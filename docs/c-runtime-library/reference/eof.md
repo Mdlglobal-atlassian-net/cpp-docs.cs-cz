@@ -1,9 +1,9 @@
 ---
 title: _eof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _eof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _eof
 helpviewer_keywords:
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288133"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941956"
 ---
-# <a name="eof"></a>_eof
+# <a name="_eof"></a>_eof
 
-Testy pro konec souboru (EOF).
+Testuje konec souboru (EOF).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,11 +55,11 @@ Popisovač souboru odkazující na otevřený soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_eof –** vrátí hodnotu 1, pokud aktuální pozice konce souboru nebo 0, pokud není. Návratová hodnota-1 označuje chybu; v takovém případě je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EBADF**, což znamená neplatného popisovače souboru.
+**_eof** vrátí hodnotu 1, pokud je aktuální pozice konec souboru, nebo 0, pokud není. Návratová hodnota-1 označuje chybu. v tomto případě je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EBADF**, což indikuje neplatný popisovač souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Eof –** funkce určuje, zda se konec souboru spojené s *fd* bylo dosaženo.
+Funkce **_eof** určuje, zda byl dosažen konec souboru přidruženého ke *FD* .
 
 ## <a name="requirements"></a>Požadavky
 
@@ -64,7 +67,7 @@ Popisovač souboru odkazující na otevřený soubor.
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -106,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crteoftxt"></a>Vstup: crt_eof.txt
+### <a name="input-crt_eoftxt"></a>Vstup: crt_eof. txt
 
 ```Input
 This file contains some text.

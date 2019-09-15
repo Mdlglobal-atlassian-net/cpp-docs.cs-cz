@@ -1,9 +1,9 @@
 ---
 title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetBreakAlloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e13c908c1efd1af9196885dee6e3b0f45845946b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342952"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942306"
 ---
-# <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
+# <a name="_crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
 Nastaví zarážku na zadaném čísle pořadí přidělení objektů (pouze ladicí verze).
 
@@ -52,11 +55,11 @@ Vrátí předchozí číslo pořadí přidělení objektů, které mělo nastave
 
 ## <a name="remarks"></a>Poznámky
 
-**_CrtSetBreakAlloc** umožňuje aplikaci provést detekci úniků paměti pomocí zastavení na určitém bodě přidělení paměti a trasování zpět k původu žádosti. Tato funkce používá sekvenční číslo pořadí přidělení objektu přiřazené bloku paměti při přidělení na haldě. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtSetBreakAlloc** odstraněna během předběžného zpracování.
+**_CrtSetBreakAlloc** umožňuje aplikaci provádět detekci nevracení paměti tím, že se v určitém bodě přidělení paměti a trasování vrátí k původní žádosti. Tato funkce používá sekvenční číslo pořadí přidělení objektu přiřazené bloku paměti při přidělení na haldě. Když není definovaný [_DEBUG](../../c-runtime-library/debug.md) , volání **_CrtSetBreakAlloc** se během předběžného zpracování odeberou.
 
-Číslo pořadí přidělení objektu je uložen v *lRequest* pole **_CrtMemBlockHeader** struktury definované v souboru Crtdbg.h. Když se informace o bloku paměti hlášeny jednou z funkcí s výpisem ladění, je toto číslo uzavřeno ve složených závorkách, jako například {36}.
+Číslo pořadí přidělení objektu je uloženo v poli *poli* struktury **_CrtMemBlockHeader** definované v souboru Crtdbg. h. Když jsou informace o bloku paměti hlášeny jednou z funkcí výpisu ladění, toto číslo je uzavřeno ve složených závorkách, například {36}.
 
-Další informace o tom, **_CrtSetBreakAlloc** jde použít s dalšími funkcemi správy paměti naleznete v tématu [sledování požadavků na přidělení haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o tom, jak se dá **_CrtSetBreakAlloc** použít s dalšími funkcemi správy paměti, najdete v tématu [sledování požadavků na přidělení haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -64,11 +67,11 @@ Další informace o tom, **_CrtSetBreakAlloc** jde použít s dalšími funkcemi
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 

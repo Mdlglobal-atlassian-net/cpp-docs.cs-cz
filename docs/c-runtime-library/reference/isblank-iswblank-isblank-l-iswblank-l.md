@@ -1,12 +1,12 @@
 ---
 title: isblank, iswblank, _isblank_l, _iswblank_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - isblank
 - _isblank_l
 - iswblank
 - _iswblank_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswblank_l
 - isblank
@@ -27,14 +30,14 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022eba0335facc597f0608d63cfb58e0146e0f23
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287074"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954521"
 ---
-# <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
+# <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
 Určuje, zda celočíselná hodnota představuje prázdný znak.
 
@@ -60,22 +63,22 @@ int _iswblank_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování.
+Celé číslo k otestování.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrátí nenulovou hodnotu, pokud *c* konkrétní reprezentací prostoru nebo znak horizontálního tabulátoru, nebo je jednou ze specifických pro národní prostředí množinu znaků, které se používají k oddělení slov v řádku textu. **isblank** vrací nenulovou hodnotu, pokud *c* je znak mezery (0x20) nebo znak horizontálního tabulátoru (0x09). Výsledek testovací podmínky pro **isblank** funkce závisí **LC_CTYPE** kategorie nastavení národního prostředí; Další informace najdete v článku [setlocale _wsetlocale](setlocale-wsetlocale.md). Verze těchto funkcí, které nemají **_l** používají aktuální národní prostředí pro všechna chování závislé na národním prostředí; ty, které mají **_l** přípona jsou stejné s tím rozdílem, že používají národní prostředí, které je předáno místo. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud je *c* konkrétní reprezentace mezery nebo horizontálního znaku tabulátoru, nebo je jednou ze sad znaků specifických pro národní prostředí, které se používají k oddělení slov v rámci řádku textu. hodnota **blank** vrátí nenulovou hodnotu, pokud je *c* znak mezery (0x20) nebo znak horizontálního tabulátoru (0x09). Výsledek testovací podmínky pro funkce **unblank** závisí na nastavení kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md). Verze těchto funkcí, které nemají příponu **_l** , používají aktuální národní prostředí pro jakékoli chování závislé na národním prostředí; verze, které mají příponu **_l** , jsou stejné s tím rozdílem, že používají národní prostředí, které je předáno místo toho. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-**iswblank** vrací nenulovou hodnotu, pokud *c* je široký znak který odpovídá standardní mezeře nebo znaku horizontálního tabulátoru.
+**iswblank** vrací nenulovou hodnotu, pokud je *c* je celosvětovým znakem, který odpovídá standardnímu znaku mezery nebo horizontálnímu znaku tabulátoru.
 
-Chování **isblank** a **_isblank_l** není definováno, pokud *c* není konec souboru nebo v rozsahu 0 až 0xFF, včetně. Při použití ladicí CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolá kontrolní výraz.
+Chování funkce **blank** a **_isblank_l** není definováno, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). Pokud je použita knihovna CRT ladění a *c* není jedna z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
@@ -84,12 +87,12 @@ Chování **isblank** a **_isblank_l** není definováno, pokud *c* není konec 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isblank**|\<ctype.h>|
-|**iswblank**|\<ctype.h > nebo \<wchar.h >|
-|**_isblank_l**|\<ctype.h>|
-|**_iswblank_l**|\<ctype.h > nebo \<wchar.h >|
+|**isblank**|\<CType. h >|
+|**iswblank**|\<CType. h > nebo \<WCHAR. h >|
+|**_isblank_l**|\<CType. h >|
+|**_iswblank_l**|\<CType. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

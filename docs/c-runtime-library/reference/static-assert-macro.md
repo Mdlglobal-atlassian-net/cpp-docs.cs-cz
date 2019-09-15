@@ -1,7 +1,7 @@
 ---
 title: _STATIC_ASSERT – makro
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,22 +12,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _STATIC_ASSERT
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: 5d3aa1d9665b48a0690d8eb62353fc98c5a550f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354690"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957935"
 ---
-# <a name="staticassert-macro"></a>_STATIC_ASSERT – makro
+# <a name="_static_assert-macro"></a>_STATIC_ASSERT – makro
 
-Vyhodnocení výrazu v době kompilace a vygenerují chybu, pokud je výsledek **FALSE**.
+Vyhodnoťte výraz v době kompilace a vygenerujte chybu, pokud je výsledek **nepravdivý**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,15 +43,15 @@ _STATIC_ASSERT(
 ### <a name="parameters"></a>Parametry
 
 *booleanExpression*<br/>
-Výraz (včetně odkazů), který se vyhodnotí na nenulovou hodnotu (**TRUE**) nebo 0 (**FALSE**).
+Výraz (včetně ukazatelů), jejichž výsledkem je nenulová hodnota (**true**) nebo 0 (**false**).
 
 ## <a name="remarks"></a>Poznámky
 
-Vypadá podobně jako toto makro [_ASSERT a _asserte – makra](assert-asserte-assert-expr-macros.md), s tím rozdílem, že *booleanExpression* je vyhodnocen v době kompilace místo za běhu. Pokud *booleanExpression* vyhodnotí jako **FALSE** (0), [Chyba kompilátoru C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) je generován.
+Toto makro se podobá [makrům _ASSERT a _ASSERTE](assert-asserte-assert-expr-macros.md)s tím rozdílem, že *booleanExpression* je vyhodnocena v době kompilace místo za běhu. Pokud se *booleanExpression* vyhodnotí jako **false** (0), vygeneruje se [Chyba kompilátoru C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) .
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu zkontrolujeme, jestli [sizeof](../../c-language/sizeof-operator-c.md) **int** je větší než nebo rovna hodnotě 2 bajty a zda [sizeof](../../c-language/sizeof-operator-c.md) **dlouhé** 1 bajt. Program nebude kompilovat a bude generovat [Chyba kompilátoru C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) protože **dlouhé** je větší než 1 bajt.
+V tomto příkladu zkontrolujeme, zda je typ [sizeof](../../c-language/sizeof-operator-c.md) , který je **int** , větší nebo roven 2 bajtů a zda je typ [sizeof](../../c-language/sizeof-operator-c.md) a **Long** roven 1 bajt. Program se nezkompiluje a vygeneruje [chybu kompilátoru C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) , protože **Long** je větší než 1 bajt.
 
 ```C
 // crt__static_assert.c

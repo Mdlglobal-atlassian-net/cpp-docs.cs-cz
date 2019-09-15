@@ -1,9 +1,9 @@
 ---
 title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtIsValidHeapPointer
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a8746eb2da90ac5515d92113b977011a4647fe6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339387"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942388"
 ---
-# <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
+# <a name="_crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
-Ověří, zda zadaný ukazatel do haldy přidělené ve některé knihovny run-time jazyka C, ale ne nutně knihovnou CRT volajícího. Ve verzích CRT před Visual Studio 2010 ověří, že zadaný ukazatel je v lokální haldy (pouze ladicí verze).
+Ověřuje, že zadaný ukazatel je v haldě přidělené některými knihovnami run-time jazyka C, ale ne nutně v knihovně CRT volajícího. Ve verzích CRT před Visual Studio 2010 Tato verze ověřuje, zda je zadaný ukazatel v místní haldě (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,23 +47,23 @@ int _CrtIsValidHeapPointer(
 ### <a name="parameters"></a>Parametry
 
 *userData*<br/>
-Ukazatel na začátku bloku přidělené paměti.
+Ukazatel na začátek přiděleného bloku paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_Crtisvalidheappointer –** vrátí TRUE, pokud je zadaný ukazatel v haldě sdílena všemi instancemi knihovny CRT. Ve verzích CRT před Visual Studio 2010 to vrátí hodnotu TRUE Pokud je zadaný ukazatel v lokální haldy. V opačném případě vrátí funkce hodnotu FALSE.
+**_CrtIsValidHeapPointer** vrací hodnotu true, pokud je zadaný ukazatel v haldě sdílené všemi instancemi knihoven CRT. Ve verzích CRT před Visual Studio 2010 vrátí tato hodnota hodnotu TRUE, pokud je zadaný ukazatel v místní haldě. V opačném případě vrátí funkce hodnotu FALSE.
 
 ## <a name="remarks"></a>Poznámky
 
-Nedoporučujeme tuto funkci použít. Od verze Visual Studio 2010 CRT knihovny, všechny knihovny CRT sdílet jeden haldy operačního systému, *haldy procesu*. **_Crtisvalidheappointer –** funkce oznámí, zda ukazatel přidělení haldy CRT, ale ne, který byl přidělen knihovnou CRT volajícího. Představte si třeba blok přidělaná pomocí sady Visual Studio 2010 verzi knihovny CRT. Pokud **_crtisvalidheappointer –** funkce exportované sadou Visual Studio 2012 verzi knihovny CRT testuje ukazatel, vrátí hodnotu TRUE. Už je to užitečné test. Ve verzích před Visual Studio 2010 knihovny CRT funkce používá tak, aby byl adresu konkrétní paměti v rámci lokální haldy. Lokální haldy odkazuje na haldě vytvoří a spravuje konkrétní instanci knihovny run-time C. Pokud se dynamická knihovna (DLL) obsahuje statický odkaz na knihovny run-time, má svoji vlastní instanci haldy za běhu a proto své vlastní haldy, nezávisle na lokální haldy vaší aplikace. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_crtisvalidheappointer –** odstraněna během předběžného zpracování.
+Tuto funkci nedoporučujeme používat. Od knihovny CRT sady Visual Studio 2010, všechny knihovny CRT sdílejí jednu haldu operačního systému, *haldu procesu*. Funkce **_CrtIsValidHeapPointer** hlásí, zda byl ukazatel přidělen v haldě CRT, ale nikoli v případě, že byl přidělen knihovnou CRT volajícího. Zvažte například blok přidělený pomocí verze sady Visual Studio 2010 knihovny CRT. Pokud funkce **_CrtIsValidHeapPointer** exportovaná verzí sady Visual Studio 2012 knihovny CRT testuje ukazatel, vrátí hodnotu true. To již není užitečný test. Ve verzích knihovny CRT před Visual Studio 2010 se funkce používá k zajištění, že konkrétní adresa paměti je v rámci místní haldy. Místní halda odkazuje na haldu vytvořenou a spravovanou určitou instancí knihovny run-time jazyka C. Pokud dynamická knihovna (DLL) obsahuje statický odkaz na běhovou knihovnu, má svou vlastní instanci haldy běhu, a proto vlastní haldu nezávisle na místní haldě aplikace. Když není definovaný [_DEBUG](../../c-runtime-library/debug.md) , volání **_CrtIsValidHeapPointer** se během předběžného zpracování odeberou.
 
-Protože tato funkce vrací hodnotu TRUE nebo FALSE, může být předán do jednoho z [_ASSERT](assert-asserte-assert-expr-macros.md) makra vytvořit jednoduchý mechanismus zpracování ladění chyb. Následující příklad způsobí selhání kontrolního výrazu, pokud zadaná adresa není umístěn v rámci lokální haldy:
+Vzhledem k tomu, že tato funkce vrací hodnotu TRUE nebo FALSE, může být předána jednomu z [_ASSERT](assert-asserte-assert-expr-macros.md) maker pro vytvoření jednoduchého mechanismu pro zpracování chyb ladění. Následující příklad způsobí selhání kontrolního výrazu, pokud zadaná adresa není umístěna v místní haldě:
 
 ```C
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-Další informace o tom, **_crtisvalidheappointer –** jde použít s další funkce ladění a makra, najdete v článku [makra pro vytváření sestav](/visualstudio/debugger/macros-for-reporting). Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o tom, jak lze **_CrtIsValidHeapPointer** použít s dalšími funkcemi ladění a makry, naleznete v tématu [makra pro vytváření sestav](/visualstudio/debugger/macros-for-reporting). Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -68,15 +71,15 @@ Další informace o tom, **_crtisvalidheappointer –** jde použít s další f
 |-------------|---------------------|
 |**_CrtIsValidHeapPointer**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak otestovat, zda paměť je platná, pokud se použije s parametrem knihovny runtime jazyka C před Visual Studio 2010. V tomto příkladu se poskytuje pro uživatelé staršího kódu knihovny CRT.
+Následující příklad ukazuje, jak otestovat, zda je paměť platná, pokud je použita s běhovými knihovnami jazyka C před sadou Visual Studio 2010. Tento příklad je k dispozici pro uživatele starší verze kódu knihovny CRT.
 
 ```C
 // crt_isvalid.c

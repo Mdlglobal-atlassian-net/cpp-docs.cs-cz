@@ -1,12 +1,12 @@
 ---
 title: fscanf, _fscanf_l, fwscanf, _fwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fscanf
 - _fwscanf_l
 - _fscanf_l
 - fwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fscanf
 - fwscanf
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _ftscanf function
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
-ms.openlocfilehash: 5be3f4107d2f05c1863c9c8303ac89e184590baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c143cbc1bf642e7efc6f10b9615fdaca8a236d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287834"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956623"
 ---
-# <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
+# <a name="fscanf-_fscanf_l-fwscanf-_fwscanf_l"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
-Čtení formátovaných dat z datového proudu. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [fscanf_s – _fscanf_s_l –, fwscanf_s – _fwscanf_s_l –](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).
+Čtení formátovaných dat z datového proudu. K dispozici jsou bezpečnější verze těchto funkcí; viz [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,48 +84,48 @@ int _fwscanf_l(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
-*Formát*<br/>
+*format*<br/>
 Řetězec řízení formátu
 
 *argument*<br/>
 Volitelné argumenty
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí počet polí úspěšně převedena a přidělena; Vrácená hodnota nezahrnuje pole, která byla načtena, ale nejsou přiřazena. Vrácená hodnota 0 označuje, že nebyla přiřazena žádná pole. Pokud dojde k chybě nebo pokud je dosaženo konce souboru datového proudu před prvním převodem, vrácená hodnota je **EOF** pro **fscanf –** a **fwscanf –**.
+Každá z těchto funkcí vrátí počet úspěšně převedených a přiřazených polí; Vrácená hodnota nezahrnuje pole, která byla načtena, ale nebyla přiřazena. Návratová hodnota 0 značí, že nebyla přiřazena žádná pole. Pokud dojde k chybě nebo pokud je před prvním převodem dosaženo konce souboru datového proudu, je vrácená hodnota znak **EOF** pro **Fscanf** a **fwscanf**.
 
-Tyto funkce ověřují své parametry. Pokud *stream* nebo *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EOF** a nastavte **errno** k **EINVAL**.
+Tyto funkce ověřují své parametry. Pokud je *datový proud* nebo *Formát* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EOF** a nastaví **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fscanf –** funkce čte data z aktuální pozice *stream* do míst daných argumentem *argument* (pokud existuje). Každý *argument* musí být ukazatel na proměnnou typu, který odpovídá specifikátoru typů ve *formátu*. *Formát* řídí interpretaci vstupních polí a má stejnou formu a funkci, jako *formátu* argument pro **scanf**; naleznete v tématu [scanf](scanf-scanf-l-wscanf-wscanf-l.md) pro Popis *formátu*.
+Funkce **Fscanf** čte data z aktuální pozice *datového proudu* do umístění předaných *argumentem* (pokud existuje). Každý *argument* musí být ukazatel na proměnnou typu, který odpovídá specifikátoru typu ve *formátu*. *Formát* řídí interpretaci vstupních polí a má stejnou formu a funkci jako argument *Format* pro **scanf**; Popis *formátu*naleznete v tématu [scanf](scanf-scanf-l-wscanf-wscanf-l.md) .
 
-**fwscanf –** je verze širokého znaku **fscanf –**; argument formátu **fwscanf –** je širokoznaký řetězec. Tyto funkce chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **fscanf –** aktuálně nepodporuje vstup z datového proudu UNICODE.
+**fwscanf** je **Fscanf**verze s velkým znakem; argument Format pro **fwscanf** je řetězec s velkým znakem. Tyto funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **Fscanf** v současné době nepodporuje vstup z datového proudu Unicode.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ftscanf –**|**fscanf –**|**fscanf –**|**fwscanf –**|
+|**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-Další informace najdete v tématu [pole Specifikace formátu – funkce scanf a wscanf funkce](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Další informace najdete v tématu [pole specifikace formátu – funkce scanf a funkce wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**fscanf**, **_fscanf_l**|\<stdio.h>|
-|**fwscanf**, **_fwscanf_l**|\<stdio.h > nebo \<wchar.h >|
+|**fwscanf**, **_fwscanf_l**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -185,7 +188,7 @@ x
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

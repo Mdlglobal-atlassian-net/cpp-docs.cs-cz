@@ -1,9 +1,9 @@
 ---
 title: _purecall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _purecall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - purecall
 - _purecall
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: df6dde91ccb952e66eb77c841b2b1ace12756b8c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 5d62ec30731ce26c4683afc88474d4bddb63a697
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446624"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950157"
 ---
-# <a name="purecall"></a>_purecall
+# <a name="_purecall"></a>_purecall
 
-Výchozí čistě virtuální funkce volání obslužné rutiny. Kompilátor generuje kód pro volání této funkce při volání čistě virtuální členské funkce.
+Výchozí obslužná rutina chyby volání čistě virtuální funkce. Kompilátor generuje kód pro volání této funkce při volání čistě virtuální členské funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +45,13 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>Poznámky
 
-**_Purecall –** funkce je specifické pro společnost Microsoft podrobnosti implementace Microsoft C++ kompilátoru. Tato funkce není určena k volání přímo ve vašem kódu a nemá žádné veřejné záhlaví deklarace. Je tady popsali, protože je k veřejné exportu knihovny Runtime jazyka C.
+Funkce **_purecall** je podrobné informace o implementaci kompilátoru Microsoftu C++ specifické pro společnost Microsoft. Tato funkce není určena k volání přímo v kódu a nemá žádnou veřejnou deklaraci hlavičky. Je zde popsána, protože se jedná o veřejný export běhové knihovny jazyka C.
 
-Volání čistě virtuální funkce se o chybu, protože nemá žádnou implementaci. Kompilátor generuje kód, který má být vyvolán **_purecall –** funkci obslužné rutiny chyb při volání čistě virtuální funkce. Ve výchozím nastavení **_purecall –** ukončí program. Než se ukončí, **_purecall –** vyvolá funkce **_purecall_handler** fungovat, pokud byla nastavena pro proces. Můžete nainstalovat vlastní funkci obslužné rutiny chyby pro volání čistě virtuální funkce, je pro ladění nebo pro účely vykazování zachytit. Pokud chcete použít vlastní obslužnou rutinu chyb, vytvořte funkci, která má **_purecall_handler** podpis, pak použít [_set_purecall_handler –](get-purecall-handler-set-purecall-handler.md) k němu aktuální obslužné rutiny.
+Volání čistě virtuální funkce je chyba, protože nemá žádnou implementaci. Kompilátor generuje kód pro vyvolání funkce obslužné rutiny chyb **_purecall** při volání čistě virtuální funkce. Ve výchozím nastavení program **_purecall** ukončí program. Před ukončením funkce **_purecall** vyvolá funkci **_purecall_handler** , pokud byla jedna nastavena pro daný proces. Můžete nainstalovat vlastní funkci obslužné rutiny chyb pro volání čistě virtuální funkce, abyste je mohli zachytit pro účely ladění nebo generování sestav. Chcete-li použít vlastní obslužnou rutinu chyb, vytvořte funkci, která má signaturu **_purecall_handler** , pak pomocí [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md) ji nastavte na aktuální obslužnou rutinu.
 
 ## <a name="requirements"></a>Požadavky
 
-**_Purecall –** funkce nemá deklaraci záhlaví. **_Purecall_handler** definice typedef je definována v \<stdlib.h >.
+Funkce **_purecall** neobsahuje deklaraci hlavičky. Definice typedef **_purecall_handler** je definována v \<Stdlib. h >.
 
 ## <a name="see-also"></a>Viz také:
 

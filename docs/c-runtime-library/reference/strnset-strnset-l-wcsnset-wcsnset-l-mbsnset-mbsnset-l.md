@@ -1,14 +1,14 @@
 ---
 title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnset
 - _strnset
 - _mbsnset_l
 - _wcsnset_l
 - _wcsnset
 - _strnset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncset_l
 - mbsnset_l
@@ -66,19 +69,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 3389213b423857fa0a8561c1d6bd13ae2d9d6d5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb2365684f9c35e1523b34aaad30c9ae6875b5c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209607"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946977"
 ---
-# <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
+# <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
-Inicializuje znaky řetězce na daný znak. Existují bezpečnější verze těchto funkcí; Zobrazit [_strnset_s – _strnset_s_l –, _wcsnset_s –, _wcsnset_s_l, _mbsnset_s –, _mbsnset_s_l –](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
+Inicializuje znaky řetězce na daný znak. Existují bezpečnější verze těchto funkcí; viz [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsnset –** a **_mbsnset_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset** a **_mbsnset_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -126,29 +129,29 @@ unsigned char *_mbsnset_l(
 *c*<br/>
 Nastavení znaků.
 
-*Počet*<br/>
-Počet znaků, která se má nastavit.
+*výpočtu*<br/>
+Počet znaků, které mají být nastaveny.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na upravený řetězec.
+Vrátí ukazatel na upravený řetězec.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Strnset –** funkce nastaví maximálně prvních *počet* znaků *str* k *c* (převést na **char**). Pokud *počet* je větší než délka *str*, délka *str* se použije namísto *počet*.
+Funkce **_strnset** nastaví nejvýše první *počet* znaků *str* na *c* (převedených na **char**). Pokud je *počet* větší než délka *str*, místo funkce *Count*se použije délka *str* .
 
-**_wcsnset –** a **_mbsnset –** jsou širokoznaké a vícebajtové verze **_strnset –**. Argumenty řetězce a vrácené hodnoty **_wcsnset –** jsou širokoznaké řetězce **_mbsnset –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
+**_wcsnset** a **_mbsnset** jsou verze s velkým znakem a vícebajtovým znakem **_strnset**. Argumenty řetězce a návratová hodnota **_wcsnset** jsou řetězce s velkým počtem znaků; ty z **_mbsnset** jsou vícebajtové znakové řetězce. Tyto tři funkce se chovají identicky jinak.
 
-**_mbsnset –** ověří jeho parametry; Pokud *str* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, **_mbsnset –** vrátí **NULL** a nastaví **errno** k **EINVAL**. **_strnset –** a **_wcsnset –** neověří jejich parametry.
+**_mbsnset** ověří své parametry; Pokud je *str* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, **_mbsnset** vrátí **hodnotu null** a nastaví **errno** na **EINVAL**. **_strnset** a **_wcsnset** neověřují své parametry.
 
-Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsnset**|**_strnset**|**_mbsnbset**|**_wcsnset**|
 |**_tcsnset_l**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
@@ -157,13 +160,13 @@ Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strnset**|\<string.h>|
+|**_strnset**|\<String. h >|
 |**_strnset_l**|\<tchar.h>|
-|**_wcsnset**|\<String.h > nebo \<wchar.h >|
+|**_wcsnset**|\<String. h > nebo \<WCHAR. h >|
 |**_wcsnset_l**|\<tchar.h>|
-|**_mbsnset**, **_mbsnset_l**|\<Mbstring.h >|
+|**_mbsnset**, **_mbsnset_l**|\<Mbstring. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -191,7 +194,7 @@ After:  **** is a test
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

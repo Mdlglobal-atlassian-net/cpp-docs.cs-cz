@@ -1,9 +1,9 @@
 ---
 title: _heapchk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapchk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapchk
 - heapchk
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331711"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954813"
 ---
-# <a name="heapchk"></a>_heapchk
+# <a name="_heapchk"></a>_heapchk
 
-Spuštění kontroly konzistence na haldě.
+Spustí kontroly konzistence na haldě.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,29 +48,29 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_heapchk –** vrátí jednu z následujících konstant manifestu celé číslo definovaných v Malloc.h.
+**_heapchk** vrátí jednu z následujících celočíselných konstant manifestu definovaných ve typu. h.
 
 |Návratová hodnota|Podmínka|
 |-|-|
-| **_HEAPBADBEGIN** | Informace v hlavičce počáteční je chybná nebo se nenašel. |
-| **_HEAPBADNODE** | Zjistila se chybná uzlu nebo poškození haldy. |
-| **_HEAPBADPTR** | Ukazatel do haldy není platný. |
-| **_HEAPEMPTY –** | Haldy nebyla inicializována. |
-| **_HEAPOK** | Haldy se zdá být konzistentní vzhledem k aplikacím. |
+| **_HEAPBADBEGIN** | Počáteční informace hlavičky jsou chybné nebo se nenašly. |
+| **_HEAPBADNODE** | Byl nalezen špatný uzel nebo je poškozena halda. |
+| **_HEAPBADPTR** | Ukazatel na haldu není platný. |
+| **_HEAPEMPTY** | Halda nebyla inicializována. |
+| **_HEAPOK** | Halda se jeví jako konzistentní. |
 
-Kromě toho, pokud dojde k chybě **_heapchk –** nastaví **errno** k **ENOSYS**.
+Kromě toho, pokud dojde k chybě, **_heapchk** nastaví **errno** na **ENOSYS**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Heapchk –** funkce umožňuje ladění problémy související s kontrolou konzistence minimální haldy. Pokud operační systém nepodporuje **_heapchk –**(například Windows 98), funkce vrátí **_heapok –** a nastaví **errno** k **ENOSYS**.
+Funkce **_heapchk** pomáhá ladit problémy související s haldou, a to kontrolou minimální konzistence haldy. Pokud operační systém nepodporuje **_heapchk**(například Windows 98), funkce vrátí **_HEAPOK** a nastaví **errno** na **ENOSYS**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_heapchk**|\<malloc.h>|\<errno.h>|
+|**_heapchk**|\<. h >|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,9 +1,9 @@
 ---
 title: qsort_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort_s
 helpviewer_keywords:
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: f3b8bbfeb8079322a174233f3d8048a6d1b51804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358109"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949762"
 ---
-# <a name="qsorts"></a>qsort_s
+# <a name="qsort_s"></a>qsort_s
 
-Provádí rychlé řazení. Verze [qsort –](qsort.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Provede rychlé řazení. Verze [qsort](qsort.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,64 +54,64 @@ void qsort_s(
 ### <a name="parameters"></a>Parametry
 
 *base*<br/>
-Spuštění cílového pole.
+Začátek cílového pole
 
-*Číslo*<br/>
-Velikost pole prvků.
+*Automatické*<br/>
+Velikost pole v elementech
 
 *Šířka*<br/>
-Element velikost v bajtech.
+Velikost elementu v bajtech
 
 *compare*<br/>
-Funkce porovnání. První argument je *kontextu* ukazatele. Druhý argument je ukazatel *klíč* pro hledání. Třetí argument je ukazatel na prvek pole, která se má porovnat s *klíč*.
+Funkce porovnání. První argument je *kontextový* ukazatel. Druhý argument je ukazatel na *klíč* pro hledání. Třetí argument je ukazatel na prvek pole, který má být porovnán s *klíčem*.
 
 *context*<br/>
-Ukazatel na kontext, který může být objekt, který *porovnání* rutina potřebuje přístup.
+Ukazatel na kontext, který může být libovolný objekt, ke kterému má rutina *porovnání* potřebovat přístup.
 
 ## <a name="remarks"></a>Poznámky
 
-**Qsort_s –** implementuje algoritmus rychlého řazení řazení pole funkce *číslo* prvky, každý z *šířka* bajtů. Argument *základní* je ukazatel na základní pole, který se má seřadit. **qsort_s –** přepíše toto pole seřazené elementy. Argument *porovnání* je ukazatel na uživatelem zadané rutinou, která porovná dva prvky pole a vrátí hodnotu určující jejich vztahu. **qsort_s –** volání *porovnání* rutinní jednou nebo vícekrát během řazení předání ukazatele do dvou prvků pole při každém volání:
+Funkce **qsort_s** implementuje algoritmus rychlého řazení pro řazení pole *číselných* prvků, z každé *šířky* bajtů. *Základem* argumentu je ukazatel na základ pole, které má být seřazeno. **qsort_s** přepíše toto pole setříděnými prvky. Argument *Compare* je ukazatel na uživatelsky zadanou rutinu, která porovná dva prvky pole a vrátí hodnotu určující jejich relaci. **qsort_s** volá rutinu *porovnání* jednou nebo víckrát během řazení a předá ukazatelům dva prvky pole při každém volání:
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
 ```
 
-Rutina musí porovnat elementy a poté vrátí jednu z následujících hodnot:
+Rutina musí porovnat prvky a pak vracet jednu z následujících hodnot:
 
 |Návratová hodnota|Popis|
 |------------------|-----------------|
 |< 0|**elem1** menší než **elem2**|
-|0|**elem1** ekvivalentní **elem2**|
+|0|**elem1** ekvivalent **elem2**|
 |> 0|**elem1** větší než **elem2**|
 
-Pole je seřazený ve vzestupném pořadí, jak je definováno ve funkci porovnání. Chcete-li seřadit pole v sestupném pořadí, zaměňte význam "větší než" a "menší než" ve funkci porovnání.
+Pole je seřazené ve vzestupném pořadí, jak je definováno funkcí porovnání. Chcete-li seřadit pole v klesajícím pořadí, obraťte se na výraz "větší než" a "menší než" v rámci funkce porovnání.
 
-Pokud jsou předány neplatné parametry pro funkci, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce a **errno** je nastavena na **EINVAL**. Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud jsou funkci předány neplatné parametry, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí a **errno** se nastaví na **EINVAL**. Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
 |klíč|base|compare|počet|šířka|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**NULL**|Všechny|Všechny|Všechny|Všechny|**EINVAL**|
-|Všechny|**NULL**|Všechny|!= 0|Všechny|**EINVAL**|
-|Všechny|Všechny|Všechny|Všechny|<= 0|**EINVAL**|
-|Všechny|Všechny|**NULL**|Všechny|Všechny|**EINVAL**|
+|**NULL**|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|**NULL**|Jakýmikoli|!= 0|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|<= 0|**EINVAL**|
+|Jakýmikoli|Jakýmikoli|**NULL**|Jakýmikoli|Jakýmikoli|**EINVAL**|
 
-**qsort_s –** má stejné chování jako **qsort –** , ale má *kontextu* parametr a sady **errno**. Předáním *kontextu* parametr, porovnání funkcí můžete použít ukazatelem na objekt pro přístup k objektu funkce nebo jiné informace není k dispozici prostřednictvím ukazatele prvek. Přidání *kontextu* parametr díky **qsort_s –** bezpečnější, protože *kontextu* je možné předejdete tak chybám vícenásobného přístupu zavedená pomocí statické proměnné sdílet informace, které jsou k dispozici na *porovnání* funkce.
+**qsort_s** má stejné chování jako **qsort** , ale má *kontextový* parametr a nastavuje **errno**. Předáním *kontextového* parametru mohou funkce porovnání použít ukazatel na objekt pro přístup k funkcionalitě objektu nebo jiným informacím, které nejsou přístupné prostřednictvím ukazatele na prvek. Přidání *kontextového* parametru vede k **qsort_sější** zabezpečení, protože *kontext* lze použít k tomu, aby se zabránilo chybám Vícenásobný přístup zavedeným pomocí statických proměnných, aby byly k dispozici sdílené informace pro funkci *Compare* .
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**qsort_s**|\<stdlib.h > a \<search.h >|
+|**qsort_s**|\<Stdlib. h > a \<Search. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** Všechny verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
+**Knihovna** Všechny verze [funkcí knihovny CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití *kontextu* parametr **qsort_s –** funkce. *Kontextu* parametr usnadňuje provedení řazení bezpečné pro vlákna. Namísto použití statické proměnné, které musí být synchronizovány zajistit bezpečný přístup z více vláken, předejte jinou *kontextu* parametr v každé řazení. V tomto příkladu se používá objekt národní prostředí, jako *kontextu* parametru.
+Následující příklad ukazuje, jak použít *kontextový* parametr ve funkci **qsort_s** . *Kontextový* parametr usnadňuje provádění řazení z více vláken. Namísto použití statických proměnných, které musí být synchronizovány, aby bylo zajištěno zabezpečení vlákna, předejte v každém řazení jiný *kontextový* parametr. V tomto příkladu se jako *kontextový* parametr používá objekt národního prostředí.
 
 ```cpp
 // crt_qsort_s.cpp

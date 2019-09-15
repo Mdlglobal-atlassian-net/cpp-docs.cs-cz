@@ -1,9 +1,9 @@
 ---
 title: atexit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - atexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,23 +14,26 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atexit
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b91e6dad81f006b0b94ac17a940e840386f6d2b1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341584"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939663"
 ---
 # <a name="atexit"></a>atexit
 
-Zpracuje zadané funkce při ukončení.
+Zpracuje zadanou funkci při ukončení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,20 +45,20 @@ int atexit(
 
 ### <a name="parameters"></a>Parametry
 
-*Func*<br/>
-Funkce, která se má volat.
+*func*<br/>
+Funkce, která má být volána.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**AtExit** vrátí 0 v případě úspěchu nebo nenulovou hodnotu, pokud dojde k chybě.
+**atexit** vrátí 0 v případě úspěchu nebo nenulovou hodnotu, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**Atexit** funkce je předána adresu funkce *func* se volá, když program ukončen normálně. Následná volání **atexit** vytvořit registr funkcí, které jsou spouštěny popořadě poslední dovnitř, první (ven LIFO). Funkce předány **atexit** nemůže mít parametry. **AtExit** a **_onexit** použití haldy pro uložení do registru funkce. Díky tomu se počet funkcí, které mohou být registrovány je omezen pouze haldy paměti.
+Funkce **atexit** je předána adresou funkce *Func* funkce, která se má volat při normálním ukončení programu. Po sobě jdoucí volání **atexit** vytvořit registr funkcí, které jsou spouštěny v pořadí poslední v, první ven (LIFO). Funkce předané do **atexit** nemohou přijímat parametry. **atexit** a **_onexit** používají haldu k uložení registru funkcí. Počet funkcí, které lze registrovat, je tedy omezen pouze pamětí haldy.
 
-Kód v **atexit** funkce by neměla obsahovat závislost na žádné knihovny DLL, které by mohly mít již uvolněna při **atexit** funkce je volána.
+Kód ve funkci **atexit** by neměl obsahovat žádnou závislost na žádné knihovně DLL, která by již byla uvolněna při volání funkce **atexit** .
 
-Chcete-li generovat aplikace vyhovující standardu ANSI, použijte standardu ANSI **atexit** – funkce (místo podobný **_onexit** funkce).
+K vygenerování aplikace kompatibilní se standardem ANSI použijte funkci **atexit** standardu ANSI (místo podobné funkce **_onexit** ).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -65,7 +68,7 @@ Chcete-li generovat aplikace vyhovující standardu ANSI, použijte standardu AN
 
 ## <a name="example"></a>Příklad
 
-Tento program nabízených oznámení v ceně čtyři funkce do zásobníku funkce, který se spustí při **atexit** je volána. Při ukončení programu tyto programy se provádějí v poslední dovnitř, první na základě.
+Tento program vloží čtyři funkce do zásobníku funkcí, které mají být provedeny při volání funkce **atexit** . Když se program ukončí, tyto programy se spustí na začátku a prvním základě.
 
 ```C
 // crt_atexit.c

@@ -1,13 +1,13 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - towupper
 - _toupper
@@ -42,16 +45,16 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 6dd564a27ee7f3c2bb095564e5c9423249d6babc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155495"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957907"
 ---
-# <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
+# <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
-Převedení znaku na velká písmena.
+Převod znaku na velká písmena.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -78,52 +81,52 @@ int _towupper_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak pro převod.
+Znak, který se má převést
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin převádí kopii *c*, pokud je to možné a vrátí výsledek.
+Každá z těchto rutin převede kopii *jazyka c*, je-li to možné, a vrátí výsledek.
 
-Pokud *c* je široký znak, pro kterou **iswlower –** je nenulová a odpovídající široké znaky, pro které [iswupper –](isupper-isupper-l-iswupper-iswupper-l.md) nenulové, **towupper –** vrátí odpovídající širokého znaku; v opačném případě **towupper –** vrátí *c* beze změny.
+V případě, že *c* je velký znak, pro který je **iswlower** nenulový a existuje odpovídající velký znak, pro který [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) je nenulový, **towupper** vrátí odpovídající velký znak; v opačném případě **towupper** vrátí *c* beze změny.
 
-Vyhrazená k indikaci chyby není žádnou návratovou hodnotu.
+Není vyhrazena žádná návratová hodnota pro indikaci chyby.
 
-Aby **toupper** očekávané výsledky, [__isascii –](isascii-isascii-iswascii.md) a [islower](islower-iswlower-islower-l-iswlower-l.md) musí obě vrací nenulovou hodnotu.
+Chcete-li, aby atribut **ToUpper** poskytoval očekávané výsledky, [__isascii](isascii-isascii-iswascii.md) a [Lower](islower-iswlower-islower-l-iswlower-l.md) musí vracet nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto rutin Pokud je to možné převede daný malým písmenem na velké písmeno a vhodné. Převod velikosti písmen **towupper –** je specifických pro národní prostředí. V případě se změní pouze znaky relevantní pro aktuální národní prostředí. Funkce bez **_l** příponu použít aktuálně nastavené národního prostředí. Verze těchto funkcí s **_l** přípona trvat národního prostředí jako parametr, který budete používat místo aktuálně nastavené národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Každá z těchto rutin převede zadané malé písmeno na velké písmeno, pokud je to možné a vhodné. Konverze velikosti **towupper** je specifická pro národní prostředí. V případě změny jsou změněny pouze znaky relevantní pro aktuální národní prostředí. Funkce bez přípony **_l** používají aktuálně nastavené národní prostředí. Verze těchto funkcí s příponou **_l** přebírají národní prostředí jako parametr a používají jej namísto aktuálně nastaveného národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Aby **toupper** očekávané výsledky, [__isascii –](isascii-isascii-iswascii.md) a [isupper](isupper-isupper-l-iswupper-iswupper-l.md) musí obě vrací nenulovou hodnotu.
+**Aby mohla tato** hodnota vracet očekávané výsledky, [__isascii](isascii-isascii-iswascii.md) a [Upper](isupper-isupper-l-iswupper-iswupper-l.md) musí vracet nenulovou hodnotu.
 
 [Rutiny převodu dat](../../c-runtime-library/data-conversion.md)
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**ToUpper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l –** a **_towupper_l –** mít žádnou závislost národního prostředí a neměly by být volány přímo. Jsou určeny pro interní použití rozhraním **_totupper_l**.
+> **_toupper_l** a **_towupper_l** nemají žádnou závislost národního prostředí a nejsou určeny k přímému volání. Jsou k dispozici pro interní použití v **_totupper_l**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**toupper**|\<ctype.h>|
-|**_toupper**|\<ctype.h>|
-|**towupper**|\<ctype.h > nebo \<wchar.h >|
+|**ToUpper**|\<CType. h >|
+|**_toupper**|\<CType. h >|
+|**towupper**|\<CType. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [funkcí](../../c-runtime-library/to-functions.md).
+Podívejte se na příklad v tématu [funkce](../../c-runtime-library/to-functions.md).
 
 ## <a name="see-also"></a>Viz také:
 

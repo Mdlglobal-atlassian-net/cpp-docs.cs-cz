@@ -1,12 +1,12 @@
 ---
 title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswalpha
 - _iswalpha_l
 - isalpha
 - _isalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalpha
 - _ismbcalpha_l
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a7de0ba1316a6c0155a46eed0564792ee6256f2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157991"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954575"
 ---
-# <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
+# <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
 Určuje, zda celočíselná hodnota představuje abecední znak.
 
@@ -71,22 +74,22 @@ int _iswalpha_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování.
+Celé číslo k otestování.
 
-*Národní prostředí*<br/>
-Národní prostředí namísto aktuálního národního prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít místo aktuálního národního prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrátí nenulovou hodnotu, pokud *c* je konkrétní reprezentace abecední znak. **isalpha** vrací nenulovou hodnotu, pokud *c* je v rozsahu A – Z nebo a – z. **iswalpha –** vrací nenulovou hodnotu pouze pro široké znaky, pro kterou [iswupper –](isupper-isupper-l-iswupper-iswupper-l.md) nebo **iswlower –** je nenulové; to znamená pro jakýkoliv široký znak, který je jednou ze sad definovaných implementací pro kterou žádná z hodnot **iswcntrl –**, **iswdigit –**, **iswpunct –**, nebo **iswspace –** nenulové. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje testovací podmínku.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud je *c* konkrétní reprezentace abecedního znaku. parametr- **alfa** vrátí nenulovou hodnotu, pokud je *c* v rozsahu a – Z nebo a-z. **iswalpha** vrací nenulovou hodnotu pouze pro velké znaky, pro které [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) nebo **iswlower** je nenulové; To znamená pro libovolný širší znak, který je jednou ze sad definovaných implementací, pro kterou žádná z hodnot **iswcntrl**, **iswdigit**, **iswpunct**nebo **iswspace** není nenulová. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu.
 
-Verze těchto funkcí, které mají **_l** příponu použít Předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají příponu **_l** , používají parametr národního prostředí, který je předaný namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Chování **isalpha** a **_isalpha_l –** není definováno, pokud *c* není konec souboru nebo v rozsahu 0 až 0xFF, včetně. Při použití ladicí CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolá kontrolní výraz.
+Chování funkcí **Alpha** a **_isalpha_l** není definováno, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). Pokud je použita knihovna CRT ladění a *c* není jedna z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
 |**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
@@ -95,12 +98,12 @@ Chování **isalpha** a **_isalpha_l –** není definováno, pokud *c* není ko
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isalpha**|\<ctype.h>|
-|**iswalpha**|\<ctype.h > nebo \<wchar.h >|
-|**_isalpha_l**|\<ctype.h>|
-|**_iswalpha_l**|\<ctype.h > nebo \<wchar.h >|
+|**isalpha**|\<CType. h >|
+|**iswalpha**|\<CType. h > nebo \<WCHAR. h >|
+|**_isalpha_l**|\<CType. h >|
+|**_iswalpha_l**|\<CType. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,12 +1,12 @@
 ---
 title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fwprintf_p
 - _fprintf_p_l
 - _fwprintf_p_l
 - _fprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fprintf_p
 - _ftprintf_p
@@ -41,16 +44,16 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6509aba4097b3b37443443b533ebd9fb92c923a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333141"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957002"
 ---
-# <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
+# <a name="_fprintf_p-_fprintf_p_l-_fwprintf_p-_fwprintf_p_l"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 
-Tisk formátovaných dat do datového proudu.
+Vytiskne formátovaná data do datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,33 +85,33 @@ int _fwprintf_p_l(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
-*Formát*<br/>
+*format*<br/>
 Řetězec řízení formátu
 
 *argument*<br/>
 Volitelné argumenty
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_fprintf_p –** a **_fwprintf_p –** vrátí počet napsaných znaků nebo vrátí zápornou hodnotu, když dojde k chybě výstupu.
+**_fprintf_p** a **_fwprintf_p** vrátí počet zapsaných znaků nebo vrátí zápornou hodnotu, pokud dojde k chybě výstupu.
 
 ## <a name="remarks"></a>Poznámky
 
-**_fprintf_p –** formátuje a vytiskne řadu znaků a hodnot do výstupu *stream*. Každá funkce *argument* (pokud existuje) je převeden a uložen podle odpovídající specifikace formátu v *formátu*. Pro **_fprintf_p –**, *formátu* argument má stejnou syntaxi a použití, který má v **_printf_p –**. Tyto funkce podporuje poziční parametry, což znamená, že můžete změnit pořadí parametrů použitých ve formátovacím řetězci. Další informace o poziční parametry, naleznete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+**_fprintf_p** formátuje a tiskne řadu znaků a hodnot do výstupního *datového proudu*. Každý *argument* funkce (pokud existuje) je převeden a výstup podle odpovídající specifikace formátu ve *formátu*. Pro **_fprintf_p**má argument *Format* stejnou syntaxi a používá ho v **_printf_p**. Tyto funkce podporují poziční parametry, což znamená, že je možné změnit pořadí parametrů používaných formátovacím řetězcem. Další informace o pozičních parametrech naleznete v tématu [Printf_p Position Parameters](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_fwprintf_p –** je verze širokého znaku **_fprintf_p –**; v **_fwprintf_p –**, *formátu* je širokoznaký řetězec. Tyto funkce chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **_fprintf_p –** aktuálně nepodporuje výstup do datového proudu UNICODE.
+**_fwprintf_p** je **_fprintf_p**verze s velkým znakem; ve **_fwprintf_p**je *Formát* řetězec s velkým znakem. Tyto funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **_fprintf_p** v současné době nepodporuje výstup do datového proudu Unicode.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí namísto aktuálního národního prostředí předaného.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec.
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec.
 
-Podobně jako nezabezpečené verze (viz [fprintf _fprintf_l –, fwprintf – _fwprintf_l –](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), tyto funkce ověřují své parametry a vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md), pokud buď *stream* nebo *formátu* je ukazatel s hodnotou null, nebo pokud neexistují žádné neznámé nebo chybně zformulované formátovací specifikátory. Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Podobně jako nezabezpečené verze (viz [fprintf –, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)) tyto funkce ověřují své parametry a vyvolávají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md), pokud buď *datový proud* , nebo  *Formát* je ukazatel s hodnotou null, nebo pokud existují neznámé nebo špatně vytvořené specifikátory formátování. Pokud provádění může pokračovat, vrátí funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -124,9 +127,9 @@ Další informace najdete v tématu [specifikace formátu](../../c-runtime-libra
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**_fprintf_p**, **_fprintf_p_l**|\<stdio.h>|
-|**_fwprintf_p**, **_fwprintf_p_l**|\<stdio.h > nebo \<wchar.h >|
+|**_fwprintf_p**, **_fwprintf_p_l**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -174,7 +177,7 @@ this is a string
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

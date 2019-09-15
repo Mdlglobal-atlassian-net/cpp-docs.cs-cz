@@ -1,9 +1,9 @@
 ---
 title: ___lc_locale_name_func
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___lc_locale_name_func
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr110.dll
 - msvcr100.dll
@@ -11,22 +11,25 @@ apilocation:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___lc_locale_name_func
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: 88ce07ca3fece558c23f4fcd9a12949f184b7532
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abc1ade393538586ad07f57e6838591833c9948b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342676"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944234"
 ---
-# <a name="lclocalenamefunc"></a>___lc_locale_name_func
+# <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
-Vnitřní funkce CRT. Načte názvu národního prostředí aktuálního vlákna.
+Vnitřní funkce CRT. Načte aktuální název národního prostředí vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,13 +39,13 @@ wchar_t** ___lc_locale_name_func(void);
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na řetězec, který obsahuje název národního prostředí aktuálního vlákna.
+Ukazatel na řetězec, který obsahuje aktuální název národního prostředí vlákna.
 
 ## <a name="remarks"></a>Poznámky
 
-`___lc_locale_name_func` je interní funkce CRT, který používá jiné funkce CRT se získat aktuální název národního prostředí z místního úložiště vláken pro CRT data. Tyto informace jsou k dispozici také pomocí [_get_current_locale –](../c-runtime-library/reference/get-current-locale.md) funkce nebo [setlocale _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) funkce.
+`___lc_locale_name_func`je interní funkce CRT, kterou používají jiné funkce CRT k získání aktuálního názvu národního prostředí z thread localho úložiště pro data CRT. Tyto informace jsou také k dispozici pomocí funkce [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) nebo [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Functions.
 
-Vnitřní funkce CRT jsou specifický pro implementaci a může změnit jednotlivých vydání. Nedoporučujeme jejich použití ve vašem kódu.
+Interní funkce CRT jsou specifické pro konkrétní implementaci a můžou se měnit s každou vydanou verzí. Nedoporučujeme jejich použití ve vašem kódu.
 
 ## <a name="requirements"></a>Požadavky
 

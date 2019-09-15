@@ -1,9 +1,9 @@
 ---
 title: _get_output_format
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_output_format
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - msvcr80.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr110.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_output_format
 - _get_output_format
@@ -20,19 +23,19 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: 60e209f6f8b723bfae1a4b434750b6237dc6479d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20afa988bc4fdf3bc3a6ff073a48a1cc00ff84c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343504"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944357"
 ---
-# <a name="getoutputformat"></a>_get_output_format
+# <a name="_get_output_format"></a>_get_output_format
 
-Získá aktuální hodnotu příznaku formát výstupu.
+Získá aktuální hodnotu příznaku výstupního formátu.
 
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Od v sadě Visual Studio 2015, není k dispozici v CRT.
+>  Tato funkce je zastaralá. Počínaje verzí Visual Studio 2015 není k dispozici v CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,11 +45,11 @@ unsigned int _get_output_format();
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Aktuální hodnota příznaku formát výstupu.
+Aktuální hodnota příznaku výstupního formátu.
 
 ## <a name="remarks"></a>Poznámky
 
-Příznak výstupního formát řídí funkce formátovaný vstup/výstup. V současné době nemá příznak dvě možné hodnoty: 0 a `_TWO_DIGIT_EXPONENT`. Pokud `_TWO_DIGIT_EXPONENT` je nastavena plovoucí desetinnou čárkou se vytiskne pouze dvě číslice v exponentu Pokud třetí číslici vyžaduje velikost exponent. Pokud příznak je nula, plovoucí desetinnou čárkou výstupu zobrazí tři číslic exponentu, pomocí nuly v případě potřeby pro vyplnění hodnota, která má tři číslice.
+Příznak výstupní formát ovládá funkce formátovaného vstupu a výstupu. Příznak má v současnosti dvě možné hodnoty: 0 a `_TWO_DIGIT_EXPONENT`. Je `_TWO_DIGIT_EXPONENT` -li nastavena hodnota, čísla s plovoucí desetinnou čárkou budou vytištěna pouze pomocí dvou číslic ve exponentu, pokud velikost exponentu nepožaduje třetí číslice. Pokud je příznak nula, zobrazí výstup plovoucí desetinné čárky tři číslice exponentu, pokud je to nutné k vyplnění hodnoty třemi číslicemi.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -54,7 +57,7 @@ Příznak výstupního formát řídí funkce formátovaný vstup/výstup. V sou
 |-------------|---------------------|
 |`_get_output_format`|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md) v úvodu.
+Další informace o kompatibilitě naleznete v úvodu v tématu [Kompatibilita](../c-runtime-library/compatibility.md) .
 
 ## <a name="see-also"></a>Viz také:
 

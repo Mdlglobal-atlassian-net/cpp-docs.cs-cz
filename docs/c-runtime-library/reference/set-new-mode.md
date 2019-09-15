@@ -1,9 +1,9 @@
 ---
 title: _set_new_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_new_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_new_mode
 - _set_new_mode
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: 0228170e4ab5b55b4b061fa61a412766de77a063
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b248f1c97b1ec334b7441f33862b90473e08993f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356599"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948444"
 ---
-# <a name="setnewmode"></a>_set_new_mode
+# <a name="_set_new_mode"></a>_set_new_mode
 
-Nastaví nový režim obslužné rutiny pro **malloc**.
+Nastaví nový režim obslužné rutiny **pro stav**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,31 +47,31 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>Parametry
 
 *newhandlermode*<br/>
-Nový režim obslužné rutiny pro **malloc**; platná hodnota je 0 nebo 1.
+Nový režim obslužné rutiny **pro:** platná hodnota je 0 nebo 1.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí předchozí obslužnou rutinou set režimu pro **malloc**. Návratová hodnota 1 značí, že při selhání přidělení paměti, **malloc** dříve označované jako nové rutiny obsluhy; vrácená hodnota 0 označuje, že tomu tak není. Pokud *newhandlermode* argumentů není roven 0 nebo 1, vrátí hodnotu -1.
+Vrátí předchozí sadu obslužné rutiny pro **metodu**pro vytvoření. Návratová hodnota 1 znamená, že při selhání přidělení paměti, **je dřív volána** nová rutina obslužné rutiny; Návratová hodnota 0 značí, že nebyla. Pokud argument *newhandlermode* není roven 0 nebo 1, vrátí hodnotu-1.
 
 ## <a name="remarks"></a>Poznámky
 
-C++ **_Set_new_mode** funkce nastaví nový režim obslužné rutiny pro [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **malloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Další informace najdete v tématu [nové](../../cpp/new-operator-cpp.md) a [odstranit](../../cpp/delete-operator-cpp.md) operátory ve *referenční dokumentace jazyka C++*. Pokud chcete přepsat výchozí nastavení, volání:
+C++ Funkce **_set_new_mode** nastaví nový režim obslužné rutiny pro [stav](malloc.md)". Nový režim obslužné rutiny **označuje, zda je při** selhání zavolána nová rutina obslužné rutiny nastavenou na [_set_new_handler](set-new-handler.md). Ve výchozím nastavení nevolá hodnota \ nevolá novou rutinu obslužné rutiny při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby se při neúspěšném přidělení paměti nezdařila **volání nové** rutiny obslužné rutiny stejným způsobem jako operátor **New** , když dojde **k chybě ze** stejného důvodu. Další informace naleznete v tématu operátory [New](../../cpp/new-operator-cpp.md) a [Delete](../../cpp/delete-operator-cpp.md) v  *C++ referenční příručce jazyka*. Chcete-li přepsat výchozí hodnotu, zavolejte:
 
 ```cpp
 _set_new_mode(1);
 ```
 
-zpočátku v programu nebo propojení s Newmode.obj (viz [možnosti propojení](../../c-runtime-library/link-options.md)).
+na začátku v programu nebo propojení s NewMode. obj (viz [možnosti propojení](../../c-runtime-library/link-options.md)).
 
-Tato funkce ověřuje svůj parametr. Pokud *newhandlermode* je něco jinak než 0 nebo 1, funkce vyvolá obslužnou rutinu neplatného parametru, jako je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, <strong>_set_new_mode</strong> vrátí hodnotu -1 a nastaví **errno** k `EINVAL`.
+Tato funkce ověří svůj parametr. Pokud je *newhandlermode* cokoli jiného než 0 nebo 1, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí <strong>_set_new_mode</strong> hodnotu-1 a nastaví **errno** na `EINVAL`.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_set_new_mode**|\<new.h>|
+|**_set_new_mode**|\<New. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,11 +1,11 @@
 ---
 title: pow, powf, powl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - powl
 - pow
 - powf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - powl
 - pow
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232231"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950292"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Vypočítá *x* umocněné na sílu *y*.
+Vypočítá *x* umocněnou na mocninu *y*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,35 +69,35 @@ long double pow( long double x, int y );  // C++ only
 Základ.
 
 *y*<br/>
-Exponent.
+Zmocněn.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu *x*<sup>*y*</sup>. Žádná chybová zpráva vytištěna na přetečení nebo podtečení.
+Vrátí hodnotu *x*<sup>*y*</sup>. V přetečení nebo podtečení není vytištěna žádná chybová zpráva.
 
-|Hodnoty x a y|Návratová hodnota pow|
+|Hodnoty x a y|Návratová hodnota po POW|
 |-----------------------|-------------------------|
-|*x* ! = 0,0 a *y* == 0,0|1|
-|*x* == 0,0 a *y* == 0,0|1|
-|*x* == 0,0 a *y* < 0|INF|
+|*x* ! = 0,0 a *y* = = 0,0|1|
+|*x* = = 0,0 a *y* = = 0,0|1|
+|*x* = = 0,0 a *y* < 0|SOUBORŮ|
 
 ## <a name="remarks"></a>Poznámky
 
-**Pow** nerozpozná integrální hodnoty s plovoucí desetinnou čárkou větší než 2<sup>64</sup> (například 1.0E100).
+**POW** nerozpoznal celočíselné hodnoty s plovoucí desetinnou čárkou větší než 2<sup>64</sup> (například 1,0 E100).
 
-**Pow** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2, naleznete v tématu [_set_sse2_enable –](set-sse2-enable.md).
+**POW** má implementaci, která používá streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2 naleznete v tématu [_set_SSE2_enable](set-sse2-enable.md).
 
-Protože jazyk C++ umožňuje přetížení, můžete volat některý z různých přetížení **pow**. V programu jazyka C **pow** vždy má dva **double** hodnoty a vrátí **double** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat kterékoli z různých přetížení po **POW**. V programu v jazyce C, **POW** vždycky přebírá dvě hodnoty **Double** a vrátí hodnotu **Double** .
 
-`pow(int, int)` Přetížení již není k dispozici. Pokud použijete toto přetížení, kompilátor může vygenerovat [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). K tomuto problému vyhnout, přetypování první parametr **double**, **float**, nebo **dlouhé** **double**.
+`pow(int, int)` Přetížení již není k dispozici. Použijete-li toto přetížení, kompilátor může generovat [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Chcete-li se tomuto problému vyhnout, přetypujte první parametr na **Double**, **float**nebo **Long** **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
+|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
 |-|-|-|
-|**pow**, **powf**, **powl**|\<math.h>|\<Math.h > nebo \<cmath >|
+|**pow**, **powf**, **powl**|\<Math. h >|\<Math. h > nebo \<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,10 +1,10 @@
 ---
 title: _putch_nolock, _putwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch_nolock
 - _putch_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch_nolock
 - _puttch_nolock
@@ -33,19 +36,19 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-ms.openlocfilehash: 3b3ce1bb36e8a6d938ad620af21e8c1d3bc768db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74f1ba5fe43fb8d29a441fd7e024fa195c1c9082
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358206"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950084"
 ---
-# <a name="putchnolock-putwchnolock"></a>_putch_nolock, _putwch_nolock
+# <a name="_putch_nolock-_putwch_nolock"></a>_putch_nolock, _putwch_nolock
 
-Zapíše znak do konzoly bez zamčení vlákna.
+Zapíše znak do konzoly bez blokování vlákna.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,15 +64,15 @@ wchar_t c
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak pro výstup.
+Znak, který má být výstup.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí *c* v případě úspěšného ověření. Pokud **_putch_nolock** selže, vrátí **EOF**; Pokud **_putwch_nolock** selže, vrátí **WEOF**.
+Pokud je úspěšná, vrátí *c* . Pokud **_putch_nolock** dojde k chybě, vrátí **EOF**. Pokud **_putwch_nolock** selžou, vrátí **WEOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_putch_nolock** a **_putwch_nolock** jsou stejné jako **_putch** a **_putwch**v uvedeném pořadí, s tím rozdílem, že nejsou chráněny před rušením podle ostatní vlákna. Mohou být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
+**_putch_nolock** a **_putwch_nolock** jsou stejné jako **_putch** a **_putwch**, s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -81,14 +84,14 @@ Vrátí *c* v případě úspěšného ověření. Pokud **_putch_nolock** selž
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_putch_nolock**|\<conio.h>|
-|**_putwch_nolock**|\<conio.h>|
+|**_putch_nolock**|\<CONIO. h >|
+|**_putwch_nolock**|\<CONIO. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také:
 

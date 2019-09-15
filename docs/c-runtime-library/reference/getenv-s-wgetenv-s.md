@@ -1,10 +1,10 @@
 ---
 title: getenv_s, _wgetenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getenv_s
 - _wgetenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getenv_s
 - _tgetenv_s
@@ -29,19 +32,19 @@ helpviewer_keywords:
 - environment variables
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
-ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cbd1feab14ac29c46bb8851ff94a48c67bc6014
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331737"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955043"
 ---
-# <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
+# <a name="getenv_s-_wgetenv_s"></a>getenv_s, _wgetenv_s
 
-Získá hodnotu z aktuálního prostředí. Tyto verze [getenv _wgetenv](getenv-wgetenv.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Získá hodnotu z aktuálního prostředí. Tyto verze [getenv, _wgetenv](getenv-wgetenv.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,69 +78,69 @@ errno_t _wgetenv_s(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Velikost vyrovnávací paměti, které je nutné, nebo 0, pokud není nalezena proměnné.
+Velikost vyrovnávací paměti, která je povinná, nebo 0, pokud proměnná nebyla nalezena.
 
-*Vyrovnávací paměti*<br/>
-Vyrovnávací paměť pro ukládání hodnoty horní proměnné prostředí.
+*vyrovnávací paměti*<br/>
+Vyrovnávací paměť pro uložení hodnoty proměnné prostředí
 
 *numberOfElements*<br/>
 Velikost *vyrovnávací paměti*.
 
-*varname*<br/>
-Název proměnné prostředí.
+*název_proměnné*<br/>
+Název proměnné prostředí
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; v opačném případě chybu kódu při selhání.
+Nula v případě úspěchu; v opačném případě chybový kód při selhání.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
-|*pReturnValue*|*Vyrovnávací paměti*|*numberOfElements*|*varname*|Návratová hodnota|
+|*pReturnValue*|*vyrovnávací paměti*|*numberOfElements*|*název_proměnné*|Návratová hodnota|
 |--------------------|--------------|------------------------|---------------|------------------|
-|**NULL**|Všechny|Všechny|Všechny|**EINVAL**|
-|Všechny|**NULL**|>0|Všechny|**EINVAL**|
-|Všechny|Všechny|Všechny|**NULL**|**EINVAL**|
+|**NULL**|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|**NULL**|>0|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|Jakýmikoli|Jakýmikoli|**NULL**|**EINVAL**|
 
-Některé z těchto chybových stavů vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
+Kterákoli z těchto chybových podmínek vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
-Také, pokud vyrovnávací paměť je příliš malá, vrátí tyto funkce **ERANGE**. Ne, vyvolat obslužnou rutinu neplatného parametru. Jejich zapsání velikost požadované vyrovnávací paměti v *pReturnValue*a tím programu povolit programy pro volání funkce s větší vyrovnávací paměti.
+Také pokud je vyrovnávací paměť příliš malá, vrátí tyto funkce **ERANGE**. Nevyvolávají neplatnou obslužnou rutinu parametru. Načítají požadovanou velikost vyrovnávací paměti v *pReturnValue*a umožní tak programům zavolat funkci znovu s větší vyrovnávací pamětí.
 
 ## <a name="remarks"></a>Poznámky
 
-**Getenv_s –** funkce prohledává seznam proměnných prostředí pro *název_proměnné*. **getenv_s –** není malá a velká písmena v operačním systému Windows. **getenv_s –** a [_putenv_s](putenv-s-wputenv-s.md) použijte kopii prostředí, které ukazuje globální proměnná **_environ** pro přístup k prostředí. **getenv_s –** funguje pouze na datové struktury, které jsou k dispozici ke knihovně runtime a ne na prostředí segmentu"", který je vytvořen pro proces operačním systémem. Proto programy, které používají *envp* argument [hlavní](../../cpp/main-program-startup.md) nebo [wmain](../../cpp/main-program-startup.md) může načíst neplatné informace.
+Funkce **getenv_s** vyhledá v seznamu proměnných prostředí pro *název_proměnné*. **getenv_s** nerozlišuje velká a malá písmena v operačním systému Windows. **getenv_s** a [_putenv_s](putenv-s-wputenv-s.md) používají kopii prostředí, na které ukazuje globální proměnná **_environ** pro přístup k prostředí. **getenv_s** funguje pouze v datových strukturách, které jsou přístupné pro běhovou knihovnu, nikoli v prostředí "segment", které je vytvořeno pro proces operačním systémem. Proto programy, které používají argument *envp* pro [Main](../../cpp/main-program-startup.md) nebo [wmain](../../cpp/main-program-startup.md) , mohou načíst neplatné informace.
 
-**_wgetenv_s –** je verze širokého znaku **getenv_s –**; argument a návratová hodnota funkce **_wgetenv_s –** jsou širokoznaké řetězce. **_Wenviron** globální proměnná je verze širokého znaku **_environ**.
+**_wgetenv_s** je **getenv_s**verze s velkým znakem; argument a návratová hodnota **_wgetenv_s** jsou řetězce s velkým počtem znaků. Globální proměnná **_wenviron** je verze **_environ**s velkým znakem.
 
-V aplikaci znakové sady MBCS (například v programu SBCS ASCII) **_wenviron** je zpočátku **NULL** protože prostředí se skládá z vícebajtové znakové řetězce. Pak v prvním volání [_wputenv](putenv-wputenv.md), nebo při prvním volání **_wgetenv_s –**, pokud prostředí (MBCS) již existuje, odpovídající prostředí řetězce širokého znaku se vytvoří a je následně odkázáno pomocí **_wenviron**.
+V programu znakové sady MBCS (například v programu SBCS ASCII) je **_wenviron** zpočátku **null** , protože prostředí se skládá z řetězců vícebajtových znaků. Pak při prvním volání [_wputenv](putenv-wputenv.md)nebo při prvním volání **_wgetenv_s**, pokud už existuje prostředí (MBCS), vytvoří se odpovídající prostředí řetězců s velkým znakem znaků, které pak ukazuje na **_wenviron**.
 
-Podobně jako v Unicode (**_wmain**) program, **_environ** je zpočátku **NULL** protože prostředí se skládá z řetězce širokého znaku. Pak v prvním volání [_putenv](putenv-wputenv.md), nebo při prvním volání **getenv_s –** Pokud prostředí (Unicode) již existuje, odpovídající prostředí MBCS je vytvořen a je následně odkázáno pomocí **_ Environ**.
+Podobně v programu Unicode ( **_wmain**) je **_environ** zpočátku **null** , protože prostředí se skládá z řetězců s velkým počtem znaků. Pak při prvním volání [_putenv](putenv-wputenv.md)nebo při prvním volání **getenv_s** Pokud již existuje prostředí (Unicode), vytvoří se odpovídající prostředí znakové sady MBCS a následně na něj odkazuje **_environ**.
 
-Pokud dvě kopie prostředí (znaková sada MBCS a Unicode) existují současně v programu v jazyce, za běhu systému, musíte mít obě kopie a to způsobí, že času provádění. Například při volání **_putenv**, volání **_wputenv** je také spouštěny automaticky, takže odpovídají řetězce dvě prostředí.
+V případě, že dvě kopie prostředí (MBCS a Unicode) existují současně v programu, musí operační systém uchovávat obě kopie a to způsobí pomalejší dobu provádění. Například při volání **_putenv**je volání **_wputenv** také provedeno automaticky, aby oba řetězce prostředí odpovídaly.
 
 > [!CAUTION]
-> Ve výjimečných případech když Unicode verze a vícebajtová verze prostředí, za údržbu systému za běhu verze dvě prostředí nemusí odpovídat přesně. K tomu dochází proto, že i když jakýkoli jedinečný řetězec vícebajtového znaku zakončeného mapuje na jedinečné řetězec znaků Unicode, mapování z jedinečný řetězec znaků Unicode na řetězec vícebajtového znaku není nutně jedinečné. Další informace najdete v tématu [_environ _wenviron](../../c-runtime-library/environ-wenviron.md).
+> Ve vzácných instancích platí, že když systém za běhu udržuje jak verzi Unicode, tak vícebajtovou verzi prostředí, tyto dvě verze prostředí nemusí přesně odpovídat. K tomu dochází, protože i když jakýkoliv jedinečný řetězec vícebajtových znaků mapuje na jedinečný řetězec Unicode, mapování z jedinečného řetězce Unicode na řetězec vícebajtových znaků není nutně jedinečné. Další informace najdete v tématu [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> **_Putenv_s** a **_getenv_s** rodinách funkcí nejsou vláknově bezpečné. **_getenv_s** může vrátit ukazatel řetězce při **_putenv_s** upravuje řetězec a tím způsobí náhodná selhání. Ujistěte se, že volání těchto funkcí jsou synchronizována.
+> Řady funkcí **_putenv_s** a **_getenv_s** nejsou bezpečné pro přístup z více vláken. **_getenv_s** může vracet ukazatel na řetězec, zatímco **_putenv_s** upravuje řetězec, a proto způsobuje náhodné chyby. Ujistěte se, že jsou volání těchto funkcí synchronizovaná.
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit velikost vyrovnávací paměti automaticky a tím eliminují potřebu zadat argument velikosti. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky, takže eliminují nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
-Zkontrolujte nebo změňte hodnotu **TZ** proměnné, použijte prostředí **getenv_s –**, **_putenv**, a **_tzset –**, podle potřeby. Další informace o **TZ**, naleznete v tématu [_tzset –](tzset.md) a [_daylight, _dstbias, _timezone a _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Chcete-li ověřit nebo změnit hodnotu proměnné prostředí **TZ** , použijte **getenv_s**, **_putenv**a **_tzset**, podle potřeby. Další informace o **TZ**naleznete v tématech [_tzset](tzset.md) a [_daylight, _dstbias, _timezone a _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**getenv_s**|\<stdlib.h>|
-|**_wgetenv_s**|\<stdlib.h > nebo \<wchar.h >|
+|**_wgetenv_s**|\<Stdlib. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

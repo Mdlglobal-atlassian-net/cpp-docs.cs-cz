@@ -1,14 +1,14 @@
 ---
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsncat_s_l
 - wcsncat_s
 - _mbsncat_s_l
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strncat_s_l
 - _mbsncat_s_l
@@ -48,19 +51,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 6651bb6ac405ed51945f021e8d1e19f1db05d5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a3c8d7019c271b2673e85e124d50139d34866c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209893"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947410"
 ---
-# <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
+# <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
-Připojí znaky do řetězce. Tyto verze [strncat – _strncat_l, wcsncat –, _wcsncat_l, _mbsncat –, _mbsncat_l –](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Připojí znaky k řetězci. Tyto verze [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncat_s –** a **_mbsncat_s_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat_s** a **_mbsncat_s_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -148,37 +151,37 @@ errno_t _mbsncat_s_l(
 ### <a name="parameters"></a>Parametry
 
 *strDest*<br/>
-Řetězec cíle zakončený hodnotou Null.
+Cílový řetězec zakončený hodnotou null.
 
 *numberOfElements*<br/>
 Velikost cílové vyrovnávací paměti.
 
 *strSource*<br/>
-Řetězec zakončený hodnotou Null zdroje.
+Zdrojový řetězec zakončený hodnotou null.
 
-*Počet*<br/>
-Počet znaků k připojení, nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
+*výpočtu*<br/>
+Počet znaků, které se mají připojit, nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu 0, pokud je úspěšná, kód chyby při selhání.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
 |*strDestination*|*numberOfElements*|*strSource*|Návratová hodnota|Obsah *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL** nebo neukončený|Všechny|Všechny|**EINVAL**|Nezměněno|
-|Všechny|Všechny|**NULL**|**EINVAL**|Nezměněno|
-|Všechny|0 nebo příliš malá|Všechny|**ERANGE**|Nezměněno|
+|**Null** nebo neukončeno|Jakýmikoli|Jakýmikoli|**EINVAL**|Neupraveno|
+|Jakýmikoli|Jakýmikoli|**NULL**|**EINVAL**|Neupraveno|
+|Jakýmikoli|0 nebo příliš malý|Jakýmikoli|**ERANGE**|Neupraveno|
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce se pokusí připojit první *D* znaků *strSource* na konec *strDest*, kde *D* je menší než délka *počet* a délka *strSource*. Pokud připojení ty *D* znaků se vejde *strDest* (jejíž velikost je zadána jako *numberOfElements*) a ponechat místo pro ukončovacího znaku null, pak tyto znaky se připojují, počínaje ukončující hodnotu null z původní *strDest*, a nové ukončujícího znaku null je připojený; v opačném případě *strDest*[0] je nastavena na znak null a neplatný parametr je vyvolána obslužná rutina, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Tyto funkce se pokusí připojit prvních *D* znaků *StrSource* ke konci *strDest*, kde *D* je menší počet a délka *strSource*. Pokud se tyto *D* znaky připojí do *strDest* (jehož velikost se předává jako *numberOfElements*) a stále ponechají místo pro ukončovací znak null, pak se tyto znaky připojí, počínaje původní ukončující hodnotou null  *strDest*a je připojen nový ukončující znak null; v opačném případě je *strDest*[0] nastaven na znak null a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
-Dojde k výjimce výše odstavce. Pokud *počet* je [_TRUNCATE](../../c-runtime-library/truncate.md) pak největší část *strSource* jako se hodí se připojí k *strDest* a stále ponechají prostor pro připojení ukončující hodnotu null.
+Výše uvedený odstavec obsahuje výjimku. Pokud je počet [_TRUNCATE](../../c-runtime-library/truncate.md) , pak je *strSource* , jak je to vhodné, připojeno k *strDest* , zatímco stále opouští místo pro připojení ukončující hodnoty null.
 
 Například
 
@@ -188,9 +191,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-znamená, že vás žádáme, **strncat_s –** připojit tři znaky na dvou znaků ve vyrovnávací paměti pět znaků dlouhé; to by není místo pro ukončovacího znaku null, proto nechte **strncat_s –** nuly mimo řetězec a volá obslužná rutina neplatného parametru.
+znamená, že žádáme **strncat_s** , aby připojil tři znaky k dvěma znakům ve vyrovnávací paměti po dobu pěti znaků. To by nezůstalo žádný prostor pro ukončovací znak null, proto **strncat_s** vynulová řetězec a zavolá neplatnou obslužnou rutinu parametru.
 
-V případě potřeby zkrácení chování použijte **_TRUNCATE** nebo upravit *velikost* parametr odpovídajícím způsobem:
+Pokud je potřeba chování zkrácení, použijte **_TRUNCATE** nebo upravte parametr *Size* odpovídajícím způsobem:
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -202,36 +205,36 @@ or
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 ```
 
-Ve všech případech je výsledný řetězec je ukončen znakem null. Pokud se kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
+Ve všech případech je výsledný řetězec ukončen znakem null. Pokud se provádí kopírování mezi řetězci, které se překrývají, chování není definováno.
 
-Pokud *strSource* nebo *strDest* je **NULL**, nebo je *numberOfElements* je nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, funkce vrátí **EINVAL** beze změny jeho parametry.
+Pokud *strSource* nebo *StrDest* má **hodnotu null**nebo je *numberOfElements* nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, funkce vrátí **EINVAL** bez změny jeho parametrů.
 
-**wcsncat_s –** a **_mbsncat_s –** jsou širokoznaké a vícebajtové verze **strncat_s –**. Argumenty řetězce a vrácené hodnoty **wcsncat_s –** jsou širokoznaké řetězce **_mbsncat_s –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
+**wcsncat_s** a **_mbsncat_s** jsou verze s velkým znakem a vícebajtovým znakem **strncat_s**. Argumenty řetězce a návratová hodnota **wcsncat_s** jsou řetězce s velkým počtem znaků; ty z **_mbsncat_s** jsou vícebajtové znakové řetězce. Tyto tři funkce se chovají identicky jinak.
 
-Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
+Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l** a **_wcsncat_s_l** mít žádnou závislost národního prostředí; jsou poskytovány pouze pro **_tcsncat_s_l –**.
+**_strncat_s_l** a **_wcsncat_s_l** nemají žádnou závislost národního prostředí; jsou k dispozici pouze pro **_tcsncat_s_l**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strncat_s**|\<string.h>|
-|**wcsncat_s**|\<String.h > nebo \<wchar.h >|
-|**_mbsncat_s**, **_mbsncat_s_l**|\<Mbstring.h >|
+|**strncat_s**|\<String. h >|
+|**wcsncat_s**|\<String. h > nebo \<WCHAR. h >|
+|**_mbsncat_s**, **_mbsncat_s_l**|\<Mbstring. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -372,7 +375,7 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

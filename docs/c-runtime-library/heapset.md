@@ -1,9 +1,9 @@
 ---
 title: _heapset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapset
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr80.dll
 - msvcr110.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapset
 - heapset
@@ -22,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 41c39914964de74401dcdef847b2c44f623af249
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65b74798c4b3b513acea0b51ecc0cb7df98391c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944310"
 ---
-# <a name="heapset"></a>_heapset
+# <a name="_heapset"></a>_heapset
 
-Kontroluje haldy pro minimální konzistence a nastaví volné položky na zadanou hodnotu.
+Kontroluje haldy pro minimální konzistenci a nastavuje bezplatné položky na zadanou hodnotu.
 
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Od v sadě Visual Studio 2015, není k dispozici v CRT.
+>  Tato funkce je zastaralá. Počínaje verzí Visual Studio 2015 není k dispozici v CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,35 +49,35 @@ int _heapset(
 
 #### <a name="parameters"></a>Parametry
 
-*Výplň*<br/>
-Zadejte znak.
+*vyplnění*<br/>
+Znak Fill.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`_heapset` Vrátí jeden z následující celých čísel konstant manifestu definovaných v Malloc.h.
+`_heapset`Vrátí jednu z následujících celočíselných konstant manifestu definovaných ve typu. h.
 
 |||
 |-|-|
-| `_HEAPBADBEGIN`  | Počáteční informace hlavičky jsou neplatné nebo nebyly nalezeny.  |
-| `_HEAPBADNODE`  | Haldy poškozený nebo nalezený špatný uzel.  |
-| `_HEAPEMPTY`  | Halda neinicializována.  |
-| `_HEAPOK`  | Haldy se zdá být konzistentní vzhledem k aplikacím.  |
+| `_HEAPBADBEGIN`  | Informace počáteční hlavičky jsou neplatné nebo se nenašly.  |
+| `_HEAPBADNODE`  | Byl nalezen poškozený nebo chybný uzel haldy.  |
+| `_HEAPEMPTY`  | Halda není inicializovaná.  |
+| `_HEAPOK`  | Halda se jeví jako konzistentní.  |
 
-Kromě toho, pokud dojde k chybě `_heapset` nastaví `errno` k `ENOSYS`.
+Kromě toho, pokud dojde k chybě, `_heapset` nastaví `errno` na `ENOSYS`.
 
 ## <a name="remarks"></a>Poznámky
 
-`_heapset` Funkce zobrazuje umístění volné paměti nebo uzly, které byly neúmyslně přepsána.
+`_heapset` Funkce zobrazuje volná umístění paměti nebo uzly, které byly neúmyslně přepsány.
 
-`_heapset` kontroluje minimální konzistence na haldě a pak nastaví všech bajtů haldy bezplatné položky `fill` hodnotu. Tato známá hodnota zobrazí umístění paměti haldy obsahovat uzly úrovně free a které obsahují data, která se neúmyslně zapsána do uvolněné paměti. Pokud operační systém nepodporuje `_heapset`(například Windows 98), funkce vrátí `_HEAPOK` a nastaví `errno` k `ENOSYS`.
+`_heapset`kontroluje minimální konzistenci haldy a pak nastaví každý bajt bezplatných záznamů haldy na `fill` hodnotu. Tato známá hodnota ukazuje, která paměťová umístění haldy obsahují volné uzly a která obsahují data, která nebyla záměrně zapsána do uvolněné paměti. Pokud operační systém `_heapset`nepodporuje (například Windows 98), vrátí `_HEAPOK` funkce a nastaví `errno` na `ENOSYS`.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|`_heapset`|\<malloc.h>|\<errno.h>|
+|`_heapset`|\<. h >|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md) v úvodu.
+Další informace o kompatibilitě naleznete v úvodu v tématu [Kompatibilita](../c-runtime-library/compatibility.md) .
 
 ## <a name="example"></a>Příklad
 

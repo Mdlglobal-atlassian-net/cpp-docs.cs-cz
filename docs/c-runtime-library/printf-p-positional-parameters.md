@@ -1,30 +1,33 @@
 ---
 title: printf_p – poziční parametry
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-ms.openlocfilehash: f6ee84a68b2f40e535ed1dc76e4617a21bb29a6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 156baa1a91931199ebca5f6200e239aa944fee1e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348039"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944051"
 ---
-# <a name="printfp-positional-parameters"></a>printf_p – poziční parametry
+# <a name="printf_p-positional-parameters"></a>printf_p – poziční parametry
 
-Poziční parametry umožňují určit číslo, které argumentů je nahrazena do pole v řetězci formátu. Následující poziční parametr `printf` funkce jsou k dispozici:
+Poziční parametry poskytují možnost zadat podle čísla, které argumenty mají být nahrazeny polem v řetězci formátu. K dispozici jsou následující `printf` funkce pozičního parametru:
 
-| Funkce bez poziční printf | Ekvivalenty pozičních parametrů více dopředu |
+| Printf funkce bez umístění | Poziční ekvivalenty parametrů |
 |---|---|
 |[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|[_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|
 |[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|
@@ -34,53 +37,53 @@ Poziční parametry umožňují určit číslo, které argumentů je nahrazena d
 |[vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|[_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l](../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)|
 |[vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, \__vswprintf_l](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)|[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|
 
-## <a name="how-to-specify-positional-parameters"></a>Jak určit poziční parametry
+## <a name="how-to-specify-positional-parameters"></a>Určení pozičních parametrů
 
-### <a name="parameter-indexing"></a>Parametr indexování
+### <a name="parameter-indexing"></a>Indexování parametrů
 
-Ve výchozím nastavení pokud je k dispozici, žádný poziční formátování poziční funkce chovají identicky nepoziční ty. Zadejte poziční parametr formátování pomocí `%n$` na začátku specifikátor formátu, ve kterém `n` je pozice parametru pro formátování v seznamu parametrů. Pozice parametru začíná 1 pro první argument po formátovací řetězec. Zbývající část specifikátoru formátu následuje stejná pravidla jako `printf` specifikátorem formátu. Další informace o formátu specfiers najdete v tématu [syntaxe specifikace formátu: funkce printf a wprintf](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Ve výchozím nastavení, pokud není k dispozici žádné poziční formátování, se poziční funkce chovají stejně jako nepolohované. Určete poziční parametr pro formátování pomocí `%n$` na začátku specifikátoru formátu, kde `n` je pozice parametru, který se má formátovat v seznamu parametrů. Pozice parametru začíná 1 pro první argument za formátovacím řetězcem. Zbytek specifikátoru formátu následuje stejná pravidla jako `printf` specifikátor formátu. Další informace o formátu specfiers najdete v tématu [syntaxe specifikace formátu: printf a wprintf Functions](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-Tady je příklad poziční formátování:
+Tady je příklad pozičního formátování:
 
 ```C
 _printf_p("%1$s %2$s", "November", "10");
 ```
 
-Vytiskne toto:
+Vytiskne se:
 
 ```
 November 10
 ```
 
-Pořadí čísel používá nemusí odpovídat pořadí argumentů. Například je platným formátovacím řetězcem:
+Pořadí používaných čísel nemusí odpovídat pořadí argumentů. Jedná se například o platný řetězec formátu:
 
 ```C
 _printf_p("%2$s %1$s", "November", "10");
 ```
 
-Vytiskne toto:
+Vytiskne se:
 
 ```
 10 November
 ```
 
-Na rozdíl od tradičních formátovací řetězce poziční parametry lze více než jednou v řetězci formátu. Například
+Na rozdíl od tradičních formátovacích řetězců lze poziční parametry použít více než jednou v řetězci formátu. Například
 
 ```C
 _printf_p("%1$d times %1$d is %2$d", 10, 100);
 ```
 
-Vytiskne toto:
+Vytiskne se:
 
 ```
 10 times 10 is 100
 ```
 
-Všechny argumenty musí využívat alespoň jednou někde ve formátovacím řetězci. Maximální počet povolený v řetězci formátu poziční parametry je dán `_ARGMAX`.
+Všechny argumenty musí být alespoň jednou v řetězci formátu. Maximální počet pozičních parametrů povolených v řetězci formátu je dán `_ARGMAX`.
 
 ### <a name="width-and-precision"></a>Šířka a přesnost
 
-Můžete použít `*n$` určit poziční parametr jako specifikátor šířku nebo přesnosti, kde `n` je parametr width nebo přesnosti pozice v seznamu parametrů. Pozice hodnotu šířky nebo přesnosti musí být uvedena ihned následující \* symbol. Například
+Můžete použít `*n$` k určení pozičního parametru jako specifikátoru šířky nebo přesnosti, kde `n` je pozice parametru Width nebo Precision v seznamu parametrů. Pozice hodnoty Width nebo Precision se musí objevit hned za \* symbolem. Například
 
 ```C
 _printf_p("%1$*2$s","Hello", 10);
@@ -92,9 +95,9 @@ or
 _printf_p("%2$*1$s", 10, "Hello");
 ```
 
-### <a name="mixing-positional-and-non-positional-arguments"></a>Kombinování poziční a nepoziční argumenty
+### <a name="mixing-positional-and-non-positional-arguments"></a>Kombinování pozičních a nepozičních argumentů
 
-Poziční parametry nelze kombinovat s – poziční parametry ve stejném formátovacím řetězci. Pokud poziční formátování se používá, musí všechny specifikátory formátu použít poziční formátování. Ale `printf_p` a související funkce stále podporovat – poziční parametry ve formátu řetězců obsahující žádné poziční parametry.
+Poziční parametry se nedají kombinovat s parametry, které nejsou poziční, ve stejném formátovacím řetězci. Pokud je použito jakékoli poziční formátování, musí mít všechny specifikátory formátu poziční formátování. `printf_p` Nicméně a související funkce stále podporují Nepoziční parametry ve formátovacích řetězcích, které neobsahují žádné poziční parametry.
 
 ## <a name="example"></a>Příklad
 

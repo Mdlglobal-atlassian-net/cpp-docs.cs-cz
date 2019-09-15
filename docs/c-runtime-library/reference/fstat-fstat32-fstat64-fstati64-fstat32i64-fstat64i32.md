@@ -1,14 +1,14 @@
 ---
 title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fstat32
 - _fstat64
 - _fstati64
 - _fstat
 - _fstat64i32
 - _fstat32i64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstat32i64
 - fstat
@@ -49,16 +52,16 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ab71071fdf5578295cfcd72f79930787e634d5f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332785"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956466"
 ---
-# <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
+# <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
-Získá informace o otevření souboru.
+Načte informace o otevřeném souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -92,65 +95,65 @@ int _fstat64i32(
 ### <a name="parameters"></a>Parametry
 
 *fd*<br/>
-Popisovač souboru otevřený souboru.
+Popisovač souboru otevřeného souboru
 
-*Vyrovnávací paměti*<br/>
-Ukazatel na strukturu pro ukládání výsledků.
+*vyrovnávací paměti*<br/>
+Ukazatel na strukturu pro uložení výsledků.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu 0, pokud je získat informace o stavu souboru. Návratová hodnota-1 označuje chybu. Pokud popisovač souboru je neplatný nebo *vyrovnávací paměti* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EBADF**, v případě neplatného popisovače souboru, nebo do adresáře **EINVAL**, pokud *vyrovnávací paměti* je **NULL**.
+Vrátí hodnotu 0, pokud jsou získány informace o stavu souboru. Návratová hodnota-1 označuje chybu. Pokud je popisovač souboru neplatný nebo má *vyrovnávací paměť* **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EBADF**, v případě neplatného deskriptoru souboru nebo na **EINVAL**, pokud má *vyrovnávací paměť* **hodnotu null**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fstat** funkce získává informace o otevřený soubor přidružený k *fd* a uloží jej do struktury, na které odkazuje *vyrovnávací paměti*. **_Stat** struktury definované v SYS\Stat.h, obsahuje následující pole.
+Funkce **_fstat** získává informace o otevřeném souboru přidruženém ke *FD* a ukládá je do struktury, na kterou odkazovalo pomocí *vyrovnávací paměti*. Struktura **_stat** definovaná v SYS\Stat.h obsahuje následující pole.
 
 |Pole|Význam|
 |-|-|
-| **st_atime** | Čas posledního přístupu k souboru. |
-| **st_ctime** | Čas vytvoření souboru. |
-| **st_dev** | Pokud zařízení, *fd*; jinak 0. |
-| **st_mode** | Bitová maska informace režim souboru. **_S_IFCHR** bit nastaven, pokud *fd* odkazuje na zařízení. **_S_IFREG** bit nastaven, pokud *fd* odkazuje na soubor běžné. Bits pro čtení a zápis nastaveny podle režimu oprávnění k souboru. **_S_IFCHR** a ostatní konstanty jsou definovány v SYS\Stat.h. |
+| **st_atime** | Čas posledního přístupu k souboru |
+| **st_ctime** | Čas vytvoření souboru |
+| **st_dev** | Pokud zařízení, *FD*; v opačném případě 0. |
+| **st_mode** | Bitová maska pro informace o režimu souboru. Bit **_S_IFCHR** je nastaven, pokud má *FD* odkaz na zařízení. Bit **_S_IFREG** je nastaven, pokud *FD* odkazuje na běžný soubor. Bity pro čtení a zápis jsou nastaveny v závislosti na režimu oprávnění souboru. **_S_IFCHR** a další konstanty jsou definovány v SYS\Stat.h. |
 | **st_mtime** | Čas poslední změny souboru. |
-| **st_nlink** | Vždy 1 v systémech souborů než NTFS. |
-| **st_rdev** | Pokud zařízení, *fd*; jinak 0. |
-| **st_size** | Velikost souboru v bajtech. |
+| **st_nlink** | Vždy 1 v systémech souborů bez NTFS. |
+| **st_rdev** | Pokud zařízení, *FD*; v opačném případě 0. |
+| **st_size** | Velikost souboru v bajtech |
 
-Pokud *fd* odkazuje na zařízení, **st_atime**, **st_ctime**, **st_mtime**, a **st_size** pole jsou nemá význam.
+Pokud *FD* odkazuje na zařízení, pole **st_atime**, **st_ctime**, **st_mtime**a **st_size** nejsou smysluplná.
 
-Vzhledem k tomu používá Stat.h [_dev_t](../../c-runtime-library/standard-types.md) typ, který je definován v Types.h, je nutné zahrnout Types.h před Stat.h ve vašem kódu.
+Vzhledem k tomu, že stat. h používá typ [_dev_t](../../c-runtime-library/standard-types.md) , který je definován v Types. h, musíte zahrnout Types. h před stat. h ve vašem kódu.
 
-**_fstat64**, který používá **__stat64 –** struktury, umožňuje vytvoření souboru data vyjadřují až do 23:59:59, 31 prosince 3000 UTC, zatímco jiné funkce pouze představuje data do 23:59:59 18. ledna 2038 UTC. Půlnoc 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
+**_fstat64**, která používá strukturu **__stat64** , umožňuje, aby data vytváření souborů byla vyjádřena až 23:59:59, 31. prosince 3000, UTC; zatímco jiné funkce reprezentují jenom kalendářní data až 23:59:59. ledna 2038, UTC. Půlnoc, 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
 
-Variace z těchto funkcí podporovaly typy času 32bitové nebo 64bitové a 32bitové nebo 64bitové souboru. První číselná přípona (**32** nebo **64**) označuje velikost času používá typ; druhý přípony je buď **i32** nebo **i64**, označující, zda velikost souboru je reprezentován jako 32bitový nebo 64bitové celé číslo.
+Variace těchto funkcí podporují 32 nebo 64 typů času a 32 bitů a délky ne64 bitové kopie souboru. První číselná přípona (**32** nebo **64**) označuje velikost použitého typu času; Druhá přípona je buď **i32** , nebo **I64**, která označuje, jestli je velikost souboru reprezentována jako 32 nebo 64 celočíselného bitu.
 
-**_fstat** je ekvivalentní **_fstat64i32 –**, a **struktura** **_stat** obsahuje 64-bit čas. To platí Pokud **_USE_32BIT_TIME_T** je definován v takovém případě je v platnosti; staré chování **_fstat** používá čas 32-bit, a **struktura** **_stat** obsahuje čas 32-bit. Totéž platí pro **_fstati64**.
+**_fstat** je ekvivalentem **_fstat64i32**a **Struktura** **_stat** obsahuje 64-bit času. To platí, pokud není definován **_USE_32BIT_TIME_T** , v takovém případě se stará chování projeví. **_fstat** používá 32 čas a **struktura** **_stat** obsahuje 32-bit času. Totéž platí pro **_fstati64**.
 
-### <a name="time-type-and-file-length-type-variations-of-stat"></a>Typ času a soubor délka typ Variant _stat –
+### <a name="time-type-and-file-length-type-variations-of-_stat"></a>Typ času a délka souboru – variace typu _stat
 
-|Funkce|_USE_32BIT_TIME_T definované?|Typ času|Délka typu souboru|
+|Funkce|_USE_32BIT_TIME_T definovány?|Typ času|Typ délky souboru|
 |---------------|------------------------------------|---------------|----------------------|
-|**_fstat**|Nedefinovaná.|64bitová|32bitová|
-|**_fstat**|Definice|32bitová|32bitová|
-|**_fstat32**|Není ovlivněna definici makra|32bitová|32bitová|
-|**_fstat64**|Není ovlivněna definici makra|64bitová|64bitová|
-|**_fstati64**|Nedefinovaná.|64bitová|64bitová|
-|**_fstati64**|Definice|32bitová|64bitová|
-|**_fstat32i64**|Není ovlivněna definici makra|32bitová|64bitová|
-|**_fstat64i32**|Není ovlivněna definici makra|64bitová|32bitová|
+|**_fstat**|Nedefinováno|64bitová|32bitová|
+|**_fstat**|definované|32bitová|32bitová|
+|**_fstat32**|Není ovlivněno definicí makra.|32bitová|32bitová|
+|**_fstat64**|Není ovlivněno definicí makra.|64bitová|64bitová|
+|**_fstati64**|Nedefinováno|64bitová|64bitová|
+|**_fstati64**|definované|32bitová|64bitová|
+|**_fstat32i64**|Není ovlivněno definicí makra.|32bitová|64bitová|
+|**_fstat64i32**|Není ovlivněno definicí makra.|64bitová|32bitová|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fstat**|\<SYS/stat.h > a \<sys/types.h >|
-|**_fstat32**|\<SYS/stat.h > a \<sys/types.h >|
-|**_fstat64**|\<SYS/stat.h > a \<sys/types.h >|
-|**_fstati64**|\<SYS/stat.h > a \<sys/types.h >|
-|**_fstat32i64**|\<SYS/stat.h > a \<sys/types.h >|
-|**_fstat64i32**|\<SYS/stat.h > a \<sys/types.h >|
+|**_fstat**|\<sys/stat. h > a \<sys/Types. h >|
+|**_fstat32**|\<sys/stat. h > a \<sys/Types. h >|
+|**_fstat64**|\<sys/stat. h > a \<sys/Types. h >|
+|**_fstati64**|\<sys/stat. h > a \<sys/Types. h >|
+|**_fstat32i64**|\<sys/stat. h > a \<sys/Types. h >|
+|**_fstat64i32**|\<sys/stat. h > a \<sys/Types. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -223,4 +226,4 @@ Time modified : Wed May 07 15:25:11 2003
 [_access, _waccess](access-waccess.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_filelength, _filelengthi64](filelength-filelengthi64.md)<br/>
-[_stat, _wstat – funkce](stat-functions.md)<br/>
+[_stat, funkce _wstat](stat-functions.md)<br/>

@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _CrtSetDebugFillThreshold
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fe7d998a44502709edde33d22c1b1e88cf5ecbee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342969"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942298"
 ---
-# <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
+# <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
-Načte nebo změní prahovou hodnotu řízení chování plnění vyrovnávací paměti v funkcí ladění.
+Načte nebo upraví prahovou hodnotu řízení chování při zaplňování vyrovnávací paměti ve funkcích ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,15 +48,15 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 ### <a name="parameters"></a>Parametry
 
 *newThreshold*<br/>
-Nová velikost prahovou hodnotu v bajtech.
+Nová velikost prahové hodnoty v bajtech
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Prahová hodnota.
+Předchozí prahová hodnota.
 
 ## <a name="remarks"></a>Poznámky
 
-Ladicí verze funkcí některé rozšířené zabezpečení CRT naplní vyrovnávací paměť předaná k nim pomocí speciálních znaků (0xFE). To pomáhá najít případy, kdy byl předán funkci nesprávná velikost. Bohužel také snižuje výkon. Chcete-li zvýšit výkon, použijte **_crtsetdebugfillthreshold –** zakázat plnění vyrovnávací paměti pro větší než vyrovnávací paměti *newThreshold* prahovou hodnotu. A *newThreshold* hodnota 0 zakáže pro všechny vyrovnávací paměti.
+Ladicí verze některých funkcí CRT s vylepšeným zabezpečením naplní vyrovnávací paměť, která je předána, speciálním znakem (0xFE). To pomáhá najít případy, kdy byla do funkce předána nesprávná velikost. Ale zároveň snižuje výkon. Pro zvýšení výkonu pomocí **_CrtSetDebugFillThreshold** zakažte vyplňování vyrovnávací paměti pro vyrovnávací paměti větší, než je prahová hodnota *newThreshold* . Hodnota *newThreshold* 0 ji zakáže pro všechny vyrovnávací paměti.
 
 Výchozí prahová hodnota je **SIZE_T_MAX**.
 
@@ -101,11 +104,11 @@ Tady je seznam ovlivněných funkcí.
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-Tato funkce je specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Tato funkce je specifická pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 

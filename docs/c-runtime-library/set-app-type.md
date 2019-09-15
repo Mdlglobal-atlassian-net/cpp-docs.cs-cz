@@ -1,25 +1,28 @@
 ---
 title: _set_app_type
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_app_type
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: 5a29fd94cca7fdbf6bbb24699b7f510bf1465f15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e04d88d9e9981e35b7d4c80c11d27c868219f65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268808"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957924"
 ---
-# <a name="setapptype"></a>_set_app_type
+# <a name="_set_app_type"></a>_set_app_type
 
-Vnitřní funkce, která používá při spuštění říct CRT, jestli je aplikace konzolové aplikace nebo aplikace s grafickým uživatelským rozhraním.
+Interní funkce použitá při spuštění k informování CRT, jestli je aplikace Konzolová aplikace nebo aplikace grafického uživatelského rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,18 +44,18 @@ void __cdecl _set_app_type(
 *appType*<br/>
 Hodnota, která určuje typ aplikace. Možné hodnoty jsou:
 
-|Hodnota|Popis|
+|Value|Popis|
 |----------------|-----------------|
-|_crt_unknown_app|Neznámý typ aplikace.|
+|_crt_unknown_app|Neznámý typ aplikace|
 |_crt_console_app|Aplikace konzoly (příkazového řádku).|
 |_crt_gui_app|Aplikace grafického uživatelského rozhraní (Windows).|
 
 ## <a name="remarks"></a>Poznámky
 
-Za normálních okolností není potřeba voláním této funkce. Je součástí C runtime spouštěcí kód, který se spustí před `main` nazývá ve vaší aplikaci.
+Obvykle nemusíte tuto funkci volat. Je součástí spouštěcího kódu modulu runtime jazyka C, který se `main` spustí před voláním ve vaší aplikaci.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|_set_app_type|Process.h|
+|_set_app_type|Process. h|

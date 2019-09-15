@@ -1,10 +1,10 @@
 ---
 title: _fsopen, _wfsopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfsopen
 - _fsopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wfsopen
 - fsopen
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 197a4f690a6626edbfec27ea4abef1999b6cedaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ffc3aa5801ff2ed63ecf815f3351e4d7a8cf459
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287693"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956485"
 ---
-# <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
+# <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
-Otevře se datový proud s sdílení souborů.
+Otevře datový proud se sdílením souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,60 +66,60 @@ FILE *_wfsopen(
 
 ### <a name="parameters"></a>Parametry
 
-*Název souboru*<br/>
-Název souboru, který se otevře.
+*Bitmap*<br/>
+Název souboru, který se má otevřít
 
-*Režim*<br/>
-Typ přístupu povolený.
+*Mode*<br/>
+Typ povoleného přístupu.
 
 *shflag*<br/>
-Typ sdílení povolené.
+Typ sdílení je povolený.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací ukazatel na datový proud. Hodnota nulového ukazatele indikuje chybu. Pokud *filename* nebo *režimu* je **NULL** nebo prázdný řetězec, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation ](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **NULL** a nastavte **errno** k **EINVAL**.
+Každá z těchto funkcí vrací ukazatel na datový proud. Hodnota nulového ukazatele označuje chybu. Pokud je *název souboru* nebo *režim* **null** nebo prázdný řetězec, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **hodnotu null** a nastaví **errno** na **EINVAL**.
 
 Další informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fsopen –** otevře soubor určený parametrem funkce *filename* jako datový proud a připraví soubor pro následující sdílené čtení nebo zápisu, jak je definováno režimu a *shflag*argumenty. **_wfsopen –** je verze širokého znaku **_fsopen –**; *filename* a *režimu* argumenty **_wfsopen –** jsou řetězce širokého znaku. **_wfsopen –** a **_fsopen –** se jinak chovají stejně.
+Funkce **_fsopen** otevře soubor určený parametrem *filename* jako datový proud a připraví soubor pro následné sdílené čtení nebo zápis, jak jsou definovány argumenty Mode a *Shflag* . **_wfsopen** je **_fsopen**verze s velkým znakem; argumenty *filename* a *Mode* pro **_wfsopen** jsou řetězce s libovolným znakem. **_wfsopen** a **_fsopen** se chovají stejně jinak.
 
-Řetězec znaků *režimu* Určuje typ požadovaného přístupu k souboru, jak je znázorněno v následující tabulce.
-
-|Termín|Definice|
-|----------|----------------|
-|**"r"**|Otevře pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, **_fsopen –** volání selže.|
-|**"w"**|Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah zničen.|
-|**"a"**|Otevře se pro zápis na konci souboru (připojením); soubor nejdříve vytvoří, pokud neexistuje.|
-|**"r +"**|Otevře pro čtení i zápis. (Soubor musí existovat.)|
-|**"w +"**|Otevře prázdný soubor pro čtení i zápis. Pokud daný soubor existuje, jeho obsah zničen.|
-|**"a +"**|Otevře pro čtení a přidávání soubor nejdříve vytvoří, pokud neexistuje.|
-
-Použití **"w"** a **"w +"** typy opatrně, protože mohou zničit existující soubory.
-
-Při otevření souboru se **"a"** nebo **"a +"** získat přístup k typu, všechny zápisu operace dojít na konci souboru. Ukazatel na soubor lze přesunout pomocí [fseek](fseek-fseeki64.md) nebo [rewind](rewind.md), ale to je vždy přesunut na konec souboru před jakékoli zápisu operace provádí. Žádná existující data proto nemohou být přepsána. Když **"r +"**, **"w +"**, nebo **"a +"** je zadán přístupový typ, je povoleno čtení i zápis (souboru se říká, že otevřen pro úpravy). Ale při přepínání mezi čtení a zápis, musí existovat podílející [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), nebo [rewind](rewind.md) operace. Aktuální pozici, je možné zadat pro [fsetpos](fsetpos.md) nebo [fseek](fseek-fseeki64.md) operace, v případě potřeby. Kromě výše uvedených hodnot, jeden z následujících znaků může být součástí *režimu* k určení režimu překladu nových řádků a pro správu souborů.
+*Režim* řetězce znaků Určuje typ přístupu požadovaný pro soubor, jak je znázorněno v následující tabulce.
 
 |Termín|Definice|
 |----------|----------------|
-|**t**|Otevře soubor v textovém (přeloženém) režimu. V tomto režimu return-line návrat na začátek řádku – kombinace informačního kanálu (CR-LF) jsou přeloženy do informačních kanálů jednoho řádku (LF) na vstupu a LF jsou přeloženy na výstupu jako kombinace CR-LF. Příkaz CTRL+Z je na vstupu interpretován jako znak konce souboru. V souborech otevřených pro čtení nebo čtení/zápis **_fsopen –** vyhledává CTRL + Z na konci souboru a odstraní ji, pokud je to možné. Toto je provedeno z důvodu použití [fseek](fseek-fseeki64.md) a [ftell –](ftell-ftelli64.md) pro přesun v rámci souboru, který končí CTRL + Z může způsobit, že [fseek](fseek-fseeki64.md) nesprávné chování na konci souboru.|
-|**b**|Otevře soubor v binárním (nepřeloženém) režimu; překlady uvedené výše jsou potlačeny.|
-|**S**|Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, sekvenčním přístupem z disku.|
-|**R**|Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, náhodný přístup z disku.|
-|**T**|Určuje soubor jako dočasný. Pokud je to možné, není zapsán na disk.|
-|**D**|Určuje soubor jako dočasný. Je smazán po uzavření posledního ukazatele na soubor.|
+|**í**|Otevře se pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, volání **_fsopen** se nezdařilo.|
+|**"w"**|Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah je zničen.|
+|**určitého**|Otevře se pro zápis na konci souboru (přidávání); Vytvoří soubor jako první, pokud neexistuje.|
+|**"r +"**|Otevře se pro čtení i zápis. (Soubor musí existovat.)|
+|**"w +"**|Otevře prázdný soubor pro čtení i zápis. Pokud daný soubor existuje, jeho obsah je zničen.|
+|**"a +"**|Otevře se pro čtení a připojení; Vytvoří soubor jako první, pokud neexistuje.|
 
-Pokud **t** nebo **b** není uveden v *režimu*, režim překladu definován proměnnou výchozího režimu **_fmode**. Pokud **t** nebo **b** předponou argumentu, funkce selže a vrátí **NULL**. Diskuzi o textovém a binárním režimu, najdete v článku [textového a binárního režimu souboru vstupně-výstupních operací](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Používejte typy **"w"** a **"w +"** se opatrně, protože mohou zničit stávající soubory.
 
-Argument *shflag* je konstantní výraz, který se skládá z jednoho z následujících konstant manifestu definovaných v Share.h.
+Když se soubor otevře s typem přístupu **"a"** nebo **"a +"** , na konci souboru se objeví všechny operace zápisu. Ukazatel na soubor lze přemístit pomocí [fseek](fseek-fseeki64.md) nebo [Rewind](rewind.md), ale je vždy přesunut zpět na konec souboru před provedením jakékoli operace zápisu. Žádná existující data proto nemohou být přepsána. Je-li zadán typ přístupu **"r +"** , **"w +"** nebo **"a +"** , jsou povoleny čtení i zápis (soubor je označován jako otevřený pro aktualizaci). Při přepínání mezi čtením a zápisem však musí být [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md)nebo [Rewind](rewind.md) operace. V případě potřeby lze zadat aktuální pozici pro operaci [fsetpos](fsetpos.md) nebo [fseek](fseek-fseeki64.md) . Kromě výše uvedených hodnot může být jeden z následujících znaků zahrnut do *režimu* pro určení režimu překladu pro nové řádky a pro správu souborů.
+
+|Termín|Definice|
+|----------|----------------|
+|**t**|Otevře soubor v textovém (přeloženém) režimu. V tomto režimu jsou kombinace pro návrat vozíku z řádku (CR-LF) přeloženy na vstupní kanály (LF) na vstupu a znaky LF jsou přeloženy na výstup do kombinací znaků CR-LF. Příkaz CTRL+Z je na vstupu interpretován jako znak konce souboru. V souborech otevřených pro čtení nebo čtení/zápis **_fsopen** vyhledá na konci souboru CTRL + Z a pokud je to možné, odstraní ho. Důvodem je, že použití [fseek](fseek-fseeki64.md) a [ftell](ftell-ftelli64.md) k přesunu v souboru, který končí kombinací kláves CTRL + Z, může způsobit, že se [fseek](fseek-fseeki64.md) nesprávně chová na konci souboru.|
+|**b**|Otevře soubor v binárním (nepřeloženém) režimu. výše uvedené překlady jsou potlačeny.|
+|**S**|Určuje, že ukládání do mezipaměti je optimalizované pro, ale ne omezené na, sekvenční přístup z disku.|
+|**R**|Určuje, že ukládání do mezipaměti je optimalizované pro, ale ne omezené na, náhodný přístup z disku.|
+|**T**|Určuje soubor jako dočasný. Pokud je to možné, nezaprázdní na disk.|
+|**D**|Určuje soubor jako dočasný. Odstraní se po zavření posledního ukazatele na soubor.|
+
+Pokud **t** nebo **b** není uveden v *režimu*, je režim překladu definován pomocí proměnné ve výchozím režimu **_fmode**. Pokud je **t** nebo **b** předpona argumentu, funkce se nezdařila a vrátí **hodnotu null**. Diskuzi o textu a binárních režimech najdete v tématu [vstupně-výstupní operace se soubory textového a binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+
+Argument *Shflag* je konstantní výraz skládající se z jedné z následujících konstant manifestu, které jsou definovány v Share. h.
 
 |Termín|Definice|
 |----------|----------------|
 |**_SH_COMPAT**|Nastaví režim kompatibility pro 16bitové aplikace.|
-|**_SH_DENYNO**|Povolí čtení a zápis.|
-|**_SH_DENYRD**|Odepřít přístup pro čtení k tomuto souboru.|
-|**_SH_DENYRW**|Zakazuje čtení a zápis do souboru.|
-|**_SH_DENYWR**|Odepřít přístup pro zápis do souboru.|
+|**_SH_DENYNO**|Povolí přístup pro čtení a zápis.|
+|**_SH_DENYRD**|Odepře přístup pro čtení k souboru.|
+|**_SH_DENYRW**|Zakazuje přístup pro čtení a zápis k souboru.|
+|**_SH_DENYWR**|Zakazuje přístup pro zápis do souboru.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -126,10 +129,10 @@ Argument *shflag* je konstantní výraz, který se skládá z jednoho z následu
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Funkce|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |--------------|---------------------|----------------------|
-|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Konstanty manifestu pro *shflag* parametru.|
-|**_wfsopen**|\<stdio.h > nebo \<wchar.h >|\<share.h><br /><br /> Konstanty manifestu pro *shflag* parametru.|
+|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Pro konstantu manifestu pro parametr *Shflag* .|
+|**_wfsopen**|\<stdio. h > nebo \<WCHAR. h >|\<share.h><br /><br /> Pro konstantu manifestu pro parametr *Shflag* .|
 
 ## <a name="example"></a>Příklad
 
@@ -165,7 +168,7 @@ No one else in the network can write to this file until we are done.
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [ferror](ferror.md)<br/>

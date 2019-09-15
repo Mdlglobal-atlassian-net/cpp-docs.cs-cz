@@ -1,9 +1,9 @@
 ---
 title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtMemCheckpoint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf91cd8c76fd080326e2e5eeac98f7f81ab90cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339868"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942362"
 ---
-# <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
+# <a name="_crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Získá aktuální stav haldy ladění a uloží do poskytované aplikací **_CrtMemState** strukturu (pouze ladicí verze).
+Získá aktuální stav haldy ladění a uloží je do **_CrtMemState** struktury dodané aplikací (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,18 +47,18 @@ void _CrtMemCheckpoint(
 
 ### <a name="parameters"></a>Parametry
 
-*state*<br/>
-Ukazatel na **_CrtMemState** struktura, která se zaplnit kontrolním bodem paměti.
+*státech*<br/>
+Ukazatel na strukturu **_CrtMemState** , která se zaplní pomocí kontrolního bodu paměti.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtmemcheckpoint –** funkce vytvoří snímek aktuálního stavu haldy ladění v kterémkoli daném okamžiku. Tento snímek mohou využívat jiné funkce stavu haldy jako [_crtmemdifference –](crtmemdifference.md) pro zjištění nevracení paměti a dalších problémů. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtMemState** odstraněna během předběžného zpracování.
+Funkce **_CrtMemCheckpoint** vytvoří snímek aktuálního stavu haldy ladění v daném okamžiku. Tento snímek můžou použít jiné funkce stavu haldy, jako je [_CrtMemDifference](crtmemdifference.md) , které vám pomůžou detekovat nevracení paměti a další problémy. Když není definovaný [_DEBUG](../../c-runtime-library/debug.md) , volání **_CrtMemState** se během předběžného zpracování odeberou.
 
-Aplikace musí předat ukazatel dříve přiřazenou instanci **_CrtMemState** struktury definované v souboru Crtdbg.h, v *stavu* parametru. Pokud **_crtmemcheckpoint –** zjistí chybu během vytváření kontrolních bodů, funkce vygeneruje **_CRT_WARN** ladění zprávu s popisem problému.
+Aplikace musí předat ukazatel na dříve přidělenou instanci struktury **_CrtMemState** definované v souboru Crtdbg. h v parametru *State* . Pokud **_CrtMemCheckpoint** při vytváření kontrolního bodu narazí na chybu, funkce vygeneruje zprávu ladění **_CRT_WARN** popisující problém.
 
-Další informace o funkcích stavu haldy a **_CrtMemState** struktury, přečtěte si téma [funkce vykazování stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o funkcích stavu haldy a struktuře **_CrtMemState** naleznete v tématu [funkce vytváření sestav o stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Pokud *stavu* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je nastavena na **EINVAL** a funkce vrátí.
+Pokud je stav **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) je nastaveno na **EINVAL** a funkce vrátí.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -63,9 +66,9 @@ Pokud *stavu* je **NULL**, je vyvolána obslužná rutina neplatného parametru,
 |-------------|---------------------|
 |**_CrtMemCheckpoint**|\<crtdbg.h>, \<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** Ladění verzí pouze UCRT.
+**Knihovna** Ladit verze pouze UCRT.
 
 ## <a name="see-also"></a>Viz také:
 

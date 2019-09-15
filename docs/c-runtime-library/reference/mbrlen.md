@@ -1,9 +1,9 @@
 ---
 title: mbrlen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,22 +15,25 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrlen
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: ec9079b9b164e2b609a956ddf3a75cd42923bafc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9559731f39db35e03f640bb30b9af3fff00cf66
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952497"
 ---
 # <a name="mbrlen"></a>mbrlen
 
-Určete počet bajtů, které jsou vyžadovány k dokončení vícebajtového znaku v aktuálním národním prostředí, pomocí funkce restartování uprostřed vícebajtového znaku.
+Určete počet bajtů, které jsou požadovány k dokončení vícebajtového znaku v aktuálním národním prostředí, s možností restartu uprostřed vícebajtového znaku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,38 +48,38 @@ size_t mbrlen(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ukazatel na další bajt ke kontrole ve vícebajtovém znakovém řetězci.
+Ukazatel na další bajt pro kontrolu v řetězci vícebajtového znaku.
 
-*Počet*<br/>
-Maximální počet bajtů ke kontrole.
+*výpočtu*<br/>
+Maximální počet bajtů, které mají být zkontrolovány.
 
 *mbstate*<br/>
-Ukazatel na aktuální stav shift úvodní bajt *str*.
+Ukazatel na aktuální stav posunutí počátečního bajtu *str*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Jeden z následujících hodnot:
+Jedna z následujících hodnot:
 
 |||
 |-|-|
-0|Další *počet* nebo menší počet bajtů dokončení vícebajtového znaku, který představuje širokého znaku null.
-1 *počet*včetně|Další *počet* nebo menší počet bajtů je platný vícebajtový znak. Vrácená hodnota je počet bajtů, které dokončení vícebajtového znaku.
-(size_t) -(2)|Další *počet* bajtů přispívat k neúplný, ale potenciálně platný vícebajtový znak a ke všem *počet* byly zpracovány bajtů.
-(size_t) (-1)|Došlo k chybě kódování. Další *počet* nebo menší počet bajtů se nepodílejí na dokončení a je platný vícebajtový znak. V takovém případě **errno** je nastavena na EILSEQ a stav převodu v *mbstate* není zadána.
+0|Další *počet* nebo méně bajtů dokončí vícebajtovým znakem, který představuje celý znak null.
+1 pro *počet*, včetně|Další *počet* nebo méně bajtů dokončí platným vícebajtovým znakem. Vrácená hodnota je počet bajtů, které dokončí vícebajtový znak.
+(size_t) (-2)|Další *počet* bajtů přispívá k nekompletnímu, ale potenciálně platnému vícebajtovým znakem a byl zpracován tento *počet* bajtů.
+(size_t) (-1)|Došlo k chybě kódování. Další *počet* nebo méně bajtů nepřispívají k kompletnímu a platnému vícebajtovým znakům. V tomto případě je **errno** nastaveno na EILSEQ a stav konverze v *mbstate* není specifikováno.
 
 ## <a name="remarks"></a>Poznámky
 
-**Mbrlen –** funkce zkontroluje maximálně *počet* bajtů počínaje bajt odkazované *str* k určení počtu bajtů, které jsou vyžadovány k dokončení následujících vícebajtový znak, včetně nějaké sekvence shift. Je ekvivalentní volání `mbrtowc(NULL, str, count, &mbstate)` kde *mbstate* je buď uživatelem zadaného **mbstate_t** , nebo statické vnitřní objekt poskytovaných knihovnou.
+Funkce **mbrlen** kontroluje *maximálně bajtů, počínaje bajtem* , který ukazuje na *str* , aby určil počet bajtů, které jsou nutné k dokončení dalšího vícebajtového znaku, včetně všech sekvencí posunutí. Je ekvivalentní volání `mbrtowc(NULL, str, count, &mbstate)` , kde *mbstate* je buď uživatelem poskytnutý objekt **mbstate_t** , nebo statický interní objekt poskytnutý knihovnou.
 
-**Mbrlen –** funkce uloží a použije shift stavu nedokončené vícebajtového znaku v *mbstate* parametru. Díky tomu **mbrlen –** schopnost restartování uprostřed vícebajtového znaku, pokud je třeba, zkoumání maximálně *počet* bajtů. Pokud *mbstate* je ukazatel s hodnotou null, **mbrlen –** používá interní statické **mbstate_t** objekt pro uložení stavu shift. Protože vnitřní **mbstate_t** objektu není bezpečná pro vlákno, doporučujeme, abyste vždy přidělení a předání vlastní *mbstate* parametru.
+Funkce **mbrlen** ukládá a používá stav posunu neúplného vícebajtového znaku v parametru *mbstate* . To dává **mbrlen** schopnost restartovat za běhu vícebajtového znaku, pokud je to potřeba, zkoumání na nejvyšší *počet* bajtů. Pokud je *mbstate* ukazatel s hodnotou null, používá **mbrlen** vnitřní, statický objekt **mbstate_t** k uložení stavu posunu. Vzhledem k tomu, že interní objekt **mbstate_t** není bezpečný pro přístup z více vláken, doporučujeme vždy přidělit a předat vlastní parametr *mbstate* .
 
-**Mbrlen –** funkce se liší od [_mbclen mblen –, _mblen_l –](mbclen-mblen-mblen-l.md) podle jeho restartability. Stav shift je uložený ve službě *mbstate* pro pozdější volání na stejné nebo jiné funkce nabízet možnost restartování. Při použití funkcí restartovatelnou službu a nonrestartable případě nejsou výsledky definovány.  Například by měla aplikace použít **wcsrlen** místo **wcslen –** Pokud následných volání **wcsrtombs –** se použije namísto **wcstombs –**.
+Funkce **mbrlen** se liší od [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) podle jejich restartu. Stav posunu je uložený v *mbstate* pro následná volání do stejných nebo jiných restartných funkcí. Výsledky nejsou definovány při kombinování použití opakovaných a nerestartů funkcí.  Například aplikace by měla používat **wcsrlen** namísto **wcslen** , pokud je místo **wcstombs**použito následné volání **wcsrtombs** .
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|Není k dispozici|Není k dispozici|**mbrlen**|Není k dispozici|
+|Nelze použít|Nelze použít|**mbrlen**|Nelze použít|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -84,11 +87,11 @@ Jeden z následujících hodnot:
 |-------------|---------------------|
 |**mbrlen**|\<wchar.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje, jak výklad vícebajtových znaků závisí na aktuální znakové stránce a demonstruje schopnosti produktu obnovení **mbrlen –**.
+Tento příklad ukazuje, jak je výklad vícebajtových znaků závislý na aktuální znakové stránce, a ukazuje obnovení schopnosti **mbrlen**.
 
 ```C
 // crt_mbrlen.c
@@ -150,5 +153,5 @@ Character count: 25
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

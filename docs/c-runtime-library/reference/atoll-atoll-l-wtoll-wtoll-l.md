@@ -1,12 +1,12 @@
 ---
 title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtoll
 - _atoll_l
 - _wtoll_l
 - atoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoll_l
 - _wtoll
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 7933b3e25185b5abdbd10c1b3fd616742bb28f92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b5fca9c3428bce26a8a40cf8271760fa97b10b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341181"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939477"
 ---
-# <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
+# <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
 Převede řetězec na **dlouhé** **dlouhé** celé číslo.
 
@@ -68,38 +71,38 @@ long long _wtoll_l(
 *str*<br/>
 Řetězec, který má být převeden.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá funkce vrátí **dlouhé** **dlouhé** hodnotu, která vznikne interpretací vstupních znaků jako číslo. Návratová hodnota pro **atol** je 0, pokud vstup nelze převést na hodnotu daného typu.
+Každá funkce vrátí **dlouhou** **dlouhou** hodnotu, která je vytvořena interpretací vstupních znaků jako čísla. Návratová hodnota pro **atol** je 0, pokud vstup nelze převést na hodnotu daného typu.
 
-Pro přetečení s velkými kladnými hodnotami **atol** vrátí **LLONG_MAX**, a pro přetečení s velkými zápornými hodnotami vrací **LLONG_MIN**.
+Pro přetečení s velkými celočíselnými hodnotami, **Palmyra** vrátí **LLONG_MAX**a pro přetečení s velkými zápornými hodnotami vrátí **LLONG_MIN**.
 
-Ve všech případech mimo rozsah **errno** je nastavena na **ERANGE**. Pokud je parametr, který je předán **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí 0.
+V všech případech mimo rozsah je **errno** nastaveno na **ERANGE**. Pokud předaný parametr má **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce převádějí řetězec znaků na **dlouhé** **dlouhé** celočíselnou hodnotu.
+Tyto funkce převádějí řetězec znaků na **dlouhé** **dlouhé** celočíselné hodnoty.
 
-Vstupní řetězec je posloupnost znaků, které lze interpretovat jako hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce u prvního znaku, který nebude rozpoznán jako část čísla. Tento znak může být znak null ('\0' nebo L '\0'), který ukončí řetězec.
+Vstupní řetězec je posloupnost znaků, které lze interpretovat jako číselnou hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce u prvního znaku, který nemůže rozpoznat jako součást čísla. Tento znak může být znak null (' \ 0 ' nebo L ' \ 0 '), který ukončí řetězec.
 
-*Str* argument **atol** má následující formát:
+Argument *str* pro **atol** má následující formu:
 
-> [*whitespace*] [*sign*] [*digits*]
+> [*prázdné znaky*] [*Sign*] [*číslice*]
 
-A *prázdné znaky* se skládá ze znaků mezera nebo tabulátor, které jsou ignorovány; *přihlašování* je buď plus (+) nebo minus (-); a *číslic* je jeden nebo více číslic.
+*Mezera* se skládá z mezer nebo znaků tabulátoru, které jsou ignorovány; *znaménko* je buď znaménko plus (+) nebo minus (-); a *číslice* jsou jednou nebo více číslicemi.
 
-**_wtoll –** je stejný jako **atol** s tím rozdílem, že bere jako parametr řetězec širokého znaku.
+**_wtoll** je identický s **atol** s tím rozdílem, že jako parametr přijímá řetězec s velkým počtem znaků.
 
-Verze těchto funkcí, které mají **_l** přípona jsou shodné s verzemi, které ji nemají, s tím rozdílem, že používají Předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají příponu **_l** , jsou shodné s verzemi, které ji nemají, s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tstoll**|**Atol**|**Atol**|**_wtoll**|
+|**_tstoll**|**Palmyra**|**Palmyra**|**_wtoll**|
 |**_tstoll_l**|**_atoll_l**|**_atoll_l**|**_wtoll_l**|
 |**_ttoll**|**_atoll**|**_atoll**|**_wtoll**|
 
@@ -108,11 +111,11 @@ Verze těchto funkcí, které mají **_l** přípona jsou shodné s verzemi, kte
 |Rutiny|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**atoll**, **_atoll_l**|\<stdlib.h>|
-|**_wtoll**, **_wtoll_l**|\<stdlib.h > nebo \<wchar.h >|
+|**_wtoll**, **_wtoll_l**|\<Stdlib. h > nebo \<WCHAR. h >|
 
 ## <a name="example"></a>Příklad
 
-Tento program ukazuje způsob použití **atol** funkce pro převod čísel uložených jako řetězce na číselné hodnoty.
+Tento program ukazuje, jak používat funkce **Palmyra** pro převod čísel uložených jako řetězce na číselné hodnoty.
 
 ```C
 // crt_atoll.c

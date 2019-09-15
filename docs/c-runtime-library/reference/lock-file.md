@@ -1,9 +1,9 @@
 ---
 title: _lock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157432"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953303"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-Zamkne **souboru** objekt zajistit konzistenci pro vlákna **souboru** objekt současně.
+Zamkne objekt **File** , aby zajistil konzistenci pro vlákna přistupující k objektu **souboru** současně.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,12 +46,12 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parametry
 
-*Soubor*<br/>
+*souborů*<br/>
 Popisovač souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Lock_file –** funkce zámky **souboru** objekt definovaný podle objektu *souboru*. Základní soubor není uzamčen **_lock_file –**. Použití [_unlock_file –](unlock-file.md) uvolnit zámek na souboru. Volání **_lock_file –** a **_unlock_file –** musí odpovídat ve vlákně.
+Funkce **_lock_file** zamkne objekt **File** určený *souborem*. Podkladový soubor není uzamčen nástrojem **_lock_file**. K uvolnění zámku souboru použijte [_unlock_file](unlock-file.md) . Volání **_lock_file** a **_unlock_file** musí být ve vlákně shodná.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -56,7 +59,7 @@ Popisovač souboru.
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

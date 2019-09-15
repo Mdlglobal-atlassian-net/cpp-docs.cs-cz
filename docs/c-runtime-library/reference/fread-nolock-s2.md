@@ -1,9 +1,9 @@
 ---
 title: _fread_nolock_s2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fread_nolock_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,21 +15,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7fded9860b7a1364841d5f9b8a7e3aa478a8420
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333102"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956892"
 ---
-# <a name="freadnolocks"></a>_fread_nolock_s
+# <a name="_fread_nolock_s"></a>_fread_nolock_s
 
-Čte data z datového proudu, bez blokování jiných vláken. Tato verze [fread_nolock –](fread-nolock.md) má rozšíření zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Načte data z datového proudu bez uzamknutí jiných vláken. Tato verze [fread_nolock](fread-nolock.md) má vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,39 +48,39 @@ size_t _fread_nolock_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
-Umístění úložiště pro data.
+*vyrovnávací paměti*<br/>
+Umístění úložiště pro data
 
-*BufferSize*<br/>
-Velikost cílové vyrovnávací paměti v bajtech.
+*bufferSize*<br/>
+Velikost cílové vyrovnávací paměti v bajtech
 
 *elementSize*<br/>
-Velikost položky ke čtení v bajtech.
+Velikost položky, která se má načíst v bajtech
 
-*elementCount*<br/>
-Maximální počet položek, které chcete načíst.
+*Nedisponuje ElementCount*<br/>
+Maximální počet položek, které se mají přečíst
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [fread_s](fread-s.md).
+Viz [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce je nezamykací verzi **fread_s**. Je stejný jako **fread_s** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Může být rychlejší, protože narůstání režii uzamykáním ostatních vláken. Tuto funkci lze používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
+Tato funkce je neuzamknutá verze **fread_s**. Je totožný s **fread_s** s tím rozdílem, že není chráněna před rušením jinými vlákny. Může být rychlejší, protože nevzniká režie na uzamykání jiných vláken. Tuto funkci použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fread_nolock_s**|C: \<stdio.h>; C++: \<cstdio> or \<stdio.h>|
+|**_fread_nolock_s**|C: \<stdio. h >; C++ :\<cstdio > nebo \<stdio. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

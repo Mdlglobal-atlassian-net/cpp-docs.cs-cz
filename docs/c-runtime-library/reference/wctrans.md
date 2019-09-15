@@ -1,9 +1,9 @@
 ---
 title: wctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctrans
 helpviewer_keywords:
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188452"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944878"
 ---
 # <a name="wctrans"></a>wctrans
 
-Určuje jednu sadu kódy znaků mapování.
+Určuje mapování jedné sady kódů znaků na jinou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,30 +49,30 @@ wctrans_t wctrans(
 ### <a name="parameters"></a>Parametry
 
 *property*<br/>
-Řetězec, který určuje jeden platný transformací.
+Řetězec, který určuje jednu z platných transformací.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **LC_CTYPE** kategorie aktuálního národního prostředí nedefinuje mapování, jejíž název odpovídá řetězci vlastnost *vlastnost*, vrátí funkce hodnotu nula. V opačném případě se vrací nenulovou hodnotu, vhodný pro použití jako druhý argument pro následné volání [towctrans –](towctrans.md).
+Pokud kategorie **LC_CTYPE** aktuálního národního prostředí nedefinuje mapování, jehož název odpovídá *vlastnosti*řetězce vlastnosti, vrátí funkce hodnotu nula. V opačném případě vrátí nenulovou hodnotu vhodnou pro použití jako druhý argument u následného volání [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce určuje jednu sadu kódy znaků mapování.
+Tato funkce Určuje mapování z jedné sady kódů znaků na jinou.
 
 Následující páry volání mají stejné chování ve všech národních prostředích, ale je možné definovat další mapování i v národním prostředí "C":
 
 |Funkce|Stejné jako|
 |--------------|-------------|
-|ToLower(c)|towctrans – (c, wctrans("towlower"))|
-|towupper(c)|towctrans – (c, wctrans("toupper"))|
+|ToLower (c)|towctrans (c; wctrans ("towlower"))|
+|towupper (c)|towctrans (c; wctrans ("ToUpper"))|
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadované záhlaví|
+|Rutina|Požadovaná hlavička|
 |-------------|---------------------|
-|**wctrans**|\<wctype.h >|
+|**wctrans**|\<wctype. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

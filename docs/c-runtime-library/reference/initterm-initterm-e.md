@@ -1,10 +1,10 @@
 ---
 title: _initterm, _initterm_e
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _initterm_e
 - _initterm
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _initterm_e
 - initterm
@@ -28,18 +31,18 @@ helpviewer_keywords:
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-ms.openlocfilehash: 65963e95507d4d6444ebcc9038b5b8cf797f9feb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e85494bf6c8215d03602ee112e1ff2c0f1cf6f2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331659"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954620"
 ---
-# <a name="initterm-initterme"></a>_initterm, _initterm_e
+# <a name="_initterm-_initterm_e"></a>_initterm, _initterm_e
 
-Vnitřní metody, které vás tabulku ukazatelů na funkce a jejich inicializaci.
+Interní metody, které provedou tabulku ukazatelů na funkce a inicializují je.
 
-Počáteční umístění v tabulce je ukazatel na první a druhý ukazatel je konečné umístění.
+Prvním ukazatelem je počáteční umístění v tabulce a druhý ukazatel je koncové umístění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,13 +60,13 @@ int __cdecl _initterm_e(
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud se inicializace nezdaří a vyvolá chybu; kód chyby 0, pokud nenastane žádná chyba.
+Nenulový kód chyby v případě, že inicializace selhává a vyvolá chybu; 0, pokud nedošlo k žádné chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto metody jsou volány interně pouze během inicializace programu v jazyce C++. Tyto metody volat není v programu.
+Tyto metody jsou volány pouze interně během inicializace C++ programu. Nevolejte tyto metody v programu.
 
-Když tyto metody Procházet tabulku funkce položky, přeskočí **NULL** položky a pokračovat.
+Když tyto metody provedou tabulku položek funkcí, přeskočí položky **null** a pokračují.
 
 ## <a name="see-also"></a>Viz také:
 

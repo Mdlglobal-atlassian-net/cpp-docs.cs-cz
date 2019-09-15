@@ -1,9 +1,9 @@
 ---
 title: _recalloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _recalloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - recalloc_dbg
 - _recalloc_dbg
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _recalloc_dbg function
 - recalloc_dbg function
 ms.assetid: 43c3e9b2-be6d-4508-9b0f-3220c8a47ca3
-ms.openlocfilehash: e2782492d3338b5b548db0153b6123fb82ff5e72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6274e749b2c4e6f64c7c7f82f8764dcf5ba642fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357681"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949473"
 ---
-# <a name="recallocdbg"></a>_recalloc_dbg
+# <a name="_recalloc_dbg"></a>_recalloc_dbg
 
-Znovu alokuje pole a inicializuje jeho prvky na hodnotu 0 (pouze ladicí verze).
+Znovu přidělí pole a inicializuje jeho prvky na hodnotu 0 (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,40 +52,40 @@ void *_recalloc_dbg(
 ### <a name="parameters"></a>Parametry
 
 *userData*<br/>
-Ukazatele na blok paměti dříve přidělené.
+Ukazatel na dříve přidělený blok paměti.
 
-*Číslo*<br/>
-Požadovaný počet bloky paměti.
+*Automatické*<br/>
+Požadovaný počet bloků paměti.
 
-*Velikost*<br/>
+*hodnota*<br/>
 Požadovaná velikost každého bloku paměti (v bajtech).
 
 *blockType*<br/>
 Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 
-Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+Informace o typech bloků přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
 
-*Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
+*Bitmap*<br/>
+Ukazatel na název zdrojového souboru, který požadoval operaci přidělení, nebo **hodnota null**.
 
-*linenumber*<br/>
-Číslo řádku ve zdrojovém souboru, kde byla požadovaná operace rozdělení nebo **NULL**.
+*číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru, kde byla požadována operace přidělení, nebo **hodnota null**.
 
-*Filename* a *linenumber* parametry jsou k dispozici pouze při **_recalloc_dbg –** explicitně volána nebo [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) byla definována konstanta preprocesoru.
+Parametry *filename* a *číslo řádku* jsou k dispozici pouze v případě, že byla explicitně volána metoda **_recalloc_dbg** nebo byla definována konstanta preprocesoru [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení, tato funkce vrací ukazatel na část uživatele bloku paměti nevyčerpané, volá funkci novou obslužnou rutinu nebo vrátí **NULL**. Úplný popis návratový chování najdete v části poznámky. Další informace o tom, jak použít nové funkce obslužné rutiny najdete v tématu [_recalloc –](recalloc.md) funkce.
+Po úspěšném dokončení Tato funkce buď vrátí ukazatel na uživatelskou část bloku přerozdělené paměti, zavolá novou funkci obslužné rutiny nebo vrátí **hodnotu null**. Úplný popis vráceného chování naleznete v následující části poznámky. Další informace o tom, jak se používá nová funkce obslužné rutiny, najdete v tématu funkce [_recalloc](recalloc.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-**_recalloc_dbg –** je ladicí verzi [_recalloc –](recalloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_recalloc_dbg –** je omezená na volání **_recalloc –**. Obě **_recalloc –** a **_recalloc_dbg –** přidělení bloku paměti v haldě základní, ale **_recalloc_dbg –** obsáhne některé funkce pro ladění: vyrovnávací paměť po obou stranách část bloku pro testování nevracení uživatelským blok zadejte parametr pro sledování konkrétní přidělení typů a *filename*/*linenumber* informací pro určení, původ požadavků na přidělení.
+**_recalloc_dbg** je ladicí verze funkce [_recalloc](recalloc.md) . Pokud není definován [_DEBUG](../../c-runtime-library/debug.md) , každé volání **_recalloc_dbg** je sníženo na volání **_recalloc**. **_Recalloc** i **_recalloc_dbg** znovu přidělí blok paměti v základní haldě, ale **_recalloc_dbg** nabízí několik funkcí ladění: vyrovnávací paměti na obou stranách bloku pro testování nevracení, parametr typu bloku Chcete-li sledovat konkrétní typy přidělení, a*číslo řádku* informace o *názvu souboru*/, abyste určili původ požadavků na přidělení.
 
-**_recalloc_dbg –** znovu alokuje blok paměti zadaná s trochu více místa, než požadovaná velikost (*číslo* * *velikost*) který může být větší nebo menší než velikost blok původně přidělené paměti. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Přerozdělení může způsobit přechod původního paměťového bloku na jiné místo v haldě, jakož i změníte velikost bloku paměti. Část uživatele bloku je vyplněny hodnotou 0xCD a každý z vyrovnávací paměti přepsání jsou vyplněny 0xFD.
+**_recalloc_dbg** znovu přidělí zadaný blok paměti o více místa, než je požadovaná velikost (*Číselná* * *Velikost*), která může být větší nebo menší než velikost původně přiděleného bloku paměti. Dodatečné místo se používá správcem haldy ladění k propojení bloků paměti ladění a k poskytnutí aplikace s informacemi hlavičky ladění a přepsat vyrovnávací paměti. Přerozdělení může mít za následek přesunutí původního bloku paměti na jiné místo v haldě a změnu velikosti bloku paměti. Uživatelská část bloku je vyplněna hodnotou 0xCD a každá z vyrovnávací paměti přepsání je vyplněna 0xFD.
 
-**_recalloc_dbg –** nastaví **errno** k **ENOMEM** Pokud selže přidělování paměti. **EINVAL** je vrácena, pokud přesahuje velikost potřebné paměti (včetně režie již bylo zmíněno dříve) **_heap_maxreq –**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_recalloc_dbg** nastaví **errno** na **ENOMEM** , pokud není přidělení paměti úspěšné; **EINVAL** se vrátí, pokud velikost potřebné paměti (včetně výše zmíněné režie) překračuje **_HEAP_MAXREQ**. Další informace o tomto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce haldy standardní a jeho ladicí verze v sestavení pro ladění aplikace najdete v tématu [ladění verze z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi voláním standardní funkce haldy a její ladicí verzí v sestavení ladění aplikace najdete v tématu [ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -90,11 +93,11 @@ Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v 
 |-------------|---------------------|
 |**_recalloc_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Viz také:
 

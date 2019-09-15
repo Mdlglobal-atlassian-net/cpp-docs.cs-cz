@@ -1,12 +1,12 @@
 ---
 title: _isctype, iswctype, _isctype_l, _iswctype_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswctype
 - _isctype
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157303"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954403"
 ---
-# <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
+# <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-Testy *c* pro vlastnost ctype určené *desc* argument. Pro každou platnou hodnotu *desc*, existuje ekvivalentní klasifikace širokého znaku rutiny.
+Testuje *c* pro vlastnost CType určenou argumentem *DESC* . Pro každou platnou hodnotu třídy *DESC*existuje ekvivalentní rutina klasifikace se stejnou šířkou znaku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,19 +78,19 @@ int _iswctype_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování.
+Celé číslo k otestování.
 
 *desc*<br/>
-Vlastnost pro testování. To je obvykle načteno pomocí ctype nebo [wctype](wctype.md).
+Vlastnost, která se má testovat. To se obvykle načte pomocí CType nebo [wctype](wctype.md).
 
-*Národní prostředí*<br/>
-Národní prostředí pro všechny testy závislé na národním prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít pro všechny testy závislé na národním prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_isctype –** a **iswctype** vrátí nenulovou hodnotu, pokud *c* má vlastnost určenou *desc* v aktuální národní prostředí nebo 0, pokud tomu tak není. Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají národní prostředí namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**_isctype** a **iswctype** vrací nenulovou hodnotu, pokud *c* má vlastnost určenou pomocí *DESC* v aktuálním národním prostředí nebo 0, pokud tomu tak není. Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předané národní prostředí namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Chování **_isctype –** a **_isctype_l –** není definováno, pokud *c* není konec souboru nebo v rozsahu 0 až 0xFF, včetně. Při použití ladicí CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolá kontrolní výraz.
+Chování **_isctype** a **_isctype_l** není definováno, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). Pokud je použita knihovna CRT ladění a *c* není jedna z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -100,16 +103,16 @@ Chování **_isctype –** a **_isctype_l –** není definováno, pokud *c* nen
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_isctype**|\<ctype.h>|
-|**iswctype**|\<ctype.h > nebo \<wchar.h >|
-|**_isctype_l**|\<ctype.h>|
-|**_iswctype_l**|\<ctype.h > nebo \<wchar.h >|
+|**_isctype**|\<CType. h >|
+|**iswctype**|\<CType. h > nebo \<WCHAR. h >|
+|**_isctype_l**|\<CType. h >|
+|**_iswctype_l**|\<CType. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,14 +1,14 @@
 ---
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncat
 - _strncat_l
 - _mbsncat
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncat_l
 - _wcsncat_l
@@ -58,12 +61,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499441"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947357"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -146,11 +149,11 @@ Vrátí ukazatel na cílový řetězec. Žádná návratová hodnota není vyhra
 Funkce **strncat** připojí nejvýše první *počet* znaků *strSource* do *strDest*. Počáteční znak *strSource* přepíše ukončující znak null hodnoty *strDest*. Pokud se v *strSource* objeví znak null, než se připojí znaky *Count* , **Strncat** připojí všechny znaky z *strSource*, až po znak null. Pokud je *počet* větší než délka *strSource*, použije se délka *strSource* namísto *počtu*. Všechny případy, výsledný řetězec je ukončen znakem null. Pokud se provádí kopírování mezi řetězci, které se překrývají, chování není definováno.
 
 > [!IMPORTANT]
-> **strncat** nekontroluje dostatek místa v *strDest*; Proto je potenciální příčinou přetečení vyrovnávací paměti. Pamatujte, že počet přidaných znaků omezuje na počet připojených znaků; Nejedná se o omezení velikosti *strDest*. Podívejte se na téma níže uvedený příklad. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **strncat** nekontroluje dostatek místa v *strDest*; Proto je potenciální příčinou přetečení vyrovnávací paměti. Pamatujte *, že počet* přidaných znaků omezuje na počet připojených znaků; Nejedná se o omezení velikosti *strDest*. Podívejte se na téma níže uvedený příklad. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 **wcsncat** a **_mbsncat** jsou verze s velkým znakem a vícebajtovým znakem **strncat**. Argumenty řetězce a návratová hodnota **wcsncat** jsou řetězce s velkým počtem znaků; ty z **_mbsncat** jsou vícebajtové znakové řetězce. Tyto tři funkce se chovají identicky jinak.
 
-Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další [](setlocale-wsetlocale.md) informace naleznete v tématu setlocale. Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 V C++nástroji mají tyto funkce šablonu přetížení. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 

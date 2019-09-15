@@ -1,10 +1,10 @@
 ---
-title: _fpclass _fpclassf
+title: _fpclass, _fpclassf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpclass
 - _fpclassf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fpclass
 - _fpclass
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 987c87cc7a03f4a24e47654ae52e8a2416a15184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333219"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957033"
 ---
-# <a name="fpclass-fpclassf"></a>_fpclass _fpclassf
+# <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
-Vrátí hodnotu, která argumentu s plovoucí desetinnou čárkou klasifikace.
+Vrací hodnotu určující klasifikaci argumentu s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,36 +59,36 @@ int _fpclassf(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota s plovoucí desetinnou čárkou k testování.
+Hodnota s plovoucí desetinnou čárkou, která má být testována.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_Fpclass** a **_fpclassf** funkce vrátí celočíselnou hodnotu, která určuje argumentu s plovoucí desetinnou čárkou klasifikaci *x*. Klasifikace může mít jeden z následujících hodnot podle \<float.h >.
+Funkce **_fpclass** a **_fpclassf** vrátí celočíselnou hodnotu, která označuje klasifikaci plovoucí desetinné čárky argumentu *x*. Klasifikace může mít jednu z následujících hodnot, která je definována v \<float. h >.
 
 |Value|Popis|
 |-----------|-----------------|
-|**_FPCLASS_SNAN**|Signalizace NaN|
-|**_FPCLASS_QNAN**|Tichý NaN|
+|**_FPCLASS_SNAN**|Signalizace – NaN|
+|**_FPCLASS_QNAN**|Tiché NaN|
 |**_FPCLASS_NINF**|Záporné nekonečno (-INF)|
-|**_FPCLASS_NN**|Negativní normalized nenulové|
-|**_FPCLASS_ND**|Negativní denormalizovaný|
-|**_FPCLASS_NZ**|Záporná nula (- 0)|
-|**_FPCLASS_PZ**|Pozitivní 0 (+ 0)|
-|**_FPCLASS_PD**|Pozitivní denormalizovaný|
-|**_FPCLASS_PN**|Pozitivní normalized nenulové|
+|**_FPCLASS_NN**|Záporná normalizovaná nenulová hodnota|
+|**_FPCLASS_ND**|Záporné denormalizované|
+|**_FPCLASS_NZ**|Záporné nula (-0)|
+|**_FPCLASS_PZ**|Kladné 0 (+ 0)|
+|**_FPCLASS_PD**|Kladné denormalizované|
+|**_FPCLASS_PN**|Kladná normalizovaná hodnota nenulového typu|
 |**_FPCLASS_PINF**|Kladné nekonečno (+ INF)|
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fpclass** a **_fpclassf** funkce jsou specifické pro Microsoft. Když se podobají [fpclassify –](fpclassify.md), ale vrátí podrobnější informace o argument. **_Fpclassf** funkce dostupná jenom při kompilaci pro x64 platformy.
+Funkce **_fpclass** a **_fpclassf** jsou specifické pro společnost Microsoft. Jsou podobné jako [fpclassify –](fpclassify.md), ale vracejí podrobnější informace o argumentu. Funkce **_fpclassf** je k dispozici pouze v případě, že je zkompilována pro platformu x64.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fpclass**, **_fpclassf**|\<float.h >|
+|**_fpclass**, **_fpclassf**|\<float. h >|
 
-Kompatibilita a shoda podrobnosti, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě a dodržování shody najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_recalloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_recalloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - aligned_offset_recalloc_dbg
 - _aligned_offset_recalloc_dbg
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - aligned_offset_recalloc_dbg function
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
-ms.openlocfilehash: 671635e6cdc0f3f9bcd140de40500ed49beb4a8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e363a1cb104db9973f5f9e9c67a5d40693d405ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348026"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939752"
 ---
-# <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
+# <a name="_aligned_offset_recalloc_dbg"></a>_aligned_offset_recalloc_dbg
 
-Změní velikost bloku paměti, která byla přidělena pomocí [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc –](aligned-offset-malloc.md) a inicializuje přidělenou paměť na hodnotu 0 (pouze ladicí verze).
+Změní velikost bloku paměti, který byl přidělen pomocí [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc](aligned-offset-malloc.md) a inicializuje paměť na hodnotu 0 (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,43 +55,43 @@ void * _aligned_offset_recalloc_dbg(
 *memblock*<br/>
 Aktuální ukazatel bloku paměti.
 
-*Číslo*<br/>
-Počet prvků.
+*Automatické*<br/>
+Počet elementů.
 
-*Velikost*<br/>
-Délka v bajtech každého prvku.
+*hodnota*<br/>
+Délka v bajtech každého elementu.
 
-*Zarovnání*<br/>
-Hodnota zarovnání, které musí být celočíselnou mocninou 2.
+*bod*<br/>
+Hodnota zarovnání, která musí být celočíselnou mocninou 2.
 
-*Posun*<br/>
-Posun na přidělení paměti pro vynucení zarovnání.
+*polohy*<br/>
+Posun k přidělení paměti pro vynucení zarovnání.
 
-*Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který požadovanou operaci realloc nebo **NULL**.
+*Bitmap*<br/>
+Ukazatel na název zdrojového souboru, který požadoval operaci realokace nebo **null**.
 
-*linenumber*<br/>
-Číslo řádku ve zdrojovém souboru, ve kterém se požadovaná operace realloc nebo **NULL**.
+*číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru, kde byla požadována operace realokace nebo **hodnota null**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_aligned_offset_recalloc_dbg –** vrací neplatný ukazatel na blok paměti a nevyčerpané prostředky se (může být přesunutý). Vrácená hodnota je **NULL** Pokud velikost je nula a argument vyrovnávací paměti není **NULL**, nebo pokud není k dispozici dostatek paměti a rozbalte bloku na danou velikost. V prvním případě původní blok je uvolněn. V druhém případě je beze změny původního bloku. Návratová hodnota odkazuje na prostor úložiště, která je zaručeně jako vhodně zarovnaný pro úložiště libovolného typu objektu. K získání ukazatele na typ jiný než void, použijte přetypování typu na návratovou hodnotu.
+**_aligned_offset_recalloc_dbg** vrátí ukazatel void na blok paměti realokováno (a případně přesunuto). Návratová hodnota má **hodnotu null** , pokud je velikost nulová a argument buffer nemá **hodnotu null**, nebo pokud není k dispozici dostatek paměti pro rozšíření bloku na danou velikost. V prvním případě je původní blok uvolněn. V druhém případě se původní blok nezměnil. Vrácená hodnota odkazuje na prostor úložiště, který je zaručen vhodným způsobem pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než void, použijte přetypování typu u vrácené hodnoty.
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_offset_realloc_dbg –** je ladicí verzi [_aligned_offset_recalloc –](aligned-offset-recalloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_offset_recalloc_dbg –** je omezená na volání **_aligned_offset_recalloc –**. Obě **_aligned_offset_recalloc –** a **_aligned_offset_recalloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_offset_recalloc_dbg –** obsáhne Některé funkce pro ladění: vyrovnávací paměť po obou stranách část blok, který má test pro přetečení s uživatelským a *filename*/*linenumber* informací pro určení původu požadavky na přidělení. Sledování přidělování konkrétní typy s parametrem typu blok není podporovaný ladicí funkce pro zarovnané přidělení. Zobrazí se zarovnané přidělení jako _normal_block – blok typu.
+**_aligned_offset_realloc_dbg** je ladicí verze funkce [_aligned_offset_recalloc](aligned-offset-recalloc.md) . Pokud není definován [_DEBUG](../../c-runtime-library/debug.md) , každé volání **_aligned_offset_recalloc_dbg** je sníženo na volání **_aligned_offset_recalloc**. **_Aligned_offset_recalloc** i **_aligned_offset_recalloc_dbg** znovu přidělí blok paměti v základní haldě, ale **_aligned_offset_recalloc_dbg** nabízí několik funkcí ladění: vyrovnávací paměti na obou stranách uživatelské části. bloku pro otestování nevracení a*číslo řádku* informace o *názvu souboru*/k určení původu žádostí o přidělení. Sledování specifických typů přidělení s parametrem typu bloku není podporovanou funkcí ladění pro zarovnávání přidělení. Zarovnaná přidělení se zobrazí jako typ bloku _NORMAL_BLOCK.
 
-**_aligned_offset_realloc_dbg –** znovu alokuje blok zadaná paměťová s mírně více místa požadovaného *newSize*. *newSize* může být větší nebo menší než velikost bloku původně přidělené paměti. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Přerozdělení může způsobit přechod původního paměťového bloku na jiné místo v haldě, jakož i změníte velikost bloku paměti. Pokud se přesune blok paměti obsah původního bloku jsou přepsány.
+**_aligned_offset_realloc_dbg** znovu přidělí zadaný blok paměti o více místa, než je požadovaný *NewSize*. *NewSize* může být větší nebo menší než velikost původně přiděleného bloku paměti. Dodatečné místo se používá správcem haldy ladění k propojení bloků paměti ladění a k poskytnutí aplikace s informacemi hlavičky ladění a přepsat vyrovnávací paměti. Přerozdělení může mít za následek přesunutí původního bloku paměti na jiné místo v haldě a změnu velikosti bloku paměti. Pokud se blok paměti přesune, obsah původního bloku se přepíše.
 
-Tato funkce nastaví **errno** k **ENOMEM** Pokud přidělení paměti se nezdařilo nebo pokud požadovaná velikost (*číslo* * *velikost* ) byla větší než **_heap_maxreq –**. Další informace o **errno**, naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Navíc **_aligned_offset_recalloc_dbg –** ověří jeho parametry. Pokud *zarovnání* není mocninou čísla 2 nebo, pokud *posun* je větší než nebo rovna požadované velikosti a nenulovou hodnotu, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrací **NULL** a nastaví **errno** k **EINVAL**.
+Tato funkce nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovedlo nebo pokud požadovaná velikost (*Číselná* * *Velikost*) byla větší než **_HEAP_MAXREQ**. Další informace o **errno**najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_offset_recalloc_dbg** také ověří své parametry. Pokud *Zarovnání* není mocninou 2 nebo pokud je *posun* větší nebo roven požadované velikosti a nenulové hodnotě, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí **hodnotu null** a nastaví **errno** na **EINVAL**.
 
-Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce haldy standardní a jeho ladicí verze v sestavení pro ladění aplikace najdete v tématu [ladění verze z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloků přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi voláním standardní funkce haldy a její ladicí verzí v sestavení ladění aplikace najdete v tématu [ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_aligned_offset_recalloc_dbg**|\<malloc.h>|
+|**_aligned_offset_recalloc_dbg**|\<. h >|
 
 ## <a name="see-also"></a>Viz také:
 

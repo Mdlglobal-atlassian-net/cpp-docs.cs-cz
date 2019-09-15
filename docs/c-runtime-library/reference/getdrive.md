@@ -1,9 +1,9 @@
 ---
 title: _getdrive
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdrive
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getdrive
 - getdrive
@@ -25,19 +28,19 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: d71f72c00cc384d5f4f69d8a58dbcfb7aa39332f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb79d18c4ad177d7dc4da140e047ff3071ea3542
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331750"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955094"
 ---
-# <a name="getdrive"></a>_getdrive
+# <a name="_getdrive"></a>_getdrive
 
-Získá aktuální jednotku.
+Načte aktuální diskovou jednotku.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,15 +50,15 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí aktuální jednotku (výchozí) (1 = A, 2 = B a tak dále). Není vrácena žádná chyba.
+Vrátí aktuální (výchozí) jednotku (1 = A, 2 = B a tak dále). Nevrátila se žádná chybová zpráva.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getdrive**|\<direct.h>|
+|**_getdrive**|\<Direct. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

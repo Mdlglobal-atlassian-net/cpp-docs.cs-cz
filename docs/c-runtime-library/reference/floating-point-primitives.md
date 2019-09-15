@@ -1,7 +1,7 @@
 ---
-title: S plovoucí desetinnou čárkou primitiv
+title: Primitiva s plovoucí desetinnou čárkou
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _dclass
 - _ldclass
 - _fdclass
@@ -37,7 +37,7 @@ apiname:
 - _dsin
 - _ldsin
 - _fdsin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -49,7 +49,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _dclass
 - _ldclass
@@ -122,18 +125,18 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: 230d0def145bcb443437b59303b2b36e348da2bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d70062a76f9c32692f5df3f7abb96b49892725
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333609"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957162"
 ---
-# <a name="floating-point-primitives"></a>S plovoucí desetinnou čárkou primitiv
+# <a name="floating-point-primitives"></a>Primitiva s plovoucí desetinnou čárkou
 
-Primitivní funkce specifické pro společnost Microsoft, které se používají k implementaci některé standardní runtime funkce knihovny jazyka C (CRT) s plovoucí desetinnou čárkou. Pro úplnost jsou zdokumentované tady, ale nedoporučuje se používat. Některé z těchto funkcí jsou uvedené jako nevyužité, protože jste známé potíže v přesnost, zpracování výjimek a soulad s IEEE 754 chování. Existují v knihovně pouze z důvodu zpětné kompatibility. Pro správné chování, přenositelnost a dodržování standardů raději přes tyto funkce standardní funkce s plovoucí desetinnou čárkou.
+Primitivní funkce specifické pro společnost Microsoft, které se používají k implementaci některých standardních funkcí s plovoucí desetinnou čárkou v jazyce C Runtime Library (CRT). Jsou zde popsány pro úplnost, ale nejsou doporučovány pro použití. Některé z těchto funkcí jsou označeny jako nepoužívané, protože se označují, že mají problémy s přesností, zpracování výjimek a soulad s chováním IEEE-754. Existují v knihovně pouze kvůli zpětné kompatibilitě. Pro správné chování, přenositelnost a dodržování standardů, preferovat standardní funkce s plovoucí desetinnou čárkou na těchto funkcích.
 
-## <a name="dclass-ldclass-fdclass"></a>_dclass, _ldclass, _fdclass
+## <a name="_dclass-_ldclass-_fdclass"></a>_dclass, _ldclass, _fdclass
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -150,19 +153,19 @@ Argument funkce s plovoucí desetinnou čárkou.
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace těchto primitivních hodnot s plovoucí desetinnou čárkou C verze – makro CRT [fpclassify –](fpclassify.md) pro typy s plovoucí desetinnou čárkou. Klasifikace argument *x* se vrátí jako jednu z následujících konstant, definované v math.h:
+Tyto primitivy s plovoucí desetinnou čárkou implementují verze C makra CRT [fpclassify –](fpclassify.md) pro typy s plovoucí desetinnou čárkou. Klasifikace argumentu *x* je vrácena jako jedna z těchto konstant definovaná v Math. h:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
-| **FP_NAN** | Tichý, signalizace nebo neurčitý NaN |
+| **FP_NAN** | Tiché, signalizace nebo neurčitý NaN |
 | **FP_INFINITE** | Kladné nebo záporné nekonečno |
-| **FP_NORMAL** | Kladná nebo záporná normalizované nenulová hodnota |
-| **FP_SUBNORMAL** | Kladná nebo záporná subnormal (Nenormalizovaná) hodnota |
-| **FP_ZERO** | Pozitivní nebo negativní nulovou hodnotu |
+| **FP_NORMAL** | Kladná nebo záporná normalizovaná nenulová hodnota |
+| **FP_SUBNORMAL** | Kladná nebo záporná hodnota subnormálního (Denormalizovaná) |
+| **FP_ZERO** | Kladná nebo záporná nulová hodnota |
 
-Další podrobnosti, můžete použít specifické pro Microsoft [_fpclass _fpclassf](fpclass-fpclassf.md) funkce. Použití [fpclassify –](fpclassify.md) – makro nebo funkce pro přenositelnost.
+Další podrobnosti můžete použít ve funkcích [_fpclass](fpclass-fpclassf.md) specifických pro společnost Microsoft. Pro přenositelnost použijte makro nebo funkci [fpclassify –](fpclassify.md) .
 
-## <a name="dsign-ldsign-fdsign"></a>_dsign _ldsign, _fdsign
+## <a name="_dsign-_ldsign-_fdsign"></a>_dsign, _ldsign, _fdsign
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -179,9 +182,9 @@ Argument funkce s plovoucí desetinnou čárkou.
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace těchto primitivních hodnot s plovoucí desetinnou čárkou [signbit –](signbit.md) – makro nebo funkce CRT. Vrátí nenulovou hodnotu, pokud je bit znaménka nastavená v mantise (mantisa) argumentu *x*a 0, pokud není nastaven bit znaménka.
+Tyto primitivy s plovoucí desetinnou čárkou implementují makro nebo funkci [signbit –](signbit.md) v CRT. Vrátí nenulovou hodnotu, pokud je bit znaménka nastaven v mantisa (mantise) argumentu *x*a 0, pokud není bit znaménka nastaven.
 
-## <a name="dpcomp-ldpcomp-fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
+## <a name="_dpcomp-_ldpcomp-_fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -198,17 +201,17 @@ Argumenty funkce s plovoucí desetinnou čárkou.
 
 ### <a name="remarks"></a>Poznámky
 
-Těchto primitivních hodnot s plovoucí desetinnou čárkou přijímají dva argumenty, *x* a *y*a vrátí hodnotu, která zobrazuje jejich pořadí vztahu, vyjádřené jako bitový nebo tyto konstanty definované v math.h:
+Tyto primitivy s plovoucí desetinnou čárkou přebírají dva argumenty, *x* a *y*a vrátí hodnotu, která zobrazuje jejich vztah řazení vyjádřený jako bitový nebo tyto konstanty definované v Math. h:
 
 | Value | Popis |
 |------------|-----------------|
-| **_FP_LT** | *x* lze považovat za méně než *y* |
-| **_FP_EQ** | *x* lze považovat za rovna *y* |
-| **_FP_GT** | *x* lze považovat za větší než *y* |
+| **_FP_LT** | *x* se dá považovat za míň než *y* . |
+| **_FP_EQ** | *x* se dá vzít v úvahu jako *y* . |
+| **_FP_GT** | *x* se dá považovat za větší než *y* . |
 
-Implementace těchto primitivních hodnot [isgreater isgreaterequal, isless, islessequal islessgreater a isunordered](floating-point-ordering.md) makra a funkce v CRT.
+Tyto primitivní prvky implementují v CRT funkce [isgreaterequal, less, islessequal, islessgreater a isunordered](floating-point-ordering.md) .
 
-## <a name="dtest-ldtest-fdtest"></a>_dtest, _ldtest, _fdtest
+## <a name="_dtest-_ldtest-_fdtest"></a>_dtest, _ldtest, _fdtest
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -221,23 +224,23 @@ short __cdecl _fdtest(float* px);
 ### <a name="parameters"></a>Parametry
 
 *px*<br/>
-Ukazatel na argument typu s plovoucí desetinnou čárkou.
+Ukazatel na argument s plovoucí desetinnou čárkou.
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace těchto primitivních hodnot s plovoucí desetinnou čárkou C++ verze funkcí CRT [fpclassify –](fpclassify.md) pro typy s plovoucí desetinnou čárkou. Argument *x* se vyhodnotí a vrátí se jako jeden z následujících konstant, definované v math.h klasifikace:
+Tyto primitivní funkce s plovoucí desetinnou čárkou implementují C++ verze [fpclassify –](fpclassify.md) funkcí CRT pro typy s plovoucí desetinnou čárkou. Argument *x* je vyhodnocen a klasifikace je vrácena jako jedna z těchto konstant, definována v Math. h:
 
 |Value|Popis|
 |-----------|-----------------|
-| **FP_NAN** | Tichý, signalizace nebo neurčitý NaN |
+| **FP_NAN** | Tiché, signalizace nebo neurčitý NaN |
 | **FP_INFINITE** | Kladné nebo záporné nekonečno |
-| **FP_NORMAL** | Kladná nebo záporná normalizované nenulová hodnota |
-| **FP_SUBNORMAL** | Kladná nebo záporná subnormal (Nenormalizovaná) hodnota |
-| **FP_ZERO** | Pozitivní nebo negativní nulovou hodnotu |
+| **FP_NORMAL** | Kladná nebo záporná normalizovaná nenulová hodnota |
+| **FP_SUBNORMAL** | Kladná nebo záporná hodnota subnormálního (Denormalizovaná) |
+| **FP_ZERO** | Kladná nebo záporná nulová hodnota |
 
-Další podrobnosti, můžete použít specifické pro Microsoft [_fpclass _fpclassf](fpclass-fpclassf.md) funkce. Použití [fpclassify –](fpclassify.md) funkce pro přenositelnost.
+Další podrobnosti můžete použít ve funkcích [_fpclass](fpclass-fpclassf.md) specifických pro společnost Microsoft. Pro přenositelnost použijte funkci [fpclassify –](fpclassify.md) .
 
-## <a name="dint-ldint-fdint"></a>_d_int _ld_int, _fd_int
+## <a name="_d_int-_ld_int-_fd_int"></a>_d_int, _ld_int, _fd_int
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -250,16 +253,16 @@ short __cdecl _fd_int(float* px, short exp);
 ### <a name="parameters"></a>Parametry
 
 *px*<br/>
-Ukazatel na argument typu s plovoucí desetinnou čárkou.
+Ukazatel na argument s plovoucí desetinnou čárkou.
 
 *exp*<br/>
-Exponent jako s integrálním typem.
+Exponent jako integrální typ.
 
 ### <a name="remarks"></a>Poznámky
 
-Ukazatel na hodnotu s plovoucí desetinnou čárkou trvat těchto primitivních hodnot s plovoucí desetinnou čárkou *px* a hodnotu exponentu *exp*a odebírají zlomkovou část hodnoty s plovoucí desetinnou čárkou níže daný exponent, pokud je to možné . Vrácená hodnota je výsledkem **fpclassify –** na vstupní hodnota v *px* Pokud nekonečno a NaN a na výstupu hodnoty v *px* jinak.
+Tyto primitivy s plovoucí desetinnou čárkou přijímají ukazatel na hodnotu *px* s plovoucí desetinnou čárkou a hodnotu exponentu *exp*a odstraní zlomkovou část hodnoty s plovoucí desetinnou čárkou pod daným exponentem, pokud je to možné. Vrácená hodnota je výsledkem **fpclassify –** na vstupní hodnotě v *px* , pokud se jedná o NaN nebo nekonečno, a na výstupní hodnotu v *px* v opačném případě.
 
-## <a name="dscale-ldscale-fdscale"></a>_dscale _ldscale, _fdscale
+## <a name="_dscale-_ldscale-_fdscale"></a>_dscale, _ldscale, _fdscale
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -272,16 +275,16 @@ short __cdecl _fdscale(float* px, long exp);
 ### <a name="parameters"></a>Parametry
 
 *px*<br/>
-Ukazatel na argument typu s plovoucí desetinnou čárkou.
+Ukazatel na argument s plovoucí desetinnou čárkou.
 
 *exp*<br/>
-Exponent jako s integrálním typem.
+Exponent jako integrální typ.
 
 ### <a name="remarks"></a>Poznámky
 
-Ukazatel na hodnotu s plovoucí desetinnou čárkou trvat těchto primitivních hodnot s plovoucí desetinnou čárkou *px* a hodnotu exponentu *exp*, a škálovat hodnotu v *px* 2<sup> *exp*</sup>, pokud je to možné. Vrácená hodnota je výsledkem **fpclassify –** na vstupní hodnota v *px* Pokud nekonečno a NaN a na výstupu hodnoty v *px* jinak. Přenositelnost, dáváte přednost [ldexp – ldexpf – a ldexpl](ldexp.md) funkce.
+Tyto primitivní prvky s plovoucí desetinnou čárkou přijímají ukazatel na hodnotu *px* s plovoucí desetinnou čárkou a hodnotu exponentu *exp*a hodnotu v *px* podle 2<sup>*exp*</sup>, pokud je to možné. Vrácená hodnota je výsledkem **fpclassify –** na vstupní hodnotě v *px* , pokud se jedná o NaN nebo nekonečno, a na výstupní hodnotu v *px* v opačném případě. Pro přenositelnost dáváte přednost funkcím [ldexp –, ldexpf – a ldexpl](ldexp.md) .
 
-## <a name="dunscale-ldunscale-fdunscale"></a>_dunscale, _ldunscale, _fdunscale
+## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale, _ldunscale, _fdunscale
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -294,16 +297,16 @@ short __cdecl _fdunscale(short* pexp, float* px);
 ### <a name="parameters"></a>Parametry
 
 *pexp*<br/>
-Ukazatel na exponent jako s integrálním typem.
+Ukazatel na exponent jako integrální typ.
 
 *px*<br/>
-Ukazatel na argument typu s plovoucí desetinnou čárkou.
+Ukazatel na argument s plovoucí desetinnou čárkou.
 
 ### <a name="remarks"></a>Poznámky
 
-Těchto primitivních hodnot s plovoucí desetinnou čárkou rozdělit hodnotu s plovoucí desetinnou čárkou, na kterou odkazoval *px* mantisy (mantisa) a exponent, pokud je to možné. Mantisa je škálovat tak, aby absolutní hodnota je větší než nebo rovna hodnotě 0,5 a menší než 1,0. Exponent je hodnota *n*, kde původní hodnotu s plovoucí desetinnou čárkou je rovna škálován mantisy krát 2<sup>*n*</sup>. Toto celé číslo exponent *n* je uložen v umístění, na které odkazuje *pexp*. Vrácená hodnota je výsledkem **fpclassify –** na vstupní hodnota v *px* Pokud nekonečno a NaN a na jinak výstupní hodnoty. Přenositelnost, dáváte přednost [frexp – frexpf –, frexpl –](frexp.md) funkce.
+Tyto primitivní prvky s plovoucí desetinnou čárkou rozdělují hodnotu s plovoucí desetinnou čárkou, na kterou odkazuje *px* na mantisa (Mantis) a exponent, pokud je to možné. Mantisa se škáluje tak, že absolutní hodnota je větší než nebo rovna 0,5 a menší než 1,0. Exponent je hodnota *n*, kde je původní hodnota s plovoucí desetinnou čárkou rovna mantisa krátě zvětšené 2<sup>*n*</sup>. Celočíselný exponent *n* je uložený v umístění, na které odkazuje *pexp*. Vrácená hodnota je výsledkem **fpclassify –** na vstupní hodnotě v *px* , pokud se jedná o NaN nebo nekonečno, a na výstupní hodnotě v opačném případě. Pro přenositelnost dáváte přednost funkci [frexp –, frexpf – a frexpl](frexp.md) .
 
-## <a name="dexp-ldexp-fdexp"></a>_dexp, _ldexp, _fdexp
+## <a name="_dexp-_ldexp-_fdexp"></a>_dexp, _ldexp, _fdexp
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -319,16 +322,16 @@ short __cdecl _fdexp(float* px, float y, long exp);
 Argument funkce s plovoucí desetinnou čárkou.
 
 *px*<br/>
-Ukazatel na argument typu s plovoucí desetinnou čárkou.
+Ukazatel na argument s plovoucí desetinnou čárkou.
 
 *exp*<br/>
-Exponent jako s integrálním typem.
+Exponent jako integrální typ.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoření těchto primitivních hodnot s plovoucí desetinnou čárkou hodnotu s plovoucí desetinnou čárkou v umístění, na kterou odkazoval *px* rovna *y* * 2<sup>*exp*</sup>. Vrácená hodnota je výsledkem **fpclassify –** na vstupní hodnota v *y* Pokud nekonečno a NaN a na výstupu hodnoty v *px* jinak. Přenositelnost, dáváte přednost [ldexp – ldexpf – a ldexpl](ldexp.md) funkce.
+Tyto primitivy s plovoucí desetinnou čárkou vytvoří hodnotu s plovoucí desetinnou čárkou v umístění, na které je odkazováno v *px* rovném *y* * 2<sup>*exp*</sup>. Vrácená hodnota je výsledkem **fpclassify –** na vstupní hodnotě v *y* , pokud se jedná o NaN nebo nekonečno a výstupní hodnotu v *px* v opačném případě. Pro přenositelnost dáváte přednost funkcím [ldexp –, ldexpf – a ldexpl](ldexp.md) .
 
-## <a name="dnorm-fdnorm"></a>_dnorm, _fdnorm
+## <a name="_dnorm-_fdnorm"></a>_dnorm, _fdnorm
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -340,13 +343,13 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>Parametry
 
 *PS*<br/>
-Ukazatel na bitové reprezentace hodnotu s plovoucí desetinnou čárkou, vyjádřené jako pole **bez znaménka** **krátký**.
+Ukazatel na bitovou reprezentaci hodnoty s plovoucí desetinnou čárkou vyjádřenou jako pole **krátkého** **nepodepsaného znaménka** .
 
 ### <a name="remarks"></a>Poznámky
 
-Těchto primitivních hodnot s plovoucí desetinnou čárkou normalizovat zlomkovou část underflowed s plovoucí desetinnou čárkou a upravit *charakteristiku*, nebo posunutého exponent, tak, aby odpovídaly. Je hodnota předána jako bitové reprezentace typu s plovoucí desetinnou čárkou převést na celou řadu **bez znaménka** **krátký** prostřednictvím `_double_val`, `_ldouble_val`, nebo `_float_val` typu punning sjednocení deklarovaná v math.h. Vrácená hodnota je výsledek **fpclassify –** vstupní hodnotu s plovoucí desetinnou čárkou, pokud je nekonečno a NaN a jinak výstupní hodnoty.
+Tyto primitivy s plovoucí desetinnou čárkou normalizují zlomkovou část hodnoty s plovoucí desetinnou čárkou a upraví *charakteristiky*nebo posunuté exponenty tak, aby odpovídaly. Hodnota je předána jako bitová reprezentace typu s plovoucí `_double_val`desetinnou čárkou, která je převedena na pole **bez znaménka** **short** pomocí, `_ldouble_val`nebo `_float_val` typu punning Union deklarovaného v Math. h. Návratová hodnota je výsledkem **fpclassify –** na vstupní hodnoty s plovoucí desetinnou čárkou, pokud se jedná o NaN nebo nekonečno a na výstupní hodnotě v opačném případě.
 
-## <a name="dpoly-ldpoly-fdpoly"></a>_dpoly _ldpoly, _fdpoly
+## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -361,17 +364,17 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 *x*<br/>
 Argument funkce s plovoucí desetinnou čárkou.
 
-*Tabulka*<br/>
-Ukazatel na tabulku konstantní koeficienty pro polynomu.
+*stolní*<br/>
+Ukazatel na tabulku konstantních koeficientů pro polynom.
 
 *n*<br/>
-Pořadí stupeň polynomu k vyhodnocení.
+Pořadí polynomu k vyhodnocení.
 
 ### <a name="remarks"></a>Poznámky
 
-Těchto primitivních hodnot s plovoucí desetinnou čárkou vrátit vyhodnocení *x* v polynomu pořadí *n* jehož koeficienty jsou reprezentovány odpovídající konstantních hodnot v *tabulky*. Například pokud *tabulky*\[0] = 3.0, *tabulky*\[1] = 4.0, *tabulky*\[2] = 5.0, a *n* = 2, představuje polynomické 5.0 x<sup>2</sup> + 4.0 x + 3.0. Pokud tento polynomial vyhodnotí *x* 2.0, výsledkem je 31.0. Tyto funkce se používá interně.
+Tyto primitivy s plovoucí desetinnou čárkou vrací vyhodnocení *x* ve polynomu *n* , jejichž součinitele jsou reprezentovány odpovídajícími konstantními hodnotami v *tabulce*. Například pokud *tabulka*\[0] = 3,0, *tabulka*\[1] = 4,0, *tabulka*\[2] = 5,0 a *n* = 2, představuje polynom 5.0 x<sup>2</sup> + 4.0 x + 3,0. Pokud se tato polynom hodnotí pro *x* z 2,0, výsledek je 31,0. Tyto funkce se nepoužívají interně.
 
-## <a name="dlog-dlog-dlog"></a>_dlog, _dlog, _dlog
+## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -387,13 +390,13 @@ float __cdecl _fdlog(float x, int base_flag);
 Argument funkce s plovoucí desetinnou čárkou.
 
 *base_flag*<br/>
-Příznak, který určuje základ pro použití, 0 pro základ *e* a nenulové pro základní 10.
+Příznak, který řídí základ pro použití, 0 pro základní *e* a nenulovou hodnotu pro základní 10.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí přirozený protokolu těchto primitivních hodnot s plovoucí desetinnou čárkou *x*, ln (*x*) nebo protokolu<sub>*e*</sub>(*x*), Když *base_flag* je 0. Vrátí základní 10 protokolu *x*, nebo protokol<sub>10</sub>(*x*), kdy *base_flag* je nulová. Tyto funkce se používá interně. Přenositelnost, dáváte přednost funkce [protokolu, logf –, logl, log10, log10f – a log10l](log-logf-log10-log10f.md).
+Tyto primitivní funkce s plovoucí desetinnou čárkou Vrátí přirozený protokol *x*, LN (*x*) nebo protokolu<sub>*e*</sub>(*x*), pokud je *base_flag* 0. Vrátí protokolový základ 10 z *x*nebo protokol<sub>10</sub>(*x*), pokud *base_flag* není nula. Tyto funkce se nepoužívají interně. Pro přenositelnost, preferovat protokoly funkcí [, logf –, logl, log10 –, log10f – a log10l](log-logf-log10-log10f.md).
 
-## <a name="dsin-ldsin-fdsin"></a>_dsin, _ldsin, _fdsin
+## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin, _fdsin
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -408,18 +411,18 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 *x*<br/>
 Argument funkce s plovoucí desetinnou čárkou.
 
-*quadrant společnosti Gartner*<br/>
-Kvadrant posun 0, 1, 2 nebo 3 a použijte k vytvoření `sin`, `cos`, `-sin`, a `-cos` výsledky.
+*-*<br/>
+Časový posun od 0, 1, 2 nebo 3, který se má použít `sin`k `cos`vytváření `-sin`výsledků, `-cos` , a.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí sinus těchto primitivních hodnot s plovoucí desetinnou čárkou *x* posunu podle *kvadrantu* modulo 4. Efektivně, vrátí hodnotu sinus, kosinus, - sinus a - kosinus *x* při *kvadrantu* modulo 4 je 0, 1, 2 nebo 3, v uvedeném pořadí. Tyto funkce se používá interně. Přenositelnost, dáváte přednost [sin, sinf –, sinl –](sin-sinf-sinl.md), [cos cosf – a cosl –](cos-cosf-cosl.md) funkce.
+Tyto primitivy s plovoucí desetinnou čárkou vrací sinus posunu x *kvadrantem* modulo 4. Efektivně Vrátí sinus, kosinus,-sinus a-kosinus hodnoty *x* , pokud je v případě *, že modulo* 4 je 0, 1, 2 nebo 3, v uvedeném pořadí. Tyto funkce se nepoužívají interně. Pro přenositelnost můžete upřednostnit funkce [Sin, sinf –, Sinl](sin-sinf-sinl.md), [cos, cosf – a cosl](cos-cosf-cosl.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: \<math.h >
+Header: \<Math. h >
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
@@ -431,7 +434,7 @@ Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[frexp – frexpf –, frexpl –](frexp.md)<br/>
-[ldexp – ldexpf – a ldexpl](ldexp.md)<br/>
-[protokol, logf –, logl, log10, log10f –, log10l](log-logf-log10-log10f.md)<br/>
+[frexp –, frexpf –, frexpl](frexp.md)<br/>
+[ldexp –, ldexpf – a ldexpl](ldexp.md)<br/>
+[log, logf –, logl, log10 –, log10f –, log10l](log-logf-log10-log10f.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>

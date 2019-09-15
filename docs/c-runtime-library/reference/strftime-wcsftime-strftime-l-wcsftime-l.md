@@ -1,12 +1,12 @@
 ---
 title: strftime, wcsftime, _strftime_l, _wcsftime_l
 ms.date: 03/22/2018
-apiname:
+api_name:
 - strftime
 - _wcsftime_l
 - _strftime_l
 - wcsftime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsftime
 - strftime
@@ -34,16 +37,16 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c20303973d09f48067dc331dba98a08f8f364f8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353836"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958128"
 ---
-# <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
+# <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
-Formátovací řetězec času.
+Formátování času řetězce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,104 +84,104 @@ size_t _wcsftime_l(
 *strDest*<br/>
 Výstupní řetězec.
 
-*maxsize*<br/>
-Velikost *strDest* vyrovnávací paměti, měřeno v znaků (**char** nebo **wchar_t**).
+*MaxSize*<br/>
+Velikost vyrovnávací paměti *strDest* měřená v znacích (**char** nebo **wchar_t**).
 
-*Formát*<br/>
+*format*<br/>
 Řetězec řízení formátu
 
 *timeptr*<br/>
-**TM** datové struktury.
+datová struktura **TM**
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**STRFTIME** vrátí počet znaků, které jsou umístěny v *strDest* a **wcsftime** vrátí odpovídající počet širokých znaků.
+**strftime** vrátí počet znaků umístěných v *strDest* a **wcsftime** vrátí odpovídající počet velkých znaků.
 
-Celkový počet znaků, včetně ukončujícího znaku null, je-li více než *maxsize*, obě **strftime** a **wcsftime** vrátí 0 a obsah  *strDest* jsou neurčité.
+Pokud celkový počet znaků, včetně ukončující hodnoty null, je větší než *MaxSize*, **strftime** a **wcsftime** vrátí 0 a obsah *strDest* jsou neurčitelné.
 
-Počet znaků v *strDest* je rovna počtu literálními znaky ve *formátu* a také všechny znaky, které mohou být přidány do *formátu* prostřednictvím formátování kódů. Ukončující znak null řetězce se nepočítá ve vrácené hodnotě.
+Počet znaků v *strDest* se rovná počtu literálních znaků ve *formátu* a znaků, které mohou být přidány do *formátu* prostřednictvím kódů formátování. Ukončující hodnota null řetězce se nepočítá v návratové hodnotě.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strftime** a **wcsftime** funkce formátu **tm** časové hodnoty ve *timeptr* podle zadané  *Formát* argument a uloží výsledek do vyrovnávací paměti *strDest*. Maximálně *maxsize* znaky jsou umístěny v řetězci. Popis pole *timeptr* struktury, přečtěte si téma [asctime –](asctime-wasctime.md). **wcsftime** je ekvivalentem širokého znaku **strftime**; její argument ukazatele na řetězec odkazuje na řetězec širokých znaků. Tyto funkce chovají identicky jinak.
+Funkce **strftime** a **wcsftime** naformátují hodnotu času **TM** v *timeptr* podle zadaného argumentu *formátu* a výsledek uloží do vyrovnávací paměti *strDest*. Do řetězce se nanejvýš vloží znaky *MaxSize* . Popis polí ve struktuře *timeptr* naleznete v tématu [asctime](asctime-wasctime.md). **wcsftime** je ekvivalentem **strftime**; Argument ukazatele na řetězec odkazuje na řetězec s velkým znakem. Tyto funkce se chovají identicky jinak.
 
-Tato funkce ověřuje své parametry. Pokud *strDest*, *formátu*, nebo *timeptr* je ukazatel s hodnotou null, nebo pokud **tm** řešený datová struktura *timeptr* je neplatná (například, pokud obsahuje mimo rozsah hodnot pro času nebo data), nebo pokud *formátu* řetězec obsahuje neplatný kód formátování, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce vrátí hodnotu 0 a nastaví **errno** k **EINVAL**.
+Tato funkce ověří své parametry. Pokud je *strDest*, *Format*nebo *timeptr* ukazatel s hodnotou null, nebo pokud je datová struktura **TM** adresovaná v *timeptr* platná (například pokud obsahuje mimo rozsah hodnot pro čas nebo datum), nebo pokud řetězec *formátu* obsahuje neplatný kód formátování, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu 0 a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-*Formátu* argument se skládá z jednoho nebo více kódů; protože v **printf**, formátování kódy jsou uvozená znakem procent (**%**). Znaky, které nezačínají **%** zkopírují beze změny do *strDest*. **LC_TIME** kategorie aktuálního národního prostředí má vliv na výstupní formátování **strftime**. (Další informace o **LC_TIME**, naleznete v tématu [setlocale](setlocale-wsetlocale.md).) **Strftime** a **wcsftime** aktuálně nastavené pomocí funkce národního prostředí. **_Strftime_l –** a **_wcsftime_l –** verze těchto funkcí jsou identické, s tím rozdílem, že trvat národního prostředí jako parametr a použít namísto v současné době nastavené národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Argument *Format* se skládá z jednoho nebo více kódů; Jak je uvedeno v **printf**, před kódy formátování předchází znak procenta ( **%** ). Znaky, které nejsou začínat **%** , se zkopírují beze změny do *strDest*. Kategorie **LC_TIME** aktuálního národního prostředí má vliv na formátování výstupu **strftime**. (Další informace o **LC_TIME**najdete v tématu [setlocale](setlocale-wsetlocale.md).) Funkce **strftime** a **wcsftime** používají aktuálně nastavené národní prostředí. Verze **_strftime_l** a **_wcsftime_l** těchto funkcí jsou stejné s tím rozdílem, že přebírají národní prostředí jako parametr a používají je namísto aktuálně nastaveného národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-**Strftime** funkce podporují tyto formátovací kódy:
+Funkce **strftime** podporují tyto kódy formátování:
 
 |||
 |-|-|
-|Kód|Řetězci pro nahrazení|
-|**%a**|Zkrácený název dne v národním prostředí|
-|**%A**|Úplný název dne v národním prostředí|
+|Kód|Řetězec pro nahrazení|
+|**% a**|Zkrácený název dne v týdnu v národním prostředí|
+|**% A**|Úplný název dne v týdnu v národním prostředí|
 |**%b**|Zkrácený název měsíce v národním prostředí|
 |**%B**|Úplný název měsíce v národním prostředí|
-|**%c**|Datum a čas reprezentace vhodné pro národní prostředí|
-|**%C**|Rok, vydělí se číslem 100 a zkrácen na celočíselnou hodnotu jako desetinné číslo (00−99)|
+|**% c**|Reprezentace data a času, která je vhodná pro národní prostředí|
+|**%C**|Rok dělený 100 a zkrácený na celé číslo, jako desetinné číslo (00 − 99)|
 |**%d**|Den v měsíci jako desetinné číslo (01-31)|
-|**%D**|Ekvivalentní **%m/%d/%y**|
-|**%e**|Den v měsíci jako desetinné číslo (1-31), kde jeden číslic předchází mezeru|
-|**%F**|Ekvivalentní **%Y - min %– %d**|
-|**%g**|Poslední 2 číslice rok týden podle ISO 8601 jako desítkové číslo (00 - 99)|
-|**%G**|Rok týden podle ISO 8601 jako desítkové číslo|
-|**%h**|Zkrácený název měsíce (ekvivalentní **%b**)|
-|**%H**|Hodiny ve 24hodinovém formátu (00 - 23)|
+|**%D**|Ekvivalent k **% m/% d/% y**|
+|**% e**|Den v měsíci jako desetinné číslo (1-31), kde před sebou následují číslice|
+|**%F**|Ekvivalent **% Y-% m-% d**|
+|**% g**|Poslední 2 číslice roku založeného na standardu ISO 8601 jako desetinné číslo (00-99)|
+|**% G**|Rok založený na týdnu ISO 8601 jako desetinné číslo|
+|**% h**|Zkrácený název měsíce (ekvivalent **% b**)|
+|**%H**|Hodiny ve 24hodinovém formátu (00-23)|
 |**%I**|Hodiny ve 12hodinovém formátu (01-12)|
 |**%j**|Den v roce jako desetinné číslo (001-366)|
-|**%m**|Měsíce jako desetinné číslo (01-12)|
-|**%M**|Minuty jako desetinné číslo (00 - 59)|
-|**%n**|Znak nového řádku (**\n**)|
-|**%p**|12hodinovém národního prostředí. Indikátor pro 12hodinový formát|
-|**%r**|Národního prostředí 12hodinový formát času|
-|**%R**|Ekvivalentní **% H: %M**|
-|**%S**|Druhý jako desetinné číslo (00 - 59)|
-|**%t**|Znak horizontálního tabulátoru (**\t**)|
-|**%T**|Ekvivalentní **% H: % M: %S**, formát času ISO 8601|
-|**%u**|ISO 8601 den v týdnu jako desetinné číslo (1-7; Pondělí je 1)|
-|**%U**|Číslo týdne v roce jako desetinné číslo (00 - 53), kde První neděle je první den v týdnu 1|
-|**%V**|ISO 8601. číslo týdne jako desítkové číslo (00 - 53)|
-|**%w**|Den v týdnu jako desetinné číslo (0 – 6; 0 je neděle)|
-|**%W**|Číslo týdne v roce jako desetinné číslo (00 - 53), kde první pondělí je první den v týdnu 1|
-|**%x**|Datum reprezentaci pro národní prostředí|
-|**%X**|Čas reprezentace pro národní prostředí|
-|**%y**|Rok bez století, jako desetinné číslo (00 - 99)|
-|**%Y**|Rok se stoletím jako desetinné číslo|
-|**%z**|Posun od času UTC ve formátu ISO 8601. žádné znaky, pokud se časové pásmo neznámý|
-|**%Z**|Časové pásmo název národního prostředí nebo zkratku časové pásmo, v závislosti na nastavení registru. žádné znaky, pokud se časové pásmo neznámý|
-|**%%**|Znak procent|
+|**% m**|Měsíc jako desetinné číslo (01-12)|
+|**%M**|Minuta jako desetinné číslo (00-59)|
+|**% n**|Znak nového řádku ( **\n**)|
+|**% p**|/P.M. národního prostředí indikátor pro 12 hodin|
+|**% r**|12 hodinový čas národního prostředí|
+|**%R**|Ekvivalent **% H:%M**|
+|**%S**|Sekunda jako desetinné číslo (00-59)|
+|**%t**|Znak horizontálního tabulátoru ( **\t**)|
+|**%T**|Ekvivalent **% H:%M:% S**, formát času ISO 8601|
+|**% u**|ISO 8601 Weekday jako desetinné číslo (1-7; Pondělí je 1)|
+|**%U**|Číslo týdne v roce jako desetinné číslo (00-53), kde první neděle je první den v týdnu 1|
+|**%V**|Číslo ISO 8601 týdnů jako desetinné číslo (00-53)|
+|**%w**|Weekday v týdnu jako desetinné číslo (0-6; Neděle je 0)|
+|**%W**|Číslo týdne v roce jako desetinné číslo (00-53), kde první pondělí je první den v týdnu 1|
+|**% x**|Reprezentace data pro národní prostředí|
+|**%X**|Časová reprezentace národního prostředí|
+|**% y**|Rok bez století, jako desetinné číslo (00-99)|
+|**% Y**|Rok s století, jako desetinné číslo|
+|**%z**|Posun od času UTC ve formátu ISO 8601; žádné znaky, pokud je časové pásmo neznámé|
+|**%Z**|Název časového pásma národního prostředí nebo zkratka časového pásma, v závislosti na nastavení registru; žádné znaky, pokud je časové pásmo neznámé|
+|**%%**|Symbol procenta|
 
-Stejně jako **printf** funkce, **#** příznak může předpony žádné formátování kódu. V takovém případě význam formátovat kód je změněno následovně.
+Stejně jako ve funkci **#** printf může příznak označovat libovolný formátovací kód. V takovém případě je význam formátu kódu změněn následujícím způsobem.
 
 |Formátování kódu|Význam|
 |-----------------|-------------|
-|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** Příznak se ignoruje.|
-|**%#c**|Dlouhé datum a čas reprezentace, vhodné pro národní prostředí. Příklad: "Úterý, 14 dne 1995, 12:41:29".|
-|**%#x**|Datum (dlouhé) reprezentaci, vhodné pro národní prostředí. Příklad: "Úterý, 14 dne 1995".|
-|**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #I**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Odeberte počátečních nul nebo mezery (pokud existuje).|
+|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** příznak je ignorován.|
+|**%#c**|Dlouhé reprezentace data a času, která je vhodná pro národní prostředí. Příklad: "Úterý 14. března, 1995, 12:41:29".|
+|**%#x**|Dlouhé reprezentace data, která je vhodná pro národní prostředí. Příklad: "Úterý 14. března 1995".|
+|**% #d**, **% #D**, **% #e**, **% #F**, **% #H**, **%** #I, **% #j,%** **#m**, **% #M**, **% #r**, **% #R,% #S,% #T,% #U,% #V,% #W, % #y**, **% #Y**|Odebrat úvodní nuly nebo mezery (pokud existují).|
 
-ISO 8601-týden a na základě týden roku vytvářených **%V**, **%g**, a **%G**, používá týden, který začíná v pondělí, kde je v týdnu, který obsahuje od 4, což je první 1 týden týden, který obsahuje alespoň čtyři dny v roce. Pokud první pondělí rok 2, 3 nebo 4, předchozí dny jsou součástí minulý týden v předchozím roce. U těchto dnů **%V** nahrazuje 53 a oba **%g** a **%G** nahrazují číslic v předchozím roce.
+ISO 8601 týden a týden založený na týdnu vytvořil **% V**, **% g**a **% g**používá týden, který začíná v pondělí, kde týden 1 je týden, který obsahuje 4. ledna, což je první týden, který obsahuje nejméně čtyři dny v roce. Pokud je první pondělí roku v roce 2., 3. nebo 4., jsou předchozí dny součástí posledního týdne předchozího roku. V těchto dnech je **% V** nahrazeno 53, přičemž **% g** i **% g** jsou nahrazeny číslicemi předchozího roku.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**strftime**|\<time.h>|
-|**wcsftime**|\<Time.h > nebo \<wchar.h >|
+|**wcsftime**|\<Time. h > nebo \<WCHAR. h >|
 |**_strftime_l**|\<time.h>|
-|**_wcsftime_l**|\<Time.h > nebo \<wchar.h >|
+|**_wcsftime_l**|\<Time. h > nebo \<WCHAR. h >|
 
-**_Strftime_l –** a **_wcsftime_l –** funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Funkce **_strftime_l** a **_wcsftime_l** jsou specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -188,7 +191,7 @@ Podívejte se na příklad pro [čas](time-time32-time64.md).
 
 [Národní prostředí](../../c-runtime-library/locale.md) <br/>
 [Správa času](../../c-runtime-library/time-management.md) <br/>
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md) <br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md) <br/>
 [strcoll – funkce](../../c-runtime-library/strcoll-functions.md) <br/>

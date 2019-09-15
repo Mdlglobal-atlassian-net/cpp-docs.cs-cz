@@ -1,9 +1,9 @@
 ---
 title: _getw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getw
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157627"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954880"
 ---
-# <a name="getw"></a>_getw
+# <a name="_getw"></a>_getw
 
 Získá celé číslo z datového proudu.
 
@@ -45,15 +48,15 @@ int _getw(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_getw –** vrátí celočíselnou hodnotu číst. Vrácená hodnota **EOF** označuje chybu nebo konec souboru. Ale protože **EOF** hodnota je také legitimní celočíselnou hodnotu, použijte **feof** nebo **ferror** ověření endovém souborovém nebo chybová podmínka. Pokud *stream* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí **EOF**.
+**_getw** vrací celočíselnou hodnotu čtenou. Návratová hodnota **EOF** značí chybu nebo konec souboru. Vzhledem k tomu, že hodnota **EOF** je také legitimní celočíselná hodnota, použijte **feof** nebo **trajekt** k ověření konce souboru nebo chybové podmínky. Pokud má *datový proud* **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **EOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Getw –** funkce přečte další binární hodnota typu **int** ze souboru spojené s *stream* a zvýší přidružený ukazatel na soubor (pokud existuje) tak, aby odkazoval Další nepřečtené znak. **_getw –** nepřebírá žádné speciální zarovnání položek v datovém proudu. Může dojít k problémům s přenos s **_getw –** protože velikost **int** typu a pořadí bajtů v rámci **int** typ se liší mezi systémy.
+Funkce **_getw** čte další binární hodnotu typu **int** ze souboru přidruženého ke *streamování* a zvýší přidružený ukazatel na soubor (pokud existuje), který odkazuje na další nepřečtený znak. **_getw** nepředpokládá žádné speciální zarovnání položek v datovém proudu. Problémy s přenosem může nastat v **_getw** , protože velikost typu **int** a řazení bajtů v rámci typu **int** se v různých systémech liší.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -61,7 +64,7 @@ Ukazatel **souboru** struktury.
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -98,7 +101,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtgetwtxt"></a>Vstup: crt_getw.txt
+### <a name="input-crt_getwtxt"></a>Vstup: crt_getw. txt
 
 ```Input
 Line one.
@@ -113,5 +116,5 @@ First data word in file: 0x656e694c
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_putw](putw.md)<br/>

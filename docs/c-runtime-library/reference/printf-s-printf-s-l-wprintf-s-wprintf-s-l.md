@@ -1,12 +1,12 @@
 ---
 title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_s_l
 - wprintf_s
 - _wprintf_s_l
 - printf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wprintf_s
 - printf_s
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-ms.openlocfilehash: 6b07fd90e0390d5c39bc8f5885f5744de20eeb79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8b324b5f3c23b324bdcd43e3529ad3a3d4d6847
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231998"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950186"
 ---
-# <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
+# <a name="printf_s-_printf_s_l-wprintf_s-_wprintf_s_l"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
-Tiskne formátovaný výstup do standardního výstupního datového proudu. Tyto verze [printf _printf_l –, wprintf _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Vytiskne formátovaný výstup do standardního výstupního proudu. Tyto verze [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,41 +75,41 @@ int _wprintf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Formát*<br/>
-Formátování ovládacího prvku.
+*format*<br/>
+Ovládací prvek Format
 
 *argument*<br/>
 Volitelné argumenty
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet vytištěných znaků nebo záporná hodnota, pokud dojde k chybě.
+Vrátí počet vytištěných znaků nebo zápornou hodnotu, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**Printf_s** funkce formátuje a vytiskne řadu znaků a hodnot do standardního výstupního datového proudu **stdout**. Pokud argumenty jsou podle *formátu* řetězce, *formátu* řetězec musí obsahovat specifikace, které určují požadovaný výstupní formát argumentů.
+Funkce **printf_s** formátuje a tiskne řadu znaků a hodnot do standardního výstupního proudu **stdout**. Pokud argumenty následují *formátovací* řetězec, *formátovací* řetězec musí obsahovat specifikace, které určují výstupní formát argumentů.
 
-Hlavní rozdíl mezi **printf_s** a **printf** je, že **printf_s** kontroluje v řetězci formátování platnost znaků formátování, zatímco **printf**  pouze ověří, zda formátovací řetězec ukazatel s hodnotou null. Pokud kontrola selže, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Hlavní rozdíl mezi **printf_s** a **printf** je, že **printf_s** kontroluje řetězce formátu pro platné formátovací znaky, zatímco **printf** pouze kontroluje, zda je řetězec formátu ukazatel s hodnotou null. Pokud některá z těchto kontrol selžou, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
-Informace o **errno** a kódy chyb, naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o **errno** a chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**printf_s** a **fprintf_s –** chovají stejně, s výjimkou, že **printf_s** zapíše výstup do **stdout** , nikoli do cílového umístění typu **Souboru**. Další informace najdete v tématu [fprintf_s – _fprintf_s_l –, fwprintf_s – _fwprintf_s_l –](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+**printf_s** a **fprintf_s** se chovají stejně, s výjimkou toho, že **printf_s** zapisuje výstup do **stdout** místo do cíle typu **File**. Další informace najdete v tématu [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
-**wprintf_s –** je verze širokého znaku **printf_s**; *formátu* je širokoznaký řetězec. **wprintf_s –** a **printf_s** chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **printf_s** aktuálně nepodporuje výstup do datového proudu UNICODE.
+**wprintf_s** je **printf_s**verze s velkým znakem; *Formát* je řetězec s velkým znakem. **wprintf_s** a **printf_s** se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **printf_s** v současné době nepodporuje výstup do datového proudu Unicode.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE – definice|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
 |**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
-*Formátu* argument se skládá z běžných znaků, řídících sekvencí a (Pokud argumenty jsou podle *formátu*) specifikace formátu. Obyčejné znaky a sekvence escape se zkopírují do **stdout** v pořadí jejich výskytu. Například řádek
+Argument *formátu* se skládá z běžných znaků, řídicích sekvencí a ( *Pokud následují argumenty formátu)* . Běžné znaky a řídicí sekvence jsou zkopírovány do **stdout** v pořadí podle jejich vzhledu. Například řádek
 
 ```C
 printf_s("Line one\n\t\tLine two\n");
@@ -119,19 +122,19 @@ Line one
         Line two
 ```
 
-[Specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) vždy začínají znakem procenta (**%**) a jsou čteny zleva doprava. Když **printf_s** nalezne první specifikaci formátu (pokud existuje), převede hodnotu prvního argumentu po *formátu* a uloží jej odpovídajícím způsobem. Druhá specifikace formátu způsobí, že druhý argument bude převeden a uložen, a tak dále. Pokud existuje více argumentů, než je specifikace formátu, další argumenty jsou ignorovány. Výsledky nejsou definovány, jestliže neexistuje dostatek argumentů pro všechny specifikace formátu.
+[Specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) vždy začínají znakem procenta ( **%** ) a jsou čteny zleva doprava. Když **printf_s** narazí na první specifikaci formátu (pokud existuje), převede hodnotu prvního argumentu po jeho *formátování* a provede odpovídající výstup. Druhá specifikace formátu způsobí, že druhý argument bude převeden a výstup a tak dále. Pokud existuje více argumentů, než je specifikace formátu, nadbytečné argumenty jsou ignorovány. Pokud není dostatek argumentů pro všechny specifikace formátu, jsou výsledky nedefinovány.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec.
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**printf_s**, **_printf_s_l**|\<stdio.h>|
-|**wprintf_s**, **_wprintf_s_l**|\<stdio.h > nebo \<wchar.h >|
+|**wprintf_s**, **_wprintf_s_l**|\<stdio. h > nebo \<WCHAR. h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -213,7 +216,7 @@ Address as:   0012FF78
 ## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

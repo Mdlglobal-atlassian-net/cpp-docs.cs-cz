@@ -1,9 +1,9 @@
 ---
 title: __RTDynamicCast
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __RTDynamicCast
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcr120.dll
@@ -11,22 +11,25 @@ apilocation:
 - msvcr100.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __RTDynamicCast
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: f4bf4895af99b2d5c2d61e739c9d49d59cecb020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184525"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957331"
 ---
-# <a name="rtdynamiccast"></a>__RTDynamicCast
+# <a name="__rtdynamiccast"></a>__RTDynamicCast
 
-Implementace modulu runtime [dynamic_cast](../cpp/dynamic-cast-operator.md) operátor.
+Běhová implementace operátoru [dynamic_cast](../cpp/dynamic-cast-operator.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,31 +46,31 @@ PVOID __RTDynamicCast (
 #### <a name="parameters"></a>Parametry
 
 *inptr*<br/>
-Ukazatel na objekt polymorfní.
+Ukazatel na polymorfní objekt.
 
 *VfDelta*<br/>
-Posun ukazatele virtuální funkce objektu.
+Posun ukazatele virtuální funkce v objektu
 
 *SrcType*<br/>
-Statický typ objektu, na které odkazují `inptr` parametru.
+Statický typ objektu, na který `inptr` ukazuje parametr.
 
 *TargetType*<br/>
-Požadovaný výsledek přetypování.
+Zamýšlený výsledek funkce CAST
 
 *isReference*<br/>
-**Hodnota TRUE** Pokud vstup je odkaz; **false** při vstupu ukazatele.
+**true** , pokud je vstup odkazem; **false** , pokud je vstup ukazatelem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na odpovídající dílčí objekt, v případě úspěchu; v opačném případě **NULL**.
+Ukazatel na příslušný dílčí objekt, pokud je úspěšný; v opačném případě **hodnota null**.
 
 ## <a name="exceptions"></a>Výjimky
 
-`bad_cast()` Pokud vstup do `dynamic_cast<>` je odkaz a přetypování se nezdaří.
+`bad_cast()`Pokud `dynamic_cast<>` je vstupem odkaz a přetypování se nezdařilo.
 
 ## <a name="remarks"></a>Poznámky
 
-Převede `inptr` na objekt typu `TargetType`. Typ `inptr` musí být ukazatel, pokud `TargetType` je ukazatel nebo l hodnotou, pokud `TargetType` je odkaz. `TargetType` musí být ukazatel nebo odkaz na typ dříve definicí třídy nebo ukazatel na typ void.
+Převede `inptr` na objekt typu `TargetType`. Typ `inptr` musí být ukazatel, pokud `TargetType` je ukazatel nebo l-hodnota, pokud `TargetType` je odkazem. `TargetType`musí se jednat o ukazatel nebo odkaz na dříve definovaný typ třídy nebo ukazatel na void.
 
 ## <a name="requirements"></a>Požadavky
 

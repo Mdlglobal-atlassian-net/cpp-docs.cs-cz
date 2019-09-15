@@ -1,9 +1,9 @@
 ---
 title: _calloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _calloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab17348e473a4f642e784defe4569e0e799299e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340858"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939322"
 ---
-# <a name="callocdbg"></a>_calloc_dbg
+# <a name="_calloc_dbg"></a>_calloc_dbg
 
-Přidělí počet bloků paměti haldy pro další místa pro ladění záhlaví a přepsat vyrovnávací paměti (pouze ladicí verze).
+Přiděluje počet bloků paměti v haldě s dodatečnou mezerou pro hlavičku ladění a přepíše vyrovnávací paměti (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,44 +50,44 @@ void *_calloc_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*Číslo*<br/>
-Požadovaný počet bloky paměti.
+*Automatické*<br/>
+Požadovaný počet bloků paměti.
 
-*Velikost*<br/>
+*hodnota*<br/>
 Požadovaná velikost každého bloku paměti (v bajtech).
 
 *blockType*<br/>
 Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 
-Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu[typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+Informace o typech bloků přidělení a způsobu jejich použití naleznete v tématu[typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
 
-*Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
+*Bitmap*<br/>
+Ukazatel na název zdrojového souboru, který požadoval operaci přidělení, nebo **hodnota null**.
 
-*linenumber*<br/>
-Číslo řádku ve zdrojovém souboru, kde byla požadovaná operace rozdělení nebo **NULL**.
+*číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru, kde byla požadována operace přidělení, nebo **hodnota null**.
 
-*Filename* a *linenumber* parametry jsou k dispozici pouze při **_calloc_dbg –** explicitně volána nebo [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)byla definována konstanta preprocesoru.
+Parametry *filename* a *číslo řádku* jsou k dispozici pouze v případě, že byla explicitně volána metoda **_calloc_dbg** nebo byla definována konstanta preprocesoru [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení, tato funkce vrací ukazatel na uživatelské část poslední blok paměti přidělené, volá funkci novou obslužnou rutinu nebo vrátí **NULL**. Úplný popis návratový chování naleznete v části poznámky. Další informace o tom, jak použít nové funkce obslužné rutiny najdete v tématu [calloc](calloc.md) funkce.
+Po úspěšném dokončení Tato funkce vrátí ukazatel na uživatelskou část posledního přiděleného bloku paměti, zavolá novou funkci obslužné rutiny nebo vrátí **hodnotu null**. Úplný popis vráceného chování naleznete v části poznámky. Další informace o tom, jak se používá nová funkce obslužné rutiny, najdete v tématu funkce [calloc](calloc.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-**_calloc_dbg –** je ladicí verzi [calloc](calloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_calloc_dbg –** je omezená na volání **calloc**. Obě **calloc** a **_calloc_dbg –** přidělit *číslo* bloky paměti v haldě základní, ale **_calloc_dbg –** nabízí několik ladění funkce:
+**_calloc_dbg** je ladicí verze funkce [calloc](calloc.md) . Pokud není definován [_DEBUG](../../c-runtime-library/debug.md) , každé volání **_calloc_dbg** je sníženo na volání **calloc**. **Calloc** i **_calloc_dbg** přidělují *číselné* bloky paměti v základní haldě, ale **_calloc_dbg** nabízí několik funkcí ladění:
 
-- Vyrovnávací paměť po obou stranách část uživatele bloku pro testování nevracení.
+- Vyrovnávací paměti na kterékoli straně uživatelské části bloku k otestování nevracení.
 
-- Parametr typu blok pro sledování přidělení konkrétních typů.
+- Parametr typu bloku ke sledování konkrétních typů přidělení.
 
-- *Název souboru*/*linenumber* informací pro určení původu požadavků na přidělení.
+- filename/*číslo řádku* informace k určení původu žádostí o přidělení.
 
-**_calloc_dbg –** přiděluje každý blok paměti se trochu více místa požadovaného *velikost*. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Při přidělení bloku část uživatele bloku je vyplněny hodnotou 0xCD a každý z vyrovnávací paměti přepsání jsou vyplněny 0xFD.
+**_calloc_dbg** přiděluje každý blok paměti o něco více místa, než je požadovaná *Velikost*. Dodatečné místo se používá správcem haldy ladění k propojení bloků paměti ladění a k poskytnutí aplikace s informacemi hlavičky ladění a přepsat vyrovnávací paměti. Po přidělení bloku je uživatelská část bloku vyplněna hodnotou 0xCD a každá z vyrovnávací paměti přepsání je vyplněna 0xFD.
 
-**_calloc_dbg –** nastaví **errno** k **ENOMEM** Pokud selže přidělování paměti. **EINVAL** je vrácena, pokud přesahuje velikost potřebné paměti (včetně režie již bylo zmíněno dříve) **_heap_maxreq –**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_calloc_dbg** nastaví **errno** na **ENOMEM** , pokud není přidělení paměti úspěšné; **EINVAL** se vrátí, pokud velikost potřebné paměti (včetně výše zmíněné režie) překračuje **_HEAP_MAXREQ**. Další informace o tomto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce haldy standardní oproti jeho ladicí verze v sestavení pro ladění aplikace najdete v tématu [ladění verze z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi voláním standardní funkce haldy oproti verzi ladicího programu v sestavení ladění aplikace naleznete v tématu [ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -92,7 +95,7 @@ Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v 
 |-------------|---------------------|
 |**_calloc_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

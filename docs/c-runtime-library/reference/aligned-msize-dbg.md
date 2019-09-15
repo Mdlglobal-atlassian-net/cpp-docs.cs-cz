@@ -1,9 +1,9 @@
 ---
 title: _aligned_msize_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_msize_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_msize_dbg
 helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2a0ceab906dccacb2e1c78a8789d524b608a4ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342028"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939868"
 ---
-# <a name="alignedmsizedbg"></a>_aligned_msize_dbg
+# <a name="_aligned_msize_dbg"></a>_aligned_msize_dbg
 
-Vrátí velikost bloku paměti přiděleny do haldy (pouze ladicí verze).
+Vrátí velikost bloku paměti přiděleného v haldě (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,27 +47,27 @@ size_t _aligned_msize_dbg(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Ukazatele na blok paměti.
+Ukazatel na blok paměti.
 
-*Zarovnání*<br/>
-Hodnota zarovnání, které musí být celočíselnou mocninou 2.
+*bod*<br/>
+Hodnota zarovnání, která musí být celočíselnou mocninou 2.
 
-*Posun*<br/>
-Posun na přidělení paměti pro vynucení zarovnání.
+*polohy*<br/>
+Posun k přidělení paměti pro vynucení zarovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí velikost (v bajtech) jako celé číslo bez znaménka.
+Vrátí velikost (v bajtech) jako unsigned integer.
 
 ## <a name="remarks"></a>Poznámky
 
-*Zarovnání* a *posun* hodnoty musí být stejný jako hodnoty předané na funkci, která přidělené bloku.
+Hodnoty *Zarovnání* a *posunutí* musí být stejné jako hodnoty předané funkci, která tento blok přidělila.
 
-**_aligned_msize_dbg** je ladicí verzi [_aligned_msize –](aligned-msize.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_msize_dbg** je omezená na volání **_aligned_msize –**. Obě **_aligned_msize –** a **_aligned_msize_dbg** vypočítat velikost bloku paměti v haldě základní, ale **_aligned_msize_dbg** přidá funkce ladění: Zahrnuje vrácená velikost vyrovnávací paměti na obou stranách část uživatele bloku paměti.
+**_aligned_msize_dbg** je ladicí verze funkce [_aligned_msize](aligned-msize.md) . Pokud není definován [_DEBUG](../../c-runtime-library/debug.md) , každé volání **_aligned_msize_dbg** je sníženo na volání **_aligned_msize**. **_Aligned_msize** i **_aligned_msize_dbg** vypočítávají velikost bloku paměti v základní haldě, ale **_aligned_msize_dbg** přidá funkci ladění: Zahrnuje vyrovnávací paměti na obou stranách uživatelské části bloku paměti ve vrácené velikosti.
 
-Tato funkce ověřuje svůj parametr. Pokud *memblock* je ukazatel s hodnotou null nebo *zarovnání* není mocninou čísla 2, **_msize –** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation ](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
+Tato funkce ověří svůj parametr. Pokud je *memblock* ukazatel s hodnotou null nebo *Zarovnání* není mocninou 2, **_msize** vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce nastaví **errno** na **EINVAL** a vrátí-1.
 
-Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce haldy standardní a jeho ladicí verze v sestavení pro ladění aplikace najdete v tématu [ladění verze z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloků přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi voláním standardní funkce haldy a její ladicí verzí v sestavení ladění aplikace najdete v tématu [ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -72,11 +75,11 @@ Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v 
 |-------------|---------------------|
 |**_aligned_msize_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,12 +1,12 @@
 ---
 title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
 - _mbsnbcoll
 - _mbsnbicoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbicoll
 - mbsnbcoll
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-ms.openlocfilehash: c18faa3c93969a683b3ee3ef58dd02e1c1ae61f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c435060a6ac62213a50ba1d9fb9ef7d83fcb33
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156717"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952280"
 ---
-# <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
+# <a name="_mbsnbcoll-_mbsnbcoll_l-_mbsnbicoll-_mbsnbicoll_l"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
-Porovná *n* bajtů dvou vícebajtových znakových řetězců pomocí informací vícebajtové kódové stránky.
+Porovná *n* bajtů dvou vícebajtových znakových řetězců pomocí vícebajtových informací o znakové stránce.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,36 +88,36 @@ int _mbsnbicoll_l(
 
 ### <a name="parameters"></a>Parametry
 
-*string1*, *string2*<br/>
-Řetězce k porovnání.
+*řetězec1*, *řetězec2*<br/>
+Řetězce, které se mají porovnat
 
-*Počet*<br/>
-Počet bajtů k porovnání.
+*výpočtu*<br/>
+Počet bajtů, které mají být porovnány.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota označuje vztah mezi podřetězci *řetězec1* a *řetězec2*.
+Vrácená hodnota označuje vztah podřetězců *řetězec1* a *řetězec2*.
 
 |Návratová hodnota|Popis|
 |------------------|-----------------|
-|< 0|*řetězec1* podřetězec menší než *řetězec2* dílčí řetězec.|
-|0|*řetězec1* podřetězec shodný s *řetězec2* dílčí řetězec.|
-|> 0|*řetězec1* větší než podřetězec *řetězec2* dílčí řetězec.|
+|< 0|podřetězec *řetězec1* menší než *řetězec2* podřetězce|
+|0|řetězec *řetězec1* shodný s podřetězcem *řetězec2* .|
+|> 0|podřetězec *řetězec1* větší než *řetězec2* podřetězce|
 
-Pokud *řetězec1* nebo *řetězec2* je **NULL** nebo *počet* je větší než **INT_MAX**, neplatný je vyvolána obslužná rutina parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastavte **errno** k **EINVAL**. Chcete-li použít **_NLSCMPERROR**, zahrňte String.h nebo Mbstring.h.
+Pokud má parametr *řetězec1* nebo *řetězec2* **hodnotu null** nebo je *počet* větší než **INT_MAX**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastaví **errno** na **EINVAL**. Chcete-li použít **_NLSCMPERROR**, zahrňte buď String. h, nebo Mbstring. h.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí kompletuje nanejvýš prvních *počet* bajtů *řetězec1* a *řetězec2* a vrátí hodnotu, která označuje vztah mezi výsledný podřetězce z *řetězec1* a *řetězec2*. Pokud poslední bajt v podřetězci *řetězec1* nebo *řetězec2* je vedoucí bajt, není zahrnut v porovnání; tyto funkce porovnají pouze kompletní znaky v podřetězcích. **_mbsnbicoll –** je velká a malá písmena verze **_mbsnbcoll –**. Stejně jako [_mbsnbcmp –](mbsnbcmp-mbsnbcmp-l.md) a [_mbsnbicmp –](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll –** a **_mbsnbicoll –** kompletují dva vícebajtové znakové řetězce podle lexikografickém pořadí určeném vícebajtovou [znaková stránka](../../c-runtime-library/code-pages.md) aktuálně používán.
+Každá z těchto funkcí se seřazením z nejvyšší *počet* bajtů v řetězci *řetězec1* a *řetězec2* a vrátí hodnotu, která označuje vztah mezi výslednými podřetězci *řetězec1* a *řetězec2*. Pokud je finální bajt v podřetězci *řetězec1* nebo *řetězec2* vedoucí bajt, není zahrnut v porovnání; Tyto funkce porovnávají pouze kompletní znaky v podřetězcích. **_mbsnbicoll** je verze **_mbsnbcoll**bez rozlišení velkých a malých písmen. Podobně jako [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) a [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** a **_mbsnbicoll** kompletují dva vícebajtové znakové řetězce podle objednávky lexikografickým pořadím určené vícebajtovou [znakovou stránkou](../../c-runtime-library/code-pages.md) , která se právě používá.
 
-Pro některé kódové stránky a příslušné znakové sady pořadí znaků ve znakové sadě může lišit od pořadí lexikografických znaků. V národním prostředí "C", to není případ: pořadí znaků ve znakové sadě ASCII je stejné jako lexikografické pořadí znaků. Ale v některých evropských znakových stránek, například znak "a" (hodnota 0x61) předchází znakové "č. (hodnota 0xE4) v znakové sady, ale znak"č' předchází znak "a" lexicographically. K provedení lexikografického porovnání řetězců pomocí bajtů v takové situaci, použijte **_mbsnbcoll –** spíše než **_mbsnbcmp –**; pro kontrolu pouze rovnosti řetězců použijte **_mbsnbcmp –**.
+Pro některé znakové stránky a odpovídající znakové sady se pořadí znaků ve znakové sadě může lišit od pořadí znaků lexikografickým pořadím. V národním prostředí "C" se nejedná o tento případ: pořadí znaků v sadě znaků ASCII je stejné jako lexikografickým pořadím pořadí znaků. V některých evropských kódových stránkách například znak "a" (Value 0x61) předchází znak "ä" (Value 0xE4) ve znakové sadě, ale znak "ä" před znakem "a" lexikograficky. Chcete-li provést lexikografickým pořadím porovnání řetězců podle bajtů v takové instanci, použijte **_mbsnbcoll** namísto **_mbsnbcmp**; Chcete-li kontrolovat pouze rovnost řetězců, použijte **_mbsnbcmp**.
 
-Protože **coll** funkce kompletují řetězce lexikograficky pro porovnávání, zatímco **cmp** funkce jednoduše testují rovnost řetězců, **coll** jsou funkce mnohem pomalejší než odpovídající **cmp** verze. Proto **coll** funkce by měly být používány pouze v případě, že existuje rozdíl mezi znakové sady a lexikografickým pořadím znaků v aktuální znakové stránce a tento rozdíl je relevantní pro porovnání.
+Vzhledem k tomu, že funkce **coll** vyhodnotí řetězce lexikograficky pro porovnání, zatímco funkce **CMP** jednoduše testuje rovnost řetězců, funkce **coll** jsou mnohem pomalejší než odpovídající verze **CMP** . Proto by měly být funkce **coll** použity pouze v případě, že existuje rozdíl mezi pořadím znakové sady a pořadím znaků lexikografickým pořadím na aktuální znakové stránce a tento rozdíl je pro porovnání důležité.
 
-Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -129,16 +132,16 @@ Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsnbcoll**|\<Mbstring.h >|
-|**_mbsnbcoll_l**|\<Mbstring.h >|
-|**_mbsnbicoll**|\<Mbstring.h >|
-|**_mbsnbicoll_l**|\<Mbstring.h >|
+|**_mbsnbcoll**|\<Mbstring. h >|
+|**_mbsnbcoll_l**|\<Mbstring. h >|
+|**_mbsnbicoll**|\<Mbstring. h >|
+|**_mbsnbicoll_l**|\<Mbstring. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>

@@ -1,9 +1,9 @@
 ---
 title: access (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - access
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - access
 helpviewer_keywords:
 - access function
 ms.assetid: 65197793-bd0a-41c3-9c29-18de2d95d9a6
-ms.openlocfilehash: a12acb91852d97596c956834c2b2dc0a2412194e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f18e330aa7736053a089f7bf730401fe8f80fa53
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335727"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943947"
 ---
 # <a name="access-crt"></a>access (CRT)
 
-Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_přístupový](access-waccess.md) nebo s rozšířeným zabezpečením [_access_s –](access-s-waccess-s.md) místo.
+Tato funkce POSIX je zastaralá. Místo toho použijte C++ [_access](access-waccess.md) podle standardu ISO nebo [_access_s](access-s-waccess-s.md) s vylepšeným zabezpečením.

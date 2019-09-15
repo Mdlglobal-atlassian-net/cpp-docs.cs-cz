@@ -1,10 +1,10 @@
 ---
 title: asctime, _wasctime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wasctime
 - asctime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tasctime
 - asctime
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: bc2d7a50442d9000eaaebf7a06bf336b3317e4df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341805"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939671"
 ---
-# <a name="asctime-wasctime"></a>asctime, _wasctime
+# <a name="asctime-_wasctime"></a>asctime, _wasctime
 
-Převést **tm** čas struktury na řetězec znaků. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [asctime_s, _wasctime_s – –](asctime-s-wasctime-s.md).
+Převést časovou strukturu **správce** na řetězec znaků. K dispozici jsou bezpečnější verze těchto funkcí; viz [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,41 +58,41 @@ wchar_t *_wasctime(
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Struktura času a data.
+Struktura data a času.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**asctime –** vrací ukazatel na výsledek řetězce znak; **_wasctime –** vrací ukazatel na výsledek řetězce širokého znaku. Neexistuje žádná návratová hodnota chyba.
+**asctime** vrací ukazatel na výsledek řetězce znaků; **_wasctime** vrací ukazatel na výsledek řetězce s velkým znakem. Nechybí návratová hodnota.
 
 ## <a name="remarks"></a>Poznámky
 
-Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [asctime_s, _wasctime_s – –](asctime-s-wasctime-s.md).
+K dispozici jsou bezpečnější verze těchto funkcí; viz [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
-**Asctime –** funkce převede čas uložené jako struktury na řetězec znaků. *Timeptr* hodnota se obvykle získá z volání **gmtime** nebo **localtime**, které vracejí ukazatele na **tm** strukturu, definované v čase. H.
+Funkce **asctime** převede čas uložený jako strukturu na řetězec znaků. Hodnota *timeptr* je obvykle získána ze volání **gmtime** nebo **localtime**, který vrací ukazatel na strukturu **TM** definovanou v čase. Y.
 
-|člen timeptr|Hodnota|
+|člen timeptr|Value|
 |--------------------|-----------|
 |**tm_hour**|Hodiny od půlnoci (0-23)|
-|**tm_isdst**|Kladná, pokud je v platnosti; letního času 0, pokud není platná; letního času záporná, pokud stav letní čas není znám. Knihovny run-time jazyka C předpokládá použita pravidla Spojených států pro implementaci výpočtu letního času (DST).|
+|**tm_isdst**|Kladné, pokud je v platnosti letní čas; 0, pokud letní čas neplatí; záporné, pokud stav letního času není známý. Knihovna run-time jazyka C předpokládá pravidla USA pro implementaci výpočtu letního času (DST).|
 |**tm_mday**|Den v měsíci (1-31)|
-|**tm_min**|Minuty po hodině (0 – 59)|
-|**tm_mon**|Měsíc (0 – 11; Leden = 0)|
-|**tm_sec**|Sekundy po minutě (0 – 59)|
-|**tm_wday**|Den v týdnu (0 – 6; Neděle = 0)|
-|**tm_yday**|Den roku (0-365; 1. ledna = 0)|
-|**tm_year**|Rok (aktuální rok minus 1900)|
+|**tm_min**|Minuty po hodině (0-59)|
+|**tm_mon**|Měsíc (0-11; Leden = 0)|
+|**tm_sec**|Sekundy po minutě (0-59)|
+|**tm_wday**|Den v týdnu (0-6; Neděle = 0)|
+|**tm_yday**|Den v roce (0-365; 1. ledna = 0)|
+|**tm_year**|Year (aktuální rok minus 1900)|
 
-Řetězec převedený znak je také upravena podle nastavení místní časové pásmo. Informace o konfiguraci místního času, najdete v článku [čas](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), a [localtime](localtime-localtime32-localtime64.md) funkce a [_tzset –](tzset.md) – funkce informace o definování prostředí časové pásmo a globální proměnné.
+Převedený řetězec znaků je také upraven podle nastavení místního časového pásma. Informace o konfiguraci místního času naleznete v tématu funkce [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)a [localtime](localtime-localtime32-localtime64.md) a funkce [_tzset](tzset.md) pro informace o definování prostředí časového pásma a globálních proměnných.
 
-Řetězec výsledek produkovaný **asctime –** obsahuje přesně 26 znaků a má tvar `Wed Jan 02 02:03:55 1980\n\0`. Se používá 24hodinový formát. Všechna pole mají konstantní šířce. Znak nového řádku a znak null zabírat posledních dvou pozic řetězce. **asctime –** používá jeden staticky přidělenou vyrovnávací paměť pro vrácený řetězec. Každé volání funkcí ničí výsledek předchozího volání.
+Výsledek řetězce vytvořený pomocí **asctime** obsahuje přesně 26 znaků a má formu `Wed Jan 02 02:03:55 1980\n\0`. Použije se 24hodinový čas. Všechna pole mají konstantní šířku. Znak nového řádku a znak null zabírají poslední dvě pozice řetězce. **asctime** používá pro uložení návratového řetězce jednu staticky přidělenou vyrovnávací paměť. Každé volání této funkce zničí výsledek předchozího volání.
 
-**_wasctime –** je verze širokého znaku **asctime –**. **_wasctime –** a **asctime –** se jinak chovají stejně.
+**_wasctime** je verze **asctime**s velkým znakem. **_wasctime** a **asctime** se chovají stejně jinak.
 
-Tyto funkce ověřují své parametry. Pokud *timeptr* je ukazatel s hodnotou null, nebo pokud obsahuje hodnoty mimo rozsah, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **NULL** a nastaví **errno** k **EINVAL**.
+Tyto funkce ověřují své parametry. Pokud je *timeptr* ukazatel s hodnotou null, nebo pokud obsahuje hodnoty mimo rozsah, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce **hodnotu null** a nastaví **errno** na **EINVAL**.
 
-### <a name="generic-text-routine-mapping"></a>Rutiny mapování obecného textu
+### <a name="generic-text-routine-mapping"></a>Mapování rutiny obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime**|**asctime**|**asctime**|**_wasctime**|
 
@@ -98,11 +101,11 @@ Tyto funkce ověřují své parametry. Pokud *timeptr* je ukazatel s hodnotou nu
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**asctime**|\<time.h>|
-|**_wasctime**|\<Time.h > nebo \<wchar.h >|
+|**_wasctime**|\<Time. h > nebo \<WCHAR. h >|
 
 ## <a name="example"></a>Příklad
 
-Tento program umístí systémový čas dlouhé celé číslo **aclock**, přeloží ho do struktury **newtime** a poté převádí řetězec formuláře pro výstup, pomocí **asctime –** funkce.
+Tento program umístí systémový čas do dlouhého celého čísla **ACLOCK**, převede ho do struktury **newtime** a pak ji převede na formát řetězce pro výstup pomocí funkce **asctime** .
 
 ```C
 // crt_asctime.c

@@ -1,10 +1,10 @@
 ---
 title: _chdir, _wchdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wchdir
 - _chdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tchdir
 - _chdir
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: e4cf7a44864df0b5ecca531aab3db4546c25bb2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347662"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939376"
 ---
-# <a name="chdir-wchdir"></a>_chdir, _wchdir
+# <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
 Změní aktuální pracovní adresář.
 
@@ -56,26 +59,26 @@ int _wchdir(
 
 ### <a name="parameters"></a>Parametry
 
-*DirName*<br/>
-Cesta nového pracovního adresáře.
+*dirname*<br/>
+Cesta k novému pracovnímu adresáři
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tyto funkce vrátí hodnotu 0, pokud je úspěšná. Návratová hodnota-1 označuje chybu. Pokud zadaná cesta nebyla nalezena, **errno** je nastavena na **ENOENT**. Pokud *dirname* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí hodnotu -1.
+Tyto funkce vrací hodnotu 0, pokud bylo úspěšné. Návratová hodnota-1 označuje chybu. Pokud zadanou cestu nebylo možné najít, **errno** je nastaven na **ENOENT**. Pokud má dirname **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí-1.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Chdir –** funkce změní aktuální pracovní adresář na adresář zadaný *dirname*. *Dirname* parametr musí odkazovat na existující adresář. Tuto funkci můžete změnit aktuální pracovní adresář v jakékoli jednotce. Pokud nový písmeno jednotky je zadán v *dirname*, se také změní výchozí písmeno jednotky. Například pokud je výchozí písmeno jednotky a je aktuálním pracovním adresáři \BIN, následující volání změní aktuální pracovní adresář pro jednotku C a C se zavádí jako nové výchozí jednotka:
+Funkce **_chdir** změní aktuální pracovní adresář na adresář určený parametrem *dirname*. Parametr *dirname* musí odkazovat na existující adresář. Tato funkce může změnit aktuální pracovní adresář na jakékoli jednotce. Pokud je v *dirname*zadáno nové písmeno jednotky, změní se také písmeno výchozí jednotky. Pokud je například výchozím písmenem jednotky a adresářem \BIN aktuální pracovní adresář, následující volání změní aktuální pracovní adresář pro jednotku C a vytvoří jako novou výchozí jednotku C:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Při použití volitelných lomítka (**&#92;**) v cestách, je nutné umístit dvě zpětná lomítka (**&#92;&#92;**) v literálu C k reprezentaci jedno zpětné lomítko ( **&#92;**).
+Použijete-li v cestách volitelný znak zpětného lomítka ( **&#92;** ), je nutné umístit dvě zpětná **&#92;** lomítka () do řetězcového literálu jazyka C pro reprezentaci jednoho zpětného lomítka ( **&#92;** ).
 
-**_wchdir –** je verze širokého znaku **_chdir –**; *dirname* argument **_wchdir –** je širokoznaký řetězec. **_wchdir –** a **_chdir –** se jinak chovají stejně.
+**_wchdir** je **_chdir**verze s velkým znakem; Argument *dirname* pro **_wchdir** je řetězec s velkým znakem. **_wchdir** a **_chdir** se chovají stejně jinak.
 
-### <a name="generic-text-routine-mapping"></a>Mapování obecného textu rutiny:
+### <a name="generic-text-routine-mapping"></a>Mapování rutiny obecného textu:
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -85,10 +88,10 @@ Při použití volitelných lomítka (**&#92;**) v cestách, je nutné umístit 
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_chdir**|\<direct.h>|\<errno.h>|
-|**_wchdir**|\<Direct.h > nebo \<wchar.h >|\<errno.h>|
+|**_chdir**|\<Direct. h >|\<errno.h>|
+|**_wchdir**|\<Direct. h > nebo \<WCHAR. h >|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

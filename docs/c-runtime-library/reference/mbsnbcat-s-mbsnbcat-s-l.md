@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcat_s, _mbsnbcat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnbcat_s
 - mbsnbcat_s
@@ -32,19 +35,19 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a3f66f8fc8d4fd659880e8793fdaae635f9f7ba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331518"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952261"
 ---
-# <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
+# <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
-Připojí řetězec vícebajtového znaku nanejvýš prvních **n** bajtů jiného vícebajtové znakové řetězce. Jde o verzích [_mbsnbcat – _mbsnbcat_l –](mbsnbcat-mbsnbcat-l.md) , které mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Připojí se k vícebajtovým řetězcům znaků, maximálně prvních **n** bajtů jiného vícebajtového znaku. Jedná se o verze [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) , které mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,44 +82,44 @@ errno_t _mbsnbcat_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
-Řetězec cíle zakončený hodnotou Null vícebajtového znaku.
+*propojovací*<br/>
+Cílový řetězec vícebajtových znaků zakončený hodnotou null.
 
 *sizeInBytes*<br/>
-Velikost *dest* vyrovnávací paměti v bajtech.
+Velikost *cílový* buffer v bajtech
 
 *src*<br/>
-Řetězec zakončený hodnotou Null zdroje vícebajtového znaku.
+Zdrojový řetězec vícebajtových znaků zakončený hodnotou null.
 
-*Počet*<br/>
-Počet bajtů z *src* pro připojení k *dest*.
+*výpočtu*<br/>
+Počet bajtů ze *Src* pro připojení k *cíl*.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; v opačném případě chybový kód.
+Nula v případě úspěchu; v opačném případě kód chyby.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
-|**cíl**|*sizeInBytes*|*src*|Návratová hodnota|
+|**Propojovací**|*sizeInBytes*|*src*|Návratová hodnota|
 |------------|-------------------|-----------|------------------|
-|**NULL**|Všechny|Všechny|**EINVAL**|
-|Jakýkoli|<= 0|Všechny|**EINVAL**|
-|Jakýkoli|Všechny|**NULL**|**EINVAL**|
+|**NULL**|Jakýmikoli|Jakýmikoli|**EINVAL**|
+|Any|<= 0|Jakýmikoli|**EINVAL**|
+|Any|Jakýmikoli|**NULL**|**EINVAL**|
 
-Pokud dojde k některé z chybové stavy, funkce generuje chybu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce vrátí **EINVAL** a nastaví **errno** k **EINVAL**.
+Pokud dojde k nějaké chybě, funkce vygeneruje chybu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbsnbcat_s –** funkce připojí k *dest*, maximálně prvních *počet* bajtů *src*. Pokud bajt, která bezprostředně předchází znak null v *dest* je vedoucí bajt úvodní bajt je přepsán *src*. Jinak úvodní bajt *src* přepíše ukončující znak null proměnné *dest*. Pokud se objeví nulový bajt v *src* před *počet* bajtů se připojují, **_mbsnbcat_s –** připojí všechny bajty z *src*, až hodnotu null znak. Pokud *počet* je větší než délka *src*, délka *src* je použito místo *počet*. Výsledný řetězec je ukončen znakem null. Pokud se kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
+Funkce **_mbsnbcat_s** připojí k parametru *cíl*, nejvíce první *počet* bajtů *Src*. Pokud je bajt, který bezprostředně předchází znaku null v *cíl* je vedoucí bajt, je přepsán počátečním bajtem *Src*. V opačném případě počáteční bajt *Src* přepíše ukončující znak null hodnoty *cíl*. Pokud se v *Src* objeví nulový bajt před připojením k *počtu* bajtů, **_mbsnbcat_s** připojí všechny bajty ze *Src*, až po znak null. Pokud je *počet* větší než délka *Src*, je délka *Src* použita místo *počtu*. Výsledný řetězec je ukončen znakem null. Pokud se provádí kopírování mezi řetězci, které se překrývají, chování není definováno.
 
-Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí jsou identické, s tím rozdílem, ty, které nemají mít **_l** přípona pomocí aktuálního národního prostředí a ty, které mají **_l** přípona místo toho používá parametr národního prostředí, která Předaný. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace najdete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md) . Verze těchto funkcí jsou identické, s tím rozdílem, že ty, které nemají příponu **_l** , používají aktuální národní prostředí a ty, které mají příponu **_l** , místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit velikost vyrovnávací paměti automaticky a tím eliminují potřebu zadat argument velikosti, a používají funkce jejich novějšími, bezpečnějšími můžete automaticky nahradit starší, méně zabezpečené funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++nástroji je použití těchto funkcí zjednodušeno pomocí přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size a můžou automaticky používat své novější a bezpečnější funkce k nahrazení starších a méně zabezpečených funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
+Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -129,14 +132,14 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xF
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsnbcat_s**|\<Mbstring.h >|
-|**_mbsnbcat_s_l**|\<Mbstring.h >|
+|**_mbsnbcat_s**|\<Mbstring. h >|
+|**_mbsnbcat_s_l**|\<Mbstring. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>

@@ -1,11 +1,11 @@
 ---
 title: localtime, _localtime32, _localtime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _localtime64
 - _localtime32
 - localtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - localtime64
 - _localtime64
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: d34a45ff20cb74d61a8eb189282bfdce4d8954ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e2f39b3a1b6376e24d8a812d1074840862f398a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157510"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953350"
 ---
-# <a name="localtime-localtime32-localtime64"></a>localtime, _localtime32, _localtime64
+# <a name="localtime-_localtime32-_localtime64"></a>localtime, _localtime32, _localtime64
 
-Převede časovou hodnotu a pro místní časové pásmo opraví. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [localtime_s – _localtime32_s –, _localtime64_s –](localtime-s-localtime32-s-localtime64-s.md).
+Převede hodnotu času a oprav pro místní časové pásmo. K dispozici jsou bezpečnější verze těchto funkcí; viz [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,54 +61,54 @@ Ukazatel na uložený čas.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na strukturu výsledek nebo **NULL** datum předán do funkce je:
+Vrátí ukazatel na výsledek struktury nebo **hodnotu null** , pokud je datum předané funkci:
 
-- Před půlnocí, 1. ledna 1970.
+- Před půlnocí 1. ledna 1970.
 
-- Po 03:14:07, 19. ledna 2038 UTC (pomocí **_time32 –** a **time32_t**).
+- Až 03:14:07, 19. ledna 2038, UTC (pomocí **_time32** a **time32_t**).
 
-- Po 23:59:59, 31 prosince 3000 UTC (pomocí **_time64** a **__time64_t –**).
+- Po 23:59:59, 31. prosince 3000, UTC (pomocí **_time64** a **__time64_t**).
 
-**_localtime64**, který používá **__time64_t –** struktury, umožňuje data vyjadřují až do 23:59:59, 31 prosince 3000 koordinovaného univerzálního času (UTC), zatímco **_localtime32** představuje data do 23:59:59 18. ledna 2038 UTC.
+**_localtime64**, která používá strukturu **__time64_t** , umožňuje data vyjádřit až 23:59:59, 31. prosince 3000, KOORDINOVANÝ světový čas (UTC), zatímco **_localtime32** představuje kalendářní data prostřednictvím 23:59:59 18. ledna, 2038, UTC.
 
-**localtime** je vložená funkce, která je vyhodnocena na **_localtime64**, a **time_t** je ekvivalentní **__time64_t –**. Pokud je nutné donutit kompilátor k interpretaci **time_t** jako staré 32bitové **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To způsobí, že to **localtime** vyhodnotilo **_localtime32**. Toto nastavení nedoporučujeme, protože může vaše aplikace selhat po 18. ledna 2038, a to není povoleno na 64bitových platformách.
+**localtime** je vložená funkce, která se vyhodnotí na **_localtime64**a **time_t** je ekvivalentem **__time64_t**. Pokud potřebujete vynutit, aby kompilátor interpretoval **time_t** jako starou 32 **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To způsobí, že se **localtime** vyhodnotí jako **_localtime32**. To se nedoporučuje, protože vaše aplikace může selhat i po 18. lednu 2038 a není povolená na 64 platformách.
 
-Pole typu Struktura [tm](../../c-runtime-library/standard-types.md) ukládat následující hodnoty, z nichž každý je **int**:
+Pole struktury typu [TM](../../c-runtime-library/standard-types.md) ukládají následující hodnoty, z nichž každá je **int**:
 
 |Pole|Popis|
 |-|-|
-|**tm_sec**|Sekundy po minutě (0 – 59).|
-|**tm_min**|Minuty po hodině (0 – 59).|
-|**tm_hour**|Hodiny od půlnoci (0 - 23).|
+|**tm_sec**|Sekundy po minutě (0-59).|
+|**tm_min**|Minut po hodině (0-59).|
+|**tm_hour**|Hodiny od půlnoci (0-23).|
 |**tm_mday**|Den v měsíci (1-31).|
-|**tm_mon**|Měsíc (0 – 11; Leden = 0).|
-|**tm_year**|Rok (aktuální rok minus 1900).|
-|**tm_wday**|Den v týdnu (0 – 6; Neděle = 0).|
-|**tm_yday**|Den roku (0 - 365; 1. ledna = 0).|
-|**tm_isdst**|Kladnou hodnotu, pokud je v platnosti; letního času 0, pokud není platná; letního času Záporná hodnota, pokud stav letní čas není znám.|
+|**tm_mon**|Měsíc (0-11; Leden = 0).|
+|**tm_year**|Year (aktuální rok minus 1900).|
+|**tm_wday**|Den v týdnu (0-6; Neděle = 0).|
+|**tm_yday**|Den v roce (0-365; 1. ledna = 0).|
+|**tm_isdst**|Kladná hodnota v případě, že platí letní čas; 0, pokud letní čas neplatí; záporná hodnota, pokud stav letního času není znám.|
 
-Pokud **TZ** nastavení proměnné prostředí, knihovny run-time jazyka C předpokládá pravidla vhodné Spojených států pro implementaci výpočtu letního času – času (DST).
+Pokud je nastavena proměnná prostředí **TZ** , knihovna run-time jazyka C předpokládá pravidla, která jsou vhodná pro USA pro implementaci výpočtu času letního času (DST).
 
 ## <a name="remarks"></a>Poznámky
 
-**Localtime** funkce převede uložené jako čas [time_t](../../c-runtime-library/standard-types.md) hodnotu a výsledek je uložen na strukturu typu [tm](../../c-runtime-library/standard-types.md). **Dlouhé** hodnotu *sourceTime* představuje sekundách uplynulých od půlnoci (00: 00:00), 1. ledna 1970, UTC. Tato hodnota se obvykle získá z [čas](time-time32-time64.md) funkce.
+Funkce **localtime** převede čas uložený jako hodnotu [time_t](../../c-runtime-library/standard-types.md) a výsledek uloží ve struktuře typu [TM](../../c-runtime-library/standard-types.md). Hodnota **Long** *sourceTime* představuje sekundy, které uplynuly od půlnoci (00:00:00), 1. ledna 1970, UTC. Tato hodnota je obvykle získána z funkce [Time](time-time32-time64.md) .
 
-32bitové a 64bitové verze systému [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime –](mkgmtime-mkgmtime32-mkgmtime64.md), a **localtime** vše pomocí jediné **tm** struktury na vlákno pro převod. Každé volání některé z těchto rutin ničí výsledek předchozího volání.
+32 a 64 verze [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)a **localtime** používají pro převod jednu strukturu **TM** na vlákno. Každé volání jedné z těchto rutin zničí výsledek předchozího volání.
 
-**localtime** pro místní časové pásmo opraví, pokud uživatel nejprve nastaví proměnnou prostředí globální **TZ**. Když **TZ** nastavena tři další proměnné prostředí (**_timezone**, **_daylight**, a **_tzname**) se automaticky nastaví také. Pokud **TZ** proměnná není nastavená, **localtime** pokusí použít informace o časovém pásmu, zadaný v aplikaci datum/čas v Ovládacích panelech. Pokud nelze získat tyto informace, se standardně používá PST8PDT, což znamená tichomořské časové pásmo. Zobrazit [_tzset –](tzset.md) popis těchto proměnných. **TZ** je rozšíření společnosti Microsoft a není součástí standardní definice ANSI **localtime**.
+**localtime** správné pro místní časové pásmo, pokud uživatel napřed nastaví globální proměnnou prostředí na **TZ**. Je-li nastavena hodnotu **TZ** , jsou automaticky nastaveny i tři další proměnné prostředí ( **_timezone**, **_daylight**a **_tzname**). Pokud není nastavena proměnná **TZ** , **localtime** se pokusí použít informace o časovém pásmu zadané v aplikaci datum/čas v Ovládacích panelech. Pokud tyto informace nelze získat, PST8PDT, který označuje časové pásmo tichomořského, se ve výchozím nastavení používá. Popis těchto proměnných naleznete v tématu [_tzset](tzset.md) . **TZ** je rozšíření společnosti Microsoft, které není součástí standardní definice standardu ANSI pro **localtime**.
 
 > [!NOTE]
-> Cílové prostředí snažte se zjistit, zda je v platnosti letní čas.
+> Cílové prostředí by mělo zkusit zjistit, jestli je aktivní letní čas.
 
-Tyto funkce ověřují své parametry. Pokud *sourceTime* je ukazatel s hodnotou null, nebo pokud *sourceTime* hodnota je negativní, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí funkce **NULL** a nastavte **errno** k **EINVAL**.
+Tyto funkce ověřují své parametry. Pokud je *sourceTime* ukazatel s hodnotou null, nebo pokud je hodnota *sourceTime* záporná, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **hodnotu null** a nastaví **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
+|Rutina|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
 |-------------|---------------------|-|
-|**localtime**, **_localtime32**, **_localtime64**|\<time.h>|\<CTime – > nebo \<time.h >|
+|**localtime**, **_localtime32**, **_localtime64**|\<time.h>|\<CTime – > nebo \<Time. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

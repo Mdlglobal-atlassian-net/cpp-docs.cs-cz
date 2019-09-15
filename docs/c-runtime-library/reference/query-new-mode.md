@@ -1,9 +1,9 @@
 ---
 title: _query_new_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - query_new_mode
 - _query_new_mode
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59724dafdc6488596478d0b44b254c4f498fce99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358070"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950103"
 ---
-# <a name="querynewmode"></a>_query_new_mode
+# <a name="_query_new_mode"></a>_query_new_mode
 
-Vrátí celé číslo udávající nový režim obslužné rutiny nastavil **_set_new_mode** pro **malloc**.
+Vrací celé číslo označující nový režim obslužné rutiny nastavené hodnotou **_set_new_mode** **pro typ**pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,23 +48,23 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí aktuální nový režim obslužné rutiny, konkrétně 0 nebo 1, pro **malloc**. Návratová hodnota 1 značí, že při selhání přidělení paměti, **malloc** volá nové rutiny obsluhy; vrácená hodnota 0 označuje, že tomu tak není.
+Vrátí aktuální režim obslužné rutiny, jmenovitě 0 nebo 1, pro **pole pro vytvoření**nového. Návratová hodnota 1 **znamená, že** při selhání přidělení paměti zavolá neplnění volání nové rutiny obslužné rutiny. Návratová hodnota 0 značí, že není.
 
 ## <a name="remarks"></a>Poznámky
 
-C++ **_Query_new_mode –** funkce vrátí celé číslo, které označuje nový režim obslužné rutiny, kterou je nastavit C++ [_set_new_mode](set-new-mode.md) fungovat [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání přidělení paměti, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání. Můžete použít **_set_new_mode** tak přepsat toto chování, které při selhání **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor provede, když se nepodaří přidělení paměti. Další informace najdete v diskuzi o [nové a odstranit operátory](../../cpp/new-and-delete-operators.md) v referenci jazyka C++.
+C++ **_query_new_mode** vrací celé číslo, které označuje nový režim obslužné rutiny, který je nastaven C++ funkcí [_set_new_mode](set-new-mode.md) pro typ [objektu.](malloc.md) Nový režim obslužné rutiny označuje, zda při selhání přidělení paměti, **je třeba** volat novou rutinu obslužné rutiny nastavenou na [_set_new_handler](set-new-handler.md). Ve výchozím nastavení nezavolá při selhání novou rutinu obslužné rutiny. Můžete použít **_set_new_mode** k přepsání tohoto chování, aby při selhání zavolalo novou rutinu obslužné rutiny stejným způsobem jako operátor **New** **při selhání přidělení** paměti. Další informace naleznete v tématu věnovaném [operátorům New a DELETE](../../cpp/new-and-delete-operators.md) v referenční příručce C++ jazyka.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_query_new_mode**|\<new.h>|
+|**_query_new_mode**|\<New. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,10 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285142"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951780"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
-Jeden vyrovnávací paměti přesune do jiné. Jde o verzích [memmove wmemmove –](memmove-wmemmove.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Přesune jednu vyrovnávací paměť do druhé. Jedná se o verze [memmove, wmemmove](memmove-wmemmove.md) s vylepšeními zabezpečení, jak [je popsáno v části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,8 +58,8 @@ errno_t wmemmove_s(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
-Cílový objekt.
+*propojovací*<br/>
+Cílový objekt
 
 *numberOfElements*<br/>
 Velikost cílové vyrovnávací paměti.
@@ -64,35 +67,35 @@ Velikost cílové vyrovnávací paměti.
 *src*<br/>
 Zdrojový objekt.
 
-*Počet*<br/>
-Počet bajtů (**memmove_s –**) nebo znaky (**wmemmove_s –**) ke kopírování.
+*výpočtu*<br/>
+Počet bajtů (**memmove_s**) nebo znaků (**wmemmove_s**), které mají být zkopírovány.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; při selhání kód chyby
+Nula v případě úspěchu; chybový kód při selhání
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
-|*dest*|*numberOfElements*|*src*|Návratová hodnota|Obsah *dest*|
+|*propojovací*|*numberOfElements*|*src*|Návratová hodnota|Obsah cíle|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
-|Všechny|Všechny|**NULL**|**EINVAL**|Nezměněno|
-|Všechny|< *Počet*|Všechny|**ERANGE**|Nezměněno|
+|**NULL**|Jakýmikoli|Jakýmikoli|**EINVAL**|Neupraveno|
+|Jakýmikoli|Jakýmikoli|**NULL**|**EINVAL**|Neupraveno|
+|Jakýmikoli|< *výpočtu*|Jakýmikoli|**ERANGE**|Neupraveno|
 
 ## <a name="remarks"></a>Poznámky
 
-Kopie *počet* bajtů ze znaků *src* k *dest*. Pokud se některé oblasti oblasti zdroj a cíl překrývají, **memmove_s –** zajistí, že se zkopírují původní zdroj bajtů překrývající se oblasti před přepsáním.
+Zkopíruje *počet* bajtů znaků ze *Src* na *cíl*. Pokud se některé oblasti zdrojové oblasti a cíle překrývají, **memmove_s** zajistí, že původní zdrojové bajty v překrývající se oblasti se před přepsáním zkopírují.
 
-Pokud *dest* nebo, pokud *src* je ukazatel s hodnotou null, nebo pokud cílový řetězec je moc malé, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** a nastavte **errno** k **EINVAL**.
+Pokud je parametr Destination nebo pokud *Src* je ukazatel s hodnotou null *, nebo pokud* je cílový řetězec příliš malý, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** a nastaví **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**memmove_s**|\<string.h>|
+|**memmove_s**|\<String. h >|
 |**wmemmove_s**|\<wchar.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

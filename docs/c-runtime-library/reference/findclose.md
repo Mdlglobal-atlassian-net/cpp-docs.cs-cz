@@ -1,9 +1,9 @@
 ---
 title: _findclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _findclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _findclose
 - findclose
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67336cc12bcdee754edd40b91078faa83a17984
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333752"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957324"
 ---
-# <a name="findclose"></a>_findclose
+# <a name="_findclose"></a>_findclose
 
-Uzavře popisovač zadaný hledaný a přidružené prostředky.
+Zavře zadaný vyhledávací popisovač a uvolní přidružené prostředky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,12 +47,12 @@ int _findclose(
 
 ### <a name="parameters"></a>Parametry
 
-*handle*<br/>
-Hledání popisovač vrácený voláním předchozí **_findfirst**.
+*popisovač*<br/>
+Popisovač vyhledávání vrácený předchozím voláním **_findfirst**
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření **_findclose –** vrátí hodnotu 0. V opačném případě vrátí hodnotu -1 a nastaví **errno** k **ENOENT**, označující, že žádné další odpovídající soubory nebyl nalezen.
+V případě úspěchu vrátí **_findclose** 0. V opačném případě vrátí hodnotu-1 a nastaví **errno** na **ENOENT**, což značí, že nebyly nalezeny žádné další odpovídající soubory.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -57,7 +60,7 @@ V případě úspěšného ověření **_findclose –** vrátí hodnotu 0. V op
 |--------------|---------------------|
 |**_findclose**|\<io.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

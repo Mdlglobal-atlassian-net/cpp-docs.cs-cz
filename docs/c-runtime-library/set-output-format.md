@@ -1,9 +1,9 @@
 ---
 title: _set_output_format
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_output_format
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr100.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr90.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_output_format
 - _set_output_format
@@ -22,19 +25,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: 173c1bbae3009ffb4ee10b7b32ec7751f47c56c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268734"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957315"
 ---
-# <a name="setoutputformat"></a>_set_output_format
+# <a name="_set_output_format"></a>_set_output_format
 
-Přizpůsobí výstupních formátů používaných sadou formátovaný vstupních/výstupních funkcí.
+Přizpůsobí výstupní formáty používané ve formátovaných vstupně-výstupních funkcích.
 
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Od v sadě Visual Studio 2015, není k dispozici v CRT.
+>  Tato funkce je zastaralá. Počínaje verzí Visual Studio 2015 není k dispozici v CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,20 +49,20 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>Parametry
 
-*Formát*<br/>
-[in] Hodnotu představující formátu.
+*format*<br/>
+pro Hodnota, která představuje formát, který má být použit.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výstupní formát.
+Předchozí výstupní formát.
 
 ## <a name="remarks"></a>Poznámky
 
-`_set_output_format` slouží ke konfiguraci výstupu formátovaných vstupních/výstupních funkcí, jako [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). V současné době je pouze konvence formátování, změněné touto funkcí počet číslic zobrazených v exponenty ve výstupu příkazu plovoucí desetinnou čárkou.
+`_set_output_format`slouží ke konfiguraci výstupu formátovaných vstupně-výstupních funkcí, jako je [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). V současné době jediná konvence formátování, kterou lze změnit pomocí této funkce, je počet číslic zobrazených v exponentech ve výstupu čísel s plovoucí desetinnou čárkou.
 
-Ve výchozím nastavení, výstup s plovoucí desetinnou čárkou bodu čísla pomocí funkcí, jako `printf_s`, `wprintf_s`, a související funkce v knihovně nástroje Visual C++ Standard C vytiskne tří číslic exponentu, i v případě, že není nutné tři číslice představující hodnotu exponent. Nuly se používají k vyplnění hodnota, která má tři číslice. `_set_output_format` umožňuje toto chování změnit tak, aby vypsaných pouze dvě číslice v exponentu Pokud třetí číslici vyžaduje velikost exponent.
+Ve výchozím nastavení výstupy čísel s plovoucí desetinnou čárkou podle `printf_s`funkcí `wprintf_s`, jako je, a související funkce C++ v knihovně jazyka Visual Standard jazyka C, tisknou tři číslice pro exponent, i když tři číslice nejsou požadovány pro reprezentaci hodnoty exponent. K vyplnění hodnoty třemi číslicemi se používají nuly. `_set_output_format`umožňuje změnit toto chování tak, aby se na exponent tiskly jenom dvě číslice, pokud velikost exponentu nepožaduje třetí číslice.
 
-Pokud chcete povolit exponenty dvěma číslicemi, voláním této funkce s parametrem `_TWO_DIGIT_EXPONENT`, jak je znázorněno v příkladu. Chcete-li zakázat exponenty dvě číslice, voláním této funkce s parametrem 0.
+Chcete-li povolit dvojúrovňové exponenty, zavolejte tuto funkci s parametrem `_TWO_DIGIT_EXPONENT`, jak je znázorněno v příkladu. Chcete-li zakázat dvě exponenty číslic, zavolejte tuto funkci s argumentem 0.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -67,7 +70,7 @@ Pokud chcete povolit exponenty dvěma číslicemi, voláním této funkce s para
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md) v úvodu.
+Další informace o kompatibilitě naleznete v úvodu v tématu [Kompatibilita](../c-runtime-library/compatibility.md) .
 
 ## <a name="example"></a>Příklad
 

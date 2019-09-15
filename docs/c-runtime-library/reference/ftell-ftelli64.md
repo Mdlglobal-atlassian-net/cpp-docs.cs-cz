@@ -1,10 +1,10 @@
 ---
 title: ftell, _ftelli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftelli64
 - ftell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftelli64
 - ftell
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: f9548d4684bd2df734be2b0b703f98d8c7982884
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: fda309420e6ae241d3c8ed73c3d41c8ae50de662
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376120"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956457"
 ---
-# <a name="ftell-ftelli64"></a>ftell, _ftelli64
+# <a name="ftell-_ftelli64"></a>ftell, _ftelli64
 
 Získá aktuální pozici ukazatele na soubor.
 
@@ -62,7 +65,7 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **ftell** a **_ftelli64** načtou aktuální pozici ukazatele souboru (pokud existuje) přidruženého ke streamu . Pozice je vyjádřena jako posun vzhledem k začátku datového proudu.
+Funkce **ftell** a **_ftelli64** načtou aktuální pozici ukazatele souboru (pokud existuje) přidruženého ke *streamu*. Pozice je vyjádřena jako posun vzhledem k začátku datového proudu.
 
 Všimněte si, že když se soubor otevře pro připojená data, určí se poslední pozice v/v operace, nikoli v případě, kdy by došlo k dalšímu zápisu. Například pokud je soubor otevřen pro připojení a poslední operace byla načtena, je pozice souboru bod, ve kterém se spustí další operace čtení, nikoli místo, kde se spustí další zápis. (Při otevření souboru pro připojení se pozice souboru přesune na konec souboru před jakoukoliv operací zápisu.) Pokud v souboru otevřeném pro připojení ještě nedošlo k žádné vstupně-výstupní operaci, je pozice souboru počátkem souboru.
 

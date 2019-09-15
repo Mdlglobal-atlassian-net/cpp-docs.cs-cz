@@ -1,9 +1,9 @@
 ---
 title: qsort
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort
 helpviewer_keywords:
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 8a770965a03e43227b99f122924c723691f79c61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358096"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949701"
 ---
 # <a name="qsort"></a>qsort
 
-Provádí rychlé řazení. Bezpečnější verze této funkce je k dispozici. Zobrazit [qsort_s –](qsort-s.md).
+Provede rychlé řazení. K dispozici je bezpečnější verze této funkce; viz [qsort_s](qsort-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,22 +54,22 @@ void qsort(
 ### <a name="parameters"></a>Parametry
 
 *base*<br/>
-Spuštění cílového pole.
+Začátek cílového pole
 
-*Číslo*<br/>
-Velikost pole prvků.
+*Automatické*<br/>
+Velikost pole v elementech
 
 *Šířka*<br/>
-Element velikost v bajtech.
+Velikost elementu v bajtech
 
 *compare*<br/>
-Ukazatel na uživatelem zadané rutinou, která porovná dva prvky pole a vrátí hodnotu, která určuje jejich vzájemný vztah.
+Ukazatel na uživatelsky zadanou rutinu, která porovná dva prvky pole a vrátí hodnotu, která určuje jejich relaci.
 
 ## <a name="remarks"></a>Poznámky
 
-**Qsort –** implementuje algoritmus rychlého řazení řazení pole funkce *číslo* prvky, každý z *šířka* bajtů. Argument *základní* je ukazatel na základní pole, který se má seřadit. **qsort –** přepíše toto pole pomocí seřazených elementy.
+Funkce **qsort** implementuje algoritmus rychlého řazení pro řazení pole *číselných* prvků, z každé *šířky* bajtů. *Základem* argumentu je ukazatel na základ pole, které má být seřazeno. **qsort** přepisuje toto pole pomocí seřazených prvků.
 
-**qsort –** volání *porovnání* rutinní jeden nebo více krát během řazení a předá dva prvky pole ukazatelů na každé volání.
+**qsort** volá rutinu *porovnání* jednou nebo vícekrát během řazení a předá ukazatelům dva prvky pole při každém volání.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -74,23 +77,23 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 Rutina porovná prvky a vrátí jednu z následujících hodnot.
 
-|Porovnání návratovou hodnotu funkce|Popis|
+|Porovnat návratovou hodnotu funkce|Popis|
 |-----------------------------------|-----------------|
 |< 0|**elem1** menší než **elem2**|
-|0|**elem1** ekvivalentní **elem2**|
+|0|**elem1** ekvivalent **elem2**|
 |> 0|**elem1** větší než **elem2**|
 
-Pole je seřazený ve vzestupném pořadí, jak je definováno ve funkci porovnání. Chcete-li seřadit pole v sestupném pořadí, zaměňte význam "větší než" a "menší než" ve funkci porovnání.
+Pole je seřazené ve vzestupném pořadí, jak je definováno funkcí porovnání. Chcete-li seřadit pole v klesajícím pořadí, obraťte se na výraz "větší než" a "menší než" v rámci funkce porovnání.
 
-Tato funkce ověřuje své parametry. Pokud *porovnání* nebo *číslo* je **NULL**, nebo pokud *základní* je **NULL** a *číslo* je nenulová nebo pokud *šířka* je menší než nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí a **errno** je nastavena na **EINVAL**.
+Tato funkce ověří své parametry. Pokud je **hodnota** *Compare* nebo *Number* null nebo pokud je hodnota *Base* **null** a *číslo* je nenulové, nebo pokud je *Šířka* menší než nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí a **errno** se nastaví na **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**qsort**|\<stdlib.h > a \<search.h >|
+|**qsort**|\<Stdlib. h > a \<Search. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,14 +1,17 @@
 ---
 title: to – funkce
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - To
 helpviewer_keywords:
@@ -20,59 +23,59 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304394"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944812"
 ---
 # <a name="to-functions"></a>to – funkce
 
-Každá z **k** funkce a její přidružené – makro, pokud existuje, převede jeden znak jinému znaku.
+Každý z funkcí a přidruženého makra, **Pokud je,** převede jeden znak na jiný znak.
 
 |||
 |-|-|
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[ToUpper _toupper –, towupper –](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
-|[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[ToUpper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
+|[ToLower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
 
 ## <a name="remarks"></a>Poznámky
 
-**k** funkce a makro převody jsou následující.
+Na **funkce a** převody maker jsou následující.
 
 |Rutina|– Makro|Popis|
 |-------------|-----------|-----------------|
-|`__toascii`|`__toascii`|Převede `c` znak ASCII|
-|`tolower`|`tolower`|Převede `c` na malá písmena v případě potřeby|
-|`_tolower`|`_tolower`|Převede `c` na malá písmena|
-|`towlower`|Žádné|Převede `c` na odpovídající širokého znaku malé písmeno|
-|`toupper`|`toupper`|Převede `c` na velká písmena v případě potřeby|
-|`_toupper`|`_toupper`|Převede `c` na velká písmena|
-|`towupper`|Žádné|Převede c na odpovídající širokého znaku velké písmeno|
+|`__toascii`|`__toascii`|Převede `c` na znak ASCII.|
+|`tolower`|`tolower`|V `c` případě potřeby převede na malá písmena.|
+|`_tolower`|`_tolower`|Převede `c` na malá písmena.|
+|`towlower`|Žádné|Převede `c` na odpovídající malé písmeno s velkým znakem.|
+|`toupper`|`toupper`|V `c` případě potřeby převede na velká písmena|
+|`_toupper`|`_toupper`|Převede `c` na velká písmena.|
+|`towupper`|Žádné|Převede jazyk c na odpovídající velké písmeno.|
 
-Používat funkce verze **k** rutin, které jsou také definovány jako makra, buď odeberte definice maker s `#undef` direktivy nebo nezahrnují CTYPE. H. Pokud použijete možnosti kompilátoru /Za, kompilátor používá verzi funkce `toupper` nebo `tolower`. Deklarace `toupper` a `tolower` funkce jsou v STDLIB. H.
+Chcete **-li použít verze funkce rutiny** , které jsou také definovány jako makra, buď odeberte definice `#undef` maker direktivy nebo nezahrnujte CType. Y. Použijete-li možnost kompilátoru/za, kompilátor použije verzi `toupper` funkce nebo. `tolower` Deklarace funkcí `tolower` a jsou v Stdlib. `toupper` Y.
 
-`__toascii` Rutinní nastaví všechny, ale 7 bity nižšího řádu `c` na hodnotu 0, tak, aby převedená hodnota představuje znak ve znakové sadě ASCII. Pokud `c` již znaku ASCII, představuje `c` se nezmění.
+Rutina nastaví všechny s výjimkou méně než 7 `c` bitů na hodnotu 0, aby převedená hodnota představovala znak v sadě znaků ASCII. `__toascii` Pokud `c` již představuje znak ASCII, `c` je beze změny.
 
-`tolower` a `toupper` rutiny:
+Rutiny `toupper`a: `tolower`
 
-- Na kterých závisí `LC_CTYPE` kategorie aktuálního národního prostředí (`tolower` volání `isupper` a `toupper` volání `islower`).
+- Jsou závislé `LC_CTYPE` na kategorii aktuálního národního prostředí ( `isupper` `tolower` volání a `toupper` volání `islower`).
 
-- Převést `c` Pokud `c` představuje písmeno převést má správnou velikost písmen v aktuální národní prostředí a opačném případě existuje pro toto národní prostředí. V opačném případě `c` je beze změny.
+- Převést `c` , `c` pokud představuje konvertibilní písmena odpovídajícího případu v aktuálním národním prostředí a pro toto národní prostředí existuje opačný případ. V opačném případě se nemění. `c`
 
-`_tolower` a `_toupper` rutiny:
+Rutiny `_toupper`a: `_tolower`
 
-- Jsou nezávislé na národní prostředí a mnohem rychlejší verze `tolower` a **toupper.**
+- Je nezávislý na národním prostředí, mnohem rychlejší verze `tolower` a **ToUpper.**
 
-- Lze použít pouze tehdy, když **isascii – (**`c`**)** a buď **isupper (**`c`**)** nebo **islower (**`c`**)**, jsou nenulové.
+- Lze ji použít pouze v případě, že je nastavena hodnota "- **ASCII (** `c` **)** a" **Upper "(** `c` **) nebo"** **Lower "(** `c` **)** , jsou nenulové.
 
-- Pokud máte nedefinované výsledky `c` není písmeno ASCII správnou velikost písmen pro převod.
+- Mít nedefinované výsledky, `c` Pokud se nejedná o písmeno ASCII příslušného případu pro převod.
 
-`towlower` a `towupper` funkce vrací převedený kopie `c` pouze v případě jsou splněny obě následující podmínky nenulovou hodnotu. V opačném případě `c` je beze změny.
+Funkce `towlower` a `towupper` vracejípřevedenoukopiiifapouzevpřípadě,žeoběnásledujícípodmínky`c` jsou nenulové. V opačném případě se nemění. `c`
 
-- `c` je široký znak má správnou velikost písmen (to znamená, pro kterou `iswupper` nebo **iswlower –,** , je nenulové).
+- `c`je velký znak vhodného případu (tj., pro který `iswupper` nebo **iswlower,** v uvedeném pořadí není nula).
 
-- Existuje široký znak odpovídající cílové případu (to znamená, pro kterou `iswlower` nebo **iswupper –,** , je nenulové).
+- K dispozici je odpovídající velký znak cílového případu (tj., pro který `iswlower` nebo **iswupper,** v uvedeném pořadí není nula).
 
 ## <a name="example"></a>Příklad
 

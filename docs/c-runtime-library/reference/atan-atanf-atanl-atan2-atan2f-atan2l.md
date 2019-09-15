@@ -1,14 +1,14 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atan2f
 - atan2l
 - atan2
 - atanf
 - atan
 - atanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atan
 - atan2l
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341714"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939607"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Vypočítá arkustangens výrazu **x** (**atan**, **atanf –**, a **atanl –**) nebo Arkus tangens **y** / **x** (**atan2**, **atan2f –**, a **atan2l –**).
+Vypočítá arkustangens **x** (**Atan**, **atanf –** a **atanl**) nebo arkustangens **y**/**x** (**ARCTG2**, **atan2f –** a **atan2l**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,31 +75,31 @@ long double atan2( long double y, long double x );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*, *y*<br/>
-Všechna čísla.
+Libovolná čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Atan** vrátí Arkus tangens *x* v rozsahu - pí/2 do pí/2 radiánů. **ATAN2** vrátí Arkus tangens *y*/*x* v rozsahu - pí na radiány pí. Pokud *x* je 0, **atan** vrátí hodnotu 0. Pokud se oba parametry **atan2** mají hodnotu 0, funkce vrátí 0. Všechny výsledky jsou v radiánech.
+**Atan** Vrátí arkustangens *x* v rozsahu-π/2 na π/2 radiány. funkce **ARCTG2** vrací arkustangens *y*/*x* v rozsahu od-π do π radiánů. Pokud je *x* 0, funkce **Atan** vrátí hodnotu 0. Pokud jsou oba parametry funkce **ARCTG2** 0, vrátí funkce hodnotu 0. Všechny výsledky jsou v radiánech.
 
-**ATAN2** používá známky oba parametry k určení do kvadrantu návratovou hodnotu.
+funkce **ARCTG2** používá znaménka obou parametrů k určení kvadrantu návratové hodnoty.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|žádná|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
-**Atan** funkce vypočítá arkustangens (inverzní funkce tangens) *x*. **ATAN2** vypočítá arkustangens výrazu *y*/*x* (Pokud *x* rovná 0, **atan2** Pokud vrátí hodnotu pí/2 *y* kladné, if - pí/2 *y* je záporný nebo 0, pokud *y* je 0.)
+Funkce **Atan** vypočítá arkustangens (funkci inverzní tangens) *x*. funkce **ARCTG2** vypočítá arkustangens *y*/*x* (Pokud *x* Equals 0, funkce **ARCTG2** vrátí π/2, pokud *y* je kladné,-π/2, pokud *y* je záporné nebo 0, pokud je *y* 0.)
 
-**Atan** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2, naleznete v tématu [_set_sse2_enable –](set-sse2-enable.md).
+**Atan** má implementaci, která používá streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2 naleznete v tématu [_set_SSE2_enable](set-sse2-enable.md).
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **atan** a **atan2** trvají **float** nebo **dlouhé** **double**  argumenty. V programu jazyka C **atan** a **atan2** vždy provést **double** argumenty a vraťte se **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení funkce **Atan** a **ARCTG2** , které přebírají argumenty **typu float** nebo **Long** **Double** . V programu v jazyce C mají funkce **Atan** a **ARCTG2** vždycky argumenty **Double** a vracet hodnotu **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
+|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
 |-------------|---------------------|-|
-|**Atan**, **atan2**, **atanf –**, **atan2f –**, **atanl –**, **atan2l –**|\<math.h>|\<cmath > nebo \<math.h >|
+|**Atan**, **ARCTG2**, **atanf –** , **atan2f –** , **atanl**, **atan2l**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
 ## <a name="example"></a>Příklad
 

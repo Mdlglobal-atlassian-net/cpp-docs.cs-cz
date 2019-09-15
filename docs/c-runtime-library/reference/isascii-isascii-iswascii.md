@@ -1,10 +1,10 @@
 ---
 title: isascii, __isascii, iswascii
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswascii
 - __isascii
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswascii
 - istascii
@@ -34,16 +37,16 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee20711628d5c2135b4ee1c37b87cb77f3610695
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287466"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954569"
 ---
-# <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
+# <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
-Určuje, zda určitý znak je znak ASCII.
+Určuje, zda je určitý znak znak ASCII.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,17 +64,17 @@ int iswascii(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování.
+Celé číslo k otestování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrátí nenulovou hodnotu, pokud **c** je konkrétní reprezentace znaku ASCII. **__isascii –** vrací nenulovou hodnotu, pokud **c** je znak ASCII (v rozsahu 0x00 – 0x7F). **iswascii –** vrací nenulovou hodnotu, pokud **c** je širokoznaká reprezentace znaku ASCII. Každá z těchto rutin vrátí hodnotu 0, pokud **c** nesplňuje testovací podmínku.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud je **c** konkrétní reprezentace znaku ASCII. **__isascii** vrací nenulovou hodnotu, pokud je **c** znak ASCII (v rozsahu 0x00-0x7F). **iswascii** vrací nenulovou hodnotu, pokud je **c** znaková reprezentace znaku ASCII. Každá z těchto rutin vrátí hodnotu 0, pokud **c** nesplňuje podmínky testu.
 
 ## <a name="remarks"></a>Poznámky
 
-Obě **__isascii –** a **iswascii –** jsou implementovány jako makra, pokud je definován _CTYPE_DISABLE_MACROS preprocesor makro.
+**__Isascii** i **iswascii** jsou implementovány jako makra, pokud není definován preprocesor makro _CTYPE_DISABLE_MACROS.
 
-Z důvodu zpětné kompatibility **isascii –** je implementovaný jako makra pouze v případě [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) není definované nebo je definováno jako 0; v opačném případě není definováno.
+Z důvodu zpětné kompatibility je [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) implementován jako makro pouze v **případě, že** není definován nebo je definován jako 0; v opačném případě není definován.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -83,10 +86,10 @@ Z důvodu zpětné kompatibility **isascii –** je implementovaný jako makra p
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isascii**, **__isascii**|C: \<ctype.h ><br /><br /> Jazyk C++: \<cctype – > nebo \<ctype.h >|
-|**iswascii**|C: \<wctype.h >, \<ctype.h >, nebo \<wchar.h ><br /><br /> Jazyk C++: \<cwctype – >, \<cctype – >, \<wctype.h >, \<ctype.h >, nebo \<wchar.h >|
+|**isascii**, **__isascii**|C: \<CType. h ><br /><br /> C++: \<cctype > nebo \<CType. h >|
+|**iswascii**|C: \<wctype. h >, \<CType. h > nebo \<WCHAR. h ><br /><br /> C++: \<cwctype >, \<cctype >, \<wctype. h >, \<CType. h > nebo \<WCHAR. h >|
 
-**Isascii –**, **__isascii –** a **iswascii –** funkce jsou specifické pro Microsoft. Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Funkce **__isascii** a **iswascii** jsou **specifické pro společnost**Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

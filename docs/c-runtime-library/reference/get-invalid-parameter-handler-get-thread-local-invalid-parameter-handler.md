@@ -1,10 +1,10 @@
 ---
 title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_invalid_parameter_handler
 - stdlib/_get_invalid_parameter_handler
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 7d1a87f9ade0845994918d5a4d59dc56e190d2b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534590fed77fe06149db892d98ba0e555297ac7c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287479"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955835"
 ---
-# <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
+# <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
-Získá funkce, která je volána, když zjistí CRT neplatný argument.
+Vrátí funkci, která je volána, když CRT detekuje neplatný argument.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,13 +49,13 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na aktuálně nastavené funkce obslužnou rutinu neplatného parametru, nebo nulový ukazatel, pokud žádná nastavení.
+Ukazatel na aktuálně nastavenou funkci obslužné rutiny neplatného parametru nebo ukazatel s hodnotou null, pokud není nastaven.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_invalid_parameter_handler** funkce získá v současné době nastavené globální neplatný parametr obslužné rutiny. Vrátí ukazatel s hodnotou null, pokud byl nastaven žádný globální neplatný parametr obslužné rutiny. Podobně platí **_get_thread_local_invalid_parameter_handler** získá aktuální obslužná rutina neplatného parametru místního vlákna vlákna je volán na nebo ukazatel s hodnotou null, pokud byla nastavena žádná obslužná rutina. Informace o tom, jak nastavit globální a místní neplatný parametr obslužné rutiny najdete v tématu [_set_invalid_parameter_handler – _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+Funkce **_get_invalid_parameter_handler** získá aktuálně nastavenou obslužnou rutinu globálního neplatného parametru. Vrátí ukazatel s hodnotou null, pokud nebyla nastavena žádná obslužná rutina globálního neplatného parametru. Podobně **_get_thread_local_invalid_parameter_handler** získá aktuální obslužnou rutinu neplatného místního vlákna vlákna, na kterou je volána, nebo ukazatel s hodnotou null, pokud nebyla nastavena žádná obslužná rutina. Informace o tom, jak nastavit globální obslužné rutiny parametrů globálních a místních vláken, naleznete v tématu [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-Ukazatel funkce vrácená neplatný parametr obslužné rutiny je následujícího typu:
+Vrácený ukazatel na funkci obslužné rutiny neplatného parametru má následující typ:
 
 ```C
 typedef void (__cdecl* _invalid_parameter_handler)(
@@ -64,15 +67,15 @@ typedef void (__cdecl* _invalid_parameter_handler)(
     );
 ```
 
-Podrobnosti o obslužnou rutinu neplatného parametru, najdete v prototypu v [_set_invalid_parameter_handler – _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+Podrobnosti o obslužné rutině neplatného parametru naleznete v prototypu v [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> Jazyk C++: \<cstdlib – > nebo \<stdlib.h >|
+|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib > nebo \<Stdlib. h >|
 
-**_Get_invalid_parameter_handler** a **_get_thread_local_invalid_parameter_handler** funkce jsou specifické pro Microsoft. Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Funkce **_get_invalid_parameter_handler** a **_get_thread_local_invalid_parameter_handler** jsou specifické pro společnost Microsoft. Informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

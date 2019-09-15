@@ -1,13 +1,13 @@
 ---
 title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __swprintf_l
 - sprintf
 - _sprintf_l
 - _swprintf_l
 - swprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _stprintf_l
 - __swprintf_l
@@ -46,16 +49,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: f32b1622539e73ab04c19d6d46ffdbc58b9961d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a306788045fc6fe52da835029d32cfc42c0ed4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958292"
 ---
-# <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
+# <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
-Zapište formátovaná data do řetězce. Bezpečnější verze některých z těchto funkcí jsou k dispozici. Zobrazit [sprintf_s – _sprintf_s_l –, swprintf_s – _swprintf_s_l –](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Bezpečné verze **swprintf** a **_swprintf_l –** nepřebírají *počet* parametru.
+Zápis formátovaných dat do řetězce. K dispozici jsou bezpečnější verze některých z těchto funkcí; viz [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Zabezpečené verze **swprintf** a **_swprintf_l** nevezmou parametr *Count* .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -107,45 +110,45 @@ int _sprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Umístění úložiště pro výstup
 
-*Počet*<br/>
-Maximální počet znaků k uložení v kódování Unicode verze této funkce.
+*výpočtu*<br/>
+Maximální počet znaků, které mají být uloženy ve verzi Unicode této funkce.
 
-*Formát*<br/>
+*format*<br/>
 Řetězec řízení formátu
 
 *argument*<br/>
-Nepovinné argumenty.
+Nepovinné argumenty
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet napsaných znaků, nebo -1, pokud došlo k chybě. Pokud *vyrovnávací paměti* nebo *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Počet zapsaných znaků nebo hodnota-1, pokud došlo k chybě. Pokud je *vyrovnávací paměť* nebo *Formát* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
-**sprintf** vrátí počet bajtů uložených v *vyrovnávací paměti*, výčtu nebudou započteny ukončující znak null. **swprintf** vrátí počet širokých znaků, které jsou uložené v *vyrovnávací paměti*, výčtu nebudou započteny ukončující široké znaky null.
+**sprintf –** vrací počet bajtů uložených v *bufferu*a nepočítá ukončující znak null. **swprintf** vrací počet velkých znaků uložených v *bufferu*a nepočítá ukončující znak null.
 
 ## <a name="remarks"></a>Poznámky
 
-**Sprintf** funkce formátuje a ukládá řadu znaků a hodnot v *vyrovnávací paměti*. Každý *argument* (pokud existuje) je převeden a uložen podle odpovídající specifikace formátu v *formátu*. Formát se skládá z běžných znaků a má stejnou formu a funkci, jako *formátu* argument pro [printf](printf-printf-l-wprintf-wprintf-l.md). Po poslední znak zapsat je připojen znak null. Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
+Funkce **sprintf –** formátuje a ukládá řadu znaků a hodnot v *bufferu*. Každý *argument* (pokud existuje) je převeden a výstup podle odpovídající specifikace formátu ve *formátu*. Formát se skládá z běžných znaků a má stejnou formu a funkci jako argument *Format* pro [printf](printf-printf-l-wprintf-wprintf-l.md). Po napsání posledního znaku je připojen znak null. Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
 
 > [!IMPORTANT]
-> Pomocí **sprintf**, neexistuje žádný způsob, jak omezit počet napsaných znaků, což znamená, že kód pomocí **sprintf** je náchylný k přetečení vyrovnávací paměti. Zvažte použití související funkce [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), která určuje maximální počet znaků, které mají být zapsána do *vyrovnávací paměti*, nebo použijte [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) určit velikost vyrovnávací paměť je povinný. Také se ujistěte, že *formátu* není uživatelem definovaný řetězec.
+> Pomocí **sprintf –** neexistuje žádný způsob, jak omezit počet zapsaných znaků, což znamená, že kód používající **sprintf –** je náchylný k přetečení vyrovnávací paměti. Zvažte použití související funkce [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), která určuje maximální počet znaků, které mají být zapsány do *vyrovnávací paměti*, nebo použijte [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) k určení, jak velká je požadovaná vyrovnávací paměť. Také se ujistěte, že *Formát* není uživatelem definovaný řetězec.
 
-**swprintf** je verze širokého znaku **sprintf**; argumenty ukazatele pro **swprintf** jsou širokoznaké řetězce. Detekce chyb kódování ve **swprintf** může lišit od v **sprintf**. **swprintf** a **fwprintf –** chovají stejně, s výjimkou, že **swprintf** zapíše výstup do řetězce, nikoli do cílového umístění typu **souboru**a **swprintf** vyžaduje *počet* parametru určete maximální počet znaků, které mají být zapsána. Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+**swprintf** je **sprintf –** verze s velkým znakem; argumenty ukazatele na **swprintf** jsou řetězce s velkým znakem. Detekce chyb kódování v **swprintf** se může lišit od v **sprintf –** . **swprintf** a **fwprintf** se chovají stejně, s tím rozdílem, že **swprintf** zapisuje výstup do řetězce, nikoli do cíle typu **soubor**a **swprintf** vyžaduje, aby parametr *Count* určoval maximální počet. znaků, které mají být zapsány. Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
-**swprintf** odpovídá standardu ISO C, který vyžaduje druhý parametr, *počet*, typu **size_t**. K vynucení starého nestandardního chování definujte **_CRT_NON_CONFORMING_SWPRINTFS**. V budoucí verzi může být odebrán staré chování, takže kód by měl změnit používat nové chování splňující podmínky.
+**swprintf** odpovídá standardu ISO C, který vyžaduje druhý parametr *Count*typu **size_t**. Chcete-li vynutit staré nestandardní chování, definujte **_CRT_NON_CONFORMING_SWPRINTFS**. V budoucí verzi je možné odebrat staré chování, takže by měl být kód změněn tak, aby používal nové vyhovující chování.
 
-V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stprintf**|**sprintf**|**sprintf**|**_swprintf**|
 |**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
@@ -155,9 +158,9 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**sprintf**, **_sprintf_l**|\<stdio.h>|
-|**swprintf**, **_swprintf_l**|\<stdio.h > nebo \<wchar.h >|
+|**swprintf**, **_swprintf_l**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -222,7 +225,7 @@ wrote -1 characters
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

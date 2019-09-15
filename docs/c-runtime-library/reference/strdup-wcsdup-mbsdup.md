@@ -1,11 +1,11 @@
 ---
 title: _strdup, _wcsdup, _mbsdup
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdup
 - _mbsdup
 - _wcsdup
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsdup
 - mbsdup
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96e0a8f9f72b811f891217deabe758626b03186
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353882"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958183"
 ---
-# <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
+# <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
-Duplicitní řetězce.
+Duplikuje řetězce.
 
 > [!IMPORTANT]
-> **_mbsdup –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsdup** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,37 +76,37 @@ unsigned char *_mbsdup(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Řetězec zakončený hodnotou Null zdroje.
+Zdrojový řetězec zakončený hodnotou null.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací ukazatel na umístění úložiště pro kopírované řetězec nebo **NULL** pokud nejde přidělit úložiště.
+Každá z těchto funkcí vrací ukazatel na umístění úložiště pro zkopírovaný řetězec nebo **hodnotu null** , pokud nelze přidělit úložiště.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Strdup –** volání funkce [malloc](malloc.md) přidělit prostor úložiště pro kopii *strSource* a pak zkopíruje *strSource* k přidělené místo.
+Funkce **_strdup** [volá metodu pro přidělení](malloc.md) úložného prostoru pro kopii *StrSource* a pak kopíruje *strSource* do přiděleného místa.
 
-**_wcsdup –** a **_mbsdup –** jsou širokoznaké a vícebajtové verze **_strdup –**. Argumenty a vrácené hodnoty **_wcsdup –** jsou širokoznaké řetězce **_mbsdup –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
+**_wcsdup** a **_mbsdup** jsou verze s velkým znakem a vícebajtovým znakem **_strdup**. Argumenty a návratová hodnota **_wcsdup** jsou řetězce s velkým počtem znaků; ty z **_mbsdup** jsou vícebajtové znakové řetězce. Tyto tři funkce se chovají identicky jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-Protože **_strdup –** volání **malloc** přidělit prostor úložiště pro kopii *strSource*, je dobrým zvykem vždy vydat tuto paměť pomocí volání [bezplatné](free.md) na ukazatel, který je vrácen voláním rutiny **_strdup –**.
+Vzhledem k tomu, že _strdup **volá metodu** pro přidělení úložného prostoru pro kopii *strSource*, je dobrým zvykem vydávat tuto paměť vždy voláním [bezplatné](free.md) rutiny na ukazatel, který je vrácen voláním metody **_strdup**.
 
-Pokud **_DEBUG** a **_CRTDBG_MAP_ALLOC** jsou definovány, **_strdup –** a **_wcsdup –** jsou nahrazena voláními funkcí **_strdup_dbg –**  a **_wcsdup_dbg –** umožňuje ladit přidělování paměti. Další informace najdete v tématu [_strdup_dbg – _wcsdup_dbg –](strdup-dbg-wcsdup-dbg.md).
+Pokud jsou definovány **_DEBUG** a **_CRTDBG_MAP_ALLOC** , jsou **_strdup** a **_wcsdup** nahrazeny voláními **_strdup_dbg** a **_wcsdup_dbg** , aby bylo možné ladit přidělení paměti. Další informace najdete v tématu [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strdup**|\<string.h>|
-|**_wcsdup**|\<String.h > nebo \<wchar.h >|
-|**_mbsdup**|\<Mbstring.h >|
+|**_strdup**|\<String. h >|
+|**_wcsdup**|\<String. h > nebo \<WCHAR. h >|
+|**_mbsdup**|\<Mbstring. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -131,7 +134,7 @@ Copy:     This is the buffer text
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

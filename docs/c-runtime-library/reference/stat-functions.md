@@ -1,7 +1,7 @@
 ---
 title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstat64
 - _stati64
 - _stat32
@@ -14,7 +14,7 @@ apiname:
 - _stat64
 - _stat64i32
 - _wstat32i64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -26,7 +26,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tstat32
 - tstat
@@ -106,16 +109,16 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a6e78c0d98871e4becbb5e7411d9c819e9d0596
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354705"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957951"
 ---
-# <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
+# <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
-Umožňuje získáte informace o stavu souboru.
+Získat informace o stavu souboru
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -173,50 +176,50 @@ int _wstat64i32(
 ### <a name="parameters"></a>Parametry
 
 *Cesta*<br/>
-Ukazatel na řetězec obsahující cestu k existující soubor nebo adresář.
+Ukazatel na řetězec obsahující cestu k existujícímu souboru nebo adresáři.
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Ukazatel na strukturu, která ukládá výsledky.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí 0, pokud je získat informace o stavu souboru. Návratová hodnota-1 označuje chybu, v takovém případě **errno** je nastavena na **ENOENT**, která udává, že název souboru nebo cesta nebyla nalezena. Vrácená hodnota **EINVAL** určuje neplatný parametr; **errno** je také nastavena na **EINVAL** v tomto případě.
+Každá z těchto funkcí vrátí 0, pokud jsou získány informace o stavu souboru. Návratová hodnota-1 označuje chybu. v takovém případě je **errno** nastavena na **ENOENT**, což značí, že se nepovedlo najít název souboru nebo cestu. Návratová hodnota **EINVAL** označuje neplatný parametr. **errno** je také v tomto případě nastaveno na **EINVAL** .
 
-Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o tomto a dalších návratových kódů.
+Další informace o tomto a dalších návratových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-Časové razítko souboru lze znázornit, pokud je novější než půlnoci 1. ledna 1970 a před 23:59:59, 31 prosince 3000 UTC, pokud nechcete použít **_stat32 –** nebo **_wstat32 –**, nebo jste definovali **_ USE_32BIT_TIME_T**, v takovém případě může být reprezentován datum pouze až do 23:59:59 18. ledna 2038 UTC.
+Časové razítko v souboru může být reprezentované, pokud je pozdější než půlnoc, od 1. ledna 1970 a do 23:59:59, 31. prosince 3000, UTC, pokud nepoužíváte **_stat32** nebo **_wstat32**nebo jste definovali **_USE_32BIT_TIME_T**. v takovém případě může být datum zastoupeno pouze 23:59:59 do 18. ledna 2038, UTC.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Stat** funkce získává informace o souboru nebo adresáři určeném *cesta* a uloží jej do struktury, na které odkazuje *vyrovnávací paměti*. **_stat –** automaticky zpracovává argumenty vícebajtových řetězců znaků podle potřeby, rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která aktuálně používán.
+Funkce **_stat** získává informace o souboru nebo adresáři určeném *cestou* a ukládá je do struktury, na kterou se odkazuje pomocí *vyrovnávací paměti*. **_stat** automaticky zpracovává argumenty vícebajtového řetězce znaků podle potřeby a rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která se právě používá.
 
-**_wstat –** je verze širokého znaku **_stat**; *cesta* argument **_wstat –** je širokoznaký řetězec. **_wstat –** a **_stat** chovají stejně, s výjimkou, že **_wstat –** nezpracovává vícebajtové znakové řetězce.
+**_wstat** je **_stat**verze s velkým znakem; Argument *cesty* pro **_wstat** je řetězec s velkým znakem. **_wstat** a **_stat** se chovají stejně, s výjimkou toho, že **_wstat** zpracovává řetězce vícebajtových znaků.
 
-Variace tyto funkce podporují typy času 32bitové nebo 64bitové a 32bitové nebo 64bitové souboru délky. První číselná přípona (**32** nebo **64**) označuje velikost času používá typ; druhý přípony je buď **i32** nebo **i64**, označující, zda velikost souboru je reprezentován jako 32bitový nebo 64bitové celé číslo.
+Variace těchto funkcí podporují typy s délkou 32 nebo 64 a délky souborů 32 a 64. První číselná přípona (**32** nebo **64**) označuje velikost použitého typu času; Druhá přípona je buď **i32** , nebo **I64**, která označuje, jestli je velikost souboru reprezentována jako 32 nebo 64 celočíselného bitu.
 
-**_stat –** je ekvivalentní **_stat64i32 –**, a **struktura** **_stat** obsahuje 64-bit čas. To platí Pokud **_USE_32BIT_TIME_T** je definován v takovém případě je v platnosti; staré chování **_stat** používá čas 32-bit, a **struktura** **_stat** obsahuje čas 32-bit. Totéž platí pro **_stati64**.
+**_stat** je ekvivalentem **_stat64i32**a **Struktura** **_stat** obsahuje 64-bit času. To platí, pokud není definován **_USE_32BIT_TIME_T** , v takovém případě se stará chování projeví. **_stat** používá 32 čas a **struktura** **_stat** obsahuje 32-bit času. Totéž platí pro **_stati64**.
 
 > [!NOTE]
-> **_wstat –** nefunguje s Windows Vista symbolické odkazy. V těchto případech **_wstat –** bude vždy sestavy soubor o velikosti 0. **_stat –** správně funguje s symbolické odkazy.
+> **_wstat** nefunguje s symbolické odkazy systému Windows Vista. V těchto případech bude **_wstat** vždy hlásit velikost souboru 0. **_stat** funguje správně se symbolických odkazů.
 
-Tato funkce ověřuje své parametry. Pokud *cesta* nebo *vyrovnávací paměti* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Tato funkce ověří své parametry. Pokud má kterákoli z *cest* nebo *vyrovnávací paměti* **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
-### <a name="time-type-and-file-length-type-variations-of-stat"></a>Typ času a soubor délka typ Variant _stat –
+### <a name="time-type-and-file-length-type-variations-of-_stat"></a>Typ času a délka souboru – variace typu _stat
 
-|Funkce|_USE_32BIT_TIME_T definované?|Typ času|Délka typu souboru|
+|Funkce|_USE_32BIT_TIME_T definovány?|Typ času|Typ délky souboru|
 |---------------|------------------------------------|---------------|----------------------|
-|**_stat**, **_wstat**|Nedefinovaná.|64bitová|32bitová|
-|**_stat**, **_wstat**|Definice|32bitová|32bitová|
-|**_stat32**, **_wstat32**|Není ovlivněna definici makra|32bitová|32bitová|
-|**_stat64**, **_wstat64**|Není ovlivněna definici makra|64bitová|64bitová|
-|**_stati64**, **_wstati64**|Nedefinovaná.|64bitová|64bitová|
-|**_stati64**, **_wstati64**|Definice|32bitová|64bitová|
-|**_stat32i64**, **_wstat32i64**|Není ovlivněna definici makra|32bitová|64bitová|
-|**_stat64i32**, **_wstat64i32**|Není ovlivněna definici makra|64bitová|32bitová|
+|**_stat**, **_wstat**|Nedefinováno|64bitová|32bitová|
+|**_stat**, **_wstat**|definované|32bitová|32bitová|
+|**_stat32**, **_wstat32**|Není ovlivněno definicí makra.|32bitová|32bitová|
+|**_stat64**, **_wstat64**|Není ovlivněno definicí makra.|64bitová|64bitová|
+|**_stati64**, **_wstati64**|Nedefinováno|64bitová|64bitová|
+|**_stati64**, **_wstati64**|definované|32bitová|64bitová|
+|**_stat32i64**, **_wstat32i64**|Není ovlivněno definicí makra.|32bitová|64bitová|
+|**_stat64i32**, **_wstat64i32**|Není ovlivněno definicí makra.|64bitová|32bitová|
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstat**|**_stat**|**_stat**|**_wstat**|
 |**_tstat64**|**_stat64**|**_stat64**|**_wstat64**|
@@ -224,32 +227,32 @@ Tato funkce ověřuje své parametry. Pokud *cesta* nebo *vyrovnávací paměti*
 |**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
 |**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
-**_Stat** struktury definované v SYS\STAT. H, obsahuje následující pole.
+Struktura **_stat** definovaná v SYS\STAT. H obsahuje následující pole.
 
 |Pole||
 |-|-|
-| **st_gid** | Číselný identifikátor skupiny, která je vlastníkem souboru (specifické pro systém UNIX) Toto pole bude vždy nula v systémech Windows. Přesměrované soubor je klasifikován jako soubor Windows. |
-| **st_atime** | Čas posledního přístupu k souboru. Diskové jednotky naformátované platné v systému souborů NTFS, ale ne v systému souborů FAT. |
-| **st_ctime** | Čas vytvoření souboru. Diskové jednotky naformátované platné v systému souborů NTFS, ale ne v systému souborů FAT. |
-| **st_dev** | Číslo disku obsahující soubor jednotky (stejné jako **st_rdev**). |
-| **st_ino** | Počet uzlu informace ( **uzlů**) pro soubor (specifické pro systém UNIX). V systémech souborů UNIX **uzlů** popisuje data souborů a časová razítka, oprávnění a obsah. Pokud jsou soubory pevných – vzájemně propojený, sdílejí stejné **uzlů**. **Uzlů**a proto **st_ino**, nemá žádný význam v systémech souborů FAT, HPFS nebo systému souborů NTFS. |
-| **st_mode** | Bitová maska informace režim souboru. **_S_IFDIR** bit nastaven, pokud *cesta* Určuje adresář; **_S_IFREG** bit nastaven, pokud *cesta* Určuje běžný soubor nebo zařízení. Podle režimu oprávnění k souboru; jsou nastaveny bity pro čtení a zápis uživatele uživatel spustit bity jsou nastaveny podle příponu názvu souboru. |
-| **st_mtime** | Čas poslední změny souboru. |
-| **st_nlink** | Vždy 1 v systémech souborů než NTFS. |
-| **st_rdev** | Číslo disku obsahující soubor jednotky (stejné jako **st_dev**). |
-| **st_size** | Velikost souboru v bajtech; 64bitové celé číslo pro změny s **i64** příponu. |
-| **st_uid** | Číselný identifikátor uživatele, který je vlastníkem souboru (specifické pro systém UNIX). Toto pole bude vždy nula v systémech Windows. Přesměrované soubor je klasifikován jako soubor Windows. |
+| **st_gid** | Číselný identifikátor skupiny, který vlastní soubor (specifický pro systém UNIX), bude v systémech Windows vždycky nula. Přesměrovaný soubor je klasifikován jako soubor systému Windows. |
+| **st_atime** | Čas posledního přístupu k souboru Platí pro systém souborů NTFS, ale ne pro diskové jednotky ve formátu FAT. |
+| **st_ctime** | Čas vytvoření souboru Platí pro systém souborů NTFS, ale ne pro diskové jednotky ve formátu FAT. |
+| **st_dev** | Číslo jednotky disku obsahujícího soubor (totéž jako **st_rdev**). |
+| **st_ino** | Číslo informačního uzlu ( **inode**) pro soubor (specifický pro systém UNIX). V systémech souborů UNIX **inode** popisuje datum a časová razítka, oprávnění a obsah souboru. Když jsou soubory vzájemně propojeny, sdílejí stejný **inode**. **Inode**, a proto **st_ino**, nemá žádný význam v systémech souborů FAT, HPFS nebo NTFS. |
+| **st_mode** | Bitová maska pro informace o režimu souboru. Bit **_S_IFDIR** je nastaven, pokud *cesta* Určuje adresář. bit **_S_IFREG** je nastaven, pokud *cesta* určuje běžný soubor nebo zařízení. Bity čtení a zápisu uživatelů jsou nastaveny v závislosti na režimu oprávnění souboru; bity spouštění uživatele jsou nastaveny podle přípony názvu souboru. |
+| **st_mtime** | Čas poslední úpravy souboru |
+| **st_nlink** | Vždy 1 v systémech souborů bez NTFS. |
+| **st_rdev** | Číslo jednotky disku obsahujícího soubor (totéž jako **st_dev**). |
+| **st_size** | Velikost souboru v bajtech; 64 celé číslo pro variace s příponou **I64** . |
+| **st_uid** | Číselný identifikátor uživatele, který vlastní soubor (specifický pro systém UNIX). Toto pole bude v systémech Windows vždycky nula. Přesměrovaný soubor je klasifikován jako soubor systému Windows. |
 
-Pokud *cesta* odkazuje na zařízení, **st_size**, různá pole čas **st_dev**, a **st_rdev** pole **_stat –**  struktura nemají smysl. Protože STAT. H používá [_dev_t](../../c-runtime-library/standard-types.md) typ, který je definovaný v typy. H, musí obsahovat typy. H před STAT. H ve vašem kódu.
+Pokud *cesta* odkazuje na zařízení, pole **st_size**, různá časová pole, **st_dev**a **st_rdev** ve struktuře **_stat** nemají význam. Protože STAT. H používá typ [_dev_t](../../c-runtime-library/standard-types.md) , který je definován v typech. H, je nutné zahrnout typy. H před STATou H ve vašem kódu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
-|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<SYS/Types.h > za nímž následuje \<sys/stat.h >|\<errno.h>|
-|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<SYS/Types.h > za nímž následuje \<sys/stat.h > nebo \<wchar.h >|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/Types. h > následovaný \<sys/stat. h >|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/Types. h > následovaný \<sys/stat. h > nebo \<WCHAR. h >|\<errno.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,14 +1,14 @@
 ---
 title: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsnicmp
 - _strnicmp_l
 - _wcsnicmp_l
 - _strnicmp
 - _mbsnicmp
 - _mbsnicmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsnicmp_l
 - _strnicmp
@@ -66,19 +69,19 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 38f5697e0c7fe147a481249888595b7d51cfe93c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d1645c33684f5a0fbabc2119592c39a7df97ca3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209684"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947135"
 ---
-# <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
+# <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
-Porovná zadaný počet znaků, bez ohledu na případ dvou řetězců.
+Porovná zadaný počet znaků dvou řetězců bez ohledu na velikost písmen.
 
 > [!IMPORTANT]
-> **_mbsnicmp –** a **_mbsnicmp_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicmp** a **_mbsnicmp_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -120,40 +123,40 @@ int _mbsnicmp_l(
 
 ### <a name="parameters"></a>Parametry
 
-*string1*, *string2*<br/>
-Řetězec zakončený hodnotou Null pro srovnání.
+*řetězec1*, *řetězec2*<br/>
+Řetězec zakončený hodnotou null k porovnání
 
-*Počet*<br/>
+*výpočtu*<br/>
 Počet znaků, které mají být porovnány.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Označuje vztah mezi podřetězci, následujícím způsobem.
+Označuje vztah mezi podřetězci následujícím způsobem.
 
 |Návratová hodnota|Popis|
 |------------------|-----------------|
-|< 0|*řetězec1* dílčí řetězec je menší než *řetězec2* dílčí řetězec.|
-|0|*řetězec1* se shoduje s podřetězcem *řetězec2* dílčí řetězec.|
-|> 0|*řetězec1* je větší než podřetězec *řetězec2* dílčí řetězec.|
+|< 0|podřetězec *řetězec1* je menší než *řetězec2* .|
+|0|podřetězec *řetězec1* je identický s podřetězcem *řetězec2* .|
+|> 0|podřetězec *řetězec1* je větší než *řetězec2* .|
 
-Na parametr chyby ověřování, vrátí tyto funkce **_NLSCMPERROR**, který je definován v \<string.h > a \<mbstring.h >.
+Při ověřování parametru tyto funkce vrací **_NLSCMPERROR**, která je definována v \<String. h > a \<Mbstring. h >.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Strnicmp –** funkce ordinally porovná maximálně, první *počet* znaků *řetězec1* a *řetězec2*. Porovnání je provedeno bez ohledu na případ převedením jednotlivé znaky na malá písmena. **_strnicmp –** je velká a malá písmena verze **strncmp –**. Porovnání končí, když je dosaženo ukončujícího znaku null v jednom z řetězců před *počet* znaků. Pokud jsou řetězce shodné při dosažení ukončujícího znaku null v jednom z řetězců před *počet* jsou porovnány znaky, kratší řetězec je menší.
+Funkce **_strnicmp** pořadíně porovnává, ve většině případů první *počet* znaků *řetězec1* a *řetězec2*. Porovnání je provedeno bez ohledu na případ převodem jednotlivých znaků na malá písmena. **_strnicmp** je verze **strncmp**bez rozlišení velkých a malých písmen. Porovnání končí, pokud je dosaženo ukončujícího znaku null v řetězci před porovnáním znaků *Count* . Pokud jsou řetězce stejné, když je dosaženo ukončujícího znaku null v řetězci předtím, než jsou znaky *Count* porovnány, kratší řetězec je menší.
 
-Znaky z 91 96 v tabulce ASCII ('[','\\","] "," ^ ","_"a"\`") vyhodnotit jako méně než libovolný znak abecedy. Toto řazení je stejné jako u **stricmp –**.
+Znaky od 91 do 96 v tabulce ASCII (' [',\\' ', '] ', ' ^ ', ' _ ' a '\`') vyhodnotí jako znak, který je menší než jakýkoli abecední znak. Toto řazení je stejné jako u **stricmp**.
 
-**_wcsnicmp –** a **_mbsnicmp –** jsou širokoznaké a vícebajtové verze **_strnicmp –**. Argumenty **_wcsnicmp –** jsou širokoznaké řetězce **_mbsnicmp –** jsou vícebajtové znakové řetězce. **_mbsnicmp –** rozpozná vícebajtové znakové sekvence podle aktuální vícebajtové znakové stránce a vrátí **_NLSCMPERROR** v případě chyby. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Tyto tři funkce chovají identicky jinak. Tyto funkce se vztahuje nastavení národního prostředí – verze, které nemají **_l** používají aktuální národní prostředí pro své chování závislé na národním prostředí; ty, které mají **_l** příponu Místo toho použít *národní prostředí* , který je předán. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**_wcsnicmp** a **_mbsnicmp** jsou verze s velkým znakem a vícebajtovým znakem **_strnicmp**. Argumenty **_wcsnicmp** jsou řetězce s velkým počtem znaků; ty z **_mbsnicmp** jsou vícebajtové znakové řetězce. **_mbsnicmp** rozpoznává vícebajtové znakové sekvence podle aktuální vícebajtové znakové stránky a vrátí **_NLSCMPERROR** na chybu. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Tyto tři funkce se chovají identicky jinak. Tyto funkce jsou ovlivněny nastavením národního prostředí – verze, které nemají příponu **_l** , používají aktuální národní prostředí pro své chování závislé na národním prostředí. verze, které mají příponu **_l** , místo toho používají *národní prostředí* , které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Všechny tyto funkce ověřují své parametry. Pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastavte **errno** k **EINVAL**.
+Všechny tyto funkce ověřují své parametry. Pokud je buď *řetězec1* nebo *řetězec2* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncicmp**|**_strnicmp**|**_mbsnicmp**|**_wcsnicmp**|
 |**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
@@ -163,19 +166,19 @@ Všechny tyto funkce ověřují své parametry. Pokud *řetězec1* nebo *řetěz
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strnicmp**, **_strnicmp_l**|\<string.h>|
-|**_wcsnicmp**, **_wcsnicmp_l**|\<String.h > nebo \<wchar.h >|
-|**_mbsnicmp**, **_mbsnicmp_l**|\<Mbstring.h >|
+|**_strnicmp**, **_strnicmp_l**|\<String. h >|
+|**_wcsnicmp**, **_wcsnicmp_l**|\<String. h > nebo \<WCHAR. h >|
+|**_mbsnicmp**, **_mbsnicmp_l**|\<Mbstring. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [strncmp –](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
+Podívejte se na příklad pro [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

@@ -1,27 +1,30 @@
 ---
-title: delete(CRT) – operátor
+title: delete – operátor(CRT)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr120.dll
 - msvcr100.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - delete[]
 helpviewer_keywords:
 - operator delete[]
 - vector delete
 ms.assetid: e91bd0df-3815-40ca-950a-67b470518aed
-ms.openlocfilehash: 81fc30d91d487c0077df5b8f964c685cb7453aeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73869045eeca6a91a429ee38e5d26d28d56117c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344145"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944524"
 ---
-# <a name="operator-deletecrt"></a>delete(CRT) – operátor
+# <a name="operator-deletecrt"></a>delete – operátor(CRT)
 
-Od v sadě Visual Studio 2013, Universal C Runtime (UCRT) již podporuje C++ specifické operátor new a operátor delete funkce. Ty jsou teď součástí standardní knihovny C++. Další informace najdete v tématu [nové a odstranit operátory](../cpp/new-and-delete-operators.md) a [operátor delete](../cpp/delete-operator-cpp.md) v referenci jazyka C++.
+Počínaje Visual Studio 2013 technologie Universal C runtime (UCRT) již nepodporuje C++funkce operátoru new a operátoru delete specifické pro operátor a. Teď jsou součástí C++ standardní knihovny. Další informace najdete v tématu [operátory New a DELETE](../cpp/new-and-delete-operators.md) a [operátor delete](../cpp/delete-operator-cpp.md) v referenční C++ příručce jazyka.

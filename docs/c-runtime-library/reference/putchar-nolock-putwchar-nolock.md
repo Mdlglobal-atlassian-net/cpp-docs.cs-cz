@@ -1,10 +1,10 @@
 ---
 title: _putchar_nolock, _putwchar_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putchar_nolock
 - _putwchar_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putwchar_nolock
 - _puttchar_nolock
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-ms.openlocfilehash: 2a70c2363b5ae35faab9a0167200366b286408b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dba6537c5fb7ec66a812f2c34831b1b908fc3e4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358152"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949959"
 ---
-# <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
+# <a name="_putchar_nolock-_putwchar_nolock"></a>_putchar_nolock, _putwchar_nolock
 
-Zapíše znak do **stdout** bez zamčení vlákna.
+Zapíše znak do **stdout** bez uzamčení vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,15 +60,15 @@ wint_t _putwchar_nolock(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak k zapsání.
+Znak, který se má zapsat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Zobrazit **putchar, putwchar**.
+Viz **putchar, putwchar**.
 
 ## <a name="remarks"></a>Poznámky
 
-**putchar_nolock** a **_putwchar_nolock –** jsou shodné s verzemi bez **_nolock** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Mohou být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
+**putchar_nolock** a **_putwchar_nolock** jsou stejné jako verze bez přípony **_nolock** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -78,13 +81,13 @@ Zobrazit **putchar, putwchar**.
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_putchar_nolock**|\<stdio.h>|
-|**_putwchar_nolock**|\<stdio.h > nebo \<wchar.h >|
+|**_putwchar_nolock**|\<stdio. h > nebo \<WCHAR. h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -118,6 +121,6 @@ This is the line of output
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

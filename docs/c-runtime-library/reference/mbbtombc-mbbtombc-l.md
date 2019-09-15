@@ -1,10 +1,10 @@
 ---
 title: _mbbtombc, _mbbtombc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbbtombc_l
 - _mbbtombc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbbtombc_l
 - _mbbtombc
@@ -28,19 +31,19 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 244e603a3234b755d19a1c1d0738e8c22d74b8e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156901"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952738"
 ---
-# <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
+# <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
-Převede jednobajtový vícebajtový znak na odpovídající dvojitým bajtem vícebajtového znaku.
+Převede vícebajtový znak s jedním bajtem na odpovídající dvoubajtové vícebajtový znak.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,31 +60,31 @@ unsigned int _mbbtombc_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Jednobajtový znak pro převod.
+Jednobajtové znak, který se má převést
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **_mbbtombc –** úspěšně převede *c*, vrátí vícebajtového znaku; v opačném případě vrátí *c*.
+Pokud **_mbbtombc** úspěšně převede *c*, vrátí vícebajtový znak; v opačném případě vrátí *c*.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbbtombc –** funkce převede daný jednobajtový vícebajtový znak na odpovídající dvojitým bajtem vícebajtového znaku. Znaky musí spadat do rozsahu 0x20 – 0x7E nebo 0xA1 – 0xDF, který má být převeden.
+Funkce **_mbbtombc** Převede daný bajt vícebajtového znaku na odpovídající dvoubajtové vícebajtové znaky. Znaky musí být v rozsahu 0x20-0x7E nebo 0xA1-0xDF, aby je bylo možné převést.
 
-Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze této funkce jsou identické, s tím rozdílem, že **_mbbtombc –** používá aktuální národní prostředí pro toto chování závislé na národním prostředí a **_mbbtombc_l –** místo toho používá parametr národního prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace najdete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md) . Verze této funkce jsou identické, s tím rozdílem, že **_mbbtombc** používá aktuální národní prostředí pro toto chování závislé na národním prostředí a **_mbbtombc_l** místo toho používá parametr národního prostředí, který je předaný. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V dřívějších verzích **_mbbtombc –** označovala jako **hantozen**. Pro nový kód, použijte **_mbbtombc –**.
+V dřívějších verzích se **_mbbtombc** jmenovala **hantozen**. Pro nový kód použijte **_mbbtombc**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbbtombc**|\<Mbstring.h >|
-|**_mbbtombc_l**|\<Mbstring.h >|
+|**_mbbtombc**|\<Mbstring. h >|
+|**_mbbtombc_l**|\<Mbstring. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

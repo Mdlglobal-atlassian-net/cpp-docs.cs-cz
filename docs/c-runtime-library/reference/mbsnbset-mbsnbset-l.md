@@ -1,10 +1,10 @@
 ---
 title: _mbsnbset, _mbsnbset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbset
 - _mbsnbset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset
 - mbsnbset_l
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 7783ff6519147331ae3943f053efe1bae01aee7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499793"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952157"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
@@ -88,7 +91,7 @@ Funkce **_mbsnbset** a **_mbsnbset_l** nastaví maximálně první *počet* bajt
 
 Pokud má str **hodnotu null** nebo je *počet* nula, tato funkce vygeneruje výjimku neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **hodnotu null**. Kromě toho, pokud *c* není platný vícebajtový znak, je **errno** nastaven na **EINVAL** a místo toho se použije místo.
 
-Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další [](setlocale-wsetlocale.md) informace naleznete v tématu setlocale. Verze **_mbsnbset** této funkce používá aktuální národní prostředí pro toto chování závislé na národním prostředí; verze **_mbsnbset_l** je shodná s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze **_mbsnbset** této funkce používá aktuální národní prostředí pro toto chování závislé na národním prostředí; verze **_mbsnbset_l** je shodná s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 **Poznámka k zabezpečení** Toto rozhraní API způsobuje potenciální hrozbu, o kterou vznikají problémy s přetečením vyrovnávací paměti. Problémy s přetečením vyrovnávací paměti představují častější způsob útoku na systém, což vede k neoprávněnému zvýšení oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
