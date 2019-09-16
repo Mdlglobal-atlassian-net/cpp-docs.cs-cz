@@ -1,9 +1,9 @@
 ---
 title: fgetpos
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetpos
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetpos
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27d25b29f656d1df889e5f83857ca437f609a07a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333927"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940843"
 ---
 # <a name="fgetpos"></a>fgetpos
 
-Získá datový proud Indikátor pozice v souboru.
+Získá indikátor pozice souboru datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,16 +50,16 @@ int fgetpos(
 *stream*<br/>
 Cílový datový proud.
 
-*pos*<br/>
-Indikátor pozice v úložišti.
+*POS*<br/>
+Úložiště indikátoru pozice.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření **fgetpos** vrátí hodnotu 0. Při selhání, vrátí nenulovou hodnotu a nastaví **errno** na jednu z následujících manifest konstanty (definované v STDIO. H): **EBADF**, což znamená, že zadaný datový proud není platným souborem ukazatel nebo není přístupný, nebo **EINVAL**, což znamená, že *stream* hodnotu nebo hodnotu *pos*je neplatný, třeba když buď je ukazatel s hodnotou null. Pokud *stream* nebo *pos* je **NULL** ukazatel myši, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+V případě úspěchu vrátí **fgetpos** 0. Při selhání vrátí nenulovou hodnotu a nastaví **errno** na jednu z následujících konstant manifestu (definované v stdio. H): **EBADF**, což znamená, že zadaný datový proud není platný ukazatel na soubor nebo není přístupný, nebo **EINVAL**, což znamená, že hodnota *datového proudu* nebo hodnota *POS* není platná, například pokud buď je ukazatel s hodnotou null. Pokud je *datový proud* nebo *POS* ukazatel s **hodnotou null** , funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Fgetpos** funkce získá aktuální hodnotu *stream* Indikátor pozice v souboru argumentu a ukládá ho do objektu odkazované *pos*. **Fsetpos** funkce můžete později použít informace uložené v *pos* resetovat *stream* argumentu ukazatel na pozici v době **fgetpos** byla volána. *Pos* hodnota uložená v interní formát a je určena pro použití pouze **fgetpos** a **fsetpos**.
+Funkce **fgetpos** získá aktuální hodnotu indikátoru pozice souboru v argumentu *datového proudu* a uloží ji do objektu, na který ukazuje *POS*. Funkce **fsetpos** může později použít informace uložené v *POS* , aby obnovila ukazatel argumentu *datového proudu* na jeho pozici v době volání **fgetpos** . Hodnota *POS* je uložená v interním formátu a je určená jenom pro použití pomocí **fgetpos** a **fsetpos**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -64,7 +67,7 @@ V případě úspěšného ověření **fgetpos** vrátí hodnotu 0. Při selhá
 |--------------|---------------------|
 |**fgetpos**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -108,13 +111,13 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetpostxt"></a>Vstup: crt_fgetpos.txt
+## <a name="input-crt_fgetpostxt"></a>Vstup: crt_fgetpos. txt
 
 ```Input
 fgetpos gets a stream's file-position indicator.
 ```
 
-### <a name="output-crtfgetpostxt"></a>Výstup crt_fgetpos.txt
+### <a name="output-crt_fgetpostxt"></a>Výstup crt_fgetpos. txt
 
 ```Output
 after fgetpos: gets a stream
@@ -123,5 +126,5 @@ after fsetpos: gets a stream
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fsetpos](fsetpos.md)<br/>
