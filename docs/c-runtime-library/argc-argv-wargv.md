@@ -1,13 +1,16 @@
 ---
-title: __argc __argv, __wargv
+title: __argc, __argv, __wargv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wargv
 - __argv
 - __argc
-apilocation:
+api_location:
 - msvcrt120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __argv
 - __argc
@@ -17,16 +20,16 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59ab1f5ba52e6dc84d44e8cb5465cfa412d01895
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290479"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940627"
 ---
-# <a name="argc-argv-wargv"></a>__argc __argv, __wargv
+# <a name="__argc-__argv-__wargv"></a>__argc, __argv, __wargv
 
-`__argc` Počet argumentů příkazového řádku předané do programu je globální proměnná. `__argv` ukazatel na pole řetězců jedním jednobajtového znaku nebo více byte znaků, které obsahují argumenty programu a `__wargv` je ukazatel na pole řetězce širokého znaku obsahující argumenty programu. Tyto globální proměnné poskytují argumenty, které mají `main` nebo `wmain`.
+`__argc` Globální proměnná je počet argumentů příkazového řádku předaných programu. `__argv`je ukazatel na pole jednobajtových znaků nebo vícebajtových řetězců, které obsahují argumenty programu, a `__wargv` je ukazatel na pole řetězců s velkým znakem, které obsahují argumenty programu. Tyto globální proměnné poskytují argumenty pro `main` nebo. `wmain`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,13 +41,13 @@ extern wchar_t ** __wargv;
 
 ## <a name="remarks"></a>Poznámky
 
-V programu v jazyce, který používá `main` funkci `__argc` a `__argv` jsou inicializovány při spuštění programu pomocí příkazového řádku, který se používá ke spuštění programu. Příkazový řádek je analyzován do jednotlivé argumenty a zástupné znaky jsou rozbaleny. Počet argumentů je přiřazena k `__argc` argument řetězce jsou přidělený k haldě a ukazatel na pole argumentů je přiřazena k `__argv`. V programu kompilovaného použití širokých znaků a `wmain` funkce, argumenty jsou analyzovány a zástupné znaky jsou rozbaleny jako řetězce širokého znaku a ukazatel na pole řetězců argument je přiřazena k `__wargv`.
+V programu, který používá `main` `__argc` funkci a `__argv` jsou inicializovány při spuštění programu pomocí příkazového řádku, který je použit ke spuštění programu. Příkazový řádek se analyzuje do jednotlivých argumentů a jsou rozbalené zástupné znaky. Počet argumentů je přiřazen k `__argc` a řetězce argumentů jsou přiděleny na haldu a k poli je `__argv`přiřazena ukazatel na pole argumentů. V programu, který je zkompilován pro použití velkých znaků `wmain` a funkce, jsou analyzovány argumenty a zástupné znaky jsou rozšířeny jako řetězce s velkým počtem znaků a ukazatel na pole řetězců argumentů je `__wargv`přiřazen.
 
-Přenositelný kód, doporučujeme použít argumenty předané `main` získat argumenty příkazového řádku ve svém programu.
+V případě přenosného kódu doporučujeme použít argumenty předané `main` pro k získání argumentů příkazového řádku v programu.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina Tchar.h|_UNICODE nedefinovaná.|_UNICODE definováno|
+|Rutina Tchar.h|_UNICODE není definován.|_UNICODE definováno|
 |---------------------|---------------------------|-----------------------|
 |`__targv`|`__argv`|`__wargv`|
 
@@ -54,7 +57,7 @@ Přenositelný kód, doporučujeme použít argumenty předané `main` získat a
 |---------------------|---------------------|
 |`__argc`, `__argv`, `__wargv`|\<stdlib.h>, \<cstdlib> (C++)|
 
-`__argc`, `__argv`, a `__wargv` jsou rozšíření společnosti Microsoft. Informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md).
+`__argc`, `__argv` a`__wargv` jsou rozšířeními společnosti Microsoft. Informace o kompatibilitě najdete v tématu [Kompatibilita](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

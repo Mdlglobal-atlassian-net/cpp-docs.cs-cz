@@ -1,11 +1,11 @@
 ---
-title: Sqrt sqrtf –, sqrtl –
+title: sqrt, sqrtf, sqrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - sqrtl
 - sqrtf
 - sqrt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sqrt
 - sqrtf
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 7c17c973b98638195e2e2d2a5f793578437d11ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354896"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958099"
 ---
-# <a name="sqrt-sqrtf-sqrtl"></a>Sqrt sqrtf –, sqrtl –
+# <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
 Vypočítá druhou odmocninu.
 
@@ -69,25 +72,25 @@ Nezáporná hodnota s plovoucí desetinnou čárkou
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **sqrt** trvají **float** nebo **dlouhé** **double** typy. V programu jazyka C **sqrt** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **odmocniny** , které přebírají typ **float** nebo **Long** **Double** . V programu v jazyce C **odmocnina** vždy přebírá a vrací hodnotu **Double**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Sqrt** funkce vrátí druhou odmocninu z *x*. Ve výchozím nastavení pokud *x* je záporný, **sqrt** vrátí nekonečno hodnotu NaN.
+Funkce **Sqrt** Vrátí druhou odmocninu *x*. Ve výchozím nastavení, pokud je *x* záporné, **odmocnina** vrátí nekonečnou hodnotu NaN.
 
-|Vstup|Výjimka SEH|**_matherr** Exception|
+|Vstup|Výjimka SEH|**_matherr** Jímka|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
+|QNAN, ZASÁHNOUT|žádná|_DOMAIN|
 |- ∞|žádná|_DOMAIN|
-|x<0|žádná|_DOMAIN|
+|x < 0|žádná|_DOMAIN|
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt**, **sqrtf**, **sqrtl**|\<Math. h >|\<cmath >|
 
-Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
