@@ -1,10 +1,10 @@
 ---
 title: _mbsnbicmp, _mbsnbicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbicmp_l
 - _mbsnbicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strnicmp
 - _wcsnicmp_l
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 059d0781e465f6491f27fd634bbc4479104bc12f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331295"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952192"
 ---
-# <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
+# <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
 Porovná **n** bajtů dvou vícebajtových znakových řetězců a ignoruje velikost písmen.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,35 +69,35 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>Parametry
 
-*string1*, *string2*<br/>
-Řetězec zakončený hodnotou Null pro srovnání.
+*řetězec1*, *řetězec2*<br/>
+Řetězec zakončený hodnotou null k porovnání
 
-*Počet*<br/>
-Počet bajtů k porovnání.
+*výpočtu*<br/>
+Počet bajtů, které mají být porovnány.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota označuje vztah mezi podřetězci.
+Vrácená hodnota označuje vztah mezi podřetězci.
 
 |Návratová hodnota|Popis|
 |------------------|-----------------|
-|< 0|*řetězec1* podřetězec menší než *řetězec2* dílčí řetězec.|
-|0|*řetězec1* podřetězec shodný s *řetězec2* dílčí řetězec.|
-|> 0|*řetězec1* větší než podřetězec *řetězec2* dílčí řetězec.|
+|< 0|podřetězec *řetězec1* menší než *řetězec2* podřetězce|
+|0|řetězec *řetězec1* shodný s podřetězcem *řetězec2* .|
+|> 0|podřetězec *řetězec1* větší než *řetězec2* podřetězce|
 
-V případě chyby **_mbsnbicmp –** vrátí **_NLSCMPERROR**, který je definován v souborech String.h a Mbstring.h.
+V případě chyby vrátí **_mbsnbicmp** hodnotu **_NLSCMPERROR**, která je definována v řetězci. h a Mbstring. h.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbsnbicmp –** funkce provádí řadové porovnání nanejvýš prvních *počet* bajtů *řetězec1* a *řetězec2*. Porovnání je provedeno převedením na malá písmena; každý znak [_mbsnbcmp –](mbsnbcmp-mbsnbcmp-l.md) je velká a malá písmena verze **_mbsnbicmp –**. Porovnání končí, když je dosaženo ukončujícího znaku null v jednom z řetězců před *počet* znaků. Pokud jsou řetězce shodné při dosažení ukončujícího znaku null v jednom z řetězců před *počet* jsou porovnány znaky, kratší řetězec je menší.
+Funkce **_mbsnbicmp** provádí ordinální porovnání v nejvíce prvním *počtu* bajtů *řetězec1* a *řetězec2*. Porovnání je provedeno převodem každého znaku na malá. [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) je verze **_mbsnbicmp**s rozlišováním velkých a malých písmen. Porovnání končí, pokud je dosaženo ukončujícího znaku null v řetězci před porovnáním znaků *Count* . Pokud jsou řetězce stejné, když je dosaženo ukončujícího znaku null v řetězci předtím, než jsou znaky *Count* porovnány, kratší řetězec je menší.
 
-**_mbsnbicmp –** je podobný [_mbsnbcmp –](mbsnbcmp-mbsnbcmp-l.md), s tím rozdílem, že porovná řetězce až *počet* bajtů namísto znaků.
+**_mbsnbicmp** se podobá [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), s tím rozdílem, že porovnává řetězce až po *počet* bajtů místo znaků.
 
-Dva řetězce obsahují znaky umístěné mezi "Z" a "a" v tabulce ASCII ('[','\\","] "," ^ ","_"a"\`") porovnávají různě v závislosti na velikosti jejich písmen. Například dva řetězce "ABCDE" a "ABCD ^" porovnávají jeden ze způsobů, pokud je výsledkem porovnávání malá písmena ("abcde" > "abcd ^") a jiným způsobem ("ABCDE" < "ABCD ^") Pokud je velké písmeno.
+Dva řetězce, které obsahují znaky umístěné mezi ' Z ' a ' a ' v tabulce ASCII (' [',\\', '] ', ' @ ', ' _\`' a ' ') porovnávají odlišně v závislosti na jejich velikosti. Například dva řetězce "ABCDE" a "ABCD ^" porovnávají jeden ze způsobů, pokud je porovnávání malými písmeny ("abcde" > "abcd ^") a druhým způsobem ("ABCDE" < "ABCD ^"), pokud se jedná o velká písmena.
 
-**_mbsnbicmp –** rozpozná vícebajtové znakové sekvence podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) aktuálně používán. Není ovlivněna aktuálním nastavením národního prostředí.
+**_mbsnbicmp** rozpoznává vícebajtové znakové sekvence podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) , která se právě používá. Není ovlivněno aktuálním nastavením národního prostředí.
 
-Pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, **_mbsnbicmp –** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **_NLSCMPERROR** a nastaví **errno** k **EINVAL**.
+Pokud je buď *řetězec1* nebo *řetězec2* ukazatel s hodnotou null, vyvolá **_mbsnbicmp** neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -107,17 +110,17 @@ Pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, **_mbsnbicmp �
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsnbicmp**|\<Mbstring.h >|
+|**_mbsnbicmp**|\<Mbstring. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_mbsnbcmp – _mbsnbcmp_l –](mbsnbcmp-mbsnbcmp-l.md).
+Podívejte se na příklad pro [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>

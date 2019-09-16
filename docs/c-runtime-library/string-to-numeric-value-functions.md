@@ -1,14 +1,17 @@
 ---
 title: Funkce řetězců na numerické hodnoty
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr120.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstoui64
 - _tcstoi64
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9d8218bd5a3151e17b7ac380bb86c85dac3e6a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304550"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944727"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funkce řetězců na numerické hodnoty
 
@@ -37,56 +40,56 @@ ms.locfileid: "62304550"
 
 ## <a name="remarks"></a>Poznámky
 
-Každá funkce **strtod** řady převede řetězec zakončený hodnotou null je číselná hodnota. V následující tabulce jsou uvedeny dostupné funkce.
+Každá funkce v rodině **strtod** převede řetězec zakončený hodnotou null na číselnou hodnotu. Dostupné funkce jsou uvedené v následující tabulce.
 
 |Funkce|Popis|
 |--------------|-----------------|
-|`strtod`|Převod řetězce na hodnotu s plovoucí desetinnou dvojitou přesností|
-|`strtol`|Převod řetězce na dlouhé celé číslo|
-|`strtoul`|Převod řetězce na dlouhé celé číslo bez znaménka|
-|`_strtoi64`|Převod řetězce na 64-bit `__int64` celé číslo|
-|`_strtoui64`|Převést řetězec na unsigned 64-bit `__int64` celé číslo|
+|`strtod`|Převést řetězec na hodnotu s dvojitou přesností s plovoucí desetinnou čárkou|
+|`strtol`|Převést řetězec na dlouhé celé číslo|
+|`strtoul`|Převést řetězec na dlouhé celé číslo bez znaménka|
+|`_strtoi64`|Převést řetězec na 64-bitové `__int64` celé číslo|
+|`_strtoui64`|Převést řetězec na celé číslo bez znaménka 64-bit `__int64`|
 
-`wcstod`, `wcstol`, `wcstoul`, a `_wcstoi64` jsou širokoznaké verze `strtod`, `strtol`, `strtoul`, a `_strtoi64`v uvedeném pořadí. Řetězcový argument pro každý z těchto funkcí širokého znaku je řetězec širokého znaku; Každá funkce chová stejně jako jeho protějšek jedním jednobajtového znaku jinak.
+`wcstod`, `wcstol`, `wcstoul`a `strtol` jsouverze`strtod`s libovolným znakem, `_strtoi64`, a v uvedeném pořadí. `strtoul` `_wcstoi64` Řetězcový argument pro každou z těchto funkcí s velkým znakem je řetězec s velkým znakem; Každá funkce se chová stejně jako jeho protějšek s jedním bajtem, jinak.
 
-`strtod` Funkce přebírá dva argumenty: vstupní řetězec je první a druhý ukazatel na znak, který ukončí proces převodu. `strtol`, `strtoul`, **_strtoi64 –** a **_strtoui64 –** trvat třetí argument jako základna čísla pro použití v procesu převodu.
+`strtod` Funkce přebírá dva argumenty: první je vstupní řetězec a druhý ukazatel na znak, který ukončí proces převodu. `strtol`, `strtoul`, **_strtoi64** a **_strtoui64** přebírají třetí argument jako základní číslo pro použití v procesu převodu.
 
-Vstupní řetězec je posloupnost znaků, které lze interpretovat jako hodnotu zadaného typu. Každá funkce zastaví čtení řetězce u prvního znaku, který nebude rozpoznán jako část čísla. Může to být ukončující znak null. Pro `strtol`, `strtoul`, `_strtoi64`, a `_strtoui64`, tento ukončující znak může být také první číselný znak větší než nebo rovna hodnotě základní uživatelem zadané číslo.
+Vstupní řetězec je posloupnost znaků, které lze interpretovat jako číselnou hodnotu zadaného typu. Každá funkce zastaví čtení řetězce u prvního znaku, který není rozpoznán jako část čísla. Může to být ukončující znak null. Pro `strtol`, `strtoul`, a`_strtoi64`je tento ukončovací znak také první číselný znak, který je větší než nebo roven základu číselného zadaného uživatele. `_strtoui64`
 
-Pokud uživatel uvedl ukazatel na znak koncové převod není nastavená na **NULL** během volání, ukazatel na znak, který zastavil skenování se uloží existuje místo. Pokud žádné převody nemohou být provedeny (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota ukazatele na řetězec je uložen na této adrese.
+Pokud uživatelem zadaný ukazatel na znak konce převodu není v době volání nastaven na **hodnotu null** , místo toho se uloží ukazatel na znak, který zastaví kontrolu. Pokud převod nelze provést (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota ukazatele řetězce je uložena na adrese.
 
-`strtod` očekává, že řetězec má následující formu:
+`strtod`očekává řetězec v následujícím tvaru:
 
-[*prázdné znaky*] [*přihlašování*] [`digits`] [**.** `digits`] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*přihlašování*] `digits`]
+[*prázdné znaky*] [*Sign*] [`digits`] [ **.** `digits` &#124; &#124; &#124; ] [{d d e e} [*Sign]]* `digits`
 
-A *prázdné znaky* může skládat ze znaků mezera nebo tabulátor, které jsou ignorovány; *přihlašování* je buď plus (**+**) nebo minus (**-**); a `digits` jsou jeden nebo více desítkových číslic. Pokud se před číselnou soustavou znaků se nezobrazí žádné číslice, alespoň číslice se musí nacházet za číselnou soustavou znaků. Může být následován desítkových číslic exponentu, které se skládají z úvodního písmene (**d**, **D**, **e**, nebo **E**) a volitelně celé číslo se znaménkem. Pokud se nezobrazí část ani Číselná soustava znaků, považován za Číselná soustava znaků postupuje podle poslední číslice v řetězci. První znak, který není vhodná pro tento formulář zastaví skenování.
+*Mezera* se může skládat z mezer nebo znaků tabulátoru, které se ignorují. *znaménko* je buď znaménko plus ( **+** ), nebo mínus ( **-** ); a `digits` je jedna nebo více desítkových číslic. Pokud se před znakem základu neobjeví žádné číslice, musí se alespoň jedna objevit za znakem základu. V desítkových číslicích může následovat exponent, který se skládá z úvodního písmene (**d**, **d**, **e**nebo **e**) a volitelně podepsaného celého čísla. Pokud se nezobrazí část exponentu ani číselný znak, předpokládá se, že za poslední číslicí v řetězci bude následovat znak základu. První znak, který se nevejde do tohoto formuláře zastaví kontrolu.
 
-`strtol`, `strtoul`, `_strtoi64`, A `_strtoui64` funkce očekávat na řetězec v následujícím formátu:
+Funkce `strtol`, `strtoul`, `_strtoi64`a očekávajířetězecvnásledujícímtvaru:`_strtoui64`
 
-[*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]
+[*prázdné znaky*] [{ **+** &#124; `digits` &#124; }] [0 [{x x}]] [] **-**
 
-Pokud je základní argument mezi 2 a 36, použije se jako základ pro číslo. Pokud je 0, počáteční znaky odkazuje end převod ukazatele se používají ke stanovení základu. Pokud je první znak 0 a druhý znak není "x" nebo "X", řetězec je interpretován jako osmičkové celé číslo. v opačném případě je interpretován jako desítkové číslo. Pokud je první znak "0" a druhý znak je písmeno "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; jenom písmena, jejichž přiřazené hodnoty jsou menší než *základní* nejsou povoleny. `strtoul` a `_strtoui64` povolit plus (**+**) nebo minus (**-**) přihlašování předponu; úvodní mínus znamená, že návratová hodnota je negovat.
+Pokud je základní argument mezi 2 a 36, pak se používá jako základ čísla. Pokud je 0, prvotní znaky, na které se odkazuje ukazatel na konci převodu, se používají k určení základu. Pokud je první znak 0 a druhý znak není x nebo X, řetězec je interpretován jako osmičkové celé číslo; v opačném případě je interpretován jako desítkové číslo. Pokud je první znak "0" a druhý znak je "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; povolena jsou pouze písmena, jejichž přiřazené hodnoty jsou menší než *Base* . `strtoul`a `_strtoui64` umožňují znaménko plus **+** () nebo mínus **-** () znaménko; úvodní znaménko mínus označuje, že návratová hodnota je negace.
 
-Výstupní hodnota je ovlivněna nastavením `LC_NUMERIC` nastavením kategorie národního prostředí; viz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v.
+Výstupní hodnota je ovlivněna nastavením `LC_NUMERIC` kategorie národního prostředí; viz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) pro další informace. Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí.
 
-Při hodnotě vrácené tyto funkce by způsobilo přetečení nebo podtečení, nebo pokud převod není možný, speciální případových hodnoty jsou vráceny, jak je znázorněno:
+Když hodnota vrácená těmito funkcemi by způsobila přetečení nebo podtečení nebo když převod není možný, vrátí se speciální hodnoty Case, jak je uvedeno níže:
 
-|Funkce|Podmínka|Hodnota vrácená|
+|Funkce|Podmínka|Vrácená hodnota|
 |--------------|---------------|--------------------|
-|`strtod`|přetečení|+/- `HUGE_VAL`|
-|`strtod`|Podtečení nebo žádný převod|0|
+|`strtod`|Plně|+/- `HUGE_VAL`|
+|`strtod`|Podtečení nebo bez převodu|0|
 |`strtol`|+ Přetečení|**LONG_MAX**|
-|`strtol`|-Přetečení|**LONG_MIN**|
-|`strtol`|Podtečení nebo žádný převod|0|
+|`strtol`|– Přetečení|**LONG_MIN**|
+|`strtol`|Podtečení nebo bez převodu|0|
 |`_strtoi64`|+ Přetečení|**_I64_MAX**|
-|`_strtoi64`|-Přetečení|**_I64_MIN**|
-|`_strtoi64`|Žádný převod|0|
-|`_strtoui64`|přetečení|**_UI64_MAX**|
-|`_strtoui64`|Žádný převod|0|
+|`_strtoi64`|– Přetečení|**_I64_MIN**|
+|`_strtoi64`|Bez převodu|0|
+|`_strtoui64`|Plně|**_UI64_MAX**|
+|`_strtoui64`|Bez převodu|0|
 
-**_I64_MAX**, _**I64_MIN**, a **_UI64_MAX** jsou definovány v omezení. H.
+**_I64_MAX**, _**I64_MIN**a **_UI64_MAX** jsou definovány v omezeních. Y.
 
-`wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, a `_wcstoui64` jsou širokoznaké verze `strtod`, `strtol`, `strtoul`, `_strtoi64`, a `_strtoui64`v uvedeném pořadí; ukazatel na end sady konverzi argument pro každý z těchto funkcí širokého znaku je širokoznaký řetězec. Jinak každá z těchto funkcí širokého znaku chová stejně jako jeho protějšek jedním jednobajtového znaku.
+`wcstod`, `wcstol` `strtol` `strtoul`, `wcstoul` ,a`strtod` jsouverze`_strtoi64`s libovolným znakem,,, a ,vtomtopořadí,ukazatelna`_strtoui64` `_wcstoui64` `_wcstoi64` Argument konec převodu na každou z těchto funkcí s velkým znakem je řetězec s velkým počtem znaků. V opačném případě se každá z těchto funkcí s velkým znakem chová stejně jako protějšek s jedním bytem znaku.
 
 ## <a name="see-also"></a>Viz také:
 

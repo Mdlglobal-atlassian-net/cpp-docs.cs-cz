@@ -1,12 +1,12 @@
 ---
 title: strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcstoimax
 - _wcstoimax_l
 - _strtoimax_l
 - strtoimax
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstoimax
 - _tcstoimax
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-ms.openlocfilehash: e0a320f90b2c0f8653109a6ae0056c4c0cdd7455
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea1ab72a361987d0ccdfe1f4b4a4efb6a0fb427e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176288"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957665"
 ---
-# <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
+# <a name="strtoimax-_strtoimax_l-wcstoimax-_wcstoimax_l"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 
-Převede řetězec na celočíselnou hodnotu největšího typu celé číslo se znaménkem podporované.
+Převede řetězec na celočíselnou hodnotu největšího podporovaného typu celého čísla se znaménkem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,47 +77,47 @@ intmax_t _wcstoimax_l(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Řetězec zakončený hodnotou Null pro převod.
+Řetězec zakončený hodnotou null pro převod.
 
 *endptr*<br/>
 Ukazatel na znak, který zastaví skenování.
 
 *base*<br/>
-Základna čísla pro použití.
+Číselná základna, která se má použít.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**strtoimax** vrátí hodnotu, která představuje řetězec *strSource*, s výjimkou případů, kdy by reprezentace způsobila přetečení – v takovém případě vrátí **INTMAX_MAX** nebo **INTMAX_MIN**, a **errno** je nastavena na **ERANGE**. Funkce vrátí hodnotu 0, pokud žádné převody nemohou být provedeny. **wcstoimax –** vrátí hodnoty analogicky k **strtoimax**.
+**strtoimax** vrací hodnotu reprezentovanou v řetězci *strSource*, s výjimkou případů, kdy by reprezentace způsobila přetečení – v takovém případě vrátí **INTMAX_MAX** nebo **INTMAX_MIN**a **errno** je nastaven na **ERANGE** . Funkce vrátí hodnotu 0, pokud převod nelze provést. **wcstoimax** vrací hodnoty obdobně **strtoimax**.
 
-**INTMAX_MAX** a **INTMAX_MIN** jsou definovány v stdint.h.
+**INTMAX_MAX** a **INTMAX_MIN** jsou definovány v stdin. h.
 
-Pokud *strSource* je **NULL** nebo *základní* je nenulový a menší než 2 nebo větší než 36, **errno** je nastavena na **EINVAL** .
+Pokud má StrSource **hodnotu null** nebo *základní* hodnota je nenulová a buď menší než 2, nebo větší než 36, **errno** je nastavena na hodnotu **EINVAL**.
 
-Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Strtoimax** funkce převede *strSource* do **intmax_t**. Širokoznaká verze **strtoimax** je **wcstoimax –**; její *strSource* argument je širokoznaký řetězec. Jinak tyto funkce chovají identicky. Obě funkce zastaví čtení řetězce *strSource* u prvního znaku, který nebude rozpoznán jako část čísla. Může to být ukončující znak null nebo první číselný znak, který je větší než nebo rovna hodnotě může být *základní*.
+Funkce **strtoimax** převede *strSource* na **intmax_t**. Verze **strtoimax** s velkým znakem je **wcstoimax**; jeho argument *strSource* je řetězec s velkým znakem. V opačném případě se tyto funkce chovají identicky. Obě funkce přestanou číst řetězec *strSource* u prvního znaku, který nedokáže rozpoznat jako součást čísla. Může to být ukončující znak null nebo se může jednat o první číselný znak, který je větší nebo roven *základu*.
 
-Národního prostředí **LC_NUMERIC** kategorie určuje rozpoznávání znaku radix v *strSource*; Další informace najdete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md). Funkce, které nemají **_l** přípona používají aktuální národní prostředí; **_strtoimax_l –** a **_wcstoimax_l –** jsou stejné pro odpovídající funkce, které nemají **_l** s tím rozdílem, že místo toho používají národní prostředí, která Předaný. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Nastavení kategorie **LC_NUMERIC** národního prostředí Určuje rozpoznávání znaku základu v *strSource*; Další informace naleznete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md). Funkce, které nemají příponu **_l** , používají aktuální národní prostředí; **_strtoimax_l** a **_wcstoimax_l** jsou stejné jako odpovídající funkce, které nemají příponu **_l** s tím rozdílem, že místo toho používají národní prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Pokud *endptr* není **NULL**, ukazatel na znak, který zastavil skenování, je uložen na umístění, které ukazuje *endptr*. Pokud žádné převody nemohou být provedeny (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložen v umístění, které ukazuje *endptr*.
+Pokud *endptr* není **null**, ukazatel na znak, který zastavil skenování, je uložen v umístění, na které ukazuje *endptr*. Pokud převod nelze provést (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložena v umístění, na které odkazuje *endptr*.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstoimax**|**strtoimax**|**strtoimax**|**wcstoimax**|
 |**_tcstoimax_l**|**strtoimax_l**|**_strtoimax_l**|**_wcstoimax_l**|
 
-**strtoimax** očekává, že *strSource* tak, aby odkazoval na řetězec v následujícím formátu:
+**strtoimax** očekává, že *strSource* odkazuje na řetězec v následujícím tvaru:
 
-> [*prázdné znaky*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*číslic* &#124; *písmena*]  
+> [*prázdné znaky*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [číslice písmen] **-**
 
-A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou ignorovány; *číslic* jsou jeden nebo více desítkových číslic; *písmena* jsou jedno nebo více písmen "a" až "z" (nebo "A" až "Z"). První znak, který není vhodná pro tento formulář zastaví skenování. Pokud *základní* je mezi 2 a 36, je použit jako základ pro číslo. Pokud *základní* je 0, počáteční znaky řetězce odkazované *strSource* slouží ke stanovení základu. Pokud je první znak "0" a druhý znak není "x" nebo "X", řetězec je interpretován jako osmičkové celé číslo. Pokud je první znak "0" a druhý znak je písmeno "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; jenom písmena, jejichž přiřazené hodnoty jsou menší než *základní* nejsou povoleny. První znak mimo rozsah základny zastaví skenování. Například pokud *základní* je 0 a první znak zkontrolovat je "0", předpokládá se osmičkové celé číslo a znak "8" nebo "9" zastaví skenování.
+*Mezera se může skládat* z mezer a znaků tabulátoru, které jsou ignorovány; *číslice* jsou jednu nebo více desítkových číslic; *písmeny* jsou jedno nebo více písmen "a" až "z" (nebo "a" až "z"). První znak, který se nevejde do tohoto formuláře zastaví kontrolu. Pokud je *základ* mezi 2 a 36, použije se jako základ čísla. Pokud je *základ* 0, pro určení základu se použijí počáteční znaky řetězce, na který odkazuje *strSource* . Pokud je první znak 0 a druhý znak není x nebo X, řetězec je interpretován jako osmičkové celé číslo. Pokud je první znak "0" a druhý znak je "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; povolena jsou pouze písmena, jejichž přiřazené hodnoty jsou menší než *Base* . První znak mimo rozsah základny zastaví skenování. Pokud je například *základ* 0 a první naskenovaný znak je "0", předpokládá se osmičkové celé číslo a znak "8" nebo "9" zastaví kontrolu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -122,7 +125,7 @@ A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou i
 |-------------|---------------------|
 |**strtoimax**, **_strtoimax_l**, **wcstoimax**, **_wcstoimax_l**|\<inttypes.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

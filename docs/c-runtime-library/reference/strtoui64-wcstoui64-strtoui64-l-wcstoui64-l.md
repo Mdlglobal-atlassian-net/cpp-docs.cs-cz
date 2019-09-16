@@ -1,12 +1,12 @@
 ---
 title: _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strtoui64
 - _strtoui64_l
 - _wcstoui64
 - _wcstoui64_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcstoui64_l
 - strtoui64_l
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: dec7debff809f8b3d61856f9be77bc590d845c12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be7d779bac50d332dde879c9d5b070fd2bf7e7e5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269014"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946428"
 ---
-# <a name="strtoui64-wcstoui64-strtoui64l-wcstoui64l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
+# <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 
-Převod řetězce na nepodepsaný **__int64** hodnotu.
+Převede řetězec na nepodepsaný **__int64** hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,60 +84,60 @@ unsigned __int64 _wcstoui64(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Řetězec zakončený hodnotou Null pro převod.
+Řetězec zakončený hodnotou null pro převod.
 
 *endptr*<br/>
 Ukazatel na znak, který zastaví skenování.
 
 *base*<br/>
-Základna čísla pro použití.
+Číselná základna, která se má použít.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_strtoui64 –** vrátí hodnotu představovanou řetězcem *strSource*s výjimkou případů, kdy reprezentace by způsobila přetečení, v takovém případě ji vrátí **_UI64_MAX**. **_strtoui64 –** vrátí hodnotu 0, pokud žádné převody nemohou být provedeny.
+**_strtoui64** vrací hodnotu reprezentovanou v řetězci *strSource*, s výjimkou případů, kdy by reprezentace způsobila přetečení. v takovém případě vrátí **_UI64_MAX**. **_strtoui64** vrátí hodnotu 0, pokud převod nelze provést.
 
-**_UI64_MAX** je definována v omezení. H.
+**_UI64_MAX** je definována v omezeních. Y.
 
-Pokud *strSource* je **NULL** nebo *základní* je nenulový a menší než 2 nebo větší než 36, **errno** je nastavena na **EINVAL** .
+Pokud má StrSource **hodnotu null** nebo *základní* hodnota je nenulová a buď menší než 2, nebo větší než 36, **errno** je nastavena na hodnotu **EINVAL**.
 
-Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratových kódů.
+Další informace o těchto a dalších návratových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-**_Strtoui64 –** funkce převede *strSource* do **bez znaménka** **__int64**. **_wcstoui64 –** je verze širokého znaku **_strtoui64 –**; její *strSource* argument je širokoznaký řetězec. V opačném případě tyto funkce chovají identicky.
+Funkce **_strtoui64** převede *strSource* na **nepodepsaný** **__int64**. **_wcstoui64** je **_strtoui64**verze s velkým znakem; jeho argument *strSource* je řetězec s velkým znakem. V opačném případě se tyto funkce chovají identicky.
 
-Obě funkce zastaví čtení řetězce *strSource* u prvního znaku, který nebude rozpoznán jako část čísla. Může to být ukončující znak null nebo první číselný znak větší než nebo rovna hodnotě může být *základní*.
+Obě funkce přestanou číst řetězec *strSource* u prvního znaku, který nedokáže rozpoznat jako součást čísla. Může to být ukončující znak null nebo se může jednat o první číselný znak, který je větší nebo roven *základní*.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstoui64**|**_strtoui64**|**_strtoui64**|**_wstrtoui64**|
 |**_tcstoui64_l**|**_strtoui64_l**|**_strtoui64_l**|**_wstrtoui64_l**|
 
-Aktuální národní prostředí **LC_NUMERIC** kategorie určuje rozpoznávání znaku radix v *strSource*; Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). Funkce bez přípony _l používají aktuální národní prostředí; **_strtoui64_l –** a **_wcstoui64_l –** jsou stejné pro odpovídající funkce bez **_l** přípony s tím rozdílem, že používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Nastavení kategorie **LC_NUMERIC** aktuálního národního prostředí Určuje rozpoznávání znaku základu v *strSource*; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md). Funkce bez přípony _l používají aktuální národní prostředí; **_strtoui64_l** a **_wcstoui64_l** jsou stejné jako odpovídající funkce bez přípony **_l** s tím rozdílem, že místo toho používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Pokud *endptr* není **NULL**, ukazatel na znak, který zastavil skenování, je uložen v umístění, na které odkazuje *endptr*. Pokud žádné převody nemohou být provedeny (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložen v umístění, na které odkazuje *endptr*.
+Pokud *endptr* není **null**, ukazatel na znak, který zastavil skenování, je uložen v umístění, na které odkazuje *endptr*. Pokud převod nelze provést (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložena v umístění, na které odkazuje *endptr*.
 
-**_strtoui64 –** očekává, že *strSource* tak, aby odkazoval na řetězec v následujícím formátu:
+**_strtoui64** očekává, že *strSource* odkazuje na řetězec v následujícím tvaru:
 
-> [*prázdné znaky*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*číslic* &#124; *písmena*]  
+> [*prázdné znaky*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [číslice písmen] **-**
 
-A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou ignorovány. *číslice* jsou jeden nebo více desítkových číslic. *písmena* jsou jedno nebo více písmen "a" až "z" (nebo "A" až "Z"). První znak, který není vhodná pro tento formulář zastaví skenování. Pokud *základní* je mezi 2 a 36, je použit jako základ pro číslo. Pokud *základní* je 0, počáteční znaky řetězce odkazované *strSource* slouží ke stanovení základu. Pokud je první znak 0 a druhý znak není "x" nebo "X", řetězec je interpretován jako osmičkové celé číslo. Pokud je první znak "0" a druhý znak je písmeno "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; jenom písmena, jejichž přiřazené hodnoty jsou menší než *základní* nejsou povoleny. První znak mimo rozsah základny zastaví skenování. Například pokud *základní* je 0 a první znak zkontrolovat je "0", předpokládá se osmičkové celé číslo a znak "8" nebo "9" zastaví skenování.
+*Mezera se může skládat* z mezer a znaků tabulátoru, které jsou ignorovány. *číslice* jsou jednu nebo více desítkových číslic. *písmeny* jsou jedno nebo více písmen "a" až "z" (nebo "a" až "z"). První znak, který se nevejde do tohoto formuláře zastaví kontrolu. Pokud je *základ* mezi 2 a 36, použije se jako základ čísla. Pokud je *základ* 0, pro určení základu se použijí počáteční znaky řetězce, na který odkazuje *strSource* . Pokud je první znak 0 a druhý znak není x nebo X, řetězec je interpretován jako osmičkové celé číslo. Pokud je první znak "0" a druhý znak je "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; povolena jsou pouze písmena, jejichž přiřazené hodnoty jsou menší než *Base* . První znak mimo rozsah základny zastaví skenování. Pokud je například *základ* 0 a první naskenovaný znak je "0", předpokládá se osmičkové celé číslo a znak "8" nebo "9" zastaví kontrolu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_strtoui64**|\<stdlib.h>|
-|**_wcstoui64**|\<stdlib.h > nebo \<wchar.h >|
+|**_wcstoui64**|\<Stdlib. h > nebo \<WCHAR. h >|
 |**_strtoui64_l**|\<stdlib.h>|
-|**_wcstoui64_l**|\<stdlib.h > nebo \<wchar.h >|
+|**_wcstoui64_l**|\<Stdlib. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

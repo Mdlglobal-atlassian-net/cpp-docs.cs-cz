@@ -1,12 +1,12 @@
 ---
 title: strtoull, _strtoull_l, wcstoull, _wcstoull_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strtoull_l
 - _wcstoull_l
 - strtoull
 - wcstoull
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcstoull_l
 - _tcstoull
@@ -34,16 +37,16 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-ms.openlocfilehash: f23799b43a356600f48fb0fbf32b4604966c416b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70d7a53219a9176e848fde239d90291366b67eb0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379204"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957603"
 ---
-# <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
+# <a name="strtoull-_strtoull_l-wcstoull-_wcstoull_l"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 
-Převede řetězce na hodnotu unsigned long long integer.
+Převede řetězce na celočíselnou hodnotu bez znaménka Long.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,56 +78,56 @@ unsigned long long _wcstoull_l(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Řetězec zakončený hodnotou Null pro převod.
+Řetězec zakončený hodnotou null pro převod.
 
 *endptr*<br/>
 Ukazatel na znak, který zastaví skenování.
 
 *base*<br/>
-Základna čísla pro použití.
+Číselná základna, která se má použít.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**strtoull –** vrátí převedenou hodnotu, pokud existuje, nebo **ULLONG_MAX** při přetečení. **strtoull –** vrátí hodnotu 0, pokud žádné převody nemohou být provedeny. **wcstoull –** vrátí hodnoty analogicky k **strtoull –**. U obou funkcí **errno** je nastavena na **ERANGE** Pokud dojde k přetečení nebo podtečení.
+**strtoull** vrátí převedenou hodnotu, pokud existuje, nebo **ULLONG_MAX** při přetečení. **strtoull** vrátí hodnotu 0, pokud převod nelze provést. **wcstoull** vrací hodnoty obdobně **strtoull**. Pro obě funkce je **errno** nastaveno na **ERANGE** , pokud dojde k přetečení nebo podtečení.
 
-Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí převede vstupní řetězec *strSource* do **bez znaménka** **dlouhé** **dlouhé** celočíselnou hodnotu.
+Každá z těchto funkcí převede vstupní řetězec *strSource* **na celočíselnou** hodnotu **bez znaménka** **Long** .
 
-**strtoull –** zastaví čtení řetězce *strSource* u prvního znaku, který nebude rozpoznán jako část čísla. Může to být ukončující znak null nebo první číselný znak, který je větší než nebo rovna hodnotě může být *základní*. Nastavení jazyka **LC_NUMERIC** kategorie národního prostředí určuje rozpoznávání znaku radix v *strSource*; Další informace najdete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md). **strtoull –** a **wcstoull –** používají aktuální národní prostředí; **_strtoull_l –** a **_wcstoull_l –** místo toho použijte národní prostředí, které je předáno, ale jsou identické jinak. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**strtoull** zastaví čtení řetězce *strSource* u prvního znaku, který nelze rozpoznat jako součást čísla. Může to být ukončující znak null nebo se může jednat o první číselný znak, který je větší nebo roven *základu*. Nastavení kategorie **LC_NUMERIC** národního prostředí Určuje rozpoznávání znaku základu v *strSource*; Další informace naleznete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoull** a **wcstoull** používají aktuální národní prostředí; **_strtoull_l** a **_wcstoull_l** místo toho používají národní prostředí, které je předáno, ale je identické jinak. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Pokud *endptr* není **NULL**, ukazatel na znak, který zastavil skenování, je uložen na umístění, které ukazuje *endptr*. Pokud žádné převody nemohou být provedeny (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložen v umístění, které ukazuje *endptr*.
+Pokud *endptr* není **null**, ukazatel na znak, který zastavil skenování, je uložen v umístění, na které ukazuje *endptr*. Pokud převod nelze provést (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložena v umístění, na které odkazuje *endptr*.
 
-**wcstoull –** je verze širokého znaku **strtoull –** a jeho *strSource* argument je širokoznaký řetězec. Jinak tyto funkce chovají identicky.
+**wcstoull** je verze **strtoull** s libovolným znakem a jeho argument *strSource* je řetězec s velkým počtem znaků. V opačném případě se tyto funkce chovají identicky.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstoull**|**strtoull**|**strtoull**|**wcstoull –**|
+|**_tcstoull**|**strtoull**|**strtoull**|**wcstoull**|
 |**_tcstoull_l**|**strtoull_l**|**_strtoull_l**|**_wcstoull_l**|
 
-**strtoull –** očekává, že *strSource* tak, aby odkazoval na řetězec v následujícím formátu:
+**strtoull** očekává, že *strSource* odkazuje na řetězec v následujícím tvaru:
 
-> [*prázdné znaky*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*číslic* &#124; *písmena*]  
+> [*prázdné znaky*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [číslice písmen] **-**
 
-A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou ignorovány. *číslice* jsou jeden nebo více desítkových číslic. *písmena* jsou jedno nebo více písmen "a" až "z" (nebo "A" až "Z"). První znak, který není vhodná pro tento formulář zastaví skenování. Pokud *základní* je mezi 2 a 36, je použit jako základ pro číslo. Pokud *základní* je 0, počáteční znaky řetězce, který ukazuje *strSource* slouží ke stanovení základu. Pokud je první znak "0" a druhý znak není "x" nebo "X", řetězec je interpretován jako osmičkové celé číslo. Pokud je první znak "0" a druhý znak je písmeno "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; jenom písmena, jejichž přiřazené hodnoty jsou menší než *základní* nejsou povoleny. První znak mimo rozsah základny zastaví skenování. Například pokud *základní* je 0 a první znak zkontrolovat je "0", předpokládá se osmičkové celé číslo a znak "8" nebo "9" zastaví skenování. **strtoull –** povoluje znaménko plus (**+**) nebo minus (**-**) předponu; úvodní znaménko mínus označuje, že návratová hodnota je negovat.
+*Mezera se může skládat* z mezer a znaků tabulátoru, které jsou ignorovány. *číslice* jsou jednu nebo více desítkových číslic. *písmeny* jsou jedno nebo více písmen "a" až "z" (nebo "a" až "z"). První znak, který se nevejde do tohoto formuláře zastaví kontrolu. Pokud je *základ* mezi 2 a 36, použije se jako základ čísla. Pokud je *základ* 0, k určení základu se použijí počáteční znaky řetězce, na který odkazuje *strSource* . Pokud je první znak 0 a druhý znak není x nebo X, řetězec je interpretován jako osmičkové celé číslo. Pokud je první znak "0" a druhý znak je "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; povolena jsou pouze písmena, jejichž přiřazené hodnoty jsou menší než *Base* . První znak mimo rozsah základny zastaví skenování. Například pokud je *základ* 0 a první naskenovaný znak je "0", předpokládá se osmičkové celé číslo a znak "8" nebo "9" zastaví skenování. **strtoull** umožňuje znaménko plus ( **+** ) nebo mínus ( **-** ) předponu; úvodní znaménko mínus indikuje, že vrácená hodnota je negace.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**strtoull**|\<stdlib.h>|
-|**wcstoull –**|\<stdlib.h > nebo \<wchar.h >|
+|**wcstoull**|\<Stdlib. h > nebo \<WCHAR. h >|
 |**_strtoull_l**|\<stdlib.h>|
-|**_wcstoull_l**|\<stdlib.h > nebo \<wchar.h >|
+|**_wcstoull_l**|\<Stdlib. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
