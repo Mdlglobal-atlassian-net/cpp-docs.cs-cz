@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: f33365fffc9a4addb0f22a90b87f8a03fdf2c1a9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8bc2a42c5a9006065e2f0f4ecb70911e0055823e
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513735"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062061"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvoření tradiční desktopové aplikace pro WindowsC++()
 
@@ -70,7 +70,7 @@ Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li p
 
 1. Na **souboru** nabídce zvolte **nový** a klikněte na tlačítko **projektu**.
 
-1. V dialogovém okně **Nový projekt** rozbalte v levém podokně položku nainstalovaná > **aplikace Visual C++** a pak vyberte možnost **desktopová plocha systému Windows**. V prostředním podokně vyberte možnost **Průvodce desktopovou plochou systému Windows**.
+1. V dialogovém okně **Nový projekt** rozbalte v levém podokně položku **nainstalovaná** > **C++aplikace Visual**a pak vyberte možnost **desktopová plocha systému Windows**. V prostředním podokně vyberte možnost **Průvodce desktopovou plochou systému Windows**.
 
    Do pole **název** zadejte název projektu, například *DesktopApp*. Zvolte **OK**.
 
@@ -157,8 +157,8 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
 
    ```cpp
    LRESULT CALLBACK WndProc(
-      _In_ HWND   hwnd,
-      _In_ UINT   uMsg,
+      _In_ HWND   hWnd,
+      _In_ UINT   message,
       _In_ WPARAM wParam,
       _In_ LPARAM lParam
    );
@@ -271,7 +271,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    return (int) msg.wParam;
    ```
 
-   Další informace o strukturách a funkcích ve smyčce zpráv naleznete v tématu [MSG](/windows/win32/api/winuser/ns-winuser-msg), GetMessage, [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage). [](/windows/win32/api/winuser/nf-winuser-getmessage)
+   Další informace o strukturách a funkcích ve smyčce zpráv naleznete v tématu [MSG](/windows/win32/api/winuser/ns-winuser-msg), [GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).
 
    V tomto okamžiku `WinMain` by funkce měla vypadat podobně jako následující kód.
 

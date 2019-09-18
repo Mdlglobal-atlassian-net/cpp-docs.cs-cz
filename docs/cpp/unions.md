@@ -7,21 +7,21 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: c15ec782d16aebab85d57de2dea1e91b91620c74
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894473"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062060"
 ---
 # <a name="unions"></a>Sjednocení
 
 > [!NOTE]
-> V C ++ 17 a novějších **std::variant** třídy je typově bezpečný alternativou pro sjednocení.
+> V C++ 17 a novějších je třída **std:: variant** typově bezpečná alternativa pro sjednocení.
 
-A **sjednocení** je uživatelem definovaný typ, ve kterém všichni členové sdílejí stejné místo v paměti. To znamená, že v každém okamžiku sjednocení může obsahovat více než jeden objekt ze svého seznamu členů. Také znamená, že bez ohledu na to, kolik členů má sjednocení, vždy používá pouze dostatek paměti k ukládání největšího členu.
+**Sjednocení** je uživatelem definovaný typ, ve kterém všichni členové sdílejí stejné umístění v paměti. To znamená, že v daném okamžiku sjednocení nemůže obsahovat více než jeden objekt ze svého seznamu členů. Také to znamená, že bez ohledu na to, kolik členů má sjednocení, vždy používá dostatek paměti k uložení největšího člena.
 
-Sjednocení může být užitečné pro zachování paměti, když máte velké množství objektů a/nebo paměti omezený. Ale vyžadují použití správně, protože zodpovídáte za zajištění, že vždy přistupujete posledního člena, který se zapsala do velmi opatrně. Pokud libovolný člen typy nejsou v netriviálních konstruktor, musíte napsat další kód explicitně konstrukce a zničení tohoto člena. Před použitím sjednocení, zvažte, jestli problém, který se snažíte vyřešit by mohla lépe vyjádřit pomocí základní třída a odvozené třídy.
+Sjednocení můžou být užitečná při zachování paměti, když máte spoustu objektů a/nebo omezené paměti. Vyžadují navíc správné použití, protože zodpovídáte za to, že budete mít vždycky přístup k poslednímu členovi, ke kterému jste se zapsali. Pokud kterýkoli typ člena má netriviální konstruktor, musíte napsat další kód pro explicitní sestavení a zničení tohoto člena. Před použitím sjednocení zvažte, jestli problém, který se snažíte vyřešit, může být lepší vyjádřit pomocí základní třídy a odvozených tříd.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,13 +35,13 @@ union [name]  { member-list };
 Název typu sjednocení.
 
 *seznam členů*<br/>
-Členy, které sjednocení může obsahovat. Viz poznámky.
+Členy, které může sjednocení obsahovat. Viz poznámky.
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="declaring-a-union"></a>Deklarace sjednocení
 
-Zahájit deklarace sjednocení s **sjednocení** – klíčové slovo a uzavřete seznam členů do složených závorek:
+Zahajte deklaraci sjednocení s klíčovým slovem **Union** a vložte seznam členů do složených závorek:
 
 ```cpp
 // declaring_a_union.cpp
@@ -58,13 +58,13 @@ int main()
 {
     RecordType t;
     t.i = 5; // t holds an int
-    t.f = 7.25 // t now holds a float
+    t.f = 7.25; // t now holds a float
 }
 ```
 
 ## <a name="using-unions"></a>Použití sjednocení
 
-V předchozím příkladu veškerý kód, který přistupuje k sjednocení potřebuje vědět, který člen obsahuje data. Nejběžnější řešení tohoto problému je uzavření sjednocení ve struktuře spolu s člen další výčtu, která určuje typ dat aktuálně uloženy ve sjednocení. Jedná se *rozlišované sjednocení* a následující příklad zobrazuje základní vzor.
+V předchozím příkladu musí jakýkoli kód, který přistupuje ke sjednocení, znát, který člen drží data. Nejběžnějším řešením tohoto problému je uzavření sjednocení do struktury spolu s dalším členem výčtu, který určuje typ dat, která jsou aktuálně ukládána do sjednocení. To se označuje jako *rozlišené sjednocení* a následující příklad ukazuje základní vzor.
 
 ```cpp
 #include <queue>
@@ -147,15 +147,15 @@ void Initialize()
 }
 ```
 
-V předchozím příkladu mějte na paměti, že ve vstupní struktuře sjednocení nemá žádný název. Toto je anonymní sjednocení a její členy jsou přístupné, jako by byly přímé členy struktury. Další informace o anonymních sjednoceních naleznete v části níže.
+V předchozím příkladu si všimněte, že sjednocení ve vstupní struktuře nemá žádný název. Toto je anonymní sjednocení a jeho členové mají přístup, jako kdyby byli přímými členy struktury. Další informace o anonymních sjednoceních najdete v části níže.
 
-Samozřejmě předchozí příklad znázorňuje problém, který může také vyřešit pomocí třídy, které jsou odvozeny z obecnou základní třídu a větvení kódu na základě typu runtime jednotlivých objektů v kontejneru. Výsledkem může být kód, jednodušší na správu a informace o tom, ale to může být také pomalejší než při použití sjednocení. Navíc se sjednocení, můžete ukládat typy naprosto nesouvisející a typ hodnoty, která je uložena beze změny typu union sám dynamicky měnit. Proto můžete vytvořit heterogenní pole MyUnionType, jehož prvky uchovávat různé hodnoty různých typů.
+Samozřejmě předchozí příklad ukazuje problém, který lze také vyřešit pomocí tříd odvozených ze společné základní třídy a větvení kódu na základě typu modulu runtime každého objektu v kontejneru. Výsledkem může být kód, který usnadňuje údržbu a pochopení, ale může být také pomalejší než použití sjednocení. Pomocí sjednocení můžete také ukládat zcela nesouvisející typy a dynamicky měnit typ hodnoty, která je uložena bez změny typu proměnné sjednocení. Proto můžete vytvořit heterogenní pole MyUnionType, jehož prvky ukládají různé hodnoty různých typů.
 
-Všimněte si, že `Input` struktury v předchozím příkladu může být snadno chybná. Je zcela na uživateli umožňuje využít diskriminátor správně pro přístup k členu, který obsahuje data. Může chránit proti zneužití tím, že privátní sjednocení a poskytuje zvláštní přístup funguje, jak je znázorněno v následujícím příkladu.
+Všimněte si, `Input` že strukturu v předchozím příkladu je možné snadno použít. Pro přístup ke členu, který obsahuje data, je zcela na uživatele správně použit diskriminátor. Ochranu před zneužitím můžete zajistit tak, že vytvoříte soukromou unii a poskytnete speciální funkce přístupu, jak je znázorněno v následujícím příkladu.
 
-## <a name="unrestricted-unions-c11"></a>Neomezená sjednocení (C ++ 11)
+## <a name="unrestricted-unions-c11"></a>Neomezená sjednocení (C++ 11)
 
-V C ++ 03 a starší sjednocení může obsahovat nestatické datové členy typu třídy za předpokladu, typ nemá žádné uživatelem zadané konstruktory, destruktory ani operátory přiřazení. V C ++ 11 odeberou se tato omezení. Pokud zahrnete takový člen vaše sjednocení pak v kompilátoru automaticky označí jakékoli zvláštní členské funkce, které nejsou k dispozici jako odstraněný uživatel. Pokud sjednocení je anonymní sjednocení uvnitř třídy nebo struktury, jakékoli zvláštní členské funkce třídy nebo struktury, které nejsou poskytnutého uživatelem se označí jako odstraněný. Následující příklad ukazuje, jak zpracovat případy, kdy jeden z členů sjednocení má člena, který vyžaduje tento zvláštní zacházení:
+V jazyce C++ 03 a dříve může sjednocení obsahovat nestatické datové členy s typem třídy, pokud typ nemá žádné uživatelem poskytnuté konstruktory, destruktory nebo operátory přiřazení. V jazyce C++ 11 jsou tato omezení odebrána. Pokud zahrnete takového člena do vaší unie, kompilátor automaticky označí všechny zvláštní členské funkce, které nejsou zadány uživatelem jako odstraněné. Pokud je sjednocení anonymního sjednocení uvnitř třídy nebo struktury, pak jsou všechny zvláštní členské funkce třídy nebo struktury, které nejsou zadány uživatelem, označeny jako odstraněné. Následující příklad ukazuje, jak zpracovat případ, kdy jeden z členů sjednocení má člena, který vyžaduje Toto speciální zacházení:
 
 ```cpp
 // for MyVariant
@@ -601,7 +601,7 @@ private:
 };
 ```
 
-Sjednocení nemůže ukládat odkazy. Sjednocení nepodporují dědičnosti, proto samotné sjednocení nejde použít jako základní třídy dědit z jiné třídy nebo obsahovat virtuální funkce.
+Sjednocení nemůžou ukládat odkazy. Sjednocení nepodporují dědění, proto nejde samotného sjednocení použít jako základní třídu nebo dědit z jiné třídy nebo mít virtuální funkce.
 
 ## <a name="initializing-unions"></a>Inicializace sjednocení
 
@@ -633,24 +633,24 @@ int main()
 
 Sjednocení `NumericType` je v paměti uspořádáno (obecně) tak, jak ukazuje následující obrázek.
 
-![Ukládání dat ve sjednocení číselného typu](../cpp/media/vc38ul1.png "ukládání dat ve sjednocení NumericType") <br/>
+![Úložiště dat v rámci sjednocení číselného typu](../cpp/media/vc38ul1.png "Ukládání dat v NumericType sjednocení") <br/>
 Uložení dat ve sjednocení NumericType
 
-## <a name="anonymous_unions"></a> Anonymní sjednocení
+## <a name="anonymous_unions"></a>Anonymní sjednocení
 
-Anonymní sjednocení jsou sjednocení deklarovaná bez *název třídy* nebo *seznam deklarátorů*.
+Anonymní sjednocení jsou sjednocení, která jsou deklarována bez *názvu třídy* nebo *deklarátor-list*.
 
 ```cpp
 union  {  member-list  }
 ```
 
-Názvy deklarované v anonymním sjednocení se používají přímo jako nečlenské proměnné. Názvy deklarované v anonymních sjednoceních proto musí být jedinečný v okolním rozsahu.
+Názvy deklarované v anonymním sjednocení se používají přímo jako nečlenské proměnné. Proto názvy deklarované v anonymním sjednocení musí být v okolním oboru jedinečné.
 
-Kromě omezení pro pojmenované sjednocení anonymní sjednocení jsou v souladu s těmito dalšími omezeními:
+Kromě omezení pro pojmenovaná sjednocení se anonymním sjednocením vztahují tato další omezení:
 
-- Musí být také deklarovány jako **statické** při deklaraci v oboru souboru nebo oboru názvů.
+- Musí být také deklarovány jako **static** , pokud jsou deklarovány v oboru názvů File nebo Namespace.
 
-- Může mít pouze **veřejné** členy. **privátní** a **chráněné** členy v anonymních sjednoceních generují chyby.
+- Můžou mít jenom **veřejné** členy; **soukromé** a **chráněné** členy v anonymních sjednoceních generují chyby.
 
 - Nemohou mít členské funkce.
 
