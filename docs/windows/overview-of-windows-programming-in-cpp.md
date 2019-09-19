@@ -1,13 +1,13 @@
 ---
 title: Přehled programování v C++ v systému Windows
-ms.date: 07/28/2019
+ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514804"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127184"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -17,7 +17,7 @@ Tato část popisuje, jak pomocí sady Visual Studio a knihoven wrapper knihovny
 
 ## <a name="command-line-console-applications"></a>Aplikace příkazového řádku (konzoly)
 
-C++konzolové aplikace jsou spouštěny z příkazového řádku v okně konzoly a mohou zobrazovat pouze výstupy textu. Další informace najdete v tématu [konzolové aplikace](console-applications-in-visual-cpp.md).
+C++konzolové aplikace jsou spouštěny z příkazového řádku v okně konzoly a mohou zobrazovat pouze výstupy textu. Další informace najdete v tématu [Vytvoření projektu C++ konzolové aplikace](../get-started/tutorial-console-cpp.md).
 
 ## <a name="native-desktop-client-applications"></a>Nativní klientské aplikace pro stolní počítače
 

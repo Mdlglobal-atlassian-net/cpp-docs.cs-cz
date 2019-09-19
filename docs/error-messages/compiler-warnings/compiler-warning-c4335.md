@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
-ms.openlocfilehash: 43c2f5d9092cdbad14e429349bd7d04e236b75e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d44a1ae5354e8d22e41694f4d6df42ad22c3986d
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151848"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127168"
 ---
 # <a name="compiler-warning-c4335"></a>Upozornění kompilátoru C4335
 
-Zjistil se formát souborů Mac: převeďte prosím zdrojový soubor do formátu DOS nebo UNIX
+Zjistil se formát souboru Mac: Převeďte prosím zdrojový soubor na formát DOS nebo UNIX.
 
-Znak ukončení řádku prvního řádku zdrojového souboru je styl Macintosh ('\r;) na rozdíl od systému UNIX ('\n') nebo DOS ("\r\n").
+Znak ukončení řádku prvního řádku zdrojového souboru je stylem Macintosh ("\r") na rozdíl od UNIXu (\n) nebo DOS ("\r\n").
 
-Toto upozornění je vždy vyvoláno jako chyby.  Zobrazit [upozornění](../../preprocessor/warning.md) direktivu pragma pro informace o tom, jak toto upozornění vypněte.  Navíc se objeví toto upozornění pouze jednou za kompilace. Proto pokud existuje více `#include` direktivy, které určují soubory ve formátu Macintosh C4335 se vystavit pouze jednou.
+Toto upozornění je vždy vyvoláno jako chyba.  Informace o tom, jak toto upozornění zakázat, naleznete v tématu [Upozornění](../../preprocessor/warning.md) pragma.  Toto upozornění je také vydáváno pouze jednou za kompilantu. Proto pokud existuje více `#include` direktiv, které určují soubory ve formátu počítače Macintosh, C4335 se vydá jenom jednou.
 
-Jeden způsob, jak vygenerovat soubory ve formátu Macintosh je použít **pokročilé nastavení uložení** (na **souboru** nabídky) v sadě Visual Studio.
+Jedním ze způsobů, jak generovat soubory ve formátu systému Macintosh, je použití **možností upřesnění Uložit** (v nabídce **soubor** ) v aplikaci Visual Studio.
 
 ## <a name="example"></a>Příklad
 

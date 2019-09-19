@@ -1,21 +1,21 @@
 ---
 title: 'Postupy: Vytváření a používání instancí weak_ptr'
 ms.custom: how-to
-ms.date: 07/12/2018
+ms.date: 09/18/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 63eed40117d1a79c69bd05e5bd1503d4222f556d
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e5d1b13d894a617ca514e26f14fde3f514540d34
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787078"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127182"
 ---
 # <a name="how-to-create-and-use-weak_ptr-instances"></a>Postupy: Vytváření a používání instancí weak_ptr
 
 V některých případech musí objekt ukládat způsob, jak přistupovat k základnímu objektu `shared_ptr` a bez toho, aby bylo možné zvýšit počet odkazů. K této situaci obvykle dochází, když máte cyklické odkazy mezi `shared_ptr` instancemi.
 
-Nejlepším návrhem je vyhnout se sdílenému vlastnictví ukazatelů, kdykoli můžete. Pokud však musíte mít sdílené vlastnictví `shared_ptr` instancí, vyhněte se cyklickým odkazům mezi nimi. Pokud jsou cyklické odkazy nenevyhnutelné nebo dokonce vhodnější z nějakého důvodu, použijte `weak_ptr` k tomu, aby jeden nebo více vlastníků poskytoval slabý odkaz na jiný. `shared_ptr` Pomocí nástroje `weak_ptr`můžete `shared_ptr` vytvořit spojení s existující sadou souvisejících instancí, ale pouze pokud je základní paměťový prostředek stále platný. Sám `weak_ptr` o sobě se neúčastní počítání odkazů, a proto nemůže zabránit tomu, aby se počet odkazů přečetl na nulu. Můžete však použít `weak_ptr` k pokusu o získání nové kopie, `shared_ptr` pomocí které byla inicializována. Pokud je paměť již odstraněna, `bad_weak_ptr` je vyvolána výjimka. Pokud je paměť stále platná, nový sdílený ukazatel zvýší počet odkazů a zaručí, že paměť bude platná, dokud `shared_ptr` proměnná zůstane v oboru.
+Nejlepším návrhem je vyhnout se sdílenému vlastnictví ukazatelů, kdykoli můžete. Pokud však musíte mít sdílené vlastnictví `shared_ptr` instancí, vyhněte se cyklickým odkazům mezi nimi. Pokud jsou cyklické odkazy nenevyhnutelné nebo dokonce vhodnější z nějakého důvodu, použijte `weak_ptr` k tomu, aby jeden nebo více vlastníků poskytoval slabý odkaz na jiný. `shared_ptr` Pomocí nástroje `weak_ptr`můžete `shared_ptr` vytvořit spojení s existující sadou souvisejících instancí, ale pouze pokud je základní paměťový prostředek stále platný. Sám `weak_ptr` o sobě se neúčastní počítání odkazů, a proto nemůže zabránit tomu, aby se počet odkazů přečetl na nulu. Můžete však použít `weak_ptr` k pokusu o získání nové kopie, `shared_ptr` pomocí které byla inicializována. Pokud je paměť již odstraněna, vrátí `weak_ptr` `false`se operátor bool. Pokud je paměť stále platná, nový sdílený ukazatel zvýší počet odkazů a zaručí, že paměť bude platná, dokud `shared_ptr` proměnná zůstane v oboru.
 
 ## <a name="example"></a>Příklad
 

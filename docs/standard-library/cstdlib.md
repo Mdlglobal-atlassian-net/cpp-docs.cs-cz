@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-ms.openlocfilehash: 298d6a512b2863a326bda0670f33fe8f1bda0688
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0b4f24f50c78d9a079e2c7d0c8e3d3c5bfe952c2
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449399"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127219"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 
@@ -98,7 +98,7 @@ Nula, pokud je registrace úspěšná, nenulová, pokud selže.
 
 #### <a name="remarks"></a>Poznámky
 
-Funkce registrují funkci, na kterou odkazuje funkce *Func* na volání bez argumentů, pokud `quick_exit` je volána metoda. `at_quick_exit()` Není určeno, zda volání, ke `at_quick_exit()` kterému dojde, před všemi `quick_exit` voláními budou úspěšná a `at_quick_exit()` funkce nezavádí data rasy. Pořadí registrace může být neurčité, `at_quick_exit` Pokud bylo voláno z více než jednoho vlákna `at_quick_exit` a vzhledem k `atexit` tomu, že registrace se liší od registrací, aplikace mohou vyžadovat volání registračních funkcí s stejný argument. Implementace musí podporovat registraci alespoň 32 funkcí.
+Funkce registruje funkci *Func*, která je volána bez argumentů při `quick_exit` volání metody. `at_quick_exit()` Volání `at_quick_exit()` , které se nestane, se `quick_exit` nemusí zdařit, dokud nebudou všechna volání úspěšná. `at_quick_exit()` Funkce nezavádí data rasy. Pořadí registrace může být neurčitelné, `at_quick_exit` Pokud bylo voláno z více než jednoho vlákna. Vzhledem `at_quick_exit` k tomu, že registrace `atexit` se liší od registrací, aplikace mohou vyžadovat volání registračních funkcí pomocí stejného argumentu. MSVC podporuje registraci alespoň 32 funkcí.
 
 ### <a name="atexit"></a>atexit
 
@@ -109,7 +109,7 @@ int atexit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>Poznámky
 
-Funkce registrují funkci, na kterou odkazuje funkce Func na volání bez argumentů při normálním ukončení programu.  `atexit()` Není určeno, zda volání `atexit()` , které neproběhne před `exit()` voláním, bude úspěšné a `atexit()` funkce nezavádí data rasy. Implementace musí podporovat registraci alespoň 32 funkcí.
+Funkce registrují funkci, na kterou odkazuje funkce Func na volání bez argumentů při normálním ukončení programu. `atexit()` Volání `atexit()` , které neproběhne před `exit()` voláním, nemusí být úspěšné. `atexit()` Funkce nezavádí data rasy.
 
 #### <a name="return-value"></a>Návratová hodnota
 
@@ -125,11 +125,11 @@ Vrátí hodnotu nula, pokud je registrace úspěšná, nenulová, pokud selže.
 
 Nejprve objekty s dobou trvání úložiště vlákna a související s aktuálním vláknem jsou zničeny.
 
-Dále objekty s trváním statického úložiště jsou zničeny a jsou volány funkce zaregistrované voláním `atexit` . Automatické objekty nejsou zničeny v důsledku volání `exit()`. Pokud ovládací prvek opustí registrovanou funkci volanou `exit` , protože funkce neposkytuje obslužnou rutinu pro vyvolanou `std::terminate()` výjimku, musí být volána. Funkce je volána pro pokaždé, když je zaregistrována. Objekty s automatickým trváním úložiště jsou zničeny v programu, jehož funkce main neobsahuje žádné automatické objekty a provádí volání `exit()`. Ovládací prvek lze přenést přímo do takové hlavní funkce vyvoláním výjimky, která je zachycena v Main.
+Dále objekty s trváním statického úložiště jsou zničeny a jsou volány funkce zaregistrované voláním `atexit` . Automatické objekty nejsou při `exit()` volání zničeny. Pokud ovládací prvek opustí registrovanou funkci volanou `exit` v důsledku toho, že funkce neposkytne obslužnou rutinu pro `std::terminate()` vyvolanou výjimku, je volána. Funkce se volá jednou pro každé zaregistrování. Objekty s automatickým trváním úložiště jsou zničeny v programu `main` , jehož funkce neobsahuje žádné automatické objekty a provádí `exit()`volání. Ovládací prvek lze přenést přímo do takové `main` funkce vyvoláním výjimky, která je zachycena v. `main`
 
-V dalším kroku jsou vyprázdněny všechny otevřené datové proudy jazyka c (jak jsou <cstdio>vyvolány signaturami funkcí deklarovanými v) s nezapsanými daty uloženými v bufferu, všechny otevřené datové `tmpfile()` proudy c jsou uzavřeny a všechny soubory vytvořené voláním budou odebrány.
+V dalším kroku jsou všechny otevřené datové proudy jazyka c (jak jsou vyvolány signatury funkce deklarované v \<cstdio >) s nezapsanými daty uloženými do vyrovnávací paměti vyprázdněny, všechny otevřené datové proudy jazyka c jsou uzavřeny a všechny soubory vytvořené voláním `tmpfile()` budou odebrány.
 
-Nakonec je ovládací prvek vrácen do hostitelského prostředí. Pokud je stav nula nebo EXIT_SUCCESS, je vrácena implementace definovaná formou úspěšného ukončení stavu. Je-li stav EXIT_FAILURE, je vrácena uživatelsky definovaná forma stavu neúspěšného ukončení. V opačném případě je vrácený stav definovaný jako implementace.
+Nakonec je ovládací prvek vrácen do hostitelského prostředí. Pokud je *stav* nula nebo EXIT_SUCCESS, je vrácena implementace definovaná formou úspěšného ukončení stavu. MSVC vrací hodnotu nula. Pokud je *stav* EXIT_FAILURE, MSVC vrátí hodnotu 3. V opačném případě MSVC vrátí hodnotu parametru *status* .
 
 ### <a name="getenv"></a>getenv
 
@@ -145,7 +145,7 @@ char* getenv(const char* name);
 
 #### <a name="remarks"></a>Poznámky
 
-Funkce registrované voláními `at_quick_exit` jsou volány v opačném pořadí registrace, s tím rozdílem, že funkce musí být volána po dříve registrovaných funkcích, které již byly volány v době, kdy byla zaregistrována. Objekty nesmí být zničeny v důsledku volání `quick_exit`. Pokud ovládací prvek opustí registrovanou funkci volanou `quick_exit` , protože funkce neposkytuje obslužnou rutinu pro vyvolanou `std::terminate()` výjimku, musí být volána. Funkce, která je `at_quick_exit` zaregistrována prostřednictvím, je vyvolána `quick_exit`vláknem, který volá, což může být jiné vlákno než ta, která je zaregistrována, takže registrované funkce by neměly spoléhat na identitu objektů s dobou trvání úložiště vlákna. Po volání zaregistrovaných `quick_exit` funkcí se `_Exit(status)`zavolá. Standardní vyrovnávací paměti souborů nejsou vyprázdněny. Funkce `quick_exit` je bezpečná pro signál, pokud jsou funkce zaregistrované v `at_quick_exit` .
+Obecně `at_quick_exit` jsou funkce registrované voláními volány v obráceném pořadí jejich registrace. Toto pořadí se nevztahuje na funkce zaregistrované po volání jiných registrovaných funkcí. Po `quick_exit` volání nejsou zničeny žádné objekty. Pokud ovládací prvek opustí registrovanou funkci volanou `quick_exit` v důsledku toho, že funkce neposkytne obslužnou rutinu pro `std::terminate()` vyvolanou výjimku, je volána. Funkce, která je `at_quick_exit` zaregistrována prostřednictvím, je vyvolána `quick_exit`vláknem, který volá, což může být jiné vlákno než ta, která ho zaregistrovala. To znamená, že registrované funkce by neměly spoléhat na identitu objektů, které mají dobu trvání úložiště vlákna. Po volání registrovaných funkcí `quick_exit` , `_Exit(status)`volání. Standardní vyrovnávací paměti souborů nejsou vyprázdněny. Funkce `quick_exit` je bezpečná pro signál, pokud jsou funkce zaregistrované v `at_quick_exit` .
 
 ### <a name="system"></a>souborů
 
@@ -156,11 +156,20 @@ int system(const char* string);
 ## <a name="memory-allocation-functions"></a>Funkce přidělování paměti
 
 ```cpp
-void* aligned_alloc(size_t alignment, size_t size);
+// void* aligned_alloc(size_t alignment, size_t size); // Unsupported in MSVC
 void* calloc(size_t nmemb, size_t size);
 void free(void* ptr);
 void* malloc(size_t size);
 void* realloc(void* ptr, size_t size);
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tyto funkce mají sémantiku určenou ve standardní knihovně jazyka C. MSVC nepodporuje `aligned_alloc` funkci. C11 určený `aligned_alloc()` způsobem, který je nekompatibilní s `free()`implementací Microsoft, konkrétně, která `free()` musí být schopná zvládnout vysoce zarovnané přidělení.
+
+## <a name="numeric-string-conversions"></a>Převody číselných řetězců
+
+```cpp
 double atof(const char* nptr);
 int atoi(const char* nptr);
 long int atol(const char* nptr);
@@ -174,11 +183,11 @@ unsigned long int strtoul(const char* nptr, char** endptr, int base);
 unsigned long long int strtoull(const char* nptr, char** endptr, int base);
 ```
 
-#### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>Poznámky
 
 Tyto funkce mají sémantiku určenou ve standardní knihovně jazyka C.
 
-##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>Vícebajtové a velké řetězcové funkce a funkce pro převod znaků
+## <a name="multibyte--wide-string-and-character-conversion-functions"></a>Vícebajtové a velké řetězcové funkce a funkce pro převod znaků
 
 ```cpp
 int mblen(const char* s, size_t n);
@@ -227,6 +236,15 @@ double abs(double j);
 long double abs(long double j);
 long int labs(long int j);
 long long int llabs(long long int j);
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tyto funkce mají sémantiku určenou ve standardní knihovně jazyka C.
+
+## <a name="integer-division"></a>Dělení celého čísla
+
+```cpp
 div_t div(int numer, int denom);
 ldiv_t div(long int numer, long int denom);
 lldiv_t div(long long int numer, long long int denom);
@@ -237,17 +255,6 @@ lldiv_t lldiv(long long int numer, long long int denom);
 ### <a name="remarks"></a>Poznámky
 
 Tyto funkce mají sémantiku určenou ve standardní knihovně jazyka C.
-
-## <a name="functions"></a>Funkce
-
-```cpp
-void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
-c-compare-pred * compar);
-void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
-compare-pred * compar);
-void qsort(void* base, size_t nmemb, size_t size, c-compare-pred * compar);
-void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
-```
 
 ## <a name="see-also"></a>Viz také:
 
