@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907664"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095873"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Přidání popisovače zpráv knihovny MFC
 
-Můžete použít [Průvodce třídou](mfc-class-wizard.md) nebo okno **vlastnosti** v **zobrazení tříd** pro přidání obslužné rutiny zpráv (členská funkce, která zpracovává zprávy systému Windows) ke třídě a mapování zpráv systému Windows k obslužné rutině zprávy. Můžete také přidat [obslužnou rutinu události pro jakýkoli ovládací prvek dialogového okna](../../windows/adding-event-handlers-for-dialog-box-controls.md). 
+Můžete použít [Průvodce třídou](mfc-class-wizard.md) nebo okno **vlastnosti** v **zobrazení tříd** pro přidání obslužné rutiny zpráv (členská funkce, která zpracovává zprávy systému Windows) ke třídě a mapování zpráv systému Windows k obslužné rutině zprávy. Můžete také přidat [obslužnou rutinu události pro jakýkoli ovládací prvek dialogového okna](../../windows/adding-event-handlers-for-dialog-box-controls.md).
 
 Pomocí **Průvodce třídou** nebo okna **vlastností** (v **zobrazení tříd**) k definování funkcí pro zpracování událostí a zpráv můžete automaticky aktualizovat tabulku pro odeslání zprávy (nebo mapu zpráv) a soubor hlaviček vaší třídy.
 

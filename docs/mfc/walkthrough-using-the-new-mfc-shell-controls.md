@@ -4,12 +4,12 @@ ms.date: 04/25/2019
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: cf0a6bd230364b48c78c72b8e453e7e641fb2d0e
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e371368d4e588de5f94f6a252c6db291ec851e0a
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907411"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096007"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Návod: Použití nových ovládacích prvků prostředí MFC
 
@@ -31,14 +31,14 @@ Tyto kroky se liší v závislosti na verzi sady Visual Studio, kterou použív�
 
 1. V hlavní nabídce vyberte **soubor** > **Nový** > **projekt** a otevřete tak dialogové okno **vytvořit nový projekt** .
 
-1. Do vyhledávacího pole v horní části zadejte **MFC** a pak zvolte **aplikace MFC** ze seznamu výsledků. 
+1. Do vyhledávacího pole v horní části zadejte **MFC** a pak zvolte **aplikace MFC** ze seznamu výsledků.
 
 1. Klikněte na **Další**. Na další stránce zadejte název projektu a v případě potřeby zadejte umístění projektu.
 
 1. Kliknutím na tlačítko **vytvořit** vytvořte projekt.
 
    Po zobrazení **Průvodce aplikací knihovny MFC** použijte následující možnosti:
- 
+
    1. Na levé straně vyberte **Typ aplikace** . Pak vyberte možnost **jednotlivý dokument** a vyberte možnost **dokument/zobrazit podporu architektury**. V nabídce **styl projektu**vyberte možnost **Visual Studio**a v rozevíracím seznamu **vizuální styl a barvy** vyberte možnost **Office 2007 (modrý motiv)** .
 
    1. V podokně **Podpora složeného dokumentu** vyberte **None (žádné**).
@@ -59,7 +59,7 @@ Tyto kroky se liší v závislosti na verzi sady Visual Studio, kterou použív�
 
 1. Použijte **Průvodce aplikací knihovny MFC** k vytvoření nové aplikace MFC. Chcete-li spustit průvodce, klikněte v nabídce **soubor** na příkaz **Nový**a vyberte možnost **projekt**. Zobrazí se dialogové okno **Nový projekt** .
 
-1. V dialogovém okně **Nový projekt** rozbalte uzel **vizuál C++**  v podokně **typy projektů** a vyberte položku **MFC**. Poté v podokně **šablony** vyberte možnost **aplikace MFC**. Zadejte název projektu, například `MFCShellControls` a klikněte na tlačítko **OK**. 
+1. V dialogovém okně **Nový projekt** rozbalte uzel **vizuál C++**  v podokně **typy projektů** a vyberte položku **MFC**. Poté v podokně **šablony** vyberte možnost **aplikace MFC**. Zadejte název projektu, například `MFCShellControls` a klikněte na tlačítko **OK**.
 
    Po zobrazení **Průvodce aplikací knihovny MFC** použijte následující možnosti:
 
@@ -202,7 +202,7 @@ Průvodce automaticky vytvoří aplikaci, která má standardní panel nabídek,
 
    Pravým tlačítkem myši klikněte na libovolnou položku v ovládacím prvku stromu nebo v ovládacím prvku seznam. Dostanete stejnou kontextovou nabídku jako v případě, že jste používali skutečný **Průzkumník souborů**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Průvodce vytvořil panel Outlooku v podokně **složky** i v podokně **kalendáře** . Pravděpodobně nemá smysl mít podokno **kalendáře** v okně **Průzkumníka** , proto toto podokno teď odeberte.
 

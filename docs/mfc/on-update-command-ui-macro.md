@@ -9,16 +9,16 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-ms.openlocfilehash: 467e130f3e6518cc4ec554f6574fb9fcbabaf1f3
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 2a3f097a44e96fc470719ce636cc1b73e676fb38
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907944"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095838"
 ---
 # <a name="on_update_command_ui-macro"></a>ON_UPDATE_COMMAND_UI – makro
 
-Chcete-li připojit objekt uživatelského rozhraní k obslužné rutině aktualizace příkazu v objektu Target příkazu, otevřete **zobrazení tříd**, klikněte pravým tlačítkem na třídu, do které bude obslužná rutina přidána, a zvolte možnost **Průvodce třídou**. V seznamu na levé straně Najděte ID objektu uživatelského rozhraní a v pravém podokně zvolte **UPDATE_COMMAND_UI** a klikněte na **Přidat obslužnou rutinu**. Tím se ve třídě vytvoří funkce obslužné rutiny a přidá odpovídající položku v mapě zpráv. Další informace najdete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md) . V podokně **zprávy** můžete určit další zprávy, které se mají zpracovat. 
+Chcete-li připojit objekt uživatelského rozhraní k obslužné rutině aktualizace příkazu v objektu Target příkazu, otevřete **zobrazení tříd**, klikněte pravým tlačítkem na třídu, do které bude obslužná rutina přidána, a zvolte možnost **Průvodce třídou**. V seznamu na levé straně Najděte ID objektu uživatelského rozhraní a v pravém podokně zvolte **UPDATE_COMMAND_UI** a klikněte na **Přidat obslužnou rutinu**. Tím se ve třídě vytvoří funkce obslužné rutiny a přidá odpovídající položku v mapě zpráv. Další informace najdete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md) . V podokně **zprávy** můžete určit další zprávy, které se mají zpracovat.
 
 Například chcete-li aktualizovat příkaz Zrušit vše v nabídce úprav programu, použijte **Průvodce třídou** k přidání položky mapování zpráv do vybrané třídy, deklarace funkce pro obslužnou rutinu aktualizace příkazu volanou `OnUpdateEditClearAll` v deklaraci třídy a prázdné Šablona funkce v implementačním souboru třídy Prototyp funkce vypadá takto:
 

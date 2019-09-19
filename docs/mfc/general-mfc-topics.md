@@ -1,29 +1,29 @@
 ---
 title: Obecná témata MFC
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f4c75e3f8bd8f7d32109cf92465dfa6e5aba6ed
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219727"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095863"
 ---
 # <a name="general-mfc-topics"></a>Obecná témata MFC
 
 Tato řada článků obsahuje technické podrobnosti o knihovně Microsoft Foundation Class (MFC) a poskytuje přehled rozhraní MFC a jeho klíčových komponent a podsystémů.
 
-Knihovna Microsoft Foundation Class je aplikační rozhraní pro programování v systému Microsoft Windows. Je napsána v jazyce C++ a poskytuje většinu kódu potřebného pro správu oken, nabídek a dialogů, provádění základních vstupně-výstupních operací, ukládání kolekcí datových objektů apod. Stačí do tohoto rozhraní pouze přidat kód specifický pro aplikaci. Vzhledem k povaze programování tříd jazyka C++, je snadné rozšířit nebo přepsat základní funkce, která [rozhraní MFC](../mfc/framework-mfc.md) poskytuje.
+Knihovna Microsoft Foundation Class je aplikační rozhraní pro programování v systému Microsoft Windows. Je napsána v jazyce C++ a poskytuje většinu kódu potřebného pro správu oken, nabídek a dialogů, provádění základních vstupně-výstupních operací, ukládání kolekcí datových objektů apod. Stačí do tohoto rozhraní pouze přidat kód specifický pro aplikaci. Vzhledem k povaze C++ programování tříd je snadné roztáhnout nebo přepsat základní funkce, které poskytuje [rozhraní knihovny MFC](../mfc/framework-mfc.md) .
 
-Rozhraní MFC je přístupem, který umožňuje využít jako základ práci odborných programátorů pro systém Windows. Rozhraní MFC zkracuje dobu vývoje, činí kód přenosnějším, poskytuje obrovskou podporu bez snížení svobody a flexibility programování a poskytuje snadný přístup k prvkům a technologiím uživatelského rozhraní, které je obtížné naprogramovat, například technologii Active, OLE či internetovému programování. Kromě toho rozhraní MFC zjednodušuje programování databází pomocí objektů DAO (Data Access Objects) a rozhraní ODBC (Open Database Connectivity) a síťové programování pomocí rozhraní Windows Sockets. Rozhraní MFC usnadňuje programování funkcí jako seznam vlastností („kartové dialogy“), náhled tisku či plovoucí přizpůsobitelné panely nástrojů.
+Rozhraní MFC je přístupem, který umožňuje využít jako základ práci odborných programátorů pro systém Windows. Rozhraní MFC zkracuje dobu vývoje, činí kód přenosnějším, poskytuje obrovskou podporu bez snížení svobody a flexibility programování a poskytuje snadný přístup k prvkům a technologiím uživatelského rozhraní, které je obtížné naprogramovat, například technologii Active, OLE či internetovému programování. Kromě toho knihovna MFC zjednodušuje programování databáze prostřednictvím objektů DAO (nyní zastaralých) a rozhraní ODBC (Open Database Connectivity) a síťového programování prostřednictvím rozhraní Windows Sockets. Rozhraní MFC usnadňuje programování funkcí jako seznam vlastností („kartové dialogy“), náhled tisku či plovoucí přizpůsobitelné panely nástrojů.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-`MFC Samples`, které jsou dodávány v [Visual C++ – ukázky](../overview/visual-cpp-samples.md)
+`MFC Samples`, které jsou zadány [v C++ vizuálních ukázkách](../overview/visual-cpp-samples.md)
 
 [Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)
 
@@ -33,7 +33,7 @@ Rozhraní MFC je přístupem, který umožňuje využít jako základ práci odb
 
 [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)
 
-[CWinApp Třída aplikace](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Třída aplikace](../mfc/cwinapp-the-application-class.md)
 
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -51,9 +51,9 @@ Rozhraní MFC je přístupem, který umožňuje využít jako základ práci odb
 
 [Dynamické rozložení](../mfc/dynamic-layout.md)
 
-Přehled referenční dokumentace knihovny MFC, naleznete v tématu [knihovny Microsoft Foundation Class](../mfc/mfc-desktop-applications.md).
+Přehled Referenční dokumentace knihovny MFC naleznete v tématu [Knihovna Microsoft Foundation Class](../mfc/mfc-desktop-applications.md).
 
-Informace o poskytovateli ATL naleznete v tématu [referenční dokumentace ke knihovně Active šablony](../atl/atl-class-overview.md).
+Informace o knihovně ATL naleznete v tématu [Reference knihovny Active Template Library](../atl/atl-class-overview.md).
 
 ## <a name="see-also"></a>Viz také:
 

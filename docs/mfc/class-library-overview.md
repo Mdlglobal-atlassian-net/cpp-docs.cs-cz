@@ -1,6 +1,6 @@
 ---
 title: Přehled knihovny tříd
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.mfc
 helpviewer_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23097c0bf3399a4dced6640f41c0d46dba101b26
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327311"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095944"
 ---
 # <a name="class-library-overview"></a>Přehled knihovny tříd
 
-Tento přehled rozděluje a popisuje třídy v třídy knihovny MFC (Microsoft Foundation) verze 9.0. Třídy v MFC dohromady, tvoří aplikační architekturu – rámec aplikace napsaný pro rozhraní API Windows. Úlohou programování je vyplnit kód, který je specifický pro aplikaci.
+Tento přehled rozděluje a popisuje třídy v knihovna Microsoft Foundation Class (MFC) verze 9,0. Třídy v knihovně MFC společně tvoří rozhraní aplikace – rozhraní napsané pro rozhraní API systému Windows. Úkolem programování je vyplnit kód, který je specifický pro vaši aplikaci.
 
-Třídy knihovny jsou uvedeny zde v následujících kategoriích:
+Třídy knihovny jsou zde uvedeny v následujících kategoriích:
 
-- [Kořenová třída: Třídy CObject](../mfc/root-class-cobject.md)
+- [Kořenová třída: CObject](../mfc/root-class-cobject.md)
 
 - [Třídy architektury aplikace MFC](../mfc/mfc-application-architecture-classes.md)
 
@@ -109,13 +109,13 @@ Třídy knihovny jsou uvedeny zde v následujících kategoriích:
 
    - [Třídy výjimek](../mfc/exception-classes.md)
 
-V části [obecná filozofie návrhu třídy](../mfc/general-class-design-philosophy.md) vysvětluje, jak byla navržena knihovna MFC.
+Oddíl [Obecné třídy návrhu filozofie](../mfc/general-class-design-philosophy.md) vysvětluje, jak byla navržena knihovna MFC.
 
-Přehled architektury, najdete v tématu [použití tříd pro zápis aplikace pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Některé z tříd uvedených výše jsou univerzální třídy, které mohou být použity mimo rámec a poskytují užitečné abstrakce, jako jsou kolekce, výjimky, soubory a řetězce.
+Přehled rozhraní najdete v tématu [použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Některé ze tříd uvedených výše jsou obecné třídy, které lze použít mimo rámec rozhraní a poskytují užitečné abstrakce, jako jsou kolekce, výjimky, soubory a řetězce.
 
-Dědičnost třídy zobrazíte pomocí [grafu hierarchie třídy](../mfc/hierarchy-chart.md).
+Chcete-li zobrazit dědičnost třídy, použijte [graf hierarchie tříd](../mfc/hierarchy-chart.md).
 
-Kromě tříd uvedených v tomto přehledu knihovna MFC obsahuje počet globálních funkcí, globálních proměnných a maker. Přehled a podrobné zobrazení těchto v tomto tématu je [v makrech MFC a Globals](../mfc/reference/mfc-macros-and-globals.md), který následuje poskytuje abecední reference k třídám MFC.
+Kromě tříd uvedených v tomto přehledu knihovna MFC obsahuje řadu globálních funkcí, globálních proměnných a maker. K dispozici je přehled a podrobný seznam těchto témat v tématech [MFC makra a Globals](../mfc/reference/mfc-macros-and-globals.md), který následuje Abecední odkaz na třídy knihovny MFC.
 
 ## <a name="see-also"></a>Viz také:
 

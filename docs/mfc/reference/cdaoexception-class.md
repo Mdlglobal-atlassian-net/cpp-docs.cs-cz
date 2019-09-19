@@ -1,6 +1,6 @@
 ---
 title: CDaoException – třída
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoException
 - AFXDAO/CDaoException
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: e5f28b8896fc9e7e5c6a656a64b938cd7af39f42
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 262c9b75771611dc04938fa5d9f58c3f7e5fc2ef
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507066"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096135"
 ---
 # <a name="cdaoexception-class"></a>CDaoException – třída
 
 Představuje podmínku výjimky vyplývající z databázových tříd knihovny MFC založených na objektech DAO (Data Access Objects).
+Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -105,7 +106,7 @@ Nicméně můžete chtít explicitně vytvořit objekt výjimky, pokud provádí
 
 1. Voláním členské funkce [GetErrorCount](#geterrorcount) objektu výjimky určíte, kolik objektů chyby je v kolekci chyb databázového stroje. (Obvykle pouze jeden, pokud nepoužíváte zdroj dat ODBC.)
 
-1. Volání členské funkce GetErrorInfo [](#geterrorinfo) objektu výjimky pro načtení jednoho konkrétního objektu chyby v čase, index v kolekci, prostřednictvím objektu výjimky. Objekt výjimky si popřemýšlejte jako proxy pro jeden objekt Error objektu DAO.
+1. Volání členské funkce [GetErrorInfo](#geterrorinfo) objektu výjimky pro načtení jednoho konkrétního objektu chyby v čase, index v kolekci, prostřednictvím objektu výjimky. Objekt výjimky si popřemýšlejte jako proxy pro jeden objekt Error objektu DAO.
 
 1. Prověřte aktuální strukturu [CDaoErrorInfo –](../../mfc/reference/cdaoerrorinfo-structure.md) , `GetErrorInfo` která se vrací v datovém členu [m_pErrorInfo](#m_perrorinfo) . Jeho členové poskytují informace o chybě rozhraní DAO.
 
@@ -129,7 +130,7 @@ Počet objektů chyb DAO v kolekci chyb databázového stroje.
 
 ### <a name="remarks"></a>Poznámky
 
-Tyto informace jsou užitečné k tomu, aby se v kolekci chyb přečetly všechny objekty chyb DAO v kolekci. Chcete-li načíst chybový objekt podle indexu nebo čísla chyby DAO, zavolejte členskou [](#geterrorinfo) funkci GetErrorInfo.
+Tyto informace jsou užitečné k tomu, aby se v kolekci chyb přečetly všechny objekty chyb DAO v kolekci. Chcete-li načíst chybový objekt podle indexu nebo čísla chyby DAO, zavolejte členskou funkci [GetErrorInfo](#geterrorinfo) .
 
 > [!NOTE]
 >  V kolekci chyb obvykle existuje pouze jeden objekt Error. Pokud pracujete se zdrojem dat ODBC, může se jednat o více než jeden.
@@ -185,7 +186,7 @@ Možné hodnoty jsou:
 
 ##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo
 
-Obsahuje ukazatel na `CDaoErrorInfo` strukturu, která poskytuje informace o objektu chyby DAO, který jste naposledy načetli voláním metody GetErrorInfo. [](#geterrorinfo)
+Obsahuje ukazatel na `CDaoErrorInfo` strukturu, která poskytuje informace o objektu chyby DAO, který jste naposledy načetli voláním metody [GetErrorInfo](#geterrorinfo).
 
 ### <a name="remarks"></a>Poznámky
 

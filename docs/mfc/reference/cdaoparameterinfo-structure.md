@@ -1,22 +1,24 @@
 ---
 title: CDaoParameterInfo – struktura
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoParameterInfo
 helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 62addd44f8aa8fceafef6a27244994a2ec6b766b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f0ee7ebe1d5d4eff50194c2d5c5cccf8f373c61
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399782"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096081"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo – struktura
 
-`CDaoParameterInfo` Struktura obsahuje informace o parametru objekt definovaný pro datový přístup k objektům (DAO).
+`CDaoParameterInfo` Struktura obsahuje informace o objektu parametru definovaném pro objekty DAO (Data Access Objects).
+Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
+
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,30 +34,30 @@ struct CDaoParameterInfo
 #### <a name="parameters"></a>Parametry
 
 *m_strName*<br/>
-Jedinečné názvy parametrem objektu. Další informace naleznete v tématu "Název vlastnosti" v nápovědě k DAO.
+Jedinečně pojmenuje objekt parametru. Další informace najdete v nápovědě k rozhraní DAO v tématu "vlastnost názvu".
 
 *m_nType*<br/>
-Hodnota, která určuje datový typ parametru objektu. Seznam možných hodnot najdete v tématu *m_nType* člena [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktury. Další informace naleznete v tématu "Vlastnost typu" v nápovědě k DAO.
+Hodnota, která určuje datový typ objektu parametru. Seznam možných hodnot naleznete v tématu *m_nType* člen struktury [CDaoFieldInfo –](../../mfc/reference/cdaofieldinfo-structure.md) . Další informace naleznete v nápovědě k rozhraní DAO v tématu "vlastnost typu".
 
 *m_varValue*<br/>
-Hodnota parametru uložené v [COleVariant](../../mfc/reference/colevariant-class.md) objektu.
+Hodnota parametru uložená v objektu [COleVariant](../../mfc/reference/colevariant-class.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Odkazy na primární a sekundární výše určit, jak vrácené informace [getparameterinfo –](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) členské funkce ve třídě `CDaoQueryDef`.
+Odkazy na primární a sekundární výše označují, jak jsou informace vráceny členskou funkcí [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) ve třídě `CDaoQueryDef`.
 
-Knihovny MFC nejsou zapouzdření rozhraní DAO parametr objekty ve třídě. Objekty základní knihovny MFC rozhraní DAO querydef `CDaoQueryDef` objekty uložit parametry do kolekce jejich parametry. Pro přístup k objektům parametr v [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md) objektu, volání objektu querydef `GetParameterInfo` členskou funkci pro konkrétní název parametru nebo indexu v kolekci parametrů. Můžete použít [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) členské funkce ve spojení s `GetParameterInfo` k vytvoření smyčky přes kolekce parametrů.
+Knihovna MFC nepoužívá zapouzdření objektů parametrů DAO ve třídě. Objekty DAO v podkladových objektech knihovny MFC `CDaoQueryDef` ukládají parametry do kolekcí parametrů. Chcete-li získat přístup k objektům parametrů v objektu [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) , zavolejte `GetParameterInfo` členskou funkci objektu querydef pro konkrétní název parametru nebo index do kolekce Parameters. Můžete použít členskou funkci [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) ve spojení s `GetParameterInfo` smyčkou prostřednictvím kolekce Parameters.
 
-Načte informace [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) členská funkce je uložen v `CDaoParameterInfo` struktury. Volání `GetParameterInfo` querydef objektu, v jehož kolekce parametrů je objekt parametr uložen.
+Informace načtené členskou funkcí [CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) jsou uloženy ve `CDaoParameterInfo` struktuře. Volání `GetParameterInfo` objektu QueryDef, v jehož kolekcích parametrů je objekt Parameter uložen.
 
 > [!NOTE]
->  Pokud chcete získat nebo nastavit pouze hodnoty parametru, použijte [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) a [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) členské funkce třídy `CDaoRecordset`.
+>  Pokud chcete získat nebo nastavit pouze hodnotu parametru, použijte členské funkce třídy `CDaoRecordset` [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) a [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) .
 
-`CDaoParameterInfo` Definuje také `Dump` členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoParameterInfo` objektu.
+`CDaoParameterInfo`také definuje `Dump` členskou funkci v sestavení ladění. Můžete použít `Dump` k výpisu obsahu `CDaoParameterInfo` objektu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao.h
+**Záhlaví:** afxdao. h
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,6 +1,6 @@
 ---
 title: Framework (MFC)
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 helpviewer_keywords:
 - encapsulation [MFC], Win32 API
 - MFC, application framework
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 933fcf97c24ed0903395e2c718f8c89d42473494
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d93d2d50bab4b63258a3e0fe4cd2f24c2fcde4f3
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219766"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095789"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 
-Práce s použitím rozhraní framework knihovny Microsoft Foundation Class (MFC) je do značné míry na základě několik hlavních třídách a několik nástrojů pro Visual C++. Některé třídy zapouzdření velkou část rozhraní (API) systému Win32. Jiné třídy zapouzdření aplikace konceptů, jako jsou dokumenty, zobrazení a vlastní aplikace. Stále ostatní zapouzdření OLE funkce, ODBC a DAO přístup k datům.
+Vaše práce s rozhraním knihovny MFC (Microsoft Foundation Class) je převážně založena na několika hlavních třídách a několika vizuálních C++ nástrojích. Některé třídy zapouzdřují velkou část rozhraní API (Application Programming Interface) Win32. Jiné třídy zapouzdřují koncepty aplikace, jako jsou dokumenty, zobrazení a aplikace samotné. I ostatní zapouzdřují funkce OLE a funkce pro přístup k datům rozhraní ODBC a rozhraní DAO.  (Rozhraní DAO je podporováno prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.)
 
-Například na Win32 konceptu okna jsou zapouzdřena objektem třídy knihovny MFC `CWnd`. To znamená, že třída C++ nazývá `CWnd` zapouzdřuje nebo "zabalí" `HWND` popisovač, který představuje okno Windows. Obdobně třídy `CDialog` zapouzdřuje Win32 dialogových oknech.
+Například Win32's koncept okna je zapouzdřen třídou `CWnd`MFC. To znamená, že C++ třída s `CWnd` názvem zapouzdření nebo " `HWND` zabalí" popisovač, který představuje okno systému Windows. Podobně třída `CDialog` zapouzdřuje dialogová okna Win32.
 
-Zapouzdření znamená, že třídy C++ `CWnd`, například obsahuje členskou proměnnou typu `HWND`, a členské funkce třídy zapouzdření volání Win32 funkcí, které přijímají `HWND` jako parametr. Členské funkce tříd mají obvykle stejný název jako funkce Win32, které zapouzdřují.
+Zapouzdření znamená, že C++ třída `CWnd`obsahuje například členskou proměnnou typu `HWND`a členské funkce třídy zapouzdřují `HWND` volání funkcí Win32, které přijímají jako parametr. Členské funkce třídy obvykle mají stejný název jako funkce Win32, které zapouzdřují.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -35,13 +35,13 @@ Zapouzdření znamená, že třídy C++ `CWnd`, například obsahuje členskou p
 
 [Průvodci a editory prostředků](../mfc/wizards-and-the-resource-editors.md)
 
-## <a name="in-related-sections"></a>V související oddíly
+## <a name="in-related-sections"></a>V souvisejících oddílech
 
 [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)
 
 [Jakým způsobem volá framework váš kód](../mfc/how-the-framework-calls-your-code.md)
 
-[CWinApp Třída aplikace](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Třída aplikace](../mfc/cwinapp-the-application-class.md)
 
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)
 
