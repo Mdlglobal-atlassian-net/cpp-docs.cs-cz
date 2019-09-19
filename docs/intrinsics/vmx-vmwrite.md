@@ -39,13 +39,13 @@ pro Hodnota, která se má zapsat do pole VMCS
 
 ## <a name="return-value"></a>Návratová hodnota
 
-0,8
+0\
 Operace byla úspěšná.
 
-první
+1\
 Operace se nezdařila s rozšířeným stavem dostupným v `VM-instruction error field` aktuálním VMCS.
 
-odst
+2\
 Operace se nezdařila bez dostupného stavu.
 
 ## <a name="remarks"></a>Poznámky
