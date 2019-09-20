@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2337
-ms.date: 11/04/2016
+title: Chyba kompilátoru C2337
+ms.date: 09/19/2019
 f1_keywords:
 - C2337
 helpviewer_keywords:
 - C2337
 ms.assetid: eccc9178-a15e-42cd-bbd0-3cea7cf2d55b
-ms.openlocfilehash: 63f18a12ccd1962dd221324f5557c29be89eb04c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf9b3e782804add13aeaef0e6672d2dd66d193be
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188269"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158778"
 ---
-# <a name="compiler-error-c2337"></a>Compiler Error C2337
+# <a name="compiler-error-c2337"></a>Chyba kompilátoru C2337
 
-'název atributu': atribut nebyl nalezen
+> *atribut-Name*: atribut se nenašel.
 
-Použili jste atribut, který se nepodporuje v této verzi systému Visual C++.
+Váš kód používá atribut, který není v tomto kontextu podporován. Nebo, atribut není v této verzi kompilátoru k dispozici. Tento problém vyřešíte odebráním nepodporovaného atributu.
 
 Následující ukázka generuje C2337:
 
-```
+```cpp
 // C2337.cpp
 // compile with: /c
 [emitidl];
