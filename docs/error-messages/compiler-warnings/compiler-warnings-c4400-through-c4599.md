@@ -134,12 +134,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 9f7886a88ebd98d5d7ab1848ea7a788967362ad7
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: d1a4da3d5e721c85879441a53ef4bc00549b587d
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550439"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230487"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Upozornění kompilátoru C4400 až C4599
 
@@ -203,12 +203,12 @@ ms.locfileid: "69550439"
 |Upozornění kompilátoru (úroveň 1) C4452|'*Identifier*': veřejný typ nemůže být v globálním oboru. Musí být v oboru názvů, který je podřízeným názvem výstupního souboru. winmd.|
 |Upozornění kompilátoru (úroveň 1) C4453|*typ*: Typ [WebHostHidden] by se neměl používat na publikované ploše typu public, který není [WebHostHidden].|
 |Upozornění kompilátoru (úroveň 1) C4454|klíčové slovo*Function*je přetížené více než počtem vstupních parametrů, aniž by byl zadán parametr [DefaultOverload]. Vybírá se*deklarace*jako výchozí přetížení.|
-|Upozornění kompilátoru (úroveň 1) C4455|operátor operator: identifikátory přípon literálů, které nezačínají podtržítkem, jsou vyhrazené.|
+|Upozornění kompilátoru (úroveň 1) C4455|*operátor operator*: identifikátory přípon literálů, které nezačínají podtržítkem, jsou vyhrazené.|
 |[Upozornění kompilátoru (úroveň 4) C4456](compiler-warning-level-4-c4456.md)|deklarace '*Identifier*' skrývá předchozí místní deklaraci|
 |[Upozornění kompilátoru (úroveň 4) C4457](compiler-warning-level-4-c4457.md)|deklarace '*Identifier*' skrývá parametr funkce|
 |[Upozornění kompilátoru (úroveň 4) C4458](compiler-warning-level-4-c4458.md)|deklarace '*Identifier*' skrývá člena třídy|
 |[Upozornění kompilátoru (úroveň 4) C4459](compiler-warning-level-4-c4459.md)|deklarace '*Identifier*' skrývá globální deklaraci|
-|[Upozornění kompilátoru (úroveň 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|Operátor "&#124;WinRT Managed" operator", má parametr předaný odkazem. Operátor {0}&#124;spravovaného WinRT máodlišnou sémantiku od C++ operátoru*cpp_operator*, chtěli jste ho předat hodnotou?|
+|[Upozornění kompilátoru (úroveň 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|Operátor "&#124;WinRT Managed *" operator "* , má parametr předaný odkazem. Operátor {0}&#124;spravovaného WinRT máodlišnou sémantiku od C++ operátoru*cpp_operator*, chtěli jste ho předat hodnotou?|
 |[Upozornění kompilátoru (úroveň 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|*ClassName*: Tato třída má finalizační metodu! *finalizační*metoda, ale nemá žádný destruktor ~*dtor*|
 |[Upozornění kompilátoru (úroveň 1, chyba) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*Type*': nelze určit identifikátor GUID typu. Program může při běhu selhat.|
 |[Upozornění kompilátoru (úroveň 4) C4463](compiler-warning-level-4-c4463.md)|plně přiřazení*hodnoty*k bitovému poli, které může uchovávat jenom hodnoty z '*MIN_VALUE*' na '*MAX_VALUE*'|
@@ -222,9 +222,9 @@ ms.locfileid: "69550439"
 |Upozornění kompilátoru (úroveň 3) C4476|'*Function*': Neznámý znak pole typu '*Character*' ve specifikátoru formátu|
 |[Upozornění kompilátoru (úroveň 1) C4477](c4477.md)|'*Function*': formátovací řetězec '*řetězec*' vyžaduje argument typu '*Type*', ale *číslo* argumentu variadické je typu '*Type*'|
 |Upozornění kompilátoru (úroveň 1) C4478|'*Function*': poziční a Nepoziční zástupné symboly nelze kombinovat ve stejném formátovacím řetězci|
-|Upozornění kompilátoru (chyba) C4480|používá se nestandardní rozšíření: zadání podkladového typupro výčet Enum.|
+|Upozornění kompilátoru (chyba) C4480|používá se nestandardní rozšíření: zadání podkladového typu pro výčet*Enum.*|
 |[Upozornění kompilátoru (úroveň 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|používá se nestandardní rozšíření: specifikátor override "*klíčové slovo*"|
-|Upozornění kompilátoru C4482|používá se nestandardní rozšíření: vkvalifikovaném názvu se používá výčet Enum.|
+|Upozornění kompilátoru C4482|používá se nestandardní rozšíření: v kvalifikovaném*názvu se používá*výčet Enum.|
 |Upozornění kompilátoru (úroveň 1, chyba) C4483|Chyba syntaxe: očekávalo C++ se klíčové slovo.|
 |[Upozornění kompilátoru (chyba) C4484](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|'*override_function*': odpovídá metodě Base ref class '*base_class_function*', ale není označeno jako ' Virtual ', ' New ' nebo ' override '; Předpokládá se klíčové slovo New (a ne Virtual).|
 |[Upozornění kompilátoru (chyba) C4485](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|'*override_function*': odpovídá metodě Base ref class '*base_class_function*', ale není označeno jako ' New ' nebo ' override '; Předpokládá se klíčové slovo New (a Virtual).|
@@ -245,7 +245,7 @@ ms.locfileid: "69550439"
 |[Upozornění kompilátoru (úroveň 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|*specifikace propojení*vyžaduje použití klíčového slova extern a musí předcházet všem ostatním specifikátorům.|
 |[Upozornění kompilátoru (úroveň 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'*Identifier*': překročila se délka názvu dekorované, název byl zkrácen.|
 |[Upozornění kompilátoru (úroveň 4) C4505](../../error-messages/compiler-warnings/compiler-warning-level-4-c4505.md)|'*Function*': došlo k odebrání neodkazované místní funkce|
-|[Upozornění kompilátoru (úroveň 1) C4506](../../error-messages/compiler-warnings/compiler-warning-level-1-c4506.md)|žádná definice pro vloženou funkciFunction|
+|[Upozornění kompilátoru (úroveň 1) C4506](../../error-messages/compiler-warnings/compiler-warning-level-1-c4506.md)|žádná definice pro vloženou funkci*Function*|
 |[Upozornění kompilátoru (úroveň 1) C4508](../../error-messages/compiler-warnings/compiler-warning-level-1-c4508.md)|'*Function*': funkce by měla vracet hodnotu; Předpokládá se návratový typ void.|
 |Upozornění kompilátoru C4509|používá se nestandardní rozšíření:*Function*používá SEH a*objekt*má destruktor.|
 |[Upozornění kompilátoru (úroveň 4) C4510](../../error-messages/compiler-warnings/compiler-warning-level-4-c4510.md)|*Class*: výchozí konstruktor byl implicitně definovaný jako odstraněný.|
@@ -261,7 +261,7 @@ ms.locfileid: "69550439"
 |[Upozornění kompilátoru (úroveň 3) C4521](../../error-messages/compiler-warnings/compiler-warning-level-3-c4521.md)|'*Class*': bylo zadáno více kopírovacích konstruktorů|
 |[Upozornění kompilátoru (úroveň 3) C4522](../../error-messages/compiler-warnings/compiler-warning-level-3-c4522.md)|*Class*: je zadaných víc operátorů přiřazení.|
 |[Upozornění kompilátoru (úroveň 3) C4523](../../error-messages/compiler-warnings/compiler-warning-level-3-c4523.md)|'*Class*': bylo zadáno více destruktorů|
-|[Upozornění kompilátoru (úroveň 1) C4526](../../error-messages/compiler-warnings/compiler-warning-level-1-c4526.md)|'*Function*': statická členská funkce nemůže přepsat přepsání virtuálnífunkce virtuální funkce se ignoruje, virtuální funkce bude skrytá.|
+|[Upozornění kompilátoru (úroveň 1) C4526](../../error-messages/compiler-warnings/compiler-warning-level-1-c4526.md)|'*Function*': statická členská funkce nemůže přepsat přepsání virtuální*funkce virtuální*funkce se ignoruje, virtuální funkce bude skrytá.|
 |[Upozornění kompilátoru (úroveň 1) C4530](../../error-messages/compiler-warnings/compiler-warning-level-1-c4530.md)|C++použila se obslužná rutina výjimky, ale není povolená sémantika unwind. Zadat/EHsc|
 |Upozornění kompilátoru (úroveň 1) C4531|C++zpracování výjimek není v systém Windows CE k dispozici. Použití strukturovaného zpracování výjimek|
 |[Upozornění kompilátoru (úroveň 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|' Continue ': skok mimo blok ' __finally/finally ' má během zpracování ukončení nedefinované chování|
@@ -295,20 +295,20 @@ ms.locfileid: "69550439"
 |Upozornění kompilátoru (úroveň 4) C4562|s možností/CLR se vyžadují plně prototypované funkce: () se převádí na: (void).|
 |[Upozornění kompilátoru (úroveň 4) C4564](../../error-messages/compiler-warnings/compiler-warning-level-4-c4564.md)|Metoda "*Method*" třídy "*ClassName*" definuje nepodporovaný výchozí parametr '*Parameter*'|
 |[Upozornění kompilátoru (úroveň 4) C4565](../../error-messages/compiler-warnings/compiler-warning-level-4-c4565.md)|'*Function*': předefinování; symbol byl dřív deklarovaný pomocí __declspec (modifikátor).|
-|[Upozornění kompilátoru (úroveň 1) C4566](../../error-messages/compiler-warnings/compiler-warning-level-1-c4566.md)|znak reprezentovaný symbolem Universal-Character-Name nemůže být reprezentovaný v aktuální znakové stránce (*Number*).|
+|[Upozornění kompilátoru (úroveň 1) C4566](../../error-messages/compiler-warnings/compiler-warning-level-1-c4566.md)|znak reprezentovaný symbolem Universal-Character-Name nemůže být reprezentovaný v aktuální znakové stránce (*Number* *).*|
 |Upozornění kompilátoru (úroveň 1) C4568|'*Function*': podpis explicitního přepsání neodpovídá žádnému členu.|
 |Upozornění kompilátoru (úroveň 3) C4569|'*Function*': podpis explicitního přepsání neodpovídá žádnému členu.|
 |[Upozornění kompilátoru (úroveň 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|*Type*: není explicitně deklarované jako abstraktní, ale má abstraktní funkce.|
-|[Upozornění kompilátoru (úroveň 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Informační: sémantika catch (...) se od verze C++ Visual 7,1 změnila. strukturované výjimky (SEH) už se nezachycují.|
+|[Upozornění kompilátoru (úroveň 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|informační: sémantika catch (...) se od verze C++ Visual 7,1 změnila. strukturované výjimky (SEH) už se nezachycují.|
 |[Upozornění kompilátoru (úroveň 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|Atribut [ParamArray] je zastaralý v rámci/CLR, použijte... takové|
 |Upozornění kompilátoru (úroveň 1) C4573|použití*funkce lambda Function*vyžaduje, aby kompilátor zachytí this, ale aktuální výchozí režim sběru nepovoluje.|
 |Upozornění kompilátoru (úroveň 4) C4574|'*Identifikátor*' je definován jako ' 0 ': nechtěli jste použít ' #if identifikátor '?|
 |Upozornění kompilátoru (úroveň 1) C4575|' __vectorcall ' není kompatibilní s možností '/CLR ': Probíhá převod na ' __stdcall '|
 |Upozornění kompilátoru (úroveň 1, chyba) C4576|typ v závorce následovaný seznamem inicializátorů je nestandardní explicitní syntaxe převodu typu.|
-|Upozornění kompilátoru (úroveň 1, vypnuto) C4577|' s výjimkou ' se používá bez zadaného režimu zpracování výjimek; ukončení u výjimky není zaručeno. Zadat/EHsc|
+|[Upozornění kompilátoru (úroveň 1, vypnuto) C4577](../../error-messages/compiler-warnings/compiler-warning-level-1-c4577.md)|' s výjimkou ' se používá bez zadaného režimu zpracování výjimek; ukončení u výjimky není zaručeno. Zadat/EHsc|
 |Upozornění kompilátoru (úroveň 1, chyba) C4578|' ABS ': převod z '*typ1*' na '*typ2*', možná ztráta dat (nechtěli jste volat '*Function*' nebo #include \<cmath >?)|
 |[Upozornění kompilátoru (úroveň 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[Attribute] je zastaralá; místo toho zadejte System:: Attribute nebo Platform:: metadata jako základní (Base) třídu.|
-|[Upozornění kompilátoru (úroveň 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|zastaralé chování:*řetězec*byl nahrazen řetězcem '*String*' pro zpracování atributu|
+|[Upozornění kompilátoru (úroveň 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|zastaralé chování:*řetězec*byl nahrazen*řetězcem ' String*' pro zpracování atributu|
 |Upozornění kompilátoru (úroveň 4) C4582|*Type*: konstruktor se nevolá implicitně.|
 |Upozornění kompilátoru (úroveň 4) C4583|*Type*: destruktor se nevolá implicitně.|
 |[Upozornění kompilátoru (úroveň 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|'*Class1*': základní třída '*Class2*' je již základní třídou '*class3*'|
@@ -323,8 +323,8 @@ ms.locfileid: "69550439"
 |Upozornění kompilátoru (úroveň 1) C4595|'*Type*': Změna chování: destruktor již nebude implicitně volán, pokud je vyvolána výjimka|
 |[Upozornění kompilátoru (úroveň 4) C4596](../../error-messages/compiler-warnings/c4596.md)|'*Identifier*': neplatný kvalifikovaný název v deklaraci členu|
 |Upozornění kompilátoru (chyba) C4597|nedefinované chování: OffsetOf se aplikuje na člen virtuální základny.|
-|Upozornění kompilátoru (úroveň 1 a úroveň 3) C4598|' #include '*záhlaví*' ': číslo hlavičky v předkompilované hlavičce neodpovídá aktuální kompilaci na této pozici|
-|Upozornění kompilátoru (úroveň 3) C4599|'*příznak* *cesty*': číslo argumentu příkazového řádku neodpovídá předkompilované hlavičce|
+|Upozornění kompilátoru (úroveň 1 a úroveň 3) C4598|' #include '*záhlaví*' ' *: číslo hlavičky v předkompilované* hlavičce neodpovídá aktuální kompilaci na této pozici|
+|Upozornění kompilátoru (úroveň 3) C4599|'*příznak* *cesty*': číslo argumentu příkazového *řádku neodpovídá předkompilované* hlavičce|
 
 ## <a name="see-also"></a>Viz také:
 

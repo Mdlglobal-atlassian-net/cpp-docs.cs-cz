@@ -63,8 +63,6 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -74,7 +72,6 @@ f1_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
 helpviewer_keywords:
@@ -139,8 +136,6 @@ helpviewer_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -150,15 +145,14 @@ helpviewer_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
-ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 7e715dcbac9dc59fe09ee1f917c02a23b3c4db14
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631541"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230479"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Upozornění kompilátoru C4800 až C5999
 
@@ -185,7 +179,7 @@ ms.locfileid: "69631541"
 |[Upozornění kompilátoru (úroveň 4) C4816](compiler-warning-level-4-c4816.md)|*param*: parametr má pole s nulovou velikostí, které se zkrátí (Pokud není objekt předaný odkazem).|
 |[Upozornění kompilátoru (úroveň 1) C4817](compiler-warning-level-1-c4817.md)|'*Member*': Neplatné použití '. ' pro přístup k tomuto členu; Kompilátor nahradil znakem->.|
 |[Upozornění kompilátoru (úroveň 1) C4819](compiler-warning-level-1-c4819.md)|Soubor obsahuje znak, který nemůže být reprezentovaný v aktuální znakové stránce (číslo). Uložte soubor ve formátu Unicode, aby nedošlo ke ztrátě dat.|
-|[Upozornění kompilátoru (úroveň 4) C4820](compiler-warning-level-4-c4820.md)|odsazeníbajtů, které se přidalo po sestavení '*MEMBER_NAME*'|
+|[Upozornění kompilátoru (úroveň 4) C4820](compiler-warning-level-4-c4820.md)|odsazení*bajtů,* které se přidalo po sestavení '*MEMBER_NAME*'|
 |[Upozornění kompilátoru (úroveň 1) C4821](compiler-warning-level-1-c4821.md)|Nejde určit typ kódování Unicode, uložte prosím soubor s signaturou (BOM).|
 |[Upozornění kompilátoru (úroveň 1) C4822](compiler-warning-level-1-c4822.md)|' Member Function ': členská funkce lokální třídy nemá tělo|
 |[Upozornění kompilátoru (úroveň 3) C4823](compiler-warning-level-3-c4823.md)|'*Function*': používá ukazatele připnutí, ale není povolena sémantika unwind. Zvažte použití/EHa|
@@ -252,7 +246,7 @@ ms.locfileid: "69631541"
 |[Upozornění kompilátoru (úroveň 1, chyba) C4956](compiler-warning-c4956.md)|*typ*: Tento typ nejde ověřit.|
 |[Upozornění kompilátoru (úroveň 1, chyba) C4957](compiler-warning-c4957.md)|'*cast*': explicitní přetypování z '*cast_from*' na '*cast_to*' nelze ověřit|
 |[Upozornění kompilátoru (úroveň 1, chyba) C4958](compiler-warning-c4958.md)|'*Operation*': aritmetický ukazatel nelze ověřit|
-|[Upozornění kompilátoru (úroveň 1, chyba) C4959](compiler-warning-c4959.md)|nejde definovat nespravovaný typtypu v/CLR: safe, protože přístup k jeho členům poskytuje neověřitelný kód.|
+|[Upozornění kompilátoru (úroveň 1, chyba) C4959](compiler-warning-c4959.md)|nejde definovat nespravovaný typ*typu v*/CLR: safe, protože přístup k jeho členům poskytuje neověřitelný kód.|
 |[Upozornění kompilátoru (úroveň 4) C4960](compiler-warning-level-4-c4960.md)|*funkce ' function*' je příliš velká pro profilaci|
 |[Upozornění kompilátoru (úroveň 1) C4961](compiler-warning-c4961.md)|Žádná data profilu se nesloučila do souboru. PGD, optimalizace na základě profilu jsou zakázané.|
 |[Upozornění kompilátoru (úroveň 4) C4962](compiler-warning-c4962.md)|'*Function*': Optimalizace na základě profilu jsou zakázané, protože optimalizace způsobily nekonzistenci dat profilu.|
@@ -265,7 +259,7 @@ ms.locfileid: "69631541"
 |[Upozornění kompilátoru (úroveň 1, chyba) C4972](compiler-warning-c4972.md)|Přímá úprava nebo zpracování výsledku operace unbox, protože l-hodnotu nelze ověřit|
 |Upozornění kompilátoru (úroveň 1) C4973|*symbol*: označený jako zastaralý|
 |Upozornění kompilátoru (úroveň 1) C4974|*symbol*: označený jako zastaralý|
-|Upozornění kompilátoru (úroveň 3) C4981|Warbird: funkce Functions označená jako __forceinline není vložená, protože obsahuje sémantiku výjimky.|
+|Upozornění kompilátoru (úroveň 3) C4981|Warbird:*funkce Functions*označená jako __forceinline není vložená, protože obsahuje sémantiku výjimky.|
 |[Upozornění kompilátoru C4984](compiler-warning-c4984.md)|If constexpr je rozšíření jazyka C++ 17.|
 |Upozornění kompilátoru (úroveň 3) C4985|'*symbol_name*': atributy nejsou přítomny u předchozí deklarace.|
 |[Upozornění kompilátoru C4986](compiler-warning-c4986.md)|*deklarace*: specifikace výjimky neodpovídá předchozí deklaraci.|
@@ -288,12 +282,12 @@ ms.locfileid: "69631541"
 |Upozornění kompilátoru (úroveň 1 a úroveň 4) C5027|*Type*: operátor Move Assignment byl implicitně definovaný jako odstraněný.|
 |Upozornění kompilátoru (úroveň 1) C5028|*název*: Zarovnání zadané v předchozí deklaraci (*Number*) není v definici zadané.|
 |Upozornění kompilátoru (úroveň 4) C5029|používá se nestandardní rozšíření: atributy zarovnání C++ v se použijí jenom na proměnné, datové členy a typy značek.|
-|Upozornění kompilátoru (úroveň 3) C5030|atribut Attributese nerozpoznal.|
+|Upozornění kompilátoru (úroveň 3) C5030|atribut Attribute*se nerozpoznal.*|
 |Upozornění kompilátoru (úroveň 4) C5031|upozornění #pragma (pop): pravděpodobně neshoda, stav upozornění na vyjímání stavu vloženého do jiného souboru|
 |Upozornění kompilátoru (úroveň 4) C5032|zjištěné upozornění #pragma (push) bez odpovídajícího #pragma upozornění (pop)|
 |Upozornění kompilátoru (úroveň 1) C5033|Třída*úložiště*už není podporovanou třídou úložiště.|
-|Upozornění kompilátoru C5034|Použití vnitřních vnitřních objektůzpůsobí, že *funkce* Function se zkompiluje jako kód hosta.|
-|Upozornění kompilátoru C5035|použití funkce Function způsobí, že *funkce* Function se zkompiluje jako kód hosta.|
+|Upozornění kompilátoru C5034|použití*vnitřních vnitřních objektů*způsobí, že *funkce* Function se zkompiluje jako kód hosta.|
+|Upozornění kompilátoru C5035|použití*funkce Function*způsobí, že *funkce* Function se zkompiluje jako kód hosta.|
 |Upozornění kompilátoru (úroveň 1) C5036|při kompilaci s/Hybrid: x86arm64 '*typ1*' do '*typ2*' se převádí ukazatel na funkci VarArgs.|
 |Upozornění kompilátoru (chyba) C5037|*Member-Function*: mimo řádek definice člena šablony třídy nemůže mít výchozí argumenty.|
 |[Upozornění kompilátoru (úroveň 4) C5038](c5038.md)|datový člen*člen1*se inicializuje po datovém členu '*member2*'.|
@@ -302,9 +296,9 @@ ms.locfileid: "69631541"
 |Upozornění kompilátoru (úroveň 1) C5041|'*definition*': definice mimo řádek pro statický datový člen constexpr není potřebná a je v c++ 17 zastaralá.|
 |Upozornění kompilátoru (úroveň 3) C5042|'*deklarace*': deklarace funkcí v oboru bloku nelze zadat ' inline ' na standard C++; odebrat specifikátor inline|
 |Upozornění kompilátoru (úroveň 2) C5043|*specifikace*: specifikace výjimky neodpovídá předchozí deklaraci.|
-|Upozornění kompilátoru (úroveň 4) C5044|Argument pro možnost příkazového řádku odkazuje na cestu "*cesta*", která neexistuje.|
-|[Upozornění kompilátoru C5045](c5045.md)|Kompilátor vloží Spectre zmírnění paměti, pokud je zadán přepínač/Qspectre|
-|[Upozornění kompilátoru (úroveň 2) C5046](c5046.md)|'*Function*': Symbol zahrnující typ s interní vazbou není definovaný.|
+|Upozornění kompilátoru (úroveň 4) C5044|Argument *pro možnost příkazového řádku odkazuje na* cestu "*cesta*", která neexistuje.|
+| [Upozornění kompilátoru C5045](c5045.md) | Kompilátor vloží Spectre zmírnění paměti, pokud je zadán přepínač/Qspectre |
+| [Upozornění kompilátoru (úroveň 2) C5046](c5046.md) | '*Function*': Symbol zahrnující typ s interní vazbou není definovaný. |
 | Upozornění kompilátoru (úroveň 1) C5047 | nestandardní \_ \_použití, pokud\_existuje, s moduly se nepodporuje. |
 | Upozornění kompilátoru (úroveň 1) C5048 | Použití makra '*název_makra*' může mít za následek Nedeterministický výstup |
 | Upozornění kompilátoru (úroveň 1) C5049 | *řetězec*: Vložení úplné cesty může mít za následek výstup závislý na počítači. |
@@ -314,7 +308,7 @@ ms.locfileid: "69631541"
 | Upozornění kompilátoru (úroveň 1) C5102 | ignoruje se neplatná definice makra příkazového řádku*Value*. |
 | Upozornění kompilátoru (úroveň 1) C5103 | vložením '*token1*' a '*token2*' není výsledkem platný token předzpracování |
 | Upozornění kompilátoru (úroveň 1) C5104 | Našla se hodnota "*řetězec1*#*řetězec2*" v seznamu nahrazení makra. měli jste na mysli "*řetězec1*" "#*řetězec2*"? |
-| Upozornění kompilátoru (úroveň 1) C5105 | rozšíření makra produkující definované má nedefinované chování. |
+| [Upozornění kompilátoru (úroveň 1) C5105](c5105.md) | rozšíření makra produkující definované má nedefinované chování. |
 | Upozornění kompilátoru (úroveň 1) C5106 | makro se předefinovalo s jinými názvy parametrů. |
 | Upozornění kompilátoru (úroveň 1) C5107 | chybí ukončovací znak*char*. |
 
