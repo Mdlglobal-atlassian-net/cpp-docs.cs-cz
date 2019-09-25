@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514217"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor obrázků pro ikony (C++)
@@ -62,7 +62,7 @@ Můžete také použít **Editor obrázků** a [binární editor](binary-editor.
 
 Kromě vytváření nových grafických prostředků můžete [importovat existující image](../windows/how-to-copy-resources.md#import-and-export-resources) pro úpravy a pak je přidat do projektu. Můžete také otevřít a upravit obrázky, které nejsou součástí projektu pro úpravu samostatného [obrázku](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
 
-Informace o **editoru obrázků**najdete v tématu Jak [vytvořit ikonu nebo jiný obrázek](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [Upravit obrázek](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [použít nástroj pro kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md), [pracovat s barvami](../windows/working-with-color-image-editor-for-icons.md)a klávesovou zkratku [](../windows/accelerator-keys-image-editor-for-icons.md).
+Informace o **editoru obrázků**najdete v tématu Jak [vytvořit ikonu nebo jiný obrázek](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [Upravit obrázek](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [použít nástroj pro kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md), [pracovat s barvami](../windows/working-with-color-image-editor-for-icons.md)a [klávesovou zkratku](../windows/accelerator-keys-image-editor-for-icons.md).
 
 > [!NOTE]
 > Zdarma si stáhněte **knihovnu imagí sady Visual Studio** , která obsahuje mnoho animací, rastrových obrázků a ikon, které můžete použít ve svých aplikacích. Další informace o tom, jak stáhnout knihovnu, najdete v [knihovně imagí sady Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
@@ -167,7 +167,7 @@ Tady je příklad, jak přidat text do ikony v aplikaci pro Windows a manipulova
 
    - Vyberte možnost **Times New Roman** ze seznamu dostupných písem, která jsou uvedena v poli se seznamem **písem** .
 
-   - V seznamu dostupných stylů písem uvedených v seznamu **styl písma** vyberte tučné písmo.
+   - V seznamu dostupných stylů písem uvedených v seznamu **styl písma** vyberte **tučné** písmo.
 
    - V seznamu dostupných velikostí bodů uvedených v seznamu **Velikost** vyberte **10** .
 
@@ -178,7 +178,7 @@ Tady je příklad, jak přidat text do ikony v aplikaci pro Windows a manipulova
 V oblasti textu se zobrazí text, který se zobrazí jako součást prostředku. Zpočátku je tato oblast prázdná.
 
 > [!NOTE]
-> Pokud je nastavené **průhledné pozadí** , do obrázku se umístí jenom text. Pokud je nastavené neprůhledné **pozadí** , ohraničující obdélník, vyplněný barvou pozadí, se umístí za text.
+> Pokud je nastavené **průhledné pozadí** , do obrázku se umístí jenom text. Pokud je nastavené **neprůhledné pozadí** , ohraničující obdélník, vyplněný barvou pozadí, se umístí za text.
 
 ## <a name="window-panes"></a>Podokna
 

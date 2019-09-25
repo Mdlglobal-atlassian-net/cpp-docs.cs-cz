@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498609"
 ---
 # <a name="try-finally-statement"></a>try-finally – příkaz
@@ -45,7 +45,7 @@ Následující syntaxe popisuje příkaz **try-finally** :
 ## <a name="grammar"></a>Gramatika
 
 *try-finally-příkaz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;vyzkoušení *složeného* příkazu finally  **\_ \_**  **\_ \_**
+&nbsp;&nbsp;&nbsp;&nbsp;vyzkoušení *složeného*  **\_příkazufinally \_**  **\_ \_**
 
 Příkaz **try-finally** je rozšířením společnosti Microsoft pro jazyky C a C++ , které umožňuje cílovým aplikacím zaručit spuštění kódu pro vyčištění v případě přerušení provádění bloku kódu. Vyčištění se skládá z těchto úloh jako rušení přidělení paměti, zavírání souborů a uvolňování obslužných rutin souborů. Příkaz **try-finally** je zvláště užitečný pro rutiny, které mají několik míst, kde je provedena kontrola chyby, která by mohla způsobit předčasné vrácení z rutiny.
 

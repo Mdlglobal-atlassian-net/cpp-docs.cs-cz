@@ -50,10 +50,10 @@ helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69496621"
 ---
 # <a name="cpatht-class"></a>CPathT – třída
@@ -73,7 +73,7 @@ class CPathT
 #### <a name="parameters"></a>Parametry
 
 *StringType*<br/>
-Třída řetězců ATL/MFC, která se má použít pro cestu ( [](../../atl-mfc-shared/reference/cstringt-class.md)viz CStringT)
+Třída řetězců ATL/MFC, která se má použít pro cestu (viz [CStringT](../../atl-mfc-shared/reference/cstringt-class.md))
 
 ## <a name="members"></a>Členové
 
@@ -117,7 +117,7 @@ Třída řetězců ATL/MFC, která se má použít pro cestu ( [](../../atl-mfc-
 |[CPathT::IsSameRoot](#issameroot)|Voláním této metody určíte, zda má jiná cesta společnou kořenovou komponentu s aktuální cestou.|
 |[CPathT::IsUNC](#isunc)|Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention) pro server a sdílenou složku.|
 |[CPathT::IsUNCServer](#isuncserver)|Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention) pro server.|
-|[CPathT::IsUNCServerShare](#isuncservershare)|Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention), \\ \ sdílenou složkou *serveru*\ .|
+|[CPathT::IsUNCServerShare](#isuncservershare)|Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention), \\ \ *sdílenou složkou* *serveru*\ .|
 |[CPathT::MakePretty](#makepretty)|Voláním této metody převedete cestu na všechna malá písmena, aby cesta poskytovala konzistentní vzhled.|
 |[CPathT::MatchSpec](#matchspec)|Zavolejte tuto metodu pro hledání řetězce obsahujícího typ shody se zástupnými znaky.|
 |[CPathT::QuoteSpaces](#quotespaces)|Voláním této metody uzavřete cestu do uvozovek, pokud obsahuje mezery.|
@@ -568,7 +568,7 @@ Další informace najdete v tématu [PathIsUNCServer](/windows/win32/api/shlwapi
 
 ##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare
 
-Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention), \\ \ sdílenou složkou *serveru*\ .
+Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention), \\ \ *sdílenou složkou* *serveru*\ .
 
 ```
 BOOL IsUNCServerShare() const;

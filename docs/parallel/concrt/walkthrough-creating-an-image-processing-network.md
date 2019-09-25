@@ -6,10 +6,10 @@ helpviewer_keywords:
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 680037e0e14c3ebd9171cacf477520e025eecebe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512158"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Návod: Vytváření sítě pro zpracování obrázků
@@ -50,7 +50,7 @@ Následující funkce `GetRGB` a `MakeColor`, extrahují a sloučí jednotlivé 
 
 [!code-cpp[concrt-image-processing-filter#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_1.cpp)]
 
-Následující funkce `ProcessImage`volá daný objekt [std:: Function](../../standard-library/function-class.md) k transformaci hodnoty barvy v jednotlivých pixelech v objektu bitmapy rozhraní GDI+ [](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) . Funkce používá algoritmus [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) ke zpracování každého řádku bitmapy paralelně. `ProcessImage`
+Následující funkce `ProcessImage`volá daný objekt [std:: Function](../../standard-library/function-class.md) k transformaci hodnoty barvy v jednotlivých pixelech v objektu [bitmapy](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) rozhraní GDI+. Funkce používá algoritmus [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) ke zpracování každého řádku bitmapy paralelně. `ProcessImage`
 
 [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_2.cpp)]
 

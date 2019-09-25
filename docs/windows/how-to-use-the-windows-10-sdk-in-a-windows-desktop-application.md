@@ -4,10 +4,10 @@ ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 ms.openlocfilehash: 8dbf18d24c0369507743c3c1da624838f9ab4703
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69513818"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Postupy: Použití sady Windows 10 SDK v desktopové aplikaci pro Windows
@@ -20,7 +20,7 @@ Počínaje sadou Visual Studio 2015 a sadou Windows 10 SDK byla Knihovna CRT roz
 
 ### <a name="to-target-the-windows-10-sdk"></a>Zaměření na sadu Windows 10 SDK
 
-1. Ujistěte se, že je nainstalovaná sada Windows 10 SDK. Sada Windows 10 SDK je nainstalovaná jako součást **vývoje C++ desktopových** aplikací. Samostatná verze je k dispozici na webu [soubory ke stažení a nástroje pro Windows 10](https://developer.microsoft.com/windows/downloads).
+1. Ujistěte se, že je nainstalovaná sada Windows 10 SDK. Sada Windows 10 SDK je nainstalovaná jako součást  **C++ vývoje desktopových** aplikací. Samostatná verze je k dispozici na webu [soubory ke stažení a nástroje pro Windows 10](https://developer.microsoft.com/windows/downloads).
 
 2. Otevřete místní nabídku uzlu projektu a vyberte možnost **změnit cílovou verzi sady SDK**.
 

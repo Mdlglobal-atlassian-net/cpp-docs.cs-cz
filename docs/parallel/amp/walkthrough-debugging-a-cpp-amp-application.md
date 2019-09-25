@@ -8,10 +8,10 @@ helpviewer_keywords:
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
 ms.openlocfilehash: 0c9fb5588cfd44c83d8fe72c7c4aede0fedab672
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631589"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Návod: Ladění aplikace C++ amp
@@ -70,7 +70,7 @@ Pokyny k vytvoření projektu se liší v závislosti na verzi sady Visual Studi
 
 1. Na panelu nabídek vyberte **soubor** > **Nový** > **projekt**.
 
-1. V části nainstalováno v podokně šablony vyberte **možnost C++Visual** .
+1. V části **nainstalováno** v podokně šablony vyberte **možnost C++Visual** .
 
 1. Zvolte **Konzolová aplikace Win32**, `AMPMapReduce` do pole **název** zadejte a pak klikněte na tlačítko **OK** .
 
@@ -306,11 +306,11 @@ V této části se dozvíte, jak ladit kód GPU, což je kód obsažený `sum_ke
 
 ### <a name="to-use-the-parallel-watch-window"></a>Použití paralelního okno Kukátko
 
-1. Chcete-li otevřít okno **paralelní kukátko** , v panelu nabídek vyberte **možnost ladit** > **Windows** > **paralelní sledování** > **paralelní sledování 1**.
+1. Chcete-li otevřít okno **paralelní kukátko** , v panelu nabídek vyberte možnost **ladit** > **Windows** > **paralelní sledování** > **paralelní sledování 1**.
 
    Můžete použít okno **paralelní kukátko** pro kontrolu hodnot výrazu ve více vláknech.
 
-2. Ukotvěte okno **paralelní kukátko 1** k dolnímu okraji sady Visual Studio. V tabulce okna paralelního kukátka jsou 32 řádky. Každý odpovídá vláknu GPU, který se zobrazil v okně vlákna GPU a v okně **paralelní zásobníky** . Nyní můžete zadat výrazy, jejichž hodnoty chcete kontrolovat v rámci všech 32 vláken GPU.
+2. Ukotvěte okno **paralelní kukátko 1** k dolnímu okraji sady Visual Studio. V tabulce okna **paralelního kukátka** jsou 32 řádky. Každý odpovídá vláknu GPU, který se zobrazil v okně vlákna GPU a v okně **paralelní zásobníky** . Nyní můžete zadat výrazy, jejichž hodnoty chcete kontrolovat v rámci všech 32 vláken GPU.
 
 3. Vyberte záhlaví sloupce **Přidat kukátko** , zadejte `localIdx`a pak stiskněte klávesu **ENTER** .
 
@@ -345,17 +345,17 @@ Konkrétní vlákna GPU můžete označit příznakem v okně **vlákna GPU** , 
 
    Následující obrázek znázorňuje čtyři aktivní vlákna označená příznakem v okně **vláken GPU** .
 
-   ![Okno vláken GPU s vlákny s] příznakem (../../parallel/amp/media/campg.png "Okno vláken GPU s vlákny s") příznakem <br/>
+   ![Okno vláken GPU s vlákny s příznakem](../../parallel/amp/media/campg.png "Okno vláken GPU s vlákny s příznakem") <br/>
    Aktivní vlákna v okně vláken GPU
 
    Okno **paralelního sledování** a DataTip okna **paralelní zásobníky** označují vlákna označená příznakem.
 
 4. Pokud se chcete zaměřit na čtyři vlákna, která jste označili příznakem, můžete se rozhodnout zobrazit v oknech **vlákna GPU**, **paralelní sledování**a **paralelní zásobníky** pouze vlákna s příznakem.
 
-   V libovolném z oken nebo na panelu nástrojů **umístění ladění** vyberte tlačítko **Zobrazit pouze označené** příznakem. Následující ilustrace znázorňuje tlačítko **Zobrazit pouze** s příznakem na panelu nástrojů **umístění ladění** .
+   V libovolném z oken nebo na panelu nástrojů **umístění ladění** vyberte tlačítko **Zobrazit pouze označené příznakem** . Následující ilustrace znázorňuje tlačítko **Zobrazit pouze s příznakem** na panelu nástrojů **umístění ladění** .
 
-   ![Panel nástrojů umístění ladění s ikonou zobrazit jenom ikonu s] příznakem (../../parallel/amp/media/camph.png "Panel nástrojů umístění ladění s ikonou zobrazit jenom ikonu s") příznakem <br/>
-   **Zobrazit tlačítko pouze** s příznakem
+   ![Panel nástrojů umístění ladění s ikonou zobrazit jenom ikonu s příznakem](../../parallel/amp/media/camph.png "Panel nástrojů umístění ladění s ikonou zobrazit jenom ikonu s příznakem") <br/>
+   **Zobrazit tlačítko pouze s příznakem**
 
    Okna **GPU**, **paralelní sledování**a **paralelní zásobníky** teď zobrazují pouze vlákna označená příznakem.
 
@@ -365,7 +365,7 @@ Vlákna GPU můžete zablokovat (pozastavit) a uvolnit (obnovit) z okna **vlákn
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Zablokování a odmrazení vláken GPU
 
-1. Kliknutím na tlačítko **Zobrazit pouze** s příznakem zobrazíte všechna vlákna.
+1. Kliknutím na tlačítko **Zobrazit pouze s příznakem** zobrazíte všechna vlákna.
 
 2. Na panelu nabídek vyberte možnost**pokračovat**v **ladění** > .
 
@@ -401,7 +401,7 @@ Všechna vlákna v dané dlaždici se spouštějí na řádek, který obsahuje k
 
 ### <a name="to-run-all-threads-to-the-location-marked-by-the-cursor"></a>Spuštění všech vláken do umístění označeného kurzorem
 
-1. V místní nabídce pro zmrazená vlákna klikněte na možnostrozmrazit.
+1. V místní nabídce pro zmrazená vlákna klikněte na možnost **rozmrazit**.
 
 2. V **editoru kódu**umístěte kurzor na řádek 30.
 

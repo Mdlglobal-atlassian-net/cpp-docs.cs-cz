@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498632"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
@@ -63,7 +63,7 @@ Následující ilustrace znázorňuje relativní velikosti předdefinovaných ty
 
 V následující tabulce jsou uvedeny nejčastěji používané základní typy:
 
-|type|Velikost|Komentář|
+|Typ|Velikost|Komentář|
 |----------|----------|-------------|
 |int|4 bajty|Výchozí volba pro integrální hodnoty.|
 |double|8 bajtů|Výchozí volba pro hodnoty s plovoucí desetinnou čárkou.|
@@ -80,7 +80,7 @@ Typ **void** je speciální typ; nemůžete deklarovat proměnnou typu **void**,
 
 ## <a name="const-type-qualifier"></a>Kvalifikátor typu const
 
-Jakýkoli vestavěný nebo uživatelem definovaný typ může být kvalifikován pomocí klíčového slova const. Kromě toho členské funkce mohou býtkvalifikovány jako const a dokonce i přetížení **const**. Hodnotu typu const nelze po inicializaci změnit.
+Jakýkoli vestavěný nebo uživatelem definovaný typ může být kvalifikován pomocí klíčového slova const. Kromě toho členské funkce mohou být kvalifikovány jako **const**a dokonce i přetížení **const**. Hodnotu typu **const** nelze po inicializaci změnit.
 
 ```cpp
 
@@ -88,9 +88,9 @@ const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
 ```
 
-Kvalifikátor **const** se v deklaracích funkcí a proměnných často používá a "konstanta const" je důležitým konceptem C++v nástroji; v podstatě znamená použití const k zaručení, v době kompilace, že hodnoty nejsou záměrně upravovány. Další informace naleznete v tématu [const](../cpp/const-cpp.md).
+Kvalifikátor **const** se v deklaracích funkcí a proměnných často používá a "konstanta const" je důležitým konceptem C++v nástroji; v podstatě znamená použití **const** k zaručení, v době kompilace, že hodnoty nejsou záměrně upravovány. Další informace naleznete v tématu [const](../cpp/const-cpp.md).
 
-Typ **const** je odlišný od své nekonstantní verze; například const **int** je odlišný typ z **int**. V případě, že C++ je nutné odebrat *const-Ness* z proměnné, můžete použít operátor **const_cast** na těchto vzácných případech. Další informace naleznete v tématu [převody typů a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Typ **const** je odlišný od své nekonstantní verze; například **const int** je odlišný typ z **int**. V případě, že C++ je nutné odebrat *const-Ness* z proměnné, můžete použít operátor **const_cast** na těchto vzácných případech. Další informace naleznete v tématu [převody typů a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="string-types"></a>Typy řetězců
 
@@ -98,7 +98,7 @@ V jazyce není k C++ dispozici žádný vestavěný typ řetězce; **char** a **
 
 ## <a name="user-defined-types"></a>Uživateli definované typy
 
-Při definování **třídy**, **struktury**, sjednocenínebo **výčtu**je tato konstrukce použita ve zbytku kódu, jako by šlo o základní typ. Má známou velikost v paměti a na kontrolu doby kompilace a doby trvání programu při běhu se vztahují některá pravidla týkající se způsobu jeho použití. Nejdůležitější rozdíly mezi základními typy a typy definovanými uživateli jsou následující:
+Při definování **třídy**, **struktury**, **sjednocení**nebo **výčtu**je tato konstrukce použita ve zbytku kódu, jako by šlo o základní typ. Má známou velikost v paměti a na kontrolu doby kompilace a doby trvání programu při běhu se vztahují některá pravidla týkající se způsobu jeho použití. Nejdůležitější rozdíly mezi základními typy a typy definovanými uživateli jsou následující:
 
 - Kompilátor neobsahuje žádné předdefinované informace o uživatelském typu. Učí se typu při prvním výskytu definice během procesu kompilace.
 
@@ -106,7 +106,7 @@ Při definování **třídy**, **struktury**, sjednocenínebo **výčtu**je tato
 
 ## <a name="pointer-types"></a>Typy ukazatelů
 
-Dating zpět na nejstarší verze jazyka C a C++ nadále umožňuje deklarovat proměnnou typu ukazatele pomocí speciálního deklarátor `*` (hvězdička). Typ ukazatele ukládá adresu umístění v paměti, kde je uložena skutečná hodnota dat. V moderním C++se tyto odkazy označují jako nezpracované *ukazatele*a k nim ve vašem kódu přistupovaly prostřednictvím speciálních `*` operátorů (hvězdička) nebo `->` (pomlčka s větší-než). Tento postup se nazývá *přesměrování*a ten, který použijete, závisí na tom, zda provádíte přesměrování ukazatele na skalární nebo ukazatel na člen v objektu. Práce s typy ukazatelů byla dlouhou dobu jedním z nejsložitějších a nejvíce matoucích aspektů vývoje programů v jazycích C a C++. Tato část popisuje některé skutečnosti a postupy, které vám pomůžou při používání nezpracovaných ukazatelů, pokud chcete C++ , ale v moderních IT již není nutné (nebo se doporučuje) používat nezpracované ukazatele pro vlastnictví objektů na všech základě vývoje inteligentního [ukazatele](../cpp/smart-pointers-modern-cpp.md) (Další informace najdete v tématu. na konci této části). Nezpracované ukazatele lze stále s výhodou a bezpečně používat ke sledování objektů, pokud je však potřebujete použít pro vlastnictví objektu, měli byste tak činit s rozvahou a velmi pečlivě promyslet, jak se budou objekty vlastněné těmito ukazateli vytvářet a odstraňovat.
+Dating zpět na nejstarší verze jazyka C a C++ nadále umožňuje deklarovat proměnnou typu ukazatele pomocí speciálního deklarátor `*` (hvězdička). Typ ukazatele ukládá adresu umístění v paměti, kde je uložena skutečná hodnota dat. V moderním C++se tyto odkazy označují jako *nezpracované ukazatele*a k nim ve vašem kódu přistupovaly prostřednictvím speciálních `*` operátorů (hvězdička) nebo `->` (pomlčka s větší-než). Tento postup se nazývá *přesměrování*a ten, který použijete, závisí na tom, zda provádíte přesměrování ukazatele na skalární nebo ukazatel na člen v objektu. Práce s typy ukazatelů byla dlouhou dobu jedním z nejsložitějších a nejvíce matoucích aspektů vývoje programů v jazycích C a C++. Tato část popisuje některé skutečnosti a postupy, které vám pomůžou při používání nezpracovaných ukazatelů, pokud chcete C++ , ale v moderních IT již není nutné (nebo se doporučuje) používat nezpracované ukazatele pro vlastnictví objektů na všech základě vývoje [inteligentního ukazatele](../cpp/smart-pointers-modern-cpp.md) (Další informace najdete v tématu. na konci této části). Nezpracované ukazatele lze stále s výhodou a bezpečně používat ke sledování objektů, pokud je však potřebujete použít pro vlastnictví objektu, měli byste tak činit s rozvahou a velmi pečlivě promyslet, jak se budou objekty vlastněné těmito ukazateli vytvářet a odstraňovat.
 
 Základní princip, který byste měli znát, je, že deklarací proměnné nezpracovaného ukazatele se přidělí pouze paměť potřebná k uložení adresy umístění v paměti, na které bude ukazatel odkazovat při zrušení reference. Přidělení paměti pro samotnou hodnotu dat (označované také jako *záložní úložiště*) ještě není přiděleno. Jinými slovy, deklarováním proměnné nezpracovaného ukazatele vytváříte proměnnou adresy v paměti, nikoli skutečnou datovou proměnnou. Zrušení reference na proměnnou ukazatele, aniž byste se ujistili, že proměnná obsahuje platnou adresu záložního úložiště, způsobí v programu nedefinované chování (obvykle závažnou chybu). Následující příklad ukazuje tento druh chyby:
 
@@ -134,9 +134,9 @@ V příkladu dochází ke zrušení reference na typ ukazatele bez přidělení
                               // "pNumber".
 ```
 
-Příklad opraveného kódu používá místní paměť zásobníku k vytvoření záložního úložiště, `pNumber` které odkazuje na. Pro jednoduchost používáme základní typ. V praxi jsou záložní úložiště pro ukazatele často uživatelsky definovaných typů, které se dynamicky přidělují v oblasti paměti nazvané halda (nebo *bezplatné úložiště*) pomocí **nového** výrazu klíčového slova (v programování ve stylu C, starší. `malloc()` Použila se funkce běhové knihovny jazyka C). Po přidělení jsou tyto proměnné obvykle označovány jako objekty, zejména v případě, že jsou založeny na definici třídy. Paměť, která je přidělena **novému** , musí být odstraněna odpovídajícím příkazem **Delete** (nebo, pokud `malloc()` jste použili funkci k přidělení, běhové funkce `free()`jazyka C).
+Příklad opraveného kódu používá místní paměť zásobníku k vytvoření záložního úložiště, `pNumber` které odkazuje na. Pro jednoduchost používáme základní typ. V praxi jsou záložní úložiště pro ukazatele často uživatelsky definovaných typů, které se dynamicky přidělují v oblasti paměti nazvané *halda* (nebo *bezplatné úložiště*) pomocí **nového** výrazu klíčového slova (v programování ve stylu C, starší .`malloc()` Použila se funkce běhové knihovny jazyka C). Po přidělení jsou tyto proměnné obvykle označovány jako objekty, zejména v případě, že jsou založeny na definici třídy. Paměť, která je přidělena **novému** , musí být odstraněna odpovídajícím příkazem **Delete** (nebo, pokud `malloc()` jste použili funkci k přidělení, běhové funkce `free()`jazyka C).
 
-Je však snadné zapomenout odstranit dynamicky přidělený objekt – zejména v komplexním kódu, což způsobí, že chyba prostředku volala nevracení *paměti*. Z tohoto důvodu se používání nezpracovaných ukazatelů v moderním jazyce C++ nedoporučuje. Téměř vždy je lepší zabalit nezpracovaný ukazatel do [inteligentního ukazatele](../cpp/smart-pointers-modern-cpp.md), který automaticky uvolní paměť při vyvolání jeho destruktoru (když se kód z oboru inteligentního ukazatele překročí); Díky inteligentním ukazatelům prakticky eliminují celou třídu chyb v C++ programech. V následujícím příkladu předpokládejme `MyClass` , že je uživatelem definovaný typ, který má veřejnou metodu.`DoSomeWork();`
+Je však snadné zapomenout odstranit dynamicky přidělený objekt – zejména v komplexním kódu, což způsobí, že chyba prostředku volala *nevracení paměti*. Z tohoto důvodu se používání nezpracovaných ukazatelů v moderním jazyce C++ nedoporučuje. Téměř vždy je lepší zabalit nezpracovaný ukazatel do [inteligentního ukazatele](../cpp/smart-pointers-modern-cpp.md), který automaticky uvolní paměť při vyvolání jeho destruktoru (když se kód z oboru inteligentního ukazatele překročí); Díky inteligentním ukazatelům prakticky eliminují celou třídu chyb v C++ programech. V následujícím příkladu předpokládejme `MyClass` , že je uživatelem definovaný typ, který má veřejnou metodu.`DoSomeWork();`
 
 ```cpp
 void someFunction() {

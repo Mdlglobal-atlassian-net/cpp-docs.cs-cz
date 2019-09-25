@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514689"
 ---
 # <a name="toolbar-editor-c"></a>Editor panelů nástrojůC++()
@@ -189,7 +189,7 @@ Například, chcete-li zobrazit popis tlačítka pro tlačítko **Tisk** v **pro
 
 1. Otevřete **WordPad**.
 
-1. Najeďte ukazatelem myši na tlačítko tiskového panelu nástrojů a Všimněte `Print` si, že je nyní plovoucí v rámci ukazatele myši.
+1. Najeďte ukazatelem myši na tlačítko **tiskového** panelu nástrojů a Všimněte `Print` si, že je nyní plovoucí v rámci ukazatele myši.
 
 1. Podívejte se na stavový řádek v dolní části okna **programu WordPad** a Všimněte si, že nyní zobrazuje text `Prints the active document`.
 
@@ -203,6 +203,6 @@ MFC nebo ATL
 
 ## <a name="see-also"></a>Viz také:
 
-[](../windows/resource-editors.md)
-Nabídky editorů prostředků[a další prostředky](/windows/win32/menurc/resources)<br/>
+[Nabídky editorů](../windows/resource-editors.md)
+prostředků[a další prostředky](/windows/win32/menurc/resources)<br/>
 [Vlastnosti tlačítka panelu nástrojů](../windows/toolbar-button-properties.md)<br/>

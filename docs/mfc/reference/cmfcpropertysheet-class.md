@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 ms.openlocfilehash: f7c9d2b472a443d8bf556d0b12dfe202ea8607a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505055"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet – třída
@@ -185,7 +185,7 @@ pro Index ikony založený na nule, nebo hodnota-1, pokud se nepoužívá žádn
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přidá stránku vlastností jako list ovládacího prvku stromu. Chcete-li přidat stránku vlastností, vytvořte `CMFCPropertySheet` objekt, zavolejte metodu [CMFCPropertySheet:: SetLook](#setlook) s parametrem nastaveným na `CMFCPropertySheet::PropSheetLook_Tree`hodnotu a poté pomocí této metody přidejte stránku vlastností.
+Tato metoda přidá stránku vlastností jako list ovládacího prvku stromu. Chcete-li přidat stránku vlastností, vytvořte `CMFCPropertySheet` objekt, zavolejte metodu [CMFCPropertySheet:: SetLook](#setlook) *s parametrem* nastaveným na `CMFCPropertySheet::PropSheetLook_Tree`hodnotu a poté pomocí této metody přidejte stránku vlastností.
 
 ##  <a name="addtreecategory"></a>CMFCPropertySheet::AddTreeCategory
 
@@ -219,7 +219,7 @@ Ukazatel na nový uzel v ovládacím prvku strom.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li přidat nový uzel, který je také označován jako kategorie, do ovládacího prvku stromu. Chcete-li přidat uzel, vytvořte `CMFCPropertySheet` objekt, zavolejte metodu [CMFCPropertySheet:: SetLook](#setlook) s parametrem nastaveným na `CMFCPropertySheet::PropSheetLook_Tree`hodnotu a poté pomocí této metody přidejte uzel.
+Tuto metodu použijte, chcete-li přidat nový uzel, který je také označován jako kategorie, do ovládacího prvku stromu. Chcete-li přidat uzel, vytvořte `CMFCPropertySheet` objekt, zavolejte metodu [CMFCPropertySheet:: SetLook](#setlook) *s parametrem* nastaveným na `CMFCPropertySheet::PropSheetLook_Tree`hodnotu a poté pomocí této metody přidejte uzel.
 
 Použijte návratovou hodnotu této metody v následných voláních do [CMFCPropertySheet:: AddPageToTree](#addpagetotree) a [CMFCPropertySheet:: AddTreeCategory](#addtreecategory).
 

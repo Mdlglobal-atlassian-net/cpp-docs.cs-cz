@@ -10,10 +10,10 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: 3a7f9c5720c4bd6a43a1a95f9bc19680ba0a9c1e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631716"
 ---
 # <a name="cancellation-in-the-ppl"></a>Zrušení v knihovně PPL
@@ -79,7 +79,7 @@ Třídy `task`, `task_group` a`structured_task_group` podporují zrušení pomoc
 
 Chcete-li zahájit zrušení, zavolejte metodu [Concurrency:: cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) . Na zrušení můžete reagovat těmito způsoby:
 
-- Pro `task` objekty použijte funkci [Concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) . `cancel_current_task`zruší aktuální úlohu a jakékoli její pokračování založené na hodnotách. (Zrušení tokenu zrušení, který je spojen s úlohou nebo jejich pokračováním, nelze zrušit.)
+- Pro `task` objekty použijte funkci [Concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) . `cancel_current_task`zruší aktuální úlohu a jakékoli její pokračování založené na hodnotách. (Zrušení *tokenu* zrušení, který je spojen s úlohou nebo jejich pokračováním, nelze zrušit.)
 
 - Pro skupiny úloh a paralelní algoritmy použijte funkci [Concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) k detekci zrušení a vraťte se co nejdříve z těla úkolu, když tato funkce vrátí **hodnotu true**. (Nevolejte `cancel_current_task` ze skupiny úloh.)
 
@@ -112,7 +112,7 @@ Je možné, že budete chtít spustit libovolný kód při zrušení tokenu zru�
 
 [!code-cpp[concrt-task-cancellation-callback#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_5.cpp)]
 
-Paralelismus [úkolu](../../parallel/concrt/task-parallelism-concurrency-runtime.md) dokumentu vysvětluje rozdíl mezi pokračováním založeným na hodnotách a úlohami. Pokud neposkytnete `cancellation_token` objekt pro úlohu pokračování, pokračování zdědí token zrušení z předchozí úlohy následujícími způsoby:
+[Paralelismus úkolu](../../parallel/concrt/task-parallelism-concurrency-runtime.md) dokumentu vysvětluje rozdíl mezi pokračováním založeným na hodnotách a úlohami. Pokud neposkytnete `cancellation_token` objekt pro úlohu pokračování, pokračování zdědí token zrušení z předchozí úlohy následujícími způsoby:
 
 - Pokračování na základě hodnoty vždy zdědí token zrušení předchozí úlohy.
 
@@ -152,7 +152,7 @@ Pokud podřízená úloha provádí časově náročnou operaci a nevolá ji do 
 
 [!code-cpp[concrt-task-tree#6](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_6.cpp)]
 
-Tento příklad kontroluje zrušení každé 100. iterace smyčky Task.<sup></sup> Frekvence, se kterou kontrolujete zrušení, závisí na objemu práce, kterou vaše úloha provádí, a na tom, jak rychle potřebujete, aby úkoly reagovaly na zrušení.
+Tento příklad kontroluje zrušení<sup>každé 100.</sup> iterace smyčky Task. Frekvence, se kterou kontrolujete zrušení, závisí na objemu práce, kterou vaše úloha provádí, a na tom, jak rychle potřebujete, aby úkoly reagovaly na zrušení.
 
 Pokud nemáte přístup k objektu nadřazené skupiny úloh, zavolejte funkci [Concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) , která určí, zda je nadřazená skupina úloh zrušena.
 
@@ -251,7 +251,7 @@ Použití zrušení je vhodné, pokud je možné včas ukončit každého člena
 |[Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)|Popisuje paralelní algoritmy, které souběžně provádějí práci na kolekcích dat.|
 |[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Poskytuje přehled knihovny paralelních vzorů.|
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Odkaz
 
 [task – třída (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)
 

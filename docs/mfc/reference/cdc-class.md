@@ -403,10 +403,10 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69507003"
 ---
 # <a name="cdc-class"></a>CDC – třída
@@ -1689,7 +1689,7 @@ Prostředek ikony musí být dřív načtený pomocí funkcí `CWinApp::LoadIcon
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CWnd::](../../mfc/reference/cwnd-class.md#isiconic)deicond.
+  Podívejte se na příklad pro [CWnd:: Deicond](../../mfc/reference/cwnd-class.md#isiconic).
 
 ##  <a name="drawstate"></a>CDC::D rawState
 
@@ -2049,11 +2049,11 @@ Pro každý objekt daného typu je funkce zpětného volání, kterou předáte,
 
 Všimněte si, že nové funkce Microsoft C++ Visual vám umožňují používat běžnou funkci jako funkci předanou `EnumObjects`. Předaná `EnumObjects` adresa je ukazatel na funkci exportovanou s funkcí **Export** a s konvencí volání Pascal. V aplikacích v chráněném režimu není nutné vytvořit tuto funkci s funkcí Windows MakeProcInstance nebo uvolnit funkci po použití s funkcí FreeProcInstance Windows.
 
-Nemusíte také exportovat název funkce v příkazu EXPORTS v souboru definice modulu aplikace. Místo toho můžete použít modifikátor funkce **exportu** , jako v
+Nemusíte také exportovat název funkce v příkazu **EXPORTS** v souboru definice modulu aplikace. Místo toho můžete použít modifikátor funkce **exportu** , jako v
 
 **Export zpětného volání int** AFunction **(typem LPStr**, **typem LPStr);**
 
-aby kompilátor vygeneroval vhodný záznam exportu pro export podle názvu bez aliasing. To funguje pro většinu potřeb. U některých zvláštních případů, jako je například exportování funkce podle pořadového čísla nebo vytváření aliasů exportu, je stále nutné použít příkaz EXPORTS v souboru definice modulu.
+aby kompilátor vygeneroval vhodný záznam exportu pro export podle názvu bez aliasing. To funguje pro většinu potřeb. U některých zvláštních případů, jako je například exportování funkce podle pořadového čísla nebo vytváření aliasů exportu, je stále nutné použít příkaz **EXPORTS** v souboru definice modulu.
 
 Pro kompilaci programů Microsoft Foundation budou normálně použity možnosti kompilátoru/GA a/GEs. Možnost kompilátoru/GW se nepoužívá společně s třídami Microsoft Foundation. (Pokud použijete funkci `MakeProcInstance`Windows, budete muset explicitně přetypovat ukazatel na vrácenou funkci z FARPROC na typ potřebný v tomto rozhraní API.) Rozhraní pro registraci zpětného volání jsou nyní typově bezpečná (musíte předat ukazatel na funkci, který odkazuje na správný druh funkce pro konkrétní zpětné volání).
 
@@ -3097,7 +3097,7 @@ Hodnota požadované schopnosti, pokud je funkce úspěšná.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPrintDialog::](../../mfc/reference/cprintdialog-class.md#getdefaults)GetDefaults.
+  Podívejte se na příklad pro [CPrintDialog:: GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).
 
 ##  <a name="getfontdata"></a>CDC:: GetFontData
 
@@ -5740,11 +5740,11 @@ Pokud aplikace umožňuje zrušit tiskovou úlohu během zařazování, musí p�
 
 Všimněte si, že funkce Microsoft Visual C++ zjednodušují vytváření funkce zpětného volání předané `SetAbortProc`do. Adresa předaná `EnumObjects` členské funkci je ukazatel na funkci exportovanou pomocí `__declspec(dllexport)` a s `__stdcall` konvencí volání.
 
-Nemusíte také exportovat název funkce v příkazu EXPORTS v souboru definice modulu aplikace. Místo toho můžete použít modifikátor funkce **exportu** , jako v
+Nemusíte také exportovat název funkce v příkazu **EXPORTS** v souboru definice modulu aplikace. Místo toho můžete použít modifikátor funkce **exportu** , jako v
 
 **Export zpětného volání bool** AFunction ( **HDC**, `int` **);**
 
-aby kompilátor vygeneroval vhodný záznam exportu pro export podle názvu bez aliasing. To funguje pro většinu potřeb. U některých zvláštních případů, jako je například exportování funkce podle pořadového čísla nebo vytváření aliasů exportu, je stále nutné použít příkaz EXPORTS v souboru definice modulu.
+aby kompilátor vygeneroval vhodný záznam exportu pro export podle názvu bez aliasing. To funguje pro většinu potřeb. U některých zvláštních případů, jako je například exportování funkce podle pořadového čísla nebo vytváření aliasů exportu, je stále nutné použít příkaz **EXPORTS** v souboru definice modulu.
 
 Rozhraní pro registraci zpětného volání jsou nyní typově bezpečná (musíte předat ukazatel na funkci, který odkazuje na správný druh funkce pro konkrétní zpětné volání).
 
