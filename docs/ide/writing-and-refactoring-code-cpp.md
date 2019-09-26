@@ -3,13 +3,13 @@ title: Úpravy a refaktorace C++ kódu v aplikaci Visual Studio
 description: Pomocí editoru C++ kódu v aplikaci Visual Studio můžete formátovat, Procházet, pochopit a Refaktorovat kód.
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.topic: landing-page
-ms.openlocfilehash: 255576bfc4a7eb78a660e5bfb05b0a97a7eb4c34
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 2da1b38d2f5bb61edb473e5909b76225f214a116
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221514"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274780"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Úpravy a refaktorace C++ kódu v aplikaci Visual Studio
 
@@ -23,7 +23,7 @@ IntelliSense je výkonný nástroj pro dokončování kódu, který navrhuje sym
 
 Některé symboly jsou automaticky vynechány, aby lépe omezily výsledky. Například při přístupu ke členům objektu třídy z vnějšku třídy nebudete moci zobrazit soukromé členy ve výchozím nastavení nebo chráněných členů (Pokud nejste v kontextu podřízené třídy). Filtrování můžete upravit pomocí tlačítek v dolní části.
 
-Když v rozevíracím seznamu vyberete symbol, můžete ho automaticky nastavit pomocí tabulátoru, **zadání**nebo jednoho z dalších znaků potvrzení (ve výchozím nastavení: {} [ ]().,:; +-*/% & | ^! =? @ #\). Chcete-li přidat nebo odebrat znaky z tohoto seznamu, vyhledejte "IntelliSense" v **panelu snadného spuštění** (CTRL + Q) a vyberte **textový editor >C++ možnosti upřesnit v jazyce C/>** . Možnost v **seznamu členů seznam znaků potvrzení** vám umožní přizpůsobit seznam požadovanými změnami.
+Když v rozevíracím seznamu vyberete symbol, můžete ho automaticky nastavit pomocí **tabulátoru**, **zadání**nebo jednoho z dalších znaků potvrzení (ve výchozím nastavení: {} [ ]().,:; +-*/% & | ^! =? @ #\). Chcete-li přidat nebo odebrat znaky z tohoto seznamu, vyhledejte "IntelliSense" v **panelu snadného spuštění** (CTRL + Q) a vyberte **textový editor >C++ možnosti upřesnit v jazyce C/>** . Možnost v **seznamu členů seznam znaků potvrzení** vám umožní přizpůsobit seznam požadovanými změnami.
 
 Možnost **režim filtrování seznamu členů** určuje, jaké druhy návrhů automatického dokončování IntelliSense vidíte. Ve výchozím nastavení je nastavená na **fuzzy**. Pokud máte symbol nazvaný *MyAwesomeClass*, můžete při hledání přibližně zadat "Mac" a najít třídu v návrzích automatického dokončování. Nepřibližný algoritmus nastaví minimální prahovou hodnotu, kterou symboly musí splňovat, aby se v seznamu zobrazily. **Inteligentní** filtrování zobrazí všechny symboly obsahující podřetězce, které odpovídají zadaným hodnotám. Filtrování **předpon** vyhledá řetězce, které začínají zadaným textem.
 
@@ -98,11 +98,11 @@ V případě některých druhů chyb a také běžných vzorů kódování bude 
 
 V následujícím příkladu `vector` byla deklarována, ale nebyla nalezena žádná definice, takže Editor nabízí zahrnutí potřebného hlavičkového souboru:
 
-![Rychlá&#43; &#43; ] oprava pro rychlé(../ide/media/quick-fix-for-header-cpp.png " C++ ") opravy v jazyce C
+![Rychlá&#43; &#43; ] oprava pro rychlé(../ide/media/quick-fix-for-header-cpp.png " C++ opravy v") jazyce C
 
 Editor také nabízí rychlé opravy pro některé příležitosti refaktoringu. Například pokud deklarujete třídu v hlavičkovém souboru, Visual Studio nabídne vytvoření definice v samostatném souboru. cpp. 
 
-![Rychlá&#43; &#43; ] oprava pro rychlé(../ide/media/quick-fix.png " C++ ") opravy v jazyce C
+![Rychlá&#43; &#43; ] oprava pro rychlé(../ide/media/quick-fix.png " C++ opravy v") jazyce C
 
 ## <a name="change-tracking"></a>Sledování změn
 
@@ -134,7 +134,7 @@ Další informace najdete v tématu [Přidání funkcionality pomocí průvodců
 
 ##  <a name="refactoring"></a>Refaktoring
 
-Refaktoring je k dispozici v místní nabídce rychlá akce nebo kliknutím na žárovku [](/visualstudio/ide/perform-quick-actions-with-light-bulbs) v editoru.  Některé jsou také k dispozici v nabídce **upravit >** refaktoring.  Mezi tyto funkce patří:
+Refaktoring je k dispozici v místní nabídce rychlá akce nebo kliknutím [na žárovku v editoru](/visualstudio/ide/perform-quick-actions-with-light-bulbs) .  Některé jsou také k dispozici v nabídce **upravit > refaktoring** .  Mezi tyto funkce patří:
 
 * [Přejmenovat](refactoring/rename.md)
 * [Extrahovat funkci](refactoring/extract-function.md)
@@ -177,7 +177,7 @@ Další možnosti formátování najdete v části **Upravit** > **Upřesnit** v
 
 ![C++Rozšířené možnosti úprav](media/edit-advanced-cpp.png)
 
-Možnosti pro povolení a konfiguraci C++specifických funkcí pro úpravy > jsou k dispozici v části **nástroje** > **textový editor** > **C/C++** . Po výběru možnosti, kterou chcete nastavit, můžete získat další pomoc stisknutím **klávesy F1** , když je dialog aktivní. V případě obecných možností formátování kódu zadejte `Editor C++` do **nabídky Snadné spuštění**.
+**Možnosti pro** > povolení a konfiguraci C++specifických funkcí pro úpravy jsou k dispozici v části **nástroje** > **textový editor** > **C/C++** . Po výběru možnosti, kterou chcete nastavit, můžete získat další pomoc stisknutím **klávesy F1** , když je dialog aktivní. V případě obecných možností formátování kódu zadejte `Editor C++` do **nabídky Snadné spuštění**.
 
 ![Možnosti > Visual Studio Tools](../ide/media/tools-options.png "Možnosti editoru")
 

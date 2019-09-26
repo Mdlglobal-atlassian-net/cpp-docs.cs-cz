@@ -1,7 +1,7 @@
 ---
 title: Přípony komponent pro .NET a UPW
 ms.date: 10/12/2018
-ms.topic: landing-page
+ms.topic: overview
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 76cbb20d108745984490e67b53db39f58e34d327
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222226"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274681"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Přípony komponent pro .NET a UPW
 
@@ -37,7 +37,7 @@ Rozšíření také obsahují *Kontextově závislá* klíčová slova. Klíčov
 
 V následující tabulce jsou uvedena klíčová C++ slova v rozšíření jazyka.
 
-|Klíčové slovo|Závislé na kontextu|Účel|Reference|
+|Klíčové slovo|Závislé na kontextu|Účel|Odkaz|
 |-------------|-----------------------|-------------|---------------|
 |**ref class**<br /><br /> **struktura ref**|Ne|Deklaruje třídu.|[Třídy a struktury](classes-and-structs-cpp-component-extensions.md)|
 |**Value – třída**<br /><br /> **struktura hodnoty**|Ne|Deklaruje hodnotovou třídu.|[Třídy a struktury](classes-and-structs-cpp-component-extensions.md)|
@@ -51,7 +51,7 @@ V následující tabulce jsou uvedena klíčová C++ slova v rozšíření jazyk
 
 Následující klíčová slova můžete použít k zařazování chování přepsání pro odvození. I když klíčové slovo **New** není rozšířením C++, je zde uvedeno, protože může být použito v dalším kontextu. Některé specifikátory jsou platné i pro nativní programování. Další informace najdete v tématu [jak: Deklaruje specifikátory přepisu v nativních kompilacíchC++(](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)/CLI).
 
-|Klíčové slovo|Závislé na kontextu|Účel|Reference|
+|Klíčové slovo|Závislé na kontextu|Účel|Odkaz|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|Ano|Označuje, že funkce nebo třídy jsou abstraktní.|[abstract](abstract-cpp-component-extensions.md)|
 |**new**|Ne|Označuje, že funkce není popsána ve verzi základní třídy.|[new (nový slot v tabulce vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
@@ -71,7 +71,7 @@ Následující klíčová slova byla přidána pro podporu generických typů. D
 
 Do C++ rozšíření byla přidána následující klíčová slova.
 
-|Klíčové slovo|Závislé na kontextu|Účel|Reference|
+|Klíčové slovo|Závislé na kontextu|Účel|Odkaz|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|Ano|Označuje chování výchozí zpracování výjimek.|[Zpracování výjimek](exception-handling-cpp-component-extensions.md)|
 |**for each, in**|Ne|Vytvoří výčet prvků kolekce.|[for each, in](../dotnet/for-each-in.md)|
@@ -85,7 +85,7 @@ Do C++ rozšíření byla přidána následující klíčová slova.
 
 Následující jazykové konstrukce jsou implementovány jako šablony namísto klíčová slova. Zadáte `/ZW` -li možnost kompilátoru, jsou definovány `lang` v oboru názvů. Zadáte `/clr` -li možnost kompilátoru, jsou definovány `cli` v oboru názvů.
 
-|Klíčové slovo|Účel|Reference|
+|Klíčové slovo|Účel|Odkaz|
 |-------------|-------------|---------------|
 |**array**|Deklaruje pole.|[Pole](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(Jenom CLR) Odkazuje na data v typu odkazu.|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +97,7 @@ Následující jazykové konstrukce jsou implementovány jako šablony namísto 
 
 Následující typ deklarátory instruuje modul runtime, aby automaticky spravoval dobu života a odstraňování přidělených objektů.
 
-|Operátor|Účel|Reference|
+|Operátor|Účel|Odkaz|
 |--------------|-------------|---------------|
 |`^`|Deklaruje popisovač objektu; To znamená, že ukazatel na objekt prostředí Windows Runtime nebo CLR, který je automaticky odstraněn, když již není použitelný.|[Operátor popisovače objektu (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Deklaruje sledovací odkaz; To znamená odkaz na objekt prostředí Windows Runtime nebo CLR, který je automaticky odstraněn, když již není použitelný.|[Operátor sledovacího odkazu](tracking-reference-operator-cpp-component-extensions.md)|

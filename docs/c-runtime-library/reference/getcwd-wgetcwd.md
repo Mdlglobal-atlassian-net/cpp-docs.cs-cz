@@ -1,6 +1,7 @@
 ---
 title: _getcwd, _wgetcwd
-ms.date: 11/04/2016
+description: Běhová knihovna jazyka C Functions _getcwd, _wgetcwd získá aktuální pracovní adresář.
+ms.date: 09/24/2019
 api_name:
 - _wgetcwd
 - _getcwd
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955245"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274633"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -62,10 +63,10 @@ wchar_t *_wgetcwd(
 
 ### <a name="parameters"></a>Parametry
 
-*vyrovnávací paměti*<br/>
+*vyrovnávací paměti*\
 Umístění úložiště pro cestu
 
-*maxlen*<br/>
+*maxlen*\
 Maximální délka cesty ve znacích: **char** pro **_getcwd** a **wchar_t** pro **_wgetcwd**.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -78,7 +79,7 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 Funkce **_getcwd** získá úplnou cestu k aktuálnímu pracovnímu adresáři pro výchozí jednotku a uloží ji do *vyrovnávací paměti*. Celočíselný argument *MAXLEN* určuje maximální délku cesty. Pokud délka cesty (včetně ukončujícího znaku null) přesahuje *MAXLEN*, dojde k chybě. Argument *buffer* může mít **hodnotu null**. vyrovnávací paměť s minimální velikostí MAXLEN ( **pouze v případě**potřeby) se automaticky přidělí pomocí typu \ k uložení cesty. Tato vyrovnávací paměť může být později uvolněna voláním metody **Free** a předáním **_getcwd** návratové hodnoty (ukazatel na přidělenou vyrovnávací paměť).
 
-**_getcwd** vrátí řetězec, který představuje cestu k aktuálnímu pracovnímu adresáři. Pokud je aktuální pracovní adresář kořenem, řetězec končí zpětným lomítkem ( **\\** ). Pokud je aktuální pracovní adresář nastaven na jiný adresář než kořenový, řetězec končí názvem adresáře, nikoli zpětným lomítkem.
+**_getcwd** vrátí řetězec, který představuje cestu k aktuálnímu pracovnímu adresáři. Pokud je aktuální pracovní adresář kořenem, řetězec končí zpětným lomítkem (`\`). Pokud je aktuální pracovní adresář nastaven na jiný adresář než kořenový, řetězec končí názvem adresáře, nikoli zpětným lomítkem.
 
 **_wgetcwd** je **_getcwd**verze s velkým znakem; Argument *buffer* a návratová hodnota **_wgetcwd** jsou řetězce s libovolným znakem. **_wgetcwd** a **_getcwd** se chovají stejně jinak.
 
@@ -103,26 +104,28 @@ Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-r
 
 ```C
 // crt_getcwd.c
+// Compile with: cl /W4 crt_getcwd.c
 // This program places the name of the current directory in the
 // buffer array, then displays the name of the current directory
 // on the screen. Passing NULL as the buffer forces getcwd to allocate
 // memory for the path, which allows the code to support file paths
 // longer than _MAX_PATH, which are supported by NTFS.
 
-#include <direct.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <direct.h> // _getcwd
+#include <stdlib.h> // free, perror
+#include <stdio.h>  // printf
+#include <string.h> // strlen
 
 int main( void )
 {
    char* buffer;
 
    // Get the current working directory:
-   if( (buffer = _getcwd( NULL, 0 )) == NULL )
+   if ( (buffer = _getcwd( NULL, 0 )) == NULL )
       perror( "_getcwd error" );
    else
    {
-      printf( "%s \nLength: %d\n", buffer, strnlen(buffer) );
+      printf( "%s \nLength: %zu\n", buffer, strlen(buffer) );
       free(buffer);
    }
 }
@@ -134,7 +137,7 @@ C:\Code
 
 ## <a name="see-also"></a>Viz také:
 
-[Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
-[_chdir, _wchdir](chdir-wchdir.md)<br/>
-[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
-[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
+[Řízení adresáře](../../c-runtime-library/directory-control.md)\
+[_chdir, _wchdir](chdir-wchdir.md)\
+[_mkdir, _wmkdir](mkdir-wmkdir.md)\
+[_rmdir, _wrmdir](rmdir-wrmdir.md)
