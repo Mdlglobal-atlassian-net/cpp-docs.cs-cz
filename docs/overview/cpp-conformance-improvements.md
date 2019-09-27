@@ -1,16 +1,16 @@
 ---
 title: C++vylepšení shody
-ms.date: 08/30/2019
+ms.date: 09/25/2019
 description: Microsoft C++ v aplikaci Visual Studio pokračuje v plném souladu s jazykem standardu c++ 20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 8eae104d21de271f11c727262939121c20050092
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4825317b07535d98b1b5db4442f935e9b2cfb632
+ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927949"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314480"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Vylepšení shody C++ se sadou Visual Studio
 
@@ -123,7 +123,7 @@ int main()
 
 ### <a name="lambda-closures"></a>Uzavření lambda
 
-V jazyce C++ 14 nejsou typy uzavření lambda literály. Primárním pořadím tohoto pravidla je, že výraz lambda nesmí být přiřazen `constexpr` proměnné. Následující kód zkompiluje bez chyb v aplikaci Visual Studio 2017, ale v aplikaci Visual Studio 2019 vyvolá *C2127: l: Neplatná inicializace entity constexpr s nekonstantním výrazem*:
+V jazyce C++ 14 nejsou typy uzavření lambda literály. Primárním pořadím tohoto pravidla je, že výraz lambda nesmí být přiřazen proměnné **constexpr** . Následující kód zkompiluje bez chyb v aplikaci Visual Studio 2017, ale v aplikaci Visual Studio 2019 vyvolá *C2127: l: Neplatná inicializace entity constexpr s nekonstantním výrazem*:
 
 ```cpp
 int main()
@@ -132,7 +132,7 @@ int main()
 }
 ```
 
-Chcete-li se této chybě vyhnout, `constexpr` buď odstraňte kvalifikátor, nebo změňte režim shody na. `/std:c++17`
+Chcete-li se této chybě vyhnout, buď odstraňte kvalifikátor **constexpr** , nebo změňte režim shody na `/std:c++17`.
 
 ### <a name="stdcreate_directory-failure-codes"></a>`std::create_directory`kódy chyb
 
@@ -148,7 +148,7 @@ Nové paralelní verze systémů `is_sorted`, `is_sorted_until`, `is_partitioned
 
 ### <a name="atomic-initialization"></a>atomická inicializace
 
-[P0883 "Oprava atomické inicializace"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) se změní `std::atomic` na hodnotu-Initialized (nepoužívá se) místo výchozí inicializace. Oprava je povolena při použití Clang/LLVM s standardní knihovnou společnosti Microsoft. V současné době je zakázána pro kompilátor C++ společnosti Microsoft jako alternativní řešení chyby při `constexpr` zpracování.
+[P0883 "Oprava atomické inicializace"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) se změní `std::atomic` na hodnotu-Initialized (nepoužívá se) místo výchozí inicializace. Oprava je povolena při použití Clang/LLVM s standardní knihovnou společnosti Microsoft. V současné době je zakázána pro kompilátor C++ společnosti Microsoft jako alternativní řešení chyby při zpracování **constexpr** .
 
 ### <a name="remove_cvref-and-remove_cvref_t"></a>`remove_cvref` a `remove_cvref_t`
 
@@ -246,7 +246,7 @@ void f() {
 
 ### <a name="noexcept-constexpr-functions"></a>s výjimkou funkcí constexpr
 
-Funkce constexpr se už při použití `noexcept` v konstantním výrazu nepovažují za výchozí. Tato změna chování přichází z řešení [CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351) a je povolená v [/Permissive-](../build/reference/permissive-standards-conformance.md). Následující příklad kompiluje v aplikaci Visual Studio 2019 verze 16,1 a starší, ale vytváří C2338 v aplikaci Visual Studio 2019 verze 16,2:
+Funkce constexpr již nejsou považovány za, **s výjimkou** standardně při použití v konstantním výrazu. Tato změna chování přichází z řešení [CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351) a je povolená v [/Permissive-](../build/reference/permissive-standards-conformance.md). Následující příklad kompiluje v aplikaci Visual Studio 2019 verze 16,1 a starší, ale vytváří C2338 v aplikaci Visual Studio 2019 verze 16,2:
 
 ```cpp
 constexpr int f() { return 0; }
@@ -256,7 +256,7 @@ int main() {
 }
 ```
 
-Chcete-li chybu opravit, přidejte `noexcept` do deklarace funkce výraz:
+Chcete-li chybu opravit, přidejte do deklarace funkce výraz **s výjimkou** :
 
 ```cpp
 constexpr int f() noexcept { return 0; }
@@ -388,11 +388,93 @@ bool neq(const S& lhs, const S& rhs) {
 - [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): \<verze >
 - [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf): s výjimkou konstruktoru Move std:: Function
 
+## <a name="improvements_163"></a>Vylepšení shody v aplikaci Visual Studio 2019 verze 16,3
+
+### <a name="stream-extraction-operators-for-char-removed"></a>Odebrané operátory extrakce streamu pro char *
+
+Operátory extrakce streamu pro ukazatele na znaky se odebraly a nahradily operátory extrakce pro pole znaků (na [P0487R1](http://http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 považuje odebrané přetížení za nebezpečné. V [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md) režim teď následující příklad vytvoří *C2679: Binary ' > > ': nenašel se žádný operátor, který přebírá pravý operand typu ' char\*' (nebo neexistuje žádný přijatelný převod)* :
+
+```cpp
+   char x[42];
+   char* p = x;
+   std::cin >> std::setw(42);
+   std::cin >> p;
+```
+
+Chcete-li se vyhnout této chybě, použijte operátor extrakce s proměnnou Char []:
+
+```cpp
+char x[42];
+std::cin >> x;
+```
+
+### <a name="new-keywords-requires-and-concept"></a>Nové klíčové slovo vyžaduje **koncept** a.
+
+Nová klíčová slova **vyžaduje** a **koncept** se přidal do kompilátoru C++ Microsoftu. Pokud se pokusíte použít buď jednu jako identifikátor v [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md) režim, kompilátor vyvolá *C2059: Chyba syntaxe*.
+
+### <a name="constructors-as-type-names-disallowed"></a>Konstruktory jako názvy typů nejsou povoleny.
+
+Názvy konstruktorů se už nepovažují za vložené – názvy tříd, když se objeví v kvalifikovaném názvu za aliasem pro specializaci šablony třídy. Dřív bylo povoleno použití konstruktorů jako názvu typu k deklaraci jiných entit. Následující příklad nyní vytvoří *C3646: ' TotalDuration ': neznámý specifikátor*override:
+
+```cpp
+#include <chrono>
+
+class Foo {
+   std::chrono::milliseconds::duration TotalDuration{};
+};
+
+```
+
+Chcete-li se této chybě `TotalDuration` vyhnout, deklarujte, jak je znázorněno zde:
+
+```cpp
+#include <chrono>
+
+class Foo {
+  std::chrono::milliseconds TotalDuration {};
+};
+```
+
+### <a name="stricter-checking-of-extern-c-functions"></a>Striktní kontrola externích funkcí jazyka C
+
+Pokud byla funkce **extern "C"** deklarována v různých oborech názvů, předchozí verze kompilátoru C++ společnosti Microsoft nezkontrolovaly, zda deklarace byly kompatibilní. V aplikaci Visual Studio 2019 verze 16,3 kompilátor provede takovou kontrolu. V režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) generuje následující kód *C2371: předefinování; odlišné základní typy* a *C2733 nemůžete přetížit funkci s propojením jazyka C*:
+
+```cpp
+using BOOL = int;
+
+namespace N
+{
+   extern "C" void f(int, int, int, bool);
+}
+
+void g()
+{
+   N::f(0, 1, 2, false);
+}
+
+extern "C" void f(int, int, int, BOOL){}
+```
+
+Chcete-li se vyhnout chybám v předchozím příkladu, použijte **bool** namísto **bool** konzistentně v `f`obou deklaracích.
+
 ## <a name="update_160"></a>Opravy chyb a změny chování v aplikaci Visual Studio 2019
+
+### <a name="reinterpret_cast-in-a-constexpr-function"></a>Reinterpret_cast ve funkci constexpr
+
+**Přetypování reinterpret_cast** je ve funkci **constexpr** neplatné. Kompilátor společnosti C++ Microsoft předtím odmítne **reinterpret_cast** pouze v případě, že byl použit v kontextu **constexpr** . V aplikaci Visual Studio 2019 ve všech režimech jazykových standardů kompilátor správně diagnostikuje **reinterpret_cast** v definici funkce **constexpr** . Následující kód teď vytvoří *C3615: funkce constexpr f nemůže mít za následek konstantní výraz*.
+
+```cpp
+long long i = 0;
+constexpr void f() {
+    int* a = reinterpret_cast<int*>(i);
+}
+```
+
+Chcete-li se této chybě vyhnout, odeberte modifikátor **constexpr** z deklarace funkce.
 
 ### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>Oprava diagnostiky pro konstruktor rozsahu basic_string
 
-V aplikaci Visual Studio 2019 `basic_string` konstruktor rozsahu již potlačuje diagnostiku kompilátoru pomocí. `static_cast` Následující kód zkompiluje bez upozornění v aplikaci Visual Studio 2017, navzdory možné ztrátě dat z `wchar_t` do `char` po inicializaci `out`:
+V aplikaci Visual Studio 2019 `basic_string` konstruktor rozsahu již potlačuje diagnostiku kompilátoru pomocí. `static_cast` Následující kód zkompiluje bez upozornění v aplikaci Visual Studio 2017, navzdory možné ztrátě dat z `wchar_t` na **char** při inicializaci: `out`
 
 ```cpp
 std::wstring ws = /* … */;
@@ -427,7 +509,7 @@ Chcete-li se vyhnout chybě v tomto příkladu, použijte operátor s metodou To
 
 ### <a name="initializers-for-inline-static-data-members"></a>Inicializátory pro vložené statické datové členy
 
-V rámci `inline` a `static constexpr` Inicializátory se teď správně zjistily neplatné přístupy členů. Následující příklad zkompiluje bez chyby v aplikaci Visual Studio 2017, ale v aplikaci Visual Studio 2019 v `/std:c++17` režimu, který vyvolává *chybu C2248: nelze přistupovat k soukromému členu deklarovanému ve třídě X*.
+V rámci **vložených** a **statických** inicializátorů constexpr se teď správně zjistily neplatné přístupy členů. Následující příklad zkompiluje bez chyby v aplikaci Visual Studio 2017, ale v aplikaci Visual Studio 2019 v `/std:c++17` režimu, který vyvolává *chybu C2248: nelze přistupovat k soukromému členu deklarovanému ve třídě X*.
 
 ```cpp
 struct X
@@ -454,7 +536,7 @@ struct X
 
 ### <a name="c4800-reinstated"></a>C4800 obnoveno
 
-MSVC se používá k upozornění výkonu na C4800 implicitního převodu na `bool`. Bylo příliš vysoké a nedalo se ho potlačit, protože nám ho můžete odebrat v aplikaci Visual Studio 2017. V průběhu životního cyklu sady Visual Studio 2017 ale máme spoustu názoru na užitečné případy, které vyhodnotila. Vrátíme se do sady Visual Studio 2019 pečlivě přizpůsobených C4800 spolu s vysvětlujícím C4165. Obě tato upozornění lze snadno potlačit buď pomocí explicitního přetypování, nebo porovnání na hodnotu 0 příslušného typu. C4800 je nestandardní upozornění na úrovni 4 a C4165 je upozornění na úroveň 3 ve výchozím nastavení. Obě jsou Zjistitelnější pomocí `/Wall` možnosti kompilátoru.
+MSVC používá k upozornění výkonu C4800 implicitního převodu na **bool**. Bylo příliš vysoké a nedalo se ho potlačit, protože nám ho můžete odebrat v aplikaci Visual Studio 2017. V průběhu životního cyklu sady Visual Studio 2017 ale máme spoustu názoru na užitečné případy, které vyhodnotila. Vrátíme se do sady Visual Studio 2019 pečlivě přizpůsobených C4800 spolu s vysvětlujícím C4165. Obě tato upozornění lze snadno potlačit buď pomocí explicitního přetypování, nebo porovnání na hodnotu 0 příslušného typu. C4800 je nestandardní upozornění na úrovni 4 a C4165 je upozornění na úroveň 3 ve výchozím nastavení. Obě jsou Zjistitelnější pomocí `/Wall` možnosti kompilátoru.
 
 Následující příklad vyvolává C4800 a C4165 pod `/Wall`:
 
@@ -496,7 +578,7 @@ void example()
 
 ### <a name="function-template-bodies-containing-constexpr-if-statements"></a>Těla šablony funkce obsahující příkazy constexpr if
 
-Pro tělo funkce šablony `if constexpr` obsahující příkazy jsou `/permissive-` povoleny některé kontroly související s analýzou. Například v aplikaci Visual Studio 2017 následující kód vytvoří jazyk C*7510: ' Type ': použití názvu závislého typu musí být předponou ' typename '* pouze v případě, že `/permissive-` možnost není nastavena. V sadě Visual Studio 2019 stejný kód vyvolává chyby i v případě `/permissive-` , že je nastavena možnost:
+Tělo funkce šablony obsahující, pokud jsou v příkazech **constexpr** povoleny některé kontroly související s analýzou [/Permissive-](../build/reference/permissive-standards-conformance.md) . Například v aplikaci Visual Studio 2017 následující kód vytvoří *C7510: ' Type ': použití názvu závislého typu musí být předponou ' typename '* pouze v případě, že není nastavena možnost **/Permissive-** . V sadě Visual Studio 2019 stejný kód vyvolává chyby i v případě, že je nastavena možnost **/Permissive-** :
 
 ```cpp
 template <typename T>
@@ -527,11 +609,11 @@ int main()
 }
 ```
 
-Chcete-li se této chybě vyhnout `typename` , přidejte klíčové slovo do `a`deklarace `typename T::Type a;`:.
+Chcete-li se této chybě vyhnout, přidejte klíčové slovo**TypeName** do `a`deklarace `typename T::Type a;`:.
 
 ### <a name="inline-assembly-code-isnt-supported-in-a-lambda-expression"></a>Kód vloženého sestavení není podporován ve výrazu lambda.
 
-Vizuální C++ tým se nedávno dozvěděl o potížích se zabezpečením, kdy použití vloženého assembleru v rámci výrazu lambda by mohlo vést k poškození `ebp` (registraci návratové adresy) za běhu. Škodlivý útočník by mohl využít tento scénář. Vzhledem k povaze problému je fakt, že Inline assembler je podporován pouze v x86 a špatná interakce mezi vloženým assemblerem a zbytkem kompilátoru, bylo nejbezpečnější řešení tohoto problému, bylo zakázáno vloženého assembleru v rámci výrazu lambda.
+Tým Microsoftu C++ se nedávno dozvěděl o potížích se zabezpečením, kdy použití vloženého assembleru v rámci výrazu lambda by mohlo vést k poškození `ebp` (registraci návratové adresy) za běhu. Škodlivý útočník by mohl využít tento scénář. Vzhledem k povaze problému je fakt, že Inline assembler je podporován pouze v x86 a špatná interakce mezi vloženým assemblerem a zbytkem kompilátoru, bylo nejbezpečnější řešení tohoto problému, bylo zakázáno vloženého assembleru v rámci výrazu lambda.
 
 Jediné použití vloženého assembleru v rámci výrazu lambda, který jsme našli na zástupný, bylo zachytit zpáteční adresu. V tomto scénáři můžete zachytit zpáteční adresu na všech platformách jednoduše pomocí vnitřního `_ReturnAddress()`kompilátoru.
 
@@ -672,7 +754,7 @@ Opravili jsme chybu vedlejších vlastností typu, `add_const_t` kde a souvisej�
 
 ### <a name="const-comparators-for-associative-containers"></a>Const komparátorů pro asociativní kontejnery
 
-Kód pro hledání a vložení v [Nastavení](../standard-library/set-class.md), [mapování](../standard-library/map-class.md), [multiset](../standard-library/multiset-class.md)a [multimap](../standard-library/multimap-class.md) byl sloučen za účelem snížení velikosti kódu. Operace vložení nyní volají méně než porovnání na `const` funktor porovnání stejným způsobem jako dříve provedené operace vyhledávání. Následující kód je zkompilován v aplikaci Visual Studio 2019 verze 16,1 a starší, ale vyvolává C3848 v aplikaci Visual Studio 2019 verze 16,2:
+Kód pro hledání a vložení v [Nastavení](../standard-library/set-class.md), [mapování](../standard-library/map-class.md), [multiset](../standard-library/multiset-class.md)a [multimap](../standard-library/multimap-class.md) byl sloučen za účelem snížení velikosti kódu. Operace vložení nyní volají méně než porovnání u funktor porovnání **const** stejným způsobem, jako jste předtím provedli operace hledání. Následující kód je zkompilován v aplikaci Visual Studio 2019 verze 16,1 a starší, ale vyvolává C3848 v aplikaci Visual Studio 2019 verze 16,2:
 
 ```cpp
 #include <iostream>
@@ -707,7 +789,7 @@ int main() {
 }
 ```
 
-Chcete-li se této chybě vyhnout, udělejte `const`operátor porovnání:
+Chcete-li se této chybě vyhnout, udělejte operátor porovnání **const**:
 
 ```cpp
 struct Comparer  {
@@ -724,19 +806,19 @@ struct Comparer  {
 
 ## <a name="improvements_150"></a>Vylepšení shody v aplikaci Visual Studio 2017 RTW (verze 15,0)
 
-S podporou pro zobecněnou `constexpr` a nestatickou inicializaci datových členů (NSDMI) pro agregace je kompilátor společnosti Microsoft C++ v rámci sady Visual Studio 2017 nyní dokončen pro funkce přidané v standardu c++ 14. Nicméně kompilátor stále nemá několik funkcí z standardů C++ 11 a C++ 98. Pro tabulku, která zobrazuje aktuální stav kompilátoru, se zobrazí [Shoda v jazyce Visual C++ Language](../visual-cpp-language-conformance.md) .
+S podporou pro zobecněnou inicializaci **constexpr** a nestatických inicializací datových členů (NSDMI) pro agregace je kompilátor C++ společnosti Microsoft v rámci sady Visual Studio 2017 nyní dokončen pro funkce přidané v standardu c++ 14. Nicméně kompilátor stále nemá několik funkcí z standardů C++ 11 a C++ 98. Pro tabulku, která zobrazuje aktuální stav kompilátoru, se zobrazí [Shoda v jazyce Visual C++ Language](../visual-cpp-language-conformance.md) .
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11: Podpora SFINAE výrazů v dalších knihovnách
 
-Kompilátor i nadále vylepšuje podporu výrazu SFINAE, který je vyžadován pro odvození argumentu šablony a nahrazování, kde `decltype` a `constexpr` výrazy mohou být uvedeny jako parametry šablony. Další informace najdete v tématu [vylepšení SFINAE výrazů v aplikaci Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3).
+Kompilátor nadále vylepšuje podporu výrazu SFINAE, který je vyžadován pro odvození argumentu šablony a nahrazení, kde se výrazy **decltype** a **constexpr** mohou zobrazovat jako parametry šablony. Další informace najdete v tématu [vylepšení SFINAE výrazů v aplikaci Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3).
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C++14: NSDMI pro agregace
 
 Agregace je pole nebo třída bez uživatelsky zadaného konstruktoru, žádné soukromé nebo chráněné nestatické datové členy, žádné základní třídy ani žádné virtuální funkce. Počínaje agregací C++ 14 mohou obsahovat inicializátory členů. Další informace naleznete v tématu [Inicializátory členů a agregace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html).
 
-### <a name="c14-extended-constexpr"></a>C++14: Cházející`constexpr`
+### <a name="c14-extended-constexpr"></a>C++14: Rozšířený **constexpr**
 
-Výrazy deklarované jako `constexpr` jsou nyní dovoleny obsahovat určité druhy deklarací, if a Switch příkazy, smyčky a mutace objektů, jejichž doba života začala v rámci vyhodnocení výrazu constexpr. Navíc už neexistuje požadavek, aby `constexpr` nestatická členská funkce musela být `const`implicitně. Další informace naleznete v tématu [požadavků Constraints on constexpr Functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html).
+Výrazy deklarované jako **constexpr** mají nyní povoleno obsahovat určité druhy deklarací, if a Switch příkazy, smyčky a mutace objektů, jejichž doba života začala v rámci vyhodnocení výrazu constexpr. Navíc už neexistuje požadavek, aby nestatická členská funkce **constexpr** musela být implicitně **const**. Další informace naleznete v tématu [požadavků Constraints on constexpr Functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html).
 
 ### <a name="c17-terse-static_assert"></a>C++ 17: Stručný`static_assert`
 
@@ -756,13 +838,13 @@ Smyčky for založené na rozsahu již nevyžadují `begin()` a `end()` vracejí
 
 Výrazy lambda se teď dají použít v konstantních výrazech. Další informace naleznete v tématu [lambda výrazy constexpr v C++ ](../cpp/lambda-expressions-constexpr.md).
 
-### <a name="if-constexpr-in-function-templates"></a>`if constexpr`v šablonách funkcí
+### <a name="if-constexpr-in-function-templates"></a>**if constexpr** v šablonách funkcí
 
-Šablona funkce může obsahovat `if constexpr` příkazy pro povolení větvení v době kompilace. Další informace naleznete v tématu [if constexpr Statements](../cpp/if-else-statement-cpp.md#if_constexpr).
+Šablona funkce může obsahovat, **Pokud příkazy constexpr** povolují větvení v době kompilace. Další informace naleznete v tématu [if constexpr Statements](../cpp/if-else-statement-cpp.md#if_constexpr).
 
 ### <a name="selection-statements-with-initializers"></a>Příkazy výběru s Inicializátory
 
-`if` Příkaz může obsahovat inicializátor, který zavádí proměnnou v oboru bloku v rámci příkazu samotného. Další informace naleznete v tématu [if – příkazy s inicializátorem](../cpp/if-else-statement-cpp.md#if_with_init).
+Příkaz **if** může zahrnovat inicializátor, který zavádí proměnnou v oboru bloku v rámci příkazu samotného. Další informace naleznete v tématu [if – příkazy s inicializátorem](../cpp/if-else-statement-cpp.md#if_with_init).
 
 ### <a name="maybe_unused-and-nodiscard-attributes"></a>`[[maybe_unused]]`a `[[nodiscard]]` atributy
 
@@ -776,7 +858,7 @@ Nová syntaxe pro povolení pouze jednoho identifikátoru oboru názvů v seznam
 
 Je možné, že je nyní v jedné deklaraci uložena hodnota s jednotlivými názvy pro své komponenty, pokud je hodnota pole, `std::tuple` nebo nebo `std::pair`má všechny veřejné nestatické datové členy. Další informace najdete v tématu [strukturované vazby](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) a [vracení více hodnot z funkce](../cpp/functions-cpp.md#multi_val).
 
-### <a name="construction-rules-for-enum-class-values"></a>Pravidla vytváření pro `enum class` hodnoty
+### <a name="construction-rules-for-enum-class-values"></a>Pravidla vytváření pro hodnoty **třídy výčtu**
 
 Nyní je implicitní nebo nezúžený převod z nadřízeného typu výčtu na samotný výčet, pokud jeho definice nezavádí enumerátor a zdroj používá syntaxi Inicializace seznamu. Další informace najdete v tématu [pravidla vytváření pro hodnoty](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) a [výčty](../cpp/enumerations-cpp.md#no_enumerators)výčtových tříd.
 
@@ -784,21 +866,21 @@ Nyní je implicitní nebo nezúžený převod z nadřízeného typu výčtu na s
 
 `*this` Objekt ve výrazu lambda se teď dá zachytit podle hodnoty. Tato změna umožňuje scénáře, ve kterých je výraz lambda vyvolán paralelně a asynchronních operací, zejména u novějších architektur počítače. Další informace naleznete v tématu [lambda \*zachycení tohoto podle hodnoty jako \[\*=, this\]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
 
-### <a name="removing-operator-for-bool"></a>Odebírá `operator++` se pro`bool`
+### <a name="removing-operator-for-bool"></a>Odebírá `operator++` se pro **bool** .
 
-`operator++`již není u `bool` typů podporován. Další informace najdete v tématu [Odebrání zastaralého operátoru + + (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
+`operator++`již není podporován na **logických** typech. Další informace najdete v tématu [Odebrání zastaralého operátoru + + (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
 
-### <a name="removing-deprecated-register-keyword"></a>Odebírá se zastaralé `register` klíčové slovo.
+### <a name="removing-deprecated-register-keyword"></a>Odebírá se zastaralá klíčová slova **Register** .
 
-`register` Klíčové slovo, dříve zastaralé (a ignorováno kompilátorem), je nyní odebráno z jazyka. Další informace najdete v tématu [Odebrání zastaralého použití klíčového slova Register](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html).
+Klíčové slovo **Register** , dříve zastaralé (a ignorováno kompilátorem), je nyní odebráno z jazyka. Další informace najdete v tématu [Odebrání zastaralého použití klíčového slova Register](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html).
 
 ## <a name="improvements_155"></a>Vylepšení shody v 15,5
 
 Funkce označené \[14] jsou k dispozici nepodmíněně ani v **/std: c++ 14** Mode.
 
-### <a name="new-compiler-switch-for-extern-constexpr"></a>Nový přepínač kompilátoru pro`extern constexpr`
+### <a name="new-compiler-switch-for-extern-constexpr"></a>Nový přepínač kompilátoru pro **externí constexpr**
 
-V dřívějších verzích sady Visual Studio kompilátor vždy přiřadil `constexpr` vnitřní propojení proměnné i v případě, že byla proměnná označena. `extern` V aplikaci Visual Studio 2017 verze 15,5 nový přepínač kompilátoru, [/Zc: externConstexpr](../build/reference/zc-externconstexpr.md), umožňuje správné chování vyhovující standardům. Další informace naleznete v tématu [extern vazby constexpr](#extern_linkage).
+V dřívějších verzích sady Visual Studio kompilátor vždy přiřadil vnitřní propojení proměnné **constexpr** i v případě, že proměnná byla označena jako **extern**. V aplikaci Visual Studio 2017 verze 15,5 nový přepínač kompilátoru, [/Zc: externConstexpr](../build/reference/zc-externconstexpr.md), umožňuje správné chování vyhovující standardům. Další informace naleznete v tématu [extern vazby constexpr](#extern_linkage).
 
 ### <a name="removing-dynamic-exception-specifications"></a>Odebírají se specifikace dynamických výjimek.
 
@@ -854,7 +936,7 @@ Vylepšení dodržování standardů pomocí zamezení nestandardního rozšíř
 
 Standardní knihovna nyní používá šablony proměnných interně.
 
-Standardní knihovna byla aktualizována v reakci na změny kompilátoru c++ 17, včetně přidání `noexcept` v systému typů a odebrání dynamických výjimek-specifikací.
+Standardní knihovna byla aktualizována v reakci na změny kompilátoru C++ 17, včetně přidání, **s výjimkou** v systému typů a odebráním dynamických výjimek-specifikací.
 
 ## <a name="improvements_156"></a>Vylepšení shody v 15,6
 
@@ -1034,7 +1116,7 @@ void sample(A<0> *p)
 
 [P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) Přesuňte nové základní funkce pro převod řetězce z P0067R5 do nové hlavičky \<charconv > a udělejte další vylepšení, včetně změny zpracování chyb, která se má použít `std::error_code` `std::errc` místo.
 
-### <a name="c17-constexpr-for-char_traits-partial"></a>C++ 17: `constexpr` pro `char_traits` (částečné)
+### <a name="c17-constexpr-for-char_traits-partial"></a>C++ 17: **constexpr** pro `char_traits` (částečný)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) `std::traits_type` Změny členských funkcí `length` ,`compare`a lze`find` je použítvkonstantních`std::string_view` výrazech. (V aplikaci Visual Studio 2017 verze 15,6 je podporována pouze pro Clang/LLVM. Ve verzi 15,7 Preview 2 je podpora skoro dokončená i pro ClXX.)
 
@@ -1169,7 +1251,7 @@ int main()
 }
 ```
 
-### `constexpr`
+### <a name="constexpr"></a>**constexpr**
 
 Pokud levý operand podmíněného vyhodnocení operace v kontextu constexpr není platný, Visual Studio 2017 správně vyvolá chybu. Následující kód je zkompilován v sadě Visual Studio 2015, ale ne v sadě Visual Studio 2017 (C3615 constexpr function ' f ' nemůže mít za následek konstantní výraz):
 
@@ -1186,7 +1268,7 @@ constexpr bool f(const array<1> &arr)
 }
 ```
 
-Chcete-li chybu opravit, deklarujte `array::size()` funkci buď `constexpr` jako, nebo `constexpr` odeberte kvalifikátor z `f`.
+Chcete-li chybu opravit, deklarujte `array::size()` funkci jako **constexpr** nebo odstraňte kvalifikátor **constexpr** z `f`.
 
 ### <a name="class-types-passed-to-variadic-functions"></a>Typy tříd předané do variadické funkcí
 
@@ -1255,7 +1337,7 @@ struct S
 int i = (const S)0; // error C2440
 ```
 
-Chcete-li chybu opravit, `operator int()` deklarujte jako `const`.
+Chcete-li chybu opravit, `operator int()` deklarujte jako **const**.
 
 ### <a name="access-checking-on-qualified-names-in-templates"></a>Kontrola přístupu k kvalifikovaným názvům v šablonách
 
@@ -1292,7 +1374,7 @@ template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember':
 
 ### <a name="expression-sfinae"></a>Výraz – SFINAE
 
-Pro podporu Expression-SFINAE kompilátor nyní analyzuje `decltype` argumenty při deklaraci šablony namísto vytvoření instance. V důsledku toho, pokud je v argumentu decltype Nalezeno nezávislá specializace, není odvoditelné na dobu vytvoření instance. Je zpracována okamžitě a všechny výsledné chyby jsou diagnostikovány v daném čase.
+Pro podporu Expression-SFINAE kompilátor nyní analyzuje argumenty **decltype** při deklaraci šablony namísto vytvoření instance. V důsledku toho, pokud je v argumentu decltype Nalezeno nezávislá specializace, není odvoditelné na dobu vytvoření instance. Je zpracována okamžitě a všechny výsledné chyby jsou diagnostikovány v daném čase.
 
 Následující příklad ukazuje chybu kompilátoru, která je vyvolána v bodě deklarace:
 
@@ -1341,7 +1423,7 @@ value struct V
 
 ### <a name="default-indexers-ccli"></a>Výchozí indexery (C++/CLI)
 
-V aplikaci Visual Studio 2015 a starší kompilátor v některých případech chybně identifikoval výchozí vlastnost jako výchozí indexer. Bylo možné vyřešit problém pomocí identifikátoru `default` pro přístup k vlastnosti. Alternativní řešení se jako klíčové slovo `default` v c++ 11 stalo problematickým. V aplikaci Visual Studio 2017 byly opraveny chyby, které vyžadovaly alternativní řešení, a kompilátor nyní vyvolá chybu při `default` použití pro přístup k výchozí vlastnosti pro třídu.
+V aplikaci Visual Studio 2015 a starší kompilátor v některých případech chybně identifikoval výchozí vlastnost jako výchozí indexer. Tento problém bylo možné vyřešit pomocí **výchozího** identifikátoru pro přístup k vlastnosti. Alternativní řešení se jako klíčové slovo v C++ 11 stalo problematickým po zavedení **výchozího nastavení** . V aplikaci Visual Studio 2017 byly opraveny chyby, které vyžadovaly alternativní řešení, a kompilátor nyní vyvolá chybu, pokud je použita **Výchozí hodnota** pro přístup k výchozí vlastnosti pro třídu.
 
 ```cpp
 //class1.cs
@@ -1413,7 +1495,7 @@ void g()
 }
 ```
 
-Chcete-li chybu opravit, `i` deklarujte jako `int`.
+Chcete-li chybu opravit, `i` deklarujte jako **int**.
 
 ### <a name="pre-condition-checks-for-type-traits"></a>Kontroly předběžných podmínek u vlastností typu
 
@@ -1508,9 +1590,9 @@ template <typename T>
 void S::f(T t) {}
 ```
 
-### <a name="attempting-to-take-the-address-of-this-pointer"></a>Pokus o převzetí adresy `this` ukazatele
+### <a name="attempting-to-take-the-address-of-this-pointer"></a>Probíhá pokus o převzetí adresy **tohoto** ukazatele.
 
-C++ V`this` je prvalue typu ukazatel na X. Nelze převzít adresu `this` nebo ji vytvořit jako odkaz na odkaz lvalue. V předchozích verzích sady Visual Studio, kompilátor vám umožní obejít toto omezení pomocí přetypování. V aplikaci Visual Studio 2017 verze 15,3 vyvolá kompilátor chybu upozornění C2664.
+V C++ **tomto** prvalue typu ukazatel na X. **Tuto** adresu nemůžete převzít ani ji nelze vytvořit jako odkaz na lvalue. V předchozích verzích sady Visual Studio, kompilátor vám umožní obejít toto omezení pomocí přetypování. V aplikaci Visual Studio 2017 verze 15,3 vyvolá kompilátor chybu upozornění C2664.
 
 ### <a name="conversion-to-an-inaccessible-base-class"></a>Převod na nepřístupnou základní třídu
 
@@ -1530,7 +1612,7 @@ void f()
 
 ### <a name="default-arguments-arent-allowed-on-out-of-line-definitions-of-member-functions"></a>Výchozí argumenty nejsou povolené u definic na řádcích a u členských funkcí.
 
-Výchozí argumenty nejsou povoleny pro předdefinované definice členských funkcí v třídách šablon. Kompilátor vydá upozornění pod **/Permissive**a v části **/Permissive-** se objeví závažná chyba.
+Výchozí argumenty nejsou povoleny pro předdefinované definice členských funkcí v třídách šablon. Kompilátor vydá upozornění pod **/Permissive**a v části [/Permissive-](../build/reference/permissive-standards-conformance.md)se objeví závažná chyba.
 
 V předchozích verzích sady Visual Studio mohl následující nesprávně vytvořený kód způsobit chybu modulu runtime. Visual Studio 2017 verze 15,3 generuje upozornění C5034: A\<T >:: f: definice mimo řádek pro člena šablony třídy nemůže mít výchozí argumenty:
 
@@ -1605,9 +1687,9 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 
 Toto upozornění je ve výchozím nastavení v 15,3 vypnuto, ale ve výchozím nastavení je v 15,5 a má vliv pouze na kód kompilovaný pomocí **/Wall** **/WX**.
 
-### <a name="decltype-and-calls-to-deleted-destructors"></a>`decltype`a volání odstraněných destruktorů
+### <a name="decltype-and-calls-to-deleted-destructors"></a>**decltype** a volání odstraněných destruktorů
 
-V předchozích verzích sady Visual Studio kompilátor nerozpoznal, když došlo k volání odstraněného destruktoru v kontextu výrazu přidruženého `decltype`k. V aplikaci Visual Studio 2017 verze 15,3 následující kód vytvoří "Error C2280: A\<T >:: ~ A (void) ': Probíhá pokus o odkaz na odstraněnou funkci ":
+V předchozích verzích sady Visual Studio kompilátor nerozpoznal, když došlo k volání odstraněného destruktoru v kontextu výrazu přidruženého k **decltype**. V aplikaci Visual Studio 2017 verze 15,3 následující kód vytvoří "Error C2280: A\<T >:: ~ A (void) ': Probíhá pokus o odkaz na odstraněnou funkci ":
 
 ```cpp
 template<typename T>
@@ -1630,7 +1712,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>Neinicializované proměnné const
 
-Vydání sady Visual Studio 2017 RTW má regresi, ve C++ které kompilátor nevydá diagnostiku, `const` Pokud proměnná nebyla inicializována. Tato regrese byla opravena v aplikaci Visual Studio 2017 verze 15,3. Následující kód teď vytvoří "upozornění C4132: ' Value ': objekt const by měl být inicializován:
+Vydání sady Visual Studio 2017 RTW má regresi, ve C++ které by kompilátor nevydal diagnostiku, pokud nebyla inicializována proměnná **const** . Tato regrese byla opravena v aplikaci Visual Studio 2017 verze 15,3. Následující kód teď vytvoří "upozornění C4132: ' Value ': objekt const by měl být inicializován:
 
 ```cpp
 const int Value; //C4132
@@ -2013,7 +2095,7 @@ Toto nové upozornění C4768 se poskytuje na některých hlavičkách Windows S
 
 ### <a name="extern_linkage"></a>Externí propojení constexpr
 
-V dřívějších verzích sady Visual Studio kompilátor vždy přiřadil `constexpr` vnitřní propojení proměnné i v případě, že byla proměnná označena. `extern` V aplikaci Visual Studio 2017 verze 15,5 nový přepínač kompilátoru ( **/Zc: externConstexpr**) umožňuje správné chování vyhovující standardům. Nakonec se toto chování stane výchozím nastavením.
+V dřívějších verzích sady Visual Studio kompilátor vždy přiřadil vnitřní propojení proměnné **constexpr** i v případě, že proměnná byla označena jako **extern**. V aplikaci Visual Studio 2017 verze 15,5 nový přepínač kompilátoru ( **/Zc: externConstexpr**) umožňuje správné chování vyhovující standardům. Nakonec se toto chování stane výchozím nastavením.
 
 ```cpp
 extern constexpr int x = 10;
@@ -2023,13 +2105,13 @@ extern constexpr int x = 10;
 error LNK2005: "int const x" already defined
 ```
 
-Pokud hlavičkový soubor obsahuje proměnnou deklarovanou `extern constexpr`, musí být označena `__declspec(selectany)` tak, aby jejich duplicitní deklarace byla správně kombinována:
+Pokud hlavičkový soubor obsahuje proměnnou deklarovanou **extern constexpr**, je nutné označit `__declspec(selectany)` , aby jejich duplicitní deklarace byly správně kombinovány:
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
 ```
 
-### <a name="typeid-cant-be-used-on-incomplete-class-type"></a>`typeid`nejde použít pro nekompletní typ třídy.
+### <a name="typeid-cant-be-used-on-incomplete-class-type"></a>**typeid** se nedá použít u nekompletního typu třídy.
 
 V dřívějších verzích sady Visual Studio kompilátor nesprávně povolil následující kód, což má za následek potenciálně nesprávné informace o typu. V aplikaci Visual Studio 2017 verze 15,5 kompilátor správně vyvolá chybu:
 
@@ -2069,11 +2151,11 @@ struct D : public B { virtual ~D(); };
 static_assert(std::is_convertible<D *, B *>::value, "fail");
 ```
 
-### <a name="noexcept_removal"></a>Odebrání specifikace dynamické výjimky a`noexcept`
+### <a name="noexcept_removal"></a>Odebrání specifikace dynamické výjimky a **s výjimkou**
 
-V jazyce c++ 17 `throw()` je alias pro `noexcept`, `throw(<type list>)` a `throw(...)` odebraný a některé typy mohou zahrnovat `noexcept`. Tato změna může způsobit problémy s kompatibilitou zdroje s kódem, který odpovídá C++ 14 nebo staršímu. Přepínač **/Zc: noexceptTypes-** Switch lze použít pro návrat k verzi `noexcept` c++ 14, zatímco obecně pracuje v režimu c++ 17. Umožňuje aktualizovat zdrojový kód tak, aby odpovídal c++ 17 bez nutnosti přepsat celý `throw()` kód současně.
+`throw()` V c++ 17 je alias pro, **s výjimkou**, `throw(<type list>)` a `throw(...)` jsou odebrány a některé typy mohou obsahovat výjimku, **s výjimkou**. Tato změna může způsobit problémy s kompatibilitou zdroje s kódem, který odpovídá C++ 14 nebo staršímu. Přepínač **/Zc: noexceptTypes-** Switch lze použít pro návrat k verzi c++ 14, **s výjimkou** obecného použití režimu c++ 17. Umožňuje aktualizovat zdrojový kód tak, aby odpovídal c++ 17 bez nutnosti přepsat celý `throw()` kód současně.
 
-Kompilátor také nyní diagnostikuje více neshodných specifikací výjimek v deklaracích v režimu C++ 17 nebo pomocí **/Permissive-** s novým C5043 upozorněním.
+Kompilátor také nyní diagnostikuje více neshodných specifikací výjimek v deklaracích v režimu C++ 17 nebo pomocí [/Permissive-](../build/reference/permissive-standards-conformance.md) s novým C5043 upozorněním.
 
 Následující kód generuje C5043 a C5040 v aplikaci Visual Studio 2017 verze 15,5 při použití přepínače **/std: c++ 17** :
 
@@ -2091,7 +2173,7 @@ struct B : A {
 };
 ```
 
-Chcete-li chyby odebrat, když stále používáte **/std: c++ 17**, přidejte do příkazového řádku přepínač **/Zc: noexceptTypes** , nebo jinak aktualizujte kód, který chcete `noexcept`použít, jak je znázorněno v následujícím příkladu:
+Chcete-li odstranit chyby, když stále používáte **/std: c++ 17**, přidejte do příkazového řádku přepínač **/Zc: noexceptTypes** , nebo jinak aktualizujte kód tak, aby používal **s výjimkou**, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 void f() noexcept;
@@ -2164,11 +2246,11 @@ int main()
 }
 ```
 
-### <a name="noexcept-and-partial-specializations"></a>`noexcept`a částečné specializace
+### <a name="noexcept-and-partial-specializations"></a>**s výjimkou** a částečně specializace
 
-`noexcept` V systému typů by částečné specializace pro párové konkrétní typy "volat" mohly selhat při kompilování nebo výběru primární šablony z důvodu chybějící částečné specializace pro ukazatele na funkci s výjimkou funkcí.
+S **výjimkou** v systému typů může Částečná specializace pro párové konkrétní typy "volat" selhat při kompilaci nebo výběru primární šablony z důvodu chybějící částečné specializace pro ukazatele na funkci s výjimkou funkcí.
 
-V takových případech může být nutné přidat další částečné specializace pro zpracování `noexcept` ukazatelů na funkce a `noexcept` ukazatele na členské funkce. Tato přetížení jsou platná pouze v **/std: režim c++ 17** . Pokud je nutné provést zpětnou kompatibilitu s c++ 14 a píšete kód, který používají jiní uživatelé, pak byste měli Tato nová přetížení v rámci `#ifdef` direktiv chránit. Pokud pracujete v samostatném modulu, pak místo používání `#ifdef` ochranných krytů můžete kompilovat pomocí přepínače **/Zc: noexceptTypes-** Switch.
+V takových případech může být nutné přidat další částečnou specializaci pro zpracování ukazatelů **s výjimkou** ukazatelů na funkce a **s výjimkou** ukazatelů na členské funkce. Tato přetížení jsou platná pouze v **/std: režim c++ 17** . Pokud je nutné provést zpětnou kompatibilitu s c++ 14 a píšete kód, který používají jiní uživatelé, pak byste měli Tato nová přetížení v rámci `#ifdef` direktiv chránit. Pokud pracujete v samostatném modulu, pak místo používání `#ifdef` ochranných krytů můžete kompilovat pomocí přepínače **/Zc: noexceptTypes-** Switch.
 
 Následující kód je zkompilován v rámci **/std: c++ 14** , ale v rámci/STD se nezdařil **: c++ 17** with "Error C2027: použití nedefinovaného typu" A\<T > "":
 
@@ -2274,7 +2356,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 verze 15,7 v **/std: režim c++ 17** vyžaduje `typename` klíčové slovo v `using` příkazu D. Bez `typename`, kompilátor vyvolává upozornění C4346: *B < T\*>:: type ': závislý název není typ* a chyba C2061: *Chyba syntaxe: identifikátor ' type '* :
+Visual Studio 2017 verze 15,7 v **/std: režim c++ 17** vyžaduje klíčové slovo**TypeName** v příkazu **using** v D. Bez**TypeName**, kompilátor vyvolává upozornění C4346: *B < T\*>:: type ': závislý název není typ* a chyba C2061: *Chyba syntaxe: identifikátor ' type '* :
 
 ```cpp
 template<typename T>
@@ -2290,7 +2372,7 @@ struct D : B<T*> {
 
 ### <a name="c17-nodiscard-attribute---warning-level-increase"></a>C++ 17: `[[nodiscard]]` zvýšení úrovně upozornění atributu
 
-V aplikaci Visual Studio 2017 verze 15,7 v **/std: režim c++ 17** , úroveň upozornění C4834 ("rušení návratové hodnoty funkce s atributem" ") se zvyšuje z w3 na W1. Upozornění můžete zakázat s přetypováním na `void`nebo předáním **/WD: 4834** do kompilátoru.
+V aplikaci Visual Studio 2017 verze 15,7 v **/std: režim c++ 17** , úroveň upozornění C4834 ("rušení návratové hodnoty funkce s atributem" ") se zvyšuje z w3 na W1. Upozornění můžete zakázat s přetypováním na **void**nebo předáním **/WD: 4834** do kompilátoru.
 
 ```cpp
 [[nodiscard]] int f() { return 0; }
@@ -2324,9 +2406,9 @@ D<int> d;
 
 Chcete-li chybu opravit, změňte výraz b () na b\<T > ().
 
-### <a name="constexpr-aggregate-initialization"></a>`constexpr`agregovat inicializaci
+### <a name="constexpr-aggregate-initialization"></a>agregovaná inicializace **constexpr**
 
-Předchozí verze C++ kompilátoru nesprávně zpracovaly `constexpr` agregační inicializaci; přijal se neplatný kód, ve kterém agregační-init-list má příliš mnoho prvků a vytvořil pro něj špatný CodeGen. Následující kód je příkladem takového kódu:
+Předchozí verze C++ kompilátoru nesprávně zpracovaly agregační inicializaci **constexpr** ; přijal se neplatný kód, ve kterém agregační-init-list má příliš mnoho prvků a vytvořil pro něj špatný CodeGen. Následující kód je příkladem takového kódu:
 
 ```cpp
 #include <array>
@@ -2366,9 +2448,9 @@ int main() {
 
 Změny kompilátoru v aplikaci Visual Studio 2017 verze 15,8 spadají do kategorie opravy chyb a změny chování a jsou uvedeny níže:
 
-### <a name="typename-on-unqualified-identifiers"></a>`typename`na nekvalifikované identifikátory
+###<a name="typename-on-unqualified-identifiers"></a>**TypeName** u nekvalifikovaných identifikátorů
 
-V režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) již kompilátor `typename` nepřijímá klíčová slova spurious u nekvalifikovaných identifikátorů v definicích šablon aliasů. Následující kód teď vytvoří C7511 *'t: za klíčovým slovem typeName musí následovat kvalifikovaný název*:
+V režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) již kompilátor nepřijímá klíčová slova**TypeName** spurious u nekvalifikovaných identifikátorů v definicích šablon aliasu. Následující kód teď vytvoří C7511 *'t: za klíčovým slovem typeName musí následovat kvalifikovaný název*:
 
 ```cpp
 template <typename T>
@@ -2401,7 +2483,7 @@ Dvoustupňové vyhledávání názvů vyžaduje, aby se nezávisle používané 
 
 Jedním ze způsobů, jak to může manifest, je vyhledávání do závislých základních tříd. Dříve kompilátor povolil použití názvů, které jsou definovány v závislých základních třídách, protože by byly vyhledány během doby vytváření instancí při řešení všech typů. Teď, když je kód považován za chybu. V těchto případech můžete vynutit, aby se proměnná prohlédla při vytváření instance tím, že je kvalifikována jako typ základní třídy, nebo jinak, aby byla závislá na tom, například přidáním `this->` ukazatele.
 
-V režimu **/Permissive-** nyní vyvolá následující kód C3861: *' base_value ': identifikátor nebyl nalezen*:
+V režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) nyní vyvolá následující kód C3861: *' base_value ': identifikátor nebyl nalezen*:
 
 ```cpp
 template <class T>
@@ -2472,7 +2554,7 @@ public:
 
 V aplikaci Visual Studio 2017 verze 15,8 kompilátor omezuje oblasti, které se tyto `reinterpret_cast` operátory mohou zobrazit ve výchozím režimu, aby kód pomohly odpovídat standardnímu C++ chování. V rámci [/Permissive-](../build/reference/permissive-standards-conformance.md)jsou omezení ještě přísnější. Použití výsledku `offsetof` v místech, které vyžadují konstantní výrazy, může mít za následek kód, který vydává upozornění C4644, že *použití OffsetOf vzoru založeného na makru v konstantních výrazech je nestandardní; C++ použijte OffsetOf definované ve standardu. místo toho* nebo C2975 *neplatný argument šablony, byl očekáván konstantní výraz v čase kompilace*.
 
-Následující kód vyvolává C4644 v **/Default** a **/std: režimy C++ 17** a C2975 v režimu **/Permissive-** :
+Následující kód vyvolává C4644 v **/Default** a **/std: režimy C++ 17** a C2975 v režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) :
 
 ```cpp
 struct Data {
@@ -2514,7 +2596,7 @@ int main()
 
 Předchozí verze kompilátoru společnosti Microsoft C++ nerozpoznaly, že základní třída měla kvalifikátory CV, pokud bylo také vystaveno rozšíření balení.
 
-V aplikaci Visual Studio 2017 verze 15,8 v režimu **/Permissive-** následující kód vyvolává C3770 *' const S ': není platnou základní třídou*:
+V aplikaci Visual Studio 2017 verze 15,8 v režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) následující kód vyvolává C3770 *' const S ': není platnou základní třídou*:
 
 ```cpp
 template<typename... T>
@@ -2528,11 +2610,11 @@ int main()
 }
 ```
 
-### <a name="template-keyword-and-nested-name-specifiers"></a>`template`klíčové slovo a vnořené specifikátory názvů
+### <a name="template-keyword-and-nested-name-specifiers"></a>klíčové slovo **šablony** a specifikátory vnořeného názvu
 
-V režimu **/Permissive-** kompilátor nyní vyžaduje `template` klíčové slovo, aby předcházel název šablony, když přichází po závislém vnořeném specifikátoru názvu.
+V režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) kompilátor nyní vyžaduje klíčové slovo **template** , aby předcházel název šablony, když přichází po závislém vnořeném specifikátoru názvu.
 
-Následující kód v režimu **/Permissive-** nyní vyvolává C7510: *' example ': použití závislého názvu šablony musí být předpona ' Template '. Poznámka: viz odkaz na instanci šablony třídy ' X<T>' kompilovány*:
+Následující kód v režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) nyní vyvolává C7510: *' example ': použití závislého názvu šablony musí být předpona ' Template '. Poznámka: viz odkaz na instanci šablony třídy ' X<T>' kompilovány*:
 
 ```cpp
 template<typename T> struct Base
@@ -2550,7 +2632,7 @@ struct X : Base<T>
 };
 ```
 
-Chcete-li chybu opravit, přidejte `template` klíčové slovo `Base<T>::example<int>();` do příkazu, jak je znázorněno v následujícím příkladu:
+Chcete-li chybu opravit, přidejte klíčové slovo **template** do `Base<T>::example<int>();` příkazu, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 template<typename T> struct Base
@@ -2593,7 +2675,7 @@ struct A
 A<>::from_template_t<A<int>> a;
 ```
 
-V aplikaci Visual Studio 2017 verze 15,9 v režimu **/Permissive-** kompilátor vyvolává C3861: *' from_template ': identifikátor nebyl nalezen*.
+V aplikaci Visual Studio 2017 verze 15,9 v režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) kompilátor vyvolává C3861: *' from_template ': identifikátor nebyl nalezen*.
 
 Chcete-li chybu opravit, `from_template` deklarujte `from_template_t`ji.
 
@@ -2616,7 +2698,7 @@ Kompilátor také vyvolává C7536 vždy, když je soubor. IFC zfalšován. Hlav
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Částečné řazení zahrnující aliasy a Neodvozená kontextová
 
-Implementace se odchylují v pravidlech částečného řazení, které zahrnují aliasy v neodvozených kontextech. V následujícím příkladu RSZ a kompilátor společnosti Microsoft C++ (v režimu **/Permissive-** ) vyvolávají chybu, zatímco Clang akceptuje kód.
+Implementace se odchylují v pravidlech částečného řazení, které zahrnují aliasy v neodvozených kontextech. V následujícím příkladu RSZ a kompilátor společnosti Microsoft C++ (v režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) ) vyvolávají chybu, zatímco Clang akceptuje kód.
 
 ```cpp
 #include <utility>
@@ -2734,7 +2816,7 @@ struct S
 {
     constexpr void f();
 };
-  
+ 
 template<>
 constexpr void S<int>::f()
 {
@@ -2750,7 +2832,7 @@ note: failure was caused by call of undefined function or one not declared 'cons
 note: see usage of 'g'.
 ```
 
-Chcete-li se této chybě vyhnout `constexpr` , odeberte kvalifikátor z explicitního vytváření instancí funkce. `f()`
+Chcete-li se této chybě vyhnout, odeberte kvalifikátor **constexpr** z explicitního vytváření instancí funkce `f()`.
 
 ::: moniker-end
 
