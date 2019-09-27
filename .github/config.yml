@@ -1,5 +1,4 @@
 newPRWelcomeComment: >
-  “
   Děkujeme, že přispíváte k našemu lokalizovanému obsahu! 
   Všechny příspěvky k našemu obsahu musí dodržovat následující pokyny:
   1. [Microsoft Language Style Guide](https://www.microsoft.com/Language/StyleGuides) popisující, jak má vypadat text při předkladu z angličtiny do jiného jazyky
@@ -8,4 +7,3 @@ newPRWelcomeComment: >
   Přispívejte dál a zajistěte si vyšší hodnocení na naší [přispěvatelské tabulce výsledků](https://microsoftl10n.github.io/), na které se vám připisují body za vaše <lokalizační> příspěvky!
 
   Microsoft Developer Relationship – mezinárodní skupina
-  “
