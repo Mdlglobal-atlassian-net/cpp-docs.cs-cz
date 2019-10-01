@@ -12,7 +12,7 @@
           href: general-mfc-topics.md
         - name: Použití zdrojových souborů MFC
           href: using-the-mfc-source-files.md
-        - name: MFC – verze knihovny
+        - name: MFC – knihovní verze
           expanded: false
           items:
             - name: MFC – verze knihovny
@@ -1023,7 +1023,7 @@
             - name: Životní cyklus dialogového okna
               expanded: false
               items:
-                - name: Životní cyklus dialogového okna
+                - name: Práce s dialogovými okny v MFC
                   href: life-cycle-of-a-dialog-box.md
                 - name: Vytváření a zobrazování dialogových oken
                   href: creating-and-displaying-dialog-boxes.md

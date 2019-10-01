@@ -409,6 +409,8 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: Ukázkový soubor projektu
                   href: build/reference/project-files.md
+                - name: Struktura souborů .vcxproj.filters
+                  href: build/reference/vcxproj-filters-files.md
             - name: Stránky vlastností projektu v C++
               expanded: false
               items:
@@ -426,15 +428,15 @@
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Stránky vlastností C/C++
                   href: build/reference/c-cpp-prop-page.md
-                - name: Stránky vlastností linkeru
+                - name: stránky vlastností linkeru
                   href: build/reference/linker-property-pages.md
                 - name: Stránky vlastností příkazového řádku
                   href: build/reference/command-line-property-pages.md
                 - name: NMake – stránka vlastností
                   href: build/reference/nmake-property-page.md
-                - name: Stránky vlastností nástroje manifest
+                - name: stránky vlastností nástroje manifest
                   href: build/reference/manifest-tool-property-pages.md
-                - name: Stránky vlastností prostředků
+                - name: stránky vlastností prostředků
                   href: build/reference/resources-property-pages.md
                 - name: Stránka vlastností spravovaných prostředků
                   href: build/reference/managed-resources-property-page.md
@@ -794,6 +796,8 @@
                       href: build/reference/zf.md
                     - name: /Zg (generování prototypů funkcí)
                       href: build/reference/zg-generate-function-prototypes.md
+                    - name: /ZH (algoritmus hash pro kontrolní součet v informacích o ladění)
+                      href: build/reference/zh.md
                     - name: /Zl (vynechání názvu výchozí knihovny)
                       href: build/reference/zl-omit-default-library-name.md
                     - name: /Zm (určení limitu přidělení paměti pro předkompilované hlavičky)
@@ -952,6 +956,10 @@
                   href: build/reference/largeaddressaware-handle-large-addresses.md
                 - name: /LIBPATH (další proměnná libpath)
                   href: build/reference/libpath-additional-libpath.md
+                - name: /LINKREPRO (název adresáře pro reprodukci odkazu)
+                  href: build/reference/linkrepro.md
+                - name: /LINKREPROTARGET (název souboru pro reprodukci odkazu)
+                  href: build/reference/linkreprotarget.md
                 - name: /LTCG (generování kódu během propojování)
                   href: build/reference/ltcg-link-time-code-generation.md
                 - name: /MACHINE (zadání cílové platformy)
@@ -1521,6 +1529,8 @@
           href: ide/writing-and-refactoring-code-cpp.md
         - name: Navigace v kódu C++
           href: ide/navigate-code-cpp.md
+        - name: Nastavení předvoleb kódování C++
+          href: ide/how-to-set-preferences.md
         - name: Spolupráce přes Live Share pro C++
           href: ide/live-share-cpp.md
         - name: Změna signatury
@@ -4809,7 +4819,7 @@
                       href: preprocessor/preprocessor-operators.md
                     - name: 'Operátor nastavení velikosti řetězce (#)'
                       href: preprocessor/stringizing-operator-hash.md
-                    - name: 'Charakterizace operátoru (#@)'
+                    - name: 'Operátor převádějící na znak (#@)'
                       href: preprocessor/charizing-operator-hash-at.md
                     - name: 'Operátor vložení tokenu (##)'
                       href: preprocessor/token-pasting-operator-hash-hash.md
