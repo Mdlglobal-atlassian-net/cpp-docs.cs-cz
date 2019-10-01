@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /LINKREPROTARGET linker option
 - -LINKREPROTARGET linker option
 - linker repro reporting
-ms.openlocfilehash: 4912e8bc64d31e3ecc97ea25783c7329e7d7861c
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d629c4c2665239d03f38569677fa579b6c8d37e0
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686836"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712685"
 ---
 # <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET (název souboru reprodukci propojení)
 
@@ -24,7 +24,7 @@ Instruuje linker nebo nástroj knihovny, aby vygeneroval propojení reprodukci, 
 
 > **/LINKREPROTARGET:** _název souboru_
 
-### <a name="arguments"></a>Argumenty
+### <a name="arguments"></a>Arguments
 
 **/LINKREPROTARGET:** _název souboru_@no__t – 2
 Název cílového souboru, který se má filtrovat Odkaz reprodukci je generován pouze v případě, že pojmenovaný soubor je výstupní cíl. Názvy souborů, které obsahují mezery, musí být uzavřeny do dvojitých uvozovek. Název souboru by měl obsahovat základní název a příponu, ale ne cestu.
@@ -39,7 +39,9 @@ Další informace o tom, jak a kdy vytvořit propojení reprodukci, najdete v č
 
 Pokud má mít možnost **/LINKREPROTARGET** nějaký účinek, musí být nastavené možnosti **/LINKREPRO** a [/out](out-output-file-name.md) .
 
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení této možnosti linkeru ve vývojovém prostředí sady Visual Studio
+**/LINKREPROTARGET** je k dispozici počínaje verzí Visual Studio 2019 verze 16,1.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
 1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
@@ -47,11 +49,11 @@ Pokud má mít možnost **/LINKREPROTARGET** nějaký účinek, musí být nasta
 
 1. Do pole **Další možnosti** zadejte možnost **/LINKREPROTARGET:** _název souboru_ . Kliknutím na **tlačítko OK** aplikujte změnu.
 
-### <a name="to-set-this-linker-option-programmatically"></a>Chcete-li nastavit tuto možnost linkeru programově
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Další informace najdete v tématech
+## <a name="see-also"></a>Viz také:
 
 [Referenční příručka linkeru MSVC](linking.md)\
 [MSVC Možnosti linkeru](linker-options.md)\

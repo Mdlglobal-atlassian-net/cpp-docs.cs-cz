@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685588"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712691"
 ---
 # <a name="linker-options"></a>Možnosti linkeru
 
@@ -23,11 +23,11 @@ LINK. exe spojuje soubory objektů a knihovny Common Object File Format (COFF) a
 
 V následující tabulce jsou uvedeny možnosti pro soubor LINK. exe. Další informace o propojení najdete v tématech:
 
-- [Možnosti propojení řízené kompilátorem](compiler-controlled-link-options.md)
+- [Možnosti LINK řízené kompilátorem](compiler-controlled-link-options.md)
 
-- [Vstupní soubory propojení](link-input-files.md)
+- [Vstupní soubory LINK](link-input-files.md)
 
-- [PROPOJIT výstup](link-output.md)
+- [LINK – výstup](link-output.md)
 
 - [Vyhrazená slova](reserved-words.md)
 
@@ -88,7 +88,7 @@ K určení některých možností linkeru můžete použít direktivu pragma [Ko
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Instruuje kompilátor, že aplikace podporuje adresy větší než 2 gigabajty.|
 |[/LIBPATH](libpath-additional-libpath.md)|Určuje cestu, která se má hledat před cestou ke knihovně prostředí.|
 |[/LINKREPRO](linkrepro.md)|Určuje cestu k vygenerování artefaktů reprodukci propojení v.|
-|[/LINKREPROTARGET](linkreprotarget.md)|Vygeneruje propojení reprodukci pouze při vytváření zadaného cíle.|
+|[/LINKREPROTARGET](linkreprotarget.md)|Vygeneruje propojení reprodukci pouze při vytváření zadaného cíle. <sup>16,1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|Určuje generování kódu při propojování.|
 |[/MACHINE](machine-specify-target-platform.md)|Určuje cílovou platformu.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Vytvoří soubor souběžného manifestu a volitelně ho vloží do binárního souboru.|
@@ -137,9 +137,9 @@ K určení některých možností linkeru můžete použít direktivu pragma [Ko
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|Částečně podepíše soubor metadat prostředí Windows Runtime (. winmd) umístěním veřejného klíče do souboru winmd.|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|Zpracovává upozornění linkeru jako chyby.|
 
-Další informace naleznete v tématu [možnosti propojení řízené kompilátorem](compiler-controlled-link-options.md).
+<sup>16,1</sup> Tato možnost je k dispozici počínaje verzí Visual Studio 2019 16,1.
 
-## <a name="see-also"></a>Další informace najdete v tématech
+## <a name="see-also"></a>Viz také:
 
 [Referenční @no__tC++ C/sestavení](c-cpp-building-reference.md)– 2
-[Referenční příručka linkeru MSVC](linking.md)
+[Referenční zdroje k linkeru MSVC](linking.md)
