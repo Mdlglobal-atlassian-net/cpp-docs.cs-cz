@@ -9,23 +9,23 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-ms.openlocfilehash: cef9941cccd49ca61f0a93472636656f7241a61e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c89ed82b148062ddb64fa85eaabda12f44e59895
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383812"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685761"
 ---
 # <a name="dialog-data-validation"></a>Ověřování dat dialogového okna
 
-Ověření kromě výměny dat můžete určit pomocí volání funkce DDV, jak je znázorněno v příkladu v [výměna dat dialogových oken](../mfc/dialog-data-exchange.md). `DDV_MaxChars` Volání v příkladu ověřuje, že řetězec zadaný v ovládacím prvku textového pole není delší než 20 znaků. Funkce DDV obvykle upozorní uživatele s okno se zprávou, pokud ověření selže a umístí na problematický ovládací prvek fokus, takže uživatel může znovu data. DDV funkce pro daný ovládací prvek musí být volána bezprostředně po funkci DDX pro stejný ovládací prvek.
+Ověřování můžete kromě výměny dat zadat také voláním funkce DDV, jak je znázorněno v příkladu v části [Výměna dat dialogových oken](../mfc/dialog-data-exchange.md). Volání `DDV_MaxChars` v příkladu ověřuje, že řetězec zadaný v ovládacím prvku textové pole není delší než 20 znaků. Funkce DDV obvykle upozorní uživatele na okno se zprávou, pokud se ověření nepovede a umístí fokus na problematické řízení, aby uživatel mohl znovu zadat data. Funkce DDV pro daný ovládací prvek musí být volána ihned po funkci DDX pro stejný ovládací prvek.
 
-Můžete také definovat vlastní vlastní rutiny DDX a DDV. Podrobnosti o tomto a dalších aspektů DDX a DDV najdete v tématu [26 Technická poznámka MFC](../mfc/tn026-ddx-and-ddv-routines.md).
+Můžete také definovat vlastní rutiny DDX a DDV. Podrobnosti o tomto a dalších aspektech DDX a DDV naleznete v tématu [technická Poznámka (MFC) 26](../mfc/tn026-ddx-and-ddv-routines.md).
 
-[Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) bude zapisovat všechny DDX a DDV volá v objektu map data za vás.
+[Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) zapíše všechna volání DDX a DDV v datové mapě za vás.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
 [Výměna a ověřování dat dialogových oken](../mfc/dialog-data-exchange-and-validation.md)<br/>
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Výměna dat dialogových oken](../mfc/dialog-data-exchange.md)

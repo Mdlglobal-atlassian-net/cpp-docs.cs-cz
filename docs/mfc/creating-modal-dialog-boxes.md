@@ -6,17 +6,17 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], modal
 ms.assetid: 26c7a68c-79f6-4862-a5a8-6024984644d2
-ms.openlocfilehash: 5de6eeb616f32c7b8829d827988a972e41658530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed0fe3b7ef8aeddea01f573bfe8e1c01a6b5b443
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174091"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685674"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Vytváření modálních dialogových oken
 
-Chcete-li vytvoření modálního dialogového okna, zavolejte buď dvě veřejné konstruktory deklarované v [CDialog](../mfc/reference/cdialog-class.md). V dalším kroku volání objektu dialogového okna [DoModal](../mfc/reference/cdialog-class.md#domodal) členské funkce k zobrazení dialogového okna a spravovat interakce s ním, dokud uživatel zvolí OK nebo zrušit. Tuto správu `DoModal` díky modální dialogové okno. Pro modální dialogová okna `DoModal` načte prostředku dialogového okna.
+Chcete-li vytvořit modální dialogové okno, zavolejte jeden ze dvou veřejných konstruktorů deklarovaných v [CDialog](../mfc/reference/cdialog-class.md). Dále zavolejte členskou funkci [DoModal](../mfc/reference/cdialog-class.md#domodal) objektu dialogového okna pro zobrazení dialogového okna a ke správě interakce s ním, dokud uživatel nezvolí OK nebo zrušit. Tato správa pomocí `DoModal` způsobuje, že dialogové okno je modální. V případě modálních dialogových oken `DoModal` načte prostředek dialogového okna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)

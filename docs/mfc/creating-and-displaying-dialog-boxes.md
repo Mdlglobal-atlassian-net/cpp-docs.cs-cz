@@ -8,26 +8,26 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: e0b7ff31576b345ac2911e62a6e10469845eecba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d23e4d2c9249ce248eb8092963036f2ba5cacac
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175027"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685737"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Vytváření a zobrazování dialogových oken
 
-Vytvoření objektu dialogového okna je dvoufázové operace. Nejprve vytvořte objekt dialogové okno a potom vytvořte dialogového okna. Modální a nemodální dialogová okna se liší trochu v procesu použité k vytvoření a jejich zobrazení. V následující tabulce jsou uvedeny jak modální a nemodální dialogové okno pole jsou obvykle vytvořen a zobrazí.
+Vytvoření objektu dialogového okna je dvoufázové operace. Nejprve Sestavte objekt dialogového okna a pak vytvořte dialogové okno. Modální a nemodální dialogová okna se trochu liší v procesu použitém k jejich vytvoření a zobrazení. Následující tabulka uvádí, jak jsou modální a nemodální dialogová okna normálně vytvořená a zobrazená.
 
 ### <a name="dialog-creation"></a>Vytvoření dialogového okna
 
-|Typ dialogové okno|Jak ji vytvořit|
+|Typ dialogového okna|Jak ho vytvořit|
 |-----------------|----------------------|
-|[Nemodální](../mfc/creating-modeless-dialog-boxes.md)|Vytvořit `CDialog`, zavolejte `Create` členskou funkci.|
-|[Modal](../mfc/creating-modal-dialog-boxes.md)|Vytvořit `CDialog`, zavolejte `DoModal` členskou funkci.|
+|[Modální](../mfc/creating-modeless-dialog-boxes.md)|Konstrukce `CDialog` a volání členské funkce `Create`.|
+|[Převodu](../mfc/creating-modal-dialog-boxes.md)|Konstrukce `CDialog` a volání členské funkce `DoModal`.|
 
-Pokud chcete, vytvoříte vašem dialogovém okně ze [šablony dialogového okna v paměti](../mfc/using-a-dialog-template-in-memory.md) , který je vytvořen, nikoli z prostředku šablony dialogového okna. Toto je rozšířená, ale.
+V případě potřeby můžete vytvořit dialogové okno ze [šablony dialogového okna v paměti](../mfc/using-a-dialog-template-in-memory.md) , kterou jste vytvořili, nikoli z prostředku šablony dialogového okna. Toto je pokročilé téma, ale.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)

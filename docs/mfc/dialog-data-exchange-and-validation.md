@@ -1,5 +1,5 @@
 ---
-title: Výměna a ověření dat dialogových oken
+title: Výměna a ověřování dat dialogových oken
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data validation [MFC], dialog boxes
@@ -15,24 +15,24 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: a52af898c844cce05a138b8bc0e608681d13a491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302095"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685758"
 ---
-# <a name="dialog-data-exchange-and-validation"></a>Výměna a ověření dat dialogových oken
+# <a name="dialog-data-exchange-and-validation"></a>Výměna a ověřování dat dialogových oken
 
-Výměna dat dialogových oken (DDX) je snadný způsob, inicializovat ovládací prvky ve vašem dialogovém okně a shromažďovat datový vstup uživatele. Ověřování dat dialogového okna (DDV) je snadný způsob, jak ověřit datové položky v dialogovém okně. Chcete-li využít výhod DDX a DDV v dialogových oknech, použijte [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) vytvářet datové členy a nastavte jejich datové typy a zadat ověřovací pravidla.
+Výměna dialogových dat (DDX) je jednoduchý způsob, jak inicializovat ovládací prvky v dialogovém okně a shromažďovat datové vstupy uživatelem. Ověřování dat dialogových oken (DDV) představuje snadný způsob, jak ověřit zadávání dat v dialogovém okně. Chcete-li využít výhod DDX a DDV v dialogových oknech, pomocí [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) vytvořte datové členy a nastavte jejich datové typy a určete pravidla ověřování.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Výměna dat dialogových oken](../mfc/dialog-data-exchange.md)
 
 - [Ověřování dat dialogového okna](../mfc/dialog-data-validation.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)

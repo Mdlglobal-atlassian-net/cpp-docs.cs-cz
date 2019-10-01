@@ -1,5 +1,5 @@
 ---
-title: Načítání dat z objektu dialogového okna
+title: Načítání dat z objektu dialogového okna
 ms.date: 11/04/2016
 helpviewer_keywords:
 - dialog boxes [MFC], retrieving user data
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-ms.openlocfilehash: b376edc3ee7d8abbca43da6d823e71abad99bc5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 903d76a1e672d05a3c093e528f7153562df8e3e5
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308898"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685578"
 ---
-# <a name="retrieving-data-from-the-dialog-object"></a>Načítání dat z objektu dialogového okna
+# <a name="retrieving-data-from-the-dialog-object"></a>Načítání dat z objektu dialogového okna
 
-Rozhraní poskytuje snadný způsob inicializace hodnot ovládacích prvků v dialogovém okně a k načtení hodnot z ovládacích prvků. Více pracné ruční přístup je pro volání funkce, jako `SetDlgItemText` a `GetDlgItemText` členské funkce třídy `CWnd`, které platí pro ovládací prvek windows. Pomocí těchto funkcí je každý řízení přístupu jednotlivě a nastavit nebo získat její hodnota volání funkcí, jako `SetWindowText` a `GetWindowText`. Přístup v rámci automatizuje inicializace a načtení.
+Rozhraní poskytuje snadný způsob, jak inicializovat hodnoty ovládacích prvků v dialogovém okně a načíst hodnoty z ovládacích prvků. Pracné ručním přístupem je volání funkcí, jako jsou členské funkce `SetDlgItemText` a `GetDlgItemText` třídy `CWnd`, které se vztahují k ovládacím prvkům Windows. S těmito funkcemi získáte přístup ke každému ovládacímu prvku jednotlivě pro nastavení nebo získání jeho hodnoty, volání funkcí, jako je například `SetWindowText` a `GetWindowText`. Přístup k rozhraní se automatizuje inicializací i načítáním.
 
-Výměna dat dialogových oken (DDX) umožňuje snadno vyměňovat data mezi ovládacími prvky v dialogovém okně proměnných pole a člen v objektu dialogového okna. Tato výměna pracuje oběma směry. Pokud chcete inicializovat ovládací prvky v dialogovém okně, můžete nastavit hodnoty datových členů v objektu dialogového okna a rozhraní bude přenos hodnoty k ovládacím prvkům předtím, než se zobrazí dialogové okno. Potom můžete kdykoli aktualizovat datové členy dialogové okno s daty zadané uživatelem. V tomto okamžiku můžete data ve odkazující na data členské proměnné.
+Výměna dialogových dat (DDX) umožňuje snadněji vyměňovat data mezi ovládacími prvky v dialogovém okně a členskými proměnnými v objektu dialogového okna. Tato výměna funguje jak oběma způsoby. Chcete-li inicializovat ovládací prvky v dialogovém okně, můžete nastavit hodnoty datových členů v objektu dialogového okna a rozhraní přenese hodnoty do ovládacích prvků před zobrazením dialogového okna. Pak můžete kdykoli aktualizovat datové členy dialogových oken daty zadanými uživatelem. V tomto okamžiku můžete použít data odkazem na proměnné datových členů.
 
-Můžete také nastavit hodnoty ovládací prvky dialogového okna, chcete-li být ověřeny pomocí ověřování dat dialogového okna (DDV).
+Můžete také zajistit, aby byly hodnoty ovládacích prvků dialog ověřovány automaticky pomocí ověřování dat dialogového okna (DDV).
 
-DDX a DDV jsou vysvětlené podrobněji [výměna dat dialogových oken a ověření](../mfc/dialog-data-exchange-and-validation.md).
+DDX a DDV jsou podrobněji vysvětleny v tématu [Výměna a ověřování dat dialogových oken](../mfc/dialog-data-exchange-and-validation.md).
 
-Pro modální dialogové okno, můžete načíst žádná data, kdy uživatel zadal `DoModal` vrátí IDOK, ale před dialogové okno je objekt zničen. Pro nemodální dialogové okno, můžete načíst data z objektu dialogového okna kdykoli po zavolání `UpdateData` s argumentem **TRUE** a následný přístup k proměnné členů třídy dialogového okna. Tomuto tématu je popsáno podrobněji v [výměna dat dialogových oken a ověření](../mfc/dialog-data-exchange-and-validation.md).
+V případě modálního dialogového okna můžete načíst všechna data, která uživatel zadal, když `DoModal` vrátí IDOK, ale před zničením objektu dialogového okna. Pro nemodální dialogové okno můžete načíst data z objektu dialogového okna kdykoli voláním `UpdateData` s argumentem **true** a následným přístupem k proměnným členů třídy dialogového okna. Tento předmět je podrobněji popsán v tématu [Výměna a ověřování dat dialogových oken](../mfc/dialog-data-exchange-and-validation.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)

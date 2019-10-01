@@ -1,6 +1,6 @@
 ---
-title: Životní cyklus dialogového okna
-ms.date: 11/04/2016
+title: Práce s dialogovými okny v MFC
+ms.date: 09/27/2019
 helpviewer_keywords:
 - dialog boxes [MFC], life cycle
 - modal dialog boxes [MFC], life cycle
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: a3772a180e35a57c997446fcf2268d84bec2daa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad15250cf9a8dd663072cf9423263260bbb40a0e
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365329"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685724"
 ---
-# <a name="life-cycle-of-a-dialog-box"></a>Životní cyklus dialogového okna
+# <a name="working-with-dialog-boxes-in-mfc"></a>Práce s dialogovými okny v MFC
 
-Během životního cyklu dialogového okna uživatel vyvolá dialogové okno, obvykle uvnitř obslužná rutina příkazu, který vytvoří a inicializuje objektu dialogového okna, kterou uživatel komunikuje dialogových oken a dialog se zavře.
+Během životního cyklu dialogového okna uživatel vyvolá dialogové okno, obvykle v rámci obslužné rutiny příkazu, která vytvoří a inicializuje objekt dialogového okna, uživatel pracuje s dialogovým oknem a pak se dialogové okno zavře.
 
-Vaše obslužná rutina pro modální dialogová okna, shromažďuje všechna data uživatele zadali po zavření dialogového okna. Protože objektu dialogového okna existuje po jeho dialogového okna uzavřel, jednoduše můžete členské proměnné třídy dialogového okna extrahovat data.
+U modálních dialogových oken vaše obslužná rutina shromáždí všechna data, která uživatel zadal po zavření dialogového okna. Vzhledem k tomu, že objekt dialogového okna existuje po zavření jeho dialogového okna, můžete jednoduše použít členské proměnné vaší třídy dialogu k extrakci dat.
 
-Pro nemodální dialogová okna může často extrahovat data z objektu dialogového okna, dialogové okno je stále zobrazená. V určitém okamžiku jeho zničení objektu dialogového okna; Pokud k tomu dojde, závisí na kódu.
+Pro nemodální dialogová okna můžete často extrahovat data z objektu dialogového okna, když je dialogové okno stále vidět. V určitém okamžiku je objekt dialogového okna zničen; v takovém případě závisí na vašem kódu.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Vytváření a zobrazování dialogových oken](../mfc/creating-and-displaying-dialog-boxes.md)
 
@@ -33,22 +33,22 @@ Pro nemodální dialogová okna může často extrahovat data z objektu dialogov
 
 - [Použití šablony dialogového okna v paměti](../mfc/using-a-dialog-template-in-memory.md)
 
-- [Nastavení barvy pozadí v dialogovém okně](../mfc/setting-the-dialog-boxs-background-color.md)
+- [Nastavení barvy pozadí dialogového okna](../mfc/setting-the-dialog-boxs-background-color.md)
 
-- [Inicializace dialogových oken](../mfc/initializing-the-dialog-box.md)
+- [Inicializace dialogového okna](../mfc/initializing-the-dialog-box.md)
 
-- [Zpracování zpráv Windows ve vašem dialogovém okně](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [Zpracování zpráv systému Windows ve vašem dialogovém okně](../mfc/handling-windows-messages-in-your-dialog-box.md)
 
 - [Načítání dat z objektu dialogového okna](../mfc/retrieving-data-from-the-dialog-object.md)
 
 - [Zavření dialogového okna](../mfc/closing-the-dialog-box.md)
 
-- [Zničení dialogových oken](../mfc/destroying-the-dialog-box.md)
+- [Zničení dialogového okna](../mfc/destroying-the-dialog-box.md)
 
 - [Výměna dat dialogových oken (DDX) a ověřování (DDV)](../mfc/dialog-data-exchange-and-validation.md)
 
-- [Dialogová okna Vlastnosti list](../mfc/property-sheets-and-property-pages-mfc.md)
+- [Dialogová okna seznamu vlastností](../mfc/property-sheets-and-property-pages-mfc.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
 [Dialogová okna](../mfc/dialog-boxes.md)

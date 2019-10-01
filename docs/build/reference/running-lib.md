@@ -1,6 +1,7 @@
 ---
 title: Spuštění knihovny LIB
-ms.date: 09/28/2018
+description: Popisuje možnosti příkazového řádku, které lze použít s nástrojem lib. exe.
+ms.date: 09/25/2019
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -26,74 +27,76 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d65c8d8b3b0cd28c7cccda25bfd9512321172f9
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318690"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685546"
 ---
 # <a name="running-lib"></a>Spuštění knihovny LIB
 
-Různé možnosti příkazového řádku umožňuje řízení LIB.
+K řízení knihovny LIB lze použít různé možnosti příkazového řádku.
 
-## <a name="lib-command-line"></a>Lib – příkazový řádek
+## <a name="lib-command-line"></a>LIB – příkazový řádek
 
-Spuštění knihovny LIB, zadejte příkaz `lib` následovaný možností a názvy souborů pro úlohu používáte LIB provádět. LIB také přijímá vstup příkazového řádku v souborech příkazů, které jsou popsány v následující části. Nepoužívat proměnnou prostředí LIB.
+Chcete-li spustit LIB, zadejte příkaz `lib` následovaný parametry a názvy souborů pro úkol, který používáte LIB k provedení. LIB také přijímá vstup z příkazového řádku v souborech příkazů, které jsou popsány v následující části. LIB nepoužívá proměnnou prostředí.
 
-> [!NOTE]
-> Pokud jste zvyklí LINK32.exe a LIB32.exe nástroje zadaný s Microsoft Win32 Software Development Kit pro Windows NT, pravděpodobně používáte buď příkaz `link32 -lib` nebo příkaz `lib32` pro správu knihoven a vytváření Importujte knihovny. Nezapomeňte změnit soubory pravidel a dávkové soubory použít `lib` místo příkazu.
+## <a name="lib-command-files"></a>LIB – soubory příkazů
 
-## <a name="lib-command-files"></a>Příkazové soubory knihovny LIB
+Argumenty příkazového řádku můžete předat do knihovny LIB v souboru příkazů pomocí následující syntaxe:
 
-Argumenty příkazového řádku můžete předat LIB v souboru příkazů, použijte tuto syntaxi:
+> **LIB \@** <em>příkaz-souboru</em>
 
-> **LIB \@**  <em>commandfile</em>
+Soubor *Command-File* je textový soubor. Mezi znakem @ ( **\@** ) a názvem souboru nejsou povoleny mezery ani tabulátory. Název *souboru příkazu* nemá výchozí příponu. je nutné zadat úplný název souboru včetně všech přípon. Nelze použít zástupné znaky. Můžete zadat absolutní nebo relativní cestu s názvem souboru.
 
-Soubor *commandfile* je textový soubor. Je povolená žádná mezera nebo tabulátor mezi zavináč (**\@**) a název souboru. Neexistuje žádný výchozí příponou; musíte zadat úplný název souboru, včetně všech rozšíření. Zástupné znaky nelze použít. Můžete zadat absolutní nebo relativní cestu s názvem souboru.
+V souboru příkazů mohou být argumenty odděleny mezerami nebo kartami, jak mohou být na příkazovém řádku. Argumenty lze také oddělit znaky nového řádku. Použijte středník ( **;** ) k označení komentáře. LIB ignoruje veškerý text od středníku po konec řádku.
 
-V souboru příkazů argumentů je možné oddělit mezerami či tabulátory, jak to jde na příkazovém řádku; také je možné oddělit znaky nového řádku. Použijte středník (**;**) k označení komentář. Lib – ignoruje veškerý text z středník na konec řádku.
+V příkazu LIB můžete zadat buď všechny, nebo jenom ty z příkazového řádku, a v příkazu LIB můžete použít více než jeden soubor příkazů. LIB přijímá vstup z příkazového souboru, jako by byl zadán v tomto umístění na příkazovém řádku. Soubory příkazů nemůžou být vnořené. LIB vypisuje obsah souborů příkazů, pokud se nepoužije možnost **/nologo** .
 
-Můžete zadat část nebo celý příkazový řádek v souboru příkazů a můžete použít více než jeden soubor příkazů v příkazu LIB. LIB přijímá vstupní soubor příkazů, jako kdyby byly zadány v dané oblasti na příkazovém řádku. Soubory příkazů nelze vnořit. LIB vypisuje obsah souborů příkazů, pokud není použit parametr/nologo.
+## <a name="using-lib-options"></a>Použití možností LIB
 
-## <a name="using-lib-options"></a>Pomocí možností LIB
+Možnost se skládá z specifikátoru možnosti, který je buď spojovník ( **-** ), nebo lomítko ( **/** ) následovaný názvem možnosti. Názvy možností nejde zkracovat. Některé možnosti přebírají argument zadaný za dvojtečkou ( **:** ). V rámci specifikace možnosti nejsou povoleny mezery ani tabulátory. Jednotlivé specifikace možností na příkazovém řádku můžete oddělit jednou nebo více mezerami nebo kartami. Názvy možností a jejich klíčové slovo nebo argumenty názvu souboru nerozlišují velká a malá písmena, ale identifikátory používané jako argumenty rozlišují malá a velká písmena. LIB zpracovává možnosti v pořadí zadaném v příkazovém řádku a v souborech příkazů. Pokud se možnost opakuje s jinými argumenty, má poslední zpracování přednost.
 
-Možnost sestává ze specifikátoru možnosti, které je buď pomlčka (**-**) nebo lomítka (**/**), následuje název možnosti. Názvy možností nelze zkracovat. Některé možnosti přijímají argument, zadané za dvojtečkou (**:**). Ve specifikaci možnosti nejsou povoleny mezery ani tabulátory. Jednotlivé specifikace možností lze na příkazovém řádku oddělit jednou nebo více mezerami či tabulátory. Názvy možností a jejich klíčového slova nebo argumenty názvů souborů nejsou velká a malá písmena, ale identifikátory používané jako argumenty jsou malá a velká písmena. Lib – zpracovává možnosti v pořadí zadaném v příkazovém řádku a v souborech příkazů. Pokud je možnost Opakovat různé argumenty, poslední z nich má být zpracován přednost.
+Následující možnosti platí pro všechny režimy LIB:
 
-Tyto možnosti platí pro všechny druhy LIB:
+> **/Errorreport** \[**žádné** &#124; &#124; &#124; **odeslání**fronty výzev]
 
-> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
+Pokud LIB. exe v době běhu selhává, můžete použít **/errorreport** k odeslání informací společnosti Microsoft o těchto interních chybách.
 
-Pokud lib.exe selže v době běhu, můžete použít **/errorreport** odesílat informace společnosti Microsoft o tyto vnitřní chyby.
+Další informace o **/errorreport**najdete v tématu [/errorreport (sestava chyb interních kompilátorů)](errorreport-report-internal-compiler-errors.md).
 
-Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](errorreport-report-internal-compiler-errors.md).
+> **/LINKREPRO:** _directory-Path_ \
+> **/LINKREPROTARGET:** _název souboru_
+
+Aby bylo možné pomáhat společnosti Microsoft diagnostikovat chyby a vnitřní chyby nástroje lib. exe, můžete použít možnost [/LINKREPRO](linkrepro.md) . Vygeneruje *propojení reprodukci*, sadu artefaktů sestavení, které umožňují Microsoftu reprodukování problému, ke kterému dojde během operací knihovny. Možnost [/LINKREPROTARGET](linkreprotarget.md) lze použít s možností **/LINKREPRO** . Generuje pouze artefakty reprodukci propojení, když soubor LIB. exe vytvoří zadaný soubor. Další informace najdete v tématu [postup nahlášení problému pomocí sady nástrojů Microsoftu C++ ](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 > **/LTCG**
 
-Zastupuje "LTCG" *generování kódu při propojování*. Tato funkce vyžaduje spolupráci mezi kompilátor ([cl.exe](compiler-options.md)), LIB a linkeru ([odkaz](linker-options.md)) k optimalizaci kódu za jakékoli součásti přínosech samostatně.
+"LTCG" představuje pro *generování kódu při propojování*. Tato funkce vyžaduje spolupráci mezi kompilátorem ([CL. exe](compiler-options.md)), lib a linkerem ([odkazem](linker-options.md)) za účelem optimalizace kódu nad rámec toho, co každá komponenta může provádět sám sebe.
 
-Pro LIB **parametru/LTCG** možnost určuje, že vstupy z cl.exe obsahovat objektové soubory, které byly generovány použitím [/GL](gl-whole-program-optimization.md) – možnost kompilátoru. Pokud tyto vstupy zaznamená LIB a **parametru/LTCG** není zadán, bude pomocí parametru/LTCG povolena poté, co zobrazení informačních zpráv restartujte. Jinými slovy není nutné explicitně nastavit tuto možnost, ale jeho zrychluje výkon sestavení to provést, protože není potřeba restartovat LIB.
+Pro LIB možnost **/LTCG** určuje, že vstupy z CL. exe obsahují soubory objektů, které byly generovány pomocí možnosti kompilátoru [/GL](gl-whole-program-optimization.md) . Pokud LIB nalezne takové vstupy a **/LTCG** se nezadá, po zobrazení informační zprávy se restartuje s povoleným/LTCG. Jinými slovy není nutné explicitně nastavit tuto možnost, ale zrychluje se tak výkon sestavení, protože LIB nemusí restartovat sám.
 
-V procesu sestavení na odkaz přijde výstup LIB. PROPOJENÍ má svůj vlastní samostatný **parametru/LTCG** možnost, která se používá k provádění různých optimalizací, včetně celého programu optimalizace a optimalizace na základě profilu (PGO) instrumentace. Další informace o možnosti propojení naleznete v tématu [parametru/LTCG](ltcg-link-time-code-generation.md).
+V procesu sestavení je výstup z knihovny LIB odeslán na odkaz. ODKAZ má svou vlastní samostatnou možnost **/LTCG** . Používá se k provádění různých optimalizací, včetně optimalizace celého programu a instrumentace s optimalizací na základě profilu (PGO). Další informace o možnosti propojení naleznete v tématu [/LTCG](ltcg-link-time-code-generation.md).
 
-> **/ MACHINE**
+> **/MACHINE**
 
-Určuje cílovou platformu programu. Obvykle není potřeba zadat/Machine. LIB odvodí typ počítače ze souborů .obj. V některých případech však LIB nelze určit typ počítače a vydává chybovou zprávu. Pokud k takové chybě dojde, zadejte volbu /MACHINE. V režimu/extract tato možnost se týká jenom k ověření. Použití `lib /?` příkazového řádku, chcete-li zobrazit typy dostupných počítačů.
+Určuje cílovou platformu pro program. Obvykle není nutné zadávat **/Machine**. LIB odvodí typ počítače ze souborů. obj. V některých případech však LIB nemůže určit typ počítače a vydá chybovou zprávu. Pokud dojde k takové chybě, zadejte **/Machine**. V režimu **/Extract** je tato možnost určena pouze pro ověřování. K zobrazení dostupných typů počítačů použijte `lib /?` na příkazovém řádku.
 
 > **/NOLOGO**
 
-Potlačí zobrazení LIB o autorských právech zprávu a číslo verze a zabraňuje zobrazování souborů příkazu.
+Potlačí zobrazení zprávy o autorských právech LIB a čísla verze a zabrání v vracení souborů příkazů.
 
-> **/ VERBOSE**
+> **/VERBOSE**
 
-Zobrazí podrobnosti o průběhu relace, včetně názvů přidávané soubory .obj. Informace odeslány na standardní výstup a je možné přesměrovat do souboru.
+Zobrazí podrobnosti o průběhu relace, včetně názvů přidávaných souborů. obj. Informace se odesílají do standardního výstupu a dají se přesměrovat na soubor.
 
-> **/WX**[**:NO**]
+> **/WX**[ **: No**]
 
-Zpracovávat upozornění jako chyby. Zobrazit [/WX (zpracovávat upozornění Linkeru jako chyb)](wx-treat-linker-warnings-as-errors.md) Další informace.
+Považovat upozornění za chyby. Další informace naleznete v tématu [/WX (zpracovávání upozornění linkeru jako chyby)](wx-treat-linker-warnings-as-errors.md).
 
-Další možnosti platí jenom pro konkrétní druhy LIB. Tyto možnosti jsou popsány v části popisující oba režimy.
+Další možnosti se vztahují pouze na konkrétní režimy LIB. Tyto možnosti jsou popsány v oddílech popisujících jednotlivé režimy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
-[Referenční dokumentace ke knihovně LIB](lib-reference.md)
+[LIB – Referenční dokumentace](lib-reference.md)

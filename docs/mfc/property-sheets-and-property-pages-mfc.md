@@ -8,28 +8,28 @@ helpviewer_keywords:
 - CPropertySheet class [MFC], property sheets and pages
 - property sheets, propert pages
 ms.assetid: de8fea12-6c35-4cef-8625-b8073a379446
-ms.openlocfilehash: 7ff2851cc4ed04a64f1a49d68b6e3143b5edccd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d4fd1c957b7f4d0d6ad10379a448309743aa11a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297018"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685084"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Seznamy vlastností a stránky vlastností (MFC)
 
-Knihovny MFC [dialogové okno](../mfc/dialog-boxes.md) můžete provést na pohled "kartě dialog" začleněním seznamy vlastností a stránky vlastností. Nazývá "seznam vlastností" v knihovně MFC, tento druh dialogové okno, podobně jako mnoho dialogových oken v aplikaci Microsoft Word, Excel a Visual C++ se zobrazí tak, aby obsahovala zásobníku seznamů s kartami, podobně jako zásobník složky souborů z zepředu dozadu nebo skupině kaskádových akcí systému windows. Ovládací prvky na kartě front-jsou viditelné. pouze kartě s popiskem je viditelný na zadní karty. Seznamy vlastností jsou zvláště užitečná pro správu velkého množství vlastností nebo nastavení, která poměrně elegantně lze rozdělit do několika skupin. Obvykle jeden seznam vlastností může zjednodušit uživatelského rozhraní tak, že nahradíte několik samostatných dialogových oknech.
+[Dialogové](../mfc/dialog-boxes.md) okno knihovny MFC může být pokaždé, když se zobrazí dialogové okno s přehledem o zahrnutí seznamů vlastností a stránek vlastností. Označuje se jako "seznam vlastností" v knihovně MFC. Tento druh dialogového okna, podobně jako mnoho dialogových oken v aplikaci Microsoft Word, Excel C++a Visual, vypadá jako zásobník karet s kartami, podobně jako zásobník složek souborů zobrazených vpřed nebo i skupina oken s kaskádami. Ovládací prvky na přední kartě jsou viditelné; na zadních kartách je zobrazená jenom karta s popiskem. Seznamy vlastností jsou zvláště užitečné pro správu velkého počtu vlastností nebo nastavení, která se poměrně rozpadají do několika skupin. Jeden seznam vlastností obvykle může zjednodušit uživatelské rozhraní nahrazením několika samostatných dialogových oken.
 
-Od verze knihovny MFC verze 4.0 seznamy vlastností a stránky vlastností jsou implementovány pomocí běžných ovládacích prvků, které jsou součástí Windows 95 a Windows NT verze 3.51 a vyšší.
+Od verze MFC 4,0 jsou seznamy vlastností a stránky vlastností implementovány pomocí běžných ovládacích prvků, které jsou dodávány se systémy Windows 95 a Windows NT verze 3,51 a novější.
 
-Seznamy vlastností jsou implementovány s třídami [cpropertysheet –](../mfc/reference/cpropertysheet-class.md) a [CPropertyPage](../mfc/reference/cpropertypage-class.md) (podle *odkaz knihovny MFC*). `CPropertySheet` Definuje celkový dialogu, který může obsahovat více výraz "stránky" na základě `CPropertyPage`.
+Seznamy vlastností jsou implementovány pomocí tříd [CPropertySheet –](../mfc/reference/cpropertysheet-class.md) a [CPropertyPage –](../mfc/reference/cpropertypage-class.md) (popsaných v *referenčních informacích knihovny MFC*). `CPropertySheet` definuje celkové dialogové okno, které může obsahovat více "stránek" na základě `CPropertyPage`.
 
-Informace o vytváření a práci se seznamy vlastností, naleznete v tématu [vlastností](../mfc/property-sheets-mfc.md).
+Informace o vytváření a práci se seznamy vlastností naleznete v tématu seznam [vlastností](../mfc/property-sheets-mfc.md)tématu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)<br/>
-[Seznamy vlastností a stránky vlastností v prostředí MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)<br/>
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Seznamy vlastností a stránky vlastností v MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)<br/>
 [Výměna dat](../mfc/exchanging-data.md)<br/>
 [Vytvoření nemodálního seznamu vlastností](../mfc/creating-a-modeless-property-sheet.md)<br/>
-[Ošetření tlačítka Použít](../mfc/handling-the-apply-button.md)
+[Zpracování tlačítka použít](../mfc/handling-the-apply-button.md)

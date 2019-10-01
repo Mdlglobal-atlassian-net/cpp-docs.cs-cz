@@ -1,5 +1,5 @@
 ---
-title: Zničení dialogových oken
+title: Zničení dialogového okna
 ms.date: 11/04/2016
 helpviewer_keywords:
 - dialog boxes [MFC], deleting
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], destroying
 - modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
-ms.openlocfilehash: 84ae5b336bb8eeac4f8ab7b6e5b9f00246f9ca15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b407c6e832dde7a5865146e7cc12d1840d3234a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254303"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685859"
 ---
-# <a name="destroying-the-dialog-box"></a>Zničení dialogových oken
+# <a name="destroying-the-dialog-box"></a>Zničení dialogového okna
 
-Modální dialogová okna jsou obvykle vytvořené v rámci zásobníku a zničeny při ukončení funkce, které byly vytvořeny. Destruktor objektu dialogového okna se volá, když objekt dostane mimo rozsah.
+Modální dialogová okna jsou obvykle vytvořena v bloku zásobníku a zničena v případě, že funkce, která je vytvořila, končí. Destruktor objektu dialogového okna se volá, když se objekt dostane mimo rozsah.
 
-Nemodální dialogová okna jsou obvykle vytvořených a vlastněných platformou nadřazeného zobrazení nebo rámec okna, okna hlavního rámce aplikace nebo okna rámce dokumentu. Výchozí hodnota [při zavření](../mfc/reference/cwnd-class.md#onclose) volání obsluhy [destroywindow –](../mfc/reference/cwnd-class.md#destroywindow), které ničí dialogového okna. Pokud dialogové okno samostatné, s žádné ukazatele nebo jiné sémantice speciální vlastnictví, by měly přepsat [postncdestroy –](../mfc/reference/cwnd-class.md#postncdestroy) ke zničení objektu jazyka C++ dialogového okna. Musí také přepsat [OnCancel](../mfc/reference/cdialog-class.md#oncancel) a volat `DestroyWindow` z ní. V opačném případě vlastník dialogového okna by měl zničit objekt jazyka C++, když už není nezbytné.
+Nemodální dialogová okna se obvykle vytváří a vlastní v rámci nadřazeného zobrazení nebo okna rámce – hlavní okno rámce aplikace nebo okno rámce dokumentu. Výchozí obslužná rutina pro [ukončení](../mfc/reference/cwnd-class.md#onclose) volá [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), což zničí okno dialogového okna. Pokud se dialogové okno nachází samostatně, bez ukazatelů na něj nebo jiné sémantiky zvláštního vlastnictví, byste měli přepsat [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) pro zničení objektu C++ dialogového okna. Měli byste také přepsat příkaz pro [zrušení](../mfc/reference/cdialog-class.md#oncancel) a volání `DestroyWindow` v rámci něj. V takovém případě by vlastník dialogového okna měl zničit C++ objekt, když již není nutný.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)

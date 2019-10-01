@@ -9,30 +9,30 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-ms.openlocfilehash: d0df76c506d4e6f2267e3a7628825e7b47a56c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e6c81a0f4bd6983c2a76baf6148941a4fa21d
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242325"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685631"
 ---
 # <a name="creating-the-dialog-resource"></a>Vytvoření prostředku dialogového okna
 
-K návrhu [dialogové okno](../mfc/dialog-boxes.md) a vytvoření prostředku dialogového okna, můžete použít [editoru dialogového okna](../windows/dialog-editor.md). V editoru dialogového okna můžete:
+Chcete-li navrhnout [dialogové okno](../mfc/dialog-boxes.md) a vytvořit prostředek dialogu, použijte [Editor dialogových oken](../windows/dialog-editor.md). V editoru dialogového okna můžete:
 
-- Upravte velikost a umístění, do kterého vaše dialogové okno bude mít, když se objeví.
+- Upravte velikost a umístění, ve kterém bude dialogové okno vypadat.
 
-- Různé typy ovládacích prvků přetažením z palety ovládacích prvků a jejich umístění, kam je chcete v dialogovém okně.
+- Přetáhněte různé druhy ovládacích prvků z palety ovládacích prvků a přetáhněte je tam, kde je chcete mít v dialogovém okně.
 
-- Umístěte ovládací prvky s zarovnání tlačítka na panelu nástrojů.
+- Umístěte ovládací prvky s tlačítky zarovnání na panelu nástrojů.
 
-- Otestujte vašem dialogovém okně simulovali vzhled a chování, které bude mít ve svém programu. V režimu testu můžete manipulovat s ovládací prvky dialogových oken zadáním textu do textových polí, kliknutím na tlačítek a tak dále.
+- Otestujte dialogové okno simulací vzhledu a chování, které bude mít v programu. V testovacím režimu můžete manipulovat s ovládacími prvky dialogového okna zadáním textu do textových polí, kliknutím na pushbuttons a tak dále.
 
-Po dokončení, uloží se prostředek vaší šablony dialogového okna souboru skriptu prostředků vaší aplikace. Můžete upravit ho později podle potřeby. Úplný popis toho, jak vytvořit a upravit prostředky dialogového okna, najdete v článku [editoru dialogového okna](../windows/dialog-editor.md) témata. Tento postup slouží také k vytváření prostředků šablony dialogového okna pro [CFormView](../mfc/reference/cformview-class.md) a [CRecordView](../mfc/reference/crecordview-class.md) třídy.
+Po dokončení se prostředek šablony dialogu uloží do souboru skriptu prostředků vaší aplikace. V případě potřeby ho můžete upravit později. Úplný popis vytváření a úprav prostředků dialogového okna najdete v tématech v [editoru dialogových oken](../windows/dialog-editor.md) . Tato technika se používá také k vytvoření prostředků šablony dialogového okna pro třídy [CFormView](../mfc/reference/cformview-class.md) a [CRecordView](../mfc/reference/crecordview-class.md) .
 
-Když v dialogovém okně Vzhled vám vyhovuje, vytvoření třídy dialogového okna a namapujte jeho zprávy, jak je popsáno v [vytvoření třídy dialogového okna s použitím průvodců kódem](../mfc/creating-a-dialog-class-with-code-wizards.md).
+Když vzhled dialogového okna vyhovuje vám, vytvořte třídu dialogového okna a namapujte její zprávy, jak je popsáno v tématu [Vytvoření třídy dialogového okna pomocí průvodců kódem](../mfc/creating-a-dialog-class-with-code-wizards.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows messages [MFC], handling
 - message handling [MFC], in dialog boxes
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
-ms.openlocfilehash: 5aff70010f3a84dceb88d22ee5e109cbf37abb5b
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 371d82072d569014e0d38b13fe6419c6fe7b8bc3
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907708"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685869"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Zpracování zpráv systému Windows ve vašem dialogovém okně
 
@@ -19,6 +19,6 @@ Dialogová okna jsou okna, která mohou zpracovávat zprávy systému Windows, p
 
 Další informace najdete v tématu [mapování zpráv systému Windows na třídu dialogu](../mfc/mapping-windows-messages-to-your-class.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)

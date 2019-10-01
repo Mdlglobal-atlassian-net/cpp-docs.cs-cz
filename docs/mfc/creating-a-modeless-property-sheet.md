@@ -6,29 +6,29 @@ helpviewer_keywords:
 - property sheets, modeless
 - Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
-ms.openlocfilehash: 39285927b67091f5b8762dab56009712d806d259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90f6dcd5659d308a4b39d6a7d5a42003fc1f2111
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407988"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685684"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Vytvoření nemodálního seznamu vlastností
 
-Seznamy vlastností, které vytvoříte za normálních okolností bude modální okno. Při použití modální seznam vlastností, musí uživatel před použitím jakékoliv jiné části aplikace zavřete okno vlastností. Tento článek popisuje, jakou metodu použijete k vytvoření nemodálního seznamu vlastností, které mu umožní ponechat otevřené okno vlastností při použití jiných částí aplikace.
+V normálním případě se seznamy vlastností, které vytvoříte, budou modální. Při použití modálního seznamu vlastností musí uživatel před použitím jakékoli jiné části aplikace zavřít seznam vlastností. Tento článek popisuje metody, které můžete použít k vytvoření nemodálního seznamu vlastností, který umožňuje uživateli ponechat seznam vlastností otevřený při použití jiných částí aplikace.
 
-Chcete-li zobrazit seznam vlastností jako nemodálního dialogového místo jako modální dialogové okno, zavolejte [CPropertySheet::Create](../mfc/reference/cpropertysheet-class.md#create) místo [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). Je nutné implementovat také některé další úkoly pro podporu nemodálního seznamu vlastností.
+Chcete-li zobrazit seznam vlastností jako nemodální dialogové okno namísto jako modální dialogové okno, zavolejte [CPropertySheet –:: Create](../mfc/reference/cpropertysheet-class.md#create) namísto [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). Také je nutné implementovat některé dodatečné úlohy pro podporu nemodálního seznamu vlastností.
 
-Jednu z dalších úloh se výměna dat mezi vlastností a externí objekt, který upravuje při otevření seznamu vlastností. Toto je obvykle stejné úlohy jako u standardní nemodální dialogová okna. Součástí této úlohy je implementace kanálu komunikace mezi nemodálního seznamu vlastností a externí objekt, na kterou se vztahují nastavení vlastností. Tato implementace je mnohem jednodušší, pokud odvodíte třídu od [cpropertysheet –](../mfc/reference/cpropertysheet-class.md) pro vaše nemodálního seznamu vlastností. Tento článek předpokládá, že jste tak učinili.
+Jedna z dalších úloh vyměňuje data mezi seznamem vlastností a externím objektem, který upravuje, když je otevřen seznam vlastností. Většinou se jedná o stejný úkol jako u standardních nemodálních dialogových oken. Součástí této úlohy je implementace kanálu komunikace mezi nemodálním seznamem vlastností a externím objektem, na který se aplikuje nastavení vlastností. Tato implementace je mnohem jednodušší, pokud odvozujete třídu od [CPropertySheet –](../mfc/reference/cpropertysheet-class.md) pro váš nemodální seznam vlastností. V tomto článku se předpokládá, že jste to udělali.
 
-Jednu metodu pro komunikaci mezi nemodálního seznamu vlastností a externí objekt (aktuální výběr v zobrazení, například) je definování ukazatel externí objekt ze seznamu vlastností. Definovat funkci (podobným názvem `SetMyExternalObject`) v `CPropertySheet`-odvozené třídy změnit při každé změně výběru z jednoho externího objektu na jiný ukazatel. `SetMyExternalObject` Funkce potřebuje k obnovení nastavení pro každou stránku vlastností tak, aby odrážely nově vybraného externího objektu. K tomu, `SetMyExternalObject` funkce musí mít přístup k [CPropertyPage](../mfc/reference/cpropertypage-class.md) objekty, které patří k `CPropertySheet` třídy.
+Jedna metoda pro komunikaci mezi nemodálním seznamem vlastností a externím objektem (například aktuální výběr v zobrazení) je definovat ukazatel z seznamu vlastností na externí objekt. Definujte funkci (s názvem `SetMyExternalObject`) v třídě odvozené @no__t -1, abyste změnili ukazatel při každé změně fokusu z jednoho externího objektu na jiný. Funkce `SetMyExternalObject` musí resetovat nastavení pro každou stránku vlastností tak, aby odrážela nově vybraný externí objekt. Aby to bylo možné, funkce `SetMyExternalObject` musí mít přístup k objektům [CPropertyPage –](../mfc/reference/cpropertypage-class.md) , které patří do třídy `CPropertySheet`.
 
-Nejpohodlnější způsob, jak pro poskytnutí přístupu k stránky vlastností v rámci seznamu vlastností, je vložit `CPropertyPage` objekty v `CPropertySheet`-odvozenému objektu. Vkládání `CPropertyPage` objekty v `CPropertySheet`-odvozeného objektu se liší od návrh typický pro modální dialogová okna, kde vlastník vlastností vytvoří `CPropertyPage` objektů a předává je do seznamu vlastností prostřednictvím [ CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage).
+Nejpohodlnější způsob poskytnutí přístupu k stránkám vlastností v rámci seznamu vlastností je vložení objektů `CPropertyPage` do objektu odvozeného z @no__t -1. Vložení objektů `CPropertyPage` do objektu odvozeného @no__t -1 se liší od typického návrhu modálních dialogových oken, kde vlastník seznamu vlastností vytvoří objekty `CPropertyPage` a předá je do seznamu vlastností prostřednictvím [CPropertySheet –:: addPage](../mfc/reference/cpropertysheet-class.md#addpage).
 
-Existuje mnoho alternativy uživatelského rozhraní pro určení, kdy bude použito nastavení nemodálního seznamu vlastností do externího objektu. Jeden alternativou je k aplikování nastavení na aktuální stránce vlastností pokaždé, když uživatel změní jakákoli hodnota. Další možností je použít tlačítko, což mu umožní accumulate změny na stránkách vlastností před jejich potvrzením do externího objektu. Další informace o způsobech ke zpracování na tlačítko použít, najdete v článku [ošetření tlačítka použít](../mfc/handling-the-apply-button.md).
+Existuje mnoho alternativ uživatelského rozhraní pro určení, kdy má být nastavení nemodálního seznamu vlastností použito pro externí objekt. Jednou z možností je použít nastavení aktuální stránky vlastností vždy, když uživatel změní libovolnou hodnotu. Další možností je poskytnout tlačítko použít, které uživateli umožňuje shromáždit změny na stránkách vlastností před jejich potvrzením externímu objektu. Informace o způsobech zpracování tlačítka použít naleznete v článku [manipulace s tlačítkem použít](../mfc/handling-the-apply-button.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
 [Seznamy vlastností](../mfc/property-sheets-mfc.md)<br/>
 [Výměna dat](../mfc/exchanging-data.md)<br/>
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)

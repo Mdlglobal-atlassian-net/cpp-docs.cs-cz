@@ -1,5 +1,5 @@
 ---
-title: Komponenty dialogového okna v rozhraní .NET Framework
+title: Komponenty dialogového okna v rozhraní .NET Framework
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - dialog templates [MFC], MFC framework
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
-ms.openlocfilehash: 88027df7433267925e91db2d368b744cee8a9e75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15d01924be811a9c9ec8ea333870f444bf9aa61a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182290"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685836"
 ---
-# <a name="dialog-box-components-in-the-framework"></a>Komponenty dialogového okna v rozhraní .NET Framework
+# <a name="dialog-box-components-in-the-framework"></a>Komponenty dialogového okna v rozhraní .NET Framework
 
-V rámci MFC dialogového okna má dvě součásti:
+V rozhraní knihovny MFC má dialogové okno dvě komponenty:
 
-- Prostředek šablony dialogového okna, která určuje ovládací prvky dialogových oken a jejich umístění.
+- Prostředek šablony dialogového okna, který určuje ovládací prvky dialogového okna a jejich umístění.
 
-   Dialogové okno prostředků ukládá šablony dialogového okna, ve kterém Windows vytvoří dialogové okno a zobrazí ji. Šablona specifikuje v dialogovém okně Vlastnosti, včetně jeho velikost, umístění, styl a typy a umístění ovládacích prvků v dialogovém okně. Obvykle použijete šablony dialogového okna uložené jako prostředek, ale můžete také vytvořit vlastní šablonu v paměti.
+   Dialogové okno obsahuje šablonu dialogového okna, ze které systém Windows vytvoří dialogové okno a zobrazí jej. Šablona určuje charakteristiky dialogového okna, včetně jeho velikosti, umístění, stylu a typů a umístění ovládacích prvků dialogového okna. Obvykle budete používat šablonu dialogu uloženou jako prostředek, ale můžete také vytvořit vlastní šablonu v paměti.
 
-- Dialogové okno třída odvozená z [CDialog](../mfc/reference/cdialog-class.md), a poskytuje tak programové rozhraní pro správu dialogových oken.
+- Třída dialogového okna odvozená od [CDialog](../mfc/reference/cdialog-class.md), která poskytuje programové rozhraní pro správu dialogového okna.
 
-   Dialogové okno je okno a připojí do okna Windows, když je viditelné. Při vytvoření dialogového okna, prostředku šablony dialogového okna slouží jako šablony pro vytváření podřízených ovládacích prvků okno pro dialogové okno.
+   Dialogové okno je okno, které se připojí k oknu Windows, pokud je viditelné. Když je dialogové okno vytvořeno, použije se jako šablona pro vytváření podřízených ovládacích prvků okna pro dialogové okno prostředek šablony dialogového okna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
-[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+[Práce s dialogovými okny v MFC](../mfc/life-cycle-of-a-dialog-box.md)
