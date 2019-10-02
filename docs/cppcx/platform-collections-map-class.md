@@ -1,6 +1,6 @@
 ---
-title: 'Platform::Collections:: map – třída'
-ms.date: 03/27/2019
+title: 'Platform:: Collections:: map – třída'
+ms.date: 10/01/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81721d719a424250beed89f4a5656b3f2fc27922
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161755"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816301"
 ---
-# <a name="platformcollectionsmap-class"></a>Platform::Collections:: map – třída
+# <a name="platformcollectionsmap-class"></a>Platform:: Collections:: map – třída
 
-Představuje *mapy*, což je kolekce párů klíč hodnota.
+Představuje *mapu*, která je kolekcí párů klíč-hodnota. Implementuje [Windows:: Foundation:: Collections:: IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_) pro usnadnění [vazby dat](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,61 +39,61 @@ ref class Map sealed;
 ### <a name="parameters"></a>Parametry
 
 *K*<br/>
-Typ klíče v páru klíč hodnota.
+Typ klíče v páru klíč-hodnota.
 
-*V*<br/>
-Typ hodnoty v páru klíč hodnota.
+*ICES*<br/>
+Typ hodnoty v páru klíč-hodnota.
 
 *C*<br/>
-Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu Map. Ve výchozím nastavení [std::less\<K >](../standard-library/less-struct.md).
+Typ, který poskytuje objekt funkce, který může porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí v mapě. Ve výchozím nastavení je [> std:: less @ no__t-1 tisíc](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()* vygenerovaný kompilátorem funkci, která ověřuje typu *K* a *V* a poskytuje uživatelsky přívětivou chybovou zprávu, pokud typ nelze ukládat v objektu Map.
+*__is_valid_winrt_type ()* Funkce vygenerovaná kompilátorem, která ověřuje typ *K* a *V* a poskytuje popisnou chybovou zprávu, pokud typ nemůže být uložen na mapě.
 
 ### <a name="remarks"></a>Poznámky
 
-Povolené typy jsou:
+Povolené typy:
 
-- celá čísla
+- Celá čísla
 
 - Třída rozhraní ^
 
 - Třída Public ref class ^
 
-- Hodnota – struktura
+- struktura hodnoty
 
-- Veřejný výčet tříd
+- Public enum – třída
 
-Mapa je v podstatě obálka pro [std::map](../standard-library/map-class.md). Je konkrétní implementaci C++ [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) a [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) typy, které jsou předány přes veřejné rozhraní Windows Runtime. Pokud se pokusíte použít `Platform::Collections::Map` zadejte veřejné návratová hodnota nebo parametr, je vyvolána C3986 Chyba kompilátoru. Chybu můžete vyřešit změnou typu parametr nebo návratovou hodnotu pro [Windows::Foundation::Collections::IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+Mapa je v podstatě obálkou pro [std:: map](../standard-library/map-class.md). Jedná se o C++ konkrétní implementaci [Windows:: Foundation:: Collections:: IMAP < Windows:: Foundation:: Collections:: IKeyValuePair @ no__t-2K, V > >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) a [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) typy, které se předávají přes veřejná okna. Běhová rozhraní. Pokud se pokusíte použít typ `Platform::Collections::Map` ve veřejné návratové hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou typu parametru nebo návratové hodnoty na [Windows:: Foundation:: Collections:: IMAP @ no__t-1 tisíc, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
 Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Členové
+### <a name="members"></a>Pedagog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[Map::map](#ctor)|Inicializuje novou instanci třídy Map.|
+|[Map:: map](#ctor)|Inicializuje novou instanci třídy map.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[Map::clear](#clear)|Odebere všechny páry klíč hodnota z aktuálního objektu Map.|
-|[Map::First](#first)|Vrátí iterátor, který určuje první prvek v objektu map.|
-|[Map::GetView](#getview)|Vrátí zobrazení jen pro čtení do aktuální mapování To znamená [Platform::Collections:: mapview – třída](../cppcx/platform-collections-mapview-class.md).|
-|[Map::HasKey](#haskey)|Určuje, zda aktuální mapa obsahuje zadaný klíč.|
-|[Map::Insert](#insert)|Přidá zadanou dvojici klíč hodnota do aktuálního objektu Map.|
-|[Map::Lookup](#lookup)|Získá prvek na zadaný klíč v aktuálním objektu Map.|
-|[Map::Remove](#remove)|Odstraní zadanou dvojici klíč hodnota z aktuálního objektu Map.|
-|[Map::size](#size)|Vrátí počet prvků v aktuálním objektu Map.|
+|[Map:: Clear](#clear)|Odebere všechny páry klíč-hodnota z aktuálního objektu mapy.|
+|[Map:: First](#first)|Vrátí iterátor, který určuje první prvek v mapě.|
+|[Map:: GetView](#getview)|Vrátí zobrazení aktuálního mapování jen pro čtení. To znamená, že [Třída Platform:: Collections:: MapView](../cppcx/platform-collections-mapview-class.md).|
+|[Map:: Haskey –](#haskey)|Určuje, zda aktuální mapa obsahuje zadaný klíč.|
+|[Map:: INSERT](#insert)|Přidá k aktuálnímu objektu mapy zadanou dvojici klíč-hodnota.|
+|[Map:: Lookup](#lookup)|Načte prvek v zadaném klíči v aktuálním objektu map.|
+|[Map:: Remove](#remove)|Odstraní specifikovanou dvojici klíč-hodnota z aktuálního objektu mapy.|
+|[Map:: size](#size)|Vrátí počet prvků v aktuálním objektu map.|
 
-### <a name="events"></a>Události
+### <a name="events"></a>Akce
 
 |||
 |-|-|
-|Název|Popis|
-|[Map::mapchanged –](#mapchanged) událostí|Nastane, pokud se změní na mapě.|
+|Name (Název)|Popis|
+|[Map:: MapChanged –](#mapchanged) událost|Nastane, pokud se změní mapa.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -101,13 +101,13 @@ Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** collection.h
+**Header:** Collection. h
 
-**Namespace:** Platform::Collections –
+**Obor názvů:** Platform:: Collections
 
-## <a name="clear"></a>  Map::clear – metoda
+## <a name="clear"></a>Map:: Clear – metoda
 
-Odebere všechny páry klíč hodnota z aktuálního objektu Map.
+Odebere všechny páry klíč-hodnota z aktuálního objektu mapy.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -115,9 +115,9 @@ Odebere všechny páry klíč hodnota z aktuálního objektu Map.
 virtual void Clear();
 ```
 
-## <a name="first"></a>  Map::First – metoda
+## <a name="first"></a>Map:: First – metoda
 
-Vrátí iterátor, který určuje první prvek v objektu map, nebo `nullptr` Pokud mapa je prázdný.
+Vrátí iterátor, který určuje první prvek v mapě, nebo `nullptr`, pokud je mapa prázdná.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -128,15 +128,15 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor, který určuje první prvek v objektu map.
+Iterátor, který určuje první prvek v mapě.
 
 ### <a name="remarks"></a>Poznámky
 
-Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například, `auto x = myMap->First();`.
+Pohodlný způsob, jak uchovávat iterátory vrácené funkcí First (), je přiřadit návratovou hodnotu proměnné, která je deklarována s klíčovým slovem srážky typu **auto** . Například, `auto x = myMap->First();`.
 
-## <a name="getview"></a>  Map::GetView – metoda
+## <a name="getview"></a>Map:: GetView – metoda
 
-Vrátí zobrazení jen pro čtení do aktuální mapování To znamená, [Platform::Collections:: mapview – třída](../cppcx/platform-collections-mapview-class.md), která implementuje [Windows::Foundation::Collections::IMapView\<K, V >] / uwp/api/Windows.Foundation.Collections.IMapView_K_V_) rozhraní.
+Vrátí zobrazení aktuálního mapování jen pro čtení. To znamená, že [Třída Platform:: Collections:: MapView](../cppcx/platform-collections-mapview-class.md), která implementuje rozhraní [Windows:: Foundation:: Collections:: IMapView @ No__t-1 tisíc, V >]/UWP/API/Windows.Foundation.Collections.IMapView_K_V_).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -146,9 +146,9 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `MapView` objektu.
+Objekt `MapView`.
 
-## <a name="haskey"></a>  Map::HasKey – metoda
+## <a name="haskey"></a>Map:: Haskey – – metoda
 
 Určuje, zda aktuální mapa obsahuje zadaný klíč.
 
@@ -161,15 +161,15 @@ bool HasKey(K key);
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Klíč používaná k nalezení elementu mapy. Typ *klíč* je typename *K*.
+Klíč, který slouží k vyhledání mapového prvku. Typ *klíče* je TypeName *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud je klíč nalezen, jinak **false**.
+**true** , pokud se klíč najde; v opačném případě **false**.
 
-## <a name="insert"></a>  Map::Insert – metoda
+## <a name="insert"></a>Map:: Insert – metoda
 
-Přidá zadanou dvojici klíč hodnota do aktuálního objektu Map.
+Přidá k aktuálnímu objektu mapy zadanou dvojici klíč-hodnota.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -180,18 +180,18 @@ virtual bool Insert(K key, V value);
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
+Klíčová část páru klíč-hodnota. Typ *klíče* je TypeName *K*.
 
 *value*<br/>
-Hodnota část páru klíč hodnota. Typ *hodnotu* je typename *V*.
+Část hodnoty páru klíč-hodnota. Typ *hodnoty* je TypeName *V*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud klíč existujícího prvku v aktuální mapování odpovídá *klíč* a hodnota část tohoto prvku je nastavená na *hodnota*. **false** žádné stávající elementy v aktuálním Map *klíč* a *klíč* a *hodnotu* parametry jsou provedeny v páru klíč hodnota a pak přidá do aktuální mapování.
+**true** , pokud klíč stávajícího prvku v aktuální mapě odpovídá *klíči* a hodnota části tohoto prvku je nastavena na *hodnotu*. **false** , pokud žádný existující element v aktuální mapě neodpovídá *klíči* a parametry *klíče* a *hodnoty* se provedou s dvojicí klíč-hodnota a pak se přidaly k aktuální mapě.
 
-## <a name="lookup"></a>  Map::Lookup – metoda
+## <a name="lookup"></a>Map:: Lookup – Metoda
 
-Načte hodnotu typu V, který je spojen se zadaným klíčem typu kB, pokud klíč existuje.
+Načte hodnotu typu V, která je přidružena k zadanému klíči typu K, pokud klíč existuje.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -202,19 +202,19 @@ V Lookup(K key);
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Klíč používaná k nalezení prvku v objektu Map. Typ *klíč* je typename *K*.
+Klíč, který slouží k vyhledání prvku v mapě. Typ *klíče* je TypeName *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která se páruje s oblastí *klíč*. Typ vrácené hodnoty je typename *V*.
+Hodnota, která se spáruje s *klíčem*. Typ návratové hodnoty je TypeName *V*.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud klíč neexistuje, o [Platform::outofboundsexception –](../cppcx/platform-outofboundsexception-class.md) je vyvolána výjimka.
+Pokud klíč neexistuje, je vyvolána výjimka [Platform:: OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) .
 
-## <a name="ctor"></a>  Map::map konstruktor
+## <a name="ctor"></a>Map:: map – konstruktor
 
-Inicializuje novou instanci třídy Map.
+Inicializuje novou instanci třídy map.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -231,24 +231,24 @@ Map(
 
 ### <a name="parameters"></a>Parametry
 
-*Inicializace*<br/>
-Typename aktuální mapování.
+*For*<br/>
+Název TypeName aktuální mapy
 
-*comp*<br/>
-Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu Map.
+*zajištění*<br/>
+Typ, který poskytuje objekt funkce, který může porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí v mapě.
 
-*m*<br/>
-Odkaz nebo [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k `map Class` , který slouží k inicializaci aktuální mapování.
+*4m*<br/>
+Odkaz nebo [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) na `map Class`, které se používají k inicializaci aktuální mapy.
 
 *první*<br/>
-Vstupní iterátor první prvek v rozsahu prvků, které slouží k inicializaci aktuální mapování.
+Vstupní iterátor prvního prvku v rozsahu prvků, který slouží k inicializaci aktuální mapy.
 
-*last*<br/>
-Vstupní iterátor první prvek po celou řadu prvků, které slouží k inicializaci aktuální mapování.
+*posledního*<br/>
+Vstupní iterátor prvního prvku za rozsah prvků použitý k inicializaci aktuální mapy.
 
-## <a name="mapchanged"></a>  Map::mapchanged – událost
+## <a name="mapchanged"></a>Map:: MapChanged – událost
 
-Vyvoláno, když je položka vložena do nebo odebrány z mapy.
+Je aktivována při vložení nebo odebrání položky z mapy.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -256,17 +256,17 @@ Vyvoláno, když je položka vložena do nebo odebrány z mapy.
 event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 ```
 
-### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
+### <a name="property-valuereturn-value"></a>Hodnota nebo návratová hodnota vlastnosti
 
-A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , který obsahuje informace o objektu, který vyvolal událost a druh změn, ke které došlo. Viz také [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) a [CollectionChange výčet](/uwp/api/windows.foundation.collections.collectionchange).
+[MapChangedEventHandler @ no__t-1 tisíc, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , který obsahuje informace o objektu, který vyvolal událost, a o druhu změny, ke které došlo. Viz také [IMapChangedEventArgs @ no__t-1 tisíc >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) a [CollectionChange](/uwp/api/windows.foundation.collections.collectionchange).
 
-## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework
+## <a name="net-framework-equivalent"></a>Ekvivalent .NET Framework
 
-Projekt aplikace Windows Runtime pomocí jazyka C# nebo Visual Basic IMap\<K, V > jako IDictionary\<K, V >.
+Prostředí Windows Runtime aplikace, které C# používají nebo Visual Basic Project IMAP @ No__t-1 tisíc, v > jako IDictionary @ No__t-2k, v >.
 
-## <a name="remove"></a>  Map::Remove – metoda
+## <a name="remove"></a>Map:: Remove – metoda
 
-Odstraní zadanou dvojici klíč hodnota z aktuálního objektu Map.
+Odstraní specifikovanou dvojici klíč-hodnota z aktuálního objektu mapy.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -277,11 +277,11 @@ virtual void Remove(K key);
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
+Klíčová část páru klíč-hodnota. Typ *klíče* je TypeName *K*.
 
-## <a name="size"></a>  Map::size – metoda
+## <a name="size"></a>Map:: size – metoda
 
-Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvků v objektu Map.
+Vrátí počet elementů [Windows:: Foundation:: Collections:: IKeyValuePair @ no__t-1 tisíc, v >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) v mapě.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -291,9 +291,10 @@ virtual property unsigned int Size;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet prvků v objektu Map.
+Počet prvků v mapě.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
-[Platforma Namespace](platform-namespace-c-cx.md)<br/>
-[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[Kolekce (C++/CX)](collections-c-cx.md)<br/>
+[Obor názvů platformy](platform-namespace-c-cx.md)<br/>
+[Vytváření komponent prostředí Windows Runtime v nástrojiC++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

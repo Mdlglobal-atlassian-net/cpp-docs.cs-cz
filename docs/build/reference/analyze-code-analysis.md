@@ -1,6 +1,6 @@
 ---
-title: /analyze (Analýza kódu)
-ms.date: 04/26/2018
+title: /analyze (analýza kódu)
+ms.date: 10/01/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnablePREfast
 - /analyze
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d647045d76dc32544f8146424b220547890b0943
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273154"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816324"
 ---
-# <a name="analyze-code-analysis"></a>/analyze (Analýza kódu)
+# <a name="analyze-code-analysis"></a>/analyze (analýza kódu)
 
-Umožňuje zadat parametry pro analýzu a řízení kódu.
+Povoluje analýzu kódu a možnosti řízení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,27 +28,27 @@ Umožňuje zadat parametry pro analýzu a řízení kódu.
 /analyze[-][:WX-][:log filename][:quiet][:stacksize number][:max_paths number][:only][:ruleset]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
-/ analyze zapne na analýzu ve výchozím režimu. Výstup analýzy se zobrazuje **výstup** okna jako další chybové zprávy. Použití **/ analyze-** k explicitnímu vypnutí analýzy.
+/Analyze zapne analýzu ve výchozím režimu. Výstup analýzy přejde do okna **výstup** jako jiné chybové zprávy. K explicitnímu vypnutí analýzy použijte **/analyze-** .
 
-/ analyze: WX-zadání **/ analyze: WX -** znamená, že upozornění analýzy kódu, které nemají být považována za chyby při kompilaci pomocí **/WX**. Další informace najdete v tématu [/w, /W0, /W1, /W2, w3, / W4, /w1, /w2, w3, / W4, / wall, WD, / we, Wo, WV, /WX (úroveň upozornění)](compiler-option-warning-level.md).
+/analyze: WX-specifikovat **/analyze: WX-** znamená, že při kompilaci pomocí **/WX**se nepovažují upozornění analýzy kódu jako chyby. Další informace najdete v tématech [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (úroveň upozornění)](compiler-option-warning-level.md).
 
-/ analyze: log `filename` podrobné výsledky analýzy jsou zapsány jako XML soubor, který je určen `filename`.
+/analyze: log `filename` podrobné výsledky analyzátoru jsou zapsány jako XML do souboru určeného `filename`.
 
-/ analyze: quiet zapne vypnout výstup analýzy **výstup** okna.
+/analyze: quiet vypne výstup analyzátoru do okna **výstup** .
 
-/ analyze: stacksize `number` `number` parametr, který se používá tato možnost určuje velikost v bajtech rámce zásobníku, pro které upozornění [C6262](/visualstudio/code-quality/c6262) je generován. Pokud tento parametr není zadán, má rámec zásobníku ve výchozím nastavení velikost 16 kB.
+/analyze: STACKSIZE `number` parametr `number`, který se používá s touto možností určuje velikost rámce zásobníku, pro který je vygenerováno upozornění [C6262](/visualstudio/code-quality/c6262) . Mezera před `number` je volitelná. Pokud tento parametr není zadán, velikost rámce zásobníku je ve výchozím nastavení 16 KB.
 
-/ analyze: max_paths `number` `number` parametr, který se používá s tímto parametrem, určuje maximální počet analyzovaných cest kódu. Pokud tento parametr není zadán, je ve výchozím nastavení tento počet 256. Vyšší hodnoty provádějí důkladnější kontrolu, ale analýza může trvat déle.
+/analyze: max_paths `number` parametr `number`, který se používá s touto možností určuje maximální počet cest kódu, které se mají analyzovat. Pokud tento parametr není zadán, bude ve výchozím nastavení číslo 256. Větší hodnoty provádějí důkladnější kontrolu, ale analýza může trvat delší dobu.
 
-/ analyze: pouze obvykle, kompilátor generuje kód a provádí další kontrolu po spuštění analýzy syntaxe. **/ Analyze: pouze** volba vypne tuto fázi generování kódu; tím se urychlí analýza, ale nejsou zaznamenávány chyby a upozornění, které mohou být zjištěna ve fázi generování kódu kompilátoru kompilace. Pokud program obsahuje chyby generování kódu, mohou být výsledky analýzy nespolehlivé; proto doporučujeme, abyste tento parametr použili pouze v případě, že kód již prošel kontrolou syntaxe generování kódu bez chyb.
+/analyze: obvykle kompilátor vygeneruje kód a po spuštění analyzátoru provede více kontroly syntaxe. Možnost **/analyze: Only** vypne průchod generování kódu; Díky tomu je analýza rychlejší, ale chyby kompilace a upozornění, která mohla být zjištěna předáním generování kódu kompilátorem, nejsou generována. Pokud program neuvolní chyby generování kódu, výsledky analýzy mohou být nespolehlivé; Proto doporučujeme použít tuto možnost pouze v případě, že kód již projde kontrolu syntaxe pro generování kódu bez chyb.
 
-/ analyze: ruleset `<file_path>.ruleset` umožňuje určit pravidlo, které nastaví pro analýzu, včetně vlastních sad pravidel, můžete vytvořit sami. Když tento přepínač nastavený, stroj pravidel je mnohem efektivnější, protože nezahrnuje jiné členy zadané sady dřív, než spustíte pravidel. Pokud není nastaven přepínač, modul kontroluje všechna pravidla.
+/analyze: RuleSet `<file_path>.ruleset` umožňuje určit, které sady pravidel se mají analyzovat, včetně vlastních sad pravidel, které můžete vytvořit sami. Pokud je tento přepínač nastaven, modul pravidel je efektivnější, protože před spuštěním vyloučí nečleny zadané sady pravidel. Když není přepínač nastavený, modul zkontroluje všechna pravidla.
 
-Sady pravidel, které se dodávají pomocí sady Visual Studio se nacházejí v **%VSINSTALLDIR%\Team sad Tools\Rule Tools\Static analýzy.**
+RuleSets, který se dodává se sadou Visual Studio, najdete v **sadě%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule sady.**
 
-Následující ukázkové sady vlastních pravidel říká stroj pravidel kontroluje C6001 a C26494. Tento soubor můžete umístit kamkoli za předpokladu, má `.ruleset` rozšíření a můžete zadat úplnou cestu v argumentu.
+Následující ukázková sada vlastních pravidel informuje modul pravidel, aby kontroloval C6001 a C26494. Tento soubor můžete umístit kdekoli, dokud má příponu `.ruleset` a v argumentu zadáte úplnou cestu.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,40 +60,40 @@ Následující ukázkové sady vlastních pravidel říká stroj pravidel kontro
 </RuleSet>
 ```
 
-/ analyze: modul plug-in umožňuje zadaný modul plug-in PREfast jako součást analýza kódu spuštěna.
-LocalEspC.dll je modul plug-in, který implementuje analýzy souběžnosti související kód se změnami rozsah C261XX upozornění. Například [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
+/analyze: modul plug-in umožňuje spustit zadaný modul plug-in v rámci analýzy kódu.
+LocalEspC. dll je modul plug-in, který implementuje kontroly analýzy kódu související s souběžnou analýzou v rozsahu upozornění C261XX. Například [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
 
-Spustit LocalEspC.dll, použijte tuto možnost kompilátoru: **/ analyze: modul plug-in LocalEspC.dll**
+Pokud chcete spustit LocalEspC. dll, použijte tuto možnost kompilátoru: **/analyze: plugin LocalEspC. dll.**
 
-Pokud chcete spustit CppCoreCheck.dll, nejprve spusťte tento příkaz z příkazového řádku pro vývojáře:
+Chcete-li spustit CppCoreCheck. dll, nejprve spusťte tento příkaz z příkazového řádku pro vývojáře:
 
 ```cmd
 set Esp.Extensions=CppCoreCheck.dll
 ```
 
-Pak pomocí této možnosti kompilátoru: **/ analyze: modul plug-in EspXEngine.dll**.
+Pak použijte tuto možnost kompilátoru: **/analyze: plugin EspXEngine. dll**.
 
 ## <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [analýzy kódu pro C/C++ přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) a [analýzy kódu pro C/C++ upozornění](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings).
+Další informace naleznete v tématu [Analýza kódu pro c/C++ přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) a [Analýza kódu pro c/C++ upozornění](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings).
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení této možnosti kompilátoru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Rozbalte **vlastnosti konfigurace** uzlu.
+1. Rozbalte uzel **Vlastnosti konfigurace** .
 
-1. Rozbalte **analýzy kódu** uzlu.
+1. Rozbalte uzel **Analýza kódu** .
 
-1. Vyberte **Obecné** stránku vlastností.
+1. Vyberte stránku vlastností **Obecné** .
 
-1. Změnit jedno nebo více **analýzy kódu** vlastnosti.
+1. Upravte jednu nebo více vlastností **analýzy kódu** .
 
-### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
+### <a name="to-set-this-compiler-option-programmatically"></a>Chcete-li nastavit tuto možnost kompilátoru programově
 
 1. Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
-- [Parametry kompilátoru MSVC](compiler-options.md)
+- [Možnosti kompilátoru MSVC](compiler-options.md)
 - [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
