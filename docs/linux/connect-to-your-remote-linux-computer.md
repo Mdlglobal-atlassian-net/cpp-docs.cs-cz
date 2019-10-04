@@ -3,12 +3,12 @@ title: Připojení k cílovému systému Linux v aplikaci Visual Studio
 description: Jak se připojit ke vzdálenému počítači se systémem Linux nebo WSL zevnitř projektu sady Visual C++ Studio.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383407"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925562"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Připojení k cílovému systému Linux v aplikaci Visual Studio
 
@@ -41,10 +41,10 @@ Nastavení tohoto vzdáleného připojení:
    | Entry | Popis
    | ----- | ---
    | **Název hostitele**           | Název nebo IP adresa cílového zařízení
-   | **Port**                | Port, na kterém běží služba SSH, obvykle 22
+   | **Přístavní**                | Port, na kterém běží služba SSH, obvykle 22
    | **Uživatelské jméno**           | Uživatel, který se má ověřit jako
    | **Typ ověřování** | Heslo nebo privátní klíč jsou podporovány současně.
-   | **Heslo**            | Heslo pro zadané uživatelské jméno
+   | **Zadáno**            | Heslo pro zadané uživatelské jméno
    | **Soubor privátního klíče**    | Soubor privátního klíče vytvořený pro připojení SSH
    | **Hesel**          | Přístupové heslo použité s privátním klíčem vybraným výše
 
@@ -52,11 +52,11 @@ Nastavení tohoto vzdáleného připojení:
    
    Privátní soubor klíčů RSA můžete vytvořit pomocí následujících kroků:
 
-    1. Na počítači s Windows vytvořte pár klíčů ssh pomocí `ssh-keygen -t rsa`. Tím se vytvoří veřejný klíč a privátní klíč. Ve výchozím nastavení jsou klíče umístěny pod `C:\Users\%USERNAME%\.ssh` názvy `id_rsa.pub` a `id_rsa`.
+    1. Na počítači s Windows vytvořte pár klíčů ssh s `ssh-keygen -t rsa`. Tím se vytvoří veřejný klíč a privátní klíč. Ve výchozím nastavení jsou klíče umístěny pod `C:\Users\%USERNAME%\.ssh` s názvy `id_rsa.pub` a `id_rsa`.
 
     1. Z Windows zkopírujte veřejný klíč do počítače se systémem Linux: `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`.
 
-    1. V systému Linux přidejte klíč do seznamu autorizovaných klíčů (a ujistěte se, že soubor má správná oprávnění):`cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+    1. V systému Linux přidejte klíč do seznamu autorizovaných klíčů (a ujistěte se, že soubor má správná oprávnění): `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
 
 1. Kliknutím na tlačítko **připojit** se pokuste o připojení ke vzdálenému počítači. 
 
@@ -94,11 +94,12 @@ V aplikaci Visual Studio 2017 se ke WSL připojujete pomocí stejných kroků ja
 
 Visual Studio 2019 verze 16,1 přidala nativní podporu pro C++ použití s podsystémem [Windows pro Linux (WSL)](https://docs.microsoft.com/windows/wsl/about).  To znamená, že už nebudete muset přidat vzdálené připojení nebo nakonfigurovat SSH, aby bylo možné sestavovat a ladit v místní instalaci WSL. Podrobnosti o [tom, jak nainstalovat WSL](https://docs.microsoft.com/windows/wsl/install-win10) , najdete tady.
 
-Chcete-li nakonfigurovat WSL instalaci pro práci se sadou Visual Studio, je třeba nainstalovat následující nástroje: RSZ, GDB, make, rsync a zip. Můžete je nainstalovat do distribuce, které používají APT, pomocí tohoto příkazu: 
+Chcete-li nakonfigurovat WSL instalaci pro práci se sadou Visual Studio, je třeba nainstalovat následující nástroje: RSZ nebo Clang, GDB, make, rsync a zip. Můžete je nainstalovat do distribuce, které používají APT, pomocí tohoto příkazu, který také nainstaluje kompilátor g + +: 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
+Další informace najdete v tématu [stažení, instalace a nastavení úlohy Linux](download-install-and-setup-the-linux-development-workload.md).
 
 Pokud chcete nakonfigurovat projekt pro WSL, přečtěte si téma [konfigurace projektu pro Linux](configure-a-linux-project.md) nebo [konfigurace projektu pro Linux cmake](cmake-linux-project.md) v závislosti na tom, jaký druh projektu máte. Pokud chcete postupovat podle podrobných pokynů pro vytvoření jednoduché konzolové aplikace pomocí WSL, podívejte se na tento úvodní příspěvek na blogu v [ C++ článku Visual Studio 2019 a v subsystému Windows pro Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
 

@@ -4,12 +4,12 @@ ms.date: 10/01/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 52ca34ef8522ada1881e2f7f5df212167c64c919
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 168f5b0aac34757a9c2d73bcebc908a0d58721fe
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816391"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925575"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake v sadě Visual Studio
 
@@ -58,12 +58,6 @@ Pokud potřebujete předat argumenty spustitelnému souboru v době ladění, m�
 
 > [!NOTE]
 > Pro jiné druhy projektů otevřené složky se používají dva další soubory JSON: **CppProperties. JSON** a **Tasks. vs. JSON**. Ani jedna z těchto projektů není relevantní pro projekty CMake.
-
-## <a name="import-an-existing-cache"></a>Importovat existující mezipaměť
-
-Když importujete existující soubor CMakeCache. txt, Visual Studio automaticky extrahuje vlastní proměnné a na základě nich vytvoří předem vyplněný soubor **CMakeSettings. JSON** . Původní mezipaměť není nijak upravována a lze ji nadále používat z příkazového řádku nebo s jakýmkoli nástrojem nebo IDE použitým k jejich vygenerování. Nový soubor **CMakeSettings. JSON** se umístí vedle kořenového souboru CMakeLists. txt projektu. Visual Studio vygeneruje novou mezipaměť založenou na souboru nastavení. Automatické generování mezipaměti můžete přepsat v dialogovém okně **nástroje > možnosti > cmake > obecné** .
-
-Ne vše v mezipaměti je importováno. Vlastnosti, jako je generátor a umístění kompilátorů, se nahrazují výchozími hodnotami, které jsou známé pro správnou práci s IDE.
 
 ## <a name="open-an-existing-cache"></a>Otevřít existující mezipaměť
 
@@ -306,13 +300,13 @@ V sadě Visual Studio 2015 mohou uživatelé sady Visual Studio použít [gener�
 ::: moniker-end
 
 
-## <a name="see-also"></a>Další informace najdete v tématech
+## <a name="see-also"></a>Viz také:
 
 [Kurz: vytváření C++ projektů pro různé platformy v aplikaci Visual Studio](get-started-linux-cmake.md)<br/>
 [Konfigurace projektu Linux CMake](../linux/cmake-linux-project.md)<br/>
-[Připojení ke vzdálenému počítači se systémem Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Přizpůsobení nastavení sestavení CMake](customize-cmake-settings.md)<br/>
-[Odkaz na CMakeSettings. JSON](cmakesettings-reference.md)<br/>
-[Konfigurace relací ladění CMake](configure-cmake-debugging-sessions.md)<br/>
-[Nasazení, spuštění a ladění projektu pro Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[Připojení ke vzdálenému počítači s Linuxem](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Vlastní nastavení sestavení CMake](customize-cmake-settings.md)<br/>
+[Referenční informace k CMakeSettings.json](cmakesettings-reference.md)<br/>
+[Konfigurace ladicích relací CMake](configure-cmake-debugging-sessions.md)<br/>
+[Nasazení, spuštění a ladění projektu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Odkaz na předdefinovaný konfigurační odkaz CMake](cmake-predefined-configuration-reference.md)<br/>
