@@ -1,18 +1,18 @@
 ---
 title: C++vylepšení shody
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 description: Microsoft C++ v aplikaci Visual Studio pokračuje v plném souladu s jazykem standardu c++ 20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 02cf57666c3bffd1adabb912f042f22b71e8d8f5
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816358"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998882"
 ---
-# <a name="c-conformance-improvements-in-visual-studio"></a>C++vylepšení shody v aplikaci Visual Studio
+# <a name="c-conformance-improvements-in-visual-studio"></a>Vylepšení shody C++ se sadou Visual Studio
 
 Microsoft C++ provádí vylepšení shody a opravy chyb v každé verzi. V tomto článku jsou uvedená vylepšení podle hlavní verze a pak podle verze. Také uvádí hlavní opravy chyb podle verze. Chcete-li přejít přímo na změny konkrétní verze, použijte seznam **v tomto článku** .
 
@@ -168,7 +168,7 @@ Implementují se vlastnosti typu `remove_cvref` a `remove_cvref_t` z [P0550](htt
 
 [P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html). C++ 20 přidá nový typ znaku, který se používá k reprezentaci jednotek kódu v kódování UTF-8. řetězcové literály `u8` v C++ 20 mají typ `const char8_t[N]` namísto `const char[N]`, což byl případ dřív. V [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm)se navrhly podobné změny pro Standard C. Návrhy pro nápravu zpětné kompatibility `char8_t` jsou uvedené v [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html). Kompilátor společnosti C++ Microsoft přidává podporu `char8_t` v aplikaci Visual Studio 2019 verze 16,1 při zadání možnosti kompilátoru **/Zc: char8_t** . V budoucnu se bude podporovat s [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md), což se dá vrátit k chování c++ 17 prostřednictvím **/Zc: char8_t-** . Kompilátor EDG pro technologii IntelliSense ho ještě nepodporuje, takže uvidíte jenom chyby spurious IntelliSense, které nemají vliv na skutečnou kompilaci.
 
-#### <a name="example"></a>Příklad:
+#### <a name="example"></a>Příklad
 
 ```cpp
 const char* s = u8"Hello"; // C++17
@@ -238,7 +238,7 @@ void f() {
 
 - `starts_with()` a `ends_with()` pro `basic_string` a `basic_string_view`.
 - `contains()` pro asociativní kontejnery.
-- `remove()`, `remove_if()` a `unique()` pro `list` a `forward_list` nyní vrátí `size_type`.
+- `remove()`, `remove_if()` a `unique()` pro `list` a `forward_list` teď vrací `size_type`.
 - `shift_left()` a `shift_right()` přidáno do \<algorithm >.
 
 
@@ -456,6 +456,10 @@ extern "C" void f(int, int, int, BOOL){}
 ```
 
 Chcete-li se vyhnout chybám v předchozím příkladu, použijte **bool** namísto **bool** konzistentně v deklaracích `f`.
+
+### <a name="standard-library-improvements"></a>Vylepšení standardní knihovny
+
+> Byly odebrány nestandardní hlavičky \<stdexcpt. h > a \<typeinfo. h. Kód, který obsahuje, by měl místo toho zahrnovat standardní záhlaví \<exception > a \<typeinfo > v uvedeném pořadí.
 
 ## <a name="update_160"></a>Opravy chyb a změny chování v aplikaci Visual Studio 2019
 
@@ -722,7 +726,7 @@ Neseřazený kontejner @no__t funkce-0 nyní vyhrazuje pro N prvků, jak je pops
 
 - Dříve některé časové hodnoty, které byly předány do knihovny souběžnosti, by byly přetečení, například `condition_variable::wait_for(seconds::max())`. Nyní se nahodilé změny nazměnily na zdánlivě náhodný cyklus, který je v uint32_t milisekundách přijatých základními rozhraními Win32 API.
 
-- Hlavička <ctime> nyní správně deklaruje `timespec` a `timespec_get` v oboru názvů `std`, kromě jejich deklarace v globálním oboru názvů.
+- Hlavička \<ctime > nyní správně deklaruje `timespec` a `timespec_get` v oboru názvů `std`, kromě jejich deklarace v globálním oboru názvů.
 
 ### <a name="various-fixes-for-containers"></a>Různé opravy pro kontejnery
 
@@ -2844,6 +2848,6 @@ Chcete-li se této chybě vyhnout, odeberte kvalifikátor **constexpr** z explic
 
 ::: moniker-end
 
-## <a name="see-also"></a>Další informace najdete v tématech
+## <a name="see-also"></a>Viz také:
 
 [Shoda C++ s vizuálním jazykem](../visual-cpp-language-conformance.md)

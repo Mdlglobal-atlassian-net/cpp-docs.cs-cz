@@ -1,6 +1,6 @@
 ---
 title: bad_cast – výjimka
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - bad_cast
 - bad_cast_cpp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: b40f64671e7c259b7dc04b31a11d20d0fc76c5c4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7384394fb53c6aa4bc009a903ba0ed22bf0ed0d6
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242393"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998783"
 ---
-# <a name="badcast-exception"></a>bad_cast – výjimka
+# <a name="bad_cast-exception"></a>bad_cast – výjimka
 
-**Bad_cast –** výjimku **dynamic_cast** operátor jako výsledek neúspěšného přetypování na typ odkazu.
+Výjimka **bad_cast** je vyvolána operátorem **dynamic_cast** jako výsledek neúspěšného přetypování na odkazový typ.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,18 +28,18 @@ catch (bad_cast)
 
 ## <a name="remarks"></a>Poznámky
 
-Rozhraní pro **bad_cast –** je:
+Rozhraní pro **bad_cast** je:
 
 ```cpp
 class bad_cast : public exception
 ```
 
-Následující kód obsahuje příklad neúspěšného **dynamic_cast** , které vyvolá **bad_cast –** výjimky.
+Následující kód obsahuje příklad neúspěšného **dynamic_cast** , který vyvolá výjimku **bad_cast** .
 
 ```cpp
 // expre_bad_cast_Exception.cpp
 // compile with: /EHsc /GR
-#include <typeinfo.h>
+#include <typeinfo>
 #include <iostream>
 
 class Shape {
@@ -65,14 +65,14 @@ int main() {
 }
 ```
 
-Výjimka je vyvolána, protože přetypovaný objekt (Shape) není odvozen ze zadaného typu přetypování (Circle). Chcete-li se této výjimce vyhnout, přidejte do funkce `main` následující deklarace:
+Výjimka je vyvolána, protože objekt, který je přetypování (tvar), není odvozen od zadaného typu přetypování (Circle). Chcete-li se této výjimce vyhnout, přidejte do funkce `main` následující deklarace:
 
 ```cpp
 Circle circle_instance;
 Circle& ref_circle = circle_instance;
 ```
 
-Poté zaměňte význam přetypování v **zkuste** blokovat následujícím způsobem:
+Pak převratte smysl přetypování do bloku **Try** následujícím způsobem:
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
@@ -84,7 +84,7 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 |Konstruktor|Popis|
 |-|-|
-|[bad_cast –](#bad_cast)|Konstruktor pro objekty typu `bad_cast`.|
+|[bad_cast](#bad_cast)|Konstruktor pro objekty typu `bad_cast`.|
 
 ### <a name="functions"></a>Funkce
 
@@ -96,9 +96,9 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 |Operátor|Popis|
 |-|-|
-|[operátor =](#op_eq)|Operátor přiřazení, který se přiřadí jednu `bad_cast` objektu na jiný.|
+|[operátor =](#op_eq)|Operátor přiřazení, který přiřadí jeden objekt `bad_cast` k druhému.|
 
-## <a name="bad_cast"></a> bad_cast –
+## <a name="bad_cast"></a>bad_cast
 
 Konstruktor pro objekty typu `bad_cast`.
 
@@ -107,15 +107,15 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="op_eq"></a> operátor =
+## <a name="op_eq"></a>operátor =
 
-Operátor přiřazení, který se přiřadí jednu `bad_cast` objektu na jiný.
+Operátor přiřazení, který přiřadí jeden objekt `bad_cast` k druhému.
 
 ```cpp
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a> Co
+## <a name="what"></a>Co
 
 ```cpp
 const char* what() const noexcept override;
@@ -123,6 +123,6 @@ const char* what() const noexcept override;
 
 ## <a name="see-also"></a>Viz také:
 
-[dynamic_cast – operátor](../cpp/dynamic-cast-operator.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[dynamic_cast – operátor](../cpp/dynamic-cast-operator.md)\
+[Klíčová slova](../cpp/keywords-cpp.md)\
 [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)

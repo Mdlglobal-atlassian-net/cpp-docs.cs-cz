@@ -1,15 +1,15 @@
 ---
 title: typeid – operátor
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a2d3c494cd5aadafedcaaae9ec72809d633a4a
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404660"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998746"
 ---
 # <a name="typeid-operator"></a>typeid – operátor
 
@@ -22,27 +22,27 @@ typeid(expression)
 
 ## <a name="remarks"></a>Poznámky
 
-**Typeid** operátor umožňuje typ objektu má být stanovena v době běhu.
+Operátor **typeid** povoluje typ objektu, který se má určit v době běhu.
 
-Výsledek **typeid** je `const type_info&`. Hodnota je odkaz na `type_info` objekt, který představuje buď *id typu* nebo typu *výraz*podle toho, jaký tvar operátoru **typeid** se používá. Zobrazit [type_info – třída](../cpp/type-info-class.md) Další informace.
+Výsledek **typeid** je `const type_info&`. Hodnota je odkaz na objekt `type_info`, který představuje *identifikátor typu* nebo typ *výrazu*, v závislosti na tom, který typ **typeid** je použit. Další informace naleznete v tématu [Třída type_info](../cpp/type-info-class.md).
 
-**Typeid** operátor nepracuje se spravovanými typy (abstraktní deklarátory nebo instance), najdete v článku [typeid](../extensions/typeid-cpp-component-extensions.md) Další informace o získání <xref:System.Type> zadaného typu.
+Operátor **typeid** nefunguje se spravovanými typy (abstraktní deklarátory nebo instance). Informace o tom, jak získat <xref:System.Type> zadaného typu, naleznete v tématu [typeid](../extensions/typeid-cpp-component-extensions.md).
 
-**Typeid** operátor provádí kontrolu za běhu při použití na l hodnotu polymorfního typu třídy, kde nelze určit skutečný typ objektu pomocí poskytnutých statických údajů. Takové případy jsou:
+Operátor **typeid** provádí kontrolu za běhu při použití na l-hodnotu polymorfního typu třídy, kde skutečný typ objektu nelze určit pomocí zadaných statických informací. Takové případy jsou:
 
 - odkaz na třídu,
 
-- Ukazatel, přístup přes ukazatel pomocí \*
+- Ukazatel, na který se odkazuje `*`
 
-- indexovaný ukazatel (tj. [ ]). (Použití indexu s ukazatelem na polymorfní typ není obecně bezpečné.)
+- Ukazatel v dolním indexu (`[ ]`). (Není bezpečné použít dolní index s ukazatelem na polymorfní typ.)
 
-Pokud *výraz* odkazuje na typ základní třídy, ale objekt je ve skutečnosti typem odvozeným ze základní třídy, `type_info` reference pro odvozenou třídu, je výsledek. *Výraz* musí odkazovat na polymorfní typ (třídu s virtuálními funkcemi). V opačném případě je výsledek `type_info` pro statické třídy uvedené v *výraz*. Dále musí být ukazatel odkázán tak, aby se použil objekt, na který odkazuje. Bez odkázání ukazatele, výsledkem bude `type_info` pro ukazatele, nikoli odkazuje na. Příklad:
+Pokud *výraz* odkazuje na typ základní třídy, přesto je objekt skutečně typu odvozeného z této základní třídy, je výsledkem odkaz `type_info` pro odvozenou třídu. *Výraz* musí ukazovat na polymorfní typ (třídu s virtuálními funkcemi). V opačném případě je výsledkem `type_info` pro statickou třídu, na kterou se odkazuje ve *výrazu*. Kromě toho musí být ukazatel na odkaz, aby byl objekt použit jako ten, na který odkazuje. Bez přesměrování ukazatele bude výsledek `type_info` pro ukazatel, nikoli na to, na který odkazuje. Příklad:
 
 ```cpp
 // expre_typeid_Operator.cpp
 // compile with: /GR /EHsc
 #include <iostream>
-#include <typeinfo.h>
+#include <typeinfo>
 
 class Base {
 public:
@@ -63,9 +63,9 @@ int main() {
 }
 ```
 
-Pokud *výraz* je odkazován ukazatelem a hodnota ukazatele je nula, **typeid** vyvolá [bad_typeid – výjimka](../cpp/bad-typeid-exception.md). Pokud ukazatel neodkazuje na platný objekt `__non_rtti_object` je vyvolána výjimka, označující pokus analyzovat RTTI, která způsobila chybu (např. narušení přístupu), protože objekt je nějakým způsobem neplatný (Chybný ukazatel nebo kód nebyl zkompilován s [GR](../build/reference/gr-enable-run-time-type-information.md)).
+Pokud *výraz* odkazuje na ukazatel a hodnota ukazatele je nula, **typeid** vyvolá [výjimku bad_typeid](../cpp/bad-typeid-exception.md). Pokud ukazatel neukazuje na platný objekt, je vyvolána výjimka `__non_rtti_object`. Označuje pokus o analýzu RTTI, který aktivoval chybu, protože objekt je nějakým způsobem neplatný. (Například je to špatný ukazatel nebo kód nebyl zkompilován pomocí [/gr](../build/reference/gr-enable-run-time-type-information.md)).
 
-Pokud *výraz* není ukazatelem ani odkazem na základní třídu objektu, výsledkem je `type_info` představující statický typ odkazu *výraz*. *Statického typu* výrazu odkazuje na typ výrazu jako je znám v době kompilace. Sémantika provádění je při vyhodnocování statického typu výrazu ignorována. Kromě toho jsou odkazy ignorovány, pokud je to při stanovení statického typu výrazu možné:
+Pokud *výraz* není ukazatel, a nikoli odkaz na základní třídu objektu, je výsledkem odkaz `type_info` reprezentující statický typ *výrazu*. *Statický typ* výrazu odkazuje na typ výrazu, který je známý v době kompilace. Sémantika provádění je při vyhodnocování statického typu výrazu ignorována. Kromě toho jsou odkazy ignorovány, pokud je to při stanovení statického typu výrazu možné:
 
 ```cpp
 // expre_typeid_Operator_2.cpp
@@ -77,7 +77,7 @@ int main()
 }
 ```
 
-**typeid** lze také použít v šablonách pro určení typu parametru šablony:
+**typeid** lze také použít v šablonách k určení typu parametru šablony:
 
 ```cpp
 // expre_typeid_Operator_3.cpp
@@ -92,5 +92,5 @@ T max( T arg1, T arg2 ) {
 
 ## <a name="see-also"></a>Viz také:
 
-[Informace o typu modulu runtime](../cpp/run-time-type-information.md)<br/>
+[Informace o typu běhového](../cpp/run-time-type-information.md)běhu \
 [Klíčová slova](../cpp/keywords-cpp.md)

@@ -1,21 +1,21 @@
 ---
 title: Standardní převody
-ms.date: 11/19/2018
+ms.date: 10/02/2019
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c51a5ea5aaabb27babb9e4cd355721742088d31e
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267278"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998895"
 ---
 # <a name="standard-conversions"></a>Standardní převody
 
-Jazyk C++ definuje převody mezi základními typy. Definuje také převody pro ukazatel, odkaz a pro odvozené typy ukazatele na člena. Tyto převody jsou označovány jako *standardní převody*.
+Jazyk C++ definuje převody mezi základními typy. Definuje také převody pro ukazatel, odkaz a pro odvozené typy ukazatele na člena. Tyto převody se nazývají *standardní převody*.
 
 Tato část popisuje následující standardní převody:
 
@@ -35,8 +35,8 @@ Tato část popisuje následující standardní převody:
 
 - Převody ukazatele na člena
 
-    > [!NOTE]
-    >  Uživatelské typy mohou zadat své vlastní převody. Převod uživatelských typů je obsažen v [konstruktory](../cpp/constructors-cpp.md) a [převody](../cpp/user-defined-type-conversions-cpp.md).
+  > [!NOTE]
+  > Uživatelské typy mohou zadat své vlastní převody. Převod uživatelsky definovaných typů je popsaný v části [konstruktory](../cpp/constructors-cpp.md) a [převody](../cpp/user-defined-type-conversions-cpp.md).
 
 Následující kód provede převody (v tomto příkladu integrální povýšení):
 
@@ -51,41 +51,41 @@ long_num1 = int_num;
 long_num2 = int_num * long_num2;
 ```
 
-Výsledkem převodu je l-hodnota pouze v případě, že vytvoří typ odkazu. Například uživatelem definovaný převod deklarovaný jako `operator int&()` vrátí odkaz a je l hodnotou. Ale převod deklarovaný jako `operator int()`vrátí objekt a není l hodnotou.
+Výsledkem převodu je l-hodnota pouze v případě, že vytvoří typ odkazu. Například uživatelsky definovaný převod deklarovaný jako `operator int&()` vrací odkaz a je l-hodnotou. Převod deklarovaný jako `operator int()` však vrátí objekt a není l-hodnotou.
 
 ## <a name="integral-promotions"></a>Integrální povýšení
 
-Objekty celočíselného typu lze převést na jiné širší celočíselné typy (to znamená na typy, které mohou představovat větší množinu hodnot). Tento typ rozšiřujícího převodu se nazývá „povýšení celočíselného typu“. S povýšením celočíselného typu lze všude ve výrazu, kde lze použít jiný celočíselný typ, použít následující:
+Objekty integrálního typu lze převést na jiný širší celočíselný typ, tj. typ, který může představovat větší sadu hodnot. Tento typ rozšiřování konverze se nazývá *integrální povýšení*. Při povýšení integrálního typu můžete použít následující typy ve výrazu bez ohledu na to, kde je možné použít jiný integrální typ:
 
-- Objekty, literály a konstanty typu **char** a **krátká celočíselná**
+- Objekty, literály a konstanty typu **char** a **short int**
 
 - Výčtové typy
 
-- **int** bitová pole
+- bitové pole **int**
 
 - Enumerátory
 
-Povýšení typu v jazyce C++ „zachovávají hodnotu“. To znamená, že hodnota po povýšení zůstane stejná jako hodnota před povýšením. V zachovávajícího hodnotu, objekty kratších celočíselných typů (jako je například bitová pole nebo objekty typu **char**) jsou povýšeny na typ **int** Pokud **int** může představovat úplnou rozsah z původního typu. Pokud **int** nemůže reprezentovat úplný rozsah hodnot, pak je objekt povýšen na typ **unsigned int**. Ačkoli je tato strategie stejná jako ve standardu ANSI C, převody zachovávající hodnotu nezachovávají to, zda objekt má nebo nemá znaménko.
+C++propagační akce jsou "zachování hodnoty", jako hodnota po povýšení, která je zaručena jako hodnota před povýšením. U propagačních akcí, které zachovává hodnoty, jsou objekty kratších integrálních typů (například bitových polí nebo objektů typu **char**) povýšeny na typ **int** , pokud **int** může představovat plný rozsah původního typu. Pokud **int** nemůže reprezentovat plný rozsah hodnot, pak je objekt povýšen na typ **unsigned int**.  I když je tato strategie stejná jako ta, kterou používá standardní C, převody bez obsluhy nezachovávají "podepsané" objektu.
 
-Povýšení typu zachovávající hodnotu a povýšení typu, která normálně zachovávají znaménko, vrátí stejné výsledky. Mohou však vrátit různé výsledky, pokud je povýšený typ objektu jedním z následujících:
+Povýšení typu zachovávající hodnotu a povýšení typu, která normálně zachovávají znaménko, vrátí stejné výsledky. Můžou ale způsobit různé výsledky, pokud se propagovaný objekt zobrazí jako:
 
-- Operand operátoru **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, nebo **>=**
+- Operand `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` nebo `>=`
 
-   Tyto operátory spoléhají pro stanovení výsledku na znaménko. Proto povýšení typu zachovávající hodnotu a povýšení typu zachovávající znaménko vrátí při použití s těmito operandy různé výsledky.
+   Tyto operátory spoléhají pro stanovení výsledku na znaménko. Zachování hodnot a zachovávání nabídek při použití na tyto operandy vytváří různé výsledky.
 
-- Levý operand **>>** nebo **>>=**
+- Levý operand `>>` nebo `>>=`
 
-   Tyto operátory zacházejí při provádění operací posunu s hodnotami se znaménkem nebo bez znaménka odlišně. U hodnot se znaménkem posunutí hodnoty vpravo způsobí, že je bit znaménka posunut na pozici uvolněného bitu. U hodnot bez znaménka jsou pozice uvolněných bitů vyplněny nulami.
+   Tyto operátory se v rámci operace posunu považovat za jiné množství znaménka a nepodepsaného. U podepsaných množství je operace pravého posunutí propagována bit znaménka do uvolněné bitových pozic, zatímco uvolněné bitové pozice jsou vyplněna nulami v nepodepsaných množstvích.
 
-- Argument přetížené funkce nebo operand přetíženého operátoru, který závisí na tom, zda je typ tohoto operandu pro párování argumentů se znaménkem nebo bez. (Viz [přetížené operátory](../cpp/operator-overloading.md) Další informace o definici přetížených operátorů.)
+- Argument přetížené funkce nebo operand přetíženého operátoru, který závisí na znaménku typu operandu pro porovnání argumentů. Další informace o definování přetížených operátorů naleznete v tématu [přetížené operátory](../cpp/operator-overloading.md).
 
 ## <a name="integral-conversions"></a>Integrální převody
 
-Mezi celočíselnými typy jsou prováděny celočíselné převody. Integrální typy jsou **char**, **int**, a **dlouhé** (a **krátký**, **podepsané**a **bez znaménka** verze těchto typů).
+*Celočíselné převody* jsou převody mezi celočíselnými typy. Integrální typy jsou **char**, **short** (nebo **short int**), **int**, **Long**a **Long Long**. Tyto typy mohou být kvalifikovány **se znaménkem nebo** **bez** **znaménka a nelze** je použít jako zkratku pro **celé číslo bez znaménka**.
 
-**Podepsaného na nepodepsané**
+### <a name="signed-to-unsigned"></a>Podepsáno na nepodepsané
 
-Objekty celočíselných typů se znaménkem lze převést na odpovídající typy bez znaménka. Když tyto převody nastanou, skutečný bitový vzor se nezmění. Změní se však interpretace dat. Vezměte v úvahu tento kód:
+Objekty celočíselných typů se znaménkem lze převést na odpovídající typy bez znaménka. Když dojde k těmto převodům, skutečný bitový vzorek se nezmění. Nicméně výklad dat se změní. Vezměte v úvahu tento kód:
 
 ```cpp
 #include <iostream>
@@ -101,11 +101,11 @@ int main()
 // Output: 65533
 ```
 
-V předchozím příkladu **podepsané řečeno**, `i`, je definována a inicializována na záporné číslo. Výraz `(u = i)` způsobí, že `i` pro převod na **unsigned short** před přiřazením k `u`.
+V předchozím příkladu je **podepsaná short**, `i`, definována a inicializována na záporné číslo. Výraz `(u = i)` způsobí, že `i` bude před přiřazením `u` převedeno na **znaménko short** .
 
-**Unsigned na signed**
+### <a name="unsigned-to-signed"></a>Nepodepsané na signed
 
-Objekty celočíselných typů bez znaménka lze převést na odpovídající typy se znaménkem. Avšak takový převod může způsobit špatné vyhodnocení dat, je-li hodnota objektu bez znaménka mimo rozsah reprezentovatelný typem se znaménkem, jak je uvedeno v následujícím příkladu:
+Objekty celočíselných typů bez znaménka lze převést na odpovídající typy se znaménkem. Pokud je však hodnota bez znaménka mimo reprezentovatelné rozsah podepsaného typu, výsledek nebude mít správnou hodnotu, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 #include <iostream>
@@ -121,38 +121,38 @@ cout << (i = u) << "\n";
 //Output: -3
 ```
 
-V předchozím příkladu `u` je **unsigned short** celočíselný objekt, který musí být převeden na hodnotu se znaménkem pro vyhodnocení výrazu `(i = u)`. Vzhledem k tomu, že jeho hodnotu nelze vyjádřit správně **podepsané řečeno**, data chybně interpretována, jak je znázorněno.
+V předchozím příkladu je `u` **nepodepsaný krátkým** integrálním objektem, který musí být převeden na znaménko pro vyhodnocení výrazu `(i = u)`. Vzhledem k tomu, že jeho hodnota nemůže být správně reprezentovaná v **signed short**, data jsou nesprávně interpretována, jak je znázorněno.
 
-## <a name="floating-point-conversions"></a>Plovoucí převody bodu
+## <a name="floating-point-conversions"></a>Převody s plovoucí desetinnou čárkou
 
-Objekt typu s plovoucí desetinnou čárkou lze bezpečně převést na přesnější typ s plovoucí desetinnou čárkou, to znamená, že převod nezpůsobí ztrátu významu. Například převody z **float** k **double** nebo z **double** k **long double** jsou bezpečné a hodnota se nezmění.
+Objekt typu s plovoucí desetinnou čárkou lze bezpečně převést na přesnější typ s plovoucí desetinnou čárkou, to znamená, že převod nezpůsobí ztrátu významu. Například převod z **float** na **Double** nebo z **Double** na **Long Double** je bezpečný a hodnota je beze změny.
 
-Objekt typu s plovoucí desetinnou čárkou lze převést na méně přesný typ, pokud je v rozsahu vyjádřitelném tímto typem. (Viz [plovoucí omezení](../cpp/floating-limits.md) pro rozsahy typů s plovoucí desetinnou čárkou.) Pokud nelze původní hodnotu přesně vyjádřit, může být převedena buď na další vyšší, nebo na další nižší vyjádřitelnou hodnotu. Pokud žádná taková hodnota neexistuje, výsledek není definován. Vezměte v úvahu v následujícím příkladu:
+Objekt plovoucího typu lze také převést na méně přesný typ, pokud je v rozsahu, který je reprezentován tímto typem. (Viz [omezení plovoucí](../cpp/floating-limits.md) pro rozsahy plovoucích typů.) Pokud původní hodnota není reprezentována přesně, může být převedena na další vyšší nebo na další nižší reprezentovatelné hodnoty. Výsledek není definován, pokud taková hodnota neexistuje. Vezměte v úvahu následující příklad:
 
 ```cpp
 cout << (float)1E300 << endl;
 ```
 
-Maximální hodnota vyjádřitelná typem **float** je 3.402823466E38 – je mnohem menší hodnota než 1E300. Proto číslo je převedeno na nekonečno a výsledek je "informace".
+Maximální hodnota, která je reprezentována typem **float** , je 3.402823466 E38 – mnohem menší číslo než 1E300. Proto je číslo převedeno na nekonečno a výsledek je "INF".
 
-## <a name="conversions-between-integral-and-floating-point-types"></a>Převody mezi typy s plovoucí desetinnou čárkou a integrální bodů
+## <a name="conversions-between-integral-and-floating-point-types"></a>Převody mezi typy integrálních a plovoucích bodů
 
-Určité výrazy mohou způsobit převod objektů typu s plovoucí desetinnou čárkou na celočíselné typy nebo naopak. Jakmile je objekt celočíselného typu převeden na typ s plovoucí desetinnou čárkou a původní hodnotu nelze převést zcela přesně, výsledkem je nejbližší vyšší nebo nejbližší nižší reprezentovatelná hodnota.
+Určité výrazy mohou způsobit převod objektů typu s plovoucí desetinnou čárkou na celočíselné typy nebo naopak. Když je objekt integrálního typu převeden na plovoucí typ a původní hodnota není reprezentována přesně, výsledek je následující vyšší nebo další nižší reprezentovatelné hodnoty.
 
-Při převodu objektu typu s plovoucí desetinnou čárkou na celočíselný typ je desetinná část zkrácena. V procesu převodu se neuskuteční zaokrouhlení. Zkrácení znamená, že číslo 1,3 je převedeno na hodnotu 1 a-1.3 je převedena na hodnotu -1.
+Když je objekt plovoucího typu převeden na celočíselný typ, Zlomková část je *zkrácena*nebo zaokrouhlena směrem k nule. Číslo, jako je 1,3, je převedeno na 1 a-1,3 je převedeno na-1. Pokud je zkrácená hodnota vyšší než nejvyšší reprezentovatelné hodnoty nebo nižší než nejnižší reprezentující hodnota, výsledek není definován.
 
 ## <a name="arithmetic-conversions"></a>Aritmetické převody
 
-Mnoho binárních operátorů (popsáno v [výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)) způsobuje převody operandů a vrací výsledky stejným způsobem. Způsob, jakým tyto operátory provádějí převody, se nazývá „obvyklé aritmetické převody“. Aritmetické převody operandů různých nativních typů jsou prováděny tak, jak je znázorněno v následující tabulce. Typy typedef se chovají podle svých základních nativních typů.
+Mnoho binárních operátorů (popsaných v tématu [výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)) způsobuje převody operandů a výsledky jsou stejné jako. Převody, které tyto operátory způsobují, se nazývají *běžné aritmetické převody*. Aritmetické převody operandů, které mají různé nativní typy, jsou provedeny, jak je uvedeno v následující tabulce. Typy typedef se chovají podle svých základních nativních typů.
 
 ### <a name="conditions-for-type-conversion"></a>Podmínky pro převod typu
 
 |Splněné podmínky|Konverze|
 |--------------------|----------------|
-|Některý operand je typu **long double**.|Další operand je převeden na typ **long double**.|
-|Předcházející podmínky nebyly splněny a některý operand je typu **double**.|Další operand je převeden na typ **double**.|
-|Předcházející podmínky nebyly splněny a některý operand je typu **float**.|Další operand je převeden na typ **float**.|
-|Předcházející podmínky nebyly splněny (žádný z operandů není typ s plovoucí desetinnou čárkou).|Celočíselné povýšení je s těmito operandy provedeno následovně:<br /><br />– Pokud některý operand je typu **unsigned long**, je druhý operand je převeden na typ **unsigned long**.<br />-Pokud není předcházející podmínka splněna a některý operand je typu **dlouhé** a druhý operand typu **unsigned int**, jsou oba operandy převedeny na typ **unsigned long**.<br />– Pokud nejsou splněny obě předcházející podmínky, a pokud některý operand je typu **dlouhé**, je druhý operand je převeden na typ **dlouhé**.<br />– Nejsou-li předchozí tři podmínky splněny a některý operand je typu **unsigned int**, je druhý operand je převeden na typ **unsigned int**.<br />– Pokud je splněna žádná z předchozích podmínek, jsou oba operandy převedeny na typ **int**.|
+|Buď je operand typu **Long Double**.|Další operand je převeden na typ **Long Double**.|
+|Předchozí podmínka není splněna a jeden operand je typu **Double**.|Další operand je převeden na typ **Double**.|
+|Předchozí podmínky nejsou splněné a jeden operand je typu **float**.|Další operand je převeden na typ **float**.|
+|Předcházející podmínky nebyly splněny (žádný z operandů není typ s plovoucí desetinnou čárkou).|Operandy získají celočíselné propagační akce následujícím způsobem:<br /><br />– Pokud je jeden operand typu **bez znaménka Long**, je druhý operand převeden na typ **bez znaménka Long**.<br />– Pokud předchozí podmínka není splněna a pokud je jeden z operandů typu **Long** a druhý typu **bez znaménka int**, jsou oba operandy převedeny na typ **bez znaménka Long**.<br />– Pokud nejsou splněny předchozí dvě podmínky a pokud je jeden z operandů typu **Long**, je druhý operand převeden na typ **Long**.<br />– Pokud nejsou splněny předchozí tři podmínky, a pokud je jeden z operandů typu **bez znaménka int**, je druhý operand převeden na typ **int bez znaménka**.<br />– Pokud není splněna žádná z předchozích podmínek, jsou oba operandy převedeny na typ **int**.|
 
 Následující kód znázorňuje pravidla převodu, která jsou popsána v tabulce:
 
@@ -173,46 +173,44 @@ int main() {
 }
 ```
 
-První příkaz v předchozím příkladu znázorňuje násobení dvou celočíselných typů, `iVal` a `ulVal`. Podmínka je splněna, že ani jeden operand není typu s plovoucí desetinnou čárkou a jeden operand je typu **unsigned int**. Proto je druhý operand, `iVal`, je převeden na typ **unsigned int**. Výsledek je přiřazen do proměnné `dVal`. Podmínka je splněna jeden operand je typu **double**, proto **unsigned int** výsledek násobení je převeden na typ **double**.
+První příkaz v předchozím příkladu znázorňuje násobení dvou celočíselných typů, `iVal` a `ulVal`. Podmínka splněná je v tom, že ani operand není typu float, a jeden operand je typu **unsigned int**. Proto je druhý operand `iVal` převeden na typ **int unsigned**. Výsledek se pak přiřadí `dVal`. Podmínka, která je zde splněna, je, že jeden operand je typu **Double**, takže výsledek násobení **unsigned int** je převeden na typ **Double**.
 
-Druhý příkaz v předchozím příkladu znázorňuje sečtení typu **float** a celočíselného typu, `fVal` a `ulVal`. `ulVal` Proměnná je převeden na typ **float** (třetí podmínka v tabulce). Výsledek součtu je převeden na typ **double** (druhá podmínka v tabulce) a přiřazená `dVal`.
+Druhý příkaz v předchozím příkladu ukazuje přidání typu **float** a integrálního typu: `fVal` a `ulVal`. Proměnná `ulVal` je převedena na typ **float** (třetí podmínka v tabulce). Výsledek sčítání je převeden na typ **Double** (druhá podmínka v tabulce) a přiřazený k `dVal`.
 
 ## <a name="pointer-conversions"></a>Převody ukazatele
 
 Ukazatele lze převádět během přiřazení, inicializace, porovnání a v jiných výrazech.
 
-### <a name="pointer-to-classes"></a>Ukazatele na třídy
+### <a name="pointer-to-classes"></a>Ukazatel na třídy
 
-Existují dva případy, ve kterých lze převést ukazatel na třídu na ukazatel na základní třídu.
+Existují dva případy, kdy je možné ukazatel na třídu převést na ukazatel na základní třídu.
 
-První případem je, pokud zadaná základní třída je přístupná a převod je jednoznačný. (Viz [více základních tříd](../cpp/multiple-base-classes.md) Další informace o odkazech na nejednoznačný základní třídy.)
+První případ je v případě, že je zadaná základní třída přístupná a převod je nejednoznačný. Další informace o nejednoznačných odkazech na základní třídu naleznete v tématu [více základních tříd](../cpp/multiple-base-classes.md).
 
-Určuje, zda je dostupná základní třídu, závisí na druh dědičnosti používaných pro odvození. Vezměte v úvahu dědičnosti znázorněné na následujícím obrázku.
+Zda je základní třída přístupná, závisí na druhu dědičnosti použitých v odvození. Zvažte dědění na následujícím obrázku.
 
-![Graf dědičnosti, který znázorňuje základní&#45;třídy usnadnění](../cpp/media/vc38xa1.gif "graf dědičnosti, který znázorňuje základní&#45;třídy usnadnění přístupu") <br/>
+![Graf dědičnosti znázorňující&#45;]přístupnost základní třídy(../cpp/media/vc38xa1.gif "zobrazení grafu dědičnosti základní&#45;třídy") <br/>
 Graf dědičnosti pro ilustraci usnadnění základní třídy
 
-V následující tabulce jsou uvedeny základní třídy usnadnění pro situace znázorněna na obrázku.
+Následující tabulka ukazuje přístupnost základní třídy pro situaci, která je znázorněna na obrázku.
 
-### <a name="base-class-accessibility"></a>Usnadnění základní třídy
-
-|Typ funkce|Odvození|Převod z<br /><br /> B * a\* právní?|
+|Typ funkce|Odvození|Převod z<br /><br /> B * na hodnotu @ no__t-0 právní?|
 |----------------------|----------------|-------------------------------------------|
-|Externí funkce (není třída s rozsahem)|Soukromé|Ne|
+|Externí funkce (není v oboru tříd)|Soukromé|Ne|
 ||Chráněno|Ne|
 ||Public|Ano|
-|Členská funkce B (v oboru B)|Soukromé|Ano|
+|B – členská funkce (v oboru B)|Soukromé|Ano|
 ||Chráněno|Ano|
 ||Public|Ano|
-|Členská funkce jazyka C (v oboru C)|Soukromé|Ne|
+|Členská funkce jazyka c (v oboru C)|Soukromé|Ne|
 ||Chráněno|Ano|
 ||Public|Ano|
 
-Druhý případ, ve kterém lze převést ukazatel na třídu na ukazatel na základní třídu je při použití explicitní převod typu. (Viz [operátor převodu explicitního typu](explicit-type-conversion-operator-parens.md) pro další informace o převodu explicitního typu.)
+Druhý případ, ve kterém může být ukazatel na třídu převeden na ukazatel na základní třídu, je při použití explicitní konverze typu. Další informace o explicitních převodech typů naleznete v tématu [operátor převodu explicitního typu](explicit-type-conversion-operator-parens.md).
 
-Výsledek takového převodu je ukazatel na "podobjekt," část objektu, který je zcela popsal základní třídy.
+Výsledek takového převodu je ukazatel na *podobjekt*, část objektu, která je zcela popsána základní třídou.
 
-Následující kód definuje dvě třídy `A` a `B`, kde `B` je odvozen z `A`. (Další informace o dědičnosti, naleznete v tématu [odvozené třídy](../cpp/inheritance-cpp.md).) Potom definuje `bObject`, objekt typu `B`a dva ukazatele (`pA` a `pB`), které ukazují na objekt.
+Následující kód definuje dvě třídy, `A` a `B`, kde `B` je odvozeno od `A`. (Další informace o dědičnosti naleznete v tématu [odvozené třídy](../cpp/inheritance-cpp.md).) Pak definuje `bObject`, objekt typu `B` a dva ukazatele (`pA` a `pB`), které odkazují na objekt.
 
 ```cpp
 // C2039 expected
@@ -241,32 +239,32 @@ int main()
 }
 ```
 
-Ukazatel `pA` je typu `A *`, což může být interpretován jako význam "ukazatel na objekt typu `A`." Členové `bObject` `(`například `BComponent` a `BMemberFunc`) jsou jedinečné pro typ `B` a proto jsou přístupná přes `pA`. `pA` Ukazatel umožňuje přístup jenom k těmto vlastnostem (členské funkce a data) objektu, které jsou definovány ve třídě `A`.
+Ukazatel `pA` je typu `A *`, který lze interpretovat jako "ukazatel na objekt typu `A`". Členy `bObject` (například `BComponent` a `BMemberFunc`) jsou jedinečné pro typ `B` a jsou proto nepřístupné prostřednictvím `pA`. Ukazatel `pA` umožňuje přístup pouze k těmto vlastnostem (členské funkce a data) objektu, který je definován ve třídě `A`.
 
 ### <a name="pointer-to-function"></a>Ukazatel na funkci
 
-Ukazatel na funkci lze převést na typ `void *`, pokud typ `void *` je příliš velká pro tento ukazatel.
+Ukazatel na funkci lze převést na typ `void *`, pokud je typ `void *` dostatečně velký pro uložení tohoto ukazatele.
 
-### <a name="pointer-to-void"></a>Ukazatel na typ void
+### <a name="pointer-to-void"></a>Ukazatel na void
 
-Ukazatele na typ **void** lze převést na ukazatele na libovolný typ, ale pouze pomocí přetypování explicitního typu (na rozdíl od v jazyce C). Ukazatel na libovolný typ může být implicitně převést na ukazatel na typ **void**. Ukazatel na neúplný objekt typu lze převést na ukazatel na **void** (implicitně) a zpět (explicitně). Výsledek takového převodu je roven hodnotě původního ukazatele. Objekt je považován za neúplný, pokud je deklarovaný, ale není k dispozici dostatek informací, na základě kterých lze určit jeho velikost nebo základní třídu.
+Ukazatele na typ **void** lze převést na ukazatele na jakýkoli jiný typ, ale pouze s přetypováním explicitního typu (na rozdíl od jazyka C). Ukazatel na libovolný typ lze převést implicitně na ukazatel na typ **void**. Ukazatel na nekompletní objekt typu lze převést na ukazatel na **typ void** (implicitně) a zpět (explicitně). Výsledek takového převodu je roven hodnotě původního ukazatele. Objekt se považuje za nekompletní, pokud je deklarovaný, ale k dispozici nejsou dostatečné informace k určení jeho velikosti nebo základní třídy.
 
-Ukazatel na libovolný objekt, který není **const** nebo **volatile** lze implicitně převést na ukazatel typu `void *`.
+Ukazatel na libovolný objekt, který není **const** nebo **volatile** , lze implicitně převést na ukazatel typu `void *`.
 
-### <a name="const-and-volatile-pointers"></a>ukazatelé const a volatile
+### <a name="const-and-volatile-pointers"></a>const a volatile – ukazatele
 
-Jazyk C++ neposkytuje standardní převod z **const** nebo **volatile** typu na typ, který není **const** nebo **volatile**. Libovolné druhy převodu lze však určit pomocí přetypování explicitních typů (včetně převodů, které nejsou bezpečné).
+C++nedodá standardní převod z typu **const** nebo **volatile** na typ, který není **const** nebo **volatile**. Libovolné druhy převodu lze však určit pomocí přetypování explicitních typů (včetně převodů, které nejsou bezpečné).
 
 > [!NOTE]
->  Ukazatele na členy jazyka C++, s výjimkou ukazatelů na statické členy, jsou odlišné od běžných ukazatelů a nemají stejné standardní převody. Ukazatele na statické členy jsou normální ukazatele a mají stejné převody jako normální ukazatele.
+> C++ukazatele na členy, s výjimkou ukazatelů na statické členy, se liší od normálních ukazatelů a nemají stejné standardní převody. Ukazatele na statické členy jsou normální ukazatele a mají stejné převody jako normální ukazatele.
 
-### <a name="null-pointer-conversions"></a>převody ukazatele s hodnotou Null
+### <a name="null-pointer-conversions"></a>nenulové převody ukazatelů
 
-Celočíselný konstantní výraz, který se vyhodnotí na hodnotu nula nebo takový výraz přetypovaný na typ ukazatele, je převeden na ukazatel zvaný "nulový ukazatel". Tento ukazatel zaručuje nerovnost při porovnání s ukazatelem na libovolný platný objekt nebo funkci (kromě ukazatelů na objekty se základem, které mohou mít stejný posun a stále ukazovat na různé objekty).
+Celočíselný konstantní výraz, který je vyhodnocen jako nula, nebo takové přetypování výrazu na typ ukazatele, je převeden na ukazatel nazvaný *ukazatel s hodnotou null*. Tento ukazatel vždy porovnává nerovnost s ukazatelem na libovolný platný objekt nebo funkci. Výjimkou jsou ukazatele na objekty založené na objektech, které mohou mít stejný posun a pořád odkazují na různé objekty.
 
-V C ++ 11 [nullptr](../cpp/nullptr.md) typ by měl být upřednostňované C-style ukazatel s hodnotou null.
+V jazyce C++ 11 by měl být typ [nullptr](../cpp/nullptr.md) upřednostňovaný na ukazatel null ve stylu jazyka C.
 
-### <a name="pointer-expression-conversions"></a>Převody ukazatele výraz
+### <a name="pointer-expression-conversions"></a>Převody výrazů ukazatelů
 
 Každý výraz typu pole lze převést na ukazatel stejného typu. Výsledkem převodu je ukazatel na první prvek pole. Následující příklad ukazuje takový převod:
 
@@ -277,17 +275,17 @@ char *pszPath = szPath; // Equals &szPath[0].
 
 Výraz, jehož výsledkem je funkce vracející určitý typ, je převeden na ukazatel na funkci vracející tento typ kromě těchto případů:
 
-- Výraz je použit jako operand operátoru address-of (**&**).
+- Výraz je použit jako Operand operátoru address-of ( **&** ).
 
 - Výraz je použit jako operand operátoru volání funkce.
 
 ## <a name="reference-conversions"></a>Převody odkazů
 
-Odkaz na třídu lze převést na odkaz na základní třídu v následujících případech:
+Odkaz na třídu lze převést na odkaz na základní třídu v těchto případech:
 
 - Zadaná základní třída je přístupná.
 
-- Převod je jednoznačný. (Viz [více základních tříd](../cpp/multiple-base-classes.md) Další informace o odkazech na nejednoznačný základní třídy.)
+- Převod je jednoznačný. (Další informace o nejednoznačných odkazech na základní třídu naleznete v tématu [více základních tříd](../cpp/multiple-base-classes.md).)
 
 Výsledkem převodu je ukazatel na podobjekt, který představuje základní třídu.
 
@@ -295,7 +293,7 @@ Výsledkem převodu je ukazatel na podobjekt, který představuje základní tř
 
 Ukazatele na členy třídy lze převádět během přiřazení, inicializace, porovnání a v jiných výrazech. Tato část popisuje následující převody ukazatele na člen:
 
-## <a name="pointer-to-base-class-member"></a>Ukazatel na člena základní třídy
+### <a name="pointer-to-base-class-member"></a>Ukazatel na člena základní třídy
 
 Ukazatel na člen základní třídy lze převést na ukazatel na člen třídy z ní odvozené, pokud jsou splněny následující podmínky:
 
@@ -309,9 +307,9 @@ Je-li levý operand ukazatel na člen, pravý operand musí být typu ukazatele 
 
 - Levý operand je ukazatel na člen třídy odvozené veřejně a jednoznačně z třídy pravého operandu.
 
-## <a name="integral-constant-conversions"></a>Integrální konstantní konverze
+### <a name="null-pointer-to-member-conversions"></a>nulový ukazatel na převody členů
 
-Celočíselný konstantní výraz, který je vyhodnocen na hodnotu nula, je převeden na ukazatel zvaný „nulový ukazatel“. Tento ukazatel zaručuje nerovnost při porovnání s ukazatelem na libovolný platný objekt nebo funkci (kromě ukazatelů na objekty se základem, které mohou mít stejný posun a stále ukazovat na různé objekty).
+Celočíselný konstantní výraz, který je vyhodnocen jako nula, je převeden na ukazatel s hodnotou null. Tento ukazatel vždy porovnává nerovnost s ukazatelem na libovolný platný objekt nebo funkci. Výjimkou jsou ukazatele na objekty založené na objektech, které mohou mít stejný posun a pořád odkazují na různé objekty.
 
 Následující kód znázorňuje definici ukazatele na člen `i` třídy `A`. Ukazatel `pai` je inicializován na hodnotu 0, což je nulový ukazatel.
 
@@ -331,4 +329,4 @@ int main()
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)
+[C++Referenční dokumentace jazyka](../cpp/cpp-language-reference.md)

@@ -1,6 +1,6 @@
 ---
-title: Převody z nepodepsaných integrálních typů
-ms.date: 03/27/2019
+title: Převody z integrálních typů bez znaménka
+ms.date: 10/02/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,67 +8,83 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312437"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998785"
 ---
-# <a name="conversions-from-unsigned-integral-types"></a>Převody z nepodepsaných integrálních typů
+# <a name="conversions-from-unsigned-integral-types"></a>Převody z integrálních typů bez znaménka
 
-Celé číslo bez znaménka je rozšířením nula převést na kratší celé číslo bez znaménka nebo podepsaný zkrácením nejvyšších bitů nebo na již bez znaménka nebo podepsané celé číslo. Další informace najdete v tématu [převody z celočíselných typů bez znaménka tabulky](#conversions-from-unsigned-integral-types-table).
+Pokud je unsigned integer převeden na celé číslo nebo na typ s plovoucí desetinnou čárkou, pokud je původní hodnota reprezentována v typu výsledku, hodnota je beze změny.
 
-Pokud hodnoty celočíselného typu převeden na celé číslo se znaménkem s menší velikostí, nebo celé číslo bez znaménka, je převedena na jeho odpovídající celé číslo se znaménkem, hodnota je beze změny, pokud můžou být vyjádřeny v novém typu. Nicméně hodnota představuje změny, pokud je bit znaménka nastavená jako v následujícím příkladu.
+Při převodu unsigned integer na celé číslo větší velikosti je hodnota nulová – rozšířená. Při převodu na celé číslo menší velikosti jsou bity vysokého řádu zkráceny. Výsledek je interpretován pomocí typu výsledku, jak je znázorněno v tomto příkladu.
 
 ```C
-int j;
-unsigned short k = 65533;
+unsigned k = 65533;
+short j;
 
 j = k;
 printf_s( "%hd\n", j );   // Prints -3
 ```
 
-Pokud nemůže být reprezentovaná, výsledkem je definován implementací. Zobrazit [převody přetypování](../c-language/type-cast-conversions.md) informace o zpracování kompilátor Microsoft C degradace celých čísel. Stejné výsledky chování z převodu celého čísla nebo z typu přetypování na celé číslo.
+Při převodu unsigned integer na typ s plovoucí desetinnou čárkou, pokud původní hodnota nemůže být reprezentována přesně v typu výsledku, výsledek je další nebo nižší reprezentovatelné číslo.
 
-Nepodepsané hodnoty se převedou tak, aby zachovává jejich hodnota a není reprezentovatelné přímo v jazyce C. Jedinou výjimkou je převod z **unsigned long** k **float**, který ztratí maximálně bity nižšího řádu. V opačném případě hodnota se zachová pro účely, nebo bez znaménka. Pokud hodnota typu celé číslo je převedena na číslo s plovoucí čárkou a hodnota je mimo rozsah reprezentovatelný, výsledek nedefinován. (Viz [úložiště základních typů](../c-language/storage-of-basic-types.md) informace o rozsahu u typů s plovoucí desetinnou čárkou a integrální.)
+Informace o velikostech typů integrálních a plovoucích bodů naleznete v části [úložiště základních typů](../c-language/storage-of-basic-types.md) .
 
-Následující tabulka shrnuje převody z nepodepsaných integrálních typů.
+**Specifické pro společnost Microsoft**
 
-## <a name="conversions-from-unsigned-integral-types-table"></a>Převody z celočíselných typů bez znaménka tabulky
+V kompilátoru společnosti Microsoft, **unsigned** (nebo **unsigned int**) a **Long bez znaménka** jsou odlišné, ale ekvivalentní typy. Převod hodnoty typu **int bez znaménka** pokračuje stejným způsobem jako převod typu **Long bez znaménka**.
+
+**Specifické pro konec Microsoftu**
+
+Následující tabulka shrnuje převody z celočíselných typů bez znaménka.
+
+## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tabulka převodů z celočíselných typů bez znaménka
 
 |From|Chcete-li|Metoda|
 |----------|--------|------------|
-|**unsigned char**|**char**|Zachovat bitový vzor; bit vyššího řádu stane bitu znaménka|
-|**unsigned char**|**short**|Rozšíření nula|
-|**unsigned char**|**long**|Rozšíření nula|
-|**unsigned char**|**short bez znaménka**|Rozšíření nula|
-|**unsigned char**|**unsigned long**|Rozšíření nula|
-|**unsigned char**|**float**|Převést na **dlouhé**; převod **dlouhé** k **plovoucí desetinnou čárkou**|
-|**unsigned char**|**double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
-|**unsigned char**|**typ long double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
-|**short bez znaménka**|**char**|Zachovat dolní bajty.|
-|**short bez znaménka**|**short**|Zachovat bitový vzor; bit vyššího řádu stane bitu znaménka|
-|**short bez znaménka**|**long**|Rozšíření nula|
-|**short bez znaménka**|**unsigned char**|Zachovat dolní bajty.|
-|**short bez znaménka**|**unsigned long**|Rozšíření nula|
-|**short bez znaménka**|**float**|Převést na **dlouhé**; převod **dlouhé** k **plovoucí desetinnou čárkou**|
-|**short bez znaménka**|**double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
-|**short bez znaménka**|**typ long double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
-|**unsigned long**|**char**|Zachovat dolní bajty.|
-|**unsigned long**|**short**|Zachovat nižší řád slova|
-|**unsigned long**|**long**|Zachovat bitový vzor; bit vyššího řádu stane bitu znaménka|
-|**unsigned long**|**unsigned char**|Zachovat dolní bajty.|
-|**unsigned long**|**short bez znaménka**|Zachovat nižší řád slova|
-|**unsigned long**|**float**|Převést na **dlouhé**; převod **dlouhé** k **plovoucí desetinnou čárkou**|
-|**unsigned long**|**double**|Převést přímo na **double**|
-|**unsigned long**|**typ long double**|Převést na **dlouhé**; převod **dlouhé** k **double**|
-
-**Microsoft Specific**
-
-Kompilátor Microsoft C **unsigned int** je ekvivalentem typu **unsigned long** typu. Převod **unsigned int** hodnotu pokračuje stejným způsobem jako převod **unsigned long**. Převody z **unsigned long** hodnoty **float** nejsou přesné, pokud je převáděná hodnota větší než maximální pozitivní podepsané **dlouhé** hodnotu.
-
-**Specifické pro END Microsoft**
+|**znak bez znaménka**|**char**|Zachovat bitový vzor; bit vysokého řádu se změní na bit znaménka.|
+|**znak bez znaménka**|**short**|Nulová – rozšiřování|
+|**znak bez znaménka**|**long**|Nulová – rozšiřování|
+|**znak bez znaménka**|**Long Long**|Nulová – rozšiřování|
+|**znak bez znaménka**|**krátký unsigned**|Nulová – rozšiřování|
+|**znak bez znaménka**|**unsigned long**|Nulová – rozšiřování|
+|**znak bez znaménka**|**dlouhý unsigned long**|Nulová – rozšiřování|
+|**znak bez znaménka**|**float**|Převést na **Long**; převést **Long** na **float**|
+|**znak bez znaménka**|**double**|Převést na **Long**; převést **Long** na **Double**|
+|**znak bez znaménka**|**Long Double**|Převést na **Long**; převést **Long** na **Double**|
+|**krátký unsigned**|**char**|Zachovat bajty s nižším pořadím|
+|**krátký unsigned**|**short**|Zachovat bitový vzor; bit vysokého řádu se změní na bit znaménka.|
+|**krátký unsigned**|**long**|Nulová – rozšiřování|
+|**krátký unsigned**|**Long Long**|Nulová – rozšiřování|
+|**krátký unsigned**|**znak bez znaménka**|Zachovat bajty s nižším pořadím|
+|**krátký unsigned**|**unsigned long**|Nulová – rozšiřování|
+|**krátký unsigned**|**dlouhý unsigned long**|Nulová – rozšiřování|
+|**krátký unsigned**|**float**|Převést na **Long**; převést **Long** na **float**|
+|**krátký unsigned**|**double**|Převést na **Long**; převést **Long** na **Double**|
+|**krátký unsigned**|**Long Double**|Převést na **Long**; převést **Long** na **Double**|
+|**unsigned long**|**char**|Zachovat bajty s nižším pořadím|
+|**unsigned long**|**short**|Zachovat slovo s nižším pořadím|
+|**unsigned long**|**long**|Zachovat bitový vzor; bit vysokého řádu se změní na bit znaménka.|
+|**unsigned long**|**Long Long**|Nulová – rozšiřování|
+|**unsigned long**|**znak bez znaménka**|Zachovat bajty s nižším pořadím|
+|**unsigned long**|**krátký unsigned**|Zachovat slovo s nižším pořadím|
+|**unsigned long**|**dlouhý unsigned long**|Nulová – rozšiřování|
+|**unsigned long**|**float**|Převést na **Long**; převést **Long** na **float**|
+|**unsigned long**|**double**|Převést přímo na **dvojitou přesnost**|
+|**unsigned long**|**Long Double**|Převést na **Long**; převést **Long** na **Double**|
+|**dlouhý unsigned long**|**char**|Zachovat bajty s nižším pořadím|
+|**dlouhý unsigned long**|**short**|Zachovat slovo s nižším pořadím|
+|**dlouhý unsigned long**|**long**|Zachovat hodnotu DWORD s nižším pořadím|
+|**dlouhý unsigned long**|**Long Long**|Zachovat bitový vzor; bit vysokého řádu se změní na bit znaménka.|
+|**dlouhý unsigned long**|**znak bez znaménka**|Zachovat bajty s nižším pořadím|
+|**dlouhý unsigned long**|**krátký unsigned**|Zachovat slovo s nižším pořadím|
+|**dlouhý unsigned long**|**unsigned long**|Zachovat hodnotu DWORD s nižším pořadím|
+|**dlouhý unsigned long**|**float**|Převést na **Long**; převést **Long** na **float**|
+|**dlouhý unsigned long**|**double**|Převést přímo na **dvojitou přesnost**|
+|**dlouhý unsigned long**|**Long Double**|Převést na **Long**; převést **Long** na **Double**|
 
 ## <a name="see-also"></a>Viz také:
 

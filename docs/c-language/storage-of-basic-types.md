@@ -1,6 +1,6 @@
 ---
 title: Úložiště základních typů
-ms.date: 11/04/2016
+ms.date: 10/02/2019
 helpviewer_keywords:
 - specifiers [C++], type
 - integral types, storage
@@ -21,30 +21,31 @@ helpviewer_keywords:
 - unsigned types [C++], storage
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
-ms.openlocfilehash: 51b67b375cf7a4608d3080e5922cabbf3135ddfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c642df4dd85e4aa09f90a143b8aa67c28b7dc2
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335881"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998762"
 ---
 # <a name="storage-of-basic-types"></a>Úložiště základních typů
 
 Následující tabulka shrnuje úložiště přidružená ke každému základnímu typu.
 
-### <a name="sizes-of-fundamental-types"></a>Velikosti základních typů
+## <a name="sizes-of-fundamental-types"></a>Velikosti základních typů
 
-|Type|Úložiště|
+|Typ|Úložiště|
 |----------|-------------|
-|`char`, `unsigned char`, **podepsané char**|1 bajt|
+|**char**, **unsigned char**, **signed char**|1 bajt|
 |**krátký**, **unsigned short**|2 bajty|
-|`int`, `unsigned int`|4 bajty|
-|**dlouhé**, `unsigned long`|4 bajty|
+|**int**, **unsigned int**|4 bajty|
+|**Long**, **bez znaménka**|4 bajty|
+|**Long Long**, **bez znaménka Long Long**|8 bajtů|
 |**float**|4 bajty|
 |**double**|8 bajtů|
-|`long double`|8 bajtů|
+|**Long Double**|8 bajtů|
 
-Datové typy jazyka C spadají do hlavních kategorií. "Celočíselné typy" zahrnují `char`, `int`, **krátký**, **dlouhé**, **podepsané**, `unsigned`, a `enum`. "Typy s plovoucí desetinnou čárkou" zahrnují **float**, **double**, a `long double`. „Aritmetické typy“ zahrnují všechny typy s plovoucí desetinnou čárkou a celočíselné typy.
+Datové typy jazyka C spadají do hlavních kategorií. *Integrální typy* zahrnují **int**, **char**, **short**, **Long**a **Long Long**. Tyto typy mohou být kvalifikovány **se znaménkem nebo** **bez**znaménka **a samotné samotný podpis lze** použít jako zkratku pro **unsigned int**. Výčtové typy (**Enum**) jsou také považovány za integrální typy pro většinu účelů. *Typy s plovoucí desetinnou* čárkou zahrnují **float**, **Double**a **Long Double**. *Aritmetické typy* zahrnují všechny plovoucí a integrální typy.
 
 ## <a name="see-also"></a>Viz také:
 

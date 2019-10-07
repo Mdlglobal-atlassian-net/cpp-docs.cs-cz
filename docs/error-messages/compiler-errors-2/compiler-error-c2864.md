@@ -1,27 +1,31 @@
 ---
 title: Chyba kompilátoru C2864
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - C2864
 helpviewer_keywords:
 - C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
-ms.openlocfilehash: 9bfc18137df1a54530011a8ec3f7ea50b1d6c86a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 122e0455f84d8940eda04f3968e883dd1f0cd444
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227497"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998664"
 ---
 # <a name="compiler-error-c2864"></a>Chyba kompilátoru C2864
 
-Proměnná: statický datový člen s inicializátorem ve třídě musí mít stálý celočíselný typ const
+> *název členu*: Statický datový člen s inicializátorem ve třídě musí mít nestálý celočíselný typ const.
 
-Inicializace `static` datový člen, který je definován jako `volatile`, není typem-`const`, nebo není celočíselným typem, použijte příkaz pro definici členu. Nelze je inicializovat v deklaraci.
+## <a name="remarks"></a>Poznámky
 
-Tato ukázka vygeneruje upozornění C2864:
+Chcete-li inicializovat datový člen `static`, který je definován jako `volatile`, není `const` nebo není integrálním typem, použijte příkaz definice členu. Nelze je inicializovat v deklaraci.
 
-```
+## <a name="example"></a>Příklad
+
+Tato ukázka generuje C2864:
+
+```cpp
 // C2864.cpp
 // compile with: /c
 class B  {
@@ -30,14 +34,14 @@ private:
    static int b = 3;   // C2864
    volatile static int c = 3;   // C2864
    volatile static const int d = 3;   // C2864
-   const static long long e = 3;   // OK
+   static const long long e = 3;   // OK
    static const double f = 3.33;   // C2864
 };
 ```
 
 Tato ukázka ukazuje, jak vyřešit upozornění C2864:
 
-```
+```cpp
 // C2864b.cpp
 // compile with: /c
 class C  {
