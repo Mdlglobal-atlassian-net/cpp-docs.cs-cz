@@ -194,7 +194,7 @@ Nyní tato knihovna DLL nemá příliš mnoho. V dalším kroku vytvoříte hlav
 
 Tento hlavičkový soubor deklaruje některé funkce pro vytvoření generalizované sekvence Fibonacci, pro které jsou zadány dvě počáteční hodnoty. Volání, které `fibonacci_init(1, 1)` generuje známou sekvenci Fibonacci čísla.
 
-Všimněte si příkazů preprocesoru v horní části souboru. Nová šablona projektu pro projekt knihovny DLL přidává **exporty _ProjectName_&#95; do definovaných maker preprocesoru. V tomto příkladu definuje Visual Studio **exporty&#95;MATHLIBRARY** při sestavení projektu knihovny DLL MATHLIBRARY.
+Všimněte si příkazů preprocesoru v horní části souboru. Nová šablona projektu pro projekt knihovny DLL přidává **exporty _ProjectName_&#95;EXPORTS** do definovaných maker preprocesoru. V tomto příkladu definuje Visual Studio **exporty&#95;MATHLIBRARY** při sestavení projektu knihovny DLL MATHLIBRARY.
 
 Když je definováno makro **MATHLIBRARY&#95;EXPORTS** , makro **rozhraní&#95;MATHLIBRARY API** nastaví `__declspec(dllexport)` modifikátor v deklaracích funkce. Tento modifikátor instruuje kompilátor a linker, aby exportovali funkci nebo proměnnou z knihovny DLL pro použití v jiných aplikacích. Pokud **MATHLIBRARY&#95;exporty** nejsou definovány, například když je hlavičkový soubor součástí klientské aplikace, `__declspec(dllimport)` **rozhraní MATHLIBRARY&#95;API** použije pro deklarace modifikátor. Tento modifikátor optimalizuje import funkce nebo proměnné v aplikaci. Další informace naleznete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 

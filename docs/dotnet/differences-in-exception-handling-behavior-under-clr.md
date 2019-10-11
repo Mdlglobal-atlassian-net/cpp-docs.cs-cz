@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: b84c51bc6adbb4fd879aadbca2856887e51fc401
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e307bbbf79e6340d4090e471fe643726b5366f9
+ms.sourcegitcommit: a9f1a1ba078c2b8c66c3d285accad8e57dc4539a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501239"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72037809"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Rozdíly v chování zpracování výjimek v režimu kompilace /CLR
 
@@ -149,7 +149,7 @@ caught an SEH Exception
 
 ##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>Filtry výjimek a EXCEPTION_CONTINUE_EXECUTION
 
-Pokud se filtr vrátí `EXCEPTION_CONTINUE_EXECUTION` ve spravované aplikaci, je zpracována, jako by byl vrácen `EXCEPTION_CONTINUE_SEARCH`filtr. Další informace o těchto konstantách naleznete v [příkazu try-except](../cpp/try-except-statement.md).
+Pokud filtr vrátí ve spravované aplikaci `EXCEPTION_CONTINUE_EXECUTION`, je zpracována, jako by filtr vrátil hodnotu `EXCEPTION_CONTINUE_SEARCH`. Další informace o těchto konstantách naleznete v [příkazu try-except](../cpp/try-except-statement.md).
 
 Následující příklad demonstruje tento rozdíl:
 
@@ -190,7 +190,7 @@ Counter=-3
 
 ##  <a name="vcconthe_set_se_translatorfunction"></a>Funkce _set_se_translator
 
-Funkce Translator, která `_set_se_translator`je nastavena voláním, má vliv pouze na catch v nespravovaném kódu. Následující příklad demonstruje toto omezení:
+Funkce Translator, která je nastavena voláním `_set_se_translator`, má vliv pouze na zachycení v nespravovaném kódu. Následující příklad demonstruje toto omezení:
 
 ```cpp
 // clr_exception_handling_8.cpp
@@ -279,4 +279,4 @@ Caught an SEH exception with exception code: e0000101
 
 [Zpracování výjimek](../extensions/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>
-[Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)
+[Zpracování výjimek v MSVC](../cpp/exception-handling-in-visual-cpp.md)

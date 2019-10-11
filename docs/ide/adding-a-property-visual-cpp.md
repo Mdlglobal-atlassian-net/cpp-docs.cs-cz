@@ -157,7 +157,7 @@ Tato stránka Průvodce přidáním vlastnosti slouží k určení libovolného 
 
 - `helpstring`
 
-  Určuje řetězec znaků, který se používá k popisu prvku, na který se vztahuje. Ve výchozím nastavení je nastaveno na `property`&nbsp;*název vlastnosti&nbsp;* . Viz [HelpString](/windows/win32/Midl/helpstring) v *odkazu MIDL*.
+  Určuje řetězec znaků, který se používá k popisu prvku, na který se vztahuje. Ve výchozím nastavení je nastaveno na `property`&nbsp;*název&nbsp;vlastnosti*. Viz [HelpString](/windows/win32/Midl/helpstring) v *odkazu MIDL*.
 
 ### <a name="other-options"></a>Další možnosti
 
