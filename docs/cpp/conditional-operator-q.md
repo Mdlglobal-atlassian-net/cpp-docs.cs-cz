@@ -1,5 +1,5 @@
 ---
-title: 'Podmíněný operátor:? :'
+title: 'Podmíněný operátor: &quest;:'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399145"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276816"
 ---
-# <a name="conditional-operator--"></a>Podmíněný operátor:? :
+# <a name="conditional-operator-quest-"></a>Podmíněný operátor: &quest;:
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,38 +25,38 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>Poznámky
 
-Podmíněný operátor (**?:**) je tříhodnotový operátor (má tři operandy). Podmíněný operátor pracuje následujícím způsobem:
+Podmíněný operátor ( **?:** ) je Ternární operátor (používá tři operandy). Podmíněný operátor funguje následujícím způsobem:
 
-- První operand je implicitně převeden na **bool**. Je vyhodnocen a před pokračováním jsou dokončeny všechny vedlejší účinky.
+- První operand je implicitně převeden na **bool**. Před pokračováním se vyhodnotí a všechny vedlejší účinky jsou dokončeny.
 
-- Pokud je první operand vyhodnocen jako **true** (1), je vyhodnocen Druhý operand.
+- Pokud je první operand vyhodnocen jako **true** (1), je vyhodnocen druhý operand.
 
 - Pokud je první operand vyhodnocen jako **false** (0), je vyhodnocen třetí operand.
 
-Výsledek podmíněného operátoru je určen podle toho, který operand je vyhodnocen, zda druhý nebo třetí. V podmíněném výrazu je vyhodnocen pouze jeden z posledních dvou operandů.
+Výsledek podmíněného operátoru je výsledkem vyhodnocení jakéhokoli operandu – druhý nebo třetí. V podmíněném výrazu je vyhodnocen pouze jeden z posledních dvou operandů.
 
-Podmíněné výrazy mají asociativitu zprava doleva. První operand musí být celočíselného typu nebo typu ukazatele. Do druhého a třetího operandu, platí následující pravidla:
+Podmíněné výrazy mají asociativita zprava doleva. První operand musí být integrálního typu nebo typu ukazatele. Následující pravidla platí pro druhý a třetí operand:
 
-- Pokud jsou oba operandy stejného typu, je výsledek tohoto typu.
+- Jsou-li oba operandy stejného typu, je výsledek tohoto typu.
 
-- Pokud jsou oba operandy aritmetického nebo výčtového typu, obvyklé aritmetické převody (popsané v [standardní převody](standard-conversions.md)) jsou provedeny je převést na společný typ.
+- Jsou-li oba operandy aritmetických nebo výčtových typů, jsou provedeny běžné aritmetické převody (pokryté [standardními převody](standard-conversions.md)) pro jejich převod na společný typ.
 
-- Pokud jsou oba operandy typů ukazatele nebo pokud je jeden typ ukazatele a druhý je konstantní výraz, který se vyhodnotí na hodnotu 0, jsou provedeny převody pro převod na společný typ.
+- Jsou-li oba operandy typu ukazatele, nebo pokud je jeden typ ukazatele a druhý je konstantní výraz, který je vyhodnocen na hodnotu 0, jsou provedeny převody ukazatelů pro jejich převod na společný typ.
 
-- Pokud jsou oba operandy typů odkazů, který je převede na společný typ. jsou provedeny převody odkazů.
+- Jsou-li oba operandy typu odkazu, jsou provedeny převody odkazů pro jejich převod na společný typ.
 
 - Pokud jsou oba operandy typu void, společný typ je typ void.
 
-- Pokud jsou oba operandy stejného typu definovaný uživatelem, je společný typ tohoto typu.
+- Pokud jsou oba operandy stejného uživatelsky definovaného typu, společný typ je tento typ.
 
-- Pokud mají různé typy operandů a alespoň jeden z operandů má uživatelem definovaný typ jazykových pravidel slouží k určení společný typ. (Viz následující upozornění.)
+- Pokud mají operandy různé typy a nejméně jeden z operandů má uživatelsky definovaný typ, použijí se pravidla jazyka pro určení společného typu. (Viz upozornění níže.)
 
-Jakékoli kombinace druhého a třetího operandu, které nejsou uvedeny v předchozím seznamu, jsou neplatné. Typ výsledku je společný typ a je to l-hodnota, pokud jsou druhý i třetí operand stejného typu a oba jsou l-hodnoty.
+Jakékoli kombinace druhý a třetí operandy, které nejsou v předchozím seznamu, jsou neplatné. Typ výsledku je společný typ a jedná se o l-hodnotu, pokud jsou druhý i třetí operand stejného typu a obě jsou l-hodnoty.
 
 > [!WARNING]
->  Pokud nejsou identické typy druhého a třetího operandu, jsou vyvolány pravidla převodu komplexní typ, jak je uvedeno ve standardu jazyka C++. Tyto převody může vést k neočekávanému chování, včetně vytváření a zničení dočasné objekty. Z tohoto důvodu důrazně vám buď (1) vyhnout jako operandy s podmíněným operátorem pomocí uživatelem definované typy nebo (2) Pokud pomocí uživatelem definovaných typů, pak explicitně přetypovat operandem na společný typ.
+>  Pokud typy druhý a třetí operand nejsou totožné, pak jsou vyvolány komplexní pravidla konverze typu, jak je uvedeno ve C++ standardu. Tyto převody mohou vést k neočekávanému chování, včetně konstrukce a zničení dočasných objektů. Z tohoto důvodu se důrazně doporučuje buď (1) Nepoužívat uživatelsky definované typy jako operandy s podmíněným operátorem nebo (2), pokud použijete uživatelsky definované typy, a pak explicitně přetypovat každý operand na společný typ.
 
-## <a name="example"></a>Příklad
+## <a name="example"></a>Příklad:
 
 ```cpp
 // expre_Expressions_with_the_Conditional_Operator.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Další informace najdete v tématech
 
-[Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++Předdefinované operátory, priority a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operátor podmíněného výrazu](../c-language/conditional-expression-operator.md)
