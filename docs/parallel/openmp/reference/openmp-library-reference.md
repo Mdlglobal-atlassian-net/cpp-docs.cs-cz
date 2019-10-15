@@ -2,12 +2,12 @@
 title: OpenMP – Referenční dokumentace knihoven
 ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: c63ae5ba7f04d8ee6bd02418792804373fa71e6b
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682596"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348227"
 ---
 # <a name="openmp-library-reference"></a>OpenMP – Referenční dokumentace knihoven
 
@@ -26,10 +26,10 @@ Funkce běhové knihovny jazyka Visual C++ OpenMP jsou obsaženy v následujíc�
 
 |Knihovna run-time OpenMP|Svých|
 |------------------------------|---------------------|
-|VCOMP. KNIHOVNA|Multithreading, dynamické propojení (import knihovny pro VCOMP. LIB).|
-|VCOMPD.LIB|Multithreading, dynamické propojení (import knihovny pro VCOMPD. VÍKA) (ladění)|
+|VCOMP. Knihovna|Multithreading, dynamické propojení (import knihovny pro VCOMP. LIB).|
+|VCOMPD. Knihovna|Multithreading, dynamické propojení (import knihovny pro VCOMPD. VÍKA) (ladění)|
 
-Pokud je v kompilaci definováno _DEBUG a pokud `#include omp.h` je ve zdrojovém kódu, VCOMPD. LIB bude výchozí lib, jinak VCOMP. Použije se LIB.
+Pokud je v kompilaci definováno _DEBUG a pokud `#include <omp.h>` je ve zdrojovém kódu, VCOMPD. LIB bude výchozí lib, jinak VCOMP. Použije se LIB.
 
 Můžete použít [/NODEFAULTLIB (Ignorovat knihovny)](../../../build/reference/nodefaultlib-ignore-libraries.md) k odebrání výchozí knihovny LIB a explicitní propojení s knihovnou dle vašeho výběru.
 
