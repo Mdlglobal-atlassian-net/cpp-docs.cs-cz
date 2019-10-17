@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514826"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444984"
 ---
 # <a name="menu-editor-c"></a>Editor nabídek (C++)
 
@@ -59,7 +59,7 @@ Nabídky umožňují uspořádat příkazy v logickém a snadno čitelném způs
 
 ### <a name="to-create-a-standard-menu"></a>Vytvoření standardní nabídky
 
-1. Přejděte na **zobrazení** > nabídky**prostředky** a klikněte pravým tlačítkem myši na záhlaví **nabídky** . Zvolte **Přidat prostředek**a pak **Nabídka**.
+1. Přejděte na **zobrazení**nabídky  > **ostatní Windows** > **prostředky** a klikněte pravým tlačítkem myši na záhlaví **nabídky** . Zvolte **Přidat prostředek**a pak **Nabídka**.
 
 1. V řádku nabídek vyberte pole **Nová položka** (v tomto poli obsahuje *text*).
 

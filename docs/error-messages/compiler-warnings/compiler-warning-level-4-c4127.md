@@ -1,31 +1,31 @@
 ---
-title: Kompilátor C4127 upozornění (úroveň 4)
-ms.date: 09/13/2018
+title: Upozornění kompilátoru (úroveň 4) C4127
+ms.date: 10/16/2019
 f1_keywords:
 - C4127
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 7f1e23d15d8daa126987278611cb5a85a5a36fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bef825f546573b878c415c385e1a2a2286e08db4
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401306"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444903"
 ---
-# <a name="compiler-warning-level-4-c4127"></a>Kompilátor C4127 upozornění (úroveň 4)
+# <a name="compiler-warning-level-4-c4127"></a>Upozornění kompilátoru (úroveň 4) C4127
 
-> podmíněný výraz je konstantní.
+> podmíněný výraz je konstanta
 
 ## <a name="remarks"></a>Poznámky
 
-Řídicí výraz **Pokud** příkazu nebo **při** smyčky je vyhodnocen jako konstanta. Z důvodu jejich společné idiomatickou využití, od Visual Studio 2015 update 3, jako je například 1 triviální konstanty nebo **true** nespouštějí upozornění, pokud nejsou výsledek operace ve výrazu.
+Řídicí výraz příkazu **if** nebo **while** je vyhodnocen jako konstanta. Vzhledem k tomu, že se jedná o běžné použití idiomatickou, počínaje verzí Visual Studio 2015 Update 3, triviální konstanty jako 1 nebo **true** neaktivují upozornění, pokud se nejedná o výsledek operace ve výrazu.
 
-Pokud kontrolní výraz **při** smyčky je konstanta, vzhledem k tomu, opakování ve smyčce ukončeno uprostřed, zvažte nahrazení **při** smyčky s **pro** smyčky. Můžete vynechat inicializaci, ukončení testu a opakovat přírůstek **pro** smyčky, což způsobí, že smyčka bude neomezený, stejně jako `while(1)`, a můžete ukončení smyčky z textu **pro** příkaz.
+Pokud řídicí výraz smyčky **while** je konstanta, protože smyčka končí uprostřed, zvažte nahrazení smyčky **while** smyčkou **for** . Můžete vynechat stav inicializace, ukončení testu a smyčka smyčky **for** , což způsobí, že smyčka bude nekonečná, stejně jako `while(1)`, a můžete ukončit smyčku z těla příkazu **for** .
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje dva způsoby C4127 se vygeneruje a ukazuje způsob použití smyčky for, aby se zabránilo upozornění:
+Následující příklad ukazuje dva způsoby, jak se vygeneruje C4127, a ukazuje, jak použít smyčku for, abyste se vyhnuli upozornění:
 
 ```cpp
 // C4127.cpp
@@ -41,5 +41,34 @@ int main() {
       printf("test\n");
       break;
    }
+}
+```
+
+Toto upozornění je také možné vygenerovat při použití konstanty v době kompilace v podmíněném výrazu:
+
+
+```cpp
+#include <string>
+
+using namespace std;
+
+template<size_t S, class T>
+void MyFunc()
+{
+   if (sizeof(T) >= S) // C4127. "Consider using 'if constexpr' statement instead"
+   {
+   }
+}
+
+class Foo
+{
+   int i;
+   string s;
+};
+
+int main()
+{
+   Foo f;
+   MyFunc<4, Foo>();
 }
 ```

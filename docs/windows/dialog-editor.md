@@ -1,5 +1,5 @@
 ---
-title: Editor dialogových oken (C++)
+title: Editor dialogovýchC++oken ()
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
@@ -23,102 +23,102 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: dc5a823951e07af96efceec52d2aa23552c2d002
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414259"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445026"
 ---
-# <a name="dialog-editor-c"></a>Editor dialogových oken (C++)
+# <a name="dialog-editor-c"></a>Editor dialogovýchC++oken ()
 
-**Editoru dialogového okna** umožňuje vytvoření nebo úpravu prostředků dialogových oken.
+**Editor dialogového okna** umožňuje vytvořit nebo upravit prostředky dialogového okna.
 
-- Chcete-li otevřít editor, dvakrát klikněte na soubor .rc dialogu v **zobrazení prostředků** okno a přejděte do nabídky **zobrazení** > **zobrazení prostředků**.
+- Editor otevřete tak, že dvakrát kliknete na soubor. RC dialogového okna v okně **prostředky** nebo přejdete do nabídky **zobrazení** > **ostatní Windows** > **prostředky**.
 
-Jeden z prvních kroků při vytváření nové dialogové okno nebo šablony dialogového okna, je přidání ovládacích prvků. V **editoru dialogového okna**, můžete uspořádat ovládací prvky podle určité velikosti, tvaru nebo zarovnání, nebo je můžete přesouvat přibližně pro práci v dialogovém okně. Rovněž lze ovládací prvky snadno odstranit.
+Jedním z prvních kroků při vytváření nového dialogového okna nebo šablony dialogového okna je přidání ovládacích prvků. V **editoru dialogového okna**můžete uspořádat ovládací prvky tak, aby odpovídaly určité velikosti, tvaru nebo zarovnání, nebo je můžete v dialogovém okně pracovat. Rovněž lze ovládací prvky snadno odstranit.
 
 Dialogové okno lze uložit jako šablonu, takže je možné jej znovu použít. Rovněž lze snadno přepínat mezi návrhem dialogového okna a editací kódu, který jej implementuje.
 
-Je také možné upravovat vlastnosti jednoho nebo více ovládacích prvků v **editoru dialogového okna**. Můžete změnit pořadí ovládacích prvků, to znamená, když pořadí, ve kterém ovládací prvky získávají zaměřit **kartu** stisknutí klávesy, nebo můžete definovat přístupové klávesy nebo kombinace kláves, která umožňuje uživatelům vybrat ovládací prvek pomocí klávesnice.
+V **editoru dialogového okna**je také možné upravit vlastnosti jednoho nebo více ovládacích prvků. Můžete změnit pořadí prvků, tj. pořadí, ve kterém ovládací prvky získají fokus při stisknutí klávesy **TAB** , nebo můžete definovat přístupová klávesa nebo kombinaci kláves, která uživatelům umožňuje vybrat ovládací prvek pomocí klávesnice.
 
-**Editoru dialogového okna** také umožňuje použití vlastních ovládacích prvků, včetně ovládacích prvků ActiveX. Můžete také upravit [zobrazení formuláře](../mfc/reference/cformview-class.md), [zaznamenat zobrazení](../data/record-views-mfc-data-access.md), nebo [dialogové pruhy](../mfc/dialog-bars.md).
+**Editor dialogového okna** také umožňuje používat vlastní ovládací prvky, včetně ovládacích prvků ActiveX. Můžete také upravit [zobrazení formuláře](../mfc/reference/cformview-class.md), [zobrazení záznamů](../data/record-views-mfc-data-access.md)nebo [panely dialogového okna](../mfc/dialog-bars.md).
 
-Od verze Visual Studio 2015, můžete použít **editoru dialogového okna** k definování dynamického rozložení, které určují, jak přesunout ovládacích prvků a změna velikosti, když uživatel změní dialogové okno. Další informace najdete v tématu [dynamické rozložení](../mfc/dynamic-layout.md).
+Počínaje sadou Visual Studio 2015 můžete použít **Editor dialogového okna** k definování dynamického rozložení, které určuje způsob přesunutí a změny velikosti ovládacích prvků, když uživatel změní velikost dialogového okna. Další informace najdete v tématu [dynamické rozložení](../mfc/dynamic-layout.md).
 
-Další informace o prostředcích naleznete v tématu Jak [vytvoření dialogového okna](../windows/creating-a-new-dialog-box.md) a [ovládací prvky dialogového okna](../windows/controls-in-dialog-boxes.md).
+Další informace o prostředcích najdete v tématu Postup [Vytvoření dialogového okna](../windows/creating-a-new-dialog-box.md) a [ovládací prvky dialogového okna](../windows/controls-in-dialog-boxes.md).
 
 > [!TIP]
-> Při použití **editoru dialogového okna**, v mnoha případech můžete vybrat pomocí pravé tlačítko myši zobrazit místní nabídku s často používanými příkazy.
+> Při použití **editoru dialogových oken**můžete v mnoha instancích vybrat pravé tlačítko myši a zobrazit místní nabídku často používaných příkazů.
 
 ## <a name="dialog-editor-toolbar"></a>Panel nástrojů editoru dialogového okna
 
-**Editoru dialogového okna** nástrojů obsahuje tlačítka pro uspořádání rozložení ovládacích prvků v dialogovém okně třeba velikost a zarovnání. **Editor dialogových oken** tlačítka na panelu nástrojů odpovídají příkazy na **formátu** nabídky.
+Panel nástrojů **editoru dialogového okna** obsahuje tlačítka pro uspořádání rozložení ovládacích prvků v dialogovém okně, například velikost a zarovnání. Tlačítka panelu nástrojů **editoru dialogového okna** odpovídají příkazům v nabídce **Formát** .
 
 |Ikona|Význam|Ikona|Význam|
 |----------|-------------|----------|-------------|
-|![Tlačítko Testovat Dialog](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Testovací dialogové okno|![Místo přes tlačítko](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Mezi|
-|![Zarovnat doleva tlačítko](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Zarovnat doleva|![Tlačítko místo dolů](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Dolů|
-|![Zarovnat práva tlačítko](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Zarovnat doprava|![Ujistěte se stejnou šířku tlačítka](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Nastavit stejnou šířku|
-|![Zarovnat horní tlačítko](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Zarovnat nahoru|![Ujistěte se stejnou výškou tlačítko](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Stejná výška|
-|![Zarovnat DNA tlačítko](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Zarovnat dolů|![Ujistěte se stejnou velikostí tlačítko](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Nastavit stejnou velikost|
-|![Tlačítko svisle Center](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Svisle|![Přepínací tlačítko mřížky](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Přepnout mřížku|
-|![Vodorovná tlačítka Center](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Vodorovná|![Tlačítko průvodce přepínací tlačítko](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Průvodce přepínací tlačítko|
+|![Tlačítko Test dialogového okna](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Dialogové okno testu|![Mezera napříč tlačítkem](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Čtečce|
+|![Tlačítko Zarovnat doleva](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Zarovnat doleva|![Tlačítko rozmístit dolů](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Dolů|
+|![Tlačítko Zarovnat práva](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Zarovnat práva|![Tlačítko nastavit stejnou šířku](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Nastavit stejnou šířku|
+|![Zarovnat nahoru – tlačítko](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Zarovnat nahoru|![Tlačítko nastavit stejnou výšku](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Nastavit stejnou výšku|
+|![Tlačítko Zarovnat dolů](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Zarovnat dolů|![Tlačítko nastavit stejnou velikost](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Nastavit stejnou velikost|
+|![Tlačítko svislého středu](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Svislé|![Tlačítko pro přepnutí mřížky](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Přepnout mřížku|
+|![Tlačítko vodorovně na střed](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontální|![Tlačítko Přepnout vodítka](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Přepnout vodítka|
 
-- Zobrazení nebo skrytí **editoru dialogového okna** nástrojů, přejděte do nabídky **zobrazení** > **panely nástrojů** > **editoru dialogového okna**.
+- Chcete-li zobrazit nebo skrýt panel nástrojů **editoru dialogového okna** , přejděte do nabídky **zobrazení** > **panely nástrojů** >  –**Editor dialogových oken**.
 
-Když otevřete **editoru dialogového okna** v projektu v jazyce C++ **editoru dialogového okna** nástrojů se automaticky zobrazí v horní části vašeho řešení, ale pokud explicitně Zavřít panel nástrojů, bude nutné ho vyvolat Při příštím otevření **editoru dialogového okna**. Zobrazení můžete přepínat výběrem ze seznamu dostupných panelů nástrojů a oken.
+Otevřete-li **Editor dialogového okna** v C++ projektu, panel nástrojů **editoru dialogového okna** se automaticky zobrazí v horní části řešení, ale pokud explicitně zavřete panel nástrojů, budete ho muset vyvolat při příštím otevření **dialogového okna Editor.** . Zobrazení můžete přepnout tak, že ho vyberete ze seznamu dostupných panelů nástrojů a oken.
 
 ## <a name="switch-between-dialog-box-controls-and-code"></a>Přepínání mezi ovládacími prvky dialogového okna a kódem
 
-V aplikacích MFC můžete dvakrát kliknout na dialogové okno Ovládací prvky pro přechod na svůj kód obslužné rutiny nebo k rychlému vytvoření zástupné procedury funkcí obslužných rutin.
+V aplikacích MFC můžete dvakrát kliknout na ovládací prvky dialogového okna a přejít tak na svůj kód obslužné rutiny nebo rychle vytvořit funkci obslužné rutiny pro zástupné procedury.
 
-Ovládací prvek, vyberte **ControlEvents** tlačítko nebo **zprávy** tlačítko [okno vlastností](/visualstudio/ide/reference/properties-window) Chcete-li zobrazit úplný seznam událostí a zpráv Windows k dispozici pro vybranou položku. Zvolte ze seznamu a vytvořit nebo upravit funkce obslužné rutiny.
+Když je vybrán ovládací prvek, vyberte tlačítko **ControlEvents** nebo tlačítko **zprávy** v [okno Vlastnosti](/visualstudio/ide/reference/properties-window) k zobrazení úplného seznamu zpráv a událostí systému Windows, které jsou k dispozici pro vybranou položku. Výběrem ze seznamu můžete vytvořit nebo upravit funkce obslužných rutin.
 
-- Pro přechod na kód z **editoru dialogového okna**, dvakrát klikněte na ovládací prvek v dialogovém okně můžete přejít k deklaraci jeho naposledy implementované zprávy funkci pro zpracování.
+- Chcete-li přejít na kód z **editoru dialogového okna**, dvakrát klikněte na ovládací prvek v dialogovém okně, abyste se přeskočili k deklaraci své naposledy implementované funkce zpracování zpráv.
 
-   Pro třídy založený na knihovně ATL dialogových oken můžete vždy přejít na definici konstruktoru.
+   Pro třídy dialogového okna založené na knihovně ATL vždy přeskočíte na definici konstruktoru.
 
-- Chcete-li zobrazit události pro ovládací prvek, ovládací prvek, zvolte **ControlEvents** tlačítko **vlastnosti** okna.
+- Chcete-li zobrazit události pro ovládací prvek s vybraným ovládacím prvkem, klikněte na tlačítko **ControlEvents** v okně **vlastnosti** .
 
-   Pokud jeden ovládací prvek má fokus v dialogovém okně, kliknete pravým tlačítkem a vyberte **přidat obslužnou rutinu události**. To umožňuje zadat třídu, ke kterému je přidání obslužné rutiny. Další informace najdete v tématu [přidání obslužné rutiny události](../ide/adding-an-event-handler-visual-cpp.md).
+   Pokud jeden ovládací prvek má fokus v dialogovém okně, můžete kliknout pravým tlačítkem a vybrat možnost **Přidat obslužnou rutinu události**. To umožňuje zadat třídu, do které je obslužná rutina přidána. Další informace naleznete v tématu [Přidání obslužné rutiny události](../ide/adding-an-event-handler-visual-cpp.md).
 
    > [!NOTE]
-   > Výběr **ControlEvents** tlačítka, když je fokus dialogové okno uvádí seznam všech ovládacích prvků v poli dialogové okno, které můžete rozbalit Úprava události pro jednotlivé ovládací prvky.
+   > Výběr tlačítka **ControlEvents** , když má dialogové okno fokus, zpřístupní seznam všech ovládacích prvků v dialogovém okně, které pak můžete rozbalit a upravit události pro jednotlivé ovládací prvky.
 
-- Chcete-li zobrazit zprávy pro dialogové okno, s dialogovým oknem vybrali, zvolte **zprávy** tlačítko **vlastnosti** okna.
+- Chcete-li zobrazit zprávy pro dialogové okno s vybraným dialogovým oknem, klikněte na tlačítko **zprávy** v okně **vlastnosti** .
 
 ## <a name="accelerator-keys"></a>Klávesy akcelerátoru
 
-Níže jsou výchozí klávesové zkratky pro **editoru dialogového okna** příkazy.  
+Níže jsou uvedeny výchozí klávesy akcelerátoru pro příkazy **editoru dialogového okna** .  
 
-|Příkaz|klíče|Popis|
+|Příkaz|Klíče|Popis|
 |-------------|----------|-----------------|
-|Format.AlignBottoms|**CTRL** + **Shift** + **šipka dolů**|Zarovná okraje dolní části vybrané ovládací prvky s dominantního ovládacího prvku.|
-|Format.AlignCenters|**Shift** + **F9**|Zarovná svisle na střed vybrané ovládací prvky s dominantního ovládacího prvku.|
-|Format.AlignLefts|**CTRL** + **Shift** + **šipka vlevo**|Zarovná levé hrany vybrané ovládací prvky s dominantního ovládacího prvku.|
-|Format.AlignMiddles|**F9**|Zarovná vodorovně na střed vybrané ovládací prvky s dominantního ovládacího prvku.|
-|Format.AlignRights|**CTRL** + **Shift** + **šipka doprava**|Zarovná okraje pravé vybrané ovládací prvky s dominantního ovládacího prvku.|
-|Format.AlignTops|**CTRL** + **Shift** + **šipka nahoru**|Zarovnává horní hrany vybrané ovládací prvky s dominantního ovládacího prvku.|
-|Format.ButtonBottom|**Ctrl** + **B**|Umístí vybrané tlačítek podél dole uprostřed dialogového okna.|
-|Format.ButtonRight|**Ctrl** + **R**|Umístí vybraného tlačítka v pravém horním rohu dialogového okna.|
-|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|Centra pro ovládací prvky vodorovně v dialogovém okně.|
-|Format.CenterVertical|**CTRL** + **F9**|Centra pro ovládací prvky v dialogovém okně svisle.|
-|Format.CheckMnemonics|**Ctrl** + **M**|Kontrola jedinečnosti klávesových zkratek.|
-|Format.SizeToContent|**Shift** + **F7**|Změní velikost vybrané ovládací prvky podle text titulku.|
-|Format.SpaceAcross|**ALT** + **šipka vlevo**|Rovnoměrné mezery vybrané ovládací prvky vodorovně.|
-|Format.SpaceDown|**ALT** + **šipka dolů**|Rovnoměrné mezery svisle vybrané ovládací prvky.|
+|Format.AlignBottoms|**Ctrl** + **SHIFT** + **šipka dolů**|Zarovnává spodní okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
+|Format.AlignCenters|**Shift** + **F9**|Zarovnává svislé středy vybraných ovládacích prvků s dominantním ovládacím prvkem.|
+|Format.AlignLefts|**Ctrl** + **SHIFT** + **šipka doleva**|Zarovná levé okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
+|Format.AlignMiddles|**Vede**|Zarovná Vodorovné středy vybraných ovládacích prvků s dominantním ovládacím prvkem.|
+|Format.AlignRights|**Ctrl** + **SHIFT** + **šipka doprava**|Zarovná pravé hrany vybraných ovládacích prvků s dominantním ovládacím prvkem.|
+|Format.AlignTops|**Ctrl** + **SHIFT** + **šipka nahoru**|Zarovná horní okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
+|Format.ButtonBottom|**Ctrl** + **B**|Umístí vybraná tlačítka podél dolního středu dialogového okna.|
+|Format.ButtonRight|**Ctrl** + **R**|Umístí vybraná tlačítka do pravého horního rohu dialogového okna.|
+|Format.CenterHorizontal|**Ctrl** + **SHIFT** + **F9**|Nacentruje ovládací prvky v dialogovém okně vodorovně.|
+|Format.CenterVertical|**Ctrl** + **F9**|Nacentruje ovládací prvky v dialogovém okně svisle.|
+|Format.CheckMnemonics|**Ctrl** + **M**|Kontroluje jedinečnost symbolických instrukcí.|
+|Format. SizeToContent|**Shift** + **F7**|Změní velikost vybraných ovládacích prvků tak, aby odpovídaly textu titulku.|
+|Format.SpaceAcross|**Alt** + **šipka vlevo**|Rovnoměrně rozmístit vybrané ovládací prvky vodorovně.|
+|Format.SpaceDown|**Alt** + **šipka dolů**|Vybrané ovládací prvky se rovnoměrně rozmístí svisle.|
 |Format.TabOrder|**Ctrl** + **D**|Nastaví pořadí ovládacích prvků v dialogovém okně.|
-|Format.TestDialog|**Ctrl** + **T**|Spustí dialogových oken k otestování vzhled a chování.|
-|Format.ToggleGuides|**Ctrl** + **G**|Přepínání mezi žádná mřížka, pokyny a Mřížka pro dialogové okno úpravy.|
+|Format.TestDialog|**Ctrl** + **t**|Spustí dialogové okno pro otestování vzhledu a chování.|
+|Format.ToggleGuides|**Ctrl** + **G**|Cykly mezi žádnou mřížkou, pokyny a mřížkou pro úpravy dialogu.|
 
-- Chcete-li změnit klávesové zkratky, přejděte do nabídky **nástroje** > **možnosti**a zvolte **klávesnice** pod **prostředí** složky.
+- Chcete-li změnit klávesové zkratky, přejděte do nabídky **nástroje**@no__t**Možnosti**-1 a ve složce **prostředí** vyberte možnost **klávesnice** .
 
-   Další informace najdete v tématu [určení a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+   Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
-- Chcete-li změnit nastavení, přejděte do nabídky **nástroje** > **nastavení importu a exportu**.
+- Pokud chcete změnit nastavení, přejděte na **nástroje**nabídky  > **Nastavení importu a exportu**.
 
-   Dostupné možnosti v dialogových oknech, názvy a umístění příkazů nabídky se zobrazí, mohou lišit od informací uvedených v **pomáhají** v závislosti na aktivních nastaveních nebo edici.  Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+   Možnosti dostupné v dialogových oknech a názvy a umístění příkazů nabídky, které vidíte, se mohou lišit od toho, co je popsáno v **nápovědě** v závislosti na aktivních nastaveních nebo edici.  Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ## <a name="requirements"></a>Požadavky
 

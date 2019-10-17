@@ -1,5 +1,5 @@
 ---
-title: Editory prostředků (C++)
+title: Editory prostředkůC++()
 ms.date: 02/14/2019
 f1_keywords:
 - vs.editors.resource
@@ -21,106 +21,106 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 850d4b72ddb45551528526cd9e02345aee74d751
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344230"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444990"
 ---
-# <a name="resource-editors-c"></a>Editory prostředků (C++)
+# <a name="resource-editors-c"></a>Editory prostředkůC++()
 
-Editor prostředků je specializované prostředí pro vytváření nebo úprav prostředky, které jsou součástí projektu sady Visual Studio. Editory prostředků Visual Studio techniky a rozhraní vám pomůžou vytvářet a upravovat prostředky aplikace rychle a snadno sdílet. Editory prostředků umožňují zobrazit a upravit prostředky v příslušné prostředky editoru a ve verzi preview.
+Editor prostředků je specializované prostředí pro vytváření a úpravu prostředků, které jsou součástí projektu sady Visual Studio. Editory prostředků sady Visual Studio sdílí techniky a rozhraní, které vám pomůžou rychle a snadno vytvářet a upravovat prostředky aplikace. Editory prostředků umožňují zobrazit a upravit prostředky v příslušných editorech a v prostředcích Preview.
 
-Otevře se editor odpovídající automaticky při vytvoření nebo otevření prostředku.
+Vhodný Editor se automaticky otevře při vytváření nebo otevírání prostředku.
 
 > [!NOTE]
-> Protože spravované projekty nepoužívají soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumníka řešení**. Můžete použít [Editor obrázků](../windows/image-editor-for-icons.md) a [binární Editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
+> Vzhledem k tomu, že spravované projekty nepoužívají soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumník řešení**. Můžete použít [Editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
 
-|Použití...|Chcete-li upravit...|
+|Použijte...|Chcete upravit...|
 |----------------|----------------|
-|[Editor akcelerátorů](../windows/accelerator-editor.md)|Tabulek akcelerátorů v aplikaci Visual Studio C++ projekty.|
-|[Binární editor](binary-editor.md)|Informace o binárních dat a vlastních prostředků v projektech Visual C++, Visual Basic nebo Visual C#.|
-|[Editor dialogových oken](../windows/dialog-editor.md)|Dialogová okna v sadě Visual Studio C++ projekty.|
-|[Editor obrázků](../windows/image-editor-for-icons.md)|Rastrové obrázky, ikony, kurzory a další soubory obrázků v projektech Visual C++, Visual Basic nebo Visual C#.|
-|[Editor nabídek](../windows/menu-editor.md)|Prostředky nabídky v sadě Visual Studio C++ projekty.|
-|[Ribbon Editor](../mfc/ribbon-designer-mfc.md)|Prostředky z pásu karet v projektech knihovny MFC.|
-|[Editor řetězce](../windows/string-editor.md)|Řetězec tabulky v sadě Visual Studio C++ projekty.|
-|[Editor panelu nástrojů](../windows/toolbar-editor.md)|Prostředky panelu nástrojů v sadě Visual Studio C++ projekty. **Panelu nástrojů editoru** je součástí **Editor obrázků**.|
-|[Editor informací o verzi](../windows/version-information-editor.md)|Informace o verzi v sadě Visual Studio C++ projekty.|
+|[Editor akcelerátorů](../windows/accelerator-editor.md)|Tabulky akcelerátorů v projektech C++ sady Visual Studio.|
+|[Binární editor](binary-editor.md)|Informace o binárních datech a vlastní prostředky C++v projektech visual, Visual Basic C# nebo Visual.|
+|[Editor dialogových oken](../windows/dialog-editor.md)|Dialogová okna v projektech C++ sady Visual Studio.|
+|[Editor obrázků](../windows/image-editor-for-icons.md)|Rastrové obrázky, ikony, kurzory a další soubory obrázků v projektech C++visual, Visual Basic nebo Visual C# .|
+|[Editor nabídek](../windows/menu-editor.md)|Prostředky nabídky v projektech sady C++ Visual Studio.|
+|[Editor pásu karet](../mfc/ribbon-designer-mfc.md)|Prostředky pásu karet v projektech MFC.|
+|[Editor řetězce](../windows/string-editor.md)|Tabulky řetězců v projektech sady C++ Visual Studio.|
+|[Editor panelu nástrojů](../windows/toolbar-editor.md)|Prostředky panelu nástrojů v projektech C++ sady Visual Studio. **Editor panelu nástrojů** je součástí **editoru obrázků**.|
+|[Editor informací o verzi](../windows/version-information-editor.md)|Informace o verzi v projektech C++ sady Visual Studio.|
 
 > [!NOTE]
-> Pokud váš projekt již neobsahuje soubor .rc, přečtěte si téma [jak: Vytvoření prostředků](../windows/how-to-create-a-resource-script-file.md).
+> Pokud projekt ještě neobsahuje soubor. RC, přečtěte si téma [Postupy: vytváření prostředků](../windows/how-to-create-a-resource-script-file.md).
 
-## <a name="view-and-edit-resources"></a>Zobrazení a úpravy prostředků
+## <a name="view-and-edit-resources"></a>Zobrazení a úprava prostředků
 
-Každý typ prostředku má editoru prostředků specifických pro příslušný typ prostředku. Můžete změnit uspořádání, změňte velikost, přidat ovládací prvky a funkce nebo jinak upravit aspektů prostředku pomocí editoru přidružené. Můžete také upravit prostředek v [textový formát](../windows/how-to-open-a-resource-script-file-in-text-format.md) a [binární formát](../windows/opening-a-resource-for-binary-editing.md).
+Každý typ prostředku má editor prostředků specifický pro daný typ prostředku. Můžete změnit uspořádání, změnit velikost, přidat ovládací prvky a funkce nebo jinak upravit aspekty prostředku pomocí přidruženého editoru. Prostředek můžete také upravit v [textovém formátu](../windows/how-to-open-a-resource-script-file-in-text-format.md) a v [binárním formátu](../windows/opening-a-resource-for-binary-editing.md).
 
-Některé typy prostředků jsou jednotlivé soubory, které můžete importovat a používat různými způsoby; patří mezi ně rastrové obrázky, ikony, kurzory, panely nástrojů a soubory html. Tyto zdroje mají názvy souborů a [identifikátory prostředků](../windows/symbols-resource-identifiers.md). Jiné, jako je například dialogová okna, nabídek a tabulky řetězců v projekty Win32, existují pouze v rámci prostředku skriptů (.rc) souboru nebo souboru prostředků (.rct) šablony.
+Některé typy prostředků jsou jednotlivé soubory, které je možné naimportovat a používat různými způsoby. mezi ně patří rastrové obrázky, ikony, kurzory, panely nástrojů a soubory HTML. Tyto prostředky mají názvy souborů a [identifikátorů prostředků](../windows/symbols-resource-identifiers.md). Ostatní, například dialogy, nabídky a tabulky řetězců v projektech Win32, existují pouze jako součást souboru skriptu prostředků (. RC) nebo šablony prostředků (. RCT).
 
-Prostředky může být také upravena mimo projekt bez nutnosti otevřít projekt, naleznete v tématu [jak: Vytvoření prostředků](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Prostředky je také možné upravovat mimo projekt, aniž by byl projekt otevřený, viz [Postupy: vytváření prostředků](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
 > [!NOTE]
-> Vlastnosti prostředku může být upraveno pomocí **vlastnosti** okna.
+> Vlastnosti prostředku lze upravit pomocí okna **vlastnosti** .
 
-- Chcete-li upravit vlastnosti prostředku, v [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na prostředku, kterou chcete upravit a zvolte **vlastnosti**.  Potom v [okno vlastností](/visualstudio/ide/reference/properties-window), změna vlastností prostředku.
+- Chcete-li upravit vlastnosti prostředku, klikněte v [prostředky](how-to-create-a-resource-script-file.md#create-resources)pravým tlačítkem myši na prostředek, který chcete upravit, a vyberte možnost **vlastnosti**.  Pak v [okno Vlastnosti](/visualstudio/ide/reference/properties-window)změňte vlastnosti prostředku.
 
-- Pokud chcete vrátit zpět změny provedené na vlastnosti prostředku, ujistěte se, že váš prostředek má fokus **zobrazení prostředků** a zvolte **zpět** z **upravit** nabídky.
+- Pokud chcete vrátit zpět změnu vlastností prostředku, ujistěte se, že se váš prostředek zaměřuje na **prostředky** a v nabídce **Upravit** vyberte **zpět** .
 
 ### <a name="win32-resources"></a>Prostředky Win32
 
-Budete mít přístup k prostředkům Win32 v [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) podokně.
+K prostředkům Win32 získáte přístup v podokně [prostředky](how-to-create-a-resource-script-file.md#create-resources) .
 
-#### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Chcete-li zobrazit prostředek systému Win32 v editoru prostředků
+#### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Zobrazení prostředku Win32 v editoru prostředků
 
-1. Přejděte do nabídky **zobrazení** > **zobrazení prostředků**.
+1. Přejít na **zobrazení**nabídky  > **ostatní Windows** > **prostředky**.
 
-1. Pokud **zobrazení prostředků** okno nejsou nejvrchnější okna, vyberte **zobrazení prostředků** kartu a přenést ho do horní části.
+1. Pokud okno **prostředky** není horním největším oknem, vyberte kartu **prostředky** a přeneste ji do horní části.
 
-1. Z **zobrazení prostředků**, rozbalte složku pro projekt, který obsahuje prostředky, které chcete zobrazit. Například pokud chcete zobrazit prostředku dialogového okna, rozbalte **dialogové okno** složky.
+1. Z **prostředky**rozbalte složku projektu obsahující prostředky, které chcete zobrazit. Například pokud chcete zobrazit prostředek dialogového okna, rozbalte složku **dialogového okna** .
 
-1. Dvakrát klikněte na prostředek, třeba **IDD_ABOUTBOX**.
+1. Dvakrát klikněte na prostředek, například **IDD_ABOUTBOX**.
 
-   Prostředek se otevře ve vhodném editoru. Například pro prostředky dialogového okna, prostředek se otevře uvnitř **editoru dialogového okna**.
+   Prostředek se otevře ve vhodném editoru. Například pro prostředky dialogového okna se prostředek otevře v **editoru dialogového okna**.
 
-#### <a name="to-delete-an-existing-win32-resource"></a>Chcete-li odstranit existující prostředek systému Win32
+#### <a name="to-delete-an-existing-win32-resource"></a>Odstranění existujícího prostředku Win32
 
-1. V **zobrazení prostředků**, rozbalte uzel pro typ prostředku.
+1. V **prostředky**rozbalte uzel pro typ prostředku.
 
-1. Klikněte pravým tlačítkem na požadovaný prostředek odstranit a zvolit **odstranit**.
+1. Klikněte pravým tlačítkem na prostředek, který chcete odstranit, a vyberte **Odstranit**.
 
 > [!TIP]
-> Tuto metodu můžete použít také v případě, že máte soubor .rc otevřený v okna dokumentu mimo projekt.
+> Tuto metodu lze použít také v případě, že je soubor. RC otevřen v okně dokumentu mimo projekt.
 
-### <a name="managed-project-resources"></a>Spravovaný projekt prostředků
+### <a name="managed-project-resources"></a>Spravované prostředky projektu
 
-Protože spravovaných projektů nepoužívejte soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumníka řešení**. Použití [Editor obrázků](../windows/image-editor-for-icons.md) a [binární Editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky a editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
+Vzhledem k tomu, že spravované projekty nepoužívají soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumník řešení**. Použijte [Editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky a editory prostředků sady Visual Studio nepodporují úpravu integrovaných prostředků.
 
-- Chcete-li zobrazit spravovaného prostředku v editoru prostředků v **Průzkumníka řešení**, dvakrát klikněte na prostředek, třeba *Bitmap1.bmp*, a prostředek se otevře ve vhodném editoru.
+- Chcete-li zobrazit spravovaný prostředek v editoru prostředků, v **Průzkumník řešení**dvakrát klikněte na prostředek, například *Bitmap1. bmp*a prostředek se otevře v příslušném editoru.
 
-- Odstranění existujícího spravovaného prostředku, v **Průzkumníka řešení**, klikněte pravým tlačítkem na požadovaný prostředek odstranit a zvolit **odstranit**.
+- Pokud chcete odstranit existující spravovaný prostředek, klikněte v **Průzkumník řešení**pravým tlačítkem na prostředek, který chcete odstranit, a vyberte **Odstranit**.
 
 ## <a name="preview-resources"></a>Náhled prostředků
 
-Ve verzi Preview vašich prostředků, aby bylo možné zobrazit grafických prostředků bez jejich otevírání. V předběžné verzi je také užitečné pro spustitelné soubory po jste sestavili, protože identifikátory prostředků změnit na čísla. Protože tyto identifikátory číselné často neposkytuje dostatek informací, zobrazení náhledu prostředky vám pomůže rychle identifikovat.
+Zobrazte náhled prostředků, abyste mohli zobrazit grafické prostředky bez nutnosti jejich otevírání. Náhled je vhodný také pro spustitelné soubory po jejich kompilování, protože se identifikátory prostředků změnily na čísla. Vzhledem k tomu, že tyto číselné identifikátory často neposkytují dostatek informací, vám jejich náhled pomůže rychle identifikovat.
 
-Následující typy prostředků poskytují náhled rozložení vizuálu: Rastrový obrázek, dialogové okno, ikona, nabídka, kurzor, panel nástrojů
+Následující typy prostředků poskytují náhled vizuálního rozložení: rastrový obrázek, dialog, ikona, nabídka, kurzor, panel nástrojů
 
-Následující prostředky neposkytují visual ve verzi preview: Akcelerátor, informace o verzi manifestu, tabulka řetězců
+Následující zdroje neposkytují vizuální náhled: akcelerátor, manifest, tabulka řetězců, informace o verzi.
 
 > [!NOTE]
-> Náhled prostředků vyžaduje Win32.
+> Pro náhled prostředků vyžaduje Win32.
 
 ### <a name="to-preview-resources"></a>Náhled prostředků
 
-1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) nebo okno dokumentu, vyberte prostředek, třeba **IDD_ABOUTBOX**.
+1. V [prostředky](how-to-create-a-resource-script-file.md#create-resources) nebo okně dokumentu vyberte prostředek, například **IDD_ABOUTBOX**.
 
-1. V [okno vlastností](/visualstudio/ide/reference/properties-window), vyberte **stránky vlastností** tlačítko.
+1. V [okno Vlastnosti](/visualstudio/ide/reference/properties-window)vyberte tlačítko **stránky vlastností** .
 
    > [!TIP]
-   > Použít zástupce, přejděte do nabídky **zobrazení** > **stránky vlastností**.
+   > Použijte zástupce, přejděte do nabídky **zobrazení**@no__t**stránky vlastností**-1.
 
-   **Vlastnost** pro prostředek se otevře stránka zobrazení ve verzi preview tohoto prostředku. Můžete použít **nahoru** a **dolů** v ovládacím prvku klávesy se šipkami přejdete strom **zobrazení prostředků** nebo okno dokumentu. **Vlastnost** stránky zůstávají otevřené, který se zobrazí jakémukoli prostředku, který má právě fokus a můžete zobrazit jejich náhled.
+   Otevře se stránka **vlastností** prostředku se zobrazením náhledu tohoto prostředku. Pomocí kláves se šipkami **nahoru** a **dolů** můžete procházet stromové ovládací prvky v **prostředky** nebo v okně dokumentu. Stránka **vlastností** zůstane otevřená a zobrazí všechny prostředky, které mají fokus a můžou se zobrazit v náhledu.
 
 ## <a name="requirements"></a>Požadavky
 
