@@ -50,10 +50,10 @@ helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69496621"
 ---
 # <a name="cpatht-class"></a>CPathT – třída
@@ -81,8 +81,8 @@ Třída řetězců ATL/MFC, která se má použít pro cestu (viz [CStringT](../
 
 |Name|Popis|
 |----------|-----------------|
-|[CPathT::PCXSTR](#pcxstr)|Typ konstantního řetězce.|
-|[CPathT::PXSTR](#pxstr)|Typ String.|
+|[CPathT::P CXSTR](#pcxstr)|Typ konstantního řetězce.|
+|[CPathT::P XSTR](#pxstr)|Typ String.|
 |[CPathT::XCHAR](#xchar)|Typ znaku.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
@@ -98,9 +98,9 @@ Třída řetězců ATL/MFC, která se má použít pro cestu (viz [CStringT](../
 |[CPathT::AddBackslash](#addbackslash)|Voláním této metody přidáte zpětné lomítko na konec řetězce pro vytvoření správné syntaxe pro cestu.|
 |[CPathT::AddExtension](#addextension)|Voláním této metody přidáte příponu souboru do cesty.|
 |[CPathT:: Append](#append)|Voláním této metody připojíte řetězec k aktuální cestě.|
-|[CPathT::BuildRoot](#buildroot)|Voláním této metody vytvoříte kořenovou cestu z daného čísla jednotky.|
-|[CPathT::Canonicalize](#canonicalize)|Voláním této metody převedete cestu na kanonický tvar.|
-|[CPathT::Combine](#combine)|Voláním této metody zřetězí řetězec představující název adresáře a řetězec představující název cesty k souboru na jednu cestu.|
+|[CPathT:: BuildRoot](#buildroot)|Voláním této metody vytvoříte kořenovou cestu z daného čísla jednotky.|
+|[CPathT:: kanonického tvaru](#canonicalize)|Voláním této metody převedete cestu na kanonický tvar.|
+|[CPathT:: kombinovat](#combine)|Voláním této metody zřetězí řetězec představující název adresáře a řetězec představující název cesty k souboru na jednu cestu.|
 |[CPathT::CommonPrefix](#commonprefix)|Voláním této metody určíte, zda zadaná cesta sdílí společnou předponu s aktuální cestou.|
 |[CPathT::CompactPath](#compactpath)|Zavolejte tuto metodu, chcete-li zkrátit cestu k souboru tak, aby odpovídala dané šířce v pixelech tím, že nahradíte součásti cesty třemi tečkami.|
 |[CPathT::CompactPathEx](#compactpathex)|Zavolejte tuto metodu, chcete-li zkrátit cestu k souboru tak, aby odpovídala zadanému počtu znaků, a to tak, že nahradíte součásti cesty třemi tečkami.|
@@ -108,16 +108,16 @@ Třída řetězců ATL/MFC, která se má použít pro cestu (viz [CStringT](../
 |[CPathT::FindExtension](#findextension)|Voláním této metody zjistíte pozici přípony souboru v cestě.|
 |[CPathT::FindFileName](#findfilename)|Voláním této metody zjistíte pozici názvu souboru v cestě.|
 |[CPathT::GetDriveNumber](#getdrivenumber)|Voláním této metody prohledáte cestu k písmenu jednotky v rozsahu od "A" do "Z" a vrátíte odpovídající číslo jednotky.|
-|[CPathT::GetExtension](#getextension)|Voláním této metody Získá příponu souboru z cesty.|
-|[CPathT::IsDirectory](#isdirectory)|Voláním této metody zkontrolujete, zda je cesta platným adresářem.|
-|[CPathT::IsFileSpec](#isfilespec)|Voláním této metody můžete vyhledat cestu pro všechny znaky oddělujecích cesty (například ': ' nebo '\\'). Pokud nejsou k dispozici žádné znaky oddělovače cest, je cesta považována za cestu specifikace souboru.|
-|[CPathT::IsPrefix](#isprefix)|Voláním této metody určíte, zda cesta obsahuje platnou předponu typu předaného *pszPrefix*.|
-|[CPathT::IsRelative](#isrelative)|Voláním této metody určíte, zda je cesta relativní.|
-|[CPathT::IsRoot](#isroot)|Voláním této metody určíte, zda je cesta kořenem adresáře.|
+|[CPathT:: GetExtension](#getextension)|Voláním této metody Získá příponu souboru z cesty.|
+|[CPathT::-adresář](#isdirectory)|Voláním této metody zkontrolujete, zda je cesta platným adresářem.|
+|[CPathT::-FileSpec](#isfilespec)|Voláním této metody můžete vyhledat cestu pro všechny znaky oddělujecích cesty (například ': ' nebo ' \\ '). Pokud nejsou k dispozici žádné znaky oddělovače cest, je cesta považována za cestu specifikace souboru.|
+|[CPathT::-prefix](#isprefix)|Voláním této metody určíte, zda cesta obsahuje platnou předponu typu předaného *pszPrefix*.|
+|[CPathT::-relativní](#isrelative)|Voláním této metody určíte, zda je cesta relativní.|
+|[CPathT::-root](#isroot)|Voláním této metody určíte, zda je cesta kořenem adresáře.|
 |[CPathT::IsSameRoot](#issameroot)|Voláním této metody určíte, zda má jiná cesta společnou kořenovou komponentu s aktuální cestou.|
 |[CPathT::IsUNC](#isunc)|Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention) pro server a sdílenou složku.|
 |[CPathT::IsUNCServer](#isuncserver)|Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention) pro server.|
-|[CPathT::IsUNCServerShare](#isuncservershare)|Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention), \\ \ *sdílenou složkou* *serveru*\ .|
+|[CPathT::IsUNCServerShare](#isuncservershare)|Voláním této metody zjistíte, jestli je cesta platnou cestou ke sdílené složce UNC (Universal Naming Convention), \\ \  \ *sdílení* *serveru* .|
 |[CPathT::MakePretty](#makepretty)|Voláním této metody převedete cestu na všechna malá písmena, aby cesta poskytovala konzistentní vzhled.|
 |[CPathT::MatchSpec](#matchspec)|Zavolejte tuto metodu pro hledání řetězce obsahujícího typ shody se zástupnými znaky.|
 |[CPathT::QuoteSpaces](#quotespaces)|Voláním této metody uzavřete cestu do uvozovek, pokud obsahuje mezery.|
@@ -150,7 +150,7 @@ Třída řetězců ATL/MFC, která se má použít pro cestu (viz [CStringT](../
 
 ## <a name="remarks"></a>Poznámky
 
-`CPath`, `CPathA`a `CPathW` jsou instancemi, které `CPathT` jsou definovány takto:
+`CPath`, `CPathA` a `CPathW` jsou instance `CPathT` definované následujícím způsobem:
 
 `typedef CPathT< CString > CPath;`
 
@@ -284,9 +284,9 @@ Vrátí společnou předponu.
 
 ### <a name="remarks"></a>Poznámky
 
-Předpona je jedním z těchto typů: "C:\\\\", ".", "..", "..", ".. \\\\". Další informace najdete v tématu [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
+Předpona je jedním z těchto typů: "C: \\ \\", ".", "..", "..", "..", ".. \\ \\ ". Další informace najdete v tématu [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
-##  <a name="compactpath"></a>  CPathT::CompactPath
+##  <a name="compactpath"></a>CPathT::CompactPath
 
 Zavolejte tuto metodu, chcete-li zkrátit cestu k souboru tak, aby odpovídala dané šířce v pixelech tím, že nahradíte součásti cesty třemi tečkami.
 
@@ -349,7 +349,7 @@ CPathT() throw();
 *pszPath*<br/>
 Ukazatel na řetězec cesty.
 
-*Cesta*<br/>
+*dílčí*<br/>
 Řetězec cesty
 
 ##  <a name="fileexists"></a>CPathT:: existuje
@@ -444,9 +444,9 @@ Vrátí nenulovou hodnotu (16), pokud je cesta adresářem, jinak FALSE.
 
 Další informace najdete v tématu [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).
 
-##  <a name="isfilespec"></a>  CPathT::IsFileSpec
+##  <a name="isfilespec"></a>CPathT::-FileSpec
 
-Voláním této metody můžete vyhledat cestu pro všechny znaky oddělujecích cesty (například ': ' nebo '\\'). Pokud nejsou k dispozici žádné znaky oddělovače cest, je cesta považována za cestu specifikace souboru.
+Voláním této metody můžete vyhledat cestu pro všechny znaky oddělujecích cesty (například ': ' nebo ' \\ '). Pokud nejsou k dispozici žádné znaky oddělovače cest, je cesta považována za cestu specifikace souboru.
 
 ```
 BOOL IsFileSpec() const;
@@ -471,7 +471,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>Parametry
 
 *pszPrefix*<br/>
-Předpona, kterou chcete vyhledat. Předpona je jedním z těchto typů: "C:\\\\", ".", "..", "..", ".. \\\\".
+Předpona, kterou chcete vyhledat. Předpona je jedním z těchto typů: "C: \\ \\", ".", "..", "..", "..", ".. \\ \\ ".
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -497,7 +497,7 @@ Vrátí hodnotu TRUE, pokud je cesta relativní, nebo FALSE, pokud je absolutní
 
 Další informace najdete v tématu [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).
 
-##  <a name="isroot"></a>  CPathT::IsRoot
+##  <a name="isroot"></a>CPathT::-root
 
 Voláním této metody určíte, zda je cesta kořenem adresáře.
 
@@ -513,7 +513,7 @@ Vrátí hodnotu TRUE, pokud je cesta kořenem, nebo v opačném případě FALSE
 
 Další informace najdete v tématu [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
 
-##  <a name="issameroot"></a>  CPathT::IsSameRoot
+##  <a name="issameroot"></a>CPathT::IsSameRoot
 
 Voláním této metody určíte, zda má jiná cesta společnou kořenovou komponentu s aktuální cestou.
 
@@ -550,7 +550,7 @@ Vrátí hodnotu TRUE, pokud je cesta platnou cestou UNC, nebo v opačném příp
 
 Další informace najdete v tématu [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).
 
-##  <a name="isuncserver"></a>  CPathT::IsUNCServer
+##  <a name="isuncserver"></a>CPathT::IsUNCServer
 
 Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention) pro server.
 
@@ -566,9 +566,9 @@ Vrátí hodnotu TRUE, pokud je řetězec platnou cestou UNC pouze pro server (ž
 
 Další informace najdete v tématu [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
 
-##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare
+##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare
 
-Voláním této metody určíte, zda je cesta platnou cestou UNC (Universal Naming Convention), \\ \ *sdílenou složkou* *serveru*\ .
+Voláním této metody zjistíte, jestli je cesta platnou cestou ke sdílené složce UNC (Universal Naming Convention), \\ \  \ *sdílení* *serveru* .
 
 ```
 BOOL IsUNCServerShare() const;
@@ -576,13 +576,13 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu true, pokud je cesta ve \\ \ *sdílené složce* *serveru*\ , nebo v opačném případě false.
+Vrátí hodnotu TRUE, pokud je cesta ve formátu \\ \  \ *sdílení* *serveru* nebo v opačném případě false.
 
 ### <a name="remarks"></a>Poznámky
 
 Další informace najdete v tématu [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).
 
-##  <a name="m_strpath"></a>  CPathT::m_strPath
+##  <a name="m_strpath"></a>CPathT::m_strPath
 
 Cesta.
 
@@ -592,7 +592,7 @@ StringType m_strPath;
 
 ### <a name="remarks"></a>Poznámky
 
-`StringType`je parametr šablony pro `CPathT`.
+`StringType` je parametr šablony, který se má `CPathT`.
 
 ##  <a name="makepretty"></a>CPathT::MakePretty
 
@@ -610,7 +610,7 @@ Vrátí hodnotu TRUE, pokud byla cesta převedena, nebo v opačném případě F
 
 Další informace najdete v tématu [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).
 
-##  <a name="matchspec"></a>  CPathT::MatchSpec
+##  <a name="matchspec"></a>CPathT::MatchSpec
 
 Zavolejte tuto metodu pro hledání řetězce obsahujícího typ shody se zástupnými znaky.
 
@@ -648,7 +648,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 Vrátí aktualizovanou cestu.
 
-##  <a name="operator_const_stringtype_amp"></a>CPathT:: operator const StringType&amp;
+##  <a name="operator_const_stringtype_amp"></a>CPathT:: operator const StringType &amp;
 
 Tento operátor umožňuje objektu pracovat jako řetězec.
 
@@ -672,7 +672,7 @@ operator PCXSTR() const throw();
 
 Vrátí řetězec představující aktuální cestu spravovanou tímto objektem.
 
-##  <a name="operator_stringtype_amp"></a>CPathT:: operator StringType&amp;
+##  <a name="operator_stringtype_amp"></a>CPathT:: operator StringType &amp;
 
 Tento operátor umožňuje objektu pracovat jako řetězec.
 
@@ -694,7 +694,7 @@ typedef StringType::PCXSTR PCXSTR;
 
 ### <a name="remarks"></a>Poznámky
 
-`StringType`je parametr šablony pro `CPathT`.
+`StringType` je parametr šablony, který se má `CPathT`.
 
 ##  <a name="pxstr"></a>CPathT::P XSTR
 
@@ -706,9 +706,9 @@ typedef StringType::PXSTR PXSTR;
 
 ### <a name="remarks"></a>Poznámky
 
-`StringType`je parametr šablony pro `CPathT`.
+`StringType` je parametr šablony, který se má `CPathT`.
 
-##  <a name="quotespaces"></a>  CPathT::QuoteSpaces
+##  <a name="quotespaces"></a>CPathT::QuoteSpaces
 
 Voláním této metody uzavřete cestu do uvozovek, pokud obsahuje mezery.
 
@@ -720,7 +720,7 @@ void QuoteSpaces();
 
 Další informace najdete v tématu [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).
 
-##  <a name="relativepathto"></a>  CPathT::RelativePathTo
+##  <a name="relativepathto"></a>CPathT::RelativePathTo
 
 Voláním této metody vytvoříte relativní cestu z jednoho souboru nebo složky do jiné.
 
@@ -855,7 +855,7 @@ Vrátí pozici začátku dílčí cesty, která následuje po kořenu (písmeno 
 
 Další informace najdete v tématu [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).
 
-##  <a name="strippath"></a>  CPathT::StripPath
+##  <a name="strippath"></a>CPathT::StripPath
 
 Voláním této metody odeberete část cesty s plně kvalifikovanou cestou a názvem souboru.
 
@@ -867,7 +867,7 @@ void StripPath();
 
 Další informace najdete v tématu [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).
 
-##  <a name="striptoroot"></a>  CPathT::StripToRoot
+##  <a name="striptoroot"></a>CPathT::StripToRoot
 
 Voláním této metody odeberete všechny části cesty s výjimkou kořenových informací.
 
@@ -905,7 +905,7 @@ typedef StringType::XCHAR XCHAR;
 
 ### <a name="remarks"></a>Poznámky
 
-`StringType`je parametr šablony pro `CPathT`.
+`StringType` je parametr šablony, který se má `CPathT`.
 
 ## <a name="see-also"></a>Viz také:
 
