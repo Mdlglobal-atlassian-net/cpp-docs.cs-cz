@@ -1,17 +1,17 @@
 ---
 title: Konstruktory (C++)
-ms.date: 09/05/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 0e2e3536c8eb0a5b111ff18e43044783ea684f1f
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062031"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587942"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -64,11 +64,11 @@ int main()
 
 - Konstruktory mohou být deklarovány jako **inline**, [Explicit](#explicit_constructors), **Friend** nebo [constexpr](#constexpr_constructors).
 - Konstruktor může inicializovat objekt, který byl deklarován jako **const**, **volatile** nebo **const volatile**. Objekt se bude **const** po dokončení konstruktoru.
-- Chcete-li definovat konstruktor v implementačním souboru, poskytněte mu úplný název jako jakákoli jiná členská funkce: `Box::Box(){...}`.
+- Chcete-li definovat konstruktor v implementačním souboru, poskytněte mu kvalifikovaný název jako u jakékoli jiné členské funkce: `Box::Box(){...}`.
 
 ## <a name="member_init_list"></a>Seznamy inicializátorů členů
 
-Konstruktor může volitelně mít seznam inicializátorů členů, který inicializuje členy třídy před spuštěním těla konstruktoru. (Všimněte si, že seznam inicializátorů členů není stejný jako *seznam inicializátorů* typu [std::\<initializer_list T >](../standard-library/initializer-list-class.md).)
+Konstruktor může volitelně mít seznam inicializátorů členů, který inicializuje členy třídy před spuštěním těla konstruktoru. (Všimněte si, že seznam inicializátorů členů není stejný jako *seznam inicializátorů* typu [std:: initializer_list \<T >](../standard-library/initializer-list-class.md).)
 
 Použití seznamu inicializátoru členů je upřednostňováno při přiřazování hodnot v těle konstruktoru, protože přímo inicializuje člen. V následujícím příkladu ukazuje seznam inicializátorů členů se skládá ze všech výrazů **identifikátoru (Argument)** za dvojtečkou:
 
@@ -78,7 +78,7 @@ Použití seznamu inicializátoru členů je upřednostňováno při přiřazov�
     {}
 ```
 
-Identifikátor musí odkazovat na člena třídy; je inicializován s hodnotou argumentu. Argument může být jeden z parametrů konstruktoru, volání funkce nebo [std:: initializer_list\<T >](../standard-library/initializer-list-class.md).
+Identifikátor musí odkazovat na člena třídy; je inicializován s hodnotou argumentu. Argument může být jeden z parametrů konstruktoru, volání funkce nebo [std:: initializer_list \<T >](../standard-library/initializer-list-class.md).
 
 v seznamu inicializátoru členů musí být inicializovány **konstantní** členy a členy typu odkazu.
 
@@ -206,13 +206,13 @@ Pokus o zkopírování objektu vyvolá chybu *C2280: pokus o odkaz na odstraněn
 
 ## <a name="move_constructors"></a>Přesunout konstruktory
 
-*Konstruktor přesunu* je speciální členská funkce, která přesouvá vlastnictví dat existujícího objektu na novou proměnnou bez kopírování původních dat. Jako svůj první parametr převezme odkaz rvalue a všechny další parametry musí mít výchozí hodnoty. Konstruktory přesunutí můžou významně zvýšit efektivitu vašeho programu při předávání velkých objektů. Konstruktor Move přebírá jako svůj první parametr odkaz rvalue. Všechny ostatní parametry musí mít výchozí hodnoty.
+*Konstruktor přesunu* je speciální členská funkce, která přesouvá vlastnictví dat existujícího objektu na novou proměnnou bez kopírování původních dat. Jako svůj první parametr převezme odkaz rvalue a všechny další parametry musí mít výchozí hodnoty. Konstruktory přesunutí můžou významně zvýšit efektivitu vašeho programu při předávání velkých objektů.
 
 ```cpp
 Box(Box&& other);
 ```
 
-Kompilátor zvolí konstruktor přesunu v určitých situacích, kdy je objekt inicializován jiným objektem stejného typu, který má být zničen a již nepotřebuje IT prostředky. Následující příklad ukazuje jeden případ, když je vybrán konstruktor Move v rámci řešení přetížení. *Pole* proměnné vrácené funkcí get_Box () je *hodnotu XValue* (hodnota vypršení platnosti), která se chystá přejít mimo obor. Pro poskytnutí motivace pro tento příklad dejte krabici velký vektor řetězců, které představují jeho obsah. Spíše než zkopírování vektoru a jeho řetězců, konstruktor Move "" ukrást "z hodnoty" box ", aby vektor nyní patřil do nového objektu. Volání `std::move` je vše potřebné, protože obě `vector` třídy i `string` implementují své vlastní konstruktory Move.
+Kompilátor zvolí konstruktor přesunu v určitých situacích, kdy je objekt inicializován jiným objektem stejného typu, který má být zničen a již nepotřebuje své prostředky. Následující příklad ukazuje jeden případ, když je vybrán konstruktor Move v rámci řešení přetížení. V konstruktoru, který volá `get_Box()`, vrácená hodnota je *hodnotu XValue* (hodnota vypršení platnosti). Není přiřazená k žádné proměnné a proto se chystá přejít mimo rozsah. Pro poskytnutí motivace pro tento příklad dejte krabici velký vektor řetězců, které představují jeho obsah. Spíše než zkopírování vektoru a jeho řetězců, konstruktor Move "" ukrást "z hodnoty" box ", aby vektor nyní patřil do nového objektu. Volání `std::move` je vše potřebné, protože třídy `vector` a `string` implementují své vlastní konstruktory Move.
 
 ```cpp
 #include <iostream>
@@ -318,7 +318,7 @@ Konstruktor se může deklarovat jako [constexpr](constexpr-cpp.md) , pokud
 
 ## <a name="init_list_constructors"></a>Konstruktory seznamu inicializátorů
 
-Pokud konstruktor přebírá jako svůj parametr [std:\<:\> initializer_list T](../standard-library/initializer-list-class.md) a všechny ostatní parametry mají výchozí argumenty, tento konstruktor se vybere v řešení přetížení při vytváření instance pomocí Direct. operace. Initializer_list můžete použít k inicializaci libovolného člena, který ho může přijmout. Předpokládejme například, že třída box (zobrazená dříve) má `std::vector<string>` člena. `m_contents` Můžete zadat konstruktor podobný tomuto:
+Pokud konstruktor přebírá jako svůj parametr hodnotu [std:: initializer_list \<T \>](../standard-library/initializer-list-class.md) a všechny ostatní parametry mají výchozí argumenty, tento konstruktor bude vybrán v řešení přetížení, pokud je vytvořena instance pomocí metody Direct operace. Initializer_list můžete použít k inicializaci libovolného člena, který ho může přijmout. Předpokládejme například, že třída box (uvedená dříve) má `m_contents` `std::vector<string>` členů. Můžete zadat konstruktor podobný tomuto:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -335,7 +335,7 @@ A pak vytvořte objekty box takto:
 
 ## <a name="explicit_constructors"></a>Explicitní konstruktory
 
-Pokud má třída konstruktor s jedním parametrem, nebo pokud všechny parametry s výjimkou jednoho mají výchozí hodnotu, typ parametru lze implicitně převést na typ třídy. Například, pokud `Box` má třída konstruktor podobný tomuto:
+Pokud má třída konstruktor s jedním parametrem, nebo pokud všechny parametry s výjimkou jednoho mají výchozí hodnotu, typ parametru lze implicitně převést na typ třídy. Například pokud má třída `Box` konstruktor podobný tomuto:
 
 ```cpp
 Box(int size): m_width(size), m_length(size), m_height(size){}
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Konstruktor odvozené třídy vždy volá konstruktor základní třídy, aby se před provedením jakékoli další práce mohl spolehnout na zcela konstruované základní třídy. Konstruktory základní třídy `ClassA` jsou volány v pořadí odvození – například pokud je odvozen z `ClassB`, který `ClassC` je odvozen z `ClassC`, je nejprve volán konstruktor, poté `ClassB` konstruktor a pak `ClassA` konstruktor.
+Konstruktor odvozené třídy vždy volá konstruktor základní třídy, aby se před provedením jakékoli další práce mohl spolehnout na zcela konstruované základní třídy. Konstruktory základní třídy jsou volány v pořadí odvození – například pokud `ClassA` je odvozena z `ClassB`, která je odvozena od `ClassC`, je nejprve volán konstruktor `ClassC`, poté konstruktor `ClassB`, poté konstruktor `ClassA`.
 
 Pokud základní třída nemá výchozí konstruktor, musíte zadat parametry konstruktoru základní třídy v konstruktoru odvozené třídy:
 
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 verze 15,7 a novější**: Příkaz **using** v **/std: režim c++ 17** přináší do rozsahu všechny konstruktory ze základní třídy s výjimkou těch, které mají stejný podpis na konstruktory v odvozené třídě. Obecně je nejvhodnější použít dědění konstruktorů, pokud odvozená třída deklaruje žádné nové datové členy nebo konstruktory. Viz také [vylepšení v aplikaci Visual Studio 2017 verze 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
+**Visual Studio 2017 verze 15,7 a novější**: příkaz **using** v **/std: režim c++ 17** přináší do rozsahu všechny konstruktory ze základní třídy s výjimkou těch, které mají stejný podpis na konstruktory v odvozené třídě. Obecně je nejvhodnější použít dědění konstruktorů, pokud odvozená třída deklaruje žádné nové datové členy nebo konstruktory. Viz také [vylepšení v aplikaci Visual Studio 2017 verze 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
 
 ::: moniker-end
 
@@ -615,7 +615,7 @@ Odvozená třída nemůže dědit z více základních tříd, pokud mají tyto 
 
 ## <a name="constructors_in_composite_classes"></a>Konstruktory a složené třídy
 
-Třídy, které obsahují členy typu třídy, jsou označovány jako *složené třídy*. Při vytvoření člena typu třídy pro složenou třídu je konstruktor volán před vlastním konstruktorem třídy. Pokud obsažená třída nemá výchozí konstruktor, musíte použít seznam inicializace v konstruktoru složené třídy. V `StorageBox` předchozím příkladu, pokud změníte typ `m_label` členské proměnné na novou `Label` třídu, je nutné zavolat konstruktor základní `StorageBox` třídy a inicializovat `m_label` proměnnou v konstruktoru:
+Třídy, které obsahují členy typu třídy, jsou označovány jako *složené třídy*. Při vytvoření člena typu třídy pro složenou třídu je konstruktor volán před vlastním konstruktorem třídy. Pokud obsažená třída nemá výchozí konstruktor, musíte použít seznam inicializace v konstruktoru složené třídy. Pokud například v předchozím `StorageBox` změníte typ `m_label` členské proměnné na novou třídu `Label`, je nutné volat konstruktor základní třídy a inicializovat `m_label` proměnnou v konstruktoru `StorageBox` :
 
 ```cpp
 class Label {

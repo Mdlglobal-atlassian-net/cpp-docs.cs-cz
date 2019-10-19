@@ -3,10 +3,10 @@ title: Dynamické rozložení
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70907551"
 ---
 # <a name="dynamic-layout"></a>Dynamické rozložení
@@ -23,7 +23,7 @@ Po změně velikosti je oblast seznamu zvětšena tak, aby zobrazovala více pol
 
 ![Po změně velikosti dialogového okna.](../mfc/media/mfcdynamiclayout5.png "Po změně velikosti dialogového okna.")
 
-Můžete řídit dynamické rozložení zadáním podrobností pro každý ovládací prvek v editoru prostředků v rozhraní IDE nebo můžete to provést programově pomocí přístupu `CMFCDynamicLayout` k objektu pro konkrétní ovládací prvek a nastavením vlastností.
+Můžete řídit dynamické rozložení zadáním podrobností pro každý ovládací prvek v editoru prostředků v integrovaném vývojovém prostředí (IDE), nebo můžete to provést programově pomocí přístupu k objektu `CMFCDynamicLayout` pro konkrétní ovládací prvek a nastavením vlastností.
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Nastavení vlastností dynamického rozložení v editoru prostředků
 
@@ -53,15 +53,15 @@ Předchozí postup je užitečný pro zadání vlastností dynamického rozlože
 
 #### <a name="to-set-dynamic-layout-properties-programmatically"></a>Programové nastavení vlastností dynamického rozložení
 
-1. Vyhledejte nebo vytvořte místo v kódu implementace třídy dialogu, kde chcete zadat dynamické rozložení pro dialog. Například můžete chtít přidat metodu, jako `AdjustLayout` je například v dialogovém okně, a zavolat ji z míst, kde je nutné změnit rozložení. Je možné, že je nejprve volána z konstruktoru nebo po provedení změn v dialogovém okně.
+1. Vyhledejte nebo vytvořte místo v kódu implementace třídy dialogu, kde chcete zadat dynamické rozložení pro dialog. Například můžete chtít přidat metodu, jako je například `AdjustLayout` v dialogovém okně, a zavolat ji z míst, kde je nutné změnit rozložení. Je možné, že je nejprve volána z konstruktoru nebo po provedení změn v dialogovém okně.
 
-1. Pro dialogové okno zavolejte [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metodu `CWnd` třídy. `GetDynamicLayout`vrátí ukazatel na `CMFCDynamicLayout` objekt.
+1. Pro dialogové okno zavolejte [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metodu třídy `CWnd`. `GetDynamicLayout` vrací ukazatel na objekt `CMFCDynamicLayout`.
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Pro první ovládací prvek, do kterého chcete přidat dynamické chování, použijte statické metody třídy dynamického rozložení k vytvoření struktury [MoveSettings –](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) , která kóduje způsob, jakým má být ovládací prvek upravován. Provedete to tak, že nejprve zvolíte vhodnou statickou metodu: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)nebo [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Předáte procento pro horizontální nebo svislé aspekty přesunutí. Tyto statické metody vracejí nově vytvořený objekt MoveSettings –, který můžete použít k určení chování ovládacího prvku.
+1. Pro první ovládací prvek, do kterého chcete přidat dynamické chování, použijte statické metody třídy dynamického rozložení k vytvoření struktury [MoveSettings –](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) , která kóduje způsob, jakým má být ovládací prvek upravován. To provedete tak, že nejprve zvolíte vhodnou statickou metodu: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)nebo [CMFCDynamicLayout:: MoveHorizontalAndVertical ](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Předáte procento pro horizontální nebo svislé aspekty přesunutí. Tyto statické metody vracejí nově vytvořený objekt MoveSettings –, který můžete použít k určení chování ovládacího prvku.
 
    Mějte na paměti, že 100 znamená, že při změně velikosti dialogového okna se mění velikost, což způsobí, že okraj ovládacího prvku zůstane od nového ohraničení pevně větší.
 

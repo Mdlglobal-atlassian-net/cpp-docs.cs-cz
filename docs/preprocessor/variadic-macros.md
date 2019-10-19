@@ -1,16 +1,16 @@
 ---
 title: Makra variadické
-ms.date: 08/29/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: 171ea797adc1e407a8b7ef0592508653f758df64
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: de4d3a7f03f613cb058e564664f01837df23aefb
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216519"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587886"
 ---
 # <a name="variadic-macros"></a>Makra variadické
 
@@ -18,9 +18,9 @@ Makra variadic jsou makra podobná funkcím, které obsahují proměnný počet 
 
 ## <a name="remarks"></a>Poznámky
 
-Chcete-li použít makra variadické, mohou být tři tečky zadány jako konečný formální argument v definici makra a identifikátor `__VA_ARGS__` nahrazení lze použít v definici pro vložení dalších argumentů.  `__VA_ARGS__`je nahrazen všemi argumenty, které se shodují se třemi tečkami, včetně čárky mezi nimi.
+Chcete-li použít makra variadické, mohou být tři tečky zadány jako konečný formální argument v definici makra a náhradní identifikátor `__VA_ARGS__` lze použít v definici pro vložení dalších argumentů.  `__VA_ARGS__` se nahradí všemi argumenty, které se shodují se třemi tečkami, včetně čárky mezi nimi.
 
-Standard jazyka C určuje, že se třemi tečkami musí být předán alespoň jeden argument, aby bylo zajištěno, že makro nebude přeloženo na výraz s koncovou čárkou. Tradiční implementace společnosti C++ Microsoft potlačuje koncovou čárku, pokud se tři tečky nepředávají žádné argumenty.
+Standard jazyka C určuje, že se třemi tečkami musí být předán alespoň jeden argument, aby bylo zajištěno, že makro nebude přeloženo na výraz s koncovou čárkou. Tradiční implementace společnosti C++ Microsoft potlačuje koncovou čárku, pokud se tři tečky nepředávají žádné argumenty. Pokud je nastavena možnost kompilátoru `/experimental:preprocessor`, není koncová čárka potlačena.
 
 ## <a name="example"></a>Příklad
 
