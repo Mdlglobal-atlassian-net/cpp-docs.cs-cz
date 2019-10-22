@@ -6,39 +6,39 @@ f1_keywords:
 helpviewer_keywords:
 - streambuf header
 ms.assetid: 4365b25c-5831-488b-b9c2-867bfe961b89
-ms.openlocfilehash: 87fb74f62abffdd62b8c0179b13f53d96439d6c6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ca5f53d67bb32e59c20d1d440879144f0a617c66
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449567"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686026"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
-Zahrňte standardní hlavičku \<iostreams streambuf > k definování třídy template [basic_streambuf](../standard-library/basic-streambuf-class.md), která je základní pro provoz třídy iostreams. Tato hlavička je obvykle zahrnutá v jiné hlavičce iostreams; Jenom zřídka je potřeba ho zahrnout přímo.
+Iostreams 클래스의 작업에 기본적인 basic_streambuf 클래스 템플릿 [](../standard-library/basic-streambuf-class.md)를 정의 하려면 iostreams 표준 헤더 \<streambuf >를 포함 합니다. 이 헤더는 일반적으로 다른 iostreams 헤더에 의해 포함되며, 직접 포함해야 하는 경우는 거의 없습니다.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>구문
 
 ```cpp
 #include <streambuf>
 ```
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>형식 정의
 
-|Název typu|Popis|
+|형식 이름|설명|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Specializace `basic_streambuf` , která jako parametry šablony používá **char** .|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Specializace `basic_streambuf` , která používá **wchar_t** jako parametry šablony.|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|**Char** 를 템플릿 매개 변수로 사용 하는 `basic_streambuf`의 특수화입니다.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|**Wchar_t** 를 템플릿 매개 변수로 사용 하는 `basic_streambuf`의 특수화입니다.|
 
-### <a name="classes"></a>Třídy
+### <a name="classes"></a>클래스
 
-|Třída|Popis|
+|인스턴스|설명|
 |-|-|
-|[basic_streambuf – třída](basic-streambuf-class.md)|Třída šablony popisuje abstraktní základní třídu pro odvození vyrovnávací paměti datového proudu, který řídí přenos prvků do a z konkrétní reprezentace datového proudu.|
+|[basic_streambuf 클래스](basic-streambuf-class.md)|클래스 템플릿에서는 스트림의 특정 표현과의 요소 전송을 제어 하는 스트림 버퍼 파생을 위한 추상 기본 클래스에 대해 설명 합니다.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>참조
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programování iostream –](../standard-library/iostream-programming.md)\
-[iostreams – konvence](../standard-library/iostreams-conventions.md)
+[헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 프로그래밍](../standard-library/iostream-programming.md)\
+[iostreams 규칙](../standard-library/iostreams-conventions.md)

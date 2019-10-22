@@ -1,5 +1,5 @@
 ---
-title: složitý&lt;dlouhý typ Double&gt;
+title: '&gt; &lt;long Double'
 ms.date: 11/04/2016
 f1_keywords:
 - std::complex<long double>
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449483"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688236"
 ---
-# <a name="complexltlong-doublegt"></a>složitý&lt;dlouhý typ Double&gt;
+# <a name="complexltlong-doublegt"></a>&gt; &lt;long Double
 
-Tato explicitně specializovaná třída šablony popisuje objekt, který ukládá seřazený pár objektů, jak typu **Long Double**, tak první představuje skutečnou část komplexního čísla a druhý představující imaginární část.
+Tato explicitně specializovaná šablona třídy popisuje objekt, který ukládá seřazený pár objektů, jak typu **Long Double**, tak první představuje skutečnou část komplexního čísla a druhý představující imaginární část.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,20 +32,20 @@ public:
 complex(
     constexpr complex<long double>& complexNum);
 
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*\
+*_RealVal* \
 Hodnota typu **Long Double** pro skutečnou část složeného čísla konstrukce
 
-*_ImagVal*\
+*_ImagVal* \
 Hodnota typu **Long Double** pro imaginární část složeného čísla, která je konstruována.
 
-*complexNum*\
-Komplexní číslo typu **Double** nebo typu **float** , jehož reálné a imaginární části jsou použity k inicializaci komplexního typu dlouhého dvojnásobku typu  .
+*complexNum* \
+Komplexní číslo typu **Double** nebo typu **float** , jehož reálné a imaginární části jsou použity k inicializaci komplexního typu **dlouhého dvojnásobku** typu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -53,11 +53,11 @@ Komplexní číslo typu **Long Double**.
 
 ## <a name="remarks"></a>Poznámky
 
-Explicitní specializace třídy `complex` šablony na komplexní třídu typu **Long Double** se liší od třídy šablony pouze v konstruktorech, které definuje. Převod z typu **Long Double na typ** **float** je povolen na implicitní, ale převod z **Double** na **Long Double** musí být **explicitní**. Použití explicitních  pravidel je vycházející z inicializace s převodem typu pomocí syntaxe přiřazení.
+Explicitní specializace šablony třídy `complex` komplexní třídy typu **Long Double** se liší od šablony třídy pouze v konstruktorech, které definuje. Převod z typu **Long Double na typ** **float** je povolen na implicitní, ale převod z **Double** na **Long Double** musí být **explicitní**. Použití **explicitních** pravidel je vycházející z inicializace s převodem typu pomocí syntaxe přiřazení.
 
-Další informace o třídě `complex` šablony a jejích členech naleznete v tématu [Complex Class](../standard-library/complex-class.md).
+Další informace o šabloně třídy `complex` a jejích členech naleznete v tématu [Complex Class](../standard-library/complex-class.md).
 
-**Specifické pro společnost Microsoft**: Typy **Long Double** a **Double** mají stejnou reprezentaci, ale jsou odlišné typy. Další informace najdete v tématu [základní typy](../cpp/fundamental-types-cpp.md).
+**Specifické pro společnost Microsoft**: **dlouhé typy Double** a **Double** mají stejnou reprezentaci, ale jedná se o odlišné typy. Další informace najdete v tématu [základní typy](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Příklad
 
@@ -117,11 +117,11 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<komplexní >
+**Záhlaví**: \<complex >
 
 **Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Complex – třída](../standard-library/complex-class.md)\
+[komplexní \ třídy](../standard-library/complex-class.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

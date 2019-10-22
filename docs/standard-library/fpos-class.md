@@ -11,22 +11,22 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 60d7d00e6b9426df9b3086d9b82deaf1fdd1463c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cdca7b961d9aedad841692160c8313f8a306dec2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454149"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689676"
 ---
 # <a name="fpos-class"></a>fpos – třída
 
-Třída šablony popisuje objekt, který může ukládat všechny informace potřebné k obnovení libovolného indikátoru pozice souboru v jakémkoli datovém proudu. Objekt třídy fpos\< **St**> efektivně ukládá alespoň dva členské objekty:
+Šablona třídy popisuje objekt, který může ukládat všechny informace potřebné k obnovení libovolného indikátoru pozice souboru v jakémkoli datovém proudu. Objekt třídy fpos \< **St**> efektivně ukládá alespoň dva členské objekty:
 
 - Posun bajtů typu [streamoff](../standard-library/ios-typedefs.md#streamoff).
 
-- Stav konverze pro použití objektem třídy basic_filebuf typu `St`, obvykle. `mbstate_t`
+- Stav konverze, pro který je použit objekt třídy basic_filebuf typu `St`, obvykle `mbstate_t`.
 
-Může také uložit libovolné umístění souboru pro použití objektem třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)typu `fpos_t`. Pro prostředí s omezeným počtem souborů se ale `streamoff` `fpos_t` může v některých případech použít zaměnitelné. Pro prostředí bez datových proudů, které mají kódování závislé na stavu, `mbstate_t` může být ve skutečnosti nepoužitelné. Proto se počet uložených členských objektů může lišit.
+Může také uložit libovolné umístění souboru pro použití objektem třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)typu `fpos_t`. Pro prostředí s omezeným počtem souborů se ale v některých případech může `streamoff` a `fpos_t` někdy použít zaměnitelné. Pro prostředí bez datových proudů, které mají kódování závislé na stavu, může být `mbstate_t` ve skutečnosti Nepoužito. Proto se počet uložených členských objektů může lišit.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,7 +37,7 @@ class fpos
 
 ### <a name="parameters"></a>Parametry
 
-*Statetype*\
+*Statetype* \
 Informace o stavu.
 
 ### <a name="constructors"></a>Konstruktory
@@ -59,15 +59,15 @@ Informace o stavu.
 |-|-|
 |[operator!=](#op_neq)|Testuje indikátory pozice souboru pro nerovnost.|
 |[operator + – operátor](#op_add)|Zvýší ukazatel pozice v souboru.|
-|[operator+=](#op_add_eq)|Zvýší ukazatel pozice v souboru.|
+|[operator + = – operátor](#op_add_eq)|Zvýší ukazatel pozice v souboru.|
 |[podnikatel](#operator-)|Sníží ukazatel pozice v souboru.|
-|[operator-=](#operator-_eq)|Sníží ukazatel pozice v souboru.|
-|[operator==](#op_eq_eq)|Testuje indikátory pozice souboru pro rovnost.|
-|[operátor streamoff](#op_streamoff)|Přetypování objekt typu `fpos` na objekt typu `streamoff`.|
+|[-= – operátor](#operator-_eq)|Sníží ukazatel pozice v souboru.|
+|[operator = = – operátor](#op_eq_eq)|Testuje indikátory pozice souboru pro rovnost.|
+|[operátor streamoff](#op_streamoff)|Přetypování objektu typu `fpos` na objekt typu `streamoff`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> pro iOS
+**Záhlaví:** \<ios >
 
 **Obor názvů:** std
 
@@ -83,13 +83,13 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*\
+*_Off* \
 Posun do datového proudu.
 
-*_State*\
-Počáteční stav `fpos` objektu.
+*_State* \
+Počáteční stav objektu `fpos`.
 
-*_Filepos*\
+*_Filepos* \
 Posun do datového proudu.
 
 ### <a name="remarks"></a>Poznámky
@@ -108,7 +108,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Indikátor pozice souboru, u kterého se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -117,7 +117,7 @@ Indikátor pozice souboru, u kterého se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí `!(*this == right)`členské funkce.
+Členská funkce vrací `!(*this == right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*\
+*_Off* \
 Posun, kterým chcete zvýšit ukazatel pozice souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -190,11 +190,11 @@ Pozice v souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí **fpos (\*this) + =.** `_Off`
+Členská funkce vrátí **fpos (\*this) + =** `_Off`.
 
 ### <a name="example"></a>Příklad
 
-Ukázku použití `operator+`naleznete v tématu [Operator! =](#op_neq) .
+Ukázku použití `operator+` naleznete v části [Operator! =](#op_neq) .
 
 ## <a name="op_add_eq"></a>fpos:: operator + =
 
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*\
+*_Off* \
 Posun, kterým chcete zvýšit ukazatel pozice souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,11 +215,11 @@ Pozice v souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce přidá *_Off* k uloženému členskému objektu posunu a pak  **\*ho vrátí.** Pro umístění v rámci souboru je výsledek obecně platný pouze pro binární proudy, které nemají kódování závislé na stavu.
+Členská funkce přidá *_Off* k uloženému členskému objektu posunu a vrátí **\*this**. Pro umístění v rámci souboru je výsledek obecně platný pouze pro binární proudy, které nemají kódování závislé na stavu.
 
 ### <a name="example"></a>Příklad
 
-Ukázku použití `operator+=`naleznete v tématu [Operator! =](#op_neq) .
+Ukázku použití `operator+=` naleznete v části [Operator! =](#op_neq) .
 
 ## <a name="operator-"></a>fpos:: operator-
 
@@ -233,19 +233,19 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Pozice souboru.
 
-*_Off*\
+*_Off* \
 Posun datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První členská funkce vrátí `(streamoff)*this - (streamoff) right`. Druhá členská funkce vrátí `fpos(*this) -= _Off`.
+První členská funkce vrátí `(streamoff)*this - (streamoff) right`. Druhá členská funkce vrací `fpos(*this) -= _Off`.
 
 ### <a name="example"></a>Příklad
 
-Ukázku použití `operator-`naleznete v tématu [Operator! =](#op_neq) .
+Ukázku použití `operator-` naleznete v části [Operator! =](#op_neq) .
 
 ## <a name="operator-_eq"></a>fpos:: operator-=
 
@@ -257,12 +257,12 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*\
+*_Off* \
 Posun datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí `fpos(*this) -= _Off`členské funkce.
+Členská funkce vrací `fpos(*this) -= _Off`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -270,7 +270,7 @@ Pro umístění v rámci souboru je výsledek obecně platný pouze pro binárn�
 
 ### <a name="example"></a>Příklad
 
-Ukázku použití `operator-=`naleznete v tématu [Operator! =](#op_neq) .
+Ukázku použití `operator-=` naleznete v části [Operator! =](#op_neq) .
 
 ## <a name="op_eq_eq"></a>fpos:: operator = = – operátor
 
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Indikátor pozice souboru, u kterého se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -291,15 +291,15 @@ Indikátor pozice souboru, u kterého se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí `(streamoff)*this == (streamoff)right`členské funkce.
+Členská funkce vrací `(streamoff)*this == (streamoff)right`.
 
 ### <a name="example"></a>Příklad
 
-Ukázku použití `operator+=`naleznete v tématu [Operator! =](#op_neq) .
+Ukázku použití `operator+=` naleznete v části [Operator! =](#op_neq) .
 
 ## <a name="op_streamoff"></a>fpos:: operator streamoff
 
-Přetypování objektu typu `fpos` na objekt typu `streamoff`
+Objekt cast typu `fpos` k objektu typu `streamoff`.
 
 ```cpp
 operator streamoff() const;
@@ -307,7 +307,7 @@ operator streamoff() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí uložený členský objekt posunu a všechny další posuny uložené jako součást `fpos_t` členského objektu.
+Členská funkce vrátí uložený členský objekt posunu a všechny další posuny uložené jako součást objektu člena `fpos_t`.
 
 ### <a name="example"></a>Příklad
 
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parametry
 
-*_State*\
+*_State* \
 Nový stav konverze.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -365,7 +365,7 @@ Stav konverze.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce vrátí hodnotu uloženou v `St` objektu member. Druhá členská funkce ukládá *_State* do `St` objektu member.
+První členská funkce vrátí hodnotu uloženou v objektu `St` člena. Druhá členská funkce ukládá *_State* do členského objektu `St`.
 
 ### <a name="example"></a>Příklad
 
@@ -394,6 +394,6 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programování iostream –](../standard-library/iostream-programming.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[iostream – programování](../standard-library/iostream-programming.md) \
 [iostreams – konvence](../standard-library/iostreams-conventions.md)

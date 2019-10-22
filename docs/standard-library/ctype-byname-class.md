@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: 0b0f33781cc9f1f54661a44a5434c94316432a45
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: dcaaff45fb33155710f788af4ceb657eff97464e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457896"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689736"
 ---
-# <a name="ctypebyname-class"></a>ctype_byname – třída
+# <a name="ctype_byname-class"></a>ctype_byname – třída
 
-Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost CType daného národního prostředí, což umožňuje klasifikaci znaků a převod znaků mezi velikostmi písmen a nativním a národním prostředím zadanými znakové sady.
+Šablona odvozené třídy popisuje objekt, který může sloužit jako omezující vlastnost CType daného národního prostředí, což umožňuje klasifikaci znaků a převod znaků mezi písmeny a nativními a národními zadanými znakovými sadami.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,11 +40,11 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Jeho chování je určeno pojmenovaným národním `_Locname`prostředím. Každý konstruktor inicializuje svůj základní objekt pomocí [CType](../standard-library/ctype-class.md)\<CharType > ( `_Refs`) nebo ekvivalentu pro základní třídu `ctype<char>`.
+Jeho chování je určeno názvem národního `_Locname`. Každý konstruktor inicializuje svůj základní objekt pomocí [ctype](../standard-library/ctype-class.md) \<CharType > (`_Refs`) nebo ekvivalentu `ctype<char>` základní třídy.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 

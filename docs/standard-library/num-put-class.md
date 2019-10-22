@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: ac034a4b80225bd9674e72ca3255938316c5905a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 49d76c5d553054934907cd2ddc0b7fd1f8b1e998
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457704"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687629"
 ---
-# <a name="numput-class"></a>num_put – třída
+# <a name="num_put-class"></a>num_put – třída
 
-Třída šablony popisující objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převodu číselných hodnot na sekvence typu `CharType`.
+Šablona třídy popisující objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převodu číselných hodnot na sekvence typu `CharType`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,10 +35,10 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+*CharType* \
 Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
-*OutputIterator*\
+*OutputIterator* \
 Typ iterátoru, do kterého číselné funkce zapisují svůj výstup.
 
 ## <a name="remarks"></a>Poznámky
@@ -62,12 +62,12 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 
 |Členská funkce|Popis|
 |-|-|
-|[do_put](#do_put)|Virtuální funkce, která je volána k převedení čísla na sekvenci `CharType`s, která představuje číslo formátované pro dané národní prostředí.|
-|[převést](#put)|Převede číslo na sekvenci `CharType`s, která představuje číslo formátované pro dané národní prostředí.|
+|[do_put](#do_put)|Virtuální funkce, která je volána k převedení čísla na sekvenci `CharType`s reprezentující číslo formátované pro dané národní prostředí.|
+|[převést](#put)|Převede číslo na sekvenci `CharType`s reprezentující číslo formátované pro dané národní prostředí.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 
@@ -81,11 +81,11 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr `CharType`šablony.
+Typ je synonymum pro parametr šablony `CharType`.
 
 ## <a name="do_put"></a>num_put::d o_put
 
-Virtuální funkce, která je volána k převedení čísla na sekvenci `CharType`s, která představuje číslo formátované pro dané národní prostředí.
+Virtuální funkce, která je volána k převedení čísla na sekvenci `CharType`s reprezentující číslo formátované pro dané národní prostředí.
 
 ```cpp
 virtual iter_type do_put(
@@ -139,16 +139,16 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametry
 
-*generace*\
+*další* \
 Iterátor adresující první prvek vloženého řetězce.
 
-*_Iosbase*\
+*_Iosbase* \
 Byl zadán datový proud, který obsahuje národní prostředí s omezující vlastností numpunct, která se používá k punctuateí výstupu a příznaků formátování výstupu.
 
-*_Fill*\
+*_Fill* \
 Znak, který se používá pro mezery.
 
-*počítává*\
+\ *Val*
 Typ Number nebo Boolean, který má být výstup.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -159,37 +159,37 @@ Výstupní iterátor adresuje umístění, které je umístěno na jednom za pos
 
 První virtuální chráněná členská funkce vygeneruje sekvenční prvky začínající na *Další* pro vytváření celočíselného výstupní pole z hodnoty *Val*. Funkce vrátí iterátor, který určuje další místo pro vložení elementu nad pole generovaného celočíselného výstupu.
 
-Pole s celočíselným výstupem je vygenerováno pomocí stejných pravidel, která jsou používána funkcemi tisku pro vygenerování řady elementů **char** do souboru. U každého takového elementu char se předpokládá mapování na ekvivalentní prvek typu `CharType` jednoduchým mapováním 1:1. Místo toho, `do_put` kde funkce Print doplní pole buď mezerou, nebo číslicí 0. `fill` Ekvivalentní specifikace převodu tisk je určena následujícím způsobem:
+Pole s celočíselným výstupem je vygenerováno pomocí stejných pravidel, která jsou používána funkcemi tisku pro vygenerování řady elementů **char** do souboru. U každého takového elementu char se předpokládá mapování na ekvivalentní prvek typu `CharType` jednoduchým mapováním 1:1. Místo toho, aby funkce Print napracovala pole s mezerami nebo číslicí 0, ale `do_put` používá `fill`. Ekvivalentní specifikace převodu tisk je určena následujícím způsobem:
 
-- IF **iosbase**. [Flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield`,specifikace[](../standard-library/ios-functions.md#oct)převodu je .`lo` == `ios_base::`
+- IF **iosbase**. [příznaky](../standard-library/ios-base-class.md#flags)  &  `ios_base::basefield`  ==  `ios_base::`[OCT](../standard-library/ios-functions.md#oct), je specifikace převodu `lo`.
 
-- Pokud **iosbase. Flags** & **ios_base:: basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), je `lx`specifikace převodu.
+- Pokud **iosbase. flags**  & **ios_base:: basefield**  ==  `ios_base::`[hex](../standard-library/ios-functions.md#hex), je specifikace převodu `lx`.
 
-- V opačném případě je `ld`specifikace převodu.
+- V opačném případě je specifikace převodu `ld`.
 
-IF **iosbase**. [Šířka](../standard-library/ios-base-class.md#width) je nenulová, Šířka pole této hodnoty je přednastavena. Funkce pak zavolá **iosbase**. **Šířka** (0) Chcete-li obnovit šířku pole na nulu.
+IF **iosbase**. [Šířka](../standard-library/ios-base-class.md#width) je nenulová, Šířka pole této hodnoty je přednastavena. Funkce pak zavolá **iosbase**. **Width**(0) pro obnovení šířky pole na nulu
 
-K odsazení dochází pouze v případě, že minimální počet prvků *N* vyžadovaných pro určení výstupního pole je menší než **iosbase**. [Šířka](../standard-library/ios-base-class.md#width). Takové odsazení se skládá z sekvence *N* - **šířky** kopie **výplně**. K odsazení pak dojde následujícím způsobem:
+K odsazení dochází pouze v případě, že minimální počet prvků *N* vyžadovaných pro určení výstupního pole je menší než **iosbase**. [Šířka](../standard-library/ios-base-class.md#width). Toto odsazení se skládá z posloupnosti *N*  - ch kopií**šířky** **výplně**. K odsazení pak dojde následujícím způsobem:
 
-- IF **iosbase**. **příznaky** & [vlevo,](../standard-library/ios-functions.md#left)příznak **je-** předpona.`ios_base::adjustfield` == `ios_base::` (Odsazení proběhne po vygenerovaném textu.)
+- IF **iosbase**. **příznaky**  &  `ios_base::adjustfield`  ==  `ios_base::`[vlevo](../standard-library/ios-functions.md#left), příznak **-** je přednastaven. (Odsazení proběhne po vygenerovaném textu.)
 
-- Pokud **iosbase. Flags** & **ios_base:: adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), příznak **0** se přiřadí. (Pro pole číselného výstupu dojde k odsazení, kde je panel funkce tisku s 0.)
+- Pokud **iosbase. flags**  & **ios_base:: adjustfield**  ==  `ios_base::`[interní](../standard-library/ios-functions.md#internal), příznak **0** se přiřadí. (Pro pole číselného výstupu dojde k odsazení, kde je panel funkce tisku s 0.)
 
 - Jinak se nepřidá žádný další příznak. (Odsazení proběhne před vygenerovanou sekvencí.)
 
 Uznan
 
-- IF **iosbase**. **příznaky** & [](../standard-library/ios-functions.md#showpos) showpos jsou nenulové, příznak **+** je předponou specifikace převodu.`ios_base::`
+- IF **iosbase**. **příznaky**  &  `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) je nenulové, příznak **+** je zadán do specifikace převodu.
 
-- IF **iosbase**. **příznaky**[](../standard-library/ios-functions.md#showbase) **#** ios_base:: showbase je nenulové, příznak je předponou specifikace převodu. & 
+- IF **iosbase**. **příznaky**  & **ios_base::** [showbase](../standard-library/ios-functions.md#showbase) je nenulové, příznak **#** je přidaný do specifikace převodu.
 
-Formát pole s celočíselným výstupem je dále určen**FAC** [omezujícími vlastnostmi národního prostředí](../standard-library/locale-class.md#facet_class)vráceným voláním [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md) \< **elem**> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Určen
+Formát pole s celočíselným výstupem je dále určen [omezující vlastností národního prostředí](../standard-library/locale-class.md#facet_class)**FAC** vrácené voláním [use_facet](../standard-library/locale-functions.md#use_facet)  < [numpunct](../standard-library/numpunct-class.md) \< **elem**> ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Určen
 
 - **FAC**. [seskupení](../standard-library/numpunct-class.md#grouping) určuje, jak jsou číslice seskupeny nalevo od libovolné desetinné čárky.
 
 - **FAC**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) Určuje sekvenci, která odděluje skupiny číslic nalevo od libovolné desetinné čárky.
 
-Pokud **FAC**žádné omezení seskupení neukládá. **seskupení** (jeho první prvek má hodnotu CHAR_MAX), pak žádné instance **FAC**. `thousands_sep`jsou generovány v poli výstup. V opačném případě se po převodu tisku Vloží oddělovače.
+Pokud **FAC**žádné omezení seskupení neukládá. **seskupení** (jeho první prvek má hodnotu CHAR_MAX), pak žádné instance **FAC**. `thousands_sep` jsou generovány v poli výstup. V opačném případě se po převodu tisku Vloží oddělovače.
 
 Druhá virtuální funkce Protected member:
 
@@ -200,7 +200,7 @@ virtual iter_type do_put(iter_type next,
     unsigned long val) const;
 ```
 
-se chová stejně jako první, s tím rozdílem, že nahrazuje specifikaci `ld` převodu s. `lu`
+se chová stejně jako první, s tím rozdílem, že nahrazuje specifikaci převodu `ld` s `lu`.
 
 Třetí funkce virtuální chráněné členské funkce:
 
@@ -213,17 +213,17 @@ virtual iter_type do_put(iter_type next,
 
 se chová stejně jako první, s tím rozdílem, že generuje výstupní pole s plovoucí desetinnou čárkou z hodnoty **Val**. **FAC**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) Určuje sekvenci, která odděluje celočíselné číslice od číslic zlomku. Ekvivalentní specifikace převodu tisk je určena následujícím způsobem:
 
-- IF **iosbase**. **příznaky**jsouopraveny, & specifikace[](../standard-library/ios-functions.md#fixed)převodu je`lf`.`ios_base::floatfield` == `ios_base::`
+- IF **iosbase**. **příznaky**  &  `ios_base::floatfield`  ==  `ios_base::`[opraveny](../standard-library/ios-functions.md#fixed), je specifikace převodu `lf`.
 
-- IF **iosbase**. **Flags** & **ios_base:: floatfield** == `ios_base::`[vědecký](../standard-library/ios-functions.md#scientific), specifikace převodu je `le`. IF **iosbase**. **příznaky** `E`[](../standard-library/ios-functions.md#uppercase) `e` velká písmena jsou nenulové, jsou nahrazeny hodnotou. & `ios_base::`
+- IF **iosbase**. **příznaky**  & **ios_base:: floatfield**  ==  `ios_base::`[vědecký](../standard-library/ios-functions.md#scientific), specifikace převodu je `le`. IF **iosbase**. **příznaky**  &  `ios_base::`[velká písmena](../standard-library/ios-functions.md#uppercase) jsou nenulové, `e` je nahrazena `E`.
 
-- V opačném případě je specifikace převodu **LG**. IF **iosbase**. **příznaky** `g` `G`ios_base:: velká písmena jsou nenulové, jsou nahrazeny hodnotou. & 
+- V opačném případě je specifikace převodu **LG**. IF **iosbase**. **příznaky**  & **ios_base:: Velká** je nenulová, `g` je nahrazena `G`.
 
-IF **iosbase**. **příznaky** & **ios_base:: fixed** jsou nenulové nebo IF **iosbase**. [přesnost](../standard-library/ios-base-class.md#precision) je větší než nula, přesnost s hodnotou **iosbase**. do specifikace převodu se přidá **přesnost** . Jakékoli odsazení se chová stejně jako u pole s celočíselným výstupem. Znak odsazení je **Fill**. Uznan
+IF **iosbase**. **příznaky**  & **ios_base:: fixed** jsou nenulové nebo IF **iosbase**. [přesnost](../standard-library/ios-base-class.md#precision) je větší než nula, přesnost s hodnotou **iosbase**. do specifikace převodu se přidá **přesnost** . Jakékoli odsazení se chová stejně jako u pole s celočíselným výstupem. Znak odsazení je **Fill**. Uznan
 
-- IF **iosbase**. **příznaky** & [](../standard-library/ios-functions.md#showpos) showpos jsou nenulové, příznak **+** je předponou specifikace převodu.`ios_base::`
+- IF **iosbase**. **příznaky**  &  `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) je nenulové, příznak **+** je zadán do specifikace převodu.
 
-- IF **iosbase**. **příznaky** & [](../standard-library/ios-functions.md#showpoint) showpoint jsou nenulové, příznak **#** je předponou specifikace převodu.`ios_base::`
+- IF **iosbase**. **příznaky**  &  `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint) je nenulové, příznak **#** je zadán do specifikace převodu.
 
 Čtvrtá virtuální funkce Protected member:
 
@@ -234,7 +234,7 @@ virtual iter_type do_put(iter_type next,
     long double val) const;
 ```
 
-se chová stejně jako třetí, s tím rozdílem, že `l` kvalifikátor ve specifikaci převodu je `L`nahrazen.
+se chová stejně jako třetí, s tím rozdílem, že kvalifikátor `l` ve specifikaci převodu je nahrazen `L`.
 
 Pátá virtuální chráněná členská funkce:
 
@@ -245,7 +245,7 @@ virtual iter_type do_put(iter_type next,
     const void* val) const;
 ```
 
-se chová stejně jako první, s tím rozdílem, že je `p`specifikace převodu **,** a jakýkoliv kvalifikátor potřebný k určení odsazení.
+se chová stejně jako první, s tím rozdílem, že specifikace převodu je `p` **,** a jakýkoliv kvalifikátor potřebný k určení odsazení.
 
 Šestá virtuální členská funkce Protected:
 
@@ -258,7 +258,7 @@ virtual iter_type do_put(iter_type next,
 
 se chová stejně jako první, s tím rozdílem, že generuje výstupní pole Boolean z hodnoty *Val*.
 
-Pole s logickým výstupem má jednu ze dvou forem. Pokud `iosbase.flags & ios_base::`je [boolalpha](../standard-library/ios-functions.md#boolalpha) **false**, vrátí `do_put(_Next, _Iosbase, _Fill, (long)val)`členská funkce, což obvykle vytvoří vygenerované pořadí buď 0 (pro **false**), nebo 1 (pro **true**). V opačném případě je vygenerovaná sekvence buď *FAC*. [hodnota false](../standard-library/numpunct-class.md#falsename) (pro **false**) nebo *FAC*. [hodnota true](../standard-library/numpunct-class.md#truename) (pro **true**).
+Pole s logickým výstupem má jednu ze dvou forem. Pokud `iosbase.flags & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) je **false**, vrátí členská funkce `do_put(_Next, _Iosbase, _Fill, (long)val)`, která obvykle vytvoří vygenerovanou sekvenci 0 (pro **false**) nebo 1 (pro **true**). V opačném případě je vygenerovaná sekvence buď *FAC*. [hodnota false](../standard-library/numpunct-class.md#falsename) (pro **false**) nebo *FAC*. [hodnota true](../standard-library/numpunct-class.md#truename) (pro **true**).
 
 Sedmá virtuální funkce chráněná členem:
 
@@ -269,7 +269,7 @@ virtual iter_type do_put(iter_type next,
     long long val) const;
 ```
 
-se chová stejně jako první, s tím rozdílem, že nahrazuje specifikaci `ld` převodu s. `lld`
+se chová stejně jako první, s tím rozdílem, že nahrazuje specifikaci převodu `ld` s `lld`.
 
 Osmá virtuální funkce Protected member:
 
@@ -280,11 +280,11 @@ virtual iter_type do_put(iter_type next,
     unsigned long long val) const;
 ```
 
-se chová stejně jako první, s tím rozdílem, že nahrazuje specifikaci `ld` převodu s. `llu`
+se chová stejně jako první, s tím rozdílem, že nahrazuje specifikaci převodu `ld` s `llu`.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [vložení](#put), která `do_put`volá.
+Podívejte se na příklad pro [Put](#put), který volá `do_put`.
 
 ## <a name="iter_type"></a>num_put::iter_type
 
@@ -308,18 +308,18 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*\
+*_Refs* \
 Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
 ### <a name="remarks"></a>Poznámky
 
 Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
 
-- 0: Životnost objektu je spravována národními prostředími, která jej obsahují.
+- 0: životnost objektu je spravována místními objekty, které jej obsahují.
 
-- 1: Životnost objektu musí být ručně spravovaná.
+- 1: životnost objektu musí být ručně spravovaná.
 
-- \> 1: Tyto hodnoty nejsou definovány.
+- \> 1: tyto hodnoty nejsou definovány.
 
 Nejsou možné žádné přímé příklady, protože je destruktor chráněný.
 
@@ -327,7 +327,7 @@ Konstruktor inicializuje svůj základní objekt pomocí **locale::** [Face](../
 
 ## <a name="put"></a>num_put::p UT
 
-Převede číslo na sekvenci `CharType`s, která představuje číslo formátované pro dané národní prostředí.
+Převede číslo na sekvenci `CharType`s reprezentující číslo formátované pro dané národní prostředí.
 
 ```cpp
 iter_type put(
@@ -381,16 +381,16 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametry
 
-*propojovací*\
+*cílový* \
 Iterátor adresující první prvek vloženého řetězce.
 
-*_Iosbase*\
+*_Iosbase* \
 Byl zadán datový proud, který obsahuje národní prostředí s omezující vlastností numpunct, která se používá k punctuateí výstupu a příznaků formátování výstupu.
 
-*_Fill*\
+*_Fill* \
 Znak, který se používá pro mezery.
 
-*počítává*\
+\ *Val*
 Typ Number nebo Boolean, který má být výstup.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -399,7 +399,7 @@ Výstupní iterátor adresuje umístění, které je umístěno na jednom za pos
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny členské funkce vracejí [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `val`).
+Všechny členské funkce vracejí [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `val`).
 
 ### <a name="example"></a>Příklad
 
@@ -439,6 +439,6 @@ num_put( ) = 1.000,67
 
 ## <a name="see-also"></a>Viz také:
 
-[\<> národního prostředí](../standard-library/locale.md)\
-[Face – třída](../standard-library/locale-class.md#facet_class)\
+[\<locale >](../standard-library/locale.md) \
+\ [třídy omezující vlastnosti](../standard-library/locale-class.md#facet_class)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,19 +1,19 @@
 ---
-title: komplexní&lt;float&gt;
+title: komplexní &lt;float &gt;
 ms.date: 11/04/2016
 f1_keywords:
 - complex/std::complex<float>
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453104"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688244"
 ---
-# <a name="complexltfloatgt"></a>komplexní&lt;float&gt;
+# <a name="complexltfloatgt"></a>komplexní &lt;float &gt;
 
 Popisuje objekt, který ukládá seřazený pár objektů typu **float**, první představuje skutečnou část komplexního čísla a druhý představující imaginární část.
 
@@ -35,19 +35,19 @@ constexpr complex(
 
 constexpr complex(
     const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*\
+*_RealVal* \
 Hodnota typu **float** pro reálnou část komplexního čísla, který je vytvářen.
 
-*_ImagVal*\
+*_ImagVal* \
 Hodnota typu **float** pro imaginární část komplexního čísla, která je konstruována.
 
-*complexNum*\
+*complexNum* \
 Komplexní číslo typu **Double** nebo typu **Long Double** , jehož reálné a imaginární části jsou použity k inicializaci komplexního čísla typu **float** , který je konstruován.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -56,9 +56,9 @@ Komplexní číslo typu **float**.
 
 ## <a name="remarks"></a>Poznámky
 
-Explicitní specializace třídy Template složitá na komplexní třídu typu **float** se liší od třídy Template pouze v konstruktorech, které definuje. Převod z **float** na **Double** může být implicitní, ale méně bezpečný převod z **float** na **Long Double** musí být **explicitní**. Použití explicitních  pravidel je vycházející z inicializace s převodem typu pomocí syntaxe přiřazení.
+Explicitní specializace šablony třídy složitá na komplexní třídu typu **float** se liší od šablony třídy pouze v konstruktorech, které definuje. Převod z **float** na **Double** může být implicitní, ale méně bezpečný převod z **float** na **Long Double** musí být **explicitní**. Použití **explicitních** pravidel je vycházející z inicializace s převodem typu pomocí syntaxe přiřazení.
 
-Další informace o třídě `complex`šablon naleznete v tématu [Complex Class](../standard-library/complex-class.md). Seznam členů třídy `complex`šablony naleznete v tématu.
+Další informace o `complex` šablony třídy naleznete v tématu [Complex Class](../standard-library/complex-class.md). Seznam členů šablony třídy `complex` naleznete v tématu.
 
 ## <a name="example"></a>Příklad
 
@@ -118,11 +118,11 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<komplexní >
+**Záhlaví**: \<complex >
 
 **Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Complex – třída](../standard-library/complex-class.md)\
+[komplexní \ třídy](../standard-library/complex-class.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

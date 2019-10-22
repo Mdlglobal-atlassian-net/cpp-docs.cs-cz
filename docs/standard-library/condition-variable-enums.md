@@ -1,20 +1,20 @@
 ---
-title: '&lt;condition_variable –&gt; výčty'
+title: '&lt;condition_variable&gt; 열거형'
 ms.date: 11/04/2016
 f1_keywords:
 - condition_variable/std::cv_status
 ms.assetid: f261ad79-e25b-4afa-9f8a-909ce697e0d8
-ms.openlocfilehash: d5fe9f3e40af4ba17c5523175de26519f0b352d6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 593b79115e6f58edd8224d5f38dc6fbefb132fe4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244590"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689780"
 ---
-# <a name="ltconditionvariablegt-enums"></a>&lt;condition_variable –&gt; výčty
+# <a name="ltcondition_variablegt-enums"></a>&lt;condition_variable&gt; 열거형
 
-## <a name="cv_status"></a> cv_status –
+## <a name="cv_status"></a>cv_status
 
-Poskytuje symbolické názvy pro vrácené hodnoty metod třídy šablony [condition_variable](../standard-library/condition-variable-class.md).
+는 클래스 템플릿 [condition_variable](../standard-library/condition-variable-class.md)메서드의 반환 값에 대 한 기호화 된 이름을 제공 합니다.
 
-cv_status – třída {no_timeout vypršení časového limitu};
+class cv_status { no_timeout timeout };

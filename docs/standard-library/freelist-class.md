@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454132"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688045"
 ---
 # <a name="freelist-class"></a>freelist – třída
 
@@ -32,12 +32,12 @@ class freelist : public Max
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Sz*|Počet prvků v poli, které mají být přiděleny.|
-|*Max*|Maximální třída představující maximální počet prvků, které mají být uloženy v seznamu Free. Maximální třída může být [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md)nebo [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*'S*|Počet prvků v poli, které mají být přiděleny.|
+|*Počet*|Maximální třída představující maximální počet prvků, které mají být uloženy v seznamu Free. Maximální třída může být [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md)nebo [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída šablony spravuje seznam bloků paměti velikosti *SZ* s maximální délkou seznamu určeného maximální třídou předanou *Max.*
+Tato šablona třídy spravuje seznam bloků paměti velikosti *SZ* s maximální délkou seznamu určeného maximální třídou předanou *Max.*
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -54,7 +54,7 @@ Tato třída šablony spravuje seznam bloků paměti velikosti *SZ* s maximáln�
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> přidělování
+**Záhlaví:** \<allocators >
 
 **Obor názvů:** stdext
 
@@ -100,12 +100,12 @@ bool push(void* ptr);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud `full` funkce maximální třídy vrátí `push` **hodnotu false**. v opačném případě vrátí funkce **hodnotu false**.
+**true** , pokud funkce `full` třídy max vrátí **hodnotu false**; v opačném případě funkce `push` vrátí **hodnotu false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud funkce Max Class vrátí **hodnotu false**, přidá tato členská funkce blok paměti, na který odkazuje PTR, na záhlaví seznamu.  `full`
+Pokud funkce `full` třídy max vrátí **hodnotu false**, přidá tato členská funkce blok paměti, na který odkazuje *PTR* , na záhlaví seznamu.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators >](../standard-library/allocators-header.md)

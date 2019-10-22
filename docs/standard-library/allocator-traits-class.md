@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 795fd17c2c5b3c7fa92e62088b8f2fd126094df9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 470b3086b4bdfa776558122eda9e496fa6c4bcdc
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245893"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690065"
 ---
-# <a name="allocatortraits-class"></a>allocator_traits – třída
+# <a name="allocator_traits-class"></a>allocator_traits – třída
 
-Třída šablony popisuje objekt, který doplňuje *typ alokátoru*. Typ alokátoru, který je libovolný typ, který popisuje objekt alokátoru, který se používá pro správu přidělené úložiště. Konkrétně pro jakýkoli typ alokátoru `Alloc`, můžete použít `allocator_traits<Alloc>` určit všechny informace, které je potřeba v kontejneru povoleným přidělováním. Další informace najdete v tématu výchozí [Allocator – třída](../standard-library/allocator-class.md).
+Šablona třídy popisuje objekt, který doplňuje *typ přidělování*. Typ přidělování je libovolný typ, který popisuje objekt přidělování, který se používá ke správě přiděleného úložiště. Konkrétně pro jakýkoli typ přidělování `Alloc` můžete pomocí `allocator_traits<Alloc>` určit všechny informace, které jsou vyžadovány kontejnerem s povoleným přidělováním. Další informace najdete v tématu výchozí [Třída přidělování](../standard-library/allocator-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,33 +65,33 @@ template <class Alloc>
 |||
 |-|-|
 |`allocator_type`|Tento typ je synonymum pro parametr šablony `Alloc`.|
-|`const_pointer`|Tento typ je `Alloc::const_pointer`v případě, že typ je ve správném formátu; v opačném případě tento typ je `pointer_traits<pointer>::rebind<const value_type>`.|
-|`const_void_pointer`|Tento typ je `Alloc::const_void_pointer`v případě, že typ je ve správném formátu; v opačném případě tento typ je `pointer_traits<pointer>::rebind<const void>`.|
-|`difference_type`|Tento typ je `Alloc::difference_type`v případě, že typ je ve správném formátu; v opačném případě tento typ je `pointer_traits<pointer>::difference_type`.|
-|`pointer`|Tento typ je `Alloc::pointer`v případě, že typ je ve správném formátu; v opačném případě tento typ je `value_type *`.|
-|`propagate_on_container_copy_assignment`|Tento typ je `Alloc::propagate_on_container_copy_assignment`v případě, že typ je ve správném formátu; v opačném případě tento typ je `false_type`.|
-|`propagate_on_container_move_assignment`|Tento typ je `Alloc::propagate_on_container_move_assignment`v případě, že typ je ve správném formátu; v opačném případě tento typ je `false_type`. Pokud typ obsahuje hodnotu true, zkopíruje kontejnerem s povoleným přidělováním jeho uložené přidělování na přiřazení pro přesun.|
-|`propagate_on_container_swap`|Tento typ je `Alloc::propagate_on_container_swap`v případě, že typ je ve správném formátu; v opačném případě tento typ je `false_type`. Pokud typ obsahuje hodnotu true, kontejnerem s povoleným přidělováním Zamění jeho uložené přidělování na prohození.|
-|`size_type`|Tento typ je `Alloc::size_type`v případě, že typ je ve správném formátu; v opačném případě tento typ je `make_unsigned<difference_type>::type`.|
-|`value_type`|Tento typ je synonymum pro `Alloc::value_type`.|
-|`void_pointer`|Tento typ je `Alloc::void_pointer`v případě, že typ je ve správném formátu; v opačném případě tento typ je `pointer_traits<pointer>::rebind<void>`.|
+|`const_pointer`|Tento typ je `Alloc::const_pointer`, pokud je typ ve správném formátu; v opačném případě je tento typ `pointer_traits<pointer>::rebind<const value_type>`.|
+|`const_void_pointer`|Tento typ je `Alloc::const_void_pointer`, pokud je typ ve správném formátu; v opačném případě je tento typ `pointer_traits<pointer>::rebind<const void>`.|
+|`difference_type`|Tento typ je `Alloc::difference_type`, pokud je typ ve správném formátu; v opačném případě je tento typ `pointer_traits<pointer>::difference_type`.|
+|`pointer`|Tento typ je `Alloc::pointer`, pokud je typ ve správném formátu; v opačném případě je tento typ `value_type *`.|
+|`propagate_on_container_copy_assignment`|Tento typ je `Alloc::propagate_on_container_copy_assignment`, pokud je typ ve správném formátu; v opačném případě je tento typ `false_type`.|
+|`propagate_on_container_move_assignment`|Tento typ je `Alloc::propagate_on_container_move_assignment`, pokud je typ ve správném formátu; v opačném případě je tento typ `false_type`. Pokud typ drží hodnotu true, kontejner s povoleným přidělováním zkopíruje svůj uložený Alokátor na přiřazení přesunutí.|
+|`propagate_on_container_swap`|Tento typ je `Alloc::propagate_on_container_swap`, pokud je typ ve správném formátu; v opačném případě je tento typ `false_type`. Pokud typ drží hodnotu true, kontejner s povoleným přidělováním zahodí svůj uložený Alokátor na swap.|
+|`size_type`|Tento typ je `Alloc::size_type`, pokud je typ ve správném formátu; v opačném případě je tento typ `make_unsigned<difference_type>::type`.|
+|`value_type`|Tento typ je synonymem pro `Alloc::value_type`.|
+|`void_pointer`|Tento typ je `Alloc::void_pointer`, pokud je typ ve správném formátu; v opačném případě je tento typ `pointer_traits<pointer>::rebind<void>`.|
 
 ### <a name="static-methods"></a>Statické metody
 
-Následující statické metody odpovídající metodu volat parametr daného alokátoru.
+Následující statické metody volají odpovídající metodu pro daný parametr přidělování.
 
 |||
 |-|-|
-|[allocate](#allocate)|Statická metoda, která přiděluje paměť pomocí parametru dané alokátoru.|
-|[Konstrukce](#construct)|Statická metoda, která používá alokátorem určeným pro vytvoření objektu.|
-|[zrušit přidělení](#deallocate)|Statická metoda, která používá alokátorem určeným se uvolnit zadaný počet objektů.|
-|[zrušení](#destroy)|Statická metoda, která používá alokátorem určeným pro volání destruktoru objektu bez rušení přidělení paměti.|
-|[max_size](#max_size)|Statická metoda, která používá alokátorem určeným pro určení maximální počet objektů, které mohou být přiděleny.|
-|[select_on_container_copy_construction](#select_on_container_copy_construction)|Statická metoda, která volá `select_on_container_copy_construction` na zadaného alokátoru.|
+|[allocate](#allocate)|Statická metoda, která přiděluje paměť pomocí zadaného parametru přidělování.|
+|[Contains](#construct)|Statická metoda, která používá zadané přidělování k vytvoření objektu.|
+|[uvolnit](#deallocate)|Statická metoda, která používá zadané přidělování k navrácení zadaného počtu objektů.|
+|[způsobit](#destroy)|Statická metoda, která používá zadané přidělování pro volání destruktoru u objektu bez zrušení přidělení paměti.|
+|[max_size](#max_size)|Statická metoda, která používá zadané přidělování k určení maximálního počtu objektů, které se dají přidělit.|
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Statická metoda, která volá `select_on_container_copy_construction` v zadaném přidělování.|
 
-### <a name="allocate"></a> přidělení
+### <a name="allocate"></a>FISIM
 
-Statická metoda, která přiděluje paměť pomocí parametru dané alokátoru.
+Statická metoda, která přiděluje paměť pomocí zadaného parametru přidělování.
 
 ```cpp
 static pointer allocate(Alloc& al, size_type count);
@@ -102,26 +102,26 @@ static pointer allocate(Alloc& al, size_type count,
 
 #### <a name="parameters"></a>Parametry
 
-*Al*\
-Objekt alokátoru.
+*al* \
+Objekt přidělování.
 
-*Počet*\
-Počet prvků, které mají přidělit.
+*počet* \
+Počet prvků, které mají být přiděleny.
 
-*pomocný parametr*\
-A `const_pointer` objekt alokátoru, které může pomáhají při neodpovídajících žádosti o úložiště vyhledáním adresu přiděleného objektu před požadavku. Žádné pomocný parametr je považován za ukazatel s hodnotou null.
+\ *nápovědy*
+@No__t_0, která může pomoci objektu přidělování v souladu s požadavkem na úložiště hledáním adresy přiděleného objektu před požadavkem. Ukazatel s hodnotou null je považován za nepoužitou nápovědu.
 
 #### <a name="return-value"></a>Návratová hodnota
 
 Každá metoda vrací ukazatel na přidělený objekt.
 
-Vrátí první statickou metodu `al.allocate(count)`.
+První statická metoda vrací `al.allocate(count)`.
 
-Druhá metoda vrací `al.allocate(count, hint)`, pokud výraz je dobře vytvořen; v opačném případě vrátí `al.allocate(count)`.
+Druhá metoda vrátí `al.allocate(count, hint)`, pokud je tento výraz dobře vytvořen; v opačném případě vrátí `al.allocate(count)`.
 
-### <a name="construct"></a> Konstrukce
+### <a name="construct"></a>Contains
 
-Statická metoda, která používá alokátorem určeným pro vytvoření objektu.
+Statická metoda, která používá zadané přidělování k vytvoření objektu.
 
 ```cpp
 template <class Uty, class Types>
@@ -130,22 +130,22 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 #### <a name="parameters"></a>Parametry
 
-*Al*\
-Objekt alokátoru.
+*al* \
+Objekt přidělování.
 
-*PTR*\
-Ukazatel na umístění, kde má být vytvořen objekt.
+\ *PTR*
+Ukazatel na umístění, kde má být objekt vytvořen.
 
-*argumenty*\
-Seznam argumentů, která je předána do konstruktoru objektu.
+\ *argumentů*
+Seznam argumentů, které jsou předány konstruktoru objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Volání funkce statický člen `al.construct(ptr, args...)`, pokud výraz je dobře vytvořen; v opačném případě je vyhodnocen jako `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
+Statická členská funkce volá `al.construct(ptr, args...)`, pokud je výraz dobře vytvořený; v opačném případě vyhodnocuje `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-### <a name="deallocate"></a> zrušit přidělení
+### <a name="deallocate"></a>uvolnit
 
-Statická metoda, která používá alokátorem určeným se uvolnit zadaný počet objektů.
+Statická metoda, která používá zadané přidělování k navrácení zadaného počtu objektů.
 
 ```cpp
 static void deallocate(Alloc al,
@@ -155,24 +155,24 @@ static void deallocate(Alloc al,
 
 #### <a name="parameters"></a>Parametry
 
-*Al*\
-Objekt alokátoru.
+*al* \
+Objekt přidělování.
 
-*PTR*\
-Ukazatel na počáteční umístění objekty, které chcete být navrácena.
+\ *PTR*
+Ukazatel na počáteční umístění objektů, které mají být přiděleny.
 
-*Počet*\
-Počet objektů, které chcete uvolnit.
+*počet* \
+Počet objektů, které mají být přiděleny.
 
 #### <a name="remarks"></a>Poznámky
 
 Tato metoda volá `al.deallocate(ptr, count)`.
 
-Tato metoda vyvolá žádnou akci.
+Tato metoda nevyvolává nic.
 
-### <a name="destroy"></a> zrušení
+### <a name="destroy"></a>způsobit
 
-Statická metoda, která používá alokátorem určeným pro volání destruktoru objektu bez rušení přidělení paměti.
+Statická metoda, která používá zadané přidělování pro volání destruktoru u objektu bez zrušení přidělení paměti.
 
 ```cpp
 template <class Uty>
@@ -181,19 +181,19 @@ template <class Uty>
 
 #### <a name="parameters"></a>Parametry
 
-*Al*\
-Objekt alokátoru.
+*al* \
+Objekt přidělování.
 
-*PTR*\
+\ *PTR*
 Ukazatel na umístění objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Tato metoda volá `al.destroy(ptr)`, pokud výraz je dobře vytvořen; v opačném případě je vyhodnocen jako `ptr->~Uty()`.
+Tato metoda volá `al.destroy(ptr)`, pokud je tento výraz dobře vytvořen; v opačném případě vyhodnocuje `ptr->~Uty()`.
 
-### <a name="max_size"></a> max_size
+### <a name="max_size"></a>max_size
 
-Statická metoda, která používá alokátorem určeným pro určení maximální počet objektů, které mohou být přiděleny.
+Statická metoda, která používá zadané přidělování k určení maximálního počtu objektů, které se dají přidělit.
 
 ```cpp
 static size_type max_size(const Alloc& al);
@@ -201,16 +201,16 @@ static size_type max_size(const Alloc& al);
 
 #### <a name="parameters"></a>Parametry
 
-*Al*\
-Objekt alokátoru.
+*al* \
+Objekt přidělování.
 
 #### <a name="remarks"></a>Poznámky
 
-Tato metoda vrátí `al.max_size()`, pokud výraz je dobře vytvořen; v opačném případě vrátí `numeric_limits<size_type>::max()`.
+Tato metoda vrací `al.max_size()`, pokud je tento výraz ve správném formátu; v opačném případě vrátí `numeric_limits<size_type>::max()`.
 
-### <a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
 
-Statická metoda, která volá `select_on_container_copy_construction` na zadaného alokátoru.
+Statická metoda, která volá `select_on_container_copy_construction` v zadaném přidělování.
 
 ```cpp
 static Alloc select_on_container_copy_construction(const Alloc& al);
@@ -218,13 +218,13 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 #### <a name="parameters"></a>Parametry
 
-*Al*\
-Objekt alokátoru.
+*al* \
+Objekt přidělování.
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vrátí `al.select_on_container_copy_construction()`, pokud se, že typ je dobře vytvořen; v opačném případě vrátí *al*.
+Tato metoda vrací `al.select_on_container_copy_construction()`, pokud je tento typ dobře vytvořen; v opačném případě vrátí *Al*.
 
 #### <a name="remarks"></a>Poznámky
 
-Tato metoda se používá k určení přidělování při přiřazeným kontejnerem je vytvořena kopie.
+Tato metoda slouží k určení přidělování při sestavení přidruženého kontejneru.

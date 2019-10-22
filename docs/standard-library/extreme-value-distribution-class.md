@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457764"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688070"
 ---
-# <a name="extremevaluedistribution-class"></a>extreme_value_distribution – třída
+# <a name="extreme_value_distribution-class"></a>extreme_value_distribution – třída
 
 Generuje rozdělení extrémní hodnoty.
 
@@ -71,24 +71,24 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType*\
-Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
+*RealType* \
+Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
 
-*URNG*\
-Modul generátoru náhodných čísel. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
+*URNG* \
+Modul generátoru náhodných čísel. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje distribuci, která vytváří hodnoty typu s plovoucí desetinnou čárkou, nebo typ **Double** , pokud není k dispozici, distribuované podle distribuce extrémní hodnoty. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+Šablona třídy popisuje distribuci, která vytváří hodnoty typu s plovoucí desetinnou čárkou, nebo typ **Double** , pokud není k dispozici, distribuované podle distribuce extrémní hodnoty. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|
 |`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|
 
-Vlastnosti funkce `a()` a `b()` vracejí jejich příslušné hodnoty pro uložené distribuční parametry `a` a `b`.
+Funkce vlastností `a()` a `b()` vrátí jejich příslušné hodnoty pro uložené distribuční parametry `a` a `b`.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
+Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
 
 Podrobné informace o distribuci extrémních hodnot naleznete v článku Wolfram MathWorld – [extrémní hodnota rozdělení hodnoty](https://go.microsoft.com/fwlink/p/?linkid=401110).
 
@@ -177,7 +177,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<náhodné >
+**Záhlaví:** \<random >
 
 **Obor názvů:** std
 
@@ -192,24 +192,24 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*a_value*\
-Parametr `a` distribuce.
+*a_value* \
+Parametr distribuce `a`.
 
-*b_value*\
-Parametr `b` distribuce.
+*b_value* \
+Parametr distribuce `b`.
 
-*parametr*\
-`param_type` Struktura použitá k sestavení distribuce.
+*parametr* \
+Struktura `param_type` používaná k sestavení distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
 **Předběžná podmínka:** `0.0 < b`
 
-První konstruktor vytvoří objekt `a` , jehož uložená hodnota obsahuje hodnotu *a_value* a jejíž uložená `b` hodnota obsahuje hodnotu *b_value*.
+První konstruktor vytvoří objekt, jehož uložená `a` hodnota obsahuje hodnotu *a_value* a jejíž uložená `b` hodnota obsahuje hodnotu *b_value*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuce voláním `param()` členské funkce.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
 
-## <a name="param_type"></a>  extreme_value_distribution::param_type
+## <a name="param_type"></a>extreme_value_distribution::p aram_type
 
 Ukládá parametry distribuce.
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*a_value*\
-Parametr `a` distribuce.
+*a_value* \
+Parametr distribuce `a`.
 
-*b_value*\
-Parametr `b` distribuce.
+*b_value* \
+Parametr distribuce `b`.
 
-*Kliknutím*\
-`param_type` Objekt, který se má porovnat.
+*pravé* \
+Objekt `param_type`, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
 **Předběžná podmínka:** `0.0 < b`
 
-Tuto strukturu lze předat konstruktoru třídy distribuce při vytváření instance, `param()` členské funkci pro nastavení uložených parametrů stávající distribuce a k `operator()` použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)
+[\<random >](../standard-library/random.md)

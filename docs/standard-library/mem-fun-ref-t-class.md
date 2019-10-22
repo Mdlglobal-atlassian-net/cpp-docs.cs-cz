@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: 0879736863a9b8052d19cc86dc5636ba14bcf993
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8f5ef05d1bdeec694cdf22d7e7a163478127dfc
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240611"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687762"
 ---
-# <a name="memfunreft-class"></a>mem_fun_ref_t – třída
+# <a name="mem_fun_ref_t-class"></a>mem_fun_ref_t – třída
 
-Třída adaptéru umožňující `non_const` členskou funkci, která nepřijímá žádné argumenty, která se má volat jako objekt jednočlenné funkce při inicializaci s argumentem reference. Zastaralé v C ++ 11, v C ++ 17 odebrané.
+Třída adaptéru umožňující `non_const` členskou funkci, která nepřijímá žádné argumenty, které se mají volat jako unární objekt funkce při inicializaci s argumentem odkazu. Zastaralé v C++ 11, odebrané v C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,20 +31,20 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm*\
-Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
+*_Pm* \
+Ukazatel na členskou funkci třídy `Type`, která má být převedena na objekt funkce.
 
-*doleva*\
-Objekt, který *_Pm* členská funkce je volána v.
+*levý* \
+Objekt, na kterém je volána členská funkce *_Pm*
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Přizpůsobitelnou jednočlennou funkci.
+Přizpůsobitelná unární funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející (**levé**. * `_Pm`) ().
+Šablona třídy uchovává kopii *_Pm*, která musí být ukazatel na členskou funkci třídy `Type` v objektu Private member. Definuje jeho členskou funkci `operator()` jako vrácení (**Left**. * `_Pm`) ().
 
 ## <a name="example"></a>Příklad
 
-Konstruktor třídy `mem_fun_ref_t` se obvykle nepoužívá přímo; pomocnou funkci `mem_fun_ref` slouží k přizpůsobení členské funkce. Zobrazit [mem_fun_ref –](../standard-library/functional-functions.md#mem_fun_ref) příklad, jak používat adaptéry členské funkce.
+Konstruktor `mem_fun_ref_t` se obvykle nepoužívá přímo; pomocná funkce `mem_fun_ref` slouží k přizpůsobení členských funkcí. Příklad použití adaptérů členské funkce naleznete v tématu [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) .

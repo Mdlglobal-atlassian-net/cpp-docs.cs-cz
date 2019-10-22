@@ -1,5 +1,5 @@
 ---
-title: '&lt;hash_set&gt;'
+title: '&lt;hash_set &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <hash_set>
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
-ms.openlocfilehash: 559bbff00b8e5204dd4f381abaf9987b4752db48
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 00ca476816213d38b3c50c64e0978e65ac1a5ea1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452023"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687951"
 ---
-# <a name="lthashsetgt"></a>&lt;hash_set&gt;
+# <a name="lthash_setgt"></a>&lt;hash_set &gt;
 
 > [!NOTE]
 > Tato hlavička je zastaralá. Alternativou je [< unordered_set >](../standard-library/unordered-set.md).
 
-Definuje třídy šablon kontejnerů hash_set a hash_multiset a jejich podpůrné šablony.
+Definuje šablony tříd kontejneru hash_set a hash_multiset a jejich podpůrné šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,12 +46,12 @@ Definuje třídy šablon kontejnerů hash_set a hash_multiset a jejich podpůrn�
 
 |Třída|Popis|
 |-|-|
-|[hash_compare – třída](../standard-library/hash-compare-class.md)|Popisuje objekt, který může být použit jakýmkoli z asociativních kontejnerů hash – hash_map, hash_multimap, hash_set nebo hash_multiset – jako výchozí `Traits` objekt parametru pro řazení a hash prvků, které obsahují.|
+|[hash_compare – třída](../standard-library/hash-compare-class.md)|Popisuje objekt, který může být použit jakýmkoli z asociativních kontejnerů hash – hash_map, hash_multimap, hash_set nebo hash_multiset – jako výchozí objekt parametru `Traits` pro řazení a hash prvků, které obsahují.|
 |[hash_set – třída](../standard-library/hash-set-class.md)|Slouží k ukládání a rychlému načítání dat z kolekce, ve které jsou hodnoty prvků, které jsou obsaženy, jedinečné a slouží jako klíčové hodnoty.|
 |[hash_multiset – třída](../standard-library/hash-multiset-class.md)|Slouží k ukládání a rychlému načítání dat z kolekce, ve které jsou hodnoty prvků, které jsou obsaženy, jedinečné a slouží jako klíčové hodnoty.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

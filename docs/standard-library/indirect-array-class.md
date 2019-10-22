@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be0c5153cbc94d09b414fc9e14fa498c7a4cfa7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456328"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687923"
 ---
-# <a name="indirectarray-class"></a>indirect_array – třída
+# <a name="indirect_array-class"></a>indirect_array – třída
 
-Interní pomocná třída šablony, která podporuje objekty, které jsou podmnožinou valarrays, poskytováním operací mezi poli podmnožiny, které jsou definovány určením podmnožiny indexů nadřazené valarray.
+Interní pomocná šablona třídy, která podporuje objekty, které jsou podmnožinou valarrays, poskytováním operací mezi poli podmnožiny, které jsou definovány určením podmnožiny indexů nadřazené valarray.
 
 ## <a name="syntax"></a>Syntaxe
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje objekt, který ukládá odkaz na `va` objekt třídy [valarray](../standard-library/valarray-class.md) **\<typu >** společně s objektem `xa` třídy `valarray<size_t>`, který popisuje sekvenci prvků, ze kterých lze vybírat. `valarray<Type>` objekt.
+Třída popisuje objekt, který ukládá odkaz na objekt `va` třídy [valarray](../standard-library/valarray-class.md)  **\<Type >** , společně s objektem `xa` třídy `valarray<size_t>`, který popisuje sekvenci prvků, které se mají vybrat z objektu `valarray<Type>`.
 
-Objekt vytvoříte pouze pomocí zápisu výrazu formuláře `va[xa]`. `indirect_array<Type>` Členské funkce třídy indirect_array se pak chovají jako odpovídající signatury funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů.
+Objekt `indirect_array<Type>` vytvoříte pouze pomocí zápisu výrazu `va[xa]` formuláře. Členské funkce třídy indirect_array se pak chovají stejně jako odpovídající signatura funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů.
 
-Sekvence se skládá z protokolu **XA.** prvky [velikosti](../standard-library/valarray-class.md#size) , kde se `I` element změní na index XA `I`[] `va`v rámci.
+Sekvence se skládá z protokolu **XA.** prvky [velikosti](../standard-library/valarray-class.md#size) , kde `I` elementu se změní na index **XA**[`I`] v rámci `va`.
 
 ## <a name="example"></a>Příklad:
 
@@ -75,7 +75,7 @@ The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<valarray >
+**Záhlaví:** \<valarray >
 
 **Obor názvů:** std
 

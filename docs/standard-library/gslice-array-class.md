@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 68ce774128395e941ff80580a02c4ee28a74a4e4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448922"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689600"
 ---
-# <a name="gslicearray-class"></a>gslice_array – třída
+# <a name="gslice_array-class"></a>gslice_array – třída
 
-Interní pomocná třída šablony, která podporuje obecné objekty řezů tím, že poskytuje operace mezi podmnožinami, které jsou definovány v obecné výseči valarray.
+Interní pomocná šablona třídy, která podporuje obecné objekty řezů poskytnutím operací mezi poli podmnožiny, které jsou definovány obecným řezem valarray.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje objekt `va` , který ukládá odkaz na objekt třídy [valarray](../standard-library/valarray-class.md) **\<typu >** společně s objektem `gs` třídy [gslice](../standard-library/gslice-class.md) , který popisuje sekvenci prvků, ze kterých se má vybírat. `valarray<Type>` objekt.
+Třída popisuje objekt, který ukládá odkaz na objekt `va` třídy [valarray](../standard-library/valarray-class.md)  **\<Type >** , společně s objektem `gs` třídy [gslice](../standard-library/gslice-class.md) , který popisuje sekvenci prvků, které se mají vybrat z objektu `valarray<Type>`.
 
-Objekt vytváříte pouze pomocí zápisu výrazu ve formě [VA&#91;GS&#93;.](../standard-library/valarray-class.md#op_at) `gslice_array<Type>` Členské funkce třídy gslice_array se pak chovají jako odpovídající signatury funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů.
+Objekt `gslice_array<Type>` vytvoříte pouze pomocí zápisu výrazu ve formě [VA&#91;GS&#93;](../standard-library/valarray-class.md#op_at). Členské funkce třídy gslice_array se pak chovají stejně jako odpovídající signatura funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů.
 
-Třída šablony je vytvořena nepřímo některými valarray operacemi a nelze ji použít přímo v programu. Operátor dolního indexu řezu používá místo toho interní pomocnou třídu:
+Šablona třídy je vytvořena nepřímo některými valarray operacemi a nelze ji použít přímo v programu. Místo toho se používá interní šablona pomocné třídy pro operátor dolního indexu řezu:
 
-`gslice_array`\<**Typ** >  **Zadejte >** : :`operator[]` ( **constgslice &** ). `valarray` \<
+**typ** `gslice_array` \< >  `valarray` \< **typ**>:: `operator[]` ( **constgslice &** ).
 
-Objekt vytvoříte pouze tak, že zapíšete výraz formuláře `va[gsl]`pro řez `gsl` valarray `va`. `gslice_array<Type>` Členské funkce třídy gslice_array se pak chovají jako odpovídající signatury funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů. Sekvence řízená gslice_array je definována třemi parametry konstruktoru řezu, indexem prvního prvku v prvním řezu, počtem prvků v jednotlivých výsečích a vzdáleností mezi prvky v jednotlivých výsečích.
+Objekt `gslice_array<Type>` vytvoříte pouze tak, že zapíšete výraz `va[gsl]` formuláře pro průřez `gsl` `va` valarray. Členské funkce třídy gslice_array se pak chovají stejně jako odpovídající signatura funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů. Sekvence řízená gslice_array je definována třemi parametry konstruktoru řezu, indexem prvního prvku v prvním řezu, počtem prvků v jednotlivých výsečích a vzdáleností mezi prvky v jednotlivých výsečích.
 
 V následujícím příkladu:
 
@@ -83,7 +83,7 @@ Příklad, jak deklarovat a používat slice_array, naleznete v příkladu pro [
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<valarray >
+**Záhlaví:** \<valarray >
 
 **Obor názvů:** std
 

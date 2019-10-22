@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453180"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688252"
 ---
 # <a name="complex-class"></a>complex – třída
 
-Třída šablony popisuje objekt, který ukládá dva objekty typu `Type`, jednu, která představuje reálnou část komplexního čísla a jednu, která představuje imaginární část.
+Šablona třídy popisuje objekt, který ukládá dva objekty typu `Type`, jeden, který představuje skutečnou část komplexního čísla a jednu, která představuje imaginární část.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,9 +38,9 @@ Objekt třídy `Type`:
 
 - Definuje aritmetické operátory a matematické funkce podle potřeby, které jsou definovány pro typy s plovoucí desetinnou čárkou s konvenčním chováním.
 
-Zejména, mezi konstrukcí kopírování a výchozím konstrukcí, které následují přiřazení, nesmí existovat žádné drobné rozdíly. Žádná operace s objekty třídy `Type` nesmí vyvolat výjimky.
+Zejména, mezi konstrukcí kopírování a výchozím konstrukcí, které následují přiřazení, nesmí existovat žádné drobné rozdíly. Žádná operace s objekty třídy `Type` nemůže vyvolat výjimky.
 
-Pro tři typy s plovoucí desetinnou čárkou existují explicitní specializace složitosti třídy šablony. V této implementaci je hodnota `Type` jiného typu přetypovat na hodnotu **Double** pro skutečné výpočty s **dvojitým** výsledkem přiřazeným k uloženému objektu typu. `Type`
+Pro tři typy s plovoucí desetinnou čárkou existují explicitní specializace složitých šablon tříd. V této implementaci je hodnota jakéhokoliv jiného typu `Type` přetypovat na hodnotu **Double** pro skutečné výpočty s **dvojitým** výsledkem přiřazeným k uloženému objektu typu `Type`.
 
 ## <a name="members"></a>Členové
 
@@ -48,7 +48,7 @@ Pro tři typy s plovoucí desetinnou čárkou existují explicitní specializace
 
 |||
 |-|-|
-|[complex](#complex)|Vytvoří komplexní číslo se specifikovanými reálnými a imaginárními částmi nebo jako kopii nějakého jiného komplexního čísla.|
+|[složit](#complex)|Vytvoří komplexní číslo se specifikovanými reálnými a imaginárními částmi nebo jako kopii nějakého jiného komplexního čísla.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -68,8 +68,8 @@ Pro tři typy s plovoucí desetinnou čárkou existují explicitní specializace
 |||
 |-|-|
 |[operator * = – operátor](#op_star_eq)|Vynásobí cílové komplexní číslo faktorem, který může být složitý nebo stejný typ jako reálné a imaginární části komplexního čísla.|
-|[operator+=](#op_add_eq)|Přidá číslo do cílového komplexního čísla, kde přidané číslo může být složité nebo stejného typu, jako jsou reálné a imaginární části komplexního čísla, ke kterému je přidána.|
-|[operator-=](#operator-_eq)|Odečte číslo od cílového komplexního čísla, kde odečtené číslo může být složité nebo stejného typu, jako jsou reálné a imaginární části komplexního čísla, ke kterému je přidána.|
+|[operator + = – operátor](#op_add_eq)|Přidá číslo do cílového komplexního čísla, kde přidané číslo může být složité nebo stejného typu, jako jsou reálné a imaginární části komplexního čísla, ke kterému je přidána.|
+|[-= – operátor](#operator-_eq)|Odečte číslo od cílového komplexního čísla, kde odečtené číslo může být složité nebo stejného typu, jako jsou reálné a imaginární části komplexního čísla, ke kterému je přidána.|
 |[operator/= – operátor](#op_div_eq)|Vydělí cílové komplexní číslo dělitelem, což může být složité, nebo musí být stejného typu jako reálné a imaginární části komplexního čísla.|
 |[operátor =](#op_eq)|Přiřadí číslo cílovému komplexnímu číslu, kde přiřazené číslo může být složité nebo stejného typu, jako jsou reálné a imaginární části komplexního čísla, ke kterému se přiřazuje.|
 
@@ -91,18 +91,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*\
+*_RealVal* \
 Hodnota reálné části, která se používá k inicializaci komplexního čísla.
 
-*_ImagVal*\
+*_ImagVal* \
 Hodnota imaginární části používaná k inicializaci komplexního čísla, které je konstruováno.
 
-*complexNum*\
+*complexNum* \
 Komplexní číslo, jehož reálné a imaginární části jsou použity k inicializaci komplexního čísla, které je konstruováno.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje uloženou skutečnou část na  *\_RealVal* a uloženou imaginární část do  *\_Imagval*. Druhý konstruktor inicializuje uloženou skutečnou část do `complexNum.real()` a uloženou imaginární část do. `complexNum.imag()`
+První konstruktor inicializuje uloženou skutečnou část pro *\_RealVal* a uloženou imaginární část pro *\_Imagval*. Druhý konstruktor inicializuje uloženou skutečnou část pro `complexNum.real()` a uloženou imaginární část pro `complexNum.imag()`.
 
 V této implementaci, pokud Překladatel nepodporuje funkce šablon členů, Šablona:
 
@@ -171,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Komplexní číslo, jehož imaginární hodnota má být extrahována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -228,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Komplexní číslo nebo číslo, které je stejného typu jako parametr cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -313,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Komplexní číslo nebo číslo, které je stejného typu jako parametr cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -416,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*\
+*complexNum* \
 Komplexní číslo, které má být odečteno od cílového komplexního čísla.
 
-*_RealPart*\
+*_RealPart* \
 Reálné číslo, které má být odečteno od cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -524,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*\
+*complexNum* \
 Komplexní číslo, které má být odečteno od cílového komplexního čísla.
 
-*_RealPart*\
+*_RealPart* \
 Reálné číslo, které má být odečteno od cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -626,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Komplexní číslo nebo číslo, které je stejného typu jako parametr cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -703,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Komplexní číslo, jehož skutečná hodnota má být extrahována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`value_type`je synonymum pro parametr komplexní `Type` šablony třídy.
+`value_type` je synonymum pro parametr šablony komplexní `Type` třídy.
 
 ### <a name="example"></a>Příklad
 

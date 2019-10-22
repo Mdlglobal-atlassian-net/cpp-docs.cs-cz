@@ -1,24 +1,24 @@
 ---
-title: '&lt;hash_map&gt;'
+title: '&lt;hash_map &gt;'
 ms.date: 01/18/2018
 f1_keywords:
 - <hash_map>
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: cca38386892ce4df6bf9863e0cbac3dc16106d35
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e586a933c2a80b7e611bcd4b4714e300eb21a0ad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448669"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689576"
 ---
-# <a name="lthashmapgt"></a>&lt;hash_map&gt;
+# <a name="lthash_mapgt"></a>&lt;hash_map &gt;
 
 > [!NOTE]
-> Tato hlavička je zastaralá. Alternativou je [ \<unordered_map >](unordered-map.md).
+> Tato hlavička je zastaralá. Alternativa je [\<unordered_map >](unordered-map.md).
 
-Definuje třídy šablon kontejnerů hash_map a hash_multimap a jejich podpůrné šablony.
+Definuje šablony tříd kontejneru hash_map a hash_multimap a jejich podpůrné šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,19 +43,19 @@ Definuje třídy šablon kontejnerů hash_map a hash_multimap a jejich podpůrn�
 
 |Třída|Popis|
 |-|-|
-|[hash_compare – třída](hash-compare-class.md)|Popisuje objekt, který může být použit jakýmkoli z asociativních kontejnerů hash – hash_map, hash_multimap, hash_set nebo hash_multiset – jako výchozí `Traits` objekt parametru pro řazení a hash prvků, které obsahují.|
+|[hash_compare – třída](hash-compare-class.md)|Popisuje objekt, který může být použit jakýmkoli z asociativních kontejnerů hash – hash_map, hash_multimap, hash_set nebo hash_multiset – jako výchozí objekt parametru `Traits` pro řazení a hash prvků, které obsahují.|
 |[value_compare – třída](value-compare-class.md)|Poskytuje objekt funkce, který může porovnat prvky hash_map porovnáním hodnot jejich klíčů a určením jejich relativního pořadí v hash_map.|
 |[hash_map – třída](hash-map-class.md)|Slouží k ukládání a rychlému načítání dat z kolekce, ve které je každý prvek dvojice, která má klíč řazení, jehož hodnota je jedinečná a přidružená hodnota dat.|
 |[hash_multimap – třída](hash-multimap-class.md)|Používá se pro ukládání a rychlé načítání dat z kolekce, ve které je každý prvek dvojice, která má klíč řazení, jehož hodnota nemusí být jedinečná a přidružená hodnota dat.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** \<hash_map>
+**Záhlaví:** \<hash_map >
 
 **Obor názvů:** stdext
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](thread-safety-in-the-cpp-standard-library.md)\
+@No__t_1 [referenčních souborů hlaviček](cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](cpp-standard-library-reference.md)

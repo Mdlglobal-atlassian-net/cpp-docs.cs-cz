@@ -1,20 +1,20 @@
 ---
-title: '&lt;memory_resource&gt;'
+title: '&lt;memory_resource &gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: d4b25c6ee575191f1e17b0202d33298e2e9e67f0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 752396bb06b292ce29b7c6cd292287955b6066a7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451907"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687715"
 ---
-# <a name="ltmemoryresourcegt"></a>&lt;memory_resource&gt;
+# <a name="ltmemory_resourcegt"></a>&lt;memory_resource &gt;
 
-Definuje třídu šablony kontejneru memory_resource a její podpůrné šablony.
+Definuje šablonu třídy kontejneru memory_resource a její podpůrné šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ Definuje třídu šablony kontejneru memory_resource a její podpůrné šablony
 |||
 |-|-|
 |[operator!=](../standard-library/memory-resource-operators.md#op_neq)|Testuje, zda objekt memory_resource na levé straně operátoru není roven objektu memory_resource na pravé straně.|
-|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|Testuje, zda je objekt memory_resource na levé straně operátoru roven objektu memory_resource na pravé straně.|
+|[operator = = – operátor](../standard-library/memory-resource-operators.md#op_eq_eq)|Testuje, zda je objekt memory_resource na levé straně operátoru roven objektu memory_resource na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
@@ -58,6 +58,6 @@ Definuje třídu šablony kontejneru memory_resource a její podpůrné šablony
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

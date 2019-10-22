@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-ms.openlocfilehash: 15efae85baf3f03b764c7117538d7cc179553050
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450887"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688172"
 ---
 # <a name="ctype-class"></a>ctype – třída
 
@@ -56,20 +56,20 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+*CharType* \
 Typ používaný v rámci programu ke kódování znaků.
 
 ## <a name="remarks"></a>Poznámky
 
-Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k uložené hodnotě ukládá do pole `id`jedinečnou kladnou hodnotu. Klasifikační kritéria mají k dispozici vnořený typ bitové masky v základní třídě ctype_base.
+Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k uložené hodnotě ukládá v `id` jedinečnou kladnou hodnotu. Klasifikační kritéria mají k dispozici vnořený typ bitové masky v základní třídě ctype_base.
 
-C++ Standardní knihovna definuje dvě explicitní specializace této třídy šablony:
+C++ Standardní knihovna definuje dvě explicitní specializace této šablony třídy:
 
-- `ctype<char>`, explicitní specializace, jejíž rozdíly jsou popsány samostatně. Další informace naleznete v tématu [Třída&lt;CType&gt; char](../standard-library/ctype-char-class.md).
+- `ctype<char>` explicitní specializace, jejíž rozdíly jsou popsány samostatně. Další informace naleznete v tématu [ctype &lt;char &gt; třídy](../standard-library/ctype-char-class.md).
 
 - `ctype<wchar_t>`, který zpracovává prvky jako velké znaky.
 
-Další specializace třídy `ctype<CharType>`šablony:
+Další specializace šablony třídy `ctype<CharType>`:
 
 - Převeďte hodnotu *ch* typu *CharType* na hodnotu typu **char** s výrazem `(char)ch`.
 
@@ -81,7 +81,7 @@ Všechny ostatní operace se provádí na hodnotách typu **char** stejným způ
 
 |Konstruktor|Popis|
 |-|-|
-|[CType](#ctype)|Konstruktor pro objekty třídy `ctype` , které slouží jako omezující vlastnosti národního prostředí pro znaky.|
+|[CType](#ctype)|Konstruktor pro objekty třídy `ctype`, které slouží jako omezující vlastnosti národního prostředí pro znaky.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -104,13 +104,13 @@ Všechny ostatní operace se provádí na hodnotách typu **char** stejným způ
 |[dále](#narrow)|Převede znak typu `CharType` používaného národním prostředím na odpovídající znak typu char v nativní znakové sadě.|
 |[scan_is](#scan_is)|Vyhledá první znak v rozsahu, který odpovídá zadané masce.|
 |[scan_not](#scan_not)|Vyhledá první znak v rozsahu, který neodpovídá zadané masce.|
-|[tolower](#tolower)|Převede znak nebo rozsah znaků na malá písmena.|
+|[ToLower](#tolower)|Převede znak nebo rozsah znaků na malá písmena.|
 |[ToUpper](#toupper)|Převede znak nebo rozsah znaků na velká písmena.|
-|[widen](#widen)|Převede znak typu **char** v nativní znakové sadě na odpovídající znak typu `CharType` používaný národním prostředím.|
+|[rozšiřuje](#widen)|Převede znak typu **char** v nativní znakové sadě na odpovídající znak typu `CharType` používaný národním prostředím.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 
@@ -128,7 +128,7 @@ Typ je synonymum pro parametr šablony *CharType*.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se, jak [](#widen) členské funkce rozšiřují příklad, `char_type` který používá jako návratovou hodnotu.
+Podívejte se, jak členské funkce [rozšiřují](#widen) příklad, který používá `char_type` jako návratovou hodnotu.
 
 ## <a name="ctype"></a>CType:: CType
 
@@ -140,22 +140,22 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*\
+*_Refs* \
 Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
 ### <a name="remarks"></a>Poznámky
 
 Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
 
-- 0: Životnost objektu je spravována národními prostředími, která jej obsahují.
+- 0: životnost objektu je spravována místními objekty, které jej obsahují.
 
-- 1: Životnost objektu musí být ručně spravovaná.
+- 1: životnost objektu musí být ručně spravovaná.
 
-- \> 1: Tyto hodnoty nejsou definovány.
+- \> 1: tyto hodnoty nejsou definovány.
 
 Nejsou možné žádné přímé příklady, protože je destruktor chráněný.
 
-Konstruktor inicializuje svůj `locale::facet` základní objekt pomocí **locale::** [Face](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Konstruktor inicializuje svůj `locale::facet` základní objekt pomocí **locale::** [Face](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="do_is"></a>CType::d o_is
 
@@ -174,19 +174,19 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*\
+*maskVal* \
 Hodnota masky, pro kterou má být testován znak.
 
-*Zvolte*\
+*ch* \
 Znak, jehož atributy mají být testovány.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu, jehož atributy mají být klasifikovány.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned po posledním znaku v rozsahu, jehož atributy mají být klasifikovány.
 
-*propojovací*\
+*cílový* \
 Ukazatel na začátek pole, kde jsou uloženy hodnoty masky characterizing atributů každého znaku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -201,7 +201,7 @@ Hodnoty masky klasifikace atributů znaků jsou poskytovány třídou [ctype_bas
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad [pro,](#is)který volá `do_is`.
+Podívejte [se na příklad pro,](#is)který volá `do_is`.
 
 ## <a name="do_narrow"></a>CType::d o_narrow
 
@@ -221,19 +221,19 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>Parametry
 
-*Zvolte*\
-Znak typu `Chartype` používaný národním prostředím, které má být převedeno.
+*ch* \
+Znak typu `Chartype` používané národním prostředím, které má být převedeno.
 
-*výchozí*\
-Výchozí hodnota, která má být přiřazena členskou funkcí k znakům typu `CharType` , které nemají protějšky znaků typu **char**.
+*výchozí* \
+Výchozí hodnota, která má být přiřazena členskou funkcí znakům typu `CharType`, které nemají znaky protějšku typu **char**.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu znaků, který má být převeden.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu znaků, který má být převeden.
 
-*propojovací*\
+*cílový* \
 Const ukazatel na první znak typu **char** v cílovém rozsahu, ve kterém je uložený převedený rozsah znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -244,11 +244,11 @@ Druhá chráněná členská funkce vrátí ukazatel na cílový rozsah nativní
 
 ### <a name="remarks"></a>Poznámky
 
-Druhá chráněná šablona člena ukládá `dest`do [ `last` `I` `default` `first` `I`] hodnotu `do_narrow`([ `I`],) pro v intervalu [0,  -  `first`).
+Druhá chráněná šablona člena ukládá do `dest` [`I`] hodnotu `do_narrow` (`first` [`I`], `default`) pro `I` v intervalu [0 `last`  -  `first`).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad [](#narrow)pro zúžení, `do_narrow`která volání vyvolají.
+Podívejte se na příklad pro [zúžení](#narrow), který volá `do_narrow`.
 
 ## <a name="do_scan_is"></a>CType::d o_scan_is
 
@@ -263,13 +263,13 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*\
+*maskVal* \
 Hodnota masky odpovídající znaku.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu, který chcete prohledat.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu, který chcete prohledat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -278,11 +278,11 @@ Ukazatel na první znak v rozsahu, který odpovídá zadané masce. Pokud žádn
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce vrátí nejmenší ukazatel `ptr` v rozsahu [ `first`, `last`), pro který [](#do_is)je hodnota `maskVal`do_is \* (, `ptr`) true.
+Chráněná členská funkce vrátí nejmenší ukazatel `ptr` v rozsahu [`first`, `last`), pro který má vlastnost [do_is](#do_is)(`maskVal`, \* `ptr`) hodnotu true.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [scan_is](#scan_is), která `do_scan_is`volá.
+Podívejte se na příklad pro [scan_is](#scan_is), který volá `do_scan_is`.
 
 ## <a name="do_scan_not"></a>CType::d o_scan_not
 
@@ -297,13 +297,13 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*\
+*maskVal* \
 Hodnota masky nesmí odpovídat znaku.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu, který chcete prohledat.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu, který chcete prohledat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -312,11 +312,11 @@ Ukazatel na první znak v rozsahu, který neodpovídá zadané masce. Pokud žá
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce vrátí nejmenší ukazatel `ptr` v rozsahu [ `first`, `last`), pro který [](#do_is)je do_is `maskVal`( \* , `ptr`) false.
+Chráněná členská funkce vrátí nejmenší ukazatel `ptr` v rozsahu [`first`, `last`), pro který je [do_is](#do_is)(`maskVal` \* `ptr`) false.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [scan_not](#scan_not), která `do_scan_not`volá.
+Podívejte se na příklad pro [scan_not](#scan_not), který volá `do_scan_not`.
 
 ## <a name="do_tolower"></a>CType::d o_tolower
 
@@ -332,13 +332,13 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>Parametry
 
-*Zvolte*\
+*ch* \
 Znak, který má být převeden na malá písmena.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu znaků, jejichž případy mají být převedeny.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu znaků, jejichž případy mají být převedeny.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -347,11 +347,11 @@ První chráněná členská funkce vrátí formu malých písmen parametru *ch*
 
 ### <a name="remarks"></a>Poznámky
 
-Druhá funkce šablony Protected member nahradí každý element `first` [ `I`] `I` v intervalu [0, `do_tolower` `first` `last`  - ) s ( `first` [ `I`]).
+Druhá funkce šablony Protected member nahradí každý prvek `first` [`I`] pro `I` v intervalu [0, `last`  -  `first`) s `do_tolower` (`first` [`I`]).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [ToLower](#tolower), který `do_tolower`volá.
+Podívejte se na příklad pro [ToLower](#tolower), který volá `do_tolower`.
 
 ## <a name="do_toupper"></a>CType::d o_toupper
 
@@ -367,13 +367,13 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>Parametry
 
-*Zvolte*\
+*ch* \
 Znak, který má být převeden na velká písmena.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu znaků, jejichž případy mají být převedeny.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu znaků, jejichž případy mají být převedeny.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -382,11 +382,11 @@ První chráněná členská funkce vrátí formu velkých písmen parametru *ch
 
 ### <a name="remarks"></a>Poznámky
 
-Druhá funkce šablony Protected member nahradí každý element `first` [ `I`] `I` v intervalu [0, `do_toupper` `first` `last`  - ) s ( `first` [ `I`]).
+Druhá funkce šablony Protected member nahradí každý prvek `first` [`I`] pro `I` v intervalu [0, `last`  -  `first`) s `do_toupper` (`first` [`I`]).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [ToUpper](#toupper), který `do_toupper`volá.
+Podívejte se na příklad pro [ToUpper](#toupper), který volá `do_toupper`.
 
 ## <a name="do_widen"></a>CType::d o_widen
 
@@ -403,31 +403,31 @@ virtual const char *do_widen(
 
 ### <a name="parameters"></a>Parametry
 
-*bytové*\
+*bajtové* \
 Znak typu **char** v nativní znakové sadě, která má být převedena.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu znaků, který má být převeden.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu znaků, který má být převeden.
 
-*propojovací*\
+*cílový* \
 Ukazatel na první znak typu `CharType` v cílovém rozsahu, ve kterém je uložený převedený rozsah znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První chráněná členská funkce vrátí znak typu `CharType` , který odpovídá znaku parametru nativního typu **char**.
+První chráněná členská funkce vrátí znak typu `CharType`, který odpovídá znaku parametru nativního typu **char**.
 
-Druhá chráněná členská funkce vrátí ukazatel na cílový rozsah znaků typu `CharType` používaných národním prostředím převedený z nativních znaků typu **char**.
+Druhá chráněná členská funkce vrací ukazatel na cílový rozsah znaků typu `CharType` používané národním prostředím převedených z nativních znaků typu **char**.
 
 ### <a name="remarks"></a>Poznámky
 
-Druhá chráněná šablona člena ukládá `dest`do [  -  `last` `I` `first` `I`] hodnotu `do_widen`([ `I`]), pro v intervalu [0, `first`).
+Druhá chráněná šablona člena ukládá do `dest` [`I`] hodnotu `do_widen` (`first` [`I`]) pro `I` v intervalu [0 `last`  -  `first`).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [rozšíření](#widen), která `do_widen`volá.
+Podívejte se na příklad pro [rozšíření](#widen), který volá `do_widen`.
 
 ## <a name="is"></a>CType:: is
 
@@ -444,19 +444,19 @@ const CharType *is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*\
+*maskVal* \
 Hodnota masky, pro kterou má být testován znak.
 
-*Zvolte*\
+*ch* \
 Znak, jehož atributy mají být testovány.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu, jehož atributy mají být klasifikovány.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned po posledním znaku v rozsahu, jehož atributy mají být klasifikovány.
 
-*propojovací*\
+*cílový* \
 Ukazatel na začátek pole, kde jsou uloženy hodnoty masky characterizing atributů každého znaku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -524,30 +524,30 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>Parametry
 
-*Zvolte*\
-Znak typu `Chartype` používaný národním prostředím, které má být převedeno.
+*ch* \
+Znak typu `Chartype` používané národním prostředím, které má být převedeno.
 
-*výchozí*\
-Výchozí hodnota, která má být přiřazena členskou funkcí k znakům typu `CharType` , které nemají protějšky znaků typu **char**.
+*výchozí* \
+Výchozí hodnota, která má být přiřazena členskou funkcí znakům typu `CharType`, které nemají znaky protějšku typu **char**.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu znaků, který má být převeden.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu znaků, který má být převeden.
 
-*propojovací*\
+*cílový* \
 Const ukazatel na první znak typu **char** v cílovém rozsahu, ve kterém je uložený převedený rozsah znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První členská funkce vrací nativní znak typu **char** , který odpovídá znaku parametru typu `CharType default` , pokud není definován protějšek.
+První členská funkce vrací nativní znak typu **char** , který odpovídá znaku parametru typu `CharType default`, pokud není protějšek definován.
 
 Druhá členská funkce vrátí ukazatel na cílový rozsah nativních znaků převedených ze znaků typu `CharType`.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce vrátí [do_narrow](#do_narrow)(`ch`, `default`). Druhá členská funkce vrátí [do_narrow](#do_narrow) (`first`, `last`, `default`, `dest`). Pouze základní zdrojové znaky jsou zaručeny, že mají jedinečný inverzní obraz `CharType` v rámci. `narrow` Pro tyto základní zdrojové znaky následující invariantní proměnné uchovávají: `narrow` ( [rozšířit](#widen) ( **c** ), 0) = = **c**.
+První členská funkce vrátí [do_narrow](#do_narrow)(`ch`, `default`). Druhá členská funkce vrátí [do_narrow](#do_narrow) (`first`, `last`, `default`, `dest`). U základních zdrojových znaků je zaručeno, že mají v `narrow` jedinečný `CharType` obrázku. Pro tyto základní zdrojové znaky následující invariantní uchovávají: `narrow` ( [rozšířit](#widen) ( **c** ), 0) = = **c**.
 
 ### <a name="example"></a>Příklad
 
@@ -588,13 +588,13 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*\
+*maskVal* \
 Hodnota masky odpovídající znaku.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu, který chcete prohledat.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu, který chcete prohledat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -644,13 +644,13 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>Parametry
 
-*maskVal*\
+*maskVal* \
 Hodnota masky nesmí odpovídat znaku.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu, který chcete prohledat.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu, který chcete prohledat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -699,13 +699,13 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Zvolte*\
+*ch* \
 Znak, který má být převeden na malá písmena.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu znaků, jejichž případy mají být převedeny.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu znaků, jejichž případy mají být převedeny.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -754,13 +754,13 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Zvolte*\
+*ch* \
 Znak, který má být převeden na velká písmena.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu znaků, jejichž případy mají být převedeny.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu znaků, jejichž případy mají být převedeny.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -771,7 +771,7 @@ Druhá členská funkce vrátí *Poslední*.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce vrátí [do_toupper](#do_toupper)(`ch`). Druhá členská funkce vrátí [do_toupper](#do_toupper)( `first`, `last`).
+První členská funkce vrátí [do_toupper](#do_toupper)(`ch`). Druhá členská funkce vrátí [do_toupper](#do_toupper)(`first`, `last`).
 
 ### <a name="example"></a>Příklad
 
@@ -809,23 +809,23 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="parameters"></a>Parametry
 
-*bytové*\
+*bajtové* \
 Znak typu char v nativní znakové sadě, která má být převedena.
 
-*první*\
+*první* \
 Ukazatel na první znak v rozsahu znaků, který má být převeden.
 
-*posledního*\
+*poslední* \
 Ukazatel na znak hned za posledním znakem v rozsahu znaků, který má být převeden.
 
-*propojovací*\
+*cílový* \
 Ukazatel na první znak typu `CharType` v cílovém rozsahu, ve kterém je uložený převedený rozsah znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První členská funkce vrátí znak typu `CharType` , který odpovídá znaku parametru nativního typu **char**.
+První členská funkce vrátí znak typu `CharType`, který odpovídá znaku parametru nativního typu **char**.
 
-Druhá členská funkce vrátí ukazatel na cílový rozsah znaků typu `CharType` používaných národním prostředím převedený z nativních znaků typu **char**.
+Druhá členská funkce vrátí ukazatel na cílový rozsah znaků typu `CharType` používané národním prostředím převedeným z nativních znaků typu **char**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -863,5 +863,5 @@ Hello everyone!
 
 ## <a name="see-also"></a>Viz také:
 
-[\<> národního prostředí](../standard-library/locale.md)\
+[\<locale >](../standard-library/locale.md) \
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;iOS&gt;'
+title: '&lt;ios &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <ios>
@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449135"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689511"
 ---
-# <a name="ltiosgt"></a>&lt;iOS&gt;
+# <a name="ltiosgt"></a>&lt;ios &gt;
 
 Definuje několik typů a funkcí základních pro provoz iostreams. Tato hlavička je obvykle zahrnutá v dalších hlavičkách iostream –. Jenom zřídka ho zahrnete přímo.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<iOS >
+**Záhlaví**: \<ios >
 
 **Obor názvů:** std
 
 > [!NOTE]
-> Knihovna \<> pro iOS `#include <iosfwd>` používá příkaz.
+> Knihovna \<ios > používá příkaz `#include <iosfwd>`.
 
 ## <a name="remarks"></a>Poznámky
 
-Velkou skupinou funkcí jsou manipulace s nimi. Manipulátor deklarované v \<iOS > mění hodnoty uložené v objektu argumentu třídy [ios_base](../standard-library/ios-base-class.md). Jiné manipulace provádějí akce s datovými proudy řízenými objekty typu odvozenými z této třídy, jako je například specializace jedné z tříd šablon [basic_istream](../standard-library/basic-istream-class.md) nebo [basic_ostream](../standard-library/basic-ostream-class.md). Například [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) vymaže příznak `ios_base::skipws` Format v objektu `str`, který může být jednoho z těchto typů.
+Velkou skupinou funkcí jsou manipulace s nimi. Manipulátor deklarovaný v \<ios > mění hodnoty uložené v objektu argumentu třídy [ios_base](../standard-library/ios-base-class.md). Jiné manipulace provádějí akce s datovými proudy řízenými objekty typu odvozenými z této třídy, jako je například specializace jedné z šablon třídy [basic_istream](../standard-library/basic-istream-class.md) nebo [basic_ostream](../standard-library/basic-ostream-class.md). Například [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) vymaže příznak Format `ios_base::skipws` v `str` objektu, který může být jeden z těchto typů.
 
-Můžete také volat manipulátor vložením do výstupního datového proudu nebo extrakci ze vstupního datového proudu z důvodu speciálního vkládání a extrakce operací pro třídy odvozené z `ios_base`. Příklad:
+Můžete také volat manipulátor vložením do výstupního datového proudu nebo extrakci ze vstupního datového proudu, protože pro třídy odvozené od `ios_base` jsou zadány speciální operace vkládání a extrakce. Příklad:
 
 ```cpp
 istr>> noskipws;
@@ -48,7 +48,7 @@ volá [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 |[iOS](../standard-library/ios-typedefs.md#ios)|Podporuje třídu iOS z staré knihovny iostream –.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Podporuje interní operace.|
 |[streampos](../standard-library/ios-typedefs.md#streampos)|Obsahuje aktuální pozici ukazatele vyrovnávací paměti nebo ukazatele na soubor.|
-|[streamsize](../standard-library/ios-typedefs.md#streamsize)|Určuje velikost datového proudu.|
+|[StreamSize](../standard-library/ios-typedefs.md#streamsize)|Určuje velikost datového proudu.|
 |[wios](../standard-library/ios-typedefs.md#wios)|Podporuje třídu wios ze staré knihovny iostream –.|
 |[wstreampos](../standard-library/ios-typedefs.md#wstreampos)|Obsahuje aktuální pozici ukazatele vyrovnávací paměti nebo ukazatele na soubor.|
 
@@ -58,7 +58,7 @@ volá [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) se v datovém proudu zobrazují jako **true** nebo **false** .|
 |[18.12](../standard-library/ios-functions.md#dec)|Určuje, že se celočíselné proměnné zobrazují v zápisu se základem 10.|
-|[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Nakonfiguruje příznaky `ios_base` objektu na použití výchozího formátu zobrazení pro hodnoty float.|
+|[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Nakonfiguruje příznaky objektu `ios_base` k použití výchozího formátu zobrazení pro hodnoty float.|
 |[určí](../standard-library/ios-functions.md#fixed)|Určuje, že se v zápisu s pevným počtem desetinných míst zobrazuje číslo s plovoucí desetinnou čárkou.|
 |[soustavy](../standard-library/ios-functions.md#hex)|Určuje, že se celočíselné proměnné zobrazují v zápisu se základem 16.|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
@@ -95,13 +95,13 @@ volá [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|Třída šablony popisuje funkce úložiště a členů společné pro vstupní datové proudy (ze třídy template [basic_istream](../standard-library/basic-istream-class.md)) a výstupní datové proudy (ze třídy template [basic_ostream](../standard-library/basic-ostream-class.md)), která závisí na parametrech šablony.|
-|[fpos](../standard-library/fpos-class.md)|Třída šablony popisuje objekt, který může ukládat všechny informace potřebné k obnovení libovolného indikátoru pozice souboru v jakémkoli datovém proudu.|
+|[basic_ios](../standard-library/basic-ios-class.md)|Šablona třídy popisuje funkce úložiště a členů společné pro vstupní datové proudy (ze šablony třídy [basic_istream](../standard-library/basic-istream-class.md)) a výstupní datové proudy (ze šablony třídy [basic_ostream](../standard-library/basic-ostream-class.md)), která závisí na parametrech šablony.|
+|[fpos](../standard-library/fpos-class.md)|Šablona třídy popisuje objekt, který může ukládat všechny informace potřebné k obnovení libovolného indikátoru pozice souboru v jakémkoli datovém proudu.|
 |[ios_base](../standard-library/ios-base-class.md)|Třída popisuje funkce úložiště a členů společné pro vstupní i výstupní proudy, které nezávisí na parametrech šablony.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programování iostream –](../standard-library/iostream-programming.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[iostream – programování](../standard-library/iostream-programming.md) \
 [iostreams – konvence](../standard-library/iostreams-conventions.md)

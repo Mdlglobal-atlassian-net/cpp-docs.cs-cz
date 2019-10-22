@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449941"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687689"
 ---
 # <a name="messages-class"></a>messages – třída
 
-Třída šablony popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí k načítání lokalizovaných zpráv z katalogu internacionalizovaných zpráv pro dané národní prostředí.
+Šablona třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí k načítání lokalizovaných zpráv z katalogu mezinárodních zpráv pro dané národní prostředí.
 
 Je-li třída zpráv aktuálně implementována, nejsou k dispozici žádné zprávy.
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+*CharType* \
 Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
 ## <a name="remarks"></a>Poznámky
@@ -64,7 +64,7 @@ Tato omezující vlastnost v podstatě otevře katalog zpráv definovaný v zák
 |Název typu|Popis|
 |-|-|
 |[char_type](#char_type)|Typ znaku, který je používán pro zobrazení zpráv.|
-|[string_type](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahujícího znaky typu. `CharType`|
+|[string_type](#string_type)|Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -79,7 +79,7 @@ Tato omezující vlastnost v podstatě otevře katalog zpráv definovaný v zák
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval*\
+*_Catval* \
 Katalog, který má být zavřen.
 
 ### <a name="remarks"></a>Poznámky
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval*\
+*_Catval* \
 Katalog, který má být zavřen.
 
 ### <a name="remarks"></a>Poznámky
@@ -133,7 +133,7 @@ Chráněná členská funkce zavře katalog zpráv *_Catval*, který musí být 
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [zavření](#close), který `do_close`volá.
+Podívejte se na příklad pro [zavření](#close), který volá `do_close`.
 
 ## <a name="do_get"></a>zprávy::d o_get
 
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval*\
+*_Catval* \
 Identifikační hodnota určující katalog zpráv, který má být prohledán.
 
-*_Nastavit*\
+*_Nastavit* \
 První identifikovaný, která se používá k vyhledání zprávy v katalogu zpráv.
 
-*_Message*\
+*_Message* \
 Druhá identifikovaná, která se používá k vyhledání zprávy v katalogu zpráv.
 
-*_Dfault*\
+*_Dfault* \
 Řetězec, který má být vrácen při selhání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -171,7 +171,7 @@ Chráněná členská funkce se pokusí získat sekvenci zprávy z katalogu zpr�
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [Get](#get), která `do_get`volá.
+Podívejte se na příklad pro [Get](#get), který volá `do_get`.
 
 ## <a name="do_open"></a>zprávy::d o_open
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname*\
+*_Catname* \
 Název katalogu, který se má prohledat
 
-*_Loc*\
+*_Loc* \
 Národní prostředí, které se v katalogu vyhledává.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -203,7 +203,7 @@ Návratová hodnota by měla být použita jako argument na pozdějším volán�
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [Open](#open), který `do_open`volá.
+Podívejte se na příklad pro [Open](#open), který volá `do_open`.
 
 ## <a name="get"></a>zprávy:: Get
 
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval*\
+*_Catval* \
 Identifikační hodnota určující katalog zpráv, který má být prohledán.
 
-*_Nastavit*\
+*_Nastavit* \
 První identifikovaný, která se používá k vyhledání zprávy v katalogu zpráv.
 
-*_Message*\
+*_Message* \
 Druhá identifikovaná, která se používá k vyhledání zprávy v katalogu zpráv.
 
-*_Dfault*\
+*_Dfault* \
 Řetězec, který má být vrácen při selhání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -237,7 +237,7 @@ Vrátí kopii *_Dfault* při selhání. V opačném případě vrátí kopii zad
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`).
+Členská funkce vrátí [do_get](#do_get)(`_Catval`, `_Set`, `_Message`, `_Dfault`).
 
 ## <a name="messages"></a>zprávy:: zprávy
 
@@ -254,25 +254,25 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*\
+*_Refs* \
 Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
-*_Locname*\
+*_Locname* \
 Název národního prostředí.
 
 ### <a name="remarks"></a>Poznámky
 
 Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
 
-- 0: Životnost objektu je spravována národními prostředími, která jej obsahují.
+- 0: životnost objektu je spravována místními objekty, které jej obsahují.
 
-- 1: Životnost objektu musí být ručně spravovaná.
+- 1: životnost objektu musí být ručně spravovaná.
 
-- \> 1: Tyto hodnoty nejsou definovány.
+- \> 1: tyto hodnoty nejsou definovány.
 
 Nejsou možné žádné přímé příklady, protože je destruktor chráněný.
 
-Konstruktor inicializuje svůj základní objekt pomocí **locale::** [Face](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Konstruktor inicializuje svůj základní objekt pomocí **locale::** [Face](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="open"></a>Messages:: Open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname*\
+*_Catname* \
 Název katalogu, který se má prohledat
 
-*_Loc*\
+*_Loc* \
 Národní prostředí, které se v katalogu vyhledává.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -298,11 +298,11 @@ Vrátí hodnotu, která při selhání porovná méně než nulu. V opačném p�
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_open](#do_open)( `_Catname`, `_Loc`).
+Členská funkce vrátí [do_open](#do_open)(`_Catname`, `_Loc`).
 
 ## <a name="string_type"></a>zprávy:: string_type
 
-Typ, který popisuje řetězec typu `basic_string` obsahujícího znaky typu. `CharType`
+Typ, který popisuje řetězec typu `basic_string` obsahující znaky typu `CharType`.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;
@@ -310,10 +310,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy šablony [basic_string](../standard-library/basic-string-class.md) , jejíž objekty mohou ukládat kopie sekvencí zpráv.
+Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) , jejíž objekty mohou ukládat kopie sekvencí zpráv.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<> národního prostředí](../standard-library/locale.md)\
-[messages_base – třída](../standard-library/messages-base-class.md)\
+[\<locale >](../standard-library/locale.md) \
+\ [třídy messages_base](../standard-library/messages-base-class.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

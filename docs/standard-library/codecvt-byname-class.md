@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459850"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688296"
 ---
-# <a name="codecvtbyname-class"></a>codecvt_byname – třída
+# <a name="codecvt_byname-class"></a>codecvt_byname – třída
 
-Odvozená třída šablony popisující objekt, který může sloužit jako omezující vlastnost kolace daného národního prostředí a který umožňuje načtení informací specifických pro kulturní oblast v případě převodů.
+Šablona odvozené třídy popisující objekt, který může sloužit jako omezující vlastnost COLLATE daného národního prostředí a který umožňuje načtení informací specifických pro kulturní oblast týkající se převodů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,21 +43,21 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*\
+*_Locname* \
 Pojmenované národní prostředí.
 
-*_Refs*\
+*_Refs* \
 Počáteční počet odkazů
 
 ## <a name="remarks"></a>Poznámky
 
 Charakteristiky byname se automaticky vytvoří při vytváření pojmenovaného národního prostředí.
 
-Jeho chování je určeno názvem národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt pomocí [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType > ( `_Refs`).
+Jeho chování je určeno názvem národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt pomocí [codecvt](../standard-library/codecvt-class.md) \<CharType, Byte, StateType > (`_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 

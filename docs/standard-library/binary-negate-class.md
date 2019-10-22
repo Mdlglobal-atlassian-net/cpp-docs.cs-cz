@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: d93ead4f301b6c5df918a6f402cea6963a9535e1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243371"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688404"
 ---
-# <a name="binarynegate-class"></a>binary_negate – třída
+# <a name="binary_negate-class"></a>binary_negate – třída
 
-Třída šablony poskytující členské funkce, které negují návratovou hodnotu zadané binární funkce. Zastaralé v C ++ 17 nahrazený [not_fn](functional-functions.md#not_fn).
+Šablona třídy poskytující členskou funkci, která negace návratové hodnoty zadané binární funkce. Zastaralé v C++ 17 namísto [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ class binary_negate
 
 ### <a name="parameters"></a>Parametry
 
-*Func*\
-Binární funkce na bude negovat.
+@No__t_1 *Func*
+Binární funkce, která má být negace.
 
-*doleva*\
-Levý operand binární funkce, která se bude negovat.
+*levý* \
+Levý operand binární funkce, která má být negace.
 
-*doprava*\
-Pravý operand binární funkce, která se bude negovat.
+*pravé* \
+Pravý operand binární funkce, která má být negace.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -48,9 +48,9 @@ Negace binární funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá jejich kopii objekt binární funkce *Func*. Definuje jeho členskou funkci `operator()` jako vracející `!Func(left, right)`.
+Šablona třídy uchovává kopii funkce *Func*objektu binární funkce. Definuje jeho členskou funkci `operator()` jako vrácení `!Func(left, right)`.
 
-Konstruktor třídy `binary_negate` je zřídka se používá přímo. Pomocná funkce [not2 –](../standard-library/functional-functions.md#not2) se obvykle dává přednost před deklarování a použití **binary_negator** adaptér predikátu.
+Konstruktor `binary_negate` se zřídka používá přímo. Pomocná funkce [not2 –](../standard-library/functional-functions.md#not2) je obvykle upřednostňována k deklaraci a použití predikátu **binary_negator** adaptéru.
 
 ## <a name="example"></a>Příklad
 

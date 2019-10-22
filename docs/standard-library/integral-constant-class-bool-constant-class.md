@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9577ce51d4b0773f7b309fe3dc6dcb5820693dcb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452049"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689538"
 ---
-# <a name="integralconstant-class-boolconstant-class"></a>Třída integral_constant, třída bool_constant
+# <a name="integral_constant-class-bool_constant-class"></a>Třída integral_constant, třída bool_constant
 
 Provede celočíselnou konstantu z typu a hodnoty.
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parametry
 
-*Š*\
+*T* \
 Typ konstanty.
 
-*ICES*\
+*v* \
 Hodnota konstanty.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony, při specializované s celočíselným typem *T* a hodnotou v typu, představuje objekt, který obsahuje konstantu tohoto integrálního typu se zadanou hodnotou.  `integral_constant` Člen s názvem `type` je alias pro generovaný typ specializace šablony `value` a člen obsahuje hodnotu *v* použitou k vytvoření specializace.
+Šablona třídy `integral_constant` při specializovaném s celočíselným typem *t* a hodnotou *v* typu představuje objekt, který obsahuje konstantu tohoto integrálního typu se zadanou hodnotou. Člen s názvem `type` je alias pro vygenerovaný typ specializace šablony a člen `value` obsahuje hodnotu *v* použitou k vytvoření specializace.
 
-Třída šablony je `integral_constant` explicitní Částečná specializace, která jako argument *T* používá **bool.** `bool_constant`
+Šablona třídy `bool_constant` je explicitní Částečná specializace `integral_constant`, která jako argument *t* používá **bool** .
 
 ## <a name="example"></a>Příklad
 
@@ -74,12 +74,12 @@ integral_constant<bool, false> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<type_traits >
+**Záhlaví:** \<type_traits >
 
 **Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[< type_traits >](../standard-library/type-traits.md)\
-[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[< type_traits >](../standard-library/type-traits.md) \
+[false_type](../standard-library/type-traits-typedefs.md#false_type) \
 [true_type](../standard-library/type-traits-typedefs.md#true_type)

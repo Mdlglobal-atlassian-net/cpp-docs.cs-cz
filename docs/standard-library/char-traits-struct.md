@@ -27,14 +27,14 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: ea5f53fd77545713dfcc6a969f1c172d89f8e460
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459025"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689902"
 ---
-# <a name="chartraits-struct"></a>char_traits – struktura
+# <a name="char_traits-struct"></a>char_traits – struktura
 
 Struktura char_traits popisuje atributy přidružené ke znaku.
 
@@ -47,12 +47,12 @@ struct char_traits;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+*CharType* \
 Datový typ elementu.
 
 ## <a name="remarks"></a>Poznámky
 
-Struktura šablony popisuje různé znaky znaků pro typ `CharType`. Třída šablony [basic_string](../standard-library/basic-string-class.md) a také několik tříd šablon iostream –, včetně [basic_ios](../standard-library/basic-ios-class.md), použijte tyto informace k manipulaci s prvky typu `CharType`. Takový typ elementu nesmí vyžadovat explicitní konstrukci nebo zničení. Musí poskytovat výchozí konstruktor, kopírovací konstruktor a operátor přiřazení s očekávanou sémantikou. Bitová kopie musí mít stejný účinek jako přiřazení. Žádná z členských funkcí struktury char_traits nemůže vyvolat výjimky.
+Struktura šablony popisuje různé vlastnosti znaků pro typ `CharType`. Šablona třídy [basic_string](../standard-library/basic-string-class.md) a také několik šablon třídy iostream –, včetně [basic_ios](../standard-library/basic-ios-class.md), použijte tyto informace k manipulaci s prvky typu `CharType`. Takový typ elementu nesmí vyžadovat explicitní konstrukci nebo zničení. Musí poskytovat výchozí konstruktor, kopírovací konstruktor a operátor přiřazení s očekávanou sémantikou. Bitová kopie musí mít stejný účinek jako přiřazení. Žádná z členských funkcí struktury char_traits nemůže vyvolat výjimky.
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -68,25 +68,25 @@ Struktura šablony popisuje různé znaky znaků pro typ `CharType`. Třída ša
 
 |Členská funkce|Popis|
 |-|-|
-|[assign](#assign)|Přiřadí jednu hodnotu znaku k druhé.|
-|[compare](#compare)|Porovná až k zadanému počtu znaků ve dvou řetězcích.|
+|[řadit](#assign)|Přiřadí jednu hodnotu znaku k druhé.|
+|[porovnán](#compare)|Porovná až k zadanému počtu znaků ve dvou řetězcích.|
 |[kopií](#copy)|Zkopíruje zadaný počet znaků z jednoho řetězce do jiného. Zastaralé Místo toho použijte [char_traits:: _Copy_s](#copy_s) .|
 |[_Copy_s](#copy_s)|Zkopíruje zadaný počet znaků z jednoho řetězce do jiného.|
 |[eof](#eof)|Vrátí znak konce souboru (EOF).|
-|[přepínače](#eq)|Testuje, zda `char_type` jsou dva znaky stejné.|
-|[eq_int_type](#eq_int_type)|Testuje, zda jsou dva znaky `int_type`reprezentované jako s rovny.|
+|[přepínače](#eq)|Testuje, zda jsou dva `char_type` znaky stejné.|
+|[eq_int_type](#eq_int_type)|Testuje, zda jsou dva znaky reprezentované jako `int_type`s stejné.|
 |[najít](#find)|Vyhledá první výskyt zadaného znaku v rozsahu znaků.|
-|[length](#length)|Vrátí délku řetězce.|
+|[časový](#length)|Vrátí délku řetězce.|
 |[lt](#lt)|Testuje, zda je jeden znak menší než jiný.|
 |[Pøesunout](#move)|Zkopíruje zadaný počet znaků v sekvenci do druhé, možná překrývající se, sekvence. Zastaralé Místo toho použijte [char_traits:: _Move_s](#move_s) .|
 |[_Move_s](#move_s)|Zkopíruje zadaný počet znaků v sekvenci do druhé, možná překrývající se, sekvence.|
 |[not_eof](#not_eof)|Testuje, zda je znak znak konce souboru (EOF).|
-|[to_char_type](#to_char_type)|Převede znak na odpovídající `char_type` znak a vrátí výsledek. `int_type`|
-|[to_int_type](#to_int_type)|Převede znak na odpovídající `int_type` znak a vrátí výsledek. `char_type`|
+|[to_char_type](#to_char_type)|Převede `int_type` znak na odpovídající `char_type` znak a vrátí výsledek.|
+|[to_int_type](#to_int_type)|Převede `char_type` znak na odpovídající `int_type` znak a vrátí výsledek.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> řetězců
+**Záhlaví:** \<string >
 
 **Obor názvů:** std
 
@@ -105,15 +105,15 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="parameters"></a>Parametry
 
-**_** *CharFrom* Znak, jehož hodnota má být přiřazena.
+**_** *CharFrom* znak, jehož hodnota má být přiřazena.
 
-*_CharTo*\
+*_CharTo* \
 Prvek, kterému má být přiřazena hodnota znaku.
 
-*strTo*\
+*strTo* \
 Řetězec nebo znaková pole, jejichž počáteční prvky mají být přiřazeny hodnoty znaků.
 
-*_Num*\
+*_Num* \
 Počet prvků, které budou přiřazeny hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -171,11 +171,11 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr `CharType`šablony.
+Typ je synonymum pro parametr šablony `CharType`.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [kopírování](#copy) , který ukazuje, jak deklarovat a použít `char_type`.
+Podívejte se na příklad pro [kopírování](#copy) pro příklad, jak deklarovat a použít `char_type`.
 
 ## <a name="compare"></a>char_traits:: Compare
 
@@ -189,13 +189,13 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Parametry
 
-*str1*\
+*str1* \
 První ze dvou řetězců, které mají být porovnány.
 
-*str2*\
+*str2* \
 Druhý ze dvou řetězců, které mají být porovnány.
 
-*_Num*\
+*_Num* \
 Počet prvků v řetězci, které mají být porovnány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -255,13 +255,13 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_To*\
+*_To* \
 Element na začátku řetězce nebo pole znaků, které cílí na příjem zkopírované sekvence znaků.
 
-*_From*\
+*_From* \
 Prvek na začátku zdrojového řetězce nebo pole znaků, který má být zkopírován.
 
-*_Num*\
+*_Num* \
 Počet prvků, které mají být zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -317,16 +317,16 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*propojovací*\
+*cílový* \
 Řetězec nebo pole znaků, které cílí na příjem zkopírované sekvence znaků.
 
-*dest_size*\
-Velikost *cíle.* Pokud `char_type` je **char**, pak je tato velikost v bajtech. Pokud `char_type` je **wchar_t**, pak je tato velikost uvedená v slovech.
+*dest_size* \
+Velikost *cíle.* Pokud `char_type` je **char**, pak je tato velikost v bajtech. Pokud `char_type` je **wchar_t**, je tato velikost uvedená v slovech.
 
-*_From*\
+*_From* \
 Zdrojový řetězec nebo pole znaků, které mají být zkopírovány.
 
-*výpočtu*\
+*počet* \
 Počet prvků, které mají být zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -421,7 +421,7 @@ The eof marker for char_traits<wchar_t> is: 65535
 
 ## <a name="eq"></a>char_traits:: EQ
 
-Testuje, zda `char_type` jsou dva znaky stejné.
+Testuje, zda jsou dva `char_type` znaky stejné.
 
 ```cpp
 static bool eq(const char_type& _Ch1, const char_type& _Ch2);
@@ -429,10 +429,10 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1*\
+*_Ch1* \
 První ze dvou znaků, které mají být testovány pro rovnost.
 
-*_Ch2*\
+*_Ch2* \
 Druhý ze dvou znaků, které mají být testovány pro rovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -481,7 +481,7 @@ The character ch1 is equal to the character ch3.
 
 ## <a name="eq_int_type"></a>char_traits::eq_int_type
 
-Testuje, zda jsou dva znaky `int_type`reprezentované jako s rovny nebo ne.
+Testuje, zda jsou dva znaky reprezentované jako `int_type`s stejné nebo ne.
 
 ```cpp
 static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
@@ -489,11 +489,11 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1*\
-První ze dvou znaků, které mají být testovány pro rovnost `int_type`jako s.
+*_Ch1* \
+První ze dvou znaků, které mají být testovány pro rovnost jako `int_type`s.
 
-*_Ch2*\
-Druhý ze dvou znaků, které mají být testovány pro rovnost `int_type`jako s.
+*_Ch2* \
+Druhý ze dvou znaků, které mají být testovány pro rovnost jako `int_type`s.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -576,13 +576,13 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
+\ *str*
 První znak v řetězci, který má být prohledán.
 
-*_Num*\
+*_Num* \
 Počet pozic, počítáno od prvního, v rozsahu, který chcete prohledat.
 
-*_Ch*\
+*_Ch* \
 Znak, který má být prohledán v rozsahu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -641,11 +641,11 @@ typedef long int_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Musí být možné napsat přetypování na hodnotu typu `CharType` na `int_type` zpět, `CharType` aniž by se změnila původní hodnota.
+Musí být možné napsat přetypování na hodnotu typu `CharType`, aby `int_type` pak zpět na `CharType` bez změny původní hodnoty.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat [](#eq_int_type) a používat `int_type`, naleznete v příkladu pro eq_int_type.
+Příklad, jak deklarovat a používat `int_type`, naleznete v příkladu pro [eq_int_type](#eq_int_type) .
 
 ## <a name="length"></a>char_traits:: Length
 
@@ -657,7 +657,7 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
+\ *str*
 Řetězec jazyka C, jehož délku má být měřena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -700,10 +700,10 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1*\
+*_Ch1* \
 První ze dvou znaků, které mají být testovány na méně než.
 
-*_Ch2*\
+*_Ch2* \
 Druhý ze dvou znaků, které mají být testovány na méně než.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -763,13 +763,13 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_To*\
+*_To* \
 Element na začátku řetězce nebo pole znaků, které cílí na příjem zkopírované sekvence znaků.
 
-*_From*\
+*_From* \
 Prvek na začátku zdrojového řetězce nebo pole znaků, který má být zkopírován.
 
-*_Num*\
+*_Num* \
 Počet prvků, které mají být zkopírovány ze zdrojového řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -840,16 +840,16 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Parametry
 
-*propojovací*\
+*cílový* \
 Element na začátku řetězce nebo pole znaků, které cílí na příjem zkopírované sekvence znaků.
 
-*dest_size*\
-Velikost *cíle.* Pokud `char_type` je **char**, pak je v bajtech. Pokud `char_type` je **wchar_t**, pak se jedná o slova.
+*dest_size* \
+Velikost *cíle.* Pokud je `char_type` **char**, pak je v bajtech. Pokud `char_type` je **wchar_t**, pak se jedná o slova.
 
-*_From*\
+*_From* \
 Prvek na začátku zdrojového řetězce nebo pole znaků, který má být zkopírován.
 
-*výpočtu*\
+*počet* \
 Počet prvků, které mají být zkopírovány ze zdrojového řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -916,14 +916,14 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*\
-Znak reprezentovaný jako `int_type` testovaný pro, zda se jedná o znak EOF nebo ne.
+*_Ch* \
+Znak reprezentovaný jako `int_type`, který se má testovat, pokud se jedná o znak EOF nebo ne.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Reprezentace testovaného znaku, `int_type` Pokud znak není roven znaku EOF. `int_type`
+@No__t_0 reprezentace testovaného znaku, pokud `int_type` znaku není rovno znaku EOF.
 
-Pokud je hodnota `int_type` znaku rovna hodnotě EOF `int_type` , pak hodnota **false**.
+Pokud znak `int_type` hodnota se rovná hodnotě EOF `int_type`, pak hodnota **false**.
 
 ### <a name="example"></a>Příklad
 
@@ -1016,7 +1016,7 @@ Typ popisuje objekt, který může představovat stav konverze. Je to obvykle sy
 
 ## <a name="to_char_type"></a>char_traits::to_char_type
 
-Převede znak na odpovídající `char_type` znak a vrátí výsledek. `int_type`
+Převede `int_type` znak na odpovídající `char_type` znak a vrátí výsledek.
 
 ```cpp
 static char_type to_char_type(const int_type& _Ch);
@@ -1024,12 +1024,12 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*\
-Znak, který má být reprezentován `char_type`jako. `int_type`
+*_Ch* \
+@No__t_0 znak, který se má znázornit jako `char_type`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Znak, který odpovídá `int_type` znaku. `char_type`
+Znak `char_type` odpovídající znaku `int_type`
 
 Hodnota *_Ch* , kterou nelze reprezentovat jako výsledek nespecifikovaného výsledku.
 
@@ -1037,13 +1037,13 @@ Hodnota *_Ch* , kterou nelze reprezentovat jako výsledek nespecifikovaného vý
 
 Operace převodu [to_int_type](#to_int_type) a `to_char_type` jsou vzájemně inverzní, takže:
 
-`to_int_type` ( `to_char_type` ( *x* ) ) == *x*
+`to_int_type` (`to_char_type` ( *x* )) = = *x*
 
-pro libovolný `int_type` *x* a
+pro všechny `int_type` *x* a
 
-`to_char_type` ( `to_int_type` ( *x* ) ) == *x*
+`to_char_type` (`to_int_type` ( *x* )) = = *x*
 
-pro libovolný `char_type` znak *x*.
+pro libovolný `char_type` *x*.
 
 ### <a name="example"></a>Příklad
 
@@ -1122,7 +1122,7 @@ The recovered char_type of ch2 is equal to the original ch2.
 
 ## <a name="to_int_type"></a>char_traits::to_int_type
 
-Převede znak na odpovídající `int_type` znak a vrátí výsledek. `char_type`
+Převede `char_type` znak na odpovídající `int_type` znak a vrátí výsledek.
 
 ```cpp
 static int_type to_int_type(const char_type& _Ch);
@@ -1130,24 +1130,24 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*\
-Znak, který má být reprezentován `int_type`jako. `char_type`
+*_Ch* \
+@No__t_0 znak, který má být reprezentován jako `int_type`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Znak, který odpovídá `char_type` znaku. `int_type`
+Znak `int_type` odpovídající znaku `char_type`
 
 ### <a name="remarks"></a>Poznámky
 
-Operace `to_int_type` převodu a [to_char_type](#to_char_type) jsou vzájemně inverzní, takže:
+Operace převodu `to_int_type` a [to_char_type](#to_char_type) jsou vzájemně inverzní, takže:
 
-`to_int_type` ( `to_char_type` ( *x* ) ) == *x*
+`to_int_type` (`to_char_type` ( *x* )) = = *x*
 
-pro libovolný `int_type` *x*a
+pro všechny `int_type` *x*a
 
-`to_char_type` ( `to_int_type` ( *x* ) ) == *x*
+`to_char_type` (`to_int_type` ( *x* )) = = *x*
 
-pro libovolný `char_type` znak *x*.
+pro libovolný `char_type` *x*.
 
 ### <a name="example"></a>Příklad
 

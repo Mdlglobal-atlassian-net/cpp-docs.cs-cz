@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454186"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689212"
 ---
 # <a name="numpunct-class"></a>numpunct – třída
 
-Třída šablony popisující objekt, který může sloužit jako místní omezující vlastnost k popisu sekvencí typu `CharType` používaného k reprezentaci informací o formátování a interpunkci číselných a logických výrazů.
+Šablona třídy, která popisuje objekt, který může sloužit jako místní omezující vlastnost pro popis sekvencí typu `CharType` slouží k reprezentaci informací o formátování a interpunkci číselných a logických výrazů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+*CharType* \
 Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
 ## <a name="remarks"></a>Poznámky
@@ -87,7 +87,7 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 
@@ -160,7 +160,7 @@ Prvek specifický pro národní prostředí, který se použije jako desetinná 
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [decimal_point](#decimal_point), kde je virtuální členská funkce volána `decimal_point`nástrojem.
+Podívejte se na příklad pro [decimal_point](#decimal_point), kde je virtuální členská funkce volána pomocí `decimal_point`.
 
 ## <a name="do_falsename"></a>numpunct::d o_falsename
 
@@ -180,7 +180,7 @@ virtual string_type do_falsename() const;
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [hodnotu false](#falsename), kde je virtuální členská funkce volána `falsename`nástrojem.
+Podívejte se na příklad pro [false](#falsename), kde je virtuální členská funkce volána pomocí `falsename`.
 
 ## <a name="do_grouping"></a>numpunct::d o_grouping
 
@@ -200,7 +200,7 @@ Chráněná virtuální členská funkce, která vrátí pravidlo specifické pr
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad [seskupení](#grouping), kde je virtuální členská funkce volána nástrojem `grouping`.
+Podívejte se na příklad [seskupení](#grouping), kde je virtuální členská funkce volána pomocí `grouping`.
 
 ## <a name="do_thousands_sep"></a>numpunct::d o_thousands_sep
 
@@ -216,11 +216,11 @@ Vrátí prvek specifický pro národní prostředí, který se použije jako odd
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce vrátí prvek specifický pro národní prostředí typu `CharType` , který se použije jako oddělovač skupin nalevo od libovolné desetinné čárky.
+Chráněná virtuální členská funkce vrátí prvek specifický pro národní prostředí typu `CharType`, který se použije jako oddělovač skupin nalevo od libovolné desetinné čárky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [thousands_sep](#thousands_sep), kde je virtuální členská funkce volána `thousands_sep`nástrojem.
+Podívejte se na příklad pro [thousands_sep](#thousands_sep), kde je virtuální členská funkce volána pomocí `thousands_sep`.
 
 ## <a name="do_truename"></a>numpunct::d o_truename
 
@@ -238,7 +238,7 @@ Všechna národní prostředí vrátí řetězec "true", který bude představov
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [hodnotu true](#truename), kde je virtuální členská funkce volána `truename`nástrojem.
+Podívejte se na příklad pro [hodnotu true](#truename), kde je virtuální členská funkce volána pomocí `truename`.
 
 ## <a name="falsename"></a>numpunct:: false
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec obsahující sekvenci `CharType`s pro použití jako text reprezentace hodnoty **false**.
+Řetězec obsahující sekvenci `CharType`s, která se má použít jako textová reprezentace hodnoty **false**
 
 ### <a name="remarks"></a>Poznámky
 
@@ -345,18 +345,18 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*\
+*_Refs* \
 Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
 ### <a name="remarks"></a>Poznámky
 
 Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
 
-- 0: Životnost objektu je spravována národními prostředími, která jej obsahují.
+- 0: životnost objektu je spravována místními objekty, které jej obsahují.
 
-- 1: Životnost objektu musí být ručně spravovaná.
+- 1: životnost objektu musí být ručně spravovaná.
 
-- \> 1: Tyto hodnoty nejsou definovány.
+- \> 1: tyto hodnoty nejsou definovány.
 
 Nejsou možné žádné přímé příklady, protože je destruktor chráněný.
 
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy šablony [basic_string](../standard-library/basic-string-class.md) , jejíž objekty mohou ukládat kopie sekvencí interpunkce.
+Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) , jejíž objekty mohou ukládat kopie sekvencí interpunkce.
 
 ## <a name="thousands_sep"></a>numpunct:: thousands_sep
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Viz také:
 
-[\<> národního prostředí](../standard-library/locale.md)\
-[Face – třída](../standard-library/locale-class.md#facet_class)\
+[\<locale >](../standard-library/locale.md) \
+\ [třídy omezující vlastnosti](../standard-library/locale-class.md#facet_class)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

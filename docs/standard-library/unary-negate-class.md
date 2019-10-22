@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240549"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684436"
 ---
-# <a name="unarynegate-class"></a>unary_negate – třída
+# <a name="unary_negate-class"></a>unary_negate – třída
 
-Třída šablony poskytující členské funkce, které negují návratovou hodnotu zadané jednočlenné funkce. Zastaralé v C ++ 17 nahrazený [not_fn](functional-functions.md#not_fn).
+Šablona třídy poskytující členskou funkci, která negace návratové hodnoty zadané unární funkce. Zastaralé v C++ 17 namísto [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,21 +31,21 @@ class unary_negate
 
 ### <a name="parameters"></a>Parametry
 
-*Func*\
-Jednočlenné funkce bude negovat.
+@No__t_1 *Func*
+Unární funkce, která má být negace.
 
-*doleva*\
-Operand unárního funkce bude negovat.
+*levý* \
+Operand unární funkce, která má být negace.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Negace jednočlenné funkce.
+Negace unární funkce
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá jejich kopii objekt jednočlenné funkce  *\_Func*. Definuje jeho členskou funkci `operator()` jako vracející `!_Func(left)`.
+Šablona třídy uchovává kopii unárního objektu funkce *\_Func*. Definuje jeho členskou funkci `operator()` jako vrácení `!_Func(left)`.
 
-Konstruktor třídy `unary_negate` je zřídka se používá přímo. Pomocná funkce [not1 –](../standard-library/functional-functions.md#not1) poskytuje snadný způsob, jak deklarovat a použít **unary_negator** adaptér predikátu.
+Konstruktor `unary_negate` se zřídka používá přímo. Pomocná funkce [not1 –](../standard-library/functional-functions.md#not1) poskytuje snazší způsob, jak deklarovat a použít predikát **unary_negator** .
 
 ## <a name="example"></a>Příklad
 

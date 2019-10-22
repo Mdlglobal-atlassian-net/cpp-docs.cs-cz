@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-ms.openlocfilehash: cf33c5f627a88698c84947f9b803edaebccf5566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 358348a57b823fcea82cd296967c83778819361d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450405"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688964"
 ---
-# <a name="slicearray-class"></a>slice_array – třída
+# <a name="slice_array-class"></a>slice_array – třída
 
-Interní pomocná třída šablony, která podporuje objekty řezu tím, že poskytuje operace mezi podmnožinou polí definovaných v řezu valarray.
+Interní pomocná šablona třídy, která podporuje objekty řezů poskytnutím operací mezi poli podmnožiny, které jsou definovány v řezu valarray.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +42,13 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje objekt, který ukládá odkaz na objekt třídy [valarray](../standard-library/valarray-class.md) **\<typu >** společně s objektem [řezu](../standard-library/slice-class.md)třídy, který popisuje sekvenci prvků, které se mají vybrat z valarray. **\<Zadejte >** Object.
+Třída popisuje objekt, který ukládá odkaz na objekt třídy [valarray](../standard-library/valarray-class.md)  **\<Type >** spolu s objektem [řezu](../standard-library/slice-class.md)třídy, který popisuje sekvenci prvků, které se mají vybrat z **valarray \<Type >** objekt.
 
-Třída šablony je vytvořena nepřímo některými valarray operacemi a nelze ji použít přímo v programu. Interní pomocná třída šablony, která je používána operátorem dolního indexu řezu:
+Šablona třídy je vytvořena nepřímo některými valarray operacemi a nelze ji použít přímo v programu. Interní šablona pomocné třídy, kterou používá operátor dolního indexu řezu:
 
-`slice_array`\<**Typ** >  **Typ:** : (`operator[]` ). `valarray` <  `slice`
+**typ** `slice_array` \< >  `valarray` < **typ**:: `operator[]` (`slice`).
 
-Objekt vytvoříte pouze tak, že zapíšete výraz ve formátu [VA&#91;SL&#93;](../standard-library/valarray-class.md#op_at)pro `sl` řez valarray `va`. `slice_array<Type>` Členské funkce třídy slice_array se pak chovají jako odpovídající signatury funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů. Sekvence řízená slice_array je definována třemi parametry konstruktoru řezu, indexem prvního prvku v řezu, počtem prvků a vzdáleností mezi prvky. Slice_array vyjmutí z valarray `va` deklarovaného pomocí VA `slice`[(2, 5, 3)] vybere prvky s indexy 2, 5, 8, 11 a 14 z. `va` Indexy musí být platné, aby byl postup platný.
+Objekt `slice_array<Type>` vytvoříte pouze tak, že zapíšete výraz ve formátu [VA&#91;SL&#93;](../standard-library/valarray-class.md#op_at)pro průřez `sl` valarray `va`. Členské funkce třídy slice_array se pak chovají stejně jako odpovídající signatura funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů. Sekvence řízená slice_array je definována třemi parametry konstruktoru řezu, indexem prvního prvku v řezu, počtem prvků a vzdáleností mezi prvky. Slice_array vyjmuté z valarray `va` deklarované pomocí **VA**[`slice` (2, 5, 3)] vybere elementy s indexy 2, 5, 8, 11 a 14 z `va`. Indexy musí být platné, aby byl postup platný.
 
 ## <a name="example"></a>Příklad
 
@@ -56,7 +56,7 @@ Příklad, jak deklarovat a používat slice_array, naleznete v příkladu pro [
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<valarray >
+**Záhlaví:** \<valarray >
 
 **Obor názvů:** std
 

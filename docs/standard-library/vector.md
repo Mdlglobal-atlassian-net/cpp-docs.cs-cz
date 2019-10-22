@@ -1,28 +1,28 @@
 ---
-title: '&lt;vektorový&gt;'
+title: '&lt;vector &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <vector>
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 59424a9f6a9434b5d7d3f4298cbb0bc03926621c
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 19068de41cfdcb17ae624858c137bf624851479f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957054"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684071"
 ---
-# <a name="ltvectorgt"></a>&lt;vektorový&gt;
+# <a name="ltvectorgt"></a>&lt;vector &gt;
 
-Definuje vektor třídy šablony kontejneru a několik pomocných šablon.
+Definuje vektor šablony třídy kontejneru a několik podpůrných šablon.
 
-`vector` Je kontejner, který organizuje prvky daného typu v lineární sekvenci. Umožňuje rychlý náhodný přístup k jakémukoli prvku a dynamické přidávání a odebírání do a z sekvence. `vector` Je upřednostňovaný kontejner pro sekvenci, pokud je výkon náhodného přístupu na úrovni Premium.
+@No__t_0 je kontejner, který organizuje prvky daného typu v lineární sekvenci. Umožňuje rychlý náhodný přístup k jakémukoli prvku a dynamické přidávání a odebírání do a z sekvence. @No__t_0 je preferovaným kontejnerem pro sekvenci, když je výkon náhodného přístupu na úrovni Premium.
 
 > [!NOTE]
-> Vektorová knihovna > také `#include <initializer_list>` používá příkaz. \<
+> Knihovna \<vector > používá také příkaz `#include <initializer_list>`.
 
-Další informace o třídě `vector`naleznete v tématu [Vector Class](../standard-library/vector-class.md). Informace o specializaci `vector<bool>`naleznete v tématu [Vector\<bool > Class](../standard-library/vector-bool-class.md).
+Další informace o třídě `vector` naleznete v tématu [Vector Class](../standard-library/vector-class.md). Informace o `vector<bool>` specializace naleznete v tématu [vector \<bool > Class](../standard-library/vector-bool-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,16 +77,16 @@ void swap (
 
 ### <a name="parameters"></a>Parametry
 
-*Textový*\
+*Zadejte* \
 Parametr šablony pro typ dat uložených ve vektoru.
 
-*Dělující*\
+@No__t_1 *přidělování*
 Parametr šablony pro uložený objekt přidělování zodpovědný za přidělení a zrušení přidělení paměti.
 
-*zbývá*\
+*levý* \
 První (levý) vektor v operaci porovnání
 
-*Kliknutím*\
+*pravé* \
 Druhý (pravý) vektor v operaci porovnání.
 
 ## <a name="members"></a>Členové
@@ -97,8 +97,8 @@ Druhý (pravý) vektor v operaci porovnání.
 |-|-|
 |[podnikatel! =](../standard-library/vector-operators.md#op_neq)|Testuje, zda vektorový objekt na levé straně operátoru není roven objektu Vector na pravé straně.|
 |[operátor <](../standard-library/vector-operators.md#op_lt)|Testuje, zda je objekt Vector na levé straně operátoru menší než objekt Vector na pravé straně.|
-|[podnikatel\<=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, zda je vektorový objekt na levé straně operátoru menší než nebo roven objektu Vector na pravé straně.|
-|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Testuje, zda je objekt Vector na levé straně operátoru roven objektu Vector na pravé straně.|
+|[operátor \< =](../standard-library/vector-operators.md#op_gt_eq)|Testuje, zda je vektorový objekt na levé straně operátoru menší než nebo roven objektu Vector na pravé straně.|
+|[operator = = – operátor](../standard-library/vector-operators.md#op_eq_eq)|Testuje, zda je objekt Vector na levé straně operátoru roven objektu Vector na pravé straně.|
 |[operátor >](../standard-library/vector-operators.md#op_gt)|Testuje, zda je objekt Vector na levé straně operátoru větší než objekt Vector na pravé straně.|
 |[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, zda je objekt Vector na levé straně operátoru větší než nebo roven objektu Vector na pravé straně.|
 
@@ -113,16 +113,16 @@ Druhý (pravý) vektor v operaci porovnání.
 |||
 |-|-|
 |hash|Vrátí hodnotu hash vektoru.|
-|[Vector\<– logická > – třída](../standard-library/vector-bool-class.md)|Plná specializace vektoru třídy šablony pro prvky typu `bool` s přidělováním pro podkladový typ používaný specializací.|
+|[Třída Vector \<bool >](../standard-library/vector-bool-class.md)|Plná specializace vektoru šablony třídy pro prvky typu `bool` s přidělováním pro podkladový typ používaný specializací.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> vektoru
+**Záhlaví:** \<vector >
 
 **Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: fcc643d7569bd4f71b11249babdb49ef1362dc8b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 890ebb7d4c2b8fbd51a4460e21efba3e763ead7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240495"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687190"
 ---
-# <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function – třída
+# <a name="pointer_to_binary_function-class"></a>pointer_to_binary_function – třída
 
-Převede ukazatel na binární funkci na přizpůsobitelnou binární funkci. Zastaralé v C ++ 11, v C ++ 17 odebrané.
+Převede ukazatel na binární funkci na přizpůsobitelnou binární funkci. Zastaralé v C++ 11, odebrané v C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,23 +33,23 @@ class pointer_to_binary_function
 
 ### <a name="parameters"></a>Parametry
 
-*pfunc*\
-Binární funkce pro převod.
+*pfunc* \
+Binární funkce, která má být převedena.
 
-*doleva*\
-Levé straně objekt, který  *\*pfunc* je volán na.
+*levý* \
+Levý objekt, na kterém je volána *\*pfunc* .
 
-*doprava*\
-Vpravo objekt, který  *\*pfunc* je volán na.
+*pravé* \
+Pravý objekt, na kterém je volána *\*pfunc* .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Třída šablony ukládá kopie `pfunc`. Definuje jeho členskou funkci `operator()` jako vracející `(* pfunc)(Left, right)`.
+Šablona třídy uchovává kopii `pfunc`. Definuje jeho členskou funkci `operator()` jako vrácení `(* pfunc)(Left, right)`.
 
 ## <a name="remarks"></a>Poznámky
 
-Ukazatel na binární funkci je objekt funkce a může být předán s libovolným algoritmem standardní knihovny C++, který očekává binární funkci jako parametr, ale není přizpůsobitelné. Pro použití s adaptér, jako jsou k němu po navázání hodnoty nebo pomocí negator, je nutné zadat s vnořené typy `first_argument_type`, `second_argument_type`, a `result_type` , které umožňují tyto úpravy. Převod pomocí `pointer_to_binary_function` umožňuje adaptérů funkce pro práci s ukazateli binární funkce.
+Ukazatel binární funkce je objekt funkce a může být předán jakémukoli C++ standardnímu algoritmu knihovny, který jako parametr očekává binární funkci, ale nelze ji upravit. Chcete-li ji použít s adaptérem, jako je například vazba hodnoty na ni nebo pomocí operátoru negace, musí být zadána s vnořenými typy `first_argument_type`, `second_argument_type` a `result_type`, které tuto úpravu umožňují. Převod pomocí `pointer_to_binary_function` umožňuje adaptivním funkcím pracovat s ukazateli binárních funkcí.
 
 ## <a name="example"></a>Příklad
 
-Konstruktor třídy `pointer_to_binary_function` je zřídka se používá přímo. Viz pomocná funkce [ptr_fun –](../standard-library/functional-functions.md#ptr_fun) příklad toho, jak deklarovat a použít `pointer_to_binary_function` adaptér predikátu.
+Konstruktor `pointer_to_binary_function` se zřídka používá přímo. Podívejte se na pomocnou funkci [ptr_fun](../standard-library/functional-functions.md#ptr_fun) , která ukazuje, jak deklarovat a použít predikát `pointer_to_binary_function` adaptér.

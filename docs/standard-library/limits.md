@@ -1,5 +1,5 @@
 ---
-title: '&lt;lhůty&gt;'
+title: '&lt;limits &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - limits/std::<limits>
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: de8f815cd59b84a1e63c231e18e4882d0b5d6f09
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3ad740975cfff4f65f9e1c800a709cfaca3367db
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447575"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687811"
 ---
-# <a name="ltlimitsgt"></a>&lt;lhůty&gt;
+# <a name="ltlimitsgt"></a>&lt;limits &gt;
 
-Definuje třídu `numeric_limits` šablony a dva výčty týkající se reprezentace a zaokrouhlení plovoucí desetinné čárky.
+Definuje šablonu třídy `numeric_limits` a dva výčty týkající se reprezentace a zaokrouhlení s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<omezení >
+**Záhlaví:** \<limits >
 
 **Obor názvů:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Explicitní specializace `numeric_limits` třídy popisují mnoho vlastností základních typů, včetně znaků, čísel a typů s plovoucí desetinnou čárkou a **logické** hodnoty C++jazyk. Vlastnosti popsané v \<omezeních > zahrnují přesnost, minimální a maximální velikost reprezentace, zaokrouhlení a chyby typu signalizace.
+Explicitní specializace `numeric_limits` třídy popisují mnoho vlastností základních typů, včetně znaků, čísel a typů s plovoucí desetinnou čárkou a **bool** , která jsou definovaná implementací, místo aby byla opravena pravidly C++ Language. Vlastnosti popsané v \<limits > zahrnují přesnost, minimální a maximální velikost reprezentace, zaokrouhlování a chyby typu signalizace.
 
 ## <a name="members"></a>Členové
 
@@ -41,9 +41,9 @@ Explicitní specializace `numeric_limits` třídy popisují mnoho vlastností z�
 
 |||
 |-|-|
-|[numeric_limits – třída](../standard-library/numeric-limits-class.md)|Třída Template popisuje aritmetické vlastnosti předdefinovaných číselných typů.|
+|[numeric_limits – třída](../standard-library/numeric-limits-class.md)|Šablona třídy popisuje aritmetické vlastnosti předdefinovaných číselných typů.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

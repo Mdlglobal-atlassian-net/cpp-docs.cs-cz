@@ -1,5 +1,5 @@
 ---
-title: valarray&lt;–&gt; třída bool
+title: valarray &lt;bool &gt; – třída
 ms.date: 11/04/2016
 f1_keywords:
 - valarray<bool>
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
-ms.openlocfilehash: b597bbe5327eb95c8c2be1016a2a036ed7ef2baa
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c0fc15920018104147b6fd7ea39ab04bbc8862ad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452284"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688757"
 ---
-# <a name="valarrayltboolgt-class"></a>valarray&lt;–&gt; třída bool
+# <a name="valarrayltboolgt-class"></a>valarray &lt;bool &gt; – třída
 
-Specializovaná verze třídy template **valarray\<typu >** k prvkům typu **bool**.
+Specializovaná verze šablony třídy **valarray \<Type >** k prvkům typu **bool**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,11 +73,11 @@ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<valarray >
+**Záhlaví:** \<valarray >
 
 **Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[valarray – třída](../standard-library/valarray-class.md)\
+\ [třídy valarray](../standard-library/valarray-class.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

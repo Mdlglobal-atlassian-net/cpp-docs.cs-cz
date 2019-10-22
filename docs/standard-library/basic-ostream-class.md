@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: 8715ae4816be9c8f1453b243d1c8d3574d8c97cf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9025d595e79eed9f81aff77b931a2585359a8c3a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457872"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689979"
 ---
-# <a name="basicostream-class"></a>basic_ostream – třída
+# <a name="basic_ostream-class"></a>basic_ostream – třída
 
-Tato třída šablony popisuje objekt, který řídí vložení prvků a zakódovaných objektů do vyrovnávací paměti datového proudu pomocí prvků `Elem`typu, označovaného také jako [char_type](../standard-library/basic-ios-class.md#char_type), jejichž znakové vlastnosti jsou určeny třídou `Tr`, také označuje se jako [traits_type](../standard-library/basic-ios-class.md#traits_type).
+Tato šablona třídy popisuje objekt, který řídí vložení prvků a zakódovaných objektů do vyrovnávací paměti datového proudu pomocí prvků typu `Elem`, označovaného také jako [char_type](../standard-library/basic-ios-class.md#char_type), jejichž znakové vlastnosti jsou určeny třídou `Tr`, označovanou také jako [ traits_type](../standard-library/basic-ios-class.md#traits_type).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,10 +40,10 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*\
-A `char_type`.
+*Elem* \
+@No__t_0.
 
-*Recenzent*\
+*Tr* \
 Znak `traits_type`.
 
 ## <a name="remarks"></a>Poznámky
@@ -102,7 +102,7 @@ return (*this);
 
 Obě skupiny funkcí volají [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**), pokud při vkládání prvků narazí na selhání.
 
-Objekt třídy basic_istream\< **elem**, **TR**> ukládá pouze virtuální veřejný objekt Base třídy [basic_ios](../standard-library/basic-ios-class.md) **\<elem**, **TR >** .
+Objekt třídy basic_istream \< **elem**, **TR**> ukládá pouze virtuální veřejný objekt Base třídy [basic_ios](../standard-library/basic-ios-class.md)  **\<Elem**, **TR >** .
 
 ## <a name="example"></a>Příklad
 
@@ -112,7 +112,7 @@ Další informace o výstupních streamech najdete v příkladu pro [třídu bas
 
 |Konstruktor|Popis|
 |-|-|
-|[basic_ostream](#basic_ostream)|`basic_ostream` Vytvoří objekt.|
+|[basic_ostream](#basic_ostream)|Vytvoří objekt `basic_ostream`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -122,7 +122,7 @@ Další informace o výstupních streamech najdete v příkladu pro [třídu bas
 |[převést](#put)|Vloží znak do datového proudu.|
 |[seekp](#seekp)|Obnoví pozici ve výstupním datovém proudu.|
 |[Ukázka](#sentry)|Vnořená Třída popisuje objekt, jehož deklarace strukturuje formátované výstupní funkce a neformátované výstupní funkce.|
-|[swap](#swap)|Vyměňuje hodnoty tohoto `basic_ostream` objektu pro objekty, které jsou k `basic_ostream` dispozici.|
+|[adresu](#swap)|Vyměňuje hodnoty tohoto objektu `basic_ostream` pro objekty poskytnutého `basic_ostream`.|
 |[tellp](#tellp)|Pozice sestav ve výstupním datovém proudu.|
 |[write](#write)|Vloží znaky do datového proudu.|
 
@@ -135,13 +135,13 @@ Další informace o výstupních streamech najdete v příkladu pro [třídu bas
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<ostream >
+**Záhlaví:** \<ostream >
 
 **Obor názvů:** std
 
 ## <a name="basic_ostream"></a>basic_ostream::basic_ostream
 
-`basic_ostream` Vytvoří objekt.
+Vytvoří objekt `basic_ostream`.
 
 ```cpp
 explicit basic_ostream(
@@ -153,18 +153,18 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf*\
+*strbuf* \
 Objekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd*\
+*_Isstd* \
 **true** , pokud se jedná o standardní datový proud; v opačném případě **false**.
 
-*Kliknutím*\
+*pravé* \
 Odkaz rvalue na objekt typu `basic_ostream`.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje základní třídu voláním metody [init](../standard-library/basic-ios-class.md#init)(`strbuf`). Druhý konstruktor inicializuje základní třídu voláním [basic_ios:: Move](../standard-library/basic-ios-class.md#move)`(right)`.
+První konstruktor inicializuje základní třídu voláním metody [init](../standard-library/basic-ios-class.md#init)(`strbuf`). Druhý konstruktor inicializuje základní třídu voláním [basic_ios:: move](../standard-library/basic-ios-class.md#move) `(right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -184,7 +184,7 @@ Odkaz na objekt basic_ostream.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud [rdbuf](../standard-library/basic-ios-class.md#rdbuf) není ukazatel s hodnotou null, funkce volá **rdbuf->** [pubsync](../standard-library/basic-streambuf-class.md#pubsync). Pokud vrátí hodnotu-1, funkce volá [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**). Vrátí  **\*tuto**hodnotu.
+Pokud [rdbuf](../standard-library/basic-ios-class.md#rdbuf) není ukazatel s hodnotou null, funkce volá **rdbuf->** [pubsync](../standard-library/basic-streambuf-class.md#pubsync). Pokud vrátí hodnotu-1, funkce volá [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**). Vrátí **\*this**.
 
 ### <a name="example"></a>Příklad
 
@@ -205,7 +205,7 @@ int main( )
 test
 ```
 
-## <a name="basic_ostream_operator_lt_lt"></a>basic_ostream:: operator&lt;&lt;
+## <a name="basic_ostream_operator_lt_lt"></a>basic_ostream:: operator &lt; &lt;
 
 Zapisuje do datového proudu.
 
@@ -237,13 +237,13 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parametry
 
-*PFN*\
+*Pfn* \
 Ukazatel na funkci.
 
-*strbuf*\
-Ukazatel na `stream_buf` objekt.
+*strbuf* \
+Ukazatel na objekt `stream_buf`.
 
-*počítává*\
+\ *Val*
 Element, který se má zapsat do datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -252,9 +252,9 @@ Odkaz na objekt basic_ostream.
 
 ### <a name="remarks"></a>Poznámky
 
-Hlavička \<> ostream definuje také několik globálních operátorů vkládání. Další informace najdete v tématu [operátor < <](../standard-library/ostream-operators.md#op_lt_lt).
+Hlavička \<ostream > také definuje několik globálních operátorů vložení. Další informace najdete v tématu [operátor < <](../standard-library/ostream-operators.md#op_lt_lt).
 
-První členská funkce `ostr << endl` zajišťuje, že výraz formuláře volá [endl](../standard-library/ostream-functions.md#endl) **(OSTR)** a pak ho vrátí.  **\*** Druhá a třetí funkce zajišťují, aby se podobným způsobem chovali další manipulace, například [hex](../standard-library/ios-functions.md#hex). Zbývající funkce jsou všechny formátované výstupní funkce.
+První členská funkce zajistí, že výraz formuláře `ostr << endl` volá [endl](../standard-library/ostream-functions.md#endl) **(OSTR)** a potom vrátí **\*this**. Druhá a třetí funkce zajišťují, aby se podobným způsobem chovali další manipulace, například [hex](../standard-library/ios-functions.md#hex). Zbývající funkce jsou všechny formátované výstupní funkce.
 
 Funkce
 
@@ -262,7 +262,7 @@ Funkce
 basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-extrahuje prvky z *strbuf*, pokud *strbuf* není ukazatel s hodnotou null a vloží je. Extrakce se zastaví na konci souboru, nebo pokud extrakce vyvolá výjimku (která se znovu vyvolala). Také se zastaví, aniž by došlo k extrakci daného elementu, pokud vložení neproběhne úspěšně. Pokud funkce nevloží žádné elementy nebo pokud extrakce vyvolá výjimku, funkce volá [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). V každém případě funkce  **\*to**vrací.
+extrahuje prvky z *strbuf*, pokud *strbuf* není ukazatel s hodnotou null a vloží je. Extrakce se zastaví na konci souboru, nebo pokud extrakce vyvolá výjimku (která se znovu vyvolala). Také se zastaví, aniž by došlo k extrakci daného elementu, pokud vložení neproběhne úspěšně. Pokud funkce nevloží žádné elementy nebo pokud extrakce vyvolá výjimku, funkce volá [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). V každém případě vrátí funkce **\*this**.
 
 Funkce
 
@@ -270,7 +270,7 @@ Funkce
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-Převede `_Val` na logické pole a vloží ho voláním [use_facet](../standard-library/basic-filebuf-class.md#open) **< num_put\<elem, OutIt >** [](../standard-library/ios-base-class.md#getloc)`(`getloc). [Vložit](#put) (**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)),  **\*this**, `getloc`, **Val**). Zde je definován jako [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<elem, TR >.** `OutIt` Funkce vrátí  **\*tuto**hodnotu.
+Převede `_Val` na logické pole a vloží ho voláním [use_facet](../standard-library/basic-filebuf-class.md#open) **< Num_put \<Elem, OutIt >** `(`[getloc](../standard-library/ios-base-class.md#getloc)). [Put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **Val**). Zde je `OutIt` definováno jako [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)  **\<Elem, TR >** . Funkce vrátí **\*this**.
 
 Funkce
 
@@ -286,7 +286,7 @@ basic_ostream<Elem, Tr>& operator<<(unsigned long long val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```
 
-Každý z nich převede *Val* na číselné pole a vloží ho voláním **use_facet <\<num_put elem, OutIt >** (`getloc`). **Vložit** (**OutIt**(`rdbuf`),  **\*this**, `getloc`, **Val**). Zde je **OutIt** definován jako **ostreambuf_iterator\<elem, TR >** . Funkce vrátí  **\*tuto**hodnotu.
+Každý z nich převede *Val* na číselné pole a vloží ho voláním **use_facet < Num_put \<Elem, OutIt >** (`getloc`). **Put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **Val**). Zde je **OutIt** definován jako **Ostreambuf_iterator \<Elem, TR >** . Funkce vrátí **\*this**.
 
 Funkce
 
@@ -296,7 +296,7 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```
 
-Každý převeďte hodnotu *Val* na číselné pole a vložte ji voláním **use_facet <\<num_put elem, OutIt >** (`getloc`) **. put**(**OutIt**(`rdbuf`),  **\*this**, `getloc`, **Val**). Zde je **OutIt** definován jako **ostreambuf_iterator\<elem, TR >** . Funkce vrátí  **\*tuto**hodnotu.
+Každý z nich převede *Val* na číselné pole a vloží ho voláním **use_facet < Num_put \<Elem, OutIt >** (`getloc` **). put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **Val**). Zde je **OutIt** definován jako **Ostreambuf_iterator \<Elem, TR >** . Funkce vrátí **\*this**.
 
 ### <a name="example"></a>Příklad
 
@@ -358,8 +358,8 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-`rvalue` Odkaz`basic_ostream` na objekt.
+*pravé* \
+@No__t_0 odkaz na objekt `basic_ostream`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -375,7 +375,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*\
+*_Ch* \
 Znak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -384,7 +384,7 @@ Odkaz na objekt basic_ostream.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce naformátovaná Output vloží element *_Ch*. Vrátí  **\*tuto**hodnotu.
+Funkce naformátovaná Output vloží element *_Ch*. Vrátí **\*this**.
 
 ### <a name="example"></a>Příklad
 
@@ -419,13 +419,13 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos*\
+*_Pos* \
 Pozice v datovém proudu.
 
-*_Off*\
+*_Off* \
 Posun vzhledem k *_Way*.
 
-*_Way*\
+*_Way* \
 Jeden z výčtů [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) .
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -434,7 +434,7 @@ Odkaz na objekt basic_ostream.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je selhání **false**, První členská funkce volá **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*) pro nějaký `pos_type` dočasný objekt. [](../standard-library/basic-ios-class.md#fail) `newpos` Pokud `fail` je hodnota false, druhá funkce volá **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_Off, _Way*). V obou případech, pokud (`off_type`)**newpos = =** (`off_type`) (-1) (operace umístění se nezdařila), funkce volá **ISTR.** [setstate](../standard-library/basic-ios-class.md#setstate) (**failbit**). Obě funkce  **\*to**vrací.
+Pokud [](../standard-library/basic-ios-class.md#fail) je selhání **false**, První členská funkce volá **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf)  **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*) pro některé `pos_type` dočasné `newpos` objektů. Pokud je `fail` false, druhá funkce volá **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_Off, _Way*). V obou případech, pokud (`off_type`)**newpos = =** (`off_type`) (-1) (operace umístění se nezdařila), funkce volá **ISTR.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Obě funkce vrací **\*this**.
 
 ### <a name="example"></a>Příklad
 
@@ -470,17 +470,17 @@ int main()
 
 Vnořená Třída popisuje objekt, jehož deklarace strukturuje formátované výstupní funkce a neformátované výstupní funkce.
 
-Třída Sentry {Public: Explicit Sentry (basic_ostream\<elem, TR > & _Ostr); operátor bool () const; ~ Sentry ();};
+Třída Sentry {Public: Explicit Sentry (basic_ostream \<Elem, TR > & _Ostr); operátor bool () const; ~ Sentry ();};
 
 ### <a name="remarks"></a>Poznámky
 
-Vnořená Třída popisuje objekt, jehož deklarace strukturuje formátované výstupní funkce a neformátované výstupní funkce. IF **OSTR.** [dobrá](../standard-library/basic-ios-class.md#good) **hodnota je true** a **OSTR.** [](../standard-library/basic-ios-class.md#tie) propojení není ukazatel s hodnotou null, konstruktor volá **OSTR. >** [vyprázdnění](#flush). Konstruktor pak uloží hodnotu vrácenou `ostr.good` v. `status` Pozdější volání, které `operator bool` poskytuje tuto uloženou hodnotu.
+Vnořená Třída popisuje objekt, jehož deklarace strukturuje formátované výstupní funkce a neformátované výstupní funkce. IF **OSTR.** [dobrá](../standard-library/basic-ios-class.md#good) **hodnota je true** a **OSTR.** propojení [není ukazatel](../standard-library/basic-ios-class.md#tie) s hodnotou null, konstruktor volá **OSTR. >** [vyprázdnění](#flush). Konstruktor pak uloží hodnotu vrácenou `ostr.good` v `status`. Pozdější volání `operator bool` doručuje tuto uloženou hodnotu.
 
 Pokud `uncaught_exception` vrátí **hodnotu false** a [příznaky](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) je nenulové, volá destruktor [vyprázdnění](#flush).
 
-## <a name="swap"></a>  basic_ostream::swap
+## <a name="swap"></a>basic_ostream:: swap
 
-Vyměňuje hodnoty tohoto `basic_ostream` objektu pro zadané hodnoty `basic_ostream`.
+Vyměňuje hodnoty tohoto `basic_ostream` objektu pro hodnoty poskytnuté `basic_ostream`.
 
 ```cpp
 void swap(basic_ostream& right);
@@ -488,12 +488,12 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-Odkaz na `basic_ostream` objekt.
+*pravé* \
+Odkaz na objekt `basic_ostream`.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce volá [basic_ios:: swap](../standard-library/basic-ios-class.md#swap) `(right)` pro výměnu obsahu tohoto objektu po napravení obsahu.
+Členská funkce volá [basic_ios:: swap](../standard-library/basic-ios-class.md#swap) `(right)` pro výměnu obsahu tohoto objektu pro obsah *vpravo*.
 
 ## <a name="tellp"></a>basic_ostream::tellp
 
@@ -509,11 +509,11 @@ Pozice ve výstupním datovém proudu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud [](../standard-library/basic-ios-class.md#fail) je selhání **false**, vrátí členská funkce [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **v**). V opačném případě `pos_type`vrátí (-1).
+Pokud [](../standard-library/basic-ios-class.md#fail) je selhání **false**, vrátí členská funkce [rdbuf](../standard-library/basic-ios-class.md#rdbuf)  **->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur` **v**). V opačném případě vrátí `pos_type` (-1).
 
 ### <a name="example"></a>Příklad
 
-Příklad [](#seekp) použití `tellp`naleznete v tématu seekp.
+Příklad použití `tellp` naleznete v tématu [seekp](#seekp) .
 
 ## <a name="write"></a>basic_ostream:: Write
 
@@ -525,10 +525,10 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>Parametry
 
-*výpočtu*\
+*počet* \
 Počet znaků, které mají být vloženy do datového proudu.
 
-*str*\
+\ *str*
 Znaky, které mají být vloženy do datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -537,14 +537,14 @@ Odkaz na objekt basic_ostream.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce naformátovaná [Output](../standard-library/basic-ostream-class.md) vloží sekvenci prvků *Count* začínající na *str*.
+[Funkce naformátovaná Output](../standard-library/basic-ostream-class.md) vloží sekvenci prvků *Count* začínající na *str*.
 
 ### <a name="example"></a>Příklad
 
-Příklad [](../standard-library/ios-typedefs.md#streamsize) použití `write`naleznete v tématu StreamSize.
+Příklad použití `write` naleznete v tématu [StreamSize](../standard-library/ios-typedefs.md#streamsize) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programování iostream –](../standard-library/iostream-programming.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[iostream – programování](../standard-library/iostream-programming.md) \
 [iostreams – konvence](../standard-library/iostreams-conventions.md)

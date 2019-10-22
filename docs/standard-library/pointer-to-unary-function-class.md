@@ -1,5 +1,5 @@
 ---
-title: pointer_to_unary_function – třída
+title: pointer_to_unary_function 클래스
 ms.date: 02/21/2019
 f1_keywords:
 - functional/std::pointer_to_unary
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-ms.openlocfilehash: cff84f1f15eea34c60162f702dfe05350d1383d1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2b6bf82faa39e22c5af584a9fc3ebf68f5851463
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240468"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689144"
 ---
-# <a name="pointertounaryfunction-class"></a>pointer_to_unary_function – třída
+# <a name="pointer_to_unary_function-class"></a>pointer_to_unary_function 클래스
 
-Převede ukazatel na jednočlennou funkci na přizpůsobitelnou jednočlennou funkci. Zastaralé v C ++ 11, v C ++ 17 odebrané.
+단항 함수 포인터를 조정 가능한 단항 함수로 변환합니다. C + + 11에서 사용 되지 않으며 c + + 17에서 제거 되었습니다.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>구문
 
 ```cpp
 template <class Arg, class Result>
@@ -30,22 +30,22 @@ class pointer_to_unary_function
 };
 ```
 
-### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>매개 변수
 
-*pfunc*\
-Binární funkce pro převod.
+*pfunc* \
+변환할 이진 함수입니다.
 
-*doleva*\
-Objekt, který  *\*pfunc* je volán na.
+*왼쪽* \
+*\*pfunc*를 호출한 개체입니다.
 
-## <a name="return-value"></a>Návratová hodnota
+## <a name="return-value"></a>반환 값
 
-Třída šablony ukládá kopie `pfunc`. Definuje jeho členskou funkci `operator()` jako vracející (\* **pfunc**) (_ *vlevo*).
+클래스 템플릿은 `pfunc`의 복사본을 저장 합니다. 그리고 해당 구성원 함수 `operator()`가 (\* **pfunc**)(_ *Left*)를 반환하는 것으로 정의합니다.
 
-## <a name="remarks"></a>Poznámky
+## <a name="remarks"></a>주의
 
-Ukazatel na funkci unární je objekt funkce a může být předán s libovolným algoritmem standardní knihovny C++, který očekává unární funkci jako parametr, ale není přizpůsobitelné. Pro použití s adaptér, jako jsou k němu po navázání hodnoty nebo pomocí negator, je nutné zadat s vnořené typy `argument_type` a `result_type` , které umožňují tyto úpravy. Převod pomocí `pointer_to_unary_function` umožňuje adaptérů funkce pro práci s ukazateli binární funkce.
+단항 함수 포인터는 함수 개체이며, 매개 변수로 단항 함수를 사용해야 하는 C++ 표준 라이브러리 알고리즘으로 전달할 수는 있지만 조정할 수는 없습니다. 값을 바인딩 또는 부 정자와와 함께 사용 하는 것과 같이 어댑터와 함께 사용 하려면 중첩 된 형식 `argument_type` 제공 해야 하며, 이러한 조정 작업을 가능 하 게 하는 `result_type`. `pointer_to_unary_function`을 사용하여 변환을 수행하면 함수 어댑터를 이진 함수 포인터와 함께 사용할 수 있습니다.
 
-## <a name="example"></a>Příklad
+## <a name="example"></a>예제
 
-Konstruktor třídy `pointer_to_unary_function` je zřídka se používá přímo. Viz pomocná funkce [ptr_fun –](../standard-library/functional-functions.md#ptr_fun) příklad toho, jak deklarovat a použít `pointer_to_unary_function` adaptér predikátu.
+`pointer_to_unary_function`의 생성자는 직접 사용되는 경우가 거의 없습니다. `pointer_to_unary_function` 어댑터 조건자를 선언하고 사용하는 방법의 예제는 도우미 함수 [ptr_fun](../standard-library/functional-functions.md#ptr_fun)을 참조하세요.

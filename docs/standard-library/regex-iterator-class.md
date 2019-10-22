@@ -1,5 +1,5 @@
 ---
-title: regex_iterator – třída
+title: regex_iterator 클래스
 ms.date: 09/10/2018
 f1_keywords:
 - regex/std::regex_iterator
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: ccf806a7918100c58e04ab403f3a8b895e8dc256
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fb609df2bf52873dac3cddaa6b12f82ea1b53237
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451561"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689087"
 ---
-# <a name="regexiterator-class"></a>regex_iterator – třída
+# <a name="regex_iterator-class"></a>regex_iterator 클래스
 
-Iterátor třídy pro shody
+일치 항목에 대한 반복기 클래스입니다.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>구문
 
 ```cpp
 template<class BidIt,
@@ -36,57 +36,57 @@ template<class BidIt,
 class regex_iterator
 ```
 
-## <a name="parameters"></a>Parametry
+## <a name="parameters"></a>매개 변수
 
-*BidI*\
-Typ iterátoru pro podshody.
+*Bidit* \
+부분 일치에 대한 반복기 형식입니다.
 
-*Elem*\
-Typ prvků, které se mají spárovat.
+*Elem* \
+일치 항목을 찾을 요소의 형식입니다.
 
-*RXtraits*\
-Třída vlastností prvků.
+*Rxtraits* \
+요소에 대한 특성 클래스입니다.
 
-## <a name="remarks"></a>Poznámky
+## <a name="remarks"></a>주의
 
-Třída šablony popisuje objekt konstanty dopředné iterátory. Extrahuje objekty typu `match_results<BidIt>` tím, že opakovaně aplikuje objekt `*pregex` regulárního výrazu do sekvence znaků definované rozsahem `[begin, end)`iterátoru.
+클래스 템플릿은 상수 전방 반복기 개체를 설명 합니다. 반복기 범위 `match_results<BidIt>` 에 정의된 문자 시퀀스에 정규식 개체 `*pregex` 를 반복적으로 적용하여 `[begin, end)`형식의 개체를 추출합니다.
 
-### <a name="constructors"></a>Konstruktory
+### <a name="constructors"></a>생성자
 
-|Konstruktor|Popis|
+|생성자|설명|
 |-|-|
-|[regex_iterator](#regex_iterator)|Vytvoří iterátor.|
+|[regex_iterator](#regex_iterator)|반복기를 생성합니다.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>형식 정의
 
-|Název typu|Popis|
+|형식 이름|설명|
 |-|-|
-|[difference_type](#difference_type)|Typ rozdílu iterátoru.|
-|[iterator_category](#iterator_category)|Typ kategorie iterátoru|
-|[pointer](#pointer)|Typ ukazatele na shodu.|
-|[Referenční dokumentace](#reference)|Typ odkazu na shodu.|
-|[regex_type](#regex_type)|Typ regulárního výrazu, který se má shodovat.|
-|[value_type](#value_type)|Typ shody.|
+|[difference_type](#difference_type)|반복기 차이의 형식입니다.|
+|[iterator_category](#iterator_category)|반복기 범주의 형식입니다.|
+|[pointer](#pointer)|일치 항목에 대한 포인터의 형식입니다.|
+|[reference](#reference)|일치 항목에 대한 참조의 형식입니다.|
+|[regex_type](#regex_type)|일치 항목을 찾을 정규식의 형식입니다.|
+|[value_type](#value_type)|일치 항목의 형식입니다.|
 
-### <a name="operators"></a>Operátory
+### <a name="operators"></a>연산자
 
-|Operátor|Popis|
+|연산자|설명|
 |-|-|
-|[operator!=](#op_neq)|Porovná iterátory pro nerovnost.|
-|[podnikatel](#op_star)|Přistupuje k určené shodě.|
-|[operator + + – operátor](#op_add_add)|Zvýší iterátor.|
-|[operátor =](#op_eq)|Porovná iterátory o rovnosti.|
-|[operátor->](#op_arrow)|Přistupuje k určené shodě.|
+|[operator!=](#op_neq)|반복기가 같지 않은지 비교합니다.|
+|[operator*](#op_star)|지정된 일치 항목에 액세스합니다.|
+|[operator++](#op_add_add)|반복기를 증가시킵니다.|
+|[operator=](#op_eq)|반복기가 같은지 비교합니다.|
+|[operator->](#op_arrow)|지정된 일치 항목에 액세스합니다.|
 
-## <a name="requirements"></a>Požadavky
+## <a name="requirements"></a>요구 사항
 
-**Hlavička:** \<> regulárního výrazu
+**헤더:** \<regex>
 
-**Obor názvů:** std
+**네임스페이스:** std
 
-## <a name="examples"></a>Příklady
+## <a name="examples"></a>예제
 
-Příklady regulárních výrazů najdete v následujících tématech:
+정규식에 대한 예제는 다음 항목을 참조하세요.
 
 - [regex_match](../standard-library/regex-functions.md#regex_match)
 
@@ -139,128 +139,128 @@ match == a
 
 ## <a name="difference_type"></a>  regex_iterator::difference_type
 
-Typ rozdílu iterátoru.
+반복기 차이의 형식입니다.
 
 ```cpp
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Typ je synonymum pro `std::ptrdiff_t`.
+이 형식은 `std::ptrdiff_t`의 동의어입니다.
 
-## <a name="iterator_category"></a>regex_iterator::iterator_category
+## <a name="iterator_category"></a>  regex_iterator::iterator_category
 
-Typ kategorie iterátoru
+반복기 범주의 형식입니다.
 
 ```cpp
 typedef std::forward_iterator_tag iterator_category;
 ```
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Typ je synonymum pro `std::forward_iterator_tag`.
+이 형식은 `std::forward_iterator_tag`의 동의어입니다.
 
-## <a name="op_neq"></a>regex_iterator:: operator! =
+## <a name="op_neq"></a>  regex_iterator::operator!=
 
-Porovná iterátory pro nerovnost.
+반복기가 같지 않은지 비교합니다.
 
 ```cpp
 bool operator!=(const regex_iterator& right);
 ```
 
-### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>매개 변수
 
-*Kliknutím*\
-Iterátor, pro který se má porovnat.
+*오른쪽* \
+비교할 반복기입니다.
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Vrátí `!(*this == right)`členské funkce.
+멤버 함수는 `!(*this == right)`를 반환합니다.
 
-## <a name="op_star"></a>regex_iterator:: operator * – operátor
+## <a name="op_star"></a>  regex_iterator::operator*
 
-Přistupuje k určené shodě.
+지정된 일치 항목에 액세스합니다.
 
 ```cpp
 const match_results<BidIt>& operator*();
 ```
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Členská funkce vrátí uloženou hodnotu `match`.
+이 멤버 함수는 저장된 값 `match`를 반환합니다.
 
-## <a name="op_add_add"></a>regex_iterator:: operator + +
+## <a name="op_add_add"></a>  regex_iterator::operator++
 
-Zvýší iterátor.
+반복기를 증가시킵니다.
 
 ```cpp
 regex_iterator& operator++();
 regex_iterator& operator++(int);
 ```
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Pokud aktuální shoda nemá žádné znaky pro první volání `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail | regex_constants::match_not_null)`operátoru; v opačném případě posune uloženou hodnotu `begin` tak, aby odkazovala na první znak po `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail)`aktuální shodě, potom volání. V obou případech, pokud vyhledávání neuspěje, operátor nastaví objekt na iteraci na konci sekvence. Operátor vrací objekt.
+현재 일치 항목에 문자가 없으면 첫 번째 연산자가 `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail | regex_constants::match_not_null)`를 호출하고, 그렇지 않으면 저장된 값 `begin` 으로 이동하여 현재 일치 항목 다음의 첫 번째 문자를 가리킨 다음 `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail)`을 호출합니다. 두 경우 모두 검색에 실패하면 연산자가 개체를 시퀀스의 끝 반복기로 설정합니다. 연산자가 개체를 반환합니다.
 
-Druhý operátor vytvoří kopii objektu, zvýší objekt a vrátí kopii.
+두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.
 
-## <a name="op_eq"></a>regex_iterator:: operator =
+## <a name="op_eq"></a>  regex_iterator::operator=
 
-Porovná iterátory o rovnosti.
+반복기가 같은지 비교합니다.
 
 ```cpp
 bool operator==(const regex_iterator& right);
 ```
 
-### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>매개 변수
 
-*Kliknutím*\
-Iterátor, pro který se má porovnat.
+*오른쪽* \
+비교할 반복기입니다.
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Členská funkce vrátí hodnotu true `*this` , pokud a *Right* jsou iterace koncového pořadí nebo `begin == right.begin`Pokud ani není iterátorem konci sekvence a, `end == right.end`, `pregex == right.pregex`a `flags == right.flags`. V opačném případě vrátí hodnotu false.
+@No__t_0와 *right* 가 둘 다 시퀀스의 끝 반복기 이거나 둘 다 시퀀스의 끝 반복기와 `begin == right.begin`, `end == right.end`, `pregex == right.pregex` 및 `flags == right.flags`가 아닌 경우 멤버 함수는 true를 반환 합니다. 그렇지 않으면 false를 반환합니다.
 
-## <a name="op_arrow"></a>regex_iterator:: operator-&gt;
+## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
 
-Přistupuje k určené shodě.
+지정된 일치 항목에 액세스합니다.
 
 ```cpp
 const match_results<BidIt> * operator->();
 ```
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Členská funkce vrátí adresu uložené hodnoty `match`.
+멤버 함수는 저장된 값 `match`의 주소를 반환합니다.
 
-## <a name="pointer"></a>regex_iterator::p ointer
+## <a name="pointer"></a>  regex_iterator::pointer
 
-Typ ukazatele na shodu.
+일치 항목에 대한 포인터의 형식입니다.
 
 ```cpp
 typedef match_results<BidIt> *pointer;
 ```
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Typ je synonymum pro `match_results<BidIt>*`, kde `BidIt` je parametr šablony.
+이 형식은 `match_results<BidIt>*`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.
 
-## <a name="reference"></a>regex_iterator:: Reference
+## <a name="reference"></a>  regex_iterator::reference
 
-Typ odkazu na shodu.
+일치 항목에 대한 참조의 형식입니다.
 
 ```cpp
 typedef match_results<BidIt>& reference;
 ```
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Typ je synonymum pro `match_results<BidIt>&`, kde `BidIt` je parametr šablony.
+이 형식은 `match_results<BidIt>&`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.
 
-## <a name="regex_iterator"></a>regex_iterator::regex_iterator
+## <a name="regex_iterator"></a>  regex_iterator::regex_iterator
 
-Vytvoří iterátor.
+반복기를 생성합니다.
 
 ```cpp
 regex_iterator();
@@ -271,56 +271,56 @@ regex_iterator(BidIt first,
     regex_constants::match_flag_type f = regex_constants::match_default);
 ```
 
-### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>매개 변수
 
-*první*\
-Začátek sekvence, která se má shodovat
+*첫 번째* \
+일치하는 시퀀스의 시작입니다.
 
-*posledního*\
-Konec sekvence, která se má shodovat.
+*마지막* \
+일치하는 시퀀스의 끝입니다.
 
-*odebrat*\
-Regulární výraz pro shody
+*다시* \
+일치 항목에 대한 정규식입니다.
 
-*FJ*\
-Příznaky pro shody
+*f* \
+일치에 대한 플래그입니다.
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-První konstruktor vytvoří iterátor konec sekvence. Druhý konstruktor inicializuje uloženou hodnotu `begin` jako *první*, uloženou hodnotu `end` s *Poslední*, uloženou `pregex` hodnotou s `&re`a uloženou hodnotou `flags` v *f*. Pak volá `regex_search(begin, end, match, *pregex, flags)`. Pokud se hledání nepovede, konstruktor nastaví objekt na iteraci na konci sekvence.
+첫 번째 생성자는 시퀀스의 끝 반복기를 생성합니다. 두 번째 생성자는 `begin` 저장 된 값을 *first*로 초기화 하 고, 저장 된 값을 *last*와 `end` 하 고, 저장 된 값 `pregex` `&re`를 사용 하 고, 저장 된 값은 *f*와 `flags` 합니다. 그런 다음 `regex_search(begin, end, match, *pregex, flags)`를 호출합니다. 검색에 실패하면 생성자는 개체를 시퀀스의 끝 반복기로 설정합니다.
 
 ## <a name="regex_type"></a>  regex_iterator::regex_type
 
-Typ regulárního výrazu, který se má shodovat.
+일치 항목을 찾을 정규식의 형식입니다.
 
 ```cpp
 typedef basic_regex<Elem, RXtraits> regex_type;
 ```
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Typedef je synonymum pro `basic_regex<Elem, RXtraits>`.
+typedef는 `basic_regex<Elem, RXtraits>`의 동의어입니다.
 
-## <a name="value_type"></a>regex_iterator::value_type
+## <a name="value_type"></a>  regex_iterator::value_type
 
-Typ shody.
+일치 항목의 형식입니다.
 
 ```cpp
 typedef match_results<BidIt> value_type;
 ```
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-Typ je synonymum pro `match_results<BidIt>`, kde `BidIt` je parametr šablony.
+이 형식은 `match_results<BidIt>`의 동의어로, 여기서 `BidIt` 는 템플릿 매개 변수입니다.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>참조
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants – třída](../standard-library/regex-constants-class.md)\
-[regex_error – třída](../standard-library/regex-error-class.md)\
-[\<regulární funkce >](../standard-library/regex-functions.md)\
-[regex_iterator – třída](../standard-library/regex-iterator-class.md)\
-[\<operátory > Regex](../standard-library/regex-operators.md)\
-[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)\
-[regex_traits – třída](../standard-library/regex-traits-class.md)\
-[\<Regex > definice typedef](../standard-library/regex-typedefs.md)
+[Regex_constants 클래스](../standard-library/regex-constants-class.md) \
+[Regex_error 클래스](../standard-library/regex-error-class.md) \
+[> 함수를 \<regex](../standard-library/regex-functions.md) \
+[Regex_iterator 클래스](../standard-library/regex-iterator-class.md) \
+[> 연산자를 \<regex](../standard-library/regex-operators.md) \
+[Regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md) \
+[Regex_traits 클래스](../standard-library/regex-traits-class.md) \
+[\<regex> 형식 정의](../standard-library/regex-typedefs.md)

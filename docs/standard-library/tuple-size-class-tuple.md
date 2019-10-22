@@ -1,5 +1,5 @@
 ---
-title: tuple_size – třída;
+title: tuple_size třída;
 ms.date: 11/04/2016
 f1_keywords:
 - tuple_size
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241558"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688858"
 ---
-# <a name="tuplesize-class"></a>tuple_size – třída;
+# <a name="tuple_size-class"></a>tuple_size třída;
 
-Počet prvků, které `tuple` obsahuje.
+Oznamuje počet prvků, které `tuple` obsahuje.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,31 +60,31 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ### <a name="parameters"></a>Parametry
 
-*Řazené kolekce členů*\
+@No__t_1 *řazené kolekce členů*
 Typ řazené kolekce členů.
 
-*Elem*\
+*Elem* \
 Typ prvků pole.
 
-*Velikost*\
+*Velikost* \
 Velikost pole.
 
-*T1*\
-Typ prvního člena, které odpovídá páru licencí.
+@No__t_1 *T1*
+Typ prvního členu páru.
 
-*T2.* \
-Typ druhý člen, které odpovídá páru licencí.
+*T2* \
+Typ druhého člena dvojice.
 
-*Typy*\
-Typy elementů řazené kolekce členů.
+@No__t_1 *typů*
+Typy prvků řazené kolekce členů.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony má člen `value` , který je celočíselný konstantní výraz jehož hodnota je rozsah typ řazené kolekce členů *řazené kolekce členů*.
+Šablona třídy má člen `value`, který je integrální konstantní výraz, jehož hodnota je rozsah *řazené*kolekce členů typu řazené kolekce členů.
 
-Specializace šablon pro pole má člen `value` , který je celočíselný konstantní výraz jehož hodnota je *velikost*, což je velikost pole.
+Specializace šablony pro pole má členský `value` výraz integrální konstanty, jejíž hodnota je *Size*, což je velikost pole.
 
-Specializace šablony pro dvojici má člen `value` , který je celočíselný konstantní výraz jehož hodnota je 2.
+Specializace šablony pro dvojici má členský `value`, který je integrálním konstantním výrazem, jehož hodnota je 2.
 
 ## <a name="example"></a>Příklad
 
@@ -117,10 +117,10 @@ int main()
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<řazené kolekce členů >
+**Záhlaví:** \<tuple >
 
-**Záhlaví:** \<pole > (pro specializaci pole)
+**Header:** \<array > (pro specializaci pole)
 
-**Záhlaví:** \<nástroje > (pro specializaci pár)
+**Header:** \<utility > (pro specializaci páru)
 
-**Namespace:** std
+**Obor názvů:** std

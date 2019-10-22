@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-ms.openlocfilehash: 9da5e3593288be02819330e11b60e306784054dc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 12398203d61f2c3ea155b5f6e6e7b118d4a13c75
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460143"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689407"
 ---
-# <a name="maskarray-class"></a>mask_array – třída
+# <a name="mask_array-class"></a>mask_array – třída
 
-Interní pomocná třída šablony, která podporuje objekty, které jsou podmnožinou nadřazených valarrays, určené s logickým výrazem, poskytnutím operací mezi poli podmnožiny.
+Interní pomocná šablona třídy, která podporuje objekty, které jsou podmnožinou nadřazených valarrays, určené s logickým výrazem, poskytnutím operací mezi poli podmnožiny.
 
 ## <a name="syntax"></a>Syntaxe
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje objekt, který ukládá odkaz na `va` objekt třídy [valarray](../standard-library/valarray-class.md) **\<typu >** společně s objektem [\<](../standard-library/valarray-bool-class.md) `ba` valarray bool >, který popisuje sekvence prvků, které se mají vybrat `valarray<Type>` z objektu
+Třída popisuje objekt, který ukládá odkaz na objekt `va` třídy [valarray](../standard-library/valarray-class.md)  **\<Type >** , společně s objektem `ba` třídy [valarray \<bool >](../standard-library/valarray-bool-class.md), který popisuje sekvenci prvků k výběru. z objektu `valarray<Type>`.
 
-Objekt vytváříte pouze pomocí zápisu výrazu ve formátu [VA&#91;ba&#93;.](../standard-library/valarray-class.md#op_at) `mask_array<Type>` Členské funkce třídy mask_array se pak chovají jako odpovídající signatury funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů.
+Objekt `mask_array<Type>` vytvoříte pouze pomocí zápisu výrazu ve formátu [VA&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Členské funkce třídy mask_array se pak chovají stejně jako odpovídající signatura funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů.
 
-Sekvence se skládá maximálně z `ba.size` prvků. Prvek *J* je zahrnutý pouze v případě, že je hodnota **ba**[ *J*] true. Proto je v sekvenci tolik prvků, jako jsou pravdivé prvky v `ba`. Pokud `I` je index nejnižšího prvku true v `ba`, pak hodnota **VA**[ `I`] je ve vybrané sekvenci nula elementu.
+Sekvence se skládá z nejvíce `ba.size` prvků. Prvek *J* je zahrnutý pouze v případě, že je hodnota **ba**[ *J*] true. Proto existuje tolik prvků v sekvenci, protože jsou v `ba` pravdivé prvky. Pokud `I` je index nejmenšího true elementu v `ba`, pak hodnota **VA**[`I`] je ve vybrané sekvenci nula elementu.
 
 ## <a name="example"></a>Příklad
 
@@ -70,7 +70,7 @@ The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<valarray >
+**Záhlaví:** \<valarray >
 
 **Obor názvů:** std
 

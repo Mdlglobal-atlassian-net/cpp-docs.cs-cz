@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ce03510bec05f3e5e770e930759648c9add0387f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450902"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684057"
 ---
-# <a name="wstringconvert-class"></a>wstring_convert – třída
+# <a name="wstring_convert-class"></a>wstring_convert – třída
 
-Třída `wstring_convert` šablony provádí převody mezi šířkou řetězce a bajtovým řetězcem.
+Šablona třídy `wstring_convert` provádí převody mezi šířkou řetězce a bajtovým řetězcem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,17 +42,17 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parametry
 
-*Codecvt*\
+*Codecvt* \
 Omezující vlastnost [národního prostředí](../standard-library/locale-class.md) , která představuje objekt převodu.
 
-*Elem*\
+*Elem* \
 Typ elementu s velkým znakem.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje objekt, který ovládá převody mezi objekty v řetězci třídy `std::basic_string<Elem>` a objekty bajtů řetězce třídy `std::basic_string<char>` (označované také jako `std::string`). Třída šablony definuje typy `wide_string` a `byte_string` jako synonyma pro tyto dva typy. Převod mezi sekvencí `Elem` hodnot (uložený `wide_string` v objektu) a vícebajtové `byte_string` sekvence (uložené v objektu) se provádí pomocí objektu třídy `Codecvt<Elem, char, std::mbstate_t>`, který splňuje požadavky standardu. omezující vlastnost `std::codecvt<Elem, char, std::mbstate_t>`převodu kódu.
+Šablona třídy popisuje objekt, který ovládá převody mezi objekty s řetězci třídy `std::basic_string<Elem>` a objekty bajtů bajtů třídy `std::basic_string<char>` (označované také jako `std::string`). Šablona třídy definuje typy `wide_string` a `byte_string` jako synonyma těchto dvou typů. Převod mezi sekvencí `Elem` hodnoty (uložený v objektu `wide_string`) a vícebajtové sekvence (uložené v objektu `byte_string`) se provádí pomocí objektu třídy `Codecvt<Elem, char, std::mbstate_t>`, který splňuje požadavky standardní omezující vlastnosti převodu kódu `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Objekt této třídy šablony ukládá:
+Objekt této šablony třídy ukládá:
 
 - Bajtový řetězec, který se má zobrazit u chyb
 
@@ -90,7 +90,7 @@ Objekt této třídy šablony ukládá:
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 
@@ -139,8 +139,8 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Bytové*|Sekvence bajtů s jedním prvkem, která má být převedena.|
 |*ptr*|Styl C, sekvence znaků zakončených hodnotou null, které mají být převedeny.|
-|*Bstr*|[Byte_string](#byte_string) , který se má převést.|
-|*first*|První znak v rozsahu znaků, který má být převeden.|
+|*BSTR*|[Byte_string](#byte_string) , který se má převést.|
+|*první*|První znak v rozsahu znaků, který má být převeden.|
 |*posledního*|Poslední znak v rozsahu znaků, který má být převeden.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -179,7 +179,7 @@ Objekt [stavu konverze](../standard-library/wstring-convert-class.md) , který p
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="state_type"></a>  wstring_convert::state_type
+## <a name="state_type"></a>wstring_convert::state_type
 
 Typ, který představuje stav převodu.
 
@@ -207,9 +207,9 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |Parametr|Popis|
 |---------------|-----------------|
 |*Char*|Velký znak, který má být převeden.|
-|*Wptr*|Styl C, znak zakončený hodnotou null, počínaje `wptr`, který má být převeden.|
+|*Wptr*|Znak C-zakončený hodnotou null, počínaje od `wptr`, který má být převeden.|
 |*Wstr*|[Wide_string](#wide_string) , který se má převést.|
-|*first*|První prvek v rozsahu prvků, který má být převeden.|
+|*první*|První prvek v rozsahu prvků, který má být převeden.|
 |*posledního*|Poslední prvek v rozsahu prvků, který má být převeden.|
 
 ### <a name="remarks"></a>Poznámky
@@ -244,7 +244,7 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*\*Pcvt*|Objekt typu `Codecvt` , který má provést převod.|
+|*\*Pcvt*|Objekt typu `Codecvt` k provedení převodu.|
 |*_State*|Objekt typu [state_type](#state_type) představující stav převodu.|
 |*_Berr*|[Byte_string](#byte_string) , který se má zobrazit na chybách|
 |*Werr*|[Wide_string](#wide_string) , který se má zobrazit na chybách|

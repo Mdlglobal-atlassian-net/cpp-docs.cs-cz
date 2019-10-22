@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: 22bb9d94b4c420419941a5bb7af24009b91f0a54
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d25d8837c549b425416632ee07e23bb57fbd17ae
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456311"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689410"
 ---
 # <a name="map-class"></a>map – třída
 
@@ -113,19 +113,19 @@ class map;
 
 ### <a name="parameters"></a>Parametry
 
-*Zkrat*\
+@No__t_1 *klíčů*
 Datový typ klíče, který se uloží v objektu map.
 
-*Textový*\
+*Zadejte* \
 Typ dat prvku, který bude uložen v objektu map.
 
-*Traits*\
-Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu map. Tento argument je nepovinný a binární `less<Key>` predikát je výchozí hodnota.
+@No__t_1 *vlastností*
+Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu map. Tento argument je nepovinný a binární predikát `less<Key>` výchozí hodnotu.
 
 V jazyce C++ 14 můžete povolit heterogenní vyhledávání zadáním predikátu std:: less < >, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers) .
 
-*Dělující*\
-Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota `allocator<pair<const Key, Type> >`je.
+@No__t_1 *přidělování*
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota je `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -141,7 +141,7 @@ Třída C++ mapy standardní knihovny je:
 
 - Kontejner asociativních párů, protože jeho prvky hodnoty dat se liší od hodnot klíčů.
 
-- Třída šablony, protože funkce, které poskytuje jsou obecné a nezávislé na prvku nebo typu klíče. Datové typy použité pro prvky a klíče jsou zadány jako parametry v šabloně třídy společně s funkcí porovnání a alokátorem.
+- Šablona třídy, protože funkce, které poskytuje, jsou obecné a nezávislé na elementu nebo typu klíče. Datové typy použité pro prvky a klíče jsou zadány jako parametry v šabloně třídy společně s funkcí porovnání a alokátorem.
 
 Iterátor poskytnutý třídou map je obousměrný iterátor, ale členské funkce třídy [INSERT](#insert) a [map](#map) mají verze, které přebírají jako parametry šablony slabší vstupní iterátor, jehož požadavky na funkce jsou menší než ty. garantuje se třídou Obousměrných iterátorů. Různé koncepty iterátorů se týkají upřesnění jejich funkčnosti. Každý koncept iterátoru má vlastní sadu požadavků a algoritmy, které s ním pracují musí být omezeny těmito požadavky. Ke vstupnímu iterátoru lze přistoupit přes ukazatel pro odkazování na některý objekt a může být zvýšena na další iterátor v sekvenci.
 
@@ -154,7 +154,7 @@ Mapa řadí prvky, které ovládací prvek ovládá, voláním uloženého objek
 > [!NOTE]
 > Funkce porovnání je binární predikát, který indukuje přísné slabé seřazení ve standardním matematickém smyslu. Binární predikát f (x, y) je objekt funkce, který má dva objekty argumentu x a y a návratovou hodnotu **true** nebo **false**. Řazení určené pro sadu je přísné slabé řazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde jsou dva objekty x a y definovány jako ekvivalentní, je-li hodnota f (x, y) i f (y, x) **false**. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
 >
-> V jazyce c++ 14 můžete povolit heterogenní vyhledávání zadáním `std::less<>` predikátu nebo `std::greater<>` , který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers) .
+> V jazyce C++ 14 můžete povolit heterogenní vyhledávání zadáním predikátu `std::less<>` nebo `std::greater<>`, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers) .
 
 ## <a name="members"></a>Členové
 
@@ -162,24 +162,24 @@ Mapa řadí prvky, které ovládací prvek ovládá, voláním uloženého objek
 
 |||
 |-|-|
-|[mapy](#map)|Sestaví seznam konkrétní velikosti nebo s prvky určité hodnoty nebo s určitou hodnotou nebo s `allocator` kopií nějaké jiné mapy.|
+|[mapy](#map)|Sestaví seznam konkrétní velikosti nebo s prvky konkrétní hodnoty nebo pomocí konkrétního `allocator` nebo jako kopii nějaké jiné mapy.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
-|[allocator_type](#allocator_type)|Definice typu pro `allocator` třídu objektu map.|
-|[const_iterator](#const_iterator)|Definice typu obousměrného iterátoru, který může číst  prvek const v mapě.|
-|[const_pointer](#const_pointer)|Typedef pro ukazatel na prvek const  v mapě.|
-|[const_reference](#const_reference)|Definice typu odkazu na prvek const  uložený v mapě pro čtení a provádění operací **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst libovolný  element const v mapě.|
+|[allocator_type](#allocator_type)|Typedef pro třídu `allocator` pro objekt map.|
+|[const_iterator](#const_iterator)|Definice typu obousměrného iterátoru, který může číst prvek **const** v mapě.|
+|[const_pointer](#const_pointer)|Typedef pro ukazatel na prvek **const** v mapě.|
+|[const_reference](#const_reference)|Definice typu odkazu na prvek **const** uložený v mapě pro čtení a provádění operací **const** .|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst libovolný element **const** v mapě.|
 |[difference_type](#difference_type)|Definice typu celého čísla se znaménkem pro počet prvků objektu map v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterator](#iterator)|Definice typu obousměrného iterátoru, který může číst nebo upravovat libovolný prvek v objektu map.|
+|[iterátor](#iterator)|Definice typu obousměrného iterátoru, který může číst nebo upravovat libovolný prvek v objektu map.|
 |[key_compare](#key_compare)|Definice typu poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v objektu map.|
 |[key_type](#key_type)|Definice typu klíče řazení uloženého v jednotlivých prvcích objektu map.|
 |[mapped_type](#mapped_type)|Definice typu dat uložených v jednotlivých prvcích objektu map.|
-|[pointer](#pointer)|Typedef pro ukazatel na prvek const  v mapě.|
-|[Referenční dokumentace](#reference)|Definice typu odkazu na prvek uložený v objektu map.|
+|[ukazatele](#pointer)|Typedef pro ukazatel na prvek **const** v mapě.|
+|[odkaz](#reference)|Definice typu odkazu na prvek uložený v objektu map.|
 |[reverse_iterator](#reverse_iterator)|Definice typu obousměrného iterátoru, který může číst nebo upravovat prvek v obráceném objektu map.|
 |[size_type](#size_type)|Celočíselná definice typu bez znaménka pro počet prvků v objektu map.|
 |[value_type](#value_type)|Definice typu pro typ objektu, který je uložen jako prvek v objektu map.|
@@ -188,22 +188,22 @@ Mapa řadí prvky, které ovládací prvek ovládá, voláním uloženého objek
 
 |Členská funkce|Popis|
 |-|-|
-|[at](#at)|Vyhledá prvek se zadanou hodnotou klíče.|
+|[Počínaje](#at)|Vyhledá prvek se zadanou hodnotou klíče.|
 |[ifunctiondiscovery](#begin)|Vrátí iterátor odkazující na první prvek v objektu map.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor odkazující na první prvek v objektu map.|
 |[cend](#cend)|Vrátí konstantní iterátor za koncem.|
 |[jejich](#clear)|Odstraní všechny prvky objektu map.|
 |[výpočtu](#count)|Vrátí počet prvků objektu map, jejichž klíč odpovídá klíči zadaného parametrem.|
-|[crbegin](#crbegin)|Vrátí konstantní iterátor, který odkazuje na první prvek v obráceném objektu map.|
+|[crbegin –](#crbegin)|Vrátí konstantní iterátor, který odkazuje na první prvek v obráceném objektu map.|
 |[crend](#crend)|Vrátí konstantní iterátor, který odkazuje na umístění za posledním prvkem v převráceném objektu map.|
 |[emplace](#emplace)|Vloží vytvořený prvek na místo do objektu map.|
 |[emplace_hint](#emplace_hint)|Vloží vytvořený prvek s náznakem umístění na místo do objektu map.|
-|[empty](#empty)|Vrátí **hodnotu true** , pokud je mapa prázdná.|
+|[obsahovat](#empty)|Vrátí **hodnotu true** , pokud je mapa prázdná.|
 |[účelu](#end)|Vrátí iterátor za koncem.|
-|[equal_range](#equal_range)|Vrátí pár iterátorů. První iterátor v páru odkazuje na první prvek `map` s klíčem, který je větší než zadaný klíč. Druhý iterátor v páru odkazuje na první prvek v `map` klíči s klíčem, který je roven nebo větší než klíč.|
+|[equal_range](#equal_range)|Vrátí pár iterátorů. První iterátor ve dvojici odkazuje na první prvek v `map` s klíčem, který je větší než zadaný klíč. Druhý iterátor v páru odkazuje na první prvek v `map` s klíčem, který je roven nebo větší než klíč.|
 |[ověřování](#erase)|Odebere prvek nebo rozsah prvků v objektu map od zadané pozice.|
 |[najít](#find)|Vrátí iterátor odkazující na umístění prvku v objektu map, který má klíč stejný jako zadaný klíč.|
-|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objektu, který se používá k vytvoření mapy.|
+|[get_allocator](#get_allocator)|Vrátí kopii objektu `allocator`, který se používá k vytvoření mapy.|
 |[zadat](#insert)|Vloží prvek nebo rozsah prvků na určenou pozici do objektu map.|
 |[key_comp](#key_comp)|Vrátí kopii objektu porovnání, která je použit pro seřazení klíčů v objektu map.|
 |[lower_bound](#lower_bound)|Vrátí iterátor na první prvek objektu map s hodnotou klíče, který je roven nebo větší než zadaný klíč.|
@@ -211,7 +211,7 @@ Mapa řadí prvky, které ovládací prvek ovládá, voláním uloženého objek
 |[rbegin](#rbegin)|Vrátí iterátor odkazující na první prvek v obráceném objektu map.|
 |[rend](#rend)|Vrátí iterátor, který odkazuje na umístění za posledním prvkem v převráceném objektu map.|
 |[hodnota](#size)|Vrátí počet prvků v objektu map.|
-|[swap](#swap)|Zamění prvky dvou objektů map.|
+|[adresu](#swap)|Zamění prvky dvou objektů map.|
 |[upper_bound](#upper_bound)|Vrátí iterátor na první prvek objektu map s hodnotou klíče, který je větší než zadaný klíč.|
 |[value_comp](#value_comp)|Získá kopii objektu porovnání použitého pro seřazení hodnot prvků objektu map.|
 
@@ -352,9 +352,9 @@ const_iterator cbegin() const;
 
 ### <a name="remarks"></a>Poznámky
 
-V případě návratové hodnoty `cbegin`nelze prvky v rozsahu upravovat.
+S návratovou hodnotou `cbegin` nelze upravovat elementy v rozsahu.
 
-Tuto členskou funkci můžete použít místo `begin()` členské funkce k zajištění, že návratová hodnota je. `const_iterator` Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. `Container` V příkladu zvažte, že se jedná o upravitelný kontejner (nekonstantní) jakýkoli druh, který podporuje `begin()` a. `cbegin()`
+Tuto členskou funkci lze použít místo `begin()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `begin()` a `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -374,13 +374,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor  s obousměrným přístupem const, který odkazuje hned za konec rozsahu.
+Iterátor s obousměrným přístupem **const** , který odkazuje hned za konec rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-`cend`slouží k otestování, zda iterátor prošl na konci rozsahu.
+`cend` slouží k otestování, zda iterátor prošl na konci rozsahu.
 
-Tuto členskou funkci můžete použít místo `end()` členské funkce k zajištění, že návratová hodnota je. `const_iterator` Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. `Container` V příkladu zvažte, že se jedná o upravitelný kontejner (nekonstantní) jakýkoli druh, který podporuje `end()` a. `cend()`
+Tuto členskou funkci lze použít místo `end()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `end()` a `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -448,17 +448,17 @@ typedef implementation-defined const_iterator;
 
 Typ `const_iterator` nelze použít pro úpravu hodnoty prvku.
 
-[](#value_type) `pair` \<  Definuje body mapy na prvky, které jsou objekty value_type, které jsou typu constKey, typ >, jehož prvním členem je klíč k elementu a druhý člen je namapován `const_iterator` Datum uchovávané prvkem.
+@No__t_0 definován pomocí map body k prvkům, které jsou objekty [value_type](#value_type), které jsou typu `pair` \< **constKey**, **Zadejte**>, jehož prvním členem je klíč k elementu a jehož druhý člen je mapované datum držené objekt.
 
-Chcete-li odkázat `const_iterator` `cIter` na ukazatel ukazující na prvek v mapě, použijte `->` operátor.
+Chcete-li přesměrovat `const_iterator` `cIter` ukazovat na prvek v mapě, použijte operátor `->`.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte `cIter`  ->  **nejprve**, který je ekvivalentní (\* `cIter`). **nejprve**.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte**nejprve**`cIter`  -> , který je ekvivalentní (\* `cIter`). **nejprve**.
 
-Chcete-li získat přístup k hodnotě mapovaného pole datum pro element `cIter`, použijte  ->  **druhý**, který je ekvivalentní\* ( `cIter`). **sekunda**.
+Pro přístup k hodnotě mapovaného pole pro prvek použijte `cIter`  -> **Second**, který je ekvivalentní (\* `cIter`). **sekunda**.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [začátek](#begin) pro příklad, který používá `const_iterator`.
+Viz příklad pro [začátek](#begin) příkladu, který používá `const_iterator`.
 
 ## <a name="const_pointer"></a>const_pointer
 
@@ -526,7 +526,7 @@ The data value of first element in the map is 10.
 
 ## <a name="const_reverse_iterator"></a>const_reverse_iterator
 
-Typ, který poskytuje obousměrný iterátor, který může číst libovolný  element const v mapě.
+Typ, který poskytuje obousměrný iterátor, který může číst libovolný element **const** v mapě.
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -536,17 +536,17 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 Typ `const_reverse_iterator` nemůže změnit hodnotu prvku a použít k iteraci přes mapu v opačném případě.
 
-Definice odkazuje na elementy, které jsou objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`, jejichž prvním členem je klíč k elementu a jehož druhým členem je mapované datum uchovávané prvkem. `const_reverse_iterator`
+@No__t_0 definované pomocí map odkazuje na elementy, které jsou objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`, jejichž prvním členem je klíč k elementu a jehož druhým členem je mapované datum uchovávané prvkem.
 
-Chcete-li odkázat `const_reverse_iterator crIter` na ukazatel ukazující na prvek v mapě, `->` použijte operátor.
+Chcete-li přesměrovat `const_reverse_iterator crIter` odkazující na prvek v mapě, použijte operátor `->`.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte `crIter`  ->  **nejprve**, který je ekvivalentní (\* `crIter`). **nejprve**.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte**nejprve**`crIter`  -> , který je ekvivalentní (\* `crIter`). **nejprve**.
 
-Chcete-li získat přístup k hodnotě mapovaného pole datum pro element `crIter`, použijte  ->  **druhý**, který je ekvivalentní\* ( `crIter`). **nejprve**.
+Pro přístup k hodnotě mapovaného pole pro prvek použijte `crIter`  -> **Second**, který je ekvivalentní (\* `crIter`). **nejprve**.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat [](#rend) a používat `const_reverse_iterator`, naleznete v příkladu pro rend.
+Příklad, jak deklarovat a používat `const_reverse_iterator`, naleznete v příkladu pro [rend](#rend) .
 
 ## <a name="count"></a>výpočtu
 
@@ -558,7 +558,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Hodnota klíče prvků, které mají být porovnány s mapou.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -569,7 +569,7 @@ Hodnota klíče prvků, které mají být porovnány s mapou.
 
 Členská funkce vrátí počet prvků *x* v rozsahu.
 
-\[lower_bound (*klíč*); Upper_bound (*klíč*))
+\[ lower_bound (*klíč*); Upper_bound (*klíč*))
 
 což je 0 nebo 1 v případě mapy, což je jedinečný asociativní kontejner.
 
@@ -626,15 +626,15 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní reverzní obousměrný iterátor, který adresuje první prvek v obrácené [mapě](../standard-library/map-class.md) nebo řeší, co byl poslední prvek v neobráceném pořadí `map`.
+Konstantní reverzní obousměrný iterátor, který adresuje první prvek v obrácené [mapě](../standard-library/map-class.md) nebo řeší, co byl posledním prvkem v neobráceném `map`.
 
 ### <a name="remarks"></a>Poznámky
 
-`crbegin`se používá s obráceným znaménkem `map` jako [Begin](#begin) `map`se používá s.
+`crbegin` se používá s obráceným `map` stejně jako [Begin](#begin) se používá s `map`.
 
-S návratovou hodnotou `crbegin` `map` nelze objekt upravit.
+S návratovou hodnotou `crbegin` nelze změnit objekt `map`
 
-`crbegin`lze použít k iteraci `map` zpětně.
+`crbegin` lze použít k iteraci `map` zpět.
 
 ### <a name="example"></a>Příklad
 
@@ -676,15 +676,15 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní reverzní obousměrný iterátor, který adresuje umístění následující po posledním prvku v obrácené [mapě](../standard-library/map-class.md) (umístění, které předchází první prvek v opačném případě `map`).
+Konstantní reverzní obousměrný iterátor, který adresuje umístění následující po posledním prvku v obrácené [mapě](../standard-library/map-class.md) (umístění, které předchází první prvek v neobráceném `map`).
 
 ### <a name="remarks"></a>Poznámky
 
-`crend`se používá s obrácenou mapou jako [End](#end) se používá s `map`.
+`crend` se používá s obrácenou mapou jako [End](#end) se používá s `map`.
 
-S návratovou hodnotou `crend` `map` nelze objekt upravit.
+S návratovou hodnotou `crend` nelze změnit objekt `map`.
 
-`crend`dá se použít k otestování, jestli reverzní iterátor dosáhl konce jeho platnosti `map`.
+`crend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho `map`.
 
 Hodnota vrácená `crend` by neměla být zpětně odkazovaná.
 
@@ -729,9 +729,9 @@ typedef allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`difference_type` Je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. `first` `first` `last`  Obvykle se používá k reprezentaci počtu prvků v rozsahu [First, Last) mezi iterátory a, zahrnuje element, na který se odkazuje, a rozsah prvků až do, ale ne. `difference_type` zahrnutí prvku, na `last`který ukazuje.
+@No__t_0 je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. @No__t_0 se obvykle používá k reprezentaci počtu prvků v rozsahu *[First, Last)* mezi iterátory `first` a `last`, zahrnuje element, na který odkazuje `first`, a rozsah prvků až do, ale ne včetně. , prvek odkazoval na `last`.
 
-Všimněte si, `difference_type` že i když je k dispozici pro všechny iterátory, které splňují požadavky vstupního iterátoru, což zahrnuje třídu Obousměrných iterátorů podporovaných vratnými kontejnery, jako je například set, odečítání mezi iterátory je pouze podporováno náhodnými iterátory přístupu poskytnutými náhodným kontejnerem přístupu, jako je například Vector.
+Všimněte si, že i když `difference_type` je k dispozici pro všechny iterátory, které splňují požadavky vstupního iterátoru, které zahrnují třídu Obousměrných iterátorů podporovaných vratnými kontejnery, jako je například set, odečítání mezi iterátory je podporováno pouze pomocí iterátory náhodného přístupu poskytované náhodným kontejnerem přístupu, jako je například Vector.
 
 ### <a name="example"></a>Příklad
 
@@ -788,14 +788,14 @@ emplace(
 
 ### <a name="parameters"></a>Parametry
 
-*argumentů*\
+\ *argumentů*
 Argumenty předané k vytvoření prvku, který má být vložen do mapy, pokud již neobsahuje prvek, jehož hodnota je ekvivalentní objednaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 [Dvojice](../standard-library/pair-structure.md) , jejíž **logická** komponenta má hodnotu true, pokud bylo provedeno vložení, a hodnotu false, pokud mapa již obsahovala prvek ekvivalentní hodnoty v řazení. Komponenta iterátoru dvojice vrácených hodnot odkazuje na nově vložený element, pokud je **logická** komponenta true nebo na existující prvek, pokud je komponenta **bool** false.
 
-Chcete-li získat přístup ke komponentě `pair` `pr`iterátoru, použijte `pr.first`; pro odkázání `*pr.first`na něj použijte. Pro přístup ke komponentě **bool** použijte `pr.second`. Příklad naleznete v ukázce kódu dále v tomto článku.
+Chcete-li získat přístup k součásti iterátoru `pair` `pr`, použijte `pr.first`; Pokud ho chcete odkázat, použijte `*pr.first`. Pro přístup ke komponentě **bool** použijte `pr.second`. Příklad naleznete v ukázce kódu dále v tomto článku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -874,10 +874,10 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Parametry
 
-*argumentů*\
+\ *argumentů*
 Argumenty předané k vytvoření prvku, který má být vložen do mapy, pokud již mapa tento prvek neobsahuje, nebo obecněji, pokud již neobsahuje prvek, jehož klíč je ekvivalentní objednání.
 
-*,* \
+*kde* \
 Místo zahájení vyhledání správného bodu vložení. (Pokud tento bod bezprostředně předchází *místu, k*vložení může dojít v konstantním času v čase namísto logaritmické doby.)
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -999,7 +999,7 @@ Iterace po konci. Pokud je mapa prázdná, pak `map::end() == map::begin()`.
 
 ### <a name="remarks"></a>Poznámky
 
-`end`slouží k otestování, zda iterátor prošl koncem jeho mapy.
+`end` slouží k otestování, zda iterátor prošl koncem jeho mapy.
 
 Hodnota vrácená `end` by neměla být zpětně odkazovaná.
 
@@ -1017,12 +1017,12 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Hodnota klíče argumentu, která má být porovnána s klíčem řazení prvku z prohledávané mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro přístup k prvnímu iterátoru páru `pr` vráceného členskou funkcí použijte `pr`. **nejprve**a pro zpětnou vazbu dolního iterátoru použijte \*(. `pr` **první**). Pro přístup k druhému iterátoru páru `pr` vráceného členskou funkcí použijte `pr`. za **druhé**a pro zpětnou vazbu k hornímu iterátoru \*, `pr`použijte (. **sekundy**).
+Chcete-li získat přístup k prvnímu iterátoru páru `pr` vráceném členskou funkcí, použijte `pr`. **nejprve**a pro zpětnou vazbu dolního iterátoru použijte \* (`pr`. **první**). Pro přístup k druhému iterátoru páru `pr` vráceném členskou funkcí použijte `pr`. za **druhé**a pro zpětnou vazbu k hornímu iterátoru použijte \* (`pr`. **sekundy**).
 
 ### <a name="example"></a>Příklad
 
@@ -1102,16 +1102,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*,* \
+*Kde* \
 Pozice prvku, který má být odebrán.
 
-*První*\
+*První* \
 Pozice prvního prvku, který má být odebrán.
 
-*Posledního*\
+*Poslední* \
 Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Zkrat*\
+@No__t_1 *klíčů*
 Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1212,18 +1212,18 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Hodnota klíče, která má být porovnána klíčem řazení prvku z prohledávané mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor, který odkazuje na umístění elementu se zadaným klíčem, nebo umístění, které následuje po posledním prvku v mapě (`map::end()`), pokud se pro klíč nenajde shoda.
+Iterátor, který odkazuje na umístění elementu se zadaným klíčem, nebo umístění, které následuje po posledním prvku v mapě (`map::end()`), pokud se pro klíč nenajde žádná shoda.
 
 ### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí iterátor, který odkazuje na prvek v mapě, jejíž klíč řazení je ekvivalentní klíči argumentu v binárním predikátu, který vystaví řazení na základě vztahu k srovnatelnosti.
 
-Pokud `find` je vrácená hodnota přiřazena `const_iterator`k, objekt mapy nelze změnit. Pokud `find` je vrácená hodnota přiřazena `iterator`k, lze objekt mapy upravit
+Pokud je vrácená hodnota `find` přiřazena k `const_iterator`, objekt mapy nelze změnit. Pokud je vrácená hodnota `find` přiřazena k `iterator`, objekt mapy lze upravit
 
 ### <a name="example"></a>Příklad
 
@@ -1397,30 +1397,30 @@ IList);
 
 ### <a name="parameters"></a>Parametry
 
-*Počítává*\
+@No__t_1 *Val*
 Hodnota prvku, který má být vložen do mapy, pokud již neobsahuje prvek, jehož klíč je ekvivalentní objednané.
 
-*,* \
+*Kde* \
 Místo zahájení vyhledání správného bodu vložení. (Pokud tento bod bezprostředně předchází *místu, k*vložení může dojít v konstantním času v čase namísto logaritmické doby.)
 
-*ValTy*\
+*ValTy* \
 Parametr šablony, který určuje typ argumentu, který může mapa použít k vytvoření prvku [value_type](#value_type)a Perfect-forwarding *Val* jako argument.
 
-*První*\
+*První* \
 Pozice prvního prvku, který chcete zkopírovat.
 
-*Posledního*\
+*Poslední* \
 Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.
 
-*InputIterator*\
+*InputIterator* \
 Argument funkce šablony, který splňuje požadavky [vstupního iterátoru](../standard-library/input-iterator-tag-struct.md) , který odkazuje na prvky typu, které lze použít k vytvoření objektů [value_type](#value_type) .
 
-*IList*\
+@No__t_1 *IList*
 [Initializer_list](../standard-library/initializer-list.md) , ze kterého se mají kopírovat prvky
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členské funkce s jedním prvkem, (1) a (2), vrátí dvojici [](../standard-library/pair-structure.md) , jejíž **logická** komponenta má hodnotu true, pokud bylo provedeno vložení, a hodnotu false, pokud mapa již obsahovala element, jehož klíč měl ekvivalentní hodnotu v řazení. Komponenta iterátoru dvojice vrácených hodnot odkazuje na nově vložený element, pokud je **logická** komponenta true nebo na existující prvek, pokud je komponenta **bool** false.
+Členské funkce s jedním prvkem, (1) a (2), vrátí [dvojici](../standard-library/pair-structure.md) , jejíž **logická** komponenta má hodnotu true, pokud bylo provedeno vložení, a hodnotu false, pokud mapa již obsahovala element, jehož klíč měl ekvivalentní hodnotu v řazení. Komponenta iterátoru dvojice vrácených hodnot odkazuje na nově vložený element, pokud je **logická** komponenta true nebo na existující prvek, pokud je komponenta **bool** false.
 
 Členské funkce s jedním prvkem, (3) a (4), vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen do mapy, nebo pokud element s ekvivalentním klíčem již existuje, pro existující prvek.
 
@@ -1430,11 +1430,11 @@ Touto funkcí nejsou zneplatněny žádné iterátory, ukazatele ani odkazy.
 
 Při vložení pouze jednoho prvku, pokud je vyvolána výjimka, není změněn stav kontejneru. Pokud je při vkládání více prvků vyvolána výjimka, kontejner zůstane v neurčeném, ale platném stavu.
 
-Chcete-li získat přístup k součásti `pair` `pr` iterátoru, kterou vrátí členské funkce s jedním prvkem, použijte `pr.first`; k přečtení iterátoru v rámci vráceného páru, `*pr.first`použijte příkaz a poskytnutí prvku. Pro přístup ke komponentě **bool** použijte `pr.second`. Příklad naleznete v ukázce kódu dále v tomto článku.
+Chcete-li získat přístup k součásti iterátoru `pair` `pr`, který je vrácen členskými funkcemi s jedním prvkem, použijte `pr.first`; Chcete-li překázat na iterátor v rámci vráceného páru, použijte `*pr.first`, což vám poskytne element. Pro přístup ke komponentě **bool** použijte `pr.second`. Příklad naleznete v ukázce kódu dále v tomto článku.
 
-[Value_type](#value_type) kontejneru je definice typu, která patří do kontejneru a pro mapu `map<K, V>::value_type` je. `pair<const K, V>` Hodnota prvku je seřazená dvojice, ve které je první komponenta rovna hodnotě klíče a druhá komponenta je rovna datové hodnotě prvku.
+[Value_type](#value_type) kontejneru je definice typu, která patří do kontejneru a pro mapu `map<K, V>::value_type` je `pair<const K, V>`. Hodnota prvku je seřazená dvojice, ve které je první komponenta rovna hodnotě klíče a druhá komponenta je rovna datové hodnotě prvku.
 
-Členská funkce range (5) vloží sekvenci hodnot prvků do mapy, která odpovídá každému prvku řešenému iterátorem v rozsahu `[First, Last)`; proto se `Last` nevloží. Členská funkce kontejneru `end()` se vztahuje k pozici hned za posledním prvkem v kontejneru, například příkaz `m.insert(v.begin(), v.end());` se pokusí vložit všechny prvky `v` do `m`. Vkládají se pouze prvky, které v rozsahu obsahují jedinečné hodnoty. Duplicitní hodnoty jsou ignorovány. Chcete-li sledovat, které prvky jsou odmítnuty, použijte jednoprvkovou verzi funkce `insert`.
+Členská funkce range (5) vloží sekvenci hodnot prvků do mapy, která odpovídá každému prvku, který je adresován iterátorem v rozsahu `[First, Last)`; Proto se `Last` nevloží. Členská funkce kontejneru `end()` se vztahuje k pozici hned za posledním prvkem v kontejneru, například příkaz `m.insert(v.begin(), v.end());` se pokusí vložit všechny prvky `v` do `m`. Vkládají se pouze prvky, které v rozsahu obsahují jedinečné hodnoty. Duplicitní hodnoty jsou ignorovány. Chcete-li sledovat, které prvky jsou odmítnuty, použijte jednoprvkovou verzi funkce `insert`.
 
 Členská funkce seznamu inicializátorů (6) používá [initializer_list](../standard-library/initializer-list.md) ke zkopírování prvků do mapy.
 
@@ -1548,15 +1548,15 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Iterátor definovaný v mapě odkazuje na elementy, které jsou objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`, jejichž první člen je klíč k elementu a jehož druhý člen je mapovaným typem, který je držen prvkem.
+Iterátor definovaný v mapě odkazuje na elementy, které jsou objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`, jehož prvním členem je klíč k elementu a jehož druhým členem je mapované datum uchovávané prvkem.
 
-Chcete-li odkázat iterátor *ITER* ukazující na prvek v mapě, použijte `->` operátor.
+Chcete-li odkázat iterátor *ITER* ukazující na prvek v mapě, použijte operátor `->`.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte `Iter->first`, který je `(*Iter).first`ekvivalentní. Pro přístup k hodnotě mapovaného pro datum elementu použijte `Iter->second`, který je `(*Iter).second`ekvivalentní.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte `Iter->first`, který je ekvivalentní `(*Iter).first`. Pro přístup k hodnotě mapovaného pole Datum elementu použijte `Iter->second`, který je ekvivalentní `(*Iter).second`.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak [](#begin) deklarovat a používat `iterator`, naleznete v části příklad pro začátek.
+Viz příklad pro [začátek](#begin) pro příklad, jak deklarovat a používat `iterator`.
 
 ## <a name="key_comp"></a>key_comp
 
@@ -1576,7 +1576,7 @@ Uložený objekt definuje členskou funkci.
 
 `bool operator(const Key& left, const Key& right);`
 
-který vrátí **hodnotu true** , pokud `left` předchází a není rovno `right` v pořadí řazení.
+Vrátí **hodnotu true** , pokud `left` předchází a není rovna `right` v pořadí řazení.
 
 ### <a name="example"></a>Příklad
 
@@ -1639,13 +1639,13 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_compare`je synonymem *vlastností*parametrů šablony.
+`key_compare` je synonymum pro *vlastnosti*parametrů šablony.
 
 Další informace o *vlastnostích* naleznete v tématu [Třída mapy](../standard-library/map-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak [](#key_comp) deklarovat a používat `key_compare`, naleznete v části příklad pro key_comp.
+Příklad, jak deklarovat a používat `key_compare`, naleznete v tématu příklad pro [key_comp](#key_comp) .
 
 ## <a name="key_type"></a>key_type
 
@@ -1657,13 +1657,13 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_type`je synonymum pro *klíč*parametru šablony.
+`key_type` je synonymum pro *klíč*parametru šablony.
 
 Další informace o *klíči*naleznete v části poznámky v tématu [Třída mapy](../standard-library/map-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak [](#value_type) deklarovat a používat `key_type`, naleznete v části příklad pro value_type.
+Příklad, jak deklarovat a používat `key_type`, naleznete v tématu příklad pro [value_type](#value_type) .
 
 ## <a name="lower_bound"></a>lower_bound
 
@@ -1677,14 +1677,14 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Hodnota klíče argumentu, která má být porovnána s klíčem řazení prvku z prohledávané mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`iterator` Nebo`const_iterator` , který řeší umístění elementu v mapě, který má klíč, který je roven nebo větší než klíč argumentu, nebo který řeší umístění, které následuje po posledním prvku na mapě, pokud není nalezena shoda pro klíč.
+@No__t_0 nebo `const_iterator`, které řeší umístění elementu v mapě, který má klíč, který je roven nebo větší než klíč argumentu nebo který řeší umístění, které následuje po posledním prvku na mapě, pokud není nalezena shoda pro klíč.
 
-Pokud `lower_bound` je vrácená hodnota přiřazena `const_iterator`k, objekt mapy nelze změnit. Pokud `lower_bound` je vrácená hodnota přiřazena `iterator`k, lze objekt mapy upravit.
+Pokud je vrácená hodnota `lower_bound` přiřazena k `const_iterator`, objekt mapy nelze změnit. Pokud je vrácená hodnota `lower_bound` přiřazena k `iterator`, lze objekt map upravit.
 
 ### <a name="example"></a>Příklad
 
@@ -1789,22 +1789,22 @@ map(
 
 ### <a name="parameters"></a>Parametry
 
-*VŠ*\
-Třída přidělování úložiště, která se má použít pro tento objekt mapy, který má `Allocator`výchozí hodnotu.
+*Al* \
+Třída přidělování úložiště, která se má použít pro tento objekt mapy, ve kterém se výchozí hodnota `Allocator`.
 
-*Zajištění*\
-Funkce porovnání typu `const Traits` sloužící k uspořádání prvků v mapě, což je `hash_compare`výchozí hodnota.
+@No__t_1 *comp*
+Funkce porovnání typu `const Traits` slouží k uspořádání prvků na mapě, která má výchozí hodnotu `hash_compare`.
 
-*Kliknutím*\
+*Pravé* \
 Objekt map, ze kterého je kopií vytvořen objekt set.
 
-*První*\
+*První* \
 Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.
 
-*Posledního*\
+*Poslední* \
 Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.
 
-*IList*\
+@No__t_1 *IList*
 Initializer_list, ze kterého se mají kopírovat prvky
 
 ### <a name="remarks"></a>Poznámky
@@ -1823,7 +1823,7 @@ Pátý konstruktor určuje kopii mapy přesunutím *doprava*.
 
 Šestý, sedmý a osmý konstruktor používají initializer_list, ze kterého se zkopírují členové.
 
-Následující tři konstruktory kopírují rozsah `[First, Last)` mapy se zvýšením explicitního určení typu funkce porovnání třídy `Traits` a přidělování.
+Následující tři konstruktory kopírují rozsah `[First, Last)` mapy a zvyšují tak explicitní určení typu funkce porovnání třídy `Traits` a přidělování.
 
 ### <a name="example"></a>Příklad
 
@@ -1957,7 +1957,7 @@ Další informace o *typu* naleznete v tématu [Třída mapy](../standard-librar
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak [](#value_type) deklarovat a používat `mapped_type`, naleznete v části příklad pro value_type.
+Příklad, jak deklarovat a používat `mapped_type`, naleznete v tématu příklad pro [value_type](#value_type) .
 
 ## <a name="max_size"></a>max_size
 
@@ -2004,7 +2004,7 @@ Type& operator[](Key&& key);
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Hodnota klíče prvku, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2015,9 +2015,9 @@ Odkaz na hodnotu dat vloženého prvku.
 
 Pokud není nalezena hodnota klíče argumentu, je vložen spolu s výchozí hodnotou datového typu.
 
-`operator[]`lze použít k vložení `m` prvků do mapy pomocí `m[key] = DataValue;` Where `DataValue` je hodnota `mapped_type` elementu s klíčovou hodnotou *klíče*.
+`operator[]` lze použít k vložení prvků do mapy `m` pomocí `m[key] = DataValue;`, kde `DataValue` je hodnota `mapped_type` elementu s klíčovou hodnotou *klíče*.
 
-Při použití `operator[]` pro vložení prvků, vrácený odkaz neurčuje, zda vkládání mění již existující prvek nebo vytváří nový. Členské funkce [find](#find) a [INSERT](#insert) lze použít k určení, zda je prvek se zadaným klíčem již přítomen před vložením.
+Při použití `operator[]` pro vložení prvků, vrácený odkaz neurčuje, zda vložení mění již existující prvek nebo vytváří nový. Členské funkce [find](#find) a [INSERT](#insert) lze použít k určení, zda je prvek se zadaným klíčem již přítomen před vložením.
 
 ### <a name="example"></a>Příklad
 
@@ -2101,12 +2101,12 @@ map& operator=(map&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-[Mapa](../standard-library/map-class.md) , která se kopíruje `map`do.
+*pravé* \
+[Mapa](../standard-library/map-class.md) , která se kopíruje do `map`.
 
 ### <a name="remarks"></a>Poznámky
 
-Po vymazání všech existujících prvků v `map`, `operator=` buď zkopíruje nebo přesune obsah *přímo* do mapy.
+Po vymazání všech existujících prvků v `map` `operator=` buď zkopírování nebo přesunutí obsahu *přímo* do mapy.
 
 ### <a name="example"></a>Příklad
 
@@ -2175,11 +2175,11 @@ Reverzní obousměrný iterátor, který adresuje první prvek v obrácené map�
 
 ### <a name="remarks"></a>Poznámky
 
-`rbegin`se používá s obrácenou mapou stejně jako [Begin](#begin) se používá s mapou.
+`rbegin` se používá s obrácenou mapou jako [začínající](#begin) , která se používá s mapou.
 
-Pokud `rbegin` je vrácená hodnota přiřazena `const_reverse_iterator`k, nelze objekt map upravit. Pokud `rbegin` je vrácená hodnota přiřazena `reverse_iterator`k, lze objekt map upravit.
+Pokud je vrácená hodnota `rbegin` přiřazena k `const_reverse_iterator`, objekt mapy nelze změnit. Pokud je vrácená hodnota `rbegin` přiřazena k `reverse_iterator`, lze objekt map upravit.
 
-`rbegin`lze použít k iteraci v mapě zpětně.
+`rbegin` lze použít k iteraci v mapě zpět.
 
 ### <a name="example"></a>Příklad
 
@@ -2312,11 +2312,11 @@ Zpětný obousměrný iterátor, který adresuje umístění následující po p
 
 ### <a name="remarks"></a>Poznámky
 
-`rend`se používá s obrácenou mapou jako [End](#end) se používá s mapou.
+`rend` se používá s obrácenou mapou jako [End](#end) se používá s mapou.
 
-Pokud `rend` je vrácená hodnota přiřazena `const_reverse_iterator`k, nelze objekt map upravit. Pokud `rend` je vrácená hodnota přiřazena `reverse_iterator`k, lze objekt map upravit.
+Pokud je vrácená hodnota `rend` přiřazena k `const_reverse_iterator`, objekt mapy nelze změnit. Pokud je vrácená hodnota `rend` přiřazena k `reverse_iterator`, lze objekt map upravit.
 
-`rend`dá se použít k otestování, jestli reverzní iterátor dosáhl konce jeho mapy.
+`rend` lze použít k otestování, zda zpětný iterátor dosáhl konce jeho mapy.
 
 Hodnota vrácená `rend` by neměla být zpětně odkazovaná.
 
@@ -2392,15 +2392,15 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Typ `reverse_iterator` nemůže změnit hodnotu prvku a použít k iteraci přes mapu v opačném případě.
 
-Definice odkazuje na elementy, které jsou objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`, jejichž prvním členem je klíč k elementu a jehož druhým členem je mapované datum uchovávané prvkem. `reverse_iterator`
+@No__t_0 definované pomocí map odkazuje na elementy, které jsou objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`, jejichž prvním členem je klíč k elementu a jehož druhým členem je mapované datum uchovávané prvkem.
 
-Chcete-li odkázat `reverse_iterator` na *rIter* ukazující na prvek v `->` mapě, použijte operátor.
+Chcete-li odkázat na `reverse_iterator` *rIter* ukazující na prvek v mapě, použijte operátor `->`.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte `rIter`  ->  **nejprve**, který je ekvivalentní (\* `rIter`). **nejprve**. Chcete-li získat přístup k hodnotě mapovaného pole datum pro element `rIter`, použijte  ->  **druhý**, který je ekvivalentní\* ( `rIter`). **nejprve**.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte**nejprve**`rIter`  -> , který je ekvivalentní (\* `rIter`). **nejprve**. Pro přístup k hodnotě mapovaného pole pro prvek použijte `rIter`  -> **Second**, který je ekvivalentní (\* `rIter`). **nejprve**.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak [](#rbegin) deklarovat a používat `reverse_iterator`, naleznete v části příklad pro rbegin.
+Příklad, jak deklarovat a používat `reverse_iterator`, naleznete v tématu příklad pro [rbegin](#rbegin) .
 
 ## <a name="size"></a>hodnota
 
@@ -2469,7 +2469,7 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Mapa argumentů poskytující prvky, které mají být nahrazeny cílovou mapou.
 
 ### <a name="remarks"></a>Poznámky
@@ -2540,14 +2540,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Hodnota klíče argumentu, která má být porovnána s hodnotou klíče řazení prvku z prohledávané mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`iterator` Nebo`const_iterator` , který řeší umístění elementu v mapě, který má klíč, který je větší než klíč argumentu, nebo který řeší umístění, které následuje po posledním prvku na mapě, pokud není nalezena shoda pro klíč.
+@No__t_0 nebo `const_iterator`, které řeší umístění elementu v mapě s klíčem, který je větší než klíč argumentu, nebo který řeší umístění, které následuje po posledním prvku na mapě, pokud není nalezena shoda pro klíč.
 
-Pokud je vrácená hodnota přiřazena k `const_iterator`, objekt mapy nelze upravit. Pokud je vrácená hodnota přiřazena k `iterator`, lze objekt mapy upravit.
+Pokud je vrácená hodnota přiřazena k `const_iterator`, objekt mapy nelze změnit. Pokud je vrácená hodnota přiřazena k `iterator`, objekt mapy lze změnit.
 
 ### <a name="example"></a>Příklad
 
@@ -2614,11 +2614,11 @@ Vrátí objekt funkce porovnání, který mapa používá pro seřazení jeho pr
 
 ### <a name="remarks"></a>Poznámky
 
-Pro mapu *m*, pokud dva prvky *E1*(*K1*, *D1*) a *E2*(*K2*, *D2*) jsou `value_type`objekty typu, kde *K1* a *K1* jsou jejich klíče typu `key_type` a *D1* a *D2* jsou jejich data typu `mapped_type`, `m.key_comp(k1, k2)`pak `m.value_comp(e1, e2)` je ekvivalentem. Uložený objekt definuje členskou funkci.
+Pro mapu *m*platí, že pokud jsou dva prvky *E1*(*K1*, *D1*) a *E2*(*K2*, *D2*) objekty typu `value_type`, kde *K1* a *K1* jsou jejich klíče typu 0 a *D1* a *D2* jsou data typu 3 a pak 4 jsou ekvivalentní 5. Uložený objekt definuje členskou funkci.
 
 `bool operator( value_type& left, value_type& right);`
 
-Vrátí hodnotu **true** , pokud hodnota `left` klíče předchází a není rovna hodnotě `right` klíče v pořadí řazení.
+Vrátí hodnotu **true** , pokud hodnota klíče `left` předchází a není rovna hodnotě klíče `right` v pořadí řazení.
 
 ### <a name="example"></a>Příklad
 
@@ -2730,6 +2730,6 @@ int main( )
 
 ## <a name="see-also"></a>Viz také:
 
-[Kontejnery](../cpp/containers-modern-cpp.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+@No__t_1 [kontejnerů](../cpp/containers-modern-cpp.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

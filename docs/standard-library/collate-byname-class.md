@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458627"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688272"
 ---
-# <a name="collatebyname-class"></a>collate_byname – třída
+# <a name="collate_byname-class"></a>collate_byname – třída
 
-Odvozená třída šablony popisující objekt, který může sloužit jako omezující vlastnost kolace daného národního prostředí a který umožňuje načtení informací specifických pro kulturní oblast v případě konvencí řazení řetězců.
+Šablona odvozené třídy popisující objekt, který může sloužit jako omezující vlastnost COLLATE daného národního prostředí a který umožňuje načtení informací specifických pro kulturní oblast týkající se konvencí řazení řetězců.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,19 +39,19 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*\
+*_Locname* \
 Pojmenované národní prostředí.
 
-*_Refs*\
+*_Refs* \
 Počáteční počet odkazů
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje objekt, který může sloužit jako [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) typu [COLLATE](../standard-library/collate-class.md#collate)\<CharType >. Jeho chování je určeno [názvem](../standard-library/locale-class.md#name) národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt pomocí [COLLATE](../standard-library/collate-class.md#collate)\<CharType > ( `_Refs`).
+Šablona třídy popisuje objekt, který může sloužit jako [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) typu [COLLATE](../standard-library/collate-class.md#collate) \<CharType >. Jeho chování je určeno [názvem](../standard-library/locale-class.md#name) národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt s [kompletem collate](../standard-library/collate-class.md#collate) \<CharType > (`_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 

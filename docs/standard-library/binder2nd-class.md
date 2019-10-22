@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 5f59887e6c9d2965a6c8680f17a40c5bd93869c0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243356"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689939"
 ---
 # <a name="binder2nd-class"></a>binder2nd – třída
 
-Třída šablony poskytující konstruktor, který převádí objekt binární funkce na objekt jednočlenné funkce navázáním druhého argumentu binární funkce na zadanou hodnotu. Zastaralé v C ++ 11, v C ++ 17 odebrané.
+Šablona třídy poskytující konstruktor, který převádí objekt binární funkce na unární objekt funkce navázáním druhého argumentu binární funkce na zadanou hodnotu. Zastaralé v C++ 11, odebrané v C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,24 +38,24 @@ class binder2nd
 
 ### <a name="parameters"></a>Parametry
 
-*Func*\
-Objekt binární funkce pro převod na objekt jednočlenné funkce.
+@No__t_1 *Func*
+Objekt binární funkce, který má být převeden na unární objekt funkce.
 
-*doprava*\
-Hodnota, na které má být vázaný druhého argumentu binární funkce na objekt.
+*pravé* \
+Hodnota, na kterou má být druhý argument objektu binární funkce svázán.
 
-*doleva*\
-Hodnota argumentu, který porovná objekt adaptovaného binární pevnou hodnotu druhého argumentu.
+*levý* \
+Hodnota argumentu, který upravený binární objekt porovnává s pevnou hodnotou druhého argumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Objekt jednočlenné funkce, která je výsledkem vazby druhého argumentu binární funkce na objekt na hodnotu *správné*.
+Unární objekt funkce, který je výsledkem vazby druhého argumentu objektu binární funkce na hodnotu *Right*.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá jejich kopii _ objekt binární funkce *Func* v `op`a kopii *správné* v `value`. Definuje jeho členskou funkci `operator()` jako vracející **op**(`left`, **hodnotu**).
+Šablona třídy uchovává kopii objektu binární funkce _ *Func* in `op` a kopii *přímo* v `value`. Definuje jeho členskou funkci `operator()` jako vrácení **op**(`left`, **hodnota**).
 
-Pokud `Func` je objekt typu `Operation` a jazyka c je konstanta, pak [bind2nd –](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) odpovídá `binder2nd` konstruktoru třídy `binder2nd` \<  **Operace**> (`Func`, `c`) a pohodlnější.
+Pokud `Func` je objekt typu `Operation` a c je konstanta, pak [bind2nd –](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) je ekvivalentem konstruktoru třídy `binder2nd` `binder2nd` \< **operace**> (`Func`, 0) a pohodlnější.
 
 ## <a name="example"></a>Příklad
 

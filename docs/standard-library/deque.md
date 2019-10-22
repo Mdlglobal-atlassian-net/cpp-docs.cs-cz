@@ -1,28 +1,28 @@
 ---
-title: '&lt;deque&gt;'
+title: '&lt;deque &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <deque>
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a5fea8f4a1bc1612a35db71cc515ba4799e95da6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454487"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689729"
 ---
-# <a name="ltdequegt"></a>&lt;deque&gt;
+# <a name="ltdequegt"></a>&lt;deque &gt;
 
-Definuje třídu šablony kontejneru deque a několik podpůrných šablon.
+Definuje šablonu třídy kontejneru deque a několik podpůrných šablon.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví**: \<deque >
 
 > [!NOTE]
-> Knihovna deque > také `#include <initializer_list>` používá příkaz. \<
+> Knihovna \<deque > používá také příkaz `#include <initializer_list>`.
 
 ## <a name="members"></a>Členové
 
@@ -32,8 +32,8 @@ Definuje třídu šablony kontejneru deque a několik podpůrných šablon.
 |-|-|
 |[operator!=](../standard-library/deque-operators.md#op_neq)|Testuje, zda objekt deque na levé straně operátoru není roven objektu deque na pravé straně.|
 |[operátor <](../standard-library/deque-operators.md#op_lt)|Testuje, zda je objekt deque na levé straně operátoru menší než objekt deque na pravé straně.|
-|[podnikatel\<=](../standard-library/deque-operators.md#op_gt_eq)|Testuje, zda je objekt deque na levé straně operátoru menší než nebo roven objektu deque na pravé straně.|
-|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Testuje, zda je objekt deque na levé straně operátoru roven objektu deque na pravé straně.|
+|[operátor \< =](../standard-library/deque-operators.md#op_gt_eq)|Testuje, zda je objekt deque na levé straně operátoru menší než nebo roven objektu deque na pravé straně.|
+|[operator = = – operátor](../standard-library/deque-operators.md#op_eq_eq)|Testuje, zda je objekt deque na levé straně operátoru roven objektu deque na pravé straně.|
 |[operátor >](../standard-library/deque-operators.md#op_gt)|Testuje, zda je objekt deque na levé straně operátoru větší než objekt deque na pravé straně.|
 |[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Testuje, zda je objekt deque na levé straně operátoru větší než nebo roven objektu deque na pravé straně.|
 
@@ -41,7 +41,7 @@ Definuje třídu šablony kontejneru deque a několik podpůrných šablon.
 
 |||
 |-|-|
-|[swap](../standard-library/deque-functions.md#swap)|Vyměňuje prvky dvou deques.|
+|[adresu](../standard-library/deque-functions.md#swap)|Vyměňuje prvky dvou deques.|
 
 ### <a name="classes"></a>Třídy
 
@@ -51,6 +51,6 @@ Definuje třídu šablony kontejneru deque a několik podpůrných šablon.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

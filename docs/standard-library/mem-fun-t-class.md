@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-ms.openlocfilehash: 19ccd4835c4257a7f409bcf0f7bda1a898567458
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3c6606fe4d2df3b6068c3bb8194dc380344f7d97
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245088"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689370"
 ---
-# <a name="memfunt-class"></a>mem_fun_t – třída
+# <a name="mem_fun_t-class"></a>mem_fun_t – třída
 
-Třída adaptéru umožňující `non_const` členskou funkci, která nepřijímá žádné argumenty, která se má volat jako objekt jednočlenné funkce při inicializaci s argumentem ukazatele. Zastaralé v C ++ 11, v C ++ 17 odebrané.
+Třída adaptéru, která `non_const` umožňuje, aby při inicializaci s argumentem ukazatele převolala žádné argumenty jako unární objekt funkce. Zastaralé v C++ 11, odebrané v C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,20 +30,20 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm*\
-Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
+*_Pm* \
+Ukazatel na členskou funkci třídy `Type`, která má být převedena na objekt funkce.
 
-*_Pleft*\
-Objekt, který *_Pm* členská funkce je volána v.
+*_Pleft* \
+Objekt, na kterém je volána členská funkce *_Pm*
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Přizpůsobitelnou jednočlennou funkci.
+Přizpůsobitelná unární funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející (`_Pleft`->* `_Pm`) ().
+Šablona třídy uchovává kopii *_Pm*, která musí být ukazatel na členskou funkci třídy `Type` v objektu Private member. Definuje jeho členskou funkci `operator()` jako vrácení (`_Pleft` ->*  `_Pm`) ().
 
 ## <a name="example"></a>Příklad
 
-Konstruktor třídy `mem_fun_t` se obvykle nepoužívá přímo; pomocnou funkci `mem_fun` slouží k přizpůsobení členské funkce. Zobrazit [mem_fun –](../standard-library/functional-functions.md#mem_fun) příklad, jak používat adaptéry členské funkce.
+Konstruktor `mem_fun_t` se obvykle nepoužívá přímo; pomocná funkce `mem_fun` slouží k přizpůsobení členských funkcí. Příklad použití adaptérů členské funkce naleznete v tématu [mem_fun](../standard-library/functional-functions.md#mem_fun) .

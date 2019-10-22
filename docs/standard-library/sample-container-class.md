@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-ms.openlocfilehash: 2024574633069cc70f0885fdce63f3afc09227c0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 404e372e65af8b93ae4f6f2827a73ef64336690a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451110"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688978"
 ---
 # <a name="sample-container-class"></a>Ukázkový kontejner – třída
 
@@ -18,7 +18,7 @@ ms.locfileid: "68451110"
 
 Popisuje objekt, který ovládá proměnlivou délku sekvence prvků, obvykle typu `Ty`. Sekvence je ukládána různými způsoby v závislosti na skutečném kontejneru.
 
-Konstruktor kontejneru nebo členská funkce se mohou setkat s voláním konstruktoru **daného (** const ta **&** ) nebo funkcí **:: operator =** (**const Ty &** ). Pokud takové volání vyvolá výjimku, objekt kontejneru je povinen zachovat jeho integritu a znovu vyvolat všechny výjimky, které zachytí. Můžete bezpečně prohodit, přiřadit, smazat nebo zničit objekt kontejneru poté, co vyvolá jednu z těchto výjimek. Obecně však nemůžete odhadnout stav sekvence řízené objektem kontejneru.
+Konstruktor kontejneru nebo členská funkce se mohou setkat s voláním konstruktoru **daného**(**const ta &** ) nebo funkcí **:: operator =** (**const Ty &** ). Pokud takové volání vyvolá výjimku, objekt kontejneru je povinen zachovat jeho integritu a znovu vyvolat všechny výjimky, které zachytí. Můžete bezpečně prohodit, přiřadit, smazat nebo zničit objekt kontejneru poté, co vyvolá jednu z těchto výjimek. Obecně však nemůžete odhadnout stav sekvence řízené objektem kontejneru.
 
 Několik dalších aspektů:
 
@@ -26,15 +26,15 @@ Několik dalších aspektů:
 
 - Pokud kontejner ukládá objekt přidělování *Al*a *Al* vyvolá výjimku jinou než v důsledku volání `al.allocate`, výsledný stav objektu kontejneru není definován.
 
-- Pokud kontejner ukládá kompozici objektů funkcí , aby bylo možné určit, jak sestavovat řízený sekvenci, a *comp* vyvolá výjimku jakéhokoli druhu, výsledný stav objektu kontejneru není definován.
+- Pokud kontejner ukládá *kompozici*objektů funkcí, aby bylo možné určit, jak sestavovat řízený sekvenci, a *comp* vyvolá výjimku jakéhokoli druhu, výsledný stav objektu kontejneru není definován.
 
 Třídy kontejneru definované C++ standardní knihovnou splňují několik dalších požadavků, jak je popsáno v následujících odstavcích.
 
-[Seznam](../standard-library/list-class.md) tříd šablony kontejneru poskytuje deterministické a užitečné chování i v přítomnosti výše popsaných výjimek. Například pokud je vyvolána výjimka během vložení jednoho nebo více prvků, kontejner zůstane nezměněn a výjimka je znovu vyvolána.
+[Seznam](../standard-library/list-class.md) šablon třídy kontejneru poskytuje deterministické a užitečné chování i v přítomnosti výše popsaných výjimek. Například pokud je vyvolána výjimka během vložení jednoho nebo více prvků, kontejner zůstane nezměněn a výjimka je znovu vyvolána.
 
-Pro *všechny* třídy kontejneru C++ definované standardní knihovnou, pokud je vyvolána výjimka během volání následujících členských funkcí `insert`,, `push_back`nebo `push_front`, kontejner zůstane nezměněn a výjimka je znovu vyvolána.
+Pro *všechny* třídy kontejneru definované C++ standardní knihovnou, pokud je vyvolána výjimka během volání následujících členských funkcí, `insert`, `push_back` nebo `push_front`, kontejner zůstane nezměněn a výjimka je znovu vyvolána.
 
-Pro *všechny* třídy kontejneru definované C++ standardní knihovnou není během volání následujících členských funkcí vyvolána žádná výjimka: `pop_back`,. `pop_front`
+Pro *všechny* třídy kontejneru definované C++ standardní knihovnou není během volání následujících členských funkcí vyvolána žádná výjimka: `pop_back`, `pop_front`.
 
 [Vymazání](../standard-library/container-class-erase.md) členské funkce vyvolá výjimku pouze v případě, že operace kopírování (přiřazení nebo konstrukce kopírování) vyvolá výjimku.
 
@@ -46,13 +46,13 @@ Kromě toho není vyvolána žádná výjimka při kopírování iterátoru vrá
 
 - Odkazy, ukazatele a iterátory, které označují prvky kontrolovaných kontrolovaných sekvencí, zůstávají platné.
 
-Objekt třídy kontejneru definované C++ standardní knihovnou přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, prostřednictvím uloženého objektu typu `Alloc`, což je obvykle parametr šablony. Takový objekt přidělování musí mít stejné externí rozhraní jako objekt třídy `allocator<Ty>`. Konkrétně `Alloc` musí být stejný typ jako`Alloc::rebind<value_type>::other`
+Objekt třídy kontejneru definované C++ standardní knihovnou přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, pomocí uloženého objektu typu `Alloc`, což je obvykle parametr šablony. Takový objekt přidělování musí mít stejné externí rozhraní jako objekt třídy `allocator<Ty>`. Konkrétně `Alloc` musí být stejný typ jako `Alloc::rebind<value_type>::other`
 
-Pro *všechny* třídy kontejneru definované C++ standardní knihovnou vrátí členská funkce `Alloc get_allocator const;` kopii uloženého objektu přidělování. Všimněte si, že uložený objekt přidělování *není zkopírován při* přiřazení objektu kontejneru. Všechny konstruktory inicializují hodnotu uloženou `allocator`v, `Alloc` na, pokud konstruktor neobsahuje parametr přidělování.
+U *všech* tříd kontejneru definovaných ve C++ standardní knihovně vrátí členská funkce `Alloc get_allocator const;` kopii uloženého objektu přidělování. Všimněte si, že uložený objekt přidělování *není zkopírován při* přiřazení objektu kontejneru. Všechny konstruktory inicializují hodnotu uloženou v `allocator`, aby `Alloc`, pokud konstruktor neobsahuje parametr přidělování.
 
 V souladu se C++ standardem může třída kontejneru definovaná C++ standardní knihovnou předpokládat, že:
 
-- Všechny objekty třídy `Alloc` Compare EQUAL.
+- Všechny objekty třídy `Alloc` porovnat se stejnou hodnotou.
 
 - Typ `Alloc::const_pointer` je stejný jako `const Ty *`.
 
@@ -72,8 +72,8 @@ V této implementaci ale kontejnery nedělají takové zjednodušení předpokla
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<ukázkový kontejnerový >
+**Hlavička**: \<sample > kontejneru
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Ukázkový > kontejneru](../standard-library/sample-container.md)
+[> kontejneru \<sample](../standard-library/sample-container.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6fca9b2130407b165a7a7bfb1fb2a9ec81774e20
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459391"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689888"
 ---
-# <a name="codecvtbase-class"></a>codecvt_base – třída
+# <a name="codecvt_base-class"></a>codecvt_base – třída
 
-Základní třída pro třídu codecvt, která se používá k definování typu `result`výčtu, který se používá jako návratový typ pro členské funkce omezující vlastnosti pro indikaci výsledku převodu.
+Základní třída pro třídu codecvt, která se používá k definování typu výčtu označovaného jako `result`, použit jako návratový typ pro členské funkce omezující podmínky k indikaci výsledku převodu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,19 +38,19 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje výčet společný pro všechny specializace třídy template [codecvt](../standard-library/codecvt-class.md). Výsledek výčtu popisuje možné návratové hodnoty z [do_in](../standard-library/codecvt-class.md#do_in) nebo [do_out](../standard-library/codecvt-class.md#do_out):
+Třída popisuje výčet společný pro všechny specializace šablony třídy [codecvt](../standard-library/codecvt-class.md). Výsledek výčtu popisuje možné návratové hodnoty z [do_in](../standard-library/codecvt-class.md#do_in) nebo [do_out](../standard-library/codecvt-class.md#do_out):
 
-- `ok`Pokud konverze mezi interním a externím kódováním znaků je úspěšná.
+- `ok`, zda převod mezi interním a externím kódováním znaků je úspěšný.
 
-- `partial`Pokud cíl není dostatečně velký, aby převod mohl být úspěšný.
+- `partial`, pokud cíl není dostatečně velký, aby byl převod úspěšný.
 
-- `error`v případě, že je zdrojová sekvence nesprávně vytvořená.
+- `error`, pokud je zdrojová sekvence nesprávně vytvořená.
 
-- `noconv`Pokud funkce neprovede žádný převod.
+- `noconv`, pokud funkce neprovede žádný převod.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 

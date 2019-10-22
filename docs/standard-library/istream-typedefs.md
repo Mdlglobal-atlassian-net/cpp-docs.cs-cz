@@ -1,5 +1,5 @@
 ---
-title: '&lt;IStream&gt; definice typedef'
+title: '&lt;istream &gt; definice typedef'
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::iostream
@@ -7,23 +7,23 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: 864854fa2697a76c2f3476bcb050d5f5d084dc9d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9a25e4aa9ee42ea36d1bb8d6b196b36ff5c97758
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458752"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689481"
 ---
-# <a name="ltistreamgt-typedefs"></a>&lt;IStream&gt; definice typedef
+# <a name="ltistreamgt-typedefs"></a>&lt;istream &gt; definice typedef
 
 ||||
 |-|-|-|
-|[iostream](#iostream)|[istream](#istream)|[wiostream](#wiostream)|
+|[iostream –](#iostream)|[IStream](#istream)|[wiostream](#wiostream)|
 |[wistream](#wistream)|
 
 ## <a name="iostream"></a>iostream –
 
-Typ `basic_iostream` specializovaný na **char**.
+Typ `basic_iostream` specializované na **char**.
 
 ```cpp
 typedef basic_iostream<char, char_traits<char>> iostream;
@@ -31,11 +31,11 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_iostream](../standard-library/basic-iostream-class.md)specializované pro prvky typu **char** s výchozími vlastnostmi znaků.
+Typ je synonymum pro šablonu třídy [basic_iostream](../standard-library/basic-iostream-class.md)specializované pro prvky typu **char** s výchozími vlastnostmi znaků.
 
 ## <a name="istream"></a>IStream
 
-Typ `basic_istream` specializovaný na **char**.
+Typ `basic_istream` specializované na **char**.
 
 ```cpp
 typedef basic_istream<char, char_traits<char>> istream;
@@ -43,11 +43,11 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_istream](../standard-library/basic-istream-class.md)specializované pro prvky typu **char** s výchozími vlastnostmi znaků.
+Typ je synonymum pro šablonu třídy [basic_istream](../standard-library/basic-istream-class.md)specializované pro prvky typu **char** s výchozími vlastnostmi znaků.
 
 ## <a name="wiostream"></a>wiostream
 
-Typ `basic_iostream` specializovaný na **wchar_t**.
+Typ `basic_iostream` specializované na **wchar_t**.
 
 ```cpp
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
@@ -55,11 +55,11 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_iostream](../standard-library/basic-iostream-class.md)specializované pro prvky typu **wchar_t** s výchozími vlastnostmi znaků.
+Typ je synonymum pro šablonu třídy [basic_iostream](../standard-library/basic-iostream-class.md)specializované pro prvky typu **wchar_t** s výchozími vlastnostmi znaků.
 
 ## <a name="wistream"></a>wistream
 
-Typ `basic_istream` specializovaný na **wchar_t**.
+Typ `basic_istream` specializované na **wchar_t**.
 
 ```cpp
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
@@ -67,8 +67,8 @@ typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_istream](../standard-library/basic-istream-class.md)specializované pro prvky typu **wchar_t** s výchozími vlastnostmi znaků.
+Typ je synonymum pro šablonu třídy [basic_istream](../standard-library/basic-istream-class.md)specializované pro prvky typu **wchar_t** s výchozími vlastnostmi znaků.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<IStream >](../standard-library/istream.md)
+[\<istream >](../standard-library/istream.md)

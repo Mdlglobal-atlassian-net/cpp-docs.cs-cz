@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: 0e7084f0df15a1adf2124c9c6b8cae63eb12de89
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957037"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689704"
 ---
 # <a name="forward_list-class"></a>forward_list – třída
 
@@ -103,19 +103,19 @@ class forward_list
 Zadejte * \
 Typ dat prvku, který bude uložen v forward_list.
 
-*Dělující*\
-Uložený objekt přidělování, který zapouzdřuje informace o přidělování forward_list a navracení paměti. Tento parametr je volitelný. Výchozí hodnota je přidělování <`Type`>.
+@No__t_1 *přidělování*
+Uložený objekt přidělování, který zapouzdřuje informace o přidělování forward_list a navracení paměti. Tento parametr je volitelný. Výchozí hodnota je přidělování < `Type` >.
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, pomocí uloženého objektu *přidělování* tříd, který je založen na [třídě přidělování](../standard-library/allocator-class.md) (obvykle se `std::allocator)`označuje jako. `forward_list` Další informace najdete v tématu [přidělování](../standard-library/allocators.md). Objekt přidělování musí mít stejné externí rozhraní jako objekt třídy `allocator`šablony.
+Objekt `forward_list` přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, pomocí uloženého objektu *přidělování* tříd, který je založen na [třídě přidělování](../standard-library/allocator-class.md) (obvykle se označuje jako `std::allocator)`. Další informace najdete v tématu [přidělování](../standard-library/allocators.md). Objekt přidělování musí mít stejné externí rozhraní jako objekt typu `allocator`.
 
 > [!NOTE]
 > Uložený objekt přidělování není zkopírován při přiřazení objektu kontejneru.
 
-Iterátory, ukazatele a odkazy mohou být neplatné, pokud se prvky jejich řízené sekvence vymažou pomocí `forward_list`. Vložení a spojení prováděná na řízené sekvenci prostřednictvím `forward_list` neověřuje iterátory.
+Iterátory, ukazatele a odkazy mohou být neplatné, pokud jsou prvky své řízené sekvence vymazány prostřednictvím `forward_list`. Vložení a spojení prováděná na řízené sekvenci prostřednictvím `forward_list` neprovádí neplatnost iterátorů.
 
-K sestavování řízené sekvence může dojít voláním [forward_list:: insert_after](#insert_after), což je jediná členská funkce, která volá konstruktor `Type(const  T&)`. `forward_list`mohou také volat konstruktory Move. Pokud takový výraz vyvolá výjimku, objekt kontejneru vloží žádné nové prvky a znovu vyvolá výjimku. Proto objekt třídy `forward_list` šablony je ponechán ve známém stavu, když dojde k takovým výjimkám.
+K přidaným sekvenci řízené sekvence může dojít voláním [forward_list:: insert_after](#insert_after), což je jediná členská funkce, která volá konstruktor `Type(const  T&)`. `forward_list` mohou také volat konstruktory Move. Pokud takový výraz vyvolá výjimku, objekt kontejneru vloží žádné nové prvky a znovu vyvolá výjimku. Proto objekt typu `forward_list` je ponechán ve známém stavu, když dojde k takovým výjimkám.
 
 ## <a name="members"></a>Členové
 
@@ -134,9 +134,9 @@ K sestavování řízené sekvence může dojít voláním [forward_list:: inser
 |[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na prvek **const** v seznamu pro dopředný seznam.|
 |[const_reference](#const_reference)|Typ, který poskytuje konstantní odkaz na prvek v seznamu pro dopředný seznam.|
 |[difference_type](#difference_type)|Typ se znaménkem typu Integer, který lze použít k reprezentaci počtu prvků v dopředných seznamech v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterator](#iterator)|Typ, který poskytuje iterátor pro seznam pro dopředek.|
-|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v seznamu pro dopředný seznam.|
-|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek v seznamu pro dopředný seznam.|
+|[iterátor](#iterator)|Typ, který poskytuje iterátor pro seznam pro dopředek.|
+|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek v seznamu pro dopředný seznam.|
+|[odkaz](#reference)|Typ, který poskytuje odkaz na prvek v seznamu pro dopředný seznam.|
 |[size_type](#size_type)|Typ, který představuje vzdálenost bez znaménka mezi dvěma prvky.|
 |[value_type](#value_type)|Typ, který představuje typ elementu uložený v seznamu pro dopředný seznam.|
 
@@ -144,7 +144,7 @@ K sestavování řízené sekvence může dojít voláním [forward_list:: inser
 
 |||
 |-|-|
-|[assign](#assign)|Vymaže prvky ze seznamu před a zkopíruje novou sadu prvků do cílového seznamu pro seznam.|
+|[řadit](#assign)|Vymaže prvky ze seznamu před a zkopíruje novou sadu prvků do cílového seznamu pro seznam.|
 |[before_begin](#before_begin)|Vrátí iterátor adresující pozici před prvním prvkem v seznamu pro dopředný seznam.|
 |[ifunctiondiscovery](#begin)|Vrátí iterátor adresující první prvek v seznamu pro dopředný seznam.|
 |[cbefore_begin](#cbefore_begin)|Vrátí konstantní iterátor adresující pozici před prvním prvkem v seznamu pro dopředný seznam.|
@@ -153,7 +153,7 @@ K sestavování řízené sekvence může dojít voláním [forward_list:: inser
 |[jejich](#clear)|Smaže všechny prvky seznamu dopředných.|
 |[emplace_after](#emplace_after)|Přesune konstrukce nový prvek po zadané pozici.|
 |[emplace_front](#emplace_front)|Přidá prvek konstruovaný na začátek seznamu.|
-|[empty](#empty)|Testuje, zda je seznam předaných je prázdný.|
+|[obsahovat](#empty)|Testuje, zda je seznam předaných je prázdný.|
 |[účelu](#end)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v seznamu pro dopředný seznam.|
 |[erase_after](#erase_after)|Odebere prvky ze seznamu předek po zadané pozici.|
 |[dopředu](#front)|Vrátí odkaz na první prvek v seznamu pro dopředné.|
@@ -169,7 +169,7 @@ K sestavování řízené sekvence může dojít voláním [forward_list:: inser
 |[zpět](#reverse)|Obrátí pořadí, ve kterém se prvky vyskytují v seznamu dopředného vyhledávání.|
 |[druhu](#sort)|Uspořádá elementy ve vzestupném pořadí nebo s objednávkou určenou predikátem.|
 |[splice_after](#splice_after)|Znovu spojí propojení mezi uzly.|
-|[swap](#swap)|Vyměňuje prvky dvou seznamů pro přeposílání.|
+|[adresu](#swap)|Vyměňuje prvky dvou seznamů pro přeposílání.|
 |[unique](#unique)|Odebere sousední prvky, které přejdou na zadaný test.|
 
 ### <a name="operators"></a>Operátory
@@ -188,7 +188,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`allocator_type`je synonymem pro přidělování parametrů šablony.
+`allocator_type` je synonymum pro přidělování parametrů šablony.
 
 ## <a name="assign"></a>řadit
 
@@ -208,29 +208,29 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parametry
 
-*první*\
+*první* \
 Začátek rozsahu nahrazení.
 
-*posledního*\
+*poslední* \
 Konec rozsahu nahrazení.
 
-*výpočtu*\
+*počet* \
 Počet prvků, které se mají přiřadit.
 
-*počítává*\
+\ *Val*
 Hodnota, kterou chcete přiřadit každému elementu.
 
-*Textový*\
+*Zadejte* \
 Typ hodnoty.
 
-*IList*\
+@No__t_1 *IList*
 Initializer_list, který se má zkopírovat
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je forward_list typu Integer, První členská funkce se chová stejně jako `assign((size_type)First, (Type)Last)`. V opačném případě první členská funkce nahradí sekvenci `*this` řízenou sekvencí `First, Last)`[, která nesmí překrývat počáteční řízenou sekvenci.
+Pokud je forward_list typu Integer, První členská funkce se chová stejně jako `assign((size_type)First, (Type)Last)`. V opačném případě první členská funkce nahradí sekvenci řízenou `*this` sekvencí [`First, Last)`, která nesmí překrývat počáteční řízenou sekvenci.
 
-Druhá členská funkce nahradí sekvenci řízenou `*this` `Count` opakováním prvků hodnoty `Val`.
+Druhá členská funkce nahradí sekvenci řízenou `*this` s opakováním `Count` prvků `Val` hodnoty.
 
 Třetí členská funkce zkopíruje prvky initializer_list do forward_list.
 
@@ -288,13 +288,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor pro dopředný přístup const, který odkazuje na první prvek rozsahu nebo umístění hned za konec prázdného rozsahu (pro prázdný rozsah `cbegin() == cend()`).
+Iterátor pro dopředný přístup **const** , který odkazuje na první prvek rozsahu nebo umístění hned za konec prázdného rozsahu (pro prázdný rozsah `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Poznámky
 
-V případě návratové hodnoty `cbegin`nelze prvky v rozsahu upravovat.
+S návratovou hodnotou `cbegin` nelze upravovat elementy v rozsahu.
 
-Tuto členskou funkci můžete použít místo `begin()` členské funkce k zajištění, že návratová hodnota je. `const_iterator` Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. `Container` V příkladu zvažte, že se jedná o upravitelný kontejner (nekonstantní) jakýkoli druh, kterýpodporuje `begin()` a. `cbegin()`
+Tuto členskou funkci lze použít místo `begin()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `begin()` a `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -317,9 +317,9 @@ Iterátor pro dopředný přístup, který ukazuje přesně za konec rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-`cend`slouží k otestování, zda iterátor prošl na konci rozsahu.
+`cend` slouží k otestování, zda iterátor prošl na konci rozsahu.
 
-Tuto členskou funkci můžete použít místo `end()` členské funkce k zajištění, že návratová hodnota je. `const_iterator` Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. `Container` V příkladu zvažte, že se jedná o upravitelný kontejner (nekonstantní) jakýkoli druh, kterýpodporuje `end()` a. `cend()`
+Tuto členskou funkci lze použít místo `end()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `end()` a `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -341,7 +341,7 @@ void clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce volá`erase_after(before_begin(), end()).`
+Tato členská funkce volá `erase_after(before_begin(), end()).`.
 
 ## <a name="const_iterator"></a>const_iterator
 
@@ -353,7 +353,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-`const_iterator`popisuje objekt, který může sloužit jako konstanta dopředný iterátor pro řízenou sekvenci. Je zde popsána jako synonymum pro implementaci definovaný typ.
+`const_iterator` popisuje objekt, který může sloužit jako konstantní dopředný iterátor pro řízenou sekvenci. Je zde popsána jako synonymum pro implementaci definovaný typ.
 
 ## <a name="const_pointer"></a>const_pointer
 
@@ -386,7 +386,7 @@ typedef typename Allocator::difference_type difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`difference_type`popisuje objekt, který může představovat rozdíl mezi adresami všech dvou prvků v řízené sekvenci.
+`difference_type` popisuje objekt, který může představovat rozdíl mezi adresami všech dvou prvků v řízené sekvenci.
 
 ## <a name="emplace_after"></a>emplace_after
 
@@ -399,10 +399,10 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*,* \
+*Kde* \
 Pozice v seznamu cíle předek, kde je vytvořen nový prvek.
 
-*počítává*\
+\ *Val*
 Argument konstruktoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -424,12 +424,12 @@ template <class Type>
 
 ### <a name="parameters"></a>Parametry
 
-*počítává*\
+\ *Val*
 Prvek přidaný na začátek seznamu pro dopředný seznam.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce vloží prvek s argumenty `_ val` konstruktoru na konci řízené sekvence.
+Tato členská funkce vloží element s argumenty konstruktoru `_ val` na konci řízené sekvence.
 
 Pokud je vyvolána výjimka, kontejner zůstane beze změny a výjimka je znovu vyvolána.
 
@@ -469,13 +469,13 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*,* \
+*Kde* \
 Pozice v seznamu cíle předek, kde je prvek smazán.
 
-*první*\
+*první* \
 Začátek rozsahu, který chcete vymazat.
 
-*posledního*\
+*poslední* \
 Konec rozsahu, který se má vymazat
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -486,9 +486,9 @@ Iterátor, který určuje první prvek zbývající za odebranými prvky, nebo [
 
 První členská funkce odstraní prvek kontrolované sekvence hned za *WHERE*.
 
-Druhá členská funkce odstraní prvky kontrolované sekvence v rozsahu `( first,  last)` (ani není zahrnut koncový bod).
+Druhá členská funkce odstraní prvky řízené sekvence v rozsahu `( first,  last)` (ani není součástí koncového bodu).
 
-Mazání prvků způsobuje `N` volání destruktoru. `N` [](../standard-library/forward-list-class.md) Dojde k přerozdělení, takže iterátory a odkazy se stanou pro vymazané prvky neplatné.
+Mazání `N` prvků způsobuje volání destruktoru `N`. Dojde k [přerozdělení](../standard-library/forward-list-class.md) , takže iterátory a odkazy se stanou pro vymazané prvky neplatné.
 
 Členské funkce nikdy nevyvolají výjimku.
 
@@ -515,38 +515,38 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parametry
 
-*VŠ*\
+*Al* \
 Třída alokátoru, která se má použít s tímto objektem.
 
-*Výpočtu*\
+*Počet* \
 Počet prvků v seznamu sestavených.
 
-*Počítává*\
+@No__t_1 *Val*
 Hodnota prvků v seznamu sestavena.
 
-*Kliknutím*\
+*Pravé* \
 Seznam, ze kterého se má sestavený seznam kopírovat
 
-*První*\
+*První* \
 Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.
 
-*Posledního*\
+*Poslední* \
 Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.
 
-*IList*\
+@No__t_1 *IList*
 Initializer_list, který se má zkopírovat
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny konstruktory ukládají [přidělování](../standard-library/allocator-class.md) a inicializují řízenou sekvenci. Objekt přidělování je argument *Al*, pokud je k dispozici. Pro kopírovací konstruktor je ` right.get_allocator()`to. V opačném případě `Allocator()`je to.
+Všechny konstruktory ukládají [přidělování](../standard-library/allocator-class.md) a inicializují řízenou sekvenci. Objekt přidělování je argument *Al*, pokud je k dispozici. Pro kopírovací konstruktor je ` right.get_allocator()`. V opačném případě je `Allocator()`.
 
 První dva konstruktory určují prázdnou počáteční sekvenci řízenou.
 
-Třetí konstruktor určuje opakování počtu prvků hodnoty. `Type()`
+Třetí konstruktor určuje opakování *počtu prvků `Type()`* hodnoty.
 
-Čtvrtý a pátý konstruktor určuje opakování počtu prvků Value *Val*.
+Čtvrtý a pátý konstruktor určuje opakování *počtu prvků Value* *Val*.
 
-Šestý konstruktor určuje kopii sekvence řízenou *vpravo*. Pokud `InputIterator` je celočíselný typ, další dva konstruktory určují `(size_type)First` opakování prvků hodnoty `(Type)Last`. V opačném případě následující dva konstruktory určují sekvenci `[First, Last)`.
+Šestý konstruktor určuje kopii sekvence řízenou *vpravo*. Pokud `InputIterator` je celočíselný typ, další dva konstruktory určují opakování `(size_type)First` prvků `(Type)Last` hodnoty. V opačném případě následující dva konstruktory určují `[First, Last)` sekvence.
 
 Deváté a desáté konstruktory jsou stejné jako šest, ale s odkazem [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) .
 
@@ -592,22 +592,22 @@ template <class InputIterator>
 
 ### <a name="parameters"></a>Parametry
 
-*,* \
+*Kde* \
 Pozice v seznamu cílové dopřed, kde je vložen první prvek.
 
-*Výpočtu*\
+*Počet* \
 Počet prvků, které mají být vloženy.
 
-*První*\
+*První* \
 Začátek rozsahu vložení
 
-*Posledního*\
+*Poslední* \
 Konec rozsahu vložení
 
-*Počítává*\
+@No__t_1 *Val*
 Prvek přidaný do seznamu pro dopředné.
 
-*IList*\
+@No__t_1 *IList*
 Initializer_list, který se má vložit
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -620,15 +620,15 @@ Každá z členských funkcí vkládá – hned za element, na který ukazuje, *
 
 První členská funkce vloží prvek, který má hodnotu *Val* a vrátí iterátor, který určí nově vložený element.
 
-Druhá členská funkce vloží opakování počtu prvků Value *Val*.
+Druhá členská funkce vloží opakování *počtu prvků Value* *Val*.
 
-Pokud `InputIterator` je celočíselný typ, třetí členská funkce se chová stejně jako `insert(it, (size_type)First, (Type)Last)`. V opačném případě vloží sekvenci `[First, Last)`, která nesmí překrývat počáteční řízenou sekvenci.
+Pokud `InputIterator` je celočíselný typ, třetí členská funkce se chová stejně jako `insert(it, (size_type)First, (Type)Last)`. V opačném případě vloží `[First, Last)` sekvence, která nesmí překrývat počáteční řízenou sekvenci.
 
 Čtvrtá členská funkce vloží sekvenci, která je určena objektem třídy `initializer_list<Type>`.
 
 Poslední členská funkce je stejná jako první, ale s odkazem [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) .
 
-Vložení `N` prvků způsobí `N` volání konstruktoru. [](../standard-library/forward-list-class.md) Dojde k přerozdělení, ale žádné iterátory nebo odkazy se stanou neplatnými.
+Vložení prvků `N` způsobí volání konstruktoru `N`. Dojde k [přerozdělení](../standard-library/forward-list-class.md) , ale žádné iterátory nebo odkazy se stanou neplatnými.
 
 Pokud je vyvolána výjimka během vkládání jednoho nebo více prvků, kontejner zůstane nezměněn a výjimka je znovu vyvolána.
 
@@ -642,7 +642,7 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-`iterator`popisuje objekt, který může sloužit jako dopředný iterátor pro řízenou sekvenci. Je zde popsána jako synonymum pro implementaci definovaný typ.
+`iterator` popisuje objekt, který může sloužit jako dopředný iterátor pro řízenou sekvenci. Je zde popsána jako synonymum pro implementaci definovaný typ.
 
 ## <a name="max_size"></a>max_size
 
@@ -660,7 +660,7 @@ Délka nejdelší sekvence, kterou může objekt ovládat.
 
 ## <a name="merge"></a>sloučení
 
-Kombinuje dvě seřazené sekvence do jedné seřazené sekvence v lineárním čase. Odebere prvky ze seznamu argumentů a vloží je do tohoto `forward_list`seznamu. Tyto dva seznamy by měly být seřazené podle stejného objektu Compare Function před voláním `merge`. Kombinovaný seznam bude seřazen podle objektu funkce Compare.
+Kombinuje dvě seřazené sekvence do jedné seřazené sekvence v lineárním čase. Odebere prvky ze seznamu argumentů a vloží je do tohoto `forward_list`. Tyto dva seznamy by měly být seřazené podle stejného objektu Compare Function před voláním `merge`. Kombinovaný seznam bude seřazen podle objektu funkce Compare.
 
 ```cpp
 void merge(forward_list& right);
@@ -670,21 +670,21 @@ template <class Predicate>
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Seznam pro přeposílání, ze kterého se mají sloučit
 
-*zajištění*\
+\ *comp*
 Objekt funkce Compare, který se používá k řazení prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-`forward_list::merge`Odebere prvky z `forward_list` `right`a vloží je do tohoto `forward_list`. Obě sekvence musí být seřazeny stejným predikátem, popsaným níže. Kombinované pořadí je také řazeno pomocí objektu Compare Function.
+`forward_list::merge` odstraní prvky z `right` `forward_list` a vloží je do tohoto `forward_list`. Obě sekvence musí být seřazeny stejným predikátem, popsaným níže. Kombinované pořadí je také řazeno pomocí objektu Compare Function.
 
-Pro `Pi` iterátory a `!(*Pj < *Pi)` `j` `i` `Pj` určení prvků na pozicích a první členská funkce ukládá pořadí pokaždé `i < j`. (Elementy jsou seřazeny podle `ascending` pořadí.) Druhá členská funkce ukládá pořadí `! comp(*Pj, *Pi)` pokaždé. `i < j`
+Pro iterátory `Pi` a `Pj` určení prvků na pozicích `i` a `j` první členská funkce ukládá pořadí `!(*Pj < *Pi)` vždy, když `i < j`. (Prvky jsou seřazené v pořadí `ascending`.) Druhá členská funkce ukládá pořadí `! comp(*Pj, *Pi)` vždy, když `i < j`.
 
-V výsledné řízené sekvenci nejsou vráceny žádné páry prvků v původní řízené sekvenci. Pokud dvojice prvků ve výsledné kontrolované sekvenci porovná EQUAL ( `!(*Pi < *Pj) && !(*Pj < *Pi)`), prvek z původní kontrolované sekvence se zobrazí před prvkem řízeným pomocí. `right`
+V výsledné řízené sekvenci nejsou vráceny žádné páry prvků v původní řízené sekvenci. Pokud dvojice prvků v výsledné kontrolované sekvenci porovná EQUAL (`!(*Pi < *Pj) && !(*Pj < *Pi)`), zobrazí se prvek z původní kontrolované sekvence před prvkem řízeným pomocí `right`.
 
-Výjimka je vyvolána pouze v `comp` případě, že vyvolá výjimku. V takovém případě je řízená sekvence ponechána v nespecifikovaném pořadí a výjimka je znovu vyvolána.
+Výjimka je vyvolána pouze v případě, že `comp` vyvolá výjimku. V takovém případě je řízená sekvence ponechána v nespecifikovaném pořadí a výjimka je znovu vyvolána.
 
 ## <a name="op_eq"></a>operátor =
 
@@ -698,15 +698,15 @@ forward_list& operator=(forward_list&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Seznam pro dopředné kopírování do seznamu pro příjem
 
-*IList*\
+@No__t_1 *IList*
 Seznam inicializátorů uzavřený ve složených závorkách, který se chová stejně jako sekvence prvků typu `Type`.
 
 ### <a name="remarks"></a>Poznámky
 
-První operátor členu nahradí řízenou sekvenci kopií řízené sekvence napravo.
+První operátor členu nahradí řízenou sekvenci kopií řízené sekvence *napravo*.
 
 Druhý členský operátor nahradí řízená sekvence z objektu třídy `initializer_list<Type>`.
 
@@ -745,7 +745,7 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*počítává*\
+\ *Val*
 Prvek přidaný na začátek seznamu pro dopředný seznam.
 
 ### <a name="remarks"></a>Poznámky
@@ -770,12 +770,12 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*počítává*\
+\ *Val*
 Hodnota, která, pokud je držena prvkem, bude mít za následek odebrání tohoto elementu ze seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce se odebere ze kontrolované sekvence všechny prvky určené iterátorem `P`, pro který. `*P ==  val`
+Členská funkce odebere z řízených sekvencí všechny prvky určené `P` iterátoru, pro které `*P ==  val`.
 
 Členská funkce nikdy nevyvolává výjimku.
 
@@ -790,12 +790,12 @@ template <class Predicate>
 
 ### <a name="parameters"></a>Parametry
 
-*čekání*\
+*před* \
 Unární predikát, který je-li splněn prvkem, vede k odstranění tohoto prvku ze seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce se odebere ze kontrolované sekvence všechny prvky určené iterátorem `P`, pro který ` pred(*P)` má hodnotu true.
+Členská funkce se odebere z řízených sekvencí všechny prvky určené `P` iterátoru, pro které ` pred(*P)` má hodnotu true.
 
 K výjimce dojde pouze v případě, že *před* vyvolá výjimku. V takovém případě je řízená sekvence ponechána v nespecifikovaném stavu a výjimka je znovu vyvolána.
 
@@ -810,15 +810,15 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize*\
+*_Newsize* \
 Počet prvků v seznamu pro dopředné velikosti
 
-*počítává*\
+\ *Val*
 Hodnota, která má být použita pro odsazení.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce zajišťují, aby počet prvků v seznamu byl po *_Newsize*. Pokud musí být řízená sekvence delší, První členská funkce připojí prvky s hodnotou `Type()`, zatímco druhá členská funkce přidá prvky s hodnotou *Val*. Aby se řízená sekvence zkrátila kratší, obě členské funkce si `erase_after(begin() + _Newsize - 1, end())`budou efektivně volat.
+Členské funkce zajišťují, aby počet prvků v seznamu byl po *_Newsize*. Je-li nutné řídit sekvenci déle, První členská funkce připojí prvky s hodnotou `Type()`, zatímco druhá členská funkce připojí prvky s hodnotou *Val*. Chcete-li nastavit kratší sekvenci, oba členské funkce efektivně volají `erase_after(begin() + _Newsize - 1, end())`.
 
 ## <a name="reverse"></a>zpět
 
@@ -852,14 +852,14 @@ void sort(Predicate pred);
 
 ### <a name="parameters"></a>Parametry
 
-*čekání*\
+*před* \
 Predikát řazení.
 
 ### <a name="remarks"></a>Poznámky
 
 Oba členské funkce sestavují elementy v řízené sekvenci pomocí predikátu, který je popsán níže.
 
-Pro `Pi` iterátory a `!(*Pj < *Pi)` `j` `i` `Pj` určení prvků na pozicích a první členská funkce ukládá pořadí pokaždé `i < j`. (Elementy jsou seřazeny podle `ascending` pořadí.) Funkce šablony člena ukládá pořadí `! pred(*Pj, *Pi)` vždy, když je to. `i < j` V výsledné řízené sekvenci jsou vráceny žádné seřazené páry prvků v původní řízené sekvenci. (Řazení je stabilní.)
+Pro iterátory `Pi` a `Pj` určení prvků na pozicích `i` a `j` první členská funkce ukládá pořadí `!(*Pj < *Pi)` vždy, když `i < j`. (Prvky jsou seřazené v pořadí `ascending`.) Funkce šablony člena ukládá pořadí `! pred(*Pj, *Pi)` vždy, když `i < j`. V výsledné řízené sekvenci jsou vráceny žádné seřazené páry prvků v původní řízené sekvenci. (Řazení je stabilní.)
 
 K výjimce dojde pouze v případě, že *před* vyvolá výjimku. V takovém případě je řízená sekvence ponechána v nespecifikovaném pořadí a výjimka je znovu vyvolána.
 
@@ -892,30 +892,30 @@ void splice_after(
 
 ### <a name="parameters"></a>Parametry
 
-*,* \
+*Kde* \
 Pozice v cílovém forward_list, po které se má vložit
 
-*Zdrojová*\
+@No__t_1 *zdroje*
 Zdrojový forward_list, který má být vložen do cílového forward_list.
 
-*ITER*\
+@No__t_1 *ITER*
 Prvek, který má být vložen ze zdrojového forward_list.
 
-*První*\
+*První* \
 První prvek v rozsahu, který má být vložen ze zdrojového forward_list.
 
-*Posledního*\
+*Poslední* \
 První pozice mimo rozsah, který má být vložen ze zdrojového forward_listu.
 
 ### <a name="remarks"></a>Poznámky
 
-První pár členských funkcí vloží sekvenci řízenou *zdrojem* hned za prvkem v řízené sekvenci, na kterou ukazuje, *kde*. Také odebere všechny prvky ze *zdroje*. (`&Source` nesmí se rovnat.)
+První pár členských funkcí vloží sekvenci řízenou *zdrojem* hned za prvkem v řízené sekvenci, na kterou ukazuje, *kde*. Také odebere všechny prvky ze *zdroje*. ( **`&Source` se nesmí rovnat.** )
 
-Druhá dvojice členských funkcí odstraní element přímo po Iterě v sekvenci řízené *zdrojem* a vloží jej hned za prvek v řízené sekvenci, na který ukazuje, *kde*. (Pokud `Where == Iter || Where == ++Iter`nedojde k žádné změně.)
+Druhá dvojice členských funkcí odstraní element přímo po *iterě* v sekvenci řízené *zdrojem* a vloží jej hned za prvek v řízené sekvenci, na který ukazuje, *kde*. (Pokud `Where == Iter || Where == ++Iter`, nedojde k žádné změně.)
 
-Třetí pár členských funkcí (spojování s rozsahem) vloží dílčí rozsah určený `(First, Last)` z sekvence řízené *zdrojem* hned za prvkem v řízené sekvenci, na který ukazuje, *kde*. Také odstraní původní dílčí rozsah z sekvence řízené *zdrojem*. (Pokud `&Source == this`, nesmí rozsah `(First, Last)` zahrnovat element, na který ukazuje, *kde*.)
+Třetí pár členských funkcí (spojování s rozsahem) vloží dílčí rozsah určený `(First, Last)` z sekvence řízené *zdrojem* hned za prvkem v řízené sekvenci, na který ukazuje, *kde*. Také odstraní původní dílčí rozsah z sekvence řízené *zdrojem*. (Pokud `&Source == this`, rozsah `(First, Last)` nesmí obsahovat element, na který odkazuje, *kde*.)
 
-`N` Pokud je přidaný rozsah přidaných prvků, a `&Source != this`, je objekt [iterátoru](#iterator) `N` třídy zvýšen krát.
+Pokud se v rámci rozsahu spojování vloží `N` prvky a `&Source != this`, je objekt [iterátoru](#iterator) třídy zvýšený `N` časy.
 
 Žádné iterátory, ukazatele nebo odkazy, které určují přizpůsobitelné prvky, se stanou neplatnými.
 
@@ -1002,12 +1002,12 @@ void swap(forward_list& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Seznam pro předávání, který poskytuje prvky, které mají být vyměněny.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce přemění kontrolované sekvence mezi `*this` a *vpravo*. Pokud `get_allocator() ==  right.get_allocator()`je to v konstantním čase, nevyvolává žádné výjimky a neověřuje žádné odkazy, ukazatele nebo iterátory, které určují elementy ve dvou řízených sekvencích. V opačném případě provede několik přiřazení prvků a volání konstruktoru v poměru k počtu prvků ve dvou řízených sekvencích.
+Členská funkce přemění kontrolované sekvence mezi `*this` a *pravou*. Pokud je `get_allocator() ==  right.get_allocator()`, tak v konstantním čase nevyvolává žádné výjimky a neověřuje žádné odkazy, ukazatele nebo iterátory, které určují elementy ve dvou řízených sekvencích. V opačném případě provede několik přiřazení prvků a volání konstruktoru v poměru k počtu prvků ve dvou řízených sekvencích.
 
 ## <a name="unique"></a>tabulka
 
@@ -1021,18 +1021,18 @@ void unique(BinaryPredicate comp);
 
 ### <a name="parameters"></a>Parametry
 
-*zajištění*\
+\ *comp*
 Binární predikát, který slouží k porovnání po sobě jdoucích prvků.
 
 ### <a name="remarks"></a>Poznámky
 
 Zachová první z každého jedinečného prvku a odstraní zbytek. Elementy musí být seřazeny tak, aby prvky stejné hodnoty byly sousedící v seznamu.
 
-První členská funkce se odebere ze kontrolované sekvence každý prvek, který porovnává stejnou hodnotu jako předchozí prvek. `Pi` Pro iterátory `i + 1 == j &&  comp(*Pi, *Pj)`a `Pj` určení prvků na pozicích `i` a `j`druhá členská funkce odebere všechny prvky, pro které.
+První členská funkce se odebere ze kontrolované sekvence každý prvek, který porovnává stejnou hodnotu jako předchozí prvek. Pro iterátory `Pi` a `Pj` určení prvků na pozicích `i` a `j`, druhá členská funkce odebere všechny prvky, pro které `i + 1 == j &&  comp(*Pi, *Pj)`.
 
-V případě řízené sekvence délky `N` (> 0) je predikát ` comp(*Pi, *Pj)` vyhodnocen jako `N - 1` časy.
+Pro řízenou sekvenci Length `N` (> 0) je predikát ` comp(*Pi, *Pj)` vyhodnocen `N - 1` časů.
 
-Výjimka je vyvolána pouze v `comp` případě, že vyvolá výjimku. V takovém případě je řízená sekvence ponechána v nespecifikovaném stavu a výjimka je znovu vyvolána.
+Výjimka je vyvolána pouze v případě, že `comp` vyvolá výjimku. V takovém případě je řízená sekvence ponechána v nespecifikovaném stavu a výjimka je znovu vyvolána.
 
 ## <a name="value_type"></a>value_type
 

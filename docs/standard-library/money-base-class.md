@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c614832b0cbb1cc23e42ecb3a939ccf1334a5cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455569"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689314"
 ---
-# <a name="moneybase-class"></a>money_base – třída
+# <a name="money_base-class"></a>money_base – třída
 
-Třída popisuje výčet a strukturu společnou pro všechny specializace třídy template [moneypunct](../standard-library/moneypunct-class.md).
+Třída popisuje výčet a strukturu společnou pro všechny specializace šablony třídy [moneypunct](../standard-library/moneypunct-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,21 +28,21 @@ struct pattern
 
 ## <a name="remarks"></a>Poznámky
 
-Výčet `part` popisuje možné hodnoty v prvcích pole Array ve vzoru struktury. Hodnoty `part` jsou:
+@No__t_0 výčtu popisuje možné hodnoty v prvcích pole Array ve vzoru struktury. Hodnoty `part` jsou:
 
-- `none`pro vyhledání žádného nebo více mezer nebo vygenerování nic.
+- `none` odpovídat žádnému nebo více mezerám nebo generovat nic.
 
-- `sign`pro spárování nebo vygenerování kladného nebo záporného znaménka.
+- `sign`, aby odpovídaly nebo vygenerovaly kladné nebo záporné znaménko.
 
-- `space`pro vyhledání žádného nebo více mezer nebo vygenerování prostoru.
+- `space` odpovídat žádnému nebo více mezerám nebo vygenerovat mezeru.
 
-- `symbol`pro spárování nebo vygenerování symbolu měny.
+- `symbol`, aby odpovídaly nebo vygenerovaly symbol měny.
 
-- `value`pro spárování nebo vygenerování peněžní hodnoty.
+- `value`, aby odpovídaly nebo vygenerovaly peněžní hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 

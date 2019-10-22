@@ -13,22 +13,22 @@ helpviewer_keywords:
 - optional/std::optional::reset
 - optional/std::optional::value
 - optional/std::optional::value_or
-ms.openlocfilehash: f664df6493a7ee20361d49531a930aeb810d3d2a
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d9c4bf5356e6ff163ecdf7e1a80bc55453d59003
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957150"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689149"
 ---
 # <a name="optional-class"></a>Volitelná třída
 
-Třída `optional<T>` šablony popisuje objekt, který může nebo nemusí obsahovat hodnotu typu `T`, označovanou jako *obsažená hodnota*.
+Šablona třídy `optional<T>` popisuje objekt, který může nebo nemusí obsahovat hodnotu typu `T`, která se označuje jako *obsažená hodnota*.
 
-Když instance `optional<T>` obsahuje hodnotu, obsažená hodnota je přidělena v rámci úložiště `optional` objektu v oblasti vhodně zarovnané pro typ `T`. Když je převeden na `bool`, výsledek je `true` , pokud objekt `false`obsahuje hodnotu; v opačném případě je to. `optional<T>`
+Pokud instance `optional<T>` obsahuje hodnotu, obsažená hodnota je přidělena v rámci úložiště objektu `optional` v oblasti vhodně zarovnané pro typ `T`. Pokud je `optional<T>` převedena na `bool`, výsledek je `true`, pokud objekt obsahuje hodnotu; v opačném případě je `false`.
 
-Typ `T` objektu s omezením nesmí být [in_place_t](in-place-t-struct.md) ani [nullopt_t](nullopt-t-structure.md). `T`musí být *zničitelné*, to znamená, že jeho destruktor musí znovu získat všechny vlastněné prostředky a nemůže vyvolat žádné výjimky.
+Objekt typu intypeed Object `T` nesmí být [in_place_t](in-place-t-struct.md) ani [nullopt_t](nullopt-t-structure.md). `T` musí být *zničitelné*, to znamená, že jeho destruktor musí znovu získat všechny vlastněné prostředky a nemůže vyvolat žádné výjimky.
 
-`optional` Třída je v c++ 17 novinkou.
+Třída `optional` je v C++ 17 novinkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,19 +52,19 @@ template<class T> optional(T) -> optional<T>;
 |[optional](#optional) | Vytvoří objekt typu `optional`. |
 |[~ volitelné](#optional-destructor) | Zničí objekt typu `optional`. |
 | **Přiřazení** | |
-| [operátor =](#op_eq) | `optional` Nahradí jinou`optional`kopií. |
+| [operátor =](#op_eq) | Nahradí `optional` kopií jiného `optional`. |
 | [emplace](#op_eq) | Inicializuje obsaženou hodnotu se zadanými argumenty. |
-| **Swap** | |
-| [swap](#swap) | Zamění obsaženou hodnotu nebo prázdný stav jinou `optional`hodnotou. |
+| **Adresu** | |
+| [adresu](#swap) | Zamění obsaženou hodnotu nebo prázdný stav s jiným `optional`. |
 | **Pozorovatelů** | |
-| [has_value](#has_value) | Vrátí, zda `optional` objekt obsahuje hodnotu. |
+| [has_value](#has_value) | Vrátí, zda objekt `optional` obsahuje hodnotu. |
 | [value](#value) | Vrátí obsaženou hodnotu. |
 | [value_or](#value_or) | Vrátí obsaženou hodnotu nebo alternativu, pokud není zadána žádná hodnota. |
-| [operátor->](#op_as) | Odkazuje na obsaženou hodnotu `optional` objektu. |
-| [podnikatel](#op_mem) | Odkazuje na obsaženou hodnotu `optional` objektu. |
-| [operátor bool](#op_bool) | Vrátí, zda `optional` objekt obsahuje hodnotu. |
+| [operátor->](#op_as) | Odkazuje na obsaženou hodnotu objektu `optional`. |
+| [podnikatel](#op_mem) | Odkazuje na obsaženou hodnotu objektu `optional`. |
+| [operátor bool](#op_bool) | Vrátí, zda objekt `optional` obsahuje hodnotu. |
 | **Modifikátory** | |
-| [reset](#reset) | Obnoví `optional` zničení jakékoli obsažené hodnoty. |
+| [nové](#reset) | Obnoví `optional` zničením obsažené hodnoty. |
 
 ## <a name="has_value"></a>has_value
 
@@ -100,33 +100,33 @@ explicit optional(optional<U>&& rhs);
 
 ### <a name="parameters"></a>Parametry
 
-*zarovnání indirekce RHS*\
-`optional` K zkopírování nebo přesunutí konstrukce obsažené hodnoty z.
+*zarovnání indirekce rhs* \
+@No__t_0 ke zkopírování nebo přesunutí konstrukce obsažené hodnoty z.
 
-*i_list*\
+*i_list* \
 Seznam inicializátorů, z něhož se má vytvořit obsažená hodnota
 
-*argumentů*\
+\ *argumentů*
 Seznam argumentů, z něhož se má vytvořit obsažená hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-`constexpr optional() noexcept;`
-`constexpr optional(nullopt_t nullopt) noexcept;`Tyto konstruktory konstrukce `optional` , které neobsahují hodnotu.
+`constexpr optional() noexcept;` 
+ `constexpr optional(nullopt_t nullopt) noexcept;` tyto konstruktory vytvoří `optional`, který neobsahuje hodnotu.
 
-`constexpr optional(const optional& rhs);`Konstruktor Copy inicializuje obsaženou hodnotu z obsažené hodnoty argumentu. Je definována jako Odstraněná, pokud `is_copy_constructible_v<T>` není pravda a je triviální, `is_trivially_copy_constructible_v<T>` Pokud má hodnotu true.
+`constexpr optional(const optional& rhs);` konstruktor Copy inicializuje z obsažené hodnoty argumentu obsaženou hodnotu. Je definována jako **Odstraněná** , pokud `is_copy_constructible_v<T>` není true a je triviální, pokud `is_trivially_copy_constructible_v<T>` true.
 
-`constexpr optional(optional&& rhs) noexcept;`Konstruktor Move inicializuje obsaženou hodnotu přesunutím z obsažené hodnoty argumentu. Nepodílí se na řešení přetížení `is_move_constructible_v<T>` , pokud není pravda a je triviální, `is_trivially_move_constructible_v<T>` Pokud má hodnotu true.
+`constexpr optional(optional&& rhs) noexcept;` konstruktor Move inicializuje obsaženou hodnotu přesunutím z obsažené hodnoty argumentu. Neúčastní řešení přetížení, pokud `is_move_constructible_v<T>` není pravda a je triviální, pokud `is_trivially_move_constructible_v<T>` true.
 
-`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);`Direct inicializuje obsaženou hodnotu jako při použití argumentů `std::forward<Args>(args)`. Tento konstruktor je `constexpr` , `T` Pokud je použit `constexpr`konstruktor. Nepodílí se na řešení přetížení `is_constructible_v<T, Args...>` , pokud není pravda.
+`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);` Direct inicializuje obsaženou hodnotu jako při použití argumentů `std::forward<Args>(args)`. Tento konstruktor je `constexpr`, je-li použit konstruktor `T` `constexpr`. Neúčastní řešení přetížení, pokud `is_constructible_v<T, Args...>` není pravda.
 
-`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);`Direct inicializuje obsaženou hodnotu jako při použití argumentů `i_list, std::forward<Args>(args)`. Tento konstruktor je `constexpr` , `T` Pokud je použit `constexpr`konstruktor. Nepodílí se na řešení přetížení `is_constructible_v<T, initializer_list<U>&, Args&&...>` , pokud není pravda.
+`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);` Direct inicializuje obsaženou hodnotu jako při použití argumentů `i_list, std::forward<Args>(args)`. Tento konstruktor je `constexpr`, je-li použit konstruktor `T` `constexpr`. Neúčastní řešení přetížení, pokud `is_constructible_v<T, initializer_list<U>&, Args&&...>` není pravda.
 
-`template <class U = T> explicit constexpr optional(U&& rhs);`Přímo inicializuje obsaženou hodnotu jako při použití `std::forward<U>(v)`. Tento konstruktor je `constexpr` , `T` Pokud je použit `constexpr`konstruktor. Není součástí řešení přetížení, pokud `is_constructible_v<T, U&&>` není true a `is_same_v<remove_cvref_t<U>, in_place_t>` a `is_same_v<remove_cvref_t<U>, optional>` je false.
+`template <class U = T> explicit constexpr optional(U&& rhs);` Direct inicializuje obsaženou hodnotu jako při použití `std::forward<U>(v)`. Tento konstruktor je `constexpr`, je-li použit konstruktor `T` `constexpr`. Nepodílí se na řešení přetížení, pokud `is_constructible_v<T, U&&>` není true a `is_same_v<remove_cvref_t<U>, in_place_t>` a `is_same_v<remove_cvref_t<U>, optional>` mají hodnotu false.
 
-`template <class U> explicit optional(const optional<U>& rhs);`Pokud *Zarovnání indirekce RHS* obsahuje hodnotu, přímo inicializuje obsaženou hodnotu z obsažené hodnoty argumentu. Nepodílí se na řešení přetížení `is_constructible_v<T, const U&>` , pokud není pravda `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`a `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`,, `is_convertible_v<const optional<U>&&, T>` a jsou všechna false.
+`template <class U> explicit optional(const optional<U>& rhs);` Pokud *Zarovnání indirekce RHS* obsahuje hodnotu, přímo inicializuje obsaženou hodnotu z obsažené hodnoty argumentu. Nepodílí se na rozlišení přetěžování, pokud `is_constructible_v<T, const U&>` hodnotu true a `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` a `is_convertible_v<const optional<U>&&, T>` jsou všechny nepravdivé.
 
-`template <class U> explicit optional(optional<U>&& rhs);`Pokud *Zarovnání indirekce RHS* obsahuje hodnotu, přímo inicializuje obsaženou hodnotu jako při použití `std::move(*rhs)`. Nepodílí se na řešení přetížení `is_constructible_v<T, U&&>` , pokud není pravda `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`a `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`,, `is_convertible_v<const optional<U>&&, T>` a jsou všechna false.
+`template <class U> explicit optional(optional<U>&& rhs);` Pokud *Zarovnání indirekce RHS* obsahuje hodnotu, přímo inicializuje obsaženou hodnotu jako při použití `std::move(*rhs)`. Nepodílí se na rozlišení přetěžování, pokud `is_constructible_v<T, U&&>` hodnotu true a `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` a `is_convertible_v<const optional<U>&&, T>` jsou všechny nepravdivé.
 
 ## <a name="optional-destructor"></a>~ Volitelný destruktor
 
@@ -138,11 +138,11 @@ Zničí všechny netriviální zničitelné obsažené hodnoty, pokud je k dispo
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `T` je zničitelné triviální, pak `optional<T>` je také triviální zničitelné.
+Pokud je `T` triviální zničitelné, `optional<T>` je také triviální zničitelné.
 
 ## <a name="op_eq"></a>operátor =
 
-Nahradí obsaženou hodnotu `optional` s kopírováním nebo přesunutím z jiné `optional` obsažené hodnoty.
+Nahradí obsaženou hodnotu `optional` kopírováním nebo přesunutím z jiné hodnoty, která byla obsaženy `optional`.
 
 ```cpp
 optional& operator=(nullopt_t) noexcept;
@@ -167,7 +167,7 @@ T& emplace(initializer_list<U>, Args&&...);
 
 ## <a name="op_as"></a>operátor->
 
-Odkazuje na obsaženou hodnotu `optional` objektu.
+Odkazuje na obsaženou hodnotu objektu `optional`.
 
 ```cpp
 constexpr const T* operator->() const;
@@ -176,7 +176,7 @@ constexpr T* operator->();
 
 ## <a name="op_mem"></a>podnikatel
 
-Odkazuje na obsaženou hodnotu `optional` objektu.
+Odkazuje na obsaženou hodnotu objektu `optional`.
 
 ```cpp
 constexpr const T& operator*() const&;
@@ -187,7 +187,7 @@ constexpr const T&& operator*() const&&;
 
 ## <a name="op_bool"></a>operátor bool
 
-Oznamuje, zda `optional` objekt obsahuje obsaženou hodnotu.
+Oznamuje, zda objekt `optional` má obsaženou hodnotu.
 
 ```cpp
 constexpr explicit operator bool() const noexcept;
@@ -228,4 +228,4 @@ template <class U>
 
 ## <a name="see-also"></a>Viz také:
 
-[\<volitelné >](optional.md)
+[\<optional >](optional.md)

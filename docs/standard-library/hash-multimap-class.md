@@ -86,14 +86,14 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 2022031a52efbc8e8064ae23e14ae19e4aefb77c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b42dd5ba4aa3df12e3ef1aba930b2214dde19756
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448675"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687976"
 ---
-# <a name="hashmultimap-class"></a>hash_multimap – třída
+# <a name="hash_multimap-class"></a>hash_multimap – třída
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [Unordered_multimap třída](../standard-library/unordered-multimap-class.md).
@@ -112,16 +112,16 @@ class hash_multimap
 
 ### <a name="parameters"></a>Parametry
 
-*Zkrat*\
+@No__t_1 *klíčů*
 Klíčový datový typ, který se uloží do hash_multimap.
 
-*Textový*\
+*Zadejte* \
 Typ dat prvku, který bude uložen v hash_multimap.
 
-*Traits*\
+@No__t_1 *vlastností*
 Typ, který obsahuje dva objekty funkce, jeden z *vlastností* třídy, které jsou schopny porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a funkci hash, která je unárním predikátem mapování hodnot klíčů prvků na celá čísla bez znaménka Zadejte `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key>>` je výchozí hodnota.
 
-*Dělující*\
+@No__t_1 *přidělování*
 Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování hash_multimap's a navracení paměti. Tento argument je nepovinný a výchozí hodnota je `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Poznámky
@@ -138,7 +138,7 @@ Hash_multimap je:
 
 - Kontejner asociativní podle páru, protože jeho hodnoty prvků jsou odlišné od hodnot klíčů.
 
-- Třída šablony, protože poskytuje obecné funkce a to nezávisle na určitém typu dat obsažených jako prvky nebo klíče. Datové typy použité pro prvky a klíče jsou místo toho zadány jako parametry v šabloně třídy společně s funkcí porovnání a alokátorem.
+- Šablona třídy, protože funkce, které poskytuje, jsou obecné a nezávisle na konkrétním typu dat obsažených jako elementy nebo klíče. Datové typy použité pro prvky a klíče jsou místo toho zadány jako parametry v šabloně třídy společně s funkcí porovnání a alokátorem.
 
 Hlavní výhodou použití algoritmu hash pro řazení je vyšší efektivita; úspěšné hashování provádí vložení, odstranění a vyhledá v konstantním průměrném čase v porovnání s časem, který je úměrný logaritmu počtu prvků v kontejneru pro řazení technik. Hodnota prvku v hash_multimap, ale ne jeho přidružená hodnota klíče, může být změněna přímo. Namísto toho hodnoty klíčů přidružené ke starým prvkům musí být odstraněny a vloženy nové hodnoty klíče související s novými prvky.
 
@@ -146,9 +146,9 @@ Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vklá
 
 Hash_multimap by měl být asociativní kontejner výběru, pokud podmínky přidružování hodnot k jejich klíčům jsou splněné aplikací. Model pro tento typ struktury je uspořádaný seznam klíčových slov s přidruženými řetězcovými hodnotami poskytujícími (řekněme) definice, kde slova nebyla vždy jednoznačně definována. Pokud místo toho byla klíčová slova definována jedinečně, takže klíče byly jedinečné, pak by měl být hash_map kontejnerem volby. Pokud na druhé straně je jenom uložený seznam slov, pak bude hash_set správným kontejnerem. Pokud bylo povoleno více výskytů slov, pak bude hash_multiset odpovídající strukturou kontejneru.
 
-Hash_multimap objedná sekvenci, kterou řídí, voláním uloženého `Traits` objektu hash typu [value_compare](../standard-library/value-compare-class.md). K tomuto uloženému objektu je možné přistupovat voláním členské funkce [key_comp](../standard-library/hash-map-class.md#key_comp). Takový objekt funkce se musí chovat stejně jako objekt třídy [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>`. Konkrétně pro všechny `Key` hodnoty typu `Key`je volání `Traits (Key)` výsledkem distribuce hodnot typu `size_t`.
+Hash_multimap objedná sekvenci, kterou řídí, voláním uložené hodnoty hash `Traits` objektu typu [value_compare](../standard-library/value-compare-class.md). K tomuto uloženému objektu je možné přistupovat voláním členské funkce [key_comp](../standard-library/hash-map-class.md#key_comp). Takový objekt funkce se musí chovat stejně jako objekt třídy [hash_compare](../standard-library/hash-compare-class.md) `<Key, less<Key>>`. Konkrétně pro všechny hodnoty `Key` typu `Key` volání `Traits (Key)` poskytuje distribuci hodnot typu `size_t`.
 
-Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. Výsledkem je řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát f (x, y) je objekt funkce, který `x` má dva objekty argumentu a `y` a návratovou hodnotu **true** nebo **false**. Řazení uložené na hash_multimap je přísné slabé seřazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde jsou dva `x` objekty `y` a jsou definovány tak, aby byly ekvivalentní při použití f (x , y) a f (y, x) jsou **false**. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
+Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. Výsledkem je řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát f (x, y) je objekt funkce, který má dva objekty argumentu `x` a `y` a návratovou hodnotu **true** nebo **false**. Řazení uložené na hash_multimap je přísné slabé seřazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde jsou dva objekty `x` a `y` definovány jako ekvivalentní, když jsou hodnoty v f (x, y) i f (y). , x) jsou **nepravdivé**. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
 
 Skutečné pořadí prvků v řízené sekvenci závisí na funkci hash, funkci řazení a aktuální velikosti zatřiďovací tabulky uložené v objektu kontejneru. Nelze určit aktuální velikost zatřiďovací tabulky, takže nemůžete obecné předpovědět pořadí prvků v řízené sekvenci. Vkládání prvků nezruší platnost žádných iterátorů a odstranění prvků zruší platnost pouze těch iterátorů, které výslovně odkazovaly na odstraněné prvky.
 
@@ -158,25 +158,25 @@ Iterátor poskytnutý třídou hash_multimap je obousměrný iterátor, ale funk
 
 |Konstruktor|Popis|
 |-|-|
-|[hash_multimap](#hash_multimap)|Sestaví seznam konkrétní velikosti nebo s prvky konkrétní hodnoty nebo s určitou `allocator` nebo jinou kopií. `hash_multimap`|
+|[hash_multimap](#hash_multimap)|Sestaví seznam konkrétní velikosti nebo s prvky konkrétní hodnoty nebo pomocí konkrétního `allocator` nebo jako kopii nějakého jiného `hash_multimap`.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[allocator_type](#allocator_type)|Typ, který představuje `allocator` třídu `hash_multimap` pro objekt.|
-|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst `const` element `hash_multimap`v.|
-|[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na prvek const v.  `hash_multimap`|
-|[const_reference](#const_reference)|Typ, který poskytuje odkaz na prvek **const** uložený v a `hash_multimap` pro čtení a provádění operací **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst libovolný  element const v `hash_multimap`.|
+|[allocator_type](#allocator_type)|Typ, který představuje třídu `allocator` pro objekt `hash_multimap`.|
+|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst `const` prvek v `hash_multimap`.|
+|[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na prvek **const** v `hash_multimap`.|
+|[const_reference](#const_reference)|Typ, který poskytuje odkaz na prvek **const** uložený v `hash_multimap` pro čtení a provádění operací **const** .|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst libovolný prvek **const** v `hash_multimap`.|
 |[difference_type](#difference_type)|Typ se znaménkem typu Integer, který lze použít k reprezentaci počtu prvků `hash_multimap` v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterator](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_multimap`.|
+|[iterátor](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_multimap`.|
 |[key_compare](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `hash_multimap`.|
 |[key_type](#key_type)|Typ, který popisuje objekt klíče řazení, který představuje jednotlivé prvky `hash_multimap`.|
 |[mapped_type](#mapped_type)|Typ, který představuje datový typ uložený v `hash_multimap`.|
-|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_multimap`.|
-|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v `hash_multimap`.|
-|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném pořadí `hash_multimap`.|
+|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_multimap`.|
+|[odkaz](#reference)|Typ, který poskytuje odkaz na prvek uložený v `hash_multimap`.|
+|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném `hash_multimap`.|
 |[size_type](#size_type)|Typ unsigned integer, který může představovat počet prvků v `hash_multimap`.|
 |[value_type](#value_type)|Typ, který poskytuje objekt funkce, který může porovnat dva prvky jako klíče řazení pro určení jejich relativního pořadí v `hash_multimap`.|
 
@@ -188,37 +188,37 @@ Iterátor poskytnutý třídou hash_multimap je obousměrný iterátor, ale funk
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek v `hash_multimap`.|
 |[cend](#cend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v `hash_multimap`.|
 |[jejich](#clear)|Smaže všechny prvky `hash_multimap`.|
-|[výpočtu](#count)|Vrátí počet prvků, `hash_multimap` jejichž klíč odpovídá klíči určenému parametrem.|
-|[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném pořadí `hash_multimap`.|
-|[crend](#crend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném pořadí `hash_multimap`.|
-|[emplace](#emplace)|Vloží prvek konstruovaný na místo `hash_multimap`.|
-|[emplace_hint](#emplace_hint)|Vloží prvek konstruovaný do a `hash_multimap`s pomocným parametrem umístění.|
-|[empty](#empty)|Testuje, zda `hash_multimap` je objekt prázdný.|
+|[výpočtu](#count)|Vrátí počet prvků v `hash_multimap`, jejichž klíč odpovídá klíči určenému parametrem.|
+|[crbegin –](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném `hash_multimap`.|
+|[crend](#crend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném `hash_multimap`.|
+|[emplace](#emplace)|Vloží prvek konstruovaný na místo do `hash_multimap`.|
+|[emplace_hint](#emplace_hint)|Vloží prvek konstruovaný na místo do `hash_multimap` s pomocným parametrem umístění.|
+|[obsahovat](#empty)|Testuje, zda je `hash_multimap` prázdné.|
 |[účelu](#end)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v `hash_multimap`.|
 |[equal_range](#equal_range)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v `hash_multimap`.|
-|[ověřování](#erase)|Odebere prvek nebo rozsah prvků v `hash_multimap` zadaném umístění.|
-|[najít](#find)|Vrátí iterátor adresující umístění elementu v `hash_multimap` , který má klíč odpovídající zadanému klíči.|
-|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objektu použitou k `hash_multimap`vytvoření.|
-|[zadat](#insert)|Vloží prvek nebo rozsah prvků do `hash_multimap` zadané pozice.|
+|[ověřování](#erase)|Odebere prvek nebo rozsah prvků v `hash_multimap` ze zadané pozice.|
+|[najít](#find)|Vrátí iterátor adresující umístění elementu v `hash_multimap`, který má klíč shodný se zadaným klíčem.|
+|[get_allocator](#get_allocator)|Vrátí kopii objektu `allocator`, který se používá k vytvoření `hash_multimap`.|
+|[zadat](#insert)|Vloží prvek nebo rozsah prvků do `hash_multimap` na zadané pozici.|
 |[key_comp](#key_comp)|Načte kopii objektu porovnání, která se používá k řazení klíčů v `hash_multimap`.|
-|[lower_bound](#lower_bound)|Vrátí iterátor na první prvek v `hash_multimap` , který má hodnotu klíče, která je rovna nebo větší než zadaný klíč.|
+|[lower_bound](#lower_bound)|Vrátí iterátor na první prvek v `hash_multimap`, který má hodnotu klíče, která je rovna nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku `hash_multimap`.|
-|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném pořadí `hash_multimap`.|
-|[rend](#rend)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v obráceném pořadí `hash_multimap`.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném `hash_multimap`.|
+|[rend](#rend)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v obráceném `hash_multimap`.|
 |[hodnota](#size)|Určuje novou velikost pro `hash_multimap`.|
-|[swap](#swap)|Vyměňuje prvky dvou `hash_multimap`s.|
-|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `hash_multimap` , který má hodnotu klíče, která je větší než zadaný klíč.|
+|[adresu](#swap)|Vyměňuje prvky dvou `hash_multimap`s.|
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `hash_multimap`, který má hodnotu klíče, která je větší než zadaný klíč.|
 |[value_comp](#value_comp)|Načte kopii objektu porovnání, která se používá k seřazení hodnot prvků v `hash_multimap`.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[hash_multimap::operator=](#op_eq)|Nahradí prvky a `hash_multimap` jinou `hash_multimap`kopií.|
+|[hash_multimap:: operator =](#op_eq)|Nahradí prvky `hash_multimap` kopií jiného `hash_multimap`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** \<hash_map>
+**Záhlaví:** \<hash_map >
 
 **Obor názvů:** stdext
 
@@ -235,13 +235,13 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>Poznámky
 
-`allocator_type`je synonymum pro parametr `Allocator`šablony.
+`allocator_type` je synonymum pro parametr šablony `Allocator`.
 
-Další informace o `Allocator`naleznete v části poznámky v tématu [Třída hash_multimap](../standard-library/hash-multimap-class.md) .
+Další informace o `Allocator` naleznete v části poznámky v tématu [Třída hash_multimap](../standard-library/hash-multimap-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `allocator_type`naleznete v příkladu pro [get_allocator](#get_allocator) .
+Příklad použití `allocator_type` naleznete v příkladu pro [get_allocator](#get_allocator) .
 
 ## <a name="begin"></a>hash_multimap:: begin
 
@@ -262,7 +262,7 @@ Obousměrný iterátor, který adresuje první prvek v hash_multimap nebo umíst
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `begin` je vrácená hodnota přiřazena `const_iterator`k, prvky v objektu hash_multimap nelze upravovat. Pokud `begin` je vrácená hodnota přiřazena `iterator`k, lze upravit prvky v objektu hash_multimap.
+Pokud je vrácená hodnota `begin` přiřazena k `const_iterator`, prvky v objektu hash_multimap nelze upravovat. Pokud je vrácená hodnota `begin` přiřazena k `iterator`, prvky v objektu hash_multimap lze upravit.
 
 ### <a name="example"></a>Příklad
 
@@ -321,7 +321,7 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní obousměrný iterátor, který adresuje první prvek v [hash_multimap](../standard-library/hash-multimap-class.md) nebo je v umístění úspěšné `hash_multimap`.
+Konstantní obousměrný iterátor, který adresuje první prvek v [hash_multimap](../standard-library/hash-multimap-class.md) nebo umístění, které je úspěšně prázdné `hash_multimap`.
 
 ### <a name="example"></a>Příklad
 
@@ -365,11 +365,11 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní obousměrný iterátor, který adresuje umístění následující po posledním prvku v [hash_multimap](../standard-library/hash-multimap-class.md). Pokud je prázdný, pak `hash_multimap::cend == hash_multimap::begin`. `hash_multimap`
+Konstantní obousměrný iterátor, který adresuje umístění následující po posledním prvku v [hash_multimap](../standard-library/hash-multimap-class.md). Pokud je `hash_multimap` prázdné, `hash_multimap::cend == hash_multimap::begin`.
 
 ### <a name="remarks"></a>Poznámky
 
-`cend`slouží k otestování, zda iterátor dosáhl konce jeho hash_multimap.
+`cend` slouží k otestování, zda iterátor dosáhl konce jeho hash_multimap.
 
 Hodnota vrácená `cend` by neměla být zpětně odkazovaná.
 
@@ -468,17 +468,17 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Typ `const_iterator` nelze použít pro úpravu hodnoty prvku.
 
-Definice hash_multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. `const_iterator` Hodnota klíče je k dispozici prostřednictvím prvního páru členů a hodnota mapovaného prvku je k dispozici prostřednictvím druhého člena dvojice.
+@No__t_0 definované hash_multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím prvního páru členů a hodnota mapovaného prvku je k dispozici prostřednictvím druhého člena dvojice.
 
-Chcete-li odkázat `const_iterator` `cIter` na ukazatel ukazující na prvek v hash_multimap, použijte `->` operátor.
+Chcete-li přesměrovat `const_iterator` `cIter` ukazovat na prvek v hash_multimap, použijte operátor `->`.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte `cIter->first`, který je `(*cIter).first`ekvivalentní. Pro přístup k hodnotě mapovaného pro datum elementu použijte `cIter->second`, který je `(*cIter).second`ekvivalentní.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte `cIter->first`, který je ekvivalentní `(*cIter).first`. Pro přístup k hodnotě mapovaného pole Datum elementu použijte `cIter->second`, který je ekvivalentní `(*cIter).second`.
 
 ### <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [začátek](#begin) příkladu pomocí `const_iterator`.
 
-## <a name="const_pointer"></a>  hash_multimap::const_pointer
+## <a name="const_pointer"></a>hash_multimap::const_pointer
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [Unordered_multimap třída](../standard-library/unordered-multimap-class.md).
@@ -556,7 +556,7 @@ The data value of 1st element in the hash_multimap is 10.
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [Unordered_multimap třída](../standard-library/unordered-multimap-class.md).
 
-Typ, který poskytuje obousměrný iterátor, který může číst libovolný  element const v hash_multimap.
+Typ, který poskytuje obousměrný iterátor, který může číst libovolný element **const** v hash_multimap.
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
@@ -566,15 +566,15 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 Typ `const_reverse_iterator` nemůže změnit hodnotu prvku a použít k iteraci přes hash_multimap v obráceném pořadí.
 
-Definice hash_multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`, jejichž první člen je klíč k elementu a jehož druhým členem je mapované datum uchovávané prvkem. `const_reverse_iterator`
+@No__t_0 definovaná pomocí hash_multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`, jejichž prvním členem je klíč k elementu a jehož druhým členem je mapované datum uchovávané prvkem.
 
-Chcete-li odkázat `const_reverse_iterator` `crIter` na ukazatel ukazující na prvek v hash_multimap, použijte `->` operátor.
+Chcete-li přesměrovat `const_reverse_iterator` `crIter` ukazovat na prvek v hash_multimap, použijte operátor `->`.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte `crIter->first`, který je `(*crIter).first`ekvivalentní. Pro přístup k hodnotě mapovaného pro datum elementu použijte `crIter->second`, který je `(*crIter).second`ekvivalentní.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte `crIter->first`, který je ekvivalentní `(*crIter).first`. Pro přístup k hodnotě mapovaného pole Datum elementu použijte `crIter->second`, který je ekvivalentní `(*crIter).second`.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat [](#rend) a používat, `const_reverse_iterator`naleznete v příkladu pro rend.
+Příklad, jak deklarovat a použít `const_reverse_iterator`, naleznete v příkladu pro [rend](#rend) .
 
 ## <a name="count"></a>hash_multimap:: Count
 
@@ -589,7 +589,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Klíč prvků, které mají být porovnány s hash_multimap.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -662,15 +662,15 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní reverzní obousměrný iterátor, který adresuje první prvek v obráceném [hash_multimap](../standard-library/hash-multimap-class.md) nebo řeší, co byl poslední prvek v neobráceném pořadí `hash_multimap`.
+Konstantní reverzní obousměrný iterátor, který adresuje první prvek v obráceném [hash_multimap](../standard-library/hash-multimap-class.md) nebo řeší, co byl poslední prvek v neobráceném `hash_multimap`.
 
 ### <a name="remarks"></a>Poznámky
 
-`crbegin`se používá s obráceným hash_multimap stejně jako [hash_multimap:: begin](#begin) se používá s `hash_multimap`.
+`crbegin` se používá s obráceným hash_multimap stejně jako [hash_multimap:: begin](#begin) se používá s `hash_multimap`.
 
-S návratovou hodnotou `crbegin` `hash_multimap` nelze objekt upravit.
+S návratovou hodnotou `crbegin` nelze změnit objekt `hash_multimap`.
 
-`crbegin`lze použít k iteraci `hash_multimap` zpětně.
+`crbegin` lze použít k iteraci `hash_multimap` zpět.
 
 ### <a name="example"></a>Příklad
 
@@ -714,15 +714,15 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní reverzní obousměrný iterátor, který adresuje umístění následující po posledním prvku v obráceném [hash_multimap](../standard-library/hash-multimap-class.md) (umístění, které předchází prvnímu prvku v opačném případě `hash_multimap`).
+Const reverzní obousměrný iterátor, který adresuje umístění následující po posledním prvku v obráceném [hash_multimap](../standard-library/hash-multimap-class.md) (umístění, které předchází první prvek v neobráceném `hash_multimap`).
 
 ### <a name="remarks"></a>Poznámky
 
-`crend`se používá s obráceným hash_multimap stejně jako [hash_multimap:: end](#end) se používá s hash_multimap.
+`crend` se používá s obráceným hash_multimap stejně jako [hash_multimap:: end](#end) se používá s hash_multimap.
 
-S návratovou hodnotou `crend` `hash_multimap` nelze objekt upravit.
+S návratovou hodnotou `crend` nelze změnit objekt `hash_multimap`.
 
-`crend`dá se použít k otestování, jestli reverzní iterátor dosáhl konce jeho hash_multimap.
+`crend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho hash_multimap.
 
 Hodnota vrácená `crend` by neměla být zpětně odkazovaná.
 
@@ -756,7 +756,7 @@ int main( )
 The last element of the reversed hash_multimap hm1 is 3.
 ```
 
-## <a name="difference_type"></a>  hash_multimap::difference_type
+## <a name="difference_type"></a>hash_multimap::d ifference_type
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [Unordered_multimap třída](../standard-library/unordered-multimap-class.md).
@@ -769,9 +769,9 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 ### <a name="remarks"></a>Poznámky
 
-`difference_type` Je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. `first` `first` `last`  Obvykle se používá k reprezentaci počtu prvků v rozsahu [First, Last) mezi iterátory a, zahrnuje element, na který se odkazuje, a rozsah prvků až do, ale ne. `difference_type` zahrnutí prvku, na `last`který ukazuje.
+@No__t_0 je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. @No__t_0 se obvykle používá k reprezentaci počtu prvků v rozsahu *[First, Last)* mezi iterátory `first` a `last`, zahrnuje element, na který odkazuje `first`, a rozsah prvků až do, ale ne včetně. , prvek odkazoval na `last`.
 
-Všimněte si, `difference_type` že i když je k dispozici pro všechny iterátory, které splňují požadavky vstupního iterátoru, což zahrnuje třídu Obousměrných iterátorů podporovaných vratnými kontejnery, jako je například set, odečítání mezi iterátory je pouze podporováno iterátory náhodného přístupu, které jsou poskytovány kontejnerem s náhodným přístupem, jako je například Vector.
+Všimněte si, že i když `difference_type` je k dispozici pro všechny iterátory, které splňují požadavky vstupního iterátoru, které zahrnují třídu Obousměrných iterátorů podporovaných vratnými kontejnery, jako je například set, odečítání mezi iterátory je podporováno pouze pomocí iterátory s náhodným přístupem poskytované kontejnerem s náhodným přístupem, jako je například Vector.
 
 ### <a name="example"></a>Příklad
 
@@ -853,7 +853,7 @@ iterator emplace(ValTy&& val);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`emplace` Členská funkce vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen.
+Členská funkce `emplace` vrací iterátor, který odkazuje na pozici, kam byl nový prvek vložen.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -906,12 +906,12 @@ iterator emplace_hint(
 
 |Parametr|Popis|
 |-|-|
-|*počítává*|Hodnota, která se používá k přesunutí konstrukce elementu, který má být [](../standard-library/hash-multimap-class.md) vložen do objektu `hash_multimap` hash_multimap, pokud již tento prvek neobsahuje (nebo obecněji je prvek, jehož klíč je ekvivalentně seřazen).|
+|*počítává*|Hodnota použitá k přesunutí konstrukce elementu, který má být vložen do objektu [hash_multimap](../standard-library/hash-multimap-class.md) , pokud `hash_multimap` již tento prvek neobsahuje (nebo všeobecně obecně, element, jehož klíč je ekvivalentní objednaný).|
 |*_Where*|Nápověda týkající se místa, kde lze začít hledat správný bod vložení.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce [hash_multimap:: emplace](#emplace) Vrátí iterátor, který odkazuje na pozici, kam byl nový element vložen do `hash_multimap`.
+Členská funkce [hash_multimap:: emplace](#emplace) vrací iterátor, který odkazuje na pozici, kam byl nový prvek vložen do `hash_multimap`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1018,7 +1018,7 @@ Obousměrný iterátor, který adresuje umístění následující po posledním
 
 ### <a name="remarks"></a>Poznámky
 
-`end`slouží k otestování, zda iterátor dosáhl konce jeho hash_multimap.
+`end` slouží k otestování, zda iterátor dosáhl konce jeho hash_multimap.
 
 Hodnota vrácená `end` by neměla být zpětně odkazovaná.
 
@@ -1085,14 +1085,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Klíč argumentu, který se má porovnat s klíčem řazení prvku z prohledávané hash_multimapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Pár iterátorů, jako je první [lower_bound](#lower_bound) klíče a druhý je [Upper_bound](#upper_bound) klíče.
 
-Pro přístup k prvnímu iterátoru páru `pr` vráceného členskou funkcí použijte `pr`. **nejprve** a pro zpětnou vazbu dolního iterátoru použijte \*( `pr`. **první**). Pro přístup k druhému iterátoru páru `pr` vráceného členskou funkcí použijte `pr`. **sekundy** a pro zpětnou vazbu horního iterátoru, \*použijte `pr`(. **sekundy**).
+Chcete-li získat přístup k prvnímu iterátoru páru `pr` vráceném členskou funkcí, použijte `pr`. **nejprve** a pro zpětnou vazbu dolního iterátoru použijte \* (`pr`. **první**). Pro přístup k druhému iterátoru páru `pr` vráceném členskou funkcí použijte `pr`. **sekundy** a pro zpětnou vazbu horního iterátoru, použijte \* (`pr`. **sekundy**).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1176,16 +1176,16 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where*\
+*_Where* \
 Pozice prvku, který má být odebrán z hash_multimap.
 
-*první*\
+*první* \
 Pozice prvního prvku byla odebrána z hash_multimap.
 
-*posledního*\
+*poslední* \
 Pozice hned za posledním prvkem odebraným z hash_multimap.
 
-*zkrat*\
+\ *klíčů*
 Klíč prvků, které mají být odebrány z hash_multimap.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1300,7 +1300,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Klíč, který má být porovnán klíčem řazení prvku z hash_multimap.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1309,9 +1309,9 @@ Iterátor, který adresuje první umístění elementu se zadaným klíčem, neb
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí iterátor, který adresuje element v hash_multimap, jehož klíč řazení je `equivalent` klíč k argumentu v rámci binárního predikátu, který vystaví řazení na základě vztahu menšího než srovnatelnosti.
+Členská funkce vrátí iterátor, který adresuje element v hash_multimap, jehož klíč řazení je `equivalent` k klíči argumentu pod binárním predikátem, který vystaví řazení na základě vztahu menšího, než je srovnatelnost.
 
-Pokud `find` je vrácená hodnota přiřazena `const_iterator`k, objekt hash_multimap nelze změnit. Pokud `find` je vrácená hodnota přiřazena `iterator`k, lze objekt hash_multimap upravit.
+Pokud je vrácená hodnota `find` přiřazena k `const_iterator`, objekt hash_multimap nelze změnit. Pokud je vrácená hodnota `find` přiřazena k `iterator`, lze objekt hash_multimap upravit.
 
 ### <a name="example"></a>Příklad
 
@@ -1515,8 +1515,8 @@ hash_multimap(
 
 |Parametr|Popis|
 |-|-|
-|*VŠ*|Třída přidělování úložiště, která se má použít pro tento objekt hash_multimap, který má `Allocator`výchozí hodnotu.|
-|*Zajištění*|Funkce porovnání typu `const Traits` sloužící k uspořádání prvků v mapě, což je `Traits`výchozí hodnota.|
+|*VŠ*|Třída přidělování úložiště, která se má použít pro tento objekt hash_multimap, který má výchozí hodnotu `Allocator`.|
+|*Zajištění*|Funkce porovnání typu `const Traits` slouží k uspořádání prvků na mapě, která má výchozí hodnotu `Traits`.|
 |*Kliknutím*|Objekt map, ze kterého je kopií vytvořen objekt set.|
 |*První*|Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.|
 |*Posledního*|Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.|
@@ -1528,15 +1528,15 @@ Všechny konstruktory ukládají typ objektu přidělování, který spravuje pa
 
 Všechny konstruktory inicializují své hash_multimap.
 
-Všechny konstruktory ukládají objekt funkce typu `Traits` , který se používá k navázání objednávky mezi klíči hash_multimap a může být později vrácen voláním [key_comp](#key_comp).
+Všechny konstruktory ukládají objekt funkce typu `Traits`, který se používá k navázání objednávky mezi klíči hash_multimap a může být později vrácen voláním [key_comp](#key_comp).
 
-První tři konstruktory určují prázdné počáteční hash_multimap; druhý určuje typ funkce porovnání (*comp*), která se použije při vytváření pořadí prvků, a třetí explicitně určuje typ přidělujícího prvku (`_Al`), který se má použít. Klíčové slovo `explicit` potlačí určité druhy automatických převodů typu.
+První tři konstruktory určují prázdné počáteční hash_multimap; druhý určuje typ funkce porovnání (*comp*), která se použije při stanovení pořadí prvků, a třetí explicitně určuje typ přidělujícího prvku (`_Al`), který se má použít. Klíčové slovo `explicit` potlačí určité druhy automatických převodů typu.
 
-Čtvrtý konstruktor určuje kopii hash_multimap `Right`.
+Čtvrtý konstruktor určuje kopii `Right` hash_multimap.
 
-Následující tři konstruktory kopírují rozsah `First, Last)` mapy se zvýšením explicitního určení typu funkce porovnání třídy `Traits` a přidělování.
+Následující tři konstruktory kopírují rozsah `First, Last)` mapy a zvyšují tak explicitní určení typu funkce porovnání třídy `Traits` a přidělování.
 
-Osmý konstruktor přesune hash_multimap `Right`.
+Osmý konstruktor přesune `Right` hash_multimap.
 
 Poslední tři konstruktory používají initializer_list.
 
@@ -1582,19 +1582,19 @@ iterator insert(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První dvě `insert` členské funkce vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen.
+První dvě členské funkce `insert` Vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen.
 
 Třetí členská funkce používá initializer_list pro prvky, které mají být vloženy.
 
 Čtvrtá členská funkce vloží sekvenci hodnot prvků do mapy, která odpovídá každému prvku, který je adresován iterátorem v rozsahu `[First, Last)` zadané sady.
 
-Poslední dvě `insert` členské funkce se chovají stejně jako první dva, s tím rozdílem, že přesouvají-vytvoří vloženou hodnotu.
+Poslední dvě `insert` členské funkce se chovají stejně jako první dva, s tím rozdílem, že přesunou vloženou hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
 [Value_type](#value_type) elementu je pár, takže hodnota elementu bude seřazená dvojice, ve které je první komponenta rovna hodnotě klíče a druhá součást je rovna hodnotě dat elementu.
 
-Vložení se může vyskytnout v konstantním konstantním čase pro verzi `insert`pomocného parametru, namísto logaritmické doby, pokud kurzor okamžitě následuje *tam, kde*.
+Vložení se může vyskytnout v konstantním konstantním čase pro verzi pomocného parametru `insert`, namísto logaritmické doby, pokud kurzor okamžitě následuje *tam, kde*.
 
 ## <a name="iterator"></a>hash_multimap:: iterátor
 
@@ -1609,11 +1609,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Poznámky
 
-[](#value_type) `pair` \< Hash_multimap odkazuje na objekty value_type, které jsou typu const Key, Type >, jehož prvním členem je klíč k elementu a jehož druhým členem je mapované datum uchovávané `iterator` element.
+@No__t_0 definované hash_multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair` \< **const Key, typ**>, jehož prvním členem je klíč k elementu a druhý člen je mapované datum uchovávané prvkem.
 
-Chcete-li odkázat na **iterátor** `Iter` ukazující na prvek v `->` hash_multimap, použijte operátor.
+Chcete-li přesměrovat **iterátor** `Iter` odkazovat na prvek v hash_multimap, použijte operátor `->`.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte `Iter`  ->  **nejprve**, který je ekvivalentní (\* `Iter`). **nejprve**. Chcete-li získat přístup k hodnotě mapovaného pole datum pro element `Iter`, použijte  ->  **druhý**, který je ekvivalentní\* ( `Iter`). **nejprve**.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte**nejprve**`Iter`  -> , který je ekvivalentní (\* `Iter`). **nejprve**. Pro přístup k hodnotě mapovaného pole pro prvek použijte `Iter`  -> **Second**, který je ekvivalentní (\* `Iter`). **nejprve**.
 
 Typ `iterator` lze použít pro úpravu hodnoty prvku.
 
@@ -1640,9 +1640,9 @@ Vrátí objekt funkce, který hash_multimap používá k seřazení jeho prvků.
 
 Uložený objekt definuje členskou funkci.
 
-**bool – operátor (const Key &** `left` **, const Key &** `right` **);**
+**bool – operátor (const key &** `left` **, const Key &** `right` **);**
 
-který vrátí **hodnotu true** , pokud `left` předchází a není rovno `right` v pořadí řazení.
+Vrátí **hodnotu true** , pokud `left` předchází a není rovna `right` v pořadí řazení.
 
 ### <a name="example"></a>Příklad
 
@@ -1706,15 +1706,15 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_compare`je synonymem *vlastností*parametrů šablony.
+`key_compare` je synonymum pro *vlastnosti*parametrů šablony.
 
 Další informace o *vlastnostích* naleznete v tématu [třídy hash_multimap](../standard-library/hash-multimap-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat [](#key_comp) a používat `key_compare`, naleznete v příkladu pro key_comp.
+Příklad, jak deklarovat a používat `key_compare`, naleznete v příkladu pro [key_comp](#key_comp) .
 
-## <a name="key_type"></a>  hash_multimap::key_type
+## <a name="key_type"></a>hash_multimap::key_type
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [Unordered_multimap třída](../standard-library/unordered-multimap-class.md).
@@ -1727,13 +1727,13 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_type`je synonymum pro *klíč*parametru šablony.
+`key_type` je synonymum pro *klíč*parametru šablony.
 
 Další informace o *klíči*naleznete v části poznámky v tématu [Třída hash_multimap](../standard-library/hash-multimap-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat [](#value_type) a používat `key_compare`, naleznete v příkladu pro value_type.
+Příklad, jak deklarovat a používat `key_compare`, naleznete v příkladu pro [value_type](#value_type) .
 
 ## <a name="lower_bound"></a>hash_multimap::lower_bound
 
@@ -1750,14 +1750,14 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Klíč argumentu, který se má porovnat s klíčem řazení prvku z prohledávané hash_multimapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 [Iterátor](#iterator) nebo [const_iterator](#const_iterator) , které řeší umístění elementu v hash_multimap s klíčem, který je roven nebo větší než klíč argumentu nebo který řeší umístění, které následuje po posledním prvku v hash_multimap, pokud není shoda Nalezeno pro klíč.
 
-Pokud `lower_bound` je vrácená hodnota přiřazena `const_iterator`k, objekt hash_multimap nelze změnit. Pokud `lower_bound` je vrácená hodnota přiřazena `iterator`k, lze objekt hash_multimap upravit.
+Pokud je vrácená hodnota `lower_bound` přiřazena k `const_iterator`, objekt hash_multimap nelze změnit. Pokud je vrácená hodnota `lower_bound` přiřazena k `iterator`, lze objekt hash_multimap upravit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1843,13 +1843,13 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`mapped_type`je synonymum pro *typ*parametru šablony.
+`mapped_type` je synonymum pro *typ*parametru šablony.
 
 Další informace o *typu* najdete v tématu [Třída hash_multimap](../standard-library/hash-multimap-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat [](#value_type) a používat `key_type`, naleznete v příkladu pro value_type.
+Příklad, jak deklarovat a používat `key_type`, naleznete v příkladu pro [value_type](#value_type) .
 
 ## <a name="max_size"></a>hash_multimap::max_size
 
@@ -1906,11 +1906,11 @@ hash_multimap& operator=(hash_multimap&& right);
 
 |Parametr|Popis|
 |-|-|
-|*Kliknutím*|[Hash_multimap](../standard-library/hash-multimap-class.md) , který se kopíruje `hash_multimap`do.|
+|*Kliknutím*|[Hash_multimap](../standard-library/hash-multimap-class.md) se kopíruje do `hash_multimap`.|
 
 ### <a name="remarks"></a>Poznámky
 
-Po vymazání všech existujících prvků `hash_multimap`v, `operator=` buď zkopíruje nebo přesune `hash_multimap`obsah *přímo* do.
+Po vymazání všech existujících prvků v `hash_multimap` `operator=` buď zkopírování nebo přesunutí obsahu *přímo* do `hash_multimap`.
 
 ### <a name="example"></a>Příklad
 
@@ -1986,11 +1986,11 @@ Reverzní obousměrný iterátor, který adresuje první prvek v obráceném has
 
 ### <a name="remarks"></a>Poznámky
 
-`rbegin`se používá s obráceným hash_multimap stejně jako [Begin](#begin) se používá s hash_multimap.
+`rbegin` se používá s obráceným hash_multimap stejně jako [Begin](#begin) se používá s hash_multimap.
 
-Pokud `rbegin` je vrácená hodnota přiřazena `const_reverse_iterator`k, nelze objekt hash_multimap změnit. Pokud `rbegin` je vrácená hodnota přiřazena `reverse_iterator`k, lze objekt hash_multimap upravit.
+Pokud je vrácená hodnota `rbegin` přiřazena k `const_reverse_iterator`, objekt hash_multimap nelze změnit. Pokud je vrácená hodnota `rbegin` přiřazena k `reverse_iterator`, lze objekt hash_multimap upravit.
 
-`rbegin`dá se použít k iteraci hash_multimap dozadu.
+`rbegin` lze použít k iterování hash_multimap dozadu.
 
 ### <a name="example"></a>Příklad
 
@@ -2134,11 +2134,11 @@ Zpětný obousměrný iterátor, který adresuje umístění následující po p
 
 ### <a name="remarks"></a>Poznámky
 
-`rend`se používá s obráceným hash_multimap jako [End](#end) se používá s hash_multimap.
+`rend` se používá s obráceným hash_multimap stejně jako [End](#end) se používá s hash_multimap.
 
-Pokud `rend` je vrácená hodnota přiřazena k [const_reverse_iterator](#const_reverse_iterator), objekt hash_multimap nelze změnit. Pokud `rend` je vrácená hodnota přiřazena k [reverse_iterator](#reverse_iterator), lze objekt hash_multimap upravit.
+Pokud je vrácená hodnota `rend` přiřazena k [const_reverse_iterator](#const_reverse_iterator), objekt hash_multimap nelze změnit. Pokud je vrácená hodnota `rend` přiřazena k [reverse_iterator](#reverse_iterator), lze objekt hash_multimap upravit.
 
-`rend`dá se použít k otestování, jestli reverzní iterátor dosáhl konce jeho hash_multimap.
+`rend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho hash_multimap.
 
 Hodnota vrácená `rend` by neměla být zpětně odkazovaná.
 
@@ -2216,13 +2216,13 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `reverse_iterator` se používá k iterování přes hash_multimap v obráceném pořadí.
+Typ `reverse_iterator` slouží k iterování hash_multimap v obráceném pořadí.
 
-[](#value_type) `pair` \< Definice hash_multimap odkazuje na objekty value_type, které jsou typu const Key, zadejte >. `reverse_iterator` Hodnota klíče je k dispozici prostřednictvím prvního páru členů a hodnota mapovaného prvku je k dispozici prostřednictvím druhého člena dvojice.
+@No__t_0 definované hash_multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair` \< **const Key, zadejte**>. Hodnota klíče je k dispozici prostřednictvím prvního páru členů a hodnota mapovaného prvku je k dispozici prostřednictvím druhého člena dvojice.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat [](#rbegin) a používat `reverse_iterator`, naleznete v příkladu pro rbegin.
+Příklad, jak deklarovat a používat `reverse_iterator`, naleznete v příkladu pro [rbegin](#rbegin) .
 
 ## <a name="size"></a>hash_multimap:: size
 
@@ -2289,9 +2289,9 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [Velikost](#size) pro příklad, jak deklarovat a použít`size_type`
+Podívejte se na příklad pro [Velikost](#size) pro příklad, jak deklarovat a použít `size_type`
 
-## <a name="swap"></a>  hash_multimap::swap
+## <a name="swap"></a>hash_multimap:: swap
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [Unordered_multimap třída](../standard-library/unordered-multimap-class.md).
@@ -2304,7 +2304,7 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Hash_multimap poskytuje prvky, které mají být měněny, nebo hash_multimap, jejichž prvky mají být vyměňovány pomocí těch hash_multimap.
 
 ### <a name="remarks"></a>Poznámky
@@ -2378,14 +2378,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*zkrat*\
+\ *klíčů*
 Klíč argumentu, který se má porovnat s klíčem řazení prvku z prohledávané hash_multimapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 [Iterátor](#iterator) nebo [const_iterator](#const_iterator) , které řeší umístění elementu v hash_multimap s klíčem, který je větší než klíč argumentu, nebo který řeší umístění, které následuje po posledním prvku v hash_multimap, pokud není nalezena shoda pro zkrat.
 
-Pokud `upper_bound` je vrácená hodnota přiřazena `const_iterator`k, objekt hash_multimap nelze změnit. Pokud `upper_bound` je vrácená hodnota přiřazena `iterator`k, lze objekt hash_multimap upravit.
+Pokud je vrácená hodnota `upper_bound` přiřazena k `const_iterator`, objekt hash_multimap nelze změnit. Pokud je vrácená hodnota `upper_bound` přiřazena k `iterator`, lze objekt hash_multimap upravit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2466,11 +2466,11 @@ Vrátí objekt funkce porovnání, který hash_multimap používá k seřazení 
 
 ### <a name="remarks"></a>Poznámky
 
-Pro hash_multimap *m*, pokud dva prvky *E1* (*K1*, *D1*) a *E2*(*K2*, *D2*) jsou objekty typu [value_type](#value_type), kde *K1* a *K2* jsou jejich klíče typu [key_type](#key_type) a *D1* a *D2* jsou jejich data typu [mapped_type](#mapped_type) `m.value_comp()(e1, e2)` `m.key_comp()(k1, k2)`a pak jsou ekvivalentní. Uložený objekt definuje členskou funkci.
+Pro hash_multimap *m*, pokud dva prvky *E1* (*K1*, *D1*) a *E2*(*K2*, *D2*) jsou objekty typu [value_type](#value_type), kde *K1* a *K2* jsou jejich klíče typu [key_type](#key_type) a *D1* a *D2* jsou jejich data typu [mapped_type](#mapped_type), 4 je ekvivalentem 5. Uložený objekt definuje členskou funkci.
 
 `bool operator( value_type& left, value_type& right);`
 
-Vrátí hodnotu **true** , pokud hodnota `left` klíče předchází a není rovna hodnotě `right` klíče v pořadí řazení.
+Vrátí hodnotu **true** , pokud hodnota klíče `left` předchází a není rovna hodnotě klíče `right` v pořadí řazení.
 
 ### <a name="example"></a>Příklad
 
@@ -2532,7 +2532,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`value_type`je deklarován jako párování\<const [key_type](#key_type), [mapped_type](#mapped_type)> a NOT\<párové key_type, mapped_type >, protože klíče asociativního kontejneru se nesmí měnit pomocí nekonstantního iterátoru nebo odkazu.
+`value_type` je deklarována jako párové \<const [key_type](#key_type), [mapped_type](#mapped_type)> a nikoli dvojici \<key_type, mapped_type >, protože klíče asociativního kontejneru nelze změnit pomocí nekonstantního iterátoru nebo odkazu.
 
 ### <a name="example"></a>Příklad
 
@@ -2595,5 +2595,5 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_assignable
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
-ms.openlocfilehash: 324e4a1f1bd3528f09f21c5e485ac814038b7517
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4b349d328da995105a6217f4ab597da5d7eafc38
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448372"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689494"
 ---
-# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable – třída
+# <a name="is_trivially_move_assignable-class"></a>is_trivially_move_assignable – třída
 
 Testuje, zda má typ operátor přiřazení triviálního přesunutí.
 
@@ -26,7 +26,7 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
+*Ty* \
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
@@ -35,19 +35,15 @@ Instance predikátu typu má hodnotu true, *Pokud typ je* třída, která má op
 
 Operátor přiřazení přesunu pro *danou třídu je* triviální, pokud:
 
-implicitně se poskytuje
-
-Třída *ty* nemá žádné virtuální funkce.
-
-Třída *ty* nemá žádné virtuální základy.
-
-třídy všech nestatických datových členů typu třídy mají operátory přiřazení triviálního přesunutí.
-
-třídy všech nestatických datových členů typu Array třídy mají operátory přiřazení triviálního přesunutí.
+- implicitně se poskytuje
+- Třída *ty* nemá žádné virtuální funkce.
+- Třída *ty* nemá žádné virtuální základy.
+- třídy všech nestatických datových členů typu třídy mají operátory přiřazení triviálního přesunutí.
+- třídy všech nestatických datových členů typu Array třídy mají operátory přiřazení triviálního přesunutí.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<type_traits >
+**Záhlaví:** \<type_traits >
 
 **Obor názvů:** std
 

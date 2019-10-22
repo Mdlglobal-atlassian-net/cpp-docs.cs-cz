@@ -1,5 +1,5 @@
 ---
-title: poisson_distribution – třída
+title: poisson_distribution 클래스
 ms.date: 11/04/2016
 f1_keywords:
 - random/std::poisson_distribution
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458468"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689119"
 ---
-# <a name="poissondistribution-class"></a>poisson_distribution – třída
+# <a name="poisson_distribution-class"></a>poisson_distribution 클래스
 
-Generuje Poissonova rozdělení.
+푸아송 분포를 생성합니다.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>구문
 
 ```cpp
 template<class IntType = int>
@@ -65,35 +65,35 @@ public:
    };
 ```
 
-### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>매개 변수
 
-*IntType*\
-Celočíselný typ výsledku, výchozí hodnota je **int**. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
+*Inttype* \
+정수 결과 형식으로, 기본적으로 **int**로 설정 됩니다. 가능한 형식은 [\<random >](../standard-library/random.md)를 참조 하세요.
 
-## <a name="remarks"></a>Poznámky
+## <a name="remarks"></a>주의
 
-Třída šablony popisuje distribuci, která vytváří hodnoty celočíselného typu zadaného uživatelem pomocí Poissonova rozdělení. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+클래스 템플릿은 포아송 분포를 사용 하 여 사용자 지정 정수 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
 |[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
 |`poisson_distribution::operator()`||[param_type](#param_type)|
 
-Funkce `mean()` Property vrátí hodnotu parametru pro uložený distribuční parametr *střední*hodnota.
+속성 함수 `mean()`은 저장된 분포 매개 변수 *mean*의 값을 반환합니다.
 
-Člen `param()` vlastnosti nastaví nebo `param_type` vrátí uložený balíček parametrů distribuce.
+속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
 
-Členské funkce `max()` a vracejí nejmenší možný výsledek a největší možný výsledek, v uvedeném pořadí. `min()`
+`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.
 
-Členská funkce zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího `operator()` volání není závislý na všech hodnotách získaných z modulu před voláním. `reset()`
+`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.
 
-`operator()` Členské funkce vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
+분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
 
-Podrobné informace o Poissonova rozdělení naleznete v článku Wolfram MathWorld [Poissonova rozdělení](https://go.microsoft.com/fwlink/p/?linkid=401112).
+푸아송 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [푸아송 분포](https://go.microsoft.com/fwlink/p/?linkid=401112)를 참조하세요.
 
-## <a name="example"></a>Příklad
+## <a name="example"></a>예제
 
 ```cpp
 // compile with: /EHsc /W4
@@ -146,7 +146,7 @@ int main()
 }
 ```
 
-První test:
+첫 번째 테스트:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -163,7 +163,7 @@ Distribution for 100 samples:
     5 :
 ```
 
-Druhý test:
+두 번째 테스트:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -190,40 +190,40 @@ Distribution for 100 samples:
    17 :
 ```
 
-## <a name="requirements"></a>Požadavky
+## <a name="requirements"></a>요구 사항
 
-**Hlavička:** \<náhodné >
+**헤더:** \<random>
 
-**Obor názvů:** std
+**네임스페이스:** std
 
-## <a name="poisson_distribution"></a>poisson_distribution::p oisson_distribution
+## <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution
 
-Sestaví rozdělení.
+분포를 생성합니다.
 
 ```cpp
 explicit poisson_distribution(RealType mean = 1.0);
 explicit binomial_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>매개 변수
 
-*Průměrná*\
-Parametr `mean` distribuce.
+*평균* \
+`mean` 분포 매개 변수입니다.
 
-*parametr*\
-Struktura parametrů používaná k sestavení distribuce.
+*parm* \
+분포를 생성하는 데 사용되는 매개 변수 구조입니다.
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-**Předběžná podmínka:** `0.0 < mean`
+**사전 조건:** `0.0 < mean`
 
-První konstruktor vytvoří objekt, jehož uložená `mean` hodnota drží *střední*hodnotu.
+첫 번째 생성자는 저장된 `mean` 값이*mean* 값을 보유하는 개체를 생성합니다.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuce voláním `param()` členské funkce.
+두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
 ## <a name="param_type"></a>  poisson_distribution::param_type
 
-Ukládá parametry distribuce.
+분포의 매개 변수를 저장합니다.
 
 ```cpp
 struct param_type {
@@ -236,16 +236,16 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>매개 변수
 
-Viz parametry konstruktoru pro [poisson_distribution](#poisson_distribution).
+[poisson_distribution](#poisson_distribution)에 대한 생성자 매개 변수를 참조하세요.
 
-### <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>주의
 
-**Předběžná podmínka:** `0.0 < mean`
+**사전 조건:** `0.0 < mean`
 
-Tuto strukturu lze předat konstruktoru třídy distribuce při vytváření instance, `param()` členské funkci pro nastavení uložených parametrů stávající distribuce a k `operator()` použití namísto uložených parametrů.
+이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>참조
 
-[\<náhodné >](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

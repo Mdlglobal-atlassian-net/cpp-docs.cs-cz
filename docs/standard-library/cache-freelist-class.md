@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d7840d114acfa0f3daa01c8dfdb6c6114829d93d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449690"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689918"
 ---
-# <a name="cachefreelist-class"></a>cache_freelist – třída
+# <a name="cache_freelist-class"></a>cache_freelist – třída
 
 Definuje [přidělování bloků](../standard-library/allocators-header.md) , které přiděluje a odděluje bloky paměti s jednou velikostí.
 
@@ -32,12 +32,12 @@ class cache_freelist
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Sz*|Počet prvků v poli, které mají být přiděleny.|
-|*Max*|Maximální třída představující maximální velikost volného seznamu. To může být [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md)nebo [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*'S*|Počet prvků v poli, které mají být přiděleny.|
+|*Počet*|Maximální třída představující maximální velikost volného seznamu. To může být [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md)nebo [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony cache_freelist udržuje volný seznam bloků paměti velikosti *SZ*. Když je bezplatný seznam plný, používá **operátor delete** k navrácení bloků paměti. Když je seznam free prázdný, používá **operátor New** k přidělení nových paměťových bloků. Maximální velikost volného seznamu je určena třídou Max třídy předanou v parametru *Max* .
+Šablona třídy cache_freelist udržuje bezplatný seznam bloků paměti velikosti *SZ*. Když je bezplatný seznam plný, používá **operátor delete** k navrácení bloků paměti. Když je seznam free prázdný, používá **operátor New** k přidělení nových paměťových bloků. Maximální velikost volného seznamu je určena třídou Max třídy předanou v parametru *Max* .
 
 Každý blok paměti obsahuje z paměti *SZ až SZ* bajtů a data, která **operátor New** a **operátor delete** vyžadují.
 
@@ -56,7 +56,7 @@ Každý blok paměti obsahuje z paměti *SZ až SZ* bajtů a data, která **oper
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> přidělování
+**Záhlaví:** \<allocators >
 
 **Obor názvů:** stdext
 
@@ -109,4 +109,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators >](../standard-library/allocators-header.md)

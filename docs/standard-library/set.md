@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450528"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686462"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-Definuje třídy šablony kontejneru nastavené a multiset a jejich podpůrné šablony.
+Definuje sadu šablon třídy kontejneru a multiset a jejich podpůrné šablony.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<nastavit >
+**Záhlaví:** \<set >
 
 **Obor názvů:** std
 
 > [!NOTE]
-> Sada > Knihovna také `#include <initializer_list>` používá příkaz. \<
+> Knihovna \<set > používá také příkaz `#include <initializer_list>`.
 
 ## <a name="members"></a>Členové
 
@@ -34,16 +34,16 @@ Definuje třídy šablony kontejneru nastavené a multiset a jejich podpůrné �
 |-|-|-|
 |[operator! = (set) – operátor](../standard-library/set-operators.md#op_neq)|[operator! = (multiset) – operátor](../standard-library/set-operators.md#op_neq)|Testuje, zda objekt set nebo multiset na levé straně operátoru není roven sadě nebo objektu multiset na pravé straně.|
 |[operátor < (set)](../standard-library/set-operators.md#op_lt)|[operátor < (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Testuje, zda je objekt set nebo multiset na levé straně operátoru menší než sada nebo objekt multiset na pravé straně.|
-|[operator < = (set) – operátor](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset) – operátor](../standard-library/set-operators.md#op_lt_eq_multiset)|Testuje, zda je objekt set nebo multiset na levé straně operátoru menší než nebo roven množině nebo objektu multiset na pravé straně.|
-|[operator = = (set) – operátor](../standard-library/set-operators.md#op_eq_eq)|[operator== (multiset)](../standard-library/set-operators.md#op_eq_eq_multiset)|Testuje, zda je objekt set nebo multiset na levé straně operátoru roven sadě nebo objektu multiset na pravé straně.|
+|[operator < = (set) – operátor](../standard-library/set-operators.md#op_lt_eq)|[operator \< = (multiset) – operátor](../standard-library/set-operators.md#op_lt_eq_multiset)|Testuje, zda je objekt set nebo multiset na levé straně operátoru menší než nebo roven množině nebo objektu multiset na pravé straně.|
+|[operator = = (set) – operátor](../standard-library/set-operators.md#op_eq_eq)|[operator = = (multiset) – operátor](../standard-library/set-operators.md#op_eq_eq_multiset)|Testuje, zda je objekt set nebo multiset na levé straně operátoru roven sadě nebo objektu multiset na pravé straně.|
 |[operátor > (set)](../standard-library/set-operators.md#op_gt)|[operátor > (multiset)](../standard-library/set-operators.md#op_gt_multiset)|Testuje, zda je objekt set nebo multiset na levé straně operátoru větší než sada nebo objekt multiset na pravé straně.|
-|[operator > = (set) – operátor](../standard-library/set-operators.md#op_gt_eq)|[operator>= (multiset)](../standard-library/set-operators.md#op_gt_eq_multiset)|Testuje, zda je objekt set nebo multiset na levé straně operátoru větší než nebo rovno množině nebo objektu multiset na pravé straně.|
+|[operator > = (set) – operátor](../standard-library/set-operators.md#op_gt_eq)|[operator > = (multiset) – operátor](../standard-library/set-operators.md#op_gt_eq_multiset)|Testuje, zda je objekt set nebo multiset na levé straně operátoru větší než nebo rovno množině nebo objektu multiset na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
 |Nastavit verzi|Verze multiset|Popis|
 |-|-|-|
-|[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Vyměňuje prvky dvou sad nebo množin.|
+|[adresu](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Vyměňuje prvky dvou sad nebo množin.|
 
 ### <a name="classes"></a>Třídy
 
@@ -54,6 +54,6 @@ Definuje třídy šablony kontejneru nastavené a multiset a jejich podpůrné �
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

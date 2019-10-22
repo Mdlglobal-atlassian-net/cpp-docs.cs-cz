@@ -94,14 +94,14 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 0e51831dde9461a3d52cdaaf37d1f6c87966caeb
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1b43c2291499af87f2be1e5bec25717a30c28bfd
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453359"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688427"
 ---
-# <a name="basicstreambuf-class"></a>basic_streambuf – třída
+# <a name="basic_streambuf-class"></a>basic_streambuf – třída
 
 Popisuje abstraktní základní třídu pro odvození vyrovnávací paměti datového proudu, který řídí přenos prvků do a z konkrétní reprezentace datového proudu.
 
@@ -114,19 +114,19 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*\
-A [char_type](#char_type).
+*Elem* \
+[Char_type](#char_type).
 
-*Recenzent*\
+*Tr* \
 Znak [traits_type](#traits_type).
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje abstraktní základní třídu pro odvození vyrovnávací paměti datového proudu, který řídí přenos prvků do a z konkrétní reprezentace datového proudu. Objekt třídy `basic_streambuf` pomáhá řídit datový proud pomocí prvků typu *TR*, označovaného také jako [char_type](#char_type), jejichž znaková vlastnost je určena třídou [char_traits](../standard-library/char-traits-struct.md), označovanou také jako [traits_type](#traits_type).
+Šablona třídy popisuje abstraktní základní třídu pro odvození vyrovnávací paměti datového proudu, který řídí přenos prvků do a z konkrétní reprezentace datového proudu. Objekt třídy `basic_streambuf` pomáhá řídit datový proud s prvky typu *TR*, označované také jako [char_type](#char_type), jehož znaková vlastnost je určena třídou [char_traits](../standard-library/char-traits-struct.md), označovanou také jako [traits_type](#traits_type).
 
-Každý datový proud vyrovnávací paměti koncepční řízení dvou nezávislých datových proudů: jeden pro extrakci (vstup) a jeden pro vložení (výstup). Konkrétní reprezentace však může být buď nepřístupná, nebo oběma datovými proudy. Obvykle udržuje určitou relaci mezi dvěma datovými proudy. To, co vložíte do výstupního datového proudu [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`je > objekt, například je to, co později extrahujete ze vstupního proudu. Když umístíte jeden datový proud objektu [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem` `Tr`> objekt, umístí se druhý datový proud do společné.
+Každý datový proud vyrovnávací paměti koncepční řízení dvou nezávislých datových proudů: jeden pro extrakci (vstup) a jeden pro vložení (výstup). Konkrétní reprezentace však může být buď nepřístupná, nebo oběma datovými proudy. Obvykle udržuje určitou relaci mezi dvěma datovými proudy. Obsah, který vložíte do výstupního proudu [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem`, `Tr` objekt >, například je to, co později extrahujete ze vstupního datového proudu. Když umístíte jeden datový proud [basic_filebuf](../standard-library/basic-filebuf-class.md) <  `Elem`, `Tr` objekt >, umístěte druhý datový proud do společné.
 
-Veřejné rozhraní pro třídu `basic_streambuf` šablony poskytuje operace, které jsou společné pro všechny vyrovnávací paměti datového proudu, ale specializované. Chráněné rozhraní poskytuje operace potřebné k tomu, aby konkrétní reprezentace datového proudu fungovala. Chráněné virtuální členské funkce umožňují přizpůsobit chování odvozené vyrovnávací paměti datového proudu pro konkrétní reprezentace datového proudu. Jednotlivé vyrovnávací paměti v odvozeném datovém proudu v této knihovně popisují, jak specializují chování svých chráněných virtuálních členských funkcí. Výchozí chování základní třídy, která často nedělá nic, je popsáno v tomto tématu.
+Veřejné rozhraní pro šablonu třídy `basic_streambuf` poskytuje operace, které jsou společné pro všechny vyrovnávací paměti datového proudu, ale specializované. Chráněné rozhraní poskytuje operace potřebné k tomu, aby konkrétní reprezentace datového proudu fungovala. Chráněné virtuální členské funkce umožňují přizpůsobit chování odvozené vyrovnávací paměti datového proudu pro konkrétní reprezentace datového proudu. Jednotlivé vyrovnávací paměti v odvozeném datovém proudu v této knihovně popisují, jak specializují chování svých chráněných virtuálních členských funkcí. Výchozí chování základní třídy, která často nedělá nic, je popsáno v tomto tématu.
 
 Zbývající chráněné členské funkce řídí kopírování do a z jakéhokoli úložiště dodaného pro přenos vyrovnávací paměti do a z datových proudů. Vstupní vyrovnávací paměť je například charakterizována:
 
@@ -154,9 +154,9 @@ Pro jakoukoli vyrovnávací paměť se používá následující protokol:
 
 - V případě vstupní vyrovnávací paměti, pokud počáteční ukazatel porovnává méně než další ukazatel, můžete převést element na putback pozici určenou sníženým dalším ukazatelem.
 
-Všechny chráněné virtuální členské funkce, které zapisujete pro třídu `basic_streambuf`odvozenou < z `Elem`, `Tr`> musí spolupracovat na zachování tohoto protokolu.
+Všechny chráněné virtuální členské funkce, které zapisujete pro třídu odvozenou z `basic_streambuf` <  `Elem`, `Tr` > musí spolupracovat na zachování tohoto protokolu.
 
-`basic_streambuf`Objekt třídy <  >ukládá`Tr`šest ukazatelů dříve popsaných v předchozích krocích. `Elem` Také ukládá objekt národního prostředí do objektu typu [locale](../standard-library/locale-class.md) pro potenciální použití v odvozené vyrovnávací paměti datového proudu.
+Objekt třídy `basic_streambuf` <  `Elem` `Tr` > ukládá šest ukazatelů dříve popsaných v předchozích krocích. Také ukládá objekt národního prostředí do objektu typu [locale](../standard-library/locale-class.md) pro potenciální použití v odvozené vyrovnávací paměti datového proudu.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -168,11 +168,11 @@ Všechny chráněné virtuální členské funkce, které zapisujete pro třídu
 
 |Název typu|Popis|
 |-|-|
-|[char_type](#char_type)|Přidruží název typu k `Elem` parametru šablony.|
-|[int_type](#int_type)|Přidruží název typu v rámci `basic_streambuf` rozsahu `Elem` s parametrem šablony.|
-|[off_type](#off_type)|Přidruží název typu v rámci `basic_streambuf` rozsahu `Elem` s parametrem šablony.|
-|[pos_type](#pos_type)|Přidruží název typu v rámci `basic_streambuf` rozsahu `Elem` s parametrem šablony.|
-|[traits_type](#traits_type)|Přidruží název typu k `Tr` parametru šablony.|
+|[char_type](#char_type)|Přidruží název typu k parametru `Elem` šablony.|
+|[int_type](#int_type)|Přidruží název typu v rámci rozsahu `basic_streambuf` s parametrem šablony `Elem`.|
+|[off_type](#off_type)|Přidruží název typu v rámci rozsahu `basic_streambuf` s parametrem šablony `Elem`.|
+|[pos_type](#pos_type)|Přidruží název typu v rámci rozsahu `basic_streambuf` s parametrem šablony `Elem`.|
+|[traits_type](#traits_type)|Přidruží název typu k parametru `Tr` šablony.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -181,38 +181,38 @@ Všechny chráněné virtuální členské funkce, které zapisujete pro třídu
 |[eback](#eback)|Chráněná funkce, která vrací ukazatel na začátek vstupní vyrovnávací paměti.|
 |[egptr](#egptr)|Chráněná funkce, která vrací ukazatel hned za koncem vstupní vyrovnávací paměti.|
 |[epptr](#epptr)|Chráněná funkce, která vrací ukazatel hned za koncem výstupní vyrovnávací paměti.|
-|[gbump](#gbump)|Chráněná funkce, která `count` přičítá k dalšímu ukazateli pro vstupní vyrovnávací paměť.|
-|[getloc](#getloc)|Získá národní prostředí objektu. `basic_streambuf`|
+|[gbump](#gbump)|Chráněná funkce, která přidá `count` k dalšímu ukazateli pro vstupní vyrovnávací paměť.|
+|[getloc](#getloc)|Získá národní prostředí objektu `basic_streambuf`.|
 |[gptr](#gptr)|Chráněná funkce, která vrací ukazatel na další prvek vstupní vyrovnávací paměti.|
 |[imbue –](#imbue)|Chráněná virtuální funkce volaná funkcí [pubimbue](#pubimbue).|
 |[in_avail](#in_avail)|Vrátí počet prvků, které jsou připraveny ke čtení z vyrovnávací paměti.|
-|[overflow](#overflow)|Chráněná virtuální funkce, která může být volána při vložení nového znaku do úplné vyrovnávací paměti.|
+|[plně](#overflow)|Chráněná virtuální funkce, která může být volána při vložení nového znaku do úplné vyrovnávací paměti.|
 |[pbackfail](#pbackfail)|Chráněná virtuální členská funkce, která se pokusí vrátit prvek do vstupního datového proudu, pak jej nastaví na aktuální prvek (ukazuje na další ukazatel).|
 |[pbase](#pbase)|Chráněná funkce, která vrací ukazatel na začátek výstupní vyrovnávací paměti.|
-|[pbump](#pbump)|Chráněná funkce, která `count` přičítá k dalšímu ukazateli pro výstupní vyrovnávací paměť.|
+|[pbump](#pbump)|Chráněná funkce, která přidá `count` k dalšímu ukazateli pro výstupní vyrovnávací paměť.|
 |[pptr](#pptr)|Chráněná funkce, která vrací ukazatel na další prvek výstupní vyrovnávací paměti.|
-|[pubimbue](#pubimbue)|Nastaví národní prostředí objektu. `basic_streambuf`|
+|[pubimbue](#pubimbue)|Nastaví národní prostředí objektu `basic_streambuf`.|
 |[pubseekoff](#pubseekoff)|Volá [seekoff](#seekoff), chráněnou virtuální funkci, která je přepsána v odvozené třídě.|
 |[pubseekpos](#pubseekpos)|Volá [seekpos](#seekpos), chráněnou virtuální funkci, která je přepsána v odvozené třídě a obnoví aktuální pozici ukazatele.|
 |[pubsetbuf](#pubsetbuf)|Volá [setbuf](#setbuf), chráněnou virtuální funkci, která je přepsána v odvozené třídě.|
 |[pubsync](#pubsync)|Volá [synchronizaci](#sync), chráněnou virtuální funkci, která je přepsána v odvozené třídě a aktualizuje externí datový proud přidružený k této vyrovnávací paměti.|
-|[sbumpc](#sbumpc)|Přečte a vrátí aktuální prvek a přesune ukazatel na datový proud.|
+|[sbumpc –](#sbumpc)|Přečte a vrátí aktuální prvek a přesune ukazatel na datový proud.|
 |[seekoff](#seekoff)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice pro řízené streamy.|
 |[seekpos](#seekpos)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice pro řízené streamy.|
 |[setbuf](#setbuf)|Chráněná virtuální členská funkce provádí operaci specifickou pro každou odvozenou vyrovnávací paměť datového proudu.|
-|[setg](#setg)|Chráněná funkce, která `_Gbeg` ukládá do počátečního ukazatele `_Gnext` , v dalším ukazateli a `_Gend` na koncový ukazatel pro vstupní vyrovnávací paměť.|
-|[setp](#setp)|Chráněná funkce, která `_Pbeg` ukládá do počátečního ukazatele `_Pend` a do koncového ukazatele pro výstupní vyrovnávací paměť.|
-|[sgetc](#sgetc)|Vrátí aktuální element beze změny pozice v datovém proudu.|
+|[setg](#setg)|Chráněná funkce, která ukládá `_Gbeg` do počátečního ukazatele, `_Gnext` v dalším ukazateli a `_Gend` na koncovém ukazateli pro vstupní vyrovnávací paměť.|
+|[setp](#setp)|Chráněná funkce, která ukládá `_Pbeg` do počátečního ukazatele a `_Pend` v koncovém ukazateli výstupní vyrovnávací paměti.|
+|[sgetc –](#sgetc)|Vrátí aktuální element beze změny pozice v datovém proudu.|
 |[sgetn](#sgetn)|Vrátí počet čtených prvků.|
 |[showmanyc](#showmanyc)|Chráněná virtuální členská funkce, která vrací počet znaků, které mohou být extrahovány ze vstupního datového proudu a zajišťují, že program nebude podléhat neurčitému čekání.|
 |[snextc](#snextc)|Přečte aktuální prvek a vrátí následující element.|
-|[sputbackc](#sputbackc)|`char_type` Vloží do streamu.|
+|[sputbackc](#sputbackc)|Vloží `char_type` do datového proudu.|
 |[sputc](#sputc)|Vloží znak do datového proudu.|
 |[sputn](#sputn)|Vloží řetězec znaků do datového proudu.|
 |[stossc](#stossc)|Přesunout za aktuální prvek v datovém proudu.|
 |[sungetc](#sungetc)|Získá znak z datového proudu.|
-|[swap](#swap)|Vyměňuje hodnoty v tomto objektu pro hodnoty v zadaném `basic_streambuf` parametru objektu.|
-|[sync](#sync)|Chráněná virtuální funkce, která se pokouší synchronizovat řízené streamy s libovolnými přidruženými externími proudy.|
+|[adresu](#swap)|Vyměňuje hodnoty v tomto objektu pro hodnoty v zadaném parametru objektu `basic_streambuf`.|
+|[brání](#sync)|Chráněná virtuální funkce, která se pokouší synchronizovat řízené streamy s libovolnými přidruženými externími proudy.|
 |[uflow](#uflow)|Chráněná virtuální funkce, která extrahuje aktuální prvek ze vstupního datového proudu.|
 |[podtečení](#underflow)|Chráněná virtuální funkce, která extrahuje aktuální prvek ze vstupního datového proudu.|
 |[xsgetn](#xsgetn)|Chráněná virtuální funkce, která extrahuje prvky ze vstupního datového proudu.|
@@ -222,11 +222,11 @@ Všechny chráněné virtuální členské funkce, které zapisujete pro třídu
 
 |Operátor|Popis|
 |-|-|
-|[operátor =](#op_eq)|Přiřadí hodnoty tohoto objektu z jiného `basic_streambuf` objektu.|
+|[operátor =](#op_eq)|Přiřadí hodnoty tohoto objektu z jiného objektu `basic_streambuf`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<streambuf >
+**Záhlaví:** \<streambuf >
 
 **Obor názvů:** std
 
@@ -242,16 +242,16 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-Odkaz lvalue na `basic_streambuf` objekt, který se používá k nastavení hodnot tohoto `basic_streambuf` objektu.
+*pravé* \
+Odkaz lvalue na objekt `basic_streambuf`, který se používá k nastavení hodnot tohoto objektu `basic_streambuf`.
 
 ### <a name="remarks"></a>Poznámky
 
 První chráněný konstruktor ukládá ukazatel s hodnotou null ve všech ukazatelích řídících vstupní vyrovnávací paměť a výstupní vyrovnávací paměť. Také ukládá `locale::classic` do objektu locale. Další informace naleznete v tématu [locale:: Classic](../standard-library/locale-class.md#classic).
 
-Druhý chráněný konstruktor zkopíruje ukazatele a národní prostředí zprava.
+Druhý chráněný konstruktor zkopíruje ukazatele a národní prostředí *zprava*.
 
-## <a name="char_type"></a>  basic_streambuf::char_type
+## <a name="char_type"></a>basic_streambuf::char_type
 
 Přidruží název typu k parametru šablony **elem** .
 
@@ -305,7 +305,7 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Parametry
 
-*výpočtu*\
+*počet* \
 Hodnota, o kterou má být ukazatel posunut.
 
 ## <a name="getloc"></a>basic_streambuf:: getloc
@@ -364,7 +364,7 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*_Loc*\
+*_Loc* \
 Odkaz na národní prostředí.
 
 ### <a name="remarks"></a>Poznámky
@@ -385,7 +385,7 @@ Počet prvků, které jsou připraveny ke čtení z vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je k dispozici [pozice pro čtení](../standard-library/basic-streambuf-class.md) , vrátí členská funkce [egptr](#egptr) - [GPTR](#gptr). V opačném případě vrátí [showmanyc](#showmanyc).
+Pokud je k dispozici [pozice pro čtení](../standard-library/basic-streambuf-class.md) , vrátí členská funkce [egptr](#egptr)  - [GPTR](#gptr). V opačném případě vrátí [showmanyc](#showmanyc).
 
 ### <a name="example"></a>Příklad
 
@@ -405,7 +405,7 @@ int main( )
 }
 ```
 
-## <a name="int_type"></a>  basic_streambuf::int_type
+## <a name="int_type"></a>basic_streambuf::int_type
 
 Přidruží název typu v rámci oboru basic_streambuf k jednomu z typů v parametru šablony.
 
@@ -413,7 +413,7 @@ Přidruží název typu v rámci oboru basic_streambuf k jednomu z typů v param
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="off_type"></a>  basic_streambuf::off_type
+## <a name="off_type"></a>basic_streambuf::off_type
 
 Přidruží název typu v rámci oboru basic_streambuf k jednomu z typů v parametru šablony.
 
@@ -423,7 +423,7 @@ typedef typename traits_type::off_type off_type;
 
 ## <a name="op_eq"></a>basic_streambuf:: operator =
 
-Přiřadí hodnoty tohoto objektu z jiného `basic_streambuf` objektu.
+Přiřadí hodnoty tohoto objektu z jiného objektu `basic_streambuf`.
 
 ```cpp
 basic_streambuf& operator=(const basic_streambuf& right);
@@ -431,12 +431,12 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-Odkaz lvalue na `basic_streambuf` objekt, který se používá k přiřazení hodnot tomuto objektu.
+*pravé* \
+Odkaz lvalue na objekt `basic_streambuf`, který se používá k přiřazení hodnot tomuto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněný členský operátor kopíruje z *pravého* ukazatele, který řídí vstupní vyrovnávací paměť a výstupní vyrovnávací paměť. Také v nástroji `right.`ukládá `locale object` [getloc ()](#getloc) . Vrátí `*this`.
+Chráněný členský operátor kopíruje z *pravého* ukazatele, který řídí vstupní vyrovnávací paměť a výstupní vyrovnávací paměť. Také v `locale object` ukládá `right.`[getloc ()](#getloc) . Vrátí `*this`.
 
 ## <a name="overflow"></a>basic_streambuf:: přetečení
 
@@ -448,7 +448,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta*\
+*_Meta* \
 Znak, který se má vložit do vyrovnávací paměti, nebo **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -457,21 +457,21 @@ Pokud funkce nemůže být úspěšná, vrátí **traits_type:: EOF** nebo vyvol
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *\_* [](../standard-library/char-traits-struct.md#to_char_type)  *\_se meta* nerovná jako **traits_type:: EOF**, chráněná virtuální členská funkce budoucna vloží element **traits_type::** to_char_type (meta) do výstupu. Stream. To lze provést různými způsoby:
+Pokud se *\_Meta* nerovná **traits_type:: EOF**, chráněná virtuální členská funkce budoucna vložení elementu **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) do výstupního datového proudu. Může tak učinit různými způsoby:
 
-- `write position` Pokud je k dispozici, může uložit element do pozice pro zápis a zvýšit další ukazatel pro výstupní vyrovnávací paměť.
+- Pokud je `write position` k dispozici, může uložit element do pozice pro zápis a zvýšit další ukazatel pro výstupní vyrovnávací paměť.
 
 - Dá se k dispozici pozice pro zápis přidělením nového nebo dalšího úložiště pro výstupní vyrovnávací paměť.
 
 - Dá se použít k dispozici k umístění zápisu, a to v některém externím cíli, některých nebo všech prvcích mezi začátkem a dalšími ukazateli pro výstupní vyrovnávací paměť.
 
-Virtuální funkce přetečení společně s funkcemi [Sync](#sync) a subflow definuje charakteristiky třídy odvozené od streambuf. [](#underflow) Každá odvozená třída může implementovat přetečení odlišně, ale rozhraní se třídou volajícího datového proudu je stejné.
+Virtuální funkce přetečení společně s funkcemi [Sync](#sync) a [subflow](#underflow) definuje charakteristiky třídy odvozené od streambuf. Každá odvozená třída může implementovat přetečení odlišně, ale rozhraní se třídou volajícího datového proudu je stejné.
 
-`sputc` `sputn` `overflow` Funkce je nejčastěji volána veřejnými `streambuf` funkcemi, jako je a když je oblast Put plná, ale jiné třídy, včetně tříd datového proudu, mohou volat kdykoli. `overflow`
+Funkce `overflow` je nejčastěji volána funkcemi veřejné `streambuf` jako `sputc` a `sputn`, když je oblast Put zaplněna, ale jiné třídy, včetně tříd datového proudu, mohou volat `overflow` kdykoli.
 
-Funkce využívá znaky v oblasti Put mezi `pbase` ukazateli a `pptr` poté znovu inicializuje oblast PUT. Funkce musí také spotřebovávat `nCh` ( `nCh` Pokud`EOF`není), nebo se může rozhodnout vložit tento znak do nové oblasti vložení, aby se využívalo při dalším volání. `overflow`
+Funkce využívá znaky v oblasti vložení mezi `pbase` a ukazateli `pptr` a pak znovu inicializuje oblast PUT. Funkce `overflow` musí také spotřebovávat `nCh` (Pokud `nCh` není `EOF`), nebo se může rozhodnout vložit tento znak do nové oblasti Put tak, aby se při dalším volání využíval.
 
-Definice spotřebování se liší mezi odvozenými třídami. Například `filebuf` třída zapisuje své znaky do souboru, `strstreambuf` zatímco třída je zachovává do vyrovnávací paměti a (Pokud je vyrovnávací paměť určena jako dynamická) rozšiřuje vyrovnávací paměť v reakci na volání přetečení. Toto rozšíření se dosahuje uvolněním staré vyrovnávací paměti a jejím nahrazením novým, větším. Ukazatelé se upraví podle potřeby.
+Definice spotřebování se liší mezi odvozenými třídami. Například třída `filebuf` zapisuje své znaky do souboru, zatímco třída `strstreambuf` je zachovává do vyrovnávací paměti a (Pokud je vyrovnávací paměť určena jako dynamická), rozšiřuje vyrovnávací paměť v reakci na volání přetečení. Toto rozšíření se dosahuje uvolněním staré vyrovnávací paměti a jejím nahrazením novým, větším. Ukazatelé se upraví podle potřeby.
 
 ## <a name="pbackfail"></a>basic_streambuf::p neúspěšného selhání
 
@@ -483,7 +483,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta*\
+*_Meta* \
 Znak, který se má vložit do vyrovnávací paměti, nebo **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -492,7 +492,7 @@ Pokud funkce nemůže být úspěšná, vrátí **traits_type:: EOF** nebo vyvol
 
 ### <a name="remarks"></a>Poznámky
 
-*Pokud\_se meta* porovnává jako **traits_type:: EOF**, element, který se má předávat zpátky, je efektivně ten, který už je v proudu před aktuálním elementem. V opačném případě je tento prvek nahrazen **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_meta*). Funkce může vložit element zpět různými způsoby:
+Pokud *\_Meta* porovnává jako **traits_type:: EOF**, element, který se má nabízet, je efektivně ten, který už je v proudu před aktuálním prvkem. V opačném případě je tento prvek nahrazen **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*). Funkce může vložit element zpět různými způsoby:
 
 - Pokud je k dispozici putback pozice, může uložit prvek do putback pozice a snížit další ukazatel pro vstupní vyrovnávací paměť.
 
@@ -500,7 +500,7 @@ Pokud funkce nemůže být úspěšná, vrátí **traits_type:: EOF** nebo vyvol
 
 - V případě vyrovnávací paměti datového proudu s běžnými vstupními a výstupními proudy může být putback pozice k dispozici při zapisování, do některých externích cílů, některých nebo všech prvků mezi začátkem a dalšími ukazateli pro výstupní vyrovnávací paměť.
 
-## <a name="pbase"></a>  basic_streambuf::pbase
+## <a name="pbase"></a>basic_streambuf: základ:p
 
 Chráněná funkce, která vrací ukazatel na začátek výstupní vyrovnávací paměti.
 
@@ -522,10 +522,10 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Parametry
 
-*výpočtu*\
+*počet* \
 Počet znaků, o které má být pozice zápisu přesunuta vpřed.
 
-## <a name="pos_type"></a>  basic_streambuf::pos_type
+## <a name="pos_type"></a>basic_streambuf::p os_type
 
 Přidruží název typu v rámci oboru basic_streambuf k jednomu z typů v parametru šablony.
 
@@ -555,7 +555,7 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*_Loc*\
+*_Loc* \
 Odkaz na národní prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -582,18 +582,18 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*\
+*_Off* \
 Pozice pro hledání vzhledem k *_Way*.
 
-*_Way*\
+*_Way* \
 Výchozí bod pro operace posunu. Možné hodnoty najdete v tématu [seekdir](../standard-library/ios-base-class.md#seekdir) .
 
-*_Which*\
+*_Which* \
 Určuje režim pro pozici ukazatele. Ve výchozím nastavení je to, aby bylo možné upravovat pozice pro čtení a zápis.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí novou pozici nebo neplatnou pozici streamu ( [seekoff](#seekoff)(_ *off*, `_Which` `_Way`,)).
+Vrátí novou pozici nebo neplatnou pozici streamu ( [seekoff](#seekoff)(_ *off*, `_Way`, `_Which`)).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -609,15 +609,15 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp*\
+*_Sp* \
 Pozice pro hledání.
 
-*_Which*\
+*_Which* \
 Určuje režim pro pozici ukazatele. Ve výchozím nastavení je to, aby bylo možné upravovat pozice pro čtení a zápis.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nová pozice nebo neplatná pozice v datovém proudu. Chcete-li zjistit, zda je pozice datového proudu neplatná, porovnejte `pos_type(off_type(-1))`návratovou hodnotu hodnotou.
+Nová pozice nebo neplatná pozice v datovém proudu. Chcete-li zjistit, zda je pozice datového proudu neplatná, porovnejte vrácenou hodnotu s `pos_type(off_type(-1))`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -635,15 +635,15 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Buffer*\
+*_Buffer* \
 Ukazatel na `char_type` pro tuto instanci.
 
-*výpočtu*\
+*počet* \
 Velikost vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí [setbuf](#setbuf)( `_Buffer`, `count`).
+Vrátí [setbuf](#setbuf)(`_Buffer`, `count`).
 
 ## <a name="pubsync"></a>basic_streambuf::p ubsync
 
@@ -671,7 +671,7 @@ Aktuální prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Je-li k dispozici pozice pro čtení, vrátí členské funkce **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong> [GPTR](#gptr)) a zvýší další ukazatel pro vstupní vyrovnávací paměť. V opačném případě vrátí [uflow](#uflow).
+Pokud je k dispozici pozice pro čtení, vrátí členská funkce **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong>[GPTR](#gptr)) a zvýší další ukazatel pro vstupní vyrovnávací paměť. V opačném případě vrátí [uflow](#uflow).
 
 ### <a name="example"></a>Příklad
 
@@ -698,7 +698,7 @@ int main( )
 51
 ```
 
-## <a name="seekoff"></a>  basic_streambuf::seekoff
+## <a name="seekoff"></a>basic_streambuf:: seekoff
 
 Chráněná virtuální členská funkce, která se pokusí změnit aktuální pozice pro řízené streamy.
 
@@ -711,28 +711,28 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*\
+*_Off* \
 Pozice pro hledání vzhledem k *_Way*.
 
-*_Way*\
+*_Way* \
 Výchozí bod pro operace posunu. Možné hodnoty najdete v tématu [seekdir](../standard-library/ios-base-class.md#seekdir) .
 
-*_Which*\
+*_Which* \
 Určuje režim pro pozici ukazatele. Ve výchozím nastavení je to, aby bylo možné upravovat pozice pro čtení a zápis.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí novou pozici nebo neplatnou pozici streamu `seekoff` (( _ off `_Way`, `_Which`,)).
+Vrátí novou pozici nebo neplatnou pozici streamu (`seekoff` (_ *off*, `_Way`, `_Which`)).
 
 ### <a name="remarks"></a>Poznámky
 
 Nová pozice je určena následujícím způsobem:
 
-- Pokud `_Way` je == Novápozice začátek datového proudu *plus _.* `ios_base::beg`
+- Pokud `_Way`  ==  `ios_base::beg`, nová pozice je začátek datového proudu *plus _.*
 
-- Pokud `_Way` je == Novápozice aktuální pozice v datovém proudu a je *vypnuta.* `ios_base::cur`
+- Pokud `_Way`  ==  `ios_base::cur`, nová pozice je aktuální pozice v datovém proudu plus *_.*
 
-- Pokud `_Way` je == Novápozice koncem datového proudu *plus _.* `ios_base::end`
+- Pokud `_Way`  ==  `ios_base::end`, nová pozice je konec datového proudu *plus _.*
 
 Obvykle, pokud **& ios_base:: in** je nenulová, je ovlivněn vstupní datový proud a pokud **& ios_base:: out** je nenulové, bude ovlivněn výstupní datový proud. Skutečné použití tohoto parametru se ale liší mezi odvozenými vyrovnávacími paměťmi streamu.
 
@@ -748,15 +748,15 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp*\
+*_Sp* \
 Pozice pro hledání.
 
-*_Which*\
+*_Which* \
 Určuje režim pro pozici ukazatele. Ve výchozím nastavení je to, aby bylo možné upravovat pozice pro čtení a zápis.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nová pozice nebo neplatná pozice datového proudu. Chcete-li zjistit, zda je pozice datového proudu neplatná, porovnejte `pos_type(off_type(-1))`návratovou hodnotu hodnotou.
+Nová pozice nebo neplatná pozice datového proudu. Chcete-li zjistit, zda je pozice datového proudu neplatná, porovnejte vrácenou hodnotu s `pos_type(off_type(-1))`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -766,7 +766,7 @@ Obvykle, pokud **& ios_base:: in** je nenulová, je ovlivněn vstupní datový p
 
 Pokud funkce uspěje při změně pozice nebo pozice datového proudu, vrátí výslednou pozici v datovém proudu nebo jednu z výsledných datových míst. V opačném případě vrátí neplatnou pozici streamu (-1). Výchozím chováním je vrácení neplatné pozice streamu.
 
-## <a name="setbuf"></a>  basic_streambuf::setbuf
+## <a name="setbuf"></a>basic_streambuf:: setbuf
 
 Chráněná virtuální členská funkce, která provádí operaci specifickou pro každou odvozenou vyrovnávací paměť datového proudu.
 
@@ -778,10 +778,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Buffer*\
+*_Buffer* \
 Ukazatel na vyrovnávací paměť.
 
-*výpočtu*\
+*počet* \
 Velikost vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -790,11 +790,11 @@ Výchozím chováním **je vrácení.**
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf`poskytuje oblast paměti pro `streambuf` použití objektu. Jak se používá vyrovnávací paměť v definovaném v odvozených třídách.
+Viz [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf` poskytuje oblast paměti pro použití objektu `streambuf`. Jak se používá vyrovnávací paměť v definovaném v odvozených třídách.
 
-## <a name="setg"></a>  basic_streambuf::setg
+## <a name="setg"></a>basic_streambuf::setg
 
-Chráněná funkce, která ukládá _ *Gbeg* do počátečního ukazatele `_Gnext` , v dalším ukazateli a `_Gend` na koncový ukazatel pro vstupní vyrovnávací paměť.
+Chráněná funkce, která ukládá _ *Gbeg* do počátečního ukazatele, `_Gnext` v dalším ukazateli a `_Gend` na koncovém ukazateli pro vstupní vyrovnávací paměť.
 
 ```cpp
 void setg(char_type* _Gbeg,
@@ -804,16 +804,16 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Parametry
 
-*_Gbeg*\
+*_Gbeg* \
 Ukazatel na začátek vyrovnávací paměti.
 
-*_Gnext*\
+*_Gnext* \
 Ukazatel na někde uprostřed vyrovnávací paměti.
 
-*_Gend*\
+*_Gend* \
 Ukazatel na konec vyrovnávací paměti.
 
-## <a name="setp"></a>  basic_streambuf::setp
+## <a name="setp"></a>basic_streambuf::setp
 
 Chráněná funkce, která ukládá *_Pbeg* do počátečního ukazatele a *_Pend* na koncový ukazatel pro výstupní vyrovnávací paměť.
 
@@ -823,10 +823,10 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pbeg*\
+*_Pbeg* \
 Ukazatel na začátek vyrovnávací paměti.
 
-*_Pend*\
+*_Pend* \
 Ukazatel na konec vyrovnávací paměti.
 
 ## <a name="sgetc"></a>basic_streambuf:: sgetc –
@@ -843,7 +843,7 @@ Aktuální prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je k dispozici pozice pro čtení, vrátí členská funkce **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*` [GPTR](#gptr)). V opačném případě [](#underflow)vrátí podtečení.
+Pokud je k dispozici pozice pro čtení, vrátí členská funkce **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`*`[GPTR](#gptr)). V opačném případě vrátí [podtečení](#underflow).
 
 ### <a name="example"></a>Příklad
 
@@ -879,10 +879,10 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Vyrovnávací paměť obsahující extrahované znaky.
 
-*výpočtu*\
+*počet* \
 Počet prvků, které mají být čteny.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -891,7 +891,7 @@ Počet přečtených prvků. Další informace najdete v tématu [StreamSize](..
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [xsgetn](#xsgetn)( `ptr`, `count`).
+Členská funkce vrátí [xsgetn](#xsgetn)(`ptr`, `count`).
 
 ### <a name="example"></a>Příklad
 
@@ -982,7 +982,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*\
+*_Ch* \
 Znak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -991,7 +991,7 @@ Vrátí znak nebo chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je k dispozici putback pozice a *_Ch* se rovná znaku uloženému na této pozici, členská funkce sníží další ukazatel pro vstupní vyrovnávací paměť a vrátí **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). V opačném případě [](#pbackfail)vrátí pbackfail `_Ch`().
+Pokud je k dispozici putback pozice a *_Ch* se rovná znaku uloženému na této pozici, členská funkce sníží další ukazatel pro vstupní vyrovnávací paměť a vrátí **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`). V opačném případě vrátí [pbackfail](#pbackfail)(`_Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -1030,7 +1030,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch*\
+*_Ch* \
 Znak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1039,7 +1039,7 @@ Vrátí znak, pokud bylo úspěšné.
 
 ### <a name="remarks"></a>Poznámky
 
-[](../standard-library/char-traits-struct.md#to_int_type) `_Ch` Pokud je k dispozici, členská funkce ukládá _Ch do pozice pro zápis, zvýší další ukazatel pro výstupní vyrovnávací paměť a vrátí traits_type:: to_int_type (). `write position` V opačném případě [](#overflow)vrátí přetečení ( `_Ch`).
+Pokud je k dispozici `write position`, členská funkce uloží *_Ch* do pozice pro zápis, zvýší další ukazatel pro výstupní vyrovnávací paměť a vrátí **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`). V opačném případě vrátí [přetečení](#overflow)(`_Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -1073,10 +1073,10 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Řetězec znaků.
 
-*výpočtu*\
+*počet* \
 Počet znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1085,7 +1085,7 @@ Počet znaků, které jsou ve skutečnosti vloženy do datového proudu.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [xsputn](#xsputn)( `ptr`, `count`). Další informace najdete v části s poznámkami tohoto člena.
+Členská funkce vrátí [xsputn](#xsputn)(`ptr`, `count`). Další informace najdete v části s poznámkami tohoto člena.
 
 ### <a name="example"></a>Příklad
 
@@ -1154,7 +1154,7 @@ Vrátí buď znak, nebo selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je k dispozici putback pozice, členská funkce sníží další ukazatel pro vstupní vyrovnávací paměť a vrátí `traits_type::` [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*` [GPTR](#gptr)). Není však vždy možné určit poslední přečtený znak, aby mohl být zachycen ve stavu aktuální vyrovnávací paměti. Pokud je to pravda, funkce vrátí [pbackfail](#pbackfail). Aby k této situaci nedocházelo, Sledujte znak pro vrácení zpět a volání `sputbackc(ch)`, což vám nevede k selhání za předpokladu, že byste ho nevolali na začátku datového proudu a nesnažíte se vrátit více než jeden znak.
+Pokud je k dispozici putback pozice, členská funkce sníží další ukazatel pro vstupní vyrovnávací paměť a vrátí `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`*`[GPTR](#gptr)). Není však vždy možné určit poslední přečtený znak, aby mohl být zachycen ve stavu aktuální vyrovnávací paměti. Pokud je to pravda, funkce vrátí [pbackfail](#pbackfail). Chcete-li se této situaci vyhnout, Sledujte znak, který vrátí zpět a zavolejte `sputbackc(ch)`, což neselže, pokud ho nebudete volat na začátku datového proudu a nepokusíte se vrátit více než jeden znak.
 
 ### <a name="example"></a>Příklad
 
@@ -1192,7 +1192,7 @@ int main( )
 
 ## <a name="swap"></a>basic_streambuf:: swap
 
-Vyměňuje hodnoty v tomto objektu pro hodnoty v zadaném `basic_streambuf` objektu.
+Vyměňuje hodnoty v tomto objektu pro hodnoty v zadaném objektu `basic_streambuf`.
 
 ```cpp
 void swap(basic_streambuf& right);
@@ -1202,13 +1202,13 @@ void swap(basic_streambuf& right);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Kliknutím*|Odkaz lvalue na `basic_streambuf` objekt, který se používá k výměně hodnot.|
+|*Kliknutím*|Odkaz lvalue na objekt `basic_streambuf`, který se používá k výměně hodnot.|
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce se *vyměňuje spolu se* všemi ukazateli `input buffer` řízení a `output buffer`. Také vyměňuje `right.` `locale` [getloc ()](#getloc) s objektem.
+Chráněná členská funkce se bude *napravit* pomocí všech ukazatelů řídících `input buffer` a `output buffer`. Také vyměňuje `right.`[getloc ()](#getloc) s objektem `locale`.
 
-## <a name="sync"></a>  basic_streambuf::sync
+## <a name="sync"></a>basic_streambuf:: Sync
 
 Chráněná virtuální funkce, která se pokouší synchronizovat řízené streamy s libovolnými přidruženými externími proudy.
 
@@ -1222,9 +1222,9 @@ Pokud funkce nemůže být úspěšná, vrátí-1. Výchozím chováním je vrá
 
 ### <a name="remarks"></a>Poznámky
 
-`sync`zahrnuje zápis všech prvků mezi začátkem a dalšími ukazateli pro výstupní vyrovnávací paměť. Nezahrnuje vkládání všech prvků mezi dalšími a koncovými ukazateli pro vstupní vyrovnávací paměť.
+`sync` zahrnuje zápis všech prvků mezi začátkem a dalšími ukazateli pro výstupní vyrovnávací paměť. Nezahrnuje vkládání všech prvků mezi dalšími a koncovými ukazateli pro vstupní vyrovnávací paměť.
 
-## <a name="traits_type"></a>  basic_streambuf::traits_type
+## <a name="traits_type"></a>basic_streambuf::traits_type
 
 Přidruží název typu k parametru šablony **TR** .
 
@@ -1246,7 +1246,7 @@ Aktuální prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce se pokusí extrahovat aktuální prvek **ch** ze vstupního datového proudu, potom posunout aktuální pozici datového proudu a vrátit prvek jako **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). To lze provést různými způsoby:
+Chráněná virtuální členská funkce se pokusí extrahovat aktuální prvek **ch** ze vstupního datového proudu, potom posunout aktuální pozici datového proudu a vrátit prvek jako **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). Může tak učinit různými způsoby:
 
 - Pokud je k dispozici pozice pro čtení, je objekt **ch** jako element uložený na pozici pro čtení a přesune další ukazatel pro vstupní vyrovnávací paměť.
 
@@ -1270,21 +1270,21 @@ Aktuální prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce budoucna extrakci aktuálního prvku **ch** ze vstupního datového proudu, aniž by došlo k posunutí aktuální pozice datového proudu, a `traits_type::`vrátí ho jako [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). To lze provést různými způsoby:
+Chráněná virtuální členská funkce budoucna extrakci aktuálního prvku **ch** ze vstupního datového proudu, aniž by došlo k posunutí aktuální pozice datového proudu, a vrátí ho jako `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). Může tak učinit různými způsoby:
 
 - Pokud je k dispozici pozice pro čtení, **ch** je prvek uložený na pozici pro čtení. Další informace naleznete v části poznámky [třídy basic_streambuf](../standard-library/basic-streambuf-class.md).
 
 - Dá se k dispozici pozice pro čtení přidělením nového nebo dalšího úložiště pro vstupní vyrovnávací paměť a následným čtením z nějakého externího zdroje, jednoho nebo více prvků. Další informace naleznete v části poznámky [třídy basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-Pokud funkce nemůže být úspěšná, vrátí `traits_type::` [EOF](../standard-library/char-traits-struct.md#eof) `()` nebo vyvolá výjimku. V opačném případě vrátí aktuální prvek ve vstupním datovém proudu, který je převeden tak, jak je popsáno výše. Výchozí chování se vrátí `traits_type::eof()`.
+Pokud funkce nemůže být úspěšná, vrátí `traits_type::`[eof](../standard-library/char-traits-struct.md#eof) `()` nebo vyvolá výjimku. V opačném případě vrátí aktuální prvek ve vstupním datovém proudu, který je převeden tak, jak je popsáno výše. Výchozím chováním je vrácení `traits_type::eof()`.
 
-Virtuální `underflow` funkce s funkcemi [synchronizace](#sync) a přetečení [](#overflow) definuje charakteristiky `streambuf`odvozené třídy. Každá odvozená třída může `underflow` implementovat odlišně, ale rozhraní se třídou volajícího datového proudu je stejné.
+Funkce Virtual `underflow` s funkcemi [Sync](#sync) a [přetečení](#overflow) definuje vlastnosti třídy odvozené od `streambuf`. Každá odvozená třída může implementovat `underflow` odlišně, ale rozhraní s třídou volajícího datového proudu je stejné.
 
-`streambuf` [](#sgetn) `underflow` [](#sgetc) Funkce je nejčastěji volána veřejnými funkcemi jako sgetc – a sgetn, pokud je oblast Get prázdná, ale jiné třídy, včetně tříd datového proudu, mohou volat kdykoli. `underflow`
+Funkce `underflow` je nejčastěji volána funkcemi veřejné `streambuf`, jako je [sgetc –](#sgetc) a [sgetn](#sgetn) , pokud je oblast Get prázdná, ale jiné třídy, včetně tříd datového proudu, mohou volat `underflow` kdykoli.
 
-`underflow` Funkce dodá plochu Get se znaky ze vstupního zdroje. Pokud oblast get obsahuje znaky, `underflow` vrátí první znak. Je-li oblast získat prázdná, vyplní oblast získat a vrátí další znak (který je v oblasti Get). Pokud nejsou k dispozici žádné další znaky, `underflow` vrátí `EOF` a ponechá oblast získat prázdnou.
+Funkce `underflow` poskytuje oblast získat se znaky ze vstupního zdroje. Pokud oblast get obsahuje znaky, `underflow` vrátí první znak. Je-li oblast získat prázdná, vyplní oblast získat a vrátí další znak (který je v oblasti Get). Pokud nejsou k dispozici žádné další znaky, `underflow` vrátí `EOF` a ponechá oblast získat prázdnou.
 
-`strstreambuf` Ve `overflow` [](#egptr) třídě upravuje ukazatel egptr na přístup k úložišti, které bylo dynamicky přiděleno voláním. `underflow`
+Ve třídě `strstreambuf` `underflow` upravuje ukazatel [egptr](#egptr) pro přístup k úložišti, které bylo dynamicky přiděleno voláním `overflow`.
 
 ## <a name="xsgetn"></a>basic_streambuf::xsgetn
 
@@ -1300,10 +1300,10 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Vyrovnávací paměť obsahující extrahované znaky.
 
-*výpočtu*\
+*počet* \
 Počet prvků, které mají být extrahovány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1324,10 +1324,10 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Ukazatel na prvky, které chcete vložit.
 
-*výpočtu*\
+*počet* \
 Počet prvků, které mají být vloženy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1336,10 +1336,10 @@ Počet prvků, které jsou ve skutečnosti vloženy do datového proudu.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce vloží do výstupního datového proudu až do *počtu* elementů, jako by to opakovali volání [sputc](#sputc), od pole začínajícího na *PTR*. Vložení znaků do výstupního proudu zastaví, jakmile jsou všechny znaky *Count* zapsány, nebo pokud by `sputc( count)` volání vrátilo. `traits::eof()` Vrátí počet prvků, které jsou skutečně vloženy.
+Chráněná virtuální členská funkce vloží do výstupního datového proudu až do *počtu* elementů, jako by to opakovali volání [sputc](#sputc), od pole začínajícího na *PTR*. Vložení znaků do výstupního proudu zastaví po zapsání všech znaků *Count* nebo volání `sputc( count)` vrátilo `traits::eof()`. Vrátí počet prvků, které jsou skutečně vloženy.
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programování iostream –](../standard-library/iostream-programming.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[iostream – programování](../standard-library/iostream-programming.md) \
 [iostreams – konvence](../standard-library/iostreams-conventions.md)

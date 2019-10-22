@@ -1,5 +1,5 @@
 ---
-title: '&lt;type_traits&gt;'
+title: '&lt;type_traits &gt;'
 ms.date: 02/21/2019
 f1_keywords:
 - <type_traits>
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455052"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684414"
 ---
-# <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
+# <a name="lttype_traitsgt"></a>&lt;type_traits &gt;
 
 Definuje šablony pro konstanty v době kompilace, které poskytují informace o vlastnostech svých argumentů typu nebo vytvářejí transformované typy.
 
@@ -26,22 +26,22 @@ Definuje šablony pro konstanty v době kompilace, které poskytují informace o
 
 ## <a name="remarks"></a>Poznámky
 
-Třídy a šablony v \<type_traits > slouží pro podporu odvození typu, klasifikace a transformaci v době kompilace. Používají se také ke zjišťování chyb souvisejících s typem a k optimalizaci obecného kódu. Vlastnosti unárního typu popisují vlastnost typu, vlastnosti binárního typu popisují relaci mezi typy a transformační vlastnosti upravují vlastnost typu.
+Třídy a šablony v \<type_traits > jsou používány pro podporu odvození typu, klasifikace a transformaci v době kompilace. Používají se také ke zjišťování chyb souvisejících s typem a k optimalizaci obecného kódu. Vlastnosti unárního typu popisují vlastnost typu, vlastnosti binárního typu popisují relaci mezi typy a transformační vlastnosti upravují vlastnost typu.
 
-Pomocná třída `integral_constant` a její `true_type` specializace šablony a `false_type` tvoří základní třídy pro predikáty typu. *Predikát typu* je šablona, která přijímá jeden nebo více argumentů typu. Pokud predikát typu *drží hodnotu true*, je veřejně odvozen přímo nebo nepřímo z [true_type](../standard-library/type-traits-typedefs.md#true_type). Pokud predikát typu *obsahuje hodnotu false*, je veřejně odvozen přímo nebo nepřímo z [false_type](../standard-library/type-traits-typedefs.md#false_type).
+Pomocná třída `integral_constant` a její specializace šablony `true_type` a `false_type` tvoří základní třídy pro predikáty typu. *Predikát typu* je šablona, která přijímá jeden nebo více argumentů typu. Pokud predikát typu *drží hodnotu true*, je veřejně odvozen přímo nebo nepřímo z [true_type](../standard-library/type-traits-typedefs.md#true_type). Pokud predikát typu *obsahuje hodnotu false*, je veřejně odvozen přímo nebo nepřímo z [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
-*Modifikátor typu* nebo *transformační* vlastnost je šablona, která přebírá jeden nebo více argumentů šablony a má jeden člen, `type`,, což je synonymum pro upravený typ.
+*Modifikátor typu* nebo *transformační* vlastnost je šablona, která přebírá jeden nebo více argumentů šablony a má jeden člen, `type`, což je synonymum pro upravený typ.
 
 ### <a name="alias-templates"></a>Šablony aliasů
 
-Chcete-li zjednodušit výrazy vlastností typu, `typename some_trait<T>::type` jsou k dispozici [šablony aliasů](../cpp/aliases-and-typedefs-cpp.md) , kde *some_trait* je název třídy šablony. Například [add_const](../standard-library/add-const-class.md) má šablonu alias pro svůj typ `add_const_t`, definován jako:
+Chcete-li zjednodušit výrazy vlastností typu, jsou k dispozici [šablony aliasů](../cpp/aliases-and-typedefs-cpp.md) pro `typename some_trait<T>::type`, kde *some_trait* je název šablony třídy. Například [add_const](../standard-library/add-const-class.md) má šablonu alias pro svůj typ, `add_const_t` definován jako:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Jedná se o zadané aliasy pro `type` členy:
+Jedná se o zadané aliasy `type`ch členů:
 
 ||||
 |-|-|-|
@@ -69,7 +69,7 @@ Kategorie primárního typu
 |||
 |-|-|
 |[is_void](../standard-library/is-void-class.md)|Testuje, zda je typ **void**.|
-|[is_null_pointer](../standard-library/is-null-pointer-class.md)|Testuje, zda je `std::nullptr_t`typ.|
+|[is_null_pointer](../standard-library/is-null-pointer-class.md)|Testuje, zda je typ `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Testuje, zda je typ integrální.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Testuje, zda je typ plovoucí desetinná čárka.|
 |[is_array](../standard-library/is-array-class.md)|Testuje, zda je typ pole.|
@@ -105,11 +105,11 @@ Vlastnosti typu
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Testuje, zda je typ triviální kopie.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Testuje, zda je typ standardní typ rozložení.|
 |[is_pod](../standard-library/is-pod-class.md)|Testuje, zda je typ POD.|
-|[is_literal_type](../standard-library/is-literal-type-class.md)|Testuje, zda může být `constexpr` typ proměnná nebo použit `constexpr` ve funkci.|
+|[is_literal_type](../standard-library/is-literal-type-class.md)|Testuje, zda může být typ `constexpr` proměnnou nebo použit ve funkci `constexpr`.|
 |[is_empty](../standard-library/is-empty-class.md)|Testuje, zda je typ prázdná třída.|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Testuje, zda je typ polymorfní třídy.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Testuje, zda je typ abstraktní třída.|
-|[is_final](../standard-library/is-final-class.md)|Testuje, zda je typ typu třídy označeno `final`.|
+|[is_final](../standard-library/is-final-class.md)|Testuje, zda je typ typu třídy označený jako `final`.|
 |[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|Testuje, zda je typ celé číslo se znaménkem.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Testuje, zda je typ unsigned integer.|
@@ -228,4 +228,4 @@ Vlastnosti logického operátoru
 
 ## <a name="see-also"></a>Viz také:
 
-[\<funkční >](../standard-library/functional.md)
+[\<functional >](../standard-library/functional.md)

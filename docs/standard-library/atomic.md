@@ -48,16 +48,16 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: 4c46eb2b9bea30bf37800b33ce0dcf44c0d807f0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456725"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688453"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
-Definuje třídy a třídy šablon, které se použijí k vytváření typů, které podporují atomické operace.
+Definuje třídy a šablony tříd, které se použijí k vytváření typů, které podporují atomické operace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,29 +76,29 @@ Atomická operace má dvě klíčové vlastnosti, které vám pomůžou použít
 
 - Na základě jeho argumentu [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vytvoří atomická operace požadavky na řazení pro viditelnost účinků jiných atomických operací ve stejném vlákně. V důsledku toho znemožňuje optimalizace kompilátoru, které porušují požadavky na řazení.
 
-Na některých platformách nemusí být možné efektivně implementovat atomické operace pro některé typy bez použití `mutex` zámků. Atomický typ je *bez zámku* , pokud žádné atomické operace na tomto typu nepoužívají zámky.
+Na některých platformách nemusí být možné efektivně implementovat atomické operace pro některé typy bez použití zámků `mutex`. Atomický typ je *bez zámku* , pokud žádné atomické operace na tomto typu nepoužívají zámky.
 
-**C++11**: V obslužných rutinách signalizace můžete provádět atomické operace `obj` s `obj.is_lock_free()` objektem, pokud je hodnota nebo `atomic_is_lock_free(x)` true.
+**C++ 11**: v obslužných rutinách signálu můžete provádět atomické operace s objektem `obj`, pokud jsou hodnoty `obj.is_lock_free()` nebo `atomic_is_lock_free(x)` pravdivé.
 
 Třída [atomic_flag](../standard-library/atomic-flag-structure.md) poskytuje minimální atomická typ, který obsahuje příznak **bool** . Jeho operace jsou vždycky bez zámků.
 
-Třída `atomic<T>` Template ukládá objekt svého typu `T` argumentu a poskytuje atomický přístup k této uložené hodnotě. Můžete vytvořit instanci pomocí libovolného typu, který lze kopírovat pomocí [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) a testovat pro rovnost pomocí [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). Konkrétně jej můžete použít s uživatelsky definovanými typy, které splňují tyto požadavky, a v mnoha případech s typy s plovoucí desetinnou čárkou.
+Šablona třídy `atomic<T>` ukládá objekt jeho typu argumentu `T` a poskytuje atomický přístup k této uložené hodnotě. Můžete vytvořit instanci pomocí libovolného typu, který lze kopírovat pomocí [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) a testovat pro rovnost pomocí [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). Konkrétně jej můžete použít s uživatelsky definovanými typy, které splňují tyto požadavky, a v mnoha případech s typy s plovoucí desetinnou čárkou.
 
 Šablona má také sadu specializací pro celočíselné typy a částečnou specializaci pro ukazatele. Tyto specializace poskytují další operace, které nejsou k dispozici prostřednictvím primární šablony.
 
 ## <a name="pointer-specializations"></a>Specializace ukazatelů
 
-`atomic<T *>` Částečné specializace se vztahují na všechny typy ukazatelů. Poskytují metody pro aritmetický ukazatel.
+@No__t_0 částečné specializace se vztahují na všechny typy ukazatelů. Poskytují metody pro aritmetický ukazatel.
 
 ## <a name="integral-specializations"></a>Celočíselné specializace
 
-`atomic<integral>` Specializace se vztahují na všechny celočíselné typy. Poskytují další operace, které nejsou k dispozici prostřednictvím primární šablony.
+@No__t_0 specializace se vztahují na všechny celočíselné typy. Poskytují další operace, které nejsou k dispozici prostřednictvím primární šablony.
 
-Každý `atomic<integral>` typ má odpovídající makro, které lze použít `if directive` v k určení v době kompilace, zda jsou operace s tímto typem bez zámků. Pokud je hodnota makra nula, operace s typem nebudou bez zámků. Pokud je hodnota 1, operace můžou být bez zámků a je nutná kontrolní doba. Pokud je hodnota 2, operace se zablokují bez zámků. Funkci `atomic_is_lock_free` lze použít k určení za běhu, zda jsou operace s typem bez zámku.
+Každý typ `atomic<integral>` má odpovídající makro, které lze použít v `if directive` k určení v době kompilace, zda jsou operace s tímto typem bez zámků. Pokud je hodnota makra nula, operace s typem nebudou bez zámků. Pokud je hodnota 1, operace můžou být bez zámků a je nutná kontrolní doba. Pokud je hodnota 2, operace se zablokují bez zámků. Funkci `atomic_is_lock_free` lze použít k určení za běhu, zda jsou operace s typem bez zámku.
 
-Pro každý z celočíselných typů existuje odpovídající pojmenovaný typ Atom, který spravuje objekt daného integrálního typu. Každý `atomic_integral` typ má stejnou sadu členských funkcí jako odpovídající vytváření instancí `atomic<T>` a lze jej předat do kterékoli atomické funkce, které nejsou členy.
+Pro každý z celočíselných typů existuje odpovídající pojmenovaný typ Atom, který spravuje objekt daného integrálního typu. Každý typ `atomic_integral` má stejnou sadu členských funkcí jako odpovídající instance `atomic<T>` a může být předán do kterékoli nečlenské atomické funkce.
 
-|`atomic_integral`Textový|Celočíselný typ|`atomic_is_lock_free`Podokně|
+|Typ `atomic_integral`|Celočíselný typ|`atomic_is_lock_free` – makro|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_schar`|**signed char**|ATOMIC_CHAR_LOCK_FREE|
@@ -165,14 +165,14 @@ Názvy typedef existují pro specializace šablony atomie pro některé typy, kt
 
 ## <a name="functions"></a>Funkce
 
-V následujícím seznamu funkce `_explicit` , které nekončí, mají sémantiku odpovídající `_explicit`, s tím rozdílem, že mají implicitní argumenty `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+V následujícím seznamu funkce, které nekončí `_explicit` mají sémantiku odpovídající `_explicit`, s tím rozdílem, že mají implicitní argumenty [memory_order](../standard-library/atomic-enums.md#memory_order_enum) `memory_order_seq_cst`.
 
 |Name|Popis|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Provádí operaci *atomické porovnání a výměny* .|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Provádí operaci *atomické porovnání a výměny* .|
-|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Provede slabě atomická operace *porovnání a výměny* .|
-|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Provede slabě atomická operace *porovnání a výměny* .|
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Provede *slabě atomická operace porovnání a výměny* .|
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Provede *slabě atomická operace porovnání a výměny* .|
 |[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Nahradí uloženou hodnotu.|
 |[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Nahradí uloženou hodnotu.|
 |[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Přidá zadanou hodnotu do existující uložené hodnoty.|
@@ -185,11 +185,11 @@ V následujícím seznamu funkce `_explicit` , které nekončí, mají sémantik
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Odečte zadanou hodnotu od stávající uložené hodnoty.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Provede bitovou `exclusive or` na zadané hodnotě a existující uloženou hodnotu.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Provede bitovou `exclusive or` na zadané hodnotě a existující uloženou hodnotu.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Nastaví příznak v `atomic_flag` objektu na **hodnotu false**.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Nastaví příznak v `atomic_flag` objektu na **hodnotu false**.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Nastaví příznak v `atomic_flag` objektu na **hodnotu true**.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Nastaví příznak v `atomic_flag` objektu na **hodnotu true**.|
-|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Nastaví uloženou hodnotu v `atomic` objektu.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Nastaví příznak v objektu `atomic_flag` na **hodnotu false**.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Nastaví příznak v objektu `atomic_flag` na **hodnotu false**.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Nastaví příznak v objektu `atomic_flag` na **hodnotu true**.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Nastaví příznak v objektu `atomic_flag` na **hodnotu true**.|
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Nastaví uloženou hodnotu v objektu `atomic`.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Určuje, zda jsou atomické operace se zadaným objektem bez zámku.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Atomicky načte hodnotu.|
 |[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Atomicky načte hodnotu.|
@@ -201,5 +201,5 @@ V následujícím seznamu funkce `_explicit` , které nekončí, mají sémantik
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

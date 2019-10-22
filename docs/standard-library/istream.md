@@ -1,5 +1,5 @@
 ---
-title: '&lt;istream&gt;'
+title: '&lt;istream &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::<istream>
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8e9675a673462c8eaab94d29a3ae36a4786737b7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458732"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687855"
 ---
-# <a name="ltistreamgt"></a>&lt;istream&gt;
+# <a name="ltistreamgt"></a>&lt;istream &gt;
 
-Definuje třídu šablony basic_istream, která vymezuje extrakce pro iostreams, a třídu šablony basic_iostream, která řeší vložení i extrakci. Záhlaví také definuje související manipulátor. Tento hlavičkový soubor obvykle obsahuje jinou hlavičku iostreams; Jenom zřídka je budete muset zahrnout přímo.
+Definuje šablonu třídy basic_istream, která vymezuje extrakce pro iostreams, a šablonu třídy basic_iostream, která řeší vložení i extrakci. Záhlaví také definuje související manipulátor. Tento hlavičkový soubor obvykle obsahuje jinou hlavičku iostreams; Jenom zřídka je budete muset zahrnout přímo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,17 +29,17 @@ Definuje třídu šablony basic_istream, která vymezuje extrakce pro iostreams,
 
 |Název typu|Popis|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` specializovaný na **char**.|
-|[istream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specializovaný na **char**.|
-|[wiostream](../standard-library/istream-typedefs.md#wiostream)|Typ `basic_iostream` specializovaný na **WCHAR**.|
-|[wistream](../standard-library/istream-typedefs.md#wistream)|Typ `basic_istream` specializovaný na **WCHAR**.|
+|[iostream –](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` specializované na **char**.|
+|[IStream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specializované na **char**.|
+|[wiostream](../standard-library/istream-typedefs.md#wiostream)|Typ `basic_iostream` specializované na **WCHAR**.|
+|[wistream](../standard-library/istream-typedefs.md#wistream)|Typ `basic_istream` specializované na **WCHAR**.|
 
 ### <a name="manipulators"></a>Manipulátory
 
 |||
 |-|-|
-|[ws](../standard-library/istream-functions.md#ws)|Přeskočí prázdné znaky v datovém proudu.|
-|[swap](../standard-library/istream-functions.md#istream_swap)|Vyměňuje dva objekty streamu.|
+|[specifikace](../standard-library/istream-functions.md#ws)|Přeskočí prázdné znaky v datovém proudu.|
+|[adresu](../standard-library/istream-functions.md#istream_swap)|Vyměňuje dva objekty streamu.|
 
 ### <a name="operators"></a>Operátory
 
@@ -52,10 +52,10 @@ Definuje třídu šablony basic_istream, která vymezuje extrakce pro iostreams,
 |Třída|Popis|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Třída streamu, která může provádět vstup i výstup.|
-|[basic_istream](../standard-library/basic-istream-class.md)|Třída šablony popisuje objekt, který ovládá extrakci prvků a kódovaných objektů z vyrovnávací paměti datového proudu pomocí prvků typu `Elem`, označovaného také jako [char_type](../standard-library/basic-ios-class.md#char_type), jejichž znakové vlastnosti jsou určeny třídou `Tr`, také označuje se jako [traits_type](../standard-library/basic-ios-class.md#traits_type).|
+|[basic_istream](../standard-library/basic-istream-class.md)|Šablona třídy popisuje objekt, který ovládá extrakci prvků a kódovaných objektů z vyrovnávací paměti datového proudu pomocí prvků typu `Elem`, označovaného také jako [char_type](../standard-library/basic-ios-class.md#char_type), jejichž znakové vlastnosti jsou určeny `Tr` třídy, označované také jako [ traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programování iostream –](../standard-library/iostream-programming.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[iostream – programování](../standard-library/iostream-programming.md) \
 [iostreams – konvence](../standard-library/iostreams-conventions.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkce&gt; paměti'
+title: funkce &lt;memory &gt;
 ms.date: 08/05/2019
 f1_keywords:
 - memory/std::addressof
@@ -77,14 +77,14 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 4d33240edc326b03b0ef184ac14e233a90acd5f4
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821324"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687730"
 ---
-# <a name="ltmemorygt-functions"></a>&lt;funkce&gt; paměti
+# <a name="ltmemorygt-functions"></a>funkce &lt;memory &gt;
 
 ## <a name="addressof"></a>AddressOf
 
@@ -106,12 +106,12 @@ const T* addressof(
 
 ### <a name="parameters"></a>Parametry
 
-*osa*\
+*hodnota* \
 Objekt nebo funkce, pro které chcete získat adresu true.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Skutečná adresa objektu nebo funkce, na kterou odkazuje *hodnota*, i když `operator&()` existuje přetížený.
+Skutečná adresa objektu nebo funkce, na kterou odkazuje *hodnota*, i když existuje přetížený `operator&()`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -130,19 +130,19 @@ void* align(
 
 ### <a name="parameters"></a>Parametry
 
-*bod*\
+\ *Zarovnání*
 Zarovnání čekající na pokus.
 
-*hodnota*\
+*velikost* \
 Velikost v bajtech pro zarovnané úložiště.
 
-*střed*\
-Počáteční adresa dostupného nepřetržitého fondu úložiště, který chcete použít. Tento parametr je také výstupní parametr a je nastaven tak, aby obsahoval novou počáteční adresu, pokud je zarovnání úspěšné. Pokud `align()` je neúspěšná, tento parametr se neupraví.
+\ *PTR*
+Počáteční adresa dostupného nepřetržitého fondu úložiště, který chcete použít. Tento parametr je také výstupní parametr a je nastaven tak, aby obsahoval novou počáteční adresu, pokud je zarovnání úspěšné. Pokud je `align()` neúspěšná, tento parametr se neupraví.
 
-*space*\
-Celkové místo, které je `align()` dostupné pro použití při vytváření zarovnaného úložiště. Tento parametr je také výstupní parametr a obsahuje zbývající upravené místo ve vyrovnávací paměti úložiště po odečtení zarovnaného úložiště a veškeré přidružené režie.
+\ *mezer*
+Celkové místo dostupné pro `align()`, které se má použít při vytváření zarovnaného úložiště. Tento parametr je také výstupní parametr a obsahuje zbývající upravené místo ve vyrovnávací paměti úložiště po odečtení zarovnaného úložiště a veškeré přidružené režie.
 
-Pokud `align()` je neúspěšná, tento parametr se neupraví.
+Pokud je `align()` neúspěšná, tento parametr se neupraví.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -150,7 +150,7 @@ Ukazatel s hodnotou null, pokud se požadovaná zarovnaná vyrovnávací paměť
 
 ### <a name="remarks"></a>Poznámky
 
-Upravené parametry *PTR* a *Space* umožňují opakované volání `align()` ve stejné vyrovnávací paměti, případně s různými hodnotami pro *Zarovnání* a *Velikost*. Následující fragment kódu ukazuje jedno použití `align()`.
+Upravené parametry *PTR* a *space* umožňují volat `align()` opakovaně ve stejné vyrovnávací paměti, případně s různými hodnotami pro *Zarovnání* a *Velikost*. Následující fragment kódu ukazuje jedno použití `align()`.
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -177,7 +177,7 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 
 ## <a name="allocate_shared"></a>allocate_shared
 
-Vytvoří [shared_ptr](shared-ptr-class.md) pro objekty, které jsou přiděleny a sestaveny pro daný typ pomocí zadaného přidělování. `shared_ptr`Vrátí.
+Vytvoří [shared_ptr](shared-ptr-class.md) pro objekty, které jsou přiděleny a sestaveny pro daný typ pomocí zadaného přidělování. Vrátí `shared_ptr`.
 
 ```cpp
 template <class T, class Allocator, class... Args>
@@ -188,10 +188,10 @@ shared_ptr<T> allocate_shared(
 
 ### <a name="parameters"></a>Parametry
 
-*vyhrazen*\
+\ *přidělení*
 Alokátor použitý k vytvoření objektů.
 
-*argumentů*\
+\ *argumentů*
 Nula nebo více argumentů, které se stanou objekty.
 
 ### <a name="remarks"></a>Poznámky
@@ -321,18 +321,18 @@ shared_ptr<T> const_pointer_cast(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*\
+*T* \
 Typ řízený vráceným sdíleným ukazatelem.
 
-*Jiná*\
+*Jiné* \
 Typ řízený sdíleným ukazatelem argumentu.
 
-*SP*\
+\ *SP*
 Sdílený ukazatel argumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-`shared_ptr` Funkce šablony vrátí prázdný objekt, pokud `const_cast<T*>(sp.get())` vrátí ukazatel s hodnotou null `shared_ptr<T>` ; v opačném případě vrátí objekt, který je vlastníkem prostředku, který je vlastníkem *SP*. Výraz `const_cast<T*>(sp.get())` musí být platný.
+Funkce šablony vrátí prázdný objekt `shared_ptr`, pokud `const_cast<T*>(sp.get())` vrací ukazatel s hodnotou null; v opačném případě vrátí objekt `shared_ptr<T>`, který vlastní prostředek, který je vlastníkem *SP*. Výraz `const_cast<T*>(sp.get())` musí být platný.
 
 ### <a name="example"></a>Příklad
 
@@ -371,10 +371,10 @@ void declare_no_pointers(
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Adresa prvního znaku, který již neobsahuje sledovací ukazatele.
 
-*hodnota*\
+*velikost* \
 Velikost bloku, který začíná na *PTR* , který neobsahuje žádné zjistitelné ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -392,7 +392,7 @@ void declare_reachable(
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Ukazatel na dosažitelnou, přidělenou a platnou oblast úložiště.
 
 ### <a name="remarks"></a>Poznámky
@@ -417,15 +417,15 @@ struct default_delete
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Ukazatel na objekt, který chcete odstranit.
 
-*Jiná*\
+*Jiné* \
 Typ prvků v poli, který má být odstraněn.
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje odstranění, které odstraní skalární objekty přidělené operátorem **New**, vhodné pro použití s třídou `unique_ptr`Template. Má také explicitní specializaci `default_delete<T[]>`.
+Šablona třídy popisuje odstranění, které odstraní skalární objekty přidělené **operátorem New**, vhodné pro použití s šablonou třídy `unique_ptr`. Má také explicitní `default_delete<T[]>` specializace.
 
 ## <a name="destroy_at"></a>destroy_at
 
@@ -486,18 +486,18 @@ shared_ptr<T> dynamic_pointer_cast(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*\
+*T* \
 Typ řízený vráceným sdíleným ukazatelem.
 
-*Jiná*\
+*Jiné* \
 Typ řízený sdíleným ukazatelem argumentu.
 
-*SP*\
+\ *SP*
 Sdílený ukazatel argumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-`shared_ptr` Funkce šablony vrátí prázdný objekt, pokud `dynamic_cast<T*>(sp.get())` vrátí ukazatel s hodnotou null `shared_ptr<T>` ; v opačném případě vrátí objekt, který je vlastníkem prostředku, který je vlastníkem *SP*. Výraz `dynamic_cast<T*>(sp.get())` musí být platný.
+Funkce šablony vrátí prázdný objekt `shared_ptr`, pokud `dynamic_cast<T*>(sp.get())` vrací ukazatel s hodnotou null; v opačném případě vrátí objekt `shared_ptr<T>`, který vlastní prostředek, který je vlastníkem *SP*. Výraz `dynamic_cast<T*>(sp.get())` musí být platný.
 
 ### <a name="example"></a>Příklad
 
@@ -547,18 +547,18 @@ Deleter* get_deleter(
 
 ### <a name="parameters"></a>Parametry
 
-*Deleter*\
+@No__t_1 *odstranění*
 Typ odstranění.
 
-*Š*\
+*T* \
 Typ řízený sdíleným ukazatelem.
 
-*SP*\
+\ *SP*
 Sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrací ukazatel na odstranění typu *Odstranit* , který patří k `shared_ptr` objektu *SP*. Pokud v nástroji *SP* není odstraněn nebo pokud jeho odstranění není typu *Delete*, vrátí funkce hodnotu 0.
+Funkce šablony vrací ukazatel na odstranění typu *Odstranit* , který patří do `shared_ptr`ho objektu *SP*. Pokud v nástroji *SP* není odstraněn nebo pokud jeho odstranění není typu *Delete*, vrátí funkce hodnotu 0.
 
 ### <a name="example"></a>Příklad
 
@@ -628,12 +628,12 @@ pair<T *, ptrdiff_t> get_temporary_buffer(
 
 ### <a name="parameters"></a>Parametry
 
-*výpočtu*\
+*počet* \
 Maximální počet prvků požadovaných pro přidělení paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`pair` Jehož první součást je ukazatel na přidělenou paměť a jejíž druhá součást poskytuje velikost vyrovnávací paměti, která označuje největší počet prvků, které by mohly být uloženy.
+@No__t_0, jehož první součást je ukazatel na přidělenou paměť a jejíž druhá součást poskytuje velikost vyrovnávací paměti, která označuje největší počet prvků, které by mohly být uloženy.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -676,7 +676,7 @@ could store is given by: resultPair.second = 9.
 
 ## <a name="make_shared"></a>make_shared
 
-Vytvoří a vrátí [shared_ptr](shared-ptr-class.md) , který odkazuje na přidělené objekty, které jsou vytvořené z nuly nebo více argumentů pomocí výchozího přidělování. Přidělí a sestaví jak objekt zadaného typu `shared_ptr` , tak pro správu sdíleného vlastnictví objektu a `shared_ptr`vrátí.
+Vytvoří a vrátí [shared_ptr](shared-ptr-class.md) , který odkazuje na přidělené objekty, které jsou vytvořené z nuly nebo více argumentů pomocí výchozího přidělování. Přidělí a sestaví jak objekt zadaného typu, tak `shared_ptr` pro správu sdíleného vlastnictví objektu a vrátí `shared_ptr`.
 
 ```cpp
 template <class T, class... Args>
@@ -686,21 +686,21 @@ shared_ptr<T> make_shared(
 
 ### <a name="parameters"></a>Parametry
 
-*argumentů*\
+\ *argumentů*
 Nula nebo více argumentů konstruktoru. Funkce odvodí, které přetížení konstruktoru bude vyvoláno na základě poskytnutých argumentů.
 
 ### <a name="remarks"></a>Poznámky
 
-Používejte `make_shared` jako jednoduchý a efektivnější způsob, jak vytvořit objekt `shared_ptr` a ke správě sdíleného přístupu k objektu ve stejnou dobu. Sémanticky uvedené dva příkazy jsou ekvivalentní:
+Použijte `make_shared` jako jednoduchý a efektivnější způsob, jak vytvořit objekt a `shared_ptr` ke správě sdíleného přístupu k objektu ve stejnou dobu. Sémanticky uvedené dva příkazy jsou ekvivalentní:
 
 ```cpp
 auto sp = std::shared_ptr<Example>(new Example(argument));
 auto msp = std::make_shared<Example>(argument);
 ```
 
-První příkaz však vytvoří dvě přidělení, a pokud přidělení `shared_ptr` po úspěšném přidělení `Example` objektu dojde k chybě, není `Example` objekt bez názvu vrácen. Příkaz, který používá `make_shared` , je jednodušší, protože je zapojeno pouze jedno volání funkce. Je efektivnější, protože knihovna může vytvořit jedno přidělení pro objekt i inteligentní ukazatel. Tato funkce je rychlejší a vede k menší fragmentaci paměti a nedochází k výjimce při jednom přidělení, ale ne k druhému. Výkon je vylepšený o lepší národní prostředí pro kód, který odkazuje na objekt a aktualizuje počty odkazů v inteligentním ukazateli.
+První příkaz však vytvoří dvě přidělení a pokud přidělení `shared_ptr` selžou po úspěšném přidělení `Example` objektu, není objekt bez názvu `Example` vrácen. Příkaz, který používá `make_shared`, je jednodušší, protože je zapojeno pouze jedno volání funkce. Je efektivnější, protože knihovna může vytvořit jedno přidělení pro objekt i inteligentní ukazatel. Tato funkce je rychlejší a vede k menší fragmentaci paměti a nedochází k výjimce při jednom přidělení, ale ne k druhému. Výkon je vylepšený o lepší národní prostředí pro kód, který odkazuje na objekt a aktualizuje počty odkazů v inteligentním ukazateli.
 
-Zvažte použití [make_unique](memory-functions.md#make_unique) , pokud nepotřebujete sdílený přístup k objektu. [Allocate_shared](memory-functions.md#allocate_shared) použijte, pokud potřebujete zadat vlastní přidělování pro objekt. Nemůžete `make_shared` použít, pokud objekt vyžaduje vlastní odstranění, protože neexistuje žádný způsob, jak odstranit modul pro odstranění jako argument.
+Zvažte použití [make_unique](memory-functions.md#make_unique) , pokud nepotřebujete sdílený přístup k objektu. [Allocate_shared](memory-functions.md#allocate_shared) použijte, pokud potřebujete zadat vlastní přidělování pro objekt. @No__t_0 nemůžete použít, pokud objekt vyžaduje vlastní odstranění, protože neexistuje žádný způsob, jak odstranit modul pro odstranění jako argument.
 
 Následující příklad ukazuje, jak vytvořit sdílené odkazy na typ vyvoláním konkrétního konstruktoru přetížení.
 
@@ -791,38 +791,38 @@ template <class T, class... Args>
 
 ### <a name="parameters"></a>Parametry
 
-*Š*\
-Typ objektu, na který `unique_ptr` bude odkazovat.
+*T* \
+Typ objektu, na který bude `unique_ptr` odkazovat.
 
-*Argumentů*\
-Typy argumentů konstruktoru určené argumenty.
+@No__t_1 *argumentů*
+Typy argumentů konstruktoru určené *argumenty.*
 
-*argumentů*\
+\ *argumentů*
 Argumenty, které mají být předány konstruktoru objektu typu *T*.
 
-*elementu*\
+*prvky* \
 Pole prvků typu *T*.
 
-*hodnota*\
+*velikost* \
 Počet prvků pro přidělení prostoru v novém poli.
 
 ### <a name="remarks"></a>Poznámky
 
-První přetížení se používá pro jednotlivé objekty. Druhé přetížení je vyvoláno pro pole. Třetí přetížení zabraňuje zadání velikosti pole v argumentu typu (make_unique\<T [N] >); Tato konstrukce není podporována aktuálním standardem. Použijete `make_unique` -li k `unique_ptr` vytvoření pro pole, je nutné inicializovat prvky pole samostatně. Místo použití tohoto přetížení, možná lepší volbou je použití [std:: Vector](vector-class.md).
+První přetížení se používá pro jednotlivé objekty. Druhé přetížení je vyvoláno pro pole. Třetí přetížení znemožňuje zadání velikosti pole v argumentu typu (make_unique \<T [N] >); Tento konstrukcí není podporován aktuálním standardem. Použijete-li `make_unique` k vytvoření `unique_ptr` pole, je nutné inicializovat prvky pole samostatně. Místo použití tohoto přetížení, možná lepší volbou je použití [std:: Vector](vector-class.md).
 
-Vzhledem `make_unique` k tomu, že je pečlivě implementována pro bezpečnost výjimek, `make_unique` doporučujeme použít místo přímého `unique_ptr` volání konstruktorů.
+Vzhledem k tomu, že `make_unique` je pečlivě implementována pro bezpečnost výjimek, doporučujeme používat `make_unique` namísto přímého volání `unique_ptr` konstruktorů.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít `make_unique`. Další příklady naleznete v tématu [How to: Vytvořte a používejte instance](../cpp/how-to-create-and-use-unique-ptr-instances.md)unique_ptr.
+Následující příklad ukazuje, jak použít `make_unique`. Další příklady naleznete v tématu [How to: Create and use Unique_ptr Instances](../cpp/how-to-create-and-use-unique-ptr-instances.md).
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
-Když se v souvislosti s a `unique_ptr`zobrazí chyba C2280, je téměř jistě, protože se pokoušíte vyvolat svůj kopírovací konstruktor, což je Odstraněná funkce.
+Když se v souvislosti s `unique_ptr` zobrazí chyba C2280, je téměř jistě, protože se pokoušíte vyvolat svůj kopírovací konstruktor, což je Odstraněná funkce.
 
 ## <a name="owner_less"></a>owner_less
 
-Umožňuje smíšené porovnání sdílených a slabých ukazatelů na základě vlastnictví. Vrátí **hodnotu true** , pokud je levý parametr seřazen před pravým parametrem členské `owner_before`funkce.
+Umožňuje smíšené porovnání sdílených a slabých ukazatelů na základě vlastnictví. Vrátí **hodnotu true** , pokud je levý parametr seřazen před pravým parametrem `owner_before` členské funkce.
 
 ```cpp
 template <class T>
@@ -885,15 +885,15 @@ template<> struct owner_less<void>
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý* \
 Sdílený nebo slabý ukazatel.
 
-*Kliknutím*\
+*pravé* \
 Sdílený nebo slabý ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
-Třídy šablon definují všechny své členské operátory jako vracené `left.owner_before(right)`.
+Šablony tříd definují všechny své členské operátory jako vrácení `left.owner_before(right)`.
 
 ## <a name="reinterpret_pointer_cast"></a>reinterpret_pointer_cast
 
@@ -911,18 +911,18 @@ shared_ptr<T> reinterpret_pointer_cast(
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Odkaz na `shared_ptr<U>`.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je *PTR* prázdné, nová `shared_ptr` je také prázdná, jinak sdílí vlastnictví s *PTR*. Nový sdílený ukazatel je výsledkem vyhodnocení `reinterpret_cast<Y*>(ptr.get())`, kde `Y` je `typename std::shared_ptr<T>::element_type`. Chování není definováno, pokud `reinterpret_cast<T*>((U*)nullptr)` není ve správném formátu.
+Pokud je *PTR* prázdné, je nový `shared_ptr` také prázdný, jinak sdílí vlastnictví s *PTR*. Nový sdílený ukazatel je výsledkem vyhodnocení `reinterpret_cast<Y*>(ptr.get())`, kde `Y` je `typename std::shared_ptr<T>::element_type`. Chování není definováno, pokud `reinterpret_cast<T*>((U*)nullptr)` není správně vytvořen.
 
 Funkce šablony, která přebírá odkaz lvalue, je v C++ 17 novinkou. Funkce šablony, která přebírá odkaz rvalue, je v C++ 20 novinkou.
 
 ## <a name="return_temporary_buffer"></a>return_temporary_buffer
 
-Zruší přidělení dočasné paměti, která byla přidělena pomocí `get_temporary_buffer` funkce šablony.
+Zruší přidělení dočasné paměti, která byla přidělena pomocí funkce šablony `get_temporary_buffer`.
 
 ```cpp
 template <class T>
@@ -932,7 +932,7 @@ void return_temporary_buffer(
 
 ### <a name="parameters"></a>Parametry
 
-*vyrovnávací paměti*\
+\ *vyrovnávací paměti*
 Ukazatel na paměť, která se má uvolnit
 
 ### <a name="remarks"></a>Poznámky
@@ -993,18 +993,18 @@ shared_ptr<T> static_pointer_cast(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*\
+*T* \
 Typ řízený vráceným sdíleným ukazatelem.
 
-*Jiná*\
+*Jiné* \
 Typ řízený sdíleným ukazatelem argumentu.
 
-*SP*\
+\ *SP*
 Sdílený ukazatel argumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí prázdný `shared_ptr` objekt, pokud je *SP* prázdného `shared_ptr` objektu; v opačném případě vrátí `shared_ptr<T>` objekt, který je vlastníkem prostředku, který je vlastníkem *SP*. Výraz `static_cast<T*>(sp.get())` musí být platný.
+Funkce šablony vrátí prázdný objekt `shared_ptr`, pokud je *SP* prázdný objekt `shared_ptr`; v opačném případě vrátí objekt `shared_ptr<T>`, který vlastní prostředek, který je vlastníkem *SP*. Výraz `static_cast<T*>(sp.get())` musí být platný.
 
 ### <a name="example"></a>Příklad
 
@@ -1065,21 +1065,21 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*\
+*T* \
 Typ řízený ukazatelem argumentu.
 
-*Deleter*\
+@No__t_1 *odstranění*
 Odstraní se jedinečný typ ukazatele.
 
-*zbývá*\
+*levý* \
 Levý ukazatel.
 
-*Kliknutím*\
+*pravé* \
 Pravý ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablon volá `left.swap(right)`.
+Funkce šablony volají `left.swap(right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -1138,15 +1138,15 @@ void undeclare_no_pointers(
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Ukazatel na adresu paměti dříve označený pomocí [declare_no_pointers](#declare_no_pointers).
 
-*hodnota*\
-Počet bajtů v rozsahu paměti. Tato hodnota musí být rovna číslu použitému ve `declare_no_pointers` volání.
+*velikost* \
+Počet bajtů v rozsahu paměti. Tato hodnota musí být stejná jako číslo použité ve volání `declare_no_pointers`.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce informuje všechny uvolňování paměti, že rozsah adres `[ptr, ptr + size)` nyní může obsahovat sledovací ukazatele.
+Funkce informuje jakýkoliv systém uvolňování paměti, že rozsah adres `[ptr, ptr + size)` nyní může obsahovat sledovací ukazatele.
 
 ## <a name="undeclare_reachable"></a>undeclare_reachable
 
@@ -1160,7 +1160,7 @@ T *undeclare_reachable(
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Ukazatel na adresu paměti dříve označený pomocí [declare_reachable](#declare_reachable).
 
 ### <a name="remarks"></a>Poznámky
@@ -1188,16 +1188,16 @@ ForwardIterator uninitialized_copy(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Vstupní iterátor adresující první prvek ve zdrojovém rozsahu.
 
-*posledního*\
+*poslední* \
 Vstupní iterátor adresující poslední prvek ve zdrojovém rozsahu.
 
-*propojovací*\
+*cílový* \
 Dopředný iterátor, který adresuje první prvek v cílovém rozsahu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1308,21 +1308,21 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Vstupní iterátor odkazující na objekt, který chcete kopírovat.
 
-*výpočtu*\
+*počet* \
 Typ celého čísla se znaménkem nebo bez znaménka udávající, kolikrát se má objekt kopírovat.
 
-*propojovací*\
+*cílový* \
 Dopředný iterátor odkazující na umístění nových kopií.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Dopředný iterátor adresující první pozici za cílem. Pokud byl zdrojový rozsah prázdný, iterátor adresy napřed.
+Dopředný iterátor adresující první pozici za cílem. Pokud byl zdrojový rozsah prázdný, iterátor adresy *napřed*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1358,13 +1358,13 @@ void uninitialized_default_construct(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Iterátor adresující první prvek v rozsahu, který se má sestavit.
 
-*posledního*\
+*poslední* \
 Iterátor adresující jeden za poslední prvek v rozsahu, který se má sestavit.
 
 ### <a name="remarks"></a>Poznámky
@@ -1385,7 +1385,7 @@ Tyto funkce jsou v C++ 17 nové.
 
 ## <a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
 
-Výchozí sestaví zadaný počet objektů iterátoru `value_type`, počínaje zadaným umístěním.
+Výchozí vytvoří zadaný počet objektů `value_type` iterátoru počínaje zadaným umístěním.
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1402,13 +1402,13 @@ ForwardIterator uninitialized_default_construct_n(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Iterátor adresující první prvek v cílovém rozsahu, který se má sestavit.
 
-*výpočtu*\
+*počet* \
 Počet prvků v cílovém rozsahu, který se má sestavit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1453,16 +1453,16 @@ void uninitialized_fill(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Dopředný iterátor, který adresuje první prvek v cílovém rozsahu, který se má inicializovat.
 
-*posledního*\
+*poslední* \
 Dopředný iterátor, který adresuje poslední prvek v cílovém rozsahu, který se má inicializovat.
 
-*osa*\
+*hodnota* \
 Hodnota, která má být použita k inicializaci cílového rozsahu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1541,16 +1541,16 @@ ForwardIterator uninitialized_fill_n(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Dopředný iterátor, který adresuje první prvek v cílovém rozsahu, který se má inicializovat.
 
-*výpočtu*\
+*počet* \
 Počet prvků, které mají být inicializovány.
 
-*osa*\
+*hodnota* \
 Hodnota, která se má použít k inicializaci cílového rozsahu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1623,16 +1623,16 @@ ForwardIterator uninitialized_move(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Vstupní iterátor adresující první prvek ve zdrojovém rozsahu, který se má přesunout.
 
-*posledního*\
+*poslední* \
 Vstupní iterátor adresující jedno za poslední prvek ve zdrojovém rozsahu, který se má přesunout.
 
-*propojovací*\
+*cílový* \
 Začátek cílového rozsahu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1673,16 +1673,16 @@ pair<InputIterator, ForwardIterator> uninitialized_move_n(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Vstupní iterátor adresující první prvek ve zdrojovém rozsahu, který se má přesunout.
 
-*výpočtu*\
+*počet* \
 Počet prvků ve zdrojovém rozsahu, který chcete přesunout.
 
-*propojovací*\
+*cílový* \
 Začátek cílového rozsahu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1704,7 +1704,7 @@ Tyto funkce jsou v C++ 17 nové.
 
 ## <a name="uninitialized_value_construct"></a>uninitialized_value_construct
 
-Vytvoří objekty iterátorů `value_type` podle hodnoty inicializace v zadaném rozsahu.
+Vytvoří objekty iterátorů `value_type` podle inicializace hodnoty v zadaném rozsahu.
 
 ```cpp
 template <class ForwardIterator>
@@ -1721,13 +1721,13 @@ void uninitialized_value_construct(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Iterátor adresující první prvek v rozsahu do hodnoty konstrukce.
 
-*posledního*\
+*poslední* \
 Iterátor adresující jedno za poslední prvek v rozsahu do hodnoty konstrukce.
 
 ### <a name="remarks"></a>Poznámky
@@ -1744,13 +1744,13 @@ Pokud je vyvolána výjimka, dříve vytvořené objekty jsou zničeny v nespeci
 
 Verze se zásadami spouštění má stejný výsledek, ale provádí se podle zadaných *zásad*.
 
-Pokud dojde k chybě přidělení paměti, `std::bad_alloc` je vyvolána výjimka.
+Pokud dojde k chybě přidělení paměti, je vyvolána výjimka `std::bad_alloc`.
 
 Tyto funkce jsou v C++ 17 nové.
 
 ## <a name="uninitialized_value_construct_n"></a>uninitialized_value_construct_n
 
-Sestaví zadaný počet objektů inicializace iterátoru `value_type` podle hodnoty, počínaje zadaným umístěním.
+Sestaví zadaný počet objektů `value_type` iterátoru podle hodnoty inicializace, počínaje zadaným umístěním.
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1767,13 +1767,13 @@ ForwardIterator uninitialized_value_construct_n(
 
 ### <a name="parameters"></a>Parametry
 
-*politických*\
+\ *zásad*
 Zásady spouštění, které se mají použít.
 
-*první*\
+*první* \
 Iterátor adresující první prvek v cílovém rozsahu, který se má sestavit.
 
-*výpočtu*\
+*počet* \
 Počet prvků v cílovém rozsahu, který se má sestavit.
 
 ### <a name="remarks"></a>Poznámky
@@ -1791,13 +1791,13 @@ Pokud je vyvolána výjimka, dříve vytvořené objekty jsou zničeny v nespeci
 
 Verze se zásadami spouštění má stejný výsledek, ale provádí se podle zadaných *zásad*.
 
-Pokud dojde k chybě přidělení paměti, `std::bad_alloc` je vyvolána výjimka.
+Pokud dojde k chybě přidělení paměti, je vyvolána výjimka `std::bad_alloc`.
 
 Tyto funkce jsou v C++ 17 nové.
 
 ## <a name="uses_allocator_v"></a>uses_allocator_v
 
-Pomocná šablona proměnné pro přístup k hodnotě `uses_allocator` šablony.
+Pomocná šablona proměnné pro přístup k hodnotě šablony `uses_allocator`.
 
 ```cpp
 template <class T, class Alloc>
@@ -1806,4 +1806,4 @@ inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 
 ## <a name="see-also"></a>Viz také:
 
-[\<memory>](memory.md)
+[\<memory >](memory.md)

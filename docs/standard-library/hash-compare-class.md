@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: 399b412c41128f513cf01d1e034bad2bbc5ef79f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fb44a371630a66275f6ef59a0bf66b4cb73a71f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448810"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689562"
 ---
-# <a name="hashcompare-class"></a>hash_compare – třída
+# <a name="hash_compare-class"></a>hash_compare – třída
 
-Třída šablony popisuje objekt, který může být použit jakýmkoli z asociativních kontejnerů hash – hash_map, hash_multimap, hash_set nebo hash_multiset – **jako výchozí objekt** parametru pro řazení a hash prvků, které obsahují.
+Šablona třídy popisuje objekt, který může být použit jakýmkoli z asociativních kontejnerů hash – hash_map, hash_multimap, hash_set nebo hash_multiset – **jako výchozí objekt** parametru pro řazení a hash prvků, které obsahují.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,13 +23,13 @@ hash_compare třídy {resize_ts; Public: const bucket_size = 4; const size_t min
 
 ## <a name="remarks"></a>Poznámky
 
-Každý asociativní kontejner hash ukládá objekt zatřiďovacích vlastností typu `Traits` (parametr šablony). Třídu můžete odvodit od specializace hash_compare pro selektivní přepsání určitých funkcí a objektů, nebo můžete předat vlastní verzi této třídy, pokud splňujete určité minimální požadavky. Konkrétně pro objekt hash_comp typu `hash_compare<Key, Traits>`je vyžadováno následující chování výše uvedenými kontejnery:
+Každý asociativní kontejner s algoritmem hash ukládá objekt hash objektů typu `Traits` (parametr šablony). Třídu můžete odvodit od specializace hash_compare pro selektivní přepsání určitých funkcí a objektů, nebo můžete předat vlastní verzi této třídy, pokud splňujete určité minimální požadavky. Konkrétně pro objekt hash_comp typu `hash_compare<Key, Traits>` je následující chování vyžadováno výše uvedenými kontejnery:
 
-- Pro všechny hodnoty `key` typu `Key`volání **hash_comp**(`key`) slouží jako funkce hash, která poskytuje distribuci hodnot typu `size_t`. Funkce poskytnutá funkcí hash_compare vrací `key`.
+- Pro všechny hodnoty `key` typu `Key` volání **hash_comp**(`key`) slouží jako funkce hash, která poskytuje distribuci hodnot typu `size_t`. Funkce poskytnutá funkcí hash_compare vrací `key`.
 
-- Pro libovolnou hodnotu `key1` typu `Key` , která předchází `key2` v sekvenci a má stejnou hodnotu hash (hodnota vrácená funkcí hash), **hash_comp**(`key2`, `key1`) je false. Funkce musí stanovit celkové řazení hodnot typu `Key`. Funkce poskytnutá funkcí hash_compare vrací *comp*(`key2`, `key1`) `,` , kde *comp* je uložený objekt typu `Traits` , který můžete zadat při vytváření objektu hash_comp. Pro výchozí `Traits` typ `less<Key>`parametru se klíče řazení nikdy nesnižují.
+- Pro libovolnou hodnotu `key1` typu `Key`, která předchází `key2` v sekvenci a má stejnou hodnotu hash (hodnota vrácená funkcí hash), je **hash_comp**(`key2`, `key1`) false. Funkce musí ukládat celkové řazení hodnot typu `Key`. Funkce dodaná funkcí hash_compare vrací *comp*(`key2`, `key1`) `,`, kde *comp* je uložený objekt typu `Traits`, který lze zadat při vytváření objektu hash_comp. Pro výchozí typ parametru `Traits` `less<Key>`, klíče řazení nikdy nesnižují hodnotu.
 
-- Celočíselná konstanta `bucket_size` určuje průměrný počet prvků na hodnotu "interval" (hodnota hash-Table Entry), které by měl kontejner zkusit přesáhnout. Musí být větší než nula. Hodnota zadaná v hash_compare je 4.
+- Celočíselná konstanta `bucket_size` určuje střední počet prvků na hodnotu "interval" (hodnota hash-Table Entry), které by měl kontejner zkusit přesáhnout. Musí být větší než nula. Hodnota zadaná v hash_compare je 4.
 
 - Celočíselná konstanta `min_buckets` určuje minimální počet intervalů, které se mají zachovat v zatřiďovací tabulce. Musí to být Mocnina dvou a větší než nula. Hodnota zadaná v hash_compare je 8.
 
@@ -39,11 +39,11 @@ Příklady, jak deklarovat a používat hash_set, naleznete v tématu Příklady
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** \<hash_map>
+**Záhlaví:** \<hash_map >
 
 **Obor názvů:** stdext
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

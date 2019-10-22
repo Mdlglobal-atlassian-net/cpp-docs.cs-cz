@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449646"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688348"
 ---
-# <a name="cachesuballoc-class"></a>cache_suballoc – třída
+# <a name="cache_suballoc-class"></a>cache_suballoc – třída
 
 Definuje [přidělování bloků](../standard-library/allocators-header.md) , které přiděluje a odděluje bloky paměti s jednou velikostí.
 
@@ -32,13 +32,13 @@ class cache_suballoc
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Sz*|Počet prvků v poli, které mají být přiděleny.|
+|*'S*|Počet prvků v poli, které mají být přiděleny.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony cache_suballoc ukládá nepřidělené bloky paměti do bezplatného seznamu s nevázanou délkou, `freelist<sizeof(Type), max_unbounded>`pomocí a rozděluje bloky paměti z většího bloku, který je přidělen s **operátorem New** , pokud je seznam volných hodnot prázdný.
+Šablona třídy cache_suballoc ukládá nepřidělené bloky paměti do bezplatného seznamu s nevázanou délkou, používá `freelist<sizeof(Type), max_unbounded>` a rozděluje bloky paměti z většího bloku dat přiděleného **operátorem New** , pokud je seznam volných hodnot prázdný.
 
-Každý blok dat `Sz * Nelts` uchovává bajty použitelné paměti a data, která **operátor New** a **operátor delete** vyžadují. Přidělené bloky dat nejsou nikdy uvolněny.
+Každý blok dat uchovává `Sz * Nelts` bajtů použitelné paměti a data, která **operátor New** a **operátor delete** vyžaduje. Přidělené bloky dat nejsou nikdy uvolněny.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -55,7 +55,7 @@ Každý blok dat `Sz * Nelts` uchovává bajty použitelné paměti a data, kter
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> přidělování
+**Záhlaví:** \<allocators >
 
 **Obor názvů:** stdext
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators >](../standard-library/allocators-header.md)

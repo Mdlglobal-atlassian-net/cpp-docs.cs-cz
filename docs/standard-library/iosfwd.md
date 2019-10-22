@@ -1,21 +1,21 @@
 ---
-title: '&lt;iosfwd&gt;'
+title: '&lt;iosfwd &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <iosfwd>
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449073"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687871"
 ---
-# <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
+# <a name="ltiosfwdgt"></a>&lt;iosfwd &gt;
 
-Deklaruje předávané odkazy na několik tříd šablon používaných v rámci iostreams. Všechny takové třídy šablony jsou definovány v jiných standardních hlavičkách. Tuto hlavičku zahrnete explicitně jenom v případě, že potřebujete jednu z jejích deklarací, ale ne její definici.
+Deklaruje předávané odkazy na několik šablon tříd používaných v rámci iostreams. Všechny tyto šablony třídy jsou definovány v jiných standardních hlavičkách. Tuto hlavičku zahrnete explicitně jenom v případě, že potřebujete jednu z jejích deklarací, ale ne její definici.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Dopředné deklarace/třídy šablon
+## <a name="forward-declarations-and-class-templates"></a>Dopředné deklarace a šablony tříd
 
 ```cpp
 template <class _Statetype>
@@ -128,7 +128,7 @@ class basic_fstream;
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programování iostream –](../standard-library/iostream-programming.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[iostream – programování](../standard-library/iostream-programming.md) \
 [iostreams – konvence](../standard-library/iostreams-conventions.md)

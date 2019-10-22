@@ -1,5 +1,5 @@
 ---
-title: '&lt;stran&gt;'
+title: '&lt;ratio &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - ratio/std::mega
@@ -31,16 +31,16 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458169"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687067"
 ---
-# <a name="ltratiogt"></a>&lt;stran&gt;
+# <a name="ltratiogt"></a>&lt;ratio &gt;
 
-Zahrňte standardní poměr \<hlaviček > k definování konstant a šablon, které se používají k ukládání a manipulaci s racionálními čísly v době kompilace.
+Zahrňte standardní hlavičku \<ratio > k definování konstant a šablon, které se používají k ukládání a manipulaci s racionálními čísly v době kompilace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,17 +60,17 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-`ratio` Šablona definuje statické `num` konstanty `num` , `num` jakoje`den` = čitatel/jmenovatel a a nemá žádné společné faktory. `den`  /  `den` `num` / `den`je hodnota reprezentovaná třídou šablony. `type` Proto určí`ratio<num, den>`instanci.
+Šablona `ratio` definuje statické konstanty `num` a `den` tak, že `num`  /  `den` = = čitatel/jmenovatel a `num` a `den` nemají žádné společné faktory. `num`  /  `den` je hodnota reprezentovaná šablonou třídy. Proto `type` určí `ratio<num, den>` vytváření instancí.
 
 ### <a name="specializations"></a>Specializace
 
-\<poměr > také definuje specializace `ratio` , které mají následující formu.
+\<ratio > také definuje specializace `ratio`, které mají následující formu.
 
 `template <class R1, class R2> struct ratio_specialization`
 
 Každá specializace má dva parametry šablony, které musí být také specializace `ratio`. Hodnota `type` je určena přidruženou logickou operací.
 
-|Name|`type`Osa|
+|Name|Hodnota `type`|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|

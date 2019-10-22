@@ -14,20 +14,20 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 14841662235f075d74120673208dd54531763c09
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6b429b0e5c734f81216c988e372c02021528cffd
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456716"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690031"
 ---
-# <a name="autoptr-class"></a>auto_ptr – třída
+# <a name="auto_ptr-class"></a>auto_ptr – třída
 
 Zalomí inteligentní ukazatel kolem prostředku, který zajišťuje, že je prostředek zničen automaticky, když ovládací prvek opustí blok.
 
-Třída s možností `unique_ptr` příschopností `auto_ptr`nahrazuje. Další informace naleznete v tématu [Třída unique_ptr](../standard-library/unique-ptr-class.md).
+@No__t_1 třída s možností pří`unique_ptr` nahrazuje. Další informace naleznete v tématu [Třída unique_ptr](../standard-library/unique-ptr-class.md).
 
-Další informace o `throw()` zpracování výjimek naleznete v tématu [Specifikace výjimek (throw)](../cpp/exception-specifications-throw-cpp.md).
+Další informace o `throw()` a zpracování výjimek naleznete v tématu [Specifikace výjimek (throw)](../cpp/exception-specifications-throw-cpp.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,17 +55,17 @@ class auto_ptr {
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-, `auto_ptr` Ze kterého se má získat existující prostředek.
+*pravé* \
+@No__t_0, ze kterého se má získat existující prostředek
 
-*střed*\
+\ *PTR*
 Ukazatel, který je určen k nahrazení uloženého ukazatele.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje inteligentní ukazatel nazvaný `auto_ptr`a přiřazenému objektu. Ukazatel musí mít buď hodnotu null, nebo určovat objekt přidělený **novým**. Přenese vlastnictví, `auto_ptr` Pokud je jeho uložená hodnota přiřazena k jinému objektu. (Po přenosu s nulovým ukazatelem nahradí uloženou hodnotu.) Destruktor pro `auto_ptr<Type>` odstranění přiděleného objektu. `auto_ptr<Type>` Zajišťuje, aby byl přidělený objekt automaticky odstraněn, když ovládací prvek opustí blok, a to i přes vyvolanou výjimku. Neměli byste vytvářet dva `auto_ptr<Type>` objekty, které vlastní tento objekt.
+Šablona třídy popisuje inteligentní ukazatel nazvaný `auto_ptr` k přidělenému objektu. Ukazatel musí mít buď hodnotu null, nebo určovat objekt přidělený **novým**. @No__t_0 přenáší vlastnictví, pokud je jeho uložená hodnota přiřazena k jinému objektu. (Po přenosu s nulovým ukazatelem nahradí uloženou hodnotu.) Destruktor pro `auto_ptr<Type>` odstraní přidělený objekt. @No__t_0 zajišťuje, aby byl přidělený objekt automaticky odstraněn, když ovládací prvek opustí blok, a to i přes vyvolanou výjimku. Neměli byste vytvářet dva objekty `auto_ptr<Type>`, které vlastní stejný objekt.
 
-`auto_ptr<Type>` Objektu můžete předat hodnotu jako argument volání funkce. Element `auto_ptr` nemůže být prvkem žádného standardního kontejneru knihovny. Nelze spolehlivě spravovat sekvenci `auto_ptr<Type>` objektů se C++ standardním kontejnerem knihovny.
+Objekt `auto_ptr<Type>` můžete předat hodnotou jako argument volání funkce. @No__t_0 nemůže být elementem žádného standardního kontejneru knihovny. Nemůžete spolehlivě spravovat sekvenci `auto_ptr<Type>` objektů se C++ standardním kontejnerem knihovny.
 
 ## <a name="members"></a>Členové
 
@@ -79,7 +79,7 @@ Třída šablony popisuje inteligentní ukazatel nazvaný `auto_ptr`a přiřazen
 
 |||
 |-|-|
-|[element_type](#element_type)|Typ je synonymum pro parametr `Type`šablony.|
+|[element_type](#element_type)|Typ je synonymum pro parametr šablony `Type`.|
 
 ### <a name="functions"></a>Funkce
 
@@ -87,17 +87,17 @@ Třída šablony popisuje inteligentní ukazatel nazvaný `auto_ptr`a přiřazen
 |-|-|
 |[get](#get)|Členská funkce vrátí uložený ukazatel `myptr`.|
 |[předběžné](#release)|Člen nahradí uložený ukazatel `myptr` ukazatelem s hodnotou null a vrátí dříve uložený ukazatel.|
-|[reset](#reset)|Členská funkce vyhodnotí výraz `delete myptr`, ale pouze v případě, že se `myptr` hodnota uloženého ukazatele změní v důsledku volání funkce. Pak nahradí uložený ukazatel pomocí *PTR*.|
+|[nové](#reset)|Členská funkce vyhodnotí výraz `delete myptr`, ale pouze v případě, že se hodnota uloženého ukazatele `myptr` změní v důsledku volání funkce. Pak nahradí uložený ukazatel pomocí *PTR*.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[operátor =](#op_eq)|Operátor přiřazení, který přenáší vlastnictví jednoho `auto_ptr` objektu na jiný.|
+|[operátor =](#op_eq)|Operátor přiřazení, který přenáší vlastnictví z jednoho objektu `auto_ptr` do jiného.|
 |[podnikatel](#op_star)|Operátor přesměrování pro objekty typu `auto_ptr`.|
 |[operátor->](#op_arrow)|Operátor pro povolení přístupu členů|
-|[operátor auto_ptr\<jiné >](#op_auto_ptr_lt_other_gt)|Přetypování z jednoho typu `auto_ptr` na jiný `auto_ptr`typ.|
-|[operátor auto_ptr_ref\<jiné >](#op_auto_ptr_ref_lt_other_gt)|Přetypování z `auto_ptr` `auto_ptr_ref`a na.|
+|[auto_ptr – operátor \<Other >](#op_auto_ptr_lt_other_gt)|Přetypování z jednoho druhu `auto_ptr` na jiný typ `auto_ptr`.|
+|[auto_ptr_ref – operátor \<Other >](#op_auto_ptr_ref_lt_other_gt)|Přetypování z `auto_ptr` na `auto_ptr_ref`.|
 
 ### <a name="auto_ptr"></a>auto_ptr
 
@@ -116,19 +116,19 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*střed*\
-Ukazatel na objekt, který `auto_ptr` zapouzdřuje.
+\ *PTR*
+Ukazatel na objekt, který `auto_ptr` zapouzdření.
 
-*Kliknutím*\
-`auto_ptr` Objekt, který má být zkopírován konstruktorem.
+*pravé* \
+Objekt `auto_ptr`, který má být zkopírován konstruktorem.
 
 #### <a name="remarks"></a>Poznámky
 
-První konstruktor ukládá *PTR* do `myptr`, uložený ukazatel na přidělený objekt. Druhý konstruktor převádí vlastnictví ukazatele uloženého *vpravo*uložením *vpravo*. [vydaná verze](#release) v `myptr`produktu.
+První konstruktor ukládá *PTR* do `myptr`, uložený ukazatel na přidělený objekt. Druhý konstruktor převádí vlastnictví ukazatele uloženého *vpravo*uložením *vpravo*. [vydání](#release) v `myptr`.
 
-Třetí konstruktor se chová stejně jako druhý s tím rozdílem, že ukládá `right`. `ref`. `release`v `myptr`, kde `ref` je odkaz uložený v `right`.
+Třetí konstruktor se chová stejně jako druhý s tím rozdílem, že ukládá `right`. `ref`. `release` v `myptr`, kde `ref` je odkaz uložený v `right`.
 
-Konstruktor šablony se chová stejně jako druhý konstruktor za předpokladu, že ukazatel na `Other` může být implicitně převeden na ukazatel na. `Type`
+Konstruktor šablony se chová stejně jako druhý konstruktor za předpokladu, že ukazatel na `Other` lze implicitně převést na ukazatel na `Type`.
 
 #### <a name="example"></a>Příklad
 
@@ -191,7 +191,7 @@ Destructing 00311AF8
 
 ### <a name="element_type"></a>element_type
 
-Typ je synonymum pro parametr `Type`šablony.
+Typ je synonymum pro parametr šablony `Type`.
 
 ```cpp
 typedef Type element  _type;
@@ -258,7 +258,7 @@ Destructing 00311B88 Value: 6
 
 ### <a name="op_eq"></a>operátor =
 
-Operátor přiřazení, který přenáší vlastnictví jednoho `auto_ptr` objektu na jiný.
+Operátor přiřazení, který přenáší vlastnictví z jednoho objektu `auto_ptr` do jiného.
 
 ```cpp
 template <class Other>
@@ -269,7 +269,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Objekt typu `auto_ptr`.
 
 #### <a name="return-value"></a>Návratová hodnota
@@ -278,7 +278,7 @@ Odkaz na objekt typu `auto_ptr<Type>`.
 
 #### <a name="remarks"></a>Poznámky
 
-Přiřazení vyhodnotí výraz `delete myptr`, ale pouze v případě, že se `myptr` uložený ukazatel změní jako výsledek přiřazení. Pak přenáší vlastnictví ukazatele uloženého *vpravo*uložením *práva*. [vydaná verze](#release) v `myptr`produktu. Funkce vrátí  __\*tuto__hodnotu.
+Přiřazení vyhodnotí výraz `delete myptr`, ale pouze v případě, že se uložený ukazatel `myptr` změní v důsledku přiřazení. Pak přenáší vlastnictví ukazatele uloženého *vpravo*uložením *práva*. [vydání](#release) v `myptr`. Funkce vrátí __\*this__.
 
 #### <a name="example"></a>Příklad
 
@@ -294,17 +294,17 @@ Type& operator*() const throw();
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt typu `Type` , který vlastní ukazatel.
+Odkaz na objekt typu `Type`, který vlastní ukazatel.
 
 #### <a name="remarks"></a>Poznámky
 
-Operátor dereference vrací `*` [Get](#get). Proto nesmí mít uložený ukazatel hodnotu null.
+Operátor dereference vrací `*`[Get](#get). Proto nesmí mít uložený ukazatel hodnotu null.
 
 #### <a name="example"></a>Příklad
 
 Příklad použití členské funkce naleznete v tématu [auto_ptr](#auto_ptr).
 
-### <a name="op_arrow"></a>podnikatel&gt;
+### <a name="op_arrow"></a>operátor-&gt;
 
 Operátor pro povolení přístupu členů
 
@@ -314,19 +314,19 @@ Type * operator->() const throw();
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Člen objektu, který `auto_ptr` je vlastníkem.
+Člen objektu, který `auto_ptr` vlastní.
 
 #### <a name="remarks"></a>Poznámky
 
-Operátor výběru vrátí [Get](#get)`( )`, aby se**člen** Expression *AP*-> choval stejně jako ( *AP*. **získat** ())-> **člen**, kde *AP* je objekt `auto_ptr` **typu**třídy \< >. Proto nesmí mít uložený ukazatel hodnotu null a `Type` musí se jednat o typ třídy, struktury nebo sjednocení `member` s členem.
+Operátor výběru vrátí příkaz [get](#get) `( )`, takže se výraz *AP* -> **člen** chová stejně jako ( *AP*. **Get**())-> **člen**, kde *ap* je objekt třídy `auto_ptr` \< **typ**>. Proto musí být uložený ukazatel null a `Type` musí být typu třída, struktura nebo sjednocení s členem `member`.
 
 #### <a name="example"></a>Příklad
 
 Příklad použití členské funkce naleznete v tématu [auto_ptr](#auto_ptr).
 
-### <a name="op_auto_ptr_lt_other_gt"></a>auto_ptr&lt;– operátor&gt;
+### <a name="op_auto_ptr_lt_other_gt"></a>auto_ptr – operátor &lt;Other &gt;
 
-Přetypování z jednoho typu `auto_ptr` na jiný `auto_ptr`typ.
+Přetypování z jednoho druhu `auto_ptr` na jiný typ `auto_ptr`.
 
 ```cpp
 template <class Other>
@@ -335,7 +335,7 @@ operator auto _ptr<Other>() throw();
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Operátor přetypování typu vrátí `auto_ptr` \< **jiné**> (  **\*this**).
+Operátor přetypování typu vrátí `auto_ptr` \< **jiné**> ( **\*this**).
 
 #### <a name="example"></a>Příklad
 
@@ -354,9 +354,9 @@ int main()
 }
 ```
 
-### <a name="op_auto_ptr_ref_lt_other_gt"></a>auto_ptr_ref&lt;– operátor&gt;
+### <a name="op_auto_ptr_ref_lt_other_gt"></a>auto_ptr_ref – operátor &lt;Other &gt;
 
-Přetypování z `auto_ptr` `auto_ptr_ref`a na.
+Přetypování z `auto_ptr` na `auto_ptr_ref`.
 
 ```cpp
 template <class Other>
@@ -365,7 +365,7 @@ operator auto _ptr  _ref<Other>() throw();
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Operátor přetypování typu vrátí **auto_ptr_ref** \< **jinou**> (  **\*this**).
+Operátor přetypování typu vrátí **auto_ptr_ref** \< **jiné**> ( **\*this**).
 
 #### <a name="example"></a>Příklad
 
@@ -479,7 +479,7 @@ Destructing 00311B88 Value: 6
 
 ### <a name="reset"></a>nové
 
-Členská funkce vyhodnotí výraz `delete myptr`, ale pouze v případě, že se `myptr` hodnota uloženého ukazatele změní v důsledku volání funkce. Pak nahradí uložený ukazatel pomocí `ptr`.
+Členská funkce vyhodnotí výraz `delete myptr`, ale pouze v případě, že se hodnota uloženého ukazatele `myptr` změní v důsledku volání funkce. Pak nahradí uložený ukazatel pomocí `ptr`.
 
 ```cpp
 void reset(Type* ptr = 0);
@@ -487,7 +487,7 @@ void reset(Type* ptr = 0);
 
 #### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Ukazatel, který je určen k nahrazení uloženého ukazatele `myptr`.
 
 #### <a name="example"></a>Příklad
