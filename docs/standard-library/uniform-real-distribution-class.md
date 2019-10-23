@@ -1,5 +1,5 @@
 ---
-title: uniform_real_distribution 클래스
+title: uniform_real_distribution – třída
 ms.date: 11/04/2016
 f1_keywords:
 - random/std::uniform_real_distribution
@@ -33,11 +33,11 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72688811"
 ---
-# <a name="uniform_real_distribution-class"></a>uniform_real_distribution 클래스
+# <a name="uniform_real_distribution-class"></a>uniform_real_distribution – třída
 
-시작 범위는 포함되고 끝 범위는 제외되는 출력 범위 내에서 균등한(모든 값이 균일하게 있을 것 같음) 부동 소수점 분포를 생성합니다.
+Generuje jednotný (každá hodnota je stejně pravděpodobná) rozdělení plovoucí desetinné čárky v rámci výstupní oblasti, která je zapsána jako výhradní.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 template<class RealType = double>
@@ -69,33 +69,33 @@ public:
 };
 ```
 
-### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>Parametry
 
 *RealType* \
-부동 소수점 결과 형식으로, 기본적으로 **double**로 설정 됩니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Poznámky
 
-클래스 템플릿에서는 분포를 사용 하 여 사용자 지정 정수 부동 소수점 형식의 값을 생성 하는 포괄 전용 분포를 설명 하므로 모든 값이 동일 하 게 될 수 있습니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+Šablona třídy popisuje kompletní distribuci, která vytváří hodnoty celočíselně zadaného typu s plovoucí desetinnou čárkou s distribucí, aby každá hodnota byla stejně pravděpodobná. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
 
-속성 멤버 `a()`는 분포의 현재 저장된 최하한을 반환하고 `b()`는 현재 저장된 최상한을 반환합니다. 이 분포 클래스의 경우 최하한과 최상한 값은 [\<random>](../standard-library/random.md) 항목에서 설명한 공통 속성 함수 `min()` 및 `max()`가 반환한 값과 동일합니다.
+Člen vlastnosti `a()` vrátí aktuálně uloženou minimální hranici distribuce, zatímco `b()` vrátí aktuálně uloženou hodnotu Bound. Pro tuto třídu distribuce jsou tyto minimální a maximální hodnoty stejné jako ty, které vrátily funkce Common Property `min()` a `max()` popsané v tématu [\<random >](../standard-library/random.md) .
 
-속성 멤버 `param()`은 `param_type`으로 저장된 분포 매개 변수 패키지를 설정하거나 반환합니다.
+Člen vlastnosti `param()` nastaví nebo vrátí `param_type` uložený balíček parametrů distribuce.
 
-`min()` 및 `max()` 구성원 함수는 각각 가능한 가장 작은 결과 및 가능한 가장 큰 결과를 반환합니다.
+Členské funkce `min()` a `max()` vracejí nejmenší možný výsledek a největší možný výsledek.
 
-`reset()` 구성원 함수는 캐시된 모든 값을 버립니다. 따라서 `operator()`에 대한 다음 호출의 결과는 호출 전 엔진에서 얻은 어떠한 값의 영향도 받지 않습니다.
+Členská funkce `reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
 
-`operator()` 구성원 함수는 현재 매개 변수 패키지 또는 지정된 매개 변수 패키지에서 URNG 엔진을 기반으로 하여 다음에 생성된 값을 반환합니다.
+Členské funkce `operator()` vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
 
-분포 클래스 및 이러한 클래스의 멤버에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
+Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
 
-## <a name="example"></a>예제
+## <a name="example"></a>Příklad
 
 ```cpp
 // compile with: /EHsc /W4
@@ -172,43 +172,43 @@ Distribution for 10 samples:
          10: 0.8795716566
 ```
 
-## <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>Požadavky
 
-**헤더:** \<random>
+**Záhlaví:** \<random >
 
-**네임스페이스:** std
+**Obor názvů:** std
 
-## <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution
+## <a name="uniform_real_distribution"></a>uniform_real_distribution::uniform_real_distribution
 
-분포를 생성합니다.
+Sestaví rozdělení.
 
 ```cpp
 explicit uniform_real_distribution(result_type a = 0.0, result_type b = 1.0);
 explicit uniform_real_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>Parametry
 
 *\*
-난수 값의 하한으로, 하한 값도 포함됩니다.
+Dolní mez pro náhodné hodnoty, včetně.
 
 *b* \
-난수 값의 상한으로, 상한 값은 제외됩니다.
+Horní mez pro náhodné hodnoty, exkluzivní.
 
-*parm* \
-분포를 생성하는 데 사용되는 `param_type` 구조체입니다.
+*parametr* \
+Struktura `param_type` používaná k sestavení distribuce.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>Poznámky
 
-**사전 조건:** `a < b`
+**Předběžná podmínka:** `a < b`
 
-첫 번째 생성자 *는 값을 저장 하* 고 저장 된 *b* 값이 *b*값을 보유 하 고 있는 *개체를 생성* 합니다.
+První konstruktor vytvoří *objekt,* *jehož uložená hodnota obsahuje hodnotu a* a jejíž hodnota uložená *b* obsahuje hodnotu *b*.
 
-두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
 
-## <a name="param_type"></a>  uniform_real_distribution::param_type
+## <a name="param_type"></a>uniform_real_distribution::p aram_type
 
-분포의 모든 매개 변수를 저장합니다.
+Ukládá všechny parametry distribuce.
 
 ```cpp
 struct param_type {
@@ -222,23 +222,23 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>Parametry
 
 *\*
-난수 값의 하한으로, 하한 값도 포함됩니다.
+Dolní mez pro náhodné hodnoty, včetně.
 
 *b* \
-난수 값의 상한으로, 상한 값은 제외됩니다.
+Horní mez pro náhodné hodnoty, exkluzivní.
 
-*오른쪽* \
-이 매개 변수와 비교할 `param_type` 개체입니다.
+*pravé* \
+Objekt `param_type`, který se má porovnat.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>Poznámky
 
-**사전 조건:** `a < b`
+**Předběžná podmínka:** `a < b`
 
-이 구조를 인스턴스화 시에는 분포의 클래스 생성자로, 기존 분포의 저장된 매개 변수를 설정하기 위해서는 `param()` 멤버 함수로, 저장된 매개 변수 대신 사용하기 위해서는 `operator()`로 전달할 수 있습니다.
+Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>Viz také:
 
-[\<random>](../standard-library/random.md)
+[\<random >](../standard-library/random.md)

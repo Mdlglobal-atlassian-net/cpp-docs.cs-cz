@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451810"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689332"
 ---
-# <a name="messagesbyname-class"></a>messages_byname – třída
+# <a name="messages_byname-class"></a>messages_byname – třída
 
-Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost zprávy daného národního prostředí a který umožňuje načtení lokalizovaných zpráv.
+Šablona odvozené třídy popisuje objekt, který může sloužit jako omezující vlastnost zprávy daného národního prostředí a který umožňuje načtení lokalizovaných zpráv.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,19 +39,19 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*\
+*_Locname* \
 Pojmenované národní prostředí.
 
-*_Refs*\
+*_Refs* \
 Počáteční počet odkazů
 
 ## <a name="remarks"></a>Poznámky
 
-Jeho chování je určeno názvem národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt se [zprávami](../standard-library/messages-class.md#messages)\<CharType > `_Refs`().
+Jeho chování je určeno názvem národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt se [zprávami](../standard-library/messages-class.md#messages) \<CharType > (`_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 

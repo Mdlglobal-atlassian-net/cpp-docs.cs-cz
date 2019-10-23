@@ -1,5 +1,5 @@
 ---
-title: '&lt;operátory&gt; regulárního výrazu'
+title: operátory &lt;regex &gt;
 ms.date: 11/04/2016
 f1_keywords:
 - regex/std::operator!=
@@ -10,20 +10,20 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460125"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689077"
 ---
-# <a name="ltregexgt-operators"></a>&lt;operátory&gt; regulárního výrazu
+# <a name="ltregexgt-operators"></a>operátory &lt;regex &gt;
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[podnikatel&gt;](#op_gt)|[podnikatel&gt;=](#op_gt_eq)|
-|[podnikatel&lt;](#op_lt)|[podnikatel&lt;&lt;](#op_lt_lt)|[podnikatel&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[operátor &gt;](#op_gt)|[operátor &gt; =](#op_gt_eq)|
+|[operátor &lt;](#op_lt)|[operátor &lt; &lt;](#op_lt_lt)|[operátor &lt; =](#op_lt_eq)|
+|[operator = = – operátor](#op_eq_eq)|
 
 ## <a name="op_neq"></a>! = – operátor
 
@@ -66,24 +66,24 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidI*\
+@No__t_1 *BiDi*
 Typ iterátoru.
 
-*IOtraits*\
+*IOtraits* \
 Třída řetězcových vlastností.
 
-*Vyhrazen*\
+@No__t_1 *přidělení*
 Třída alokátoru
 
-*zbývá*\
+*levý* \
 Levý objekt, který chcete porovnat.
 
-*Kliknutím*\
+*pravé* \
 Pravý objekt, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony vrátí `!(left == right)`.
+Každý operátor šablony vrací `!(left == right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -144,7 +144,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a>podnikatel&lt;
+## <a name="op_lt"></a>operátor &lt;
 
 Méně než porovnání pro různé objekty.
 
@@ -181,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidI*\
+@No__t_1 *BiDi*
 Typ iterátoru.
 
-*IOtraits*\
+*IOtraits* \
 Třída řetězcových vlastností.
 
-*Vyhrazen*\
+@No__t_1 *přidělení*
 Třída alokátoru
 
-*zbývá*\
+*levý* \
 Levý objekt, který chcete porovnat.
 
-*Kliknutím*\
+*pravé* \
 Pravý objekt, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a>podnikatel&lt;&lt;
+## <a name="op_lt_lt"></a>operátor &lt; &lt;
 
 Vloží sub_match do datového proudu.
 
@@ -266,27 +266,27 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*\
+*Elem* \
 Typ elementu.
 
-*IOtraits*\
+*IOtraits* \
 Třída řetězcových vlastností.
 
-*Vyhrazen*\
+@No__t_1 *přidělení*
 Třída alokátoru
 
-*BidI*\
+@No__t_1 *BiDi*
 Typ iterátoru.
 
-*jiného*\
+\ *operačního systému*
 Výstupní datový proud
 
-*Kliknutím*\
+*pravé* \
 Objekt, který má být vložen.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor šablony vrátí `os << right.str()`.
+Operátor šablony vrací `os << right.str()`.
 
 ### <a name="example"></a>Příklad
 
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a>podnikatel&lt;=
+## <a name="op_lt_eq"></a>operátor &lt; =
 
 Menší nebo rovno porovnání pro různé objekty.
 
@@ -351,24 +351,24 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidI*\
+@No__t_1 *BiDi*
 Typ iterátoru.
 
-*IOtraits*\
+*IOtraits* \
 Třída řetězcových vlastností.
 
-*Vyhrazen*\
+@No__t_1 *přidělení*
 Třída alokátoru
 
-*zbývá*\
+*levý* \
 Levý objekt, který chcete porovnat.
 
-*Kliknutím*\
+*pravé* \
 Pravý objekt, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony vrátí `!(right < left)`.
+Každý operátor šablony vrací `!(right < left)`.
 
 ### <a name="example"></a>Příklad
 
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidI*\
+@No__t_1 *BiDi*
 Typ iterátoru.
 
-*IOtraits*\
+*IOtraits* \
 Třída řetězcových vlastností.
 
-*Vyhrazen*\
+@No__t_1 *přidělení*
 Třída alokátoru
 
-*zbývá*\
+*levý* \
 Levý objekt, který chcete porovnat.
 
-*Kliknutím*\
+*pravé* \
 Pravý objekt, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
@@ -486,11 +486,11 @@ Každý operátor šablony převede každý z jejích argumentů na typ String a
 
 Když operátor šablony převede své argumenty na typ řetězce, používá první z následujících transformací, které platí:
 
-argumenty, jejichž typy jsou specializací třídy `match_results` šablon nebo `sub_match` `str` jsou převedené voláním členské funkce;
+argumenty, jejichž typy jsou specializací šablony třídy `match_results` nebo `sub_match` jsou převedené voláním členské funkce `str`;
 
-argumenty, jejichž typy jsou specializací třídy `basic_string` šablony, nejsou změněny;
+argumenty, jejichž typy jsou specializací šablony třídy `basic_string` jsou beze změny;
 
-všechny ostatní typy argumentů jsou převedeny předáním hodnoty argumentu konstruktoru pro příslušnou specializaci třídy `basic_string`šablony.
+všechny ostatní typy argumentů jsou převedeny předáním hodnoty argumentu konstruktoru pro příslušnou specializaci šablony třídy `basic_string`.
 
 ### <a name="example"></a>Příklad
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a>podnikatel&gt;
+## <a name="op_gt"></a>operátor &gt;
 
 Větší než porovnání pro různé objekty.
 
@@ -588,24 +588,24 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidI*\
+@No__t_1 *BiDi*
 Typ iterátoru.
 
-*IOtraits*\
+*IOtraits* \
 Třída řetězcových vlastností.
 
-*Vyhrazen*\
+@No__t_1 *přidělení*
 Třída alokátoru
 
-*zbývá*\
+*levý* \
 Levý objekt, který chcete porovnat.
 
-*Kliknutím*\
+*pravé* \
 Pravý objekt, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony vrátí `right < left`.
+Každý operátor šablony vrací `right < left`.
 
 ### <a name="example"></a>Příklad
 
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a>podnikatel&gt;=
+## <a name="op_gt_eq"></a>operátor &gt; =
 
 Větší nebo rovno porovnání pro různé objekty.
 
@@ -698,24 +698,24 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-*BidI*\
+@No__t_1 *BiDi*
 Typ iterátoru.
 
-*IOtraits*\
+*IOtraits* \
 Třída řetězcových vlastností.
 
-*Vyhrazen*\
+@No__t_1 *přidělení*
 Třída alokátoru
 
-*zbývá*\
+*levý* \
 Levý objekt, který chcete porovnat.
 
-*Kliknutím*\
+*pravé* \
 Pravý objekt, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony vrátí `!(left < right)`.
+Každý operátor šablony vrací `!(left < right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>Viz také:
 
-[\<regex>](../standard-library/regex.md)\
-[regex_constants – třída](../standard-library/regex-constants-class.md)\
-[regex_error – třída](../standard-library/regex-error-class.md)\
-[\<regulární funkce >](../standard-library/regex-functions.md)\
-[regex_iterator – třída](../standard-library/regex-iterator-class.md)\
-[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)\
-[regex_traits – třída](../standard-library/regex-traits-class.md)\
-[\<Regex > definice typedef](../standard-library/regex-typedefs.md)
+[\<regex >](../standard-library/regex.md) \
+\ [třídy regex_constants](../standard-library/regex-constants-class.md)
+\ [třídy regex_error](../standard-library/regex-error-class.md)
+[funkce \<regex >](../standard-library/regex-functions.md) \
+\ [třídy regex_iterator](../standard-library/regex-iterator-class.md)
+\ [třídy regex_token_iterator](../standard-library/regex-token-iterator-class.md)
+\ [třídy regex_traits](../standard-library/regex-traits-class.md)
+[\<regex > definice typedef](../standard-library/regex-typedefs.md)

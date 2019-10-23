@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b839126b7b5541c3a9dd033fcbbc8221bde7c22
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448134"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689462"
 ---
 # <a name="istreambuf_iterator-class"></a>istreambuf_iterator – třída
 
-Třída šablony istreambuf_iterator popisuje vstupní objekt iterátoru, který extrahuje znakové prvky z vyrovnávací paměti vstupního datového proudu, ke kterému přistupuje prostřednictvím objektu, který ukládá, typu ukazatel na `basic_streambuf` \< **CharType**,  **> Vlastností**.
+Šablona třídy istreambuf_iterator popisuje vstupní objekt iterátoru, který extrahuje znakové prvky z vyrovnávací paměti vstupního datového proudu, ke kterému přistupuje prostřednictvím objektu, který ukládá, typu ukazatel na `basic_streambuf` \< **CharType**, **vlastnosti**> .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,11 +39,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+*CharType* \
 Typ, který představuje typ znaku pro istreambuf_iterator.
 
-*Traits*\
-Typ, který představuje typ znaku pro istreambuf_iterator. Tento argument je nepovinný a výchozí hodnota `char_traits` je \< *CharType >.*
+@No__t_1 *vlastností*
+Typ, který představuje typ znaku pro istreambuf_iterator. Tento argument je nepovinný a výchozí hodnota je `char_traits` \< *CharType >.*
 
 ## <a name="remarks"></a>Poznámky
 
@@ -55,17 +55,17 @@ Po sestavování nebo zvyšování objektu třídy istreambuf_iterator pomocí u
 
 |Konstruktor|Popis|
 |-|-|
-|[istreambuf_iterator](#istreambuf_iterator)|Vytvoří inicializaci, která je inicializována pro čtení znaků ze vstupního datového proudu. `istreambuf_iterator`|
+|[istreambuf_iterator](#istreambuf_iterator)|Vytvoří `istreambuf_iterator` inicializovaný pro čtení znaků ze vstupního datového proudu.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[char_type](#char_type)|Typ, který poskytuje typ `ostreambuf_iterator`znaku pro.|
-|[int_type](#int_type)|Typ, který poskytuje celočíselný typ pro `istreambuf_iterator`.|
-|[istream_type](#istream_type)|Typ, který poskytuje typ `istream_iterator`datového proudu.|
-|[streambuf_type](#streambuf_type)|Typ, který poskytuje typ `istreambuf_iterator`datového proudu.|
-|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|Typ, který poskytuje znaky typu `istream_iterator`pro.|
+|[char_type](#char_type)|Typ, který poskytuje typ znaku `ostreambuf_iterator`.|
+|[int_type](#int_type)|Typ, který poskytuje typ Integer pro `istreambuf_iterator`.|
+|[istream_type](#istream_type)|Typ, který poskytuje typ datového proudu `istream_iterator`.|
+|[streambuf_type](#streambuf_type)|Typ, který poskytuje typ datového proudu `istreambuf_iterator`.|
+|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|Typ, který poskytuje typ znakových vlastností `istream_iterator`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -78,18 +78,18 @@ Po sestavování nebo zvyšování objektu třídy istreambuf_iterator pomocí u
 |Operátor|Popis|
 |-|-|
 |[podnikatel](#op_star)|Dereferenční operátor vrátí následující znak v toku.|
-|[operator++](#op_add_add)|Vrátí buď následující znak ze vstupního toku, nebo zkopíruje objekt před jeho zvýšením a vrátí kopii.|
+|[operator + + – operátor](#op_add_add)|Vrátí buď následující znak ze vstupního toku, nebo zkopíruje objekt před jeho zvýšením a vrátí kopii.|
 |[operátor->](#op_arrow)|Vrátí hodnotu členu, pokud existuje.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<iterátor >
+**Záhlaví:** \<iterator >
 
 **Obor názvů:** std
 
 ## <a name="char_type"></a>istreambuf_iterator::char_type
 
-Typ, který poskytuje typ `ostreambuf_iterator`znaku pro.
+Typ, který poskytuje typ znaku `ostreambuf_iterator`.
 
 ```cpp
 typedef CharType char_type;
@@ -142,16 +142,16 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
+*pravé* \
 Iterátor, pro který chcete kontrolovat rovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud `istreambuf_iterator`jsou oba iterátory konce datového proudu, nebo pokud ani není iterátor konce datového proudu; jinak **false**.
+**true** , pokud jsou oba `istreambuf_iterator`s iterátory koncového datového proudu nebo pokud ani není iterátor konci datového proudu; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozsah je definován `istreambuf_iterator` k aktuální pozici a iterátoru konci datového proudu, ale vzhledem k tomu, že všechny iterátory streamu jsou ekvivalentní `equal` v rámci členské funkce, není možné definovat žádné dílčí rozsahy pomocí `istreambuf_iterator`s. Operátory `==` a`!=` mají stejnou sémantiku.
+Rozsah je definován `istreambuf_iterator` k aktuální pozici a iterátoru koncového datového proudu, ale vzhledem k tomu, že všechny iterátory streamu, které nejsou na konci, jsou ekvivalentní v rámci `equal` členské funkce, není možné definovat žádné dílčí rozsahy pomocí `istreambuf_iterator`s. Operátory `==` a `!=` mají stejnou sémantiku.
 
 ### <a name="example"></a>Příklad
 
@@ -183,7 +183,7 @@ int main( )
 
 ## <a name="int_type"></a>istreambuf_iterator::int_type
 
-Typ, který poskytuje celočíselný typ pro `istreambuf_iterator`.
+Typ, který poskytuje typ Integer pro `istreambuf_iterator`.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -214,7 +214,7 @@ The inttype1 = 100.
 
 ## <a name="istream_type"></a>istreambuf_iterator::istream_type
 
-Typ, který poskytuje typ `istreambuf_iterator`datového proudu.
+Typ, který poskytuje typ datového proudu `istreambuf_iterator`.
 
 ```cpp
 typedef basic_istream<CharType, Traits> istream_type;
@@ -222,11 +222,11 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum `basic_istream` pro \< **CharType**, **vlastnosti**>.
+Typ je synonymum pro `basic_istream` \< **CharType**, **vlastnosti**>.
 
 ### <a name="example"></a>Příklad
 
-Příklad [](#istreambuf_iterator) , jak deklarovat a používat `istream_type`, naleznete v tématu istreambuf_iterator.
+Příklad, jak deklarovat a používat `istream_type`, naleznete v tématu [istreambuf_iterator](#istreambuf_iterator) .
 
 ## <a name="istreambuf_iterator"></a>istreambuf_iterator::istreambuf_iterator
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf*\
-Vstupní vyrovnávací paměť datového proudu, ke `istreambuf_iterator` které se připojí.
+*strbuf* \
+Vyrovnávací paměť vstupního datového proudu, ke které se má `istreambuf_iterator` připojit.
 
-*_Istr*\
-Vstupní datový proud, ke kterému `istreambuf_iterator` se připojuje.
+*_Istr* \
+Vstupní datový proud, ke kterému se připojuje `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje vstupní datový proud – ukazatel vyrovnávací paměti pomocí *strbuf*. Druhý konstruktor inicializuje vstupní datový proud – ukazatel vyrovnávací paměti pomocí *_Istr*. `rdbuf`a nakonec se pokusí extrahovat a uložit objekt typu `CharType`.
+První konstruktor inicializuje vstupní datový proud – ukazatel vyrovnávací paměti pomocí *strbuf*. Druhý konstruktor inicializuje vstupní datový proud – ukazatel vyrovnávací paměti pomocí *_Istr*. `rdbuf` a nakonec se pokusí extrahovat a uložit objekt typu `CharType`.
 
 ### <a name="example"></a>Příklad
 
@@ -332,11 +332,11 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`istreambuf_iterator` Odkaz`istreambuf_iterator`na.
+@No__t_0 nebo odkaz na `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Poznámky
 
-První operátor nakonec se pokusí extrahovat a uložit objekt typu `CharType` z přidruženého vstupního datového proudu. Druhý operátor vytvoří kopii objektu, zvýší objekt a vrátí kopii.
+První operátor se nakonec pokusí extrahovat a uložit objekt typu `CharType` z přidruženého vstupního streamu. Druhý operátor vytvoří kopii objektu, zvýší objekt a vrátí kopii.
 
 ### <a name="example"></a>Příklad
 
@@ -376,7 +376,7 @@ const Elem* operator->() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Operátor to vrátí  **& \*. \***
+Operátor vrací **& \* \*this**.
 
 ## <a name="streambuf_type"></a>istreambuf_iterator::streambuf_type
 
@@ -388,15 +388,15 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum `basic_streambuf` pro \< **CharType**, **vlastnosti**>.
+Typ je synonymum pro `basic_streambuf` \< **CharType**, **vlastnosti**>.
 
 ### <a name="example"></a>Příklad
 
-Příklad [](#istreambuf_iterator) , jak deklarovat a používat `istreambuf_type`, naleznete v tématu istreambuf_iterator.
+Příklad, jak deklarovat a používat `istreambuf_type`, naleznete v tématu [istreambuf_iterator](#istreambuf_iterator) .
 
 ## <a name="traits_type"></a>istreambuf_iterator::traits_type
 
-Typ, který poskytuje znaky typu `istream_iterator`pro.
+Typ, který poskytuje typ znakových vlastností `istream_iterator`.
 
 ```cpp
 typedef Traits traits_type;
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>Viz také:
 
-[Struktura iterátoru](../standard-library/iterator-struct.md)\
-[\<iterátor >](../standard-library/iterator.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+\ [struktury iterátoru](../standard-library/iterator-struct.md)
+[\<iterator >](../standard-library/iterator.md) \
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

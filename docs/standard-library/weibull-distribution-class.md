@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459622"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688515"
 ---
-# <a name="weibulldistribution-class"></a>weibull_distribution – třída
+# <a name="weibull_distribution-class"></a>weibull_distribution – třída
 
 Generuje rozdělení WEIBULL.
 
@@ -70,29 +70,29 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parametry
 
-*RealType*\
-Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
+*RealType* \
+Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje distribuci, která vytváří hodnoty typu s plovoucí desetinnou čárkou, nebo typ **Double** , pokud není k dispozici, distribuované podle rozdělení WEIBULL. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+Šablona třídy popisuje distribuci, která vytváří hodnoty typu s plovoucí desetinnou čárkou, nebo typ **Double** , pokud není k dispozici, distribuované podle rozdělení WEIBULL. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|
 |`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|
 
-Funkce vlastností `a()` a `b()` vrátit jejich příslušné hodnoty pro parametry uložené distribuční *a* a *b*.
+Funkce vlastností `a()` a `b()` vrátí jejich příslušné hodnoty pro uložené distribuční parametry *a* a *b*.
 
-Člen `param()` vlastnosti nastaví nebo `param_type` vrátí uložený balíček parametrů distribuce.
+Člen vlastnosti `param()` nastaví nebo vrátí `param_type` uložený balíček parametrů distribuce.
 
-Členské funkce `max()` a vracejí nejmenší možný výsledek a největší možný výsledek, v uvedeném pořadí. `min()`
+Členské funkce `min()` a `max()` vracejí nejmenší možný výsledek a největší možný výsledek.
 
-Členská funkce zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího `operator()` volání není závislý na všech hodnotách získaných z modulu před voláním. `reset()`
+Členská funkce `reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
 
-`operator()` Členské funkce vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+Členské funkce `operator()` vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
+Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
 
 Podrobné informace o distribuci WEIBULL najdete v článku Wolfram MathWorld, [distribuce WEIBULL](http://mathworld.wolfram.com/WeibullDistribution.html).
 
@@ -209,7 +209,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<náhodné >
+**Záhlaví:** \<random >
 
 **Obor názvů:** std
 
@@ -222,22 +222,22 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*určitého*\
-Parametr `a` distribuce.
+*\*
+Parametr distribuce `a`.
 
-*b*\
-Parametr `b` distribuce.
+*b* \
+Parametr distribuce `b`.
 
-*parametr*\
-`param_type` Struktura použitá k sestavení distribuce.
+*parametr* \
+Struktura `param_type` používaná k sestavení distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < a` a`0.0 < b`
+**Předběžná podmínka:** `0.0 < a` a `0.0 < b`
 
-První konstruktoru vytvoří objekt jehož uložené `a` hodnota obsahuje hodnotu *a* a jehož uložené `b` hodnota obsahuje hodnotu *b*.
+První konstruktor vytvoří objekt, jehož uložená `a` hodnota obsahuje hodnotu *a a jehož* uložená `b` hodnota obsahuje hodnotu *b*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuce voláním `param()` členské funkce.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
 
 ## <a name="param_type"></a>weibull_distribution::p aram_type
 
@@ -257,21 +257,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*určitého*\
-Parametr `a` distribuce.
+*\*
+Parametr distribuce `a`.
 
-*b*\
-Parametr `b` distribuce.
+*b* \
+Parametr distribuce `b`.
 
-*Kliknutím*\
-`param_type` Objekt, který se má porovnat.
+*pravé* \
+Objekt `param_type`, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < a` a`0.0 < b`
+**Předběžná podmínka:** `0.0 < a` a `0.0 < b`
 
-Tuto strukturu lze předat konstruktoru třídy distribuce při vytváření instance, `param()` členské funkci pro nastavení uložených parametrů stávající distribuce a k `operator()` použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)
+[\<random >](../standard-library/random.md)

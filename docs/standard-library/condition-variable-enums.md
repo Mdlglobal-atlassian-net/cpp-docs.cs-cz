@@ -1,5 +1,5 @@
 ---
-title: '&lt;condition_variable&gt; 열거형'
+title: výčty &lt;condition_variable &gt;
 ms.date: 11/04/2016
 f1_keywords:
 - condition_variable/std::cv_status
@@ -11,10 +11,10 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72689780"
 ---
-# <a name="ltcondition_variablegt-enums"></a>&lt;condition_variable&gt; 열거형
+# <a name="ltcondition_variablegt-enums"></a>výčty &lt;condition_variable &gt;
 
 ## <a name="cv_status"></a>cv_status
 
-는 클래스 템플릿 [condition_variable](../standard-library/condition-variable-class.md)메서드의 반환 값에 대 한 기호화 된 이름을 제공 합니다.
+Poskytuje symbolické názvy pro návratové hodnoty metod šablony třídy [condition_variable](../standard-library/condition-variable-class.md).
 
-class cv_status { no_timeout timeout };
+cv_status třídy {no_timeout – časový limit};

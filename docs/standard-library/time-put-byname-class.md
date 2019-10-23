@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: 2da2bf4ea1c709b820c1a82dc20e288634139a83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4471c0df352a4d40d863ac36f0245cf8194f588c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459993"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685456"
 ---
-# <a name="timeputbyname-class"></a>time_put_byname – třída
+# <a name="time_put_byname-class"></a>time_put_byname – třída
 
-Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí typu `time_put` \< CharType, OutputIterator >.
+Šablona odvozené třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí typu `time_put` \< CharType, OutputIterator >.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,19 +40,19 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*\
+*_Locname* \
 Název národního prostředí.
 
-*_Refs*\
+*_Refs* \
 Počáteční počet odkazů
 
 ## <a name="remarks"></a>Poznámky
 
-Jeho chování je určeno [názvem](../standard-library/locale-class.md#name) národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt pomocí [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
+Jeho chování je určeno [názvem](../standard-library/locale-class.md#name) národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt pomocí \<CharType [time_put](../standard-library/time-put-class.md#time_put) , OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> národního prostředí
+**Záhlaví:** \<locale >
 
 **Obor názvů:** std
 

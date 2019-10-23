@@ -1,5 +1,5 @@
 ---
-title: const_mem_fun_ref_t 클래스
+title: const_mem_fun_ref_t – třída
 ms.date: 02/21/2019
 f1_keywords:
 - functional/std::const_mem_fun_ref_t
@@ -13,11 +13,11 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72689764"
 ---
-# <a name="const_mem_fun_ref_t-class"></a>const_mem_fun_ref_t 클래스
+# <a name="const_mem_fun_ref_t-class"></a>const_mem_fun_ref_t – třída
 
-참조 인수를 사용하여 초기화할 때 인수를 사용하지 않는 **const** 멤버 함수를 단항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다. C + + 11에서 사용 되지 않으며 c + + 17에서 제거 되었습니다.
+Třída adaptéru umožňující volat **konstantní** členskou funkci, která nepřijímá žádné argumenty jako unární objekt funkce při inicializaci s argumentem odkazu. Zastaralé v C++ 11, odebrané v C++ 17.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 template <class Result, class Type>
@@ -29,22 +29,22 @@ template <class Result, class Type>
 };
 ```
 
-### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>Parametry
 
-*Pm* \
-함수 개체로 변환할 `Type` 클래스의 멤버 함수 포인터입니다.
+@No__t_1 *ODP* .
+Ukazatel na členskou funkci třídy `Type`, která má být převedena na objekt funkce.
 
-*왼쪽* \
-*Pm* 멤버 함수가 호출 되는 개체입니다.
+*levý* \
+Objekt, na kterém je volána členská funkce *PM* .
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Návratová hodnota
 
-조정 가능한 단항 함수입니다.
+Přizpůsobitelná unární funkce.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Poznámky
 
-클래스 템플릿은 *Pm*의 복사본을 저장 합니다 .이 복사본은 private 멤버 개체에서 `Type` 클래스의 멤버 함수에 대 한 포인터 여야 합니다. @No__t_0 (**left**. \* `Pm`) () **const**를 반환 하는 것 처럼 해당 멤버 함수를 정의 합니다.
+Šablona třídy uchovává kopii *PM*, která musí být ukazatel na členskou funkci třídy `Type` v objektu Private member. Definuje jeho členskou funkci `operator()` jako vrácení (**Left**. \* `Pm`) () **const**.
 
-## <a name="example"></a>예제
+## <a name="example"></a>Příklad
 
-`const_mem_fun_ref_t`의 생성자는 일반적으로 직접 사용되지 않습니다. 도우미 함수 `mem_fun_ref`은 멤버 함수를 적용하는 데 사용됩니다. 멤버 함수 어댑터를 사용하는 방법에 대한 예제는 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)를 참조하세요.
+Konstruktor `const_mem_fun_ref_t` se obvykle nepoužívá přímo; pomocná funkce `mem_fun_ref` slouží k přizpůsobení členských funkcí. Příklad použití adaptérů členské funkce naleznete v tématu [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) .

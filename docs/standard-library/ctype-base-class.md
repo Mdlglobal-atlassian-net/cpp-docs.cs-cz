@@ -1,5 +1,5 @@
 ---
-title: ctype_base 클래스
+title: ctype_base – třída
 ms.date: 11/04/2016
 f1_keywords:
 - locale/std::ctype_base
@@ -13,11 +13,11 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72688197"
 ---
-# <a name="ctype_base-class"></a>ctype_base 클래스
+# <a name="ctype_base-class"></a>ctype_base – třída
 
-클래스는 클래스 템플릿 [ctype](../standard-library/ctype-class.md)의 패싯에 대 한 기본 클래스로 사용 됩니다. 개별적으로 또는 전체 범위 내에서 특성을 분류 또는 테스트하는 데 사용하는 열거형을 정의하는 데 사용하는 ctype 클래스의 기본 클래스입니다.
+Třída slouží jako základní třída pro omezující vlastnosti třídy template [CType](../standard-library/ctype-class.md). Základní třída pro třídu ctype, která se používá k definování typů výčtu použitých ke klasifikaci nebo testování znaků buď jednotlivě, nebo v rámci celých rozsahů.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 struct ctype_base : public locale::facet
@@ -43,40 +43,40 @@ struct ctype_base : public locale::facet
 };
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Poznámky
 
-열거형 마스크를 정의합니다. 각 열거형 상수는 \<ctype.h> 헤더에 선언된 비슷한 이름의 함수에 정의된 것처럼 문자를 분류하는 다양한 방법의 특징을 지정합니다. 상수는 다음과 같습니다.
+Definuje masku výčtu. Každá konstanta výčtu charakterizuje jiný způsob klasifikace znaků, jak jsou definovány funkcemi s podobnými názvy deklarovanými v hlavičce \<ctype. h >. Konstanty jsou:
 
-- **space**([isspace](../standard-library/locale-functions.md#isspace) 함수)
+- **Space** (funkce- [Space](../standard-library/locale-functions.md#isspace))
 
-- **print**([isprint](../standard-library/locale-functions.md#isprint) 함수)
+- **Tisk** (funkce- [Print](../standard-library/locale-functions.md#isprint))
 
-- **cntrl**([iscntrl](../standard-library/locale-functions.md#iscntrl) 함수)
+- **TAB** (Function [iscntrl](../standard-library/locale-functions.md#iscntrl))
 
-- **upper**(함수 [isupper](../standard-library/locale-functions.md#isupper))
+- **Upper** (funkce – [horní](../standard-library/locale-functions.md#isupper))
 
-- **lower**([islower](../standard-library/locale-functions.md#islower) 함수)
+- **Lower** (funkce je [levnější](../standard-library/locale-functions.md#islower))
 
-- **digit**([isdigit](../standard-library/locale-functions.md#isdigit) 함수)
+- **číslice** (funkce- [číslice](../standard-library/locale-functions.md#isdigit))
 
-- **punct**([ispunct](../standard-library/locale-functions.md#ispunct) 함수)
+- **punct** (Function [ispunct](../standard-library/locale-functions.md#ispunct))
 
-- **xdigit**([isxdigit](../standard-library/locale-functions.md#isxdigit) 함수)
+- **xdigit** (Function [isxdigit](../standard-library/locale-functions.md#isxdigit))
 
-- **alpha**([isalpha](../standard-library/locale-functions.md#isalpha) 함수)
+- **alfa** (Function- [alfa](../standard-library/locale-functions.md#isalpha))
 
-- **alnum**([isalnum](../standard-library/locale-functions.md#isalnum) 함수)
+- **alnum** (Function [isalnum](../standard-library/locale-functions.md#isalnum))
 
-- **graph**([isgraph](../standard-library/locale-functions.md#isgraph) 함수)
+- **Graph** (Function [graf](../standard-library/locale-functions.md#isgraph))
 
-이러한 상수를 OR 연산하여 분류의 조합을 특징지을 수 있습니다. 특히 **alnum과** = = ( **알파** &#124; **숫자** \)와 **그래프** \= \= \( **alnum과** &#124; **punct**)이 항상 true입니다.
+Můžete charakterizovat kombinaci klasifikací tím, že ORing tyto konstanty. Konkrétně je vždy true, že **alnum** = = ( **alfa** &#124; **číslice** \) a **Graph** \= \= \( **alnum** &#124; **punct**).
 
-## <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>Požadavky
 
-**헤더:** \<locale>
+**Záhlaví:** \<locale >
 
-**네임스페이스:** std
+**Obor názvů:** std
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>Viz také:
 
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

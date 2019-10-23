@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: b9ffb4aff4d4d5667ab8d626ea13a21da94ca0c1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ae03802549f7791e51dccf1ea98a7b18929a4a4b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456467"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690112"
 ---
-# <a name="alignedunion-class"></a>aligned_union – třída
+# <a name="aligned_union-class"></a>aligned_union – třída
 
 Poskytuje typ POD dostatečně velký a vhodně zarovnaný k uložení typu sjednocení a požadované velikosti.
 
@@ -29,15 +29,15 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*Funkce*\
+*Délka* \
 Hodnota zarovnání pro největší typ ve sjednocení.
 
-*Druhy*\
+@No__t_1 *typů*
 Různé typy v základním sjednocení.
 
 ## <a name="remarks"></a>Poznámky
 
-Pomocí třídy Template získáte zarovnání a velikost potřebnou k uložení sjednocení do neinicializovaného úložiště. Definice typedef `type` člena pojmenovává typ pod, který je vhodný pro uložení libovolného typu uvedeného v *typech*. minimální velikost je *len*. Statický člen `alignment_value` typu `std::size_t` obsahuje nejpřísnější zarovnání vyžadované u všech typů uvedených v *typech*.
+Pomocí šablony třídy získáte zarovnání a velikost potřebnou k uložení sjednocení do neinicializovaného úložiště. Definice typedef člena `type` pojmenovává typ POD, který je vhodný pro úložiště libovolného typu uvedeného v *typech*. minimální velikost je *len*. Statický člen `alignment_value` typu `std::size_t` obsahuje nejpřísnější zarovnání vyžadované všemi typy uvedenými v *typech*.
 
 ## <a name="example"></a>Příklad
 
@@ -79,11 +79,11 @@ value of u->i is 1065353216
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<type_traits >
+**Záhlaví:** \<type_traits >
 
 **Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[< type_traits >](../standard-library/type-traits.md)\
+[< type_traits >](../standard-library/type-traits.md) \
 [alignment_of – třída](../standard-library/alignment-of-class.md)

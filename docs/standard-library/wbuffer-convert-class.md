@@ -1,5 +1,5 @@
 ---
-title: wbuffer_convert 클래스
+title: wbuffer_convert – třída
 ms.date: 11/04/2016
 f1_keywords:
 - xlocmon/stdext::cvt::wbuffer_convert
@@ -13,11 +13,11 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72688545"
 ---
-# <a name="wbuffer_convert-class"></a>wbuffer_convert 클래스
+# <a name="wbuffer_convert-class"></a>wbuffer_convert – třída
 
-바이트 스트림 버퍼에서 나가고 들어오는 요소의 전송을 제어하는 스트림 버퍼에 대해 설명합니다.
+Popisuje vyrovnávací paměť datového proudu, která řídí přenos prvků do a z vyrovnávací paměti datového proudu bajtů.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 template <class Codecvt, class Elem = wchar_t, class Traits = std::char_traits<Elem>>
@@ -25,22 +25,22 @@ class wbuffer_convert
     : public std::basic_streambuf<Elem, Traits>
 ```
 
-### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>Parametry
 
-|매개 변수|설명|
+|Parametr|Popis|
 |---------------|-----------------|
-|*Codecvt*|변환 개체를 나타내는 [locale](../standard-library/locale-class.md) 패싯입니다.|
-|*Elem*|와이드 문자 요소 형식입니다.|
-|*특성*|*Elem*과 연결된 특성입니다.|
+|*Codecvt*|Omezující vlastnost [národního prostředí](../standard-library/locale-class.md) , která představuje objekt převodu.|
+|*Elem*|Typ elementu s velkým znakem.|
+|*Traits*|Vlastnosti přidružené k *elem*.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Poznámky
 
-이 클래스 템플릿은 형식 `_Elem`의 요소 전송을 제어 하는 스트림 버퍼에 대해 설명 합니다 .이는 문자 특성이 `std::streambuf` 형식의 바이트 스트림 버퍼를 대상으로 하 `Traits` 클래스에서 설명 합니다.
+Tato šablona třídy popisuje vyrovnávací paměť datového proudu, která řídí přenos prvků typu `_Elem`, jejichž charakteristické znaky jsou popsány třídou `Traits`, do a z vyrovnávací paměti datového proudu typu `std::streambuf`.
 
-`Elem` 값 시퀀스와 멀티바이트 시퀀스 간 변환은 클래스 `Codecvt<Elem, char, std::mbstate_t>`의 개체에 의해 수행되며, 표준 코드 변환 패싯 `std::codecvt<Elem, char, std::mbstate_t>`의 요구 사항을 충족합니다.
+Převod mezi sekvencí `Elem` hodnoty a vícebajtové sekvence je proveden pomocí objektu třídy `Codecvt<Elem, char, std::mbstate_t>`, který splňuje požadavky standardní omezující vlastnosti převodu kódu `std::codecvt<Elem, char, std::mbstate_t>`.
 
-이 클래스 템플릿의 개체는 다음을 저장 합니다.
+Objekt této šablony třídy ukládá:
 
-- 기본 바이트 스트림 버퍼에 대한 포인터
+- Ukazatel na svou podkladovou vyrovnávací paměť datového proudu
 
-- 할당된 변환 개체에 대한 포인터([wbuffer_convert](../standard-library/wbuffer-convert-class.md) 개체가 제거될 때 해제됨)
+- Ukazatel na objekt přidělené konverze (který je uvolněn při [wbuffer_convert](../standard-library/wbuffer-convert-class.md)

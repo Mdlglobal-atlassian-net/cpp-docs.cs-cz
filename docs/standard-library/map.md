@@ -1,30 +1,30 @@
 ---
-title: '&lt;mapy&gt;'
+title: '&lt;map &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <map>
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456295"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687781"
 ---
-# <a name="ltmapgt"></a>&lt;mapy&gt;
+# <a name="ltmapgt"></a>&lt;map &gt;
 
-Definuje třídy šablon kontejneru mapy a multimap a jejich podpůrné šablony.
+Definuje šablony tříd kontejneru mapy a multimap a jejich podpůrné šablony.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<mapování >
+**Záhlaví:** \<map >
 
 **Obor názvů:** std
 
 > [!NOTE]
-> Mapa > Knihovna také `#include <initializer_list>` používá příkaz. \<
+> Knihovna \<map > používá také příkaz `#include <initializer_list>`.
 
 ## <a name="members"></a>Členové
 
@@ -34,10 +34,10 @@ Definuje třídy šablon kontejneru mapy a multimap a jejich podpůrné šablony
 |-----------------|----------------------|-----------------|
 |[operator! = (map) – operátor](../standard-library/map-operators.md#op_neq)|[operator! = (multimap) – operátor](../standard-library/map-operators.md#op_neq)|Testuje, zda objekt map nebo multimap na levé straně operátoru není roven mapě nebo objektu multimap na pravé straně.|
 |[operátor < (map)](../standard-library/map-operators.md#op_eq_eq)|[operátor < (multimap)](../standard-library/map-operators.md#op_eq_eq)|Testuje, zda je objekt map nebo multimap na levé straně operátoru menší než mapa nebo objekt multimap na pravé straně.|
-|[operátor < = (map)](../standard-library/map-operators.md#op_lt)|[operator\<= (multimap) – operátor](../standard-library/map-operators.md#op_lt)|Testuje, zda je objekt map nebo multimap na levé straně operátoru menší než nebo roven mapě nebo objektu multimap na pravé straně.|
-|[operator = = (map) – operátor](../standard-library/map-operators.md#op_eq_eq)|[operator== (multimap)](../standard-library/map-operators.md#op_eq_eq_multimap)|Testuje, zda je objekt map nebo multimap na levé straně operátoru roven mapě nebo objektu multimap na pravé straně.|
+|[operátor < = (map)](../standard-library/map-operators.md#op_lt)|[operator \< = (multimap) – operátor](../standard-library/map-operators.md#op_lt)|Testuje, zda je objekt map nebo multimap na levé straně operátoru menší než nebo roven mapě nebo objektu multimap na pravé straně.|
+|[operator = = (map) – operátor](../standard-library/map-operators.md#op_eq_eq)|[operator = = (multimap) – operátor](../standard-library/map-operators.md#op_eq_eq_multimap)|Testuje, zda je objekt map nebo multimap na levé straně operátoru roven mapě nebo objektu multimap na pravé straně.|
 |[operátor > (map)](../standard-library/map-operators.md#op_gt)|[operátor > (multimap)](../standard-library/map-operators.md#op_gt_multimap)|Testuje, zda je objekt map nebo multimap na levé straně operátoru větší než mapa nebo objekt multimap na pravé straně.|
-|[operátor > = (map)](../standard-library/map-operators.md#op_gt_eq)|[operator>= (multimap)](../standard-library/map-operators.md#op_gt_eq_multimap)|Testuje, zda je objekt map nebo multimap na levé straně operátoru větší než nebo roven mapě nebo objektu multimap na pravé straně.|
+|[operátor > = (map)](../standard-library/map-operators.md#op_gt_eq)|[operator > = (multimap) – operátor](../standard-library/map-operators.md#op_gt_eq_multimap)|Testuje, zda je objekt map nebo multimap na levé straně operátoru větší než nebo roven mapě nebo objektu multimap na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
@@ -55,6 +55,6 @@ Definuje třídy šablon kontejneru mapy a multimap a jejich podpůrné šablony
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

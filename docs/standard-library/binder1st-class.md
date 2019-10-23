@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243374"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688391"
 ---
 # <a name="binder1st-class"></a>binder1st – třída
 
-Třída šablony poskytující konstruktor, který převádí objekt binární funkce na objekt jednočlenné funkce navázáním prvního argumentu binární funkce na zadanou hodnotu. Zastaralé v C ++ 11 nahrazený [svázat](functional-functions.md#bind)a v C ++ 17 odebrané.
+Šablona třídy poskytující konstruktor, který převádí objekt binární funkce na unární objekt funkce navázáním prvního argumentu binární funkce na zadanou hodnotu. Zastaralé v C++ 11 ve prospěch [vazby](functional-functions.md#bind)a odebrané v c++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*binary_fn*\
-Objekt binární funkce pro převod na objekt jednočlenné funkce.
+*binary_fn* \
+Objekt binární funkce, který má být převeden na unární objekt funkce.
 
-*doleva*\
-Hodnota, na které má být vázaný prvního argumentu binární funkce na objekt.
+*levý* \
+Hodnota, na kterou má být první argument objektu binární funkce svázán.
 
-*doprava*\
-Hodnota argumentu, který porovná objekt adaptovaného binární pevnou hodnotu druhého argumentu.
+*pravé* \
+Hodnota argumentu, který upravený binární objekt porovnává s pevnou hodnotou druhého argumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Objekt jednočlenné funkce, která je výsledkem vazby prvního argumentu binární funkce na objekt na hodnotu *levé*.
+Unární objekt funkce, který je výsledkem vazby prvního argumentu objektu binární funkce na hodnotu *Left*.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá jejich kopii objekt binární funkce *binary_fn* v `op`a kopii *levé* v `value`. Definuje jeho členskou funkci `operator()` jako vracející `op(value, right)`.
+Šablona třídy uchovává kopii objektu binární funkce *binary_fn* v `op` a kopii *Left* v `value`. Definuje jeho členskou funkci `operator()` jako vrácení `op(value, right)`.
 
-Pokud *binary_fn* je objekt typu `Operation` a `c` je konstanta, pak `bind1st(binary_fn, c)` je pohodlnější ekvivalentem `binder1st<Operation>(binary_fn, c)`. Další informace najdete v tématu [bind1st –](../standard-library/functional-functions.md#bind1st).
+Pokud *binary_fn* je objekt typu `Operation` a `c` je konstanta, pak `bind1st(binary_fn, c)` je pohodlnější ekvivalent `binder1st<Operation>(binary_fn, c)`. Další informace najdete v tématu [bind1st –](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Příklad
 

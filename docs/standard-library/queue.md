@@ -1,30 +1,30 @@
 ---
-title: '&lt;provedených&gt;'
+title: '&lt;queue &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <queue>
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: 506ab5fccd44ad37a08a9f741f44f24d3a85b87d
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: ee35f880ddf40561cacb5c4d519f2e6291ad77a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956999"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689113"
 ---
-# <a name="ltqueuegt"></a>&lt;provedených&gt;
+# <a name="ltqueuegt"></a>&lt;queue &gt;
 
-Definuje třídy šablon priority_queue a Queue a několik podpůrných šablon.
+Definuje šablony tříd priority_queue a Queue a několik podpůrných šablon.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> fronty
+**Záhlaví:** \<queue >
 
 **Obor názvů:** std
 
 > [!NOTE]
-> Fronta > Knihovna také `#include <initializer_list>` používá příkaz. \<
+> Knihovna \<queue > používá také příkaz `#include <initializer_list>`.
 
 ## <a name="members"></a>Členové
 
@@ -34,8 +34,8 @@ Definuje třídy šablon priority_queue a Queue a několik podpůrných šablon.
 |-|-|
 |[operator!=](../standard-library/queue-operators.md#op_neq)|Testuje, zda objekt Queue na levé straně operátoru není roven objektu Queue na pravé straně.|
 |[operátor <](../standard-library/queue-operators.md#op_lt)|Testuje, zda je objekt Queue na levé straně operátoru menší než objekt Queue na pravé straně.|
-|[podnikatel\<=](../standard-library/queue-operators.md#op_gt_eq)|Testuje, zda je objekt Queue na levé straně operátoru menší než nebo roven objektu Queue na pravé straně.|
-|[operator==](../standard-library/queue-operators.md#op_eq_eq)|Testuje, zda je objekt Queue na levé straně operátoru roven objektu Queue na pravé straně.|
+|[operátor \< =](../standard-library/queue-operators.md#op_gt_eq)|Testuje, zda je objekt Queue na levé straně operátoru menší než nebo roven objektu Queue na pravé straně.|
+|[operator = = – operátor](../standard-library/queue-operators.md#op_eq_eq)|Testuje, zda je objekt Queue na levé straně operátoru roven objektu Queue na pravé straně.|
 |[operátor >](../standard-library/queue-operators.md#op_gt)|Testuje, zda je objekt Queue na levé straně operátoru větší než objekt Queue na pravé straně.|
 |[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Testuje, zda je objekt Queue na levé straně operátoru větší než nebo roven objektu Queue na pravé straně.|
 
@@ -48,6 +48,6 @@ Definuje třídy šablon priority_queue a Queue a několik podpůrných šablon.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: ostream_iterator 클래스
+title: ostream_iterator – třída
 ms.date: 11/04/2016
 f1_keywords:
 - iterator/std::ostream_iterator
@@ -19,71 +19,71 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72687244"
 ---
-# <a name="ostream_iterator-class"></a>ostream_iterator 클래스
+# <a name="ostream_iterator-class"></a>ostream_iterator – třída
 
-클래스 템플릿 ostream_iterator는 연속 요소를 추출 `operator <<`를 사용 하 여 출력 스트림에 쓰는 출력 반복기 개체에 대해 설명 합니다.
+Šablona třídy ostream_iterator popisuje výstupní objekt iterátoru, který zapisuje po sobě jdoucí prvky do výstupního datového proudu pomocí `operator <<` extrakce.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 template <class Type class CharType = char class Traits = char_traits <CharType>>
 class ostream_iterator
 ```
 
-### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>Parametry
 
-*형식* \
-출력 스트림에 삽입될 개체의 형식입니다.
+*Zadejte* \
+Typ objektu, který má být vložen do výstupního toku.
 
-*Chartype* \
-`ostream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 **char**입니다.
+*CharType* \
+Typ, který představuje typ znaku pro `ostream_iterator`. Tento argument je nepovinný a výchozí hodnota je **char**.
 
-*특성* \
-`ostream_iterator`의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char_traits`\< *CharType>입니다.*
+@No__t_1 *vlastností*
+Typ, který představuje typ znaku pro `ostream_iterator`. Tento argument je nepovinný a výchozí hodnota je `char_traits` \< *CharType >.*
 
-ostream_iterator 클래스는 출력 반복기에 대한 요구 사항을 충족해야 합니다. 알고리즘은 `ostream_iterator`를 사용하여 출력 스트림에 직접 쓸 수 있습니다.
+Třída ostream_iterator musí splňovat požadavky na výstupní iterátor. Algoritmy lze zapisovat přímo do výstupních datových proudů pomocí `ostream_iterator`.
 
-### <a name="constructors"></a>생성자
+### <a name="constructors"></a>Konstruktory
 
-|생성자|설명|
+|Konstruktor|Popis|
 |-|-|
-|[ostream_iterator](#ostream_iterator)|출력 스트림으로 쓰도록 초기화 및 구분된 `ostream_iterator`를 구성합니다.|
+|[ostream_iterator](#ostream_iterator)|Sestaví `ostream_iterator`, který je inicializován a oddělený pro zápis do výstupního datového proudu.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|형식 이름|설명|
+|Název typu|Popis|
 |-|-|
-|[char_type](#char_type)|`ostream_iterator`의 문자 형식을 허용하는 형식입니다.|
-|[ostream_type](#ostream_type)|`ostream_iterator`의 스트림 형식을 허용하는 형식입니다.|
-|[traits_type](#traits_type)|`ostream_iterator`의 특성 형식을 허용하는 형식입니다.|
+|[char_type](#char_type)|Typ, který poskytuje typ znaku `ostream_iterator`.|
+|[ostream_type](#ostream_type)|Typ, který poskytuje typ datového proudu `ostream_iterator`.|
+|[traits_type](#traits_type)|Typ, který poskytuje typ znakových vlastností `ostream_iterator`.|
 
-### <a name="operators"></a>연산자
+### <a name="operators"></a>Operátory
 
-|연산자|설명|
+|Operátor|Popis|
 |-|-|
-|[operator*](#op_star)|@No__t_1  =  `x` \* 출력 반복기 식을 구현 하는 데 사용 되는 역참조 연산자입니다.|
-|[operator++](#op_add_add)|연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostream_iterator`를 반환한 비함수 증분 연산자.|
-|[operator=](#op_eq)|출력 스트림에 쓰기 위해 `i`  =  `x` \* 출력 반복기 식을 구현 하는 데 사용 되는 할당 연산자입니다.|
+|[podnikatel](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x`.|
+|[operator + + – operátor](#op_add_add)|Nefunkční operátor přírůstku, který vrací `ostream_iterator` ke stejnému objektu, který byl vyřešen před voláním operace.|
+|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x` pro zápis do výstupního datového proudu.|
 
-## <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>Požadavky
 
-**헤더:** \<iterator>
+**Záhlaví:** \<iterator >
 
-**네임스페이스:** std
+**Obor názvů:** std
 
-## <a name="char_type"></a>  ostream_iterator::char_type
+## <a name="char_type"></a>ostream_iterator::char_type
 
-반복기의 문자 형식을 제공하는 형식입니다.
+Typ, který poskytuje typ znaku iterátoru.
 
 ```cpp
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>Poznámky
 
-이 형식은 템플릿 매개 변수 `CharType`의 동의어입니다.
+Typ je synonymum pro parametr šablony `CharType`.
 
-### <a name="example"></a>예제
+### <a name="example"></a>Příklad
 
 ```cpp
 // ostream_iterator_char_type.cpp
@@ -120,23 +120,23 @@ by intOut are:
 */
 ```
 
-## <a name="op_star"></a>  ostream_iterator::operator*
+## <a name="op_star"></a>ostream_iterator:: operator * – operátor
 
-출력 반복기 식 \* *ii* = *x*를 구현하는 데 사용된 역참조 연산자.
+Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* *ii*  = *x*.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator*();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Návratová hodnota
 
-`ostream_iterator`에 대한 참조입니다.
+Odkaz na `ostream_iterator`.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>Poznámky
 
-`ostream_iterator`가 충족해야 하는 출력 반복기에 대한 요구 사항은 \* *ii* = *t* 식만 유효해야 한다는 것과 해당 반복기 자체는 **operator** 또는 `operator=`에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이 구현에서는 구성원 연산자가 **\*this**를 반환합니다.
+Požadavky na výstupní iterátor, které musí `ostream_iterator` splňovat, vyžadují, aby byl platný jenom výraz \* *ii*  = *t* a neříkají nic o **operátoru** nebo `operator=` sám o sobě. Operátor member v této implementaci vrací **\*this**.
 
-### <a name="example"></a>예제
+### <a name="example"></a>Příklad
 
 ```cpp
 // ostream_iterator_op_deref.cpp
@@ -169,24 +169,24 @@ Elements written to output stream:
 */
 ```
 
-## <a name="op_add_add"></a>  ostream_iterator::operator++
+## <a name="op_add_add"></a>ostream_iterator:: operator + +
 
-연산이 호출되기 전에 주소 지정한 동일한 개체에 `ostream_iterator`를 반환한 비함수 증분 연산자.
+Nefunkční operátor přírůstku, který vrací `ostream_iterator` ke stejnému objektu, který byl vyřešen před voláním operace.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator++();
 ostream_iterator<Type, CharType, Traits> operator++(int);
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Návratová hodnota
 
-`ostream_iterator`에 대한 참조입니다.
+Odkaz na `ostream_iterator`.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>Poznámky
 
-이러한 구성원 연산자는 둘 다 **\*this**를 반환합니다.
+Tyto členské operátory vrátí **\*this**.
 
-### <a name="example"></a>예제
+### <a name="example"></a>Příklad
 
 ```cpp
 // ostream_iterator_op_incr.cpp
@@ -219,28 +219,28 @@ Elements written to output stream:
 */
 ```
 
-## <a name="op_eq"></a>  ostream_iterator::operator=
+## <a name="op_eq"></a>ostream_iterator:: operator =
 
-Output_iterator 식을 구현 하는 데 사용 되는 할당 연산자 \* `i`  =  `x` 출력 스트림에 씁니다.
+Operátor přiřazení používaný k implementaci výrazu output_iterator \* `i`  =  `x` pro zápis do výstupního datového proudu.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 ```
 
-### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>Parametry
 
-*val* \
-출력 스트림에 삽입될 `Type` 형식의 개체 값입니다.
+\ *Val*
+Hodnota objektu typu `Type`, který má být vložen do výstupního datového proudu.
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Návratová hodnota
 
-연산자는 개체와 연결 된 출력 스트림에 *val* 을 삽입 한 다음 [ostream_iterator 생성자](#ostream_iterator) 에 지정 된 구분 기호 (있는 경우)를 입력 한 다음 `ostream_iterator`에 대 한 참조를 반환 합니다.
+Operátor vloží hodnotu *Val* do výstupního datového proudu přidruženého k objektu, následovaný oddělovačem zadaným v [konstruktoru ostream_iterator](#ostream_iterator) (pokud existuje) a poté vrátí odkaz na `ostream_iterator`.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>Poznámky
 
-@No__t_0 충족 해야 하는 출력 반복기에 대 한 요구 사항에는 식 \* `ii` `t`  =  유효 해야 하 고 연산자 또는 operator =에 대해 아무 것도 지정 하지 않아도 됩니다. 이 멤버 연산자는 `*this`를 반환합니다.
+Požadavky na výstupní iterátor, které musí `ostream_iterator` splňovat, vyžadují pouze výraz \* `ii`  =  `t` být platné a neříká nic o operátoru nebo operátoru = sám o sobě. Tento členský operátor vrací `*this`.
 
-### <a name="example"></a>예제
+### <a name="example"></a>Příklad
 
 ```cpp
 // ostream_iterator_op_assign.cpp
@@ -273,9 +273,9 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iterator"></a>  ostream_iterator::ostream_iterator
+## <a name="ostream_iterator"></a>ostream_iterator::ostream_iterator
 
-출력 스트림으로 쓰도록 초기화 및 구분된 `ostream_iterator`를 구성합니다.
+Sestaví `ostream_iterator`, který je inicializován a oddělený pro zápis do výstupního datového proudu.
 
 ```cpp
 ostream_iterator(
@@ -286,21 +286,21 @@ ostream_iterator(
     const CharType* _Delimiter);
 ```
 
-### <a name="parameters"></a>매개 변수
+### <a name="parameters"></a>Parametry
 
 *_Ostr* \
-반복할 [ostream_iterator::ostream_type](#ostream_type) 형식의 출력 스트림입니다.
+Výstupní datový proud typu [ostream_iterator:: ostream_type](#ostream_type) , který se má iterovat.
 
-*_ 구분 기호* \
-출력 스트림에서 값 사이에 삽입되는 구분 기호입니다.
+*_Delimiter* \
+Oddělovač, který je vložen do výstupního datového proudu mezi hodnotami.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>Poznámky
 
-첫 번째 생성자는 `&_Ostr`로 출력 스트림 포인터를 초기화합니다. 구분 기호 문자열 포인터는 빈 문자열을 지정합니다.
+První konstruktor inicializuje ukazatel výstupního datového proudu s `&_Ostr`. Ukazatel řetězce oddělovače označuje prázdný řetězec.
 
-두 번째 생성자는 `&_Ostr` 사용 하 여 출력 스트림 포인터를 초기화 하 고 구분 *기호*를 사용 하 여 구분 기호 문자열 포인터를 초기화 합니다.
+Druhý konstruktor inicializuje ukazatel výstupního datového proudu pomocí `&_Ostr` a ukazatele na řetězec oddělovače s *_Delimiter*.
 
-### <a name="example"></a>예제
+### <a name="example"></a>Příklad
 
 ```cpp
 // ostream_iterator_ostream_iterator.cpp
@@ -347,35 +347,35 @@ Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
 */
 ```
 
-## <a name="ostream_type"></a>  ostream_iterator::ostream_type
+## <a name="ostream_type"></a>ostream_iterator::ostream_type
 
-반복기의 스트림 형식을 제공하는 형식입니다.
+Typ, který poskytuje typ datového proudu iterátoru.
 
 ```cpp
 typedef basic_ostream<CharType, Traits> ostream_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>Poznámky
 
-이 형식은 쓰기에 사용할 수 있는 개체를 정의하는 iostream 계층의 스트림 클래스인 [basic_ostream](../standard-library/basic-ostream-class.md)< `CharType`, `Traits`>와 동일한 의미입니다.
+Typ je synonymum pro [basic_ostream](../standard-library/basic-ostream-class.md) <  `CharType`, `Traits` >, třída Stream hierarchie iostream –, která definuje objekty, které lze použít pro zápis.
 
-### <a name="example"></a>예제
+### <a name="example"></a>Příklad
 
-`ostream_type`을 선언하고 사용하는 방법의 예제는 [ostream_iterator](#ostream_iterator)를 참조하세요.
+Příklad, jak deklarovat a používat `ostream_type`, naleznete v tématu [ostream_iterator](#ostream_iterator) .
 
-## <a name="traits_type"></a>  ostream_iterator::traits_type
+## <a name="traits_type"></a>ostream_iterator::traits_type
 
-반복기의 특성 형식을 제공하는 형식입니다.
+Typ, který poskytuje typ znaků typu iterátoru.
 
 ```cpp
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>Poznámky
 
-이 형식은 템플릿 매개 변수 `Traits`의 동의어입니다.
+Typ je synonymum pro parametr šablony `Traits`.
 
-### <a name="example"></a>예제
+### <a name="example"></a>Příklad
 
 ```cpp
 // ostream_iterator_traits_type.cpp
@@ -413,8 +413,8 @@ by intOut are:
 */
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>Viz také:
 
-[\<iterator>](../standard-library/iterator.md)\
-[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+[\<iterator >](../standard-library/iterator.md) \
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
