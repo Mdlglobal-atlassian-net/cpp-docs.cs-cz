@@ -2969,7 +2969,7 @@
                           href: c-language/c-integer-constants.md
                         - name: Celočíselné typy
                           href: c-language/integer-types.md
-                        - name: Omezení celočíselných typů v jazyce C++
+                        - name: Omezení celočíselných typů v jazycích C a C++
                           href: c-language/cpp-integer-limits.md
                     - name: Konstanty znaků jazyka C
                       expanded: false
