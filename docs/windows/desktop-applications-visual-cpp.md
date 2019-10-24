@@ -3,26 +3,26 @@ title: Aplikace klasické pracovní plochy C++(Visual)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 91fcc596a4c30e3fa74043c846eda6f06b666f2c
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 98909097cf791d55f5971a89643839e07b0c60d1
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274726"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778509"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikace klasické pracovní plochy C++(Visual)
 
-*Desktopová aplikace* v C++ systému je nativní aplikace, která má přístup k celé sadě rozhraní API systému Windows a buď se spouští v okně, nebo v systémové konzole. Aplikace klasické pracovní C++ plochy v nástroji můžou běžet v systému Windows XP prostřednictvím systému Windows 10 (i když systém Windows XP již není oficiálně podporován a existuje mnoho rozhraní API systému Windows, které bylo od té doby zavedeno). 
+*Desktopová aplikace* v C++ systému je nativní aplikace, která má přístup k celé sadě rozhraní API systému Windows a buď se spouští v okně, nebo v systémové konzole. Aplikace klasické pracovní C++ plochy v nástroji můžou běžet v systému Windows XP prostřednictvím systému Windows 10 (i když systém Windows XP již není oficiálně podporován a existuje mnoho rozhraní API systému Windows, které bylo od té doby zavedeno).
 
-Desktopová aplikace se liší od aplikace Univerzální platforma Windows (UWP), která se dá spustit na počítačích s Windows 10, a taky na zařízeních XBox, Windows Phone, Surface Hub a dalších. Další informace o desktopu vs. Aplikace UWP najdete v tématu [Volba vaší technologie](/windows/win32/choose-your-technology).
+Desktopová aplikace se liší od aplikace Univerzální platforma Windows (UWP), která se dá spustit na počítačích s Windows 10, a taky na zařízeních XBox, Windows Phone, Surface Hub a dalších. Další informace o aplikacích Desktop vs. UWP najdete v tématu [Volba technologie](/windows/win32/choose-your-technology).
 
-### <a name="desktop-bridge"></a>Most pro stolní počítače
+## <a name="desktop-bridge"></a>Most pro stolní počítače
 
 Ve Windows 10 můžete zabalit stávající desktopovou aplikaci nebo objekt COM jako aplikaci UWP a přidat funkce UWP, jako je dotykové ovládání, nebo volat rozhraní API z moderní sady Windows API. Aplikaci pro UWP můžete také přidat do řešení pro stolní počítače v aplikaci Visual Studio a zabalit je do jednoho balíčku a použít rozhraní API systému Windows ke komunikaci mezi nimi.
 
 V aplikaci Visual Studio 2017 verze 15,4 a novější můžete vytvořit projekt balíčku aplikace systému Windows, který výrazně zjednodušuje práci s balíčkem stávající aplikace klasické pracovní plochy. S ohledem na to, jaká volání registru nebo rozhraní API vaše aplikace klasické pracovní plochy používá, platí několik omezení, ale v mnoha případech můžete vytvořit alternativní cesty kódu pro dosažení podobných funkcí při spuštění v balíčku aplikace. Další informace najdete v tématu [most pro stolní počítače](/windows/uwp/porting/desktop-to-uwp-root).
 
-### <a name="terminology"></a>Terminologie
+## <a name="terminology"></a>Terminologie
 
 - Aplikace *Win32* je desktopová aplikace pro C++ Windows, která umožňuje používat nativní rozhraní API pro Windows C nebo rozhraní API [modelu COM](/windows/win32/apiindex/windows-api-list) CRT a standardní knihovny API a knihovny třetích stran. Aplikace Win32, která běží v okně, vyžaduje, aby vývojář pracoval explicitně se zprávami systému Windows v rámci funkce procedury systému Windows. Bez ohledu na název může být aplikace Win32 kompilována jako 32 (x86) nebo 64-bit (x64) binární. V integrovaném vývojovém prostředí sady Visual Studio jsou výrazy x86 a Win32 synonymně.
 
@@ -44,7 +44,7 @@ Každá desktopová aplikace C++ v nástroji může používat modul C runtime (
 |[Přidávání souborů do prázdných aplikací Win32](adding-files-to-an-empty-win32-applications.md)|Postup přidání souborů do prázdného projektu.|
 |[Práce se zdrojovými soubory](working-with-resource-files.md)|Postup přidání obrázků, ikon, tabulek řetězců a dalších prostředků do aplikace klasické pracovní plochy.|
 |[Prostředky pro vytvoření hry s použitím rozhraní DirectXC++()](resources-for-creating-a-game-using-directx.md)|Obsahuje odkazy na obsah pro vytváření her C++v nástroji.|
-|[Návod: Vytvoření a použití statické knihovny](walkthrough-creating-and-using-a-static-library-cpp.md)|Postup vytvoření binárního souboru. lib.|
+|[Návod: vytvoření a použití statické knihovny](walkthrough-creating-and-using-a-static-library-cpp.md)|Postup vytvoření binárního souboru. lib.|
 |[Postupy: Použití sady Windows 10 SDK v desktopové aplikaci Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Obsahuje kroky pro nastavení projektu pro sestavení pomocí sady Windows 10 SDK.|
 
 ## <a name="related-articles"></a>Související články
@@ -52,7 +52,7 @@ Každá desktopová aplikace C++ v nástroji může používat modul C runtime (
 |Název|Popis|
 |-----------|-----------------|
 |[Vývoj pro Windows](/windows/win32/index)|Obsahuje informace o rozhraní API a modelu COM systému Windows. (Některá rozhraní API systému Windows a knihovny DLL třetích stran jsou implementovány jako objekty modelu COM.)|
-|[Hilo Vývoj C++ aplikací pro systém Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Popisuje, jak vytvořit bohatou klientskou aplikaci pro Windows, která používá animaci Windows a Direct2D k vytvoření uživatelského rozhraní založeného na karuselu.  Tento kurz se od Windows 7 neaktualizoval, ale stále poskytuje důkladný úvod k programování v systému Win32.|
+|[Hilo: vývoj C++ aplikací pro Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Popisuje, jak vytvořit bohatou klientskou aplikaci pro Windows, která používá animaci Windows a Direct2D k vytvoření uživatelského rozhraní založeného na karuselu.  Tento kurz se od Windows 7 neaktualizoval, ale stále poskytuje důkladný úvod k programování v systému Win32.|
 |[Přehled programování v C++ v systému Windows](overview-of-windows-programming-in-cpp.md)|Popisuje klíčové funkce programování pro stolní počítače v C++systému Windows.|
 
 ## <a name="see-also"></a>Viz také:

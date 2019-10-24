@@ -5,20 +5,20 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: af220854f71a84902d9ad417242b6d037d4ba0f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52b20c5a8eccbf9e8a87cfa7e8fb01da846153d8
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234069"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778449"
 ---
 # <a name="elements-of-c"></a>Elementy jazyka C
 
-Tato část popisuje elementy programovací jazyk C, včetně názvů, číslice a znaky použitý k vytvoření programu v jazyce C. Tyto tokeny součásti syntaxe standardu ANSI C popisků
+Tato část popisuje prvky programovacího jazyka C, včetně názvů, čísel a znaků použitých k vytvoření programu v jazyce C. Syntaxe standardu ANSI C tyto tokeny komponent označí.
 
-Tato část vysvětluje, jak definovat tokeny a způsob, jak je kompilátor vyhodnocuje.
+Tato část vysvětluje, jak definovat tokeny a jak je kompilátor vyhodnocuje.
 
-Jsou popsány v následujících tématech:
+Jsou popsána následující témata:
 
 - [Tokeny](../c-language/c-tokens.md)
 
@@ -32,11 +32,11 @@ Jsou popsány v následujících tématech:
 
 - [Řetězcové literály](../c-language/c-string-literals.md)
 
-- [Interpunkce a speciální znaky](../c-language/punctuation-and-special-characters.md)
+- [Interpunkční znaménka a speciální znaky](../c-language/punctuation-and-special-characters.md)
 
-Část také obsahuje referenční tabulky pro [Trigraphs](../c-language/trigraphs.md), [omezení konstant s plovoucí desetinné čárky s](../c-language/limits-on-floating-point-constants.md), [omezení typu Integer jazyka C++](../c-language/cpp-integer-limits.md), a [řídicí sekvence ](../c-language/escape-sequences.md).
+Oddíl obsahuje také referenční tabulky pro [trigraphs](../c-language/trigraphs.md), [omezení konstant s plovoucí](../c-language/limits-on-floating-point-constants.md)desetinnou čárkou, hodnoty v jazyce [C a C++ celých čísel](../c-language/cpp-integer-limits.md)a [řídicí sekvence](../c-language/escape-sequences.md).
 
-Operátory jsou znaky (jednotlivé znaky a kombinace znaků), které určují, jak se hodnoty manipulovat. Každý symbol je interpretován jako celek, volá se token. Další informace najdete v tématu [operátory](../c-language/c-operators.md).
+Operátory jsou symboly (jednotlivé znaky a kombinace znaků), které určují, jak mají být hodnoty manipulovány. Každý symbol je interpretován jako jediná jednotka, která se nazývá token. Další informace najdete v tématu [operátory](../c-language/c-operators.md).
 
 ## <a name="see-also"></a>Viz také:
 
