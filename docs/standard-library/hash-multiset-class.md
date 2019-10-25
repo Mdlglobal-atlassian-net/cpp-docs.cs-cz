@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 6b3a57d110f2416f5539399ed087e0acbb156991
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689589"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890087"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset – třída
 
@@ -109,13 +109,13 @@ class hash_multiset
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *klíčů*
+\ *klíčů*
 Typ dat prvku, který bude uložen v hash_multiset.
 
-@No__t_1 *vlastností*
+\ *vlastností*
 Typ, který obsahuje dva objekty funkce, jedno z porovnání třídy, které je binární predikát schopný porovnat dvě hodnoty elementů jako klíče řazení pro určení jejich relativního pořadí a funkci hash, která je unárním predikátem mapování hodnot klíčů prvků na nepodepsané celá čísla typu `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key> >` je výchozí hodnota.
 
-@No__t_1 *přidělování*
+\ *přidělování*
 Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování hash_multiset's a navracení paměti. Tento argument je nepovinný a výchozí hodnota je `allocator<Key>`.
 
 ## <a name="remarks"></a>Poznámky
@@ -138,7 +138,7 @@ Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vklá
 
 Hash_multiset by měl být asociativní kontejner výběru, pokud podmínky přidružování hodnot k jejich klíčům splňují požadavky aplikace. Prvky hash_multiset mohou být vícenásobné a slouží jako vlastní klíče řazení, takže klíče nejsou jedinečné. Model pro tento typ struktury je uspořádaný seznam slov, v němž se slova mohou vyskytovat více než jednou. Bylo překročeno více výskytů slov, takže hash_set by byla příslušná struktura kontejneru. Pokud byly jedinečné definice připojeny jako hodnoty k seznamu jedinečných klíčových slov, pak bude hash_map vhodnou strukturou, která bude tato data obsahovat. Pokud místo toho definice nejsou jedinečné, hash_multimap by byl kontejnerem volby.
 
-Hash_multiset seřadí sekvenci, kterou řídí, voláním uloženého objektu hash znaků typu [value_compare](#value_compare). K tomuto uloženému objektu je možné přistupovat voláním členské funkce [key_comp](#key_comp). Takový objekt funkce se musí chovat stejně jako objekt třídy `hash_compare<Key, less<Key> >`. Konkrétně pro všechny hodnoty *klíče* typu `Key` volání `Trait(Key)` vypočítá distribuci hodnot typu `size_t`.
+Hash_multiset seřadí sekvenci, kterou řídí, voláním uloženého objektu hash znaků typu [value_compare](#value_compare). K tomuto uloženému objektu je možné přistupovat voláním členské funkce [key_comp](#key_comp). Takový objekt funkce se musí chovat stejně jako objekt třídy `hash_compare<Key, less<Key> >`. Konkrétně pro všechny hodnoty *klíče* typu `Key`volání `Trait(Key)` vypočítá distribuci hodnot typu `size_t`.
 
 Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát *f*( *x*, *y*) je objekt funkce, který má dva objekty argumentu x a y a návratovou hodnotu true nebo false. Řazení uložené na hash_multiset je přísné slabé seřazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde jsou dva objekty x a y definovány jako ekvivalentní, když je v *f*( *x*, y).) a *f*( *y*, *x*) jsou false. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
 
@@ -184,7 +184,7 @@ Iterátor poskytnutý třídou hash_multiset je obousměrný iterátor, ale funk
 |[crbegin –](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném `hash_multiset`.|
 |[crend](#crend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném `hash_multiset`.|
 |[emplace](#emplace)|Vloží prvek konstruovaný na místo do `hash_multiset`.|
-|[emplace_hint](#emplace_hint)|Vloží prvek konstruovaný na místo do `hash_multiset` s pomocným parametrem umístění.|
+|[emplace_hint](#emplace_hint)|Vloží prvek konstruovaný na místo do `hash_multiset`s pomocným parametrem umístění.|
 |[obsahovat](#empty)|Testuje, zda je `hash_multiset` prázdné.|
 |[účelu](#end)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v `hash_multiset`.|
 |[equal_range](#equal_range)|Vrátí dvojici iterátorů v uvedeném pořadí na první prvek v `hash_multiset` s klíčem, který je větší než zadaný klíč a na první prvek v `hash_multiset` s klíčem, který je roven nebo větší než klíč.|
@@ -307,7 +307,7 @@ Konstantní obousměrný iterátor, který adresuje první prvek v [hash_multise
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin` nelze upravovat elementy v objektu `hash_multiset`.
+S návratovou hodnotou `cbegin`nelze upravovat elementy v objektu `hash_multiset`.
 
 ### <a name="example"></a>Příklad
 
@@ -613,7 +613,7 @@ Konstantní reverzní obousměrný iterátor, který adresuje první prvek v obr
 
 `crbegin` se používá s obráceným `hash_multiset` stejně jako [hash_multiset:: begin](#begin) se používá s `hash_multiset`.
 
-S návratovou hodnotou `crbegin` nelze změnit objekt `hash_multiset`.
+S návratovou hodnotou `crbegin`nelze změnit objekt `hash_multiset`.
 
 `crbegin` lze použít k iteraci `hash_multiset` zpět.
 
@@ -665,7 +665,7 @@ Const reverzní obousměrný iterátor, který adresuje umístění následujíc
 
 `crend` se používá s obráceným `hash_multiset` stejně jako [hash_multiset:: end](#end) se používá s `hash_multiset`.
 
-S návratovou hodnotou `crend` nelze změnit objekt `hash_multiset`.
+S návratovou hodnotou `crend`nelze změnit objekt `hash_multiset`.
 
 `crend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho hash_multiset.
 
@@ -712,7 +712,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 ### <a name="remarks"></a>Poznámky
 
-@No__t_0 je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. @No__t_0 se obvykle používá k reprezentaci počtu prvků v rozsahu [`first`, `last`) mezi iterátory `first` a `last`, zahrnuje element, na který odkazuje `first`, a rozsah prvků až po , ale nezahrnuje prvek, na který ukazuje `last`.
+`difference_type` je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. `difference_type` se obvykle používá k reprezentaci počtu prvků v rozsahu [`first`, `last`) mezi iterátory `first` a `last`, zahrnuje element, na který odkazuje `first`, a rozsah prvků až po , ale nezahrnuje prvek, na který ukazuje `last`.
 
 Všimněte si, že i když `difference_type` je k dispozici pro všechny iterátory, které splňují požadavky vstupního iterátoru, který zahrnuje třídu Obousměrných iterátorů podporovaných vratnými kontejnery, jako je například set. Odčítání mezi iterátory je podporováno pouze iterátory s náhodným přístupem, které jsou poskytovány kontejnerem s náhodným přístupem, jako je například Vector nebo deque.
 
@@ -839,16 +839,17 @@ Vloží prvek konstruovaný na místo do hash_multiset s pomocným parametrem um
 ```cpp
 template <class ValTy>
 iterator insert(
-    const_iterator _Where,
+    const_iterator where,
     ValTy&& val);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*počítává*|Hodnota prvku, který má být vložen do objektu [hash_multiset](../standard-library/hash-multiset-class.md) , pokud `hash_multiset` již tento prvek neobsahuje, nebo obecněji, což je objekt, jehož klíč je ekvivalentně seřazený.|
-|*_Where*|Místo zahájení vyhledání správného bodu vložení. (Vložení se může vyskytnout v konstantním času v čase, namísto logaritmické doby, pokud kurzor hned následuje *_Where*.)|
+\ *Val*
+Hodnota prvku, který má být vložen do objektu [hash_multiset](../standard-library/hash-multiset-class.md) , pokud `hash_multiset` již tento prvek neobsahuje, nebo obecněji, což je objekt, jehož klíč je ekvivalentně seřazený.
+
+*kde* \
+Místo zahájení vyhledání správného bodu vložení. (Vložení se může vyskytnout v konstantním čase, namísto logaritmické doby, pokud se kurzor okamžitě sleduje *tam, kde*.)
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -856,7 +857,7 @@ iterator insert(
 
 ### <a name="remarks"></a>Poznámky
 
-Vložení se může vyskytnout v konstantním času v čase, namísto logaritmické doby, pokud se bod vložení hned sleduje podle *_Where*.
+Vložení se může objevit v konstantním času v čase, namísto logaritmické doby, pokud se místo vložení hned následuje *tam, kde*.
 
 ### <a name="example"></a>Příklad
 
@@ -1091,7 +1092,7 @@ The hash_multiset hms1 doesn't have an element with a key less than 40.
 Odebere prvek nebo rozsah prvků v objektu hash_multiset ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.
 
 ```cpp
-iterator erase(iterator _Where);
+iterator erase(iterator where);
 
 iterator erase(iterator first, iterator last);
 
@@ -1100,7 +1101,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*_Where* \
+*kde* \
 Pozice prvku, který má být odebrán z hash_multiset.
 
 *první* \
@@ -1299,7 +1300,7 @@ Allocator get_allocator() const;
 
 Alokátor používaný hash_multiset ke správě paměti, což je parametr šablony třídy `Allocator`.
 
-Další informace o `Allocator` naleznete v části poznámky v tématu [Třída hash_multiset](../standard-library/hash-multiset-class.md) .
+Další informace o `Allocator`naleznete v části poznámky v tématu [Třída hash_multiset](../standard-library/hash-multiset-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1392,33 +1393,42 @@ hash_multiset(
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp,
     const Allocator& Al);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*VŠ*|Třída přidělování úložiště, která se má použít pro tento objekt `hash_multiset`, který má výchozí hodnotu `Allocator`.|
-|*Zajištění*|Funkce porovnání typu `const Traits` slouží k uspořádání prvků v `hash_multiset`, jejichž výchozí hodnota je `hash_compare`.|
-|*Kliknutím*|@No__t_0, ze kterého má být vytvořená `hash_multiset` kopie.|
-|*První*|Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.|
-|*Posledního*|Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.|
-|*IList*|Initializer_list obsahující prvky, které mají být zkopírovány.|
+*Al* \
+Třída přidělování úložiště, která se má použít pro tento objekt `hash_multiset`, který má výchozí hodnotu `Allocator`.
+
+\ *comp*
+Funkce porovnání typu `const Traits` slouží k uspořádání prvků v `hash_multiset`, jejichž výchozí hodnota je `hash_compare`.
+
+*Pravé* \
+`hash_multiset`, ze kterého má být vytvořená `hash_multiset` kopie.
+
+*první* \
+Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.
+
+*poslední* \
+Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.
+
+\ *IList*
+Initializer_list obsahující prvky, které mají být zkopírovány.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1434,7 +1444,7 @@ První tři konstruktory určují prázdné počáteční `hash_multiset`, druh�
 
 Pátý, šestý a sedmý konstruktor používají initializer_list.
 
-Poslední tři konstruktory kopírují rozsah [`First`, `Last`) `hash_multiset` se zvýšením explicitního určení typu funkce porovnání třídy Compare a Alokátor.
+Poslední tři konstruktory kopírují rozsah [`first`, `last`) `hash_multiset` se zvýšením explicitního určení typu funkce porovnání třídy Compare a Alokátor.
 
 Skutečné pořadí prvků v kontejneru sady nastavení s hodnotou hash závisí na funkci hash, funkci řazení a aktuální velikosti zatřiďovací tabulky a nemůže obecně být předpokládaná, protože by mohla být s kontejnerem množiny, kde byla určena funkcí řazení. samy.
 
@@ -1447,46 +1457,53 @@ Vloží prvek nebo rozsah prvků do objektu hash_multiset.
 
 ```cpp
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    iterator Where,
+    iterator where,
     const Type& Al);
 
 void insert(
     initializer_list<Type> IList);
 
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    Iterator Where,
-    const Type& Val);
+    Iterator where,
+    const Type& value);
 
 template <class InputIterator>
 void insert(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class ValTy>
 iterator insert(
-    ValTy&& Val);
+    ValTy&& value);
 
 template <class ValTy>
 iterator insert(
-    const_iterator Where,
-    ValTy&& Val);
+    const_iterator where,
+    ValTy&& value);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*Počítává*|Hodnota elementu, který má být vložen do hash_multiset, pokud hash_multiset již tento prvek neobsahuje, nebo obecněji, element, jehož klíč je ekvivalentně seřazen.|
-|*,*|Místo zahájení vyhledání správného bodu vložení. (Vložení se může vyskytnout v konstantním času v čase, namísto logaritmické doby, pokud se bod vložení hned `_Where`.)|
-|*První*|Pozice prvního prvku, který má být zkopírován z hash_multiset.|
-|*Posledního*|Pozice bezprostředně za posledním prvkem, který má být zkopírován z hash_multiset.|
-|*IList*|Initializer_list obsahující prvky ke zkopírování.|
+*hodnota* \
+Hodnota elementu, který má být vložen do hash_multiset, pokud hash_multiset již tento prvek neobsahuje, nebo obecněji, element, jehož klíč je ekvivalentně seřazen.
+
+*kde* \
+Místo zahájení vyhledání správného bodu vložení. (Vložení se může vyskytnout v konstantním čase, namísto logaritmické doby, pokud se kurzor okamžitě sleduje *tam, kde*.)
+
+*první* \
+Pozice prvního prvku, který má být zkopírován z hash_multiset.
+
+*poslední* \
+Pozice bezprostředně za posledním prvkem, který má být zkopírován z hash_multiset.
+
+\ *IList*
+Initializer_list obsahující prvky ke zkopírování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1494,7 +1511,7 @@ První dvě vložené členské funkce vrátí iterátor, který odkazuje na poz
 
 Další tři členské funkce používají initializer_list.
 
-Třetí členská funkce vloží sekvenci hodnot prvků do hash_multiset odpovídající každému elementu, který je adresován v rozsahu [`First`, `Last`) zadaného hash_multiset.
+Třetí členská funkce vloží sekvenci hodnot prvků do hash_multiset odpovídající každému elementu, který je adresován v rozsahu [`first`, `last`) zadaného hash_multiset.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1540,7 +1557,7 @@ Další informace o *vlastnostích* naleznete v tématu [třídy hash_multiset](
 
 Uložený objekt definuje členskou funkci:
 
-**bool – operátor**( **const Key &** *_xVal,* **const Key &** _ `yVal`);
+`bool operator<(const Key& _xVal, const Key& _yVal);`
 
 Vrátí **hodnotu true** , pokud `_xVal` předchází a není rovna `_yVal` v pořadí řazení.
 
@@ -1767,7 +1784,7 @@ hash_multiset& operator=(hash_multiset&& right);
 
 ### <a name="remarks"></a>Poznámky
 
-Po vymazání všech existujících prvků v `hash_multiset` `operator=` buď zkopírování nebo přesunutí obsahu *přímo* do `hash_multiset`.
+Po vymazání všech existujících prvků v `hash_multiset``operator=` buď zkopírování nebo přesunutí obsahu *přímo* do `hash_multiset`.
 
 ### <a name="example"></a>Příklad
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::codecvt [C++], out
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
-ms.openlocfilehash: de7a520dea8510d3e865b4faecd50eb60d2d47a2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 631c3b88be5e2a03798ff6d8e3fb200ad257a8d7
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689857"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890191"
 ---
 # <a name="codecvt-class"></a>codecvt – třída
 
@@ -122,18 +122,18 @@ převádí mezi sekvencemi `char32_t` kódovanými jako UTF-32 (UCS-4) a sekvenc
 |-|-|
 |[always_noconv](#always_noconv)|Ověřuje, zda je nutné provést nějaké převody.|
 |[do_always_noconv](#do_always_noconv)|Virtuální funkce volaná k ověření, zda je nutné provést nějaké převody.|
-|[do_encoding](#do_encoding)|Virtuální funkce, která testuje, zda je kódování `Byte`ho datového proudu závislé na stavu, zda je poměr mezi `Byte`s použit a `CharType`s vytvořen, a pokud ano, určuje hodnotu tohoto poměru.|
-|[do_in](#do_in)|Virtuální funkce volaná k převedení sekvence interního `Byte`s na sekvenci externích `CharType`s.|
-|[do_length](#do_length)|Virtuální funkce, která určuje, kolik `Byte`s z dané sekvence externích `Byte`s vytvoří nevíce než daný počet interních `CharType`s a vrátí tento počet `Byte`s.|
+|[do_encoding](#do_encoding)|Virtuální funkce, která testuje, zda je kódování `Byte`ho datového proudu závislé na stavu, zda je poměr mezi použitými hodnotami `Byte` a `CharType` vyprodukovaný, a pokud ano, určuje hodnotu tohoto poměru.|
+|[do_in](#do_in)|Virtuální funkce volaná k převedení sekvence interních `Byte` hodnot na sekvenci externích hodnot `CharType`.|
+|[do_length](#do_length)|Virtuální funkce, která určuje, kolik hodnot `Byte` z dané sekvence externích `Byte` hodnot vyprodukuje nevětší než zadaný počet interních `CharType` hodnot a vrátí tento počet `Byte` hodnot.|
 |[do_max_length](#do_max_length)|Virtuální funkce, která vrací maximální počet externích bajtů potřebných k vytvoření jednoho interního `CharType`.|
-|[do_out](#do_out)|Virtuální funkce volaná k převedení sekvence interního `CharType`s na sekvenci externích bajtů.|
-|[do_unshift](#do_unshift)|Virtuální funkce volaná k poskytnutí `Byte`s nutného při převodu závislém na stavu k dokončení posledního znaku v sekvenci `Byte`s.|
-|[kódování](#encoding)|Testuje, zda je kódování `Byte`ho datového proudu závislé na stavu, zda je poměr mezi `Byte`s použit a `CharType`s vytvořen, a pokud ano, určí hodnotu tohoto poměru.|
-|[in](#in)|Převede externí reprezentace sekvence `Byte`s na vnitřní reprezentaci sekvence `CharType`s.|
-|[časový](#length)|Určuje, kolik `Byte`s z dané sekvence externích `Byte`s vyrábí nevětší než daný počet interních `CharType`s a vrátí tento počet `Byte`s.|
-|[max_length](#max_length)|Vrátí maximální počet externích `Byte`s potřebných k výrobě jednoho vnitřního `CharType`.|
-|[out](#out)|Převede sekvenci interního `CharType`s na sekvenci externích `Byte`s.|
-|[unshift](#unshift)|Poskytuje externí `Byte`s nutné při převodu závislém na stavu k dokončení posledního znaku v sekvenci `Byte`s.|
+|[do_out](#do_out)|Virtuální funkce volaná k převedení sekvence interních `CharType` hodnot na sekvenci externích bajtů.|
+|[do_unshift](#do_unshift)|Virtuální funkce volaná k poskytnutí hodnot `Byte` potřebných v převodu závislém na stavu k dokončení posledního znaku v sekvenci hodnot `Byte`.|
+|[kódování](#encoding)|Testuje, zda je kódování `Byte`ho datového proudu závislé na stavu, zda je poměr mezi použitými hodnotami `Byte` a `CharType`ými hodnotami konstantní, a pokud ano, určuje hodnotu tohoto poměru.|
+|[in](#in)|Převede externí reprezentace sekvence `Byte` hodnot na vnitřní reprezentaci sekvence `CharType` hodnot.|
+|[časový](#length)|Určuje, kolik hodnot `Byte` z dané sekvence externích `Byte` hodnot nepřekračuje zadaný počet interních `CharType` hodnot a vrátí tento počet `Byte` hodnot.|
+|[max_length](#max_length)|Vrátí maximální počet externích hodnot `Byte` potřebných k vystavení jednoho interního `CharType`.|
+|[out](#out)|Převede sekvenci interních `CharType` hodnot na sekvenci externích hodnot `Byte`.|
+|[unshift](#unshift)|Poskytuje externí `Byte` hodnoty potřebné v převodu závislém na stavu k dokončení posledního znaku v sekvenci hodnot `Byte`.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -143,7 +143,7 @@ převádí mezi sekvencemi `char32_t` kódovanými jako UTF-32 (UCS-4) a sekvenc
 
 ## <a name="always_noconv"></a>codecvt:: always_noconv
 
-Ověřuje, zda je nutné provést nějaké převody.
+Testuje, zda není třeba provádět převody.
 
 ```cpp
 bool always_noconv() const throw();
@@ -151,7 +151,7 @@ bool always_noconv() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Logická hodnota, která má **hodnotu true** , pokud není nutné provádět převody; **hodnota false** musí být dokončena nejméně jedna.
+Logická hodnota, která má **hodnotu true** , pokud není nutné provádět převody; **false** , pokud je potřeba provést aspoň jeden.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -197,17 +197,17 @@ At least one conversion is required.
 Konstruktor pro objekty třídy codecvt, které slouží jako omezující vlastnost národního prostředí pro zpracování převodů.
 
 ```cpp
-explicit codecvt(size_t _Refs = 0);
+explicit codecvt(size_t refs = 0);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+\ *ReFS*
 Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
+Možné hodnoty pro parametr *ReFS* a jejich význam jsou:
 
 - 0: životnost objektu je spravována místními objekty, které jej obsahují.
 
@@ -215,11 +215,11 @@ Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
 
 - 2: tyto hodnoty nejsou definovány.
 
-Konstruktor inicializuje svůj `locale::facet` základní objekt pomocí **locale::** [Face](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Konstruktor inicializuje svůj `locale::facet` základní objekt s parametrem [locale:: face](../standard-library/locale-class.md#facet_class)`(refs)`.
 
 ## <a name="do_always_noconv"></a>codecvt::d o_always_noconv
 
-Virtuální funkce volaná k ověření, zda je nutné provést nějaké převody.
+Virtuální funkce volaná k otestování, zda není třeba provádět převody.
 
 ```cpp
 virtual bool do_always_noconv() const throw();
@@ -237,7 +237,7 @@ Podívejte se na příklad pro [always_noconv](#always_noconv), který volá `do
 
 ## <a name="do_encoding"></a>codecvt::d o_encoding
 
-Virtuální funkce, která testuje, zda je kódování `Byte`ho datového proudu závislé na stavu, zda je poměr mezi `Byte`s použit a `CharType`s vyráběn je konstantní a pokud ano, určuje hodnotu tohoto poměru.
+Virtuální funkce, která testuje, zda je kódování `Byte`ho datového proudu závislé na stavu, zda je poměr mezi použitými hodnotami `Byte` a `CharType` vyprodukovaný, je konstantní a pokud ano, určuje hodnotu tohoto poměru.
 
 ```cpp
 virtual int do_encoding() const throw();
@@ -259,11 +259,11 @@ Podívejte se na příklad pro [kódování](#encoding), který volá `do_encodi
 
 ## <a name="do_in"></a>codecvt::d o_in
 
-Virtuální funkce volaná k převedení sekvence externích `Byte`s na posloupnost vnitřních `CharType`s.
+Virtuální funkce volaná k převedení sekvence externích `Byte` hodnot na sekvenci interních `CharType` hodnot.
 
 ```cpp
 virtual result do_in(
-    StateType& _State,
+    StateType& state,
     const Byte* first1,
     const Byte* last1,
     const Byte*& next1,
@@ -274,7 +274,7 @@ virtual result do_in(
 
 ### <a name="parameters"></a>Parametry
 
-*_State* \
+\ *stavu*
 Stav převodu, který je udržován mezi voláními členské funkce.
 
 *first1* \
@@ -309,7 +309,7 @@ Vrátí hodnotu, která indikuje úspěch, částečnou úspěch nebo neúspěch
 
 ### <a name="remarks"></a>Poznámky
 
-*_State* musí představovat počáteční stav převodu na začátku nové zdrojové sekvence. Funkce změní svou uloženou hodnotu podle potřeby, aby odrážela aktuální stav úspěšného převodu. Jeho uložená hodnota je v opačném případě neurčená.
+*stav* musí představovat počáteční stav převodu na začátku nové zdrojové sekvence. Funkce změní svou uloženou hodnotu podle potřeby, aby odrážela aktuální stav úspěšného převodu. Jeho uložená hodnota je v opačném případě neurčená.
 
 ### <a name="example"></a>Příklad
 
@@ -317,19 +317,19 @@ Podívejte se na příklad [v](#in)tématu, který volá `do_in`.
 
 ## <a name="do_length"></a>codecvt::d o_length
 
-Virtuální funkce, která určuje, kolik `Byte`s z dané sekvence externích `Byte`s vytvoří nevíce než daný počet interních `CharType`s a vrátí tento počet `Byte`s.
+Virtuální funkce, která určuje, kolik hodnot `Byte` z dané sekvence externích `Byte` hodnot vyprodukuje nevětší než zadaný počet interních `CharType` hodnot a vrátí tento počet `Byte` hodnot.
 
 ```cpp
 virtual int do_length(
-    const StateType& _State,
+    const StateType& state,
     const Byte* first1,
     const Byte* last1,
-    size_t _Len2) const;
+    size_t len2) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_State* \
+\ *stavu*
 Stav převodu, který je udržován mezi voláními členské funkce.
 
 *first1* \
@@ -338,20 +338,20 @@ Ukazatel na začátek externí sekvence.
 *last1* \
 Ukazatel na konec externí sekvence.
 
-*_Len2* \
-Maximální počet `Byte`s, které mohou být vráceny členskou funkcí.
+*len2*\
+Maximální počet `Byte` hodnot, které mohou být vráceny členskou funkcí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo představující počet maximálních převodů, který není větší než *_Len2*definovaný externí zdrojovou sekvencí na [`first1`, `last1`).
+Celé číslo představující počet maximálních převodů, který není větší než *len2*definovaný externí zdrojovou sekvencí na [`first1`, `last1`).
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce efektivně volá `do_in` (`_State`, `first1`, `last1`, `next1`, `_Buf`, `_Buf`  +  `_Len2`, `next2`) pro *_State* (kopie stavu), 1 vyrovnávací paměti. a ukazatele 2and 3.
+Chráněná virtuální členská funkce efektivně volá `do_in( state, first1, last1, next1, buf, buf + len2, next2)` pro *stav* (kopii stavu), část vyrovnávací paměti `buf`a ukazatele `next1` a `next2`.
 
-Pak vrátí `next2`  -  `buf`. Proto počítá maximální počet převodů, nikoli větší než *_Len2*, definované zdrojovou sekvencí v [`first1`, `last1`).
+Pak vrátí `next2`  -  `buf`. Proto počítá maximální počet převodů, nikoli větší než *len2*, definované zdrojovou sekvencí v [`first1`, `last1`).
 
-Verze šablony vždy vrátí menší z *last1*  - *first1* a *_Len2*.
+Verze šablony vždy vrátí menší z *last1* - *first1* a *len2*.
 
 ### <a name="example"></a>Příklad
 
@@ -359,7 +359,7 @@ Podívejte se na příklad [délky](#length), která volá `do_length`.
 
 ## <a name="do_max_length"></a>codecvt::d o_max_length
 
-Virtuální funkce, která vrací maximální počet externích `Byte`s potřebných k vytvoření jednoho interního `CharType`.
+Virtuální funkce, která vrací maximální počet externích `Byte` hodnot nezbytných k vytvoření jednoho interního `CharType`.
 
 ```cpp
 virtual int do_max_length() const throw();
@@ -367,11 +367,11 @@ virtual int do_max_length() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maximální počet `Byte`s potřebných k výrobě jednoho `CharType`.
+Maximální počet `Byte` hodnot, které jsou nutné k vyprodukování jednoho `CharType`.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce vrací největší přípustnou hodnotu, kterou může vrátit [do_length](#do_length)(`first1`, `last1`, 1) pro libovolné platné hodnoty *first1* a *last1*.
+Chráněná virtuální členská funkce vrací největší přípustnou hodnotu, kterou může [do_length](#do_length)`( first1, last1, 1)` vrátit pro libovolné platné hodnoty *first1* a *last1*.
 
 ### <a name="example"></a>Příklad
 
@@ -379,11 +379,11 @@ Podívejte se na příklad pro [max_length](#max_length), který volá `do_max_l
 
 ## <a name="do_out"></a>codecvt::d o_out
 
-Virtuální funkce volaná k převedení sekvence interního `CharType`s na sekvenci externích `Byte`s.
+Virtuální funkce volaná k převedení sekvence interních `CharType` hodnot na sekvenci externích hodnot `Byte`.
 
 ```cpp
 virtual result do_out(
-    StateType& _State,
+    StateType& state,
     const CharType* first1,
     const CharType* last1,
     const CharType*& next1,
@@ -394,7 +394,7 @@ virtual result do_out(
 
 ### <a name="parameters"></a>Parametry
 
-*_State* \
+\ *stavu*
 Stav převodu, který je udržován mezi voláními členské funkce.
 
 *first1* \
@@ -429,7 +429,7 @@ Funkce vrátí:
 
 ### <a name="remarks"></a>Poznámky
 
-*_State* musí představovat počáteční stav převodu na začátku nové zdrojové sekvence. Funkce změní svou uloženou hodnotu podle potřeby, aby odrážela aktuální stav úspěšného převodu. Jeho uložená hodnota je v opačném případě neurčená.
+*stav* musí představovat počáteční stav převodu na začátku nové zdrojové sekvence. Funkce změní svou uloženou hodnotu podle potřeby, aby odrážela aktuální stav úspěšného převodu. Jeho uložená hodnota je v opačném případě neurčená.
 
 ### <a name="example"></a>Příklad
 
@@ -437,11 +437,11 @@ Podívejte [se na příklad, který](#out)volá `do_out`.
 
 ## <a name="do_unshift"></a>codecvt::d o_unshift
 
-Virtuální funkce volaná k poskytnutí `Byte`s nutného při převodu závislém na stavu k dokončení posledního znaku v sekvenci `Byte`s.
+Virtuální funkce volaná k poskytnutí hodnot `Byte` potřebných v převodu závislém na stavu k dokončení posledního znaku v sekvenci hodnot `Byte`.
 
 ```cpp
 virtual result do_unshift(
-    StateType& _State,
+    StateType& state,
     Byte* first2,
     Byte* last2,
     Byte*& next2) const;
@@ -449,7 +449,7 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>Parametry
 
-*_State* \
+\ *stavu*
 Stav převodu, který je udržován mezi voláními členské funkce.
 
 *first2* \
@@ -465,7 +465,7 @@ Ukazatel na první nezměněný prvek v cílové sekvenci.
 
 Funkce vrátí:
 
-- `codecvt_base::error`, pokud *stav* _ představuje neplatný stav
+- `codecvt_base::error`, pokud *stav* představuje neplatný stav
 
 - `codecvt_base::noconv`, pokud funkce neprovede žádný převod
 
@@ -475,7 +475,7 @@ Funkce vrátí:
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce se pokusí převést zdrojový element `CharType` (0) na cílovou sekvenci, kterou ukládá v rámci [`first2`, `last2`) s výjimkou ukončovacího elementu `Byte` (0). Vždy ukládá v *next2* ukazatel na první nezměněný prvek v cílové sekvenci.
+Chráněná virtuální členská funkce se pokusí převést zdrojový element `CharType`(0) na cílovou sekvenci, kterou ukládá v rámci [`first2`, `last2`) s výjimkou ukončovacího elementu `Byte`(0). Vždy ukládá v *next2* ukazatel na první nezměněný prvek v cílové sekvenci.
 
 _ *Stav* musí představovat počáteční stav převodu na začátku nové zdrojové sekvence. Funkce změní svou uloženou hodnotu podle potřeby, aby odrážela aktuální stav úspěšného převodu. Obvykle převod zdrojového elementu `CharType` (0) opustí aktuální stav ve stavu prvotního převodu.
 
@@ -485,7 +485,7 @@ Podívejte se na příklad pro [unshift](#unshift), který volá `do_unshift`.
 
 ## <a name="encoding"></a>codecvt:: Encoding
 
-Testuje, zda je kódování `Byte`ho datového proudu závislé na stavu, zda je poměr mezi `Byte`s použit a `CharType`s vytvořen, a pokud ano, určí hodnotu tohoto poměru.
+Testuje, zda je kódování `Byte`ho datového proudu závislé na stavu, zda je poměr mezi použitými hodnotami `Byte` a `CharType`ými hodnotami konstantní, a pokud ano, určuje hodnotu tohoto poměru.
 
 ```cpp
 int encoding() const throw();
@@ -548,11 +548,11 @@ Typ je synonymum pro parametr šablony `Byte`.
 
 ## <a name="in"></a>codecvt:: v
 
-Převede externí reprezentace sekvence `Byte`s na vnitřní reprezentaci sekvence `CharType`s.
+Převede externí reprezentace sekvence `Byte` hodnot na vnitřní reprezentaci sekvence `CharType` hodnot.
 
 ```cpp
 result in(
-    StateType& _State,
+    StateType& state,
     const Byte* first1,
     const Byte* last1,
     const Byte*& next1,
@@ -563,7 +563,7 @@ result in(
 
 ### <a name="parameters"></a>Parametry
 
-*_State* \
+\ *stavu*
 Stav převodu, který je udržován mezi voláními členské funkce.
 
 *first1* \
@@ -586,7 +586,7 @@ Ukazatel na `CharType`, která přichází po posledním převodu `Chartype` na 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu, která označuje úspěch, částečný úspěch nebo neúspěch operace. Funkce vrátí:
+Vrátí hodnotu, která indikuje úspěch, částečnou úspěch nebo neúspěch operace. Funkce vrátí:
 
 - `codecvt_base::error`, pokud je zdrojová sekvence nesprávně vytvořená.
 
@@ -598,9 +598,9 @@ Vrátí hodnotu, která označuje úspěch, částečný úspěch nebo neúspěc
 
 ### <a name="remarks"></a>Poznámky
 
-*_State* musí představovat počáteční stav převodu na začátku nové zdrojové sekvence. Funkce změní svou uloženou hodnotu podle potřeby, aby odrážela aktuální stav úspěšného převodu. Po částečné konverzi musí být *_State* nastavené tak, aby bylo možné pokračovat v převodu, když přicházejí nové znaky.
+*stav* musí představovat počáteční stav převodu na začátku nové zdrojové sekvence. Funkce změní svou uloženou hodnotu podle potřeby, aby odrážela aktuální stav úspěšného převodu. Po částečné konverzi musí být *stav* nastaven tak, aby bylo možné pokračovat v převodu, když přicházejí nové znaky.
 
-Členská funkce vrátí [do_in](#do_in)(`_State`, _ *First1, last1, next1, First2, _Llast2, next2*).
+Členská funkce vrací [do_in](#do_in)`( state, first1,  last1,  next1, first2, last2,  next2)`.
 
 ### <a name="example"></a>Příklad
 
@@ -653,19 +653,19 @@ Typ je synonymum pro parametr šablony `CharType`.
 
 ## <a name="length"></a>codecvt:: Length
 
-Určuje, kolik `Byte`s z dané sekvence externích `Byte`s vyrábí nevětší než daný počet interních `CharType`s a vrátí tento počet `Byte`s.
+Určuje, kolik hodnot `Byte` z dané sekvence externích `Byte` hodnot nepřekračuje zadaný počet interních `CharType` hodnot a vrátí tento počet `Byte` hodnot.
 
 ```cpp
 int length(
-    const StateType& _State,
+    const StateType& state,
     const Byte* first1,
     const Byte* last1,
-    size_t _Len2) const;
+    size_t len2) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_State* \
+\ *stavu*
 Stav převodu, který je udržován mezi voláními členské funkce.
 
 *first1* \
@@ -674,16 +674,16 @@ Ukazatel na začátek externí sekvence.
 *last1* \
 Ukazatel na konec externí sekvence.
 
-*_Len2* \
+*len2*\
 Maximální počet bajtů, které mohou být vráceny členskou funkcí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo představující počet maximálních převodů, který není větší než *_Len2*definovaný externí zdrojovou sekvencí na [`first1`, `last1`).
+Celé číslo představující počet maximálních převodů, který není větší než *len2*definovaný externí zdrojovou sekvencí na [`first1`, `last1`).
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_length](#do_length)( *_State, first1*, `last1` `_Len2`).
+Členská funkce vrací [do_length](#do_length)`( state, first1, last1, len2)`.
 
 ### <a name="example"></a>Příklad
 
@@ -716,7 +716,7 @@ The length of the string is: 50.
 
 ## <a name="max_length"></a>codecvt:: max_length
 
-Vrátí maximální počet externích `Byte`s potřebných k výrobě jednoho vnitřního `CharType`.
+Vrátí maximální počet externích hodnot `Byte` potřebných k vystavení jednoho interního `CharType`.
 
 ```cpp
 int max_length() const throw();
@@ -724,7 +724,7 @@ int max_length() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maximální počet `Byte`s potřebných k výrobě jednoho `CharType`.
+Maximální počet `Byte` hodnot, které jsou nutné k vyprodukování jednoho `CharType`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -755,11 +755,11 @@ int main( )
 
 ## <a name="out"></a>codecvt:: out
 
-Převede sekvenci interního `CharType`s na sekvenci externích `Byte`s.
+Převede sekvenci interních `CharType` hodnot na sekvenci externích hodnot `Byte`.
 
 ```cpp
 result out(
-    StateType& _State,
+    StateType& state,
     const CharType* first1,
     const CharType* last1,
     const CharType*& next1,
@@ -770,7 +770,7 @@ result out(
 
 ### <a name="parameters"></a>Parametry
 
-*_State* \
+\ *stavu*
 Stav převodu, který je udržován mezi voláními členské funkce.
 
 *first1* \
@@ -793,7 +793,7 @@ Odkaz na ukazatel na první převedený `Byte` po posledním převedeném `Byte`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce vrátí [do_out](#do_out)(`_State`, `first1`, `last1`, `next1`, `first2`, `last2`, `next2`).
+Členská funkce vrací [do_out](#do_out)`( state, first1, last1, next1, first2, last2, next2)`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -850,11 +850,11 @@ Typ je synonymum pro parametr šablony `StateType`.
 
 ## <a name="unshift"></a>codecvt:: unshift
 
-Poskytuje `Byte`s nutné v převodu závislém na stavu k dokončení posledního znaku v sekvenci `Byte`s.
+Poskytuje `Byte` hodnoty potřebné v převodu závislém na stavu k dokončení posledního znaku v sekvenci hodnot `Byte`.
 
 ```cpp
 result unshift(
-    StateType& _State,
+    StateType& state,
     Byte* first2,
     Byte* last2,
     Byte*& next2) const;
@@ -862,7 +862,7 @@ result unshift(
 
 ### <a name="parameters"></a>Parametry
 
-*_State* \
+\ *stavu*
 Stav převodu, který je udržován mezi voláními členské funkce.
 
 *first2* \
@@ -888,11 +888,11 @@ Funkce vrátí:
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce se pokusí převést zdrojový element `CharType` (0) na cílovou sekvenci, kterou ukládá v rámci [`first2`, `last2`) s výjimkou ukončovacího elementu `Byte` (0). Vždy ukládá v *next2* ukazatel na první nezměněný prvek v cílové sekvenci.
+Chráněná virtuální členská funkce se pokusí převést zdrojový element `CharType`(0) na cílovou sekvenci, kterou ukládá v rámci [`first2`, `last2`) s výjimkou ukončovacího elementu `Byte`(0). Vždy ukládá v *next2* ukazatel na první nezměněný prvek v cílové sekvenci.
 
-*_State* musí představovat počáteční stav převodu na začátku nové zdrojové sekvence. Funkce změní svou uloženou hodnotu podle potřeby, aby odrážela aktuální stav úspěšného převodu. Obvykle převod zdrojového elementu `CharType` (0) opustí aktuální stav ve stavu prvotního převodu.
+*stav* musí představovat počáteční stav převodu na začátku nové zdrojové sekvence. Funkce změní svou uloženou hodnotu podle potřeby, aby odrážela aktuální stav úspěšného převodu. Obvykle převod zdrojového elementu `CharType` (0) opustí aktuální stav ve stavu prvotního převodu.
 
-Členská funkce vrátí [do_unshift](#do_unshift)(`_State`, `first2`, `last2`, `next2`).
+Členská funkce vrací [do_unshift](#do_unshift)`( state, first2, last2, next2 )`.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689939"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890096"
 ---
 # <a name="binder2nd-class"></a>binder2nd – třída
 
@@ -28,7 +28,7 @@ class binder2nd
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
-        const Operation& Func,
+        const Operation& func,
         const typename Operation::second_argument_type& right);
 
     result_type operator()(const argument_type& left) const;
@@ -38,7 +38,7 @@ class binder2nd
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *Func*
+\ *Func*
 Objekt binární funkce, který má být převeden na unární objekt funkce.
 
 *pravé* \
@@ -53,9 +53,9 @@ Unární objekt funkce, který je výsledkem vazby druhého argumentu objektu bi
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy uchovává kopii objektu binární funkce _ *Func* in `op` a kopii *přímo* v `value`. Definuje jeho členskou funkci `operator()` jako vrácení **op**(`left`, **hodnota**).
+Šablona třídy uchovává kopii funkce *Func* objektu binární funkce v `op`a kopii *přímo* v `value`. Definuje jeho členskou funkci `operator()` jako vrácení `op(left, value)`.
 
-Pokud `Func` je objekt typu `Operation` a c je konstanta, pak [bind2nd –](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) je ekvivalentem konstruktoru třídy `binder2nd` `binder2nd` \< **operace**> (`Func`, 0) a pohodlnější.
+Pokud je *Func* objekt typu `Operation` a c je konstanta, pak je [bind2nd –](../standard-library/functional-functions.md#bind2nd)`(func, c)` ekvivalentem konstruktoru třídy `binder2nd` `binder2nd<Operation>(func, c)`a pohodlnější.
 
 ## <a name="example"></a>Příklad
 

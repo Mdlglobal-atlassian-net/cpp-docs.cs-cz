@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkce&gt; iomanip'
+title: funkce &lt;iomanip&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - iomanip/std::get_money
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 09bb043c40774b102dee023773349223a2fbb4a9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449220"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890150"
 ---
-# <a name="ltiomanipgt-functions"></a>&lt;funkce&gt; iomanip
+# <a name="ltiomanipgt-functions"></a>funkce &lt;iomanip&gt;
 
 ||||
 |-|-|-|
@@ -42,28 +42,28 @@ ms.locfileid: "68449220"
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
 |[setprecision](#setprecision)|[setw](#setw)|
 
-## <a name="iomanip_get_money"></a>  get_money
+## <a name="iomanip_get_money"></a>get_money
 
 Extrahuje peněžní hodnotu z datového proudu pomocí požadovaného formátu a vrátí hodnotu v parametru.
 
 ```cpp
 template <class Money>
-T7 get_money(Money& _Amount, bool _Intl);
+T7 get_money(Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Amount*\
+\ *částky*
 Extrahovaná peněžní hodnota.
 
-*_Intl*\
-Pokud **má hodnotu true**, použijte mezinárodní formát. Výchozí hodnota je **false**.
+*use_intl*\
+Pokud **má hodnotu true**, použijte mezinárodní formát. Výchozí hodnota je **false (NEPRAVDA**).
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor vrátí objekt `str`, který při extrakci z datového proudu chová `get` `formatted input function` jako volání členské funkce pro omezující vlastnost `money_get` národního prostředí `str`, která je přidružena k, pomocí *_Intl* pro označení mezinárodního formátu V případě úspěchu se volání uloží do *_Amount* extrahované peněžní hodnoty. Manipulátor se pak vrátí `str`.
+Manipulátor vrátí objekt, který při extrakci z datového proudu `str`chová jako `formatted input function`, který volá členskou funkci `get` pro omezující vlastnost národního prostředí `money_get` přidružených k `str`, pomocí *use_intl* k označení mezinárodního formátu. . V případě úspěchu se volání ukládají v *množství* extrahované peněžní hodnoty. Manipulátor pak vrátí `str`.
 
-`Money`musí být typu `long double` nebo instance `basic_string` se stejnými parametry elementu a vlastností jako `str`.
+`Money` musí být typu `long double` nebo instance `basic_string` se stejnými parametry elementu a vlastností jako `str`.
 
 ## <a name="iomanip_get_time"></a>get_time
 
@@ -71,20 +71,20 @@ Extrahuje časovou hodnotu z datového proudu pomocí požadovaného formátu. V
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
+T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Tptr*\
+*time_ptr*\
 Čas ve formě struktury času.
 
-*_Fmt*\
+*time_format*\
 Požadovaný formát, který se má použít k získání hodnoty času.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor vrátí objekt, který `str`při extrakci z datového proudu chová `formatted input function` jako volání členské funkce `get` pro omezující vlastnost `time_get` národního prostředí `str`, která je přidružena k, pomocí `tptr` Určete časovou strukturu a `fmt` určete začátek formátovacího řetězce zakončeného hodnotou null. V případě úspěchu se volání ukládají do struktury času, které jsou přidruženy k polím s extrahovanými časovými poli. Manipulátor se pak vrátí `str`.
+Manipulátor vrátí objekt, který při extrakci z datového proudu `str`chová jako `formatted input function`, který volá členskou funkci `get` pro omezující vlastnost národního prostředí `time_get` přidružených k `str`, pomocí `tptr` k označení časové struktury a `fmt` k označení začátku formátovacího řetězce zakončeného hodnotou null. V případě úspěchu se volání ukládají do struktury času, které jsou přidruženy k polím s extrahovanými časovými poli. Manipulátor pak vrátí `str`.
 
 ## <a name="iomanip_put_money"></a>put_money
 
@@ -92,15 +92,15 @@ Vloží peněžní částku pomocí požadovaného formátu do datového proudu.
 
 ```cpp
 template <class Money>
-T8 put_money(const Money& _Amount, bool _Intl);
+T8 put_money(const Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Amount*\
+\ *částky*
 Peněžní částka, která má být vložena do datového proudu.
 
-*_Intl*\
+*use_intl*\
 Nastavte na **hodnotu true** , pokud má manipulátor používat mezinárodní formát, **false** , pokud by neměl.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -109,9 +109,9 @@ Vrátí `str`.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor vrátí objekt, který při vložení do datového `str`proudu chová jako naformátovanou výstupní funkci, která volá členskou funkci `put` pro omezující vlastnost `money_put` národního prostředí přidruženou `str`k. V případě úspěchu bude volání vloženo `amount` vhodně formátované pomocí * _Intl` to indicate international format and `str. Fill ()`, as the fill element. The manipulator then returns `str.
+Manipulátor vrátí objekt, který při vložení do datového proudu `str`chová jako naformátovanou výstupní funkci, která volá členskou funkci `put` pro omezující vlastnost národního prostředí `money_put` přidružená k `str`. V případě úspěchu volání vloží `amount` vhodně naformátované, pomocí *use_intl* k označení mezinárodního formátu a `str.fill()`, jako element Fill. Manipulátor pak vrátí `str`.
 
-`Money`musí být typu `long double` nebo instance `basic_string` se stejnými parametry elementu a vlastností jako `str`.
+`Money` musí být typu `long double` nebo instance `basic_string` se stejnými parametry elementu a vlastností jako `str`.
 
 ## <a name="iomanip_put_time"></a>put_time
 
@@ -119,20 +119,20 @@ Zapisuje časovou hodnotu z časové struktury do datového proudu pomocí zadan
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
+T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Tptr*\
+*time_ptr*\
 Hodnota času pro zápis do datového proudu, která je poskytována v časové struktuře.
 
-*_Fmt*\
+*time_format*\
 Požadovaný formát pro zápis hodnoty času.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor vrátí objekt, který při vložení do datového proudu `str`se chová `formatted output function`jako. Funkce Output volá členskou funkci `put` pro omezující vlastnost `time_put` národního prostředí přidruženou k `str`. Funkce Output používá *_Tptr* k označení časové struktury a *_Fmt* k indikaci začátku řetězce formátu zakončeného hodnotou null. V případě úspěchu volání vloží literálový text z řetězce formátu a převede hodnoty z časové struktury. Manipulátor se pak vrátí `str`.
+Manipulátor vrátí objekt, který při vložení do datového proudu `str`chová jako `formatted output function`. Funkce Output volá členskou funkci `put` pro omezující vlastnost národního prostředí `time_put` přidružená ke `str`. Funkce Output používá *time_ptr* k označení časové struktury a *TIME_FORMAT* k indikaci začátku řetězce formátu zakončeného hodnotou null. V případě úspěchu volání vloží literálový text z řetězce formátu a převede hodnoty z časové struktury. Manipulátor pak vrátí `str`.
 
 ## <a name="quoted"></a>uvedená
 
@@ -147,13 +147,13 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
+\ *str*
 Std:: String, char\*, řetězcový literál nebo nezpracovaný řetězcový literál nebo celá verze některého z těchto (například std:: wstring, wchar_t\*).
 
-*oddělovač*\
+\ *oddělovače*
 Uživatelem zadaný znak nebo celý znak, který se použije jako oddělovač pro začátek a konec řetězce.
 
-*před*\
+*řídicí*\
 Uživatelem zadaný znak nebo velký znak, který se použije jako řídicí znak řídicích sekvencí v rámci řetězce.
 
 ### <a name="remarks"></a>Poznámky
@@ -306,50 +306,50 @@ Press Enter to exit
 Vymaže zadané příznaky.
 
 ```cpp
-T1 resetiosflags(ios_base::fmtflags Mask);
+T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit*\
+\ *masky*
 Příznaky, které mají být vymazány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá **str**. [setf](../standard-library/ios-base-class.md#setf) ( `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Maska*) a pak se vrátí `str`.
+Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`a potom vrátí `str`.
 
 ### <a name="example"></a>Příklad
 
-Příklad [](../standard-library/iomanip-functions.md#setw) použití `resetiosflags`naleznete v tématu setw.
+Příklad použití `resetiosflags`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
 ## <a name="setbase"></a>setbase
 
 Nastaví základ pro celá čísla.
 
 ```cpp
-T3 setbase(int _Base);
+T3 setbase(int base);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Base*\
+*základní*\
 Základ čísla
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá **str**. `setf`( **Maska**, [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)), a pak se `str`vrátí. `mask` Tady se určuje takto:
+Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá `str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`a potom vrátí `str`. Tady se `mask` určí takto:
 
-- Pokud je *základna* _ 8, `mask` pak `ios_base::`je [ZZÚ](../standard-library/ios-functions.md#oct).
+- Pokud je *základna* 8, `mask` je `ios_base::`[ZZÚ](../standard-library/ios-functions.md#oct).
 
-- Pokud je *základna* _ 10, pak maska `ios_base::`je [prosinec](../standard-library/ios-functions.md#dec).
+- Pokud je *základem* 10, je maska `ios_base::`[dec](../standard-library/ios-functions.md#dec).
 
-- Pokud je *základna* _ 16, `mask` pak `ios_base::`je [hex](../standard-library/ios-functions.md#hex).
+- Pokud je *základna* 16, `mask` je `ios_base::`[hex](../standard-library/ios-functions.md#hex).
 
-- Pokud je *základna* _ jakákoli jiná hodnota, pak je `ios_base::`maska [fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).
+- Pokud je *základem* jakákoli jiná hodnota, pak je maska `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)`.
 
 ### <a name="example"></a>Příklad
 
-Příklad [](../standard-library/iomanip-functions.md#setw) použití `setbase`naleznete v tématu setw.
+Příklad použití `setbase`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
 ## <a name="setfill"></a>setfill
 
@@ -362,37 +362,37 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*Zvolte*\
+*Ch* \
 Znak, který bude použit k vyplňování mezer v zobrazení zarovnané na pravé straně.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Manipulátor šablony vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá **str**. [vyplnit](../standard-library/basic-ios-class.md#fill) (`Ch`) a potom vrátí `str`. Typ `Elem` musí být stejný jako typ prvku pro datový proud `str`.
+Manipulátor šablony vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá `str.`[fill](../standard-library/basic-ios-class.md#fill)`(Ch)`a potom vrátí `str`. Typ `Elem` musí být stejný jako typ prvku pro datový proud `str`.
 
 ### <a name="example"></a>Příklad
 
-Příklad [](../standard-library/iomanip-functions.md#setw) použití `setfill`naleznete v tématu setw.
+Příklad použití `setfill`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
 ## <a name="setiosflags"></a>setiosflags
 
 Nastaví zadané příznaky.
 
 ```cpp
-T2 setiosflags(ios_base::fmtflags Mask);
+T2 setiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit*\
+\ *masky*
 Příznaky, které mají být nastaveny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá **str**. [setf](../standard-library/ios-base-class.md#setf) (_ *Maska*) a pak se vrátí `str`.
+Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá `str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`a potom vrátí `str`.
 
 ### <a name="example"></a>Příklad
 
-Příklad [](../standard-library/iomanip-functions.md#setw) použití `setiosflags`naleznete v tématu setw.
+Příklad použití `setiosflags`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
 ## <a name="setprecision"></a>setprecision
 
@@ -409,11 +409,11 @@ Přesnost pro hodnoty s plovoucí desetinnou čárkou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá **str**. [přesnost](../standard-library/ios-base-class.md#precision) (`Prec`) a potom vrátí `str`.
+Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá`(Prec)``str.`[Precision](../standard-library/ios-base-class.md#precision) a potom vrátí `str`.
 
 ### <a name="example"></a>Příklad
 
-Příklad [](../standard-library/iomanip-functions.md#setw) použití `setprecision`naleznete v tématu setw.
+Příklad použití `setprecision`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
 ## <a name="setw"></a>setw
 
@@ -425,12 +425,12 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Parametry
 
-*Rozlehlý*\
+*Roztažitelné*\
 Šířka zobrazovaného pole
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá **str**. [Šířka](../standard-library/ios-base-class.md#width) (_ *Roztažitelné*), pak vrátí `str`.
+Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá`(Wide)``str.`[Width](../standard-library/ios-base-class.md#width) a potom vrátí `str`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -653,4 +653,4 @@ l5 = 65536
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iomanip>](../standard-library/iomanip.md)
+[\<iomanip >](../standard-library/iomanip.md)

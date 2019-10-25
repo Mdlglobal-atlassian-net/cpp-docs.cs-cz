@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689704"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890193"
 ---
 # <a name="forward_list-class"></a>forward_list – třída
 
@@ -103,7 +103,7 @@ class forward_list
 Zadejte * \
 Typ dat prvku, který bude uložen v forward_list.
 
-@No__t_1 *přidělování*
+\ *přidělování*
 Uložený objekt přidělování, který zapouzdřuje informace o přidělování forward_list a navracení paměti. Tento parametr je volitelný. Výchozí hodnota je přidělování < `Type` >.
 
 ## <a name="remarks"></a>Poznámky
@@ -223,7 +223,7 @@ Hodnota, kterou chcete přiřadit každému elementu.
 *Zadejte* \
 Typ hodnoty.
 
-@No__t_1 *IList*
+\ *IList*
 Initializer_list, který se má zkopírovat
 
 ### <a name="remarks"></a>Poznámky
@@ -521,7 +521,7 @@ Třída alokátoru, která se má použít s tímto objektem.
 *Počet* \
 Počet prvků v seznamu sestavených.
 
-@No__t_1 *Val*
+\ *Val*
 Hodnota prvků v seznamu sestavena.
 
 *Pravé* \
@@ -533,7 +533,7 @@ Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.
 *Poslední* \
 Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.
 
-@No__t_1 *IList*
+\ *IList*
 Initializer_list, který se má zkopírovat
 
 ### <a name="remarks"></a>Poznámky
@@ -546,7 +546,7 @@ Třetí konstruktor určuje opakování *počtu prvků `Type()`* hodnoty.
 
 Čtvrtý a pátý konstruktor určuje opakování *počtu prvků Value* *Val*.
 
-Šestý konstruktor určuje kopii sekvence řízenou *vpravo*. Pokud `InputIterator` je celočíselný typ, další dva konstruktory určují opakování `(size_type)First` prvků `(Type)Last` hodnoty. V opačném případě následující dva konstruktory určují `[First, Last)` sekvence.
+Šestý konstruktor určuje kopii sekvence řízenou *vpravo*. Pokud `InputIterator` je celočíselný typ, další dva konstruktory určují opakování `(size_type)First` prvků `(Type)Last`hodnoty. V opačném případě následující dva konstruktory určují `[First, Last)`sekvence.
 
 Deváté a desáté konstruktory jsou stejné jako šest, ale s odkazem [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) .
 
@@ -604,10 +604,10 @@ Začátek rozsahu vložení
 *Poslední* \
 Konec rozsahu vložení
 
-@No__t_1 *Val*
+\ *Val*
 Prvek přidaný do seznamu pro dopředné.
 
-@No__t_1 *IList*
+\ *IList*
 Initializer_list, který se má vložit
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -622,7 +622,7 @@ První členská funkce vloží prvek, který má hodnotu *Val* a vrátí iterá
 
 Druhá členská funkce vloží opakování *počtu prvků Value* *Val*.
 
-Pokud `InputIterator` je celočíselný typ, třetí členská funkce se chová stejně jako `insert(it, (size_type)First, (Type)Last)`. V opačném případě vloží `[First, Last)` sekvence, která nesmí překrývat počáteční řízenou sekvenci.
+Pokud `InputIterator` je celočíselný typ, třetí členská funkce se chová stejně jako `insert(it, (size_type)First, (Type)Last)`. V opačném případě vloží `[First, Last)`sekvence, která nesmí překrývat počáteční řízenou sekvenci.
 
 Čtvrtá členská funkce vloží sekvenci, která je určena objektem třídy `initializer_list<Type>`.
 
@@ -678,7 +678,7 @@ Objekt funkce Compare, který se používá k řazení prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-`forward_list::merge` odstraní prvky z `right` `forward_list` a vloží je do tohoto `forward_list`. Obě sekvence musí být seřazeny stejným predikátem, popsaným níže. Kombinované pořadí je také řazeno pomocí objektu Compare Function.
+`forward_list::merge` odstraní prvky z `right``forward_list` a vloží je do tohoto `forward_list`. Obě sekvence musí být seřazeny stejným predikátem, popsaným níže. Kombinované pořadí je také řazeno pomocí objektu Compare Function.
 
 Pro iterátory `Pi` a `Pj` určení prvků na pozicích `i` a `j` první členská funkce ukládá pořadí `!(*Pj < *Pi)` vždy, když `i < j`. (Prvky jsou seřazené v pořadí `ascending`.) Druhá členská funkce ukládá pořadí `! comp(*Pj, *Pi)` vždy, když `i < j`.
 
@@ -701,7 +701,7 @@ forward_list& operator=(forward_list&& right);
 *pravé* \
 Seznam pro dopředné kopírování do seznamu pro příjem
 
-@No__t_1 *IList*
+\ *IList*
 Seznam inicializátorů uzavřený ve složených závorkách, který se chová stejně jako sekvence prvků typu `Type`.
 
 ### <a name="remarks"></a>Poznámky
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize* \
+*_Newsize*\
 Počet prvků v seznamu pro dopředné velikosti
 
 \ *Val*
@@ -895,10 +895,10 @@ void splice_after(
 *Kde* \
 Pozice v cílovém forward_list, po které se má vložit
 
-@No__t_1 *zdroje*
+\ *zdroje*
 Zdrojový forward_list, který má být vložen do cílového forward_list.
 
-@No__t_1 *ITER*
+\ *ITER*
 Prvek, který má být vložen ze zdrojového forward_list.
 
 *První* \
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony _ `Ty`.
+Typ je synonymum pro parametr šablony `Type`.

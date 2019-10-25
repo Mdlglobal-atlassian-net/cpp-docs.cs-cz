@@ -1,5 +1,5 @@
 ---
-title: '&lt;bitset –&gt; operátory'
+title: '&lt;operátory&gt; bitset'
 ms.date: 11/04/2016
 f1_keywords:
 - bitset/std::operator&amp;
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243323"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890131"
 ---
-# <a name="ltbitsetgt-operators"></a>&lt;bitset –&gt; operátory
+# <a name="ltbitsetgt-operators"></a>&lt;operátory&gt; bitset
 
-## <a name="op_amp"></a> – Operátor&amp;
+## <a name="op_amp"></a>operátor&amp;
 
-Provádí logické bitové `AND` mezi dvěma bitsets.
+Provede bitovou `AND` mezi dvěma bitsetsy.
 
 ```cpp
 template <size_t size>
@@ -35,15 +35,15 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-První dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
+*levý* \
+První ze dvou Bitsets, jejichž příslušné prvky mají být kombinovány s bitovým `AND`.
 
-*doprava*\
-Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
+*pravé* \
+Druhý ze dvou valarrays, jejichž příslušné prvky mají být kombinovány s bitovým `AND`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bitset –, jehož prvky jsou výsledkem provádění `AND` operace na odpovídající prvky *levé* a *správné*.
+Bitset, jehož prvky jsou výsledkem provádění operace `AND` na odpovídajících prvcích *vlevo* a *vpravo*.
 
 ### <a name="example"></a>Příklad
 
@@ -73,9 +73,9 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a> – Operátor&lt;&lt;
+## <a name="op_lt_lt"></a>operátor&lt;&lt;
 
-Vloží textové znázornění sekvence bit do výstupního datového proudu.
+Vloží textovou reprezentaci bitové sekvence do výstupního datového proudu.
 
 ```
 template <class CharType, class Traits, size_t N>
@@ -86,18 +86,18 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*\
-Objekt typu **bitset –\<N >** , který má být vložen do výstupního datového proudu jako řetězec.
+*pravé* \
+Objekt typu **bitset\<N >** , který má být vložen do výstupního datového proudu jako řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Textové vyjádření pořadí bitů v `ostr`.
+Textová reprezentace bitové sekvence v `ostr`.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce přetížení šablon `operator<<`, což bitset – Chcete-li možné zapsat bez první převodu na řetězec. Funkce šablony efektivně provede:
+Funkce šablony přetěžuje `operator<<`, což umožňuje, aby bylo zapsáno bitset bez jeho první konverze na řetězec. Funkce šablony efektivně provede:
 
-**ostr** << _*vpravo*. [to_string](bitset-class.md) <**CharType**, **osobnostní rysy**, **alokátoru**\<**CharType**>>)
+`ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
 ### <a name="example"></a>Příklad
 
@@ -130,42 +130,40 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a> – Operátor&gt;&gt;
+## <a name="op_gt_gt"></a>operátor&gt;&gt;
 
-Načte řetězec rozšířené znaky do bitset –.
+Přečte řetězec bitových znaků do bitset.
 
 ```
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
-    basic_istream<CharType, Traits>&
-_Istr,
-    bitset<N>&
-    right);
+    basic_istream<CharType, Traits>& i_str,
+    bitset<N>& right);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr*\
-Řetězec, který se zadá do vstupního datového proudu má být vložen do bitset –.
+*i_str*\
+Řetězec, který je zadán do vstupního datového proudu, který má být vložen do bitset.
 
-*doprava*\
-Bitset –, který přijímá bity ze vstupního datového proudu.
+*pravé* \
+Bitset, který přijímá bity ze vstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Funkce šablony vrátí řetězec *_Istr*.
+Funkce šablony vrátí řetězec *i_str*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce přetížení šablon `operator>>` ukládat v bitset – _ *vpravo* bitset – hodnota (`str`), kde `str` je objekt typu [basic_string](basic-string-class.md)  <  **CharType**, **osobnostní rysy**, **alokátoru** \< **CharType**>> **&** extrahují z *_Istr*.
+Funkce šablony přetěžuje `operator>>` pro uložení *v bitset hodnotu* `bitset(str)`, kde `str` je objekt typu [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` extrakce z *i_str*.
 
-Funkce šablony extrahuje prvky z *_Istr* a vloží je do bitset – dokud:
+Funkce šablony extrahuje prvky z *i_str* a vloží je do bitset, dokud:
 
-- Všechny prvky bit byly extrahovány ze vstupního datového proudu a uložená v bitset –.
+- Všechny bitové prvky byly extrahovány ze vstupního datového proudu a uloženy do bitset.
 
-- Bitset – je se vyplní bits ze vstupního datového proudu.
+- Bitset se naplní bity ze vstupního streamu.
 
-- Input element, který není 1 ani 0 narazí.
+- Byl zjištěn vstupní element, který není 0 ani 1.
 
 ### <a name="example"></a>Příklad
 
@@ -216,9 +214,9 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a> operátor ^
+## <a name="op_xor"></a>operátor ^
 
-Provádí logické bitové `EXCLUSIVE-OR` mezi dvěma bitsets.
+Provede bitovou `EXCLUSIVE-OR` mezi dvěma bitsetsy.
 
 ```cpp
 template <size_t size>
@@ -230,15 +228,15 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-První dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
+*levý* \
+První ze dvou Bitsets, jejichž příslušné prvky mají být kombinovány s bitovým `EXCLUSIVE-OR`.
 
-*doprava*\
-Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
+*pravé* \
+Druhý ze dvou valarrays, jejichž příslušné prvky mají být kombinovány s bitovým `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bitset –, jehož prvky jsou výsledkem provádění `EXCLUSIVE-OR` operace na odpovídající prvky *levé* a *správné*.
+Bitset, jehož prvky jsou výsledkem provádění operace `EXCLUSIVE-OR` na odpovídajících prvcích *vlevo* a *vpravo*.
 
 ### <a name="example"></a>Příklad
 
@@ -268,9 +266,9 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a> – operátor&#124;
+## <a name="op_or"></a>podnikatel&#124;
 
-Provádí logické bitové `OR` mezi dvěma bitsets.
+Provede bitovou `OR` mezi dvěma bitsetsy.
 
 ```cpp
 template <size_t size>
@@ -282,15 +280,15 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-První dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
+*levý* \
+První ze dvou Bitsets, jejichž příslušné prvky mají být kombinovány s bitovým `OR`.
 
-*doprava*\
-Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
+*pravé* \
+Druhý ze dvou valarrays, jejichž příslušné prvky mají být kombinovány s bitovým `OR`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bitset –, jehož prvky jsou výsledkem provádění `OR` operace na odpovídající prvky *levé* a *správné*.
+Bitset, jehož prvky jsou výsledkem provádění operace `OR` na odpovídajících prvcích *vlevo* a *vpravo*.
 
 ### <a name="example"></a>Příklad
 
