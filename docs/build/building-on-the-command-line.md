@@ -1,8 +1,8 @@
 ---
-title: Použití služby Microsoft C++ sady nástrojů z příkazového řádku
-description: Pomocí nástrojů Microsoft C++ kompilátor (MSVC) z příkazového řádku mimo rozhraní IDE sady Visual Studio.
+title: Použití sady nástrojů C++ Microsoft z příkazového řádku
+description: Použijte Microsoft C++ Compiler sada nástrojů (MSVC) z příkazového řádku mimo integrované vývojové prostředí (IDE) sady Visual Studio.
 ms.custom: conceptual
-ms.date: 06/06/2019
+ms.date: 10/22/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,167 +10,166 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: b5e9bf266d79ee86cae84535641a52c7c52be391
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821136"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811157"
 ---
-# <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Použití služby Microsoft C++ sady nástrojů z příkazového řádku
+# <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Použití sady nástrojů C++ Microsoft z příkazového řádku
 
-Pomocí nástrojů, které jsou zahrnuty v sadě Visual Studio můžete vytvářet aplikace jazyka C a C++ v příkazovém řádku. Microsoft C++ sada nástrojů kompilátoru (MSVC) je také jako samostatný balíček ke stažení [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads/) stránky. To je součástí **Build Tools pro Visual Studio** balíčku. Můžete také stáhnout jenom nástroje, které potřebujete pro C++ vývoje.
+Můžete sestavit C a C++ aplikace na příkazovém řádku pomocí nástrojů, které jsou součástí sady Visual Studio. Sada nástrojů C++ kompilátoru Microsoft (MSVC) je také zaváděná jako samostatný balíček ze stránky [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) . Je součástí balíčku **Nástroje pro sestavení pro sadu Visual Studio** . Můžete si stáhnout jenom nástroje, které potřebujete pro C++ vývoj.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Jak používat nástroje příkazového řádku
 
-Když vyberete některou C++ zátěží v instalačním programu sady Visual Studio, nainstaluje Visual Studio *sada nástrojů platformy*. Sada nástrojů platformy má všechny C a C++ nástroje pro konkrétní verze sady Visual Studio. Mezi tyto nástroje patří jazyka C /C++ kompilátory, linkers, montážní společnosti a další sestavení odpovídající knihoven a nástrojů. Všechny tyto nástroje můžete na příkazovém řádku. Budete také používají interně v integrovaném vývojovém prostředí sady Visual Studio. Existují samostatné hostované x86 a x64 hostované kompilátory a nástroje pro vytváření kódu pro x86, x 64, ARM a ARM64 cíle. Každá sada nástrojů pro konkrétní architekturu hostitele a cílovém sestavení je uložen do vlastního adresáře.
+Když vyberete jednu z C++ úloh v instalační program pro Visual Studio, nainstaluje *sadu nástrojů platformy*sady Visual Studio. Sada nástrojů platformy obsahuje všechny nástroje C a C++ pro konkrétní verzi sady Visual Studio. Mezi tyto nástroje patří kompilátoryC++ C/kompilátory, propojování, assemblery a další nástroje sestavení a vyhovující knihovny. Všechny tyto nástroje můžete použít na příkazovém řádku. Používají se také interně v integrovaném vývojovém prostředí sady Visual Studio. Pro vytváření kódu pro cíle x86, x64, ARM a ARM64 jsou k dispozici samostatné kompilátory hostované pro x86 a x64 a nástroje. Každá sada nástrojů pro konkrétní hostitele a cílovou architekturu sestavení je uložena ve vlastním adresáři.
 
-Pracovala správně, nástroje vyžadují několik proměnných prostředí konkrétní nastavení. Tyto proměnné se používají k přidání nástrojů do cesty a nastavit obsahovat soubor, soubor knihovny a umístění sad SDK. Abyste usnadnili snadnou k nastavení těchto proměnných prostředí, instalační program vytvoří přizpůsobené *soubory příkazů*, nebo dávkové soubory, během instalace. Můžete spustit některý z těchto souborů příkaz k nastavení konkrétního hostitele a Cílová architektura sestavení, verzi sady Windows SDK a sady nástrojů platformy. Pro usnadnění práce Instalační program také vytvoří zástupce v nabídce Start. Klávesové zkratky spustit příkazový řádek pro vývojáře systému windows s použitím tyto příkazové soubory pro konkrétní kombinací hostitelů a cíl. Tyto klávesové zkratky Ujistěte se, že jsou všechny proměnné požadované prostředí nastavené a připravené k použití.
+Pro správné fungování nástroje vyžadují, aby byly nastaveny několik specifických proměnných prostředí. Tyto proměnné slouží k přidání nástrojů do cesty a k nastavení souboru include, souboru knihovny a umístění sady SDK. Pro usnadnění nastavení těchto proměnných prostředí instalační program vytvoří během instalace přizpůsobené *soubory příkazů*nebo dávkové soubory. Můžete spustit jeden z těchto souborů příkazů pro nastavení konkrétního hostitele a cílové architektury sestavení, Windows SDK verze a sady nástrojů platformy. Pro usnadnění práce instalační program také vytvoří zástupce v nabídce Start. Zástupci spouštějí vývojáře příkazového řádku pro konkrétní kombinace hostitelů a cílů pomocí těchto souborů příkazů. Tyto klávesové zkratky zajišťují, aby byly všechny požadované proměnné prostředí nastaveny a připravené k použití.
 
-Požadované proměnné jsou specifické pro vaši instalaci a sestavení architektury, které zvolíte. Jsou také může změnit aktualizací produktu nebo upgradu. Proto doporučujeme použít nainstalovaných příkazový řádek příkazu nebo místní soubor, místo nastavení proměnných prostředí. Další informace najdete v tématu [nastavit cesty a proměnných prostředí pro sestavení příkazového řádku](setting-the-path-and-environment-variables-for-command-line-builds.md).
+Požadované proměnné prostředí jsou specifické pro vaši instalaci a architekturu sestavení, kterou zvolíte. Mohou být také změněny aktualizacemi nebo upgrady produktu. To je důvod, proč doporučujeme použít nainstalovaný zástupce příkazového řádku nebo soubor příkazů místo nastavení proměnných prostředí sami. Další informace naleznete v tématu [Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Sady nástrojů, souborů příkazů a zkratky nainstalované závisí na procesor počítače a možností, které jste vybrali při instalaci. Nástroje hostované v x86 a různé nástroje, které sestavení x86 a x64 kódu se vždy instalují. Pokud máte Windows 64-bit, jsou nainstalovány také nástroje x64 hostované a různé nástroje, které sestavení x86 a x64 kódu. Pokud se rozhodnete nepovinný C++ nástroje pro univerzální platformu Windows a pak x86 a x64 nástroje, které sestavení kódu ARM a ARM64 také se nainstalují. Jiné úlohy může nainstalovat další nástroje.
+Sady nástrojů, soubory příkazů a klávesové zkratky závisí na procesoru počítače a možnostech, které jste vybrali během instalace. Nástroje hostované pro platformu x86 a různé nástroje, které sestavují kód x86 a x64, jsou vždy nainstalovány. Pokud máte 64 Windows, nainstalují se i nástroje hostované pro platformu x64 a mezi nástroji, které sestavují kód x86 a x64. Pokud zvolíte volitelné C++ Univerzální platforma Windows nástroje, nainstaluje se také nástroj x86 a x64, který sestaví kód ARM a ARM64. Jiné úlohy můžou nainstalovat další nástroje.
 
-## <a name="developer_command_prompt_shortcuts"></a> Zástupce příkazového řádku pro vývojáře
+## <a name="developer_command_prompt_shortcuts"></a>Zástupci příkazového řádku pro vývojáře
 
-Zástupce příkazového řádku se instalují do složky specifické pro verzi sady Visual Studio v nabídce Start. Tady je seznam zástupců základní příkazový řádek a sestavení architektury, které podporují:
+Zástupce příkazového řádku jsou nainstalovány ve složce sady Visual Studio specifické pro danou verzi v nabídce Start. Tady je seznam základních klávesových zkratek příkazového řádku a architektury sestavení, které podporují:
 
-- **Developer Command Prompt** – nastaví prostředí tak, aby 32-bit, nativní x86 nástroje použít k vytváření 32-bit, x86 nativní kód.
-- **x86 native Tools Command Prompt** – nastaví prostředí tak, aby 32-bit, nativní x86 nástroje použít k vytváření 32-bit, x86 nativní kód.
-- **x64 native Tools Command Prompt** – nastaví prostředí tak, aby použít 64-bit, x64 cloudově nativních nástrojů k vytváření 64-bit, x64 nativní kód.
-- **x86_x64 Cross Tools Command Prompt** – nastaví prostředí tak, aby použití 32-bit x86 cloudově nativních nástrojů k vytvoření 64-bit, x64 nativní kód.
-- **x64_x86 Cross Tools Command Prompt** – nastaví prostředí tak, aby použít 64-bit, x64 cloudově nativních nástrojů k vytváření 32-bit, x86 nativní kód.
+- **Developer Command Prompt** – nastaví prostředí tak, aby používalo 32 – nativní nástroje x86 pro sestavování 32 kódu nativního pro x86.
+- **x86 Native Tools Command Prompt** – nastaví prostředí tak, aby používalo 32 – nativní nástroje x86 pro sestavování 32 kódu nativního pro x86.
+- **x64 Native Tools Command Prompt** – nastaví prostředí tak, aby používalo 64 – 32bitové nástroje x64 pro sestavování kódu 64-bit, x64-Native.
+- **x86_x64 cross Tools Command Prompt** – nastaví prostředí tak, aby používalo 32 – nativní nástroje x86 pro sestavování kódu 64-bit, x64 – Native.
+- **x64_x86 cross Tools Command Prompt** – nastaví prostředí tak, aby používalo 64 – 32bitové nástroje x64 pro sestavování 32 kódu nativního pro x86.
 
 ::: moniker range=">= vs-2019"
 
-Názvy složky a místní nabídky Start se liší v závislosti na nainstalované verzi sady Visual Studio. Pokud nastavíte jeden, jsou také závislé na instalaci **Přezdívka**. Předpokládejme například, že jste nainstalovali Visual Studio 2019 a dáte ho přezdívku z *nejnovější*. Zástupce příkazového řádku pro vývojáře jmenuje **Developer Command Prompt for VS 2019 (nejnovější)** , do složky s názvem **Visual Studio 2019**.
+Složka nabídky Start a názvy zástupců se liší v závislosti na nainstalované verzi sady Visual Studio. Pokud jste ho nastavili, závisí taky na **přezdívkě**instalace. Předpokládejme například, že jste nainstalovali sadu Visual Studio 2019 a zadali jste přezdívku *nejnovější*. Zástupce příkazového řádku pro vývojáře má název **Developer Command Prompt pro VS 2019 (nejnovější)** ve složce s názvem **Visual Studio 2019**.
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-Názvy složky a místní nabídky Start se liší v závislosti na nainstalované verzi sady Visual Studio. Pokud nastavíte jeden, jsou také závislé na instalaci **Přezdívka**. Předpokládejme například, že jste nainstalovali Visual Studio 2017 a jste zadali, ho přezdívku z *nejnovější*. Zástupce příkazového řádku pro vývojáře jmenuje **Developer Command Prompt for VS 2017 (nejnovější)** , do složky s názvem **Visual Studio 2017**.
+Složka nabídky Start a názvy zástupců se liší v závislosti na nainstalované verzi sady Visual Studio. Pokud jste ho nastavili, závisí taky na **přezdívkě**instalace. Předpokládejme například, že jste nainstalovali sadu Visual Studio 2017 a zadali jste přezdívku *nejnovější*. Zástupce příkazového řádku pro vývojáře má název **Developer Command Prompt pro VS 2017 (nejnovější)** ve složce s názvem **Visual Studio 2017**.
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-Názvy složky a místní nabídky Start se liší v závislosti na nainstalované verzi sady Visual Studio. Předpokládejme například, že jste nainstalovali Visual Studio 2015. Zástupce příkazového řádku pro vývojáře jmenuje **Developer Command Prompt for VS 2015**.
+Složka nabídky Start a názvy zástupců se liší v závislosti na nainstalované verzi sady Visual Studio. Předpokládejme například, že jste nainstalovali Visual Studio 2015. Zástupce příkazového řádku pro vývojáře má název **Developer Command Prompt pro VS 2015**.
 
 ::: moniker-end
 
-## <a name="developer_command_prompt"></a> Chcete-li otevřít okno příkazového řádku pro vývojáře
+### <a name="developer_command_prompt"></a>Otevření okna příkazového řádku pro vývojáře
 
-1. Na ploše otevřete Windows **Start** nabídky a pak přejděte k vyhledání a otevření složky pro vaši verzi sady Visual Studio, například **Visual Studio 2019**.
+1. Na ploše otevřete nabídku **Start** systému Windows a potom posuňte zobrazení a otevřete složku pro vaši verzi sady Visual Studio, například **Visual Studio 2019**.
 
-1. Ve složce, vyberte **Developer Command Prompt** pro vaši verzi sady Visual Studio. Tento zástupce spustí okno příkazového řádku pro vývojáře, který používá výchozí architektura sestavení 32-bit, x86 cloudově nativních nástrojů k vývoji 32-bit, x86 nativní kód. Pokud dáváte přednost architektura jiné než výchozí sestavení, zvolte jednu z nativní nebo různé nástroje příkazové řádky k určení hostitele a cílové architektury.
+1. Ve složce vyberte **Developer Command Prompt** pro vaši verzi sady Visual Studio. Tato klávesová zkratka spustí okno příkazového řádku pro vývojáře, které používá výchozí architekturu sestavení rozhraní 32 x86, nativní nástroje pro sestavování 32 kódu nativního pro x86. Pokud dáváte přednost jiné než výchozí architektuře sestavení, zvolte jeden z příkazů pro nativní nebo mezinástrojní příkazy k určení architektury hostitele a cíle.
 
-Pro ještě rychlejší možností, jak otevřít příkazový řádek pro vývojáře, zadejte *příkazový řádek pro vývojáře* klasické pracovní plochy vyhledávacího pole. Zvolte požadovaný výsledek.
+Chcete-li ještě rychlejší otevření příkazového řádku pro vývojáře, zadejte do pole pro hledání na ploše *příkaz Developer Command Prompt* . Pak zvolte výsledek, který chcete.
 
-## <a name="developer_command_file_locations"></a> Umístění souborů příkaz pro vývojáře
+## <a name="developer_command_file_locations"></a>Umístění souborů příkazů pro vývojáře
 
-Pokud chcete nastavit prostředí pro sestavení v existující okno příkazového řádku, můžete použít jeden příkaz soubory vytvořené pomocí Instalační služby. Doporučujeme, abyste že nastavení prostředí v novém okně příkazového řádku. Nedoporučujeme vám novější přepínače prostředí v příkazovém okně stejné.
+Pokud dáváte přednost nastavení prostředí sestavení v existujícím okně příkazového řádku, můžete použít jeden ze souborů příkazů vytvořených instalačním programem. Doporučujeme nastavit prostředí v novém okně příkazového řádku. Nedoporučujeme vám později přepnout prostředí ve stejném příkazovém okně.
 
 ::: moniker range=">= vs-2019"
 
-Umístění souboru příkazu závisí na verzi sady Visual Studio, které jste nainstalovali a na možnosti, které jste provedli během instalace. Pro Visual Studio 2019 umístění typické instalace na 64bitovém systému je v \\Program Files (x86)\\sady Microsoft Visual Studio\\2019\\*edition*. *Edice* může být Community, Professional, Enterprise, BuildTools nebo jiné pojmenování, které jste zadali.
+Umístění souboru příkazů závisí na verzi sady Visual Studio, kterou jste nainstalovali, a na volbách, které jste provedli během instalace. V případě sady Visual Studio 2019 je typické umístění instalace v systému 64 v \\Program Files (x86)\\Microsoft Visual Studio\\2019\\*Edition*. *Edice* může být komunita, Professional, Enterprise, BuildTools nebo jiná Přezdívka, kterou jste zadali.
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-Umístění souboru příkazu závisí na verzi sady Visual Studio, které jste nainstalovali a na možnosti, které jste provedli během instalace. Pro Visual Studio 2017, umístění typické instalace na 64bitovém systému je v \\Program Files (x86)\\sady Microsoft Visual Studio\\2017\\*edition*. *Edice* může být Community, Professional, Enterprise, BuildTools nebo jiné pojmenování, které jste zadali.
+Umístění souboru příkazů závisí na verzi sady Visual Studio, kterou jste nainstalovali, a na volbách, které jste provedli během instalace. V případě sady Visual Studio 2017 je typické umístění instalace v systému 64 v \\Program Files (x86)\\Microsoft Visual Studio\\2017\\*Edition*. *Edice* může být komunita, Professional, Enterprise, BuildTools nebo jiná Přezdívka, kterou jste zadali.
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-Umístění souboru příkaz závisí na verzi sady Visual Studio a v instalačním adresáři. Pro Visual Studio 2015, umístění typické instalace probíhá \\Program Files (x86)\\Microsoft Visual Studio 14.0.
+Umístění souboru příkazů závisí na verzi sady Visual Studio a instalačním adresáři. V případě sady Visual Studio 2015 je obvyklé umístění instalace ve \\Program Files (x86)\\Microsoft Visual Studio 14,0.
 
 ::: moniker-end
 
-Soubor příkazů hlavního vývojáře příkazového řádku, VsDevCmd.bat, je umístěn ve Common7\\podadresáři Tools. Pokud nejsou zadány žádné parametry, nastaví prostředí tak, aby x86 nativní nástroje použít k vytváření x86 32bitová verze kódu.
+Primární soubor příkazů příkazového řádku pro vývojáře, VsDevCmd. bat, je umístěný v podadresáři Common7\\Tools. Pokud nejsou zadány žádné parametry, nastaví prostředí pro použití nástrojů x86-Native k sestavení 32 kódu x86.
 
 ::: moniker range=">= vs-2017"
 
-Další příkaz soubory jsou k dispozici k nastavení konkrétního sestavení architektury. Soubory příkazů, který je k dispozici, závisí na úlohách sady Visual Studio a možnostech, které jste nainstalovali. V sadě Visual Studio 2017 a Visual Studio 2019, najdete je v VC\\pomocné\\sestavení podadresář.
+K dispozici jsou další soubory příkazů pro nastavení konkrétní architektury sestavení. Dostupné soubory příkazů závisí na úlohách sady Visual Studio a možnostech, které jste nainstalovali. V aplikaci Visual Studio 2017 a Visual Studio 2019 najdete je v VC\\pomocné adresáře\\sestavení.
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-Další příkaz soubory jsou k dispozici k nastavení konkrétního sestavení architektury. Soubory příkazů, který je k dispozici, závisí na úlohách sady Visual Studio a možnostech, které jste nainstalovali. V sadě Visual Studio 2015, nacházejí v VC VC\\bin nebo VC\\bin\\*architektura* podadresářů, kde *architektura* je nativní nebo Možnosti křížový kompilátor.
+K dispozici jsou další soubory příkazů pro nastavení konkrétní architektury sestavení. Dostupné soubory příkazů závisí na úlohách sady Visual Studio a možnostech, které jste nainstalovali. V aplikaci Visual Studio 2015 jsou umístěny v *podadresářích* VC, VC\\bin nebo VC\\bin\\, kde *Architektura* je jednou z nativních možností nebo z možností křížového kompilátoru.
 
 ::: moniker-end
 
-Tyto soubory příkaz nastavit výchozí parametry a volání VsDevCmd.bat k nastavení prostředí architektury zadané sestavení. Typické instalace může zahrnovat tyto soubory příkazů:
+Tyto příkazové soubory nastavují výchozí parametry a volají VsDevCmd. bat pro nastavení zadaného prostředí architektury sestavení. Typická instalace může zahrnovat tyto soubory příkazů:
 
-|Soubor příkazů|Hostitel a cílové architektury|
+|Soubor příkazů|Architektury hostitelů a cílů|
 |---|---|
-|**vcvars32.bat**| Nástroje x86 nativní 32bitový použít k vytváření x86 32bitová verze kódu.|
-|**vcvars64.bat**| Nástroje x64 nativní 64bitové použít k vytváření 64-bit x64 kódu.|
-|**vcvarsx86_amd64.bat**| Pomocí nástrojů mezi 32-bit x86 nativní k vytvoření 64-bit x64 kódu.|
-|**vcvarsamd64_x86.bat**| 64-bit x64 nativní křížové nástroje použít k vytváření x86 32bitová verze kódu.|
-|**vcvarsx86_arm.bat**| Pomocí nástrojů mezi 32-bit x86 nativní sestavení kódu ARM.|
-|**vcvarsamd64_arm.bat**| Pomocí křížové nástroje x64 nativní 64bitové sestavení kódu ARM.|
-|**vcvarsall.bat**| Pomocí parametrů můžete určit hostitele a cílové architektury, sady Windows SDK a možností platformy. Seznam podporované možnosti, volání pomocí **/help** parametru.|
+|**Vcvars32. bat**| Pro sestavování 32 kódu x86 použijte 32 nástroje x86-Native.|
+|**vcvars64. bat**| Pro sestavování 64 kódu x64 použijte rozhraní 64 x64 – nativní nástroje pro 64bitovou verzi.|
+|**vcvarsx86_amd64. bat**| Pro sestavování kódu 64 x64 použijte 32 nativních různých nástrojů x86.|
+|**vcvarsamd64_x86. bat**| Pro sestavování 32 kódu x86 použijte 64 nativních mezinástrojních x64 platforem.|
+|**vcvarsx86_arm. bat**| K sestavení kódu ARM použijte 32 nativních různých nástrojů x86.|
+|**vcvarsamd64_arm. bat**| K sestavení kódu ARM použijte 64 x64 nativních různých nástrojů.|
+|**vcvarsall. bat**| Pomocí parametrů můžete zadat hostitele a cílové architektury, Windows SDK a možnosti platformy. Seznam podporovaných možností zavoláte pomocí parametru **/help** .|
 
 > [!CAUTION]
-> Soubor vcvarsall.bat a další soubory příkazů sady Visual Studio se může lišit od počítače na počítač. Nepřepisovat existující soubor vcvarsall.bat nebo je poškozena pomocí souboru z jiného počítače. Znovu spusťte instalační program sady Visual Studio k nahrazení souboru chybí.
+> Soubor vcvarsall. bat a další soubory příkazů sady Visual Studio se mohou v počítači lišit. Neměňte chybějící nebo poškozený soubor vcvarsall. bat pomocí souboru z jiného počítače. Opětovným spuštěním instalačního programu sady Visual Studio nahraďte chybějící soubor.
 >
-> Soubor vcvarsall.bat se také liší mezi verzemi. Pokud na počítači, který také používá starší verzi sady Visual Studio je nainstalovaná aktuální verze sady Visual Studio, nespouštějte vcvarsall.bat nebo jiného souboru příkazů sady Visual Studio z různých verzí ve stejném okně příkazového řádku.
+> Soubor vcvarsall. bat se také liší od verze k verzi. Pokud je aktuální verze sady Visual Studio nainstalována na počítači, který má také starší verzi sady Visual Studio, nespouštějte vcvarsall. bat ani jiný soubor příkazů sady Visual Studio z různých verzí ve stejném okně příkazového řádku.
 
-## <a name="use-the-developer-tools-in-an-existing-command-window"></a>Pomocí vývojářských nástrojů v existujících příkazové okno
+## <a name="use-the-developer-tools-in-an-existing-command-window"></a>Použití vývojářských nástrojů v existujícím příkazovém okně
 
-Použít soubor vcvarsall.bat je nejjednodušší způsob, jak určit konkrétní sestavení architektury v existující příkazové okno. Pomocí vcvarsall.bat můžete nastavit proměnné prostředí pro příkazový řádek pro nativní kompilace 32bitová nebo 64bitová verze konfigurace. Argumenty umožňují zadat křížové kompilace x86, x 64, ARM, nebo procesory ARM64. Můžete cílit platformy Microsoft Store, univerzální platformu Windows a Windows Desktop. Dokonce je možné určit, které Windows SDK používat a vyberte verzi sady nástrojů platformy.
+Nejjednodušší způsob, jak zadat konkrétní architekturu sestavení v existujícím příkazovém okně, je použití souboru vcvarsall. bat. Pomocí vcvarsall. bat nastavte proměnné prostředí pro konfiguraci příkazového řádku pro nativní 32 nebo 64 bitovou kompilaci. Argumenty umožňují určit více kompilací procesorů x86, x64, ARM nebo ARM64. Můžete cílit na platformy Microsoft Store, Univerzální platforma Windows nebo Windows Desktop. Můžete dokonce určit, které Windows SDK se mají použít, a vybrat verzi sady nástrojů platformy.
 
-Při použití bez argumentů, vcvarsall.bat nastaví proměnné prostředí použít aktuální x86 nativního kompilátoru pro cíle 32bitová verze Windows Desktop. Můžete přidat nakonfigurovat prostředí tak, aby používat žádné nativní nebo kompilátoru nástrojů pro různé argumenty. vcvarsall.bat zobrazí chybovou zprávu, pokud zadáte konfiguraci, která není nainstalována nebo je dostupný na vašem počítači.
+Při použití bez argumentů nakonfiguruje vcvarsall. bat proměnné prostředí tak, aby používaly aktuální kompilátor x86-Native pro 32 cíle pro stolní počítače s Windows. Můžete přidat argumenty a nakonfigurovat prostředí tak, aby používalo některé z nativních nebo přesných nástrojů pro více kompilátorů. vcvarsall. bat zobrazí chybovou zprávu, pokud zadáte konfiguraci, která není v počítači nainstalovaná nebo dostupná.
 
-### <a name="vcvarsall-syntax"></a>Syntaxe vcvarsall
+### <a name="vcvarsall-syntax"></a>syntaxe vcvarsall
 
-> **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [ **-vcvars_ver=** _vcversion_]
+> **vcvarsall. bat** [*Architektura*] [*platform_type*] [*winsdk_version*] [ **-vcvars_ver =** _vcversion_]
 
-*architecture*<br/>
-Tento volitelný argument určuje architekturu hostitele a cílovém používat. Pokud *architektura* není zadán, výchozí prostředí pro sestavení se používá. Podporují se tyto argumenty:
+*Architektura*<br/>
+Tento nepovinný argument určuje hostitelskou a cílovou architekturu, která se má použít. Pokud *Architektura* není zadaná, použije se výchozí prostředí sestavení. Jsou podporovány tyto argumenty:
 
-|*architecture*|Kompilátor|Architektura počítače hostitele|Architektura výstupu (cíl) sestavení|
+|*Architektura*|Přepínač|Architektura hostitelského počítače|Sestavit výstupní (cílovou) architekturu|
 |----------------------------|--------------|----------------------------------|-------------------------------|
-|**x86**|x86 32bitová nativní|x86, x64|x86|
-|**x86\_amd64** nebo **x86\_x64**|různé x64 na x86|x86, x64|x64|
-|**x86_arm**|ARM na křížové x86|x86, x64|ARM|
-|**x86_arm64**|ARM64 na x86 křížové|x86, x64|ARM64|
-|**AMD64** nebo **x64**|x64 64bitové nativní|x64|x64|
-|**AMD64\_x86** nebo **x64\_x86**|x86 na x64 cross|x64|x86|
-|**AMD64\_arm** nebo **x64\_arm**|ARM na křížové x64|x64|ARM|
-|**AMD64\_arm64** nebo **x64\_arm64**|ARM64 na x64 křížové|x64|ARM64|
+|**architektur**|x86 32-bit Native|x86, x64|x86|
+|**x86\_amd64** nebo **x86\_x64**|x64 na platformě x86|x86, x64|x64|
+|**x86_arm**|ARM na platformě x86|x86, x64|ARM|
+|**x86_arm64**|ARM64 v x86 – křížení|x86, x64|ARM64|
+|**amd64** nebo **x64**|x64 64-bit Native|x64|x64|
+|**amd64\_x86** nebo **x64\_x86**|x86 na platformě x64|x64|x86|
+|**amd64\_ARM** nebo **x64\_ARM**|ARM na platformě x64|x64|ARM|
+|**amd64\_arm64** nebo **x64\_arm64**|ARM64 na platformě x64|x64|ARM64|
 
 *platform_type*<br/>
-Tento volitelný argument můžete zadat **ukládání** nebo **UPW** jako typ platformy. Ve výchozím nastavení je nastavit prostředí k vytváření aplikací konzoly nebo stolního počítače.
+Tento volitelný argument umožňuje zadat **úložiště** nebo **UWP** jako typ platformy. Ve výchozím nastavení je prostředí nastavené na sestavování desktopových nebo konzolových aplikací.
 
 *winsdk_version*<br/>
-Volitelně určuje verzi sady Windows SDK používat. Ve výchozím nastavení se používá nejnovější nainstalovaný Windows SDK. Chcete-li určit verzi sady Windows SDK, můžete použít úplné číslo Windows 10 SDK, jako **10.0.10240.0**, nebo zadejte **8.1** použití sady SDK pro Windows 8.1.
+Volitelně určuje verzi Windows SDK, která se má použít. Ve výchozím nastavení se používá nejnovější nainstalovaná Windows SDK. K určení verze Windows SDK můžete použít celé číslo sady Windows 10 SDK, například **10.0.10240.0**, nebo zadat **8,1** pro použití sady Windows 8.1 SDK.
 
 *vcversion*<br/>
-Volitelně určuje sada nástrojů kompilátoru Visual Studio používat. Ve výchozím nastavení je prostředí nastaveno použití aktuální sady nástrojů kompilátoru Visual Studio.
+Volitelně určuje sadu nástrojů kompilátoru sady Visual Studio, která se má použít. Ve výchozím nastavení je prostředí nastaveno na použití aktuální sady nástrojů kompilátoru sady Visual Studio.
 
 ::: moniker range=">= vs-2019"
 
-Použití **-vcvars_ver = 14.2 x .yyyyy** určit konkrétní verzi sady nástrojů kompilátoru Visual Studio 2019.
+Použijte **-vcvars_ver = 14.2 x. yyyyy** k určení konkrétní verze sady nástrojů kompilátoru sady Visual Studio 2019.
 
-Použití **-vcvars_ver = 14.16** určíme nejnovější verzi sady nástrojů kompilátoru Visual Studio 2017.
+Pomocí **-vcvars_ver = 14.16** určete nejnovější verzi sady nástrojů kompilátoru sady Visual Studio 2017.
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-Použití **-vcvars_ver = 14.16** určíme nejnovější verzi sady nástrojů kompilátoru Visual Studio 2017.
+Pomocí **-vcvars_ver = 14.16** určete nejnovější verzi sady nástrojů kompilátoru sady Visual Studio 2017.
 
-Použití **-vcvars_ver = 14.1 x .yyyyy** určit konkrétní verzi sady nástrojů kompilátoru Visual Studio 2017.
+Použijte **-vcvars_ver = 14,1 x. yyyyy** k určení konkrétní verze sady nástrojů kompilátoru sady Visual Studio 2017.
 
 ::: moniker-end
 
-Použití **-vcvars_ver = 14.0** k určení sady nástrojů kompilátoru Visual Studio 2015.
+Pomocí **-vcvars_ver = 14.0** určete sadu nástrojů kompilátoru sady Visual Studio 2015.
 
-<a name="vcvarsall"></a>
-#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>K nastavení prostředí pro sestavení v existující okno příkazového řádku
+#### <a name="vcvarsall"></a>Nastavení prostředí sestavení v existujícím okně příkazového řádku
 
-1. Na příkazovém řádku pomocí příkazu CD přejděte do adresáře instalace sady Visual Studio. Potom použijte CD znovu změnit na podadresář, který obsahuje soubory příkazů určených pro konfigurace. Visual Studio 2019 a Visual Studio 2017 *VC\\pomocné\\sestavení* podadresáře. Pro Visual Studio 2015, použijte *VC* podadresáře.
+1. Na příkazovém řádku pomocí příkazu CD přejděte do instalačního adresáře sady Visual Studio. Pak znovu použijte disk CD pro změnu v podadresáři, který obsahuje soubory příkazů specifické pro konfiguraci. V případě sady Visual Studio 2019 a sady Visual Studio 2017 použijte *\\\\sestavení* podadresáře VC. V případě sady Visual Studio 2015 použijte podadresář *VC* .
 
-1. Zadejte příkaz pro upřednostňovaných vývojářského prostředí. Například k sestavení kódu ARM pro UPW na 64bitové platformě pomocí nejnovější sadu Windows SDK a sady Visual Studio sadu nástrojů kompilátoru, použijte tento příkazový řádek:
+1. Zadejte příkaz pro preferované vývojové prostředí. Například pro sestavení kódu ARM pro UWP na 64 platformě použijte nejnovější Windows SDK a sadu nástrojů kompilátoru sady Visual Studio, použijte tento příkazový řádek:
 
    `vcvarsall.bat amd64_arm uwp`
 
@@ -178,105 +177,105 @@ Použití **-vcvars_ver = 14.0** k určení sady nástrojů kompilátoru Visual 
 
 ::: moniker range=">= vs-2019"
 
-Otevřete dialogové okno Vlastnosti pro zástupce příkazového řádku pro vývojáře najdete v tématu příkazu cíle použít. Například cíl **x64 Native Tools Command Prompt pro VS 2019** zástupce je podobný:
+Otevřete dialogové okno Vlastnosti pro zástupce příkazového řádku pro vývojáře a podívejte se na použitý cíl příkazu. Například cíl pro **x64 Native Tools Command Prompt zástupce VS 2019** je podobný následujícímu:
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-Otevřete dialogové okno Vlastnosti pro zástupce příkazového řádku pro vývojáře najdete v tématu příkazu cíle použít. Například cíl **x64 Native Tools Command Prompt pro VS 2017** zástupce je podobný:
+Otevřete dialogové okno Vlastnosti pro zástupce příkazového řádku pro vývojáře a podívejte se na použitý cíl příkazu. Například cíl pro **x64 Native Tools Command Prompt zástupce VS 2017** je podobný následujícímu:
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-Otevřete dialogové okno Vlastnosti pro zástupce příkazového řádku pro vývojáře najdete v tématu příkazu cíle použít. Například cíl **VS2015 x64 Native Tools Command Prompt** zástupce je podobný:
+Otevřete dialogové okno Vlastnosti pro zástupce příkazového řádku pro vývojáře a podívejte se na použitý cíl příkazu. Například cíl pro zástupce **VS2015 x64 Native Tools Command Prompt** vypadá podobně jako:
 
-`%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"" amd64`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64`
 
 ::: moniker-end
 
-Specifické pro architekturu dávkové soubory sady *architektura* vcvarsall.bat parametr a volání. K těmto souborům služby batch můžete předat stejné možnosti, jak by předat vcvarsall.bat nebo vcvarsall.bat lze volat pouze přímo. Zadat parametry pro příkaz zástupce, přidejte je na konec příkazu v uvozovkách. Například tady je místní a začít vytvářet kód ARM pro UPW pro 64bitové platformy, pomocí nejnovější sadu Windows SDK. Pokud chcete používat starší sada nástrojů kompilátoru, zadejte číslo verze. Ve vaší místní pomocí něčeho jako cíl tohoto příkazu:
+Dávkové soubory specifické pro danou architekturu nastaví parametr *architektury* a zavolají vcvarsall. bat. Do těchto dávkových souborů můžete předat stejné možnosti jako při předání do vcvarsall. bat, nebo můžete přímo volat vcvarsall. bat. Chcete-li zadat parametry vlastního zástupce příkazu, přidejte je na konec příkazu v uvozovkách. Tady je například zástupce k sestavení kódu ARM pro UWP na 64 platformě pomocí nejnovější Windows SDK. Chcete-li použít starší sadu nástrojů kompilátoru, zadejte číslo verze. Ve svém zástupci použijte něco jako tento cíl příkazu:
 
 ::: moniker range=">= vs-2019"
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.16"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.16`
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.0"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.0`
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-`%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"" amd64 -vcvars_ver=12.0`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64 -vcvars_ver=12.0`
 
 ::: moniker-end
 
-Upravte cestu tak, aby odrážely adresáře instalace sady Visual Studio. Soubor vcvarsall.bat obsahuje další informace o číslech konkrétní verzi.
+Upravte cestu tak, aby odrážela instalační adresář sady Visual Studio. Soubor vcvarsall. bat obsahuje další informace o konkrétních číslech verzí.
 
 ## <a name="command-line-tools"></a>Nástroje příkazového řádku
 
-K sestavení C /C++ projekt na příkazovém řádku aplikace Visual Studio poskytuje nástroje příkazového řádku:
+Pro sestavení C/C++ projekt na příkazovém řádku poskytuje Visual Studio tyto nástroje příkazového řádku:
 
 [CL](reference/compiling-a-c-cpp-program.md)<br/>
-Zkompilujte a propojte soubory zdrojového kódu do aplikací, knihoven a knihovny DLL pomocí kompilátoru (cl.exe).
+Použijte kompilátor (CL. exe) pro zkompilování a propojení souborů se zdrojovým kódem do aplikací, knihoven a knihoven DLL.
 
-[Odkaz](reference/linking.md)<br/>
-Pokud chcete připojit zkompilované soubory objektů a knihovny do aplikací a knihoven DLL použijte linker (link.exe).
+[Propojit](reference/linking.md)<br/>
+Pomocí linkeru (Link. exe) můžete propojit zkompilované soubory objektů a knihovny s aplikacemi a knihovnami DLL.
 
 [MSBuild](msbuild-visual-cpp.md)<br/>
-Slouží ke konfiguraci sestavení a nepřímo volat sada nástrojů MSBuild (msbuild.exe) a soubor projektu (.vcxproj). Je ekvivalentní s běžící **sestavení** projektu nebo **sestavit řešení** příkazu v integrovaném vývojovém prostředí sady Visual Studio. Spuštění nástroje MSBuild z příkazového řádku je pokročilý scénář a doporučuje nejčastěji.
+Pomocí nástroje MSBuild (MSBuild. exe) a souboru projektu (. vcxproj) můžete konfigurovat sestavení a vyvolat sadu nástrojů nepřímo. Odpovídá spuštění příkazu **sestavit** projekt nebo **Sestavit řešení** v integrovaném vývojovém prostředí sady Visual Studio. Spuštění nástroje MSBuild z příkazového řádku je pokročilý scénář a obecně se nedoporučuje.
 
-[NÁSTROJE DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-Použití nástroje DEVENV (devenv.exe) v kombinaci s přepínačem příkazového řádku, jako **/Build** nebo **/Clean** k provedení určité příkazy sestavení bez zobrazení integrovaném vývojovém prostředí sady Visual Studio. Obecně platí DEVENV je upřednostňována před použití nástroje MSBuild přímo, protože můžete umožnit, aby složitosti MSBuild sady Visual Studio.
+[NÁSTROJE devenv](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
+Použijte DEVENV (devenv. exe) kombinovaný s přepínačem příkazového řádku, jako je **/Build** nebo **/clean** , a spusťte některé příkazy sestavení bez zobrazení integrovaného vývojového prostředí (IDE) sady Visual Studio. V Obecné verzi je nástroj DEVENV upřednostňován při přímém použití nástroje MSBuild, protože aplikaci Visual Studio můžete nechat zpracovat složitá prostředí MSBuild.
 
 [NMAKE](reference/nmake-reference.md)<br/>
-Pomocí NMAKE (nmake.exe) ve Windows můžete vytvářet projekty C++ založené na tradiční souboru pravidel.
+Použijte NMAKE (NMAKE. exe) ve Windows k sestavení C++ projektů na základě tradičního souboru pravidel.
 
-Při sestavování v příkazovém řádku příkaz F1 není k dispozici rychlou nápovědu. Místo toho vyhledávacího webu můžete použít k získání informací o upozornění, chyby a zprávy, nebo můžete použít soubory offline Nápověda. Hledání v [docs.microsoft.com](https://docs.microsoft.com/cpp/), použijte vyhledávací pole v horní části stránky.
+Při sestavování na příkazovém řádku není k dispozici příkaz F1 pro rychlou nápovědu. Místo toho můžete pomocí vyhledávacího modulu získat informace o upozorněních, chybách a zprávách nebo můžete použít offline soubory nápovědy. Pokud chcete použít vyhledávání v [docs.Microsoft.com](https://docs.microsoft.com/cpp/), použijte vyhledávací pole v horní části stránky.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-Tyto články ukazují, jak vytvářet aplikace v příkazovém řádku a popisují, jak přizpůsobit prostředí sestavení z příkazového řádku. Některé ukazují, jak používat 64bitové sady nástrojů a cílit na x86, x 64, ARM, ARM64 platformy a. Najdete zde také popis sestavení z příkazového řádku nástroje MSBuild a příkaz NMAKE.
+Tyto články ukazují, jak sestavovat aplikace na příkazovém řádku a popisují, jak přizpůsobit prostředí pro sestavování z příkazového řádku. Některé ukazují, jak používat 64-bitové sady nástrojů a cílit na platformy x86, x64, ARM a ARM64. Popisují také použití nástrojů pro sestavení příkazového řádku MSBuild a NMAKE.
 
-[Návod: Kompilace nativního programu C++ na příkazovém řádku](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
-Poskytuje příklad, který ukazuje, jak vytvořit a zkompilujte C++ program na příkazovém řádku.
+[Návod: kompilace nativního C++ programu na příkazovém řádku](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+Poskytuje příklad, který ukazuje, jak vytvořit a zkompilovat C++ program na příkazovém řádku.
 
-[Návod: Kompilace programu C na příkazovém řádku](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
-Popisuje, jak kompilovat program napsaný v programovacím jazyce C.
+[Návod: Kompilace programu C v příkazovém řádku](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+Popisuje, jak zkompilovat program napsaný v programovacím jazyce C.
 
-[Návod: Kompilace programu C++/CLI na příkazovém řádku](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
-Popisuje, jak vytvořit a zkompilujte C++vyhodnocovací program, který používá rozhraní .NET Framework.
+[Návod: kompilace programu C++/CLI na příkazovém řádku](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
+Popisuje, jak vytvořit a zkompilovat program C++/CLI, který používá .NET Framework.
 
-[Návod: Kompilace programu C++/CX na příkazovém řádku](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
-Popisuje, jak vytvořit a zkompilujte C++/CX program, který používá prostředí Windows Runtime.
+[Návod: kompilace programu C++/CX na příkazovém řádku](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
+Popisuje, jak vytvořit a zkompilovat program C++/CX, který používá prostředí Windows Runtime.
 
 [Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
-Jak nastavit proměnné prostředí použít 32bitový nebo 64bitové sady nástrojů k cíli x86, x64, ARM, ARM64 platformy a.
+Postup nastavení proměnných prostředí pro použití 32 nebo 64 sady nástrojů pro cílení na platformy x86, x64, ARM a ARM64
 
-[NMAKE – referenční zdroje](reference/nmake-reference.md)<br/>
-Obsahuje odkazy na články, které popisují Program údržby nástroj Microsoft (NMAKE. SOUBOR EXE).
+[NMAKE – referenční informace](reference/nmake-reference.md)<br/>
+Obsahuje odkazy na články, které popisují Nástroj Údržba programu společnosti Microsoft (NMAKE. EXE).
 
-[MSBuild na příkazovém řádku - C++](msbuild-visual-cpp.md)<br/>
-Obsahuje odkazy na články, které popisují postup použít msbuild.exe příkazovém řádku.
+[MSBuild na příkazovém řádku –C++](msbuild-visual-cpp.md)<br/>
+Obsahuje odkazy na články, které popisují použití nástroje MSBuild. exe z příkazového řádku.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[/MD, /MT, /LD (použití knihovny run-time)](reference/md-mt-ld-use-run-time-library.md)<br/>
-Popisuje, jak pomocí těchto možností kompilátoru pro použití knihovny run-time ladění nebo vydání.
+[/MD,/MT,/LD (Použít běhovou knihovnu)](reference/md-mt-ld-use-run-time-library.md)<br/>
+Popisuje, jak používat tyto možnosti kompilátoru k použití běhové knihovny ladění nebo uvolnění.
 
-[Možnosti kompilátoru C/C++](reference/compiler-options.md)<br/>
-Obsahuje odkazy na články, které popisují možnosti kompilátoru C a C++ a CL.exe.
+[Možnosti jazykaC++ C/kompilátoru](reference/compiler-options.md)<br/>
+Obsahuje odkazy na články, které popisují možnosti jazyka C++ C a kompilátoru a CL. exe.
 
 [Možnosti linkeru MSVC](reference/linker-options.md)<br/>
-Obsahuje odkazy na články, které popisují možnosti linkeru a LINK.exe.
+Obsahuje odkazy na články, které popisují možnosti linkeru a LINK. exe.
 
-[Nástroje pro vytváření dalších MSVC](reference/c-cpp-build-tools.md)<br/>
-Poskytuje nástroje, které jsou zahrnuty v sadě Visual Studio pro vytváření odkazy pro C/C++.
+[Další nástroje sestavení MSVC](reference/c-cpp-build-tools.md)<br/>
+Obsahuje odkazy na nástroje C/C++ Build, které jsou součástí sady Visual Studio.
 
 ## <a name="see-also"></a>Viz také:
 

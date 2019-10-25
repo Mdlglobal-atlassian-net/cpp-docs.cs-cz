@@ -1,6 +1,6 @@
 ---
-title: Specifikace šířky scanf
-ms.date: 11/04/2016
+title: scanf – specifikace šířky
+ms.date: 10/22/2019
 api_location:
 - msvcr100.dll
 - msvcr120.dll
@@ -17,61 +17,63 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 3b00996f3a17ab9298b1edba5a8e60826e19fdcc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957351"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811116"
 ---
-# <a name="scanf-width-specification"></a>Specifikace šířky scanf
+# <a name="scanf-width-specification"></a>scanf – specifikace šířky
 
-Tyto informace se vztahují na výklad řetězců formátu v `scanf` rodině funkcí, včetně zabezpečených verzí `scanf_s`, jako je. Tyto funkce obvykle předpokládají, že vstupní datový proud je rozdělen do posloupnosti tokenů. Tokeny jsou odděleny prázdnými znaky (mezera, tabulátor nebo nový řádek) nebo v případě číselných typů přirozeným koncem číselného datového typu, který je označen prvním znakem, který nelze převést na číselný text. Nicméně specifikace šířky může být použita k tomu, aby se analýza vstupu zastavila před přirozeným koncem tokenu.
+Tyto informace se vztahují na výklad řetězců formátu v `scanf` rodině funkcí, včetně zabezpečených verzí, jako je `scanf_s`. Tyto funkce obvykle předpokládají, že vstupní datový proud je rozdělen do posloupnosti tokenů. Tokeny jsou odděleny prázdným znakem (mezera, tabulátor nebo nový řádek) nebo pro číselné typy, a to přirozenému konci číselného datového typu, který je označen prvním znakem, který nelze převést na číselný text. Nicméně specifikace šířky může být použita k tomu, aby se analýza vstupu zastavila před přirozeným koncem tokenu.
 
-Specifikace *šířky* se skládá ze znaků mezi `%` specifikátorem a polem typu, které mohou zahrnovat kladné celé číslo s názvem pole *Width* a jeden nebo více znaků, které označují velikost pole, což může být také považuje se za modifikátory typu pole, jako je například označení, zda je celočíselný typ **krátký** nebo **dlouhý**. Tyto znaky jsou označovány jako předpona velikosti.
+Specifikace *šířky* se skládá ze znaků mezi `%` a specifikátorem pole typu, které mohou zahrnovat kladné celé číslo s názvem pole *Width* a jeden nebo více znaků, které označují velikost pole, což může být také považuje se za modifikátory typu pole, jako je například označení, zda je celočíselný typ **krátký** nebo **dlouhý**. Tyto znaky jsou označovány jako předpona velikosti.
 
 ## <a name="the-width-field"></a>Pole Šířka
 
-Pole *Šířka* je kladné desítkové celé číslo, které řídí maximální počet znaků, které mají být pro dané pole přečteny. Nejsou převáděny a uloženy na odpovídajícím `argument`místě žádné znaky s více než *šířkou* . Je-li znak, který nelze převést na základě daného formátu, před dosažením *šířky* , lze načíst méně než znaků *šířky* .
+Pole *Šířka* je kladné desítkové celé číslo, které určuje maximální počet znaků, které mají být pro dané pole čteny. Nepřevádí a ukládají se do odpovídajících `argument`žádné znaky s více než *šířkou* . Pokud je před dosažením *šířky* prázdné znaky nebo znak, který nelze převést podle daného formátu, je možné číst méně než znaků *šířky* .
 
-Specifikace šířky je oddělená a odlišná od argumentu velikosti vyrovnávací paměti vyžadovaného zabezpečenými verzemi těchto funkcí (tj. `scanf_s`, `wscanf_s`, atd.). V následujícím příkladu je specifikace šířky 20, což značí, že ze vstupního streamu se mají číst až 20 znaků. Velikost vyrovnávací paměti je 21, což zahrnuje místo pro možné 20 znaků a ukončovací znak null:
+Specifikace šířky je oddělená a odlišná od argumentu velikosti vyrovnávací paměti vyžadovaného zabezpečenými verzemi těchto funkcí (například `scanf_s`, `wscanf_s`a tak dále). V následujícím příkladu je specifikace šířky 20, což značí, že ze vstupního streamu se mají číst až 20 znaků. Velikost vyrovnávací paměti je 21, což zahrnuje místo pro možné 20 znaků a ukončovací znak null:
 
 ```C
 char str[21];
 scanf_s("%20s", str, 21);
 ```
 
-Pokud se pole *Width* nepoužívá, `scanf_s` pokusí se načíst celý token do řetězce. Pokud zadaná velikost není dostatečně velká pro uložení celého tokenu, nebude do cílového řetězce nic zapsáno. Pokud je zadáno pole *Šířka* , pak budou znaky první *šířky* v tokenu zapsány do cílového řetězce spolu s ukončovacím znakem null.
+Pokud se pole *Šířka* nepoužívá, `scanf_s` se pokusí přečíst celý token do řetězce. Pokud zadaná velikost není dostatečně velká pro uložení celého tokenu, nezapíše se do cílového řetězce nic. Pokud je zadáno pole *Šířka* , pak se znaky první *šířky* v tokenu zapisují do cílového řetězce spolu s ukončovacím znakem null.
 
 ## <a name="the-size-prefix"></a>Předpona velikosti
 
-Volitelné předpony **h**, **l**, **ll**, **I64** `argument` a **l** označují velikost (dlouhého nebo krátkého bajtového znaku nebo samostatného znaku v závislosti na tom, který typ znaku upravuje). Tyto znaky specifikace formátu se používají s znaky typu v `scanf` nebo `wscanf` k určení interpretace argumentů, jak je znázorněno v následující tabulce. Předpona typu **I64** je rozšířením společnosti Microsoft a není kompatibilní se standardem ANSI. Znaky typu a jejich význam jsou popsány v tabulce "Type Characters for scanf Functions" (znaky [pole typu scanf](../c-runtime-library/scanf-type-field-characters.md)).
+Volitelné předpony **h**, **HH**, **l**, **ll**, **I64**a **l** označují velikost `argument` (dlouhý nebo krátký, jednobajtové znak nebo velký znak v závislosti na tom, který typ znaku upravuje). Tyto znaky specifikace formátu se používají s znaky typu v `scanf` nebo `wscanf` funkce k určení interpretace argumentů, jak je znázorněno v následující tabulce. Předpona typu **I64** je rozšířením společnosti Microsoft a není kompatibilní se standardem C. Znaky typu a jejich význam jsou popsány v tabulce "Type Characters for scanf Functions" (znaky [pole typu scanf](../c-runtime-library/scanf-type-field-characters.md)).
 
 > [!NOTE]
-> Předpony **h**, **l**a **l** jsou rozšířeními společnosti Microsoft, pokud se používají s daty `char`typu.
+> Předpony **h**, **l**a **l** jsou rozšířeními společnosti Microsoft, pokud se používají s daty typu **char**.
 
 ### <a name="size-prefixes-for-scanf-and-wscanf-format-type-specifiers"></a>Předpony velikosti pro specifikátory typu scanf a wscanf formátu
 
 |Zadání|Použít předponu|Se specifikátorem typu|
 |----------------|----------------|-------------------------|
 |**double**|**l**|**e**, **e**, **f**, **g**nebo **g**|
-|**Long Double** (stejné jako Double)|**L**|**e**, **e**, **f**, **g**nebo **g**|
+|**Long Double** (totéž jako Double)|**L**|**e**, **e**, **f**, **g**nebo **g**|
 |**dlouhé celé číslo**|**l**|**d**, **i**, **o**, **x**nebo **x**|
-|**dlouhé celé číslo bez znaménka**|**l**|**u**|
+|**dlouhé celé číslo bez znaménka**|**l**|**h**|
 |**Long Long**|**vše**|**d**, **i**, **o**, **x**nebo **x**|
-|`short int`|**h**|**d**, **i**, **o**, **x**nebo **x**|
-|**krátké celé číslo bez znaménka**|**h**|**u**|
-|__**int64**|**I64**|**d**, **i**, **o**, **u**, **x**nebo **x**|
-|Jednobajtové znak s`scanf`|**h**|**c** nebo **c**|
-|Jednobajtové znak s`wscanf`|**h**|**c** nebo **c**|
-|Širší znak s`scanf`|**l**|**c** nebo **c**|
-|Širší znak s`wscanf`|**l**|**c**nebo **c**|
-|Řetězec s jedním bajtem a znakem`scanf`|**h**|**s** nebo **s**|
-|Řetězec s jedním bajtem a znakem`wscanf`|**h**|**s** nebo **s**|
-|Řetězec s velkým znakem s`scanf`|**l**|**s** nebo **s**|
-|Řetězec s velkým znakem s`wscanf`|**l**|**s** nebo **s**|
+|**krátké celé číslo**|**y**|**d**, **i**, **o**, **x**nebo **x**|
+|**krátké celé číslo bez znaménka**|**y**|**h**|
+|**char**|**HH**|**d**, **i**, **o**, **x**nebo **x**|
+|**znak bez znaménka**|**HH**|**h**|
+|**Int64**|**I64**|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|Jednobajtové znak s `scanf`|**y**|**c** nebo **c**|
+|Jednobajtové znak s `wscanf`|**y**|**c** nebo **c**|
+|Širší znak s `scanf`|**l**|**c** nebo **c**|
+|Širší znak s `wscanf`|**l**|**c**nebo **c**|
+|Řetězec znaků s jedním bajtem s `scanf`|**y**|**s** nebo **s**|
+|Řetězec znaků s jedním bajtem s `wscanf`|**y**|**s** nebo **s**|
+|Řetězec s velkým znakem s `scanf`|**l**|**s** nebo **s**|
+|Řetězec s velkým znakem s `wscanf`|**l**|**s** nebo **s**|
 
-Následující příklady používají **h** a **l** s `scanf_s` funkcemi a `wscanf_s` funkcemi:
+Následující příklady používají **h** a **l** s `scanf_s` funkcí a `wscanf_s` funkcí:
 
 ```C
 scanf_s("%ls", &x, 2);     // Read a wide-character string
@@ -82,17 +84,17 @@ Pokud používáte nezabezpečenou funkci v `scanf` rodině, vynechejte parametr
 
 ## <a name="reading-undelimited-strings"></a>Čtení nevymezených řetězců
 
-Pro čtení řetězců, které nejsou odděleny prázdnými znaky, lze pro znak typu **s** (String) nahradit sadu znaků v závorkách ( **[]** ). Sada znaků v závorkách je označována jako řídicí řetězec. Odpovídající vstupní pole je čteno s prvním znakem, který se nezobrazuje v řídicím řetězci. Pokud je první znak v sadě stříška ( **^** ), efekt je obrácený: Vstupní pole je čteno do prvního znaku, který se zobrazí ve zbývající části znakové sady.
+Pro čtení řetězců, které nejsou odděleny prázdnými znaky, lze pro znak typu **s** (String) nahradit sadu znaků v závorkách ( **[]** ). Sada znaků v závorkách je označována jako *řídicí řetězec*. Odpovídající vstupní pole je čteno do prvního znaku, který se nezobrazuje v řídicím řetězci. Pokud je první znak v sadě stříška ( **^** ), efekt je obrácený: vstupní pole je čteno na první znak, který se zobrazí ve zbývající části znakové sady.
 
-Všimněte si, že **% [a-z]** a **% [z-a]** jsou interpretovány jako ekvivalent pro **% [abcde... z]** . Toto je společná `scanf` přípona funkce, ale standard ANSI je nepožaduje.
+**% [A-z]** i **% [z-a]** jsou interpretovány jako ekvivalent pro **% [abcde... z]** . Jedná se o běžné rozšíření `scanf` funkce, ale není vyžadováno standardem C.
 
 ## <a name="reading-unterminated-strings"></a>Čtení neukončených řetězců
 
-Chcete-li uložit řetězec bez uložení ukončujícího znaku null (' \ 0 '), použijte specifikaci **%** <em>n</em>**c** , kde *n* je desítkové celé číslo. V tomto případě znak typu **c** označuje, že argument je ukazatel na pole znaků. Následující *n* znaků je čten ze vstupního datového proudu do zadaného umístění a není připojen žádný znak null (' \ 0 '). Pokud není zadán parametr *n* , jeho výchozí hodnota je 1.
+Chcete-li uložit řetězec bez uložení ukončujícího znaku null (' \ 0 '), použijte specifikaci `%Nc`, kde *N* je desítkové celé číslo. V tomto případě znak typu **c** označuje, že argument je ukazatel na pole znaků. Následující *N* znaků je čten ze vstupního datového proudu do zadaného umístění a není připojen žádný znak null (' \ 0 '). Pokud není zadán *N* , jeho výchozí hodnota je 1.
 
 ## <a name="when-scanf-stops-reading-a-field"></a>Když scanf zastaví čtení pole
 
-`scanf` Funkce vyhledá každé vstupní pole znak po znaku. Před dosažením znaku mezery z nejrůznějších důvodů může přestat číst konkrétní vstupní pole:
+Funkce `scanf` kontroluje každé vstupní pole, znak po znaku. Před dosažením znaku mezery v jednom z několika důvodů může přestat číst konkrétní vstupní pole:
 
 - Byla dosažena zadaná šířka.
 
@@ -102,7 +104,7 @@ Chcete-li uložit řetězec bez uložení ukončujícího znaku null (' \ 0 '), 
 
 - Další znak se neobjeví v dané znakové sadě.
 
-Z jakéhokoli důvodu, když `scanf` funkce zastaví čtení vstupního pole, je další vstupní pole považováno za začínající na první nepřečtený znak. Konfliktní znak, pokud existuje, je považován za nepřečtený a je prvním znakem dalšího vstupního pole nebo prvním znakem v následných operacích čtení na vstupním datovém proudu.
+Z jakéhokoli důvodu, když funkce `scanf` zastaví čtení vstupního pole, je další vstupní pole považováno za začínající na první nepřečtený znak. Konfliktní znak, pokud existuje, je považován za nepřečtený. Je to první znak dalšího vstupního pole nebo první znak v následných operacích čtení na vstupním datovém proudu.
 
 ## <a name="see-also"></a>Viz také:
 

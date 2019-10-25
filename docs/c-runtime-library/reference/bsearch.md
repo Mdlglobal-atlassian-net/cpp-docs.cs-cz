@@ -1,6 +1,6 @@
 ---
 title: bsearch
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch
 api_location:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939439"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811099"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -51,19 +51,19 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
-Objekt, který chcete vyhledat.
+\ *klíčů*
+Ukazatel na klíč, který chcete vyhledat.
 
-*base*<br/>
-Ukazatel na základ dat hledání
+*základní*\
+Ukazatel na základ dat hledání.
 
-*Automatické*<br/>
+\ *číslo*
 Počet elementů.
 
-*Šířka*<br/>
+\ *šířky*
 Šířka prvků
 
-*compare*<br/>
+*porovnat*\
 Funkce zpětného volání, která porovnává dva elementy. První je ukazatel na klíč pro hledání a druhý je ukazatel na prvek pole, který má být porovnán s klíčem.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -72,15 +72,15 @@ Funkce zpětného volání, která porovnává dva elementy. První je ukazatel 
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **bSearch** provádí binární hledání seřazeného pole *číselného* prvku, přičemž každý z nich má velikost *v bajtech* . *Základní* hodnota je ukazatel na základ pole, které má být prohledáno, a *klíč* je hledaná hodnota. Parametr *Compare* je ukazatel na uživatelsky zadanou rutinu, která porovnává požadovaný klíč s prvkem pole a vrací jednu z následujících hodnot, které určují jejich vztah:
+Funkce **bSearch** provádí binární hledání seřazeného pole *číselného* prvku, přičemž každý z nich má velikost *v bajtech* . *Základní* hodnota je ukazatel na základ pole, které má být prohledáno, a *klíč* je hledaná hodnota. Parametr *Compare* je ukazatel na uživatelsky zadanou rutinu, která porovnává požadovaný klíč s elementem pole. Vrátí jednu z následujících hodnot, které určují jejich vztah:
 
 |Hodnota vrácená rutinou *Compare*|Popis|
 |-----------------------------------------|-----------------|
 |\< 0|Klíč je menší než prvek pole.|
-|0|Klíč je roven elementu pole.|
+|0,8|Klíč je roven elementu pole.|
 |> 0|Klíč je větší než prvek pole.|
 
-Tato funkce ověří své parametry. Pokud je **hodnota** *Compare*, *klíč* nebo *číslo* null nebo pokud je hodnota *Base* **null** a *číslo* je nenulové, nebo pokud je *Šířka* nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru. ](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na `EINVAL` a funkce vrátí **hodnotu null**.
+Tato funkce ověří své parametry. Pokud je hodnota *Compare*, *klíč* nebo *číslo* **null**nebo pokud je hodnota *Base* **null** a *číslo* je nenulové, nebo pokud je *Šířka* nula, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [parametru. Ověřování](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaveno na `EINVAL` a funkce vrátí **hodnotu null**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -137,7 +137,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Viz také:
 
-[Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[Hledání a řazení](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)
