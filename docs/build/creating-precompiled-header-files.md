@@ -1,22 +1,22 @@
 ---
 title: Předkompilované soubory hlaviček
-ms.date: 08/19/2019
+ms.date: 10/24/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69630496"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920100"
 ---
 # <a name="precompiled-header-files"></a>Předkompilované soubory hlaviček
 
-Při vytváření nového projektu v aplikaci Visual Studio je do projektu přidán *předkompilovaný hlavičkový soubor* s názvem *PCH. h* . (V aplikaci Visual Studio 2017 a starší se soubor nazýval *stdafx. h*.) Účelem souboru je urychlení procesu sestavení. Všechny stabilní hlavičkové soubory, například `<vector>`, by měly být zahrnuty například hlavičky standardní knihovny (například). Předkompilovaná hlavička je kompilována pouze v případě, že je upravena nebo všechny soubory, které obsahují. Pokud provedete pouze změny ve zdrojovém kódu projektu, sestavení bude přeskočit kompilaci pro předkompilovanou hlavičku. 
+Při vytváření nového projektu v aplikaci Visual Studio je do projektu přidán *předkompilovaný hlavičkový soubor* s názvem *PCH. h* . (V aplikaci Visual Studio 2017 a starší se soubor nazýval *stdafx. h*.) Účelem souboru je urychlení procesu sestavení. Zde by měly být zahrnuty všechny stabilní hlavičkové soubory, například hlavičky standardní knihovny, například `<vector>`. Předkompilovaná hlavička je kompilována pouze v případě, že je upravena nebo všechny soubory, které obsahují. Pokud provedete pouze změny ve zdrojovém kódu projektu, sestavení bude přeskočit kompilaci pro předkompilovanou hlavičku. 
 
 Možnosti kompilátoru pro předkompilované hlavičky jsou [/y](reference/y-precompiled-headers.md). Na stránkách vlastností projektu jsou možnosti umístěny v části **Vlastnosti konfigurace > předkompilovaných hlavičekC++ C/>** . Můžete zvolit, že nebudete používat předkompilované hlavičky, a můžete zadat název souboru hlaviček a cestu k výstupnímu souboru. 
 
@@ -87,7 +87,7 @@ Když zadáte možnost použít předkompilovaný hlavičkový soubor (/Yu), kom
 
 ### <a name="pragma-consistency"></a>Pragma – konzistence
 
-Direktivy pragma zpracované během vytváření souboru PCH obvykle ovlivňují soubor, se kterým se následně používá soubor PCH. Direktivy `message` pragma aneovlivňujízbývajícíčástkompilace.`comment`
+Direktivy pragma zpracované během vytváření souboru PCH obvykle ovlivňují soubor, se kterým se následně používá soubor PCH. Direktivy pragma `comment` a `message` neovlivňují zbývající část kompilace.
 
 Tyto direktivy pragma ovlivňují pouze kód v rámci souboru PCH; neovlivňují kód, který následně používá soubor PCH:
 
@@ -118,7 +118,7 @@ Tato tabulka uvádí možnosti kompilátoru, které mohou při použití předko
 
 |Možnost|Name|Pravidlo|
 |------------|----------|----------|
-|/D|Definovat konstanty a makra|Musí být stejné mezi kompilací, která vytvořila předkompilovanou hlavičku a aktuální kompilaci. Stav definovaných konstant není zaškrtnuto, ale může dojít k nepředvídatelným výsledkům, pokud jsou soubory závislé na hodnotách změněných konstant.|
+|Parametr|Definovat konstanty a makra|Musí být stejné mezi kompilací, která vytvořila předkompilovanou hlavičku a aktuální kompilaci. Stav definovaných konstant není zaškrtnuto, ale může dojít k nepředvídatelným výsledkům, pokud jsou soubory závislé na hodnotách změněných konstant.|
 |/E nebo/EP|Kopírovat výstup preprocesoru do standardního výstupu|Předkompilované hlavičky nefungují s možností/E nebo/EP.|
 |/FR nebo/FR|Generování informací o prohlížeči zdrojového kódu Microsoftu|Aby byly možnosti/fr a/FR platné s možností/Yu, musí být také v platnosti, když byla vytvořena Předkompilovaná hlavička. Další kompilace, které používají předkompilovanou hlavičku, generují také informace o prohlížeči zdrojového kódu. Informace o prohlížeči jsou umístěny v jednom souboru. sbr a jsou odkazovány jinými soubory stejným způsobem jako informace CodeView. Umístění informací o zdrojovém prohlížeči nelze přepsat.|
 |/GA,/GD,/GE,/GW nebo/GW|Možnosti protokolu Windows|Musí být stejné mezi kompilací, která vytvořila předkompilovanou hlavičku a aktuální kompilaci. Pokud se tyto možnosti liší, zobrazí se zpráva s upozorněním.|
@@ -179,9 +179,9 @@ UNSTABLEHDRS = unstable.h
 CLFLAGS = /c /W3
 # List all linker options common to both debug and final
 # versions of your code here:
-LINKFLAGS = /NOD /ONERROR:NOEXE
+LINKFLAGS = /nologo
 !IF "$(DEBUG)" == "1"
-CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi /f
+CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi
 LINKFLAGS = $(LINKFLAGS) /COD
 LIBS      = slibce
 !ELSE
@@ -257,7 +257,7 @@ void savetime( void );
 //
 #ifndef __UNSTABLE_H
 #define __UNSTABLE_H
-#include<iostream.h>
+#include<iostream>
 void notstable( void );
 #endif // __UNSTABLE_H
 ```
@@ -270,6 +270,7 @@ void notstable( void );
 #include"another.h"
 #include"stable.h"
 #include"unstable.h"
+using namespace std;
 // The following code represents code that is deemed stable and
 // not likely to change. The associated interface code is
 // precompiled. In this example, the header files STABLE.H and
