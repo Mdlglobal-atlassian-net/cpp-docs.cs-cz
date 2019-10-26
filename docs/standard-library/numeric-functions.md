@@ -22,18 +22,18 @@ helpviewer_keywords:
 - std::transform_exclusive_scan [C++]
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
-ms.openlocfilehash: 0a9d0ce34b1dcd2dd9252f4b243db85118deabe6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ab1e2942cbcfe568dd4c280c059fe0768493794c
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246725"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889966"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;číselné&gt; funkce
 
-## <a name="accumulate"></a> accumulate
+## <a name="accumulate"></a>accumulate
 
-Vypočítá součet všech prvků v zadaném rozsahu, včetně některých počátečních hodnot výpočtem po sobě jdoucích částečných součtů nebo vypočítá výsledek po sobě jdoucích částečných výsledků podobně získaných pomocí zadané binární operace, než součtem.
+Vypočítá součet všech prvků v zadaném rozsahu včetně některé počáteční hodnoty tím, že provede výpočet po sobě jdoucích částečných součtů nebo vypočítá výsledek následných částečných výsledků podobně jako při použití zadané binární operace, která se liší od součtu.
 
 ```cpp
 template <class InputIterator, class Type>
@@ -49,25 +49,25 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parametry
 
-*první*\
-Vstupní iterátor adresující první prvek v rozsahu třeba sečítá nebo zkombinován podle zadané binární operace.
+*první* \
+Vstupní iterátor adresující první prvek v rozsahu, který má být shrnut nebo kombinován v závislosti na zadané binární operaci.
 
-*poslední*\
-Vstupní iterátor adresující poslední prvek v rozsahu se sčítat ani zkombinován podle zadané binární operace, které je o jednu pozici za posledním prvkem, který je skutečně zahrnut do iterovaného souhrnu.
+*poslední* \
+Vstupní iterátor adresující poslední prvek v rozsahu, který má být sečtený nebo kombinovaný podle zadané binární operace, která je o jednu pozici nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
-*Val*\
-Počáteční hodnota, ke kterému každý element je pak přidat nebo v kombinaci s podle zadané binární operace.
+\ *Val*
+Počáteční hodnota, na kterou jsou jednotlivé prvky v závislosti na zadané binární operaci zase přidány nebo kombinovány.
 
 *binary_op*\
-Binární operace, která se použije na každý prvek v zadaném rozsahu a výsledek jeho předchozími verzemi.
+Binární operace, která má být použita na každý prvek v zadaném rozsahu a výsledek předchozích aplikací.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Součet *val* a všechny prvky v zadaném rozsahu pro první funkce šablony, nebo jako druhá funkce šablony, výsledek použití binární operace místo operace součtu, zadaný do ( *PartialResult, \*Iter*), kde *PartialResult* je výsledkem předchozí žádosti operace a `Iter` je iterátorem ukazujícím na prvek v rozsahu.
+Součet *Val* a všech prvků v zadaném rozsahu pro první funkci šablony, nebo pro druhou funkci šablony, výsledek použití zadané binární operace místo operace Sum, do (*PartialResult, \*ITER* ), kde *PartialResult* je výsledkem předchozích aplikací operace a `Iter` je iterátor ukazující na prvek v rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-Počáteční hodnota zajistí, že bude dobře definovaných výsledek při rozsahu je prázdný, v takovém případě *val* je vrácena. Binární operace nemusí být asociativní ani komutativní. Výsledkem je inicializován na počáteční hodnotu *val* a potom *výsledek*  =  `binary_op` (*výsledek*, <strong>\*</strong> `Iter`) se počítá interaktivně pomocí rozsahu, kde `Iter` je iterátorem ukazujícím na po sobě jdoucích prvek v rozsahu. Rozsah musí být platná a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převeditelný na **typ** zajistit, že během iterace.
+Počáteční hodnota si zajistí, že bude k dispozici správný výsledek, pokud je rozsah prázdný. v takovém případě se vrátí hodnota *Val* . Binární operace nemusí být asociativní ani komutativní. Výsledek je inicializován na počáteční hodnotu *Val* a pak *výsledek* = `binary_op` (*výsledek*, <strong>\*</strong>`Iter`) se vypočítává iterativním rozsahem, kde `Iter` je iterátor ukazující na po sobě. prvek v rozsahu. Rozsah musí být platný a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převoditelné na **typ** , aby se zajistilo uzavření během iterace.
 
 ### <a name="example"></a>Příklad
 
@@ -168,7 +168,7 @@ The vector of partial products is:
 ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
-## <a name="adjacent_difference"></a> adjacent_difference
+## <a name="adjacent_difference"></a>adjacent_difference
 
 Vypočítá po sobě následující rozdíly mezi každým prvkem a jeho předchůdcem ve vstupním rozsahu a vydá výsledky do cílového rozsahu nebo vypočte výsledek zobecněné procedury, kde je operace rozdílu nahrazena jinou zadanou binární operací.
 
@@ -205,13 +205,13 @@ ForwardIterator2 adjacent_difference(
 
 ### <a name="parameters"></a>Parametry
 
-*první*\
+*první* \
 Vstupní iterátor adresující první prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými předchůdci nebo ve kterém použije dvojice hodnot jiná zadaná binární operace.
 
-*poslední*\
+*poslední* \
 Vstupní iterátor adresující poslední prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými předchůdci nebo ve kterém použije dvojice hodnot jiná zadaná binární operace.
 
-*výsledek*\
+\ *výsledku*
 Vstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém se uloží série rozdílů nebo výsledky zadané operace.
 
 *binary_op*\
@@ -219,17 +219,17 @@ Binární operace, která se použije v zobecněné operaci nahrazující operac
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výstupní iterace adresující konec cílového rozsahu: `result` + (`last` - `first`).
+Výstupní iterátor adresující konec cílového rozsahu: `result` + (`last` - `first`).
 
 ### <a name="remarks"></a>Poznámky
 
-Výstupní iterátor _ *výsledek* může být stejným iterátorem jako vstupní iterátor * první, * tak, aby `adjacent_difference`mohou být vypočítány na místě.
+*Výsledkem* výstupního iterátoru může být *stejný iterátor jako vstupní iterátor, aby*bylo možné vypočítat `adjacent_difference` hodnoty.
 
-Pro sekvenci hodnot *a*1, *a*2, *a*3, ukládá ve vstupním rozsahu, první funkce šablony po sobě jdoucích `partial_difference`s *a*1 , *a*2 - *a*1, a3 – *a*2 v cílovém rozsahu.
+Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá první funkce šablony po sobě jdoucí `partial_difference` hodnoty *a*1, *a*2- *a*1, a3- *a*2 v cílovém rozsahu.
 
-Pro sekvenci hodnot *a*1, *a*2, *a*3, ukládá ve vstupním rozsahu, druhá funkce šablony po sobě jdoucích `partial_difference`s *a* 1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2 v cílovém rozsahu.
+Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá druhá funkce šablony po sobě následující `partial_difference` hodnoty *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2 v cíli. oblasti.
 
-Binární operace `binary_op` nemusí být asociativní ani komutativní, protože se vztahuje pořadí operací je určeno.
+`binary_op` binární operace není nutné použít asociativní ani komutativní, protože je zadané pořadí operací.
 
 ### <a name="example"></a>Příklad
 
@@ -292,7 +292,7 @@ int main( )
 }
 ```
 
-## <a name="exclusive_scan"></a> exclusive_scan
+## <a name="exclusive_scan"></a>exclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator, class T>
@@ -316,14 +316,14 @@ ForwardIterator2 result,
 T init, BinaryOperation binary_op);
 ```
 
-## <a name="gcd"></a> GCD
+## <a name="gcd"></a>GCD
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
-## <a name="inclusive_scan"></a> inclusive_scan
+## <a name="inclusive_scan"></a>inclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator>
@@ -355,9 +355,9 @@ ForwardIterator2 result,
 BinaryOperation binary_op, T init);
 ```
 
-## <a name="inner_product"></a> inner_product –
+## <a name="inner_product"></a>inner_product
 
-Vypočítá součet prvků produktu ve dvou rozsazích a přidá ji do zadané počáteční hodnotě nebo vypočítá výsledek zobecněné procedury, kde jsou binární operace součtu a produktu nahrazeny jinými zadanými binárními operacemi.
+Vypočítá součet elementu v rámci produktu dvou rozsahů a přidá jej k zadané počáteční hodnotě nebo vypočítá výsledek zobecněné procedury, kde jsou souhrn a operace binárního produktu nahrazeny jinými zadanými binárními operacemi.
 
 ```cpp
 template <class InputIterator1, class InputIterator2, class Type>
@@ -379,41 +379,41 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parametry
 
-*first1*\
-Vstupní iterátor adresující první prvek v první rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní pomocí druhého rozsahu se vypočítat.
+*first1* \
+Vstupní iterátor adresující první prvek v prvním rozsahu, jehož vnitřní produkt nebo zobecněný vnitřní produkt s druhým rozsahem mají být počítány.
 
-*Příjmení1*\
-Vstupní iterátor adresující poslední prvek v první rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní pomocí druhého rozsahu se vypočítat.
+*last1* \
+Vstupní iterátor adresující poslední prvek v prvním rozsahu, jehož vnitřní produkt nebo zobecněný vnitřní produkt s druhým rozsahem mají být počítány.
 
-*first2*\
-Vstupní iterátor adresující první prvek v druhého rozsahu, jehož vnitřní nebo produkt zobecněný vnitřní s prvním rozsah má vypočítat.
+*first2* \
+Vstupní iterátor adresující první prvek ve druhém rozsahu, jehož vnitřní produkt nebo zobecněný vnitřní produkt s prvním rozsahem je vypočítáván.
 
-*Val*\
-Počáteční hodnotu, ke kterému vnitřní nebo produkt zobecněný vnitřní mezi oblastí se má přidat.
+\ *Val*
+Počáteční hodnota, na kterou se má přidat vnitřní produkt nebo zobecněný vnitřní produkt mezi rozsahy.
 
 *binary_op1*\
-Binární operace, která nahrazuje produktu vnitřní operace součtu element-wise produkty v generalizace vnitřní produktu.
+Binární operace, která nahrazuje interní operaci součinu součtu, která se použije u produktů, které jsou v generalizi, v generalizi vnitřního produktu.
 
 *binary_op2*\
-Binární operace, která nahrazuje vnitřní produktu element-wise operace násobení v generalizace vnitřní produktu.
+Binární operace, která nahrazuje prvek vnitřního produktu, který se má vynásobit ve generalizaci vnitřního produktu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První členská funkce vrátí součet element-wise produkty a přidá do ní zadaná počáteční hodnota. Ano pro rozsahy hodnot *a*i a *b*i, vrátí hodnotu:
+První členská funkce vrátí součet součinů prvků a přidá je do zadané počáteční hodnoty. Takže pro rozsahy hodnot *a*i a *b*i vrátí:
 
-`val` + (*a*1 \* *b*1) + (*a*2 \* *b*2) + … + (*a*n \* *b*n)
+`val` + (*a*1 \* *b*1) + (*a*2 \* *b*2) +... + (*a*n \* *b*n)
 
-Využívejte iterativní nahrazením *val* s `val` + (*a*můžu \* *b*můžu).
+iterativním nahrazením hodnoty *Val* pomocí `val` + (*a*i \* *b*i).
 
 Druhá členská funkce vrátí:
 
 `val` *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
 
-Využívejte iterativní nahrazením *val* s `val` *binary_op1* (*a*můžu *binary_op2* *b* i).
+iterativním nahrazením *hodnoty Val* pomocí `val` *binary_op1* (*a*i *binary_op2* *b*i).
 
 ### <a name="remarks"></a>Poznámky
 
-Počáteční hodnota zajistí, že bude dobře definovaných výsledek při rozsahu je prázdný, v takovém případě *val* je vrácena. Binární operace nemusí být asociativní ani komutativní. Rozsah musí být platná a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převeditelný na **typ** zajistit, že během iterace.
+Počáteční hodnota zajistí, že bude k dispozici správný výsledek, pokud je rozsah prázdný. v takovém případě se vrátí hodnota *Val* . Binární operace nemusejí být asociativní ani komutativní. Rozsah musí být platný a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převoditelné na **typ** , aby se zajistilo uzavření během iterace.
 
 ### <a name="example"></a>Příklad
 
@@ -505,9 +505,9 @@ int main()
 }
 ```
 
-## <a name="iota"></a> iota
+## <a name="iota"></a>p
 
-Obsahuje počáteční hodnotu počínaje prvním prvkem a následně postupné přírůstky tuto hodnotu (` value++`) v každém z prvků intervalu `[first,  last)`.
+Ukládá počáteční hodnotu počínaje prvním prvkem a naplňuje po sobě jdoucí přírůstky dané hodnoty (` value++`) v každém elementu v intervalu `[first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -516,18 +516,18 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parametry
 
-*první*\
-Vstupní iterátor adresující první prvek v rozsahu pro vyplnění.
+*první* \
+Vstupní iterátor adresující první prvek v rozsahu, který má být vyplněn.
 
-*poslední*\
-Vstupní iterátor adresující poslední prvek v rozsahu pro vyplnění.
+*poslední* \
+Vstupní iterátor adresující poslední prvek v rozsahu, který má být vyplněn.
 
-*Hodnota*\
-Počáteční hodnotu pro uložení v prvním prvku a postupně přírůstek pro pozdější elementy.
+*hodnota* \
+Počáteční hodnota, která má být uložena v prvním prvku a v případě pozdějšího zvýšení pro pozdější prvky.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje některá použití pro `iota` funkce vyplněním [seznamu](../standard-library/list.md) celých čísel a potom naplnění [vektoru](../standard-library/vector.md) s `list` tak, aby [random_ Shuffle](../standard-library/algorithm-functions.md#random_shuffle) funkci lze použít.
+Následující příklad ukazuje některé použití funkce `iota` vyplněním [seznamu](../standard-library/list.md) celých čísel a následně vyplněním [vektoru](../standard-library/vector.md) pomocí `list`, aby bylo možné použít funkci [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) .
 
 ```cpp
 // compile by using: cl /EHsc /nologo /W4 /MTd
@@ -567,16 +567,16 @@ int main(void)
 }
 ```
 
-## <a name="lcm"></a> LCM
+## <a name="lcm"></a>chyb
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> lcm(M m, N n);
 ```
 
-## <a name="partial_sum"></a> partial_sum –
+## <a name="partial_sum"></a>partial_sum
 
-Vypočítá sérii součtů ve vstupním rozsahu od prvního prvku po *můžu*tý prvek a uloží výsledek každého součtu v *můžu*-tém prvku cílového rozsahu nebo vypočítá výsledek zobecněné procedury, kde je operace součtu nahrazena jinou zadanou binární operací.
+Vypočítá sérii součtů ve vstupním rozsahu od prvního prvku *po i*-tý prvek a uloží výsledek každého součtu v *i*-tém prvku cílového rozsahu nebo vypočítá výsledek zobecněné procedury, kde je operace součtu nahradila jinou zadanou binární operací.
 
 ```cpp
 template <class InputIterator, class OutIt>
@@ -595,13 +595,13 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parametry
 
-*první*\
+*první* \
 Vstupní iterátor adresující první prvek v rozsahu, u kterého bude proveden částečný součet nebo který bude zkombinován podle zadané binární operace.
 
-*poslední*\
+*poslední* \
 Vstupní iterátor adresující poslední prvek v rozsahu, u kterého bude proveden částečný součet nebo který bude zkombinován podle zadané binární operace, který se nachází o jednu pozici za posledním prvkem, který je skutečně zahrnut do iterovaného souhrnu.
 
-*výsledek*\
+\ *výsledku*
 Vstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém se uloží série částečných součtů nebo výsledky zadané operace.
 
 *binary_op*\
@@ -609,17 +609,17 @@ Binární operace, která se použije v zobecněné operaci nahrazující operac
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výstupní iterace adresující konec cílového rozsahu: `result` + (`last` - `first`),
+Výstupní iterátor adresující konec cílového rozsahu: `result` + (`last` - `first`),
 
 ### <a name="remarks"></a>Poznámky
 
-Výstupní iterátor *výsledek* může být stejným iterátorem jako vstupní iterátor *první*, takže částečné součty mohou být vypočítány na místě.
+*Výsledkem* výstupního iterátoru může být *stejný iterátor jako vstupní iterátor, aby*bylo možné vypočítat částečné součty.
 
-Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu, první šablona funkce ukládá po sobě jdoucích částečných součtů v cílovém rozsahu, kde *můžu*tý prvek je dán (((*a*1 + *a*2) + *a*3) *a*můžu).
+Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá první funkce šablony po sobě jdoucí částečné součty do cílového rozsahu, kde *i*-tý prvek je dán hodnotou *((((1 +* *a*2) + *a*3) a.i).
 
-Pro sekvenci hodnot 1, 2, 3 ve vstupním rozsahu, druhá funkce šablony jsou uloženy po sobě jdoucích částečných součtů v cílovém rozsahu, kde je i-tý prvek zobrazit příkazem (((1 `binary_op`  2)`binary_op`  3)můžu).
+Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá druhá funkce šablony po sobě jdoucí částečné součty do cílového rozsahu, kde je druhý element dán ( *(((1 `binary_op`* *a*2 *) `binary_op`* 3) *.*
 
-Binární operace *binary_op* nemusí být asociativní ani komutativní, protože se vztahuje pořadí operací je určeno.
+*Binary_op* binární operace nemusí být asociativní ani komutativní, protože je zadáno pořadí operací.
 
 ### <a name="example"></a>Příklad
 
@@ -681,7 +681,7 @@ int main( )
 }
 ```
 
-## <a name="reduce"></a> snížení
+## <a name="reduce"></a>úrovně
 
 ```cpp
 template<class InputIterator>
@@ -705,7 +705,7 @@ ForwardIterator first, ForwardIterator last, T init,
 BinaryOperation binary_op);
 ```
 
-## <a name="transform_exclusive_scan"></a> transform_exclusive_scan
+## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator, class T,
@@ -726,7 +726,7 @@ BinaryOperation binary_op,
 UnaryOperation unary_op);
 ```
 
-## <a name="transform_inclusive_scan"></a> transform_inclusive_scan
+## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator,
@@ -761,7 +761,7 @@ UnaryOperation unary_op,
 T init);
 ```
 
-## <a name="transform_reduce"></a> transform_reduce
+## <a name="transform_reduce"></a>transform_reduce
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class T>

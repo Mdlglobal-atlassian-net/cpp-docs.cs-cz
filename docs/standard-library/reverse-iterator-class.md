@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: aadc5cffd6f88de175ff04f50d6572e38ba05533
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 99fe323177c0aff29f5f01e6835bd800616e2e16
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686574"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889982"
 ---
 # <a name="reverse_iterator-class"></a>reverse_iterator – třída
 
@@ -42,13 +42,13 @@ RandomIterator typ, který představuje iterátor, který má být přizpůsoben
 
 ## <a name="remarks"></a>Poznámky
 
-Existující C++ kontejnery standardní knihovny také definují `reverse_iterator` a `const_reverse_iterator` typy a mají členské funkce `rbegin` a `rend`, které vracejí reverzní iterátory. Tyto iterátory mají sémantiku přepisu. @No__t_0 adaptér doplňuje tuto funkci, protože nabízí sémantiku vkládání a lze ji také použít s datovými proudy.
+Existující C++ kontejnery standardní knihovny také definují`reverse_iterator`a`const_reverse_iterator`typy a mají členské funkce`rbegin`a`rend`, které vracejí reverzní iterátory. Tyto iterátory mají sémantiku přepisu. `reverse_iterator` adaptér doplňuje tuto funkci, protože nabízí sémantiku vkládání a lze ji také použít s datovými proudy.
 
-@No__t_0, která vyžaduje obousměrný iterátor, nesmí volat žádné členské funkce `operator+=`, `operator+`, `operator-=`, `operator-` nebo `operator[]`, které lze použít pouze s iterátory s náhodným přístupem.
+`reverse_iterator`, která vyžaduje obousměrný iterátor, nesmí volat žádné členské funkce `operator+=`, `operator+`, `operator-=`, `operator-`nebo `operator[]`, které lze použít pouze s iterátory s náhodným přístupem.
 
-Rozsah iterátoru je [*First*, *Last*), kde čtvercová závorka vlevo označuje zahrnutí *prvního* a závorky na pravé straně značí zahrnutí prvků až do *posledního* samotného. Stejné prvky jsou zahrnuté do reverzní sekvence [ **rev**  - *first*, **REV**  - *Last*), takže pokud *Poslední* je prvek, který je v sekvenci jednou po konci, pak první element **REV**  -  *první* v obrácené sekvenci ukazuje na 0 (*posledních* -1). Identita, která spojuje všechny obrácené iterátory s jejich základním iterátorem, je:
+Rozsah iterátoru je [*First*, *Last*), kde čtvercová závorka vlevo označuje zahrnutí *prvního* a závorky na pravé straně značí zahrnutí prvků až do *posledního* samotného. Stejné prvky jsou zahrnuté do reverzní sekvence [ **rev** - *first*, **REV** - *Last*), takže pokud *Poslední* je prvek, který je v sekvenci jednou po konci, pak první element **REV** -  *první* v obrácené sekvenci ukazuje na \*(*posledních* -1). Identita, která spojuje všechny obrácené iterátory s jejich základním iterátorem, je:
 
-& \* ( **reverse_iterator** ( *i* )) = = & \* ( *i* -1).
+&\*( **reverse_iterator** ( *i* )) = = &\*( *i* -1).
 
 V praxi to znamená, že v obrácené sekvenci bude iterátor reverse_iterator ukazovat na prvek o jednu pozici za prvkem (vpravo), na který iterátor ukazoval v původní sekvenci. Takže pokud iterátor adresující prvek 6 v sekvenci (2, 4, 6, 8), pak `reverse_iterator` adresuje prvek 4 v obrácené sekvenci (8, 6, 4, 2).
 
@@ -109,7 +109,7 @@ Iterátor podkladové `reverse_iterator`.
 
 Identita, která se vztahuje na všechny reverzní iterátory na své základní iterátory, je:
 
-& \* (`reverse_iterator` ( *i* )) = = & \* ( *i* -1).
+&\*(`reverse_iterator` ( *i* )) = = &\*( *i* -1).
 
 V praxi to znamená, že v obrácené sekvenci `reverse_iterator` odkaz na element, který překračuje (napravo od) prvku, na který iterátor odkazoval v původní sekvenci. Takže pokud iterátor adresující prvek 6 v sekvenci (2, 4, 6, 8), pak `reverse_iterator` adresuje prvek 4 v obrácené sekvenci (8, 6, 4, 2).
 
@@ -174,11 +174,11 @@ typedef typename iterator_traits<RandomIterator>::difference_type  difference_ty
 
 Typ rozdílu `reverse_iterator` je stejný jako typ rozdílu iterátoru.
 
-Typ je synonymum pro vlastnost TypeName typu iterátor `iterator_traits` \< **RandomIterator** >  **::p ointer**.
+Typ je synonymum pro vlastnost TypeName typu iterátor `iterator_traits`\< **RandomIterator**>  **::p ointer**.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a používat `difference_type`, naleznete v tématu [reverse_iterator:: operator&#91; ](#op_at) .
+Příklad, jak deklarovat a používat`difference_type`, naleznete v tématu [reverse_iterator:: operator&#91; ](#op_at) .
 
 ## <a name="iterator_type"></a>reverse_iterator::iterator_type
 
@@ -196,7 +196,7 @@ Typ je synonymum pro parametr šablony `Iterator`.
 
 Příklad, jak deklarovat a používat `iterator_type`, naleznete v tématu [reverse_iterator:: Base](#base) .
 
-## <a name="op_star"></a>reverse_iterator:: operator \*
+## <a name="op_star"></a>reverse_iterator:: operator\*
 
 Vrátí prvek, který je reverse_iterator adresami.
 
@@ -270,7 +270,7 @@ Posun, který má být přidán do reverzního iterátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-@No__t_0 adresování posunutí elementu.
+`reverse_iterator` adresování posunutí elementu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -492,7 +492,7 @@ Posun, který má být odečten od reverse_iterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-@No__t_0 adresování posunutí elementu.
+`reverse_iterator` adresování posunutí elementu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -644,7 +644,7 @@ Posun, který má být odečten od `reverse_iterator`.
 
 Tato členská funkce se dá použít jenom v případě, že `reverse_iterator` splňuje požadavky pro iterátor náhodného přístupu.
 
-Operátor vyhodnocuje **aktuální** *+ _.* pak vrátí **\*this**.
+Operátor vyhodnocuje **aktuální** * + a* potom vrátí **\*** .
 
 ### <a name="example"></a>Příklad
 
@@ -869,7 +869,7 @@ typedef typename iterator_traits<RandomIterator>::pointer pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro vlastnost TypeName typu iterátor `iterator_traits` \< *RandomIterator* >  **::p ointer**.
+Typ je synonymum pro vlastnost TypeName typu iterátor `iterator_traits`\< *RandomIterator*>  **::p ointer**.
 
 ### <a name="example"></a>Příklad
 
@@ -941,11 +941,11 @@ typedef typename iterator_traits<RandomIterator>::reference reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro vlastnost TypeName typu iterátoru `iterator_traits` \< *RandomIterator* >  **:: Reference**.
+Typ je synonymum pro vlastnost TypeName typu iterátoru `iterator_traits`\< *RandomIterator*>  **:: Reference**.
 
 ### <a name="example"></a>Příklad
 
-Příklady, jak deklarovat a používat `reference`, naleznete v tématu [reverse_iterator:: operator&#91; ](#op_at) nebo [reverse_iterator:: operator *](#op_star) .
+Příklady, jak deklarovat a používat`reference`, naleznete v tématu [reverse_iterator:: operator&#91; ](#op_at) nebo [reverse_iterator:: operator *](#op_star) .
 
 ## <a name="reverse_iterator"></a>reverse_iterator::reverse_iterator
 
@@ -972,7 +972,7 @@ Výchozí `reverse_iterator` nebo `reverse_iterator` přizpůsobování podklado
 
 Identita, která spojuje všechny obrácené iterátory s jejich základním iterátorem, je:
 
-& \* (`reverse_iterator` ( *i* )) = = & \* ( *i* -1).
+&\*(`reverse_iterator` ( *i* )) = = &\*( *i* -1).
 
 V praxi to znamená, že v obrácené sekvenci bude iterátor reverse_iterator ukazovat na prvek o jednu pozici za prvkem (vpravo), na který iterátor ukazoval v původní sekvenci. Takže pokud iterátor adresující prvek 6 v sekvenci (2, 4, 6, 8), pak `reverse_iterator` adresuje prvek 4 v obrácené sekvenci (8, 6, 4, 2).
 
