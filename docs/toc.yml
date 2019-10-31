@@ -1157,34 +1157,7 @@
                     - name: Ukázkový soubor pravidel
                       href: build/reference/sample-makefile.md
                 - name: Bloky popisů
-                  expanded: false
-                  items:
-                    - name: Bloky popisů
-                      href: build/reference/description-blocks.md
-                    - name: Cíle
-                      expanded: false
-                      items:
-                        - name: Cíle
-                          href: build/reference/targets.md
-                        - name: Pseudocíle
-                          href: build/reference/pseudotargets.md
-                        - name: Více cílů
-                          href: build/reference/multiple-targets.md
-                        - name: Kumulativní závislosti
-                          href: build/reference/cumulative-dependencies.md
-                        - name: Cíle ve více blocích popisů
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: Vedlejší efekty závislostí
-                          href: build/reference/dependency-side-effects.md
-                    - name: Závislosti
-                      expanded: false
-                      items:
-                        - name: Závislosti
-                          href: build/reference/dependents.md
-                        - name: Odvozené závislé prvky
-                          href: build/reference/inferred-dependents.md
-                        - name: Cesty hledání závislých prvků
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: Příkazy v souboru pravidel
                   expanded: false
                   items:
@@ -1410,6 +1383,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA
