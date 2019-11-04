@@ -21,20 +21,20 @@ Určuje zarovnání balení pro členy struktury, sjednocení a třídy.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **sada #pragma pack (show)** \
-> **#pragma pack (push** [ **,** *Identifier* ] [ **,** *n* ] **)** \
-> **#pragma pack (pop** [ **;** { *identifikátor* | *n* }] **)** \
+> **#pragma pack( show )** \
+> **#pragma pack ( push** [ **,** *Identifier* ] [ **,** *n* ] **)** \
+> **#pragma pack ( pop** [ **;** { *identifikátor* | *n* }] **)** \
 > **#pragma pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>Parametry
 
-**uvádí**\
+**show**\
 Volitelné Zobrazí aktuální bajtovou hodnotu zarovnání balení. Hodnota se zobrazí ve zprávě upozornění.
 
-**replik**\
+**push**\
 Volitelné Posune aktuální hodnotu zarovnání balení do vnitřního zásobníku kompilátoru a nastaví aktuální hodnotu zarovnání balení na *n*. Pokud není zadán *n* , aktuální hodnota zarovnání pro sbalení je vložena.
 
-**výstrah**\
+**pop**\
 Volitelné Odebere záznam z horní části interního zásobníku kompilátoru. Pokud není zadán parametr *n* s příkazem **POP**, pak hodnota balení přidružená k výslednému záznamu v horní části zásobníku je nová hodnota zarovnání balení. Pokud je zadána hodnota *n* , například `#pragma pack(pop, 16)`,, *n* se bude novou hodnotou zarovnání balení. Pokud jste se přizpůsobili pomocí identifikátoru, `#pragma pack(pop, r1)`například, pak všechny záznamy v zásobníku budou odebrány, dokud nebude nalezen záznam s *identifikátorem* . Tento záznam se vyjímá a hodnota balení přidružená k výslednému záznamu v horní části zásobníku je nová hodnota zarovnání balení. Pokud jste přihlášeni pomocí identifikátoru, který nebyl nalezen v žádném záznamu v zásobníku, pak se **POP** ignoruje.
 
 *RID*\
