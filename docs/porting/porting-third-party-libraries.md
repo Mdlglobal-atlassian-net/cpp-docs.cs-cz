@@ -1,30 +1,30 @@
 ---
-title: Přenos knihoven třetích stran
-ms.date: 01/10/2017
+title: Portování knihoven třetích stran
+ms.date: 10/29/2019
 helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-ms.openlocfilehash: e1aefc82eb23a8479035dd3372fa9ec24ab8feb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89460af1ad0b356f4f5952141636a9f067131750
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337229"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627194"
 ---
-# <a name="porting-third-party-libraries"></a>Přenos knihoven třetích stran
+# <a name="porting-third-party-libraries"></a>Portování knihoven třetích stran
 
-Při upgradu projektu na aktuální verzi jazyka Visual C++, musíte také upgradovat všechny knihovny, které používá projekt tak, aby knihovny a váš projekt jsou vybaveny stejnou verzi a flavor kompilátoru. (Další informace najdete v tématu [přehled potenciálních problémů s upgradem](overview-of-potential-upgrade-issues-visual-cpp.md)).
+Při upgradu projektu z Visual Studio 2013 nebo předchozí na aktuální verzi vizuálu C++je také nutné upgradovat všechny knihovny, které projekt používá, aby knihovna a projekt byly sestaveny se stejnou verzí a charakterem kompilátoru. Pokud nemáte přístup ke zdrojovému kódu knihovny a knihovna není k dispozici prostřednictvím vcpkg, musíte získat aktualizovaný binární soubor od dodavatele knihovny. (Další informace najdete v tématu [Přehled potenciálních problémů s upgradem](overview-of-potential-upgrade-issues-visual-cpp.md)).
 
-## <a name="introducing-vcpkg"></a>Představujeme vcpkg
+Při upgradu aplikace ze sady Visual Studio 2015 nebo Visual Studio 2017 na Visual Studio 2019 není nutné upgradovat závislosti, protože kód vygenerovaný těmito třemi verzemi je binární kompatibilní. Další informace naleznete v tématu [ C++ binární kompatibilita mezi Visual Studio 2015 a Visual Studio 2019](binary-compat-2015-2017.md).
 
-V minulosti byl někdy netriviální úkolů hledání a upgrade knihovny 3. stran. Do usnadňují získání a znovu sestavte C++ 3. stran open source knihoven Visual C++ tým vytvořil nástroj příkazového řádku, volá se, **balení nástrojů VC ++** nebo **vcpkg**. Vcpkg má katalog mnoho oblíbených open source knihoven C++. V katalogu přímo z příkazového řádku vcpkg můžete nainstalovat všechny knihovny. Při instalaci knihovny Vcpkg vytvoří stromu adresáře na počítači a přidá .h, .lib a binární soubory v této složce. Můžete použít tuto složku v příkazovém řádku kompilace, nebo ji integrovat do sady Visual Studio 2015 nebo později pomocí vcpkg integrace instalačního příkazu. Po integraci umístění knihovny sady Visual Studio můžete najít ho a přidat ho do nového projektu, který vytvoříte. Pro použití knihovny, právě `#include` a sady Visual Studio bude automaticky přidat cestu .lib do nastavení projektu a kopírování knihovny dll do složky řešení. Další informace najdete v tématu [vcpkg: Správce balíčků pro C++](../build/vcpkg.md).
+## <a name="vcpkg-for-open-source-libraries"></a>vcpkg pro open source knihovny
 
-## <a name="reporting-issues"></a>Hlášení problémů s
+V minulosti bylo hledání a upgrade knihoven třetích stran někdy netriviální úloha. Aby bylo snazší získat a znovu sestavovat C++ open source knihovny třetích stran, vytvořil vizuální C++ tým nástroj příkazového řádku, který se nazývá nástroj pro **balení VC + +** nebo **vcpkg**. Vcpkg má katalog s možností vyhledávání mnoha oblíbených C++ Open Source knihoven. Libovolnou knihovnu v katalogu můžete nainstalovat přímo z příkazového řádku vcpkg. Při instalaci knihovny vytvoří Vcpkg ve vašem počítači stromovou strukturu a do této složky přidá. h,. lib a binární soubory. Tuto složku můžete použít v příkazovém řádku kompilace nebo ji integrovat do sady Visual Studio 2015 nebo novější pomocí příkazu integrace vcpkg Integration Install. Po integraci umístění knihovny může Visual Studio najít ho a přidat ho do libovolného nového projektu, který vytvoříte. Chcete-li použít knihovnu, stačí ji `#include` a Visual Studio automaticky přidá cestu. lib k nastavení projektu a zkopíruje knihovnu DLL do složky řešení. Další informace najdete v tématu [vcpkg: Správce balíčků pro C++ ](../build/vcpkg.md).
 
-Pokud není k dispozici v knihovně **vcpkg** katalogu, které otevřete problém na [úložiště GitHub se vzorovými](https://github.com/Microsoft/vcpkg/issues) kde komunity a týmu Visual C++ můžete podívat, jak to a potenciálně vytvořit soubor port pro tuto knihovnu.
+## <a name="reporting-issues"></a>Vytváření sestav – problémy
 
-Pro nechráněný 3 stran knihovny (není otevřený zdroj) doporučujeme, abyste se obrátili zprostředkovatele knihovny. Ale jsme chtěli vědět o žádné speciální knihovny používají a zablokuje, dejte nám vědět, které z nich záviset na (můžete kontaktujte nás na adrese vcupgrade@microsoft.com).
+Pokud vaše open source knihovna není přítomna v katalogu **vcpkg** , můžete otevřít problém v [úložišti GitHub](https://github.com/Microsoft/vcpkg/issues) , kde ho komunita a Visual C++ tým uvidí a případně můžou vytvořit soubor portu pro tuto knihovnu.
 
 ## <a name="see-also"></a>Viz také:
 

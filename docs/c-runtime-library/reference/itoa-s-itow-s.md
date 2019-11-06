@@ -79,14 +79,14 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 204abd65981371a970623879ec94ff77db6728b2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953555"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625070"
 ---
-# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
 Převede celé číslo na řetězec. Jedná se o verze [_itoa, _itow funkce](itoa-itow.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -144,7 +144,7 @@ Výstupní vyrovnávací paměť, která obsahuje výsledek převodu.
 *hodnota*<br/>
 Velikost *vyrovnávací paměti* ve znacích nebo ve velkých znacích.
 
-*radix*<br/>
+*Číselná*<br/>
 Číselná základ číselné soustavy, která se má použít k převodu *hodnoty*, která musí být v rozsahu 2-36.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -153,10 +153,10 @@ Nula v případě úspěchu; chybový kód při selhání. Pokud platí kteráko
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|value|Vyrovnávací paměti|velikost|radix|vrátit|
+|value|Vyrovnávací paměti|velikost|Číselná|Vrátit|
 |-----------|------------|----------------------|-----------|------------|
-|Jakýmikoli|**NULL**|Jakýmikoli|Jakýmikoli|**EINVAL**|
-|Jakýmikoli|Jakýmikoli|<=0|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|**PLATNOST**|Jakýmikoli|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|Jakýmikoli|< = 0|Jakýmikoli|**EINVAL**|
 |Jakýmikoli|Jakýmikoli|< = délka požadovaného řetězce výsledku|Jakýmikoli|**EINVAL**|
 |Jakýmikoli|Jakýmikoli|Jakýmikoli|*základ* < 2 nebo *Číselná* > 36|**EINVAL**|
 
@@ -170,7 +170,7 @@ S výjimkou parametrů a návratové hodnoty mají rodiny funkcí **_itoa_s** a 
 
 V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 CRT obsahuje vhodná makra pro definování velikosti vyrovnávací paměti, která je nutná k převodu nejdelší možné hodnoty každého typu celého čísla, včetně ukončovacího znaku null a znaku znaménka pro několik běžných základů. Další informace naleznete v tématu [maximální počet převodů makra](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -188,7 +188,7 @@ CRT obsahuje vhodná makra pro definování velikosti vyrovnávací paměti, kte
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<Stdlib. h >|
 |**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<Stdlib. h > nebo \<WCHAR. h >|
 
 Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

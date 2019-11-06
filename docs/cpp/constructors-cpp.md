@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 8fa7f02f8537f60b71ff21a476589cab9fcf595b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587942"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625090"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -68,7 +68,7 @@ int main()
 
 ## <a name="member_init_list"></a>Seznamy inicializátorů členů
 
-Konstruktor může volitelně mít seznam inicializátorů členů, který inicializuje členy třídy před spuštěním těla konstruktoru. (Všimněte si, že seznam inicializátorů členů není stejný jako *seznam inicializátorů* typu [std:: initializer_list \<T >](../standard-library/initializer-list-class.md).)
+Konstruktor může volitelně mít seznam inicializátorů členů, který inicializuje členy třídy před spuštěním těla konstruktoru. (Všimněte si, že seznam inicializátorů členů není stejný jako *seznam inicializátorů* typu [std:: initializer_list\<t >](../standard-library/initializer-list-class.md).)
 
 Použití seznamu inicializátoru členů je upřednostňováno při přiřazování hodnot v těle konstruktoru, protože přímo inicializuje člen. V následujícím příkladu ukazuje seznam inicializátorů členů se skládá ze všech výrazů **identifikátoru (Argument)** za dvojtečkou:
 
@@ -78,7 +78,7 @@ Použití seznamu inicializátoru členů je upřednostňováno při přiřazov�
     {}
 ```
 
-Identifikátor musí odkazovat na člena třídy; je inicializován s hodnotou argumentu. Argument může být jeden z parametrů konstruktoru, volání funkce nebo [std:: initializer_list \<T >](../standard-library/initializer-list-class.md).
+Identifikátor musí odkazovat na člena třídy; je inicializován s hodnotou argumentu. Argument může být jeden z parametrů konstruktoru, volání funkce nebo [std:: initializer_list\<t >](../standard-library/initializer-list-class.md).
 
 v seznamu inicializátoru členů musí být inicializovány **konstantní** členy a členy typu odkazu.
 
@@ -318,7 +318,7 @@ Konstruktor se může deklarovat jako [constexpr](constexpr-cpp.md) , pokud
 
 ## <a name="init_list_constructors"></a>Konstruktory seznamu inicializátorů
 
-Pokud konstruktor přebírá jako svůj parametr hodnotu [std:: initializer_list \<T \>](../standard-library/initializer-list-class.md) a všechny ostatní parametry mají výchozí argumenty, tento konstruktor bude vybrán v řešení přetížení, pokud je vytvořena instance pomocí metody Direct operace. Initializer_list můžete použít k inicializaci libovolného člena, který ho může přijmout. Předpokládejme například, že třída box (uvedená dříve) má `m_contents` `std::vector<string>` členů. Můžete zadat konstruktor podobný tomuto:
+Pokud konstruktor přebírá jako svůj parametr [std:: initializer_list\<t\>](../standard-library/initializer-list-class.md) a všechny ostatní parametry mají výchozí argumenty, tento konstruktor se vybere v řešení přetížení při vytváření instance pomocí Direct operace. Initializer_list můžete použít k inicializaci libovolného člena, který ho může přijmout. Předpokládejme například, že třída box (uvedená dříve) má `m_contents``std::vector<string>` členů. Můžete zadat konstruktor podobný tomuto:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)

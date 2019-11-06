@@ -1,70 +1,73 @@
 ---
-title: Pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů
-ms.date: 11/04/2016
+title: Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí
+ms.date: 10/25/2019
 helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 35f6ac980a451b375d5005c20853fdd29c78d96d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448954"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627150"
 ---
-# <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů
+# <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí
 
-Za normálních okolností doporučujeme aktualizovat projekty, když instalujete nejnovější verzi sady Visual Studio. Náklady na aktualizaci projekty a kód se obvykle více než posun tak výhod nového integrovaného vývojového prostředí, kompilátor, knihovny a nástroje. Ale víme, že nemusí být schopen aktualizovat některé projekty. Můžete mít binární soubory, které jsou vázané na starší platformy, že z důvodů údržby nelze upgradovat nebo knihovny. Váš kód může použít nestandardní jazykovým konstrukcím, které by přerušit, pokud jste přesunuli na novější kompilátoru. Váš kód může spoléhat na 3. stran knihovny pro konkrétní verzi nástroje Visual C++. Nebo může vytvořit knihovny pro ostatní uživatele, které musí cílit na konkrétní starší verze jazyka Visual C++.
+Normálně doporučujeme, abyste projekty aktualizovali při instalaci nejnovější verze sady Visual Studio. Náklady na aktualizaci vašich projektů a kódu jsou obvykle větší než posun díky výhodám nového integrovaného vývojového prostředí (IDE, kompilátoru, knihoven a nástrojů). Víme ale, že možná nebudete moct aktualizovat některé projekty. Můžete mít binární soubory, které jsou svázané se staršími knihovnami nebo platformami, z důvodů údržby nemůžete upgradovat. Váš kód může používat nestandardní jazykové konstrukce, které by byly přerušeny, pokud jste přešli na novější kompilátor. Váš kód může spoléhat na knihovny třetích stran zkompilované pro konkrétní verzi vizuálu C++. Případně můžete vytvořit knihovny pro jiné, které musí cílit na konkrétní starší verzi vizuálu C++.
 
-Naštěstí můžete použít Visual Studio 2017 a Visual Studio 2015 k sestavení projektů, které cílový starší sady nástrojů kompilátoru a knihovny. Nemusíte upgradovat Visual Studio 2010, Visual Studio 2012, Visual Studio 2013 nebo projektu sady Visual Studio 2015 využívat nové funkce v integrovaném vývojovém prostředí:
+Naštěstí můžete pomocí sady Visual Studio 2017 a sady Visual Studio 2015 sestavovat projekty, které cílí na starší sady nástrojů a knihovny pro kompilátor. Nemusíte upgradovat projekt sady Visual Studio 2010, Visual Studio 2012, Visual Studio 2013 nebo Visual Studio 2015, aby bylo možné využívat nové funkce v integrovaném vývojovém prostředí (IDE):
 
-  - Nové funkce refaktoringu jazyka C++ a experimentální funkce editoru
-  - Nové nástroje pro diagnostiku ladicího programu a do okna Seznam chyb
+  - Nové C++ funkce refaktoringu a experimentální funkce editoru
+  - Nové okno ladicího programu nástrojů pro diagnostiku a Seznam chyb okno
   - Přepracované zarážky, okno výjimky a nové tipy pro výkon
-  - Nové nástroje navigace a vyhledávání kódu
-  - Nové rychlé opravy C++ a rozšíření nástrojů Productivity Power Tools.
+  - Nové nástroje pro navigaci v kódu a nástroje pro hledání
+  - Nové C++ rychlé opravy a produktivita rozšíření Power Tools.
 
-Můžete také směrovat projektů Visual Studio 2008, ale nelze je použít beze změny. Podrobnosti najdete v tématu **pokyny, jak Visual Studio 2008** oddílu.
+Můžete také cílit na projekty sady Visual Studio 2008, ale nelze je použít beze změny. Podrobnosti naleznete v části **pokyny pro Visual Studio 2008** .
 
-Nejnovější verze sady Visual Studio podporují nativní cílení na více platforem a verzemi projektů. Nativní cílení na více platforem je schopnost nejnovější integrovaného vývojového prostředí pro sestavení pomocí nástrojů, které jsou nainstalované v předchozích verzích sady Visual Studio. Verzemi je schopnost nejnovější IDE načtěte projekty vytvořené v předchozí verzi integrované vývojové prostředí bez jakýchkoli změn do projektu. Pokud nainstalujete nejnovější verzi sady Visual Studio – souběžně se stávající verzi, můžete použít novou verzi rozhraní IDE s kompilátorem a nástroji ze stávající verze k sestavování vašich projektů. Ostatní členové týmu můžete dál používat projekty ve starší verzi sady Visual Studio.
+Nejnovější verze sady Visual Studio podporují nativní cílení na více verzí a kruhové Trip projektů. Nativní cílení na více verzí je schopnost nejnovějšího integrovaného vývojového prostředí (IDE) pro sestavení pomocí sad nástrojů nainstalovaných předchozími verzemi sady Visual Studio. Round-Trip je schopnost nejnovějšího rozhraní IDE načíst projekty vytvořené předchozí verzí IDE bez provedení změn v projektu. Pokud nainstalujete nejnovější verzi sady Visual Studio vedle stávající verze, můžete použít novou verzi rozhraní IDE s kompilátorem a nástroji z existující verze k sestavení projektů. Jiní členové týmu mohou nadále používat projekty ve starší verzi sady Visual Studio.
 
-Pokud používáte starší sadu nástrojů, můžete využít výhod řadu nejnovější funkce integrovaného vývojového prostředí, ale ne nejnovější zálohy C++ kompilátor, knihovny a nástroje sestavení. Například nebudou moct použít nová shoda vylepšení jazyka nové ladění a funkce analýzy kódu nebo získat rychlejší propustnost sestavení na nejnovější sadu nástrojů. Existují také některé funkce integrovaného vývojového prostředí, které nejsou kompatibilní s starší sady nástrojů. Například typ informace jsou pravděpodobně chybí v Profiler paměti a operaci refaktoringu **převést na nezpracované řetězcové literály** generuje C ++ 11 kompatibilní kód, který nebude kompilovat při použití sady Visual Studio 2012 nebo starší sady nástrojů.
+Použijete-li starší sadu nástrojů, můžete využít mnoho nejnovějších funkcí rozhraní IDE, ale ne poslední pokrok v C++ kompilátoru, knihovnách a nástrojích sestavení. Například nebudete moci používat nová vylepšení v souladu s jazyky, nové funkce ladění a analýzy kódu nebo získat rychlejší sestavení nejnovější sady nástrojů. K dispozici jsou také některé funkce rozhraní IDE, které jsou nekompatibilní se staršími sadami nástrojů. Například informace o typu mohou chybět v profileru paměti a operace refaktoringu **převedené na nezpracované řetězcové literály** generuje kód kompatibilní s jazykem C + +11, který nebude zkompilován při použití sady Visual Studio 2012 nebo starší sady nástrojů.
 
-## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>Jak používat nativní cílení na více platforem v sadě Visual Studio
+## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>Jak používat nativní cílení na více platforem v aplikaci Visual Studio
 
-Po instalaci sady Visual Studio – souběžně se starší verzí, otevřete existující projekt v nové verzi sady Visual Studio. Při načtení projektu sady Visual Studio vás zeptá, zda chcete upgradovat na nejnovější kompilátor jazyka C++ a knihoven. Vzhledem k tomu, aby se projekt zachovat starší kompilátor a knihovny, zvolte **zrušit** tlačítko.
+Jakmile nainstalujete sadu Visual Studio souběžně se starší verzí, otevřete existující projekt v nové verzi sady Visual Studio. Po načtení projektu aplikace Visual Studio zobrazí dotaz, zda chcete upgradovat, aby používala nejnovější C++ kompilátor a knihovny. Vzhledem k tomu, že chcete, aby projekt zachoval starší kompilátor a knihovny, klikněte na tlačítko **Storno** .
 
-Visual Studio je trvalé o upgradu projektu. Chcete-li předejít zobrazení upgradu dialogového okna pokaždé, když načtete projekt, můžete definovat následující vlastnosti v projektech, nebo v souborech .props nebo .targets importovat:
+Visual Studio je trvalé o upgradu projektu. Chcete-li se vyhnout zobrazení dialogového okna pro upgrade při každém načtení projektu, můžete definovat následující vlastnost v projektech nebo v souborech. props nebo. targets, které importují:
 
 `<VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>`
 
-Pokud chcete provést upgrade vašich projektů, je třeba odebrat tuto vlastnost.
+Tuto vlastnost je nutné odebrat, pokud chcete upgradovat projekty.
 
-Pokud se rozhodnete neupgradovat, Visual Studio neprovede žádné změny k souborům řešení nebo projektu. Při sestavování projektu generovaný binární soubory jsou plně kompatibilní s těmi, které jste vytvořili pomocí starší verze sady Visual Studio. Je to proto, že Visual Studio používá stejné kompilátor jazyka C++ a propojí stejné knihovny, která jsou součástí vašeho starší prostředí IDE. To je také proč upgradu dialog upozorňuje na starší verze sady Visual Studio nainstalovaný, pokud se rozhodnete udržovat **zrušit**.
+Pokud se rozhodnete neupgradovat, Visual Studio neprovede žádné změny v souborech řešení nebo projektu. Při sestavování projektu jsou vygenerované binární soubory plně kompatibilní s těmi, které jste vytvořili ve starší verzi sady Visual Studio. Je to proto, že Visual Studio používá C++ stejný kompilátor a propojuje stejné knihovny, se kterými bylo vaše staré integrované vývojové prostředí (IDE) dodáváno. To je také důvod, proč dialogové okno pro upgrade vás upozorní, že pokud vyberete **Zrušit**, zůstane nainstalována starší verze sady Visual Studio.
 
-## <a name="instructions-for-visual-studio-2008"></a>Pokyny pro sadu Visual Studio 2008
+## <a name="instructions-for-visual-studio-2008"></a>Pokyny pro Visual Studio 2008
 
-Visual Studio 2008 má svůj vlastní vyhrazený sestavovací systém pro jazyk C++ volá **VCBuild**. Spouští se v sadě Visual Studio 2010, Visual Studio C++ projekty byly změněny na použití **MSBuild**. To znamená, že musí přejít až aktualizaci k sestavování projektů Visual Studio 2008 v nejnovější verzi sady Visual Studio. Aktualizovaný projekt stále generuje binární soubory, které jsou plně kompatibilní s binárními soubory vytvořené pomocí integrovaného vývojového prostředí Visual Studio 2008.
+Visual Studio 2008 měl vlastní vyhrazený systém sestavení pro C++ s názvem **vcbuild**. Od aplikace Visual Studio 2010 byly projekty sady C++ Visual Studio změněny na použití nástroje **MSBuild**. To znamená, že pokud se má provést upgrade na trvalé nebo na více platforem, musíte projít krok aktualizace a sestavit projekty sady Visual Studio 2008 v nejnovější verzi sady Visual Studio. Aktualizovaný projekt stále generuje binární soubory, které jsou plně kompatibilní s binárními soubory vytvořenými pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio 2008.
 
-Kromě aktuální verze sady Visual Studio, nejprve musíte nainstalovat Visual Studio 2010 ve stejném počítači jako Visual Studio 2008. Nainstaluje pouze Visual Studio 2010 **MSBuild** skripty, které jsou potřeba k projektům cílové sady Visual Studio 2008.
+Nejprve je třeba nainstalovat sadu Visual Studio 2010 na stejném počítači jako Visual Studio 2008. Pouze Visual Studio 2010 nainstaluje skripty **MSBuild** , které jsou požadovány pro cílení na projekty sady Visual Studio 2008.
 
-Dále je třeba aktualizovat Visual Studio 2008 řešení a projektů na aktuální verzi sady Visual Studio. Doporučujeme že vytvořit zálohu projekty a soubory řešení před upgradem. Chcete-li zahájit proces upgradu, otevřete řešení v aktuální verzi sady Visual Studio. Když dostanete upgradu řádku, zkontrolujte zobrazené informace a klikněte na tlačítko **OK** spusťte upgrade. Pokud máte více než jeden projekt v řešení, je nutné aktualizovat Průvodce vytvoří novou .vcxproj projektu soubory – souběžně s existujícími soubory .vcproj. Za předpokladu, máte také kopii původního souboru .sln, upgrade nemá žádný vliv na existující projekty Visual Studio 2008.
+Dále je nutné aktualizovat řešení a projekty sady Visual Studio 2008 na aktuální verzi sady Visual Studio. Před upgradem doporučujeme vytvořit zálohu projektů a souborů řešení. Chcete-li spustit proces upgradu, otevřete řešení v aktuální verzi sady Visual Studio. Po zobrazení výzvy k upgradu zkontrolujte zobrazené informace a pak kliknutím na **tlačítko OK** spusťte upgrade. Pokud máte v řešení více než jeden projekt, je nutné aktualizovat Průvodce vytvořením nových souborů projektu vcxproj vedle existujících souborů. vcproj. Pokud máte také kopii původního souboru. sln, upgrade nemá jiný dopad na vaše stávající projekty sady Visual Studio 2008.
 
-Po dokončení upgradu, pokud má sestava protokolu chyb a upozornění pro všechny projekty, seznamte se s nimi pečlivě. Převod z **VCBuild** k **MSBuild** může způsobit problémy. Ujistěte se, že pochopit a implementovat všechny akce položky uvedené v sestavě. Další informace o protokolu o upgradu sestavy a problémy, které mohou nastat při převodu **VCBuild** k **MSBuild**, najdete v tomto [cílení na více verzí v nativním C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) blogový příspěvek.
+> [!NOTE]
+> Následující postup se týká pouze scénářů cílení na více platforem. Pokud máte v úmyslu trvale upgradovat projekt na novější sadu nástrojů, pak je dalším krokem uložení projektu, jeho otevření v sadě Visual Studio 2019 a řešení problémů s sestavením, které jsou zde uvedeny.
 
-Po dokončení upgradu projektu a opravili všechny problémy v souboru protokolu, vaše řešení cílí skutečně nejnovější sadu nástrojů. V posledním kroku změníte vlastnosti pro každý projekt v řešení použít sadu nástrojů Visual Studio 2008. S řešením načten v aktuální verzi sady Visual Studio, pro každý projekt v řešení, otevřete projekt **stránky vlastností** dialogové okno: Klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a pak vyberte **vlastnosti**. V **stránky vlastností** dialogovém okně Změnit **konfigurace** hodnotu rozevíracího seznamu **všechny konfigurace**. V **vlastnosti konfigurace**vyberte **Obecné**a potom změňte **sada nástrojů platformy** k **Visual Studio 2008 (v90)**.
+Pokud se upgrade dokončí, pokud sestava protokolu obsahuje chyby nebo varování pro některý z vašich projektů, pečlivě si je Projděte. Převod z **vcbuild** na **MSBuild** může způsobovat problémy. Ujistěte se, že rozumíte a implementujete všechny položky akcí uvedené v sestavě. Další informace o sestavě protokolu upgradu a problémech, ke kterým může dojít při převodu **vcbuild** na **MSBuild**, najdete v tomto [ C++ nativním](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) blogovém příspěvku cílení na více platforem.
 
-Po této změně Visual Studio 2008 kompilátor a knihovny se používají ke generování binárních souborů projektu při sestavování řešení v aktuální verzi sady Visual Studio.
+Až se upgrade projektu dokončí a opravíte všechny problémy v souboru protokolu, vaše řešení vlastně cílí na nejnovější sadu nástrojů. V posledním kroku změňte vlastnosti pro každý projekt v řešení tak, aby používal sadu nástrojů sady Visual Studio 2008. Pomocí řešení načteného v aktuální verzi sady Visual Studio, pro každý projekt v řešení, otevřete dialogové okno **stránky vlastností** projektu: klikněte pravým tlačítkem myši na projekt v **Průzkumník řešení** a pak vyberte **vlastnosti**. V dialogovém okně **stránky vlastností** změňte hodnotu rozevíracího seznamu **Konfigurace** na **všechny konfigurace**. V **nastavení vlastnosti konfigurace**vyberte **Obecné**a pak změňte **sadu nástrojů platformy** na **Visual Studio 2008 (V90)** .
 
-## <a name="install-an-older-visual-studio-toolset"></a>Instalace starší nástrojů sady Visual Studio
+Po této změně se kompilátor a knihovny sady Visual Studio 2008 použijí ke generování binárních souborů projektu při sestavení řešení v aktuální verzi sady Visual Studio.
 
-Možná bude starý Visual Studio C++ projekt, který nemůžete nebo nechcete upgradovat, ale ne platformy verzi sady nástrojů, který odpovídá projektu. Získat sadu nástrojů, můžete v tomto případě nainstalovat Visual Studio edice Community zdarma nebo Express edition verze, které potřebujete. Všechny verze sady Visual Studio ze sady Visual Studio 2008 na nainstalovat kompilátoru, nástroje a knihovny, je potřeba cílit na tuto verzi v aktuální sadě Visual Studio. Vyhledejte Microsoft Download Center vyhledejte a stáhněte konkrétní verzi sady Visual Studio. Ujistěte se, že během instalace zvolíte možnosti instalace jazyka C++. Po dokončení instalace, spusťte tuto verzi sady Visual Studio nainstalovat všechny aktualizace. Také zkontrolujte, které mohou vyžadovat změny aktualizací Windows. Tento proces kontroly aktualizací může být nutné opakovat více než jednou. Chcete-li získat všechny aktualizace.
+## <a name="install-an-older-visual-studio-toolset"></a>Nainstalovat starší sadu nástrojů sady Visual Studio
 
-Aktuálně k dispozici ke stažení, najdete v části [starší sadě Visual Studio software ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/).
+Je možné, že máte starý projekt C++ sady Visual Studio, který nemůžete nebo nechcete upgradovat, ale ne verzi sady nástrojů platformy, která odpovídá vašemu projektu. V takovém případě můžete získat sadu nástrojů a nainstalovat bezplatnou verzi sady Visual Studio Community nebo Express, kterou potřebujete. Každá verze sady Visual Studio ze sady Visual Studio 2008 v systému může nainstalovat kompilátor, nástroje a knihovny, které potřebujete k zacílení verze z aktuální sady Visual Studio. Na webu Microsoft Download Center vyhledejte a stáhněte konkrétní verzi sady Visual Studio. Ujistěte se, že během C++ instalace zvolíte možnost instalace. Po dokončení instalace spusťte tuto verzi sady Visual Studio a nainstalujte aktualizace. Také vyhledejte jakékoli web Windows Update změny, které mohou být požadovány. Tento proces kontroly aktualizací může být potřeba zopakovat více než jednou a získat tak každou aktualizaci.
 
-Při instalaci těchto produktů **sada nástrojů platformy** vlastnost rozevírací seznam v **stránky vlastností** dialogové okno se automaticky aktualizuje a zobrazí dostupné sady nástrojů. Nejnovější verzi sady Visual Studio můžete nyní použít k sestavení projektů pro tyto starší verze sady nástrojů bez převodu nebo upgradu je.
+Informace o aktuálně dostupných souborech ke stažení najdete v tématu [stažení staršího softwaru sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/).
+
+Po instalaci těchto produktů se v dialogovém okně **stránky vlastností** automaticky aktualizuje rozevírací seznam vlastnosti sady **nástrojů platformy** , aby se zobrazily dostupné sady nástrojů. Nyní můžete použít nejnovější verzi sady Visual Studio k sestavení projektů pro tyto starší verze sady nástrojů bez jejich převádění nebo upgradu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Upgrade projektů z dřívějších verzí sady VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Vylepšení shody C++ se sadou Visual Studio](../overview/cpp-conformance-improvements.md)

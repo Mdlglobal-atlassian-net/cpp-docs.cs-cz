@@ -1,17 +1,18 @@
 ---
 title: 'Návod: vytvoření tradiční desktopové aplikace systému WindowsC++()'
+description: Jak vytvořit minimální, tradiční desktopovou aplikaci pro Windows pomocí sady Visual Studio C++, a Win32 API
 ms.custom: get-started-article
-ms.date: 10/21/2019
+ms.date: 11/03/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 080c4cd9612058a0a54f19e5d0f4b8add4a03bce
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778539"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627482"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: vytvoření tradiční desktopové aplikace systému WindowsC++()
 
@@ -76,9 +77,7 @@ Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li p
 
    ![Pojmenování projektu DesktopApp](../build/media/desktop-app-new-project-name-153.png "Pojmenování projektu DesktopApp")
 
-1. V dialogovém okně **pracovní projekt Windows** v části **Typ aplikace**vyberte možnost **aplikace systému Windows (. exe)** . V části **Další možnosti**vyberte **prázdný projekt**. Kliknutím na **tlačítko OK** vytvořte projekt.
-
-   ![Průvodce vytvořením DesktopApp v desktopovém projektu Windows](../build/media/desktop-app-new-project-wizard-153.png "Průvodce vytvořením DesktopApp v desktopovém projektu Windows")
+1. V dialogovém okně **pracovní projekt Windows** v části **Typ aplikace**vyberte možnost **aplikace systému Windows (. exe)** . V části **Další možnosti**vyberte **prázdný projekt**. Ujistěte se, že není vybraná **Předkompilovaná hlavička** . Kliknutím na **tlačítko OK** vytvořte projekt.
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **DesktopApp** , zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
 
@@ -108,9 +107,7 @@ Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li p
 
    ![Přehled Průvodce vytvořením DesktopApp v aplikaci Win32](../build/media/desktop-app-win32-wizard-overview-150.png "Přehled Průvodce vytvořením DesktopApp v aplikaci Win32")
 
-1. Na stránce **nastavení aplikace** klikněte v části **Typ aplikace**na položku **aplikace systému Windows**. V části **Další možnosti**vyberte **prázdný projekt**. Kliknutím na tlačítko **Dokončit** vytvořte projekt.
-
-   ![Vytvoření DesktopApp v nastavení Průvodce aplikací Win32](../build/media/desktop-app-win32-wizard-settings-150.png "Vytvoření DesktopApp v nastavení Průvodce aplikací Win32")
+1. Na stránce **nastavení aplikace** klikněte v části **Typ aplikace**na položku **aplikace systému Windows**. V části **Další možnosti**zrušte zaškrtnutí políčka **Předkompilovaná hlavička**a pak vyberte **prázdný projekt**. Kliknutím na tlačítko **Dokončit** vytvořte projekt.
 
 1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt DesktopApp, zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
 
@@ -144,9 +141,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    Informace o parametrech a návratové hodnotě této funkce naleznete v tématu [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Jaká jsou všechna další slova, například `CALLBACK` nebo `HINSTANCE` nebo `_In_`? Tradiční rozhraní API systému Windows používá rozsáhly definice typedef a makra preprocesoru pro abstrakci některých podrobností o typech a kódu specifického pro platformu, jako jsou konvence volání, deklarace **__declspec** a direktivy pragma kompilátoru. V aplikaci Visual Studio můžete pomocí funkce [rychlá informace](/visualstudio/ide/using-intellisense#quick-info) technologie IntelliSense zobrazit, co tyto definice typedef a makra definují. Najeďte myší na slovo, které vás zajímá, nebo ho vyberte a stiskněte **ctrl** +**K**, **CTRL** +**I** pro malé automaticky otevírané okno, které obsahuje definici. Další informace najdete v tématu [použití technologie IntelliSense](/visualstudio/ide/using-intellisense). Parametry a návratové typy často používají *poznámky SAL* , které vám pomůžou zachytit programové chyby. Další informace najdete v tématu [Použití poznámek SAL ke snížení vad CC++ /kódu](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Jaká jsou všechna další slova, například `CALLBACK`nebo `HINSTANCE`nebo `_In_`? Tradiční rozhraní API systému Windows používá rozsáhly definice typedef a makra preprocesoru pro abstrakci některých podrobností o typech a kódu specifického pro platformu, jako jsou konvence volání, deklarace **__declspec** a direktivy pragma kompilátoru. V aplikaci Visual Studio můžete pomocí funkce [rychlá informace](/visualstudio/ide/using-intellisense#quick-info) technologie IntelliSense zobrazit, co tyto definice typedef a makra definují. Najeďte myší na slovo, které vás zajímá, nebo ho vyberte a stiskněte **ctrl** +**K**, **CTRL** +**I** pro malé automaticky otevírané okno, které obsahuje definici. Další informace najdete v tématu [použití technologie IntelliSense](/visualstudio/ide/using-intellisense). Parametry a návratové typy často používají *poznámky SAL* , které vám pomůžou zachytit programové chyby. Další informace najdete v tématu [Použití poznámek SAL ke snížení vad CC++ /kódu](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Desktopové programy Windows vyžadují &lt;windows. h >. &lt;tchar. h > definuje makro `TCHAR`, které se nakonec překládá na **wchar_t** , pokud je v projektu definován symbol Unicode, v opačném případě se překládá na **char**.  Pokud vždy sestavíte s povoleným kódováním UNICODE, nepotřebujete TCHAR a můžete pouze použít **wchar_t** přímo.
+1. Desktopové programy Windows vyžadují &lt;windows. h >. &lt;TCHAR. h > definuje makro `TCHAR`, které se nakonec překládá na **wchar_t** , pokud je v projektu definován symbol Unicode, v opačném případě se překládá na **char**.  Pokud vždy sestavíte s povoleným kódováním UNICODE, nepotřebujete TCHAR a můžete pouze použít **wchar_t** přímo.
 
    ```cpp
    #include <windows.h>

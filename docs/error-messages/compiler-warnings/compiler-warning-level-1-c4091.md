@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4091
+title: Upozornění kompilátoru (úroveň 1) C4091
 ms.date: 11/04/2016
 f1_keywords:
 - C4091
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 87432a74dfe7c09a52f436d4e91b3f70eb66856b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce6dd980ef70f129a0dbae474b8f717f7573f861
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410444"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626742"
 ---
-# <a name="compiler-warning-level-1-c4091"></a>Kompilátor upozornění (úroveň 1) C4091
+# <a name="compiler-warning-level-1-c4091"></a>Upozornění kompilátoru (úroveň 1) C4091
 
-! – klíčové slovo': ignorovány levá strana 'type', pokud není deklarovaná žádná proměnná
+klíčové slovo: ignoruje se vlevo od typu, pokud není deklarovaná žádná proměnná.
 
-Kompilátor zjistil situace, kdy uživatel pravděpodobně určené proměnnou deklarovat, ale kompilátor nebyl schopen deklarovat proměnnou.
+Kompilátor zjistil situaci, kdy uživatel pravděpodobně určil proměnnou, která má být deklarována, ale kompilátor nedokázal deklarovat proměnnou.
 
 ## <a name="example"></a>Příklad
 
-A `__declspec` atribut na začátku deklarace uživatelského typu platí pro proměnnou daného typu. C4091 označuje, že není deklarovaná žádná proměnná. Následující ukázka generuje C4091.
+Atribut `__declspec` na začátku deklarace uživatelsky definovaného typu platí pro proměnnou daného typu. C4091 značí, že není deklarována žádná proměnná. Následující ukázka generuje C4091.
 
-```
+```cpp
 // C4091.cpp
 // compile with: /W1 /c
 __declspec(dllimport) class X {}; // C4091
@@ -38,9 +38,9 @@ class __declspec(dllimport) X3 {};
 
 ## <a name="example"></a>Příklad
 
-Pokud identifikátor je definice typu, nemůže být také název proměnné. Následující ukázka generuje C4091.
+Pokud je identifikátor typu typedef, nemůže být zároveň názvem proměnné. Následující ukázka generuje C4091.
 
-```
+```cpp
 // C4091_b.cpp
 // compile with: /c /W1 /WX
 #define LIST 4

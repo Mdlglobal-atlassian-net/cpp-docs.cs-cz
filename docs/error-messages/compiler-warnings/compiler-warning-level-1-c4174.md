@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4174
+title: Upozornění kompilátoru (úroveň 1) C4174
 ms.date: 11/04/2016
 f1_keywords:
 - C4174
 helpviewer_keywords:
 - C4174
 ms.assetid: 63301e51-24bc-43c4-bb11-252f7d513e9e
-ms.openlocfilehash: cc55318c8ef54f7d7f69e93d72717f54578ba576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfa3c66e31e35cf9dbbd55f29fcd2d511870fdce
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391683"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624806"
 ---
-# <a name="compiler-warning-level-1-c4174"></a>Kompilátor upozornění (úroveň 1) C4174
+# <a name="compiler-warning-level-1-c4174"></a>Upozornění kompilátoru (úroveň 1) C4174
 
-"name": není k dispozici jako komponenta #pragma
+Název: není k dispozici jako součást #pragma.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // C4174.cpp
 // compile with: /W1
 #pragma component(info)  // C4174; unknown

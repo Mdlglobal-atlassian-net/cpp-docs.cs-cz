@@ -63,12 +63,12 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: 70009f1d7d0230b37c6a59da20996842f976d02f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5790cf6c36faa0669fd12d6875b7e7488e819b12
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947588"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625805"
 ---
 # <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
@@ -161,7 +161,7 @@ Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního 
 
 V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -174,7 +174,7 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strlwr_s**, **_strlwr_s_l**|\<String. h >|
+|**_strlwr_s**, **_strlwr_s_l**|\<string. h >|
 |**_mbslwr_s**, **_mbslwr_s_l**|\<Mbstring. h >|
 |**_wcslwr_s**, **_wcslwr_s_l**|\<String. h > nebo \<WCHAR. h >|
 

@@ -1,35 +1,35 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4042
+title: Upozornění kompilátoru (úroveň 1) C4042
 ms.date: 11/04/2016
 f1_keywords:
 - C4042
 helpviewer_keywords:
 - C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
-ms.openlocfilehash: 99f4f45aad82aa9898dad4cffb60b8e3311ddc9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db7f0425c3752c20ca8c5d4b6c95845ff64475c5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152136"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627036"
 ---
-# <a name="compiler-warning-level-1-c4042"></a>Kompilátor upozornění (úroveň 1) C4042
+# <a name="compiler-warning-level-1-c4042"></a>Upozornění kompilátoru (úroveň 1) C4042
 
-'identifier': má špatnou třídu úložiště
+identifikátor: má chybnou třídu úložiště.
 
-Zadané úložiště třídy nelze použít s identifikátorem v tomto kontextu. Kompilátor používá místo toho bude výchozí třída úložiště:
+Zadaná třída úložiště se v tomto kontextu nedá použít s tímto identifikátorem. Kompilátor místo toho používá výchozí třídu úložiště:
 
-- `extern`, pokud *identifikátor* je funkce.
+- `extern`, pokud je *identifikátor* funkce.
 
-- **Automatické**, pokud *identifikátor* je formální parametr nebo lokální proměnné.
+- **auto**, pokud je *identifikátor* formální parametr nebo místní proměnná.
 
-- Třída žádné úložiště, pokud *identifikátor* je globální proměnné.
+- Žádná třída úložiště, pokud je *identifikátor* globální proměnnou.
 
-Toto upozornění může být způsobeno určující třídu úložiště než **zaregistrovat** v deklaraci parametru.
+Toto upozornění může být způsobeno zadáním třídy úložiště jiné než **registrace** v deklaraci parametru.
 
 Následující ukázka generuje C4042
 
-```
+```cpp
 // C4042.cpp
 // compile with: /W1 /LD
 int func2( __declspec( thread ) int tls_i )    // C4042

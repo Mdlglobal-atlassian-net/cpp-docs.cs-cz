@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4183
+title: Upozornění kompilátoru (úroveň 1) C4183
 ms.date: 11/04/2016
 f1_keywords:
 - C4183
 helpviewer_keywords:
 - C4183
 ms.assetid: dc48312c-4b34-44dd-80ff-eb5f11d5ca47
-ms.openlocfilehash: 0d947a0f6d777a5ed3191d6d232a604028be2003
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be79c664f09f80d8f0c8779babf236dccac90ea8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391618"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626233"
 ---
-# <a name="compiler-warning-level-1-c4183"></a>Kompilátor upozornění (úroveň 1) C4183
+# <a name="compiler-warning-level-1-c4183"></a>Upozornění kompilátoru (úroveň 1) C4183
 
-'identifier': chybí návratový typ; předpokládá, že členská funkce vrátí "int"
+' identifier ': chybějící návratový typ; Předpokládá se, že se jedná o členskou funkci, která vrací int.
 
-Definice vložené členské funkce ve třídě nebo struktuře nemá typ vrácené hodnoty. Tato členská funkce se předpokládá, že má výchozí hodnotu návratového typu `int`.
+Vložená definice členské funkce ve třídě nebo struktuře nemá návratový typ. Tato členská funkce předpokládá, že má výchozí návratový typ `int`.
 
 Následující ukázka generuje C4183:
 
-```
+```cpp
 // C4183.cpp
 // compile with: /W1 /c
 #pragma warning(disable : 4430)

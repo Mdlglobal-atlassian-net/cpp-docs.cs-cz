@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 196a3aac09db790da6b8137029383cca77c3d2ad
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947281"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626152"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -171,10 +171,10 @@ Nula v případě úspěchu, **STRUNCATE** , pokud došlo ke zkrácení, v opač
 
 |*strDest*|*numberOfElements*|*strSource*|Návratová hodnota|Obsah *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|Jakýmikoli|Jakýmikoli|**EINVAL**|Neupraveno|
-|Jakýmikoli|Jakýmikoli|**NULL**|**EINVAL**|*strDest* [0] nastavit na 0|
-|Jakýmikoli|0|Jakýmikoli|**EINVAL**|Neupraveno|
-|Není **null**|příliš malý|Jakýmikoli|**ERANGE**|*strDest* [0] nastavit na 0|
+|**PLATNOST**|Jakýmikoli|Jakýmikoli|**EINVAL**|Neupraveno|
+|Jakýmikoli|Jakýmikoli|**PLATNOST**|**EINVAL**|*strDest*[0] nastaví na 0.|
+|Jakýmikoli|0,8|Jakýmikoli|**EINVAL**|Neupraveno|
+|není **null**|příliš malý|Jakýmikoli|**ERANGE**|*strDest*[0] nastaví na 0.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -210,7 +210,7 @@ Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního 
 
 V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -226,7 +226,7 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strncpy_s**, **_strncpy_s_l**|\<String. h >|
+|**strncpy_s**, **_strncpy_s_l**|\<string. h >|
 |**wcsncpy_s**, **_wcsncpy_s_l**|\<String. h > nebo \<WCHAR. h >|
 |**_mbsncpy_s**, **_mbsncpy_s_l**|\<Mbstring. h >|
 

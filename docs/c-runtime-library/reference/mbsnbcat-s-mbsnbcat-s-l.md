@@ -35,12 +35,12 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: 8a3f66f8fc8d4fd659880e8793fdaae635f9f7ba
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a148f4be503ee793e4e36855233edfc8fa8f165a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952261"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624343"
 ---
 # <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
@@ -105,9 +105,9 @@ Nula v případě úspěchu; v opačném případě kód chyby.
 
 |**Propojovací**|*sizeInBytes*|*src*|Návratová hodnota|
 |------------|-------------------|-----------|------------------|
-|**NULL**|Jakýmikoli|Jakýmikoli|**EINVAL**|
-|Any|<= 0|Jakýmikoli|**EINVAL**|
-|Any|Jakýmikoli|**NULL**|**EINVAL**|
+|**PLATNOST**|Jakýmikoli|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|< = 0|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|Jakýmikoli|**PLATNOST**|**EINVAL**|
 
 Pokud dojde k nějaké chybě, funkce vygeneruje chybu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**.
 
@@ -119,7 +119,7 @@ Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního 
 
 V C++nástroji je použití těchto funkcí zjednodušeno pomocí přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size a můžou automaticky používat své novější a bezpečnější funkce k nahrazení starších a méně zabezpečených funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 

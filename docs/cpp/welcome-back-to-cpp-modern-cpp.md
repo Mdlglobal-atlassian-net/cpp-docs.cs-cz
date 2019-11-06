@@ -3,42 +3,42 @@ title: C++ vás vítá zpět (moderní verze jazyka C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f59395001722244cb407ef07ed8a301f08df85b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209525"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624762"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ vás vítá zpět (moderní verze jazyka C++)
 
-C++ je jedním z nejpoužívanějších programovacích jazyků na světě. Kvalitně napsané C++ programy jsou rychlé a efektivní. Jazyk je flexibilnější než ostatní jazyky, protože slouží k vytvoření široké škály aplikací, od zábavných a vzrušujících her, přes vysoce výkonný vědecký software, ovladače zařízení, vložené programy a klientské aplikace Windows. Více než 20 let bylo C++ využíváno k řešení problémů, jako je tento a mnoho dalších. Co možná nevíte je, že rostoucí počet programátorů C++ mají složit staromódní programování ve stylu jazyka C včerejška a místo toho používají moderní jazyk C++.
+C++je jedním z nejčastěji používaných programovacích jazyků na světě. Dobře zapsané C++ programy jsou rychlé a efektivní. Jazyk je flexibilnější než ostatní jazyky, protože ho můžete použít k vytvoření široké škály aplikací, od zábavy a zajímavých her až po vysoce výkonný vědecký software, pro ovladače zařízení, vložené programy a klientské aplikace systému Windows. Po víc než 20 let C++ se používá k řešení problémů, jako jsou tyto a spousta dalších. To, co neznáte, je, že rostoucí C++ počet programátorů rozloží dowdyé programování ve stylu C včera a má místo toho C++ používají moderní.
 
-Jeden z původních požadavků jazyka C++ byla zpětná kompatibilita s jazykem C. Od té doby se jazyk C++ vyvinul skrze několik iterací — C s třídami, poté původní specifikací jazyka C++ a pak řadou dalších vylepšení. Z důvodu tohoto dědictví C++ se často označuje jako programovací jazyk více paradigmaty. V jazyce C++ vám pomůžou používat čistě procedurální programování ve stylu C, které zahrnuje surové ukazatele, pole, řetězce znaků zakončených znakem null, vlastní datové struktury a další funkce, které dovolují skvělý výkon, ale mohou také zanášet chyby a složitost.  Protože podobných nástrah je programování ve stylu jazyka C, jeden z cílů při vytvoření jazyka C++ bylo zajistit bezpečnost typů a usnadňují zápis, rozšiřitelnost a údržbu programů. Zpočátku C++ zahrnoval paradigmata programování jako je objektově orientované programování. V průběhu let funkce byly přidány pro určitý jazyk, spolu s široce testovanými standardními knihovnami datových struktur a algoritmů. Je tyto doplňky, které jste provedli moderní styl C++ je to možné.
+Jeden z původních požadavků pro C++ byl zpětně kompatibilní s jazykem C. C++ Od té doby se vyvinulo několik iterací – C s třídami, pak původní C++ specifikace jazyka a potom mnoho dalších vylepšení. Z důvodu tohoto dědictví C++ se často označuje jako vícenásobný programovací jazyk. V C++nástroji můžete provádět čistě procedurální programování ve stylu jazyka C, které zahrnuje nezpracované ukazatele, pole, řetězce znaků zakončené hodnotou null, vlastní datové struktury a další funkce, které mohou umožňovat skvělý výkon, ale mohou také zadávat chyby a složitost.  Vzhledem k tomu, že programování ve stylu jazyka C je fraught s nástrah, jedním z nalezených C++ cílů pro bylo, aby programy byly typově bezpečné a snadněji zapisovaly, rozšířily a udržovaly. Na začátku, C++ vydaná přidaná programovací paradigmata jako objektově orientované programování. V průběhu let byly funkce přidány do jazyka společně s vysoce testovanými standardními knihovnami datových struktur a algoritmů. Jsou to tyto dodatky, které vedly C++ k modernímu stylu.
 
-Moderní jazyk C++ zvýrazňuje:
+Moderní C++ zvýraznění:
 
-- Rozsah založený na zásobníku namísto haldy nebo globálního statického oboru.
+- Rozsah založený na zásobníku místo haldy nebo statického globálního rozsahu.
 
 - Automatické odvození typu namísto explicitních názvů typů.
 
-- Inteligentní ukazatele namísto ukazatelů raw.
+- Inteligentní ukazatele namísto nezpracovaných ukazatelů.
 
-- `std::string` a `std::wstring` typy (viz [ \<řetězec >](../standard-library/string.md)) namísto nezpracovaných `char[]` pole.
+- typy `std::string` a `std::wstring` (viz [\<řetězec >](../standard-library/string.md)) místo nezpracovaných `char[]` polí.
 
-- [Standardní knihovny C++](../standard-library/cpp-standard-library-header-files.md) kontejnery, jako jsou `vector`, `list`, a `map` namísto polí raw nebo vlastních kontejnerů. Zobrazit [ \<vektoru >](../standard-library/vector.md), [ \<seznamu >](../standard-library/list.md), a [ \<mapy >](../standard-library/map.md).
+- Knihovny standardních knihoven jako `vector`, `list`a `map` místo nezpracovaných polí nebo vlastních kontejnerů. [ C++ ](../standard-library/cpp-standard-library-header-files.md) Viz [\<vector >](../standard-library/vector.md), [\<seznamu >](../standard-library/list.md)a [\<map](../standard-library/map.md)>.
 
-- Standardní knihovny C++ [algoritmy](../standard-library/algorithm.md) místo ručně kódovaných.
+- C++Standardní [algoritmy](../standard-library/algorithm.md) knihovny místo ručních kódovaných.
 
-- Výjimky pro hlášení a zpracování podmínek chyby.
+- Výjimky, pro hlášení a zpracování chybových podmínek.
 
-- Komunikace mezi vlákny pomocí standardní knihovny C++ bez zámku `std::atomic<>` (viz [ \<atomické >](../standard-library/atomic.md)) namísto jiných mechanismů komunikace mezi vlákny.
+- Bezplatná komunikace mezi vlákny pomocí C++ standardní knihovny `std::atomic<>` (viz [\<atomická >](../standard-library/atomic.md)) namísto jiných mechanismů komunikace mezi vlákny.
 
-- Vložené [lambda funkce](../cpp/lambda-expressions-in-cpp.md) namísto samostatné implementace malé funkce.
+- Vložené [funkce lambda](../cpp/lambda-expressions-in-cpp.md) namísto malých funkcí implementovaných samostatně.
 
-- Rozsah smyček for založených na zápis robustnějších smyček, které pracují s pole, kontejnery standardní knihovny C++ a prostředí Windows Runtime kolekcí ve formě `for ( for-range-declaration : expression )`. To je součástí základní jazykové podpory. Další informace najdete v tématu [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md).
+- Pro smyčky založené na rozsahu pro zápis robustnějších smyček, které pracují s poli, C++ standardními kontejnery knihovny a kolekcemi prostředí Windows Runtime ve formuláři `for ( for-range-declaration : expression )`. Toto je součást základní jazykové podpory. Další informace naleznete v tématu [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md).
 
-Samotný jazyk C++ prošel také vývojem. Porovnejte následující fragmenty kódu. Tento ukazuje, jak věci mají být používány v C++:
+Vyvinuli jsme také samotný C++ jazyk. Porovnejte následující fragmenty kódu. Tento příklad ukazuje, jak se používají C++:
 
 ```cpp
 #include <vector>
@@ -69,7 +69,7 @@ void f()
 } // end f()
 ```
 
-Zde je, jak lze provést totéž v moderním jazyce C++:
+Tady je postup, jak se stejné věc dosahuje C++v moderním:
 
 ```cpp
 #include <memory>
@@ -91,45 +91,45 @@ void f()
 }
 ```
 
-V moderním jazyce C++ nemusíte používat new/delete ani explicitní zpracování výjimek, protože můžete místo toho použít inteligentní ukazatele. Při použití **automaticky** odvození typu a [funkci lambda](../cpp/lambda-expressions-in-cpp.md), můžete napsat kód rychleji, upevnit ho a lépe ho chápat. A range-based **pro** smyčky je přehlednější, jednodušší a méně náchylná k neúmyslným chybám než C-style **pro** smyčky. Často používaný text spolu s minimálními řádky kódu můžete použít k zápisu do aplikace. A ujistěte se, že kód, bezpečným pro výjimky a paměť a mít žádné přidělování a navracení zpět nebo chybové kódy pro řešení.
+V moderním C++případě nemusíte používat nové a odstranit nebo explicitní zpracování výjimek, protože místo toho můžete použít inteligentní ukazatele. Když použijete funkce **automatického** typu odvození a [lambda](../cpp/lambda-expressions-in-cpp.md), můžete napsat kód rychleji, posílit a pochopit ho lépe. A **pro** smyčku založené na rozsahu je čistící, jednodušší použití a méně náchylná k nezamýšleným chybám než **ve stylu C** smyčky. Můžete použít často používaný text s minimálními řádky kódu k zápisu vaší aplikace. A můžete provádět tyto výjimky bezpečného kódu a paměti a nemusíte se s nimi zabývat žádným kódem přidělení/zrušením.
 
-Moderní jazyk C++ zahrnuje dva druhy polymorfismu: kompilace pomocí šablon a běh prostřednictvím dědičnosti a virtualizace. Je možné kombinovat dva druhy polymorfismů pro velký vliv. Šablona standardní knihovny C++ `shared_ptr` používá virtuální metody k provedení jeho mazání zjevně výmazu typu. Ale nepřehánějte to s využíváním virtualizace pro polymorfismus když šablona je lepší volbou. Šablony mohou být velmi účinné.
+Moderní C++ společnost zahrnuje dva druhy polymorfismu: kompilace, prostřednictvím šablon a běhu prostřednictvím dědičnosti a virtualizace. Můžete kombinovat dva druhy polymorfismu a skvělého efektu. Šablona C++ standardní knihovny `shared_ptr` používá interní virtuální metody k provedení zjevně snadného typu mazání. Ale nepoužívejte virtualizaci pro polymorfismus, když je šablona lepší volbou. Šablony můžou být velmi výkonné.
 
-Pokud přecházíte na C++ z jiného jazyka, zejména ze spravovaných jazyků, ve kterém se většina typů odkazových typech a velmi málo jsou typy hodnot vědět, že třídy C++ typy hodnot ve výchozím nastavení. Ale můžete je specifikovat jako referenční typy, a povolit tak polymorfní chování podporující objektově orientované programování. Užitečná Perspektiva: typy hodnot jsou informace o paměti a řízení rozložení, typy odkazů jsou další informace o základních tříd a virtuálních funkcí pro podporu polymorfismu. Ve výchozím nastavení jsou typy hodnot kopírovatelné – každá má konstruktor kopie a operátor přiřazení kopie. Při zadávání typu odkazu, nastavte třídu, aby nekopírovatelných – zakažte konstruktor kopie a operátor přiřazení kopie a použijte virtuální destruktor, který podporuje polymorfismus. Typy hodnot jsou také o obsahu, které při jejich kopírování, poskytují dvě nezávislé hodnoty, které můžete upravit samostatně. Ale typy odkazů jsou o identitě – co druh objektu jde – a z tohoto důvodu jsou někdy označovány jako polymorfní typy.
+Pokud přecházíte C++ z jiného jazyka, zejména ze spravovaného jazyka, ve kterém je většina typů odkazových typů, a velmi málo jsou typy hodnot, víte, C++ že třídy jsou typy hodnot standardně. Ale můžete je zadat jako referenční typy pro povolení polymorfního chování, které podporuje objektově orientované programování. Užitečná perspektiva: typy hodnot jsou více o ovládacím prvku paměť a rozložení, typy odkazů jsou více o základních třídách a virtuálních funkcích pro podporu polymorfismu. Ve výchozím nastavení jsou typy hodnot zkopírovány – každý má kopírovací konstruktor a operátor přiřazení kopie. Pokud zadáte typ odkazu, zpřístupněte třídu jako nekopírovatelné – zakažte kopírovací konstruktor a operátor přiřazení kopie – a použijte virtuální destruktor, který podporuje polymorfismus. Typy hodnot jsou také informace o obsahu, který při zkopírování poskytují dvě nezávislé hodnoty, které lze upravit samostatně. Ale typy odkazů jsou o identitě – jaký typ objektu je – a z tohoto důvodu jsou někdy označovány jako polymorfní typy.
 
-C++ dochází k návratu protože výkon má znovu. Jazyky jako Java a C# jsou vhodné, pokud je důležitá produktivita programátora, ale zobrazit svá omezení při napájení výkon se projeví. Vysoké účinnosti a výkonu, zejména v zařízeních, která mají omezený hardware Nic nepřekoná moderního C++.
+C++má návratu, protože je opět zapnutý král. Jazyky jako Java a C# jsou vhodné, pokud je důležitá produktivita programátora, ale zobrazují se jejich omezení, pokud jsou výkon a výkon nejdůležitější. Pro zajištění vysoké efektivity a výkonu, zejména na zařízeních s omezeným hardwarem, C++není nic Beats moderní.
 
-Nejen jazyk je moderní, nástroje pro vývoj jsou moc. Visual Studio činí všechny části cyklu vývoje je robustní a efektivní. Zahrnuje nástroje Application Lifecycle Management (ALM), vylepšení IDE, jako například IntelliSense, mechanismů vhodných nástrojů, jako jsou XAML a sestavení, ladění a mnoho dalších nástrojů.
+Nejedná se o moderní jazyk, ale také o vývojářských nástrojích. Visual Studio umožňuje robustní a efektivní všechny části vývojového cyklu. Zahrnuje nástroje pro správu životního cyklu aplikací (ALM), rozšíření IDE, jako je IntelliSense, mechanizmy přívětivé nástrojem, jako je XAML a sestavování, ladění a mnoho dalších nástrojů.
 
-Články v této části dokumentace poskytují podrobné pokyny a osvědčené postupy pro nejdůležitější funkce a postupy při vytváření moderních programy v jazyce C++.
+Články v této části dokumentace poskytují obecné pokyny a osvědčené postupy pro nejdůležitější funkce a techniky pro psaní moderních C++ programů.
 
-- [C++ – systém typů](../cpp/cpp-type-system-modern-cpp.md)
+- [C++Systém typů](../cpp/cpp-type-system-modern-cpp.md)
 
 - [Jednotná inicializace a delegování konstruktorů](../cpp/uniform-initialization-and-delegating-constructors.md)
 
-- [Životní cyklus objektů a Správa prostředků](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
+- [Životnost objektů a Správa prostředků](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
 
 - [Prostředky ve vlastnictví objektů (RAII)](../cpp/objects-own-resources-raii.md)
 
 - [Inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md)
 
-- [Ukazatel na implementaci pro zapouzdření za kompilace](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
+- [Ukazatel na implementaci pro zapouzdření při kompilaci](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
 
 - [Kontejnery](../cpp/containers-modern-cpp.md)
 
 - [Algoritmy](../cpp/algorithms-modern-cpp.md)
 
-- [Řetězec a vstupně-výstupních operací formátování (moderní verze jazyka C++)](../cpp/string-and-i-o-formatting-modern-cpp.md)
+- [Formátování řetězců a I/O (moderní C++)](../cpp/string-and-i-o-formatting-modern-cpp.md)
 
-- [Ošetření chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)
+- [Zpracování chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)
 
-- [Přenositelnost u rozhraní ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)
+- [Přenositelnost v hranicích ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)
 
-Další informace najdete v článku Stack Overflow [idiomy v jazyce C++ která se považují za zastaralé v C ++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
+Další informace najdete v článku o Stack Overflow, [které C++ idiomy jsou zastaralé v c++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
 
 ## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Výrazy lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Shoda jazyka Visual C++](../overview/visual-cpp-language-conformance.md)
+[Tabulka C++ shody jazyka Microsoft](../overview/visual-cpp-language-conformance.md)

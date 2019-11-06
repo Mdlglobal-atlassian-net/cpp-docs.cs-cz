@@ -3,12 +3,12 @@ title: Připojení k cílovému systému Linux v aplikaci Visual Studio
 description: Jak se připojit ke vzdálenému počítači se systémem Linux nebo WSL zevnitř projektu sady Visual C++ Studio.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925562"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626779"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Připojení k cílovému systému Linux v aplikaci Visual Studio
 
@@ -52,7 +52,7 @@ Nastavení tohoto vzdáleného připojení:
    
    Privátní soubor klíčů RSA můžete vytvořit pomocí následujících kroků:
 
-    1. Na počítači s Windows vytvořte pár klíčů ssh s `ssh-keygen -t rsa`. Tím se vytvoří veřejný klíč a privátní klíč. Ve výchozím nastavení jsou klíče umístěny pod `C:\Users\%USERNAME%\.ssh` s názvy `id_rsa.pub` a `id_rsa`.
+    1. Na počítači s Windows vytvořte pár klíčů ssh pomocí `ssh-keygen -t rsa`. Tím se vytvoří veřejný klíč a privátní klíč. Ve výchozím nastavení jsou klíče umístěny pod `C:\Users\%USERNAME%\.ssh` s názvy `id_rsa.pub` a `id_rsa`.
 
     1. Z Windows zkopírujte veřejný klíč do počítače se systémem Linux: `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`.
 
@@ -79,6 +79,20 @@ Nastavení tohoto vzdáleného připojení:
    Protokoly zahrnují připojení, všechny příkazy odeslané do vzdáleného počítače (jejich text, ukončovací kód a čas spuštění) a veškerý výstup ze sady Visual Studio do prostředí. Protokolování funguje pro libovolný projekt CMake pro různé platformy nebo pro linuxový projekt založený na MSBuildu v sadě Visual Studio.
 
    Výstup můžete nakonfigurovat tak, aby přešel do souboru nebo do podokna **protokolování pro různé platformy** v okno výstup. Pro projekty Linux založené na platformě MSBuild nejsou příkazy vydané vzdálenému počítači nástrojem MSBuild směrovány do **okno výstup** , protože jsou generovány mimo proces. Místo toho jsou protokolovány do souboru s předponou "msbuild_".
+   
+## <a name="tcp-port-forwarding"></a>Předávání portů TCP
+
+Podpora pro Linux v systému Visual Studio je závislá na předávání portů TCP. **Rsync** a **gdbserver** budou ovlivněny, pokud je ve vzdáleném systému zakázané předávání portů TCP. 
+
+Rsync se používají v projektech Linux založených na MSBuildu i v projektech CMake ke [zkopírování hlaviček ze vzdáleného systému do Windows, které se mají použít pro IntelliSense](configure-a-linux-project.md#remote_intellisense). Pokud nemůžete povolit předávání portů TCP, můžete zakázat automatické stahování vzdálených hlaviček prostřednictvím nástrojů > možností > pro různé platformy > Správce připojení > vzdálenou hlavičkou IntelliSense. Pokud vzdálený systém, ke kterému se pokoušíte připojit, nemá povolený předávání portů TCP, zobrazí se při stahování vzdálených hlaviček pro technologii IntelliSense následující chyba.
+
+![Chyba hlaviček](media/port-forwarding-headers-error.png)
+
+Rsync je také používána podporou CMake sady Visual Studio ke kopírování zdrojových souborů do vzdáleného systému. Pokud nemůžete povolit předávání portů TCP, můžete jako metodu vzdálené kopie zdroje použít SFTP. Protokol SFTP je obecně pomalejší než rsync, ale nemá závislost na předávání portů TCP. Metodu vzdálené kopírování zdrojů můžete spravovat pomocí vlastnosti remoteCopySourcesMethod v [editoru nastavení cmake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Pokud je přesměrování portu TCP na vzdáleném systému zakázané, zobrazí se v okně výstup CMake Chyba při prvním vyvolání rsync.
+
+![Chyba rsync](media/port-forwarding-copy-error.png)
+
+Gdbserver se dá použít k ladění na integrovaných zařízeních. Pokud nemůžete povolit předávání portů TCP, budete muset použít GDB pro všechny scénáře vzdáleného ladění. GDB se ve výchozím nastavení používá při ladění projektů ve vzdáleném systému. 
 
    ::: moniker-end
 

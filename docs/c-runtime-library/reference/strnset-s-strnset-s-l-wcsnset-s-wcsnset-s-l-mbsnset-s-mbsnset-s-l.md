@@ -58,12 +58,12 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 3542d2272282a9c3f6b2aed8cc443bef85dfe883
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946994"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626136"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
@@ -124,7 +124,7 @@ errno_t _mbsnset_s_l(
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti *str* .
 
-*c*<br/>
+*r*<br/>
 Nastavení znaků.
 
 *výpočtu*<br/>
@@ -147,7 +147,7 @@ Tyto funkce nastavují nejvíce první *počet* znaků *str* na *c*. Pokud je *p
 
 Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -160,10 +160,10 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strnset_s**|\<String. h >|
-|**_strnset_s_l**|\<tchar.h>|
+|**_strnset_s**|\<string. h >|
+|**_strnset_s_l**|\<TCHAR. h >|
 |**_wcsnset_s**|\<String. h > nebo \<WCHAR. h >|
-|**_wcsnset_s_l**|\<tchar.h>|
+|**_wcsnset_s_l**|\<TCHAR. h >|
 |**_mbsnset_s**, **_mbsnset_s_l**|\<Mbstring. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

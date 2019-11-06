@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da36641f6a3ba8dc1da0894aedbfa390d2e796ae
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956109"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625051"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -80,9 +80,9 @@ Nula v případě úspěchu. Pokud dojde k chybě z důvodu neplatného parametr
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*vyrovnávací paměti*|*sizeInBytes*|*value*|*znak*|vrátit|Hodnota v *bufferu*|
+|*vyrovnávací paměti*|*sizeInBytes*|*value*|*znak*|Vrátit|Hodnota v *bufferu*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|Nezměněno.|
+|**PLATNOST**|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|Nezměněno.|
 |Není **null** (ukazuje na platnou paměť)|nula|Jakýmikoli|Jakýmikoli|**EINVAL**|Nezměněno.|
 |Není **null** (ukazuje na platnou paměť)|Jakýmikoli|Jakýmikoli|>= *sizeInBytes*|**EINVAL**|Nezměněno.|
 
@@ -96,13 +96,13 @@ Funkce **_gcvt_s** převede *hodnotu* s plovoucí desetinnou čárkou na řetěz
 
 V C++systému je použití této funkce zjednodušené přetížením šablony; přetížení může odvodit délku vyrovnávací paměti automaticky a eliminuje nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze této funkce nejprve vyplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Ladicí verze této funkce nejprve vyplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_gcvt_s**|\<stdlib.h>|\<error.h>|
+|**_gcvt_s**|\<Stdlib. h >|Chyba \<. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 

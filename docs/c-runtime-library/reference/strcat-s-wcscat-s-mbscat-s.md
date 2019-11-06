@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957982"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625784"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -122,8 +122,8 @@ Nula v případě úspěchu; chybový kód při selhání.
 |*strDestination*|*numberOfElements*|*strSource*|Návratová hodnota|Obsah *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**Null** nebo neukončeno|Jakýmikoli|Jakýmikoli|**EINVAL**|Neupraveno|
-|Jakýmikoli|Jakýmikoli|**NULL**|**EINVAL**|*strDestination* [0] nastavit na 0|
-|Jakýmikoli|0 nebo příliš malý|Jakýmikoli|**ERANGE**|*strDestination* [0] nastavit na 0|
+|Jakýmikoli|Jakýmikoli|**PLATNOST**|**EINVAL**|*strDestination*[0] nastaví na 0.|
+|Jakýmikoli|0 nebo příliš malý|Jakýmikoli|**ERANGE**|*strDestination*[0] nastaví na 0.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -146,7 +146,7 @@ Verze funkcí, které mají příponu **_l** , mají stejné chování, ale pou�
 
 V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -158,7 +158,7 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcat_s**|\<String. h >|
+|**strcat_s**|\<string. h >|
 |**wcscat_s**|\<String. h > nebo \<WCHAR. h >|
 |**_mbscat_s**|\<Mbstring. h >|
 

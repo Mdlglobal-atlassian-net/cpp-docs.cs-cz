@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4172
+title: Upozornění kompilátoru (úroveň 1) C4172
 ms.date: 11/04/2016
 f1_keywords:
 - C4172
 helpviewer_keywords:
 - C4172
 ms.assetid: a8d2bf65-d8b1-4fe3-8340-a223d7e7fde6
-ms.openlocfilehash: caa71da9182c1da1d17d87d901084d0ee9badf73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d53972dbcb2e3ab6a95b0b874cc6bb98cd66840
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391787"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624830"
 ---
-# <a name="compiler-warning-level-1-c4172"></a>Kompilátor upozornění (úroveň 1) C4172
+# <a name="compiler-warning-level-1-c4172"></a>Upozornění kompilátoru (úroveň 1) C4172
 
-Vrací adresu lokální proměnné nebo dočasné
+vrací se adresa místní proměnné nebo dočasné.
 
-Funkce vrátí adresu místní proměnné nebo dočasný objekt. Lokálních proměnných a dočasné objekty jsou zničeny při návratu funkce, takže adresu vrácenou není platný.
+Funkce vrací adresu lokální proměnné nebo dočasného objektu. Lokální proměnné a dočasné objekty jsou zničeny při návratu funkce, takže vrácená adresa není platná.
 
-Změnit návrh funkce tak, aby nevrací adresu místního objektu.
+Přenavrhněte funkci tak, aby nevracela adresu místního objektu.
 
 Následující ukázka generuje C4172:
 
-```
+```cpp
 // C4172.cpp
 // compile with: /W1 /LD
 float f = 10;

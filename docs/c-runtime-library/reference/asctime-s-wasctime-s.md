@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943657"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624789"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -86,13 +86,13 @@ Nula v případě úspěchu. Pokud dojde k selhání, je vyvolána obslužná ru
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*vyrovnávací paměti*|*numberOfElements*|*tmSource*|vrátit|Hodnota v *bufferu*|
+|*vyrovnávací paměti*|*numberOfElements*|*tmSource*|Vrátit|Hodnota v *bufferu*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|Any|Any|**EINVAL**|Neupraveno|
-|Není **null** (ukazuje na platnou paměť)|0|Any|**EINVAL**|Neupraveno|
-|Není **null**|0 < velikosti < 26|Any|**EINVAL**|Prázdný řetězec|
-|Není **null**|>= 26|**NULL**|**EINVAL**|Prázdný řetězec|
-|Není **null**|>= 26|Neplatná časová struktura nebo hodnoty mimo rozsah pro součásti času|**EINVAL**|Prázdný řetězec|
+|**PLATNOST**|Jakýmikoli|Jakýmikoli|**EINVAL**|Neupraveno|
+|Není **null** (ukazuje na platnou paměť)|0,8|Jakýmikoli|**EINVAL**|Neupraveno|
+|není **null**|0 < velikosti < 26|Jakýmikoli|**EINVAL**|Prázdný řetězec|
+|není **null**|> = 26|**PLATNOST**|**EINVAL**|Prázdný řetězec|
+|není **null**|> = 26|Neplatná časová struktura nebo hodnoty mimo rozsah pro součásti času|**EINVAL**|Prázdný řetězec|
 
 > [!NOTE]
 > Chybové podmínky pro **wasctime_s** jsou podobné **asctime_s** s výjimkou, že omezení velikosti se měří ve slovech.
@@ -101,7 +101,7 @@ Nula v případě úspěchu. Pokud dojde k selhání, je vyvolána obslužná ru
 
 Funkce **asctime** převede čas uložený jako strukturu na řetězec znaků. Hodnota *tmSource* je obvykle získána ze volání **gmtime** nebo **localtime**. Obě funkce lze použít k vyplnění struktury **TM** , jak je definováno v čase. Y.
 
-|člen timeptr|Value|
+|člen timeptr|Hodnota|
 |--------------------|-----------|
 |**tm_hour**|Hodiny od půlnoci (0-23)|
 |**tm_isdst**|Kladné, pokud je v platnosti letní čas; 0, pokud letní čas neplatí; záporné, pokud stav letního času není známý. Knihovna run-time jazyka C předpokládá pravidla USA pro implementaci výpočtu letního času (DST).|
@@ -115,9 +115,11 @@ Funkce **asctime** převede čas uložený jako strukturu na řetězec znaků. H
 
 Převedený řetězec znaků je také upraven podle nastavení místního časového pásma. Další informace o konfiguraci místního času a funkci [_ftime64](tzset.md) pro informace o nástroji naleznete v tématu [Time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, localtime_s](ftime-ftime32-ftime64.md)a [_localtime32_s](localtime-s-localtime32-s-localtime64-s.md) , _localtime64_s, _tzset Functions. definování prostředí časového pásma a globálních proměnných.
 
-Výsledek řetězce vytvořený pomocí **asctime_s** obsahuje přesně 26 znaků a má formu `Wed Jan 02 02:03:55 1980\n\0`. Použije se 24hodinový čas. Všechna pole mají konstantní šířku. Znak nového řádku a znak null zabírají poslední dvě pozice řetězce. Hodnota předaná jako druhý parametr by měla být nejméně ta velká. Pokud je menší, vrátí se chybový kód **EINVAL**.
+Výsledek řetězce vytvořený pomocí **asctime_s** obsahuje přesně 26 znaků a má `Wed Jan 02 02:03:55 1980\n\0`formuláře. Použije se 24hodinový čas. Všechna pole mají konstantní šířku. Znak nového řádku a znak null zabírají poslední dvě pozice řetězce. Hodnota předaná jako druhý parametr by měla být nejméně ta velká. Pokud je menší, vrátí se chybový kód **EINVAL**.
 
 **_wasctime_s** je verze **asctime_s**s velkým znakem. **_wasctime_s** a **asctime_s** se chovají stejně jinak.
+
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapování rutiny obecného textu
 
@@ -131,7 +133,7 @@ V C++systému je použití těchto funkcí zjednodušeno díky přetížení ša
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**asctime_s**|\<time.h>|
+|**asctime_s**|\<time. h >|
 |**_wasctime_s**|\<Time. h > nebo \<WCHAR. h >|
 
 ## <a name="security"></a>Zabezpečení

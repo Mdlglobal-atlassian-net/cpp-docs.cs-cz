@@ -1,13 +1,13 @@
 ---
 title: 'Průvodce přenosem: MFC Scribble'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511543"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627216"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Průvodce přenosem: MFC Scribble
 
@@ -23,13 +23,13 @@ Než se pokusíte o upgrade, ujistěte se, že máte nainstalovanou pracovní ú
 
 V dalším kroku zálohujte celé řešení a veškerý jeho obsah.
 
-Nakonec jsme se museli rozhodnout o konkrétní metodě upgradu. V případě složitějších řešení a projektů, které nebyly upgradovány po dlouhou dobu, byste měli zvážit upgrade jedné verze sady Visual Studio v jednom okamžiku. Tímto způsobem můžete zúžit možnosti, které verze sady Visual Studio zavedla k problému. V případě jednoduchého projektu je vhodné ho otevřít v nejnovější verzi sady Visual Studio a povolit průvodci převod projektu. Pokud to nefunguje, můžete zkusit upgradovat jednu verzi najednou, pokud máte přístup k příslušným verzím sady Visual Studio.
+Nakonec otevřete řešení v nejnovější verzi sady Visual Studio a umožněte průvodci převést projekt. 
 
-Všimněte si, že můžete také spustit devenv z příkazového řádku pomocí `/Upgrade` možnosti namísto použití průvodce k upgradu projektů. Viz [/Upgrade (devenv. exe)](/visualstudio/ide/reference/upgrade-devenv-exe). To může být užitečné při automatizaci procesu upgradu pro velký počet projektů.
+Všimněte si, že můžete také spustit devenv na příkazovém řádku pomocí možnosti `/Upgrade` místo použití Průvodce pro upgrade projektů. Viz [/Upgrade (devenv. exe)](/visualstudio/ide/reference/upgrade-devenv-exe). To může být užitečné při automatizaci procesu upgradu pro velký počet projektů.
 
 ### <a name="step-1-converting-the-project-file"></a>Krok 1. Převod souboru projektu
 
-Když otevřete starý soubor projektu v aplikaci Visual Studio 2017, Visual Studio nabídne převod souboru projektu na nejnovější verzi, kterou jsme přijali. Zobrazilo se následující dialogové okno:
+Když otevřete starý soubor projektu v aplikaci Visual Studio, Visual Studio nabídne převod souboru projektu na nejnovější verzi, kterou jsme přijali. Zobrazilo se následující dialogové okno:
 
 ![Zkontrolovat změny projektu a řešení](../porting/media/scribbleprojectupgrade.PNG "Zkontrolovat změny projektu a řešení")
 
@@ -49,9 +49,9 @@ V tomto případě byly problémy všechna upozornění a aplikace Visual Studio
 
 ### <a name="step-2-getting-it-to-build"></a>Krok 2. Získání sestavení
 
-Před sestavením zkontrolujeme sadu nástrojů platformy, abychom věděli, jaká verze kompilátoru systém projektu používá. V dialogovém okně Vlastnosti projektu v části **Vlastnosti konfigurace**v kategorii **Obecné** si prohlédněte vlastnost **Sada nástrojů platformy** . Obsahuje verzi sady Visual Studio a číslo verze nástroje platformy, které je v tomto případě v141 pro verzi sady Visual Studio 2017 nástroje. Při převodu projektu, který byl původně zkompilován pomocí sady Visual Studio 2010, 2012, 2013 nebo 2015, sada nástrojů není automaticky aktualizována na sadu nástrojů Visual Studio 2017.
+Před sestavením zkontrolujeme sadu nástrojů platformy, abychom věděli, jaká verze kompilátoru systém projektu používá. V dialogovém okně Vlastnosti projektu v části **Vlastnosti konfigurace**v kategorii **Obecné** si prohlédněte vlastnost **Sada nástrojů platformy** . Obsahuje verzi sady Visual Studio a číslo verze nástroje platformy, které je v tomto případě v141 pro verzi sady Visual Studio 2017 nástroje. Když převedete projekt, který byl původně zkompilován pomocí sady Visual Studio 2010, 2012, 2013 nebo 2015, sada nástrojů se automaticky neaktualizuje na nejnovější sadu nástrojů.
 
-Chcete-li přepnout na kódování Unicode, otevřete vlastnosti projektu, v části **Vlastnosti konfigurace**vyberte oddíl **Obecné** a vyhledejte vlastnost **znaková sada** . Toto změňte z **použití vícebajtové znakové sady** pro **použití znakové sady Unicode**. Vlivem této změny je, že jsou teď definovaná makra _UNICODE a Unicode a možnost _MBCS není, což můžete ověřit v dialogovém okně Vlastnosti v kategorii **CC++ /** kategorie ve vlastnosti příkazového **řádku** .
+Chcete-li přepnout na kódování Unicode, otevřete vlastnosti projektu, v části **Vlastnosti konfigurace**vyberte oddíl **Obecné** a vyhledejte vlastnost **znaková sada** . Toto změňte z **použití vícebajtové znakové sady** pro **použití znakové sady Unicode**. Vlivem této změny je, že jsou teď definovaná makra _UNICODE a Unicode a možnost _MBCS není, což můžete ověřit v dialogovém okně Vlastnosti v kategorii **C/C++**  kategorie ve vlastnosti **příkazového řádku** .
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic

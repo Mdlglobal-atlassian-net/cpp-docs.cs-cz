@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4293
+title: Upozornění kompilátoru (úroveň 1) C4293
 ms.date: 11/04/2016
 f1_keywords:
 - C4293
 helpviewer_keywords:
 - C4293
 ms.assetid: babecd96-eb51-41a5-9835-462c7a46dbad
-ms.openlocfilehash: 03520e2018efd611985c0eeca8bb2cac259ff3cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee03d4a15b03ba48a3e9a04d6387d8482973adac
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384215"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626624"
 ---
-# <a name="compiler-warning-level-1-c4293"></a>Kompilátor upozornění (úroveň 1) C4293
+# <a name="compiler-warning-level-1-c4293"></a>Upozornění kompilátoru (úroveň 1) C4293
 
-'operator': záporný nebo moc velký počet operací shift je; nedefinované chování
+' operator ': počet posunů je záporný nebo moc velký, nedefinované chování
 
-Pokud počet posunů je záporný nebo moc velký, bude výsledkem obraz chování není definováno.
+Pokud je počet posunutí záporný nebo příliš velký, chování výsledného obrázku není definováno.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4293:
 
-```
+```cpp
 // C4293.cpp
 // compile with: /c /W1
 unsigned __int64 combine (unsigned lo, unsigned hi) {

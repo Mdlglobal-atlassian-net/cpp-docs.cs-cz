@@ -1,6 +1,7 @@
 ---
 title: _strdate_s, _wstrdate_s
-ms.date: 11/04/2016
+description: _strdate_s a _wstrdate_s jsou zabezpečené verze CRT funkcí _strdate a _wstrdate, které vloží aktuální datum do vyrovnávací paměti.
+ms.date: 11/01/2019
 api_name:
 - _strdate_s
 - _wstrdate_s
@@ -36,27 +37,27 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-ms.openlocfilehash: fadd30ec81cff59d675212e59c8513656c7b2f35
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d04c134fcd19753ac0cecf8cc3b87e902d92e83
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940755"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625764"
 ---
 # <a name="_strdate_s-_wstrdate_s"></a>_strdate_s, _wstrdate_s
 
-Zkopírujte aktuální systémové datum do vyrovnávací paměti. Jedná se o verze [_strdate, _wstrdate](strdate-wstrdate.md) s vylepšeními zabezpečení, jak [je popsáno v části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zkopírujte aktuální systémové datum do vyrovnávací paměti. Tyto funkce jsou verze [_strdate, _wstrdate](strdate-wstrdate.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
 ```C
 errno_t _strdate_s(
    char *buffer,
-   size_t numberOfElements
+   size_t size
 );
 errno_t _wstrdate_s(
    wchar_t *buffer,
-   size_t numberOfElements
+   size_t size
 );
 template <size_t size>
 errno_t _strdate_s(
@@ -70,11 +71,11 @@ errno_t _wstrdate_s(
 
 ### <a name="parameters"></a>Parametry
 
-*vyrovnávací paměti*<br/>
-Ukazatel na vyrovnávací paměť, která bude vyplněna řetězcem formátovaného data.
+\ *vyrovnávací paměti*
+Ukazatel na vyrovnávací paměť pro vložení formátovaného řetězce data.
 
-*numberOfElements*<br/>
-Velikost vyrovnávací paměti.
+*velikost* \
+Velikost vyrovnávací paměti v jednotkách znaků.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -82,28 +83,30 @@ Nula v případě úspěchu. Návratová hodnota je kód chyby, pokud dojde k se
 
 ## <a name="error-conditions"></a>Chybové stavy
 
-|*vyrovnávací paměti*|*numberOfElements*|vrátit|Obsah *vyrovnávací paměti*|
+|*vyrovnávací paměti*|*hodnota*|Vrátit|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|jakýmikoli|**EINVAL**|Neupraveno|
-|NOT **null** (ukazující na platnou vyrovnávací paměť)|0|**EINVAL**|Neupraveno|
-|NOT **null** (ukazující na platnou vyrovnávací paměť)|0 < *numberOfElements* < 9|**EINVAL**|Prázdný řetězec|
-|NOT **null** (ukazující na platnou vyrovnávací paměť)|*numberOfElements* > = 9|0|Aktuální datum ve formátu, jak je uvedeno v komentářích|
+|**PLATNOST**|jakýmikoli|**EINVAL**|Neupraveno|
+|NOT **null** (ukazující na platnou vyrovnávací paměť)|0,8|**EINVAL**|Neupraveno|
+|NOT **null** (ukazující na platnou vyrovnávací paměť)|0 < *velikosti* < 9|**EINVAL**|Prázdný řetězec|
+|NOT **null** (ukazující na platnou vyrovnávací paměť)|*velikost* > = 9|0,8|Aktuální datum ve formátu, jak je uvedeno v komentářích|
 
 ## <a name="security-issues"></a>Problémy se zabezpečením
 
-Předání neplatné **nenulové** hodnoty pro vyrovnávací paměť způsobí porušení přístupu, pokud je parametr *numberOfElements* větší než 9.
+Předání neplatné, nenulové hodnoty pro *vyrovnávací paměť* má za následek porušení přístupu, pokud je parametr *Size* větší než devět.
 
-Předání hodnot velikosti, která je větší než skutečná velikost *vyrovnávací paměti* , způsobí přetečení vyrovnávací paměti.
+Předání hodnoty *velikosti* větší než skutečná velikost *vyrovnávací paměti* způsobí přetečení vyrovnávací paměti.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce poskytují bezpečnější verze **_strdate** a **_wstrdate**. Funkce **_strdate_s** zkopíruje aktuální systémové datum do vyrovnávací paměti, na kterou ukazuje *vyrovnávací paměť*, formátovanou **mm**/**DD**/**RR**, kde **mm** jsou dvě číslice představující měsíc, **DD** představují dvě číslice představující den a **YY** jsou poslední dvě číslice roku. Například řetězec **12/05/99** představuje 5. prosince 1999. Vyrovnávací paměť musí být aspoň 9 znaků dlouhá.
+Tyto funkce poskytují bezpečnější verze **_strdate** a **_wstrdate**. Funkce **_strdate_s** zkopíruje aktuální systémové datum do vyrovnávací paměti, na kterou ukazuje *vyrovnávací paměť*. Jedná se o formát `mm/dd/yy`, kde `mm` je dvoumístný měsíc, `dd` je dvoumístný den a `yy` jsou poslední dvě číslice roku. Například řetězec `12/05/99` představuje 5. prosince 1999. Vyrovnávací paměť musí mít aspoň devět znaků.
 
 **_wstrdate_s** je **_strdate_s**verze s velkým znakem; argument a návratová hodnota **_wstrdate_s** jsou řetězce s velkým počtem znaků. Tyto funkce se chovají identicky jinak.
 
-Pokud je *vyrovnávací paměť* ukazatel s **hodnotou null** , nebo pokud je *numberOfElements* méně než 9 znaků, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce-1 a nastaví **errno** na **EINVAL** , pokud vyrovnávací paměť má **hodnotu null** nebo pokud je *numberOfElements* menší nebo rovna 0, nebo nastavte **errno** na **ERANGE** , pokud *numberOfElements* je menší než 9.
+Pokud je *vyrovnávací paměť* ukazatel s **hodnotou null** nebo je *Velikost* menší než devět znaků, je vyvolána obslužná rutina neplatného parametru. Je popsána v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce hodnotu-1. Nastaví **errno** na **EINVAL** , pokud je vyrovnávací paměť **null** nebo pokud je *Velikost* menší nebo rovna 0. Nebo nastaví **errno** na **ERANGE** , pokud je *Velikost* menší než 9.
 
-V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno pomocí přetížení šablon. Přetížení můžou odvodit délku vyrovnávací paměti automaticky, což eliminuje nutnost zadat argument *Size* . A můžou automaticky nahradit nezabezpečené funkce jejich novějšími, bezpečnějšími protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
+
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapování rutiny obecného textu:
 
@@ -115,9 +118,9 @@ V C++systému je použití těchto funkcí zjednodušeno díky přetížení ša
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strdate**|\<time.h>|
+|**_strdate**|\<time. h >|
 |**_wstrdate**|\<Time. h > nebo \<WCHAR. h >|
-|**_strdate_s**|\<time.h>|
+|**_strdate_s**|\<time. h >|
 
 ## <a name="example"></a>Příklad
 
@@ -125,11 +128,11 @@ Podívejte se na příklad pro [čas](time-time32-time64.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Správa času](../../c-runtime-library/time-management.md)<br/>
-[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
-[ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
-[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
-[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)<br/>
-[time, _time32, _time64](time-time32-time64.md)<br/>
-[_tzset](tzset.md)<br/>
+\ [správy času](../../c-runtime-library/time-management.md)
+[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)\
+[ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)\
+[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)\
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)\
+[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)\
+[Time, _time32, _time64](time-time32-time64.md)\
+[_tzset](tzset.md)

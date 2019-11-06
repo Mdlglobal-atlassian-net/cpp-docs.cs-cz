@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4272
+title: Upozornění kompilátoru (úroveň 1) C4272
 ms.date: 11/04/2016
 f1_keywords:
 - C4272
 helpviewer_keywords:
 - C4272
 ms.assetid: 0d6c1de4-2eef-42c4-b861-c221f8b495ef
-ms.openlocfilehash: 26e136aa395729d520f4a71a06b6dc212cf21f8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13c56c2261cd069e7edec63921c198e2bee56c95
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208308"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626702"
 ---
-# <a name="compiler-warning-level-1-c4272"></a>Kompilátor upozornění (úroveň 1) C4272
+# <a name="compiler-warning-level-1-c4272"></a>Upozornění kompilátoru (úroveň 1) C4272
 
-'function': je označené jako __declspec(dllimport); Při importu funkce, musí specifikovat nativní konvence volání.
+' function ': je označen jako __declspec (dllimport); Při importu funkce je nutné zadat nativní konvenci volání.
 
-Jedná se o chybu, chcete-li exportovat funkce označené [__clrcall](../../cpp/clrcall.md) volání konvence a kompilátor toto upozornění vydá, pokud se pokusíte importovat funkce označené `__clrcall`.
+Pokud se pokusíte importovat funkci označenou jako `__clrcall`, jedná se o chybu při exportování funkce označené konvencí volání [__clrcall](../../cpp/clrcall.md) a kompilátor vydá toto upozornění.
 
 Následující ukázka generuje C4272:
 
-```
+```cpp
 // C4272.cpp
 // compile with: /c /W1 /clr
 __declspec(dllimport) void __clrcall Test();   // C4272

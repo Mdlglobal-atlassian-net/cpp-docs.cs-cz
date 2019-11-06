@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4002
+title: Upozornění kompilátoru (úroveň 1) C4002
 ms.date: 11/04/2016
 f1_keywords:
 - C4002
 helpviewer_keywords:
 - C4002
 ms.assetid: 6bda1dfe-e2e4-4771-9794-5a404c466dd5
-ms.openlocfilehash: f2d2166a1370c02cfbc2346a63a424239ccb2b92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aac8285e3935bb0fb910b52a7dd813d0a708732
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187258"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627392"
 ---
-# <a name="compiler-warning-level-1-c4002"></a>Kompilátor upozornění (úroveň 1) C4002
+# <a name="compiler-warning-level-1-c4002"></a>Upozornění kompilátoru (úroveň 1) C4002
 
-moc velký počet skutečných parametrů pro – makro 'identifier'
+moc velký počet skutečných parametrů pro makro Identifier
 
-Počet skutečných parametrů v makru překračuje počet formálních parametrů v definici makra. Preprocesoru shromažďuje nadbytečné parametry ale bude je ignorovat při rozšíření makra.
+Počet skutečných parametrů v makru překračuje počet formálních parametrů v definici makra. Preprocesor shromáždí dodatečné parametry, ale během rozšíření makra je ignoruje.
 
-C4002 může dojít, pokud nesprávně pomocí [Variadických maker](../../preprocessor/variadic-macros.md).
+C4002 se může vyskytnout, když nesprávně použije [makra variadické](../../preprocessor/variadic-macros.md).
 
 Následující ukázka generuje C4002:
 
-```
+```cpp
 // C4002.cpp
 // compile with: /W1
 #define test(a) (a)
@@ -37,11 +37,11 @@ int main() {
 }
 ```
 
-Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio .NET 2003: navíc čárkami v makru již nejsou přijata.
+Tato chyba se může vygenerovat taky v důsledku práce s shodami s kompilátorem, která se dokončila pro Visual Studio .NET 2003: další čárky v makru už nejsou přijaté.
 
-Kompilátor nebude přijímat další čárkami v makru. Kód je platný v aplikaci Visual Studio .NET 2003 a Visual Studio .NET verzí jazyka Visual C++ odeberte nadbytečné středníky.
+Kompilátor již nebude v makru přijímat nadbytečné čárky. Aby kód byl platný jak v jazyce Visual Studio .NET 2003, tak ve verzi Visual Studio .NET C++, odeberte nadbytečné čárky.
 
-```
+```cpp
 // C4002b.cpp
 // compile with: /W1
 #define F(x,y)

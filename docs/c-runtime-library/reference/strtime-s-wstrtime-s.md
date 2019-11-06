@@ -33,12 +33,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c74e7359f68469fd8322ba1c9348acffd636282a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946569"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625922"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -81,12 +81,12 @@ Pokud dojde k chybě, je vyvolána obslužná rutina neplatného parametru, jak 
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*vyrovnávací paměti*|*numberOfElements*|vrátit|Obsah *vyrovnávací paměti*|
+|*vyrovnávací paměti*|*numberOfElements*|Vrátit|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|jakýmikoli|**EINVAL**|Neupraveno|
-|NOT **null** (ukazující na platnou vyrovnávací paměť)|0|**EINVAL**|Neupraveno|
+|**PLATNOST**|jakýmikoli|**EINVAL**|Neupraveno|
+|NOT **null** (ukazující na platnou vyrovnávací paměť)|0,8|**EINVAL**|Neupraveno|
 |NOT **null** (ukazující na platnou vyrovnávací paměť)|0 < velikosti < 9|**EINVAL**|Prázdný řetězec|
-|NOT **null** (ukazující na platnou vyrovnávací paměť)|Velikost > 9|0|Aktuální čas formátovaný podle zadání v komentářích|
+|NOT **null** (ukazující na platnou vyrovnávací paměť)|Velikost > 9|0,8|Aktuální čas formátovaný podle zadání v komentářích|
 
 ## <a name="security-issues"></a>Problémy se zabezpečením
 
@@ -102,6 +102,8 @@ Tyto funkce poskytují bezpečnější verze [_strtime](strtime-wstrtime.md) a [
 
 V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
 ### <a name="generic-text-routine-mapping"></a>Mapování rutiny obecného textu:
 
 |Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
@@ -112,7 +114,7 @@ V C++systému je použití těchto funkcí zjednodušeno díky přetížení ša
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strtime_s**|\<time.h>|
+|**_strtime_s**|\<time. h >|
 |**_wstrtime_s**|\<Time. h > nebo \<WCHAR. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

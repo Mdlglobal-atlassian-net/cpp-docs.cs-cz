@@ -28,12 +28,12 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a37508c293ee72934a8580f822878f27031b864b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937718"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624387"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
@@ -90,10 +90,10 @@ V případě neplatného parametru, jak je uvedeno v následující tabulce, tat
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Návratová hodnota|Hodnota v *bufferu*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**NULL**|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|Nezměněno.|
-|Není **null** (ukazuje na platnou paměť)|<=0|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|Nezměněno.|
-|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**NULL**|Jakýmikoli|**EINVAL**|Nezměněno.|
-|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**NULL**|**EINVAL**|Nezměněno.|
+|**PLATNOST**|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|Nezměněno.|
+|Není **null** (ukazuje na platnou paměť)|< = 0|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|Nezměněno.|
+|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**PLATNOST**|Jakýmikoli|**EINVAL**|Nezměněno.|
+|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**PLATNOST**|**EINVAL**|Nezměněno.|
 
 ## <a name="security-issues"></a>Problémy se zabezpečením
 
@@ -111,13 +111,13 @@ Rozdíl mezi **_ecvt_s** a **_fcvt_s** je ve výkladu parametru *_Count* . **_ec
 
 V C++systému je použití této funkce zjednodušené přetížením šablony; přetížení může odvodit délku vyrovnávací paměti automaticky a eliminuje nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze této funkce nejprve vyplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Ladicí verze této funkce nejprve vyplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_ecvt_s**|\<stdlib.h>|\<errno.h>|
+|**_ecvt_s**|\<Stdlib. h >|\<errno. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 

@@ -1,26 +1,26 @@
 ---
 title: Projekty CMake v sadě Visual Studio
-ms.date: 10/01/2019
+ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 168f5b0aac34757a9c2d73bcebc908a0d58721fe
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 2efd228971f19ca525f245014f3046b1b62995dc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925575"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624592"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake v sadě Visual Studio
 
-CMake je open source nástroj pro různé platformy, který slouží k definování procesů sestavení, které běží na různých platformách. Tento článek předpokládá, že máte zkušenosti s CMakí. Další informace o IT najdete v [sestavování, testování a zabalení softwaru pomocí cmake](https://cmake.org/). 
+CMake je open source nástroj pro různé platformy, který slouží k definování procesů sestavení, které běží na různých platformách. Tento článek předpokládá, že máte zkušenosti s CMakí. Další informace o IT najdete v [sestavování, testování a zabalení softwaru pomocí cmake](https://cmake.org/).
 
 > [!NOTE]
-> Sada CMake se v sadě Visual Studio během posledních několika verzí stala více a více integrována. Pokud chcete zobrazit správné informace o verzi, kterou používáte, ujistěte se, že je správně nastavený selektor verzí v levém horním rohu této stránky. 
+> Sada CMake se v sadě Visual Studio během posledních několika verzí stala více a více integrována. Pokud chcete zobrazit správné informace o verzi, kterou používáte, ujistěte se, že je správně nastavený selektor verzí v levém horním rohu této stránky.
 
 ::: moniker range="vs-2019"
 
-Součást  **C++ cmake Tools for Windows** používá funkci [Otevřít složku](https://docs.microsoft.com/en-us/cpp/build/open-folder-projects-cpp?view=vs-2019) pro využívání souborů projektu cmake (například CMakeLists. txt) přímo pro účely IntelliSense a procházení. Podporují se expertem i generátory sady Visual Studio. Použijete-li generátor sady Visual Studio, je vytvořen dočasný soubor projektu nástroje MSBuild. exe, ale nikdy se nenačte pro účely IntelliSense nebo procházení. Můžete také importovat stávající mezipaměť CMake.
+Součást  **C++ cmake Tools for Windows** používá funkci [Otevřít složku](open-folder-projects-cpp.md) pro využívání souborů projektu cmake (například CMakeLists. txt) přímo pro účely IntelliSense a procházení. Podporují se expertem i generátory sady Visual Studio. Použijete-li generátor sady Visual Studio, je vytvořen dočasný soubor projektu nástroje MSBuild. exe, ale nikdy se nenačte pro účely IntelliSense nebo procházení. Můžete také importovat stávající mezipaměť CMake.
 
 ## <a name="installation"></a>Instalace
 
@@ -38,7 +38,7 @@ Když vyberete **soubor > otevřít > složku** a otevřete složku obsahující
 
 - **Průzkumník řešení** zobrazuje strukturu a soubory složek.
 
-- Sada Visual Studio spustí cmake. exe a vygeneruje mezipaměť CMake pro výchozí *konfiguraci*, což je x64 ladění. V **okno výstup**se zobrazí příkazový řádek cmake spolu s dalším výstupem z cmake.
+- Sada Visual Studio spustí cmake. exe a vygeneruje soubor mezipaměti CMake (*CMakeCache. txt*) pro výchozí *konfiguraci*, což je x64 ladění. V **okno výstup**se zobrazí příkazový řádek cmake spolu s dalším výstupem z cmake.
 
 - Na pozadí Visual Studio začne indexovat zdrojové soubory, aby bylo možné povolit technologii IntelliSense, informace o procházení, refaktoring atd. Při práci Visual Studio monitoruje změny v editoru a také na disku, aby byl jeho index synchronizovaný se zdroji.
 
@@ -50,9 +50,13 @@ Své projekty můžete také hierarchicky zobrazit podle cílů. V rozevíracím
 
 ![Tlačítko zobrazení cílů CMake](media/cmake-targets-view.png)
 
-Sada Visual Studio používá k ukládání proměnných prostředí nebo možností příkazového řádku pro cmake. exe soubor s názvem **CMakeSettings. JSON** . **CMakeSettings. JSON** také umožňuje definovat a ukládat více konfigurací sestavení cmake a pohodlně přepínat mezi nimi v integrovaném vývojovém prostředí (IDE). V sadě Visual Studio 2019 **Editor nastavení cmake** nabízí pohodlný způsob, jak upravit nastavení. Další informace najdete v tématu [přizpůsobení nastavení cmake](customize-cmake-settings.md) .
+Kliknutím na tlačítko **Zobrazit všechny soubory** v horní části **Průzkumník řešení** zobrazíte všechny výstupy vygenerované cmaki ve složkách *out/Build/<config>* .
 
-V opačném případě použijte **CMakeLists. txt** stejným způsobem jako v jakémkoli projektu cmake, abyste určili zdrojové soubory, našli knihovny, nastavili možnosti kompilátoru a linkeru a zadali další informace související se systémem sestavení.
+Visual Studio používá soubor s názvem **CMakeSettings. JSON** , který umožňuje definovat a ukládat více konfigurací sestavení a pohodlně přepínat mezi nimi v integrovaném vývojovém prostředí (IDE). *Konfigurace* je konstrukce sady Visual Studio, která zapouzdřuje nastavení specifická pro daný typ sestavení. Tato nastavení slouží ke konfiguraci výchozích možností příkazového řádku, které Visual Studio předá do cmake. exe. Tady můžete také zadat další možnosti CMake a definovat další proměnné, které chcete. Všechny možnosti jsou zapsány do mezipaměti CMake buď jako vnitřní, nebo jako externí proměnné. V sadě Visual Studio 2019 **Editor nastavení cmake** nabízí pohodlný způsob, jak upravit nastavení. Další informace najdete v tématu [přizpůsobení nastavení cmake](customize-cmake-settings.md) .
+
+Jedno nastavení `intelliSenseMode` není předáno do CMake, ale používá se pouze sada Visual Studio.
+
+Použijte soubor **CMakeLists. txt** v každé složce projektu stejným způsobem jako v jakémkoli projektu cmake k určení zdrojových souborů, hledání knihoven, nastavení kompilátoru a linkeru a zadání dalších informací souvisejících se systémem sestavení.
 
 Pokud potřebujete předat argumenty spustitelnému souboru v době ladění, můžete použít jiný soubor nazvaný **Launch. vs. JSON**. V některých scénářích aplikace Visual Studio tyto soubory automaticky vygeneruje. můžete je upravit ručně. Soubor můžete také vytvořit sami.
 
@@ -61,7 +65,7 @@ Pokud potřebujete předat argumenty spustitelnému souboru v době ladění, m�
 
 ## <a name="open-an-existing-cache"></a>Otevřít existující mezipaměť
 
-Když otevřete existující mezipaměť CMake, Visual Studio se nebude pokoušet spravovat vaši mezipaměť a strom sestavení za vás. Díky tomu mají vaše vlastní nebo preferované nástroje úplnou kontrolu nad tím, jak CMake nakonfiguruje váš projekt. V sadě Visual Studio můžete otevřít existující mezipaměť prostřednictvím **souboru > otevřít > cmake** a přejít na existující soubor CMakeCache. txt. Případně, pokud jste již otevřeli projekt v aplikaci Visual Studio, můžete do něj přidat existující mezipaměť stejným způsobem, jako byste přidali novou konfiguraci. Další informace najdete v našem blogovém příspěvku o [otevření existující mezipaměti v aplikaci Visual Studio](https://devblogs.microsoft.com/cppblog/open-existing-cmake-caches-in-visual-studio/).
+Když otevřete existující soubor mezipaměti CMake (*CMakeCache. txt*), Visual Studio se nebude pokoušet spravovat vaši mezipaměť a strom sestavení za vás. Díky tomu mají vaše vlastní nebo preferované nástroje úplnou kontrolu nad tím, jak CMake nakonfiguruje váš projekt. V sadě Visual Studio můžete otevřít existující mezipaměť prostřednictvím **souboru > otevřít > cmake** a přejít na existující soubor *CMakeCache. txt*. Případně, pokud jste již otevřeli projekt v aplikaci Visual Studio, můžete do něj přidat existující mezipaměť stejným způsobem, jako byste přidali novou konfiguraci. Další informace najdete v našem blogovém příspěvku o [otevření existující mezipaměti v aplikaci Visual Studio](https://devblogs.microsoft.com/cppblog/open-existing-cmake-caches-in-visual-studio/).
 
 ## <a name="building-cmake-projects"></a>Sestavování projektů CMake
 
@@ -73,29 +77,27 @@ Chcete-li vytvořit projekt CMake, máte tyto možnosti:
 
 1. V hlavní nabídce vyberte **sestavit > sestavit vše** (**F7** nebo **CTRL + SHIFT + B**). Ujistěte se, že cíl CMake je už vybraný v rozevíracím seznamu **položky po spuštění** na panelu nástrojů **Obecné** .
 
-![Nabídka sestavení cmake příkazu](media/cmake-build-menu.png "cmake – příkaz nabídky sestavení")
-
-Můžete přizpůsobit konfigurace sestavení, proměnné prostředí, argumenty příkazového řádku a další nastavení, aniž byste museli upravovat soubor CMakeLists. txt pomocí **editoru nastavení cmake**. Další informace najdete v tématu [přizpůsobení nastavení cmake](customize-cmake-settings.md).
+![Příkaz nabídky buildu CMake](media/cmake-build-menu.png "Nabídka příkazů pro sestavení CMake")
 
 Jak byste očekávali, výsledky sestavení se zobrazí v **okno výstup** a **Seznam chyb**.
 
-![Chyby buildu cmake]Chyba(media/cmake-build-errors.png "buildu cmake")
+![Chyby sestavení CMake](media/cmake-build-errors.png "Chyby sestavení CMake")
 
-Ve složce s více cíli sestavení můžete zvolit položku **sestavení** v nabídce **cmake** nebo v kontextové nabídce **CMakeLists. txt** a určit tak, který cíl cmake se má sestavit. Stisknutím **kombinace kláves CTRL + SHIFT + B** v projektu cmake sestavíte aktuální aktivní dokument.
+Ve složce s více cíli sestavení můžete zvolit položku **sestavení** v nabídce **cmake** nebo v kontextové nabídce *CMakeLists. txt* a určit tak, který cíl cmake se má sestavit. Stisknutím **kombinace kláves CTRL + SHIFT + B** v projektu cmake sestavíte aktuální aktivní dokument.
 
 ## <a name="debugging-cmake-projects"></a>Ladění projektů CMake
 
 Chcete-li ladit projekt CMake, zvolte požadovanou konfiguraci a stiskněte klávesu **F5**nebo stiskněte tlačítko **Spustit** na panelu nástrojů. Pokud tlačítko **Spustit** uvádí možnost "vybrat položku po spuštění", vyberte šipku rozevíracího seznamu a zvolte cíl, který chcete spustit. (V projektu CMake je možnost aktuální dokument platná jenom pro soubory. cpp.)
 
-Tlačítko spustit(media/cmake-run-button.png "cmake") ![tlačítka Spustit]cmake
+![Tlačítko spustit CMake](media/cmake-run-button.png "Tlačítko spustit CMake")
 
-Příkazy **Run** nebo **F5** nejprve sestaví projekt, pokud byly od předchozího sestavení provedeny změny.
+Příkazy **Run** nebo **F5** nejprve sestaví projekt, pokud byly od předchozího sestavení provedeny změny. Změny *CMakeSettings. JSON* způsobí opětovné vygenerování mezipaměti cmake.
 
 Relaci ladění CMake můžete přizpůsobit nastavením vlastností v souboru **Launch. vs. JSON** . Další informace najdete v tématu [Konfigurace relací ladění cmake](configure-cmake-debugging-sessions.md).
 
 ## <a name="just-my-code-for-cmake-projects"></a>Pouze můj kód pro projekty CMake
 
-Při sestavování pro Windows pomocí kompilátoru MSVC, projekty CMake mají podporu pouze pro ladění pouze můj kód v kompilátoru a linkeru, pokud je v sadě Visual Studio povolena možnost. Pokud chcete nastavení změnit, přejděte na **nástroje** > **možnosti**-1  > **ladění** > **Obecné**.
+Při sestavování pro Windows pomocí kompilátoru MSVC, projekty CMake mají podporu pouze pro ladění pouze můj kód v kompilátoru a linkeru, pokud je v sadě Visual Studio povolena možnost. Pokud chcete toto nastavení změnit, přejděte na **nástroje** > **možnosti** > **ladění** > **Obecné**.
 
 ## <a name="vcpkg-integration"></a>Integrace Vcpkg
 
@@ -103,30 +105,29 @@ Pokud jste nainstalovali [vcpkg](vcpkg.md), projekty cmake otevřené v sadě Vi
 
 ## <a name="customize-configuration-feedback"></a>Přizpůsobení zpětné vazby konfigurace
 
-Ve výchozím nastavení je většina konfiguračních zpráv potlačena, pokud nedošlo k chybě. Všechny zprávy můžete zobrazit tak, že tuto funkci povolíte v **nástrojích**@no__t**možnosti**-1  > **cmake**.
+Ve výchozím nastavení je většina konfiguračních zpráv potlačena, pokud nedošlo k chybě. Všechny zprávy můžete zobrazit tak, že tuto funkci povolíte v **nabídce nástroje** > **Možnosti** > **cmake**.
 
-   ![Konfigurace možností diagnostiky cmake]možnosti(media/vs2019-cmake-configure-options.png "diagnostiky")
+   ![Konfigurace možností diagnostiky CMake](media/vs2019-cmake-configure-options.png "Možnosti diagnostiky CMake")
 
 ## <a name="editing-cmakeliststxt-files"></a>Úpravy souborů CMakeLists. txt
 
 Pokud chcete upravit soubor CMakeLists. txt, klikněte pravým tlačítkem na soubor v **Průzkumník řešení** a vyberte **otevřít**. Pokud provedete změny v souboru, zobrazí se žlutý stavový řádek, který vám bude informovat o tom, že technologie IntelliSense bude aktualizována a nabídne vám možnost zrušit operaci aktualizace. Informace o CMakeLists. txt najdete v dokumentaci k [cmaki](https://cmake.org/documentation/).
 
-   Úprava souboru ![CMakeLists. txt úpravou](media/cmake-cmakelists.png "souboru CMakeLists. txt")
+   ![Úpravy souboru CMakeLists. txt](media/cmake-cmakelists.png "Úpravy souboru CMakeLists. txt")
 
 Jakmile soubor uložíte, krok konfigurace se automaticky spustí znovu a zobrazí informace v okně **výstup** . Chyby a varování se zobrazí v okně **Seznam chyb** nebo **výstup** . Dvojím kliknutím na chybu v **Seznam chyb** přejděte na problematický řádek v CMakeLists. txt.
 
-   ![CMakeLists. txt]– chyby(media/cmake-cmakelists-error.png "souboru CMakeLists. txt")
-
+   ![Chyby souboru CMakeLists. txt](media/cmake-cmakelists-error.png "Chyby souboru CMakeLists. txt")
 
 ## <a name="cmake-configure-step"></a>Krok konfigurace CMake
 
-Pokud jsou provedeny významné změny v souborech **CMakeSettings. JSON** nebo CMakeLists. txt, sada Visual Studio automaticky znovu spustí krok konfigurace cmake. Pokud se krok konfigurace dokončí bez chyb, shromažďované informace jsou k dispozici C++ v technologii IntelliSense a jazykové služby a také v operacích sestavení a ladění.
+Pokud jsou provedeny významné změny v souborech *CMakeSettings. JSON* nebo *CMakeLists. txt* , sada Visual Studio automaticky znovu spustí krok konfigurace cmake. Pokud se krok konfigurace dokončí bez chyb, shromažďované informace jsou k dispozici C++ v technologii IntelliSense a jazykové služby a také v operacích sestavení a ladění.
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>Řešení chyb v mezipaměti CMake
 
-Pokud potřebujete další informace o stavu mezipaměti CMake pro diagnostiku problému, otevřete hlavní nabídku **projektu** nebo místní nabídku **CMakeLists. txt** v **Průzkumník řešení** a spusťte jeden z těchto příkazů:
+Pokud potřebujete další informace o stavu mezipaměti CMake pro diagnostiku problému, otevřete hlavní nabídku **projektu** nebo místní nabídku *CMakeLists. txt* v **Průzkumník řešení** a spusťte jeden z těchto příkazů:
 
-- Možnost **Zobrazit mezipaměť** otevře soubor CMakeCache. txt z kořenové složky sestavení v editoru. (Všechny úpravy, které uděláte v CMakeCache. txt, se při vyčištění mezipaměti vymažou. Pokud chcete provést změny, které budou trvalé po vyčištění mezipaměti, přečtěte si téma [přizpůsobení nastavení cmake](customize-cmake-settings.md).)
+- Možnost **Zobrazit mezipaměť** otevře soubor *CMakeCache. txt* z kořenové složky sestavení v editoru. (Všechny úpravy, které uděláte v *CMakeCache. txt* , se při vyčištění mezipaměti vymažou. Pokud chcete provést změny, které budou trvalé po vyčištění mezipaměti, přečtěte si téma [přizpůsobení nastavení cmake](customize-cmake-settings.md).)
 
 - **Složka otevřít mezipaměť** otevře okno Průzkumníka s kořenovou složkou sestavení.
 
@@ -180,9 +181,9 @@ Své projekty můžete také hierarchicky zobrazit podle cílů. V rozevíracím
 
 ![Tlačítko zobrazení cílů CMake](media/cmake-targets-view.png)
 
-Sada Visual Studio používá k ukládání proměnných prostředí nebo možností příkazového řádku pro cmake. exe soubor s názvem **CMakeSettings. JSON** . **CMakeSettings. JSON** také umožňuje definovat a ukládat více konfigurací sestavení cmake a pohodlně přepínat mezi nimi v integrovaném vývojovém prostředí (IDE). 
+Sada Visual Studio používá k ukládání proměnných prostředí nebo možností příkazového řádku pro cmake. exe soubor s názvem *CMakeSettings. JSON* . *CMakeSettings. JSON* také umožňuje definovat a ukládat více konfigurací sestavení cmake a pohodlně přepínat mezi nimi v integrovaném vývojovém prostředí (IDE).
 
-V opačném případě použijte soubor **CMakeLists. txt** stejným způsobem jako v jakémkoli projektu cmake, abyste určili zdrojové soubory, našli knihovny, nastavili možnosti kompilátoru a linkeru a zadali další informace související se systémem sestavení.
+V opačném případě použijte soubor *CMakeLists. txt* stejným způsobem jako v jakémkoli projektu cmake, abyste určili zdrojové soubory, našli knihovny, nastavili možnosti kompilátoru a linkeru a zadali další informace související se systémem sestavení.
 
 Pokud potřebujete předat argumenty spustitelnému souboru v době ladění, můžete použít jiný soubor nazvaný **Launch. vs. JSON**. V některých scénářích aplikace Visual Studio tyto soubory automaticky vygeneruje. můžete je upravit ručně. Soubor můžete také vytvořit sami.
 
@@ -191,7 +192,7 @@ Pokud potřebujete předat argumenty spustitelnému souboru v době ladění, m�
 
 ## <a name="import-an-existing-cache"></a>Importovat existující mezipaměť
 
-Když importujete existující soubor CMakeCache. txt, Visual Studio automaticky extrahuje vlastní proměnné a na základě nich vytvoří předem vyplněný soubor **CMakeSettings. JSON** . Původní mezipaměť není nijak upravována a lze ji nadále používat z příkazového řádku nebo s jakýmkoli nástrojem nebo IDE použitým k jejich vygenerování. Nový soubor **CMakeSettings. JSON** se umístí vedle kořenového souboru CMakeLists. txt projektu. Visual Studio vygeneruje novou mezipaměť založenou na souboru nastavení. Automatické generování mezipaměti můžete přepsat v dialogovém okně **nástroje > možnosti > cmake > obecné** .
+Když importujete existující soubor *CMakeCache. txt* , Visual Studio automaticky extrahuje vlastní proměnné a na základě nich vytvoří předem vyplněný soubor *CMakeSettings. JSON* . Původní mezipaměť není nijak upravována a lze ji nadále používat z příkazového řádku nebo s jakýmkoli nástrojem nebo IDE použitým k jejich vygenerování. Nový soubor *CMakeSettings. JSON* se umístí vedle kořenového souboru CMakeLists. txt projektu. Visual Studio vygeneruje novou mezipaměť založenou na souboru nastavení. Automatické generování mezipaměti můžete přepsat v dialogovém okně **nástroje > možnosti > cmake > obecné** .
 
 Ne vše v mezipaměti je importováno.  Vlastnosti, jako je generátor a umístění kompilátorů, se nahrazují výchozími hodnotami, které jsou známé pro správnou práci s IDE.
 
@@ -199,15 +200,15 @@ Ne vše v mezipaměti je importováno.  Vlastnosti, jako je generátor a umíst�
 
 1. V hlavní nabídce vyberte **soubor > otevřít > cmake**:
 
-   ![Otevřít soubor cmake](media/cmake-file-open.png ", otevřít, cmake")
+   ![Otevřít CMake](media/cmake-file-open.png "Soubor, otevřít, CMake")
 
    Tím se otevře průvodce **importem cmake z mezipaměti** .
 
-2. Přejděte k souboru CMakeCache. txt, který chcete importovat, a klikněte na tlačítko **OK**. Zobrazí se průvodce **importem projektu cmake z mezipaměti** :
+2. Přejděte k souboru *CMakeCache. txt* , který chcete importovat, a klikněte na tlačítko **OK**. Zobrazí se průvodce **importem projektu cmake z mezipaměti** :
 
-   ![Import mezipaměti cmake](media/cmake-import-wizard.png "otevřete Průvodce importem mezipaměti cmake") .
+   ![Import mezipaměti CMake](media/cmake-import-wizard.png "Otevřete Průvodce pro import mezipaměti CMake.")
 
-   Po dokončení průvodce uvidíte nový soubor CMakeCache. txt v **Průzkumník řešení** vedle kořenového souboru CMakeLists. txt v projektu.
+   Po dokončení průvodce uvidíte nový soubor *CMakeCache. txt* v **Průzkumník řešení** vedle kořenového souboru *CMakeLists. txt* v projektu.
 
 ## <a name="building-cmake-projects"></a>Sestavování projektů CMake
 
@@ -215,55 +216,53 @@ Chcete-li vytvořit projekt CMake, máte tyto možnosti:
 
 1. Na panelu nástrojů obecné Najděte rozevírací seznam **Konfigurace** ; ve výchozím nastavení se pravděpodobně zobrazuje "Linux-debug" nebo "x64-debug". Vyberte požadovanou konfiguraci a stiskněte klávesu **F5**nebo klikněte na tlačítko **Spustit** (zelený trojúhelník) na panelu nástrojů. Projekt se nejprve automaticky sestaví jako řešení sady Visual Studio.
 
-1. Klikněte pravým tlačítkem na CMakeLists. txt a v místní nabídce vyberte **sestavit** . Pokud máte ve struktuře složek více cílů, můžete si vybrat, jestli chcete sestavit jenom jeden konkrétní cíl.
+1. Klikněte pravým tlačítkem na *CMakeLists. txt* a v místní nabídce vyberte **sestavit** . Pokud máte ve struktuře složek více cílů, můžete si vybrat, jestli chcete sestavit jenom jeden konkrétní cíl.
 
 1. V hlavní nabídce vyberte **sestavit > sestavit řešení** (**F7** nebo **CTRL + SHIFT + B**). Ujistěte se, že cíl CMake je už vybraný v rozevíracím seznamu **položky po spuštění** na panelu nástrojů **Obecné** .
 
-![Nabídka sestavení cmake příkazu](media/cmake-build-menu.png "cmake – příkaz nabídky sestavení")
+![Příkaz nabídky buildu CMake](media/cmake-build-menu.png "Nabídka příkazů pro sestavení CMake")
 
-Můžete přizpůsobit konfigurace sestavení, proměnné prostředí, argumenty příkazového řádku a další nastavení beze změny souboru CMakeLists. txt pomocí souboru **CMakeSettings. JSON** . Další informace najdete v tématu [přizpůsobení nastavení cmake](customize-cmake-settings.md).
+Můžete přizpůsobit konfigurace sestavení, proměnné prostředí, argumenty příkazového řádku a další nastavení beze změny souboru CMakeLists. txt pomocí souboru *CMakeSettings. JSON* . Další informace najdete v tématu [přizpůsobení nastavení cmake](customize-cmake-settings.md).
 
 Jak byste očekávali, výsledky sestavení se zobrazí v **okno výstup** a **Seznam chyb**.
 
-![Chyby buildu cmake]Chyba(media/cmake-build-errors.png "buildu cmake")
+![Chyby sestavení CMake](media/cmake-build-errors.png "Chyby sestavení CMake")
 
-Ve složce s více cíli sestavení můžete zvolit položku **sestavení** v nabídce **cmake** nebo v kontextové nabídce **CMakeLists. txt** a určit tak, který cíl cmake se má sestavit. Stisknutím **kombinace kláves CTRL + SHIFT + B** v projektu cmake sestavíte aktuální aktivní dokument.
+Ve složce s více cíli sestavení můžete zvolit položku **sestavení** v nabídce **cmake** nebo v kontextové nabídce *CMakeLists. txt* a určit tak, který cíl cmake se má sestavit. Stisknutím **kombinace kláves CTRL + SHIFT + B** v projektu cmake sestavíte aktuální aktivní dokument.
 
 ## <a name="debugging-cmake-projects"></a>Ladění projektů CMake
 
 Chcete-li ladit projekt CMake, zvolte požadovanou konfiguraci a stiskněte klávesu **F5**nebo stiskněte tlačítko **Spustit** na panelu nástrojů. Pokud tlačítko **Spustit** uvádí možnost "vybrat položku po spuštění", vyberte šipku rozevíracího seznamu a zvolte cíl, který chcete spustit. (V projektu CMake je možnost aktuální dokument platná jenom pro soubory. cpp.)
 
-Tlačítko spustit(media/cmake-run-button.png "cmake") ![tlačítka Spustit]cmake
+![Tlačítko spustit CMake](media/cmake-run-button.png "Tlačítko spustit CMake")
 
 Příkazy **Run** nebo **F5** nejprve sestaví projekt, pokud byly od předchozího sestavení provedeny změny.
 
 Relaci ladění CMake můžete přizpůsobit nastavením vlastností v souboru **Launch. vs. JSON** . Další informace najdete v tématu [Konfigurace relací ladění cmake](configure-cmake-debugging-sessions.md).
 
-
 ## <a name="editing-cmakeliststxt-files"></a>Úpravy souborů CMakeLists. txt
 
 Pokud chcete upravit soubor CMakeLists. txt, klikněte pravým tlačítkem na soubor v **Průzkumník řešení** a vyberte **otevřít**. Pokud provedete změny v souboru, zobrazí se žlutý stavový řádek, který vám bude informovat o tom, že technologie IntelliSense bude aktualizována a nabídne vám možnost zrušit operaci aktualizace. Informace o CMakeLists. txt najdete v dokumentaci k [cmaki](https://cmake.org/documentation/).
 
-   Úprava souboru ![CMakeLists. txt úpravou](media/cmake-cmakelists.png "souboru CMakeLists. txt")
+   ![Úpravy souboru CMakeLists. txt](media/cmake-cmakelists.png "Úpravy souboru CMakeLists. txt")
 
 Jakmile soubor uložíte, krok konfigurace se automaticky spustí znovu a zobrazí informace v okně **výstup** . Chyby a varování se zobrazí v okně **Seznam chyb** nebo **výstup** . Dvojím kliknutím na chybu v **Seznam chyb** přejděte na problematický řádek v CMakeLists. txt.
 
-   ![CMakeLists. txt]– chyby(media/cmake-cmakelists-error.png "souboru CMakeLists. txt")
-
+   ![Chyby souboru CMakeLists. txt](media/cmake-cmakelists-error.png "Chyby souboru CMakeLists. txt")
 
 ## <a name="cmake-configure-step"></a>Krok konfigurace CMake
 
-Pokud jsou provedeny významné změny v souborech **CMakeSettings. JSON** nebo CMakeLists. txt, sada Visual Studio automaticky znovu spustí krok konfigurace cmake. Pokud se krok konfigurace dokončí bez chyb, shromažďované informace jsou k dispozici C++ v technologii IntelliSense a jazykové služby a také v operacích sestavení a ladění.
+Pokud jsou provedeny významné změny v souborech *CMakeSettings. JSON* nebo CMakeLists. txt, sada Visual Studio automaticky znovu spustí krok konfigurace cmake. Pokud se krok konfigurace dokončí bez chyb, shromažďované informace jsou k dispozici C++ v technologii IntelliSense a jazykové služby a také v operacích sestavení a ladění.
 
 Pokud více projektů CMake používá stejný název konfigurace CMake (například x86-Debug), všechny jsou nakonfigurovány a sestaveny (ve vlastní kořenové složce sestavení), když je tato konfigurace vybrána. Cíle můžete ladit ze všech projektů CMake, které se účastní konfigurace CMake.
 
-   Položka(media/cmake-build-only.png "nabídky cmake") jenom sestavení cmake ![jenom pro sestavení cmake]
+   ![Položka nabídky jenom pro sestavení CMake](media/cmake-build-only.png "Položka nabídky jenom pro sestavení CMake")
 
-Chcete-li omezit sestavení a relace ladění na podmnožinu projektů v pracovním prostoru, vytvořte novou konfiguraci s jedinečným názvem v souboru **CMakeSettings. JSON** a použijte ji pouze pro tyto projekty. Pokud je zvolena tato konfigurace, příkazy IntelliSense a sestavení a ladění jsou povoleny pouze pro ty zadané projekty.
+Chcete-li omezit sestavení a relace ladění na podmnožinu projektů v pracovním prostoru, vytvořte novou konfiguraci s jedinečným názvem v souboru *CMakeSettings. JSON* a použijte ji pouze pro tyto projekty. Pokud je zvolena tato konfigurace, příkazy IntelliSense a sestavení a ladění jsou povoleny pouze pro ty zadané projekty.
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>Řešení chyb v mezipaměti CMake
 
-Pokud potřebujete další informace o stavu mezipaměti CMake pro diagnostiku problému, otevřete hlavní nabídku **cmake** nebo místní nabídku **CMakeLists. txt** v **Průzkumník řešení** a spusťte jeden z těchto příkazů:
+Pokud potřebujete další informace o stavu mezipaměti CMake pro diagnostiku problému, otevřete hlavní nabídku **cmake** nebo místní nabídku *CMakeLists. txt* v **Průzkumník řešení** a spusťte jeden z těchto příkazů:
 
 - Možnost **Zobrazit mezipaměť** otevře soubor CMakeCache. txt z kořenové složky sestavení v editoru. (Všechny úpravy, které uděláte v CMakeCache. txt, se při vyčištění mezipaměti vymažou. Pokud chcete provést změny, které budou trvalé po vyčištění mezipaměti, přečtěte si téma [přizpůsobení nastavení cmake](customize-cmake-settings.md).)
 
@@ -306,7 +305,7 @@ V sadě Visual Studio 2015 mohou uživatelé sady Visual Studio použít [gener�
 [Konfigurace projektu Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Připojení ke vzdálenému počítači s Linuxem](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Vlastní nastavení sestavení CMake](customize-cmake-settings.md)<br/>
-[Referenční informace k CMakeSettings.json](cmakesettings-reference.md)<br/>
+[Referenční informace k CMakeSettings.json](o regenerate the root-reference.md)<br/>
 [Konfigurace ladicích relací CMake](configure-cmake-debugging-sessions.md)<br/>
 [Nasazení, spuštění a ladění projektu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Odkaz na předdefinovaný konfigurační odkaz CMake](cmake-predefined-configuration-reference.md)<br/>

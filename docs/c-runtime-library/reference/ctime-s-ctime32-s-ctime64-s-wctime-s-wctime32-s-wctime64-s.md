@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942012"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624414"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -148,13 +148,13 @@ Nula v případě úspěchu. Pokud dojde k chybě z důvodu neplatného parametr
 
 ## <a name="error-conditions"></a>Chybové stavy
 
-|*vyrovnávací paměti*|*numberOfElements*|*sourceTime*|vrátit|Hodnota v *bufferu*|
+|*vyrovnávací paměti*|*numberOfElements*|*sourceTime*|Vrátit|Hodnota v *bufferu*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|Jakýmikoli|Jakýmikoli|**EINVAL**|Neupraveno|
-|Není **null** (ukazuje na platnou paměť)|0|Jakýmikoli|**EINVAL**|Neupraveno|
-|Není **null**|0 < velikosti < 26|Jakýmikoli|**EINVAL**|Prázdný řetězec|
-|Není **null**|>= 26|NULL|**EINVAL**|Prázdný řetězec|
-|Není **null**|>= 26|< 0|**EINVAL**|Prázdný řetězec|
+|**PLATNOST**|Jakýmikoli|Jakýmikoli|**EINVAL**|Neupraveno|
+|Není **null** (ukazuje na platnou paměť)|0,8|Jakýmikoli|**EINVAL**|Neupraveno|
+|není **null**|0 < velikosti < 26|Jakýmikoli|**EINVAL**|Prázdný řetězec|
+|není **null**|> = 26|NULL|**EINVAL**|Prázdný řetězec|
+|není **null**|> = 26|< 0|**EINVAL**|Prázdný řetězec|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -172,6 +172,8 @@ Převedený řetězec znaků je také upraven podle nastavení místního časov
 
 V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
@@ -184,7 +186,7 @@ V C++systému je použití těchto funkcí zjednodušeno díky přetížení ša
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
+|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time. h >|
 |**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<Time. h > nebo \<WCHAR. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

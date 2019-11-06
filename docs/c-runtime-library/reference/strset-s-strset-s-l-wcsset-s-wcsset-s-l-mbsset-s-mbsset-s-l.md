@@ -61,12 +61,12 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 7d959a1b8856fda6abc17c77e0c0f8c0679883a7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a962a333af2a7f5c75d1ce2eb3fb5ce797a5d7f2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946782"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626125"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
@@ -121,7 +121,7 @@ Byl nastaven řetězec zakončený hodnotou null.
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti *str* .
 
-*c*<br/>
+*r*<br/>
 Nastavení znaků.
 
 *jazyka*<br/>
@@ -139,7 +139,7 @@ Funkce **_strset_s** nastaví všechny znaky *str* na *c* (převedené na **char
 
 Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -152,10 +152,10 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strset_s**|\<String. h >|
-|**_strset_s_l**|\<tchar.h>|
+|**_strset_s**|\<string. h >|
+|**_strset_s_l**|\<TCHAR. h >|
 |**_wcsset_s**|\<String. h > nebo \<WCHAR. h >|
-|**_wcsset_s_l**|\<tchar.h>|
+|**_wcsset_s_l**|\<TCHAR. h >|
 |**_mbsset_s**, **_mbsset_s_l**|\<Mbstring. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

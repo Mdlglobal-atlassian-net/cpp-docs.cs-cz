@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
-ms.openlocfilehash: fe765fa49b9aa11667e1eac4a9cfed54bb84fd8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 661b687373d6c72b9f40a05d1406bc89ce332133
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447860"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623707"
 ---
 # <a name="compiler-warning-c4430"></a>Upozornění kompilátoru C4430
 
-chybějící specifikátor typu: předpokládá se int Poznámka: Jazyk C++ nepodporuje typ default int.
+chybějící specifikátor typu: předpokládá se int Poznámka: C++ nepodporuje default-int.
 
-Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: všechny deklarace musíte explicitně zadat typ; je již předpokládá.
+Tato chyba se může vygenerovat v důsledku práce s shodami s kompilátorem, která byla dokončena pro sadu Visual Studio 2005: všechny deklarace musí explicitně zadat typ; int již nepředpokládáme.
 
-C4430 je vždy vyvoláno jako chyba.  Můžete vypnout toto upozornění se `#pragma warning` nebo **/wd**; naleznete v tématu [upozornění](../../preprocessor/warning.md) nebo [/w, /W0, /W1, /W2, w3, / W4, /w1, /w2, w3, / W4, / wall, WD, / we, Wo, WV, /WX (úroveň upozornění)](../../build/reference/compiler-option-warning-level.md)Další informace.
+C4430 se vždy vydá jako chyba.  Toto upozornění můžete vypnout pomocí `#pragma warning` nebo **/WD**; Další informace najdete v tématech [Upozornění](../../preprocessor/warning.md) nebo [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (úroveň upozornění)](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4430.
 
-```
+```cpp
 // C4430.cpp
 // compile with: /c
 struct CMyClass {

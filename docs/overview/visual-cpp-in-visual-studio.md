@@ -1,54 +1,54 @@
 ---
 title: C++ v sadě Visual Studio
-description: Visual C++ je název pro kompilátor C++ společnosti Microsoft, editor kódu a související nástroje v integrovaném vývojovém prostředí sady Visual Studio. Použití jazyka Visual C++ pro vývoj aplikací pro Windows, Linux, Android a iOS.
+description: Vizuál C++ je název pro kompilátor Microsoft C++ , Editor kódu a související nástroje v integrovaném vývojovém prostředí sady Visual Studio. Pomocí vizuálu C++ můžete vyvíjet programy pro Windows, Linux, Android a iOS.
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552377"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626219"
 ---
 # <a name="c-in-visual-studio"></a>C++ v sadě Visual Studio
 
 > [!NOTE]
-> Tuto dokumentaci pro vývojáře se vztahuje k sadě Visual Studio 2015 a novější. Pomocí selektoru verze v levém horním rohu stránky tak, aby odpovídaly vaší verze sady Visual Studio.
+> Tato dokumentace pro vývojáře se vztahuje na Visual Studio 2015 a novější. Použijte selektor verzí v levém horním rohu stránky tak, aby odpovídal vaší verzi sady Visual Studio.
 >
-> Pokud hledáte balíček distribuovatelných součástí Visual C++ tak, aby mohly běžet programu, pokračujte [Microsoft Download Center](https://www.microsoft.com/download/) a zadejte **Visual C++** do vyhledávacího pole.
+> Pokud hledáte vizuální C++ Distribuovatelný balíček, abyste mohli spustit program, přejděte na [webu Microsoft Download Center](https://www.microsoft.com/download/) a do vyhledávacího pole zadejte **vizuál C++**  .
 
-Microsoft Visual C++, obvykle zkrátila na Visual C++ nebo MSVC, je název pro C++, C a jazyk sestavení vývojářské nástroje a knihovny, které jsou k dispozici jako součást sady Visual Studio ve Windows. Tyto nástroje a knihovny umožňují vytvářet aplikace pro univerzální platformu Windows (UPW), nativních aplikací stolní počítače a servery Windows, multiplatformní knihovny a aplikace, které běží na Windows, Linux, Android a iOS, stejně jako spravovaných aplikací a knihoven, které používají rozhraní .NET Architektura. Visual C++ můžete použít k zápisu cokoli z jednoduché konzolové aplikace do nejvíce propracované a komplexní aplikace pro Windows desktop z ovladačů zařízení a součástí operačního systému pro mobilní zařízení a hry pro různé platformy z nejmenší zařízení IoT k více serverů vysokovýkonného výpočetního prostředí v cloudu Azure.
+Microsoft Visual C++, obvykle zkrácený na Visual C++ nebo MSVC, je název pro vývojové nástroje a C++jazyky pro jazyk sestavení a knihovny, které jsou k dispozici v rámci sady Visual Studio ve Windows. Tyto nástroje a knihovny vám umožní vytvářet aplikace Univerzální platforma Windows (UWP), nativní desktopové a serverové aplikace Windows, knihovny pro různé platformy a aplikace, které běží na Windows, Linux, Androidu a v iOS, a taky spravované aplikace a knihovny, které používají .NET. Rámci. Pomocí vizuálu C++ můžete psát cokoli z jednoduchých konzolových aplikací do nejpropracovanějších a komplexních aplikací pro desktopy Windows, od ovladačů zařízení a součástí operačního systému po hry pro různé platformy pro mobilní zařízení a z nejmenších zařízení IoT. pro výpočetní výkon na více serverech v cloudu Azure.
 
-Visual Studio 2015 a 2017 2019 může být nainstalovaná vedle sebe. Visual Studio 2019 (v142 sada nástrojů kompilátoru) můžete použít k úpravám a vytváření aplikací pomocí sady nástrojů ze sady Visual Studio 2015 (v140) a Visual Studio 2017 (verze 141).
+Sady Visual Studio 2015, 2017 a 2019 lze instalovat vedle sebe. Můžete použít sadu Visual Studio 2019 (V142 sady nástrojů kompilátoru) k úpravám a sestavování programů pomocí sady nástrojů ze sady Visual Studio 2015 (v140) a sady Visual Studio 2017 (v141).
 
 ## <a name="whats-new-and-conformance-history"></a>Co je nového a historie shody
 
-[Co je nového v C++ v sadě Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Zjistěte, co je nového v sadě Visual Studio.
+[Co je nového C++ v aplikaci Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+Zjistěte, co je nového v aplikaci Visual Studio.
 
-[Co je nového v jazyce C++ v aplikaci Visual Studio 2003 – 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
-Zjistěte, co je nového v jazyce C++ pro každou verzi sady Visual Studio z 2003 – 2015.
+[Co je nového C++ v aplikaci Visual Studio 2003 až 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+Zjistěte, co bylo nového v C++ pro každou verzi sady Visual Studio od 2003 do 2015.
 
 [Vylepšení shody C++ se sadou Visual Studio](cpp-conformance-improvements.md)<br/>
-Další informace o vylepšení shody C++ v sadě Visual Studio.
+Přečtěte C++ si o vylepšeních dodržování shody v aplikaci Visual Studio.
 
-[Shoda jazyka Visual C++](visual-cpp-language-conformance.md)<br/>
-Seznam stav shody funkcí v kompilátoru MSVC C++.
+[Tabulka C++ shody jazyka Microsoft](visual-cpp-language-conformance.md)<br/>
+Seznam stavů shody podle funkcí v kompilátoru MSVC C++ .
 
 [Historie změn Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 Přečtěte si o nejnovějších změnách v předchozích verzích.
 
-## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Instalace sady Visual Studio a upgradujete ze starší verze
+## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Nainstalovat Visual Studio a upgradovat z dřívějších verzí
 
 [Instalace podpory jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md)<br/>
-Stáhněte si Visual Studio 2017 nebo Visual Studio 2019 a nainstalujte vizuál C++ sady nástrojů.
+Stáhněte si Visual Studio 2017 nebo Visual Studio 2019 a nainstalujte vizuální C++ sadu nástrojů.
 
 [Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-Pokyny pro přenosy kódu a upgrade projektů na Visual Studio 2015 nebo novější využívat větší shoda s kompilátorem prostředí k C++ standardní a také dobu výrazně vylepšený kompilace a funkce zabezpečení, jako je zmírnění hrozby Spectre.
+Pokyny pro přenos kódu a upgradování projektů do sady Visual Studio 2015 nebo novější, aby bylo možné využít větší soulad s kompilátorem C++ ve standardu a také výrazně zlepšit dobu kompilace a bezpečnostní funkce, jako je například zmírnění Spectre.
 
 [Nástroje a funkce Visual C++ v různých edicích sady Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Zjistěte informace o různých edicích sady Visual Studio.
@@ -56,55 +56,55 @@ Zjistěte informace o různých edicích sady Visual Studio.
 [Podporované platformy](supported-platforms-visual-cpp.md)<br/>
 Zjistěte, které platformy jsou podporovány.
 
-## <a name="learn-c"></a>Informace o jazyku C++
+## <a name="learn-c"></a>SeznámitC++
 
-[C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-Další informace o moderní C++ programovací techniky na základě v C ++ 11 a novějším, které umožňují napsat rychlé a bezpečné kód a vyhnout se mnoho nástrahy programování ve stylu C.
+[Vítejte zpět naC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+Přečtěte si další C++ informace o moderních programovacích technikách založených na jazyce c++ 11 a novějším, které vám umožní psát rychlý a bezpečný kód a vyhnout se mnoha nástrah programování ve stylu C.
 
-[Standardní C++](https://isocpp.org/)<br/>
+[StandardníC++](https://isocpp.org/)<br/>
 Získejte informace o jazyce C++, přehled o moderním jazyce C++ a odkazy na knihy, články, rozhovory a události.
 
-[Informace o jazyku Visual C++](../build/vscpp-step-1-create.md)<br/>
+[Naučit se vizuálC++](../build/vscpp-step-1-create.md)<br/>
 Začněte se učit jazyk C++.
 
 [Visual C++ – ukázky](visual-cpp-samples.md)<br/>
 Informace o ukázkách kódu.
 
-## <a name="c-development-tools"></a>Vývojové nástroje C++
+## <a name="c-development-tools"></a>C++vývojové nástroje
 
-[Přehled o vývoji v jazyce C++ v sadě Visual Studio](overview-of-cpp-development.md)<br/>
-Tom, jak pomocí integrovaného vývojového prostředí sady Visual Studio můžete vytvářet projekty, úpravy kódu, propojit s knihovnami, kompilace, ladění, vytvořit testy jednotek, provést statické analýzy, nasazení a další.
+[Přehled C++ vývoje v aplikaci Visual Studio](overview-of-cpp-development.md)<br/>
+Jak používat integrované vývojové prostředí (IDE) sady Visual Studio k vytváření projektů, úpravám kódu, propojení s knihovnami, kompilaci, ladění, vytváření jednotkových testů, provádění statických analýz, nasazení a dalších.
 
 [Projekty a systémy sestavení](../build/projects-and-build-systems-cpp.md)<br/>
-Jak vytvořit a nakonfigurovat možnosti kompilátoru a propojovacího programu MSVC projekty aplikace Visual Studio C++, projekty CMake a dalších typů projektů.
+Jak vytvořit a nakonfigurovat projekty sady Visual C++ Studio, projekty cmake a jiné druhy projektů s možností kompilátoru MSVC a linkeru.
 
-[Psaní a refaktoring kódu jazyka C++](../ide/writing-and-refactoring-code-cpp.md)<br/>
-Jak používat si produktivitu funkcí v C++ editor Refaktorovat, navigaci, pochopit a psát kód.
+[Psaní a refaktoring C++ kódu](../ide/writing-and-refactoring-code-cpp.md)<br/>
+Použití funkcí produktivity v C++ editoru k refaktorování, procházení, pochopení a psaní kódu.
 
 [Ladění nativního kódu](/visualstudio/debugger/debugging-native-code)<br/>
-Pomocí ladicího programu sady Visual Studio s projekty C++.
+Použijte ladicí program sady Visual Studio C++ s projekty.
 
-[Analýza kódu pro C/C++ – přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
-Použití anotací SAL nebo podle dokumentu C++ Core Guidelines šachovnice provádět statické analýzy.
+[Analýza kódu pro C/C++ přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+Použijte poznámky SAL nebo C++ základní pokyny pro kontrolu a proveďte statickou analýzu.
 
-[Zápis testů jednotek pro C/C++ v sadě Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
-Vytvoření testování částí pomocí Microsoft Unit Testing Framework pro C++, Google Test, Boost.Test nebo CTest.
+[Zápis testů jednotek pro C/C++ v aplikaci Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+Vytvářejte testy jednotek pomocí architektury testování částí od společnosti Microsoft C++pro, Google test, zvýšení. test nebo CTest.
 
-## <a name="write-applications-in-c"></a>Psaní aplikací v jazyce C++
+## <a name="write-applications-in-c"></a>Psát aplikace vC++
 
 [Univerzální aplikace pro Windows (C++)](../cppcx/universal-windows-apps-cpp.md)<br/>
-Vyhledejte si pokyny a referenční obsah ve středisku pro vývojáře v operačním systému Windows. Informace o vývoji aplikací pro UWP, naleznete v tématu [Úvod k univerzální platformě Windows](/windows/uwp/get-started/universal-application-platform-guide) a [vytvoření vaší první aplikace pro UWP pomocí jazyka C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
+Vyhledejte si pokyny a referenční obsah ve středisku pro vývojáře v operačním systému Windows. Informace o vývoji aplikací pro UWP najdete v tématu [Úvod do Univerzální platforma Windows](/windows/uwp/get-started/universal-application-platform-guide) a [Vytvoření první aplikace pro UWP pomocí C++ ](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
-[Desktopové aplikace (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
-Zjistěte, jak vytvořit tradiční nativních desktopových aplikací C++ pro Windows.
+[Desktopové aplikaceC++()](../windows/desktop-applications-visual-cpp.md)<br/>
+Naučte se vytvářet tradiční nativní C++ aplikace klasické pracovní plochy pro Windows.
 
 [Programování pro .NET v jazyce C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
-Zjistěte, jak vytvořit knihovny DLL, které umožňuje interoperabilitu mezi nativním jazyce C++ a .NET programy napsané v jazycích, jako je C# nebo Visual Basic.
+Naučte se vytvářet knihovny DLL, které umožňují vzájemnou funkční spolupráci mezi nativními C++ a programy .NET napsanými v jazycích, například C# nebo Visual Basic.
 
-[Programování v systému Linux](../linux/index.md)<br/>
-Použijte Visual Studio IDE na kód a nasaďte na vzdáleném počítači s Linuxem pro kompilaci pomocí GCC.
+[Programování pro Linux](../linux/index.md)<br/>
+Pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio můžete kódovat a nasadit do vzdáleného počítače se systémem Linux pro kompilaci pomocí nástroje RSZ.
 
-[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](../build/dlls-in-visual-cpp.md)<br/>
+[Vytváření C/C++ knihoven DLL v aplikaci Visual Studio](../build/dlls-in-visual-cpp.md)<br/>
 Zjistěte, jak používat Win32 a knihovny ATL a MFC pro vytvoření DLL knihoven pracovní plochy Windows a jak kompilovat a registrovat vytvořené knihovny DLL.
 
 [Paralelní programování](../parallel/parallel-programming-in-visual-cpp.md)<br/>
@@ -114,13 +114,13 @@ Získejte další informace o použití knihovny PPL, C++ AMP, OpenMP a dalšíc
 Zjistěte, jak chránit aplikace před nebezpečným kódem a neoprávněným použitím.
 
 [Cloudové a webové programování](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
-V jazyce C++ máte několik možností pro připojení k webu a cloudu.
+V C++nástroji máte několik možností, jak se připojit k webu a ke cloudu.
 
 [Přístup k datům](../data/data-access-in-cpp.md)<br/>
 Připojení k databázím pomocí rozhraní ODBC a OLE DB.
 
 [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)<br/>
-Další informace o práci s jiným textovým a formáty řetězců a kódování pro místní i mezinárodní vývoje.
+Přečtěte si o práci s různými formáty textu a řetězce a kódování pro místní a mezinárodní vývoj.
 
 ## <a name="languages-reference"></a>Jazyky – referenční informace
 
@@ -132,20 +132,20 @@ Další informace o práci s jiným textovým a formáty řetězců a kódován�
 
 [Vnitřní funkce kompilátoru a jazyk sestavení](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
-## <a name="c-libraries-in-visual-studio"></a>Knihovny C++ v sadě Visual Studio
+## <a name="c-libraries-in-visual-studio"></a>C++Knihovny v aplikaci Visual Studio
 
-Následující části obsahují informace o různých knihoven C a C++, které jsou zahrnuty v sadě Visual Studio.
+Následující části obsahují informace o různých knihovnách C a C++ , které jsou součástí sady Visual Studio.
 
 [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Obsahuje bezpečnější alternativy k funkcím, u kterých je známo, že představují bezpečnostní problém.
 
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
-Standardní knihovně C++.
+C++ Standardní knihovna.
 
 [Knihovna ATL (Active Template Library)](../atl/atl-com-desktop-components.md)<br/>
-Podpora pro komponenty modelu COM a aplikace.
+Podpora komponent a aplikací modelu COM.
 
-[Knihovny Microsoft Foundation třídy (MFC)](../mfc/mfc-desktop-applications.md)<br/>
+[Knihovny Microsoft Foundation Class (MFC)](../mfc/mfc-desktop-applications.md)<br/>
 Podpora pro vytváření aplikací klasické pracovní plochy, které mají tradiční uživatelské rozhraní nebo uživatelské rozhraní ve stylu Office.
 
 [Knihovna PPL (Parallel Patterns Library)](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
@@ -154,25 +154,25 @@ Asynchronní a paralelní algoritmy, které jsou spouštěny na CPU.
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Masivně paralelní algoritmy, které jsou spouštěny na GPU.
 
-[Knihovna prostředí runtime Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
-Univerzální aplikace pro platformu Windows (UPW) a komponenty.
+[Knihovna šablon prostředí Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+Aplikace a součásti Univerzální platforma Windows (UWP).
 
 [Programování pro .NET v jazyce C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 Programování pro modul Common Language Runtime (CLR).
 
-## <a name="third-party-open-source-c-libraries"></a>Knihovny třetích stran opensourcového jazyka C++
+## <a name="third-party-open-source-c-libraries"></a>Open source C++ knihovny třetích stran
 
-Napříč platformami **vcpkg** nástroj příkazového řádku výrazně zjednodušuje zjišťování a instalaci více než 900 open source knihoven jazyka C++. See [vcpkg: Správce balíčků jazyka C++ pro Windows](../build/vcpkg.md).
+Nástroj příkazového řádku **vcpkg** pro více platforem značně zjednodušuje zjišťování a instalaci více než 900 C++ Open Source knihoven. Viz [vcpkg: C++ správce balíčků pro Windows](../build/vcpkg.md).
 
-## <a name="feedback-and-community"></a>Názory a komunita
+## <a name="feedback-and-community"></a>Váš názor a komunita
 
 [Postup nahlášení problému se sadou nástrojů Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
-Naučíte se vytvářet zprávy o chybách efektivní proti sady nástrojů Visual C++ (kompilátoru, linkeru a dalších nástrojů) a způsoby, jak odeslat sestavy.
+Naučte se vytvářet efektivní zprávy o chybách proti vizuální C++ sadě nástrojů (kompilátor, linker a další nástroje) a způsobech odeslání sestavy.
 
-Microsoft [ C++ Blog týmu](https://devblogs.microsoft.com/cppblog/)<br/>
-Další informace o nových funkcích a nejnovější informace od vývojářů C++ nástroje v sadě Visual Studio.
+[ C++ Blog týmu Microsoftu](https://devblogs.microsoft.com/cppblog/)<br/>
+Přečtěte si další informace o nových funkcích a nejnovějších informacích od vývojářů C++ nástrojů v aplikaci Visual Studio.
 
-[Visual Studio Developer Community](https://developercommunity.visualstudio.com/)<br/>
+[Komunita vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/)<br/>
 Zjistěte, jak získat nápovědu, oznamovat chyby a posílat návrhy na vylepšení pro sadu Visual Studio.
 
 ## <a name="see-also"></a>Viz také:

@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4003
+title: Upozornění kompilátoru (úroveň 1) C4003
 ms.date: 11/04/2016
 f1_keywords:
 - C4003
 helpviewer_keywords:
 - C4003
 ms.assetid: 0ed1c285-4428-4c90-8131-86897e31f115
-ms.openlocfilehash: 7b1b87c643111f2b12124e348be8fb823e113937
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4adbffe3220060ee9d43f01cf94628f85d3991cc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187303"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627390"
 ---
-# <a name="compiler-warning-level-1-c4003"></a>Kompilátor upozornění (úroveň 1) C4003
+# <a name="compiler-warning-level-1-c4003"></a>Upozornění kompilátoru (úroveň 1) C4003
 
-není dost skutečných parametrů pro – makro 'identifier'
+pro makro Identifier není dostatečný počet skutečných parametrů.
 
-Počet formálních parametrů v definici makra překračuje počet skutečných parametrů v makru. Rozšíření makra nahradí prázdný text pro chybějící parametry.
+Počet formálních parametrů v definici makra překračuje počet skutečných parametrů v makru. Rozšíření makra nahrazuje prázdný text pro chybějící parametry.
 
 Následující ukázka generuje C4003:
 
-```
+```cpp
 // C4003.cpp
 // compile with: /WX
 #define test(a,b) (a+b)

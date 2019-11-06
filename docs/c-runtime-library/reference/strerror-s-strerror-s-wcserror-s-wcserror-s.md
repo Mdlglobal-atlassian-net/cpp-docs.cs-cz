@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958150"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625811"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -120,12 +120,12 @@ Nula v případě úspěchu, chybový kód při selhání.
 
 |*vyrovnávací paměti*|*numberOfElements*|*strErrMsg*|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|Jakýmikoli|Jakýmikoli|není k dispozici|
-|Jakýmikoli|0|Jakýmikoli|Neupraveno|
+|**PLATNOST**|Jakýmikoli|Jakýmikoli|není k dispozici|
+|Jakýmikoli|0,8|Jakýmikoli|Neupraveno|
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **strerror_s** mapuje *errnum* na řetězec chybové zprávy a vrátí řetězec v *bufferu*. **_strerror_s** nepřijímá číslo chyby. k určení příslušné zprávy používá aktuální hodnotu **errno** . Zpráva ani **strerror_s** ani **_strerror_s** zprávu nevytiskne: V takovém případě je třeba zavolat výstupní funkci, jako je například [fprintf –](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Funkce **strerror_s** mapuje *errnum* na řetězec chybové zprávy a vrátí řetězec v *bufferu*. **_strerror_s** nepřijímá číslo chyby. k určení příslušné zprávy používá aktuální hodnotu **errno** . **Strerror_s** ani **_strerror_s** zprávu skutečně nevytiskne: pro to je třeba volat výstupní funkci, jako je například [fprintf –](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -149,7 +149,7 @@ Tyto funkce ověřují své parametry. Pokud má vyrovnávací paměť **hodnotu
 
 V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -161,7 +161,7 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strerror_s**, **_strerror_s**|\<String. h >|
+|**strerror_s**, **_strerror_s**|\<string. h >|
 |**_wcserror_s**, **__wcserror_s**|\<String. h > nebo \<WCHAR. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

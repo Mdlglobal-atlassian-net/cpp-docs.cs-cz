@@ -35,12 +35,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: b0db1a50f638c6130e4beb6798431179edec153b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951585"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624213"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -83,7 +83,7 @@ Obě tyto funkce vrátí nulu při úspěchu; chybový kód při selhání.
 
 |*nameTemplate*|*sizeInChars*|Návratová hodnota|Nová hodnota v *nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|Jakýmikoli|**EINVAL**|**NULL**|
+|**PLATNOST**|Jakýmikoli|**EINVAL**|**PLATNOST**|
 |Nesprávný formát (pro správný formát viz oddíl poznámky)|Jakýmikoli|**EINVAL**|Prázdný řetězec|
 |Jakýmikoli|< = počet X|**EINVAL**|Prázdný řetězec|
 
@@ -92,6 +92,8 @@ Pokud dojde k některé z výše uvedených chybových podmínek, je vyvolána o
 ## <a name="remarks"></a>Poznámky
 
 Funkce **_mktemp_s** vytvoří jedinečný název souboru úpravou argumentu *nameTemplate* , aby po volání odkazoval ukazatel *nameTemplate* na řetězec obsahující nový název souboru. **_mktemp_s** automaticky zpracovává argumenty vícebajtového řetězce znaků podle potřeby a rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která je aktuálně používána systémem za běhu. **_wmktemp_s** je **_mktemp_s**verze s velkým znakem; argumentem **_wmktemp_s** je řetězec s velkým počtem znaků. **_wmktemp_s** a **_mktemp_s** se chovají identicky jinak, s tím rozdílem, že **_wmktemp_s** zpracovává řetězce vícebajtových znaků.
+
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -125,7 +127,7 @@ V C++systému je použití těchto funkcí zjednodušeno díky přetížení ša
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mktemp_s**|\<io.h>|
+|**_mktemp_s**|\<IO. h >|
 |**_wmktemp_s**|\<IO. h > nebo \<WCHAR. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

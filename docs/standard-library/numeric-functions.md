@@ -1,12 +1,21 @@
 ---
 title: '&lt;číselné&gt; funkce'
-ms.date: 11/04/2016
+description: Popisuje šablony funkcí poskytované hlavičkou &lt;číselné&gt;ve C++ standardní knihovně.
+ms.date: 10/30/2019
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
+- numeric/std::exclusive_scan
+- numeric/std::gcd
+- numeric/std::inclusive_scan
 - numeric/std::inner_product
 - numeric/std::iota
+- numeric/std::lcm
 - numeric/std::partial_sum
+- numeric/std::reduce
+- numeric/std::transform_exclusive_scan
+- numeric/std::transform_inclusive_scan
+- numeric/std::transform_reduce
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -22,52 +31,55 @@ helpviewer_keywords:
 - std::transform_exclusive_scan [C++]
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
-ms.openlocfilehash: ab1e2942cbcfe568dd4c280c059fe0768493794c
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889966"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627448"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;číselné&gt; funkce
 
 ## <a name="accumulate"></a>accumulate
 
-Vypočítá součet všech prvků v zadaném rozsahu včetně některé počáteční hodnoty tím, že provede výpočet po sobě jdoucích částečných součtů nebo vypočítá výsledek následných částečných výsledků podobně jako při použití zadané binární operace, která se liší od součtu.
+Vypočítá součet všech prvků v zadaném rozsahu, včetně některých počátečních hodnot, díky výpočtu po sobě jdoucích částečných součtů. Nebo vypočítá výsledek po sobě jdoucích částečných výsledků zadané binární operace.
 
 ```cpp
 template <class InputIterator, class Type>
-Type accumulate(InputIterator first, InputIterator last, Type val);
+Type accumulate(
+    InputIterator first,
+    InputIterator last,
+    Type init);
 
 template <class InputIterator, class Type, class BinaryOperation>
 Type accumulate(
     InputIterator first,
     InputIterator last,
-    Type val,
+    Type init,
     BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *první* \
-Vstupní iterátor adresující první prvek v rozsahu, který má být shrnut nebo kombinován v závislosti na zadané binární operaci.
+Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
 
 *poslední* \
-Vstupní iterátor adresující poslední prvek v rozsahu, který má být sečtený nebo kombinovaný podle zadané binární operace, která je o jednu pozici nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
-\ *Val*
-Počáteční hodnota, na kterou jsou jednotlivé prvky v závislosti na zadané binární operaci zase přidány nebo kombinovány.
+*inicializace*\
+Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
 
 *binary_op*\
-Binární operace, která má být použita na každý prvek v zadaném rozsahu a výsledek předchozích aplikací.
+Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Součet *Val* a všech prvků v zadaném rozsahu pro první funkci šablony, nebo pro druhou funkci šablony, výsledek použití zadané binární operace místo operace Sum, do (*PartialResult, \*ITER* ), kde *PartialResult* je výsledkem předchozích aplikací operace a `Iter` je iterátor ukazující na prvek v rozsahu.
+Součet *init* a všech prvků v zadaném rozsahu pro první funkci šablony, nebo pro druhou funkci šablony, výsledek použití binární operace *binary_op* místo operace Sum na (* PartialResult, *IN_ ITER*), kde *PartialResult* je výsledkem předchozích aplikací operace a *in_iter* je iterátor ukazující na další prvek v rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-Počáteční hodnota si zajistí, že bude k dispozici správný výsledek, pokud je rozsah prázdný. v takovém případě se vrátí hodnota *Val* . Binární operace nemusí být asociativní ani komutativní. Výsledek je inicializován na počáteční hodnotu *Val* a pak *výsledek* = `binary_op` (*výsledek*, <strong>\*</strong>`Iter`) se vypočítává iterativním rozsahem, kde `Iter` je iterátor ukazující na po sobě. prvek v rozsahu. Rozsah musí být platný a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převoditelné na **typ** , aby se zajistilo uzavření během iterace.
+Počáteční hodnota zajistí, že bude k dispozici správný výsledek, pokud je rozsah prázdný. v takovém případě se vrátí *init* . Binární operace nemusí být asociativní ani komutativní. Výsledek je inicializován na počáteční hodnotu *init* a pak *výsledek* = *binary_op*(*Result*, *in_iter*) se vypočítává iterativním rozsahem, kde *in_iter* je iterátor ukazující na každý. po sobě jdoucí prvek v rozsahu. Rozsah musí být platný a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převoditelné na **typ** , aby se zajistilo uzavření během iterace.
 
 ### <a name="example"></a>Příklad
 
@@ -170,7 +182,7 @@ The vector of partial products is:
 
 ## <a name="adjacent_difference"></a>adjacent_difference
 
-Vypočítá po sobě následující rozdíly mezi každým prvkem a jeho předchůdcem ve vstupním rozsahu a vydá výsledky do cílového rozsahu nebo vypočte výsledek zobecněné procedury, kde je operace rozdílu nahrazena jinou zadanou binární operací.
+Vypočítá po sobě následující rozdíly mezi každým prvkem a jeho předchůdcem ve vstupním rozsahu. Vrátí výstup výsledků do cílového rozsahu. Nebo vypočítá výsledek zobecněné procedury, kde je operace rozdílu nahrazena jinou zadanou binární operací.
 
 ```cpp
 template <class InputIterator, class OutIterator>
@@ -205,6 +217,9 @@ ForwardIterator2 adjacent_difference(
 
 ### <a name="parameters"></a>Parametry
 
+*exec*\
+Zásady spouštění.
+
 *první* \
 Vstupní iterátor adresující první prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými předchůdci nebo ve kterém použije dvojice hodnot jiná zadaná binární operace.
 
@@ -215,7 +230,7 @@ Vstupní iterátor adresující poslední prvek ve vstupním rozsahu, jehož prv
 Vstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém se uloží série rozdílů nebo výsledky zadané operace.
 
 *binary_op*\
-Binární operace, která se použije v zobecněné operaci nahrazující operace odčítání v rozdílové proceduře.
+Binární operace, která se má použít v zobecněné operaci nahrazující operaci odčítání v rozdílové proceduře.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -225,11 +240,11 @@ Výstupní iterátor adresující konec cílového rozsahu: `result` + (`last` -
 
 *Výsledkem* výstupního iterátoru může být *stejný iterátor jako vstupní iterátor, aby*bylo možné vypočítat `adjacent_difference` hodnoty.
 
-Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá první funkce šablony po sobě jdoucí `partial_difference` hodnoty *a*1, *a*2- *a*1, a3- *a*2 v cílovém rozsahu.
+Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá první funkce šablony po sobě jdoucí `adjacent_difference` hodnoty *a*1, *a*2- *a*1, a3- *a*2 v cílovém rozsahu.
 
-Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá druhá funkce šablony po sobě následující `partial_difference` hodnoty *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2 v cíli. oblasti.
+Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá druhá funkce šablony po sobě následující `adjacent_difference` hodnoty *a*1, *a*2 *binary_op* *a*1, *a*3 *binary_op* *a*2, v cílový rozsah.
 
-`binary_op` binární operace není nutné použít asociativní ani komutativní, protože je zadané pořadí operací.
+Binární operace *binary_op* nemusí být asociativní ani komutativní, protože je zadané pořadí operací.
 
 ### <a name="example"></a>Příklad
 
@@ -294,66 +309,160 @@ int main( )
 
 ## <a name="exclusive_scan"></a>exclusive_scan
 
+Vypočítá výhradní operaci součtu předpony pomocí `std::plus<>()` nebo zadaného binárního operátoru v rámci rozsahu s ohledem na počáteční hodnotu. Zapíše výsledky do rozsahu začínajícího v zadaném cíli. Exkluzivní celočíselná *předpona* znamená, že *n*-tý element input není zahrnutý do *n*-tého součtu. Přetížení, která zahrnují argument zásady spouštění, se spustí podle zadaných zásad.
+
 ```cpp
-template<class InputIterator, class OutputIterator, class T>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init);
-template<class InputIterator, class OutputIterator, class T, class BinaryOperation>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init, BinaryOperation binary_op);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init, BinaryOperation binary_op);
+template<class InputIterator, class OutputIterator, class Type>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init);
+
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op);
 ```
 
+### <a name="parameters"></a>Parametry
+
+*exec*\
+Zásady spouštění.
+
+*první* \
+Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
+
+*poslední* \
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+
+\ *výsledku*
+Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
+
+*inicializace*\
+Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+
+*binary_op*\
+Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
+
+### <a name="return-value"></a>Návratová hodnota
+
+Výstupní iterátor adresující konec cílového rozsahu: *výsledek* + (*Poslední* - *první*).
+
 ## <a name="gcd"></a>GCD
+
+Vypočítá největšího společného dělitele celých čísel m a n.
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
+### <a name="parameters"></a>Parametry
+
+*m*, *n*\
+Hodnoty integrálního typu.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí největší společný dělitel absolutních hodnot *m* a *n*nebo nula, pokud jsou hodnoty *m* a *n* nula. Výsledky nejsou definovány, pokud absolutní hodnoty *m* nebo *n* nejsou reprezentovány jako hodnoty typu `common_type_t<M,N>`.
+
 ## <a name="inclusive_scan"></a>inclusive_scan
+
+Vypočítá celkovou operaci součtu předpony pomocí `std::plus<>()` nebo zadaného binárního operátoru v rámci rozsahu s ohledem na počáteční hodnotu. Zapíše výsledky do rozsahu začínajícího v zadaném cíli. Celková *celočíselná předpona* znamená, že *n*-tý prvek input je zahrnut do *n*-tého součtu. Přetížení, která zahrnují argument zásady spouštění, se spustí podle zadaných zásad.
 
 ```cpp
 template<class InputIterator, class OutputIterator>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result);
+
 template<class InputIterator, class OutputIterator, class BinaryOperation>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op);
-template<class InputIterator, class OutputIterator, class BinaryOperation, class T>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op, T init);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class Type>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    Type init);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
 class BinaryOperation>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class T>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op, T init);
+class BinaryOperation, class Type>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    Type init);
 ```
+
+### <a name="parameters"></a>Parametry
+
+*exec*\
+Zásady spouštění.
+
+*první* \
+Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
+
+*poslední* \
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+
+\ *výsledku*
+Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
+
+*inicializace*\
+Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+
+*binary_op*\
+Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
+
+### <a name="return-value"></a>Návratová hodnota
+
+Výstupní iterátor adresující konec cílového rozsahu: *výsledek* + (*Poslední* - *první*).
 
 ## <a name="inner_product"></a>inner_product
 
@@ -365,16 +474,16 @@ Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val);
+    Type             init);
 
 template <class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
 Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val,
-    BinaryOperation1  binary_op1,
-    BinaryOperation2  binary_op2);
+    Type             init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -388,7 +497,7 @@ Vstupní iterátor adresující poslední prvek v prvním rozsahu, jehož vnitř
 *first2* \
 Vstupní iterátor adresující první prvek ve druhém rozsahu, jehož vnitřní produkt nebo zobecněný vnitřní produkt s prvním rozsahem je vypočítáván.
 
-\ *Val*
+*inicializace*\
 Počáteční hodnota, na kterou se má přidat vnitřní produkt nebo zobecněný vnitřní produkt mezi rozsahy.
 
 *binary_op1*\
@@ -401,19 +510,19 @@ Binární operace, která nahrazuje prvek vnitřního produktu, který se má vy
 
 První členská funkce vrátí součet součinů prvků a přidá je do zadané počáteční hodnoty. Takže pro rozsahy hodnot *a*i a *b*i vrátí:
 
-`val` + (*a*1 \* *b*1) + (*a*2 \* *b*2) +... + (*a*n \* *b*n)
+*init* + (*a*1 \* *b*1) + (*a*2 \* *b*2) +... + (*a*n \* *b*n)
 
-iterativním nahrazením hodnoty *Val* pomocí `val` + (*a*i \* *b*i).
+iterativním nahrazením *init* pomocí *init* + (*a*i \* *b*i).
 
 Druhá členská funkce vrátí:
 
-`val` *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
+*init* *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
 
-iterativním nahrazením *hodnoty Val* pomocí `val` *binary_op1* (*a*i *binary_op2* *b*i).
+iterativním nahrazením *init* pomocí *init* *binary_op1* (*a*i *binary_op2* *b*i).
 
 ### <a name="remarks"></a>Poznámky
 
-Počáteční hodnota zajistí, že bude k dispozici správný výsledek, pokud je rozsah prázdný. v takovém případě se vrátí hodnota *Val* . Binární operace nemusejí být asociativní ani komutativní. Rozsah musí být platný a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převoditelné na **typ** , aby se zajistilo uzavření během iterace.
+Počáteční hodnota zajistí, že bude k dispozici dobře definovaný výsledek, pokud je rozsah prázdný. V takovém případě se vrátí *init* . Binární operace nemusejí být asociativní ani komutativní. Rozsah musí být platný a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převoditelné na **typ** , aby se zajistilo uzavření během iterace.
 
 ### <a name="example"></a>Příklad
 
@@ -507,7 +616,7 @@ int main()
 
 ## <a name="iota"></a>p
 
-Ukládá počáteční hodnotu počínaje prvním prvkem a naplňuje po sobě jdoucí přírůstky dané hodnoty (` value++`) v každém elementu v intervalu `[first,  last)`.
+Ukládá počáteční hodnotu počínaje prvním prvkem a naplňuje po sobě jdoucí přírůstky dané hodnoty (`value++`) v každém elementu v intervalu `[first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -576,7 +685,7 @@ constexpr common_type_t<M,N> lcm(M m, N n);
 
 ## <a name="partial_sum"></a>partial_sum
 
-Vypočítá sérii součtů ve vstupním rozsahu od prvního prvku *po i*-tý prvek a uloží výsledek každého součtu v *i*-tém prvku cílového rozsahu nebo vypočítá výsledek zobecněné procedury, kde je operace součtu nahradila jinou zadanou binární operací.
+Vypočítá sérii součtů ve vstupním rozsahu od prvního prvku po *n*-tý prvek a uloží výsledek každého součtu v *n*-té elementu cílového rozsahu. Nebo vypočítá výsledek zobecněné procedury, kde je operace součtu nahrazena jinou zadanou binární operací.
 
 ```cpp
 template <class InputIterator, class OutIt>
@@ -602,24 +711,24 @@ Vstupní iterátor adresující první prvek v rozsahu, u kterého bude proveden
 Vstupní iterátor adresující poslední prvek v rozsahu, u kterého bude proveden částečný součet nebo který bude zkombinován podle zadané binární operace, který se nachází o jednu pozici za posledním prvkem, který je skutečně zahrnut do iterovaného souhrnu.
 
 \ *výsledku*
-Vstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém se uloží série částečných součtů nebo výsledky zadané operace.
+Výstupní iterátor adresující první prvek cílového rozsahu pro uložení řady částečných součtů nebo po sobě jdoucích výsledků zadané binární operace.
 
 *binary_op*\
-Binární operace, která se použije v zobecněné operaci nahrazující operace součtu v proceduře částečného součtu.
+Binární operace, která se má použít v zobecněné operaci nahrazující operaci součtu v postupu částečného součtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výstupní iterátor adresující konec cílového rozsahu: `result` + (`last` - `first`),
+Výstupní iterátor adresující konec cílového rozsahu: *výsledek* + (*Poslední* - *první*).
 
 ### <a name="remarks"></a>Poznámky
 
 *Výsledkem* výstupního iterátoru může být *stejný iterátor jako vstupní iterátor, aby*bylo možné vypočítat částečné součty.
 
-Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá první funkce šablony po sobě jdoucí částečné součty do cílového rozsahu, kde *i*-tý prvek je dán hodnotou *((((1 +* *a*2) + *a*3) a.i).
+Pro sekvenci hodnot *a*1, *a*2,... *x ve*vstupním rozsahu ukládá první funkce šablony po sobě jdoucí částečné součty do cílového rozsahu. *N*-tý element je*dán (1*+ *a*2 + *a*3 +... + *a*n).
 
-Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá druhá funkce šablony po sobě jdoucí částečné součty do cílového rozsahu, kde je druhý element dán ( *(((1 `binary_op`* *a*2 *) `binary_op`* 3) *.*
+Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá druhá funkce šablony po sobě jdoucí částečné výsledky do cílového rozsahu. *N*-tý element je dán ((... ((*a*1 *binary_op* *a*2) *binary_op* *a*3) *binary_op* ...) *binary_op* *a*n).
 
-*Binary_op* binární operace nemusí být asociativní ani komutativní, protože je zadáno pořadí operací.
+Binární operace *binary_op* nemusí být asociativní ani komutativní, protože je zadané pořadí operací.
 
 ### <a name="example"></a>Příklad
 
@@ -683,123 +792,276 @@ int main( )
 
 ## <a name="reduce"></a>úrovně
 
+Omezí všechny prvky v zadaném rozsahu, případně včetně některých počátečních hodnot, díky výpočtu součtů v libovolném a možném permuted pořadí. Nebo se zkracuje pomocí výpočtu výsledků zadané binární operace. Přetížení, která zahrnují argument zásady spouštění, se spustí podle zadaných zásad.
+
 ```cpp
 template<class InputIterator>
-typename iterator_traits<InputIterator>::value_type
-reduce(InputIterator first, InputIterator last);
-template<class InputIterator, class T>
-T reduce(InputIterator first, InputIterator last, T init);
-template<class InputIterator, class T, class BinaryOperation>
-T reduce(InputIterator first, InputIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<InputIterator>::value_type reduce(
+    InputIterator first,
+    InputIterator last);
+
+template<class InputIterator, class Type>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init);
+
+template<class InputIterator, class Type, class BinaryOperation>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator>
-typename iterator_traits<ForwardIterator>::value_type
-reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last);
-template<class ExecutionPolicy, class ForwardIterator, class T>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init);
-template<class ExecutionPolicy, class ForwardIterator, class T, class BinaryOperation>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<ForwardIterator>::value_type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op);
 ```
+
+### <a name="parameters"></a>Parametry
+
+*exec*\
+Zásady spouštění.
+
+*první* \
+Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
+
+*poslední* \
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+
+\ *výsledku*
+Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
+
+*inicializace*\
+Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+
+*binary_op*\
+Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
+
+### <a name="return-value"></a>Návratová hodnota
+
+Výsledek použití *binary_op* nebo `std::plus<>()` k *inicializaci* a všech prvků v zadaném rozsahu na (* PartialResult, *in_iter*), kde *PartialResult* je výsledkem předchozích aplikací operace a *in_iter* je iterátor ukazující na některý prvek v rozsahu. V přetížení, které nespecifikují *init*, je použitá hodnota *init* ekvivalentní `typename iterator_traits<InputIterator>::value_type{}`.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud je *binary_op* asociativní a komutativní, chování `reduce` není deterministické. Chování není definováno, pokud *binary_op* upraví libovolný element, nebo zruší platnost libovolného iterátoru v intervalu \[*First*, *Last*] včetně.
 
 ## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
+Transformuje prvky rozsahu se zadaným unárním operátorem a poté vypočítá výhradní operaci součtu předpony pomocí `std::plus<>()` nebo zadaného binárního operátoru v rozsahu, s ohledem na počáteční hodnotu. Zapíše výsledky do rozsahu začínajícího v zadaném cíli. Exkluzivní celočíselná *předpona* znamená, že *n*-tý element input není zahrnutý do *n*-tého součtu. Přetížení, která zahrnují argument zásady spouštění, se spustí podle zadaných zásad. Suma se dá provést v libovolném pořadí.
+
 ```cpp
-template<class InputIterator, class OutputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
+
+### <a name="parameters"></a>Parametry
+
+*exec*\
+Zásady spouštění.
+
+*první* \
+Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
+
+*poslední* \
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+
+\ *výsledku*
+Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
+
+*inicializace*\
+Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+
+*binary_op*\
+Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
+
+*unary_op*\
+Unární operace, která se má použít u každého prvku v zadaném rozsahu.
 
 ## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
 
+Transformuje prvky rozsahu pomocí zadaného unárního operátoru a potom vypočítá operaci součtu vnitřních předpon pomocí `std::plus<>()` nebo zadaného binárního operátoru v rozsahu s ohledem na počáteční hodnotu. Zapíše výsledky do rozsahu začínajícího v zadaném cíli. Celková *celočíselná předpona* znamená, že *n*-tý prvek input je zahrnut do *n*-tého součtu. Přetížení, která zahrnují argument zásady spouštění, se spustí podle zadaných zásad. Suma se dá provést v libovolném pořadí.
+
 ```cpp
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation, class T>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation, class T>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation, class Type>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation, class Type>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
 ```
+
+### <a name="parameters"></a>Parametry
+
+*exec*\
+Zásady spouštění.
+
+*první* \
+Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
+
+*poslední* \
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+
+\ *výsledku*
+Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
+
+*binary_op*\
+Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
+
+*unary_op*\
+Unární operace, která se má použít u každého prvku v zadaném rozsahu.
+
+*inicializace*\
+Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
 
 ## <a name="transform_reduce"></a>transform_reduce
 
+Transformuje rozsah prvků a pak použije funktor, který zmenší transformované elementy v libovolném pořadí. Efektivně `transform` následovaný `reduce`.
+
 ```cpp
-template<class InputIterator1, class InputIterator2, class T>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init);
-template<class InputIterator1, class InputIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class InputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(InputIterator first, InputIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class ExecutionPolicy,
-class ForwardIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
+template<class InputIterator1, class InputIterator2, class Type>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init);
+
+template<class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class InputIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
+
+### <a name="parameters"></a>Parametry
+
+*exec*\
+Zásady spouštění.
+
+*první* \
+Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
+
+*first1* \
+Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op1*.
+
+*poslední* \
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+
+*last1* \
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op1*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+
+\ *výsledku*
+Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
+
+*inicializace*\
+Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+
+*binary_op*\
+Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
+
+*unary_op*\
+Unární operace, která se má použít u každého prvku v zadaném rozsahu.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Převedený výsledek se transformuje.

@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4230
+title: Upozornění kompilátoru (úroveň 1) C4230
 ms.date: 11/04/2016
 f1_keywords:
 - C4230
 helpviewer_keywords:
 - C4230
 ms.assetid: a4be8729-74b6-44df-a5ea-e3f45aad0f8f
-ms.openlocfilehash: c8d223a286b8d42ca404fbfe7cbc51b67b3dd497
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 668060f372a86295ef9a2cbcc1d5a6cd4ae9b2c5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207481"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624919"
 ---
-# <a name="compiler-warning-level-1-c4230"></a>Kompilátor upozornění (úroveň 1) C4230
+# <a name="compiler-warning-level-1-c4230"></a>Upozornění kompilátoru (úroveň 1) C4230
 
-anachronismus: Modifikátory/kvalifikátory promíchaný; kvalifikátor se ignoruje.
+nepoužitý anachronizmus: modifikátory/kvalifikátory v proložení; kvalifikátor se ignoruje.
 
-Použití kvalifikátoru před modifikátor Microsoft, jako `__cdecl` je zastaralý postup.
+Používání kvalifikátoru před modifikátorem Microsoftu, jako je například `__cdecl`, je zastaralý postup.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // C4230.cpp
 // compile with: /W1 /LD
 int __cdecl const function1();   // C4230 const ignored

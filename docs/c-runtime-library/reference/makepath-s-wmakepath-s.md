@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 7efd7c8e5ce7314e6fe719073685377f4b325fbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7bd85734e71120a214d652048c02c176728474b2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952949"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624360"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -83,7 +83,7 @@ errno_t _wmakepath_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Cesta*<br/>
+*dílčí*<br/>
 Vyrovnávací paměť úplné cesty.
 
 *sizeInWords*<br/>
@@ -92,16 +92,16 @@ Velikost vyrovnávací paměti ve slovech.
 *sizeInBytes*<br/>
 Velikost vyrovnávací paměti v bajtech.
 
-*drive*<br/>
+*disky*<br/>
 Obsahuje písmeno (A, B a tak dále) odpovídající požadované jednotce a volitelné koncové čárky. **_makepath_s** vloží dvojtečku do složené cesty automaticky, pokud chybí. Pokud má jednotka **hodnotu null** nebo odkazuje na prázdný řetězec, v řetězci složené *cesty* se nezobrazí žádné písmeno jednotky.
 
-*dir*<br/>
-Obsahuje cestu k adresářům, včetně označení jednotky nebo samotného názvu souboru. Koncové lomítko je nepovinné a v jednom argumentu *dir* se může použít lomítko (/) nebo\\zpětné lomítko () nebo obojí. Pokud není zadáno žádné koncové lomítko ( \\/nebo), je vloženo automaticky. Pokud je adresář **null** nebo odkazuje na prázdný řetězec, do řetězce složené *cesty* není vložena žádná cesta k adresáři.
+*Dir*<br/>
+Obsahuje cestu k adresářům, včetně označení jednotky nebo samotného názvu souboru. Koncové lomítko je nepovinné a lomítko (/) nebo zpětné lomítko (\\) nebo obojí může být použito v jednom argumentu *dir* . Pokud není zadané žádné koncové lomítko (/nebo \\), automaticky se vloží. Pokud je adresář **null** nebo odkazuje na prázdný řetězec, do řetězce složené *cesty* není vložena žádná cesta k adresáři.
 
 *fname*<br/>
 Obsahuje základní název souboru bez přípony názvu souboru. Pokud má fname **hodnotu null** nebo odkazuje na prázdný řetězec, do řetězce složené *cesty* není vložen žádný název souboru.
 
-*ext*<br/>
+*rozšířeného*<br/>
 Obsahuje skutečnou příponu názvu souboru s úvodním nebo Bezm počátečního období (.). **_makepath_s** Vloží tečku automaticky, pokud se nezobrazí v *EXT*. Pokud má EXT **hodnotu null** nebo odkazuje na prázdný řetězec, v řetězci složené *cesty* není vloženo žádné rozšíření.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -110,10 +110,10 @@ Nula v případě úspěchu; chybový kód při selhání.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*Cesta*|*sizeInWords*sizeInBytes / |vrátit|Obsah *cesty*|
+|*dílčí*|*sizeInWords* / *sizeInBytes*|Vrátit|Obsah *cesty*|
 |------------|------------------------------------|------------|------------------------|
-|**NULL**|Jakýmikoli|**EINVAL**|Neupraveno|
-|Jakýmikoli|<= 0|**EINVAL**|Neupraveno|
+|**PLATNOST**|Jakýmikoli|**EINVAL**|Neupraveno|
+|Jakýmikoli|< = 0|**EINVAL**|Neupraveno|
 
 Pokud dojde k některé z výše uvedených chybových podmínek, vyvolají tyto funkce obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **EINVAL**. Pro *jednotky*Parameters, *fname*a *EXT*jsou povoleny **hodnoty null** . Informace o chování, když jsou tyto parametry ukazateli na hodnotu null nebo prázdné řetězce, naleznete v části poznámky.
 
@@ -133,13 +133,13 @@ Pokud má cesta **hodnotu null**, je vyvolána obslužná rutina neplatného par
 
 V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_makepath_s**|\<stdlib.h>|
+|**_makepath_s**|\<Stdlib. h >|
 |**_wmakepath_s**|\<Stdlib. h > nebo \<WCHAR. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

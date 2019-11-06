@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4177
+title: Upozornění kompilátoru (úroveň 1) C4177
 ms.date: 11/04/2016
 f1_keywords:
 - C4177
 helpviewer_keywords:
 - C4177
 ms.assetid: 2b05a5b3-696e-4f21-818e-227b9335e748
-ms.openlocfilehash: 5c8f3dc37c76ad0d016108b792ee61c67cce63d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82aae8e5d0be15adef7891b39a6f7e482c729e60
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391657"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625060"
 ---
-# <a name="compiler-warning-level-1-c4177"></a>Kompilátor upozornění (úroveň 1) C4177
+# <a name="compiler-warning-level-1-c4177"></a>Upozornění kompilátoru (úroveň 1) C4177
 
-\#pragma – Direktiva pragma musí být v globálním oboru
+Direktiva pragma \#pragma by měla být v globálním oboru.
 
-[– Direktiva pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) – Direktiva pragma, neměl by se používat v místním oboru. **– Direktiva pragma** nebudou platné, dokud globálním rozsahem dochází po aktuálního oboru.
+Direktiva [pragma pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) by se neměla používat v místním oboru. **Direktiva pragma** nebude platná, dokud nebude po aktuálním oboru nalezen globální obor.
 
 Následující ukázka generuje C4177:
 
-```
+```cpp
 // C4177.cpp
 // compile with: /W1
 // #pragma bss_seg("global")   // OK

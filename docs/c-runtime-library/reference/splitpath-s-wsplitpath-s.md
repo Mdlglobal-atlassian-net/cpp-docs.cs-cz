@@ -34,12 +34,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958056"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625844"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -90,17 +90,17 @@ errno_t _wsplitpath_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Cesta*<br/>
+*dílčí*<br/>
 Úplná cesta
 
-*drive*<br/>
+*disky*<br/>
 Písmeno jednotky následovaný dvojtečkou ( **:** ). Pokud nepotřebujete písmeno jednotky, můžete pro tento parametr předat **hodnotu null** .
 
 *driveNumberOfElements*<br/>
 Velikost vyrovnávací paměti *jednotky* v jednobajtových nebo velkých znacích. Pokud má jednotka **hodnotu null**, tato hodnota musí být 0.
 
-*dir*<br/>
-Cesta k adresáři, včetně koncového lomítka. Lze použít lomítka **/** (), zpětná lomítka ( **\\** ) nebo obojí. Pokud nepotřebujete cestu k adresáři, můžete pro tento parametr předat **hodnotu null** .
+*Dir*<br/>
+Cesta k adresáři, včetně koncového lomítka. Je možné použít lomítka ( **/** ), zpětná lomítka ( **\\** ) nebo obojí. Pokud nepotřebujete cestu k adresáři, můžete pro tento parametr předat **hodnotu null** .
 
 *dirNumberOfElements*<br/>
 Velikost vyrovnávací paměti *adresáře* v jednobajtových nebo velkých znacích. Pokud má dir **hodnotu null**, tato hodnota musí být 0.
@@ -111,7 +111,7 @@ Základní název souboru (bez přípony) Pokud název souboru nepotřebujete, m
 *nameNumberOfElements*<br/>
 Velikost vyrovnávací paměti *fname* v jednobajtových nebo velkých znacích. Pokud má fname **hodnotu null**, tato hodnota musí být 0.
 
-*ext*<br/>
+*rozšířeného*<br/>
 Přípona názvu souboru včetně úvodní tečky ( **.** ) Pokud nepotřebujete příponu filename, můžete pro tento parametr předat **hodnotu null** .
 
 *extNumberOfElements*<br/>
@@ -153,7 +153,7 @@ Každá součást úplné cesty je uložena v samostatné vyrovnávací paměti;
 
 V následující tabulce jsou uvedeny hodnoty konstant manifestu.
 
-|Name|Value|
+|Name|Hodnota|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
@@ -164,13 +164,13 @@ Pokud úplná cesta neobsahuje komponentu (například filename), **_splitpath_s
 
 V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_splitpath_s**|\<stdlib.h>|
+|**_splitpath_s**|\<Stdlib. h >|
 |**_wsplitpath_s**|\<Stdlib. h > nebo \<WCHAR. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

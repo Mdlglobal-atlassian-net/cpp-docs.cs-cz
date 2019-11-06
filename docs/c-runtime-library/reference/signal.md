@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948113"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625856"
 ---
 # <a name="signal"></a>signal
 
@@ -113,7 +113,7 @@ Nastavení signálu se nezachovají v sedefinovaných procesech, které jsou vyt
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**signal**|\<signal.h>|
+|**signal**|\<Signal. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
@@ -127,7 +127,6 @@ Následující příklad ukazuje, jak použít **signál** k přidání nějaké
 // Use signal to attach a signal handler to the abort routine
 #include <stdlib.h>
 #include <signal.h>
-#include <tchar.h>
 
 void SignalHandler(int signal)
 {
@@ -149,9 +148,16 @@ int main()
 }
 ```
 
+Výstup závisí na používané verzi modulu runtime, zda je aplikace Konzolová aplikace nebo aplikace systému Windows a nastavení registru systému Windows. V případě konzolové aplikace může být do stderr odesílána například následující zpráva:
+
 ```Output
-This application has requested the Runtime to terminate it in an unusual way.
-Please contact the application's support team for more information.
+Debug Error!
+
+Program: c:\Projects\crt_signal\Debug\crt_signal.exe
+
+R6010
+
+- abort() has been called
 ```
 
 ## <a name="see-also"></a>Viz také:

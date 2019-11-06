@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363528"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623634"
 ---
 # <a name="compiler-warning-c4484"></a>Upozornění kompilátoru C4484
 
-'override_function': odpovídá metodě base ref class "base_class_function", ale není označeno 'virtual', 'new' nebo 'override'; předpokládá se 'new' (tzn. ne virtual)
+' override_function ': odpovídá metodě Base ref class ' base_class_function ', ale není označeno jako ' Virtual ', ' New ' nebo ' override '; Předpokládá se klíčové slovo New (a ne Virtual).
 
-Při kompilaci s **/CLR**, kompilátor nebude implicitně přepsat funkci základní třídy, což znamená, že funkce získá novou patici ve vtable. Pokud chcete vyřešit, explicitně určete, jestli má funkce přepsání.
+Při kompilaci s možností **/CLR**kompilátor implicitně nepřepisuje funkci základní třídy, což znamená, že funkce získá novou pozici v tabulce vtable. Pro vyřešení explicitně určete, zda je funkce přepsání.
 
 Další informace naleznete v tématu:
 
@@ -27,13 +27,13 @@ Další informace naleznete v tématu:
 
 - [new (nový slot v tabulce vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
-C4484 je vždy vyvoláno jako chyba. Použití [upozornění](../../preprocessor/warning.md) potlačit C4484 direktivy pragma.
+C4484 se vždy vydá jako chyba. Pro potlačení C4484 Použijte direktivu pragma [Warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4484.
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {

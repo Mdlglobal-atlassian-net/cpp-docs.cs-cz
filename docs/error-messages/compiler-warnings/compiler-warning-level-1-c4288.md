@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4288
+title: Upozornění kompilátoru (úroveň 1) C4288
 ms.date: 11/04/2016
 f1_keywords:
 - C4288
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-ms.openlocfilehash: d8769f5663ca0bde9048e52d4579012dfccab0a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81094bf019060b56337347f7d364ead7c78c8128
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207092"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626663"
 ---
-# <a name="compiler-warning-level-1-c4288"></a>Kompilátor upozornění (úroveň 1) C4288
+# <a name="compiler-warning-level-1-c4288"></a>Upozornění kompilátoru (úroveň 1) C4288
 
-používá se nestandardní rozšíření: 'var': Proměnná ovládacího prvku smyčky deklarovaná ve smyčce for-loop se používá mimo obor smyčky for loop; je v konfliktu s deklarací ve vnějším oboru.
+používá se nestandardní rozšíření: var: proměnná ovládacího prvku smyčky deklarovaná ve smyčce for-Loop se používá mimo obor smyčky for-Loop; je v konfliktu s deklarací ve vnějším oboru.
 
-Při kompilaci s [/Ze](../../build/reference/za-ze-disable-language-extensions.md) a **/Zc:forscope-**, proměnná deklarovaná ve **pro** smyčky byl použit po [pro](../../cpp/for-statement-cpp.md)-oboru smyčky. Rozšíření společnosti Microsoft pro jazyk C++ umožňuje tato proměnná zůstane v oboru a C4288 upozorňuje, že první deklarace proměnné se nepoužívá.
+Při kompilaci s [/ze](../../build/reference/za-ze-disable-language-extensions.md) a **/Zc: forScope-** byla jako rozsah smyčky [for-Loop](../../cpp/for-statement-cpp.md)použita Proměnná deklarovaná ve smyčce **for** . Rozšíření společnosti Microsoft pro C++ jazyk umožňuje, aby tato proměnná zůstala v rozsahu a C4288 vás, že první deklarace proměnné se nepoužívá.
 
-Zobrazit [/Zc: forscope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) informace o tom, jak zadat rozšíření společnosti Microsoft v **pro** smyčky s /Ze.
+Informace o tom, jak zadat rozšíření Microsoftu v **pro smyčky for for** with/ze., najdete v tématu [/Zc: forScope.](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)
 
 Následující ukázka generuje C4288:
 
-```
+```cpp
 // C4288.cpp
 // compile with: /W1 /c /Zc:forScope-
 int main() {

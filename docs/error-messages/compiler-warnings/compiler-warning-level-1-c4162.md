@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4162
+title: Upozornění kompilátoru (úroveň 1) C4162
 ms.date: 11/04/2016
 f1_keywords:
 - C4162
 helpviewer_keywords:
 - C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-ms.openlocfilehash: 6c6b675fd47cb6e98255515c7cd77c6dd48ea02b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e70898065a40a965b08b090bc59263acd918515
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391813"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624854"
 ---
-# <a name="compiler-warning-level-1-c4162"></a>Kompilátor upozornění (úroveň 1) C4162
+# <a name="compiler-warning-level-1-c4162"></a>Upozornění kompilátoru (úroveň 1) C4162
 
-'identifier': žádná funkce s C-linkage nalezen
+' identifier ': nebyla nalezena žádná funkce s propojením jazyka C
 
-Funkce s C-linkage je deklarovaná, ale nebyl nalezen.
+Funkce s propojením jazyka C je deklarována, ale nebyla nalezena.
 
-Pokud chcete vyřešit toto upozornění, kompilaci v souboru .c (vyvolání kompilátor jazyka C).  Pokud je nutné vyvolat kompilátor C++, umístěte před deklarací funkce extern "C".
+Chcete-li vyřešit toto upozornění, zkompilujte v souboru. c (zavolejte kompilátor jazyka C).  Pokud je nutné vyvolat C++ kompilátor, umístěte extern "C" před deklaraci funkce.
 
 Následující ukázka generuje C4162
 
-```
+```cpp
 // C4162.cpp
 // compile with: /c /W1
 unsigned char _bittest(long* a, long b);
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C4162b.cpp
 // compile with: /c
 extern "C"

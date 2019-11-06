@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4163
+title: Upozornění kompilátoru (úroveň 1) C4163
 ms.date: 11/04/2016
 f1_keywords:
 - C4163
 helpviewer_keywords:
 - C4163
 ms.assetid: b08413fd-03fc-4f41-9167-a98976ac12f2
-ms.openlocfilehash: 737cf7ad00bfefd429792eed3f730844789e0c02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 640ce66233fb8820ec434e70060a5ab3cf56c3c0
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391761"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627438"
 ---
-# <a name="compiler-warning-level-1-c4163"></a>Kompilátor upozornění (úroveň 1) C4163
+# <a name="compiler-warning-level-1-c4163"></a>Upozornění kompilátoru (úroveň 1) C4163
 
-'identifier': není dostupné jako vnitřní funkce
+' identifier ': není k dispozici jako vnitřní funkce
 
-Zadanou funkci nelze použít jako [vnitřní](../../preprocessor/intrinsic.md) funkce. Kompilátor ignoruje neplatný název funkce.
+Zadanou funkci nelze použít jako [vnitřní](../../preprocessor/intrinsic.md) funkci. Kompilátor ignoruje neplatný název funkce.
 
 Následující ukázka generuje C4163:
 
-```
+```cpp
 // C4163.cpp
 // compile with: /W1 /LD
 #include <math.h>
