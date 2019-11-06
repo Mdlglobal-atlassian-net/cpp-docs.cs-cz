@@ -70,7 +70,7 @@ V následující tabulce jsou uvedeny nejčastěji používané základní typy
 |bool|1 bajt|Představuje hodnoty, které mohou být „true“ nebo „false“.|
 |char|1 bajt|Používá se pro znaky standardu ASCII ve starších řetězcích stylu C nebo objektů std::string, které nikdy nebude nutné převést do kódování UNICODE.|
 |wchar_t|2 bajty|Představuje hodnoty „širokých“ znaků, které mohou být kódovány ve formátu UNICODE (UTF-16 v systému Windows, v jiných operačních systémech se může lišit). Toto je typ znaku, který se používá v řetězcích typu `std::wstring`.|
-|Nepodepsaný &nbsp;char|1 bajt|C++nemá žádný předdefinovaný `byte` typ.  Umožňuje znázornit hodnotu bajtu pomocí unsigned char.|
+|unsigned&nbsp;char|1 bajt|C++nemá žádný předdefinovaný `byte` typ.  Umožňuje znázornit hodnotu bajtu pomocí unsigned char.|
 |unsigned int|4 bajty|Výchozí volba pro bitové příznaky.|
 |long long|8 bajtů|Představuje hodnoty tvořené vysokým celým číslem.|
 
