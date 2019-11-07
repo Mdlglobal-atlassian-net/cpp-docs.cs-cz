@@ -1,25 +1,25 @@
 ---
 title: .FPO
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .FPO
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: b793b3efa72a676b800c10b98ea06001ddcf10d5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3938d9194c35d567ea670e0b92a731193ccd2254
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491426"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703798"
 ---
-# <a name="fpo"></a>.FPO
+# <a name="fpo-32-bit-masm"></a>. Rpcrt4 (32-bit MASM)
 
-Okně. Rpcrt4 direktiva řídí emise ladících záznamů do segmentu nebo oddílu. Debug $ F.
+Okně. Rpcrt4 direktiva řídí emise ladících záznamů do segmentu nebo oddílu. Debug $ F. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> FPO (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> Rpcrt4 (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
 
 ### <a name="parameters"></a>Parametry
 

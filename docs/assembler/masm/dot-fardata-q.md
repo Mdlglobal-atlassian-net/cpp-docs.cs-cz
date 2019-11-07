@@ -1,21 +1,21 @@
 ---
 title: .FARDATA?
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .FARDATA?
 helpviewer_keywords:
 - .FARDATA? directive
 ms.assetid: 3b416313-44b7-4724-a2cf-69d73871a10c
-ms.openlocfilehash: 72ca773c484f04250c7fc40763617694105e6c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b26da266671eb84b0015cb57c2d0dae11e9ac8d2
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185249"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703841"
 ---
-# <a name="fardata"></a>.FARDATA?
+# <a name="fardata-32-bit-masm"></a>.FARDATA? (32-bit MASM)
 
-Při použití s [. MODEL](../../assembler/masm/dot-model.md), spustí úplně datový segment pro neinicializovaná data (název segmentu FAR_BSS nebo *název*).
+Při použití s nástrojem [. MODEL](../../assembler/masm/dot-model.md)spustí pro neinicializovaná data úplně datový segment (název segmentu FAR_BSS nebo *název*). (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 

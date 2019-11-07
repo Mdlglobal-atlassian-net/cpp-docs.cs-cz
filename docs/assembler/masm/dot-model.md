@@ -1,58 +1,58 @@
 ---
 title: .MODEL
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MODEL
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934098"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703578"
 ---
-# <a name="model"></a>.MODEL
+# <a name="model-32-bit-masm"></a>. MODEL (32-bit MASM)
 
-Inicializuje model paměti programu.
+Inicializuje model paměti programu. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> . MODEL memorymodel [[, langtype]] [[, stackoption]]
+> . Memorymodel modelu [[, langtype]] [[, stackoption]]
 
 ### <a name="parameters"></a>Parametry
 
 *memorymodel*<br/>
-Povinný parametr, který určuje velikost ukazatele na kód a data.
+Povinný parametr, který určuje velikost kódu a datových ukazatelů.
 
 *langtype*<br/>
-Volitelný parametr, který nastaví konvence pojmenování a volání procedury a veřejných symbolů.
+Volitelný parametr, který nastaví konvence volání a pojmenování pro procedury a veřejné symboly.
 
 *stackoption*<br/>
 Volitelný parametr.
 
-*stackoption* nepoužívá, pokud *memorymodel* je `FLAT`.
+*stackoption* se nepoužívá, pokud je *memorymodel* `FLAT`.
 
-Určení `NEARSTACK` seskupí segmentu zásobníku do jednoho fyzického segmentu (`DGROUP`) spolu s daty. Registr segmentu zásobníku (`SS`) se předpokládá, že obsahovat stejné adrese jako registr segmentu dat (`DS`). `FARSTACK` neseskupuje do zásobníku s `DGROUP`; proto `SS` nerovná `DS`.
+Určení `NEARSTACK` seskupí segment zásobníku do jednoho fyzického segmentu (`DGROUP`) spolu s daty. Předpokládá se, že registr segmentu zásobníku (`SS`) drží stejnou adresu jako registr datových segmentů (`DS`). `FARSTACK` neseskupují zásobník s `DGROUP`; Proto se `SS` nerovná `DS`.
 
 ## <a name="remarks"></a>Poznámky
 
-.`MODEL` není použit v [MASM pro x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+.`MODEL` se nepoužívá v [MASM pro x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-Následující tabulka uvádí možné hodnoty pro každý parametr při cílení na platformy 16bitová a 32bitová verze:
+V následující tabulce jsou uvedeny možné hodnoty pro každý parametr při cílení na 16bitové a 32-bitové platformy:
 
-|Parametr|32bitové hodnoty|16bitové hodnoty (podpora pro vývoj starší 16 bitů)|
+|Parametr|32 – bitové hodnoty|16bitové hodnoty (podpora pro starší 16bitový vývoj)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
-|*stackoption*|Nepoužívá se|`NEARSTACK`, `FARSTACK`|
+|*langtype*|`C``STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL``STDCALL`|
+|*stackoption*|Nepoužívá se|`NEARSTACK``FARSTACK`|
 
 ## <a name="code"></a>Kód
 
-MASM související ukázky, stáhněte si ukázky kompilátoru z [Visual C++ – ukázky MFC a související dokumentaci pro sadu Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
+Ukázky týkající se MASM najdete v ukázkách kompilátoru z [vizuálních C++ ukázek a v související dokumentaci k sadě Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-Následující příklad ukazuje použití `.MODEL` směrnice.
+Následující příklad ukazuje použití direktivy `.MODEL`.
 
 ## <a name="example"></a>Příklad
 

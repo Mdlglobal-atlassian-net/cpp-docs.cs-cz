@@ -1,27 +1,27 @@
 ---
 title: .REPEAT
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .REPEAT
 helpviewer_keywords:
 - .REPEAT directive
 ms.assetid: cb8ad8c6-587b-42f9-a0ad-b5316a24918c
-ms.openlocfilehash: ac136bba4c349c84f81248bed12570c02e91577b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0533397c60c83f22b10c84ec72aa6eb65a71e4c0
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203994"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703569"
 ---
-# <a name="repeat"></a>.REPEAT
+# <a name="repeat-32-bit-masm"></a>. OPAKOVAT (32-bit MASM)
 
-Generuje kód, který se opakuje spouštění bloku *příkazy* dokud `condition` stane pravdivou. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), který změní hodnotu true, pokud CX je nula, může být nahrazeno [. DOKUD](../../assembler/masm/dot-until.md). `condition` Je volitelný s **. UNTILCXZ**.
+Vygeneruje kód, který opakuje provádění bloku *příkazů* , dokud `condition` nebude pravda. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), která se bude pravda, když je CX nula, může být nahrazena [. DO](../../assembler/masm/dot-until.md). `condition` je volitelná pro **. UNTILCXZ**. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
 > .REPEAT<br/>
 > příkazy<br/>
-> . Až do podmínky
+> . DO podmínky
 
 ## <a name="see-also"></a>Viz také:
 

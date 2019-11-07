@@ -6,30 +6,30 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: df193bae541aecf8416056c2b169f0079539d173
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 9eb157ecbc738e1d7a1c3022d5f156fb590e8f04
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450857"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704124"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC
 
-CWinFormsView – třída knihovny MFC používá k hostování uživatelského ovládacího prvku Windows Forms v zobrazení MFC. Zobrazení formulářů Windows MFC jsou ovládací prvky ActiveX. Uživatelský ovládací prvek je hostovaný jako podřízený objekt nativní zobrazení a zabírá celé oblasti klienta nativní zobrazení.
+Knihovna MFC používá ke hostování model Windows Forms uživatelského ovládacího prvku v zobrazení knihovny MFC třídu CWinFormsView. Zobrazení model Windows Forms knihovny MFC jsou ovládací prvky ActiveX. Uživatelský ovládací prvek je hostován jako podřízený objekt nativního zobrazení a zabírá celou klientskou oblast nativního zobrazení.
 
-Konečný výsledek vypadá podobně jako model používaný [třídy CFormView](../mfc/reference/cformview-class.md). To vám umožní využít Návrháře formulářů Windows a modulu runtime a vytvářet bohaté zobrazení založené na formulářích.
+Konečný výsledek se podobá modelu používanému [třídou CFormView](../mfc/reference/cformview-class.md). To vám umožní využít návrháře model Windows Forms a modul runtime k vytváření bohatých zobrazení na základě formulářů.
 
-Vzhledem k tomu zobrazení MFC Windows Forms – ovládací prvky ActiveX, nemají stejné `hwnd` jako zobrazení MFC. Také nelze předat jako ukazatel [CView](../mfc/reference/cview-class.md) zobrazení. Obecně platí pomocí metod rozhraní .NET Framework pracovat se zobrazeními Windows Forms a využívá méně Win32.
+Vzhledem k tomu, že zobrazení model Windows Forms knihovny MFC jsou ovládací prvky ActiveX, nemají stejné `hwnd` jako zobrazení MFC. Nelze je také předat jako ukazatel na zobrazení [CView](../mfc/reference/cview-class.md) . Obecně použijte .NET Framework metody pro práci s model Windows Forms zobrazeními a používejte méně na Win32.
 
-Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows Forms, naleznete v tématu [MFC a integrace formulářů Windows](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Postupy: Vytvoření uživatelského ovládacího prvku a hostování zobrazení MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)
+[Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)
 
-[Postupy: Přidání směrování příkazů do ovládacího prvku modelu Windows Forms](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
+[Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
-[Postupy: Vlastnosti a metody volání ovládacího prvku modelu Windows Forms](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)
+[Postupy: Vlastnosti volání a metody ovládacího prvku modelu Windows Forms](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)
 
 ## <a name="see-also"></a>Viz také:
 

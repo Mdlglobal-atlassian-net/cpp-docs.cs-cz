@@ -1,58 +1,58 @@
 ---
-title: Windows Forms a MFC programování rozdíly
+title: Model Windows Forms – rozdíly v programování knihovny MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 165c72b4f91073947d3914ae773e277cce192564
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 52de36217a5ab47eddcbe1abd6617860dcb910b8
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449998"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704181"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Rozdíly v programování mezi prostředími Windows Forms a MFC
 
-Témata v [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) popisovat podporu knihovny MFC pro Windows Forms. Pokud nejste obeznámeni s rozhraní .NET Framework nebo programování knihovny MFC, toto téma obsahuje základní informace o programování rozdíly mezi nimi.
+Témata v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) popisují podporu knihovny mfc pro model Windows Forms. Pokud nejste obeznámeni s programováním .NET Framework nebo MFC, toto téma poskytuje základní informace o rozdílech mezi programováním mezi těmito dvěma.
 
-Windows Forms slouží k vytváření aplikací pro Microsoft Windows na rozhraní .NET Framework. Toto rozhraní poskytuje moderní, objektově orientované, rozšiřitelnou sadu tříd, které vám umožní vyvíjet bohaté aplikace pro systém Windows. Pomocí Windows Forms budete moct vytvořit aplikaci rich client, který může přistupovat k širokou škálu zdrojů dat a zobrazení dat a zařízení a úpravy dat pomocí ovládacích prvků Windows Forms.
+Model Windows Forms slouží k vytváření aplikací pro Microsoft Windows v .NET Framework. Toto rozhraní poskytuje moderní, objektově orientované a rozšiřitelnou sadu tříd, které vám umožní vyvíjet aplikace pro Windows s využitím. Pomocí model Windows Forms můžete vytvořit bohatou klientskou aplikaci, která bude mít přístup k široké škále zdrojů dat, a poskytuje zařízení pro zobrazení dat a úpravy dat pomocí model Windows Forms ovládacích prvků.
 
-Ale pokud jste zvyklí ke knihovně MFC, vám dají zneužít k vytvoření určité typy aplikací, které se zatím nepodporují explicitně ve Windows Forms. Aplikace Windows Forms jsou ekvivalentní MFC dialogového okna aplikace. Však neposkytují infrastruktury, které přímo jinými typy aplikací knihovny MFC jako server/kontejner OLE dokumentu, dokumenty ActiveX, Document/View – podpora pro rozhraní jednoho dokumentu (SDI), rozhraní více dokumentů (MDI), a více rozhraní nejvyšší úrovně (MTI). Můžete napsat vlastní logiku k vytváření těchto aplikací.
+Pokud jste však zvyklí na knihovnu MFC, můžete použít k vytvoření určitých typů aplikací, které ještě nejsou explicitně podporované v model Windows Forms. Aplikace model Windows Forms jsou ekvivalentní k aplikacím MFC dialog. Neposkytují však infrastrukturu pro přímou podporu jiných typů aplikací knihovny MFC, jako je například dokumentový server nebo kontejner technologie OLE, dokumenty ActiveX, dokument/zobrazení, podpora rozhraní SDI (Single-Document Interface), rozhraní více dokumentů (MDI) a více rozhraní na nejvyšší úrovni (MTI). Chcete-li vytvořit tyto aplikace, můžete napsat vlastní logiku.
 
-Další informace o aplikacích pro Windows Forms, naleznete v tématu [Úvod do modelu Windows Forms](/dotnet/framework/winforms/windows-forms-overview).
+Další informace o model Windows Formsch aplikacích najdete v tématu [Úvod do model Windows Forms](/dotnet/framework/winforms/windows-forms-overview).
 
-Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows Forms, naleznete v tématu [MFC a integrace formulářů Windows](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
-Následující zobrazení MFC nebo dokumentu a příkazu směrování funkce nemají ekvivalent v formuláře Windows:
+Následující zobrazení knihovny MFC nebo funkce směrování dokumentu a příkazů nemají v model Windows Forms žádné ekvivalenty:
 
-- Prostředí integrace
+- Integrace prostředí
 
-   Knihovna MFC zpracovává dynamických dat (DDE) exchange příkazy a argumenty příkazového řádku, které používá prostředí, když klikněte pravým tlačítkem na dokument a vyberte tyto příkazy jako otevřít, upravit nebo vytisknout. Formuláře Windows nemá integraci prostředí a nereaguje na příkazy prostředí.
+   Knihovna MFC zpracovává příkazy DDE (Dynamic Data Exchange) a argumenty příkazového řádku, které prostředí používá, když kliknete pravým tlačítkem myši na dokument a vyberete tyto příkazy jako otevřené, úpravy nebo tisk. Model Windows Forms nemá žádnou integraci prostředí a nereaguje na příkazy prostředí.
 
 - Šablony dokumentů
 
-   V knihovně MFC šablony dokumentů přidružit k zobrazení, která je obsažena v okně s rámečkem (v režimu MDI, SDI nebo MTI), dokumentů, které jste otevřeli. Windows Forms nemá žádný ekvivalent k šablony dokumentů.
+   V knihovně MFC přiřadí šablony dokumentu zobrazení, které je obsaženo v okně rámce (v režimu MDI, SDI nebo MTI), s dokumentem, který jste otevřeli. Model Windows Forms nemá žádný ekvivalent k šablonám dokumentů.
 
 - Dokumenty
 
-   Knihovna MFC registruje typy souborů dokumentu a zpracovává typ dokumentu, při otevírání dokumentu z prostředí. Windows Forms nemá žádný dokument podpory.
+   Knihovna MFC registruje typy souborů dokumentů a zpracovává typ dokumentu při otevírání dokumentu z prostředí. Model Windows Forms nemá podporu dokumentu.
 
-- Stavy dokumentu
+- Stavy dokumentů
 
-   Knihovna MFC udržuje změny stavů pro dokument. Proto při ukončete aplikaci, zavřete poslední zobrazení, která obsahuje aplikaci nebo výstup z Windows, MFC zobrazí výzvu k uložení dokumentů. Windows Forms nemá žádný ekvivalent podpory.
+   Knihovna MFC udržuje v dokumentu nečisté stavy. Proto při zavření aplikace zavře poslední zobrazení, které obsahuje aplikaci, nebo ukončí činnost z Windows, knihovna MFC vás vyzve k uložení dokumentu. Model Windows Forms nemá žádnou ekvivalentní podporu.
 
 - Příkazy
 
-   Knihovna MFC má koncept příkazy. Řádku nabídek, nástrojů a kontextové nabídky můžete vyvolat všechny stejný příkaz, například vyjmutí a kopírování. Ve Windows Forms příkazy jsou úzce vázané události z konkrétní prvek uživatelského rozhraní (např. položka nabídky); Proto je nutné explicitně připojení všechny události příkazu. Můžete také zpracování více událostí pomocí jedné obslužné rutiny ve Windows Forms. Další informace najdete v tématu [připojení více událostí k jedné obslužné rutině událostí ve Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
+   Knihovna MFC má koncept příkazů. Panel nabídek, panel nástrojů a kontextová nabídka může vyvolat stejný příkaz, například vyjmout a kopírovat. V model Windows Forms jsou příkazy úzce vázané události z konkrétního prvku uživatelského rozhraní (například položky nabídky). Proto je nutné explicitně připojit všechny události příkazu. Můžete také zpracovat více událostí s jednou obslužnou rutinou v model Windows Forms. Další informace naleznete v tématu [připojení více událostí k jedné obslužné rutině události v model Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
 
 - Směrování příkazů
 
-   Směrování příkazů MFC umožňuje zobrazení aktivního nebo dokument ke zpracování příkazů. Protože ten samý příkaz často mají různý význam pro různá zobrazení (například kopírování chová odlišně v zobrazení pro úpravy textu než v grafickém editoru), příkazy musí být zpracovány aktivní zobrazení. Protože Windows Forms nabídky a panely nástrojů nemají žádné vlastní porozumění aktivního zobrazení, nemůže mít jiné obslužné rutiny pro každý typ zobrazení pro vaše **MenuItem.Click** události bez psaním dalšího kódu, interní.
+   Směrování příkazů MFC umožňuje aktivnímu zobrazení nebo dokumentu zpracovat příkazy. Vzhledem k tomu, že stejný příkaz často má různé významy různých zobrazení (například kopírování se chová jinak v zobrazení pro úpravy textu než v grafickém editoru), musí být příkazy zpracovány aktivním zobrazením. Vzhledem k tomu, že model Windows Forms nabídky a panely nástrojů nemají žádné znalosti o aktivním zobrazení, nemůžete mít pro každý typ zobrazení pro položku MenuItem jinou obslužnou rutinu **. klikněte na tlačítko** události bez psaní dalšího interního kódu.
 
-- Příkaz aktualizační mechanismy
+- Mechanismus aktualizace příkazu
 
-   Knihovna MFC má příkaz Aktualizovat mechanismus. Proto je zodpovědný za stavy prvků UI (například povolování nebo zakazování položka nabídky nebo nástroj tlačítko a zkontrolovat stavy) aktivní zobrazení nebo dokument. Windows Forms nemá žádný ekvivalent mechanismus příkazu update.
+   MFC má mechanismus aktualizace příkazu. Proto aktivní zobrazení nebo dokument zodpovídá za stav prvků uživatelského rozhraní (například povolení nebo zakázání položky nabídky nebo tlačítka nástroje a zaškrtnuté stavy). Model Windows Forms nemá žádný ekvivalent mechanismu aktualizace příkazů.
 
 ## <a name="see-also"></a>Viz také:
 

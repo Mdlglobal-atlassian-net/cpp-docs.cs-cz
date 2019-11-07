@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 96730cb3902674373e3e2429b7bc51cbbe257ff3
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 1351f0b2aa4ebc288469231a27c691237b52b1c1
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630841"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704128"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
 
-Knihovna MFC poskytuje třídu šablon [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , takže můžete hostovat model Windows Forms uživatelský ovládací prvek (<xref:System.Windows.Forms.UserControl>) v modálním nebo nemodálním dialogovém okně knihovny MFC. `CWinFormsDialog`je odvozen z třídy MFC [CDialog](../mfc/reference/cdialog-class.md), takže dialogové okno lze spustit jako modální nebo nemodální.
+Knihovna MFC poskytuje třídu šablon [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , takže můžete hostovat model Windows Forms uživatelský ovládací prvek (<xref:System.Windows.Forms.UserControl>) v modálním nebo nemodálním dialogovém okně knihovny MFC. `CWinFormsDialog` je odvozen z třídy MFC [CDialog](../mfc/reference/cdialog-class.md), takže dialogové okno lze spustit jako modální nebo nemodální.
 
-Proces, který `CWinFormsDialog` používá k hostování uživatelského ovládacího prvku, je podobný jako v tématu [hostování uživatelského ovládacího prvku Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). `CWinFormsDialog` Nicméně spravuje inicializaci a hostování uživatelského ovládacího prvku tak, aby se nemusela programovat ručně.
+Proces, který `CWinFormsDialog` používá k hostování uživatelského ovládacího prvku, je podobný jako v tématu [hostování uživatelského ovládacího prvku Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). `CWinFormsDialog` ale spravuje inicializaci a hostování uživatelského ovládacího prvku tak, aby se nemusela programovat ručně.
 
-Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
 
 ### <a name="to-create-the-mfc-host-application"></a>Vytvoření hostitelské aplikace MFC
 
@@ -35,23 +35,23 @@ Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostř
 
    V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu **MFC03** a vyberte možnost **vlastnosti**. Zobrazí se dialogové okno **stránky vlastností** .
 
-   V dialogovém okně **stránky vlastností** v ovládacím prvku strom **vlastností konfigurace** vyberte možnost **Obecné**a potom v části **výchozí nastavení projektu** nastavte podporu modulu **CLR** na **Common Language Runtime ( /CLR)** . Klikněte na **OK**.
+   V dialogovém okně **stránky vlastností** v ovládacím prvku strom **vlastností konfigurace** vyberte možnost **Obecné**a potom v části **výchozí nastavení projektu** nastavte podporu modulu **CLR** na **Common Language Runtime ( /CLR)** . Klikněte na tlačítko **OK**.
 
 1. Přidejte odkaz na ovládací prvek .NET.
 
-   V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu **MFC03** a vyberte možnost **Přidat**, **odkazy**. Na **stránce vlastností**klikněte na **Přidat nový odkaz**, vyberte WindowsControlLibrary1 (na kartě **projekty** ) a klikněte na **OK**. Tím se přidá odkaz ve formuláři Možnosti kompilátoru [/Fu](../build/reference/fu-name-forced-hash-using-file.md) , takže program se zkompiluje. také zkopíruje WindowsControlLibrary1. dll do `MFC03` adresáře projektu, takže se program spustí.
+   V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu **MFC03** a vyberte možnost **Přidat**, **odkazy**. Na **stránce vlastností**klikněte na **Přidat nový odkaz**, vyberte WindowsControlLibrary1 (na kartě **projekty** ) a klikněte na **OK**. Tím se přidá odkaz ve formuláři Možnosti kompilátoru [/Fu](../build/reference/fu-name-forced-hash-using-file.md) , takže program se zkompiluje. také zkopíruje WindowsControlLibrary1. dll do adresáře projektu `MFC03`, takže se program spustí.
 
-1. Přidejte `#include <afxwinforms.h>` do souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší) na konci existujících `#include` příkazů.
+1. Přidejte `#include <afxwinforms.h>` do souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší) na konci existujících příkazů `#include`.
 
-1. Přidejte novou třídu, která je podtřídami `CDialog`.
+1. Přidejte novou třídu, která `CDialog`podtřídy.
 
-   Klikněte pravým tlačítkem na název projektu a přidejte třídu MFC (označovanou jako CHostForWinForm), `CDialog`kterou podtřídy. Vzhledem k tomu, že nepotřebujete prostředek dialogového okna, můžete odstranit ID prostředku (vyberte **prostředky**, rozbalte složku **dialogového okna** a odstraňte `IDD_HOSTFORWINFORM` prostředek.  Pak odeberte všechny odkazy na ID v kódu.).
+   Klikněte pravým tlačítkem na název projektu a přidejte třídu knihovny MFC (s názvem CHostForWinForm), kterou podtřídy `CDialog`. Vzhledem k tomu, že nepotřebujete prostředek dialogového okna, můžete odstranit ID prostředku (vyberte **prostředky**, rozbalte složku **dialogového okna** a odstraňte prostředek `IDD_HOSTFORWINFORM`.  Pak odeberte všechny odkazy na ID v kódu.).
 
-1. Nahraďte `CDialog` soubory v CHostForWinForm. h a CHostForWinForm. cpp `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`pomocí.
+1. Nahraďte `CDialog` v CHostForWinForm. h a CHostForWinForm. cpp soubory pomocí `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 
 1. Volejte DoModal pro třídu CHostForWinForm.
 
-   V MFC03. cpp přidejte `#include "HostForWinForm.h"`.
+   Do MFC03. cpp přidejte `#include "HostForWinForm.h"`.
 
    Před příkazem Return v definici CMFC03App:: InitInstance přidejte:
 
@@ -62,7 +62,7 @@ Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostř
 
 1. Sestavte a spusťte projekt.
 
-   Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+   V nabídce **sestavení** klikněte na **Sestavit řešení**.
 
    V nabídce **ladit** klikněte na **Spustit bez ladění**.
 
@@ -137,4 +137,4 @@ Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostř
 ## <a name="see-also"></a>Viz také:
 
 <xref:System.Windows.Forms.UserControl?displayProperty=fullName>
-[Použití uživatelského ovládacího prvku Windows Form v MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
+[pomocí uživatelského ovládacího prvku Windows Form v MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)

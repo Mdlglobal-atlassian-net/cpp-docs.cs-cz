@@ -1,29 +1,29 @@
 ---
 title: INVOKE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - Invoke
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: efa8f710701e15845c3a6a22ba024c9cf1882457
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853bc9cd22d866357a4cd2d695beccc3efc20acf
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202615"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703969"
 ---
-# <a name="invoke"></a>INVOKE
+# <a name="invoke-32-bit-masm"></a>INVOKE (32-bit MASM)
 
-Volá podle postupu na adrese dán *výraz*, předány argumenty v zásobníku nebo v registrech podle standardní konvence volání jazyka typu.
+Volá proceduru na adrese předané *výrazem*, předává argumenty v zásobníku nebo v registrech v souladu se standardními konvencemi volání typu jazyka. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> INVOKE *výraz* [[, *argumenty*]]
+> INVOKE – *výraz* [[, *argumenty*]]
 
 ## <a name="remarks"></a>Poznámky
 
-Každý argument předaný do procedury může být výraz, pár registr nebo výraz adresy (předcházet párový příkaz výrazu `ADDR`).
+Každý argument předaný proceduře může být výrazem, dvojicí registru nebo výrazem adresy (výraz předchází `ADDR`).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,21 +1,21 @@
 ---
 title: .386P
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .386P
 helpviewer_keywords:
 - .386P directive
 ms.assetid: 15199091-3bb7-4270-bb9b-878c1c2f2146
-ms.openlocfilehash: 98b0b5d40f9c9ae47995698a53d3f16c14850071
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4b969d509e18b53fa08c8329027dbd6b7a6a5b3
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185663"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703005"
 ---
-# <a name="386p"></a>.386P
+# <a name="386p-32-bit-masm"></a>.386P (32-bit MASM)
 
-Umožňuje sestavení všechny pokyny (včetně privileged) 80386 procesoru; Zakáže sestavení instrukcí zavedena v novější procesorů systémech.
+Povolí sestavení všech instrukcí (včetně privilegovaných) pro procesor 80386. zakáže sestavení instrukcí představených s novějšími procesory. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,7 +23,7 @@ Umožňuje sestavení všechny pokyny (včetně privileged) 80386 procesoru; Zak
 
 ## <a name="remarks"></a>Poznámky
 
-Taky umožňuje 80387 pokyny.
+Také povoluje 80387 instrukcí.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,25 +1,25 @@
 ---
 title: .BREAK
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .BREAK
 helpviewer_keywords:
 - .BREAK directive
 ms.assetid: 4f55dfce-ff41-4a68-9423-b0077dfc9206
-ms.openlocfilehash: ebf5bc74eb8e639d97762b64a15d3049b898160b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b08f1953aaf6b77925f38739c5ad79cec283617e
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185490"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703038"
 ---
-# <a name="break"></a>.BREAK
+# <a name="break-32-bit-masm"></a>. PŘERUŠENÍ (32-bit MASM)
 
-Generuje kód ukončení [. ZATÍMCO](../../assembler/masm/dot-while.md) nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokovat, pokud *podmínku* má hodnotu true.
+Generuje kód pro ukončení [. WHILe](../../assembler/masm/dot-while.md) nebo [. ](../../assembler/masm/dot-repeat.md)Pokud je *Podmínka* pravdivá, opakujte blok. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> . PŘERUŠIT [[. Podmínka IF]]
+> . PŘERUŠENÍ [[. IF podmínka]]
 
 ## <a name="see-also"></a>Viz také:
 
