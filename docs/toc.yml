@@ -4714,6 +4714,8 @@
               items:
                 - name: Preprocesor
                   href: preprocessor/preprocessor.md
+                - name: Přehled experimentálního preprocesoru
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: Fáze převodu
                   href: preprocessor/phases-of-translation.md
                 - name: Direktivy preprocesoru
