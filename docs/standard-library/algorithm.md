@@ -1,5 +1,5 @@
 ---
-title: '&lt;algoritmus&gt;'
+title: algoritmus &lt;&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - <algorithm>
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f72969052ae3ecc0d9fb88382e1560c846e2167c
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456505"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912893"
 ---
-# <a name="ltalgorithmgt"></a>&lt;algoritmus&gt;
+# <a name="ltalgorithmgt"></a>algoritmus &lt;&gt;
 
 Definuje C++ standardní funkce šablon kontejneru, které provádějí algoritmy.
 
@@ -26,23 +26,23 @@ Definuje C++ standardní funkce šablon kontejneru, které provádějí algoritm
 ```
 
 > [!NOTE]
-> Algoritmus > Knihovna také `#include <initializer_list>` používá příkaz. \<
+> \<algoritmus > Library také používá příkaz `#include <initializer_list>`.
 
 ## <a name="remarks"></a>Poznámky
 
-C++ Standardní algoritmy knihovny jsou obecné, protože mohou pracovat na různých datových strukturách. Datové struktury, na kterých mohou fungovat, zahrnují nejen C++ standardní knihovny tříd kontejneru, jako jsou `vector` a `list`, ale také programové datové struktury a pole prvků, které splňují požadavky typu konkrétní algoritmus. C++Algoritmy standardní knihovny dosahují této úrovně obecného přístupem k prvkům kontejneru a jejich procházení nepřímo prostřednictvím iterátorů.
+C++ Standardní algoritmy knihovny jsou obecné, protože mohou pracovat na různých datových strukturách. Datové struktury, na kterých mohou fungovat, zahrnují nejen C++ standardní třídy kontejneru knihovny, například `vector` a `list`, ale také programové datové struktury a pole prvků, které splňují požadavky konkrétního algoritmu. C++Algoritmy standardní knihovny dosahují této úrovně obecného přístupem k prvkům kontejneru a jejich procházení nepřímo prostřednictvím iterátorů.
 
 C++Algoritmy standardní knihovny mají rozsahy iterátoru, které jsou obvykle určeny počáteční nebo koncovou polohou. Tyto rozsahy musí být platné v tom smyslu, že na všechny ukazatele v rozsazích musí být možné nepřímo odkazovat a v rámci sekvencí každého rozsahu musí být poslední pozice dosažitelná z první pomocí přírůstku.
 
 C++ Standardní algoritmy knihovny rozšíří akce podporované operacemi a členskými funkcemi každého C++ kontejneru standardních knihoven a umožňují práci, například s různými typy objektů kontejnerů současně. K předání informací o účelu algoritmů byly použity dvě přípony.
 
-- `_if` Přípona označuje, že algoritmus je použit s objekty funkce, které pracují na hodnotách prvků, nikoli na hodnotách samotných prvků. Algoritmus vyhledá prvky, jejichž hodnoty neodpovídají kritériu určenému objektem funkce, `find` a algoritmus vyhledá konkrétní hodnotu. `find_if`
+- Přípona `_if` označuje, že algoritmus je použit s objekty funkce, které pracují na hodnotách prvků, nikoli na samotných prvcích. Algoritmus `find_if` vyhledává prvky, jejichž hodnoty neodpovídají kritériu určenému objektem funkce, a algoritmus `find` vyhledává konkrétní hodnotu.
 
-- Přípona „_copy“ označuje, že algoritmus nejen manipuluje s hodnotami prvků, ale také kopíruje změněné hodnoty do cílového rozsahu. Algoritmus obrátí pořadí prvků v rozsahu `reverse_copy` a algoritmus také zkopíruje výsledek do cílového rozsahu. `reverse`
+- Přípona „_copy“ označuje, že algoritmus nejen manipuluje s hodnotami prvků, ale také kopíruje změněné hodnoty do cílového rozsahu. Algoritmus `reverse` obrátí pořadí prvků v rozsahu a algoritmus `reverse_copy` také zkopíruje výsledek do cílového rozsahu.
 
 C++Algoritmy standardní knihovny jsou často klasifikované do skupin, které označují něco o jejich účelu nebo požadavcích. Mezi ně patří modifikace algoritmů, které mění hodnotu prvků v porovnání s nezměněnými algoritmy, které nemění. Mutující algoritmy mění pořadí prvků, ale nikoli jejich hodnoty. Odebírající algoritmy mohou odstranit prvky z rozsahu nebo rozsah zkopírovat. Řazení algoritmů přeuspořádání prvků v rozsahu v různých způsobech a algoritmy seřazených rozsahů se chovají pouze v rozsahu, jehož prvky byly seřazeny určitým způsobem.
 
-Číselné C++ algoritmy standardní knihovny, které jsou k dispozici pro numerické zpracování, mají vlastní hlavičkový soubor [ \<>](../standard-library/numeric.md)a objekty a adaptéry funkcí jsou definovány v [ \<> funkce](../standard-library/functional.md) záhlaví. Objekty funkce, které vracejí logické hodnoty, jsou označovány jako predikáty. Výchozím binárním predikátem je porovnání `operator<`. Seřazované prvky musí být obecně menší než srovnatelné, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo zda jeden je menší než druhý. Výsledkem je řazení mezi neekvivalentními prvky.
+Číselné C++ algoritmy standardní knihovny, které jsou k dispozici pro numerické zpracování, mají vlastní hlavičkový soubor [\<číselná >](../standard-library/numeric.md)a objekty funkcí a adaptéry jsou definovány v záhlaví [\<funkčních](../standard-library/functional.md) objektech funkcí >, které vracejí logické hodnoty, jsou označovány jako predikáty. Výchozím binárním predikátem je `operator<`porovnání. Seřazované prvky musí být obecně menší než srovnatelné, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo zda jeden je menší než druhý. Výsledkem je řazení mezi neekvivalentními prvky.
 
 ### <a name="function-templates"></a>Šablony funkcí
 
@@ -84,7 +84,7 @@ C++Algoritmy standardní knihovny jsou často klasifikované do skupin, které o
 |[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)|Porovná prvek po prvku mezi dvěma sekvencemi k určení, která z nich je menší.|
 |[lower_bound](../standard-library/algorithm-functions.md#lower_bound)|Najde pozici prvního prvku v seřazeném rozsahu, jehož hodnota je větší nebo rovna zadané hodnotě, kde kritérium pořadí může být určeno primárním predikátem.|
 |[make_heap](../standard-library/algorithm-functions.md#make_heap)|Převede prvky ze zadaného rozsahu do haldy, ve které je první prvek největší a pro kterou může být kritérium řazení určeno binárním predikátem.|
-|[max](../standard-library/algorithm-functions.md#max)|Porovná dva objekty a vrátí větší z nich, kde kritérium pořadí může být určeno binárním predikátem.|
+|[počet](../standard-library/algorithm-functions.md#max)|Porovná dva objekty a vrátí větší z nich, kde kritérium pořadí může být určeno binárním predikátem.|
 |[max_element](../standard-library/algorithm-functions.md#max_element)|Vyhledá první výskyt největšího prvku v zadaném rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
 |[sloučení](../standard-library/algorithm-functions.md#merge)|Kombinuje všechny prvky ze dvou po sobě seřazených zdrojových rozsahů do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
 |[dlouhé](../standard-library/algorithm-functions.md#min)|Porovná dva objekty a vrátí menší z nich, kde kritérium pořadí může být určeno binárním predikátem.|
@@ -92,7 +92,7 @@ C++Algoritmy standardní knihovny jsou často klasifikované do skupin, které o
 |[minmax](../standard-library/algorithm-functions.md#minmax)|Porovná dva vstupní parametry a vrátí je jako dvojici v pořadí od nejmenšího po největší.|
 |[minmax_element](../standard-library/algorithm-functions.md#minmax_element)|Provede práci prováděnou [Min_element](../standard-library/algorithm-functions.md#min_element) a [max_element](../standard-library/algorithm-functions.md#max_element) v jednom volání.|
 |[shod](../standard-library/algorithm-functions.md#mismatch)|Porovná dva rozsahy prvek po prvku buď ke zjištění rovnosti, nebo ekvivalence ve smyslu určeném binárním predikátem a vyhledá první pozici, kde existuje rozdíl.|
-|[&lt;ALG&gt; přesunout](../standard-library/algorithm-functions.md#alg_move)|Přesune prvky přidružené k určenému rozsahu.|
+|[přesunout &lt;ALG&gt;](../standard-library/algorithm-functions.md#alg_move)|Přesune prvky přidružené k určenému rozsahu.|
 |[move_backward](../standard-library/algorithm-functions.md#move_backward)|Přesune prvky jednoho iterátoru do druhého. Pohyb začíná posledním prvkem v daném rozsahu a končí prvním prvkem v daném rozsahu.|
 |[next_permutation](../standard-library/algorithm-functions.md#next_permutation)|Znovu uspořádá prvky v rozsahu tak, aby původní pořadí bylo nahrazeno lexikograficky následující větší permutací, pokud existuje, kde význam následujícího může být určen binárním predikátem.|
 |[none_of](../standard-library/algorithm-functions.md#none_of)|Vrátí **hodnotu pravda** , pokud není podmínka nikdy obsažena v rámci prvků v daném rozsahu.|
@@ -110,7 +110,7 @@ C++Algoritmy standardní knihovny jsou často klasifikované do skupin, které o
 |[remove_copy](../standard-library/algorithm-functions.md#remove_copy)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky zadané hodnoty zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.|
 |[remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky splňující predikát zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.|
 |[remove_if](../standard-library/algorithm-functions.md#remove_if)|Odstraní prvky, které splňují predikát, z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.|
-|[replace](../standard-library/algorithm-functions.md#replace)|Zkontroluje každý prvek v rozsahu a nahradí jej, pokud odpovídá zadané hodnotě.|
+|[náhrady](../standard-library/algorithm-functions.md#replace)|Zkontroluje každý prvek v rozsahu a nahradí jej, pokud odpovídá zadané hodnotě.|
 |[replace_copy](../standard-library/algorithm-functions.md#replace_copy)|Zkontroluje každý prvek ve zdrojovém rozsahu a nahradí jej, pokud při kopírování výsledku do nového cílového rozsahu odpovídá zadané hodnotě.|
 |[replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)|Zkontroluje každý prvek ve zdrojovém rozsahu a nahradí jej, pokud při kopírování výsledku do nového cílového rozsahu splňuje zadaný predikát.|
 |[replace_if](../standard-library/algorithm-functions.md#replace_if)|Zkontroluje každý prvek v rozsahu a nahradí jej, pokud splňuje zadaný predikát.|
@@ -119,7 +119,7 @@ C++Algoritmy standardní knihovny jsou často klasifikované do skupin, které o
 |[před](../standard-library/algorithm-functions.md#rotate)|Vymění prvky ve dvou sousedních rozsazích.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Vymění prvky ve dvou sousedních rozsazích v rámci zdrojového rozsahu a zkopíruje výsledek do cílového rozsahu.|
 |[vzorku](../standard-library/algorithm-functions.md#sample)||
-|[search](../standard-library/algorithm-functions.md#search)|Vyhledá první výskyt sekvence v cílovém rozsahu, jejíž prvky jsou rovné prvkům v dané sekvenci prvků nebo jejíž prvky jsou ekvivalentní ve smyslu určeném binárním predikátem prvkům v dané sekvenci.|
+|[nápovědě](../standard-library/algorithm-functions.md#search)|Vyhledá první výskyt sekvence v cílovém rozsahu, jejíž prvky jsou rovné prvkům v dané sekvenci prvků nebo jejíž prvky jsou ekvivalentní ve smyslu určeném binárním predikátem prvkům v dané sekvenci.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Vyhledá první dílčí sekvenci v rozsahu zadaného počtu prvků s konkrétní hodnotou nebo vztahem k dané hodnotě podle binárního predikátu.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Sjednotí všechny prvky, které patří do jednoho seřazeného zdrojového rozsahu, ale nikoli do druhého seřazeného zdrojového rozsahu, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
 |[set_intersection](../standard-library/algorithm-functions.md#set_intersection)|Sjednotí všechny prvky, které náleží do obou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.|
@@ -130,7 +130,7 @@ C++Algoritmy standardní knihovny jsou často klasifikované do skupin, které o
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|Převede haldu na seřazený rozsah.|
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|Rozdělí prvky v rozsahu do dvou oddělených sad. Prvky, které splňují unární predikát, jsou umístěny před těmi, které jej nesplňují. Relativní pořadí ekvivalentních prvků je zachováno.|
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle setřiďovacího kritéria určeného binárním predikátem a zachová relativní pořadí ekvivalentních prvků.|
-|[swap](../standard-library/algorithm-functions.md#swap)|Vymění hodnoty prvků mezi dvěma typy objektů, obsah prvního objektu přiřadí ke druhému objektu a obsah druhého k prvnímu objektu.|
+|[adresu](../standard-library/algorithm-functions.md#swap)|Vymění hodnoty prvků mezi dvěma typy objektů, obsah prvního objektu přiřadí ke druhému objektu a obsah druhého k prvnímu objektu.|
 |[swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)|Vymění prvky z jednoho rozsahu za prvky druhého rozsahu o stejné velikosti.|
 |[převedení](../standard-library/algorithm-functions.md#transform)|Aplikuje zadaný objekt funkce na každý prvek ve zdrojovém rozsahu nebo na dvojici prvků ze dvou zdrojových rozsahů a zkopíruje vrácené hodnoty objektu funkce do cílového rozsahu.|
 |[unique](../standard-library/algorithm-functions.md#unique)|Odstraní duplicitní prvky, které v zadaném rozsahu sousedí.|
@@ -139,6 +139,6 @@ C++Algoritmy standardní knihovny jsou často klasifikované do skupin, které o
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+\ [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

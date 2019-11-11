@@ -3,12 +3,12 @@ title: Instalace úlohy C++ Linux do sady Visual Studio
 description: Popisuje, jak stáhnout, nainstalovat a nastavit úlohu pro Linux pro C++ v aplikaci Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925419"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912901"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Stažení, instalace a nastavení úlohy Linux
 
@@ -48,7 +48,7 @@ Pro některý z těchto scénářů se vyžaduje **vývoj pro C++ Linux s** úlo
 
 Pokud ještě nemáte počítač se systémem Linux, můžete v Azure vytvořit virtuální počítač se systémem Linux. Další informace najdete v tématu [rychlý Start: Vytvoření virtuálního počítače se systémem Linux v Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
 
-Ve Windows 10 můžete nainstalovat a cílit na svůj oblíbený distribuce pro Linux v subsystému Windows pro Linux (WSL). Další informace najdete v tématu [Instalační příručka k subsystému Windows pro Linux pro Windows 10](/windows/wsl/install-win10). WSL je vhodné prostředí konzoly, ale nedoporučuje se pro grafické aplikace. 
+Ve Windows 10 můžete nainstalovat a cílit na svůj oblíbený distribuce pro Linux v subsystému Windows pro Linux (WSL). Další informace najdete v tématu [Instalační příručka k subsystému Windows pro Linux pro Windows 10](/windows/wsl/install-win10). Pokud nemůžete získat přístup k Windows Storu, můžete [balíčky distribuce pro WSL stáhnout ručně](/windows/wsl/install-manual). WSL je vhodné prostředí konzoly, ale nedoporučuje se pro grafické aplikace. 
 
 ::: moniker-end
 
