@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4369
+title: Upozornění kompilátoru (úroveň 1) C4369
 ms.date: 11/04/2016
 f1_keywords:
 - C4369
 helpviewer_keywords:
 - C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
-ms.openlocfilehash: b374b67fa3319be35490358d7664bcb45bc640db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 617cb2cc3774b288581a3868125ced19b28ba45a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207027"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966514"
 ---
-# <a name="compiler-warning-level-1-c4369"></a>Kompilátor upozornění (úroveň 1) C4369
+# <a name="compiler-warning-level-1-c4369"></a>Upozornění kompilátoru (úroveň 1) C4369
 
-'čítače výčtu': hodnota výčtu 'value' nemůže být reprezentovaná jako 'type', hodnota je "nová_hodnota"
+' enumerátor ': hodnota čítače výčtu ' value ' nemůže být reprezentována jako typ ' type ', hodnota je ' new_value '
 
-Enumerátor vypočítal být větší než největší hodnota zadaného základního typu.  To způsobilo přetečení a kompilátor zabalená hodnota enumerátoru na nejnižší možná hodnota pro typ.
+Enumerátor byl vypočítán jako větší než největší hodnota zadaného základního typu.  To způsobilo přetečení a kompilátor zabalí hodnotu enumerátoru k nejnižší možné hodnotě pro daný typ.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4369.
 
-```
+```cpp
 // C4369.cpp
 // compile with: /W1
 int main() {

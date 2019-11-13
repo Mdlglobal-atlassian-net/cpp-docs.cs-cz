@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4545
+title: Upozornění kompilátoru (úroveň 1) C4545
 ms.date: 11/04/2016
 f1_keywords:
 - C4545
 helpviewer_keywords:
 - C4545
 ms.assetid: 43f8f34f-ed46-4661-95c0-c588c577ff73
-ms.openlocfilehash: 59e8bf18302d94ac609773e36a782f1457c8db6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39770a8c7ad5241ed625575c94dc19bf91e3b5bd
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352884"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966431"
 ---
-# <a name="compiler-warning-level-1-c4545"></a>Kompilátor upozornění (úroveň 1) C4545
+# <a name="compiler-warning-level-1-c4545"></a>Upozornění kompilátoru (úroveň 1) C4545
 
 výraz před čárkou vyhodnocuje na funkci, která nemá k dispozici seznam argumentů
 
-Kompilátor zjistil čárkou chybně vytvořený výraz.
+Kompilátor zjistil výraz čárky ve formátu nesprávně vytvořeného výrazu.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 Následující ukázka generuje C4545:
 
-```
+```cpp
 // C4545.cpp
 // compile with: /W1
 #pragma warning (default : 4545)
