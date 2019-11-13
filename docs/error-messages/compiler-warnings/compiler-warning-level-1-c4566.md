@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4566
+title: Upozornění kompilátoru (úroveň 1) C4566
 ms.date: 11/04/2016
 f1_keywords:
 - C4566
 helpviewer_keywords:
 - C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-ms.openlocfilehash: c864feb2478e9f99ad6e4c0087dcef72b55de601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6a62b399aa32ec6caf2e5a9ee6d4c5836601ba4
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397260"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965961"
 ---
-# <a name="compiler-warning-level-1-c4566"></a>Kompilátor upozornění (úroveň 1) C4566
+# <a name="compiler-warning-level-1-c4566"></a>Upozornění kompilátoru (úroveň 1) C4566
 
-znak reprezentován universal-character-name 'char' nemůže být reprezentovaný v aktuální znakové stránce (stránky)
+znak reprezentovaný symbolem Universal-Character-Name nemůže být reprezentovaný v aktuální znakové stránce (Page).
 
-Každý znak Unicode lze znázornit v aktuální znakové stránce ANSI.
+Ne každý znak Unicode může být reprezentován na aktuální znakové stránce ANSI.
 
-Úzký řetězce (jeden bajtové znaků), jsou převedeny na vícebajtové znaky vzhledem k tomu jsou velké řetězce (dvoubajtové znaky) není.
+Úzké řetězce (jednobajtové znaky) jsou převedeny na vícebajtové znaky, zatímco velké řetězce (dvoubajtové znaky) nejsou.
 
 Následující ukázka generuje C4566:
 
-```
+```cpp
 // C4566.cpp
 // compile with: /W1
 int main() {

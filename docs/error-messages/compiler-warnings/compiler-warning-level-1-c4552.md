@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4552
+title: Upozornění kompilátoru (úroveň 1) C4552
 ms.date: 11/04/2016
 f1_keywords:
 - C4552
 helpviewer_keywords:
 - C4552
 ms.assetid: ebbbb5ee-1c19-45bd-b386-41a19630fc76
-ms.openlocfilehash: 1fb2dc7fd4bc685e457898b47c513c21009146ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9f7fcd5a1949082aad75407f230db2e32dddd67
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410353"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966346"
 ---
-# <a name="compiler-warning-level-1-c4552"></a>Kompilátor upozornění (úroveň 1) C4552
+# <a name="compiler-warning-level-1-c4552"></a>Upozornění kompilátoru (úroveň 1) C4552
 
-'operator': operátor nemá žádný vliv; Očekával se operátor s vedlejším účinkem
+' operator ': operátor nemá žádný vliv; očekával se operátor s vedlejším účinkem.
 
-Pokud příkaz výrazu má operátor bez vlivu na straně jako horní části výrazu, je pravděpodobně chyba.
+Pokud příkaz výrazu má operátor, který nemá žádný vedlejší efekt jako začátek výrazu, pravděpodobně došlo k chybě.
 
-Chcete-li přepsat toto upozornění, umístěte výraz v závorkách.
+Chcete-li toto upozornění přepsat, vložte výraz do závorek.
 
 Následující ukázka generuje C4552:
 
-```
+```cpp
 // C4552.cpp
 // compile with: /W1
 int main() {

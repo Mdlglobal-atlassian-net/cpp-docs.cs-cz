@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4581
+title: Upozornění kompilátoru (úroveň 1) C4581
 ms.date: 11/04/2016
 f1_keywords:
 - C4581
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 5931516e3f4eba91c3b7a3ab4d0ca4979ce1ed84
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447097"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965926"
 ---
-# <a name="compiler-warning-level-1-c4581"></a>Kompilátor upozornění (úroveň 1) C4581
+# <a name="compiler-warning-level-1-c4581"></a>Upozornění kompilátoru (úroveň 1) C4581
 
-zastaralé chování: "Řetězec1" nahradit "řetězec2" atributu procesu
+zastaralé chování: "" řetězec1 "' nahrazeno ' řetězec2 ' pro zpracování atributu
 
-Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: kontroly parametrů pro vizuál C++ atributy.
+Tato chyba se může vygenerovat jako výsledek práce s shodami s kompilátorem, která se dokončila pro Visual Studio 2005: Kontrola C++ parametrů pro vizuální atributy.
 
-V předchozích verzích byla přijata hodnoty atributů, zda byl uzavřen do uvozovek. Pokud je hodnota výčtu, nesmí být uzavřen v uvozovkách.
+V předchozích verzích byly hodnoty atributů přijaty bez ohledu na to, zda byly uzavřeny v uvozovkách. Pokud je hodnota výčet, nesmí být uzavřena do uvozovek.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4581.
 
-```
+```cpp
 // C4581.cpp
 // compile with: /c /W1
 #include "unknwn.h"

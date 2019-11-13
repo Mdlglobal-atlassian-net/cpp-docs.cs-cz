@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4392
+title: Upozornění kompilátoru (úroveň 1) C4392
 ms.date: 11/04/2016
 f1_keywords:
 - C4392
 helpviewer_keywords:
 - C4392
 ms.assetid: 817806ad-06a6-4b9e-8355-e25687c782dc
-ms.openlocfilehash: 1dc0c546509b17132358f432f6a781035a314a72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b19080f4a86267a48618a5f40d7576c07c96c18a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386418"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966106"
 ---
-# <a name="compiler-warning-level-1-c4392"></a>Kompilátor upozornění (úroveň 1) C4392
+# <a name="compiler-warning-level-1-c4392"></a>Upozornění kompilátoru (úroveň 1) C4392
 
-'podpis': nesprávný počet argumentů pro vnitřní funkci, byl očekáván ' argumentů.
+' Signature ': nesprávný počet argumentů pro vnitřní funkci, očekávané argumenty ' Number '
 
-Deklarace funkce pro vnitřní kompilátor má nesprávný počet argumentů. Výsledná bitová kopie se možná správně nespustí.
+Deklarace funkce pro vnitřní objekt kompilátoru obsahovala nesprávný počet argumentů. Výsledný obrázek nemusí fungovat správně.
 
-Pokud chcete vyřešit toto varování, opravte deklaraci nebo odstraňte deklaraci a jednoduše #include na příslušný soubor hlaviček.
+Chcete-li toto upozornění opravit, buď opravte deklaraci nebo odstraňte deklaraci a jednoduše #include příslušný hlavičkový soubor.
 
 Následující ukázka generuje C4392:
 
-```
+```cpp
 // C4392.cpp
 // compile with: /W1
 // processor: x86

@@ -3,12 +3,12 @@ title: Instalace úlohy C++ Linux do sady Visual Studio
 description: Popisuje, jak stáhnout, nainstalovat a nastavit úlohu pro Linux pro C++ v aplikaci Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
-ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
+ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73912901"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966215"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Stažení, instalace a nastavení úlohy Linux
 
@@ -48,29 +48,31 @@ Pro některý z těchto scénářů se vyžaduje **vývoj pro C++ Linux s** úlo
 
 Pokud ještě nemáte počítač se systémem Linux, můžete v Azure vytvořit virtuální počítač se systémem Linux. Další informace najdete v tématu [rychlý Start: Vytvoření virtuálního počítače se systémem Linux v Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
 
-Ve Windows 10 můžete nainstalovat a cílit na svůj oblíbený distribuce pro Linux v subsystému Windows pro Linux (WSL). Další informace najdete v tématu [Instalační příručka k subsystému Windows pro Linux pro Windows 10](/windows/wsl/install-win10). Pokud nemůžete získat přístup k Windows Storu, můžete [balíčky distribuce pro WSL stáhnout ručně](/windows/wsl/install-manual). WSL je vhodné prostředí konzoly, ale nedoporučuje se pro grafické aplikace. 
+Ve Windows 10 můžete nainstalovat a cílit na svůj oblíbený distribuce pro Linux v subsystému Windows pro Linux (WSL). Další informace najdete v tématu [Instalační příručka k subsystému Windows pro Linux pro Windows 10](/windows/wsl/install-win10). Pokud nemůžete získat přístup k Windows Storu, můžete [balíčky distribuce pro WSL stáhnout ručně](/windows/wsl/install-manual). WSL je vhodné prostředí konzoly, ale nedoporučuje se pro grafické aplikace.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Projekty Linux v aplikaci Visual Studio vyžadují, aby byly na vzdáleném systému Linux nebo WSL nainstalovány následující závislosti: 
-- **Kompilátor** – Visual Studio 2019 obsahuje okamžitou podporu pro RSZ a [Clang](https://docs.microsoft.com/en-us/cpp/build/clang-support-cmake?view=vs-2019). 
-- **GDB** – Visual Studio automaticky spouští GDB v systému Linux a používá front-end ladicí program sady Visual Studio k poskytování prostředí pro ladění s plnou přesností na platformě Linux. 
+Projekty Linux v aplikaci Visual Studio vyžadují, aby byly na vzdáleném systému Linux nebo WSL nainstalovány následující závislosti:
+
+- **Kompilátor** – Visual Studio 2019 obsahuje okamžitou podporu pro RSZ a [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
+- **GDB** – Visual Studio automaticky spouští GDB v systému Linux a používá front-end ladicí program sady Visual Studio k poskytování prostředí pro ladění s plnou přesností na platformě Linux.
 - **rsync** a **zip – zahrnutí rsync a zip umožňuje** aplikaci Visual Studio extrahovat hlavičkové soubory ze systému Linux do systému souborů Windows pro použití technologií IntelliSense.
 - **Značka**
 - **OpenSSH-server** (pouze systémy Remote Linux) – Visual Studio se připojuje ke vzdáleným systémům Linux přes zabezpečené připojení SSH.
 - **Cmake** (jenom projekty cmake) – můžete nainstalovat [staticky propojené binární soubory cmake Microsoftu pro Linux](https://github.com/microsoft/CMake/releases).
 
-V následujících příkazech se předpokládá, že používáte g + + místo Clang. 
+V následujících příkazech se předpokládá, že používáte g + + místo Clang.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Projekty Linux v aplikaci Visual Studio vyžadují, aby byly na vzdáleném systému Linux nebo WSL nainstalovány následující závislosti: 
+Projekty Linux v aplikaci Visual Studio vyžadují, aby byly na vzdáleném systému Linux nebo WSL nainstalovány následující závislosti:
+
 - **RSZ** – Visual Studio 2017 obsahuje okamžitou podporu pro RSZ.
-- **GDB** – Visual Studio automaticky spouští GDB v systému Linux a používá front-end ladicí program sady Visual Studio k poskytování prostředí pro ladění s plnou přesností na platformě Linux. 
+- **GDB** – Visual Studio automaticky spouští GDB v systému Linux a používá front-end ladicí program sady Visual Studio k poskytování prostředí pro ladění s plnou přesností na platformě Linux.
 - **rsync** a **zip – zahrnutí rsync a zip umožňuje** aplikaci Visual Studio extrahovat hlavičkové soubory ze systému Linux do systému souborů Windows pro použití v IntelliSense.
 - **Značka**
 - **OpenSSH-server** – Visual Studio se připojuje ke vzdáleným systémům Linux přes zabezpečené připojení SSH.
@@ -78,7 +80,7 @@ Projekty Linux v aplikaci Visual Studio vyžadují, aby byly na vzdáleném syst
 
 ::: moniker-end
 
-::: moniker range="vs-2019" 
+::: moniker range="vs-2019"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Instalace pro Linux: Ubuntu v WSL
 

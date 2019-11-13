@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: 9eb157ecbc738e1d7a1c3022d5f156fb590e8f04
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bf91730f98685935d50ee0076739b436e8d9da60
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704124"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964935"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC
 
@@ -21,7 +21,7 @@ Konečný výsledek se podobá modelu používanému [třídou CFormView](../mfc
 
 Vzhledem k tomu, že zobrazení model Windows Forms knihovny MFC jsou ovládací prvky ActiveX, nemají stejné `hwnd` jako zobrazení MFC. Nelze je také předat jako ukazatel na zobrazení [CView](../mfc/reference/cview-class.md) . Obecně použijte .NET Framework metody pro práci s model Windows Forms zobrazeními a používejte méně na Win32.
 
-Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
+Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/download/details.aspx?id=2113).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

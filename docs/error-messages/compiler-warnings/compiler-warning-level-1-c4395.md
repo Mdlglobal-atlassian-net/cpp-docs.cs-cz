@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4395
+title: Upozornění kompilátoru (úroveň 1) C4395
 ms.date: 11/04/2016
 f1_keywords:
 - C4395
 helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 074e00ff2ae44986127f629da6ef38f9f5df7212
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182402"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964875"
 ---
-# <a name="compiler-warning-level-1-c4395"></a>Kompilátor upozornění (úroveň 1) C4395
+# <a name="compiler-warning-level-1-c4395"></a>Upozornění kompilátoru (úroveň 1) C4395
 
-'function': členská funkce se bude volat pro kopii datového členu initonly 'member'
+' function ': členská funkce bude vyvolána pro kopii datového členu initonly ' member '
 
-Členská funkce byla volána pro [initonly (C++vyhodnocovací)](../../dotnet/initonly-cpp-cli.md) datový člen.  C4395, která upozorní **initonly** datový člen nemůže upravit funkce.
+Členská funkce byla volána pro datový člen [initonlyC++(/CLI)](../../dotnet/initonly-cpp-cli.md) .  C4395 upozorňuje, že datový člen **initonly** nemůže být změněn funkcí.
 
 Následující ukázka generuje C4395:
 
-```
+```cpp
 // C4395.cpp
 // compile with: /W1 /clr
 public value class V {

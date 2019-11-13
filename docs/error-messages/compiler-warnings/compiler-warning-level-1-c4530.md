@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4530
+title: Upozornění kompilátoru (úroveň 1) C4530
 ms.date: 11/04/2016
 f1_keywords:
 - C4530
 helpviewer_keywords:
 - C4530
 ms.assetid: a04dcdb2-84db-459d-9e5e-4e743887465f
-ms.openlocfilehash: a542f9b6bb73e561592e1e779aa6ee493612e6ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3139d321bca64b9938badebdabccd3ca1eb96d11
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160715"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966266"
 ---
-# <a name="compiler-warning-level-1-c4530"></a>Kompilátor upozornění (úroveň 1) C4530
+# <a name="compiler-warning-level-1-c4530"></a>Upozornění kompilátoru (úroveň 1) C4530
 
-Obslužná rutina výjimky C++, které používá, ale sémantiku odvíjení nejsou povolené. Zadejte/EHsc
+C++použila se obslužná rutina výjimky, ale není povolená sémantika unwind. Zadat/EHsc
 
-Zpracování výjimek jazyka C++ se použil, ale [/EHsc](../../build/reference/eh-exception-handling-model.md) nebyla vybrána.
+C++bylo použito zpracování výjimek, ale [/EHsc](../../build/reference/eh-exception-handling-model.md) nebylo vybráno.
 
-Když není povolená možnost/EHsc, nebude objekt s automatickým úložištěm v rámci mezi způsobem throw funkce a funkce zachytávání throw, zničeny. Ale v vytvoří objekt s automatickým úložištěm **zkuste** nebo **catch** zničí bloku.
+Pokud možnost/EHsc není povolená, objekt s automatickým úložištěm v rámci, mezi funkcí, kterou vyvolává throw, a funkcí, které zachytí throw, nebude zničen. Objekt s automatickým úložištěm vytvořeným v bloku **Try** nebo **catch** však bude zničen.
 
 Následující ukázka generuje C4530:
 
-```
+```cpp
 // C4530.cpp
 // compile with: /W1
 int main() {
@@ -31,4 +31,4 @@ int main() {
 }
 ```
 
-Příklad s/EHsc k vyřešení upozornění kompilace.
+Chcete-li vyřešit upozornění, zkompilujte ukázku pomocí/EHsc.

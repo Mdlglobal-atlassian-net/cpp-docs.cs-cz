@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4346
+title: Upozornění kompilátoru (úroveň 1) C4346
 ms.date: 11/04/2016
 f1_keywords:
 - C4346
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa71565824355ff4b3658fd9de22c09d6db6dc33
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187215"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966566"
 ---
-# <a name="compiler-warning-level-1-c4346"></a>Kompilátor upozornění (úroveň 1) C4346
+# <a name="compiler-warning-level-1-c4346"></a>Upozornění kompilátoru (úroveň 1) C4346
 
-"name": závislý název není typ
+' name ': závislý název není typu
 
-[Typename](../../cpp/typename.md) – klíčové slovo je vyžadována, pokud má být zpracována jako typ závislý název. Pro kód, který funguje stejně ve všech verzích aplikace Visual C++, přidejte `typename` deklarace.
+Klíčové slovo [TypeName](../../cpp/typename.md) je vyžadováno, pokud je závislý název považován za typ. Pro kód, který funguje stejně ve všech verzích vizuálu C++, přidejte `typename` k deklaraci.
 
 Následující ukázka generuje C4346:
 
-```
+```cpp
 // C4346.cpp
 // compile with: /WX /LD
 template<class T>
@@ -32,9 +32,9 @@ struct C {
 };
 ```
 
-Následující ukázky jsou uvedeny další příklady kde **typename** je požadováno klíčové slovo:
+Následující ukázky ukazují další příklady, kde je klíčové slovo **TypeName** požadováno:
 
-```
+```cpp
 // C4346b.cpp
 // compile with: /LD /W1
 template<class T>
@@ -53,9 +53,9 @@ struct M : public L<typename T::Type, T::Value>
 };
 ```
 
-a to,
+a to
 
-```
+```cpp
 // C4346c.cpp
 // compile with: /LD /WX
 struct Y {

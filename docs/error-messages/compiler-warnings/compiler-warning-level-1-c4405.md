@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4405
+title: Upozornění kompilátoru (úroveň 1) C4405
 ms.date: 11/04/2016
 f1_keywords:
 - C4405
 helpviewer_keywords:
 - C4405
 ms.assetid: 155c64d6-58ae-4455-b61f-ccd711c5da96
-ms.openlocfilehash: e85bdc995fe16f91e2e9c734dacc65ca0b7b622d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 182f9ff061fd2a8ebe5ea0046545412fca5f646a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182376"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965591"
 ---
-# <a name="compiler-warning-level-1-c4405"></a>Kompilátor upozornění (úroveň 1) C4405
+# <a name="compiler-warning-level-1-c4405"></a>Upozornění kompilátoru (úroveň 1) C4405
 
-'identifier': identifikátor je vyhrazené slovo
+' identifier ': identifikátor je vyhrazené slovo
 
-Vyhrazené pro vložené sestavení slovo se používá jako název proměnné. To může způsobit nepředvídatelné výsledky. Pokud chcete vyřešit toto upozornění, vyhněte se názvů proměnných s slova vyhrazená pro vložené sestavení. Následující ukázka generuje C4405:
+Slovo rezervované pro vložené sestavení se používá jako název proměnné. To může vést k nepředvídatelným výsledkům. Chcete-li toto upozornění opravit, vyhněte se zadávání názvů proměnných pomocí slov vyhrazených pro vložené sestavení. Následující ukázka generuje C4405:
 
-```
+```cpp
 // C4405.cpp
 // compile with: /W1
 // processor: x86

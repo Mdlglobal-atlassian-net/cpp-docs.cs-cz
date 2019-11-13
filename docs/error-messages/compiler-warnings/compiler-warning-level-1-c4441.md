@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4441
+title: Upozornění kompilátoru (úroveň 1) C4441
 ms.date: 11/04/2016
 f1_keywords:
 - C4441
 helpviewer_keywords:
 - C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-ms.openlocfilehash: 45d7a6af09677c1e63dab5ffcc55c35d8203b40b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f45288e1e52d157e5c135a45c0801a909fccfbc
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408235"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966028"
 ---
-# <a name="compiler-warning-level-1-c4441"></a>Kompilátor upozornění (úroveň 1) C4441
+# <a name="compiler-warning-level-1-c4441"></a>Upozornění kompilátoru (úroveň 1) C4441
 
-konvence volání cc1 ignorovány; Místo toho použita cc2
+konvence volání ' CC1 ' ignorována; místo toho se použila možnost CC2.
 
-Členské funkce ve spravované uživatelem definovaných typů a obecných typů globální funkce musí použít [__clrcall](../../cpp/clrcall.md) konvence volání.  Kompilátor používá `__clrcall`.
+Členské funkce v spravovaných uživatelsky definovaných typech a obecných globálních funkcích musí používat konvenci volání [__clrcall](../../cpp/clrcall.md) .  Kompilátor použil `__clrcall`.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4441.
 
-```
+```cpp
 // C4441.cpp
 // compile with: /clr /W1 /c
 generic <class ItemType>

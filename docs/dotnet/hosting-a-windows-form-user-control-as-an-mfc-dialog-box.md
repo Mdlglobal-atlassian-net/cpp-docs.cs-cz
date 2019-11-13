@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 1351f0b2aa4ebc288469231a27c691237b52b1c1
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 7fc2aad1e0a550fb8f22b311518ae9fb16c076a5
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704128"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964940"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
 
@@ -19,7 +19,7 @@ Knihovna MFC poskytuje třídu šablon [CWinFormsDialog](../mfc/reference/cwinfo
 
 Proces, který `CWinFormsDialog` používá k hostování uživatelského ovládacího prvku, je podobný jako v tématu [hostování uživatelského ovládacího prvku Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). `CWinFormsDialog` ale spravuje inicializaci a hostování uživatelského ovládacího prvku tak, aby se nemusela programovat ručně.
 
-Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
+Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/download/details.aspx?id=2113).
 
 ### <a name="to-create-the-mfc-host-application"></a>Vytvoření hostitelské aplikace MFC
 

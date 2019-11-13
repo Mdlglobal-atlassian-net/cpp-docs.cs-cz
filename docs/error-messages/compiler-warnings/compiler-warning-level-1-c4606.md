@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4606
+title: Upozornění kompilátoru (úroveň 1) C4606
 ms.date: 11/04/2016
 f1_keywords:
 - C4606
 helpviewer_keywords:
 - C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
-ms.openlocfilehash: e471ca3e478d1166b150e49bf25efa4b9d5803cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36031aa9a831d4669d796d8a40292e2d6ba15a8
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402512"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964968"
 ---
-# <a name="compiler-warning-level-1-c4606"></a>Kompilátor upozornění (úroveň 1) C4606
+# <a name="compiler-warning-level-1-c4606"></a>Upozornění kompilátoru (úroveň 1) C4606
 
-\#– Direktiva pragma upozornění: ignoruje; warning_number Upozornění analýzy kódu nejsou přidružená k úrovním upozornění
+\#pragma – upozornění: warning_number se ignoruje; Upozornění analýzy kódu nejsou přidružená k úrovním upozornění
 
-Pro upozornění analýzy kódu, pouze `error`, `once`, a `default` jsou podporovány [upozornění](../../preprocessor/warning.md) direktivy pragma.
+V případě upozornění analýzy kódu jsou s direktivou pragma [Warning](../../preprocessor/warning.md) podporovány pouze `error`, `once`a `default`.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4606.
 
-```
+```cpp
 // C4606.cpp
 // compile with: /c /W1
 #pragma warning(1: 6001)   // C4606

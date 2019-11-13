@@ -1,18 +1,18 @@
 ---
-title: 'Postupy: Úprava cílové architektury a sady nástrojů platformy'
+title: 'Postupy: Změna cílové architektury a sady nástrojů'
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 6af7a4eb47c1d3f8b9c52eec39795c9307ca9d8e
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492222"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964902"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Postupy: Úprava cílové architektury a sady nástrojů platformy
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Postupy: Změna cílové architektury a sady nástrojů
 
 Můžete upravit soubor projektu sady Visual C++ Studio pro cílení na různé verze sady C++ nástrojů platformy, Windows SDK a .NET Framework (C++pouze projekty/CLI). Ve výchozím nastavení používá projektový systém verzi .NET Framework a verzi sady nástrojů, která odpovídá verzi sady Visual Studio, kterou používáte k vytvoření projektu. Můžete upravit všechny tyto hodnoty v souboru. vcxproj tak, abyste mohli použít stejný základ kódu pro každý cíl kompilace.
 
@@ -30,9 +30,9 @@ Visual Studio také podporuje více cílů pro C++ projekty. Pomocí integrovan�
 
 ## <a name="target-framework-ccli-project-only"></a>Cílová architektura (C++jenom projekt/CLI)
 
-Když změníte cílovou architekturu, změňte také sadu nástrojů platformy na verzi, která rozhraní podporuje. Chcete-li například cílit na .NET Framework 4,5, je nutné použít sadu nástrojů kompatibilní platformy, jako je například Visual Studio 2015 (v140), Visual Studio 2013 (v120) nebo Visual Studio 2012 (v110). Sadu nástrojů platformy [Windows 7,1 SDK](https://www.microsoft.com/en-us/download/details.aspx?id=8279) můžete použít k cílení na .NET Framework 2,0, 3,0, 3,5 a 4 a platformy x86/x64.
+Když změníte cílovou architekturu, změňte také sadu nástrojů platformy na verzi, která rozhraní podporuje. Chcete-li například cílit na .NET Framework 4,5, je nutné použít sadu nástrojů kompatibilní platformy, jako je například Visual Studio 2015 (v140), Visual Studio 2013 (v120) nebo Visual Studio 2012 (v110). Sadu nástrojů platformy [Windows 7,1 SDK](https://www.microsoft.com/download/details.aspx?id=8279) můžete použít k cílení na .NET Framework 2,0, 3,0, 3,5 a 4 a platformy x86/x64.
 
-Cílovou platformu můžete rozšířit ještě tak, že vytvoříte vlastní sadu nástrojů platformy. Další informace najdete v tématu [ C++ nativní cílení na více](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) platforem na C++ blogu vizuálu.
+Cílovou platformu můžete rozšířit ještě tak, že vytvoříte vlastní sadu nástrojů platformy. Další informace najdete v tématu [ C++ nativní cílení na více](https://devblogs.microsoft.com/cppblog/c-native-multi-targeting/) platforem na C++ blogu vizuálu.
 
 ### <a name="to-change-the-target-framework"></a>Změna cílového rozhraní .NET Framework
 
@@ -43,7 +43,7 @@ Cílovou platformu můžete rozšířit ještě tak, že vytvoříte vlastní sa
 
 1. Na panelu nabídek vyberte **soubor**, **otevřít**, **soubor**. V dialogovém okně **otevřít soubor** přejděte do složky projektu a pak otevřete soubor projektu (. vcxproj).
 
-1. V souboru projektu vyhledejte položku pro cílovou verzi rozhraní .NET Framework. Například pokud je váš projekt navržen pro použití .NET Framework 4,5, vyhledejte `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` `<PropertyGroup Label="Globals">` v prvku `<Project>` prvku. `<TargetFrameworkVersion>` Pokud prvek není k dispozici, projekt nepoužívá .NET Framework a není vyžadována žádná změna.
+1. V souboru projektu vyhledejte položku pro cílovou verzi rozhraní .NET Framework. Například pokud je váš projekt navržen pro použití .NET Framework 4,5, vyhledejte `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` v prvku `<PropertyGroup Label="Globals">` elementu `<Project>`. Pokud `<TargetFrameworkVersion>` prvek není k dispozici, projekt nepoužívá .NET Framework a není vyžadována žádná změna.
 
 1. Změňte hodnotu na požadovanou verzi rozhraní, například v 3.5 nebo v 4.6.
 
@@ -63,7 +63,7 @@ Cílovou platformu můžete rozšířit ještě tak, že vytvoříte vlastní sa
 
 1. V pravém podokně vyberte **sadu nástrojů platformy** a v rozevíracím seznamu vyberte požadovanou sadu nástrojů. Pokud jste například nainstalovali sadu nástrojů sady Visual Studio 2010, vyberte sadu **Visual studio 2010 (V100)** a použijte ji pro svůj projekt.
 
-1. Zvolte **OK** tlačítko.
+1. Klikněte na tlačítko **OK** .
 
 ## <a name="see-also"></a>Viz také:
 

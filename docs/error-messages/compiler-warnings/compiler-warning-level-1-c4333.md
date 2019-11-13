@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4333
+title: Upozornění kompilátoru (úroveň 1) C4333
 ms.date: 11/04/2016
 f1_keywords:
 - C4333
 helpviewer_keywords:
 - C4333
 ms.assetid: d3763c52-6110-4da0-84db-5264e3f3f166
-ms.openlocfilehash: b0f87b5d839dcfbb577af567a1a51a95daf716f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b4e567f07d15b47d3c1f507b43257dac9a49d66
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406597"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966057"
 ---
-# <a name="compiler-warning-level-1-c4333"></a>Kompilátor upozornění (úroveň 1) C4333
+# <a name="compiler-warning-level-1-c4333"></a>Upozornění kompilátoru (úroveň 1) C4333
 
-'operator': posunutí doprava o moc velkou hodnotu, ztráta dat
+' operator ': pravý posun o moc velký objem, ztráta dat
 
-Operaci posunutí doprava byla příliš velké množství.  Všechny významných bitů posunuty navýšení kapacity a výsledek bude vždy nula.
+Operace posunutí doprava byla příliš velká.  Všechny významné bity se posunou a výsledek bude vždycky nula.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4333.
 
-```
+```cpp
 // C4333.cpp
 // compile with: /c /W1
 unsigned shift8 (unsigned char c) {

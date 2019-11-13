@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4364
+title: Upozornění kompilátoru (úroveň 1) C4364
 ms.date: 11/04/2016
 f1_keywords:
 - C4364
 helpviewer_keywords:
 - C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
-ms.openlocfilehash: db2774b6a73a989b4e9250719f99122826b486fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 716f440cddc3889ec719ef3b295a0d076175be93
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207105"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966519"
 ---
-# <a name="compiler-warning-level-1-c4364"></a>Kompilátor upozornění (úroveň 1) C4364
+# <a name="compiler-warning-level-1-c4364"></a>Upozornění kompilátoru (úroveň 1) C4364
 
-\#pro sestavení 'file' dřív zjištěné v: location(line_number) bez atributu as_friend; atribut as_friend se nepoužije
+\#použití pro sestavení ' file ' dříve zobrazené v umístění (line_number) bez atributu as_friend; as_friend se nepoužívá.
 
-A `#using` – direktiva se opakuje pro daná metadata souboru, ale `as_friend` kvalifikátor nebyl použit v první výskyt; kompilátor bude ignorovat druhou `as_friend`.
+Pro daný soubor metadat byla opakována `#using` direktiva, ale kvalifikátor `as_friend` nebyl použit v prvním výskytu; Kompilátor bude ignorovat druhý `as_friend`.
 
-Další informace najdete v tématu [přátelská sestavení (C++)](../../dotnet/friend-assemblies-cpp.md).
+Další informace naleznete v tématu [Friend Assemblies (C++)](../../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="example"></a>Příklad
 
 Následující příklad vytvoří komponentu.
 
-```
+```cpp
 // C4364.cpp
 // compile with: /clr /LD
 ref class A {};
@@ -35,7 +35,7 @@ ref class A {};
 
 Následující ukázka generuje C4364.
 
-```
+```cpp
 // C4364_b.cpp
 // compile with: /clr /W1 /c
 #using " C4364.dll"

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 1a688870f4700e8e3b935245f2c9243f8d5aa823
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 8925b86a5920df6a53a2625b782cf41e1a7fe32c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704089"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964966"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského rozhraní Windows Form v dialogovém okně knihovny MFC
 
 Knihovna MFC hostuje ovládací prvek model Windows Forms jako speciální druh ovládacího prvku ActiveX a komunikuje s ovládacím prvkem pomocí rozhraní ActiveX a vlastností a metod <xref:System.Windows.Forms.Control> třídy. Pro práci s ovládacím prvkem doporučujeme použít .NET Framework vlastnosti a metody.
 
-Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/en-us/download/details.aspx?id=2113).
+Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/download/details.aspx?id=2113).
 
 > [!NOTE]
 >  V aktuální verzi `CDialogBar` objekt nemůže hostovat ovládací prvky model Windows Forms.

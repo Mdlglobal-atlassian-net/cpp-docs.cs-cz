@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4407
+title: Upozornění kompilátoru (úroveň 1) C4407
 ms.date: 11/04/2016
 f1_keywords:
 - C4407
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: 2e47e293b650f64d2a6be91a837cc4195e073e8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: cdc25155aced50331851e9581c346155c6f8e45c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447743"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966345"
 ---
-# <a name="compiler-warning-level-1-c4407"></a>Kompilátor upozornění (úroveň 1) C4407
+# <a name="compiler-warning-level-1-c4407"></a>Upozornění kompilátoru (úroveň 1) C4407
 
-přetypování mezi různé reprezentacemi ukazatele na člen, kompilátor může vygenerovat nesprávný kód
+přetypování mezi různými ukazateli na reprezentace členů, kompilátor může generovat nesprávný kód.
 
-Byl zjištěn nesprávný přetypování.
+Bylo zjištěno nesprávné přetypování.
 
-C4407 mohou být generovány z důvodu kompilátoru prací, které bylo provedeno v sadě Visual Studio 2005. Pointer-to-member nyní vyžaduje úplný název a address-of – operátor (&).
+C4407 je možné vygenerovat z důvodu práce v souladu s kompilátorem, která byla provedena v aplikaci Visual Studio 2005. Ukazatel na člena nyní vyžaduje úplný název a operátor address-of (&).
 
-C4407 může dojít, pokud přetypování mezi více dědičnosti pointer-to-member na jednoduchá dědičnost pointer-to-member. Někdy to můžou fungovat, ale někdy není toho schopen, protože reprezentace pointer-to-member jednoduchá dědičnost nebude obsahovat dostatek informací. Kompilace s **/VMM** může pomoci (Další informace najdete v tématu [/VMM, / VMS, / vmv (obecná reprezentace)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Můžete také zkusit uspořádání základní třídy; kompilátor je zjišťování ztráty informací v převod, protože základní třída je posunem nenulové od odvozený.
+K C4407 může dojít, pokud přetypování mezi vícenásobnou dědičností mezi jednotlivými členy a jedním členem ukazatele dědičnosti na člena. V některých případech to může fungovat, ale někdy to nemůže být způsobeno tím, že reprezentace typu pointer-to-Member s jediným děděním neobsahuje dostatečné informace. Kompilace s **/VMM** může pomáhat (Další informace najdete v tématu [/VMM,/VMS,/VMV (pro obecné účely reprezentaci)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Můžete také zkusit změnit uspořádání základních tříd; Kompilátor detekuje ztrátu informací v převodu, protože základní třída je nenulového posunu od odvozeného.
 
 Následující ukázka generuje C4407:
 
-```
+```cpp
 // C4407.cpp
 // compile with: /W1 /c
 struct C1 {};
