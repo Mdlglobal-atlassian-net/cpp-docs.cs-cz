@@ -6,42 +6,42 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 1a92d2a22e8aa9df29c18fa36ff4508eb8eec57f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d9b550313c8e65e47db70dc81519abce7db95da5
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445862"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050205"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM pro x64 (ml64.exe)
 
-Visual Studio obsahuje 32bitové a 64bitové prostředí verze Microsoft Assembler (MASM) na cílový x64 kód. S názvem ml64.exe, toto je assembler, který přijímá x64 jazyka assembleru. Nástroje příkazového řádku MASM nainstalují při výběru úlohy pro C++ během instalace sady Visual Studio. MASM nástroje nejsou k dispozici jako samostatný soubor ke stažení. Pokyny o tom, jak stáhnout a nainstalovat jeho kopii sady Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio). Pokud chcete nainstalovat úplné rozhraní IDE sady Visual Studio, ale zajímá jenom nástroje příkazového řádku, stáhněte si [Build Tools pro Visual Studio](https://visualstudio.microsoft.com/downloads/).
+Visual Studio zahrnuje 32 a 64 bitové hostované verze Microsoft assembleru (MASM) do cíle kódu x64. S názvem ml64. exe se jedná o Assembler, který přijímá jazyk x64 Assembler. Nástroje příkazového řádku MASM se instalují při výběru zatížení během instalace C++ sady Visual Studio. Nástroje MASM nejsou k dispozici jako samostatné stažení. Pokyny ke stažení a instalaci kopie sady Visual Studio naleznete v tématu [install Visual Studio](/visualstudio/install/install-visual-studio). Pokud nechcete instalovat celé rozhraní IDE sady Visual Studio, ale chcete pouze nástroje příkazového řádku, Stáhněte si [Nástroje sestavení pro Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
-Použití MASM k vytváření kódu pro x64, zaměřuje na příkazovém řádku, je nutné použít příkazový řádek vývojáře pro x64 cíle, které nastaví tato cesta i ostatním proměnným prostředí. Informace o tom, jak spustit příkazový řádek pro vývojáře najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../../build/building-on-the-command-line.md).
+Chcete-li použít MASM k sestavení kódu pro cíle x64 na příkazovém řádku, je nutné použít příkazový řádek pro vývojáře pro cíle x64, který nastaví požadovanou cestu a další proměnné prostředí. Informace o spuštění příkazového řádku pro vývojáře naleznete v tématu [sestavení C/C++ Code v příkazovém řádku](../../build/building-on-the-command-line.md).
 
-Informace o možnostech příkazového řádku ml64.exe najdete v tématu [ML a ml64 v příkazovém Reference k příkazovému řádku](../../assembler/masm/ml-and-ml64-command-line-reference.md).
+Informace o možnostech příkazového řádku ml64. exe najdete v tématu Referenční dokumentace k [příkazovému řádku ml a ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md).
 
-Vložený assembler nebo použití klíčového slova ASM se nepodporuje pro x64 nebo cíle ARM. K portu vašeho x86 kódu tohoto použití inline assembleru x64 nebo ARM, můžete převést kódu jazyka c++, použít vnitřní funkce kompilátoru nebo vytvořit zdrojové soubory jazyka assembleru. Microsoft C++ kompilátor podporuje vnitřních objektů, aby bylo možné použít speciální funkce pokyny pro příklad privilegovaného, bit kontrolu a testování, interlocked a tak dále, v jako blízko způsobem napříč platformami jako je to možné. Informace o vnitřní objekty dostupné, najdete v části [vnitřní funkce kompilátoru](../../intrinsics/compiler-intrinsics.md).
+Inline assembler nebo použití klíčového slova ASM není podporováno pro cíle x64 a ARM. Chcete-li svůj kód x86 použít pro inline assembleru na x64 nebo ARM, můžete převést kód C++na, použít vnitřní objekty kompilátoru nebo vytvořit zdrojové soubory assembleru jazyka assembleru. Kompilátor společnosti C++ Microsoft podporuje vnitřní funkce, díky kterým můžete v případě potřeby použít pokyny speciální funkce, například privilegované, bitovou kontrolu/testování, prolínání a tak dále, a to co nejblíže k platformě pro různé platformy. Informace o dostupných vnitřních objektech naleznete v tématu [vnitřní objekty kompilátoru](../../intrinsics/compiler-intrinsics.md).
 
-## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>Přidání souboru jazyka assembleru do sady Visual Studio C++ projektu
+## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>Přidání souboru jazyka assembleru do projektu sady Visual Studio C++
 
-Systém projektu sady Visual Studio podporuje assembleru jazyka soubory sestavené s využitím MASM ve svých projektech C++. Můžete vytvořit x64 assembleru jazyka zdrojové soubory a sestavení je do souborů objektů pomocí MASM, která plně podporuje x64. Pak můžete propojit tyto soubory objekt kódu jazyka C++ vytvořené pro x64 cíle. Toto je jeden způsob, jak překonat chybějící x x64 inline assembleru.
+Systém projektu sady Visual Studio podporuje soubory Assembler-Language sestavené pomocí MASM ve vašich C++ projektech. Můžete vytvářet zdrojové soubory jazyka x64 assembleru a sestavovat je do souborů objektů pomocí MASM, který podporuje plně x64. Pak můžete propojit tyto soubory objektů s vaším C++ kódem vytvořeným pro cíle x64. Toto je jeden ze způsobů, jak překonat chybějící rozhraní inline assembleru x64.
 
-### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>Přidání souboru jazyka assembleru do existující sady Visual Studio C++ projektu
+### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>Přidání souboru jazyka assembleru do existujícího projektu sady Visual Studio C++
 
-1. Vyberte projekt v **Průzkumníka řešení**. V panelu nabídky zvolte **projektu**, **přizpůsobení sestavení**.
+1. Vyberte projekt v **Průzkumník řešení**. Na panelu nabídek vyberte možnost **projekt**, **přizpůsobení sestavení**.
 
-1. V **Visual C++ soubory úpravy sestavení** dialogové okno pole, zaškrtněte políčko vedle **masm(.targets,.props)**. Zvolte **OK** výběr uložte a zavřete dialogové okno.
+1. V dialogovém **okně C++ Visual Build Customization Files** zaškrtněte políčko vedle **MASM (. targets,. props)** . Kliknutím na **tlačítko OK** uložte výběr a zavřete dialogové okno.
 
-1. V panelu nabídky zvolte **projektu**, **přidat novou položku**.
+1. Na panelu nabídek vyberte možnost **projekt**, **Přidat novou položku**.
 
-1. V **přidat novou položku** dialogu **soubor C++ (.cpp)** v prostředním podokně. V **název** ovládacích prvků pro úpravy, zadejte nový název souboru, který má **.asm** rozšíření místo .cpp. Zvolte **přidat** přidejte soubor do projektu a zavřete dialogové okno.
+1. V dialogovém okně **Přidat novou položku** vyberte  **C++ v prostředním podokně soubor (. cpp)** . V ovládacím prvku upravit **název** zadejte nový název souboru, který má příponu **. asm** místo. cpp. Zvolením možnosti **Přidat** přidejte soubor do projektu a zavřete dialogové okno.
 
-Vytvoření kódu assembleru jazyka do souboru .asm, kterou jste přidali. Při sestavení vašeho řešení, je vyvolána MASM assembler do souboru .asm sestavení do souboru objektu, který se pak propojí do vašeho projektu. Pro usnadnění přístupu symbol deklarace vašich funkcí assembler jako `extern "C"` ve zdrojovém kódu C++, místo použití jazyka C++ název dekorace konvencí ve vašem jazyce assembler zdrojové soubory.
+Vytvořte kód assembleru-Language v souboru. ASM, který jste přidali. Při sestavování řešení je vyvolána MASM Assembler pro sestavení souboru. asm do souboru objektu, který je poté propojen do projektu. Chcete-li usnadnit přístup k symbolům, deklarujte své funkce assembleru jako `extern "C"` ve C++ zdrojovém kódu C++ namísto použití konvence dekorace názvů ve zdrojových souborech assembleru jazyka.
 
-## <a name="ml64-specific-directives"></a>Direktivy pro konkrétní ml64 v příkazovém
+## <a name="ml64-specific-directives"></a>Direktivy specifické pro ml64
 
-Můžete použít následující direktivy pro konkrétní ml64 v příkazovém ve zdrojovém kódu assembleru jazyka, který se zaměřuje x64:
+Ve zdrojovém kódu vašeho jazyka assembleru, který cílí na x64, můžete použít následující direktivy ml64:
 
 - [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
 
@@ -57,11 +57,11 @@ Můžete použít následující direktivy pro konkrétní ml64 v příkazovém 
 
 - [.SETFRAME](../../assembler/masm/dot-setframe.md)
 
-Kromě toho [PROC](../../assembler/masm/proc.md) – direktiva byl aktualizován pro použití s ml64.exe.
+Direktiva [proc](../../assembler/masm/proc.md) se navíc aktualizovala pro použití s ml64. exe.
 
-## <a name="32-bit-address-mode-address-size-override"></a>Režim adresy 32-bit (adresa velikost přepsání)
+## <a name="32-bit-address-mode-address-size-override"></a>32 – režim bitové adresy (přepsání velikosti adresy)
 
-MASM vysílá přepsání velikost adresy 0x67 Pokud operand paměti zahrnuje 32-bit registrů. Například následující příklady způsobit přepsání velikost adresy emitování:
+MASM vygeneruje přepsání velikosti 0x67 adres, pokud operand paměti obsahuje 32 bitů. Například následující příklady způsobí, že bude vygenerováno přepsání velikosti adresy:
 
 ```asm
 mov rax, QWORD PTR [ecx]
@@ -71,9 +71,9 @@ prefetch [eax]
 movnti rax, QWORD PTR [r8d]
 ```
 
-MASM předpokládá, že pokud se zobrazí pouze jako operand paměti posunu 32-bit, 64-bit adresování je určena. Aktuálně není dostupná podpora pro 32-bit adresování pomocí těchto operandů.
+MASM předpokládá, že pokud se navýšení 32 bitového posunu zobrazuje samostatně jako operand paměti, je určeno 64 adresování. V současnosti není podporována podpora 32 bitového adresování s takovými operandy.
 
-A konečně kombinování velikosti registru v rámci paměti operand, jak je ukázáno v následujícím kódu, dojde k chybě.
+Nakonec vymíchat velikosti registrů v rámci operandu paměti, jak je znázorněno v následujícím kódu, vygeneruje chybu.
 
 ```asm
 mov eax, DWORD PTR [rcx*2+r10d]

@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4912
+title: Upozornění kompilátoru (úroveň 1) C4912
 ms.date: 11/04/2016
 f1_keywords:
 - C4912
 helpviewer_keywords:
 - C4912
 ms.assetid: ba1f1a66-8c20-4792-9ac8-43e49f729ae2
-ms.openlocfilehash: 7a6f7df79a98685a7eec1582ae248ea3f620c5fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e9e13cd909ec77397eac8b40ec4323b2b5847d9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207046"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050255"
 ---
-# <a name="compiler-warning-level-1-c4912"></a>Kompilátor upozornění (úroveň 1) C4912
+# <a name="compiler-warning-level-1-c4912"></a>Upozornění kompilátoru (úroveň 1) C4912
 
-'attribute': atribut má nedefinované chování pro vnořené UDT
+atribut ' Attribute ': atribut má nedefinované chování pro vnořené UDT
 
-Atributy, které platí pro vnořené UDT (uživatelem definovaný typ, který může být definice typedef, sjednocení nebo struktura) mohou být ignorovány.
+Atributy, které se vztahují na vnořené UDT (uživatelsky definovaný typ, který může být typu typedef, sjednocení nebo struktura), mohou být ignorovány.
 
-Následující kód ukazuje, jak by se vygenerovala toto upozornění:
+Následující kód ukazuje, jak se vygenerovalo toto upozornění:
 
-```
+```cpp
 // C4912.cpp
 // compile with: /W1
 #include <windows.h>

@@ -1,36 +1,36 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4667
+title: Upozornění kompilátoru (úroveň 1) C4667
 ms.date: 11/04/2016
 f1_keywords:
 - C4667
 helpviewer_keywords:
 - C4667
 ms.assetid: 5d2b7fe0-4f0e-4cd6-b432-ca02c3d194ab
-ms.openlocfilehash: 685cdc2577e1207360c793c82808919c39753f49
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9ae0d5cdcc1f6cca25f55cd1d7c03cc345c39e5e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344472"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051399"
 ---
-# <a name="compiler-warning-level-1-c4667"></a>Kompilátor upozornění (úroveň 1) C4667
+# <a name="compiler-warning-level-1-c4667"></a>Upozornění kompilátoru (úroveň 1) C4667
 
-'function': definovaná žádná šablona funkcí, která odpovídá vynucenému vytváření instancí
+' function ': není definována žádná šablona funkcí, která by odpovídala vynucenému vytváření instancí
 
-Nelze vytvořit instanci šablony funkce, která nebyla deklarována.
+Nemůžete vytvořit instanci šablony funkce, která nebyla deklarována.
 
-Následující příklad způsobí, že C4667:
+Následující ukázka způsobí C4667:
 
-```
+```cpp
 // C4667a.cpp
 // compile with: /LD /W1
 template
 void max(const int &, const int &); // C4667 expected
 ```
 
-K tomuto upozornění předejít, prvotním deklarování šablony funkce:
+Chcete-li se tomuto upozornění vyhnout, nejprve deklarujte šablonu funkce:
 
-```
+```cpp
 // C4667b.cpp
 // compile with: /LD
 // Declare the function template

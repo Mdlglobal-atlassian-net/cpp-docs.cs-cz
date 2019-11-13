@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4677
+title: Upozornění kompilátoru (úroveň 1) C4677
 ms.date: 11/04/2016
 f1_keywords:
 - C4677
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 66b8d42b63bcbf328703523c4eeda7a047f4643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8567e7392537507a25121977448ac47ec079316b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374570"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051368"
 ---
-# <a name="compiler-warning-level-1-c4677"></a>Kompilátor upozornění (úroveň 1) C4677
+# <a name="compiler-warning-level-1-c4677"></a>Upozornění kompilátoru (úroveň 1) C4677
 
-'function': podpis nesoukromého členu obsahuje typ sestavení private 'private_type.
+' function ': podpis neprivátního členu obsahuje typ sestavení Private ' private_type '
 
-Typ, který nemá přístupnost public mimo sestavení používá typ, který má privátní přístup mimo sestavení. Komponenta, která odkazuje na typ veřejné sestavení nebude možné používat typ člena nebo členy, které odkazují na typ sestavení private.
+Typ, který má veřejné přístupnost mimo sestavení, používá typ, který má privátní přístup mimo sestavení. Komponenta, která odkazuje na typ veřejného sestavení, nebude moci používat člena typu nebo členy, kteří odkazují na privátní typ sestavení.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4677.
 
-```
+```cpp
 // C4677.cpp
 // compile with: /clr /c /W1
 delegate void TestDel();

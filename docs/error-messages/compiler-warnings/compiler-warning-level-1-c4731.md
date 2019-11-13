@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4731
+title: Upozornění kompilátoru (úroveň 1) C4731
 ms.date: 11/04/2016
 f1_keywords:
 - C4731
 helpviewer_keywords:
 - C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-ms.openlocfilehash: af091d1d35fff955afcc5af3da48b80416e79f36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2591756dfaa8887affbe4e470f1c98738b6b680
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385430"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052431"
 ---
-# <a name="compiler-warning-level-1-c4731"></a>Kompilátor upozornění (úroveň 1) C4731
+# <a name="compiler-warning-level-1-c4731"></a>Upozornění kompilátoru (úroveň 1) C4731
 
-"ukazatelů": "zaregistrovat" upravil vložený kód sestavení registr ukazatelů rámců
+' pointer ': registr ukazatele rámce ' register ' změněn pomocí vloženého kódu sestavení
 
-Registr ukazatelů rámec byl změněn. Musíte uložení a obnovení registru v vaše sestavení bloku nebo rámec proměnná na řádku (místní proměnná nebo parametr, v závislosti na registr upravit) nebo váš kód nemusí fungovat správně.
+Registr ukazatele na rámec byl změněn. Je nutné uložit a obnovit registr ve vloženém bloku sestavení nebo proměnné rámce (místní nebo parametr, v závislosti na změně registru), nebo váš kód nemusí fungovat správně.
 
 Následující ukázka generuje C4731:
 
-```
+```cpp
 // C4731.cpp
 // compile with: /W1 /LD
 // processor: x86
@@ -39,4 +39,4 @@ void bad(int p) {
 }
 ```
 
-Právě upravuje EBP je rámcový ukazatel (FPO je zakázáno). Když `p` je novější odkazuje, se na ni odkazuje vzhledem k `EBP`. Ale `EBP` je přepsaný pomocí kódu, takže program nebude správně fungovat a může dokonce selhání.
+EBP je ukazatel na rámec (! není povolen) a je upravován. Pokud na `p` později odkazuje, je odkazováno vzhledem k `EBP`. `EBP` však byl kód přepsán, takže program nebude správně fungovat a může dokonce dojít k chybě.

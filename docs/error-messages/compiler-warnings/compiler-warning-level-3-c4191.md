@@ -1,43 +1,43 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4191
+title: Upozornění kompilátoru (úroveň 3) C4191
 ms.date: 11/04/2016
 f1_keywords:
 - C4191
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0d7dc57c8d3c94a52f72b536657bb3ea1c6b3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402252"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051881"
 ---
-# <a name="compiler-warning-level-3-c4191"></a>Kompilátor upozornění (úroveň 3) C4191
+# <a name="compiler-warning-level-3-c4191"></a>Upozornění kompilátoru (úroveň 3) C4191
 
-' operator/operation': nebezpečný převod z 'type of expression' na 'type required'
+operátor/operace: nezabezpečený převod z typu výrazu na typ Required
 
-Několik operací zahrnující ukazatele na funkce považovány za nebezpečné:
+Několik operací, které se týkají ukazatelů na funkce, se považují za nebezpečné:
 
-- Typy funkcí pomocí různých konvencí volání.
+- Typy funkcí s různými konvencemi volání.
 
-- Typy funkcí s různými vrácení konvence.
+- Typy funkcí s různými konvencemi vracení.
 
-- Argument nebo návratových typů pomocí různých velikostí, typ kategorie a klasifikace.
+- Argumenty nebo návratové typy s různými velikostmi, kategorie typu nebo klasifikace.
 
-- Rozdílné délky seznamu argumentů (na `__cdecl`pouze na přetypování z delší seznam do seznamu kratší, i pokud kratší je vararg).
+- Lišící se délka seznamu argumentů (na `__cdecl`, pouze při přetypování z delšího seznamu na kratší seznam, i když je kratší, je vararg).
 
-- Ukazatel na data (jiné než **void**<strong>\*</strong>) alias na ukazatel na funkci.
+- Ukazatel na data (jiné než **void** <strong>\*</strong>) s aliasem na funkci.
 
-- Další rozdíl typ, který povede k chybě nebo upozornění na `reinterpret_cast`.
+- Jakýkoli jiný typ rozdílu, který by vrátil chybu nebo upozornění na `reinterpret_cast`.
 
-Volání této funkce přes ukazatel výsledku může způsobit pád programu.
+Volání této funkce prostřednictvím ukazatele výsledku může způsobit zhroucení programu.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 Následující ukázka generuje C4191:
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

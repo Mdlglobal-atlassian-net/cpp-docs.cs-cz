@@ -1,33 +1,33 @@
 ---
-title: Kompilátor upozornění (úroveň 2) C4244
+title: Upozornění kompilátoru (úroveň 2) C4244
 ms.date: 11/04/2016
 f1_keywords:
 - C4244
 helpviewer_keywords:
 - C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-ms.openlocfilehash: af821d80ff8c4c7717986f2ff4d0f3392cd6fca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43d8a992801d556ce85577f5f9da1bec584cb173
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349721"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052128"
 ---
-# <a name="compiler-warning-level-2-c4244"></a>Kompilátor upozornění (úroveň 2) C4244
+# <a name="compiler-warning-level-2-c4244"></a>Upozornění kompilátoru (úroveň 2) C4244
 
-'argument': převod z 'type1' na 'type2', možná ztráta dat
+' Argument ': převod z ' typ1 ' na ' typ2 ', možná ztráta dat
 
-A s plovoucí desetinnou čárkou typu bodu byl převeden na typ integer.  Může dojít ke ztrátě dat, mohlo dojít.
+Typ s plovoucí desetinnou čárkou byl převeden na celočíselný typ.  Možná došlo ke ztrátě dat.
 
-Pokud se zobrazí C4244, si změnit program používat typy kompatibilní, nebo přidat nějaké logiky do kódu, aby se zajistilo, že rozsah možných hodnot bude vždy kompatibilní s typy, které používáte.
+Pokud získáte C4244, měli byste buď změnit program na používání kompatibilních typů, nebo přidat do kódu určitou logiku, abyste zajistili, že rozsah možných hodnot bude vždy kompatibilní s typy, které používáte.
 
-Na úrovni 3 a 4; můžete také vyvolat C4244 Zobrazit [upozornění kompilátoru (úrovně 3 a 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) Další informace.
+C4244 může také proaktivovat úroveň 3 a 4; Další informace najdete v tématu [Upozornění kompilátoru (úrovně 3 a 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4244:
 
-```
+```cpp
 // C4244_level2.cpp
 // compile with: /W2
 

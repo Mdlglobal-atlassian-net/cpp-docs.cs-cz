@@ -2,7 +2,7 @@
 title: Použití sady nástrojů C++ Microsoft z příkazového řádku
 description: Použijte Microsoft C++ Compiler sada nástrojů (MSVC) z příkazového řádku mimo integrované vývojové prostředí (IDE) sady Visual Studio.
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811157"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051484"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Použití sady nástrojů C++ Microsoft z příkazového řádku
 
-Můžete sestavit C a C++ aplikace na příkazovém řádku pomocí nástrojů, které jsou součástí sady Visual Studio. Sada nástrojů C++ kompilátoru Microsoft (MSVC) je také zaváděná jako samostatný balíček ze stránky [soubory ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) . Je součástí balíčku **Nástroje pro sestavení pro sadu Visual Studio** . Můžete si stáhnout jenom nástroje, které potřebujete pro C++ vývoj.
+Můžete sestavit C a C++ aplikace na příkazovém řádku pomocí nástrojů, které jsou součástí sady Visual Studio. Sada nástrojů C++ kompilátoru Microsoft (MSVC) je také ke stažení jako samostatný balíček, který neobsahuje integrované vývojové prostředí (IDE) sady Visual Studio.
+
+## <a name="download-and-install-the-tools"></a>Stažení a instalace nástrojů
+
+Pokud jste nainstalovali aplikaci Visual Studio a C++ úlohu, máte k dispozici všechny nástroje příkazového řádku. Informace o tom, jak nainstalovat C++ a Visual Studio, najdete v tématu [instalace C++ podpory v aplikaci Visual Studio](vscpp-step-0-installation.md). Pokud chcete pouze sadu nástrojů příkazového řádku, Stáhněte si [nástroje Build Tools for Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Když spustíte stažený spustitelný soubor, aktualizuje a spustí Instalační program pro Visual Studio. Chcete-li nainstalovat pouze nástroje, které C++ potřebujete pro vývoj, vyberte úlohu  **C++ nástroje sestavení** . Můžete vybrat volitelné knihovny a sady nástrojů, které chcete zahrnout do **podrobností o instalaci**. Chcete-li vytvořit kód pomocí nástrojů sady Visual Studio 2015 nebo 2017, vyberte volitelné nástroje buildu MSVC v140 nebo MSVC v141. Až budete s vybranými možnostmi spokojeni, vyberte **nainstalovat**.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Jak používat nástroje příkazového řádku
 
@@ -123,7 +127,7 @@ Při použití bez argumentů nakonfiguruje vcvarsall. bat proměnné prostřed�
 
 ### <a name="vcvarsall-syntax"></a>syntaxe vcvarsall
 
-> **vcvarsall. bat** [*Architektura*] [*platform_type*] [*winsdk_version*] [ **-vcvars_ver =** _vcversion_]
+> **vcvarsall. bat** [*architektura*] [*platform_type*] [*winsdk_version*] [ **-vcvars_ver =** _vcversion_]
 
 *Architektura*<br/>
 Tento nepovinný argument určuje hostitelskou a cílovou architekturu, která se má použít. Pokud *Architektura* není zadaná, použije se výchozí prostředí sestavení. Jsou podporovány tyto argumenty:
@@ -152,14 +156,14 @@ Volitelně určuje sadu nástrojů kompilátoru sady Visual Studio, která se m�
 
 Použijte **-vcvars_ver = 14.2 x. yyyyy** k určení konkrétní verze sady nástrojů kompilátoru sady Visual Studio 2019.
 
-Pomocí **-vcvars_ver = 14.16** určete nejnovější verzi sady nástrojů kompilátoru sady Visual Studio 2017.
+Použijte **-vcvars_ver = 14.16** k určení nejnovější verze sady nástrojů kompilátoru sady Visual Studio 2017.
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-Pomocí **-vcvars_ver = 14.16** určete nejnovější verzi sady nástrojů kompilátoru sady Visual Studio 2017.
+Použijte **-vcvars_ver = 14.16** k určení nejnovější verze sady nástrojů kompilátoru sady Visual Studio 2017.
 
-Použijte **-vcvars_ver = 14,1 x. yyyyy** k určení konkrétní verze sady nástrojů kompilátoru sady Visual Studio 2017.
+Použijte **-vcvars_ver = 14,1 x. rrrr** k určení konkrétní verze sady nástrojů kompilátoru sady Visual Studio 2017.
 
 ::: moniker-end
 

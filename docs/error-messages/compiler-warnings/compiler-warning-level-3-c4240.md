@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4240
+title: Upozornění kompilátoru (úroveň 3) C4240
 ms.date: 11/04/2016
 f1_keywords:
 - C4240
 helpviewer_keywords:
 - C4240
 ms.assetid: a2657cdb-18e1-493f-882b-4e10c0bca71d
-ms.openlocfilehash: fe5306cc7909138fea0159553b53c2adc6a46dc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3636e902e8d6ecd34cdc3e1135761c8595dc5998
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402213"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051760"
 ---
-# <a name="compiler-warning-level-3-c4240"></a>Kompilátor upozornění (úroveň 3) C4240
+# <a name="compiler-warning-level-3-c4240"></a>Upozornění kompilátoru (úroveň 3) C4240
 
-používá se nestandardní rozšíření: přístup k "classname" teď definovaný jako "specifikátor přístupu", dřív byl definovaný jako "přístup specifikátor"
+používá se nestandardní rozšíření: přístup k objektu ClassName je teď definovaný jako specifikátor přístupu, dřív byl definovaný jako specifikátor přístupu.
 
-V části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), nelze změnit přístup na vnořenou třídu. V části výchozí rozšíření Microsoft (/Ze) je to možné, se toto upozornění.
+V části Kompatibilita s ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) nemůžete změnit přístup na vnořenou třídu. V rámci výchozího rozšíření Microsoft Extensions (/ze) můžete s tímto upozorněním.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // C4240.cpp
 // compile with: /W3
 class X

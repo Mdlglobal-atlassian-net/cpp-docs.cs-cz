@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4390
+title: Upozornění kompilátoru (úroveň 3) C4390
 ms.date: 11/04/2016
 f1_keywords:
 - C4390
 helpviewer_keywords:
 - C4390
 ms.assetid: c95c2f1b-9bce-4b1f-a80c-565d4cde0b1e
-ms.openlocfilehash: 4ca00f892adc8fe3ac1bffb59a27ea1744249dea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8402c6a2d0fcbb4704b833ac7ae2b070c7af3a48
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401979"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051593"
 ---
-# <a name="compiler-warning-level-3-c4390"></a>Kompilátor upozornění (úroveň 3) C4390
+# <a name="compiler-warning-level-3-c4390"></a>Upozornění kompilátoru (úroveň 3) C4390
 
-";': prázdný řízený příkaz nalezen. je to záměr?
+; – našel se prázdný řízený příkaz; je tento záměr?
 
-Středník bylo zjištěno, po příkazu ovládacího prvku, který neobsahuje žádné instrukce.
+Za řídicím příkazem, který neobsahuje žádné instrukce, byl nalezen středník.
 
-Pokud získáte C4390 kvůli makra, měli byste použít [upozornění](../../preprocessor/warning.md) direktivy pragma zakážete C4390 v modulu, který obsahuje makra.
+Pokud obdržíte C4390 z důvodu makra, měli byste použít direktivu pragma [Warning](../../preprocessor/warning.md) k zakázání C4390 v modulu, který obsahuje makro.
 
 Následující ukázka generuje C4390:
 
-```
+```cpp
 // C4390.cpp
 // compile with: /W3
 int main() {

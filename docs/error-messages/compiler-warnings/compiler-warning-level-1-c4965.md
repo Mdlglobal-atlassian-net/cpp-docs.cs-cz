@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4965
+title: Upozornění kompilátoru (úroveň 1) C4965
 ms.date: 11/04/2016
 f1_keywords:
 - C4965
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383833"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052237"
 ---
-# <a name="compiler-warning-level-1-c4965"></a>Kompilátor upozornění (úroveň 1) C4965
+# <a name="compiler-warning-level-1-c4965"></a>Upozornění kompilátoru (úroveň 1) C4965
 
-implicitní pole celé číslo 0; Použijte nullptr nebo explicitní přetypování.
+implicitní pole typu Integer 0; použít nullptr nebo explicitní přetypování
 
-Visual C++ poskytuje implicitní zabalení typů hodnot. Instrukce, jejímž výsledkem bylo null přiřazení pomocí Správce rozšíření pro C++ teď bude přiřazení na zabalený int
+Vizuální C++ funkce implicitní zabalení hodnotových typů. Instrukce, která vedla k přiřazení null pomocí spravovaných rozšíření, se C++ teď staly přiřazením do zabaleného int.
 
-Další informace najdete v tématu [zabalení](../../extensions/boxing-cpp-component-extensions.md).
+Další informace naleznete v tématu [zabalení](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4965.
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {

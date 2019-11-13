@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4621
+title: Upozornění kompilátoru (úroveň 1) C4621
 ms.date: 11/04/2016
 f1_keywords:
 - C4621
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd4defe18a94f65e265d02f6c26c715667cd696
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221355"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052595"
 ---
-# <a name="compiler-warning-level-1-c4621"></a>Kompilátor upozornění (úroveň 1) C4621
+# <a name="compiler-warning-level-1-c4621"></a>Upozornění kompilátoru (úroveň 1) C4621
 
-'operator--' pro typ 'type', používá se prefixová podoba se nenašla postfixová podoba
+nebyla nalezena žádná přípona operátoru ' operator--' pro typ ' type ' s použitím formuláře předpony
 
-Došlo k dispozici žádné definované pro daný typ příponového operátoru dekrementace. Kompilátor používá přetížené prefixový operátor.
+Pro daný typ nebyl definován žádný operátor pro snížení přípony. Kompilátor použil přetížený operátor předpony.
 
-Toto upozornění se můžete vyhnout tak, že definujete příponový `--` operátor. Vytvořit verzi dvěma argumenty `--` operátor, jak je znázorněno níže:
+Toto upozornění lze zabránit definováním přípony `--` operátoru. Vytvořte verzi `--` operátoru se dvěma argumenty, jak je znázorněno níže:
 
-```
+```cpp
 // C4621.cpp
 // compile with: /W1
 class A

@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4733
+title: Upozornění kompilátoru (úroveň 1) C4733
 ms.date: 11/04/2016
 f1_keywords:
 - C4733
 helpviewer_keywords:
 - C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-ms.openlocfilehash: 0d0b0b912ef15294f9a4362a79dffd6d7eeabed8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbecdda481748aa77eefdab8d61e50350804e09f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221112"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051314"
 ---
-# <a name="compiler-warning-level-1-c4733"></a>Kompilátor upozornění (úroveň 1) C4733
+# <a name="compiler-warning-level-1-c4733"></a>Upozornění kompilátoru (úroveň 1) C4733
 
-Vložené asm přiřazení 'FS:0': není zaregistrovaný jako bezpečná obslužná rutina
+Vložené ASM přiřadí se k FS: 0: obslužná rutina není zaregistrovaná jako bezpečná obslužná rutina.
 
-Úprava hodnoty v FS:0 přidejte novou obslužnou rutinu výjimky funkce nemusí fungovat s bezpečné výjimky, protože jako platnou obslužnou rutinu nelze registrovat obslužné rutiny (viz [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
+Funkce, která upravuje hodnotu v FS: 0 Chcete-li přidat novou obslužnou rutinu výjimky, nemusí fungovat s bezpečnými výjimkami, protože obslužná rutina nemusí být registrována jako platná obslužná rutina výjimky (viz [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
 
-Pokud chcete vyřešit toto upozornění, buď odeberte definici FS:0 nebo to vypněte upozornění a použijte [. SAFESEH](../../assembler/masm/dot-safeseh.md) k určení obslužných rutin bezpečných výjimek.
+Chcete-li vyřešit toto upozornění, odstraňte FS: 0. Zakažte nebo vypněte toto upozornění a použijte [. SAFESEH](../../assembler/masm/dot-safeseh.md) pro určení bezpečných obslužných rutin výjimek.
 
 Následující ukázka generuje C4733:
 
-```
+```cpp
 // C4733.cpp
 // compile with: /W1 /c
 // processor: x86

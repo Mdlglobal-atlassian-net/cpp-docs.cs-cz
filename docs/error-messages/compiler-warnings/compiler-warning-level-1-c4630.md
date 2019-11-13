@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4630
+title: Upozornění kompilátoru (úroveň 1) C4630
 ms.date: 11/04/2016
 f1_keywords:
 - C4630
 helpviewer_keywords:
 - C4630
 ms.assetid: d8926376-7acc-4fc7-8438-6f0de3468870
-ms.openlocfilehash: 98ea72bef0cb95163604144c1069a13c3b27d81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 893364183594782b825377f57fa4e525338d62d8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324529"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052558"
 ---
-# <a name="compiler-warning-level-1-c4630"></a>Kompilátor upozornění (úroveň 1) C4630
+# <a name="compiler-warning-level-1-c4630"></a>Upozornění kompilátoru (úroveň 1) C4630
 
-'symbol': specifikátor třídy úložiště "extern" není platný pro definici členu
+' symbol ': specifikátor třídy úložiště ' extern ' není pro definici členu platný
 
-Datový člen nebo členskou funkci je definován jako `extern`. Členové nemohou být externím, i když můžete celé objekty. Kompilátor ignoruje `extern` – klíčové slovo. Následující ukázka generuje C4630:
+Datový člen nebo členská funkce jsou definovány jako `extern`. Členové nemohou být externí, i když mohou být celé objekty. Kompilátor ignoruje klíčové slovo `extern`. Následující ukázka generuje C4630:
 
-```
+```cpp
 // C4630.cpp
 // compile with: /W1 /LD
 class A {

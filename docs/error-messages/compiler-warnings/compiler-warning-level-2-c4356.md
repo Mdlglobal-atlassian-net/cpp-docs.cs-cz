@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 2) C4356
+title: Upozornění kompilátoru (úroveň 2) C4356
 ms.date: 11/04/2016
 f1_keywords:
 - C4356
 helpviewer_keywords:
 - C4356
 ms.assetid: 3af3defe-de33-43b6-bd6c-2c2e09e34f3f
-ms.openlocfilehash: 218aac1cc98d9b119490a547d63b4b5ee83e53df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f110ee633fed1c3b43ecc06dadcc27fde4f14bde
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402460"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052025"
 ---
-# <a name="compiler-warning-level-2-c4356"></a>Kompilátor upozornění (úroveň 2) C4356
+# <a name="compiler-warning-level-2-c4356"></a>Upozornění kompilátoru (úroveň 2) C4356
 
-'member': Statický datový člen nejde inicializovat prostřednictvím odvozené třídy
+member: Statický datový člen nejde inicializovat prostřednictvím odvozené třídy.
 
-Inicializace statický datový člen byl chybně vytvořen. Kompilátor přijaté inicializace. Aby se zabránilo upozornění, inicializujte člena prostřednictvím základní třídy.
+Inicializace statického datového členu byla chybně vytvořena. Kompilátor přijal inicializaci. Chcete-li se vyhnout upozornění, inicializujte člena prostřednictvím základní třídy.
 
-Použití [upozornění](../../preprocessor/warning.md) – Direktiva pragma pro potlačení tohoto upozornění.
+Pro potlačení tohoto upozornění Použijte direktivu pragma [Warning](../../preprocessor/warning.md) .
 
 Následující ukázka generuje C4356:
 
-```
+```cpp
 // C4356.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

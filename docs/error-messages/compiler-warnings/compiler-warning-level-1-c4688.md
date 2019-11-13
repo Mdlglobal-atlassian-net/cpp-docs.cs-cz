@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4688
+title: Upozornění kompilátoru (úroveň 1) C4688
 ms.date: 11/04/2016
 f1_keywords:
 - C4688
 helpviewer_keywords:
 - C4688
 ms.assetid: a027df3c-b2b8-4c49-8539-c2bc42db74e8
-ms.openlocfilehash: 1c94198eca0a88174c8655e0d571c37f82a2df36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc869b7e22bc8bce0230892dc9a67d6aaec09f46
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375090"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052504"
 ---
-# <a name="compiler-warning-level-1-c4688"></a>Kompilátor upozornění (úroveň 1) C4688
+# <a name="compiler-warning-level-1-c4688"></a>Upozornění kompilátoru (úroveň 1) C4688
 
-"omezení": seznam omezení obsahuje typ sestavení private 'type'
+omezení: seznam omezení obsahuje typ sestavení Private.
 
-Seznam omezení obsahuje privátní typ sestavení, což znamená, že nebude k dispozici při typu přistupuje z mimo sestavení. Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md).
+Seznam omezení má privátní typ sestavení, což znamená, že nebude k dispozici, pokud je přístup k typu z vnějšku sestavení. Další informace najdete v tématu [Obecné typy](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4688.
 
-```
+```cpp
 // C4688.cpp
 // compile with: /clr /c /W1
 ref struct A {};   // private type

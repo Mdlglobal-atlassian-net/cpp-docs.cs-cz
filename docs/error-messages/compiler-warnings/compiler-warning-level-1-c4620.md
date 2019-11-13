@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4620
+title: Upozornění kompilátoru (úroveň 1) C4620
 ms.date: 11/04/2016
 f1_keywords:
 - C4620
 helpviewer_keywords:
 - C4620
 ms.assetid: fed29934-b797-47e8-bbea-c7e5f8dd6e93
-ms.openlocfilehash: 8e2d11d63704c86c824fd80e1c8a933c10e062d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d03c7d845923b918fbb665933147d8ff97cda7ab
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404015"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051466"
 ---
-# <a name="compiler-warning-level-1-c4620"></a>Kompilátor upozornění (úroveň 1) C4620
+# <a name="compiler-warning-level-1-c4620"></a>Upozornění kompilátoru (úroveň 1) C4620
 
-postfixová podoba ' operator ++' nalezen pro typ 'type', používá se prefixová podoba
+pro typ Type se nenašla žádná přípona operator + + s použitím formuláře s předponou.
 
-Neexistuje žádná příponového operátoru Inkrementace definované pro daný typ. Kompilátor používá přetížené prefixový operátor.
+Pro daný typ není definován žádný operátor přírůstku přípony. Kompilátor použil přetížený operátor předpony.
 
-Toto upozornění se můžete vyhnout tak, že definujete příponový `++` operátor. Vytvořit verzi dvěma argumenty `++` operátor, jak je znázorněno zde:
+Toto upozornění lze zabránit definováním přípony `++` operátoru. Vytvořte verzi `++` operátoru se dvěma argumenty, jak je znázorněno zde:
 
-```
+```cpp
 // C4620.cpp
 // compile with: /W1
 class A

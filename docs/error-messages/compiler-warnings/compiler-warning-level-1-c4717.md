@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4717
+title: Upozornění kompilátoru (úroveň 1) C4717
 ms.date: 11/04/2016
 f1_keywords:
 - C4717
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0cf9aef8f68ca5972fd3d7886cd8061b88d043ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221138"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051348"
 ---
-# <a name="compiler-warning-level-1-c4717"></a>Kompilátor upozornění (úroveň 1) C4717
+# <a name="compiler-warning-level-1-c4717"></a>Upozornění kompilátoru (úroveň 1) C4717
 
-'function': rekurzivní pro všechny cesty ovládacích prvků, funkce způsobí za běhu přetečení zásobníku
+' function ': rekurzivní pro všechny cesty ovládacích prvků, funkce způsobí přetečení zásobníku za běhu.
 
-Každá cesta přes funkci obsahuje volání funkce. Protože neexistuje žádný způsob, jak funkce bez první volání, samotný exit rekurzivně, funkce se nikdy ukončí.
+Každá cesta prostřednictvím funkce obsahuje volání funkce. Vzhledem k tomu, že neexistuje žádný způsob, jak funkci ukončit, aniž by bylo nutné nejprve volat sama sebe, funkce nebude nikdy ukončena.
 
 Následující ukázka generuje C4717:
 
-```
+```cpp
 // C4717.cpp
 // compile with: /W1 /c
 // C4717 expected

@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4946
+title: Upozornění kompilátoru (úroveň 1) C4946
 ms.date: 11/04/2016
 f1_keywords:
 - C4946
 helpviewer_keywords:
 - C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-ms.openlocfilehash: f215c621486bf223d8f6c90b0a4f4ae119ad4b1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 238e842202bfde05f41d5ab7bc4e3eb2b8b63735
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280567"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050184"
 ---
-# <a name="compiler-warning-level-1-c4946"></a>Kompilátor upozornění (úroveň 1) C4946
+# <a name="compiler-warning-level-1-c4946"></a>Upozornění kompilátoru (úroveň 1) C4946
 
 reinterpret_cast použito mezi souvisejícími třídami: 'class1' a 'class2'
 
-Nepoužívejte [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) k převodu mezi souvisejících typů. Použít [static_cast](../../cpp/static-cast-operator.md) místo, nebo pro polymorfní typy, použijte [dynamic_cast](../../cpp/dynamic-cast-operator.md).
+Nepoužívejte [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) k přetypování mezi souvisejícími typy. Použijte [static_cast](../../cpp/static-cast-operator.md) místo toho nebo pro polymorfní typy použijte [dynamic_cast](../../cpp/dynamic-cast-operator.md).
 
-Ve výchozím nastavení toto upozornění je vypnuté. Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Ve výchozím nastavení je toto upozornění Vypnuto. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-Následující příklad kódu vytvoří C4946:
+Následující příklad kódu generuje C4946:
 
-```
+```cpp
 // C4946.cpp
 // compile with: /W1
 #pragma warning (default : 4946)

@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4624
+title: Upozornění kompilátoru (úroveň 1) C4624
 ms.date: 11/04/2016
 f1_keywords:
 - C4624
 helpviewer_keywords:
 - C4624
 ms.assetid: 14f61769-d92e-482b-9515-debd87b30a66
-ms.openlocfilehash: b1a7d715057f4c6d8ada104ad07f6ad0b9c52fb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ef871f31d5d1d31e6d1d26d46b6f7f99c8fba86
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221388"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051454"
 ---
-# <a name="compiler-warning-level-1-c4624"></a>Kompilátor upozornění (úroveň 1) C4624
+# <a name="compiler-warning-level-1-c4624"></a>Upozornění kompilátoru (úroveň 1) C4624
 
-'derived class': destruktor byl implicitně definovaný jako odstranit, protože destruktor základní třídy je nedostupné nebo odstraněné
+' odvozené třídy ': destruktor byl implicitně definován jako odstraněný, protože destruktor základní třídy je nepřístupný nebo odstraněný.
 
-Destruktor nebyla přístupná nebo odstraněné v základní třídě a proto se nevygeneroval pro odvozenou třídu. Jakýkoliv pokus o vytvoření objektu tohoto typu v zásobníku způsobí chybu kompilátoru.
+Destruktor nebyl přístupný nebo odstraněn v základní třídě, a proto nebyl vygenerován pro odvozenou třídu. Jakékoli pokus o vytvoření objektu tohoto typu v zásobníku způsobí chybu kompilátoru.
 
-Následující ukázka generuje C4624 a ukazuje, jak ho opravit:
+Následující ukázka generuje C4624 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C4624.cpp
 // compile with: /W1 /c
 class B {

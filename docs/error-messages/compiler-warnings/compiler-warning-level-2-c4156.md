@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 2) C4156
+title: Upozornění kompilátoru (úroveň 2) C4156
 ms.date: 11/04/2016
 f1_keywords:
 - C4156
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: 7d9a4ed09f026267e2c0f37fbbe4550ecd668dfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95605aa29e1faba449e19dcf20e6895d31cc5874
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350462"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052134"
 ---
-# <a name="compiler-warning-level-2-c4156"></a>Kompilátor upozornění (úroveň 2) C4156
+# <a name="compiler-warning-level-2-c4156"></a>Upozornění kompilátoru (úroveň 2) C4156
 
-odstranění výrazu pole bez použití pole v podobě 'odstranit'; pole v podobě nahrazena
+odstranění výrazu pole bez použití formuláře pole ' Delete '; nahrazeno formuláře pole
 
-Bez pole v podobě **odstranit** nelze odstranit pole. Kompilátor přeložil **odstranit** pole formuláře.
+Formulář, který není polem, **nelze odstranit** pole. Kompilátor přeložil **odstranění** do formuláře Array.
 
-Toto upozornění se zobrazí pouze v rámci rozšíření společnosti Microsoft (/Ze).
+K tomuto upozornění dochází pouze v rámci rozšíření společnosti Microsoft (/ze).
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // C4156.cpp
 // compile with: /W2
 int main()

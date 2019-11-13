@@ -1,33 +1,33 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4692
+title: Upozornění kompilátoru (úroveň 1) C4692
 ms.date: 11/04/2016
 f1_keywords:
 - C4692
 helpviewer_keywords:
 - C4692
 ms.assetid: f6fb3acc-8228-491a-9c30-ce302d8a9c75
-ms.openlocfilehash: d013990d0d56c028f48928d1b48c2e0a66b393af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7ec657956c72f1e321227d54b796164292f0c0e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221263"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052497"
 ---
-# <a name="compiler-warning-level-1-c4692"></a>Kompilátor upozornění (úroveň 1) C4692
+# <a name="compiler-warning-level-1-c4692"></a>Upozornění kompilátoru (úroveň 1) C4692
 
 'function': podpis nesoukromého členu obsahuje sestavení privátního nativního typu 'native_type'
 
-Typ, který je viditelný mimo sestavení obsahuje členskou funkci, jehož předpis obsahuje nativní typ, který není viditelný mimo sestavení. Členská funkce proto by neměl volat, pokud dojde k vytvoření jeho nadřazeného typu mimo sestavení.
+Typ, který je viditelný mimo sestavení, obsahuje členskou funkci, jejíž signatura obsahuje nativní typ, který není viditelný vně sestavení. Proto by nemělo být volána členská funkce, je-li její nadřazený typ vytvořena mimo sestavení.
 
-Další informace najdete v tématu [zadejte viditelnost](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).
+Další informace najdete v tématu [viditelnost typů](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).
 
-Toto upozornění je vypnuto ve výchozím nastavení. Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4692.
 
-```
+```cpp
 // C4692.cpp
 // compile with: /W1 /c /clr
 #pragma warning(default:4692)

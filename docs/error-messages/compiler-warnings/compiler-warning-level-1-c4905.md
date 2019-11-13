@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4905
+title: Upozornění kompilátoru (úroveň 1) C4905
 ms.date: 11/04/2016
 f1_keywords:
 - C4905
 helpviewer_keywords:
 - C4905
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
-ms.openlocfilehash: c1d201eb7d3eee322a1aa1e598eeb24928e361a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0086a3b312895d86f2e76bdbbd348f90654ba8e2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380653"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051219"
 ---
-# <a name="compiler-warning-level-1-c4905"></a>Kompilátor upozornění (úroveň 1) C4905
+# <a name="compiler-warning-level-1-c4905"></a>Upozornění kompilátoru (úroveň 1) C4905
 
 široký řetězcový literál přetypován na 'LPSTR'
 
-Kompilátor zjistil nebezpečné přetypování. Přetypování úspěšná, ale měli byste použít rutinu převodu.
+Kompilátor zjistil nezabezpečené přetypování. Přetypování bylo úspěšné, ale měli byste použít rutinu převodu.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4905.
 
-```
+```cpp
 // C4905.cpp
 // compile with: /W1
 #pragma warning(default : 4905)

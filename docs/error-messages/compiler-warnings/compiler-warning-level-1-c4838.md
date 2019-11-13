@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4838
+title: Upozornění kompilátoru (úroveň 1) C4838
 ms.date: 11/04/2016
 f1_keywords:
 - C4838
 helpviewer_keywords:
 - C4838
 ms.assetid: fea07924-5feb-4ed4-99b5-1a8c41d28db6
-ms.openlocfilehash: dcb7062c751320a9f9c612b42caf6d018047d8d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 552c7d9e868ae531b1ff2ef20db7adfa813a4fbe
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380835"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051223"
 ---
-# <a name="compiler-warning-level-1-c4838"></a>Kompilátor upozornění (úroveň 1) C4838
+# <a name="compiler-warning-level-1-c4838"></a>Upozornění kompilátoru (úroveň 1) C4838
 
-Převod z 'type_1' na 'type_2' vyžaduje zúžení převodu
+převod z ' type_1 ' na ' type_2 ' vyžaduje zužující převod
 
-Při použití inicializace agregace nebo seznamu byl nalezen implicitní zužující převod.
+Při použití agregace nebo Inicializace seznamu byl nalezen implicitní zužující převod.
 
-Jazyk C umožňuje implicitní zužující převody přiřazení a inicializace a C++ řídí barvy, i když neočekávané zúžení je příčinou chyby mnoho kódu. Chcete-li kód bezpečnější, C++ standard vyžaduje diagnostické zprávy při výskytu zužující převod v inicializačního seznamu. V jazyce Visual C++ je diagnostiky [Chyba kompilátoru C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md) při použití syntaxe jednotnou inicializaci podporované od v sadě Visual Studio 2015. Kompilátor vygeneruje upozornění C4838 při používání seznamu nebo syntaxe agregační inicializace podporuje Visual Studio 2013.
+Jazyk C umožňuje implicitní zužující převody v přiřazeních a inicializaci a řídí se C++ podle potřeby, a to i v případě neočekávaného zúžení je příčinou mnoha chyb kódu. Aby byl kód zabezpečený, C++ vyžaduje se diagnostická zpráva, když dojde k zužujícímu převodu v inicializačním seznamu. V jazyce C++Visual Studio je diagnostika [Chyba kompilátoru C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md) při použití jednotné syntaxe inicializace podporované od verze Visual Studio 2015. Kompilátor generuje upozornění C4838 při použití seznamu nebo agregace syntaxe inicializace, kterou podporuje Visual Studio 2013.
 
-Zužující převod může být v pořádku, pokud víte, že možné rozsahu hodnot převedený vejde do cíle. V takovém případě znáte více než kompilátor. Pokud provedete zužující převod záměrně, ujistěte se, vaše záměry explicitní pomocí statické přetypování. Toto upozornění, jinak téměř vždy označuje, že máte chybu v kódu. Můžete to napravit tak, že objekty, které je inicializovat mít typy, které jsou dostatečně velký, aby zpracovávat vstupy.
+Zužující převod může být v pořádku, když víte, že možný rozsah přepočítaných hodnot se může vejít do cíle. V tomto případě znáte více než kompilátor. Pokud uděláte zužující převod záměrně, udělejte své záměry explicitně pomocí statického přetypování. V opačném případě tato varovná zpráva téměř vždy indikuje, že ve vašem kódu máte chybu. Můžete ji opravit tím, že zajistěte, aby objekty, které inicializujete, měly typy, které jsou dostatečně velké pro zpracování vstupů.
 
-Následující ukázka generuje C4838 a ukazuje jeden způsob, jak ho opravit:
+Následující ukázka generuje C4838 a ukazuje jeden ze způsobů, jak ji opravit:
 
-```
+```cpp
 // C4838.cpp -- C++ narrowing conversion diagnostics
 // Compile by using: cl /EHsc C4838.cpp
 

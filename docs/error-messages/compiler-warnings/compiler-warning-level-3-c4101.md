@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4101
+title: Upozornění kompilátoru (úroveň 3) C4101
 ms.date: 11/04/2016
 f1_keywords:
 - C4101
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: d1109a32e754a6055e5e1d90632ad85332d832f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5effdbb4c7e83999655641a248c389c7c4d260d0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402317"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051908"
 ---
-# <a name="compiler-warning-level-3-c4101"></a>Kompilátor upozornění (úroveň 3) C4101
+# <a name="compiler-warning-level-3-c4101"></a>Upozornění kompilátoru (úroveň 3) C4101
 
-'identifier': neodkazovaná lokální proměnná
+' identifier ': neodkazovaná lokální proměnná
 
-Lokální proměnné se nikdy nepoužívá. Toto upozornění se generují v zřejmé situace:
+Místní proměnná se nikdy nepoužívá. Toto upozornění se projeví ve zjevné situaci:
 
-```
+```cpp
 // C4101a.cpp
 // compile with: /W3
 int main() {
@@ -27,9 +27,9 @@ int i;   // C4101
 }
 ```
 
-Nicméně toto upozornění se vrátí taky při volání metody **statické** funkce člena prostřednictvím instance třídy:
+K tomuto upozornění dojde ale také při volání **statické** členské funkce prostřednictvím instance třídy:
 
-```
+```cpp
 // C4101b.cpp
 // compile with:  /W3
 struct S {
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-V takovém případě kompilátor používá informace o `si` přístup **statické** funkce, ale instance třídy není potřeba volat **statické** funkce; proto upozornění. Pokud chcete vyřešit toto upozornění, můžete:
+V této situaci kompilátor používá informace o `si` pro přístup ke **statické** funkci, ale instance třídy není nutná pro volání funkce **static** ; proto upozornění. Chcete-li vyřešit toto upozornění, můžete:
 
-- Přidejte konstruktor, ve kterém by kompilátor použít instanci `si` ve volání `func`.
+- Přidejte konstruktor, ve kterém by kompilátor používal instanci `si` ve volání `func`.
 
-- Odeberte **statické** – klíčové slovo z definice `func`.
+- Odeberte klíčové slovo **static** z definice `func`.
 
-- Volání **statické** funkce explicitně: `int y = S::func();`.
+- Explicitně volejte **statickou** funkci: `int y = S::func();`.

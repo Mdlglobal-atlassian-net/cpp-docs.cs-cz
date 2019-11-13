@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4715
+title: Upozornění kompilátoru (úroveň 1) C4715
 ms.date: 11/04/2016
 f1_keywords:
 - C4715
 helpviewer_keywords:
 - C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-ms.openlocfilehash: f165ea3b54b78e2f8fae995815e309d55101244e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 268a26f5de1bb7f757a8e7cba6d3f5e6ddff882e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406324"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052481"
 ---
-# <a name="compiler-warning-level-1-c4715"></a>Kompilátor upozornění (úroveň 1) C4715
+# <a name="compiler-warning-level-1-c4715"></a>Upozornění kompilátoru (úroveň 1) C4715
 
-'function': Ne všechny cesty ovládacích prvků vracet hodnotu
+' function ': ne všechny cesty k ovládacím prvkům vrací hodnotu
 
-Zadaná funkce může potenciálně nesmí vracet hodnotu.
+Zadaná funkce nemůže vracet hodnotu.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // C4715a.cpp
 // compile with: /W1 /LD
 int func1( int i )
@@ -31,9 +31,9 @@ int func1( int i )
 }
 ```
 
-Aby se zabránilo toto upozornění, upravte kód tak, aby všechny cesty přiřadit návratovou hodnotu funkce:
+Chcete-li zabránit tomuto upozornění, upravte kód tak, aby všechny cesty přiřadily vrácenou hodnotu funkci:
 
-```
+```cpp
 // C4715b.cpp
 // compile with: /LD
 int func1( int i )
@@ -43,9 +43,9 @@ int func1( int i )
 }
 ```
 
-Je možné, že váš kód může obsahovat volání funkce, která se nikdy vrátí, jako v následujícím příkladu:
+Je možné, že váš kód může obsahovat volání funkce, která se nikdy nevrátí, jako v následujícím příkladu:
 
-```
+```cpp
 // C4715c.cpp
 // compile with: /W1 /LD
 void fatal()
@@ -62,4 +62,4 @@ int glue()
 }
 ```
 
-Tento kód také vygeneruje upozornění, protože kompilátor, který nezná `fatal` nikdy nevrátí. Chcete-li zabránit tento kód vygeneruje chybovou zprávu, deklarujte `fatal` pomocí [__declspec(noreturn)](../../cpp/noreturn.md).
+Tento kód také vygeneruje upozornění, protože kompilátor neví, že `fatal` nikdy nevrátí. Chcete-li zabránit tomu, aby tento kód generoval chybovou zprávu, deklarujte `fatal` pomocí [__declspec (vrácení zpět)](../../cpp/noreturn.md).

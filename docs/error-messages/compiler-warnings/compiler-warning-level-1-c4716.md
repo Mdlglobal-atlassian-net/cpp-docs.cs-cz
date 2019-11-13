@@ -1,33 +1,33 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4716
+title: Upozornění kompilátoru (úroveň 1) C4716
 ms.date: 11/04/2016
 f1_keywords:
 - C4716
 helpviewer_keywords:
 - C4716
 ms.assetid: d95ecfe5-870f-461f-a746-7913af98414b
-ms.openlocfilehash: 5ec0aea543053d699db7483df7dd7ea91b3af715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5215e8fd0bdd44c9bdfc731d2b74499d38853e80
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363814"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052465"
 ---
-# <a name="compiler-warning-level-1-c4716"></a>Kompilátor upozornění (úroveň 1) C4716
+# <a name="compiler-warning-level-1-c4716"></a>Upozornění kompilátoru (úroveň 1) C4716
 
-'function' musí vracet hodnotu
+klíčové slovo Function musí vracet hodnotu.
 
-Dané funkce nevrací hodnotu.
+Daná funkce nevrátila hodnotu.
 
-Pouze funkce s návratovým typem void lze použít příkaz return bez doprovodné návratové hodnoty.
+Návratový příkaz bez doprovodné návratové hodnoty můžou použít jenom funkce s návratovým typem void.
 
-Nedefinovaná hodnota se vrátí při volání této funkce.
+Při volání této funkce bude vrácena Nedefinovaná hodnota.
 
-Toto upozornění je automaticky povýšen na chybu. Pokud chcete toto chování upravit, použijte [varování #pragma](../../preprocessor/warning.md).
+Toto upozornění je automaticky povýšeno na chybu. Pokud chcete toto chování změnit, použijte [#pragma upozornění](../../preprocessor/warning.md).
 
 Následující ukázka generuje C4716:
 
-```
+```cpp
 // C4716.cpp
 // compile with: /c /W1
 // C4716 expected

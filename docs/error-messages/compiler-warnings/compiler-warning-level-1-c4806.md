@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4806
+title: Upozornění kompilátoru (úroveň 1) C4806
 ms.date: 11/04/2016
 f1_keywords:
 - C4806
 helpviewer_keywords:
 - C4806
 ms.assetid: 79eb74cd-b925-4b5b-84e1-8ae6f33e38b3
-ms.openlocfilehash: b6fc5708d4e2f9982ceaab57260f13e134e4d247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae6ed7d7a38daf0ce525ae62409823212db711b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406402"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052367"
 ---
-# <a name="compiler-warning-level-1-c4806"></a>Kompilátor upozornění (úroveň 1) C4806
+# <a name="compiler-warning-level-1-c4806"></a>Upozornění kompilátoru (úroveň 1) C4806
 
-'operation': nebezpečná operace: žádná hodnota typu 'type' povýšen na typ "typ" se nemůže rovnat dané konstantě
+' operation ': nebezpečná operace: žádná hodnota typu typu zvýšená na typ ' type ' se může rovnat dané konstantě.
 
-Tato zpráva zobrazí upozornění s kódem, jako `b == 3`, kde `b` má typ `bool`. Podpora pravidla Příčina `bool` má být převeden na `int`. Toto je právní, ale nemůže být nikdy **true**. Následující ukázka generuje C4806:
+Tato zpráva se upozorní na kód, například `b == 3`, kde `b` je typu `bool`. Pravidla propagace způsobují, `bool` budou povýšeny na `int`. To je právní, ale nemůže mít nikdy **hodnotu true**. Následující ukázka generuje C4806:
 
-```
+```cpp
 // C4806.cpp
 // compile with: /W1
 int main()

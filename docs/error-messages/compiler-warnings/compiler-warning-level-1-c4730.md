@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cdd6018afd26b09f7a4555ff8d0431c3364f09e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386353"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051328"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Upozornění kompilátoru (úroveň 1) C4730
 
-"hlavní": směšování výrazů _m64 a plovoucí desetinná čárka výrazy mohou způsobit nesprávný kód
+' Main ': kombinování _m64 a výrazů s plovoucí desetinnou čárkou může mít za následek nesprávný kód
 
-Funkce používá [__m64](../../cpp/m64.md) a **float**/**double** typy. Protože MMX a s plovoucí desetinnou čárkou registrů sdílet stejný fyzický prostor registru (nelze použít současně), pomocí `__m64` a **float**/**double** typů ve stejném funkce může způsobit poškození dat, což může způsobit výjimku.
+Funkce používá [__m64](../../cpp/m64.md) a **float**/**dvojitých** typů. Vzhledem k tomu, že registry MMX a plovoucí desetinné čárky sdílejí stejný fyzický prostor registru (nelze použít současně), pomocí `__m64` a **float**/**dvojitých** typů ve stejné funkci může dojít k poškození dat, což může způsobit výjimku.
 
-Bezpečně používat `__m64` typy a typy s plovoucí desetinnou čárkou ve stejné funkci každou instrukci, která používá jeden z typů musí být odděleny **_m_empty()** (pro MMX) nebo **_m_femms()** (pro 3DNow!) vnitřní.
+Aby bylo možné bezpečně používat typy `__m64` a typy s plovoucí desetinnou čárkou ve stejné funkci, každá instrukce, která používá jeden z typů, by měla být oddělena **_m_empty ()** (pro MMX) nebo **_m_femms ()** (pro 3DNow!).
 
 Následující ukázka generuje C4730:
 
-```
+```cpp
 // C4730.cpp
 // compile with: /W1
 // processor: x86

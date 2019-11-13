@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 2) C4250
+title: Upozornění kompilátoru (úroveň 2) C4250
 ms.date: 11/04/2016
 f1_keywords:
 - C4250
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 8baf3c03c87dc70a80b785d7f81cbee4e1d828f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03826f10659cbdf6035cd4dedebecca3e3302e3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349708"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052117"
 ---
-# <a name="compiler-warning-level-2-c4250"></a>Kompilátor upozornění (úroveň 2) C4250
+# <a name="compiler-warning-level-2-c4250"></a>Upozornění kompilátoru (úroveň 2) C4250
 
-'class1': 'class2::member"prostřednictvím dominance dědí
+' Class1 ': dědí z ' Class2:: member ' prostřednictvím dominantního postavení
 
-Dva nebo více členů mají stejný název. V `class2` se dědí, protože je základní třídou pro jiné třídy, které tento člen.
+Dva nebo více členů mají stejný název. Objekt ve `class2` je zděděn, protože se jedná o základní třídu pro ostatní třídy, které tento člen obsahovaly.
 
-Chcete-li potlačit C4250, použijte [upozornění](../../preprocessor/warning.md) direktivy pragma.
+Chcete-li potlačit C4250, použijte direktivu pragma [Warning](../../preprocessor/warning.md) .
 
-Vzhledem k tomu, že virtuální základní třídy je sdílen mezi více odvozených tříd, název v odvozené třídě dominuje název v základní třídě. Například s ohledem následující hierarchie tříd, existují dvě definice func zděděné v rámci kosočtverce: instance vbc::func() prostřednictvím slabé třídy a dominantní:: func() prostřednictvím dominantní třídy. Neúplného volání func() prostřednictvím objekt třídy kosočtverce vždy volá instance dominate:: func().  Kdyby zavést instance func() slabé třídy ani definice by převládají na poli a volání by být označeno jako dvojznačné.
+Vzhledem k tomu, že virtuální základní třída je sdílena mezi více odvozenými třídami, název v odvozené třídě slouží jako název v základní třídě. Například vzhledem k následující hierarchii tříd jsou v rámci kosočtverce zděděny dvě definice Func: instance Vbc:: Func () prostřednictvím slabé třídy a dominantního typu: Func () prostřednictvím dominantní třídy. Nekvalifikované volání funkce Func () prostřednictvím objektu Diamond Class vždycky zavolá instanci dominantního prvku:: Func ().  Pokud byla slabá třída zavedena instance Func (), ani žádná definice by nevedla, a volání by bylo označeno jako nejednoznačné.
 
-```
+```cpp
 // C4250.cpp
 // compile with: /c /W2
 #include <stdio.h>
@@ -49,7 +49,7 @@ int main() {
 
 Následující ukázka generuje C4250.
 
-```
+```cpp
 // C4250_b.cpp
 // compile with: /W2 /EHsc
 #include <iostream>
@@ -80,9 +80,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje mnohem složitější situace. Následující ukázka generuje C4250.
+Tato ukázka ukazuje složitější situaci. Následující ukázka generuje C4250.
 
-```
+```cpp
 // C4250_c.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4807
+title: Upozornění kompilátoru (úroveň 1) C4807
 ms.date: 11/04/2016
 f1_keywords:
 - C4807
 helpviewer_keywords:
 - C4807
 ms.assetid: 089c9f87-fd81-402e-9826-66a8ef1ef1fe
-ms.openlocfilehash: a68596136e61aa33176365a4eff818124463b77e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c18dbac0681067d9bc52455dfdbe44a24c786ee7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390461"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051545"
 ---
-# <a name="compiler-warning-level-1-c4807"></a>Kompilátor upozornění (úroveň 1) C4807
+# <a name="compiler-warning-level-1-c4807"></a>Upozornění kompilátoru (úroveň 1) C4807
 
-'operation': potenciálně nebezpečné směšování typu 'type' a podepsaný bitového pole typu 'type'
+' operation ': potenciálně nebezpečné kombinace typu ' type ' a podepsaného bitového pole typu ' type '
 
-Toto upozornění se vygeneruje, když jeden bit podepsané bitové pole k porovnání `bool` proměnné. Vzhledem k tomu, že jeden bit, podepsané bitové pole může obsahovat jenom hodnoty -1 nebo 0, je nebezpečné, kterým se má porovnat `bool`. Žádná upozornění se generují o kombinování `bool` a jeden bit, bez znaménka bitová pole vzhledem k tomu, že jsou shodné s `bool` a může obsahovat pouze 0 nebo 1.
+Toto upozornění je generováno při porovnávání bitového bitu podepsaného v rámci `bool` proměnné. Vzhledem k tomu, že bitové pole s jednorázovým podpisem může obsahovat pouze hodnoty-1 nebo 0, není bezpečné ho porovnat s `bool`. Nejsou generována žádná upozornění týkající se kombinování `bool` a bitová pole bez znaménka, protože jsou identická s `bool` a mohou obsahovat pouze 0 nebo 1.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4807:
 
-```
+```cpp
 // C4807.cpp
 // compile with: /W1
 typedef struct bitfield {

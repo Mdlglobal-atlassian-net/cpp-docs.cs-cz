@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4243
+title: Upozornění kompilátoru (úroveň 3) C4243
 ms.date: 11/04/2016
 f1_keywords:
 - C4243
 helpviewer_keywords:
 - C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-ms.openlocfilehash: e08a8538c93681c59779f681812a9ba8f7e316a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed5cc87f1bc376526f5129aa157c38a3f034b20b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402200"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051745"
 ---
-# <a name="compiler-warning-level-3-c4243"></a>Kompilátor upozornění (úroveň 3) C4243
+# <a name="compiler-warning-level-3-c4243"></a>Upozornění kompilátoru (úroveň 3) C4243
 
-převod: převod typu"existuje z 'type1' na 'type2', ale je nedostupný
+převod typu konverze existuje z ' typ1 ' na ' typ2 ', ale je nepřístupný
 
-Ukazatel na odvozenou třídu převeden na ukazatel na základní třídu, ale základní třídy s přístupem k soukromé nebo chráněné nastavení dědí odvozená třída.
+Ukazatel na odvozenou třídu je převeden na ukazatel na základní třídu, ale odvozená třída dědí základní třídu s privátním nebo chráněným přístupem.
 
 Následující ukázka generuje C4243:
 
-```
+```cpp
 // C4243.cpp
 // compile with: /W3
 // C4243 expected

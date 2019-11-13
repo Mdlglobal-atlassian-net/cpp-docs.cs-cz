@@ -1,33 +1,33 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4691
+title: Upozornění kompilátoru (úroveň 1) C4691
 ms.date: 11/04/2016
 f1_keywords:
 - C4691
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: c194e19c8766b67eb7deef32e7228564cda5f1e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6124171bb5f257dac1dd972f7943d001fb54c9ca
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406376"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051362"
 ---
-# <a name="compiler-warning-level-1-c4691"></a>Kompilátor upozornění (úroveň 1) C4691
+# <a name="compiler-warning-level-1-c4691"></a>Upozornění kompilátoru (úroveň 1) C4691
 
-'type': neodkazovaná sestavení 'file', typ definovaný v aktuální překladové jednotce použít místo toho se očekával odkazovaný typ
+Typ: odkazovaný typ se očekával v neodkazovaném sestavení ' file ', typ definovaný v aktuální jednotce překladu se místo toho použil.
 
-Metadata souboru, který obsahuje původní definice typu není odkazován, a kompilátor používá místní typ definice.
+Na soubor metadat obsahující definici původního typu se neodkazuje a kompilátor používá definici místního typu.
 
-V případě, kdy se znovu sestavit *souboru*, C4691 můžete ignorovat nebo vypnout pomocí direktivy pragma [upozornění](../../preprocessor/warning.md).  To znamená pokud soubor, který vytváříte je stejný jako soubor, kde se očekává, že kompilátor najít definice typu, můžete ignorovat C4691.
+V případě, že znovu sestavíte *soubor*, C4691 lze ignorovat nebo vypnout pomocí [Upozornění](../../preprocessor/warning.md)pragma.  To znamená, že pokud soubor, který sestavíte, je stejný jako soubor, ve kterém kompilátor očekává nalezení definice typu, můžete ignorovat C4691.
 
-Ale neočekávané chování může dojít, pokud kompilátor používá definici, která nepochází ze stejného sestavení, která je popsána v metadatech; Typy CLR jsou zadány nejen podle názvu typu, ale také podle sestavení.  To znamená se liší od sestavení y.dll určitého typu Z určitého typu Z z.dll sestavení.
+Pokud však kompilátor používá definici, která není ze stejného sestavení, na které je odkazováno v metadatech, může dojít k neočekávanému chování. Typy CLR jsou zadány nejen názvem typu, ale také sestavením.  To znamená, že typ z z Assembly z. dll je jiný než typ z sestavení y. dll.
 
 ## <a name="example"></a>Příklad
 
 Tato ukázka obsahuje původní definici typu.
 
-```
+```cpp
 // C4691_a.cpp
 // compile with: /clr /LD /W1
 public ref class Original_Type {};
@@ -35,9 +35,9 @@ public ref class Original_Type {};
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka odkazuje C4691_a.dll a deklaruje pole typu Original_Type.
+Tato ukázka odkazuje na C4691_a. dll a deklaruje pole typu Original_Type.
 
-```
+```cpp
 // C4691_b.cpp
 // compile with: /clr /LD
 #using "C4691_a.dll"
@@ -49,11 +49,11 @@ public:
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C4691.  Všimněte si, že tato ukázka obsahuje definici pro Original_Type a neodkazuje na C4691a.dll.
+Následující ukázka generuje C4691.  Všimněte si, že tento příklad obsahuje definici pro Original_Type a neodkazuje na C4691a. dll.
 
-Pokud chcete vyřešit, odkazovat na soubor metadat, který obsahuje původní definici typu a odeberte místní deklarace a definice.
+Pro vyřešení, odkazování na soubor metadat, který obsahuje definici původní typ a odebrání místní deklarace a definice.
 
-```
+```cpp
 // C4691_c.cpp
 // compile with: /clr /LD /W1
 // C4691 expected

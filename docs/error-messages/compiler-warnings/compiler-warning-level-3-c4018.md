@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4018
+title: Upozornění kompilátoru (úroveň 3) C4018
 ms.date: 11/04/2016
 f1_keywords:
 - C4018
 helpviewer_keywords:
 - C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-ms.openlocfilehash: 6436f62a06cbe931ca5b42751d60507f21675c5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e136a82f8a0ecb3f5375d3a486dd017df7edb6e0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402369"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051986"
 ---
-# <a name="compiler-warning-level-3-c4018"></a>Kompilátor upozornění (úroveň 3) C4018
+# <a name="compiler-warning-level-3-c4018"></a>Upozornění kompilátoru (úroveň 3) C4018
 
-"výraz": podepsané/unsigned – neshoda
+' Expression ': signed/unsigned – neshoda
 
-Porovnání číslo se znaménkem a bez znaménka vyžaduje kompilátor převede hodnotu podepsaného na nepodepsané.
+Porovná se podepsané a nepodepsané číslo, které kompilátor potřebuje k převedení podepsané hodnoty na unsigned.
 
-Toto upozornění může opravit, pokud jeden ze dvou typů přetypování při testování typy se znaménkem a bez znaménka.
+Toto upozornění může být opraveno, pokud při testování podepsaných a nepodepsaných typů dojde k přetypování jednoho ze dvou typů.
 
 Následující ukázka generuje C4018:
 
-```
+```cpp
 // C4018.cpp
 // compile with: /W3
 int main() {

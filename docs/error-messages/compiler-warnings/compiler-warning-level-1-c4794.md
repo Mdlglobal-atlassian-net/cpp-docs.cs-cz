@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4794
+title: Upozornění kompilátoru (úroveň 1) C4794
 ms.date: 11/04/2016
 f1_keywords:
 - C4794
 helpviewer_keywords:
 - C4794
 ms.assetid: badc9c36-fa1a-4fec-929b-7bfda7a7b79f
-ms.openlocfilehash: d44e3af88de9457fdc5c2df905ccbae22d3562da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d669280c0dc6a730a22480e602dac8cc6153449
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280370"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052370"
 ---
-# <a name="compiler-warning-level-1-c4794"></a>Kompilátor upozornění (úroveň 1) C4794
+# <a name="compiler-warning-level-1-c4794"></a>Upozornění kompilátoru (úroveň 1) C4794
 
-segment proměnné místní úložiště vláken "proměnné" změněno z "název oddílu" na ".tls$"
+segment thread local proměnné úložiště ' Variable ' se změnil z ' název oddílu ' na '. TLS $ '
 
-Použili jste [#pragma data_seg](../../preprocessor/data-seg.md) chcete změnit proměnné tls na oddíl .tls $ nespouští.
+Použili jste [#pragma data_seg](../../preprocessor/data-seg.md) k umístění proměnné TLS do oddílu, který nezačíná na. TLS $.
 
-.Tls$*x* části bude existovat do souboru objektu kde [__declspec(thread)](../../cpp/thread.md) proměnné jsou definovány. Oddíl .tls v souboru EXE nebo DLL způsobí z těchto oddílů.
+Oddíl. TLS $*x* bude existovat v souboru objektu, kde jsou definovány proměnné [__declspec (thread)](../../cpp/thread.md) . V části. TLS v souboru EXE nebo DLL bude výsledkem tyto části.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4794:
 
-```
+```cpp
 // C4794.cpp
 // compile with: /W1 /c
 #pragma data_seg(".someseg")

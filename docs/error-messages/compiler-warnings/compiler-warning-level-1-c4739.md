@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4739
+title: Upozornění kompilátoru (úroveň 1) C4739
 ms.date: 11/04/2016
 f1_keywords:
 - C4739
 helpviewer_keywords:
 - C4739
 ms.assetid: 600873b3-7c85-4cd4-944e-cd8e01bfcbb0
-ms.openlocfilehash: 4c48ad9349361324c18ec790c51d1095cce104e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df8f3bcf6cfcc9feb2a400526285ccd9cb0396e4
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280435"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052410"
 ---
-# <a name="compiler-warning-level-1-c4739"></a>Kompilátor upozornění (úroveň 1) C4739
+# <a name="compiler-warning-level-1-c4739"></a>Upozornění kompilátoru (úroveň 1) C4739
 
-odkaz na proměnnou 'var' překračuje její prostor úložiště.
+odkaz na proměnnou var překračuje její prostor úložiště.
 
-Hodnota byla přiřazena proměnné, ale hodnota je větší než velikost proměnné. Paměť, se zapíšou mimo umístění v paměti proměnné a ztrátě dat je možné.
+Proměnné byla přiřazena hodnota, ale hodnota je větší než velikost proměnné. Paměť bude zapsána za rámec místa v paměti proměnné a může dojít ke ztrátě dat.
 
-Pokud chcete vyřešit toto upozornění, pouze přiřadíte hodnotu proměnné, jehož velikost může obsahovat hodnotu.
+Chcete-li toto upozornění vyřešit, přiřaďte hodnotu pouze proměnné, jejíž velikost může být přizpůsobena hodnotě.
 
 Následující ukázka generuje C4739:
 
-```
+```cpp
 // C4739.cpp
 // compile with: /RTCs /Zi /W1 /c
 char *pc;
