@@ -1,15 +1,15 @@
 ---
 title: Průvodce C++ přenosem a upgradem Microsoftu
 description: Upgradujte C++ kód Microsoft na nejnovější verzi sady Visual Studio.
-ms.date: 10/29/2019
+ms.date: 11/05/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: d67c2665574242a46d697f6e9f24321556146958
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 04c3950d637c01031e78d0d95e13232143ceb232
+ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625685"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119486"
 ---
 # <a name="microsoft-c-porting-and-upgrading-guide"></a>Průvodce C++ přenosem a upgradem Microsoftu
 
@@ -25,7 +25,7 @@ Pokud starší verze aplikace běží uspokojivě, v zabezpečeném prostředí 
 
 - Stejný kód může běžet rychleji kvůli vylepšeným optimalizacím kompilátoru.
 
-- Moderní C++ funkce a postupy programování eliminují mnoho běžných příčin chyb a je mnohem snazší zachovat starší idiomy ve stylu jazyka C.
+- Moderní C++ funkce a postupy programování eliminují mnoho běžných příčin chyb a vytváří kód, který je mnohem snazší udržovat než starší idiomy ve stylu jazyka C.
 
 - Doba sestavování je výrazně rychlejší, kvůli vylepšením výkonu v kompilátoru a linkeru.
 
@@ -48,6 +48,7 @@ Další informace naleznete v tématu [použití nativního cílení na více pl
 |Název|Popis|
 |-----------|-----------------|
 |[Upgrade C++ projektů z dřívějších verzí sady Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Postup upgradu základní znakové sady na Visual Studio 2019 a V142 kompilátoru.|
+|[Nástroje IDE pro upgrade C++ kódu](ide-tools-for-upgrading-code.md)|Užitečné funkce IDE, které vám pomůžou v procesu upgradu.|
 |[C++Binární kompatibilita mezi 2015 a 2019](binary-compat-2015-2017.md)|Využívání knihoven v140 jako z projektů V142.|
 |[Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí](use-native-multi-targeting.md)|Použijte Visual Studio 2019 se staršími kompilátory a knihovnami.|
 |[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Seznam všech změn v nástrojích knihovny a sestavení C++ společnosti Microsoft ze sady Visual Studio 2003 až 2015, které mohou vyžadovat změny v kódu.|
