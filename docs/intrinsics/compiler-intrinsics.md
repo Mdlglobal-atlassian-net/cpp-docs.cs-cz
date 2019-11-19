@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 8c101de6d74a4f2d3073bd220a29f2a0328d2959
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 61fc825e333b8d839d15752ce737dfc6d3980809
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216878"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163484"
 ---
 # <a name="compiler-intrinsics"></a>Vnitřní funkce kompilátoru
 
@@ -24,17 +24,19 @@ Pokud je funkce vnitřní, kód pro tuto funkci je obvykle vložen vloženě, co
 
 Použití vnitřních objektů má vliv na přenositelnost kódu, protože vnitřní objekty, které jsou k dispozici v C++ jazyce Visual, nemusí být k dispozici, pokud je kód zkompilován s jinými kompilátory a některé vnitřní objekty, které mohou být k dispozici pro některé cílové architektury, nejsou k dispozici pro všechny architektury. Vnitřní objekty jsou však obvykle více přenosné než vložené sestavení. Vnitřní objekty jsou požadovány v 64 architekturách, kde není podporováno vložené sestavení.
 
-Některé vnitřní objekty, jako `__assume` jsou a `__ReadWriteBarrier`, poskytují informace kompilátoru, které mají vliv na chování Optimalizátoru.
+Některé vnitřní objekty, například `__assume` a `__ReadWriteBarrier`, poskytují informace kompilátoru, který má vliv na chování Optimalizátoru.
 
-Některé vnitřní objekty jsou k dispozici pouze jako vnitřní objekty a některé jsou k dispozici v rámci funkcí i vnitřních implementací. Můžete dát kompilátoru pokyn, aby používal vnitřní implementaci jedním ze dvou způsobů v závislosti na tom, zda chcete povolit pouze konkrétní funkce nebo chcete povolit všechny vnitřní objekty. Prvním způsobem je použít `#pragma intrinsic(` *seznam vnitřních funkcí-Name-list*`)`. Direktivu pragma lze použít k určení jednoho vnitřního nebo více vnitřních objektů oddělených čárkami. Druhým je použití možnosti kompilátoru [/Oi (generovat vnitřní funkce)](../build/reference/oi-generate-intrinsic-functions.md) , která zpřístupňuje všechny vnitřní objekty na dané platformě. V části **/Oi**použijte `#pragma function(` *seznam vnitřních funkcí-Name-list* `)` , abyste vynutili použití volání funkce namísto vnitřní. Pokud dokumentace pro konkrétní vnitřní poznámky, kterou rutina je k dispozici pouze jako vnitřní, je použita vnitřní implementace bez ohledu na to, zda je zadána `#pragma intrinsic` možnost/Oi nebo. Ve všech případech **/Oi** nebo `#pragma intrinsic` umožňuje, ale nenutí, aby Optimalizátor používal vnitřní. Optimalizátor může stále volat funkci.
+Některé vnitřní objekty jsou k dispozici pouze jako vnitřní objekty a některé jsou k dispozici v rámci funkcí i vnitřních implementací. Můžete dát kompilátoru pokyn, aby používal vnitřní implementaci jedním ze dvou způsobů v závislosti na tom, zda chcete povolit pouze konkrétní funkce nebo chcete povolit všechny vnitřní objekty. Prvním způsobem je použití`)``#pragma intrinsic(`*vnitřních funkcí-Name-list* . Direktivu pragma lze použít k určení jednoho vnitřního nebo více vnitřních objektů oddělených čárkami. Druhým je použití možnosti kompilátoru [/Oi (generovat vnitřní funkce)](../build/reference/oi-generate-intrinsic-functions.md) , která zpřístupňuje všechny vnitřní objekty na dané platformě. V části **/Oi**použijte `#pragma function(`*vnitřní funkce-název-seznam*`)` k vynucení použití volání funkce namísto vnitřní. Pokud dokumentace pro konkrétní vnitřní poznámky, kterou rutina je k dispozici pouze jako vnitřní, je použita vnitřní implementace bez ohledu na to, zda je zadána možnost **/Oi** nebo `#pragma intrinsic`. Ve všech případech **/Oi** nebo `#pragma intrinsic` umožňuje, ale nenutí, aby Optimalizátor používal vnitřní. Optimalizátor může stále volat funkci.
 
 Některé standardní funkce jazykaC++ C/knihovny jsou k dispozici ve vnitřních implementacích na některých architekturách. Při volání funkce CRT je použita vnitřní implementace, pokud je **/Oi** zadáno na příkazovém řádku.
 
-K dispozici je \<soubor hlaviček intrin. h >, který deklaruje prototypy pro společné vnitřní funkce. Vnitřní objekty specifické pro výrobce jsou k dispozici \<v > hlavičkových souborech \<immintrin. h > a ammintrin. h. Kromě toho některá Hlavičková okna deklaruje funkce, které jsou mapovány na vnitřní kompilátor.
+K dispozici je hlavičkový soubor \<intrin. h >, který deklaruje prototypy pro společné vnitřní funkce. Vnitřní objekty specifické pro výrobce jsou k dispozici v souboru hlaviček \<immintrin. h > a \<ammintrin. h >. Kromě toho některá Hlavičková okna deklaruje funkce, které jsou mapovány na vnitřní kompilátor.
 
 V následujících částech jsou uvedeny všechny vnitřní objekty, které jsou k dispozici v různých architekturách. Další informace o tom, jak vnitřní funkce fungují na konkrétním cílovém procesoru, najdete v referenční dokumentaci výrobce.
 
 - [Vnitřní objekty ARM](../intrinsics/arm-intrinsics.md)
+
+- [Vnitřní objekty ARM64](../intrinsics/arm64-intrinsics.md)
 
 - [x86 – seznam vnitřních objektů](../intrinsics/x86-intrinsics-list.md)
 

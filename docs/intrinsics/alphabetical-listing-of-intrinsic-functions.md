@@ -6,20 +6,20 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 56aad4c0b39a7a4bd2d425907023cbc8c9b335c4
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220078"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163464"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Abecední seznam vnitřních funkcí
 
-V následujících částech jsou popsány vnitřní funkce specifické pro společnost Microsoft, které jsou k dispozici v některých nebo všech architekturách. Další podporované vnitřní prvky jsou zdokumentovány výrobci procesorů, a to buď v hlavičkových souborech, nebo na svých webech. Odkazy na dokumentaci výrobce najdete v částech [vnitřní objekty ARM](../intrinsics/arm-intrinsics.md), [vnitřní objekty x86](../intrinsics/x86-intrinsics-list.md)a [x64](../intrinsics/x64-amd64-intrinsics-list.md) . Funkce běhové knihovny jazyka C (CRT), které mají pro ně implementovány vnitřní objekty, zde nejsou popsány. Tyto funkce jsou zdokumentovány v [referenčních informacích ke knihovně run-time jazyka C](../c-runtime-library/c-run-time-library-reference.md).
+V následujících částech jsou popsány vnitřní funkce specifické pro společnost Microsoft, které jsou k dispozici v některých nebo všech architekturách. Další podporované vnitřní prvky jsou zdokumentovány výrobci procesorů, a to buď v hlavičkových souborech, nebo na svých webech. Odkazy na dokumentaci výrobce najdete v částech [vnitřní objekty ARM](../intrinsics/arm-intrinsics.md), [vnitřní objekty ARM64](../intrinsics/arm64-intrinsics.md), vnitřní objekty [x86](../intrinsics/x86-intrinsics-list.md)a [vnitřní objekty x64](../intrinsics/x64-amd64-intrinsics-list.md) . Funkce běhové knihovny jazyka C (CRT), které mají pro ně implementovány vnitřní objekty, zde nejsou popsány. Tyto funkce jsou zdokumentovány v [referenčních informacích ke knihovně run-time jazyka C](../c-runtime-library/c-run-time-library-reference.md).
 
-[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
+[__addfsbyte \__addfsword \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__addgsbyte \__addgsword \__addgsdword \_](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
@@ -37,13 +37,13 @@ V následujících částech jsou popsány vnitřní funkce specifické pro spol
 
 [_bittestandset, _bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
-[__cpuid, \__cpuidex](../intrinsics/cpuid-cpuidex.md)
+[__cpuid \__cpuidex](../intrinsics/cpuid-cpuidex.md)
 
 [__debugbreak](../intrinsics/debugbreak.md)
 
 [_disable](../intrinsics/disable.md)
 
-[__emul, \__emulu](../intrinsics/emul-emulu.md)
+[__emul \__emulu](../intrinsics/emul-emulu.md)
 
 [_enable](../intrinsics/enable.md)
 
@@ -59,9 +59,9 @@ V následujících částech jsou popsány vnitřní funkce specifické pro spol
 
 [__inbytestring](../intrinsics/inbytestring.md)
 
-[__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
+[__incfsbyte \__incfsword \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__incgsbyte \__incgsword \__incgsdword \_](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -69,35 +69,35 @@ V následujících částech jsou popsány vnitřní funkce specifické pro spol
 
 [__int2c](../intrinsics/int2c.md)
 
-[Vnitřní funkce _InterlockedAdd](../intrinsics/interlockedadd-intrinsic-functions.md)
+[_InterlockedAdd vnitřní funkce](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
-[Vnitřní funkce _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
+[_InterlockedAnd vnitřní funkce](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[vnitřní funkce _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[_interlockedbittestandreset vnitřní funkce](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[vnitřní funkce _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[_interlockedbittestandset vnitřní funkce](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[_InterlockedCompareExchange vnitřní funkce](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
-[Vnitřní funkce _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
+[_InterlockedCompareExchangePointer vnitřní funkce](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)
+[_InterlockedDecrement vnitřní funkce](../intrinsics/interlockeddecrement-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)
+[_InterlockedExchange vnitřní funkce](../intrinsics/interlockedexchange-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
+[_InterlockedExchangeAdd vnitřní funkce](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
+[_InterlockedExchangePointer vnitřní funkce](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)
+[_InterlockedIncrement vnitřní funkce](../intrinsics/interlockedincrement-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)
+[_InterlockedOr vnitřní funkce](../intrinsics/interlockedor-intrinsic-functions.md)
 
-[Vnitřní funkce _InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)
+[_InterlockedXor vnitřní funkce](../intrinsics/interlockedxor-intrinsic-functions.md)
 
 [__invlpg](../intrinsics/invlpg.md)
 
@@ -111,7 +111,7 @@ V následujících částech jsou popsány vnitřní funkce specifické pro spol
 
 [__ll_rshift](../intrinsics/ll-rshift.md)
 
-[__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
+[__lzcnt16 \__lzcnt \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
 
 [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)
 
@@ -157,7 +157,7 @@ V následujících částech jsou popsány vnitřní funkce specifické pro spol
 
 [__outwordstring](../intrinsics/outwordstring.md)
 
-[__popcnt16, \__popcnt, \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
+[__popcnt16 \__popcnt \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
 
 [__rdtsc](../intrinsics/rdtsc.md)
 
@@ -179,9 +179,9 @@ V následujících částech jsou popsány vnitřní funkce specifické pro spol
 
 [__readeflags](../intrinsics/readeflags.md)
 
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
+[__readfsbyte \__readfsdword \__readfsqword \_](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
+[__readgsbyte \__readgsdword \__readgsqword \_](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
 [__readmsr](../intrinsics/readmsr.md)
 
@@ -267,9 +267,9 @@ V následujících částech jsou popsány vnitřní funkce specifické pro spol
 
 [__writeeflags](../intrinsics/writeeflags.md)
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
+[__writefsbyte \__writefsdword \__writefsqword \_](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
+[__writegsbyte \__writegsdword \__writegsqword \_](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
 [__writemsr](../intrinsics/writemsr.md)
 
