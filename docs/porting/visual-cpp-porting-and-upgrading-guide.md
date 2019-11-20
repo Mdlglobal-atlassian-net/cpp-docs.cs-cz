@@ -1,65 +1,65 @@
 ---
-title: Průvodce C++ přenosem a upgradem Microsoftu
-description: Upgradujte C++ kód Microsoft na nejnovější verzi sady Visual Studio.
-ms.date: 11/05/2019
+title: Microsoft C++ porting and upgrading guide
+description: Upgrade Microsoft C++ code to the latest version of Visual Studio.
+ms.date: 11/18/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: 04c3950d637c01031e78d0d95e13232143ceb232
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 88b5b31428979d26bbbf810c4c04c99f411dbcbb
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119486"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189353"
 ---
-# <a name="microsoft-c-porting-and-upgrading-guide"></a>Průvodce C++ přenosem a upgradem Microsoftu
+# <a name="microsoft-c-porting-and-upgrading-guide"></a>Microsoft C++ porting and upgrading guide
 
-Toto téma poskytuje průvodce pro upgrade kódu Microsoft C++ na nejnovější verzi sady Visual Studio. Pokud provádíte upgrade z projektu vytvořeného v aplikaci Visual Studio 2008 nebo starší, musíte nejprve použít Visual Studio 2010 k převedení projektu na formát MSBuild a pak otevřít projekt v aplikaci Visual Studio 2019. Pro projekty vytvořené v aplikaci Visual Studio 2010 až 2015 stačí otevřít projekt v aplikaci Visual Studio 2019. Úplné pokyny najdete v tématu [upgrade C++ projektů z dřívějších verzí sady Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md).
+This article provides a guide for upgrading Microsoft C++ code to the latest version of Visual Studio. For projects created in Visual Studio 2010 through 2015, just open the project in Visual Studio 2019. You can upgrade a Visual Studio 2008 or earlier project in two steps. Use Visual Studio 2010 to convert the project to MSBuild format first. Then open the project in Visual Studio 2019. For complete instructions, see [Upgrading C++ projects from earlier versions of Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md).
 
-Sady nástrojů v sadě Visual Studio 2015, Visual Studio 2017 a Visual Studio 2019 jsou binární kompatibilní, což umožňuje upgradovat na novější verzi kompilátoru, aniž by bylo nutné upgradovat závislosti knihoven. Další informace najdete v tématu [ C++ binární kompatibilita mezi 2015 a 2019](binary-compat-2015-2017.md).
+The toolsets in Visual Studio 2015, Visual Studio 2017, and Visual Studio 2019 are binary-compatible. Now you can upgrade to a more recent version of the compiler without having to upgrade your library dependencies. For more information, see [C++ binary compatibility 2015-2019](binary-compat-2015-2017.md).
 
-Při upgradu projektů, které používají open source knihovny nebo které mají být spouštěny na různých platformách, doporučujeme migrovat na projekt založený na CMaki. Další informace najdete v tématu [projekty cmake v sadě Visual Studio](../build/cmake-projects-in-visual-studio.md) .
+When upgrading projects that use open-source libraries or are meant to run on multiple platforms, we recommended migrating to a CMake-based project. For more information, see [CMake projects in Visual Studio](../build/cmake-projects-in-visual-studio.md)
 
-## <a name="reasons-to-upgrade-c-code"></a>Důvody pro upgrade C++ kódu
+## <a name="reasons-to-upgrade-c-code"></a>Reasons to upgrade C++ code
 
-Pokud starší verze aplikace běží uspokojivě, v zabezpečeném prostředí a není v aktivním vývoji, nemusí být pro upgrade k dispozici mnohem motivace. Nicméně pokud aplikace vyžaduje průběžnou údržbu nebo pokud nový vývoj funkcí zahrnuje vylepšení výkonu nebo zabezpečení, můžete zvážit upgrade kódu z některého z následujících důvodů:
+If a legacy application is running satisfactorily, in a secure environment, and isn't under active development, there might not be much incentive to upgrade it. However, consider an upgrade in these cases: Your application requires ongoing maintenance. Or, you're doing new feature development, or making performance or security improvements. An upgrade brings these benefits:
 
-- Stejný kód může běžet rychleji kvůli vylepšeným optimalizacím kompilátoru.
+- The same code can run faster, because we've improved compiler optimizations.
 
-- Moderní C++ funkce a postupy programování eliminují mnoho běžných příčin chyb a vytváří kód, který je mnohem snazší udržovat než starší idiomy ve stylu jazyka C.
+- Modern C++ features and programming practices eliminate many common causes of bugs, and produce code that's far easier to maintain than older C-style idioms.
 
-- Doba sestavování je výrazně rychlejší, kvůli vylepšením výkonu v kompilátoru a linkeru.
+- Build times are faster, because of performance improvements in the compiler and linker.
 
-- Lepší soulad s normami. Možnost kompilátoru [/Permissive-](../build/reference/permissive-standards-conformance.md) umožňuje identifikovat kód, který byl dříve povolen kompilátorem společnosti Microsoft C++ , ale nedodržuje aktuální C++ Standard.
+- Better standards conformance. The [/permissive-](../build/reference/permissive-standards-conformance.md) compiler option helps you identify code that doesn't conform to the current C++ standard.
 
-- Lepší zabezpečení za běhu, včetně bezpečnějších funkcí [knihovny běhového prostředí jazyka C]() a funkcí kompilátoru, jako je například [Kontrola ochrany](../build/reference/guard-enable-guard-checks.md) a adresování (Visual Studio 2019 verze 16,4).
+- Better run-time security, including more secure [C Runtime library]() features. And, compiler features such as [guard checking](../build/reference/guard-enable-guard-checks.md) and address sanitizers (new in Visual Studio 2019 version 16.4).
 
-## <a name="multitargeting-vs-upgrading"></a>Cílení na více verzí vs. upgrade
+## <a name="multitargeting-vs-upgrading"></a>Multitargeting vs. upgrading
 
-Pokud upgrade základu kódu na novou sadu nástrojů není možností, můžete stále používat nejnovější verzi sady Visual Studio k vytváření a úpravám projektů, které se kompilují se staršími sadami nástrojů a knihovnami. V aplikaci Visual Studio 2019 můžete využít výhod funkcí, jako například:
+Perhaps upgrading your code base to a new toolset isn't an option for you. You can still use the latest Visual Studio to build and edit projects that use older toolsets and libraries. In Visual Studio 2019, you can take advantage of features such as:
 
-- Moderní nástroje pro statickou analýzu, včetně C++ základních pokynů pro kontrolu a Clang-uklizený, vám pomůžou identifikovat potenciální problémy ve zdrojovém kódu.
+- modern static analysis tools, including the C++ Core Guidelines checkers and Clang-Tidy, to help identify potential problems in your source code.
 
-- Automatické formátování podle vašeho výběru moderních stylů může pomáhat s tím, že starší verze kódu budou mnohem čitelnější.
+- automatic formatting according to your choice of modern styles can help make legacy code much more readable.
 
-Další informace naleznete v tématu [použití nativního cílení na více platforem v aplikaci Visual Studio k sestavení starých projektů](use-native-multi-targeting.md).
+For more information, see [Use native multi-targeting in Visual Studio to build old projects](use-native-multi-targeting.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 |Název|Popis|
 |-----------|-----------------|
-|[Upgrade C++ projektů z dřívějších verzí sady Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Postup upgradu základní znakové sady na Visual Studio 2019 a V142 kompilátoru.|
-|[Nástroje IDE pro upgrade C++ kódu](ide-tools-for-upgrading-code.md)|Užitečné funkce IDE, které vám pomůžou v procesu upgradu.|
-|[C++Binární kompatibilita mezi 2015 a 2019](binary-compat-2015-2017.md)|Využívání knihoven v140 jako z projektů V142.|
-|[Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí](use-native-multi-targeting.md)|Použijte Visual Studio 2019 se staršími kompilátory a knihovnami.|
-|[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Seznam všech změn v nástrojích knihovny a sestavení C++ společnosti Microsoft ze sady Visual Studio 2003 až 2015, které mohou vyžadovat změny v kódu.|
-|[Novinky Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|Všechny informace "Co je nového" pro společnost Microsoft C++ ze sady visual Studio 2003 prostřednictvím sady visual Studio 2015.|
-|[Přenos a upgrade: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|V této části jsme převedli a upgradují několik ukázek a aplikací a probrali zkušenosti a výsledky. Můžete se setkat s tím, že vám přečtěte, co je součástí procesu přenosu a upgradu. V celém procesu probereme tipy a triky pro upgrade a ukážeme, jak byly vyřešeny konkrétní chyby.|
-|[Portování do Univerzální platforma Windows](porting-to-the-universal-windows-platform-cpp.md)|Obsahuje informace o přenosech kódu do Windows 10.|
-|[Úvod do prostředí Visual C++ pro uživatele systému UNIX](introduction-to-visual-cpp-for-unix-users.md)|Poskytuje informace pro uživatele systému UNIX, kteří jsou novinkou v jazyce Visual C++ a chtějí s ním být produktivní.|
-|[Spouštění programů Linux ve Windows](porting-from-unix-to-win32.md)|Popisuje možnosti migrace aplikací pro systém UNIX do systému Windows.|
+|[Upgrading C++ projects from earlier versions of Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|How to upgrade your code base to Visual Studio 2019 and v142 of the compiler.|
+|[IDE tools for upgrading C++ code](ide-tools-for-upgrading-code.md)|Useful IDE features that help in the upgrade process.|
+|[C++ binary compatibility 2015-2019](binary-compat-2015-2017.md)|Consume v140 and v141 libraries as-is from v142 projects.|
+|[Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí](use-native-multi-targeting.md)|Use Visual Studio 2019 with older compilers and libraries.|
+|[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|A list of all the changes in the Microsoft C++ libraries and build tools from Visual Studio 2003 through 2015 that might require changes in your code.|
+|[Novinky Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|All the "what's new" information for Microsoft C++ from Visual Studio 2003 through Visual Studio 2015.|
+|[Přenos a upgrade: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|For this section, we ported and upgrades several samples and applications and discussed the experiences and results. These articles give you a sense of what's involved in the porting and upgrading process. Throughout the process, we discuss tips and tricks for upgrading and show how specific errors were fixed.|
+|[Porting to the Universal Windows Platform](porting-to-the-universal-windows-platform-cpp.md)|Contains information about porting code to Windows 10|
+|[Úvod do prostředí Visual C++ pro uživatele systému UNIX](introduction-to-visual-cpp-for-unix-users.md)|Provides information for UNIX users who are new to Visual C++ and want to become productive with it.|
+|[Running Linux programs on Windows](porting-from-unix-to-win32.md)|Discusses options for migrating UNIX applications to Windows.|
 
 ## <a name="see-also"></a>Viz také:
 
 [C++ v sadě Visual Studio](../overview/visual-cpp-in-visual-studio.md)<br/>
-[Co je nového pro C++ kompilátor v aplikaci Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[What's New for The C++ compiler in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Vylepšení shody C++ se sadou Visual Studio](../overview/cpp-conformance-improvements.md)<br/>

@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 3) c4640 týkajícího
+title: Compiler Warning (level 3) C4640
 ms.date: 11/04/2016
 f1_keywords:
 - C4640
 helpviewer_keywords:
 - C4640
 ms.assetid: f76871f6-e436-4c35-9793-d2f22f7e1c7f
-ms.openlocfilehash: ccfb82852325437a739d7a8f8a5c5b06ce5f9714
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bd983f1fcc4248910c5eeafd4dea30106083d05
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401680"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189104"
 ---
-# <a name="compiler-warning-level-3-c4640"></a>Kompilátor upozornění (úroveň 3) c4640 týkajícího
+# <a name="compiler-warning-level-3-c4640"></a>Compiler Warning (level 3) C4640
 
-'instance': konstrukce lokálního statického objektu není bezpečná pro vlákno
+'instance' : construction of local static object is not thread-safe
 
-Statické instance objektu není bezpečná.
+A static instance of an object is not thread safe.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+This warning is off by default. See [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md) for more information.
 
-Následující ukázka generuje c4640 týkajícího:
+The following sample generates C4640:
 
-```
+```cpp
 // C4640.cpp
 // compile with: /W3
 #pragma warning(default:4640)

@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4792
+title: Compiler Warning (level 3) C4792
 ms.date: 11/04/2016
 f1_keywords:
 - C4792
 helpviewer_keywords:
 - C4792
 ms.assetid: c047ce69-a622-44e1-9425-d41aa9261c61
-ms.openlocfilehash: adf233673c4b654927aa9488565adf6ceef5d3e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84a8a8bbb08ac97fe87d63d1ea44587790f87d92
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401563"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189331"
 ---
-# <a name="compiler-warning-level-3-c4792"></a>Kompilátor upozornění (úroveň 3) C4792
+# <a name="compiler-warning-level-3-c4792"></a>Compiler Warning (level 3) C4792
 
-Funkce 'function' deklarovaná pomocí: sysimport a odkazuje z nativního kódu; naimportujte knihovnu požadovanou pro propojení.
+function 'function' declared using sysimport and referenced from native code; import library required to link
 
-Nativní funkce, které byly naimportovány do programu v rámci atributu DllImport byla volána z nespravované funkce. Proto je třeba propojit knihovnu importu pro knihovnu DLL.
+A native function that was imported into the program with DllImport was called from an unmanaged function. Therefore, you must link to the import library for the DLL.
 
-Toto upozornění nelze vyřešit v kódu nebo tak, že změníte způsob kompilace. Použití [upozornění](../../preprocessor/warning.md) direktivy pragma zakážete toto upozornění.
+This warning cannot be resolved in code or by changing the way you compile. Use the [warning](../../preprocessor/warning.md) pragma to disable this warning.
 
-Následující ukázka generuje C4792:
+The following sample generates C4792:
 
-```
+```cpp
 // C4792.cpp
 // compile with: /clr /W3
 // C4792 expected

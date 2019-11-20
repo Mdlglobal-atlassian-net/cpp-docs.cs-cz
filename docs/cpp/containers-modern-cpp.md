@@ -1,24 +1,24 @@
 ---
 title: Kontejnery (moderní verze jazyka C++)
-ms.date: 01/18/2018
+ms.date: 11/12/2019
 ms.topic: conceptual
-ms.openlocfilehash: 37b540132fc9ddc03d5eaafd33c545b5db5e7935
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 41b9d560ce827cee5c90467184ef5b2b729e0639
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926250"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188904"
 ---
 # <a name="containers-modern-c"></a>Kontejnery (moderní verze jazyka C++)
 
-Ve výchozím nastavení použijte [Vector](../standard-library/vector-class.md) jako preferovaný sekvenční kontejner v C++. Toto je ekvivalent `List<T>` v jazycích .NET.
+By default, use [std::vector](../standard-library/vector-class.md) as the preferred sequential container in C++. The performance of **std::vector** is comparable to C-style arrays in most scenarios and is far safer. **std::vector** is equivalent to `List<T>` in .NET languages.
 
 ```cpp
 vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-Použijte [mapu](../standard-library/map-class.md) (ne `unordered_map`) jako výchozí asociativní kontejner. Použijte [set](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md)a [multiset](../standard-library/multiset-class.md) pro vygenerování & více případů.
+Use [map](../standard-library/map-class.md) (not `unordered_map`) as the default associative container. Use [set](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md), and [multiset](../standard-library/multiset-class.md) for degenerate & multi cases.
 
 ```cpp
 map<string, string> apple_color;
@@ -26,17 +26,17 @@ map<string, string> apple_color;
 apple_color["Granny Smith"] = "Green";
 ```
 
-Když je potřeba optimalizace výkonu, zvažte použití:
+When performance optimization is needed, consider using:
 
-- Typ [pole](../standard-library/array-class-stl.md) , když je vkládání důležité, například jako člen třídy.
+- The [array](../standard-library/array-class-stl.md) type when embedding is important, for example, as a class member.
 
-- Neuspořádané asociativní kontejnery, například [unordered_map](../standard-library/unordered-map-class.md). Ty mají nižší režijní náklady na prvky a vyhledávání v čase, ale mohou být těžší používat správně a efektivně.
+- Unordered associative containers such as [unordered_map](../standard-library/unordered-map-class.md). These have lower per-element overhead and constant-time lookup, but they can be harder to use correctly and efficiently.
 
-- Seřazeno `vector`. Další informace najdete v tématu [algoritmy](../cpp/algorithms-modern-cpp.md).
+- Sorted `vector`. For more information, see [Algorithms](../cpp/algorithms-modern-cpp.md).
 
-Nepoužívejte pole ve stylu jazyka C. U starších rozhraní API, která potřebují přímý přístup k datům, použijte místo toho přístupové `f(vec.data(), vec.size());` metody, jako je například.
+Don’t use C-style arrays. For older APIs that need direct access to the data, use accessor methods such as `f(vec.data(), vec.size());` instead.
 
-Další informace o kontejnerech naleznete v tématu [ C++ standardní kontejnery knihovny](../standard-library/stl-containers.md).
+For more information about containers, see [C++ Standard Library Containers](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Viz také:
 

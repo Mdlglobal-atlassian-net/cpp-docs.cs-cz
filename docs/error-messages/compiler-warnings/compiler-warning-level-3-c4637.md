@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4637
+title: Compiler Warning (level 3) C4637
 ms.date: 11/04/2016
 f1_keywords:
 - C4637
 helpviewer_keywords:
 - C4637
 ms.assetid: 5fd347c1-2de9-408f-9136-1bf1ff273622
-ms.openlocfilehash: 80c55494a391922453f2d89ae26ee5f47dc433b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e712429ad52ccb990f81e1a4d3bd65a525558692
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401693"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189124"
 ---
-# <a name="compiler-warning-level-3-c4637"></a>Kompilátor upozornění (úroveň 3) C4637
+# <a name="compiler-warning-level-3-c4637"></a>Compiler Warning (level 3) C4637
 
-Cíl komentáře dokumentu XML: \<zahrnout > značky zahozeny.  Důvod
+XML document comment target: \<include> tag discarded.  reason
 
-Syntaxe [ \<zahrnout >](../../build/reference/include-visual-cpp.md) značky není správný.
+The syntax of an [\<include>](../../build/reference/include-visual-cpp.md) tag was not correct.
 
-Následující ukázka generuje C4637:
+The following sample generates C4637:
 
-```
+```cpp
 // C4637.cpp
 // compile with: /clr /doc /LD /W3
 using namespace System;
