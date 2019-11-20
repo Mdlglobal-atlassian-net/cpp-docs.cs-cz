@@ -4215,22 +4215,7 @@
                 - name: constexpr – výrazy lambda
                   href: cpp/lambda-expressions-constexpr.md
             - name: Pole
-              expanded: false
-              items:
-                - name: Pole
-                  href: cpp/arrays-cpp.md
-                - name: Používání polí
-                  href: cpp/using-arrays-cpp.md
-                - name: Inicializace polí
-                  href: cpp/initializing-arrays.md
-                - name: Pole ve výrazech
-                  href: cpp/arrays-in-expressions.md
-                - name: Interpretace operátoru dolního indexu
-                  href: cpp/interpretation-of-subscript-operator.md
-                - name: Indirekce u typů polí
-                  href: cpp/indirection-on-array-types.md
-                - name: Pořadí polí jazyka C++
-                  href: cpp/ordering-of-cpp-arrays.md
+              href: cpp/arrays-cpp.md
             - name: Odkazy
               expanded: false
               items:
@@ -4931,6 +4916,8 @@
               href: intrinsics/compiler-intrinsics.md
             - name: ARM – vnitřní funkce
               href: intrinsics/arm-intrinsics.md
+            - name: ARM64 – vnitřní funkce
+              href: intrinsics/arm64-intrinsics.md
             - name: x86 – seznam vnitřních funkcí
               href: intrinsics/x86-intrinsics-list.md
             - name: x64 (amd64) – seznam vnitřních funkcí
