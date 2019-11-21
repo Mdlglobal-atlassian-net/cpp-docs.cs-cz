@@ -1115,7 +1115,7 @@
                       href: build/reference/notification-hooks.md
                     - name: Hooky selhání
                       href: build/reference/failure-hooks.md
-                    - name: Výjimky (C/C++)
+                    - name: Kódy výjimek při načítání knihoven DLL (C/C++)
                       href: build/reference/exceptions-c-cpp.md
                 - name: Výpis importu se zpožděným načtením
                   href: build/reference/dumping-delay-loaded-imports.md
@@ -3652,51 +3652,18 @@
               items:
                 - name: C++ vás vítá zpět (moderní verze jazyka C++)
                   href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: C++ – systém typů (moderní verze jazyka C++)
-                  expanded: false
-                  items:
-                    - name: C++ – systém typů (moderní verze jazyka C++)
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Typy hodnot (moderní verze jazyka C++)
-                      href: cpp/value-types-modern-cpp.md
-                    - name: Převody typů a jejich zabezpečení (moderní verze jazyka C++)
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
                 - name: "Jednotná inicializace a\_delegování konstruktorů"
                   href: cpp/uniform-initialization-and-delegating-constructors.md
                 - name: Životní cyklus objektů a správa prostředků (moderní verze jazyka C++)
                   href: cpp/object-lifetime-and-resource-management-modern-cpp.md
                 - name: Prostředky ve vlastnictví objektů (RAII)
                   href: cpp/objects-own-resources-raii.md
-                - name: Chytré ukazatele (moderní verze jazyka C++)
-                  expanded: false
-                  items:
-                    - name: Chytré ukazatele (moderní verze jazyka C++)
-                      href: cpp/smart-pointers-modern-cpp.md
-                    - name: "Postupy: Vytváření a\_používání instancí ukazatelů unique_ptr"
-                      href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: "Postupy: Vytváření a\_používání instancí ukazatelů shared_ptr"
-                      href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: "Postupy: Vytváření a\_používání instancí ukazatelů weak_ptr"
-                      href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: "Postupy: Vytváření a\_používání instancí objektů CComPtr a CComQIPtr"
-                      href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-                - name: Ukazatel na implementaci pro zapouzdření za kompilace (moderní verze jazyka C++)
-                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
                 - name: Kontejnery (moderní verze jazyka C++)
                   href: cpp/containers-modern-cpp.md
                 - name: Algoritmy (moderní verze jazyka C++)
                   href: cpp/algorithms-modern-cpp.md
                 - name: Formátování řetězců a I/O (moderní verze jazyka C++)
                   href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: Ošetření chyb a výjimek (moderní verze jazyka C++)
-                  expanded: false
-                  items:
-                    - name: Ošetření chyb a výjimek (moderní verze jazyka C++)
-                      href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: "Postupy: Návrh s\_ohledem na bezpečnost výjimek"
-                      href: cpp/how-to-design-for-exception-safety.md
-                    - name: 'Postupy: Rozhraní mezi kódem výjimek a ostatním kódem'
-                      href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: Přenositelnost u rozhraní ABI (moderní verze jazyka C++)
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
             - name: Lexikální konvence
@@ -3737,6 +3704,8 @@
                 - name: Deklarace a definice
                   expanded: false
                   items:
+                    - name: C++ – systém typů
+                      href: cpp/cpp-type-system-modern-cpp.md
                     - name: Deklarace a definice
                       href: cpp/declarations-and-definitions-cpp.md
                     - name: Přehled deklarátorů
@@ -3880,6 +3849,8 @@
                       href: cpp/floating-limits.md
                 - name: Standardní převody
                   href: cpp/standard-conversions.md
+                - name: Převody a bezpečnost typů
+                  href: cpp/type-conversions-and-type-safety-modern-cpp.md
             - name: 'Integrované operátory, jejich priorita a asociativita'
               expanded: false
               items:
@@ -4134,7 +4105,7 @@
                       href: cpp/protected-cpp.md
                     - name: public
                       href: cpp/public-cpp.md
-                - name: Inicializace tříd a struktur bez konstruktorů
+                - name: Inicializace složenými závorkami
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
                 - name: Konstruktory
                   expanded: false
@@ -4145,6 +4116,8 @@
                       href: cpp/copy-constructors-and-copy-assignment-operators-cpp.md
                     - name: Konstruktory přesunutí a operátory přiřazení pro přesunutí
                       href: cpp/move-constructors-and-move-assignment-operators-cpp.md
+                    - name: Delegování konstruktorů
+                      href: cpp/delegating-constructors.md
                 - name: Destruktory
                   href: cpp/destructors-cpp.md
                 - name: Přehled členských funkcí
@@ -4189,6 +4162,8 @@
                   href: cpp/special-member-functions.md
                 - name: Statické členy
                   href: cpp/static-members-cpp.md
+                - name: Třídy jazyka C++ jako typy hodnot
+                  href: cpp/value-types-modern-cpp.md
                 - name: Převody uživatelsky definovaných typů
                   href: cpp/user-defined-type-conversions-cpp.md
                 - name: Proměnlivé datové členy
@@ -4234,43 +4209,58 @@
             - name: Ukazatele
               expanded: false
               items:
-                - name: Ukazatele
+                - name: Ukazatelé
                   href: cpp/pointers-cpp.md
+                - name: Nezpracované ukazatele
+                  href: cpp/raw-pointers.md
                 - name: const a volatile – ukazatele
                   href: cpp/const-and-volatile-pointers.md
                 - name: new a delete – operátory
                   href: cpp/new-and-delete-operators.md
+                - name: Chytré ukazatele
+                  href: cpp/smart-pointers-modern-cpp.md
+                - name: "Postupy: Vytváření a\_používání instancí ukazatelů unique_ptr"
+                  href: cpp/how-to-create-and-use-unique-ptr-instances.md
+                - name: "Postupy: Vytváření a\_používání instancí ukazatelů shared_ptr"
+                  href: cpp/how-to-create-and-use-shared-ptr-instances.md
+                - name: "Postupy: Vytváření a\_používání instancí ukazatelů weak_ptr"
+                  href: cpp/how-to-create-and-use-weak-ptr-instances.md
+                - name: "Postupy: Vytváření a\_používání instancí objektů CComPtr a CComQIPtr"
+                  href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+                - name: Ukazatel na implementaci pro zapouzdření za kompilace
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
             - name: "Ošetření výjimek v\_C++"
               expanded: false
               items:
                 - name: "Ošetření výjimek v\_C++"
                   href: cpp/exception-handling-in-visual-cpp.md
-                - name: Ošetření výjimek
+                - name: Moderní osvědčené postupy v jazyce C++
+                  href: cpp/errors-and-exception-handling-modern-cpp.md
+                - name: "Postup návrhu s\_ohledem na bezpečnost výjimek"
+                  href: cpp/how-to-design-for-exception-safety.md
+                - name: Postup vytvoření rozhraní mezi kódem výjimek a ostatním kódem
+                  href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+                - name: 'try, throw a catch – příkazy'
+                  href: cpp/try-throw-and-catch-statements-cpp.md
+                - name: Postup vyhodnocení bloků catch
+                  href: cpp/how-catch-blocks-are-evaluated-cpp.md
+                - name: Výjimky a uvolnění zásobníku
+                  href: cpp/exceptions-and-stack-unwinding-in-cpp.md
+                - name: Specifikace výjimek (throw)
+                  href: cpp/exception-specifications-throw-cpp.md
+                - name: noexcept
+                  href: cpp/noexcept-cpp.md
+                - name: Neošetřené výjimky jazyka C++
+                  href: cpp/unhandled-cpp-exceptions.md
+                - name: Kombinace výjimek v jazycích C (strukturované) a C++
                   expanded: false
                   items:
-                    - name: Ošetření výjimek
-                      href: cpp/cpp-exception-handling.md
-                    - name: 'try, throw a catch – příkazy'
-                      href: cpp/try-throw-and-catch-statements-cpp.md
-                    - name: Postup vyhodnocení bloků catch
-                      href: cpp/how-catch-blocks-are-evaluated-cpp.md
-                    - name: Výjimky a uvolňování zásobníku v jazyce C++
-                      href: cpp/exceptions-and-stack-unwinding-in-cpp.md
-                    - name: Specifikace výjimek (throw)
-                      href: cpp/exception-specifications-throw-cpp.md
-                    - name: noexcept
-                      href: cpp/noexcept-cpp.md
-                    - name: Neošetřené výjimky jazyka C++
-                      href: cpp/unhandled-cpp-exceptions.md
                     - name: Kombinace výjimek v jazycích C (strukturované) a C++
-                      expanded: false
-                      items:
-                        - name: Kombinace výjimek v jazycích C (strukturované) a C++
-                          href: cpp/mixing-c-structured-and-cpp-exceptions.md
-                        - name: Použití funkcí setjmp-longjmp
-                          href: cpp/using-setjmp-longjmp.md
-                        - name: Ošetření strukturovaných výjimek v C++
-                          href: cpp/exception-handling-differences.md
+                      href: cpp/mixing-c-structured-and-cpp-exceptions.md
+                    - name: Použití funkcí setjmp-longjmp
+                      href: cpp/using-setjmp-longjmp.md
+                    - name: Ošetření strukturovaných výjimek v C++
+                      href: cpp/exception-handling-differences.md
                 - name: Strukturované ošetření výjimek (SEH) (C/C++)
                   expanded: false
                   items:

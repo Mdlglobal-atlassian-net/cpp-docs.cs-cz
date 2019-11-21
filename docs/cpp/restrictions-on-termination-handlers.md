@@ -6,22 +6,22 @@ helpviewer_keywords:
 - restrictions, termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 8b1cb481-303f-4e79-b409-57a002a9fa9e
-ms.openlocfilehash: 7b092ee8682dfeef0c8151c56544e36427f40da0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c39407270037756c55dc42aed80e1d04616c9ee
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244486"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246381"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Omezení obslužných rutin ukončení
 
-Nelze použít **goto** příkazu Přejít do **__try** blok příkazů nebo **__finally** blok příkazů. Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. (Můžete, ale přejít z celkového počtu **__try** blok příkazů.) Kromě toho nelze vnořovat obslužná rutina ukončení v případě obslužná rutina výjimky **__finally** bloku.
+You cannot use a **goto** statement to jump into a **__try** statement block or a **__finally** statement block. Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. (You can, however, jump out of a **__try** statement block.) Also, you cannot nest an exception handler or termination handler inside a **__finally** block.
 
-Kromě toho některé druhy kód v obslužné rutiny ukončení výsledkům sporné, proto byste měli použít opatrně, a pokud vůbec. Je **goto** příkaz, který vrací z celkového počtu **__finally** blok příkazů. Pokud blok se provádí jako součást normální ukončení, neobvyklé nic se nestane. Ale pokud systému je odvíjení zásobníku, který získá odvíjení zarážky a aktuální funkci řízení jakoby nebyly žádné abnormální ukončení.
+In addition, some kinds of code permitted in a termination handler produce questionable results, so you should use them with caution, if at all. One is a **goto** statement that jumps out of a **__finally** statement block. If the block is executing as part of normal termination, nothing unusual happens. But if the system is unwinding the stack, that unwinding stops, and the current function gains control as if there were no abnormal termination.
 
-A **vrátit** výroku uvnitř **__finally** blok příkazů představuje přibližně o stejnou situaci. Ovládací prvek vrátí volajícímu okamžitě funkce obsahující obslužné rutiny ukončení. Pokud systém byl odvíjení zásobníku, tento proces je zastaven a program pokračuje, jako kdyby byla bez výjimky vyvolána.
+A **return** statement inside a **__finally** statement block presents roughly the same situation. Control returns to the immediate caller of the function containing the termination handler. If the system was unwinding the stack, this process is halted, and the program proceeds as if there had been no exception raised.
 
 ## <a name="see-also"></a>Viz také:
 
-[Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

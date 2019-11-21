@@ -1,6 +1,6 @@
 ---
 title: /GX (povolení zpracování výjimek)
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 f1_keywords:
 - /gx
 helpviewer_keywords:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-ms.openlocfilehash: 43be8f6d0f080f0d85568ce5b089751fc68f0e8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 171ff0d0dfb1dec41bae5f6be63c941802c402a4
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292000"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245092"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (povolení zpracování výjimek)
 
-Zastaralé Povolí synchronní zpracování výjimek pomocí za předpokladu, že funkce deklarované s použitím `extern "C"` nikdy nevyvolají výjimku.
+Zastaralé Enables synchronous exception handling using the assumption that functions declared by using `extern "C"` never throw an exception.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,19 +30,17 @@ Zastaralé Povolí synchronní zpracování výjimek pomocí za předpokladu, ž
 
 ## <a name="remarks"></a>Poznámky
 
-**/GX** je zastaralý. Použít ekvivalent [/EHsc](eh-exception-handling-model.md) místo něj parametr. Seznam možností kompilátoru zastaralé, najdete v článku **zastaralé a odebrat možnosti kompilátoru** tématu [možnosti kompilátoru seřazené podle kategorie](compiler-options-listed-by-category.md).
+**/GX** is deprecated. Use the equivalent [/EHsc](eh-exception-handling-model.md) option instead. For a list of deprecated compiler options, see the **Deprecated and Removed Compiler Options** section in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
-Ve výchozím nastavení **/EHsc**, ekvivalent **/GX**, je v platnosti při kompilaci s použitím vývojového prostředí sady Visual Studio. Při použití nástroje příkazového řádku, je zadán bez ošetření výjimek. Toto je ekvivalentem **/GX-**.
-
-Další informace najdete v tématu [zpracování výjimek jazyka C++](../../cpp/cpp-exception-handling.md).
+By default, **/EHsc**, the equivalent of **/GX**, is in effect when you compile by using the Visual Studio development environment. When using the command line tools, no exception handling is specified. This is the equivalent of **/GX-** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Open the project's **Property Pages** dialog box. For details, see [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
 
-1. V navigačním podokně zvolte **vlastnosti konfigurace**, **C/C++**, **příkazového řádku**.
+1. In the navigation pane, choose **Configuration Properties**, **C/C++** , **Command Line**.
 
-1. Zadejte možnost do kompilátoru **další možnosti** pole.
+1. Type the compiler option in the **Additional Options** box.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 

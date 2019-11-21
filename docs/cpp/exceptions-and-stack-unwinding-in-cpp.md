@@ -1,31 +1,31 @@
 ---
-title: Výjimky a unwinding zásobníku v jazyce C++
-ms.date: 11/04/2016
+title: Výjimky a uvolňování zásobníku v jazyce C++
+ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-ms.openlocfilehash: 5e094101557469a189311ce2c5344bb895696649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11657206e86dbc81eb62c1e11b49fd87777f11d8
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398885"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246571"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Výjimky a unwinding zásobníku v jazyce C++
 
-V mechanismu výjimek jazyka C++ přesune ovládací prvek příkaz throw na první příkaz catch, který dokáže zpracovat vyvolaný typ. Pokud je dosažen příkaz catch, všechny automatické proměnné, které jsou v rozsahu mezi throw a catch – příkazy jsou zničeny v procesu, který se označuje jako *odvíjení zásobníku*. V odvíjení zásobníku pokračuje provádění takto:
+V mechanismu výjimek jazyka C++ přesune ovládací prvek příkaz throw na první příkaz catch, který dokáže zpracovat vyvolaný typ. When the catch statement is reached, all of the automatic variables that are in scope between the throw and catch statements are destroyed in a process that is known as *stack unwinding*. V odvíjení zásobníku pokračuje provádění takto:
 
-1. Ovládací prvek dosáhne **zkuste** příkaz normálním sekvenčním prováděním. Chráněné části v **zkuste** je blok proveden.
+1. Control reaches the **try** statement by normal sequential execution. The guarded section in the **try** block is executed.
 
-1. Pokud není vyvolána žádná výjimka za běhu chráněné části **catch** klauzule, které následují **zkuste** bloku již nebudou provedeny. Provádění pokračuje na příkazu za poslední **catch** klauzuli, která následuje přidružený **zkuste** bloku.
+1. If no exception is thrown during execution of the guarded section, the **catch** clauses that follow the **try** block are not executed. Execution continues at the statement after the last **catch** clause that follows the associated **try** block.
 
-1. Pokud je vyvolána výjimka při provádění chráněné části nebo v jakékoli rutině, kterou chráněná část volá přímo nebo nepřímo, je vytvořen objekt výjimky z objektu, který je vytvořen **throw** operand. (To znamená možné zahrnutí konstruktoru kopie.) V tomto okamžiku kompilátor hledá **catch** klauzule ve vyšším kontextu spuštění, který může zpracovat výjimku, která je vyvolána, nebo pro **catch** obslužná rutina, která dokáže zpracovat výjimky libovolného typu. **Catch** obslužné rutiny jsou zkoumány podle pořadí jejich vzhledu po **zkuste** bloku. Pokud je nalezena žádná odpovídající obslužná rutina, další dynamicky uzavírající **zkuste** bloku je zkontrolován. Tento proces pokračuje, dokud prozkoumán vnější uzavírající **zkuste** bloku je zkontrolován.
+1. If an exception is thrown during execution of the guarded section or in any routine that the guarded section calls either directly or indirectly, an exception object is created from the object that is created by the **throw** operand. (This implies that a copy constructor may be involved.) At this point, the compiler looks for a **catch** clause in a higher execution context that can handle an exception of the type that is thrown, or for a **catch** handler that can handle any type of exception. The **catch** handlers are examined in order of their appearance after the **try** block. If no appropriate handler is found, the next dynamically enclosing **try** block is examined. This process continues until the outermost enclosing **try** block is examined.
 
 1. Není-li stále nalezena odpovídající obslužná rutina nebo nastane-li výjimka v průběhu procesu odvíjení, avšak před získáním ovládacího prvku obslužnou rutinou, je za běhu zavolána předdefinovaná funkce `terminate`. Dojde-li k výjimce poté, co je vyvolána výjimka, avšak před zahájením procesu odvíjení, je zavolán příkaz `terminate`.
 
-1. Pokud odpovídající **catch** obslužná rutina se nachází a zachycena hodnotou, její parametr je inicializován zkopírováním objektu výjimky. Je-li zachycena na základě odkazu, je parametr inicializován pro odkázání na objekt výjimky. Po inicializaci parametru je zahájen proces odvíjení zásobníku. To zahrnuje zničení všech automatických objektů, které byly plně sestaveny –, ale dosud zničeny – mezi začátkem **zkuste** blok, který je přidružený **catch** obslužné rutiny a Vyvolejte lokality výjimky. Zničení nastane v obráceném pořadí vytvoření. **Catch** obslužná rutina se spustí a program pokračuje v provádění po poslední obslužné rutiny – to znamená, v prvním příkazu nebo konstrukci, která není **catch** obslužné rutiny. Ovládací prvek může vstoupit **catch** obslužná rutina skrze vyvolanou výjimku, nikdy prostřednictvím **goto** příkaz nebo **případ** popisku v **přepnout** příkaz.
+1. If a matching **catch** handler is found, and it catches by value, its formal parameter is initialized by copying the exception object. Je-li zachycena na základě odkazu, je parametr inicializován pro odkázání na objekt výjimky. Po inicializaci parametru je zahájen proces odvíjení zásobníku. This involves the destruction of all automatic objects that were fully constructed—but not yet destructed—between the beginning of the **try** block that is associated with the **catch** handler and the throw site of the exception. Zničení nastane v obráceném pořadí vytvoření. The **catch** handler is executed and the program resumes execution after the last handler—that is, at the first statement or construct that is not a **catch** handler. Control can only enter a **catch** handler through a thrown exception, never through a **goto** statement or a **case** label in a **switch** statement.
 
-## <a name="stack-unwinding-example"></a>Příklad odvíjení zásobníku
+## <a name="stack-unwinding-example"></a>Stack unwinding example
 
-Následující příklad ukazuje odvíjení zásobníku po vyvolání výjimky. Spuštění ve vlákně přejde z příkazu throw v `C` k příkazu catch v `main` a odvine každou funkci, na kterou narazí. Všimněte si pořadí, v jakém jsou objekty `Dummy` vytvářeny a následně zničeny při mizení z rozsahu. Všimněte si také, že žádná funkce není dokončena, s výjimkou funkce `main`, která obsahuje příkaz catch. Funkce `A` se nikdy nevrátí ze svého volání `B()` a `B` se nikdy vrátí ze svého volání `C()`. Po odstranění komentářů řádku definice ukazatele `Dummy` a odpovídajícího příkazu odstranění a po následném spuštění programu si všimněte, že ukazatel není nikdy odstraněn. To ukazuje, co se může stát, když funkce neposkytují záruku výjimky. Další informace najdete v tématu Postupy: Návrh výjimek. Zakomentováním příkazu catch lze sledovat, co se stane, když program skončí kvůli neošetřené výjimce.
+Následující příklad ukazuje odvíjení zásobníku po vyvolání výjimky. Spuštění ve vlákně přejde z příkazu throw v `C` k příkazu catch v `main` a odvine každou funkci, na kterou narazí. Všimněte si pořadí, v jakém jsou objekty `Dummy` vytvářeny a následně zničeny při mizení z rozsahu. Všimněte si také, že žádná funkce není dokončena, s výjimkou funkce `main`, která obsahuje příkaz catch. Funkce `A` se nikdy nevrátí ze svého volání `B()` a `B` se nikdy vrátí ze svého volání `C()`. Po odstranění komentářů řádku definice ukazatele `Dummy` a odpovídajícího příkazu odstranění a po následném spuštění programu si všimněte, že ukazatel není nikdy odstraněn. To ukazuje, co se může stát, když funkce neposkytují záruku výjimky. Další informace naleznete v tématu Postup: Návrh výjimek. Zakomentováním příkazu catch lze sledovat, co se stane, když program skončí kvůli neošetřené výjimce.
 
 ```cpp
 #include <string>

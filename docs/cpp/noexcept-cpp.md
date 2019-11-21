@@ -1,38 +1,38 @@
 ---
 title: noexcept (C++)
-ms.date: 01/12/2018
+ms.date: 11/19/2019
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: cf53aca918e36d18ab7f8aa14b01caaf0e55627c
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: 5e8d58ed246b0143dc3d3be545cd796a4c3d60ed
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69975887"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245629"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
-**C++ 11:** Určuje, zda funkce může vyvolat výjimky.
+**C++11:** Specifies whether a function might throw exceptions.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *s výjimkou výrazu*: &nbsp; &nbsp; &nbsp; svýjimkou&nbsp;(konstantní výraz &nbsp; &nbsp; &nbsp; &nbsp;  **)**
+> *noexcept-expression*: &nbsp;&nbsp;&nbsp;&nbsp;**noexcept** &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**
 
 ### <a name="parameters"></a>Parametry
 
 *constant-expression*<br/>
-Konstantní výraz typu **bool** , který představuje, zda je sada potenciálních typů výjimek prázdná. Nepodmíněný verze je ekvivalentem `noexcept(true)`.
+A constant expression of type **bool** that represents whether the set of potential exception types is empty. The unconditional version is equivalent to `noexcept(true)`.
 
 ## <a name="remarks"></a>Poznámky
 
-*Výraz s výjimkou* je druh *specifikace výjimky*, přípona deklarace funkce, která představuje sadu typů, které mohou odpovídat obslužné rutině výjimky pro jakoukoliv výjimku, která ukončí funkci. Unární podmíněný operátor `noexcept(` *constant_expression* `)` , kde *constant_expression* vrací **true**a jeho nepodmíněné synonymum **s výjimkou**, určete, že sada potenciálních typů výjimek, které funkci lze ukončit, protože je prázdná. To znamená, že funkce nikdy nevyvolá výjimku a nikdy neumožňuje šířit výjimku mimo svůj rozsah. Operátor `noexcept(` *constant_expression*, kde constant_expression vrací hodnotu false, nebo absence specifikace výjimky (jiné než pro destruktor nebo unallocation), označuje, že`)` sada možných výjimek, které mohou opustit funkci, je sada všech typů.
+A *noexcept expression* is a kind of *exception specification*, a suffix to a function declaration that represents a set of types that might be matched by an exception handler for any exception that exits a function. Unary conditional operator `noexcept(`*constant_expression*`)` where *constant_expression* yields **true**, and its unconditional synonym **noexcept**, specify that the set of potential exception types that can exit a function is empty. That is, the function never throws an exception and never allows an exception to be propagated outside its scope. The operator `noexcept(`*constant_expression*`)` where *constant_expression* yields **false**, or the absence of an exception specification (other than for a destructor or deallocation function), indicates that the set of potential exceptions that can exit the function is the set of all types.
 
-Označte funkci jako **s výjimkou** pouze v případě, že všechny funkce, které volá, buď přímo, nebo nepřímo, jsou také **s výjimkou** nebo **const**. Kompilátor nemusí nutně kontrolovat každou cestu kódu pro výjimky, které by mohly být součástí funkce **s výjimkou** . Pokud výjimka ukončí vnější rozsah funkce označené `noexcept`, [std:: Terminate](../standard-library/exception-functions.md#terminate) je vyvolána okamžitě a neexistuje žádná záruka, že se vyvolají destruktory všech objektů v oboru. Použijte **výjimku s výjimkou** namísto dynamického specifikátoru `throw()`výjimky, který je nyní zastaralý ve standardu. Doporučujeme použít `noexcept` pro všechny funkce, které nikdy neumožňují výjimku pro rozšíření zásobníku volání. Je-li funkce deklarována **s výjimkou**, umožňuje kompilátoru generovat efektivnější kód v několika různých kontextech. Další informace naleznete v tématu [Specifikace výjimek](exception-specifications-throw-cpp.md).
+Mark a function as **noexcept** only if all the functions that it calls, either directly or indirectly, are also **noexcept** or **const**. The compiler does not necessarily check every code path for exceptions that might bubble up to a **noexcept** function. If an exception does exit the outer scope of a function marked `noexcept`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked immediately, and there is no guarantee that destructors of any in-scope objects will be invoked. Use **noexcept** instead of the dynamic exception specifier `throw()`, which is now deprecated in the standard. We recommended you apply `noexcept` to any function that never allows an exception to propagate up the call stack. When a function is declared **noexcept**, it enables the compiler to generate more efficient code in several different contexts. For more information, see [Exception specifications](exception-specifications-throw-cpp.md).
 
 ## <a name="example"></a>Příklad
 
-Funkce šablony, která kopíruje svůj argument, může být deklarována **s výjimkou** podmínky, že objekt, který je kopírován, je prostým starým datovým typem (pod). Taková funkce by mohla být deklarována takto:
+A template function that copies its argument might be declared **noexcept** on the condition that the object being copied is a plain old data type (POD). Such a function could be declared like this:
 
 ```cpp
 #include <type_traits>
@@ -46,5 +46,5 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 
 ## <a name="see-also"></a>Viz také:
 
-[Zpracovávání výjimek v jazyce C++](cpp-exception-handling.md)<br/>
-[Specifikace výjimek (throw, s výjimkou)](exception-specifications-throw-cpp.md)
+[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
+[Exception Specifications (throw, noexcept)](exception-specifications-throw-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Nezpracované výjimky jazyka C++
+title: Neošetřené výjimky jazyka C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [C++], unhandled exceptions
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-ms.openlocfilehash: 85227e0bd0ca33f925e8fe72b6489fa81305d031
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd5ce722c5159041ba8fb0a4a41b942a1bd4614f
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312207"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246065"
 ---
-# <a name="unhandled-c-exceptions"></a>Nezpracované výjimky jazyka C++
+# <a name="unhandled-c-exceptions"></a>Neošetřené výjimky jazyka C++
 
-Pokud odpovídající obslužná rutina (nebo tlačítko se třemi tečkami **catch** obslužná rutina) nebyl nalezen aktuální výjimku, předdefinované `terminate` volá funkci run-time. (V libovolné obslužné rutině lze funkci `terminate` volat také explicitně.) Výchozí akcí funkce `terminate` je volání funkce `abort`. Chcete-li, aby funkce `terminate` vyvolala před ukončením aplikace jinou funkci v programu, vyvolejte funkci `set_terminate`, v jejímž jediném argumentu bude název funkce, která má být vyvolána. Funkci `set_terminate` lze vyvolat kdekoli v programu. `terminate` Rutina vždy volá poslední funkci předána jako argument pro `set_terminate`.
+If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. Chcete-li, aby funkce `terminate` vyvolala před ukončením aplikace jinou funkci v programu, vyvolejte funkci `set_terminate`, v jejímž jediném argumentu bude název funkce, která má být vyvolána. Funkci `set_terminate` lze vyvolat kdekoli v programu. The `terminate` routine always calls the last function given as an argument to `set_terminate`.
 
 ## <a name="example"></a>Příklad
 
@@ -56,4 +56,4 @@ Funkce `term_func` by měla ukončit program nebo aktuální vlákno, ideálně 
 
 ## <a name="see-also"></a>Viz také:
 
-[Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

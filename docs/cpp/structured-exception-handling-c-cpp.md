@@ -9,64 +9,64 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 4555690476bc149687c680fc2baae53b96658a4e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498484"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245127"
 ---
 # <a name="structured-exception-handling-cc"></a>Strukturované zpracování výjimek (C/C++)
 
-Strukturované zpracování výjimek (SEH) je rozšíření společnosti Microsoft pro jazyk C, které zpracovává určité výjimečné situace v kódu, například hardwarové chyby, řádným způsobem. I když Windows a C++ Microsoft podporují SEH, doporučujeme, abyste používali zpracování výjimek C++ standardu ISO, protože díky tomu je váš kód lépe přenosný a flexibilní. Chcete-li však zachovat stávající kód nebo konkrétní druhy programů, bude pravděpodobně nutné použít SEH.
+Structured exception handling (SEH) is a Microsoft extension to C to handle certain exceptional code situations, such as hardware faults, gracefully. Although Windows and Microsoft C++ support SEH, we recommend that you use ISO-standard C++ exception handling because it makes your code more portable and flexible. Nevertheless, to maintain existing code or for particular kinds of programs, you still might have to use SEH.
 
-**Specifické pro společnost Microsoft:**
+**Microsoft specific:**
 
 ## <a name="grammar"></a>Gramatika
 
-*try-except – příkaz* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *složený* příkaz **__except** **(** *výraz* **)** *složený* příkaz
+*try-except-statement* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
-*try-finally-příkaz* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *složený* příkaz **__finally** *složený* příkaz
+*try-finally-statement* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>Poznámky
 
-Pomocí SEH můžete zajistit, aby prostředky, jako jsou paměťové bloky a soubory, byly vydány správně, pokud se provádění nečekaně ukončí. Můžete také zpracovat konkrétní problémy, například nedostatečné množství paměti – pomocí stručného strukturovaného kódu, který nespoléhá na příkazy **goto** nebo vést testování návratových kódů.
+With SEH, you can ensure that resources such as memory blocks and files are released correctly if execution unexpectedly terminates. You can also handle specific problems—for example, insufficient memory—by using concise structured code that does not rely on **goto** statements or elaborate testing of return codes.
 
-Příkazy try-except a try-finally uvedené v tomto článku jsou rozšířeními společnosti Microsoft pro jazyk C. Podporují SEH tím, že umožňují aplikacím převzít řízení programu po událostech, které by jinak ukončily provádění. I když SEH funguje C++ se zdrojovými soubory, není speciálně navržen pro C++. Použijete- C++ li SEH v programu, který kompilujete pomocí možnosti [/EHa nebo/EHsc](../build/reference/eh-exception-handling-model.md) , destruktory pro lokální objekty se nazývají, ale jiné chování při provádění nemusí být to, co očekáváte. Ilustraci najdete v příkladu dále v tomto článku. Ve většině případů místo SEH doporučujeme používat standardní [ C++ zpracování výjimek](../cpp/try-throw-and-catch-statements-cpp.md)standardu ISO, které kompilátor Microsoftu C++ podporuje i. Pomocí C++ zpracování výjimek můžete zajistit, aby byl kód lépe přenosný, a můžete zpracovat výjimky libovolného typu.
+The try-except and try-finally statements referred to in this article are Microsoft extensions to the C language. They support SEH by enabling applications to gain control of a program after events that would otherwise terminate execution. Although SEH works with C++ source files, it's not specifically designed for C++. If you use SEH in a C++ program that you compile by using the [/EHa or /EHsc](../build/reference/eh-exception-handling-model.md) option, destructors for local objects are called but other execution behavior might not be what you expect. For an illustration, see the example later in this article. In most cases, instead of SEH we recommend that you use ISO-standard [C++ exception handling](../cpp/try-throw-and-catch-statements-cpp.md), which the Microsoft C++ compiler also supports. By using C++ exception handling, you can ensure that your code is more portable, and you can handle exceptions of any type.
 
-Pokud máte kód jazyka C, který používá SEH, můžete jej kombinovat s C++ kódem, který C++ používá zpracování výjimek. Informace naleznete v tématu [zpracování strukturovaných výjimek C++v ](../cpp/exception-handling-differences.md).
+If you have C code that uses SEH, you can mix it with C++ code that uses C++ exception handling. For information, see [Handle structured exceptions in C++](../cpp/exception-handling-differences.md).
 
-Existují dva mechanismy SEH:
+There are two SEH mechanisms:
 
-- [Obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)nebo bloky **__except** , které mohou reagovat na nebo zrušit výjimku.
+- [Exception handlers](../cpp/writing-an-exception-handler.md), or **__except** blocks, which can respond to or dismiss the exception.
 
-- [Obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)nebo bloky **__finally** , které jsou vždy volány, bez ohledu na to, zda výjimka způsobuje ukončení nebo ne.
+- [Termination handlers](../cpp/writing-a-termination-handler.md), or **__finally** blocks, which are always called, whether an exception causes termination or not.
 
-Tyto dva druhy obslužných rutin jsou odlišné, ale úzce se vztahují k procesu, který se označuje jako "odvinutí zásobníku". Pokud dojde k strukturované výjimce, systém Windows vyhledá naposledy nainstalovanou obslužnou rutinu výjimky, která je aktuálně aktivní. Obslužná rutina může provést jednu ze tří věcí:
+These two kinds of handlers are distinct, but are closely related through a process known as "unwinding the stack." When a structured exception occurs, Windows looks for the most recently installed exception handler that is currently active. The handler can do one of three things:
 
-- Nepodařilo se rozpoznat výjimku a předat řízení jiným obslužným rutinám.
+- Fail to recognize the exception and pass control to other handlers.
 
-- Rozpoznat výjimku, ale zavřít ji.
+- Recognize the exception but dismiss it.
 
-- Rozpoznat výjimku a zpracovat ji.
+- Recognize the exception and handle it.
 
-Obslužná rutina výjimky, která rozpozná výjimku, nesmí být ve funkci, která byla spuštěna v okamžiku, kdy došlo k výjimce. V některých případech může být ve funkci mnohem vyšší v zásobníku. Aktuálně spuštěná funkce a všechny ostatní funkce v rámci rámce zásobníku jsou ukončeny. Během tohoto procesu je zásobník "Replaced;", což znamená, že místní nestatické proměnné ukončených funkcí jsou ze zásobníku vymazány.
+The exception handler that recognizes the exception may not be in the function that was running when the exception occurred. In some cases, it may be in a function much higher on the stack. The currently running function and all other functions on the stack frame are terminated. During this process, the stack is "unwound;" that is, local non-static variables of terminated functions are cleared from the stack.
 
-Při uvolňování zásobníku volá operační systém jakékoli obslužné rutiny ukončení, které jste napsali pro jednotlivé funkce. Pomocí obslužné rutiny ukončení můžete vyčistit prostředky, které by jinak zůstaly otevřené z důvodu neobvyklého ukončení. Pokud jste zadali kritickou část, můžete ji ukončit v obslužné rutině ukončení. Pokud bude program vypnutý, můžete provádět další údržbu úlohy, jako je zavření a odebrání dočasných souborů.
+As it unwinds the stack, the operating system calls any termination handlers that you've written for each function. By using a termination handler, you can clean up resources that otherwise would remain open because of an abnormal termination. If you've entered a critical section, you can exit it in the termination handler. If the program is going to shut down, you can perform other housekeeping tasks such as closing and removing temporary files.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-- [Zápis obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)
+- [Writing an exception handler](../cpp/writing-an-exception-handler.md)
 
-- [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)
+- [Writing a termination handler](../cpp/writing-a-termination-handler.md)
 
 - [Ošetření strukturovaných výjimek v C++](../cpp/exception-handling-differences.md)
 
 ## <a name="example"></a>Příklad
 
-Jak bylo uvedeno dříve, destruktory pro lokální objekty jsou volány, pokud použijete C++ SEH v programu a zkompilujete pomocí možnosti **/EHa** nebo **/EHsc** . Chování při spuštění ale nemusí být očekávaným způsobem, pokud používáte i C++ výjimky. Tento příklad ukazuje tyto rozdíly v chování.
+As stated earlier, destructors for local objects are called if you use SEH in a C++ program and compile it by using the **/EHa** or **/EHsc** option. However, the behavior during execution may not be what you expect if you are also using C++ exceptions. This example demonstrates these behavioral differences.
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-Použijete-li **/EHsc** ke kompilaci tohoto kódu, ale makro `CPPEX` místního testovacího ovládacího prvku není definováno, neexistuje `TestClass` žádné spuštění destruktoru a výstup vypadá takto:
+If you use **/EHsc** to compile this code but the local test control macro `CPPEX` is undefined, there is no execution of the `TestClass` destructor and the output looks like this:
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-Použijete-li **/EHsc** pro zkompilování kódu `CPPEX` a je definována pomocí `/DCPPEX` (tak, že C++ je vyvolána výjimka), destruktor `TestClass` se spustí a výstup vypadá takto:
+If you use **/EHsc** to compile the code and `CPPEX` is defined by using `/DCPPEX` (so that a C++ exception is thrown), the `TestClass` destructor executes and the output looks like this:
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Použijete-li **/EHa** ke kompilaci kódu, vyvolá `TestClass` se destruktor bez ohledu na to, zda byla výjimka vyvolána pomocí `std::throw` nebo pomocí SEH k vyvolání výjimky, to znamená, zda `CPPEX` je definována nebo nikoli. Výstup bude vypadat nějak takto:
+If you use **/EHa** to compile the code, the `TestClass` destructor executes regardless of whether the exception was thrown by using `std::throw` or by using SEH to trigger the exception, that is, whether `CPPEX` defined or not. The output looks like this:
 
 ```Output
 Throwing C++ exception
@@ -138,14 +138,14 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Další informace naleznete v tématu [/EH (model zpracování výjimek)](../build/reference/eh-exception-handling-model.md).
+For more information, see [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md).
 
-**Specifické pro konec Microsoftu**
+**END Microsoft Specific**
 
 ## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
-[Zpracování chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Strukturované zpracování výjimek (Windows)](/windows/win32/debug/structured-exception-handling)
+[Errors and Exception Handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Structured Exception Handling (Windows)](/windows/win32/debug/structured-exception-handling)

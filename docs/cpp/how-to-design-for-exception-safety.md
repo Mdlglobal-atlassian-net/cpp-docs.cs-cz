@@ -1,29 +1,29 @@
 ---
-title: 'Postupy: Návrh pro bezpečnost výjimek'
+title: 'How to: Design for exception safety'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183710"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246520"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Postupy: Návrh pro bezpečnost výjimek
+# <a name="how-to-design-for-exception-safety"></a>How to: Design for exception safety
 
 Jednou z výhod mechanismu výjimek je, že vykonávání spolu s daty o výjimce přejde přímo z příkazu, který výjimku vyvolal, na první příkaz catch, který tuto výjimku zpracuje. Tato obslužná rutina může být v zásobníku volání o libovolný počet úrovní výše. Funkce, které se volají mezi příkazem try a příkazem throw, nemusí o vyvolání této výjimky nic vědět.  Avšak musí být navrženy tak, aby se v jakémkoli bodě, kde se výjimka může šířit výše, mohly „nečekaně“ dostat mimo rozsah, a to bez zanechání částečně vytvořených objektů, úniku paměti nebo datových struktur, které jsou v nepoužitelném stavu.
 
-## <a name="basic-techniques"></a>Základní postupy
+## <a name="basic-techniques"></a>Basic techniques
 
 Robustní zásady zpracování výjimek je nutné pečlivě promyslet a měly by být součástí procesu návrhu. Obecně je většina výjimek zjištěna a vyvolána v nižších vrstvách softwarového modulu, ačkoli obvykle tyto vrstvy nemají dostatek kontextu pro zpracování těchto chyb nebo vystavení zprávy koncovým uživatelům. Ve středních vrstvách mohou funkce výjimku zachytit a znovu vyvolat, pokud je nutné objekt výjimky zkontrolovat nebo pokud obsahuje další užitečné informace pro vyšší vrstvu, která výjimku nakonec zachytí. Funkce by měla výjimku zachytit a „spolknout“ pouze v případě, že je schopna se z této výjimky zcela obnovit. V mnoha případech je správným chováním v prostředních vrstvách umožnit výjimce šíření výše zásobníkem volání. Dokonce i v nejvyšší vrstvě může být vhodné nechat neošetřenou výjimku ukončit program, pokud tato výjimka zanechá program ve stavu, ve kterém nelze zaručit jeho správnost.
 
 Bez ohledu na to, jak funkce výjimku zpracovává, musí být navržena podle následujících základních pravidel, aby byla zaručena bezpečnost výjimek.
 
-### <a name="keep-resource-classes-simple"></a>Třídy prostředků ponechejte jednoduché
+### <a name="keep-resource-classes-simple"></a>Keep resource classes simple
 
-Při ruční resource management ve třídách zapouzdříte, použijte třídu, která nemá žádný účinek kromě správy na jediný prostředek. Udržováním třídy jednoduché, snížíte riziko zavlečení nedostatku prostředků. Použití [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md) Pokud je to možné, jak je znázorněno v následujícím příkladu. Tento příklad je záměrně umělý a zjednodušený, aby byly zvýrazněny rozdíly při použití `shared_ptr`.
+When you encapsulate manual resource management in classes, use a class that does nothing except manage a single resource. By keeping the class simple, you reduce the risk of introducing resource leaks. Use [smart pointers](smart-pointers-modern-cpp.md) when possible, as shown in the following example. Tento příklad je záměrně umělý a zjednodušený, aby byly zvýrazněny rozdíly při použití `shared_ptr`.
 
 ```cpp
 // old-style new/delete version
@@ -83,29 +83,29 @@ public:
 };
 ```
 
-### <a name="use-the-raii-idiom-to-manage-resources"></a>Použití vzoru RAII pro správu prostředků
+### <a name="use-the-raii-idiom-to-manage-resources"></a>Use the RAII idiom to manage resources
 
-Na bezpečnost výjimek, musí zajistit objekty, že byla přidělena pomocí funkce `malloc` nebo **nové** jsou zničeny, a všechny prostředky, jako jsou popisovače souborů, jsou uzavřít nebo uvolnit i v případě, že dojde k výjimce. *Získání prostředků je inicializace* (RAII) svazuje správu takových prostředků s životností automatických proměnných. Když se funkce dostane mimo rozsah, a to buď vrácením běžným způsobem, nebo z důvodu výjimky, jsou zavolány destruktory všech plně konstruovaných automatických proměnných. Obalový objekt vzoru RAII, jako je inteligentní ukazatel, ve svém destruktoru volá příslušnou funkci odstranění nebo uzavření. V kódu bezpečném z hlediska výjimek je obzvláště důležité ihned předat vlastnictví každého prostředku nějakému typu objektu RAII. Všimněte si, `vector`, `string`, `make_shared`, `fstream`, a podobné třídy řeší získání prostředku za vás.  Ale `unique_ptr` a tradiční `shared_ptr` jsou speciální konstrukce, protože získání prostředků provádí uživatel namísto tohoto objektu; proto se berou podle *uvolnění prostředků je zničení* , ale sporná podle vzoru RAII.
+To be exception-safe, a function must ensure that objects that it has allocated by using `malloc` or **new** are destroyed, and all resources such as file handles are closed or released even if an exception is thrown. The *Resource Acquisition Is Initialization* (RAII) idiom ties management of such resources to the lifespan of automatic variables. Když se funkce dostane mimo rozsah, a to buď vrácením běžným způsobem, nebo z důvodu výjimky, jsou zavolány destruktory všech plně konstruovaných automatických proměnných. Obalový objekt vzoru RAII, jako je inteligentní ukazatel, ve svém destruktoru volá příslušnou funkci odstranění nebo uzavření. V kódu bezpečném z hlediska výjimek je obzvláště důležité ihned předat vlastnictví každého prostředku nějakému typu objektu RAII. Note that the `vector`, `string`, `make_shared`, `fstream`, and similar classes handle acquisition of the resource for you.  However, `unique_ptr` and traditional `shared_ptr` constructions are special because resource acquisition is performed by the user instead of the object; therefore, they count as *Resource Release Is Destruction* but are questionable as RAII.
 
-## <a name="the-three-exception-guarantees"></a>Tři záruky výjimky
+## <a name="the-three-exception-guarantees"></a>The three exception guarantees
 
-Obvykle je bezpečnost výjimek popisována v pojmech tří záruk výjimky, které může funkce poskytovat: *záruka žádného selhání*, *silná záruka*a *základní záruka* .
+Typically, exception safety is discussed in terms of the three exception guarantees that a function can provide: the *no-fail guarantee*, the *strong guarantee*, and the *basic guarantee*.
 
-### <a name="no-fail-guarantee"></a>Záruka žádného selhání
+### <a name="no-fail-guarantee"></a>No-fail guarantee
 
 Záruka žádného selhání (nebo „bez vyvolání výjimky“) je nejsilnější záruka, kterou funkce může poskytnout. Uvádí, že funkce nevyvolá výjimku a žádné výjimce nepovolí šíření. Takovou záruku však nelze spolehlivě poskytnout, pokud (a) nejsou všechny funkce, které tato funkce volá, také se zárukou žádného selhání nebo (b) nejsou všechny vyvolané výjimky zachyceny předtím, než dosáhnou této funkce nebo (c) nejsou všechny výjimky, které mohou dosáhnout tuto funkci, zachyceny a správně zpracovány.
 
-Silná i základní záruka se spoléhají na předpoklad, že destruktory jsou se zárukou žádného selhání. Všechny kontejnery a typy ve standardní knihovně zaručují, že jejich destruktory nevyvolají výjimku. Existuje také požadavek konverzace: Standardní knihovna vyžaduje, aby uživatelem definované typy, které jsou uvedené –, jako například argumenty šablony, musí mít non-throwing. destruktory.
+Silná i základní záruka se spoléhají na předpoklad, že destruktory jsou se zárukou žádného selhání. Všechny kontejnery a typy ve standardní knihovně zaručují, že jejich destruktory nevyvolají výjimku. Existuje také požadavek, že standardní knihovna vyžaduje, aby uživatelské typy, jako například argumenty šablony, měly destruktory, které nevyvolají výjimku.
 
-### <a name="strong-guarantee"></a>Silná záruka
+### <a name="strong-guarantee"></a>Strong guarantee
 
 Silná záruka udává, že pokud se funkce z důvodu výjimky dostane mimo rozsah, nenastane únik paměti a stav programu nebude změněn. Funkce poskytující silnou záruku je v podstatě transakce se sémantikou potvrzení nebo vrácení. Buď je zcela úspěšná, nebo nemá žádný vliv.
 
-### <a name="basic-guarantee"></a>Základní záruka
+### <a name="basic-guarantee"></a>Basic guarantee
 
 Základní záruka je z těchto tří záruk nejslabší. Avšak může být nejlepší volbou, pokud je silná záruka příliš náročná na spotřebu paměti nebo výkon. Základní záruka udává, že pokud dojde k výjimce, nenastane žádný únik paměti a objekt bude ve stále použitelném stavu i v případě, že data mohla být změněna.
 
-## <a name="exception-safe-classes"></a>Třídy bezpečné z hlediska výjimek
+## <a name="exception-safe-classes"></a>Exception-safe classes
 
 Třída může pomoci zajistit svou vlastní bezpečnost výjimek i v případě, že je využívána nebezpečnými funkcemi tím, že neumožní své částečné vytvoření nebo částečné zničení. Pokud se konstruktor třídy ukončí před dokončením, není tento objekt nikdy vytvořen a jeho destruktor není nikdy zavolán. I když destruktory automatických proměnných inicializovaných před výjimkou budou zavolány, nastane únik dynamicky přidělené paměti nebo prostředků, které nejsou spravovány inteligentním ukazatelem nebo podobnou automatickou proměnnou.
 
@@ -121,5 +121,5 @@ Předdefinované typy jsou všechny se zárukou žádného selhání a typy stan
 
 ## <a name="see-also"></a>Viz také:
 
-[Ošetření chyb a výjimek (moderní verze jazyka C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Postupy: Rozhraní mezi kódem výjimek a ostatním kódem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
+[Postupy: Rozhraní mezi kódem výjimek a ostatním kódem](how-to-interface-between-exceptional-and-non-exceptional-code.md)

@@ -19,24 +19,24 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: a55c1f2d5c2e73028b337d17b74fe1280f670707
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266778"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245146"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try, throw a catch – příkazy (C++)
 
-K implementaci zpracování výjimek v C++, můžete použít **zkuste**, **throw**, a **catch** výrazy.
+To implement exception handling in C++, you use **try**, **throw**, and **catch** expressions.
 
-Nejprve **zkuste** bloku uzavřete jeden nebo více příkazů, které mohou vyvolat výjimku.
+First, use a **try** block to enclose one or more statements that might throw an exception.
 
-A **throw** výraz signalizuje, že výjimečné podmínce – často chybě – došlo k chybě v **zkuste** bloku. Objekt jakéhokoli typu můžete použít jako operand **throw** výrazu. Tento objekt je obvykle používán ke sdělování informací o dané chybě. Ve většině případů doporučujeme použít [std::exception](../standard-library/exception-class.md) třídy nebo některé z odvozených tříd, které jsou definovány ve standardní knihovně. Pokud jeden z nich není vhodná, doporučujeme odvodit vlastní třídu výjimek z `std::exception`.
+A **throw** expression signals that an exceptional condition—often, an error—has occurred in a **try** block. You can use an object of any type as the operand of a **throw** expression. Tento objekt je obvykle používán ke sdělování informací o dané chybě. In most cases, we recommend that you use the [std::exception](../standard-library/exception-class.md) class or one of the derived classes that are defined in the standard library. If one of those is not appropriate, we recommend that you derive your own exception class from  `std::exception`.
 
-Zpracování výjimek, které mohou být vyvolány, implementujte jeden nebo více **catch** bloky hned za **zkuste** bloku. Každý **catch** bloku Určuje typ výjimky, které dokáže zpracovat.
+To handle exceptions that may be thrown, implement one or more **catch** blocks immediately following a **try** block. Each **catch** block specifies the type of exception it can handle.
 
-Tento příklad ukazuje **zkuste** bloku a jeho obslužné rutiny. Předpokládejme, že `GetNetworkResource()` získává data přes síťové připojení a že tyto dva typy výjimek jsou třídy definované uživatelem, které jsou odvozeny z `std::exception`. Všimněte si, že tyto výjimky jsou zachyceny pomocí **const** odkazovat **catch** příkazu. Doporučujeme vyvolat výjimky podle hodnoty a zachytit jej podle odkazu const.
+This example shows a **try** block and its handlers. Assume that `GetNetworkResource()` acquires data over a network connection and that the two exception types are user-defined classes that derive from `std::exception`. Notice that the exceptions are caught by **const** reference in the **catch** statement. Doporučujeme vyvolat výjimky podle hodnoty a zachytit jej podle odkazu const.
 
 ## <a name="example"></a>Příklad
 
@@ -74,9 +74,9 @@ MyData GetNetworkResource()
 
 ## <a name="remarks"></a>Poznámky
 
-Kód za **zkuste** klauzule je chráněná část kódu. **Throw** výraz *vyvolá*– to znamená, vyvolá – výjimku. Blok kódu po **catch** klauzule je obslužná rutina výjimky. To je obslužná rutina, která *zachytí* výjimku, která je vyvolána, pokud typy ve **throw** a **catch** výrazy jsou kompatibilní. Seznam pravidel, která určují typ shody v **catch** bloky, naleznete v tématu [How Catch Blocks vyhodnocují](../cpp/how-catch-blocks-are-evaluated-cpp.md). Pokud **catch** příkaz určuje tři tečky (...) místo typu, **catch** bloku zpracovává každý typ výjimky. Pokud kompilujete s [/EHa](../build/reference/eh-exception-handling-model.md) možnost, může jít o strukturované výjimky jazyka C a systémem či aplikacemi generované asynchronní výjimky, jako je paměť ochrany, dělení nulou a s plovoucí desetinnou čárkou porušení . Protože **catch** bloky se zpracovávají v pořadí programu se najít odpovídající typ, obslužná rutina tří teček musí být poslední obslužnou rutinou pro přidružený **zkuste** bloku. Použití `catch(...)` používejte opatrně neumožňují programu pokračovat, dokud blok catch ví, jak zpracovat určitou výjimku, která je zachycena. Obvykle `catch(...)` blokování se používá k protokolování chyb a provádění zvláštního vyčištění před zastavením spuštění programu.
+The code after the **try** clause is the guarded section of code. The **throw** expression *throws*—that is, raises—an exception. The code block after the **catch** clause is the exception handler. This is the handler that *catches* the exception that's thrown if the types in the **throw** and **catch** expressions are compatible. For a list of rules that govern type-matching in **catch** blocks, see [How Catch Blocks are Evaluated](../cpp/how-catch-blocks-are-evaluated-cpp.md). If the **catch** statement specifies an ellipsis (...) instead of a type, the **catch** block handles every type of exception. When you compile with the [/EHa](../build/reference/eh-exception-handling-model.md) option, these can include C structured exceptions and system-generated or application-generated asynchronous exceptions such as memory protection, divide-by-zero, and floating-point violations. Because **catch** blocks are processed in program order to find a matching type, an ellipsis handler must be the last handler for the associated **try** block. Use `catch(...)` with caution; do not allow a program to continue unless the catch block knows how to handle the specific exception that is caught. Typically, a `catch(...)` block is used to log errors and perform special cleanup before program execution is stopped.
 
-A **throw** výraz, který nemá žádné operandy, znovu vyvolá aktuálně zpracovávanou výjimku. Doporučujeme tento formulář při opětném vyvolávání výjimky, protože se tak zachovají informace o polymorfním typu původní výjimky. Takový výraz byste měli použít pouze ve **catch** obslužné rutiny nebo ve funkci, která je volána z **catch** obslužné rutiny. Objekt znovu vyvolané výjimky je původní objekt výjimky, ne kopie.
+A **throw** expression that has no operand re-throws the exception currently being handled. Doporučujeme tento formulář při opětném vyvolávání výjimky, protože se tak zachovají informace o polymorfním typu původní výjimky. Such an expression should only be used in a **catch** handler or in a function that's called from a **catch** handler. Objekt znovu vyvolané výjimky je původní objekt výjimky, ne kopie.
 
 ```cpp
 try {
@@ -93,7 +93,7 @@ catch(...) {
 
 ## <a name="see-also"></a>Viz také:
 
-[Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)<br/>
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Nezpracované výjimky jazyka C++](../cpp/unhandled-cpp-exceptions.md)<br/>
 [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

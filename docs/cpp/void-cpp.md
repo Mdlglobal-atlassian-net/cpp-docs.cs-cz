@@ -8,22 +8,22 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: cb4be000c3c41862d5b4df766d21ae1cddeb6838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d01d5b50cb347736bbd2a42fb76811bdfdb546c
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243988"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245206"
 ---
 # <a name="void-c"></a>void (C++)
 
-Při použití jako návratový typ funkce **void** – klíčové slovo určuje, že funkce nevrací hodnotu. Při použití pro seznam parametrů funkce určuje void, že funkce nepřebírá žádné parametry. Při použití v deklaraci ukazatele určuje void, že je ukazatel „univerzální“.
+When used as a function return type, the **void** keyword specifies that the function does not return a value. When used for a function's parameter list, **void** specifies that the function takes no parameters. When used in the declaration of a pointer, **void** specifies that the pointer is "universal."
 
-Pokud je ukazatel typu `void *`, může odkazovat na libovolnou proměnnou, která není deklarována s **const** nebo **volatile** – klíčové slovo. Ukazatel void nelze přímo odkázat, pokud není přetypován na jiný typ. Ukazatel void lze převést na libovolný typ datového ukazatele.
+If a pointer's type is **void\*** , the pointer can point to any variable that is not declared with the **const** or **volatile** keyword. A **void\*** pointer cannot be dereferenced unless it is cast to another type. A **void\*** pointer can be converted into any other type of data pointer.
 
-Ukazatel void může v jazyce C++ odkazovat na funkci, ale nikoli na člen třídy.
+A **void** pointer can point to a function, but not to a class member in C++.
 
-Nelze deklarovat proměnnou typu void.
+You cannot declare a variable of type **void**.
 
 ## <a name="example"></a>Příklad
 

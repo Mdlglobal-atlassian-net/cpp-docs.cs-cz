@@ -1,5 +1,5 @@
 ---
-title: Kombinace jazyka C (strukturované) a výjimky jazyka C++
+title: Mixing C (structured) and C++ exceptions
 ms.date: 08/14/2018
 helpviewer_keywords:
 - exceptions [C++], mixed C and C++
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - catch keyword [C++], mixed
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
-ms.openlocfilehash: 94d6dc249cb130aaf09d3202b9e8f437d00a9597
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e49731f1c81057002eaae2bef16cda4a5cf86f8d
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345958"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246464"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Kombinace jazyka C (strukturované) a výjimky jazyka C++
+# <a name="mixing-c-structured-and-c-exceptions"></a>Mixing C (structured) and C++ exceptions
 
-Pokud chcete zapsat přenositelný kód, není doporučeno používat zpracování strukturovaných výjimek (SEH) v programu v jazyce C++. Však můžete někdy chtít zkompilovat pomocí [/EHa](../build/reference/eh-exception-handling-model.md) spojit strukturované výjimky a zdrojový kód jazyka C++ a někdy třeba zařízení pro práci s oběma druhy výjimek. Protože obslužná rutina strukturované výjimky nemá žádný koncept objektů ani typových výjimek, nemůže zpracovat výjimky vyvolané z kódu jazyka C++. Nicméně C++ **catch** obslužné rutiny strukturované výjimky zpracovat mohou. C++Syntaxe pro zpracování výjimek (**zkuste**, **throw**, **catch**) neakceptuje kompilátor jazyka C, ale syntaxe zpracování strukturovaných výjimek (**definovaný blok __try**, **__except**, **__finally**) je podporován C++ kompilátoru.
+If you want to write portable code, the use of structured exception handling (SEH) in a C++ program isn't recommended. However, you may sometimes want to compile using [/EHa](../build/reference/eh-exception-handling-model.md) and mix structured exceptions and C++ source code, and need some facility for handling both kinds of exceptions. Because a structured exception handler has no concept of objects or typed exceptions, it can't handle exceptions thrown by C++ code. However, C++ **catch** handlers can handle structured exceptions. C++ exception handling syntax (**try**, **throw**, **catch**) isn't accepted by the C compiler, but structured exception handling syntax ( **__try**, **__except**, **__finally**) is supported by the C++ compiler.
 
-Zobrazit [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) informace o tom, jak zpracování strukturovaných výjimek jako C++ výjimky.
+See [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) for information on how to handle structured exceptions as C++ exceptions.
 
-Jsou-li zkombinovány strukturované a výjimky jazyka C++, mějte na paměti těchto potenciálních problémů:
+If you mix structured and C++ exceptions, be aware of these potential issues:
 
 - Výjimky jazyka C++ a strukturované výjimky nelze kombinovat v rámci stejné funkce.
 
-- Obslužné rutiny ukončení (**__finally** bloky) jsou provedeny vždy, i v případě odvíjení po vyvolání výjimky.
+- Termination handlers ( **__finally** blocks) are always executed, even during unwinding after an exception is thrown.
 
-- Zpracování výjimek jazyka C++ může zachytit a zachovat sémantiku odvíjení ve všech modulech zkompilovaných pomocí [/EH](../build/reference/eh-exception-handling-model.md) – možnosti kompilátoru, které umožňují sémantiku odvíjení.
+- C++ exception handling can catch and preserve unwind semantics in all modules compiled with the [/EH](../build/reference/eh-exception-handling-model.md) compiler options, which enable unwind semantics.
 
-- Mohou existovat situace, ve kterých nejsou funkce destruktoru volány pro všechny objekty. Například pokud se strukturovaná výjimka objeví při pokusu provést volání funkce prostřednictvím ukazatele neinicializované funkce, přičemž tato funkce přijímá jako parametry objekty, které byly vytvořeny před voláním, destruktory tyto objekty nejsou volány během odvíjení zásobníku.
+- Mohou existovat situace, ve kterých nejsou funkce destruktoru volány pro všechny objekty. For example, if a structured exception occurs while attempting to make a function call through an uninitialized function pointer, and that function takes as parameters objects that were constructed before the call, the destructors of those objects are not called during stack unwind.
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Použití funkcí setjmp a longjmp v programech jazyka C++](../cpp/using-setjmp-longjmp.md)
+- [Using setjmp or longjmp in C++ programs](../cpp/using-setjmp-longjmp.md)
 
-  Zobrazit další informace týkající se použití `setjmp` a `longjmp` v programech jazyka C++.
+  See more information on the use of `setjmp` and `longjmp` in C++ programs.
 
 - [Ošetření strukturovaných výjimek v C++](../cpp/exception-handling-differences.md)
 
-  Příklady způsobů, jak vám umožní zpracování strukturovaných výjimek jazyka C++.
+  See examples of the ways you can use C++ to handle structured exceptions.
 
 ## <a name="see-also"></a>Viz také:
 
-[Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

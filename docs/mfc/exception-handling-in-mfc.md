@@ -1,6 +1,6 @@
 ---
 title: Zpracování výjimek v prostředí MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 helpviewer_keywords:
 - DAO [MFC], exceptions
 - assertions [MFC], When to use exceptions
@@ -33,83 +33,82 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: e8c0f1feba566ef9b961edcfacb9124830f9851d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7d1be30edec598135eed2a74fca87f1e5444f55d
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508625"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246734"
 ---
 # <a name="exception-handling-in-mfc"></a>Zpracování výjimek v prostředí MFC
 
-Tento článek vysvětluje mechanismy zpracování výjimek, které jsou k dispozici v knihovně MFC. K dispozici jsou dva mechanismy:
+This article explains the exception-handling mechanisms available in MFC. Two mechanisms are available:
 
-- C++výjimky, které jsou k dispozici v knihovně MFC verze 3,0 a novější
+- C++ exceptions, available in MFC version 3.0 and later
 
-- Makra výjimek knihovny MFC, která jsou k dispozici v MFC verzích 1,0 a novější
+- The MFC exception macros, available in MFC versions 1.0 and later
 
-Pokud vytváříte novou aplikaci pomocí knihovny MFC, měli byste použít C++ mechanismus. Mechanismus založený na makrech můžete použít, pokud již vaše existující aplikace tento mechanismus často používá.
+If you're writing a new application using MFC, you should use the C++ mechanism. You can use the macro-based mechanism if your existing application already uses that mechanism extensively.
 
-Existující kód můžete snadno převést na použití C++ výjimek namísto maker výjimek knihovny MFC. Výhody převodu kódu a pokynů pro jejich účely jsou popsány v článku [výjimky: Převod z maker](../mfc/exceptions-converting-from-mfc-exception-macros.md)výjimek knihovny MFC.
+You can readily convert existing code to use C++ exceptions instead of the MFC exception macros. Advantages of converting your code and guidelines for doing so are described in the article [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
-Pokud jste již vytvořili aplikaci pomocí maker výjimek knihovny MFC, můžete nadále používat tato makra v existujícím kódu při použití C++ výjimek v novém kódu. Výjimky článků [: Změny maker výjimek ve verzi 3,0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) obsahují pokyny k tomu, jak to provést.
+If you have already developed an application using the MFC exception macros, you can continue using these macros in your existing code, while using C++ exceptions in your new code. The article [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) gives guidelines for doing so.
 
 > [!NOTE]
->  Chcete- C++ li ve svém kódu povolit zpracování výjimek, C++ vyberte možnost povolit výjimky na stránce generování kódu ve složceC++ C nebo v dialogovém okně [stránky vlastností](../build/reference/property-pages-visual-cpp.md) projektu, nebo použijte možnost kompilátoru [/EHsc](../build/reference/eh-exception-handling-model.md) .
+>  To enable C++ exception handling in your code, select Enable C++ Exceptions on the Code Generation page in the C/C++ folder of the project's [Property Pages](../build/reference/property-pages-visual-cpp.md) dialog box, or use the [/EHsc](../build/reference/eh-exception-handling-model.md) compiler option.
 
-Tento článek se zabývá následujícími tématy:
+This article covers the following topics:
 
-- [Kdy použít výjimky](#_core_when_to_use_exceptions)
+- [When to use exceptions](#_core_when_to_use_exceptions)
 
-- [Podpora výjimek MFC](#_core_mfc_exception_support)
+- [MFC exception support](#_core_mfc_exception_support)
 
-- [Další informace o výjimkách](#_core_further_reading_about_exceptions)
+- [Further reading about exceptions](#_core_further_reading_about_exceptions)
 
-##  <a name="_core_when_to_use_exceptions"></a>Kdy použít výjimky
+##  <a name="_core_when_to_use_exceptions"></a> When to Use Exceptions
 
-Při volání funkce během provádění programu mohou nastat tři kategorie výsledků: normální spuštění, chybné provedení nebo abnormální spuštění. Každá kategorie je popsána níže.
+Three categories of outcomes can occur when a function is called during program execution: normal execution, erroneous execution, or abnormal execution. Each category is described below.
 
-- Normální spuštění
+- Normal execution
 
-   Funkce se může provádět normálně a vracet. Některé funkce vrátí kód výsledku volajícímu, který označuje výsledek funkce. Možné kódy výsledků jsou striktně definovány pro funkci a představují rozsah možných výsledků funkce. Výsledný kód může indikovat úspěch nebo neúspěch nebo může dokonce indikovat konkrétní typ selhání, který je v normálním rozsahu očekávání. Například funkce stavu souboru může vracet kód, který indikuje, že soubor neexistuje. Všimněte si, že termín "kód chyby" se nepoužívá, protože výsledný kód představuje jeden z mnoha očekávaných výsledků.
+   The function may execute normally and return. Some functions return a result code to the caller, which indicates the outcome of the function. The possible result codes are strictly defined for the function and represent the range of possible outcomes of the function. The result code can indicate success or failure or can even indicate a particular type of failure that is within the normal range of expectations. For example, a file-status function can return a code that indicates that the file does not exist. Note that the term "error code" is not used because a result code represents one of many expected outcomes.
 
-- Chybné spuštění
+- Erroneous execution
 
-   Volající způsobuje chybu v předání argumentů funkci nebo volání funkce v nevhodném kontextu. Tato situace způsobí chybu a měla by být zjištěna kontrolním výrazem během vývoje programu. (Další informace o kontrolních výrazech naleznete v tématu [CC++ /kontrolní výrazy](/visualstudio/debugger/c-cpp-assertions).)
+   The caller makes some mistake in passing arguments to the function or calls the function in an inappropriate context. This situation causes an error, and it should be detected by an assertion during program development. (For more information on assertions, see [C/C++ Assertions](/visualstudio/debugger/c-cpp-assertions).)
 
-- Abnormální spuštění
+- Abnormal execution
 
-   Neobvyklé provádění zahrnuje situace, kdy podmínky mimo řízení programu, například chyby nedostatku paměti nebo vstupně-výstupních chyb, ovlivňují výsledek funkce. Neobvyklé situace by měly být zpracovány zachycením a vygenerováním výjimek.
+   Abnormal execution includes situations where conditions outside the program's control, such as low memory or I/O errors, are influencing the outcome of the function. Abnormal situations should be handled by catching and throwing exceptions.
 
-Použití výjimek je zvláště vhodné při abnormálním spuštění.
+Using exceptions is especially appropriate for abnormal execution.
 
-##  <a name="_core_mfc_exception_support"></a>Podpora výjimek MFC
+##  <a name="_core_mfc_exception_support"></a> MFC Exception Support
 
-Bez ohledu na to C++ , zda používáte výjimky přímo nebo použijte makra výjimek knihovny MFC, budete používat [CException – třídy](../mfc/reference/cexception-class.md) nebo `CException`odvozené objekty, které mohou být vyvolány rozhraním nebo aplikací.
+Whether you use the C++ exceptions directly or use the MFC exception macros, you will use [CException Class](../mfc/reference/cexception-class.md) or `CException`-derived objects that may be thrown by the framework or by your application.
 
-V následující tabulce jsou uvedeny předdefinované výjimky poskytované knihovnou MFC.
+The following table shows the predefined exceptions provided by MFC.
 
 |Exception – třída|Význam|
 |---------------------|-------------|
-|[CMemoryException – třída](../mfc/reference/cmemoryexception-class.md)|Nedostatek paměti|
-|[CFileException – třída](../mfc/reference/cfileexception-class.md)|Výjimka souboru|
-|[CArchiveException – třída](../mfc/reference/carchiveexception-class.md)|Výjimka archivu/serializace|
-|[CNotSupportedException – třída](../mfc/reference/cnotsupportedexception-class.md)|Odpověď na požadavek na nepodporovanou službu|
-|[CResourceException – třída](../mfc/reference/cresourceexception-class.md)|Výjimka přidělení prostředků Windows|
-|[CDaoException – třída](../mfc/reference/cdaoexception-class.md)|Výjimky databáze (třídy DAO)|
-|[CDBException – třída](../mfc/reference/cdbexception-class.md)|Výjimky databáze (třídy rozhraní ODBC)|
+|[CMemoryException – třída](../mfc/reference/cmemoryexception-class.md)|Out-of-memory|
+|[CFileException – třída](../mfc/reference/cfileexception-class.md)|File exception|
+|[CArchiveException – třída](../mfc/reference/carchiveexception-class.md)|Archive/Serialization exception|
+|[CNotSupportedException – třída](../mfc/reference/cnotsupportedexception-class.md)|Response to request for unsupported service|
+|[CResourceException – třída](../mfc/reference/cresourceexception-class.md)|Windows resource allocation exception|
+|[CDaoException – třída](../mfc/reference/cdaoexception-class.md)|Database exceptions (DAO classes)|
+|[CDBException – třída](../mfc/reference/cdbexception-class.md)|Database exceptions (ODBC classes)|
 |[COleException – třída](../mfc/reference/coleexception-class.md)|OLE – výjimky|
-|[COleDispatchException – třída](../mfc/reference/coledispatchexception-class.md)|Výjimky odeslání (automatizace)|
-|[CUserException – třída](../mfc/reference/cuserexception-class.md)|Výjimka, která upozorní uživatele na okno se zprávou, potom vyvolá obecnou [třídu CException –](../mfc/reference/cexception-class.md)|
+|[COleDispatchException – třída](../mfc/reference/coledispatchexception-class.md)|Dispatch (automation) exceptions|
+|[CUserException – třída](../mfc/reference/cuserexception-class.md)|Exception that alerts the user with a message box, then throws a generic [CException Class](../mfc/reference/cexception-class.md)|
 
-> [!NOTE]
->  Knihovna MFC podporuje C++ obě výjimky i makra MFC výjimky. Knihovna MFC přímo nepodporuje strukturované obslužné rutiny výjimek (SEH) systému Windows NT, jak je popsáno v tématu [strukturované zpracování výjimek](/windows/win32/debug/structured-exception-handling).
+Od verze 3.0 používá MFC výjimky jazyka C++, ale stále podporuje jeho starší makra pro zpracování výjimek, jejichž forma se podobá výjimkám jazyka C++. Přestože nejsou tato makra vhodná pro nové programování, jsou z důvodu zpětné kompatibility stále podporována. V aplikacích používajících makra lze volně používat i výjimky jazyka C++. During preprocessing, the macros evaluate to the exception handling keywords defined in the MSVC implementation of the C++ language as of Visual C++ version 2.0. Stávající makra zpracování výjimek lze při použití výjimek jazyka C++ ponechat. For information on mixing macros and C++ exception handling and on converting old code to use the new mechanism, see the articles [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) and [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md). Starší výjimky maker knihovny MFC, pokud je stále používáte, se vyhodnotí jako klíčová slova výjimek jazyka C++. See [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md). MFC does not directly support Windows NT structured exception handlers (SEH), as discussed in [Structured Exception Handling](/windows/win32/debug/structured-exception-handling).
 
-##  <a name="_core_further_reading_about_exceptions"></a>Další informace o výjimkách
+##  <a name="_core_further_reading_about_exceptions"></a> Further Reading About Exceptions
 
-Následující články vysvětlují použití knihovny MFC k výjimce:
+The following articles explain using the MFC library for exception handing:
 
-- [Výjimky: Zachytávání a odstraňování výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md)
+- [Výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
 - [Výjimky: Zkoumání obsahu výjimek](../mfc/exceptions-examining-exception-contents.md)
 
@@ -119,9 +118,9 @@ Následující články vysvětlují použití knihovny MFC k výjimce:
 
 - [Výjimky: Výjimky databáze](../mfc/exceptions-database-exceptions.md)
 
-- [Výjimky: OLE – výjimky](../mfc/exceptions-ole-exceptions.md)
+- [Výjimky: Výjimky OLE](../mfc/exceptions-ole-exceptions.md)
 
-Následující články porovnávají makra výjimek knihovny MFC s klíčovými slovy C++ výjimky a vysvětlují, jak lze přizpůsobit kód:
+The following articles compare the MFC exception macros with the C++ exception keywords and explain how you can adapt your code:
 
 - [Výjimky: Změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
@@ -131,5 +130,5 @@ Následující články porovnávají makra výjimek knihovny MFC s klíčovými
 
 ## <a name="see-also"></a>Viz také:
 
-[Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)<br/>
-[Jak můžu: Vytvořit vlastní třídy výjimek](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[How Do I: Create my Own Custom Exception Classes](https://go.microsoft.com/fwlink/p/?linkid=128045)

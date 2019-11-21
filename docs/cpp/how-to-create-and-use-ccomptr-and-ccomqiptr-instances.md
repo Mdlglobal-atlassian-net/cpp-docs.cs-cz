@@ -1,39 +1,39 @@
 ---
-title: 'Postupy: Vytváření a používání instancí CComPtr a CComQIPtr'
+title: 'How to: Create and use CComPtr and CComQIPtr instances'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8dd7aa903eefd533b1dd2688f3cee46ab3787e60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e376eab75b9b1fb4a7a271d05fe037142f22e139
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498597"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246543"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Postupy: Vytváření a používání instancí CComPtr a CComQIPtr
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and use CComPtr and CComQIPtr instances
 
-V klasickém programování v systému Windows jsou knihovny často implementovány jako objekty modelu COM (nebo přesněji, jako servery COM). Mnoho součástí operačního systému Windows je implementováno jako servery COM a mnoho přispěvatelů poskytuje knihovny v tomto formuláři. Informace o základech modelu COM naleznete v tématu [Component Object Model (com)](/windows/win32/com/component-object-model--com--portal).
+In classic Windows programming, libraries are often implemented as COM objects (or more precisely, as COM servers). Many Windows operating system components are implemented as COM servers, and many contributors provide libraries in this form. For information about the basics of COM, see [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
 
-Při vytváření instance objektu COM (Component Object Model) uložte ukazatel rozhraní do inteligentního ukazatele modelu COM, který provede počítání odkazů pomocí volání `AddRef` a `Release` v destruktoru. Pokud používáte knihovnu ATL (Active Template Library) nebo knihovna Microsoft Foundation Class (MFC), pak použijte `CComPtr` inteligentní ukazatel. Pokud nepoužíváte ATL nebo MFC, pak použijte `_com_ptr_t`. Vzhledem k `std::unique_ptr`tomu, že neexistuje žádný ekvivalent modelu COM, použijte tyto inteligentní ukazatele pro scénáře jednoho vlastníka i více vlastníků. `CComPtr` A`ComQIPtr` podporují operace přesunu, které mají odkazy rvalue.
+When you instantiate a Component Object Model (COM) object, store the interface pointer in a COM smart pointer, which performs the reference counting by using calls to `AddRef` and `Release` in the destructor. If you are using the Active Template Library (ATL) or the Microsoft Foundation Class Library (MFC), then use the `CComPtr` smart pointer. If you are not using ATL or MFC, then use `_com_ptr_t`. Because there is no COM equivalent to `std::unique_ptr`, use these smart pointers for both single-owner and multiple-owner scenarios. Both `CComPtr` and `ComQIPtr` support move operations that have rvalue references.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít `CComPtr` pro vytvoření instance objektu COM a získání ukazatelů na jeho rozhraní. Všimněte si, `CComPtr::CoCreateInstance` že členská funkce se používá k vytvoření objektu COM namísto funkce Win32, která má stejný název.
+The following example shows how to use `CComPtr` to instantiate a COM object and obtain pointers to its interfaces. Notice that the `CComPtr::CoCreateInstance` member function is used to create the COM object, instead of the Win32 function that has the same name.
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr`a jeho příbuzní jsou součástí knihovny ATL a jsou definovány v \<Atlcomcli. h >. `_com_ptr_t`je deklarována \<v comip. h >. Kompilátor vytvoří specializace `_com_ptr_t` při generování obálkových tříd pro knihovny typů.
+`CComPtr` and its relatives are part of the ATL and are defined in \<atlcomcli.h>. `_com_ptr_t` is declared in \<comip.h>. The compiler creates specializations of `_com_ptr_t` when it generates wrapper classes for type libraries.
 
 ## <a name="example"></a>Příklad
 
-ATL také poskytuje `CComQIPtr`, což má jednodušší syntaxi pro dotazování objektu COM k načtení dalšího rozhraní. Nicméně doporučujeme `CComPtr` , protože vše, `CComQIPtr` co může dělat a je sémanticky konzistentní s ukazateli nezpracovaných rozhraní modelu COM. Použijete-li `CComPtr` k dotazování na rozhraní, je ukazatel nového rozhraní umístěn v parametru out. Pokud se volání nezdařilo, je vrácena hodnota HRESULT, což je typický vzor modelu COM. S `CComQIPtr`, návratovou hodnotou je ukazatel samotný a pokud volání není úspěšné, nelze získat k vnitřní vrácené hodnotě HRESULT. Následující dva řádky ukazují, jak se mechanismy `CComPtr` zpracování chyb a `CComQIPtr` liší.
+ATL also provides `CComQIPtr`, which has a simpler syntax for querying a COM object to retrieve an additional interface. However, we recommend `CComPtr` because it does everything that `CComQIPtr` can do and is semantically more consistent with raw COM interface pointers. If you use a `CComPtr` to query for an interface, the new interface pointer is placed in an out parameter. If the call fails, an HRESULT is returned, which is the typical COM pattern. With `CComQIPtr`, the return value is the pointer itself, and if the call fails, the internal HRESULT return value cannot be accessed. The following two lines show how the error handling mechanisms in `CComPtr` and `CComQIPtr` differ.
 
 [!code-cpp[COM_smart_pointers#02](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_2.cpp)]
 
 ## <a name="example"></a>Příklad
 
-`CComPtr`poskytuje specializaci pro rozhraní IDispatch, která umožňuje uložit ukazatele na komponenty automatizace modelu COM a vyvolat metody v rozhraní pomocí pozdní vazby. `CComDispatchDriver`je definice `CComQIPtr<IDispatch, &IIDIDispatch>`typu, která je implicitně převoditelná na `CComPtr<IDispatch>`. Proto pokud se některý z těchto tří názvů zobrazí v kódu, je ekvivalentní `CComPtr<IDispatch>`. Následující příklad ukazuje, jak získat ukazatel na objektový model aplikace Microsoft Word pomocí `CComPtr<IDispatch>`.
+`CComPtr` provides a specialization for IDispatch that enables it to store pointers to COM automation components and invoke the methods on the interface by using late binding. `CComDispatchDriver` is a typedef for `CComQIPtr<IDispatch, &IIDIDispatch>`, which is implicitly convertible to `CComPtr<IDispatch>`. Therefore, when any of these three names appears in code, it is equivalent to `CComPtr<IDispatch>`. The following example shows how to obtain a pointer to the Microsoft Word object model by using a `CComPtr<IDispatch>`.
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 

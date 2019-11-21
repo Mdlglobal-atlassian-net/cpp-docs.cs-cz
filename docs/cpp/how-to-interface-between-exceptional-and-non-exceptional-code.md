@@ -1,29 +1,29 @@
 ---
-title: 'Postupy: Rozhraní mezi kódem výjimek a ostatním kódem'
+title: 'How to: Interface between exceptional and non-exceptional code'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fccc40302ab7bd43b3e6b2f87eef488c7813c9be
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183697"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245611"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Postupy: Rozhraní mezi kódem výjimek a ostatním kódem
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>How to: Interface between exceptional and non-exceptional code
 
-Tento článek popisuje, jak implementovat konzistentní zpracování výjimek v modulu jazyka C++ a také způsob převodu těchto výjimek z chybových kódů na hranicích výjimek.
+This article describes how to implement consistent exception-handling in a C++ module, and also how to translate those exceptions to and from error codes at the exception boundaries.
 
-Někdy musí modul C++ pracovat s kódem, který nepoužívá výjimky (kód bez výjimek). Toto rozhraní se označuje jako *hranice výjimky*. Například můžete chtít volat funkci Win32 `CreateFile` ve svém programu C++. `CreateFile` nevyvolá výjimky; Místo toho definuje kódy chyb, které je možné načíst podle `GetLastError` funkce. Pokud C++ program je netriviální, potom v něm pravděpodobně dáváte mají konzistentní zásady zpracování chyb založené na výjimku. A je pravděpodobně nebudete chtít opustit výjimky jen proto rozhraní s nevýjimečným kódem, a ani nebudete chtít míchat zásady chyb na základě výjimky a nezaložené výjimku v modulu jazyka C++.
+Sometimes a C++ module has to interface with code that doesn't use exceptions (non-exceptional code). Such an interface is known as an *exception boundary*. For example, you may want to call the Win32 function `CreateFile` in your C++ program. `CreateFile` doesn't throw exceptions; instead it sets error codes that can be retrieved by the `GetLastError` function. If your C++ program is non-trivial, then in it you probably prefer to have a consistent exception-based error-handling policy. And you probably don't want to abandon exceptions just because you interface with non-exceptional code, and neither do you want to mix exception-based and non-exception-based error policies in your C++ module.
 
-## <a name="calling-non-exceptional-functions-from-c"></a>Volání Nevýjimečné funkce z jazyka C++
+## <a name="calling-non-exceptional-functions-from-c"></a>Calling non-exceptional functions from C++
 
-Při volání nevýjimečné funkce z jazyka C++, myšlenka je zabalit tuto funkci ve funkci jazyka C++, který zjistí všechny chyby a pak případně vyvolá výjimku. Při návrhu takové funkce obálky, nejdřív se rozhodněte, který typ záruky výjimky chcete poskytnout: bez vyvolávání, silný nebo základní. Za druhé Navrhněte funkci tak, aby všechny prostředky, například obslužné rutiny souborů, byly správně uvolněny, pokud je vyvolána výjimka. Obvykle to znamená použít inteligentní ukazatele nebo podobné správce prostředků pro vlastnění zdrojů. Další informace o zvažování návrhu naleznete v tématu [jak: Návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md).
+When you call a non-exceptional function from C++, the idea is to wrap that function in a C++ function that detects any errors and then possibly throws an exception. When you design such a wrapper function, first decide which type of exception guarantee to provide:  no-throw, strong, or basic. Second, design the function so that all resources, for example, file handles, are correctly released if an exception is thrown. Typically, this means that you use smart pointers or similar resource managers to own the resources. For more information about design considerations, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje funkce jazyka C++, které používají rozhraní Win32 `CreateFile` a `ReadFile` functions interně pro otevření a čtení dvou souborů.  `File` Třída je získání prostředků je obálka inicializace (RAII) pro popisovače souborů. Jeho konstruktor rozpozná stav "soubor nebyl nalezen" a dojde k výjimce šíření chyb v zásobníku volání modulu C++ (v tomto příkladu `main()` funkce). Pokud je vyvolána výjimka po `File` objektu je plně sestaveny, destruktor automaticky volá `CloseHandle` k uvolnění popisovače souboru. (Pokud dáváte přednost, můžete použít aktivní šablony knihovny (ATL) `CHandle` třídy pro stejný účel, nebo `unique_ptr` společně s vlastním odstraňovačem.) Funkce, které volají Win32 a rozhraní API CRT detekují chyby a poté vyvolají výjimky C++ pomocí místně definované `ThrowLastErrorIf` funkce, která dále používá `Win32Exception` třídu odvozenou z `runtime_error` třídy. Všechny funkce v tomto příkladu zadejte záruku silné výjimky; Pokud v libovolném bodě těchto funkcí je vyvolána výjimka, žádných zdrojů a je upraven žádný stav programu.
+The following example shows C++ functions that use the Win32 `CreateFile` and `ReadFile` functions internally to open and read two files.  The `File` class is a resource acquisition is initialization (RAII) wrapper for the file handles. Its constructor detects a "file not found" condition and throws an exception to propagate the error up the call stack of the C++ module (in this example, the `main()` function). If an exception is thrown after a `File` object is fully constructed, the destructor automatically calls `CloseHandle` to release the file handle. (If you prefer, you can use the Active Template Library (ATL) `CHandle` class for this same purpose, or a `unique_ptr` together with a custom deleter.) The functions that call Win32 and CRT APIs detect errors and then throw C++ exceptions using the locally-defined `ThrowLastErrorIf` function, which in turn uses the `Win32Exception` class, derived from the `runtime_error` class. All functions in this example provide a strong exception guarantee; if an exception is thrown at any point in these functions, no resources are leaked and no program state is modified.
 
 ```cpp
 // compile with: /EHsc
@@ -158,11 +158,11 @@ int main ( int argc, char* argv[] )
 }
 ```
 
-## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Volání výjimečného Nevýjimečným kódem
+## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Calling exceptional code from non-exceptional code
 
-Funkce jazyka C++, které jsou deklarovány jako "extern C" mohou být volány programy c. Servery C++ COM mohou být spotřebovány kódem napsaným v některém z mnoha různých jazycích. Při implementaci veřejných funkcí podporujících výjimky v C++, které jsou volány kódem bez výjimek, nesmí funkce C++ povolit všechny výjimky zpět na volajícího. Funkce C++ proto musí konkrétně zachytit každou výjimku, kterou umí zpracovat a v případě potřeby ji převést do srozumitelného chybového kódu, který volající rozumí. Pokud jsou známy všechny potenciální výjimky, by měl mít funkce C++ `catch(...)` bloku jako poslední obslužnou rutinou. V takovém případě je nejlepší oznámit závažnou chybu volajícímu, protože váš program může být v neznámém stavu.
+C++ functions that are declared as "extern C" can be called by C programs. C++ COM servers can be consumed by code written in any of a number of different languages. When you implement public exception-aware functions in C++ to be called by non-exceptional code, the C++ function must not allow any exceptions to propagate back to the caller. Therefore, the C++ function must specifically catch every exception that it knows how to handle and, if appropriate, convert the exception to an error code that the caller understands. If not all potential exceptions are known, the C++ function should have a `catch(...)` block as the last handler. In such a case, it's best to report a fatal error to the caller, because your program might be in an unknown state.
 
-Následující příklad ukazuje funkci, která předpokládá, že jakoukoliv výjimku, která by mohla být vyvolána je buď Win32Exception, nebo typ výjimky odvozený z `std::exception`. Funkce zachytí jakoukoli výjimku těchto typů a šíří informace o chybě jako chybový kód Win32 k volajícímu.
+The following example shows a function that assumes that any exception that might be thrown is either a Win32Exception or an exception type derived from `std::exception`. The function catches any exception of these types and propagates the error information as a Win32 error code to the caller.
 
 ```cpp
 BOOL DiffFiles2(const string& file1, const string& file2)
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-Při převodu z výjimek na chybové kódy jedním potenciálním problémem je, že kódy chyb často neobsahují bohatost informací, které mohou ukládat výjimky. Chcete-li to vyřešit, můžete poskytnout **catch** blok pro každý typ výjimky, která by mohla být vyvolána a provádět protokolování pro zaznamenání podrobnosti o výjimce, než je převedena na chybový kód. Tento přístup může vytvořit velké množství opakování kódu, pokud více funkcí používá stejnou sadu **catch** bloky. Dobrým způsobem, jak zabránit opakování kódu, je refaktoring bloků do jedné soukromé funkce nástroje, který implementuje **zkuste** a **catch** a ostatní porty blokuje přijímá objekt funkce, která je volána v **zkuste** bloku. V každé veřejné funkci předejte kód funkci nástroje jako lambda výraz.
+When you convert from exceptions to error codes, one potential issue is that error codes often don't contain the richness of information that an exception can store. To address this, you can provide a **catch** block for each specific exception type that might be thrown, and perform logging to record the details of the exception before it is converted to an error code. This approach can create a lot of code repetition if multiple functions all use the same set of **catch** blocks. A good way to avoid code repetition is by refactoring those blocks into one private utility function that implements the **try** and **catch** blocks and accepts a function object that is invoked in the **try** block. In each public function, pass the code to the utility function as a lambda expression.
 
 ```cpp
 template<typename Func>
@@ -213,7 +213,7 @@ bool Win32ExceptionBoundary(Func&& f)
 }
 ```
 
-Následující příklad ukazuje, jak zapsat lambda výraz, který definuje funktor. Když je funktor definovaný "vloženě" pomocí lambda výrazu, je často čitelnější než by bylo, pokud by byl zapsán jako objekt pojmenované funkce.
+The following example shows how to write the lambda expression that defines the functor. When a functor is defined "inline" by using a lambda expression, it is often easier to read than it would be if it were written as a named function object.
 
 ```cpp
 bool DiffFiles3(const string& file1, const string& file2)
@@ -232,9 +232,9 @@ bool DiffFiles3(const string& file1, const string& file2)
 }
 ```
 
-Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md).
+For more information about lambda expressions, see [Lambda Expressions](lambda-expressions-in-cpp.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Ošetření chyb a výjimek (moderní verze jazyka C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Postupy: Návrh s ohledem na bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
+[Postupy: Návrh s ohledem na bezpečnost výjimek](how-to-design-for-exception-safety.md)<br/>

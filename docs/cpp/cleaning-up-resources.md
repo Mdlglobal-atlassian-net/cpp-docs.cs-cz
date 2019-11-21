@@ -9,28 +9,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: 0db21b20b94dc1a3f347bd848c999a961398759b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 225c3ccaf3342f11ad4eb6d6575ad3ac542acfd2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386119"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246639"
 ---
 # <a name="cleaning-up-resources"></a>Vymazání prostředků
 
-Při provádění obslužné rutiny ukončení nemusíte před voláním rutiny ukončení vědět, které prostředky jsou ve skutečnosti přiděleny. Je možné, **__try** bloku příkazu byl přerušen dříve, než byly veškeré prostředky přiděleny, tak, aby všechny prostředky byly otevřeny.
+Při provádění obslužné rutiny ukončení nemusíte před voláním rutiny ukončení vědět, které prostředky jsou ve skutečnosti přiděleny. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
 
 Proto byste dříve, než přikročíte k zpracování vyčištění při ukončení, měli z důvodu bezpečnosti zkontrolovat, které prostředky jsou skutečně otevřené. Doporučený postup je:
 
 1. Inicializovat popisovače na hodnotu NULL.
 
-1. V **__try** příkaz blokovat, přidělit prostředky. Pokud je prostředek přidělen, jsou popisovače nastaveny na kladné hodnoty.
+1. In the **__try** statement block, allocate resources. Pokud je prostředek přidělen, jsou popisovače nastaveny na kladné hodnoty.
 
-1. V **__finally** blok příkazů, uvolněte každý prostředek, jehož odpovídající popisovač nebo proměnná příznaku je nenulová nebo not NULL.
+1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
 
 ## <a name="example"></a>Příklad
 
-Například následující kód používá popisovač ukončení pro uzavření tří souborů a bloku paměti, které byly přiděleny v **__try** blok příkazů. Před vyčištěním prostředků kód nejprve zkontroluje, zda tyto prostředky byly přiděleny.
+For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Před vyčištěním prostředků kód nejprve zkontroluje, zda tyto prostředky byly přiděleny.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

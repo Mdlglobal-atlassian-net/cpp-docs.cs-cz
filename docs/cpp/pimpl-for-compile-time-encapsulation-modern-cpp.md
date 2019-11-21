@@ -3,28 +3,28 @@ title: Ukazatel na implementaci pro zapouzdření za kompilace (moderní verze j
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-ms.openlocfilehash: 6e114e2802dd4b2e5d1497867e2224be90c4752d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1eb06ad3a52be486f085babf699677951b1ee71
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396103"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245180"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Ukazatel na implementaci pro zapouzdření za kompilace (moderní verze jazyka C++)
 
-*Ukazatel na implementaci idiom* je moderní C++ techniku ke skrytí implementace, chcete-li minimalizovat párování a k oddělení rozhraní. Ukazatel na implementaci je zkratka pro "ukazatel na implementaci." Může již být seznámení s konceptem, ale znáte jiné názvy jako idiom Cheshiru Cat nebo brány Firewall kompilátoru.
+The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
 
-## <a name="why-use-pimpl"></a>Proč používat ukazatel na implementaci?
+## <a name="why-use-pimpl"></a>Why use pimpl?
 
-Zde je, jak vylepšit idiom ukazatel na implementaci životního cyklu vývoje softwaru:
+Here's how the pimpl idiom can improve the software development lifecycle:
 
-- Minimalizace závislostí kompilace.
+- Minimization of compilation dependencies.
 
-- Oddělení rozhraní a implementaci.
+- Separation of interface and implementation.
 
-- Přenositelnost.
+- Portability.
 
-## <a name="pimpl-header"></a>Ukazatel na implementaci záhlaví
+## <a name="pimpl-header"></a>Pimpl header
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-Idiom ukazatel na implementaci vyhýbá cascades opětovné sestavení a křehký objekt rozložení. Je vhodná pro (přechodně) oblíbených typů.
+The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
 
-## <a name="pimpl-implementation"></a>Ukazatel na implementaci implementace
+## <a name="pimpl-implementation"></a>Pimpl implementation
 
-Definovat `impl` třída v souboru .cpp.
+Define the `impl` class in the .cpp file.
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>Osvědčené postupy
 
-Zvažte, jestli se má přidat podporu pro specializaci non-throwing. prohození.
+Consider whether to add support for non-throwing swap specialization.
 
 ## <a name="see-also"></a>Viz také:
 
-[C++ vás vítá zpět (moderní verze jazyka C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

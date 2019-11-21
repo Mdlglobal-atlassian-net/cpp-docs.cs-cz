@@ -3,30 +3,30 @@ title: Životní cyklus objektů a správa prostředků (moderní verze jazyka C
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91229ea1b2d7a85f852138176d8cdb46dfa8c0df
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245012"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246430"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Životní cyklus objektů a správa prostředků (moderní verze jazyka C++)
 
-Na rozdíl od spravovaných jazyků nemá C++ kolekce paměti (GC), který automaticky uvolní prostředky bez delší používané paměti při spuštění programu. V jazyce C++ správu prostředků přímo souvisí s životního cyklu objektu. Tento dokument popisuje faktory, které ovlivňují dobu života objektu v jazyce C++ a jak ho spravovat.
+Unlike managed languages, C++ doesn’t have garbage collection (GC), which automatically releases no-longer-used memory resources as a program runs. In C++, resource management is directly related to object lifetime. This document describes the factors that affect object lifetime in C++ and how to manage it.
 
-C++ nemá uvolňování paměti, především proto, že nezpracuje bez paměťových prostředků. Podobné těm v jazyce C++ deterministické destruktory pouze dokáže zpracovat prostředky paměti a které nejsou paměťově stejně. Globální Katalog má také jiné problémy, jako je vyšší nároky na paměť a využití procesoru a umístění. Ale obecnosti je základní problém, který není možné řešit prostřednictvím inteligentní optimalizace.
+C++ doesn’t have GC primarily because it doesn't handle non-memory resources. Only deterministic destructors like those in C++ can handle memory and non-memory resources equally. GC also has other problems, like higher overhead in memory and CPU consumption, and locality. But universality is a fundamental problem that can't be mitigated through clever optimizations.
 
 ## <a name="concepts"></a>Koncepty
 
-Důležitá věc, kterou ve správě životního cyklu objektu je zapouzdření, kdo je použití objektu nemusí vědět, co vlastní prostředky, které objekt, nebo jak zbavit, nebo dokonce Určuje, zda vlastní všechny prostředky ve všech. Má jenom ke zničení objektu. Jazyk C++ core je navržený tak, aby, že objekty jsou zničeny, ve správnou dobu, to znamená, jak bloky jsou se ukončil, v opačném pořadí konstrukce. Pokud objekt je zničen, jejích základních tříd a členů jsou zničeny v určitém pořadí.  Jazyk automaticky odstraní objekty, dokud neprovedete speciální věci, jako je velikost haldy nebo nové umístění.  Například [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md) jako `unique_ptr` a `shared_ptr`, a kontejnery standardní knihovny C++, jako jsou `vector`, zapouzdření **nové** /  **Odstranit** a `new[]` / `delete[]` v objektech, které mají destruktory. To je důvod, proč je tedy potřeba použít inteligentní ukazatele a kontejnery standardní knihovny C++.
+An important thing in object-lifetime management is the encapsulation—whoever's using an object doesn't have to know what resources that object owns, or how to get rid of them, or even whether it owns any resources at all. It just has to destroy the object. The C++ core language is designed to ensure that objects are destroyed at the correct times, that is, as blocks are exited, in reverse order of construction. When an object is destroyed, its bases and members are destroyed in a particular order.  The language automatically destroys objects, unless you do special things like heap allocation or placement new.  For example, [smart pointers](../cpp/smart-pointers-modern-cpp.md) like `unique_ptr` and `shared_ptr`, and C++ Standard Library containers like `vector`, encapsulate **new**/**delete** and `new[]`/`delete[]` in objects, which have destructors. That's why it's so important to use smart pointers and C++ Standard Library containers.
 
-Dalším důležitým konceptem ve správě životního cyklu: destruktory. Destruktory zapouzdření uvolnění prostředků.  (Obvykle použila se mnemotechnika je RRID uvolnění prostředků je zničení.)  Prostředek je něco, co můžete získat z "systém" a dát později.  Paměť je nejběžnější prostředků, ale existují také soubory, sokety, textury a jiné než paměťových prostředků. "Vlastnit" prostředek znamená, že můžete použít, když ho potřebujete, ale taky je potřeba ji uvolnit, až budete hotovi s ním.  Pokud objekt je zničen, jeho destruktor uvolní prostředky, které jej vlastní.
+Another important concept in lifetime management: destructors. Destructors encapsulate resource release.  (The commonly used mnemonic is RRID, Resource Release Is Destruction.)  A resource is something that you get from "the system" and have to give back later.  Memory is the most common resource, but there are also files, sockets, textures, and other non-memory resources. "Owning" a resource means you can use it when you need it but you also have to release it when you're finished with it.  When an object is destroyed, its destructor releases the resources that it owned.
 
-Poslední koncept je orientovaného acyklického grafu (orientovaného Acyklického grafu).  Struktura vlastnictví v aplikaci tvoří DAG. Žádný objekt může vlastnit sebe sama –, který je nejen nemožné, ale také ze své podstaty nemá význam. Ale dva objekty můžou sdílet vlastnictví třetí objekt.  Několik druhů odkazy je možné ve skupině DAG takto: Je členem skupiny B A (B vlastníkem A), úložiště jazyka C `vector<D>` (C vlastní každý prvek D), úložiště E `shared_ptr<F>` (E sdílí vlastnictví F, případně s jinými objekty), a tak dále.  Za předpokladu, neexistují žádné cykly a každý odkaz v tomto orientovaném acyklickém grafu je reprezentován objektem, který má destruktor (namísto nezpracovaný ukazatel, popisovač nebo jiný mechanismus) a potom nedostatku prostředků jsou nemožné, protože jazyk se nedají. Uvolnění prostředků ihned poté, co jste už nepotřebujete, bez systému uvolňování paměti spuštěna. Sledování životnosti je režie bez pro obor zásobníku, základních tříd, členů a související případy a cenově dostupné pro `shared_ptr`.
+The final concept is the DAG (Directed Acyclic Graph).  The structure of ownership in a program forms a DAG. No object can own itself—that's not only impossible but also inherently meaningless. But two objects can share ownership of a third object.  Several kinds of links are possible in a DAG like this: A is a member of B (B owns A), C stores a `vector<D>` (C owns each D element), E stores a `shared_ptr<F>` (E shares ownership of F, possibly with other objects), and so forth.  As long as there are no cycles and every link in the DAG is represented by an object that has a destructor (instead of a raw pointer, handle, or other mechanism), then resource leaks are impossible because the language prevents them. Resources are released immediately after they're no longer needed, without a garbage collector running. The lifetime tracking is overhead-free for stack scope, bases, members, and related cases, and inexpensive for `shared_ptr`.
 
-### <a name="heap-based-lifetime"></a>Doba života haldy
+### <a name="heap-based-lifetime"></a>Heap-based lifetime
 
-Doba života objektu haldy, použijte [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md). Použití `shared_ptr` a `make_shared` jako výchozí ukazatel a alokátorem. Použití `weak_ptr` přerušit cykly, ukládání do mezipaměti, a sledujte objekty bez ovlivnění nebo za předpokladu, že nic o jejich životnosti.
+For heap object lifetime, use [smart pointers](../cpp/smart-pointers-modern-cpp.md). Use `shared_ptr` and `make_shared` as the default pointer and allocator. Use `weak_ptr` to break cycles, do caching, and observe objects without affecting or assuming anything about their lifetimes.
 
 ```cpp
 void func() {
@@ -38,13 +38,13 @@ p->draw();
 } // no delete required, out-of-scope triggers smart pointer destructor
 ```
 
-Použití `unique_ptr` jedinečné vlastnictví, například v *ukazatel na implementaci* idiom. (Viz [ukazatel na implementaci pro zapouzdření za kompilace](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Ujistěte se, `unique_ptr` primární cílem všechny explicitní **nové** výrazy.
+Use `unique_ptr` for unique ownership, for example, in the *pimpl* idiom. (See [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Make a `unique_ptr` the primary target of all explicit **new** expressions.
 
 ```cpp
 unique_ptr<widget> p(new widget());
 ```
 
-Nezpracované ukazatele můžete použít pro jiné vlastnictví a zjišťování. Může dangle-vlastnící ukazatele, ale nemůže způsobit únik těchto.
+You can use raw pointers for non-ownership and observation. A non-owning pointer may dangle, but it can’t leak.
 
 ```cpp
 class node {
@@ -56,11 +56,11 @@ class node {
 node::node() : parent(...) { children.emplace_back(new node(...) ); }
 ```
 
-Když se vyžaduje optimalizace výkonu, budete nejspíš muset použít *dobře zapouzdřený* vlastnící ukazatele a explicitního volání odstranit. Příkladem je při implementaci nízké úrovně datovou strukturu.
+When performance optimization is required, you might have to use *well-encapsulated* owning pointers and explicit calls to delete. An example is when you implement your own low-level data structure.
 
-### <a name="stack-based-lifetime"></a>Doba života založené na zásobníku
+### <a name="stack-based-lifetime"></a>Stack-based lifetime
 
-V moderním jazyce C++ *založené na zásobníku oboru* je efektivní způsob, jak zapisovat robustního kódu, protože spojuje automatické *zásobníku životnost* a *datový člen životnost* s vysokou efektivitu – Doba života pro sledování je v podstatě zdarma režijní náklady. Doba života objektu haldy vyžaduje pečlivé ruční správy a může sloužit jako zdroj pro nedostatku prostředků a nedostatků, zejména v případě, že pracujete s nezpracované ukazatele. Vezměte v úvahu tento kód, který ukazuje obor založené na zásobníku:
+In modern C++, *stack-based scope* is a powerful way to write robust code because it combines automatic *stack lifetime* and *data member lifetime* with high efficiency—lifetime tracking is essentially free of overhead. Heap object lifetime requires diligent manual management and can be the source of resource leaks and inefficiencies, especially when you are working with raw pointers. Consider this code, which demonstrates stack-based scope:
 
 ```cpp
 class widget {
@@ -81,10 +81,10 @@ void functionUsingWidget () {
   // as if "finally { w.dispose(); w.g.dispose(); }"
 ```
 
-Používejte opatrně statickou životnost (globální statické, místní statické funkce) vzhledem k tomu může dojít k problémům. Co se stane, když se vyvolá výjimku konstruktoru na globální objekt? Obvykle aplikace chyby způsobem, který může být obtížné ladit. Pořadí konstrukce je problematické pro objekty statickou životnost a není bezpečná pro souběžnost. Nejenže je konstrukce objektu problém, pořadí zničení může být složité, zejména v případě, že je zahrnuta polymorfismu. I v případě, že objekt nebo proměnná není polymorfní a nemá komplexní konstrukce/destrukce řazení, je stále problém souběžnosti bezpečné pro vlákna. Aplikace s více podprocesy nelze bezpečně upravovat data v statické objekty bez nutnosti místní úložiště vláken, zámky prostředků a jiné zvláštní opatření.
+Use static lifetime sparingly (global static, function local static) because problems can arise. What happens when the constructor of a global object throws an exception? Typically, the app faults in a way that can be difficult to debug. Construction order is problematic for static lifetime objects, and is not concurrency-safe. Not only is object construction a problem, destruction order can be complex, especially where polymorphism is involved. Even if your object or variable isn’t polymorphic and doesn't have complex construction/destruction ordering, there’s still the issue of thread-safe concurrency. A multithreaded app can’t safely modify the data in static objects without having thread-local storage, resource locks, and other special precautions.
 
 ## <a name="see-also"></a>Viz také:
 
-[C++ vás vítá zpět (moderní verze jazyka C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

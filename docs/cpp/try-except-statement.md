@@ -26,76 +26,76 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: b4dccb58bf63f51e88006b793b8a94bfbe021c73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: af378f510f11e1fe7d08619b5f33efe92a13d7be
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400540"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245166"
 ---
 # <a name="try-except-statement"></a>try-except – příkaz
 
 **Microsoft Specific**
 
-**Zkuste – s výjimkou** příkaz je rozšířením společnosti Microsoft pro C a C++ – jazyky, které podporuje strukturované zpracování výjimek.
+The **try-except** statement is a Microsoft extension to the C and C++ languages that supports structured exception handling.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\_\_Zkuste**<br/>
+> **\_\_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;strážené kódu<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
 > }<br/>
-> **\_\_s výjimkou** ( *výraz* )<br/>
+> **\_\_except** ( *expression* )<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;Kód obslužné rutiny výjimek<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// exception handler code<br/>
 > }
 
 ## <a name="remarks"></a>Poznámky
 
-**Zkuste – s výjimkou** příkaz je rozšířením společnosti Microsoft pro C a C++ – jazyky, které umožňuje cílovým aplikacím získat řízení, pokud dojde k událostem, které za normálních okolností ukončí provádění programu. Tyto události jsou nazývány *výjimky*, a mechanismus, který se výjimkami zabývá, se nazývá *strukturované zpracování výjimek* (SEH).
+The **try-except** statement is a Microsoft extension to the C and C++ languages that enables target applications to gain control when events that normally terminate program execution occur. Such events are called *exceptions*, and the mechanism that deals with exceptions is called *structured exception handling* (SEH).
 
-Související informace naleznete v tématu [try-finally – příkaz](../cpp/try-finally-statement.md).
+For related information, see the [try-finally statement](../cpp/try-finally-statement.md).
 
 Výjimky mohou být hardwarové nebo softwarové. I v případech, kdy aplikace nemohou být zotaveny z hardwarových nebo softwarových výjimek, umožňuje strukturované zpracování výjimek zobrazit informace o chybě a zachytit vnitřní stav aplikace pro diagnostiku problému. To je užitečné zejména pro občasné problémy, které nelze snadno reprodukovat.
 
 > [!NOTE]
-> Strukturované zpracování výjimek funguje na architektuře Win32 pro zdrojové soubory jazyka C i C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Zpracování výjimek jazyka C++ je také více flexibilní, jelikož dokáže zpracovat výjimky libovolného typu. Pro programy C++ je doporučeno použití mechanismu zpracování výjimek jazyka C++ ([try, catch a throw](../cpp/try-throw-and-catch-statements-cpp.md) příkazů).
+> Strukturované zpracování výjimek funguje na architektuře Win32 pro zdrojové soubory jazyka C i C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Zpracování výjimek jazyka C++ je také více flexibilní, jelikož dokáže zpracovat výjimky libovolného typu. For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
 
-Složený příkaz za **__try** klauzule je tělem nebo chráněnou částí. Složený příkaz za **__except** klauzule je obslužná rutina výjimky. Obslužná rutina udává sadu akcí provedených v případě, že během provádění těla chráněné části dojde k vyvolání výjimky. Spuštění probíhá následujícím způsobem:
+The compound statement after the **__try** clause is the body or guarded section. The compound statement after the **__except** clause is the exception handler. Obslužná rutina udává sadu akcí provedených v případě, že během provádění těla chráněné části dojde k vyvolání výjimky. Execution proceeds as follows:
 
 1. Chráněná část je spuštěna.
 
-1. Pokud při provádění chráněné části dojde k žádné výjimce, provádění pokračuje na příkazu následujícímu po **__except** klauzuli.
+1. If no exception occurs during execution of the guarded section, execution continues at the statement after the **__except** clause.
 
-1. Pokud dojde k výjimce za běhu chráněné části nebo v jakékoli rutině chráněná část volá, **__except** *výraz* (volá se *filtr* výraz) je vyhodnocen a jeho hodnota určuje, jak je výjimka ošetřena. Existují tři možné hodnoty:
+1. If an exception occurs during execution of the guarded section or in any routine the guarded section calls, the **__except** *expression* (called the *filter* expression) is evaluated and the value determines how the exception is handled. There are three possible values:
 
-   - EXCEPTION_CONTINUE_EXECUTION (-1) výjimka je ignorována. Program bude pokračovat tam, kde k výjimce došlo.
+   - EXCEPTION_CONTINUE_EXECUTION (-1) Exception is dismissed. Program bude pokračovat tam, kde k výjimce došlo.
 
-   - EXCEPTION_CONTINUE_SEARCH (0) výjimka není rozpoznána. Pokračujte ve vyhledávání zásobníkem pro obslužnou rutinu, nejprve obsahující **zkuste – s výjimkou** příkazy, pak u obslužných rutin s druhou nejvyšší prioritou.
+   - EXCEPTION_CONTINUE_SEARCH (0) Exception is not recognized. Continue to search up the stack for a handler, first for containing **try-except** statements, then for handlers with the next highest precedence.
 
-   - EXCEPTION_EXECUTE_HANDLER (1) výjimka je rozpoznána. Řízení je převedeno na obslužnou rutinu výjimek pomocí provádí **__except** složený příkaz a potom pokračovat v provádění po **__except** bloku.
+   - EXCEPTION_EXECUTE_HANDLER (1) Exception is recognized. Transfer control to the exception handler by executing the **__except** compound statement, then continue execution after the **__except** block.
 
-Vzhledem k tomu, **__except** výraz je vyhodnocen jako výraz jazyka C, je omezený na jednu hodnotu, operátor podmíněného výrazu nebo operátor čárky. Je-li požadováno rozsáhlejší zpracování, může výraz zavolat rutinu, která vrátí jednu z výše uvedených tří hodnot.
+Because the **__except** expression is evaluated as a C expression, it is limited to a single value, the conditional-expression operator, or the comma operator. Je-li požadováno rozsáhlejší zpracování, může výraz zavolat rutinu, která vrátí jednu z výše uvedených tří hodnot.
 
 Každá aplikace může obsahovat svou vlastní obslužnou rutinu výjimky.
 
-Není povoleno přejít do **__try** příkaz však povoleno přejít mimo něj. Obslužná rutina výjimky není volána, pokud proces je ukončen v průběhu provádění příkazu **zkuste – s výjimkou** příkazu.
+It is not valid to jump into a **__try** statement, but valid to jump out of one. The exception handler is not called if a process is terminated in the middle of executing a **try-except** statement.
 
-Z důvodu kompatibility s předchozími verzemi **_try**, **_except**, a **_leave** jsou synonyma pro **__try**, **__except** , a **__leave** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
+For compatibility with previous versions, **_try**, **_except**, and **_leave** are synonyms for **__try**, **__except**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
 
-### <a name="the-leave-keyword"></a>Klíčové slovo __leave
+### <a name="the-__leave-keyword"></a>Klíčové slovo __leave
 
-**__Leave** – klíčové slovo je platné pouze uvnitř chráněné části **zkuste – s výjimkou** příkazu a jeho účinkem je přechod na konec chráněné části. Běh programu pokračuje prvním příkazem za obslužnou rutinou výjimky.
+The **__leave** keyword is valid only within the guarded section of a **try-except** statement, and its effect is to jump to the end of the guarded section. Běh programu pokračuje prvním příkazem za obslužnou rutinou výjimky.
 
-A **goto** příkaz lze také přejít mimo chráněnou část a nesnižuje výkon jako v **try-finally** příkaz protože odvíjení zásobníku nevyskytuje. Doporučujeme však, že používáte **__leave** – klíčové slovo spíše než **goto** příkaz vzhledem k tomu, že jste méně pravděpodobné, že aby programovací chyba, když chráněná část je velký nebo složitý.
+A **goto** statement can also jump out of the guarded section, and it does not degrade performance as it does in a **try-finally** statement because stack unwinding does not occur. However, we recommend that you use the **__leave** keyword rather than a **goto** statement because you are less likely to make a programming mistake if the guarded section is large or complex.
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>Vnitřní funkce strukturovaného zpracování výjimek
 
-Strukturované zpracování výjimek poskytuje dvě vnitřní funkce, které jsou k dispozici pro použití s **zkuste – s výjimkou** – příkaz: `GetExceptionCode` a `GetExceptionInformation`.
+Structured exception handling provides two intrinsic functions that are available to use with the **try-except** statement: `GetExceptionCode` and `GetExceptionInformation`.
 
-`GetExceptionCode` vrací kód výjimky (32bitové celé číslo).
+`GetExceptionCode` returns the code (a 32-bit integer) of the exception.
 
-Vnitřní funkce `GetExceptionInformation` vrací ukazatel na strukturu obsahující další informace o výjimce. Pomocí tohoto ukazatele lze přistoupit ke stavu počítače, v jakém byl v době výskytu hardwarové výjimky. Struktura je následující:
+The intrinsic function `GetExceptionInformation` returns a pointer to a structure containing additional information about the exception. Pomocí tohoto ukazatele lze přistoupit ke stavu počítače, v jakém byl v době výskytu hardwarové výjimky. Struktura je následující:
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -104,19 +104,19 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
 ```
 
-Typy ukazatelů `PEXCEPTION_RECORD` a `PCONTEXT` jsou definovány ve vloženém souboru \<souboru winnt.h >, a `_EXCEPTION_RECORD` a `_CONTEXT` jsou definovány ve vloženém souboru \<excpt.h >
+The pointer types `PEXCEPTION_RECORD` and `PCONTEXT` are defined in the include file \<winnt.h>, and `_EXCEPTION_RECORD` and `_CONTEXT` are defined in the include file \<excpt.h>
 
-Můžete použít `GetExceptionCode` uvnitř obslužné rutiny výjimky. Můžete však použít `GetExceptionInformation` pouze v rámci výrazu filtru výjimky. Informace, na které ukazuje, jsou obecně umístěny do zásobníku a ve chvíli, kdy je řízení převedeno na obslužnou rutinu výjimky, jsou již nedostupné.
+You can use `GetExceptionCode` within the exception handler. However, you can use `GetExceptionInformation` only within the exception filter expression. Informace, na které ukazuje, jsou obecně umístěny do zásobníku a ve chvíli, kdy je řízení převedeno na obslužnou rutinu výjimky, jsou již nedostupné.
 
-Vnitřní funkce `AbnormalTermination` je k dispozici v rámci obslužné rutiny ukončení. Vrátí hodnotu 0, pokud text **try-finally** příkaz ukončeno sekvenčně. Ve všech ostatních případech vrátí hodnotu 1.
+The intrinsic function `AbnormalTermination` is available within a termination handler. It returns 0 if the body of the **try-finally** statement terminates sequentially. Ve všech ostatních případech vrátí hodnotu 1.
 
-excpt.h definuje několik alternativních názvů pro tyto vnitřní objekty:
+excpt.h defines some alternate names for these intrinsics:
 
-`GetExceptionCode` je ekvivalentní `_exception_code`
+`GetExceptionCode` is equivalent to `_exception_code`
 
-`GetExceptionInformation` je ekvivalentní `_exception_info`
+`GetExceptionInformation` is equivalent to `_exception_info`
 
-`AbnormalTermination` je ekvivalentní `_abnormal_termination`
+`AbnormalTermination` is equivalent to `_abnormal_termination`
 
 ## <a name="example"></a>Příklad
 
@@ -182,10 +182,10 @@ in except
 world
 ```
 
-**Specifické pro END Microsoft**
+**END Microsoft Specific**
 
 ## <a name="see-also"></a>Viz také:
 
-[Zápis obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)<br/>
+[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

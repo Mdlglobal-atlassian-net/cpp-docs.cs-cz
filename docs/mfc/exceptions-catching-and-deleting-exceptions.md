@@ -9,47 +9,47 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0142ffddfb391ae8da878d9e5fe34629cf16cb52
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173272"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246695"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Výjimky: Zachytávání a mazání
 
-Následující pokyny a příklady ukazují, jak zachytit a odstranit výjimky. Další informace o **zkuste**, **catch**, a **throw** klíčová slova, naleznete v tématu [zpracování výjimek jazyka C++](../cpp/cpp-exception-handling.md).
+The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and **throw** keywords, see [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-Vaší obslužné rutiny výjimek musí objektech výjimek, které zpracovávají, odstranit, protože selhání odstranit výjimky způsobí, že nevracení paměti pokaždé, když se tento kód zachytí výjimku.
+Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.
 
-Vaše **catch** bloku musí odstranit výjimku při:
+Your **catch** block must delete an exception when:
 
-- **Catch** bloku vyvolá novou výjimku.
+- The **catch** block throws a new exception.
 
-   Samozřejmě nesmí odstranit výjimku, pokud vyvoláte výjimku znovu:
+   Of course, you must not delete the exception if you throw the same exception again:
 
    [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- Spuštění se vrátí v rámci **catch** bloku.
+- Execution returns from within the **catch** block.
 
 > [!NOTE]
->  Při odstraňování `CException`, použijte `Delete` členská funkce se odstranit výjimky. Nepoužívejte **odstranit** – klíčové slovo, protože může selhat, pokud výjimka není na haldě.
+>  When deleting a `CException`, use the `Delete` member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.
 
-#### <a name="to-catch-and-delete-exceptions"></a>K zachycení a odstranit výjimky
+#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions
 
-1. Použití **zkuste** – klíčové slovo k nastavení **zkuste** bloku. Spustit všechny příkazy programu, které můžou vyvolat výjimku v rámci **zkuste** bloku.
+1. Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.
 
-   Použití **catch** – klíčové slovo k nastavení **catch** bloku. Kód zpracování výjimek v umístěte **catch** bloku. Kód v **catch** blok se spustí, pouze pokud kód v rámci **zkuste** bloku dojde k výjimce typu určeného v **catch** příkazu.
+   Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.
 
-   Zobrazí se následující kostra jak **zkuste** a **catch** bloky, jsou obvykle seřazené:
+   The following skeleton shows how **try** and **catch** blocks are normally arranged:
 
    [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   Když je vyvolána výjimka, řízení se předá první **catch** bloku, deklarace výjimky odpovídá typu výjimky. Můžete selektivně zpracovávat různé druhy výjimek pomocí sekvenční **catch** blokuje, jak je uvedeno níže:
+   When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-Další informace najdete v tématu [výjimky: Převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
 ## <a name="see-also"></a>Viz také:
 

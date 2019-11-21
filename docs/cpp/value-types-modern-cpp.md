@@ -1,24 +1,20 @@
 ---
-title: Typy hodnot (moderní verze jazyka C++)
-ms.date: 05/07/2019
+title: C++ classes as value types
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 1aabcad46e848e1a499a142adaba5002a829bbf5
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221880"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246023"
 ---
-# <a name="value-types-modern-c"></a>Typy hodnot (moderní verze jazyka C++)
+# <a name="c-classes-as-value-types"></a>C++ classes as value types
 
-Třídy jazyka C++ jsou ve výchozích hodnotách. Toto téma obsahuje úvodní přehled typy hodnot a problémy týkající se jejich použití.
+C++ classes are by default value types. They can be specified as reference types, which enable polymorphic behavior to support object-oriented programming. Value types are sometimes viewed from the perspective of memory and layout control, whereas reference types are about base classes and virtual functions for polymorphic purposes. By default, value types are copyable, which means there is always a copy constructor and a copy assignment operator. For reference types, you make the class non-copyable (disable the copy constructor and copy assignment operator) and use a virtual destructor, which supports their intended polymorphism. Value types are also about the contents, which, when they are copied, always give you two independent values that can be modified separately. Reference types are about identity - what kind of object is it? For this reason, "reference types" are also referred to as "polymorphic types".
 
-## <a name="value-vs-reference-types"></a>Hodnoty a odkazové typy
-
-Jak už jsme uvedli, jsou třídy jazyka C++ ve výchozích hodnotách. Mohou být určeny jako typy odkazů, které povolit tak polymorfní chování pro podporu objektově orientované programování. Typy hodnot jsou někdy zobrazit z pohledu paměti a rozložení ovládacího prvku, že typy odkazů jsou o základních tříd a virtuálních funkcí pro polymorfní účely. Ve výchozím nastavení jsou typy hodnot kopírovatelné, což znamená, že je vždycky kopírovací konstruktor a operátor přiřazení kopie. Pro typy odkazů, provedete třídy kopírovatelná (zakažte konstruktor kopie a operátor přiřazení kopie) a použijte virtuální destruktor, který podporuje jejich zamýšlený polymorfismu. Typy hodnot jsou také o obsahu, které při jejich kopírování, vždy získáte dvě nezávislé hodnoty, které je možné upravit samostatně. Typy odkazů jsou o identitě - jaký druh objektu jde? Z tohoto důvodu "referenční typy" jsou také označovány jako "polymorfní typy".
-
-Pokud chcete skutečně jako odkaz na typ (základní třída, virtuální funkce), je nutné explicitně zakázat kopírování, jak je znázorněno `MyRefType` třídy v následujícím kódu.
+If you really want a reference-like type (base class, virtual functions), you need to explicitly disable copying, as shown in the `MyRefType` class in the following code.
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -39,7 +35,7 @@ int main()
 }
 ```
 
-Kompilování výše uvedený kód způsobí následující chybu:
+Compiling the above code will result in the following error:
 
 ```Output
 test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private member declared in class 'MyRefType'
@@ -47,13 +43,13 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
         meow.cpp(3) : see declaration of 'MyRefType'
 ```
 
-## <a name="value-types-and-move-efficiency"></a>Typy hodnot a přesunout efektivity
+## <a name="value-types-and-move-efficiency"></a>Value types and move efficiency
 
-Režijní náklady na kopírování přidělení je vyloučeno z důvodu optimalizace nové kopie. Například při vkládání řetězce uprostřed vektor řetězce, bude žádné kopírování přerozdělení režijní náklady, pouze move - i v případě, že výsledkem zvětšit vektoru samotný. To platí i pro jiné operace, například provádění operace přidat na dvě velmi velké objekty. Jak povolit tyto operace optimalizace hodnotu? V některé kompilátory C++ kompilátor umožní to pro vás implicitně, stejně jako kopírovací konstruktory mohou být automaticky generovaný kompilátorem. Nicméně v C++, třídě muset "přihlásit" k přesunutí přiřazení a konstruktory jeho deklarací v definici třídy. Toho lze dosáhnout pomocí dvojitých ampersandu (& &) odkaz na rvalue v odpovídající člen funkce deklarace a definice konstruktor přesunutí a metody přiřazení přesunu.  Také je třeba vložit správný kód "odcizit vnitřností" ze zdrojového objektu.
+Copy allocation overhead is avoided due to new copy optimizations. For example, when you insert a string in the middle of a vector of strings, there will be no copy re-allocation overhead, only a move- even if it results in a grow of the vector itself. This also applies to other operations, for instance performing an add operation on two very large objects. How do you enable these value operation optimizations? In some C++ compilers, the compiler will enable this for you implicitly, much like copy constructors can be automatically generated by the compiler. However, in C++, your class will need to "opt-in" to move assignment and constructors by declaring it in your class definition. This is accomplished by using the double ampersand (&&) rvalue reference in the appropriate member function declarations and defining move constructor and move assignment methods.  You also need to insert the correct code to "steal the guts" out of the source object.
 
-Jak rozhodnout, pokud potřebujete přesunout povolené? Pokud již víte, že je že nutné zkopírovat konstrukce povolena, budete zřejmě chtít přesunout povoleno, zda může být levnější než hluboké kopírování. Ale pokud víte, že přesunete potřebovat podporu, ho neznamená nutně, že chcete, aby kopie povolené. Takovém případě by byla volána "jenom pro přesun typu". Příklad již ve standardní knihovně `unique_ptr`. Jako poznámka na okraj, starý `auto_ptr` je zastaralá a nahradila `unique_ptr` přesně vzhledem k absenci podporu sémantiky přesunutí v předchozí verzi jazyka C++.
+How do you decide if you need move enabled? If you already know you need copy construction enabled, you probably want move enabled if it can be cheaper than a deep copy. However, if you know you need move support, it doesn't necessarily mean you want copy enabled. This latter case would be called a "move-only type". An example already in the standard library is `unique_ptr`. As a side note, the old `auto_ptr` is deprecated, and was replaced by `unique_ptr` precisely due to the lack of move semantics support in the previous version of C++.
 
-Pomocí sémantiky přesunutí návratové hodnoty nebo můžete vložit ve středu. Přesunutí je optimalizace kopie. Je nutné pro přidělení haldy jako alternativní řešení. Vezměte v úvahu následujícím pseudokódu:
+By using move semantics you can return-by-value or insert-in-middle. Move is an optimization of copy. There is need for heap allocation as a workaround. Consider the following pseudocode:
 
 ```cpp
 #include <set>
@@ -82,9 +78,9 @@ HugeMatrix operator+(      HugeMatrix&&,       HugeMatrix&&);
 hm5 = hm1+hm2+hm3+hm4+hm5;   // efficient, no extra copies
 ```
 
-### <a name="enabling-move-for-appropriate-value-types"></a>Povolení přesunu pro typy odpovídající hodnotu
+### <a name="enabling-move-for-appropriate-value-types"></a>Enabling move for appropriate value types
 
-Pro třídu jako hodnota přesunutí kde může být levnější než hluboká kopie povolte konstrukci přesunu a přesunutí přiřazení efektivitu. Vezměte v úvahu následujícím pseudokódu:
+For a value-like class where move can be cheaper than a deep copy, enable move construction and move assignment for efficiency. Consider the following pseudocode:
 
 ```cpp
 #include <memory>
@@ -106,17 +102,13 @@ public:
 };
 ```
 
-Pokud povolíte konstrukce/přiřazení kopie, povolte konstrukce/přiřazení pro přesun také, pokud může být levnější než hluboké kopírování.
+If you enable copy construction/assignment, also enable move construction/assignment if it can be cheaper than a deep copy.
 
-Některé *bez hodnoty* typy jsou jenom pro přesun, například když nemůžete klonovat prostředek pouze přenos vlastnictví. Příklad: `unique_ptr`.
-
-## <a name="section"></a>Section
-
-Obsah
+Some *non-value* types are move-only, such as when you can’t clone a resource, only transfer ownership. Example: `unique_ptr`.
 
 ## <a name="see-also"></a>Viz také:
 
-[C++ – systém typů (moderní verze jazyka C++)](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[C++ vás vítá zpět (moderní verze jazyka C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ type system](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

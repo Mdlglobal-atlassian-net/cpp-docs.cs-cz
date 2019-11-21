@@ -1,6 +1,6 @@
 ---
 title: Operátory new a delete
-ms.date: 05/07/2019
+ms.date: 11/19/2019
 f1_keywords:
 - delete_cpp
 - new
@@ -8,50 +8,49 @@ helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: 8dd5e6a555872c443e32e9ea464ea49d4ae18f99
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222362"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246439"
 ---
-# <a name="new-and-delete-operators"></a>Operátory new a delete
+# <a name="new-and-delete-operators"></a>new a delete – operátory
 
-Jazyk C++ podporuje dynamické přidělování a navracení objektů pomocí [nové](../cpp/new-operator-cpp.md) a [odstranit](../cpp/delete-operator-cpp.md) operátory. Tyto operátory přidělují paměť objektům z fondu s názvem volné úložiště. **Nové** operátor volá funkci speciální [operátor new](../cpp/new-operator-cpp.md)a **odstranit** operátor volá funkci speciální [operátor delete](../cpp/delete-operator-cpp.md).
+C++ supports dynamic allocation and deallocation of objects using the [new](new-operator-cpp.md) and [delete](delete-operator-cpp.md) operators. Tyto operátory přidělují paměť objektům z fondu s názvem volné úložiště. The **new** operator calls the special function [operator new](new-operator-cpp.md), and the **delete** operator calls the special function [operator delete](delete-operator-cpp.md).
 
-**Nové** fungovat v C++ standardní knihovny podporuje chování určené v C++ standard, což je vyvolání výjimky std::bad_alloc Pokud selhání přidělení paměti. Pokud stále chcete non-throwing. verzi **nové**, propojit aplikaci s nothrownew.obj. Ale při propojení s nothrownew.obj výchozí **operátor new** ve standardní knihovně C++ nebude dál fungovat.
+The **new** function in the C++ Standard Library supports the behavior specified in the C++ standard, which is to throw a std::bad_alloc exception if the memory allocation fails. If you still want the non-throwing version of **new**, link your program with nothrownew.obj. However, when you link with nothrownew.obj, the default **operator new** in the C++ Standard Library no longer functions.
 
-Seznam souborů knihoven, které tvoří knihovny prostředí Runtime jazyka C a standardní knihovny C++, naleznete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
+For a list of the library files that comprise the C Runtime Library and the C++ Standard Library, see [CRT Library Features](../c-runtime-library/crt-library-features.md).
 
-##  <a id="new_operator"> </a> New – operátor
+##  <a id="new_operator"> </a> The new operator
 
-Například následující příkaz vyskytne v programu v jazyce, je přeložen volání funkce **operátor new**:
+When a statement such as the following is encountered in a program, it translates into a call to the function **operator new**:
 
 ```cpp
 char *pch = new char[BUFFER_SIZE];
 ```
 
-Pokud je požadavek pro nula bajtů úložiště, **operátor new** vrací ukazatel na konkrétní objekt (opakovaná volání **operátor new** vrátí různé ukazatele). Pokud není dostatek paměti pro požadavek na přidělení, **operátor new** vyvolá výjimku std::bad_alloc, nebo vrátí **nullptr** případě propojení v non-throwing. **operátor new** podporovat.
+If the request is for zero bytes of storage, **operator new** returns a pointer to a distinct object (that is, repeated calls to **operator new** return different pointers). If there is insufficient memory for the allocation request, **operator new** throws a `std::bad_alloc` exception, or returns **nullptr** if you have linked in non-throwing **operator new** support.
 
-Lze napsat rutinu, která se pokusí uvolnit paměť a opakovat přidělení; Zobrazit [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) Další informace. Podrobné informace o schématu obnovení naleznete v části zpracování není dostatek paměti tohoto tématu.
+You can write a routine that attempts to free memory and retry the allocation; see [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) for more information. For more details on the recovery scheme, see the Handling insufficient memory section of this topic.
 
-Dva obory **operátor new** funkce jsou popsány v následující tabulce.
+The two scopes for **operator new** functions are described in the following table.
 
-### <a name="scope-for-operator-new-functions"></a>Obor pro funkce operator new
+### <a name="scope-for-operator-new-functions"></a>Scope for operator new functions
 
-|Operátor|Scope|
+|Operátor|Rozsah|
 |--------------|-----------|
-|**:: new – operátor**|Globální|
-|*Název třídy* **:: new – operátor**|Třída|
+|**::operator new**|Globální|
+|*class-name* **::operator new**|Třída|
 
-První argument **operátor new** musí být typu `size_t` (typ definovaný v \<stddef.h >), a návratový typ je vždy **void** <strong>\*</strong>.
+The first argument to **operator new** must be of type `size_t` (a type defined in \<stddef.h>), and the return type is always **void** <strong>\*</strong>.
 
-Globální **operátor new** funkce je volána, když **nové** operátor se používá k přidělení paměti pro objekty předdefinovaných typů, uživatelem definované objekty typu třídy, které neobsahují **operátor new** funkce a pole libovolného typu. Při **nové** operátor se používá k přidělení paměti pro objekty typu třídy kde **operátor new** je definován, tuto třídu **operátor new** je volána.
+The global **operator new** function is called when the **new** operator is used to allocate objects of built-in types, objects of class type that do not contain user-defined **operator new** functions, and arrays of any type. When the **new** operator is used to allocate objects of a class type where an **operator new** is defined, that class's **operator new** is called.
 
-**Operátor new** definovanou pro třídu je statickou členskou funkcí (který, proto nelze virtuální), která skrývá globální funkci **operátor new** funkce pro objekty typu třídy. Vezměte si situaci, kdy **nové** se používá k přidělení a nastavení paměti dané hodnotě:
+An **operator new** function defined for a class is a static member function (which cannot, therefore, be virtual) that hides the global **operator new** function for objects of that class type. Consider the case where **new** is used to allocate and set memory to a given value:
 
 ```cpp
-// spec1_the_operator_new_function1.cpp
 #include <malloc.h>
 #include <memory.h>
 
@@ -78,16 +77,15 @@ int main()
 }
 ```
 
-Argument zadaný v závorkách **nové** je předán `Blanks::operator new` jako `chInit` argument. Ale globální **operátor new** funkce je skrytá, způsobí kód například následující vygeneruje chybu:
+The argument supplied in parentheses to **new** is passed to `Blanks::operator new` as the `chInit` argument. However, the global **operator new** function is hidden, causing code such as the following to generate an error:
 
 ```cpp
 Blanks *SomeBlanks = new Blanks;
 ```
 
-Kompilátor podporuje členská pole **nové** a **odstranit** operátory v deklaraci třídy. Příklad:
+The compiler supports member array **new** and **delete** operators in a class declaration. Příklad:
 
 ```cpp
-// spec1_the_operator_new_function2.cpp
 class MyClass
 {
 public:
@@ -107,13 +105,11 @@ int main()
 }
 ```
 
-### <a name="handling-insufficient-memory"></a>Zpracování nedostatek paměti
+### <a name="handling-insufficient-memory"></a>Handling insufficient memory
 
-Testování neúspěchu přidělení paměti lze provést například následujícím kódem:
+Testing for failed memory allocation can be done as shown here:
 
 ```cpp
-// insufficient_memory_conditions.cpp
-// compile with: /EHsc
 #include <iostream>
 using namespace std;
 #define BIG_NUMBER 100000000
@@ -126,33 +122,30 @@ int main() {
 }
 ```
 
-Neexistuje jiný způsob zpracování požadavků na přidělení paměti selhalo: napsat vlastní rutinu obnovení pro zpracování takového selhání, pak registraci funkci voláním [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) funkci run-time.
+There is another way to handle failed memory allocation requests. Write a custom recovery routine to handle such a failure, then register your function by calling the [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) run-time function.
 
-##  <a id="delete_operator"> </a> Operátor delete
+##  <a id="delete_operator"> </a> The delete operator
 
-Paměti dynamicky přidělené pomocí **nové** operátor může být uvolněna pomocí **odstranit** operátor. Volání operátoru delete **operátor delete** funkce, která uvolní paměť zpět do fondu k dispozici. Použití **odstranit** operátor také způsobí, že destruktor třídy (pokud existuje) má být volána.
+Memory that is dynamically allocated using the **new** operator can be freed using the **delete** operator. The delete operator calls the **operator delete** function, which frees memory back to the available pool. Using the **delete** operator also causes the class destructor (if there is one) to be called.
 
-Globální a s rozsahem třídy **operátor delete** funkce. Pouze jeden **operátor delete** funkce lze definovat pro danou třídu; Pokud definována, skrývá globální **operátor delete** funkce. Globální **operátor delete** funkce je volána vždy pro pole libovolného typu.
+There are global and class-scoped **operator delete** functions. Only one **operator delete** function can be defined for a given class; if defined, it hides the global **operator delete** function. The global **operator delete** function is always called for arrays of any type.
 
-Globální **operátor delete** funkce. Existují dvě formy pro globální **operátor delete** a člen třídy **operátor delete** funkce:
+The global **operator delete** function. Two forms exist for the  global **operator delete**  and class-member **operator delete** functions:
 
 ```cpp
 void operator delete( void * );
 void operator delete( void *, size_t );
 ```
 
-Pouze jeden z předchozí dvě různými formami může být k dispozici pro danou třídu. První formulář přijímá jeden argument typu `void *`, který obsahuje ukazatel na objekt, který chcete uvolnit. Druhý formulář – velikostí dealokace – přebírá dva argumenty, první z nich je ukazatelem na blok paměti určený k uvolnění a druhý z nich je počet bajtů k přidělení. Návratový typ obě formy **void** (**operátor delete** nemůže vracet hodnotu).
+Only one of the preceding two forms can be present for a given class. The first form takes a single argument of type `void *`, which contains a pointer to the object to deallocate. The second form—sized deallocation—takes two arguments, the first of which is a pointer to the memory block to deallocate and the second of which is the number of bytes to deallocate. The return type of both forms is **void** (**operator delete** cannot return a value).
 
-Záměrem druhý formulář je k urychlení vyhledávání ke kategorii správnou velikost pro objekt, který má být odstraněna, který je často není uložen téměř přidělení samotného a pravděpodobně bez mezipaměti; druhý typ je zvláště užitečné, když **operátor delete** funkce ze základní třídy se používá k odstranění objektu odvozené třídy.
+The intent of the second form is to speed up searching for the correct size category of the object to be deleted, which is often not stored near the allocation itself and likely uncached. The second form is useful when an **operator delete** function from a base class is used to delete an object of a derived class.
 
-**Operátor delete** je funkce statická, proto nemůže být virtuální. **Operátor delete** funkce dodržuje řízení přístupu, jak je popsáno v [řízení přístupu členů](../cpp/member-access-control-cpp.md).
+The **operator delete** function is static; therefore, it cannot be virtual. The **operator delete** function obeys access control, as described in [Member-Access Control](member-access-control-cpp.md).
 
-Následující příklad ukazuje definované uživatelem **operátor new** a **operátor delete** funkce navržené tak, aby přidělování a navrácení paměti protokolu:
+The following example shows user-defined **operator new** and **operator delete** functions designed to log allocations and deallocations of memory:
 
 ```cpp
-// spec1_the_operator_delete_function1.cpp
-// compile with: /EHsc
-// arguments: 3
 #include <iostream>
 using namespace std;
 
@@ -198,9 +191,9 @@ int main( int argc, char *argv[] ) {
 }
 ```
 
-Předchozí kód lze použít k detekci "úniku paměti" – to znamená, paměti, která je přidělené ve volném úložišti, ale nikdy uvolněna. K provedení této detekce, globální **nové** a **odstranit** operátory jsou předefinována na počet přidělování a navracení zpět paměti.
+The preceding code can be used to detect "memory leakage" — that is, memory that is allocated on the free store but never freed. To perform this detection, the global **new** and **delete** operators are redefined to count allocation and deallocation of memory.
 
-Kompilátor podporuje členská pole **nové** a **odstranit** operátory v deklaraci třídy. Příklad:
+The compiler supports member array **new** and **delete** operators in a class declaration. Příklad:
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

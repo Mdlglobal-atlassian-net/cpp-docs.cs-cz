@@ -1,5 +1,5 @@
 ---
-title: Specifikace výjimek (throw, noexcept) (C++)
+title: Exception specifications (throw, noexcept) (C++)
 ms.date: 01/18/2018
 helpviewer_keywords:
 - exceptions [C++], exception specifications
@@ -8,55 +8,55 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: a3d4c0446cd8dde83febb1b4269811b5dec3c477
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222103"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245884"
 ---
-# <a name="exception-specifications-throw-noexcept-c"></a>Specifikace výjimek (throw, noexcept) (C++)
+# <a name="exception-specifications-throw-noexcept-c"></a>Exception specifications (throw, noexcept) (C++)
 
-Specifikace výjimek jsou funkce jazyka C++, které označují programátora záměr o typy výjimek, které můžete rozšířit pomocí funkce. Můžete určit, že funkce může nebo nemusí výjimku ukončit pomocí *specifikace výjimky*. Kompilátor tyto informace můžete použít k optimalizaci volání funkce a ukončení programu, pokud neočekávanou výjimku řídící funkce.
+Exception specifications are a C++ language feature that indicate the programmer's intent about the exception types that can be propagated by a function. You can specify that a function may or may not exit by an exception by using an *exception specification*. The compiler can use this information to optimize calls to the function, and to terminate the program if an unexpected exception escapes the function.
 
-Před C ++ 17 se dva typy specifikace výjimky. *Noexcept specifikace* byla nová v C ++ 11. Určuje, zda sada potenciální výjimky, které může uniknout funkce je prázdný. *Specifikace dynamických výjimek*, nebo `throw(optional_type_list)` specifikace, bylo zastaralé v C ++ 11 a odstraněno v C ++ 17, s výjimkou `throw()`, což je alias pro `noexcept(true)`. Tato specifikace výjimky je navržená k poskytuje souhrnné informace o jaké výjimky mohou být vyvolány ve funkci, ale v praxi byl nalezen jako problematické. Jeden specifikace dynamických výjimek, který být částečně užitečné byla Nepodmíněný `throw()` specifikace. Například deklarace funkce:
+Prior to C++17 there were two kinds of exception specification. The *noexcept specification* was new in C++11. It specifies whether the set of potential exceptions that can escape the function is empty. The *dynamic exception specification*, or `throw(optional_type_list)` specification, was deprecated in C++11 and removed in C++17, except for `throw()`, which is an alias for `noexcept(true)`. This exception specification was designed to provide summary information about what exceptions can be thrown out of a function, but in practice it was found to be problematic. The one dynamic exception specification that did prove to be somewhat useful was the unconditional `throw()` specification. For example, the function declaration:
 
 ```cpp
 void MyFunction(int i) throw();
 ```
-přikáže kompilátoru, že funkce nevyvolá žádné výjimky. Nicméně v **/std: c ++ 14** režimu to může vést k nedefinované chování, pokud funkce vyvolá výjimku. Proto doporučujeme použít [noexcept](../cpp/noexcept-cpp.md) operátor ne výše:
+tells the compiler that the function does not throw any exceptions. However, in **/std:c++14** mode this could lead to undefined behavior if the function does throw an exception. Therefore we recommend using the [noexcept](../cpp/noexcept-cpp.md) operator instead of the one above:
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-Následující tabulka shrnuje Microsoft C++ implementaci specifikace výjimek:
+The following table summarizes the Microsoft C++ implementation of exception specifications:
 
-|Specifikace výjimek|Význam|
+|Exception specification|Význam|
 |-----------------------------|-------------|
-|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|Funkce nevyvolá výjimku. V [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) režimu (výchozí), `noexcept` a `noexcept(true)` jsou ekvivalentní. Když výjimka je vyvolána z funkce, která je deklarována `noexcept` nebo `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) je vyvolána. Když je výjimka vyvolána z funkce deklarované jako `throw()` v **/std: c ++ 14** režimu, výsledek je nedefinované chování. Žádná konkrétní funkce je vyvolána. Toto je odchylkami od C ++ 14 na úrovni standard, který vyžaduje kompilátor, který má být vyvolán [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 verze 15.5 nebo novější**: V **/std: c ++ 17** režimu `noexcept`, `noexcept(true)`, a `throw()` jsou všechny ekvivalentní. V **/std: c ++ 17** režimu `throw()` je alias pro `noexcept(true)`. V **/std: c ++ 17** režimu, když výjimka je vyvolána z funkce deklarovaná pomocí některé z těchto specifikací [std::terminate](../standard-library/exception-functions.md#terminate) se vyvolá podle požadavku standardu C ++ 17.|
-|`noexcept(false)`<br/>`throw(...)`<br/>Žádné podmínky|Funkce může vyvolat výjimky jakéhokoli typu.|
-|`throw(type)`| (**C ++ 14 a dřívějších**) funkce může vyvolat výjimku typu `type`. Kompilátor přijímá syntaxi, ale interpretovat jako `noexcept(false)`. V **/std: c ++ 17** režimu kompilátor vydá upozornění C5040.|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|The function does not throw an exception. In [/std:c++14](../build/reference/std-specify-language-standard-version.md) mode (which is the default), `noexcept` and `noexcept(true)` are equivalent. When an exception is thrown from a function that is declared `noexcept` or `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked. When an exception is thrown from a function declared as `throw()` in **/std:c++14** mode, the result is undefined behavior. No specific function is invoked. This is a divergence from the C++14 standard, which required the compiler to invoke [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 version 15.5 and later**: In **/std:c++17** mode , `noexcept`, `noexcept(true)`, and `throw()` are all equivalent. In **/std:c++17** mode, `throw()` is an alias for `noexcept(true)`. In **/std:c++17** mode, when an exception is thrown from a function declared with any of these specifications, [std::terminate](../standard-library/exception-functions.md#terminate)  is invoked as required by the C++17 standard.|
+|`noexcept(false)`<br/>`throw(...)`<br/>No specification|The function can throw an exception of any type.|
+|`throw(type)`| (**C++14 and earlier**) The function can throw an exception of type `type`. The compiler accepts the syntax, but interprets it as `noexcept(false)`. In **/std:c++17** mode the compiler issues warning C5040.|
 
-Pokud zpracování výjimek se používá v aplikaci, musí být funkce v zásobníku volání, která zpracovává vyvolané výjimky před opustí vnějším oboru funkce označena `noexcept`, `noexcept(true)`, nebo `throw()`. Pokud žádné funkce volána mezi ten, který vyvolá výjimku a ten, který zpracovává výjimku jsou zadané jako `noexcept`, `noexcept(true)` (nebo `throw()` v **/std: c ++ 17** režimu), program se ukončí, když Funkce noexcept šíří výjimku.
+If exception handling is used in an application, there must be a function in the call stack that handles thrown exceptions before they exit the outer scope of a function marked `noexcept`, `noexcept(true)`, or `throw()`. If any functions called between the one that throws an exception and the one that handles the exception are specified as `noexcept`, `noexcept(true)` (or `throw()` in **/std:c++17** mode), the program is terminated when the noexcept function propagates the exception.
 
-Chování výjimky funkce závisí na následujících faktorech:
+The exception behavior of a function depends on the following factors:
 
-- Které [režim standardní kompilace jazyka](../build/reference/std-specify-language-standard-version.md) nastavena.
-- Jste kompilovali funkci pod C nebo C++.
+- Which [language standard compilation mode](../build/reference/std-specify-language-standard-version.md) is set.
+- Whether you are compiling the function under C or C++.
 
-- Které [/EH](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru použijete.
+- Which [/EH](../build/reference/eh-exception-handling-model.md) compiler option you use.
 
-- Určuje, zda explicitně zadáte specifikaci výjimky.
+- Whether you explicitly specify the exception specification.
 
-Explicitní specifikace výjimek nejsou povoleny ve funkcích c. Funkci jazyka C předpokládá, že není k vyvolání výjimky v rámci **/EHsc**a může vyvolat strukturované výjimky v rámci **/EHS**, **/EHa**, nebo **/EHac**.
+Explicit exception specifications are not allowed on C functions. A C function is assumed not to throw exceptions under **/EHsc**, and may throw structured exceptions under **/EHs**, **/EHa**, or **/EHac**.
 
-Následující tabulka uvádí, zda funkci jazyka C++ může potenciálně vyvolat v rámci různých zpracování možností kompilátoru výjimek:
+The following table summarizes whether a C++ function may potentially throw under various compiler exception handling options:
 
 |Funkce|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|C++ funguje bez specifikací výjimek|Ano|Ano|Ano|Ano|
-|Funkce jazyka C++ s `noexcept`, `noexcept(true)`, nebo `throw()` specifikace výjimek|Ne|Ne|Ano|Ano|
-|Funkce jazyka C++ s `noexcept(false)`, `throw(...)`, nebo `throw(type)` specifikace výjimek|Ano|Ano|Ano|Ano|
+|C++ function with no exception specification|Ano|Ano|Ano|Ano|
+|C++ function with `noexcept`, `noexcept(true)`, or `throw()` exception specification|Ne|Ne|Ano|Ano|
+|C++ function with `noexcept(false)`, `throw(...)`, or `throw(type)` exception specification|Ano|Ano|Ano|Ano|
 
 ## <a name="example"></a>Příklad
 
@@ -130,4 +130,4 @@ in handler
 ## <a name="see-also"></a>Viz také:
 
 [try, throw a catch – příkazy (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
-[Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Načasování zpracování výjimky: Souhrn'
+title: 'Timing of exception handling: A summary'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 870606c3661df3654581760214e48ef2bdfb1987
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221904"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246335"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Načasování zpracování výjimky: Souhrn
+# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
 
-Obslužné rutiny ukončení provádí bez ohledu na to, jak **__try** se ukončí blok příkazů. Příčiny opuštění **__try** bloku, `longjmp` příkaz, který opuštění bloku a odvíjení zásobníku z důvodu zpracování výjimek.
+A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
 
 > [!NOTE]
->  Microsoft C++ kompilátor podporuje dvě formy `setjmp` a `longjmp` příkazy. Rychlá verze obchází zpracování ukončení, ale je mnohem efektivnější. Chcete-li tuto verzi použít, zahrňte soubor \<setjmp.h >. Jiné verze podporují zpracování ukončení, jak je popsáno v předchozím odstavci. Chcete-li tuto verzi použít, zahrňte soubor \<setjmpex.h >. Zvýšení výkonu u rychlé verze závisí na konfiguraci hardwaru.
+>  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. Rychlá verze obchází zpracování ukončení, ale je mnohem efektivnější. To use this version, include the file \<setjmp.h>. Jiné verze podporují zpracování ukončení, jak je popsáno v předchozím odstavci. To use this version, include the file \<setjmpex.h>. Zvýšení výkonu u rychlé verze závisí na konfiguraci hardwaru.
 
 Operační systém spustí všechny obslužné rutiny ukončení ve správném pořadí, předtím než lze spustit jakýkoli jiný kód, včetně těla obslužné rutiny výjimky.
 
@@ -35,7 +35,7 @@ Je-li příčinou přerušení výjimka, systém musí před rozhodnutím, co uk
 
 1. Pokud tento filtr předá řízení (vrátí hodnotu 0), proces pokračuje, dokud není nalezen filtr, který nepředá řízení.
 
-1. Pokud tento filtr vrátí hodnotu -1, provádění pokračuje, kde byla výjimka vyvolána, a nedojde k žádnému ukončení probíhá.
+1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
 
 1. Jestliže filtr vrátí hodnotu 1, dojde k následujícím událostem:
 
@@ -49,5 +49,5 @@ Je-li příčinou přerušení výjimka, systém musí před rozhodnutím, co uk
 
 ## <a name="see-also"></a>Viz také:
 
-[Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
