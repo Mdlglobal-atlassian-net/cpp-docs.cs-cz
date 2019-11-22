@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CDaoIndexFieldInfo structure [MFC]
 - DAO (Data Access Objects), Index Fields collection
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
-ms.openlocfilehash: a8b0ff991b8cc4988192b89d7f70309af9b9112a
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 10c786ef4fed9ecb3bbbb93526cd68a11e18d58c
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096094"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303661"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo – struktura
 
-`CDaoIndexFieldInfo` Struktura obsahuje informace o objektu pole indexu definovaném pro objekty DAO (Data Access Object).
+Struktura `CDaoIndexFieldInfo` obsahuje informace o objektu pole indexu definovaném pro objekty DAO (Data Access Object).
 
 Rozhraní DAO je podporováno prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
 
@@ -40,11 +40,11 @@ Určuje pořadí indexů definované objektem indexu. TRUE, pokud je pořadí se
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt index může mít množství polí, která označují, která pole a tabledef (nebo sada záznamů založená na tabulce) jsou indexovány. Odkazy na primární výše označují, jak jsou vráceny informace v `m_pFieldInfos` členu objektu [CDaoIndexInfo –](../../mfc/reference/cdaoindexinfo-structure.md) `GetIndexInfo` získaném voláním členské funkce třídy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).
+Objekt index může mít množství polí, která označují, která pole a tabledef (nebo sada záznamů založená na tabulce) jsou indexovány. Odkazy na primární výše označují, jak jsou vráceny informace v `m_pFieldInfos` členu objektu [CDaoIndexInfo –](../../mfc/reference/cdaoindexinfo-structure.md) získaného voláním členské funkce `GetIndexInfo` třídy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).
 
-Objekty indexů a objekty pole indexu nejsou reprezentovány třídou MFC. Místo toho objekty DAO podkladové objekty knihovny MFC třídy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) obsahují kolekci objektů indexů, které se nazývají kolekce indexů. Každý objekt index zase obsahuje kolekci objektů polí. Tyto třídy poskytují členské funkce pro přístup k jednotlivým položkám informací o indexu, nebo k nim můžete přistupovat současně `CDaoIndexInfo` pomocí objektu `GetIndexInfo` voláním členské funkce obsahujícího objektu. Objekt má datový člen, `m_pFieldInfos`, který `CDaoIndexFieldInfo` odkazuje na pole objektů. `CDaoIndexInfo`
+Objekty indexů a objekty pole indexu nejsou reprezentovány třídou MFC. Místo toho objekty DAO podkladové objekty knihovny MFC třídy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) obsahují kolekci objektů indexů, které se nazývají kolekce indexů. Každý objekt index zase obsahuje kolekci objektů polí. Tyto třídy poskytují členské funkce pro přístup k jednotlivým položkám informací o indexu nebo k nim můžete přistupovat současně pomocí objektu `CDaoIndexInfo` voláním členské funkce `GetIndexInfo` objektu, který jej obsahuje. Objekt `CDaoIndexInfo` a potom má datový člen `m_pFieldInfos`, který odkazuje na pole objektů `CDaoIndexFieldInfo`.
 
-`GetIndexInfo` Volání členské funkce obsahujícího objektu tabledef nebo Recordset, ve kterém je kolekce indexů uložena, je uložen do objektu indexu, který vás zajímá. Pak přejděte [](../../mfc/reference/cdaoindexinfo-structure.md) ke členuobjektu`m_pFieldInfos` CDaoIndexInfo –. Délka `m_pFieldInfos` pole je uložena v `m_nFields`. `CDaoIndexFieldInfo`také definuje `Dump` členskou funkci v sestavení ladění. Můžete použít `Dump` k výpisu obsahu `CDaoIndexFieldInfo` objektu.
+Zavolejte členskou funkci `GetIndexInfo` objektu obsahujícího tabledef nebo Recordset, ve kterém je kolekce indexů uložena, v němž je uložen objekt indexu, který vás zajímá. Pak přejděte k `m_pFieldInfos`mu členu objektu [CDaoIndexInfo –](../../mfc/reference/cdaoindexinfo-structure.md) . Délka pole `m_pFieldInfos` je uložena v `m_nFields`. `CDaoIndexFieldInfo` také definuje členskou funkci `Dump` v sestaveních ladění. K výpisu obsahu `CDaoIndexFieldInfo` objektu můžete použít `Dump`.
 
 ## <a name="requirements"></a>Požadavky
 

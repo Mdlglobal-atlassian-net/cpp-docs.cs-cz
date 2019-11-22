@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@F symbol'
 ms.assetid: fa717dc8-e5a4-420d-ad3c-cb64ed258a60
-ms.openlocfilehash: 9c7a214d9a160bbf280c0b7ec3dc2f5765ce375a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03120d1a65c46f3f67947936d00600f2139ba237
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166279"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302676"
 ---
-# <a name="f"></a>@F
+# <a name="f"></a>\@F
 
-Umístění na další [@@:](../../assembler/masm/at-at.md) popisek.
+Umístění dalšího [\@\@:](../../assembler/masm/at-at.md) popisek.
 
 ## <a name="syntax"></a>Syntaxe
 
-> @F
+> **\@F**
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)<br/>
+[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)

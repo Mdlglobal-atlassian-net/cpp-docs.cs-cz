@@ -2,79 +2,79 @@
 title: Běžné problémy s migrací ARM v prostředí Visual C++
 ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 78d87000240acd394edf823a778ae29060c6d09c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 518b8872b301a8fcfc0f154cb3d5d0299efb0975
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220880"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303228"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Běžné problémy s migrací ARM v prostředí Visual C++
 
-Při použití služby Microsoft C++ kompilátor (MSVC), stejné C++ zdrojový kód může vytvářet různé výsledky v architektuře ARM, než na x86 nebo x64 architektury.
+Při použití kompilátoru Microsoft C++ (MSVC) může stejný C++ zdrojový kód vést k různým výsledkům architektury ARM než v architekturách x86 a x64.
 
-## <a name="sources-of-migration-issues"></a>Zdroje problémy s migrací
+## <a name="sources-of-migration-issues"></a>Zdroje problémů s migrací
 
-Mnoho problémů, které se mohou vyskytnout při migrace kódu z architektury x86 nebo x64 na architekturu ARM se vztahují na zdrojový kód konstrukce, které mohou vyvolat nedefinované, definovanou implementací nebo neurčené chování.
+Mnohé problémy, se kterými se můžete setkat při migraci kódu z architektur x86 nebo x64 do architektury ARM, souvisí s konstrukcemi zdrojového kódu, které mohou vyvolat nedefinované chování definované implementací nebo nespecifikovaným způsobem.
 
-*Nedefinované chování* je chování, které není definován standardu jazyka C++ a, který je způsobeno tím, operace, která nemá žádný rozumný výsledek: například převod hodnotu s plovoucí desetinnou čárkou na celé číslo bez znaménka, nebo hodnotu posunu počet pozic který je záporná nebo přesahuje počet bitů v jeho povýšený typ.
+*Nedefinované chování* je chování, které C++ Standard nedefinuje a které je způsobeno operací, která nemá rozumný výsledek: například převod hodnoty s plovoucí desetinnou čárkou na unsigned integer nebo posunutí hodnoty o několik pozic, které jsou záporné nebo překračují počet bitů v jeho propagovaném typu.
 
-*Chování definované implementací* je chování, C++ standard vyžaduje dodavatel kompilátoru k definování a dokumentu. Program můžete bezpečně spolehnout na chování definované implementací, i když to uděláte tak nemusí být portable. Chování definované implementací příklady velikosti předdefinované datové typy a jejich požadavky na zarovnání. Příklad operace, které by mohly mít dopad chování definované implementací je přístup k seznamu argumentů proměnných.
+*Chování definované implementací* je chování, které C++ Standard vyžaduje, aby dodavatel kompilátoru definoval a dokumentoval. Program se může bezpečně spoléhat na chování definované implementací, i když to ale nemusí být přenosné. Mezi příklady chování definovaného implementací patří velikosti integrovaných datových typů a jejich požadavky na jejich zarovnání. Příkladem operace, která může být ovlivněna chováním definovaným implementací, je přístup k seznamu argumentů proměnných.
 
-*Tento parametr zadán chování* je chování, které se zasílají standardu jazyka C++ záměrně Nedeterministický. Ačkoli chování se považuje za Nedeterministický, určuje konkrétní volání neurčené chování implementace kompilátoru. Ale neexistuje žádný požadavek pro dodavatele kompilátoru určit výsledek nebo zaručit konzistenci mezi srovnatelné volání a neexistuje žádný požadavek pro dokumentaci. Příklad neurčené chování je pořadí, ve kterém jsou vyhodnoceny dílčí výrazy, které zahrnují argumenty pro volání funkce.
+*Nespecifikované chování* je chování, C++ které standardní ponechá úmyslně Nedeterministický. I když se chování považuje za nedeterministické, konkrétní vyvolání nespecifikovaného chování je určeno implementací kompilátoru. Neexistuje však žádný požadavek na to, aby dodavatel kompilátoru předem určil výsledek nebo zajistil konzistentní chování mezi srovnatelnými voláními a neexistuje žádný požadavek na dokumentaci. Příkladem nespecifikovaného chování je pořadí, ve kterém jsou vyhodnoceny dílčí výrazy, které obsahují argumenty pro volání funkce.
 
-Další problémy s migrací lze přiřadit k hardwaru rozdíly mezi ARM a x86 nebo x64 architektury, které pracují s C++ standard odlišně. Například poskytuje silné paměťový model architektury x86 a x64 `volatile`-kvalifikovaný proměnné některé další vlastnosti, které se používají k usnadnění určité druhy komunikace mezi vlákny v minulosti. Ale model slabé paměti architektury ARM nepodporuje toto použití ani standardu jazyka C++ vyžaduje ho.
+Další problémy s migrací se dají přidružit k hardwarovým rozdílům mezi architekturami ARM a x86 nebo x64, C++ které pracují se standardem odlišně. Například model silné paměti architektury x86 a x64 poskytuje `volatile`kvalifikovaných proměnných některé další vlastnosti, které byly použity k usnadnění určitých druhů komunikace mezi vlákny v minulosti. Nejedná se ale o C++ nepodporováný model paměti architektury ARM, ale standardní to nevyžaduje.
 
 > [!IMPORTANT]
->  I když `volatile` zisky některé vlastnosti, které je možné implementovat omezený formám komunikace mezi vlákny na x86 a x64, tyto další vlastnosti nejsou dostatečná k implementaci obecně mezi vlákna komunikace. Standard jazyka C++ doporučuje, aby takovou komunikaci implementovat pomocí příslušné synchronizace primitiv.
+>  I když `volatile` získá některé vlastnosti, které lze použít k implementaci omezených forem komunikace mezi vlákny na platformě x86 a x64, tyto další vlastnosti nejsou dostačující k implementaci komunikace mezi vlákny obecně. C++ Standard doporučuje, aby taková komunikace byla implementována místo toho pomocí příslušných primitivních primitiv synchronizace.
 
-Protože různé platformy mohou tyto druhy chování express odlišně, přenos softwaru mezi platformami může být obtížné a náchylné k chybám Pokud závisí na chování konkrétní platformy. I když mnohé z těchto druhů chování může být dodržen a může se zobrazit stabilní, spoléhání se na nich je alespoň nepřenosné a v případě neurčené nebo nedefinované chování, je také chybou. I chování, které je uvedené v tomto dokumentu nemělo spoléhat a v budoucnu změnit, jaké kompilátory a implementace procesoru.
+Vzhledem k tomu, že různé platformy můžou tyto druhy chování vyjádřit odlišně, může být přenos softwaru mezi platformami obtížné a náchylný k chybám, pokud závisí na chování konkrétní platformy. I když mnoho z těchto druhů chování může být pozorováno a může se zdát být stabilní, spoléhá se na ně aspoň na přenosné a v případě nedefinovaného nebo nespecifikovaného chování je také chyba. I chování, které je Citováno v tomto dokumentu, by se nemělo spoléhat na a může se změnit v budoucích kompilátorech nebo implementacích procesoru.
 
-## <a name="example-migration-issues"></a>Problémy s migrací příklad
+## <a name="example-migration-issues"></a>Příklady problémů s migrací
 
-Zbývající část tohoto dokumentu popisuje, jak různé chování těchto prvků jazyka C++ mohou přinést různé výsledky na různých platformách.
+Zbývající část tohoto dokumentu popisuje, jak může jiné chování těchto C++ elementů jazyka způsobit různé výsledky na různých platformách.
 
-### <a name="conversion-of-floating-point-to-unsigned-integer"></a>Převod s plovoucí desetinnou čárkou na celé číslo bez znaménka
+### <a name="conversion-of-floating-point-to-unsigned-integer"></a>Převod plovoucí desetinné čárky na unsigned integer
 
-V architektuře ARM nepovažuje převod na 32bitové celé číslo s plovoucí desetinnou čárkou na nejbližší hodnotu, která reprezentuje na celé číslo. Pokud s plovoucí desetinnou čárkou je mimo rozsah, která představuje celé číslo. V architekturách x86 a x64 převod cyklickému přechodu Pokud celé číslo bez znaménka, nebo je nastavený na -2147483648 Pokud podepsané celé číslo. Žádný z těchto architektury přímo nepodporuje převod hodnoty s plovoucí desetinnou čárkou na menší typy celých čísel; Místo toho převody jsou prováděny na 32 bitů a výsledky se zkrátí na menší velikost.
+V architektuře ARM je převod hodnoty s plovoucí desetinnou čárkou na 32 celé číslo se sytostí na nejbližší hodnotu, kterou může celé číslo představovat, pokud je hodnota s plovoucí desetinnou čárkou mimo rozsah, jehož celé číslo může představovat. V architekturách x86 a x64 se převod zalamuje kolem, pokud je celé číslo bez znaménka, nebo je nastaveno na-2147483648, pokud je celé číslo podepsáno. Žádná z těchto architektur přímo nepodporuje převod hodnot s plovoucí desetinnou čárkou na menší celočíselné typy; místo toho jsou převody provedeny na 32 bitů a výsledky jsou zkráceny na menší velikost.
 
-Pro architekturu ARM kombinace přechod sytosti a zkrácení znamená, že převod na typy bez znaménka správně nepovažuje menších typů bez znaménka při nepovažuje 32bitové celé číslo, ale vytváří zkrácený výsledek pro hodnoty, které jsou větší než menší typ může představovat ale příliš malá pro saturate úplné 32bitové celé číslo. Převod nepovažuje správně pro 32bitová celá čísla se znaménkem, ale zkrácení sytou, podepsaný celých čísel za následek pozitivně přeplněný hodnoty -1 a pro negativní přeplněný hodnoty 0. Převod na menší celé číslo se znaménkem vytváří zkrácený výsledek, které nepředvídatelné.
+V případě architektury ARM je kombinace sytosti a zkrácení znamená, že převod na typy bez znaménka správně přesáhne menší typy bez znaménka při sytosti 32 celé číslo, ale výsledkem je zkrácený výsledek pro hodnoty, které jsou větší než menší typ může představovat, ale je příliš malý pro sytost úplného 32 celého čísla. Převod je také správně sytost u celých čísel se znaménkem (32), ale zkrácením nasycených celých čísel je hodnota-1 pro kladné hodnoty a 0 pro hodnoty s negativní sytostí. Převod na menší celé číslo se znaménkem vytvoří zkrácený výsledek, který nelze předvídat.
 
-Pro architektury x86 a x64 kombinace obklopující chování pro převod na celé číslo bez znaménka a oceňování explicitní převody celé číslo se znaménkem na přetečení, společně s zkrácení, byly výsledky pro většinu staffhubu nepředvídatelné, pokud jsou moc velká.
+V architekturách x86 a x64 je kombinace chování při obtékání unsigned integer a explicitního oceňování pro převody s celými čísly při přetečení spolu se zkrácením povede k nepředvídatelným výsledkům pro většinu Shift. moc velký.
 
-Tyto platformy se také liší v jak zpracovávají NaN (Not a Number) převod na typy celých čísel. Na ARM NaN převádí na 0x00000000; na x86 a x64 převede 0x80000000.
+Tyto platformy se také liší v tom, jak zpracovávají převod NaN (ne-a-Number) na celočíselné typy. V ARM se hodnota NaN převede na 0x00000000; v x86 a x64 se převede na 0x80000000.
 
-Převody plovoucí desetinné čárky lze pouze spoléhat Pokud víte, že je hodnota v rozsahu, který je převáděn na typ integer.
+Konverze s plovoucí desetinnou čárkou se dá spoléhat jenom v případě, že víte, že hodnota spadá do rozsahu typu Integer, na který se převádí.
 
-### <a name="shift-operator---behavior"></a>Operátor posunutí (\< \< >>) chování
+### <a name="shift-operator---behavior"></a>Chování operátoru Shift (\<\< > >)
 
-V architektuře ARM hodnotu lze přesunout left nebo right až 255 bits ještě před zahájením modelu opakování. V architekturách x86 a x64 vzor se opakuje v každé násobek 32 Pokud zdroj vzor je proměnná 64-bit; v takovém případě vzor se opakuje v každé násobkem 64 na x 64 a každý násobek 256 na x86, kde pracuje implementaci softwaru. Pro 32bitové proměnné, která má hodnotu 1 posunuta doleva o 32 pozice, na ARM výsledkem je 0, například na x86 výsledek je 1 a na x64 vrácená hodnota je také 1. Ale pokud je zdroj hodnoty proměnné 64-bit, pak výsledek na všech třech platformách 4294967296, a hodnota nebude "obtékat kolem" dokud posunula 64 pozice na x64 nebo 256 pozice na ARM a x86.
+V architektuře ARM může být hodnota posunutá doleva nebo doprava až 255 bitů, než se vzorek začne opakovat. V architekturách x86 a x64 se vzor opakuje v každé násobce 32, pokud zdroj vzorce je 64 proměnná; v takovém případě se vzor opakuje v každé násobce 64 na x64 a v každé násobce 256 v x86, kde se používá implementace softwaru. Například pro 32 proměnnou, která má hodnotu 1 posunutou doleva o 32 pozic, je výsledek 0, v x86 je výsledkem 1 a v případě x64 je výsledkem také 1. Pokud je však zdrojem hodnoty 64 bitová proměnná, pak výsledek na všech třech platformách je 4294967296 a hodnota nebude "obtékat", dokud nebude 64 přesunuta do polohy x64 nebo na 256 pozic na ARM a x86.
 
-Vzhledem k tomu, že výsledek operace posunutí, která překračuje počet bitů v zdrojový typ není definován, kompilátor nemusí mít konzistentní chování ve všech situacích. Například pokud jsou oba operandy posunu znám v době kompilace, kompilátor může optimalizovat program pomocí rutiny interní předpočítání výsledek shift a potom nahraďte výsledek místo operaci posunutí. Pokud hodnota shift je příliš velká, nebo záporný, výsledkem vnitřní rutina může být jiný než výsledek stejný výraz shift jako provedl procesoru.
+Vzhledem k tomu, že výsledek operace posunutí, který překračuje počet bitů ve zdrojovém typu, není definován, kompilátor nemusí mít ve všech situacích konzistentní chování. Například pokud jsou oba operandy Shift známy v době kompilace, kompilátor může optimalizovat program pomocí interní rutiny k předběžnému výpočtu výsledku posunu a následným nahrazením výsledku operace posunutí. Pokud je hodnota posunutí příliš velká nebo záporná, výsledek interní rutiny může být jiný než výsledek stejného výrazu Shift, který je spuštěný PROCESORem.
 
-### <a name="variable-arguments-varargs-behavior"></a>Chování proměnné argumenty (vararg)
+### <a name="variable-arguments-varargs-behavior"></a>Chování proměnných argumentů (varargs)
 
-V architektuře ARM podléhají parametry ze seznamu argumenty proměnných, které jsou předány v zásobníku zarovnání. Například je 64-bit parametr zarovnáno na hranici 64-bit. Na x86 a x64 argumenty, které jsou předány v zásobníku nejsou v souladu s zarovnání a aktualizací Service pack úzce. Tento rozdíl může způsobit variadické funkce, jako je `printf` číst adresy paměti, které byly určeny jako odsazení v ARM Pokud je očekávané rozložení seznamu proměnné argumenty, se neshoduje přesně, i v případě, že může fungovat pro podmnožinu některé hodnoty v x86 nebo x64 architektury. Podívejte se například:
+V architektuře ARM se parametry ze seznamu argumentů proměnné, které jsou předány v zásobníku, vztahují na zarovnání. Například parametr 64-bit je zarovnán na 64 bitové hranici. V x86 a x64 argumenty, které jsou předány v zásobníku, nejsou předmětem zarovnání a balení těsně. Tento rozdíl může způsobit variadické funkci, jako je například `printf` pro čtení adres paměti, které byly určeny jako odsazení na ARM, pokud očekávané rozložení seznamu argumentů proměnných není přesně shodné, i když může fungovat pro podmnožinu některých hodnot v architekturách x86 nebo x64. Vezměte v úvahu tento příklad:
 
 ```C
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.
-// on x86 and x64 this may work for small values because %d will “parse” the low-32 bits of the argument.
+// on x86 and x64 this may work for small values because %d will "parse" the low-32 bits of the argument.
 // on ARM the calling convention will align the 64-bit value and the code will print a random value
 printf("%d\n", 1LL);
 ```
 
-V takovém případě chyby může být opraveno a ujistěte se, že specifikace správný formát se používá tak, aby se považuje za zarovnání argumentu. Tento kód je správný:
+V takovém případě může být chyba opravena tím, že zajistí, že se použije správná specifikace formátu, aby bylo zváženo zarovnání argumentu. Tento kód je správný:
 
 ```C
 // CORRECT: use %I64d for 64-bit integers
 printf("%I64d\n", 1LL);
 ```
 
-### <a name="argument-evaluation-order"></a>Pořadí vyhodnocení argumentu
+### <a name="argument-evaluation-order"></a>Pořadí vyhodnocení argumentů
 
-Protože ARM, x 86 a x64 procesorů se tak liší, můžou poskytnout různé požadavky pro implementace kompilátoru a také různé možnosti optimalizace. Z tohoto důvodu spolu s jinými faktory jako nastavení konvence volání a optimalizace, kompilátor může vyhodnotit argumentů v jiném pořadí na různé architektury nebo při změně dalších faktorů. To může způsobit chování aplikace, která závisí na konkrétní evaluationorder neočekávaně změnit.
+Vzhledem k tomu, že procesory ARM, x86 a x64 jsou rozdílné, mohou představovat různé požadavky na implementace kompilátoru a také různé příležitosti pro optimalizace. Z tohoto důvodu může kompilátor vyhodnotit argumenty funkce v jiném pořadí v různých architekturách nebo v případě, že jsou jiné faktory změněny. To může způsobit neočekávané změny chování aplikace, která spoléhá na konkrétní pořadí vyhodnocování.
 
-Předejít těmto chybám může dojít, pokud argumenty funkce mají vedlejší účinky, které mají vliv ostatních argumentů pro funkce ve stejném volání. Obvykle je snadné se vyhnout, tento druh závislosti, ale to může v některých případech být skryty závislosti, které je obtížné rozpoznat nebo přetížení operátoru. Vezměte v úvahu tento příklad kódu:
+Tento druh chyby může nastat, pokud argumenty funkce mají vedlejší účinky, které mají vliv na ostatní argumenty funkce ve stejném volání. Tento druh závislosti se většinou snadno vyhne, ale může být někdy zakrytý závislostmi, které jsou obtížné nerozlišuje, nebo přetěžováním operátorů. Vezměte v úvahu tento příklad kódu:
 
 ```cpp
 handle memory_handle;
@@ -82,21 +82,21 @@ handle memory_handle;
 memory_handle->acquire(*p);
 ```
 
-To vypadá jasně definované, avšak v tom případě `->` a `*` jsou přetížené operátory, potom tento kód se přeloží na něco, co vypadá takto:
+To se jeví jako dobře definované, ale pokud `->` a `*` jsou přetížené operátory, pak je tento kód přeložen na něco, co se podobá tomuto:
 
 ```cpp
 Handle::acquire(operator->(memory_handle), operator*(p));
 ```
 
-A pokud neexistuje závislost mezi `operator->(memory_handle)` a `operator*(p)`, může kód závisí na konkrétní evaluationorder, i když původní kód vypadá neexistuje žádná závislost je to možné.
+A pokud existuje závislost mezi `operator->(memory_handle)` a `operator*(p)`, může se kód spoléhat na konkrétní pořadí vyhodnocování, i když původní kód vypadá jako, že neexistuje žádná možná závislost.
 
-### <a name="volatile-keyword-default-behavior"></a>volatile – klíčové slovo výchozí chování
+### <a name="volatile-keyword-default-behavior"></a>nestálé výchozí chování klíčových slov
 
-Kompilátor MSVC podporuje dvě různé interpretaci `volatile` kvalifikátor úložiště, který určíte pomocí přepínače kompilátoru. [/Volatile:ms](reference/volatile-volatile-keyword-interpretation.md) přepínač vybere rozšířená volatile sémantiku, která zaručí silné řazení, protože byl z důvodu model silného paměti na tyto architektury tradiční případ x86 a x64 společnosti Microsoft. [/Volatile:iso](reference/volatile-volatile-keyword-interpretation.md) přepínač vybere striktní C++ standardní volatile sémantiku, která nezaručují silné řazení.
+Kompilátor MSVC podporuje dvě různé interprety `volatile` kvalifikátor úložiště, který lze zadat pomocí přepínačů kompilátoru. Přepínač [/volatile: MS](reference/volatile-volatile-keyword-interpretation.md) vybírá nestálou sémantiku od společnosti Microsoft, která zaručuje silné řazení, stejně jako tradiční scénář pro x86 a x64, protože se jedná o model silné paměti v těchto architekturách. Přepínač [/volatile: ISO](reference/volatile-volatile-keyword-interpretation.md) vybere striktní C++ standardní sémantiku volatile, která nezaručuje silné řazení.
 
-V architektuře ARM, výchozí hodnota je **/volatile:iso** protože slabě řazení paměti modelu mají procesory ARM a ARM softwaru nemá starší verze sady spoléhat na rozšířené sémantika **/volatile:ms**  a nemá obvykle rozhraní s software, který nemá. Je však stále někdy vhodné nebo dokonce muset kompilovat aplikace ARM k používání sémantiky rozšířené. Například může být příliš drahé port programu k používání sémantiky ISO C++ nebo ovladač může být nutné splnit tradiční sémantiku fungovat správně. V těchto případech můžete použít **/volatile:ms** přepínače; znovu vytvořit tradiční volatile sémantiky pro cíle ARM, však kompilátor musí vložit překážky paměti kolem každé čtení nebo zápis `volatile` proměnné k vynucení silné řazení, který může mít negativní dopad na výkon.
+V architektuře ARM je výchozím nastavením **/volatile: ISO** , protože procesory ARM mají slabě seřazený paměťový model a protože software ARM nemá starší verzi, která by se měla spoléhat na rozšířenou sémantiku **/volatile: MS** a obvykle nemá k dispozici rozhraní s tímto softwarem. Někdy je však stále pohodlné nebo dokonce nutné zkompilovat program ARM, aby používal rozšířenou sémantiku. Například může být příliš nákladné, aby mohl program naportovat k používání sémantiky C++ ISO, nebo může být nutné, aby software ovladače dodržoval tradiční sémantiku, aby správně fungoval. V těchto případech můžete použít přepínač **/volatile: MS** ; Chcete-li však znovu vytvořit tradiční nestálou sémantiku pro cíle ARM, kompilátor musí vložit bariéry paměti kolem každého čtení nebo zápisu `volatile` proměnné, aby vynutilo silné řazení, což může mít negativní dopad na výkon.
 
-V architekturách x86 a x64, výchozí hodnota je **/volatile:ms** vzhledem k tomu, že velká část softwaru, který již byl vytvořen pro tyto architektury s využitím MSVC spoléhá na ně. Při kompilaci programů x86 a x64 můžete zadat **/volatile:iso** přepínače, která pomáhá zabránit zbytečným umožňující tradiční volatile sémantiku a zvýšení úrovně přenositelnost.
+V architekturách x86 a x64 je výchozí hodnota **/volatile: MS** , protože většina softwaru, který už je pro tyto architektury vytvořená, používá MSVC, spoléhá na ně. Při kompilaci programů x86 a x64 můžete zadat přepínač **/volatile: ISO** , který vám umožní vyhnout se zbytečnému spoléhání na tradiční nestálou sémantiku a zvýšit přenositelnost.
 
 ## <a name="see-also"></a>Viz také:
 
