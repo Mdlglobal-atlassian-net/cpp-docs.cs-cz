@@ -6,47 +6,47 @@ f1_keywords:
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210518"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394759"
 ---
 # <a name="proto"></a>PROTO
 
-Prototypy funkce nebo procedury. Můžete volat funkce prototypem pomocí PROTO – direktiva pomocí [INVOKE](invoke.md) směrnice.
+Prototypes a function or procedure. You can call the function prototyped by the PROTO directive by using the [INVOKE](invoke.md) directive.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *Popisek* **PROTO** \[ *vzdálenost*] \[ *langtype*] \[ __,__ \[ *parametr*]__:__*značka*]...
+> *label* **PROTO** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦ __,__ ⟦*parameter*⟧ __:__ *tag* ...⟧
 
 ### <a name="parameters"></a>Parametry
 
-*label*<br/>
-Název nevolá se prototypovaná funkce.
+*label*\
+The name of the prototyped function.
 
-*distance*<br/>
-(Volitelné) Použít v modelech paměti 16 bitů výchozí hodnotu přepsat a uvede **NEAR** nebo **FAR** volání.
+*distance*\
+(Optional) Used in 16-bit memory models to override the default and indicate **NEAR** or **FAR** calls.
 
-*langtype*<br/>
-(Volitelné) Nastaví konvence pojmenování a volání procedury a veřejných symbolů. Podporované konvence jsou:
+*language-type*\
+(Optional) Sets the calling and naming convention for procedures and public symbols. Supported conventions are:
 
-- 32-bit **PLOCHÝ** modelu: **C**, **STDCALL**
+- 32-bit **FLAT** model: **C**, **STDCALL**
 
-- 16bitové modely: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- 16-bit models: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
 
-*Parametr*<br/>
-Volitelný název parametru funkce.
+*parameter*\
+The optional name for a function parameter.
 
-*Značka*<br/>
-Typ parametru funkce.
+*tag*\
+The type of a function parameter.
 
-*Parametr* a *značka* parametrů může být více než jednou, jednou pro každý předaný argument.
+The *parameter* and *tag* parameters may appear multiple times, once for each passed argument.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje **PROTO** deklarace pro funkce s názvem `addup3` , která používá **NEAR** volání k přepsání pro volání procedur a používá výchozí model 16 bitů **C**konvence volání pro zásobníku parametrů a návratové hodnoty. Přebírá dva argumenty **slovo** a **VARARG**.
+This sample shows a **PROTO** declaration for a function named `addup3` that uses a **NEAR** call to override the 16-bit model default for procedure calls, and uses the **C** calling convention for stack parameters and return values. It takes two arguments, a **WORD** and a **VARARG**.
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
@@ -54,5 +54,5 @@ addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](directives-reference.md)<br/>
-[. Referenční informace k modelu](dot-model.md)<br/>
+[Directives Reference](directives-reference.md)\
+[.MODEL Reference](dot-model.md)

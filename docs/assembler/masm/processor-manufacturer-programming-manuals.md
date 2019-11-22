@@ -1,30 +1,30 @@
 ---
-title: Příručky pro programování výrobce procesoru
+title: Příručky pro programování od výrobce procesoru
 ms.date: 08/30/2018
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-ms.openlocfilehash: be650b0d19577b0a2191a6bf7d16063e720f3b0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd1cba8378a8b173d36e9cc8975b171cd58d388c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210574"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394837"
 ---
-# <a name="processor-manufacturer-programming-manuals"></a>Příručky pro programování výrobce procesoru
+# <a name="processor-manufacturer-programming-manuals"></a>Příručky pro programování od výrobce procesoru
 
-Tento článek obsahuje odkazy na weby, které může obsahovat informace o programování o procesorů, které nejsou vyrobené, prodává nebo podporovaný společností Microsoft. Microsoft není vlastníte nebo ovládáte weby nebo obsah na ně.
+This article provides links to websites that may contain programming information about processors that are not manufactured, sold, or supported by Microsoft. Microsoft does not own or control the websites or the content on them.
 
-## <a name="processor-manufacturer-websites"></a>Websites výrobce procesoru
+## <a name="processor-manufacturer-websites"></a>Processor manufacturer websites
 
-- [Příručky pro vývojáře AMD, příručky a dokumenty ISA](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD Developer Guides, Manuals & ISA Documents](https://developer.amd.com/resources/developer-guides-manuals/)
 
-- [Příručky pro Intel 64 a IA-32 architektury softwaru pro vývojáře](https://software.intel.com/articles/intel-sdm)
+- [Intel 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/articles/intel-sdm)
 
-- [Úvod do Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Introduction to Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>Poznámky
 
-Visual Studio ani Microsoft Macro Assembler podporují všechny procesory.
+Neither Visual Studio nor the Microsoft Macro Assembler support all processors.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Microsoft Macro Assembler – referenční dokumentace](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)

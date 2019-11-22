@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-ms.openlocfilehash: 20ea0b24892c6d77e4a8f577713c2b5ad970bf41
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4b56c176fcbd9bd48e0d97f049d98c55cf5bedf3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302071"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399025"
 ---
 # <a name="instr"></a>\@InStr
 
-Funkce makra, která vyhledá první výskyt *řetěze* v parametru *řetěze*, počínaje *pozicí* v parametru *řetěze*. Pokud se *pozice* nezobrazí, hledání začíná na začátku *řetězce řetěze*. Vrací celé číslo pozice nebo 0, pokud není nalezena hodnota *řetěze* .
+Macro function that finds the first occurrence of *string2* in *string1*, beginning at *position* within *string1*. If *position* does not appear, search begins at start of *string1*. Returns a position integer or 0 if *string2* is not found.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@InStr (** ⟦*pozice*⟧ __,__ *řetěze* __,__ *řetěze* **)**
+> **\@InStr(** ⟦*position*⟧ __,__ *string1* __,__ *string2* **)**
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

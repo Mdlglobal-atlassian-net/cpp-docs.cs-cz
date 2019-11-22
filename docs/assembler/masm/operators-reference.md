@@ -1,92 +1,92 @@
 ---
-title: Referenční dokumentace k operátorům MASM
+title: MASM Operators reference
 ms.date: 08/30/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210811"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395215"
 ---
-# <a name="masm-operators-reference"></a>Referenční dokumentace k operátorům MASM
+# <a name="masm-operators-reference"></a>MASM Operators reference
 
-## <a name="arithmetic"></a>Aritmetické operace
+## <a name="arithmetic"></a>Arithmetic
 
 ||||
 |-|-|-|
-|[* (vynásobit)](operator-multiply.md)|[+ (Přidat)](operator-add.md)|[-(odečíst nebo negovat)](operator-subtract-2.md)|
-|[. (pole)](operator-dot.md)|[/ (dělení)](operator-subtract-1.md)|[&#91;&#93;(index)](operator-brackets.md)|
-|[MOD (zbytek)](operator-mod.md)|||
+|[* (multiply)](operator-multiply.md)|[+ (add)](operator-add.md)|[- (subtract or negate)](operator-subtract-2.md)|
+|[. (field)](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
+|[MOD (remainder)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Tok řízení
 
 ||||
 |-|-|-|
-|[\! (prostředí runtime logický operátor not)](operator-logical-not-masm-run-time.md)|[\!= (nerovná runtime)](operator-not-equal-masm.md)|[&#124;&#124;(logický modul runtime nebo)](operator-logical-or.md)|
-|[& & (logický modul runtime a)](operator-logical-and-masm-run-time.md)|[< (prostředí runtime menší než)](operator-less-than-masm-run-time.md)|[\<= (prostředí runtime menší nebo rovno)](operator-less-or-equal-masm-run-time.md)|
-|[== (prostředí runtime rovno)](operator-equal-masm-run-time.md)|[> (větší než runtime)](operator-greater-than-masm-run-time.md)|[> = (prostředí runtime větší nebo rovno)](operator-greater-or-equal-masm-run-time.md)|
-|[& (bitový modulu runtime a)](operator-bitwise-and.md)|||
-|[CARRY? (runtime carry test)](operator-carry-q.md)|[OVERFLOW? (test přetečení runtime)](operator-overflow-q.md)|[PARITY? (runtime parity test)](operator-parity-q.md)|
-|[SIGN? (test přihlašování runtime)](operator-sign-q.md)|[NULA? (prostředí runtime nula test)](operator-zero-q.md)||
+|[\! (runtime logical not)](operator-logical-not-masm-run-time.md)|[\!= (runtime not equal)](operator-not-equal-masm.md)|[&#124;&#124; (runtime logical or)](operator-logical-or.md)|
+|[&& (runtime logical and)](operator-logical-and-masm-run-time.md)|[< (runtime less than)](operator-less-than-masm-run-time.md)|[\<= (runtime less or equal)](operator-less-or-equal-masm-run-time.md)|
+|[== (runtime equal)](operator-equal-masm-run-time.md)|[> (runtime greater than)](operator-greater-than-masm-run-time.md)|[>= (runtime greater or equal)](operator-greater-or-equal-masm-run-time.md)|
+|[& (runtime bitwise and)](operator-bitwise-and.md)|||
+|[CARRY? (runtime carry test)](operator-carry-q.md)|[OVERFLOW? (runtime overflow test)](operator-overflow-q.md)|[PARITY? (runtime parity test)](operator-parity-q.md)|
+|[SIGN? (runtime sign test)](operator-sign-q.md)|[ZERO? (runtime zero test)](operator-zero-q.md)||
 
-## <a name="logical-and-shift"></a>Logické a Shift
-
-||||
-|-|-|-|
-|[A (bitový a)](operator-and.md)|[Ne (bitový operátor not)](operator-not.md)|[OR (bitový nebo)](operator-or.md)|
-|[Shl – (shift bits vlevo)](operator-shl.md)|[Shr – (shift bits vpravo)](operator-shr.md)|[XOR (bitový exkluzivní nebo)](operator-xor.md)|
-
-## <a name="macro"></a>– Makro
+## <a name="logical-and-shift"></a>Logical and Shift
 
 ||||
 |-|-|-|
-|[\! (znakový literál)](operator-logical-not-masm.md)|[% (nakládání jako text)](operator-percent.md)||
-|[;; (považovat komentář)](operator-semicolons.md)|[&lt; &gt; (považovat za jeden literál)](operator-literal.md)|[& & (Nahraďte hodnotu parametru)](operator-logical-and-masm.md)|
+|[AND (bitwise and)](operator-and.md)|[NOT (bitwise not)](operator-not.md)|[OR (bitwise or)](operator-or.md)|
+|[SHL (shift bits left)](operator-shl.md)|[SHR (shift bits right)](operator-shr.md)|[XOR (bitwise exclusive or)](operator-xor.md)|
+
+## <a name="macro"></a>Macro
+
+||||
+|-|-|-|
+|[\! (character literal)](operator-logical-not-masm.md)|[% (treat as text)](operator-percent.md)||
+|[;; (treat as comment)](operator-semicolons.md)|[&lt; &gt; (treat as one literal)](operator-literal.md)|[& & (substitute parameter value)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Různé
 
 ||||
 |-|-|-|
-|["" (zpracovávat jako řetězec)](operator-single-quote.md)|["" (zpracovávat jako řetězec)](operator-double-quote.md)||
-|: (místní Popisek definice)|:: (registrovat segmentu a posunu)|:: (globální Popisek definice)|
-|[; (považovat komentář)](operator-semicolon.md)|[DUP (při opakovaném deklarace)](operator-dup.md)||
+|[' ' (treat as string)](operator-single-quote.md)|[" " (treat as string)](operator-double-quote.md)||
+|: (local label definition)|:: (register segment and offset)|:: (global label definition)|
+|[; (treat as comment)](operator-semicolon.md)|[DUP (repeat declaration)](operator-dup.md)||
 
 ## <a name="record"></a>Záznam
 
 |||
 |-|-|
-|[MASKA (získat záznam nebo pole bitová maska)](operator-mask.md)|[Šířka (získat šířku záznam nebo pole)](operator-width.md)|
+|[MASK (get record or field bitmask)](operator-mask.md)|[WIDTH (get record or field width)](operator-width.md)|
 
 ## <a name="relational"></a>Relační
 
 ||||
 |-|-|-|
-|[EQ (rovná)](operator-eq.md)|[GE (větší nebo rovno)](operator-ge.md)|[GT (větší než)](operator-gt.md)|
-|[LE (menší nebo rovno)](operator-le.md)|[LT (menší než)](operator-lt.md)|[NE (není rovno)](operator-ne.md)|
+|[EQ (equal)](operator-eq.md)|[GE (greater or equal)](operator-ge.md)|[GT (greater than)](operator-gt.md)|
+|[LE (less or equal)](operator-le.md)|[LT (less than)](operator-lt.md)|[NE (not equal)](operator-ne.md)|
 
 ## <a name="segment"></a>Segment
 
 |||
 |-|-|
-|[: (segmentovat přepsání)](operator-colon.md)|:: (registrovat segmentu a posunu)|
-|[IMAGEREL (image relativním posunem)](operator-imagerel.md)|[LROFFSET (zavaděč přeložit posunu)](operator-lroffset.md)|
-|[POSUN (relativním posunem segmentu)](operator-offset.md)|[SECTIONREL (relativním posunem část)](operator-sectionrel.md)|
-|[SEG (get segmentu)](operator-seg.md)||
+|[: (segment override)](operator-colon.md)|:: (register segment and offset)|
+|[IMAGEREL (image relative offset)](operator-imagerel.md)|[LROFFSET (loader resolved offset)](operator-lroffset.md)|
+|[OFFSET (segment relative offset)](operator-offset.md)|[SECTIONREL (section relative offset)](operator-sectionrel.md)|
+|[SEG (get segment)](operator-seg.md)||
 
-## <a name="type"></a>Type
+## <a name="type"></a>Typ
 
 ||||
 |-|-|-|
-|[Vysoká (8 bitů nejnižší 16 bitů)](operator-high.md)|[HIGH32 (32 bitů 64 bitů)](operator-high32.md)|[HIGHWORD (16 bitů nejnižší 32 bitů)](operator-highword.md)|
-|[Délka (počet prvků v poli)](operator-length.md)|[LENGTHOF (počet prvků v poli)](operator-lengthof.md)|[Nízká (8 bitech)](operator-low.md)|
-|[LOW32 (nedostatek 32 bitů)](operator-low32.md)|[LOWWORD (nízké 16 bitů)](operator-lowword.md)|[OPATTR (informace o typu argumentu get)](operator-opattr.md)|
-|[PTR (ukazatel na nebo jako typ)](operator-ptr.md)|[SHORT (krátký popis značky)](operator-short.md)|[VELIKOST (velikost typu nebo proměnné)](operator-size.md)|
-|[SIZEOF (velikost typu nebo proměnné)](operator-sizeof.md)|[Toto (aktuální umístění)](operator-this.md)|[Typ (typ výrazu get)](operator-type.md)|
-|[. Typ (informace o typu argumentu get)](operator-dot-type.md)|||
+|[HIGH (high 8 bits of lowest 16 bits)](operator-high.md)|[HIGH32 (high 32 bits of 64 bits)](operator-high32.md)|[HIGHWORD (high 16 bits of lowest 32 bits)](operator-highword.md)|
+|[LENGTH (number of elements in array)](operator-length.md)|[LENGTHOF (number of elements in array)](operator-lengthof.md)|[LOW (low 8 bits)](operator-low.md)|
+|[LOW32 (low 32 bits)](operator-low32.md)|[LOWWORD (low 16 bits)](operator-lowword.md)|[OPATTR (get argument type info)](operator-opattr.md)|
+|[PTR (pointer to or as type)](operator-ptr.md)|[SHORT (mark short label type)](operator-short.md)|[SIZE (size of type or variable)](operator-size.md)|
+|[SIZEOF (size of type or variable)](operator-sizeof.md)|[THIS (current location)](operator-this.md)|[TYPE (get expression type)](operator-type.md)|
+|[.TYPE (get argument type info)](operator-dot-type.md)|||
 
 ## <a name="see-also"></a>Viz také:
 

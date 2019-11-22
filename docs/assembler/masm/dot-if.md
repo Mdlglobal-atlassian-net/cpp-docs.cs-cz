@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-ms.openlocfilehash: 83c9ff588e2fe273e24e1d0b1c16517c5eee3365
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: e8213052dce8d84d62f90d4bc2653435c2b31434
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703783"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398227"
 ---
-# <a name="if-32-bit-masm"></a>. IF (32-bit MASM)
+# <a name="if-32-bit-masm"></a>.IF (32-bit MASM)
 
-Vygeneruje kód, který testuje `condition1` (například AX > 7) a provede *příkazy* , pokud je tato podmínka pravdivá. (jenom 32-bitová MASM.)
+Generates code that tests *condition1* (for example, AX > 7) and executes the *statements* if that condition is true. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> . Pokud condition1<br/>
-> příkazy<br/>
-> [[. ELSEIF Podmínka2<br/>
-> příkazy]]<br/>
-> [[. OSTATNÍCH<br/>
-> příkazy]]<br/>
-> .ENDIF
+> **.IF** *condition1*\
+> *statements*\
+> ⟦ **.ELSEIF** *condition2*\
+> *statements*⟧\
+> ⟦ **.ELSE**\
+> *statements*⟧\
+> **.ENDIF**
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud [. V OPAČNém](../../assembler/masm/dot-else.md) případě se spustí jeho příkazy, pokud původní podmínka byla nepravdivá. Všimněte si, že podmínky jsou vyhodnocovány v době běhu.
+If a [.ELSE](../../assembler/masm/dot-else.md) follows, its statements are executed if the original condition was false. Note that the conditions are evaluated at run time.
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

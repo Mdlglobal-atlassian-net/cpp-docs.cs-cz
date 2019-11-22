@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-ms.openlocfilehash: 09e5663a8c3bfe0f2ce0a94bcb4006f2dd654cc2
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d62026b02f476a19defc9ae6c8e9c83500bfe067
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301909"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398957"
 ---
-# <a name="model"></a>Model \@
+# <a name="model"></a>\@Model
 
-1 pro **malý** model, 2 pro **malý** model, 3 pro **kompaktní** model, 4 pro **střední** model, 5 pro **velký** model, 6 pro **obrovský** model a 7 pro **plochý** model (číslo rovno).
+1 for **TINY** model, 2 for **SMALL** model, 3 for **COMPACT** model, 4 for **MEDIUM** model, 5 for **LARGE** model, 6 for **HUGE** model, and 7 for **FLAT** model (numeric equate).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ ms.locfileid: "74301909"
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

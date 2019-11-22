@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDPROLOG directive
 ms.assetid: 61a2474c-9527-46e6-9f9d-bc4b42c10f35
-ms.openlocfilehash: e6450ff0daaf679738cbbfe224002b01fe97b8ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2eb635264590d7323c67d69b56a539907fe2c25
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185326"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398454"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
 
-Signalizuje konec deklarace prologu.
+Signals the end of the prologue declarations.
 
 ## <a name="syntax"></a>Syntaxe
 
-> .ENDPROLOG
+> **.ENDPROLOG**
 
 ## <a name="remarks"></a>Poznámky
 
-Jedná se o chybu k používání některé z prologu deklarace mimo oblast mezi [PROC](../../assembler/masm/proc.md) rámce a. ENDPROLOG.
+It is an error to use any of the prologue declarations outside of the region between [PROC](../../assembler/masm/proc.md) **FRAME** and **.ENDPROLOG**.
 
-Další informace najdete v tématu [MASM pro x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)

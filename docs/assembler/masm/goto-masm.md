@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - GOTO directive
 ms.assetid: 6a5f73e7-6784-4eae-ac52-4fc77a7f369f
-ms.openlocfilehash: a03cbda5a8ff64f6c167766f416e7744a5382ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424ff295fe37e7c5ff02897a01b99a7c75876f85
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203077"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397486"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
 
-Přenese sestavení na řádek označený **:**_macrolabel_.
+Transfers assembly to the line marked **:** _macrolabel_.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **Příkaz GOTO** *macrolabel*
+> **GOTO** *macrolabel*
 
 ## <a name="remarks"></a>Poznámky
 
-**Příkaz GOTO** smí obsahovat pouze uvnitř [– makro](macro.md), [pro](for-masm.md), [FORC](forc.md), [OPAKUJTE](repeat.md), a [při](while-masm.md)bloky. *Macrolabel* cíl musí být pouze – direktiva v řádku a musí být předcházen přední dvojtečka.
+**GOTO** is permitted only inside [MACRO](macro.md), [FOR](for-masm.md), [FORC](forc.md), [REPEAT](repeat.md), and [WHILE](while-masm.md) blocks. The *macrolabel* target must be the only directive on the line and must be preceded by a leading colon.
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

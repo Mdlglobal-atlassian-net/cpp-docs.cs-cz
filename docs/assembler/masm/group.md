@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - GROUP directive
 ms.assetid: 55dc9548-154e-486d-849a-135e4631eca9
-ms.openlocfilehash: 1a192005c325905e6f40643c5f16e185f67265ad
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 1465d114bc2ea060e8cc8d1dd0aa3484b2f6c10d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704252"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397476"
 ---
-# <a name="group-32-bit-masm"></a>Skupina (32-bit MASM)
+# <a name="group-32-bit-masm"></a>GROUP (32-bit MASM)
 
-Přidejte zadané *segmenty* do skupiny s názvem *název*. (jenom 32-bitová MASM.)
+Add the specified *segments* to the group called *name*. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> Name – segment skupiny [[, segment]]...
+> *name* **GROUP** *segment* ⟦ __,__ *segment* ...⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

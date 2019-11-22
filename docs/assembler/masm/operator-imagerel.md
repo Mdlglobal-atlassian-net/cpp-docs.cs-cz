@@ -8,27 +8,27 @@ helpviewer_keywords:
 - operator IMAGEREL
 - IMAGEREL operator
 ms.assetid: 5b5ea425-36f0-467c-9262-62c484b7fdb4
-ms.openlocfilehash: 1363297cc1627775093f0f5e78937b981e41bdc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f88501d007ece1e3b9f45620953a911d4a6aa66e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176873"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396889"
 ---
 # <a name="operator-imagerel"></a>operátor IMAGEREL
 
-Vrátí image relativní posun `expression`.
+Returns the image relative offset of *expression*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> Výraz IMAGEREL
+> **IMAGEREL** *expression*
 
 ## <a name="remarks"></a>Poznámky
 
-Výsledná hodnota se často označuje jako adresa RVA nebo relativní virtuální adresu.
+The resulting value is often referred to as an RVA or Relative Virtual Address.
 
-IMAGEREL je k dispozici pouze s emisí objektu souboru COFF.
+IMAGEREL is available only with COFF object emission.
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

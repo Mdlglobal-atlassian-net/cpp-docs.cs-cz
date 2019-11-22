@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - DD directive
 ms.assetid: 0c238628-2fe2-437e-979d-a90bdae7b478
-ms.openlocfilehash: 6022da53ad8cde2b90431bfaf5b1ea2ddc0cac34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e87098d2536cce5d818a0759f50b42fa50cb887a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178805"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398800"
 ---
 # <a name="dd"></a>DD
 
-Přiděluje a volitelně inicializuje double word (4 bajtů) úložiště pro každou `initializer`. `DD` je synonymum pro [DWORD](../../assembler/masm/dword.md).
+Allocates and optionally initializes a double word (4 bytes) of storage for each *initializer*. **DD** is a synonym of [DWORD](../../assembler/masm/dword.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> [[název]] Inicializátor DD [[, inicializátor]]...
+> ⟦*name*⟧ **DD** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Slouží také jako specifikátor typu kdekoli typ je platný.
+Can also be used as a type specifier anywhere a type is legal.
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)

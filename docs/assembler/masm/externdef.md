@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERNDEF directive
 ms.assetid: 95a10de6-c345-4428-a2f2-90f7d411dc86
-ms.openlocfilehash: 23d34af470e825a8535de8cb28645a7bfb4c4d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 469b49832c171ee78336a0c457f0d269acd3b59d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203085"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397531"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
-Určuje jeden nebo více externích proměnných, popisky nebo symboly volá *název* jehož typ je `type`.
+Defines one or more external variables, labels, or symbols called *name* whose type is *type*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> EXTERNDEF [[langtype]]. název: Typ [[, název: Typ [[langtype]]]]...
+> **EXTERNDEF** ⟦*language-type*⟧ *name* __:__ *type* ⟦ __,__ ⟦*language-type*⟧ *name* __:__ *type* ...⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud *název* je definována v modulu je považován za [veřejné](../../assembler/masm/public-masm.md). Pokud *název* se odkazuje v modulu je považován za [EXTERN](../../assembler/masm/extern-masm.md). Pokud *název* se neodkazuje, je ignorována. `type` Může být [ABS](../../assembler/masm/operator-abs.md), který importuje *název* jako konstanta. Obvykle se používá v soubory k zahrnutí.
+If *name* is defined in the module, it is treated as [PUBLIC](../../assembler/masm/public-masm.md). If *name* is referenced in the module, it is treated as [EXTERN](../../assembler/masm/extern-masm.md). If *name* is not referenced, it is ignored. The *type* can be [ABS](../../assembler/masm/operator-abs.md), which imports *name* as a constant. Normally used in include files.
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)

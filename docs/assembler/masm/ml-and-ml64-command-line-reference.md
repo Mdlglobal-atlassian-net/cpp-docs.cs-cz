@@ -54,89 +54,89 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: a452bab03e31436ee5dde476117bce8b73c7571f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 470cad1be6fe314fde89ee144a8935664ead5953
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178108"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397200"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Referenční dokumentace pro použití nástroje ML a ML64 v příkazovém řádku
 
-Sestaví a odkazuje jeden nebo více zdrojových souborů sestavení jazyka. Možnosti příkazového řádku jsou malá a velká písmena.
+Assembles and links one or more assembly-language source files. The command-line options are case sensitive.
 
-Další informace o ml64.exe najdete v tématu [MASM pro x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information on ml64.exe, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> ML \[ *možnosti*] *filename* \[ \[ *možnosti*] *filename*]
+> ML \[*options*] *filename* \[ \[*options*]  *filename*]
 >
-> Ml64 v příkazovém \[ *možnosti*] *filename* \[ \[ *možnosti*] *filename*]... \[/link *linkoptions*]
+> ML64 \[*options*] *filename* \[ \[*options*]  *filename*] ... \[/link *linkoptions*]
 
 ### <a name="parameters"></a>Parametry
 
-*Možnosti*<br/>
-Možnosti uvedené v následující tabulce.
+*options*\
+The options listed in the following table.
 
 |Možnost|Akce|
 |------------|------------|
-|**/AT**|Umožňuje aplikaci malého modelu paměti podporu. Umožňuje chybové zprávy pro konstrukce kódu, které porušují požadavky na soubory ve formátu .com. Všimněte si, že to není ekvivalentní [. MODEL](../../assembler/masm/dot-model.md) **TINY** směrnice.<br /><br /> Není k dispozici v ml64.exe.|
-|**/BL** *název souboru*|Vybere alternativní linkeru.|
-|**/c**|Sestaví pouze. Není propojena.|
-|**/coff**|Vygeneruje soubor objektu běžné format (COFF) typ objektu modulu. Obecně potřebné pro vývoj jazyk sestavení Win32.<br /><br /> Není k dispozici v ml64.exe.|
-|**/Cp**|Zachová případ všechny identifikátory uživatele.|
-|**/Cu**|Všechny identifikátory se mapuje na velká písmena (výchozí).<br /><br /> Není k dispozici v ml64.exe.|
-|**/Cx**|Zachová veřejného partnerského vztahu a externí symboly v takovém případě.|
-|**/D** *symbol*[[=*value*]]|Definuje makra text s daným názvem. Pokud *hodnotu* je chybí, je prázdný. Více tokenů oddělené mezerami musí být uzavřen v uvozovkách.|
-|**/EP**|Generuje seznam předem zpracovaný zdroj (odeslané do STDOUT). Zobrazit **/Sf**.|
-|**/ ERRORREPORT** [ **NONE** &AMP;#124; **VÝZVY** &AMP;#124; **FRONTY** &AMP;#124; **ODESLAT** ]|Pokud ml.exe nebo ml64.exe selže v době běhu, můžete použít **/errorreport** odesílat informace společnosti Microsoft o tyto vnitřní chyby.<br /><br /> Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).|
-|**/F** *hexnum*|Nastaví velikost do zásobníku *hexnum* bajtů (to je stejný jako **/odkazu/STACK**:*číslo*). Hodnota musí být vyjádřena v šestnáctkové soustavě. Musí být mezera mezi **/F** a *hexnum*.|
-|**/FE** *název souboru*|Název spustitelného souboru.|
-|**/FL**[[*filename*]]|Generuje seznam deskách kódu. Zobrazit **/Sf**.|
-|**/FM**[[*filename*]]|Vytvoří soubor mapy linkeru.|
-|**/Fo** *název souboru*|Název souboru objektu. Další informace jsou uvedeny v části poznámky.|
-|**/FPi**|Generuje oprava disponují emulátor pro aritmetické operace s plovoucí desetinnou čárkou (pouze smíšeným jazykem).<br /><br /> Není k dispozici v ml64.exe.|
-|**/FR**[[*filename*]]|Generuje zdrojový soubor .sbr prohlížeče.|
-|**/FR**[[*filename*]]|Generuje vyžaduje rozšířený formát zdrojového souboru .sbr prohlížeče.|
-|**/Gc**|Určuje použití stylu až po FORTRAN nebo Pascal funkce volání a konvence vytváření názvů. Stejné jako **možností jazyka: PASCAL**.<br /><br /> Není k dispozici v ml64.exe.|
-|**/Gd**|Určuje použití stylu C funkce volání a konvence vytváření názvů. Stejné jako **možností jazyka: C**.<br /><br /> Není k dispozici v ml64.exe.|
-|**/GZ**|Určuje použití funkce __stdcall volání a konvence vytváření názvů.  Stejné jako **možností jazyka: STCALL**.<br /><br /> Není k dispozici v ml64.exe.|
-|**/H** *číslo*|Externí názvy omezuje počet významných znaků. Výchozí hodnota je 31 znaků.<br /><br /> Není k dispozici v ml64.exe.|
-|**/ Help**|Volá QuickHelp nápovědu k ML.|
-|**/I** *cesta*|Nastaví cestu k souboru include. Maximálně 10 **/I** možnosti je povoleno.|
-|**/nologo**|Potlačí zobrazování zpráv pro úspěšné sestavení.|
-|**/ omf**|Vytváří objekt modulu soubor formátu (OMF) typ objektu modulu.  **/ omf** znamená **/c**; ML.exe nepodporuje odkazování omf – objekty.<br /><br /> Není k dispozici v ml64.exe.|
-|**/Sa**|Zapne seznam všechny dostupné informace.|
-|**/safeseh**|Označí objekt jako buď neobsahující žádné obslužné rutiny výjimky nebo obsahující obslužné rutiny výjimek, které jsou deklarovány pomocí [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Není k dispozici v ml64.exe.|
-|**/Sf**|Přidá soubor výpisu k výpisu první pass.|
-|**/Sl** *šířka*|Nastaví šířku čáry v znaky na řádek zdroje. Rozsah je 0 nebo 60 až 255. Výchozí hodnota je 0. Stejné jako [stránky](../../assembler/masm/page.md) šířku.|
-|**/Sn**|Při vytváření výpis vypne tabulky symbolů.|
-|**/SP** *délku*|Nastaví délku stránky zdroje v řádků na stránce. Rozsah je 0 nebo 10 až 255. Výchozí hodnota je 0. Stejné jako [stránky](../../assembler/masm/page.md) délku.|
-|**/Ss** *text*|Určuje text pro výpis zdroje. Stejné jako [TITULEK](../../assembler/masm/subtitle.md) text.|
-|**/St** *text*|Určuje název zdrojového seznamu. Stejné jako [název](../../assembler/masm/title.md) text.|
-|**/Sx**|Zapne false podmíněné výrazy v seznamu.|
-|**/Ta** *název souboru*|Sestaví zdrojového souboru, jehož název nekončí příponou .asm.|
-|**/w**|Stejné jako **/W0/WX**.|
-|**/W** *úroveň*|Nastaví úroveň pro upozornění, kde *úroveň* = 0, 1, 2 nebo 3.|
-|**/WX**|Vrátí kód chyby, pokud se upozornění.|
-|**/X**|Ignorujte prostředí cesty zahrnutí.|
-|**/Zd**|Generuje informace o číslech řádků v souboru objektů.|
-|**/Zf**|Díky veřejné všechny symboly.|
-|**/Zi**|Generuje informace CodeView v objektu souboru.|
-|**/Zm**|Umožňuje**M510** možnost pro maximální kompatibilitu s MASM 5.1.<br /><br /> Není k dispozici v ml64.exe.|
-|**/ Zp**[[*zarovnání*]]|Sbalí struktury na hranici zadaném bajtu. *Zarovnání* může být 1, 2 nebo 4.|
-|**/Zs**|Provádí pouze kontrola syntaxe.|
-|**/?**|Zobrazí souhrn syntaxe příkazového řádku ML.|
+|**/AT**|Enables tiny-memory-model support. Enables error messages for code constructs that violate the requirements for .com format files. Note that this is not equivalent to the [.MODEL](../../assembler/masm/dot-model.md) **TINY** directive.<br /><br /> Not available in ml64.exe.|
+|**/Bl** *filename*|Selects an alternate linker.|
+|**/c**|Assembles only. Does not link.|
+|**/coff**|Generates common object file format (COFF) type of object module. Generally required for Win32 assembly language development.<br /><br /> Not available in ml64.exe.|
+|**/Cp**|Preserves case of all user identifiers.|
+|**/Cu**|Maps all identifiers to upper case (default).<br /><br /> Not available in ml64.exe.|
+|**/Cx**|Preserves case in public and extern symbols.|
+|**/D** *symbol*⟦=*value*⟧|Defines a text macro with the given name. If *value* is missing, it is blank. Multiple tokens separated by spaces must be enclosed in quotation marks.|
+|**/EP**|Generates a preprocessed source listing (sent to STDOUT). See **/Sf**.|
+|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND** ]|If ml.exe or ml64.exe fails at runtime, you can use **/ERRORREPORT** to send information to Microsoft about these internal errors.<br /><br /> For more information about **/ERRORREPORT**, see [/errorReport (Report Internal Compiler Errors)](../../build/reference/errorreport-report-internal-compiler-errors.md).|
+|**/F** *hexnum*|Sets stack size to *hexnum* bytes (this is the same as **/link/STACK**:*number*). The value must be expressed in hexadecimal notation. There must be a space between **/F** and *hexnum*.|
+|**/Fe** *filename*|Names the executable file.|
+|**/Fl**⟦*filename*⟧|Generates an assembled code listing. See **/Sf**.|
+|**/Fm**⟦*filename*⟧|Creates a linker map file.|
+|**/Fo** *filename*|Names an object file. See Remarks section for more information.|
+|**/FPi**|Generates emulator fix-ups for floating-point arithmetic (mixed language only).<br /><br /> Not available in ml64.exe.|
+|**/Fr**⟦*filename*⟧|Generates a source browser .sbr file.|
+|**/FR**⟦*filename*⟧|Generates an extended form of a source browser .sbr file.|
+|**/Gc**|Specifies use of FORTRAN- or Pascal-style function calling and naming conventions. Same as **OPTION LANGUAGE:PASCAL**.<br /><br /> Not available in ml64.exe.|
+|**/Gd**|Specifies use of C-style function calling and naming conventions. Same as **OPTION LANGUAGE:C**.<br /><br /> Not available in ml64.exe.|
+|**/GZ**|Specifies use of __stdcall function calling and naming conventions.  Same as **OPTION LANGUAGE:STCALL**.<br /><br /> Not available in ml64.exe.|
+|**/H** *number*|Restricts external names to number significant characters. The default is 31 characters.<br /><br /> Not available in ml64.exe.|
+|**/help**|Calls QuickHelp for help on ML.|
+|**/I** *pathname*|Sets path for include file. A maximum of 10 **/I** options is allowed.|
+|**/nologo**|Suppresses messages for successful assembly.|
+|**/omf**|Generates object module file format (OMF) type of object module.  **/omf** implies **/c**; ML.exe does not support linking OMF objects.<br /><br /> Not available in ml64.exe.|
+|**/Sa**|Turns on listing of all available information.|
+|**/safeseh**|Marks the object as either containing no exception handlers or containing exception handlers that are all declared with [.SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Not available in ml64.exe.|
+|**/Sf**|Adds first-pass listing to listing file.|
+|**/Sl** *width*|Sets the line width of source listing in characters per line. Range is 60 to 255 or 0. Default is 0. Same as [PAGE](../../assembler/masm/page.md) width.|
+|**/Sn**|Turns off symbol table when producing a listing.|
+|**/Sp** *length*|Sets the page length of source listing in lines per page. Range is 10 to 255 or 0. Default is 0. Same as [PAGE](../../assembler/masm/page.md) length.|
+|**/Ss** *text*|Specifies text for source listing. Same as [SUBTITLE](../../assembler/masm/subtitle.md) text.|
+|**/St** *text*|Specifies title for source listing. Same as [TITLE](../../assembler/masm/title.md) text.|
+|**/Sx**|Turns on false conditionals in listing.|
+|**/Ta** *filename*|Assembles source file whose name does not end with the .asm extension.|
+|**/w**|Same as **/W0/WX**.|
+|**/W** *level*|Sets the warning level, where *level* = 0, 1, 2, or 3.|
+|**/WX**|Returns an error code if warnings are generated.|
+|**/X**|Ignore INCLUDE environment path.|
+|**/Zd**|Generates line-number information in object file.|
+|**/Zf**|Makes all symbols public.|
+|**/Zi**|Generates CodeView information in object file.|
+|**/Zm**|Enables**M510** option for maximum compatibility with MASM 5.1.<br /><br /> Not available in ml64.exe.|
+|**/Zp**⟦*alignment*⟧|Packs structures on the specified byte boundary. The *alignment* can be 1, 2, or 4.|
+|**/Zs**|Performs a syntax check only.|
+|**/?**|Displays a summary of ML command-line syntax.|
 
-*Název souboru*<br/>
-Název souboru.
+*filename*\
+The name of the file.
 
-*linkoptions*<br/>
-Možnosti odkazů.  Zobrazit [možnosti Linkeru](../../build/reference/linker-options.md) Další informace.
+*linkoptions*\
+The link options.  See [Linker Options](../../build/reference/linker-options.md) for more information.
 
 ## <a name="remarks"></a>Poznámky
 
-Některé možnosti příkazového řádku pro použití nástroje ML a ml64 v příkazovém jsou citlivé na umístění. Například protože ML a ml64 v příkazovém může přijmout několik **/c** možnosti, odpovídající **/Fo** možnosti musí být zadán před **/c**. Následující příklad příkazového řádku ukazuje specifikaci souboru objektu pro každý specifikace souboru sestavení:
+Some command-line options to ML and ML64 are placement-sensitive. For example, because ML and ML64 can accept several **/c** options, any corresponding **/Fo** options must be specified before **/c**. The following command-line example illustrates an object file specification for each assembly file specification:
 
 **ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm**
 
@@ -144,11 +144,11 @@ Některé možnosti příkazového řádku pro použití nástroje ML a ml64 v p
 
 |Proměnná|Popis|
 |--------------|-----------------|
-|INCLUDE|Určuje cesty pro hledání vložených souborů.|
-|ML|Určuje výchozí možnosti příkazového řádku.|
-|TMP|Určuje cestu pro dočasné soubory.|
+|INCLUDE|Specifies search path for include files.|
+|ML|Specifies default command-line options.|
+|TMP|Specifies path for temporary files.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>
-[Microsoft Macro Assembler – referenční dokumentace](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[ML Error Messages](../../assembler/masm/ml-error-messages.md)\
+[Microsoft Macro Assembler – referenční dokumentace](../../assembler/masm/microsoft-macro-assembler-reference.md)
