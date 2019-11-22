@@ -4,65 +4,65 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a24349980e9395257f20fcfcc0987883060a7c1d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837519"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303134"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura souborů .vcxproj a .props
 
-[Nástroj MSBuild](../msbuild-visual-cpp.md) je výchozí systém projektu v sadě Visual Studio; při výběru **souboru** > **nový projekt** vytváření projekt MSBuild, jehož nastavení se ukládají v jazyce Visual C++ v souboru projektu XML, který má příponu `.vcxproj`. Soubor projektu může také importovat souborech .props a souborech .targets ukládat nastavení. Ve většině případů nikdy muset ručně upravit soubor projektu a ve skutečnosti byste neměli upravovat ho ručně Pokud nemáte dostatečné povědomí o MSBuild. Kdykoli je to možné používejte stránky vlastností sady Visual Studio k úpravě nastavení projektu (viz [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md). Nicméně v některých případech budete muset ručně upravit seznam souborů nebo vlastnosti projektu. U scénářů tento článek obsahuje základní informace o struktuře souboru.
+Nástroj [MSBuild](../msbuild-visual-cpp.md) je výchozím systémem projektu v aplikaci Visual Studio; Když zvolíte **soubor** > **Nový projekt** ve vizuálu C++ , vytváříte projekt MSBuild, jehož nastavení jsou uložena v souboru projektu XML, který má `.vcxproj`rozšíření. Soubor projektu může také importovat soubory. props a. targets, kde lze uložit nastavení. Ve většině případů nikdy nemusíte ručně upravovat soubor projektu a ve skutečnosti byste ho neměli upravovat ručně, pokud nebudete mít dobrý význam nástroje MSBuild. Kdykoliv je to možné, měli byste použít stránky vlastností sady Visual Studio pro úpravu nastavení projektu (viz [nastavení C++ kompilátoru a vlastností sestavení v sadě Visual Studio](../working-with-project-properties.md). V některých případech však může být nutné ručně upravit soubor projektu nebo seznam vlastností. V těchto scénářích obsahuje tento článek základní informace o struktuře souboru.
 
 **Důležité:**
 
-Pokud budete chtít ručně upravit soubor .vcxproj, mějte na paměti tyto skutečnosti:
+Pokud se rozhodnete ručně upravit soubor. vcxproj, pamatujte na tyto skutečnosti:
 
-1. Struktura souboru musí následovat předepsané formulář, který je popsaný v tomto článku.
+1. Struktura souboru musí odpovídat předepsanému formuláři, který je popsán v tomto článku.
 
-1. Visual Studio C++ systém projektu aktuálně nepodporuje použití zástupných znaků v položkách projektu. Například to není podporováno:
+1. Systém projektu sady C++ Visual Studio v současné době nepodporuje v položkách projektu zástupné znaky. Například to není podporováno:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Visual Studio C++ systém projektu aktuálně nepodporuje makra v cesty položky projektu. Například to není podporováno:
+1. Systém projektu sady C++ Visual Studio aktuálně nepodporuje makra v cestách položek projektu. Například to není podporováno:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
-   "Není podporován" znamená, že makra zaručené fungování pro všechny operace v rozhraní IDE. Makra, které se nezmění jejich hodnoty v různých konfiguracích by měla fungovat, ale nemusí být zachována, pokud položka se přesune na jiný filtr nebo projektu. Makra, změnit jejich hodnoty pro různé konfigurace způsobí problémy, protože rozhraní IDE neočekává cesty položky projektu jiný konfigurací jiného projektu.
+   "Není podporováno" znamená, že makra nejsou zaručena fungovat pro všechny operace v integrovaném vývojovém prostředí (IDE). Makra, která nemění svou hodnotu v různých konfiguracích by měla fungovat, ale nemusí být zachována, pokud je položka přesunuta do jiného filtru nebo projektu. Makra, která změní jejich hodnotu pro různé konfigurace, způsobí problémy, protože rozhraní IDE neočekává, že se cesty položek projektu pro různé konfigurace projektu liší.
 
-1. Pokud chcete mít vlastnosti projektu správně přidat, odebrat nebo upravit při úpravách v **vlastnosti projektu** dialogovém okně soubor musí obsahovat samostatné skupiny pro každou konfiguraci projektu a podmínky musí být v tomto formuláři:
+1. Aby se správně přidaly, odebraly nebo upravily vlastnosti projektu při úpravách v dialogovém okně **Vlastnosti projektu** , soubor musí obsahovat samostatné skupiny pro každou konfiguraci projektu a podmínky musí být v tomto formátu:
 
    ```xml
    Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"
    ```
 
-1. Každá vlastnost musí být zadaná ve skupině s správný popisek, jak je uvedeno v souboru pravidel vlastnost. Další informace najdete v tématu [soubory pravidlo xml stránky vlastností](property-page-xml-files.md).
+1. Každá vlastnost musí být zadaná ve skupině se správným popiskem, jak je uvedeno v souboru pravidel vlastnosti. Další informace najdete v tématu [soubory pravidel XML stránky vlastností](property-page-xml-files.md).
 
-## <a name="vcxproj-file-elements"></a>prvky souborů .vcxproj
+## <a name="vcxproj-file-elements"></a>prvky souboru. vcxproj
 
-Obsah souboru .vcxproj si můžete prohlédnout pomocí jakékoli textovém editoru nebo editoru XML. Můžete ji zobrazit v sadě Visual Studio kliknutím pravým tlačítkem myši na projekt v Průzkumníku řešení výběr **uvolnit projekt** a následným výběrem možnosti **upravit Foo.vcxproj**.
+Obsah souboru. vcxproj můžete zkontrolovat pomocí libovolného textu nebo editoru XML. Můžete ji zobrazit v aplikaci Visual Studio tak, že kliknete pravým tlačítkem na projekt v Průzkumník řešení, zvolíte **Uvolnit projekt** a pak zvolíte **Upravit foo. vcxproj**.
 
-Všimněte si, že prvním krokem je nejvyšší úrovně prvky, které se zobrazí v určitém pořadí. Příklad:
+První věc, kterou je třeba si všimnout, je, že se prvky na nejvyšší úrovni zobrazují v určitém pořadí. Příklad:
 
-- Po dokončení importu pro Microsoft.Cpp.Default.props dojde k vlastnosti skupin a skupinách definic položek maximum.
+- Většina skupin vlastností a skupin definic položek nastane po importu pro Microsoft. cpp. default. props.
 
-- Na konci souboru jsou importovány všechny cíle.
+- Všechny cíle jsou importovány na konci souboru.
 
-- Existuje více skupin pro vlastnost, každá má jedinečný popisek, a k nim dojde v určitém pořadí.
+- Existuje více skupin vlastností, z nichž každý má jedinečný popisek, a vyskytují se v určitém pořadí.
 
-Pořadí prvků v souboru projektu je velmi důležité, protože nástroj MSBuild je založena na sekvenční vyhodnocení modelu.  Pokud soubor projektu, včetně všech importovaných .props a souborech .targets, obsahuje několik definic vlastnosti, přepíše poslední definice ta předchozí. Vzhledem k tomu, že zjistí jeho poslední během jeho vyhodnocení ke stroji MSBUild, se v následujícím příkladu se nastaví hodnota "xyz" během kompilace.
+Pořadí prvků v souboru projektu je velmi důležité, protože nástroj MSBuild je založen na modelu sekvenčního vyhodnocení.  Pokud je soubor projektu, včetně všech importovaných souborů. props a. targets, tvořen více definicemi vlastnosti, poslední definice přepíše předchozí. V následujícím příkladu bude během kompilace nastavena hodnota "xyz", protože modul MSBUild během hodnocení zjistí jeho poslední.
 
 ```xml
   <MyProperty>abc</MyProperty>
   <MyProperty>xyz</MyProperty>
 ```
 
-Následující fragment kódu ukazuje minimální .vcxproj soubor. Jakýkoli soubor .vcxproj vygenerované sadou Visual Studio bude obsahovat tyto prvky nejvyšší úrovně nástroje MSBuild a zobrazí se v tomto pořadí (i když mohou obsahovat více kopií každé takové element nejvyšší úrovně). Všimněte si, že `Label` atributy jsou libovolné značky, které se používají pouze pomocí sady Visual Studio jako výstražných tabulek pro úpravy, nemají žádné další funkce.
+Následující fragment kódu ukazuje minimální soubor VCXPROJ. Libovolný soubor. vcxproj generovaný v aplikaci Visual Studio bude obsahovat tyto prvky nástroje MSBuild nejvyšší úrovně a v tomto pořadí budou zobrazeny (i když mohou obsahovat více kopií každého takového prvku nejvyšší úrovně). Všimněte si, že `Label` atributy jsou libovolné značky, které používá aplikace Visual Studio jako signposts pro úpravy; nemají žádnou jinou funkci.
 
 ```xml
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
@@ -82,29 +82,29 @@ Následující fragment kódu ukazuje minimální .vcxproj soubor. Jakýkoli sou
 </Project>
 ```
 
-Následující části popisují účel každé z těchto prvků a proč jsou řazeny tímto způsobem:
+Následující části popisují účel každého z těchto prvků a proč jsou uspořádány tímto způsobem:
 
-### <a name="project-element"></a>Project – element
+### <a name="project-element"></a>Projektový element
 
 ```xml
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project` je kořenový uzel. Určuje verze nástroje MSBuild se má použít a také výchozí cíl, který se spustí, když tento soubor je předán MSBuild.exe.
+`Project` je kořenovým uzlem. Určuje verzi nástroje MSBuild, která se má použít, a také výchozí cíl, který se má provést, když se tento soubor předává nástroji MSBuild. exe.
 
-### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations itemgroup – element
+### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations – element Item
 
 ```xml
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations` obsahuje popis konfigurace projektu. Mezi příklady patří ladění | Win32, Release | Win32, ladění | ARM a tak dále. Mnoho nastavení projektu jsou specifická pro danou konfiguraci. Například bude pravděpodobně chcete nastavit vlastnosti optimalizace pro sestavení pro vydání, ale nikoli sestavení pro ladění.
+`ProjectConfigurations` obsahuje popis konfigurace projektu. Příklady ladění | Win32, verze | Win32, ladění | ARM a tak dále. Mnoho nastavení projektu je specifické pro danou konfiguraci. Například pravděpodobně budete chtít nastavit vlastnosti optimalizace pro sestavení pro vydání, ale ne sestavení pro ladění.
 
-`ProjectConfigurations` Skupiny položek se nepoužívá v okamžiku sestavení. Visual Studio IDE vyžaduje-li načíst projekt. Tato skupina položek můžete přesunout do souboru props a importovat soubor .vcxproj. Ale v takovém případě pokud je potřeba přidat nebo odebrat konfigurace, musíte ručně upravit soubor PROPS; nelze použít integrovaném vývojovém prostředí.
+Skupina položek `ProjectConfigurations` se v době sestavení nepoužívá. Rozhraní IDE sady Visual Studio vyžaduje, aby bylo možné načíst projekt. Tuto skupinu položek lze přesunout do souboru. props a importovat do souboru. vcxproj. V takovém případě, pokud potřebujete přidat nebo odebrat konfigurace, je však nutné ručně upravit soubor. props; rozhraní IDE nemůžete použít.
 
 ### <a name="projectconfiguration-elements"></a>ProjectConfiguration elementy
 
-Následující fragment kódu ukazuje konfiguraci projektu. V tomto příkladu "Debug | x 64 je název konfigurace. Název konfigurace projektu musí být ve formátu $(Configuration)|$(Platform). Konfigurace projektu uzel může mít dvě vlastnosti: Konfigurace a platforma. Tyto vlastnosti se automaticky nastaví hodnotami, které jsou tady zadané, když je aktivní konfigurace.
+Následující fragment kódu ukazuje konfiguraci projektu. V tomto příkladu je název konfigurace ladit | x64. Název konfigurace projektu musí být ve formátu $ (konfigurace) | $ (platforma). Uzel Konfigurace projektu může mít dvě vlastnosti: konfiguraci a platformu. Tyto vlastnosti se automaticky nastaví s hodnotami, které tady určíte, když je konfigurace aktivní.
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -113,118 +113,118 @@ Následující fragment kódu ukazuje konfiguraci projektu. V tomto příkladu "
 </ProjectConfiguration>
 ```
 
-Integrované vývojové prostředí očekává konfigurace projektu pro libovolnou kombinaci konfigurace a platforma hodnot použitých ve všech položkách ProjectConfiguration. To často znamená, že projekt může být konfigurace nemá význam projektu ke splnění tohoto požadavku. Například pokud projekt obsahuje tyto konfigurace:
+Rozhraní IDE očekává, že se pro libovolnou kombinaci konfigurací a hodnot platforem používaných ve všech ProjectConfiguration položkách najde konfigurace projektu. To často znamená, že projekt může mít nevýznamné konfigurace projektu pro splnění tohoto požadavku. Pokud má například projekt tyto konfigurace:
 
 - Debug|Win32
 
-- Maloobchodní | Win32
+- Maloobchodní prodej | Chyb
 
-- Speciální 32-bit optimalizace | Win32
+- Speciální optimalizace 32 – 32bitová verze | Chyb
 
-i když je pro x64 "Speciální 32-bit optimalizace" pak musí mít rovněž těchto konfigurací:
+pak musí mít také tyto konfigurace, i když "speciální optimalizace 32", která je pro platformu x64 nevýznamná:
 
 - Debug|x64
 
-- Maloobchodní | x64
+- Maloobchodní prodej | x64
 
-- Speciální 32-bit optimalizace | x64
+- Speciální optimalizace 32 – 32bitová verze | x64
 
-Můžete zakázat sestavení a nasazení příkazů pro všechny konfigurace v **Správci konfigurace řešení**.
+Příkazy Build a deploy můžete zakázat pro jakoukoli konfiguraci v **řešení Configuration Manager**.
 
-### <a name="globals-propertygroup-element"></a>Globals PropertyGroup – element
+### <a name="globals-propertygroup-element"></a>Element vlastnosti globálních vlastností
 
 ```xml
 <PropertyGroup Label="Globals" />
 ```
 
-`Globals` obsahuje nastavení úrovně projektu jako je například ProjectGuid RootNamespace a ApplicationType / ApplicationTypeRevision. Poslední dva často definují cílový operační systém. Projekt můžete cílit pouze jeden operační systém, skutečnost, že odkazy a položky projektu nelze nyní k dispozici podmínky. Tyto vlastnosti nejsou obvykle přepsána jinde v souboru projektu. Tato skupina není závislá na konfiguraci a proto obvykle jenom jedné skupiny Globals existuje v souboru projektu.
+`Globals` obsahuje nastavení na úrovni projektu, jako jsou ProjectGuid, RootNamespace a typu ApplicationType/ApplicationTypeRevision. Poslední dvě často definují cílový operační systém. Projekt může cílit jenom na jeden operační systém z důvodu faktu, že odkazy a položky projektu nemůžou mít aktuálně nastavené podmínky. Tyto vlastnosti se obvykle nepřepisují jinde v souboru projektu. Tato skupina není závislá na konfiguraci, a proto v souboru projektu existuje jenom jedna skupina Globals.
 
-### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props Import – element
+### <a name="microsoftcppdefaultprops-import-element"></a>Import elementu Microsoft. cpp. default. props
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
 ```
 
-**Microsoft.Cpp.default.props** seznamu vlastností je součástí sady Visual Studio a nelze ji změnit. Obsahuje výchozí nastavení projektu. Výchozí nastavení se může lišit v závislosti na tom, ApplicationType.
+Seznam vlastností **Microsoft. cpp. default. props** je součástí sady Visual Studio a nelze jej upravit. Obsahuje výchozí nastavení projektu. Výchozí hodnoty se mohou lišit v závislosti na typu ApplicationType.
 
-### <a name="configuration-propertygroup-elements"></a>PropertyGroup – elementy konfigurace
+### <a name="configuration-propertygroup-elements"></a>Prvky vlastností konfigurace
 
 ```xml
 <PropertyGroup Label="Configuration" />
 ```
 
-A `Configuration` skupiny vlastností má podmínku připojené konfigurace (například `Condition=”'$(Configuration)|$(Platform)'=='Debug|Win32'”`) a je k dispozici ve více kopií, jeden pro každou konfiguraci. Tato skupina vlastností hostitelem vlastnosti, které jsou nastavené pro konkrétní konfiguraci. Vlastnosti konfigurace zahrnují PlatformToolset a také řídit zahrnutí vlastností systému v **souboru Microsoft.Cpp.props**. Například pokud definujete vlastnost `<CharacterSet>Unicode</CharacterSet>`, pak seznam vlastností systému **microsoft. Cpp.unicodesupport.props** budou zahrnuty. Je-li si prohlédnout **souboru Microsoft.Cpp.props**, zobrazí se řádek: `<Import Condition=”'$(CharacterSet)' == 'Unicode'”   Project=”$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props”/>`.
+`Configuration` skupina vlastností má připojenu podmínku konfigurace (například `Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"`) a je k dispozici v několika kopiích, jedna na konfiguraci. Tato skupina vlastností je hostitelem vlastností, které jsou nastaveny pro konkrétní konfiguraci. Konfigurační vlastnosti zahrnují PlatformToolset a také řídí zahrnutí seznamů vlastností systému do **Microsoft. cpp. props**. Například pokud definujete vlastnost `<CharacterSet>Unicode</CharacterSet>`, zobrazí se seznam vlastností systému **Microsoft. Budou zahrnuty cpp cpp. unicodesupport. props** . Pokud provedete kontrolu **Microsoft. cpp. props**, zobrazí se řádek: `<Import Condition="'$(CharacterSet)' == 'Unicode'" Project="$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props" />`.
 
-### <a name="microsoftcppprops-import-element"></a>Import souboru Microsoft.Cpp.props – element
+### <a name="microsoftcppprops-import-element"></a>Import elementu Microsoft. cpp. props
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 ```
 
-**Souboru Microsoft.Cpp.props** seznam vlastností (přímo nebo prostřednictvím importy) definuje výchozí hodnoty pro mnoho nástrojově specifické vlastnosti, jako je optimalizace a úroveň upozornění kompilátoru vlastnosti, TypeLibraryName nástroj MIDL Vlastnost a tak dále. Importuje také různé seznamy vlastností systému podle vlastnosti konfigurace, které jsou definovány ve skupině vlastností okamžitě výše.
+Seznam vlastností **Microsoft. cpp. props** (přímo nebo prostřednictvím importu) definuje výchozí hodnoty pro mnoho vlastností specifických pro nástroj, jako je optimalizace a vlastnosti úrovně upozornění kompilátoru, vlastnost NÁZEVKNIHOVNYTYPŮ nástroje MIDL a tak dále. Také importuje různé systémové seznamy vlastností na základě toho, které vlastnosti konfigurace jsou definovány ve skupině vlastností přímo výše.
 
-### <a name="extensionsettings-importgroup-element"></a>ExtensionSettings importgroup – element
+### <a name="extensionsettings-importgroup-element"></a>Platný ExtensionSettings – element import
 
 ```xml
 <ImportGroup Label="ExtensionSettings" />
 ```
 
-`ExtensionSettings` Skupina obsahuje importy pro seznamy vlastností, které jsou součástí přizpůsobení sestavení. Přizpůsobení sestavení je definován až tři soubory: souboru .targets, .props souboru a souboru .xml. Tato skupina import obsahuje importy pro soubor PROPS.
+Skupina `ExtensionSettings` obsahuje importy pro seznamy vlastností, které jsou součástí vlastního nastavení sestavení. Přizpůsobení sestavení je definováno až třemi soubory: soubor. targets, soubor. props a soubor. XML. Tato skupina pro import obsahuje importy pro soubor. props.
 
-### <a name="propertysheets-importgroup-elements"></a>Importgroup PropertySheets – elementy
+### <a name="propertysheets-importgroup-elements"></a>PropertySheets elementy import
 
 ```xml
 <ImportGroup Label="PropertySheets" />
 ```
 
-`PropertySheets` Skupina obsahuje importy pro uživatelských seznamů vlastností. Toto jsou seznamy vlastností, které jste přidali v rámci Správce vlastností zobrazení v sadě Visual Studio. Pořadí, ve kterém jsou uvedeny tyto importy je důležité a výpočtu je zapsán v Správce vlastností. Soubor projektu obvykle obsahuje víc instancí tohoto druhu importovat skupiny, jeden pro každou konfiguraci projektu.
+Skupina `PropertySheets` obsahuje seznamy vlastností uživatele. Jedná se o seznamy vlastností, které přidáte pomocí zobrazení Správce vlastností v aplikaci Visual Studio. Pořadí, ve kterém jsou tyto importy uvedené, je důležité a projeví se v Správce vlastností. Soubor projektu normálně obsahuje více instancí tohoto typu skupiny importů, jeden pro každou konfiguraci projektu.
 
-### <a name="usermacros-propertygroup-element"></a>UserMacros PropertyGroup – element
+### <a name="usermacros-propertygroup-element"></a>UserMacros – element vlastnosti
 
 ```xml
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros` obsahuje vlastnosti vytvoříte jako proměnné, které se používají k přizpůsobení procesu sestavení. Můžete například definovat uživatelské makro k definování vlastní výstupní cestu jako $(CustomOutputPath) a použijte jej k definování jiné proměnné. Tato skupina vlastností jsou uloženy tyto vlastnosti. Všimněte si, že v sadě Visual Studio této skupině automaticky nezadají informace v souboru projektu protože Visual C++ nepodporuje uživatelská makra pro konfigurace. Uživatelská makra jsou podporovány v seznamu vlastností.
+`UserMacros` obsahuje vlastnosti, které vytvoříte jako proměnné, které se používají k přizpůsobení procesu sestavení. Můžete například definovat uživatelské makro pro definování vlastní výstupní cesty jako $ (CustomOutputPath) a použít je k definování dalších proměnných. Tato vlastnost slouží jako skupina vlastností. Všimněte si, že v aplikaci Visual Studio není tato skupina v souboru projektu naplněná C++ , protože vizuál nepodporuje uživatelská makra pro konfigurace. Uživatelská makra jsou podporována v seznamu vlastností.
 
-### <a name="per-configuration-propertygroup-elements"></a>Elementy PropertyGroup podle konfigurace
+### <a name="per-configuration-propertygroup-elements"></a>Prvky vlastností jednotlivých konfigurací
 
 ```xml
 <PropertyGroup />
 ```
 
-Existuje víc instancí této vlastnosti skupiny, jeden pro každou konfiguraci pro všechny konfigurace projektu. Každá vlastnost skupina musí mít jednu podmínku konfigurace připojené. Pokud žádné konfigurace, které chybí, **vlastnosti projektu** dialogového okna nebude fungovat správně. Na rozdíl od výše uvedených skupin vlastností tohohle nemá popisek. Tato skupina obsahuje nastavení konfigurace na úrovni projektu. Tato nastavení platí pro všechny soubory, které jsou součástí skupiny zadané položky. Přizpůsobení položky definice sestavení metadata se inicializuje tady.
+Existuje několik instancí této skupiny vlastností, jeden pro každou konfiguraci pro všechny konfigurace projektu. Každá skupina vlastností musí mít připojenu jednu podmínku konfigurace. Pokud chybí nějaké konfigurace, dialogové okno **vlastností projektu** nebude správně fungovat. Na rozdíl od výše uvedených skupin vlastností nemá tato jedna jmenovka. Tato skupina obsahuje nastavení na úrovni konfigurace projektu. Tato nastavení platí pro všechny soubory, které jsou součástí zadané skupiny položek. Metadata definice položky vlastního nastavení sestavení jsou inicializována zde.
 
-Tato PropertyGroup musí být pozdější než `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` a musí být žádné jiné PropertyGroup bez popisku před (jinak úpravy vlastností projektu nebude správně fungovat).
+Tato vlastnost musí být uvedena po `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` a nesmí obsahovat žádnou jinou vlastnost Property bez popisku (jinak úpravy vlastností projektu nebudou fungovat správně).
 
-### <a name="per-configuration-itemdefinitiongroup-elements"></a>ItemDefinitionGroup – prvky podle konfigurace
+### <a name="per-configuration-itemdefinitiongroup-elements"></a>ItemDefinitionGroup prvků pro konfiguraci
 
 ```xml
 <ItemDefinitionGroup />
 ```
 
-Obsahuje definice položek. Tyto musí řídit stejnými pravidly podmínky jako elementy PropertyGroup popiskem podle konfigurace.
+Obsahuje definice položek. Ty musí splňovat pravidla stejných podmínek, jako jsou prvky Property, které jsou v jednotlivých konfiguracích bez popisku.
 
-### <a name="itemgroup-elements"></a>Itemgroup – elementy
+### <a name="itemgroup-elements"></a>Prvky položky
 
 ```xml
 <ItemGroup />
 ```
 
-Obsahuje položky (zdrojových souborů, atd.) v projektu. Podmínky nejsou podporovány pro položky projektu (to znamená, typy položek, které jsou považovány za položky projektu podle definice pravidla).
+Obsahuje položky (zdrojové soubory atd.) v projektu. Podmínky nejsou podporovány pro položky projektu (tj. typy položek, které jsou považovány za položky projektu podle definic pravidel).
 
-Metadata by měl mít konfigurace podmínek pro každou konfiguraci, i když jsou všechny byly stejné. Příklad:
+Metadata by měla mít konfigurační podmínky pro každou konfiguraci, i když jsou všechny stejné. Příklad:
 
 ```xml
 <ItemGroup>
   <ClCompile Include="stdafx.cpp">
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
   </ClCompile>
 </ItemGroup>
 ```
 
-Visual Studio C++ systém projektu aktuálně nepodporuje použití zástupných znaků v položkách projektu.
+Systém projektu sady C++ Visual Studio v současné době nepodporuje v položkách projektu zástupné znaky.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Visual Studio C++ systém projektu aktuálně nepodporuje použití zástupných
 </ItemGroup>
 ```
 
-Visual Studio C++ systém projektu aktuálně nepodporuje makra v položkách projektu.
+Systém projektu sady C++ Visual Studio aktuálně nepodporuje makra v položkách projektu.
 
 ```xml
 <ItemGroup>
@@ -240,21 +240,21 @@ Visual Studio C++ systém projektu aktuálně nepodporuje makra v položkách pr
 </ItemGroup>
 ```
 
-Odkazy jsou uvedeny v ItemGroup a mají tato omezení:
+Odkazy jsou zadány ve více položkách a mají tato omezení:
 
-- Odkazy na podmínky nepodporují.
+- Odkazy nepodporují podmínky.
 
-- Odkazuje na metadata nepodporuje podmínky.
+- Odkazy na metadata nepodporují podmínky.
 
-### <a name="microsoftcpptargets-import-element"></a>Microsoft.Cpp.targets Import – element
+### <a name="microsoftcpptargets-import-element"></a>Microsoft. cpp. targets – import elementu
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 ```
 
-Definuje (přímo nebo prostřednictvím importy) cíle Visual C++, jako je například sestavení, vyčištění, atd.
+Definuje (přímo nebo prostřednictvím importu) vizuální C++ cíle, jako je sestavení, čištění atd.
 
-### <a name="extensiontargets-importgroup-element"></a>ExtensionTargets importgroup – element
+### <a name="extensiontargets-importgroup-element"></a>ExtensionTargets – element import
 
 ```xml
 <ImportGroup Label="ExtensionTargets" />
@@ -262,21 +262,21 @@ Definuje (přímo nebo prostřednictvím importy) cíle Visual C++, jako je nap�
 
 Tato skupina obsahuje importy pro cílové soubory vlastního nastavení sestavení.
 
-## <a name="impact-of-incorrect-ordering"></a>Dopad nesprávnému řazení
+## <a name="impact-of-incorrect-ordering"></a>Dopad nesprávného řazení
 
-Integrované vývojové prostředí sady Visual Studio závisí na projektu soubor having řazení popsané výše. Například při definování hodnotu vlastnosti na stránkách vlastností rozhraní IDE se obecně umístit definici vlastnosti ve skupině vlastností s popiskem prázdný. Tím se zajistí, že se hodnoty definované uživatelem přepisují výchozí hodnoty, které jsou uvedeny v seznamu vlastností systému. Obdobně cílové soubory jsou importovány na konci vzhledem k tomu, že využívat vlastnosti určené výše, a protože jsou obecně nedefinují vlastnosti sami. Obdobně uživatelských seznamů vlastností se importují po seznamech vlastností, které systém (zahrnuté prostřednictvím **souboru Microsoft.Cpp.props**). Tím se zajistí, že uživatel může přepsat výchozí hodnoty získaných vlastností systému.
+Rozhraní IDE sady Visual Studio závisí na souboru projektu, který má řazení popsané výše. Například při definování hodnoty vlastnosti na stránkách vlastností bude IDE obvykle umístit definici vlastnosti ve skupině vlastností s prázdným popiskem. Tím se zajistí, že se výchozí hodnoty přenesené do seznamů vlastností systému přepíšou uživatelsky definovanými hodnotami. Podobně jsou cílové soubory importovány na konec, protože spotřebovávají vlastnosti definované výše a protože všeobecně nedefinují vlastnosti samotné. Podobně se seznamy vlastností uživatele importují po seznamech systémových vlastností (zahrnutých přes **Microsoft. cpp. props**). Tím se zajistí, že uživatel může přepsat jakékoli výchozí hodnoty, které jsou součástí systémových vlastností systému.
 
-Pokud soubor .vcxproj nedodržuje toto rozložení, nemusí být čekáte výsledků sestavení. Například Pokud omylem importovat seznam vlastností systému po seznamech vlastností, které jsou definované uživatelem, nastavení uživatele přepsat podle vlastností systému.
+Pokud soubor. vcxproj nedodržuje toto rozložení, výsledky sestavení nemusí být očekávaným způsobem. Pokud například omylem importujete seznam vlastností systému po seznamech vlastností definovaných uživatelem, bude nastavení uživatele přepsáno pomocí seznamů vlastností systému.
 
-Dokonce i prostředí čas IDE návrh některých míry závisí na správné pořadí prvků. Například, pokud váš soubor .vcxproj nemá `PropertySheets` skupiny import, integrovaném vývojovém prostředí nemusí být schopní určit, kam umístit nový seznam vlastností, které uživatel vytvořil v **Správce vlastností**. To může způsobit uživatel list přepsání seznam systému. I když heuristiky používá integrované vývojové prostředí může tolerovat možnost, podverze nekonzistence v rozložení souboru .vcxproj, důrazně doporučujeme dodržet struktura uvedené dříve v tomto článku.
+I prostředí pro dobu návrhu IDE závisí na určitém rozsahu pro správné řazení prvků. Například pokud váš soubor. vcxproj nemá `PropertySheets` skupinu pro import, rozhraní IDE nemusí být schopné určit, kam umístit nový seznam vlastností, který uživatel vytvořil v **Správce vlastností**. To může mít za následek přepsání seznamu uživatelů systémem. I když heuristická metoda používaná rozhraním IDE dokáže tolerovat drobné nekonzistence v rozložení souboru. vcxproj, důrazně se doporučuje odchýlit od struktury uvedené dříve v tomto článku.
 
-## <a name="how-the-ide-uses-element-labels"></a>Použití popisků element integrovaného vývojového prostředí
+## <a name="how-the-ide-uses-element-labels"></a>Jak IDE používá popisky elementů
 
-V prostředí IDE, při nastavení **UseOfAtl** vlastnosti na stránce Obecné vlastnosti, která jsou zapsána do skupiny vlastností konfigurace v souboru projektu, zatímco **TargetName** stejné stránce vlastností je zapsán do skupiny vlastností popiskem podle konfigurace. Visual Studio zjistí soubor xml stránky vlastností pro informace, ve kterém můžete napsat každou vlastnost. Pro **Obecné** stránka vlastností (za předpokladu, že máte anglickou verzi Visual Studio. 2019 Enterprise Edition), je tento soubor `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Pravidla souboru XML stránky vlastností definuje statické informace o pravidle a všechny její vlastnosti. Jeden takový část informací je upřednostňovaný pozice vlastnost pravidla v cílovém souboru (souboru, kam se budou zapisovat jeho hodnotu). Preferované umístění je určen atribut Label v elementech souborů projektu.
+V integrovaném vývojovém prostředí (IDE) když nastavíte vlastnost **UseOfAtl** na stránce Obecné vlastnosti, je zapsán do skupiny vlastností konfigurace v souboru projektu, zatímco vlastnost **TargetName** na stejné stránce vlastností je zapsána do skupiny vlastností bez popisku pro jednu konfiguraci. Visual Studio vyhledá v souboru XML stránky vlastností informace o tom, kde mají být jednotlivé vlastnosti napsány. Pro stránku vlastností **General** (za předpokladu, že máte anglickou verzi sady Visual Studio 2019 Enterprise Edition), je tento soubor `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Soubor pravidel XML stránky vlastností definuje statické informace o pravidle a všech jeho vlastnostech. Jedna z těchto informací je upřednostňovanou polohou vlastnosti pravidla v cílovém souboru (soubor, do kterého se má zapsat jeho hodnota). Upřednostňovaná poloha je určena atributem Label v prvcích souboru projektu.
 
-## <a name="property-sheet-layout"></a>Vlastnosti rozložení tabulky
+## <a name="property-sheet-layout"></a>Rozložení seznamu vlastností
 
-Následující fragment kódu XML je minimální rozložení vlastností (.props) soubor. Je podobný soubor .vcxproj a funkce .props prvky lze odvodit z předchozích diskuse.
+Následující fragment kódu XML je minimální rozložení souboru seznamu vlastností (. props). Je podobný souboru. vcxproj a funkce prvků. props lze odvodit z předchozí diskuze.
 
 ```xml
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -288,7 +288,7 @@ Následující fragment kódu XML je minimální rozložení vlastností (.props
 </Project>
 ```
 
-Chcete-li vlastní seznam vlastností, zkopírujte jeden z souborech .props ve složce VCTargets a upravovat pro účely. Pro Visual Studio. 2019 Enterprise edition, je výchozí cestu VCTargets `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
+Chcete-li vytvořit vlastní seznam vlastností, zkopírujte jeden ze souborů. props ve složce VCTargets a upravte jej pro vaše účely. Pro Visual Studio 2019 Enterprise Edition je výchozí cesta VCTargets `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
 
 ## <a name="see-also"></a>Viz také:
 

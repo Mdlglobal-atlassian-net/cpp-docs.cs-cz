@@ -4,12 +4,12 @@ description: Jak nastavit, zkompilovat a ladit C++ open source projekt cmake v s
 author: mikeblome
 ms.topic: tutorial
 ms.date: 11/08/2019
-ms.openlocfilehash: 05f120335180d27e84a99819ee97c233dd1b39a7
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965093"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303252"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Kurz: vytváření C++ projektů pro různé platformy v aplikaci Visual Studio
 
@@ -53,7 +53,7 @@ V tomto kurzu se naučíte:
 * Git pro Windows nainstalovaný na počítači s Windows.
 * Účet GitHubu.
 
-## <a name="clone-an-open-source-cmake-project-from-github"></a>Naklonování open source projektu CMake z GitHubu
+## <a name="clone-an-open-source-cmake-project-from-github"></a>naklonování open source projektu CMake z GitHubu
 
 V tomto kurzu se používá sada odrážek sady SDK na GitHubu. Poskytuje detekci kolizí a simulaci fyziky pro mnoho aplikací. Sada SDK obsahuje ukázkové spustitelné programy, které se zkompiluje a spouštějí bez nutnosti psát další kód. V tomto kurzu se nemění žádný zdrojový kód ani skripty sestavení. Začněte tím, že naklonujte úložiště *bullet3* z GitHubu na počítači, na kterém máte nainstalovanou aplikaci Visual Studio.
 
@@ -155,7 +155,7 @@ V tomto kroku budeme ladit ukázkový program, který demonstruje knihovnu fyzik
 
    Pokud jste už přidali vzdálené připojení, můžete toto okno otevřít tak, že přejdete na **nástroje > možnosti > > Správce připojení pro různé platformy**.
 
-1. Zadejte [informace o připojení k počítači se systémem Linux](/cpp/linux/connect-to-your-remote-linux-computer.md) a klikněte na tlačítko **připojit**. Visual Studio přidá tento počítač jako výchozí připojení pro **Linux-Debug**jako výchozí připojení k CMakeSettings. JSON. Vyžádá si také hlavičky ze vzdáleného počítače, takže získáte [technologii IntelliSense specifickou pro toto vzdálené připojení](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). V dalším kroku aplikace Visual Studio odešle soubory do vzdáleného počítače a vygeneruje mezipaměť CMake ve vzdáleném systému. Tyto kroky můžou nějakou dobu trvat, v závislosti na rychlosti vaší sítě a výkonu vzdáleného počítače. Budete vědět, že je to hotové, když se v okně výstup CMake zobrazí zpráva "extrakce cílových informací byla dokončena".
+1. Zadejte [informace o připojení k počítači se systémem Linux](/cpp/linux/connect-to-your-remote-linux-computer) a klikněte na tlačítko **připojit**. Visual Studio přidá tento počítač jako výchozí připojení pro **Linux-Debug**jako výchozí připojení k CMakeSettings. JSON. Vyžádá si také hlavičky ze vzdáleného počítače, takže získáte [technologii IntelliSense specifickou pro toto vzdálené připojení](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). V dalším kroku aplikace Visual Studio odešle soubory do vzdáleného počítače a vygeneruje mezipaměť CMake ve vzdáleném systému. Tyto kroky můžou nějakou dobu trvat, v závislosti na rychlosti vaší sítě a výkonu vzdáleného počítače. Budete vědět, že je to hotové, když se v okně výstup CMake zobrazí zpráva "extrakce cílových informací byla dokončena".
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Nastavení zarážky, sestavení a spuštění v systému Linux
 

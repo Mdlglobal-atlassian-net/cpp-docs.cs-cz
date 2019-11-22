@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@SubStr symbol'
 ms.assetid: f4b8fc6e-14a0-46fe-8c27-6b3347a08504
-ms.openlocfilehash: 566a39dff32a87d729efcb462c03fcacf55553e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3daff591dd1f3030628fe97b15998c6c365c9e92
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178844"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301975"
 ---
-# <a name="substr"></a>@SubStr
+# <a name="substr"></a>\@substr
 
-Makro funkci, která vrátí podřetězec počínaje *pozice*.
+Funkce makra, která vrací dílčí řetězec začínající na *pozici*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> @SubStr(string, pozice [[, délka]])
+> **\@substr (** *řetězec* __,__ *pozice* ⟦ __,__ *Délka*⟧ **)**
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)<br/>
+[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)

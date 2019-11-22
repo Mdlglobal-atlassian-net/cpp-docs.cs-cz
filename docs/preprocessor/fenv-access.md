@@ -1,6 +1,7 @@
 ---
 title: fenv_access – direktiva pragma
-ms.date: 08/29/2019
+description: Popisuje využití a účinky direktivy pragma fenv_access. Direktiva fenv_access řídí přístup k prostředí s plovoucí desetinnou čárkou za běhu.
+ms.date: 11/19/2019
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-ms.openlocfilehash: c8e66881bde12df28bf24e18230471cb4caca792
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e03eb404f2805a4f7c96509600c063c1b1acf629
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218604"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305846"
 ---
 # <a name="fenv_access-pragma"></a>fenv_access – direktiva pragma
 
@@ -25,9 +26,17 @@ Zakáže (**zapnuto**) nebo povolí (**vypnuto**) optimalizace, které by mohly 
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je fenv_access **vypnutý**. Pokud kompilátor může předpokládat, že váš kód nepřistupuje k prostředí s plovoucí desetinnou čárkou nebo s ním nepracuje, může provést mnoho optimalizace kódu s plovoucí desetinnou čárkou. Nastavte **fenv_access** na **on** pro informování kompilátoru, že váš kód přistupuje k prostředí s plovoucí desetinnou čárkou pro testování příznaků stavu, výjimek nebo nastavení příznaků režimu ovládacího prvku. Kompilátor tyto optimalizace zakáže, aby váš kód mohl konzistentně přistupovat k prostředí s plovoucí desetinnou čárkou.
+Ve výchozím nastavení je fenv_access **vypnuto**. Kompilátor předpokládá, že váš kód nepřistupuje k prostředí s plovoucí desetinnou čárkou nebo s ním nepracuje. Pokud není přístup k prostředí vyžadován, může kompilátor provádět více pro optimalizaci kódu s plovoucí desetinnou čárkou.
 
-Další informace o chování plovoucí desetinné čárky naleznete v tématu [/FP (určení chování s plovoucí](../build/reference/fp-specify-floating-point-behavior.md)desetinnou čárkou).
+Povolte **fenv_access** , pokud váš kód testuje příznaky stavu s plovoucí desetinnou čárkou, výjimky nebo příznaky režimu ovládacího prvku sady. Kompilátor zakáže optimalizace s plovoucí desetinnou čárkou, takže váš kód může konzistentně přistupovat k prostředí s plovoucí desetinnou čárkou.
+
+Možnost příkazového řádku [/FP: Strict] automaticky povolí **fenv_access**. Další informace o tomto a dalším chování plovoucí desetinné čárky najdete v tématu [/FP (určení chování s plovoucí](../build/reference/fp-specify-floating-point-behavior.md)desetinnou čárkou).
+
+Existují omezení způsobů, jak můžete použít direktivu pragma **fenv_access** v kombinaci s dalšími nastaveními s plovoucí desetinnou čárkou:
+
+- Nemůžete povolit **fenv_access** , pokud není povolená Přesná sémantika. Pomocí direktivy pragma [float_control](float-control.md) lze povolit přesné sémantiky nebo pomocí možností kompilátoru [/FP:](../build/reference/fp-specify-floating-point-behavior.md) [Restricted nebo/FP: Strict](../build/reference/fp-specify-floating-point-behavior.md) . Kompilátor je standardně **/FP: přesné** , pokud není zadána jiná možnost příkazového řádku s plovoucí desetinnou čárkou.
+
+- Pokud je nastavená **fenv_access (zapnuto)** , nemůžete použít **float_control** k zakázání přesné sémantiky.
 
 Typy optimalizací, které jsou předmětem **fenv_access** :
 
@@ -45,7 +54,7 @@ Mezi další direktivy pragma pro čísla s plovoucí desetinnou čárkou patř�
 
 ## <a name="examples"></a>Příklady
 
-Tento příklad nastaví **fenv_access** na **on** pro nastavení registračního registru ovládacího prvku s plovoucí desetinnou čárkou na 24-bitovou přesnost:
+Tento příklad nastaví **fenv_access** na **on** pro nastavení registračního registru ovládacího prvku s plovoucí desetinnou čárkou na 24bitové přesnosti:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -75,7 +84,7 @@ int main() {
 out=9.999999776482582e-03
 ```
 
-Pokud zadáte komentář `#pragma fenv_access (on)` z předchozí ukázky, Všimněte si, že výstup je jiný, protože kompilátor provádí vyhodnocení v době kompilace, které nepoužívá režim řízení.
+Pokud Odkomentujete `#pragma fenv_access (on)` z předchozí ukázky, výstup se liší. Je to proto, že kompilátor provádí vyhodnocení v době kompilace, což nepoužívá režim řízení.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

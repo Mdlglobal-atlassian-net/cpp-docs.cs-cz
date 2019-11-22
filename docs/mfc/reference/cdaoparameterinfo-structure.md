@@ -7,18 +7,16 @@ helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 4f0ee7ebe1d5d4eff50194c2d5c5cccf8f373c61
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f96cba8ea43db7e24e834b1de4ffb593b2c6e0d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096081"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303481"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo – struktura
 
-`CDaoParameterInfo` Struktura obsahuje informace o objektu parametru definovaném pro objekty DAO (Data Access Objects).
-Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
-
+Struktura `CDaoParameterInfo` obsahuje informace o objektu parametru definovaném pro objekty DAO (Data Access Objects). Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,14 +44,14 @@ Hodnota parametru uložená v objektu [COleVariant](../../mfc/reference/colevari
 
 Odkazy na primární a sekundární výše označují, jak jsou informace vráceny členskou funkcí [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) ve třídě `CDaoQueryDef`.
 
-Knihovna MFC nepoužívá zapouzdření objektů parametrů DAO ve třídě. Objekty DAO v podkladových objektech knihovny MFC `CDaoQueryDef` ukládají parametry do kolekcí parametrů. Chcete-li získat přístup k objektům parametrů v objektu [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) , zavolejte `GetParameterInfo` členskou funkci objektu querydef pro konkrétní název parametru nebo index do kolekce Parameters. Můžete použít členskou funkci [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) ve spojení s `GetParameterInfo` smyčkou prostřednictvím kolekce Parameters.
+Knihovna MFC nepoužívá zapouzdření objektů parametrů DAO ve třídě. Objekty DAO querydef objekty knihovny MFC `CDaoQueryDef` objekty ukládají parametry do kolekcí parametrů. Chcete-li získat přístup k objektům parametrů v objektu [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) , zavolejte členskou funkci `GetParameterInfo` objektu querydef pro konkrétní název parametru nebo index do kolekce Parameters. Můžete použít členskou funkci [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) ve spojení s `GetParameterInfo` ke smyčce prostřednictvím kolekce Parameters.
 
-Informace načtené členskou funkcí [CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) jsou uloženy ve `CDaoParameterInfo` struktuře. Volání `GetParameterInfo` objektu QueryDef, v jehož kolekcích parametrů je objekt Parameter uložen.
+Informace načtené členskou funkcí [CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) jsou uloženy ve struktuře `CDaoParameterInfo`. Zavolejte `GetParameterInfo` pro objekt querydef, v jehož kolekci parametrů je uložený objekt Parameter.
 
 > [!NOTE]
->  Pokud chcete získat nebo nastavit pouze hodnotu parametru, použijte členské funkce třídy `CDaoRecordset` [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) a [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) .
+>  Pokud chcete získat nebo nastavit pouze hodnotu parametru, použijte členské funkce [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) a [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) třídy `CDaoRecordset`.
 
-`CDaoParameterInfo`také definuje `Dump` členskou funkci v sestavení ladění. Můžete použít `Dump` k výpisu obsahu `CDaoParameterInfo` objektu.
+`CDaoParameterInfo` také definuje členskou funkci `Dump` v sestaveních ladění. K výpisu obsahu `CDaoParameterInfo` objektu můžete použít `Dump`.
 
 ## <a name="requirements"></a>Požadavky
 

@@ -1,26 +1,26 @@
 ---
 title: '@CodeSize'
-ms.date: 08/30/2018
+ms.date: 11/21/2019
 f1_keywords:
 - '@CodeSize'
 helpviewer_keywords:
 - '@CodeSize symbol'
 ms.assetid: 6e18d99f-9999-41fe-9330-b80de8f735d5
-ms.openlocfilehash: 36befca435c6aedcad442711caaa8a884cc52394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 586b2921e708542c38dede240c5ebaed83590fab
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166682"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302920"
 ---
-# <a name="codesize"></a>@CodeSize
+# <a name="codesize"></a>\@CodeSize
 
-0 pro **TINY**, **malé**, **COMPACT**, a **PLOCHÝ** modely a 1 pro **střední**,  **VELKÉ**, a **HUGE** modely (číselné odpovídá).
+0 pro **malé**, **malé**, **kompaktní**a **ploché** modely a 1 pro **střední**, **velké**a **obrovský** modely (číslo rovno).
 
 ## <a name="syntax"></a>Syntaxe
 
-> @CodeSize
+> **\@CodeSize**
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)<br/>
+[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)

@@ -1,27 +1,32 @@
 ---
 title: Rekurzivní makra
-ms.date: 11/04/2016
+description: Popisuje makra, která používáte pro volání nástroje NMAKE v rekurzivních relacích.
+ms.date: 11/20/2019
 helpviewer_keywords:
 - NMAKE program, recursion macros
 - recursion macros
 - macros, recursion
 ms.assetid: c53e5ae7-619e-46b1-bdc2-86d8c7798b1d
-ms.openlocfilehash: 064bc40906bcf3a126c225585a6df43443b5c38e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- MAKE
+- MAKEDIR
+- MAKEFLAGS
+ms.openlocfilehash: f2bda23cb079e4fd7d12cea3598d33b3625c088d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319236"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303153"
 ---
 # <a name="recursion-macros"></a>Rekurzivní makra
 
-Rekurzivní makra použijte k volání NMAKE rekurzivně. Rekurzivní relace dědit z příkazového řádku nebo proměnné prostředí makra a Tools.ini informace. Nedědí odvozených pravidel definovaných pravidel nebo **. PŘÍPONY** a **. CENNÝ** specifikace. Předání makra NMAKE relace rekurzivní nastavení proměnné prostředí se SADOU před rekurzivní volání, definujte makro v příkazu pro rekurzivní volání nebo definujte makro Tools.ini.
+Použijte makra rekurze k rekurzivnímu volání NMAKE. Rekurzivní relace dědí makra z příkazového řádku a prostředí a informace o nástrojích. ini. Nedědí pravidla odvození podle souborů pravidel ani `.SUFFIXES` a `.PRECIOUS` specifikace. Existují tři způsoby, jak předat makra rekurzivní relaci NMAKE: před rekurzivním volání nastavte proměnnou prostředí pomocí příkazu :::no-loc text="SET":::. Definujte makro v příkazu pro rekurzivní volání. Nebo definujte makro v souboru Tools. ini.
 
 |– Makro|Definice|
 |-----------|----------------|
-|**UJISTĚTE SE**|Příkaz původně použít k vyvolání NMAKE.<br /><br /> Makra $(MAKE) poskytuje úplnou cestu k nmake.exe.|
-|**MAKEDIR –**|Aktuální adresář při NMAKE.|
-|**MAKEFLAGS**|Možnosti aktuálně používána. Použít jako `/$(MAKEFLAGS)`.  Mějte na paměti, /F produkt není zahrnutý.|
+|**MAKE**|Příkaz, který byl původně použit k vyvolání NMAKE.<br /><br /> Makro `$(MAKE)` poskytuje úplnou cestu k nástroji NMAKE. exe.|
+|**MAKEDIR**|Aktuální adresář při vyvolání NMAKE|
+|**MAKEFLAGS**|Aktuálně platné možnosti. Použijte jako `/$(MAKEFLAGS)`. Možnost **/f** není zahrnutá.|
 
 ## <a name="see-also"></a>Viz také:
 

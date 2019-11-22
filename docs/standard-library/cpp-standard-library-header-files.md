@@ -5,12 +5,12 @@ helpviewer_keywords:
 - header files, C++ Standard Library
 - C++ Standard Library, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-ms.openlocfilehash: dc337ef078108d86849aa7b7452512dfb69e6e18
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 807e65c69e55d8790b77a493e4ae1878aa740557
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341123"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305405"
 ---
 # <a name="c-standard-library-header-files"></a>C++standardní soubory hlaviček knihovny
 
@@ -20,31 +20,31 @@ Hlavičkové soubory pro C++ standardní knihovnu a rozšíření podle kategori
 
 ::: moniker range=">=vs-2017"
 
-| Kategorie | Záhlaví |
+| Kategorie | záhlaví |
 | - | - |
-| [Algoritmy](../cpp/algorithms-modern-cpp.md) | algoritmus > [, cstdlib>\<](cstdlib.md), [ Číselná\<>](numeric.md) [ \<](algorithm.md) |
-| Atomické operace |  atomická ><sup>11</sup> [ \<](atomic.md) |
-| Obálky knihovny C | [ \<](cfenv.md)<sup></sup> [ \<](cerrno.md) [ \<cassert >](cctype.md), [ccomplex > 11 a b, cctype >, cerrno >, cfenv > 11, \<](ccomplex.md) [ \<](cassert.md)<sup></sup> [ \<cfloat >](cfloat.md),<sup></sup> [ \<cinttypes >](cinttypes.md)11, [ \<ciso646 >](ciso646.md)<sup>b</sup>, [ \<climits >](climits.md), [ \<clocale >](clocale.md), [ cmath\<>](cmath.md), [ csetjmp>,csignal>,cstdalign>11ab,cstdarg>,\<](csetjmp.md) [ \<](cstdarg.md) [ \<](csignal.md) [ \<](cstdalign.md)<sup></sup> [ \<cstdbool >](cstdbool.md)<sup>11 a b</sup>, [ \<cstddef >](cstddef.md), [ \<cstdint >](cstdint.md)<sup>11</sup>, [ \<cstdio >](cstdio.md), [ \<cstdlib >](cstdlib.md), [ CString\<>](cstring.md),<sup></sup> [ \<](ctime.md)<sup></sup> [ \<](cuchar.md) [ \<](cwchar.md) [ ctgmath>11\<](ctgmath.md)a b, CTime – >, cuchar > 11, cwchar >, [ cwctype\<>](cwctype.md) |
-| Koncepty | \<Koncepty ><sup>20</sup> |
+| [Algoritmy](../cpp/algorithms-modern-cpp.md) | [\<algoritmu >](algorithm.md) [\<cstdlib >](cstdlib.md) [\<číselné >](numeric.md) |
+| Atomické operace |  [\<atomická >](atomic.md)<sup>11</sup> |
+| Obálky knihovny C | [\<cassert >](cassert.md), [\<ccomplex >](ccomplex.md)<sup>11 a b</sup>, [\<cctype >](cctype.md), [\<cerrno >](cerrno.md), [\<cfenv >](cfenv.md)<sup>11</sup>, [\<cfloat >](cfloat.md), [\<cinttypes >](cinttypes.md)<sup>11</sup>, [\<ciso646 >](ciso646.md)<sup>b</sup>, [\<climits >](climits.md), [\<clocale](clocale.md) [>,\<cmath >,\<](cmath.md) [csetjmp >,\<](csetjmp.md) [ csignal >](csignal.md), [\<cstdalign >](cstdalign.md)<sup>11 a b</sup> [\<cstdarg >](cstdarg.md), [\<cstdbool >](cstdbool.md)<sup>11 a b</sup>, [\<cstddef >](cstddef.md), [\<cstdint >](cstdint.md)<sup>11</sup>, [\<cstdio >](cstdio.md), [\<cstdlib >](cstdlib.md), [\<CString >](cstring.md),\<ctgmath [>](ctgmath.md)<sup>11 a b</sup>, [\<CTime – >](ctime.md),\<[cuchar >](cuchar.md)<sup>11</sup> , [\<cwchar >](cwchar.md), [\<cwctype >](cwctype.md) |
+| Koncepty | \<koncepty ><sup>20</sup> |
 | [Kontejnery](../cpp/containers-modern-cpp.md) | |
-| Kontejnery sekvence | <sup></sup><sup></sup> [ Array\<>](array.md)11, [ deque>,forward_list>11,list>,Vector>\<](deque.md) [ \<](forward-list.md) [ \<](list.md) [ \<](vector.md) |
+| Kontejnery sekvence | [\<array >](array.md)<sup>11</sup>, [\<deque >](deque.md), [\<forward_list >](forward-list.md)<sup>11</sup>, [\<seznam >](list.md), [\<Vector >](vector.md) |
 | Seřazené asociativní kontejnery| [\<map>](map.md), [\<set>](set.md) |
-| Neuspořádané asociativní kontejnery | unordered_map ><sup>11</sup>, [ unordered_set>\<](unordered-set.md)<sup>11</sup> [ \<](unordered-map.md) |
-| Adaptéry kontejneru | > fronty, [ \<](queue.md) [ >zásobníku\<](stack.md) |
+| Neuspořádané asociativní kontejnery | [\<unordered_map >](unordered-map.md)<sup>11</sup> [\<unordered_set >](unordered-set.md)<sup>11</sup> |
+| Adaptéry kontejneru | [>\<fronty](queue.md) [\<zásobníku >](stack.md) |
 | Zobrazení kontejneru | \<rozpětí ><sup>20</sup> |
-| [Zpracování chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md) | <sup></sup> [ cassert\<>](cassert.md) [, výjimka\<>](exception.md) [, stdexcept\<>](stdexcept.md) [, system_error\<>](system-error.md)11 |
-| Obecné nástroje | \<Každý ><sup>17</sup>, [ \<bitset >](bitset.md), \<charconv ><sup>17</sup>, [ \<cstdlib >](cstdlib.md), \<provádění ><sup>17</sup>, [ \<funkční >](functional.md), [ >\<paměti](memory.md), \< [ \<](ratio.md)<sup></sup><sup></sup><sup></sup>memory_resource > 17, volitelné > 17, poměr > 11, scoped_allocator > \< [ \< ](scoped-allocator.md) <sup>11</sup><sup></sup><sup></sup>,<sup></sup> [ \<](type-traits.md) [ \<](typeindex.md) [ \<](utility.md)řazené kolekce členů > 11, type_traits > 11, typeindex > 11, nástroj >, [ \<](tuple.md) \<varianta ><sup>17</sup> |
-| [I/O a formátování](../cpp/string-and-i-o-formatting-modern-cpp.md) | <sup></sup><sup></sup> [ \<](iomanip.md) [ \<](fstream.md) [ cinttypes\<>](cinttypes.md)11, [ cstdio>,systémsouborů>17,fstream–>,iomanip>,\<](cstdio.md) [ \<](filesystem.md) [ iOS\<>](ios.md), [ iosfwd>,iostream–>,IStream>,ostream>,sstream>\<](iosfwd.md) [ \<](iostream.md) [ \<](istream.md) [ \<](ostream.md) [ \<](sstream.md) \< [ ,\<streambuf >](streambuf.md) [ ,\<strstream >](strstream.md)<sup>c</sup>, syncstream ><sup>20</sup> |
+| [Zpracování chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md) | [\<cassert >](cassert.md), [\<> výjimky](exception.md) [\<stdexcept >](stdexcept.md), [\<system_error >](system-error.md)<sup>11</sup> |
+| Obecné nástroje | \<jakýchkoli ><sup>17</sup>, [\<bitset >](bitset.md), \<charconv ><sup>17</sup>, [\<cstdlib >](cstdlib.md), \<spouštění ><sup>17</sup>, [\<funkční >](functional.md), [\<paměti >](memory.md), \<memory_resource ><sup>17</sup>, \<volitelné ><sup>17</sup>,\<[poměr >](ratio.md)<sup>11</sup>, [\<scoped_allocator >](scoped-allocator.md)<sup>11</sup>, [\<řazené kolekce členů >](tuple.md)<sup>11</sup> [,\<type_traits >](type-traits.md)<sup>11</sup> [\<typeindex >](typeindex.md)<sup>11</sup>, [\<utility >](utility.md), \<varianta ><sup>17</sup> |
+| [I/O a formátování](../text/string-and-i-o-formatting-modern-cpp.md) | [\<cinttypes >](cinttypes.md)<sup>11</sup>, [\<cstdio >](cstdio.md), [\<systému souborů >](filesystem.md)<sup>17</sup>, [\<fstream – >](fstream.md), [\<iomanip >](iomanip.md), [\<ios >](ios.md), [\<iosfwd >](iosfwd.md), [\<iostream – >](iostream.md), [\<IStream >](istream.md), [\<ostream >](ostream.md),\<sstream [>](sstream.md), [\<streambuf >](streambuf.md), [\<](strstream.md)<sup>strstream > </sup>\<syncstream ><sup>20</sup> |
 | Iterátory | [\<iterator>](iterator.md) |
-| Podpora jazyků | \< \< \< <sup></sup><sup></sup><sup></sup> [ cfloat\<>](cfloat.md) [, climits\<>](climits.md) [, codecvt\<>](codecvt.md)11 a, porovnat > 20, smlouva > 20, korutina ><sup>20</sup>, [ \<csetjmp >](csetjmp.md), [ \<csignal >](csignal.md), [ \<cstdarg >](cstdarg.md), [ \<cstddef >](cstddef.md), [ \<cstdint > ](cstdint.md) <sup>11</sup><sup></sup> [, cstdlib\<>](cstdlib.md) [, výjimka\<>](exception.md) [, initializer_list\<>](initializer-list.md)11 [, omezení>,\<](limits.md) [ \< New >](new.md), [ \<TypeInfo >](typeinfo.md), \<verze ><sup>20</sup> |
-| Lokalizace | [ \<](locale.md) <sup></sup> [ clocale>\<](cvt-wbuffer.md), [codecvt > 11 a, CVT/wbuffer >, CVT/wstring >, národní prostředí > \<](codecvt.md) [ \<](cvt-wstring.md) [ \<](clocale.md) |
-| Matematické a číselné znaky | \<bit ><sup>20</sup>, [ \<cfenv >](cfenv.md)<sup>11</sup>, [ \<cmath >](cmath.md), [ \<komplexní >](complex.md), [ \<cstdlib >](cstdlib.md), [ \<omezení >](limits.md), [ Číselná\<>](numeric.md),<sup></sup><sup></sup> [ náhodný\<>](random.md)11 [, poměr>11,valarray>\<](ratio.md) [ \<](valarray.md) |
-| [Správa paměti](../cpp/smart-pointers-modern-cpp.md) | <sup></sup><sup></sup> [ přidělování>\<](new.md), \< [ \<](scoped-allocator.md) [ >\<paměti](memory.md), memory_resource > 17, New >, scoped_allocator > 11 [ \<](allocators-header.md) |
-| Multithreading | <sup></sup><sup></sup><sup></sup><sup></sup> [ \<](condition-variable.md) [ \<](future.md) [ \<atomická](mutex.md)> 11, condition_variable > 11, budoucí > 11, mutex > 11, [ \<](atomic.md) [ \< shared_mutex >](shared-mutex.md)<sup>14</sup>, [ \<vlákno >](thread.md)<sup>11</sup> |
-| Rozsahy | \<rozsahy ><sup>20</sup> |
-| Regulární výrazy | regulární výraz ><sup>11</sup> [ \<](regex.md) |
-| Řetězce a znaková data | <sup></sup> [ cctype\<>](cctype.md), [ cstdlib>,CString>,cuchar>11,cwchar>,cwctype\<](cstdlib.md) [ \<](cstring.md) [ \<](cuchar.md) [ \<](cwchar.md) [ \< >](cwctype.md) [ ,\<Regex >](regex.md)<sup>11</sup>, [ \<> řetězce](string.md), [ \<string_view >](string-view.md)<sup>17</sup> |
-| Time | Chrono ><sup>11</sup>, [ CTime–\<>](ctime.md) [ \<](chrono.md) |
+| Podpora jazyků | [\<cfloat >](cfloat.md), [\<climits >](climits.md), [\<codecvt >](codecvt.md)<sup>11 a</sup>, \<porovnání ><sup>20</sup>, \<kontrakt ><sup>20</sup>, \<korutina<sup>> 20</sup>, [\<csetjmp >](csetjmp.md), [\<csignal >](csignal.md), [\<cstdarg >](cstdarg.md),\<[cstddef >](cstddef.md), [\<cstdint >](cstdint.md)<sup>11</sup> [,\<cstdlib >,](cstdlib.md)\<[výjimka >](exception.md) , [\<initializer_list >](initializer-list.md)<sup>11</sup> [\<omezení >](limits.md)\<> [nové\<](new.md), [> TypeInfo \<](typeinfo.md), > verze<sup>20</sup> |
+| Lokalizace | [\<clocale >](clocale.md), [\<codecvt >](codecvt.md)<sup>11 a</sup>, [\<CVT/wbuffer >](cvt-wbuffer.md), [\<CVT/wstring >](cvt-wstring.md), [\<národním prostředí >](locale.md) |
+| Matematické a číselné znaky | \<bit ><sup>20</sup>, [\<cfenv >](cfenv.md)<sup>11</sup>, [\<cmath >](cmath.md), [\<komplexní >](complex.md), [\<cstdlib >](cstdlib.md), [\<omezení >](limits.md), [\<číselná >](numeric.md), [\<náhodný >](random.md)<sup>11</sup>, [\<poměr >](ratio.md)<sup>11</sup>\<[> valarray](valarray.md) |
+| [Správa paměti](../cpp/smart-pointers-modern-cpp.md) | [\<přidělování >](allocators-header.md), [\<> paměti](memory.md)\<memory_resource ><sup>17</sup>\<[nové >](new.md)\<scoped_allocator > [](scoped-allocator.md)<sup>11</sup> |
+| Multithreading | [\<atomická >](atomic.md)<sup>11</sup> [\<condition_variable >](condition-variable.md)<sup>11</sup>, [\<budoucí >](future.md)<sup>11</sup>, [\<mutex >](mutex.md)<sup>11</sup>, [\<shared_mutex >](shared-mutex.md)<sup>14</sup>, [\<vlákno >](thread.md)<sup>11</sup> |
+| Rozsahy | rozsahy \<><sup>20</sup> |
+| Regulární výrazy | [\<regex >](regex.md)<sup>11</sup> |
+| Řetězce a znaková data | [\<cctype >](cctype.md), [\<cstdlib >](cstdlib.md), [\<cstring >](cstring.md), [\<cuchar >](cuchar.md)<sup>11</sup>, [\<cwchar >](cwchar.md), [\<cwctype >](cwctype.md), [\<regulárního výrazu >](regex.md)<sup>11</sup>, [\<řetězec >](string.md), [\<string_view >](string-view.md)<sup>17</sup> |
+| Čas | [\<chrono >](chrono.md)<sup>11</sup> [\<CTime – >](ctime.md) |
 
 <sup>11</sup> přidáno ve standardu c++ 11. \
 <sup>14</sup> přidáno ve standardu c++ 14. \
@@ -58,23 +58,23 @@ Jazyk <sup>c</sup> je zastaralý ve standardu c++ 98.
 
 ::: moniker range="vs-2015"
 
-|Kategorie|Záhlaví|
+|Kategorie|záhlaví|
 |-|-|
-|[Algoritmy](../cpp/algorithms-modern-cpp.md)|[\<> algoritmu](algorithm.md)|
-|Obálky knihovny C|[ cassert\<>](cassert.md), [ cctype>,cerrno>,cfenv>,cfloat>,cinttypes>,\<](cctype.md) [ \<](cerrno.md) [ \<](cfenv.md) [ \<](cfloat.md) [ \<](cinttypes.md) [ ciso646\<>](ciso646.md) [, climits\<>](climits.md) [, clocale\<>](clocale.md) [, cmath\<>](cmath.md) [, csetjmp\<>](csetjmp.md), [csignal \< >](csignal.md) [ ,\<cstdarg >](cstdarg.md) [ ,\<cstdbool >](cstdbool.md) [ ,\<cstddef >](cstddef.md), [ \<cstdint >](cstdint.md), [ \<cstdio >](cstdio.md), [ cstdlib\<>](cstdlib.md), [ CString>,ctgmath>,CTime–>,cwchar>,cwctype>\<](cstring.md) [ \<](ctgmath.md) [ \<](ctime.md) [ \<](cwchar.md) [ \< ](cwctype.md)|
+|[Algoritmy](../cpp/algorithms-modern-cpp.md)|[algoritmus \<>](algorithm.md)|
+|Obálky knihovny C|[\<cassert >](cassert.md), [\<cctype >](cctype.md), [\<cerrno >](cerrno.md), [\<cfenv >](cfenv.md), [\<cfloat >](cfloat.md), [\<cinttypes >](cinttypes.md), [\<ciso646 >](ciso646.md), [\<climits >](climits.md), [\<clocale](clocale.md)>, [\<](cmath.md) [](cstdarg.md) [](csetjmp.md) [](csignal.md) [](cstdbool.md) [cmath >,\<csetjmp >,\<csignal >,\<cstdarg >,\<cstdbool >,\<cstddef >](cstddef.md), [\<cstdint >](cstdint.md), [\<cstdio >](cstdio.md), [\<cstdlib >](cstdlib.md), [\<CString >](cstring.md), [\<ctgmath >](ctgmath.md), [\<CTime – >](ctime.md), [\<cwchar >](cwchar.md), [\<cwctype >](cwctype.md)|
 |[Kontejnery](../cpp/containers-modern-cpp.md)||
-|Kontejnery sekvence|[ Array\<>](array.md), [ deque>,forward_list>,list>,Vector>\<](deque.md) [ \<](forward-list.md) [ \<](list.md) [ \<](vector.md)|
+|Kontejnery sekvence|[\<> pole](array.md), [\<deque >](deque.md), [\<forward_list >](forward-list.md), [\<seznam >](list.md), [\<Vector >](vector.md)|
 |Seřazené asociativní kontejnery| [\<map>](map.md), [\<set>](set.md)|
-|Neuspořádané asociativní kontejnery|unordered_map >, [ \<](unordered-map.md) [ unordered_set>\<](unordered-set.md)|
-|Kontejnery adaptéru|> fronty, [ \<](queue.md) [ >zásobníku\<](stack.md)|
-|[Zpracování chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)|výjimka > [, stdexcept>\<](stdexcept.md), [ system_error\<>](system-error.md) [ \<](exception.md)|
-|[I/O a formátování](../cpp/string-and-i-o-formatting-modern-cpp.md)|[ \<](iomanip.md) [ \<](iosfwd.md) [ \<](fstream.md) [ \<](ios.md) [ \<](iostream.md)> systému souborů, fstream – >, iomanip >, iOS >, iosfwd >, iostream – >, [ \<](filesystem.md) [ IStream\<>](istream.md), [ ostream>,sstream>,streambuf>,strstream>\<](ostream.md) [ \<](sstream.md) [ \<](streambuf.md) [ \<](strstream.md)|
+|Neuspořádané asociativní kontejnery|[\<unordered_map >](unordered-map.md) [\<unordered_set >](unordered-set.md)|
+|Kontejnery adaptéru|[>\<fronty](queue.md) [\<zásobníku >](stack.md)|
+|[Zpracování chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<> výjimky](exception.md) [\<stdexcept >](stdexcept.md) [\<](system-error.md) system_error >|
+|[I/O a formátování](../text/string-and-i-o-formatting-modern-cpp.md)|[\<> systému souborů](filesystem.md) [\<fstream – >](fstream.md), [\<iomanip >](iomanip.md), [\<ios >](ios.md), [\<iosfwd >](iosfwd.md), [\<iostream – >](iostream.md), [\<istream >](istream.md), [\<ostream >](ostream.md), [\<sstream >](sstream.md), [\<streambuf >](streambuf.md),\<[strstream >](strstream.md)|
 |Iterátory|[\<iterator>](iterator.md)|
 |Lokalizace|[\<codecvt>](codecvt.md), [\<cvt/wbuffer>](cvt-wbuffer.md), [\<cvt/wstring>](cvt-wstring.md), [\<locale>](locale.md)|
-|Matematické a číselné znaky|[ komplexní\<>](complex.md), [ omezení>,číselná>,náhodný>,poměr>,valarray>\<](limits.md) [ \<](numeric.md) [ \<](random.md) [ \<](ratio.md) [ \<](valarray.md)|
-|[Správa paměti](../cpp/smart-pointers-modern-cpp.md)|přidělování > [, >\<paměti](memory.md), [ nového>,>\<](new.md) [ \<](allocators-header.md) [ \<](scoped-allocator.md)|
-|Multithreading|[ \<](mutex.md) [ \<](shared-mutex.md)atomická > [ ,\<condition_variable >](condition-variable.md), [ \<budoucí >](future.md), mutex >, shared_mutex >, vlákno [ \<](atomic.md) [ \< >](thread.md)|
-|Další nástroje|[ bitset\<>](bitset.md), [ Chrono>,funkční>,initializer_list>,řazenékolekcečlenů>,type_traits\<](chrono.md) [ \<](functional.md) [ \<](initializer-list.md) [ \<](tuple.md) [ \< >](type-traits.md) [ ,\<TypeInfo >](typeinfo.md), [ \<typeindex >](typeindex.md), [ \<Nástroj >](utility.md)|
+|Matematické a číselné znaky|[\<složitých >](complex.md) [\<limity >](limits.md), [\<číselné >](numeric.md), [\<náhodný >](random.md), [\<poměr](ratio.md)>\<> [](valarray.md)|
+|[Správa paměti](../cpp/smart-pointers-modern-cpp.md)|[\<přidělování >](allocators-header.md), [\<> paměti](memory.md) [\<nové >](new.md), [\<scoped_allocator >](scoped-allocator.md)|
+|Multithreading|[\<atomická >](atomic.md), [\<condition_variable >](condition-variable.md), [\<budoucí >](future.md), [\<mutex >](mutex.md), [\<shared_mutex >](shared-mutex.md), [\<vlákna](thread.md) >|
+|Další nástroje|[\<bitset >](bitset.md), [\<chrono >](chrono.md), [\<funkční >](functional.md), [\<initializer_list >](initializer-list.md), [\<řazené kolekce členů >](tuple.md), [\<type_traits >](type-traits.md), [\<TypeInfo >](typeinfo.md), [\<typeindex >](typeindex.md), [\<utility >](utility.md)|
 |Řetězce a znaková data|[\<regex>](regex.md), [\<string>](string.md), [\<string_view>](string-view.md)
 
 ::: moniker-end

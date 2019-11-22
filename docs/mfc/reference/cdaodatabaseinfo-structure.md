@@ -7,17 +7,16 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 46d8056ee4ab478b65f3ef0bd59d88bd3af9b28c
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 60972aa3ecaef4d38c9a0d0ecc70477796aa37aa
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096162"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304252"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo – struktura
 
-`CDaoDatabaseInfo` Struktura obsahuje informace o databázovém objektu definovaném pro objekty DAO (Data Access Objects).
-Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
+Struktura `CDaoDatabaseInfo` obsahuje informace o databázovém objektu definovaném pro objekty DAO (Data Access Objects). Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,41 +50,41 @@ Označuje verzi databázového stroje Microsoft Jet. Chcete-li načíst hodnotu 
 *m_lCollatingOrder*<br/>
 Určuje pořadí řazení v textu pro porovnání a řazení řetězců. Možné hodnoty:
 
-- `dbSortGeneral`Použijte řazení Obecné (v angličtině, francouzštině, němčině, portugalštině, italštině a moderní španělštině).
+- `dbSortGeneral` použít řazení Obecné (v angličtině, francouzštině, němčině, portugalštině, italštině a moderní španělštině).
 
-- `dbSortArabic`Použijte arabské pořadí řazení.
+- `dbSortArabic` použít arabské řazení.
 
-- `dbSortCyrillic`Použijte pořadí řazení v ruštině.
+- `dbSortCyrillic` použít pořadí řazení v ruštině.
 
-- `dbSortCzech`Použijte pořadí řazení v češtině.
+- `dbSortCzech` použít český způsob řazení.
 
-- `dbSortDutch`Použijte nizozemské pořadí řazení.
+- `dbSortDutch` použít nizozemské pořadí řazení.
 
-- `dbSortGreek`Použijte řecké pořadí řazení.
+- `dbSortGreek` použít řecké pořadí řazení.
 
-- `dbSortHebrew`Použijte Hebrejské pořadí řazení.
+- `dbSortHebrew` použít Hebrejské pořadí řazení.
 
-- `dbSortHungarian`Použijte maďarské pořadí řazení.
+- `dbSortHungarian` použít maďarské pořadí řazení.
 
-- `dbSortIcelandic`Použijte pořadí řazení v islandském.
+- `dbSortIcelandic` použít pořadí řazení v islandském.
 
-- `dbSortNorwdan`Použijte norské nebo dánské pořadí řazení.
+- `dbSortNorwdan` použít norské nebo dánské pořadí řazení.
 
-- `dbSortPDXIntl`Použijte mezinárodní pořadí řazení pro Paradox.
+- `dbSortPDXIntl` použít mezinárodní pořadí řazení pro Paradox.
 
-- `dbSortPDXNor`Použijte pořadí řazení v programu Paradox Norština nebo Dánština.
+- `dbSortPDXNor` použít řazení norského nebo dánského pořadí řazení.
 
-- `dbSortPDXSwe`Použijte pořadí řazení švédské nebo finské.
+- `dbSortPDXSwe` použít pořadí řazení švédské nebo finské.
 
-- `dbSortPolish`Použijte úhledné pořadí řazení.
+- `dbSortPolish` použít polský způsob řazení.
 
-- `dbSortSpanish`Použijte pořadí řazení v španělštině.
+- `dbSortSpanish` použít španělskou objednávku řazení.
 
-- `dbSortSwedFin`Použijte pořadí řazení švédského nebo finského.
+- `dbSortSwedFin` použít pořadí řazení švédského nebo finského.
 
-- `dbSortTurkish`Použijte turecké pořadí řazení.
+- `dbSortTurkish` použít turecké pořadí řazení.
 
-- `dbSortUndefined`Pořadí řazení není definováno nebo je neznámé.
+- `dbSortUndefined` pořadí řazení není definováno nebo není známo.
 
 Další informace najdete v tématu Přizpůsobení nastavení registru Windows pro přístup k datům v nápovědě k rozhraním DAO.
 
@@ -99,7 +98,7 @@ Poskytuje informace o zdroji otevřené databáze. Informace o tom, jak propojit
 
 Databáze je objekt DAO, jehož základem je objekt knihovny MFC třídy [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Odkazy na primární, sekundární a všechny výše označují, jak jsou informace vráceny členskou funkcí [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) .
 
-Informace načtené členskou funkcí [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) jsou uloženy ve `CDaoDatabaseInfo` struktuře. Volání `GetDatabaseInfo`objektu,ve kterémdatabázejeuloženakolekcedatabázovýchobjektů.`CDaoWorkspace` `CDaoDatabaseInfo`také definuje `Dump` členskou funkci v sestavení ladění. Můžete použít `Dump` k výpisu obsahu `CDaoDatabaseInfo` objektu.
+Informace načtené členskou funkcí [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) jsou uloženy ve struktuře `CDaoDatabaseInfo`. Vyvolejte `GetDatabaseInfo` pro objekt `CDaoWorkspace`, ve kterém databáze je uložena kolekce databázových objektů. `CDaoDatabaseInfo` také definuje členskou funkci `Dump` v sestaveních ladění. K výpisu obsahu `CDaoDatabaseInfo` objektu můžete použít `Dump`.
 
 ## <a name="requirements"></a>Požadavky
 

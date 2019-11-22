@@ -1,27 +1,43 @@
 ---
 title: Příkazová makra a makra možností
-ms.date: 11/04/2016
+description: Popisuje Předdefinovaná makra NMAKE pro nástroje sestavení a jejich možnosti.
+ms.date: 11/20/2019
 helpviewer_keywords:
 - options macros
 - command macros in NMAKE
 - macros, options macros
 - macros, command macros
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
-ms.openlocfilehash: c6dad7b50d265a1460a98747665d48051078163a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- AS
+- AFLAGS
+- CC
+- CFLAGS
+- CPP
+- CPPFLAGS
+- CXX
+- CXXFLAGS
+- RC
+- RFLAGS
+- ias
+- ml
+- ml64
+- cl
+- rc
+ms.openlocfilehash: d5c4477fd97e2a6c48dbac4d0ce83f7fd5f12ad6
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272435"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303181"
 ---
 # <a name="command-macros-and-options-macros"></a>Příkazová makra a makra možností
 
-Příkazová makra jsou předdefinované pro produkty společnosti Microsoft. Makra možností představují možnosti k těmto produktům a nejsou definovaná ve výchozím nastavení. Obě se používají předdefinované odvozených pravidel a můžete používat v blocích popisů nebo uživatelem definované odvozená pravidla. Příkazová makra lze redefinovat představující část nebo všechny z příkazového řádku, včetně možnosti. Makra možností vygenerovat řetězec s hodnotou null v případě Nedefinováno.
+Makra příkazů jsou předdefinovaná pro produkty Microsoftu. Možnosti makra představují možnosti pro tyto produkty a ve výchozím nastavení nejsou definovány. Obě jsou používány v předdefinovaných pravidlech odvození a lze je použít v blocích popisu nebo uživatelsky definovaným odvozenm pravidlem. Makra příkazu lze předefinovat tak, aby reprezentovala část nebo celý příkazový řádek, včetně možností. Makra možností generují řetězec s hodnotou null, pokud není definován vlevo.
 
-|Produkt společnosti Microsoft|Příkaz – Makro|Definován jako|Možnosti – makro|
+|Produkt společnosti Microsoft|Makro příkazu|Definováno jako|Možnosti makra|
 |-----------------------|-------------------|----------------|-------------------|
-|MASM|**AS**|ml|**AFLAGS**|
-|Základní kompilátoru|**BC**|bc|**BFLAGS**|
+|Assembler maker|**AS**|ml, iasnebo ml64|**AFLAGS**|
 |Kompilátor jazyka C|**CC**|cl|**CFLAGS**|
 |Kompilátor C++|**CPP**|cl|**CPPFLAGS**|
 |Kompilátor C++|**CXX**|cl|**CXXFLAGS**|

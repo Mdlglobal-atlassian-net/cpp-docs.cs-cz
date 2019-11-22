@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: cbb9e4002bb47ad8f65678c7a324267ca9717e94
-ms.sourcegitcommit: f82a6de52470070accb09a3a8f8b08060c492efa
+ms.openlocfilehash: 5e1c75e32899ef9697025d662eeec4a6a2482f2b
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411751"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304297"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Návod: Přidání objektu D2D do projektu MFC
 
@@ -36,7 +36,7 @@ K dokončení tohoto Názorného postupu musíte mít nainstalovanou aplikaci Vi
 
 ## <a name="to-create-an-mfc-application"></a>Vytvoření aplikace MFC
 
-1. Použijte **Průvodce aplikací knihovny MFC** k vytvoření aplikace MFC. Viz [Návod: Použití nových ovládacích prvků](walkthrough-using-the-new-mfc-shell-controls.md) prostředí MFC pro pokyny k otevření Průvodce pro vaši verzi sady Visual Studio.
+1. Použijte **Průvodce aplikací knihovny MFC** k vytvoření aplikace MFC. Pokyny k otevření Průvodce pro vaši verzi sady Visual Studio najdete v tématu [Návod: použití nových ovládacích prvků prostředí MFC](walkthrough-using-the-new-mfc-shell-controls.md) .
 
 1. Do pole **název** zadejte *MFCD2DWalkthrough*. Zvolte **OK**.
 
@@ -44,7 +44,7 @@ K dokončení tohoto Názorného postupu musíte mít nainstalovanou aplikaci Vi
 
 ## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Vytvoření štětce s plnými barvami a štětce s lineárním přechodem
 
-1. V **Průzkumník řešení**v projektu **MFCD2DWalkthrough** ve složce **soubory hlaviček** otevřete MFCD2DWalkthroughView. h. Přidejte tento kód do `CMFCD2DWalkthroughView` třídy pro vytvoření tří datových proměnných:
+1. V **Průzkumník řešení**v projektu **MFCD2DWalkthrough** ve složce **soubory hlaviček** otevřete MFCD2DWalkthroughView. h. Přidejte tento kód do třídy `CMFCD2DWalkthroughView` pro vytvoření tří datových proměnných:
 
    ```cpp
    CD2DTextFormat* m_pTextFormat;
@@ -54,7 +54,7 @@ K dokončení tohoto Názorného postupu musíte mít nainstalovanou aplikaci Vi
 
    Uložte soubor a zavřete ho.
 
-1. Ve složce **zdrojové soubory** otevřete MFCD2DWalkthroughView. cpp. V konstruktoru `CMFCD2DWalkthroughView` třídy přidejte tento kód:
+1. Ve složce **zdrojové soubory** otevřete MFCD2DWalkthroughView. cpp. V konstruktoru pro třídu `CMFCD2DWalkthroughView` přidejte tento kód:
 
    ```cpp
    // Enable D2D support for this window:
@@ -104,9 +104,9 @@ K dokončení tohoto Názorného postupu musíte mít nainstalovanou aplikaci Vi
 
 1. V **Průvodci třídou MFC**vyberte v části **název třídy**možnost `CMFCD2DWalkthroughView`.
 
-1. Na kartě **zprávy** v poli **zprávy** vyberte `WM_SIZE` a pak zvolte **Přidat obslužnou rutinu**. Tato akce přidá `OnSize` `CMFCD2DWalkthroughView` do třídy obslužnou rutinu zprávy.
+1. Na kartě **zprávy** v poli **zprávy** vyberte možnost `WM_SIZE` a pak zvolte možnost **Přidat obslužnou rutinu**. Tato akce přidá do třídy `CMFCD2DWalkthroughView` obslužnou rutinu zprávy `OnSize`.
 
-1. V poli **existující obslužné rutiny** vyberte `OnSize`. Pro zobrazení `CMFCD2DWalkthroughView::OnSize` metody vyberte možnost **Upravit kód** . Na konci metody přidejte následující kód.
+1. V poli **existující obslužné rutiny** vyberte `OnSize`. Chcete-li zobrazit metodu `CMFCD2DWalkthroughView::OnSize`, vyberte možnost **Upravit kód** . Na konci metody přidejte následující kód.
 
    ```cpp
    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
@@ -122,9 +122,9 @@ K dokončení tohoto Názorného postupu musíte mít nainstalovanou aplikaci Vi
 
 1. Na kartě **zprávy** vyberte **Přidat vlastní zprávu**.
 
-1. V dialogovém okně **Přidat vlastní zprávu** zadejte do pole **vlastní Windows zpráva** *AFX_WM_DRAW2D*. Do pole **název obslužné rutiny zpráv** zadejte *OnDraw2D*. Vyberte možnost **registrovaná zpráva** a klikněte na **tlačítko OK**. Tato akce přidá do `CMFCD2DWalkthroughView` třídy obslužnou rutinu zprávy pro zprávu AFX_WM_DRAW2D.
+1. V dialogovém okně **Přidat vlastní zprávu** zadejte do pole **zpráva ve vlastním systému Windows** *AFX_WM_DRAW2D*. Do pole **název obslužné rutiny zpráv** zadejte *OnDraw2D*. Vyberte možnost **registrovaná zpráva** a klikněte na **tlačítko OK**. Tato akce přidá do `CMFCD2DWalkthroughView` třídy obslužnou rutinu zprávy pro AFX_WM_DRAW2Dovou zprávu.
 
-1. V poli **existující obslužné rutiny** vyberte `OnDraw2D`. Pro zobrazení `CMFCD2DWalkthroughView::OnDraw2D` metody vyberte možnost **Upravit kód** . Použijte tento kód pro `CMFCD2DWalkthroughView::OnDrawD2D` metodu:
+1. V poli **existující obslužné rutiny** vyberte `OnDraw2D`. Chcete-li zobrazit metodu `CMFCD2DWalkthroughView::OnDraw2D`, vyberte možnost **Upravit kód** . Použijte tento kód pro metodu `CMFCD2DWalkthroughView::OnDrawD2D`:
 
    ```cpp
    afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(

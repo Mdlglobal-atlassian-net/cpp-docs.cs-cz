@@ -9,24 +9,24 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: fda4e968a4761fcf1e2245964bd5dca3f41a82ad
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096046"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302975"
 ---
 # <a name="view-classes-architecture"></a>Třídy zobrazení (architektura)
 
-`CView`a jeho odvozené třídy jsou podřízená okna, která představují klientskou oblast okna rámce. Zobrazení zobrazují data a přijímají vstup pro dokument.
+`CView` a jeho odvozené třídy jsou podřízená okna, která představují klientskou oblast okna rámce. Zobrazení zobrazují data a přijímají vstup pro dokument.
 
 Třída zobrazení je asociována s třídou dokumentu a třídou okna s rámečkem pomocí objektu šablony dokumentu.
 
 [CView](../mfc/reference/cview-class.md)<br/>
-Základní třída pro zobrazení dat dokumentu v konkrétní aplikaci. Zobrazení zobrazují data a přijímají uživatelský vstup pro úpravy nebo výběr dat. Odvodit vaše třídy zobrazení z `CView`.
+Základní třída pro zobrazení dat dokumentu v konkrétní aplikaci. Zobrazení zobrazují data a přijímají uživatelský vstup pro úpravy nebo výběr dat. Odvodit vaše třídy zobrazení od `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Základní třída pro zobrazení s možnostmi posouvání Odvodit třídu zobrazení z `CScrollView` pro automatické posouvání.
+Základní třída pro zobrazení s možnostmi posouvání Odvodíte třídu zobrazení z `CScrollView` pro automatické posouvání.
 
 ## <a name="form-and-record-views"></a>Zobrazení formulářů a záznamů
 
@@ -35,10 +35,10 @@ Zobrazení formuláře jsou také posouvání zobrazení. Jsou založeny na šab
 Zobrazení záznamů jsou odvozena z zobrazení formuláře. Kromě šablony dialogového okna mají také připojení k databázi.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Zobrazení posuvníku, jehož rozložení je definováno v šabloně dialogového okna. Odvození třídy z `CFormView` pro implementaci uživatelského rozhraní na základě šablony dialogového okna.
+Zobrazení posuvníku, jehož rozložení je definováno v šabloně dialogového okna. Odvození třídy z `CFormView` k implementaci uživatelského rozhraní na základě šablony dialogového okna.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů DAO (Data Access Object). Podobně jako všechny zobrazení `CDaoRecordView` formulářů je založen na šabloně dialogového okna. Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. 3,6 je finální verze, která je považována za zastaralou.
+Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů DAO (Data Access Object). Podobně jako u všech zobrazení formulářů je `CDaoRecordView` založena na šabloně dialogového okna. Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 Podporuje ovládací prvek pro procházení webu v rámci aplikace. Ovládací prvek podporuje dynamické HTML v knihovně MFC.
@@ -47,7 +47,7 @@ Podporuje ovládací prvek pro procházení webu v rámci aplikace. Ovládací p
 Poskytuje podporu OLE DB knihovny MFC pro zobrazení formulářů.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů rozhraní ODBC (Open Database Connectivity). Podobně jako všechny zobrazení `CRecordView` formulářů je založen na šabloně dialogového okna.
+Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů rozhraní ODBC (Open Database Connectivity). Podobně jako u všech zobrazení formulářů je `CRecordView` založena na šabloně dialogového okna.
 
 ## <a name="control-views"></a>Zobrazení ovládacích prvků
 

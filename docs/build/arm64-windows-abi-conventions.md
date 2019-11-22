@@ -1,12 +1,12 @@
 ---
 title: Přehled konvencí ARM64 ABI
 ms.date: 03/27/2019
-ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163220"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303271"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Přehled konvencí ARM64 ABI
 
@@ -53,8 +53,8 @@ Výchozí zarovnání rozložení pro národní prostředí:
 
 | Velikost v bajtech | Zarovnání v bajtech |
 | - | - |
-| první | první |
-| odst | odst |
+| 1 | 1 |
+| 2 | 2 |
 | 3, 4 | 4 |
 | > 4 | 8 |
 
@@ -62,10 +62,10 @@ Výchozí zarovnání rozložení pro globální a statické prvky:
 
 | Velikost v bajtech | Zarovnání v bajtech |
 | - | - |
-| první | první |
+| 1 | 1 |
 | 2 - 7 | 4 |
 | 8 - 63 | 8 |
-| > = 64 | 16bitovém |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Celočíselné registry
 
@@ -74,9 +74,9 @@ Architektura AArch64 podporuje Registry typu Integer 32:
 | Registr | Permanentní? | Role |
 | - | - | - |
 | x0 | Permanentní | Parametr/Scrat registr 1, výsledný registr |
-| x1 – 120 | Permanentní | Parametr/Scrat registr 2-8 |
-| x8 – X15 | Permanentní | Odkládací Registry |
-| x16 – x17 | Permanentní | Odkládací Registry uvnitř procedury – volání |
+| x1-x7 | Permanentní | Parametr/Scrat registr 2-8 |
+| x8-x15 | Permanentní | Odkládací Registry |
+| x16-x17 | Permanentní | Odkládací Registry uvnitř procedury – volání |
 | x18 | Bez volatile | Registr platformy: v režimu jádra odkazuje na KPCR pro aktuální procesor; v uživatelském režimu odkazuje na TEB |
 | x19-x28 | Bez volatile | Odkládací Registry |
 | x29/FP | Bez volatile | Ukazatel na rámec |
@@ -97,8 +97,8 @@ Architektura AArch64 podporuje taky 32 Registry s plovoucí desetinnou čárkou 
 | Registr | Permanentní? | Role |
 | - | - | - |
 | v0 | Permanentní | Parametr/Scrat registr 1, výsledný registr |
-| V1 – v7 | Permanentní | Parametry/pomocné Registry 2-8 |
-| V8 – v15 | Bez volatile | Odkládací Registry (pouze nízké 64 bity jsou nestálé) |
+| v1-v7 | Permanentní | Parametry/pomocné Registry 2-8 |
+| v8-v15 | Bez volatile | Odkládací Registry (pouze nízké 64 bity jsou nestálé) |
 | v16-v31 | Permanentní | Odkládací Registry |
 
 Ke každému registru může být přistup jako k úplné 128ové hodnotě (přes v0-V31 nebo Q0-Q31). Je možné, že je k ní přistupovaná hodnota 64 (přes D31), jako 32 hodnota (prostřednictvím S0-S31), jako 16bitová hodnota (prostřednictvím H0-H31) nebo jako 8bitové hodnoty (prostřednictvím B0-B31). Přístup k menšímu počtu než 128 bitů přistupuje pouze k dolním bitům plného 128 bitového registru. Zbývající bity zůstanou beze změny, pokud není uvedeno jinak. (AArch64 se liší od AArch32, kde menší registry byly zabaleny nad většími Registry.)
@@ -108,10 +108,10 @@ Registr ovládacího prvku s plovoucí desetinnou čárkou (FPCR) má určité p
 | Bity | Význam | Permanentní? | Role |
 | - | - | - | - |
 | 26 | AHP | Bez volatile | Alternativní ovládací prvek s poloviční přesností |
-| 0,25 | JMÉNA | Bez volatile | Výchozí ovládací prvek režimu NaN. |
+| 25 | ROZLIŠUJÍCÍ NÁZEV | Bez volatile | Výchozí ovládací prvek režimu NaN. |
 | 24 | FZ | Bez volatile | Řízení režimu vyprázdnění na nulu. |
 | 23-22 | RMode | Bez volatile | Ovládací prvek režimu zaokrouhlování |
-| 15, 12 – 8 | IDE/IXE/atd. | Bez volatile | Depeše výjimky povolit bity, musí být vždy 0. |
+| 15,12-8 | IDE/IXE/atd. | Bez volatile | Depeše výjimky povolit bity, musí být vždy 0. |
 
 ## <a name="system-registers"></a>Systémové Registry
 

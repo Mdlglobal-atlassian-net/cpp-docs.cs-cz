@@ -1,5 +1,5 @@
 ---
-title: 'TN054: Přímé volání rozhraní DAO při použití tříd MFC DAO'
+title: 'TN054: Přímé volání rozhraní DAO při používání tříd DAO knihovny MFC'
 ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC, DAO and
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - TN054
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
-ms.openlocfilehash: cef9852f762a64579e11fe4b0d8606bfc9d36709
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 0eb9daf156f51ecb4eb1e6fdc721b34878a43351
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095979"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303418"
 ---
-# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: Přímé volání rozhraní DAO při použití tříd MFC DAO
+# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: Přímé volání rozhraní DAO při používání tříd DAO knihovny MFC
 
 > [!NOTE]
-> Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. 3,6 je finální verze, která je považována za zastaralou. Vizuální C++ prostředí a Průvodci nepodporují rozhraní DAO (i když třídy rozhraní DAO jsou zahrnuty a je možné je nadále používat). Společnost Microsoft doporučuje, abyste pro nové projekty používali [šablony OLE DB](../data/oledb/ole-db-templates.md) nebo [rozhraní ODBC a knihovnu MFC](../data/odbc/odbc-and-mfc.md) . V údržbě stávajících aplikací byste měli používat jenom rozhraní DAO.
+> Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou. Vizuální C++ prostředí a Průvodci nepodporují rozhraní DAO (i když třídy rozhraní DAO jsou zahrnuty a je možné je nadále používat). Společnost Microsoft doporučuje, abyste pro nové projekty používali [šablony OLE DB](../data/oledb/ole-db-templates.md) nebo [rozhraní ODBC a knihovnu MFC](../data/odbc/odbc-and-mfc.md) . V údržbě stávajících aplikací byste měli používat jenom rozhraní DAO.
 
-Při použití databázových tříd knihovny MFC DAO mohou nastat situace, kdy je nutné použít rozhraní DAO přímo. Obvykle se nejedná o případ, ale knihovna MFC poskytuje některé pomocné mechanismy, které usnadňují přímé volání rozhraní DAO při kombinování použití tříd knihovny MFC s přímými voláními rozhraní DAO. Vytvoření přímého volání rozhraní DAO do metod objektu DAO spravovaného knihovnou MFC by mělo vyžadovat pouze pár řádků kódu. Potřebujete-li vytvořit a použít objekty DAO, které nejsou *spravovány* knihovnou MFC, budete muset provést trochu více práce ve skutečně volání `Release` objektu. Tato technická Poznámka vysvětluje, kdy možná budete chtít volat rozhraní DAO přímo, k čemu vám můžou pomáhat pomocníky MFC, a jak používat rozhraní DAO OLE. Nakonec tato poznámka obsahuje několik ukázkových funkcí, které ukazují, jak volat rozhraní DAO přímo pro funkce zabezpečení rozhraní DAO.
+Při použití databázových tříd knihovny MFC DAO mohou nastat situace, kdy je nutné použít rozhraní DAO přímo. Obvykle se nejedná o případ, ale knihovna MFC poskytuje některé pomocné mechanismy, které usnadňují přímé volání rozhraní DAO při kombinování použití tříd knihovny MFC s přímými voláními rozhraní DAO. Vytvoření přímého volání rozhraní DAO do metod objektu DAO spravovaného knihovnou MFC by mělo vyžadovat pouze pár řádků kódu. Potřebujete-li vytvořit a použít objekty DAO, které nejsou *spravovány* knihovnou MFC, budete muset provést trochu více práce ve skutečnosti, že se na objekt skutečně volá `Release`. Tato technická Poznámka vysvětluje, kdy možná budete chtít volat rozhraní DAO přímo, k čemu vám můžou pomáhat pomocníky MFC, a jak používat rozhraní DAO OLE. Nakonec tato poznámka obsahuje několik ukázkových funkcí, které ukazují, jak volat rozhraní DAO přímo pro funkce zabezpečení rozhraní DAO.
 
 ## <a name="when-to-make-direct-dao-calls"></a>Kdy provést Přímá volání rozhraní DAO
 
@@ -31,7 +31,7 @@ Nejběžnější situace při vytváření přímého volání rozhraní DAO nas
 
 ## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>Stručný přehled implementace rozhraní DAO a knihovny MFC
 
-Balení rozhraní DAO v knihovně MFC usnadňuje používání rozhraní DAO tím, že zpracovává spoustu podrobností, takže se nemusíte starat o trochu věcí. To zahrnuje inicializaci OLE, vytváření a správu objektů DAO (zejména objektů kolekce), kontrolu chyb a poskytování silně typovaného a jednoduššího rozhraní (žádné **varianty** nebo `BSTR` argumenty). Můžete provést Přímá volání rozhraní DAO a stále využívat tyto funkce. Veškerý váš kód musí být volán `Release` pro všechny objekty vytvořené přímými voláními rozhraní DAO a *nesmí* měnit žádný ukazatel rozhraní, které může knihovna MFC spoléhat na interně. Například neměňte člen *m_pDAORecordset* otevřeného `CDaoRecordset` objektu, pokud nerozumíte *všem* vnitřním důsledky. Můžete však použít rozhraní *m_pDAORecordset* k volání DAO přímo pro získání kolekce polí. V takovém případě se člen *m_pDAORecordset* neupraví. Stačí volat `Release` objekt kolekce pole, až budete hotovi s objektem.
+Balení rozhraní DAO v knihovně MFC usnadňuje používání rozhraní DAO tím, že zpracovává spoustu podrobností, takže se nemusíte starat o trochu věcí. To zahrnuje inicializaci OLE, vytváření a správu objektů DAO (zejména objektů kolekce), kontrolu chyb a poskytování silně typovaného a jednoduššího rozhraní (bez argumentů **typu variant** nebo `BSTR`). Můžete provést Přímá volání rozhraní DAO a stále využívat tyto funkce. Veškerý váš kód musí být volán `Release` pro všechny objekty vytvořené přímými voláními rozhraní DAO a *nesmí* měnit žádný ukazatel rozhraní, které může knihovna MFC spoléhat na interně. Například neměňte *m_pDAORecordset* členu otevřeného objektu `CDaoRecordset`, pokud nerozumíte *všem* vnitřním důsledky. Můžete však použít rozhraní *m_pDAORecordset* pro volání DAO přímo pro získání kolekce polí. V tomto případě by se člen *m_pDAORecordset* nezměnil. Stačí volat `Release` v objektu kolekce pole, když jste hotovi s objektem.
 
 ## <a name="description-of-helpers-to-make-dao-calls-easier"></a>Popis pomocníků pro snazší volání rozhraní DAO
 
@@ -41,38 +41,40 @@ Pomocníkům, které jsou k dispozici pro snazší volání DAO, jsou stejné po
 
 Rozhraní OLE pro každý objekt v hierarchii objektů DAO jsou definována v hlavičkovém souboru DBDAOINT. H, který najdete v adresáři \Program Files\Microsoft Visual Studio .NET 2003 \ VC7\include. Tato rozhraní poskytují metody, které umožňují manipulovat s celou hierarchií rozhraní DAO.
 
-Pro mnoho metod v rozhraních DAO budete muset manipulovat `BSTR` s objektem (délka předpony, která se používá v automatizaci OLE). Objekt je obvykle zapouzdřen v rámci datového typu **variant.** `BSTR` Třída `COleVariant` knihovny MFC sama dědí z datového typu **variant** . V závislosti na tom, jestli sestavíte projekt pro ANSI nebo Unicode, budou rozhraní DAO vracet ANSI nebo `BSTR`Unicode s. Dvě makra, V_BSTR a V_BSTRT, jsou užitečné, aby bylo zajištěno, že rozhraní DAO `BSTR` získá očekávaný typ.
+Pro mnoho metod v rozhraních DAO budete muset manipulovat s objektem `BSTR` (délka předpony, která se používá v automatizaci OLE). Objekt `BSTR` obvykle je zapouzdřen v rámci datového typu **variant** . Třída knihovny MFC `COleVariant` sama dědí z datového typu **variant** . V závislosti na tom, jestli sestavíte projekt pro ANSI nebo Unicode, budou rozhraní DAO vracet ANSI nebo Unicode `BSTR`s. Dvě makra, V_BSTR a V_BSTRT, jsou užitečné, aby bylo zajištěno, že rozhraní DAO získá `BSTR` očekávaného typu.
 
-V_BSTR extrahuje `COleVariant`člena *bstrVal* . Toto makro se obvykle používá v případě, že potřebujete předat obsah `COleVariant` metody rozhraní DAO. Následující fragment kódu ukazuje jak deklarace, tak skutečné použití dvou metod rozhraní DAO DAOUser, které využívají makro V_BSTR:
+V_BSTR extrahuje člena `COleVariant`*bstrVal* . Toto makro se obvykle používá v případě, že potřebujete předat obsah `COleVariant` metodě rozhraní DAO. Následující fragment kódu ukazuje jak deklarace, tak skutečné použití dvou metod rozhraní DAO DAOUser, které využívají makro V_BSTR:
 
 ```cpp
 COleVariant varOldName;
 COleVariant varNewName(_T("NewUser"), VT_BSTRT);
 
-// Code to assign pUser to a valid value omitted DAO 3.6 is the final version and it is considered obsolete.User *pUser = NULL;
+// Code to assign pUser to a valid value omitted DAOUser *pUser = NULL;
 
 // These method declarations were taken from DBDAOINT.H
 // STDMETHOD(get_Name) (THIS_ BSTR FAR* pbstr) PURE;
 // STDMETHOD(put_Name) (THIS_ BSTR bstr) PURE;
-DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->get_Name(&V_BSTR (&varOldName))); DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->put_Name(V_BSTR (&varNewName)));
+DAO_CHECK(pUser->get_Name(&V_BSTR (&varOldName)));
+DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
 ```
 
-Všimněte si, `VT_BSTRT` že argument zadaný `COleVariant` v konstruktoru výše zajišťuje, že při vytváření verze ANSI `BSTR` aplikace a `COleVariant` Unicode `BSTR` pro verzi Unicode sady bude v rozhraní ANSI. vaše aplikace. To je to, co rozhraní DAO očekává.
+Všimněte si, že argument `VT_BSTRT` zadaný v konstruktoru `COleVariant` výše zajišťuje, aby se v `COleVariant` `BSTR` ANSI, pokud vytvoříte verzi aplikace ANSI a `BSTR` Unicode pro verzi vaší aplikace pro Unicode. To je to, co rozhraní DAO očekává.
 
-Druhé makro, V_BSTRT, extrahuje *bstrVal* člena `COleVariant` ANSI nebo Unicode v závislosti na typu sestavení (ANSI nebo Unicode). Následující kód ukazuje, jak extrahovat `BSTR` hodnotu z a `COleVariant` do `CString`:
+Druhé makro, V_BSTRT, extrahuje buď člena ANSI nebo Unicode *bstrVal* `COleVariant` v závislosti na typu sestavení (ANSI nebo Unicode). Následující kód ukazuje, jak extrahovat `BSTR` hodnoty z `COleVariant` do `CString`:
 
 ```cpp
 COleVariant varName(_T("MyName"), VT_BSTRT);
 CString str = V_BSTRT(&varName);
 ```
 
-Makro V_BSTRT spolu s dalšími postupy pro otevření jiných typů uložených v `COleVariant`nástroji je znázorněno v ukázce DAOVIEW. Konkrétně tento překlad je proveden v `CCrack::strVARIANT` metodě. Tato metoda, pokud je to možné, překládá hodnotu a `COleVariant` do `CString`instance.
+V_BSTRT makro, spolu s dalšími postupy pro otevření jiných typů uložených v `COleVariant`, je znázorněno v ukázce DAOVIEW. Konkrétně tento překlad je proveden v metodě `CCrack::strVARIANT`. Tato metoda, pokud je to možné, překládá hodnotu `COleVariant` do instance `CString`.
 
 ## <a name="simple-example-of-a-direct-call-to-dao"></a>Jednoduchý příklad přímého volání rozhraní DAO
 
-Můžou nastat situace, kdy je potřeba aktualizovat základní objekty kolekce DAO. Obvykle by to nemělo být nutné, ale pokud je to nezbytné, jedná se o jednoduchý postup. Příkladem, kdy může být nutné aktualizovat kolekci, je při provozu ve víceuživatelském prostředí s více uživateli, kteří vytvářejí nové TableDefs. V takovém případě vaše kolekce TableDefs může být zastaralá. Chcete-li aktualizovat kolekci, stačí zavolat `Refresh` metodu konkrétního objektu kolekce a vyhledat chyby:
+Můžou nastat situace, kdy je potřeba aktualizovat základní objekty kolekce DAO. Obvykle by to nemělo být nutné, ale pokud je to nezbytné, jedná se o jednoduchý postup. Příkladem, kdy může být nutné aktualizovat kolekci, je při provozu ve víceuživatelském prostředí s více uživateli, kteří vytvářejí nové TableDefs. V takovém případě vaše kolekce TableDefs může být zastaralá. Chcete-li aktualizovat kolekci, stačí volat metodu `Refresh` konkrétního objektu kolekce a vyhledat chyby:
 
-```cpp DAO 3.6 is the final version and it is considered obsolete._CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
+```cpp
+DAO_CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
 ```
 
 Všimněte si, že v současné době všechna rozhraní objektů kolekce DAO jsou nedokumentované podrobnosti o implementaci tříd databáze knihovny MFC DAO.

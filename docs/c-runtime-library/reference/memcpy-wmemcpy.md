@@ -27,12 +27,12 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-ms.openlocfilehash: e9d947dc4e9ecea654e8cb16e957887fe4360161
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bf7f12cd00780347f23252764aace449dd6f5722
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951845"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303292"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -61,7 +61,7 @@ Nová vyrovnávací paměť.
 *src*<br/>
 Vyrovnávací paměť, ze které se má kopírovat.
 
-*výpočtu*<br/>
+*count*<br/>
 Počet znaků, které mají být zkopírovány.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -80,7 +80,7 @@ Hodnota *cíl*.
 >
 > Vzhledem k tomu, že **memcpy** využití kompilátorem VC + + a knihovny byly pečlivě kontrolovány, jsou tato volání povolena v rámci kódu, který je jinak kompatibilní s SDL.  volání **memcpy** představená ve zdrojovém kódu aplikace jsou kompatibilní s SDL pouze v případě, že je toto použití přezkoumáno odborníky na zabezpečení.
 
-Funkce **memcpy** a **wmemcpy** budou zastaralé pouze v případě, že je konstanta **_CRT_SECURE_DEPRECATE_MEMORY** definována před příkazem include, aby byly funkce zastaralé, například v následujícím příkladu:
+Funkce **memcpy** a **wmemcpy** budou zastaralé pouze v případě, že je konstanta **_CRT_SECURE_DEPRECATE_MEMORY** definována před příkazem začlenění, aby byly funkce zastaralé, například v následujícím příkladu:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

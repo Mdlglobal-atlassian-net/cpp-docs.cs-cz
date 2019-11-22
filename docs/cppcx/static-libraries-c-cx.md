@@ -2,55 +2,55 @@
 title: Statické knihovny (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 188ba06518bf6cdd154b7d6bd61216ed1e4ffad3
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877244"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302941"
 ---
 # <a name="static-libraries-ccx"></a>Statické knihovny (C++/CX)
 
-Statické knihovny, který se používá v aplikaci pro univerzální platformu Windows (UPW) může obsahovat kód jazyka C++ podle standardu ISO, včetně typů STL a volání rozhraní API Win32, které nejsou vyloučeny z aplikace platformy Windows Runtime. Statická knihovna spotřebovává součásti prostředí Windows Runtime a může vytvářet komponenty prostředí Windows Runtime s určitými omezeními.
+Statická knihovna, která se používá v aplikaci Univerzální platforma Windows (UWP), může obsahovat kód ISO standard C++ , včetně typů STL, a také volání rozhraní API systému Win32, která nejsou vyloučena z aplikace prostředí Windows Runtime App Platform. Statická knihovna spotřebovává prostředí Windows Runtime komponenty a může vytvářet prostředí Windows Runtime komponenty s určitými omezeními.
 
-## <a name="creating-static-libraries"></a>Vytvoření statické knihovny
+## <a name="creating-static-libraries"></a>Vytváření statických knihoven
 
 
-Pokyny pro vytvoření nového projektu se liší v závislosti na tom, kterou verzi sady Visual Studio jste nainstalovali. Ujistěte se, že máte volič verze v horním vlevo nastavené na správné verzi.
+Pokyny pro vytvoření nového projektu se liší v závislosti na verzi sady Visual Studio, kterou jste nainstalovali. Ujistěte se, že máte selektor verzí v levém horním rohu nastavený na správnou verzi.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Chcete-li vytvořit statickou knihovnu UPW v aplikaci Visual Studio 2019
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Vytvoření statické knihovny UWP v aplikaci Visual Studio 2019
 
-1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogové okno.
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
 
-1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **UPW**. 
+1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte na **UWP**. 
 
-1. Filtrované seznamu typů projektů zvolte **statická knihovna (Universal Windows - C++/CX)** klikněte na tlačítko **Další**. Na další stránce zadejte název projektu a zadejte umístění projektu, v případě potřeby.
+1. Z filtrovaného seznamu typů projektů zvolte možnost **Statická knihovna (Universal Windows- C++/CX)** a pak klikněte na tlačítko **Další**. Na další stránce zadejte název projektu a v případě potřeby určete umístění projektu.
 
-1. Zvolte **vytvořit** tlačítko pro vytvoření projektu.
+1. Kliknutím na tlačítko **vytvořit** vytvořte projekt.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Chcete-li vytvořit statickou knihovnu UWP v sadě Visual Studio 2017 nebo Visual Studio 2015
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Vytvoření statické knihovny UWP v aplikaci Visual Studio 2017 nebo Visual Studio 2015
 
-1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**. V části **Visual C++** > **Windows Universal** zvolte **statická knihovna (Universal Windows)**.
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**. V **části C++ Visual** > **Windows Universal** zvolit **statickou knihovnu (Universal Windows)** .
 
-1. V **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **vlastnosti**. V **vlastnosti** dialogovém okně **vlastnosti konfigurace** > **C/C++** nastavte **využívat rozšíření modulu Runtime Windows** k **Ano (/ZW)**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**. V dialogovém okně **vlastnosti** na stránce **Vlastnosti konfigurace** > **CC++ nebo** nastavte **rozšíření spotřebovávat prostředí Windows Runtime** na **Ano (/ZW)** .
 
 ::: moniker-end
 
-Při kompilaci novou statickou knihovnu, pokud provedete voláním rozhraní Win32 API, která je vyloučená pro aplikace pro UPW, kompilátor vyvolá chybu C3861, "Identifikátor se nenašel." Vyhledejte alternativní metodu, která je podporována pro prostředí Windows Runtime, najdete v článku [alternativy k rozhraní API Windows v aplikacích pro UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
+Při kompilaci nové statické knihovny, pokud provedete volání Win32 API vyloučeného pro aplikace pro UWP, kompilátor vyvolá chybu C3861, identifikátor nebyl nalezen. Alternativní metodu, která je pro prostředí Windows Runtime podporovaná, najdete [v tématu alternativy k rozhraním API Windows v aplikacích pro UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 
-Pokud chcete přidat projekt statické knihovny C++ do řešení aplikace UPW, bude pravděpodobně nutné aktualizovat nastavení vlastností projektu knihovny, tak, aby je nastavena podpora UWP, na **Ano**. Bez tohoto nastavení dojde k sestavení kódu a odkazy, ale k chybě dojde při pokusu o ověření aplikace pro Microsoft Store. Statické knihovny lib by měl být zkompilován pomocí stejného nastavení kompilátoru jako projekt, který je spotřebovává.
+Pokud přidáte projekt C++ statické knihovny do řešení aplikace UWP, bude pravděpodobně nutné aktualizovat nastavení vlastnosti projektu knihovny tak, aby byla vlastnost podpora UWP nastavena na **hodnotu Ano**. Bez tohoto nastavení kód vytvoří a propojí, ale při pokusu o ověření aplikace pro Microsoft Store dojde k chybě. Statická knihovna lib by měla být zkompilována se stejným nastavením kompilátoru jako projekt, který ho využívá.
 
-Pokud využíváte statickou knihovnu, která vytvoří veřejné `ref` tříd, veřejné rozhraní a třídy hodnota veřejného linker vydá toto varování:
+Použijete-li statickou knihovnu, která vytvoří veřejné třídy `ref`, třídy veřejných rozhraní nebo veřejné třídy hodnot, linker toto upozornění vyvolá:
 
-> **upozornění LNK4264:** zkompiloval s parametrem /ZW do statické knihovny; soubor objektu archivace mějte na paměti, že při vytváření typů prostředí Windows Runtime nedoporučuje propojení se statickou knihovnou, která obsahuje metadata prostředí Windows Runtime.
+> **Upozornění LNK4264:** archivace souboru objektu zkompilovaného pomocí/ZW do statické knihovny; Pamatujte, že při vytváření prostředí Windows Runtime typů se nedoporučuje propojit se statickou knihovnou, která obsahuje prostředí Windows Runtime metadata.
 
-Upozornění můžete bezpečně ignorovat pouze v případě, že se statickou knihovnou není vytváření komponent Windows Runtime, využívání mimo samotné knihovny. Pokud knihovny nespotřeboval komponenty, která definuje, pak linkeru můžete optimalizují implementace i v případě, že veřejný metadata obsahují informace o typu. To znamená, že bude zkompilována veřejné součásti ve statické knihovně, ale za běhu, neaktivuje. Z tohoto důvodu všechny modulu Windows Runtime komponenty, která je určena pro použití jinými součástmi nebo aplikace musí být implementován v dynamická knihovna (DLL).
+Upozornění lze bezpečně ignorovat pouze v případě, že Statická knihovna neprodukuje prostředí Windows Runtime komponenty, které jsou spotřebovány mimo samotnou knihovnu. Pokud knihovna nevyužívá komponentu, kterou definuje, pak linker může optimalizovat implementaci, i když veřejná metadata obsahují informace o typu. To znamená, že veřejné součásti ve statické knihovně budou kompilovány, ale za běhu se neaktivují. Z tohoto důvodu musí být všechny prostředí Windows Runtime komponenty určené pro použití jinými komponentami nebo aplikacemi implementovány v dynamické knihovně (DLL).
 
 ## <a name="see-also"></a>Viz také:
 

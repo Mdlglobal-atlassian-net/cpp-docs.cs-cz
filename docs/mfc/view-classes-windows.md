@@ -8,16 +8,16 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: f3e9ea2ebf3eb0ce04fde0339aaf0243686248a9
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096042"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302969"
 ---
 # <a name="view-classes-windows"></a>Třídy zobrazení (Windows)
 
-`CView`a jeho odvozené třídy jsou podřízená okna, která představují klientskou oblast okna rámce. Zobrazení zobrazují data a přijímají vstup pro dokument.
+`CView` a jeho odvozené třídy jsou podřízená okna, která představují klientskou oblast okna rámce. Zobrazení zobrazují data a přijímají vstup pro dokument.
 
 Třída zobrazení je asociována s třídou dokumentu a třídou okna s rámečkem pomocí objektu šablony dokumentu.
 
@@ -25,7 +25,7 @@ Třída zobrazení je asociována s třídou dokumentu a třídou okna s rámeč
 Základní třída pro zobrazení dat dokumentu v konkrétní aplikaci. Zobrazení zobrazují data a přijímají uživatelský vstup pro úpravy nebo výběr dat. Odvodit třídu zobrazení nebo třídy z `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Základní třída pro zobrazení s možnostmi posouvání Odvodit třídu zobrazení z `CScrollView` pro automatické posouvání.
+Základní třída pro zobrazení s možnostmi posouvání Odvodíte třídu zobrazení z `CScrollView` pro automatické posouvání.
 
 ## <a name="form-and-record-views"></a>Zobrazení formulářů a záznamů
 
@@ -34,13 +34,13 @@ Zobrazení formuláře jsou také posouvání zobrazení. Jsou založeny na šab
 Zobrazení záznamů jsou odvozena z zobrazení formuláře. Kromě šablony dialogového okna mají také připojení k databázi.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Zobrazení posuvníku, jehož rozložení je definováno v šabloně dialogového okna. Odvození třídy z `CFormView` pro implementaci uživatelského rozhraní na základě šablony dialogového okna.
+Zobrazení posuvníku, jehož rozložení je definováno v šabloně dialogového okna. Odvození třídy z `CFormView` k implementaci uživatelského rozhraní na základě šablony dialogového okna.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů DAO (Data Access Object). Podobně jako všechny zobrazení `CDaoRecordView` formulářů je založen na šabloně dialogového okna. Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. 3,6 je finální verze, která je považována za zastaralou.
+Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů DAO (Data Access Object). Podobně jako u všech zobrazení formulářů je `CDaoRecordView` založena na šabloně dialogového okna. Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů rozhraní ODBC (Open Database Connectivity). Podobně jako všechny zobrazení `CRecordView` formulářů je založen na šabloně dialogového okna.
+Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů rozhraní ODBC (Open Database Connectivity). Podobně jako u všech zobrazení formulářů je `CRecordView` založena na šabloně dialogového okna.
 
 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
 Zobrazení formuláře, které poskytuje funkce platformy pro úpravy HTML WebBrowser
@@ -66,7 +66,7 @@ Zobrazení, které obsahuje ovládací prvek stromu systému Windows (viz [CTree
 
 ## <a name="related-classes"></a>Související třídy
 
-`CSplitterWnd`umožňuje mít více zobrazení v rámci jednoho okna rámce. `CPrintDialog`a `CPrintInfo` podporují náhled tiskových a tiskových možností zobrazení. `CRichEditDoc`a `CRichEditCntrItem` používají se `CRichEditView` k implementaci funkcí kontejneru OLE.
+`CSplitterWnd` umožňuje mít více zobrazení v rámci jednoho okna rámce. `CPrintDialog` a `CPrintInfo` podporují možnosti tisku a tisku ve verzi Preview zobrazení. `CRichEditDoc` a `CRichEditCntrItem` se používají s `CRichEditView` k implementaci schopností kontejneru OLE.
 
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
 Okno, které může uživatel rozdělit do několika podoken. Velikost těchto podoken může měnit uživatel nebo pevná velikost.
@@ -75,7 +75,7 @@ Okno, které může uživatel rozdělit do několika podoken. Velikost těchto p
 Poskytuje standardní dialogové okno pro tisk souboru.
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-Struktura obsahující informace o úloze tisku nebo náhledu tisku. Používá se `CView`v architektuře pro tisk.
+Struktura obsahující informace o úloze tisku nebo náhledu tisku. Používá se v architektuře tisku `CView`.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
 Udržuje seznam položek klienta OLE, které jsou v `CRichEditView`.

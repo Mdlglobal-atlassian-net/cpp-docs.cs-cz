@@ -12,16 +12,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: e0daabf3d236eb7038f22c54ea76d616baf613a0
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f1fa862a30a83cbda049fc63bac6c33a101587b
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096004"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305382"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC – ovládací prvky ActiveX: Pokročilá témata
 
-Tento článek se věnuje pokročilým tématům, která souvisí s vývojem ovládacích prvků ActiveX. Zde jsou některé z nich:
+Tento článek se věnuje pokročilým tématům, která souvisí s vývojem ovládacích prvků ActiveX. Mezi ně patří:
 
 - [Použití databázových tříd v ovládacích prvcích ActiveX](#_core_using_database_classes_in_activex_controls)
 
@@ -43,7 +43,7 @@ Vzhledem k tomu, že třídy ovládacích prvků ActiveX jsou součástí knihov
 Obecný přehled databázových tříd knihovny MFC naleznete v tématu [třídy databáze MFC (rozhraní DAO a rozhraní ODBC)](../data/mfc-database-classes-odbc-and-dao.md). Článek zavádí jak třídy knihovny MFC rozhraní ODBC, tak třídy MFC DAO a směruje vás na další podrobnosti.
 
 > [!NOTE]
->   Rozhraní DAO je podporováno prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou. Vizuální C++ prostředí a Průvodci nepodporují rozhraní DAO (i když třídy rozhraní DAO jsou zahrnuty a je možné je nadále používat). Společnost Microsoft doporučuje, abyste pro nové projekty používali [šablony OLE DB](../data/oledb/ole-db-programming.md) nebo [rozhraní ODBC a knihovnu MFC](../data/odbc/odbc-and-mfc.md) . V údržbě stávajících aplikací byste měli používat jenom rozhraní DAO.
+> Rozhraní DAO je podporováno prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou. Vizuální C++ prostředí a Průvodci nepodporují rozhraní DAO (i když třídy rozhraní DAO jsou zahrnuty a je možné je nadále používat). Společnost Microsoft doporučuje, abyste pro nové projekty používali [šablony OLE DB](../data/oledb/ole-db-programming.md) nebo [rozhraní ODBC a knihovnu MFC](../data/odbc/odbc-and-mfc.md) . V údržbě stávajících aplikací byste měli používat jenom rozhraní DAO.
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>Implementace parametrizované vlastnosti
 
@@ -89,13 +89,13 @@ Následující řádky jsou přidány do třídy ovládacího prvku. Soubor H:
 
 [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]
 
-Tento kód deklaruje dvě funkce nazvané `GetArray` a `SetArray` , které umožňují uživateli při přístupu k vlastnosti požádat o konkrétní řádek a sloupec.
+Tento kód deklaruje dvě funkce nazvané `GetArray` a `SetArray`, které umožňují uživateli při přístupu k vlastnosti požádat o konkrétní řádek a sloupec.
 
 Kromě toho Průvodce přidáním vlastnosti přidá následující řádky do mapy odeslání ovládacího prvku umístěnou v implementaci třídy ovládacího prvku (. CPP):
 
 [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
-Nakonec jsou implementace `GetArray` funkcí a `SetArray` přidány na konec. Soubor CPP. Ve většině případů upravíte funkci get tak, aby vracela hodnotu vlastnosti. Funkce Set obvykle obsahuje kód, který by se měl spustit, buď před nebo po změně vlastnosti.
+Nakonec jsou do konce okna přidány implementace funkcí `GetArray` a `SetArray`. Soubor CPP. Ve většině případů upravíte funkci get tak, aby vracela hodnotu vlastnosti. Funkce Set obvykle obsahuje kód, který by se měl spustit, buď před nebo po změně vlastnosti.
 
 Aby byla tato vlastnost užitečná, mohli byste deklarovat proměnnou člena dvourozměrného pole ve třídě ovládacího prvku typu **short**pro ukládání hodnot pro parametrizovanou vlastnost. Pak můžete změnit funkci get tak, aby vracela hodnotu uloženou ve správném řádku a sloupci, jak je uvedeno v parametrech, a upravit funkci set tak, aby aktualizovala hodnotu, na kterou odkazuje parametr řádku a sloupce.
 
@@ -103,7 +103,7 @@ Aby byla tato vlastnost užitečná, mohli byste deklarovat proměnnou člena dv
 
 Pokud dojde k chybovým podmínkám v ovládacím prvku, může být nutné ohlásit chybu do kontejneru ovládacích prvků. Existují dvě metody pro hlášení chyb v závislosti na situaci, ve které dojde k chybě. Pokud k chybě dojde v rámci funkce Get nebo set vlastnosti nebo v rámci implementace metody automatizace OLE, ovládací prvek by měl zavolat [COleControl –:: ThrowError](../mfc/reference/colecontrol-class.md#throwerror), který signalizuje uživateli ovládacího prvku, že došlo k chybě. Pokud k chybě dojde v jinou dobu, ovládací prvek by měl zavolat [COleControl –:: FireError –](../mfc/reference/colecontrol-class.md#fireerror), což vyvolá chybovou událost typu akcie.
 
-Chcete-li určit druh chyby, ke které došlo, ovládací prvek musí předat kód `ThrowError` chyby nebo. `FireError` Kód chyby je stavový kód OLE, který má 32ovou hodnotu. Pokud je to možné, vyberte kód chyby ze standardní sady kódů definovaných v OLECTL. Soubor hlaviček H Následující tabulka shrnuje tyto kódy.
+Chcete-li určit druh chyby, ke které došlo, ovládací prvek musí předat kód chyby `ThrowError` nebo `FireError`. Kód chyby je stavový kód OLE, který má 32ovou hodnotu. Pokud je to možné, vyberte kód chyby ze standardní sady kódů definovaných v OLECTL. Soubor hlaviček H Následující tabulka shrnuje tyto kódy.
 
 ### <a name="activex-control-error-codes"></a>Kódy chyb ovládacích prvků ActiveX
 
@@ -160,7 +160,7 @@ Pokud vytváříte ovládací prvek ActiveX, který nahradí existující ovlád
 
 V některých případech můžete chtít speciální kombinace klávesových zkratek zpracovat zvláštním způsobem; Například vložte nový řádek při stisknutí klávesy ENTER v ovládacím prvku víceřádkový textový rámeček nebo při stisknutí ID směrového klíče mezi skupinu ovládacích prvků pro úpravy.
 
-Pokud je `COleControl`základní třídou ovládacího prvku ActiveX, můžete přepsat [CWnd::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage) ke zpracování zpráv předtím, než je kontejner zpracuje. Při použití této techniky vždy vrátí **hodnotu true** , pokud zprávu zpracujete v přepsání `PreTranslateMessage`.
+Pokud je základní třída ovládacího prvku ActiveX `COleControl`, můžete přepsat [CWnd::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage) ke zpracování zpráv předtím, než je kontejner zpracuje. Při použití této techniky vždy vrátí **hodnotu true** , pokud zprávu zpracováváte v přepsání `PreTranslateMessage`.
 
 Následující příklad kódu ukazuje možný způsob zpracování všech zpráv souvisejících se směrovým klíčem.
 

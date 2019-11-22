@@ -1,66 +1,25 @@
 ---
-title: Životní cyklus objektů a správa prostředků (moderní verze jazyka C++)
-ms.date: 11/04/2016
+title: Životnost objektů a Správa prostředků (RAII)
+description: Postupujte podle principu RAII v moderním C++ , abyste se vyhnuli nevracení prostředků.
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 91229ea1b2d7a85f852138176d8cdb46dfa8c0df
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246430"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303369"
 ---
-# <a name="object-lifetime-and-resource-management-modern-c"></a>Životní cyklus objektů a správa prostředků (moderní verze jazyka C++)
+# <a name="object-lifetime-and-resource-management-raii"></a>Životnost objektů a Správa prostředků (RAII)
 
-Unlike managed languages, C++ doesn’t have garbage collection (GC), which automatically releases no-longer-used memory resources as a program runs. In C++, resource management is directly related to object lifetime. This document describes the factors that affect object lifetime in C++ and how to manage it.
+Na rozdíl od spravovaných C++ jazyků nemá automatické *uvolňování paměti*. To je interní proces, který uvolní paměť haldy a další prostředky při spuštění programu. C++ Program zodpovídá za vrácení všech pořízených prostředků do operačního systému. Selhání uvolnění nepoužívaného prostředku se nazývá *netěsnost*. Nevrácené prostředky nejsou k dispozici ostatním programům, dokud se proces neukončí. Konkrétně nevracení paměti je běžné příčinou chyb v programování ve stylu C.
 
-C++ doesn’t have GC primarily because it doesn't handle non-memory resources. Only deterministic destructors like those in C++ can handle memory and non-memory resources equally. GC also has other problems, like higher overhead in memory and CPU consumption, and locality. But universality is a fundamental problem that can't be mitigated through clever optimizations.
+Moderní C++ Vyhněte se použití paměti haldy co nejvíc tím, že deklarujete objekty v zásobníku. Pokud je prostředek pro zásobník příliš velký, měl by být *vlastněn* objektem. Jakmile se objekt inicializuje, získá prostředek, který vlastní. Objekt je pak zodpovědný za uvolnění prostředku ve svém destruktoru. Vlastnící objekt je deklarován v zásobníku. Princip, kdy jsou *objekty vlastní prostředky* , se také označují jako "získávání prostředků je inicializace" nebo RAII.
 
-## <a name="concepts"></a>Koncepty
+Když se objekt zásobníku vlastnícího prostředky dostane mimo rozsah, jeho destruktor se automaticky vyvolá. Tímto způsobem uvolňování paměti v C++ nástroji úzce souvisí s životností objektu a je deterministické. Prostředek je vždy vydán ve známém bodě v programu, který lze ovládat. Pouze deterministické destruktory, jako jsou C++ v, mohou zpracovávat prostředky paměti a nepaměťových prostředků stejně.
 
-An important thing in object-lifetime management is the encapsulation—whoever's using an object doesn't have to know what resources that object owns, or how to get rid of them, or even whether it owns any resources at all. It just has to destroy the object. The C++ core language is designed to ensure that objects are destroyed at the correct times, that is, as blocks are exited, in reverse order of construction. When an object is destroyed, its bases and members are destroyed in a particular order.  The language automatically destroys objects, unless you do special things like heap allocation or placement new.  For example, [smart pointers](../cpp/smart-pointers-modern-cpp.md) like `unique_ptr` and `shared_ptr`, and C++ Standard Library containers like `vector`, encapsulate **new**/**delete** and `new[]`/`delete[]` in objects, which have destructors. That's why it's so important to use smart pointers and C++ Standard Library containers.
-
-Another important concept in lifetime management: destructors. Destructors encapsulate resource release.  (The commonly used mnemonic is RRID, Resource Release Is Destruction.)  A resource is something that you get from "the system" and have to give back later.  Memory is the most common resource, but there are also files, sockets, textures, and other non-memory resources. "Owning" a resource means you can use it when you need it but you also have to release it when you're finished with it.  When an object is destroyed, its destructor releases the resources that it owned.
-
-The final concept is the DAG (Directed Acyclic Graph).  The structure of ownership in a program forms a DAG. No object can own itself—that's not only impossible but also inherently meaningless. But two objects can share ownership of a third object.  Several kinds of links are possible in a DAG like this: A is a member of B (B owns A), C stores a `vector<D>` (C owns each D element), E stores a `shared_ptr<F>` (E shares ownership of F, possibly with other objects), and so forth.  As long as there are no cycles and every link in the DAG is represented by an object that has a destructor (instead of a raw pointer, handle, or other mechanism), then resource leaks are impossible because the language prevents them. Resources are released immediately after they're no longer needed, without a garbage collector running. The lifetime tracking is overhead-free for stack scope, bases, members, and related cases, and inexpensive for `shared_ptr`.
-
-### <a name="heap-based-lifetime"></a>Heap-based lifetime
-
-For heap object lifetime, use [smart pointers](../cpp/smart-pointers-modern-cpp.md). Use `shared_ptr` and `make_shared` as the default pointer and allocator. Use `weak_ptr` to break cycles, do caching, and observe objects without affecting or assuming anything about their lifetimes.
-
-```cpp
-void func() {
-
-auto p = make_shared<widget>(); // no leak, and exception safe
-...
-p->draw();
-
-} // no delete required, out-of-scope triggers smart pointer destructor
-```
-
-Use `unique_ptr` for unique ownership, for example, in the *pimpl* idiom. (See [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Make a `unique_ptr` the primary target of all explicit **new** expressions.
-
-```cpp
-unique_ptr<widget> p(new widget());
-```
-
-You can use raw pointers for non-ownership and observation. A non-owning pointer may dangle, but it can’t leak.
-
-```cpp
-class node {
-  ...
-  vector<unique_ptr<node>> children; // node owns children
-  node* parent; // node observes parent, which is not a concern
-  ...
-};
-node::node() : parent(...) { children.emplace_back(new node(...) ); }
-```
-
-When performance optimization is required, you might have to use *well-encapsulated* owning pointers and explicit calls to delete. An example is when you implement your own low-level data structure.
-
-### <a name="stack-based-lifetime"></a>Stack-based lifetime
-
-In modern C++, *stack-based scope* is a powerful way to write robust code because it combines automatic *stack lifetime* and *data member lifetime* with high efficiency—lifetime tracking is essentially free of overhead. Heap object lifetime requires diligent manual management and can be the source of resource leaks and inefficiencies, especially when you are working with raw pointers. Consider this code, which demonstrates stack-based scope:
+Následující příklad ukazuje jednoduchý objekt `w`. Je deklarována v zásobníku v oboru funkce a je zničena na konci bloku funkce. Objekt `w` nevlastní žádné *prostředky* (například paměť přidělené haldě). Jeho jediný členský `g` je sám o sobě deklarovaný v zásobníku a jednoduše se předává mimo rozsah spolu s `w`. V destruktoru `widget` není vyžadován žádný speciální kód.
 
 ```cpp
 class widget {
@@ -81,10 +40,57 @@ void functionUsingWidget () {
   // as if "finally { w.dispose(); w.g.dispose(); }"
 ```
 
-Use static lifetime sparingly (global static, function local static) because problems can arise. What happens when the constructor of a global object throws an exception? Typically, the app faults in a way that can be difficult to debug. Construction order is problematic for static lifetime objects, and is not concurrency-safe. Not only is object construction a problem, destruction order can be complex, especially where polymorphism is involved. Even if your object or variable isn’t polymorphic and doesn't have complex construction/destruction ordering, there’s still the issue of thread-safe concurrency. A multithreaded app can’t safely modify the data in static objects without having thread-local storage, resource locks, and other special precautions.
+V následujícím příkladu `w` vlastní prostředek paměti, takže aby bylo možné paměť odstranit, musí mít ve svém destruktoru kód.
+ 
+```cpp
+class widget
+{
+private:
+    int* data;
+public:
+    widget(const int size) { data = new int[size]; } // acquire
+    ~widget() { delete[] data; } // release
+    void do_something() {}
+};
+
+void functionUsingWidget() {
+    widget w(1000000);   // lifetime automatically tied to enclosing scope
+                        // constructs w, including the w.data member
+    w.do_something();
+
+} // automatic destruction and deallocation for w and w.data
+
+```
+
+Od verze C++ 11 existuje lepší způsob, jak napsat předchozí příklad: pomocí inteligentního ukazatele ze standardní knihovny. Inteligentní ukazatel zpracovává přidělování a odstraňování paměti, kterou vlastní. Použití inteligentního ukazatele eliminuje nutnost explicitního destruktoru ve třídě `widget`.
+
+```cpp
+#include <memory>
+class widget
+{
+private:
+    std::unique_ptr<int> data;
+public:
+    widget(const int size) { data = std::make_unique<int>(size); }
+    void do_something() {}
+};
+
+void functionUsingWidget() {
+    widget w(1000000);   // lifetime automatically tied to enclosing scope
+                // constructs w, including the w.data gadget member
+    // ...
+    w.do_something();
+    // ...
+} // automatic destruction and deallocation for w and w.data
+
+```
+
+Pomocí inteligentních ukazatelů pro přidělení paměti můžete eliminovat potenciál nevracení paměti. Tento model funguje pro jiné prostředky, jako jsou popisovače souborů nebo sokety. Můžete spravovat vlastní prostředky podobným způsobem ve svých třídách. Další informace najdete v tématu [inteligentní ukazatele](smart-pointers-modern-cpp.md).
+
+Návrh C++ zajistí, že objekty budou zničeny, když dostanou mimo rozsah. To znamená, že jsou zničeny při ukončení bloků, v opačném pořadí konstrukce. Když je objekt zničen, jeho základy a členy jsou zničeny v určitém pořadí. Objekty deklarované mimo libovolný blok v globálním rozsahu mohou vést k problémům. Může být obtížné ladit, pokud konstruktor globálního objektu vyvolá výjimku.
 
 ## <a name="see-also"></a>Viz také:
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Vítejte zpět naC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

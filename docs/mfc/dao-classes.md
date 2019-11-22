@@ -7,20 +7,20 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: febd20971fd85275bd7ded0d2216fab0e05adbd1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: cdd3fd9a733df73d36441693d049724878219df5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095609"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303398"
 ---
 # <a name="dao-classes"></a>DAO – třídy
 
-Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. 3,6 je finální verze, která je považována za zastaralou.
+Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
 
 Tyto třídy pracují s ostatními třídami aplikačního rozhraní a poskytují snadný přístup k databázím DAO (Data Access Object), které používají stejný databázový stroj jako Microsoft Visual Basic a Microsoft Access. Třídy DAO mají přístup také k široké škále databází, pro které jsou k dispozici ovladače rozhraní ODBC (Open Database Connectivity).
 
-Programy, které používají databáze DAO, budou mít alespoň `CDaoDatabase` objekt `CDaoRecordset` a objekt.
+Programy, které používají databáze DAO, budou mít alespoň objekt `CDaoDatabase` a objekt `CDaoRecordset`.
 
 > [!NOTE]
 >  Vizuální C++ prostředí a průvodci už rozhraní DAO nepodporují (i když třídy DAO jsou zahrnuté a pořád je můžete používat). Microsoft doporučuje používat rozhraní ODBC pro nové projekty knihovny MFC. V údržbě stávajících aplikací byste měli používat jenom rozhraní DAO.
@@ -52,7 +52,7 @@ Podporuje rutiny pro výměnu záznamů pole (DFX) DAO používané databázový
 ## <a name="related-classes"></a>Související třídy
 
 [CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
-Zapouzdřuje popisovač do úložiště pro binární rozsáhlý objekt (BLOB), jako je například rastrový obrázek. `CLongBinary`objekty se používají ke správě rozsáhlých datových objektů uložených v databázových tabulkách.
+Zapouzdřuje popisovač do úložiště pro binární rozsáhlý objekt (BLOB), jako je například rastrový obrázek. objekty `CLongBinary` se používají ke správě rozsáhlých datových objektů uložených v databázových tabulkách.
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
 Obálka pro typ automatizace OLE **, typ aritmetického typu s**pevnou desetinnou čárkou, s 15 číslicemi před desetinnou čárkou a 4 číslicemi.

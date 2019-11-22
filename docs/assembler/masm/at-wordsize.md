@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@WordSize symbol'
 ms.assetid: a4fb3bf1-4f87-4306-ad4d-27d999ce2b3a
-ms.openlocfilehash: b1ce903f4a37707a8563b4f1f0b3e62eaa91a787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 288ccb7e9e72e7f6b692d8ce172b4170fae1ff1a
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185968"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301952"
 ---
-# <a name="wordsize"></a>@WordSize
+# <a name="wordsize"></a>\@WordSize
 
-Dvě pro segment 16 bitů nebo čtyři pro segment 32-bit (číselné odpovídá).
+Dva pro 16bitový segment nebo čtyři pro 32 segment (číslo rovno).
 
 ## <a name="syntax"></a>Syntaxe
 
-> @WordSize
+> **\@WordSize**
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)<br/>
+[Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)

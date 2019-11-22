@@ -1,225 +1,225 @@
 ---
-title: Přehled konvencí ARM ABI
+title: Přehled konvencí ABI pro ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 176aaaa17af1ce358255ca94eaccc7d5217f2a87
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295229"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303194"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Přehled konvencí ARM32 ABI
 
-Binárním rozhraním aplikace (ABI) pro kód zkompilovaný pro Windows na procesorech ARM je založen na standardní EABI ARM. Tento článek popisuje hlavní rozdíly mezi Windows na ARM a standard. Tento dokument popisuje ARM32 ABI. Informace o ARM64 ABI najdete v tématu [ABI ARM64 přehled konvencí](arm64-windows-abi-conventions.md). Další informace o standardní EABI ARM naleznete v tématu [aplikace binární rozhraní ABI () pro architekturu ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (externí odkaz).
+Binární rozhraní aplikace (ABI) pro kód kompilovaný pro Windows na procesorech ARM je založené na standardu ARM EABI. Tento článek popisuje hlavní rozdíly mezi Windows na ARM a standardem. Tento dokument popisuje ARM32 ABI. Informace o ARM64 ABI najdete v tématu [Přehled ARM64ch konvencí ABI](arm64-windows-abi-conventions.md). Další informace o standardu ARM EABI naleznete v tématu [Application Binary Interface (ABI) pro architekturu ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (externí odkaz).
 
 ## <a name="base-requirements"></a>Základní požadavky
 
-Windows na ARM předpokládá, že je spuštěn na architekturu ARMv7 za všech okolností. Podpora plovoucí desetinné čárky ve formuláři VFPv3 D32 nebo novější musí být součástí hardwaru. VFP musí podporovat jednoduchou přesností a dvojité přesnosti s plovoucí desetinnou čárkou v hardwaru. Modul Windows runtime nepodporuje emulaci plovoucí desetinné čárky k povolení spuštění na jiných VFP hardwaru.
+Systém Windows na ARM předpokládá, že je neustále spuštěný v architektuře ARMv7. Podpora plovoucí desetinné čárky ve formátu VFPv3-D32 nebo vyšší musí být přítomna v hardwaru. VFP musí podporovat hardware s jednoduchou přesností a dvojitou přesností s plovoucí desetinnou čárkou. Prostředí Windows Runtime nepodporuje emulaci s plovoucí desetinnou čárkou, aby bylo možné spouštět na VFPm hardwaru.
 
-Přidává rozšířenou podporu rozšíření SIMD (NEON) – jedná se o celé číslo a operací s plovoucí desetinnou čárkou, musí být k dispozici také v hardwaru. Nenabízí žádnou podporu runtime pro emulaci.
+Podpora rozšíření NEON (Advanced SIMD Extensions) – zahrnuje i operace s plovoucí desetinnou čárkou – musí být také přítomny v hardwaru. Není k dispozici žádná podpora pro emulaci za běhu.
 
-Podpora dělení celého čísla (UDIV/SDIV) je důrazně doporučujeme, ale nevyžaduje. Platformy, které neobsahují podporu dělení celého čísla může mít za následek snížení výkonu vzhledem k tomu, že tyto operace musí být zachycena a případně opravit.
+Podpora dělení celočíselného čísla (UDIV/SDIV) se důrazně doporučuje, ale není potřeba. Na platformách, které chybí podpora celočíselného dělení, může dojít ke snížení výkonu, protože tyto operace musí být zachyceny a případně opraveny.
 
-## <a name="endianness"></a>Ukládání významných bajtů
+## <a name="endianness"></a>Endianitou
 
-Windows na ARM se spustí v režimu little endian. Kompilátor MSVC a prostředí Windows runtime očekávat, že data ve formátu little endian za všech okolností. I když sadu instrukcí SETEND v ARM instrukce architektury (ISA) umožňuje změnit aktuální endianitou kódu i uživatelského režimu, tím proto se nedoporučují, protože je nebezpečné pro aplikaci. Pokud je výjimka vygenerované v režimu formát big-endian chování nepředvídatelné a může vést selhání aplikace v uživatelském režimu nebo kontroly chyb v režimu jádra.
+Systém Windows na ARM se spustí v režimu Little endian. Kompilátor MSVC i prostředí Windows Runtime očekávají data ve Little endian. I když SETEND instrukcí v architektuře ARM podporuje i kód v uživatelském režimu pro změnu aktuální služby endian, tak se to nedoporučuje, protože je pro aplikaci nebezpečné. Pokud je výjimka vygenerována v režimu big endian, chování je nepředvídatelné a může vést k chybě aplikace v uživatelském režimu nebo v režimu jádra kontroly chyb.
 
 ## <a name="alignment"></a>Zarovnání
 
-Zarovnání, které chyby stále mohou být generovány v některých situacích přistupuje transparentně, i když se povolí Windows ARM hardwarem pro zpracování chybně zarovnaných celé číslo. Postupujte podle těchto pravidel pro zarovnání:
+I když systém Windows umožňuje, aby hardware ARM zpracovával nesprávně zarovnané celočíselné přístupy, chyby zarovnání se v některých situacích pořád generují. Pro zarovnání použijte tato pravidla:
 
-- Poloviční slova velké (16 bitů) a načte slova velké celé číslo (32bitová verze) a úložiště nemusí být zarovnaný. Hardware zpracovává je efektivní a transparentně.
+- Celočíselné načítání a ukládání v polovičním formátu (16 bitů) a velikost slov (v 32) není nutné zarovnávat. Hardware je efektivně zpracovává a transparentně.
 
-- Zarovnání zatížení s plovoucí desetinnou čárkou a úložiště. Jádro nezarovnaných zatížení zpracovává a ukládá transparentně, ale s významné režijní náklady.
+- Načítání a ukládání s plovoucí desetinnou čárkou se musí zarovnávat. Jádro zpracovává nezarovnané zatížení a úložiště transparentně, ale s významnou režií.
 
-- Načtení nebo uložení double (LDRD/STRD) a zarovnání více operací (LDM/STM). Jádro zpracovává většina z nich transparentně, ale s významné režijní náklady.
+- Musí být zarovnaná operace Load nebo Store Double (LDRD/STRD) a vícenásobné operace (LDM/STM). Jádro zpracovává většinu těchto prostředků transparentně, ale s významnou režií.
 
-- Všechny přístupy do paměti bez vyrovnávací paměti musí být zarovnány i pro přístup k celé číslo. Nezarovnané přístupy způsobit chybu zarovnání.
+- Všechna přístup k neuložené paměti musí být zarovnaná, i pro přístup typu Integer. Nezarovnaný přístup způsobí chybu zarovnání.
 
 ## <a name="instruction-set"></a>Sada instrukcí
 
-Instrukce pro Windows na ARM je výhradně omezená na Thumb-2. Veškerý kód proveden na této platformě se očekává spuštění a zůstanou v režimu Thumb po celou dobu. Pokus přepnout do starší verze ARM instrukční sada může být úspěšné, ale pokud ano, všechny výjimky nebo přerušení, ke kterým dochází může vést chybě aplikace v uživatelském režimu nebo kontroly chyb v režimu jádra.
+Sada instrukcí pro Windows v ARM je výhradně omezená na palec – 2. Očekává se, že veškerý kód spuštěný na této platformě se spustí a zůstane v režimu povýšení. Pokus o přepnutí do starší sady instrukcí ARM může být úspěšný, ale v případě, že dojde k jakýmkoli výjimkám nebo přerušením, může dojít k selhání aplikace v uživatelském režimu nebo k chybám v režimu jádra.
 
-Vedlejším účinkem tento požadavek je, že všechny ukazatele kód musí mít s nízkou nastaven bit. Je to tak, aby při jsou načtena a rozvětvených prostřednictvím BLX nebo MX, procesor zůstanou v režimu Thumb a ne pokoušejí nepozorovaně spustit cílový kód jako 32bitový ARM pokyny.
+Vedlejším účinkem tohoto požadavku je, že všechny ukazatele kódu musí mít nízkou bitovou sadu. To znamená, že když jsou načteny a větvení přes BLX nebo BX, procesor zůstane v režimu povýšení a nepokusí se spustit cílový kód jako instrukce pro procesory ARM 32-bit.
 
 ### <a name="it-instructions"></a>Pokyny pro IT
 
-Použití IT instrukcí v kód Thumb-2 je zakázáno, s výjimkou v takové situaci:
+Použití instrukcí v oddělení IT v kódu pro palec – 2 není povoleno s výjimkou těchto specifických případů:
 
-- Instrukce IT jde použít jenom k úpravě jeden cíl instrukcí.
+- Instrukce IT se dá použít jenom k úpravě jedné cílové instrukce.
 
-- Instrukce cíl musí být instrukce 16 bitů.
+- Instrukce target musí být 16bitová instrukce.
 
-- Instrukce cíl musí být jedna z následujících:
+- Instrukce target musí být jedna z následujících:
 
    |16bitové operační kódy|Třída|Omezení|
    |---------------------|-----------|------------------|
-   |MOV MVN|Přesunout|Správce prostředků! = počítače, VP! = PC|
-   |LDR, LDR[S]B, LDR[S]H|Načtení z paměti|Ale ne literál formulářů omezeně distribuovatelných oprav|
-   |STR STRB, STRH|Store do paměti.||
-   |ADD, ADC, RSB, SBC, SUB|Můžete přidávat nebo odebírat|Ale ne ADD/SUB SP, SP, imm7 formulářů<br /><br /> Správce prostředků! = PC, relativní rozlišující! = PC, Rdm! = PC|
-   |CMP, CMN|Porovnat|Správce prostředků! = PC, Rn! = PC|
-   |MUL|Násobení||
+   |MOV, MVN|Přesunutí|RM! = počítač, RD! = počítač|
+   |LDR, LDR[S]B, LDR[S]H|Načíst z paměti|Ale nejedná se o literálové formuláře LDR.|
+   |STR, PARAMETRU STRB, STRH|Ukládat do paměti||
+   |ADD, ADC, RSB, MEZIPAMĚŤ SOFTWAROVÉ SBĚRNICE, SUB|Přidat nebo odečíst|Ale ne doplňky/SUB SP, SP, imm7 Forms<br /><br /> RM! = PC, RDN! = PC, RDM! = PC|
+   |CMP, CMN|Porovnán|RM! = PC, RN! = počítač|
+   |MUL|Hodnotou||
    |ASR, LSL, LSR, ROR|Bitový posun||
-   |A BIC EOR, ORR TST|Aritmetický bitový||
-   |BX|Větev se má zaregistrovat|Správce prostředků! = PC|
+   |A, BIC, EOR, ORR, TST|Bitové aritmetické operace||
+   |BX|Větev k registraci|RM! = počítač|
 
-I když aktuální ARMv7 procesorů nelze sestavy pomocí formulářů zakázaného instrukce budoucí generace se očekává. Pokud jsou zjištěny tyto formuláře, žádný program, který používá je může skončit s výjimkou nedefinované instrukce.
+I když aktuální procesory ARMv7 nemůžou hlásit použití nepovolených formulářů instrukcí, očekává se budoucí generace. Pokud jsou tyto formuláře zjištěny, mohou být všechny programy, které je používají, ukončeny nedefinovanou výjimkou instrukcí.
 
-### <a name="sdivudiv-instructions"></a>SDIV/UDIV pokyny
+### <a name="sdivudiv-instructions"></a>Pokyny pro SDIV/UDIV
 
-Použití celé číslo rozdělit pokyny SDIV a UDIV je plně podporované. zahrnuje to i na platformách bez nativního hardwaru jejich zpracování. Režijní náklady za SDIV nebo UDIV dělení na mozkové A9 procesoru je přibližně 80 cykly, kromě celkový čas dělení 20 až 250 cyklů, v závislosti na vstupy.
+Použití instrukcí celočíselného dělení SDIV a UDIV je plně podporované, i na platformách bez nativního hardwaru pro jejich zpracování. Režie na SDIV nebo UDIV rozdělení na procesor Cortex je přibližně 80 cyklů, a to v závislosti na tom, 20-250 Jaké jsou vstupy.
 
 ## <a name="integer-registers"></a>Celočíselné registry
 
-Procesor ARM podporuje 16 registrů pro celé číslo:
+Procesor ARM podporuje 16 celých celočíselných registrů:
 
-|Registr|Volatile?|Role|
+|Registr|Permanentní?|Role|
 |--------------|---------------|----------|
-|r0|Volatile|Parametr, výsledek pomocné registrace 1|
-|r1|Volatile|Parametr, výsledek pomocné registru 2|
-|r2|Volatile|Parametr pomocné register 3|
-|r3|Volatile|Parametr pomocné register 4|
-|R4|Non-volatile||
-|r5|Non-volatile||
-|r6|Non-volatile||
-|r7|Non-volatile||
-|R8|Non-volatile||
-|r9|Non-volatile||
-|r10|Non-volatile||
-|r11|Non-volatile|Ukazatel na rámec|
-|r12|Volatile|Volání procedury uvnitř pomocné registru|
-|r13 (SP)|Non-volatile|Ukazatel zásobníku|
-|r14 (LR)|Non-volatile|Registr odkaz|
-|r15 (PC)|Non-volatile|Čítač programu|
+|r0|Permanentní|Parametr, Result, Scrat registr 1|
+|r1|Permanentní|Parametr, Result, Scrat zápis 2|
+|r2|Permanentní|Parametr, Scrat registr 3|
+|r3|Permanentní|Parametr, Scrat registr 4|
+|R4|Bez volatile||
+|r5|Bez volatile||
+|r6|Bez volatile||
+|r7|Bez volatile||
+|R8|Bez volatile||
+|r9|Bez volatile||
+|r10|Bez volatile||
+|r11|Bez volatile|Ukazatel na rámec|
+|r12|Permanentní|V rámci procedur – vytočit nový zápis|
+|r13 (SP)|Bez volatile|Ukazatel zásobníku|
+|r14 (LR)|Bez volatile|Registrovat odkaz|
+|r15 (PC)|Bez volatile|Čítač programu|
 
-Podrobnosti o tom, jak použít parametr a vrátí hodnotu registrů, najdete v části předávání parametru v tomto článku.
+Podrobnosti o tom, jak používat parametr a návratové hodnoty, naleznete v části předávání parametrů v tomto článku.
 
-Windows používá r11 pro rychlé procházení zásobníku. Další informace najdete v části procházení zásobníku. Kvůli tomuto požadavku r11 musí odkazovat na nejvyšší článek v řetězci za všech okolností. Nepoužívejte r11 pro obecné účely – kódu nebude generovat správný procházení zásobníku během analýzy.
+Systém Windows používá R11 pro rychlé procházení rámce zásobníku. Další informace najdete v části procházení zásobníku. Z důvodu tohoto požadavku musí R11 ukazovat na nejvyšší odkaz v řetězu. Nepoužívejte R11 pro obecné účely – váš kód při analýze negeneruje správné procházení zásobníku.
 
-## <a name="vfp-registers"></a>Zaregistruje VFP
+## <a name="vfp-registers"></a>Registry VFP
 
-Windows podporuje jenom varianty ARM, které mají VFPv3 D32 koprocesoru podporují. To znamená, že registrů plovoucí desetinné čárky jsou vždy k dispozici a lze dovolávat pro předávání parametrů a kompletní sada 32 registrů je k dispozici pro použití. Zaregistruje VFP a jejich využití jsou shrnuté v této tabulce:
+Windows podporuje jenom varianty ARM, které mají podporu koprocesorů VFPv3-D32. To znamená, že registry s plovoucí desetinnou čárkou jsou vždy přítomny a lze je použít pro předávání parametrů a že je k dispozici úplná sada 32 registrů pro použití. Registry VFP a jejich využití jsou shrnuté v této tabulce:
 
-|Určené|Double – prvky|Quads|Volatile?|Role|
+|Jednoduchou|Double – prvky|Quad|Permanentní?|Role|
 |-------------|-------------|-----------|---------------|----------|
-|s0-s3|d0-d1|q0|Volatile|Pomocné parametry, výsledek, registr|
-|s4-s7|d2-d3|q1|Volatile|Pomocné parametry registrace|
-|s8-s11|d4-d5|q2|Volatile|Pomocné parametry registrace|
-|s12-s15|d6-d7|q3|Volatile|Pomocné parametry registrace|
-|s16-s19|d8-d9|q4|Non-volatile||
-|s20-s23|d10-d11|q5|Non-volatile||
-|s24-s27|d12-d13|q6|Non-volatile||
-|s28-s31|d14-d15|q7|Non-volatile||
-||d16-d31|q8-q15|Volatile||
+|s0-s3|d0-d1|q0|Permanentní|Parametry, výsledek, Scrat zápis|
+|s4-s7|d2-d3|q1|Permanentní|Parametry, nový registrační registr|
+|s8-s11|d4-d5|q2|Permanentní|Parametry, nový registrační registr|
+|s12-s15|d6-d7|q3|Permanentní|Parametry, nový registrační registr|
+|s16-s19|d8-d9|q4|Bez volatile||
+|s20-s23|d10-d11|q5|Bez volatile||
+|s24-s27|d12-d13|q6|Bez volatile||
+|s28-s31|d14-d15|q7|Bez volatile||
+||d16-d31|q8-q15|Permanentní||
 
-Následující tabulka ukazuje stav s plovoucí desetinnou čárkou a bitová pole (FPSCR) se řídicí registr:
+Další tabulka ilustruje stav a kontrolní registr s plovoucí desetinnou čárkou (FPSCR) bitová pole:
 
-|Bity|Význam|Volatile?|Role|
+|Bity|Význam|Permanentní?|Role|
 |----------|-------------|---------------|----------|
-|31-28|NZCV|Volatile|Příznaky stavu|
-|27|QC|Volatile|Kumulativní sytost|
-|26|AHP|Non-volatile|Alternativní ovládací prvek poloviční přesností|
-|25|ROZLIŠUJÍCÍ NÁZEV|Non-volatile|Výchozí NaN režimu ovládací prvek|
-|24|FZ|Non-volatile|Vyprázdnění nula režim ovládacího prvku|
-|23-22|RMode|Non-volatile|Ovládací prvek režimu zaokrouhlení|
-|21-20|STRIDE|Non-volatile|Vector – Stride, musí být vždy 0.|
-|18-16|Délka|Non-volatile|Vector – délku, musí být vždy 0.|
-|15, 12-8|Integrované vývojové prostředí, IXE, atd.|Non-volatile|Výjimku zachytit povolit bits, musí být vždy 0.|
-|7, 4-0|Dokument společnosti IDC, IXC, atd.|Volatile|Příznaky kumulativní výjimky|
+|31-28|NZCV|Permanentní|Příznaky stavu|
+|27|QC|Permanentní|Kumulativní sytost|
+|26|AHP|Bez volatile|Alternativní ovládací prvek s poloviční přesností|
+|25|ROZLIŠUJÍCÍ NÁZEV|Bez volatile|Výchozí ovládací prvek režimu NaN|
+|24|FZ|Bez volatile|Řízení režimu vyprázdnění na nulu|
+|23-22|RMode|Bez volatile|Ovládací prvek režimu zaokrouhlování|
+|21-20|Mezer|Bez volatile|Vektorová rozteč, musí vždy být 0.|
+|18-16|Funkce|Bez volatile|Délka vektoru, musí být vždy 0.|
+|15, 12-8|IDE, IXE atd.|Bez volatile|Depeše výjimky povolit bity, musí být vždy 0|
+|7, 4-0|IDC, IXC atd.|Permanentní|Příznaky kumulativní výjimky|
 
 ## <a name="floating-point-exceptions"></a>Výjimky s plovoucí desetinnou čárkou
 
-Většina ARM hardware nepodporuje výjimky s plovoucí desetinnou čárkou IEEE. Na procesoru varianty, které mají hardwarové výjimky s plovoucí desetinnou čárkou jádra Windows tiše zachytí výjimky a implicitně zakazuje je do registru FPSCR. Tím se zajistí normalizované chování napříč varianty procesoru. Kód vyvinutý na platformě, která nemá podporu výjimky v opačném případě mohli dostávat neočekávané výjimky, při spuštění na platformě, která se má výjimka podporují.
+Většina hardwaru ARM nepodporuje výjimky s plovoucí desetinnou čárkou standardu IEEE. V případě variant procesoru, které mají hardwarové výjimky s plovoucí desetinnou čárkou, jádro systému Windows tiše tyto výjimky zachytí a implicitně je zakáže v registru FPSCR. Tím se zajistí normalizované chování napříč variantami procesoru. V opačném případě kód vyvinutý na platformě, která nemá podporu výjimek, může obdržet neočekávané výjimky, když běží na platformě, která má podporu výjimek.
 
 ## <a name="parameter-passing"></a>Předávání parametrů
 
-Pro jiné variadické funkce Windows na ARM ABI následuje ARM pravidla pro předávání parametrů – to zahrnuje rozšíření VFP a Advanced SIMD. Postupujte podle těchto pravidel [postup volání Standard pro architekturu ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)sloučeného pomocí rozšíření VFP. Ve výchozí, první čtyři celočíselné argumenty a až osm s plovoucí desetinnou čárkou nebo vektorové argumenty jsou předány v registrech a další argumenty jsou předány v zásobníku. Argumenty jsou přiřazeny k registry nebo zásobníku pomocí tohoto postupu:
+Pro funkce, které nejsou variadické, Windows na ARM provede pravidla ARM pro předávání parametrů – to zahrnuje VFP a rozšířená rozšíření SIMD. Tato pravidla dodržují [Standard volání procedur pro architekturu ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), konsolidovaná s rozšířeními VFP. Ve výchozím nastavení jsou v registrech předány první čtyři celočíselné argumenty a až osm argumentů s plovoucí desetinnou čárkou nebo vektory a další argumenty jsou předány do zásobníku. Argumenty jsou přiřazeny k registrům nebo zásobníku pomocí tohoto postupu:
 
-### <a name="stage-a-initialization"></a>Fáze A: Inicializace
+### <a name="stage-a-initialization"></a>Fáze A: inicializace
 
-Inicializace probíhá pouze jednou, před zahájením zpracování argumentů:
+Inicializace je provedena právě jednou, před zahájením zpracování argumentu:
 
-1. Na další základní registrace číslo (NCRN) je nastavena na r0.
+1. Další základní číslo registru (NCRN) je nastavené na R0.
 
-1. VFP registry jsou označeny jako volné.
+1. Registry VFP jsou označeny jako nepřidělené.
 
-1. Na další skládaný Argument adresu (NSAA) je nastavena na aktuální SP.
+1. Následující adresa skládaného argumentu (NSAA) je nastavená na aktuální SP.
 
-1. Pokud je volána funkce, která vrátí výsledek v paměti, adresu pro výsledek se umístí do r0 a je nastavena NCRN R1.
+1. Pokud je zavolána funkce, která vrátí výsledek v paměti, pak je adresa pro výsledek umístěna v r0 a NCRN je nastaven na R1.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fáze B: Předem odsazení a rozšíření argumentů
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fáze B: předběžné odsazení a rozšíření argumentů
 
-Pro každý argument v seznamu je použito první vyhovující pravidlo z následujícího seznamu:
+Pro každý argument v seznamu se použije první pravidlo pro porovnání z následujícího seznamu:
 
-1. Pokud argument je složený typ, jehož velikost nelze určit staticky tak, že volající a volaného, tento argument je zkopírována do paměti a nahrazuje ukazatel na kopii.
+1. Pokud je argumentem složený typ, jehož velikost nemůže být staticky určena volajícím i volaným, je argument zkopírován do paměti a nahrazen ukazatelem na kopii.
 
-1. Pokud je argumentem bajtů nebo částečně slova 16 bitů, je nulou nebo rozšířena znaménkem na 32bitové úplné slovo a považován za argument na 4 bajty.
+1. Pokud je argumentem bajt nebo 16bitové poloviční slovo, pak se jedná o nulové rozšíření nebo znaménko na 32 celé slovo, které se považuje za argument o velikosti 4 bajty.
 
-1. Pokud argument je složený typ, jeho velikost se zaokrouhluje na nejbližší násobek čísla 4.
+1. Pokud je argumentem složený typ, jeho velikost se zaokrouhluje na nejbližší násobek 4.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fáze C: Přiřazení argumentů, které mají registry a zásobníku
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fáze C: přiřazení argumentů k registrům a zásobníku
 
-Pro každý argument v seznamu následující pravidla se použijí pak dokud byl přidělen argument:
+U každého argumentu v seznamu jsou následující pravidla aplikována postupně, dokud není přidělen argument:
 
-1. Pokud je argument typu VFP a dostatek po sobě jdoucích nepřidělené registrů VFP příslušného typu, argument je přidělen nejnižší číslované pořadí těchto registrů.
+1. Pokud je argumentem typ VFP a existuje dostatek po sobě jdoucích VFP registrů příslušného typu, pak je argument přidělen na nejnižší počet sekvencí takových registrů.
 
-1. Pokud je argumentem Typ VFP, všechny zbývající volné registry jsou označeny jako nedostupné. NSAA se upraví nahoru, dokud je správně zarovnán pro typ argumentu a argument je zkopírován do zásobníku volání na upravené NSAA. NSAA je poté zvýšen o velikost argumentu.
+1. Pokud je argumentem typ VFP, všechny zbývající nepřidělené Registry jsou označeny jako nedostupné. NSAA se upraví nahoru, dokud není správně zarovnán pro typ argumentu a argument je zkopírován do zásobníku v upraveném NSAA. NSAA se pak zvýší o velikost argumentu.
 
-1. Pokud argument vyžaduje 8bajtový zarovnání, NCRN se zaokrouhluje nahoru na nejbližší číslo sudé registru.
+1. Pokud argument vyžaduje zarovnání 8 bajtů, NCRN se zaokrouhlí až na další číslo, které je sudé.
 
-1. Pokud není více než r4 minus NCRN velikost argumentu ve slovech 32-bit, argument zkopírována do registrů core, počínaje NCRN, s nejméně významných bitů zabírá registrů nižší sudým číslem. NCRN se zvýší počet registrů použít.
+1. Pokud velikost argumentu v 32ových slovech není více než R4 minus NCRN, je argument zkopírován do základních registrů, počínaje NCRN, přičemž nejméně významné bity vybírají Registry s nižším číslem. NCRN se zvyšuje podle počtu využitých registrů.
 
-1. Pokud NCRN je menší než r4 a NSAA rovná SP, argument je rozdělená mezi základní registry a zásobníku. První část argumentu je zkopírována do registrů core, počínaje NCRN, až a včetně r3. Zbývající část argumentu je zkopírován do zásobníku, počínaje NSAA. NCRN je nastavena na r4 a NSAA je zvýšen o velikost argumentu minus částka předány v registrech.
+1. Pokud je NCRN menší než R4 a NSAA je rovno SP, je argument rozdělen mezi základní registry a zásobník. První část argumentu je zkopírována do základních registrů, počínaje NCRN, až do a včetně R3. Zbývající část argumentu je zkopírována do zásobníku počínaje NSAA. NCRN je nastavená na R4 a NSAA se zvyšuje o velikost argumentu minus počet předaných v registrech.
 
-1. Pokud argument vyžaduje 8bajtový zarovnání, NSAA se zaokrouhluje další zarovnané adrese 8 bajtů.
+1. Pokud argument vyžaduje zarovnání 8 bajtů, NSAA se zaokrouhlí na další adresu zarovnaná na 8 bajtech.
 
-1. Argument je zkopírována do paměti NSAA. NSAA je zvýšen o velikost argumentu.
+1. Argument je zkopírován do paměti v NSAA. NSAA se zvyšuje o velikost argumentu.
 
-VFP registrech nejsou použity pro variadické funkce a pravidel C fáze 1 a 2 jsou ignorovány. To znamená, že variadické funkce může začínat volitelné nabízených {r0 – r3} pro předřazení argumentů registru do jakýchkoli dalších argumentů předaná volající funkcí a přejděte k seznamu argumentů celý přímo ze zásobníku.
+Registry VFP se nepoužívají pro funkce variadické a pravidla 1 fáze C a 2 jsou ignorována. To znamená, že funkce variadické může začínat nepovinným nabízeným vložením {r0-R3}, aby se argumenty registru předaly dalším argumentům předaným volajícím a pak měli přístup k celému seznamu argumentů přímo ze zásobníku.
 
-Hodnoty typu Integer se vrátí v r0, případně rozšířit na r1 pro vrácené hodnoty 64-bit. VFP/NEON s plovoucí desetinnou čárkou nebo SIMD typu hodnoty jsou vráceny v s0, d0 nebo q0 podle potřeby.
+Hodnoty celočíselného typu jsou vraceny v r0, volitelně rozšířené na R1 pro hodnoty 64 vracené zpět. Hodnoty VFP/NEON typu s plovoucí desetinnou čárkou nebo SIMD jsou v případě potřeby vráceny v S0, d0 nebo Q0.
 
 ## <a name="stack"></a>Rámec
 
-Zásobník musí zůstat 4bajtové zarovnána po celou dobu a musí být 8 bajtů zarovnána na hranici žádné funkce. To je potřeba k podpoře časté použití propojené operace pro proměnné zásobníku 64-bit. ARM EABI hlásí, že zásobník je 8 bajtů zarovnána na libovolné veřejné rozhraní. Pro zajištění konzistence Windows na ARM ABI bere v úvahu všechny funkce předěl, který má být veřejné rozhraní.
+Zásobník musí zůstat zarovnaný na 4 bajtech a musí být zarovnán na 8 bajtů na hranici funkce. Tato akce je nutná k podpoře častého použití propojených operací s 64 bitovými proměnnými zásobníku. EABI ARM uvádí, že zásobník je 8 bajtů zarovnaný na jakémkoli veřejném rozhraní. V případě konzistence se systém Windows na ARM vytvoří jako veřejné rozhraní a považuje se za hranice funkce.
 
-Funkce, které mají používat ukazatel na rámec – například toto volání funkce `alloca` nebo který ukazatel zásobníku změnit dynamicky – musíte nastavit ukazatel na rámec v r11 v prologu funkce a nechte beze změny až epilogu. Funkce, které nevyžadují ukazatel na rámec musí v prologu provede všechny aktualizace zásobníku a ukazatel zásobníku, dokud epilogu beze změny.
+Funkce, které musí používat ukazatel na rámec, například funkce, které volají `alloca` nebo které dynamicky mění ukazatel zásobníku – musí nastavit ukazatel na rámec v r11 ve funkci prologu a ponechat ho beze změny až do epilogu. Funkce, které nevyžadují ukazatel na rámec, musí provést všechny aktualizace zásobníku v prologu a nechat ukazatel zásobníku beze změny do epilogu.
 
-Funkce, které přidělují 4 KB nebo Další informace o zásobníku musíte zajistit, že je v pořadí dotčená každou stránku před poslední stránky. Tím se zajistí, že žádný kód můžete "leap přes" ochranné stránky, které Windows používá rozšíření zásobníku. Obvykle to se provádí `__chkstk` pomocné rutiny, které se předává celkové přidělení zásobníku v bajtech dělený 4 v r4 a která vrací poslední zásobníku přidělení velikost v bajtech zpět v r4.
+Funkce, které přidělují 4 KB nebo více v zásobníku, musí zajistit, aby se všechny stránky před poslední stránkou dotkly v daném pořadí. Tím se zajistí, že žádný kód nemůže "přesměrovat" na stránku Guard, kterou systém Windows používá k rozšíření zásobníku. Obvykle je to prováděno pomocí pomocné rutiny `__chkstk`, která se předá celkovým přidělením zásobníku v bajtech dělený 4 v R4 a která vrací konečnou velikost přidělení zásobníku v bajtech zpátky v R4.
 
-### <a name="red-zone"></a>Červené zóny
+### <a name="red-zone"></a>Červená zóna
 
-8bajtový oblast bezprostředně pod aktuální ukazatel zásobníku je vyhrazený pro analýzu a dynamické opravy. To umožňuje pečlivě generovaného kódu má být vložen, který uchovává 2 registrů na [sp, #-8] a používá je dočasně libovolného důvodů. Jádra Windows zaručuje, že tyto 8 bajtů nedojde k přepsání dojde-li k výjimce nebo přerušení v uživatelském režimu i režimu jádra.
+Oblast s 8 bajty hned pod aktuálním ukazatelem zásobníku je vyhrazena pro analýzu a dynamické opravy. To umožňuje, aby byl kód vložen pečlivě, což ukládá 2 Registry na [SP, #-8] a dočasně je používá pro libovolný účel. Jádro systému Windows zaručuje, že tyto 8 bajty nebudou přepsány, pokud dojde k výjimce nebo přerušení v uživatelském režimu i v režimu jádra.
 
-### <a name="kernel-stack"></a>Jádra zásobníku
+### <a name="kernel-stack"></a>Zásobník jádra
 
-Výchozím režimu jádra zásobníku ve Windows je tři stránky (12 KB). Dejte pozor, abyste vytvořit funkce, které mají velké zásobníku vyrovnávací paměti v režimu jádra. Přerušení může pocházet pomocí velmi málo rezervou zásobníku a způsobit, že zásobník tísňový kontroly chyb.
+Výchozí zásobník režimu jádra ve Windows je tři stránky (12 KB). Dejte pozor, abyste nevytvářeli funkce s velkými vyrovnávacími paměťmi zásobníku v režimu jádra. K přerušení může docházet s velmi malou rezervou zásobníku a způsobit nenouzové selhání zásobníku.
 
-## <a name="cc-specifics"></a>Specifikace jazyka C/C++
+## <a name="cc-specifics"></a>C/C++ specifické
 
-Výčty jsou typy 32bitové celé číslo, pokud alespoň jednu hodnotu ve výčtu vyžaduje 64-bit double word úložiště. V takovém případě výčtu je povýšen na typ 64bitové celé číslo.
+Výčty jsou 32 celočíselných typů, pokud alespoň jedna hodnota ve výčtu nevyžaduje 64 úložiště dvakrát-Word. V takovém případě je výčet povýšen na celočíselný typ, který je 64.
 
-`wchar_t` je definován jako ekvivalentní `unsigned short`, chcete-li zachovat kompatibilitu s jinými platformami.
+`wchar_t` je nastavené tak, aby byly rovnocenné `unsigned short`, aby se zachovala kompatibilita s jinými platformami.
 
 ## <a name="stack-walking"></a>Procházení zásobníku
 
-Windows kód je zkompilován pomocí ukazatele na rámce povolené ([/Oy (vynechání ukazatele na rámec)](reference/oy-frame-pointer-omission.md)) k povolení procházení zásobníku rychlé. Obecně platí, r11 zaregistrovat odkazuje na odkaz na další v řetězci, který je {r11, lr} pár, který určuje ukazatel na předchozí snímek zásobníku a zpáteční adresu. Doporučujeme, aby váš kód také povolit ukazatele na rámce lepší profilace a trasování.
+Kód Windows je kompilován s povolenými ukazateli snímků ([/Oy (vynechání ukazatele na rámec)](reference/oy-frame-pointer-omission.md)) a umožňuje rychlé procházení zásobníku. Obecně platí, že registr R11 odkazuje na další odkaz v řetězci, což je dvojice {R11, LR}, která určuje ukazatel na předchozí snímek v zásobníku a návratovou adresu. Doporučujeme, aby váš kód také povolil ukazatele rámce pro lepší profilování a trasování.
 
-## <a name="exception-unwinding"></a>Uvolňování výjimek
+## <a name="exception-unwinding"></a>Vrácení výjimky zpět
 
-Během zpracování výjimek uvolnění zásobníku je povoleno pomocí kódy unwind. Kódy unwind je posloupnost bajtů, které jsou uložené v části .xdata spustitelné bitové kopie. Popisují operace kód prologu a epilogu funkce abstraktní způsobem tak, aby efekty prologu funkce může být v rámci přípravy odvíjení rámce zásobníku volajícího vrátit zpět.
+Odvinutí zásobníku během zpracování výjimky je povoleno pomocí unwind kódů. Unwind kódy jsou posloupnosti bajtů uložených v oddílu. xdata spustitelného obrázku. Popisují operaci prologu a kódu epilogu abstraktním způsobem tak, aby se účinky prologu funkce mohly vrátit zpět v přípravě pro vrácení zpět do rámce zásobníku volajícího.
 
-ARM EABI určuje odvíjení model výjimek, který používá parsovat kódy unwind. Tato specifikace však není dostatečná pro uvolnění ve Windows, které musí zpracovat případy, ve kterém procesoru je uprostřed prologu nebo epilogu funkce. Další informace o Windows na ARM data výjimky a uvolnění, naleznete v tématu [zpracování výjimek ARM](arm-exception-handling.md).
+EABI ARM určuje model unwind pro výjimku, který používá unwind kódy. Tato specifikace však není dostačující pro odvíjení v systému Windows, která musí zpracovávat případy, kde procesor je uprostřed prologu nebo epilogu funkce. Další informace o systému Windows na základě dat výjimky ARM a o tom, jak se odvíjí, najdete v tématu [zpracování výjimek v ARM](arm-exception-handling.md).
 
-Doporučujeme, aby dynamicky generovaném kódu najdete pomocí dynamické funkce tabulky zadané ve volání do `RtlAddFunctionTable` a související funkce, tak, aby vygenerovaného kódu mohl podílet na zpracování výjimek.
+Doporučujeme, aby se dynamicky generovaný kód popsal pomocí tabulek dynamických funkcí zadaných v voláních do `RtlAddFunctionTable` a přidružených funkcí, aby se generovaný kód mohl zúčastnit zpracování výjimek.
 
-## <a name="cycle-counter"></a>Čítač cyklu
+## <a name="cycle-counter"></a>Čítač cyklů
 
-Procesory ARM se systémem Windows jsou potřebné k podpoře cyklu čítač, ale pomocí čítače přímo může způsobit problémy. K těmto potížím vyhnout, Windows na ARM používá nedefinovaný operační kód k vyžádání normalizovanou hodnotu čítače cyklu 64-bit. V jazyce C nebo C++, použijte `__rdpmccntr64` přirozené pro generování odpovídající operační kód; ze sestavení, použijte `__rdpmccntr64` instrukce. Čtení čítačů cyklu trvá přibližně 60 cykly na mozkové a A9.
+Procesory ARM s Windows jsou potřebné k podpoře počítadla cyklu, ale použití čítače přímo může způsobovat problémy. Aby se tyto problémy předešly, Windows v ARM používá nedefinovaný operační kód pro vyžádání normalizované hodnoty počítadla 64 bitů. Z C nebo C++použijte vnitřní `__rdpmccntr64` k vygenerování příslušného operačního kódu; ze sestavení použijte instrukci `__rdpmccntr64`. Čtení počítadla cyklu trvá přibližně 60 cyklů v Cortex.
 
-Čítač je čítač true cyklu, nikoli hodin; proto počítání frekvence se liší podle frekvence procesoru. Pokud chcete k měření uplynulý čas, použijte `QueryPerformanceCounter`.
+Čítač je skutečným počítadlem, nikoli hodinami. Proto se frekvence počítání liší od frekvence procesoru. Pokud chcete změřit uplynulý čas, použijte `QueryPerformanceCounter`.
 
 ## <a name="see-also"></a>Viz také:
 

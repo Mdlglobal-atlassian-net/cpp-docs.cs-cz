@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: c1936e51630c78de3e7b9dc8a5c7d141ea01ad4b
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444862"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303196"
 ---
 # <a name="x64-exception-handling"></a>x64 – ošetření výjimek
 
@@ -39,7 +39,7 @@ Struktura informací o unwind datech se používá k zaznamenání vlivů funkce
 |||
 |-|-|
 |UBYTE: 3|Version|
-|UBYTE: 5|Příznaky|
+|UBYTE: 5|příznaky|
 |UBYTE|Velikost prologu|
 |UBYTE|Počet unwind kódů|
 |UBYTE: 4|Registr snímků|
@@ -72,11 +72,11 @@ Struktura UNWIND_INFO musí být zarovnaná na DWORD v paměti. Každé pole zna
 
    V současné době jsou definovány tři příznaky:
 
-   |příznaků|Popis|
+   |Příznak|Popis|
    |-|-|
    |`UNW_FLAG_EHANDLER`| Funkce má obslužnou rutinu výjimky, která by měla být volána při hledání funkcí, které potřebují prošetřit výjimky.|
    |`UNW_FLAG_UHANDLER`| Funkce má obslužnou rutinu ukončení, která by měla být volána při odvíjení výjimky.|
-   |`UNW_FLAG_CHAININFO`| Tato struktura unwind informace není primární pro proceduru. Místo toho Položka zřetězené unwind informace je obsahem předchozí položky RUNTIME_FUNCTION. Informace naleznete v tématu [Zřetězené struktury unwind info](#chained-unwind-info-structures). Pokud je tento příznak nastaven, musí být zaškrtnuty příznaky UNW_FLAG_EHANDLER a UNW_FLAG_UHANDLER. Také v registru rámců a polích alokace pevného zásobníku musí být stejné hodnoty jako v primárních informacích o unwind.|
+   |`UNW_FLAG_CHAININFO`| Tato struktura unwind informace není primární pro proceduru. Místo toho Položka zřetězené unwind informace je obsahem předchozí položky RUNTIME_FUNCTION. Informace naleznete v tématu [Zřetězené struktury unwind info](#chained-unwind-info-structures). Pokud je tento příznak nastaven, musí být vymazány příznaky UNW_FLAG_EHANDLER a UNW_FLAG_UHANDLER. Také v registru rámců a polích alokace pevného zásobníku musí být stejné hodnoty jako v primárních informacích o unwind.|
 
 - **Velikost prologu**
 
@@ -88,11 +88,11 @@ Struktura UNWIND_INFO musí být zarovnaná na DWORD v paměti. Každé pole zna
 
 - **Registr snímků**
 
-   Pokud je hodnota nenulová, funkce použije ukazatel na rámec (FP) a toto pole je číslo nestálého registru, který se používá jako ukazatel na rámec, a to pomocí stejného kódování pro pole informace o operaci v uzlech UNWIND_CODE.
+   Pokud je hodnota nenulová, funkce použije ukazatel na rámec (FP) a toto pole je číslo nestálého registru, které se používá jako ukazatel rámce, a to pomocí stejného kódování pro pole informace o operaci UNWIND_CODEch uzlů.
 
 - **Posunutí registru snímků (zvětšeno)**
 
-   Pokud je pole registru rámce nenulové, toto pole je posun s měřítkem od RSP, který je použit pro registr FP při jeho navázání. Skutečný registr FP je nastaven na RSP + 16 \* tohoto čísla, což umožňuje posuny od 0 do 240. Tento posun umožňuje ukazovat registraci FP do středu přidělení místního zásobníku pro dynamické rámce zásobníku, což umožňuje lepší hustotu kódu prostřednictvím kratších instrukcí. (To znamená, že další pokyny můžou používat 8bitový odsazený posun se znaménkem.)
+   Pokud je pole registru rámce nenulové, toto pole je posun s měřítkem od RSP, který je použit pro registr FP při jeho navázání. Skutečný registr FP je nastaven na RSP + 16 \* tomto čísle, což umožňuje posuny od 0 do 240. Tento posun umožňuje ukazovat registraci FP do středu přidělení místního zásobníku pro dynamické rámce zásobníku, což umožňuje lepší hustotu kódu prostřednictvím kratších instrukcí. (To znamená, že další pokyny můžou používat 8bitový odsazený posun se znaménkem.)
 
 - **Pole unwind kódů**
 
@@ -108,7 +108,7 @@ Struktura UNWIND_INFO musí být zarovnaná na DWORD v paměti. Každé pole zna
 
 - **Zřetězené unwind informace**
 
-   Pokud je nastaven příznak UNW_FLAG_CHAININFO, pak struktura UNWIND_INFO končí třemi UWORDs.  Tyto UWORDs reprezentují RUNTIME_FUNCTION informace pro funkci zřetězeného unwind.
+   Pokud je nastaven příznak UNW_FLAG_CHAININFO, pak UNWIND_INFO struktura končí třemi UWORDsy.  Tyto UWORDs reprezentují RUNTIME_FUNCTION informace pro funkci zřetězeného unwind.
 
 ### <a name="struct-unwind_code"></a>struct UNWIND_CODE
 
@@ -128,17 +128,17 @@ Posun (od začátku prologu) konce instrukce, která provádí tuto operaci, plu
 
 #### <a name="unwind-operation-code"></a>Kód operace unwind
 
-Poznámka: některé provozní kódy vyžadují posun bez znaménka k hodnotě v rámci místního zásobníku zásobníku. Tento posun je od začátku, tedy od nejnižší adresy pevného přidělení zásobníku. Pokud je pole registru rámce v UNWIND_INFO nula, posun je od RSP. Pokud je pole registru rámce nenulové, je tento posun z místa, kde byl nalezen RSP, když byl vytvořen registr FP. Je rovna registru FP minus offset registru FP (16 \* posun snímku s měřítkem v UNWIND_INFO). Pokud je použit registr FP, pak jakýkoliv unwind kód, který přebírá posun, musí být použit pouze poté, co je v prologu vytvořen registr FP.
+Poznámka: některé provozní kódy vyžadují posun bez znaménka k hodnotě v rámci místního zásobníku zásobníku. Tento posun je od začátku, tedy od nejnižší adresy pevného přidělení zásobníku. Pokud je pole registru rámce v UNWIND_INFO nula, posun je od RSP. Pokud je pole registru rámce nenulové, je tento posun z místa, kde byl nalezen RSP, když byl vytvořen registr FP. Je rovna registru FP minus posunutí registru FP (16 \* posun snímku s měřítkem v UNWIND_INFO). Pokud je použit registr FP, pak jakýkoliv unwind kód, který přebírá posun, musí být použit pouze poté, co je v prologu vytvořen registr FP.
 
-Pro všechny operační kódy s výjimkou `UWOP_SAVE_XMM128` a `UWOP_SAVE_XMM128_FAR` je posun vždy násobkem 8, protože všechny hodnoty zásobníku jsou uloženy na hranici 8 bajtů (samotný zásobník je vždy zarovnán na 16 bajtů). U kódů operací, které mají krátký posun (méně než 512K), má konečný USHORT v uzlech pro tento kód posun dělený číslem 8. U kódů operací, které mají dlouhý posun (512K < = offset < 4GB), si poslední dva uzly USHORT pro tento kód podrží posun (ve formátu Little Endian).
+Pro všechny operační kódy s výjimkou `UWOP_SAVE_XMM128` a `UWOP_SAVE_XMM128_FAR`posun je vždy násobkem 8, protože všechny hodnoty zásobníku jsou uloženy na hranici 8 bajtů (samotný zásobník je vždy zarovnán na 16 bajtů). U kódů operací, které mají krátký posun (méně než 512K), má konečný USHORT v uzlech pro tento kód posun dělený číslem 8. U kódů operací, které mají dlouhý posun (512K < = offset < 4GB), si poslední dva uzly USHORT pro tento kód podrží posun (ve formátu Little Endian).
 
-Pro operační kódy `UWOP_SAVE_XMM128` a `UWOP_SAVE_XMM128_FAR` je posun vždy násobek 16, protože všechny 128 operace XMM se musí nacházet v paměti zarovnané na 16 bajtů. Proto je faktor škálování 16 použit pro `UWOP_SAVE_XMM128`, což povoluje posuny menší než 1 milion.
+Pro operační kódy `UWOP_SAVE_XMM128` a `UWOP_SAVE_XMM128_FAR`je posun vždy násobek 16, protože všechny 128 operace XMM se musí nacházet v paměti zarovnané na 16 bajtů. Proto se pro `UWOP_SAVE_XMM128`používá faktor škálování 16, což povoluje posuny menší než 1 milion.
 
 Kód operace unwind je jednou z těchto hodnot:
 
 - `UWOP_PUSH_NONVOL` (0) 1 uzel
 
-  Vyhrajte nestálý celočíselný registr, čímž se sníží hodnota RSP o 8. Informace o operaci je číslo registru. Z důvodu omezení epilogů musí být nenávratové kódy `UWOP_PUSH_NONVOL` nejprve uvedeny v prologu a odpovídajícím způsobem, nakonec v poli unwind kódu. Toto relativní řazení platí pro všechny ostatní kódy unwind s výjimkou `UWOP_PUSH_MACHFRAME`.
+  Vyhrajte nestálý celočíselný registr, čímž se sníží hodnota RSP o 8. Informace o operaci je číslo registru. Z důvodu omezení epilogů musí `UWOP_PUSH_NONVOL` unwind kódy nejprve objevit v prologu a odpovídajícím způsobem, nakonec v poli unwind kódu. Toto relativní řazení se vztahuje na všechny ostatní unwind kódy s výjimkou `UWOP_PUSH_MACHFRAME`.
 
 - `UWOP_ALLOC_LARGE` (1) 2 nebo 3 uzly
 
@@ -158,7 +158,7 @@ Kód operace unwind je jednou z těchto hodnot:
 
 - `UWOP_SET_FPREG` (3) 1 uzel
 
-  Vytvořte registr ukazatele na rámec nastavením registru na určitý posun aktuálního RSP. Posun je roven poli posunutí registru rámce (škálované) v UNWIND_INFO \* 16, což umožňuje posuny od 0 do 240. Použití posunu umožňuje vytvořit ukazatel na rámec, který odkazuje na střed pevného přidělení zásobníku, což přispívá ke hustotě kódu tím, že umožňuje přístup k používání krátkých forem instrukcí. Pole informace o operaci je rezervované a nemělo by se používat.
+  Vytvořte registr ukazatele na rámec nastavením registru na určitý posun aktuálního RSP. Posun je roven poli posunutí registru snímků (škálované) v UNWIND_INFO \* 16, což umožňuje posuny od 0 do 240. Použití posunu umožňuje vytvořit ukazatel na rámec, který odkazuje na střed pevného přidělení zásobníku, což přispívá ke hustotě kódu tím, že umožňuje přístup k používání krátkých forem instrukcí. Pole informace o operaci je rezervované a nemělo by se používat.
 
 - `UWOP_SAVE_NONVOL` (4) 2 uzly
 
@@ -182,7 +182,7 @@ Kód operace unwind je jednou z těchto hodnot:
 
   |||
   |-|-|
-  |RSP + 32|SS|
+  |RSP+32|SS|
   |RSP + 24|Starý RSP|
   |RSP + 16|EFLAGS|
   |RSP + 8|CS|
@@ -193,13 +193,13 @@ Kód operace unwind je jednou z těchto hodnot:
   |||
   |-|-|
   |RSP + 40|SS|
-  |RSP + 32|Starý RSP|
+  |RSP+32|Starý RSP|
   |RSP + 24|EFLAGS|
   |RSP + 16|CS|
   |RSP + 8|Vložil|
   |RSP|Kód chyby|
 
-  Tento unwind kód se vždy zobrazí v zástupném prologu, který není nikdy proveden, ale zobrazí se před skutečným vstupním bodem rutiny přerušení a existuje pouze místo pro simulaci vložení rámce počítače. `UWOP_PUSH_MACHFRAME` zaznamenává tuto simulaci, která indikuje, že počítač tuto operaci provedl.
+  Tento unwind kód se vždy zobrazí v zástupném prologu, který není nikdy proveden, ale zobrazí se před skutečným vstupním bodem rutiny přerušení a existuje pouze místo pro simulaci vložení rámce počítače. `UWOP_PUSH_MACHFRAME` zaznamenává tuto simulaci, která indikuje, že počítač provede koncepční operaci této operace:
 
   1. Odblokovaná zpáteční adresa RIP z vrcholu zásobníku do *tempa*
   
@@ -215,7 +215,7 @@ Kód operace unwind je jednou z těchto hodnot:
 
   1. Kód chyby při vložení (Pokud se informace o op rovná 1)
 
-  Simulovaná operace `UWOP_PUSH_MACHFRAME` snižuje hodnotu RSP 40 (op info Equals 0) nebo 48 (op info Equals 1).
+  Simulovaná operace `UWOP_PUSH_MACHFRAME` snižuje hodnoty RSP o 40 (op info Equals 0) nebo 48 (op info Equals 1).
 
 #### <a name="operation-info"></a>Informace o operaci
 
@@ -223,14 +223,14 @@ Význam bitů informací o operaci závisí na kódu operace. Pro kódování re
 
 |||
 |-|-|
-|0,8|RAX|
-|první|RCX|
-|odst|RDX|
+|0|RAX|
+|1|RCX|
+|2|RDX|
 |3|RBX|
 |4|RSP|
 |5|RBP|
 |6|RSI|
-|čl|RDI|
+|7|RDI|
 |8 až 15|R8 do R15|
 
 ### <a name="chained-unwind-info-structures"></a>Zřetězené struktury unwind info
@@ -245,13 +245,13 @@ Zřetězené informace jsou užitečné ve dvou situacích. Nejprve je možné j
 
 Můžete také použít zřetězené informace k seskupení nestálých uložení registru. Kompilátor může zpozdit uložení některých nestálých registrů, dokud není mimo prolog vstupu funkce. Můžete je zaznamenat pomocí primárního unwind informace pro část funkce před seskupeným kódem a pak nastavit zřetězené informace s nenulovou velikostí prologu, kde unwind kódy v zřetězených informacích odrážejí uložení nestálých registrů. V takovém případě jsou unwind kódy všechny instance UWOP_SAVE_NONVOL. Seskupení, které ukládá nestálé Registry pomocí nabízeného oznámení nebo upravuje registraci RSP pomocí dalšího pevného přidělení zásobníku není podporováno.
 
-Položka UNWIND_INFO, která má UNW_FLAG_CHAININFO sadu, může obsahovat položku RUNTIME_FUNCTION, jejíž položka UNWIND_INFO má také UNW_FLAG_CHAININFO sadu, někdy se jim říká *vícenásobné zalamování*. Nakonec zřetězené informace o zřetězení unwind přicházejí na položku UNWIND_INFO, která má nezaškrtnuté UNW_FLAG_CHAININFO. Tato položka je primární UNWIND_INFO položka, která odkazuje na skutečný vstupní bod procedury.
+UNWIND_INFO položka, která má UNW_FLAG_CHAININFO sada, může obsahovat položku RUNTIME_FUNCTION, jejíž UNWIND_INFO položka má také UNW_FLAG_CHAININFO nastaveno, někdy se jim říká *vícenásobné zalamování*. Nakonec zřetězené informace o zřetězení unwind přicházejí do UNWIND_INFO položky, která má UNW_FLAG_CHAININFO vymazané. Tato položka je primární UNWIND_INFO položka, která odkazuje na skutečný vstupní bod procedury.
 
 ## <a name="unwind-procedure"></a>Unwind – procedura
 
 Pole unwind kódu je seřazeno v sestupném pořadí. Pokud dojde k výjimce, kompletní kontext je uložen operačním systémem v záznamu kontextu. Poté je vyvolána logika odeslání výjimky, která opakovaně spouští tyto kroky pro nalezení obslužné rutiny výjimky:
 
-1. Pomocí aktuálního protokolu RIP uloženého v záznamu kontextu vyhledejte položku tabulky RUNTIME_FUNCTION, která popisuje aktuální funkci (nebo část funkce pro zřetězené UNWIND_INFO položky).
+1. Pomocí aktuálního protokolu RIP uloženého v záznamu kontextu vyhledejte položku RUNTIME_FUNCTION tabulky, která popisuje aktuální funkci (nebo část funkce pro zřetězené UNWIND_INFO položky).
 
 1. Pokud není nalezena žádná položka tabulky funkcí, pak je v listu funkce a RSP přímo adresuje návratový ukazatel. Návratový ukazatel na [RSP] je uložen v aktualizovaném kontextu, simulovaný RSP RSP se zvýší o 8 a krok 1 se opakuje.
 
@@ -267,7 +267,7 @@ Pole unwind kódu je seřazeno v sestupném pořadí. Pokud dojde k výjimce, ko
 
 1. Pokud není k dispozici žádná obslužná rutina specifická pro jazyk nebo obslužná rutina vrátí stav "pokračovat v hledání", záznam kontextu musí být vrácen do stavu volajícího. Provede se zpracováním všech prvků pole unwind kódu, které vrátí účinek každého z nich. Krok 1 se pak opakuje.
 
-V případě zřetězení informací o unwind jsou tyto základní kroky stále následovány. Jediným rozdílem je, že při procházení pole unwind kódu pro unwind efektů prologu je po dosažení konce pole propojeno s nadřazenými informacemi o unwind a celé pole unwind kódu, které se nachází vás provedl. Toto propojení pokračuje, dokud se dorazí na unwind informace bez příznaku UNW_CHAINED_INFO a pak se dokončí procházení pole unwind kódu.
+V případě zřetězení informací o unwind jsou tyto základní kroky stále následovány. Jediným rozdílem je, že při procházení pole unwind kódu pro unwind efektů prologu je po dosažení konce pole propojeno s nadřazenými informacemi o unwind a celé pole unwind kódu, které se nachází vás provedl. Toto propojení pokračuje, dokud se dorazí na unwind informace bez příznaku UNW_CHAINED_INFO a potom se dokončí procházení pole unwind kódu.
 
 Nejmenší sada unwind dat je 8 bajtů. To by představovalo funkci, která zaznamenala pouze 128 bajtů v zásobníku nebo méně a případně uložila jeden nestálý registr. Je také velikost Zřetězené struktury unwind informací pro Prolog s nulovou délkou bez jakýchkoli unwind kódů.
 
@@ -305,11 +305,11 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** je hodnota RIP v rámci této funkce. Tato hodnota je buď adresa výjimky, nebo adresa, na které ovládací prvek opustil funkci navázání. Protokol RIP slouží k určení, zda je ovládací prvek v některém chráněném konstruktoru uvnitř této funkce, například blok `__try` pro `__try` @ no__t-2 @ no__t-3 nebo `__try` @ no__t-5 @ no__t-6.
+**ControlPc** je hodnota RIP v rámci této funkce. Tato hodnota je buď adresa výjimky, nebo adresa, na které ovládací prvek opustil funkci navázání. Protokol RIP slouží k určení, zda je ovládací prvek v některém chráněném konstruktoru uvnitř této funkce, například `__try` blok pro `__try`/`__except` nebo `__try`/`__finally`.
 
 **ImageBase** je základní bitová kopie (zátěžová adresa) modulu obsahujícího tuto funkci, která se má přidat k 32m posunům použitým v položce funkce a unwind informacím pro zaznamenávání relativních adres.
 
-**FunctionEntry** poskytuje ukazatel na položku funkce RUNTIME_FUNCTION, která drží funkci a unwind informace o relativních adresách pro tuto funkci.
+**FunctionEntry** poskytuje ukazatel na záznam funkce RUNTIME_FUNCTION, který obsahuje funkci a unwind informace – relativní adresy pro tuto funkci.
 
 **EstablisherFrame** je adresa základu pevné alokace zásobníku pro tuto funkci.
 
@@ -329,13 +329,13 @@ Aby bylo možné zapisovat správné rutiny sestavení, je k dispozici sada pseu
 
 |Pseudo – operace|Popis|
 |-|-|
-|@No__t rámce procedury-0:*ehandler*]|Způsobí, že MASM vygeneruje položku tabulky funkce v. pdata a unwind informace v. xdata pro strukturované zpracování výjimek funkce unwind.  Pokud je přítomen *ehandler* , je tato procedura zadána v. xdata jako obslužná rutina specifická pro jazyk.<br /><br /> Pokud je použit atribut FRAME, musí následovat po. Direktiva ENDPROLOG  Pokud je funkce listová funkce (jak je definována v [typech funkcí](../build/stack-usage.md#function-types)), atribut rámce není zbytečný, stejně jako zbytek těchto pseudo operací.|
+|\[rámce procedury:*ehandler*]|Způsobí, že MASM vygeneruje položku tabulky funkce v. pdata a unwind informace v. xdata pro strukturované zpracování výjimek funkce unwind.  Pokud je přítomen *ehandler* , je tato procedura zadána v. xdata jako obslužná rutina specifická pro jazyk.<br /><br /> Pokud je použit atribut FRAME, musí následovat po. Direktiva ENDPROLOG  Pokud je funkce listová funkce (jak je definována v [typech funkcí](../build/stack-usage.md#function-types)), atribut rámce není zbytečný, stejně jako zbytek těchto pseudo operací.|
 |. PUSHREG *registraci*|Vygeneruje položku UWOP_PUSH_NONVOL unwind kódu pro zadané číslo registru pomocí aktuálního posunu v prologu.<br /><br /> Použijte ji pouze s nestálými Registry celých čísel.  Pro vložení těkavých registrů použijte. ALLOCSTACK 8 místo toho|
 |. SETFRAME *registr*, *posun*|Vyplní pole registru rámce a posune v informacích o unwind pomocí zadaného registru a posunutí. Posun musí být násobkem 16 a menší nebo roven 240. Tato direktiva také generuje položku UWOP_SET_FPREG unwind kódu pro zadaný registr pomocí aktuálního posunu prologu.|
-|. *Velikost* ALLOCSTACK|Generuje UWOP_ALLOC_SMALL nebo UWOP_ALLOC_LARGE s určenou velikostí pro aktuální posun v prologu.<br /><br /> Operandem *velikosti* musí být násobek osmi.|
-|. SAVEREG *registr*, *posun*|Generuje položku UWOP_SAVE_NONVOL nebo UWOP_SAVE_NONVOL_FAR unwind kódu pro zadaný registr a posun pomocí aktuálního posunutí prologu. MASM zvolí nejúčinnější kódování.<br /><br /> hodnota *posunu* musí být kladná a násobkem 8. *posun* je relativní vzhledem ke základu rámce procedury, který je obecně v RSP, nebo pokud používáte ukazatel na rámec, ukazatel na rámec bez měřítka.|
-|. SAVEXMM128 *registr*, *posun*|Generuje položku UWOP_SAVE_XMM128 nebo UWOP_SAVE_XMM128_FAR unwind kódu pro zadaný XMM registr a posun pomocí aktuálního posunu prologu. MASM zvolí nejúčinnější kódování.<br /><br /> hodnota *posunu* musí být kladná a násobkem 16.  *posun* je relativní vzhledem ke základu rámce procedury, který je obecně v RSP, nebo pokud používáte ukazatel na rámec, ukazatel na rámec bez měřítka.|
-|. PUSHFRAME \[*kód*]|Generuje položku UWOP_PUSH_MACHFRAME unwind kódu. Pokud je zadán volitelný *kód* , je položka unwind kódu dána modifikátorem 1. V opačném případě je modifikátor 0.|
+|. *Velikost* ALLOCSTACK|Vygeneruje UWOP_ALLOC_SMALL nebo UWOP_ALLOC_LARGE se zadanou velikostí pro aktuální posun v prologu.<br /><br /> Operandem *velikosti* musí být násobek osmi.|
+|. SAVEREG *registr*, *posun*|Generuje položku UWOP_SAVE_NONVOL nebo UWOP_SAVE_NONVOL_FAR unwind kódu pro zadaný registr a posun pomocí aktuálního posunu prologu. MASM zvolí nejúčinnější kódování.<br /><br /> hodnota *posunu* musí být kladná a násobkem 8. *posun* je relativní vzhledem ke základu rámce procedury, který je obecně v RSP, nebo pokud používáte ukazatel na rámec, ukazatel na rámec bez měřítka.|
+|. SAVEXMM128 *registr*, *posun*|Generuje položku UWOP_SAVE_XMM128 nebo UWOP_SAVE_XMM128_FAR unwind kódu pro zadaný registr XMM a posun pomocí aktuálního posunu prologu. MASM zvolí nejúčinnější kódování.<br /><br /> hodnota *posunu* musí být kladná a násobkem 16.  *posun* je relativní vzhledem ke základu rámce procedury, který je obecně v RSP, nebo pokud používáte ukazatel na rámec, ukazatel na rámec bez měřítka.|
+|. PUSHFRAME \[*kód*]|Generuje položku neUWOP_PUSH_MACHFRAMEho kódu unwind. Pokud je zadán volitelný *kód* , je položka unwind kódu dána modifikátorem 1. V opačném případě je modifikátor 0.|
 |.ENDPROLOG|Signalizuje konec deklarací prologu.  Musí se nacházet v prvních 255 bajtech funkce.|
 
 Zde je ukázkový prolog funkce s řádným využitím většiny operačních kódů:
@@ -361,8 +361,8 @@ sample PROC FRAME
 
 ; you can modify the stack pointer outside of the prologue (similar to alloca)
 ; because we have a frame pointer.
-; if we didn’t have a frame pointer, this would be illegal
-; if we didn’t make this modification,
+; if we didn't have a frame pointer, this would be illegal
+; if we didn't make this modification,
 ; there would be no need for a frame pointer
 
     sub rsp, 060h
@@ -372,14 +372,14 @@ sample PROC FRAME
     mov rax, 0
     mov rax, [rax] ; AV!
 
-; restore the registers that weren’t saved with a push
-; this isn’t part of the official epilog, as described in section 2.5
+; restore the registers that weren't saved with a push
+; this isn't part of the official epilog, as described in section 2.5
 
     movdqa xmm7, [rbp]
     mov rsi, [rbp+018h]
     mov rdi, [rbp-010h]
 
-; Here’s the official epilog
+; Here's the official epilog
 
     lea rsp, [rbp+020h] ; deallocate both fixed and dynamic portions of the frame
     pop rbp
@@ -393,15 +393,15 @@ Další informace o příkladu epilogu naleznete v tématu [epilog Code](prolog-
 
 Aby bylo možné zjednodušit používání [nezpracovaných pseudo operací](#raw-pseudo-operations), je k dispozici sada maker definovaná v ksamd64. Inc, kterou lze použít k vytvoření typických procedur prologues a epilogues.
 
-|Podokně|Popis|
+|– Makro|Popis|
 |-|-|
-|alloc_stack (n)|Přidělí rámec zásobníku n bajtů (pomocí `sub rsp, n`) a vygeneruje příslušné informace unwind (. allocstack n).|
-|save_reg *reg*, *Loc*|Uloží do zásobníku nestálý registr *reg* v zásobníku na posunutí RSP *Loc*a vygeneruje příslušné informace o unwind. (. Savereg reg; Loc)|
+|alloc_stack(n)|Přidělí rámec zásobníku n bajtů (pomocí `sub rsp, n`) a vygeneruje příslušné informace unwind (. allocstack n).|
+|save_reg *reg*, *loc*|Uloží do zásobníku nestálý registr *reg* v zásobníku na posunutí RSP *Loc*a vygeneruje příslušné informace o unwind. (. Savereg reg; Loc)|
 |push_reg *reg*|Vloží do zásobníku nestálý registr *reg* a vygeneruje příslušné informace o unwind. (. pushreg reg)|
 |rex_push_reg *reg*|Uloží do zásobníku nestálý registr pomocí dvou bajtů push a vygeneruje příslušné informace unwind (. pushreg reg).  Toto makro použijte v případě, že je nabízena první instrukcí ve funkci, aby se zajistilo, že je funkce Hot-patchovaná.|
-|save_xmm128 *reg*, *Loc*|Uloží do zásobníku nestálou *registraci registru XMM na* posunutí RSP *Loc*a vygeneruje příslušné informace unwind (. savexmm128 reg, Loc).|
-|set_frame *reg*, *offset*|Nastaví Registry registru *reg* na hodnotu RSP + *offset* (pomocí `mov` nebo `lea`) a vygeneruje příslušné informace unwind (. set_frame reg, offset).|
-|push_eflags|Vloží eflags s instrukcí `pushfq` a vygeneruje příslušné informace unwind (. alloc_stack 8).|
+|save_xmm128 *reg*; *Loc*|Uloží do zásobníku nestálou *registraci registru XMM na* posunutí RSP *Loc*a vygeneruje příslušné informace unwind (. savexmm128 reg, Loc).|
+|set_frame *reg*, *offset*|Nastaví Registry registru *reg* na hodnotu RSP + *offset* (pomocí `mov`nebo `lea`) a emituje příslušné informace unwind (. set_frame reg, offset).|
+|push_eflags|Vloží eflags s instrukcí `pushfq` a vygeneruje příslušné informace o unwind (. alloc_stack 8).|
 
 Tady je ukázkový prolog funkce se správným využitím maker:
 
@@ -423,7 +423,7 @@ sample2 PROC FRAME
     mov rsi, sampleFrame.SavedRsi[rsp]
     mov rdi, sampleFrame.SavedRdi[rsp]
 
-; Here’s the official epilog
+; Here's the official epilog
 
     add rsp, (sizeof sampleFrame)
     ret

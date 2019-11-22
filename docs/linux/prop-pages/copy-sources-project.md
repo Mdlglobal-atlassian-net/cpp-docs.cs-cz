@@ -2,12 +2,12 @@
 title: Kopírovat zdrojové vlastnosti projektu (Linux C++)
 ms.date: 10/16/2019
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-ms.openlocfilehash: ceaa1240f08b83ebc83bd7fdc25a3215467eb3f1
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: bc99814e825cda091b6a0b00256ca2d8269ecdd3
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444942"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305396"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Kopírovat zdrojové vlastnosti projektu (Linux C++)
 
@@ -27,13 +27,13 @@ Zdroje ke zkopírování | Určuje zdroje, které se zkopírují do vzdáleného
 Kopírovat zdroje | Určuje, jestli se mají kopírovat zdroje do vzdáleného systému.
 Další zdroje ke zkopírování | Určuje další zdroje ke zkopírování do vzdáleného systému. Volitelně lze seznam zadat jako místní pro páry vzdáleného mapování pomocí syntaxe, jako je tato: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kde lze místní soubor zkopírovat do zadaného vzdáleného umístění ve vzdáleném systému.
 
-@SourcesToCopyRemotely a @DataFilesToCopyRemotely odkazují na skupiny položek v souboru projektu. Chcete-li upravit, které zdroje nebo datové soubory se zkopírují vzdáleně, upravte soubor *vcxproj* takto:
+@SourcesToCopyRemotely a @DataFilesToCopyRemotely v souboru projektu odkazují na skupiny položek. Chcete-li upravit, které zdroje nebo datové soubory se zkopírují vzdáleně, upravte soubor *vcxproj* takto:
 
 ```xml
 <ItemGroup>
-   <MyItems Include=“foo.txt” />
-   <MyItems Include=“bar.txt” />
-   <DataFilesToCopyRemotely Include=”@(MyItems)” />
+   <MyItems Include="foo.txt" />
+   <MyItems Include="bar.txt" />
+   <DataFilesToCopyRemotely Include="@(MyItems)" />
 </ItemGroup>
 ```
 

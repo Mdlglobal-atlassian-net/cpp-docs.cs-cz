@@ -7,18 +7,16 @@ helpviewer_keywords:
 - CDaoErrorInfo structure [MFC]
 - DAO (Data Access Objects), Errors collection
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
-ms.openlocfilehash: a7b273bd2aa6b428bf795c1842455b8bfe187cc8
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 8d731c8e8bea1adc850ab3c00c7688b9f8c9b819
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096140"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304235"
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo – struktura
 
-`CDaoErrorInfo` Struktura obsahuje informace o objektu Error definovaném pro objekty DAO (Data Access Objects).
-Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
-
+Struktura `CDaoErrorInfo` obsahuje informace o objektu Error definovaném pro objekty DAO (Data Access Object). Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,11 +50,11 @@ ID kontextu pro téma v souboru nápovědy systému Microsoft Windows. Podrobnos
 
 ## <a name="remarks"></a>Poznámky
 
-Knihovna MFC neprovádí zapouzdření objektů chyb DAO ve třídě. Místo toho třída [CDaoException](../../mfc/reference/cdaoexception-class.md) poskytuje rozhraní pro přístup ke kolekci chyb obsaženým v objektu DAO `DBEngine` , objekt, který obsahuje také všechny pracovní prostory. Když operace knihovny MFC rozhraní DAO vyvolá `CDaoException` objekt, který zachytíte, knihovna `CDaoErrorInfo` MFC vyplní strukturu a uloží ji do [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) člena objektu výjimky. (Pokud se rozhodnete volat rozhraní DAO přímo, je nutné zavolat členskou funkci [GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) objektu Exception sami, abyste mohli `m_pErrorInfo`vyplnit.)
+Knihovna MFC neprovádí zapouzdření objektů chyb DAO ve třídě. Místo toho třída [CDaoException](../../mfc/reference/cdaoexception-class.md) poskytuje rozhraní pro přístup ke kolekci chyb obsažené v objektu DAO `DBEngine` objekt, který obsahuje také všechny pracovní prostory. Když operace knihovny MFC rozhraní DAO vyvolá objekt `CDaoException`, který zachytíte, knihovna MFC vyplní strukturu `CDaoErrorInfo` a uloží ji do [m_pErrorInfoho](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) člena objektu výjimky. (Pokud se rozhodnete volat rozhraní DAO přímo, je nutné zavolat členskou funkci [GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) objektu Exception sami sebe k vyplnění `m_pErrorInfo`.)
 
-Další informace o zpracování chyb DAO naleznete v článku [výjimky: Výjimky](../../mfc/exceptions-database-exceptions.md)databáze. Související informace naleznete v tématu "chybový objekt" v nápovědě k rozhraní DAO.
+Další informace o zpracování chyb DAO naleznete v článku [výjimky databáze](../../mfc/exceptions-database-exceptions.md). Související informace naleznete v tématu "chybový objekt" v nápovědě k rozhraní DAO.
 
-Informace načtené členskou funkcí [CDaoException:: GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) jsou uloženy ve `CDaoErrorInfo` struktuře. Prohlédněte si datový člen [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) z `CDaoException` objektu, který zachytíte v obslužné rutině výjimky `GetErrorInfo` , `CDaoException` nebo zavolejte z objektu, který vytvoříte explicitně, aby se zkontrolovaly chyby, které mohly nastat během přímého volání. rozhraní DAO. `CDaoErrorInfo`také definuje `Dump` členskou funkci v sestavení ladění. Můžete použít `Dump` k výpisu obsahu `CDaoErrorInfo` objektu.
+Informace načtené členskou funkcí [CDaoException:: GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) jsou uloženy ve struktuře `CDaoErrorInfo`. Prostudujte datový člen [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) z objektu `CDaoException`, který zachytíte v obslužné rutině výjimky, nebo zavolejte `GetErrorInfo` z objektu `CDaoException`, který vytvoříte explicitně, aby bylo možné kontrolovat chyby, k nimž mohlo dojít během přímého volání rozhraní DAO. `CDaoErrorInfo` také definuje členskou funkci `Dump` v sestaveních ladění. K výpisu obsahu `CDaoErrorInfo` objektu můžete použít `Dump`.
 
 ## <a name="requirements"></a>Požadavky
 

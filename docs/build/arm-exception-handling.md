@@ -2,12 +2,12 @@
 title: Zpracování výjimek ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: a3d1a5f3becefc064c5bb38dc566892ae8da8530
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c55baf453c1879f1e0a857cc746bba7802d69f88
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493367"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303277"
 ---
 # <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
@@ -60,7 +60,7 @@ Každý záznam. pdata pro ARM má délku 8 bajtů. Obecný formát záznamu um�
 |Odsazení slova|Bity|Účel|
 |-----------------|----------|-------------|
 |0|0-31|*Počáteční adresa RVA funkce* je 32-BITOVÁ adresa RVA začátku funkce. Pokud funkce obsahuje kód miniatury, musí být nastaven nižší bit této adresy.|
-|1|0-1|*Příznak* je 2 bitové pole, které určuje, jak interpretovat zbývající 30 bitů druhého. pdata slovo. Pokud je *příznak* 0, zbývající bity vycházejí z *informací o výjimce RVA* (s nízkými dvěma bitymi implicitně 0). Pokud *příznak* není nula, zbývající bity budou mít sbalenou strukturu *unwind dat* .|
+|1|0-1|*Příznak* je 2 bitové pole, které určuje, jak interpretovat zbývající 30 bitů druhého. pdata slovo. Pokud je *příznak* 0, zbývající bity vycházejí z *informací o výjimce RVA* (s nízkými dvěma bitymi implicitně 0). Pokud *příznak* není nula, zbývající bity budou mít *sbalenou strukturu unwind dat* .|
 |1|2-31|*Informace o výjimce RVA* nebo *zabalená zpětná data*.<br /><br /> *Informace o výjimce RVA* je adresa struktury informací o výjimce s proměnnou délkou, která je uložená v oddílu. xdata. Tato data musí být zarovnané na 4 bajty.<br /><br /> *Zabalená unwind data* jsou komprimovaný popis operací vyžadovaných k unwind z funkce za předpokladu kanonického tvaru. V tomto případě není vyžadován žádný záznam XData.|
 
 ### <a name="packed-unwind-data"></a>Zabalená unwind data
@@ -113,7 +113,7 @@ Prologues pro kanonické funkce můžou mít až 5 instrukcí (Všimněte si, ž
 
 Instrukce 1 je vždy přítomna v případě, že je bit *H* nastavený na hodnotu 1.
 
-Chcete-li nastavit řetězení rámců, je k dispozici buď instrukce 3a, nebo 3b, pokud je nastaven bit *jazyka C* . Je to 16bitová `mov` , pokud nejsou vloženy žádné Registry jiné než R11 a LR. v opačném případě je to 32 bitů `add`.
+Chcete-li nastavit řetězení rámců, je k dispozici buď instrukce 3a, nebo 3b, pokud je nastaven bit *jazyka C* . Je to 16bitová `mov`, pokud nejsou vloženy žádné Registry jiné než R11 a LR; v opačném případě je to 32 `add`.
 
 Pokud je zadána nepřeložená úprava, instrukci 5 představuje explicitní úpravu zásobníku.
 
@@ -154,7 +154,7 @@ Instrukce 6 je explicitní úprava zásobníku, pokud je zadána nepřeložená 
 
 Pokyny 7 a 8 používají stejnou logiku jako prologu k určení, které Registry budou obnoveny ze zásobníku, ale s těmito dvěma změnami: první, *EF* se používá místo *BF*; za druhé, pokud je *vrácená* hodnota = 0, pak se LR v seznamu registr nahrazuje řetězcem a epilogu končí okamžitě.
 
-Pokud je nastavená možnost *H* , pak je k dispozici buď pokyn 9a, nebo 9b. K označení, že LR není v zásobníku, se používá pokyn 9a. V tomto případě je zásobník manuálně upraven a *ret* musí mít hodnotu 1 nebo 2 pro určení explicitního návratu. Instrukce 9b se používá, když *L* je 1, k indikaci počátečního konce epilogu a k vrácení a úpravě zásobníku ve stejnou dobu.
+Pokud je nastavená možnost *H* , pak je k dispozici buď pokyn 9a, nebo 9b. K označení, že LR *není v* zásobníku, se používá pokyn 9a. V tomto případě je zásobník manuálně upraven a *ret* musí mít hodnotu 1 nebo 2 pro určení explicitního návratu. Instrukce 9b se používá, když *L* je 1, k indikaci počátečního konce epilogu a k vrácení a úpravě zásobníku ve stejnou dobu.
 
 Pokud se epilogu ještě neukončil, pak je k dispozici buď instrukce 10a, nebo 10b, aby označovala 16bitovou nebo 32ovou větev na základě hodnoty *ret*.
 
@@ -167,7 +167,7 @@ Pokud je zabalený unwind formát nedostatečný pro popis odvíjení funkce, je
    |Word|Bity|Účel|
    |----------|----------|-------------|
    |0|0-17|*Délka funkce* je 18 bitové pole, které označuje celkovou délku funkce v bajtech dělenou 2. Je-li funkce větší než 512 KB, je nutné pro popis funkce použít více záznamů. pdata a. xdata. Podrobnosti najdete v části velké funkce v tomto dokumentu.|
-   |0|18-19|' 2D ' je 2 bitové pole, které popisuje verzi zbývajícího XData. V tuto chvíli je definovaná jenom verze 0. hodnoty 1-3 jsou vyhrazené.|
+   |0|18-19|' 2D *' je 2* bitové pole, které popisuje verzi zbývajícího XData. V tuto chvíli je definovaná jenom verze 0. hodnoty 1-3 jsou vyhrazené.|
    |0|20|*X* je 1 bitové pole, které indikuje přítomnost (1) nebo absence (0) dat výjimky.|
    |0|21|*E* je 1 bitové pole, které indikuje, že informace, které popisují jeden epilogu, se zabalí do hlavičky (1) místo vyžadování dalších slov oboru později (0).|
    |0|22|*F* je 1 bitové pole, které indikuje, že tento záznam popisuje fragment funkce (1) nebo úplnou funkci (0). Fragment znamená, že neexistuje žádný prologu a že všechny zpracování prologu by se měly ignorovat.|
@@ -267,7 +267,7 @@ Tím se zobrazuje rozsah hexadecimálních hodnot pro každý bajt v *kódu*unwi
 
 Unwind kódy jsou navržené tak, že první bajt kódu oznamuje celkovou velikost v bajtech kódu a velikost odpovídajícího operačního kódu v datovém proudu instrukcí. Chcete-li vypočítat velikost prologu nebo epilogu, Projděte si unwind kódy od začátku sekvence až do konce a použijte vyhledávací tabulku nebo podobnou metodu k určení, jak dlouho je odpovídající operační kód.
 
-Unwind kódy 0xFD a 0xFE jsou ekvivalentní regulárnímu kódu 0xFF, ale účet pro jeden další nop opcode v případě epilogu, buď 16 bitů nebo 32-bit. Pro prologues jsou kódy 0xFD, 0xFE a 0xFF přesně ekvivalentní. Tyto účty pro Common epilogu končí `bx lr` nebo `b <tailcall-target>`, které nemají ekvivalentní prologu instrukci. Tím se zvyšuje pravděpodobnost, že lze odvinout sekvence sdílet mezi prologu a epilogues.
+Unwind kódy 0xFD a 0xFE jsou ekvivalentní regulárnímu kódu 0xFF, ale účet pro jeden další nop opcode v případě epilogu, buď 16 bitů nebo 32-bit. Pro prologues jsou kódy 0xFD, 0xFE a 0xFF přesně ekvivalentní. Tyto účty pro běžné epilogu končí `bx lr` nebo `b <tailcall-target>`, které nemají ekvivalentní instrukci prologu. Tím se zvyšuje pravděpodobnost, že lze odvinout sekvence sdílet mezi prologu a epilogues.
 
 V mnoha případech by mělo být možné použít stejnou sadu unwind kódů pro prologu a všechny epilogues. Pro zpracování nevinutí částečně spuštěných prologues a epilogues však může být nutné mít více sekvencí unwind kódu, které se liší v pořadí nebo chování. To je důvod, proč každý epilogu má svůj vlastní index do pole unwind k zobrazení, kde začít provádět.
 
@@ -360,7 +360,7 @@ ShrinkWrappedFunction
     pop    {r4, pc}          ; C:
 ```
 
-Funkce zabalené při zmenšení obvykle očekávají, že místo pro nadbytečné Registry se uloží do normálního prologuu a pak se provede uložení registru pomocí `str` nebo `stm` místo `push`. Tím se zachová všechna manipulace s ukazateli na zásobníku v původní prologu funkce.
+Funkce zabalené v rámci zúžení obvykle mají za následek předem přidělit prostor pro nadbytečné Registry v normálním prologu a poté provést příkaz Register pro uložení pomocí `str` nebo `stm` namísto `push`. Tím se zachová všechna manipulace s ukazateli na zásobníku v původní prologu funkce.
 
 Ukázková funkce zmenšení se musí rozdělit do tří oblastí, které jsou v komentářích označeny jako A, B a C. První oblast pokrývá začátek funkce na konci dalších nestálých uložení. Aby se tento fragment popsal jako prologu a No epilogues, musí být vytvořený záznam. pdata nebo. xdata.
 
@@ -410,7 +410,7 @@ Pokud se po ignorování epilogues s jednou instrukcí žádné zbývající epi
 
 V těchto příkladech je základ obrázku na adrese 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Příklad 1: List – funkce bez místních hodnot
+### <a name="example-1-leaf-function-no-locals"></a>Příklad 1: funkce listu bez místních hodnot
 
 ```asm
 Prologue:
@@ -444,7 +444,7 @@ Epilogue:
 
    - *Úprava zásobníku* = 0, což značí neúpravu zásobníku
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Příklad 2: Vnořená funkce s místním přidělením
+### <a name="example-2-nested-function-with-local-allocation"></a>Příklad 2: vnořená funkce s místním přidělením
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Úprava zásobníku* = 3 (= 0x0C/4)
 
-### <a name="example-3-nested-variadic-function"></a>Příklad 3: Vnořená funkce variadické
+### <a name="example-3-nested-variadic-function"></a>Příklad 3: vnořená funkce variadické
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Úprava zásobníku* = 0, což značí neúpravu zásobníku
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Příklad 4: Funkce s více Epilogues
+### <a name="example-4-function-with-multiple-epilogues"></a>Příklad 4: funkce s více Epilogues
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - Unwind kód 2 = 0xFF: end
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Příklad 5: Funkce s dynamickým zásobníkem a vnitřním epilogu
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Příklad 5: funkce s dynamickým zásobníkem a vnitřním epilogu
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Kódová slova* = 0x01, což značí 1 32.-bit unwind kódů
 
-- Word 1: Obor epilogu na posunu 0xC6 (= 0x18C/2), spouští se index unwind kódu v hodnotě 0x00 a podmínka 0x0E (Always).
+- Word 1: epilogu rozsah na posunu 0xC6 (= 0x18C/2), spuštění indexu unwind kódu v hodnotě 0x00 a podmínka 0x0E (Always)
 
 - Unwind kódy začínající na slovo 2: (Shared Between prologu/epilogu)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - Unwind kód 3 = 0xFD: end, počítá se jako 16bitové instrukce pro epilogu.
 
-### <a name="example-6-function-with-exception-handler"></a>Příklad 6: Funkce s obslužnou rutinou výjimky
+### <a name="example-6-function-with-exception-handler"></a>Příklad 6: funkce s obslužnou rutinou výjimky
 
 ```asm
 Prologue:
@@ -698,7 +698,7 @@ Epilogue:
 
 - Slova 4 a novější jsou vložená data výjimky.
 
-### <a name="example-7-funclet"></a>Příklad 7: Funkce
+### <a name="example-7-funclet"></a>Příklad 7: funkce
 
 ```asm
 Function:

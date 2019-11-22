@@ -12,17 +12,17 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 7107964cc894a0aa45be5de362c9edd166dc0af1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 744e1c71476ccfbe6ea8f8359dcdb9a29efc995e
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095962"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305369"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO
 
 > [!NOTE]
-> Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. 3,6 je finální verze, která je považována za zastaralou. Vizuální C++ prostředí a Průvodci nepodporují rozhraní DAO (i když třídy rozhraní DAO jsou zahrnuty a je možné je nadále používat). Společnost Microsoft doporučuje, abyste pro nové projekty používali [šablony OLE DB](../data/oledb/ole-db-templates.md) nebo [rozhraní ODBC a knihovnu MFC](../data/odbc/odbc-and-mfc.md) . V údržbě stávajících aplikací byste měli používat jenom rozhraní DAO.
+> Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou. Vizuální C++ prostředí a Průvodci nepodporují rozhraní DAO (i když třídy rozhraní DAO jsou zahrnuty a je možné je nadále používat). Společnost Microsoft doporučuje, abyste pro nové projekty používali [šablony OLE DB](../data/oledb/ole-db-templates.md) nebo [rozhraní ODBC a knihovnu MFC](../data/odbc/odbc-and-mfc.md) . V údržbě stávajících aplikací byste měli používat jenom rozhraní DAO.
 
 ## <a name="overview"></a>Přehled
 
@@ -74,12 +74,12 @@ Nejpravděpodobnější rozdíly mezi třídami jsou pravděpodobně změny náz
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date`(`COleDateTime`založené na)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date` (na základě`COleDateTime`)|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-1 funkce je založena na `CTime` a. <sup></sup> `RFX_Date` `TIMESTAMP_STRUCT`
+<sup>1</sup> funkce `RFX_Date` je založená na `CTime` a `TIMESTAMP_STRUCT`.
 
 Hlavní změny funkčnosti, které mohou ovlivnit vaši aplikaci a vyžadují více než jednoduché změny názvů, jsou uvedeny níže.
 
@@ -87,22 +87,22 @@ Hlavní změny funkčnosti, které mohou ovlivnit vaši aplikaci a vyžadují v�
 
    Pomocí tříd rozhraní ODBC MFC potřebných k definování těchto možností prostřednictvím maker nebo výčtových typů.
 
-   Pomocí tříd DAO poskytuje rozhraní DAO definici těchto možností v hlavičkovém souboru (DBDAOINT. H). Proto je typ sady záznamů výčet členem `CRecordset`, ale s rozhraním DAO je místo toho konstantní. Můžete například použít **snímek** při určení typu `CRecordset` v rozhraní ODBC, ale **DB_OPEN_SNAPSHOT** při určení typu `CDaoRecordset`.
+   Pomocí tříd DAO poskytuje rozhraní DAO definici těchto možností v hlavičkovém souboru (DBDAOINT. H). Typ sady záznamů je tedy Výčtový člen `CRecordset`, ale s rozhraním DAO je místo toho konstanta. Můžete například použít **snímek** při určení typu `CRecordset` v rozhraní ODBC, ale při určení typu `CDaoRecordset`**DB_OPEN_SNAPSHOT** .
 
-- Výchozí typ sady záznamů pro `CRecordset` je **snímek** , zatímco výchozí typ sady záznamů `CDaoRecordset` pro je **dynamická sada** (viz poznámka níže pro další problém týkající se snímků třídy rozhraní ODBC).
+- Výchozí typ sady záznamů pro `CRecordset` je **snímek** , zatímco výchozí typ sady záznamů pro `CDaoRecordset` je **dynamická sada** (viz poznámka níže pro další problém týkající se snímků třídy rozhraní ODBC).
 
-- Třída rozhraní `CRecordset` ODBC má možnost vytvořit pouze dopředný typ sady záznamů. `CDaoRecordset` Ve třídě není pouze typ sady záznamů typu Recordset, ale spíše vlastnost (nebo možnost) určitých typů sad záznamů.
+- Třída `CRecordset` ODBC má možnost vytvořit pouze dopředný typ sady záznamů. Ve třídě `CDaoRecordset` není pouze typ sady záznamů, ale spíše vlastnost (nebo možnost) určitých typů sad záznamů.
 
-- Sada záznamů s připojením pouze při otevření `CRecordset` objektu, která je určena k načtení a připojení dat sady záznamů. S `CDaoRecordset` objektem, možnost připojení pouze znamená, že data sady záznamů lze připojit pouze (a nikoli číst).
+- Sada záznamů s připojením pouze při otevření objektu `CRecordset`, což znamená, že data sady záznamů mohou být čtena a připojena. V případě `CDaoRecordset` objektu, možnost append-only znamená, že data sady záznamů lze připojit pouze (a nikoli číst).
 
-- Funkce členů transakce třídy rozhraní ODBC jsou členy `CDatabase` a fungují na úrovni databáze. Ve třídách rozhraní DAO jsou členské funkce transakce členy třídy vyšší úrovně (`CDaoWorkspace`), a proto mohou ovlivnit více `CDaoDatabase` objektů sdílející stejný pracovní prostor (místo transakce).
+- Funkce členů transakce třídy rozhraní ODBC jsou členy `CDatabase` a působí na úrovni databáze. Ve třídách rozhraní DAO jsou funkce členů transakce členy třídy vyšší úrovně (`CDaoWorkspace`), a proto mohou ovlivnit více objektů `CDaoDatabase` sdílející stejný pracovní prostor (místo transakce).
 
-- Třída výjimky byla změněna. `CDBExceptions`jsou vyvolány ve třídách `CDaoExceptions` rozhraní ODBC a v třídách DAO.
+- Třída výjimky byla změněna. `CDBExceptions` jsou vyvolány ve třídách rozhraní ODBC a `CDaoExceptions` v třídách DAO.
 
-- `RFX_Date`používá `CTime` objekty `TIMESTAMP_STRUCT` a při `DFX_Date` použití .`COleDateTime` Je téměř totožný s `CTime`, ale je založen na 8bitovém **datu** OLE, nikoli na 4 bajtové time_t, takže může obsahovat mnohem větší rozsah dat. `COleDateTime`
+- `RFX_Date` používá objekty `CTime` a `TIMESTAMP_STRUCT`, zatímco `DFX_Date` používá `COleDateTime`. `COleDateTime` je téměř totožná s `CTime`, ale je založena na osmi bajtovém **datu** OLE, nikoli na 4 bajtovém **time_t** , takže může obsahovat mnohem větší rozsah dat.
 
    > [!NOTE]
-   > Snímky DAO`CDaoRecordset`() jsou jen pro čtení, zatímco snímky`CRecordset`ODBC () můžou být aktualizovatelné v závislosti na ovladači a použití knihovny kurzorů ODBC. Pokud používáte knihovnu kurzorů, můžete `CRecordset` snímky aktualizovat. Pokud používáte některý z ovladačů Microsoft z Desktop Driver Pack 3,0 bez knihovny kurzorů ODBC, `CRecordset` snímky jsou jen pro čtení. Pokud používáte jiný ovladač, podívejte se do dokumentace k ovladači a zjistěte, jestli jsou snímky`STATIC_CURSORS`() jen pro čtení.
+   > Snímky DAO (`CDaoRecordset`) jsou jen pro čtení, zatímco snímky ODBC (`CRecordset`) můžou být aktualizovatelné v závislosti na ovladači a použití knihovny kurzorů ODBC. Pokud používáte knihovnu kurzorů, můžete `CRecordset` snímky aktualizovatelné. Pokud používáte některý z ovladačů Microsoft z Desktop Driver Pack 3,0 bez knihovny kurzorů ODBC, snímky `CRecordset` jsou jen pro čtení. Pokud používáte jiný ovladač, podívejte se do dokumentace k ovladači a zjistěte, jestli jsou snímky (`STATIC_CURSORS`) jen pro čtení.
 
 ## <a name="see-also"></a>Viz také:
 
