@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator THIS
 - THIS operator
 ms.assetid: d795aa0e-6c01-49b7-8c64-8ab111fd82d3
-ms.openlocfilehash: cfc53da4a2a8285d439d0c6c570c180ca6773df3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de680deccb5492201eaf335b27c7121fc707a35f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198399"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395471"
 ---
 # <a name="operator-this"></a>THIS – operátor
 
-Vrací hodnotu zadaného operand operátoru `type` jehož hodnoty posunu a segment se rovná hodnotě aktuální umístění čítače.
+Returns an operand of specified *type* whose offset and segment values are equal to the current location counter value.
 
 ## <a name="syntax"></a>Syntaxe
 
-> Tento typ
+> **THIS** *type*
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

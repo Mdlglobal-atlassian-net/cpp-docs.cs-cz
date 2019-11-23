@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e7931c97570c0fefcacb0123d75934867793fba4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210531"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395027"
 ---
 # <a name="proc"></a>PROC
 
-Označuje začátek a konec bloku procedura volána *popisek*. Příkazy v bloku nelze volat s **volání** instrukce nebo [INVOKE](../../assembler/masm/invoke.md) směrnice.
+Marks start and end of a procedure block called *label*. The statements in the block can be called with the **CALL** instruction or [INVOKE](../../assembler/masm/invoke.md) directive.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *Popisek* PROC [[*vzdálenost*]] [[*langtype*]] [[*viditelnost*]] [[\<*prologuearg*>]] [[ POUŽÍVÁ *reglist*]] [[, *parametr* [[:*značka*]]]...<br/>
-> [[SNÍMKU [[:*ehandler adresu*]]]]<br/>
-> *Příkazy*<br/>
-> *Popisek* ENDP
+> *label* **PROC** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦*visibility*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**USES** *reglist*⟧ ⟦ __,__ *parameter* ⟦ __:__ *tag*⟧ ...⟧\
+> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧\
+> *statements*\
+> *label* **ENDP**
 
 ## <a name="remarks"></a>Poznámky
 
-[[SNÍMKU [[:*ehandler adresu*]]]] je platný pouze s ml64.exe a způsobí, že MASM pro generování záznam tabulky funkcí v .pdata a vrátit se zpět informace v .xdata funkce uživatele strukturované zpracování výjimek unwind chování.
+⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧ is only valid with ml64.exe, and causes MASM to generate a function table entry in .pdata and unwind information in .xdata for a function's structured exception handling unwind behavior.
 
-Když **rámce** atribut se používá, musí být následován znakem [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) směrnice.
+When the **FRAME** attribute is used, it must be followed by an [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive.
 
-Zobrazit [MASM pro x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) pro další informace o použití ml64.exe.
+See [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) for more information on using ml64.exe.
 
 ## <a name="example"></a>Příklad
 
@@ -54,7 +54,7 @@ _text ENDS
 END
 ```
 
-Ve výše uvedeném kódu bude generovat v následující tabulce funkce a unwind informace:
+The above code will emit the following function table and unwind information:
 
 ```Output
 FileHeader->Machine 34404
@@ -79,4 +79,4 @@ Dumping Unwind Information for file ex2.exe
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

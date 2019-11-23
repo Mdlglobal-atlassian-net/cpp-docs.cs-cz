@@ -6,53 +6,53 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703578"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398114"
 ---
-# <a name="model-32-bit-masm"></a>. MODEL (32-bit MASM)
+# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
 
-Inicializuje model paměti programu. (jenom 32-bitová MASM.)
+Initializes the program memory model. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> . Memorymodel modelu [[, langtype]] [[, stackoption]]
+> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
 
 ### <a name="parameters"></a>Parametry
 
-*memorymodel*<br/>
-Povinný parametr, který určuje velikost kódu a datových ukazatelů.
+*memory-model*\
+Required parameter that determines the size of code and data pointers.
 
-*langtype*<br/>
-Volitelný parametr, který nastaví konvence volání a pojmenování pro procedury a veřejné symboly.
+*language-type*\
+Optional parameter that sets the calling and naming conventions for procedures and public symbols.
 
-*stackoption*<br/>
-Volitelný parametr.
+*stack-option*\
+Optional parameter.
 
-*stackoption* se nepoužívá, pokud je *memorymodel* `FLAT`.
+*stack-option* is not used if *memory-model* is **FLAT**.
 
-Určení `NEARSTACK` seskupí segment zásobníku do jednoho fyzického segmentu (`DGROUP`) spolu s daty. Předpokládá se, že registr segmentu zásobníku (`SS`) drží stejnou adresu jako registr datových segmentů (`DS`). `FARSTACK` neseskupují zásobník s `DGROUP`; Proto se `SS` nerovná `DS`.
+Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
 
 ## <a name="remarks"></a>Poznámky
 
-.`MODEL` se nepoužívá v [MASM pro x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-V následující tabulce jsou uvedeny možné hodnoty pro každý parametr při cílení na 16bitové a 32-bitové platformy:
+The following table lists the possible values for each parameter when targeting 16-bit and 32-bit platforms:
 
-|Parametr|32 – bitové hodnoty|16bitové hodnoty (podpora pro starší 16bitový vývoj)|
+|Parametr|32-bit values|16-bit values (support for earlier 16-bit development)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C``STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL``STDCALL`|
-|*stackoption*|Nepoužívá se|`NEARSTACK``FARSTACK`|
+|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
+|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
+|*stack-option*|Nepoužívá se|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Kód
 
-Ukázky týkající se MASM najdete v ukázkách kompilátoru z [vizuálních C++ ukázek a v související dokumentaci k sadě Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
+For MASM-related samples, download the Compiler samples from [Visual C++ Samples and Related Documentation for Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-Následující příklad ukazuje použití direktivy `.MODEL`.
+The following example demonstrates the use of the `.MODEL` directive.
 
 ## <a name="example"></a>Příklad
 
@@ -88,4 +88,4 @@ end
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)<br/>
+[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)

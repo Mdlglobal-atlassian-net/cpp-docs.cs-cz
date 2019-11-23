@@ -1,5 +1,5 @@
 ---
-title: operátor +
+title: '\+ – operátor'
 ms.date: 08/30/2018
 f1_keywords:
 - +
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - arithmetic operators [C++], addition
 - operators [MASM], arithmetic
 ms.assetid: 89e31a6e-2f68-4481-b394-1348e14e4653
-ms.openlocfilehash: 01bb647b6cef0bb417a9c897912387dc0019bf0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6f1e587e192fbf38d26c4485e97831b2242effc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177237"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397136"
 ---
-# <a name="operator-"></a>operátor +
+# <a name="operator-"></a>\+ – operátor
 
-První operátor vrací *expression1* plus *expression2*.
+The first operator returns *expression1* plus *expression2*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *Expression1* + *expression2*
+> *expression1* + *expression2*
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)<br/>
+[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
