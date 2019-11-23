@@ -1,5 +1,5 @@
 ---
-title: /LINKREPROTARGET (název souboru reprodukci propojení)
+title: /LINKREPROTARGET (název souboru pro reprodukci odkazu)
 description: Možnost linkeru nebo nástroje knihovny pro nastavení názvu cílového souboru pro propojení reprodukci.
 ms.date: 09/24/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71712685"
 ---
-# <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET (název souboru reprodukci propojení)
+# <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET (název souboru pro reprodukci odkazu)
 
 Instruuje linker nebo nástroj knihovny, aby vygeneroval propojení reprodukci, jenom když má cíl zadaný název souboru.
 
@@ -26,7 +26,7 @@ Instruuje linker nebo nástroj knihovny, aby vygeneroval propojení reprodukci, 
 
 ### <a name="arguments"></a>Arguments
 
-**/LINKREPROTARGET:** _název souboru_@no__t – 2
+**/LINKREPROTARGET:** \_názvu souboru_
 Název cílového souboru, který se má filtrovat Odkaz reprodukci je generován pouze v případě, že pojmenovaný soubor je výstupní cíl. Názvy souborů, které obsahují mezery, musí být uzavřeny do dvojitých uvozovek. Název souboru by měl obsahovat základní název a příponu, ale ne cestu.
 
 ## <a name="remarks"></a>Poznámky
@@ -45,7 +45,7 @@ Pokud má mít možnost **/LINKREPROTARGET** nějaký účinek, musí být nasta
 
 1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **Vlastnosti konfigurace** > **linker** >  stránka vlastností**příkazového řádku** .
+1. Vyberte **Vlastnosti konfigurace** > stránka vlastností **příkazového řádku** > **linkeru** .
 
 1. Do pole **Další možnosti** zadejte možnost **/LINKREPROTARGET:** _název souboru_ . Kliknutím na **tlačítko OK** aplikujte změnu.
 
@@ -55,6 +55,6 @@ Pokud má mít možnost **/LINKREPROTARGET** nějaký účinek, musí být nasta
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční příručka linkeru MSVC](linking.md)\
-[MSVC Možnosti linkeru](linker-options.md)\
+\ [Referenční příručka linkeru MSVC](linking.md)
+\ [možností linkeru MSVC](linker-options.md)
 [/LINKREPRO](linkrepro.md)

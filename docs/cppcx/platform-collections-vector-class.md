@@ -41,17 +41,17 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 Typ prvků obsažených v objektu Vector.
 
-*Cerebrální*<br/>
+*E*<br/>
 Určuje binární predikát pro testování rovnosti s hodnotami typu *T*. Výchozí hodnota je `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Poznámky
 
 Povolené typy:
 
-1. Celá čísla
+1. celá čísla
 
 1. Třída rozhraní ^
 
@@ -65,17 +65,17 @@ Třída **Vector** je C++ konkrétní implementace rozhraní [Windows:: Foundati
 
 Pokud se pokusíte použít **vektorový** typ ve veřejné návratové hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit tak, že změníte parametr nebo návratový typ hodnoty na [Windows:: Foundation:: Collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Další informace najdete v tématu [kolekce (C++/CX)](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Pedagog
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[Vector:: Vector](#ctor)|Inicializuje novou instanci třídy Vector.|
+|[Vector::Vector](#ctor)|Inicializuje novou instanci třídy Vector.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name (Název)|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Vector:: Append](#append)|Vloží zadanou položku za poslední položku v aktuálním vektoru.|
 |[Vector:: Clear](#clear)|Odstraní všechny prvky v aktuálním vektoru.|
@@ -91,12 +91,12 @@ Pokud se pokusíte použít **vektorový** typ ve veřejné návratové hodnotě
 |[Vector:: SetAt](#setat)|Přiřadí zadanou hodnotu k elementu v aktuálním vektoru, který je identifikován zadaným indexem.|
 |[Vector:: size](#size)|Vrátí počet prvků v aktuálním objektu Vector.|
 
-### <a name="events"></a>Akce
+### <a name="events"></a>Události
 
 |||
 |-|-|
-|Name (Název)|Popis|
-|[Windows události:: Foundation:: Collection:: VectorChangedEventHandler @ no__t-1T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Nastane, pokud se změní vektor.|
+|Název|Popis|
+|[Windows události:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Nastane, pokud se změní vektor.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -120,7 +120,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parametry
 
-*indexovacím*<br/>
+*index*<br/>
 Položka, která má být vložena do vektoru. Typ *položky* je definován pomocí typeName *T* .
 
 ## <a name="clear"></a>Vector:: Clear – metoda
@@ -165,7 +165,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*indexovacím*<br/>
+*index*<br/>
 Unsigned integer založený na nule, který určuje konkrétní prvek v objektu Vector.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -186,7 +186,7 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Parametry
 
-*Indexu*<br/>
+*startIndex*<br/>
 Index založený na nule začátku položek, které se mají načíst.
 
 *propojovací*<br/>
@@ -198,7 +198,7 @@ Počet načtených položek
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce není určena pro použití přímo klientským kódem. Používá se interně ve [funkci to_vector](../cppcx/to-vector-function.md) k umožnění efektivního převodu Platform:: Vector instance na instance std:: vector.
+Tato funkce není určena pro použití přímo klientským kódem. Používá se interně ve [funkci to_vector](../cppcx/to-vector-function.md) k zajištění efektivního převodu Platform:: Vector instance na instance std:: vector.
 
 ## <a name="getview"></a>Vector:: GetView – metoda
 
@@ -229,7 +229,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 *value*<br/>
 Položka, kterou chcete najít.
 
-*indexovacím*<br/>
+*index*<br/>
 Index založený na nule položky, pokud je nalezena *hodnota* parametru; v opačném případě 0.
 
 Parametr *index* je 0, pokud buď je položka prvním prvkem vektoru, nebo položka nebyla nalezena. Pokud je vrácená hodnota **true**, položka byla nalezena a jedná se o první prvek; v opačném případě položka nebyla nalezena.
@@ -254,7 +254,7 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parametry
 
-*indexovacím*<br/>
+*index*<br/>
 Unsigned integer založený na nule, který určuje konkrétní prvek v objektu Vector.
 
 *položkami*<br/>
@@ -272,7 +272,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*indexovacím*<br/>
+*index*<br/>
 Unsigned integer založený na nule, který určuje konkrétní prvek v objektu Vector.
 
 ## <a name="removeatend"></a>Vector:: RemoveAtEnd – metoda
@@ -312,7 +312,7 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parametry
 
-*indexovacím*<br/>
+*index*<br/>
 Unsigned integer založený na nule, který určuje konkrétní prvek v objektu Vector.
 
 *položkami*<br/>
@@ -357,7 +357,7 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>Parametry
 
-*určitého*<br/>
+*a*<br/>
 [Std:: Array](../standard-library/array-class-stl.md) , který bude použit k inicializaci vektoru.
 
 *šipka*<br/>
@@ -366,7 +366,7 @@ Vector(std::initializer_list<T> il);
 *For*<br/>
 Typ kolekce objektů, které se používají k inicializaci aktuálního vektoru.
 
-*kódu*<br/>
+*il*<br/>
 [Std:: initializer_list](../standard-library/initializer-list-class.md) objektů typu *T* , které budou použity k inicializaci vektoru.
 
 *N*<br/>
@@ -378,19 +378,19 @@ Počet prvků ve vektoru.
 *value*<br/>
 Hodnota, která se používá k inicializaci každého prvku v aktuálním vektoru.
 
-*ICES*<br/>
+*v*<br/>
 [Hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) pro objekt [std:: Vector](../standard-library/vector-class.md) , který se používá k inicializaci aktuálního vektoru.
 
-*střed*<br/>
+*ptr*<br/>
 Ukazatel na `std::vector`, který se používá k inicializaci aktuálního vektoru.
 
-*první*<br/>
+*first*<br/>
 První prvek v sekvenci objektů, které se používají k inicializaci aktuálního vektoru. Typ *prvního* je předán pomocí způsobu *dokonalého předávání*. Další informace naleznete v tématu [rvalue reference deklarátor: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 *posledního*<br/>
 Poslední prvek v sekvenci objektů, které se používají k inicializaci aktuálního vektoru. Typ *Poslední* se předává pomocí *metody dokonalého přesměrování*. Další informace naleznete v tématu [rvalue reference deklarátor: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Další informace najdete v tématech
+## <a name="see-also"></a>Viz také:
 
 [Kolekce (C++/CX)](collections-c-cx.md)<br/>
 [Obor názvů platformy](platform-namespace-c-cx.md)<br/>

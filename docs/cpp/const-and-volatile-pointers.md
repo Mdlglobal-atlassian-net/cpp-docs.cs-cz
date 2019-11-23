@@ -16,34 +16,34 @@ ms.locfileid: "74246632"
 ---
 # <a name="const-and-volatile-pointers"></a>const a volatile – ukazatele
 
-The [const](const-cpp.md) and [volatile](volatile-cpp.md) keywords change how pointers are treated. The **const** keyword specifies that the pointer cannot be modified after initialization; the pointer is protected from modification thereafter.
+Klíčová slova [const](const-cpp.md) a [volatile](volatile-cpp.md) mění způsob, jakým jsou zpracovány ukazatele. Klíčové slovo **const** určuje, že ukazatel po inicializaci nemůže být změněn; ukazatel je chráněn před úpravou poté.
 
-The **volatile** keyword specifies that the value associated with the name that follows can be modified by actions other than those in the user application. Therefore, the **volatile** keyword is useful for declaring objects in shared memory that can be accessed by multiple processes or global data areas used for communication with interrupt service routines.
+Klíčové slovo **volatile** určuje, že hodnotu přidruženou k názvu, který následuje, lze upravit pomocí jiných akcí než těch v uživatelské aplikaci. Proto klíčové slovo **volatile** je užitečné pro deklarování objektů ve sdílené paměti, ke kterým je možné přistupovat pomocí více procesů nebo globálních datových oblastí používaných pro komunikaci s rutinami služby přerušení.
 
-When a name is declared as **volatile**, the compiler reloads the value from memory each time it is accessed by the program. Tím jsou výrazně omezeny možné optimalizace. Pokud však může dojít k nečekané změně stavu objektu, jde o jediný způsob, jak lze zajistit předvídatelný výkon programu.
+Pokud je název deklarován jako **volatile**, kompilátor znovu načte hodnotu z paměti pokaždé, když k ní program přistupuje. Tím jsou výrazně omezeny možné optimalizace. Pokud však může dojít k nečekané změně stavu objektu, jde o jediný způsob, jak lze zajistit předvídatelný výkon programu.
 
-To declare the object pointed to by the pointer as **const** or **volatile**, use a declaration of the form:
+Chcete-li deklarovat objekt, na který odkazoval ukazatel jako **const** nebo **volatile**, použijte deklaraci formuláře:
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-To declare the value of the pointer — that is, the actual address stored in the pointer — as **const** or **volatile**, use a declaration of the form:
+Chcete-li deklarovat hodnotu ukazatele – tj. skutečnou adresu uloženou v ukazateli – jako **const** nebo **volatili**, použijte deklaraci formuláře:
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-The C++ language prevents assignments that would allow modification of an object or pointer declared as **const**. Taková přiřazení by odstranila informaci, s níž byl objekt nebo ukazatel deklarován, a porušila by tak záměr původní deklarace. Vezměte v úvahu následující deklarace:
+C++ Jazyk zabraňuje přiřazení, která umožňují změnu objektu nebo ukazatele deklarovaného jako **const**. Taková přiřazení by odstranila informaci, s níž byl objekt nebo ukazatel deklarován, a porušila by tak záměr původní deklarace. Vezměte v úvahu následující deklarace:
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-Given the preceding declarations of two objects (`cch`, of type **const char**, and `ch`, of type **char)** , the following declaration/initializations are valid:
+Vzhledem k předchozím deklaracím dvou objektů (`cch`typu **const char**a `ch`typu **Char)** jsou následující deklarace/inicializace platné:
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-Deklarace proměnné `pch2` deklaruje ukazatel, pomocí kterého lze upravit konstantní objekt, a proto není povolena. The declaration of `pch3` specifies that the pointer is constant, not the object; the declaration is disallowed for the same reason the `pch2` declaration is disallowed.
+Deklarace proměnné `pch2` deklaruje ukazatel, pomocí kterého lze upravit konstantní objekt, a proto není povolena. Deklarace `pch3` určuje, zda je ukazatel konstantní, nikoli objekt; deklarace není povolena ze stejného důvodu, že deklarace `pch2` není povolena.
 
 Následujících osm přiřazení ukazuje přiřazování pomocí ukazatele a změnu hodnoty ukazatele z předchozích deklarací. Pro tuto chvíli předpokládejme, že pro proměnné `pch1` až `pch8` byla inicializace správná.
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-Pointers declared as **volatile**, or as a mixture of **const** and **volatile**, obey the same rules.
+Ukazatele deklarované jako **nestálé**nebo jako kombinace **const** a **volatile**dodržují stejná pravidla.
 
-Pointers to **const** objects are often used in function declarations as follows:
+Ukazatele na objekty **const** jsou často používány v deklaracích funkcí následujícím způsobem:
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-The preceding statement declares a function, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), where two of the three arguments are of type pointer to **char**. Because the arguments are passed by reference and not by value, the function would be free to modify both `strDestination` and `strSource` if `strSource` were not declared as **const**. The declaration of `strSource` as **const** assures the caller that `strSource` cannot be changed by the called function.
+Předchozí příkaz deklaruje funkci, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), kde dva ze tří argumentů jsou typu ukazatel na **char**. Vzhledem k tomu, že argumenty jsou předány odkazem a nikoli hodnotou, funkce by byla volná pro úpravu `strDestination` a `strSource`, pokud `strSource` nebyla deklarována jako **const**. Deklarace `strSource` jako **const** zaručí volajícímu, že `strSource` nemůže změnit volaná funkce.
 
 > [!NOTE]
-> Because there is a standard conversion from *typename* <strong>\*</strong> to **const** *typename* <strong>\*</strong>, it is legal to pass an argument of type `char *` to [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). However, the reverse is not true; no implicit conversion exists to remove the **const** attribute from an object or pointer.
+> Vzhledem k tomu, že existuje standardní převod z *typename* <strong>\*</strong> na **const** *TypeName* <strong>\*</strong>, je právní předávat argument typu `char *` do [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Opačně však není pravda; neexistuje žádný implicitní převod pro odebrání atributu **const** z objektu nebo ukazatele.
 
-A **const** pointer of a given type can be assigned to a pointer of the same type. However, a pointer that is not **const** cannot be assigned to a **const** pointer. Následující kód ukazuje správná i nesprávná přiřazení:
+Ukazatel **const** daného typu lze přiřadit k ukazateli stejného typu. Ukazatel, který není **const** , však nelze přiřadit k ukazateli **const** . Následující kód ukazuje správná i nesprávná přiřazení:
 
 ```cpp
 // const_pointer.cpp
@@ -126,5 +126,5 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Pointers](pointers-cpp.md)
-[Raw pointers](raw-pointers.md)
+[Ukazatele](pointers-cpp.md)
+[nezpracovaných ukazatelů](raw-pointers.md)

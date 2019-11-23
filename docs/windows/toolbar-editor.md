@@ -107,13 +107,13 @@ Tlačítko panelu nástrojů má následující vlastnosti:
 
 1. V dialogovém okně **Přidat prostředek** vyberte v seznamu **typ prostředku** položku **panel nástrojů** a klikněte na tlačítko **Nový**.
 
-   Pokud se vedle typu prostředku **+** **panelu nástrojů** zobrazí znaménko plus (), znamená to, že jsou k dispozici šablony panelu nástrojů. Vyberte znaménko plus a rozbalte seznam šablon, vyberte šablonu a zvolte **Nový**.
+   Pokud se vedle typu prostředku **panelu nástrojů** zobrazuje znaménko plus ( **+** ), znamená to, že jsou k dispozici šablony panelu nástrojů. Vyberte znaménko plus a rozbalte seznam šablon, vyberte šablonu a zvolte **Nový**.
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Převod rastrových obrázků na prostředky panelu nástrojů
 
 1. Otevřete existující rastrový prostředek v [editoru obrázků](../windows/image-editor-for-icons.md). Pokud bitmapa ještě není ve vašem souboru *. RC* , klikněte pravým tlačítkem myši na soubor *. RC* a zvolte **importovat**, potom přejděte k rastrovému obrázku, který chcete přidat do souboru *. RC* , a vyberte **otevřít**.
 
-1. Přejít k**editoru panelu nástrojů** **Obrázek** > nabídky
+1. Přejít na **Obrázek** nabídky > **Editor panelu nástrojů**.
 
    Zobrazí se dialogové okno **nový prostředek panelu nástrojů** . Šířku a výšku obrázků ikon můžete změnit tak, aby odpovídaly rastrovému obrázku. Obrázek panelu nástrojů se pak zobrazí v **editoru panelu nástrojů**.
 
@@ -134,7 +134,7 @@ Tlačítko panelu nástrojů má následující vlastnosti:
 
    - Přiřaďte ID k prázdnému tlačítku na pravé straně panelu nástrojů. Můžete to provést úpravou vlastnosti **ID** v [okně Vlastnosti](/visualstudio/ide/reference/properties-window). Například můžete chtít, aby tlačítko panelu nástrojů mělo stejné ID jako možnost nabídky. V takovém případě můžete pomocí rozevíracího seznamu vybrat **ID** možnosti nabídky.
 
-   - V podokně **zobrazení panelu nástrojů** vyberte prázdné tlačítko na pravé straně panelu nástrojů a začněte kreslit. ID příkazu výchozího tlačítka je přiřazeno (ID_BUTTON\<n >).
+   - V podokně **zobrazení panelu nástrojů** vyberte prázdné tlačítko na pravé straně panelu nástrojů a začněte kreslit. Je přiřazeno výchozí ID příkazu tlačítka (ID_BUTTON\<n >).
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Přidání obrázku na panel nástrojů jako tlačítko
 
@@ -145,11 +145,11 @@ Tlačítko panelu nástrojů má následující vlastnosti:
    > [!NOTE]
    > Otevřete-li obrázek v aplikaci Visual Studio, otevře se v **editoru obrázků**. Můžete také otevřít obrázek v jiných grafických programech.
 
-1. Přejděte do nabídky **Upravit** > **kopii**.
+1. Přejděte do nabídky **upravit** > **Kopírovat**.
 
 1. Přepněte na panel nástrojů výběrem jeho karty v horní části okna zdroje.
 
-1. Přejděte do nabídky **Upravit** > **vložení**.
+1. Přejděte do nabídky **upravit** > **Vložit**.
 
    Obrázek se zobrazí na panelu nástrojů jako nové tlačítko.
 
@@ -183,19 +183,19 @@ V podokně **zobrazení panelu nástrojů** přetáhněte tlačítko, které chc
 
 1. Vyberte tlačítko panelu nástrojů.
 
-1. V [okně Vlastnosti](/visualstudio/ide/reference/properties-window)zadejte do pole **příkazového řádku** popis tlačítka pro stavový řádek a za zprávu přidejte a zadejte `\n` název popisu nástroje.
+1. V [okně Vlastnosti](/visualstudio/ide/reference/properties-window)přidejte do pole **příkazového řádku** popis tlačítka pro stavový řádek a za zprávu přidejte `\n` a název tipu nástroje.
 
 Například, chcete-li zobrazit popis tlačítka pro tlačítko **Tisk** v **programu WordPad**:
 
 1. Otevřete **WordPad**.
 
-1. Najeďte ukazatelem myši na tlačítko **tiskového** panelu nástrojů a Všimněte `Print` si, že je nyní plovoucí v rámci ukazatele myši.
+1. Najeďte ukazatelem myši na tlačítko **tiskového** panelu nástrojů a Všimněte si, že se teď slovo `Print` v ukazateli myši plovoucí.
 
-1. Podívejte se na stavový řádek v dolní části okna **programu WordPad** a Všimněte si, že nyní zobrazuje text `Prints the active document`.
+1. Podívejte se na stavový řádek v dolní části okna **programu WordPad** a Všimněte si, že se v něm nyní zobrazuje text `Prints the active document`.
 
-`Print`je název tipu nástroje a `Prints the active document` je popisem tlačítka pro stavový řádek.
+`Print` je název tipu nástroje a `Prints the active document` je popis tlačítka pro stavový řádek.
 
-Chcete-li tento efekt použít v **editoru panelu nástrojů**, nastavte vlastnost **prompt** na `Prints the active document\nPrint`hodnotu.
+Chcete-li tento efekt použít v **editoru panelu nástrojů**, nastavte vlastnost **Prompt** na hodnotu `Prints the active document\nPrint`.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -203,6 +203,6 @@ MFC nebo ATL
 
 ## <a name="see-also"></a>Viz také:
 
-[Nabídky editorů](../windows/resource-editors.md)
-prostředků[a další prostředky](/windows/win32/menurc/resources)<br/>
+[Editory prostředků](../windows/resource-editors.md)
+[nabídek a dalších prostředků](/windows/win32/menurc/resources)<br/>
 [Vlastnosti tlačítka panelu nástrojů](../windows/toolbar-button-properties.md)<br/>

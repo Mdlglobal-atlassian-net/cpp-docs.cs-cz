@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: GUID – hodnotová třída'
+title: Platform::Guid – hodnotová třída
 ms.date: 01/15/2019
 ms.topic: reference
 f1_keywords:
@@ -14,7 +14,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/02/2019
 ms.locfileid: "71816583"
 ---
-# <a name="platformguid-value-class"></a>Platform:: GUID – hodnotová třída
+# <a name="platformguid-value-class"></a>Platform::Guid – hodnotová třída
 
 Představuje typ [GUID](/previous-versions/cc317743(v%3dmsdn.10)) v systému prostředí Windows Runtimeho typu.
 
@@ -24,21 +24,21 @@ Představuje typ [GUID](/previous-versions/cc317743(v%3dmsdn.10)) v systému pro
 public value struct Guid
 ```
 
-### <a name="members"></a>Pedagog
+### <a name="members"></a>Members
 
-`Platform::Guid` má metody `Equals()`, `GetHashCode()` a `ToString()` odvozené z [třídy Platform:: Object](../cppcx/platform-object-class.md)a metodu `GetTypeCode()` odvozenou z [třídy Platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` má také následující členy.
+`Platform::Guid` má metody `Equals()`, `GetHashCode()`a `ToString()` odvozené z [třídy Platform:: Object](../cppcx/platform-object-class.md)a `GetTypeCode()` metody odvozené z [třídy Platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` mají také následující členy.
 
 |Člen|Popis|
 |------------|-----------------|
 |[Hlavních](#ctor)|Inicializuje novou instanci `Platform::Guid`.|
-|[operator = = – operátor](#operator-equality)|Operátor Equals|
-|[! = – operátor](#operator-inequality)|Operátor nerovnosti|
-|[operátor @ no__t-1](#operator-less)|Operátor menší než|
-|[operator () – operátor](#operator-call)|Převede `Platform::Guid` na `GUID`.|
+|[operator==](#operator-equality)|Operátor Equals|
+|[operator!=](#operator-inequality)|Operátor nerovnosti|
+|[operátor&lt;](#operator-less)|Operátor menší než|
+|[operator()](#operator-call)|Převede `Platform::Guid` na `GUID`.|
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li vygenerovat novou `Platform::Guid`, použijte statickou metodu [Windows:: Foundation:: GuidHelper:: CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) .
+Chcete-li vygenerovat nový `Platform::Guid`, použijte statickou metodu [Windows:: Foundation:: GuidHelper:: CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) .
 
 ### <a name="requirements"></a>Požadavky
 
@@ -81,31 +81,31 @@ Guid(
 
 ### <a name="parameters"></a>Parametry
 
-*určitého*<br/>
+*a*<br/>
 Prvních 4 bajtů `GUID`.
 
 *b*<br/>
 Dalších 2 bajtů `GUID`.
 
-*r*<br/>
+*c*<br/>
 Dalších 2 bajtů `GUID`.
 
-*trojrozměrné*<br/>
+*d*<br/>
 Další bajt `GUID`.
 
-*cerebrální*<br/>
+*e*<br/>
 Další bajt `GUID`.
 
-*FJ*<br/>
+*f*<br/>
 Další bajt `GUID`.
 
-*věcn*<br/>
+*g*<br/>
 Další bajt `GUID`.
 
-*y*<br/>
+*h*<br/>
 Další bajt `GUID`.
 
-*došlo*<br/>
+*i*<br/>
 Další bajt `GUID`.
 
 *j*<br/>
@@ -114,8 +114,8 @@ Další bajt `GUID`.
 *k*<br/>
 Další bajt `GUID`.
 
-*4m*<br/>
-@No__t-0 ve formě [struktury GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+*m*<br/>
+`GUID` ve formě [struktury GUID](/previous-versions/cc317743(v%3dmsdn.10)).
 
 *n*<br/>
 Zbývajících 8 bajtů `GUID`.
@@ -133,14 +133,14 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 ### <a name="parameters"></a>Parametry
 
 *guid1*<br/>
-První @no__t – 0 pro porovnání.
+První `Platform::Guid` k porovnání
 
 *guid2*<br/>
-Druhý `Platform::Guid` pro porovnání.
+Druhý `Platform::Guid` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-True, pokud jsou dvě instance `Platform::Guid` stejné.
+True, pokud jsou tyto dvě instance `Platform::Guid` stejné.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -159,16 +159,16 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 ### <a name="parameters"></a>Parametry
 
 *guid1*<br/>
-První @no__t – 0 pro porovnání.
+První `Platform::Guid` k porovnání
 
 *guid2*<br/>
-Druhý `Platform::Guid` pro porovnání.
+Druhý `Platform::Guid` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-True, pokud nejsou dvě instance `Platform::Guid` stejné.
+True, pokud se tyto dvě instance `Platform::Guid` neshodují.
 
-## <a name="operator-less"></a>GUID:: operator @ no__t-1 – operátor
+## <a name="operator-less"></a>GUID:: operator&lt; – operátor
 
 Porovná dvě instance `Platform::Guid` pro řazení.
 
@@ -181,16 +181,16 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 ### <a name="parameters"></a>Parametry
 
 *guid1*<br/>
-První @no__t – 0 pro porovnání.
+První `Platform::Guid` k porovnání
 
 *guid2*<br/>
-Druhý `Platform::Guid` pro porovnání.
+Druhý `Platform::Guid` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-True, pokud je *guid1* seřazen před *guid2*. Řazení je lexikografickým pořadím po každém `Platform::Guid`, jako by to bylo pole 4 32 nepodepsaných hodnot. Toto není řazení, které používá SQL Server nebo .NET Framework, ani to stejné jako řazení lexicographical podle řetězcové reprezentace.
+True, pokud je *guid1* seřazen před *guid2*. Řazení je lexikografickým pořadím, když se každý `Platform::Guid` zpracuje, jako by to bylo pole 4 32 nepodepsaných hodnot. Toto není řazení, které používá SQL Server nebo .NET Framework, ani to stejné jako řazení lexicographical podle řetězcové reprezentace.
 
-Tento operátor je k dispozici, aby bylo možné objekty `Guid` snáze spotřebovat C++ standardní knihovnou.
+Tento operátor je k dispozici, aby bylo možné `Guid` objekty snadněji využívané C++ standardní knihovnou.
 
 ## <a name="operator-call"></a>GUID:: operator () – operátor
 
@@ -206,6 +206,6 @@ const GUID& Platform::Guid::operator();
 
 [Struktura identifikátoru GUID](/previous-versions/cc317743(v%3dmsdn.10)).
 
-## <a name="see-also"></a>Další informace najdete v tématech
+## <a name="see-also"></a>Viz také:
 
-[Obor názvů platformy](../cppcx/platform-namespace-c-cx.md)
+[Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

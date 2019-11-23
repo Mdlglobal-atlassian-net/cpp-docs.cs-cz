@@ -69,7 +69,7 @@ C++propagační akce jsou "zachování hodnoty", jako hodnota po povýšení, kt
 
 Povýšení typu zachovávající hodnotu a povýšení typu, která normálně zachovávají znaménko, vrátí stejné výsledky. Můžou ale způsobit různé výsledky, pokud se propagovaný objekt zobrazí jako:
 
-- Operand `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` nebo `>=`
+- Operand `/`, `%`, `/=`, `%=`, `<`, `<=`, `>`nebo `>=`
 
    Tyto operátory spoléhají pro stanovení výsledku na znaménko. Zachování hodnot a zachovávání nabídek při použití na tyto operandy vytváří různé výsledky.
 
@@ -101,7 +101,7 @@ int main()
 // Output: 65533
 ```
 
-V předchozím příkladu je **podepsaná short**, `i`, definována a inicializována na záporné číslo. Výraz `(u = i)` způsobí, že `i` bude před přiřazením `u` převedeno na **znaménko short** .
+V předchozím příkladu je **znaménko short**, `i`, definováno a inicializováno na záporné číslo. Výraz `(u = i)` způsobí, že `i` převést na **znaménko short** před přiřazením `u`.
 
 ### <a name="unsigned-to-signed"></a>Nepodepsané na signed
 
@@ -121,13 +121,13 @@ cout << (i = u) << "\n";
 //Output: -3
 ```
 
-V předchozím příkladu je `u` **nepodepsaný krátkým** integrálním objektem, který musí být převeden na znaménko pro vyhodnocení výrazu `(i = u)`. Vzhledem k tomu, že jeho hodnota nemůže být správně reprezentovaná v **signed short**, data jsou nesprávně interpretována, jak je znázorněno.
+V předchozím příkladu `u` je **nepodepsaný krátký** integrálový objekt, který musí být převeden na znaménko množství pro vyhodnocení `(i = u)`výrazů. Vzhledem k tomu, že jeho hodnota nemůže být správně reprezentovaná v **signed short**, data jsou nesprávně interpretována, jak je znázorněno.
 
 ## <a name="floating-point-conversions"></a>Převody s plovoucí desetinnou čárkou
 
 Objekt typu s plovoucí desetinnou čárkou lze bezpečně převést na přesnější typ s plovoucí desetinnou čárkou, to znamená, že převod nezpůsobí ztrátu významu. Například převod z **float** na **Double** nebo z **Double** na **Long Double** je bezpečný a hodnota je beze změny.
 
-Objekt plovoucího typu lze také převést na méně přesný typ, pokud je v rozsahu, který je reprezentován tímto typem. (Viz [omezení plovoucí](../cpp/floating-limits.md) pro rozsahy plovoucích typů.) Pokud původní hodnota není reprezentována přesně, může být převedena na další vyšší nebo na další nižší reprezentovatelné hodnoty. Výsledek není definován, pokud taková hodnota neexistuje. Vezměte v úvahu následující příklad:
+Objekt plovoucího typu lze také převést na méně přesný typ, pokud je v rozsahu, který je reprezentován tímto typem. (Viz [omezení plovoucí](../cpp/floating-limits.md) pro rozsahy plovoucích typů.) Pokud původní hodnota není reprezentována přesně, může být převedena na další vyšší nebo na další nižší reprezentovatelné hodnoty. Výsledek není definován, pokud taková hodnota neexistuje. Vezměte v úvahu v následujícím příkladu:
 
 ```cpp
 cout << (float)1E300 << endl;
@@ -173,9 +173,9 @@ int main() {
 }
 ```
 
-První příkaz v předchozím příkladu znázorňuje násobení dvou celočíselných typů, `iVal` a `ulVal`. Podmínka splněná je v tom, že ani operand není typu float, a jeden operand je typu **unsigned int**. Proto je druhý operand `iVal` převeden na typ **int unsigned**. Výsledek se pak přiřadí `dVal`. Podmínka, která je zde splněna, je, že jeden operand je typu **Double**, takže výsledek násobení **unsigned int** je převeden na typ **Double**.
+První příkaz v předchozím příkladu znázorňuje násobení dvou celočíselných typů, `iVal` a `ulVal`. Podmínka splněná je v tom, že ani operand není typu float, a jeden operand je typu **unsigned int**. Druhý operand, `iVal`, je tedy převeden na typ **unsigned int**. Výsledek se pak přiřadí `dVal`. Podmínka, která je zde splněna, je, že jeden operand je typu **Double**, takže výsledek násobení **unsigned int** je převeden na typ **Double**.
 
-Druhý příkaz v předchozím příkladu ukazuje přidání typu **float** a integrálního typu: `fVal` a `ulVal`. Proměnná `ulVal` je převedena na typ **float** (třetí podmínka v tabulce). Výsledek sčítání je převeden na typ **Double** (druhá podmínka v tabulce) a přiřazený k `dVal`.
+Druhý příkaz v předchozím příkladu ukazuje přidání typu **float** a integrálního typu: `fVal` a `ulVal`. Proměnná `ulVal` je převedena na typ **float** (třetí podmínka v tabulce). Výsledek sčítání je převeden na typ **Double** (druhá podmínka v tabulce) a přiřazeno k `dVal`.
 
 ## <a name="pointer-conversions"></a>Převody ukazatele
 
@@ -194,23 +194,23 @@ Graf dědičnosti pro ilustraci usnadnění základní třídy
 
 Následující tabulka ukazuje přístupnost základní třídy pro situaci, která je znázorněna na obrázku.
 
-|Typ funkce|Odvození|Převod z<br /><br /> B * na hodnotu @ no__t-0 právní?|
+|Typ funkce|Odvození|Převod z<br /><br /> B * do\* legální?|
 |----------------------|----------------|-------------------------------------------|
 |Externí funkce (není v oboru tříd)|Soukromé|Ne|
-||Chráněno|Ne|
+||chráněný|Ne|
 ||Public|Ano|
 |B – členská funkce (v oboru B)|Soukromé|Ano|
-||Chráněno|Ano|
+||chráněný|Ano|
 ||Public|Ano|
 |Členská funkce jazyka c (v oboru C)|Soukromé|Ne|
-||Chráněno|Ano|
+||chráněný|Ano|
 ||Public|Ano|
 
 Druhý případ, ve kterém může být ukazatel na třídu převeden na ukazatel na základní třídu, je při použití explicitní konverze typu. Další informace o explicitních převodech typů naleznete v tématu [operátor převodu explicitního typu](explicit-type-conversion-operator-parens.md).
 
 Výsledek takového převodu je ukazatel na *podobjekt*, část objektu, která je zcela popsána základní třídou.
 
-Následující kód definuje dvě třídy, `A` a `B`, kde `B` je odvozeno od `A`. (Další informace o dědičnosti naleznete v tématu [odvozené třídy](../cpp/inheritance-cpp.md).) Pak definuje `bObject`, objekt typu `B` a dva ukazatele (`pA` a `pB`), které odkazují na objekt.
+Následující kód definuje dvě třídy, `A` a `B`, kde `B` je odvozeno od `A`. (Další informace o dědičnosti naleznete v tématu [odvozené třídy](../cpp/inheritance-cpp.md).) Pak definuje `bObject`, objekt typu `B`a dva ukazatele (`pA` a `pB`), které odkazují na objekt.
 
 ```cpp
 // C2039 expected
@@ -239,7 +239,7 @@ int main()
 }
 ```
 
-Ukazatel `pA` je typu `A *`, který lze interpretovat jako "ukazatel na objekt typu `A`". Členy `bObject` (například `BComponent` a `BMemberFunc`) jsou jedinečné pro typ `B` a jsou proto nepřístupné prostřednictvím `pA`. Ukazatel `pA` umožňuje přístup pouze k těmto vlastnostem (členské funkce a data) objektu, který je definován ve třídě `A`.
+Ukazatel `pA` je typu `A *`, který může být interpretován jako "ukazatel na objekt typu `A`." Členové `bObject` (například `BComponent` a `BMemberFunc`) jsou jedinečné pro typ `B` a jsou proto nepřístupné prostřednictvím `pA`. Ukazatel `pA` umožňuje přístup pouze k těmto charakteristikám (členské funkce a data) objektu, které jsou definovány ve třídě `A`.
 
 ### <a name="pointer-to-function"></a>Ukazatel na funkci
 

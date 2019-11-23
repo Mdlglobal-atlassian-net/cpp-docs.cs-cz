@@ -44,7 +44,7 @@ K určení některých možností linkeru můžete použít direktivu pragma [Ko
 |[/ALLOWBIND](allowbind-prevent-dll-binding.md)|Určuje, že knihovna DLL nemůže být vázaná.|
 |[/ALLOWISOLATION](allowisolation-manifest-lookup.md)|Určuje chování při vyhledávání manifestu.|
 |[/APPCONTAINER](appcontainer-windows-store-app.md)|Určuje, jestli aplikace musí běžet v prostředí procesu kontejneru AppContainer.|
-|[/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)|Přidá <xref:System.Diagnostics.DebuggableAttribute> ke spravované imagi.|
+|[/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)|Přidá <xref:System.Diagnostics.DebuggableAttribute> do spravované image.|
 |[/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)|Vytvoří odkaz na spravovaný prostředek.|
 |[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)|Určuje, že modul jazyka MSIL (Microsoft Intermediate Language) by měl být importován do sestavení.|
 |[/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)|Vloží spravovaný soubor prostředků do sestavení.|
@@ -141,5 +141,5 @@ K určení některých možností linkeru můžete použít direktivu pragma [Ko
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční @no__tC++ C/sestavení](c-cpp-building-reference.md)– 2
+[C/C++ sestavit\ odkazu](c-cpp-building-reference.md)
 [Referenční zdroje k linkeru MSVC](linking.md)

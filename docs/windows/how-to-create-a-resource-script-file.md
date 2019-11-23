@@ -109,7 +109,7 @@ Prostředek můžete vytvořit jako nový výchozí prostředek, což znamená p
 Použijte okno **prostředky** k zobrazení souborů prostředků obsažených ve vašich projektech. Rozbalením horní složky, například *Project1. RC*, se zobrazí typy prostředků v tomto souboru. Rozbalením jednotlivých typů prostředků zobrazíte jednotlivé prostředky daného typu.
 
 > [!TIP]
-> Chcete-li otevřít okno **prostředky** , přejděte do nabídky **zobrazení** > **ostatní systémy Windows** > **prostředky** nebo stiskněte klávesovou **zkratku CTRL**+**SHIFT**+**E**.
+> Chcete-li otevřít okno **prostředky** , přejděte do nabídky **zobrazení** > **Další Windows** > **prostředky** nebo stiskněte klávesu **CTRL**+**SHIFT**+**E**.
 
 Můžete také kliknout pravým tlačítkem myši na okno **prostředky** a spustit místní nabídku příkazů nebo dvakrát kliknout na záhlaví a uvolnit okno. Klikněte pravým tlačítkem myši na záhlaví příkazů pro příkazy, které řídí chování okna. Další informace najdete v tématu [Správa systému Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
@@ -117,19 +117,19 @@ Můžete také kliknout pravým tlačítkem myši na okno **prostředky** a spus
 
 | Vlastnost | Popis |
 |---|---|
-| **Typ prostředku** | Zadejte druh prostředku, který chcete vytvořit.<br/><br/>Můžete rozbalit kategorie prostředků kurzoru a dialogového okna a odhalit další prostředky, které jsou umístěny v *. \Microsoft Visual Studio \<version @ no__t-2\VC\VCResourceTemplates @ no__t-3 < LCID @ no__t-4\mfc.RCT*. Pokud potřebujete přidat soubory. RCT, umístěte je sem nebo zadejte jinou [cestu zahrnutí](../windows/how-to-specify-include-directories-for-resources.md). Zdroje zobrazené na nejvyšší úrovni v ovládacím prvku strom jsou výchozí prostředky, které nabízí Visual Studio. Prostředky v souborech. RCT se zobrazí na druhé úrovni v příslušné kategorii. Není k dispozici žádný přednastavený limit počtu souborů. RCT, které můžete přidat.<br/><br/> |
-| **New** | Vytvořte prostředek na základě typu vybraného v poli **typ prostředku** a otevřete prostředek v příslušném editoru.<br/><br/>Například pokud vytvoříte prostředek dialogového okna, otevře se prostředek v [editoru dialogových oken](../windows/dialog-editor.md). |
-| **Importovat** | Otevřete dialogové okno **importovat** a přejděte k prostředku, který chcete importovat do aktuálního projektu.<br/><br/>Můžete importovat rastrový obrázek, ikonu, kurzor, HTML, zvuk (. WAV) nebo vlastní soubor prostředků. |
-| **Uživatelská** | Otevřete dialogové okno **Nový vlastní prostředek** a vytvořte vlastní prostředek.<br/><br/>Obsahuje také vlastnost **typ prostředku** , která poskytuje textové pole pro zadání názvu vlastního typu prostředku. Při C++ ukončení se vizuál automaticky převede na velká písmena. Vlastní prostředky se upravují jenom v [binárním editoru](../windows/binary-editor.md). |
+| **Typ prostředku** | Zadejte druh prostředku, který chcete vytvořit.<br/><br/>Můžete rozbalit kategorie prostředků kurzoru a dialogového okna a odhalit další prostředky, které jsou umístěny v *. \Microsoft Visual Studio \<verze\>\VC\VCResourceTemplates\\< LCID\>\mfc.RCT*. Pokud potřebujete přidat soubory. RCT, umístěte je sem nebo zadejte jinou [cestu zahrnutí](../windows/how-to-specify-include-directories-for-resources.md). Zdroje zobrazené na nejvyšší úrovni v ovládacím prvku strom jsou výchozí prostředky, které nabízí Visual Studio. Prostředky v souborech. RCT se zobrazí na druhé úrovni v příslušné kategorii. Není k dispozici žádný přednastavený limit počtu souborů. RCT, které můžete přidat.<br/><br/> |
+| **Nové** | Vytvořte prostředek na základě typu vybraného v poli **typ prostředku** a otevřete prostředek v příslušném editoru.<br/><br/>Například pokud vytvoříte prostředek dialogového okna, otevře se prostředek v [editoru dialogových oken](../windows/dialog-editor.md). |
+| **Import** | Otevřete dialogové okno **importovat** a přejděte k prostředku, který chcete importovat do aktuálního projektu.<br/><br/>Můžete importovat rastrový obrázek, ikonu, kurzor, HTML, zvuk (. WAV) nebo vlastní soubor prostředků. |
+| **Vlastní** | Otevřete dialogové okno **Nový vlastní prostředek** a vytvořte vlastní prostředek.<br/><br/>Obsahuje také vlastnost **typ prostředku** , která poskytuje textové pole pro zadání názvu vlastního typu prostředku. Při C++ ukončení se vizuál automaticky převede na velká písmena. Vlastní prostředky se upravují jenom v [binárním editoru](../windows/binary-editor.md). |
 
 Když vytvoříte nový prostředek, přiřadí vám C++ vizuál jedinečný název, například `IDD_Dialog1`. Toto ID prostředku můžete upravit úpravou vlastností prostředku, a to buď v přidruženém editoru prostředků, nebo v [okno Vlastnosti](/visualstudio/ide/reference/properties-window).
 
 > [!NOTE]
-> Nezadávejte název prostředku nebo ID, které jsou rezervované v rámci sady Visual Studio. Rezervované názvy jsou `DESIGNINFO`, `HWB` a `TEXTINCLUDE` a rezervované ID je `255`.
+> Nezadávejte název prostředku nebo ID, které jsou rezervované v rámci sady Visual Studio. Rezervované názvy jsou `DESIGNINFO`, `HWB`a `TEXTINCLUDE`a rezervované ID `255`.
 
 ### <a name="to-create-a-resource"></a>Vytvoření prostředku
 
-- V **prostředky**vyberte soubor. RC, pak použijte **Edit** > **Přidat prostředek** a zvolte typ prostředku, který chcete přidat do projektu.
+- V **prostředky**vyberte soubor. RC a pak použijte **Upravit** > **Přidat prostředek** a zvolte typ prostředku, který chcete přidat do projektu.
 
    > [!TIP]
    > Můžete také kliknout pravým tlačítkem na soubor. rc v **prostředky** a zvolit **Přidat prostředek** z místní nabídky.
@@ -141,7 +141,7 @@ Když vytvoříte nový prostředek, přiřadí vám C++ vizuál jedinečný ná
 
 - V [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code)klikněte pravým tlačítkem myši na třídu, vyberte **Přidat** > **Přidat prostředek** a zvolte typ prostředku, který chcete přidat do projektu.
 
-- Použijte **projekt**nabídky  > **Přidat prostředek**.
+- Použijte **projekt** nabídky > **Přidat prostředek**.
 
 ## <a name="use-resource-templates"></a>Použití šablon prostředků
 
@@ -153,9 +153,9 @@ Po přizpůsobení šablony prostředku uložte změny do složky šablony nebo 
 > Editor prostředků automaticky poskytuje jedinečné ID prostředku. Podle potřeby můžete upravit [vlastnosti prostředku](../windows/changing-the-properties-of-a-resource.md) .
 
 > [!NOTE]
-> Soubory šablon konkrétního jazyka umístěte do podadresářů hlavního adresáře šablon. Například soubory šablon jenom v angličtině jdou do *. \\ < adresář šablony prostředků @ no__t-2\1033*.
+> Soubory šablon konkrétního jazyka umístěte do podadresářů hlavního adresáře šablon. Například soubory šablon jenom v angličtině jdou do *složky..\\< adresář šablon prostředků\>\ 1033*.
 >
-> Visual Studio vyhledá nové soubory. RCT ve složce *\Program Files\Microsoft Visual Studio \<version @ no__t-2\VC\VCResourceTemplates*, *\Program Files\Microsoft Visual Studio \<version > \VC\VCResourceTemplates @ no__t-5 < LCID @ no__t-6* (jako je LCID 1033 pro angličtinu) nebo kdekoli v [cestě include](../windows/how-to-specify-include-directories-for-resources.md). Pokud upřednostňujete ukládání souborů. RCT do jiného umístění, musíte do cesty include přidat umístění.
+> Visual Studio vyhledá nové soubory. RCT ve složce *\Program Files\Microsoft Visual Studio \<verze\>\VC\VCResourceTemplates*, *\Program Files\Microsoft Visual Studio \<verze > \VC\VCRESOURCETEMPLATES\\< LCID\>* (například LCID 1033 pro angličtinu) nebo kdekoli v [cestě include](../windows/how-to-specify-include-directories-for-resources.md). Pokud upřednostňujete ukládání souborů. RCT do jiného umístění, musíte do cesty include přidat umístění.
 
 ### <a name="to-create-and-use-a-resource-template"></a>Vytvoření a použití šablony prostředků
 
@@ -173,7 +173,7 @@ Po přizpůsobení šablony prostředku uložte změny do složky šablony nebo 
 
 1. V podokně **prostředky** klikněte pravým tlačítkem na soubor *. RC* a vyberte **Přidat prostředek**.
 
-1. Vyberte znaménko plus ( **+** ) vedle prostředku a rozbalte uzel prostředku a zobrazte šablony, které jsou pro daný prostředek k dispozici.
+1. Vyberte znaménko plus ( **+** ) vedle prostředku a rozbalte tak uzel prostředku a zobrazte šablony, které jsou pro daný prostředek k dispozici.
 
 1. Dvakrát klikněte na šablonu, kterou chcete použít.
 
@@ -181,7 +181,7 @@ Po přizpůsobení šablony prostředku uložte změny do složky šablony nebo 
 
 ### <a name="to-convert-an-existing-resource-file-to-a-template"></a>Převod existujícího souboru prostředků na šablonu
 
-V otevřeném souboru skriptu prostředků přejděte v nabídce na **soubor** > **uložit*název*souboru \< > jako**. Zadejte umístění a zvolte **OK**.
+V otevřeném souboru skriptu prostředků přejděte v nabídce na **soubor** > **uložit \<*filename*> jako**. Zadejte umístění a zvolte **OK**.
 
 ## <a name="requirements"></a>Požadavky
 

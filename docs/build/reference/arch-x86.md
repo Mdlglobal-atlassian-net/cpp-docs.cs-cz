@@ -1,5 +1,5 @@
 ---
-title: /Arch (x86)
+title: /arch (x86)
 ms.date: 10/01/2019
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
 ms.openlocfilehash: b1e5501f6edd3eb016395380ff476250c0c388b9
@@ -9,7 +9,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/02/2019
 ms.locfileid: "71816320"
 ---
-# <a name="arch-x86"></a>/Arch (x86)
+# <a name="arch-x86"></a>/arch (x86)
 
 Určuje architekturu pro generování kódu v x86. Viz také [/arch (x64)](arch-x64.md) a [/arch (ARM)](arch-arm.md).
 
@@ -19,7 +19,7 @@ Určuje architekturu pro generování kódu v x86. Viz také [/arch (x64)](arch-
 /arch:[IA32|SSE|SSE2|AVX|AVX2|AVX512]
 ```
 
-## <a name="arguments"></a>Argumenty
+## <a name="arguments"></a>Arguments
 
 **/arch: IA32**<br/>
 Neurčuje žádné rozšířené instrukce a také určuje x87 pro výpočty s plovoucí desetinnou čárkou.
@@ -41,7 +41,7 @@ Povolí použití instrukcí Intel Advanced Vector Extensions 512.
 
 ## <a name="remarks"></a>Poznámky
 
-Možnost **/arch** povolí nebo zakáže použití některých rozšíření sady instrukcí, zejména pro výpočet vektoru, který je dostupný v procesorech od platforem Intel a AMD. Obecně platí, že další rozšíření pro procesory můžou podporovat starší procesory, i když byste měli požádat o konkrétní procesor nebo test podpory rozšíření pro instrukční sady pomocí [__. CPUID](../../intrinsics/cpuid-cpuidex.md) před spuštěním kódu pomocí rozšíření sady instrukcí.
+Možnost **/arch** povolí nebo zakáže použití některých rozšíření sady instrukcí, zejména pro výpočet vektoru, který je dostupný v procesorech od platforem Intel a AMD. Obecně platí, že další rozšíření pro procesory mohou podporovat starší procesory, i když byste měli v dokumentaci pro určitý procesor nebo test podpory rozšíření sady instrukcí použít [__cpuid](../../intrinsics/cpuid-cpuidex.md) před spuštěním kódu pomocí rozšíření sady instrukcí.
 
 **/arch** má vliv jenom na generování kódu pro nativní funkce. Když použijete [/CLR](clr-common-language-runtime-compilation.md) ke kompilaci, nemá **/arch** žádný vliv na generování kódu pro spravované funkce.
 
@@ -63,7 +63,7 @@ Optimalizátor vybírá, kdy a jak používat instrukce Vector v závislosti na 
 
 Kromě vektorových instrukcí a skalárních instrukcí s plovoucí desetinnou čárkou může každá možnost **/arch** povolit také použití dalších nevektorových instrukcí, které jsou přidruženy k této možnosti. Příkladem je rodina instrukcí CMOVcc, která se dřív objevila na procesorech Intel Pentium pro. Vzhledem k tomu, že instrukce SSE byly představeny s následným procesorem Intel Pentium III, mohou být vygenerovány pokyny CMOVcc s výjimkou případů, kdy je určena **/arch:**
 
-Operace s plovoucí desetinnou čárkou jsou obvykle zaokrouhleny na dvojitou přesnost (64 bitů) v kódu x87, ale můžete použít `_controlfp` pro úpravu ovládacího prvku FP, včetně nastavení přesnosti ovládacího prvku na rozšířenou přesnost (80 bitů) nebo jednoduchou přesnost (32-bit). Další informace najdete v tématu [_control87, _controlfp @no__t -1 _control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). SSE a AVX mají pro každou operaci samostatné pokyny pro jednoduchou přesnost a dvojitou přesnost, takže neexistuje žádný ekvivalent pro kód SSE/AVX. To může změnit způsob zaoblení výsledků, pokud je výsledek operace s plovoucí desetinnou čárkou použit přímo v dalším výpočtu namísto přiřazení k uživatelské proměnné. Zvažte použití těchto zdrojů:
+Operace s plovoucí desetinnou čárkou jsou obvykle zaokrouhleny na dvojitou přesnost (64 bitů) v kódu x87, ale můžete použít `_controlfp` pro úpravu ovládacího prvku FP, včetně nastavení přesnosti ovládacího prvku na rozšířenou přesnost (80-bit) nebo s jednoduchou přesností (32-bit). Další informace najdete v tématu [_control87, _controlfp \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). SSE a AVX mají pro každou operaci samostatné pokyny pro jednoduchou přesnost a dvojitou přesnost, takže neexistuje žádný ekvivalent pro kód SSE/AVX. To může změnit způsob zaoblení výsledků, pokud je výsledek operace s plovoucí desetinnou čárkou použit přímo v dalším výpočtu namísto přiřazení k uživatelské proměnné. Zvažte použití těchto zdrojů:
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -89,7 +89,7 @@ int convert_double_to_int(double x) {
 }
 ```
 
-Makra `_M_IX86_FP`, `__AVX__`, `__AVX2__`, `__AVX512F__`, `__AVX512CD__`, `__AVX512BW__`, `__AVX512DQ__` a `__AVX512VL__` označují, zda byla použita možnost kompilátoru **/arch** . Další informace najdete v tématu [Předdefinovaná makra](../../preprocessor/predefined-macros.md). Byla představena možnost **/arch: AVX2** a makro `__AVX2__` v Visual Studio 2013 Update 2 verze 12.0.34567.1. Omezená podpora pro **/arch: AVX512** se přidala do sady visual Studio 2017 a rozšířila se v aplikaci visual Studio 2019.
+Makra `_M_IX86_FP`, `__AVX__`, `__AVX2__`, `__AVX512F__`, `__AVX512CD__`, `__AVX512BW__`, `__AVX512DQ__` a `__AVX512VL__` označují, která z možností kompilátoru **/arch** byly použity. Další informace najdete v tématu [Předdefinovaná makra](../../preprocessor/predefined-macros.md). Možnost **/arch: AVX2** a makro `__AVX2__` byly představeny v Visual Studio 2013 Update 2 verze 12.0.34567.1. Omezená podpora pro **/arch: AVX512** se přidala do sady visual Studio 2017 a rozšířila se v aplikaci visual Studio 2019.
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-avx512-ia32-sse-or-sse2-in-visual-studio"></a>Nastavení této možnosti kompilátoru pro AVX, AVX2, AVX512, IA32, SSE nebo SSE2 v sadě Visual Studio
 
@@ -101,12 +101,12 @@ Makra `_M_IX86_FP`, `__AVX__`, `__AVX2__`, `__AVX512F__`, `__AVX512CD__`, `__AVX
 
 1. Upravte vlastnost **Povolit rozšířenou sadu instrukcí** .
 
-### <a name="to-set-this-compiler-option-programmatically"></a>Chcete-li nastavit tuto možnost kompilátoru programově
+### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
 
-## <a name="see-also"></a>Další informace najdete v tématech
+## <a name="see-also"></a>Viz také:
 
-[/Arch (minimální architektura procesoru)](arch-minimum-cpu-architecture.md)<br/>
-[Možnosti kompilátoru MSVC](compiler-options.md)<br/>
+[/arch (minimální architektura procesoru)](arch-minimum-cpu-architecture.md)<br/>
+[Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

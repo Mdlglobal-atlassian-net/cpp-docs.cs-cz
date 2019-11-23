@@ -44,7 +44,7 @@ Vhodný Editor se automaticky otevře při vytváření nebo otevírání prost�
 |[Editor dialogových oken](../windows/dialog-editor.md)|Dialogová okna v projektech C++ sady Visual Studio.|
 |[Editor obrázků](../windows/image-editor-for-icons.md)|Rastrové obrázky, ikony, kurzory a další soubory obrázků v projektech C++visual, Visual Basic nebo Visual C# .|
 |[Editor nabídek](../windows/menu-editor.md)|Prostředky nabídky v projektech sady C++ Visual Studio.|
-|[Editor pásu karet](../mfc/ribbon-designer-mfc.md)|Prostředky pásu karet v projektech MFC.|
+|[Ribbon Editor](../mfc/ribbon-designer-mfc.md)|Prostředky pásu karet v projektech MFC.|
 |[Editor řetězce](../windows/string-editor.md)|Tabulky řetězců v projektech sady C++ Visual Studio.|
 |[Editor panelu nástrojů](../windows/toolbar-editor.md)|Prostředky panelu nástrojů v projektech C++ sady Visual Studio. **Editor panelu nástrojů** je součástí **editoru obrázků**.|
 |[Editor informací o verzi](../windows/version-information-editor.md)|Informace o verzi v projektech C++ sady Visual Studio.|
@@ -73,7 +73,7 @@ K prostředkům Win32 získáte přístup v podokně [prostředky](how-to-create
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Zobrazení prostředku Win32 v editoru prostředků
 
-1. Přejít na **zobrazení**nabídky  > **ostatní Windows** > **prostředky**.
+1. Přejít na **zobrazení** nabídky > **jiných** > Windows **prostředky**.
 
 1. Pokud okno **prostředky** není horním největším oknem, vyberte kartu **prostředky** a přeneste ji do horní části.
 
@@ -118,7 +118,7 @@ Následující zdroje neposkytují vizuální náhled: akcelerátor, manifest, t
 1. V [okno Vlastnosti](/visualstudio/ide/reference/properties-window)vyberte tlačítko **stránky vlastností** .
 
    > [!TIP]
-   > Použijte zástupce, přejděte do nabídky **zobrazení**@no__t**stránky vlastností**-1.
+   > Použijte zástupce, přejděte do nabídky **zobrazení** > **stránky vlastností**.
 
    Otevře se stránka **vlastností** prostředku se zobrazením náhledu tohoto prostředku. Pomocí kláves se šipkami **nahoru** a **dolů** můžete procházet stromové ovládací prvky v **prostředky** nebo v okně dokumentu. Stránka **vlastností** zůstane otevřená a zobrazí všechny prostředky, které mají fokus a můžou se zobrazit v náhledu.
 

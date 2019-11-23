@@ -34,7 +34,7 @@ ms.locfileid: "72445026"
 
 **Editor dialogového okna** umožňuje vytvořit nebo upravit prostředky dialogového okna.
 
-- Editor otevřete tak, že dvakrát kliknete na soubor. RC dialogového okna v okně **prostředky** nebo přejdete do nabídky **zobrazení** > **ostatní Windows** > **prostředky**.
+- Chcete-li otevřít Editor, dvakrát klikněte na soubor. RC dialogového okna v okně **prostředky** nebo přejděte na **zobrazení** nabídky > **Další Windows** > **prostředky**.
 
 Jedním z prvních kroků při vytváření nového dialogového okna nebo šablony dialogového okna je přidání ovládacích prvků. V **editoru dialogového okna**můžete uspořádat ovládací prvky tak, aby odpovídaly určité velikosti, tvaru nebo zarovnání, nebo je můžete v dialogovém okně pracovat. Rovněž lze ovládací prvky snadno odstranit.
 
@@ -65,9 +65,9 @@ Panel nástrojů **editoru dialogového okna** obsahuje tlačítka pro uspořád
 |![Tlačítko svislého středu](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Svislé|![Tlačítko pro přepnutí mřížky](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Přepnout mřížku|
 |![Tlačítko vodorovně na střed](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontální|![Tlačítko Přepnout vodítka](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Přepnout vodítka|
 
-- Chcete-li zobrazit nebo skrýt panel nástrojů **editoru dialogového okna** , přejděte do nabídky **zobrazení** > **panely nástrojů** >  –**Editor dialogových oken**.
+- Chcete-li zobrazit nebo skrýt panel nástrojů **editoru dialogového okna** , přejděte do nabídky **zobrazení** > **panely nástrojů** > **editoru dialogových oken**.
 
-Otevřete-li **Editor dialogového okna** v C++ projektu, panel nástrojů **editoru dialogového okna** se automaticky zobrazí v horní části řešení, ale pokud explicitně zavřete panel nástrojů, budete ho muset vyvolat při příštím otevření **dialogového okna Editor.** . Zobrazení můžete přepnout tak, že ho vyberete ze seznamu dostupných panelů nástrojů a oken.
+Otevřete-li **Editor dialogového okna** v C++ projektu, panel nástrojů **editoru dialogového okna** se automaticky zobrazí v horní části řešení, ale pokud explicitně zavřete panel nástrojů, budete ho muset vyvolat při příštím otevření **dialogového okna Editor**. Zobrazení můžete přepnout tak, že ho vyberete ze seznamu dostupných panelů nástrojů a oken.
 
 ## <a name="switch-between-dialog-box-controls-and-code"></a>Přepínání mezi ovládacími prvky dialogového okna a kódem
 
@@ -96,27 +96,27 @@ Níže jsou uvedeny výchozí klávesy akcelerátoru pro příkazy **editoru dia
 |-------------|----------|-----------------|
 |Format.AlignBottoms|**Ctrl** + **SHIFT** + **šipka dolů**|Zarovnává spodní okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
 |Format.AlignCenters|**Shift** + **F9**|Zarovnává svislé středy vybraných ovládacích prvků s dominantním ovládacím prvkem.|
-|Format.AlignLefts|**Ctrl** + **SHIFT** + **šipka doleva**|Zarovná levé okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
-|Format.AlignMiddles|**Vede**|Zarovná Vodorovné středy vybraných ovládacích prvků s dominantním ovládacím prvkem.|
+|Format.AlignLefts|**Ctrl** + **SHIFT** + **šipka vlevo**|Zarovná levé okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
+|Format.AlignMiddles|**F9**|Zarovná Vodorovné středy vybraných ovládacích prvků s dominantním ovládacím prvkem.|
 |Format.AlignRights|**Ctrl** + **SHIFT** + **šipka doprava**|Zarovná pravé hrany vybraných ovládacích prvků s dominantním ovládacím prvkem.|
 |Format.AlignTops|**Ctrl** + **SHIFT** + **šipka nahoru**|Zarovná horní okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
 |Format.ButtonBottom|**Ctrl** + **B**|Umístí vybraná tlačítka podél dolního středu dialogového okna.|
 |Format.ButtonRight|**Ctrl** + **R**|Umístí vybraná tlačítka do pravého horního rohu dialogového okna.|
-|Format.CenterHorizontal|**Ctrl** + **SHIFT** + **F9**|Nacentruje ovládací prvky v dialogovém okně vodorovně.|
-|Format.CenterVertical|**Ctrl** + **F9**|Nacentruje ovládací prvky v dialogovém okně svisle.|
+|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|Nacentruje ovládací prvky v dialogovém okně vodorovně.|
+|Format.CenterVertical|**CTRL** + **F9**|Nacentruje ovládací prvky v dialogovém okně svisle.|
 |Format.CheckMnemonics|**Ctrl** + **M**|Kontroluje jedinečnost symbolických instrukcí.|
 |Format. SizeToContent|**Shift** + **F7**|Změní velikost vybraných ovládacích prvků tak, aby odpovídaly textu titulku.|
 |Format.SpaceAcross|**Alt** + **šipka vlevo**|Rovnoměrně rozmístit vybrané ovládací prvky vodorovně.|
 |Format.SpaceDown|**Alt** + **šipka dolů**|Vybrané ovládací prvky se rovnoměrně rozmístí svisle.|
 |Format.TabOrder|**Ctrl** + **D**|Nastaví pořadí ovládacích prvků v dialogovém okně.|
-|Format.TestDialog|**Ctrl** + **t**|Spustí dialogové okno pro otestování vzhledu a chování.|
+|Format.TestDialog|**Ctrl** + **T**|Spustí dialogové okno pro otestování vzhledu a chování.|
 |Format.ToggleGuides|**Ctrl** + **G**|Cykly mezi žádnou mřížkou, pokyny a mřížkou pro úpravy dialogu.|
 
-- Chcete-li změnit klávesové zkratky, přejděte do nabídky **nástroje**@no__t**Možnosti**-1 a ve složce **prostředí** vyberte možnost **klávesnice** .
+- Chcete-li změnit klávesové zkratky, přejděte na **nástroje** nabídky > **Možnosti**a ve složce **prostředí** vyberte možnost **klávesnice** .
 
-   Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+   Další informace najdete v tématu [určení a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
-- Pokud chcete změnit nastavení, přejděte na **nástroje**nabídky  > **Nastavení importu a exportu**.
+- Pokud chcete změnit nastavení, přejděte na **nástroje** nabídky > **Nastavení importu a exportu**.
 
    Možnosti dostupné v dialogových oknech a názvy a umístění příkazů nabídky, které vidíte, se mohou lišit od toho, co je popsáno v **nápovědě** v závislosti na aktivních nastaveních nebo edici.  Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 

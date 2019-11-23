@@ -30,21 +30,21 @@ Následující snímek obrazovky ukazuje **Team Explorer** okno přetažené z v
 
 ![Snímek obrazovky s oknem Team Explorer sady Visual Studio se zvýrazněnou změnou rozložení](media/window-layout-move-team-explorer.png)
 
-V okně dokumentu je každý otevřený soubor obsažený v rámečku s kartami. Tyto karty můžete uvolnit nebo uzamknout, stejně jako okna nástrojů. Další informace naleznete v tématu [přizpůsobení rozložení oken v aplikaci Visual Studio](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+V okně dokumentu je každý otevřený soubor obsažený v rámečku s kartami. Tyto karty můžete uvolnit nebo uzamknout, stejně jako okna nástrojů. Další informace najdete v tématu [přizpůsobení rozložení oken v sadě Visual Studio](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
-Chcete-li skrýt všechna okna nástrojů a maximalizovat okno editoru kódu, stiskněte klávesu **Alt** + **SHIFT** + **ENTER** a přepněte *režim zobrazení na celé obrazovce*.
+Chcete-li skrýt všechna okna nástrojů a maximalizovat okno editoru kódu, stiskněte klávesu **Alt** + **SHIFT** + **ENTER** pro přepnutí *režimu zobrazení na celé obrazovce*.
 
 ## <a name="set-c-coding-styles-and-formatting"></a>Nastavení C++ stylů a formátování kódu
 
-Můžete určit mnoho možností formátování jednotlivých kódů, jako je například odsazení a pozice složených závorek. Provedete to tak, že přejdete do části **nástroje** > **Možnosti** > **textový editor** > **C/C++**  > **formátování** (nebo zadáte **CTRL + Q** a vyhledáte "formátování"). Případně můžete určit jeden ze stylů [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (nebo vlastní styl ClangFormat).
+Můžete určit mnoho možností formátování jednotlivých kódů, jako je například odsazení a pozice složených závorek. Provedete to tak, že přejdete do části **nástroje** > **Možnosti** > **textový editor** > **formátování** **C/C++**  > (nebo zadáte **CTRL + Q** a vyhledáte "formátování"). Případně můžete určit jeden ze stylů [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) (nebo vlastní styl ClangFormat).
 
 ![Snímek obrazovky s možnostmi ClangFormat](media/clang-format-ide.png)
 
 Další informace o všech možnostech formátování naleznete v tématu [Možnosti, textový editor, CC++/, formátování](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting).
 
-## <a name="set-the-color-theme"></a>Nastavení barevného motivu
+## <a name="set-the-color-theme"></a>Nastavit barevný motiv
 
-Chcete-li nastavit světlé nebo tmavé pozadí, zadejte **CTRL + Q** a vyhledejte "barevný motiv". Můžete je také najít tak, že v**prostředí** **nástroje** > **Možnosti** >  a zvolíte **barevný motiv**.
+Chcete-li nastavit světlé nebo tmavé pozadí, zadejte **CTRL + Q** a vyhledejte "barevný motiv". Můžete je také najít tak, že v **nabídce nástroje** > **Možnosti** > **prostředí**a zvolíte **barevný motiv**.
 
 ![Snímek obrazovky s barevnými motivy](media/tools-options-color-theme.png)
 
@@ -54,7 +54,7 @@ Tady je například tmavý motiv:
 
 ## <a name="customize-code-colorization"></a>Přizpůsobení barevného zabarvení kódu
 
-V aplikaci Visual Studio 2019 můžete vybrat ze tří předdefinovaných *schémat barev*. Ty určují, jak jsou v editoru barevně barvené prvky kódu. Chcete-li zvolit motiv, použijte možnost **nástroje** > **Možnosti**-1  > **textový editor** > **zobrazení** **C/C++**  >  a vyberte možnost **barevné schéma**:
+V aplikaci Visual Studio 2019 můžete vybrat ze tří předdefinovaných *schémat barev*. Ty určují, jak jsou v editoru barevně barvené prvky kódu. Chcete-li zvolit motiv, v nabídce **nástroje** > **Možnosti** > **textový editor** > **CC++ /**  > **zobrazení**a vyberte možnost **barevné schéma**:
 
 ![Snímek obrazovky C++ s možnostmi barevného schématu se zvýrazněnou možností Enhanced](media/color-schemes.png)
 
@@ -62,7 +62,7 @@ V barevném schématu nazývaném **Visual Studio 2017**je většina prvků kód
 
 ![Snímek obrazovky s vylepšeným barevným schématem](media/color-scheme-enhanced.png)
 
-Bez ohledu na to, který motiv nebo barevné schéma je aktivní, můžete přizpůsobit písmo a barvy pro jednotlivé prvky kódu. Provedete to tak, že přejdete do části **nástroje** > **Možnosti** > **prostředí** > **písma a barvy** (nebo zadáte **CTRL + Q** a vyhledáte "fonty"). Posuňte se dolů na seznam zobrazených položek, dokud C++ neuvidíte možnosti.
+Bez ohledu na to, který motiv nebo barevné schéma je aktivní, můžete přizpůsobit písmo a barvy pro jednotlivé prvky kódu. Provedete to tak, že přejdete na **nástroje** > **možnosti** > **prostředí** > **písma a barvy** (nebo zadáte **CTRL + Q** a vyhledáte "fonty"). Posuňte se dolů na seznam zobrazených položek, dokud C++ neuvidíte možnosti.
 
 ![Snímek obrazovky C++ s možnostmi písma a barvy](media/tools-options-cpp-colors.png)
 
@@ -90,4 +90,4 @@ Můžete určit, zda se čísla řádků zobrazí na levé straně okna editoru.
 
 ## <a name="create-keyboard-shortcuts"></a>Vytvoření klávesových zkratek
 
-Mnohé příkazy v aplikaci Visual Studio obsahují *klávesové zkratky*, kombinace kláves s klávesami CTRL, ALT a Shift. V aplikaci Visual Studio můžete tyto klávesové zkratky upravovat nebo vytvářet nové. V **nabídce nástroje**@no__t**možnosti**-1  > **prostředí**@no__t **-5 (** nebo zadejte **CTRL + Q** a vyhledejte "zkratky"). Další informace naleznete v tématu [identifikace a přizpůsobení klávesových zkratek v aplikaci Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Mnohé příkazy v aplikaci Visual Studio obsahují *klávesové zkratky*, kombinace kláves s klávesami CTRL, ALT a Shift. V aplikaci Visual Studio můžete tyto klávesové zkratky upravovat nebo vytvářet nové. V **nabídce nástroje** > **možnosti** > **prostředí** > **klávesnice** (nebo zadejte **CTRL + Q** a vyhledejte "zkratky"). Další informace naleznete v tématu [identifikace a přizpůsobení klávesových zkratek v aplikaci Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).

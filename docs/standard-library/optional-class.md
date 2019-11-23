@@ -26,7 +26,7 @@ ms.locfileid: "72689149"
 
 Pokud instance `optional<T>` obsahuje hodnotu, obsažená hodnota je přidělena v rámci úložiště objektu `optional` v oblasti vhodně zarovnané pro typ `T`. Pokud je `optional<T>` převedena na `bool`, výsledek je `true`, pokud objekt obsahuje hodnotu; v opačném případě je `false`.
 
-Objekt typu intypeed Object `T` nesmí být [in_place_t](in-place-t-struct.md) ani [nullopt_t](nullopt-t-structure.md). `T` musí být *zničitelné*, to znamená, že jeho destruktor musí znovu získat všechny vlastněné prostředky a nemůže vyvolat žádné výjimky.
+`T` typu objektu s omezením nesmí být [in_place_t](in-place-t-struct.md) nebo [nullopt_t](nullopt-t-structure.md). `T` musí být *zničitelné*, to znamená, že jeho destruktor musí znovu získat všechny vlastněné prostředky a nemůže vyvolat žádné výjimky.
 
 Třída `optional` je v C++ 17 novinkou.
 
@@ -42,7 +42,7 @@ class optional
 template<class T> optional(T) -> optional<T>;
 ```
 
-## <a name="members"></a>Členové
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -54,8 +54,8 @@ template<class T> optional(T) -> optional<T>;
 | **Přiřazení** | |
 | [operátor =](#op_eq) | Nahradí `optional` kopií jiného `optional`. |
 | [emplace](#op_eq) | Inicializuje obsaženou hodnotu se zadanými argumenty. |
-| **Adresu** | |
-| [adresu](#swap) | Zamění obsaženou hodnotu nebo prázdný stav s jiným `optional`. |
+| **Swap** | |
+| [swap](#swap) | Zamění obsaženou hodnotu nebo prázdný stav s jiným `optional`. |
 | **Pozorovatelů** | |
 | [has_value](#has_value) | Vrátí, zda objekt `optional` obsahuje hodnotu. |
 | [value](#value) | Vrátí obsaženou hodnotu. |
@@ -64,7 +64,7 @@ template<class T> optional(T) -> optional<T>;
 | [podnikatel](#op_mem) | Odkazuje na obsaženou hodnotu objektu `optional`. |
 | [operátor bool](#op_bool) | Vrátí, zda objekt `optional` obsahuje hodnotu. |
 | **Modifikátory** | |
-| [nové](#reset) | Obnoví `optional` zničením obsažené hodnoty. |
+| [reset](#reset) | Obnoví `optional` zničením obsažené hodnoty. |
 
 ## <a name="has_value"></a>has_value
 
@@ -100,10 +100,10 @@ explicit optional(optional<U>&& rhs);
 
 ### <a name="parameters"></a>Parametry
 
-*zarovnání indirekce rhs* \
-@No__t_0 ke zkopírování nebo přesunutí konstrukce obsažené hodnoty z.
+*zarovnání indirekce rhs*\
+`optional` ke zkopírování nebo přesunutí konstrukce obsažené hodnoty z.
 
-*i_list* \
+*i_list*\
 Seznam inicializátorů, z něhož se má vytvořit obsažená hodnota
 
 \ *argumentů*
@@ -111,8 +111,8 @@ Seznam argumentů, z něhož se má vytvořit obsažená hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-`constexpr optional() noexcept;` 
- `constexpr optional(nullopt_t nullopt) noexcept;` tyto konstruktory vytvoří `optional`, který neobsahuje hodnotu.
+`constexpr optional() noexcept;`
+`constexpr optional(nullopt_t nullopt) noexcept;` tyto konstruktory vytvoří `optional`, který neobsahuje hodnotu.
 
 `constexpr optional(const optional& rhs);` konstruktor Copy inicializuje z obsažené hodnoty argumentu obsaženou hodnotu. Je definována jako **Odstraněná** , pokud `is_copy_constructible_v<T>` není true a je triviální, pokud `is_trivially_copy_constructible_v<T>` true.
 
@@ -124,9 +124,9 @@ Seznam argumentů, z něhož se má vytvořit obsažená hodnota
 
 `template <class U = T> explicit constexpr optional(U&& rhs);` Direct inicializuje obsaženou hodnotu jako při použití `std::forward<U>(v)`. Tento konstruktor je `constexpr`, je-li použit konstruktor `T` `constexpr`. Nepodílí se na řešení přetížení, pokud `is_constructible_v<T, U&&>` není true a `is_same_v<remove_cvref_t<U>, in_place_t>` a `is_same_v<remove_cvref_t<U>, optional>` mají hodnotu false.
 
-`template <class U> explicit optional(const optional<U>& rhs);` Pokud *Zarovnání indirekce RHS* obsahuje hodnotu, přímo inicializuje obsaženou hodnotu z obsažené hodnoty argumentu. Nepodílí se na rozlišení přetěžování, pokud `is_constructible_v<T, const U&>` hodnotu true a `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` a `is_convertible_v<const optional<U>&&, T>` jsou všechny nepravdivé.
+`template <class U> explicit optional(const optional<U>& rhs);` Pokud *Zarovnání indirekce RHS* obsahuje hodnotu, přímo inicializuje obsaženou hodnotu z obsažené hodnoty argumentu. Nepodílí se na rozlišení přetěžování, pokud `is_constructible_v<T, const U&>` hodnotu true a `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`a `is_convertible_v<const optional<U>&&, T>` jsou všechny nepravdivé.
 
-`template <class U> explicit optional(optional<U>&& rhs);` Pokud *Zarovnání indirekce RHS* obsahuje hodnotu, přímo inicializuje obsaženou hodnotu jako při použití `std::move(*rhs)`. Nepodílí se na rozlišení přetěžování, pokud `is_constructible_v<T, U&&>` hodnotu true a `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` a `is_convertible_v<const optional<U>&&, T>` jsou všechny nepravdivé.
+`template <class U> explicit optional(optional<U>&& rhs);` Pokud *Zarovnání indirekce RHS* obsahuje hodnotu, přímo inicializuje obsaženou hodnotu jako při použití `std::move(*rhs)`. Nepodílí se na rozlišení přetěžování, pokud `is_constructible_v<T, U&&>` hodnotu true a `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`a `is_convertible_v<const optional<U>&&, T>` jsou všechny nepravdivé.
 
 ## <a name="optional-destructor"></a>~ Volitelný destruktor
 
@@ -228,4 +228,4 @@ template <class U>
 
 ## <a name="see-also"></a>Viz také:
 
-[\<optional >](optional.md)
+[\<volitelné >](optional.md)

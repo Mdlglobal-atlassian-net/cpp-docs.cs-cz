@@ -35,7 +35,7 @@ Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostř
 
    V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu **MFC03** a vyberte možnost **vlastnosti**. Zobrazí se dialogové okno **stránky vlastností** .
 
-   V dialogovém okně **stránky vlastností** v ovládacím prvku strom **vlastností konfigurace** vyberte možnost **Obecné**a potom v části **výchozí nastavení projektu** nastavte podporu modulu **CLR** na **Common Language Runtime ( /CLR)** . Klikněte na tlačítko **OK**.
+   V dialogovém okně **stránky vlastností** v ovládacím prvku strom **vlastností konfigurace** vyberte možnost **Obecné**a potom v části **výchozí nastavení projektu** nastavte podporu modulu **CLR** na **Common Language Runtime (/CLR)** . Klikněte na **OK**.
 
 1. Přidejte odkaz na ovládací prvek .NET.
 
@@ -62,7 +62,7 @@ Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostř
 
 1. Sestavte a spusťte projekt.
 
-   V nabídce **sestavení** klikněte na **Sestavit řešení**.
+   Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
    V nabídce **ladit** klikněte na **Spustit bez ladění**.
 

@@ -77,7 +77,7 @@ Nejlepším místem, kde najdete tyto informace, je protokol buildu hned poté, 
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Nahlášení obsahu příkazového řádku
 
-1. Vyhledejte soubor **CL. Command. 1. tlog** a otevřete ho. Ve výchozímnastavení je tento soubor umístěný ve složce dokumenty v \\Visual Studio *verze*\\Projects @ No__t-3*řešení*\\*ProjectName*\\*Configuration*\\*ProjectName*.tlog1CL.command.1.tlog, nebo ve složce uživatele v části 2Source @ no__t-13Repos @ no__t-14 .tlog2CL.command.1.tlog *-14*, nebo ve vaší složce uživatele v oblasti @no__t-@-@-14 Může být v jiném umístění, pokud používáte jiný systém sestavení, nebo pokud jste změnili výchozí umístění projektu.
+1. Vyhledejte soubor **CL. Command. 1. tlog** a otevřete ho. Ve výchozím nastavení je tento soubor umístěný ve složce Dokumenty v \\\\projektech sady Visual Studio\\pro *řešení*\\*ProjectName*\\*Konfigurace*\\*ProjectName*. tlog\\CL. Command. 1. tlog nebo ve složce uživatele v části \\source\\*úložiště\\* . tlog\\CL. Command. 1. tlog.\\\\\\ Může být v jiném umístění, pokud používáte jiný systém sestavení, nebo pokud jste změnili výchozí umístění projektu.
 
    V tomto souboru najdete názvy souborů zdrojového kódu následovaný argumenty příkazového řádku, které se používají pro jejich zkompilování, a to každou na samostatné řádky.
 
@@ -107,7 +107,7 @@ Dobrý reprodukci je:
 
 - **Poskytuje.** Reprofesionály by měly být co nejmenší, ale pořád předvádí přesně zjištěné potíže. V případě potřeby nemusíte mít složité ani reálné. Potřebují pouze zobrazit kód, který odpovídá standardu nebo dokumentované implementaci kompilátoru. Pro chybějící diagnostiku by měl váš reprodukci zobrazovat kód, který není vyhovující. Jednoduché pro profesionály, které obsahují dostatečný kód k předvedení problému, je nejlepší. Pokud můžete kód odstranit nebo zjednodušit a ponechat si ho v souladu s tím, že se problém nezměnil, udělejte to. Nemusíte vkládat čítače s příklady kódu, který funguje.
 
-- **Samostatně obsažený.** Respecialisté by se měli vyhnout zbytečným závislostem. Pokud můžete reprodukování problému bez knihoven třetích stran, udělejte to. Pokud můžete problém reprodukován bez jakéhokoli kódu knihovny kromě jednoduchých výstupních příkazů (například `puts("this shouldn't compile");`, `std::cout << value;` a `printf("%d\n", value);`), pak to uděláte. Je ideální, pokud může být příklad zhuštěný pouze do jednoho souboru zdrojového kódu bez odkazů na záhlaví uživatele. Snížení množství kódu, který je třeba vzít v úvahu, protože je možné, že je možný Přispěvatel k problému, je mimořádně užitečné pro nás.
+- **Samostatně obsažený.** Respecialisté by se měli vyhnout zbytečným závislostem. Pokud můžete reprodukování problému bez knihoven třetích stran, udělejte to. Pokud můžete problém reprodukován bez jakéhokoli kódu knihovny kromě jednoduchých výstupních příkazů (například `puts("this shouldn't compile");`, `std::cout << value;`a `printf("%d\n", value);`), pak to udělejte. Je ideální, pokud může být příklad zhuštěný pouze do jednoho souboru zdrojového kódu bez odkazů na záhlaví uživatele. Snížení množství kódu, který je třeba vzít v úvahu, protože je možné, že je možný Přispěvatel k problému, je mimořádně užitečné pro nás.
 
 - **Na nejnovější verzi kompilátoru.** Pokud je to možné, měli byste použít nejnovější aktualizaci na nejnovější verzi sady nástrojů. Nebo použijte nejnovější předprodejní verzi další aktualizace nebo další hlavní verzi. Problémy, které můžete najít ve starších verzích sady nástrojů, se často opravily v novějších verzích. Opravy jsou pro starší verze ve výjimečných případech nepřenosné.
 
@@ -149,7 +149,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
 
 #### <a name="backend-code-generation-crash"></a>Selhání back-endu (generování kódu)
 
-Během fáze generování kódu kompilátoru dojde k selhání back-endu. Kompilátor obvykle generuje [závažnou chybu C1001](../error-messages/compiler-errors-1/fatal-error-c1001.md)a nemusí odkazovat na soubor zdrojového kódu a číslo řádku přidružené k problému. Často zmiňuje soubor Compiler @ no__t-0utc @ no__t-1src @ no__t-2p2 @ no__t-3main. c, ale tuto podrobnosti můžete ignorovat.
+Během fáze generování kódu kompilátoru dojde k selhání back-endu. Kompilátor obvykle generuje [závažnou chybu C1001](../error-messages/compiler-errors-1/fatal-error-c1001.md)a nemusí odkazovat na soubor zdrojového kódu a číslo řádku přidružené k problému. Často zmiňuje soubor kompilátor\\UTC\\src\\P2\\Main. c, ale tento detail můžete ignorovat.
 
 Pro tento typ havárie zadejte [odkaz reprodukci](#link-repros) , pokud používáte generování kódu při propojování (LTCG), který je povolen argumentem příkazového řádku **/GL** pro CL. exe. Pokud ne, místo toho zadejte [předzpracovaný reprodukci](#preprocessed-repros) .
 
@@ -268,7 +268,7 @@ Pokud používáte C++/CX k sestavení spustitelného souboru, je nutné provés
 
 1. Vyhledejte ve vygenerovaném souboru _filename_. i soubor pro direktivy **#using** .
 
-1. Vytvořte seznam všech odkazovaných souborů. Vynechejte všechny soubory Windows @ no__t-0. winmd, soubory Platform. winmd a mscorlib. dll.
+1. Vytvořte seznam všech odkazovaných souborů. Ponechte všechny soubory Windows\*. winmd, soubory Platform. winmd a mscorlib. dll.
 
 Příprava na ověření, že předzpracovaný soubor stále reprodukuje problém,
 
@@ -318,7 +318,7 @@ Nakonec připojte předzpracované soubory reprodukci (*filename*. i a *Module*.
 
 ### <a name="link-repros"></a>Odkazy na odborníky
 
-*Odkaz reprodukci* je vygenerovaný linkerem obsah adresáře, který je zadán buď proměnnou prostředí **odkaz @ no__t-2repro** , nebo jako argument pro možnost linkeru [/LINKREPRO](../build/reference/linkrepro.md) . Obsahuje artefakty sestavení, které souhrnně ukazují problém, ke kterému dochází v době propojování. Mezi příklady patří selhání back-endu zahrnující generování kódu při propojování (LTCG) nebo chyba linkeru. Tyto artefakty sestavení jsou ty, které jsou potřeba jako vstup linkeru, takže je možné problém reprodukovat. Reprodukci propojení lze snadno vytvořit pomocí této proměnné prostředí. Umožňuje integrovanou možnost reprodukci generování linkeru.
+*Odkaz reprodukci* je linkerem generovaným obsahem adresáře, který je zadaný buď pomocí **odkazu\_** proměnné prostředí reprodukci, nebo jako argument pro možnost linkeru [/LINKREPRO](../build/reference/linkrepro.md) . Obsahuje artefakty sestavení, které souhrnně ukazují problém, ke kterému dochází v době propojování. Mezi příklady patří selhání back-endu zahrnující generování kódu při propojování (LTCG) nebo chyba linkeru. Tyto artefakty sestavení jsou ty, které jsou potřeba jako vstup linkeru, takže je možné problém reprodukovat. Reprodukci propojení lze snadno vytvořit pomocí této proměnné prostředí. Umožňuje integrovanou možnost reprodukci generování linkeru.
 
 #### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Vygenerování propojení reprodukci pomocí proměnné prostředí link_repro
 
@@ -330,25 +330,25 @@ Nakonec připojte předzpracované soubory reprodukci (*filename*. i a *Module*.
 
 1. Zadáním **mkdir linkrepro** vytvořte adresář s názvem *linkrepro* pro odkaz reprodukci. K zachycení jiného reprodukci propojení můžete použít jiný název.
 
-1. Zadejte **odkaz set příkazu @ no__t-1repro = linkrepro** a nastavte proměnnou prostředí **propojení @ no__t-3repro** na vytvořený adresář. Pokud je vaše sestavení spuštěno z jiného adresáře, jak je často u složitějších projektů, pak nastavte **propojení @ no__t-1repro** na úplnou cestu k adresáři reprodukci propojení.
+1. Zadejte **odkaz sady příkazů\_reprodukci = linkrepro** pro nastavení proměnné prostředí **propojení\_reprodukci** na vytvořený adresář. Pokud je vaše sestavení spuštěno z jiného adresáře, stejně jako u složitějších projektů, pak nastavte **odkaz\_reprodukci** na úplnou cestu k adresáři reprodukci propojení.
 
-1. Chcete-li vytvořit projekt reprodukci v aplikaci Visual Studio, zadejte v okně konzoly příkazového řádku pro vývojáře příkaz **devenv**. Zajišťuje, aby byla hodnota proměnné prostředí **Link @ no__t-1repro** viditelná pro sadu Visual Studio. Chcete-li sestavit projekt na příkazovém řádku, použijte argumenty příkazového řádku zaznamenané výše pro duplikaci sestavení reprodukci.
+1. Chcete-li vytvořit projekt reprodukci v aplikaci Visual Studio, zadejte v okně konzoly příkazového řádku pro vývojáře příkaz **devenv**. Zajišťuje, aby byla hodnota proměnné prostředí **link\_reprodukci** viditelná pro sadu Visual Studio. Chcete-li sestavit projekt na příkazovém řádku, použijte argumenty příkazového řádku zaznamenané výše pro duplikaci sestavení reprodukci.
 
 1. Sestavte projekt reprodukci a potvrďte, že došlo k očekávanému problému.
 
 1. Zavřete Visual Studio, pokud jste ho použili k sestavení.
 
-1. V okně konzoly příkazového řádku pro vývojáře zadejte **odkaz sady příkazů @ no__t-1repro =** , který vymaže proměnnou prostředí **Link @ no__t-3repro** .
+1. V okně konzoly příkazového řádku pro vývojáře zadejte **odkaz sady příkazů\_reprodukci =** , který vymaže proměnnou prostředí **reprodukci propojení\_** .
 
 Nakonec zabalit reprodukci komprimací celého adresáře linkrepro do souboru ZIP nebo podobným způsobem a připojit ho k sestavě.
 
-Možnost linkeru **/LINKREPRO** má stejný účinek jako proměnná prostředí **odkaz @ no__t-2repro** . Pomocí možnosti [/LINKREPROTARGET](../build/reference/linkreprotarget.md) můžete zadat název, který se má filtrovat pro vygenerovaný reprodukci propojení. Chcete-li použít **/LINKREPROTARGET**, musíte také zadat možnost linkeru **/out** .
+Možnost linkeru **/LINKREPRO** má stejný účinek jako proměnná prostředí **Link\_reprodukci** . Pomocí možnosti [/LINKREPROTARGET](../build/reference/linkreprotarget.md) můžete zadat název, který se má filtrovat pro vygenerovaný reprodukci propojení. Chcete-li použít **/LINKREPROTARGET**, musíte také zadat možnost linkeru **/out** .
 
 #### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Vygenerování propojení reprodukci pomocí možnosti/LINKREPRO
 
 1. Vytvořte adresář pro uložení odkazu reprodukci. Odkazujeme na úplnou cestu k adresáři, kterou vytvoříte jako _adresářovou cestu_. Použijte dvojité uvozovky kolem cesty, pokud obsahuje mezery.
 
-1. Přidejte příkaz **/LINKREPRO:** _Directory-Path_ do příkazového řádku linkeru. V aplikaci Visual Studio otevřete dialogové okno **stránky vlastností** projektu. Vyberte **Vlastnosti konfigurace** > **linker** >  stránka vlastností**příkazového řádku** . Pak do pole **Další možnosti** zadejte možnost **/LINKREPRO:** _Directory-Path_ . Kliknutím na **tlačítko OK** uložte změny.
+1. Přidejte příkaz **/LINKREPRO:** _Directory-Path_ do příkazového řádku linkeru. V aplikaci Visual Studio otevřete dialogové okno **stránky vlastností** projektu. Vyberte **Vlastnosti konfigurace** > stránka vlastností **příkazového řádku** > **linkeru** . Pak do pole **Další možnosti** zadejte možnost **/LINKREPRO:** _Directory-Path_ . Kliknutím na **tlačítko OK** uložte změny.
 
 1. Sestavte projekt reprodukci a potvrďte, že došlo k očekávanému problému.
 
@@ -371,7 +371,7 @@ Máte k dispozici několik dobrých způsobů, jak nám získat sestavu. Můžet
 
 Nástroj **ohlásit problém** v aplikaci Visual Studio je způsob, jak můžou uživatelé sady Visual Studio nahlásit problémy s několika kliknutími. Pro odeslání podrobných informací o problému, který jste našli, se zobrazí jednoduchý formulář. Sestavu pak můžete odeslat, aniž byste museli opustit integrované vývojové prostředí.
 
-Nahlášení problému prostřednictvím nástroje **ohlásit problém** je snadno a pohodlné z rozhraní IDE. K němu máte přístup z záhlaví výběrem ikony pro **odeslání zpětné vazby** vedle vyhledávacího pole snadné **spuštění** . Nebo ho můžete najít na řádku nabídek v **nápovědě** > **Odeslat názor** > **ohlásit problém**.
+Nahlášení problému prostřednictvím nástroje **ohlásit problém** je snadno a pohodlné z rozhraní IDE. K němu máte přístup z záhlaví výběrem ikony pro **odeslání zpětné vazby** vedle vyhledávacího pole snadné **spuštění** . Nebo ho můžete najít na řádku nabídek v **nápovědě** > **Odeslat názor** > **nahlásit problém**.
 
 Pokud se rozhodnete nahlásit problém, nejprve vyhledejte podobné problémy komunitou vývojářů. V případě, že byl problém ohlášen dříve, prohlaste sestavu a přidejte komentáře s dalšími konkrétními specifickými. Pokud se podobný problém nezobrazuje, v dolní části dialogového okna pro zpětnou vazbu sady Visual Studio klikněte na tlačítko **ohlásit nový problém** a podle pokynů nahlaste svůj problém.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Připojení pomocí úloh a požadavků XML HTTP'
+title: 'Návod: Připojení pomocí úloh a žádostí XML HTTP'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
@@ -13,7 +13,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512135"
 ---
-# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Návod: Připojení pomocí úloh a požadavků XML HTTP
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Návod: Připojení pomocí úloh a žádostí XML HTTP
 
 Tento příklad ukazuje, jak používat rozhraní [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) a [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) spolu s úkoly k odesílání požadavků HTTP GET a post webové službě v aplikaci Univerzální platforma Windows (UWP). Propojením požadavku `IXMLHTTPRequest2` s úkoly můžete psát kód, který lze kombinovat s ostatními úkoly. Například můžete použít úlohu stáhnout jako součást řetězce úloh. Úkol stažení může také reagovat na zrušení práce.
 
@@ -24,10 +24,10 @@ Další informace o úlohách najdete v tématu [Task paralelismus](../../parall
 
 Tento dokument nejprve ukazuje, jak vytvořit `HttpRequest` a jeho podpůrné třídy. Pak ukazuje, jak tuto třídu používat z aplikace pro UWP, která používá C++ a XAML.
 
-Příklad, který používá `IXMLHTTPRequest2` , ale nepoužívá úkoly, najdete v tématu [rychlý Start: Připojení pomocí požadavku HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
+Příklad, který používá `IXMLHTTPRequest2`, ale nepoužívá úkoly, naleznete v tématu [rychlý Start: připojení pomocí XML požadavku HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
->  `IXMLHTTPRequest2`a `IXMLHTTPRequest2Callback` jsou rozhraní, která doporučujeme použít v aplikaci pro UWP. Tento příklad můžete také upravit pro použití v desktopové aplikaci.
+>  `IXMLHTTPRequest2` a `IXMLHTTPRequest2Callback` jsou rozhraní, která doporučujeme použít v aplikaci pro UWP. Tento příklad můžete také upravit pro použití v desktopové aplikaci.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -35,19 +35,19 @@ Podpora UWP je volitelná v aplikaci Visual Studio 2017 nebo novější. Chcete-
 
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>Definice tříd HttpRequest, HttpRequestBuffersCallback a HttpRequestStringCallback
 
-Když použijete `IXMLHTTPRequest2` rozhraní k vytváření webových požadavků přes protokol HTTP, `IXMLHTTPRequest2Callback` implementujete rozhraní pro příjem odpovědi serveru a reakci na další události. Tento příklad definuje `HttpRequest` třídu pro vytváření webových požadavků `HttpRequestBuffersCallback` a třídy a `HttpRequestStringCallback` pro zpracování odpovědí. Třídy `HttpRequestBuffersCallback` `HttpRequest` a `HttpRequestStringCallback` podporují třídu;pracujetepouzestřídouzkóduaplikace.`HttpRequest`
+Použijete-li rozhraní `IXMLHTTPRequest2` k vytváření webových požadavků přes protokol HTTP, implementujete rozhraní `IXMLHTTPRequest2Callback` pro příjem odpovědi serveru a reakci na další události. Tento příklad definuje třídu `HttpRequest` pro vytváření webových požadavků a třídy `HttpRequestBuffersCallback` a `HttpRequestStringCallback` pro zpracování odpovědí. Třídy `HttpRequestBuffersCallback` a `HttpRequestStringCallback` podporují třídu `HttpRequest`; pracujete pouze s třídou `HttpRequest` z kódu aplikace.
 
-`GetAsync` MetodytřídyumožňujíspustitoperaceHTTPGETapost(`HttpRequest` v uvedeném pořadí). `PostAsync` Tyto metody používají `HttpRequestStringCallback` třídu ke čtení odpovědi serveru jako řetězce. Metody `SendAsync` a`ReadAsync` umožňují streamovat velký obsah v blocích. Tyto metody každý vrací [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) , které reprezentují operaci. Metody `GetAsync` a `PostAsync` tvoří`task<std::wstring>`hodnotu , kde částpředstavujeodpověďserveru.`wstring` Metody `SendAsync` a `ReadAsync` vytváří`task<void>` hodnoty; tyto úlohy jsou dokončeny po dokončení operací odeslání a čtení.
+`GetAsync``PostAsync` metody třídy `HttpRequest` umožňují spustit operace HTTP GET a POST (v uvedeném pořadí). Tyto metody používají třídu `HttpRequestStringCallback` ke čtení odpovědi serveru jako řetězce. Metody `SendAsync` a `ReadAsync` umožňují streamovat velký obsah v blocích. Tyto metody každý vrací [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) , které reprezentují operaci. Metody `GetAsync` a `PostAsync` vytváří `task<std::wstring>` hodnotu, kde `wstring` část představuje odpověď serveru. Metody `SendAsync` a `ReadAsync` vytváří `task<void>` hodnoty; Tyto úlohy jsou dokončeny po dokončení operací odeslání a čtení.
 
-Vzhledem k `IXMLHTTPRequest2` tomu, že rozhraní pracují asynchronně, v tomto příkladu používá [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) k vytvoření úlohy, která se dokončí po dokončení objektu zpětného volání, nebo zrušení operace stahování. `HttpRequest` Třída vytvoří pokračování na základě úkolů z této úlohy k nastavení konečného výsledku. `HttpRequest` Třída používá pokračování založené na úlohách, aby bylo zajištěno, že úloha pokračování bude spuštěna i v případě, že předchozí úloha vyvolá chybu nebo je zrušena. Další informace o pokračování na základě úkolů najdete v tématu [Task paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md) .
+Vzhledem k tomu, že rozhraní `IXMLHTTPRequest2` pracují asynchronně, tento příklad používá [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) k vytvoření úlohy, která se dokončí po dokončení objektu zpětného volání nebo zrušení operace stahování. Třída `HttpRequest` Vytvoří pokračování na základě úkolů z této úlohy, aby se nastavil konečný výsledek. Třída `HttpRequest` používá pokračování založené na úlohách, aby se zajistilo, že se úloha pokračování spustí i v případě, že předchozí úloha vyvolá chybu nebo je zrušená. Další informace o pokračování na základě úkolů najdete v tématu [Task paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md) .
 
-Pro podporu zrušení, `HttpRequest`třídy, `HttpRequestBuffersCallback`a `HttpRequestStringCallback` používají zrušení tokenů. Třídy `HttpRequestBuffersCallback` a`HttpRequestStringCallback` používají metodu [Concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) , která umožňuje události dokončení úkolu reagovat na zrušení. Toto zpětné volání zrušení přeruší stahování. Další informace o zrušení naleznete v tématu [zrušení](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
+Pro podporu zrušení používají třídy `HttpRequest`, `HttpRequestBuffersCallback`a `HttpRequestStringCallback` tokeny zrušení. Třídy `HttpRequestBuffersCallback` a `HttpRequestStringCallback` používají metodu [Concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) k povolení reakce události dokončení úkolu na zrušení. Toto zpětné volání zrušení přeruší stahování. Další informace o zrušení naleznete v tématu [zrušení](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
 #### <a name="to-define-the-httprequest-class"></a>Definice třídy HttpRequest
 
-1. V hlavní nabídce vyberte **soubor** > **Nový** > **projekt**. 
+1. V hlavní nabídce vyberte možnost **soubor** > **Nový** > **projekt**. 
 
-1. C++ Použijte šablonu **prázdná aplikace (univerzální pro Windows)** k vytvoření prázdného projektu aplikace XAML. Tento příklad pojmenovává projekt `UsingIXMLHTTPRequest2`.
+1. C++ Použijte šablonu **prázdná aplikace (univerzální pro Windows)** k vytvoření prázdného projektu aplikace XAML. V tomto příkladu se pojmenuje `UsingIXMLHTTPRequest2`projektu.
 
 1. Přidejte do projektu hlavičkový soubor s názvem HttpRequest. h a zdrojový soubor s názvem HttpRequest. cpp.
 
@@ -65,7 +65,7 @@ Pro podporu zrušení, `HttpRequest`třídy, `HttpRequestBuffersCallback`a `Http
 
 ## <a name="using-the-httprequest-class-in-a-uwp-app"></a>Použití třídy HttpRequest v aplikaci UWP
 
-Tato část ukazuje, jak používat `HttpRequest` třídu v aplikaci pro UWP. Aplikace poskytuje vstupní pole, které definuje prostředek adresy URL, a příkazy tlačítek, které provádějí operace GET a POST, a příkaz, který zruší aktuální operaci.
+Tato část ukazuje, jak použít třídu `HttpRequest` v aplikaci UWP. Aplikace poskytuje vstupní pole, které definuje prostředek adresy URL, a příkazy tlačítek, které provádějí operace GET a POST, a příkaz, který zruší aktuální operaci.
 
 #### <a name="to-use-the-httprequest-class"></a>Použití třídy HttpRequest
 
@@ -73,38 +73,38 @@ Tato část ukazuje, jak používat `HttpRequest` třídu v aplikaci pro UWP. Ap
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-2. V souboru MainPage. XAML. h přidejte tuto `#include` direktivu:
+2. V souboru MainPage. XAML. h přidejte tuto direktivu `#include`:
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-3. V souboru MainPage. XAML. h přidejte tyto `private` členské proměnné `MainPage` do třídy:
+3. V souboru MainPage. XAML. h přidejte tyto `private` členské proměnné do `MainPage` třídy:
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-4. V souboru MainPage. XAML. h deklarujte `private` metodu `ProcessHttpRequest`:
+4. V souboru MainPage. XAML. h deklarujte metodu `private` `ProcessHttpRequest`:
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-5. V souboru MainPage. XAML. cpp přidejte tyto `using` příkazy:
+5. V souboru MainPage. XAML. cpp přidejte tyto příkazy `using`:
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-6. V souboru MainPage. XAML. cpp implementujte `GetButton_Click`metody `PostButton_Click` `MainPage` , a `CancelButton_Click` třídy.
+6. V souboru MainPage. XAML. cpp Implementujte metody `GetButton_Click`, `PostButton_Click`a `CancelButton_Click` třídy `MainPage`.
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
    > [!TIP]
-   > Pokud vaše aplikace nevyžaduje podporu pro zrušení, předat [Concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) k `HttpRequest::GetAsync` metodám a `HttpRequest::PostAsync` .
+   > Pokud vaše aplikace nevyžaduje podporu pro zrušení, předejte [Concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) na metody `HttpRequest::GetAsync` a `HttpRequest::PostAsync`.
 
-1. V souboru MainPage. XAML. cpp implementujte `MainPage::ProcessHttpRequest` metodu.
+1. V souboru MainPage. XAML. cpp Implementujte metodu `MainPage::ProcessHttpRequest`.
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. Ve vlastnostech projektu v části **linker**, **vstup**zadejte `shcore.lib` , a `msxml6.lib`.
+8. Ve vlastnostech projektu v části **linker**, **vstup**zadejte `shcore.lib` a `msxml6.lib`.
 
 Tady je spuštěná aplikace:
 
-![Běžící aplikace prostředí Windows Runtime](../../parallel/concrt/media/concrt_usingixhr2.png "Běžící aplikace prostředí Windows Runtime")
+![Běžící aplikace prostředí Windows Runtime aplikaci](../../parallel/concrt/media/concrt_usingixhr2.png "spuštěné prostředí Windows Runtime")
 
 ## <a name="next-steps"></a>Další kroky
 
@@ -116,6 +116,6 @@ Tady je spuštěná aplikace:
 [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)<br/>
 [Asynchronní programování vC++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Rychlý start: Připojení pomocí třídy úloh požadavku HTTP XML (](/previous-versions/windows/apps/hh770550\(v=win.10\))IXMLHTTPRequest2)
-[(Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)<br/>
+[Rychlý Start: připojení pomocí XML požadavku HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[třídy Task (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)<br/>
 [task_completion_event – třída](../../parallel/concrt/reference/task-completion-event-class.md)

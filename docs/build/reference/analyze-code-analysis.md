@@ -24,32 +24,32 @@ Umožňuje zadat parametry pro analýzu a řízení kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/analyze**[-] [ **: WX-** ] [ **: protokol** *název_souboru*] [ **: quiet**] [ **: STACKSIZE** *číslo*] [ **: max_paths** *číslo*] [ **: pouze**] [ **: RuleSet** *RuleSet*] [ **:p lugin**  *plugin – DLL*]
+> **/analyze**[-] [ **: WX-** ] [ **: log** *filename*] [ **: quiet**] [ **: STACKSIZE** *Number*] [ **: max_paths** *číslo*] [ **: pouze**] [ **: RuleSet** *RuleSet*] [ **:p lugin** *plugin-DLL*]
 
 ## <a name="arguments"></a>Arguments
 
-**/analyze**\
+\ **/analyze**
 Zapne analýzu ve výchozím režimu. Výstup analýzy přejde do okna **výstup** jako jiné chybové zprávy. K explicitnímu vypnutí analýzy použijte **/analyze-** .
 
 **/analyze: WX-** \
 Upozornění analýzy kódu nejsou při kompilaci pomocí **/WX**považována za chyby. Další informace najdete v tématu [/WX (úroveň upozornění)](compiler-option-warning-level.md).
 
-**/analyze:** *název souboru*protokolu \
+**/analyze:** *název souboru* protokolu\
 Podrobné výsledky analyzátoru se zapisují jako XML do souboru zadaného parametrem *filename*.
 
 **/analyze: quiet**\
 Vypne výstup analyzátoru do okna **výstup** .
 
-**/analyze: STACKSIZE** *číslo*@no__t – 2
+**/analyze: STACKSIZE** *číslo*\
 Parametr *Number* , který se používá s touto možností, určuje velikost rámce zásobníku, pro který je vygenerováno upozornění [C6262](/visualstudio/code-quality/c6262) . Mezera před *číslem* je volitelná. Pokud tento parametr není zadán, velikost rámce zásobníku je ve výchozím nastavení 16 KB.
 
-**/analyze: max_paths** *číslo*@no__t – 2
+**/analyze: max_paths** *číslo*\
 Parametr *Number* , který se používá s tímto parametrem, určuje maximální počet cest kódu, které se mají analyzovat. Pokud není tento parametr zadán, bude ve výchozím nastavení číslo 256. Větší hodnoty způsobují důkladnější kontrolu, ale analýza může trvat delší dobu.
 
 **/analyze: pouze**\
 Kompilátor zpravidla generuje kód a po spuštění analýzy provádí další kontrolu syntaxe. Možnost **/analyze: Only** vypne průchod generování kódu. Zrychluje analýzu, ale chyby a upozornění, které může být generováno při generování kódu kompilátoru, se nemusí vydávat. Pokud program neuvolní chyby generování kódu, výsledky analýzy mohou být nespolehlivé. Tuto možnost doporučujeme použít pouze v případě, že kód již projde kontrolu syntaxe pro generování kódu bez chyb.
 
-**/analyze: RuleSet** *file_path. ruleset*\
+**/analyze: ruleset** *file_path. ruleset*\
 Umožňuje určit, které sady pravidel se mají analyzovat, včetně vlastních sad pravidel, které můžete vytvořit sami. Pokud je tento přepínač nastaven, modul pravidel je efektivnější, protože před spuštěním vyloučí nečleny zadané sady pravidel. V opačném případě modul kontroluje všechna pravidla.
 
 RuleSets, který se dodává se sadou Visual Studio, najdete v *sadě%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule sady.*
@@ -66,7 +66,7 @@ Následující ukázková sada vlastních pravidel informuje modul pravidel, aby
 </RuleSet>
 ```
 
-**/analyze: plugin modulů** plug *-in – @no__t DLL*– 2
+**/analyze:** *plugin* modulů plug-in –\ dll
 Povolí zadaný rychlý modul plug-in v rámci spuštění analýzy kódu.
 
 ::: moniker range="<=vs-2017"
@@ -106,7 +106,7 @@ Další informace naleznete v tématu [Analýza kódu pro c/C++ přehled](/visua
 
 1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **Vlastnosti konfigurace** >  stránka**Obecné** vlastností  >  pro**analýzu kódu**.
+1. Vyberte **Vlastnosti konfigurace** > stránce vlastností **Obecné** > **Analýza kódu** .
 
 1. Upravte jednu nebo více vlastností **analýzy kódu** .
 
@@ -116,5 +116,5 @@ Další informace naleznete v tématu [Analýza kódu pro c/C++ přehled](/visua
 
 ## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru MSVC](compiler-options.md)\
+\ [možností kompilátoru MSVC](compiler-options.md)
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

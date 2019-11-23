@@ -1,6 +1,6 @@
 ---
-title: Raw pointers (C++)
-description: How to use raw pointers in C++
+title: Nezpracované ukazatele (C++)
+description: Používání nezpracovaných ukazatelů v nástrojiC++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
@@ -11,11 +11,11 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74250658"
 ---
-# <a name="raw-pointers-c"></a>Raw pointers (C++)
+# <a name="raw-pointers-c"></a>Nezpracované ukazatele (C++)
 
-A pointer is a type of variable that stores the address of an object in memory and is used to access that object. A *raw pointer* is a pointer whose lifetime is not controlled by an encapsulating object such as a [smart pointer](smart-pointers-modern-cpp.md). A raw pointer can be assigned the address of another non-pointer variable, or it can be assigned a value of [nullptr](nullptr.md). A pointer that has not been assigned a value contains random data.
+Ukazatel je typ proměnné, která ukládá adresu objektu v paměti a slouží k přístupu k tomuto objektu. *Nezpracovaný ukazatel* je ukazatel, jehož doba života není ovládána zapouzdřeným objektem, jako je [inteligentní ukazatel](smart-pointers-modern-cpp.md). Nezpracovanému ukazateli se dá přiřadit adresa jiné proměnné bez ukazatele, nebo se mu dá přiřadit hodnota [nullptr](nullptr.md). Ukazatel, kterému nebyla přiřazena hodnota, obsahuje náhodná data.
 
-A pointer can also be *dereferenced* to retrieve the value of the object that it points at. The *member access operator* provides access to an object's members.
+Ukazatel lze také *odkázat* , aby se načetla hodnota objektu, na který odkazuje. *Operátor přístupu členů* poskytuje přístup k členům objektu.
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -26,7 +26,7 @@ A pointer can also be *dereferenced* to retrieve the value of the object that it
 
 ```
 
-A pointer can point to a typed object or to **void**. When a program allocates a new object on the [heap](https://wikipedia.org/wiki/Heap) in memory, it receives the address of that object in the form of a pointer. Such pointers are called *owning pointers*; an owning pointer (or a copy of it) must be used to explicitly delete the heap-allocated object when it is no longer needed. Failure to delete the memory results in a *memory leak* and renders that memory location unavailable to any other program on the machine. For more information, see [new and delete operators](new-and-delete-operators.md).
+Ukazatel může ukazovat na typový objekt nebo na **typ void**. Když program přidělí novému objektu [haldě](https://wikipedia.org/wiki/Heap) v paměti, obdrží adresu tohoto objektu ve formě ukazatele. Tyto ukazatele se nazývají *vlastnící ukazatele*; vlastnící ukazatel (nebo jeho kopie) se musí použít k explicitnímu odstranění objektu, který je přidělen haldě, pokud již není potřeba. Při odstranění paměti dojde k *nevrácení paměti* z důvodu nedostupnosti paměti pro žádný jiný program v počítači. Další informace najdete v tématu [operátory New a DELETE](new-and-delete-operators.md).
 
 ```cpp
 
@@ -35,7 +35,7 @@ A pointer can point to a typed object or to **void**. When a program allocates a
     delete mc; // delete object (please don't forget!)
 ```
 
-A pointer (if it isn't declared as **const**) can be incremented or decremented so that it points to a new location in memory. This is called *pointer arithmetic* and is used in C-style programming to iterate over elements in arrays or other data structures. A **const** pointer can't be made to point to a different memory location, and in that sense is very similar to a [reference](references-cpp.md). For more information, see [const and volatile pointers](const-and-volatile-pointers.md).
+Ukazatel (Pokud není deklarován jako **const**) lze zvýšit nebo snížit tak, aby odkazoval na nové umístění v paměti. Tato metoda se nazývá *aritmetický ukazatel* a používá se v programování ve stylu C k iterování nad prvky v polích nebo v jiných datových strukturách. Ukazatel **const** nelze nastavit tak, aby odkazoval na jiné umístění v paměti a v tomto smyslu je velmi podobný [odkazu](references-cpp.md). Další informace naleznete v tématu [const a volatile ukazatele](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +49,13 @@ A pointer (if it isn't declared as **const**) can be incremented or decremented 
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-On 64-bit operating systems, a pointer has a size of 64 bits; a system's pointer size determines how much addressable memory it can have. All copies of a pointer point to the same memory location. Pointers (along with references) are used extensively in C++ to pass larger objects to and from functions because it is usually far more efficient to copy an object's 64-bit address than to copy an entire object. When defining a function, specify pointer parameters as **const** unless you intend for the function to modify the object. In general, **const** references are the preferred way to pass objects to functions unless the value of the object can possibly be **nullptr**.
+V 64 operačních systémech má ukazatel velikost 64 bitů; velikost ukazatele systému určuje, kolik paměti může mít. Všechny kopie ukazatele ukazují do stejného umístění v paměti. Ukazatele (spolu s referencemi) se často používají C++ k předávání větších objektů do a z funkcí, protože je obvykle mnohem efektivnější zkopírovat 64 bitovou adresu objektu, než zkopírovat celý objekt. Při definování funkce zadejte parametry ukazatele jako **const** , pokud nechcete, aby funkce změnila objekt. Obecně platí, že odkazy **const** jsou preferovaným způsobem, jak předat objekty funkcím, pokud hodnota objektu může být **nullptr**.
 
-[Pointers to functions](#pointers_to_functions) enable functions to be passed to other functions and are used for "callbacks" in C-style programming. Modern C++ uses [lambda expressions](lambda-expressions-in-cpp.md) for this purpose.
+[Ukazatelé na funkce](#pointers_to_functions) povolují předání funkcí do jiných funkcí a používají se pro "zpětná volání" v programování ve stylu jazyka C. Moderní C++ používá pro tento účel [výrazy lambda](lambda-expressions-in-cpp.md) .
 
-## <a name="initialization-and-member-access"></a>Initialization and member access
+## <a name="initialization-and-member-access"></a>Inicializace a přístup ke členu
 
-The following example shows how to declare a raw pointer and initialize it with an object allocated on the heap, and then how to use it. It also shows a few of the dangers associated with raw pointers. (Remember, this is C-style programming and not modern C++!)
+Následující příklad ukazuje, jak deklarovat nezpracovaný ukazatel a inicializovat jej s objektem přiděleným pro haldu a poté, jak jej použít. Zobrazuje také několik rizik spojených s nezpracovanými ukazateli. (Pamatujte na to, že se jedná o programování ve stylu C++C a ne moderní!)
 
 ```cpp
 #include <iostream>
@@ -133,14 +133,14 @@ int main()
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Pointer arithmetic and arrays
+## <a name="pointer-arithmetic-and-arrays"></a>Aritmetické operace s ukazateli a pole
 
-Pointers and arrays are closely related. When an array is passed by-value to a function, it is passed as a pointer to the first element. The following example demonstrates the following important properties of pointers and arrays:
+Ukazatele a pole spolu úzce souvisejí. Když je pole předáno hodnotou do funkce, je předáno jako ukazatel na první prvek. Následující příklad ukazuje následující důležité vlastnosti ukazatelů a polí:
 
-- the `sizeof` operator returns the total size in bytes of an array
-- to determine the number of elements, divide total bytes by the size of one element
-- when an array is passed to a function, it *decays* to a pointer type
-- the `sizeof` operator when applied to a pointer returns the pointer size, 4 bytes on x86 or 8 bytes on x64
+- operátor `sizeof` vrací celkovou velikost pole v bajtech.
+- Chcete-li určit počet prvků, vydělte celkový počet bajtů velikostí jednoho elementu
+- Když se předává pole do funkce, *Decays* se na typ ukazatele.
+- operátor `sizeof`, když se aplikuje na ukazatel, vrátí velikost ukazatele, 4 bajty na platformě x86 nebo 8 bajtů na platformě x64.
 
 ```cpp
 #include <iostream>
@@ -166,9 +166,9 @@ int main()
 }
 ```
 
-Certain arithmetic operations can be performed on non-const pointers to make them point to a new memory location. A pointer can be incremented and decremented using the **++** , **+=** , **-=** and **--** operators. This technique can be used in arrays and is especially useful in buffers of untyped data. A **void\*** increments by the size of a **char** (1 byte). A typed pointer increments by size of the type it points to.
+Některé aritmetické operace lze provést na nekonstantních ukazatelích, aby odkazovaly na nové umístění v paměti. Ukazatel lze zvýšit a snížit pomocí operátorů **++** , **+=** , **-=** a **--** . Tato technika se dá použít v polích a je obzvláště užitečná ve vyrovnávací paměti netypových dat. **Typ void\*** zvyšuje velikost **znaku** (1 bajt). Zadaný ukazatel se zvyšuje podle velikosti typu, na který odkazuje.
 
-The following example demonstrates how pointer arithmetic can be used to access individual pixels in a bitmap on Windows. Note the use of **new** and **delete**, and the dereference operator. 
+Následující příklad ukazuje, jak lze použít aritmetický ukazatel pro přístup k jednotlivým pixelům v rastrovém obrázku v systému Windows. Všimněte si použití **New** a **Delete**a operátoru dereference. 
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +233,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void* pointers
+## <a name="void-pointers"></a>void * ukazatele
 
-A pointer to **void** simply points to a raw memory location. Sometimes it is necessary to use **void\*** pointers, for example when passing between C++ code and C functions. 
+Ukazatel na **void** jednoduše odkazuje na umístění nezpracované paměti. Někdy je nutné použít ukazatele **void\*** , například při předávání mezi C++ kódem a funkcemi jazyka C. 
 
-When a typed pointer is cast to a void pointer, the contents of the memory location are not changed, but the type information is lost, so that you can't perform increment or decrement operations. A memory location can be cast, for example, from MyClass* to void* and back again to MyClass*. Such operations are inherently error-prone and require great care to avoid errors. Modern C++ discourages the use of void pointers unless absolutely necessary.
+Když je typový ukazatel přetypování na ukazatel typu void, obsah umístění v paměti se nemění, ale informace o typu jsou ztraceny, takže nemůžete provádět operace zvýšení nebo snížení. Umístění paměti lze přetypovat například z MyClass * na void * a zpět na MyClass *. Tyto operace jsou v podstatě náchylné k chybám a vyžadují Skvělé opatrnosti, aby se předešlo chybám. Moderní C++ nedoporučuje použití ukazatelů typu void, pokud není nezbytně nutné.
 
 ```cpp
 
@@ -290,11 +290,11 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a> Pointers to functions
+## <a name="pointers_to_functions"></a>Ukazatele na funkce
 
-In C-style programming, function pointers are used primarily to pass functions to other functions. In this scenario, the caller can customize the behavior of a function without modifying it. In modern C++, [lambda expressions](lambda-expressions-in-cpp.md) provide the same capability with greater type safety and other advantages.
+V programování ve stylu jazyka C jsou ukazatele funkcí používány primárně pro předávání funkcí jiným funkcím. V tomto scénáři volající může přizpůsobit chování funkce beze změny. V moderních C++ [výrazech lambda](lambda-expressions-in-cpp.md) poskytují stejnou schopnost s vyšším zabezpečením typu a dalšími výhodami.
 
-A function pointer declaration specifies the signature that the pointed-to function must have:
+Deklarace ukazatele na funkci určuje signaturu, kterou musí mít ukazatel na odkaz na funkci:
 
 ```cpp
 // Declare pointer to any function that...
@@ -310,7 +310,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-The following example shows a function `combine` that takes as a parameter any function that accepts a `std::string` and returns a `std::string`. Depending on the function that is passed to `combine` it will either prepend or append a string.
+Následující příklad ukazuje funkci `combine`, která přijímá jako parametr jakoukoliv funkci, která přijímá `std::string` a vrací `std::string`. V závislosti na funkci, která je předána `combine`, buď dopřed nebo přiřaďte řetězec.
 
 ```cpp
 #include <iostream>
@@ -344,7 +344,7 @@ int main()
 
 ## <a name="see-also"></a>Viz také:
 
-[Smart pointers](smart-pointers-modern-cpp.md)
-[Indirection Operator: *](indirection-operator-star.md)<br/>
+[Inteligentní ukazatele](smart-pointers-modern-cpp.md)
+[operátora dereference: *](indirection-operator-star.md)<br/>
 [Operátor address-of: &](address-of-operator-amp.md)</br>
-[Welcome back to C++](welcome-back-to-cpp-modern-cpp.md)
+[Vítejte zpět naC++](welcome-back-to-cpp-modern-cpp.md)

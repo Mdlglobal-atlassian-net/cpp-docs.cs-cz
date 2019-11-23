@@ -43,15 +43,15 @@ Pro C++ standardní knihovnu bylo kombinování a spárování explicitně zaká
 
 Pro CRT, kombinování a spárování se nikdy nepodporovalo, ale často se jednalo o alespoň do sady Visual Studio 2015 a univerzálního CRT, protože se plocha rozhraní API v průběhu času nezměnila. Univerzální CRT podařilo přerušit zpětnou kompatibilitu, takže v budoucnu můžeme zajistit zpětnou kompatibilitu. Jinými slovy, nemáme v budoucnu žádné plány na zavedení nových, univerzálních binárních souborů CRT s verzí. Místo toho se teď existující Univerzální CRT místně aktualizuje.
 
-Abychom zajistili částečnou kompatibilitu s objekty (knihovny) a soubory objektů (knihovny), které jsou kompilovány se staršími verzemi hlaviček modulu runtime jazyka C, poskytujeme knihovnu legacy_stdio_definitions. lib se sadou Visual Studio 2015 nebo novější. Tato knihovna poskytuje symboly kompatibility pro většinu funkcí a exportů dat odebraných z univerzálního CRT. Sada symbolů kompatibility poskytnutá legacy_stdio_definitions. lib je dostačující pro splnění většiny závislostí, včetně všech závislostí v knihovnách, které jsou součástí Windows SDK. Existují však některé symboly, které byly odebrány z Univerzální CRT, pro které není možné poskytnout symboly kompatibility. Mezi tyto symboly patří některé funkce (například \_\_IOB\_Func) a exporty dat (například \_\_IMP\_\_\_IOB, \_\_IMP\_\_@no__ t_12_ pctype, \_\_IMP\_\_\_MB\_je\_max).
+Abychom zajistili částečnou kompatibilitu s objekty (knihovny) a soubory objektů (knihovny), které jsou kompilovány se staršími verzemi hlaviček modulu runtime jazyka C, poskytujeme knihovnu, legacy_stdio_definitions. lib, se sadou Visual Studio 2015 nebo novějším. Tato knihovna poskytuje symboly kompatibility pro většinu funkcí a exportů dat odebraných z univerzálního CRT. Sada symbolů kompatibility, kterou poskytuje legacy_stdio_definitions. lib, je dostačující pro splnění většiny závislostí, včetně všech závislostí v knihovnách zahrnutých do Windows SDK. Existují však některé symboly, které byly odebrány z Univerzální CRT, pro které není možné poskytnout symboly kompatibility. Mezi tyto symboly patří některé funkce (například \_\_IOB\_Func) a exporty dat (například \_\_IMP\_\_\_IOB, \_\_IMP\_\_\_pctype, \_\_IMP\_\_\_\_\_maximum).
 
 Pokud máte statickou knihovnu, která byla sestavena se starší verzí hlaviček modulu runtime jazyka C, doporučujeme následující akce v tomto pořadí:
 
 1. Znovu sestavte statickou knihovnu pomocí nové verze sady Visual Studio a hlavičkových hlaviček Universal CRT pro podporu propojení s univerzálním CRT. Tento přístup je plně podporovaná (a proto nejlepší) možnost.
 
-1. Pokud nemůžete (nebo nechcete) znovu sestavit statickou knihovnu, můžete se pokusit propojit se staršími\_stdio\_definitions. lib. Pokud vyhovuje závislosti v době propojení vaší statické knihovny, budete chtít důkladně otestovat statickou knihovnu, protože se používá v binárním souboru, aby se zajistilo, že nebude mít nepříznivý vliv na jakékoli [změny chování provedené v univerzálním CRT](visual-cpp-change-history-2003-2015.md#BK_CRT) . .
+1. Pokud nemůžete (nebo nechcete) znovu sestavit statickou knihovnu, můžete se pokusit propojit se staršími\_stdio\_definitions. lib. Pokud splňuje závislosti v době propojení ve vaší statické knihovně, budete chtít důkladně otestovat statickou knihovnu, protože se používá v binárním souboru, aby se zajistilo, že nebude mít nepříznivý vliv na jakékoli [změny chování provedené v univerzálním CRT](visual-cpp-change-history-2003-2015.md#BK_CRT).
 
-1. Pokud se neshodují žádné závislosti statické knihovny\_stdio\_definitions. lib nebo pokud knihovna nepracuje s univerzálním CRT z důvodu výše uvedených změn chování, doporučujeme zapouzdření statické knihovny. do knihovny DLL, kterou propojíte se správnou verzí modulu runtime jazyka C. Pokud byla například Statická knihovna sestavena pomocí Visual Studio 2013, je vhodné vytvořit tuto knihovnu DLL pomocí Visual Studio 2013 a také knihoven Visual Studio 2013 C++ . Sestavením knihovny do knihovny DLL zapouzdřete podrobnosti implementace, které jsou jeho závislostí na konkrétní verzi modulu runtime jazyka C. Budete chtít mít pozor, aby rozhraní knihovny DLL neuniklo podrobnosti o tom, který modul runtime jazyka C používá, například vrácením souboru * napříč hranicí knihovny DLL nebo vrácením ukazatele s přiděleným objektem, který očekává, že volající uvolňuje.
+1. Pokud se neshodují žádné závislosti statické knihovny\_stdio\_definitions. lib nebo pokud knihovna nepracuje s univerzálním CRT z důvodu výše uvedených změn chování, doporučujeme zapouzdřit statickou knihovnu do knihovny DLL, kterou propojíte se správnou verzí modulu Microsoft C Runtime. Pokud byla například Statická knihovna sestavena pomocí Visual Studio 2013, je vhodné vytvořit tuto knihovnu DLL pomocí Visual Studio 2013 a také knihoven Visual Studio 2013 C++ . Sestavením knihovny do knihovny DLL zapouzdřete podrobnosti implementace, které jsou jeho závislostí na konkrétní verzi modulu runtime jazyka C. Budete chtít mít pozor, aby rozhraní knihovny DLL neuniklo podrobnosti o tom, který modul runtime jazyka C používá, například vrácením souboru * napříč hranicí knihovny DLL nebo vrácením ukazatele s přiděleným objektem, který očekává, že volající uvolňuje.
 
 Použití vícenásobných CRTs v jednom procesu není v a samotném případě problematické (ve skutečnosti ale většina procesů ukončí načítání více knihoven DLL CRT, například komponenty operačního systému Windows budou záviset na knihovně Msvcrt. dll a CLR bude záviset na vlastní privátní CRT. Problémy vznikají při Jumble stavu z různých CRTs. Například byste neměli přidělovat paměť pomocí msvcr110. dll! a pokusit se uvolnit paměť pomocí msvcr120. dll! Free a neměli byste se pokoušet o otevření souboru pomocí msvcr110! fopen a pokus o čtení z tohoto souboru pomocí msvcr120! fread. Pokud nejumblete stav z různých CRTs, můžete v jednom procesu bezpečně načítat víc CRTs.
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t je nativní typ)
 
-(V jazyce Microsoft C++ Visual 6,0 a starším, **wchar_t** nebylo implementováno jako vestavěný typ, ale byla deklarována v WCHAR. h jako typedef pro znaménko short.) C++ Standard vyžaduje, aby **wchar_t** byl vestavěný typ. Použití verze typedef může způsobit problémy s přenositelností. Pokud upgradujete z dřívějších verzí sady Visual Studio a dojde k chybě kompilátoru upozornění C2664, protože kód se snaží implicitně převést **wchar_t** na **unsigned short**, doporučujeme, abyste změnili kód, abyste chybu opravili, místo nastavení @no__t _2_ . Další informace naleznete v tématu [/Zc: wchar_t (Wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(V jazyce Microsoft C++ Visual 6,0 a starším **wchar_t** nebyla implementována jako vestavěný typ, ale byla deklarována v WCHAR. h jako definice pro short bez znaménka.) Standard vyžaduje, aby se wchar_t předdefinovaným typem. C++ Použití verze typedef může způsobit problémy s přenositelností. Pokud upgradujete z dřívějších verzí sady Visual Studio a dojde k chybě kompilátoru upozornění C2664, protože kód se snaží implicitně převést **wchar_t** na **unsigned short**, doporučujeme, abyste změnili kód pro opravu chyby namísto nastavení `/Zc:wchar_t-`. Další informace naleznete v tématu [/Zc: wchar_t (Wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Upgrade pomocí možností linkeru/NODEFAULTLIB,/ENTRY a/NOENTRY
 
@@ -101,10 +101,10 @@ V následující tabulce jsou uvedeny knihovny, jejichž obsah se změnil od apl
 |||
 |-|-|
 |Pokud jste používali:|Je potřeba použít tyto knihovny:|
-|Libcmt. lib|Libcmt. lib, libucrt. lib, libvcruntime. lib|
-|LIBCMTD. lib|LIBCMTD. lib, libucrtd. lib, libvcruntimed. lib|
-|Msvcrt. lib|Msvcrt. lib, UCRT. lib, vcruntime. lib|
-|msvcrtd. lib|msvcrtd. lib, ucrtd. lib, vcruntimed. lib|
+|libcmt.lib|Libcmt. lib, libucrt. lib, libvcruntime. lib|
+|libcmtd.lib|LIBCMTD. lib, libucrtd. lib, libvcruntimed. lib|
+|msvcrt.lib|Msvcrt. lib, UCRT. lib, vcruntime. lib|
+|msvcrtd.lib|msvcrtd. lib, ucrtd. lib, vcruntimed. lib|
 
 Stejný problém platí také v případě, že použijete možnost `/ENTRY` nebo možnost `/NOENTRY`, která má také účinek na obcházení výchozích knihoven.
 
@@ -158,13 +158,13 @@ V průběhu let se přidaly rozhraní API a datové typy Windows a někdy se zm�
 
 Další informace o aktuální sadě rozhraní API a minimálních podporovaných operačních systémech pro konkrétní rozhraní API systému Windows najdete v tématu rozhraní API pro [Microsoft a referenční katalog](https://msdn.microsoft.com/library) a přechod na příslušné rozhraní API.
 
-### <a name="windows-version"></a>Verze Windows
+### <a name="windows-version"></a>Verze systému Windows
 
 Při upgradu programu, který používá rozhraní Windows API buď přímo, nebo nepřímo, se musíte rozhodnout, jaká je minimální verze Windows, která se má podporovat. Ve většině případů je Windows 7 dobrou volbou. Další informace najdete v tématu [problémy se soubory hlaviček](porting-guide-spy-increment.md#header_file_problems). `WINVER` makro definuje nejstarší verzi Windows, na které je program určený ke spuštění. Pokud váš program knihovny MFC nastaví program WINVER na 0x0501 (Windows XP), zobrazí se upozornění, protože knihovna MFC již nepodporuje systém XP, i když má samotný kompilátor režim XP.
 
 Další informace najdete v tématu [aktualizace cílové verze Windows](porting-guide-spy-increment.md#updating_winver) a [zastaralých hlavičkových souborů](porting-guide-spy-increment.md#outdated_header_files).
 
-## <a name="atl--mfc"></a>ATL/MFC
+## <a name="atl--mfc"></a>ATL / MFC
 
 ATL a MFC jsou poměrně stabilní rozhraní API, ale změny se provádějí občas. Další informace najdete v tématu [o C++ historii vizuálních změn 2003 – 2015](visual-cpp-change-history-2003-2015.md), [co je nového C++ pro vizuál v aplikaci Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)a [ C++ vylepšení shody v aplikaci Visual Studio](../overview/cpp-conformance-improvements.md).
 
