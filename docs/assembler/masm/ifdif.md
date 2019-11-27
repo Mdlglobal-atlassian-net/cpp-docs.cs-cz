@@ -17,7 +17,7 @@ ms.locfileid: "74397411"
 ---
 # <a name="ifdif-ifdifi"></a>IFDIF, IFDIFI
 
-Grants assembly if the text items are different.
+Udělí sestavení, pokud se liší textové položky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,8 +26,8 @@ Grants assembly if the text items are different.
 
 ## <a name="remarks"></a>Poznámky
 
-If **IFDIFI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Pokud je zadán **IFDIFI** , porovnávání rozlišuje malá a velká písmena. Úplnou syntaxi naleznete v tématu [if](../../assembler/masm/if-masm.md) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

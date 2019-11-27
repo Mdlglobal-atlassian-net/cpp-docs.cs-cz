@@ -15,12 +15,12 @@ ms.locfileid: "74397152"
 ---
 # <a name="name-masm"></a>NAME (MASM)
 
-Ignored.
+Přeskočen.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **NAME**
+> **Jméno**
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

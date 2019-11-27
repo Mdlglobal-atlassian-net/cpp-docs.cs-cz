@@ -15,16 +15,16 @@ ms.locfileid: "74397396"
 ---
 # <a name="ife"></a>IFE
 
-Grants assembly if *expression* is false (0).
+Udělí sestavení, pokud má *výraz* hodnotu false (0).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **IFE** *expression*
+> *Výraz* IFE
 
 ## <a name="remarks"></a>Poznámky
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Úplnou syntaxi naleznete v tématu [if](../../assembler/masm/if-masm.md) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)
