@@ -13,13 +13,13 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398545"
 ---
-# <a name="continue-32-bit-masm"></a>.CONTINUE (32-bit MASM)
+# <a name="continue-32-bit-masm"></a>. POKRAČOVAT (32-bit MASM)
 
-Generates code to jump to the top of a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
+Vygeneruje kód pro skok na začátek [. WHILe](../../assembler/masm/dot-while.md) nebo [. ](../../assembler/masm/dot-repeat.md)Pokud je *Podmínka* pravdivá, opakujte blok. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.CONTINUE** ⟦ **.IF** *condition*⟧
+> **. Pokračujte** v ⟦ **. IF** ⟧ *Podmínka*
 
 ## <a name="see-also"></a>Viz také:
 

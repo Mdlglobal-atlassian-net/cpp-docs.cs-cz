@@ -16,12 +16,12 @@ ms.locfileid: "74395518"
 ---
 # <a name="operator-sizeof"></a>SIZEOF – operátor
 
-Returns the number of bytes in *variable* or *type*.
+Vrátí počet bajtů v *proměnné* nebo *typu*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **SIZEOF** {*variable* | *type*}
+> **SIZEOF** {*Proměnná* | *typ*}
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

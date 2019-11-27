@@ -15,23 +15,23 @@ ms.locfileid: "74397921"
 ---
 # <a name="setframe"></a>.SETFRAME
 
-Fills in the frame register field and offset in the unwind information using the specified register (*reg*) and offset (*offset*). The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a `UWOP_SET_FPREG` unwind code entry for the specified register using the current prologue offset.
+Vyplní pole registru rámce a posune v informacích o unwind pomocí zadaného registru (*reg*) a posunutí (*posun*). Posun musí být násobkem 16 a menší nebo roven 240. Tato direktiva také generuje položku `UWOP_SET_FPREG` unwind kódu pro zadaný registr pomocí aktuálního posunu prologu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.SETFRAME** *reg*, *offset*
+> **. SETFRAME** *reg*, *offset*
 
 ## <a name="remarks"></a>Poznámky
 
-**.SETFRAME** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SETFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. SETFRAME** umožňuje uživatelům ml64. exe určit, jak se funkce rámce odvíjí, a je povoleno pouze v prologu, které se rozšíří z deklarace snímku [proc](../../assembler/masm/proc.md) na [. ](../../assembler/masm/dot-endprolog.md)Direktiva ENDPROLOG Tyto direktivy negenerují kód; generují pouze `.xdata` a `.pdata`. **. SETFRAME** by měl předcházet pokyny, které skutečně implementují akce, které se mají oddělit. Je vhodné zabalit jak direktivy unwind, tak kód, který mají být určeny k tomu, aby se zajistila shoda.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Další informace najdete v tématu [MASM for x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Ukázka
 
 ### <a name="description"></a>Popis
 
-The following sample shows how to use a frame pointer:
+Následující příklad ukazuje, jak použít ukazatel na rámec:
 
 ### <a name="code"></a>Kód
 
@@ -64,4 +64,4 @@ END
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

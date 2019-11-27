@@ -13,24 +13,24 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398227"
 ---
-# <a name="if-32-bit-masm"></a>.IF (32-bit MASM)
+# <a name="if-32-bit-masm"></a>. IF (32-bit MASM)
 
-Generates code that tests *condition1* (for example, AX > 7) and executes the *statements* if that condition is true. (32-bit MASM only.)
+Vygeneruje kód, který testuje *condition1* (například AX > 7) a provede *příkazy* , pokud je tato podmínka pravdivá. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.IF** *condition1*\
-> *statements*\
-> ⟦ **.ELSEIF** *condition2*\
-> *statements*⟧\
-> ⟦ **.ELSE**\
-> *statements*⟧\
+> **. Pokud**\ *condition1*
+> \ *příkazů*
+> ⟦ **. ELSEIF** *Podmínka2*\
+> *příkazy*⟧ \
+> ⟦ **. JINAK**\
+> *příkazy*⟧ \
 > **.ENDIF**
 
 ## <a name="remarks"></a>Poznámky
 
-If a [.ELSE](../../assembler/masm/dot-else.md) follows, its statements are executed if the original condition was false. Note that the conditions are evaluated at run time.
+Pokud [. V OPAČNém](../../assembler/masm/dot-else.md) případě se spustí jeho příkazy, pokud původní podmínka byla nepravdivá. Všimněte si, že podmínky jsou vyhodnocovány v době běhu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

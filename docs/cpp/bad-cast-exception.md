@@ -17,7 +17,7 @@ ms.locfileid: "74245957"
 ---
 # <a name="bad_cast-exception"></a>bad_cast – výjimka
 
-The **bad_cast** exception is thrown by the **dynamic_cast** operator as the result of a failed cast to a reference type.
+Výjimka **bad_cast** je vyvolána operátorem **dynamic_cast** jako výsledek neúspěšného přetypování na odkazový typ.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,13 +28,13 @@ catch (bad_cast)
 
 ## <a name="remarks"></a>Poznámky
 
-The interface for **bad_cast** is:
+Rozhraní pro **bad_cast** :
 
 ```cpp
 class bad_cast : public exception
 ```
 
-The following code contains an example of a failed **dynamic_cast** that throws the **bad_cast** exception.
+Následující kód obsahuje příklad neúspěšného **dynamic_cast** , který vyvolá výjimku **bad_cast** .
 
 ```cpp
 // expre_bad_cast_Exception.cpp
@@ -65,14 +65,14 @@ int main() {
 }
 ```
 
-The exception is thrown because the object being cast (a Shape) isn't derived from the specified cast type (Circle). Chcete-li se této výjimce vyhnout, přidejte do funkce `main` následující deklarace:
+Výjimka je vyvolána, protože objekt, který je přetypování (tvar), není odvozen od zadaného typu přetypování (Circle). Chcete-li se této výjimce vyhnout, přidejte do funkce `main` následující deklarace:
 
 ```cpp
 Circle circle_instance;
 Circle& ref_circle = circle_instance;
 ```
 
-Then reverse the sense of the cast in the **try** block as follows:
+Pak převratte smysl přetypování do bloku **Try** následujícím způsobem:
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
@@ -84,38 +84,38 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 |Konstruktor|Popis|
 |-|-|
-|[bad_cast](#bad_cast)|The constructor for objects of type `bad_cast`.|
+|[bad_cast](#bad_cast)|Konstruktor pro objekty typu `bad_cast`.|
 
 ### <a name="functions"></a>Funkce
 
 |Funkce|Popis|
 |-|-|
-|[what](#what)|Bude určeno později|
+|[Co](#what)|Bude určeno později|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operator=](#op_eq)|An assignment operator that assigns one `bad_cast` object to another.|
+|[operátor =](#op_eq)|Operátor přiřazení, který přiřadí jeden objekt `bad_cast` k druhému.|
 
-## <a name="bad_cast"></a> bad_cast
+## <a name="bad_cast"></a>bad_cast
 
-The constructor for objects of type `bad_cast`.
+Konstruktor pro objekty typu `bad_cast`.
 
 ```cpp
 bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operátor =
 
-An assignment operator that assigns one `bad_cast` object to another.
+Operátor přiřazení, který přiřadí jeden objekt `bad_cast` k druhému.
 
 ```cpp
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a> what
+## <a name="what"></a>Co
 
 ```cpp
 const char* what() const noexcept override;
@@ -123,6 +123,6 @@ const char* what() const noexcept override;
 
 ## <a name="see-also"></a>Viz také:
 
-[dynamic_cast Operator](../cpp/dynamic-cast-operator.md)\
-[Keywords](../cpp/keywords-cpp.md)\
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[operátor dynamic_cast](../cpp/dynamic-cast-operator.md)\
+\ [klíčových slov](../cpp/keywords-cpp.md)
+[Moderní C++ osvědčené postupy pro výjimky a zpracování chyb](../cpp/errors-and-exception-handling-modern-cpp.md)

@@ -80,14 +80,14 @@ Hodnota, která určuje datový typ pole. Podrobnosti najdete v nápovědě k ro
 *m_lSize*<br/>
 Hodnota, která určuje maximální velikost objektu pole DAO (v bajtech), který obsahuje text nebo pevnou velikost objektu pole, který obsahuje textové nebo číselné hodnoty. Podrobnosti najdete v nápovědě k rozhraní DAO v tématu "vlastnost velikosti". Velikost může být jedna z následujících hodnot:
 
-|Typ|Velikost (v bajtech)|Popis|
+|Typ|Velikost (bajty)|Popis|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 bajt|Ano/ne (totéž jako true/false)|
 |`dbByte`|1|Bajt|
-|`dbInteger`|2|Integer|
+|`dbInteger`|2|Celé číslo|
 |`dbLong`|4|Dlouhé|
 |`dbCurrency`|8|Měna ([COleCurrency](../../mfc/reference/colecurrency-class.md))|
-|`dbSingle`|4|Jednoduchá|
+|`dbSingle`|4|Jednoduché|
 |`dbDouble`|8|Double|
 |`dbDate`|8|Datum a čas ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Text ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
@@ -159,6 +159,6 @@ Informace načtené členskou funkcí `GetFieldInfo` (třídy obsahující pole)
 ## <a name="see-also"></a>Viz také:
 
 [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
-[CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
-[CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
+[CDaoTableDef:: GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
+[CDaoRecordset:: GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
+[CDaoQueryDef:: GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)

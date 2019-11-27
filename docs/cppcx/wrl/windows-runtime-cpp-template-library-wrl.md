@@ -3,12 +3,12 @@ title: Knihovna šablon C++ prostředí Windows Runtime (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274662"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541207"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
 
@@ -43,19 +43,19 @@ Tady je několik prostředků, které vám pomůžou pracovat s knihovnou C++ š
 [Knihovna prostředí Windows Runtime (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 V tomto videu kanálu 9 se dozvíte víc o tom C++ , jak knihovna šablon prostředí Windows Runtime pomáhá psát aplikace Univerzální platforma Windows (UWP) a jak vytvářet a využívat prostředí Windows Runtime komponenty.
 
-[Postupy: Aktivace a použití komponenty prostředí Windows Runtime](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
+[Postupy: aktivace a používání součásti prostředí Windows Runtime](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Ukazuje, jak použít knihovnu šablon C++ prostředí Windows Runtime k inicializaci prostředí Windows Runtime a aktivaci a použití komponenty prostředí Windows Runtime.
 
-[Postupy: Dokončit asynchronní operace](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
+[Postupy: dokončení asynchronních operací](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Ukazuje, jak použít knihovnu šablon C++ prostředí Windows Runtime ke spuštění asynchronních operací a provedení práce po dokončení operací.
 
-[Postupy: Zpracování událostí](how-to-handle-events-using-wrl.md)<br/>
+[Postupy: zpracování událostí](how-to-handle-events-using-wrl.md)<br/>
 Ukazuje, jak použít knihovnu šablon C++ prostředí Windows Runtime k přihlášení k odběru a zpracování událostí objektu prostředí Windows Runtime.
 
 [Návod: Vytvoření aplikace pro UPW s použitím knihovny WRL a platformy Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Naučte se, jak vytvořit aplikaci pro UWP, která používá [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
 
-[Postupy: Vytvoření klasické komponenty modelu COM](how-to-create-a-classic-com-component-using-wrl.md)<br/>
+[Postupy: vytvoření klasické komponenty modelu COM](how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Ukazuje, jak použít knihovnu šablon C++ prostředí Windows Runtime k vytvoření základní komponenty modelu COM a základní způsob, jak registrovat a spotřebovávat komponentu modelu COM z desktopové aplikace.
 
 [Postupy: Přímé vytváření instancí komponent knihovny WRL](how-to-instantiate-wrl-components-directly.md)<br/>
@@ -68,12 +68,12 @@ Ukazuje, jak zpracovat vlastní součásti prostředí Windows Runtime z WRL vyt
 Ukazuje, jak používat rozhraní [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) a [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) společně s úkoly k odesílání požadavků HTTP GET a post webové službě v aplikaci UWP.
 
 [Ukázka optimalizace cest Bing Maps](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
-Používá třídu, která je definována v [návodu: `HttpRequest` Připojení pomocí úloh a požadavků](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) XML http v kontextu úplné aplikace UWP.
+Používá třídu `HttpRequest`, která je definována v [návodu: připojení pomocí úloh a požadavků XML http](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) v kontextu úplné aplikace UWP.
 
 [Vytvoření komponenty prostředí Windows Runtime DLL s C++ ukázkou](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Ukazuje, jak pomocí knihovny šablon C++ prostředí Windows Runtime vytvořit vnitroprocesové komponentu knihovny DLL a spotřebovat ji z C++/CX, JavaScriptu a. C#
 
-[Ukázka hry rozhraní DirectX mramor bludiště](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[Ukázka hry rozhraní DirectX mramor bludiště](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Ukazuje, jak použít knihovnu šablon C++ prostředí Windows Runtime ke správě životnosti komponent modelu COM, jako je rozhraní DirectX a Media Foundation v kontextu kompletní 3D hry.
 
 [Ukázka odesílání oznámení informačních zpráv z desktopových aplikací](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
@@ -85,7 +85,7 @@ Knihovna C++ šablon prostředí Windows Runtime připomíná knihovnu ATL (Acti
 
 Knihovna C++ šablon prostředí Windows Runtime podporuje funkce modelu COM, které jsou požadovány pro aplikace pro UWP. Proto se liší od knihovny ATL, protože vynechává přímou podporu funkcí modelu COM, jako například:
 
-- Agregovat
+- agregovat
 
 - skladové implementace
 
@@ -109,23 +109,23 @@ Knihovna C++ šablon prostředí Windows Runtime poskytuje typy, které předsta
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) je typ *inteligentního ukazatele* , který představuje rozhraní určené parametrem šablony. Použijte `ComPtr` k deklaraci proměnné, která má přístup k členům objektu, který je odvozen z rozhraní. `ComPtr`automaticky udržuje počet odkazů pro základní ukazatel rozhraní a uvolní rozhraní, když počet odkazů překročí nulu.
+[ComPtr](comptr-class.md) je typ *inteligentního ukazatele* , který představuje rozhraní určené parametrem šablony. Použijte `ComPtr` k deklaraci proměnné, která má přístup k členům objektu, který je odvozen z rozhraní. `ComPtr` automaticky udržuje počet odkazů pro základní ukazatel rozhraní a uvolní rozhraní, když počet odkazů překročí nulu.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](runtimeclass-class.md) představuje instanci třídy, která dědí sadu zadaných rozhraní. `RuntimeClass` Objekt může poskytnout kombinaci podpory pro jedno nebo více prostředí Windows Runtime rozhraní modelu COM nebo slabý odkaz na komponentu.
+[RuntimeClass](runtimeclass-class.md) představuje instanci třídy, která dědí sadu zadaných rozhraní. Objekt `RuntimeClass` může poskytnout kombinaci podpory pro jedno nebo více prostředí Windows Runtimech rozhraní COM nebo slabý odkaz na komponentu.
 
 ### <a name="module"></a>Modul
 
-[Modul](module-class.md) představuje kolekci souvisejících objektů. `Module` Objekt spravuje objekty pro vytváření tříd, které vytvářejí objekty a registrují, což umožňuje jiným aplikacím použít objekt.
+[Modul](module-class.md) představuje kolekci souvisejících objektů. Objekt `Module` spravuje objekty pro vytváření tříd, které vytvářejí objekty a registrují, což umožňuje jiným aplikacím použít objekt.
 
 ### <a name="callback"></a>OnCuePoint
 
-Funkce [zpětného volání](callback-function-wrl.md) vytvoří objekt, jehož členská funkce je obslužná rutina události (metoda zpětného volání). `Callback` Použijte funkci k zápisu asynchronních operací.
+Funkce [zpětného volání](callback-function-wrl.md) vytvoří objekt, jehož členská funkce je obslužná rutina události (metoda zpětného volání). Použijte funkci `Callback` k zápisu asynchronních operací.
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](eventsource-class.md) se používá ke správě obslužných rutin událostí *delegátů* . Použijte knihovnu C++ šablon prostředí Windows Runtime k implementaci delegáta a použijte `EventSource` k přidání, odebrání a vyvolání delegátů.
+[EventSource](eventsource-class.md) se používá ke správě obslužných rutin událostí *delegátů* . Pomocí prostředí Windows Runtime C++ knihovny šablon implementujte delegáta a pomocí `EventSource` můžete přidat, odebrat a vyvolat delegáty.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -133,19 +133,19 @@ Funkce [zpětného volání](callback-function-wrl.md) vytvoří objekt, jehož 
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) představuje objekt zařazovací modul s volnými vlákny. `FtmBase`vytvoří globální tabulku rozhraní (GIT) a pomůže spravovat zařazovací a proxy objekty.
+[FtmBase](ftmbase-class.md) představuje objekt zařazovací modul s volnými vlákny. `FtmBase` vytvoří globální tabulku rozhraní (GIT) a pomůže spravovat zařazovací a proxy objekty.
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) je typ inteligentního ukazatele, který představuje *slabý odkaz*, který odkazuje na objekt, který může nebo nemusí být přístupný. `WeakRef` Objekt může být použit pouze pomocí prostředí Windows Runtime, a ne podle klasického modelu COM.
+[WeakRef](weakref-class.md) je typ inteligentního ukazatele, který představuje *slabý odkaz*, který odkazuje na objekt, který může nebo nemusí být přístupný. Objekt `WeakRef` lze použít pouze v prostředí Windows Runtime, nikoli v klasickém modelu COM.
 
-`WeakRef` Objekt obvykle představuje objekt, jehož existence je řízena externím vláknem nebo aplikací. `WeakRef` Objekt může například odkazovat na objekt souboru. Když je soubor otevřený, `WeakRef` je platný a odkazovaný soubor je přístupný. Ale když je soubor zavřený, `WeakRef` je neplatný a soubor není přístupný.
+Objekt `WeakRef` obvykle představuje objekt, jehož existence je řízena externím vláknem nebo aplikací. Objekt `WeakRef` například může odkazovat na objekt souboru. Když je soubor otevřený, `WeakRef` je platný a odkazovaný soubor je přístupný. Ale když je soubor uzavřený, `WeakRef` je neplatný a soubor není dostupný.
 
 ## <a name="related-topics"></a>Související témata
 
 |||
 |-|-|
 |[Klíčová rozhraní API podle kategorie](key-wrl-apis-by-category.md)|Zvýrazní typy, funkce C++ a makra primární knihovny šablon prostředí Windows Runtime.|
-|[Referenční informace](wrl-reference.md)|Obsahuje referenční informace pro knihovnu šablon C++ prostředí Windows Runtime.|
+|[Odkazy](wrl-reference.md)|Obsahuje referenční informace pro knihovnu šablon C++ prostředí Windows Runtime.|
 |[Rychlý referenční C++pro/CX)](../../cppcx/quick-reference-c-cx.md)|Stručně popisuje C++funkce/CX, které podporují prostředí Windows Runtime.|
 |[Používání komponent prostředí Windows Runtime v jazyce VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Ukazuje, jak použít C++/CX k vytvoření základní komponenty prostředí Windows Runtime.|

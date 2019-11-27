@@ -37,17 +37,17 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Vrátí nenulovou hodnotu, pokud je aktuální operace vhodná pro typ aktualizovaného pole.|
 |[CDaoFieldExchange:: SetFieldType](#setfieldtype)|Určuje typ datového členu sady záznamů – sloupec nebo parametr, který je reprezentován všemi následnými voláními funkcí DFX do dalšího volání `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CDaoFieldExchange::m_nOperation](#m_noperation)|Operace DFX prováděná aktuálním voláním členské funkce `DoFieldExchange` sady záznamů.|
-|[CDaoFieldExchange::m_prs](#m_prs)|Ukazatel na sadu záznamů, na které jsou prováděny operace DFX.|
+|[CDaoFieldExchange:: m_nOperation](#m_noperation)|Operace DFX prováděná aktuálním voláním členské funkce `DoFieldExchange` sady záznamů.|
+|[CDaoFieldExchange:: m_prs](#m_prs)|Ukazatel na sadu záznamů, na které jsou prováděny operace DFX.|
 
 ## <a name="remarks"></a>Poznámky
 

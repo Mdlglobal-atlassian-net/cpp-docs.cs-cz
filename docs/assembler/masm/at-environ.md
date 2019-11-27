@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399122"
 ---
-# <a name="environ"></a>\@Environ
+# <a name="environ"></a>\@Environ –
 
-Value of environment variable *envvar* (macro function).
+Hodnota proměnné prostředí *ENVVAR* (funkce makra).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@Environ(** *envvar* **)**
+> **\@Environ – (** *ENVVAR* **)**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

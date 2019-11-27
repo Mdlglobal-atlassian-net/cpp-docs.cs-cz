@@ -15,7 +15,7 @@ ms.locfileid: "74398687"
 ---
 # <a name="486p-32-bit-masm"></a>.486P (32-bit MASM)
 
-Enables assembly of all instructions (including privileged) for the 80486 processor. (32-bit MASM only.)
+Povolí sestavení všech instrukcí (včetně privilegovaných) pro procesor 80486. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 

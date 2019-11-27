@@ -15,15 +15,15 @@ ms.locfileid: "74397531"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
-Defines one or more external variables, labels, or symbols called *name* whose type is *type*.
+Definuje jednu nebo více externích proměnných, popisků nebo symbolů nazvaných *název* , jejichž typ je *typ*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **EXTERNDEF** ⟦*language-type*⟧ *name* __:__ *type* ⟦ __,__ ⟦*language-type*⟧ *name* __:__ *type* ...⟧
+> **EXTERNDEF** ⟦*typu jazyka* *⟧* __:__ *Zadejte* ⟦ __,__ ⟦*jazyk-typ*⟧ *název* __:__ *typ* ... ⟧
 
 ## <a name="remarks"></a>Poznámky
 
-If *name* is defined in the module, it is treated as [PUBLIC](../../assembler/masm/public-masm.md). If *name* is referenced in the module, it is treated as [EXTERN](../../assembler/masm/extern-masm.md). If *name* is not referenced, it is ignored. The *type* can be [ABS](../../assembler/masm/operator-abs.md), which imports *name* as a constant. Normally used in include files.
+Pokud je *název* definován v modulu, je považován za [veřejný](../../assembler/masm/public-masm.md). Pokud je v modulu odkazováno na *název* , je považován za [extern](../../assembler/masm/extern-masm.md). Pokud na *název* neodkazuje, bude ignorován. *Typ* může být [ABS](../../assembler/masm/operator-abs.md), který importuje *název* jako konstantu. Obvykle používáno v zahrnutých souborech.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398895"
 ---
-# <a name="version"></a>\@Version
+# <a name="version"></a>Verze \@
 
-The major and minor version of MASM reported at the command line, as a single number (text macro). For example, MASM version 14.23.28107.0 produces "1423".
+Hlavní a podverze MASMy hlášené na příkazovém řádku jako jedno číslo (textové makro). Například MASM verze 14.23.28107.0 vytvoří "1423".
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@Version**
+> **Verze \@**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

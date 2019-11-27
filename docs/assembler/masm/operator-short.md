@@ -16,12 +16,12 @@ ms.locfileid: "74396174"
 ---
 # <a name="operator-short"></a>SHORT – operátor
 
-Sets the type of *label* to short. All jumps to *label* must be short (within the range -128 to +127 bytes from the jump instruction to *label*).
+Nastaví typ *popisku* na short. Všechny skoky na *návěští* musí být krátké (v rozsahu od-128 do + 127 bajtů z instrukce skoku na *návěští*).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **SHORT** *label*
+> **Krátký** *popisek*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

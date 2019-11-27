@@ -19,11 +19,11 @@ ms.locfileid: "74397136"
 ---
 # <a name="operator-"></a>\+ – operátor
 
-The first operator returns *expression1* plus *expression2*.
+První operátor vrátí hodnotu *Výraz1* + *Výraz2*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* + *expression2*
+> *výraz1* + *Výraz2*
 
 ## <a name="see-also"></a>Viz také:
 

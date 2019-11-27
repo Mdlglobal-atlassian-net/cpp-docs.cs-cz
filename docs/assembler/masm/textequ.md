@@ -15,12 +15,12 @@ ms.locfileid: "74393188"
 ---
 # <a name="textequ"></a>TEXTEQU
 
-Assigns *textitem* to *name*. The *textitem* can be a literal string, a constant preceded by a `%`, or the string returned by a macro function.
+Přiřadí *textitem* k *názvu*. *Textitem* může být řetězcový literál, konstanta předchází `%`, nebo řetězec vrácený funkcí makra.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **TEXTEQU** ⟦*textitem*⟧
+> *název* **TEXTEQU** ⟦*textitem*⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

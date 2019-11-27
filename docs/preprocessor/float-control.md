@@ -37,10 +37,10 @@ Určuje, zda se má povolit (**zapnuto**) nebo zakázat (**vypnuto**) sémantika
 
 **s výjimkou** lze nastavit pouze na hodnotu **zapnuto** , je-li nastavena **přesnost** **na hodnotu on**.
 
-**push**\
+\ **nabízených oznámení**
 Posune aktuální **float_control** nastavení do vnitřního zásobníku kompilátoru.
 
-**pop**\
+\ **POP**
 Odebere nastavení **float_control** v horní části interního zásobníku kompilátoru a vytvoří nové nastavení **float_control** .
 
 ## <a name="remarks"></a>Poznámky
@@ -49,11 +49,11 @@ Odebere nastavení **float_control** v horní části interního zásobníku kom
 
 | | float_control (přesné \*) | float_control (s výjimkou \*) | fp_contract (\*) | fenv_access (\*) |
 |-|-|-|-|-|
-| /FP: Strict             | zapnuté  | zapnuté  | vypnuto | zapnuté  |
-| /FP: Strict/FP: s výjimkou | zapnuté  | vypnuto | vypnuto | zapnuté  |
-| /FP: přesný            | zapnuté  | vypnuto | zapnuté  | vypnuto |
-| /FP: přesný/FP: s výjimkou | zapnuté  | zapnuté  | zapnuté  | vypnuto |
-| /FP: Fast               | vypnuto | vypnuto | zapnuté  | vypnuto |
+| /FP: Strict             | na  | na  | vypnuto | na  |
+| /FP: Strict/FP: s výjimkou | na  | vypnuto | vypnuto | na  |
+| /FP: přesný            | na  | vypnuto | na  | vypnuto |
+| /FP: přesný/FP: s výjimkou | na  | na  | na  | vypnuto |
+| /FP: Fast               | vypnuto | vypnuto | na  | vypnuto |
 
 Jinými slovy, je nutné použít několik direktiv pragma v kombinaci k emulaci **/FP: Fast**, **/FP:** **Restricted,/FP: Strict**a **/FP: s výjimkou** možností příkazového řádku.
 

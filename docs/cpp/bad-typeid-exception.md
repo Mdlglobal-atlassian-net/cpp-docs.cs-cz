@@ -17,7 +17,7 @@ ms.locfileid: "74245918"
 ---
 # <a name="bad_typeid-exception"></a>bad_typeid – výjimka
 
-The **bad_typeid** exception is thrown by the [typeid operator](../cpp/typeid-operator.md) when the operand for **typeid** is a NULL pointer.
+Výjimka **bad_typeid** je vyvolána [operátorem typeid](../cpp/typeid-operator.md) , pokud operand pro **typeid** je ukazatel s hodnotou null.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ catch (bad_typeid)
 
 ## <a name="remarks"></a>Poznámky
 
-The interface for **bad_typeid** is:
+Rozhraní pro **bad_typeid** :
 
 ```cpp
 class bad_typeid : public exception
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-The following example shows the **typeid** operator throwing a **bad_typeid** exception.
+Následující příklad ukazuje, že operátor **typeid** vyvolává výjimku **bad_typeid** .
 
 ```cpp
 // expre_bad_typeid.cpp
@@ -80,5 +80,5 @@ Object is NULL
 
 ## <a name="see-also"></a>Viz také:
 
-[Run-Time Type Information](../cpp/run-time-type-information.md)\
+\ [informace o typu](../cpp/run-time-type-information.md) běhu
 [Klíčová slova](../cpp/keywords-cpp.md)

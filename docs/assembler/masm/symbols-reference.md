@@ -13,32 +13,32 @@ ms.locfileid: "74393559"
 ---
 # <a name="symbols-reference"></a>Referenční dokumentace k symbolům
 
-## <a name="date-and-time-information"></a>Date and time information
+## <a name="date-and-time-information"></a>Informace o datu a čase
 
 |||
 |-|-|
-|[\@Date](../../assembler/masm/at-date.md)|[\@Time](../../assembler/masm/at-time.md)|
+|[Datum \@](../../assembler/masm/at-date.md)|[Čas \@](../../assembler/masm/at-time.md)|
 
-## <a name="environment-information"></a>Environment information
-
-|||
-|-|-|
-|[\@Cpu](../../assembler/masm/at-cpu.md)|[\@Environ](../../assembler/masm/at-environ.md)|
-|[\@Interface](../../assembler/masm/at-interface.md)|[\@Version](../../assembler/masm/at-version.md)|
-
-## <a name="file-information"></a>File information
+## <a name="environment-information"></a>Informace o prostředí
 
 |||
 |-|-|
-|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@FileName](../../assembler/masm/at-filename.md)|
-|[\@Line](../../assembler/masm/at-line.md)||
+|[\@procesor](../../assembler/masm/at-cpu.md)|[\@Environ –](../../assembler/masm/at-environ.md)|
+|[Rozhraní \@](../../assembler/masm/at-interface.md)|[Verze \@](../../assembler/masm/at-version.md)|
 
-## <a name="macro-functions"></a>Macro functions
+## <a name="file-information"></a>Informace o souboru
 
 |||
 |-|-|
-|[\@CatStr](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
-|[\@SizeStr](../../assembler/masm/at-sizestr.md)|[\@SubStr](../../assembler/masm/at-substr.md)|
+|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@název souboru](../../assembler/masm/at-filename.md)|
+|[\@řádek](../../assembler/masm/at-line.md)||
+
+## <a name="macro-functions"></a>Funkce maker
+
+|||
+|-|-|
+|[\@Catstr –](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
+|[\@Sizestr –](../../assembler/masm/at-sizestr.md)|[\@substr](../../assembler/masm/at-substr.md)|
 
 ## <a name="miscellaneous"></a>Různé
 
@@ -47,15 +47,15 @@ ms.locfileid: "74393559"
 |[\$](../../assembler/masm/dollar.md)|[\?](../../assembler/masm/q.md)|[\@\@:](../../assembler/masm/at-at.md)|
 |[\@B](../../assembler/masm/at-b.md)|[\@F](../../assembler/masm/at-f.md)||
 
-## <a name="segment-information"></a>Segment information
+## <a name="segment-information"></a>Informace o segmentu
 
 ||||
 |-|-|-|
-|[\@code](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
-|[\@data](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
-|[\@fardata?](../../assembler/masm/at-fardata-q.md)|[\@Model](../../assembler/masm/at-model.md)|[\@stack](../../assembler/masm/at-stack.md)|
+|[kód \@](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
+|[data \@](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
+|[\@fardata?](../../assembler/masm/at-fardata-q.md)|[Model \@](../../assembler/masm/at-model.md)|[zásobník \@](../../assembler/masm/at-stack.md)|
 |[\@WordSize](../../assembler/masm/at-wordsize.md)|||
 
 ## <a name="see-also"></a>Viz také:
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft Macro Assembler – referenční dokumentace](../../assembler/masm/microsoft-macro-assembler-reference.md)

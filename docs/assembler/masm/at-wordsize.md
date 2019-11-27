@@ -15,7 +15,7 @@ ms.locfileid: "74398877"
 ---
 # <a name="wordsize"></a>\@WordSize
 
-Two for a 16-bit segment or four for a 32-bit segment (numeric equate).
+Dva pro 16bitový segment nebo čtyři pro 32 segment (číslo rovno).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ Two for a 16-bit segment or four for a 32-bit segment (numeric equate).
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

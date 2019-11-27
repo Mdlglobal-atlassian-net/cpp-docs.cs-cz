@@ -39,24 +39,24 @@ class CDaoException : public CException
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoException::CDaoException](#cdaoexception)|Vytvoří objekt `CDaoException`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoException::GetErrorCount](#geterrorcount)|Vrátí počet chyb v kolekci chyb databázového stroje.|
-|[CDaoException::GetErrorInfo](#geterrorinfo)|Vrátí informace o chybě týkající se konkrétního objektu chyby v kolekci Errors.|
+|[CDaoException:: GetErrorInfo](#geterrorinfo)|Vrátí informace o chybě týkající se konkrétního objektu chyby v kolekci Errors.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Obsahuje rozšířený chybový kód pro jakoukoli chybu v třídách knihovny MFC rozhraní DAO.|
-|[CDaoException::m_pErrorInfo](#m_perrorinfo)|Ukazatel na objekt [CDaoErrorInfo –](../../mfc/reference/cdaoerrorinfo-structure.md) , který obsahuje informace o jednom objektu Error objektu DAO.|
-|[CDaoException::m_scode](#m_scode)|Hodnota [Code](#m_scode) přidružená k chybě.|
+|[CDaoException:: m_nAfxDaoError](#m_nafxdaoerror)|Obsahuje rozšířený chybový kód pro jakoukoli chybu v třídách knihovny MFC rozhraní DAO.|
+|[CDaoException:: m_pErrorInfo](#m_perrorinfo)|Ukazatel na objekt [CDaoErrorInfo –](../../mfc/reference/cdaoerrorinfo-structure.md) , který obsahuje informace o jednom objektu Error objektu DAO.|
+|[CDaoException:: m_scode](#m_scode)|Hodnota [Code](#m_scode) přidružená k chybě.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -165,7 +165,7 @@ Zavolejte tuto členskou funkci pro získání následujících typů informací
 
 Informace o výjimkách rozhraní DAO a příklady kódu naleznete v článcích [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).
 
-##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
+##  <a name="m_nafxdaoerror"></a>CDaoException:: m_nAfxDaoError
 
 Obsahuje rozšířený kód chyby MFC.
 
@@ -183,7 +183,7 @@ Možné hodnoty jsou:
 
 - AFX_DAO_ERROR_OBJECT_NOT_OPEN jste se pokusili otevřít sadu záznamů založenou na objektu querydef nebo tabledef, který není v otevřeném stavu.
 
-##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo
+##  <a name="m_perrorinfo"></a>CDaoException:: m_pErrorInfo
 
 Obsahuje ukazatel na strukturu `CDaoErrorInfo`, která poskytuje informace o objektu chyby DAO, který jste naposledy načetli voláním metody [GetErrorInfo](#geterrorinfo).
 
@@ -191,7 +191,7 @@ Obsahuje ukazatel na strukturu `CDaoErrorInfo`, která poskytuje informace o obj
 
 Tento objekt obsahuje následující informace:
 
-|Člen CDaoErrorInfo –|Information|Význam|
+|Člen CDaoErrorInfo –|Informace|Význam|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|Kód chyby|Kód chyby rozhraní DAO|
 |`m_strSource`|Zdroj|Název objektu nebo aplikace, které původně vygenerovaly chybu|
@@ -201,7 +201,7 @@ Tento objekt obsahuje následující informace:
 
 Úplné podrobnosti o informacích obsažených v objektu `CDaoErrorInfo` naleznete v tématu struktura [CDaoErrorInfo –](../../mfc/reference/cdaoerrorinfo-structure.md) .
 
-##  <a name="m_scode"></a>  CDaoException::m_scode
+##  <a name="m_scode"></a>CDaoException:: m_scode
 
 Obsahuje hodnotu typu `SCODE`, která popisuje chybu.
 

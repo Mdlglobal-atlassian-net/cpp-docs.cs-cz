@@ -17,29 +17,29 @@ ms.locfileid: "74245847"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Postup vyhodnocení zachytávacího bloku (C++)
 
-Jazyk C++ umožňuje vyvolat výjimky jakéhokoli typu, obecně je však doporučeno vyvolávat typy odvozené z typu std::exception. A C++ exception can be caught by a **catch** handler that specifies the same type as the thrown exception, or by a handler that can catch any type of exception.
+Jazyk C++ umožňuje vyvolat výjimky jakéhokoli typu, obecně je však doporučeno vyvolávat typy odvozené z typu std::exception. C++ Výjimka může být zachycena obslužnou rutinou **catch** , která určuje stejný typ jako vyvolaná výjimka, nebo obslužnou rutinou, která může zachytit jakýkoli typ výjimky.
 
 Je-li typem vyvolané výjimky třída, která má také základní třídu (nebo třídy), lze ji zachytit obslužnými rutinami přijímajícími základní třídy i reference na základy daného typu výjimky. Povšimněte si, že je-li výjimka zachycena referencí, je svázána se skutečným objektem vyvolané výjimky. V ostatních případech jde o kopii (obdobně jako argument funkce).
 
-When an exception is thrown, it may be caught by the following types of **catch** handlers:
+Je-li vyvolána výjimka, může být zachycena následujícími typy obslužných rutin **catch** :
 
 - Obslužná rutina, která může přijmout libovolný typ (pomocí syntaxe tří teček).
 
-- A handler that accepts the same type as the exception object; because it is a copy, **const** and **volatile** modifiers are ignored.
+- Obslužná rutina, která přijímá stejný typ jako objekt výjimky; vzhledem k tomu, že se jedná o kopii, ignorují se modifikátory **const** a **volatile** .
 
 - Obslužná rutina přijímající reference na typ shodný s objektem výjimky.
 
-- A handler that accepts a reference to a **const** or **volatile** form of the same type as the exception object.
+- Obslužná rutina, která přijímá odkaz na **konstantní** nebo **nestálou** formu stejného typu jako objekt výjimky.
 
-- A handler that accepts a base class of the same type as the exception object; since it is a copy, **const** and **volatile** modifiers are ignored. The **catch** handler for a base class must not precede the **catch** handler for the derived class.
+- Obslužná rutina, která přijímá základní třídu stejného typu jako objekt výjimky; vzhledem k tomu, že se jedná o kopii, ignorují se modifikátory **const** a **volatile** . Obslužná rutina **catch** pro základní třídu nesmí předcházet obslužné rutině **catch** pro odvozenou třídu.
 
 - Obslužná rutina přijímající referenci na základní třídu typu shodného s objektem výjimky.
 
-- A handler that accepts a reference to a **const** or **volatile** form of a base class of the same type as the exception object.
+- Obslužná rutina, která přijímá odkaz na **konstantu** nebo **nestálou** formu základní třídy stejného typu jako objekt výjimky.
 
 - Obslužná rutina přijímající ukazatel, na nějž lze vyvolaný objekt ukazatele převést dle standardních pravidel pro převod ukazatelů.
 
-The order in which **catch** handlers appear is significant, because handlers for a given **try** block are examined in order of their appearance. Chybou je například umístit obslužnou rutinu základní třídy před obslužnou rutinu odvozené třídy. After a matching **catch** handler is found, subsequent handlers are not examined. As a result, an ellipsis **catch** handler must be the last handler for its **try** block. Příklad:
+Pořadí, ve kterém jsou obslužné rutiny **catch** významné, je důležité, protože obslužné rutiny pro daný blok **Try** jsou zkontrolovány v pořadí podle jejich vzhledu. Chybou je například umístit obslužnou rutinu základní třídy před obslužnou rutinu odvozené třídy. Po nalezení vyhovující obslužné rutiny **catch** nebudou další obslužné rutiny zkontrolovány. V důsledku toho musí být obslužná rutina **catch** se třemi tečkami poslední obslužnou rutinou pro svůj blok **Try** . Příklad:
 
 ```cpp
 // ...
@@ -62,8 +62,8 @@ catch( CExcptClass E )
 }
 ```
 
-In this example, the ellipsis **catch** handler is the only handler that is examined.
+V tomto příkladu je obslužná rutina **catch** se třemi tečkami jedinou zkoušenou obslužnou rutinou.
 
 ## <a name="see-also"></a>Viz také:
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Moderní C++ osvědčené postupy pro výjimky a zpracování chyb](../cpp/errors-and-exception-handling-modern-cpp.md)

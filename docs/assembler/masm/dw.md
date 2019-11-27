@@ -15,13 +15,13 @@ ms.locfileid: "74397746"
 ---
 # <a name="dw"></a>DW
 
-Allocates and optionally initializes a word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal. **DW** is a synonym of [WORD](../../assembler/masm/word.md).
+Přidělí a případně inicializuje slovo (2 bajty) úložiště pro každý *inicializátor*. Lze také použít jako specifikátor typu kdekoli je typ právní. **DW** je synonymem [slova](../../assembler/masm/word.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> ⟦*name*⟧ **DW** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*Name*⟧ **–** *inicializátor* ⟦ __,__ *inicializátor* ... ⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+\ – [referenční informace o direktivách](../../assembler/masm/directives-reference.md)
 [SWORD](../../assembler/masm/sword.md)

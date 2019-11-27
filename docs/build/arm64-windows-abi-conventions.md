@@ -71,7 +71,7 @@ Výchozí zarovnání rozložení pro globální a statické prvky:
 
 Architektura AArch64 podporuje Registry typu Integer 32:
 
-| Registr | Permanentní? | Role |
+| Registrace | Permanentní? | Role |
 | - | - | - |
 | x0 | Permanentní | Parametr/Scrat registr 1, výsledný registr |
 | x1-x7 | Permanentní | Parametr/Scrat registr 2-8 |
@@ -94,7 +94,7 @@ Pro zajištění kompatibility s rychlým procházením pomocí trasování udá
 
 Architektura AArch64 podporuje taky 32 Registry s plovoucí desetinnou čárkou nebo SIMD, které jsou shrnuté níže:
 
-| Registr | Permanentní? | Role |
+| Registrace | Permanentní? | Role |
 | - | - | - |
 | v0 | Permanentní | Parametr/Scrat registr 1, výsledný registr |
 | v1-v7 | Permanentní | Parametry/pomocné Registry 2-8 |
@@ -117,7 +117,7 @@ Registr ovládacího prvku s plovoucí desetinnou čárkou (FPCR) má určité p
 
 Podobně jako AArch32 poskytuje specifikace AArch64 tři Registry "ID vlákna řízené systémem":
 
-| Registr | Role |
+| Registrace | Role |
 | - | - |
 | TPIDR_EL0 | Rezervovaný. |
 | TPIDRRO_EL0 | Obsahuje číslo procesoru pro aktuální procesor. |
@@ -221,7 +221,7 @@ Všechny ostatní typy používají tuto konvenci:
 
 - Volající musí vyhradit blok paměti dostatečné velikosti a zarovnání pro uložení výsledku. Adresa bloku paměti musí být předána jako další argument funkci v x0 nebo x1, pokud je předáno $this v x0. Volaný může změnit blok paměti výsledku v jakémkoli okamžiku během provádění podprocesu. Volaný vrátí adresu bloku paměti v x0.
 
-## <a name="stack"></a>Rámec
+## <a name="stack"></a>Zásobník
 
 Za běhu, které jsou uvedeny v ARM, zásobník musí zůstat zarovnaný po dobu 16 bajtů. AArch64 obsahuje funkci hardwaru, která generuje chyby zarovnání zásobníku pokaždé, když se nerovná 16 bajtů, a v případě, že je provedeno navýšení nebo uložení v poměru SP. Systém Windows běží vždy, když je tato funkce povolená.
 

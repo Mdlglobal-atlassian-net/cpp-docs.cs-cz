@@ -15,7 +15,7 @@ ms.locfileid: "74397580"
 ---
 # <a name="exitm"></a>EXITM
 
-Terminates expansion of the current repeat or macro block and begins assembly of the next statement outside the block.
+Ukončí rozšíření aktuálního opakování nebo bloku makra a spustí sestavení dalšího příkazu mimo blok.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Terminates expansion of the current repeat or macro block and begins assembly of
 
 ## <a name="remarks"></a>Poznámky
 
-In a macro function, *textitem* is the value returned.
+V rámci funkce makra je *textitem* vrácená hodnota.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

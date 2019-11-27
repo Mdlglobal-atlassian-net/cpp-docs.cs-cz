@@ -1,5 +1,5 @@
 ---
-title: operator &lt;&gt;
+title: operátor &lt;&gt;
 ms.date: 08/30/2018
 f1_keywords:
 - <>
@@ -15,9 +15,9 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396792"
 ---
-# <a name="operator-ltgt"></a>operator &lt;&gt;
+# <a name="operator-ltgt"></a>operátor &lt;&gt;
 
-Treats *text* as a single literal element.
+Považuje *text* za jeden literálový prvek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,4 +25,4 @@ Treats *text* as a single literal element.
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

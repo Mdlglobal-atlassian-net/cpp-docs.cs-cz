@@ -16,12 +16,12 @@ ms.locfileid: "74396586"
 ---
 # <a name="operator-not"></a>NOT – operátor
 
-Returns *expression* with all bits reversed.
+Vrátí *výraz* se všemi zahozenými bity.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **NOT** *expression*
+> *Výraz* not
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74398438"
 ---
 # <a name="elseif-masm"></a>ELSEIF (MASM)
 
-Combines [ELSE](../../assembler/masm/else-masm.md) and [IF](../../assembler/masm/if-masm.md) into one statement.
+Kombinuje [Else](../../assembler/masm/else-masm.md) a v [případě](../../assembler/masm/if-masm.md) jednoho příkazu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Combines [ELSE](../../assembler/masm/else-masm.md) and [IF](../../assembler/masm
 
 ## <a name="remarks"></a>Poznámky
 
-See [IF](../../assembler/masm/if-masm.md).
+Podívejte se, [zda](../../assembler/masm/if-masm.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

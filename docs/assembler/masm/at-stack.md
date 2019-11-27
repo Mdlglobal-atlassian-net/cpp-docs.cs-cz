@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398922"
 ---
-# <a name="stack"></a>\@stack
+# <a name="stack"></a>zásobník \@
 
-DGROUP for near stacks or STACK for far stacks (text macro).
+DGROUP pro poblíž zásobníků nebo STACKu pro bohaté zásobníky (textové makro).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@stack**
+> **zásobník \@**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

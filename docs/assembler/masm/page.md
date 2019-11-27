@@ -15,14 +15,14 @@ ms.locfileid: "74395118"
 ---
 # <a name="page"></a>PAGE
 
-The first directive sets line *length* and character *width* of the program listing. If no arguments are given, generates a page break. The second directive increments the section number and resets the page number to 1.
+První direktiva nastaví *délku* řádku a *šířku* znaku pro výpis programu. Pokud nejsou zadány žádné argumenty, vygeneruje zalomení stránky. Druhá direktiva zvýší číslo oddílu a obnoví číslo stránky na hodnotu 1.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **PAGE** ⟦*length*⟧⟦ __,__ *width*⟧
+> ⟦*Délky* **stránky** ⟧ ⟦ __,__ *Width*⟧
 
-> **PAGE +**
+> **STRÁNKA +**
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

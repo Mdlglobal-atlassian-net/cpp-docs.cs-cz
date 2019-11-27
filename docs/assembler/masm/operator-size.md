@@ -17,12 +17,12 @@ ms.locfileid: "74395823"
 ---
 # <a name="operator-size"></a>operátor SIZE
 
-Returns the number of bytes in *variable* allocated by the first initializer.
+Vrátí počet bajtů v *proměnné* přidělených prvním inicializátorem.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **SIZE** *variable*
+> **Velikost** – *Proměnná*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

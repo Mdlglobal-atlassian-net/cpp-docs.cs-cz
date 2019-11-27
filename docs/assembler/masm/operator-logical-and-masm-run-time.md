@@ -1,5 +1,5 @@
 ---
-title: operator &amp;&amp; (MASM Run Time)
+title: operátor &amp;&amp; (doba běhu MASM)
 ms.date: 08/30/2018
 f1_keywords:
 - operator &&
@@ -14,14 +14,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396772"
 ---
-# <a name="operator-ampamp-masm-run-time"></a>operator &amp;&amp; (MASM Run Time)
+# <a name="operator-ampamp-masm-run-time"></a>operátor &amp;&amp; (doba běhu MASM)
 
-Logical **AND**. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Logický operátor **and**. Používáno pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. WHILe](../../assembler/masm/dot-while.md)nebo [. OPAKUJe](../../assembler/masm/dot-repeat.md) bloky a vyhodnocují v době běhu, nikoli v době sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **&&** *expression2*
+> *výraz1* **&&** *Výraz2*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

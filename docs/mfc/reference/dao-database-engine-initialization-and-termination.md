@@ -44,7 +44,7 @@ Související informace a příklad volání `AfxDaoInit`naleznete v části [Te
 
   **Header** afxdao. h
 
-##  <a name="afxdaoterm"></a>  AfxDaoTerm
+##  <a name="afxdaoterm"></a>AfxDaoTerm
 
 Tato funkce ukončí databázový stroj DAO.
 

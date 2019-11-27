@@ -15,18 +15,18 @@ ms.locfileid: "74398867"
 ---
 # <a name="byte-masm"></a>BYTE (MASM)
 
-Allocates and optionally initializes a byte of storage for each *initializer*.
+Přidělí a případně inicializuje bajt úložiště pro každý *inicializátor*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> ⟦*name*⟧ **BYTE** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦ *⟧* *inicializátoru* **bajtů** ⟦ __,__ *inicializátor* ... ⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Can also be used as a type specifier anywhere a type is legal.
+Lze také použít jako specifikátor typu kdekoli je typ právní.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[DB](../../assembler/masm/db.md)\
+\ – [referenční informace o direktivách](../../assembler/masm/directives-reference.md)
+\ [DB](../../assembler/masm/db.md)
 [SBYTE](../../assembler/masm/sbyte-masm.md)

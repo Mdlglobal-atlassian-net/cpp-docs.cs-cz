@@ -15,18 +15,18 @@ ms.locfileid: "74397245"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
 
-In the first directive, within a macro, **LOCAL** defines labels that are unique to each instance of the macro.
+V první direktivě v rámci makra **místní** definuje popisky, které jsou jedinečné pro jednotlivé instance makra.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **LOCAL** *localname* ⟦, *localname* ...⟧
+> **Místní** *LocalName* ⟦, *LocalName* ... ⟧
 >
-> **LOCAL** *label* ⟦ __\[__ *count* __]__ ⟧ ⟦ __:__ *type*⟧ ⟦ __,__ *label* ⟦ __\[__ *count* __]__ ⟧ ⟦*type*⟧ ...⟧
+> **Local** *Label* ⟦ __\[__ *Count* __]__ ⟧ ⟦ __:__ *Type*⟧ ⟦ __,__ *Label* ⟦ __\[__ *Count* __]__ ⟧ ⟦*Type*⟧... ⟧
 
 ## <a name="remarks"></a>Poznámky
 
-In the second directive, within a procedure definition (**PROC**), **LOCAL** creates stack-based variables that exist for the duration of the procedure. The *label* may be a simple variable or an array containing *count* elements.
+V druhé direktivě v rámci definice procedury (**proc**) vytvoří **místní** proměnné založené na zásobníku, které existují po dobu trvání procedury. *Popisek* může být jednoduchá proměnná nebo pole obsahující *počet* prvků.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

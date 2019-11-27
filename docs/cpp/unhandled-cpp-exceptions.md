@@ -17,7 +17,7 @@ ms.locfileid: "74246065"
 ---
 # <a name="unhandled-c-exceptions"></a>Neošetřené výjimky jazyka C++
 
-If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. Chcete-li, aby funkce `terminate` vyvolala před ukončením aplikace jinou funkci v programu, vyvolejte funkci `set_terminate`, v jejímž jediném argumentu bude název funkce, která má být vyvolána. Funkci `set_terminate` lze vyvolat kdekoli v programu. The `terminate` routine always calls the last function given as an argument to `set_terminate`.
+Pokud se pro aktuální výjimku nenajde vyhovující obslužná rutina (nebo obslužná rutina **catch** se třemi tečkami), je volána předdefinovaná funkce `terminate` běhu. (Můžete také explicitně volat `terminate` v jakékoli z vašich obslužných rutin.) Výchozí akcí `terminate` je volání `abort`. Chcete-li, aby funkce `terminate` vyvolala před ukončením aplikace jinou funkci v programu, vyvolejte funkci `set_terminate`, v jejímž jediném argumentu bude název funkce, která má být vyvolána. Funkci `set_terminate` lze vyvolat kdekoli v programu. Rutina `terminate` vždy volá poslední funkci zadanou jako argument pro `set_terminate`.
 
 ## <a name="example"></a>Příklad
 
@@ -56,4 +56,4 @@ Funkce `term_func` by měla ukončit program nebo aktuální vlákno, ideálně 
 
 ## <a name="see-also"></a>Viz také:
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Moderní C++ osvědčené postupy pro výjimky a zpracování chyb](../cpp/errors-and-exception-handling-modern-cpp.md)

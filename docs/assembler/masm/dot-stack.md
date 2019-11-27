@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397897"
 ---
-# <a name="stack-32-bit-masm"></a>.STACK (32-bit MASM)
+# <a name="stack-32-bit-masm"></a>. Zásobník (32-bit MASM)
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), defines a stack segment (with segment name **STACK**). The optional *size* specifies the number of bytes for the stack (default 1,024). The **.STACK** directive automatically closes the stack statement. (32-bit MASM only.)
+Při použití s nástrojem [. MODEL](../../assembler/masm/dot-model.md)definuje segment zásobníku (se **zásobníkem**názvů segmentů). Volitelná *Velikost* určuje počet bajtů pro zásobník (standardně 1 024). Rozhraní **.** Direktiva Stack automaticky zavře příkaz Stack. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.STACK** ⟦*size*⟧
+> **.** ⟦*Velikosti*zásobníku ⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

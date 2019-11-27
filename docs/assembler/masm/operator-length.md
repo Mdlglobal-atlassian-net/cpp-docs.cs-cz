@@ -17,12 +17,12 @@ ms.locfileid: "74396849"
 ---
 # <a name="operator-length"></a>operátor LENGTH
 
-Returns the number of data items in *variable* created by the first initializer.
+Vrátí počet položek dat v *proměnné* vytvořené prvním inicializátorem.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **LENGTH** *variable*
+> **Délka** – *Proměnná*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

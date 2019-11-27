@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4636
+title: Upozornění kompilátoru (úroveň 3) C4636
 ms.date: 11/04/2016
 f1_keywords:
 - C4636
@@ -13,15 +13,15 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189125"
 ---
-# <a name="compiler-warning-level-3-c4636"></a>Compiler Warning (level 3) C4636
+# <a name="compiler-warning-level-3-c4636"></a>Upozornění kompilátoru (úroveň 3) C4636
 
-XML document comment applied to 'construct': tag requires non-empty '' attribute.
+Komentář k dokumentu XML aplikovaný na konstrukci: tag vyžaduje atribut, který není prázdný.
 
-A tag, such as `cref`, did not have a value.
+Značka, například `cref`, neměla hodnotu.
 
 ## <a name="example"></a>Příklad
 
-The following sample generates C4636.
+Následující ukázka generuje C4636.
 
 ```cpp
 // C4636.cpp

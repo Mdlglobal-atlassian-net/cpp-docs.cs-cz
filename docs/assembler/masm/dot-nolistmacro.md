@@ -15,7 +15,7 @@ ms.locfileid: "74398060"
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
 
-Suppresses listing of macro expansions.
+Potlačí výpis rozšíření makra.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Suppresses listing of macro expansions.
 
 ## <a name="remarks"></a>Poznámky
 
-Same as [.SALL](../../assembler/masm/dot-sall.md).
+Stejné jako [. SALL](../../assembler/masm/dot-sall.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

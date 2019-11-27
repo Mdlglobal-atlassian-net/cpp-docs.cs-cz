@@ -13,34 +13,34 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398247"
 ---
-# <a name="fpo-32-bit-masm"></a>.FPO (32-bit MASM)
+# <a name="fpo-32-bit-masm"></a>. Rpcrt4 (32-bit MASM)
 
-The **.FPO** directive controls the emission of debug records to the .debug$F segment or section. (32-bit MASM only.)
+Rozhraní **. Rpcrt4** direktiva řídí emise ladících záznamů do segmentu nebo oddílu. Debug $ F. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> **. Rpcrt4** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
 
 ### <a name="parameters"></a>Parametry
 
 *cdwLocals*\
-Number of local variables, an unsigned 32 bit value.
+Počet místních proměnných, nepodepsaná 32 bitová hodnota.
 
 *cdwParams*\
-Size of the parameters in DWORDS, an unsigned 16 bit value.
+Velikost parametrů v hodnotách DWORD, nepodepsaná 16bitová hodnota.
 
 *cbProlog*\
-Number of bytes in the function prolog code, an unsigned 8 bit value.
+Počet bajtů v kódu prologu funkce, nepodepsaná hodnota 8 bitů.
 
 *cbRegs*\
-Number registers saved.
+Počet uložených registrů.
 
 *fUseBP*\
-Indicates whether the EBP register has been allocated. either 0 or 1.
+Uvádí, zda byl přidělen EBP registr. buď 0, nebo 1.
 
 *cbFrame*\
-Indicates the frame type.  See [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) for more information.
+Určuje typ rámce.  Další informace najdete v tématu [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

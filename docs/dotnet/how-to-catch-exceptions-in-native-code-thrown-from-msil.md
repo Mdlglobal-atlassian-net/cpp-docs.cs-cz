@@ -15,13 +15,13 @@ ms.locfileid: "74246681"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Postupy: Zachycení výjimek v nativním kódu vyvolaných z prostředí MSIL
 
-In native code, you can catch native C++ exception from MSIL.  You can catch CLR exceptions with `__try` and `__except`.
+V nativním kódu můžete zachytit nativní C++ výjimku z jazyka MSIL.  Výjimky CLR můžete zachytit pomocí `__try` a `__except`.
 
-For more information, see [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md) and [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
+Další informace naleznete v tématu [strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md) a [moderní C++ osvědčené postupy pro výjimky a zpracování chyb](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="example"></a>Příklad
 
-The following sample defines a module with two functions, one that throws a native exception, and another that throws an MSIL exception.
+Následující příklad definuje modul se dvěma funkcemi, jeden, který vyvolá nativní výjimku, a druhý, který vyvolá výjimku jazyka MSIL.
 
 ```
 // catch_MSIL_in_native.cpp
@@ -37,7 +37,7 @@ void Test2() {
 
 ## <a name="example"></a>Příklad
 
-The following sample defines a module that catches a native and MSIL exception.
+Následující příklad definuje modul, který zachytává nativní a výjimku jazyka MSIL.
 
 ```
 // catch_MSIL_in_native_2.cpp

@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4254
+title: Upozornění kompilátoru (úroveň 4) C4254
 ms.date: 11/04/2016
 f1_keywords:
 - c4254
 helpviewer_keywords:
 - C4254
 ms.assetid: c7dcef24-d535-4c98-bb41-fc3d2b88fd11
-ms.openlocfilehash: 925428cffae37ea26144e5b550cbc7988b33ef01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33b3ba795acb8c72c7d1630071aa2884b6137464
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400978"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541946"
 ---
-# <a name="compiler-warning-level-4-c4254"></a>Kompilátor upozornění (úroveň 4) C4254
+# <a name="compiler-warning-level-4-c4254"></a>Upozornění kompilátoru (úroveň 4) C4254
 
-'operator': převod z 'type1' na 'type2', možná ztráta dat
+' operator ': převod z ' typ1 ' na ' typ2 ', možná ztráta dat
 
-Větší bitové pole. byl přiřazen menší bitového pole. Může dojít ke ztrátě dat.
+Větší bitové pole bylo přiřazeno k menšímu bitovému poli. Mohlo by dojít ke ztrátě dat.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 Následující ukázka generuje C4254:
 
-```
+```cpp
 // C4254.cpp
 // compile with: /W4
 #pragma warning(default: 4254)

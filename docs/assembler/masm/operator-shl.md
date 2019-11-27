@@ -17,12 +17,12 @@ ms.locfileid: "74396187"
 ---
 # <a name="operator-shl"></a>SHL – operátor
 
-Returns the result of shifting the bits of *expression* left *count* number of bits.
+Vrátí výsledek posunu bitů *výrazu* *o počtu bitů doleva.*
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression* **SHL** *count*
+> *počet* SHL – výrazů
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

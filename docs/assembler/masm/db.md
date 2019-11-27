@@ -15,18 +15,18 @@ ms.locfileid: "74398808"
 ---
 # <a name="db"></a>DB
 
-Allocates and optionally initializes a byte of storage for each *initializer*. **DB** is a synonym of [BYTE](../../assembler/masm/byte-masm.md).
+Přidělí a případně inicializuje bajt úložiště pro každý *inicializátor*. **DB** je synonymum [Byte](../../assembler/masm/byte-masm.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> ⟦*name*⟧ **DB** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦ *⟧* **databáze** *inicializátoru* ⟦ __,__ *inicializátor* ... ⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Can also be used as a type specifier anywhere a type is legal.
+Lze také použít jako specifikátor typu kdekoli je typ právní.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[DB](../../assembler/masm/db.md)\
+\ – [referenční informace o direktivách](../../assembler/masm/directives-reference.md)
+\ [DB](../../assembler/masm/db.md)
 [SBYTE](../../assembler/masm/sbyte-masm.md)

@@ -13,46 +13,46 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398114"
 ---
-# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
+# <a name="model-32-bit-masm"></a>. MODEL (32-bit MASM)
 
-Initializes the program memory model. (32-bit MASM only.)
+Inicializuje model paměti programu. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
+> **. Model** *Memory – model* ⟦ __,__ *Language-Type*⟧ ⟦ __,__ *Stack-Option*⟧
 
 ### <a name="parameters"></a>Parametry
 
-*memory-model*\
-Required parameter that determines the size of code and data pointers.
+\ *modelu paměti*
+Povinný parametr, který určuje velikost kódu a datových ukazatelů.
 
-*language-type*\
-Optional parameter that sets the calling and naming conventions for procedures and public symbols.
+\ *typu jazyka*
+Volitelný parametr, který nastaví konvence volání a pojmenování pro procedury a veřejné symboly.
 
-*stack-option*\
-Optional parameter.
+\ *možností zásobníku*
+Volitelný parametr.
 
-*stack-option* is not used if *memory-model* is **FLAT**.
+*možnost Stack-* není použita, pokud je *model paměti* **plochý**.
 
-Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
+Zadání **NEARSTACK** seskupí segment zásobníku do jednoho fyzického segmentu (**DGROUP**) spolu s daty. Předpokládá se, že registr segmentu zásobníku (**SS**) odpovídá stejné adrese jako u registru datových segmentů (**DS**). **FARSTACK** neseskupuje zásobník pomocí **DGROUP**; To znamená, že **SS** nerovná **DS**.
 
 ## <a name="remarks"></a>Poznámky
 
-**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. MODEL** se nepoužívá v [MASM pro x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-The following table lists the possible values for each parameter when targeting 16-bit and 32-bit platforms:
+V následující tabulce jsou uvedeny možné hodnoty pro každý parametr při cílení na 16bitové a 32-bitové platformy:
 
-|Parametr|32-bit values|16-bit values (support for earlier 16-bit development)|
+|Parametr|32 – bitové hodnoty|16bitové hodnoty (podpora pro starší 16bitový vývoj)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
-|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
-|*stack-option*|Nepoužívá se|**NEARSTACK**, **FARSTACK**|
+|*model paměti*|**KOPIE**|**malá**, **malá**, **kompaktní**, **střední**, **Velká**, **velmi**velká, **plochá**|
+|*typ jazyka*|**C**, **STDCALL**|**C**, **Basic**, **FORTRAN**, **Pascal**, **syscall**, **STDCALL**|
+|*zásobník – možnost*|Nepoužívá se|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Kód
 
-For MASM-related samples, download the Compiler samples from [Visual C++ Samples and Related Documentation for Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
+Ukázky týkající se MASM najdete v ukázkách kompilátoru z [vizuálních C++ ukázek a v související dokumentaci k sadě Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-The following example demonstrates the use of the `.MODEL` directive.
+Následující příklad ukazuje použití direktivy `.MODEL`.
 
 ## <a name="example"></a>Příklad
 

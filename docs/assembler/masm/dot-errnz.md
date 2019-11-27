@@ -15,11 +15,11 @@ ms.locfileid: "74398298"
 ---
 # <a name="errnz"></a>**.ERRNZ**
 
-Generates an error if *expression* is true (nonzero).
+Vygeneruje chybu, pokud má *výraz* hodnotu true (nenulový).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.ERRNZ** *expression* ⟦ __,__ *message*⟧
+> **. ERRNZ** – *výraz* ⟦ __,__ *zpráva*⟧
 
 ## <a name="see-also"></a>Viz také:
 

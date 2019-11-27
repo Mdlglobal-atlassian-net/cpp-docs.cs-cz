@@ -15,16 +15,16 @@ ms.locfileid: "74397302"
 ---
 # <a name="invoke-32-bit-masm"></a>INVOKE (32-bit MASM)
 
-Calls the procedure at the address given by *expression*, passing the arguments on the stack or in registers according to the standard calling conventions of the language type. (32-bit MASM only.)
+Volá proceduru na adrese předané *výrazem*, předává argumenty v zásobníku nebo v registrech v souladu se standardními konvencemi volání typu jazyka. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **INVOKE** *expression* ⟦ __,__ *argument* ...⟧
+> **Vyvolat** ⟦ výrazu __,__ *Argument* ... ⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Each argument passed to the procedure may be an expression, a register pair, or an address expression (an expression preceded by **ADDR**).
+Každý argument předaný proceduře může být výrazem, dvojicí registru nebo výrazem adresy (výraz předchází argumentu **addr**).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

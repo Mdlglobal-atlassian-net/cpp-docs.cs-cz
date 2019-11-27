@@ -17,17 +17,17 @@ ms.locfileid: "74398373"
 ---
 # <a name="errdif-errdifi"></a>.ERRDIF, .ERRDIFI
 
-Generates an error if the text items are different.
+Vygeneruje chybu, pokud se textové položky liší.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.ERRDIF** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧\
-> **.ERRDIFI** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧
+> **. ERRDIF** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧ \
+> **. ERRDIFI** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧
 
 ## <a name="remarks"></a>Poznámky
 
-If **.ERRDIFI** is given, the comparison is case insensitive.
+Pokud **. ERRDIFI** je zadáno, porovnání rozlišuje malá a velká písmena.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

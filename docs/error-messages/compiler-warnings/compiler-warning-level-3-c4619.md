@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4619
+title: Upozornění kompilátoru (úroveň 3) C4619
 ms.date: 11/04/2016
 f1_keywords:
 - C4619
@@ -13,15 +13,15 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189168"
 ---
-# <a name="compiler-warning-level-3-c4619"></a>Compiler Warning (level 3) C4619
+# <a name="compiler-warning-level-3-c4619"></a>Upozornění kompilátoru (úroveň 3) C4619
 
-\#pragma warning : there is no warning number 'number'
+\#pragma warning: neexistuje žádné upozornění číslo.
 
-An attempt was made to disable a warning that does not exist.
+Byl proveden pokus o zakázání upozornění, které neexistuje.
 
-This warning is off by default. See [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md) for more information.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-The following sample generates C4619:
+Následující ukázka generuje C4619:
 
 ```cpp
 // C4619.cpp

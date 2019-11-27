@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4637
+title: Upozornění kompilátoru (úroveň 3) C4637
 ms.date: 11/04/2016
 f1_keywords:
 - C4637
@@ -13,13 +13,13 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189124"
 ---
-# <a name="compiler-warning-level-3-c4637"></a>Compiler Warning (level 3) C4637
+# <a name="compiler-warning-level-3-c4637"></a>Upozornění kompilátoru (úroveň 3) C4637
 
-XML document comment target: \<include> tag discarded.  reason
+Cíl komentáře k dokumentu XML: \<zahrnout zahozenou > značku.  reason
 
-The syntax of an [\<include>](../../build/reference/include-visual-cpp.md) tag was not correct.
+Syntaxe [\<include >](../../build/reference/include-visual-cpp.md) nebyla správná.
 
-The following sample generates C4637:
+Následující ukázka generuje C4637:
 
 ```cpp
 // C4637.cpp

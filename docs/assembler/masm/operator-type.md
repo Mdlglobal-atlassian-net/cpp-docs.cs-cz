@@ -17,12 +17,12 @@ ms.locfileid: "74395369"
 ---
 # <a name="operator-type"></a>TYPE – operátor
 
-Returns the type of *expression*.
+Vrátí typ *výrazu*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **TYPE** *expression*
+> *Výraz* typu
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

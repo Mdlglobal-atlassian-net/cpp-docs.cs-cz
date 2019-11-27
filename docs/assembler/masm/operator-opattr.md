@@ -17,12 +17,12 @@ ms.locfileid: "74396566"
 ---
 # <a name="operator-opattr"></a>operátor OPATTR
 
-Returns a word defining the mode and scope of *expression*. The low byte is identical to the byte returned by [.TYPE](../../assembler/masm/operator-dot-type.md). The high byte contains additional information.
+Vrátí slovo definující režim a rozsah *výrazu*. Dolní bajt je totožný s bajtem vráceným [. Zadejte](../../assembler/masm/operator-dot-type.md). Vysoký Byte obsahuje další informace.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **OPATTR** *expression*
+> *Výraz* OPATTR
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

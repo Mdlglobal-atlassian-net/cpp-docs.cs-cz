@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398974"
 ---
-# <a name="interface"></a>\@Interface
+# <a name="interface"></a>Rozhraní \@
 
-Information about the language parameters (numeric equate).
+Informace o parametrech jazyka (číslo rovná se).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@Interface**
+> **Rozhraní \@**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

@@ -17,12 +17,12 @@ ms.locfileid: "74396466"
 ---
 # <a name="operator-seg"></a>SEG – operátor
 
-Returns the segment of *expression*.
+Vrátí segment *výrazu*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **SEG** *expression*
+> *Výraz* SEG –
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

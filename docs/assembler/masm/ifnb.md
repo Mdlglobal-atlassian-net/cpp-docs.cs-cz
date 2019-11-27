@@ -15,7 +15,7 @@ ms.locfileid: "74397373"
 ---
 # <a name="ifnb"></a>IFNB
 
-Grants assembly if *textitem* is not blank.
+Udělí sestavení, pokud *textitem* není prázdné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Grants assembly if *textitem* is not blank.
 
 ## <a name="remarks"></a>Poznámky
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Úplnou syntaxi naleznete v tématu [if](../../assembler/masm/if-masm.md) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

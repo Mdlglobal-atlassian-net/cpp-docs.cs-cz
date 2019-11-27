@@ -1,5 +1,5 @@
 ---
-title: Modern C++ best practices for exceptions and error handling
+title: Moderní C++ osvědčené postupy pro výjimky a zpracování chyb
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
@@ -10,23 +10,23 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245869"
 ---
-# <a name="modern-c-best-practices-for-exceptions-and-error-handling"></a>Modern C++ best practices for exceptions and error handling
+# <a name="modern-c-best-practices-for-exceptions-and-error-handling"></a>Moderní C++ osvědčené postupy pro výjimky a zpracování chyb
 
-In modern C++, in most scenarios, the preferred way to report and handle both logic errors and runtime errors is to use exceptions. This is especially true when the stack might contain several function calls between the function that detects the error and the function that has the context to know how to handle it. Exceptions provide a formal, well-defined way for code that detects errors to pass the information up the call stack.
+V moderních C++scénářích je ve většině scénářů preferovaný způsob, jak ohlásit a zpracovávat chyby logiky a běhové chyby, použití výjimek. To platí zejména v případě, že zásobník může obsahovat několik volání funkcí mezi funkcí, která detekuje chybu, a funkcí, která má kontext pro informace o tom, jak je zpracovat. Výjimky poskytují formální a jasně definovaný způsob pro kód, který detekuje chyby pro předání informací v zásobníku volání.
 
-Program errors are generally divided into two categories: logic errors that are caused by programming mistakes, for example, an "index out of range" error, and runtime errors that are beyond the control of programmer, for example, a "network service unavailable" error. In C-style programming and in COM, error reporting is managed either by returning a value that represents an error code or a status code for a particular function, or by setting a global variable that the caller may optionally retrieve after every function call to see whether errors were reported. For example, COM programming uses the HRESULT return value to communicate errors to the caller, and the Win32 API has the GetLastError function to retrieve the last error that was reported by the call stack. In both of these cases, it's up to the caller to recognize the code and respond to it appropriately. If the caller doesn't explicitly handle the error code, the program might crash without warning, or continue to execute with bad data and produce incorrect results.
+Chyby programu jsou obecně rozděleny do dvou kategorií: logické chyby, které jsou způsobeny chybami programování, například chyba "index mimo rozsah", a chyby za běhu, které jsou mimo kontrolu programátora, například "nedostupná síťová služba". Chyba. V programování ve stylu C a v modelu COM je zasílání zpráv o chybách spravováno buď vrácením hodnoty, která představuje chybový kód, nebo stavového kódu pro konkrétní funkci, nebo nastavením globální proměnné, kterou může volající volitelně načíst po každém volání funkce k zobrazení. zda byly chyby hlášeny. Například programování modelu COM používá návratovou hodnotu HRESULT pro sdělování chyb volajícímu a Win32 API má funkci GetLastError k načtení poslední chyby, která byla hlášena zásobníkem volání. V obou těchto případech je až volající rozpoznávat kód a reagovat na něj odpovídajícím způsobem. Pokud volající explicitně nezpracovává kód chyby, může program selhat bez upozornění nebo pokračovat v provádění se špatnými daty a poskytovat nesprávné výsledky.
 
-Exceptions are preferred in modern C++ for the following reasons:
+Výjimky jsou upřednostňovány v C++ moderních případech z následujících důvodů:
 
-- An exception forces calling code to recognize an error condition and handle it. Unhandled exceptions stop program execution.
+- Výjimka vynutí volání kódu pro rozpoznání chybového stavu a jeho zpracování. Neošetřené výjimky zastaví provádění programu.
 
-- An exception jumps to the point in the call stack that can handle the error. Intermediate functions can let the exception propagate. They do not have to coordinate with other layers.
+- Výjimka odkazuje na bod v zásobníku volání, který může chybu zpracovat. Mezilehlé funkce můžou umožnit šíření výjimky. Není nutné je koordinovat s jinými vrstvami.
 
-- The exception stack-unwinding mechanism destroys all objects in scope according to well-defined rules after an exception is thrown.
+- Mechanismus uvolnění zásobníku výjimek zničí všechny objekty v rozsahu podle jasně definovaných pravidel po vyvolání výjimky.
 
-- An exception enables a clean separation between the code that detects the error and the code that handles the error.
+- Výjimka umožňuje čisté oddělení mezi kódem, který detekuje chybu, a kódem, který zpracovává chybu.
 
-The following simplified example shows the necessary syntax for throwing and catching exceptions in C++.
+Následující zjednodušený příklad ukazuje nezbytnou syntaxi pro vyvolání a zachycení výjimek v C++.
 
 ```cpp
 
@@ -60,43 +60,43 @@ int main()
 }
 ```
 
-Exceptions in C++ resemble those in languages such as C# and Java. In the **try** block, if an exception is *thrown* it will be *caught* by the first associated **catch** block whose type matches that of the exception. In other words, execution jumps from the **throw** statement to the **catch** statement. If no usable catch block is found, `std::terminate` is invoked and the program exits. In C++, any type may be thrown; however, we recommend that you throw a type that derives directly or indirectly from `std::exception`. In the previous example, the exception type, [invalid_argument](../standard-library/invalid-argument-class.md), is defined in the standard library in the [\<stdexcept>](../standard-library/stdexcept.md) header file. C++ does not provide, and does not require, a **finally** block to make sure that all resources are released if an exception is thrown. The resource acquisition is initialization (RAII) idiom, which uses smart pointers, provides the required functionality for resource cleanup. For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md). For information about the C++ stack-unwinding mechanism, see [Exceptions and Stack Unwinding](exceptions-and-stack-unwinding-in-cpp.md).
+Výjimky se C++ podobají těm v jazycích, jako je C# například a Java. V bloku **Try** , pokud je *vyvolána* výjimka, bude *zachycena* prvním přidruženým blokem **catch** , jehož typ odpovídá typu výjimky. Jinými slovy, provádění přejde z příkazu **throw** do příkazu **catch** . Pokud se nenajde žádný použitelný blok catch, vyvolá se `std::terminate` a program se ukončí. V C++, může být vyvolán libovolný typ; Nicméně doporučujeme, abyste vyvolali typ odvozený přímo nebo nepřímo z `std::exception`. V předchozím příkladu je typ výjimky [invalid_argument](../standard-library/invalid-argument-class.md)definován ve standardní knihovně v souboru hlaviček [\<stdexcept >](../standard-library/stdexcept.md) . C++neposkytuje a nevyžaduje, aby se zajistilo, že všechny prostředky jsou uvolněny, pokud je vyvolána výjimka. RAII (získání prostředku) idiom, který používá inteligentní ukazatele, poskytuje požadované funkce pro vyčištění prostředků. Další informace naleznete v tématu [How to: Design for Exception Safety](how-to-design-for-exception-safety.md). Informace o mechanismu odvíjení C++ zásobníku naleznete v tématu [výjimky a odvíjení zásobníku](exceptions-and-stack-unwinding-in-cpp.md).
 
-## <a name="basic-guidelines"></a>Basic guidelines
+## <a name="basic-guidelines"></a>Základní pokyny
 
-Robust error handling is challenging in any programming language. Although exceptions provide several features that support good error handling, they can't do all the work for you. To realize the benefits of the exception mechanism, keep exceptions in mind as you design your code.
+Robustní zpracování chyb je náročné v jakémkoli programovacím jazyce. I když výjimky poskytují několik funkcí, které podporují zpracování dobrých chyb, nemůžou dělat veškerou práci za vás. Aby bylo možné využít výhody mechanismu výjimek, pamatujte při návrhu kódu na výjimky.
 
-- Use asserts to check for errors that should never occur. Use exceptions to check for errors that might occur, for example, errors in input validation on parameters of public functions. For more information, see the section titled **Exceptions vs. Assertions**.
+- Použijte kontrolní výrazy pro kontrolu chyb, které by nikdy neměly nastat. Použijte výjimky ke kontrole chyb, které mohou nastat, například chyby při ověřování vstupu u parametrů veřejných funkcí. Další informace naleznete v části s názvem **výjimky vs. kontrolní výrazy**.
 
-- Use exceptions when the code that handles the error might be separated from the code that detects the error by one or more intervening function calls. Consider whether to use error codes instead in performance-critical loops when code that handles the error is tightly-coupled to the code that detects it.
+- Použijte výjimky, pokud kód, který zpracovává chybu, může být oddělen od kódu, který detekuje chybu pomocí jednoho nebo více zasahujících volání funkcí. Zvažte, zda používat chybové kódy místo v cyklech kritických pro výkon, když kód, který zpracovává chybu, je pevně spojený s kódem, který ho detekuje.
 
-- For every function that might throw or propagate an exception, provide one of the three exception guarantees: the strong guarantee, the basic guarantee, or the nothrow (noexcept) guarantee. For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
+- Pro každou funkci, která může vyvolat nebo šířit výjimku, poskytněte jednu ze tří záruk výjimky: silnou záruku, základní záruku, nebo výjimku (s výjimkou). Další informace naleznete v tématu [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
 
-- Throw exceptions by value, catch them by reference. Don’t catch what you can't handle.
+- Vyvolejte výjimky podle hodnoty a zachyťte je podle odkazu. Nezachyťte, co nemůžete zpracovat.
 
-- Don't use exception specifications, which are deprecated in C++11. For more information, see the section titled **Exception specifications and noexcept**.
+- Nepoužívejte specifikace výjimek, které jsou zastaralé v C++ 11. Další informace naleznete v části s názvem **Specifikace výjimek a s výjimkou**.
 
-- Use standard library exception types when they apply. Derive custom exception types from the [exception Class](../standard-library/exception-class.md) hierarchy.
+- Použijte standardní typy výjimek knihovny, když se používají. Odvodit typy vlastních výjimek z hierarchie [třídy Exception](../standard-library/exception-class.md) .
 
-- Don't allow exceptions to escape from destructors or memory-deallocation functions.
+- Nepovolujte výjimky pro únik z destruktorů nebo funkcí pro zrušení přidělení paměti.
 
-## <a name="exceptions-and-performance"></a>Exceptions and performance
+## <a name="exceptions-and-performance"></a>Výjimky a výkon
 
-The exception mechanism has a very minimal performance cost if no exception is thrown. If an exception is thrown, the cost of the stack traversal and unwinding is roughly comparable to the cost of a function call. Additional data structures are required to track the call stack after a **try** block is entered, and additional instructions are required to unwind the stack if an exception is thrown. However, in most scenarios, the cost in performance and memory footprint is not significant. The adverse effect of exceptions on performance is likely to be significant only on very memory-constrained systems, or in performance-critical loops where an error is likely to occur regularly and the code to handle it is tightly coupled to the code that reports it. In any case, it's impossible to know the actual cost of exceptions without profiling and measuring. Even in those rare cases when the cost is significant, you can weigh it against the increased correctness, easier maintainability, and other advantages that are provided by a well-designed exception policy.
+Mechanismus výjimek má velmi minimální náklady na výkon, pokud není vyvolána žádná výjimka. Je-li vyvolána výjimka, náklady na průchod zásobníku a unwind je zhruba srovnatelné s náklady na volání funkce. Další datové struktury jsou požadovány ke sledování zásobníku volání po zadání bloku **Try** a další pokyny jsou požadovány pro odvinutí zásobníku, pokud je vyvolána výjimka. Ve většině scénářů ale náklady na výkon a nároky na paměť nejsou významné. Nepříznivý dopad výjimek na výkon je pravděpodobně významný pouze pro velmi náročné systémy, nebo v případě kritických smyček pro výkon, kde je pravděpodobně k chybě často docházet, a kód pro jeho zpracování je pevně spojen s kódem, který je nahlásí. V žádném případě není možné zjistit skutečné náklady na výjimky bez profilování a měření. I ve výjimečných případech, kdy jsou náklady významné, je můžete zvážit oproti zvýšené správnosti, jednodušší údržbě a dalším výhodám, které jsou poskytovány dobře navrženými zásadami výjimek.
 
-## <a name="exceptions-vs-assertions"></a>Exceptions vs. assertions
+## <a name="exceptions-vs-assertions"></a>Výjimky vs. kontrolní výrazy
 
-Exceptions and asserts are two distinct mechanisms for detecting run-time errors in a program. Use asserts to test for conditions during development that should never be true if all your code is correct. There is no point in handling such an error by using an exception because the error indicates that something in the code has to be fixed, and doesn't represent a condition that the program has to recover from at run time. An assert stops execution at the statement so that you can inspect the program state in the debugger; an exception continues execution from the first appropriate catch handler. Use exceptions to check error conditions that might occur at run time even if your code is correct, for example, "file not found" or "out of memory." You might want to recover from these conditions, even if the recovery just outputs a message to a log and ends the program. Always check arguments to public functions by using exceptions. Even if your function is error-free, you might not have complete control over arguments that a user might pass to it.
+Výjimky a kontrolní výrazy jsou dva odlišné mechanismy pro detekci běhových chyb v programu. Použijte výrazy pro testování podmínek během vývoje, které by neměly mít nikdy hodnotu true, pokud je veškerý kód správný. Neexistuje žádný bod ke zpracování takové chyby pomocí výjimky, protože chyba indikuje, že něco v kódu musí být opraveno a nereprezentuje podmínku, kterou musí program obnovit v době běhu. Kontrolní výraz zastaví provádění v příkazu, aby bylo možné zkontrolovat stav programu v ladicím programu. výjimka pokračuje v provádění z první odpovídající obslužné rutiny catch. Použijte výjimky pro kontrolu chybových stavů, které mohou nastat v době běhu, i když je kód správný, například "soubor nebyl nalezen" nebo "nedostatek paměti". Můžete chtít provést obnovení z těchto podmínek, a to i v případě, že obnovení pouze vytvoří výstup zprávy do protokolu a ukončí program. Vždy kontrolujte argumenty na veřejné funkce pomocí výjimek. I v případě, že je vaše funkce bezchybná, možná nebudete mít úplnou kontrolu nad argumenty, které jí uživatel může předat.
 
-## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++ exceptions versus Windows SEH exceptions
+## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++výjimky oproti výjimkám Windows SEH
 
-Both C and C++ programs can use the structured exception handling (SEH) mechanism in the Windows operating system. The concepts in SEH resemble those in C++ exceptions, except that SEH uses the **__try**, **__except**, and **__finally** constructs instead of **try** and **catch**. In the Microsoft C++ compiler (MSVC), C++ exceptions are implemented for SEH. However, when you write C++ code, use the C++ exception syntax.
+C i C++ programy můžou používat mechanismus strukturovaného zpracování výjimek (SEH) v operačním systému Windows. Koncepty v SEH se podobají těm v C++ výjimkách, s tím rozdílem, že SEH používá **__try**, **__except**a **__finally** konstrukce místo **Try** a **catch**. V kompilátoru Microsoft C++ (MSVC) se C++ výjimky implementují pro SEH. Při psaní C++ kódu však použijte syntaxi C++ výjimky.
 
-For more information about SEH, see [Structured Exception Handling (C/C++)](structured-exception-handling-c-cpp.md).
+Další informace o SEH naleznete v tématu [strukturované zpracování výjimek (C/C++)](structured-exception-handling-c-cpp.md).
 
-## <a name="exception-specifications-and-noexcept"></a>Exception specifications and noexcept
+## <a name="exception-specifications-and-noexcept"></a>Specifikace výjimek a s výjimkou
 
-Exception specifications were introduced in C++ as a way to specify the exceptions that a function might throw. However, exception specifications proved problematic in practice, and are deprecated in the C++11 draft standard. We recommend that you do not use exception specifications except for `throw()`, which indicates that the function allows no exceptions to escape. If you must use exception specifications of the type `throw(`*type*`)`, be aware that MSVC departs from the standard in certain ways. For more information, see [Exception Specifications (throw)](exception-specifications-throw-cpp.md). The `noexcept` specifier is introduced in C++11 as the preferred alternative to `throw()`.
+Specifikace výjimek byly představeny C++ jako způsob, jak určit výjimky, které může funkce vyvolat. Nicméně specifikace výjimek ukázaly problematický postup a jsou zastaralé v konceptu standardu C++ 11. Doporučujeme, abyste nepoužívali specifikace výjimek s výjimkou `throw()`, což naznačuje, že funkce neumožňuje únik žádné výjimky. Pokud je nutné použít specifikace výjimek typu `throw(`*typ*`)`, uvědomte si, že MSVC odkládá ze standardu v určitých ohledech. Další informace naleznete v tématu [Specifikace výjimek (throw)](exception-specifications-throw-cpp.md). `noexcept` specifikátor je představena v jazyce C++ 11 jako upřednostňovaná alternativa k `throw()`.
 
 ## <a name="see-also"></a>Viz také:
 

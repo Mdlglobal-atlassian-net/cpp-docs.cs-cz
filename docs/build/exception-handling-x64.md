@@ -396,7 +396,7 @@ Aby bylo možné zjednodušit používání [nezpracovaných pseudo operací](#r
 |– Makro|Popis|
 |-|-|
 |alloc_stack(n)|Přidělí rámec zásobníku n bajtů (pomocí `sub rsp, n`) a vygeneruje příslušné informace unwind (. allocstack n).|
-|save_reg *reg*, *loc*|Uloží do zásobníku nestálý registr *reg* v zásobníku na posunutí RSP *Loc*a vygeneruje příslušné informace o unwind. (. Savereg reg; Loc)|
+|save_reg *reg*; *Loc*|Uloží do zásobníku nestálý registr *reg* v zásobníku na posunutí RSP *Loc*a vygeneruje příslušné informace o unwind. (. Savereg reg; Loc)|
 |push_reg *reg*|Vloží do zásobníku nestálý registr *reg* a vygeneruje příslušné informace o unwind. (. pushreg reg)|
 |rex_push_reg *reg*|Uloží do zásobníku nestálý registr pomocí dvou bajtů push a vygeneruje příslušné informace unwind (. pushreg reg).  Toto makro použijte v případě, že je nabízena první instrukcí ve funkci, aby se zajistilo, že je funkce Hot-patchovaná.|
 |save_xmm128 *reg*; *Loc*|Uloží do zásobníku nestálou *registraci registru XMM na* posunutí RSP *Loc*a vygeneruje příslušné informace unwind (. savexmm128 reg, Loc).|

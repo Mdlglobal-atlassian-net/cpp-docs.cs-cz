@@ -15,7 +15,7 @@ ms.locfileid: "74397800"
 ---
 # <a name="xcref"></a>.XCREF
 
-See [.NOCREF](../../assembler/masm/dot-nocref.md).
+Viz [. NOCREF](../../assembler/masm/dot-nocref.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ See [.NOCREF](../../assembler/masm/dot-nocref.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74399056"
 ---
 # <a name="filecur"></a>\@FileCur
 
-The name of the current file (text macro).
+Název aktuálního souboru (textové makro).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ The name of the current file (text macro).
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

@@ -17,14 +17,14 @@ ms.locfileid: "74396491"
 ---
 # <a name="operator-ptr"></a>PTR – operátor
 
-The first operator forces the *expression* to be treated as having the specified *type*. The second operator specifies a pointer to *type*.
+První operátor vynutí, aby se *výraz* zpracoval se zadaným *typem*. Druhý operátor určuje ukazatel na *typ*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *type* **PTR** *expression*
+> *typ* **PTR** – *výraz*
 >
-> \[*distance*] **PTR** *type*
+> \[*vzdálenost*] *typ* PTR
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

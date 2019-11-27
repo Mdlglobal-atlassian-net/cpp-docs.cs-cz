@@ -15,21 +15,21 @@ ms.locfileid: "74399272"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-The **ALIGN** directive aligns the next data element or instruction on an address that is a multiple of its parameter. The parameter must be a power of 2 (for example, 1, 2, 4, and so on) that is less than or equal to the segment alignment.
+Direktiva **align** zarovnává další datový prvek nebo instrukci na adrese, která je násobkem jeho parametru. Parametr musí být mocninou 2 (například 1, 2, 4 atd.), která je menší nebo rovna zarovnání segmentu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **ALIGN** ⟦*number*⟧
+> **Zarovnat** ⟦*číslo*⟧
 
 ## <a name="remarks"></a>Poznámky
 
-The **ALIGN** directive allows you to specify the beginning offset of a data element or an instruction. Aligned data can improve performance, at the expense of wasted space between data elements. Large performance improvements can be seen when data accesses are on boundaries that fit within cache lines. Accesses on natural boundaries for native types means less time spent in internal hardware realignment microcode.
+Direktiva **align** umožňuje zadat počáteční posun datového elementu nebo instrukce. Zarovnaná data mohou zvýšit výkon na úkor nevyužitého prostoru mezi datovými prvky. Velká vylepšení výkonu se dají zobrazit, když jsou přístup k datům na hranicích, která se vejdou do mezipamětí. Přístup k přirozeným hranicím pro nativní typy znamená méně času stráveného při vyžádal povolení mikrokódu interního přerovnávání hardwaru.
 
-The need for aligned instructions is rare on modern processors that use a flat addressing model, but may be required for jump targets in older code for other addressing models.
+Nutnost zarovnaných instrukcí je u moderních procesorů, které používají model plochých adres, málo vzácná, ale může se vyžadovat pro cíle skoků ve starším kódu pro jiné modely adresování.
 
-When data is aligned, the skipped space is padded with zeroes. When instructions are aligned, the skipped space is filled with appropriately-sized NOP instructions.
+Když jsou data zarovnána, vynechané místo je doplněno nulami. Po zarovnávání instrukcí se vynechané místo vyplní vhodně NOP instrukcemi.
 
 ## <a name="see-also"></a>Viz také:
 
-[EVEN](even.md)\
-[Directives reference](directives-reference.md)
+[I](even.md)\
+[Odkazy na direktivy](directives-reference.md)

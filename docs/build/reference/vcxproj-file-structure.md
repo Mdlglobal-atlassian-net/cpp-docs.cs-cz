@@ -15,7 +15,7 @@ ms.locfileid: "74303134"
 
 Nástroj [MSBuild](../msbuild-visual-cpp.md) je výchozím systémem projektu v aplikaci Visual Studio; Když zvolíte **soubor** > **Nový projekt** ve vizuálu C++ , vytváříte projekt MSBuild, jehož nastavení jsou uložena v souboru projektu XML, který má `.vcxproj`rozšíření. Soubor projektu může také importovat soubory. props a. targets, kde lze uložit nastavení. Ve většině případů nikdy nemusíte ručně upravovat soubor projektu a ve skutečnosti byste ho neměli upravovat ručně, pokud nebudete mít dobrý význam nástroje MSBuild. Kdykoliv je to možné, měli byste použít stránky vlastností sady Visual Studio pro úpravu nastavení projektu (viz [nastavení C++ kompilátoru a vlastností sestavení v sadě Visual Studio](../working-with-project-properties.md). V některých případech však může být nutné ručně upravit soubor projektu nebo seznam vlastností. V těchto scénářích obsahuje tento článek základní informace o struktuře souboru.
 
-**Důležité:**
+**Významná**
 
 Pokud se rozhodnete ručně upravit soubor. vcxproj, pamatujte na tyto skutečnosti:
 

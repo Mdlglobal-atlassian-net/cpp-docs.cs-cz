@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use unique_ptr instances'
+title: 'Postupy: vytváření a používání instancí unique_ptr'
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
@@ -11,45 +11,45 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246526"
 ---
-# <a name="how-to-create-and-use-unique_ptr-instances"></a>How to: Create and use unique_ptr instances
+# <a name="how-to-create-and-use-unique_ptr-instances"></a>Postupy: vytváření a používání instancí unique_ptr
 
-A [unique_ptr](../standard-library/unique-ptr-class.md) does not share its pointer. It cannot be copied to another `unique_ptr`, passed by value to a function, or used in any C++ Standard Library algorithm that requires copies to be made. A `unique_ptr` can only be moved. This means that the ownership of the memory resource is transferred to another `unique_ptr` and the original `unique_ptr` no longer owns it. Doporučujeme omezit objekt na jednoho vlastníka, protože více vlastnictví zkomplikuje programovou logiku. Therefore, when you need a smart pointer for a plain C++ object, use `unique_ptr`, and when you construct a `unique_ptr`, use the [make_unique](../standard-library/memory-functions.md#make_unique) helper function.
+[Unique_ptr](../standard-library/unique-ptr-class.md) nesdílí svůj ukazatel. Nemůže být zkopírován do jiného `unique_ptr`, předáno hodnotou funkce nebo použit v jakémkoli C++ algoritmu standardní knihovny, který vyžaduje, aby byly provedeny kopie. `unique_ptr` lze přesunout pouze. To znamená, že vlastnictví prostředku paměti je převedeno do jiného `unique_ptr` a původní `unique_ptr` již nevlastní. Doporučujeme omezit objekt na jednoho vlastníka, protože více vlastnictví zkomplikuje programovou logiku. Proto pokud potřebujete inteligentní ukazatel pro prostý C++ objekt, použijte `unique_ptr`a při konstrukci `unique_ptr`použijte pomocnou funkci [make_unique](../standard-library/memory-functions.md#make_unique) .
 
-The following diagram illustrates the transfer of ownership between two `unique_ptr` instances.
+Následující diagram znázorňuje přenos vlastnictví mezi dvěma instancemi `unique_ptr`.
 
-![Moving the ownership of a unique&#95;ptr](media/unique_ptr.png "Moving the ownership of a unique&#95;ptr")
+![Přesunutí vlastnictví jedinečného&#95;PTR](media/unique_ptr.png "Přesunutí vlastnictví jedinečného&#95;PTR")
 
-`unique_ptr` is defined in the `<memory>` header in the C++ Standard Library. It is exactly as efficient as a raw pointer and can be used in C++ Standard Library containers. The addition of `unique_ptr` instances to C++ Standard Library containers is efficient because the move constructor of the `unique_ptr` eliminates the need for a copy operation.
+`unique_ptr` je definována v hlavičce `<memory>` ve C++ standardní knihovně. Je přesně tak efektivní jako nezpracovaný ukazatel a lze jej použít v C++ kontejnerech Standard Library. Přidání instancí `unique_ptr` do C++ kontejnerů standardních knihoven je efektivní, protože konstruktor přesunu `unique_ptr` eliminuje nutnost operace kopírování.
 
 ## <a name="example-1"></a>Příklad 1
 
-The following example shows how to create `unique_ptr` instances and pass them between functions.
+Následující příklad ukazuje, jak vytvořit instance `unique_ptr` a předat je mezi funkcemi.
 
 [!code-cpp[stl_smart_pointers#210](codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_1.cpp)]
 
-These examples demonstrate this basic characteristic of `unique_ptr`: it can be moved, but not copied. "Moving" transfers ownership to a new `unique_ptr` and resets the old `unique_ptr`.
+Tyto příklady ukazují tuto základní charakteristiku `unique_ptr`: lze je přesunout, ale nikoli kopírovat. "Přesun" převede vlastnictví na novou `unique_ptr` a obnoví původní `unique_ptr`.
 
 ## <a name="example-2"></a>Příklad 2
 
-The following example shows how to create `unique_ptr` instances and use them in a vector.
+Následující příklad ukazuje, jak vytvořit instance `unique_ptr` a používat je ve vektoru.
 
 [!code-cpp[stl_smart_pointers#211](codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_2.cpp)]
 
-In the range for  loop, notice that the `unique_ptr` is passed by reference. If you try to pass by value here, the compiler will throw an error because the `unique_ptr` copy constructor is deleted.
+V rozsahu smyčky si všimněte, že `unique_ptr` předává odkazem. Pokud se pokusíte předat hodnotu v tomto příkladu, kompilátor vyvolá chybu, protože je odstraněn konstruktor `unique_ptr` Copy.
 
 ## <a name="example-3"></a>Příklad 3
 
-The following example shows how to initialize a `unique_ptr` that is a class member.
+Následující příklad ukazuje, jak inicializovat `unique_ptr`, který je členem třídy.
 
 [!code-cpp[stl_smart_pointers#212](codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_3.cpp)]
 
-## <a name="example-4"></a>Example 4
+## <a name="example-4"></a>Příklad 4:
 
-You can use [make_unique](../standard-library/memory-functions.md#make_unique) to create a `unique_ptr` to an array, but you cannot use `make_unique` to initialize the array elements.
+Můžete použít [make_unique](../standard-library/memory-functions.md#make_unique) k vytvoření `unique_ptr` pole, ale nelze použít `make_unique` k inicializaci prvků pole.
 
 [!code-cpp[stl_smart_pointers#213](codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]
 
-For more examples, see [make_unique](../standard-library/memory-functions.md#make_unique).
+Další příklady naleznete v tématu [make_unique](../standard-library/memory-functions.md#make_unique).
 
 ## <a name="see-also"></a>Viz také:
 

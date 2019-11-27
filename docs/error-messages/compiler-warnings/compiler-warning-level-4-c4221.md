@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4221
+title: Upozornění kompilátoru (úroveň 4) C4221
 ms.date: 11/04/2016
 f1_keywords:
 - C4221
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-ms.openlocfilehash: f552a5d76d1a778cdf72cbe079138f609350ffb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa87c240472df2926753781f0f14cbd69752de00
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401095"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541928"
 ---
-# <a name="compiler-warning-level-4-c4221"></a>Kompilátor upozornění (úroveň 4) C4221
+# <a name="compiler-warning-level-4-c4221"></a>Upozornění kompilátoru (úroveň 4) C4221
 
-používá se nestandardní rozšíření: 'identifier': Nelze inicializovat pomocí adresy automatické proměnné
+používá se nestandardní rozšíření: Identifier: nejde inicializovat pomocí adresy automatické proměnné.
 
-Pomocí rozšíření výchozí společnosti Microsoft (/Ze), můžete inicializovat požadovaný typ agregace (**pole**, `struct`, nebo **sjednocení**) adresu lokální proměnné (automatické).
+S výchozími rozšířeními společnosti Microsoft (/ze) můžete inicializovat agregovaný typ (**pole**, `struct`nebo **sjednocení**) s adresou místní (automatické) proměnné.
 
 ## <a name="example"></a>Příklad
 
-```
+```c
 // C4221.c
 // compile with: /W4
 struct S
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-Tyto inicializace jsou neplatné pod kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Taková inicializace nejsou v rámci kompatibility ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) platná.

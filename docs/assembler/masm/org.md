@@ -15,12 +15,12 @@ ms.locfileid: "74395586"
 ---
 # <a name="org"></a>ORG
 
-Sets the location counter to *expression*.
+Nastaví čítač umístění na *výraz*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **ORG** *expression*
+> *Výraz* org
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

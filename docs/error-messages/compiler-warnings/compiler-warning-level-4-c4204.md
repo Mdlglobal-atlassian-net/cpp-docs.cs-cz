@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4204
+title: Upozornění kompilátoru (úroveň 4) C4204
 ms.date: 11/04/2016
 f1_keywords:
 - C4204
 helpviewer_keywords:
 - C4204
 ms.assetid: 298d2880-6737-448e-b711-15572d540200
-ms.openlocfilehash: e16cb9fb59ee6ec24bb9b68dad1be9432d9eee3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecbe8bddd3f868070470555e79608ac1ecce380a
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401238"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541663"
 ---
-# <a name="compiler-warning-level-4-c4204"></a>Kompilátor upozornění (úroveň 4) C4204
+# <a name="compiler-warning-level-4-c4204"></a>Upozornění kompilátoru (úroveň 4) C4204
 
 používá se nestandardní rozšíření: nekonstantní agregační inicializátor
 
-S rozšířeními společnosti Microsoft (/Ze) můžete inicializovat agregované typy (pole, struktury, sjednocení a tříd) nahraďte hodnotami, které nejsou konstanty.
+Pomocí rozšíření Microsoft Extensions (/ze) můžete inicializovat agregované typy (pole, struktury, sjednocení a třídy) s hodnotami, které nejsou konstanty.
 
 ## <a name="example"></a>Příklad
 
-```
+```c
 // C4204.c
 // compile with: /W4
 int func1()
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-Tyto inicializace jsou neplatné pod kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Taková inicializace nejsou v rámci kompatibility ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) platná.

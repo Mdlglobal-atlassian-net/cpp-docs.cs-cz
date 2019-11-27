@@ -15,12 +15,12 @@ ms.locfileid: "74398022"
 ---
 # <a name="radix"></a>.RADIX
 
-Sets the default radix, in the range 2 to 16, to the value of *expression*.
+Nastaví výchozí základ číselné soustavy v rozsahu 2 až 16 na hodnotu *výrazu*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.RADIX** *expression*
+> **. Výraz ZÁKLADu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

@@ -19,12 +19,12 @@ ms.locfileid: "74396621"
 ---
 # <a name="operator-"></a>\* – operátor
 
-Returns *expression1* times *expression2*.
+Vrátí hodnotu *Výraz1* Times *Výraz2*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* __\*__ *expression2*
+> *výraz1* __\*__ *Výraz2*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

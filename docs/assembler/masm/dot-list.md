@@ -15,7 +15,7 @@ ms.locfileid: "74398193"
 ---
 # <a name="list"></a>.LIST
 
-Starts listing of statements.
+Spustí výpis příkazů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,4 +27,4 @@ Toto nastavení je výchozí.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

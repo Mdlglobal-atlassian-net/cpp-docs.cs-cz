@@ -17,12 +17,12 @@ ms.locfileid: "74396659"
 ---
 # <a name="operator-mod"></a>MOD – operátor
 
-Returns the integer value of the remainder (modulo) when dividing *expression1* by *expression2*.
+Vrací celočíselnou hodnotu zbytku (modulo) při dělení hodnoty expression2 *hodnotou* *Výraz2*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **MOD** *expression2*
+> *Výraz1* **mod** *Výraz2*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

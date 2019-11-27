@@ -20,12 +20,12 @@ ms.locfileid: "74395495"
 ---
 # <a name="operator-"></a>/ – operátor
 
-Returns *expression1* divided by *expression2*.
+Vrátí *Výraz1* dělený *Výraz2*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* __/__ *expression2*
+> *výraz1* __/__ *Výraz2*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

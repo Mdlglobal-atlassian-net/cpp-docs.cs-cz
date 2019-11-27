@@ -18,14 +18,14 @@ ms.locfileid: "74395487"
 ---
 # <a name="operator--"></a>\- – operátor
 
-Returns *expression1* minus *expression2*. The second operator reverses the sign of *expression*.
+Vrátí *Výraz1* minus *Výraz2*. Druhý operátor vrátí znaménko *výrazu*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **-** *expression2*
+> *výraz1* **-** *Výraz2*
 >
-> __-__ *expression*
+> *výraz*-
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

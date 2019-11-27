@@ -1,5 +1,5 @@
 ---
-title: Přenositelnost v hranicích ABI
+title: Přenositelnost u rozhraní ABI
 description: Nashrnutá C++ rozhraní pro konvence volání jazyka C v binárních hranicích rozhraní.
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74303319"
 ---
-# <a name="portability-at-abi-boundaries"></a>Přenositelnost v hranicích ABI
+# <a name="portability-at-abi-boundaries"></a>Přenositelnost u rozhraní ABI
 
 Používejte dostatečně přenosné typy a konvence v binárních hranicích rozhraní. "Přenosný typ" je vestavěný typ jazyka C nebo struktura, která obsahuje pouze předdefinované typy jazyka C. Typy tříd lze použít pouze v případě, že volající a volaný volaný souhlasí s rozložením, konvencí volání atd. To je možné pouze v případě, že obě jsou kompilovány se stejným kompilátorem a nastavením kompilátoru.
 

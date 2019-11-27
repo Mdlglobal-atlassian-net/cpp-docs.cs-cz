@@ -13,9 +13,9 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397882"
 ---
-# <a name="startup-32-bit-masm"></a>.STARTUP (32-bit MASM)
+# <a name="startup-32-bit-masm"></a>. SPUŠTĚNÍ (32-bit MASM)
 
-Generates program start-up code. (32-bit MASM only.)
+Generuje spouštěcí kód programu. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ Generates program start-up code. (32-bit MASM only.)
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

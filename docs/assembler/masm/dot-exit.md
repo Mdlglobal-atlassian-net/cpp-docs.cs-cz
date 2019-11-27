@@ -13,18 +13,18 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398285"
 ---
-# <a name="exit-32-bit-masm"></a>.EXIT (32-bit MASM)
+# <a name="exit-32-bit-masm"></a>. EXIT (32-bit MASM)
 
-Generates termination code. (32-bit MASM only.)
+Generuje ukončovací kód. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.EXIT** ⟦*expression*⟧
+> **. UKONČIT** ⟦*výrazu*⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Returns optional *expression* to shell.
+Vrátí volitelný *výraz* do prostředí shell.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

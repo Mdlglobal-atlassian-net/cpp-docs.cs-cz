@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398971"
 ---
-# <a name="line"></a>\@Line
+# <a name="line"></a>\@řádek
 
-The source line number in the current file (numeric equate).
+Číslo řádku zdroje v aktuálním souboru (číslice rovno).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@Line**
+> **\@řádek**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

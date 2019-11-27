@@ -1,5 +1,5 @@
 ---
-title: operator dot
+title: tečka – operátor
 ms.date: 08/30/2018
 f1_keywords:
 - operator .
@@ -17,14 +17,14 @@ ms.locfileid: "74397018"
 ---
 # <a name="operator-"></a>. – operátor
 
-The first operator returns *expression* plus the offset of *field* within its structure or union. The second operator returns value at the location pointed to by *register* plus the offset of *field* within its structure or union.
+První operátor vrátí *výraz* a posun *pole* v rámci jeho struktury nebo sjednocení. Druhý operátor vrátí hodnotu v umístění, na které ukazuje *registrace* , a posun *pole* v rámci jeho struktury nebo sjednocení.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression* __.__ *field*⟦ __.__ *field* ...⟧
+> *výraz* __.__ *pole*⟦ __.__ *pole* ... ⟧
 >
-> **\[** _register_ **]** __.__ *field*⟦ __.__ *field* ...⟧
+> **\[** _registraci_ **]** __.__ *pole*⟦ __.__ *pole* ... ⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74398069"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
-Suppresses listing of conditional blocks whose condition evaluates to false (0).
+Potlačí výpisy podmíněných bloků, jejichž podmínka je vyhodnocena jako NEPRAVDA (0).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Suppresses listing of conditional blocks whose condition evaluates to false (0).
 
 ## <a name="remarks"></a>Poznámky
 
-Toto nastavení je výchozí. Same as [.SFCOND](../../assembler/masm/dot-sfcond.md).
+Toto nastavení je výchozí. Stejné jako [. SFCOND](../../assembler/masm/dot-sfcond.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

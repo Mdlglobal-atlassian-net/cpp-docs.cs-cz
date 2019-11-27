@@ -17,12 +17,12 @@ ms.locfileid: "74396619"
 ---
 # <a name="operator-ne"></a>operátor NE
 
-Returns true (-1) if *expression1* does not equal *expression2*, or returns false (0) if it does.
+Vrátí hodnotu true (-1), pokud *Výraz1* není rovna *Výraz2*, nebo vrátí false (0), pokud ano.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **NE** *expression2*
+> *Výraz1* **ne** *Výraz2*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

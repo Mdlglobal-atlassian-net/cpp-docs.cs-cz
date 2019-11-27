@@ -37,7 +37,7 @@ Tato technická Poznámka obsahuje:
 
 - [Podrobnosti o DFX_Text](#_mfcnotes_tn053_details_of_dfx_text)
 
-**DFX Overview**
+**Přehled DFX**
 
 Mechanismus výměny pole záznamu DAO (DFX) se používá ke zjednodušení postupu načítání a aktualizace dat při použití třídy `CDaoRecordset`. Proces je zjednodušený pomocí datových členů třídy `CDaoRecordset`. Odvozením z `CDaoRecordset`můžete přidat datové členy do odvozené třídy reprezentující každé pole v tabulce nebo dotazu. Tento mechanismus statické vazby je jednoduchý, ale nemusí se jednat o metodu pro načtení nebo aktualizaci dat, kterou si můžete vybrat pro všechny aplikace. DFX načte každé vázané pole pokaždé, když se změní aktuální záznam. Pokud vyvíjíte aplikaci citlivou na výkon, která nevyžaduje načítání každého pole při změně měny, může být "dynamická vazba" prostřednictvím `CDaoRecordset::GetFieldValue` a `CDaoRecordset::SetFieldValue` může být metoda přístupu k datům podle volby.
 

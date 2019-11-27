@@ -1,5 +1,5 @@
 ---
-title: Životnost objektů a Správa prostředků (RAII)
+title: Životní cyklus objektů a správa prostředků (RAII)
 description: Postupujte podle principu RAII v moderním C++ , abyste se vyhnuli nevracení prostředků.
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74303369"
 ---
-# <a name="object-lifetime-and-resource-management-raii"></a>Životnost objektů a Správa prostředků (RAII)
+# <a name="object-lifetime-and-resource-management-raii"></a>Životní cyklus objektů a správa prostředků (RAII)
 
 Na rozdíl od spravovaných C++ jazyků nemá automatické *uvolňování paměti*. To je interní proces, který uvolní paměť haldy a další prostředky při spuštění programu. C++ Program zodpovídá za vrácení všech pořízených prostředků do operačního systému. Selhání uvolnění nepoužívaného prostředku se nazývá *netěsnost*. Nevrácené prostředky nejsou k dispozici ostatním programům, dokud se proces neukončí. Konkrétně nevracení paměti je běžné příčinou chyb v programování ve stylu C.
 

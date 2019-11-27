@@ -17,12 +17,12 @@ ms.locfileid: "74396517"
 ---
 # <a name="operator-parity"></a>PARITY? – operátor
 
-Status of parity flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Stav příznaku parity Používáno pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. WHILe](../../assembler/masm/dot-while.md)nebo [. OPAKUJe](../../assembler/masm/dot-repeat.md) bloky a vyhodnocují v době běhu, nikoli v době sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **PARITY?**
+> **Parita?**
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

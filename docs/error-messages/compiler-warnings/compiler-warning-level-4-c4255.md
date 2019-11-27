@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4255
+title: Upozornění kompilátoru (úroveň 4) C4255
 ms.date: 11/04/2016
 f1_keywords:
 - C4255
 helpviewer_keywords:
 - C4255
 ms.assetid: 2087b635-4b4c-4182-8a01-c26770d2bb88
-ms.openlocfilehash: 1796e28e88bbe52c4c21ffdf0a8a96a278a44388
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b64da554d6afbac4422c79ff593429ba90a4378
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400959"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541702"
 ---
-# <a name="compiler-warning-level-4-c4255"></a>Kompilátor upozornění (úroveň 4) C4255
+# <a name="compiler-warning-level-4-c4255"></a>Upozornění kompilátoru (úroveň 4) C4255
 
-'function': zadaný žádný prototyp funkce: převod '(') '(void).
+' function ': není zadaný žádný prototyp funkce: převod ' () ' na ' (void) '
 
-Kompilátor nenalezl explicitní seznam argumentů funkce. Toto upozornění je pro kompilátor jazyka C.
+Kompilátor nenalezl explicitní seznam argumentů funkce. Toto upozornění je pouze pro kompilátor jazyka C.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 Následující ukázka generuje C4255:
 
-```
+```c
 // C4255.c
 // compile with: /W4 /WX
 #pragma warning (default : 4255)

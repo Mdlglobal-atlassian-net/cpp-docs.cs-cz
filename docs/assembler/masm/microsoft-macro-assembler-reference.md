@@ -1,5 +1,5 @@
 ---
-title: Microsoft Macro Assembler reference
+title: Microsoft Macro Assembler – referenční dokumentace
 ms.date: 08/30/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), reference
@@ -14,40 +14,40 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397213"
 ---
-# <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler reference
+# <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční dokumentace
 
-The Microsoft Macro Assembler (MASM) provides several advantages over inline assembly. MASM contains a macro language that has features such as looping, arithmetic, and text string processing. MASM also gives you greater control over the hardware because it supports the instruction sets of the 386, 486, and Pentium processors. By using MASM, you also can reduce time and memory overhead.
+Microsoft Macro Assembler (MASM) poskytuje několik výhod oproti vloženému sestavení. MASM obsahuje jazyk makra, který obsahuje funkce jako smyčky, aritmetické zpracování textových řetězců. MASM také nabízí větší kontrolu nad hardwarem, protože podporuje sady instrukcí procesorů 386, 486 a Pentium. Pomocí MASM můžete také zkrátit dobu a nároky na paměť.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[ML and ML64 command-line option](../../assembler/masm/ml-and-ml64-command-line-reference.md)\
-Describes the ML.exe and ML64.exe command-line options.
+\ [možnost příkazového řádku ml a ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md)
+Popisuje možnosti příkazového řádku ML. exe a ML64. exe.
 
-[ML error messages](../../assembler/masm/ml-error-messages.md)\
-Describes ML.exe fatal and nonfatal error messages and warnings.
+[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)\
+Popisuje soubor ML. exe závažné a méně závažné chybové zprávy a upozornění.
 
-[Directives reference](directives-reference.md)\
-Provides links to articles that discuss the use of directives in MASM.
+\ – [referenční informace o direktivách](directives-reference.md)
+Obsahuje odkazy na články, které popisují použití direktiv v MASM.
 
-[Symbols Reference](../../assembler/masm/symbols-reference.md)\
-Provides links to articles that discuss the use of symbols in MASM.
+\ – [referenční informace o symbolech](../../assembler/masm/symbols-reference.md)
+Obsahuje odkazy na články, které popisují použití symbolů v MASM.
 
-[Operators Reference](../../assembler/masm/operators-reference.md)\
-Provides links to articles that discuss the use of operators in MASM.
+\ – [referenční informace o operátorech](../../assembler/masm/operators-reference.md)
+Obsahuje odkazy na články, které popisují použití operátorů v MASM.
 
-[Processor Manufacturer Programming Manuals](../../assembler/masm/processor-manufacturer-programming-manuals.md)\
-Provides links to websites that may contain programming information about processors that are not manufactured, sold, or supported by Microsoft.
+[Příručky pro programování výrobce procesoru](../../assembler/masm/processor-manufacturer-programming-manuals.md)\
+Obsahuje odkazy na webové stránky, které mohou obsahovat informace o programování pro procesory, které nejsou vyráběny, prodávány nebo podporovány společností Microsoft.
 
-[MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)\
-Information about how to create output files for x64.
+[MASM pro x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)\
+Informace o tom, jak vytvořit výstupní soubory pro platformu x64.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[C++ in Visual Studio](../../overview/visual-cpp-in-visual-studio.md)\
-Provides links to different areas of the Visual Studio and Visual C++ documentation.
+v aplikaci Visual Studio\ [ C++ ](../../overview/visual-cpp-in-visual-studio.md)
+Obsahuje odkazy na různé oblasti dokumentace sady Visual Studio a sady C++ Visual Studio.
 
 ## <a name="see-also"></a>Viz také:
 
-[Compiler Intrinsics](../../intrinsics/compiler-intrinsics.md)\
+[Vnitřní objekty kompilátoru](../../intrinsics/compiler-intrinsics.md)\
 [x86Intrinsics](../../intrinsics/x86-intrinsics-list.md)\
-[x64 (amd64) Intrinsics](../../intrinsics/x64-amd64-intrinsics-list.md)
+[Vnitřní objekty x64 (amd64)](../../intrinsics/x64-amd64-intrinsics-list.md)

@@ -18,7 +18,7 @@ ms.locfileid: "74396444"
 ---
 # <a name="operator-"></a>; – operátor
 
-Treats *text* as a comment.
+Považuje *text* za komentář.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,4 +26,4 @@ Treats *text* as a comment.
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

@@ -15,14 +15,14 @@ ms.locfileid: "74392981"
 ---
 # <a name="union"></a>UNION
 
-Declares a union of one or more data types. The *field-declarations* must be valid data definitions. Omit the [ENDS](../../assembler/masm/ends-masm.md) *name* label on nested **UNION** definitions.
+Deklaruje sjednocení jednoho nebo více datových typů. *Deklarace pole* musí být platné definice dat. Vynechejte popisek *název* [ukončení](../../assembler/masm/ends-masm.md) u definice vnořené **sjednocení** .
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **UNION** ⟦*alignment*⟧ ⟦ __,__ **NONUNIQUE**⟧\
-> *field-declarations*\
-> ⟦*name*⟧ **ENDS**
+> ⟦*Zarovnání* **Union** ⟧ ⟦ __,__ **nejedinečné**⟧ \
+> *deklarace pole*\
+> ⟦*název*⟧ **končí**
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

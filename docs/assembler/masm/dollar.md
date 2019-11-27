@@ -15,7 +15,7 @@ ms.locfileid: "74398760"
 ---
 # <a name=""></a>$
 
-The current value of the location counter.
+Aktuální hodnota čítače umístění.
 
 ## <a name="syntax"></a>Syntaxe
 

@@ -15,12 +15,12 @@ ms.locfileid: "74394862"
 ---
 # <a name="real10"></a>REAL10
 
-Allocates and optionally initializes a 10-byte floating-point number for each *initializer*.
+Přidělí a volitelně inicializuje číslo s plovoucí desetinnou čárkou pro každý *inicializátor*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **REAL10** *initializer* ⟦ __,__ *initializer* ...⟧
+> *název* **REAL10** *inicializátoru* ⟦ __,__ *inicializátor* ... ⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

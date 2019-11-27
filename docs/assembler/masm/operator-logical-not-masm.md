@@ -1,5 +1,5 @@
 ---
-title: '! – operátor (MASM)'
+title: '! – operátor MASM'
 ms.date: 08/30/2018
 f1_keywords:
 - operator !
@@ -15,14 +15,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396745"
 ---
-# <a name="operator--masm"></a>! – operátor (MASM)
+# <a name="operator--masm"></a>! – operátor MASM
 
-Treats *character* as a literal character rather than as an operator or symbol.
+Považuje *znak* za literální znak, nikoli jako operátor nebo symbol.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **!** *character*
+> **!** *optické*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

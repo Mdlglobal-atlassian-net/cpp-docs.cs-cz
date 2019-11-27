@@ -15,12 +15,12 @@ ms.locfileid: "74393170"
 ---
 # <a name="typedef-masm"></a>TYPEDEF (MASM)
 
-Defines a new type called *name*, which is equivalent to *type*.
+Definuje nový typ nazvaný *název*, který je ekvivalentní *typu*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **TYPEDEF** *type*
+> *název* *typu* typedef
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4208
+title: Upozornění kompilátoru (úroveň 4) C4208
 ms.date: 11/04/2016
 f1_keywords:
 - C4208
 helpviewer_keywords:
 - C4208
 ms.assetid: 5cb0a36e-3fb5-422f-a5f9-e40b70776c27
-ms.openlocfilehash: 11c6b1ad50c44ac4ad2a9d014e57efef097d9d8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e15140bd2f0983bde64c89a054fd733d1ab902ac
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401173"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541868"
 ---
-# <a name="compiler-warning-level-4-c4208"></a>Kompilátor upozornění (úroveň 4) C4208
+# <a name="compiler-warning-level-4-c4208"></a>Upozornění kompilátoru (úroveň 4) C4208
 
-používá se nestandardní rozšíření: delete [exp] - exp vyhodnotí, ale ignoruje
+používá se nestandardní rozšíření: delete [exp]-exp vyhodnoceno, ale ignorováno.
 
-Pomocí rozšíření společnosti Microsoft (/Ze), můžete odstranit pole pomocí hodnoty v závorkách se [operátor delete](../../cpp/delete-operator-cpp.md). Hodnota je ignorována.
+Pomocí rozšíření Microsoft Extensions (/ze) můžete odstranit pole pomocí [operátoru delete](../../cpp/delete-operator-cpp.md)v závorkách. Hodnota se ignoruje.
 
-```
+```cpp
 // C4208.cpp
 // compile with: /W4
 int main()
@@ -31,4 +31,4 @@ int main()
 }
 ```
 
-Tyto hodnoty nejsou platné v rámci kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Tyto hodnoty jsou neplatné v rámci kompatibility ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

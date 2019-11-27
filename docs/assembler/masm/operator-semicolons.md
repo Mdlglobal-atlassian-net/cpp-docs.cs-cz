@@ -17,7 +17,7 @@ ms.locfileid: "74396464"
 ---
 # <a name="operator-"></a>;; – operátor
 
-Treats *text* as a comment in a macro that appears only in the macro definition. The listing does not show *text* where the macro is expanded.
+Považuje *text* za komentář v makru, které se zobrazí pouze v definici makra. V tomto výpisu není zobrazen *text* , ve kterém je makro rozbalené.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,4 +25,4 @@ Treats *text* as a comment in a macro that appears only in the macro definition.
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

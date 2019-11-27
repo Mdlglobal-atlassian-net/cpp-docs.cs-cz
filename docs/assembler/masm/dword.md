@@ -15,18 +15,18 @@ ms.locfileid: "74397737"
 ---
 # <a name="dword"></a>DWORD
 
-Allocates and optionally initializes a double word (4 bytes) of storage for each *initializer*.
+Přidělí a volitelně inicializuje dvojité slovo (4 bajty) úložiště pro každý *inicializátor*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> ⟦*name*⟧ **DWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦ *⟧* *inicializátoru* **DWORD** ⟦ __,__ *inicializátor* ... ⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Can also be used as a type specifier anywhere a type is legal.
+Lze také použít jako specifikátor typu kdekoli je typ právní.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+\ – [referenční informace o direktivách](../../assembler/masm/directives-reference.md)
 [SDWORD](../../assembler/masm/sdword.md)\
 [DD](../../assembler/masm/dd.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74393703"
 ---
 # <a name="sizestr"></a>SIZESTR
 
-Finds the size of a text item.
+Najde velikost textové položky.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **SIZESTR** *textitem*
+> *název* **sizestr –** *textitem*
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

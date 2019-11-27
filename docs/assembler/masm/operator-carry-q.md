@@ -17,12 +17,12 @@ ms.locfileid: "74397075"
 ---
 # <a name="operator-carry"></a>operátor CARRY?
 
-Status of carry flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Stav přenesených příznaků. Používáno pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. WHILe](../../assembler/masm/dot-while.md)nebo [. OPAKUJe](../../assembler/masm/dot-repeat.md) bloky a vyhodnocují v době běhu, nikoli v době sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **CARRY?**
+> **ÚMYSL?**
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](../../assembler/masm/operators-reference.md)
+[Reference operátorů](../../assembler/masm/operators-reference.md)

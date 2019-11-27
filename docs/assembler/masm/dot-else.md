@@ -13,7 +13,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398500"
 ---
-# <a name="else-32-bit-masm"></a>.ELSE (32-bit MASM)
+# <a name="else-32-bit-masm"></a>. JINAK (32-bit MASM)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -21,7 +21,7 @@ ms.locfileid: "74398500"
 
 ## <a name="remarks"></a>Poznámky
 
-(32-bit MASM only.) See [.IF](../../assembler/masm/dot-if.md).
+(jenom 32-bitová MASM.) Viz [. Pokud](../../assembler/masm/dot-if.md).
 
 ## <a name="see-also"></a>Viz také:
 

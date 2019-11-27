@@ -15,16 +15,16 @@ ms.locfileid: "74397316"
 ---
 # <a name="instr"></a>INSTR
 
-Finds the first occurrence of *textitem2* in *textitem1*.
+Vyhledá první výskyt *textitem2* v *textitem1*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **INSTR** ⟦*position* __,__ ⟧ *textitem1* __,__ *textitem2*
+> *název* **InStr** ⟦*Position* __,__ ⟧ *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>Poznámky
 
-The starting *position* is optional. Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function.
+Počáteční *pozice* je volitelná. Každá textová položka může být řetězcový literál, konstanta předchází **%** , nebo řetězec vrácený funkcí makra.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

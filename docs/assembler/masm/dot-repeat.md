@@ -13,16 +13,16 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398009"
 ---
-# <a name="repeat-32-bit-masm"></a>.REPEAT (32-bit MASM)
+# <a name="repeat-32-bit-masm"></a>. OPAKOVAT (32-bit MASM)
 
-Generates code that repeats execution of the block of *statements* until *condition* becomes true. [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md), which becomes true when CX is zero, may be substituted for [.UNTIL](../../assembler/masm/dot-until.md). The *condition* is optional with **.UNTILCXZ**. (32-bit MASM only.)
+Vygeneruje kód, který opakuje provádění bloku *příkazů* , dokud *Podmínka* nebude pravdivá. [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md), která se bude pravda, když je CX nula, může být nahrazena [. DO](../../assembler/masm/dot-until.md). *Podmínka* je volitelná s **. UNTILCXZ**. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.REPEAT**\
-> *statements*\
-> **.UNTIL** *condition*
+> **. OPAKOVAT**\
+> \ *příkazů*
+> **. DO** *podmínky*
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

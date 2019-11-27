@@ -71,12 +71,12 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID ovládacího prvku v objektu [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)
 
-*index*<br/>
+*indexovacím*<br/>
 Odkaz na datový člen pole v objektu přidruženého `CRecordset` nebo `CDaoRecordset`.
 
 *pRecordset*<br/>
@@ -98,7 +98,7 @@ Obecné DDX_Field příklad najdete v tématu [DDX_FieldText](#ddx_fieldtext) . 
 
 **Záhlaví:** afxdao. h
 
-##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString
+##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString
 
 Funkce `DDX_FieldCBString` spravuje přenos dat [CString](../../atl-mfc-shared/reference/cstringt-class.md) mezi ovládacím prvkem pro úpravy ovládacího prvku pole se seznamem v zobrazení záznamu a datovým členem `CString` pole sady záznamů, která je přidružena k zobrazení záznamu.
 
@@ -119,7 +119,7 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID ovládacího prvku v objektu [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)
@@ -146,7 +146,7 @@ Obecné DDX_Field příklad najdete v tématu [DDX_FieldText](#ddx_fieldtext) . 
 
   **Header** afxdao. h
 
-## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact
+## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact
 
 Funkce `DDX_FieldCBStringExact` spravuje přenos dat [CString](../../atl-mfc-shared/reference/cstringt-class.md) mezi ovládacím prvkem pro úpravy ovládacího prvku pole se seznamem v zobrazení záznamu a datovým členem `CString` pole sady záznamů, která je přidružena k zobrazení záznamu.
 
@@ -167,7 +167,7 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID ovládacího prvku v objektu [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)
@@ -215,7 +215,7 @@ void AFXAPI DDX_FieldCheck(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID prostředku ovládacího prvku zaškrtávací políčko přidruženého k vlastnosti ovládacího prvku
@@ -236,7 +236,7 @@ Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialog
 
   **Header** afxdao. h
 
-##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex
+##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex
 
 Funkce `DDX_FieldLBIndex` synchronizuje index vybrané položky v ovládacím prvku seznamu v zobrazení záznamu a datovém členovi pole **int** objektu Recordset přidruženého k zobrazení záznamu.
 
@@ -257,12 +257,12 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID ovládacího prvku v objektu [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)
 
-*index*<br/>
+*indexovacím*<br/>
 Odkaz na datový člen pole v objektu přidruženého `CRecordset` nebo `CDaoRecordset`.
 
 *pRecordset*<br/>
@@ -305,7 +305,7 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID ovládacího prvku v objektu [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)
@@ -332,7 +332,7 @@ Obecné DDX_Field příklad najdete v tématu [DDX_FieldText](#ddx_fieldtext) . 
 
   **Header** afxdao. h
 
-##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact
+##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact
 
 Funkce `DDX_FieldLBStringExact` zkopíruje aktuální výběr ovládacího prvku seznamu v zobrazení záznamu do datového členu pole [CString](../../atl-mfc-shared/reference/cstringt-class.md) v sadě záznamů, která je přidružena k zobrazení záznamu.
 
@@ -353,7 +353,7 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID ovládacího prvku v objektu [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)
@@ -380,7 +380,7 @@ Obecné DDX_Field příklad najdete v tématu [DDX_FieldText](#ddx_fieldtext) . 
 
   **Header** afxdao. h
 
-##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio
+##  <a name="ddx_fieldradio"></a>DDX_FieldRadio
 
 Funkce `DDX_FieldRadio` přidružuje členskou proměnnou **int** na základě nuly v zobrazení záznamu sady záznamů s aktuálně vybraným přepínačem ve skupině přepínačů v zobrazení záznamu.
 
@@ -401,7 +401,7 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID prvního ve skupině (se stylem WS_GROUP) sousedících ovládacích prvků přepínačů v objektu [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
@@ -428,7 +428,7 @@ Obecné DDX_Field příklad najdete v tématu [DDX_FieldText](#ddx_fieldtext) . 
 
   **Header** afxdao. h
 
-##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll
+##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll
 
 Funkce `DDX_FieldScroll` synchronizuje pozici posunutí ovládacího prvku posuvníku v zobrazení záznamu a datovém členovi pole **int** objektu Recordset přidruženého k zobrazení záznamu (nebo pomocí libovolné celočíselné proměnné, ke které jste se rozhodli namapovat).
 
@@ -449,7 +449,7 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID prvního ve skupině (se stylem WS_GROUP) sousedících ovládacích prvků přepínačů v objektu [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
@@ -498,7 +498,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID prostředku ovládacího prvku posuvník
@@ -644,7 +644,7 @@ void AFXAPI DDX_FieldText(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
+Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
 ID ovládacího prvku v objektu [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)

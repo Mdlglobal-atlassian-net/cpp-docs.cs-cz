@@ -17,7 +17,7 @@ ms.locfileid: "74397382"
 ---
 # <a name="ifidn-ifidni"></a>IFIDN, IFIDNI
 
-Grants assembly if the text items are identical.
+Udělí sestavení, pokud jsou textové položky identické.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,8 +26,8 @@ Grants assembly if the text items are identical.
 
 ## <a name="remarks"></a>Poznámky
 
-If **IFIDNI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Pokud je zadán **IFIDNI** , porovnávání rozlišuje malá a velká písmena. Úplnou syntaxi naleznete v tématu [if](../../assembler/masm/if-masm.md) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

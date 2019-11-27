@@ -17,12 +17,12 @@ ms.locfileid: "74396865"
 ---
 # <a name="operator-le"></a>operátor LE
 
-Returns true (-1) if *expression1* is less than or equal to *expression2*, or returns false (0) if it is not.
+Vrátí hodnotu true (-1), pokud *Výraz1* je menší nebo rovna hodnotě *Výraz2*, nebo vrátí hodnotu false (0), pokud není.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **LE** *expression2*
+> *Výraz1* **Le** *Výraz2*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

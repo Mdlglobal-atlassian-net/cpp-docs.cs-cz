@@ -15,53 +15,53 @@ ms.locfileid: "74393726"
 ---
 # <a name="segment"></a>SEGMENT
 
-Defines a program segment called *name* having segment attributes
+Definuje segment programu *s názvem, který má atributy* segmentů.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
-> *statements*\
-> *name* **ENDS**
+> *Name* **segment** ⟦**jen pro čtení**⟧ ⟦*align*⟧ ⟦*kombinovat*⟧ ⟦*použití*⟧ ⟦*charakteristiky*⟧ **alias (** _String_ **)** ⟦ __'__ *Class* __'__ ⟧ \
+> \ *příkazů*
+> **konec** názvu
 
 #### <a name="parameters"></a>Parametry
 
 *align*<br/>
-The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
+Rozsah adres paměti, ze kterých lze vybrat počáteční adresu segmentu. Typ zarovnání může být jeden z následujících:
 
-|Align Type|Starting Address|
+|Typ zarovnání|Počáteční adresa|
 |----------------|----------------------|
-|**BYTE**|Next available byte address.|
-|**WORD**|Next available word address (2 bytes per word).|
-|**DWORD**|Next available double word address (4 bytes per double word).|
-|**PARA**|Next available paragraph address (16 bytes per paragraph).|
-|**PAGE**|Next available page address (256 bytes per page).|
-|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
+|**BYTOVÉ**|Další dostupná bajtová adresa.|
+|**WORD**|Další dostupná adresa slova (2 bajty na slovo).|
+|**DWORD**|Další dostupná adresa dvojitého slova (4 bajty na jeden typ Word).|
+|**–**|Další dostupná adresa odstavce (16 bajtů za odstavec).|
+|**PAGE**|Další adresa stránky k dispozici (256 bajtů na stránku).|
+|**Zarovnat**(*n*)|Další dostupná *n*-tou bajtová adresa Další informace najdete v části poznámky.|
 
-If this parameter is not specified, **PARA** is used by default.
+Pokud tento parametr nezadáte, použije se ve výchozím nastavení **para** .
 
-*combine*\
-**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
+*kombinovat*\
+**Veřejné**, **zásobník**, **běžné**, **paměť**, **na**<em>adrese</em>, **soukromá**
 
-*use*\
-**USE16**, **USE32**, **FLAT**
+*použít*\
+**USE16**, **USE32**, **plochý**
 
-*characteristics*\
-**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
+\ *charakteristik*
+**Informace**, **čtení**, **zápis**, **spouštění**, **sdílení**, **ukládání do mezipaměti**a **zahození**
 
-These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
+Jsou podporovány pouze pro COFF a odpovídají charakteristikám oddílu COFF podobného názvu (například **Shared** odpovídá IMAGE_SCN_MEM_SHARED). ČTENÍ nastaví příznak IMAGE_SCN_MEM_READ. Neplatný příznak jen pro čtení způsobil, že oddíl IMG_SCN_MEM_WRITE příznak pro vymazání. Pokud jsou nastaveny jakékoli *charakteristiky* , výchozí vlastnosti se nepoužijí a uplatní se jenom ty příznaky, které jsou v něm zadané.
 
-_string_\
-This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
+\ _řetězců_
+Tento řetězec se používá jako název oddílu ve vygenerovaném objektu COFF.  Vytvoří více oddílů se stejným externím názvem s odlišnými názvy segmentů MASM.
 
-Not supported with **/omf**.
+Nepodporováno v **/OMF**.
 
-*class*\
-Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
+\ *třídy*
+Určuje, jak mají být segmenty kombinovány a uspořádány v sestaveném souboru. Typické hodnoty jsou, `'DATA'`, `'CODE'`, `'CONST'` a `'STACK'`
 
 ## <a name="remarks"></a>Poznámky
 
-For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
+Pro `ALIGN(n)`může být *n* jakákoli mocnina 2 od 1 do 8192. Nepodporováno v **/OMF**.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

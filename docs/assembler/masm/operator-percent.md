@@ -17,12 +17,12 @@ ms.locfileid: "74396514"
 ---
 # <a name="operator-"></a>% – operátor
 
-Treats the value of *expression* in a macro argument as text.
+Zpracovává hodnotu *výrazu* v argumentu makra jako text.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **%** *expression*
+> *výraz*%
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

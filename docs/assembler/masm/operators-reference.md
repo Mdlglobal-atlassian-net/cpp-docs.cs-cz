@@ -1,5 +1,5 @@
 ---
-title: MASM Operators reference
+title: Reference k operátorům MASM
 ms.date: 08/30/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
@@ -12,81 +12,81 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74395215"
 ---
-# <a name="masm-operators-reference"></a>MASM Operators reference
+# <a name="masm-operators-reference"></a>Reference k operátorům MASM
 
-## <a name="arithmetic"></a>Arithmetic
+## <a name="arithmetic"></a>Aritmetické operace
 
 ||||
 |-|-|-|
-|[* (multiply)](operator-multiply.md)|[+ (add)](operator-add.md)|[- (subtract or negate)](operator-subtract-2.md)|
-|[. (field)](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
-|[MOD (remainder)](operator-mod.md)|||
+|[* (násobení)](operator-multiply.md)|[+ (Přidat)](operator-add.md)|[– (odečíst nebo negace)](operator-subtract-2.md)|
+|[. dílčí](operator-dot.md)|[/(rozdělit)](operator-subtract-1.md)|[&#91;&#93;indexovacím](operator-brackets.md)|
+|[MOD (zbytek)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Tok řízení
 
 ||||
 |-|-|-|
-|[\! (runtime logical not)](operator-logical-not-masm-run-time.md)|[\!= (runtime not equal)](operator-not-equal-masm.md)|[&#124;&#124; (runtime logical or)](operator-logical-or.md)|
-|[&& (runtime logical and)](operator-logical-and-masm-run-time.md)|[< (runtime less than)](operator-less-than-masm-run-time.md)|[\<= (runtime less or equal)](operator-less-or-equal-masm-run-time.md)|
-|[== (runtime equal)](operator-equal-masm-run-time.md)|[> (runtime greater than)](operator-greater-than-masm-run-time.md)|[>= (runtime greater or equal)](operator-greater-or-equal-masm-run-time.md)|
-|[& (runtime bitwise and)](operator-bitwise-and.md)|||
-|[CARRY? (runtime carry test)](operator-carry-q.md)|[OVERFLOW? (runtime overflow test)](operator-overflow-q.md)|[PARITY? (runtime parity test)](operator-parity-q.md)|
-|[SIGN? (runtime sign test)](operator-sign-q.md)|[ZERO? (runtime zero test)](operator-zero-q.md)||
+|[\! (logická modul runtime)](operator-logical-not-masm-run-time.md)|[\!= (modul runtime se nerovná)](operator-not-equal-masm.md)|[&#124;&#124;(modul runtime nebo logický)](operator-logical-or.md)|
+|[& & (logická prostředí a)](operator-logical-and-masm-run-time.md)|[< (běhové prostředí je menší než)](operator-less-than-masm-run-time.md)|[\<= (běhové prostředí je menší nebo rovno)](operator-less-or-equal-masm-run-time.md)|
+|[= = (runtime EQUAL)](operator-equal-masm-run-time.md)|[> (modul runtime je větší než)](operator-greater-than-masm-run-time.md)|[> = (runtime je větší nebo rovno)](operator-greater-or-equal-masm-run-time.md)|
+|[& (modul runtime bitových a)](operator-bitwise-and.md)|||
+|[ÚMYSL? (běh se testem)](operator-carry-q.md)|[PLNĚ? (test přetečení modulu runtime)](operator-overflow-q.md)|[Parita? (test parity za běhu)](operator-parity-q.md)|
+|[OSOBĚ? (běhový test podpisu)](operator-sign-q.md)|[VYNULUJTE? (běhový test s hodnotou nula)](operator-zero-q.md)||
 
-## <a name="logical-and-shift"></a>Logical and Shift
-
-||||
-|-|-|-|
-|[AND (bitwise and)](operator-and.md)|[NOT (bitwise not)](operator-not.md)|[OR (bitwise or)](operator-or.md)|
-|[SHL (shift bits left)](operator-shl.md)|[SHR (shift bits right)](operator-shr.md)|[XOR (bitwise exclusive or)](operator-xor.md)|
-
-## <a name="macro"></a>Macro
+## <a name="logical-and-shift"></a>Logický operátor and Shift
 
 ||||
 |-|-|-|
-|[\! (character literal)](operator-logical-not-masm.md)|[% (treat as text)](operator-percent.md)||
-|[;; (treat as comment)](operator-semicolons.md)|[&lt; &gt; (treat as one literal)](operator-literal.md)|[& & (substitute parameter value)](operator-logical-and-masm.md)|
+|[AND (bitové a)](operator-and.md)|[NOT (bitový not)](operator-not.md)|[NEBO (bitový operátor OR)](operator-or.md)|
+|[SHL – (posun Shift vlevo)](operator-shl.md)|[SHR – (Shift bity vpravo)](operator-shr.md)|[XOR (bitový exkluzivní operátor OR)](operator-xor.md)|
+
+## <a name="macro"></a>– Makro
+
+||||
+|-|-|-|
+|[\! (znakový literál)](operator-logical-not-masm.md)|[% (považovat za text)](operator-percent.md)||
+|[;; (považován za komentář)](operator-semicolons.md)|[&lt; &gt; (považovat za jeden literál)](operator-literal.md)|[& & (náhradní hodnota parametru)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Různé
 
 ||||
 |-|-|-|
-|[' ' (treat as string)](operator-single-quote.md)|[" " (treat as string)](operator-double-quote.md)||
-|: (local label definition)|:: (register segment and offset)|:: (global label definition)|
-|[; (treat as comment)](operator-semicolon.md)|[DUP (repeat declaration)](operator-dup.md)||
+|[' ' (považován za řetězec)](operator-single-quote.md)|["" (považovat za řetězec)](operator-double-quote.md)||
+|: (definice místní jmenovky)|:: (registrovat segment a posunutí)|:: (definice globálního popisku)|
+|[; (považován za komentář)](operator-semicolon.md)|[DUP (opakování deklarace)](operator-dup.md)||
 
 ## <a name="record"></a>Záznam
 
 |||
 |-|-|
-|[MASK (get record or field bitmask)](operator-mask.md)|[WIDTH (get record or field width)](operator-width.md)|
+|[MASKA (získání maskování dat nebo pole)](operator-mask.md)|[Šířka (získání záznamu nebo šířky pole)](operator-width.md)|
 
 ## <a name="relational"></a>Relační
 
 ||||
 |-|-|-|
-|[EQ (equal)](operator-eq.md)|[GE (greater or equal)](operator-ge.md)|[GT (greater than)](operator-gt.md)|
-|[LE (less or equal)](operator-le.md)|[LT (less than)](operator-lt.md)|[NE (not equal)](operator-ne.md)|
+|[EQ (rovná se)](operator-eq.md)|[GE (větší nebo rovno)](operator-ge.md)|[GT (je větší než)](operator-gt.md)|
+|[LE (menší nebo rovno)](operator-le.md)|[LT (je menší než)](operator-lt.md)|[NE (není rovno)](operator-ne.md)|
 
-## <a name="segment"></a>Segment
+## <a name="segment"></a>Letu
 
 |||
 |-|-|
-|[: (segment override)](operator-colon.md)|:: (register segment and offset)|
-|[IMAGEREL (image relative offset)](operator-imagerel.md)|[LROFFSET (loader resolved offset)](operator-lroffset.md)|
-|[OFFSET (segment relative offset)](operator-offset.md)|[SECTIONREL (section relative offset)](operator-sectionrel.md)|
-|[SEG (get segment)](operator-seg.md)||
+|[: (přepsání segmentu)](operator-colon.md)|:: (registrovat segment a posunutí)|
+|[IMAGEREL (relativní posunutí obrázku)](operator-imagerel.md)|[LROFFSET (posun přeložený zavaděčem)](operator-lroffset.md)|
+|[POSUN (relativní Posun segmentu)](operator-offset.md)|[SECTIONREL – (relativní posun oddílu)](operator-sectionrel.md)|
+|[SEG – (načíst segment)](operator-seg.md)||
 
 ## <a name="type"></a>Typ
 
 ||||
 |-|-|-|
-|[HIGH (high 8 bits of lowest 16 bits)](operator-high.md)|[HIGH32 (high 32 bits of 64 bits)](operator-high32.md)|[HIGHWORD (high 16 bits of lowest 32 bits)](operator-highword.md)|
-|[LENGTH (number of elements in array)](operator-length.md)|[LENGTHOF (number of elements in array)](operator-lengthof.md)|[LOW (low 8 bits)](operator-low.md)|
-|[LOW32 (low 32 bits)](operator-low32.md)|[LOWWORD (low 16 bits)](operator-lowword.md)|[OPATTR (get argument type info)](operator-opattr.md)|
-|[PTR (pointer to or as type)](operator-ptr.md)|[SHORT (mark short label type)](operator-short.md)|[SIZE (size of type or variable)](operator-size.md)|
-|[SIZEOF (size of type or variable)](operator-sizeof.md)|[THIS (current location)](operator-this.md)|[TYPE (get expression type)](operator-type.md)|
-|[.TYPE (get argument type info)](operator-dot-type.md)|||
+|[Vysoká (horních 8 bitů s nejnižší hodnotou 16 bitů)](operator-high.md)|[HIGH32 – (vysoké 32 bitů 64 bitů)](operator-high32.md)|[HIGHWORD (vysoké 16 bitů s nejnižší 32 bity)](operator-highword.md)|
+|[Délka (počet prvků v poli)](operator-length.md)|[LENGTHOF (počet prvků v poli)](operator-lengthof.md)|[NÍZKÁ (nízká, 8 bitů)](operator-low.md)|
+|[LOW32 – (nízké 32 bity)](operator-low32.md)|[LOWWORD (nízká úroveň 16 bitů)](operator-lowword.md)|[OPATTR (získání informací o typu argumentu)](operator-opattr.md)|
+|[PTR (ukazatel na nebo jako typ)](operator-ptr.md)|[SHORT (označit krátký typ popisku)](operator-short.md)|[VELIKOST (velikost typu nebo proměnné)](operator-size.md)|
+|[SIZEOF (velikost typu nebo proměnné)](operator-sizeof.md)|[Toto (aktuální umístění)](operator-this.md)|[TYP (získat typ výrazu)](operator-type.md)|
+|[. TYP (získat informace o typu argumentu)](operator-dot-type.md)|||
 
 ## <a name="see-also"></a>Viz také:
 

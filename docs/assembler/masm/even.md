@@ -15,7 +15,7 @@ ms.locfileid: "74397585"
 ---
 # <a name="even"></a>EVEN
 
-Aligns the next variable or instruction on an even byte.
+Zarovná další proměnnou nebo instrukci na sudý bajt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ Aligns the next variable or instruction on an even byte.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

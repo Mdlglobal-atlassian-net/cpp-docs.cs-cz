@@ -15,12 +15,12 @@ ms.locfileid: "74393511"
 ---
 # <a name="substr"></a>SUBSTR
 
-Returns a substring of *textitem*, starting at *position*. The *textitem* can be a literal string, a constant preceded by a `%`, or the string returned by a macro function.
+Vrátí podřetězec *textitem*, který začíná na *pozici*. *Textitem* může být řetězcový literál, konstanta předchází `%`, nebo řetězec vrácený funkcí makra.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **SUBSTR** *textitem* __,__ *position* ⟦ __,__ *length*⟧
+> *název* **substr** *textitem* __,__ *Position* ⟦ __,__ *Length*⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

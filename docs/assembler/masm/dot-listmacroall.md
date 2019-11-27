@@ -15,7 +15,7 @@ ms.locfileid: "74398122"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
 
-Starts listing of all statements in macros.
+Spustí výpis všech příkazů v makrech.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Starts listing of all statements in macros.
 
 ## <a name="remarks"></a>Poznámky
 
-Same as [.LALL](../../assembler/masm/dot-lall.md).
+Stejné jako [. LALL](../../assembler/masm/dot-lall.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

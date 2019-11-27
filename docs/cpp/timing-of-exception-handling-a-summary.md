@@ -1,5 +1,5 @@
 ---
-title: 'Timing of exception handling: A summary'
+title: 'Načasování zpracování výjimky: Souhrn'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -18,12 +18,12 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246335"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
+# <a name="timing-of-exception-handling-a-summary"></a>Načasování zpracování výjimky: Souhrn
 
-A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
+Obslužná rutina ukončení je prováděna bez ohledu na to, jak je ukončený blok příkazu **__try** . Mezi příčiny patří přechod z bloku **__try** , příkaz `longjmp`, který přenáší řízení z bloku a odvíjí od zpracování výjimek.
 
 > [!NOTE]
->  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. Rychlá verze obchází zpracování ukončení, ale je mnohem efektivnější. To use this version, include the file \<setjmp.h>. Jiné verze podporují zpracování ukončení, jak je popsáno v předchozím odstavci. To use this version, include the file \<setjmpex.h>. Zvýšení výkonu u rychlé verze závisí na konfiguraci hardwaru.
+>  Kompilátor společnosti C++ Microsoft podporuje dvě formy příkazů `setjmp` a `longjmp`. Rychlá verze obchází zpracování ukončení, ale je mnohem efektivnější. Chcete-li použít tuto verzi, zahrňte > souboru \<setjmp. h. Jiné verze podporují zpracování ukončení, jak je popsáno v předchozím odstavci. Chcete-li použít tuto verzi, zahrňte > souboru \<SETJMPEX. h. Zvýšení výkonu u rychlé verze závisí na konfiguraci hardwaru.
 
 Operační systém spustí všechny obslužné rutiny ukončení ve správném pořadí, předtím než lze spustit jakýkoli jiný kód, včetně těla obslužné rutiny výjimky.
 
@@ -35,7 +35,7 @@ Je-li příčinou přerušení výjimka, systém musí před rozhodnutím, co uk
 
 1. Pokud tento filtr předá řízení (vrátí hodnotu 0), proces pokračuje, dokud není nalezen filtr, který nepředá řízení.
 
-1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
+1. Pokud tento filtr vrátí hodnotu-1, vykonání pokračuje v místě, kde byla výjimka vyvolána, a dojde k žádnému ukončení.
 
 1. Jestliže filtr vrátí hodnotu 1, dojde k následujícím událostem:
 
@@ -49,5 +49,5 @@ Je-li příčinou přerušení výjimka, systém musí před rozhodnutím, co uk
 
 ## <a name="see-also"></a>Viz také:
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

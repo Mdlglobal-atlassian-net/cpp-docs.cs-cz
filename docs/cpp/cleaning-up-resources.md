@@ -18,19 +18,19 @@ ms.locfileid: "74246639"
 ---
 # <a name="cleaning-up-resources"></a>Vymazání prostředků
 
-Při provádění obslužné rutiny ukončení nemusíte před voláním rutiny ukončení vědět, které prostředky jsou ve skutečnosti přiděleny. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+Při provádění obslužné rutiny ukončení nemusíte před voláním rutiny ukončení vědět, které prostředky jsou ve skutečnosti přiděleny. Je možné, že byl blok příkazu **__try** přerušen před přidělením všech prostředků, takže nebyly otevřeny všechny prostředky.
 
 Proto byste dříve, než přikročíte k zpracování vyčištění při ukončení, měli z důvodu bezpečnosti zkontrolovat, které prostředky jsou skutečně otevřené. Doporučený postup je:
 
 1. Inicializovat popisovače na hodnotu NULL.
 
-1. In the **__try** statement block, allocate resources. Pokud je prostředek přidělen, jsou popisovače nastaveny na kladné hodnoty.
+1. V bloku příkazu **__try** přidělte prostředky. Pokud je prostředek přidělen, jsou popisovače nastaveny na kladné hodnoty.
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. V bloku příkazu **__finally** uvolněte každý prostředek, jehož odpovídající obslužná rutina nebo proměnná příznaku je nenulová nebo nemá hodnotu null.
 
 ## <a name="example"></a>Příklad
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Před vyčištěním prostředků kód nejprve zkontroluje, zda tyto prostředky byly přiděleny.
+Například následující kód používá obslužnou rutinu ukončení pro uzavření tří souborů a blok paměti, který byl přidělen v bloku příkazu **__try** . Před vyčištěním prostředků kód nejprve zkontroluje, zda tyto prostředky byly přiděleny.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74397654"
 ---
 # <a name="endm"></a>ENDM
 
-Terminates a macro or repeat block.
+Ukončí makro nebo blok opakování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Terminates a macro or repeat block.
 
 ## <a name="remarks"></a>Poznámky
 
-See [MACRO](../../assembler/masm/macro.md), [FOR](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [REPEAT](../../assembler/masm/repeat.md), or [WHILE](while-masm.md).
+Podívejte se na téma [makro](../../assembler/masm/macro.md), [pro](../../assembler/masm/for-masm.md), [hrnuté](../../assembler/masm/forc.md), [Opakovat](../../assembler/masm/repeat.md)nebo [while](while-masm.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

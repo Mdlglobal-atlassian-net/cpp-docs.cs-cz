@@ -17,12 +17,12 @@ ms.locfileid: "74396578"
 ---
 # <a name="operator-offset"></a>operátor OFFSET
 
-Returns the offset into the relevant segment of *expression*.
+Vrátí posun k příslušnému segmentu *výrazu*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **OFFSET** *expression*
+> *Výraz* **posunutí**
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: operator brackets
+title: závorky operátora
 ms.date: 08/30/2018
 f1_keywords:
 - operator []
@@ -15,13 +15,13 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397086"
 ---
-# <a name="operator-"></a>operator \[\]
+# <a name="operator-"></a>operátor \[\]
 
-Returns *expression1* plus \[*expression2*\].
+Vrátí *Výraz1* plus \[*Výraz2*\].
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **[** expression2 **]**
+> *Výraz1* **[** Výraz2 **]**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (Level 3) C4738
+title: Upozornění kompilátoru (úroveň 3) C4738
 ms.date: 11/04/2016
 f1_keywords:
 - C4738
@@ -13,21 +13,21 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189399"
 ---
-# <a name="compiler-warning-level-3-c4738"></a>Compiler Warning (Level 3) C4738
+# <a name="compiler-warning-level-3-c4738"></a>Upozornění kompilátoru (úroveň 3) C4738
 
 ukládání 32bitového plovoucího výsledku do paměti, možná ztráta
 
-C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
+C4738 upozorňuje na to, že výsledek přiřazení, přetypování, předaného argumentu nebo jiné operace může být potřeba zaokrouhlit nebo že operace skončila s registry a je potřeba k využití paměti (v rozlití). To může mít za následek ztrátu výkonu.
 
-To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
+Chcete-li vyřešit toto upozornění a vyhnout se zaokrouhlování, zkompilujte pomocí [/FP: Fast](../../build/reference/fp-specify-floating-point-behavior.md) nebo použijte `double` místo `float`.
 
-To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
+Chcete-li vyřešit toto upozornění a vyhnout se nedostatku registru, změňte pořadí výpočtu a upravte své používání pro vkládání
 
-This warning is off by default. For more information, see [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Příklad
 
-The following sample generates C4738:
+Následující ukázka generuje C4738:
 
 ```cpp
 // C4738.cpp

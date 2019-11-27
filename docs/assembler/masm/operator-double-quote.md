@@ -1,5 +1,5 @@
 ---
-title: operator &quot; &quot;
+title: operátor &quot; &quot;
 ms.date: 08/30/2018
 f1_keywords:
 - '&#34; &#34;'
@@ -15,9 +15,9 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397024"
 ---
-# <a name="operator-quot-quot"></a>operator &quot; &quot;
+# <a name="operator-quot-quot"></a>operátor &quot; &quot;
 
-Treats "*text*" as a string.
+Zpracovává "*text*" jako řetězec.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,4 +25,4 @@ Treats "*text*" as a string.
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

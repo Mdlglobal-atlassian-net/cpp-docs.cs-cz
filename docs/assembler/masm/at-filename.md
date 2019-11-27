@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399045"
 ---
-# <a name="filename"></a>\@FileName
+# <a name="filename"></a>\@název souboru
 
-The base name of the main file being assembled (text macro).
+Základní název hlavního souboru, který se sestavuje (textové makro).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@FileName**
+> **\@název souboru**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

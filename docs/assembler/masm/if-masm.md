@@ -15,22 +15,22 @@ ms.locfileid: "74397453"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-Grants assembly of *ifstatements* if *expression1* is true (nonzero) or *elseifstatements* if *expression1* is false (0) and *expression2* is true.
+Udělí sestavení *ifstatements* , je-li hodnota *expression1* true (nenulová) nebo *elseifstatements* , pokud je hodnota *Výraz1* false (0) a vlastnost *Výraz2* je true.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **IF** *expression1*\
-> *if-statements*\
-> ⟦**ELSEIF** *expression2*\
-> *elseif-statements*⟧\
+> **If** *Výraz1*\
+> *příkazy if*\
+> ⟦**ElseIf** *Výraz2*\
+> *ElseIf-příkazy*⟧ \
 > ⟦**ELSE**\
-> *else-statements*⟧\
+> *else-příkazy*⟧ \
 > **ENDIF**
 
 ## <a name="remarks"></a>Poznámky
 
-The following directives may be substituted for [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, and **ELSEIFNDEF**. Optionally, assembles *else-statements* if the previous expression is false. Note that the expressions are evaluated at assembly time.
+Pro [ElseIf](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **elseifdef –** , **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**a **elseifndef –** mohou být nahrazeny následující direktivy. Volitelně sestaví *Další příkazy* , pokud je předchozí výraz nepravdivý. Všimněte si, že výrazy jsou vyhodnocovány v době sestavení.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

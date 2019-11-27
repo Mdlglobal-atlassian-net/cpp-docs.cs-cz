@@ -17,12 +17,12 @@ ms.locfileid: "74396163"
 ---
 # <a name="operator-shr"></a>SHR – operátor
 
-Returns the result of shifting the bits of *expression* right *count* number of bits.
+Vrátí výsledek posunu bitů *výrazu* *do pravého počtu bitů* .
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression* **SHR** *count*
+> *počet* SHR – výrazů
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

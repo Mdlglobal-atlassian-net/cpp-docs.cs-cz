@@ -17,13 +17,13 @@ ms.locfileid: "74245206"
 ---
 # <a name="void-c"></a>void (C++)
 
-When used as a function return type, the **void** keyword specifies that the function does not return a value. When used for a function's parameter list, **void** specifies that the function takes no parameters. When used in the declaration of a pointer, **void** specifies that the pointer is "universal."
+Při použití jako návratový typ funkce určuje klíčové slovo **void** , že funkce nevrací hodnotu. Při použití pro seznam parametrů funkce **void** určuje, že funkce nepřijímá žádné parametry. Při použití v deklaraci ukazatele Určuje **void** , že ukazatel je "Universal".
 
-If a pointer's type is **void\*** , the pointer can point to any variable that is not declared with the **const** or **volatile** keyword. A **void\*** pointer cannot be dereferenced unless it is cast to another type. A **void\*** pointer can be converted into any other type of data pointer.
+Pokud je typ ukazatele typu **void\*** , ukazatel může ukazovat na jakoukoliv proměnnou, která není deklarována s klíčovým slovem **const** nebo **volatile** . Ukazatel typu **void\*** nelze odkázat, pokud není přetypování na jiný typ. Ukazatel **void\*** lze převést na jakýkoli jiný typ ukazatele dat.
 
-A **void** pointer can point to a function, but not to a class member in C++.
+Ukazatel **void** může ukazovat na funkci, ale ne na člen třídy v C++.
 
-You cannot declare a variable of type **void**.
+Nelze deklarovat proměnnou typu **void**.
 
 ## <a name="example"></a>Příklad
 

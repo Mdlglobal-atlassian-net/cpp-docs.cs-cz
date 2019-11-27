@@ -18,38 +18,38 @@ ms.locfileid: "74246695"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Výjimky: Zachytávání a mazání
 
-The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and **throw** keywords, see [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
+Následující pokyny a příklady vám ukážou, jak zachytit a odstranit výjimky. Další informace o klíčových slovech **Try**, **catch**a **throw** naleznete v tématu [moderní C++ osvědčené postupy pro výjimky a zpracování chyb](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.
+Obslužné rutiny výjimek musí odstranit objekty výjimek, které zpracovávají, protože chyba při odstranění výjimky způsobí nevracení paměti vždy, když kód zachytí výjimku.
 
-Your **catch** block must delete an exception when:
+Blok **catch** musí odstranit výjimku, když:
 
-- The **catch** block throws a new exception.
+- Blok **catch** vyvolá novou výjimku.
 
-   Of course, you must not delete the exception if you throw the same exception again:
+   Proto nesmíte výjimku odstranit, pokud znovu vyvoláte stejnou výjimku:
 
    [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- Execution returns from within the **catch** block.
+- Spuštění se vrátí z bloku **catch** .
 
 > [!NOTE]
->  When deleting a `CException`, use the `Delete` member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.
+>  Při odstraňování `CException`lze výjimku odstranit pomocí členské funkce `Delete`. Nepoužívejte klíčové slovo **Delete** , protože může selhat, pokud výjimka není na haldě.
 
-#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions
+#### <a name="to-catch-and-delete-exceptions"></a>Zachycení a odstranění výjimek
 
-1. Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.
+1. K nastavení **testovaného** bloku použijte klíčové slovo **Try** . Spusťte všechny příkazy programu, které mohou vyvolat výjimku v rámci bloku **Try** .
 
-   Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.
+   Pomocí klíčového slova **catch** nastavte blok **catch** . Do bloku **catch** umístěte kód pro zpracování výjimek. Kód v bloku **catch** je proveden pouze v případě, že kód v bloku **Try** vyvolá výjimku typu určeného v příkazu **catch** .
 
-   The following skeleton shows how **try** and **catch** blocks are normally arranged:
+   Následující kostra ukazuje, jak jsou bloky **Try** a **catch** normálně uspořádány:
 
    [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:
+   Je-li vyvolána výjimka, řízení předá do prvního bloku **catch** , jehož deklarace výjimky odpovídá typu výjimky. Můžete selektivně zpracovat různé typy výjimek pomocí sekvenčních bloků **catch** , jak je uvedeno níže:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Další informace naleznete v tématu [výjimky: převod z makra výjimek knihovny MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
 ## <a name="see-also"></a>Viz také:
 

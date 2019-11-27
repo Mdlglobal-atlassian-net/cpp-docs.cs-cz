@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4522
+title: Upozornění kompilátoru (úroveň 3) C4522
 ms.date: 11/04/2016
 f1_keywords:
 - C4522
@@ -13,17 +13,17 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188973"
 ---
-# <a name="compiler-warning-level-3-c4522"></a>Compiler Warning (level 3) C4522
+# <a name="compiler-warning-level-3-c4522"></a>Upozornění kompilátoru (úroveň 3) C4522
 
-'class' : multiple assignment operators specified
+Class: je zadaných víc operátorů přiřazení.
 
-The class has multiple assignment operators of a single type. This warning is informational; the constructors are callable in your program.
+Třída má více operátorů přiřazení jednoho typu. Toto upozornění je informativní; konstruktory lze volat v programu.
 
-Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning.
+Pro potlačení tohoto upozornění Použijte direktivu pragma [Warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Příklad
 
-The following sample generates C4522.
+Následující ukázka generuje C4522.
 
 ```cpp
 // C4522.cpp

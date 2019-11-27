@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4792
+title: Upozornění kompilátoru (úroveň 3) C4792
 ms.date: 11/04/2016
 f1_keywords:
 - C4792
@@ -13,15 +13,15 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189331"
 ---
-# <a name="compiler-warning-level-3-c4792"></a>Compiler Warning (level 3) C4792
+# <a name="compiler-warning-level-3-c4792"></a>Upozornění kompilátoru (úroveň 3) C4792
 
-function 'function' declared using sysimport and referenced from native code; import library required to link
+funkce Function deklarovaná pomocí: sysimport a odkazovaná z nativního kódu; Knihovna importu požadovaná pro propojení
 
-A native function that was imported into the program with DllImport was called from an unmanaged function. Therefore, you must link to the import library for the DLL.
+Nativní funkce, která byla importována do programu pomocí DllImport, byla volána z nespravované funkce. Proto je nutné propojit knihovnu importů pro knihovnu DLL.
 
-This warning cannot be resolved in code or by changing the way you compile. Use the [warning](../../preprocessor/warning.md) pragma to disable this warning.
+Toto upozornění nelze přeložit v kódu nebo změnou způsobu, jakým kompilujete. Toto upozornění můžete zakázat pomocí direktivy pragma [Upozornění](../../preprocessor/warning.md) .
 
-The following sample generates C4792:
+Následující ukázka generuje C4792:
 
 ```cpp
 // C4792.cpp

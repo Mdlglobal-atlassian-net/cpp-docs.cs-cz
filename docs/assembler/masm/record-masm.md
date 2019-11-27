@@ -15,12 +15,12 @@ ms.locfileid: "74394602"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
 
-Declares a record type consisting of the specified fields. *fieldname* names the field, *width* specifies the number of bits, and *expression* gives its initial value.
+Deklaruje typ záznamu sestávající ze zadaných polí. *název pole* , hodnota *Width* určuje počet bitů a *výraz* poskytuje počáteční hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *recordname* **RECORD** *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ⟦ __,__ *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ...⟧
+> *záznam záznamu* *NázevPole* __:__ *Width* ⟦ __=__ *Expression*⟧ ⟦ __,__ *NázevPole* __:__ *Width* ⟦ __=__ *Expression*⟧... ⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

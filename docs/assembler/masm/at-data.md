@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399189"
 ---
-# <a name="data"></a>\@data
+# <a name="data"></a>data \@
 
-The name of the default data group. Evaluates to DGROUP for all models except **FLAT**. Evaluates to **FLAT** under the **FLAT** memory model (text macro).
+Název výchozí datové skupiny. Vyhodnotí jako DGROUP pro všechny modely s výjimkou **plochých**. Vyhodnotí se jako **ploché** v modelu **ploché** paměti (textové makro).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@data**
+> **data \@**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

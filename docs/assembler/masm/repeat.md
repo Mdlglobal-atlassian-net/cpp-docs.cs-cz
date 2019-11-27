@@ -15,14 +15,14 @@ ms.locfileid: "74394330"
 ---
 # <a name="repeat"></a>REPEAT
 
-Marks a block that is to be repeated *expression* times. Same as [REPT](../../assembler/masm/rept.md).
+Označí blok, který bude opakován jako časy *výrazů* . Totéž jako [Opakovat](../../assembler/masm/rept.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **REPEAT** *expression*\
-> *statements*\
+> **Opakovat**\ *výrazu*
+> \ *příkazů*
 > **ENDM**
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

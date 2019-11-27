@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4266
+title: Upozornění kompilátoru (úroveň 4) C4266
 ms.date: 11/04/2016
 f1_keywords:
 - C4266
 helpviewer_keywords:
 - C4266
 ms.assetid: 90ec5f5b-3451-4c16-bb1b-c30a626bdaa0
-ms.openlocfilehash: c0bfe2c03b1c1e310a341e97013ae1516457f300
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e192f2e138c7e586b0fbd05e83755e686b7749ad
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400939"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541685"
 ---
-# <a name="compiler-warning-level-4-c4266"></a>Kompilátor upozornění (úroveň 4) C4266
+# <a name="compiler-warning-level-4-c4266"></a>Upozornění kompilátoru (úroveň 4) C4266
 
-'function': přepsání není k dispozici pro virtuální členskou funkci ze základního typu 'type'; funkce je skrytá.
+' function ': k dispozici není přepsání pro virtuální členskou funkci ze základního typu ' type '; funkce je skrytá.
 
-Odvozená třída nepřepsala všechna přetížení virtuální funkce.
+Odvozená třída nepřepisuje všechna přetížení virtuální funkce.
 
-Toto upozornění je vypnuto ve výchozím nastavení.  Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté.  Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 Následující ukázka generuje C4266:
 
-```
+```cpp
 // C4266.cpp
 // compile with: /W4 /c
 #pragma warning (default : 4266)
@@ -38,9 +38,9 @@ class LocalBinding : private Engine {
 };   // C4266
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C4266b.cpp
 // compile with: /W4 /c
 #pragma warning (default : 4266)

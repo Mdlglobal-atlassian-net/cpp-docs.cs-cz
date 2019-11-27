@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399175"
 ---
-# <a name="cpu"></a>\@Cpu
+# <a name="cpu"></a>\@procesor
 
-A bit mask specifying the processor mode (numeric equate).
+Bitová maska určující režim procesoru (číslo rovno).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@Cpu**
+> **\@procesor**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

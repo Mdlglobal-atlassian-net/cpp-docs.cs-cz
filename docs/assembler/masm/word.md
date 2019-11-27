@@ -15,14 +15,14 @@ ms.locfileid: "74392833"
 ---
 # <a name="word"></a>WORD
 
-Allocates and optionally initializes a word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
+Přidělí a případně inicializuje slovo (2 bajty) úložiště pro každý *inicializátor*. Lze také použít jako specifikátor typu kdekoli je typ právní.
 
 ## <a name="syntax"></a>Syntaxe
 
-> ⟦*name*⟧ **WORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*název*⟧ *inicializátoru* slov ⟦ __,__ *inicializátor* ... ⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)\
+\ – [referenční informace o direktivách](../../assembler/masm/directives-reference.md)
 [SWORD](../../assembler/masm/sword.md)\
 [DW](../../assembler/masm/dw.md)

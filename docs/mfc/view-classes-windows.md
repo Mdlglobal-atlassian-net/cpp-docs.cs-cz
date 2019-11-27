@@ -33,7 +33,7 @@ Zobrazení formuláře jsou také posouvání zobrazení. Jsou založeny na šab
 
 Zobrazení záznamů jsou odvozena z zobrazení formuláře. Kromě šablony dialogového okna mají také připojení k databázi.
 
-[CFormView](../mfc/reference/cformview-class.md)<br/>
+[Třídy CFormView](../mfc/reference/cformview-class.md)<br/>
 Zobrazení posuvníku, jehož rozložení je definováno v šabloně dialogového okna. Odvození třídy z `CFormView` k implementaci uživatelského rozhraní na základě šablony dialogového okna.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
@@ -55,13 +55,13 @@ Základní třída pro všechna zobrazení přidružená k ovládacím prvkům W
 [CEditView](../mfc/reference/ceditview-class.md)<br/>
 Zobrazení, které obsahuje standardní ovládací prvek Windows pro úpravy (viz [CEdit](../mfc/reference/cedit-class.md)). Ovládací prvky pro úpravy podporují úpravy textu, hledání, nahrazování a posouvání možností.
 
-[CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
+[CRichEditView –](../mfc/reference/cricheditview-class.md)<br/>
 Zobrazení, které obsahuje ovládací prvek Windows Rich Edit (viz [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Kromě možností ovládacího prvku pro úpravy podporují ovládací prvky s bohatou úpravou písma, barvy, formátování odstavců a vložené objekty OLE.
 
 [CListView –](../mfc/reference/clistview-class.md)<br/>
 Zobrazení, které obsahuje ovládací prvek seznamu systému Windows (viz [CListCtrl](../mfc/reference/clistctrl-class.md)). Ovládací prvek seznam zobrazuje kolekci položek, z nichž každý se skládá z ikony a popisku, podobně jako v pravém podokně Průzkumníka souborů.
 
-[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
+[CTreeView –](../mfc/reference/ctreeview-class.md)<br/>
 Zobrazení, které obsahuje ovládací prvek stromu systému Windows (viz [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Stromový ovládací prvek zobrazí hierarchický seznam ikon a popisků seřazený podobným způsobem jako v levém podokně Průzkumníka souborů.
 
 ## <a name="related-classes"></a>Související třídy
@@ -74,7 +74,7 @@ Okno, které může uživatel rozdělit do několika podoken. Velikost těchto p
 [CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
 Poskytuje standardní dialogové okno pro tisk souboru.
 
-[CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
+[CPrintInfo –](../mfc/reference/cprintinfo-structure.md)<br/>
 Struktura obsahující informace o úloze tisku nebo náhledu tisku. Používá se v architektuře tisku `CView`.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>

@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Hodnoty
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`none`|Výchozí chování: ignorovat symbolické odkazy na adresáře. Odepření oprávnění je chyba.|
 |`follow_directory_symlink`|Považovat symbolické odkazy na adresáře jako skutečné adresáře.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Hodnoty
 
-|Name|Hodnota|Popis|
+|Název|Hodnota|Popis|
 |----------|-----------|-----------------|
 |`not_found`|-1|Představuje soubor, který neexistuje.|
 |`none`|0|Představuje soubor, který nemá žádný atribut typu. (Není podporováno.)|

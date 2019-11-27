@@ -31,7 +31,7 @@ Spravuje pojmenovanou relaci databáze chráněné heslem od přihlášení k od
 [CDaoDatabase](../mfc/reference/cdaodatabase-class.md)<br/>
 Připojení k databázi, pomocí které můžete pracovat s daty.
 
-[CDaoRecordset](../mfc/reference/cdaorecordset-class.md)<br/>
+[CDaoRecordset –](../mfc/reference/cdaorecordset-class.md)<br/>
 Představuje sadu záznamů vybraných ze zdroje dat.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
@@ -51,7 +51,7 @@ Podporuje rutiny pro výměnu záznamů pole (DFX) DAO používané databázový
 
 ## <a name="related-classes"></a>Související třídy
 
-[CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
+[CLongBinary –](../mfc/reference/clongbinary-class.md)<br/>
 Zapouzdřuje popisovač do úložiště pro binární rozsáhlý objekt (BLOB), jako je například rastrový obrázek. objekty `CLongBinary` se používají ke správě rozsáhlých datových objektů uložených v databázových tabulkách.
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>

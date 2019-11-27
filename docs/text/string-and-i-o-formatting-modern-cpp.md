@@ -74,4 +74,4 @@ Následující kód demonstruje některé funkce formátování pro zvýšení �
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream – >](../standard-library/iostream.md)<br/>
 [omezení \<>](../standard-library/limits.md)<br/>
-[\<iomanip>](../standard-library/iomanip.md)
+[\<iomanip >](../standard-library/iomanip.md)

@@ -222,7 +222,7 @@ int main()
 ## <a name="see-also"></a>Viz také:
 
 [Auto – klíčové slovo](../cpp/auto-keyword.md)<br/>
-[klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (odvození typu proměnné)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof – operátor](../cpp/sizeof-operator.md)<br/>
 [typeid](../extensions/typeid-cpp-component-extensions.md)<br/>

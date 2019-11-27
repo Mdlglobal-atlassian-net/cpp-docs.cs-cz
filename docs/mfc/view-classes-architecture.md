@@ -34,16 +34,16 @@ Zobrazení formuláře jsou také posouvání zobrazení. Jsou založeny na šab
 
 Zobrazení záznamů jsou odvozena z zobrazení formuláře. Kromě šablony dialogového okna mají také připojení k databázi.
 
-[CFormView](../mfc/reference/cformview-class.md)<br/>
+[Třídy CFormView](../mfc/reference/cformview-class.md)<br/>
 Zobrazení posuvníku, jehož rozložení je definováno v šabloně dialogového okna. Odvození třídy z `CFormView` k implementaci uživatelského rozhraní na základě šablony dialogového okna.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
 Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů DAO (Data Access Object). Podobně jako u všech zobrazení formulářů je `CDaoRecordView` založena na šabloně dialogového okna. Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou.
 
-[CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
+[CHtmlView –](../mfc/reference/chtmlview-class.md)<br/>
 Podporuje ovládací prvek pro procházení webu v rámci aplikace. Ovládací prvek podporuje dynamické HTML v knihovně MFC.
 
-[COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)<br/>
+[COleDBRecordView –](../mfc/reference/coledbrecordview-class.md)<br/>
 Poskytuje podporu OLE DB knihovny MFC pro zobrazení formulářů.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
@@ -59,13 +59,13 @@ Základní třída pro všechna zobrazení přidružená k ovládacím prvkům W
 [CEditView](../mfc/reference/ceditview-class.md)<br/>
 Zobrazení, které obsahuje standardní ovládací prvek Windows pro úpravy (viz [CEdit](../mfc/reference/cedit-class.md)). Ovládací prvky pro úpravy podporují úpravy textu, hledání, nahrazování a posouvání možností.
 
-[CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
+[CRichEditView –](../mfc/reference/cricheditview-class.md)<br/>
 Zobrazení, které obsahuje ovládací prvek Windows Rich Edit (viz [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Kromě možností ovládacího prvku pro úpravy podporují ovládací prvky s bohatou úpravou písma, barvy, formátování odstavců a vložené objekty OLE.
 
 [CListView –](../mfc/reference/clistview-class.md)<br/>
 Zobrazení, které obsahuje ovládací prvek seznamu systému Windows (viz [CListCtrl](../mfc/reference/clistctrl-class.md)). Ovládací prvek seznam zobrazuje ikony a řetězce podobným způsobem jako v pravém podokně Průzkumníka souborů.
 
-[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
+[CTreeView –](../mfc/reference/ctreeview-class.md)<br/>
 Zobrazení, které obsahuje ovládací prvek stromu systému Windows (viz [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Ovládací prvek stromu zobrazuje ikony a řetězce uspořádané v hierarchii způsobem podobným levému podoknu Průzkumníka souborů.
 
 ## <a name="see-also"></a>Viz také:

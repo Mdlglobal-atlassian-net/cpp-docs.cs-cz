@@ -15,16 +15,16 @@ ms.locfileid: "74397645"
 ---
 # <a name="endp"></a>ENDP
 
-Marks the end of procedure *name* previously begun with **PROC**.
+Označuje konec *názvu* procedury, který jste dříve začali pomocí **procedury proc**.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **ENDP**
+> **ENDP** názvu
 
 ## <a name="remarks"></a>Poznámky
 
-See [PROC](../../assembler/masm/proc.md).
+Viz [proc](../../assembler/masm/proc.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

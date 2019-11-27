@@ -15,16 +15,16 @@ ms.locfileid: "74397360"
 ---
 # <a name="ifndef"></a>IFNDEF
 
-Grants assembly if *name* has not been defined.
+Udělí sestavení, pokud není definován *název* .
 
 ## <a name="syntax"></a>Syntaxe
 
-> **IFNDEF** *name*
+> *Název* ifndef
 
 ## <a name="remarks"></a>Poznámky
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Úplnou syntaxi naleznete v tématu [if](../../assembler/masm/if-masm.md) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

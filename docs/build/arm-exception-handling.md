@@ -104,7 +104,7 @@ Prologues pro kanonické funkce můžou mít až 5 instrukcí (Všimněte si, ž
 
 |Instrukce|Opcode je považována za přítomný v těchto případech:|Velikost|Operačních|Unwind kódy|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*==1|16|`push {r0-r3}`|04|
+|1|*H*= = 1|16|`push {r0-r3}`|04|
 |2|*C*= = 1 nebo *L*= = 1 nebo *R*= = 0 nebo PF = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*= = 1 a (*L*= = 0 a *R*= = 1 a PF = = 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*= = 1 a (*L*= = 1 nebo *R*= = 0 nebo PF = = 1)|32|`add r11,sp,#xx`|FC|
@@ -119,24 +119,24 @@ Pokud je zadána nepřeložená úprava, instrukci 5 představuje explicitní ú
 
 Pokyny 2 a 4 jsou nastaveny na základě toho, zda je vyžadován požadavek na vložení. Tato tabulka shrnuje, které Registry budou uloženy na základě polí v jazyce *C*, *L*, *R*a *PF* . Ve všech případech se *N* rovná *reg* + 4, *E* se rovná *reg* + 8 a *S* se rovná (~*úpravu zásobníku*) & 3.
 
-|C|L|R|PF|Vložené celočíselné registry|Vložené Registry VFP|
+|C|L|v|PF|Vložené celočíselné registry|Vložené Registry VFP|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|r4-r*N*|žádná|
-|0|0|0|1|r*S*-r*N*|žádná|
+|0|0|0|0|R4-r*N*|žádná|
+|0|0|0|1|r*S*– r*N*|žádná|
 |0|0|1|0|žádná|D8-d*E*|
-|0|0|1|1|r*S*-r3|D8-d*E*|
-|0|1|0|0|r4-r*N*, LR|žádná|
+|0|0|1|1|r*S*-R3|D8-d*E*|
+|0|1|0|0|R4-r*N*, LR|žádná|
 |0|1|0|1|r*S*-r*N*, LR|žádná|
 |0|1|1|0|LR|D8-d*E*|
-|0|1|1|1|r*S*-r3, LR|D8-d*E*|
-|1|0|0|0|r4-r*N*, r11|žádná|
-|1|0|0|1|r*S*-r*N*, r11|žádná|
+|0|1|1|1|r*S*-R3, LR|D8-d*E*|
+|1|0|0|0|R4-r*N*, R11|žádná|
+|1|0|0|1|r*S*-r*N*, R11|žádná|
 |1|0|1|0|r11|D8-d*E*|
-|1|0|1|1|r*S*-r3, r11|D8-d*E*|
-|1|1|0|0|r4-r*N*, r11, LR|žádná|
-|1|1|0|1|r*S*-r*N*, r11, LR|žádná|
+|1|0|1|1|r*S*-R3, R11|D8-d*E*|
+|1|1|0|0|R4-r*N*, R11, LR|žádná|
+|1|1|0|1|r*S*-r*N*, R11, LR|žádná|
 |1|1|1|0|r11, LR|D8-d*E*|
-|1|1|1|1|r*S*-r3, r11, LR|D8-d*E*|
+|1|1|1|1|r*S*-R3, R11, LR|D8-d*E*|
 
 Epilogues pro kanonické funkce se řídí podobným formulářem, ale v opačném a s dalšími možnostmi. Epilogu může být dlouhý až 5 instrukcí a jeho forma je striktně nadiktujná formou prologu.
 
@@ -175,7 +175,7 @@ Pokud je zabalený unwind formát nedostatečný pro popis odvíjení funkce, je
    |0|28-31|*Kódové slovo* je 4 bitové pole, které určuje počet 32-bitových slov vyžadovaných k zahrnutí všech unwind kódů v oddílu 4. Pokud je vyžadováno více než 15 slov pro více než 63 unwind kódu bajtů, pole a *epilogu Count* musí být obě nastaveny na 0, aby označovaly, že je nutné zadat rozšiřující slovo.|
    |1|0-15|*Rozšířený epilogu počet* je 16bitové pole, které poskytuje více místa pro kódování neobvykle velkého počtu epilogues. Slovo rozšíření, které obsahuje toto pole, je přítomno pouze v případě, že pole *epilogu Count* a *Code* v prvním záhlaví jsou nastavena na hodnotu 0.|
    |1|16-23|*Rozšířená slova kódu* jsou 8bitové pole, které poskytuje více místa pro kódování neobvykle velkého počtu slov unwind kódu. Slovo rozšíření, které obsahuje toto pole, je přítomno pouze v případě, že pole *epilogu Count* a *Code* v prvním záhlaví jsou nastavena na hodnotu 0.|
-   |1|24-31|Vyhrazeno|
+   |1|24-31|Rezervované|
 
 1. Po datech výjimky (pokud byl bit *E* v hlavičce nastaven na hodnotu 0) je seznam informací o oborech epilogu, které jsou zabaleny do slova a jsou uloženy v pořadí nárůstu počátečního posunu. Každý obor obsahuje tato pole:
 

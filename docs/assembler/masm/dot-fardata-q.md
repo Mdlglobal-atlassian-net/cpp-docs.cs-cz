@@ -15,12 +15,12 @@ ms.locfileid: "74398278"
 ---
 # <a name="fardata-32-bit-masm"></a>.FARDATA? (32-bit MASM)
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a far data segment for uninitialized data (segment name FAR_BSS or *name*). (32-bit MASM only.)
+Při použití s nástrojem [. MODEL](../../assembler/masm/dot-model.md)spustí pro neinicializovaná data úplně datový segment (název segmentu FAR_BSS nebo *název*). (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.FARDATA?** ⟦*name*⟧
+> **.FARDATA?** ⟦*název*⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

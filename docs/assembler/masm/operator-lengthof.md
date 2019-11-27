@@ -17,12 +17,12 @@ ms.locfileid: "74396831"
 ---
 # <a name="operator-lengthof"></a>operátor LENGTHOF
 
-Returns the number of data objects in *variable*.
+Vrátí počet datových objektů v *proměnné*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **LENGTHOF** *variable*
+> **LENGTHOF** – *Proměnná*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

@@ -15,15 +15,15 @@ ms.locfileid: "74398100"
 ---
 # <a name="nocref"></a>.NOCREF
 
-Suppresses listing of symbols in the symbol table and browser file.
+Potlačí výpis symbolů v tabulce symbolů a souboru prohlížeče.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.NOCREF** ⟦*name*⟦ __,__ *name* ...⟧⟧
+> **. NOCREF** ⟦*jméno*⟦ __,__ *název* ... ⟧⟧
 
 ## <a name="remarks"></a>Poznámky
 
-If names are specified, then only the given names are suppressed. Same as [.XCREF](../../assembler/masm/dot-xcref.md).
+Pokud jsou zadány jména, budou potlačeny pouze křestní jména. Stejné jako [. XCREF](../../assembler/masm/dot-xcref.md).
 
 ## <a name="see-also"></a>Viz také:
 

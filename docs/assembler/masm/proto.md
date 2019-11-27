@@ -15,38 +15,38 @@ ms.locfileid: "74394759"
 ---
 # <a name="proto"></a>PROTO
 
-Prototypes a function or procedure. You can call the function prototyped by the PROTO directive by using the [INVOKE](invoke.md) directive.
+Vytvoří prototypy funkce nebo procedury. Můžete zavolat funkci, kterou prototypuje, pomocí direktivy [Invoke](invoke.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-> *label* **PROTO** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦ __,__ ⟦*parameter*⟧ __:__ *tag* ...⟧
+> *Label* **proto** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦ __,__ ⟦*parametr*⟧ __:__ *tag* ... ⟧
 
 ### <a name="parameters"></a>Parametry
 
-*label*\
-The name of the prototyped function.
+\ *popisku*
+Název prototypované funkce.
 
-*distance*\
-(Optional) Used in 16-bit memory models to override the default and indicate **NEAR** or **FAR** calls.
+\ *vzdálenosti*
+Volitelné Používá se v 16bitových modelech paměti k přepsání výchozí hodnoty a označení **blízko** nebo **daleko** volání.
 
-*language-type*\
-(Optional) Sets the calling and naming convention for procedures and public symbols. Supported conventions are:
+\ *typu jazyka*
+Volitelné Nastaví konvenci volání a pojmenování pro procedury a veřejné symboly. Podporované konvence:
 
-- 32-bit **FLAT** model: **C**, **STDCALL**
+- 32 bitová **plochý** model: **C**, **STDCALL**
 
-- 16-bit models: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- 16bitové modely: **C**, **Basic**, **FORTRAN**, **Pascal**, **syscall**, **STDCALL**
 
-*parameter*\
-The optional name for a function parameter.
+\ *parametru*
+Volitelný název parametru funkce.
 
-*tag*\
-The type of a function parameter.
+\ *značek*
+Typ parametru funkce.
 
-The *parameter* and *tag* parameters may appear multiple times, once for each passed argument.
+Parametry *parametrů* a *značek* se mohou u každého předaného argumentu zobrazit víckrát.
 
 ## <a name="example"></a>Příklad
 
-This sample shows a **PROTO** declaration for a function named `addup3` that uses a **NEAR** call to override the 16-bit model default for procedure calls, and uses the **C** calling convention for stack parameters and return values. It takes two arguments, a **WORD** and a **VARARG**.
+Tato ukázka **ukazuje deklaraci** pro funkci s názvem `addup3`, která používá volání **poblíž** pro přepsání 16bitového modelu výchozí pro volání procedur a používá konvenci volání **jazyka C** pro parametry zásobníku a návratové hodnoty. Přebírá dva argumenty, **slovo** a **vararg**.
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
@@ -54,5 +54,5 @@ addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives Reference](directives-reference.md)\
-[.MODEL Reference](dot-model.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[. Odkaz na MODEL](dot-model.md)

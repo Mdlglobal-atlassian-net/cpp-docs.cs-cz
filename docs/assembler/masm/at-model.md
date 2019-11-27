@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398957"
 ---
-# <a name="model"></a>\@Model
+# <a name="model"></a>Model \@
 
-1 for **TINY** model, 2 for **SMALL** model, 3 for **COMPACT** model, 4 for **MEDIUM** model, 5 for **LARGE** model, 6 for **HUGE** model, and 7 for **FLAT** model (numeric equate).
+1 pro **malý** model, 2 pro **malý** model, 3 pro **kompaktní** model, 4 pro **střední** model, 5 pro **velký** model, 6 pro **obrovský** model a 7 pro **plochý** model (číslo rovno).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@Model**
+> **Model \@**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

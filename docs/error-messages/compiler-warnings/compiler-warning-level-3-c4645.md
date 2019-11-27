@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4645
+title: Upozornění kompilátoru (úroveň 3) C4645
 ms.date: 11/04/2016
 f1_keywords:
 - C4645
@@ -13,13 +13,13 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189376"
 ---
-# <a name="compiler-warning-level-3-c4645"></a>Compiler Warning (level 3) C4645
+# <a name="compiler-warning-level-3-c4645"></a>Upozornění kompilátoru (úroveň 3) C4645
 
-function declared with __declspec(noreturn) has a return statement
+funkce deklarovaná pomocí __declspec (Return) obsahuje příkaz return.
 
-A [return](../../cpp/return-statement-in-program-termination-cpp.md) statement was found in a function that is marked with the [noreturn](../../cpp/noreturn.md) `__declspec` modifier. The `return` statement was ignored.
+Ve funkci, která je označená modifikátorem `__declspec` [return](../../cpp/noreturn.md) , byl nalezen [návratový](../../cpp/return-statement-in-program-termination-cpp.md) příkaz. Příkaz `return` byl ignorován.
 
-The following sample generates C4645:
+Následující ukázka generuje C4645:
 
 ```cpp
 // C4645.cpp

@@ -15,7 +15,7 @@ ms.locfileid: "74398162"
 ---
 # <a name="listif"></a>.LISTIF
 
-Starts listing of statements in false conditional blocks.
+Spustí výpis příkazů v nepravdivých podmíněných blocích.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Starts listing of statements in false conditional blocks.
 
 ## <a name="remarks"></a>Poznámky
 
-Same as [.LFCOND](../../assembler/masm/dot-lfcond.md).
+Stejné jako [. LFCOND](../../assembler/masm/dot-lfcond.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

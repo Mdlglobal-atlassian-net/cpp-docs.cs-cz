@@ -24,17 +24,17 @@ ms.locfileid: "74246410"
 
 Některé nejběžnější zdroje chyb programu nejsou systémem označeny jako výjimky. Například při pokusu o přidělení bloku paměti při nedostatku paměti nevyvolá funkce API nebo modul runtime výjimku, ale vrátí kód chyby.
 
-However, you can treat any condition as an exception by detecting that condition in your code and then reporting it by calling the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function. Označením chyb tímto způsobem lze docílit výhod strukturovaného zpracování výjimek pro jakoukoli chybu modulu runtime.
+Můžete však považovat jakoukoli podmínku za výjimku tím, že zjistíte tuto podmínku v kódu a pak ji nahlásíte voláním funkce [RaiseException –](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) . Označením chyb tímto způsobem lze docílit výhod strukturovaného zpracování výjimek pro jakoukoli chybu modulu runtime.
 
 Použití strukturovaného zpracování výjimek s chybami:
 
 - Definujte vlastní kód výjimky pro událost.
 
-- Call `RaiseException` when you detect a problem.
+- Při detekci problému volejte `RaiseException`.
 
 - Pro otestování definovaného kódu výjimky použijte filtry zpracování výjimek.
 
-The \<winerror.h> file shows the format for exception codes. Abyste se ujistili, že není definován kód, který je v rozporu s existujícím kódem výjimky, nastavte třetí nejvýznamnější bit na hodnotu 1. Čtyři nejvýznamnější bity je třeba nastavit tak, jak je znázorněno v následující tabulce.
+> Soubor \<Winerror. h zobrazuje formát kódů výjimek. Abyste se ujistili, že není definován kód, který je v rozporu s existujícím kódem výjimky, nastavte třetí nejvýznamnější bit na hodnotu 1. Čtyři nejvýznamnější bity je třeba nastavit tak, jak je znázorněno v následující tabulce.
 
 |Bity|Doporučené binární nastavení|Popis|
 |----------|--------------------------------|-----------------|
@@ -44,14 +44,14 @@ The \<winerror.h> file shows the format for exception codes. Abyste se ujistili,
 
 Pokud je třeba, je možné nastavit první dva bity na nastavení jiné než binární 11. Nastavení „chyba“ je však vhodné pro většinu výjimek. Je důležité provést nastavení bitů 29 a 28, jak je uvedeno v předchozí tabulce.
 
-The resulting error code should therefore have the highest four bits set to hexadecimal E. For example, the following definitions define exception codes that do not conflict with any Windows exception codes. (Bude však možná zapotřebí zkontrolovat, které kódy jsou používány knihovnami DLL třetích stran.)
+Výsledný kód chyby by proto měl mít nejvyšší čtyři bity nastavené na hexadecimální hodnotu E. Například následující definice definují kódy výjimek, které nejsou v konfliktu s žádnými kódy výjimek systému Windows. (Bude však možná zapotřebí zkontrolovat, které kódy jsou používány knihovnami DLL třetích stran.)
 
 ```cpp
 #define STATUS_INSUFFICIENT_MEM       0xE0000001
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-Po definování kódu výjimky jej lze použít pro vyvolání výjimky. For example, the following code raises the `STATUS_INSUFFICIENT_MEM` exception in response to a memory allocation problem:
+Po definování kódu výjimky jej lze použít pro vyvolání výjimky. Například následující kód vyvolá výjimku `STATUS_INSUFFICIENT_MEM` v reakci na problém s přidělením paměti:
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -59,7 +59,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
 ```
 
-Pokud je zapotřebí jednoduše vyvolat výjimku, můžete nastavit poslední tři parametry na hodnotu 0. Poslední tři parametry jsou užitečné pro předávání dalších informací a pro nastavení příznaku, který zabrání obslužným rutinám pokračovat v provádění. See the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function in the Windows SDK for more information.
+Pokud je zapotřebí jednoduše vyvolat výjimku, můžete nastavit poslední tři parametry na hodnotu 0. Poslední tři parametry jsou užitečné pro předávání dalších informací a pro nastavení příznaku, který zabrání obslužným rutinám pokračovat v provádění. Další informace najdete v Windows SDK funkci [RaiseException –](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) .
 
 V rámci filtrů zpracování výjimek lze následně otestovat definované kódy. Příklad:
 
@@ -73,5 +73,5 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
 
 ## <a name="see-also"></a>Viz také:
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
-[Structured exception handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Zápis obslužné rutiny výjimky](../cpp/writing-an-exception-handler.md)<br/>
+[Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

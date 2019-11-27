@@ -1,6 +1,6 @@
 ---
-title: Delegating constructors (C++)
-description: Use delegating constructors in C++ to invoke other constructors and reduce code repetition.
+title: Delegování konstruktorů (C++)
+description: Použijte delegování konstruktorů v C++ k vyvolání jiných konstruktorů a zmenšení opakování kódu.
 ms.date: 11/19/2019
 ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
 ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
@@ -9,9 +9,9 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74250672"
 ---
-# <a name="delegating-constructors"></a>Delegating constructors
+# <a name="delegating-constructors"></a>Delegování konstruktorů
 
-Many classes have multiple constructors that do similar things—for example, validate parameters:
+Mnoho tříd má více konstruktorů, které se podobají podobným účelům, například ověření parametrů:
 
 ```cpp
 class class_c {
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-You could reduce the repetitive code by adding a function that does all of the validation, but the code for `class_c` would be easier to understand and maintain if one constructor could delegate some of the work to another one. To add delegating constructors, use the `constructor (. . .) : constructor (. . .)` syntax:
+Opakovaný kód můžete snížit přidáním funkce, která provádí všechna ověření, ale kód pro `class_c` by byl snazší pochopit a udržovat, pokud jeden konstruktor by mohl delegovat některé práce na jiný konstruktor. Chcete-li přidat konstruktory delegování, použijte syntaxi `constructor (. . .) : constructor (. . .)`:
 
 ```cpp
 class class_c {
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-As you step through the previous example, notice that the constructor `class_c(int, int, int)` first calls the constructor `class_c(int, int)`, which in turn calls `class_c(int)`. Each of the constructors performs only the work that is not performed by the other constructors.
+Při procházení předchozího příkladu si všimněte, že konstruktor `class_c(int, int, int)` nejprve volá `class_c(int, int)`konstruktoru, který zase volá `class_c(int)`. Každý konstruktor provádí pouze práci, která není provedena jinými konstruktory.
 
-The first constructor that's called initializes the object so that all of its members are initialized at that point. You can’t do member initialization in a constructor that delegates to another constructor, as shown here:
+První konstruktor, který je volán jako inicializuje objekt tak, aby všechny jeho členy byly inicializovány v daném okamžiku. Inicializace člena nelze provést v konstruktoru, který je delegátem jiného konstruktoru, jak je znázorněno zde:
 
 ```cpp
 class class_a {
@@ -83,7 +83,7 @@ public:
 };
 ```
 
-The next example shows the use of non-static data-member initializers. Notice that if a constructor also initializes a given data member, the member initializer is overridden:
+Následující příklad ukazuje použití nestatických inicializátorů členů dat. Všimněte si, že pokud konstruktor také inicializuje daný datový člen, inicializátor členu je přepsán:
 
 ```cpp
 class class_a {
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-The constructor delegation syntax doesn't prevent the accidental creation of constructor recursion—Constructor1 calls Constructor2 which calls Constructor1—and no errors are thrown until there is a stack overflow. It's your responsibility to avoid cycles.
+Syntaxe delegování konstruktoru nebrání nechtěnému vytvoření rekurze konstruktoru – Constructor1 volá Constructor2, která volá Constructor1 – a nejsou vyvolány žádné chyby, dokud nedojde k přetečení zásobníku. Je vaše zodpovědnost na to, abyste se vyhnuli cyklům.
 
 ```cpp
 class class_f{

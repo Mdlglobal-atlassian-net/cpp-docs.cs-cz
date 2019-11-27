@@ -15,16 +15,16 @@ ms.locfileid: "74397603"
 ---
 # <a name=""></a>=
 
-Assigns the numeric value of *expression* to *name*.
+Přiřadí číselnou hodnotu *výrazu* k *názvu*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **=** *expression*
+> *výraz* *názvu* **=**
 
 ## <a name="remarks"></a>Poznámky
 
-The symbol can be redefined later.
+Symbol se dá předefinovat později.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

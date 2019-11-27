@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4239
+title: Upozornění kompilátoru (úroveň 4) C4239
 ms.date: 11/04/2016
 f1_keywords:
 - C4239
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: 067d1aef41280f4d14fe799e4f4ee26a9f1b9f5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcb66fca7e5b8708171849f885518c15b8355ac4
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401017"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541736"
 ---
-# <a name="compiler-warning-level-4-c4239"></a>Kompilátor upozornění (úroveň 4) C4239
+# <a name="compiler-warning-level-4-c4239"></a>Upozornění kompilátoru (úroveň 4) C4239
 
-používá se nestandardní rozšíření: 'token': převod z 'type' na 'type'
+používá se nestandardní rozšíření: token: převod z typu na typ.
 
-Tento převod typu není povolený ve standardu jazyka C++, ale je povolena jako rozšíření. Toto upozornění je vždy následován alespoň jeden řádek vysvětlení popisující jazyk pravidla porušen.
+Tento převod typu není povolený C++ standardem, ale tady je povolený jako rozšíření. Toto upozornění je vždy následováno alespoň jedním řádkem vysvětlení popisujícího porušení pravidla jazyka.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4239.
 
-```
+```cpp
 // C4239.cpp
 // compile with: /W4 /c
 struct C {
@@ -43,7 +43,7 @@ Převod z celočíselného typu na Výčtový typ není striktně povolený.
 
 Následující ukázka generuje C4239.
 
-```
+```cpp
 // C4239b.cpp
 // compile with: /W4 /c
 enum E { value };

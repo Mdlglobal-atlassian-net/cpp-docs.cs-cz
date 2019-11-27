@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d36161ba54ca80fc0f576c6f0a7c2a9410bf8075
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398829"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541033"
 ---
 # <a name="comm"></a>COMM
 
-Creates a communal variable with the attributes specified in *definition*.
+Vytvoří obecnou proměnnou s atributy zadanými v *definici*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **COMM** *definition* ⟦ __,__ *definition* ...⟧
+> ⟦ *Definice* komunikace __,__ *definice* ... ⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
+Obce proměnné jsou přidělovány linkerem a nelze je inicializovat. To znamená, že nemůžete záviset na umístění nebo sekvenci takových proměnných.
 
-Each *definition* has the following form:
+Každá *definice* má následující formát:
 
-⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
+⟦*Language-Type*⟧ ⟦ v**blízkosti** | **mnohem**⟧ _Label_ **:** _Type_⟦ **:** _Count_⟧
 
-The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
+Volitelný *typ jazyka* nastaví konvence pojmenování pro následující název. Přepisuje libovolný jazyk určený parametrem **.** Direktiva modelu. Nepovinný **téměř** nebo **úplně** přepsat aktuální paměťový model. *Popisek* je název proměnné. *Typ* může být libovolný specifikátor typu ([Byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)a tak dále) nebo celé číslo určující počet bajtů. Volitelný *počet* určuje počet prvků v deklarovaném datovém objektu. Výchozí *počet* je jeden.
 
 ## <a name="example"></a>Příklad
 
-This example creates an array of 512 BYTE elements:
+Tento příklad vytvoří pole bajtů 512:
 
 ```asm
 COMM FAR ByteArray:BYTE:512
@@ -41,4 +41,4 @@ COMM FAR ByteArray:BYTE:512
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

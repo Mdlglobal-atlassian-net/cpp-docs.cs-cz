@@ -79,25 +79,25 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Vytvoří objekt `CDaoDatabase`. Zavolejte `Open` pro připojení objektu k databázi.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoDatabase::CanTransact](#cantransact)|Vrátí nenulovou hodnotu, pokud databáze podporuje transakce.|
 |[CDaoDatabase:: CanUpdate](#canupdate)|Vrátí nenulovou hodnotu, pokud je objekt `CDaoDatabase` možné aktualizovat (není jen pro čtení).|
 |[CDaoDatabase:: Close](#close)|Zavře připojení k databázi.|
-|[CDaoDatabase::Create](#create)|Vytvoří základní databázový objekt DAO a inicializuje objekt `CDaoDatabase`.|
+|[CDaoDatabase:: Create](#create)|Vytvoří základní databázový objekt DAO a inicializuje objekt `CDaoDatabase`.|
 |[CDaoDatabase::CreateRelation](#createrelation)|Definuje novou relaci mezi tabulkami v databázi.|
-|[CDaoDatabase::DeleteQueryDef](#deletequerydef)|Odstraní objekt querydef uložený v kolekci QueryDefs databáze.|
-|[CDaoDatabase::DeleteRelation](#deleterelation)|Odstraní existující relaci mezi tabulkami v databázi.|
-|[CDaoDatabase::DeleteTableDef](#deletetabledef)|Odstraní definici tabulky v databázi. Tím se odstraní skutečná tabulka a veškerá její data.|
-|[CDaoDatabase::Execute](#execute)|Provede dotaz akce. Volání `Execute` pro dotaz, který vrací výsledky, vyvolá výjimku.|
+|[CDaoDatabase::D eleteQueryDef](#deletequerydef)|Odstraní objekt querydef uložený v kolekci QueryDefs databáze.|
+|[CDaoDatabase::D eleteRelation](#deleterelation)|Odstraní existující relaci mezi tabulkami v databázi.|
+|[CDaoDatabase::D eleteTableDef](#deletetabledef)|Odstraní definici tabulky v databázi. Tím se odstraní skutečná tabulka a veškerá její data.|
+|[CDaoDatabase:: Execute](#execute)|Provede dotaz akce. Volání `Execute` pro dotaz, který vrací výsledky, vyvolá výjimku.|
 |[CDaoDatabase:: GetConnect](#getconnect)|Vrátí připojovací řetězec, který se používá pro připojení objektu `CDaoDatabase` k databázi. Používá se pro rozhraní ODBC.|
-|[CDaoDatabase::GetName](#getname)|Vrátí název databáze, která se právě používá.|
+|[CDaoDatabase:: GetName](#getname)|Vrátí název databáze, která se právě používá.|
 |[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|Vrátí počet dotazů, které jsou definovány pro databázi.|
 |[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|Vrátí informace o zadaném dotazu definovaném v databázi.|
 |[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Vrátí počet sekund, po jejichž uplynutí vyprší platnost operací databázového dotazu. Má vliv na všechny následné operace otevřít, přidat nové, aktualizovat a upravit a jiné operace na zdroje dat ODBC (pouze), jako jsou například volání `Execute`.|
@@ -106,23 +106,23 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Vrátí informace o zadané relaci definované mezi tabulkami v databázi.|
 |[CDaoDatabase::GetTableDefCount](#gettabledefcount)|Vrátí počet tabulek definovaných v databázi.|
 |[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|Vrátí informace o zadané tabulce v databázi.|
-|[CDaoDatabase::GetVersion](#getversion)|Vrátí verzi databázového stroje přidruženého k databázi.|
-|[CDaoDatabase::IsOpen](#isopen)|Vrátí nenulovou hodnotu, pokud je objekt `CDaoDatabase` aktuálně připojen k databázi.|
+|[CDaoDatabase:: GetVersion](#getversion)|Vrátí verzi databázového stroje přidruženého k databázi.|
+|[CDaoDatabase:: Open](#isopen)|Vrátí nenulovou hodnotu, pokud je objekt `CDaoDatabase` aktuálně připojen k databázi.|
 |[CDaoDatabase:: Open](#open)|Naváže připojení k databázi.|
 |[CDaoDatabase::SetQueryTimeout](#setquerytimeout)|Nastaví dobu v sekundách, po jejímž uplynutí budou operace databázového dotazu (jenom u zdrojů dat ODBC) vyprší. Má vliv na všechny následné operace otevřít, přidat nové, aktualizovat a odstranit.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Ukazatel na základní databázový objekt DAO.|
-|[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Ukazatel na objekt [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , který obsahuje databázi a definuje jeho místo transakce.|
+|[CDaoDatabase:: m_pDAODatabase](#m_pdaodatabase)|Ukazatel na základní databázový objekt DAO.|
+|[CDaoDatabase:: m_pWorkspace](#m_pworkspace)|Ukazatel na objekt [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , který obsahuje databázi a definuje jeho místo transakce.|
 
 ## <a name="remarks"></a>Poznámky
 
 Informace o podporovaných formátech databáze naleznete v tématu funkce členu [GetName](../../mfc/reference/cdaoworkspace-class.md#getname) . Jeden nebo více objektů `CDaoDatabase` můžete v daném okamžiku v daném pracovním prostoru, který je reprezentován objektem [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , aktivovat v daném čase. Pracovní prostor udržuje kolekci otevřených databázových objektů, které se nazývají kolekce databází.
 
-## <a name="usage"></a>Použití
+## <a name="usage"></a>Využití
 
 Objekty databáze lze vytvořit implicitně při vytváření objektů sady záznamů. Můžete ale také vytvořit databázové objekty explicitně. Chcete-li použít existující databázi explicitně s `CDaoDatabase`, proveďte jednu z následujících akcí:
 
@@ -311,7 +311,7 @@ Pokud vynecháte šifrovací konstantu, vytvoří se nezašifrovaná databáze. 
 > [!NOTE]
 >  Pomocí `Create`můžete vytvořit pouze Microsoft Jet (. MDB) databáze. Nemůžete vytvořit databáze ISAM nebo databáze ODBC.
 
-##  <a name="createrelation"></a>  CDaoDatabase::CreateRelation
+##  <a name="createrelation"></a>CDaoDatabase::CreateRelation
 
 Voláním této členské funkce navažte relaci mezi jedním nebo více poli v primární tabulce v databázi a jedním nebo více poli v cizí tabulce (Další tabulka v databázi).
 
@@ -374,7 +374,7 @@ Předpokládejme například, že vytvoříte relaci kaskádového odstranění 
 
 Související informace naleznete v tématu "metoda CreateRelation" v nápovědě k rozhraní DAO.
 
-##  <a name="deletequerydef"></a>  CDaoDatabase::DeleteQueryDef
+##  <a name="deletequerydef"></a>CDaoDatabase::D eleteQueryDef
 
 Tuto členskou funkci volejte pro odstranění zadaného dotazu querydef – z kolekce QueryDefs objektu `CDaoDatabase`.
 
@@ -393,7 +393,7 @@ Následně tento dotaz již není v databázi definován.
 
 Informace o vytváření objektů querydef naleznete v tématu Třída [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Objekt querydef se při vytváření objektu `CDaoQueryDef` přiřadí k určitému objektu `CDaoDatabase` a předá ho ukazatelem na databázový objekt.
 
-##  <a name="deleterelation"></a>  CDaoDatabase::DeleteRelation
+##  <a name="deleterelation"></a>CDaoDatabase::D eleteRelation
 
 Chcete-li odstranit existující relaci z kolekce vztahů objektu databáze, zavolejte tuto členskou funkci.
 
@@ -448,7 +448,7 @@ void Execute(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSQL*<br/>
+*Ipszsql*<br/>
 Ukazatel na řetězec zakončený hodnotou null obsahující platný příkaz SQL, který má být proveden.
 
 *nOptions*<br/>
@@ -789,7 +789,7 @@ Nenulové, pokud je objekt `CDaoDatabase` aktuálně otevřený; v opačném př
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_pdaodatabase"></a>  CDaoDatabase::m_pDAODatabase
+##  <a name="m_pdaodatabase"></a>CDaoDatabase:: m_pDAODatabase
 
 Obsahuje ukazatel na rozhraní OLE pro databázový objekt DAO základní objekt `CDaoDatabase`.
 
@@ -799,7 +799,7 @@ Tento ukazatel použijte v případě, že potřebujete získat přímý příst
 
 Informace o přímém volání rozhraní DAO naleznete v části [Technická poznámka 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-##  <a name="m_pworkspace"></a>  CDaoDatabase::m_pWorkspace
+##  <a name="m_pworkspace"></a>CDaoDatabase:: m_pWorkspace
 
 Obsahuje ukazatel na objekt [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) , který obsahuje databázový objekt.
 

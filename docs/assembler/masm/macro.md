@@ -15,18 +15,18 @@ ms.locfileid: "74397234"
 ---
 # <a name="macro"></a>MACRO
 
-Marks a macro block called *name* and establishes *parameter* placeholders for arguments passed when the macro is called.
+Označí blok makra nazvaný *Name* a naváže zástupné symboly *parametrů* pro argumenty předané při volání makra.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name*  **MACRO** ⟦*parameter* ⟦ **:REQ** | :=*default* |  **:VARARG**⟧ ...⟧\
-> *statements*\
-> **ENDM** ⟦*value*⟧
+> *název***makra** ⟦*parametr* ⟦ **: REQ** | : =*default* |  **: vararg**⟧... ⟧\
+> \ *příkazů*
+> **ENDM** ⟦*Value*⟧
 
 ## <a name="remarks"></a>Poznámky
 
-A macro function returns *value* to the calling statement.
+Funkce makra vrátí *hodnotu* do příkazu volání.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

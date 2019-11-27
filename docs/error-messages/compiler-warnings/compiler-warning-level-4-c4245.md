@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4245
+title: Upozornění kompilátoru (úroveň 4) C4245
 ms.date: 11/04/2016
 f1_keywords:
 - C4245
 helpviewer_keywords:
 - C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-ms.openlocfilehash: 7f22386439803de1b59f3236775aa6cec0254eab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d55226a368f81a9506b38fe9271da4332bd1f5b
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400991"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541722"
 ---
-# <a name="compiler-warning-level-4-c4245"></a>Kompilátor upozornění (úroveň 4) C4245
+# <a name="compiler-warning-level-4-c4245"></a>Upozornění kompilátoru (úroveň 4) C4245
 
-'conversion': převod z 'type1' na 'type2', neshoda signed/unsigned
+' conversion ': převod z ' typ1 ' na ' typ2 ', signed/unsigned – neshoda
 
-Pokusili jste se převést podepsané **const** , který má zápornou hodnotu, aby `unsigned`.
+Pokusili jste se převést znaménko typu **const** , který má na `unsigned`zápornou hodnotu.
 
 Následující ukázka generuje C4245:
 
-```
+```cpp
 // C4245.cpp
 // compile with: /W4 /c
 const int i = -1;

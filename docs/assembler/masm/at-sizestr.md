@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398947"
 ---
-# <a name="sizestr"></a>\@SizeStr
+# <a name="sizestr"></a>\@Sizestr –
 
-A macro function that returns the length of the given string. Returns an integer.
+Funkce makra, která vrací délku daného řetězce. Vrátí celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@SizeStr(** *string* **)**
+> **\@sizestr – (** *řetězec* **)**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

@@ -17,17 +17,17 @@ ms.locfileid: "74398347"
 ---
 # <a name="perioderridn-perioderridni"></a>&period;ERRIDN, &period;ERRIDNI
 
-Generates an error if the text items are identical.
+Vygeneruje chybu, pokud jsou textové položky identické.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.ERRIDN** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧\
-> **.ERRIDNI** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧
+> **. ERRIDN** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧ \
+> **. ERRIDNI** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧
 
 ## <a name="remarks"></a>Poznámky
 
-If **&period;ERRIDNI** is given, the comparison is case insensitive.
+Pokud je zadána **&period;ERRIDNI** , porovnávání rozlišuje malá a velká písmena.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

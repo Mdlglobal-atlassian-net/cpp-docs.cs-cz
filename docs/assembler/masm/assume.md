@@ -13,20 +13,20 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399263"
 ---
-# <a name="assume-32-bit-masm"></a>ASSUME (32-bit MASM)
+# <a name="assume-32-bit-masm"></a>Předpokládejme (32-bit MASM)
 
-Enables error checking for register values. (32-bit MASM only.)
+Povoluje kontrolu chyb hodnot registru. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **ASSUME**  *segregister* __:__ *name* ⟦ __,__ *segregister* __:__ *name*...⟧\
-> **ASSUME**  *dataregister* __:__ *type* ⟦ __,__ *dataregister* __:__ *type*...⟧\
-> **ASSUME**  *register* __:ERROR__ ⟦ __,__ *register* __:ERROR__...⟧\
-> **ASSUME**  ⟦*register* __:__ ⟧**NOTHING** ⟦ __,__ *register* __:NOTHING__...⟧
+> **Předpokládejme**  *segregister* __:__ *název* ⟦ __,__ *segregister* __:__ *název*... ⟧\
+> **Předpokládejme**  *dataregister* __:__ *Zadejte* ⟦ __,__ *dataregistry* __:__ *Type*... ⟧\
+> **Předpokládat**  *registraci* __: Chyba__ ⟦ __,__ *Register* __: Error__... ⟧\
+> **Předpokládat** ⟦*registr* __:__ ⟧**Nothing** ⟦ __;__ *Register* __: Nothing__... ⟧
 
 ## <a name="remarks"></a>Poznámky
 
-After an **ASSUME** is put into effect, the assembler watches for changes to the values of the given registers. **ERROR** generates an error if the register is used. **NOTHING** removes register error checking. You can combine different kinds of assumptions in one statement.
+Po navýšení **předpokládáme** , že Assembler sleduje změny v hodnotách daných registrů. **Při** použití registru dojde k chybě. **Nic** neodebere kontrolu chyb registru. V jednom příkazu můžete kombinovat různé druhy předpokladů.
 
 ## <a name="see-also"></a>Viz také:
 

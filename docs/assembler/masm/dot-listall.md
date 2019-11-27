@@ -15,7 +15,7 @@ ms.locfileid: "74398168"
 ---
 # <a name="listall"></a>.LISTALL
 
-Starts listing of all statements.
+Spustí výpis všech příkazů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Starts listing of all statements.
 
 ## <a name="remarks"></a>Poznámky
 
-Equivalent to the combination of [.LIST](../../assembler/masm/dot-list.md), [.LISTIF](../../assembler/masm/dot-listif.md), and [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+Ekvivalent kombinace [. SEZNAM](../../assembler/masm/dot-list.md), [. LISTIF](../../assembler/masm/dot-listif.md)a [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

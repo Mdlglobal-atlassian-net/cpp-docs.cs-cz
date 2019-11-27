@@ -41,7 +41,7 @@ Možná upgrade základu kódu na novou sadu nástrojů není pro vás možnost.
 
 - Automatické formátování podle vašeho výběru moderních stylů může pomáhat s tím, že starší verze kódu budou mnohem čitelnější.
 
-Další informace najdete v tématu [pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](use-native-multi-targeting.md).
+Další informace naleznete v tématu [použití nativního cílení na více platforem v aplikaci Visual Studio k sestavení starých projektů](use-native-multi-targeting.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

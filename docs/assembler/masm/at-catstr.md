@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399223"
 ---
-# <a name="catstr"></a>\@CatStr
+# <a name="catstr"></a>\@Catstr –
 
-Macro function that concatenates one or more strings. Returns a string.
+Funkce makra, která zřetězí jeden nebo více řetězců. Vrátí řetězec.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@CatStr(** *string1* ⟦ __,__ *string2*...⟧ **)**
+> **\@catstr – (** *řetěze* ⟦ __,__ *řetěze*... ⟧ **)**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

@@ -17,12 +17,12 @@ ms.locfileid: "74395315"
 ---
 # <a name="operator-xor"></a>XOR – operátor
 
-Returns the result of a bitwise **XOR** operation for *expression1* and *expression2*.
+Vrátí výsledek bitové operace **XOR** pro *Výraz1* a *Výraz2*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **XOR** *expression2*
+> *Výraz1* **XOR** *Výraz2*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

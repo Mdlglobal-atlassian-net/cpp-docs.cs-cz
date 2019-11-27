@@ -15,11 +15,11 @@ ms.locfileid: "74188992"
 ---
 # <a name="arrays-c"></a>Pole (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory but provide much greater type safety along with iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers (Modern C++)](containers-modern-cpp.md).
+Pole je posloupnost objektů stejného typu, které zaujímají souvislou oblast paměti. Tradiční pole ve stylu jazyka C jsou zdrojem mnoha chyb, ale jsou stále běžné, zejména v případě starších základů kódu. V moderní C++, důrazně doporučujeme použít [std:: Vector](../standard-library/vector-class.md) nebo [std:: Array](../standard-library/array-class-stl.md) namísto polí ve stylu jazyka C popsaných v této části. Oba tyto standardní typy knihoven ukládají své prvky jako souvislý blok paměti, ale poskytují mnohem větší bezpečnost typů spolu s iterátory, které mají zaručit, aby odkazovaly na platné umístění v rámci sekvence. Další informace najdete v tématu [kontejnery (moderní C++)](containers-modern-cpp.md).
 
-## <a name="stack-declarations"></a>Stack declarations
+## <a name="stack-declarations"></a>Deklarace zásobníku
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression because the compiler has to know how much stack space to allocate; it cannot use a value computed at run-time. Each element in the array is assigned a default value of 0. If you do not assign a default value, each element will initially contain whatever random values happen to be at that location.
+V deklaraci C++ pole je velikost pole zadána za názvem proměnné, nikoli za názvem typu jako v některých jiných jazycích. Následující příklad deklaruje pole 1000 dvojitých hodnot, které mají být přiděleny v zásobníku. Počet elementů musí být dodán jako celočíselný literál nebo jinak jako konstantní výraz, protože kompilátor musí zjistit, kolik místa v zásobníku se má přidělit. nemůže použít hodnotu počítanou v době běhu. Každému elementu v poli je přiřazena výchozí hodnota 0. Pokud nepřiřazujete výchozí hodnotu, každý element zpočátku bude obsahovat jakékoli náhodné hodnoty, které budou v daném umístění.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the 0th element, and the last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+První prvek v poli je element 0th a poslední prvek je element (*n*-1), kde *n* je počet prvků, které pole může obsahovat. Počet elementů v deklaraci musí být integrálního typu a musí být větší než 0. Je vaší zodpovědností zajistit, že program nikdy nepředává hodnotu operátoru dolního indexu, který je větší než `(size - 1)`.
 
-A zero-sized array is legal only when the array is the last field in a **struct** or **union** and when the Microsoft extensions (/Ze) are enabled.
+Pole s nulovou velikostí je platné pouze v případě, že je pole posledním polem **struktury** nebo **sjednocení** a když jsou povoleny rozšíření Microsoft Extensions (/ze).
 
-Stack-based arrays are faster to allocate and access than heap-based arrays, but the number of elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+Pole založené na zásobníku jsou rychlejší pro přidělení a přístup než pole založená na haldě, ale počet prvků nemůže být tak velký, aby používal příliš mnoho paměti zásobníku. Velikost je příliš velká, záleží na programu. Pomocí nástrojů pro profilaci můžete zjistit, jestli je pole moc velké.
 
-## <a name="heap-declarations"></a>Heap declarations
+## <a name="heap-declarations"></a>Deklarace haldy
 
-If you require an array that is too large to be allocated on the stack, or whose size cannot be known at compile time, you can allocate it on the heap with a [new\[\]](new-operator-cpp.md) expression. The operator returns a pointer to the first element. You can use the subscript operator with the pointer variable just as with a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It is your responsibility to ensure that:
+Pokud požadujete, aby bylo pole, které je příliš velké pro přidělení v zásobníku, nebo jehož velikost nelze znát v době kompilace, můžete jej přidělit na haldu pomocí [nového\[výrazu \]](new-operator-cpp.md) . Operátor vrací ukazatel na první prvek. Operátor dolního indexu můžete použít s proměnnou ukazatele stejně jako s polem založeném na zásobníku. Můžete také použít [aritmetický ukazatel](../c-language/pointer-arithmetic.md) k přesunutí ukazatele na libovolný prvek v poli. Vaše zodpovědnost za zajištění těchto akcí:
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you do not increment or decrement the pointer address past the array bounds.
+- Vždycky uchováváte kopii původní adresy ukazatele, abyste ji mohli odstranit, pokud už pole nepotřebujete.
+- nebudete zvyšovat ani snižovat adresu ukazatele za hranicemi pole.
 
-The following example shows how to define an array on the heap at run time, and how to access the array elements using the subscript operator or by using pointer arithmetic:
+Následující příklad ukazuje, jak definovat pole v haldě v době běhu a jak přistupovat k prvkům pole pomocí operátoru dolního indexu nebo pomocí aritmetického ukazatele:
 
 ```cpp
 
@@ -117,7 +117,7 @@ int main()
 
 ## <a name="initializing-arrays"></a>Inicializace polí
 
-You can initialize an array in a loop, one element at a time, or in a single statement. The contents of the following two arrays are identical:
+Můžete inicializovat pole ve smyčce, jednom prvku v čase nebo v jednom příkazu. Obsah následujících dvou polí je stejný:
 
 ```cpp
     int a[10];
@@ -129,11 +129,11 @@ You can initialize an array in a loop, one element at a time, or in a single sta
     int b[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 ```
 
-## <a name="passing-arrays-to-functions"></a>Passing arrays to functions
+## <a name="passing-arrays-to-functions"></a>Předávání polí do funkcí
 
-When an array is passed to a function, it is passed as a pointer to the first element. This is true for both stack-based and heap-based arrays. The pointer contains no additional size or type information. This behavior is called *pointer decay*. When you pass an array to a function, you must always specify the number of elements in a separate parameter. This behavior also implies that the array elements are not copied when the array is passed to a function. To prevent the function from modifying the elements, specify the parameter as a pointer to **const** elements.
+Když je pole předáno funkci, je předáno jako ukazatel na první prvek. To platí pro pole založená na zásobníku i na haldě. Ukazatel neobsahuje žádné další informace o velikosti ani typu. Toto chování se nazývá *ukazatel Decay*. Při předání pole do funkce je nutné vždy zadat počet prvků v samostatném parametru. Toto chování také znamená, že prvky pole nejsou zkopírovány, když je pole předáno funkci. Chcete-li zabránit funkci v úpravách prvků, zadejte parametr jako ukazatel na elementy **const** .
 
-The following example shows a function that accepts an array and a length. The pointer points to the original array, not a copy. Because the parameter is not **const**, the function can modify the array elements.
+Následující příklad ukazuje funkci, která přijímá pole a délku. Ukazatel ukazuje na původní pole, nikoli na kopii. Vzhledem k tomu, že parametr není **const**, může funkce upravit prvky pole.
 
 ```cpp
 void process(double p*, const size_t len)
@@ -146,13 +146,13 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare the array as const to make it read-only within the function block:
+Deklarujte pole jako const, aby ho bylo možné jen pro čtení v rámci bloku funkce:
 
 ```cpp
 void process(const double p*, const size_t len);
 ```
 
-The same function can also be declared in these ways, with no change in behavior. The array is still passed as a pointer to the first element:
+Stejnou funkci lze také deklarovat v těchto způsobech bez změny chování. Pole je stále předáno jako ukazatel na první prvek:
 
 ```cpp
 // Unsized array
@@ -162,20 +162,20 @@ void process(const double p[] const size_t len);
 void process(const double p[1000], const size_t len);
 ```
 
-## <a name="multidimensional-arrays"></a>Multidimensional arrays
+## <a name="multidimensional-arrays"></a>Multidimenzionální pole
 
-Arrays constructed from other arrays are multidimensional arrays. These multidimensional arrays are specified by placing multiple bracketed constant expressions in sequence. For example, consider this declaration:
+Pole vytvořená z jiných polí jsou multidimenzionální pole. Tato multidimenzionální pole jsou určena umístěním více závorek konstantních výrazů v sekvenci. Zvažte například tuto deklaraci:
 
 ```cpp
 int i2[5][7];
 ```
 
-It specifies an array of type **int**, conceptually arranged in a two-dimensional matrix of five rows and seven columns, as shown in the following figure:
+Určuje pole typu **int**, koncepčně uspořádané do dvojrozměrné matice na pěti řádcích a sedm sloupců, jak je znázorněno na následujícím obrázku:
 
-![Conceptual layout of a multi&#45;dimensional array](../cpp/media/vc38rc1.gif "Conceptual layout of a multi&#45;dimensional array") <br/>
-Conceptual layout of a multi-dimensional array
+![Koncepční rozložení vícerozměrného&#45;pole](../cpp/media/vc38rc1.gif "Koncepční rozložení vícerozměrného&#45;pole") <br/>
+Koncepční rozložení multidimenzionálního pole
 
-In declarations of multidimensioned arrays that have an initializer list (as described in [Initializers](../cpp/initializers.md)), the constant expression that specifies the bounds for the first dimension can be omitted. Příklad:
+V deklaracích polí s více dimenzemi, které mají seznam inicializátorů (jak je popsáno v [inicializátorech](../cpp/initializers.md)), konstantní výraz, který určuje hranice pro první dimenzi, lze vynechat. Příklad:
 
 ```cpp
 // arrays2.cpp
@@ -189,15 +189,15 @@ double TransportCosts[][cMarkets] = {
 };
 ```
 
-The preceding declaration defines an array that is three rows by four columns. The rows represent factories and the columns represent markets to which the factories ship. The values are the transportation costs from the factories to the markets. The first dimension of the array is left out, but the compiler fills it in by examining the initializer.
+Předchozí deklarace definuje pole, které má tři řádky se čtyřmi sloupci. Řádky reprezentují továrny a sloupce reprezentují trhy, na které se továrny dodávají. Hodnoty jsou náklady na dopravu z továrny na trhy. První dimenze pole je ponechána, ale kompilátor ji vyplní prozkoumáním inicializátoru.
 
-Use of the indirection operator (*) on an n-dimensional array type yields an n-1 dimensional array. If n is 1, a scalar (or array element) is yielded.
+Použití operátoru dereference (*) u n-dimenzionálního typu pole vrací jednorozměrné pole n-1. Pokud je n rovno 1, je vrácena skalární hodnota (nebo prvek pole).
 
 Pole jazyka C++ jsou uložena podle pořadí hlavního řádku. Pořadím hlavního řádku se rozumí, že se nejrychlejší dolní index liší od posledního.
 
 ## <a name="example"></a>Příklad
 
-The technique of omitting the bounds specification for the first dimension of a multidimensional array can also be used in function declarations as follows:
+Postup vynechání specifikace vazeb pro první dimenzi multidimenzionálního pole lze také použít v deklaracích funkce následujícím způsobem:
 
 ```cpp
 // multidimensional_arrays.cpp
@@ -250,7 +250,7 @@ double FindMinToMkt(int Mkt, double myTransportCosts[][cMkts], int mycFacts) {
 The minimum cost to Market 3 is: 17.29
 ```
 
-The function `FindMinToMkt` is written such that adding new factories does not require any code changes, just a recompilation.
+Funkce `FindMinToMkt` je zapsána tak, aby přidávání nových továren nevyžadovalo změny kódu, pouze opětovnou kompilaci.
 
 ## <a name="initializing-arrays"></a>Inicializace polí
 
@@ -283,7 +283,7 @@ int main()
 
 První prvek pole `aPoint` je vytvořen pomocí konstruktoru `Point( int, int )`. Zbývající dva prvky jsou vytvořeny výchozím konstruktorem.
 
-Static member arrays (whether **const** or not) can be initialized in their definitions (outside the class declaration). Příklad:
+Statická pole členů (zda **const** nebo not) mohou být inicializována ve svých definicích (mimo deklaraci třídy). Příklad:
 
 ```cpp
 // initializing_arrays2.cpp
@@ -301,9 +301,9 @@ int main()
 }
 ```
 
-## <a name="accessing-array-elements"></a>Accessing array elements
+## <a name="accessing-array-elements"></a>Přístup k prvkům pole
 
-You can access individual elements of an array by using the array subscript operator (`[ ]`). If a one-dimensional array is used in an expression that has no subscript, the array name evaluates to a pointer to the first element in the array.
+K jednotlivým prvkům pole můžete přistupovat pomocí operátoru dolního indexu pole (`[ ]`). Pokud je jednorozměrné pole použito ve výrazu, který nemá žádný dolní index, název pole se vyhodnotí jako ukazatel na první prvek v poli.
 
 ```cpp
 // using_arrays.cpp
@@ -315,7 +315,7 @@ int main() {
 }
 ```
 
-When you use multidimensional arrays, you can use various combinations in expressions.
+Při použití multidimenzionálních polí můžete použít různé kombinace ve výrazech.
 
 ```cpp
 // using_arrays_2.cpp
@@ -336,15 +336,15 @@ int main() {
 }
 ```
 
-In the preceding code, `multi` is a three-dimensional array of type **double**. The `p2multi` pointer points to an array of type **double** of size three. In this example, the array is used with one, two, and three subscripts. Although it is more common to specify all subscripts, as in the `cout` statement, it is sometimes useful to select a specific subset of array elements, as shown in the statements that follow `cout`.
+V předchozím kódu je `multi` trojrozměrné pole typu **Double**. Ukazatel `p2multi` odkazuje na pole typu **Double** o velikosti tři. V tomto příkladu je pole použito s jedním, dvěma a třemi dolními indexy. I když je obvyklejší zadat všechny dolní indexy, jako v příkazu `cout`, je někdy užitečné vybrat konkrétní podmnožinu prvků pole, jak je znázorněno v příkazech, které následují `cout`.
 
-## <a name="overloading-subscript-operator"></a>Overloading subscript operator
+## <a name="overloading-subscript-operator"></a>Přetížení operátoru dolního indexu
 
-Like other operators, the subscript operator (`[]`) can be redefined by the user. Výchozí chování operátoru indexu, pokud není přetížen, je kombinování názvu pole a indexu pomocí následující metody:
+Stejně jako ostatní operátory může být operátor dolního indexu (`[]`) předefinován uživatelem. Výchozí chování operátoru indexu, pokud není přetížen, je kombinování názvu pole a indexu pomocí následující metody:
 
 `*((array_name) + (subscript))`
 
-Stejně jako všechna sčítání, která zahrnují typy ukazatelů, se změna velikosti provádí automaticky pro úpravu velikosti typu. Therefore, the resultant value is not *n* bytes from the origin of array-name; rather, it is the *n*th element of the array. For more information about this conversion, see [Additive operators](additive-operators-plus-and.md).
+Stejně jako všechna sčítání, která zahrnují typy ukazatelů, se změna velikosti provádí automaticky pro úpravu velikosti typu. Proto výsledná hodnota není *n* bajtů od počátku pole-Name; místo toho je to *n*-tou prvek pole. Další informace o tomto převodu naleznete v tématu [operátory sčítání](additive-operators-plus-and.md).
 
 Pro vícerozměrná pole je adresa odvozena podobně následujícím způsobem:
 
@@ -352,14 +352,14 @@ Pro vícerozměrná pole je adresa odvozena podobně následujícím způsobem:
 
 ## <a name="arrays-in-expressions"></a>Pole ve výrazech
 
-Pokud se identifikátor typu pole objeví ve výrazu jiném než `sizeof`, adresy (`&`) nebo inicializace odkazu, je převeden na ukazatel na první prvek pole. Příklad:
+Když je identifikátor typu pole zobrazen ve výrazu jiném než `sizeof`, adresa (`&`) nebo inicializace odkazu, je převeden na ukazatel na první prvek pole. Příklad:
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-Ukazatel `psz` odkazuje na první prvek pole `szError1`. Arrays, unlike pointers, are not modifiable l-values. Proto je následující přiřazení neplatné:
+Ukazatel `psz` odkazuje na první prvek pole `szError1`. Pole, na rozdíl od ukazatelů, nejsou upravitelná l-hodnota. Proto je následující přiřazení neplatné:
 
 ```cpp
 szError1 = psz;
@@ -367,4 +367,4 @@ szError1 = psz;
 
 ## <a name="see-also"></a>Viz také:
 
-[std::array](../standard-library/array-class-stl.md)
+[std:: Array](../standard-library/array-class-stl.md)

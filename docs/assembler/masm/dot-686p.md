@@ -15,7 +15,7 @@ ms.locfileid: "74398616"
 ---
 # <a name="686p-32-bit-masm"></a>.686P (32-bit MASM)
 
-Enables assembly of all instructions (including privileged) for the Pentium Pro processor. (32-bit MASM only.)
+Povolí sestavení všech instrukcí (včetně privilegovaných) pro procesor Pentium pro. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 

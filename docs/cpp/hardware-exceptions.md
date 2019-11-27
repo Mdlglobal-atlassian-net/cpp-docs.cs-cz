@@ -27,7 +27,7 @@ Hardwarové výjimky rozpoznávané systémem Windows jsou shrnuty v následují
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|Čtení nebo zápis nepřístupného umístění v paměti.|
 |STATUS_BREAKPOINT|Přechod na hardwarem definovanou zarážku. Používáno pouze ladicími programy.|
-|STATUS_DATATYPE_MISALIGNMENT|Čtení nebo zápis dat na nesprávně zarovnané adrese. Například 16bitové entity musí být zarovnány na 2bajtové hranice. (Not applicable to Intel 80*x*86 processors.)|
+|STATUS_DATATYPE_MISALIGNMENT|Čtení nebo zápis dat na nesprávně zarovnané adrese. Například 16bitové entity musí být zarovnány na 2bajtové hranice. (Neplatí pro procesory Intel 80*x*86.)|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|Dělení typu s plovoucí desetinnou čárkou hodnotou 0,0.|
 |STATUS_FLOAT_OVERFLOW|Překročení maximálního kladného exponentu typu s plovoucí desetinnou čárkou.|
 |STATUS_FLOAT_UNDERFLOW|Překročení velikosti nejmenšího záporného exponentu typu s plovoucí desetinnou čárkou.|
@@ -38,9 +38,9 @@ Hardwarové výjimky rozpoznávané systémem Windows jsou shrnuty v následují
 |STATUS_INTEGER_OVERFLOW|Pokus o operaci, která překračuje rozsah celého čísla.|
 |STATUS_SINGLE_STEP|Spuštění jedné instrukce v režimu krokování. Používáno pouze ladicími programy.|
 
-Mnoho výjimek uvedených v předchozí tabulce by mělo být zpracováno ladicími programy, operačním systémem a jiným kódem nízké úrovně. S výjimkou chyb celých čísel a čísel s plovoucí desetinnou čárkou by váš kód neměl tyto chyby zpracovávat. Proto by měl být obvykle použit filtr pro zpracování výjimek, který výjimky ignoruje (vyhodnotí na hodnotu 0). V opačném případě může být mechanismům nižší úrovně zabráněno reagovat odpovídajícím způsobem. You can, however, take appropriate precautions against the potential effect of these low-level errors by [writing termination handlers](../cpp/writing-a-termination-handler.md).
+Mnoho výjimek uvedených v předchozí tabulce by mělo být zpracováno ladicími programy, operačním systémem a jiným kódem nízké úrovně. S výjimkou chyb celých čísel a čísel s plovoucí desetinnou čárkou by váš kód neměl tyto chyby zpracovávat. Proto by měl být obvykle použit filtr pro zpracování výjimek, který výjimky ignoruje (vyhodnotí na hodnotu 0). V opačném případě může být mechanismům nižší úrovně zabráněno reagovat odpovídajícím způsobem. Můžete však přijmout vhodná opatření proti potenciálnímu účinku těchto chyb nízké úrovně, a to pomocí [obslužných rutin ukončení](../cpp/writing-a-termination-handler.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
+[Zápis obslužné rutiny výjimky](../cpp/writing-an-exception-handler.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

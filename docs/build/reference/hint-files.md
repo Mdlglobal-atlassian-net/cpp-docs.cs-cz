@@ -20,24 +20,24 @@ ms.locfileid: "74189010"
 ---
 # <a name="hint-files"></a>Soubory pokynů
 
-A *hint file* contains macros that would otherwise cause regions of code to be skipped by the C++ Browsing Database Parser. When you open a Visual Studio C++ project, the parser analyzes the code in each source file in the project and builds a database with information about every identifier. The IDE uses that information to support code browsing features such as the **Class View** browser and the **Navigation Bar**.
+*Soubor s nápovědou* obsahuje makra, která by jinak způsobila, že oblasti kódu budou přeskočeny analyzátorem databáze C++ procházení. Když otevřete projekt sady Visual Studio C++ , analyzátor analyzuje kód v každém zdrojovém souboru v projektu a vytvoří databázi s informacemi o každém identifikátoru. Rozhraní IDE používá tyto informace k podpoře funkcí pro procházení kódu, jako je **zobrazení tříd** prohlížeč a **navigační panel**.
 
-The C++ Browsing Database Parser is a fuzzy parser that can parse large amounts of code in a short amount of time. One reason it's fast is because it skips the content of blocks. For instance, it only records the location and parameters of a function, and ignores its contents. Certain macros can cause issues for the heuristics used to determine the start and end of a block. These issues cause regions of code to be recorded improperly.
+Analyzátor C++ databáze procházení je přibližný analyzátor, který může v krátké době analyzovat velké objemy kódu. Jedním z důvodů je, že to je rychlé, protože přeskočí obsah bloků. Například zaznamenává pouze umístění a parametry funkce a ignoruje její obsah. Určitá makra mohou způsobit problémy s heuristickými metodami, které slouží k určení začátku a konce bloku. Tyto problémy způsobují nesprávné zaznamenávání oblastí kódu.
 
-These skipped regions can manifest in multiple ways:
+Tyto vynechané oblasti mohou být v manifestu vícenásobným způsobem:
 
-- Missing types and functions in **Class View**, **Go To** and **Navigation Bar**
+- Chybějící typy a funkce v **zobrazení tříd**, **Přejít na** a **navigační panel**
 
-- Incorrect scopes in the **Navigation Bar**
+- Nesprávné obory v **navigačním panelu**
 
-- Suggestions to **Create Declaration/Definition** for functions that are already defined
+- Návrhy na **vytvoření deklarace/definice** pro funkce, které jsou již definovány
 
-A hint file contains user-customizable hints, which have the same syntax as C/C++ macro definitions. Visual C++ includes a built-in hint file that is sufficient for most projects. However, you can create your own hint files to improve the parser specifically for your project.
+Soubor s nápovědou obsahuje uživatelsky přizpůsobitelné Rady, které mají stejnou syntaxi jako definiceC++ C/makra. Vizuál C++ obsahuje integrovaný soubor pokynů, který je pro většinu projektů dostačující. Můžete však vytvořit vlastní soubory pokynů pro zlepšení analyzátoru konkrétně pro váš projekt.
 
 > [!IMPORTANT]
-> If you modify or add a hint file, you need to take additional steps in order for the changes to take effect:
-> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
-> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
+> Pokud upravíte nebo přidáte soubor pokynů, je nutné provést další kroky, aby se změny projevily:
+> - Ve verzích před Visual Studio 2017 verze 15,6: Odstraňte soubor. sdf nebo soubor VC. DB v řešení pro všechny změny.
+> - V aplikaci Visual Studio 2017 verze 15,6 a novější: po přidání nových souborů pokynů toto řešení zavřete a znovu otevřete.
 
 ## <a name="scenario"></a>Scénář
 
@@ -48,129 +48,129 @@ void Function() NOEXCEPT
 }
 ```
 
-Without a hint file, `Function` doesn't show up in **Class View**, **Go To** or the **Navigation Bar**. After adding a hint file with this macro definition, the parser now understands and replaces the `NOEXCEPT` macro, which allows it to correctly parse the function:
+Bez souboru nápovědy se `Function` nezobrazuje v **zobrazení tříd**, **Přejít na** nebo **navigační panel**. Po přidání souboru s nápovědou v této definici makra analyzátor nyní rozumí a nahrazuje makro `NOEXCEPT`, které umožňuje správně analyzovat funkci:
 
 ```cpp.hint
 #define NOEXCEPT
 ```
 
-## <a name="disruptive-macros"></a>Disruptive Macros
+## <a name="disruptive-macros"></a>Rušivá makra
 
-There are two categories of macros that disrupt the parser:
+Existují dvě kategorie maker, které mají rušivý dopad na analyzátor:
 
-- Macros that encapsulate keywords that adorn a function
+- Makra, která odpouzdřují klíčová slova, která naformátují funkci
 
    ```cpp
    #define NOEXCEPT noexcept
    #define STDMETHODCALLTYPE __stdcall
    ```
 
-   For these types of macros, only the macro name is required in the hint file:
+   U těchto typů maker se v souboru nápovědy vyžaduje jenom název makra:
 
    ```cpp.hint
    #define NOEXCEPT
    #define STDMETHODCALLTYPE
    ```
 
-- Macros that contain unbalanced brackets
+- Makra, která obsahují nevyvážené závorky
 
    ```cpp
    #define BEGIN {
    ```
 
-   For these types of macros, both the macro name and its contents are required in the hint file:
+   U těchto typů maker se v souboru nápovědy vyžaduje název makra i jeho obsah:
 
    ```cpp.hint
    #define BEGIN {
    ```
 
-## <a name="editor-support"></a>Editor Support
+## <a name="editor-support"></a>Podpora editoru
 
-Starting in Visual Studio 2017 version 15.8 there are several features to identify disruptive macros:
+Od verze Visual Studio 2017 verze 15,8 existuje několik funkcí, které identifikují rušivá makra:
 
-- Macros that are inside regions skipped by the parser are highlighted.
+- Jsou zvýrazněna makra, která jsou v oblastech, které byly přeskočeny analyzátorem.
 
-- There's a Quick Action to create a hint file that includes the highlighted macro, or if there's an existing hint file, to add the macro to the hint file.
+- K dispozici je rychlá akce pro vytvoření souboru nápovědy, který obsahuje zvýrazněné makro, nebo pokud existuje existující soubor pokynů pro přidání makra do souboru pokynů.
 
-![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
+![Zvýrazněné makro](media/hint-squiggle-and-actions.png "Vlnovka s nápovědou a rychlé akce")
 
-After executing either of the Quick Actions, the parser reparses the files affected by the hint file.
+Po provedení některé z rychlých akcí analyzátor znovu analyzuje soubory ovlivněné souborem nápovědy.
 
-By default, the problem macro is highlighted as a suggestion. The highlight can be changed to something more noticeable, such as a red or green squiggle. Use the **Macros in Skipped Browsing Regions** option in the **Code Squiggles** section under **Tools** > **Options** > **Text Editor** > **C/C++**  > **View**.
+Ve výchozím nastavení je makro problému zvýrazněno jako návrh. Zvýraznění lze změnit na něco, co je patrné, například červená nebo zelená vlnovka. V části **nástroje** > **Možnosti** > **textový editor** > **C++ C/**  > **zobrazení**použijte možnost **makra v seznamu vynechané oblasti procházení** v části **vlnovky kódu** .
 
-![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
+![Makra v případě vynechané možnosti oblastí procházení](media/skipped-regions-squiggle-option.png "Byla vynechána možnost vlnovku pro vynechané oblasti.")
 
-## <a name="display-browsing-database-errors"></a>Display Browsing Database Errors
+## <a name="display-browsing-database-errors"></a>Zobrazit chyby databáze procházení
 
-The **Project** > **Display Browsing Database Errors** menu command displays all the regions that failed to parse in the **Error List**. The command is meant to streamline building the initial hint file. However, the parser can't tell if the cause of the error was a disruptive macro, so you must evaluate each error. Run the **Display Browsing Database Errors** command and navigate to each error to load the affected file in the editor. Once the file is loaded, if any macros are inside the region, they're highlighted. You can invoke the Quick Actions to add them to a hint file. After a hint file update, the error list is updated automatically. Alternatively, if you're modifying the hint file manually you can use the **Rescan Solution** command to trigger an update.
+Příkaz nabídky **Zobrazit chyby databáze** v **projektu** > zobrazení procházení zobrazí všechny oblasti, které se nepodařilo analyzovat v **Seznam chyb**. Příkaz slouží k zjednodušení sestavení počátečního souboru s nápovědou. Analyzátor ale nemůže sdělit, zda příčinou chyby bylo rušivé makro, takže je nutné vyhodnotit každou chybu. Spusťte příkaz **Zobrazit chyby databáze procházení** a přejděte k jednotlivým chybám, abyste načetli ovlivněný soubor v editoru. Když je soubor načtený, pokud jsou nějaká makra uvnitř oblasti, zvýrazní se. Můžete vyvolat rychlé akce, které je třeba přidat do souboru nápovědy. Po aktualizaci souboru nápovědy se seznam chyb aktualizuje automaticky. Případně, pokud upravujete soubor pokynů ručně, můžete použít příkaz pro **opětovné prohledání řešení** a aktivovat aktualizaci.
 
 ## <a name="architecture"></a>Architektura
 
-Hint files relate to physical directories, not the logical directories shown in **Solution Explorer**. You don't have to add a hint file to your project for the hint file to have an effect. The parsing system uses hint files only when it parses source files.
+Soubory pokynů se týkají fyzických adresářů, nikoli logických adresářů zobrazených v **Průzkumník řešení**. Nemusíte přidávat soubor pokynů do projektu, aby měl soubor pokynů efekt. Systém analýzy používá soubory pokynů pouze v případě, že analyzuje zdrojové soubory.
 
-Every hint file is named **cpp.hint**. Many directories can contain a hint file, but only one hint file can occur in a particular directory.
+Každý soubor s nápovědou má název **cpp. Hint**. Mnoho adresářů může obsahovat soubor s nápovědou, ale v konkrétním adresáři může dojít pouze k jednomu souboru s nápovědou.
 
-Your project can be affected by zero or more hint files. If there are no hint files, the parsing system uses error recovery techniques to ignore indecipherable source code. Otherwise, the parsing system uses the following strategy to find and gather hints.
+Projekt může mít vliv na žádný nebo více souborů s nápovědou. Pokud nejsou k dispozici žádné soubory pokynů, analytický systém používá techniky obnovení chyb pro ignorování nečitelného zdrojového kódu. V opačném případě analytický systém používá následující strategii k hledání a shromažďování pomocných postupů.
 
-### <a name="search-order"></a>Search Order
+### <a name="search-order"></a>Pořadí hledání
 
-The parsing system searches directories for hint files in the following order.
+Systém analýzy hledá v adresářích soubory pokynů v následujícím pořadí.
 
-- The directory that contains the installation package for Visual C++ (**vcpackages**). This directory contains a built-in hint file that describes symbols in frequently used system files, such as **windows.h**. Consequently, your project automatically inherits most of the hints that it needs.
+- Adresář, který obsahuje instalační balíček pro Visual C++ (**vcpackages**). Tento adresář obsahuje vestavěný soubor pokynů, který popisuje symboly v často používaných systémových souborech, jako je například **Windows. h**. V důsledku toho projekt automaticky zdědí většinu tipů, které potřebuje.
 
-- The path from the root directory of a source file to the directory that contains the source file itself. In a typical Visual Studio C++ project, the root directory contains the solution or project file.
+- Cesta z kořenového adresáře zdrojového souboru do adresáře, který obsahuje samotný zdrojový soubor. V typickém projektu sady C++ Visual Studio obsahuje kořenový adresář soubor řešení nebo projektu.
 
-   The exception to this rule is if a *stop file* is in the path to the source file. A stop file is any file that is named **cpp.stop**. A stop file provides additional control over the search order. Instead of starting from the root directory, the parsing system searches from the directory that contains the stop file to the directory that contains the source file. In a typical project, you don't need a stop file.
+   Výjimkou z tohoto pravidla je, pokud je *soubor stop* v cestě ke zdrojovému souboru. Soubor stop je libovolný soubor s názvem **cpp. stop**. Soubor stop poskytuje další kontrolu nad pořadím vyhledávání. Místo spuštění z kořenového adresáře prohledává systém analýzy z adresáře, který obsahuje soubor stop, do adresáře, který obsahuje zdrojový soubor. V typickém projektu nepotřebujete soubor stop.
 
-### <a name="hint-gathering"></a>Hint Gathering
+### <a name="hint-gathering"></a>Shromažďování pokynů
 
-A hint file contains zero or more *hints*. A hint is defined or deleted just like a C/C++ macro. That is, the `#define` preprocessor directive creates or redefines a hint, and the `#undef` directive deletes a hint.
+Soubor s nápovědou obsahuje nula nebo více *tipů*. Pomocný parametr je definován nebo odstraněn stejně jako makro C neboC++ . To znamená, že direktiva preprocesoru `#define` vytvoří nebo předefinuje pomocný parametr a direktiva `#undef` odstraní pomocný parametr.
 
-The parsing system opens each hint file in the search order described earlier. It accumulates each file's hints into a set of *effective hints*, and then uses the effective hints to interpret the identifiers in your code.
+Systém analýzy otevře všechny soubory pokynů v pořadí hledání, které bylo popsáno dříve. Sestaví porady jednotlivých souborů do sady *efektivních pomocných*parametrů a pak pomocí efektivních pomocných parametrů interpretuje identifikátory ve vašem kódu.
 
-The parsing system uses these rules to accumulate hints:
+Systém analýzy používá tato pravidla ke shromáždění tipů:
 
-- If the new hint specifies a name that isn't already defined, the new hint adds the name to the effective hints.
+- Pokud nová Nápověda Určuje název, který ještě není definovaný, přidá nový pokyn název k efektivním pomocným parametrům.
 
-- If the new hint specifies a name that is already defined, the new hint redefines the existing hint.
+- Pokud nový parametr určí název, který je již definován, Nový pomocný parametr znovu definuje existující nápovědu.
 
-- If the new hint is an `#undef` directive that specifies an existing effective hint, the new hint deletes the existing hint.
+- Pokud je nový pomocný parametr `#undef` direktivou, která určuje existující efektivní pomocný parametr, nový pokyn odstraní existující nápovědu.
 
-The first rule means that effective hints are inherited from previously opened hint files. The last two rules mean that hints later in the search order can override earlier hints. For example, you can override any previous hints if you create a hint file in the directory that contains a source file.
+První pravidlo znamená, že účinné pomocné parametry jsou zděděné z dříve otevřených souborů pokynů. Poslední dvě pravidla znamenají, že pomocný parametr pozdější v pořadí hledání může přepsat předchozí nápovědu. Můžete například přepsat všechny předchozí pomocné parametry, pokud vytvoříte soubor pokynů v adresáři, který obsahuje zdrojový soubor.
 
-For a depiction of how hints are gathered, see the [Example](#example) section.
+Informace o tom, jak se shromažďují pomocné údaje, najdete v části [příklad](#example) .
 
 ### <a name="syntax"></a>Syntaxe
 
-You create and delete hints by using the same syntax as the preprocessor directives to create and delete macros. In fact, the parsing system uses the C/C++ preprocessor to evaluate the hints. For more information about the preprocessor directives, see [#define Directive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md) and [#undef Directive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md).
+Pomocné parametry můžete vytvořit a odstranit pomocí stejné syntaxe jako direktivy preprocesoru pro vytváření a odstraňování maker. Ve skutečnosti systém analýzy používá k vyhodnocení pokynů C/C++ preprocesor. Další informace o direktivách preprocesoru naleznete v tématu direktiva [#define (c/C++)](../../preprocessor/hash-define-directive-c-cpp.md) a [Direktiva #undef (cC++/)](../../preprocessor/hash-undef-directive-c-cpp.md).
 
-The only unusual syntax elements are the `@<`, `@=`, and `@>` replacement strings. These hint-file specific replacement strings are only used in *map* macros. A map is a set of macros that relate data, functions, or events to other data, functions, or event handlers. For example, `MFC` uses maps to create [message maps](../../mfc/reference/message-maps-mfc.md), and `ATL` uses maps to create [object maps](../../atl/reference/object-map-macros.md). The hint-file specific replacement strings mark the starting, intermediate, and ending elements of a map. Only the name of a map macro is significant. Therefore, each replacement string intentionally hides the implementation of the macro.
+Jedinými neobvyklými syntaktickými prvky jsou `@<`, `@=`a `@>` nahrazující řetězce. Tyto nahrazující řetězce specifické pro soubor s nápovědou jsou používány pouze v makrech *map* . Mapa je sada maker, která se vztahují na data, funkce nebo události do jiných dat, funkcí nebo obslužných rutin událostí. `MFC` například používá mapy k vytváření [map zpráv](../../mfc/reference/message-maps-mfc.md)a `ATL` používá mapy k vytváření [map objektů](../../atl/reference/object-map-macros.md). Nahrazující řetězce specifické pro soubor s nápovědou označují počáteční, mezilehlé a koncové prvky mapy. Pouze název mapového makra je podstatný. Proto každý nahrazující řetězec záměrně skrývá implementaci makra.
 
-Hints use this syntax:
+Pomocné parametry používají tuto syntaxi:
 
 |Syntaxe|Význam|
 |------------|-------------|
-|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|A preprocessor directive that defines a new hint or redefines an existing hint. After the directive, the preprocessor replaces each occurrence of *hint-name* in source code with *replacement-string*.<br /><br /> The second syntax form defines a function-like hint. If a function-like hint occurs in source code, the preprocessor first replaces each occurrence of *parameter* in *replacement-string* with the corresponding argument in source code, and then replaces *hint-name* with *replacement-string*.|
-|`@<`|A hint-file specific *replacement-string* that indicates the start of a set of map elements.|
-|`@=`|A hint-file specific *replacement-string* that indicates an intermediate map element. A map can have multiple map elements.|
-|`@>`|A hint-file specific *replacement-string* that indicates the end of a set of map elements.|
-|`#undef` *hint-name*|The preprocessor directive that deletes an existing hint. The name of the hint is provided by the *hint-name* identifier.|
-|`//` *comment*|A single-line comment.|
-|`/*` *comment* `*/`|A multiline comment.|
+|*pomocný parametr `#define` –* *nahrazování názvů – řetězec*<br /><br /> `#define` parametr *-name* `(` *parametr*,...`)`*náhradní řetězec*|Direktiva preprocesoru, která definuje nový pomocný parametr nebo předefinuje existující nápovědu. Po direktivě nahradí preprocesor všechny výskyty *názvu pomocného parametru* ve zdrojovém kódu pomocí *řetězce nahrazení*.<br /><br /> Druhá forma syntaxe definuje pomocný parametr podobný funkci. Pokud se ve zdrojovém kódu vyskytne pomocný parametr, preprocesor nejprve nahradí každý výskyt *parametru* v *řetězci pro nahrazení* odpovídajícím argumentem ve zdrojovém kódu a pak nahradí *pomocný parametr názvem* s *náhradním řetězcem*.|
+|`@<`|*Řetězec nahrazení* specifický pro soubor s nápovědou, který označuje začátek sady prvků mapy.|
+|`@=`|*Řetězec nahrazení* specifický pro soubor s nápovědou, který označuje pomocný element mapy. Mapa může mít více elementů mapy.|
+|`@>`|*Řetězec nahrazení* specifický pro soubor s nápovědou, který označuje konec sady prvků mapy.|
+|*pomocný parametr `#undef` – název*|Direktiva preprocesoru, která odstraní existující pomocný parametr. Název pomocného parametru je uveden pomocí identifikátoru *názvu pomocného parametru* .|
+|*komentář* `//`|Jednořádkový komentář.|
+|`/*` *komentář* `*/`|Víceřádkový komentář.|
 
 ## <a name="example"></a>Příklad
 
-This example shows how hints are accumulated from hint files. Stop files aren't used in this example.
+Tento příklad ukazuje, jak se z souborů pokynů shromažďují pomocné parametry. V tomto příkladu nejsou používány soubory stop.
 
-The illustration shows some of the physical directories in a Visual Studio C++ project. There are hint files in the `vcpackages`, `Debug`, `A1`, and `A2` directories.
+Ilustrace znázorňuje některé fyzické adresáře v projektu sady Visual Studio C++ . Existují soubory pokynů v adresářích `vcpackages`, `Debug`, `A1`a `A2`.
 
-### <a name="hint-file-directories"></a>Hint File Directories
+### <a name="hint-file-directories"></a>Adresáře souborů pokynů
 
-![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
+![Společné a specifické&#45;adresáře souborů nápovědy pro konkrétní projekt](media/hintfile.png "HintFile")
 
-### <a name="directories-and-hint-file-contents"></a>Directories and Hint File Contents
+### <a name="directories-and-hint-file-contents"></a>Adresáře a obsah souboru pokynů
 
-This list shows the directories in this project that contain hint files, and the contents of those hint files. Only some of the many hints in the `vcpackages` directory hint file are listed:
+Tento seznam obsahuje adresáře v tomto projektu, které obsahují soubory pokynů, a obsah těchto souborů s nápovědou. V seznamu pomocného adresáře `vcpackages` se uvádí jenom některé z mnoha pomocných parametrů:
 
 - vcpackages
 
@@ -210,13 +210,13 @@ This list shows the directories in this project that contain hint files, and the
     #undef CBRACE
     ```
 
-### <a name="effective-hints"></a>Effective Hints
+### <a name="effective-hints"></a>Efektivní Nápověda
 
-This table lists the effective hints for the source files in this project:
+Tato tabulka uvádí efektivní nápovědu pro zdrojové soubory v tomto projektu:
 
-- Source File: A1_A2_B.cpp
+- Zdrojový soubor: A1_A2_B. cpp
 
-- Effective hints:
+- Efektivní Nápověda:
 
     ```cpp.hint
     // vcpackages (partial list)
@@ -232,19 +232,19 @@ This table lists the effective hints for the source files in this project:
     #define END_NAMESPACE }
     ```
 
-These notes apply to the preceding list:
+Tyto poznámky se vztahují na předchozí seznam:
 
-- The effective hints are from the `vcpackages`, `Debug`, `A1`, and `A2` directories.
+- Efektivní pomocné parametry se nacházejí v adresářích `vcpackages`, `Debug`, `A1`a `A2`.
 
-- The **#undef** directive in the `Debug` hint file removed the `#define _In_` hint in the `vcpackages` directory hint file.
+- Direktiva **#undef** v souboru s nápovědou `Debug` odebrala v souboru pokynů adresáře `vcpackages` nápovědu `#define _In_`.
 
-- The hint file in the `A1` directory redefines `START_NAMESPACE`.
+- Soubor pokynů v adresáři `A1` znovu definuje `START_NAMESPACE`.
 
-- The `#undef` hint in the `A2` directory removed the hints for `OBRACE` and `CBRACE` in the `Debug` directory hint file.
+- Pomocný parametr `#undef` v adresáři `A2` odebral pomocný parametr pro `OBRACE` a `CBRACE` v souboru pokynů pro `Debug` adresář.
 
 ## <a name="see-also"></a>Viz také:
 
-[File Types Created for Visual Studio C++ projects](file-types-created-for-visual-cpp-projects.md)<br>
+[Typy souborů vytvořených pro projekty sady C++ Visual Studio](file-types-created-for-visual-cpp-projects.md)<br>
 [#define – direktiva (C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef – direktiva (C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Poznámky SAL](../../c-runtime-library/sal-annotations.md)<br>

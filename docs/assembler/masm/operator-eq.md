@@ -17,12 +17,12 @@ ms.locfileid: "74397010"
 ---
 # <a name="operator-eq"></a>operátor EQ
 
-Returns true (-1) if *expression1* equals *expression2*, or returns false (0) if it does not.
+Vrátí hodnotu true (-1), je-li *Výraz1* Equals *Výraz2*, nebo vrátí hodnotu false (0), pokud ne.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **EQ** *expression2*
+> *Výraz1* **EQ** *Výraz2*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

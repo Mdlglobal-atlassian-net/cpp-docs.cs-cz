@@ -15,12 +15,12 @@ ms.locfileid: "74393196"
 ---
 # <a name="title"></a>TITLE
 
-Defines the program listing title.
+Definuje název výpisu programu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **TITLE** *text*
+> *Text* **nadpisu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

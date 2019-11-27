@@ -61,7 +61,7 @@ Nová vyrovnávací paměť.
 *src*<br/>
 Vyrovnávací paměť, ze které se má kopírovat.
 
-*count*<br/>
+*výpočtu*<br/>
 Počet znaků, které mají být zkopírovány.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -87,7 +87,7 @@ Funkce **memcpy** a **wmemcpy** budou zastaralé pouze v případě, že je kons
 #include <memory.h>
 ```
 
-or
+nebo
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -99,7 +99,7 @@ or
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**memcpy**|\<Memory. h > nebo \<String. h >|
-|**wmemcpy**|\<wchar.h>|
+|**wmemcpy**|\<WCHAR. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 

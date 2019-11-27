@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398902"
 ---
-# <a name="time"></a>\@Time
+# <a name="time"></a>Čas \@
 
-The system time in 24-hour hh:mm:ss format (text macro).
+Systémový čas ve 24hodinovém formátu hh: mm: SS (textové makro).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@Time**
+> **Čas \@**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

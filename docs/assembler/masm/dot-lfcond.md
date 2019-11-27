@@ -21,8 +21,8 @@ ms.locfileid: "74398202"
 
 ## <a name="remarks"></a>Poznámky
 
-See [.LISTIF](../../assembler/masm/dot-listif.md).
+Viz [. LISTIF](../../assembler/masm/dot-listif.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

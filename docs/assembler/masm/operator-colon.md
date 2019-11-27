@@ -16,12 +16,12 @@ ms.locfileid: "74397059"
 ---
 # <a name="operator-"></a>: – operátor
 
-Overrides the default segment of *expression* with *segment*. The *segment* can be a segment register, group name, segment name, or segment expression. The *expression* must be a constant.
+Přepíše výchozí segment *výrazu* *segmentem*. *Segmentem* může být registr segmentu, název skupiny, název segmentu nebo výraz segmentu. *Výraz* musí být konstanta.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *segment* **:** *expression*
+> *segment* **:** *výraz*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4534
+title: Upozornění kompilátoru (úroveň 3) C4534
 ms.date: 11/04/2016
 f1_keywords:
 - c4534
@@ -13,15 +13,15 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189093"
 ---
-# <a name="compiler-warning-level-3-c4534"></a>Compiler Warning (level 3) C4534
+# <a name="compiler-warning-level-3-c4534"></a>Upozornění kompilátoru (úroveň 3) C4534
 
-'constructor' will not be a default constructor for class 'class' due to the default argument
+konstruktor nebude výchozím konstruktorem pro třídu Class z důvodu výchozího argumentu.
 
-An unmanaged class can have a constructor with parameters that have default values and the compiler will use this as the default constructor. A class marked with the `value` keyword will not use a constructor with default values for its parameters as a default constructor.
+Nespravovaná třída může mít konstruktor s parametry, které mají výchozí hodnoty, a kompilátor bude používat jako výchozí konstruktor. Třída označená klíčovým slovem `value` nebude používat konstruktor s výchozími hodnotami pro své parametry jako výchozí konstruktor.
 
-For more information, see [Classes and Structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
+Další informace naleznete v tématu [třídy a struktury](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
-The following sample generates C4534:
+Následující ukázka generuje C4534:
 
 ```cpp
 // C4534.cpp

@@ -83,33 +83,33 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|Vytvoří objekt pracovního prostoru. Následně zavolejte `Create` nebo `Open`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDaoWorkspace:: Append](#append)|Připojí nově vytvořený pracovní prostor ke kolekci pracovních prostorů databázového stroje.|
 |[CDaoWorkspace::BeginTrans](#begintrans)|Spustí novou transakci, která se vztahuje na všechny databáze otevřené v pracovním prostoru.|
 |[CDaoWorkspace:: Close](#close)|Zavře pracovní prostor a všechny objekty, které obsahuje. Transakce, které čekají na vyřízení, se vrátí zpět.|
 |[CDaoWorkspace:: CommitTrans](#committrans)|Dokončí aktuální transakci a uloží změny.|
 |[CDaoWorkspace::CompactDatabase](#compactdatabase)|Komprimuje (nebo duplikuje) databázi.|
-|[CDaoWorkspace::Create](#create)|Vytvoří nový objekt pracovního prostoru rozhraní DAO.|
+|[CDaoWorkspace:: Create](#create)|Vytvoří nový objekt pracovního prostoru rozhraní DAO.|
 |[CDaoWorkspace::GetDatabaseCount](#getdatabasecount)|Vrátí počet databázových objektů DAO v kolekci databází v pracovním prostoru.|
 |[CDaoWorkspace::GetDatabaseInfo](#getdatabaseinfo)|Vrátí informace o zadané databázi DAO definované v kolekci databází v pracovním prostoru.|
 |[CDaoWorkspace::GetIniPath](#getinipath)|Vrátí umístění inicializačního nastavení databázového stroje Microsoft Jet v registru systému Windows.|
 |[CDaoWorkspace::GetIsolateODBCTrans](#getisolateodbctrans)|Vrátí hodnotu, která označuje, zda více transakcí zahrnující stejný zdroj dat ODBC jsou izolované prostřednictvím vynuceného více připojení ke zdroji dat.|
 |[CDaoWorkspace::GetLoginTimeout](#getlogintimeout)|Vrátí počet sekund, než dojde k chybě, když se uživatel pokusí přihlásit k databázi ODBC.|
 |[CDaoWorkspace:: GetName](#getname)|Vrátí uživatelsky definovaný název objektu pracovního prostoru.|
-|[CDaoWorkspace::GetUserName](#getusername)|Vrátí uživatelské jméno zadané při vytvoření pracovního prostoru. Toto je jméno vlastníka pracovního prostoru.|
+|[CDaoWorkspace:: getuživatelské_jméno](#getusername)|Vrátí uživatelské jméno zadané při vytvoření pracovního prostoru. Toto je jméno vlastníka pracovního prostoru.|
 |[CDaoWorkspace:: GetVersion](#getversion)|Vrátí řetězec, který obsahuje verzi databázového stroje přidruženého k pracovnímu prostoru.|
 |[CDaoWorkspace::GetWorkspaceCount](#getworkspacecount)|Vrátí počet objektů pracovního prostoru DAO v kolekci pracovních prostorů databázového stroje.|
 |[CDaoWorkspace::GetWorkspaceInfo](#getworkspaceinfo)|Vrátí informace o zadaném pracovním prostoru DAO definovaném v kolekci pracovních prostorů databázového stroje.|
-|[CDaoWorkspace::Idle](#idle)|Umožňuje databázovému stroji provádět úlohy na pozadí.|
-|[CDaoWorkspace::IsOpen](#isopen)|Vrátí nenulovou hodnotu, pokud je pracovní prostor otevřen.|
-|[CDaoWorkspace::Open](#open)|Explicitně otevře objekt pracovního prostoru přidružený k výchozímu pracovnímu prostoru rozhraní DAO.|
+|[CDaoWorkspace:: Idle](#idle)|Umožňuje databázovému stroji provádět úlohy na pozadí.|
+|[CDaoWorkspace:: Open](#isopen)|Vrátí nenulovou hodnotu, pokud je pracovní prostor otevřen.|
+|[CDaoWorkspace:: Open](#open)|Explicitně otevře objekt pracovního prostoru přidružený k výchozímu pracovnímu prostoru rozhraní DAO.|
 |[CDaoWorkspace::RepairDatabase](#repairdatabase)|Pokusí se opravit poškozenou databázi.|
 |[CDaoWorkspace:: Rollback](#rollback)|Ukončí aktuální transakci a změny neuloží.|
 |[CDaoWorkspace::SetDefaultPassword](#setdefaultpassword)|Nastaví heslo, které databázový stroj používá, když se vytvoří objekt pracovního prostoru bez konkrétního hesla.|
@@ -120,9 +120,9 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|Odkazuje na podkladový objekt pracovního prostoru DAO.|
+|[CDaoWorkspace:: m_pDAOWorkspace](#m_pdaoworkspace)|Odkazuje na podkladový objekt pracovního prostoru DAO.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -131,7 +131,7 @@ Ve většině případů nebudete potřebovat více pracovních prostorů a nebu
 > [!NOTE]
 >  Databázové třídy DAO se liší od databázových tříd knihovny MFC založených na rozhraní ODBC (Open Database Connectivity). Všechny názvy databázových tříd DAO mají předponu "CDao". Obecně jsou třídy knihovny MFC založené na rozhraní DAO větší, než třídy knihovny MFC založené na rozhraní ODBC. Třídy založené na rozhraní DAO mají přístup k datům prostřednictvím databázového stroje Microsoft Jet, včetně ovladačů ODBC. Podporují také operace DDL (Data Definition Language), jako je vytváření databází a přidávání tabulek a polí přes třídy, aniž by museli volat rozhraní DAO přímo.
 
-## <a name="capabilities"></a>Možnosti
+## <a name="capabilities"></a>Schopnosti
 
 `CDaoWorkspace` třídy poskytuje následující:
 
@@ -147,7 +147,7 @@ Ve většině případů nebudete potřebovat více pracovních prostorů a nebu
 
 Knihovna MFC neimplementuje kolekce uživatelů a skupin v rozhraní DAO, které se používají pro řízení zabezpečení. Pokud potřebujete tyto aspekty rozhraní DAO, je nutné je naprogramovat prostřednictvím přímých volání rozhraní DAO. Informace najdete v části [Technická poznámka 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-## <a name="usage"></a>Použití
+## <a name="usage"></a>Využití
 
 `CDaoWorkspace` třídy můžete použít k těmto akcím:
 
@@ -685,7 +685,7 @@ Nenulové, pokud je otevřen objekt pracovního prostoru; v opačném případě
 
 Můžete zavolat kteroukoli z členských funkcí pracovního prostoru, který je v otevřeném stavu.
 
-##  <a name="m_pdaoworkspace"></a>  CDaoWorkspace::m_pDAOWorkspace
+##  <a name="m_pdaoworkspace"></a>CDaoWorkspace:: m_pDAOWorkspace
 
 Ukazatel na podkladový objekt pracovního prostoru DAO.
 
@@ -722,7 +722,7 @@ I když mnoho `CDaoWorkspace` členských funkcí lze volat pouze po otevření 
 
 ||||
 |-|-|-|
-|[Vytvoření](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[Vytvořeny](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
 |[GetIniPath](#getinipath)|[Volnoběž](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 

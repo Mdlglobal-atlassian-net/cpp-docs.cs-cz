@@ -15,7 +15,7 @@ ms.locfileid: "74395111"
 ---
 # <a name="oword"></a>OWORD
 
-Used as a type specifier when an 16-byte data type is required.
+Používá se jako specifikátor typu, když je vyžadován 16bitový datový typ.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ Used as a type specifier when an 16-byte data type is required.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

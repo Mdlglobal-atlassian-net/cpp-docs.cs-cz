@@ -13,16 +13,16 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397832"
 ---
-# <a name="while-32-bit-masm"></a>.WHILE (32-bit MASM)
+# <a name="while-32-bit-masm"></a>. WHILe (32-bit MASM)
 
-Generates code that executes the block of *statements* while *condition* remains true. (32-bit MASM only.)
+Vygeneruje kód, který spustí blok *příkazů* , zatímco *Podmínka* zůstává pravda. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.WHILE** *condition*\
-> *statements*\
+> **.** \ *podmínky*
+> \ *příkazů*
 > **.ENDW**
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

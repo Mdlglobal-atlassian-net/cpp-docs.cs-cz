@@ -17,29 +17,29 @@ ms.locfileid: "74246709"
 ---
 # <a name="exceptions-ole-exceptions"></a>Výjimky: Výjimky OLE
 
-The techniques and facilities for handling exceptions in OLE are the same as those for handling other exceptions. For further information on exception handling, see the article [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
+Techniky a zařízení pro zpracování výjimek v technologii OLE jsou stejné jako pro zpracování jiných výjimek. Další informace o zpracování výjimek naleznete v článku [ C++ moderní osvědčené postupy pro výjimky a zpracování chyb](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-All exception objects are derived from the abstract base class `CException`. MFC provides two classes for handling OLE exceptions:
+Všechny objekty výjimek jsou odvozeny z abstraktní základní třídy `CException`. Knihovna MFC poskytuje dvě třídy pro zpracování výjimek OLE:
 
-- [COleException](../mfc/reference/coleexception-class.md) For handling general OLE exceptions.
+- [COleException](../mfc/reference/coleexception-class.md) Pro zpracování obecných výjimek OLE.
 
-- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) For generating and handling OLE dispatch (automation) exceptions.
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) Pro generování a manipulaci s výjimkami odeslání OLE (automatizace).
 
-The difference between these two classes is the amount of information they provide and where they are used. `COleException` has a public data member that contains the OLE status code for the exception. `COleDispatchException` supplies more information, including the following:
+Rozdíl mezi těmito dvěma třídami je množství informací, které poskytují a kde se používají. `COleException` má veřejný datový člen, který obsahuje kód stavu OLE pro výjimku. `COleDispatchException` poskytuje další informace, včetně následujících:
 
-- An application-specific error code
+- Kód chyby specifický pro aplikaci
 
-- An error description, such as "Disk full"
+- Popis chyby, například "plný disk"
 
-- A Help context that your application can use to provide additional information for the user
+- Kontext pro nápovědu, který může vaše aplikace používat k poskytnutí dalších informací pro uživatele
 
-- The name of your application's Help file
+- Název souboru Help vaší aplikace
 
-- The name of the application that generated the exception
+- Název aplikace, která vygenerovala výjimku.
 
-`COleDispatchException` provides more information so that it can be used with products like Microsoft Visual Basic. The verbal error description can be used in a message box or other notification; the Help information can be used to help the user respond to the conditions that caused the exception.
+`COleDispatchException` poskytuje další informace, aby je bylo možné použít s produkty, jako je Microsoft Visual Basic. Popis ústní chyby lze použít v okně se zprávou nebo v jiném oznámení. informace o nápovědě lze použít k zajištění reakce uživatele na podmínky, které způsobily výjimku.
 
-Two global functions correspond to the two OLE exception classes: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) and [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Use them to throw general OLE exceptions and OLE dispatch exceptions, respectively.
+Dvě globální funkce odpovídají dvěma třídám výjimek OLE: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) a [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Použijte je k vyvolání obecných výjimek OLE a výjimek odeslání OLE, v uvedeném pořadí.
 
 ## <a name="see-also"></a>Viz také:
 

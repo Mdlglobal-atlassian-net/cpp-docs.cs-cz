@@ -1,5 +1,5 @@
 ---
-title: Type conversions and type safety
+title: Převody a bezpečnost typů
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
@@ -10,28 +10,28 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246116"
 ---
-# <a name="type-conversions-and-type-safety"></a>Type conversions and type safety
+# <a name="type-conversions-and-type-safety"></a>Převody a bezpečnost typů
 
 Tento dokument popisuje běžné problémy při převodu typů a také způsob, jak jim zabránit v kódu jazyka C++.
 
-Při psaní programu jazyka C++ je důležité zajistit, že je typově bezpečný. To znamená, že v každé proměnné, argumentu funkce a návratové hodnotě funkce je uložen přijatelný druh dat a že operace zahrnující hodnoty různých typů mají smysl a nezpůsobují ztrátu dat, nesprávnou interpretaci bitových vzorů nebo poškození paměti. Program je podle definice typově bezpečný, pokud nikdy explicitně ani implicitně nepřevádí hodnoty jednoho typu na jiný typ. Avšak převody typů, a to dokonce nebezpečné převody, jsou někdy nutné. For example, you might have to store the result of a floating point operation in a variable of type **int**, or you might have to pass the value in an unsigned **int** to a function that takes a signed **int**. Both examples illustrate unsafe conversions because they may cause data loss or re-interpretation of a value.
+Při psaní programu jazyka C++ je důležité zajistit, že je typově bezpečný. To znamená, že v každé proměnné, argumentu funkce a návratové hodnotě funkce je uložen přijatelný druh dat a že operace zahrnující hodnoty různých typů mají smysl a nezpůsobují ztrátu dat, nesprávnou interpretaci bitových vzorů nebo poškození paměti. Program je podle definice typově bezpečný, pokud nikdy explicitně ani implicitně nepřevádí hodnoty jednoho typu na jiný typ. Avšak převody typů, a to dokonce nebezpečné převody, jsou někdy nutné. Například může být nutné uložit výsledek operace s plovoucí desetinnou čárkou do proměnné typu **int**nebo může být nutné předat hodnotu v nepodepsaném **celé číslo** do funkce, která má podepsané **celé číslo**. Oba příklady ilustrují nebezpečné převody, protože mohou způsobit ztrátu dat nebo přehodnocení hodnoty.
 
 Když kompilátor zjistí nebezpečný převod, vyvolá chybu nebo upozornění. Chyba přeruší kompilaci. Upozornění umožní pokračování kompilace a označí možnou chybu v kódu. Nicméně i v případě, že se váš program zkompiluje bez upozornění, může kód stále obsahovat implicitní převody typů poskytující nesprávné výsledky. Chyby typů mohou být rovněž způsobeny explicitními převody nebo přetypováním v kódu.
 
 ## <a name="implicit-type-conversions"></a>Implicitní převody typu
 
-When an expression contains operands of different built-in types, and no explicit casts are present, the compiler uses built-in *standard conversions* to convert one of the operands so that the types match. Kompilátor se pokusí provést převod v přesně určeném pořadí, dokud některý krok neuspěje. Pokud je vybraným převodem povýšení, kompilátor upozornění nevyvolá. Je-li převod zužující, kompilátor vyvolá upozornění na možnou ztrátu dat. To, zda skutečně dojde ke ztrátě dat, závisí na skutečných zúčastněných hodnotách, avšak doporučujeme považovat toto upozornění za chybu. Pokud se jedná o uživatelský typ, kompilátor se pokusí provést převody zadané v definici této třídy. Pokud kompilátor nenajde přijatelný převod, vyvolá chybu a program nezkompiluje. For more information about the rules that govern the standard conversions, see [Standard Conversions](../cpp/standard-conversions.md). For more information about user-defined conversions, see [User-Defined Conversions (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
+Pokud výraz obsahuje operandy různých předdefinovaných typů a nejsou k dispozici žádná explicitní přetypování, kompilátor používá předdefinované *standardní převody* pro převod jednoho z operandů tak, aby se typy shodovaly. Kompilátor se pokusí provést převod v přesně určeném pořadí, dokud některý krok neuspěje. Pokud je vybraným převodem povýšení, kompilátor upozornění nevyvolá. Je-li převod zužující, kompilátor vyvolá upozornění na možnou ztrátu dat. To, zda skutečně dojde ke ztrátě dat, závisí na skutečných zúčastněných hodnotách, avšak doporučujeme považovat toto upozornění za chybu. Pokud se jedná o uživatelský typ, kompilátor se pokusí provést převody zadané v definici této třídy. Pokud kompilátor nenajde přijatelný převod, vyvolá chybu a program nezkompiluje. Další informace o pravidlech, která řídí standardní převody, najdete v tématu [standardní převody](../cpp/standard-conversions.md). Další informace o uživatelem definovaných převodech naleznete v tématu [uživatelsky definované převody (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
 
 ### <a name="widening-conversions-promotion"></a>Rozšiřující převody (povýšení)
 
 U rozšiřujícího převodu je hodnota menší proměnné přiřazena větší proměnné bez ztráty dat. Protože rozšiřující převody jsou vždy bezpečné, kompilátor je provede bez vyvolání upozornění. Následující převody jsou rozšiřující převody.
 
-|From|Chcete-li|
+|Z|Pro|
 |----------|--------|
-|Any signed or unsigned integral type except **long long** or **__int64**|**double**|
-|**bool** or **char**|Jakýkoli jiný předdefinovaný typ|
-|**short** or **wchar_t**|**int**, **long**, **long long**|
-|**int**, **long**|**long long**|
+|Libovolný celočíselný typ se znaménkem nebo bez znaménka s výjimkou **Long Long** nebo **__int64**|**double**|
+|**bool** nebo **char**|Jakýkoli jiný předdefinovaný typ|
+|**short** nebo **wchar_t**|**int**, **Long**, **Long Long**|
+|**int**, **Long**|**Long Long**|
 |**float**|**double**|
 
 ### <a name="narrowing-conversions-coercion"></a>Zužující převody
@@ -73,7 +73,7 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
 ```
 
-Všimněte si, že hodnoty jsou interpretovány v obou směrech. Pokud váš program produkuje nesprávné výsledky, ve kterých se zdá být znaménko hodnoty obrácené, než jste očekávali, použijte implicitní převody mezi celočíselnými typy se znaménkem a bez znaménka. In the following example, the result of the expression ( 0 - 1) is implicitly converted from **int** to **unsigned int** when it's stored in `num`. To způsobí opětovnou interpretaci bitového vzoru.
+Všimněte si, že hodnoty jsou interpretovány v obou směrech. Pokud váš program produkuje nesprávné výsledky, ve kterých se zdá být znaménko hodnoty obrácené, než jste očekávali, použijte implicitní převody mezi celočíselnými typy se znaménkem a bez znaménka. V následujícím příkladu je výsledek výrazu (0-1) implicitně převeden z **int** na **unsigned int** , když je uložen v `num`. To způsobí opětovnou interpretaci bitového vzoru.
 
 ```cpp
 unsigned int u3 = 0 - 1;
@@ -84,7 +84,7 @@ Kompilátor nevyvolá upozornění o implicitních převodech mezi celočíseln�
 
 ### <a name="pointer-conversions"></a>Převody ukazatele
 
-V mnoha výrazech je pole stylu jazyka C implicitně převedeno na ukazatel na první element v tomto poli a ke konstantním převodům může dojít bez upozornění. I když je to pohodlné, je to také potenciálně náchylné k chybám. For example, the following badly designed code example seems nonsensical, and yet it will compile and produces a result of 'p'. Nejprve je konstantní textový literál „Help“ převeden na typ `char*` odkazující na první prvek pole. Tento ukazatel je poté zvýšen o tři prvky, takže nyní odkazuje na poslední prvek 'p'.
+V mnoha výrazech je pole stylu jazyka C implicitně převedeno na ukazatel na první element v tomto poli a ke konstantním převodům může dojít bez upozornění. I když je to pohodlné, je to také potenciálně náchylné k chybám. Například následující nesprávně navržený příklad kódu se jeví jako nesmyslná, a přesto se zkompiluje a vytvoří výsledek p. Nejprve je konstantní textový literál „Help“ převeden na typ `char*` odkazující na první prvek pole. Tento ukazatel je poté zvýšen o tři prvky, takže nyní odkazuje na poslední prvek 'p'.
 
 ```cpp
 char* s = "Help" + 3;
@@ -92,7 +92,7 @@ char* s = "Help" + 3;
 
 ## <a name="explicit-conversions-casts"></a>Explicitní převody (přetypování)
 
-Pomocí operace přetypování lze kompilátoru dát pokyn k převodu hodnoty z jednoho typu na jiný typ. Kompilátor vyvolá chybu v případech, kdy jsou dva typy naprosto nesouvisející, ale v jiných případech chybu nevyvolá, i když operace není typově bezpečná. Přetypování používejte opatrně, protože jakýkoli převod jednoho typu na jiný je možným zdrojem chyby programu. Použití přetypování je však někdy nutné a ne každé je stejně bezpečné. Efektivně lze přetypování využít, pokud váš kód provádí zužující převod a víte, že tento převod nebude příčinou nesprávných výsledků programu. Ve skutečnosti to kompilátoru říká, že víte, co děláte a přestane vás o tom varovat. Další možností použití je přetypování ukazatele na odvozenou třídu na ukazatele na základní třídu. Another use is to cast away the **const**-ness of a variable to pass it to a function that requires a non-**const** argument. Většina těchto operací přetypování představuje určité riziko.
+Pomocí operace přetypování lze kompilátoru dát pokyn k převodu hodnoty z jednoho typu na jiný typ. Kompilátor vyvolá chybu v případech, kdy jsou dva typy naprosto nesouvisející, ale v jiných případech chybu nevyvolá, i když operace není typově bezpečná. Přetypování používejte opatrně, protože jakýkoli převod jednoho typu na jiný je možným zdrojem chyby programu. Použití přetypování je však někdy nutné a ne každé je stejně bezpečné. Efektivně lze přetypování využít, pokud váš kód provádí zužující převod a víte, že tento převod nebude příčinou nesprávných výsledků programu. Ve skutečnosti to kompilátoru říká, že víte, co děláte a přestane vás o tom varovat. Další možností použití je přetypování ukazatele na odvozenou třídu na ukazatele na základní třídu. Dalším použitím je přetypování **const**-Ness proměnné k předání funkci, která vyžaduje argument, který není**const** . Většina těchto operací přetypování představuje určité riziko.
 
 V programování ve stylu jazyka C se pro všechny druhy přetypování používá stejný operátor přetypování ve stylu jazyka C.
 
@@ -101,9 +101,9 @@ V programování ve stylu jazyka C se pro všechny druhy přetypování použív
 int(x); // old-style cast, functional syntax
 ```
 
-Operátor přetypování ve stylu jazyka C je stejný jako operátor volání (), je proto v kódu nevýrazný a lze jej snadno přehlédnout. Both are bad because they're difficult to recognize at a glance or search for, and they're disparate enough to invoke any combination of **static**, **const**, and **reinterpret_cast**. Zjištění skutečného významu přetypování ve starém stylu může být obtížné a náchylné k chybám. Z těchto důvodů, pokud je přetypování nutné, doporučujeme použít jeden z následujících operátorů přetypování jazyka C++, které jsou v některých případech významně více typově bezpečné a zřetelněji vyjádří záměr programu:
+Operátor přetypování ve stylu jazyka C je stejný jako operátor volání (), je proto v kódu nevýrazný a lze jej snadno přehlédnout. Obě jsou chybné, protože je obtížné je rozpoznat na první pohled nebo vyhledat a jsou dostatečně různorodé, aby vyvolaly libovolnou kombinaci **statických**, **konstantních**a **reinterpret_cast**. Zjištění skutečného významu přetypování ve starém stylu může být obtížné a náchylné k chybám. Z těchto důvodů, pokud je přetypování nutné, doporučujeme použít jeden z následujících operátorů přetypování jazyka C++, které jsou v některých případech významně více typově bezpečné a zřetelněji vyjádří záměr programu:
 
-- **static_cast**, for casts that are checked at compile time only. **static_cast** returns an error if the compiler detects that you are trying to cast between types that are completely incompatible. Lze jej také použít k převodu mezi ukazatelem na základní třídu a ukazatelem na odvozenou třídu. Kompilátor však nemůže vždy jasně určit, zda tyto převody budou bezpečné i v době běhu.
+- **static_cast**pro přetypování, která jsou kontrolována pouze v době kompilace. **static_cast** vrátí chybu, pokud kompilátor detekuje, že se snažíte přetypovat mezi typy, které jsou zcela nekompatibilní. Lze jej také použít k převodu mezi ukazatelem na základní třídu a ukazatelem na odvozenou třídu. Kompilátor však nemůže vždy jasně určit, zda tyto převody budou bezpečné i v době běhu.
 
     ```cpp
     double d = 1.58947;
@@ -117,9 +117,9 @@ Operátor přetypování ve stylu jazyka C je stejný jako operátor volání ()
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-   For more information, see [static_cast](../cpp/static-cast-operator.md).
+   Další informace najdete v tématu [static_cast](../cpp/static-cast-operator.md).
 
-- **dynamic_cast**, for safe, runtime-checked casts of pointer-to-base to pointer-to-derived. A **dynamic_cast** is safer than a **static_cast** for downcasts, but the runtime check incurs some overhead.
+- **dynamic_cast**pro bezpečnou možnost přetypování ukazatele na základní modul runtime na ukazatel na odvozenou. **Dynamic_cast** je bezpečnější než **static_cast** pro dolů, ale při kontrole za běhu dojde k nějaké režii.
 
     ```cpp
     Base* b = new Base();
@@ -142,9 +142,9 @@ Operátor přetypování ve stylu jazyka C je stejný jako operátor volání ()
     //Output: d3 is null;
     ```
 
-   For more information, see [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Další informace najdete v tématu [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
-- **const_cast**, for casting away the **const**-ness of a variable, or converting a non-**const** variable to be **const**. Casting away **const**-ness by using this operator is just as error-prone as is using a C-style cast, except that with **const-cast** you are less likely to perform the cast accidentally. Sometimes you have to cast away the **const**-ness of a variable, for example, to pass a **const** variable to a function that takes a non-**const** parameter. Následující příklad ukazuje, jak to provést.
+- **const_cast**pro přetypování **const**-Ness proměnné nebo převodu proměnné, která není**const** , aby byla **const**. Odtypování **const**-Ness pomocí tohoto operátoru je stejně náchylné k chybám, jako je použití přetypování ve stylu jazyka C, s výjimkou toho, že u **const cast** je méně pravděpodobnost, že přetypování vynecháte neúmyslně. Někdy je nutné přetypování **const**-Ness proměnné, například k předání proměnné **const** funkci, která přebírá parametr, který není**const** . Následující příklad ukazuje, jak to provést.
 
     ```cpp
     void Func(double& d) { ... }
@@ -155,14 +155,14 @@ Operátor přetypování ve stylu jazyka C je stejný jako operátor volání ()
     }
     ```
 
-   For more information, see [const_cast](../cpp/const-cast-operator.md).
+   Další informace najdete v tématu [const_cast](../cpp/const-cast-operator.md).
 
-- **reinterpret_cast**, for casts between unrelated types such as **pointer** to **int**.
+- **reinterpret_cast**pro přetypování mezi nesouvisejícími typy, jako je **ukazatel** na **int**.
 
     > [!NOTE]
     >  Tento operátor přetypování se nepoužívá tak často jako ostatní a není zaručena jeho přenositelnost na jiné kompilátory.
 
-   The following example illustrates how **reinterpret_cast** differs from **static_cast**.
+   Následující příklad ukazuje, jak se **reinterpret_cast** liší od **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -174,11 +174,11 @@ Operátor přetypování ve stylu jazyka C je stejný jako operátor volání ()
                                        // However, it is not 64-bit safe.
     ```
 
-   For more information, see [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).
+   Další informace najdete v tématu [operátor reinterpret_cast](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[C++ type system](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++systém typů](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Vítejte zpět naC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

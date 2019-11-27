@@ -12,19 +12,19 @@ ms.locfileid: "74245180"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Ukazatel na implementaci pro zapouzdření za kompilace (moderní verze jazyka C++)
 
-The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
+*Ukazatel na implementaci idiom* je moderní C++ technika pro skrytí implementace, k minimalizaci spojení a k oddělení rozhraní. Ukazatel na implementaci je pro "ukazatel na implementaci" krátký. Můžete už být obeznámeni s konceptem, ale znáte ho jinými názvy, jako je Cheshire Cat nebo idiom firewall kompilátoru.
 
-## <a name="why-use-pimpl"></a>Why use pimpl?
+## <a name="why-use-pimpl"></a>Proč používat ukazatel na implementaci?
 
-Here's how the pimpl idiom can improve the software development lifecycle:
+Tady je postup, jak může ukazatel na implementaci idiom zlepšit životní cyklus vývoje softwaru:
 
-- Minimization of compilation dependencies.
+- Minimalizace závislostí kompilace.
 
-- Separation of interface and implementation.
+- Oddělení rozhraní a implementace.
 
-- Portability.
+- Přenosn.
 
-## <a name="pimpl-header"></a>Pimpl header
+## <a name="pimpl-header"></a>Ukazatel na implementaci hlavičku
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
+Ukazatel na implementaci idiom zabraňuje opětovnému sestavení kaskádových a poměrně křehkých objektů. Je vhodný pro (projíždějící) oblíbené typy.
 
-## <a name="pimpl-implementation"></a>Pimpl implementation
+## <a name="pimpl-implementation"></a>Implementace ukazatel na implementaci
 
-Define the `impl` class in the .cpp file.
+V souboru. cpp Definujte třídu `impl`.
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>Osvědčené postupy
 
-Consider whether to add support for non-throwing swap specialization.
+Zvažte, zda přidat podporu pro specializaci neaktivačního swapu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Vítejte zpět naC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

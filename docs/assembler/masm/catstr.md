@@ -15,15 +15,15 @@ ms.locfileid: "74398849"
 ---
 # <a name="catstr"></a>CATSTR
 
-Concatenates text items.
+Zřetězí textové položky.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **CATSTR** ⟦*textitem1* ⟦ __,__ *textitem2* ...⟧⟧
+> *název* **catstr –** ⟦*textitem1* ⟦ __,__ *textitem2* ... ⟧⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function. **CATSTR** is a synonym for [TEXTEQU](textequ.md).
+Každá textová položka může být řetězcový literál, konstanta předchází **%** , nebo řetězec vrácený funkcí makra. **Catstr –** je synonymum pro [TEXTEQU](textequ.md).
 
 ## <a name="see-also"></a>Viz také:
 

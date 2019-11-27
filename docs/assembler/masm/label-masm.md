@@ -15,14 +15,14 @@ ms.locfileid: "74397258"
 ---
 # <a name="label-masm"></a>Popisek (MASM)
 
-Creates a new label by assigning the current location-counter value and the given *type* to *name*.
+Vytvoří nový popisek přiřazením aktuálního umístění – hodnota čítače a daného *typu* k *názvu*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **LABEL** *type*
+> *typ* popisku názvu
 >
-> *name* **LABEL** ⟦**NEAR** | **FAR** | **PROC**⟧ **PTR** ⟦*type*⟧
+> *název* **popisku** ⟦**poblíž** | **Far** | **proc**⟧ **PTR** ⟦*typ*⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

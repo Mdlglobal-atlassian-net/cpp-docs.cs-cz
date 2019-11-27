@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4220
+title: Upozornění kompilátoru (úroveň 4) C4220
 ms.date: 11/04/2016
 f1_keywords:
 - C4220
 helpviewer_keywords:
 - C4220
 ms.assetid: aba18868-825f-4763-9af6-3296406a80e4
-ms.openlocfilehash: 177fb01ba4181f72740724d107fe08e6680ed492
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 781626e20f787bf582605ebd2d4943a7d5f2aa0c
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401108"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541922"
 ---
-# <a name="compiler-warning-level-4-c4220"></a>Kompilátor upozornění (úroveň 4) C4220
+# <a name="compiler-warning-level-4-c4220"></a>Upozornění kompilátoru (úroveň 4) C4220
 
-VarArgs spáruje zbývající parametry
+VarArgs odpovídají zbývajícím parametrům
 
-V části výchozí rozšíření Microsoft (/Ze) ukazatel na funkci odpovídá ukazatel na funkci s podobné, ale proměnné, argumenty.
+Ve výchozím rozšíření Microsoft Extensions (/ze) je ukazatel na funkci shodný s ukazatelem na funkci s podobným argumentem, ale proměnnou.
 
 ## <a name="example"></a>Příklad
 
-```
+```c
 // C4220.c
 // compile with: /W4
 
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-Tyto odkazy se neshodují v rámci kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Tyto ukazatele se neshodují v rámci kompatibility ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

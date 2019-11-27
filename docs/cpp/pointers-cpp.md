@@ -1,7 +1,7 @@
 ---
-title: Pointers (C++)
+title: Ukazatele (C++)
 ms.date: 11/19/2019
-description: About raw pointers and smart pointers in Microsoft C++.
+description: O nezpracovaných ukazatelích a inteligentních ukazatelích v Microsoftu C++.
 helpviewer_keywords:
 - pointers (C++)
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
@@ -12,28 +12,28 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246420"
 ---
-# <a name="pointers-c"></a>Pointers (C++)
+# <a name="pointers-c"></a>Ukazatele (C++)
 
-A pointer is a variable that stores the memory address of an object. Pointers are used extensively in both C and C++ for three main purposes:
+Ukazatel je proměnná, která ukládá adresu paměti objektu. Ukazatele se používají rozsáhle v C i C++ pro tři hlavní účely:
 
-- to allocate new objects on the heap,
-- to pass functions to other functions
-- to iterate over elements in arrays or other data structures.
+- Chcete-li přidělit nové objekty haldě,
+- předání funkcí jiným funkcím
+- pro iteraci prvků v polích nebo jiných datových strukturách.
 
-In C-style programming, *raw pointers* are used for all these scenarios. However, raw pointers are the source of many serious programming errors. Therefore, their use is strongly discouraged except where they provide a significant performance benefit and there is no ambiguity as to which pointer is the *owning pointer* that is responsible for deleting the object. Modern C++ provides *smart pointers* for allocating objects, *iterators* for traversing data structures, and *lambda expressions* for passing functions. By using these language and library facilities instead of raw pointers, you will make your program safer, easier to debug, and simpler to understand and maintain. See [Smart pointers](smart-pointers-modern-cpp.md), [Iterators](../standard-library/iterators.md), and [Lambda expressions](lambda-expressions-in-cpp.md) for more information.
+V programování ve stylu jazyka C se *nezpracované ukazatele* používají pro všechny tyto scénáře. Nezpracované ukazatele jsou však zdrojem mnoha závažných chyb při programování. Proto jejich použití se důrazně nedoporučuje, s výjimkou případů, kdy poskytují významný přínos výkonu a nedochází k nejednoznačnosti, jako je ukazatel *vlastnící ukazatel* , který je zodpovědný za odstranění objektu. Moderní C++ poskytuje *inteligentní ukazatele* pro přidělování objektů, *iterátorů* pro procházení datových struktur a *výrazy lambda* pro předávání funkcí. Pomocí těchto funkcí jazyka a knihovny namísto nezpracovaných ukazatelů zajistíte bezpečnější a jednodušší ladění a pochopení a údržbu. Další informace najdete v tématu [inteligentní ukazatele](smart-pointers-modern-cpp.md), [iterátory](../standard-library/iterators.md)a [výrazy lambda](lambda-expressions-in-cpp.md) .
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-- [Raw pointers](raw-pointers.md)
-- [Const and volatile pointers](const-and-volatile-pointers.md)
-- [new and delete operators](new-and-delete-operators.md)
-- [Smart pointers](smart-pointers-modern-cpp.md)
-- [How to: Create and use unique_ptr instances](how-to-create-and-use-unique-ptr-instances.md)
-- [How to: Create and use shared_ptr instances](how-to-create-and-use-shared-ptr-instances.md)
-- [How to: Create and use weak_ptr instances](how-to-create-and-use-weak-ptr-instances.md)
-- [How to: Create and use CComPtr and CComQIPtr instances](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
+- [Nezpracované ukazatele](raw-pointers.md)
+- [Ukazatele const a volatile](const-and-volatile-pointers.md)
+- [operátory New a DELETE](new-and-delete-operators.md)
+- [Inteligentní ukazatele](smart-pointers-modern-cpp.md)
+- [Postupy: vytváření a používání instancí unique_ptr](how-to-create-and-use-unique-ptr-instances.md)
+- [Postupy: vytváření a používání instancí shared_ptr](how-to-create-and-use-shared-ptr-instances.md)
+- [Postupy: vytváření a používání instancí weak_ptr](how-to-create-and-use-weak-ptr-instances.md)
+- [Postupy: vytváření a používání instancí CComPtr a CComQIPtr](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
 
 ## <a name="see-also"></a>Viz také:
 
 [Iterátory](../standard-library/iterators.md)</br>
-[Lambda expressions](lambda-expressions-in-cpp.md)
+[Výrazy lambda](lambda-expressions-in-cpp.md)

@@ -15,9 +15,9 @@ ms.locfileid: "74246609"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
-To customize how class members are initialized, or to invoke functions when an object of your class is created, define a *constructor*. A constructor has the same name as the class and no return value. You can define as many overloaded constructors as needed to customize initialization in various ways. Typically, constructors have public accessibility so that code outside the class definition or inheritance hierarchy can create objects of the class. But you can also declare a constructor as **protected** or **private**.
+Chcete-li přizpůsobit způsob inicializace členů třídy nebo vyvolat funkce při vytvoření objektu třídy, definujte *konstruktor*. Konstruktor má stejný název jako třída a žádná návratová hodnota. Můžete definovat tolik přetížených konstruktorů, kolik jich je potřeba k přizpůsobení inicializace různým způsobem. Obvykle konstruktory mají veřejnou přístupnost, takže kód mimo definici třídy nebo Hierarchie dědičnosti může vytvořit objekty třídy. Můžete ale také deklarovat konstruktor jako **chráněný** nebo **soukromý**.
 
-Constructors can optionally take a member init list. This is a more efficient way to initialize class members than assigning values in the constructor body. The following example shows a class `Box` with three overloaded constructors. The last two use member init lists:
+Konstruktory mohou volitelně převzít seznam inicializace členů. Toto je efektivnější způsob, jak inicializovat členy třídy než přiřazení hodnot v těle konstruktoru. Následující příklad ukazuje třídu `Box` se třemi přetíženými konstruktory. Poslední dva seznamy pro inicializaci členů použití:
 
 ```cpp
 class Box {
@@ -46,7 +46,7 @@ private:
 };
 ```
 
-When you declare an instance of a class, the compiler chooses which constructor to invoke based on the rules of overload resolution:
+Při deklaraci instance třídy kompilátor zvolí, který konstruktor se má vyvolat, na základě pravidel řešení přetížení:
 
 ```cpp
 int main()
@@ -62,15 +62,15 @@ int main()
 }
 ```
 
-- Constructors may be declared as **inline**, [explicit](#explicit_constructors), **friend** or [constexpr](#constexpr_constructors).
-- A constructor can initialize an object that has been declared as **const**, **volatile** or **const volatile**. The object becomes **const** after the constructor completes.
-- To define a constructor in an implementation file, give it a qualified name as with any other member function: `Box::Box(){...}`.
+- Konstruktory mohou být deklarovány jako **inline**, [Explicit](#explicit_constructors), **Friend** nebo [constexpr](#constexpr_constructors).
+- Konstruktor může inicializovat objekt, který byl deklarován jako **const**, **volatile** nebo **const volatile**. Objekt se bude **const** po dokončení konstruktoru.
+- Chcete-li definovat konstruktor v implementačním souboru, poskytněte mu kvalifikovaný název jako u jakékoli jiné členské funkce: `Box::Box(){...}`.
 
-## <a name="member_init_list"></a> Member initializer lists
+## <a name="member_init_list"></a>Seznamy inicializátorů členů
 
-A constructor can optionally have a member initializer list, which initializes class members prior to execution of the constructor body. (Note that a member initializer list is not the same thing as an *initializer list* of type [std::initializer_list\<T>](../standard-library/initializer-list-class.md).)
+Konstruktor může volitelně mít seznam inicializátorů členů, který inicializuje členy třídy před spuštěním těla konstruktoru. (Všimněte si, že seznam inicializátorů členů není stejný jako *seznam inicializátorů* typu [std:: initializer_list\<t >](../standard-library/initializer-list-class.md).)
 
-Using a member initializer list is preferred over assigning values in the body of the constructor because it directly initializes the member. In the following example shows the member initializer list consists of all the **identifier(argument)** expressions after the colon:
+Použití seznamu inicializátoru členů je upřednostňováno při přiřazování hodnot v těle konstruktoru, protože přímo inicializuje člen. V následujícím příkladu ukazuje seznam inicializátorů členů se skládá ze všech výrazů **identifikátoru (Argument)** za dvojtečkou:
 
 ```cpp
     Box(int width, int length, int height)
@@ -78,15 +78,15 @@ Using a member initializer list is preferred over assigning values in the body o
     {}
 ```
 
-The identifier must refer to a class member; it is initialized with the value of the argument. The argument can be one of the constructor parameters, a function call or a [std::initializer_list\<T>](../standard-library/initializer-list-class.md).
+Identifikátor musí odkazovat na člena třídy; je inicializován s hodnotou argumentu. Argument může být jeden z parametrů konstruktoru, volání funkce nebo [std:: initializer_list\<t >](../standard-library/initializer-list-class.md).
 
-**const** members and members of reference type must be initialized in the member initializer list.
+v seznamu inicializátoru členů musí být inicializovány **konstantní** členy a členy typu odkazu.
 
-Calls to parameterized base class constructors should be made in the initializer list to ensure the base class is fully initialized prior to execution of the derived constructor.
+Volání parametrizovaných konstruktorů základní třídy by měla být provedena v seznamu inicializátorů, aby bylo zajištěno, že základní třída bude plně inicializována před spuštěním odvozeného konstruktoru.
 
-## <a name="default_constructors"></a> Default constructors
+## <a name="default_constructors"></a>Výchozí konstruktory
 
-*Default constructors* typically have no parameters, but they can have parameters with default values.
+*Výchozí konstruktory* nemají obvykle žádné parametry, ale mohou mít parametry s výchozími hodnotami.
 
 ```cpp
 class Box {
@@ -99,7 +99,7 @@ public:
 }
 ```
 
-Default constructors are one of the [special member functions](special-member-functions.md). If no constructors are declared in a class, the compiler provides an implicit **inline** default constructor.
+Výchozí konstruktory jsou jednou ze [speciálních členských funkcí](special-member-functions.md). Pokud nejsou deklarovány žádné konstruktory ve třídě, kompilátor poskytuje implicitní **vložený** výchozí konstruktor.
 
 ```cpp
 #include <iostream>
@@ -120,18 +120,18 @@ int main() {
 }
 ```
 
-If you rely on an implicit default constructor, be sure to initialize members in the class definition, as shown in the previous example. Without those initializers, the members would be uninitialized and the Volume() call would produce a garbage value. In general, it is good practice to initialize members in this way even when not relying on an implicit default constructor.
+Pokud spoléháte na implicitní výchozí konstruktor, nezapomeňte inicializovat členy v definici třídy, jak je znázorněno v předchozím příkladu. Bez těchto inicializátorů by členové byli neinicializovaná a volání Volume () by vytvořilo hodnotu uvolnění paměti. Obecně je vhodné inicializovat členy tímto způsobem i v případě, že se nespoléhá na implicitní výchozí konstruktor.
 
-You can prevent the compiler from generating an implicit default constructor by defining it as [deleted](#explicitly_defaulted_and_deleted_constructors):
+Kompilátoru můžete zabránit v generování implicitního výchozího konstruktoru tak, že ho definujete jako [Odstraněný](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
     // Default constructor
     Box() = delete;
 ```
 
-A compiler-generated default constructor will be defined as deleted if any class members are not default-constructible. For example, all members of class type, and their class-type members, must have a default constructor and destructors that are accessible. All data members of reference type, as well as **const** members must have a default member initializer.
+Výchozí konstruktor generovaný kompilátorem bude definován jako odstraněný, pokud některé členy třídy nejsou default-constructible. Například všichni členové typu třídy a jejich členové typu třídy musí mít výchozí konstruktor a destruktory, které jsou přístupné. Všechny datové členy typu odkazu, stejně jako členové **const** musí mít výchozí inicializátor členu.
 
-When you call a compiler-generated default constructor and try to use parentheses, a warning is issued:
+Při volání výchozího konstruktoru generovaného kompilátorem a pokusu o použití závorek je vydána výstraha:
 
 ```cpp
 class myclass{};
@@ -140,7 +140,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }
 ```
 
-Toto je příklad problému Most Vexing Parse. Protože příklad výrazu může být interpretován jako deklarace funkce nebo jako vyvolání výchozího konstruktoru a protože deklarace analyzátoru jazyka C++ mají přednost před ostatními možnostmi, výraz je považován za deklaraci funkce. For more information, see [Most Vexing Parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
+Toto je příklad problému Most Vexing Parse. Protože příklad výrazu může být interpretován jako deklarace funkce nebo jako vyvolání výchozího konstruktoru a protože deklarace analyzátoru jazyka C++ mají přednost před ostatními možnostmi, výraz je považován za deklaraci funkce. Další informace najdete v tématu [co je Vexing Parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
 
 Nejsou-li deklarovány žádné nevýchozí konstruktory, kompilátor neposkytuje výchozí konstruktor:
 
@@ -170,19 +170,19 @@ Pokud třída nemá žádný výchozí konstruktor, pole objektů této třídy 
 Box boxes[3]; // C2512: no appropriate default constructor available
 ```
 
-However, you can use a set of initializer lists to initialize an array of Box objects:
+Můžete však použít sadu inicializačních seznamů pro inicializaci pole objektů boxu:
 
 ```cpp
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 ```
 
-For more information, see [Initializers](initializers.md).
+Další informace naleznete v tématu [Inicializátory](initializers.md).
 
-## <a name="copy_and_move_constructors"></a> Copy constructors
+## <a name="copy_and_move_constructors"></a>Kopírovací konstruktory
 
-A *copy constructor* initializes an object by copying the member values from an object of the same type. If your class members are all simple types such as scalar values, the compiler-generated copy constructor is sufficient and you do not need to define your own. If your class requires more complex initialization, then you need to implement a custom copy constructor. For example, if a class member is a pointer then you need to define a copy constructor to allocate new memory and copy the values from the other's pointed-to object. The compiler-generated copy constructor simply copies the pointer, so that the new pointer still points to the other's memory location.
+*Kopírovací konstruktor* inicializuje objekt zkopírováním hodnot členů z objektu stejného typu. Pokud jsou členy vaší třídy všechny jednoduché typy, jako jsou skalární hodnoty, je kopírovací konstruktor generovaný kompilátorem dostačující a nemusíte definovat vlastní. Pokud vaše třída vyžaduje složitější inicializaci, je nutné implementovat vlastní kopírovací konstruktor. Například pokud je člen třídy ukazatel, je nutné definovat kopírovací konstruktor pro přidělení nové paměti a zkopírování hodnot z objektu s ukazatelem na objekt. Kopírovací konstruktor generovaný kompilátorem jednoduše zkopíruje ukazatel, aby nový ukazatel stále odkazoval na umístění v paměti.
 
-A copy constructor may have one of these signatures:
+Kopírovací konstruktor může mít jednu z těchto signatur:
 
 ```cpp
     Box(Box& other); // Avoid if possible--allows modification of other.
@@ -194,25 +194,25 @@ A copy constructor may have one of these signatures:
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-When you define a copy constructor, you should also define a copy assignment operator (=). For more information, see [Assignment](assignment.md) and [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md).
+Při definování kopírovacího konstruktoru byste také měli definovat operátor přiřazení kopie (=). Další informace najdete v tématu konstruktory [přiřazení](assignment.md) a [kopírování a operátory přiřazení pro kopírování](copy-constructors-and-copy-assignment-operators-cpp.md).
 
-You can prevent your object from being copied by defining the copy constructor as deleted:
+Můžete zabránit kopírování objektu definováním kopírovacího konstruktoru jako odstraněného:
 
 ```cpp
     Box (const Box& other) = delete;
 ```
 
-Attempting to copy the object produces error *C2280: attempting to reference a deleted function*.
+Pokus o zkopírování objektu vyvolá chybu *C2280: pokus o odkaz na odstraněnou funkci*.
 
-## <a name="move_constructors"></a> Move constructors
+## <a name="move_constructors"></a>Přesunout konstruktory
 
-A *move constructor* is a special member function that moves ownership of an existing object's data to a new variable without copying the original data. It takes an rvalue reference as its first parameter, and any additional parameters must have default values. Move constructors can significantly increase your program's efficiency when passing around large objects.
+*Konstruktor přesunu* je speciální členská funkce, která přesouvá vlastnictví dat existujícího objektu na novou proměnnou bez kopírování původních dat. Jako svůj první parametr převezme odkaz rvalue a všechny další parametry musí mít výchozí hodnoty. Konstruktory přesunutí můžou významně zvýšit efektivitu vašeho programu při předávání velkých objektů.
 
 ```cpp
 Box(Box&& other);
 ```
 
-The compiler chooses a move constructor in certain situations where the object is being initialized by another object of the same type that is about to be destroyed and no longer needs its resources. The following example shows one case when a move constructor is selected by overload resolution. In the constructor that calls `get_Box()`, the returned value is an *xvalue* (eXpiring value). It is not assigned to any variable and is therefore about to go out of scope. To provide motivation for this example, let's give Box a large vector of strings that represent its contents. Rather than copying the vector and its strings, the move constructor "steals" it from the expiring value "box" so that the vector now belongs to the new object. The call to `std::move` is all that's needed because both `vector` and `string` classes implement their own move constructors.
+Kompilátor zvolí konstruktor přesunu v určitých situacích, kdy je objekt inicializován jiným objektem stejného typu, který má být zničen a již nepotřebuje své prostředky. Následující příklad ukazuje jeden případ, když je vybrán konstruktor Move v rámci řešení přetížení. V konstruktoru, který volá `get_Box()`, vrácená hodnota je *hodnotu XValue* (hodnota vypršení platnosti). Není přiřazená k žádné proměnné a proto se chystá přejít mimo rozsah. Pro poskytnutí motivace pro tento příklad dejte krabici velký vektor řetězců, které představují jeho obsah. Spíše než zkopírování vektoru a jeho řetězců, konstruktor Move "" ukrást "z hodnoty" box ", aby vektor nyní patřil do nového objektu. Volání `std::move` je vše potřebné, protože třídy `vector` a `string` implementují své vlastní konstruktory Move.
 
 ```cpp
 #include <iostream>
@@ -279,15 +279,15 @@ int main()
 }
 ```
 
-If a class does not define a move constructor, the compiler generates an implicit one if there is no user-declared copy constructor, copy assignment operator, move assignment operator, or destructor. If no explicit or implicit move constructor is defined, operations that would otherwise use a move constructor use the copy constructor instead. If a class declares a move constructor or move assignment operator, the implicitly declared copy constructor is defined as deleted.
+Pokud třída nedefinuje konstruktor Move, kompilátor vygeneruje implicitní výjimku, pokud není k dispozici žádný uživatelem deklarovaný kopírovací konstruktor, kopírovat operátor přiřazení, operátor přiřazení přesunutí nebo destruktor. Pokud není definován explicitní nebo implicitní konstruktor Move, operace, které by jinak používaly konstruktor Move, místo toho používají konstruktor Copy. Pokud třída deklaruje konstruktor přesunu nebo operátor přiřazení přesunutí, implicitně deklarovaný konstruktor Copy je definován jako odstraněný.
 
-An implicitly declared move constructor is defined as deleted if any members that are class types lack a destructor or the compiler cannot determine which constructor to use for the move operation.
+Implicitně deklarovaný konstruktor Move je definován jako odstraněný, pokud některý z členů, kteří mají typy třídy chybí destruktor, nebo kompilátor nemůže určit, který konstruktor použít pro operaci přesunutí.
 
-For more information about how to write a non-trivial move constructor, see [Move Constructors and Move Assignment Operators (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+Další informace o tom, jak napsat konstruktor bez triviálního přesunu, naleznete v tématu [Move konstruktors and Move AssignmentC++Operators ()](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-## <a name="explicitly_defaulted_and_deleted_constructors"></a> Explicitly defaulted and deleted constructors
+## <a name="explicitly_defaulted_and_deleted_constructors"></a>Explicitně nastavené a odstraněné konstruktory
 
-You can explicitly *default* copy constructors, default constructors, move constructors, copy assignment operators, move assignment operators, and destructors. You can explicitly *delete* all of the special member functions.
+Můžete explicitně *výchozí* konstruktory kopírování, výchozí konstruktory, přesunout konstruktory, operátory přiřazení kopie, operátory přiřazení přesunu a destruktory. Můžete explicitně *Odstranit* všechny zvláštní členské funkce.
 
 ```cpp
 class Box
@@ -302,23 +302,23 @@ public:
 };
 ```
 
-For more information, see [Explicitly Defaulted and Deleted Functions](../cpp/explicitly-defaulted-and-deleted-functions.md).
+Další informace najdete v tématu [explicitně nastavené a odstraněné funkce](../cpp/explicitly-defaulted-and-deleted-functions.md).
 
-## <a name="constexpr_constructors"></a> constexpr constructors
+## <a name="constexpr_constructors"></a>konstruktory constexpr
 
-A constructor may be declared as [constexpr](constexpr-cpp.md) if
+Konstruktor se může deklarovat jako [constexpr](constexpr-cpp.md) , pokud
 
-- it is either declared as defaulted or else it satisfies all the conditions for [constexpr functions](constexpr-cpp.md#constexpr_functions) in general;
-- the class has no virtual base classes;
-- each of the parameters is a [literal type](trivial-standard-layout-and-pod-types.md#literal_types);
-- the body is not a function try-block;
-- all non-static data members and base class sub-objects are initialized;
-- if the class is (a) a union having variant members, or (b) has anonymous unions, only one of the union members is initialized;
-- every non-static data member of class type, and all base-class sub-objects have a constexpr constructor
+- je buď deklarován jako výchozí, nebo jinak splňuje všechny podmínky pro [funkce constexpr](constexpr-cpp.md#constexpr_functions) obecně;
+- Třída nemá žádné virtuální základní třídy;
+- Každý z parametrů je [typ literálu](trivial-standard-layout-and-pod-types.md#literal_types);
+- tělo není blok try funkce;
+- všechny nestatické datové členy a dílčí objekty základní třídy jsou inicializovány;
+- Pokud je třída (a) sjednocení, které mají členy variant, nebo (b) má anonymní sjednocení, inicializuje se pouze jeden člen sjednocení;
+- Každý nestatický datový člen typu třídy a všechny dílčí objekty základní třídy mají konstruktor constexpr.
 
-## <a name="init_list_constructors"></a> Initializer list constructors
+## <a name="init_list_constructors"></a>Konstruktory seznamu inicializátorů
 
-If a constructor takes a [std::initializer_list\<T\>](../standard-library/initializer-list-class.md) as its parameter, and any other parameters have default arguments, that constructor will be selected in overload resolution when the class is instantiated through direct initialization. You can use the initializer_list to initialize any member that can accept it. For example, assume the Box class (shown previously) has a `std::vector<string>` member `m_contents`. You can provide a constructor like this:
+Pokud konstruktor přebírá jako svůj parametr [std:: initializer_list\<t\>](../standard-library/initializer-list-class.md) a všechny ostatní parametry mají výchozí argumenty, tento konstruktor bude vybrán v řešení přetížení při vytváření instance pomocí přímé inicializace. Můžete použít initializer_list k inicializaci libovolného člena, který ho může přijmout. Předpokládejme například, že třída box (uvedená dříve) má `m_contents``std::vector<string>` členů. Můžete zadat konstruktor podobný tomuto:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -326,28 +326,28 @@ If a constructor takes a [std::initializer_list\<T\>](../standard-library/initia
 {}
 ```
 
-And then create Box objects like this:
+A pak vytvořte objekty box takto:
 
 ```cpp
     Box b{ "apples", "oranges", "pears" }; // or ...
     Box b2(initializer_list<string> { "bread", "cheese", "wine" }, 2, 4, 6);
 ```
 
-## <a name="explicit_constructors"></a> Explicit constructors
+## <a name="explicit_constructors"></a>Explicitní konstruktory
 
-If a class has a constructor with a single parameter, or if all parameters except one have a default value, the parameter type can be implicitly converted to the class type. For example, if the `Box` class has a constructor like this:
+Pokud má třída konstruktor s jedním parametrem, nebo pokud všechny parametry s výjimkou jednoho mají výchozí hodnotu, typ parametru lze implicitně převést na typ třídy. Například pokud má třída `Box` konstruktor podobný tomuto:
 
 ```cpp
 Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-It is possible to initialize a Box like this:
+Je možné inicializovat například toto pole:
 
 ```cpp
 Box b = 42;
 ```
 
-Or pass an int to a function that takes a Box:
+Nebo předejte int funkci, která má pole:
 
 ```cpp
 class ShippingOrder
@@ -363,15 +363,15 @@ private:
     ShippingOrder so(42, 10.8);
 ```
 
-Such conversions can be useful in some cases, but more often they can lead to subtle but serious errors in your code. As a general rule, you should use the **explicit** keyword on a constructor (and user-defined operators) to prevent this kind of implicit type conversion:
+Tyto převody mohou být užitečné v některých případech, ale častěji můžou vést k drobným, ale vážným chybám v kódu. Jako obecné pravidlo byste měli použít **explicitní** klíčové slovo pro konstruktor (a uživatelsky definované operátory), aby se zabránilo tomuto druhu implicitního převodu typu:
 
 ```cpp
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-When the constructor is explicit, this line causes a compiler error: `ShippingOrder so(42, 10.8);`.  For more information, see [User-Defined Type Conversions](../cpp/user-defined-type-conversions-cpp.md).
+Pokud je konstruktor explicitní, tento řádek způsobí chybu kompilátoru: `ShippingOrder so(42, 10.8);`.  Další informace naleznete v tématu [uživatelsky definované převody typů](../cpp/user-defined-type-conversions-cpp.md).
 
-## <a name="order_of_construction"></a> Order of construction
+## <a name="order_of_construction"></a>Pořadí konstrukce
 
 Konstruktor provádí svou práci v tomto pořadí:
 
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Konstruktor odvozené třídy vždy volá konstruktor základní třídy, aby se před provedením jakékoli další práce mohl spolehnout na zcela konstruované základní třídy. The base class constructors are called in order of derivation—for example, if `ClassA` is derived from `ClassB`, which is derived from `ClassC`, the `ClassC` constructor is called first, then the `ClassB` constructor, then the `ClassA` constructor.
+Konstruktor odvozené třídy vždy volá konstruktor základní třídy, aby se před provedením jakékoli další práce mohl spolehnout na zcela konstruované základní třídy. Konstruktory základní třídy jsou volány v pořadí odvození – například pokud `ClassA` je odvozena z `ClassB`, která je odvozena od `ClassC`, je nejprve volán konstruktor `ClassC`, poté konstruktor `ClassB`, poté konstruktor `ClassA`.
 
 Pokud základní třída nemá výchozí konstruktor, musíte zadat parametry konstruktoru základní třídy v konstruktoru odvozené třídy:
 
@@ -478,7 +478,7 @@ Pokud konstruktor vyvolá výjimku, pořadí zničení je obrácené pořadí ko
 
 1. Pokud je konstruktor bez delegování, jsou zničeny všechny úplně vytvořené objekty a členy. Vzhledem k tomu, že objekt samotný není úplně vytvořen, není spuštěn destruktor.
 
-### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Constructors for classes that have multiple inheritance
+### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Konstruktory pro třídy, které mají vícenásobnou dědičnost
 
 Pokud je třída odvozena z více základních tříd, konstruktory základní třídy jsou vyvolány v pořadí, ve kterém jsou uvedeny v deklaraci odvozené třídy:
 
@@ -520,9 +520,9 @@ BaseClass3 ctor
 DerivedClass ctor
 ```
 
-## <a name="delegating_constructors"></a> Delegating constructors
+## <a name="delegating_constructors"></a>Delegování konstruktorů
 
-A *delegating constructor* calls a different constructor in the same class to do some of the work of initialization. This is useful when you have multiple constructors that all have to perform similar work. You can write the main logic in one constructor and invoke it from others. In the following trivial example, Box(int) delegates its work to Box(int,int,int):
+*Konstruktor delegování* volá jiný konstruktor ve stejné třídě, aby bylo možné provést některé operace inicializace. To je užitečné v případě, že máte více konstruktorů, které musí provádět podobné práce. Můžete napsat hlavní logiku v jednom konstruktoru a vyvolat ji od ostatních. V následujícím triviálním příkladu box (int) deleguje svou práci do boxu (int, int, int):
 
 ```cpp
 class Box {
@@ -542,11 +542,11 @@ public:
 };
 ```
 
-Objekt vytvořený pomocí konstruktorů je plně inicializován ihned po dokončení jakéhokoli konstruktoru. For more information, see [Delegating Constructors](../cpp/delegating-constructors.md).
+Objekt vytvořený pomocí konstruktorů je plně inicializován ihned po dokončení jakéhokoli konstruktoru. Další informace naleznete v tématu [delegování konstruktorů](../cpp/delegating-constructors.md).
 
-## <a name="inheriting_constructors"></a> Inheriting constructors (C++11)
+## <a name="inheriting_constructors"></a>Dědění konstruktorů (C++ 11)
 
-A derived class can inherit the constructors from a direct base class by using a **using** declaration as shown in the following example:
+Odvozená třída může dědit konstruktory z přímé základní třídy pomocí deklarace **using** , jak je znázorněno v následujícím příkladu:
 
 ```cpp
 #include <iostream>
@@ -597,11 +597,11 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 and later**: The **using** statement in **/std:c++17** mode brings into scope all constructors from the base class except those that have an identical signature to constructors in the derived class. In general, it is best to use inheriting constructors when the derived class declares no new data members or constructors. See also [Improvements in Visual Studio 2017 version 15.7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
+**Visual Studio 2017 a novější**: příkaz **using** v **/std: režim c++ 17** přináší do rozsahu všechny konstruktory ze základní třídy s výjimkou těch, které mají stejný podpis na konstruktory v odvozené třídě. Obecně je nejvhodnější použít dědění konstruktorů, pokud odvozená třída deklaruje žádné nové datové členy nebo konstruktory. Viz také [vylepšení v aplikaci Visual Studio 2017 verze 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
 
 ::: moniker-end
 
-A class template can inherit all the constructors from a type argument if that type specifies a base class:
+Šablona třídy může dědit všechny konstruktory z argumentu typu, pokud tento typ Určuje základní třídu:
 
 ```cpp
 template< typename T >
@@ -611,11 +611,11 @@ class Derived : T {
 };
 ```
 
-A deriving class cannot inherit from multiple base classes if those base classes have constructors that have an identical signature.
+Odvozená třída nemůže dědit z více základních tříd, pokud mají tyto základní třídy konstruktory, které mají stejný podpis.
 
-## <a name="constructors_in_composite_classes"></a> Constructors and composite classes
+## <a name="constructors_in_composite_classes"></a>Konstruktory a složené třídy
 
-Classes that contain class-type members are known as *composite classes*. Při vytvoření člena typu třídy pro složenou třídu je konstruktor volán před vlastním konstruktorem třídy. Pokud obsažená třída nemá výchozí konstruktor, musíte použít seznam inicializace v konstruktoru složené třídy. In the earlier `StorageBox` example, if you change the type of the `m_label` member variable to a new `Label` class, you must call both the base class constructor and initialize the `m_label` variable in the `StorageBox` constructor:
+Třídy, které obsahují členy typu třídy, jsou označovány jako *složené třídy*. Při vytvoření člena typu třídy pro složenou třídu je konstruktor volán před vlastním konstruktorem třídy. Pokud obsažená třída nemá výchozí konstruktor, musíte použít seznam inicializace v konstruktoru složené třídy. V předchozím příkladu `StorageBox`, pokud změníte typ `m_label` členské proměnné na novou třídu `Label`, je nutné volat konstruktor základní třídy a inicializovat `m_label` proměnnou v konstruktoru `StorageBox`:
 
 ```cpp
 class Label {
@@ -648,10 +648,10 @@ int main(){
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-- [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md)
-- [Move constructors and move assignment operators](move-constructors-and-move-assignment-operators-cpp.md)
-- [Delegating constructors](delegating-constructors.md)
+- [Kopírovací konstruktory a operátory přiřazení pro kopírování](copy-constructors-and-copy-assignment-operators-cpp.md)
+- [Konstruktory přesunutí a operátory přiřazení přesunutí](move-constructors-and-move-assignment-operators-cpp.md)
+- [Delegování konstruktorů](delegating-constructors.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[Classes and structs](classes-and-structs-cpp.md)
+[Třídy a struktury](classes-and-structs-cpp.md)

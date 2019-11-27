@@ -15,15 +15,15 @@ ms.locfileid: "74398773"
 ---
 # <a name="df"></a>DF
 
-Allocates and optionally initializes 6 bytes of storage for each *initializer*. **DF** is a synonym of [FWORD](../../assembler/masm/fword.md).
+Přidělí a případně inicializuje 6 bajtů úložiště pro každý *inicializátor*. **DF** je synonymum pro [FWORD](../../assembler/masm/fword.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> ⟦*name*⟧ **DF** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*Name*⟧ **DF** *inicializátor* ⟦ __,__ *inicializátor* ... ⟧
 
 ## <a name="remarks"></a>Poznámky
 
-Also can be used as a type specifier anywhere a type is legal.
+Lze také použít jako specifikátor typu kdekoli je typ právní.
 
 ## <a name="see-also"></a>Viz také:
 

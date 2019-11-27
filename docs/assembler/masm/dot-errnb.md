@@ -15,11 +15,11 @@ ms.locfileid: "74398332"
 ---
 # <a name="errnb"></a>.ERRNB
 
-Generates an error if *textitem* is not blank.
+Vygeneruje chybu, pokud není *textitem* prázdné.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **.ERRNB** *textitem* ⟦ __,__ *message*⟧
+> **. ERRNB** *textitem* ⟦ __,__ *zpráva*⟧
 
 ## <a name="see-also"></a>Viz také:
 

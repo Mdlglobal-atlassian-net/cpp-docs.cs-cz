@@ -17,12 +17,12 @@ ms.locfileid: "74395471"
 ---
 # <a name="operator-this"></a>THIS – operátor
 
-Returns an operand of specified *type* whose offset and segment values are equal to the current location counter value.
+Vrátí operand zadaného *typu* , jehož hodnoty posunutí a segment se rovnají hodnotě čítače aktuální umístění.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **THIS** *type*
+> **Tento** *typ*
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

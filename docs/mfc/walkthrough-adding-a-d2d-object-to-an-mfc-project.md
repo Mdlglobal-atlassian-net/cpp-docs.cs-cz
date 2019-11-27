@@ -38,7 +38,7 @@ K dokončení tohoto Názorného postupu musíte mít nainstalovanou aplikaci Vi
 
 1. Použijte **Průvodce aplikací knihovny MFC** k vytvoření aplikace MFC. Pokyny k otevření Průvodce pro vaši verzi sady Visual Studio najdete v tématu [Návod: použití nových ovládacích prvků prostředí MFC](walkthrough-using-the-new-mfc-shell-controls.md) .
 
-1. Do pole **název** zadejte *MFCD2DWalkthrough*. Zvolte **OK**.
+1. Do pole **název** zadejte *MFCD2DWalkthrough*. Klikněte na **tlačítko OK**.
 
 1. V **Průvodci aplikací knihovny MFC**zvolte možnost **Dokončit** beze změny nastavení.
 

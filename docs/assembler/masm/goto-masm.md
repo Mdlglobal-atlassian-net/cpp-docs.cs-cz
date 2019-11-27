@@ -15,16 +15,16 @@ ms.locfileid: "74397486"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
 
-Transfers assembly to the line marked **:** _macrolabel_.
+Převede sestavení na řádek s označením **:** _macrolabel_.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **GOTO** *macrolabel*
+> **Goto** *macrolabel*
 
 ## <a name="remarks"></a>Poznámky
 
-**GOTO** is permitted only inside [MACRO](macro.md), [FOR](for-masm.md), [FORC](forc.md), [REPEAT](repeat.md), and [WHILE](while-masm.md) blocks. The *macrolabel* target must be the only directive on the line and must be preceded by a leading colon.
+**Příkaz goto** je povolen pouze uvnitř [makra](macro.md), [pro](for-masm.md), [hrnuté](forc.md), [Repeat](repeat.md)a [while](while-masm.md) . Cílem *macrolabel* musí být jediná direktiva na řádku a musí předcházet přední dvojtečka.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

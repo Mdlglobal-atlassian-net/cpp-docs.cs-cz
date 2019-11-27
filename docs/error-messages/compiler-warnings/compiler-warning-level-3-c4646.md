@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4646
+title: Upozornění kompilátoru (úroveň 3) C4646
 ms.date: 11/04/2016
 f1_keywords:
 - C4646
@@ -13,13 +13,13 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189382"
 ---
-# <a name="compiler-warning-level-3-c4646"></a>Compiler Warning (level 3) C4646
+# <a name="compiler-warning-level-3-c4646"></a>Upozornění kompilátoru (úroveň 3) C4646
 
-function declared with __declspec(noreturn) has non-void return type
+funkce deklarovaná pomocí __declspec (Return) má návratový typ, který není void.
 
-A function marked with the [noreturn](../../cpp/noreturn.md) `__declspec` modifier should have a [void](../../cpp/void-cpp.md) return type.
+Funkce označená modifikátorem `__declspec` [return](../../cpp/noreturn.md) by měla mít návratový typ [void](../../cpp/void-cpp.md) .
 
-The following sample generates C4646:
+Následující ukázka generuje C4646:
 
 ```cpp
 // C4646.cpp

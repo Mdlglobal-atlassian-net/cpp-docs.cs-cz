@@ -36,7 +36,7 @@ Pokyny pro vytvoření nového projektu se liší v závislosti na verzi sady Vi
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Vytvoření statické knihovny UWP v aplikaci Visual Studio 2017 nebo Visual Studio 2015
 
-1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**. V **části C++ Visual** > **Windows Universal** zvolit **statickou knihovnu (Universal Windows)** .
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**. V **části C++ Visual** > **Windows Universal** zvolit **statickou knihovnu (Universal Windows)** .
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro projekt a poté zvolte možnost **vlastnosti**. V dialogovém okně **vlastnosti** na stránce **Vlastnosti konfigurace** > **CC++ nebo** nastavte **rozšíření spotřebovávat prostředí Windows Runtime** na **Ano (/ZW)** .
 

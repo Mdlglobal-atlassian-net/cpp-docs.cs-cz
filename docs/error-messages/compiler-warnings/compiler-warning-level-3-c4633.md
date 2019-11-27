@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4633
+title: Upozornění kompilátoru (úroveň 3) C4633
 ms.date: 11/04/2016
 f1_keywords:
 - C4633
@@ -13,13 +13,13 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189156"
 ---
-# <a name="compiler-warning-level-3-c4633"></a>Compiler Warning (level 3) C4633
+# <a name="compiler-warning-level-3-c4633"></a>Upozornění kompilátoru (úroveň 3) C4633
 
-XML document comment target: error:  reason
+Cíl komentáře dokumentu XML: Chyba: důvod
 
-A name passed to the [\<param>](../../build/reference/param-visual-cpp.md) tag was not found by the compiler.
+V kompilátoru nebyl nalezen název předaný značce [\<param >](../../build/reference/param-visual-cpp.md) .
 
-The following sample generates C4633:
+Následující ukázka generuje C4633:
 
 ```cpp
 // C4633.cpp

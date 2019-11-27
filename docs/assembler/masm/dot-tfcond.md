@@ -15,7 +15,7 @@ ms.locfileid: "74397875"
 ---
 # <a name="tfcond"></a>.TFCOND
 
-Toggles listing of false conditional blocks.
+Přepíná výpis nepravdivého podmíněného bloku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,4 @@ Toggles listing of false conditional blocks.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

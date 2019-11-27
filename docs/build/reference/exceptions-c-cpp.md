@@ -1,5 +1,5 @@
 ---
-title: DLL loading exception codes (C/C++)
+title: DLL – načítání kódů výjimek (CC++/)
 ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
@@ -21,13 +21,13 @@ ms.locfileid: "74243855"
 ---
 # <a name="exceptions-cc"></a>Výjimky (C/C++)
 
-Two exception codes can be raised when failures are encountered:
+Pokud dojde k chybám, lze vyvolat dva kódy výjimek:
 
-- For a **LoadLibrary** failure
+- Pro chybu **LoadLibrary**
 
-- For a **GetProcAddress** failure
+- Pro chybu **GetProcAddress**
 
-Here is the exception information:
+Tady jsou informace o výjimce:
 
 ```
 //
@@ -37,11 +37,11 @@ Here is the exception information:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-The exception codes thrown are the standard VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) and VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) values. The exception passes a pointer to a **DelayLoadInfo** structure in the LPDWORD value that can be retrieved by **GetExceptionInformation** in the [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation[0] field.
+K vyvolaným kódům výjimek patří hodnoty Standard VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) a VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Výjimka předá ukazatel na strukturu **DelayLoadInfo** v hodnotě LPDWORD, kterou lze načíst **GetExceptionInformation** ve struktuře [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) , v poli ExceptionInformation [0].
 
-Additionally, if the incorrect bits are set in the grAttrs field, the exception ERROR_INVALID_PARAMETER is thrown. This exception is, for all intents and purposes, fatal.
+Kromě toho, pokud jsou v poli grAttrs nastaveny nesprávné bity, je vyvolána výjimka ERROR_INVALID_PARAMETER. Tato výjimka je pro všechny záměry a účely závažná.
 
-See [Structure and Constant Definitions](structure-and-constant-definitions.md) for more information.
+Další informace najdete v tématu [Struktura a definice konstant](structure-and-constant-definitions.md) .
 
 ## <a name="see-also"></a>Viz také:
 

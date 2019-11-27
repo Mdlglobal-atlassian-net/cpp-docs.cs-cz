@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397476"
 ---
-# <a name="group-32-bit-masm"></a>GROUP (32-bit MASM)
+# <a name="group-32-bit-masm"></a>Skupina (32-bit MASM)
 
-Add the specified *segments* to the group called *name*. (32-bit MASM only.)
+Přidejte zadané *segmenty* do skupiny s názvem *název*. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **GROUP** *segment* ⟦ __,__ *segment* ...⟧
+> *názvový* *segment* skupiny ⟦ __,__ *segment* ... ⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

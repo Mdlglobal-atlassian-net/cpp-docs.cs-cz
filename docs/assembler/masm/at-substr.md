@@ -13,14 +13,14 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398917"
 ---
-# <a name="substr"></a>\@SubStr
+# <a name="substr"></a>\@substr
 
-A macro function that returns a substring starting at *position*.
+Funkce makra, která vrací dílčí řetězec začínající na *pozici*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@SubStr(** *string* __,__ *position* ⟦ __,__ *length*⟧ **)**
+> **\@substr (** *řetězec* __,__ *pozice* ⟦ __,__ *Délka*⟧ **)**
 
 ## <a name="see-also"></a>Viz také:
 
-[Symbols reference](symbols-reference.md)
+[Reference k symbolům](symbols-reference.md)

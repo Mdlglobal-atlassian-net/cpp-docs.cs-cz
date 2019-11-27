@@ -15,16 +15,16 @@ ms.locfileid: "74397333"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-Informs the linker that the current module should be linked with *libraryname*.
+Informuje linker, že aktuální modul by měl být propojen s *knihovnou*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **INCLUDELIB** *libraryname*
+> **INCLUDELIB –** *Knihovna*
 
 ## <a name="remarks"></a>Poznámky
 
-The *libraryname* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
+*Knihovna* musí být uzavřená v lomených závorkách, pokud obsahuje zpětné lomítko, středník, symbol větší než, symbol menší než, jednoduché uvozovky nebo dvojité uvozovky.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

@@ -15,13 +15,13 @@ ms.locfileid: "74246381"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Omezení obslužných rutin ukončení
 
-You cannot use a **goto** statement to jump into a **__try** statement block or a **__finally** statement block. Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. (You can, however, jump out of a **__try** statement block.) Also, you cannot nest an exception handler or termination handler inside a **__finally** block.
+Pomocí příkazu **goto** nelze přejít do bloku příkazu **__try** nebo do bloku příkazu **__finally** . Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. (Můžete však přejít z bloku příkazu **__try** .) Nemůžete také vnořit obslužnou rutinu výjimky nebo obslužné rutiny ukončení uvnitř bloku **__finally** .
 
-In addition, some kinds of code permitted in a termination handler produce questionable results, so you should use them with caution, if at all. One is a **goto** statement that jumps out of a **__finally** statement block. If the block is executing as part of normal termination, nothing unusual happens. But if the system is unwinding the stack, that unwinding stops, and the current function gains control as if there were no abnormal termination.
+Kromě toho některé druhy kódu, které jsou povoleny v obslužné rutině ukončení, vyvolávají problematické výsledky, takže je byste měli použít s opatrností, pokud vůbec. Jedním z nich je příkaz **goto** , který přeskočí z bloku příkazu **__finally** . Pokud je blok spuštěn jako součást normálního ukončení, nedošlo k žádné neobvyklé situaci. Pokud však systém odvíjí od zásobníku, toto zrušení se zastaví a aktuální funkce získá řízení, jako kdyby nedocházelo k abnormálnímu ukončení.
 
-A **return** statement inside a **__finally** statement block presents roughly the same situation. Control returns to the immediate caller of the function containing the termination handler. If the system was unwinding the stack, this process is halted, and the program proceeds as if there had been no exception raised.
+Příkaz **return** v bloku příkazu **__finally** prezentuje zhruba stejnou situaci. Řízení se vrátí bezprostřednímu volajícímu funkce obsahující obslužnou rutinu ukončení. Pokud systém odvíjí zásobník, tento proces je zastaven a program pokračuje, jako kdyby nebyla vyvolána žádná výjimka.
 
 ## <a name="see-also"></a>Viz také:
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -1,6 +1,6 @@
 ---
-title: Brace initialization for classes, structs, and unions
-description: Use brace initialization with any C++ class, struct or union
+title: Inicializace složené závorky pro třídy, struktury a sjednocení
+description: Použití inicializace složené závorky s C++ libovolnou třídou, strukturou nebo sjednocením
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
 ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
@@ -10,9 +10,9 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246506"
 ---
-# <a name="brace-initialization"></a>Brace initialization
+# <a name="brace-initialization"></a>Inicializace složenými závorkami
 
-It is not always necessary to define a constructor for a class, especially ones that are relatively simple. Users can initialize objects of a class or struct by using uniform initialization, as shown in the following example:
+Není vždy nutné definovat konstruktor pro třídu, zejména ty, které jsou relativně jednoduché. Uživatelé mohou inicializovat objekty třídy nebo struktury pomocí jednotné inicializace, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 // no_constructor.cpp
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. If a type has a default constructor, either implicitly or explicitly declared, you can use default brace initialization (with empty braces). For example, the following class may be initialized by using both default and non-default brace initialization:
+Všimněte si, že pokud třída nebo struktura nemá žádný konstruktor, zadejte prvky seznamu v pořadí, ve kterém jsou členy deklarovány ve třídě. Pokud třída má konstruktor, poskytněte prvky v pořadí parametrů. Pokud má typ výchozí konstruktor, buď implicitně nebo explicitně deklarovaný, můžete použít výchozí inicializaci složené závorky (s prázdnými závorkami). Například následující třída může být inicializována pomocí výchozí a nevýchozí inicializace složené závorky:
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-If a class has non-default constructors, the order in which class members appear in the brace initializer is the order in which the corresponding parameters appear in the constructor, not the order in which the members are declared (as with `class_a` in the previous example). Otherwise, if the type has no declared constructor, the order in which the members appear in the brace initializer is the same as the order in which they are declared; in this case, you can initialize as many of the public members as you wish, but you cannot skip any member. The following example shows the order that's used in brace initialization when there is no declared constructor:
+Pokud třída obsahuje jiné než výchozí konstruktory, pořadí, ve kterém jsou členy třídy zobrazeny v inicializátoru závorky, je pořadí, ve kterém jsou příslušné parametry zobrazeny v konstruktoru, nikoli pořadí, ve kterém jsou členy deklarovány (stejně jako u `class_a` v předchozím příkladu). V opačném případě, pokud typ nemá žádný deklarovaný konstruktor, pořadí, ve kterém se členy objeví v inicializátoru závorky, je stejné jako pořadí, ve kterém jsou deklarovány. v tomto případě můžete inicializovat libovolný počet veřejných členů, jak si přejete, ale nemůžete přeskočit žádného člena. Následující příklad ukazuje pořadí, které je použito při inicializaci závorky, pokud neexistuje žádný deklarovaný konstruktor:
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-If the default constructor is explicitly declared but marked as deleted, default brace initialization cannot be used:
+Pokud je výchozí konstruktor explicitně deklarován, ale označen jako odstraněný, nelze použít výchozí inicializaci složené závorky:
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+Inicializaci složené závorky můžete použít všude, kde se obvykle provádí inicializace – například jako parametr funkce nebo návratová hodnota nebo s klíčovým slovem **New** :
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,18 +136,18 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-## <a name="initializer_list-constructors"></a>initializer_list constructors
+## <a name="initializer_list-constructors"></a>initializer_list konstruktory
 
-The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. You can construct an initializer_list by using brace initialization:
+[Třída initializer_list](../standard-library/initializer-list-class.md) představuje seznam objektů zadaného typu, které lze použít v konstruktoru, a v jiných kontextech. Initializer_list lze vytvořit pomocí inicializace závorky:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+>  Chcete-li použít tuto třídu, je nutné zahrnout hlavičku [\<initializer_list >](../standard-library/initializer-list.md) .
 
-An `initializer_list` can be copied. In this case, the members of the new list are references to the members of the original list:
+`initializer_list` lze zkopírovat. V tomto případě jsou členové nového seznamu odkazy na členy původního seznamu:
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -156,7 +156,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-The standard library container classes, and also `string`, `wstring`, and `regex`, have `initializer_list` constructors. The following examples show how to do brace initialization with these constructors:
+Třídy kontejnerů standardní knihovny a také `string`, `wstring`a `regex`, mají `initializer_list` konstruktory. Následující příklady ukazují, jak provést inicializaci složené závorky pomocí těchto konstruktorů:
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };

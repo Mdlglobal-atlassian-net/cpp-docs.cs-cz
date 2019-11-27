@@ -15,7 +15,7 @@ ms.locfileid: "74398152"
 ---
 # <a name="listmacro"></a>.LISTMACRO
 
-Starts listing of macro expansion statements that generate code or data.
+Spustí výpis rozšiřujících příkazů makra, které generují kód nebo data.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,8 +23,8 @@ Starts listing of macro expansion statements that generate code or data.
 
 ## <a name="remarks"></a>Poznámky
 
-Toto nastavení je výchozí. Same as [.XALL](../../assembler/masm/dot-xall.md).
+Toto nastavení je výchozí. Stejné jako [. XALL](../../assembler/masm/dot-xall.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

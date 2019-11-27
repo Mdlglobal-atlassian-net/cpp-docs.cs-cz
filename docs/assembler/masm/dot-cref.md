@@ -15,7 +15,7 @@ ms.locfileid: "74398539"
 ---
 # <a name="cref"></a>.CREF
 
-Enables listing of symbols in the symbol portion of the symbol table and browser file.
+Povoluje výpis symbolů v části symbolu v tabulce symbolů a souboru prohlížeče.
 
 ## <a name="syntax"></a>Syntaxe
 

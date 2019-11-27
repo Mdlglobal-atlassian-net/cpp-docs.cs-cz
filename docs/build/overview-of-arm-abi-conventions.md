@@ -55,11 +55,11 @@ Použití instrukcí v oddělení IT v kódu pro palec – 2 není povoleno s v�
 
    |16bitové operační kódy|Třída|Omezení|
    |---------------------|-----------|------------------|
-   |MOV, MVN|Přesunutí|RM! = počítač, RD! = počítač|
+   |MOV, MVN|Přesunout|RM! = počítač, RD! = počítač|
    |LDR, LDR[S]B, LDR[S]H|Načíst z paměti|Ale nejedná se o literálové formuláře LDR.|
    |STR, PARAMETRU STRB, STRH|Ukládat do paměti||
    |ADD, ADC, RSB, MEZIPAMĚŤ SOFTWAROVÉ SBĚRNICE, SUB|Přidat nebo odečíst|Ale ne doplňky/SUB SP, SP, imm7 Forms<br /><br /> RM! = PC, RDN! = PC, RDM! = PC|
-   |CMP, CMN|Porovnán|RM! = PC, RN! = počítač|
+   |CMP, CMN|Porovnat|RM! = PC, RN! = počítač|
    |MUL|Hodnotou||
    |ASR, LSL, LSR, ROR|Bitový posun||
    |A, BIC, EOR, ORR, TST|Bitové aritmetické operace||
@@ -75,7 +75,7 @@ Použití instrukcí celočíselného dělení SDIV a UDIV je plně podporované
 
 Procesor ARM podporuje 16 celých celočíselných registrů:
 
-|Registr|Permanentní?|Role|
+|Registrace|Permanentní?|Role|
 |--------------|---------------|----------|
 |r0|Permanentní|Parametr, Result, Scrat registr 1|
 |r1|Permanentní|Parametr, Result, Scrat zápis 2|
@@ -181,7 +181,7 @@ Registry VFP se nepoužívají pro funkce variadické a pravidla 1 fáze C a 2 j
 
 Hodnoty celočíselného typu jsou vraceny v r0, volitelně rozšířené na R1 pro hodnoty 64 vracené zpět. Hodnoty VFP/NEON typu s plovoucí desetinnou čárkou nebo SIMD jsou v případě potřeby vráceny v S0, d0 nebo Q0.
 
-## <a name="stack"></a>Rámec
+## <a name="stack"></a>Zásobník
 
 Zásobník musí zůstat zarovnaný na 4 bajtech a musí být zarovnán na 8 bajtů na hranici funkce. Tato akce je nutná k podpoře častého použití propojených operací s 64 bitovými proměnnými zásobníku. EABI ARM uvádí, že zásobník je 8 bajtů zarovnaný na jakémkoli veřejném rozhraní. V případě konzistence se systém Windows na ARM vytvoří jako veřejné rozhraní a považuje se za hranice funkce.
 

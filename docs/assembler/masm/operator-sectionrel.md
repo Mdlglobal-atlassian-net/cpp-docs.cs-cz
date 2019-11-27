@@ -17,16 +17,16 @@ ms.locfileid: "74396488"
 ---
 # <a name="operator-sectionrel"></a>SECTIONREL – operátor
 
-Returns the section relative offset of expression relative to the section containing the target in the final executable.
+Vrátí relativní posun výrazu vzhledem k oddílu, který obsahuje cíl v konečném spustitelném souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **SECTIONREL** *expression*
+> *Výraz* SECTIONREL –
 
 ## <a name="remarks"></a>Poznámky
 
-**SECTIONREL** is available only with COFF object emission.
+**SECTIONREL –** je k dispozici pouze s emisemi objektů COFF.
 
 ## <a name="see-also"></a>Viz také:
 
-[Operators reference](operators-reference.md)
+[Reference operátorů](operators-reference.md)

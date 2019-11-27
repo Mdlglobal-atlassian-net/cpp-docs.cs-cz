@@ -15,16 +15,16 @@ ms.locfileid: "74397337"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
 
-Inserts source code from the source file given by *filename* into the current source file during assembly.
+Vloží zdrojový kód ze zdrojového souboru zadaného parametrem *filename* do aktuálního zdrojového souboru během sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **INCLUDE** *filename*
+> **Zahrnout** *název souboru*
 
 ## <a name="remarks"></a>Poznámky
 
-The *filename* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
+*Název souboru* musí být uzavřený v lomených závorkách, pokud obsahuje zpětné lomítko, středník, symbol větší než, menší než symbol, jednoduché uvozovky nebo dvojité uvozovky.
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

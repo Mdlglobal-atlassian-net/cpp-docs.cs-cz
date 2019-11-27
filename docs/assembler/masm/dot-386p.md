@@ -15,7 +15,7 @@ ms.locfileid: "74398722"
 ---
 # <a name="386p-32-bit-masm"></a>.386P (32-bit MASM)
 
-Enables assembly of all instructions (including privileged) for the 80386 processor; disables assembly of instructions introduced with later processors. (32-bit MASM only.)
+Povolí sestavení všech instrukcí (včetně privilegovaných) pro procesor 80386. zakáže sestavení instrukcí představených s novějšími procesory. (jenom 32-bitová MASM.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,7 +23,7 @@ Enables assembly of all instructions (including privileged) for the 80386 proces
 
 ## <a name="remarks"></a>Poznámky
 
-Also enables 80387 instructions.
+Také povoluje 80387 instrukcí.
 
 ## <a name="see-also"></a>Viz také:
 

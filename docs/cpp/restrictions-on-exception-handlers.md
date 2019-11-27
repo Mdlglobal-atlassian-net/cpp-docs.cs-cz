@@ -14,7 +14,7 @@ ms.locfileid: "74245149"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Omezení obslužných rutin výjimek
 
-The principal limitation to using exception handlers in code is that you cannot use a **goto** statement to jump into a **__try** statement block. Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. You can jump out of a **__try** statement block and nest exception handlers as you choose.
+Hlavním omezením pro použití obslužných rutin výjimek v kódu je, že nelze použít příkaz **goto** pro přechod do bloku příkazu **__try** . Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. Můžete přejít ven z bloku příkazu **__try** a vnořovat obslužné rutiny výjimek, jak zvolíte.
 
 ## <a name="see-also"></a>Viz také:
 

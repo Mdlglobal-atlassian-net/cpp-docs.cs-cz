@@ -15,12 +15,12 @@ ms.locfileid: "74394612"
 ---
 # <a name="real8"></a>REAL8
 
-Allocates and optionally initializes a double-precision (8-byte) floating-point number for each *initializer*.
+Přidělí a případně inicializuje číslo s plovoucí desetinnou čárkou s dvojitou přesností pro každý *inicializátor*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name* **REAL8** *initializer* ⟦ __,__ *initializer* ...⟧
+> *název* **REAL8** *inicializátoru* ⟦ __,__ *inicializátor* ... ⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)

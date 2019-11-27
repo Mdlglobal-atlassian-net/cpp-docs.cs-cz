@@ -15,16 +15,16 @@ ms.locfileid: "74397421"
 ---
 # <a name="ifdef"></a>IFDEF
 
-Grants assembly if *name* is a previously defined label, variable, or symbol.
+Udělí sestavení, je-li *název* dříve definovaný popisek, proměnná nebo symbol.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **IFDEF** *name*
+> *Název* ifdef
 
 ## <a name="remarks"></a>Poznámky
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Úplnou syntaxi naleznete v tématu [if](../../assembler/masm/if-masm.md) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](directives-reference.md)
+[Odkazy na direktivy](directives-reference.md)

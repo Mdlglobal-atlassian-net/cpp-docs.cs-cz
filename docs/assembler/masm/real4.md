@@ -15,12 +15,12 @@ ms.locfileid: "74394626"
 ---
 # <a name="real4"></a>REAL4
 
-Allocates and optionally initializes a single-precision (4-byte) floating-point number for each *initializer*.
+Přidělí a případně inicializuje číslo s plovoucí desetinnou čárkou s jednoduchou přesností pro každý *inicializátor*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *name*  **REAL4** *initializer* ⟦ __,__ *initializer* ...⟧
+> *název*  **REAL4** *inicializátoru* ⟦ __,__ *inicializátor* ... ⟧
 
 ## <a name="see-also"></a>Viz také:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Odkazy na direktivy](../../assembler/masm/directives-reference.md)
