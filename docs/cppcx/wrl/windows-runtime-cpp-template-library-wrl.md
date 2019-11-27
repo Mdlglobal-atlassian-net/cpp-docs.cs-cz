@@ -115,7 +115,7 @@ Knihovna C++ šablon prostředí Windows Runtime poskytuje typy, které předsta
 
 [RuntimeClass](runtimeclass-class.md) představuje instanci třídy, která dědí sadu zadaných rozhraní. Objekt `RuntimeClass` může poskytnout kombinaci podpory pro jedno nebo více prostředí Windows Runtimech rozhraní COM nebo slabý odkaz na komponentu.
 
-### <a name="module"></a>Modul
+### <a name="module"></a>– modul
 
 [Modul](module-class.md) představuje kolekci souvisejících objektů. Objekt `Module` spravuje objekty pro vytváření tříd, které vytvářejí objekty a registrují, což umožňuje jiným aplikacím použít objekt.
 
@@ -146,6 +146,6 @@ Objekt `WeakRef` obvykle představuje objekt, jehož existence je řízena exter
 |||
 |-|-|
 |[Klíčová rozhraní API podle kategorie](key-wrl-apis-by-category.md)|Zvýrazní typy, funkce C++ a makra primární knihovny šablon prostředí Windows Runtime.|
-|[Odkazy](wrl-reference.md)|Obsahuje referenční informace pro knihovnu šablon C++ prostředí Windows Runtime.|
+|[Reference](wrl-reference.md)|Obsahuje referenční informace pro knihovnu šablon C++ prostředí Windows Runtime.|
 |[Rychlý referenční C++pro/CX)](../../cppcx/quick-reference-c-cx.md)|Stručně popisuje C++funkce/CX, které podporují prostředí Windows Runtime.|
 |[Používání komponent prostředí Windows Runtime v jazyce VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Ukazuje, jak použít C++/CX k vytvoření základní komponenty prostředí Windows Runtime.|
