@@ -1,40 +1,41 @@
 ---
 title: Upozornění linkerů LNK4098
-ms.date: 03/26/2019
+description: Popisuje, jakým způsobem nekompatibilní knihovny způsobují LINKERŮ LNK4098 upozornění nástrojů linkeru a jak je lze opravit pomocí/NODEFAULTLIB.
+ms.date: 12/02/2019
 f1_keywords:
 - LNK4098
 helpviewer_keywords:
 - LNK4098
 ms.assetid: 1f1b1408-1316-4e34-80f5-6a02f2db0ac1
-ms.openlocfilehash: 66cf1a1bc75405ffc9bae8158bfc8682776a8228
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d0c7da0614651a98d5ed4f3bd3676c7d837ce67
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408092"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682947"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>Upozornění linkerů LNK4098
 
-> DEFAULTLIB "*knihovny*' je v konfliktu s použitím jiných knihoven; použijte parametr/NODEFAULTLIB:*knihovny*
+> DEFAULTLIB '*Library*' je v konfliktu s použitím jiných knihovny; použití/NODEFAULTLIB:*Library*
 
-Se snažíte propojit pomocí kompatibilní knihovny.
+Pokoušíte se propojit s nekompatibilními knihovnami.
 
 > [!NOTE]
-> Knihovny za běhu nyní obsahovat direktivy, aby se zabránilo kombinace různých typů. Zobrazí se toto upozornění, pokud se pokusíte použít různé typy nebo ladění a verze knihovny run-time ve stejném programu. Například, pokud kompilujete jeden soubor se má použít jeden druh knihovny run-time a jiný soubor, který použijete jiný typ (například ladění oproti maloobchodního prodeje) a propojují se pokusili, zobrazí se toto upozornění. Byste měli kompilovat všechny zdrojové soubory používat stejné knihovny run-time. Další informace najdete v tématu [/ / MD, / MT, /LD (použití knihovny Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md) – možnosti kompilátoru.
+> Běhové knihovny nyní obsahují direktivy, které zabraňují smíchání různých typů. Toto upozornění se zobrazí, pokud se pokusíte použít různé typy nebo ladit a neladit verze knihovny run-time ve stejném programu. Pokud jste například zkompilujete jeden soubor, abyste použili jeden typ knihovny run-time a jiný soubor pro použití jiného typu (například ladění oproti maloobchodním) a pokusili jste se ho propojit, zobrazí se toto upozornění. Všechny zdrojové soubory byste měli kompilovat pro použití stejné knihovny run-time. Další informace naleznete v tématu [/MD,/MT,/LD (použití běhové knihovny)](../../build/reference/md-mt-ld-use-run-time-library.md) – možnosti kompilátoru.
 
-Můžete použít propojovacího programu [: lib](../../build/reference/verbose-print-progress-messages.md) přepínače a zjistěte, které knihovny, linker hledá. Například pokud spustitelný soubor používá knihovny Vícevláknová, bez ladění za běhu, v seznamu uvedena by měl zahrnovat LIBCMT.lib a ne LIBCMTD.lib, MSVCRT.lib nebo MSVCRTD.lib. Poznáte linkeru, aby ignorovat nesprávné knihovny za běhu pomocí [: / NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) pro každou knihovnu, kterou chcete ignorovat.
+K zjištění, které knihovny vyhledává linker, můžete použít přepínač linkeru [/verbose: lib](../../build/reference/verbose-print-progress-messages.md) . Například pokud váš spustitelný soubor používá vícevláknové běhové knihovny, které nejsou ladit, seznam hlášených by měl obsahovat LIBCMT. lib, nikoli LIBCMTD. lib, MSVCRT. lib nebo MSVCRTD. lib. Můžete říct, že linker bude ignorovat nesprávné knihovny run-time pomocí [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) pro každou knihovnu, kterou chcete ignorovat.
 
-Následující tabulka uvádí, které knihovny mají být ignorovány, v závislosti na tom, které knihovny run-time, kterou chcete použít. Na příkazovém řádku, použijte jednu **: / NODEFAULTLIB** možnost pro každou knihovnu ignorovat. V sadě Visual Studio IDE, oddělte knihoven k ignorování středníky v **ignorovat konkrétní výchozí knihovny** vlastnost.
+Následující tabulka ukazuje, které knihovny by se měly ignorovat v závislosti na tom, která knihovna run-time se má použít. Na příkazovém řádku použijte jednu možnost **/NODEFAULTLIB** pro každou knihovnu, kterou chcete ignorovat. V integrovaném vývojovém prostředí sady Visual Studio oddělte knihovny tak, aby byly ignorovány středníky ve vlastnosti **výchozí knihovny ignorovat specifické** .
 
 | Použití této knihovny run-time | Ignorovat tyto knihovny |
 |-----------------------------------|----------------------------|
-| Vícevláknové (libcmt.lib) | msvcrt.lib; libcmtd.lib; msvcrtd.lib |
-| Vícevláknové použití knihovny DLL (msvcrt.lib) | libcmt.lib; libcmtd.lib; msvcrtd.lib |
-| Ladění vícevláknových (libcmtd.lib) | libcmt.lib; msvcrt.lib; msvcrtd.lib |
-| Ladění vícevláknové použití knihovny DLL (msvcrtd.lib) | libcmt.lib; msvcrt.lib; libcmtd.lib |
+| Vícevláknové (Libcmt. lib) | Msvcrt. lib; LIBCMTD. lib; msvcrtd. lib |
+| Multithreading pomocí knihovny DLL (Msvcrt. lib) | Libcmt. lib; LIBCMTD. lib; msvcrtd. lib |
+| Ladění s více vlákny (LIBCMTD. lib) | Libcmt. lib; Msvcrt. lib; msvcrtd. lib |
+| Ladění s více vlákny pomocí knihovny DLL (msvcrtd. lib) | Libcmt. lib; Msvcrt. lib; LIBCMTD. lib |
 
-Pokud obdržíte toto upozornění a chcete ji vytvořit spustitelný soubor, který používá bez ladění, DLL verze knihovny za běhu, můžete použít následující možnosti s linkeru:
+Například pokud jste obdrželi toto upozornění a chcete vytvořit spustitelný soubor, který používá jinou verzi knihovny run-time DLL, můžete použít následující možnosti s linkerem:
 
 ```cmd
-/NODEFAULTLIB:libcmt.lib NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
+/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
 ```

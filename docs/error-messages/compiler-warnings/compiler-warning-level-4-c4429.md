@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4429
+title: Upozornění kompilátoru (úroveň 4) C4429
 ms.date: 11/04/2016
 f1_keywords:
 - C4429
 helpviewer_keywords:
 - C4429
 ms.assetid: a3e4cf1f-a869-4e47-834a-850c21eb5297
-ms.openlocfilehash: d4eb7e7075c7adf418254e748f104a6d57c72741
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e814867278701be11b0158789f6373453aea75b8
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391527"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683240"
 ---
-# <a name="compiler-warning-level-4-c4429"></a>Kompilátor upozornění (úroveň 4) C4429
+# <a name="compiler-warning-level-4-c4429"></a>Upozornění kompilátoru (úroveň 4) C4429
 
-je to možné neúplný nebo nesprávně vytvořený universal-character-name
+název Universal-Character-Name může být neúplný nebo nesprávně vytvořený.
 
-Kompilátor zjistil sekvenci znaků, která může být chybně vytvořený univerzální název znaku. Univerzální název znaku je `\u` za nímž následuje čtyř číslic v šestnáctkové soustavě, nebo `\U` za nímž následuje osm číslic v šestnáctkové soustavě.
+Kompilátor zjistil sekvenci znaků, která může být chybně vytvořen univerzální název znaku. Univerzální název znaku je `\u` následovaný čtyřmi šestnáctkovými číslicemi nebo `\U` následovaný osmi šestnáctkovými číslicemi.
 
 Následující ukázka generuje C4429:
 
-```
+```cpp
 // C4429.cpp
 // compile with: /W4 /WX
 int \ug0e4 = 0;   // C4429

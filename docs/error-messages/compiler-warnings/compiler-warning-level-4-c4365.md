@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4365
+title: Upozornění kompilátoru (úroveň 4) C4365
 ms.date: 11/04/2016
 f1_keywords:
 - C4365
 helpviewer_keywords:
 - C4365
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
-ms.openlocfilehash: 3f9f6df9f72608f0c1197e0602c3f54548f8efcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 554ead2d26a090eb1ffc86e532841143483b365a
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403997"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683026"
 ---
-# <a name="compiler-warning-level-4-c4365"></a>Kompilátor upozornění (úroveň 4) C4365
+# <a name="compiler-warning-level-4-c4365"></a>Upozornění kompilátoru (úroveň 4) C4365
 
-'action': převod z 'type_1' na 'type_2', neshoda signed/unsigned
+' Action ': převod z ' type_1 ' na ' type_2 ', signed/unsigned – neshoda
 
-Pokusili jste se například převod hodnoty bez znaménka na hodnota se znaménkem.
+Například jste se pokusili převést hodnotu bez znaménka na hodnotu se znaménkem.
 
-C4365 je vypnuto ve výchozím nastavení.  Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+C4365 je ve výchozím nastavení vypnutá.  Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4365.
 
-```
+```cpp
 // C4365.cpp
 // compile with: /W4
 #pragma warning(default:4365)

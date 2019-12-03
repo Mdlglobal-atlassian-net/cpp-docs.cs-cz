@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4400
+title: Upozornění kompilátoru (úroveň 4) C4400
 ms.date: 11/04/2016
 f1_keywords:
 - C4400
 helpviewer_keywords:
 - C4400
 ms.assetid: f135fe98-4f92-4e07-9d71-2621b36ee755
-ms.openlocfilehash: 61a6d3090355c9bda8aa11c041b302e4ec77ec8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc5127f8d7ef868903f8a26624f2d1dc54057a4c
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391540"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683251"
 ---
-# <a name="compiler-warning-level-4-c4400"></a>Kompilátor upozornění (úroveň 4) C4400
+# <a name="compiler-warning-level-4-c4400"></a>Upozornění kompilátoru (úroveň 4) C4400
 
-'type': kvalifikátory const/volatile pro tento typ nejsou podporované
+Typ: kvalifikátory const/volatile pro tento typ nejsou podporované.
 
-[Const](../../cpp/const-cpp.md)a [volatile](../../cpp/volatile-cpp.md)kvalifikátory nebude fungovat s proměnnými běžných typů modulu runtime jazyka.
+Kvalifikátory [const](../../cpp/const-cpp.md)a [volatile](../../cpp/volatile-cpp.md)nebudou fungovat s proměnnými typů modulu CLR (Common Language Runtime).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4400.
 
-```
+```cpp
 // C4400.cpp
 // compile with: /clr /W4
 // C4401 expected

@@ -1,95 +1,93 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4996
-ms.date: 11/17/2017
+title: Upozornění kompilátoru (úroveň 3) C4996
+description: Vysvětluje, proč dochází k C4996 upozornění kompilátoru a popisuje, co s nimi dělat.
+ms.date: 11/25/2019
 f1_keywords:
 - C4996
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401498"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683330"
 ---
-# <a name="compiler-warning-level-3-c4996"></a>Kompilátor upozornění (úroveň 3) C4996
+# <a name="compiler-warning-level-3-c4996"></a>Upozornění kompilátoru (úroveň 3) C4996
 
-Kompilátor zjistil nepoužívané deklarace. **Toto upozornění je vždy záměrné zprávu od autora knihovny nebo zahrnuté záhlaví souboru, že byste neměli používat deprecated symbol bez nutnosti porozumět důsledky.** Skutečné upozornění je určená modifikátor vyřazení nebo atribut v lokalitě deklarace.
+Váš kód používá funkci, člen třídy, proměnnou nebo typedef, která je označena jako *zastaralá*. Symboly jsou zastaralé pomocí modifikátoru [__declspec (nepoužívané)](../../cpp/deprecated-cpp.md) nebo c++ 14 [\[\[zastaralá\]\]](../../cpp/attributes.md) atribut. Skutečná zpráva Upozornění C4996 je určena modifikátorem `deprecated` nebo atributem deklarace.
 
-Toto jsou některé běžné C4996 zprávy generované běhové knihovny jazyka C a standardní knihovny, ale o vyčerpávající seznam. Pomocí odkazů nebo si přečtěte o způsoby, chcete-li tento problém vyřešit, nebo chcete-li vypnout upozornění.
-
-- [POSIX název pro tuto položku je zastaralý. Místo toho použijte ISO C a C++ splňovala podmínky shody názvu: *nový_název*. Najdete v online nápovědě pro podrobnosti.](#posix-function-names)
-
-- [Tato funkce nebo proměnná může nebezpečné. Zvažte použití *safe_version* místo. Chcete-li zakázat vyřazení, použijte \_CRT\_SECURE\_ne\_upozornění.  Najdete v online nápovědě pro podrobnosti.](#unsafe-crt-library-functions)
-
-- ["std::*Název_funkce*::\_Unchecked\_iterátory::\_Deprecate" volání std::*Název_funkce*s parametry, které mohou nebezpečné – toto volání spoléhá na že volající zkontroluje správnost předaných hodnot. Tato upozornění zakážete pomocí parametru -D_SCL_SECURE_NO_WARNINGS. O tom, jak používat Visual C++ Checked Iterators naleznete v dokumentaci](#unsafe-standard-library-functions)
-
-- [Tato funkce nebo proměnná byla nahrazena novější funkce knihovny nebo operačního systému. Zvažte použití *new_item* místo. Najdete v online nápovědě pro podrobnosti.](#obsolete-crt-functions-and-variables)
-
-## <a name="cause"></a>Příčina
-
-C4996 nastane, pokud kompilátor narazí, funkce nebo proměnná, která je označena jako [zastaralé](../../cpp/deprecated-cpp.md) pomocí `__declspec(deprecated)` modifikátor, nebo když se pokusíte o přístup k funkci, člen třídy nebo definice typedef, která má C ++ 14 [ \[ \[zastaralé\] \] ](../../cpp/attributes.md) atribut. Můžete použít `__declspec(deprecated)` modifikátor nebo `[[deprecated]]` atribut sami v knihovnách nebo hlavičkové soubory k upozornění klientů o zastaralé funkce, proměnné, členy a definice TypeDef.
+> [!IMPORTANT]
+> Toto upozornění je vždy záměrné zprávy od autora hlavičkového souboru, který deklaruje symbol. Nepoužívejte nepoužívané symboly bez porozumění důsledkům.
 
 ## <a name="remarks"></a>Poznámky
 
-Mnoho funkcí, členské funkce, šablony funkce a globální proměnné v knihovnách v sadě Visual Studio jsou označeny jako *zastaralé*. Tyto funkce jsou zastaralé, protože může pojmenovali jinak upřednostňované, může být nebezpečné nebo mít bezpečnější variantu, nebo může být zastaralá. Řada zpráv o zastarání zahrnují navrhované náhrada za zastaralé funkce nebo globální proměnné.
+Mnoho funkcí, členské funkce, funkce šablon a globální proměnné v knihovnách sady Visual Studio jsou *zastaralé*. Některé, například funkce POSIX, jsou zastaralé, protože mají jiný upřednostňovaný název. Některé funkce běhové knihovny jazyka C jsou zastaralé, protože jsou nezabezpečené a mají bezpečnější variantu. Ostatní jsou zastaralé, protože jsou zastaralé. Zprávy vyřazení obvykle obsahují navrhovanou náhradu za zastaralé funkce nebo globální proměnnou.
 
-Chcete-li vyřešit tento problém, obvykle doporučujeme že po provedení změny kódu místo toho použít navrhované bezpečnější nebo aktualizované funkce a globální proměnné. Pokud je potřeba použít existující funkce nebo proměnné z důvodu přenositelnosti, upozornění můžete vypnout.
+## <a name="turn-off-the-warning"></a>Vypnutí upozornění
 
-### <a name="to-turn-the-warning-off-without-fixing-the-issue"></a>Chcete-li vypnout upozornění bez opravy problému
+Pro vyřešení problému s C4996 obvykle doporučujeme změnit kód. Místo toho použijte navrhované funkce a globální proměnné. Pokud pro účely přenositelnosti potřebujete použít existující funkce nebo proměnné, můžete upozornění vypnout.
 
-Upozornění pro konkrétního řádku kódu můžete vypnout pomocí [upozornění](../../preprocessor/warning.md) – Direktiva pragma, `#pragma warning(suppress : 4996)`. Můžete také vypnout upozornění v rámci souboru pomocí direktivy pragma upozornění `#pragma warning(disable : 4996)`.
+Chcete-li vypnout upozornění pro konkrétní řádek kódu, použijte direktivu [Warning](../../preprocessor/warning.md) , `#pragma warning(suppress : 4996)`.
 
-Můžete vypnout upozornění globálně v sestaveních příkazového řádku s použitím **/wd4996** možnost příkazového řádku.
+Chcete-li vypnout upozornění v rámci souboru, použijte direktivu Warning, `#pragma warning(disable : 4996)`.
 
-Chcete-li vypnout upozornění pro celý projekt v integrovaném vývojovém prostředí sady Visual Studio:
+Chcete-li upozornění v rámci sestavení příkazového řádku globálně vypnout, použijte možnost příkazového řádku [/wd4996](../../build/reference/compiler-option-warning-level.md) .
 
-- Otevřít **stránky vlastností** dialogové okno pro váš projekt. Informace o tom, jak pomocí dialogového okna stránky vlastností naleznete v tématu [stránky vlastností](../../build/reference/property-pages-visual-cpp.md).
-- Vyberte **vlastnosti konfigurace**, **C/C++**, **Upřesnit** stránky.
-- Upravit **zakázat specifická upozornění** vlastnost přidat `4996`. Zvolte **OK** změny.
+Vypnutí upozornění pro celý projekt v integrovaném vývojovém prostředí sady Visual Studio:
 
-Chcete-li vypnout určité konkrétní třídy upozornění na zastaralost používají v knihovnách můžete také použít makra preprocesoru. Tato makra jsou popsané níže.
+1. Otevřete dialogové okno **stránky vlastností** projektu. Informace o tom, jak používat dialogové okno stránky vlastností, najdete na [stránce vlastností](../../build/reference/property-pages-visual-cpp.md).
 
-Chcete-li definovat makro preprocesoru v sadě Visual Studio:
+1. Vyberte stránku **Vlastnosti konfigurace** > stránka pro **upřesnění** **jazyka C/C++**  > .
 
-- Otevřít **stránky vlastností** dialogové okno pro váš projekt. Informace o tom, jak pomocí dialogového okna stránky vlastností naleznete v tématu [stránky vlastností](../../build/reference/property-pages-visual-cpp.md).
-- Rozbalte **vlastnosti konfigurace > C/C++ > preprocesor**.
-- V **Definice preprocesoru** vlastnost, přidejte název makra. Zvolte **OK** uložte a pak znovu sestavit projekt.
+1. Úpravou vlastnosti **Zakázat specifická upozornění** přidejte `4996`. Kliknutím na **tlačítko OK** změny aplikujte.
 
-Chcete-li definovat makro pouze v konkrétní zdrojové soubory, přidejte řádek `#define EXAMPLE_MACRO_NAME` před všech řádků, které obsahuje soubor hlaviček.
+Můžete také použít makra preprocesoru pro vypnutí určitých specifických tříd upozornění na vyřazení používané v knihovnách. Tato makra jsou popsána níže.
 
-## <a name="specific-c4996-messages"></a>C4996 specifická
+Definování makra preprocesoru v aplikaci Visual Studio:
 
-Tady jsou některé běžné zdroje C4996 upozornění a chyb.
+1. Otevřete dialogové okno **stránky vlastností** projektu. Informace o tom, jak používat dialogové okno stránky vlastností, najdete na [stránce vlastností](../../build/reference/property-pages-visual-cpp.md).
 
-### <a name="posix-function-names"></a>Názvy funkcí v rámci specifikace POSIX
+1. Rozbalte **Vlastnosti konfigurace > předprocesory C/C++ >** .
 
-**POSIX název pro tuto položku je zastaralý. Místo toho použijte ISO C a C++ splňovala podmínky shody názvu:** *nový_název*. **Najdete v online nápovědě pro podrobnosti.**
+1. Do vlastnosti **Definice preprocesoru** přidejte název makra. Kliknutím na **tlačítko OK** uložte a znovu sestavte projekt.
 
-Microsoft má přejmenovat, některé funkce POSIX v souladu s normou C99 a C ++ 03 pravidla pro názvy definované implementací globální funkce CRT. Jenom původní názvy POSIX jsou zastaralé, ne samotné funkce. Ve většině případů vedoucí znaku podtržítka přidal do názvu funkce POSIX k vytvoření názvu standardní splňující podmínky. Kompilátor vyvolá upozornění na zastaralost pro původní název funkce a navrhne upřednostňovaný název.
+Chcete-li definovat makro pouze v konkrétních zdrojových souborech, přidejte řádek, například `#define EXAMPLE_MACRO_NAME` před všechny řádky, které obsahují hlavičkový soubor.
 
-Chcete-li vyřešit tento problém, obvykle doporučujeme že po provedení změny kódu místo toho použít názvy navrhované funkce. Aktualizované názvy jsou však specifické pro společnost Microsoft. Pokud je potřeba použít existující názvy funkcí pro přenositelnost z důvodů, můžete vypnout tato upozornění. Funkce POSIX jsou stále k dispozici v knihovně v části původní názvy.
+Tady jsou některé běžné zdroje upozornění a chyb C4996:
 
-Chcete-li vypnout upozornění na zastaralost pro tyto funkce, definujte makro preprocesoru  **\_CRT\_NONSTDC\_ne\_upozornění**. Můžete definovat toto makro v příkazovém řádku zahrnutím možnost `/D_CRT_NONSTDC_NO_WARNINGS`.
+## <a name="posix-function-names"></a>Názvy funkcí POSIX
 
-### <a name="unsafe-crt-library-functions"></a>Nebezpečné funkce knihovny CRT
+**Název POSIX pro tuto položku je zastaralý. Místo toho použijte ISO C a C++ vyhovující název:** *New-name*. **Podrobnosti najdete v online nápovědě.**
 
-**Tato funkce nebo proměnná může nebezpečné. Zvažte použití** *safe_version* **místo. Chcete-li zakázat vyřazení, použijte \_CRT\_SECURE\_ne\_upozornění.  Najdete v online nápovědě pro podrobnosti.**
+Společnost Microsoft přejmenovala některé funkce POSIX v CRT tak, aby vyhovovaly pravidlům C99 a C++ 03 pro názvy globálních funkcí definovaných pro implementaci. Pouze názvy jsou zastaralé, nikoli samotné funkce. Ve většině případů byla do názvu funkce POSIX přidána úvodní podtržítko, které vytvoří vyhovující název Standard. Kompilátor vydá upozornění na zastaralost pro původní název funkce a navrhne preferovaný název.
 
-Microsoft se nepoužívá, některé funkce CRT a standardní knihovny C++ a globální prvky ve prospěch bezpečnější verze. Zastaralé funkce ve většině případů povolit zaškrtnuté políčko pro čtení nebo zápisu do vyrovnávací paměti, což může způsobit vážné bezpečnostní problémy. Kompilátor vyvolá upozornění na zastaralost pro tyto funkce a navrhne Preferovaná funkce.
+Chcete-li tento problém vyřešit, obvykle doporučujeme změnit kód tak, aby místo toho používal navrhované názvy funkcí. Nicméně aktualizované názvy jsou specifické pro společnost Microsoft. Pokud pro účely přenositelnosti potřebujete použít stávající názvy funkcí, můžete tato upozornění vypnout. Funkce POSIX jsou stále k dispozici v knihovně pod jejich původní názvy.
 
-Chcete-li vyřešit tento problém, doporučujeme, abyste použili funkci nebo proměnnou *safe_version* místo. Pokud jste ověřili, že není možné přepisování vyrovnávací paměti nebo overread vyskytuje v kódu a nelze změnit kód pro přenositelnost z důvodů, můžete vypnout upozornění.
+Chcete-li vypnout upozornění na zastaralost pro tyto funkce, definujte makro preprocesoru **\_CRT\_NONSTDC\_žádná\_upozornění**. Toto makro můžete definovat na příkazovém řádku včetně možnosti `/D_CRT_NONSTDC_NO_WARNINGS`.
 
-Chcete-li vypnout upozornění na zastaralost pro tyto funkce v CRT, definujte  **\_CRT\_SECURE\_ne\_upozornění**. Chcete-li vypnout upozornění na zastaralé globální proměnné, definujte  **\_CRT\_SECURE\_ne\_upozornění\_GLOBALS**. Další informace o těchto zastaralé funkce a globální prvky najdete v tématu [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md) a [bezpečné knihovny: Standardní knihovna C++](../../standard-library/safe-libraries-cpp-standard-library.md).
+## <a name="unsafe-crt-library-functions"></a>Nezabezpečené funkce knihovny CRT
 
-### <a name="unsafe-standard-library-functions"></a>Nezabezpečený funkce standardní knihovny
+**Tato funkce nebo proměnná může být nebezpečná. Místo toho zvažte použití** *bezpečné verze* **. Pokud chcete zakázat zastaralost, použijte \_CRT\_zabezpečení\_žádná\_upozornění.  Podrobnosti najdete v online nápovědě.**
 
-__"std::__*Název_funkce*__::\_Unchecked\_iterátory::\_Deprecate" volání std::__*Název_funkce* **s parametry, které mohou nebezpečné – toto volání spoléhá na že volající zkontroluje správnost předaných hodnot. Chcete-li zakázat toto upozornění, použijte -D\_SCL\_SECURE\_ne\_upozornění. O tom, jak používat Visual C++ Checked Iterators naleznete v dokumentaci**
+Společnost Microsoft zastarala o C++ některé funkce knihovny CRT a standardní a Globals, protože jsou k dispozici bezpečnější verze. Většina zastaralých funkcí umožňuje nezaškrtnutou možnost přístupu pro čtení nebo zápis do vyrovnávacích pamětí. Jejich zneužití může vést k vážným problémům se zabezpečením. Kompilátor vydá upozornění na vyřazení pro tyto funkce a navrhne upřednostňovanou funkci.
 
-Toto upozornění se zobrazí v sestavení ladění, protože některé šablony funkce standardní knihovny C++ nekontrolují správnost parametrů. Ve většině případů jde, protože není dostatek informací je k dispozici funkce pro kontrolu hranice kontejneru, nebo iterátory může být použit s funkce nesprávně. Toto upozornění vám pomůže určit tyto funkce používá, protože mohou být zdrojem vážné bezpečnostní díry ve svém programu. Další informace najdete v tématu [Checked Iterators](../../standard-library/checked-iterators.md).
+K vyřešení tohoto problému doporučujeme místo toho použít funkci nebo proměnnou *s bezpečnými verzemi* . Někdy nemůžete pro účely přenositelnosti nebo zpětné kompatibility nemůžete. Pečlivě ověřte, že není možné vyrovnávací paměť přepsat nebo přečtení, aby se v kódu stala. Pak můžete upozornění vypnout.
 
-Například toto upozornění se zobrazí v režimu ladění v případě předat ukazatel element `std::copy` místo prostého pole. Chcete-li vyřešit tento problém, použijte odpovídajícím způsobem deklarované pole, tak knihovny můžete zkontrolovat mezí pole a proveďte kontrolu hranic.
+Pokud chcete vypnout upozornění na zastaralost pro tyto funkce v CRT, definujte **\_crt\_zabezpečení\_žádná\_upozornění**.
+
+Pokud chcete vypnout upozornění na zastaralé globální proměnné, definujte **\_CRT\_zabezpečení\_žádná\_upozornění\_Globals**.
+
+Další informace o těchto zastaralých funkcích a globálních funkcích naleznete v tématu [funkce zabezpečení v knihovně CRT](../../c-runtime-library/security-features-in-the-crt.md) a [bezpečné knihovny C++ : standardní knihovna](../../standard-library/safe-libraries-cpp-standard-library.md).
+
+## <a name="unsafe-standard-library-functions"></a>Nezabezpečené funkce standardní knihovny
+
+__std::__ *function_name* __::\_nezaškrtnutou\_iterátory::\_vyřadit z volání std::__ *function_name* **s parametry, které mohou být nebezpečné – tento hovor spoléhá na volajícího, aby zkontroloval, jestli jsou předané hodnoty správné. Pokud chcete toto upozornění zakázat, použijte-D\_SQL\_zabezpečení\_žádná\_upozornění. Podívejte se na dokumentaci, jak používat C++ Zaškrtnuté iterátory Visual.**
+
+Toto upozornění se zobrazí v sestavení ladění, C++ protože některé standardní funkce šablon knihovny nekontrolují správnost parametrů. Často je to proto, že není k dispozici dostatek informací pro funkci pro kontrolu hranic kontejneru. Nebo, protože iterátory mohou být pomocí funkce nesprávně použity. Toto upozornění vám pomůže identifikovat tyto funkce, protože mohou být zdrojem vážných děr zabezpečení v programu. Další informace najdete v tématu [kontrolované iterátory](../../standard-library/checked-iterators.md).
+
+Toto upozornění se například zobrazí v režimu ladění, Pokud předáte ukazatel na prvek `std::copy`namísto jednoduchého pole. Chcete-li tento problém vyřešit, použijte vhodně deklarované pole, aby knihovna mohla kontrolovat rozsahy polí a provádět kontrolu hranic.
 
 ```cpp
 // C4996_copyarray.cpp
@@ -104,7 +102,7 @@ void example(char const * const src) {
 }
 ```
 
-Se několik algoritmů standardní knihovny aktualizovat tak, aby verze "duální rozsah" v C ++ 14. Pokud používáte duální rozsah verzí, poskytuje druhého rozsahu nezbytné kontroly hranic:
+Několik algoritmů standardní knihovny se aktualizovalo tak, aby ve verzi C++ 14 byly verze s duálním rozsahem. Používáte-li duální verze rozsahu, druhý rozsah zajišťuje kontrolu potřebných hranic:
 
 ```cpp
 // C4996_containers.cpp
@@ -125,7 +123,7 @@ bool example(
 }
 ```
 
-Tento příklad ukazuje několik způsobů další standardní knihovny můžou sloužit k kontrola využití iterátoru, a pokud není zaškrtnuto využití může být nebezpečné:
+Tento příklad ukazuje několik způsobů, jak lze použít standardní knihovnu ke kontrole využití iterátoru a v případě, že nekontrolované použití může být nebezpečné:
 
 ```cpp
 // C4996_standard.cpp
@@ -210,11 +208,11 @@ int main()
 }
 ```
 
-Pokud jste ověřili, že váš kód nemůže mít funkce standardní knihovny, které aktivuje toto upozornění při přetečení vyrovnávací paměti, můžete toto upozornění vypněte. Chcete-li vypnout upozornění pro tyto funkce, definujte  **\_SCL\_SECURE\_ne\_upozornění**.
+Pokud jste ověřili, že váš kód nemůže mít chybu přetečení vyrovnávací paměti, můžete toto upozornění vypnout. Pokud chcete vypnout upozornění pro tyto funkce, definujte **\_sql\_zabezpečení\_žádná\_upozornění**.
 
-### <a name="checked-iterators-enabled"></a>Checked – iterátory povoleno
+## <a name="checked-iterators-enabled"></a>Zaškrtnuté iterátory povoleny
 
-C4996 může také dojít, pokud nepoužíváte kontrolovaný iterátor při kompilaci s `_ITERATOR_DEBUG_LEVEL` definována jako 1 nebo 2. To je nastavena na 2 ve výchozím nastavení pro sestavení s režimem ladění a na hodnotu 0 pro prodejní buildy. Zobrazit [Checked Iterators](../../standard-library/checked-iterators.md) Další informace.
+K C4996 může dojít také v případě, že nepoužíváte zaškrtnutý iterátor, pokud je `_ITERATOR_DEBUG_LEVEL` definováno jako 1 nebo 2. Je nastavené na 2 ve výchozím nastavení pro sestavení režimu ladění a na hodnotu 0 pro maloobchodní buildy. Další informace najdete v tématu [kontrolované iterátory](../../standard-library/checked-iterators.md).
 
 ```cpp
 // C4996_checked.cpp
@@ -236,29 +234,29 @@ int main() {
 }
 ```
 
-### <a name="unsafe-mfc-or-atl-code"></a>Nezabezpečený MFC nebo ATL kód
+## <a name="unsafe-mfc-or-atl-code"></a>Nezabezpečený kód knihovny MFC nebo ATL
 
-C4996 se také použití knihovny MFC nebo ATL funkce, které se přestaly z bezpečnostních důvodů.
+K C4996 může dojít, pokud používáte funkce MFC nebo ATL, které byly z bezpečnostních důvodů zastaralé.
 
-Chcete-li vyřešit tento problém, důrazně doporučujeme že po provedení změny kódu místo toho použít aktualizované funkce.
+Chcete-li tento problém vyřešit, důrazně doporučujeme, abyste místo toho změnili kód na použití aktualizovaných funkcí.
 
-Informace o tom, jak tato upozornění potlačit, naleznete v tématu [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings).
+Informace o tom, jak potlačit tato upozornění, najdete v tématu [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings).
 
-### <a name="obsolete-crt-functions-and-variables"></a>Zastaralé CRT funkce a proměnné
+## <a name="obsolete-crt-functions-and-variables"></a>Zastaralé funkce a proměnné CRT
 
-**Tato funkce nebo proměnná byla nahrazena novější funkce knihovny nebo operačního systému. Zvažte použití** *new_item* **místo. Najdete v online nápovědě pro podrobnosti.**
+**Tato funkce nebo proměnná byla nahrazena novější knihovnou nebo funkcí operačního systému. Místo toho zvažte použití** *new_item* **. Podrobnosti najdete v online nápovědě.**
 
-Některé funkce knihovny a globální proměnné jsou zastaralé jako zastaralé. Tyto funkce a proměnné může být odebrán v budoucí verzi knihovny. Kompilátor vyvolá upozornění na zastaralost pro tyto položky a navrhne upřednostňovaná alternativa.
+Některé funkce knihovny a globální proměnné jsou zastaralé jako zastaralé. Tyto funkce a proměnné mohou být v budoucí verzi knihovny odebrány. Kompilátor vydá upozornění na zastaralost pro tyto položky a navrhne upřednostňovanou alternativu.
 
-Chcete-li vyřešit tento problém, doporučujeme, abyste že po provedení změny kódu pro použití navrhované funkce nebo proměnná.
+Chcete-li tento problém vyřešit, doporučujeme změnit kód tak, aby používal navrhovanou funkci nebo proměnnou.
 
-Chcete-li vypnout upozornění na zastaralost pro tyto položky, definovat  **\_CRT\_zastaralé\_ne\_upozornění**. Další informace najdete v tématu v dokumentaci k zastaralé funkci nebo proměnnou.
+Pokud chcete pro tyto položky vypnout upozornění na zastaralost, definujte **\_CRT\_ZAstaralá\_žádná\_upozornění**. Další informace naleznete v dokumentaci pro vystaralou funkci nebo proměnnou.
 
-### <a name="marshalling-errors-in-clr-code"></a>Zařazování chybami v kódu CLR
+## <a name="marshaling-errors-in-clr-code"></a>Zařazování chyb v kódu CLR
 
-C4996 se také při použití zařazovací knihovny CLR. V tomto případě je C4996 chybou, nikoli upozorněním. K této chybě dochází, když použijete [marshal_as](../../dotnet/marshal-as.md) k převodu mezi dvěma datovými typy, které vyžadují [marshal_context Class](../../dotnet/marshal-context-class.md). Tato chyba může zobrazit také když zařazovací knihovna nepodporuje převod. Další informace o zařazovací knihovně naleznete v tématu [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md).
+K C4996 může také dojít při použití zařazovací knihovny CLR. V tomto případě je C4996 chyba, nikoli upozornění. K této chybě dochází, pokud použijete [marshal_as](../../dotnet/marshal-as.md) k převodu mezi dvěma datovými typy, které vyžadují [třídu marshal_context](../../dotnet/marshal-context-class.md). Tato chyba se může zobrazit také v případě, že zařazovací knihovna nepodporuje převod. Další informace o zařazovací knihovně naleznete [v tématu Přehled zařazování v C++ ](../../dotnet/overview-of-marshaling-in-cpp.md).
 
-Tento příklad vygeneruje C4996, protože zařazovací knihovna vyžaduje kontext pro převod z `System::String` k `const char *`.
+Tento příklad generuje C4996, protože zařazovací knihovna vyžaduje kontext pro převod z `System::String` na `const char *`.
 
 ```cpp
 // C4996_Marshal.cpp
@@ -279,9 +277,9 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>Příklad: Uživatelem definované zastaralé funkce
+## <a name="example-user-defined-deprecated-function"></a>Příklad: uživatelem definovaná vystaralá funkce
 
-Volající upozornit, když už doporučujeme použití určitých funkcí můžete použít atribut nepoužívané ve svém vlastním kódu. V tomto příkladu se vygeneruje C4996 pro řádek, na kterém je deklarována zastaralé funkce a pro řádek, na kterém je tato funkce použita.
+Nepoužívané atributy můžete použít ve vlastním kódu k upozornění volajících, když už nedoporučujete používat určité funkce. V tomto příkladu se C4996 generuje na dvou místech: jeden pro řádek, na kterém je vystaralá funkce deklarována, a jednu pro řádek, kde je funkce použita.
 
 ```cpp
 // C4996.cpp
@@ -294,7 +292,8 @@ void func1(void) {
    printf_s("\nIn func1");
 }
 
-__declspec(deprecated) void func1(int) {
+[[deprecated]]
+void func1(int) {
    printf_s("\nIn func2");
 }
 

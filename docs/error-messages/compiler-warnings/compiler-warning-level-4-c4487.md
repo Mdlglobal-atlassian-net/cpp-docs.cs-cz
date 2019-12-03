@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4487
+title: Upozornění kompilátoru (úroveň 4) C4487
 ms.date: 11/04/2016
 f1_keywords:
 - C4487
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 231482547856fc07d43ecfb859b31c2ece49fc5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1583da44368225eabd8181be970f69f6582111e1
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206998"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682983"
 ---
-# <a name="compiler-warning-level-4-c4487"></a>Kompilátor upozornění (úroveň 4) C4487
+# <a name="compiler-warning-level-4-c4487"></a>Upozornění kompilátoru (úroveň 4) C4487
 
-'derived_class_function': odpovídá zděděnou nevirtuální metodu "base_class_function", ale není explicitně označené jako new.
+' derived_class_function ': shoduje se se zděděnou nevirtuální metodou ' base_class_function ', ale není explicitně označena jako ' New '
 
-Funkce v odvozené třídě nemá stejný podpis jako funkci nevirtuální základní třídy. C4487 upozorňuje, že odvozené třídy funkce nemůže přepsat funkci základní třídy. Explicitně označit funkce odvozené třídy jako `new` vyřešit tato upozornění.
+Funkce v odvozené třídě má stejný podpis jako nevirtuální funkce základní třídy. C4487 vás připomene, že funkce odvozené třídy nepřepisuje funkci základní třídy. Explicitně označte funkci odvozené třídy jako `new` pro vyřešení tohoto upozornění.
 
-Další informace najdete v tématu [new (nový slot v tabulce vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
+Další informace najdete v tématu [New (New slot v tabulce vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4487.
 
-```
+```cpp
 // C4487.cpp
 // compile with: /W4 /clr
 using namespace System;

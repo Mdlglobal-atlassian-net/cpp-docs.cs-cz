@@ -1,43 +1,43 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4512
+title: Upozornění kompilátoru (úroveň 4) C4512
 ms.date: 11/04/2016
 f1_keywords:
 - C4512
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b8f11b55cf6ef2df601c125a1b6629aa0554da
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220987"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683182"
 ---
-# <a name="compiler-warning-level-4-c4512"></a>Kompilátor upozornění (úroveň 4) C4512
+# <a name="compiler-warning-level-4-c4512"></a>Upozornění kompilátoru (úroveň 4) C4512
 
-'class': operátor přiřazení se nepodařilo vygenerovat.
+' class ': operátor přiřazení nelze vygenerovat
 
-Kompilátor nemůže generovat operátor přiřazení pro danou třídu. Byl vytvořen žádný operátor přiřazení.
+Kompilátor nemůže pro danou třídu vygenerovat operátor přiřazení. Nebyl vytvořen žádný operátor přiřazení.
 
-Operátor přiřazení základní třídy, které nejsou přístupné prostřednictvím odvozené třídy mohou způsobit, že toto upozornění.
+Operátor přiřazení pro základní třídu, která není přístupná odvozenou třídou, může toto upozornění způsobit.
 
-K tomuto upozornění předejít, zadejte operátor přiřazení definované uživatelem pro třídu.
+Chcete-li se tomuto upozornění vyhnout, zadejte uživatelsky definovaný operátor přiřazení pro třídu.
 
-Kompilátor vygeneruje také funkci operátoru přiřazení pro třídu, která žádné nedefinuje. Tento operátor přiřazení je kopírování členů datové členy objektu. Protože `const` datové položky nelze změnit po inicializaci, pokud třída obsahuje `const` položky, výchozí operátor přiřazení nebude fungovat. Další příčinou C4512 upozornění je deklarovaná nestatický datový člen odkazového typu. Pokud je cílem vytvoření nekopírovatelných typu, je nutné zabránit vytvoření výchozího konstruktoru kopie.
+Kompilátor také vygeneruje funkci operátoru přiřazení pro třídu, která nedefinuje jednu. Tento operátor přiřazení je kopírování členů kopie datových členů objektu. Protože `const` datové položky nelze po inicializaci upravovat, pokud třída obsahuje položku `const`, výchozí operátor přiřazení nefunguje. Další příčinou upozornění C4512 je deklarace nestatického datového členu typu odkazu. Pokud je záměrem vytvořit nekopírovací typ, je nutné také zabránit vytvoření výchozího kopírovacího konstruktoru.
 
-Vyřešit upozornění C4512 pro váš kód v jednom ze tří způsobů:
+Upozornění C4512 pro váš kód můžete vyřešit jedním ze tří způsobů:
 
 - Explicitně definujte operátor přiřazení pro třídu.
 
-- Odebrat **const** nebo operátor odkaz z položky dat ve třídě.
+- Odeberte **const** nebo operátor reference z datové položky ve třídě.
 
-- Použijte #pragma [upozornění](../../preprocessor/warning.md) příkaz upozornění můžete potlačit.
+- Upozornění můžete potlačit pomocí příkazu #pragma [Warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4512.
 
-```
+```cpp
 // C4512.cpp
 // compile with: /EHsc /W4
 // processor: x86

@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4339
+title: Upozornění kompilátoru (úroveň 4) C4339
 ms.date: 11/04/2016
 f1_keywords:
 - C4339
 helpviewer_keywords:
 - C4339
 ms.assetid: 5b83353d-7777-4afb-8476-3c368349028c
-ms.openlocfilehash: bc9d335b3a09f7953a12b388d5bb40cc4d433969
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fffdaa255f6b8f2259488df610f163bebf8d6dec
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400822"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683294"
 ---
-# <a name="compiler-warning-level-4-c4339"></a>Kompilátor upozornění (úroveň 4) C4339
+# <a name="compiler-warning-level-4-c4339"></a>Upozornění kompilátoru (úroveň 4) C4339
 
-'type': zjištěno použití nedefinovaného typu WinRT nebo CLR meta-data - použití tohoto typu může vést k výjimce modulu runtime
+' type ': zjištěno použití nedefinovaného typu v WinRT nebo CLR meta-data-použití tohoto typu může vést k výjimce za běhu.
 
-Typ není definovaný v kódu, který byl zkompilován pro prostředí Windows Runtime nebo modul common language runtime. Definice typu, aby se zabránilo možné běhovou výjimku.
+Typ nebyl definován v kódu, který byl zkompilován pro prostředí Windows Runtime nebo modulu CLR (Common Language Runtime). Definujte typ, aby se předešlo možné výjimce za běhu.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Následující ukázka generuje C4339 a ukazuje, jak ho opravit:
+Následující ukázka generuje C4339 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C4339.cpp
 // compile with: /W4 /clr /c
 // C4339 expected

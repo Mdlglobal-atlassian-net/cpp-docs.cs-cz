@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4460
+title: Upozornění kompilátoru (úroveň 4) C4460
 ms.date: 11/04/2016
 f1_keywords:
 - C4460
 helpviewer_keywords:
 - C4460
 ms.assetid: c97ac1c9-598d-479e-bfff-c993690c4f3d
-ms.openlocfilehash: a42562a2c35bb56de4ce7147e199f4db2dddb684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f394af9dc0362035b9361981fdca077a3a915d5
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400809"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682923"
 ---
-# <a name="compiler-warning-level-4-c4460"></a>Kompilátor upozornění (úroveň 4) C4460
+# <a name="compiler-warning-level-4-c4460"></a>Upozornění kompilátoru (úroveň 4) C4460
 
-WinRT nebo CLR operátor 'operator', má parametr předaný odkazem. WinRT nebo CLR operátor 'operator' má odlišnou sémantiku než operátor C++ 'operator', nechtěli jste předat hodnotu?
+Operátor WinRT nebo CLR ' operator ', má parametr předaný odkazem. Operátor WinRT nebo CLR ' operator ' má odlišnou sémantiku C++ z operátoru ' operator ', kterou jste chtěli předat hodnotou?
 
-Hodnota se předá odkazem na uživatelské prostředí Windows Runtime nebo CLR operátor. Pokud se hodnota změní uvnitř funkce, mějte na paměti, že vrácená hodnota po volání funkce se přiřadí návratová hodnota funkce. Ve standardním jazyce C++ změněné hodnoty se projeví po volání funkce.
+Předala se hodnota odkazem na uživatelsky definovaný prostředí Windows Runtime nebo operátor CLR. Pokud je hodnota ve funkci změněna, Všimněte si, že hodnota vrácená po volání funkce bude přiřazena návratovou hodnotu funkce. Ve standardu C++se změněná hodnota projeví po volání funkce.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C4460 a ukazuje, jak ho opravit.
+Následující ukázka generuje C4460 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C4460.cpp
 // compile with: /W4 /clr
 #include <stdio.h>
