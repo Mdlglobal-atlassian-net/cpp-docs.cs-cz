@@ -1,35 +1,39 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4437
+title: Upozornění kompilátoru (úroveň 4) C4437
 ms.date: 11/04/2016
+f1_keywords:
+- C4437
+helpviewer_keywords:
+- C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 9ff52ae6d10f7d4ba429bbf3457a2a6b969998d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd50d5c4d79b82c135ab4e84ec390dee9e906ef
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391462"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810651"
 ---
-# <a name="compiler-warning-level-4-c4437"></a>Kompilátor upozornění (úroveň 4) C4437
+# <a name="compiler-warning-level-4-c4437"></a>Upozornění kompilátoru (úroveň 4) C4437
 
-přetypování dynamic_cast z virtuální base 'class1' na 'class2' může v některých kontextech kompilace s možností/vd2 selže nebo je 'class2' s #pragma vtordisp(2) platit
+dynamic_cast z virtuální základní třídy ' Class1 ' na ' Class2 ' může selhat v některých kontextech Zkompilováných pomocí/VD2 nebo definovat ' Class2 ' s #pragma vtordisp (2) v platnosti.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Kompilátor narazil `dynamic_cast` operace s následujícími vlastnostmi.
+Kompilátor zjistil operaci `dynamic_cast` s následujícími charakteristikami.
 
-- Přetypování je z ukazatele na základní třídu na ukazatel na odvozenou třídu.
+- Přetypování je z ukazatele základní třídy na odvozený ukazatel třídy.
 
-- Odvozená třída virtuálně dědí základní třídy.
+- Odvozená třída prakticky dědí základní třídu.
 
-- Odvozená třída nemá `vtordisp` pole pro virtuální základní třídy.
+- Odvozená třída nemá pole `vtordisp` pro virtuální základnu.
 
-- Přetypování nebyl nalezen v konstruktor nebo destruktor odvozené třídy nebo některé třídy, která dále dědí z odvozené třídy (jinak upozornění kompilátoru, které budou vydány C4436).
+- Přetypování nebylo nalezeno v konstruktoru nebo destruktoru odvozené třídy nebo některá třída, která dále dědí z odvozené třídy (jinak se vydá upozornění kompilátoru C4436).
 
-Toto upozornění znamená, že `dynamic_cast` nemusí provést správně, pokud je zpracovávána v částečně vytvořeným objektem.  Tato situace nastane, pokud nadřazené funkce je volána z konstruktoru nebo destruktoru třídy, která dědí odvozené třídy, která je uvedená v upozornění.  Pokud odvozené třídy, která je uvedená v upozornění se nikdy další odvozena, nebo nadřazené funkce není volána během vytváření objektu nebo zničení, upozornění můžete ignorovat.
+Upozornění indikuje, že `dynamic_cast` nemusí fungovat správně, pokud pracuje na částečně vytvořeném objektu.  K této situaci dochází, když je uzavírací funkce volána z konstruktoru nebo destruktoru třídy, která dědí odvozenou třídu pojmenovanou v upozornění.  Pokud odvozená třída, která je pojmenována v upozornění, již není dále odvozena, nebo není během konstrukce nebo zničení objektu volána uzavírací funkce, může být upozornění ignorováno.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C4437 a ukazuje problém s generováním kódu, který vyplývá z chybějící `vtordisp` pole.
+Následující ukázka generuje C4437 a ukazuje problém při generování kódu, který vzniká v poli chybějící `vtordisp`.
 
 ```cpp
 // C4437.cpp

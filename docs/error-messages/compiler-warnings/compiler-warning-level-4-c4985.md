@@ -1,29 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4985
+title: Upozornění kompilátoru (úroveň 4) C4985
 ms.date: 11/04/2016
+f1_keywords:
+- C4985
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-ms.openlocfilehash: 73abb166910cc421f042d22d67efc122e416bceb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75feda6fb2c88b663aa6ade0efdfffc7def1568f
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280188"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810734"
 ---
-# <a name="compiler-warning-level-4-c4985"></a>Kompilátor upozornění (úroveň 4) C4985
+# <a name="compiler-warning-level-4-c4985"></a>Upozornění kompilátoru (úroveň 4) C4985
 
-'název symbolu': neexistují atributy pro předchozí deklaraci.
+' název symbolu ': atributy nejsou přítomny u předchozí deklarace.
 
-Microsoft zdrojového kódu poznámky jazyka (SAL) poznámky na aktuální metodu deklarace nebo definice liší od poznámky u starších deklarace. Definice a deklarace metody musí využívat stejnou poznámky SAL.
+Poznámky jazyka Microsoft zdrojového kódu pro poznámky (SAL) na aktuální deklaraci nebo definici metody se liší od poznámek k předchozí deklaraci. V definici a deklaracích metody se musí použít stejné poznámky SAL.
 
-SAL poskytuje sadu poznámky, které můžete použít k popisu, jak funkce používá parametry, předpoklady, které provádí o nich a záruky, které provádí na dokončení. Poznámky jsou definovány v souboru hlaviček sal.h.
+SAL poskytuje sadu poznámek, které můžete použít k popsání toho, jak funkce používá své parametry, předpoklady, které o nich slouží, a zaručuje, že se bude dokončí. Poznámky jsou definovány v souboru hlaviček Sal. h.
 
-Všimněte si, že SAL makra nelze rozbalit, pokud projekt nemá [/ analyze](../../build/reference/analyze-code-analysis.md) příznak zadán. Pokud zadáte **/ analyze**, kompilátor může vyvolat C4985, i v případě, že žádná upozornění ani chyby zobrazovaly bez **/ analyze**.
+Všimněte si, že makra SAL se nebudou rozšiřovat, pokud projekt nemá zadaný příznak [/analyze](../../build/reference/analyze-code-analysis.md) . Když zadáte **/analyze**, může kompilátor vyvolat C4985, i když nejsou k dispozici žádná upozornění nebo chyby bez **/analyze**.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Použijte stejné poznámky SAL v definici metody a všechny jeho deklarace.
+1. Používejte stejné poznámky SAL na definici metody a všech jejích deklaracích.
 
 ## <a name="see-also"></a>Viz také:
 

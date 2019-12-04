@@ -1,21 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4435
+title: Upozornění kompilátoru (úroveň 4) C4435
 ms.date: 11/04/2016
+f1_keywords:
+- C4435
+helpviewer_keywords:
+- C4435
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ff545d3de3ef173cdbfd99d7714890e8631ce7a
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391475"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810671"
 ---
-# <a name="compiler-warning-level-4-c4435"></a>Kompilátor upozornění (úroveň 4) C4435
+# <a name="compiler-warning-level-4-c4435"></a>Upozornění kompilátoru (úroveň 4) C4435
 
-'class1': Rozložení objektu pod: / vd2 se změní z důvodu virtuální base 'class2'
+'class1': z důvodu virtuální base 'class2' se změní rozložení objektů v /vd2
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Ve výchozí možnost/vd1 kompilace, odvozená třída nemá `vtordisp` pole pro uvedené virtuální základní třídy.  Pokud/vd2 nebo `#pragma vtordisp(2)` je v platnosti `vtordisp` pole bude k dispozici, změna rozložení objektů.  To může vést k problémům binární kompatibilitu, pokud komunikující moduly jsou kompilovány pomocí různých `vtordisp` nastavení.
+V rámci výchozí možnosti kompilace/vd1 odvozená třída neobsahuje pole `vtordisp` pro uvedenou virtuální základnu.  Pokud je/VD2 nebo `#pragma vtordisp(2)`, bude k dispozici `vtordisp` pole, ve kterém se změní rozložení objektu.  To může vést k potížím s binární kompatibilitou, pokud jsou interaktivní moduly kompilovány s různými nastaveními `vtordisp`.
 
 ## <a name="example"></a>Příklad
 

@@ -39,28 +39,28 @@ helpviewer_keywords:
 - long keyword [C++]
 - type specifiers [C++]
 - integral types
-- long keyword [C++], C++ data types
+- long keyword [C++]
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99c30eeb942eb3ab57518cc63ce353cfeff0bec9
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153798"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810553"
 ---
 # <a name="fundamental-types--c"></a>Základní typy (C++)
 
-Základní typy jazyka C++ jsou rozděleny do tří kategorií: integrální plovoucí desetinná čárka a void. Integrální typy jsou schopné zpracovat celá čísla. Typy plovoucího bodu jsou schopny určit hodnoty, které mohou mít zlomkové části.
+Základní typy v C++ jsou rozděleny do tří kategorií: integrál, plovoucí desetinná čárka a typ void. Integrální typy jsou schopné zpracovat celá čísla. Typy s plovoucí desetinnou čárkou umožňují určit hodnoty, které mohou mít zlomkové části.
 
-[Void](../cpp/void-cpp.md) typu popisuje prázdnou sadu hodnot. Žádné proměnné typu **void** je možné zadat – používá se především k deklarování funkcí, které nevrací žádnou hodnotu nebo pro deklaraci obecných ukazatelů na netypový kód nebo s libovolným typem data. Libovolný výraz může být explicitně převeden nebo přetypován na typ **void**. Tyto výrazy jsou však omezeny na následující použití:
+Typ [void](../cpp/void-cpp.md) popisuje prázdnou sadu hodnot. Není možné zadat žádnou proměnnou typu **void** – používá se primárně k deklarování funkcí, které nevracejí žádné hodnoty, nebo k deklaraci obecných ukazatelů na netypové nebo libovolně typové údaje. Libovolný výraz může být explicitně převeden nebo převeden na typ **void**. Tyto výrazy jsou však omezeny na následující použití:
 
-- Příkaz výrazu. (Viz [výrazy](../cpp/expressions-cpp.md), další informace.)
+- Příkaz výrazu. (Další informace naleznete v tématu [výrazy](../cpp/expressions-cpp.md).)
 
-- Levý operand operátoru čárky. (Viz [operátor čárky](../cpp/comma-operator.md) Další informace.)
+- Levý operand operátoru čárky. (Další informace najdete v tématu [operátor čárky](../cpp/comma-operator.md) .)
 
-- Druhý nebo třetí operanda podmíněného operátoru (`? :`). (Viz [výrazy s podmíněným operátorem](../cpp/conditional-operator-q.md) Další informace.)
+- Druhý nebo třetí operand podmíněného operátoru (`? :`). (Další informace naleznete v tématu [výrazy s podmíněným operátorem](../cpp/conditional-operator-q.md) .)
 
 Následující tabulka popisuje omezení velikostí písma. Tato omezení jsou nezávislé implementace společnosti Microsoft.
 
@@ -68,36 +68,36 @@ Následující tabulka popisuje omezení velikostí písma. Tato omezení jsou n
 
 |Kategorie|Type|Obsah|
 |--------------|----------|--------------|
-|Celočíselný typ|**char**|Typ **char** je integrálový typ, který obvykle obsahuje členy znakové sady spuštění základní – ve výchozím nastavení, je to ASCII v Microsoft C++.<br /><br /> Kompilátor C++ zpracovává proměnné typu **char**, **podepsané char**, a **unsigned char** tak, že má různé typy. Proměnné typu **char** jsou povýšeny do **int** jakoby se jednalo o typ **podepsané char** ve výchozím nastavení, pokud není použita možnost kompilace/j. V tomto případě jsou považovány za typ **unsigned char** a jsou povýšeny do **int** bez přípony sign.|
-||**bool**|Typ **bool** je integrálový typ, který může mít jednu ze dvou hodnot **true** nebo **false**. Velikost není zadána.|
-||**short**|Typ **krátká celočíselná** (nebo jednoduše **krátký**) je integrálový typ, který je větší než nebo rovno velikosti typu **char**a kratší než nebo rovno velikosti typu **int**.<br /><br /> Objekty typu **krátký** lze deklarovat jako **podepsané řečeno** nebo **unsigned short**. **Podepsané řečeno** je synonymum pro **krátký**.|
-||**int**|Typ **int** je integrálový typ, který je větší než nebo rovno velikosti typu **krátká celočíselná**a kratší než nebo rovno velikosti typu **dlouhé**.<br /><br /> Objekty typu **int** lze deklarovat jako **znaménkem** nebo **unsigned int**. **Znaménkem** je synonymum pro **int**.|
-||**__int8**, **__int16**, **__int32**, **__int64**|Integer s nastavenou velikostí `__int n`, kde `n` velikost, v bitech celočíselné proměnné. **__int8**, **__int16**, **__int32** a **__int64** jsou klíčová slova specifická pro společnost Microsoft. Ne všechny typy jsou k dispozici ve všech architekturách. (**__int128** se nepodporuje.)|
-||**long**|Typ **dlouhé** (nebo **long int**) je integrálový typ, který je větší než nebo rovno velikosti typu **int**.<br /><br /> Objekty typu **dlouhé** lze deklarovat jako **podepsané dlouho** nebo **unsigned long**. **Podepsané dlouho** je synonymum pro **dlouhé**.|
-||**Long long**|Větší než nepodepsaný **dlouhé**.<br /><br /> Objekty typu **long long** lze deklarovat jako **podepsáno long long** nebo **unsigned long long**. **podepsáno long long** je synonymum pro **long long**.|
-||**wchar_t**, **__wchar_t**|Proměnné typu **wchar_t** označuje typ širokého znaku nebo vícebajtového znaku. Ve výchozím nastavení **wchar_t** je nativní typ, ale můžete použít [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) aby **wchar_t** definice typu **unsigned short**. **__Wchar_t** typ je synonymum pro nativní specifické pro společnost Microsoft **wchar_t** typu.<br /><br /> Použijte předponu L před znak nebo textový literál, chcete-li určit typ širokého znaku.|
-|Plovoucí desetinná čárka|**float**|Typ **float** je nejmenší plovoucí typu bodu.|
-||**double**|Typ **double** je plovoucí typ bodu, který je větší než nebo rovno typu **float**, ale kratší než nebo rovno velikosti typu **long double**.<br /><br /> Specifické pro Microsoft: Reprezentace **long double** a **double** je stejný jako. Ale **long double** a **double** jsou zvláštní typy.|
-||**typ long double**|Typ **long double** je plovoucí typ bodu, který je větší než nebo rovno typu **double**.|
+|Integrál|**char**|Typ **char** je integrální typ, který obvykle obsahuje členy základní znakové sady pro spuštění – ve výchozím nastavení je to ASCII v Microsoftu C++.<br /><br /> C++ Kompilátor zpracovává proměnné typu **char**, **signed char**a **unsigned char** s různými typy. Proměnné typu **char** jsou povýšeny na **int** , jako by byly typu **signed char** ve výchozím nastavení, pokud se nepoužije možnost kompilace/j. V tomto případě se považují za typ **char bez znaménka** a jsou povýšeny na **int** bez přípony Sign.|
+||**bool**|Typ **bool** je celočíselný typ, který může mít jednu ze dvou hodnot **true** nebo **false**. Velikost není zadána.|
+||**short**|Typ **short int** (nebo jen **krátká**) je celočíselný typ, který je větší nebo roven velikosti typu **char**a menší nebo roven velikosti typu **int**.<br /><br /> Objekty typu **short** lze deklarovat jako **signed short** nebo **unsigned short**. **Signed short** je synonymum pro **krátké**.|
+||**int**|Typ **int** je celočíselný typ, který je větší nebo roven velikosti typu **short int**a menší nebo roven velikosti typu **Long**.<br /><br /> Objekty typu **int** lze deklarovat jako **signed int** nebo **unsigned int**. **Signed int** je synonymem pro **int**.|
+||**__int8**, **__int16**, **__int32**, **__int64**|Size Integer `__int n`, kde `n` je velikost proměnné Integer v bitech. **__int8**, **__int16**, **__int32** a **__Int64** jsou klíčová slova specifická pro společnost Microsoft. Ne všechny typy jsou k dispozici ve všech architekturách. ( **__int128** se nepodporuje.)|
+||**long**|Typ **Long** (nebo **Long int**) je celočíselný typ, který je větší nebo roven velikosti typu **int**. (Ve Windows **Long** má stejnou velikost jako **int**.)<br /><br /> Objekty typu **Long** lze deklarovat jako **signed Long** nebo **unsigned long**. **Long signed** je synonymum pro **Long**.|
+||**Long Long**|Větší než unsigned **Long**.<br /><br /> Objekty typu **long long** lze deklarovat jako **podepsáno long long** nebo **unsigned long long**. Long Long **signed Long** je synonymum pro **dlouhou**dobu.|
+||**wchar_t**, **__wchar_t**|Proměnná typu **wchar_t** určuje typ znaku s velkým znakem nebo vícebajtovým znakem. Ve výchozím nastavení je **wchar_t** nativním typem, ale můžete použít parametr [/Zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) k provedení **wchar_t** definice typu pro **znaménko short**. Typ **__wchar_t** je synonymum specifické pro společnost Microsoft pro nativní typ **wchar_t** .<br /><br /> Použijte předponu L před znakovým nebo řetězcovým literálem k určení typu s velkým znakem.|
+|Číslo s plovoucí desetinnou čárkou|**float**|Typ **float** je nejmenší typ s plovoucí desetinnou čárkou.|
+||**double**|Typ **Double** je typ s plovoucí desetinnou čárkou, který je větší než nebo roven typu **float**, ale kratší nebo rovno velikosti typu **Long Double**.<br /><br /> Specifické pro společnost Microsoft: reprezentace **Long Double** a **Double** je shodná. **Long Double** a **Double** jsou však samostatné typy.|
+||**Long Double**|Typ **Long Double** je typ s plovoucí desetinnou čárkou, který je větší nebo roven typu **Double**.|
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Následující tabulka uvádí velikost úložiště potřebného pro základní typy v Microsoft C++.
+Následující tabulka uvádí velikost úložiště potřebného pro základní typy v jazyce Microsoft C++.
 
 ### <a name="sizes-of-fundamental-types"></a>Velikosti základních typů
 
 |Type|Velikost|
 |----------|----------|
-|**BOOL**, **char**, **unsigned char**, **podepsané char**, **__int8**|1 bajt|
-|**__int16**, **krátký**, **unsigned short**, **wchar_t**, **__wchar_t**|2 bajty|
-|**float**, **__int32**, **int**, **unsigned int**, **dlouhé**, **unsigned long**|4 bajty|
-|**dvojité**, **__int64**, **long double**, **long long**|8 bajtů|
+|**bool**, **char**, **unsigned char**, **signed char**, **__int8**|1 bajt|
+|**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2 bajty|
+|**float**, **__int32**, **int**, **unsigned int**, **Long**, **unsigned long**|4 bajty|
+|**Dvojitá**, **__int64**, **dlouhá dvojitá**, **dlouhá dlouhá**|8 bajtů|
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-Zobrazit [rozsahy datového typu](../cpp/data-type-ranges.md) souhrnné informace o rozsahu hodnot jednotlivých typů.
+V části rozsahy [datových typů](../cpp/data-type-ranges.md) můžete zobrazit souhrn rozsahu hodnot každého typu.
 
-Další informace o převodu typů najdete v tématu [standardní převody](../cpp/standard-conversions.md).
+Další informace o převodu typů naleznete v tématu [standardní převody](../cpp/standard-conversions.md).
 
 ## <a name="see-also"></a>Viz také:
 

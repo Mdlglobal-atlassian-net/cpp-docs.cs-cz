@@ -1,33 +1,37 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4436
+title: Upozornění kompilátoru (úroveň 1) C4436
 ms.date: 11/04/2016
+f1_keywords:
+- C4436
+helpviewer_keywords:
+- C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 487fb8c804ac34ba52661774c2552199c764f6b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 762a458072a0a1104cd1af55ef1f61772485b6c9
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408183"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810607"
 ---
-# <a name="compiler-warning-level-1-c4436"></a>Kompilátor upozornění (úroveň 1) C4436
+# <a name="compiler-warning-level-1-c4436"></a>Upozornění kompilátoru (úroveň 1) C4436
 
-přetypování dynamic_cast z virtuální base 'class1' na 'class2' v konstruktoru nebo destruktoru by mohly selhat s částečně vytvořeným objektem kompilace s možností/vd2 nebo definovat 'class2' s #pragma vtordisp(2) platit
+dynamic_cast z virtuální základní třídy Class1 do Class2 v konstruktoru nebo destruktoru by mohlo selhat s částečně vytvořeným objektem Zkompilováným pomocí/VD2 nebo definovat Class2 s #pragma vtordisp (2).
 
-Kompilátor narazil `dynamic_cast` operace s následujícími vlastnostmi.
+Kompilátor zjistil operaci `dynamic_cast` s následujícími charakteristikami.
 
-- Přetypování je z ukazatele na základní třídu na ukazatel na odvozenou třídu.
+- Přetypování je z ukazatele základní třídy na odvozený ukazatel třídy.
 
-- Odvozená třída virtuálně dědí základní třídy.
+- Odvozená třída prakticky dědí základní třídu.
 
-- Odvozená třída nemá `vtordisp` pole pro virtuální základní třídy.
+- Odvozená třída nemá pole `vtordisp` pro virtuální základnu.
 
-- Přetypování se nachází v konstruktor nebo destruktor odvozené třídy nebo některé třídy, která dále dědí z odvozené třídy.
+- Přetypování je nalezeno v konstruktoru nebo destruktoru odvozené třídy nebo v některé třídě, která dále dědí z odvozené třídy.
 
-Toto upozornění označuje, `dynamic_cast` nemusí provést správně, pokud je zpracovávána v částečně vytvořených objektů.  K tomu dojde, pokud konstruktor nebo destruktor odvozené pracuje na dílčí objekt některé další odvozené objektu.  Pokud je odvozená třída s názvem v tomto upozornění nikdy další odvozena, lze ignorovat upozornění.
+Upozornění indikuje, že `dynamic_cast` nemusí správně fungovat, pokud je provozován na částečně vytvořeném objektu.  K tomu dochází, pokud odvozený konstruktor/destruktor pracuje na podobjektu nějakého dalšího odvozeného objektu.  Pokud není odvozená třída s názvem v upozornění nikdy dále odvozena, upozornění může být ignorováno.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C4436 a ukazuje problém s generováním kódu, který vyplývá z chybějící `vtordisp` pole.
+Následující ukázka generuje C4436 a ukazuje problém při generování kódu, který vzniká v poli chybějící `vtordisp`.
 
 ```cpp
 // C4436.cpp
