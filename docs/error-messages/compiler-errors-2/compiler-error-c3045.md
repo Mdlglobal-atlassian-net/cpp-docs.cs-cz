@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3045
 ms.assetid: 9351ba3e-3d3f-455f-ac90-a810fa9fd947
-ms.openlocfilehash: 9beae880d840f1cd1ac73f51ebeac8883882dd92
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 88c0c9747f98c6850f3e9b4341bdcdef915ac754
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345559"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761348"
 ---
 # <a name="compiler-error-c3045"></a>Chyba kompilátoru C3045
 
-Byl očekáván složený příkaz direktivě OpenMP 'sections'. Chybí "{"
+Po direktivě OpenMP Sections se očekával složený příkaz. Chybí znak {.
 
-Musí následovat bloku kódu, který je oddělen složenými závorkami [oddíly](../../parallel/openmp/reference/sections-openmp.md) směrnice.
+Blok kódu oddělený závorkami musí následovat po direktivě [Sections](../../parallel/openmp/reference/sections-openmp.md) .
 
 Následující ukázka generuje C3045:
 
-```
+```cpp
 // C3045.cpp
 // compile with: /openmp /c
 #include "omp.h"

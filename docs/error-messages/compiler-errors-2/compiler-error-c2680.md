@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
-ms.openlocfilehash: 7a0f58ae16baee00a86038c633f996a7d27a1019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37535c9ffbafd0d312646d5f3cfdb0c4411bc790
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386808"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760306"
 ---
 # <a name="compiler-error-c2680"></a>Chyba kompilátoru C2680
 
-'type': Neplatný cílový typ pro název
+Typ: neplatný cílový typ pro název
 
-Operátor přetypování se pokusil převést na typ, který není ukazatel nebo odkaz. [Dynamic_cast](../../cpp/dynamic-cast-operator.md) operátor lze použít pouze u ukazatelů nebo odkazů.
+Operátor přetypování se pokusil převést na typ, který není ukazatel nebo odkaz. Operátor [dynamic_cast](../../cpp/dynamic-cast-operator.md) lze použít pouze pro ukazatele nebo odkazy.
 
 Následující ukázka generuje C2680:
 
-```
+```cpp
 // C2680.cpp
 // compile with: /c
 class A { virtual void f(); };
@@ -34,9 +34,9 @@ void g(B b) {
 }
 ```
 
-C2680 může dojít, pokud cíl není definován:
+K C2680 může dojít také v případě, že cíl není definován:
 
-```
+```cpp
 // C2680b.cpp
 // compile with: /clr /c
 // C2680 expected

@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C3354
 ms.assetid: 185de401-231e-4999-a149-172ee4c69d84
-ms.openlocfilehash: 1ff2967f602722c99b58b679324bd4f50575f109
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5945b2112d1d03e4f18944d15028229cce4b668
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402603"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738593"
 ---
 # <a name="compiler-error-c3354"></a>Chyba kompilátoru C3354
 
-'function': Funkce použitá k vytvoření delegáta nemůže mít návratový typ 'type'
+' function ': Funkce použitá k vytvoření delegáta nemůže mít návratový typ ' type '
 
-Nejsou platné jako typy vracených hodnot pro tyto typy `delegate`:
+Následující typy jsou neplatné jako návratové typy pro `delegate`:
 
 - Ukazatel na funkci
 
 - Ukazatel na člena
 
-- Ukazatel na členskou funkci.
+- Ukazatel na členskou funkci
 
 - Odkaz na funkci
 
-- Odkaz na členskou funkci.
+- Odkaz na členskou funkci
 
 Následující ukázka generuje C3354:
 
-```
+```cpp
 // C3354_2.cpp
 // compile with: /clr /c
 using namespace System;

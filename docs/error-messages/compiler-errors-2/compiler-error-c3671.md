@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: c4534b11f3aedf638f69337fb6a7af778e086bb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030a6acb19c0907956d2a5b833b683821591e5c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215014"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758109"
 ---
 # <a name="compiler-error-c3671"></a>Chyba kompilátoru C3671
 
-'function_1': funkce nepřepisuje "function_2.
+' function_1 ': funkce nepřepisuje ' function_2 '
 
-Při použití syntaxe explicitního přepsání, kompilátor vygeneruje chybu, pokud není funkce přepsána.  Zobrazit [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md) Další informace.
+Při použití explicitní syntaxe přepsání kompilátor vygeneruje chybu, pokud funkce není přepsána.  Další informace najdete v tématu [Explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3671.
 
-```
+```cpp
 // C3671.cpp
 // compile with: /clr /c
 ref struct S {

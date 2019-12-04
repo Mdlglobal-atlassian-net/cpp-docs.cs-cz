@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3240
 ms.assetid: 1a8dc213-b80c-47ae-ada0-e9554b635d1e
-ms.openlocfilehash: a8334b4f95ccadcce73a79d787669cba9f911199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e38ac53d0473c4fe5daace0f8c674c06b2ae0161
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174169"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756380"
 ---
 # <a name="compiler-error-c3240"></a>Chyba kompilátoru C3240
 
-'function': musí být abstraktní člen není Přetížená funkce z 'type'
+' function ': musí se jednat o abstraktní členskou funkci, která není přetížena ' type '
 
-Základní typ obsahuje funkce, která byla definována. Funkce musí být virtuální.
+Základní typ obsahuje funkci, která byla definována. Funkce musí být virtuální.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3240.
 
-```
+```cpp
 // C3240.cpp
 // compile with: /c
 __interface I {

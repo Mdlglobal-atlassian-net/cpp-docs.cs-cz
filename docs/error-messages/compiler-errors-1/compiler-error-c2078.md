@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2078
 ms.assetid: 9bead850-4123-46cf-a634-5c77ba974b2b
-ms.openlocfilehash: a800a6efa6e02f323b4b6597f1aa983f13674e83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 514776c0feb12c46dea56dd8e85043345754a229
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182805"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756445"
 ---
 # <a name="compiler-error-c2078"></a>Chyba kompilátoru C2078
 
-moc velký počet inicializátorů
+příliš mnoho inicializátorů
 
-Počet inicializátory překračuje počet objektů, které mají být inicializovány.
+Počet inicializátorů překračuje počet objektů, které mají být inicializovány.
 
-Kompilátor může odvodit správné přiřazení inicializátory objektů a vnitřních objektů, když vnitřní závorky jsou vynechaného ze seznamu inicializátorů. Kompletní výztuhy také eliminuje nejednoznačnosti a výsledkem správné přiřazení. Částečné výztuhy může způsobit C2078 z důvodu nejednoznačnosti v přiřazení inicializátory objektů.
+Kompilátor může odvodit správné přiřazení inicializátorů objektům a vnitřním objektům, když jsou vnitřní složené závorky vynechaného Copy ze seznamu inicializátorů. Úplné složené závorky také eliminují nejednoznačnost a výsledkem je správné přiřazení. Částečné složené závorky můžou způsobit C2078 z důvodu nejednoznačnosti v přiřazení inicializátorů k objektům.
 
-Následující ukázka generuje C2078 a ukazuje, jak ho opravit:
+Následující ukázka generuje C2078 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C2078.cpp
 // Compile by using: cl /c /W4 C2078.cpp
 struct S {

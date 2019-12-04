@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C3185
+title: Chyba kompilátoru C3185
 ms.date: 11/04/2016
 f1_keywords:
 - C3185
 helpviewer_keywords:
 - C3185
 ms.assetid: 5bf96279-043c-4981-9d02-b4550071b192
-ms.openlocfilehash: 45afe70b454f72dd8c9b8ce9771ce1f5aef6a10e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36f350287a1cfaf937ee739800042aaf99f31769
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366079"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761631"
 ---
-# <a name="compiler-error-c3185"></a>Compiler Error C3185
+# <a name="compiler-error-c3185"></a>Chyba kompilátoru C3185
 
-použít typeid spravovaných nebo typ WinRT 'type', použijte 'operator'
+typeid se používá u spravovaného nebo WinRT typu typu. místo toho použijte operátor operator.
 
-Nelze použít [typeid](../../cpp/typeid-operator.md) operátor pro spravované nebo WinRT typ; použijte [typeid](../../extensions/typeid-cpp-component-extensions.md) místo.
+Operátor [typeid](../../cpp/typeid-operator.md) nejde použít pro spravovaný nebo winrtový typ. místo toho použijte [typeid](../../extensions/typeid-cpp-component-extensions.md) .
 
-Následující ukázka generuje C3185 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3185 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3185a.cpp
 // compile with: /clr
 ref class Base {};

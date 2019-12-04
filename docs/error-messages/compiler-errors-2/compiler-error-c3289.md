@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C3289
+title: Chyba kompilátoru C3289
 ms.date: 11/04/2016
 f1_keywords:
 - C3289
 helpviewer_keywords:
 - C3289
 ms.assetid: 3c1c623b-7fcf-43ab-a89a-8722532a8d29
-ms.openlocfilehash: d234ad4b7c48a66352e52d3517dfd675f27b002c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee80fb2c917281163156ef148403088cef8e8545
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222614"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760163"
 ---
-# <a name="compiler-error-c3289"></a>Compiler Error C3289
+# <a name="compiler-error-c3289"></a>Chyba kompilátoru C3289
 
-'property': triviální vlastnost nemůže být indexovaná
+' Property ': triviální vlastnost nemůže být indexována
 
-Vlastnost byl deklarován nesprávně. Přístupové objekty musí být definován indexované vlastnosti. Zobrazit [vlastnost](../../extensions/property-cpp-component-extensions.md) Další informace.
+Vlastnost byla deklarována nesprávně. Pro indexovanou vlastnost je nutné definovat přístupové objekty. Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3289.
 
-```
+```cpp
 // C3289.cpp
 // compile with: /clr
 public ref struct C {

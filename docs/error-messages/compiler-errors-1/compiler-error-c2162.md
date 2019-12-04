@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2162
+title: Chyba kompilátoru C2162
 ms.date: 11/04/2016
 f1_keywords:
 - C2162
 helpviewer_keywords:
 - C2162
 ms.assetid: 34923628-d35e-48ab-9072-b95e3b5f6b45
-ms.openlocfilehash: 02c0101324b28ebe548c38c6dc617faaa62315b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b4efd609aaa1f1c5bc50460ff653b36b12061e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174780"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755691"
 ---
-# <a name="compiler-error-c2162"></a>Compiler Error C2162
+# <a name="compiler-error-c2162"></a>Chyba kompilátoru C2162
 
-formální parametr očekávané – makro
+očekával se formální parametr makra.
 
-Token následující operátor převodu na řetězec (#) není formálních parametrů názvu.
+Token následující za operátorem převodu (#) není názvem formálního parametru.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2162:
 
-```
+```cpp
 // C2162.cpp
 // compile with: /c
 #include <stdio.h>

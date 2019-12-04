@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2657
 ms.assetid: f7cf29a9-684a-4605-9469-ecfee9ba4b03
-ms.openlocfilehash: 4e2816092b3c0c210ae2c544e9bf9a823a9c5d18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e060c2b9a38866a898a3c5ada9e595464050877e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360434"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756094"
 ---
 # <a name="compiler-error-c2657"></a>Chyba kompilátoru C2657
 
-' třída:: * "na začátku příkazu (Nezapomněli jste zadat typ?)
+' class::* ' nalezen na začátku příkazu (Nezapomněli jste zadat typ?)
 
-Na řádku začal s identifikátorem pointer-to-member.
+Řádek začal identifikátorem ukazatele na člen.
 
-Tuto chybu může způsobovat chybějící specifikátor typu v deklaraci ukazatele na člen.
+Tato chyba může být způsobena chybějícím specifikátorem typu v deklaraci ukazatele na člena.
 
 Následující ukázka generuje C2657:
 
-```
+```cpp
 // C2657.cpp
 class C {};
 int main() {

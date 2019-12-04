@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2755
 ms.assetid: 8ee4eeb6-4757-4efe-9100-38ff4a96f1de
-ms.openlocfilehash: c2238058dc4b7df6bbe33e98d6ccde996f36b782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd4bb5d49f6f6e807ad240c377debb220138c93
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227969"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759552"
 ---
 # <a name="compiler-error-c2755"></a>Chyba kompilátoru C2755
 
-'param': beztypový parametr částečné specializace musí být jednoduchý identifikátor.
+param: parametr bez typu částečné specializace musí být jednoduchý identifikátor.
 
-Beztypový parametr musí být jednoduchý identifikátor, něco, co kompilátor může rozpoznat v době kompilace jednoho identifikátoru nebo konstantní hodnotu.
+Parametr bez typu musí být jednoduchý identifikátor, něco může kompilátor vyřešit v době kompilace do jednoho identifikátoru nebo konstantní hodnoty.
 
 Následující ukázka generuje C2755:
 
-```
+```cpp
 // C2755.cpp
 template<int I, int J>
 struct A {};

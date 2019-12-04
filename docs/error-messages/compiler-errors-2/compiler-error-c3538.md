@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: e8b97c8c6e5d23c406bf2d5831279810e7de0902
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376182"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761540"
 ---
 # <a name="compiler-error-c3538"></a>Chyba kompilátoru C3538
 
-v rámci declarator-list 'auto' se musí vždycky odvozovat na stejný typ.
+v deklarátor-list ' auto ' se musí vždycky odvozovat na stejný typ
 
-Všechny proměnné deklarované v deklaraci seznamu nelze vyřešit pomocí stejného typu.
+Všechny deklarované proměnné v seznamu deklarací se překládají na stejný typ.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Ujistěte se, že všechny `auto` deklarace v seznamu odvodit do stejného typu.
+1. Zajistěte, aby všechny deklarace `auto` v seznamu byly odvozeny na stejný typ.
 
 ## <a name="example"></a>Příklad
 
-Následující příkazy yield C3538. Každý příkaz deklaruje více proměnných, ale každé použití klíčového `auto` – klíčové slovo není odvodit do stejného typu.
+Následující příkazy poskytují C3538. Každý příkaz deklaruje více proměnných, ale každé použití klíčového slova `auto` není odvozeno na stejný typ.
 
-```
+```cpp
 // C3538.cpp
 // Compile with /Zc:auto
 // C3538 expected

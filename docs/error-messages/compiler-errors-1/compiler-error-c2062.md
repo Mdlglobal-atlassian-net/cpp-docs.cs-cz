@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2062
 ms.assetid: 6cc98353-2ddf-43ab-88a2-9cc91cdd6033
-ms.openlocfilehash: dcfac9629a90b82744f87ec105c30301b2102cdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a709a540b24756a7e08f98552c5888a55c3ea601
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408742"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735967"
 ---
 # <a name="compiler-error-c2062"></a>Chyba kompilátoru C2062
 
-Typ 'type' neočekávané
+typ typu je neočekávaný.
 
-Kompilátor nebyl očekáván název typu.
+Kompilátor neočekával název typu.
 
 Následující ukázka generuje C2062:
 
-```
+```cpp
 // C2062.cpp
 // compile with: /c
 struct A {  : int l; };   // C2062
 struct B { private: int l; };   // OK
 ```
 
-C2062 může vzniknout také kvůli způsobu, jakým kompilátor zpracovává nedefinovaný typy v seznamu parametrů konstruktoru. Pokud kompilátor narazí Nedefinovaný typ (chybně?), předpokládá konstruktoru je výraz a vydá C2062. Pokud chcete vyřešit, použijte pouze definované typy v seznamu parametrů konstruktoru.
+K C2062 může také dojít v důsledku toho, jak kompilátor zpracovává nedefinované typy v seznamu parametrů konstruktoru. Pokud kompilátor narazí na nedefinovaný (nesprávně napsaný) typ?), předpokládá se, že konstruktor je výraz a vydává problémy C2062. Chcete-li tento problém vyřešit, použijte pouze definované typy v seznamu parametrů konstruktoru.

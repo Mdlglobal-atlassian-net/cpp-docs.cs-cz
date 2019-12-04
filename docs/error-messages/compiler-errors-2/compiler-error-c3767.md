@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-ms.openlocfilehash: 61f7479986cccfa3851d85bf8e7bc0e9da3d1cea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 994b235b4775c28126d92c241a7e42dc837d4493
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400198"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757199"
 ---
 # <a name="compiler-error-c3767"></a>Chyba kompilátoru C3767
 
@@ -19,13 +19,13 @@ kandidátská funkce 'funkce' není k dispozici
 
 Se spřátelenou funkcí definovanou ve třídě by nemělo být zacházeno, jako kdyby byla definována a deklarována v rozsahu globálního oboru názvů. Lze ji však vyhledat pomocí vyhledávání závislého na argumentu.
 
-C3767 může být také způsobeno narušující změně: nativní typy jsou nyní ve výchozím nastavení v privátní **/CLR** tématu [zadejte viditelnost](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) Další informace.
+C3767 může být také způsobena zásadní změnou: nativní typy jsou nyní ve výchozím nastavení privátní v kompilaci **/CLR** ; Další informace najdete v tématu [viditelnost typů](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3767:
 
-```
+```cpp
 // C3767a.cpp
 // compile with: /clr
 using namespace System;
@@ -56,7 +56,7 @@ int main() {
 
 Následující ukázka generuje C3767:
 
-```
+```cpp
 // C3767c.cpp
 // compile with: /clr /c
 

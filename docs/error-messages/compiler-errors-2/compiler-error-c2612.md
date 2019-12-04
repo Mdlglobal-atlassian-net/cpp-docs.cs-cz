@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2612
 ms.assetid: 6faacfd6-4455-41a2-808e-0f6799f84d6d
-ms.openlocfilehash: b2d4888c1be39c4f48f0ca674426c7af612b9bb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630e5b1cc6e99ffda28f50c09bccbbc2fea07172
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379022"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737696"
 ---
 # <a name="compiler-error-c2612"></a>Chyba kompilátoru C2612
 
-na konci 'char' neplatné v seznamu inicializátorů base/member
+v seznamu inicializátorů Base/member je koncový znak char neplatný.
 
-Znak se objeví po poslední základní nebo členský v seznamu inicializátorů.
+Znak se zobrazí za posledním základem nebo členem v seznamu inicializátorů.
 
 Následující ukázka generuje C2612:
 
-```
+```cpp
 // C2612.cpp
 class A {
 public:

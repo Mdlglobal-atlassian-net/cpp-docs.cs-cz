@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2299
+title: Chyba kompilátoru C2299
 ms.date: 11/04/2016
 f1_keywords:
 - C2299
 helpviewer_keywords:
 - C2299
 ms.assetid: d001c2bc-f6fd-47aa-8e42-0eb824d6441d
-ms.openlocfilehash: 39659baebf7dc1859a69021f60ed452964ae61af
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 009a441ec610053176e79126d9f2663f29b26bc6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447955"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759045"
 ---
-# <a name="compiler-error-c2299"></a>Compiler Error C2299
+# <a name="compiler-error-c2299"></a>Chyba kompilátoru C2299
 
-'function': Změna chování: explicitní specializace nemůže být kopírovací konstuktor ani operátor copy assignment
+' function ': Změna chování: explicitní specializace nemůže být kopírovacím konstruktorem nebo operátorem přiřazení kopírování
 
-Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: předchozí verze vizuálu C++ explicitní specializace povolená pro kopírovací konstruktor a operátor přiřazení kopie.
+Tato chyba se může vygenerovat taky v důsledku práce s vyhovujícími kompilátory, která se dokončila pro Visual Studio 2005: předchozí verze C++ vizuálu povolila explicitní specializace kopírovacího konstruktoru nebo operátoru přiřazení pro kopírování.
 
-Chcete-li vyřešit C2299, Nedovolte, aby byly kopírovací konstruktor nebo operátor přiřazení šablony funkce, ale spíše nešablonové funkce, která přebírá typ třídy. Veškerý kód, který volá kopírovací konstuktor ani operátor přiřazení explicitním zadáním argumentů šablony musí odebrat argumenty šablony.
+Chcete-li vyřešit C2299, nevytvářejte konstruktor kopírování ani operátor přiřazení funkce šablony, ale spíše nešablonou funkce, která přebírá typ třídy. Jakýkoli kód, který volá kopírovací konstruktor nebo operátor přiřazení explicitním zadáním argumentů šablony, je nutné odebrat argumenty šablony.
 
 Následující ukázka generuje C2299:
 
-```
+```cpp
 // C2299.cpp
 // compile with: /c
 class C {

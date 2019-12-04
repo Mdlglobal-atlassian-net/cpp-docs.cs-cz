@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-ms.openlocfilehash: 7a567e4396999f98d9e9740db0acf951c443d525
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce95bba417e9be3603f15376a0fd65a48f951a2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397377"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755639"
 ---
 # <a name="compiler-error-c3533"></a>Chyba kompilátoru C3533
 
-'type': Parametr nemůže mít typ, který obsahuje nastavení auto.
+' type ': parametr nemůže mít typ, který obsahuje ' auto '
 
-Parametr metody nebo šablony se nedá deklarovat pomocí `auto` – klíčové slovo Pokud výchozí [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) – možnost kompilátoru je v platnosti.
+Metoda nebo parametr šablony nelze deklarovat s klíčovým slovem `auto`, pokud je použita výchozí hodnota [/Zc: auto](../../build/reference/zc-auto-deduce-variable-type.md) .
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Odeberte `auto` – klíčové slovo z deklarace parametru.
+1. Odeberte klíčové slovo `auto` z deklarace parametru.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad provede C3533, protože deklaruje parametr funkce se `auto` – klíčové slovo a je kompilován **/Zc: Auto**.
+Následující příklad vrátí C3533, protože deklaruje parametr funkce s klíčovým slovem `auto` a je zkompilován pomocí **/Zc: auto**.
 
-```
+```cpp
 // C3533a.cpp
 // Compile with /Zc:auto
 void f(auto j) {} // C3533
@@ -35,9 +35,9 @@ void f(auto j) {} // C3533
 
 ## <a name="example"></a>Příklad
 
-Následující příklad provede C3533 v režim C ++ 14, protože deklaruje parametr šablony s `auto` – klíčové slovo a je kompilován **/Zc: Auto**. (V C ++ 17, je to platnou definici šablony třídy s parametrem jedné šablony bez typu, jehož typ je odvozen.)
+Následující příklad vrací C3533 v režimu C++ 14, protože deklaruje parametr šablony s klíčovým slovem `auto` a je zkompilován pomocí **/Zc: auto**. (V C++ 17 je to platná definice šablony třídy s jedním netypovým parametrem šablony, jehož typ je odvozený.)
 
-```
+```cpp
 // C3533b.cpp
 // Compile with /Zc:auto
 template<auto T> class C {}; // C3533

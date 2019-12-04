@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3709
 ms.assetid: d5576b04-2f93-420a-8f3e-8b8e987e8dab
-ms.openlocfilehash: 3eb2963916cbbcbd925f755f9162ce59e9bff569
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47320c79dbbfc2152c126c80d1eb8c061f3ceb3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328429"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757914"
 ---
 # <a name="compiler-error-c3709"></a>Chyba kompilátoru C3709
 
-'function': nesprávná syntaxe pro zadání události v: __hook /\__unhook
+' function ': Nesprávná syntaxe pro určení události v __hook/\__unhook
 
-Pokud zadáte zdroj událostí s [__hook](../../cpp/hook.md) nebo [__unhook](../../cpp/unhook.md), první parametr musí být metoda platné události a druhý parametr musí být platné události zdrojový objekt (nikoli metody).
+Když zadáte zdroj události s [__hook](../../cpp/hook.md) nebo [__unhook](../../cpp/unhook.md), musí být prvním parametrem platná metoda události a druhý parametr musí být platným objektem zdroje události (nikoli metodou).
 
 Následující ukázka generuje C3709:
 
-```
+```cpp
 // C3709.cpp
 // compile with: /LD
 [event_source(native)]

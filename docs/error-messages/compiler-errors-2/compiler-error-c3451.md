@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 07cfda76af26ddb285be4f77131aaf48a20a761f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 2e0122dd53ba5318077dd33f22a07492c52db26b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447851"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756211"
 ---
 # <a name="compiler-error-c3451"></a>Chyba kompilátoru C3451
 
-'attribute': nelze použít nespravovaný atribut na "typ"
+' Attribute ': nespravovaný atribut nelze použít pro typ '
 
-Na typ CLR nelze použít atribut jazyka C++. Zobrazit [referenční dokumentace k atributům C++](../../windows/attributes/attributes-alphabetical-reference.md) Další informace.
+C++ Atribut nelze použít pro typ CLR. Další informace naleznete v tématu [ C++ Reference k atributům](../../windows/attributes/attributes-alphabetical-reference.md) .
 
-Další informace najdete v tématu [uživatelem definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Další informace najdete v tématu [uživatelsky definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
-Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: [uuid](../../windows/uuid-cpp-attributes.md) atribut již není povolena u atributu uživatelem definované pomocí CLR programování. Místo nich se používá <xref:System.Runtime.InteropServices.GuidAttribute>.
+Tato chyba se může vygenerovat v důsledku práce s shodami s kompilátorem, která se dokončila pro Visual Studio 2005: atribut [UUID](../../windows/uuid-cpp-attributes.md) už není povolený u uživatelsky definovaného atributu pomocí programování CLR. Místo nich se používá <xref:System.Runtime.InteropServices.GuidAttribute>.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3451.
 
-```
+```cpp
 // C3451.cpp
 // compile with: /clr /c
 using namespace System;

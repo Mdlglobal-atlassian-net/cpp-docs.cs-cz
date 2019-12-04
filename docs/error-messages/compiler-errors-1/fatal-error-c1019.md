@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1019
 ms.assetid: c4f8968b-bc62-4200-b3ca-69d06c163236
-ms.openlocfilehash: 2d8e63510b762b0de0cda50ab7a03b773dfb949a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f33139393f7f6225edf0c4b3f992b93d35bd6afa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383123"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756913"
 ---
 # <a name="fatal-error-c1019"></a>Závažná chyba C1019
 
-neočekávané #else
+Neočekávaná #else
 
-`#else` Mimo se objeví direktiva `#if`, `#ifdef`, nebo `#ifndef` vytvořit. Použití `#else` pouze v jednom z těchto konstruktorů.
+Direktiva `#else` se nachází mimo `#if`, `#ifdef`nebo `#ifndef` konstrukce. Použijte `#else` pouze v rámci jedné z těchto konstrukcí.
 
 Následující ukázka generuje C1019:
 
-```
+```cpp
 // C1019.cpp
 #else   // C1019
 #endif
@@ -29,9 +29,9 @@ Následující ukázka generuje C1019:
 int main() {}
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C1019b.cpp
 #if 1
 #else

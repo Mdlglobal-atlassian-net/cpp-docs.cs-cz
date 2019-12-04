@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-ms.openlocfilehash: b175b14af55a9a462e040f064cc6e38d13fffb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 460000531dba77e42379199f276c9e2e02f43a9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173980"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743416"
 ---
 # <a name="compiler-error-c3227"></a>Chyba kompilátoru C3227
 
-"parametr": 'klíčové slovo' nelze použít pro přidělení obecného typu
+parametr: nelze použít klíčové slovo pro přidělení obecného typu.
 
-Aby bylo možné vytvořit instanci typu, odpovídajícího konstruktoru je povinný. Kompilátor však není možné zajistit, že je k dispozici odpovídající konstruktor.
+Aby bylo možné vytvořit instanci typu, je vyžadován příslušný konstruktor. Kompilátor ale nemůže zajistit, aby byl k dispozici příslušný konstruktor.
 
-Chcete-li vyřešit tuto chybu můžete použít šablony místo obecných typů nebo některou z několika metod můžete použít k vytvoření instance typu.
+Chcete-li vyřešit tuto chybu, můžete použít šablony namísto obecných typů, nebo můžete použít některou z několika metod k vytvoření instance typu.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3227.
 
-```
+```cpp
 // C3227.cpp
 // compile with: /clr /c
 generic<class T> interface class ICreate {

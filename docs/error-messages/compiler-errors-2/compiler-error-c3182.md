@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3182
 ms.assetid: f3681266-308e-4990-a979-8eef8920e186
-ms.openlocfilehash: 6866c7bbcee0a4097e490b344c79a6eec7f94570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6b183eb30dd0e617e69ab9aac58bea5cb721591
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382407"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761657"
 ---
 # <a name="compiler-error-c3182"></a>Chyba kompilátoru C3182
 
-'class': deklaraci using-declaration nebo přístup člena je neplatný v rámci spravované nebo WinRTtype
+' class ': člen using-Declaration nebo deklarace přístupu je neplatný v rámci spravovaného nebo WinRTtype
 
-A [pomocí](../../cpp/using-declaration.md) deklarace není platný v rámci všech formy spravované třídy.
+Deklarace [using](../../cpp/using-declaration.md) není platná v rámci všech forem spravovaných tříd.
 
-Následující ukázka generuje C3182 a ukazuje, jak ho opravit.
+Následující ukázka generuje C3182 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C3182a.cpp
 // compile with: /clr /c
 ref struct B {

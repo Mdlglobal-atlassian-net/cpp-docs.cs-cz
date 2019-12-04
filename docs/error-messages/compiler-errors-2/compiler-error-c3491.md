@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: 12f50e48fc18fc23d078b6dbc7d21d05efa06d43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78f90ee1c44a0d42e529a027b1e7fc90a0da3cdb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381082"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738320"
 ---
 # <a name="compiler-error-c3491"></a>Chyba kompilátoru C3491
 
-'příkaz var': zachycení podle hodnoty nelze upravit ve neměnitelnou výrazu lambda.
+var: zachycení po hodnotě nejde upravovat v neměnitelném výrazu lambda.
 
-Výraz lambda není měnitelný nelze změnit hodnotu proměnné, která je zachycena hodnotou.
+Výraz lambda, který není proměnlivý, nemůže změnit hodnotu proměnné, která je zachycena hodnotou.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Deklarovat výraz lambda `mutable` – klíčové slovo, nebo
+- Deklarujte výraz lambda pomocí klíčového slova `mutable` nebo
 
-- Předejte proměnnou s odkazem na seznamu zachycení výrazu lambda.
+- Předat proměnnou odkazem na seznam zachycení výrazu lambda.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad generuje C3491, protože upravuje hlavní část výrazu lambda není měnitelný zachycená proměnná `m`:
+Následující příklad generuje C3491, protože tělo neměnitelného výrazu lambda upravuje proměnnou zachycení `m`:
 
-```
+```cpp
 // C3491a.cpp
 
 int main()
@@ -41,9 +41,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu řeší C3491 deklarováním výrazu lambda `mutable` – klíčové slovo:
+Následující příklad vyřeší C3491 deklarací výrazu lambda s klíčovým slovem `mutable`:
 
-```
+```cpp
 // C3491b.cpp
 
 int main()

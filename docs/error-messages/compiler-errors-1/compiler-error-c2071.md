@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-ms.openlocfilehash: 95344b5ef675f566f433dfeaed9dee5c38ef77d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc9781bc0cf1bc6c7f879cc3971828983471c6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303344"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757745"
 ---
 # <a name="compiler-error-c2071"></a>Chyba kompilátoru C2071
 
-'identifier': Neplatná třída úložiště
+' identifier ': Neplatná třída úložiště
 
-`identifier` byl deklarován s neplatnou [třídu úložiště](../../c-language/c-storage-classes.md). Tato chyba může být způsobena, pokud je zadán více než jedna třída úložiště pro identifikátor, nebo při definici je nekompatibilní s deklarací třídy úložiště.
+`identifier` byla deklarována s neplatnou [třídou úložiště](../../c-language/c-storage-classes.md). Tato chyba může být způsobena tím, že pro identifikátor je zadána více než jedna třída úložiště nebo když definice není kompatibilní s deklarací třídy úložiště.
 
-Chcete-li vyřešit tento problém, pochopit třídy určené úložiště identifikátoru – například `static` nebo `extern`– a opravte deklaraci tak, aby odpovídaly.
+Chcete-li tento problém vyřešit, pochopení zamýšlené třídy úložiště identifikátoru, například `static` nebo `extern`– a opravte deklaraci, která se má shodovat.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2071.
 
-```
+```cpp
 // C2071.cpp
 // compile with: /c
 struct C {
@@ -40,7 +40,7 @@ struct D {
 
 Následující ukázka generuje C2071.
 
-```
+```cpp
 // C2071_b.cpp
 // compile with: /c
 typedef int x(int i) { return i; }   // C2071

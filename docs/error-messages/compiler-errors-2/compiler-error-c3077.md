@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3077
 ms.assetid: d9f3c619-d1e2-4656-81a5-a35a9586a7d4
-ms.openlocfilehash: d59859b82c1a8d506bb793a2c4dcd887b0898d85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2dfe4c17ee122baa8f648669f9080b28584a66f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406688"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756731"
 ---
 # <a name="compiler-error-c3077"></a>Chyba kompilátoru C3077
 
-"finalizační metody": finalizační metoda může být jenom členem odkazového typu
+"finalizační metoda": finalizační metoda může být jedině členem typu odkazu.
 
-Nelze deklarovat finalizační metodu v nativní nebo hodnotového typu.
+Finalizační metodu nelze deklarovat v nativním nebo hodnotovém typu.
 
-Další informace najdete v tématu [destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C++vyhodnocovací)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Další informace naleznete v tématu [destruktory a finalizační metody v tématu How to: Define and spotřebovávají Classes andC++Structs (/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3077.
 
-```
+```cpp
 // C3077.cpp
 // compile with: /clr /c
 value struct vs {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3364
 ms.assetid: 98654741-60fe-4472-a6af-e580f8c0a6e1
-ms.openlocfilehash: e99ab3919edcfb883701c08c52cd7aad60cd4591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae1e7ddbc34d36b55d7afa424c137db00ef047d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400354"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757342"
 ---
 # <a name="compiler-error-c3364"></a>Chyba kompilátoru C3364
 
-'delegování': konstruktor delegate: argument musí být ukazatel na členskou funkci třídy spravované nebo globální funkce
+Delegate: konstruktor Delegate: argument musí být ukazatel na členskou funkci spravované třídy nebo globální funkce.
 
-Druhý parametr konstruktoru delegáta přebírá adresu členské funkce nebo adresu statické členské funkce libovolné třídy. Obě jsou považovány za jednoduché adresy.
+Druhý parametr konstruktoru delegáta přijímá buď adresu členské funkce, nebo adresu statické členské funkce libovolné třídy. Obě jsou považovány za jednoduché adresy.
 
 Následující ukázka generuje C3364:
 
-```
+```cpp
 // C3364_2.cpp
 // compile with: /clr
 

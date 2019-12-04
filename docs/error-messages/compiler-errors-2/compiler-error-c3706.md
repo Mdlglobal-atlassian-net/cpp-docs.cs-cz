@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400289"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757979"
 ---
 # <a name="compiler-error-c3706"></a>Chyba kompilátoru C3706
 
-'function': musí být rozhraní modelu COM, aby se mohly aktivovat události COM
+' function ': musí být rozhraním COM pro vyvolání událostí COM
 
-Rozhraní událostí, které vám mohly aktivovat události COM musí být rozhraní modelu COM. V takovém případě rozhraní by měly buď definovat pomocí Vizuálu C++ atribut nebo importované pomocí [#import](../../preprocessor/hash-import-directive-cpp.md) z knihovny typů s atributem společnosti #import embedded_idl.
+Rozhraní události, které použijete k vyvolání událostí modelu COM, musí být rozhraní modelu COM. V této situaci by rozhraní mělo být definováno buď pomocí vizuálního C++ atributu, nebo importováno pomocí [#import](../../preprocessor/hash-import-directive-cpp.md) z knihovny typů s atributem embedded_idl #import.
 
-Všimněte si, `#include` řádky hlavičkové soubory ATL. je znázorněno v následující ukázce jsou požadované pro použití událostí modelu COM. Chcete-li tuto chybu opravit, ujistěte se, `IEvents` (rozhraní eventing) rozhraní modelu COM s použitím jedné z následujících atributů do definice rozhraní: [objekt](../../windows/object-cpp.md), [duální](../../windows/dual.md), nebo [ dispinterface](../../windows/dispinterface.md).
+Všimněte si, že `#include` řádky hlavičkových souborů ATL zobrazených v níže uvedené ukázce jsou vyžadovány pro použití událostí COM. Chcete-li tuto chybu opravit, zajistěte, aby `IEvents` (rozhraní Event) rozhraní COM používalo jeden z následujících atributů pro definici rozhraní: [objekt](../../windows/object-cpp.md), [duální](../../windows/dual.md)nebo [odesílající](../../windows/dispinterface.md).
 
-Pokud rozhraní je ze souboru hlaviček generovaných jazykem MIDL, kompilátor jej nerozpozná jako rozhraní modelu COM.
+Pokud rozhraní pochází ze souboru hlaviček generovaného pomocí MIDL, kompilátor ho nebude rozpoznat jako rozhraní COM.
 
 Následující ukázka generuje C3706:
 
-```
+```cpp
 // C3706.cpp
 // compile with: /c
 // C3706 expected

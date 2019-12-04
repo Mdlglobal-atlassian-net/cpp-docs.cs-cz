@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2345
 ms.assetid: e1cc88b0-0223-4d07-975b-fa99956a82bd
-ms.openlocfilehash: ceb2a835ca94399f27640628105afcde986af1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85d9e312bafe0cf6c9390f7484281e1aefb22aab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188306"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760020"
 ---
 # <a name="compiler-error-c2345"></a>Chyba kompilátoru C2345
 
-align(Value): Neplatná hodnota zarovnání
+align (hodnota): Neplatná hodnota zarovnání
 
-Jste předali hodnotu, která [zarovnat](../../cpp/align-cpp.md) – klíčové slovo, které je mimo povolený rozsah.
+Předala se hodnota k klíčovému slovu [align](../../cpp/align-cpp.md) , která je mimo povolený rozsah.
 
-Následující kód vygeneruje C2345
+Následující kód generuje C2345
 
-```
+```cpp
 // C2345.cpp
 // compile with: /c
 __declspec(align(0)) int a;   // C2345

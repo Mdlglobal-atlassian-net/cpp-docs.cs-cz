@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2805
 ms.assetid: c997dc56-e199-442f-b94e-ac551ec9b015
-ms.openlocfilehash: b0b3c0d4291787fb0b5664baa9159c84c8549dfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 500660d70616a530fce3d8674f0f116ce219d1d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282068"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760631"
 ---
 # <a name="compiler-error-c2805"></a>Chyba kompilátoru C2805
 
-binární 'operátor operator' obsahuje příliš málo parametrů
+binární operátor ' operator ' má příliš málo parametrů
 
 Binární operátor nemá žádné parametry.
 
 Následující ukázka generuje C2805:
 
-```
+```cpp
 // C2805.cpp
 // compile with: /c
 class X {

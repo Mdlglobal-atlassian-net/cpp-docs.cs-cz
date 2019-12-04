@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3883
 ms.assetid: cdd1c1f4-f268-4469-9c62-d52303114b0c
-ms.openlocfilehash: 51ecf5fbc793c02a23e2aa02fb08e37ebe4b0ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dbb0328aa1810d55f2d974aed822992b53101b5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347035"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736656"
 ---
 # <a name="compiler-error-c3883"></a>Chyba kompilátoru C3883
 
-'příkaz var': Statický datový člen initonly musí být inicializován.
+var: je potřeba inicializovat statický datový člen initonly.
 
-Proměnné označené [initonly](../../dotnet/initonly-cpp-cli.md) nebyla správně inicializována.
+Proměnná označená pomocí typu [initonly](../../dotnet/initonly-cpp-cli.md) nebyla správně inicializována.
 
 Následující ukázka generuje C3883:
 
-```
+```cpp
 // C3883.cpp
 // compile with: /clr
 ref struct Y1 {
@@ -30,9 +30,9 @@ ref struct Y1 {
 };
 ```
 
-Následující příklad ukazuje možným řešením:
+Následující ukázka demonstruje možné řešení:
 
-```
+```cpp
 // C3883b.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -41,9 +41,9 @@ ref struct Y1 {
 };
 ```
 
-Následující příklad ukazuje způsob inicializace ve statickém konstruktoru:
+Následující příklad ukazuje, jak inicializovat ve statickém konstruktoru:
 
-```
+```cpp
 // C3883c.cpp
 // compile with: /clr /LD
 ref struct Y1 {

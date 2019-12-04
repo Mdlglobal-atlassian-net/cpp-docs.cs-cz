@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447185"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756848"
 ---
 # <a name="compiler-error-c3867"></a>Chyba kompilátoru C3867
 
-"funkce": volání funkce chybí seznam argumentů.; použití ' & func' vytvořte ukazatel na člena
+Func: ve volání funkce chybí seznam argumentů; Pokud chcete vytvořit ukazatel na člen, použijte & Func.
 
-Pokusili jste se převzetí adresy členské funkce bez kvalifikace členské funkce pomocí názvu třídy a operátoru address-of.
+Pokusili jste se převzít adresu členské funkce bez kvalifikovaného členu funkce s názvem třídy a operátorem adresy.
 
-Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: Rozšířená přizpůsobení pointer-to-member. Kód, který zkompiluje před Visual Studio 2005 nyní vygeneruje C3867.
+Tato chyba se může vygenerovat taky v důsledku práce s shodami s kompilátorem, která se dokončila pro Visual Studio 2005: Rozšířená shoda ukazatelů na členy. Kód, který se zkompiluje před Visual Studio 2005, teď vygeneruje C3867.
 
 ## <a name="example"></a>Příklad
 
-C3867 mohou být vydány kompilátoru zavádějící navrhované řešení. Kdykoli je to možné, použijte nejvíce odvozené třídy.
+C3867 lze vydat z kompilátoru s zavádějícím navrhovaným řešením. Kdykoli je to možné, použijte nejvíc odvozenou třídu.
 
-Následující ukázka generuje C3867 a ukazuje, jak ho opravit.
+Následující ukázka generuje C3867 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C3867_1.cpp
 // compile with: /c
 struct Base {
@@ -47,9 +47,9 @@ void Derived::Bar() {
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3867 a ukazuje, jak ho opravit.
+Následující ukázka generuje C3867 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C3867_2.cpp
 #include<stdio.h>
 
@@ -79,9 +79,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3867 a ukazuje, jak ho opravit.
+Následující ukázka generuje C3867 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C3867_3.cpp
 class X {
 public:
@@ -100,7 +100,7 @@ int main() {
 
 Následující ukázka generuje C3867.
 
-```
+```cpp
 // C3867_4.cpp
 // compile with: /c
 class A {
@@ -124,7 +124,7 @@ public:
 
 Následující ukázka generuje C3867.
 
-```
+```cpp
 // C3867_5.cpp
 // compile with: /EHsc
 #include <iostream>

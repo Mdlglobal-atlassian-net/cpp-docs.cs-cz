@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2723
 ms.assetid: 86925601-2297-4cfd-94e2-2caf27c474c4
-ms.openlocfilehash: bc07a99f12ed0e447427990969e54f7f3d3d3b7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9b169f856dba7a76e5f67e1980c4ca47ba912de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737449"
 ---
 # <a name="compiler-error-c2723"></a>Chyba kompilátoru C2723
 
-'function': "specifikátor" specifikátor není platný v definici funkce
+Function: specifikátor specifikátoru není pro definici funkce platný.
 
-Specifikátor nemůže být použit s definicí funkce mimo deklaraci třídy. `virtual` Specifikátor se dá nastavit jenom v deklaraci členské funkce v deklaraci třídy.
+Specifikátor se nemůže vyskytovat s definicí funkce mimo deklaraci třídy. Specifikátor `virtual` lze zadat pouze v deklaraci členské funkce v rámci deklarace třídy.
 
-Následující ukázka generuje C2723 a ukazuje, jak ho opravit:
+Následující ukázka generuje C2723 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C2723.cpp
 struct X {
    virtual void f();

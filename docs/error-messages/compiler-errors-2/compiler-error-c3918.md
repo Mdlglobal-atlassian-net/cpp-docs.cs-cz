@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: 2c2d2f2598d06ca228a96f2786fcb02888e29a1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386613"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758486"
 ---
 # <a name="compiler-error-c3918"></a>Chyba kompilátoru C3918
 
-použití vyžaduje 'člen' jako datový člen
+použití vyžaduje, aby member byl datový člen.
 
-C3918 může dojít z několika důvodů související s událostmi.
+K C3918 může dojít z několika důvodů souvisejících s událostmi.
 
 ## <a name="example"></a>Příklad
 
-C3918 situace může nastat, protože člen třídy je nutné v aktuálním kontextu. Následující ukázka generuje C3918.
+K C3918 může dojít, protože člen třídy je vyžadován v aktuálním kontextu. Následující ukázka generuje C3918.
 
-```
+```cpp
 // C3918.cpp
 // compile with: /clr /c
 public ref class C {
@@ -43,11 +43,11 @@ public:
 
 ## <a name="example"></a>Příklad
 
-C3918 také dojde, pokud se pokusíte zkontrolujte triviální událost pro null (název události nadále poskytovat žádné přímý přístup k úložišti delegáta zálohování pro událost).
+C3918 je také způsobena tím, že se pokusíte ověřit triviální událost pro hodnotu null (název události již nebude poskytovat přímý přístup k delegátovi záložního úložiště pro danou událost).
 
 Následující ukázka generuje C3918.
 
-```
+```cpp
 // C3918_2.cpp
 // compile with: /clr /c
 using namespace System;
@@ -68,9 +68,9 @@ ref struct EventSource : public IEFace {
 
 ## <a name="example"></a>Příklad
 
-C3918 může také dojít, pokud je nesprávně přihlášení k odběru události. Následující ukázka generuje C3918.
+K C3918 může dojít také v případě, že se nesprávně přihlásíte k odběru události. Následující ukázka generuje C3918.
 
-```
+```cpp
 // C3918_3.cpp
 // compile with: /clr /c
 using namespace System;

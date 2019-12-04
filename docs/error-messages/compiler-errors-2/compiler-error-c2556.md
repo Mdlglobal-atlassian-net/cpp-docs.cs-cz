@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2556
 ms.assetid: fc4399ad-45b3-49fd-be1f-0b13956a595a
-ms.openlocfilehash: 4a2b4dc9dcd71d518845651dee97c566b778eb0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6f08ac52eff355f0857968817a681818e3c3dc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353063"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756770"
 ---
 # <a name="compiler-error-c2556"></a>Chyba kompilátoru C2556
 
-'identifier': Přetížená funkce se liší pouze návratovým typem
+' identifier ': přetížené funkce se liší pouze v návratovém typu
 
-Přetížené funkce mají rozdílné návratové typy, ale stejný seznam parametrů. Každé přetížené funkce musí mít seznam jedinečných formálních parametrů.
+Přetížené funkce mají rozdílné návratové typy, ale stejný seznam parametrů. Každá přetížená funkce musí mít samostatný seznam formálních parametrů.
 
 Následující ukázka generuje C2556:
 
-```
+```cpp
 // C2556.cpp
 // compile with: /c
 class C {

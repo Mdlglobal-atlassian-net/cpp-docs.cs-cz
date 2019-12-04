@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2930
 ms.assetid: f07eecd1-e5d1-4518-bd89-b1fd2a003a17
-ms.openlocfilehash: 20fa3e81e66bb30bd63e579a863b6071de4ef871
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b30e614236298cf9a07cbc29e028039903f9748f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385755"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760977"
 ---
 # <a name="compiler-error-c2930"></a>Chyba kompilátoru C2930
 
-'class': typ třídy id předefinovalo jako enumerátor "identifikátor výčtu.
+' class ': typ-class-ID se předefinovalo jako enumerátor identifikátoru Enum
 
-Rozvrhy generic nebo šablony třídy nelze použít jako člen výčtu.
+Nelze použít obecnou třídu nebo třídu šablony jako člen výčtu.
 
-Tato chyba může nastat, pokud jsou nesprávně odpovídající složené závorky.
+Tato chyba může být způsobena nesprávným spárováním složených závorek.
 
 Následující ukázka generuje C2930:
 
-```
+```cpp
 // C2930.cpp
 // compile with: /c
 template<class T>
@@ -34,9 +34,9 @@ class y{};
 enum SomeEnum { y };
 ```
 
-C2930 může dojít také při použití obecných typů:
+C2930 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2930c.cpp
 // compile with: /clr /c
 generic<class T>

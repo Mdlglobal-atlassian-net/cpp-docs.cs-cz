@@ -1,29 +1,29 @@
 ---
-title: Chyba kompilátoru C2664
+title: Chyba kompilátoru upozornění C2664
 ms.date: 11/04/2016
 f1_keywords:
 - C2664
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360317"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756003"
 ---
-# <a name="compiler-error-c2664"></a>Chyba kompilátoru C2664
+# <a name="compiler-error-c2664"></a>Chyba kompilátoru upozornění C2664
 
-'function': nelze převést argument n z 'type1' na 'type2'
+' function ': argument n nelze převést z ' typ1 ' na ' typ2 '
 
-Tohoto problému s převodem parametrů může dojít, pokud je vytvořena instance třídy a v konstruktoru označeného klíčovým Probíhá pokus o implicitní převod `explicit` – klíčové slovo. Další informace o explicitních převodů, naleznete v tématu [uživatelem definovaných převodů typu](../../cpp/user-defined-type-conversions-cpp.md).
+Tento problém s převodem parametru může nastat, pokud je vytvořena instance třídy a pokus o implicitní převod na konstruktor označený klíčovým slovem `explicit`. Další informace o explicitních převodech naleznete v tématu [uživatelsky definované převody typů](../../cpp/user-defined-type-conversions-cpp.md).
 
-Pokud dočasný objekt je předán funkci, která má odkaz na objekt jako parametr, musí být tento odkaz `const` odkaz.
+Pokud je do funkce, která přebírá odkaz na objekt jako parametr, předán dočasný objekt, musí být tento odkaz `const` odkazem.
 
 Pokud je této funkci předán parametr, který není očekávaného typu, vytvoří se pomocí odpovídajícího konstruktoru dočasný objekt. Tento dočasný objekt je pak předán funkci. V tomto případě slouží dočasný objekt k inicializaci odkazu. Ve starších verzích tohoto jazyka bylo možné přechodnými objekty inicializovat všechny odkazy.
 
-Chcete-li vyřešit upozornění C2664
+Chcete-li opravit upozornění C2664,
 
 - Znovu zkontrolujte prototyp dané funkce a opravte argument uvedený v chybové zprávě.
 
@@ -31,13 +31,13 @@ Chcete-li vyřešit upozornění C2664
 
 K upozornění C2664 může rovněž dojít, pokud třída skrývá člena v jedné ze svých základních tříd.
 
-Další informace najdete v tématu [jak: Převod typu System::String na wchar_t * nebo char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Další informace naleznete v tématu [How to: Convert System:: String to wchar_t * nebo char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka vygeneruje upozornění C2664 a ukazuje, jak ho opravit.
+Následující ukázka generuje upozornění C2664 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C2664.cpp
 // C2664
 struct A {
@@ -59,9 +59,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka rovněž vygeneruje upozornění C2664 a ukazuje, jak ho opravit.
+Tato ukázka také generuje upozornění C2664 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C2664b.cpp
 // C2664 expected
 struct A {
@@ -78,9 +78,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Další ukázka demonstruje upozornění C2664 pomocí řetězcového literálu volat `Test`a ukazuje, jak ho opravit. Protože je tento parametr `szString` odkazu, objekt musí být vytvořen příslušným konstruktorem. Výsledkem je dočasný objekt, který nelze použít k inicializaci tohoto odkazu.
+Další příklad ukazuje upozornění C2664 pomocí řetězcového literálu pro volání `Test`a ukazuje, jak je opravit. Vzhledem k tomu, že je parametr `szString` odkazem, musí být objekt vytvořen příslušným konstruktorem. Výsledkem je dočasný objekt, který nelze použít k inicializaci tohoto odkazu.
 
-```
+```cpp
 // C2664c.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -119,9 +119,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Kompilátor vynucuje standardní požadavky jazyka C++ pro použití `const`. Tato ukázka vygeneruje upozornění C2664:
+Kompilátor vynutil C++ standardní požadavky na použití `const`. Tato ukázka vygeneruje upozornění C2664:
 
-```
+```cpp
 // C2664d.cpp
 // C2664 expected
 #include <windows.h>
@@ -144,9 +144,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-Zde je složitější situace, ve kterém se vygeneruje upozornění C2664, včetně pokyny o tom, jak ho opravit:
+Tady je složitější situace, kdy se vygeneruje upozornění C2664, včetně pokynů, jak ji opravit:
 
-```
+```cpp
 // C2664e.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -189,9 +189,9 @@ int main( ) {
 
 ## <a name="example"></a>Příklad
 
-Proměnná výčtu není převedena na svůj podkladový typ tak, aby bylo splněno volání funkce. Další informace najdete v tématu [výčet tříd](../../extensions/enum-class-cpp-component-extensions.md). Následující ukázka vygeneruje upozornění C2664 a ukazuje, jak ho opravit.
+Proměnná výčtu není převedena na svůj podkladový typ tak, aby bylo splněno volání funkce. Další informace naleznete v tématu [enum class](../../extensions/enum-class-cpp-component-extensions.md). Následující ukázka generuje upozornění C2664 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C2664f.cpp
 // compile with: /clr
 using namespace System;
@@ -232,13 +232,13 @@ library myproj1 {
 }
 ```
 
-Upozornění C2664 se vyvolá také pomocí `wchar_t` během portování kódu z aplikace Visual C++ 6.0 do novějších verzí. V aplikaci Visual C++ 6.0 a starší `wchar_t` byla `typedef` pro `unsigned short` a byl proto implicitně převeden na tento typ. Po Visual C++ 6.0 `wchar_t` je svým vlastním předdefinovaným typem, jak je uvedeno ve standardu jazyka C++ a nadále již není implicitně převést na `unsigned short`. Zobrazit [/Zc: wchar_t (wchar_t je nativní typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+Upozornění C2664 se také generuje pomocí `wchar_t` při přenosu kódu z Visual C++ 6,0 na novější verze. V jazyce C++ Visual 6,0 a starších `wchar_t` byl `typedef` pro `unsigned short` a byl proto implicitně převeden na tento typ. Po Visual C++ 6,0 je `wchar_t` vlastní vestavěný typ, jak je uvedeno ve C++ standardu a již není implicitně převoditelné na `unsigned short`. Viz [/Zc: wchar_t (Wchar_t je nativní typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka vygeneruje upozornění C2664 a ukazuje, jak ho opravit.
+Následující ukázka generuje upozornění C2664 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C2664h.cpp
 #import "C2664g.tlb"
 using namespace myproj1;
@@ -260,7 +260,7 @@ int main() {
 
 K upozornění C2664 také dojde, pokud kompilátor nemůže odvodit argumenty šablony.
 
-```
+```cpp
 // C2664i.cpp
 #include <stdio.h>
 template <class T, int iType=0>

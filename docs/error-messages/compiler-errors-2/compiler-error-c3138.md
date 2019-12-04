@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: d812c14c2f364681fe28a58bdaed68fe3ed8ad30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374986"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761246"
 ---
 # <a name="compiler-error-c3138"></a>Chyba kompilátoru C3138
 
-'rozhraní': 'attribute' rozhraní musí dědit z rozhraní IDispatch nebo z rozhraní, která dědí z rozhraní IDispatch
+rozhraní: rozhraní atributu musí dědit z rozhraní IDispatch nebo z rozhraní, které dědí z rozhraní IDispatch.
 
-Rozhraní s [duální](../../windows/dual.md) nebo [dispinterface](../../windows/dispinterface.md) nemá žádné atributy `IDispatch` jako přímou nebo nepřímou základní rozhraní.
+Rozhraní s atributy [Dual](../../windows/dual.md) nebo [IDispatch](../../windows/dispinterface.md) nemá `IDispatch` jako přímé nebo nepřímé základní rozhraní.
 
 Následující příklad generuje C3138:
 
-```
+```cpp
 // C3138.cpp
 #include <unknwn.h>
 

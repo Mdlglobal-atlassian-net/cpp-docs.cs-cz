@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: 7b5d1fe61ae08811186e25547ccc3f33e3b0198e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ef5eb3c2bedd9defbd0b80e6d8c5c8912fcf16d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397390"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761930"
 ---
 # <a name="compiler-error-c3532"></a>Chyba kompilátoru C3532
 
-'type': nesprávné použití 'auto'
+Type: nesprávné použití auto.
 
-Zadaný typ se nedá deklarovat pomocí `auto` – klíčové slovo. Například nelze použít `auto` – klíčové slovo Chcete-li deklarovat pole nebo metoda návratového typu.
+Zadaný typ nelze deklarovat s klíčovým slovem `auto`. Například nelze použít klíčové slovo `auto` k deklaraci pole nebo návratového typu metody.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Ujistěte se, že vrací výraz inicializace platného typu.
+1. Ujistěte se, že inicializační výraz vrací platný typ.
 
-1. Ujistěte se, že není třeba deklarovat pole nebo návratový typ metody.
+1. Ujistěte se, že nedeklarujete pole nebo návratový typ metody.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad provede C3532 vzhledem k tomu, `auto` – klíčové slovo nemůže deklarovat návratový typ metody.
+Následující příklad vrací C3532, protože klíčové slovo `auto` nemůže deklarovat návratový typ metody.
 
-```
+```cpp
 // C3532a.cpp
 // Compile with /Zc:auto
 auto f(){}   // C3532
@@ -37,9 +37,9 @@ auto f(){}   // C3532
 
 ## <a name="example"></a>Příklad
 
-Následující příklad provede C3532 vzhledem k tomu, `auto` – klíčové slovo nemůže deklarovat pole.
+Následující příklad vrací C3532, protože klíčové slovo `auto` nemůže deklarovat pole.
 
-```
+```cpp
 // C3532b.cpp
 // Compile with /Zc:auto
 int main()

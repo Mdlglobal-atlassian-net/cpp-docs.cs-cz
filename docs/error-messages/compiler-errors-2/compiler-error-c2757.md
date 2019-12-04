@@ -1,35 +1,35 @@
 ---
-title: Compiler Error C2757
+title: Chyba kompilátoru C2757
 ms.date: 11/04/2016
 f1_keywords:
 - C2757
 helpviewer_keywords:
 - C2757
 ms.assetid: 421f102f-8a32-4d47-a109-811ddf2c909d
-ms.openlocfilehash: 98b43a2f3c0888fc385226cd80889b9911c84690
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9f4661495e0fa5219a517b6f6ca410323a77269
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227909"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759526"
 ---
-# <a name="compiler-error-c2757"></a>Compiler Error C2757
+# <a name="compiler-error-c2757"></a>Chyba kompilátoru C2757
 
-'symbol': symbol s tímto názvem už existuje, a proto nelze použít tento název jako název oboru názvů
+symbol: symbol s tímto názvem už existuje, takže tento název nejde použít jako název oboru názvů.
 
 Symbol použitý v aktuální kompilaci jako identifikátor oboru názvů je již používán v odkazovaném sestavení.
 
 Následující ukázka generuje C2757:
 
-```
+```cpp
 // C2757a.cpp
 // compile with: /clr /LD
 public ref class Nes {};
 ```
 
-a pak,
+A potom
 
-```
+```cpp
 // C2757b.cpp
 // compile with: /clr /c
 #using <C2757a.dll>

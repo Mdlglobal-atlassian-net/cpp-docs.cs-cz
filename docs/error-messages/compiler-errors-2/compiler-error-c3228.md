@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3228
 ms.assetid: 9015adf9-17b0-4312-b4a7-c1f33e4126f4
-ms.openlocfilehash: 63e7afa16c21aa8c4e335d22693ca71d7ab8d6a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81ced2765ab1ac7d0d138209ee33e163d7451041
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173975"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743429"
 ---
 # <a name="compiler-error-c3228"></a>Chyba kompilátoru C3228
 
-'function': argument obecného typu pro 'param' nemůže mít "typ", musí být typ hodnoty nebo popisovač typu
+' function ': argument obecného typu pro parametr ' param ' nemůže být ' type ', musí se jednat o typ ValueType nebo popisovač
 
-Nesprávný typ byl předán jako argument obecného typu.
+Jako argument obecného typu byl předán nesprávný typ.
 
 Následující ukázka generuje C3228:
 
-```
+```cpp
 // C3228.cpp
 // compile with: /clr
 class A {};

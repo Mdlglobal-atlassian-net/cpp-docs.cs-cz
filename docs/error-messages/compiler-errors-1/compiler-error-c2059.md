@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: 2fb2aa86a1fd8f8e0710d787682fdd44abd941ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d51d4c7873d43a655dc11fa8e0fa297b8a69bff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408664"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735941"
 ---
 # <a name="compiler-error-c2059"></a>Chyba kompilátoru C2059
 
-syntax error : 'token'
+Chyba syntaxe: token
 
-Token, který způsobil chybu syntaxe.
+Token způsobil chybu syntaxe.
 
 Následující příklad vygeneruje chybovou zprávu pro řádek, který deklaruje `j`.
 
-```
+```cpp
 // C2059e.cpp
 // compile with: /c
 // C2143 expected
@@ -29,11 +29,11 @@ Následující příklad vygeneruje chybovou zprávu pro řádek, který deklaru
    int j*; // C2059
 ```
 
-Pokud chcete zjistit příčinu chyby, zkontrolujte nejen řádku, který je uvedený v chybové zprávě, ale také řádcích nad ním. Pokud zkoumání řádky se vrací potuchy o problému, zkuste okomentováním řádku, který je uvedený v chybové zprávě a možná několika řádcích nad ním.
+Chcete-li zjistit příčinu chyby, zkontrolujte nejen řádek, který je uvedený v chybové zprávě, ale také řádky nad ním. Pokud prozkoumání řádků nevrátí žádné informace o problému, zkuste komentovat řádek uvedený v chybové zprávě a možná několik řádků nad ním.
 
-Pokud chybová zpráva se zobrazí v symbolu, který bezprostředně následuje po `typedef` proměnnou, ujistěte se, že je proměnná definovaná ve zdrojovém kódu.
+Pokud se chybová zpráva vyskytne na symbolu, který následuje za `typedef` proměnnou, ujistěte se, že je proměnná definována ve zdrojovém kódu.
 
-C2059 se vyvolá, když název symbol preprocesoru je znovu použít jako identifikátor. V následujícím příkladu kompilátor narazí `DIGITS.ONE` jako číslo 1, což je neplatný jako název elementu výčtu:
+C2059 je vyvolána, když je název symbolu preprocesoru znovu použit jako identifikátor. V následujícím příkladu se kompilátor uvidí `DIGITS.ONE` jako číslo 1, které není platné jako název elementu výčtu:
 
 ```cpp
 #define ONE 1
@@ -44,9 +44,9 @@ enum class DIGITS {
 };
 ```
 
-Můžete obdržet C2059, pokud symbol vyhodnotí jako nothing, protože může dojít, když **/D**_symbol_ **=** se používá ke kompilaci.
+Můžete získat C2059, jestli se symbol nevyhodnotí jako Nothing, jak může nastat, když se k zkompilování použije **/d**_symbol_ **=** .
 
-```
+```cpp
 // C2059a.cpp
 // compile with: /DTEST=
 #include <stdio.h>
@@ -60,11 +60,11 @@ int main() {
 }
 ```
 
-Dalším užitečným, ve kterém může dojít C2059 je při kompilaci aplikace, která určuje strukturu ve výchozí argumenty pro funkci. Výchozí hodnota pro argument musí být výraz. Seznam inicializátorů – například takový, který používá k inicializaci strukturu – není výraz.  Chcete-li vyřešit tento problém, definujte konstruktor k provedení požadované inicializace.
+Další případ, ve kterém může C2059 nastat, je při kompilaci aplikace, která určuje strukturu ve výchozích argumentech funkce. Výchozí hodnota argumentu musí být výraz. Seznam inicializátorů – například jeden, který se používá k inicializaci struktury – není výraz.  Chcete-li tento problém vyřešit, definujte konstruktor, který provede požadovanou inicializaci.
 
 Následující příklad generuje C2059:
 
-```
+```cpp
 // C2059b.cpp
 // compile with: /c
 struct ag_type {
@@ -78,11 +78,11 @@ void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK
 ```
 
-C2059 může dojít přetypování chybně vytvořený.
+C2059 se může vyskytnout pro přetypování ve špatném formátu.
 
 Následující ukázka generuje C2059:
 
-```
+```cpp
 // C2059c.cpp
 // compile with: /clr
 using namespace System;
@@ -96,11 +96,11 @@ int main() {
 }
 ```
 
-C2059 může vzniknout také při pokusu o vytvoření názvu oboru názvů, který obsahuje tečku.
+K C2059 může dojít také v případě, že se pokusíte vytvořit název oboru názvů, který obsahuje tečku.
 
 Následující ukázka generuje C2059:
 
-```
+```cpp
 // C2059d.cpp
 // compile with: /c
 namespace A.B {}   // C2059
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-C2059 může dojít, pokud operátor, který se může kvalifikovat název (`::`, `->`, a `.`) musí následovat klíčové slovo `template`, jak je znázorněno v tomto příkladu:
+K C2059 může docházet, když operátor, který může kvalifikovat název (`::`, `->`a `.`), musí následovat `template`klíčového slova, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-Ve výchozím nastavení, C++, předpokládá, že `AY::Rebind` není šablona; proto následující `<` je interpretován jako symbol méně – znaménko.  Je zapotřebí sdělit kompilátoru explicitně, který `Rebind` je šablona tak, aby se může správně analyzovat lomená závorka. Chcete-li opravit tuto chybu, použijte `template` – klíčové slovo pro název závislého typu, jak je znázorněno zde:
+Ve výchozím nastavení C++ předpokládá, že `AY::Rebind` není šablonou. Proto následující `<` je interpretována jako znak menší než.  Kompilátor musíte výslovně říct, že `Rebind` je šablona, aby mohla správně analyzovat lomenou závorku. Chcete-li tuto chybu opravit, použijte klíčové slovo `template` v názvu závislého typu, jak je znázorněno zde:
 
 ```cpp
 template <typename T> struct Allocator {

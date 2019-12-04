@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2971
 ms.assetid: fdb5467b-9a41-41ef-ac20-2e9428d5a4fc
-ms.openlocfilehash: 09f3578bff5806fc32a3b5599dcfa8caa3696974
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9912224c5c871f9bae2c6d22f0d38f5f88c983a9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256320"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743286"
 ---
 # <a name="compiler-error-c2971"></a>Chyba kompilátoru C2971
 
-'class': parametr šablony 'param': 'arg': místní proměnné nelze použít jako beztypový argument
+' class ': parametr šablony ' param ': ' ARG ': lokální proměnnou nelze použít jako argument bez typu
 
-Název nebo adresu lokální proměnné nelze použít jako argument šablony.
+Jako argument šablony nelze použít název ani adresu místní proměnné.
 
 Následující ukázka generuje C2971:
 
-```
+```cpp
 // C2971.cpp
 template <int *pi>
 class Y {};

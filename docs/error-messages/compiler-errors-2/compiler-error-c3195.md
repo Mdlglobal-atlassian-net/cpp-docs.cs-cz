@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C3195
+title: Chyba kompilátoru C3195
 ms.date: 11/04/2016
 f1_keywords:
 - C3195
 helpviewer_keywords:
 - C3195
 ms.assetid: 97e4f681-812b-49e8-ba57-24b7817e3cd8
-ms.openlocfilehash: 4a54a9c629a1abaa4f1c5d15d06448e82cf25561
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8274e121e953c3e51a0f2ff8c68c315759ce3e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329098"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760423"
 ---
-# <a name="compiler-error-c3195"></a>Compiler Error C3195
+# <a name="compiler-error-c3195"></a>Chyba kompilátoru C3195
 
-'operator': je vyhrazené a nejde použít jako člen ref class nebo hodnotového typu. Operátory CLR nebo WinRT musí být definovány pomocí klíčového slova operator.
+' operator ': je rezervován a nemůže být použit jako člen třídy ref class nebo hodnotového typu. Operátory CLR nebo WinRT se musí definovat pomocí klíčového slova operator.
 
-Kompilátor zjistil definici operátoru pomocí spravovaných rozšíření syntaxe jazyka C++. Pro operátory, je nutné použít syntaxi jazyka C++.
+Kompilátor zjistil definici operátora pomocí spravovaného rozšíření pro C++ syntaxi. Je nutné použít C++ syntaxi operátorů.
 
-Následující ukázka generuje C3195 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3195 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3195.cpp
 // compile with: /clr /LD
 #using <mscorlib.dll>

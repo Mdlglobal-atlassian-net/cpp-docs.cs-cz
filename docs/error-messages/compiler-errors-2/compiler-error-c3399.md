@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: d05a861a2baedb86482503b6860098f12c41bd78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20b5e816930969278536fe3771df4ad38c3c86b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300424"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737514"
 ---
 # <a name="compiler-error-c3399"></a>Chyba kompilátoru C3399
 
-'type': při vytváření instance obecného parametru nelze zadat argumenty
+' type ': při vytváření instance obecného parametru nelze zadat argumenty
 
-Pokud zadáte `gcnew()` omezení, můžete určit, zda typ omezení bude mít konstruktor bez parametrů. Proto jedná se o chybu, pokusí se vytvořit instanci tohoto typu a předat parametr.
+Když zadáte omezení `gcnew()`, určíte, že typ omezení bude mít konstruktor bez parametrů. Proto je chyba při pokusu o vytvoření instance daného typu a předání parametru.
 
-Zobrazit [omezení parametrů obecných typů (C++vyhodnocovací)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Další informace.
+Další informace najdete v tématu [omezení proC++parametry obecného typu (/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3399.
 
-```
+```cpp
 // C3399.cpp
 // compile with: /clr /c
 generic <class T>

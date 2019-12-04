@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3161
 ms.assetid: 1fe2be85-a343-487b-8476-bf9e257eb29d
-ms.openlocfilehash: 22ecc176036308699c3ad7bd8c015836be910073
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7315dad7959cdd3b950ed814b13be3867399d332
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174208"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761813"
 ---
 # <a name="compiler-error-c3161"></a>Chyba kompilátoru C3161
 
-'rozhraní': vnoření třídy, struktury, sjednocení nebo rozhraní v rozhraní je neplatný; vnoření rozhraní ve třídě, struktury nebo sjednocení je neplatný
+Interface: vnořování třídy, struktury, sjednocení nebo rozhraní v rozhraní je neplatné. Vnořování rozhraní ve třídě, struktuře nebo sjednocení je neplatné.
 
-[__Interface](../../cpp/interface.md) může být použit pouze v globálním oboru nebo v oboru názvů. Třída, struktura nebo sjednocení nemůže objevit v rozhraní.
+[__Interface](../../cpp/interface.md) se může vyskytovat jenom v globálním oboru nebo v rámci oboru názvů. Třída, struktura nebo sjednocení se nemohou vyskytovat v rozhraní.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3161.
 
-```
+```cpp
 // C3161.cpp
 // compile with: /c
 __interface X {

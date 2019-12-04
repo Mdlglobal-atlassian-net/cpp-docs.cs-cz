@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
-ms.openlocfilehash: 4790c9caafd28722f3631104cfe5cfc762cf6426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e20333a4fc18219f7f2514f3aefe73b81f284a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406883"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759487"
 ---
 # <a name="compiler-error-c3068"></a>Chyba kompilátoru C3068
 
-'function': funkci naked' nemůže obsahovat objekty, které by vyžadovaly vrácení zpět, pokud došlo k výjimce C++
+' function ': funkce ' holé ' nemůže obsahovat objekty, které by vyžadovaly odvinutí, pokud C++ došlo k výjimce
 
-Nebylo možné provést, v odvíjení zásobníku kompilátoru [naked](../../cpp/naked-cpp.md) funkce, která byla vyvolána výjimka, protože byl vytvořen dočasný objekt funkce a zpracování výjimek jazyka C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) byl zadán.
+Kompilátor nemohl provést unwind zásobníku u [holé](../../cpp/naked-cpp.md) funkce, která vygenerovala výjimku, protože byl vytvořen dočasný objekt v rámci funkce a C++ zpracování výjimek ([/EHsc](../../build/reference/eh-exception-handling-model.md)).
 
-Chcete-li vyřešit tuto chybu, proveďte splnit aspoň jednu z následujících akcí:
+Chcete-li tuto chybu vyřešit, proveďte alespoň jednu z následujících akcí:
 
-- Nejde zkompilovat/EHsc.
+- Nekompilovat pomocí/EHsc.
 
-- Neoznačujte funkce jako `naked`.
+- Neoznačujte funkci jako `naked`.
 
 - Nevytvářejte dočasný objekt ve funkci.
 
-Pokud funkce vytvoří dočasný objekt v zásobníku, pokud funkce vyvolá výjimku, a pokud je povoleno zpracování výjimek jazyka C++, kompilátor vyčistí zásobník Pokud dojde k výjimce.
+Pokud funkce vytvoří v zásobníku dočasný objekt, pokud funkce vyvolá výjimku a je-li C++ povoleno zpracování výjimek, kompilátor vyčistí zásobník, pokud je vyvolána výjimka.
 
-Když je vyvolána výjimka, kompilátor vygeneruje kód, volá se, kódu prologu a epilogu, které nejsou součástí neviditelné funkce, je provedena pro funkci.
+Při vyvolání výjimky se pro funkci spustí kód generovaný kompilátorem, který se nazývá prolog a epilog a který není přítomen v holé funkci.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3068:
 
-```
+```cpp
 // C3068.cpp
 // compile with: /EHsc
 // processor: x86

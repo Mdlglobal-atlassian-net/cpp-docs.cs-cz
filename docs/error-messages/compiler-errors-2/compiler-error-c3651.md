@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3651
 ms.assetid: a03e692e-c219-4654-9827-8415cfa5a22d
-ms.openlocfilehash: 6e773201e3bc9a4edb1ee77f1ddcd555e0ae0c0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9468b1e9193bfa52ed133f6fdfa398e02e40c4ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388680"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756315"
 ---
 # <a name="compiler-error-c3651"></a>Chyba kompilátoru C3651
 
-'member': nejde používat jako explicitní přepsání; musí být členy základní třídy
+member: nejde použít jako explicitní přepsání; musí se jednat o člen základní (Base) třídy.
 
-Explicitní přepsání byla zadána, ale funkce přepsání se v typu, který není základního typu.
+Bylo zadáno Explicitní přepsání, ale přepsaná funkce byla v typu, který není základním typem.
 
-Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Další informace najdete v tématu [Explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Následující ukázka generuje C3651:
 
-```
+```cpp
 // C3651.cpp
 // compile with: /clr /c
 ref class C {

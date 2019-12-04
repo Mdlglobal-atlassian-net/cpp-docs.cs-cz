@@ -1,31 +1,31 @@
 ---
-title: Compiler Error C3290
+title: Chyba kompilátoru C3290
 ms.date: 11/04/2016
 f1_keywords:
 - C3290
 helpviewer_keywords:
 - C3290
 ms.assetid: 0baf684b-1143-4953-ac99-a2fa267d8017
-ms.openlocfilehash: f2a346354d8da7d78c5517b01b4438bfb8af50ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7a73c13c28923761674294d8d6e601b95ffad96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222704"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760150"
 ---
-# <a name="compiler-error-c3290"></a>Compiler Error C3290
+# <a name="compiler-error-c3290"></a>Chyba kompilátoru C3290
 
-'type': triviální vlastnost nemůže mít odkazový typ.
+Typ: triviální vlastnost nemůže mít odkazový typ.
 
-Vlastnost byl deklarován nesprávně. Když deklarujete triviální vlastnost, kompilátor vytvoří proměnnou, která aktualizuje vlastnost a není možné mít sledovací odkaz proměnnou v třídě.
+Vlastnost byla deklarována nesprávně. Pokud deklarujete triviální vlastnost, kompilátor vytvoří proměnnou, kterou bude vlastnost aktualizovat, a není možné mít sledovací proměnnou reference ve třídě.
 
-Zobrazit [vlastnost](../../extensions/property-cpp-component-extensions.md) a [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md) Další informace.
+Další informace najdete v tématu o [vlastnostech](../../extensions/property-cpp-component-extensions.md) a [operátorovi sledování odkazů](../../extensions/tracking-reference-operator-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3290.
 
-```
+```cpp
 // C3290.cpp
 // compile with: /clr /c
 ref struct R {};

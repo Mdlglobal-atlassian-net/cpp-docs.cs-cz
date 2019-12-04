@@ -1,31 +1,31 @@
 ---
-title: Chyba kompilátoru C2004
+title: Chyba kompilátoru c2004
 ms.date: 11/04/2016
 f1_keywords:
 - C2004
 helpviewer_keywords:
 - C2004
 ms.assetid: d81526dd-3a00-4593-87b0-d910d3d29bca
-ms.openlocfilehash: fb100d977188cd3a7d5b0ebbb3e29b53942871dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b781e9f81342f35d66eca222bd338252b739096c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208942"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737488"
 ---
-# <a name="compiler-error-c2004"></a>Chyba kompilátoru C2004
+# <a name="compiler-error-c2004"></a>Chyba kompilátoru c2004
 
-Očekávalo se: defined(id).
+očekávalo se: defined (ID).
 
-Identifikátor musí být uvedena v závorkách za klíčové slovo preprocesoru.
+Identifikátor musí být uveden v závorkách následujících po klíčovém slovu preprocesoru.
 
-Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio .NET 2003: chybějící závorka v direktivě preprocesoru. Pokud chybí pravá závorka direktivy preprocesoru, kompilátor vygeneruje chybu.
+Tato chyba se může vygenerovat taky v důsledku práce s shodami s kompilátorem, která se dokončila pro Visual Studio .NET 2003: v direktivě preprocesoru chybí závorky. Pokud v direktivě preprocesoru chybí pravá závorka, vyvolá kompilátor chybu.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2004:
+Následující ukázka generuje c2004:
 
-```
+```cpp
 // C2004.cpp
 // compile with: /DDEBUG
 #include <stdio.h>
@@ -40,9 +40,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C2004b.cpp
 // compile with: /DDEBUG
 #include <stdio.h>

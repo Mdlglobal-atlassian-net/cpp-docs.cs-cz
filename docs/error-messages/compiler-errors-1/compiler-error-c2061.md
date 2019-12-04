@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: 85357d94c7bc2d709e852daa60caf269949ad1b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc64852523b6b56bc506260576e3c79164628340
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408690"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735928"
 ---
 # <a name="compiler-error-c2061"></a>Chyba kompilátoru C2061
 
-Chyba syntaxe: identifikátor 'identifier'
+Chyba syntaxe: identifikátor identifikátoru
 
-Kompilátor najít identifikátor, ve kterém se neočekávala. Ujistěte se, že `identifier` je deklarována před jejich použitím.
+Kompilátor našel identifikátor, u kterého se neočekával. Ujistěte se, že je před použitím deklarováno `identifier`.
 
-Inicializátor mohou být uzavřeny v závorkách. K tomuto problému vyhnout, uzavřete deklarátoru v závorkách nebo ji `typedef`.
+Inicializátor může být uzavřený v závorkách. Chcete-li se tomuto problému vyhnout, vložte deklarátor do závorek nebo ho Udělejte `typedef`.
 
-Tato chyba může být způsobeno i když kompilátor zjistí výraz jako argument šablony třídy; použít [typename](../../cpp/typename.md) pro oznámení kompilátoru je typem.
+Tato chyba může být také způsobena tím, že kompilátor detekuje výraz jako argument šablony třídy; použijte [TypeName](../../cpp/typename.md) k oznámení, že kompilátor je typu.
 
 Následující ukázka generuje C2061:
 
-```
+```cpp
 // C2061.cpp
 // compile with: /c
 template < A a >   // C2061
@@ -34,9 +34,9 @@ template < A a >   // C2061
 class c{};
 ```
 
-C2061 může dojít, pokud předáte název instance do [typeid](../../extensions/typeid-cpp-component-extensions.md):
+K C2061 může dojít, Pokud předáte název instance na [typeid](../../extensions/typeid-cpp-component-extensions.md):
 
-```
+```cpp
 // C2061b.cpp
 // compile with: /clr
 ref struct G {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2890
 ms.assetid: 49147375-182c-42b1-b170-f475cd436d47
-ms.openlocfilehash: 43c05fba15ee78c8e1454c115246f557f98f897e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d51748e80dad0370b5f735180455dd6c8d113c7a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311706"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760899"
 ---
 # <a name="compiler-error-c2890"></a>Chyba kompilátoru C2890
 
-'class': třídy ref class. může mít pouze jednu základní třídu jiného typu než rozhraní
+' class ': třída ref class může mít pouze jednu základní třídu, která není typu Interface
 
 Referenční třída může mít pouze jednu základní třídu.
 
 Následující ukázka generuje C2890:
 
-```
+```cpp
 // C2890.cpp
 // compile with: /clr /c
 ref class A {};

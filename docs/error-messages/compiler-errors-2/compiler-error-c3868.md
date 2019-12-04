@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
-ms.openlocfilehash: 3d759d8e527bf38c7408f3497b27287e030d387e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cea8ee926bb5c1bc7482e53ed48a310c870774d1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338438"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761467"
 ---
 # <a name="compiler-error-c3868"></a>Chyba kompilátoru C3868
 
-'type': omezení pro obecný parametr "parametr" se liší od omezení v deklaraci
+' type ': omezení obecného parametru ' Parameter ' se liší od deklarací v deklaraci
 
-Více deklarací musí mít stejná obecná omezení.  Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md).
+Více deklarací musí mít stejná obecná omezení.  Další informace najdete v tématu [Obecné typy](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3868.
 
-```
+```cpp
 // C3868.cpp
 // compile with: /clr /c
 interface struct I1;

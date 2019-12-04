@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2178
 ms.assetid: 79a14158-17f3-4221-bd06-9d675c49cef4
-ms.openlocfilehash: cd153bb5b331872bfe35b046d41612998bd0eff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85cac4919c048c30a3ed1ff5573a3c14b77da0bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386002"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737189"
 ---
 # <a name="compiler-error-c2178"></a>Chyba kompilátoru C2178
 
-"*identifikátor*"se nedá deklarovat pomocí"*specifikátor*" specifikátor
+'*Identifier*' nemůže být deklarován specifikátorem '*specifikátor*'
 
-A `mutable` byl použit specifikátor v deklaraci, ale specifikátor není povolený v tomto kontextu.
+V deklaraci byl použit specifikátor `mutable`, ale specifikátor není v tomto kontextu povolený.
 
-`mutable` Specifikátor lze použít pouze u názvů datové členy třídy a nejde použít pro názvy deklarované `const` nebo `static`a nedá se použít k odkazování členů.
+Specifikátor `mutable` lze použít pouze pro názvy datových členů třídy a nelze jej použít pro názvy deklarované `const` nebo `static`a nelze jej použít pro členy odkazu.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak může dojít k C2178 a jak ho opravit.
+Následující příklad ukazuje, jak může C2178 nastat, a jak ho opravit.
 
-```
+```cpp
 // C2178.cpp
 // compile with: cl /c /W4 C2178.cpp
 

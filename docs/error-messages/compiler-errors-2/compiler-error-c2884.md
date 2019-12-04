@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2884
 ms.assetid: 8b4d43e3-3fb5-4360-86c8-de59d8736d4f
-ms.openlocfilehash: d920629dc0697d0f2fdd05ac5aca6118b89b88cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0e283c7cd6116655a56f8df67ab4eecf9923b68
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378853"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760938"
 ---
 # <a name="compiler-error-c2884"></a>Chyba kompilátoru C2884
 
-"name": zavedené pomocí deklarace je v konfliktu s lokální funkce 'function'
+' name ': zavedeno pomocí deklarace using-Declaration je v konfliktu s lokální funkcí ' function '
 
-Pokusili jste se definovat funkci více než jednou. První definice je lokální definici. Druhým je z oboru názvů s `using` deklarace.
+Pokusili jste se definovat funkci více než jednou. První definice je místní definice. Druhý je z oboru názvů s deklarací `using`.
 
 Následující ukázka generuje C2884:
 
-```
+```cpp
 // C2884.cpp
 namespace A {
    void z(int);

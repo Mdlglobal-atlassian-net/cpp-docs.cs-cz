@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: ed3cccb77a40ab646c9a6375cf4c182de62aa478
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381097"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738424"
 ---
 # <a name="compiler-error-c3488"></a>Chyba kompilátoru C3488
 
-'příkaz var' není povolený, pokud výchozí režim sběru je podle odkazu
+hodnota var není povolená, pokud je výchozí režim sběru podle odkazu.
 
-Pokud určíte, že výchozí režim sběru pro výraz lambda je podle odkazu, nelze předat proměnnou s odkazem na klauzuli capture výrazu Tento výraz.
+Pokud určíte, že výchozí režim sběru pro lambda výraz je podle odkazu, nelze předat proměnnou odkazem na klauzuli zachycení daného výrazu.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Proměnné explicitně nepředávejte klauzuli zachycení, nebo
+- Nedávejte explicitně proměnnou do klauzule Capture nebo
 
-- Nezadávejte výchozí režim sběru dat podle odkazu nebo
+- Nezadávejte odkaz podle odkazu jako výchozí režim sběru dat.
 
-- Zadejte podle hodnoty jako výchozí režim sběru dat, nebo
+- Jako výchozí režim sběru zadejte hodnotu podle hodnoty nebo
 
-- Předejte klauzule zachycení proměnné podle hodnoty. (To může změnit chování část výrazu lambda.)
+- Předat proměnnou hodnotou do klauzule zachycení. (To může změnit chování výrazu lambda.)
 
 ## <a name="example"></a>Příklad
 
-Následující příklad generuje C3488, protože odkaz na proměnnou `n` se zobrazí v klauzuli capture výrazu lambda výraz, jehož výchozí režim je podle odkazu:
+Následující příklad generuje C3488, protože odkaz na proměnnou `n` se zobrazí v klauzuli Capture výrazu lambda, jehož výchozím režimem je odkaz:
 
-```
+```cpp
 // C3488a.cpp
 
 int main()
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje na C3488 čtyři možná řešení:
+Následující příklad ukazuje čtyři možná řešení na C3488:
 
-```
+```cpp
 // C3488b.cpp
 
 int main()

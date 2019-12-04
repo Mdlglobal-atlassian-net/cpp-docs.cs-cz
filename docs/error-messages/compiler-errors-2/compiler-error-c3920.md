@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3920
 ms.assetid: 66e91f28-ed82-4ce2-bf22-c0c74905b1ed
-ms.openlocfilehash: d7163cf07a440a0afd1216b3e5cf665326ffb963
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 416752054f7397a058329e1ee4bdaef693dd0d28
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386600"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758460"
 ---
 # <a name="compiler-error-c3920"></a>Chyba kompilátoru C3920
 
-' operator ": nejde definovat přírůstek a snížení přípony WinRT nebo volání příponový operátor CLR operátor WinRT nebo CLR bude volat odpovídající předpona WinRT nebo CLR – operátor (op_Increment/op_Decrement), ale s příponou sémantikou
+' operator ': nelze definovat prefixový přírůstek/snižovat WinRT nebo operátor CLR volání přípony WinRT nebo operátoru CLR zavolá odpovídající předponu WinRT nebo CLR (op_Increment/op_Decrement), ale se sémantikou přípony
 
-Modul Windows Runtime a CLR nepodporují příponového operátoru a uživatelem definované Příponové operátory nejsou povoleny.  Můžete definovat operátor předpony a prefixový operátor se použije pro operace před a po přírůstku.
+Prostředí Windows Runtime a CLR nepodporují operátor přípon a uživatelsky definované operátory přípon nejsou povoleny.  Můžete definovat operátor předpony a operátor předpony bude použit pro operace před i po zvýšení hodnoty.
 
-Následující ukázka generuje C3920 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3920 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3920.cpp
 // compile with: /clr /LD
 public value struct V {

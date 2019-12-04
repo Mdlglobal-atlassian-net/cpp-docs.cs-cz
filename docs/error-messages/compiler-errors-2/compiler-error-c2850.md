@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2850
 ms.assetid: f3efe86c-4168-4e76-a133-3f8314c69f51
-ms.openlocfilehash: 34c2054226ea452f76fdb15b87454677a6a6fe8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a87767bb9194a0a9858dd1734abbe516ffcfac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256852"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758499"
 ---
 # <a name="compiler-error-c2850"></a>Chyba kompilátoru C2850
 
-'vytvořit': povoleno pouze v rozsahu souboru; nemusí být ve vnořeném konstruktoru
+' CONSTRUCT ': povoluje se pouze v oboru souborů; nesmí být ve vnořené konstrukci
 
-Konstrukce, jako je například některé prvky pragma se může objevit jenom v globálním oboru.
+Konstrukce, jako například některé direktivy pragma, mohou být zobrazeny pouze v globálním oboru.
 
 Následující ukázka generuje C2850:
 
-```
+```cpp
 // C2850.cpp
 // compile with: /c /Yc
 // try the following line instead

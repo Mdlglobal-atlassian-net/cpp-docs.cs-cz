@@ -6,37 +6,37 @@ f1_keywords:
 helpviewer_keywords:
 - C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
-ms.openlocfilehash: 5c9c1561b63c740b9f7f5d85b2bf3e04de2542c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1da2676d660d23e3fb71b56263779b1f1edacbf9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175183"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761735"
 ---
 # <a name="compiler-error-c3172"></a>Chyba kompilátoru C3172
 
-'module_name': nelze zadat jiné atributy idl_module v projektu
+' module_name ': v projektu nelze zadat jiné atributy idl_module
 
-[možnost idl_module](../../windows/idl-module.md) atributy se stejným názvem ale jiným `dllname` nebo `version` parametry byly nalezeny ve dvou souborů v kompilaci. Pouze jeden jedinečný `idl_module` může být určen atribut za kompilace.
+[idl_module](../../windows/idl-module.md) atributů se stejným názvem, ale s různými parametry `dllname` nebo `version` byly nalezeny ve dvou souborech v kompilaci. Pro každou kompilaci lze zadat pouze jeden jedinečný atribut `idl_module`.
 
-Identické `idl_module` atributy lze zadat ve více než jeden soubor zdrojového kódu.
+Stejné atributy `idl_module` lze zadat ve více než jednom souboru se zdrojovým kódem.
 
-Například pokud následující `idl_module` byly nalezeny atributy:
+Například pokud byly nalezeny následující atributy `idl_module`:
 
-```
+```cpp
 // C3172.cpp
 [module(name="MyMod")];
 [ idl_module(name="x", dllname="file.dll", version="1.1") ];
 int main() {}
 ```
 
-a pak,
+A potom
 
-```
+```cpp
 // C3172b.cpp
 // compile with: C3172.cpp
 // C3172 expected
 [ idl_module(name="x", dllname="file.dll", version="1.0") ];
 ```
 
-kompilátor vygeneruje C3172 (Všimněte si hodnot jinou verzi).
+kompilátor vygeneruje C3172 (Všimněte si různých hodnot verze).

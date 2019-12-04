@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2935
+title: Chyba kompilátoru C2935
 ms.date: 11/04/2016
 f1_keywords:
 - C2935
 helpviewer_keywords:
 - C2935
 ms.assetid: e11ef90d-0756-4e43-8a09-4974c6aa72a3
-ms.openlocfilehash: f44a8060910b1aeeaa4b85d1df081a559e720df8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 676c238dfb0ae78dbe5b144b5242bfb4ccbda76c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164888"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756146"
 ---
-# <a name="compiler-error-c2935"></a>Compiler Error C2935
+# <a name="compiler-error-c2935"></a>Chyba kompilátoru C2935
 
-'class': typ třídy id se předefinovalo jako globální funkce
+' class ': typ-class-ID se předefinovalo jako globální funkce
 
-Rozvrhy generic nebo šablony třídy nelze použít jako globální funkce.
+Jako globální funkci nelze použít obecnou třídu nebo třídu šablony.
 
-Tato chyba může nastat, pokud jsou nesprávně odpovídající složené závorky.
+Tato chyba může být způsobena nesprávným spárováním složených závorek.
 
 Následující ukázka generuje C2935:
 
-```
+```cpp
 // C2935.cpp
 // compile with: /c
 template<class T>
@@ -35,9 +35,9 @@ struct TC2 {};
 void TC2() {}
 ```
 
-C2935 může dojít také při použití obecných typů:
+C2935 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2935b.cpp
 // compile with: /clr /c
 generic<class T>

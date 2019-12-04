@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C3140
+title: Chyba kompilátoru C3140
 ms.date: 11/04/2016
 f1_keywords:
 - C3140
 helpviewer_keywords:
 - C3140
 ms.assetid: 122f8943-fac3-4db8-a3a8-2c5d19233de6
-ms.openlocfilehash: e7dde3eb27c018502225ea3bc45e4bee7c699379
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc1e1828583b3ac8342c12a62e6ba4c1694b5824
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374960"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760566"
 ---
-# <a name="compiler-error-c3140"></a>Compiler Error C3140
+# <a name="compiler-error-c3140"></a>Chyba kompilátoru C3140
 
-ve stejné jednotce kompilace nemůže mít víc atributů module.
+ve stejné jednotce kompilace nemůže být víc atributů Module.
 
-[Modulu](../../windows/module-cpp.md) atribut lze definovat pouze jednou za projektu.
+Atribut [Module](../../windows/module-cpp.md) lze definovat pouze jednou pro každý projekt.
 
 Následující ukázka generuje C3140:
 
-```
+```cpp
 // C3140.cpp
 // compile with: /c
 [emitidl];

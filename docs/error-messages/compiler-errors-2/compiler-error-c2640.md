@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2640
 ms.assetid: e4d137ab-ed1d-457c-9eec-b70d97f1b0b4
-ms.openlocfilehash: d0dc2dd514186a94811b816c5f3f470a057186f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75acfa4d702b31052b7113117c71bf66ed9de149
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182597"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758239"
 ---
 # <a name="compiler-error-c2640"></a>Chyba kompilátoru C2640
 
-'identifier': pro odkaz neplatný modifikátor __based
+' identifier ': modifikátor __based není pro referenci platný
 
-`__based` Modifikátor se dá použít jenom ukazatelů.
+Modifikátor `__based` lze použít pouze pro ukazatele.
 
 Následující ukázka generuje C2640:
 
-```
+```cpp
 // C2640.cpp
 void f(int i) {
     void *vp;

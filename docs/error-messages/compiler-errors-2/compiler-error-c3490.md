@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: 1e6c3c502290e88feec89877de7ad791084401cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 940eae39222548ec74bda8ccb38e669748ffa74f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381069"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738398"
 ---
 # <a name="compiler-error-c3490"></a>Chyba kompilátoru C3490
 
-'příkaz var' nelze změnit, protože se přistupuje prostřednictvím objektu const.
+vlastnost var nelze změnit, protože je k ní přistupovaná prostřednictvím objektu const.
 
-Výraz lambda, který je deklarován v `const` metoda nemůže měnit data neměnitelnou člena.
+Výraz lambda, který je deklarován v metodě `const`, nemůže upravovat data, která nejsou proměnlivá.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Odeberte `const` modifikátor z vaší deklarace metody.
+- Odeberte modifikátor `const` z deklarace metody.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad generuje C3490, protože upravuje členskou proměnnou `_i` v `const` metody:
+Následující příklad generuje C3490, protože upravuje členskou proměnnou `_i` v metodě `const`:
 
-```
+```cpp
 // C3490a.cpp
 // compile with: /c
 
@@ -44,9 +44,9 @@ class C
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu řeší C3490 odebráním `const` modifikátor od deklarace metody:
+Následující příklad vyřeší C3490 odebráním modifikátoru `const` z deklarace metody:
 
-```
+```cpp
 // C3490b.cpp
 // compile with: /c
 

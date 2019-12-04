@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2914
 ms.assetid: fc6a0592-f53e-4f5a-88cb-780bbed4acf2
-ms.openlocfilehash: 2500736f799032aea71173931139404b4406a16a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bed9e31d7d1de069ee708f8f482d26b37bc16833
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384345"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761055"
 ---
 # <a name="compiler-error-c2914"></a>Chyba kompilátoru C2914
 
-'identifier': argument typu nejde odvodit, protože argument funkce je nejednoznačný
+' identifier ': argument typu nelze odvodit, protože argument funkce je nejednoznačný.
 
-Kompilátor nemůže určit, které přetížené funkce pro argument rozvrhy generic nebo šablony.
+Kompilátor nemůže určit, které přetížené funkce mají být použity pro obecný argument nebo argument šablony.
 
 Následující ukázka generuje C2914:
 
-```
+```cpp
 // C2914.cpp
 // compile with: /c
 void f(int);
@@ -32,9 +32,9 @@ void h() { g(f); }   // C2914
 // void h() { g<int>(f); }
 ```
 
-C2914 může dojít také při použití obecných typů.  Následující ukázka generuje C2914:
+K C2914 může také dojít při použití generických typů.  Následující ukázka generuje C2914:
 
-```
+```cpp
 // C2914b.cpp
 // compile with: /clr /c
 void f(int);

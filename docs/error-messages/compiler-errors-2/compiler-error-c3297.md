@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3297
 ms.assetid: 2a718b4c-6cdb-4418-92c0-fc3a259431c4
-ms.openlocfilehash: e4661119680dff34dfaa43fb9ce71bf97150a8bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fed01b0dcf50a657b6eb457ab8e546d0648beec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222489"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760088"
 ---
 # <a name="compiler-error-c3297"></a>Chyba kompilátoru C3297
 
-"constraint_2": 'constraint_1' nelze použít jako omezení, protože 'constraint_1' má omezení hodnoty
+' constraint_2 ': nelze použít ' constraint_1 ' jako omezení, protože ' constraint_1 ' má omezení hodnoty
 
-Hodnota třídy jsou zapečetěné. Pokud omezení hodnotové třídy, můžete z něj nikdy odvodit další omezení.
+Třídy hodnot jsou zapečetěné. Pokud je omezení hodnotovou třídou, nelze z ní nikdy odvodit jiné omezení.
 
-Další informace najdete v tématu [omezení parametrů obecných typů (C++vyhodnocovací)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Další informace najdete v tématu [omezení parametrů obecného typuC++(/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3297.
 
-```
+```cpp
 // C3297.cpp
 // compile with: /clr /c
 generic<class T, class U>

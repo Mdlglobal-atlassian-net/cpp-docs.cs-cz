@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2360
 ms.assetid: 51bfd2ee-8108-4777-aa93-148b9cebfa83
-ms.openlocfilehash: 6e956ccb021dc3bce4d107e4aa6e0bbe4356283b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226fcd8a27c9abdb789b8191a5cf4e59cc4a66cc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364724"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759903"
 ---
 # <a name="compiler-error-c2360"></a>Chyba kompilátoru C2360
 
-Inicializace 'identifier' je podle popisku 'case' přeskočila.
+Inicializace identifikátoru se přeskočila jmenovkou Case.
 
-Inicializace `identifier` mohly být přeskočeny, v `switch` příkazu. Nelze přejít po deklaraci s inicializátorem, není-li prohlášení je uzavřen v bloku. (Pokud je deklarovaná v rámci bloku, proměnná je v rámci oboru až do konce `switch` příkazu.)
+Inicializace `identifier` může být vynechána v příkazu `switch`. Nejde přeskočit deklaraci s inicializátorem, pokud deklarace není uzavřená v bloku. (Pokud není deklarována v rámci bloku, proměnná je v rozsahu až do konce příkazu `switch`.)
 
 Následující ukázka generuje C2360:
 
-```
+```cpp
 // C2360.cpp
 int main() {
    int x = 0;
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C2360b.cpp
 int main() {
    int x = 0;

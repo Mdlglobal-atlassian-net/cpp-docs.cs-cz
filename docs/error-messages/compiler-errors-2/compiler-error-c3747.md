@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3747
 ms.assetid: a9a4be67-5d9c-4dcc-9ae9-baae46cbecde
-ms.openlocfilehash: 860a990e35b0d51dfc1316a11a2d2512eb40c273
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 761bb44f5097d998fd885fdb1c5caacf90db3642
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226793"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761865"
 ---
 # <a name="compiler-error-c3747"></a>Chyba kompilátoru C3747
 
-Chybí výchozí parametr typu: Parametr param
+chybějící parametr výchozího typu: param parametru
 
-Parametry obecného nebo šablonu s výchozími hodnotami nemůže v seznamu parametrů následovat parametry, které nemají výchozí hodnoty.
+Parametry obecného parametru nebo šablony s výchozími hodnotami nemohou následovat v seznamu parametrů parametry, které nemají výchozí hodnoty.
 
 Následující ukázka generuje C3747:
 
-```
+```cpp
 // C3747.cpp
 template <class T1 = int, class T2>   // C3747
 struct MyStruct {};
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C3747b.cpp
 // compile with: /c
 template <class T1, class T2 = int>

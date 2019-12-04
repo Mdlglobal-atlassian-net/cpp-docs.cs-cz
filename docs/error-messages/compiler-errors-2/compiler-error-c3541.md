@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: 03361fa3e8d4ecb9647d354dd402a9f2b0865eb6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1308ff91bcebabc5495b015321494f3457cf2d1e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761501"
 ---
 # <a name="compiler-error-c3541"></a>Chyba kompilátoru C3541
 
-'type': typeid nejde použít na typ, který obsahuje nastavení auto.
+Typ: typeid se nedá použít pro typ, který obsahuje možnost auto.
 
-[Typeid](../../extensions/typeid-cpp-component-extensions.md) operátor nelze použít pro zadaný typ, protože obsahuje `auto` specifikátor.
+Operátor [typeid](../../extensions/typeid-cpp-component-extensions.md) nelze použít na zadaný typ, protože obsahuje specifikátor `auto`.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad provede C3541.
+Následující příklad vrací C3541.
 
-```
+```cpp
 // C3541.cpp
 // Compile with /Zc:auto
 #include <typeinfo>
