@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-ms.openlocfilehash: 665244cbfc87f32274f9eaf9afacfb1caad50659
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a602238ca5a2f2a64eaa601cc6733a897b9fdb4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402681"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738684"
 ---
 # <a name="compiler-error-c3206"></a>Chyba kompilátoru C3206
 
-'function': Neplatný argument typu pro 'param' chybí seznam argumentů typu na typ třídy 'typename'
+' function ': neplatný argument typu pro ' param ', chybějící seznam argumentů typu pro typ třídy ' typename '
 
-Funkce šablon je definován přijímá argument typu šablony. Však byl předán jako argument šablony šablony.
+Funkce šablony je definována jako přebírání argumentu typu šablony. Byl však předán argument šablony.
 
 Následující ukázka generuje C3206:
 
-```
+```cpp
 // C3206.cpp
 template <class T>
 void f() {}
@@ -36,9 +36,9 @@ void f1() {
 }
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C3206b.cpp
 // compile with: /c
 template <class T>
@@ -52,9 +52,9 @@ void f1() {
 }
 ```
 
-C3206 může dojít také při použití obecných typů:
+C3206 může také nastat při použití generických typů:
 
-```
+```cpp
 // C3206c.cpp
 // compile with: /clr
 generic <class GT1>
@@ -68,9 +68,9 @@ int main() {
 }
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C3206d.cpp
 // compile with: /clr
 generic <class GT1>
@@ -84,9 +84,9 @@ int main() {
 }
 ```
 
-Šablona třídy není povolená jako argument typu šablony. Následující příklad vyvolá C3206:
+Šablona třídy není povolena jako argument typu šablony. Následující příklad vyvolává C3206:
 
-```
+```cpp
 // C3206e.cpp
 template <class T>
 struct S {};
@@ -101,9 +101,9 @@ int main() {
 }
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C3206f.cpp
 template <class T>
 struct S {};
@@ -118,9 +118,9 @@ int main() {
 }
 ```
 
-Pokud parametr template šablony je nezbytné, budete muset obalí funkci do šablony třídy, která přebírá parametr template šablony:
+Je-li parametr šablony šablony nutný, je nutné zabalit funkci do třídy šablony, která přebírá parametr šablony:
 
-```
+```cpp
 // C3206g.cpp
 template <class T>
 struct S {};

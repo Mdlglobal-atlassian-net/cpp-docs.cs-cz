@@ -1,37 +1,37 @@
 ---
-title: Compiler Error C2390
+title: Chyba kompilátoru C2390
 ms.date: 11/04/2016
 f1_keywords:
 - C2390
 helpviewer_keywords:
 - C2390
 ms.assetid: 06b749ee-d072-4db1-b229-715f2c0728b5
-ms.openlocfilehash: 89f6ebb02326413e8dca67d333e555321da4e645
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 515e2e151d27dd2eb84fc1dc71b9197b36b14cbb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393633"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745041"
 ---
-# <a name="compiler-error-c2390"></a>Compiler Error C2390
+# <a name="compiler-error-c2390"></a>Chyba kompilátoru C2390
 
-'identifier': nesprávná třída úložiště "specifikátor"
+' identifier ': nesprávná třída úložiště ' specifikátor '
 
-Třída úložiště není platný pro identifikátor globální obor. Místo neplatná třída se používá výchozí třídou úložiště.
+Třída úložiště není platná pro identifikátor globálního rozsahu. Výchozí třída úložiště se používá místo neplatné třídy.
 
 Možná řešení:
 
-- Pokud identifikátor je funkce, deklarujte ho s `extern` úložiště.
+- Pokud je identifikátor funkce, deklarujte ji pomocí `extern` Storage.
 
-- Pokud identifikátor je formální parametr nebo lokální proměnné, ji deklarujte pomocí automatického úložiště.
+- Pokud je identifikátor formálním parametrem nebo místní proměnnou, deklarujte ji pomocí automatického úložiště.
 
-- Identifikátor je globální proměnné, deklarujte ho pomocí bez třídy úložiště (automatické úložiště).
+- Pokud je identifikátor globální proměnnou, deklarujte ji bez třídy úložiště (automatické úložiště).
 
 ## <a name="example"></a>Příklad
 
 - Následující ukázka generuje C2390:
 
-```
+```cpp
 // C2390.cpp
 register int i;   // C2390
 

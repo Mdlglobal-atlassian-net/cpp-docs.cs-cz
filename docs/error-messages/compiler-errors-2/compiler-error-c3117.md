@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3117
 ms.assetid: dceee392-d4c7-4599-b75e-7aaac7c36fdd
-ms.openlocfilehash: 66efcf95599a18e0d93ff36f0e684ad350941977
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6ef04eca5c059ce1544b62addcaeb0510697d658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345546"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741167"
 ---
 # <a name="compiler-error-c3117"></a>Chyba kompilátoru C3117
 
-'%$S': rozhraní může mít pouze jednu základní třídu
+% $S: rozhraní může mít jenom jednu základní (Base) třídu.
 
-Můžete deklarovat, která dědí z více základních tříd rozhraní.
+Deklarovali jste rozhraní, které dědí z více základních tříd.
 
 Následující ukázka generuje C3117:
 
-```
+```cpp
 // C3117.cpp
 #include <windows.h>
 
