@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2553
 ms.assetid: 64bc1e9a-627f-4ce9-b7bc-dc911bdb9180
-ms.openlocfilehash: 11cb2b83d958f0c59d05034a716a022f00b326ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa3e97d576e994878ab5b080363c4c09b79f42ed
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353186"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756783"
 ---
 # <a name="compiler-error-c2553"></a>Chyba kompilátoru C2553
 
-'base_function': přepisující virtuální funkce vrátí typ se liší od "override_function.
+' base_function ': návratový typ přepisující virtuální funkce se liší od ' override_function '
 
-Funkce v odvozené třídě se pokusil přepsat virtuální funkce v základní třídě, ale funkce odvozené třídy neměl vracet hodnotu stejného typu jako funkci základní třídy.  Podpis funkce přepsání musí odpovídat signatuře funkce přepsání.
+Funkce v odvozené třídě se pokusila přepsat virtuální funkci v základní třídě, ale funkce odvozené třídy neobsahovala stejný návratový typ jako funkce základní třídy.  Signatura funkce přepsání se musí shodovat s signaturou funkce, která je přepsána.
 
 Následující ukázka generuje C2553:
 
-```
+```cpp
 // C2553.cpp
 // compile with: /clr /c
 ref struct C {

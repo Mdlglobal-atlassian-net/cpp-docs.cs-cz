@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3282
 ms.assetid: bac2ac89-c360-4c24-bb81-c20c62ece9ba
-ms.openlocfilehash: 46be1f5250c1ca787909c48646d59180d62bd899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a119f8a9482d3f49c98873fee6f54b434416ee48
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381680"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757576"
 ---
 # <a name="compiler-error-c3282"></a>Chyba kompilátoru C3282
 
-obecný parametr seznamy se může vyskytovat jenom u spravované nebo WinRTclasses, struktury nebo funkcí
+seznamy obecných parametrů se můžou vyskytovat jenom ve spravovaných nebo WinRTclasses, strukturách nebo funkcích.
 
-Seznam obecných parametrů nebyl použit správně.  Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md).
+Obecný seznam parametrů byl nesprávně použit.  Další informace najdete v tématu [Obecné typy](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3282 a ukazuje, jak ho opravit.
+Následující ukázka generuje C3282 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C3282.cpp
 // compile with: /clr /c
 generic <typename T> int x;   // C3282

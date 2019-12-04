@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2681
 ms.assetid: eb42da6d-8d2c-43fd-986b-e73e2b004885
-ms.openlocfilehash: 8b311052d3a3525090d954c0dc8cee20e985b1b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7cf39e89f70f27471fb3a251aac12793f1fb33b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282137"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760293"
 ---
 # <a name="compiler-error-c2681"></a>Chyba kompilátoru C2681
 
-'type': Neplatný typ výrazu pro název
+' type ': neplatný typ výrazu pro název
 
-Operátor přetypování se pokusil převést z neplatného typu. Například, pokud použijete [dynamic_cast](../../cpp/dynamic-cast-operator.md) operátor převodu výrazu na typ ukazatele, zdrojový výraz musí být ukazatel.
+Operátor přetypování se pokusil o převod z neplatného typu. Například pokud použijete operátor [dynamic_cast](../../cpp/dynamic-cast-operator.md) k převodu výrazu na typ ukazatele, zdrojový výraz musí být ukazatel.
 
 Následující ukázka generuje C2681:
 
-```
+```cpp
 // C2681.cpp
 class A { virtual void f(); };
 

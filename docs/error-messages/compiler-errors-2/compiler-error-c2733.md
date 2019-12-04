@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2733
 ms.assetid: 67f83561-c633-407c-a2ee-f9fd16e165bf
-ms.openlocfilehash: 26819f1928223b5fa96d275290105f32787057f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ef669a49f4a3ec5a1af1a15a79f2511fa2699dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208321"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755782"
 ---
 # <a name="compiler-error-c2733"></a>Chyba kompilátoru C2733
 
-druhé propojení C-linkage přetížení funkce 'function' není povoleno
+druhé propojení jazyka C přetížené funkce Function není povolené.
 
-Více než jeden přetížené funkce je deklarována s C-linkage. Pokud používáte C-linkage, může být pouze jednu formu zadanou funkci externí. Protože přetížené funkce mají stejné nedekorovaný název, nelze použít s programy C.
+Více než jedna přetížená funkce je deklarována s propojením jazyka C. Při použití propojení jazyka C může být pouze jedna forma zadané funkce external. Vzhledem k tomu, že přetížené funkce mají stejný nedekorovaný název, nelze je použít s programy jazyka C.
 
 Následující ukázka generuje C2733:
 
-```
+```cpp
 // C2733.cpp
 extern "C" {
    void F1(int);

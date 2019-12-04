@@ -1,37 +1,37 @@
 ---
-title: Compiler Error C2707
+title: Chyba kompilátoru C2707
 ms.date: 11/04/2016
 f1_keywords:
 - C2707
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: ce86f69b36b915b3e757b5d18430c99cb288e4e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161001"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760436"
 ---
-# <a name="compiler-error-c2707"></a>Compiler Error C2707
+# <a name="compiler-error-c2707"></a>Chyba kompilátoru C2707
 
-'identifier': špatný kontext pro vnitřní funkci.
+' identifier ': špatný kontext pro vnitřní funkci
 
-Vnitřní funkce strukturovaného zpracování výjimek nejsou platné v některých kontextech:
+Vnitřní objekty pro zpracování výjimek jsou v některých kontextech neplatné:
 
-- `_exception_code()` mimo filtr výjimek nebo `__except` bloku
+- `_exception_code()` mimo filtr výjimek nebo blok `__except`
 
 - `_exception_info()` mimo filtr výjimek
 
-- `_abnormal_termination()` mimo `__finally` bloku
+- `_abnormal_termination()` mimo blok `__finally`
 
-Chcete-li vyřešit chybu, ujistěte se, že zpracování výjimek vnitřní objekty jsou umístěny ve vhodném kontextu.
+Chcete-li vyřešit chybu, zajistěte, aby byly vnitřní objekty zpracovávající výjimky umístěny v příslušném kontextu.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2707.
 
-```
+```cpp
 // C2707.cpp
 #include <windows.h>
 #include <stdio.h>

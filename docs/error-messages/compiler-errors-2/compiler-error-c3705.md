@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
-ms.openlocfilehash: 8a1a5a7c3c54742f6952f6885a70fd5c1dcf6e0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f77457be95ae22b2a67214207d361ca105811d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227067"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757927"
 ---
 # <a name="compiler-error-c3705"></a>Chyba kompilátoru C3705
 
-'function': Nelze najít rozhraní eventing
+' function ': nelze najít rozhraní pro události
 
-Rozhraní událostí použití událostí modelu COM je nutné definovat. Všimněte si, `#include` řádky hlavičkové soubory ATL. je znázorněno v následující ukázce jsou požadované pro použití událostí modelu COM. Chcete-li tuto chybu opravit, Odkomentujte definici `IEvents` rozhraní ve vzorovém kódu.
+Je nutné definovat rozhraní události pro použití událostí COM. Všimněte si, že `#include` řádky hlavičkových souborů ATL zobrazených v níže uvedené ukázce jsou vyžadovány pro použití událostí COM. Chcete-li tuto chybu opravit, zrušte komentář definice `IEvents` rozhraní v ukázkovém kódu.
 
 Následující ukázka generuje C3705:
 
-```
+```cpp
 // C3705.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

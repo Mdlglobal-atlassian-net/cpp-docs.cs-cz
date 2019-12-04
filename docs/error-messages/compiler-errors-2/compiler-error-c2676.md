@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 1a3eab8d1df7534f2bfbed42db5c1a660942eacc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c25593df27f7c4e742eb109aeb5e94ba6fdba8c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164983"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760358"
 ---
 # <a name="compiler-error-c2676"></a>Chyba kompilátoru C2676
 
@@ -23,7 +23,7 @@ Chcete-li operátor použít, je třeba jej přetížit pro daný typ nebo defin
 
 Následující ukázka generuje C2676.
 
-```
+```cpp
 // C2676.cpp
 // C2676 expected
 struct C {
@@ -55,11 +55,11 @@ int main() {
 
 K chybě C2676 může dojít také při pokusu o provedení aritmetické operace ukazatele pro ukazatel `this` typu odkazu.
 
-Ukazatel `this` má v typu odkazu typ popisovače. Další informace najdete v tématu [sémantiku tohoto ukazatele](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
+Ukazatel `this` má v typu odkazu typ popisovače. Další informace naleznete v tématu [Sémantika ukazatele this](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
 
 Následující ukázka generuje C2676.
 
-```
+```cpp
 // C2676_a.cpp
 // compile with: /clr
 using namespace System;

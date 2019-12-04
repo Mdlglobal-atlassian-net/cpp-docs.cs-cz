@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2881
 ms.assetid: b49c63c2-b064-4d4b-a75e-ddd2af947522
-ms.openlocfilehash: 82a4fbe94bc7250244d57f549e52037d6a54c784
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c171fd529943bb07a6c512e4ac97f64f13f959d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378913"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736279"
 ---
 # <a name="compiler-error-c2881"></a>Chyba kompilátoru C2881
 
-'namespace1': se už používá jako alias pro "namespace2.
+' Namespace1 ': už se používá jako alias pro ' Namespace2 '.
 
-Nelze použít stejný název jako alias pro dva obory názvů.
+Pro dva obory názvů nelze použít stejný název jako alias.
 
 Následující ukázka generuje C2881:
 
-```
+```cpp
 // C2881.cpp
 // compile with: /c
 namespace A {

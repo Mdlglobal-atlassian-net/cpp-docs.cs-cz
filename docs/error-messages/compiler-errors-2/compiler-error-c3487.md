@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-ms.openlocfilehash: 01f8a1bd74ed2b7a3150afae5b46128c6f5b0ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b38755470e3746066711382b2ed471badc8e197
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381140"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738437"
 ---
 # <a name="compiler-error-c3487"></a>Chyba kompilátoru C3487
 
-Typ vrácené: všechny návratové výrazy se musí odvozovat na stejný typ: dřív to bylo "návratovým typem.
+návratový typ: všechny návratové výrazy se musí odvozovat na stejný typ: dřív byl návratový typ.
 
-Výraz lambda musíte zadat její typ vrácené hodnoty, pokud obsahuje jeden návratový příkaz. Pokud výraz lambda obsahuje více návratovými příkazy, musí všechny mají stejného typu.
+Lambda musí specifikovat svůj návratový typ, pokud neobsahuje jediný návratový příkaz. Pokud lambda obsahuje více příkazů Return, musí mít všechny stejný typ.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Zadejte ukončovací návratový typ pro výraz lambda. Ověřte, že všechny vrátí z výrazu lambda jsou stejného typu nebo může být implicitně převeden na typ vrácené hodnoty.
+- Zadejte koncový návratový typ pro lambda. Ověřte, zda jsou všechny návraty z výrazu lambda stejného typu nebo lze implicitně převést na návratový typ.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad generuje C3487, protože se neshodují návratové typy výrazu lambda:
+Následující příklad generuje C3487, protože návratové typy výrazu lambda se neshodují:
 
-```
+```cpp
 // C3487.cpp
 // Compile by using: cl /c /W4 C3487.cpp
 

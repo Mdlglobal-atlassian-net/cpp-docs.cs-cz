@@ -1,31 +1,31 @@
 ---
-title: Compiler Error C2749
+title: Chyba kompilátoru C2749
 ms.date: 11/04/2016
 f1_keywords:
 - C2749
 helpviewer_keywords:
 - C2749
 ms.assetid: a81aef36-cdca-4d78-89d5-b72eff2500b2
-ms.openlocfilehash: 80ac01eaba8e5291ee5558d226ebea2c3d8ff47e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71c2f3d3a297d70501c675ac6a9f750cbdf0d421
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360213"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759617"
 ---
-# <a name="compiler-error-c2749"></a>Compiler Error C2749
+# <a name="compiler-error-c2749"></a>Chyba kompilátoru C2749
 
-'type': můžete pouze operaci throw nebo catch popisovač pro spravovanou třídu s/clr: safe
+' type ': lze vyvolat nebo zachytit popisovač do spravované třídy s možností/CLR: Safe
 
-Při použití **/CLR: safe**, můžete pouze operaci throw nebo catch typ odkazu.
+Při použití **/clr: Safe**můžete vyvolat nebo zachytit pouze odkazový typ.
 
-Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2749:
 
-```
+```cpp
 // C2749.cpp
 // compile with: /clr:safe
 ref struct MyStruct {

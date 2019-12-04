@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2203
 ms.assetid: 5497df43-86f6-43d5-b6cb-723c4c589b10
-ms.openlocfilehash: 848fdad460402238f4957344dd49bd9128352b4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db36afa1376a0b64b3e110acd1722d3e0f2af449
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383259"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758954"
 ---
 # <a name="compiler-error-c2203"></a>Chyba kompilátoru C2203
 
-delete – operátor nemůže určovat hranice pro pole
+operátor delete nemůže určovat hranice pro pole.
 
-S **/Za** (ANSI) možnost `delete` operátor můžete odstranit celého pole, ale není částí nebo konkrétní členy pole.
+Pomocí možnosti **/za** (ANSI) může operátor `delete` odstranit celé pole, ale ne části nebo konkrétní členy daného pole.
 
 Následující ukázka generuje C2203:
 
-```
+```cpp
 // C2203.cpp
 // compile with: /Za
 int main() {

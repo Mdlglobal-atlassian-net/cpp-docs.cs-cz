@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-ms.openlocfilehash: e2b08ef3e46681147c4efd77cbffadb096bbfc16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd52b434f86bdc93124c6005bbf7fadad3cb56b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360707"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757056"
 ---
 # <a name="compiler-error-c2492"></a>Chyba kompilátoru C2492
 
-"*proměnnou*': data s dobou trvání úložiště vlákna nemůžou mít rozhraní dll
+'*Variable*': data s dobou trvání úložiště vlákna nesmí mít rozhraní dll
 
-Proměnná je deklarovaná s [vlákno](../../cpp/thread.md) atribut a interface s knihovnou DLL. Adresa `thread` proměnná není znám, dokud běhu, takže ji nelze ho propojit s knihovny DLL importu nebo exportu.
+Proměnná je deklarována s atributem [vlákna](../../cpp/thread.md) a s rozhraním dll. Adresa `thread` proměnné není známa, dokud není čas spuštění, a nelze ji proto propojit s importem nebo exportem knihovny DLL.
 
 Následující ukázka generuje C2492:
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

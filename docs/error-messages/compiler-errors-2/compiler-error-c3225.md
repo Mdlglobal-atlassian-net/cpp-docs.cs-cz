@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174013"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757615"
 ---
 # <a name="compiler-error-c3225"></a>Chyba kompilátoru C3225
 
-argument obecného typu pro "argument" nemůže mít "typ", musí být typ hodnoty nebo typ popisovače
+Argument obecného typu pro ARG nemůže být typu Type, musí se jednat o typ hodnoty nebo typ popisovače.
 
-Argument obecného typu nebyl nesprávného typu.
+Argument obecného typu není správného typu.
 
-Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md).
+Další informace najdete v tématu [Obecné typy](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
-Nelze vytvořit instanci obecného typu pomocí nativního typu. Následující ukázka generuje C3225.
+Nelze vytvořit instanci obecného typu s nativním typem. Následující ukázka generuje C3225.
 
-```
+```cpp
 // C3225.cpp
 // compile with: /clr
 class A {};
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad vytvoří komponentu pomocí jazyka C#. Všimněte si, že omezení určuje, že obecný typ může být vytvořena pouze s typem hodnoty.
+Následující příklad vytvoří komponentu pomocí C#. Všimněte si, že omezení určuje, že obecný typ může být vytvořen pouze pomocí typu hodnoty.
 
 ```
 // C3225_b.cs
@@ -54,9 +54,9 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Příklad
 
-Tento příklad využívá jazyka C#-vytvořili komponentu a v rozporu s omezením, který může obsahovat jenom MyList vytvořena instance s typem hodnoty jiné než <xref:System.Nullable>. Následující ukázka generuje C3225.
+Tato ukázka využívá C#vytvořenou součást a porušuje omezení, že myList lze vytvořit pouze pomocí jiného typu hodnoty než <xref:System.Nullable>. Následující ukázka generuje C3225.
 
-```
+```cpp
 // C3225_c.cpp
 // compile with: /clr
 #using "C3225_b.dll"

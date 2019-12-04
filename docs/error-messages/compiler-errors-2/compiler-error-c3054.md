@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3054
 ms.assetid: 6f4b7ac5-0d12-474b-b611-76ff26ee41ac
-ms.openlocfilehash: 1dd6450d661700d9b2f7f94e625abd9ecc64ed08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a35f72be07799f61587c77b511395223ae72939
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265565"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761186"
 ---
 # <a name="compiler-error-c3054"></a>Chyba kompilátoru C3054
 
-v obecné třídě nebo funkci aktuálně nepodporuje "#pragma omp parallel.
+možnost #pragma omp parallel se v obecné třídě nebo funkci aktuálně nepodporuje.
 
-Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md) a [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md).
+Další informace naleznete v tématu [generické](../../extensions/generics-cpp-component-extensions.md) a [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3054.
 
-```
+```cpp
 // C3054.cpp
 // compile with: /openmp /clr /c
 #include <omp.h>

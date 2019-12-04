@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2277
 ms.assetid: 15a83b07-8731-4524-810b-267f65a7844f
-ms.openlocfilehash: 5b20594df8a250a54a0fd5902e0453f7438cbbfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1c39203d8733b3992ed73172bb58fd7431e110a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389024"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759188"
 ---
 # <a name="compiler-error-c2277"></a>Chyba kompilátoru C2277
 
-'identifier': nejde adresovat tato členská funkce
+identifikátor: nejde adresovat tuto členskou funkci.
 
-Nejde převzít adresu členské funkce.
+Nelze převzít adresu členské funkce.
 
 Následující ukázka generuje C2277:
 
-```
+```cpp
 // C2277.cpp
 class A {
 public:

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
-ms.openlocfilehash: 2df788efd93fb531822d858ea5aee1722487db81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23c2a38f8e4d6781af73fb70a25cf4737e2c4e8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387033"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758772"
 ---
 # <a name="compiler-error-c2261"></a>Chyba kompilátoru C2261
 
-"řetězec": odkaz na sestavení je neplatný a nelze rozpoznat
+String: odkaz na sestavení je neplatný a nedá se přeložit.
 
-Hodnota není platný.
+Hodnota není platná.
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> slouží k určení přátelského sestavení. Například pokud a.dll chce b.dll zadat jako sestavení typu friend, zadali byste (v a.dll): InternalsVisibleTo("b"). Modul runtime pak umožní b.dll přístup ke všem, co a.dll (s výjimkou soukromé typy).
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> slouží k určení sestavení typu Friend. Například pokud chce soubor. dll zadat b. dll jako sestavení typu Friend, zadali byste (v souboru. dll): InternalsVisibleTo ("b"). Modul runtime pak umožňuje b. dll přistupovat ke všemu v souboru. dll (s výjimkou privátních typů).
 
-Další informace o správnou syntaxi při určování sestavení typu friend, naleznete v tématu [přátelská sestavení (C++)](../../dotnet/friend-assemblies-cpp.md).
+Další informace o správné syntaxi při určení sestavení typu Friend naleznete v tématu [Friend AssembliesC++()](../../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2261.
 
-```
+```cpp
 // C2261.cpp
 // compile with: /clr /c
 using namespace System::Runtime::CompilerServices;

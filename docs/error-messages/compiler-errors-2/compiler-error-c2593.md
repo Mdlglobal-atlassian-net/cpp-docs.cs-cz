@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
-ms.openlocfilehash: c358553a36104b5c389076f5a5ce02f94f85e85a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a385e35376ddce528678980705595bfb98aca95
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386912"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759344"
 ---
 # <a name="compiler-error-c2593"></a>Chyba kompilátoru C2593
 
-'operator identifier' je nejednoznačný
+' identifikátor operátora ' je dvojznačný
 
-Pro přetíženého operátoru je definován více než jeden operátor je to možné.
+Pro přetížený operátor je definován více než jeden možný operátor.
 
-Tato chyba může být stanovena při použití explicitní přetypování na jeden nebo více skutečných parametrů.
+Tato chyba se může opravit, pokud použijete explicitní přetypování na jeden nebo více skutečných parametrů.
 
 Následující ukázka generuje C2593:
 
-```
+```cpp
 // C2593.cpp
 struct A {};
 struct B : A {};
@@ -39,9 +39,9 @@ int main() {
 }
 ```
 
-Tuto chybu může způsobovat serializace typu s plovoucí desetinnou čárkou proměnné pomocí `CArchive` objektu. Kompilátor identifikuje `<<` operátor jako nejednoznačný. C++ pouze primitivní typy, které `CArchive` může serializovat typy pevné velikosti `BYTE`, `WORD`, `DWORD`, a `LONG`. Všechny typy celého čísla musí být přetypovat na některý z těchto typů pro serializaci. Typy s plovoucí desetinnou čárkou musí být archivovat pomocí `CArchive::Write()` členskou funkci.
+Tato chyba může být způsobena serializací proměnné s plovoucí desetinnou čárkou pomocí objektu `CArchive`. Kompilátor identifikuje operátor `<<` jako dvojznačný. Jedinými primitivními C++ typy, které `CArchive` mohou serializovat, jsou typy pevné velikosti `BYTE`, `WORD`, `DWORD`a `LONG`. Všechny celočíselné typy musí být přetypování na jeden z těchto typů pro serializaci. Typy s plovoucí desetinnou čárkou musí být archivovány pomocí členské funkce `CArchive::Write()`.
 
-Následující příklad ukazuje, jak archivovat do proměnné s plovoucí desetinnou čárkou (`f`) do archivní úrovně `ar`:
+Následující příklad ukazuje, jak archivovat proměnnou s plovoucí desetinnou čárkou (`f`) pro archivní `ar`:
 
 ```
 ar.Write(&f, sizeof( float ));

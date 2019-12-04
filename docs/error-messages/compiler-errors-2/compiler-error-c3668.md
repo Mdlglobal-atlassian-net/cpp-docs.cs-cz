@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3668
 ms.assetid: 53a96698-bde4-4447-95b5-b5108291f60c
-ms.openlocfilehash: 770294eb58c09024ddfb4269357b77de7b7ea7d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e949a1251fcbebfd9e8fe47caf190e81b8b9f99
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215057"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758161"
 ---
 # <a name="compiler-error-c3668"></a>Chyba kompilátoru C3668
 
-"metoda": metoda se specifikátorem přepsání 'override' nepřepsala žádné metody base class
+' Method ': metoda s specifikátorem přepisu ' override ' nepřepsala žádné metody základní třídy
 
-Funkce se pokusil přepsat funkci neexistuje.
+Funkce se pokusila přepsat neexistující funkci.
 
-Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Další informace najdete v tématu [Explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3668.
 
-```
+```cpp
 // C3668.cpp
 // compile with: /c
 __interface I {

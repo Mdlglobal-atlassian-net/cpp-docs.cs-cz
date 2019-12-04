@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2287
 ms.assetid: 64556299-4e1f-4437-88b7-2464fc0b95bb
-ms.openlocfilehash: f5493220c4380d1fd67b38995414f48a2ef72a41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 234d0e85d0d6772340797fb6880e0ef79d4191ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385820"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759136"
 ---
 # <a name="compiler-error-c2287"></a>Chyba kompilátoru C2287
 
-'class': reprezentace dědění: "representation1" je míň obecná než požadované representation2
+' class ': reprezentace dědičnosti: ' representation1 ' je méně obecná než požadovaná ' representation2 '
 
-Třída je deklarována s reprezentaci jednodušší, než se požaduje.
+Třída je deklarována s jednodušší reprezentací, než je požadováno.
 
 Následující ukázka generuje C2287:
 
-```
+```cpp
 // C2287.cpp
 // compile with: /vmg /c
 class __single_inheritance X;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3395
 ms.assetid: 26a9ebc9-ed97-47ce-b436-19aa2bcf6e50
-ms.openlocfilehash: 2e5234abcbe46e17035fd0b16e9816c879d86cfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eaf63b42a6c44153a55d8aeb70f4f1174a5c895c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243047"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737540"
 ---
 # <a name="compiler-error-c3395"></a>Chyba kompilátoru C3395
 
-'function': __declspec(dllexport) nejde použít u funkce s \__clrcall konvence volání
+' function ': __declspec (dllexport) nelze použít pro funkci s konvencí volání _clrcall \_
 
-`__declspec(dllexport)` a [__clrcall](../../cpp/clrcall.md) nejsou kompatibilní.  Další informace najdete v tématu [dllexport, dllimport](../../cpp/dllexport-dllimport.md).
+`__declspec(dllexport)` a [__clrcall](../../cpp/clrcall.md) nejsou kompatibilní.  Další informace naleznete v tématu [dllexport, dllimport](../../cpp/dllexport-dllimport.md).
 
 Následující ukázka generuje C3395:
 
-```
+```cpp
 // C3395.cpp
 // compile with: /clr /c
 

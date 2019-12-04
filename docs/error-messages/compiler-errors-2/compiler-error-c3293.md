@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3293
 ms.assetid: b772cf98-52e0-4e24-be23-1f5d87d999ac
-ms.openlocfilehash: 84d539722474d5f5dfffe1f6fe121bb7349ba131
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1713632d21ef401fb1177350c81a4a64ed0503ec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222584"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760111"
 ---
 # <a name="compiler-error-c3293"></a>Chyba kompilátoru C3293
 
-"objekt": "default" používat pro přístup k výchozí vlastnost (indexer) pro třídu 'type'
+přístupového objektu: pro přístup k výchozí vlastnosti (indexer) pro třídu Type použijte default.
 
-Indexovaná vlastnost se použila správně.  Zobrazit [jak: Pomocí vlastností v C++vyhodnocovací](../../dotnet/how-to-use-properties-in-cpp-cli.md) Další informace.
+K indexované vlastnosti došlo nesprávně.  Další informace naleznete v tématu [How to C++: use Properties in/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md) .
 
-**Visual Studio 2017 a novější**: V sadě Visual Studio 2015 a starší kompilátor v některých případech misidentified výchozí vlastnost jako výchozí indexeru. Bylo možné tento problém obejít, pomocí identifikátor "Výchozí" pro přístup k vlastnosti. Alternativní řešení, samotný začal být problematické po výchozí byla zavedená jako klíčové slovo v C ++ 11. Proto v sadě Visual Studio 2017 které jsme opravili chyby, které vyžaduje řešení, a kompilátor vyvolá chybu nyní, když "Výchozí" se používá pro přístup k výchozí vlastnost pro třídu.
+**Visual studio 2017 a novější**: v nástroji visual Studio 2015 a starších verzích kompilátor v některých případech chybně identifikoval výchozí vlastnost jako výchozí indexer. Pro přístup k vlastnosti bylo možné problém vyřešit pomocí identifikátoru "výchozí". Alternativní řešení se jako klíčové slovo v C++ 11 stalo problematickým po zavedení výchozího nastavení. Proto v aplikaci Visual Studio 2017 byly opraveny chyby, které vyžadovaly alternativní řešení, a kompilátor nyní vyvolá chybu, pokud se pro přístup k výchozí vlastnosti třídy používá výchozí hodnota.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3293 v sadě Visual Studio 2015 a starší.
+Následující ukázka generuje C3293 v aplikaci Visual Studio 2015 a starší.
 
-```
+```cpp
 // C3293.cpp
 // compile with: /clr /c
 using namespace System;

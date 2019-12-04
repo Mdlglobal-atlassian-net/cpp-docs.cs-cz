@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324763"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758031"
 ---
 # <a name="compiler-error-c3699"></a>Chyba kompilátoru C3699
 
-'operator': tuto indirekci nejde použít na typ 'type'
+' operator ': Toto dereference nelze použít pro typ ' type '
 
-Byl proveden pokus o použití nepřímý odkaz, který není povolen na `type`.
+Byl proveden pokus o použití dereference, která není povolena v `type`.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3699.
 
-```
+```cpp
 // C3699.cpp
 // compile with: /clr /c
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Triviální vlastnost nemůže být typ odkazu. Zobrazit [vlastnost](../../extensions/property-cpp-component-extensions.md) Další informace. Následující ukázka generuje C3699.
+Triviální vlastnost nemůže mít odkazový typ. Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md) . Následující ukázka generuje C3699.
 
-```
+```cpp
 // C3699_b.cpp
 // compile with: /clr /c
 ref struct C {
@@ -49,9 +49,9 @@ ref struct C {
 
 ## <a name="example"></a>Příklad
 
-Ekvivalentní "ukazatel na ukazatel" syntaxe je popisovač odkazem sledování. Následující ukázka generuje C3699.
+Ekvivalentem "ukazatele na ukazatel" je popisovačem sledovacího odkazu. Následující ukázka generuje C3699.
 
-```
+```cpp
 // C3699_c.cpp
 // compile with: /clr /c
 using namespace System;

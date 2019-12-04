@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
-ms.openlocfilehash: 8af20c5172cddd0194ed018c13960bbed7859674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd62ea825e3ae7d9e4acc1cb6d93d4bc102be0eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386028"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737319"
 ---
 # <a name="compiler-error-c2064"></a>Chyba kompilátoru C2064
 
-Termín se nevyhodnocuje na funkci s argumenty N
+termín se nevyhodnocuje na funkci, která přijímá N argumentů.
 
-Je provedeno volání funkce prostřednictvím výrazu. Výraz se nevyhodnocuje na ukazatel na funkci, která přijímá zadaný počet argumentů.
+Prostřednictvím výrazu je provedeno volání funkce. Výraz se nevyhodnocuje na ukazatel na funkci, která přebírá zadaný počet argumentů.
 
-V tomto příkladu kód pokusí volat jiné funkce jako funkce. Následující ukázka generuje C2064:
+V tomto příkladu se kód pokusí zavolat jiné než funkce jako Functions. Následující ukázka generuje C2064:
 
-```
+```cpp
 // C2064.cpp
 int i, j;
 char* p;
@@ -31,9 +31,9 @@ void func() {
 }
 ```
 
-Ukazatele na nestatické členské funkce je nutné volat z kontextu instance objektu. Následující ukázka generuje C2064 a ukazuje, jak ho opravit:
+Je nutné volat ukazatele na nestatické členské funkce z kontextu instance objektu. Následující ukázka vygeneruje C2064 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C2064b.cpp
 struct C {
    void func1(){}
@@ -50,9 +50,9 @@ int main() {
 }
 ```
 
-V rámci třídy musíte uvést ukazatelů na členské funkce také volání kontextu objektu. Následující ukázka generuje C2064 a ukazuje, jak ho opravit:
+V rámci třídy musí ukazatelé členské funkce také indikovat kontext volajícího objektu. Následující ukázka generuje C2064 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C2064d.cpp
 // Compile by using: cl /c /W4 C2064d.cpp
 struct C {

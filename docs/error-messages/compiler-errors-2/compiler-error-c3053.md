@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3053
 ms.assetid: ab9a25f3-e341-4f6e-8e69-069b4a963a64
-ms.openlocfilehash: cb01207be15a628fb0c6206df3e6a673067f568a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07514dfb931dcb5bf45bb8526cd19cf19103a56f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265643"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761201"
 ---
 # <a name="compiler-error-c3053"></a>Chyba kompilátoru C3053
 
-'symbol': 'threadprivate' platí pouze pro globální nebo statické datové položky
+' symbol ': ' threadprivate ' je platný pouze pro globální nebo statické datové položky
 
-Symboly předán [threadprivate](../../parallel/openmp/reference/threadprivate.md) musí být globální nebo statická.
+Symboly předané do [threadprivate](../../parallel/openmp/reference/threadprivate.md) musí být buď globální, nebo statické.
 
 Následující ukázka generuje C3053:
 
-```
+```cpp
 // C3053.cpp
 // compile with: /openmp
 void Test() {
@@ -34,9 +34,9 @@ void Test() {
 }
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C3053b.cpp
 // compile with: /openmp /LD
 int x, y;

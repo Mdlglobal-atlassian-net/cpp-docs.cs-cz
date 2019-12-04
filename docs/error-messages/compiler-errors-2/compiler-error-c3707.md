@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3707
 ms.assetid: ac63a5dd-7a4b-48d2-9f2a-be9cb090134c
-ms.openlocfilehash: 8a1525539c84ea427815a03057bb6d2f9213fec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6faf035c0f4f68b10b187c56bea4cafc776998cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328520"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757953"
 ---
 # <a name="compiler-error-c3707"></a>Chyba kompilátoru C3707
 
-'function': metoda dispinterface musí mít dispid
+' function ': metoda IDispatch musí mít identifikátor DISPID
 
-Pokud používáte `dispinterface` metoda, je nutné ji přiřadit `dispid`. Chcete-li tuto chybu opravit, přiřaďte `dispid` k `dispinterface` metody, například podle odstraňuje se komentování `id` atributu v metodě v následující ukázce. Další informace najdete v tématu atributy [dispinterface](../../windows/dispinterface.md) a [id](../../windows/id.md).
+Pokud použijete metodu `dispinterface`, je nutné přiřadit `dispid`. Chcete-li tuto chybu opravit, přiřaďte `dispid` k metodě `dispinterface`, například zrušením komentáře atributu `id` u metody v ukázce níže. Další informace naleznete v tématu věnovaném [a](../../windows/dispinterface.md) [identifikátoru](../../windows/id.md)atributů.
 
 Následující ukázka generuje C3707:
 
-```
+```cpp
 // C3707.cpp
 #include <atlbase.h>
 #include <atlcom.h>

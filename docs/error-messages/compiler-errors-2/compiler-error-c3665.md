@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3665
 ms.assetid: 893bb47e-8de1-43aa-af7d-fa47ad149ee9
-ms.openlocfilehash: 40de7a7b1ede5e6dbbc20d2128b782c0ad6f798b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b0c019b2425b314f5b3503db41042d917283aa8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221591"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758174"
 ---
 # <a name="compiler-error-c3665"></a>Chyba kompilátoru C3665
 
-"destruktoru": "– klíčové slovo' není u destruktoru nebo finalizační metody povolený specifikátor override
+' destruktor ': specifikátor override ' klíčové slovo ' není u destruktoru nebo finalizační metody povolen
 
-Klíčové slovo se použil, který není povolený u destruktoru nebo finalizační metodu.
+Použilo se klíčové slovo, které není u destruktoru nebo finalizační metody povolené.
 
-Například nový slot nelze požadovat u destruktoru nebo finalizační metodu.  Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md) a [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Například novou patici nelze požadovat u destruktoru nebo finalizační metody.  Další informace naleznete v tématu [Explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md) a [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Následující ukázka generuje C3665:
 
-```
+```cpp
 // C3665.cpp
 // compile with: /clr
 public ref struct R {

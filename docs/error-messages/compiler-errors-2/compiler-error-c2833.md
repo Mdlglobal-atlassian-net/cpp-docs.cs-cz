@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2833
 ms.assetid: b9418ce1-e2ee-4599-8959-6fde89c27569
-ms.openlocfilehash: dad6a64f145c3d49d3b43044ea76a11d35827943
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1467a3c67cccf28cc6b9bd0f987fe77b8da8988
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408365"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757875"
 ---
 # <a name="compiler-error-c2833"></a>Chyba kompilátoru C2833
 
-'operator operátor' není rozpoznaná jako operátor nebo typ.
+operátor Operator není rozpoznaným operátorem nebo typem.
 
-Slovo `operator` musí být následován znakem, který chcete přepsat operátor nebo typ, který chcete převést.
+Po `operator` slova musí následovat operátor, který chcete přepsat, nebo typ, který chcete převést.
 
-Seznam operátorů, které definujete v spravovaného typu, najdete v části [uživatelsky definované operátory](../../dotnet/user-defined-operators-cpp-cli.md).
+Seznam operátorů, které lze definovat ve spravovaném typu, naleznete v tématu [operátory definované uživatelem](../../dotnet/user-defined-operators-cpp-cli.md).
 
 Následující ukázka generuje C2833:
 
-```
+```cpp
 // C2833.cpp
 // compile with: /c
 class A {};

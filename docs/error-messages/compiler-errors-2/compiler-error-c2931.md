@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2931
 ms.assetid: 33430407-b149-4ba3-baf8-b0dae1ea3a5d
-ms.openlocfilehash: 8fffa6e272da64ca7baa35af635b2b0a7d40c6f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03c5c1865343afdc0fd7a67ce393c7e1a5d2966f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385742"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757693"
 ---
 # <a name="compiler-error-c2931"></a>Chyba kompilátoru C2931
 
-'class': typ třídy id se předefinovalo jako členskou funkci 'identifier'
+' class ': typ-class-ID se předefinovalo jako členská funkce ' identifier '
 
-Rozvrhy generic nebo šablony třídy nelze použít jako členskou funkci jiné třídy.
+Nelze použít obecnou třídu nebo třídu šablony jako členskou funkci jiné třídy.
 
-Tato chyba může nastat, pokud jsou nesprávně odpovídající složené závorky.
+Tato chyba může být způsobena nesprávným spárováním složených závorek.
 
 Následující ukázka generuje C2931:
 
-```
+```cpp
 // C2931.cpp
 // compile with: /c
 template<class T>
@@ -38,9 +38,9 @@ struct MyStruct2 {
 };
 ```
 
-C2931 může dojít také při použití obecných typů:
+C2931 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2931b.cpp
 // compile with: /clr /c
 generic<class T> ref struct GC {};

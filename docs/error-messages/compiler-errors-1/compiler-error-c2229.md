@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
-ms.openlocfilehash: 998067e9af178c1898c3443c4e84da965c22fa81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d974c4f0630a592daad956448bf21cea21efb7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301731"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759266"
 ---
 # <a name="compiler-error-c2229"></a>Chyba kompilátoru C2229
 
-Typ 'identifier' má neplatné pole nulové velikosti
+typ Identifier má neplatné pole s nulovou velikostí.
 
-Člen struktury nebo bitové pole obsahuje pole s nulovou velikostí, který není poslední člen.
+Člen struktury nebo bitového pole obsahuje pole s nulovou velikostí, které není posledním členem.
 
-Protože nemáte nulovou velikostí pole jako poslední člen struktury je nutné zadat velikost při přidělování struktury.
+Vzhledem k tomu, že je možné mít pole s nulovou velikostí jako poslední člen struktury, je nutné zadat jeho velikost při přidělování struktury.
 
-Pokud nulové velikosti pole není poslední člen struktury, kompilátor nemůže vypočítat posunutí pro zbývající pole.
+Pokud pole s nulovou velikostí není posledním členem struktury, kompilátor nemůže vypočítat posunutí zbývajících polí.
 
 Následující ukázka generuje C2229:
 
-```
+```cpp
 // C2229.cpp
 struct S {
    int a[0];  // C2229  zero-sized array

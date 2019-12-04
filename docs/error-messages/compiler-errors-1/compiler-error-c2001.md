@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 03b54fe2373063c8c0f9905da93822928392998d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bf9bd322812764b2f63493d4b22b58d853a25fa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209020"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756835"
 ---
 # <a name="compiler-error-c2001"></a>Chyba kompilátoru C2001
 
-Obsahuje znak nového řádku – konstanta
+nový řádek v konstantě
 
-Řetězcová konstanta nemůže pokračovat na druhý řádek, pokud nastavíte takto:
+Řetězcová konstanta nemůže pokračovat na druhém řádku, Pokud neprovedete následující akce:
 
-- Konec řádku první zpětným lomítkem.
+- Ukončí první řádek zpětným lomítkem.
 
-- Zavřete řetězec na prvním řádku s dvojité uvozovky a otevřete řetězec na dalším řádku s jinou dvojité uvozovky.
+- Zavřete řetězec na prvním řádku pomocí dvojité uvozovky a otevřete řetězec na dalším řádku s jiným znakem dvojité uvozovky.
 
-Končí první řádek s \n není dostatečná.
+Ukončení prvního řádku s \n není dostatečné.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2001:
 
-```
+```cpp
 // C2001.cpp
 // C2001 expected
 #include <stdio.h>
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-Mezery na začátku dalšího řádku za znakem pokračování řádku jsou součástí řetězcová konstanta. Žádná z příkladů uvedených výše vložit znak nového řádku do řetězcová konstanta. Můžete vložit znak nového řádku, jak je znázorněno zde:
+Mezery na začátku dalšího řádku po znaku pro pokračování řádku jsou obsaženy v řetězcové konstantě. Žádný z výše uvedených příkladů do řetězcové konstanty nevloží znak nového řádku. Můžete vložit znak nového řádku, jak je znázorněno zde:
 
-```
+```cpp
 // C2001b.cpp
 #include <stdio.h>
 
