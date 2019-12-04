@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: d2ba8d919ab71b566950cc227588e071d24016bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381101"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738411"
 ---
 # <a name="compiler-error-c3489"></a>Chyba kompilátoru C3489
 
-'příkaz var' se vyžaduje, pokud výchozí režim sběru je podle hodnoty
+klíčové slovo var je povinné, pokud je výchozí režim sběru podle hodnoty.
 
-Pokud určíte, že je výchozí režim sběru pro výraz lambda podle hodnoty, nemůžete předat proměnnou podle hodnoty klauzuli capture výrazu Tento výraz.
+Pokud určíte, že výchozí režim sběru pro lambda výraz je podle hodnoty, nelze předat proměnnou hodnotou do klauzule zachycení daného výrazu.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Proměnné explicitně nepředávejte klauzuli zachycení, nebo
+- Nedávejte explicitně proměnnou do klauzule Capture nebo
 
-- Nezadávejte podle hodnoty jako výchozí režim sběru dat, nebo
+- Nezadávejte hodnotu podle hodnoty jako výchozí režim sběru dat.
 
-- Zadejte jako výchozí režim sběru dat podle odkazu nebo
+- Zadejte odkaz podle odkazu jako výchozí režim sběru dat.
 
-- Předejte proměnnou s odkazem na klauzule zachycení. (To může změnit chování část výrazu lambda.)
+- Předat proměnnou odkazem na klauzuli zachycení. (To může změnit chování výrazu lambda.)
 
 ## <a name="example"></a>Příklad
 
-Následující příklad generuje C3489 proměnnou `n` se zobrazí hodnota v klauzuli capture výrazu lambda výraz, jehož výchozí režim je podle hodnoty:
+Následující příklad generuje proměnnou C3489 `n` se zobrazuje podle hodnoty v klauzuli Capture výrazu lambda, jehož výchozí režim je podle hodnoty:
 
-```
+```cpp
 // C3489a.cpp
 
 int main()
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje na C3489 čtyři možná řešení:
+Následující příklad ukazuje čtyři možná řešení na C3489:
 
-```
+```cpp
 // C3489b.cpp
 
 int main()

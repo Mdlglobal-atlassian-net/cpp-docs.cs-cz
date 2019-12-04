@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
-ms.openlocfilehash: dbb65628aa6e0da94a91a59724ca8e1cd5b56491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f9dea77b739aa59474e60cf852fff2577ab6ba9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187349"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753624"
 ---
 # <a name="compiler-error-c3510"></a>Chyba kompilátoru C3510
 
-Nelze najít závislý typ knihovny 'type_lib.
+Nejde najít závislou knihovnu typů type_lib.
 
-[no_registry s: %](../../preprocessor/no-registry.md) a [auto_search –](../../preprocessor/auto-search.md) bylo předáno `#import` , ale kompilátor nebyl schopen najít odkazovanou knihovnu typů.
+[no_registry](../../preprocessor/no-registry.md) a [auto_search](../../preprocessor/auto-search.md) byly předány do `#import` ale kompilátor nedokázal najít odkazovanou knihovnu typů.
 
-Chcete-li vyřešit tuto chybu, ujistěte se, že všechny knihovny typů a odkazované knihovny typů jsou k dispozici pro kompilátor.
+Chcete-li tuto chybu vyřešit, zajistěte, aby byl pro kompilátor k dispozici všechny knihovny typů a odkazované knihovny typů.
 
 Následující ukázka generuje C3510:
 
-Předpokládají, že byly vytvořeny následující knihovny dvou typů a že C3510a.tlb byl odstraněn nebo není v cestě.
+Předpokládejme, že byly sestaveny následující dvě knihovny typů a zda se C3510a. tlb odstranila nebo ne na cestě.
 
 ```
 // C3510a.idl
@@ -38,7 +38,7 @@ library C3510aLib
 };
 ```
 
-A pak zdrojový kód pro druhý knihovny typů:
+A pak zdrojový kód druhé knihovny typů:
 
 ```
 // C3510b.idl
@@ -54,9 +54,9 @@ library C3510bLib
 };
 ```
 
-A pak kód klienta:
+A pak klientský kód:
 
-```
+```cpp
 // C3510.cpp
 #import "c3510b.tlb" no_registry auto_search   // C3510
 int main() {
