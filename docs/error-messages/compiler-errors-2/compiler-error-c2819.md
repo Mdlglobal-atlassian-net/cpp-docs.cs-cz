@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2819
 ms.assetid: fcc7762d-cb82-4bb1-a715-0d82da832edf
-ms.openlocfilehash: 17b863d24d43f0dc7afb0fc4776953dcb41929e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a3768cb23c65eb3e2d818f81ff7c6a561c8d7ec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174936"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750647"
 ---
 # <a name="compiler-error-c2819"></a>Chyba kompilátoru C2819
 
-Typ 'type' nemá přetíženého členu 'operator ->.
+typ Type nemá operátor-> přetíženého členu.
 
-Je třeba definovat `operator->()` použití této operace ukazatele.
+Je nutné definovat `operator->()` pro použití této operace ukazatele.
 
 Následující ukázka generuje C2819:
 
-```
+```cpp
 // C2819.cpp
 // compile with: /c
 class A {
@@ -49,9 +49,9 @@ void F(D j) {
 }
 ```
 
-C2819 může dojít také při použití [C++ – sémantika zásobníku pro odkazové typy](../../dotnet/cpp-stack-semantics-for-reference-types.md). Následující ukázka generuje C2819:
+K C2819 může také dojít při použití [ C++ sémantiky zásobníku pro odkazové typy](../../dotnet/cpp-stack-semantics-for-reference-types.md). Následující ukázka generuje C2819:
 
-```
+```cpp
 // C2819_b.cpp
 // compile with: /clr
 ref struct R {

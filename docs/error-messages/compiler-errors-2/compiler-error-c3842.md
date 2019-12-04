@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3842
 ms.assetid: 41a1a44a-c618-40a2-8d26-7da27d14095d
-ms.openlocfilehash: a61a69aca53f7f8996d0261a57b749930ecc01cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 881165a1100d1c8791ecd5f50eda6a2e9f1650eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385508"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754911"
 ---
 # <a name="compiler-error-c3842"></a>Chyba kompilátoru C3842
 
-'function': 'const' a 'volatile: kvalifikátory pro členské funkce WinRT nebo spravované typy nejsou podporovány.
+' function ': kvalifikátory const a volatile pro členské funkce WinRT nebo Managed Types nejsou podporovány.
 
-[Const](../../cpp/const-cpp.md) a [volatile](../../cpp/volatile-cpp.md) členských funkcí třídy Windows Runtime nebo spravované typy se nepodporují.
+[const](../../cpp/const-cpp.md) a [volatile](../../cpp/volatile-cpp.md) nejsou podporovány pro členské funkce prostředí Windows Runtime nebo spravovaných typů.
 
 Následující ukázka generuje C3842:
 
-```
+```cpp
 // C3842a.cpp
 // compile with: /clr /c
 public ref struct A {

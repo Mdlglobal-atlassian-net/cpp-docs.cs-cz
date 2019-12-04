@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 901e9b791616c5684b352c1fda7687f67b895d9c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 62cf208d9d0025afba06d32a15b9a1e50777c473
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447370"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750998"
 ---
 # <a name="compiler-error-c2027"></a>Chyba kompilátoru C2027
 
-použití nedefinovaného typu 'type'
+použití nedefinovaného typu typu
 
-Typ nelze použít, dokud je definována. Chcete-li vyřešit chybu, ujistěte se, že typ je plně definována před odkazování.
+Typ nelze použít, dokud není definován. Chcete-li chybu vyřešit, ujistěte se, že je typ zcela definován před odkazem na něj.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2027.
 
-```
+```cpp
 // C2027.cpp
 class C;
 class D {
@@ -43,11 +43,11 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Je možné deklarovat ukazatel na typ deklarovaný, ale nedefinovaná. Ale C++ odkaz na Nedefinovaný typ není povolena.
+Je možné deklarovat ukazatel na deklarovaný, ale Nedefinovaný typ. Ale C++ nepovoluje odkaz na Nedefinovaný typ.
 
 Následující ukázka generuje C2027.
 
-```
+```cpp
 // C2027_b.cpp
 class A;
 A& CreateA();

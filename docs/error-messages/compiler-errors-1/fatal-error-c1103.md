@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C1103
 ms.assetid: 9d276939-9c47-4235-9d20-76b8434f9731
-ms.openlocfilehash: b6253af9fcf400321fb58d4d8a6d7aacf461b926
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f037d1acb281b5997e3486a542784abc4b4b7542
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174195"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747381"
 ---
 # <a name="fatal-error-c1103"></a>Závažná chyba C1103
 
-Závažná chyba při importu progid: "zpráva"
+Závažná chyba při importu ProgID: ' Message '
 
-Kompilátor zjistil problém při importu knihovny typů.  Například nelze zadat knihovnu typů s progid a také určit `no_registry`.
+Kompilátor zjistil problém s importem knihovny typů.  Například nelze zadat knihovnu typů s identifikátorem ProgID a zároveň zadat `no_registry`.
 
-Další informace najdete v tématu [#import Directive](../../preprocessor/hash-import-directive-cpp.md).
+Další informace najdete v tématu [direktiva #import](../../preprocessor/hash-import-directive-cpp.md).
 
-Následující ukázka vygeneruje C1103:
+V následujícím příkladu se vygeneruje C1103:
 
-```
+```cpp
 // C1103.cpp
 #import "progid:a.b.id.1.5" no_registry auto_search   // C1103
 ```

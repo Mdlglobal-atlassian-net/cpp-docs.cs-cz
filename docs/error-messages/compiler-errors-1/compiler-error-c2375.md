@@ -1,27 +1,27 @@
 ---
-title: C2375 chyby kompilátoru
+title: Chyba kompilátoru C2375
 ms.date: 11/04/2016
 f1_keywords:
 - C2375
 helpviewer_keywords:
 - C2375
 ms.assetid: 193c5e8b-1b20-4928-8a02-8c1cddaf2a26
-ms.openlocfilehash: 162f1b13ea76a92db6fbef08124a1e46bc4e18a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 926af13420ce80caf84876a12995946377366fd0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187679"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745522"
 ---
-# <a name="compiler-error-c2375"></a>C2375 chyby kompilátoru
+# <a name="compiler-error-c2375"></a>Chyba kompilátoru C2375
 
-'function': předefinování; rozdílné propojení
+' function ': předefinování; různé vazby
 
-Funkce je už deklarovaná se specifikátorem rozdílné propojení.
+Funkce je již deklarována s jiným specifikátorem propojení.
 
 Následující ukázka generuje C2375:
 
-```
+```cpp
 // C2375.cpp
 // compile with: /Za /c
 extern void func( void );

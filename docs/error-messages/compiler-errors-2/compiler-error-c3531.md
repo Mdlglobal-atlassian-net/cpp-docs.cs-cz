@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 6961d99d1a0d7d0ea063aee5544a1009af2547c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7da9da2daedc79db619f82848dc864d1cb7bd1f1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397403"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750088"
 ---
 # <a name="compiler-error-c3531"></a>Chyba kompilátoru C3531
 
-'symbol': symbol, jehož typ obsahuje nastavení auto' musí mít inicializátor
+' symbol ': symbol, jehož typ obsahuje ' auto ', musí mít inicializátor
 
-Zadaná proměnná nemá inicializační výraz.
+Zadaná proměnná neobsahuje výraz inicializátoru.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Zadejte inicializační výraz, jako je například jednoduché přiřazení, která používá syntaxe znaménka rovnosti, když deklarujete proměnnou.
+1. Zadejte výraz inicializátoru, jako je například jednoduché přiřazení, které používá syntaxi se znaménkem rovnost při deklaraci proměnné.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad provede C3531, protože proměnné `x1`, `y1, y2, y3`, a `z2` nejsou inicializovány.
+Následující příklad vrací C3531, protože proměnné `x1`, `y1, y2, y3`a `z2` nejsou inicializovány.
 
-```
+```cpp
 // C3531.cpp
 // Compile with /Zc:auto
 int main()

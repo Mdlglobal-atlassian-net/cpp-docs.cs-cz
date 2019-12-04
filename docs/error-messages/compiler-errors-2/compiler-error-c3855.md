@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
-ms.openlocfilehash: 12ee1c6aa5f414a9cf3084831c956514593102c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226f87ad428e9f005e36823834cedc2b3ee0b8c6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265461"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754820"
 ---
 # <a name="compiler-error-c3855"></a>Chyba kompilátoru C3855
 
-'class': parametr typu 'param' není kompatibilní s deklarací
+' class ': parametr typu ' para ' je nekompatibilní s deklarací
 
-Kompilátor najít šablony bez typu nebo obecné parametry s různými názvy. Tato situace může nastat, pokud zadaná šablona parametr v definici specializace šablony je nekompatibilní s deklarací.
+Kompilátor nalezl Netypový šablonu nebo obecné parametry s různými názvy. K této chybě může dojít, pokud zadaný parametr šablony v definici specializace šablony není kompatibilní s jeho deklarací.
 
 Následující ukázka generuje C3855:
 
-```
+```cpp
 // C3855.cpp
 template <int N>
 struct C {
@@ -32,9 +32,9 @@ template <char N>
 void C<N>::f() {}   // C3855
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C3855b.cpp
 // compile with: /c
 template <int N>
@@ -46,9 +46,9 @@ template <int N>
 void C<N>::f() {}
 ```
 
-C3855 může dojít také při použití obecných typů:
+C3855 může také nastat při použití generických typů:
 
-```
+```cpp
 // C3855c.cpp
 // compile with: /clr
 generic <class T>
@@ -63,9 +63,9 @@ generic <class V>
 ref struct GC1<T>::GC2 { };   // C3855
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C3855d.cpp
 // compile with: /clr /c
 generic <class T>

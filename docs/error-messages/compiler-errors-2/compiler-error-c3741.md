@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3741
 ms.assetid: ed311315-cc32-49c9-97fa-01b293d81526
-ms.openlocfilehash: d207c87c7b3f75ac939c155da127720562973160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2be5c0a4f85448f41f865bdde79d56998fbcf16a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376006"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752597"
 ---
 # <a name="compiler-error-c3741"></a>Chyba kompilátoru C3741
 
-'class': musí se jednat o coclass při "má" parametr třídy event_receiver = true
+Class: musí být typu coclass, pokud je parametr layout_dependent event_receiver = true.
 
-Když `layout_dependent=true` pro [event_receiver](../../windows/event-receiver.md) třídy a třídy musí mít také [coclass](../../windows/coclass.md) atribut.
+Při `layout_dependent=true` pro třídu [event_receiver](../../windows/event-receiver.md) musí mít třída také atribut [Coclass](../../windows/coclass.md) .
 
 Následující ukázka generuje C3741
 
-```
+```cpp
 // C3741.cpp
 // compile with: /c
 // C3741 expected

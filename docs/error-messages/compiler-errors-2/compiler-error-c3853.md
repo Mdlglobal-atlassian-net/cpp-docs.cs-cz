@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
-ms.openlocfilehash: c2282196d045ffd88696149f7d22d4ed7f9603ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef6a57b7528a07756a5a9034482bf99ed3f8cc87
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265474"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754859"
 ---
 # <a name="compiler-error-c3853"></a>Chyba kompilátoru C3853
 
-'=': opakování inicializace odkazu nebo přiřazení přes reference-to-function je neplatné.
+=: opětovná inicializace odkazu nebo přiřazení prostřednictvím typu reference-to-Function je neplatná.
 
-Nejde přiřadit k odkazu pomocí funkce, protože funkce není lvalue.
+Nelze přiřadit k odkazu prostřednictvím funkce, protože funkce nejsou hodnoty lvalue.
 
-Následující ukázky generovat C3853:
+Následující ukázky generují C3853:
 
-```
+```cpp
 // C3853.cpp
 // compile with: /EHsc
 #include <iostream>

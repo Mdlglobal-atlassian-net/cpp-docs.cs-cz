@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2104
+title: Chyba kompilátoru C2104
 ms.date: 11/04/2016
 f1_keywords:
 - C2104
 helpviewer_keywords:
 - C2104
 ms.assetid: 2ea78896-72a6-4901-a1fa-f33ea88ad61b
-ms.openlocfilehash: 086952b9f2b2b84851565bd2b4dafefa15808079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2945f35379f29f2a163e654aae1f682a0914e40e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338659"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752220"
 ---
-# <a name="compiler-error-c2104"></a>Compiler Error C2104
+# <a name="compiler-error-c2104"></a>Chyba kompilátoru C2104
 
-' &' na bitové pole se ignoruje.
+bitové pole ' & ' se ignoruje.
 
-Nejde převzít adresu bitového pole.
+Adresu bitového pole nelze adresovat.
 
 Následující ukázka generuje C2104:
 
-```
+```cpp
 // C2104.cpp
 struct X {
    int sb : 1;

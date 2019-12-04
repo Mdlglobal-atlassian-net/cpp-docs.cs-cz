@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25023277258d33ab77bde18f6cdfabc862f50a63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384228"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741739"
 ---
 # <a name="compiler-error-c3821"></a>Chyba kompilátoru C3821
 
-'function': spravovaný typ nebo funkci nelze použít v nespravované funkce
+' function ': spravovaný typ nebo funkci nelze použít v nespravované funkci
 
-Funkcí s vloženým sestavením nebo [setjmp](../../c-runtime-library/reference/setjmp.md) nemůže obsahovat typy hodnot nebo spravované třídy. Chcete-li tuto chybu vyřešit, odeberte sestavení inline assemblerem a `setjmp` nebo odebrání spravovaných objektů.
+Funkce s vloženým sestavením nebo [setjmp](../../c-runtime-library/reference/setjmp.md) nemůže obsahovat typy hodnot ani spravované třídy. Chcete-li tuto chybu opravit, odeberte vložené sestavení a `setjmp` nebo odeberte spravované objekty.
 
-C3821 může dojít, pokud se pokusíte použít automatického úložiště v funkce vararg.  Další informace najdete v tématu [seznamy argumentů proměnných (...) (C++Vyhodnocovací) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) a [ C++ sémantika zásobníku pro odkazové typy](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+K C3821 může také dojít, pokud se pokusíte použít automatické úložiště ve funkci vararg.  Další informace naleznete v tématu [proměnné seznamy argumentů (...) (C++/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) a [ C++ sémantika zásobníku pro odkazové typy](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3821.
 
-```
+```cpp
 // C3821a.cpp
 // compile with: /clr /c
 public ref struct R {};
@@ -38,7 +38,7 @@ void test1(...) {
 
 Následující ukázka generuje C3821.
 
-```
+```cpp
 // C3821b.cpp
 // compile with: /clr
 // processor: /x86

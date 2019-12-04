@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2990
+title: Chyba kompilátoru C2990
 ms.date: 11/04/2016
 f1_keywords:
 - C2990
 helpviewer_keywords:
 - C2990
 ms.assetid: 674e9f6a-6743-4af0-a7ed-cbe11103a2f8
-ms.openlocfilehash: 16c111a0fb8608615abaee495680fa38920b6c77
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 1c58c2d5da0049ec670e11c930b397caec3cbbee
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447341"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751518"
 ---
-# <a name="compiler-error-c2990"></a>Compiler Error C2990
+# <a name="compiler-error-c2990"></a>Chyba kompilátoru C2990
 
-'class': typ bez třídy, které jsou už byl deklarován jako typ třídy.
+' class ': typ netříděný jako již byl deklarován jako typ třídy
 
-Bez obecného nebo třída šablony předefinuje rozvrhy generic nebo šablony třídy. Zkontrolujte soubory hlaviček pro je v konfliktu.
+Třída, která není obecná nebo Template, předefinuje obecnou třídu nebo třídu šablony. Ověřte konflikty souborů hlaviček.
 
 Následující ukázka generuje C2990:
 
-```
+```cpp
 // C2990.cpp
 // compile with: /c
 template <class T>
@@ -29,9 +29,9 @@ class C{};
 class C{};   // C2990
 ```
 
-C2990 může dojít také při použití obecných typů:
+C2990 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2990b.cpp
 // compile with: /clr /c
 generic <class T>
@@ -40,11 +40,11 @@ ref struct GC;
 ref struct GC {};   // C2990
 ```
 
-C2990 může také dojít z důvodu rozbíjející změny v Microsoftu C++ kompilátor pro Visual Studio 2005; Kompilátor nyní vyžaduje, aby více deklarací stejného typu identické s ohledem na specifikaci šablony.
+K C2990 může také dojít z důvodu zásadní změny kompilátoru Microsoft C++ pro Visual Studio 2005; Kompilátor nyní vyžaduje, aby více deklarací pro stejný typ bylo stejné jako v souladu se specifikací šablony.
 
 Následující ukázka generuje C2990:
 
-```
+```cpp
 // C2990c.cpp
 // compile with: /c
 template<class T>

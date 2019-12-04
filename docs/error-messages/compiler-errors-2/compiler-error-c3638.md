@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3638
 ms.assetid: 8d8bc5ca-75aa-480e-b6b6-3178fab51b1d
-ms.openlocfilehash: 33bb248faf946c39543de4a14a44e2ebbda49880
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d67ac0ff6a1fa5d9efbb8d85747ff94d75c648
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385885"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742493"
 ---
 # <a name="compiler-error-c3638"></a>Chyba kompilátoru C3638
 
-'operator': nelze předefinovat standardní zabalení a rozbalení operátory převodu
+' operator ': operátory převodu standardního zabalení a rozbalení nelze předefinovat
 
-Kompilátor definuje operátor převodu pro každé spravované třídy pro podporu implicitního zabalení. Tento operátor se nedá předefinovat.
+Kompilátor definuje operátor převodu pro každou spravovanou třídu pro podporu implicitního zabalení. Tento operátor nelze předefinovat.
 
-Další informace najdete v tématu [implicitního zabalení](../../extensions/boxing-cpp-component-extensions.md).
+Další informace naleznete v tématu [implicitní zabalení](../../extensions/boxing-cpp-component-extensions.md).
 
 Následující ukázka generuje C3638:
 
-```
+```cpp
 // C3638.cpp
 // compile with: /clr
 value struct V {

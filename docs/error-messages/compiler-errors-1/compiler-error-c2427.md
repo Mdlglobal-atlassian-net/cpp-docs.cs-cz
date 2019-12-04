@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2427
+title: Chyba kompilátoru C2427
 ms.date: 11/04/2016
 f1_keywords:
 - C2427
 helpviewer_keywords:
 - C2427
 ms.assetid: a7d421af-6180-40b4-b7a6-9f3bc7dfaaf9
-ms.openlocfilehash: b794b90a476f7712c80e7617ec3c0696afb290ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d92f3bce54a4558702d2a6d3870323eb0edd5d4d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402824"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744612"
 ---
-# <a name="compiler-error-c2427"></a>Compiler Error C2427
+# <a name="compiler-error-c2427"></a>Chyba kompilátoru C2427
 
-'class': v tomto oboru nejde definovat třídu
+Class: v tomto oboru nejde definovat třídu.
 
-Byl proveden pokus o vnořené třídy, ale je vnořená třída člena základní třídy, nikoli nejvíce obsahující třídu.
+Došlo k pokusu o definování vnořené třídy, ale vnořená třída je členem základní třídy, nikoli nejvíce nadřazené třídy.
 
 Následující ukázka generuje C2427:
 
-```
+```cpp
 // C2427.cpp
 // compile with: /c
 template <class T>

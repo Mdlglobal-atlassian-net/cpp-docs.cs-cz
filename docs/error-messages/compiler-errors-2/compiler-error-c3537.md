@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: 50a06180dabfa192292fae7ba1962b6b7455bb89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3e954987b84ea128342b38307769903df4b346
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375922"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740478"
 ---
 # <a name="compiler-error-c3537"></a>Chyba kompilátoru C3537
 
-'type': nelze přetypovat na typ, který obsahuje nastavení auto.
+Typ: nejde přetypovat na typ, který obsahuje auto.
 
-Nelze převést proměnnou pro zadaný typ, protože obsahuje typ `auto` – klíčové slovo a ve výchozím nastavení [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) – možnost kompilátoru je v platnosti.
+Proměnnou nelze přetypovat na zadaný typ, protože typ obsahuje klíčové slovo `auto` a výchozí hodnota parametru [/Zc: auto](../../build/reference/zc-auto-deduce-variable-type.md) je platná.
 
 ## <a name="example"></a>Příklad
 
-Následující kód provede C3537, protože proměnné jsou přetypovat na typ, který obsahuje `auto` – klíčové slovo.
+Následující kód poskytuje C3537, protože proměnné jsou přetypování na typ, který obsahuje klíčové slovo `auto`.
 
-```
+```cpp
 // C3537.cpp
 // Compile with /Zc:auto
 int main()

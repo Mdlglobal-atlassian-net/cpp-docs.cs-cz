@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2391
 ms.assetid: 63a9c6b9-03cc-4517-885c-bdcd048643b3
-ms.openlocfilehash: 7683ad1580454bd7edb1fc08e5bd110a3e5c36c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd47ffbd9481f69f3799a94a17a53ccdffb2a84
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393620"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745015"
 ---
 # <a name="compiler-error-c2391"></a>Chyba kompilátoru C2391
 
-'identifier': 'typu friend' nelze použít při definici typu
+' identifier ': ' Friend ' nemůže být použit během definice typu
 
-`friend` Deklarace obsahuje deklaraci úplné třídy. A `friend` deklarace můžete určit členskou funkci nebo specifikátor rozpracovaného typu, ale nikoli deklarace třídy dokončení.
+Deklarace `friend` obsahuje úplnou deklaraci třídy. Deklarace `friend` může určovat členskou funkci nebo vysvětlující specifikátor typu, ale ne úplnou deklaraci třídy.
 
 Následující ukázka generuje C2326:
 
-```
+```cpp
 // C2391.cpp
 // compile with: /c
 class D {

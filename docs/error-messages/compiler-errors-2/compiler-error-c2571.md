@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2571
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
-ms.openlocfilehash: d7d4898e5f0b55c50a4c18cef053cc150394d7e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bd87f0732e1a632b8c86cc57fab1a0f104b2c77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408574"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755496"
 ---
 # <a name="compiler-error-c2571"></a>Chyba kompilátoru C2571
 
-'function': virtuální funkce nemůže být sjednocení "sjednocení.
+' function ': virtuální funkce nemůže být Union ' Union '
 
-Sjednocení je deklarován s virtuální funkcí. Je možné deklarovat pouze ve třídě nebo struktuře virtuální funkce.  Možná řešení:
+Sjednocení je deklarované s virtuální funkcí. Virtuální funkci lze deklarovat pouze ve třídě nebo struktuře.  Možná řešení:
 
 1. Změňte sjednocení na třídu nebo strukturu.
 
-1. Ujistěte se, funkce nevirtuální.
+1. Nastavte funkci jako nevirtuální.
 
 Následující ukázka generuje C2571:
 
-```
+```cpp
 // C2571.cpp
 // compile with: /c
 union A {

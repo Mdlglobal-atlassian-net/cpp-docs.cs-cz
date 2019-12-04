@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3484
 ms.assetid: 2fe847fa-f6ee-4978-bc1d-b6dc6ae906ac
-ms.openlocfilehash: c4405eb81911b1081d19d25ba779d24bee8f6d37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9895a3e5a8ae7e941fccde2da85fedfb3d2c6dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381264"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743117"
 ---
 # <a name="compiler-error-c3484"></a>Chyba kompilátoru C3484
 
-očekávalo: ->"před návratový typ
+před návratovým typem se očekávala hodnota->.
 
-Je nutné zadat `->` před návratový typ výrazu lambda.
+Je nutné zadat `->` před návratovým typem výrazu lambda.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
@@ -27,7 +27,7 @@ Je nutné zadat `->` před návratový typ výrazu lambda.
 
 Následující příklad generuje C3484:
 
-```
+```cpp
 // C3484a.cpp
 
 int main()
@@ -38,9 +38,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu řeší tím, že poskytuje C3484 `->` před návratový typ výrazu lambda:
+Následující příklad řeší C3484 poskytnutím `->` před návratovým typem výrazu lambda:
 
-```
+```cpp
 // C3484b.cpp
 
 int main()

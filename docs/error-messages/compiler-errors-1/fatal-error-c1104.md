@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C1104
 ms.assetid: 45bd85c4-77d3-4d3c-b167-49c563aefb4d
-ms.openlocfilehash: c10d1a89d854aaeac47a9a70f1e1e319d1662935
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a26e65e98b44a69eb14daf6d835fafb23362dfa2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174234"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747329"
 ---
 # <a name="fatal-error-c1104"></a>Závažná chyba C1104
 
-Závažná chyba při importu libid: "zpráva"
+Závažná chyba při importu LIBID: ' Message '
 
-Kompilátor zjistil problém při importu knihovny typů.  Například nelze zadat knihovnu typů s libid a také určit `no_registry`.
+Kompilátor zjistil problém s importem knihovny typů.  Například nemůžete zadat knihovnu typů pomocí LIBID a také zadat `no_registry`.
 
-Další informace najdete v tématu [#import Directive](../../preprocessor/hash-import-directive-cpp.md).
+Další informace najdete v tématu [direktiva #import](../../preprocessor/hash-import-directive-cpp.md).
 
-Následující ukázka vygeneruje C1104:
+V následujícím příkladu se vygeneruje C1104:
 
-```
+```cpp
 // C1104.cpp
 #import "libid:11111111.1111.1111.1111.111111111111" version("4.0") lcid("9") no_registry auto_search   // C1104
 ```

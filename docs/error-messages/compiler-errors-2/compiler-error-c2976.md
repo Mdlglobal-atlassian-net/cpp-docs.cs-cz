@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2976
 ms.assetid: d9bf9836-325e-4f72-a7e3-a67cf19d32e7
-ms.openlocfilehash: 02771d7419c58ee4f0b6d7db46ba91fde253d9a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76fd2363b6139bc1bc04aa4d4949a12522e31aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395362"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751791"
 ---
 # <a name="compiler-error-c2976"></a>Chyba kompilátoru C2976
 
-'identifier': moc malý počet argumentů typu
+identifikátor: moc malý počet argumentů typu.
 
-Obecný nebo v šabloně chybí jeden nebo více skutečných argumentů. Zkontrolujte deklaraci rozvrhy generic nebo šablony najít správný počet parametrů.
+V obecných nebo šablonách chybí jeden nebo více skutečných argumentů. Pokud chcete najít správný počet parametrů, Projděte si deklaraci Generic nebo Template.
 
-Tuto chybu může způsobovat chybějící argumenty šablony součástí standardní knihovny C++.
+Tato chyba může být způsobena chybějícími argumenty šablony C++ ve standardních komponentách knihovny.
 
 Následující ukázka generuje C2976:
 
-```
+```cpp
 // C2976.cpp
 template <class T>
 struct TC {
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-C2976 může dojít také při použití obecných typů:
+C2976 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2976b.cpp
 // compile with: /clr
 generic <class T>

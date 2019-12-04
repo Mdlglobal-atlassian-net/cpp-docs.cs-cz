@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C2034
 ms.assetid: 953d70fa-bde9-4ce6-a55d-741e7bc63ff4
-ms.openlocfilehash: 4b4fe769f78e5f826ba08d4819019210f21f860f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c416c833edf522e4e67cf84aaf7fc945ee8a7972
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400471"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755106"
 ---
 # <a name="compiler-error-c2034"></a>Chyba kompilátoru C2034
 
-'identifier': typ bitového pole je příliš malý počet bitů
+' identifier ': typ bitového pole je pro počet bitů příliš malý
 
 Počet bitů v deklaraci bitového pole překračuje velikost základního typu.
 
 Následující ukázka generuje C2034:
 
-```
+```cpp
 // C2034.cpp
 struct A {
    char test : 9;   // C2034, char has 8 bits
 };
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C2034b.cpp
 // compile with: /c
 struct A {

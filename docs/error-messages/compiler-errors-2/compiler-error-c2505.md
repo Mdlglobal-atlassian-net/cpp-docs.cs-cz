@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2505
 ms.assetid: b19f5c53-399d-425e-90db-fe3ca9b40858
-ms.openlocfilehash: bf5ffb9b6bad3db1d264941a6aefa391be521c98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a6f180c93839646d771509145b2f65a00780fd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165033"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746861"
 ---
 # <a name="compiler-error-c2505"></a>Chyba kompilátoru C2505
 
-'symbol': "__declspec(modifer)" dá používat jedině pro deklarace nebo definice globálních objektů nebo statických datových členů
+symbol: __declspec (Modifer) se dá použít jedině pro deklarace nebo definice globálních objektů nebo statických datových členů.
 
-A `__declspec` modifikátor, který je navržený pro použití pouze v globálním oboru byla použita ve funkci.
+Ve funkci byl použit modifikátor `__declspec`, který je navržen pouze pro použití v globálním oboru.
 
-Další informace najdete v tématu [appdomain](../../cpp/appdomain.md) a [procesu](../../cpp/process.md).
+Další informace naleznete v tématu [AppDomain](../../cpp/appdomain.md) a [Process](../../cpp/process.md).
 
 Následující ukázka generuje C2505:
 
-```
+```cpp
 // C2505.cpp
 // compile with: /clr
 

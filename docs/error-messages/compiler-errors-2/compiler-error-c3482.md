@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3482
 ms.assetid: bf99558e-bef4-421c-bb16-dcd9c54c1011
-ms.openlocfilehash: 6ff269d719dd354932ef79946ae99a9b60490199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d775551d0f4955dc4eda9b0d418ea31e065714f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173220"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743130"
 ---
 # <a name="compiler-error-c3482"></a>Chyba kompilátoru C3482
 
-"this" jde použít jenom jako zachycení lambdy v rámci funkce nestatického člena
+klíčové slovo this se dá použít jedině jako zachycení lambdy v rámci nestatické členské funkce.
 
-Nelze předat `this` na seznamu zachycení výrazu lambda, který je deklarován v statickou metodu nebo globálními funkcemi.
+Nelze předat `this` do seznamu zachycení výrazu lambda, který je deklarován ve statické metodě nebo globální funkci.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Převést na nestatické metody nadřazené funkce nebo
+- Převeďte uzavírací funkci na nestatickou metodu nebo
 
-- Odeberte `this` ukazatele v seznamu zachycení výrazu lambda.
+- Odeberte ukazatel `this` ze seznamu zachycení výrazu lambda.
 
 ## <a name="example"></a>Příklad
 
 Následující příklad generuje C3482:
 
-```
+```cpp
 // C3482.cpp
 // compile with: /c
 

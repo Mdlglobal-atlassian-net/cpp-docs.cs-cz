@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2433
 ms.assetid: 7079fedd-6059-4125-82ef-ebe275f1f9d1
-ms.openlocfilehash: 8a98fcf7570605694569b7ae466ae0a3c7cf14bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9edb30e574e212bd30fd60dd3ce5aaddc650dc11
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166734"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744430"
 ---
 # <a name="compiler-error-c2433"></a>Chyba kompilátoru C2433
 
-'identifier': není povolené pro deklarace dat. modifikátor
+identifikátor: modifikátor není povolený pro deklarace dat.
 
-`friend`, `virtual`, A `inline` Modifikátory nelze použít pro deklarace na data.
+Modifikátory `friend`, `virtual`a `inline` nelze použít pro deklarace dat.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2433.
 
-```
+```cpp
 // C2433.cpp
 class C{};
 

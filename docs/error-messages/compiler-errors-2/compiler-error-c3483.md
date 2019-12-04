@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3483
 ms.assetid: 18b3a2c5-dfc9-4661-9653-08a5798474cf
-ms.openlocfilehash: acbe89b5183d0991fb8d4a571a9595d6f6bafc6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d6c1467575e7fae7d5e4862f36e733a68210f8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381346"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743091"
 ---
 # <a name="compiler-error-c3483"></a>Chyba kompilátoru C3483
 
-'příkaz var' je již součástí seznamu zachycení lambdy
+klíčové slovo var už je součástí seznamu zachycení lambdy.
 
-Jste předali stejné proměnné do seznamu zachycení výrazu lambda více než jednou.
+Stejnou proměnnou jste předali do seznamu zachycení výrazu lambda více než jednou.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Odeberte všechny další instance proměnné ze seznamu zachycení.
+- Odebere všechny další instance proměnné ze seznamu zachycení.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad generuje C3483, protože proměnná `n` se zobrazí v seznamu zachycení výrazu lambda více než jednou:
+Následující příklad vygeneruje C3483, protože proměnná `n` se v seznamu zachycení výrazu lambda vyskytuje více než jednou.
 
-```
+```cpp
 // C3483.cpp
 
 int main()

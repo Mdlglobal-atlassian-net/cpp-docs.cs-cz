@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
-ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022bc1a37f7d9cfdb2c206592dd303a9c3c95080
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376026"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749110"
 ---
 # <a name="compiler-error-c3899"></a>Chyba kompilátoru C3899
 
-'příkaz var': použití l-value datového členu initonly není povolené přímo v rámci paralelní oblastí v třídě 'class'
+var: použití l-value datového členu initonly není povolené přímo v rámci paralelní oblasti třídy Class.
 
-[Initonly (C++vyhodnocovací)](../../dotnet/initonly-cpp-cli.md) uvnitř konstruktor, který je v této části se nedá inicializovat datový člen [paralelní](../../parallel/openmp/reference/parallel.md) oblasti.  Je to proto kompilátor udělá interní přemístění tento kód tak, že už efektivně nejsou součástí konstruktoru.
+Datový člen [initonlyC++(/CLI)](../../dotnet/initonly-cpp-cli.md) nejde inicializovat uvnitř této části konstruktoru, který je v [paralelní](../../parallel/openmp/reference/parallel.md) oblasti.  Důvodem je, že kompilátor provede interní přemístění tohoto kódu, což znamená, že již není součástí konstruktoru.
 
-Pokud chcete vyřešit, inicializujte datového členu initonly v konstruktoru, ale mimo paralelní oblasti.
+Chcete-li vyřešit, inicializujte datový člen initonly v konstruktoru, ale mimo paralelní oblast.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3899.
 
-```
+```cpp
 // C3899.cpp
 // compile with: /clr /openmp
 #include <omp.h>

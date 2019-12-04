@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3731
 ms.assetid: 45f89fcd-464c-4bc8-8a42-edcb5416d26c
-ms.openlocfilehash: 5acc33869648f83cd44bc557128c685f521ddf88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9acf80eec0d36db64fa070d691533e7085754ac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328065"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752948"
 ---
 # <a name="compiler-error-c3731"></a>Chyba kompilátoru C3731
 
-nekompatibilní událost "function1" a obslužnou rutinu 'function2'; Zdroj události a obslužné rutiny události musí být stejného typu
+nekompatibilní událost ' Function1 ' a obslužná rutina ' function2 '; zdroj události a obslužná rutina události musí být stejného typu.
 
-Zdroje událostí a příjemci událostí musí být stejného typu (například `native` vs. `com` typy). Chcete-li tuto chybu opravit, ujistěte se, typy zdroje událostí a shoda obslužné rutiny události.
+Zdroj události a přijímač událostí musí mít stejný typ (například `native` vs. `com` typy). Chcete-li tuto chybu opravit, zajistěte, aby byly typy zdroje událostí a obslužné rutiny události shodné.
 
 Následující ukázka generuje C3731:
 
-```
+```cpp
 // C3731.cpp
 // compile with: /clr
 #using <mscorlib.dll>

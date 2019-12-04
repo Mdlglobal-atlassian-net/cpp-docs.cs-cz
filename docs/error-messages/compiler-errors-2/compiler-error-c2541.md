@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2541
+title: Chyba kompilátoru C2541
 ms.date: 11/04/2016
 f1_keywords:
 - C2541
 helpviewer_keywords:
 - C2541
 ms.assetid: ed95180f-00df-4e62-a8e9-1b6dab8281bf
-ms.openlocfilehash: d8b2366bc2899b7a2ac76b0fae133351cd88a541
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de24503d256b8c7649ce87969b1b2f6a4709ac8f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386951"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740842"
 ---
-# <a name="compiler-error-c2541"></a>Compiler Error C2541
+# <a name="compiler-error-c2541"></a>Chyba kompilátoru C2541
 
-"odstranit": odstranění: nelze odstranit objekty, které nejsou ukazatele
+Delete: odstranit: nejde odstranit objekty, které nejsou ukazatele.
 
-[Odstranit](../../cpp/delete-operator-cpp.md) operátor byla použita na objekt, který není ukazatel.
+Operátor [Delete](../../cpp/delete-operator-cpp.md) byl použit u objektu, který není ukazatel.
 
 Následující ukázka generuje C2541:
 
-```
+```cpp
 // C2541.cpp
 int main() {
    int i;

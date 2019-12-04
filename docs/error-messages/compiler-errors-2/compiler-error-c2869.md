@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2869
 ms.assetid: 6e30c001-47f3-4101-b9f1-cc542c9fffae
-ms.openlocfilehash: 38ac73484814e0089b412938ffc2776872deff3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c543a0a4afc0d24205e5afd57cf6ca0732f3edf4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165551"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755041"
 ---
 # <a name="compiler-error-c2869"></a>Chyba kompilátoru C2869
 
-"name": již byl definován jako obor názvů
+Name: už je definované jako obor názvů.
 
-Název se už používá jako obor názvů nemůže znovu použít.
+Nemůžete znovu použít název, který už se používá jako obor názvů.
 
 Následující ukázka generuje C2869:
 
-```
+```cpp
 // C2869.cpp
 // compile with: /c
 namespace A { int i; };

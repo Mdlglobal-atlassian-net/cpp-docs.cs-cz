@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2464
 ms.assetid: ace953d6-b414-49ee-bfef-90578a8da00c
-ms.openlocfilehash: a00ac997f73175eeab08a0132128e48e8fc58feb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4952f4702d871ecf1c818b1fc7394e54a1a295f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338893"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743884"
 ---
 # <a name="compiler-error-c2464"></a>Chyba kompilátoru C2464
 
-'identifier': nelze použít "nové" k přidělení odkazu
+' identifier ': nelze použít ' New ' k přidělení odkazu
 
-Identifikátor odkazu byl přidělený `new` operátor. Odkazy nejsou objekty paměti, takže `new` nelze vrací ukazatel na ně. Pomocí syntaxe standardní deklarace proměnné můžete deklarovat odkaz.
+Identifikátor odkazu byl přidělen pomocí operátoru `new`. Odkazy nejsou objekty paměti, takže `new` nemůže vrátit ukazatel na ně. Použijte syntaxi deklarace standardní proměnné k deklaraci odkazu.
 
 Následující ukázka generuje C2464:
 
-```
+```cpp
 // C2464.cpp
 int main() {
    new ( int& ir );   // C2464

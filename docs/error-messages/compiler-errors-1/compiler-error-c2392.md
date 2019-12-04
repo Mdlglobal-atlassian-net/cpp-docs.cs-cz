@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-ms.openlocfilehash: 5977d9bf41d55ef6db8409e0187153fdbf91149e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15fa4a19cdd791ddb3636f30a636cc084bdc4a5f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393594"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745002"
 ---
 # <a name="compiler-error-c2392"></a>Chyba kompilátoru C2392
 
-'– metoda1': kovariant se vrací typy nejsou podporované v spravovanou nebo WinRTtypes, jinak "method2' by být přepsána.
+' – metoda1 ': typy kovariant Returns nejsou podporovány ve spravovaných ani WinRTtypes, jinak by se Method2 přepsal.
 
-Kovariantní návratové typy nejsou povolené u členských funkcí Windows Runtime nebo při kompilaci s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) možnost.
+Kovariantní návratové typy nejsou povoleny pro prostředí Windows Runtime členské funkce ani při kompilaci s možností [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2392 a ukazuje, jak ho opravit.
+Následující ukázka generuje C2392 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C2392.cpp
 // compile with: /clr
 public ref struct B {

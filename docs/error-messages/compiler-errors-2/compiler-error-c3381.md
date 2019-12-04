@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3381
 ms.assetid: d276c89f-8377-4cb6-a8d4-7770885f06c4
-ms.openlocfilehash: ae416d68831d1964c89d938dfcddd364e521195c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eadc9b45b4cd4f2d9b533f387dadd66be8acc963
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328861"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749565"
 ---
 # <a name="compiler-error-c3381"></a>Chyba kompilátoru C3381
 
-'assembly': sestavení specifikátory přístupu jsou dostupné pouze v kódu zkompilovaném s parametrem/CLR.
+Assembly: specifikátory přístupu k sestavení jsou dostupné jenom v kódu kompilovaném s možností/CLR.
 
-Nativní typy mohou být viditelný mimo sestavení, ale můžete nastavit jenom přístup k sestavení pro nativní typy v **/CLR** kompilace.
+Nativní typy mohou být viditelné mimo sestavení, ale lze zadat pouze přístup k sestavení pro nativní typy v kompilaci **/CLR** .
 
-Další informace najdete v tématu [zadejte viditelnost](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) a [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Další informace naleznete v tématu [viditelnost typů](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) a [/CLR (kompilace společného jazykového modulu runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3381.
 
-```
+```cpp
 // C3381.cpp
 // compile with: /c
 public class A {};   // C3381

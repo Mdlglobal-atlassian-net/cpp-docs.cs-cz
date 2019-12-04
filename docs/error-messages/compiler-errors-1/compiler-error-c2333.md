@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2333
 ms.assetid: 2636fc1e-d3e7-4e68-8628-3c81a99ba813
-ms.openlocfilehash: e9119a8375a276a59cbf3a6db9541f6ccaef5122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cca7f0d3bd75cca8fdd621fb425dec42e6560f4e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300817"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747745"
 ---
 # <a name="compiler-error-c2333"></a>Chyba kompilátoru C2333
 
-'function': Chyba v deklaraci funkce; tělo funkce se přeskočí
+' function ': Chyba v deklaraci funkce; vynechává se tělo funkce.
 
-K této chybě dochází po další chyba pro členské funkce definované uvnitř své třídy.
+K této chybě dochází po jiné chybě pro členské funkce definované uvnitř své třídy.
 
 Následující ukázka generuje C2333:
 
-```
+```cpp
 // C2333.cpp
 struct s1 {
    s1(s1) {}   // C2333

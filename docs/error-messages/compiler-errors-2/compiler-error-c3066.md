@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3066
 ms.assetid: 226f6de5-c4c5-41e2-b31a-2e30a37fbbeb
-ms.openlocfilehash: 126175b44bf0e6f4a58bc0e675cfd0cac1acc1ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80468f4e35ffd9d09706b8bb8fc2fdc6eb8e679e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182610"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738853"
 ---
 # <a name="compiler-error-c3066"></a>Chyba kompilátoru C3066
 
-existuje více způsobů, že objekt tohoto typu lze volat s těmito argumenty
+objekt tohoto typu lze s těmito argumenty volat několika způsoby.
 
-Kompilátor zjistil volání rozhraní nejednoznačnou funkci týkajících se zástupnými typy.
+Kompilátor zjistil nejednoznačné volání funkce zahrnující náhrady.
 
 Následující ukázka generuje C3066:
 
-```
+```cpp
 // C3066.cpp
 template <class T, class U> void func(T*, U*){}
 
@@ -53,9 +53,9 @@ int main() {
 }
 ```
 
-## <a name="copy-list-initialization"></a>Inicializace kopírování seznamu
+## <a name="copy-list-initialization"></a>Kopírovat seznam – inicializace
 
-V sadě Visual Studio 2015 kompilátor nesprávně zpracovávají Inicializace kopírování seznamu v stejným způsobem jako regulární Inicializace kopírování; za to, převod pouze konstruktory pro řešení přetížení. V následujícím příkladu vybere Visual Studio 2015 MyInt(23), ale Visual Studio 2017 správně vyvolá chybu.
+V sadě Visual Studio 2015 kompilátor chybně zpracoval inicializaci kopírováním seznamu, stejně jako při normální inicializaci kopírování; považuje se za převádění pouze konstruktorů pro řešení přetížení. V následujícím příkladu Visual Studio 2015 zvolí MyInt (23), ale Visual Studio 2017 správně vyvolá chybu.
 
 ```
 // From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C1071
 ms.assetid: 489f1786-370e-4ecd-af67-538fe6e5bd4e
-ms.openlocfilehash: 8fe6b0f3bb1253f72c97f29070ba81cdbdf80508
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f39359d55b5564c6379c84f07e942cf3484e011
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166656"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747407"
 ---
 # <a name="fatal-error-c1071"></a>Závažná chyba C1071
 
-Neočekávaný konec souboru v komentáři se našel
+v komentáři se našel neočekávaný konec souboru.
 
-Kompilátor bylo dosaženo konce souboru při hledání komentář.
+Kompilátor dosáhl konce souboru při skenování komentáře.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Chybí ukončovací znak komentář (* /).
+1. Chybí ukončovací znak komentáře (*/).
 
-1. Chybí znak nového řádku za komentář na posledním řádku zdrojového souboru.
+1. Po komentáři na posledním řádku zdrojového souboru chybí znak nového řádku.
 
 Následující ukázka generuje C1071:
 
-```
+```cpp
 // C1071.cpp
 int main() {
 }

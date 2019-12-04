@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2939
 ms.assetid: 455b050b-f2dc-4b5b-bd6a-e1f81d3d1644
-ms.openlocfilehash: 59b2f63ba12a644f13b3586fbf6eec4d5bfa8be5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97aa24eccb5cec7d74f7f7660260fa8b5f6d8d7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302654"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754612"
 ---
 # <a name="compiler-error-c2939"></a>Chyba kompilátoru C2939
 
-'class': typ třídy id se předefinovalo jako místní datová proměnná
+' class ': typ-class-ID se předefinovalo jako lokální datová proměnná
 
-Rozvrhy generic nebo šablony třídy nelze použít jako proměnná místní data.
+Jako místní datovou proměnnou nelze použít obecnou třídu nebo třídu šablony.
 
-Tato chyba může nastat, pokud jsou nesprávně odpovídající složené závorky.
+Tato chyba může být způsobena nesprávným spárováním složených závorek.
 
 Následující ukázka generuje C2939:
 
-```
+```cpp
 // C2939.cpp
 template<class T>
 struct TC { };
@@ -33,9 +33,9 @@ int main() {
 }
 ```
 
-C2939 může dojít také při použití obecných typů:
+C2939 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2939b.cpp
 // compile with: /clr
 generic<class T>

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2506
 ms.assetid: cfed21cd-2404-46f2-985e-d0c2c3820830
-ms.openlocfilehash: 02f0a81204c4bc1c41111d32bae1c6946dee09ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 593fbbc6b561e6390624aa79af14dc665a552990
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164862"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746835"
 ---
 # <a name="compiler-error-c2506"></a>Chyba kompilátoru C2506
 
-'member': '__declspec(modifier)' nelze použít pro tento symbol
+' member ': ' __declspec (modifikátor) ' nelze použít na tento symbol
 
-Na úrovni jednotlivého procesu nebo na úrovni appdomain nelze deklarovat pro statické členy třídy spravované třídy.
+Pro statické členy spravované třídy nelze deklarovat jednotlivé procesy nebo pro jednu doménu AppDomain.
 
-Zobrazit [appdomain](../../cpp/appdomain.md) Další informace.
+Další informace naleznete v tématu [AppDomain](../../cpp/appdomain.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2506.
 
-```
+```cpp
 // C2506.cpp
 // compile with: /clr /c
 ref struct R {

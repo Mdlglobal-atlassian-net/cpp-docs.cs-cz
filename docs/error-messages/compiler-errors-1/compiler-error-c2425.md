@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2425
+title: Chyba kompilátoru C2425
 ms.date: 11/04/2016
 f1_keywords:
 - C2425
 helpviewer_keywords:
 - C2425
 ms.assetid: 0ce59404-9aff-4e01-aa8d-27d23e92eb30
-ms.openlocfilehash: fcbcf06df3330320bf014c132abc543e2e2e8087
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b723ecdc3544865aa4adb63c4fb21db62f4b726
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402837"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744651"
 ---
-# <a name="compiler-error-c2425"></a>Compiler Error C2425
+# <a name="compiler-error-c2425"></a>Chyba kompilátoru C2425
 
-"token": nekonstantní výraz v "context"
+token: nekonstantní výraz v kontextu
 
-Token, který je součástí nekonstantní výraz v tomto kontextu.
+V tomto kontextu tvoří část tokenu součást nekonstantního výrazu.
 
-Chcete-li vyřešit tento problém, nahraďte token konstantní literál nebo výpočtu.
+Chcete-li tento problém vyřešit, nahraďte token konstantním literálem nebo pomocí výpočtu.
 
 Následující ukázka generuje C2425:
 
-```
+```cpp
 // C2425.cpp
 // processor: x86
 int main() {

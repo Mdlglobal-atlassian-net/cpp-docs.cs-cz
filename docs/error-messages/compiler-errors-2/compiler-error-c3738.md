@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
-ms.openlocfilehash: e313c7d66bc030183e330dd961fad2fb35f02ac2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffefa0eff23e11412573b8062fa15bb5679923e7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327805"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752766"
 ---
 # <a name="compiler-error-c3738"></a>Chyba kompilátoru C3738
 
-'calling_convention': konvence volání explicitního vytváření instancí se musí shodovat s instance šablony
+calling_convention: konvence volání explicitního vytváření instancí se musí shodovat s konvencí šablony, pro kterou se vytváří instance.
 
-Je doporučeno, nezadávejte u explicitní instanciace konvence volání. Pokud je to nutné, ale konvence volání se musí shodovat.
+Doporučuje se, abyste nezadali konvenci volání pro explicitní vytváření instancí. Pokud je nutné, ale konvence volání se musí shodovat.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3738.
 
-```
+```cpp
 // C3738.cpp
 // compile with: /clr
 // processor: x86

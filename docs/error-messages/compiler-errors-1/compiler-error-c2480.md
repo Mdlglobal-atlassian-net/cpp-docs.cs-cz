@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2480
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
-ms.openlocfilehash: 90016b65d4ddd58da3fb3c5ab6d81322dc0ef394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e495a8019405a558511637467133877dae1183e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187595"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743520"
 ---
 # <a name="compiler-error-c2480"></a>Chyba kompilátoru C2480
 
-'identifier': "vlákna" je platná pouze pro položky dat statického kontextu
+' identifier ': ' Thread ' je platný pouze pro položky dat statického rozsahu
 
-Nelze použít `thread` atribut s předplatným automatickou proměnnou, nestatický datový člen, parametr funkce, nebo na deklaracích nebo definicích funkce.
+Atribut `thread` nelze použít s automatickým proměnnou, nestatickým datovým členem, parametrem funkce nebo v deklaracích nebo definicích funkcí.
 
-Použití `thread` atribut pro globální proměnné, statické datové členy a místní pouze statické proměnné.
+Použijte atribut `thread` u globálních proměnných, statických datových členů a místních statických proměnných.
 
 Následující ukázka generuje C2480:
 
-```
+```cpp
 // C2480.cpp
 // compile with: /c
 __declspec( thread ) void func();   // C2480

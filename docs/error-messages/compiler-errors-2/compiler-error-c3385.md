@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3385
 ms.assetid: 5f1838c1-986e-47db-8dbc-e06976b83cf3
-ms.openlocfilehash: 0cf8f75588339420c688db6e808a62a9fb0ac15c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18cdc09a209c072036154cd610684b94addfae49
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328760"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751856"
 ---
 # <a name="compiler-error-c3385"></a>Chyba kompilátoru C3385
 
-'class::function': funkce s atributem DllImport vlastní nemůže vracet instanci třídy
+' class:: function ': funkce, která má vlastní atribut DllImport, nemůže vracet instanci třídy
 
-Funkce definovaná jako v souboru .dll, který je zadaný `DllImport` atribut nemůže vracet instanci třídy.
+Funkce definovaná jako v souboru. dll, který je určen atributem `DllImport`, nemůže vracet instanci třídy.
 
 Následující ukázka generuje C3385:
 
-```
+```cpp
 // C3385.cpp
 // compile with: /clr /c
 using namespace System;

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-ms.openlocfilehash: b03155ad1a209ae59327dd31d432f5623f380ac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5d05e9c7cc702509144fb876a1301bfc8bf3d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265994"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739607"
 ---
 # <a name="compiler-error-c2786"></a>Chyba kompilátoru C2786
 
-'type': Neplatný operand pro: __uuidof
+' type ': neplatný operand pro __uuidof
 
-[__Uuidof](../../cpp/uuidof-operator.md) operátor má uživatelem definovaný typ GUID připojený nebo objekt takový typ definovaný uživatelem.  Možné příčiny:
+Operátor [__uuidof](../../cpp/uuidof-operator.md) přebírá uživatelsky definovaný typ s PŘIPOJENým identifikátorem GUID nebo objektem takového uživatelsky definovaného typu.  Možné příčiny:
 
-1. Argument není uživatelem definovaného typu.
+1. Argument není uživatelem definovaný typ.
 
-1. `__uuidof` nejde extrahovat identifikátor GUID z argumentu.
+1. `__uuidof` nemůže z argumentu extrahovat identifikátor GUID.
 
 Následující ukázka generuje C2786:
 
-```
+```cpp
 // C2786.cpp
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 

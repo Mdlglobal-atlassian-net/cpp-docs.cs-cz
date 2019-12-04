@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3087
 ms.assetid: 4f5bdd52-a853-4f02-b160-6868e9190b9d
-ms.openlocfilehash: 43044e0708ce9c30099c7d25935a8ff9605f45ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9ae71ebfbcfcd5936a2fc3ca666aa51e59bfb5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243255"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751414"
 ---
 # <a name="compiler-error-c3087"></a>Chyba kompilátoru C3087
 
-'named_argument': volání 'attribute' už tento člen inicializuje
+' named_argument ': volání ' Attribute ' již Inicializuje tento člen
 
-Pojmenovaný argument byl zadán ve stejném bloku atribut jako nepojmenovaným argumentem pro stejnou hodnotu. Zadejte pouze pojmenované nebo nepojmenovaný argument.
+Pojmenovaný argument byl zadán ve stejném bloku atributu jako nepojmenovaný argument pro stejnou hodnotu. Zadejte pouze pojmenovaný nebo nepojmenovaný argument.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3087.
 
-```
+```cpp
 // C3087.cpp
 // compile with: /c
 [idl_quote("quote1", text="quote2")];   // C3087

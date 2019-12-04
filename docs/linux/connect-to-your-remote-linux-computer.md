@@ -3,12 +3,12 @@ title: Připojení k cílovému systému Linux v aplikaci Visual Studio
 description: Jak se připojit ke vzdálenému počítači se systémem Linux nebo k subsystému Windows pro Linux z projektu C++ v rámci sady Visual Studio.
 ms.date: 11/09/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6f7116ab5dc6c77f88d0787beac32d1c1e0a4716
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966577"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755275"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Připojení k cílovému systému Linux v aplikaci Visual Studio
 
@@ -82,7 +82,7 @@ Nastavení tohoto vzdáleného připojení:
 
 ## <a name="tcp-port-forwarding"></a>Předávání portů TCP
 
-Podpora pro Linux v systému Visual Studio je závislá na předávání portů TCP. **Rsync** a **gdbserver** budou ovlivněny, pokud je ve vzdáleném systému zakázané předávání portů TCP. 
+Podpora pro Linux v systému Visual Studio je závislá na předávání portů TCP. **Rsync** a **gdbserver** budou ovlivněny, pokud je ve vzdáleném systému zakázané předávání portů TCP. Pokud to ovlivněno touto závislostí, můžete tento [lístek s návrhem](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) poslat na komunitu vývojářů.
 
 rsync se používají v projektech Linux založených na MSBuildu i v projektech CMake ke [kopírování hlaviček ze vzdáleného systému do Windows pro použití v IntelliSense](configure-a-linux-project.md#remote_intellisense). Pokud nemůžete povolit předávání portů TCP, zakažte automatické stahování vzdálených hlaviček. Pokud ho chcete zakázat, použijte **nástroje > možnosti > pro různé platformy > Správce připojení > vzdálené záhlaví IntelliSense správce**. Pokud na vzdáleném systému není zapnuté předávání portů TCP, zobrazí se tato chyba, když se spustí stahování vzdálených hlaviček pro technologii IntelliSense:
 

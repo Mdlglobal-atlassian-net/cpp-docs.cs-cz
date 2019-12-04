@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300736"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742870"
 ---
 # <a name="compiler-error-c2955"></a>Chyba kompilátoru C2955
 
-'identifier': použít šablony třídy nebo alias obecný vyžaduje šablony nebo obecný seznam argumentů.
+' identifier ': použití šablony třídy nebo obecného aliasu vyžaduje šablonu nebo obecný seznam argumentů
 
-Šablony třídy nebo obecné třídy nelze použít jako identifikátor bez šablony nebo obecný seznam argumentů.
+Šablonu třídy nebo třídu Generic nemůžete použít jako identifikátor bez šablony nebo obecného seznamu argumentů.
 
-Další informace najdete v tématu [šablony třídy](../../cpp/class-templates.md).
+Další informace naleznete v tématu [šablony tříd](../../cpp/class-templates.md).
 
-Následující ukázka generuje C2955 a ukazuje, jak ho opravit:
+Následující ukázka generuje C2955 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -33,9 +33,9 @@ X x1;   // C2955
 X<int> x2;   // OK - this is how to fix it.
 ```
 
-C2955 může dojít také při pokusu o definici mimo řádek pro funkce deklarované v šabloně třídy:
+K C2955 může také dojít při pokusu o provedení definice mimo řádek pro funkci deklarovanou v šabloně třídy:
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -52,9 +52,9 @@ template <class T>
 void CT<T>::CTFunc2() {}
 ```
 
-C2955 může dojít také při použití obecných typů:
+C2955 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-**Visual Studio 2017 a novější:** Kompilátor správně diagnostikuje chybějící seznamy argumentů šablony, když se šablona zobrazuje v seznamu parametrů šablony (například jako součást výchozí argument šablony nebo parametr šablony bez typu). Následující kód zkompiluje v sadě Visual Studio 2015, ale dojde k chybě v sadě Visual Studio 2017.
+**Visual Studio 2017 a novější:** Kompilátor správně diagnostikuje chybějící seznamy argumentů šablony, když se šablona objeví v seznamu parametrů šablony (například jako součást výchozího argumentu šablony nebo Netypový parametr šablony). Následující kód je zkompilován v aplikaci Visual Studio 2015, ale vytváří chybu v aplikaci Visual Studio 2017.
 
 ```
 template <class T> class ListNode;

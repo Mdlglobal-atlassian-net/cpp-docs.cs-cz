@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
-ms.openlocfilehash: a5753fc99efcdb1064a21981c62faaba84d44189
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152546fce8f3ee63f8b95595bff052f18cd4ebda
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165583"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746965"
 ---
 # <a name="compiler-error-c2500"></a>Chyba kompilátoru C2500
 
-"identifier1": 'identifier2' je již přímé základní třídy.
+' identifier1 ': ' identifier2 ' už je přímá základní (Base) třída
 
-Třída nebo struktura, zobrazí se více než jednou v seznamu základních tříd.
+Třída nebo struktura se v seznamu základních tříd vyskytuje více než jednou.
 
-Přímou základní je uvedených v seznamu základních. Nepřímý základ je základní třídou jednoho v seznamu základních tříd.
+Přímá základ je jedna uvedená v základním seznamu. Nepřímá základ je základní třídou jedné ze tříd v základním seznamu.
 
-Třídu nelze zadat více než jednou jako přímou základní třídu. Třída může sloužit jako nepřímou základní třídou více než jednou.
+Třídu nelze zadat jako přímou základní třídu více než jednou. Třídu lze použít jako nepřímou základní třídu více než jednou.
 
 Následující ukázka generuje C2500:
 
-```
+```cpp
 // C2500.cpp
 // compile with: /c
 class A {};

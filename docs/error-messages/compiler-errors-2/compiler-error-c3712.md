@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
-ms.openlocfilehash: 0b84f4562dcc0dd5dcc3ecb647316772efab6b38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51772f22f83cff5c602bd2310d7913c0d317ba66
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328403"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753364"
 ---
 # <a name="compiler-error-c3712"></a>Chyba kompilátoru C3712
 
-"metoda": metoda obslužné rutiny události musí vracet stejný typ jako zdroj "metoda"
+' Method ': metoda obslužné rutiny události musí vracet stejný typ jako zdroj ' Method ' '
 
-Definujete metodu obslužné rutiny události, která nevrátila stejného typu jako metodu zdroj události. Chcete-li vyřešit tuto chybu, poskytněte metodu obslužné rutiny události vracet hodnotu stejného typu jako metodu zdroje události.
+Definovali jste metodu obslužné rutiny události, která nevrátila stejný typ jako zdrojová metoda události. Chcete-li tuto chybu opravit, poskytněte metodu obslužné rutiny události stejný návratový typ jako zdrojovou metodu události.
 
 Následující ukázka generuje C3712:
 
-```
+```cpp
 // C3712.cpp
 // compile with: /c
 [event_source(native)]

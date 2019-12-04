@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2450
 ms.assetid: 929f1c06-8774-468b-be2a-f428757875a2
-ms.openlocfilehash: 3cbab274f8f7cd04d5fb86db69572e0b7fc1c04e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d015bd165986467a82f33a2ae0dda08c6f6d248
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208968"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744144"
 ---
 # <a name="compiler-error-c2450"></a>Chyba kompilátoru C2450
 
-výraz přepínače typu 'type' je neplatný.
+výraz přepínače typu Type je neplatný.
 
-`switch` Výraz vyhodnocen jako neplatného typu. Musí být celočíselného typu nebo typ třídy s jednoznačný převod na typ integer. Pokud je vyhodnocen jako typ definovaný uživatelem, je třeba zadat operátoru převodu.
+Výraz `switch` se vyhodnotí jako neplatný typ. Musí se vyhodnotit na celočíselný typ nebo typ třídy s jednoznačným převodem na celočíselný typ. Pokud se vyhodnotí jako uživatelsky definovaný typ, je nutné zadat operátor převodu.
 
 Následující ukázka generuje C2450:
 
-```
+```cpp
 // C2450.cpp
 class X {
 public:

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3902
 ms.assetid: feb3bb29-f836-4d77-ba71-3876f7f4f216
-ms.openlocfilehash: d90bf299c566ce72e3d1cbfeb545def0a43d6cbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd98bc46e28fe54362de442a433736787cd0d07
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375987"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749058"
 ---
 # <a name="compiler-error-c3902"></a>Chyba kompilátoru C3902
 
-'přístupového objektu': typ posledního parametru musí být 'type'
+přistupující objekt: typ posledního parametru musí být Type.
 
-Typ posledního parametru alespoň jednu metodu set musí odpovídat typu vlastnosti. Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md).
+Typ posledního parametru alespoň jedné metody set musí odpovídat typu vlastnosti. Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md).
 
 Následující ukázka generuje C3902:
 
-```
+```cpp
 // C3902.cpp
 // compile with: /clr /c
 using namespace System;

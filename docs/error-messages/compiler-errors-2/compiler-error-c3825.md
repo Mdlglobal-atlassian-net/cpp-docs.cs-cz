@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
-ms.openlocfilehash: ddb665dab303b3133d4018910c2142a20a889bb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98d9dbee8b3d290af0ddd1851380758290a21d4a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390578"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741713"
 ---
 # <a name="compiler-error-c3825"></a>Chyba kompilátoru C3825
 
-'class': spravované nebo WinRTclass lze pouze spravované nebo WinRTevents
+' class ': spravovaná nebo WinRTclass může podporovat pouze spravované nebo WinRTevents
 
-Pouze .NET události jsou podporované ve spravované třídy. V modulu Windows Runtime třídy jsou podporovány pouze události prostředí Windows Runtime. Chcete-li vyřešit tuto chybu ve spravovaném kódu, změňte typ parametru `event_source` a `event_receiver` z `native` k `managed`. Případně odeberte atribut.
+Ve spravovaných třídách jsou podporovány pouze události .NET. V prostředí Windows Runtime třídách jsou podporovány pouze události prostředí Windows Runtime. Chcete-li opravit tuto chybu ve spravovaném kódu, změňte parametr typu `event_source` a `event_receiver` z `native` na `managed`. Případně odeberte atribut.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3825 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3825 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3825a.cpp
 // compile with: /clr
 public delegate void del1();

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: eb1d15a12bfebbf44f7335a848d68c367c285586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6962e5c127a92acc5dfdad580c7bc89fa134751
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300593"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753442"
 ---
 # <a name="compiler-error-c3345"></a>Chyba kompilátoru C3345
 
-'identifier': Neplatný identifikátor pro název modulu
+' identifier ': neplatný identifikátor pro název modulu
 
-*Identifikátor* pro modul obsahuje jeden nebo více znaků nemůže být přijata. Identifikátor je platný, pokud je první znak abecedy, podtržítko nebo vysokou znaků ANSI (0x80 – FF) a libovolný následující znak je alfanumerické znaky, podtržítka nebo vysokou znaků ANSI.
+*Identifikátor* pro modul obsahuje jeden nebo více nepřijatelných znaků. Identifikátor je platný, pokud je první znak abecední, podtržítko nebo high ANSI (0x80-FF) a jakýkoli další znak je alfanumerický znak, podtržítko nebo high ANSI.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Ujistěte se, že *identifikátor* neobsahuje mezery nebo jiných nepřijatelné znaků.
+1. Ujistěte se, že *identifikátor* neobsahuje prázdné znaky ani jiné nepřijmoutelné znaky.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu způsobí chybové zprávy C3345, protože `name` parametr `module` atribut obsahuje prázdnou hodnotu.
+Následující příklad kódu způsobí, že se zobrazí chybová zpráva C3345, protože parametr `name` atributu `module` obsahuje prázdnou hodnotu.
 
-```
+```cpp
 // cpp_attr_name_module.cpp
 // compile with: /LD /link /OPT:NOREF
 #include <atlbase.h>

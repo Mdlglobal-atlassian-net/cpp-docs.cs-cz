@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2381
 ms.assetid: cc765f67-64ac-406f-93ef-ae7d548d58d7
-ms.openlocfilehash: b29f7dac6c6d71e12eb0f003cdfc151dd2c349a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 834b9939a99c694c702bb268b928575b4beb8856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347896"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745392"
 ---
 # <a name="compiler-error-c2381"></a>Chyba kompilátoru C2381
 
-'function': předefinování; __declspec(noreturn) se liší.
+' function ': předefinování; __declspec (vrácení) se liší.
 
-Funkce byla deklarována a potom definované ale definice použitá [noreturn](../../cpp/noreturn.md) `__declspec` modifikátor. Použití `noreturn` nová definice funkce se považuje za; deklarace a definice musí shodnout na použití `noreturn`.
+Funkce byla deklarována a pak definována, ale definice použila modifikátor `__declspec` [return](../../cpp/noreturn.md) . Použití `noreturn` představuje předefinování funkce; deklarace a definice musí souhlasit s používáním `noreturn`.
 
 Následující ukázka generuje C2381:
 
-```
+```cpp
 // C2381.cpp
 // compile with: /c
 void f1();

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-ms.openlocfilehash: 3ead2f18cdc8b76a0bb3da30e7086bdc80b49d43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fca5bfd944514bf2658a8af5cbbd58efe5b39fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328286"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753182"
 ---
 # <a name="compiler-error-c3719"></a>Chyba kompilátoru C3719
 
-'rozhraní': zdroj událostí na základě rozhraní jde použít jenom pro události COM
+Interface: zdroj událostí založený na rozhraní se dá použít jenom pro události COM.
 
-Můžete deklarovat v kontextu jiných COM rozhraní.
+Deklarovali jste rozhraní v kontextu, který není typu COM.
 
 Následující ukázka generuje C3719:
 
-```
+```cpp
 // C3719a.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"
@@ -46,9 +46,9 @@ int main() {
 }
 ```
 
-Chcete-li tuto chybu vyřešit, použijte [objekt](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md), a [event_receiver](../../windows/event-receiver.md) atributy odpovídajícím způsobem, aby třídy, ve kterých jsou pomocí tříd rozhraní modelu COM. Příklad:
+Chcete-li tuto chybu opravit, použijte odpovídající atribut [Object](../../windows/object-cpp.md), [Coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md)a [event_receiver](../../windows/event-receiver.md) , aby byly třídy, ve kterých používáte rozhraní třídy com. Příklad:
 
-```
+```cpp
 // C3719b.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

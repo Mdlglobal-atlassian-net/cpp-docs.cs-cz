@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 4675bf95012c8e6662d7dba281c38ed2d684c448
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1861810f4598fa81d1b7662a57651b1648de1317
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406766"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749045"
 ---
 # <a name="compiler-error-c3904"></a>Chyba kompilátoru C3904
 
-'property_accessor': musíte zadat počet parametrů:
+' property_accessor ': je nutné zadat číselné parametry
 
-Zkontrolujte počet parametrů ve vaší `get` a `set` metody proti vlastnost dimenze.
+Zkontroluje počet parametrů ve vašich `get` a `set` metod proti dimenzím vlastností.
 
-- Počet parametrů pro `get` metoda musí být roven počtu dimenzí vlastnosti nebo nulu pro neindexované vlastnosti.
+- Počet parametrů pro metodu `get` musí být stejný jako počet rozměrů vlastnosti nebo být u neindexovaných vlastností nula.
 
-- Počet parametrů `set` metoda musí být větší než počet rozměrů vlastnost.
+- Počet parametrů metody `set` musí být vyšší než počet rozměrů vlastnosti.
 
 Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md).
 
@@ -29,7 +29,7 @@ Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-co
 
 Následující ukázka generuje C3904.
 
-```
+```cpp
 // C3904.cpp
 // compile with: /clr /c
 ref class X {
@@ -51,7 +51,7 @@ ref class X {
 
 Následující ukázka generuje C3904.
 
-```
+```cpp
 // C3904b.cpp
 // compile with: /clr /c
 ref struct X {

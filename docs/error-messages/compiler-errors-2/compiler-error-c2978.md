@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3996e8e8d40ca24bf54fdf5bbbfde90f3d609c9d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395323"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751548"
 ---
 # <a name="compiler-error-c2978"></a>Chyba kompilátoru C2978
 
-Chyba syntaxe: byl očekáván "keyword1" nebo 'keyword2'; našel se typ 'keyword3'; v obecných typech nejsou podporované netypové parametry
+Chyba syntaxe: očekával se typ ' keyword1 ' nebo ' keyword2 '; byl nalezen typ keyword3; parametry bez typu nejsou v obecných typech podporované.
 
-Obecné třídy byl deklarován nesprávně. Zobrazit [obecných typů](../../extensions/generics-cpp-component-extensions.md)Další informace.
+Obecná třída byla deklarována nesprávně. Další informace najdete v tématu [Obecné](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2978.
 
-```
+```cpp
 // C2978.cpp
 // compile with: /clr /c
 generic <ref class T>   // C2978

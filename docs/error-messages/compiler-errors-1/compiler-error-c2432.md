@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2432
 ms.assetid: 0e3326e8-cab1-45a5-b48d-61edd33793e8
-ms.openlocfilehash: e2983d966a6290ce19713c63feb502c8ffc74bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4234626bc246d6da87be68b03d44562dd5990ff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166838"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744508"
 ---
 # <a name="compiler-error-c2432"></a>Chyba kompilátoru C2432
 
-Neplatný odkaz na 16bitová data v 'identifier'
+Neplatný odkaz na 16bitová data v ' identifier '
 
-Registr 16 bitů se používá jako index nebo základní registrace. Kompilátor nepodporuje odkazování na 16bitová data. 16bitové registrů nelze použít jako index nebo základní registrů při kompilaci pro 32bitového kódu.
+16bitový registr se používá jako index nebo základní registr. Kompilátor nepodporuje odkazování na 16bitová data. 16bitové Registry nelze použít jako index nebo základní Registry při kompilaci pro 32 bitový kód.
 
 Následující ukázka generuje C2432:
 
-```
+```cpp
 // C2432.cpp
 // processor: x86
 int main() {

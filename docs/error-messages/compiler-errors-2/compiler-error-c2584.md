@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-ms.openlocfilehash: b61ad65555b5d5232468206f6170223c5f160a34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c3b10ecd6808ccd864ecf877fe9f1d0e9f30a3a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360466"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748629"
 ---
 # <a name="compiler-error-c2584"></a>Chyba kompilátoru C2584
 
-'Class': Přímá základní "base2 –" je nedostupná; již třídou base 'base1 –.
+' Class ': přímý základ ' base2 – ' je nepřístupný; již základem pro ' Base1 – '
 
-`Class` již je odvozena přímo z `Base1`. `Base2` také se odvozuje od `Base1`. `Class` nelze odvodit z `Base2` vzhledem k tomu, že by to znamenalo dědění (nepřímo) z `Base1` akci, která není platná vzhledem k tomu `Base1` už je přímá základní třída.
+`Class` již jsou odvozeny přímo z `Base1`. `Base2` také odvodit z `Base1`. `Class` nelze odvodit z `Base2`, protože by to znamenalo dědění (nepřímo) z `Base1` znovu, což není platné, protože `Base1` již je přímá základní třída.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2584.
 
-```
+```cpp
 // C2584.cpp
 // compile with: /c
 struct A1 {

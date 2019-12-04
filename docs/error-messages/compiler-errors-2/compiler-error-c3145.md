@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3145
 ms.assetid: f165c874-0f51-45c7-85e8-ebe321cbc168
-ms.openlocfilehash: e425402bcea3e08764a9a89abfbd9316ca254a83
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 10ce7f9e6fac09401892304f2803ea76c226fab5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345529"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746003"
 ---
 # <a name="compiler-error-c3145"></a>Chyba kompilátoru C3145
 
-'object': globální nebo statická proměnná nemusí být spravovaná nebo typ WinRT "typ"
+' Object ': globální nebo statická proměnná nesmí být typu Managed nebo WinRT ' type '
 
-Lze definovat pouze CLR nebo WinRT objektů v rámci oboru funkce.
+V rámci rozsahu funkce lze definovat pouze objekty CLR nebo WinRT.
 
-Následující ukázka generuje C3145 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3145 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3145.cpp
 // compile with: /clr
 using namespace System;
@@ -44,7 +44,7 @@ int main() {
 
 Následující ukázka generuje C3145:
 
-```
+```cpp
 // C3145b.cpp
 // compile with: /clr
 ref class MyClass {

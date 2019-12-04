@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2940
 ms.assetid: af6bf2bf-8de6-4cfd-bbf0-4c6b32a30edf
-ms.openlocfilehash: c5445b7083d11f1439d3e171d35c3ca39411310d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9477a2da32040db67a143a59d940c5f1cbe94904
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301913"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740439"
 ---
 # <a name="compiler-error-c2940"></a>Chyba kompilátoru C2940
 
-'class': typ třídy id se předefinovalo jako místní – typedef
+' class ': typ-class-ID se předefinovalo jako lokální definice typedef
 
-Rozvrhy generic nebo šablony třídy nelze použít jako místní `typedef`.
+Nelze použít obecnou třídu nebo třídu šablony jako místní `typedef`.
 
 Následující ukázka generuje C2940:
 
-```
+```cpp
 // C2940.cpp
 template<class T>
 struct TC {};
@@ -31,9 +31,9 @@ int main() {
 }
 ```
 
-C2940 může dojít také při použití obecných typů:
+C2940 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2940b.cpp
 // compile with: /clr
 generic<class T>

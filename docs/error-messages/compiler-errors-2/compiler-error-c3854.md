@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
-ms.openlocfilehash: 3b48e2c65003537102864fdafe7db70b06ade029
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c62117e9437233f614aa0e57a3848fcb8dd0c79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265526"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754846"
 ---
 # <a name="compiler-error-c3854"></a>Chyba kompilátoru C3854
 
-Výraz vlevo od '=' se vyhodnocuje jako funkce. Nelze přiřadit k funkci (funkce není l hodnota)
+výraz nalevo od operátoru = je vyhodnocen jako funkce. Funkci nelze přiřadit (funkce není l-value).
 
-Odkaz nelze ho inicializovat znovu. Odkaz na funkci přesměrování vrací funkci, která je typu rvalue, ke které nelze přiřadit. Proto nemůžete přiřadit prostřednictvím odkazu na funkci.
+Odkaz se nedá znovu inicializovat. Přesměrování odkazu na funkci vrací funkci, což je rvalue, ke kterému nemůžete přiřadit. Proto nemůžete přiřadit odkaz na funkci.
 
 Následující ukázka generuje C3854:
 
-```
+```cpp
 // C3854.cpp
 int afunc(int i)
 {

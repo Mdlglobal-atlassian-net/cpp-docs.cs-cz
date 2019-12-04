@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8492f108b57fbc63bd171276b1aa601f96a28b24
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381056"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754885"
 ---
 # <a name="compiler-error-c3849"></a>Chyba kompilátoru C3849
 
-volání Function-style na výrazu typu 'type' ztratí kvalifikátory const nebo volatile pro všechna čísla dostupná přetížení operátorů
+volání Function-Style u výrazu typu Type by ztratilo kvalifikátory const nebo volatile pro všechna dostupná přetížení operátoru.
 
-Proměnná s zadaného typu const-volatile pouze lze volat členské funkce definované s kvalifikací const-volatile stejnou nebo větší.
+Proměnná se zadaným typem const-volatile může volat jenom členské funkce definované se stejnou nebo větší kvalifikací const-volatile.
 
-Chcete-li vyřešit tuto chybu, zadejte odpovídající členskou funkci. Nelze provést převod pro deklarovaný jako const nebo volatile kvalifikovaný objektu, když že převod nezpůsobí ztrátu kvalifikace. Můžete získat kvalifikátory, ale můžete dovolit kvalifikátory převodu na.
+Chcete-li tuto chybu opravit, poskytněte příslušnou členskou funkci. Převod na objekt const nebo volatile nelze provést, pokud převod způsobí ztrátu kvalifikace. Můžete získat kvalifikátory, ale nemůžete ztratit kvalifikátory v převodu.
 
-Následující ukázky generovat C3849:
+Následující ukázky generují C3849:
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

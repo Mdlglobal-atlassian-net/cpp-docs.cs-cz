@@ -1,31 +1,31 @@
 ---
-title: Compiler Error C3154
+title: Chyba kompilátoru C3154
 ms.date: 11/04/2016
 f1_keywords:
 - C3154
 helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-ms.openlocfilehash: 9f7af4e19fab5f5a0539e9fc3bf9dbeffb5c6fbf
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e40b0c2a56c36b92465fb3bb3451a48c88b5822e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344646"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745924"
 ---
-# <a name="compiler-error-c3154"></a>Compiler Error C3154
+# <a name="compiler-error-c3154"></a>Chyba kompilátoru C3154
 
-Byl očekáván ',' před třemi tečkami. Čárkou oddělený tlačítko se třemi tečkami není podporováno ve funkcích pole parametrů.
+Před třemi tečkami se očekával znak,. Tři tečky oddělené čárkami nejsou podporovány u funkcí pole parametrů.
 
-Funkce argumentů s proměnnou délkou není deklarovaná správně.
+Funkce argumentu proměnné nebyla správně deklarována.
 
-Další informace najdete v tématu [seznamy argumentů proměnných (...) (C++Vyhodnocovací) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Další informace naleznete v tématu [proměnné seznamy argumentů (...) (C++/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3154.
 
-```
+```cpp
 // C3154.cpp
 // compile with: /clr
 ref struct R {

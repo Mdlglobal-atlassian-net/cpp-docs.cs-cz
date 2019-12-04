@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2936
+title: Chyba kompilátoru C2936
 ms.date: 11/04/2016
 f1_keywords:
 - C2936
 helpviewer_keywords:
 - C2936
 ms.assetid: 5d1ba0fc-0c78-4a37-a83b-1ef8527763be
-ms.openlocfilehash: 547690302661656cc5368f5969432de68ac91e3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d73f45440cf373368b70a11a7779f43587e73aca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302953"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754651"
 ---
-# <a name="compiler-error-c2936"></a>Compiler Error C2936
+# <a name="compiler-error-c2936"></a>Chyba kompilátoru C2936
 
-'class': typ třídy id se předefinovalo jako proměnnou globálních dat
+' class ': typ-class-ID se předefinovalo jako globální datová proměnná
 
-Rozvrhy generic nebo šablony třídy nelze použít jako globální data proměnnou.
+Nemůžete použít obecnou třídu nebo třídu šablony jako globální datovou proměnnou.
 
-Tato chyba může nastat, pokud jsou nesprávně odpovídající složené závorky.
+Tato chyba může být způsobena nesprávným spárováním složených závorek.
 
 Následující ukázka generuje C2936:
 
-```
+```cpp
 // C2936.cpp
 // compile with: /c
 template<class T> struct TC { };
@@ -34,9 +34,9 @@ struct TC2 { };
 int TC2;
 ```
 
-C2936 může dojít také při použití obecných typů:
+C2936 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2936b.cpp
 // compile with: /clr /c
 generic<class T>

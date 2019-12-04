@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
-ms.openlocfilehash: f178f969afa189910c9d23d70226ecc6c15876a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7417c651fde6bef781bb6eb2e081cd3ad8ecc3a0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353533"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741297"
 ---
 # <a name="compiler-error-c2217"></a>Chyba kompilátoru C2217
 
-'atribut1' vyžaduje "atribut2"
+' attribute1 ' vyžaduje ' attribute2 '
 
-První atribut funkce vyžaduje, aby druhý atribut.
+První atribut Function vyžaduje druhý atribut.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Přerušení (`__interrupt`) funkce deklarovaná jako `near`. Přerušení funkce musí být `far`.
+1. Funkce přerušení (`__interrupt`) je deklarována jako `near`. Funkce přerušení musí být `far`.
 
-1. Přerušení funkce deklarovaná pomocí `__stdcall`, nebo `__fastcall`. Přerušení funkce musí C používá konvence volání.
+1. Funkce přerušení deklarovaná pomocí `__stdcall`nebo `__fastcall`. Funkce přerušení musí používat konvence volání jazyka C.
 
 ## <a name="example"></a>Příklad
 
-C2217 může také dojít, pokud při pokusu o připojení k funkci modulu CLR, která přijímá proměnný počet argumentů delegáta. Pokud funkci má také přetížení e param array, místo toho, který použijte. Následující ukázka generuje C2217.
+K C2217 může také dojít, pokud se pokusíte vytvořit vazby delegáta na funkci CLR, která přebírá proměnný počet argumentů. Pokud má funkce také přetížení e-pole, použijte místo toho parametr. Následující ukázka generuje C2217.
 
-```
+```cpp
 // C2217.cpp
 // compile with: /clr
 using namespace System;

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3496
 ms.assetid: e19885f2-677f-4c1e-bc69-e35852262dc3
-ms.openlocfilehash: 025498f3fe244916cd0a06e36feee6fdb532acc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9542f1904c6797a77c88c88a37aff9348364268
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380978"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738177"
 ---
 # <a name="compiler-error-c3496"></a>Chyba kompilátoru C3496
 
-"this" se vždycky zachycuje na základě hodnoty: & Ignorovat
+klíčové slovo this je vždycky zachycené hodnotou: & se ignoruje.
 
-Nelze zachytit `this` ukazatelem, odkazem.
+Ukazatel `this` nelze zachytit podle odkazu.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Zachycení `this` ukazatele podle hodnoty.
+- Zachytit ukazatel `this` podle hodnoty
 
 ## <a name="example"></a>Příklad
 
-Následující příklad generuje C3496, protože odkaz na `this` ukazatel se zobrazí v seznamu zachycení výrazu lambda:
+Následující příklad generuje C3496, protože odkaz na ukazatel `this` se zobrazí v seznamu zachycení výrazu lambda:
 
-```
+```cpp
 // C3496.cpp
 // compile with: /c
 

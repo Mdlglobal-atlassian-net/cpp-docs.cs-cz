@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3908
 ms.assetid: 3c322482-c79e-4197-a578-2ad9bc379d1a
-ms.openlocfilehash: e11d830c3d662ea424caadeb50df669700f8c78f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b57f3346427ff548d11fe776e909eca99433a81
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406546"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749032"
 ---
 # <a name="compiler-error-c3908"></a>Chyba kompilátoru C3908
 
-úroveň přístupu méně omezující než 'konstrukce.
+úroveň přístupu je méně omezující než konstrukce.
 
-Přístupové metody vlastností (get nebo set) nemůže mít méně omezující přístupová oprávnění, než přístup k zadané v samotné vlastnosti.  Stejně tak v případě metody přistupujícího objektu události.
+Metoda přístupového objektu vlastnosti (Get nebo Set) nemůže mít méně omezující přístup, než je zadaný u samotné vlastnosti.  Podobně pro metody přístup k událostem.
 
-Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md) a [události](../../extensions/event-cpp-component-extensions.md).
+Další informace naleznete v tématu [Property](../../extensions/property-cpp-component-extensions.md) a [Event](../../extensions/event-cpp-component-extensions.md).
 
 Následující ukázka generuje C3908:
 
-```
+```cpp
 // C3908.cpp
 // compile with: /clr
 ref class X {

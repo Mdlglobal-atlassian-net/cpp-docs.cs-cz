@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3724
 ms.assetid: cab8aba7-14fc-406f-8cc6-32744c8f31c1
-ms.openlocfilehash: 126317d78785b14f5ef613ec0c83d3e50b825d60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b107137652c4efde43fdfe9c991240767eb5ced7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328156"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752974"
 ---
 # <a name="compiler-error-c3724"></a>Chyba kompilátoru C3724
 
-musíte #include \<windows.h > používat Multithreading s událostmi
+aby bylo možné používat Multithreading s událostmi, musíte #include \<Windows. h >
 
-Je vyžadován soubor windows.h, pokud používáte Multithreading s událostmi. Chcete-li tuto chybu opravit, přidejte `#include <windows.h>` na začátek souboru zdroje událostí a události jsou definovány příjemců.
+Pokud používáte Multithreading s událostmi, je třeba zadat soubor Windows. h. Chcete-li tuto chybu opravit, přidejte `#include <windows.h>` na začátek souboru, ve kterém jsou definovány zdroje událostí a přijímače událostí.
 
-```
+```cpp
 // C3724.cpp
 // uncomment the following line to resolve
 // #include <windows.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
-ms.openlocfilehash: 391b78077ea526ebbaf99552b3220f85928a9096
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f2414a51321bf249e3ac049a7048f41b71cb856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328390"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753403"
 ---
 # <a name="compiler-error-c3711"></a>Chyba kompilátoru C3711
 
-"metoda": metoda zdroj nespravované události musí vracet typ void nebo celočíselný typ.
+' Method ': metoda nespravovaného zdroje událostí musí vracet typ void nebo celočíselný typ.
 
-Metoda podle zdroje událostí, který nevrátil void nebo celočíselný typ. Chcete-li tuto chybu opravit, ujistěte se, události a obslužná rutina události, které mají návratový typ `void` nebo celočíselného typu, jako `int` nebo `long`.
+Ve zdroji událostí jste definovali metodu, která nevrátila typ void nebo celočíselný typ. Chcete-li tuto chybu opravit, zajistěte, aby obslužná rutina události a události měla návratový typ `void` nebo integrálního typu, jako je například `int` nebo `long`.
 
 Následující ukázka generuje C3711:
 
-```
+```cpp
 // C3711.cpp
 #include <atlbase.h>
 #include <atlcom.h>

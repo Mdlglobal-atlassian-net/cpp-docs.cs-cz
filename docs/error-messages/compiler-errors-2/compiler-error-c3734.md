@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3734
 ms.assetid: 4e2afdcc-7da9-45a1-9c96-85f25e2986e8
-ms.openlocfilehash: 78b3d1a57d358eb11ba2f01ec184c5487a578228
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 381bb59dae523c05cdc67e33ba9d326e247abc7d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327922"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752857"
 ---
 # <a name="compiler-error-c3734"></a>Chyba kompilátoru C3734
 
-'class': spravované nebo WinRT třída nemůže být coclass
+' class ': třída spravovaná nebo WinRT nemůže být typu coclass.
 
-[Coclass](../../windows/coclass.md) atributu nelze použít s spravované nebo třídách WinRT.
+Atribut [Coclass](../../windows/coclass.md) se nedá použít se spravovanými třídami nebo třídami WinRT.
 
-Následující ukázka generuje C3734 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3734 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3734.cpp
 // compile with: /clr /c
 [module(name="x")];

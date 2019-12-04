@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-ms.openlocfilehash: a675567e23764a0b361cab4bef4bc75019de3756
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 633089115fe7edd0bdf06cdbcda6909ae7ac656e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365842"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754157"
 ---
 # <a name="compiler-error-c3265"></a>Chyba kompilátoru C3265
 
-nejde deklarovat spravovaný "spravované konstrukce" v nespravované "nespravované konstruktoru.
+nejde deklarovat spravovanou spravovanou konstrukci v nespravovaném nespravovaném konstruktoru.
 
-Není možné zahrnout spravovaný objekt v nespravované kontextu.
+Nelze zahrnout spravovaný objekt do nespravovaného kontextu.
 
 Následující ukázka reprodukuje C3265:
 
-```
+```cpp
 // C3265_2.cpp
 // compile with: /clr /LD
 #include <vcclr.h>

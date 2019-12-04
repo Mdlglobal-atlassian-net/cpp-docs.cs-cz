@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
-ms.openlocfilehash: d2216b3fe990109828492fb2b2055e9425c1e306
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 434ae830e78c8fb5fe4e56438a557afb027d264f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361903"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752441"
 ---
 # <a name="compiler-error-c2009"></a>Chyba kompilátoru C2009
 
-opakované použití formálního – makro 'identifier'
+opakované použití formálního identifikátoru makra
 
-Seznam formálních parametrů v definici makra použije identifikátor více než jednou. Identifikátory v seznamu parametrů makra musí být jedinečné.
+Seznam formálních parametrů definice makra používá identifikátor více než jednou. Identifikátory v seznamu parametrů makra musí být jedinečné.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2009:
 
-```
+```cpp
 // C2009.cpp
 #include <stdio.h>
 
@@ -37,9 +37,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C2009b.cpp
 #include <stdio.h>
 

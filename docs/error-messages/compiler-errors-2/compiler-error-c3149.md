@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
-ms.openlocfilehash: 8238dcec821256dad8101cd7ad59b2d85882c218
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 263eb03b7a9f45458f8d8b586adc6f1cfc5805be
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345510"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745977"
 ---
 # <a name="compiler-error-c3149"></a>Chyba kompilátoru C3149
 
-'type': nelze použít tento typ tady bez nejvyšší úrovně 'char'.
+Typ: Tento typ tady nejde použít bez znaku char na nejvyšší úrovni.
 
-Deklarace nebyl správně zadán.
+Deklarace se nezadala správně.
 
-Například můžete mít definovaný typ CLR v globálním oboru a pokusu o vytvoření proměnné typu jako součást definice. Protože globální proměnné typy CLR nejsou povoleny, bude kompilátor generovat C3149.
+Například jste mohli definovat typ CLR v globálním oboru a pokusili se vytvořit proměnnou typu v rámci definice. Vzhledem k tomu, že globální proměnné typů CLR nejsou povoleny, kompilátor vygeneruje C3149.
 
-Chcete-li vyřešit tuto chybu, deklarujte proměnné typů CLR uvnitř definice funkce nebo typ.
+Chcete-li tuto chybu vyřešit, deklarujte proměnné typů CLR uvnitř funkce nebo definice typu.
 
 Následující ukázka generuje C3149:
 
-```
+```cpp
 // C3149.cpp
 // compile with: /clr
 using namespace System;
@@ -38,7 +38,7 @@ int main() {
 
 Následující ukázka generuje C3149:
 
-```
+```cpp
 // C3149b.cpp
 // compile with: /clr /c
 delegate int MyDelegate(const int, int);

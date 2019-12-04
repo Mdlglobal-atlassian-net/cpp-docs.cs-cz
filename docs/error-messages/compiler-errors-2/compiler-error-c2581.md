@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2581
 ms.assetid: 24a4e4c1-24d3-4e42-b760-7dcaf9740b16
-ms.openlocfilehash: edfab092c82f9dc1d4b9dfe5d21daa2b2ab98d08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03fc7e9da8a9b3a2e2c445f5b06395c2616f0d98
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385859"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755431"
 ---
 # <a name="compiler-error-c2581"></a>Chyba kompilátoru C2581
 
-'type': statické "operátor =" je neplatný – funkce
+Typ: statická funkce operator = je neplatná.
 
-Přiřazení (`=`) operátoru je deklarován nesprávně jako `static`. Operátory přiřazení nemůže být `static`. Další informace najdete v tématu [uživatelem definované operátory (C++vyhodnocovací)](../../dotnet/user-defined-operators-cpp-cli.md).
+Operátor přiřazení (`=`) je nesprávně deklarovaný jako `static`. Operátory přiřazení nelze `static`. Další informace najdete v tématu [operátory definované uživatelem (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2581.
 
-```
+```cpp
 // C2581.cpp
 // compile with: /clr /c
 ref struct Y {

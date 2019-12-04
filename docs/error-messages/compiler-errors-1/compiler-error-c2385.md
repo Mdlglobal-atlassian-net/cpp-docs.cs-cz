@@ -1,33 +1,33 @@
 ---
-title: Compiler Error C2385
+title: Chyba kompilátoru C2385
 ms.date: 11/04/2016
 f1_keywords:
 - C2385
 helpviewer_keywords:
 - C2385
 ms.assetid: 6d3dd1f2-e56d-49d7-865c-6a9acdb17417
-ms.openlocfilehash: bffb4c1088c41832e69b0c6f161b47f6f9f08d06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1247e4da05d65677f602a82591efd3e0c0c374e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393698"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745250"
 ---
-# <a name="compiler-error-c2385"></a>Compiler Error C2385
+# <a name="compiler-error-c2385"></a>Chyba kompilátoru C2385
 
-nejednoznačný přístup 'member'
+dvojznačný přístup k členu
 
-Člen lze odvodit z více než jeden objekt (je zděděno z více než jeden objekt).  Chcete-li vyřešit tuto chybu
+Člen může být odvozen z více než jednoho objektu (je zděděn z více než jednoho objektu).  Chcete-li tuto chybu vyřešit,
 
-- Upravte člena jednoznačný tím, že poskytuje přetypování.
+- Zajistěte, aby byl člen nejednoznačný poskytováním přetypování.
 
-- Přejmenujte nejednoznačný členy základních tříd.
+- Přejmenujte dvojznačné členy v základních třídách.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2385.
 
-```
+```cpp
 // C2385.cpp
 // C2385 expected
 #include <stdio.h>

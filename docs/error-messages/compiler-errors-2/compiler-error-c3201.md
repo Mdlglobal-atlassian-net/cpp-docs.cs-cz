@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3201
 ms.assetid: ec19cd64-1789-40a3-b2db-dff2852b9d98
-ms.openlocfilehash: 92e068103563f7427de7b394536e72b06fab3374
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4da6616c59ea4b8a720c8e2dc9742e37a9939171
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402759"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738762"
 ---
 # <a name="compiler-error-c3201"></a>Chyba kompilátoru C3201
 
-Seznam parametrů šablony pro šablonu tříd 'template' neodpovídá seznamu parametrů šablony pro parametr šablony "template.
+seznam parametrů šablony pro šablonu třídy ' Template ' neodpovídá seznamu parametrů šablony pro parametr šablony ' Template '.
 
-Byl předán šablony třídy v argumentu šablony třídy, který nepřijímá parametr šablony, nebo jste předali neodpovídající počet argumentů šablony pro výchozí argument šablony.
+Předali jste šablonu třídy v argumentu šabloně třídy, která nepřijímá parametr šablony, nebo jste předali neshodující počet argumentů šablony pro výchozí argument šablony.
 
-```
+```cpp
 // C3201.cpp
 template<typename T1, typename T2>
 class X1

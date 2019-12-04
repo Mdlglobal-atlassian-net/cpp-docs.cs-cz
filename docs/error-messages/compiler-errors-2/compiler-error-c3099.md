@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3099
 ms.assetid: b3dded0f-76c9-42c1-991b-532eb8619661
-ms.openlocfilehash: 0f3eac1c232ef159d220a347d6b6dc3aed2fdd9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f508c47c678d86f8f95303861b42f8a70daa57
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324776"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750049"
 ---
 # <a name="compiler-error-c3099"></a>Chyba kompilátoru C3099
 
-! – klíčové slovo': použijte [System::AttributeUsageAttribute] pro spravované atributy; Použijte [Windows::Foundation::Metadata::AttributeUsageAttribute] pro atributy WinRT
+klíčové slovo: pro spravované atributy použijte [System:: AttributeUsageAttribute]; pro atributy WinRT použijte [Windows:: Foundation:: metadata:: AttributeUsageAttribute].
 
-Použití <xref:System.AttributeUsageAttribute> deklarovat **/CLR** atributy. Použití `Windows::Foundation::Metadata::AttributeUsageAttribute` deklarovat atributy modulu Windows Runtime.
+Použijte <xref:System.AttributeUsageAttribute> k deklaraci atributů **/CLR** . Použijte `Windows::Foundation::Metadata::AttributeUsageAttribute` k deklaraci atributů prostředí Windows Runtime.
 
-Další informace o atributech/CLR naleznete v tématu [uživatelem definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md). Podporované atributy v prostředí Windows Runtime naleznete v tématu [Windows.Foundation.Metadata obor názvů](/uwp/api/windows.foundation.metadata)
+Další informace o atributech/CLR naleznete v tématu [uživatelsky definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md). Podporované atributy v prostředí Windows Runtime najdete v tématu [obor názvů Windows. Foundation. Metadata.](/uwp/api/windows.foundation.metadata)
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3099 a ukazuje, jak ho opravit.
+Následující ukázka generuje C3099 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C3099.cpp
 // compile with: /clr /c
 using namespace System;

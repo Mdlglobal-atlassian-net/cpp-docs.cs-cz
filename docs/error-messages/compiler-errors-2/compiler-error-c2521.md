@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2521
 ms.assetid: 6042821b-e345-4a54-a7e9-a2c9019ea016
-ms.openlocfilehash: 27d822a3daf2c20aa57ebd8b45a7a6c7afa3d3cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cabd13b3292995d2baa8c5c66e9bc9ee85118c44
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282271"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746445"
 ---
 # <a name="compiler-error-c2521"></a>Chyba kompilátoru C2521
 
-Funkce nepřijímá žádné argumenty
+funkce nepřijímá žádné argumenty.
 
-Pokusili jste se použít argumenty s destruktor nebo finalizační metodu.
+Pokusili jste se použít argumenty s destruktorem nebo finalizační metodou.
 
-Další informace najdete v tématu [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Další informace naleznete v tématu [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2521.
 
-```
+```cpp
 // C2521.cpp
 // compile with: /clr
 ref class R {

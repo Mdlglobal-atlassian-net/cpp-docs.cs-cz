@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2533
 ms.assetid: 5b335652-076c-4824-87c8-a741f64a3ce0
-ms.openlocfilehash: 00cb13d1999b00dfcaa5a2bc7bfb3b8eb16af5f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b111448e7e9d8260a5101d05996a670013936894
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386977"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746406"
 ---
 # <a name="compiler-error-c2533"></a>Chyba kompilátoru C2533
 
-'identifier': konstruktory není povolený návratový typ.
+' identifier ': konstruktory nepovolují návratový typ
 
-Konstruktor nemůže mít návratový typ (včetně `void` návratový typ).
+Konstruktor nemůže mít návratový typ (ani typ návratového typu `void`).
 
-Běžné příčiny této chyby je chybí středník mezi koncem definice třídy a první implementaci konstruktoru. Kompilátor považuje definici návratový typ funkce konstruktoru třídy a generuje C2533.
+Běžným zdrojem této chyby je středník mezi koncem definice třídy a první implementací konstruktoru. Kompilátor uvidí třídu jako definici návratového typu pro funkci konstruktoru a generuje C2533.
 
-Následující ukázka generuje C2533 a ukazuje, jak ho opravit:
+Následující ukázka vygeneruje C2533 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C2533.cpp
 // compile with: /c
 class X {

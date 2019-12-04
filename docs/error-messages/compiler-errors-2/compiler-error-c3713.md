@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
-ms.openlocfilehash: 8c8c3b5e6016c7f4af471a163463c91d478fea91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d78d1fb3028e8618035c1c6f7bb3eb0f65409dd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328377"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753351"
 ---
 # <a name="compiler-error-c3713"></a>Chyba kompilátoru C3713
 
-"metoda": metoda obslužné rutiny události musí mít stejné parametry funkce jako zdroj "metodu.
+' Method ': metoda obslužné rutiny události musí mít stejné parametry funkce jako zdroj ' Method ' '
 
-Definujete metodu obslužné rutiny události, která nepoužívá stejné parametry jako metodu zdroje události. Chcete-li vyřešit tuto chybu, poskytněte metodu obslužné rutiny události stejné parametry jako metodu zdroje události.
+Definovali jste metodu obslužné rutiny události, která nepoužívala stejné parametry jako zdrojová metoda události. Chcete-li tuto chybu opravit, poskytněte obslužné rutině události stejné parametry jako metody zdrojové události.
 
 Následující ukázka generuje C3713:
 
-```
+```cpp
 // C3713.cpp
 // compile with: /c
 [event_source(native)]

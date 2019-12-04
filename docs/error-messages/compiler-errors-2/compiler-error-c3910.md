@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3910
 ms.assetid: cfcbe620-b463-463b-95ea-2d60ad33ebb5
-ms.openlocfilehash: 186cd67d77e9aafbfe6a7d9dc18afb2bdbd94f0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef63b8f5d1ee4b3f094bed3549eec8157a950e91
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406623"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748876"
 ---
 # <a name="compiler-error-c3910"></a>Chyba kompilátoru C3910
 
-'událost': musí definovat člen metoda
+' Event ': musí definovat člen ' Method '
 
-Událost byla definována, ale neobsahuje zadaný, vyžaduje přístupové metody.
+Byla definována událost, ale neobsahovala zadanou, povinnou metodu přístupového objektu.
 
-Další informace najdete v tématu [události](../../extensions/event-cpp-component-extensions.md).
+Další informace najdete v tématu [událost](../../extensions/event-cpp-component-extensions.md).
 
 Následující ukázka generuje C3910:
 
-```
+```cpp
 // C3910.cpp
 // compile with: /clr /c
 delegate void H();

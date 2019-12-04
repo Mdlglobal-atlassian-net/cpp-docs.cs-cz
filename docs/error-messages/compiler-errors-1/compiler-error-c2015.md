@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2015
 ms.assetid: 8f40af0a-3a5a-4d6a-8ed7-125966e6bfed
-ms.openlocfilehash: d761dfde26cce9c99ccd4c3e6fd86ae1d6e16ddc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b78336d74037b9f9f52da8327479f506db1ffc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351089"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751065"
 ---
 # <a name="compiler-error-c2015"></a>Chyba kompilátoru C2015
 
-příliš mnoho znaků – konstanta
+příliš mnoho znaků v konstantě
 
-Znaková konstanta obsahuje více než dva znaky. Limit je jeden znak pro standardní znakové konstanty a dva znaky dlouhý znakové konstanty.
+Znaková konstanta obsahuje více než dva znaky. Limit je jeden znak pro standardní znakové konstanty a dva znaky pro dlouhé znakové konstanty.
 
-Sekvence escape, jako je například \t, je převedena na jeden znak.
+Řídicí sekvence, jako je například \t, je převedena na jeden znak.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2015:
 
-```
+```cpp
 // C2015.cpp
 // compile with: /c
 
@@ -35,9 +35,9 @@ char test2 = 'e';   // OK
 
 ## <a name="example"></a>Příklad
 
-C2015 může vzniknout také při použití rozšíření společnosti Microsoft, znakové konstanty převést na celá čísla.  Následující ukázka generuje C2015:
+K C2015 může také dojít při použití rozšíření společnosti Microsoft, konstanty znaků převedené na celá čísla.  Následující ukázka generuje C2015:
 
-```
+```cpp
 // C2015b.cpp
 #include <stdio.h>
 

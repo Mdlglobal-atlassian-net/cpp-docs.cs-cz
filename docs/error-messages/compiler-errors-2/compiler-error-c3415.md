@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3415
 ms.assetid: fa2db8ab-2820-4ec3-a740-fb5e2adcfb29
-ms.openlocfilehash: 3d4163fac83e24d30f29aed92e7a1ec1fc9e362f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7b49d30866b9fa5ab27a93357fd2812aaa2806
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242861"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742922"
 ---
 # <a name="compiler-error-c3415"></a>Chyba kompilátoru C3415
 
-více oddílů 'název_oddílu' nalezen s rozdílnými atributy (hodnota)
+našlo se víc oddílů section_name s různými atributy (Value).
 
-Byly zadány konfliktní hodnoty v [části](../../preprocessor/section.md) direktivy pragma.
+V [oddílech](../../preprocessor/section.md) pragma byly zadány konfliktní hodnoty.
 
-`value` je aktuální nastavení pro oddíl, jak je uvedeno v ntimage.h. Příklad:
+`value` je aktuální nastavení oddílu, jak je uvedeno v ntimage. h. Příklad:
 
 ```
 // Section contains extended relocations.
@@ -42,7 +42,7 @@ Byly zadány konfliktní hodnoty v [části](../../preprocessor/section.md) dire
 
 Následující ukázka generuje C3415:
 
-```
+```cpp
 // C3415.cpp
 #pragma section("mysec1",write)
 #pragma section("mysec1",read)   // C3415

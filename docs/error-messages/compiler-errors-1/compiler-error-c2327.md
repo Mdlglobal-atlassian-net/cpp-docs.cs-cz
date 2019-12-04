@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2327
+title: Chyba kompilátoru C2327
 ms.date: 11/04/2016
 f1_keywords:
 - C2327
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300846"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747771"
 ---
-# <a name="compiler-error-c2327"></a>Compiler Error C2327
+# <a name="compiler-error-c2327"></a>Chyba kompilátoru C2327
 
-'symbol': není název typu, statický člen ani enumerátor
+' symbol ': není název typu, statický nebo enumerátor
 
-Kód v rámci vnořené třídy se pokusí o přístup k členem nadřazené třídy, který není název typu, statický člen ani enumerátor.
+Kód v rámci vnořené třídy se pokusí získat přístup ke členu ohraničující třídy, která není název typu, statický člen ani enumerátor.
 
-Při kompilaci s **/CLR**, běžných příčin pro C2327 je vlastnost se stejným názvem jako typ vlastnosti.
+Při kompilaci s možností **/CLR**je běžnou příčinou C2327 vlastnost se stejným názvem jako typ vlastnosti.
 
 Následující ukázka generuje C2327:
 
-```
+```cpp
 // C2327.cpp
 int x;
 class enclose {
@@ -40,9 +40,9 @@ public:
 };
 ```
 
-C2327 může také dojít, pokud název typu je skryt název člena:
+K C2327 může také dojít, pokud je název typu skrytý názvem člena:
 
-```
+```cpp
 // C2327b.cpp
 class X {};
 
@@ -54,9 +54,9 @@ class S {
 };
 ```
 
-C2327 můžete také vyvolat v této situaci, kdy potřebujete plně určovat datový typ parametru:
+C2327 může také v této situaci vyvolat, kde je potřeba plně zadat datový typ parametru:
 
-```
+```cpp
 // C2327c.cpp
 // compile with: /c
 struct A {};
@@ -71,7 +71,7 @@ struct B {
 
 Následující ukázka generuje C2327:
 
-```
+```cpp
 // C2327d.cpp
 // compile with: /clr /c
 using namespace System;
@@ -103,9 +103,9 @@ namespace NA {
 }
 ```
 
-Následující příklad ukazuje C2327, pokud má vlastnost se stejným názvem jako typ vlastnosti:
+Následující příklad ukazuje C2327, pokud má vlastnost stejný název jako typ vlastnosti:
 
-```
+```cpp
 // C2327f.cpp
 // compile with: /clr /c
 public value class Address {};

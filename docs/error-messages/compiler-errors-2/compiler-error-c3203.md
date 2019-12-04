@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 1d0ed5ec717efecb9fbea4a9451836c0471522b6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447797"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738710"
 ---
 # <a name="compiler-error-c3203"></a>Chyba kompilátoru C3203
 
-'type': Třída nespecializovaná šablona nebo obecná nelze použít jako šablony nebo obecný argument šablony nebo obecný parametr 'param', očekával se skutečný typ.
+' type ': nespecializovaná šablona třídy nebo obecná nejde použít jako šablonu nebo obecný argument pro šablonu nebo obecný parametr ' param ', očekával se skutečný typ.
 
-Neplatný argument předaný do šablony třídy nebo obecná. Třída šablona nebo obecná hodnota očekává jako parametr typu.
+Předali jste neplatný argument šabloně třídy nebo Obecné. Šablona třídy nebo obecná očekává typ jako parametr.
 
-Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: šablonu nespecializovaná třídy nelze použít jako argument šablony v seznamu základních tříd. C3203 vyřešíte explicitně přidáte parametrů typu šablony pro název třídy šablony při použití jako parametr šablony v seznamu základních tříd.
+Tato chyba se může vygenerovat v důsledku práce s shodami s kompilátorem, která se dokončila pro Visual Studio 2005: nespecializovaná šablona třídy se nedá použít jako argument šablony v seznamu základních tříd. Chcete-li vyřešit C3203, explicitně přidejte parametry typu šablony do názvu třídy šablony při použití jako parametru šablony v seznamu základních tříd.
 
-```
+```cpp
 // C3203.cpp
 template< typename T >
 struct X {
@@ -40,9 +40,9 @@ int main() {
 }
 ```
 
-Následující ukázka generuje C3203 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3203 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3203_b.cpp
 // compile with: /c
 template <class T>
@@ -65,9 +65,9 @@ class C3 {};
 typedef C3<S1<int> > MyC12;
 ```
 
-C3203 může dojít také při použití obecných typů:
+C3203 může také nastat při použití generických typů:
 
-```
+```cpp
 // C3203_c.cpp
 // compile with: /clr /c
 generic <class T>

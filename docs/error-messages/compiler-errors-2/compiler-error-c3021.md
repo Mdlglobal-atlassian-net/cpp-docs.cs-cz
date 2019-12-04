@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3021
 ms.assetid: 0cef6d97-e267-438a-ac8b-0daf5bbbc2cf
-ms.openlocfilehash: 4863947fe2fedf9301fac302820cb69193581222
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a90a3378690140c27fe938c269f4fb00f6eae12
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386691"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742103"
 ---
 # <a name="compiler-error-c3021"></a>Chyba kompilátoru C3021
 
-'arg': argument je prázdný v direktivě OpenMP "direktiva"
+ARG: argument je v direktivě OpenMP prázdný.
 
-Argument je vyžadován pro direktivu OpenMP.
+Pro direktivu OpenMP je vyžadován argument.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3021:
 
-```
+```cpp
 // C3021.cpp
 // compile with: /openmp
 #include <stdio.h>

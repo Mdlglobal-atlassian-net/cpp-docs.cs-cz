@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-ms.openlocfilehash: 137913e0c6909712cbb6745666112d315925ab0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0e2082dc87c6236aa11dd3094d056b0024dfc2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226853"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752467"
 ---
 # <a name="compiler-error-c3743"></a>Chyba kompilátoru C3743
 
-můžete pouze hook/vyjmutí celé rozhraní při "má" parametr třídy event_receiver hodnotu true
+Pokud je parametr ' layout_dependent ' event_receiver true, může být zavěšeno nebo odpojování pouze celého rozhraní.
 
-[__Unhook](../../cpp/unhook.md) funkce se liší v počtu parametrů, které trvá založené na hodnotu předanou `layout_dependent` parametr [event_receiver](../../windows/event-receiver.md) třídy.
+Funkce [__unhook](../../cpp/unhook.md) se liší v počtu parametrů, které přebírá na základě hodnoty předané do parametru `layout_dependent` ve třídě [event_receiver](../../windows/event-receiver.md) .
 
 Následující ukázka generuje C3743:
 
-```
+```cpp
 // C3743.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

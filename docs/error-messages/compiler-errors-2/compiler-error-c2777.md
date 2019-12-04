@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2777
 ms.assetid: 5fe158c0-2a65-488a-aca2-61d4a8b32d43
-ms.openlocfilehash: cfbe2c729141108565f00b7b5a7fd581b49e516d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67132f0acbee3614d8032685ae454386d97b8fb1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227699"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740010"
 ---
 # <a name="compiler-error-c2777"></a>Chyba kompilátoru C2777
 
-jednu vlastnost může být zadaná jenom jedna metoda put.
+pro každou vlastnost se dá zadat jenom jedna metoda PUT.
 
-A [vlastnost](../../cpp/property-cpp.md) declspec modifikátor obsahovala více než jeden `put` vlastnost.
+Modifikátor declspec [vlastnosti](../../cpp/property-cpp.md) měl více než jednu vlastnost `put`.
 
 Následující ukázka generuje C2777:
 
-```
+```cpp
 // C2777.cpp
 struct A {
    __declspec(property(put=PutProp,put=PutPropToo))   // C2777

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
-ms.openlocfilehash: 4ad7718f4efbeb3b0bc481755fd239615ab796cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f264333d802967d0350caa8ab4ba4925ffe019af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380926"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754872"
 ---
 # <a name="compiler-error-c3852"></a>Chyba kompilátoru C3852
 
-člen s typem 'type': Inicializace agregace nelze inicializovat tento člen
+' member ' typu ' type ': agregační inicializace nemohla inicializovat tohoto člena
 
-Byl proveden pokus o přiřazení výchozí inicializace jako součást agregační inicializace na datový člen, který nemůže přijímat výchozí inicializace agregační inicializace.
+Došlo k pokusu o přiřazení výchozí inicializace v rámci agregované inicializace na datový člen, který nemůže v agregační inicializaci přijmout výchozí inicializaci.
 
-Následující ukázky generovat C3852:
+Následující ukázky generují C3852:
 
-```
+```cpp
 // C3852.cpp
 struct S
 {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2861
 ms.assetid: 012bb44d-6c9b-4def-b54e-b19f1f8ddd1b
-ms.openlocfilehash: bb61272b5a8d94a26096bd05260de331e853bf0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d6cab186d4acf229a32620f33c9c86e807459dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329072"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751986"
 ---
 # <a name="compiler-error-c2861"></a>Chyba kompilátoru C2861
 
-'název funkce': členská funkce rozhraní nemůže být definovaná.
+' function name ': nelze definovat členskou funkci rozhraní
 
-Kompilátor zjistil – klíčové slovo interface nebo odvodit struktura jako rozhraní, ale pak najít člen definici funkce.  Rozhraní nemůže obsahovat definice členské funkce.
+Kompilátor zjistil klíčové slovo rozhraní nebo odvodit strukturu jako rozhraní, ale pak nalezl definici členské funkce.  Rozhraní nemůže obsahovat definici členské funkce.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2861:
 
-```
+```cpp
 // C2861.cpp
 // compile with: /c
 #include <objbase.h>   // required for IUnknown definition

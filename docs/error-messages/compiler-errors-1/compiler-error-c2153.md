@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2153
+title: Chyba kompilátoru C2153
 ms.date: 11/04/2016
 f1_keywords:
 - C2153
 helpviewer_keywords:
 - C2153
 ms.assetid: cfc50cb7-9a0f-4b5b-879a-d419c99f7be1
-ms.openlocfilehash: eeb7da509ffb1b8c408763c79d471586eb94f383
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f03b196b7ddaae80dac1941cdde5be16acace5f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175157"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748681"
 ---
-# <a name="compiler-error-c2153"></a>Compiler Error C2153
+# <a name="compiler-error-c2153"></a>Chyba kompilátoru C2153
 
-hexadecimální konstanty musí mít alespoň jednu číslici hex
+šestnáctkové konstanty musí mít alespoň jednu šestnáctkovou číslici.
 
-Šestnáctkové konstanty 0 x, 0 X a \x nejsou platné. Musí splňovat aspoň jednu číslici hex x nebo X.
+Šestnáctkové konstanty 0x, 0X a \x nejsou platné. Nejméně jedna šestnáctková číslice musí následovat po x nebo X.
 
 Následující ukázka generuje C2153:
 
-```
+```cpp
 // C2153.cpp
 int main() {
    int a= 0x;    // C2153

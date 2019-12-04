@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
-ms.openlocfilehash: f499bb2a8fd6d3148935daec89835b79d2ff5b49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b47ddbf0775cab2bd7214f68d1b4ed6e06e6eea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390591"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741700"
 ---
 # <a name="compiler-error-c3828"></a>Chyba kompilátoru C3828
 
-Typ objektu: argumenty umístění není povoleno při vytváření instancí spravované nebo WinRTclasses
+' typ objektu ': argumenty umístění nejsou při vytváření instancí spravované nebo WinRTclasses povoleny.
 
-Při vytvoření objektu spravovaného typu nebo typ prostředí Windows Runtime, nemůžete použít formu umístění operátoru [ref new, gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) nebo [nové](../../cpp/new-operator-cpp.md).
+Při vytváření objektu spravovaného typu nebo typu prostředí Windows Runtime nemůžete použít formulář umístění operátoru [ref new, gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) nebo [New](../../cpp/new-operator-cpp.md).
 
-Následující ukázka generuje C3828 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3828 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3828a.cpp
 // compile with: /clr
 ref struct M {

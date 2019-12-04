@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - C2813
 ms.assetid: 6cf2135f-7b82-42d1-909a-5e864308a09c
-ms.openlocfilehash: 38b4bad77f836053f86a06491ef6bebbcc16671a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b36e966d897b1a3f9a4f601ef281091160da34c3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265981"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750933"
 ---
 # <a name="compiler-error-c2813"></a>Chyba kompilátoru C2813
 
-\#Import není podporován s možností/MP
+Import \#není v/MP podporován.
 
-C2813 je vygenerován v příkazu kompilátoru při zadání **/MP** – možnost kompilátoru a dva nebo více souborů do kompilace a jeden nebo více souborů obsahuje[#import](../../preprocessor/hash-import-directive-cpp.md) direktiva preprocesoru. [#Import](../../preprocessor/hash-import-directive-cpp.md) – direktiva generuje třídy C++ typy v zadané knihovny typů a pak zapíše dva soubory hlaviček těchto tříd. [#Import](../../preprocessor/hash-import-directive-cpp.md) – direktiva se nepodporuje, protože pokud několika kompilačních jednotek importovat stejnou knihovnu typů, tyto jednotky dojít ke konfliktu při pokusu o zápis stejné soubory hlaviček ve stejnou dobu.
+C2813 je vygenerována, pokud v příkazu kompilátoru zadáte možnost kompilátoru **/MP** a dva nebo více souborů, které mají být zkompilovány, a jeden nebo více souborů obsahuje direktivu preprocesoru[#import](../../preprocessor/hash-import-directive-cpp.md) . Direktiva [#import](../../preprocessor/hash-import-directive-cpp.md) generuje C++ třídy z typů v zadané knihovně typů a pak je zapisuje do dvou hlavičkových souborů. Direktiva [#import](../../preprocessor/hash-import-directive-cpp.md) není podporována, protože pokud více jednotek kompilace importuje stejnou knihovnu typů, jsou tyto jednotky při pokusu o zápis stejných hlavičkových souborů ve stejnou dobu v konfliktu.
 
-Tuto chybu kompilátoru a **/MP** – možnost kompilátoru jsou nové v sadě Visual Studio 2008.
+Tato chyba kompilátoru a možnost kompilátoru **/MP** jsou v aplikaci Visual Studio 2008 novinkou.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2813. Na příkazovém řádku ve "kompilovat s:" komentář oznamuje kompilátoru, aby použil **/MP** a **/c** – možnosti kompilátoru pro kompilaci několika souborů. Obsahuje nejméně jeden ze souborů [#import](../../preprocessor/hash-import-directive-cpp.md) směrnice. Stejného souboru dvakrát pro účely testování v tomto příkladu používáme.
+Následující ukázka generuje C2813. Příkazový řádek v komentáři "kompilovat s:" označuje kompilátor pro použití možností kompilátoru **/MP** a **/c** k zkompilování několika souborů. Nejméně jeden ze souborů obsahuje direktivu [#import](../../preprocessor/hash-import-directive-cpp.md) . Pro účely testování tohoto příkladu používáme stejný soubor dvakrát.
 
-```
+```cpp
 // C2813.cpp
 // compile with: /MP /c C2813.cpp C2813.cpp
 #import "C:\windows\system32\stdole2.tlb"   // C2813

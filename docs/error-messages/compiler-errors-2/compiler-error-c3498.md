@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-ms.openlocfilehash: 463e210e5a1ac5eb6d197062ed8921f9bbae4ad2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771e8c72ab4386bb45a11983318f412e784f5bc9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380997"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738099"
 ---
 # <a name="compiler-error-c3498"></a>Chyba kompilátoru C3498
 
-'příkaz var': nejde zachytit proměnnou, která má spravované nebo WinRTtype
+var: nejde zachytit proměnnou, která má spravovanou nebo WinRTtype.
 
-Nejde zachytit proměnnou, která obsahuje spravovaný typ nebo typ Windows Runtime ve výrazu lambda.
+Nelze zachytit proměnnou, která má spravovaný typ nebo typ prostředí Windows Runtime ve výrazu lambda.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Předejte spravovanou nebo prostředí Windows Runtime proměnné do seznamu parametrů výrazu lambda.
+- Předejte spravovanou nebo prostředí Windows Runtime proměnnou do seznamu parametrů výrazu lambda.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad generuje C3498, protože proměnnou se spravovaným typem se zobrazí v seznamu zachycení výrazu lambda:
+Následující příklad generuje C3498, protože proměnná, která má spravovaný typ, se zobrazí v seznamu zachycení výrazu lambda:
 
-```
+```cpp
 // C3498a.cpp
 // compile with: /clr
 using namespace System;
@@ -42,9 +42,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu řeší C3498 předáním spravované proměnné `s` do seznamu parametrů výrazu lambda:
+Následující příklad vyřeší C3498 předáním spravované proměnné `s` do seznamu parametrů výrazu lambda:
 
-```
+```cpp
 // C3498b.cpp
 // compile with: /clr
 using namespace System;

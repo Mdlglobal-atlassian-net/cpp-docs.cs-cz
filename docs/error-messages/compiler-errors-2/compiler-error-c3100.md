@@ -1,31 +1,31 @@
 ---
-title: Compiler Error C3100
+title: Chyba kompilátoru C3100
 ms.date: 11/04/2016
 f1_keywords:
 - C3100
 helpviewer_keywords:
 - C3100
 ms.assetid: 7a9c9eaf-08ef-442d-94a0-e457beee8549
-ms.openlocfilehash: 98fa90d184db596458ec7b943e3c35ddc5b7bce9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a0e0995b1a4dcbc92f02de03920893f884c2c7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324802"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750036"
 ---
-# <a name="compiler-error-c3100"></a>Compiler Error C3100
+# <a name="compiler-error-c3100"></a>Chyba kompilátoru C3100
 
-'target': Neznámý kvalifikátor atributu
+' Target ': neznámý kvalifikátor atributu
 
-Byl zadán neplatný atribut cíl.
+Byl zadán neplatný cíl atributu.
 
-Další informace najdete v tématu [uživatelem definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Další informace najdete v tématu [uživatelsky definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3100.
+Následující ukázka vygeneruje C3100.
 
-```
+```cpp
 // C3100.cpp
 // compile with: /clr /c
 using namespace System;

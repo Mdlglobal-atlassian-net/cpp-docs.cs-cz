@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2778
 ms.assetid: b24cb732-2914-42cc-8928-e2d87b393428
-ms.openlocfilehash: 98b5bf0a1315236f3ce96fd4b8c140ce1ab70a9f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 247aba1b4dfe6b6d6db1e2b8f46f2aa08abf1a79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501039"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739984"
 ---
 # <a name="compiler-error-c2778"></a>Chyba kompilátoru C2778
 
@@ -21,18 +21,18 @@ Rozšířenému atributu [UUID](../../cpp/uuid-cpp.md) je zadán nesprávný ide
 
 Identifikátor GUID musí být řetězec hexadecimálních čísel v následujícím formátu:
 
-```
+```cpp
 // C2778a.cpp
 // compile with: /c
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
 ```
 
-Rozšířený atribut přijímá řetězce rozpoznané v CLSIDFromString s oddělovači nebo bez závorek. [](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring) `uuid`
+`uuid` rozšířený atribut přijímá řetězce rozpoznané [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring), s oddělovači nebo bez závorek.
 
 Následující ukázka generuje C2778:
 
-```
+```cpp
 // C2778b.cpp
 struct __declspec(uuid(" 00000000-0000-0000-0000-000000000000 ")) C { };   // C2778
 struct __declspec(uuid("00000000000000000000000000000000")) D { };   // C2778

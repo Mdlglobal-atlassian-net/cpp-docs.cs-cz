@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3648
 ms.assetid: 5d042989-41cb-4cd0-aa50-976b70146aaf
-ms.openlocfilehash: 7394f6b9789caa09ffc2ad6c2cf56f037b5d57b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b26be9890bbbdf6276c61023e6867160528e236
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385573"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751830"
 ---
 # <a name="compiler-error-c3648"></a>Chyba kompilátoru C3648
 
-Tato syntaxe explicitního přepsání vyžaduje oldSyntax
+Tato syntaxe explicitního přepsání vyžaduje/CLR: oldSyntax.
 
-Při kompilaci pro nejnovější spravované syntaxe, kompilátor najít explicitní přepsání syntaxi pro předchozí verze, která se už nepodporuje.
+Při kompilaci pro nejnovější spravovanou syntaxi kompilátor nalezl explicitní syntaxi přepsání pro předchozí verze, která již není podporována.
 
-Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Další informace najdete v tématu [Explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3648:
 
-```
+```cpp
 // C3648.cpp
 // compile with: /clr
 public interface struct I {

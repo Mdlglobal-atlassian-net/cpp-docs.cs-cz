@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3717
 ms.assetid: ae4fceb1-2583-4577-b2f1-40971a017055
-ms.openlocfilehash: f7e60b4f1b6a1337ef93088e4f36ce2a1b34dc47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd9a97f1b0d9c9eecfa6a42f735f21a42fd846e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328271"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753234"
 ---
 # <a name="compiler-error-c3717"></a>Chyba kompilátoru C3717
 
-'metody': nelze definovat metodu, která aktivuje události
+' Method ': nejde definovat metodu, která aktivuje události.
 
-Můžete deklarovat metodu události, která zahrnuje implementace. [__Event](../../cpp/event.md) deklarace metody nemůže mít definici. Chcete-li vyřešit tuto chybu, zajistěte, aby definice deklarace metody žádné události. Například v následujícím kódu odebrat tělo funkce z `event1` deklaraci je uvedené poznámky.
+Deklarovali jste metodu události, která zahrnuje implementaci. Deklarace metody [__event](../../cpp/event.md) nemůže mít definici. Chcete-li tuto chybu opravit, zajistěte, aby žádné deklarace metod události neměly definice. Například v následujícím kódu odstraňte tělo funkce z deklarace `event1`, jak je uvedeno v komentářích.
 
 Následující ukázka generuje C3717:
 
-```
+```cpp
 // C3717.cpp
 [event_source(native)]
 class CEventSrc {

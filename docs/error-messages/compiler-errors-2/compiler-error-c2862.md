@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2862
 ms.assetid: c04d8499-b799-48a1-9fb4-7902a0b0ac8e
-ms.openlocfilehash: a3e2dba20c5283d87b6e98c2f8c9aba83c2d3cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd14f310a00202dce73f091dee46a4605858b698
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227686"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755080"
 ---
 # <a name="compiler-error-c2862"></a>Chyba kompilátoru C2862
 
-'rozhraní': rozhraní může mít pouze veřejné členy
+rozhraní: rozhraní může mít jenom veřejné členy.
 
-Chráněné a soukromým členům se dá přistupovat jenom ze jiné členské funkce. Tyto členy jsou žádné použití v rozhraní, protože neposkytují implementace pro kterýkoli z jejích členů.
+K chráněným a soukromým členům lze přicházet pouze z jiných členských funkcí. Tito členové nejsou v rozhraní žádné použití, protože nemusí poskytovat implementace pro žádné z jejích členů.
 
-Následující ukázka vygeneruje C2862:
+V následujícím příkladu se vygeneruje C2862:
 
-```
+```cpp
 // C2862.cpp
 // compile with: /c
 #include <unknwn.h>

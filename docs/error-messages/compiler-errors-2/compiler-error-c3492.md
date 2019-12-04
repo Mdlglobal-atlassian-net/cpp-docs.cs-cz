@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: facd8c78e775945924d77b09f9dc754bdc301ddd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381121"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738307"
 ---
 # <a name="compiler-error-c3492"></a>Chyba kompilátoru C3492
 
-'příkaz var': nejde zachytit člen anonymního sjednocení
+var: nejde zachytit člen anonymního sjednocení.
 
-Nejde zachytit člen Nepojmenovaná sjednocení.
+Nejde zachytit člen nepojmenované sjednocení.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-- Pojmenujte sjednocení a předat kompletní sjednocení struktura seznamu zachycení výrazu lambda.
+- Dejte sjednocení název a předejte kompletní strukturu sjednocení do seznamu zachycení výrazu lambda.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad generuje C3492 vzhledem k tomu zachytí člena anonymního sjednocení:
+Následující příklad generuje C3492, protože zachycuje člena anonymního sjednocení:
 
-```
+```cpp
 // C3492a.cpp
 
 int main()
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu řeší C3492 zadáním názvu unie a předáním kompletní sjednocení struktura seznamu zachycení výrazu lambda:
+Následující příklad vyřeší C3492 přidělením názvu Union a předáním úplné struktury sjednocení do seznamu zachycení výrazu lambda:
 
-```
+```cpp
 // C3492b.cpp
 
 int main()

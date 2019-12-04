@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 0e2d8e70dcc9b23c56a321487cd4b933a1086387
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742116"
 ---
 # <a name="compiler-error-c3020"></a>Chyba kompilátoru C3020
 
-'příkaz var': indexovaná proměnná OpenMP smyčku for nejde upravovat v těle smyčky
+var: indexová proměnná pro smyčku for nejde upravovat v těle smyčky.
 
-OpenMP `for` smyčky nesmíte upravovat indexu (čítače smyčky) v těle `for` smyčky.
+Smyčka `for` OpenMP nemůže změnit index (počítadlo cyklů) v těle `for` smyčky.
 
 Následující ukázka generuje C3020:
 
-```
+```cpp
 // C3020.cpp
 // compile with: /openmp
 int main() {
@@ -38,11 +38,11 @@ int main() {
 }
 ```
 
-Proměnná deklarovaná pomocí [lastprivate](../../parallel/openmp/reference/lastprivate.md) nelze použít jako index uvnitř smyčka paralelizovaná.
+Proměnná deklarovaná pomocí [lastprivate](../../parallel/openmp/reference/lastprivate.md) se nedá použít jako index uvnitř paralelismued Loop.
 
-Podle následující ukázky vám poskytne C3020 pro druhý lastprivate vzhledem k tomu, že lastprivate aktivují zápis do idx_a v krajních smyčky for. První lastprivate nedává chybu, protože tento lastprivate aktivuje zápis do idx_a mimo nejkrajnější pro smyčky (technicky vzato na konci velmi poslední iteraci). Následující ukázka generuje C3020.
+Následující ukázka poskytne C3020 pro druhý lastprivate, protože tento lastprivate aktivuje zápis do idx_a uvnitř vnější smyčky for Loop. První lastprivate nevydá chybu, protože lastprivate aktivuje zápis na idx_a mimo vnější smyčku for Loop (technicky, na konci poslední iterace). Následující ukázka generuje C3020.
 
-```
+```cpp
 // C3020b.cpp
 // compile with: /openmp /c
 float a[100][100];
@@ -59,9 +59,9 @@ void test(int first, int last)
 }
 ```
 
-Následující příklad ukazuje možným řešením:
+Následující ukázka demonstruje možné řešení:
 
-```
+```cpp
 // C3020c.cpp
 // compile with: /openmp /c
 float a[100][100];

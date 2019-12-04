@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
-ms.openlocfilehash: 13840246a5dc6a1c1bdbcb55dc47f212ee353d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 093a5856fdcfa6311fcef93214672b035c91b4fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165213"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746523"
 ---
 # <a name="compiler-error-c2513"></a>Chyba kompilátoru C2513
 
-'type': deklarovaná žádná proměnná před '='
+' type ': není deklarována žádná proměnná před znakem ' = '
 
-Specifikátor typu se zobrazí v deklaraci s identifikátorem žádné proměnné.
+V deklaraci bez identifikátoru proměnné se zobrazí specifikátor typu.
 
 Následující ukázka generuje C2513:
 
-```
+```cpp
 // C2513.cpp
 int main() {
    int = 9;   // C2513
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-Tato chyba může být také generovány jako důsledek kompilátoru shoda práce pro Visual Studio .NET 2003: Inicializace již není povolena definice typu. Inicializace definice typu není povolený Standard a nyní generuje chybu kompilátoru.
+Tato chyba se může vygenerovat taky v důsledku práce s podmnožinou shody s kompilátorem pro Visual Studio .NET 2003: inicializace typedef už není povolená. Inicializace typedef není povolená standardem a teď generuje chybu kompilátoru.
 
-```
+```cpp
 // C2513b.cpp
 // compile with: /c
 typedef struct S {
@@ -41,4 +41,4 @@ typedef struct S {
 // } S;
 ```
 
-Alternativou může být odstranění `typedef` k definování proměnné s agregační inicializátor seznamu, ale to se nedoporučuje, protože ho vytvořit proměnnou se stejným názvem jako typ, který se skrýt název typu.
+Alternativou je odstranění `typedef` k definování proměnné se seznamem agregačních inicializátorů, ale to se nedoporučuje, protože vytvoří proměnnou se stejným názvem jako typ a skryje název typu.

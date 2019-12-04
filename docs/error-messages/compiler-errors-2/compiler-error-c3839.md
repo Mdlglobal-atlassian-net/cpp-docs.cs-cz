@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3839
 ms.assetid: 0957faff-1e9f-439b-876b-85bd8d2c578d
-ms.openlocfilehash: b8382213fbe7cc953dafd9610bfb993ba7837947
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a1055a461d76856cc3bccbd9f8af0f0dcff356
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400068"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754924"
 ---
 # <a name="compiler-error-c3839"></a>Chyba kompilátoru C3839
 
-nejde změnit zarovnání v spravované nebo typ WinRT
+nejde změnit zarovnání v spravovaném nebo WinRT typu.
 
-Zarovnání proměnné ve spravované nebo typy Windows Runtime se řídí CLR nebo prostředí Windows Runtime a nelze ji změnit pomocí [zarovnat](../../cpp/align-cpp.md).
+Zarovnání proměnných v spravovaných nebo prostředí Windows Runtimech typech je řízeno modulem CLR nebo prostředí Windows Runtime a nelze je upravovat pomocí [Zarovnání](../../cpp/align-cpp.md).
 
 Následující ukázka generuje C3839:
 
-```
+```cpp
 // C3839a.cpp
 // compile with: /clr
 ref class C

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
-ms.openlocfilehash: 9bfdf8b26ab599ef1a28483af7ebc28f0dbc1912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1078bf8a97f6cb7afeaf7046489fe262c0bb0199
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328338"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753325"
 ---
 # <a name="compiler-error-c3714"></a>Chyba kompilátoru C3714
 
-"metoda": metoda obslužné rutiny události musí mít stejnou volací konvenci jako zdroj "metodu.
+' Method ': metoda obslužné rutiny události musí mít stejnou konvenci volání jako zdroj ' Method ' '
 
-Definujete metodu obslužné rutiny události, která nepoužívá stejnou volací konvenci jako zdroj událostí metodu. Chcete-li vyřešit tuto chybu, poskytněte metodu obslužné rutiny události stejné konvence volání jako metodu zdroje události. Například v následujícím kódu je konvence volání z `handler1` a `event1` odpovídají ([__cdecl](../../cpp/cdecl.md) nebo [__stdcall](../../cpp/stdcall.md) nebo jinými). Odebrání klíčová slova konvence volání z obou deklarace se také problém vyřešit a způsobit, že `event1` a `handler1` na výchozím nastavení [thiscall](../../cpp/thiscall.md) konvence volání. Zobrazit [konvence volání](../../cpp/calling-conventions.md) Další informace.
+Definovali jste metodu obslužné rutiny události, která nepoužívala stejnou konvenci volání jako zdrojová metoda události. Chcete-li tuto chybu opravit, poskytněte metodu obslužné rutiny události stejné konvence volání jako metody zdrojové události. Například v následujícím kódu proveďte konvence volání `handler1` a `event1` ([__cdecl](../../cpp/cdecl.md) nebo [__stdcall](../../cpp/stdcall.md) nebo jiné). Odebrání klíčových slov konvence volání z obou deklarací také vyřeší problém a způsobí, že `event1` a `handler1` výchozí konvenci volání [thiscall](../../cpp/thiscall.md) . Další informace najdete v tématu věnovaném [konvencím volání](../../cpp/calling-conventions.md) .
 
 Následující ukázka generuje C3714:
 
-```
+```cpp
 // C3714.cpp
 // compile with: /c
 // processor: x86
