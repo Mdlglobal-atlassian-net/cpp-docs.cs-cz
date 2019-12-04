@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
-ms.openlocfilehash: e29e536bf89aef887dc043327e4b4596703d0538
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6772572d29765370d6cdbf52ed8470ff2f3f054e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363892"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758070"
 ---
 # <a name="compiler-error-c3675"></a>Chyba kompilátoru C3675
 
-'function': je vyhrazené, protože 'property' je definován.
+' function ': je rezervováno, protože je definována vlastnost ' Property '
 
-Když deklarujete jednoduchou vlastnost, kompilátor vygeneruje get a set přístupové metody a ty názvy jsou k dispozici v rámci programu.  Názvy generované kompilátorem jsou vytvářena předřazení get_ a set_ název vlastnosti.  Proto nelze deklarovat funkce se stejným názvem jako přístupové objekty generovaný kompilátorem.
+Pokud deklarujete jednoduchou vlastnost, kompilátor vygeneruje přístupové metody Get a set a tyto názvy jsou k dispozici v oboru programu.  Názvy vygenerované kompilátorem jsou vytvořeny pomocí předpřipraveného get_ a set_ k názvu vlastnosti.  Proto nelze deklarovat funkce se stejným názvem jako přistupující objekty vygenerované kompilátorem.
 
-Zobrazit [vlastnost](../../extensions/property-cpp-component-extensions.md) Další informace.
+Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3675.
 
-```
+```cpp
 // C3675.cpp
 // compile with: /clr /c
 ref struct C {

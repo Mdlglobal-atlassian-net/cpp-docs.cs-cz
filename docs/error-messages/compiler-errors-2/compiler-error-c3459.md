@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
-ms.openlocfilehash: aaad9610ffec3efc73b1ff5650472689a2d2e82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe21414fcadef13b7af3acf4f8e1635fb12802e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363736"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756640"
 ---
 # <a name="compiler-error-c3459"></a>Chyba kompilátoru C3459
 
-'attribute': atribut je povolený jedině pro indexer tříd (výchozí indexovanou vlastnost)
+atribut: atribut je povolený jedině pro indexer tříd (výchozí indexovaná vlastnost).
 
-Atribut, který je navržený pro použít pro vlastnost indexer tříd nebyl použit správně.
+Atribut, který je navržen pro použití na vlastnost indexeru tříd, byl nesprávně použit.
 
-Další informace najdete v tématu [jak: Pomocí vlastností v C++vyhodnocovací](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Další informace najdete v tématu [Postupy: použití vlastností C++v/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3459.
 
-```
+```cpp
 // C3459.cpp
 // compile with: /clr /c
 public ref class MyString {

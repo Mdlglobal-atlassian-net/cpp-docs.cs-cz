@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
-ms.openlocfilehash: 58d56ad834b34425cda4ac7ba081eabd2424e451
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0061a7171dd08440ec5d8c8b8cadb77303ff8f41
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408352"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761112"
 ---
 # <a name="compiler-error-c2910"></a>Chyba kompilátoru C2910
 
-'function': nemůže být explicitně specializovaný.
+' function ': nelze explicitně specializovat
 
-Kompilátor zjistil pokus o explicitně specializovat funkce dvakrát.
+Kompilátor zjistil pokus o explicitní specializaci funkce dvakrát.
 
 Následující ukázka generuje C2910:
 
-```
+```cpp
 // C2910.cpp
 // compile with: /c
 template <class T>
@@ -31,11 +31,11 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization
 ```
 
-C2910 můžete také generovány, pokud se pokusíte explicitně specializovat nešablonové člena. To znamená můžete pouze explicitně specializovat šablonu funkce.
+C2910 může být také vygenerována, pokud se pokusíte o explicitní specializaci člena, který není šablonou. To znamená, že je možné pouze explicitně specializovat šablonu funkce.
 
 Následující ukázka generuje C2910:
 
-```
+```cpp
 // C2910b.cpp
 // compile with: /c
 template <class T> struct A {
@@ -54,13 +54,13 @@ template <> A<void>::A(void* p){}   // C2910
 // A<void>::A(void* p){}
 ```
 
-K této chybě také se vygeneruje jako výsledek kompilátoru prací, které bylo provedeno v aplikaci Visual Studio .NET 2003:.
+Tato chyba se taky vygeneruje v důsledku práce s vyhovujícími kompilátory, které se udělaly v sadě Visual Studio .NET 2003:.
 
-Pro kód bude platit ve Visual Studio .NET 2003 a Visual Studio .NET verzí jazyka Visual C++, odeberte `template <>`.
+Pro kód bude platný v jazyce Visual Studio .NET 2003 a Visual Studio .NET verze vizuálu C++, odeberte `template <>`.
 
 Následující ukázka generuje C2910:
 
-```
+```cpp
 // C2910c.cpp
 // compile with: /c
 template <class T> class A {

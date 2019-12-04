@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3052
 ms.assetid: 87480c42-1ceb-4775-8d20-88c54a7bb6a6
-ms.openlocfilehash: ed9c27e1602f9372cb9137615ef66932a8df960c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 618fac69078987b0322739733c403e5b2cd36486
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265773"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761215"
 ---
 # <a name="compiler-error-c3052"></a>Chyba kompilátoru C3052
 
-'příkaz var': proměnná se neobjevuje v klauzuli data-sharing pod klauzulí default(none)
+var: proměnná se neobjevuje v klauzuli data-Sharing pod klauzulí default (None).
 
-Pokud [default(none)](../../parallel/openmp/reference/default-openmp.md) se používá, všechny proměnné použité v strukturovaný blok musí být explicitně určena jako [sdílené](../../parallel/openmp/reference/shared-openmp.md) nebo [privátní](../../parallel/openmp/reference/private-openmp.md).
+Pokud se použije [výchozí (žádné)](../../parallel/openmp/reference/default-openmp.md) , musí být jakákoli proměnná použitá ve strukturovaném bloku explicitně zadaná buď jako [sdílená](../../parallel/openmp/reference/shared-openmp.md) , nebo [soukromá](../../parallel/openmp/reference/private-openmp.md).
 
 Následující ukázka generuje C3052:
 
-```
+```cpp
 // C3052.cpp
 // compile with: /openmp /c
 int main() {

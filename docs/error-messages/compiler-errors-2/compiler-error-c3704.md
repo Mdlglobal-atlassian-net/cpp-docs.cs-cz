@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3704
 ms.assetid: ee40ea35-a214-4dec-9489-d7f155dd0ac2
-ms.openlocfilehash: 4e26742de6c294018f81c6f49c1719fdb11d5149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11e5792344b6f8fba6183f4ab87e1799db803b46
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328533"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757940"
 ---
 # <a name="compiler-error-c3704"></a>Chyba kompilátoru C3704
 
-'function': metoda vararg nemůže aktivovat události
+' function ': metoda vararg nemůže aktivovat události
 
-Pokusili jste se použít [__event](../../cpp/event.md) na metoda vararg. Chcete-li tuto chybu opravit, nahraďte `fireEvent(int i, ...)` volání s `fireEvent(int i)` volání, jak je znázorněno v následujícím příkladu kódu.
+Pokusili jste se použít [__event](../../cpp/event.md) pro metodu vararg. Chcete-li tuto chybu opravit, nahraďte `fireEvent(int i, ...)` voláním `fireEvent(int i)`, jak je znázorněno v následujícím příkladu kódu.
 
 Následující ukázka generuje C3704:
 
-```
+```cpp
 // C3704.cpp
 [ event_source(native) ]
 class CEventSrc {

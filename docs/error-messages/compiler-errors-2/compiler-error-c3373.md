@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3373
 ms.assetid: 6e7586c3-1a15-4773-ad20-f90090a400dc
-ms.openlocfilehash: 2f279d602d5023c2981f49ff088fec49a1c14c76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbf6b19e6ae5e5278d7536ba8ec1cfc28483f753
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328994"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758577"
 ---
 # <a name="compiler-error-c3373"></a>Chyba kompilátoru C3373
 
-atribut 'attribute' nepřijímá žádné argumenty s výjimkou je coclass
+atribut Attribute nepřijímá žádné argumenty kromě třídy typu coclass.
 
-Některé atributy lze použít pro více než jedna konstrukce jazyka C++, ale argumenty atributu může být povolený jenom pro některé konstrukce.
+Některé atributy lze použít pro více než jednu C++ konstrukci, ale argumenty atributu mohou být povoleny pouze u některých konstrukcí.
 
 Následující ukázka generuje C3373:
 
-```
+```cpp
 // C3373.cpp
 #include <windows.h>
 

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3662
 ms.assetid: 61bd3e41-a86b-42c0-be89-d992d3906ff1
-ms.openlocfilehash: 28d8df02d63fc1b16a392a2df83524cd616d5ab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48fe8bd4a6872ff214d185ac77553debab78ab20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400302"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758187"
 ---
 # <a name="compiler-error-c3662"></a>Chyba kompilátoru C3662
 
-'member': specifikátor override povolený jenom pro členské funkce specifikátor spravované nebo třídách WinRT
+' member ': specifikátor override ' specifikátor ' je povolen pouze pro členské funkce spravované nebo třídy WinRT
 
-Specifikátor přepisu se použil pro člen nativního typu, což není povoleno.
+Pro člena nativního typu se použil specifikátor přepisu, který není povolený.
 
-Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Další informace najdete v tématu [Explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3662.
 
-```
+```cpp
 // C3662.cpp
 // compile with: /clr /c
 struct S {

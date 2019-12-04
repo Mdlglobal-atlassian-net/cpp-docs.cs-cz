@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360369"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756055"
 ---
 # <a name="compiler-error-c2660"></a>Chyba kompilátoru C2660
 
-'function': funkce nepřijímá počet parametrů
+' function ': funkce nepřijímá číselné parametry
 
 Funkce je volána s nesprávným počtem parametrů.
 
-C2660 může dojít, pokud omylem volání Windows API funkce spíše než knihovny MFC členská funkce se stejným názvem. Pro vyřešení tohoto problému:
+K C2660 může dojít, pokud omylem zavoláte funkci rozhraní API systému Windows, nikoli členskou funkci knihovny MFC se stejným názvem. Řešení tohoto problému:
 
-- Upravte volání funkce v souladu s formátem volání členské funkce.
+- Upravte volání funkce tak, aby odpovídalo formátu volání členské funkce.
 
-- Použití operátoru rozlišení oboru (`::`) pro oznámení kompilátoru hledání název funkce v oboru názvů globální.
+- Použijte operátor rozlišení oboru (`::`), chcete-li kompilátoru sdělit, aby vyhledal název funkce v globálním oboru názvů.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2660.
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-C2660 může také dojít, pokud při pokusu o přímo volat metodu Dispose ze spravovaného typu. Další informace najdete v tématu [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). Následující ukázka generuje C2660.
+K C2660 může také dojít, pokud se pokusíte přímo volat metodu Dispose spravovaného typu. Další informace naleznete v tématu [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). Následující ukázka generuje C2660.
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-C2660 dojde, pokud odvozené třídy skryje funkci.
+K C2660 dojde, pokud odvozená třída skrývá funkci.
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -94,9 +94,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-C2660 může dojít, pokud vyvoláte indexovanou vlastnost nesprávně.
+K C2660 může dojít, pokud vyvoláte indexovanou vlastnost nesprávně.
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -119,9 +119,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-C2660 může dojít, pokud vyvoláte indexovanou vlastnost nesprávně.
+K C2660 může dojít, pokud vyvoláte indexovanou vlastnost nesprávně.
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -142,9 +142,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-C2660 může dojít, pokud definujete operátor new v třídu šablony, ale v případě operátor new vytvoří objekt, jehož typ je jiné než nadřazený typ.
+K C2660 může dojít, pokud definujete nový operátor ve třídě šablony, ale pokud operátor New vytvoří objekt, jehož typ je jiný než nadřazený typ.
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: ca03a42cbf746a1ef32d9c79c23de637f05b56fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364360"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759890"
 ---
 # <a name="compiler-error-c2361"></a>Chyba kompilátoru C2361
 
-Inicializace 'identifier' je podle popisku "default" přeskočila.
+Inicializace identifikátoru se přeskočila jmenovkou default.
 
-Inicializace `identifier` mohly být přeskočeny, v `switch` příkazu. Nelze přejít po deklaraci s inicializátorem, není-li prohlášení je uzavřen v bloku. (Pokud je deklarovaná v rámci bloku, proměnná je v rámci oboru až do konce `switch` příkazu.)
+Inicializace `identifier` může být vynechána v příkazu `switch`. Nejde přeskočit deklaraci s inicializátorem, pokud deklarace není uzavřená v bloku. (Pokud není deklarována v rámci bloku, proměnná je v rozsahu až do konce příkazu `switch`.)
 
 Následující ukázka generuje C2361:
 
-```
+```cpp
 // C2361.cpp
 void func( void ) {
    int x;
@@ -35,9 +35,9 @@ void func( void ) {
 }
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C2361b.cpp
 // compile with: /c
 void func( void ) {

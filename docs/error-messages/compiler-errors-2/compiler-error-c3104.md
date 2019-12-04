@@ -1,33 +1,33 @@
 ---
-title: Compiler Error C3104
+title: Chyba kompilátoru C3104
 ms.date: 11/04/2016
 f1_keywords:
 - C3104
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447844"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755855"
 ---
-# <a name="compiler-error-c3104"></a>Compiler Error C3104
+# <a name="compiler-error-c3104"></a>Chyba kompilátoru C3104
 
 Neplatný argument atributu
 
-Zadali jste neplatný argument pro atribut.
+Zadali jste neplatný argument atributu.
 
-Zobrazit [typy parametrů atributů](../../extensions/attribute-parameter-types-cpp-component-extensions.md) Další informace.
+Další informace naleznete v tématu [typy parametrů atributu](../../extensions/attribute-parameter-types-cpp-component-extensions.md) .
 
-Tuto chybu mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio 2005: při předávání spravovaná pole vlastních atributů, typ pole je už odvodit ze seznamu inicializace agregace. Kompilátor nyní vyžaduje zadání typu pole, jakož i seznam inicializátorů.
+Tato chyba se může vygenerovat v důsledku práce s shodami s kompilátorem, která se dokončila pro sadu Visual Studio 2005: při předávání spravovaných polí do vlastních atributů není typ pole už odvozený ze seznamu agregačních inicializací. Kompilátor nyní vyžaduje, abyste určili typ pole i seznam inicializátorů.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3104.
 
-```
+```cpp
 // C3104a.cpp
 // compile with: /clr /c
 using namespace System;
@@ -48,7 +48,7 @@ ref struct AStruct{};
 
 Následující ukázka generuje C3104.
 
-```
+```cpp
 // C3104b.cpp
 // compile with: /clr /c
 // C3104 expected

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
-ms.openlocfilehash: ba16431fc71a0e594b77dcc6dab62ed6c49c9137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d318742a367487f3688717046a6a798c2add87a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257488"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759838"
 ---
 # <a name="compiler-error-c2764"></a>Chyba kompilátoru C2764
 
-'param': parametr šablony nepoužívá nebo není odvoditelný v částečné specializaci "specializace.
+param: parametr šablony se nepoužívá nebo není odvoditelný v specializaci částečné specializace.
 
-Parametr šablony se nepoužívá v částečné specializaci. To umožňuje částečná specializace nepoužitelné protože nejde odvodit parametr šablony.
+Parametr šablony se nepoužívá v částečné specializaci. Částečná specializace je nepoužitelná, protože parametr šablony nelze odvodit.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2764:
 
-```
+```cpp
 // C2764.cpp
 #include <stdio.h>
 template <class T1, class T2>

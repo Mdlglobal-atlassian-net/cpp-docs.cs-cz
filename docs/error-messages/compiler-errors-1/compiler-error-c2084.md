@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
-ms.openlocfilehash: 0f7e049bc3f96e0a8e2b0a8cd306afeff52f7a5f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 881ae051b2779fe674b31b64a7cbe7be7cf63705
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447337"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757888"
 ---
 # <a name="compiler-error-c2084"></a>Chyba kompilátoru C2084
 
-funkce "*funkce*' už má tělo.
+funkce Function*už má tělo.*
 
-Funkce již byl definován.
+Funkce již byla definována.
 
-Before Visual Studio 2002,
+Před Visual Studio 2002,
 
-- Kompilátor bude přijímat více specializace šablony, které přeložit na skutečný typ stejný, i když by nikdy nebude k dispozici další definice. Kompilátor zjistí nyní tyto několik definic.
+- Kompilátor by přijal více specializací šablony, které byly vyřešeny na stejný typ, i když další definice nebudou nikdy k dispozici. Kompilátor nyní detekuje tyto vícenásobné definice.
 
-- `__int32` a `int` zachází jako samostatné typy. Kompilátor nyní zpracovává `__int32` jako synonymum pro `int`. To znamená, že kompilátor zjistí víc definic, pokud je funkce přetížena u obou `__int32` a `int` a vrátí chybu.
+- `__int32` a `int` byly zpracovány jako samostatné typy. Kompilátor nyní zpracovává `__int32` jako synonymum pro `int`. To znamená, že kompilátor detekuje více definic, pokud je funkce přetížena v `__int32` i `int` a obsahuje chybu.
 
 ## <a name="example"></a>Příklad
 
@@ -36,9 +36,9 @@ void Func(int) {}   // define function
 void Func(int) {}   // C2084 second definition
 ```
 
-Chcete-li tuto chybu opravit, odeberte duplicitní definice:
+Tuto chybu opravíte tak, že odeberete duplicitní definici:
 
-```
+```cpp
 // C2084b.cpp
 // compile with: /c
 void Func(int);

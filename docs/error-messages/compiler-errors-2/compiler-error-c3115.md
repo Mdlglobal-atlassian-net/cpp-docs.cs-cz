@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
-ms.openlocfilehash: e334836986548d4f854dd9a5760bd8315b769d03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c03361f08ffd54396d307ed8c075a327c576d49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404088"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760736"
 ---
 # <a name="compiler-error-c3115"></a>Chyba kompilátoru C3115
 
-'attribute': Tento atribut není povolený u "konstrukce.
+' Attribute ': Tento atribut není v konstruktoru ' CONSTRUCT ' povolen
 
-Atribut byla použita k konstrukce, pro který nebyla určena.  Zobrazit [atributy podle použití](../../windows/attributes/attributes-by-usage.md) Další informace.
+Atribut byl použit pro konstrukci, pro kterou nebyl určen.  Další informace naleznete v tématu [atributy podle použití](../../windows/attributes/attributes-by-usage.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3115.
 
-```
+```cpp
 // C3115.cpp
 // compile with: /c
 #include <unknwn.h>

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8fe0802a7529551fce1c0b7242c867db52d8842
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406727"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756757"
 ---
 # <a name="compiler-error-c3072"></a>Chyba kompilátoru C3072
 
-operátor 'operator' nejde použít na instanci třídy ref class.
+operátor operator nelze použít na instanci třídy ref.
 
-použít unární "`operator` ' operátor převodu instance třídy ref class na typ popisovače
+Použijte unární operátor`operator` k převedení instance třídy ref class na typ popisovače.
 
-Typ CLR vyžaduje operátory CLR, nikoli operátory nativní (nebo standard).  Další informace najdete v tématu [Tracking Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Typ CLR vyžaduje operátory CLR, nikoli nativní operátory (nebo standardní).  Další informace naleznete v tématu [operátor sledování odkazů](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3072.
 
-```
+```cpp
 // C3072.cpp
 // compile with: /clr
 ref class R {};

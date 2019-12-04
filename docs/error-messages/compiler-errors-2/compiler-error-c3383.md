@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3383
 ms.assetid: ceb7f725-f417-4dc3-8496-0f413bb76687
-ms.openlocfilehash: 38aea188eeac90cd23d9203a53b4e630be2f115b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ceae17689cbcb9585fb3722580042187ff64a6ee
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367333"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755626"
 ---
 # <a name="compiler-error-c3383"></a>Chyba kompilátoru C3383
 
-operator new není podporovaná s/clr: safe
+klíčové slovo operator new se nepodporuje s možností/CLR: safe.
 
-Výstupní soubor **/CLR: safe** kompilace je soubor, který je prokazatelně typově bezpečný a ukazatele nejsou podporovány.
+Výstupní soubor kompilace **/clr: Safe** je soubor, který je ověřitelný jako bezpečný typ a ukazatele nejsou podporovány.
 
-Další informace najdete v tématu,
+Další informace najdete v tématu.
 
 - [/clr (kompilace modulu Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
@@ -29,7 +29,7 @@ Další informace najdete v tématu,
 
 Následující ukázka generuje C3383.
 
-```
+```cpp
 // C3383.cpp
 // compile with: /clr:safe
 int main() {

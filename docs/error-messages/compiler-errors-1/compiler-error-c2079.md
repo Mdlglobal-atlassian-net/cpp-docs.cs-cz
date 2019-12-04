@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
-ms.openlocfilehash: 68435610680e3b21415a1d9439a8133fd1e2557f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea158d8dada013f6b90d0fbe1e7502665c1c24da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391956"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757719"
 ---
 # <a name="compiler-error-c2079"></a>Chyba kompilátoru C2079
 
-'identifier' používá nedefinovanou třídu/strukturu/sjednocení "name"
+' identifier ' používá nedefinovanou třídu/strukturu/sjednocení ' name '
 
-Zadaný identifikátor je Nedefinovaná třída, struktura nebo sjednocení.
+Zadaný identifikátor je nedefinovaná třída, struktura nebo sjednocení.
 
-Tuto chybu může způsobovat anonymní sjednocení inicializace.
+Tato chyba může být způsobena inicializací anonymního sjednocení.
 
 Následující ukázka generuje C2079:
 
-```
+```cpp
 // C2079.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -32,9 +32,9 @@ int main() {
 }
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C2079b.cpp
 // compile with: /EHsc
 #include <fstream>
@@ -43,9 +43,9 @@ int main( ) {
 }
 ```
 
-C2079 může také dojít, pokud při pokusu o deklarovat objekt v zásobníku typu, jehož dopředné deklarace je jenom v oboru.
+K C2079 může také dojít, pokud se pokusíte deklarovat objekt v zásobníku typu, jehož Dopředná deklarace je pouze v oboru.
 
-```
+```cpp
 // C2079c.cpp
 class A;
 
@@ -56,9 +56,9 @@ class B {
 class A {};
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C2079d.cpp
 // compile with: /c
 class A;

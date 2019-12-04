@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2951
 ms.assetid: c6f95aa2-c894-425b-a51c-d40d70c8daa1
-ms.openlocfilehash: dbc7186edfce6cc12a38fb2fc1dda08ac4a181c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdb837f8e9a9b769d470b70b962ce63d144161e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300723"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755977"
 ---
 # <a name="compiler-error-c2951"></a>Chyba kompilátoru C2951
 
-Typ deklarace jsou povolené jenom v globálním, oboru názvů nebo třídy
+deklarace typu jsou povolené jenom na globálním oboru názvů, oboru názvů nebo třídě.
 
-Nelze deklarovat obecného nebo šablony třídy mimo globální nebo obor názvů. Pokud v zahrnutém souboru deklaracích rozvrhy generic nebo šablonu, ujistěte se, že tento soubor je v globálním oboru.
+Nelze deklarovat obecnou třídu nebo třídu šablony mimo obor názvů Global nebo Namespace. Pokud v souboru include uděláte deklarace obecných nebo šablon, ujistěte se, že je soubor zahrnutí v globálním rozsahu.
 
 Následující ukázka generuje C2951:
 
-```
+```cpp
 // C2951.cpp
 template <class T>
 class A {};
@@ -32,9 +32,9 @@ int main() {
 }
 ```
 
-C2951 může dojít také při použití obecných typů:
+C2951 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2951b.cpp
 // compile with: /clr /c
 

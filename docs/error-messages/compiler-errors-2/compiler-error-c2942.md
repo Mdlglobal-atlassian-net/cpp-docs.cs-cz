@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2942
 ms.assetid: 13abf744-8fa1-450d-886d-e5717c04956e
-ms.openlocfilehash: 8a594b9d1d8374caa972f6bfdafe5d691e634a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98bb0d9945068042e00c7c48c0304314e281fa8f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366638"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758356"
 ---
 # <a name="compiler-error-c2942"></a>Chyba kompilátoru C2942
 
-'class': typ třídy id se předefinovalo jako formální argument funkce
+' class ': typ-class-ID se předefinovalo jako formální argument funkce
 
-Rozvrhy generic nebo šablony třídy nelze použít jako formální argument. Nelze předat argument přímo do konstruktoru obecného nebo šablony třídy.
+Jako formální argument nelze použít obecnou třídu nebo třídu šablony. Argument nelze předat přímo konstruktoru třídy Generic nebo Template.
 
 Následující ukázka generuje C2942:
 
@@ -34,9 +34,9 @@ struct TC2 {};
 void f(TC2 i) {}
 ```
 
-C2942 může dojít také při použití obecných typů:
+C2942 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2942b.cpp
 // compile with: /clr /c
 generic<class T>

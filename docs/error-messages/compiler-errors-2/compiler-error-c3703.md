@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
-ms.openlocfilehash: 0b34760bc3f5b23148ce84cf590685efad2008df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1071623c8dbaef52a6a391d8858e7502de9c74b4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324633"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757992"
 ---
 # <a name="compiler-error-c3703"></a>Chyba kompilátoru C3703
 
-obslužné rutiny události: metoda obslužné rutiny události musí mít stejnou třídu úložiště jako zdroj "události.
+' obslužná rutina události ': metoda obslužné rutiny události musí mít stejnou třídu úložiště jako zdroj ' Event '.
 
-[Události](../../cpp/event-handling.md) má jinou třídu úložiště než obslužná rutina události, ke kterému je připojeno. Například tato chyba nastane, pokud obslužná rutina události je statickou členskou funkcí a události není statická. Chcete-li tuto chybu opravit, dejte události a obslužné rutiny události stejnou třídu úložiště.
+[Událost](../../cpp/event-handling.md) má jinou třídu úložiště než obslužná rutina události, ke které se připojí. Například k této chybě dochází, pokud je obslužná rutina události statická členská funkce a událost není statická. Chcete-li tuto chybu opravit, poskytněte událost a obslužné rutině události stejnou třídu úložiště.
 
 Následující ukázka generuje C3703:
 
-```
+```cpp
 // C3703.cpp
 // C3703 expected
 #include <stdio.h>

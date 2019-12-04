@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2701
+title: Chyba kompilátoru C2701
 ms.date: 11/04/2016
 f1_keywords:
 - C2701
 helpviewer_keywords:
 - C2701
 ms.assetid: 31cf2ab7-ced9-4f75-aa51-e169e20407fb
-ms.openlocfilehash: b16ddb16d98a81e53b29ff51e41d19073200a2e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aabb47d3e0e2f494b19205626861dea43ca87033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161287"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758330"
 ---
-# <a name="compiler-error-c2701"></a>Compiler Error C2701
+# <a name="compiler-error-c2701"></a>Chyba kompilátoru C2701
 
-'function': Šablona funkcí nemůže být funkce friend lokální třídy
+' function ': Šablona funkce nemůže být typu Friend lokální třídy
 
-Místní třída nemůže mít šablony funkce jako spřátelená funkce.
+Lokální třída nemůže mít funkci šablony jako funkci Friend.
 
 Následující ukázka generuje C2701:
 
-```
+```cpp
 // C2701.cpp
 // compile with: /c
 template<typename T>   // OK

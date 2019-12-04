@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3097
 ms.assetid: b24bd8f8-e04f-4fbb-be57-4feb9165572e
-ms.openlocfilehash: c1d5603ceb31313add075d334a7d27cbe878906d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a7762d03c600fed71d76a19088fb70ce311f67
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404231"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756809"
 ---
 # <a name="compiler-error-c3097"></a>Chyba kompilátoru C3097
 
-"attribute': obor atributu musí být s" sestavení: "nebo" modul: "
+' Attribute ': atribut musí být v oboru ' Assembly: ' nebo ' Module: '
 
-Globální atribut nebyl použit správně.
+Globální atribut byl použit nesprávně.
 
-Další informace najdete v tématu [uživatelem definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Další informace najdete v tématu [uživatelsky definované atributy](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3097.
 
-```
+```cpp
 // C3097.cpp
 // compile with: /clr /c
 using namespace System;

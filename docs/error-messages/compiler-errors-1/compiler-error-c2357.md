@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
-ms.openlocfilehash: 1872672e776ad13bf16be5ae69729f4f68d8f3b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce1926468bac7e44485be5c0a0944fdf12dce3d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302030"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759916"
 ---
 # <a name="compiler-error-c2357"></a>Chyba kompilátoru C2357
 
-'identifier': musí být funkce typu 'type'
+' identifier ': musí být funkce typu ' type '
 
-Kód deklaruje verzi `atexit` funkce, která se neshoduje s verzí kompilátoru deklaroval interně. Deklarovat `atexit` následujícím způsobem:
+Váš kód deklaruje verzi funkce `atexit`, která neodpovídá verzi deklarované interně kompilátorem. Deklarujte `atexit` následujícím způsobem:
 
 ```
 int __cdecl atexit(void (__cdecl *)());
 ```
 
-Další informace najdete v tématu [init_seg –](../../preprocessor/init-seg.md).
+Další informace najdete v tématu [init_seg](../../preprocessor/init-seg.md).
 
 Následující ukázka generuje C2357:
 
-```
+```cpp
 // C2357.cpp
 // compile with: /c
 // C2357 expected

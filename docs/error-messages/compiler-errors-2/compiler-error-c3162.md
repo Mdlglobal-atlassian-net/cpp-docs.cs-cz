@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3162
 ms.assetid: 0d4c4a24-1456-4191-b7d8-c38cb7b17c32
-ms.openlocfilehash: f522a2de77e03a7c5f8f8dc774d62744417344fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95cd2c4af614906da7ba2d1c4c5dd488059f970a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174286"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761800"
 ---
 # <a name="compiler-error-c3162"></a>Chyba kompilátoru C3162
 
-'type': typ odkazu, který má destruktor nelze použít jako typ statického datového člena 'member'
+' type ': typ odkazu, který má destruktor, nelze použít jako typ statického datového členu ' member '
 
-Modul common language runtime nemůže vědět, kdy spustit uživatelem definovaný destruktor, když třída také obsahuje statickou členskou funkci.
+Modul common language runtime nemůže rozpoznat, kdy se má spustit uživatelsky definovaný destruktor, pokud třída obsahuje také statickou členskou funkci.
 
-Destruktor se spustí nikdy, pokud je objekt explicitně odstraněn.
+Destruktor nebude nikdy spuštěn, dokud není objekt explicitně odstraněn.
 
-Další informace najdete v tématu,
+Další informace najdete v tématu.
 
 - [/clr (kompilace modulu Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
@@ -31,7 +31,7 @@ Další informace najdete v tématu,
 
 Následující ukázka generuje C3162.
 
-```
+```cpp
 // C3162.cpp
 // compile with: /clr /c
 ref struct A {

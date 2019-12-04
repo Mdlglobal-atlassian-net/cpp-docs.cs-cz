@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3393
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
-ms.openlocfilehash: 5147e3e406fde73a05b7069e2a9336f27b3db622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f6952de20c27a811b85694ae13892eff9231f83
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328663"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757537"
 ---
 # <a name="compiler-error-c3393"></a>Chyba kompilátoru C3393
 
-Chyba syntaxe v klauzuli omezení: 'identifier' není typ
+Chyba syntaxe v klauzuli omezení: ' identifier ' není typ
 
-Identifikátor předán omezení, který musí být typu, nebyl typu.  Další informace najdete v tématu [omezení parametrů obecných typů (C++vyhodnocovací)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Identifikátor předaný omezením, který musí být typu, nebyl typu.  Další informace najdete v tématu [omezení parametrů obecného typuC++(/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3393:
 
-```
+```cpp
 // C3393.cpp
 // compile with: /clr /c
 void MyInterface() {}

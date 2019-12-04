@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3136
 ms.assetid: c77103cd-00f7-408e-b74b-4f8562039d31
-ms.openlocfilehash: e32ffca067c3b25120301527e7a708d53001d541
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75862f3b80d617b607a7b3e735cb3e16e9a40bb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376247"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757381"
 ---
 # <a name="compiler-error-c3136"></a>Chyba kompilátoru C3136
 
-'rozhraní': rozhraní modelu COM může dědit jedině z jiného rozhraní COM, 'rozhraní' není kompatibilní se rozhraní modelu COM
+rozhraní: rozhraní COM může dědit jedině z jiného rozhraní COM, rozhraní není rozhraní COM.
 
-Rozhraní, ke které jste použili [atribut interface](../../windows/attributes/interface-attributes.md) dědí z rozhraní, které není rozhraní COM. Rozhraní modelu COM, takže v konečném důsledku dědí z `IUnknown`. Každé rozhraní, které předchází atribut rozhraní je rozhraní modelu COM.
+Rozhraní, ke kterému jste použili [atribut rozhraní](../../windows/attributes/interface-attributes.md) , dědí z rozhraní, které není rozhraním com. Rozhraní COM nakonec dědí z `IUnknown`. Jakékoli rozhraní předchází atributem rozhraní je rozhraní modelu COM.
 
 Následující příklad generuje C3136:
 
-```
+```cpp
 // C3136.cpp
 #include "unknwn.h"
 

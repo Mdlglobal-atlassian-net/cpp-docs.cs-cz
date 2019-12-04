@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: eda3910c99f4c8ea96568f2d475c5d6a1e4cdc7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 436fb112758dfdec9997ff7e6dd7ef8f9dcdc66e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174221"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761774"
 ---
 # <a name="compiler-error-c3163"></a>Chyba kompilátoru C3163
 
-'vytvořit': atributy nejsou konzistentní s předchozí deklarací.
+' CONSTRUCT ': atributy nejsou konzistentní s předchozí deklarací
 
-Atributy, které budou použity při definici v konfliktu s atributy, které se použijí k deklaraci.
+Atributy, které jsou aplikovány na definici v konfliktu s atributy, které jsou aplikovány na deklaraci.
 
-Jedním ze způsobů řešení C3163 je eliminovat atributy u dopředné deklarace. Libovolné atributy u dopředné deklarace by měla být menší než atributy v definici nebo maximálně stejná k nim.
+Jedním ze způsobů, jak vyřešit C3163, je eliminace atributů u dopředné deklarace. Všechny atributy v dopředných deklaracích by měly být menší než atributy v definici nebo, nejvíce rovny.
 
-Možnou příčinou chyby C3163 zahrnuje jazyk Microsoft zdrojového kódu poznámky (SAL). Pokud kompilujete projekt pomocí nebudou rozbaleny SAL makra **/ analyze** příznak. Program, který se zkompiluje bez čistě / analyze může vyvolat C3163, pokud se pokusíte se ji znovu zkompilovat / analyze – možnost. Další informace o SAL naleznete v tématu [poznámky SAL](../../c-runtime-library/sal-annotations.md).
+Možnou příčinou chyby C3163 je, že se jedná o jazyk Microsoft zdrojového kódu poznámek (SAL). Makra SAL se nerozšiřují, pokud projekt nezkompilujete pomocí příznaku **/analyze** . Program, který se zkompiluje čistě bez/analyze, může vyvolat C3163, pokud se pokusíte ho znovu zkompilovat s možností/Analyze. Další informace o SAL najdete v tématu [poznámky SAL](../../c-runtime-library/sal-annotations.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3163.
 
-```
+```cpp
 // C3163.cpp
 // compile with: /clr /c
 using namespace System;

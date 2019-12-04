@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
-ms.openlocfilehash: f1fad1ad18af54945ef32dadaac50a6de4dbd62f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca603eb94d5d528a7fed15e0320e1f5d88bf0629
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366378"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760873"
 ---
 # <a name="compiler-error-c2893"></a>Chyba kompilátoru C2893
 
-Nepovedlo se specializovat šablonu funkcí "název šablony.
+Nepovedlo se specializovat šablonu funkce – název šablony
 
-Kompilátor nepovedlo se specializovat šablonu funkce. Může existovat mnoho příčiny této chyby.
+Kompilátor nemohl provést specializaci šablony funkce. Tato chyba může mít mnoho příčin.
 
-Obecně platí je způsob, jak vyřešit chybu C2893 kontrolovat signatury funkce a ujistěte se, že každý typ lze vytvořit instanci.
+Obecně se způsob, jak vyřešit chybu C2893, je zkontrolovat signatura funkce a ujistit se, že je možné vytvořit instanci každého typu.
 
 ## <a name="example"></a>Příklad
 
-C2893 dochází, protože `f`pro parametr šablony `T` je rozpoznán jako `std::map<int,int>`, ale `std::map<int,int>` nemá žádný člen `data_type` (`T::data_type` nelze vytvořit instanci s `T = std::map<int,int>`.). Následující ukázka generuje C2893.
+K C2893 dochází, protože parametr šablony `f``T` je odvozen `std::map<int,int>`, ale `std::map<int,int>` nemá žádného člena `data_type` (`T::data_type` nelze vytvořit instanci s `T = std::map<int,int>`.). Následující ukázka generuje C2893.
 
-```
+```cpp
 // C2893.cpp
 // compile with: /c /EHsc
 #include<map>

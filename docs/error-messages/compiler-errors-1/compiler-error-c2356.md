@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2356
 ms.assetid: 84d5a816-9a61-4d45-9978-38e485bbf767
-ms.openlocfilehash: 0166cce6011017b8a18821666083f7c47f58b7a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e306c5a8f9175bc3c7902b20263aa2e451944182
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302537"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759929"
 ---
 # <a name="compiler-error-c2356"></a>Chyba kompilátoru C2356
 
-segment inicializace nesmí změnit průběhu překladové jednotky.
+segment inicializace se nesmí měnit během jednotky překladu.
 
 Možné příčiny:
 
-- `#pragma init_seg` předchází segmentu inicializační kód
+- `#pragma init_seg` předchází inicializačnímu kódu segmentu.
 
-- `#pragma init_seg` před jiným `#pragma init_seg`
+- `#pragma init_seg` předchází jiné `#pragma init_seg`
 
-Pokud chcete vyřešit, přesun segmentu inicializační kód na začátek modulu. Pokud musí být inicializován více oblastí, přesuňte je do samostatných modulů.
+Chcete-li problém vyřešit, přesuňte inicializační kód segmentu na začátek modulu. Pokud je nutné inicializovat více oblastí, přesuňte je na samostatné moduly.
 
 Následující ukázka generuje C2356:
 
-```
+```cpp
 // C2356.cpp
 #pragma warning(disable : 4075)
 

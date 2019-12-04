@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2923
 ms.assetid: 6b92933b-13ef-4124-99d9-b89f9fdae030
-ms.openlocfilehash: 885a3a09d43d8c3c479d11e22342487d1a1958d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3046d7009d2a54bab6d4d9acf0706335ae9d1974
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385729"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761003"
 ---
 # <a name="compiler-error-c2923"></a>Chyba kompilátoru C2923
 
-'type': 'identifikátor' není platnou šablonu argument typu pro parametr 'param'
+' type ': ' identifier ' není platným argumentem typu šablony pro parametr ' param '
 
-Seznam argumentů chybí typ potřebné k vytvoření instance šablona nebo obecná hodnota. Zkontrolujte šablona nebo obecná deklarace.
+V seznamu argumentů chybí typ potřebný k vytvoření instance šablony nebo Obecné. Ověřte šablonu nebo obecnou deklaraci.
 
 Následující ukázka generuje C2923:
 
-```
+```cpp
 // C2923.cpp
 template <class T> struct TC {};
 int x;
@@ -31,9 +31,9 @@ int main() {
 }
 ```
 
-C2923 může dojít také při použití obecných typů:
+C2923 může také nastat při použití generických typů:
 
-```
+```cpp
 // C2923b.cpp
 // compile with: /clr /c
 generic <class T> ref struct GC {};

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2243
 ms.assetid: b90065bb-d251-4ba9-8b4c-280ee13fa9c0
-ms.openlocfilehash: ded5a3d459e4b5d1412998aadbaa385864f505a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a62b1c12b94735d0383697bf7a92d12d64b21f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388858"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757797"
 ---
 # <a name="compiler-error-c2243"></a>Chyba kompilátoru C2243
 
-"typ převodu: převod z 'type1' na 'type2' existuje, ale je nedostupný
+typ převodu ' conversion ' na ' typ2 ' existuje, ale je nepřístupný
 
-Přístup k ochraně (`protected` nebo `private`) nemůže převod z ukazatele na odvozenou třídu na ukazatel na základní třídu.
+Aplikace Access Protection (`protected` nebo `private`) zabránila převodu z ukazatele na odvozenou třídu na ukazatel na základní třídu.
 
 Následující ukázka generuje C2243:
 
-```
+```cpp
 // C2243.cpp
 // compile with: /c
 class B {};
@@ -35,4 +35,4 @@ E e;
 B *p2 = &e;
 ```
 
-Základní třídy s `protected` nebo `private` přístupu nejsou dostupné pro klienty odvozené třídy. Tyto úrovně řízení přístupu slouží k označení, že je základní třídy, která by měla být viditelná klientům podrobnosti implementace. Použijte veřejnou odvození, pokud mají klienti mají přístup k implicitní převod ukazatele na odvozenou třídu na ukazatel na základní třídu odvozené třídy.
+Základní třídy s `protected` nebo `private` přístup nejsou k dispozici pro klienty odvozené třídy. Tyto úrovně řízení přístupu označují, že základní třída je podrobností implementace, které by měly být pro klienty neviditelné. Použijte veřejné odvození, pokud chcete, aby klienti odvozené třídy měli přístup k implicitnímu převodu ukazatele odvozené třídy na ukazatel na základní třídu.

@@ -6,47 +6,47 @@ f1_keywords:
 helpviewer_keywords:
 - C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
-ms.openlocfilehash: 13fb8963b33569facf62ccedfe9ce8b7bbbbfdc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82a1a3e410505be53d4356e46d5521aebb72763c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383201"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756965"
 ---
 # <a name="fatal-error-c1004"></a>Závažná chyba C1004
 
-Neočekávaný konec souboru nalezen
+našel se neočekávaný konec souboru.
 
-Kompilátor bylo dosaženo konce zdrojového souboru bez překladu konstrukci. Kód pravděpodobně chybí jeden z následujících elementů:
+Kompilátor dosáhl konce zdrojového souboru bez překladu konstrukce. V kódu může chybět jeden z následujících elementů:
 
-- Pravé složené závorky
+- Pravá složená závorka
 
 - Pravá závorka
 
-- Na závěr komentáře značky (* /)
+- Uzavírací značka komentáře (*/)
 
-- Středníkem
+- Středník
 
-Chcete-li tuto chybu vyřešit, zkontrolujte následující:
+Chcete-li tuto chybu vyřešit, ověřte následující:
 
-- Na disk výchozí nemá dostatek místa pro dočasné soubory, které vyžadují dvakrát tolik místa jako zdrojový soubor.
+- Výchozí disková jednotka nemá dostatek místa pro dočasné soubory, které vyžadují přibližně dvě místa jako zdrojový soubor.
 
-- `#if` Direktiva, která se vyhodnotí jako false chybí uzavírací `#endif` směrnice.
+- Direktiva `#if`, která je vyhodnocena jako false, nemá uzavírací direktivu `#endif`.
 
-- Zdrojový soubor nesmí končit zalomení řádku a odřádkování.
+- Zdrojový soubor nekončí návratem na začátek řádku a řádkovým kanálem.
 
 Následující ukázka generuje C1004:
 
-```
+```cpp
 // C1004.cpp
 #if TEST
 int main() {}
 // C1004
 ```
 
-Možná řešení:
+Možné řešení:
 
-```
+```cpp
 // C1004b.cpp
 #if TEST
 #endif

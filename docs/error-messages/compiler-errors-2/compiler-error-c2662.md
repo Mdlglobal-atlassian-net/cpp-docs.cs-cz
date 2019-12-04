@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: fefd523ca3b9a3406afc307150322f9d431aa730
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360337"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760449"
 ---
 # <a name="compiler-error-c2662"></a>Chyba kompilátoru C2662
 
-'function': nelze převést 'this' ukazatele z 'type1' na 'type2'
+' function ': ukazatel this nelze převést z ' typ1 ' na ' typ2 '
 
-Kompilátor nelze převést `this` ukazatel z `type1` k `type2`.
+Kompilátor nemohl převést ukazatel `this` z `type1` na `type2`.
 
-Tato chyba může být způsobena vyvoláním non -`const` členskou funkci na `const` objektu.  Možná řešení:
+Tato chyba může být způsobena voláním členské funkce, která není`const`, na objektu `const`.  Možná řešení:
 
 - Odeberte `const` z deklarace objektu.
 
-- Přidat `const` na členskou funkci.
+- Přidejte `const` do členské funkce.
 
 Následující ukázka generuje C2662:
 
-```
+```cpp
 // C2662.cpp
 class C {
 public:
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-Při kompilaci s **/CLR**, nejde volat funkci na `const` nebo `volatile` kvalifikovaný spravovaného typu. Konstantní členskou funkci spravované třídy, nelze deklarovat, proto nelze volat metody pro spravované objekty konstant.
+Při kompilaci s možností **/CLR**nelze volat funkci na `const` nebo `volatile` kvalifikovaný spravovaný typ. Nemůžete deklarovat členskou funkci const spravované třídy, takže nemůžete volat metody pro spravované objekty const.
 
-```
+```cpp
 // C2662_b.cpp
 // compile with: /c /clr
 ref struct M {
@@ -69,7 +69,7 @@ ref struct N {
 
 Následující ukázka generuje C2662:
 
-```
+```cpp
 // C2662_c.cpp
 // compile with: /c
 // C2662 expected

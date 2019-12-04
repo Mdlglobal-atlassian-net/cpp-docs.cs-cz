@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3865
 ms.assetid: 9bc62bb0-4fb8-4856-a5cf-c7cb4029a596
-ms.openlocfilehash: 846657d3598e268d78ff3c39f2bfc901756ad370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960c795fe934433e4e3cf79e4c01c49d00205b9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302017"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761488"
 ---
 # <a name="compiler-error-c3865"></a>Chyba kompilátoru C3865
 
-'calling_convention': jde použít jenom pro nativní členské funkce
+' calling_convention ': lze použít pouze pro nativní členské funkce
 
-Konvence volání byl použit na funkci, která se globální funkce nebo na spravované členskou funkci. Konvence volání jde použít jenom u nativních (není spravované) členské funkce.
+Konvence volání byla použita pro funkci, která byla buď globální funkcí, nebo na spravované členské funkci. Konvence volání se dá použít jenom u nativní (nespravované) členské funkce.
 
 Další informace najdete v tématu [konvence volání](../../cpp/calling-conventions.md).
 
 Následující ukázka generuje C3865:
 
-```
+```cpp
 // C3865.cpp
 // compile with: /clr
 // processor: x86

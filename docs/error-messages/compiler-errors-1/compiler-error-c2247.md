@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: ab1f83e2075128441cbffd2d939e3b99b45be4c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758902"
 ---
 # <a name="compiler-error-c2247"></a>Chyba kompilátoru C2247
 
-'identifier' není dostupné, protože 'class' používá "specifikátor" dědit z 'class'
+identifikátor není přístupný, protože třída používá specifikátor pro dědění z třídy.
 
-`identifier` se dědí z třídy deklarované jako s přístupem k soukromé nebo chráněné.
+`identifier` se dědí ze třídy deklarované pomocí privátního nebo chráněného přístupu.
 
 Následující ukázka generuje C2247:
 
-```
+```cpp
 // C2247.cpp
 class A {
 public:
@@ -32,11 +32,11 @@ class C : public B {} c;   // so even though C's B is public
 int j = c.i;               // C2247, i not accessible
 ```
 
-Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio .NET 2003: přístup k ovládacím prvkem chráněné členy. Chráněný člen (n) je přístupný pouze prostřednictvím funkce člena třídy (B), která dědí z třídy (A) je (n) je jejím členem.
+Tato chyba se může vygenerovat taky v důsledku práce s shodami s kompilátorem, která se dokončila pro Visual Studio .NET 2003: řízení přístupu s chráněnými členy. K chráněnému členu (n) lze přistupovat pouze prostřednictvím členské funkce třídy (B), která dědí z třídy (A), ze které je (n) členem.
 
-Pro kód, který je platný v aplikaci Visual Studio .NET 2003 a Visual Studio .NET verzí jazyka Visual C++ deklarujte člen, který chcete být funkce friend typu. Možné využít také dědění typu public.
+Pro kód, který je platný jak v rámci Visual Studio .NET 2003, tak ve verzi Visual Studio C++.NET, deklarujte člena jako přítele typu. Lze také použít dědění typu public.
 
-```
+```cpp
 // C2247b.cpp
 // compile with: /c
 // C2247 expected
@@ -57,11 +57,11 @@ void A::f() {
 }
 ```
 
-C2247 může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio .NET 2003: soukromé základní třídy nyní nedostupná. Třídu (A), která je na typ soukromé základní třídu (B) by se neměly přístupné pro typ (C), který používá jako základní třída B.
+C2247 lze také vygenerovat v důsledku práce s vyhovujícími kompilátory, které byly provedeny pro Visual Studio .NET 2003: soukromé základní třídy jsou nyní nedostupné. Třída (A), která je soukromou základní třídou typu (B), by neměla být přístupná pro typ (C), který používá B jako základní třídu.
 
-Pro kód, který je platný v aplikaci Visual Studio .NET 2003 a Visual Studio .NET verzí jazyka Visual C++ použijte operátor rozsahu.
+Pro kód, který je platný jak v jazyce Visual Studio .NET 2003, tak ve verzi Visual Studio C++.NET, použijte operátor Scope.
 
-```
+```cpp
 // C2247c.cpp
 // compile with: /c
 struct A {};

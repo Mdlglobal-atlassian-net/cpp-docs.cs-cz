@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: 8a9ec2f59f362df284e9bd5cd8df6ae986d59d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266267"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760280"
 ---
 # <a name="compiler-error-c2682"></a>Chyba kompilátoru C2682
 
-casting_operator nelze použít pro převod z 'type1' na 'type2'
+nejde použít casting_operator k převodu z typu typ1 na typ2.
 
-Operátor přetypování se pokusil převést mezi nekompatibilní typy. Například nelze použít [dynamic_cast](../../cpp/dynamic-cast-operator.md) operátor se má převést ukazatel na odkaz. `dynamic_cast` Operátor nelze použít k přetypování kvalifikátory. Všechny kvalifikátory pro typy se musí shodovat.
+Operátor přetypování se pokusil o převod mezi nekompatibilními typy. Například operátor [dynamic_cast](../../cpp/dynamic-cast-operator.md) nelze použít k převedení ukazatele na odkaz. Operátor `dynamic_cast` nelze použít k přetypování kvalifikátorů. Všechny kvalifikátory na typech se musí shodovat.
 
-Můžete použít `const_cast` odebrání atributů, jako operátor `const`, `volatile`, nebo `__unaligned`.
+Pomocí operátoru `const_cast` můžete odebrat atributy jako `const`, `volatile`nebo `__unaligned`.
 
 Následující ukázka generuje C2682:
 
-```
+```cpp
 // C2682.cpp
 class A { virtual void f(); };
 class B: public A {};
@@ -35,7 +35,7 @@ void g(A* pa) {
 
 Následující ukázka generuje C2682:
 
-```
+```cpp
 // C2682b.cpp
 // compile with: /clr
 ref struct R{};

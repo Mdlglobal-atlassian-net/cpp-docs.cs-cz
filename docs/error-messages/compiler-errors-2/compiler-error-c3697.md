@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3697
 ms.assetid: 2d3f63c4-b7f8-421d-a7a5-2bf17fd054f9
-ms.openlocfilehash: 55eadd55af8d4e6f088a0d0eb732d820242cae66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e642c744bbce5db4bb341a32769b2d9f74654044
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363684"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758057"
 ---
 # <a name="compiler-error-c3697"></a>Chyba kompilátoru C3697
 
-'kvalifikátor': Tento kvalifikátor nejde použít pro ' ^'
+' kvalifikátor ': Tento kvalifikátor nelze použít na ' ^ '
 
-Sledovací popisovač (^) byla použita k kvalifikátor, pro který nebyla určena.
+Sledovací popisovač (^) byl použit pro kvalifikátor, pro který nebyl navržen.
 
 Následující ukázka generuje C3697:
 
-```
+```cpp
 // C3697.cpp
 // compile with: /clr
 using namespace System;

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: be1051859ebbcbdc22a9b71f8c5adba2e75c4e92
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 85381b237480b86b59c33f02601a1b9dc644a5a4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344664"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761527"
 ---
 # <a name="compiler-error-c3539"></a>Chyba kompilátoru C3539
 
-'type': argument šablony nemůže být typ, který obsahuje nastavení auto.
+' type ': argument šablony nemůže být typ, který obsahuje ' auto '
 
-Typ argumentu uvedené šabloně nemůže obsahovat využití nástroje `auto` – klíčové slovo.
+Zadaný typ argumentu šablony nemůže obsahovat použití klíčového slova `auto`.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Nezadávejte argument šablony se `auto` – klíčové slovo.
+1. Nezadávejte argument šablony s klíčovým slovem `auto`.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad provede C3539.
+Následující příklad vrací C3539.
 
-```
+```cpp
 // C3539.cpp
 // Compile with /Zc:auto
 template<class T> class C{};

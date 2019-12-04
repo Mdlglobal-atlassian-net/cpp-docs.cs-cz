@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2193
+title: Chyba kompilátoru C2193
 ms.date: 11/04/2016
 f1_keywords:
 - C2193
 helpviewer_keywords:
 - C2193
 ms.assetid: 9813e853-d581-4f51-bb75-4e242298a844
-ms.openlocfilehash: 1eb1145b7927733ab82253632847da90542250fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25ebfc73fb46eca3a27875075af2d4ed46ed2fef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302615"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758551"
 ---
-# <a name="compiler-error-c2193"></a>Compiler Error C2193
+# <a name="compiler-error-c2193"></a>Chyba kompilátoru C2193
 
-'identifier': už je v segmentu
+' identifier ': již v segmentu
 
-Funkci byl umístěn do dvou různých segmentů pomocí `alloc_text` a `code_seg` direktivy pragma.
+Funkce byla vložena do dvou různých segmentů pomocí direktivy pragma `alloc_text` a `code_seg`.
 
 Následující ukázka generuje C2193:
 
-```
+```cpp
 // C2193.cpp
 // compile with: /c
 extern "C" void MYFUNCTION();

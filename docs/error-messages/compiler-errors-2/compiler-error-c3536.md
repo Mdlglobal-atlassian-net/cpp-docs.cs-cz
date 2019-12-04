@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-ms.openlocfilehash: a16c5bd46d806d09861d5734b637c2c9d9b2f9d0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a140847b642ac2437b67aa957328c3b8fbfc592d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345493"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761566"
 ---
 # <a name="compiler-error-c3536"></a>Chyba kompilátoru C3536
 
-'symbol': nejde použít, dokud není inicializován
+symbol: nejde použít dřív, než se inicializuje.
 
-Zadaný symbol nejde používat před inicializací. V praxi to znamená, že proměnné nelze inicializovat.
+Uvedený symbol nelze použít před inicializací. V praxi to znamená, že proměnnou nelze použít k inicializaci samotného.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Proměnná se sebou samým, nebyl inicializován.
+1. Neinicializujte proměnnou se sebou samým.
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu vrací C3536, protože každá proměnná je inicializována sám se sebou.
+Následující příklad vrátí C3536, protože každá proměnná je inicializována se sebou samým.
 
-```
+```cpp
 // C3536.cpp
 // Compile with /Zc:auto
 int main()

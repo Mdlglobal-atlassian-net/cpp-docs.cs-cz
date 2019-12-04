@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
-ms.openlocfilehash: a9fe72501152891d3f82567f09922dda9a9b711a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b52f58f47027d88d9b0e150ebd2bf4588161553
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214943"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758122"
 ---
 # <a name="compiler-error-c3670"></a>Chyba kompilátoru C3670
 
-'override': nelze přepsat nepřístupnou základní třídu metoda "method"
+override: nejde přepsat nepřístupnou metodu základní třídy Method.
 
-Přepsání lze provádět pouze na funkce, jejichž úroveň přístupu je k dispozici v odvozeném typu. Další informace najdete v tématu [explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Přepsání může probíhat pouze na funkci, jejíž úroveň přístupu je k dispozici v odvozeném typu. Další informace najdete v tématu [Explicitní přepsání](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Následující ukázka generuje C3670:
 
-```
+```cpp
 // C3670.cpp
 // compile with: /clr /c
 public ref class C {

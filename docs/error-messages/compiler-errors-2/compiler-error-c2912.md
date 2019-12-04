@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2912
 ms.assetid: bd55cecd-ab1a-4636-ab8a-a00393fe7b3d
-ms.openlocfilehash: b7f87ae2df5350fcfb2b7a662f517d8d7bd51ef8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 254252bfd21aa28c87810f1e21b4864e2775a71b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408391"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761082"
 ---
 # <a name="compiler-error-c2912"></a>Chyba kompilátoru C2912
 
-explicitní specializace "deklarace" není specializací šablony funkcí
+deklarace explicitní specializace není specializací šablony funkce.
 
-Nejde specializovat nešablonové funkce.
+Nemůžete specializovat funkci, která není šablonou.
 
 Následující ukázka generuje C2912:
 
-```
+```cpp
 // C2912.cpp
 // compile with: /c
 void f(char);
@@ -29,9 +29,9 @@ template<> void f(char);   // C2912
 template<class T> void f(T);   // OK
 ```
 
-K této chybě také se vygeneruje jako výsledek kompilátoru prací, které bylo provedeno v aplikaci Visual Studio .NET 2003: pro každý explicitní specializace, je nutné vybrat parametry explicitní specializace tak, aby odpovídaly parametrům primární Šablona.
+Tato chyba se taky vygeneruje v důsledku práce s vyhovujícími kompilátory, které se provedly v sadě Visual Studio .NET 2003: pro každou explicitní specializaci musíte zvolit parametry explicitní specializace, třeba to, že odpovídají parametrům primární. vzhledu.
 
-```
+```cpp
 // C2912b.cpp
 class CF {
 public:

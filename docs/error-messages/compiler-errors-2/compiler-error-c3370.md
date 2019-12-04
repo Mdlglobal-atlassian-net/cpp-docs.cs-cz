@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3370
 ms.assetid: ee6d4c85-78fc-42b2-836e-5cc491a3b2ba
-ms.openlocfilehash: 0dbc95fcb26354b0f963d1844ddd6a43783c532a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c1a9e4e099fc33dd585e5cdbffa2bbb8ea36987
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300606"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755587"
 ---
 # <a name="compiler-error-c3370"></a>Chyba kompilátoru C3370
 
-"možnost idl_module name": možnost idl_module ještě není definovaná
+název idl_module: idl_module ještě není definovaný.
 
-Než budete moct použít [možnost idl_module](../../windows/idl-module.md) zadat vstupní bod v knihovně DLL, je nutné nejprve použít `idl_module` zadat název knihovny DLL.
+Než budete moci použít [idl_module](../../windows/idl-module.md) k určení vstupního bodu v knihovně DLL, je nutné nejprve pomocí `idl_module` zadat název knihovny DLL.
 
 Následující ukázka generuje C3370:
 
-```
+```cpp
 // C3370.cpp
 [module(name=MyLibrary)];
 // uncomment the following line to resolve the error

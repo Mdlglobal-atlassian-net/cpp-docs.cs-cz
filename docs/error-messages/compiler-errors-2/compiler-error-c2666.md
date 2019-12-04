@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386873"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755990"
 ---
 # <a name="compiler-error-c2666"></a>Chyba kompilátoru C2666
 
-'identifier': číslo přetížení má podobné převody
+' identifier ': počet přetížení má podobné převody
 
-Přetížené funkce nebo operátor je nejednoznačný.   Seznam formálních parametrů může být příliš podobné pro kompilátor, aby se vyřešit nejednoznačnost.  Chcete-li vyřešit tuto chybu, je nutné explicitně přetypován jeden nebo více skutečných parametrů.
+Přetížená funkce nebo operátor je nejednoznačná.   Seznam formálních parametrů může být pro kompilátor pro vyřešení nejednoznačnosti příliš podobný.  Chcete-li tuto chybu vyřešit, explicitně přetypování jednoho nebo více skutečných parametrů.
 
 Následující ukázka generuje C2666:
 
-```
+```cpp
 // C2666.cpp
 struct complex {
    complex(double);
@@ -35,19 +35,19 @@ int main() {
 }
 ```
 
-Tato chyba může být také generovány jako důsledek kompilátoru prací, které bylo provedeno pro Visual Studio .NET 2003:
+Tato chyba se může vygenerovat taky v důsledku práce s shodami s kompilátorem, která se dokončila pro Visual Studio .NET 2003:
 
-- binární operátory a uživatelem definované převody na typy ukazatelů
+- binární operátory a uživatelsky definované převody na typy ukazatelů
 
-- převod kvalifikace není stejná jako identita převodu
+- převod kvalifikace není stejný jako převod identity.
 
-Pro binární operátory \<, >, \<= a > =, předaný parametr se teď implicitně převést na typ operandu Pokud typ parametru definuje operátor uživatelsky definovaný převod pro převod na typ operandu. Je nyní potenciál nejednoznačnost.
+Pro binární operátory \<, >, \<= a > =, předaný parametr je nyní implicitně převeden na typ operandu, pokud typ parametru definuje uživatelsky definovaný operátor převodu pro převod na typ operandu. Teď je potenciální nejednoznačnost.
 
-Kód, který je platný v aplikaci Visual Studio .NET 2003 a Visual Studio .NET verzí jazyka Visual C++ volání operátoru třídy explicitně pomocí syntaxe funkce.
+Pro kód, který je platný jak v jazyce Visual Studio .NET 2003 a Visual Studio .NET verze Visual C++Studio .NET, volejte operátor třídy explicitně pomocí syntaxe funkce.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // C2666b.cpp
 #include <string.h>
 #include <stdio.h>
@@ -106,7 +106,7 @@ int main()
 
 Následující ukázka generuje C2666
 
-```
+```cpp
 // C2666c.cpp
 // compile with: /c
 

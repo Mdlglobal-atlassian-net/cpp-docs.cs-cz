@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
-ms.openlocfilehash: 264ad52a10c6cf19d1105561f1140cf2d3e2f8e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1433faade0a41ad8b63a3b40cb5d02f724bde658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378840"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760771"
 ---
 # <a name="compiler-error-c2897"></a>Chyba kompilátoru C2897
 
-destruktor nebo finalizační metoda nemůže být šablona – funkce
+destruktor nebo finalizační metoda nemůže být šablonou funkce.
 
-Destruktory a finalizační metody nemohou být přetíženy, tak deklarace destruktoru jako šablona (které by se definovat sadu destruktory) není povolený.
+Destruktory nebo finalizační metody nemohou být přetíženy, takže deklarace destruktoru jako šablony (která by definovala sadu destruktorů) nejsou povoleny.
 
 Následující ukázka generuje C2897:
 
@@ -25,7 +25,7 @@ Následující ukázka generuje C2897:
 
 Následující ukázka generuje C2897.
 
-```
+```cpp
 // C2897.cpp
 // compile with: /c
 class X {
@@ -38,7 +38,7 @@ public:
 
 Následující ukázka generuje C2897.
 
-```
+```cpp
 // C2897_b.cpp
 // compile with: /c /clr
 ref struct R2 {

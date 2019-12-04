@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2650
 ms.assetid: 49a8ac6e-aa6d-4616-917c-a3cfcdbad5a4
-ms.openlocfilehash: c7cbc12bff4e00613032a9d28b5be7533dce9612
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f71996c6d04d8be2101762fb0fb17634e6b25a1a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152556"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756133"
 ---
 # <a name="compiler-error-c2650"></a>Chyba kompilátoru C2650
 
-'operator': nemůže být virtuální funkce
+' operator ': nemůže být virtuální funkce
 
-A `new` nebo `delete` operátor deklarován `virtual`. Tyto operátory jsou `static` členské funkce a nemůže být `virtual`.
+Operátor `new` nebo `delete` je deklarovaný `virtual`. Tyto operátory jsou `static` členských funkcí a nelze je `virtual`.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2650:
 
-```
+```cpp
 // C2650.cpp
 // compile with: /c
 class A {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3347
 ms.assetid: e939ad29-0b78-4681-9618-9bdae5675cee
-ms.openlocfilehash: 8b1c4ea76f65b9f07a96177d2e481d1abeba0927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f62d66148aa75040f7bab5ea69931d2ef9c474a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300635"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755613"
 ---
 # <a name="compiler-error-c3347"></a>Chyba kompilátoru C3347
 
-'arg': není zadaný požadovaný argument v atributu možnost idl_module
+' ARG ': povinný argument není zadán v atributu idl_module
 
-Požadovaný argument nebyl předán [možnost idl_module](../../windows/idl-module.md) atribut.
+Do atributu [idl_module](../../windows/idl-module.md) nebyl předán povinný argument.
 
 Následující ukázka generuje C3347:
 
-```
+```cpp
 // C3347.cpp
 // compile with: /c
 [module(name="xx")];

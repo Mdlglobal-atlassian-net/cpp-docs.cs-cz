@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
-ms.openlocfilehash: 3b56aae115b1a1721f3f8a8688e36b25edc7f33f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb2a847c24b2a0b7829008793f311459e76587f4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328728"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758343"
 ---
 # <a name="compiler-error-c3388"></a>Chyba kompilátoru C3388
 
-'type': nelze použít jako omezení; přepokládá se: ref class' Chcete pokračovat s analýzou.
+Type: není povolené jako omezení, za předpokladu, že ref class bude pokračovat v analýze.
 
-Byla zadána omezení u obecného typu, ale nebyl správně zadán omezení. Zobrazit [omezení parametrů obecných typů (C++vyhodnocovací)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Další informace.
+Pro obecný typ bylo zadáno omezení, ale omezení nebylo zadáno správně. Další informace najdete v tématu [omezení proC++parametry obecného typu (/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3388.
 
-```
+```cpp
 // C3388.cpp
 // compile with: /clr /c
 interface class AA {};

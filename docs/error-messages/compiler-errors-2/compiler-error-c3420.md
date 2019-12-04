@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3420
 ms.assetid: 99b53c77-f36b-4574-9199-b53111becccb
-ms.openlocfilehash: 3db109598ce0741ca34a230d8925994543bcb5ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e165a0c181bc27adebe75111050f49130305693
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182454"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756250"
 ---
 # <a name="compiler-error-c3420"></a>Chyba kompilátoru C3420
 
-"finalizační metody": finalizační metoda nemůže být virtuální
+"finalizační metoda": finalizační metoda nemůže být virtuální.
 
-Finalizační metody lze volat pouze jiné prakticky z jeho nadřazeného typu. Proto jedná se o chybu deklarovat virtuální finalizační metodu.
+Finalizační metodu lze volat pouze v nadřazeném typu, který není prakticky prakticky. Proto je chyba deklarovat virtuální finalizační metodu.
 
-Další informace najdete v tématu [destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C++vyhodnocovací)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Další informace naleznete v tématu [destruktory a finalizační metody v tématu How to: Define and spotřebovávají Classes andC++Structs (/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3420.
 
-```
+```cpp
 // C3420.cpp
 // compile with: /clr /c
 ref class R {

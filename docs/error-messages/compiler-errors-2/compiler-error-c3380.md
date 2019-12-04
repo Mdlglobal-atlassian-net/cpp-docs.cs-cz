@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3380
 ms.assetid: 86f1f4ec-4ad8-4a1a-9b6c-2d9b6129df6b
-ms.openlocfilehash: 516690f2524d48e7abbf7546592c6346e92c3e2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e26b4b1af8ee3c078f3eae3c0cb6a2677c642c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367444"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761878"
 ---
 # <a name="compiler-error-c3380"></a>Chyba kompilátoru C3380
 
-'class': Neplatné sestavení přístup specifikátor - 'public' nebo 'private' jsou povolené jenom
+' class ': Neplatný specifikátor přístupu k sestavení – jsou povoleny pouze ' Public ' nebo ' Private '
 
-Při použití u spravované třídy nebo struktury, [veřejné](../../cpp/public-cpp.md) a [privátní](../../cpp/private-cpp.md) klíčová slova označuje, zda třída bude vystavená prostřednictvím metadata sestavení. Pouze `public` nebo `private` lze použít na třídu v programu kompilovaného s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+Při použití na spravovanou třídu nebo strukturu označují klíčová slova [Public](../../cpp/public-cpp.md) a [Private](../../cpp/private-cpp.md) , zda bude třída vystavena prostřednictvím metadat sestavení. U třídy v programu zkompilovaném pomocí [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)lze použít pouze `public` nebo `private`.
 
-`ref` a `value` klíčová slova, při použití s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), označení, že třída je spravovaná (naleznete v tématu [třídy a struktury](../../extensions/classes-and-structs-cpp-component-extensions.md)).
+Klíčová slova `ref` a `value`, pokud se používají s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), označují, že třída je spravovaná (viz [třídy a struktury](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
 Následující ukázka generuje C3380:
 
-```
+```cpp
 // C3380_2.cpp
 // compile with: /clr
 protected ref class A {   // C3380

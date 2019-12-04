@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2678
 ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
-ms.openlocfilehash: 9055210401e14eeb9fdb88266870ac8fe5cbd496
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 390752d5d34685afc8b5fc5401fd75585bb48dd0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395388"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760332"
 ---
 # <a name="compiler-error-c2678"></a>Chyba kompilátoru C2678
 
-binární 'operátor': definován žádný operátor, který by zpracovával levý operand typu 'type' (nebo neexistuje žádný přijatelný převod)
+binární operátor: není definovaný žádný operátor, který by přebírají levý operand typu Type (nebo neexistuje žádný přijatelný převod).
 
 Chcete-li operátor použít, je třeba jej přetížit pro daný typ nebo definovat převod na typ, pro který je operátor definován.
 
 ## <a name="example"></a>Příklad
 
-C2678 může dojít, pokud levý operand je určen const, ale je operátor definován se nekonstantní argument.
+K C2678 může dojít, když je levý operand kvalifikován jako const, ale operátor je definován pro převzetí argumentu, který není const.
 
-Následující ukázka generuje C2678 a ukazuje, jak ho opravit:
+Následující ukázka generuje C2678 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C2678a.cpp
 // Compile by using: cl /EHsc /W4 C2678a.cpp
 struct Combo {
@@ -49,11 +49,11 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-C2678 může také dojít, pokud připnete nativní člen není před voláním členské funkce v něm.
+K C2678 může dojít také v případě, že před voláním členské funkce připnout nativní člen.
 
-Následující ukázka generuje C2678 a ukazuje, jak ho opravit.
+Následující ukázka generuje C2678 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C2678.cpp
 // compile with: /clr /c
 struct S { int _a; };

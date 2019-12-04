@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2637
 ms.assetid: 58d94447-eb96-4d8f-a690-dd78d322462e
-ms.openlocfilehash: 4231a811911fdf600b47962e929f6f3cff1f1bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17bd95cf1727d058e0cbd9e3dfb93c500da9fb5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395453"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758252"
 ---
 # <a name="compiler-error-c2637"></a>Chyba kompilátoru C2637
 
-'identifier': nejdou upravovat ukazatele na datové členy
+' identifier ': nelze upravovat ukazatele na datové členy
 
-Ukazatel na datový člen nemůže mít konvenci volání. Pokud chcete vyřešit, odeberte konvence volání nebo deklarovat ukazatel na členskou funkci.
+Ukazatel na datový člen nemůže mít konvenci volání. Chcete-li problém vyřešit, buď odeberte konvenci volání, nebo deklarujte ukazatel na členskou funkci.
 
 Následující ukázka generuje C2637:
 
-```
+```cpp
 // C2637.cpp
 // compile with: /c
 struct S {};

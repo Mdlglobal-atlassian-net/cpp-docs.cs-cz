@@ -1,19 +1,19 @@
 ---
-title: Compiler Error C2259
+title: Chyba kompilátoru C2259
 ms.date: 11/04/2016
 f1_keywords:
 - C2259
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447378"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758785"
 ---
-# <a name="compiler-error-c2259"></a>Compiler Error C2259
+# <a name="compiler-error-c2259"></a>Chyba kompilátoru C2259
 
 'třída' : instanci abstraktní třídy nelze vytvořit
 
@@ -21,11 +21,11 @@ Kód deklaruje instanci abstraktní třídy nebo struktury.
 
 Instanci třídy nebo struktury s jednou nebo více čistě virtuálními funkcemi nelze vytvořit. Chcete-li vytvořit objekty odvozené třídy, musí odvozená třída přepsat všechny čistě virtuální funkce.
 
-Další informace najdete v tématu [implicitně abstraktní třídy](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
+Další informace naleznete v tématu [implicitně abstraktní třídy](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).
 
 Následující ukázka generuje C2259:
 
-```
+```cpp
 // C2259.cpp
 // compile with: /c
 class V {
@@ -50,11 +50,11 @@ Existují dvě možná řešení problému:
 
 - Přiřaďte název implementované metody k názvu rozhraní použitím operátoru vyhodnocení rozsahu pro metody rozhraní implementované v odvozené třídě.
 
-C2259 může dojít v důsledku prací, které bylo provedeno v sadě Visual Studio 2005 **/Zc: wchar_t** je teď ve výchozím. V takovém případě může být C2599 vyřešit buď kompilací s **/Zc:wchar_t-**, chcete-li získat chování z předchozích verzí, nebo lépe aktualizací typů tak, aby byly kompatibilní. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+K C2259 může také docházet v důsledku práce s vyhovujícími změnami, které byly provedeny v sadě Visual Studio 2005, **/Zc: wchar_t** je teď ve výchozím nastavení zapnutá. V této situaci lze C2599 vyřešit sestavením pomocí funkce **/Zc: wchar_t-** , aby bylo možné získat chování z předchozích verzí nebo nejlépe pomocí aktualizace vašich typů, aby byly kompatibilní. Další informace naleznete v tématu [/Zc: wchar_t (Wchar_t je nativní typ)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 Následující ukázka generuje C2259:
 
-```
+```cpp
 // C2259b.cpp
 // compile with: /c
 #include <windows.h>
@@ -92,7 +92,7 @@ MyClass4 y;
 
 Následující ukázka generuje C2259:
 
-```
+```cpp
 // C2259c.cpp
 // compile with: /clr
 interface class MyInterface {

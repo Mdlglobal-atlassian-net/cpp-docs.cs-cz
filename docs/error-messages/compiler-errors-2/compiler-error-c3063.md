@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3063
 ms.assetid: 0ecf6f1f-e4a7-487a-9fd5-79d8ac470001
-ms.openlocfilehash: 9e53d9fe273a392695212df6dbeb679822a39068
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c52a0a4c4255eeed5f49a7e6c1e86a1f64b8ad77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404211"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755652"
 ---
 # <a name="compiler-error-c3063"></a>Chyba kompilátoru C3063
 
-operátor 'operator': všechny operandy musí mít stejný typ výčtu
+operátor operator: všechny operandy musí mít stejný typ výčtu.
 
-Při použití operátorů na enumerátorech, oba operandy musí být typu výčtu. Další informace najdete v tématu [jak: Definice a používání výčtů v C++vyhodnocovací](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
+Při použití operátorů u enumerátorů musí být oba operandy typu výčtu. Další informace naleznete v tématu [How to: Define and spotřebovávají výčty v C++/CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3063 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3063 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3063.cpp
 // compile with: /clr
 enum class E { a, b } e, mask;

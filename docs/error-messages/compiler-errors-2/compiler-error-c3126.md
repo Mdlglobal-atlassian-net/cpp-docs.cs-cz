@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3126
 ms.assetid: e72658a3-5d85-4a31-89a4-dbc3d475973d
-ms.openlocfilehash: 92f01bd9a04d6350b348d734281855bb86b350d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b8901ce9914f35d4cd219f4d51477582fa676a8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300658"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760722"
 ---
 # <a name="compiler-error-c3126"></a>Chyba kompilátoru C3126
 
-nejde definovat sjednocení "sjednocení" uvnitř spravovaného typu 'type'
+sjednocení Union nejde definovat ve spravovaném typu Type.
 
-Nejde definovat sjednocení uvnitř spravovaného typu.
+Sjednocení nelze definovat v rámci spravovaného typu.
 
 Následující ukázka generuje C3126:
 
-```
+```cpp
 // C3126_2.cpp
 // compile with: /clr /c
 ref class Test

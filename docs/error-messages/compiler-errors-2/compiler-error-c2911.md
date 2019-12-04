@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2911
 ms.assetid: 83c7c01a-ab6a-4179-9fb0-289a9ec8d44e
-ms.openlocfilehash: 56977f481a77c1f5865bec5d6ecc01c99d8224cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59061ab8126e3ba45c0b456bb4428652cab8a7e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408469"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761098"
 ---
 # <a name="compiler-error-c2911"></a>Chyba kompilátoru C2911
 
-'member': nelze deklarovat nebo definovat v aktuálním rozsahu.
+member: nejde deklarovat nebo definovat v aktuálním oboru.
 
-Uvnitř oboru názvů, třídy nebo funkce lze definovat pouze členy stejný obor názvů, třídy nebo funkce nebo člena, který je uzavřen ve stejný obor názvů, třídy nebo funkce.
+V rámci oboru názvů, třídy nebo funkce můžete definovat pouze člena stejného oboru názvů, třídy nebo funkce nebo člena, který je uzavřen stejným oborem názvů, třídou nebo funkcí.
 
 Následující ukázka generuje C2911:
 
-```
+```cpp
 // C2911.cpp
 struct A;
 

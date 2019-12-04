@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3070
 ms.assetid: ac88584d-40a6-4176-90f3-2371c3c935f2
-ms.openlocfilehash: 3825e9e77564af9c40bc08aff560cdf533f2b5c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d97550560e12ef9778553a809e02c1fb0d2d8b19
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406740"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758200"
 ---
 # <a name="compiler-error-c3070"></a>Chyba kompilátoru C3070
 
-'property': vlastnost nemá metodu set.
+' Property ': vlastnost nemá metodu ' set '
 
-Metody přístupový objekt set vlastnosti nebyla definována. Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md).
+Metoda set přístupového objektu vlastnosti nebyla definována. Další informace najdete v tématu [vlastnost](../../extensions/property-cpp-component-extensions.md).
 
 Následující ukázka generuje C3070:
 
-```
+```cpp
 // C3070.cpp
 // compile with: /clr
 ref class R {

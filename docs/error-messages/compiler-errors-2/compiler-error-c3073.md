@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
-ms.openlocfilehash: 8a4a2011124056af7064c8241450e1f3613776a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b53e704c14746579a32550726364c062a9ade6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406701"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756744"
 ---
 # <a name="compiler-error-c3073"></a>Chyba kompilátoru C3073
 
-'type': Třída ref class nemá žádné uživatelem definovaného kopírovacího konstruktoru
+' type ': třída ref class nemá uživatelsky definovaný kopírovací konstruktor.
 
-V [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) kompilace, že kompilátor nevygeneruje kopírovacího konstruktoru pro typ odkazu. V žádném **/CLR** kompilace, je nutné definovat vlastní kopírovacího konstruktoru pro typ odkazu Pokud očekáváte, že instance typu, které se mají zkopírovat.
+V kompilaci [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) Kompilátor negeneruje kopírovací konstruktor pro odkazový typ. V jakékoli kompilaci **/CLR** musíte definovat vlastní konstruktor kopírování pro typ odkazu, pokud očekáváte, že se má zkopírovat instance typu.
 
-Další informace najdete v tématu [C++ – sémantika zásobníku pro odkazové typy](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Další informace naleznete v tématu [ C++ sémantika zásobníku pro odkazové typy](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C3073.
 
-```
+```cpp
 // C3073.cpp
 // compile with: /clr
 ref class R {

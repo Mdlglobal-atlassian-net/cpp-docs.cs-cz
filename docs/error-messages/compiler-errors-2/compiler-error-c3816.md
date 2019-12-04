@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3816
 ms.assetid: 2e52cc7f-e31c-41a3-8d6f-9f5fab3648c0
-ms.openlocfilehash: d362480b3380fe4576ef56b8ca76dfa10eaa1408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e31138d50676c312028e35b480cc682dc146a43
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384280"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757121"
 ---
 # <a name="compiler-error-c3816"></a>Chyba kompilátoru C3816
 
-"deklarace" byla dříve deklarované nebo definované pomocí jiné spravované nebo WinRTmodifier
+deklarace se dřív deklarovala nebo definovala s jinou spravovanou nebo WinRTmodifier.
 
-Dopředná deklarace a skutečná deklarace vyžadují, aby existovat žádné konflikty nebo nekonzistence v deklaraci atributy.
+Dopředná deklarace a skutečná deklarace vyžadují, aby v deklaraci atributů nebyly žádné konflikty nebo nekonzistence.
 
-Následující ukázka generuje C3816 a ukazuje, jak ho opravit:
+Následující ukázka generuje C3816 a ukazuje, jak ji opravit:
 
-```
+```cpp
 // C3816a.cpp
 // compile with: /clr /c
 class C1;

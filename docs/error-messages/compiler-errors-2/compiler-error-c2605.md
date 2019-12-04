@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2605
 ms.assetid: a0e6f132-5acf-4e19-b277-ddf196d182bf
-ms.openlocfilehash: c1a3f1132edb90e119d97061fbbfb293d364ef3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfa221500d27e71cdbe1ab581eec346c0f268b66
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215223"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737878"
 ---
 # <a name="compiler-error-c2605"></a>Chyba kompilátoru C2605
 
-"name": Tato metoda je rezervovaný v rámci spravované nebo WinRT třídy
+Name: Tato metoda je vyhrazená v rámci spravované třídy nebo třídy WinRT.
 
-Některé názvy jsou vyhrazené pro vnitřní funkce kompilátoru.  Další informace najdete v tématu [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Některé názvy jsou vyhrazeny kompilátorem pro interní funkce.  Další informace naleznete v tématu [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2605.
 
-```
+```cpp
 // C2605.cpp
 // compile with: /clr /c
 ref class R {

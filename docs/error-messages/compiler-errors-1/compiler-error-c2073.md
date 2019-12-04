@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2073
 ms.assetid: 57908234-be7a-4ce9-b0a7-8b1ad621865e
-ms.openlocfilehash: 2b45d512224ec32459e6da040a6abb0211278e78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 545b2b24d3bfe5a36c5554dfa898d17b05067c3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303317"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757732"
 ---
 # <a name="compiler-error-c2073"></a>Chyba kompilátoru C2073
 
-'identifier': elementy částečně inicializovaného pole musí mít výchozí konstruktor
+' identifier ': elementy částečně inicializovaného pole musí mít výchozí konstruktor
 
-Pro pole uživatelem definované typy nebo konstanty bylo zadáno příliš málo inicializátory. Pokud explicitních inicializátorů a jeho odpovídajícího konstruktoru nejsou určeny pro člena pole, je nutné zadat výchozí konstruktor.
+Pro pole uživatelsky definovaných typů nebo konstant bylo zadáno příliš málo inicializátorů. Pokud pro člena pole není zadán explicitní inicializátor a jeho odpovídající konstruktor, je nutné zadat výchozí konstruktor.
 
 Následující ukázka generuje C2073:
 
-```
+```cpp
 // C2073.cpp
 class A {
 public:
@@ -30,7 +30,7 @@ public:
 A a[3] = { A(1), A(2) };   // C2073, no default constructor
 ```
 
-```
+```cpp
 // C2073b.cpp
 // compile with: /c
 class B {
