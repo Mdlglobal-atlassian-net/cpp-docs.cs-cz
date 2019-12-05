@@ -8,22 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: b9efac6f729a78db945ff3bd9ab16ebe315b7a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266956"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857278"
 ---
-# <a name="stdcall"></a>__stdcall
+# <a name="__stdcall"></a>__stdcall
 
-**Microsoft Specific**
-
-**__Stdcall** konvence volání se používá pro volání funkce rozhraní Win32 API. Volaný vyčistí zásobník, aby mohl kompilátor `vararg` funkce **__cdecl**. Funkce, které používají konvenci volání k vyžadování prototypu funkce.
+Konvence volání **__stdcall** slouží k volání funkcí Win32 API. Volaný vyčistí zásobník, takže kompilátor vytvoří `vararg` Functions **__cdecl**. Funkce, které používají konvenci volání k vyžadování prototypu funkce. Modifikátor **__stdcall** je specifický pro společnost Microsoft.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *Návratový typ*  **\_ \_stdcall** *název funkce*[**(** *seznam argumentů* **)** ]
+> *návratový typ* **\_\_STDCALL** *– název funkce*[ **(** *argument-seznam* **)** ]
 
 ## <a name="remarks"></a>Poznámky
 
@@ -32,20 +30,20 @@ Následující seznam ukazuje implementaci této konvence volání.
 |Prvek|Implementace|
 |-------------|--------------------|
 |Pořadí předávání argumentů|Zprava doleva.|
-|Konvence předávání argumentů|Podle hodnoty Pokud je předán typ ukazatele nebo odkazu.|
+|Konvence předávání argumentů|Podle hodnoty, pokud je předán typ ukazatele nebo odkazu.|
 |Odpovědnost za údržbu zásobníku|Volaná funkce vezme argumenty ze zásobníku.|
-|Konvence pro vzhled názvu|Podtržítko (_) je předponou názvu. Následuje název zavináč (@) následovaným počtem bajtů (v desítkové soustavě) v seznamu argumentů. Proto se funkce deklarovaná jako `int func( int a, double b )` upravena takto: `_func@12`|
+|Konvence pro vzhled názvu|Podtržítko (_) je součástí předpony názvu. Následuje je zakončen symbolem (@) následovaným počtem bajtů (v desítkové soustavě) v seznamu argumentů. Proto je funkce deklarovaná jako `int func( int a, double b )` upravena takto: `_func@12`|
 |Konvence pro posunutí|Žádné|
 
-[/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) určuje – možnost kompilátoru **__stdcall** pro všechny funkce, které nejsou explicitně deklarovány pomocí jiné konvence volání.
+Možnost kompilátoru [/GZ](../build/reference/gd-gr-gv-gz-calling-convention.md) Určuje **__stdcall** pro všechny funkce, které nejsou explicitně deklarovány s jinou konvencí volání.
 
-Z důvodu kompatibility s předchozími verzemi **_stdcall** je synonymum pro **__stdcall** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadat.
+Z důvodu kompatibility s předchozími verzemi je **_stdcall** synonymem pro **__stdcall** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
-Funkce deklarované pomocí **__stdcall** modifikátor návratové hodnoty stejným způsobem jako funkce deklarovaná pomocí [__cdecl](../cpp/cdecl.md).
+Funkce deklarované pomocí modifikátoru **__stdcall** vrací hodnoty stejným způsobem jako funkce deklarované pomocí [__cdecl](../cpp/cdecl.md).
 
-Na ARM a x64 procesory, **__stdcall** je přijato a ignorováno kompilátory; v ARM a x64 architektur, podle úmluvy argumenty předány v registrech, pokud je to možné a další argumenty jsou předány v zásobníku.
+V procesorech ARM a x64 je **__stdcall** přijat a ignorován kompilátorem; v architekturách ARM a x64 jsou podle úmluvy předány argumenty v registrech, pokud je to možné, a další argumenty jsou předány do zásobníku.
 
-U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice. Při této definici třídy
+U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice. Při této definici třídy,
 
 ```cpp
 struct CMyClass {
@@ -67,7 +65,7 @@ void __stdcall CMyClass::mymethod() { return; }
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu, využívání **__stdcall** výsledky ve všech `WINAPI` typů funkcí jako standardní volání:
+V následujícím příkladu použití **__stdcall** má za následek, že jsou všechny typy funkcí `WINAPI` zpracovávány jako standardní volání:
 
 ```cpp
 // Example of the __stdcall keyword

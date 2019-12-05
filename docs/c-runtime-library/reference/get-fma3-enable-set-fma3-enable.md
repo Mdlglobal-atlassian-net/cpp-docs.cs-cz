@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-ms.openlocfilehash: e18db90779ed59a6ca6976f69a5993d94d61c6bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dee75bf5b16b5fe5b619444f7f2736010bb42a84
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955937"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857804"
 ---
 # <a name="_get_fma3_enable-_set_fma3_enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
@@ -51,7 +51,7 @@ Nenulová hodnota, pokud jsou povoleny implementace FMA3 funkce knihovny plovouc
 
 ## <a name="remarks"></a>Poznámky
 
-Pomocí funkce **_set_FMA3_enable** povolíte nebo zakážete použití instrukcí FMA3 ve funkcích transcendentní Math s plovoucí desetinnou čárkou v knihovně CRT. Vrácená hodnota odráží implementaci, která se používá po změně. Pokud procesor nepodporuje instrukce FMA3, tato funkce je nemůže povolit v knihovně a vrácená hodnota je nula. Použijte **_get_FMA3_enable** k získání aktuálního stavu knihovny. Ve výchozím nastavení na platformách x64 detekuje spouštěcí kód CRT, zda procesor podporuje instrukce FMA3 a povoluje nebo zakazuje implementace FMA3 v knihovně.
+Pomocí funkce **_set_FMA3_enable** povolíte nebo zakážete použití instrukcí FMA3 ve funkcích matematického plovoucí desetinné čárky transcendentní v knihovně CRT. Vrácená hodnota odráží implementaci, která se používá po změně. Pokud procesor nepodporuje instrukce FMA3, tato funkce je nemůže povolit v knihovně a vrácená hodnota je nula. Pomocí **_get_FMA3_enable** získat aktuální stav knihovny. Ve výchozím nastavení na platformách x64 detekuje spouštěcí kód CRT, zda procesor podporuje instrukce FMA3 a povoluje nebo zakazuje implementace FMA3 v knihovně.
 
 Vzhledem k tomu, že implementace FMA3 používají různé algoritmy, mohou být nepatrné rozdíly ve výsledku výpočtů pozorovatelné, pokud jsou povolené nebo zakázané implementace FMA3, nebo mezi počítači, které dělají nebo nepodporují FMA3. Další informace najdete v tématu [problémy s migrací s plovoucí](../../porting/floating-point-migration-issues.md)desetinnou čárkou.
 

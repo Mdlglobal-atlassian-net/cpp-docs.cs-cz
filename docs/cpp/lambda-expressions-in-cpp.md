@@ -6,26 +6,26 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e206ea8d67bb333065bf43f7f9c2dc373a5a5258
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222381"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857486"
 ---
 # <a name="lambda-expressions-in-c"></a>Výrazy lambda v jazyce C++
 
-V C ++ 11 a novějším výraz lambda – často označované jako *lambda*– nabízí pohodlný způsob definice objektu anonymní funkce ( *uzavření*) přímo na místě, kde je vyvolána nebo předat jako argument na funkci. Výrazy lambda se obvykle používají k zapouzdření pár řádků kódu, které se předá algoritmy nebo asynchronní metody. Tento článek definuje výrazy lambda, porovnává je s jinými programovacími technikami, popisuje jejich výhody a představuje základní příklad.
+V jazyce C++ 11 a novějším je výraz lambda, často označovaný jako *lambda*, pohodlný způsob definování anonymního objektu funkce ( *uzavření*) přímo v umístění, kde je vyvoláno nebo předáno jako argument funkci. Výrazy lambda se typicky používají k zapouzdření několika řádků kódu, které jsou předány algoritmům nebo asynchronním metodám. Tento článek definuje výrazy lambda, porovnává je s jinými programovacími technikami, popisuje jejich výhody a představuje základní příklad.
 
 ## <a name="related-topics"></a>Související témata
 
-- [Výrazy lambda oproti objektům funkcí](lambda-expression-syntax.md)
+- [Lambda výrazy vs. objekty funkcí](lambda-expression-syntax.md)
 - [Práce s výrazy lambda](examples-of-lambda-expressions.md)
-- [výrazy lambda constexpr.](lambda-expressions-constexpr.md)
+- [výrazy lambda constexpr](lambda-expressions-constexpr.md)
 
-## <a name="parts-of-a-lambda-expression"></a>Části výrazu Lambda
+## <a name="parts-of-a-lambda-expression"></a>Části výrazu lambda
 
-Norma ISO C++ ukazuje jednoduchý výraz lambda, který je předán jako třetí argument `std::sort()` funkce:
+Standard ISO C++ ukazuje jednoduchý lambda, který se předává jako třetí argument funkce `std::sort()`:
 
 ```cpp
 #include <algorithm>
@@ -41,29 +41,29 @@ void abssort(float* x, unsigned n) {
 }
 ```
 
-Tento obrázek ukazuje část výrazu lambda:
+Tento obrázek ukazuje části výrazu lambda:
 
-![Konstrukční prvky výrazu lambda](../cpp/media/lambdaexpsyntax.png "konstrukční prvky výrazu lambda")
+![Strukturální prvky výrazu lambda](../cpp/media/lambdaexpsyntax.png "Strukturální prvky výrazu lambda")
 
-1. *klauzule sběru* (označované také jako *lambda-introducer* ve specifikaci jazyka C++.)
+1. *klauzule zachycení* (označuje se také jako *představení výrazu lambda* ve C++ specifikaci)
 
-1. *Seznam parametrů* volitelné. (Označované také jako *lambda declarator*)
+1. *seznam parametrů* Volitelné. (Označuje se také jako *lambda deklarátor*)
 
-1. *proměnlivé specifikace* volitelné.
+1. *proměnlivá specifikace* Volitelné.
 
-1. *Specifikace výjimky* volitelné.
+1. *Specifikace výjimek* Volitelné.
 
-1. *trailing-return-type* volitelné.
+1. *koncová – návratový typ* Volitelné.
 
-1. *hlavní část výrazu lambda*.
+1. *tělo výrazu lambda*
 
 ### <a name="capture-clause"></a>Klauzule zachycení
 
-Výraz lambda můžete zavést nové proměnné v jeho textu (v **C ++ 14**) a může taky přístup, nebo *zachycení*, proměnné z rozsah obklopujícím rozsahem. Výraz lambda začíná klauzule zachycení (*lambda-introducer* ve standardní syntaxe), která určuje, které proměnné jsou zachyceny a určuje, zda zachytávání je hodnotou nebo odkazem. Proměnné, které mají ampersand (`&`) je přistupováno podle odkazu a proměnné, které ji nemají k nim přístup podle hodnoty.
+Lambda může do svého těla začlenit nové proměnné (v **C++ 14**) a může také přistupovat k proměnným z okolního rozsahu nebo je z něj *zachytit*. Lambda začíná klauzulí zachycení (*výraz lambda – zavádí* ve standardní syntaxi), který určuje proměnné, které jsou zachyceny a zda je zachycení hodnotou nebo odkazem. Proměnné, které mají předponu ampersand (`&`), jsou k dispozici na základě odkazu a proměnných, které k nim nemají přístup pomocí hodnoty.
 
-Klauzule prázdného záznamu `[ ]`, označuje, že hlavní část výrazu lambda nemá přístup k žádné proměnné v ohraničujícím oboru.
+Prázdná klauzule zachycení, `[ ]`, označuje, že tělo výrazu lambda přistupuje k žádným proměnným v ohraničujícím oboru.
 
-Můžete použít výchozí režim zachycení (*capture-default* ve standardní syntaxe) k označení jak zachytit všechny vnější proměnné, které jsou uvedeny v lambdě: `[&]` znamená, že všechny proměnné, které odkazují na jsou zachyceny na základě odkaz, a `[=]` znamená, že jsou zachyceny hodnotou. Můžete použít výchozí režim sběru dat a pak zadejte opačné režimu explicitně pro určité proměnné. Například, pokud hlavní část výrazu lambda přistupuje k externí proměnné `total` podle odkazu a k externí proměnné `factor` podle hodnoty, pak jsou následující odchytávací klauzule rovnocenné:
+Můžete použít výchozí režim sběru (*zachytit – výchozí* ve standardní syntaxi) a určit, jak se mají zachytit vnější proměnné, na které se odkazuje ve výrazu lambda: `[&]` znamená, že všechny proměnné, na které odkazujete, jsou zachyceny odkazem a `[=]` znamená, že jsou zachyceny hodnotou. Můžete použít výchozí režim sběru dat a pak pro konkrétní proměnné zadat opačný režim. Například pokud tělo lambda přistupuje k externí proměnné `total` odkazem a externí proměnnou `factor` podle hodnoty, jsou následující klauzule zachycení ekvivalentní:
 
 ```cpp
 [&total, factor]
@@ -74,9 +74,9 @@ Můžete použít výchozí režim zachycení (*capture-default* ve standardní 
 [&total, =]
 ```
 
-Pouze proměnné, které jsou uvedeny v lambdě, jsou zachyceny při použití výchozí zachycení.
+Pouze proměnné, které jsou zmíněny v lambda, jsou zachyceny při použití zachycení – výchozí.
 
-Pokud klauzule zachycení obsahuje výchozí zachycení `&`, neuvidí žádný `identifier` v `capture` klauzule zachycení může mít formuláře `& identifier`. Podobně pokud klauzule zachycení obsahuje výchozí zachycení `=`, neuvidí žádný `capture` klauzule zachycení může mít formuláře `= identifier`. Identifikátor nebo **to** nelze v klauzuli zachycení objevit více než jednou. Následující fragment kódu dokládá několik příkladů.
+Pokud klauzule zachycení zahrnuje Capture-default `&`, nemůže mít `identifier` v `capture` této klauzule zachycení formu `& identifier`. Podobně platí, že pokud klauzule Capture zahrnuje Capture-default `=`, nemůže mít `= identifier`formuláře žádný `capture` této klauzule zachycení. Identifikátor nebo **to** nemůže být v klauzuli Capture uveden více než jednou. Následující fragment kódu dokládá několik příkladů.
 
 ```cpp
 struct S { void f(int i); };
@@ -90,7 +90,7 @@ void S::f(int i) {
 }
 ```
 
-Zachycení následované třemi tečkami je rozšiřující sada, jak je znázorněno v tomto [šablony variadických funkcí](../cpp/ellipses-and-variadic-templates.md) příkladu:
+Záznam následovaný třemi tečkami je rozšíření balíčku, jak je znázorněno v tomto příkladu [šablony variadické](../cpp/ellipses-and-variadic-templates.md) :
 
 ```cpp
 template<class... Args>
@@ -100,23 +100,23 @@ void f(Args... args) {
 }
 ```
 
-Chcete-li použít výrazy lambda v těle metody třídy, předejte **to** ukazatele klauzuli zachycení zajistíte přístup k metodám a datovým členům ohraničující třídy.
+Chcete-li použít výrazy lambda v těle metody třídy, předejte **Tento** ukazatel na klauzuli Capture pro poskytnutí přístupu k metodám a datovým členům ohraničující třídy.
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **To** ukazatele může být zachyceno hodnotou zadáním `*this` v klauzuli zachycení. Zaznamenávání hodnota znamená, že celý *uzavření*, které je objekt anonymní funkce tohoto encapulates výraz lambda, je zkopírován do každé volání webu, kde vyvolání lambda. Zachycení podle hodnoty je užitečné, když bude výraz lambda vykonán v paralelní a asynchronní operace, zejména u určité architektury hardwaru, jako je například technologie NUMA.
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): **Tento** ukazatel může být zachycen podle hodnoty zadáním `*this` v klauzuli Capture. Capture podle hodnoty znamená, že celé *uzavření*, což je objekt anonymní funkce, který encapulates lambda výraz, je zkopírováno do všech volání webu, kde je lambda vyvolána. Zachycení podle hodnoty je užitečné, pokud lambda spustí paralelní nebo asynchronní operace, zejména u některých hardwarových architektur, jako je například NUMA.
 
-Příklad, který ukazuje, jak použít výrazy lambda s metodami tříd naleznete v části "Příklad: Použití výrazu Lambda v metodě"v [příklady výrazů Lambda](../cpp/examples-of-lambda-expressions.md).
+Příklad, který ukazuje, jak používat lambda výrazy s metodami třídy naleznete v tématu "Příklad: použití výrazu lambda v metodě" v [příkladech výrazů lambda](../cpp/examples-of-lambda-expressions.md).
 
-Použijete-li klauzuli zachycení, doporučujeme ponechat tyto body na paměti, zejména při použití lambd s multithreading:
+Při použití klauzule Capture doporučujeme, abyste zachovali tyto body, zejména při použití výrazů lambda s multithreadingem:
 
-- Zachycení odkazu lze použít k úpravám proměnných mimo, ale nikoli zachycení hodnoty. (**proměnlivé** umožňuje kopie má být upraven, ale ne originálů.)
+- Zachycení odkazů lze použít pro úpravu proměnných mimo, ale zachycení hodnoty nemohou. (**proměnlivé** umožňuje upravovat kopie, ale ne originály.)
 
-- Zachycení odkazu odrážejí aktualizace proměnných mimo, ale zachycení hodnoty tomu tak není.
+- Zachycení odkazů odráží aktualizace proměnných mimo, ale zachycení hodnot ne.
 
-- Zachycení odkazu zavádějí závislost životnosti, ale zachycení hodnoty nemají žádné závislosti životnosti. To je obzvláště důležité, pokud výraz lambda běží asynchronně. Pokud zachycení místní odkazem v asynchronní lambdy této místní budou velmi pravděpodobně znovu podle času spuštění výrazu lambda, což vede k porušení přístupu v době běhu.
+- Zachycení odkazů zavádí závislost životnosti, ale zachycení hodnot nemají žádné závislosti životního cyklu. To je obzvláště důležité při asynchronním spuštění lambda. Pokud zachytíte místní odkaz v asynchronním výrazu lambda, může být tato lokální chyba způsobena časem spuštění lambda a výsledkem je narušení přístupu v době běhu.
 
-### <a name="generalized-capture-c-14"></a>Zachycení generalizovaného (C++ 14)
+### <a name="generalized-capture-c-14"></a>Generalizovaná zachycení (C++ 14)
 
-V C ++ 14 můžete zavést a existují nové inicializace proměnné v klauzuli zachycení, aniž byste museli mít tyto proměnné v ohraničujícím oboru funkce lambda. Inicializace může být vyjádřený jako libovolný libovolný výraz; Typ nové proměnné je odvozen z typu vytvářených výraz. Jednou z výhod této funkce je, že v C ++ 14 můžete zachytit jenom pro přesun proměnné (jako je například std::unique_ptr) z rozsah obklopujícím rozsahem a jejich použití ve výrazu lambda.
+V C++ 14 můžete zavést a inicializovat nové proměnné v klauzuli Capture, aniž by tyto proměnné existovaly v ohraničujícím oboru funkce lambda. Inicializace může být vyjádřena libovolným libovolným výrazem; Typ nové proměnné je odvozen z typu vytvořeného výrazem. Jednou z výhod této funkce je, že v C++ 14 můžete zachytit proměnné jenom pro přesun (například std:: unique_ptr) z okolního oboru a použít je ve výrazu lambda.
 
 ```cpp
 pNums = make_unique<vector<int>>(nums);
@@ -129,7 +129,7 @@ pNums = make_unique<vector<int>>(nums);
 
 ### <a name="parameter-list"></a>Seznam parametrů
 
-Kromě zachytávání proměnné, výraz lambda může přijmout vstupní parametry. Seznam parametrů (*lambda declarator* ve standardní syntaxe) je volitelný a v většinu aspektů podobá seznamu parametrů pro funkci.
+Kromě zachycení proměnných může lambda akceptovat vstupní parametry. Seznam parametrů (*lambda deklarátor* ve standardní syntaxi) je volitelný a ve většině aspektů se podobá seznamu parametrů funkce.
 
 ```cpp
 auto y = [] (int first, int second)
@@ -138,7 +138,7 @@ auto y = [] (int first, int second)
 };
 ```
 
-V **C++ 14**, pokud typ parametru je obecný, můžete použít klíčové slovo auto jako specifikátoru typu. To instruuje kompilátor, aby vytvořit operátor volání funkce jako šablona. Každá instance automaticky v seznamu parametrů je ekvivalentní odlišný typ parametru.
+V  **C++ 14**, pokud je typ parametru obecný, můžete použít klíčové slovo auto jako specifikátor typu. Říká kompilátoru, aby vytvořil operátor volání funkce jako šablonu. Každá instance třídy auto v seznamu parametrů je ekvivalentní parametru samostatného typu.
 
 ```cpp
 auto y = [] (auto first, auto second)
@@ -147,17 +147,17 @@ auto y = [] (auto first, auto second)
 };
 ```
 
-Výraz lambda může jako svůj argument přijmout jiný výraz lambda. Další informace najdete v tématu "Výrazy Lambda vyššího řádu" v tématu [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md).
+Výraz lambda může jako svůj argument přijmout jiný výraz lambda. Další informace naleznete v tématu "výrazy lambda s vyšším pořadím" v tématu [Příklady výrazů lambda](../cpp/examples-of-lambda-expressions.md).
 
-Seznam parametrů je nepovinný, můžete vynechat prázdné závorky, pokud nepředáte argumenty výrazu lambda a jeho lambda-declarator neobsahuje *specifikace výjimky*,  *trailing-return-type*, nebo **proměnlivé**.
+Vzhledem k tomu, že seznam parametrů je nepovinný, můžete vynechat prázdné závorky, pokud nepředáte argumenty výrazu lambda a jeho výraz lambda-deklarátor neobsahuje *specifikaci výjimek*, *koncového-návratového typu*nebo **mutable**.
 
 ### <a name="mutable-specification"></a>Proměnlivé specifikace
 
-Obvykle je operátor volání funkce lambda podle hodnoty const, ale využití **proměnlivé** – klíčové slovo toto ruší. Nevytváří proměnlivé datové členy. Proměnlivé specifikace umožňují hlavní části výrazu lambda upravit proměnné, které jsou zachyceny hodnotou. Některé příklady dále v tomto článku ukazují, jak používat **proměnlivé**.
+Obvykle operátor volání funkce lambda je const podle hodnoty, ale použití klíčového slova **mutable** zruší. Nevytváří proměnlivé datové členy. Proměnlivé specifikace umožňují hlavní části výrazu lambda upravit proměnné, které jsou zachyceny hodnotou. Některé příklady dále v tomto článku ukazují, jak používat **mutable**.
 
 ### <a name="exception-specification"></a>Specifikace výjimek
 
-Můžete použít `noexcept` specifikace výjimky označující, že výraz lambda nevyvolá žádné výjimky. Stejně jako u běžných funkcí Microsoft C++ kompilátor generuje upozornění [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Pokud výraz lambda deklaruje `noexcept` specifikace výjimek a hlavní část výrazu lambda vyvolá výjimku, jak je znázorněno zde:
+Můžete použít specifikaci pro výjimku `noexcept` pro označení, že výraz lambda nevyvolá žádné výjimky. Stejně jako u běžných funkcí kompilátor společnosti C++ Microsoft generuje upozornění [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) , pokud výraz lambda deklaruje specifikaci výjimky `noexcept` a tělo lambda vyvolá výjimku, jak je znázorněno zde:
 
 ```cpp
 // throw_lambda_expression.cpp
@@ -168,13 +168,13 @@ int main() // C4297 expected
 }
 ```
 
-Další informace najdete v tématu [specifikace výjimek (throw)](../cpp/exception-specifications-throw-cpp.md).
+Další informace naleznete v tématu [Specifikace výjimek (throw)](../cpp/exception-specifications-throw-cpp.md).
 
 ### <a name="return-type"></a>Návratový typ
 
-Návratový typ výrazu lambda je automaticky odvozen. Není nutné použít [automaticky](../cpp/auto-cpp.md) – klíčové slovo-li *trailing-return-type*. *Trailing-return-type* se podobá části návratového typu obyčejné metody nebo funkce. Ale návratový typ musí odpovídat seznamu parametrů a musí obsahovat klíčové slovo trailing-return-type `->` před návratovým typem.
+Návratový typ výrazu lambda je automaticky odvozený. Klíčové slovo [auto](../cpp/auto-cpp.md) nemusíte používat, pokud nezadáte *koncový návratový typ*. *Koncová návratový typ* se podobá částce návratového typu běžné metody nebo funkce. Návratový typ se však musí dodržet seznam parametrů a před návratovým typem musí být zahrnuté klíčové slovo koncového typu `->`.
 
-Část návratového typu výrazu lambda lze vynechat, pokud hlavní část lambdy obsahuje jenom jeden návratový příkaz nebo výraz nevrací hodnotu. Pokud hlavní část lambdy obsahuje jeden příkaz return, kompilátor odvodí návratový typ od typu vráceného výrazu. V opačném případě kompilátor odvodí návratový typ jako **void**. Zvažte následující příklad fragmentu kódu, který ilustruje tento princip.
+Část návratového typu výrazu lambda lze vynechat, pokud tělo lambda obsahuje pouze jeden návratový příkaz nebo výraz nevrací hodnotu. Pokud tělo lambda obsahuje jeden návratový příkaz, kompilátor odvodit návratový typ z typu návratového výrazu. V opačném případě kompilátor odvodí návratový typ jako **void**. Zvažte následující příklad fragmentu kódu, který ilustruje tento princip.
 
 ```cpp
 auto x1 = [](int i){ return i; }; // OK: return type is int
@@ -182,23 +182,23 @@ auto x2 = []{ return{ 1, 2 }; };  // ERROR: return type is void, deducing
                                   // return type from braced-init-list is not valid
 ```
 
-Výraz lambda může jako vrácenou hodnotu vytvořit jiný výraz lambda. Další informace najdete v tématu "Výrazy Lambda vyššího řádu" [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md).
+Výraz lambda může jako vrácenou hodnotu vytvořit jiný výraz lambda. Další informace naleznete v tématu "výrazy lambda s vyšším pořadím" v [příkladech výrazů lambda](../cpp/examples-of-lambda-expressions.md).
 
 ### <a name="lambda-body"></a>Hlavní část výrazu lambda
 
-Hlavní část výrazu lambda (*compound-statement* ve standardní syntaxe) výrazu lambda výraz může obsahovat cokoli, co může obsahovat hlavní část běžné metody nebo funkce. Tělo běžné funkce i výraz lambda mají přístup k těmto typům proměnných:
+Tělo lambda (*složený příkaz* ve standardní syntaxi) výrazu lambda může obsahovat cokoli, co může obsahovat tělo běžné metody nebo funkce. Tělo běžné funkce a výrazu lambda má přístup k těmto typům proměnných:
 
-- Zachycené proměnné z nadřazeného oboru, jak je popsáno výše.
+- Zachycené proměnné z ohraničujícího oboru, jak je popsáno výše.
 
 - Parametry
 
 - Místně deklarované proměnné
 
-- Datové členy třídy, při deklarované uvnitř třídy a **to** zachycena
+- Datové členy třídy, pokud jsou deklarovány uvnitř třídy **a jsou** zachyceny
 
-- Jakákoli proměnná, která má statickou dobu úložiště – například globální proměnné
+- Jakákoli proměnná, která má statickou dobu úložiště, například globální proměnné
 
-Následující příklad obsahuje výraz lambda, který explicitně zaznamenává proměnnou `n` podle hodnoty a implicitně zachycuje proměnnou `m` podle odkazu:
+Následující příklad obsahuje výraz lambda, který explicitně zaznamenává proměnnou `n` podle hodnoty a implicitně zaznamenává proměnnou `m` podle odkazu:
 
 ```cpp
 // captures_lambda_expression.cpp
@@ -220,9 +220,9 @@ int main()
 0
 ```
 
-Protože proměnné `n` zachycena hodnotou, její hodnotou je nadále `0` po volání výrazu lambda. **Proměnlivé** umožňuje specifikaci `n` má být upraven v rámci výrazu lambda.
+Vzhledem k tomu, že je proměnná `n` zachycena hodnotou, její hodnotou je nadále `0` i po volání výrazu lambda. **Proměnlivá** specifikace umožňuje změnit `n` v rámci výrazu lambda.
 
-Přestože výraz lambda může zachytit pouze proměnné, které mají automatickou dobu ukládání, můžete použít proměnné, které mají statickou dobu ukládání v hlavní části výrazu lambda. V následujícím příkladu `generate` funkce a výraz lambda pro přiřazení hodnoty ke každému prvku v `vector` objektu. Výraz lambda změní statickou proměnnou a vygeneruje tak hodnotu dalšího prvku.
+Přestože výraz lambda může zachytit pouze proměnné, které mají automatickou dobu ukládání, můžete použít proměnné, které mají statickou dobu ukládání v hlavní části výrazu lambda. V následujícím příkladu se využívá funkce `generate` a výraz lambda pro přiřazení hodnoty ke každému prvku v objektu `vector`. Výraz lambda změní statickou proměnnou a vygeneruje tak hodnotu dalšího prvku.
 
 ```cpp
 void fillVector(vector<int>& v)
@@ -238,9 +238,9 @@ void fillVector(vector<int>& v)
 }
 ```
 
-Další informace najdete v tématu [generovat](../standard-library/algorithm-functions.md#generate).
+Další informace naleznete v tématu [Generate](../standard-library/algorithm-functions.md#generate).
 
-Následující příklad kódu používá funkci z předchozího příkladu a přidá příklad výraz lambda, který používá algoritmus standardní knihovny C++ `generate_n`. Tento výraz lambda přiřazuje prvek objektu `vector` objekt součtu předchozích dvou prvků. **Proměnlivé** – klíčové slovo se používá tak, aby hlavní část výrazu lambda můžete upravit své kopie externích proměnných `x` a `y`, kterými zachycuje výraz lambda podle hodnoty. Vzhledem k tomu, že výraz lambda zachytí původní proměnné `x` a `y` podle hodnoty, jejich hodnoty zůstávají `1` po spuštění lambdy.
+Následující příklad kódu používá funkci z předchozího příkladu a přidá příklad výrazu lambda, který používá C++ standardní algoritmus knihovny `generate_n`. Tento výraz lambda přiřadí prvek objektu `vector` k součtu předchozích dvou prvků. Klíčové slovo **mutable** je použito, aby tělo výrazu lambda mohl upravovat své kopie externích proměnných `x` a `y`, který výraz lambda zachycuje podle hodnoty. Vzhledem k tomu, že výraz lambda zachytí původní proměnné `x` a `y` podle hodnoty, jejich hodnoty zůstávají `1` po provedení výrazu lambda.
 
 ```cpp
 // compile with: /W4 /EHsc
@@ -322,9 +322,9 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 Další informace najdete v tématu [generate_n](../standard-library/algorithm-functions.md#generate_n).
 
-## <a name="constexpr-lambda-expressions"></a>výrazy lambda constexpr.
+## <a name="constexpr-lambda-expressions"></a>constexpr – výrazy lambda
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Výraz lambda může být deklarována jako `constexpr` nebo při inicializaci každého datového člena, který zachycuje nebo zavádí je povolený v konstantním výrazu v konstantním výrazu.
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): výraz lambda může být deklarován jako `constexpr` nebo použit v konstantním výrazu, pokud je v rámci konstantního výrazu povolena inicializace každého datového člena, který zachycuje nebo zavádí.
 
 ```cpp
     int y = 32;
@@ -340,7 +340,7 @@ Další informace najdete v tématu [generate_n](../standard-library/algorithm-f
     }
 ```
 
-Výraz lambda je implicitně `constexpr` Pokud výsledek splňuje požadavky `constexpr` funkce:
+Výraz lambda je implicitně `constexpr`, pokud výsledek splňuje požadavky `constexpr` funkce:
 
 ```cpp
     auto answer = [](int n)
@@ -351,7 +351,7 @@ Výraz lambda je implicitně `constexpr` Pokud výsledek splňuje požadavky `co
     constexpr int response = answer(10);
 ```
 
-Pokud je výraz lambda implicitně nebo explicitně `constexpr`, vytvoří převod na ukazatel na funkci `constexpr` funkce:
+Pokud je lambda implicitně nebo explicitně `constexpr`, převod na ukazatel na funkci vytvoří `constexpr` funkci:
 
 ```cpp
     auto Increment = [](int n)
@@ -362,19 +362,19 @@ Pokud je výraz lambda implicitně nebo explicitně `constexpr`, vytvoří přev
     constexpr int(*inc)(int) = Increment;
 ```
 
-## <a name="microsoft-specific"></a>Microsoft-Specific
+## <a name="microsoft-specific"></a>specifické pro společnost Microsoft
 
-Výrazy lambda nejsou podporovány následující běžné entity modulu runtime (CLR) spravované jazyka: **třídy ref class**, **ref struct**, **hodnotu třídy**, nebo **hodnotu – struktura** .
+Výrazy lambda nejsou podporované v následujících spravovaných entitách modulu CLR (Common Language Runtime): **ref class**, **ref struct**, **Value Class**nebo **value struct**.
 
-Pokud použijete modifikátor specifické pro společnost Microsoft, jako [__declspec](../cpp/declspec.md), můžete ho vložit do výrazu lambda ihned po `parameter-declaration-clause`– například:
+Pokud používáte modifikátor specifický od společnosti Microsoft, například [__declspec](../cpp/declspec.md), můžete jej vložit do výrazu lambda ihned po `parameter-declaration-clause`– například:
 
 ```cpp
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
 ```
 
-Pokud chcete zjistit, jestli je modifikátor nepodporuje výrazy lambda, najdete v článku o řezu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md) část dokumentace.
+Chcete-li určit, zda je modifikátor podporován pomocí výrazů lambda, přečtěte si článek v části věnované [modifikátorům specifickým pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md) v dokumentaci.
 
-Visual Studio podporuje kromě funkce C ++ 11 Standard lambda, jsou výrazy lambda, které jsou omni převoditelné na ukazatele funkcí, které používají libovolné konvence volání.
+Kromě standardních funkcí lambda v jazyce C++ 11 podporuje Visual Studio nestavové výrazy lambda, které jsou převoditelné na ukazatele funkcí, které používají libovolné konvence volání.
 
 ## <a name="see-also"></a>Viz také:
 

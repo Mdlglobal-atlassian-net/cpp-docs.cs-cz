@@ -8,82 +8,82 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233125"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857083"
 ---
 # <a name="function-prototypes"></a>Prototypy funkcí
 
-Deklarace funkce předchází definici funkce a určuje název, návratový typ, třída úložiště a další atributy funkce. Jako prototyp potřeba deklaraci funkce také vytvořit typy a identifikátory pro argumenty funkce.
+Deklarace funkce předchází definici funkce a určuje název, návratový typ, třídu úložiště a další atributy funkce. Aby byl prototyp, deklarace funkce musí také vytvořit typy a identifikátory pro argumenty funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
 *deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *sekvence atributů*<sub>optimalizované</sub> *init-declarator-list*<sub>optimalizované</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;atribut *deklarace-specifikátor* *-SEQ*<sub>opt</sub> *-deklarátor-list*<sub>opt</sub> **;**
 
-/\* *sekvence atributů*<sub>optimalizované</sub> je specifické pro Microsoft \*/
+/\* *atribut – vlastnost SEQ*<sub>je specifická</sub> pro společnost Microsoft \*/
 
 *specifikátory deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specifikátory deklarace*<sub>optimalizované</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*třídy úložiště* -specifikátory *deklarace specifikátor-* <sub></sub> specifikátory <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *specifikátoru typu* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *kvalifikátoru typu* -deklarace
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
+*init-deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatelem*<sub>opt</sub> *Direct-deklarátor*
 
-*přímé declarator*: /\* deklarátorem funkce \*/<br/>
+*Direct-deklarátor*:/\* / funkce deklarátor \*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**   / \* deklarátor nový styl \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
 
-Prototyp má stejný formulář jako definice funkce, s tím rozdílem, že je ukončeno prvkem středníkem hned za pravou závorku a proto nemá žádný text. V obou případech musíte návratový typ souhlasit s návratovým typem zadaným v definici funkce.
+Prototyp má stejný tvar jako definice funkce, s tím rozdílem, že je ukončen středníkem hned za pravou závorku a proto nemá žádné tělo. V obou případech musí návratový typ souhlasit s návratovým typem zadaným v definici funkce.
 
-Prototypy funkcí mají důležité následovně:
+Prototypy funkcí mají následující důležité použití:
 
-- Navázání návratový typ funkce, které vrací typy jiné než **int**. I když funkce, které vracejí **int** hodnoty nevyžadují prototypů, se doporučuje prototypů.
+- Navážou návratový typ pro funkce, které vracejí jiné typy než **int**. I když funkce, které vracejí hodnoty typu **int** , nevyžadují prototypy, jsou doporučeny prototypy.
 
-- Bez dokončení prototypů jsou provedeny standardní převody, ale je proveden žádný pokus o zkontrolujte typ a počet argumentů počtem parametrů.
+- Bez kompletních prototypů jsou provedeny standardní převody, ale není proveden žádný pokus o kontrolu typu nebo počtu argumentů s počtem parametrů.
 
-- Prototypy slouží k inicializaci ukazatele na funkce, než tyto funkce jsou definovány.
+- Prototypy se používají k inicializaci ukazatelů na funkce před definováním těchto funkcí.
 
-- Seznam parametrů slouží ke kontrole souvztažnost argumentů ve volání funkce s parametry v definici funkce.
+- Seznam parametrů se používá ke kontrole korespondence argumentů ve volání funkce s parametry v definici funkce.
 
-Převedený typ každý parametr určuje výklad argumenty volání funkce umístí v zásobníku. Neshoda typů mezi argumentu a parametru může způsobit argumenty v zásobníku do dojít k nesprávné interpretaci. Například v počítači se 16 bitů, pokud ukazatel 16 bitů je předán jako argument, potom deklarovat jako **dlouhé** parametr, jako jsou interpretovány prvních 32 bitů v zásobníku **dlouhé** parametr. Tato chyba vytvoří problémy nejen s **dlouhé** parametr, ale s parametry, které na něho. Můžete zjistit chyby tohoto druhu deklarace prototypů úplné funkce pro všechny funkce.
+Převedený typ každého parametru určuje interpretaci argumentů, které volání funkce umístí do zásobníku. Neshoda typů mezi argumentem a parametrem může způsobit, že argumenty v zásobníku budou špatně interpretovány. Například v 16bitovém počítači, pokud je 16bitový ukazatel předán jako argument a následně deklarován jako **dlouhý** parametr, prvních 32 bitů v zásobníku je interpretováno jako **dlouhý** parametr. Tato chyba vytvoří pouze problémy s parametrem **Long** , ale s parametry, které následují. Chyby tohoto typu můžete zjistit deklarováním kompletních prototypů funkcí pro všechny funkce.
 
-Prototyp vytváří atributy funkce tak, aby volání funkce, které předcházet jeho definice (nebo v jiných zdrojových souborech dojde k) můžete zkontrolovat typ argumentu a návratový typ neshody. Pokud zadáte například **statické** specifikátor třídy úložiště v prototypu, musíte zadat také **statické** třídu úložiště v definici funkce.
+Prototyp vytvoří atributy funkce tak, aby volání funkce, která předchází příslušné definici (nebo k ní dochází v jiných zdrojových souborech), mohla být kontrolována pro neshody typu argumentů a návratového typu. Například pokud v prototypu zadáte specifikátor třídy úložiště **static** , je nutné v definici funkce také zadat třídu **statického** úložiště.
 
-Dokončení deklarací parametrů (`int a`) lze kombinovat s abstraktní deklarátory (`int`) ve stejné deklaraci. Například následující deklaraci je možné:
+Kompletní deklarace parametrů (`int a`) lze kombinovat s abstraktním deklarátory (`int`) ve stejné deklaraci. Například následující deklarace je platná:
 
 ```C
 int add( int a, int );
 ```
 
-Prototyp může obsahovat typ i identifikátor pro každý výraz, který je předán jako argument. Tyto identifikátory však mít rozsah pouze do konce deklarace. Prototyp můžete také sledovat, skutečnost, že je počet argumentů proměnné nebo předány žádné argumenty. Bez seznamu nemusí být odhalena neshody, proto kompilátor nemůže generovat diagnostické zprávy, které se jich týkají. Zobrazit [argumenty](../c-language/arguments.md) Další informace o kontrolu typu.
+Prototyp může zahrnovat jak typ, tak identifikátor pro, každý výraz, který je předán jako argument. Nicméně takové identifikátory mají rozsah pouze do konce deklarace. Prototyp může také odrážet skutečnost, že počet argumentů je proměnná nebo že nejsou předány žádné argumenty. Bez takového seznamu nelze zobrazit neshody, takže kompilátor nemůže generovat diagnostické zprávy týkající se těchto seznamů. Další informace o kontrole typů naleznete v tématu [argumenty](../c-language/arguments.md) .
 
-Rozsah prototypu v kompilátor Microsoft C je vyhovující standardu ANSI nyní při kompilaci s **/Za** – možnost kompilátoru. To znamená, že pokud deklarujete **struktura** nebo **sjednocení** značky v prototypu, značky se zadá v daném oboru, spíše než v globálním oboru. Například při kompilaci s **/Za** ANSI dodržování předpisů, můžete nikdy volat tuto funkci bez chyba neshody typu:
+Obor prototypu v kompilátoru jazyka Microsoft C je nyní kompatibilní se standardem ANSI při kompilaci s možností kompilátoru **/za** . To znamená, že pokud deklarujete značku **struktury** nebo **sjednocení** v rámci prototypu, je značka zadána v tomto oboru, nikoli v globálním rozsahu. Například při kompilování s **/za** pro kompatibilitu se standardem ANSI nemůžete tuto funkci nikdy volat bez toho, aby došlo k chybě neshody typů:
 
 ```C
 void func1( struct S * );
 ```
 
-Chcete-li váš kód, definice nebo deklarace **struktura** nebo **sjednocení** v globálním oboru před prototyp funkce:
+Chcete-li opravit kód, definujte nebo deklarujte **strukturu** nebo **sjednocení** v globálním oboru před prototypem funkce:
 
 ```C
 struct S;
 void func1( struct S * );
 ```
 
-V části **/Ze**, značky se stále zadá v globálním oboru.
+V části **/ze**je značka stále zadána v globálním rozsahu.
 
 ## <a name="see-also"></a>Viz také:
 

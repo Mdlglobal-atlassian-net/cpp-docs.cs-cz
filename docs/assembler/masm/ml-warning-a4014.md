@@ -1,24 +1,24 @@
 ---
 title: Upozornění nástroje ML A4014
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A4014
 helpviewer_keywords:
 - A4014
 ms.assetid: 11bc8920-3255-4ac8-999a-b9ea9c15bc81
-ms.openlocfilehash: b5354fd074bfde505b8fce0e4a0b248e5810439b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2fee1492719418e70856f423fde8f1a3cf185ab
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201061"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854508"
 ---
 # <a name="ml-warning-a4014"></a>Upozornění nástroje ML A4014
 
-pokyny a inicializovaná data nejsou podporovány v příslušných segmentech BSS
+instrukce a inicializovaná data nejsou ve segmentech BSS podporované
 
-Chcete-li definovat inicializovaná data v rámci oddílu BSS byl proveden pokus o.  Oddílu BSS je definován jako třídy, jejíž název je BSS.  To zahrnuje zjednodušené segmentu `.data?`.
+Byl proveden pokus o definování inicializovaných dat v oddílu BSS.  Oddíl BSS je definován jako třída, jejíž název je BSS.  To zahrnuje zjednodušený `.data?`segmentu.
 
 ## <a name="see-also"></a>Viz také:
 

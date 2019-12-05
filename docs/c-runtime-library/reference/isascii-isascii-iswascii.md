@@ -37,12 +37,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: ee20711628d5c2135b4ee1c37b87cb77f3610695
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954569"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857785"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -64,15 +64,15 @@ int iswascii(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k otestování.
+Celé číslo k testování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrátí nenulovou hodnotu, pokud je **c** konkrétní reprezentace znaku ASCII. **__isascii** vrací nenulovou hodnotu, pokud je **c** znak ASCII (v rozsahu 0x00-0x7F). **iswascii** vrací nenulovou hodnotu, pokud je **c** znaková reprezentace znaku ASCII. Každá z těchto rutin vrátí hodnotu 0, pokud **c** nesplňuje podmínky testu.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud je **c** konkrétní reprezentace znaku ASCII. **__isascii** vrátí nenulovou hodnotu, pokud je **c** znak ASCII (v rozsahu 0x00-0x7F). **iswascii** vrací nenulovou hodnotu, pokud je **c** znaková reprezentace znaku ASCII. Každá z těchto rutin vrátí hodnotu 0, pokud **c** nesplňuje podmínky testu.
 
 ## <a name="remarks"></a>Poznámky
 
-**__Isascii** i **iswascii** jsou implementovány jako makra, pokud není definován preprocesor makro _CTYPE_DISABLE_MACROS.
+**__Isascii** i **iswascii** jsou implementovány jako makra, pokud není definováno makro preprocesoru _CTYPE_DISABLE_MACROS.
 
 Z důvodu zpětné kompatibility je [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) implementován jako makro pouze v **případě, že** není definován nebo je definován jako 0; v opačném případě není definován.
 
@@ -89,7 +89,7 @@ Z důvodu zpětné kompatibility je [ &#95; &#95;STDC&#95; ](../../preprocessor/
 |**isascii**, **__isascii**|C: \<CType. h ><br /><br /> C++: \<cctype > nebo \<CType. h >|
 |**iswascii**|C: \<wctype. h >, \<CType. h > nebo \<WCHAR. h ><br /><br /> C++: \<cwctype >, \<cctype >, \<wctype. h >, \<CType. h > nebo \<WCHAR. h >|
 
-Funkce **__isascii** a **iswascii** jsou **specifické pro společnost**Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Funkce **iswascii** jsou specifické **__Isascii** **pro společnost**Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

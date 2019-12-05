@@ -7,20 +7,20 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331201"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857317"
 ---
 # <a name="semantics-of-expressions"></a>Sémantika výrazů
 
-Výrazy jsou vyhodnocovány podle priority a seskupení jejich operátorů. ([Priorita a asociativita operátora](../cpp/cpp-built-in-operators-precedence-and-associativity.md) v [lexikální konvence](../cpp/lexical-conventions.md), znázorňuje vztahy C++ operátory kladou na výrazy.)
+Výrazy jsou vyhodnocovány podle priority a seskupení jejich operátorů. ([Priorita operátorů a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md) v [lexikálních konvencích](../cpp/lexical-conventions.md)zobrazuje vztahy C++ , které operátory ukládají do výrazů.)
 
 ## <a name="order-of-evaluation"></a>Pořadí vyhodnocení
 
-Podívejte se například:
+Vezměte v úvahu tento příklad:
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -43,7 +43,7 @@ int main()
 54
 ```
 
-![Pořadí vyhodnocení ve výrazech](../cpp/media/vc38zv1.gif "pořadí vyhodnocení ve výrazu") <br/>
+![Pořadí vyhodnocení ve výrazu](../cpp/media/vc38zv1.gif "Pořadí vyhodnocení ve výrazu") <br/>
 Pořadí vyhodnocení výrazu
 
 Pořadí, ve kterém je výraz podle výše uvedeného obrázku vyhodnocen, se stanoví pomocí přednosti a asociativity operátorů:
@@ -52,29 +52,29 @@ Pořadí, ve kterém je výraz podle výše uvedeného obrázku vyhodnocen, se s
 
 1. Sčítání (+) má další nejvyšší prioritu, takže hodnota proměnné `a` je přičtena k výsledku operace s proměnnými `b` a `c`.
 
-1. Operátor posunu vlevo (<<) má nejnižší prioritu ve výrazu, ale existují dva výskyty. Vzhledem k tomu, že operátor levého posunu seskupuje zleva doprava, je levý podvýraz vyhodnocen jako první, a potom je vyhodnocen pravý podvýraz.
+1. Levý SHIFT (< <) má ve výrazu nejnižší prioritu, ale existují dva výskyty. Vzhledem k tomu, že operátor levého posunu seskupuje zleva doprava, je levý podvýraz vyhodnocen jako první, a potom je vyhodnocen pravý podvýraz.
 
 Použití závorek k seskupení podvýrazů mění prioritu a také pořadí, ve kterém je výraz vyhodnocen, jak je znázorněno na následujícím obrázku.
 
-![Pořadí vyhodnocení výrazu v závorkách](../cpp/media/vc38zv2.gif "pořadí vyhodnocení výrazu v závorkách") <br/>
-Pořadí vyhodnocení výrazu v závorkách
+![Pořadí vyhodnocování výrazu pomocí závorek](../cpp/media/vc38zv2.gif "Pořadí vyhodnocování výrazu pomocí závorek") <br/>
+Pořadí vyhodnocování výrazů pomocí závorek
 
 Výrazy, například na výše uvedeném obrázku, jsou vyhodnoceny výhradně z hlediska jejich vedlejších účinků, v tomto případě pro přenos informací na standardní výstup zařízení.
 
 ## <a name="notation-in-expressions"></a>Zápis ve výrazech
 
-Jazyk C++ určuje určité kompatibility při zadávání operandy. Následující tabulka uvádí typy operandů přijatelné pro operátory, které vyžaduje operandy typu *typ*.
+C++ Jazyk určuje určité kompatibility při zadávání operandů. V následující tabulce jsou uvedeny typy operandů, které jsou přijatelné pro operátory, které vyžadují operandy *typu Type.*
 
 ### <a name="operand-types-acceptable-to-operators"></a>Typy operandů přijatelné pro operátory
 
-|Očekával se typ.|Povolené typy|
+|Očekáván typ|Povolené typy|
 |-------------------|-------------------|
-|*type*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|
-|*Typ* \*|*Typ* \*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
-|`const` *Typ*|*type*<br /> `const` *Typ*<br />`const` *Typ*&|
-|`volatile` *Typ*|*type*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|
+|*type*|*typ* `const`<br /> *typ* `volatile`<br /> *zadejte*&<br /> *typ* `const`&<br /> *typ* `volatile`&<br /> *typ* `volatile const`<br /> *typ* `volatile const`&|
+|*zadejte* \*|*zadejte* \*<br /> *typ* `const` \*<br /> *typ* `volatile` \*<br /> *typ* `volatile const` \*|
+|*typ* `const`|*type*<br /> *typ* `const`<br />*typ* `const`&|
+|*typ* `volatile`|*type*<br /> *typ* `volatile`<br /> *typ* `volatile`&|
 
-Protože předchozí pravidla je vždy použít v kombinaci, může být zadán ukazatel const volatile objekt, kde se očekává ukazatel.
+Vzhledem k tomu, že předchozí pravidla mohou být vždy použita v kombinaci, lze zadat ukazatel const na nestálý objekt, kde je očekáván ukazatel.
 
 ## <a name="ambiguous-expressions"></a>Nejednoznačné výrazy
 
@@ -88,7 +88,7 @@ func( i, ++i );
 
 Jazyk C++ nezaručuje pořadí, ve kterém jsou argumenty pro volání funkce vyhodnocovány. Proto by v předcházejícím příkladu mohla `func` pro své parametry přijímat hodnoty 7 a 8 nebo 8 a 8 podle toho, zda jsou parametry vyhodnoceny zleva doprava nebo zprava doleva.
 
-## <a name="c-sequence-points-microsoft-specific"></a>Body sekvence jazyka C++ (specifické pro Microsoft)
+## <a name="c-sequence-points-microsoft-specific"></a>C++body sekvence (specifické pro Microsoft)
 
 Výraz může změnit hodnotu objektu mezi po sobě jdoucími „body sekvence“ pouze jednou.
 

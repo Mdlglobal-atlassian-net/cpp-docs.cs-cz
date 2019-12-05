@@ -9,46 +9,46 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 85eb11397b2336363fe4f55da26623fac720faf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77aefe41fecf003218343710ef090eebf99446a8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313234"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857109"
 ---
 # <a name="c-storage-classes"></a>Třídy úložiště jazyka C
 
-"Třídy úložiště" proměnné a určuje, zda položka má "globální" nebo "místní" doba života. C volá tyto dva životnosti "statická" a "automatické". Položka s globální životností existuje a má hodnotu v průběhu provádění programu. Všechny funkce mají globální životnost.
+"Třída úložiště" proměnné určuje, zda má položka životnost "Global" nebo "local". C volá tyto dvě životnosti "static" a "automaticky". Položka s globální životností existuje a má hodnotu po celou dobu provádění programu. Všechny funkce mají globální životnost.
 
-Automatické proměnné nebo proměnné s místní životnost, jsou přiděleny nové úložiště předá každý ovládací prvek v době provádění do bloku ve které jsou definovány. Při spuštění se vrátí, proměnné již smysluplné hodnoty.
+Automatické proměnné nebo proměnné s místními životnostmi jsou přiděleny nové úložiště pokaždé, když ovládací prvek pro spuštění projde do bloku, ve kterém jsou definovány. Když se spuštění vrátí, proměnné již nemají smysluplné hodnoty.
 
 Jazyk C poskytuje následující specifikátory třídy úložiště:
 
 ## <a name="syntax"></a>Syntaxe
 
-*storage-class-specifier*:<br/>
+*specifikátor třídy úložiště*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Statická**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**registraci**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Definice TypeDef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)**  / \* specifické pro Microsoft \*/
+&nbsp;&nbsp;&nbsp;**definice** typu &nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Rozšířený--modifikátor-SEQ* **)**  /\* \*specifický pro společnost Microsoft /
 
-S výjimkou `__declspec`, lze použít pouze jednu *storage-class-specifier* v *Specifikátor deklarace* v deklaraci. Pokud je provedeno bez specifikace paměťové třídy, vytvořte deklarace v rámci bloku automatických objektů.
+S výjimkou `__declspec`lze v deklaraci *specifikátoru deklarace* použít pouze jeden *specifikátor úložiště-Class* . Pokud není vytvořena žádná specifikace třídy úložiště, deklarace v rámci bloku vytvoří automatické objekty.
 
-Položky deklarované s **automaticky** nebo **zaregistrovat** specifikátor mají místní životnost. Položky deklarované s **statické** nebo `extern` specifikátor mají globální životnost.
+Položky deklarované pomocí specifikátoru **auto** nebo **Register** mají místní životnost. Položky deklarované se specifikátorem **static** nebo `extern` mají globální životnost.
 
-Protože `typedef` a `__declspec` jsou sémanticky rozdílné z těchto čtyř *storage-class-specifier* terminály, jsou popsána samostatně. Podrobnější informace o `typedef`, naleznete v tématu [deklarace Typedef](../c-language/typedef-declarations.md). Podrobnější informace o `__declspec`, naleznete v tématu [rozšířené atributy třídy úložiště](../c-language/c-extended-storage-class-attributes.md).
+Vzhledem k tomu, že `typedef` a `__declspec` jsou sémanticky odlišné od dalších čtyř terminálových *specifikátorů třídy úložiště* , jsou popsány samostatně. Konkrétní informace o `typedef`naleznete v tématu [deklarace typedef](../c-language/typedef-declarations.md). Konkrétní informace o `__declspec`najdete v tématu [Rozšířené atributy tříd úložiště](../c-language/c-extended-storage-class-attributes.md).
 
-Umístění deklarace proměnných a funkcí v rámci zdrojové soubory ovlivní také třídu úložiště a viditelnost. Deklarace mimo všechny definice funkcí se říká, že se vyskytují na úrovni "vnější úrovni." Deklarace v rámci definice funkce se zobrazí na "vnitřní úrovni."
+Umístění proměnných a deklarací funkcí v rámci zdrojových souborů má vliv také na třídu úložiště a viditelnost. Deklarace mimo všechny definice funkcí se říká, že se zobrazí na externí úrovni. Deklarace v rámci definic funkcí se zobrazí na úrovni "interní".
 
-Přesné význam jednotlivých – specifikátor třídy úložiště závisí na dva faktory:
+Přesný význam každého specifikátoru třídy úložiště závisí na dvou faktorech:
 
-- Určuje, zda se zobrazí deklarace na externí nebo interní úrovni
+- Zda se deklarace zobrazuje na externí nebo interní úrovni
 
-- Určuje, zda je položka deklarované proměnné nebo funkce
+- Zda je deklarovaná položka proměnná nebo funkce
 
-[Specifikátory třídy úložiště pro deklarace na externí úrovni](../c-language/storage-class-specifiers-for-external-level-declarations.md) a [specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md) popisují *storage-class-specifier* terminály v každý druh deklarace a výchozí chování při *storage-class-specifier* je vynecháno z proměnné. [Specifikátory třídy úložiště s deklaracemi funkce](../c-language/storage-class-specifiers-with-function-declarations.md) popisuje specifikátory třídy úložiště použít s funkcemi.
+[Specifikátory třídy úložiště pro deklarace na externí úrovni](../c-language/storage-class-specifiers-for-external-level-declarations.md) a [specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md) popisují v každém typu deklarace terminály *specifikátoru úložiště* a vysvětlují výchozí chování při vynechání *specifikátoru třídy úložiště* z proměnné. [Specifikátory třídy úložiště s deklaracemi funkcí](../c-language/storage-class-specifiers-with-function-declarations.md) probírají specifikátory třídy úložiště používané s funkcemi.
 
 ## <a name="see-also"></a>Viz také:
 

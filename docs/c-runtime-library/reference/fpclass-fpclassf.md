@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957033"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857837"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -63,9 +63,9 @@ Hodnota s plovoucí desetinnou čárkou, která má být testována.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **_fpclass** a **_fpclassf** vrátí celočíselnou hodnotu, která označuje klasifikaci plovoucí desetinné čárky argumentu *x*. Klasifikace může mít jednu z následujících hodnot, která je definována v \<float. h >.
+Funkce **_fpclass** a **_fpclassf** vrací celočíselnou hodnotu, která označuje klasifikaci plovoucí desetinné čárky argumentu *x*. Klasifikace může mít jednu z následujících hodnot, která je definována v \<float. h >.
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Signalizace – NaN|
 |**_FPCLASS_QNAN**|Tiché NaN|
@@ -86,7 +86,7 @@ Funkce **_fpclass** a **_fpclassf** jsou specifické pro společnost Microsoft. 
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fpclass**, **_fpclassf**|\<float. h >|
+|**_fpclass** **_fpclassf**|\<float. h >|
 
 Další informace o kompatibilitě a dodržování shody najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 

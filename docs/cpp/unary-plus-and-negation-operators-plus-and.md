@@ -11,12 +11,12 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-ms.openlocfilehash: c1d5fc926b396f1ec44b9e44e79721e2ca4a0908
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83fedd9d3cc6cd7c08ba79d2ed83e9f62d919e29
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244159"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857239"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Unární operátory Plus a Negation: + a -
 
@@ -29,19 +29,21 @@ ms.locfileid: "62244159"
 
 ## <a name="-operator"></a>+ – operátor
 
-Výsledek unárního operátoru plus (**+**) je hodnota jeho operandu. Operand unárního operátoru plus musí být aritmetického typu.
+Výsledek unárního operátoru plus ( **+** ) je hodnota jeho operandu. Operand unárního operátoru plus musí být aritmetického typu.
 
-Pro celočíselné operandy je prováděno celočíselné povýšení. Výsledným typem je typ, na nějž byl operand povýšen. Proto výraz `+ch`, kde `ch` je typu **char**, výsledek typ **int**; hodnota zůstává nezměněna. Zobrazit [standardní převody](standard-conversions.md) Další informace o tom, jak je povýšení provedeno.
+Pro celočíselné operandy je prováděno celočíselné povýšení. Výsledným typem je typ, na nějž byl operand povýšen. Proto výraz `+ch`, kde `ch` je typu **char**, má za následek typ **int**; hodnota se nezměnila. Další informace o tom, jak se povýšení provádí, najdete v tématu [standardní převody](standard-conversions.md) .
 
 ## <a name="--operator"></a>- – operátor
 
-Operátor unární negace (**-**) vytvoří zápor svého operandu. Operand operátoru unární negace musí být aritmetického typu.
+Unární operátor negace ( **-** ) vytvoří negativní operand. Operandem unárního operátoru negace musí být aritmetický typ.
 
-Celočíselné povýšení proběhne na celočíselných operandech a výsledný typ je typ, na který je operand povýšen. Zobrazit [standardní převody](standard-conversions.md) Další informace o jak se provádí na podporu.
+Celočíselné povýšení proběhne na celočíselných operandech a výsledný typ je typ, na který je operand povýšen. Další informace o tom, jak se povýšení provádí, najdete v tématu [standardní převody](standard-conversions.md) .
 
-## <a name="microsoft-specific"></a>Specifické pro Microsoft
+**Specifické pro společnost Microsoft**
 
-Unární negace bez znaménka se provádí tak, že se hodnota operandu od 2 ^ n, kde n je počet bitů v objektu daného typu bez znaménka.
+Unární negace množství bez znaménka je prováděna odečtením hodnoty operandu 2 ^ n, kde n je počet bitů v objektu daného typu bez znaménka.
+
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,26 +1,26 @@
 ---
 title: Méně závažná chyba nástroje ML A2019
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2019
 helpviewer_keywords:
 - A2019
 ms.assetid: 7dff209b-6d91-4e39-88a3-5d6329bac537
-ms.openlocfilehash: 48a80c643bb42ce39df00297c7f5579445c99df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23412ccd6dc84d889b62acfb4ba09cb1bde8b82a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201933"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856724"
 ---
 # <a name="ml-nonfatal-error-a2019"></a>Méně závažná chyba nástroje ML A2019
 
-**operand musí být pole nebo typ záznamu**
+**operandem musí být typ záznamu nebo pole.**
 
-Následující operand [šířka](../../assembler/masm/operator-width.md) nebo [maska](../../assembler/masm/operator-mask.md) operátor nebyla platná.
+Operand následující po operátoru [Width](../../assembler/masm/operator-width.md) nebo [maskování](../../assembler/masm/operator-mask.md) není platný.
 
-[Šířka](../../assembler/masm/operator-width.md) operátor používá operandem, který je název pole nebo záznam. [Maska](../../assembler/masm/operator-mask.md) operátor používá operandem, který je název pole nebo typ záznamu.
+Operátor [Width](../../assembler/masm/operator-width.md) převezme operand, který je názvem pole nebo záznamu. Operátor [maskování](../../assembler/masm/operator-mask.md) převezme operand, který je názvem pole nebo typu záznamu.
 
 ## <a name="see-also"></a>Viz také:
 

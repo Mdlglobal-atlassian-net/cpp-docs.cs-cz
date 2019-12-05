@@ -1,32 +1,32 @@
 ---
 title: Méně závažná chyba nástroje ML A2050
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2050
 helpviewer_keywords:
 - A2050
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
-ms.openlocfilehash: 59d08b9c2743a3b45633527bcc54b3e1c4d6a58c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15c6449ff4207c92dee28120d4f61be641cf01c8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177549"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856574"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>Méně závažná chyba nástroje ML A2050
 
-**Real nebo není povolený počet konfiguračních dat spouštění**
+**reálné číslo nebo číslo BCD není povolené.**
 
-Číslo s plovoucí desetinnou čárkou (skutečné) nebo konstanta desetinné programového binární soubor (BCD) byla použita jiné než jako inicializátor data.
+Bylo použito číslo s plovoucí desetinnou čárkou (reálné) nebo binární kódování desítkové soustavy (BCD) jiné než jako inicializátor dat.
 
-Došlo k jedné z následujících akcí:
+Došlo k jedné z následujících:
 
-- Reálné číslo nebo BCD byla použita ve výrazu.
+- Ve výrazu se použilo reálné číslo nebo BCD.
 
-- Reálné číslo byla použita k inicializaci jiné než direktivu [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), nebo [TBYTE](../../assembler/masm/tbyte.md).
+- Reálné číslo bylo použito k inicializaci jiné direktivy než [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md)nebo [TBYTE](../../assembler/masm/tbyte.md).
 
-- BCD byla použita k inicializaci jiné než direktivu `TBYTE`.
+- Používala se BCD k inicializaci jiné direktivy než `TBYTE`.
 
 ## <a name="see-also"></a>Viz také:
 

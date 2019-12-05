@@ -1,5 +1,5 @@
 ---
-title: '&gt; &lt;long Double'
+title: složitá&lt;dlouhá dvojitá&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - std::complex<long double>
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688236"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857967"
 ---
-# <a name="complexltlong-doublegt"></a>&gt; &lt;long Double
+# <a name="complexltlong-doublegt"></a>složitá&lt;dlouhá dvojitá&gt;
 
 Tato explicitně specializovaná šablona třídy popisuje objekt, který ukládá seřazený pár objektů, jak typu **Long Double**, tak první představuje skutečnou část komplexního čísla a druhý představující imaginární část.
 
@@ -38,13 +38,13 @@ complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal* \
+*_RealVal*\
 Hodnota typu **Long Double** pro skutečnou část složeného čísla konstrukce
 
-*_ImagVal* \
+*_ImagVal*\
 Hodnota typu **Long Double** pro imaginární část složeného čísla, která je konstruována.
 
-*complexNum* \
+*complexNum*\
 Komplexní číslo typu **Double** nebo typu **float** , jehož reálné a imaginární části jsou použity k inicializaci komplexního typu **dlouhého dvojnásobku** typu.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -57,7 +57,7 @@ Explicitní specializace šablony třídy `complex` komplexní třídy typu **Lo
 
 Další informace o šabloně třídy `complex` a jejích členech naleznete v tématu [Complex Class](../standard-library/complex-class.md).
 
-**Specifické pro společnost Microsoft**: **dlouhé typy Double** a **Double** mají stejnou reprezentaci, ale jedná se o odlišné typy. Další informace najdete v tématu [základní typy](../cpp/fundamental-types-cpp.md).
+**Specifické pro společnost Microsoft**: **dlouhé typy Double** a **Double** mají stejnou reprezentaci, ale jsou odlišné typy. Další informace najdete v tématu [základní typy](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Příklad
 
@@ -117,11 +117,11 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<complex >
+**Záhlaví**: \<složitých >
 
 **Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[komplexní \ třídy](../standard-library/complex-class.md)
+[komplexní\ třídy](../standard-library/complex-class.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-ms.openlocfilehash: 8eb1b93aa55601125600b6c69d9bff3d9ca43aa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1090a0f3345f749a2afbd80566a9af7b9ea32d53
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244113"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857252"
 ---
-# <a name="unaligned"></a>__unaligned
+# <a name="__unaligned"></a>__unaligned
 
-**Specifické pro Microsoft**. Při deklaraci ukazatele s **__unaligned** modifikátor, kompilátor předpokládá, že ukazatel odkazuje na data, která nejsou zarovnána. V důsledku toho příslušné platformy kód je generován pro zpracování nezarovnaných čtení a zapíše prostřednictvím ukazatele.
+**Specifické pro společnost Microsoft**. Při deklaraci ukazatele pomocí modifikátoru **__unaligned** předpokládá kompilátor, že ukazatel odkazuje na data, která nejsou zarovnána. V důsledku toho je kód vhodný pro platformu vygenerován pro zpracování nezarovnaného čtení a zápisu přes ukazatel.
 
 ## <a name="remarks"></a>Poznámky
 
-Tento modifikátor popisuje zarovnání dat adresovaný ukazatelem; ukazatel sám je považován za zarovnaný.
+Tento modifikátor popisuje zarovnání dat, která jsou řešena ukazatelem; Předpokládá se, že ukazatel je zarovnaný.
 
-Nutnost **__unaligned** – klíčové slovo se liší podle platformy a prostředí. Nepodařilo se označit data správně může dojít k problémům s od snížení výkonu na hardwarových chyb. **__Unaligned** modifikátor není platný pro x86 platformy.
+Nutnost pro klíčové slovo **__unaligned** se liší podle platformy a prostředí. Nesprávné označení dat může mít za následek problémy v rozsahu od postihů výkonu až po hardwarové chyby. Modifikátor **__unaligned** není platný pro platformu x86.
 
-Z důvodu kompatibility s předchozími verzemi **_unaligned** je synonymum pro **__unaligned** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadán.
+Z důvodu kompatibility s předchozími verzemi je **_unaligned** synonymem pro **__unaligned** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 Další informace o zarovnání naleznete v následujících tématech:
 

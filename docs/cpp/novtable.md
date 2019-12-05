@@ -7,22 +7,22 @@ helpviewer_keywords:
 - novtable __declspec keyword
 - __declspec keyword [C++], novtable
 ms.assetid: cfef09c5-8c1e-4b14-8a72-7d726ded4484
-ms.openlocfilehash: 9dcca6ec07a19d53da238020805299b652cbf919
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a147af8f536923082df3a2d6d332150a57d6af1b
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245151"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857382"
 ---
 # <a name="novtable"></a>novtable
 
-## <a name="microsoft-specific"></a>Specifické pro Microsoft
+**Specifické pro společnost Microsoft**
 
-Jedná se **__declspec** rozšířeného atributu.
+Toto je **__declspec** rozšířený atribut.
 
-Tato forma **__declspec** lze použít pro všechny deklarace tříd, ale bude použito pouze na rozhraní třídy, tedy třídy, které se nikde nebude vytvořena instance samostatně. **__Declspec** zastaví kompilátoru generování kódu inicializace konstruktoru vfptr a destruktoru třídy. V mnoha případech jsou tímto odebrány odkazy na tabulku vtable, které jsou přidruženy ke třídě a budou tedy odebrány linkerem. Použití této formy atributu **__declspec** může vést k významnému snížení velikosti kódu.
+Tato forma **__declspec** může být použita pro jakoukoliv deklaraci třídy, ale měla by být použita pouze na třídy čistě rozhraní, to znamená třídy, které nikdy nebudou vytvořeny sami. **__Declspec** zastaví kompilátor generování kódu pro inicializaci vfptr v konstruktorech a destruktoru třídy. V mnoha případech jsou tímto odebrány odkazy na tabulku vtable, které jsou přidruženy ke třídě a budou tedy odebrány linkerem. Použití této formy **__declspec** může vést k výraznému snížení velikosti kódu.
 
-Při pokusu o vytvoření instance třídy označené **novtable** a poté přístup člena třídy, zobrazí se narušení přístupu (AV).
+Pokud se pokusíte vytvořit instanci třídy **označené pomocí a** pak přistupovat ke členu třídy, obdržíte porušení přístupu (AV).
 
 ## <a name="example"></a>Příklad
 
@@ -53,7 +53,7 @@ int main() {
 In Y
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

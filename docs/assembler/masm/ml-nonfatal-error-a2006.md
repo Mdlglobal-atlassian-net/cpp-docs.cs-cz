@@ -1,38 +1,38 @@
 ---
 title: Méně závažná chyba nástroje ML A2006
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 80283bde4dff36e32d276c998f6797b6eeed8160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c55cb66d6eaeaf620aeedc1dd924f6618cbf817
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202320"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856780"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Méně závažná chyba nástroje ML A2006
 
 **Nedefinovaný symbol: identifikátor**
 
-Byl proveden pokus o použití symbolu, který nebyl definován.
+Byl proveden pokus o použití nedefinovaného symbolu.
 
-Jednu z následujících mohlo dojít:
+Mohlo dojít k jedné z následujících akcí:
 
-- Symbol není definovaný.
+- Nebyl definován symbol.
 
-- Pole nebylo člen zadané struktury.
+- Pole nebylo členem zadané struktury.
 
-- Symbol byl definován v zahrnutém souboru, který není zahrnutý.
+- V souboru include byl definován symbol, který není zahrnutý.
 
-- Externí symbol se použil bez [EXTERN](../../assembler/masm/extern-masm.md) nebo [EXTERNDEF](../../assembler/masm/externdef.md) směrnice.
+- Externí symbol byl použit bez direktivy [extern](../../assembler/masm/extern-masm.md) nebo [EXTERNDEF](../../assembler/masm/externdef.md) .
 
-- Bylo zadáno chybně název symbolu.
+- Název symbolu byl nesprávně napsaný.
 
-- Popisek místní kódu bylo odkazováno mimo svůj rozsah.
+- Mimo svůj rozsah byl odkazován na popisek místního kódu.
 
 ## <a name="see-also"></a>Viz také:
 

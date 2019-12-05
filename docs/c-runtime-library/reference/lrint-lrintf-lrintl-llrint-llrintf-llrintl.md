@@ -45,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953127"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857746"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -109,7 +109,7 @@ Hodnota, která má být zaokrouhlena.
 
 V případě úspěchu vrátí zaokrouhlenou celočíselnou hodnotu *x*.
 
-|Problém|vrátit|
+|Problém|Výsledek|
 |-----------|------------|
 |*x* je mimo rozsah návratového typu.<br /><br /> *x* = ± ∞<br /><br /> *x* = NaN|Vyvolává **FE_INVALID** a vrací nulu (0).|
 
@@ -119,7 +119,7 @@ Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení 
 
 Pokud *x* nepředstavuje ekvivalent plovoucí desetinné čárky integrální hodnoty, tyto funkce vyvolají **FE_INEXACT**.
 
-**Specifické pro společnost Microsoft**: Pokud je výsledek mimo rozsah návratového typu nebo pokud je parametr hodnota NaN nebo Infinite, vrácená hodnota je definovaná implementací. Kompilátor Microsoft vrátí hodnotu nula (0).
+**Specifické pro společnost Microsoft**: Pokud je výsledek mimo rozsah návratového typu nebo pokud je parametr NaN nebo Infinite, vrácená hodnota je definovaná implementací. Kompilátor Microsoft vrátí hodnotu nula (0).
 
 ## <a name="requirements"></a>Požadavky
 

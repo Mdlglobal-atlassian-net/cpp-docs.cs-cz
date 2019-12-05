@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939934"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857850"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -74,13 +74,13 @@ float abs( float n );   // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **ABS**, **Labs**, **LLabs** a **_abs64** vrátí absolutní hodnotu parametru *n*. Nevrátila se žádná chybová zpráva.
+Funkce **ABS**, **Labs**, **LLabs** a **_abs64** vrací absolutní hodnotu parametru *n*. Není vrácena žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení funkce **ABS** , která přijímá a vrací **dlouhé**, **dlouhé**hodnoty **float**, **Double**a **Long** **Double** . Tato přetížení jsou definována v \<hlavičce > cmath. V programu v jazyce C funkce **ABS** vždycky přebírá a vrací **int**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení funkce **ABS** , která přijímá a vrací **dlouhé**, **dlouhé**hodnoty **float**, **Double**a **Long** **Double** . Tato přetížení jsou definována v hlavičce \<cmath >. V programu v jazyce C funkce **ABS** vždycky přebírá a vrací **int**.
 
-**Specifické pro společnost Microsoft**: Vzhledem k tomu, že rozsah záporných celých čísel, která lze znázornit pomocí jakéhokoli integrálního typu, je větší než rozsah kladných celých čísel, která lze znázornit pomocí tohoto typu, je možné zadat argument pro tyto funkce, které nelze převést. Pokud absolutní hodnota argumentu nemůže být reprezentována návratovým typem, funkce **ABS** vrátí hodnotu argumentu beze změny. `abs(INT_MIN)` Konkrétně vrací`INT_MIN` ,vrací`LLONG_MIN`, vracía`_abs64(_I64_MIN)` vrací .`_I64_MIN` `labs(LONG_MIN)` `LONG_MIN` `llabs(LLONG_MIN)` To znamená, že funkce **ABS** nelze použít k zaručení kladné hodnoty.
+**Specifické pro společnost Microsoft**: vzhledem k tomu, že rozsah záporných celých čísel, která lze znázornit pomocí jakéhokoli integrálního typu, je větší než rozsah kladných celých čísel, která lze znázornit pomocí tohoto typu, je možné zadat argument pro tyto funkce, které nelze převést. Pokud absolutní hodnota argumentu nemůže být reprezentována návratovým typem, funkce **ABS** vrátí hodnotu argumentu beze změny. Konkrétně `abs(INT_MIN)` vrací `INT_MIN`, `labs(LONG_MIN)` vrací `LONG_MIN`, `llabs(LLONG_MIN)` vrací `LLONG_MIN` a `_abs64(_I64_MIN)` vrací `_I64_MIN`. To znamená, že funkce **ABS** nelze použít k zaručení kladné hodnoty.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -89,11 +89,11 @@ Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení 
 |**abs**, **labs**, **llabs**|\<Math. h > nebo \<Stdlib. h >|\<cmath >, \<cstdlib >, \<Stdlib. h > nebo \<Math. h >|
 |**_abs64**|\<stdlib.h>|\<cstdlib > nebo \<Stdlib. h >|
 
-Chcete-li použít přetížené verze funkce **ABS** v C++, je \<nutné zahrnout hlavičku > cmath.
+Chcete-li použít přetížené verze funkce **ABS** v C++, je nutné zahrnout hlavičku \<cmath >.
 
 ## <a name="example"></a>Příklad
 
-Tento program počítá a zobrazuje absolutní hodnoty několika čísel.
+Tento program vypočítá a zobrazí absolutní hodnoty několik čísel.
 
 ```C
 // crt_abs.c

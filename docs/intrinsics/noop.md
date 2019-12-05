@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-ms.openlocfilehash: 24ba85b1fbbba4491c03d5a81afae345228db3bd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: aec4df98413bf34ac1e2966d012bb905edd4775e
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217180"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857928"
 ---
 # <a name="__noop"></a>__noop
 
 **Specifické pro společnost Microsoft**
 
-`__noop` Vnitřní určuje, že by funkce měla být ignorována. Seznam argumentů je analyzován, ale pro argumenty není vygenerován žádný kód. Je určena pro použití v globálních ladicích funkcích, které přijímají proměnný počet argumentů.
+Vnitřní `__noop` určuje, že by měla být funkce ignorována. Seznam argumentů je analyzován, ale pro argumenty není vygenerován žádný kód. Je určena pro použití v globálních ladicích funkcích, které přijímají proměnný počet argumentů.
 
-Kompilátor převede `__noop` vnitřní hodnotu na 0 v době kompilace.
+Kompilátor převede v době kompilace vnitřní `__noop` na 0.
 
 ## <a name="example"></a>Příklad
 
@@ -41,6 +41,8 @@ int main() {
    PRINT("\nhello\n");
 }
 ```
+
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

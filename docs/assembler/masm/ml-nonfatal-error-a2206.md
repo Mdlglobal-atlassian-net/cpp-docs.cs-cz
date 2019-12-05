@@ -1,26 +1,26 @@
 ---
 title: Méně závažná chyba nástroje ML A2206
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2206
 helpviewer_keywords:
 - A2206
 ms.assetid: 711846d0-5a09-4353-8857-60588c25526a
-ms.openlocfilehash: 1ef796fcb55f098932beb66eb7cd2083d65e5144
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd24e32dc000b63a6d70520250e5a792cdbc455
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177004"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854638"
 ---
 # <a name="ml-nonfatal-error-a2206"></a>Méně závažná chyba nástroje ML A2206
 
-**chybějící operátor ve výrazu**
+**chybí operátor ve výrazu**
 
-Výraz nejde vyhodnotit, protože neobsahuje operátor. Tato chybová zpráva může být také vedlejší efekt předchozí chybě programu.
+Výraz se nedá vyhodnotit, protože chybí operátor. Tato chybová zpráva může být také vedlejším účinkem předchozí chyby programu.
 
-Následující řádek vygeneruje tuto chybu:
+Tato chyba se vygeneruje na následujícím řádku:
 
 ```asm
 value1 = ( 1 + 2 ) 3

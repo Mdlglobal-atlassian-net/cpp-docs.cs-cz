@@ -7,30 +7,30 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: c227640e45943fb57b1029a4f03329241d1d6b34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233451"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857096"
 ---
 # <a name="function-body"></a>Tělo funkce
 
-A *tělo funkce* je složeného příkazu, který obsahuje příkazy, které určují, co funkce dělá.
+*Tělo funkce* je složený příkaz obsahující příkazy, které určují, co funkce dělá.
 
 ## <a name="syntax"></a>Syntaxe
 
 *definice funkce*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace*<sub>optimalizované</sub> *sekvence atributů*<sub>optimalizované</sub> *deklarátor* *seznam deklarací*  <sub>optimalizované</sub> *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace*– atribut<sub>opt</sub> *-SEQ* *deklarátor* *deklarace-list*<sub></sub> <sub>opt –</sub> *složený* příkaz
 
-/\* *sekvence atributů* je specifické pro Microsoft \*/
+atribut /\* *– SEQ* je specifický pro Microsoft \*/
 
-*compound-statement*: /\* tělo funkce \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *seznam deklarací*<sub>optimalizované</sub> *seznamu příkazů*<sub>optimalizované</sub> **}**
+*složený*příkaz:/\* tělo funkce \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *Declaration-list*<sub>opt</sub> *Statement-list*<sub>opt</sub> **}**
 
-Proměnné deklarované v těle funkce, označované jako *lokální proměnné*, mají **automaticky** třída úložiště není uvedeno jinak. Při volání funkce úložiště se vytvoří pro místní proměnné a jsou prováděny místní inicializace. První příkaz v předá řízení provádění *compound-statement* a pokračuje až do **vrátit** je proveden příkaz nebo konec tělo funkce nebude nalezen. Ovládací prvek vrátí do bodu, ve kterém byla volána funkce.
+Proměnné deklarované v těle funkce, označované jako *místní proměnné*, mají **auto** třídy úložiště, pokud není uvedeno jinak. Při volání funkce se vytvoří úložiště pro místní proměnné a provede se místní inicializace. Řízení spouštění předává prvnímu příkazu v *složeném výrazu* a pokračuje, dokud není proveden **návratový** příkaz nebo dokud se nenajde konec textu funkce. Ovládací prvek se pak vrátí do bodu, ve kterém byla funkce volána.
 
-A **vrátit** příkazu, který obsahuje výraz musí být provedeny, pokud je funkce vrátit hodnotu. Návratové hodnoty funkce není definováno, pokud žádné **vrátit** je proveden příkaz nebo, pokud **vrátit** příkaz neobsahuje výraz.
+Příkaz **return** obsahující výraz musí být proveden, pokud funkce vrátí hodnotu. Návratová hodnota funkce není definována, pokud není proveden žádný **návratový** příkaz nebo pokud příkaz **return** nezahrnuje výraz.
 
 ## <a name="see-also"></a>Viz také:
 

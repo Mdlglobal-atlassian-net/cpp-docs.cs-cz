@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941132"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857824"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -65,9 +65,9 @@ Funkce **feraiseexcept** se pokusí vyvolat výjimky s plovoucí desetinnou čá
 
 Argument *excepts* může být nula, jedna z hodnot makra výjimky nebo bitová nebo druhá z podporovaných maker výjimek. Pokud je jedno ze zadaných maker výjimek FE_OVERFLOW nebo FE_UNDERFLOW, může být výjimka FE_INEXACT vyvolána jako vedlejší efekt.
 
-Chcete-li použít tuto funkci, je nutné vypnout optimalizace plovoucí desetinné čárky, které by mohly zabránit přístupu `#pragma fenv_access(on)` pomocí direktivy před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
+Chcete-li použít tuto funkci, je nutné vypnout optimalizace s plovoucí desetinnou čárkou, které by mohly zabránit přístupu pomocí direktivy `#pragma fenv_access(on)` před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
-**Specifické pro společnost Microsoft:** Výjimky určené v *s výjimkou* jsou vyvolány v pořadí FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Nicméně FE_INEXACT lze vyvolat, když je vyvolána FE_OVERFLOW nebo FE_UNDERFLOW, i když není zadáno v *s výjimkou*. **Specifické pro konec Microsoftu**
+**Specifické pro společnost Microsoft:** Výjimky, které jsou uvedeny v části *s výjimkou* , jsou vyvolány v pořadí FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Nicméně FE_INEXACT lze vyvolat při vyvolání FE_OVERFLOW nebo FE_UNDERFLOW, i když není zadáno v *s výjimkou*.
 
 ## <a name="requirements"></a>Požadavky
 
