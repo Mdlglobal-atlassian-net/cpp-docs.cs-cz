@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: f9c8de7c8686b89a2ab9570a2558e3f649e545b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e2615829f6491bf660859fbc86ebcd07a56c5fe
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155235"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857681"
 ---
 # <a name="allocator"></a>alokátor
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-**Alokátoru** Specifikátor deklarace můžete použít pro funkce vlastní přidělení paměti pro zviditelnění přidělení pomocí trasování událostí pro Windows (ETW).
+Specifikátor deklarace **přidělujícího modulu** lze použít pro vlastní funkce přidělování paměti, aby bylo možné alokace zviditelnit prostřednictvím trasování událostí pro Windows (ETW).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,10 +27,12 @@ ms.locfileid: "62155235"
 
 ## <a name="remarks"></a>Poznámky
 
-Nativní paměť profileru v sadě Visual Studio funguje tak, že shromažďování přidělení data událostí trasování událostí pro Windows, protože ho vygeneroval za běhu. Na úrovni zdroje byly anotované alokátorů CRT a sadu Windows SDK tak, aby jejich přidělení dat se dají zachytit. Pokud vytváříte vlastní alokátory, pak všechny funkce, které vrací ukazatel na nově přidělenou haldě paměť může být doplněny pomocí `__declspec(allocator)`, jak je znázorněno v následujícím příkladu myMalloc:
+Nativní profil paměti v sadě Visual Studio funguje tak, že shromažďuje data události trasování událostí pro Windows vygenerovaná během běhu. Na úrovni zdroje byly anotované alokátorů CRT a sadu Windows SDK tak, aby jejich přidělení dat se dají zachytit. Pokud píšete vlastní přidělování, pak všechny funkce, které vracejí ukazatel na nově přidělenou paměť haldy, mohou být upraveny pomocí `__declspec(allocator)`, jak je vidět v tomto příkladu pro myMalloc:
 
 ```cpp
 __declspec(allocator) void* myMalloc(size_t size)
 ```
 
-Další informace najdete v tématu [měření využití paměti v aplikaci Visual Studio](/visualstudio/profiling/memory-usage) a [vlastní nativní události haldy trasování událostí pro Windows](/visualstudio/profiling/custom-native-etw-heap-events).
+Další informace najdete v tématu [měření využití paměti v aplikaci Visual Studio](/visualstudio/profiling/memory-usage) a [vlastní nativní události haldy ETW](/visualstudio/profiling/custom-native-etw-heap-events).
+
+**Specifické pro konec Microsoftu**

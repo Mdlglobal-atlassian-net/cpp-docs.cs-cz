@@ -5,16 +5,16 @@ f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 59c5eae66f9e93cb88f9512e405376f2ef5f1ceb
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216772"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858019"
 ---
 # <a name="_div64"></a>_div64
 
-`_div64` Vnitřní dělí 64 celé číslo na 32 celé číslo. Vrácená hodnota drží podíl a vnitřní Vrátí zbytek prostřednictvím parametru ukazatele. `_div64`je **specifická pro společnost Microsoft**.
+Vnitřní `_div64` rozdělí 64 celé číslo na 32 celé číslo. Vrácená hodnota drží podíl a vnitřní Vrátí zbytek prostřednictvím parametru ukazatele. `_div64` je **specifické pro společnost Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,13 +28,13 @@ int _div64(
 
 ### <a name="parameters"></a>Parametry
 
-*podíl* \
+ \ *dividend*
 pro 64 celé číslo, které se má rozdělit.
 
 *dělitel* \
 pro 32 celé číslo, které se má rozdělit.
 
-*Hledáte* \
+*zbývající* \
 mimo 32 celé číslo bitů zbytku.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -43,13 +43,13 @@ mimo 32 celé číslo bitů zbytku.
 
 ## <a name="remarks"></a>Poznámky
 
-Vnitřní dělí dělenec dělitelem. `_div64` Ukládá zbytek v 32 celé číslo, na které ukazuje *zbytek*, a vrátí 32 bitů podílu.
+Vnitřní `_div64` rozdělí *dividendy* pomocí *dělitele*. Ukládá zbytek v 32 celé číslo, na které ukazuje *zbytek*, a vrátí 32 bitů podílu.
 
-`_div64` Vnitřní verze je k dispozici počínaje verzí Visual Studio 2019 RTM.
+Vnitřní `_div64` je k dispozici počínaje verzí Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřním|Architektura|Záhlaví|
+|Vnitřní|Architektura|Záhlaví|
 |---------------|------------------|------------|
 |`_div64`|x86, x64|\<immintrin.h>|
 

@@ -1,6 +1,6 @@
 ---
 title: 'Platform:: Collections:: Vector – třída'
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816582"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857889"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform:: Collections:: Vector – třída
 
@@ -65,17 +65,17 @@ Třída **Vector** je C++ konkrétní implementace rozhraní [Windows:: Foundati
 
 Pokud se pokusíte použít **vektorový** typ ve veřejné návratové hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit tak, že změníte parametr nebo návratový typ hodnoty na [Windows:: Foundation:: Collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Další informace najdete v tématu [kolekce (C++/CX)](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Members
+### <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Vector::Vector](#ctor)|Inicializuje novou instanci třídy Vector.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Vector:: Append](#append)|Vloží zadanou položku za poslední položku v aktuálním vektoru.|
 |[Vector:: Clear](#clear)|Odstraní všechny prvky v aktuálním vektoru.|
@@ -84,7 +84,7 @@ Pokud se pokusíte použít **vektorový** typ ve veřejné návratové hodnotě
 |[Vector:: getmany](#getmany)|Načte sekvenci položek z aktuálního vektoru počínaje zadaným indexem.|
 |[Vector:: GetView](#getview)|Vrátí zobrazení vektoru jen pro čtení. To znamená, že [Platform:: Collections:: VectorView](../cppcx/platform-collections-vectorview-class.md).|
 |[Vector:: IndexOf](#indexof)|Vyhledá zadanou položku v aktuálním vektoru a pokud ji najde, vrátí index položky.|
-|[Vector:: InsertAt](#insertat)|Vloží zadanou položku do aktuálního vektoru po elementu identifikovaném zadaným indexem.|
+|[Vector:: InsertAt](#insertat)|Vloží zadanou položku do aktuálního vektoru v elementu identifikovaném zadaným indexem.|
 |[Vector:: nahradit všechno](#replaceall)|Odstraní prvky v aktuálním vektoru a poté vloží prvky ze zadaného pole.|
 |[Vector:: funkce RemoveAt](#removeat)|Odstraní element identifikovaný zadaným indexem z aktuálního vektoru.|
 |[Vector:: RemoveAtEnd](#removeatend)|Odstraní prvek na konci aktuálního vektoru.|
@@ -95,7 +95,7 @@ Pokud se pokusíte použít **vektorový** typ ve veřejné návratové hodnotě
 
 |||
 |-|-|
-|Název|Popis|
+|Name|Popis|
 |[Windows události:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Nastane, pokud se změní vektor.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -149,7 +149,7 @@ Iterátor, který odkazuje na první prvek v objektu Vector.
 
 ### <a name="remarks"></a>Poznámky
 
-Pohodlný způsob, jak uchovávat iterátory vrácené funkcí First (), je přiřadit návratovou hodnotu proměnné, která je deklarována s klíčovým slovem srážky typu **auto** . Například, `auto x = myVector->First();`. Tento iterátor zná délku kolekce.
+Pohodlný způsob, jak uchovávat iterátory vrácené funkcí First (), je přiřadit návratovou hodnotu proměnné, která je deklarována s klíčovým slovem srážky typu **auto** . Například `auto x = myVector->First();`. Tento iterátor zná délku kolekce.
 
 Pokud potřebujete pár iterátorů předat funkci STL, použijte bezplatné funkce [Windows:: Foundation:: Collections:: begin](../cppcx/begin-function.md) a [Windows:: Foundation:: Collections:: end](../cppcx/end-function.md)
 
@@ -244,7 +244,7 @@ IndexOf používá k vyhledání položky std:: find_if. Vlastní typy prvků by
 
 ##  <a name="insertat"></a>Vector:: InsertAt – metoda
 
-Vloží zadanou položku do aktuálního vektoru po elementu identifikovaném zadaným indexem.
+Vloží zadanou položku do aktuálního vektoru v elementu identifikovaném zadaným indexem.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -258,7 +258,7 @@ virtual void InsertAt(unsigned int index, T item)
 Unsigned integer založený na nule, který určuje konkrétní prvek v objektu Vector.
 
 *položkami*<br/>
-Položka, která má být vložena do vektoru za prvkem specifikovaným *indexem*. Typ *položky* je definován pomocí typeName *T* .
+Položka, která má být vložena do vektoru v elementu určeném *indexem*. Typ *položky* je definován pomocí typeName *T* .
 
 ## <a name="removeat"></a>Vector:: funkce RemoveAt – metoda
 

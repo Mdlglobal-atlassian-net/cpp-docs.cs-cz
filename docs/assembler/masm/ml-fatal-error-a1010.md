@@ -1,38 +1,38 @@
 ---
 title: Závažná chyba nástroje ML A1010
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1010
 helpviewer_keywords:
 - A1010
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
-ms.openlocfilehash: eb4d77b856e93a8d64ee6c51bec63ceae59b22e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ec82f7f6d559d977a9aa039ed91689a0ef4d49a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202062"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856875"
 ---
 # <a name="ml-fatal-error-a1010"></a>Závažná chyba nástroje ML A1010
 
-**vnoření bezkonkurenční blok:**
+**nespárované vnořování bloků:**
 
-Začátek bloku neměl odpovídajícího end nebo koncový blok nemá odpovídající začátku. Možné zahrnutí jednu z následujících akcí:
+Blok, který začíná, nemá shodný konec, nebo konec bloku neměl shodný začátek. Může být zahrnuta jedna z následujících možností:
 
-- Direktivu vysoké úrovně, jako [. Pokud](../../assembler/masm/dot-if.md), [. OPAKUJTE](../../assembler/masm/dot-repeat.md), nebo [. ZATÍMCO](../../assembler/masm/dot-while.md).
+- Direktiva vysoké úrovně, například [. Pokud](../../assembler/masm/dot-if.md), [. Opakujte akci](../../assembler/masm/dot-repeat.md), nebo [. WHILe](../../assembler/masm/dot-while.md).
 
-- Direktivy podmíněné sestavení jako [IF](../../assembler/masm/if-masm.md), [OPAKUJTE](../../assembler/masm/repeat.md), nebo **při**.
+- Direktiva podmíněného sestavení, například [if](../../assembler/masm/if-masm.md), [Repeat](../../assembler/masm/repeat.md)nebo **while**.
 
-- Definici struktury nebo sjednocení.
+- Definice struktury nebo sjednocení.
 
 - Definice procedury.
 
 - Definice segmentu.
 
-- A [POPCONTEXT](../../assembler/masm/popcontext.md) směrnice.
+- Direktiva [POPCONTEXT](../../assembler/masm/popcontext.md)
 
-- Podmíněné sestavení direktiv, například [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), nebo **ENDIF** bez odpovídajícího [IF](../../assembler/masm/if-masm.md).
+- Direktiva podmíněného sestavení, jako je například [Else](../../assembler/masm/else-masm.md), [ElseIf](../../assembler/masm/elseif-masm.md)nebo **endif** bez odpovídajícího typu [if](../../assembler/masm/if-masm.md).
 
 ## <a name="see-also"></a>Viz také:
 

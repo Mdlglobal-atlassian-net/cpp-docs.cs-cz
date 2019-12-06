@@ -4,34 +4,34 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - based addressing
 ms.assetid: a68ff750-c7fa-4c0c-8d5f-2df76e4686c5
-ms.openlocfilehash: 8dec9b0bcc7db25e2ec4c39b9d907922691bfc05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8c923b5a111144c539b5bea1b2f47eb58dd1fbd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393945"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857642"
 ---
-# <a name="based-grammar"></a>__based – gramatika
+# <a name="__based-grammar"></a>__based – gramatika
 
-## <a name="microsoft-specific"></a>Specifické pro Microsoft
+**Specifické pro společnost Microsoft**
 
-Na základě adresování je užitečné, když je nutné mít naprostou kontrolu nad segment, ve kterém jsou objekty přidělovány (statické a dynamické na základě dat).
+Založené na adresách je užitečné, pokud potřebujete přesnou kontrolu nad segmentem, ve kterém jsou objekty přiděleny (statická a dynamická data).
 
-Jedinou formou adresování podle přijatelný v 32bitových a 64bitových kompilacích je "na základě ukazatel", který definuje typ, který obsahuje 32bitové nebo 64bitové posunutí se základní 32bitová nebo 64bitová verze nebo na základě **void**.
+Jediná forma adresování, která je přijatelná v 32 a 64 bitových kompilacích, je založena na ukazateli, který definuje typ, který obsahuje 32-bitové 64 nebo 16bitové přemístění na 32 nebo na základě hodnoty **void**.
 
 ## <a name="grammar"></a>Gramatika
 
-*na základě modifikátoru rozsahu*: **__based (***výraz base***)** 
+*založený na rozsahu – modifikátor*: **__based (**  *základní výraz*  **)**
 
-*výraz Base*: *based-variablebased-abstract-declaratorsegment-namesegment-cast*
+*základní-výraz*: *based-variablebased-abstract-declaratorsegment-namesegment-cast*
 
-*na základě proměnné*: *identifikátor*
+*based – proměnná*: *identifikátor*
 
-*based-abstract-declarator*: *abstract-declarator*
+*založené na abstract-deklarátor*: *abstract-deklarátor*
 
-*Základní typ*: *název typu*
+*základní typ*: *typ – název*
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

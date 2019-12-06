@@ -10,48 +10,48 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: d5664634687c689316427c8652865ba9423e24f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa6e977b3aa03b5f08901cfa8b0abe1b4046e72d
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157914"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857005"
 ---
 # <a name="storage-class"></a>Třída úložiště
 
-Specifikátor třídy úložiště v definici funkce poskytuje funkci `extern` nebo **statické** třídu úložiště.
+Specifikátor třídy úložiště v definici funkce poskytuje funkci buď `extern`, nebo **statickou** třídu úložiště.
 
 ## <a name="syntax"></a>Syntaxe
 
 *definice funkce*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace*<sub>optimalizované</sub> *sekvence atributů*<sub>optimalizované</sub> *deklarátor* *seznam deklarací*  <sub>optimalizované</sub> *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace*– atribut<sub>opt</sub> *-SEQ* *deklarátor* *deklarace-list*<sub></sub> <sub>opt –</sub> *složený* příkaz
 
-/\* *sekvence atributů* je specifické pro Microsoft \*/
+atribut /\* *– SEQ* je specifický pro Microsoft \*/
 
 *specifikátory deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specifikátory deklarace*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*třídy úložiště* -specifikátory *deklarace specifikátor-* <sub></sub> specifikátory<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *specifikátoru typu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *kvalifikátoru typu* -deklarace
 
-*Storage-class-specifier*: /\* pro definice funkcí \*/<br/>
+*specifikátor třídy úložiště*:/\* pro definice funkcí \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Statická**
+&nbsp;&nbsp;&nbsp;&nbsp;**static**
 
-Pokud neobsahuje definici funkce *storage-class-specifier*, výchozí hodnota třídy úložiště `extern`. Funkci lze explicitně deklarovat jako `extern`, není to však zapotřebí.
+Pokud definice funkce nezahrnuje *specifikátor třídy úložiště*, je výchozí hodnota třídy úložiště `extern`. Funkci lze explicitně deklarovat jako `extern`, není to však zapotřebí.
 
-Pokud obsahuje deklarace funkce *storage-class-specifier* `extern`, má identifikátor stejné propojení jako jakákoli viditelná deklarace identifikátoru s rozsahem souboru. Pokud v oboru souboru neexistuje žádná viditelná deklarace, má identifikátor vnější propojení. Pokud nemá identifikátor rozsahu souboru ale žádné *storage-class-specifier*, má identifikátor vnější propojení. Vnější propojení znamená, že všechny instance identifikátoru označují stejný objekt nebo funkci. Zobrazit [životnost, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md) Další informace o propojení a oboru souboru.
+Pokud deklarace funkce obsahuje `extern`*specifikátoru třídy úložiště* , identifikátor má stejné propojení jako jakákoli viditelná deklarace identifikátoru s rozsahem souboru. Pokud v oboru souboru neexistuje žádná viditelná deklarace, má identifikátor vnější propojení. Pokud identifikátor má rozsah souboru a žádný *specifikátor třídy úložiště*, má identifikátor vnější propojení. Vnější propojení znamená, že všechny instance identifikátoru označují stejný objekt nebo funkci. Další informace o propojení a rozsahu souboru naleznete v tématu [Doba života, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md) .
 
 Deklarace funkcí v oboru bloku se specifikátorem třídy úložiště jiným než `extern` generují chyby.
 
-Funkce s **statické** třídu úložiště je viditelná pouze ve zdrojovém souboru, ve kterém je definována. Všechny ostatní funkce s třídou úložiště `extern` zadanou explicitně či implicitně jsou viditelné ve všech zdrojových souborech programu. Pokud **statické** třídy úložiště se požaduje, musí být deklarován v prvním výskytu deklarace funkce (pokud existuje) a v její definici funkce.
+Funkce s třídou **statického** úložiště je viditelná pouze ve zdrojovém souboru, ve kterém je definována. Všechny ostatní funkce s třídou úložiště `extern` zadanou explicitně či implicitně jsou viditelné ve všech zdrojových souborech programu. Pokud je požadována **statická** třída úložiště, musí být deklarována v prvním výskytu deklarace (pokud existuje) funkce a v definici funkce.
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Pokud jsou povolena rozšíření společnosti Microsoft, funkce původně deklarovaná bez třídy úložiště (nebo s `extern` třídy úložiště) dostane **statické** třída úložiště, pokud definice funkce umístěna ve stejném zdrojovém souboru a pokud definice explicitně určuje **statické** třídu úložiště.
+Pokud jsou rozšíření společnosti Microsoft povolena, je funkce, která byla původně deklarována bez třídy úložiště (nebo s `extern` třídou úložiště) udělena třída **statického** úložiště, je-li definice funkce ve stejném zdrojovém souboru a pokud definice explicitně určuje třídu **statického** úložiště.
 
 Je-li program kompilován s možností kompilátoru /Ze, funkce deklarované uvnitř bloku pomocí klíčového slova `extern` mají globální viditelnost. To neplatí v případě kompilace s možností /Za. Tato funkce nemusí být spolehlivá, bere-li se v úvahu přenositelnost zdrojového kódu.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

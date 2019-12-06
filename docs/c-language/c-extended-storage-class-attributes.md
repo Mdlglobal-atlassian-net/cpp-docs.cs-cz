@@ -7,18 +7,18 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325881"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857148"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozšířené atributy třídy úložiště jazyka C
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Více aktuální informace o tomto tématu najdete v části [__declspec (C++ odkaz)](../cpp/declspec.md).
+Další informace o tomto tématu najdete v části [__declspecC++ (Referenční dokumentace)](../cpp/declspec.md).
 
 Rozšířená syntaxe atributu zjednodušuje a standardizuje rozšíření specifické pro společnost Microsoft v rámci jazyka C. Mezi atributy třídy úložiště používající rozšířenou syntaxi atributů patří atributy thread, naked, dllimport a dllexport.
 
@@ -26,24 +26,24 @@ Rozšířená syntaxe atributů pro určení informací o třídě úložiště 
 
 ## <a name="syntax"></a>Syntaxe
 
-*storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)**  / \* specifické pro Microsoft \*/
+*specifikátor třídy úložiště*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Rozšířený--modifikátor-SEQ* **)**  /\* \*specifický pro společnost Microsoft /
 
-*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
+Rozšířený-&nbsp;– *Modifikátor-SEQ*: &nbsp;&nbsp;&nbsp;/\* \*specifické pro společnost Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
+*Rozšířené – modifikátor*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*pro konkrétní Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**vlákno**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**holé**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
-Modifikátory deklarace jsou odděleny prázdným znakem. Všimněte si, že *extended-decl-modifier-seq* může být prázdný; v takovém případě nemá atribut __declspec žádný vliv.
+Modifikátory deklarace jsou odděleny prázdným znakem. Všimněte si, že *příkaz Extended---modifikátor-SEQ* může být prázdný. v takovém případě nemá __declspec žádný vliv.
 
 Atributy třídy úložiště thread, naked, dllimport a dllexport jsou vlastnostmi pouze té deklarace dat nebo funkce, pro kterou jsou použity. Tyto atributy nemění definice atributů typů samotné funkce. Atribut thread ovlivňuje pouze data. Atribut naked ovlivňuje pouze funkce. Atributy dllimport a dllexport ovlivňují funkce i data.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

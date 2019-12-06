@@ -6,36 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eb1a05eaf6669daa4cb7142ff16a57f7caf39cd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364568"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857603"
 ---
-# <a name="clrcall"></a>__clrcall
+# <a name="__clrcall"></a>__clrcall
 
-**Microsoft Specific**
+Určuje, že funkci lze volat pouze ze spravovaného kódu.  Použijte **__clrcall** pro všechny virtuální funkce, které budou volány pouze ze spravovaného kódu. Nicméně tuto konvenci volání nelze použít pro funkce, které budou volány z nativního kódu. Modifikátor **__clrcall** je specifický pro společnost Microsoft.
 
-Určuje, že funkce lze volat pouze ze spravovaného kódu.  Použití **__clrcall** pro všechny virtuální funkce, které bude volat pouze ze spravovaného kódu. Tato konvence volání však nelze použít pro funkce, které budou volat z nativního kódu.
+Pomocí **__clrcall** můžete zvýšit výkon při volání ze spravované funkce do virtuální spravované funkce nebo ze spravované funkce přes ukazatel.
 
-Použití **__clrcall** ke zlepšení výkonu při volání metody ze spravované funkce virtuální spravované funkce nebo ze spravované funkce spravované funkce prostřednictvím ukazatele.
+Vstupní body jsou oddělené, funkce generované kompilátorem. Pokud má funkce nativní i spravované vstupní body, jedna z nich bude skutečnou funkcí s implementací funkce. Druhá funkce bude samostatnou funkcí (převodem), která volá do skutečné funkce a umožňuje, aby modul common language runtime prováděl PInvoke. Při označování funkce jako **__clrcall**označíte, že implementace funkce musí být MSIL a že funkce nativního vstupního bodu nebude vygenerována.
 
-Vstupní body jsou samostatný, vygeneruje kompilátor funkce. Pokud je funkce i nativní a spravovaný vstupní body, jeden z nich bude skutečné funkce s implementací funkce. Další funkce bude o samostatnou funkci (převodní rutina), která volá do skutečné funkce a umožňuje provádět PInvoke modul common language runtime. Při označení funkci tak, aby **__clrcall**, označují implementace funkce musí být jazyk MSIL a nevygeneruje funkci nativní vstupního bodu.
+Když převezmete adresu nativní funkce, pokud není zadán **__clrcall** , kompilátor použije nativní vstupní bod. **__clrcall** označuje, že je funkce spravovaná a není nutné přecházet mezi přechodem ze spravovaného do nativního. V takovém případě kompilátor používá spravovaný vstupní bod.
 
-Při převzetí adresy nativní funkce, pokud **__clrcall** není zadán, kompilátor používá nativní vstupní bod. **výraz __clrcall** označuje, že spravované funkce a je nutné absolvovat přechod ze spravované na nativní. V takovém případě kompilátor používá spravovaný vstupní bod.
+Pokud se používá `/clr` (není `/clr:pure` nebo `/clr:safe`) a **__clrcall** se nepoužívá, převzetí adresy funkce vždycky vrátí adresu nativní funkce vstupního bodu. Při použití **__clrcall** není vytvořena funkce nativního vstupního bodu, takže získáte adresu spravované funkce, nikoli funkci převolání vstupní bod. Další informace najdete v tématu [Double dvojitý](../dotnet/double-thunking-cpp.md). Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-Když `/clr` (ne `/clr:pure` nebo `/clr:safe`) se používá a **__clrcall** je nepoužívá, převzetí adresy funkce vždy vrátí adresu funkce nativní vstupní bod. Když **__clrcall** se používá, funkci nativní vstupního bodu není vytvořen, takže získáte adresy spravované funkce, nikoli funkci převodní rutina vstupního bodu. Další informace najdete v tématu [dvojitému](../dotnet/double-thunking-cpp.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+[/CLR (kompilace modulu Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) znamená, že všechny funkce a ukazatele funkcí jsou **__clrcall** a kompilátor nepovoluje, aby byla funkce uvnitř kompilantu označena jako žádná jiná než **__clrcall**. Je-li použita možnost **/clr: Pure** , **__clrcall** lze zadat pouze pro ukazatele na funkce a externí deklarace.
 
-[/ CLR (kompilace common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) znamená, že jsou všechny funkce a ukazatelů na funkce **__clrcall** a kompilátor nebude povolit funkci uvnitř kompilantu nic jiného než Označit **__clrcall**. Když **/CLR: pure** se používá, **__clrcall** lze zadat pouze na ukazatele na funkce a externí deklarace.
+Můžete přímo volat **__clrcall** funkce z existujícího C++ kódu, který byl zkompilován pomocí **/CLR** , pokud má tato funkce implementaci MSIL. funkce **__clrcall** nelze volat přímo z funkcí, které obsahují vložený ASM a volání intrinisics specifických pro procesor, a to i v případě, že jsou tyto funkce kompilovány pomocí `/clr`.
 
-Můžete volat přímo **__clrcall** funkce z již existujících C++ kód, který byl zkompilován pomocí **/CLR** za předpokladu, tato funkce je implementace jazyka MSIL. **výraz __clrcall** funkce nelze volat přímo z funkcí, které mají vloženého kódu asm a volání intrinisics specifické pro procesor, například i v případě, že tyto funkce jsou kompilovány pomocí `/clr`.
-
-**výraz __clrcall** ukazatelů na funkce jsou určeny pouze pro použití v aplikační doméně, ve kterém byly vytvořeny.  Namísto předání **__clrcall** ukazatele funkcí napříč doménami aplikace, použijte <xref:System.CrossAppDomainDelegate>. Další informace najdete v tématu [aplikačních doménách a Visual C++](../dotnet/application-domains-and-visual-cpp.md).
+**__clrcall** ukazatelé na funkce jsou určeny pouze k použití v doméně aplikace, ve které byly vytvořeny.  Místo předání ukazatelů **__clrcall** funkcí napříč doménami aplikace použijte <xref:System.CrossAppDomainDelegate>. Další informace najdete v tématu [domény aplikace a vizuál C++ ](../dotnet/application-domains-and-visual-cpp.md).
 
 ## <a name="example"></a>Příklad
 
-Upozorňujeme, že pokud je funkce deklarovaná pomocí **__clrcall**, kód bude vytvořen, pokud je nepotřebujete, například když je volána funkce.
+Všimněte si, že pokud je funkce deklarována s **__clrcall**, kód bude vygenerován v případě potřeby; například při volání funkce.
 
 ```cpp
 // clrcall2.cpp
@@ -74,7 +72,7 @@ in Func1
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, že ukazatel na funkci, můžete definovat tak, že je deklarovat, že ukazatel funkce bude volat pouze ze spravovaného kódu. To umožňuje kompilátoru přímo volat funkci spravovaný a nativní vstupní bod (double převodní rutina problém).
+Následující příklad ukazuje, že můžete definovat ukazatel na funkci, například, deklarujete, že ukazatel na funkci bude vyvolán pouze ze spravovaného kódu. Díky tomu může kompilátor přímo volat spravovanou funkci a vyhnout se nativnímu vstupnímu bodu (problém s dvojitým převodem).
 
 ```cpp
 // clrcall3.cpp

@@ -55,16 +55,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945313"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857707"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
-Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. K dispozici jsou bezpečnější verze těchto funkcí; viz [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).
+Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. K dispozici jsou bezpečnější verze těchto funkcí; viz [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s _vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -145,7 +145,7 @@ int _vsnwprintf_l(
 *vyrovnávací paměti*<br/>
 Umístění úložiště pro výstup.
 
-*výpočtu*<br/>
+*count*<br/>
 Maximální počet znaků, které mají být zapsány.
 
 *format*<br/>
@@ -161,9 +161,9 @@ Další informace najdete v tématu [specifikace formátu](../../c-runtime-libra
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **vsnprintf** vrací počet zapsaných znaků a nepočítá ukončující znak null. Pokud velikost vyrovnávací paměti určená parametrem *Count* není dostatečně velká, aby obsahovala výstup určený parametrem *Format* a *argptr*, návratová hodnota **vsnprintf** je počet znaků, které by byly zapsány, a nepočítá hodnotu null. znak, pokud byl *počet* dostatečně velký. Pokud je vrácená hodnota větší než *Count* -1, výstup byl zkrácen. Návratová hodnota-1 označuje, že došlo k chybě kódování.
+Funkce **vsnprintf** vrací počet zapsaných znaků a nepočítá ukončující znak null. Pokud velikost vyrovnávací paměti určená parametrem *Count* není dostatečně velká, aby obsahovala výstup určený parametrem *Format* a *argptr*, návratová hodnota **vsnprintf** je počet znaků, které by byly zapsány, nepočítá znak null, pokud byl *počet* dostatečně velký. Pokud je vrácená hodnota větší než *Count* -1, výstup byl zkrácen. Návratová hodnota-1 označuje, že došlo k chybě kódování.
 
-Funkce **_vsnprintf** a **_vsnwprintf** vrací počet znaků zapsaných v případě, že počet znaků, které mají být zapsány, je menší nebo roven *počtu*; Pokud je počet znaků, které mají být zapsány, větší než *počet*, vrátí tyto funkce-1 znamenající, že výstup byl zkrácen.
+Funkce **_vsnprintf** i **_vsnwprintf** vrací počet znaků zapsaných v případě, že počet znaků, které mají být zapsány, je menší nebo roven *počtu*; Pokud je počet znaků, které mají být zapsány, větší než *počet*, vrátí tyto funkce-1 znamenající, že výstup byl zkrácen.
 
 Hodnota vrácená všemi těmito funkcemi nezahrnuje ukončující hodnotu null, ať už je zapsána, nebo ne. Pokud je *počet* nula, vrácená hodnota je počet znaků, které funkce zapisují, a ne včetně ukončujících hodnot null. Tento výsledek lze použít k přidělení dostatečného prostoru pro ukládání do vyrovnávací paměti pro řetězec a jeho ukončující hodnotu null a poté volání funkce pro vyplňování vyrovnávací paměti.
 
@@ -171,13 +171,13 @@ Pokud má formát **hodnotu null**nebo pokud je *vyrovnávací paměť* **null**
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje data a zapisuje *je do paměti, na kterou* ukazuje *vyrovnávací paměť*. Funkce **vsnprintf** vždy zapisuje ukončovací znak null, i když zkrátí výstup. Při použití **_vsnprintf** a **_vsnwprintf**se vyrovnávací paměť ukončí jenom v případě, že je na konci místnost (tj. Pokud počet znaků, které se mají zapisovat, je menší než *počet*).
+Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje data a zapisuje *je do paměti, na kterou* ukazuje *vyrovnávací paměť*. Funkce **vsnprintf** vždy zapisuje ukončovací znak null, i když zkrátí výstup. Při použití **_vsnprintf** a **_vsnwprintf**vyrovnávací paměť bude ukončena pouze v případě, že je na konci nějaká místnost (tj. Pokud je počet znaků k zápisu menší než *počet*).
 
 > [!IMPORTANT]
 > Chcete-li zabránit určitým druhům rizik zabezpečení, zajistěte, aby *Formát* nebyl uživatelem definovaným řetězcem. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Chcete-li zajistit, aby při volání **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** a **_vsnwprintf_l**existoval prostor pro ukončující hodnotu null, ujistěte se, že je *počet* striktně menší než délka vyrovnávací paměti a inicializuje vyrovnávací paměť na hodnota null před voláním funkce.
+> Aby bylo zajištěno, že při volání **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** a **_vsnwprintf_l**, je nutné, aby byl *počet* striktně menší než délka vyrovnávací paměti a aby před voláním funkce inicializoval vyrovnávací paměť na hodnotu null.
 >
 > Vzhledem k tomu, že **vsnprintf** vždy zapisuje ukončující hodnotu null, parametr *Count* může být stejný jako velikost vyrovnávací paměti.
 
@@ -185,11 +185,11 @@ Od UCRT v prostředí Visual Studio 2015 a Windows 10 se **vsnprintf** už nesho
 
 Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
-V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
 |**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|

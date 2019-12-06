@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 1b5863a021fd74bb80162d589af7c2a1a5b36f9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232465"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857070"
 ---
 # <a name="overview-of-c-statements"></a>Přehled příkazů jazyka C
 
@@ -21,27 +21,27 @@ Příkazy C sestávají z tokenů, výrazů a jiných příkazů. Příkaz tvoř
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz*: [příkaz s popiskem](../c-language/goto-and-labeled-statements-c.md)
+*příkaz*: [označený – příkaz](../c-language/goto-and-labeled-statements-c.md)
 
-[compound-statement](../c-language/compound-statement-c.md)
+[složený příkaz](../c-language/compound-statement-c.md)
 
-[příkaz výrazu](../c-language/expression-statement-c.md)
+[příkaz Expression-](../c-language/expression-statement-c.md)
 
-[selection-statement](../c-language/if-statement-c.md)
+[Výběr – příkaz](../c-language/if-statement-c.md)
 
-[iterace – příkaz](../c-language/do-while-statement-c.md)
+[příkaz iterace](../c-language/do-while-statement-c.md)
 
-[příkaz-skoku](../c-language/break-statement-c.md)
+[příkaz skoku](../c-language/break-statement-c.md)
 
-[s výjimkou příkazu Try](../c-language/try-except-statement-c.md)
+[try-except-Statement](../c-language/try-except-statement-c.md) /* \*specifické pro společnost Microsoft /
 
-/ * Specifické pro Microsoft \* / [try-finally-statement](../c-language/try-finally-statement-c.md)  / \* specifické pro Microsoft \*/
+[try-finally-příkaz](../c-language/try-finally-statement-c.md) /\* \*pro konkrétní Microsoft /
 
-Tělem příkazu je často „složený příkaz“. Složený příkaz sestává z jiných příkazů, které mohou obsahovat klíčová slova. Složený příkaz je oddělen složenými závorkami (**{}**). Všechny ostatní příkazy jazyka C končí středníkem (**;**). Středník je zakončením příkazu.
+Tělem příkazu je často „složený příkaz“. Složený příkaz sestává z jiných příkazů, které mohou obsahovat klíčová slova. Složený příkaz je oddělen složenými závorkami ( **{}** ). Všechny ostatní příkazy jazyka C končí středníkem ( **;** ). Středník je zakončením příkazu.
 
-Příkaz výrazu obsahuje výraz jazyka C, který může obsahovat aritmetické nebo logické operátory představené v [výrazy a přiřazení](../c-language/expressions-and-assignments.md). Nulový příkaz je prázdným příkazem.
+Příkaz Expression obsahuje výraz jazyka C, který může obsahovat aritmetické nebo logické operátory zavedené ve [výrazech a přiřazeních](../c-language/expressions-and-assignments.md). Nulový příkaz je prázdným příkazem.
 
-Všechny příkazy jazyka C mohou začínat identifikačním popiskem sestávajícím z názvu a dvojtečky. Jelikož pouze příkaz `goto` rozpoznává popisky příkazů, jsou tyto popisky popsány spolu s příkazem `goto`. Zobrazit [příkaz goto a příkazy s popiskem](../c-language/goto-and-labeled-statements-c.md) Další informace.
+Všechny příkazy jazyka C mohou začínat identifikačním popiskem sestávajícím z názvu a dvojtečky. Jelikož pouze příkaz `goto` rozpoznává popisky příkazů, jsou tyto popisky popsány spolu s příkazem `goto`. Další informace naleznete v tématu [Příkazy GoTo a labeled](../c-language/goto-and-labeled-statements-c.md) .
 
 ## <a name="see-also"></a>Viz také:
 

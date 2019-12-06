@@ -2,173 +2,173 @@
 title: Souhrn deklarací
 ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 21d6866f8e0b370d8a0d93253a6259302666963a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88cfc78089e0efd4765a40ab0d9c6dc333deb125
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157732"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857018"
 ---
 # <a name="summary-of-declarations"></a>Souhrn deklarací
 
 *deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *sekvence atributů*<sub>optimalizované</sub> *init-declarator-list*<sub>optimalizované</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;atribut *deklarace-specifikátor* *-SEQ*<sub>opt</sub> *-deklarátor-list*<sub>opt</sub> **;**
 
 *specifikátory deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specifikátory deklarace*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*třídy úložiště* -specifikátory *deklarace specifikátor-* <sub></sub> specifikátory<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *specifikátoru typu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *kvalifikátoru typu* -deklarace
 
-*sekvence atributů* :&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*atribut* *sekvence atributů*<sub>optimalizované</sub>
+*atribut-seq* :&nbsp;&nbsp;&nbsp;&nbsp;/\* \*specifických pro společnost Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;atributu *atributu* &nbsp; *– SEQ*<sub>opt</sub>
 
-*atribut* : jeden z&nbsp; &nbsp; &nbsp; &nbsp; / \* specifické pro Microsoft \*/<br/>
+*atribut* : jedna z&nbsp;&nbsp;&nbsp;&nbsp;/\* \*pro konkrétní Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
+*init-deklarátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*  / \* pro skalární inicializace \*/
 
-*storage-class-specifier*:<br/>
+*specifikátor třídy úložiště*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Statická**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**registraci**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Definice TypeDef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  / \* specifické pro Microsoft \*/
+&nbsp;&nbsp;&nbsp;**definice** typu &nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Rozšířený--modifikátor-SEQ* **)**  /\* \*specifický pro společnost Microsoft /
 
-*Specifikátor typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Typ void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
+*specifikátor typu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**znak**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8**  / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16**  / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32**  / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64**  / \* specifické pro Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*/ pro konkrétní Microsoft<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*/ pro konkrétní Microsoft<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*/ pro konkrétní Microsoft<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*/ pro konkrétní Microsoft<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Long**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**plovoucí desetinnou čárkou**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**podepsané**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**bez znaménka**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enum – specifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Název TypeDef*
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-Union-specifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor enum*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef-Name*
 
-*Kvalifikátor typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Const**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Volatile**
+*kvalifikátor typu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**const**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**volatile**
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatelem*<sub>opt</sub> *Direct-deklarátor*
 
-*direct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
+*přímý – deklarátor*:<br/>
+*identifikátor* &nbsp;&nbsp;&nbsp;&nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **(** *deklarátor* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **[** *konstantní výraz*<sub>optimalizované</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**  / \* deklarátor nový styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor* **[** opt *-Expression*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct deklarátor* **(** *parametr-Type-list* **)**  /\* nového stylu deklarátor \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor* **(** opt *-list*<sub>opt</sub> **)**  /\* zastaralý styl deklarátor \*/
 
 *pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub> *ukazatele*
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *kvalifikátor typu – zobrazit*<sub>výslovný souhlas</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *kvalifikátor typu – ukazatel na seznam*<sub>opt</sub>
 
-*Seznam parametrů typu*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* Seznam parametrů \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,...**
+*parametr-Type-list*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* seznamu parametrů \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parametr-list*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parametr-list* **,...**
 
-*Seznam parametrů*:<br/>
+*seznam parametrů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarace parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,** *deklarace parametru*
+&nbsp;&nbsp;&nbsp;&nbsp;*parametr-list* **,** *Parameter-Declaration*
 
-*seznam typů kvalifikátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam typů kvalifikátor* *kvalifikátor typu*
+*typ – kvalifikátor – seznam*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kvalifikátor typu*<br/>
+&nbsp;&nbsp;&nbsp;*typ &nbsp;kvalifikátor –* *kvalifikátor typu* seznamu
 
-*specifikátoru výčtu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**výčet** *identifikátor*<sub>optimalizované</sub> **{** *enumerátor seznam* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**výčet** *identifikátor*
+*specifikátor výčtu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**identifikátor výčtu**<sub>opt</sub> **{** *Enumerator-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;identifikátor **výčtu** &nbsp;
 
-*Enumerátor seznam*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Enumerátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Enumerátor seznam* **,** *enumerátoru*
+*seznam enumerátorů*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumerátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enumerátor-list* **,** *enumerátor*
 
 *enumerátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstanta výčtu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výčtu – konstanta*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Konstanta výčtu* **=** *konstantního výrazu.*
 
-*Konstanta výčtu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*
+*konstanta výčtu*:<br/>
+*identifikátor* &nbsp;&nbsp;&nbsp;&nbsp;
 
-*struct-or-union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*<sub>optimalizované</sub> **{** *struct-declaration-list* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*
+*specifikátor struct nebo Union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; *-li identifikátor sjednocení nebo identifikátor sjednocení*<sub></sub> **{** *struct-Declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;*identifikátoru* *struktury &nbsp;nebo Union*
 
-*struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **– Struktura**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**sjednocení**
+*Struktura nebo sjednocení*:<br/>
+&nbsp;&nbsp;&nbsp;**struktura** &nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Union**
 
-*struct-declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarace struktury*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
+*Struktura-deklarace-seznamu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-Declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-Declaration-list* *– deklarace*
 
-*struct-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor qualifier-list* *struct-declarator-list* **;**
+*deklarace struktury*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor-kvalifikátor-list* *struct-deklarátor-list* **;**
 
 *specifier-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátor seznam kvalifikátorů-* <sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátor seznam kvalifikátorů-* <sub>optimalizované</sub>
+&nbsp;&nbsp;&nbsp;specifikátoru *specifikátoru typu* &nbsp;– *kvalifikátor – seznam*<sub></sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;specifikátor *kvalifikátoru typu* – *kvalifikátor – seznam*<sub></sub>
 
 *struct-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator* *struct-declarator-list* **,** *deklarátor – struktura*
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-deklarátor* *struct-deklarátor-list* **,** *struct-deklarátor*
 
 *struct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *deklarátor*<sub>optimalizované</sub> **:** *konstantního výrazu.*
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor typu* *deklarátor*<sub>opt</sub> **:** *konstantní výraz*
 
 *deklarace parametru*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *deklarátor*  / \* pojmenované deklarátorů \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *abstraktní deklarátor*<sub>optimalizované</sub>  / \* anonymní deklarátorů \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory* *deklarátor* /\* s názvem deklarátor \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *abstract-deklarátor*<sub>opt</sub> /\* anonymní deklarátor \*/
 
-*Seznam identifikátorů*: /\* pro deklarátor starého stylu \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam identifikátorů* **,** *identifikátor*
+*seznam identifikátorů*:/\* pro původní styl deklarátor \*/<br/>
+*identifikátor* &nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor-seznam* **,** *identifikátor*
 
-*abstraktní deklarátor*: /\* použít s anonymní deklarátorů \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<br/>
+*abstract-deklarátor*:/\* používá se anonymní deklarátory \*/<br/>
+&nbsp;&nbsp;&nbsp;*ukazatel* &nbsp;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
 
 *direct-abstract-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(** *abstraktní deklarátor* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *abstract-deklarátor* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **[** *constant-expression*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **(** *parameter-type-list*<sub>opt</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-abstract-deklarátor*<sub>opt</sub> **(** možnost<sub>opt</sub> - *Type-list* **)**
 
-*Inicializátor*:<br/>
+*inicializátor*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *seznam inicializátorů* **}**  / \* pro inicializace agregace \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *seznam inicializátorů* **,}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *inicializátor-list* **}**  /\* pro agregovanou inicializaci \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *inicializátor-list* **,}**
 
 *seznam inicializátorů*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Inicializátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam inicializátorů* **,** *inicializátor*
+&nbsp;&nbsp;&nbsp;*inicializátor* &nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inicializátor-list* **,** *inicializátor*
 
-*Název typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor qualifier-list* *abstraktní deklarátor*<sub>optimalizované</sub>
+*název typu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor-kvalifikátor-list* - *deklarátor*–<sub>výslovný souhlas</sub>
 
-*Název typedef*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*
+*definice typedef-Name*:<br/>
+*identifikátor* &nbsp;&nbsp;&nbsp;&nbsp;
 
-*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
+Rozšířený-&nbsp;– *Modifikátor-SEQ*: &nbsp;&nbsp;&nbsp;/\* \*specifické pro společnost Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
+*Rozšířené – modifikátor*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*pro konkrétní Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**vlákno**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**holé**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 

@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedDecrement
+title: _InterlockedDecrement vnitřní funkce
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217674"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857915"
 ---
-# <a name="_interlockeddecrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedDecrement
+# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement vnitřní funkce
 
 **Specifické pro společnost Microsoft**
 
@@ -109,7 +109,7 @@ Návratová hodnota je výsledná snížená hodnota.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřním|Architektura|
+|Vnitřní|Architektura|
 |---------------|------------------|
 |`_InterlockedDecrement`, `_InterlockedDecrement16`|x86, ARM, x64, ARM64|
 |`_InterlockedDecrement64`|ARM, x64, ARM64|
@@ -119,13 +119,13 @@ Návratová hodnota je výsledná snížená hodnota.
 
 ## <a name="remarks"></a>Poznámky
 
-Existuje několik variant `_InterlockedDecrement` , které se liší v závislosti na datových typech, které zahrnují a na kterých se používají sémantiky získání nebo vydání specifické pro procesor.
+K dispozici je několik variant na `_InterlockedDecrement`, které se liší v závislosti na datových typech, které zahrnují a zda se používají sémantiky získání nebo vydání specifické pro procesor.
 
-`_InterlockedDecrement16` `_InterlockedDecrement64` I když `_InterlockedDecrement` funkce funguje s 32 celočíselnými hodnotami, pracuje na 16bitových celočíselných hodnotách a pracuje na 64 celočíselných hodnotách.
+I když funkce `_InterlockedDecrement` pracuje na základě 32 celočíselných hodnot, `_InterlockedDecrement16` pracuje na 16bitové celočíselné hodnoty a `_InterlockedDecrement64` pracuje na 64 celočíselných hodnotách.
 
-Pokud potřebujete sémantiku získání a vydání, jako `_acq` na `_rel` začátku a na konci kritického oddílu, používejte na platformách ARM vnitřní funkce a přípony. Vnitřní objekty s `_nf` příponou (bez plotu) nefungují jako bariéra paměti.
+Na platformách ARM použijte vnitřní objekty s příponami `_acq` a `_rel`, pokud potřebujete sémantiku získání a vydání, například na začátku a konci kritické části. Vnitřní objekty s příponou `_nf` (bez plotu) nefungují jako bariéra paměti.
 
-Proměnná, na `lpAddend` kterou se odkazuje parametr, musí být zarovnaná na hranici 32. v opačném případě tato funkce selže u víceprocesorových systémů s více procesory a systémy, které nejsou x86. Další informace najdete v tématu [Zarovnání](../cpp/align-cpp.md).
+Proměnná, na kterou odkazuje parametr `lpAddend`, musí být zarovnána na 32 bitovou hranici; v opačném případě tato funkce selže v systémech s více procesory x86 a systémy, které nejsou x86. Další informace najdete v tématu [Zarovnání](../cpp/align-cpp.md).
 
 Tyto rutiny jsou k dispozici pouze jako vnitřní objekty.
 
@@ -197,8 +197,10 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
+**Specifické pro konec Microsoftu**
+
 ## <a name="see-also"></a>Viz také:
 
 [Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
-[Klíčov](../cpp/keywords-cpp.md)\
+\ [klíčových slov](../cpp/keywords-cpp.md)
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

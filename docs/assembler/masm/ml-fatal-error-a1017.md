@@ -1,28 +1,28 @@
 ---
 title: Závažná chyba nástroje ML A1017
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1017
 helpviewer_keywords:
 - A1017
 ms.assetid: bef0b312-5431-4e5a-b637-c19919acf01b
-ms.openlocfilehash: 22a16569364760d0cb1d01011405f7a11dd21cac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fb0835cca135fc994866dc2453734d7b3012a64
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177770"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856823"
 ---
 # <a name="ml-fatal-error-a1017"></a>Závažná chyba nástroje ML A1017
 
-**Chybějící název zdrojového souboru**
+**Chybí název zdrojového souboru.**
 
-ML nejde najít soubor sestavení nebo předání do propojovacího programu.
+ML nemůže najít soubor, který se má sestavit nebo předat linkeru.
 
-Tato chyba se vygeneruje, když poskytují ML možnosti příkazového řádku bez zadání názvu souboru k provedení akce. Chcete-li uspořádat soubory, které nemají příponu .asm, použijte **/Ta** možnost příkazového řádku.
+Tato chyba se generuje, když zadáte možnosti příkazového řádku ML bez zadání názvu souboru, na který se má jednat. Chcete-li sestavit soubory, které nemají příponu. ASM, použijte možnost příkazového řádku **/ta** .
 
-Tato chyba může být také generován volání ML bez parametrů, pokud ML – proměnná prostředí obsahuje možnosti příkazového řádku.
+Tato chyba se dá vygenerovat taky vyvoláním ML bez parametrů, pokud proměnná prostředí ML obsahuje možnosti příkazového řádku.
 
 ## <a name="see-also"></a>Viz také:
 

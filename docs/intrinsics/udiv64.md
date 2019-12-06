@@ -5,16 +5,16 @@ f1_keywords:
 - _udiv64
 helpviewer_keywords:
 - _udiv64 intrinsic
-ms.openlocfilehash: 6dabbc94260ef578eb1a58a1b289b4a4654decdd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ddb46f33b0fccc1cedc2a704265b096ba715b506
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219676"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857993"
 ---
 # <a name="_udiv64"></a>_udiv64
 
-`_udiv64` Vnitřní rozděluje 64 unsigned integer 32-bit unsigned integer. Vrácená hodnota drží podíl a vnitřní Vrátí zbytek prostřednictvím parametru ukazatele. `_udiv64`je **specifická pro společnost Microsoft**.
+Vnitřní `_udiv64` rozděluje 64 unsigned integer bitovou unsigned integerou 32. Vrácená hodnota drží podíl a vnitřní Vrátí zbytek prostřednictvím parametru ukazatele. `_udiv64` je **specifické pro společnost Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,13 +28,13 @@ unsigned int _udiv64(
 
 ### <a name="parameters"></a>Parametry
 
-*podíl*\
+\ *dividend*
 pro 64 bitová unsigned integer k dělení.
 
 *dělitel*\
 pro 32 bitová unsigned integer k dělení.
 
-*Hledáte*\
+*zbývající*\
 mimo 32 unsigned integer zbytek.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -43,13 +43,13 @@ mimo 32 unsigned integer zbytek.
 
 ## <a name="remarks"></a>Poznámky
 
-Vnitřní dělí dělenec dělitelem. `_udiv64` Ukládá zbytek do 32 unsigned integer ukazují na *zbytek*a vrátí 32 bitů podílu.
+Vnitřní `_udiv64` rozdělí *dividendy* pomocí *dělitele*. Ukládá zbytek do 32 unsigned integer ukazují na *zbytek*a vrátí 32 bitů podílu.
 
-`_udiv64` Vnitřní verze je k dispozici počínaje verzí Visual Studio 2019 RTM.
+Vnitřní `_udiv64` je k dispozici počínaje verzí Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřním|Architektura|Záhlaví|
+|Vnitřní|Architektura|Záhlaví|
 |---------------|------------------|------------|
 |`_udiv64`|x86, x64|\<immintrin.h>|
 

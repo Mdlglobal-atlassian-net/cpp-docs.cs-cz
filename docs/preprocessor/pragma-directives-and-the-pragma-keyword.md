@@ -13,12 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6cfbcd325dc895719bad5dccc9c19bcda90cdaa0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222296"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858071"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Direktivy pragma a klíčové slovo __pragma
 
@@ -26,12 +26,12 @@ Direktivy pragma určují funkce kompilátoru specifické pro počítač nebo op
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma** *token – řetězec*\
+> **#pragma** *řetězec tokenu*\
 > **__pragma (** *token-String* **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Každá implementace jazyka C a C++ podporuje některé funkce, které jsou jedinečné pro svůj hostitelský počítač nebo operační systém. Některé programy například musí mít přesnou kontrolu nad umístěním dat v paměti nebo určovat, jak některé funkce přijímají parametry. Direktivy **#pragma** nabízejí způsob, jakým každý kompilátor nabízí funkce specifické pro počítač a operační systém a přitom udržuje celkovou kompatibilitu s jazyky C a C++ .
+Každá implementace jazyka C a C++ podporuje některé funkce, které jsou jedinečné pro daný hostitelský počítač nebo operační systém. Některé programy například musí mít přesnou kontrolu nad umístěním dat v paměti nebo určovat, jak některé funkce přijímají parametry. Direktivy **#pragma** nabízejí způsob, jakým každý kompilátor nabízí funkce specifické pro počítač a operační systém a přitom udržuje celkovou kompatibilitu s jazyky C a C++ .
 
 Direktivy pragma jsou specifické pro počítač nebo operační systém podle definice a jsou obvykle odlišné pro každý kompilátor. Direktivy pragma lze použít v podmíněných direktivách, k poskytnutí nových funkcí preprocesoru nebo k poskytnutí informací určených k implementaci kompilátoru.
 
@@ -39,7 +39,7 @@ Direktivy pragma jsou specifické pro počítač nebo operační systém podle d
 
 Kompilátor vydá upozornění, když najde direktivu pragma, kterou nerozpozná, a pokračuje v kompilaci.
 
-Kompilátory jazyka C C++ a Microsoft rozpoznají následující direktivy pragma:
+Kompilátory Microsoft C a C++ rozpoznají následující Pragma:
 
 ||||
 |-|-|-|
@@ -62,7 +62,7 @@ Kompilátory jazyka C C++ a Microsoft rozpoznají následující direktivy pragm
 
 ## <a name="pragmas-and-compiler-options"></a>Direktivy pragma a možnosti kompilátoru
 
-Některé direktivy pragma poskytují stejné funkce jako možnosti kompilátoru. Při zjištění direktivy pragma ve zdrojovém kódu přepíše chování určené možností kompilátoru. Pokud jste například zadali [/ZP8](../build/reference/zp-struct-member-alignment.md), můžete přepsat toto nastavení kompilátoru pro konkrétní oddíly kódu pomocí [balíčku](../preprocessor/pack.md):
+Některé prvky pragma poskytují stejné funkce, jaké poskytují možnosti kompilátoru. Pokud se pragma vyskytne ve zdrojovém kódu, potlačí chování určené jinou možností kompilátoru. Pokud jste například zadali [/ZP8](../build/reference/zp-struct-member-alignment.md), můžete přepsat toto nastavení kompilátoru pro konkrétní oddíly kódu pomocí [balíčku](../preprocessor/pack.md):
 
 ```cmd
 cl /Zp8 some_file.cpp
@@ -79,11 +79,9 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>Klíčové slovo __pragma ()
 
-**Specifické pro společnost Microsoft**
+Kompilátor také podporuje klíčové slovo **__pragma** specifické pro společnost Microsoft, které má stejné funkce jako direktiva **#pragma** . Rozdíl je, klíčové slovo **__pragma** je v definici makra použitelné jako vložené. Direktiva **#pragma** není použitelná v definici makra, protože kompilátor interpretuje znak čísla znaménka (#) v direktivě jako [operátor převodu (#)](../preprocessor/stringizing-operator-hash.md).
 
-Kompilátor také podporuje klíčové slovo **__pragma** , které má stejné funkce jako direktiva **#pragma** . Rozdíl je, klíčové slovo **__pragma** je použitelné jako vložené v definici makra. Direktiva **#pragma** není použitelná v definici makra, protože kompilátor interpretuje znak čísla znaménka (#) v direktivě jako [operátor převodu (#)](../preprocessor/stringizing-operator-hash.md).
-
-Následující příklad kódu ukazuje, jak lze použít klíčové slovo **__pragma** v makru. Tento kód je výňatkem z hlavičky MFCDUAL. h v ukázce ACDUAL v tématu "ukázky podpory kompilátoru COM":
+Následující příklad kódu ukazuje, jak lze použít klíčové slovo **__pragma** v makru. Tento kód je výňatkem z hlavičky mfcdual.h ve vzorku ACDUAL v "Vzorky podpory kompilátoru COM":
 
 ```cpp
 #define CATCH_ALL_DUAL \
@@ -103,10 +101,8 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Specifické pro konec Microsoftu**
-
 ## <a name="see-also"></a>Viz také:
 
-[C/C++ reference preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)\
+\ reference preprocesoru C [C++ ](../preprocessor/c-cpp-preprocessor-reference.md)
 [Direktivy pragma jazyka C](../c-language/c-pragmas.md)\
 [Klíčová slova](../cpp/keywords-cpp.md)

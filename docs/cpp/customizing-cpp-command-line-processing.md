@@ -14,24 +14,24 @@ helpviewer_keywords:
 - suppressing environment processing
 - _setenvp function
 ms.assetid: aae01cbb-892b-48b8-8e1f-34f22421f263
-ms.openlocfilehash: da1b3bdd6392b144f9315add4c19de14c1d14d41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1541840521695658b5c4d809ba7e11767b1330a2
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154688"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857551"
 ---
 # <a name="customizing-c-command-line-processing"></a>Přizpůsobení zpracování příkazového řádku jazyka C++
 
-## <a name="microsoft-specific"></a>Specifické pro Microsoft
+**Specifické pro společnost Microsoft**
 
-Pokud aplikace nepřijímá argumenty příkazového řádku, je možné ušetřit malé množství místa potlačením použití rutiny knihovny, která vykonává zpracování příkazového řádku. Tato rutina se nazývá `_setargv` a je popsána v [rozšíření zástupného znaku](../cpp/wildcard-expansion.md). Chcete-li potlačení je třeba definovat rutinu, která nemá žádný účinek v soubor obsahující `main` fungovat a pojmenujte ho `_setargv`. Volání `_setargv` je následně splněno definicí `_setargv`, a verze knihovny není načtena.
+Pokud aplikace nepřijímá argumenty příkazového řádku, je možné ušetřit malé množství místa potlačením použití rutiny knihovny, která vykonává zpracování příkazového řádku. Tato rutina se nazývá `_setargv` a je popsána v tématu [rozšíření zástupných znaků](../cpp/wildcard-expansion.md). Chcete-li potlačit jeho použití, definujte rutinu, která neprovede nic v souboru obsahujícím funkci `main` a pojmenujte ji `_setargv`. Volání `_setargv` je pak vyhovující vaší definicí `_setargv`a verze knihovny není načtena.
 
-Podobně pokud nikdy přístup k tabulce prostředí skrze `envp` argument, můžete poskytnout vlastní prázdnou rutinu, který se má použít místo `_setenvp`, rutiny zpracování prostředí. Stejně jako u `_setargv` funkci `_setenvp` musí být deklarována jako **extern "C"**.
+Podobně pokud nikdy nepřistupujete k tabulce prostředí pomocí argumentu `envp`, můžete poskytnout vlastní prázdnou rutinu, která bude použita místo `_setenvp`, rutiny zpracování prostředí. Stejně jako u funkce `_setargv` musí být `_setenvp` deklarované jako **extern "C"** .
 
-Váš program může volat `spawn` nebo `exec` řadu rutin v knihovně C Runtime. Jde-li o tento případ, neměla by být rutina zpracování prostředí potlačena, protože slouží k předání prostředí z nadřazeného procesu podřízenému procesu.
+Váš program může volat do `spawn` nebo `exec` rodinu rutin v knihovně run-time jazyka C. Jde-li o tento případ, neměla by být rutina zpracování prostředí potlačena, protože slouží k předání prostředí z nadřazeného procesu podřízenému procesu.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

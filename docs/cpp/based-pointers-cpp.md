@@ -10,29 +10,26 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 0a0435aa89e4cf744a5bc3c6dc72a715ed55f954
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 393fe8f8d12266650740942d0605152b6548d146
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498789"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857694"
 ---
 # <a name="based-pointers-c"></a>Základní ukazatelé (C++)
 
-**Specifické pro společnost Microsoft**
-
-Klíčové slovo **__based** umožňuje deklaraci ukazatelů na základě ukazatelů (ukazatelů, které jsou posunuty od stávajících ukazatelů).
+Klíčové slovo **__based** umožňuje deklaraci ukazatelů na základě ukazatelů (ukazatelů, které jsou posunuty od stávajících ukazatelů). Klíčové slovo **__based** je specifické pro společnost Microsoft.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 type __based( base ) declarator
 ```
 
 ## <a name="remarks"></a>Poznámky
 
-Ukazatelé na základě adres ukazatelů jsou jediná forma klíčového slova **__based** platná v 32 nebo 64 bitových kompilacích. Pro 32bitové kompilátory jazyka C/C++ společnosti Microsoft je ukazatel základní třídy 32bitovým posunem oproti 32bitovému základu ukazatele. Podobné omezení platí pro 64bitová prostředí, kde je ukazatel základní třídy 64bitovým posunem oproti 64bitovému základu.
+Ukazatele založené na adresách ukazatelů jsou jedinou formou klíčového slova **__based** platné v 32 bitových nebo 64 bitových kompilacích. Pro 32bitové kompilátory jazyka C/C++ společnosti Microsoft je ukazatel základní třídy 32bitovým posunem oproti 32bitovému základu ukazatele. Podobné omezení platí pro 64bitová prostředí, kde je ukazatel základní třídy 64bitovým posunem oproti 64bitovému základu.
 
 Jedním použitím ukazatelů na základě ukazatelů jsou trvalé identifikátory, které obsahují ukazatele. Propojený seznam, který se skládá z ukazatelů založených na ukazateli lze uložit na disk a následně jej lze znovu načíst na jiné místo v paměti, při současném zachování platnosti ukazatelů. Příklad:
 
@@ -53,7 +50,7 @@ Ukazateli `vpBuffer` je přiřazena adresa paměti, která je přidělena v prog
 
 Při dereferenci ukazatele základní třídy musí být základ buď explicitně zadán, nebo implicitně znám prostřednictvím deklarace.
 
-Z důvodu kompatibility s předchozími verzemi je **_based** synonymum pro **__based** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
+Z důvodu kompatibility s předchozími verzemi je **_based** synonymem pro **__based** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Příklad
 

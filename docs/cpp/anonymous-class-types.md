@@ -5,16 +5,16 @@ helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: 9cd27fb40522a07ce4591b654ee8a6dda53b4f28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 815cc4a81addc673349a3133b24ed73cfe0207e2
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184462"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857668"
 ---
 # <a name="anonymous-class-types"></a>Anonymní typy třídy
 
-Třídy mohou být anonymní – to znamená, že mohou být deklarovány bez *identifikátor*. To je užitečné při nahrazení názvu třídy **typedef** název, viz následující příklad:
+Třídy mohou být anonymní – to znamená, že mohou být deklarovány bez *identifikátoru*. To je užitečné v případě, že nahradíte název třídy názvem **typedef** , jak je uvedeno v následujícím seznamu:
 
 ```cpp
 typedef struct
@@ -25,7 +25,7 @@ typedef struct
 ```
 
 > [!NOTE]
->  Použití anonymních tříd uvedené v předchozím příkladu je užitečné pro zachování kompatibility se stávajícím kódem jazyka C. V kódu jazyka C, použití **typedef** ve spojení s anonymními strukturami převládá.
+>  Použití anonymních tříd uvedené v předchozím příkladu je užitečné pro zachování kompatibility se stávajícím kódem jazyka C. V některém kódu jazyka C je převládají použití **definice typedef** ve spojení s anonymními strukturami.
 
 Anonymní třídy jsou také užitečné, pokud chcete odkazovat člena třídy, jako by nebyl obsažen v samostatné třídě (viz následující příklad):
 
@@ -43,7 +43,7 @@ struct PTValue
 PTValue ptv;
 ```
 
-V předchozím kódu `iValue` lze přistupovat pomocí operátoru výběru členů objektu (**.**) následujícím způsobem:
+V předchozím kódu je k `iValue` možné přistupovat pomocí operátoru výběru členů objektu ( **.** ) následujícím způsobem:
 
 ```cpp
 int i = ptv.iValue;
@@ -59,7 +59,7 @@ Na anonymní třídy se vztahují jistá omezení. (Další informace o anonymn�
 
 ## <a name="anonymous-structs"></a>Anonymní struktury
 
-### <a name="microsoft-specific"></a>Specifické pro Microsoft
+**Specifické pro společnost Microsoft**
 
 Rozšíření jazyka Microsoft C umožňuje deklarovat proměnnou struktury v jiné struktuře bez zadání názvu. Tyto vnořené struktury se nazývají anonymní struktury. Jazyk C++ nepovoluje anonymní struktury.
 
@@ -92,4 +92,4 @@ int main()
 //Output: 1234567
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**

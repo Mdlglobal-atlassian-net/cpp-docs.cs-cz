@@ -2,48 +2,48 @@
 title: Souhrn příkazů
 ms.date: 11/04/2016
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
-ms.openlocfilehash: 76a549de7791f8af36fbf150c19cf6ed0de2cbe6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a230ca7d998316d2ec96e76b54ac60575acd2ee
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345198"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856992"
 ---
 # <a name="summary-of-statements"></a>Souhrn příkazů
 
 *příkaz*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz s popiskem*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*compound-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*příkaz výrazu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*příkaz výběru*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*složený* příkaz<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*příkaz Expression-*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výběru – příkaz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*iterace – příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*příkaz-skoku*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*s výjimkou příkazu Try*  / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement*  / \* specifické pro Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*příkaz skoku*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* \*pro konkrétní Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* \*specifický pro společnost Microsoft /
 
-*příkaz-skoku*:<br/>
+*příkaz skoku*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**příkaz goto** *identifikátor* **;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**pokračování**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Konec;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Vrátí** *výraz*<sub>optimalizované</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**pokračovat;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Break;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**návratový** *výraz*<sub>opt</sub> **;**
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *seznam deklarací*<sub>optimalizované</sub> *seznamu příkazů*<sub>optimalizované</sub> **}**
+*složený příkaz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *Declaration-list*<sub>opt</sub> *Statement-list*<sub>opt</sub> **}**
 
 *seznam deklarací*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarace*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam deklarací* *deklarace*
+*deklarace* &nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;*deklarace* &nbsp;*deklarace seznamu*
 
 *seznam příkazů*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*– Příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam příkazů* *– příkaz*
+&nbsp;&nbsp;&nbsp;*příkaz* &nbsp;<br/>
+&nbsp;&nbsp; *&nbsp;příkazu &nbsp;* *-list*
 
-*příkaz výrazu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz*<sub>optimalizované</sub> **;**
+*příkaz Expression*:<br/>
+&nbsp;&nbsp;&nbsp;*výraz*&nbsp;<sub>opt</sub> **;**
 
 *příkaz iterace*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**zatímco (**  *výraz*  **)**  *– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**proveďte***příkaz***během (***výraz***);**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**do***příkazu*do **(** *výraz* **);**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**pro (** *výraz*<sub>optimalizované</sub> **;** *výraz*<sub>optimalizované</sub> **;** *výraz*<sub>optimalizované</sub> **)** *– příkaz*
 
 *příkaz výběru*:<br/>
@@ -56,11 +56,11 @@ ms.locfileid: "62345198"
 &nbsp;&nbsp;&nbsp;&nbsp;**případ**  *konstantní výraz*  **:**  *– příkaz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Výchozí:**  *– příkaz*
 
-*s výjimkou příkazu Try*: /\* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except (** *výraz* **)** *compound-statement* 
+*try-except – příkaz*:/\* \*specifický pro Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except (** *výraz* **)** *compound-statement*
 
-*try-finally-statement*: /\* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement* 
+*try-finally-příkaz*:/\* \*specifický pro Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="see-also"></a>Viz také:
 

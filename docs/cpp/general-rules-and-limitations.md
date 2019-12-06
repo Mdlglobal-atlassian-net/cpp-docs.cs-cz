@@ -2,22 +2,22 @@
 title: Obecná pravidla a omezení
 ms.date: 11/04/2016
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-ms.openlocfilehash: 931ae04ef47262f15d037a2b5eeb35bd01a8419d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bd8956b08d3e5f2109c5574802a3a8a72fba537
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153772"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857525"
 ---
 # <a name="general-rules-and-limitations"></a>Obecná pravidla a omezení
 
-## <a name="microsoft-specific"></a>Specifické pro Microsoft
+**Specifické pro společnost Microsoft**
 
-- Je-li deklarovat funkci nebo objekt bez **dllimport** nebo **dllexport** atribut, funkce nebo objektu není považováno za součást rozhraní DLL. Definice funkce nebo objektu, proto musí být k dispozici v modulu nebo v jiném modulu stejného programu. Chcete-li funkce nebo objektu součástí rozhraní DLL, je třeba deklarovat definice funkce nebo objektu v modulu jako **dllexport**. V opačném případě je generována chyba linkeru.
+- Pokud deklarujete funkci nebo objekt bez atributu **dllimport** nebo **dllexport** , funkce nebo objekt není považován za součást rozhraní dll. Proto musí být definice funkce nebo objektu přítomna v modulu nebo jiném modulu stejného programu. Chcete-li vytvořit součást funkce nebo objektu v rozhraní knihovny DLL, je nutné deklarovat definici funkce nebo objektu v jiném modulu jako **dllexport**. Jinak dojde k chybě propojovacího programu.
 
-   Je-li deklarovat funkci nebo objektu **dllexport** atribut, jeho definice musí být uvedena v některých modulu stejného programu. V opačném případě je generována chyba linkeru.
+   Pokud deklarujete funkci nebo objekt s atributem **dllexport** , jeho definice se musí objevit v některém modulu stejného programu. Jinak dojde k chybě propojovacího programu.
 
-- Pokud obsahuje jeden modul ve svém programu **dllimport** a **dllexport** deklarace pro stejné funkce nebo objektu, **dllexport** atribut má přednost před přes **dllimport** atribut. Však bude vyvoláno upozornění kompilátoru. Příklad:
+- Pokud jeden modul v programu obsahuje deklarace **dllimport** i **dllexport** pro stejnou funkci nebo objekt, má atribut **dllexport** přednost před atributem **dllimport** . Vygeneruje se ale upozornění kompilátoru. Příklad:
 
     ```cpp
     __declspec( dllimport ) int i;
@@ -25,7 +25,7 @@ ms.locfileid: "62153772"
                                      // dllexport takes precedence.
     ```
 
-- V jazyce C++ lze inicializovat ukazatel globálně deklarované nebo statická místní data nebo adresou datový objekt deklarovaný s **dllimport** atribut, který generuje chybu v jazyce C. Kromě toho můžete inicializovat statické lokální funkce ukazatel adresou funkce deklarovaná pomocí **dllimport** atribut. V jazyce C nastaví tato přiřazení ukazatel na adresu převodní rutina importu knihovny DLL (provizorního kódu, který předává řízení funkci) místo adresu funkce. V jazyce C++ nastaví ukazatel na adresu funkce. Příklad:
+- V C++můžete inicializovat globálně deklarovaný nebo statický ukazatel místní dat nebo s adresou datového objektu deklarovaného s atributem **dllimport** , který generuje chybu v jazyce C. Kromě toho můžete inicializovat statický ukazatel místní funkce s adresou funkce deklarované s atributem **dllimport** . V jazyce C taková přiřazení nastaví ukazatel na adresu knihovny DLL import převodní rutiny (kód stub kódu, který přenáší řízení na funkci), nikoli adresu funkce. V C++systému nastaví ukazatel na adresu funkce. Příklad:
 
     ```cpp
     __declspec( dllimport ) void func1( void );
@@ -43,7 +43,7 @@ ms.locfileid: "62153772"
     }
     ```
 
-   Ale vzhledem k tomu program, který zahrnuje **dllexport** atribut v deklaraci objektu musí poskytnout definici pro daný objekt někde v programu, můžete inicializovat ukazatel globální ani místní statické funkce s Adresa **dllexport** funkce. Podobně můžete inicializovat globální ani místní statická data ukazatel adresou **dllexport** datový objekt. Následující kód například nevygeneruje chyby v jazyce C nebo C++:
+   Protože však program, který obsahuje atribut **dllexport** v deklaraci objektu, musí poskytnout definici pro daný objekt někde v programu, můžete inicializovat globální nebo místní ukazatel na statickou funkci s adresou funkce **dllexport** . Podobně lze inicializovat globální nebo místní ukazatel statických dat s adresou datového objektu **dllexport** . Například následující kód negeneruje chyby v C nebo C++:
 
     ```cpp
     __declspec( dllexport ) void func1( void );
@@ -59,9 +59,9 @@ ms.locfileid: "62153772"
     }
     ```
 
-- Pokud použijete **dllexport** do běžné třídy, který má základní třída, která není označena jako **dllexport**, bude kompilátor generovat C4275.
+- Použijete-li **dllexport** na regulární třídu, která má základní třídu, která není označena jako **dllexport**, kompilátor vygeneruje C4275.
 
-   Kompilátor generuje stejné upozornění, pokud základní třída je specializace šablony třídy. Chcete-li tento problém obejít, označit základní třídy s **dllexport**. Problém s specializace šablony třídy je kam umístit **__declspec(dllexport)**; nemáte oprávnění k označení šablony třídy. Místo toho explicitně vytvořit instanci šablony třídy a označit tento explicitní vytváření instancí s **dllexport**. Příklad:
+   Kompilátor generuje stejné upozornění, pokud je základní třída specializací šablony třídy. Chcete-li se tomuto problému vyhnout, označte základní třídu pomocí příkazu **dllexport**. Problém s specializací šablony třídy je místo, kam umístit **__declspec (dllexport)** ; nemůžete označit šablonu třídy. Místo toho explicitně vytvořte instanci šablony třídy a označte tuto explicitní instanci pomocí příkazu **dllexport**. Příklad:
 
     ```cpp
     template class __declspec(dllexport) B<int>;
@@ -69,21 +69,21 @@ ms.locfileid: "62153772"
     // ...
     ```
 
-   Toto řešení selže, pokud je odvozená třída argument šablony. Příklad:
+   Toto řešení se nepovede, pokud je argument šablony odvozenou třídou. Příklad:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
     // ...
     ```
 
-   Protože to je běžný vzor se šablonami, kompilátor změnil sémantika **dllexport** při použití na třídu, která má jeden nebo více základních tříd, a pokud jeden nebo více základních tříd je specializace šablony třídy . V tomto případě kompilátor implicitně platí **dllexport** do specializace šablony třídy. Můžete takto a ne se vám upozornění:
+   Vzhledem k tomu, že se jedná o společný vzor se šablonami, kompilátor změnil sémantiku **dllexport** při použití na třídu, která má jednu nebo více základních tříd a v případě, že jedna nebo více základních tříd je specializací šablony třídy. V tomto případě kompilátor implicitně aplikuje **dllexport** na specializace šablon tříd. Můžete provést následující akce a nedostávat upozornění:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
     // ...
     ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -9,32 +9,30 @@ f1_keywords:
 helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4cca797c0bff94a54b0f3302c6c475908870a99
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232399"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857616"
 ---
-# <a name="cdecl"></a>__cdecl
+# <a name="__cdecl"></a>__cdecl
 
-**Microsoft Specific**
-
-**__cdecl** je výchozí konvencí volání jazyka C a C++ programy. Vzhledem k tomu, že je zásobník vyčištěn volajícím, můžete provádět `vararg` funkce. **__Cdecl** konvence volání vytvoří větší spustitelné soubory než [__stdcall](../cpp/stdcall.md), protože vyžaduje, aby každé volání funkce obsahovalo kód pro vyčištění zásobníku. Následující seznam ukazuje implementaci této konvence volání.
+**__cdecl** je výchozí konvencí volání pro C a C++ programy. Vzhledem k tomu, že je zásobník vyčištěn volajícím, může provádět `vararg` funkce. Konvence volání **__cdecl** vytváří větší spustitelné soubory než [__stdcall](../cpp/stdcall.md), protože vyžaduje každé volání funkce pro zahrnutí kódu pro vyčištění zásobníku. Následující seznam ukazuje implementaci této konvence volání. Modifikátor **__cdecl** je specifický pro společnost Microsoft.
 
 |Prvek|Implementace|
 |-------------|--------------------|
 |Pořadí předávání argumentů|Zprava doleva.|
 |Odpovědnost za údržbu zásobníku|Volání funkce vezme argumenty ze zásobníku (POP).|
-|Konvence pro vzhled názvu|Znak podtržítka (_) je předponou názvů, kromě případů, kdy \__cdecl funkce, které používají C-linkage jsou exportovány.|
+|Konvence pro vzhled názvu|Znak podtržítka (_) je předponou názvů, kromě případů, kdy \__cdecl funkce, které používají propojení jazyka C, jsou exportovány.|
 |Konvence pro posunutí|Neprovádí se žádné posunutí.|
 
 > [!NOTE]
 >  Související informace naleznete v tématu [dekorované názvy](../build/reference/decorated-names.md).
 
-Místo **__cdecl** modifikátor před proměnnou nebo název funkce. Protože konvence pojmenování a volání jazyka C jsou standardem, jediný případ je nutné použít **__cdecl** x86 kód je Pokud jste určili `/Gv` (vectorcall), `/Gz` (stdcall) nebo `/Gr` (fastcall) – možnost kompilátoru. [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) vynutí – možnost kompilátoru **__cdecl** konvence volání.
+Před proměnnou nebo název funkce Umístěte modifikátor **__cdecl** . Vzhledem k tomu, že konvence pojmenování a volání jazyka C jsou výchozí, jediný čas, kdy je nutné použít **__cdecl** v kódu x86, je, že jste zadali možnost kompilátoru `/Gv` (vectorcall), `/Gz` (STDCALL) nebo `/Gr` (fastcall). Možnost kompilátoru [/GD](../build/reference/gd-gr-gv-gz-calling-convention.md) vynutí konvenci volání **__cdecl** .
 
-Na ARM a x64 procesory, **__cdecl** přijme, ale obvykle ignoruje kompilátor. Podle konvence pro procesory ARM a x64 jsou argumenty předávány v registrech vždy, když je to možné, a následné argumenty jsou předávány na zásobníku. V x64 kódu, použijte **__cdecl** přepsání **/Gv** – možnost kompilátoru a použijte výchozí x64 konvenci volání.
+V procesorech ARM a x64 je **__cdecl** přijatý, ale obvykle je kompilátor ignoruje. Podle konvence pro procesory ARM a x64 jsou argumenty předávány v registrech vždy, když je to možné, a následné argumenty jsou předávány na zásobníku. V kódu x64 použijte **__cdecl** k přepsání možnosti kompilátoru **/GV** a použijte výchozí konvenci volání x64.
 
 U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice. Při této definici třídy:
 
@@ -56,11 +54,11 @@ je ekvivalentem tohoto:
 void __cdecl CMyClass::mymethod() { return; }
 ```
 
-Z důvodu kompatibility s předchozími verzemi **cdecl** a **_cdecl** jsou synonyma pro **__cdecl** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
+Z důvodu kompatibility s předchozími verzemi jsou **CDECL** a **_cdecl** synonymem pro **__cdecl** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu je kompilátor nastaven na použití názvů C a konvencí pro volání `system` funkce.
+V následujícím příkladu je kompilátor nastaven na použití názvů C a konvencí pro volání ve funkci `system`.
 
 ```cpp
 // Example of the __cdecl keyword on function

@@ -6,14 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 473e7223e9974d0125e772c152ea85ae90b97342
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219221"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858058"
 ---
 # <a name="__writedr"></a>__writedr
+
+**Specifické pro společnost Microsoft**
 
 Zapíše zadanou hodnotu do určeného registru pro ladění.
 
@@ -38,7 +40,7 @@ Tyto vnitřní objekty jsou k dispozici pouze v režimu jádra a rutiny jsou k d
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřním|Architektura|
+|Vnitřní|Architektura|
 |---------------|------------------|
 |`__writedr`|x86, x64|
 

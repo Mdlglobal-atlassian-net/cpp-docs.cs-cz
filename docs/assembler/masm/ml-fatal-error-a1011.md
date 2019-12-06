@@ -1,38 +1,38 @@
 ---
 title: Závažná chyba nástroje ML A1011
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1011
 helpviewer_keywords:
 - A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-ms.openlocfilehash: 591755a1d7066d8251f61d2a22b9601a9ccb9dcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d8d3896f7788aa3f51605651ee1b728b0e1d60a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178563"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856849"
 ---
 # <a name="ml-fatal-error-a1011"></a>Závažná chyba nástroje ML A1011
 
-**Direktiva musí být v bloku ovládacího prvku**
+**Direktiva musí být v řídicím bloku.**
 
-Assembler nalezen direktivu vysoké úrovně, kde jedna neočekával. Byl nalezen jeden z následujících direktiv:
+Assembler našel direktivu vysoké úrovně, u které se neočekávala žádná z nich. Našla se jedna z následujících direktiv:
 
-- [. OSTATNÍ](../../assembler/masm/dot-else.md) bez [. IF](../../assembler/masm/dot-if.md)
+- [. JINAK](../../assembler/masm/dot-else.md) bez [. Pokud](../../assembler/masm/dot-if.md)
 
-- [. ENDIF](../../assembler/masm/dot-endif.md) bez [. IF](../../assembler/masm/dot-if.md)
+- [. ENDIF](../../assembler/masm/dot-endif.md) bez [. Pokud](../../assembler/masm/dot-if.md)
 
-- [. ENDW](../../assembler/masm/dot-endw.md) bez [. WHILE](../../assembler/masm/dot-while.md)
+- [. ENDW](../../assembler/masm/dot-endw.md) bez [. ZATÍMCO](../../assembler/masm/dot-while.md)
 
-- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) bez [. OPAKUJTE](../../assembler/masm/dot-repeat.md)
+- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) bez [. OPAKOVAT](../../assembler/masm/dot-repeat.md)
 
-- [. Pokračovat](../../assembler/masm/dot-continue.md) bez [. ZATÍMCO](../../assembler/masm/dot-while.md) nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md)
+- [. POKRAČOVAT](../../assembler/masm/dot-continue.md) bez [. WHILe](../../assembler/masm/dot-while.md) nebo [. OPAKOVAT](../../assembler/masm/dot-repeat.md)
 
-- [. PŘERUŠIT](../../assembler/masm/dot-break.md) bez [. ZATÍMCO](../../assembler/masm/dot-while.md) nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md)
+- [. Přerušit](../../assembler/masm/dot-break.md) bez [. WHILe](../../assembler/masm/dot-while.md) nebo [. OPAKOVAT](../../assembler/masm/dot-repeat.md)
 
-- [. OSTATNÍ](../../assembler/masm/dot-else.md) následující `.ELSE`
+- [. JINAK](../../assembler/masm/dot-else.md) následující `.ELSE`
 
 ## <a name="see-also"></a>Viz také:
 

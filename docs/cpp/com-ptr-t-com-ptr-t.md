@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498712"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857590"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -21,7 +21,7 @@ Vytvoří objekt **_com_ptr_t** .
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,13 +133,13 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *pInterface*<br/>
 Nezpracovaný ukazatel rozhraní.
 
 *fAddRef*<br/>
-Je-li `AddRef` nastavena hodnota true, je volána metoda zvýšení počtu odkazů zapouzdřeného ukazatele rozhraní.
+Je-li nastavena hodnota TRUE, je volána `AddRef` pro zvýšení počtu odkazů zapouzdřeného ukazatele rozhraní.
 
 *cp*<br/>
 Objekt **_com_ptr_t** .
@@ -151,16 +151,18 @@ Nezpracovaný ukazatel rozhraní, jehož typ se liší od typu inteligentního u
 A `_variant_t` objektu.
 
 *CLSID*<br/>
-Třídy `CLSID` typu coclass.
+`CLSID` třídy typu coclass.
 
 *dwClsContext*<br/>
 Kontext spuštění spustitelného kódu.
 
 *lpcStr*<br/>
-Vícebajtový řetězec, který obsahuje buď `CLSID` (začínající znakem " **{** `ProgID`") nebo.
+Vícebajtový řetězec, který obsahuje `CLSID` (začínající znakem " **{** ") nebo `ProgID`.
 
 *pOuter*<br/>
 Vnější neznámý pro [agregaci](/windows/win32/com/aggregation).
+
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -5,16 +5,16 @@ f1_keywords:
 - _udiv128
 helpviewer_keywords:
 - _udiv128 intrinsic
-ms.openlocfilehash: 0e66bbe978199f47134aa288bdd2bac4eb3e332a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8cc9ca3dbf19a04d07edb1d73df84f2e29a5c3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390162"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857980"
 ---
-# <a name="udiv128"></a>_udiv128
+# <a name="_udiv128"></a>_udiv128
 
-`_udiv128` Vnitřní rozděluje 128-bit znaménka podle 64-bit znaménka. Návratová hodnota obsahuje podíl a vnitřní Vrátí zbytek prostřednictvím parametru ukazatele. `_udiv128` je **specifické pro Microsoft**.
+Vnitřní `_udiv128` rozděluje 128 unsigned integer bitovou unsigned integerou 64. Vrácená hodnota drží podíl a vnitřní Vrátí zbytek prostřednictvím parametru ukazatele. `_udiv128` je **specifické pro společnost Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,26 +30,26 @@ unsigned __int64 _udiv128(
 ### <a name="parameters"></a>Parametry
 
 *highDividend* \
-[in] 64 bitů dělence.
+pro Horní 64é bity z dividendy.
 
 *lowDividend* \
-[in] Nízká 64 bitů podíl.
+pro Dolní 64é bity z dividendy.
 
 *dělitel* \
-[in] 64bitové celé číslo k rozdělení.
+pro 64 celé číslo, které se má rozdělit.
 
-*Zbývající* \
-[out] 64bitové celé číslo bity zbytek.
+*zbývající* \
+mimo 64 celé číslo bitů zbytku.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-64 bitů podíl.
+64 bitů podílu.
 
 ## <a name="remarks"></a>Poznámky
 
-Předejte horní 64 bitů podíl 128 bitů v *highDividend*a nižší 64 bitů v *lowDividend*. Vnitřní objekt vydělí toto hodnoty *dělitel*. Ukládá zbývající 64bitové celé číslo bez znaménka na které odkazuje *zbývající*a vrátí podíl 64 bitů.
+Předejte horní 64 bitů 128 děleného dividendu v *highDividend*a nižší 64 bitů v *lowDividend*. Vnitřní dělí tuto hodnotu *dělitelem*. Ukládá zbytek do 64 unsigned integer ukazují na *zbytek*a vrátí 64 bitů podílu.
 
-`_udiv128` Vnitřní je k dispozici od verze Visual Studio. 2019 RTM.
+Vnitřní `_udiv128` je k dispozici počínaje verzí Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -60,4 +60,4 @@ Předejte horní 64 bitů podíl 128 bitů v *highDividend*a nižší 64 bitů v
 ## <a name="see-also"></a>Viz také:
 
 [_div128](div128.md) \
-[Vnitřní funkce kompilátoru](compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](compiler-intrinsics.md)
