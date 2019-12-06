@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683330"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898779"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Upozornění kompilátoru (úroveň 3) C4996
 
@@ -23,7 +23,7 @@ Váš kód používá funkci, člen třídy, proměnnou nebo typedef, která je 
 
 ## <a name="remarks"></a>Poznámky
 
-Mnoho funkcí, členské funkce, funkce šablon a globální proměnné v knihovnách sady Visual Studio jsou *zastaralé*. Některé, například funkce POSIX, jsou zastaralé, protože mají jiný upřednostňovaný název. Některé funkce běhové knihovny jazyka C jsou zastaralé, protože jsou nezabezpečené a mají bezpečnější variantu. Ostatní jsou zastaralé, protože jsou zastaralé. Zprávy vyřazení obvykle obsahují navrhovanou náhradu za zastaralé funkce nebo globální proměnnou.
+Mnoho funkcí, členské funkce, funkce šablon a globální proměnné v knihovnách sady Visual Studio jsou *zastaralé*. Některé, například specifické funkce POSIX a Microsoft, jsou zastaralé, protože nyní mají jiný upřednostňovaný název. Některé funkce běhové knihovny jazyka C jsou zastaralé, protože jsou nezabezpečené a mají bezpečnější variantu. Ostatní jsou zastaralé, protože jsou zastaralé. Zprávy vyřazení obvykle obsahují navrhovanou náhradu za zastaralé funkce nebo globální proměnnou.
 
 ## <a name="turn-off-the-warning"></a>Vypnutí upozornění
 
@@ -61,9 +61,9 @@ Tady jsou některé běžné zdroje upozornění a chyb C4996:
 
 **Název POSIX pro tuto položku je zastaralý. Místo toho použijte ISO C a C++ vyhovující název:** *New-name*. **Podrobnosti najdete v online nápovědě.**
 
-Společnost Microsoft přejmenovala některé funkce POSIX v CRT tak, aby vyhovovaly pravidlům C99 a C++ 03 pro názvy globálních funkcí definovaných pro implementaci. Pouze názvy jsou zastaralé, nikoli samotné funkce. Ve většině případů byla do názvu funkce POSIX přidána úvodní podtržítko, které vytvoří vyhovující název Standard. Kompilátor vydá upozornění na zastaralost pro původní název funkce a navrhne preferovaný název.
+Společnost Microsoft přejmenovala některé funkce knihovny POSIX a specifické pro společnost Microsoft v CRT tak, aby splňovaly omezení C99 a C++ 03 u rezervovaných a globálních implementací definovaných názvů. *Pouze názvy jsou zastaralé, nikoli samotné funkce*. Ve většině případů byla do názvu funkce přidána úvodní podtržítko pro vytvoření vyhovujícího názvu. Kompilátor vydá upozornění na zastaralost pro původní název funkce a navrhne preferovaný název.
 
-Chcete-li tento problém vyřešit, obvykle doporučujeme změnit kód tak, aby místo toho používal navrhované názvy funkcí. Nicméně aktualizované názvy jsou specifické pro společnost Microsoft. Pokud pro účely přenositelnosti potřebujete použít stávající názvy funkcí, můžete tato upozornění vypnout. Funkce POSIX jsou stále k dispozici v knihovně pod jejich původní názvy.
+Chcete-li tento problém vyřešit, obvykle doporučujeme změnit kód tak, aby místo toho používal navrhované názvy funkcí. Nicméně aktualizované názvy jsou specifické pro společnost Microsoft. Pokud pro účely přenositelnosti potřebujete použít stávající názvy funkcí, můžete tato upozornění vypnout. Funkce jsou stále k dispozici v knihovně pod původními názvy.
 
 Chcete-li vypnout upozornění na zastaralost pro tyto funkce, definujte makro preprocesoru **\_CRT\_NONSTDC\_žádná\_upozornění**. Toto makro můžete definovat na příkazovém řádku včetně možnosti `/D_CRT_NONSTDC_NO_WARNINGS`.
 

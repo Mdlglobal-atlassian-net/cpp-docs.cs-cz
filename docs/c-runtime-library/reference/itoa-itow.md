@@ -1,5 +1,5 @@
 ---
-title: _itoa, funkce _itow
+title: _itoa, _itow funkce
 ms.date: 08/19/2019
 api_name:
 - itoa
@@ -102,12 +102,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 97085ab8a8c720d278374868f9b1c90a91a6da3b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a4e429b51e4157b49086d2425bec2698a724a0e0
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953573"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898790"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -128,7 +128,7 @@ wchar_t * _ultow( unsigned long value, wchar_t *buffer, int radix );
 wchar_t * _i64tow( long long value, wchar_t *buffer, int radix );
 wchar_t * _ui64tow( unsigned long long value, wchar_t *buffer, int radix );
 
-// These Posix versions of the functions have deprecated names:
+// These POSIX versions of the functions have deprecated names:
 char * itoa( int value, char *buffer, int radix );
 char * ltoa( long value, char *buffer, int radix );
 char * ultoa( unsigned long value, char *buffer, int radix );
@@ -182,18 +182,18 @@ Délka vyrovnávací paměti v jednotkách typu znaku. Tento parametr je odvozen
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací ukazatel na *vyrovnávací paměť*. Nevrátila se žádná chybová zpráva.
+Každá z těchto funkcí vrací ukazatel na *vyrovnávací paměť*. Není vrácena žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**a **_ui64toa** převádějí číslice daného argumentu *hodnoty* na řetězec znaků zakončený hodnotou null a uloží výsledek (až 33 znaků pro **_itoa.** , **_ltoa**a **_ultoa**a 65 pro **_i64toa** a **_ui64toa**) ve *vyrovnávací paměti*. Pokud se *základ* rovná 10 a *hodnota* je záporná, je prvním znakem uloženého řetězce znaménko mínus ( **-** ). Funkce **_itow**, **_ltow**, **_ultow**, **_i64tow**a **_ui64tow** jsou verze s libovolným znakem **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**a **_ui64toa**, v uvedeném pořadí.
+Funkce **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**a **_ui64toa** převádějí číslice daného argumentu *hodnoty* na řetězec znaků zakončený hodnotou null a uloží výsledek (až 33 znaků pro **_itoa**, **_ltoa**a **_ultoa**a 65 pro **_i64toa** a **_ui64toa**) ve *vyrovnávací paměti*. Pokud se *základ* rovná 10 a *hodnota* je záporná, je prvním znakem uloženého řetězce znaménko mínus ( **-** ). Funkce **_itow**, **_ltow**, **_ultow**, **_i64tow**a **_ui64tow** jsou verze s nejrůznějšími znaky **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**a **_ui64toa**v uvedeném pořadí.
 
 > [!IMPORTANT]
 > Tyto funkce mohou zapisovat za konec vyrovnávací paměti, která je příliš malá. Chcete-li zabránit přetečení vyrovnávací paměti, zajistěte, aby byla *vyrovnávací paměť* dostatečně velká, aby obsahovala převedené číslice, a znak null a znak znaménka. Zneužití těchto funkcí může způsobit vážné problémy se zabezpečením v kódu.
 
-Z důvodu potenciálních problémů se zabezpečením tyto funkce ve výchozím nastavení způsobují [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)upozornění na vyřazení: **Tato funkce nebo proměnná může být nebezpečná. Místo toho** zvažte použití *safe_function* **. Pokud chcete zakázat zastaralost, použijte _CRT_SECURE_NO_WARNINGS.** Doporučujeme, abyste změnili zdrojový kód tak, aby používal *safe_function* navržený zprávou upozornění. Bezpečnější funkce nezapisují více znaků, než je zadaná velikost vyrovnávací paměti. Další informace najdete v tématu [_itoa_s, _itow_s Functions](itoa-s-itow-s.md).
+Vzhledem k tomu, že problémy se zabezpečením, tyto funkce ve výchozím nastavení způsobí [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)upozornění na vyřazení: **Tato funkce nebo proměnná může být nebezpečná. Místo toho zvažte použití** *safe_function* **. Pokud chcete zakázat zastaralost, použijte _CRT_SECURE_NO_WARNINGS.** Doporučujeme, abyste změnili zdrojový kód tak, aby používal *safe_function* navržený zprávou upozornění. Bezpečnější funkce nezapisují více znaků, než je zadaná velikost vyrovnávací paměti. Další informace najdete v tématu [_itoa_s _itow_s Functions](itoa-s-itow-s.md).
 
-Chcete-li použít tyto funkce bez upozornění na vyřazení, definujte před zahrnutím hlaviček CRT **_CRT_SECURE_NO_WARNINGS** makro preprocesoru. To můžete provést na příkazovém řádku v příkazovém řádku vývojáře přidáním možnosti kompilátoru **/D_CRT_SECURE_NO_WARNINGS** do příkazu **CL** . V opačném případě definujte makro ve zdrojových souborech. Použijete-li předkompilované hlavičky, definujte makro v horní části předkompilované hlavičky Include File, *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší). Chcete-li definovat makro ve zdrojovém kódu, použijte direktivu **#define** před zahrnutím jakékoli hlavičky CRT, jako v tomto příkladu:
+Chcete-li použít tyto funkce bez upozornění na vyřazení, definujte **_CRT_SECURE_NO_WARNINGS** makro preprocesoru před zahrnutím všech hlaviček CRT. To můžete provést na příkazovém řádku v příkazovém řádku vývojáře přidáním možnosti kompilátoru **/D_CRT_SECURE_NO_WARNINGS** do příkazu **CL** . V opačném případě definujte makro ve zdrojových souborech. Použijete-li předkompilované hlavičky, definujte makro v horní části předkompilované hlavičky Include File, *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší). Chcete-li definovat makro ve zdrojovém kódu, použijte direktivu **#define** před zahrnutím jakékoli hlavičky CRT, jako v tomto příkladu:
 
 ```C
 #define _CRT_SECURE_NO_WARNINGS 1
@@ -202,9 +202,9 @@ Chcete-li použít tyto funkce bez upozornění na vyřazení, definujte před z
 
 V C++nástroji mají tyto funkce přetížení šablony, která vyvolává jejich bezpečnější protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Názvy POSIX **itoa**, **ltoa**a **ultoa** existují jako aliasy pro funkce **_itoa**, **_ltoa**a **_ultoa** . Názvy POSIX jsou zastaralé, protože nenásledují konvence názvů funkcí specifických pro implementaci ISO C. Ve výchozím nastavení tyto funkce způsobují [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)upozornění na zastaralé: **Název POSIX pro tuto položku je zastaralý. Místo toho použijte ISO C a C++ vyhovující název:** *new_name*. Doporučujeme, abyste změnili zdrojový kód tak, aby používal bezpečnější verze těchto funkcí, **_itoa_s**, **_ltoa_s**nebo **_ultoa_s**. Další informace najdete v tématu [_itoa_s, _itow_s Functions](itoa-s-itow-s.md).
+Názvy POSIX **itoa**, **ltoa**a **ultoa** existují jako aliasy pro funkce **_itoa**, **_ltoa**a **_ultoa** . Názvy POSIX jsou zastaralé, protože nedodržují konvence názvů globálních funkcí specifických pro implementaci ISO C. Ve výchozím nastavení tyto funkce způsobí vyřazení upozornění na zastaralé [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **název POSIX pro tuto položku je zastaralý. Místo toho použijte ISO C a C++ vyhovující název:** *new_name*. Doporučujeme, abyste změnili zdrojový kód tak, aby používal bezpečnější verze těchto funkcí, **_itoa_s**, **_ltoa_s**nebo **_ultoa_s**. Další informace najdete v tématu [_itoa_s _itow_s Functions](itoa-s-itow-s.md).
 
-Pro přenositelnost zdrojového kódu můžete chtít zachovat názvy POSIX ve vašem kódu. Chcete-li použít tyto funkce bez upozornění na vyřazení, před zahrnutím všech hlaviček CRT definujte jak makra preprocesoru **_CRT_NONSTDC_NO_WARNINGS** , tak **_CRT_SECURE_NO_WARNINGS** . To můžete provést na příkazovém řádku v příkazovém řádku vývojáře přidáním možností kompilátoru **/D_CRT_SECURE_NO_WARNINGS** a **/D_CRT_NONSTDC_NO_WARNINGS** do příkazu **CL** . V opačném případě definujte makra ve zdrojových souborech. Pokud používáte předkompilované hlavičky, definujte makra v horní části souboru include předkompilované hlavičky. Chcete-li definovat makra ve zdrojovém kódu, použijte direktivy **#define** před zahrnutím jakékoli hlavičky CRT, jako v tomto příkladu:
+Pro přenositelnost zdrojového kódu můžete chtít zachovat názvy POSIX ve vašem kódu. Chcete-li použít tyto funkce bez upozornění na vyřazení, definujte **_CRT_NONSTDC_NO_WARNINGS** i **_CRT_SECURE_NO_WARNINGS** makra preprocesoru před zahrnutím všech hlaviček CRT. To můžete provést na příkazovém řádku v příkazovém řádku vývojáře přidáním možností kompilátoru **/D_CRT_SECURE_NO_WARNINGS** a **/D_CRT_NONSTDC_NO_WARNINGS** do příkazu **CL** . V opačném případě definujte makra ve zdrojových souborech. Pokud používáte předkompilované hlavičky, definujte makra v horní části souboru include předkompilované hlavičky. Chcete-li definovat makra ve zdrojovém kódu, použijte direktivy **#define** před zahrnutím jakékoli hlavičky CRT, jako v tomto příkladu:
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -223,9 +223,9 @@ Chcete-li použít jedno z těchto maker ve funkci pro převod řetězce, deklar
 |Funkce|radix|Makra|
 |**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
-|**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
-|**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
-|**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
+|**_ultoa** **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
+|**_i64toa** **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
+|**_ui64toa** **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
 V tomto příkladu se používá makro Count (počet převodů) k definování vyrovnávací paměti, která je dostatečně velká, aby v základní třídě 2 obsahovala **nepodepsané dlouhé** znaky
 
@@ -254,14 +254,14 @@ int main()
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**itoa**, **ltoa**, **ultoa**|\<stdlib.h>|
-|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
+|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa** **_ui64toa**|\<stdlib.h>|
 |**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<Stdlib. h > nebo \<WCHAR. h >|
 
 Tyto funkce a makra jsou specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka demonstruje použití některých funkcí konverze celého čísla. Všimněte si použití makra **_CRT_SECURE_NO_WARNINGS** k tiché výstraze C4996.
+Tato ukázka demonstruje použití některých funkcí konverze celého čísla. Poznamenejte si použití **_CRT_SECURE_NO_WARNINGSho** makra pro tiché Upozornění C4996.
 
 ```C
 // crt_itoa.c
@@ -339,4 +339,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s, funkce _itow_s](itoa-s-itow-s.md)<br/>
+[_itoa_s, _itow_s funkce](itoa-s-itow-s.md)<br/>

@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 0e11c11b468ff6e058ccf5c75b000396e0473bfa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343833"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898747"
 ---
 # <a name="errno-constants"></a>errno – konstanty
 
@@ -58,36 +58,36 @@ ms.locfileid: "62343833"
 
 ## <a name="remarks"></a>Poznámky
 
-**Errno** hodnoty jsou konstanty, které jsou přiřazeny [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) v případě různé chybové stavy.
+Hodnoty **errno** jsou konstantami přiřazenými [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) v případě různých chybových stavů.
 
-KÓD CHYBY. H obsahuje definice **errno** hodnoty. Ale ne všechny definice podle ERRNO. H se používají v operačních systémech Windows 32-bit. Některé hodnoty v ERRNO. H jsou k dispozici pro zachování kompatibility se systémem UNIX řady operačních systémů.
+ERRNO. H obsahuje definice hodnot **errno** . Ale ne všechny definice uvedené v ERRNO. H se používá v operačních systémech Windows 32. Některé hodnoty v ERRNO. H je k dispozici pro zachování kompatibility s rodinou operačních systémů UNIX.
 
-**Errno** podmnožinu hodnoty jsou hodnoty v operačním systému Windows 32-bit **errno** XENIX systémy. To znamená **errno** hodnota není nutně stejný jako skutečný chybový kód vrácený voláním systému od operačních systémů Windows. Chcete-li získat přístup k kód chyby skutečné operačního systému, použijte [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) proměnnou, která obsahuje tuto hodnotu.
+Hodnoty **errno** v operačním systému Windows 32 jsou podmnožinou hodnot pro **errno** v systémech Xenix. Proto hodnota **errno** není nutně stejná jako skutečný kód chyby vrácený systémovým voláním z operačních systémů Windows. Pro přístup ke skutečnému kódu chyby operačního systému použijte [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) proměnnou, která obsahuje tuto hodnotu.
 
-Následující **errno** hodnoty jsou podporovány:
+Podporovány jsou následující hodnoty **errno** :
 
 |Konstanta|Popis|
 |-|-|
-|**ECHILD**|Žádné vytvářené procesy.|
-|**EAGAIN**|Žádné další procesy. Pokus o vytvoření nového procesu se nezdařila, protože neexistují žádné další proces sloty, nebo není dostatek paměti nebo bylo dosaženo maximální úrovně vnoření.|
+|**ECHILD**|Žádné setvářené procesy.|
+|**EAGAIN**|Žádné další procesy. Pokus o vytvoření nového procesu se nezdařil, protože neexistují žádné další sloty procesu, nebo není k dispozici dostatek paměti nebo byla dosažena maximální úroveň vnoření.|
 |**E2BIG**|Seznam argumentů je příliš dlouhý.|
-|**EACCES**|Oprávnění byla odepřena. Nastavení oprávnění k souboru neumožňuje zadaný přístup. Tato chyba označuje, že byl proveden pokus o přístup k souboru (nebo v některých případech se do adresáře) v způsobem, který je kompatibilní s atributy souboru.<br/><br/>Této chybě může dojít například při pokusu o čtení ze souboru, který není otevřený, otevřete existující soubor jen pro čtení pro zápis, nebo otevřete adresář, nikoli soubor. V části zástupného kódu MS-DOS verze operačních systémů, 3.0 a vyšší **EACCES** může také znamenat uzamčení nebo narušení sdílení.<br/><br/>Této chybě může dojít také při pokusu o přejmenování souboru nebo adresáře nebo odstranění existující adresář.|
-|**EBADF**|Chybné číslo souboru. Existují dva možné příčiny: (1) popisovač zadaný soubor není platnou hodnotou nebo neodkazuje na otevřený soubor. 2) byl k pokusu o zápis do souboru nebo zařízení pro přístup jen pro čtení.|
-|**EDEADLOCK**|By k vzájemnému zablokování prostředků. Argument matematické funkce není v doméně funkce.|
-|**EDOM**|Matematický argument.|
-|**EEXIST**|Soubory existují. Byl proveden pokus o vytvoření souboru, který již existuje. Například **_O_CREAT** a **_O_EXCL** příznaky jsou určené v **_Otevřít** volání, ale soubor s názvem již existuje.|
-|**EILSEQ**|Neplatné pořadí bajtů (například v řetězci znakové sady MBCS).|
-|**EINVAL**|Neplatný argument. Neplatná hodnota byl zadán pro jeden z argumentů funkce. Například hodnota pro původ zadané při umístění ukazatele souboru (prostřednictvím volání **fseek**) je před začátkem soubor.|
-|**EMFILE**|Příliš mnoho otevřených souborů. Žádné další popisovače souborů, které jsou k dispozici, takže žádné další soubory můžete otevřít.|
-|**ENOENT**|Žádný odpovídající soubor nebo adresář. Zadaný soubor nebo adresář neexistuje nebo nebyl nalezen. Tato zpráva může dojít při každém zadaný soubor neexistuje nebo součást cesty nespecifikuje existující adresář.|
-|**ENOEXEC**|Chyba formátu exec. Došlo pokusu o spuštění souboru, který není spustitelný soubor nebo, který má neplatný formát spustitelného souboru.|
-|**ENOMEM**|Není k dispozici dostatek jader. Nedostatek paměti je k dispozici pro pokus o operátor. Například tato zpráva může dojít, když není dostatek paměti ke spuštění podřízeného procesu, nebo když požádat o přidělení paměti v **_getcwd** volání nedokáže splnit.|
-|**ENOSPC**|Není dostatek místa. na zařízení. Žádné další místo pro zápis je k dispozici na zařízení (třeba při zaplnění disku).|
-|**ERANGE**|Výsledek je příliš velký. Argument matematické funkce je moc velká, čímž částečné nebo úplné dojde ke ztrátě významu výsledku. Této chybě může dojít také v dalších funkcí, pokud argument je větší, než bylo očekáváno (například když *vyrovnávací paměti* argument **_getcwd** je delší, než se očekávalo).|
-|**EXDEV**|Odkaz mezi zařízeními. Byl proveden pokus o přesunutí souboru do různých zařízení (pomocí **přejmenovat** funkce).|
-|**STRUNCATE**|Výsledkem zkrácený řetězec je řetězec kopírování nebo zřetězení. Zobrazit [_TRUNCATE](../c-runtime-library/truncate.md).
+|**EACCES**|Oprávnění bylo odepřeno. Nastavení oprávnění souboru nepovoluje zadaný přístup. Tato chyba znamená, že došlo k pokusu o přístup k souboru (nebo v některých případech adresáře) způsobem, který je nekompatibilní s atributy souboru.<br/><br/>K této chybě může dojít například při pokusu o čtení ze souboru, který není otevřen, k otevření existujícího souboru jen pro čtení pro zápis nebo pro otevření adresáře místo souboru. V části operační systém MS-DOS verze 3,0 a novější může **EACCES** také znamenat narušení uzamčení nebo sdílení.<br/><br/>K této chybě může dojít také při pokusu o přejmenování souboru nebo adresáře nebo odebrání existujícího adresáře.|
+|**EBADF**|Chybné číslo souboru Existují dvě možné příčiny: 1) zadaný popisovač souboru není platná hodnota nebo neodkazuje na otevřený soubor. 2) byl proveden pokus o zápis do souboru nebo zařízení otevřeného pro přístup jen pro čtení.|
+|**EDEADLOCK**|Dojde k zablokování prostředků. Argument matematické funkce není v doméně funkce.|
+|**EDOM**|Argument Math|
+|**EEXIST**|Soubory existují. Byl proveden pokus o vytvoření souboru, který již existuje. Například příznaky **_O_CREAT** a **_O_EXCL** jsou zadány ve volání **_open** , ale pojmenovaný soubor již existuje.|
+|**EILSEQ**|Neplatná sekvence bajtů (například v řetězci znakové sady MBCS).|
+|**EINVAL**|Neplatný argument. Pro jeden z argumentů funkce byla zadána neplatná hodnota. Například hodnota zadaná pro počátek při umístění ukazatele na soubor (prostřednictvím volání **fseek**) je před začátkem souboru.|
+|**EMFILE**|Je otevřeno příliš mnoho souborů. Nejsou k dispozici žádné další popisovače souboru, takže nelze otevřít žádné další soubory.|
+|**ENOENT**|Žádný takový soubor nebo adresář neexistuje. Zadaný soubor nebo adresář neexistuje nebo nebyl nalezen. Tato zpráva se může objevit vždy, když zadaný soubor neexistuje nebo pokud součást cesty neurčuje existující adresář.|
+|**ENOEXEC**|Chyba formátu Exec. Byl proveden pokus o spuštění souboru, který není spustitelný nebo má neplatný formát spustitelného souboru.|
+|**ENOMEM**|Nedostatek jader. K dispozici není dostatek paměti pro pokusy o obsluhu. Tato zpráva se může zobrazit například v případě, že k dispozici není dostatek paměti pro spuštění podřízeného procesu nebo když žádost o přidělení ve **_getcwd** volání nelze splnit.|
+|**ENOSPC**|Na zařízení nezbývá žádné místo. V zařízení není k dispozici více místa pro zápis (například když je disk plný).|
+|**ERANGE**|Výsledek je příliš velký. Argument matematické funkce je příliš velký, což vedlo k částečné nebo celkové ztrátě významnosti ve výsledku. K této chybě může dojít také v případě, že argument je větší, než se očekávalo (například když je argument buffer **_getcwd** delší, než se očekávalo).|
+|**EXDEV**|Propojení mezi zařízeními. Byl proveden pokus o přesunutí souboru na jiné zařízení (pomocí funkce **přejmenování** ).|
+|**STRUNCATE**|Výsledkem řetězcové kopie nebo zřetězení je zkrácený řetězec. Viz [_TRUNCATE](../c-runtime-library/truncate.md).
 
-Následující hodnoty jsou podporovány pro kompatibilitu s Posix. Jsou požadované hodnoty v systémech bez Posix.
+Pro kompatibilitu s POSIX jsou podporovány následující hodnoty. Jsou to povinné hodnoty v systémech jiných než POSIX.
 
 ```C
 #define E2BIG /* argument list too long */

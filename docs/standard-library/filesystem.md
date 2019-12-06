@@ -1,5 +1,5 @@
 ---
-title: '&lt;systému souborů&gt;'
+title: '&lt;&gt; systému souborů'
 ms.date: 11/04/2016
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_entry
@@ -9,16 +9,16 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457026"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898816"
 ---
-# <a name="ltfilesystemgt"></a>&lt;systému souborů&gt;
+# <a name="ltfilesystemgt"></a>&lt;&gt; systému souborů
 
-Zahrňte > &lt;systému souborů hlaviček pro přístup ke třídám a funkcím, které pracují a načítají informace o cestách, souborech a adresářích.
+Pro přístup ke třídám a funkcím, které pracují s a načítají informace o cestách, souborech a adresářích, zahrňte > &lt;systému souborů záhlaví.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,13 +29,13 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Od verze sady Visual Studio 2017 \<dosud nebyla hlavička > systému souborů C++ standardem. C++v aplikaci Visual Studio 2017 (MSVC v141) implementuje finální koncept Standard, který se nachází v [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Od verze sady Visual Studio 2017 se záhlaví > systému souborů \<ještě C++ nestandardní. C++v aplikaci Visual Studio 2017 (MSVC v141) implementuje finální koncept Standard, který se nachází v [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Tato hlavička podporuje systémy souborů pro jednu ze dvou hlavních tříd hostitelských operačních systémů: Microsoft Windows a POSIX.
 
 I když je většina funkcí společná pro oba operační systémy, tento dokument určuje, kde dochází k rozdílům. Příklad:
 
-- Systém Windows podporuje několik kořenových názvů, například c: \\nebo \network_name. Systém souborů se skládá z doménové struktury stromů, z nichž každý má vlastní kořenový adresář, například c:\. nebo \\\network_name\\a každý s aktuálním adresářem pro dokončení relativní cesty (jeden, který není absolutní cesta).
+- Systém Windows podporuje několik kořenových názvů, například c: nebo \\\ network_name. Systém souborů se skládá z doménové struktury stromů, z nichž každý má vlastní kořenový adresář, například c:\. nebo \\\ network_name\\a každý s vlastním adresářem pro dokončení relativní cesty (jeden, který není absolutní cesta).
 
 - POSIX podporuje jeden strom bez názvu root, jeden kořenový adresář/a jeden aktuální adresář.
 
@@ -51,11 +51,11 @@ Dalším významným rozdílem je nativní reprezentace cest:
 
 - Sekvence znaků zakončená hodnotou null, kódovaná jako UTF-8.
 
-- Sekvence wchar_t zakončená hodnotou null, která je zakódovaná pro operační systém.
+- Sekvence wchar_t zakončená hodnotou null, která je zakódovaná jako přizpůsobená operačním systémem.
 
-- Sekvence char16_t zakončené znakem null kódovaná jako UTF-16.
+- Sekvence char16_t zakončená hodnotou null, kódovaná jako UTF-16.
 
-- Sekvence char32_t zakončené znakem null kódovaná jako UTF-32.
+- Sekvence char32_t zakončená hodnotou null, kódovaná jako UTF-32.
 
 Vzájemné převody mezi těmito reprezentacemi jsou podle potřeby využívány pomocí jedné nebo více `codecvt` omezujících vlastností. Pokud není určen konkrétní objekt národního prostředí, jsou tyto omezující vlastnosti získány z globálního národního prostředí.
 
@@ -83,7 +83,7 @@ Společné pro oba systémy jsou strukturou uloženou v cestě, jakmile se dosta
 
 - Přípona je. ext.
 
-Malým rozdílem je **upřednostňovaný oddělovač**mezi posloupností adresářů v cestě. Oba operační systémy umožňují napsat lomítko/, ale v některých kontextech Windows upřednostňují zpětné lomítko \\.
+Malým rozdílem je **upřednostňovaný oddělovač**mezi posloupností adresářů v cestě. Oba operační systémy umožňují napsat lomítko/, ale v některých kontextech Windows preferují zpětné lomítko \\.
 
 Nakonec důležitou funkcí objektů cesty je, že je můžete použít všude, kde je vyžadován argument filename v třídách definovaných v hlavičce \<fstream – >.
 
@@ -95,12 +95,12 @@ Další informace a příklady kódu naleznete v tématu [Navigace v systému so
 
 |||
 |-|-|
-|[directory_entry – třída](../standard-library/directory-entry-class.md)|Popisuje objekt, který je vrácen pomocí `directory_iterator` `recursive_directory_iterator` nebo a a obsahuje cestu.|
+|[directory_entry – třída](../standard-library/directory-entry-class.md)|Popisuje objekt, který je vrácený `directory_iterator` nebo `recursive_directory_iterator` a obsahuje cestu.|
 |[directory_iterator – třída](../standard-library/directory-iterator-class.md)|Popisuje vstupní iterátor, který sekvencí názvy souborů v adresářovém systému souborů.|
 |[filesystem_error – třída](../standard-library/filesystem-error-class.md)|Základní třída pro výjimky, které jsou vyvolány pro hlášení přetečení systému nízké úrovně.|
-|[path – třída](../standard-library/path-class.md)|Definuje třídu, která ukládá objekt typu `String` šablony, který je vhodný pro použití jako název souboru.|
+|[path – třída](../standard-library/path-class.md)|Definuje třídu, která ukládá objekt typu šablony `String`, který je vhodný pro použití jako název souboru.|
 |[recursive_directory_iterator – třída](../standard-library/recursive-directory-iterator-class.md)|Popisuje vstupní iterátor, který sekvencí názvy souborů v adresářovém systému souborů. Iterátor může také dohlížet na podadresáře.|
-|[file_status – třída](../standard-library/file-status-class.md)|Zabalí a `file_type`.|
+|[file_status – třída](../standard-library/file-status-class.md)|Zalomí `file_type`.|
 
 ### <a name="structs"></a>Struktury
 
@@ -110,11 +110,11 @@ Další informace a příklady kódu naleznete v tématu [Navigace v systému so
 
 ## <a name="functions"></a>Funkce
 
-[\<Funkce > systému souborů](../standard-library/filesystem-functions.md)
+[Funkce > systému souborů \<](../standard-library/filesystem-functions.md)
 
 ## <a name="operators"></a>Operátory
 
-[\<operátoři > systému souborů](../standard-library/filesystem-operators.md)
+[\<operátory > systému souborů](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>Výčty
 
