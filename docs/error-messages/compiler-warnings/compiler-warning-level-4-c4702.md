@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4702
+title: Upozornění kompilátoru (úroveň 4) C4702
 ms.date: 11/04/2016
 f1_keywords:
 - C4702
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e46bfef925f999ed7f04b5bbe7c88800209ed14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395245"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990648"
 ---
-# <a name="compiler-warning-level-4-c4702"></a>Kompilátor upozornění (úroveň 4) C4702
+# <a name="compiler-warning-level-4-c4702"></a>Upozornění kompilátoru (úroveň 4) C4702
 
-Nedosažitelný kód
+nedosažitelný kód
 
-Toto upozornění je výsledkem kompilátoru prací, které bylo provedeno pro Visual Studio .NET 2003: nedosažitelný kód. Když kompilátor (back-end) zjistí nedosažitelný kód, C4702, vygeneruje upozornění úrovně 4.
+Toto upozornění je výsledkem práce s vyhovujícími kompilátory, které byly provedeny pro sadu Visual Studio .NET 2003: nedosažitelný kód. Když kompilátor (back-end) zjistí nedosažitelný kód, vygeneruje C4702 upozornění úrovně 4.
 
-Pro kód, který je platný v Visual Studio .NET 2003 i Visual Studio .NET verzí jazyka Visual C++ odebrání nedosažitelného kódu nebo zajistit, že je dostupná pro některé toku provádění s veškerým zdrojovým kódem.
+Pro kód, který je platný v rámci Visual Studio .NET 2003 i Visual Studio .NET verze vizuálu C++, odeberte nedosažitelný kód nebo zajistěte, aby byl veškerý zdrojový kód dosažitelný pomocí nějakého toku provádění.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4702.
 
-```
+```cpp
 // C4702.cpp
 // compile with: /W4
 #include <stdio.h>
@@ -38,13 +38,13 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Při kompilaci s **/GX**, **parametr/EHC**, **/EHsc**, nebo **/EHac** a pomocí funkce extern C, kód se může stát nedostupný protože extern C Funkce předpokládá, že není throw, proto není dosažitelný bloku catch.  Pokud se domníváte, že toto upozornění není platný, protože může vyvolat funkci, proveďte kompilaci s **/EHa** nebo **/EHS**podle toho, že došlo k výjimce.
+Při kompilaci s **/GX**, **/EHC**, **/EHsc**nebo **/EHAC** a pomocí externích funkcí jazyka c může být kód nedosažitelný, protože externí funkce jazyka c se předpokládá, že nejsou throw, takže blok catch není dosažitelný.  Pokud se domníváte, že toto upozornění není platné, protože funkce může vyvolat, kompilovat pomocí **/EHa** nebo **/EHS**, v závislosti na vyvolané výjimce.
 
-Další informace najdete v tématu [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md) Další informace.
+Další informace naleznete v tématu [/EH (model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md) , kde najdete další informace.
 
 Následující ukázka generuje C4702.
 
-```
+```cpp
 // C4702b.cpp
 // compile with: /W4 /EHsc
 #include <iostream>

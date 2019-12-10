@@ -5,36 +5,36 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 836623f6d539b7b28765763a3dc36d477f8c1499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 156b4162f742915939ebdfaec6a84d77afaad8cd
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387549"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988278"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Postupy: Převod typu .NET Collection na kontejner STL/CLR
 
-Toto téma ukazuje, jak převod kolekce .NET na jejich ekvivalentní kontejnerů STL/CLR. Jako příklad vám ukážeme, jak převést .NET <xref:System.Collections.Generic.List%601> STL/CLR [vektoru](../dotnet/vector-stl-clr.md) a jak převést .NET <xref:System.Collections.Generic.Dictionary%602> STL/CLR [mapy](../dotnet/map-stl-clr.md), ale postup je podobný pro všechny kolekce a kontejnery .
+Toto téma ukazuje, jak převést kolekce .NET na jejich ekvivalentní kontejnery STL/CLR. Jako příklad ukazujeme, jak převést <xref:System.Collections.Generic.List%601> .NET na [vektor](../dotnet/vector-stl-clr.md) STL/CLR a jak převést rozhraní .NET <xref:System.Collections.Generic.Dictionary%602> na [mapu](../dotnet/map-stl-clr.md)STL/CLR, ale postup je podobný pro všechny kolekce a kontejnery.
 
-### <a name="to-create-a-container-from-a-collection"></a>Vytvořte kontejner z kolekce
+### <a name="to-create-a-container-from-a-collection"></a>Vytvoření kontejneru z kolekce
 
-1. Převést celou kolekci, vytvořte kontejner STL/CLR a předat konstruktoru kolekce.
+1. Chcete-li převést celou kolekci, vytvořte kontejner STL/CLR a předejte kolekci do konstruktoru.
 
    První příklad ukazuje tento postup.
 
 -OR-
 
-1. Vytvořit obecný kontejneru STL/CLR vytvořením [collection_adapter –](../dotnet/collection-adapter-stl-clr.md) objektu. Tato třída šablony přijímá jako argument kolekce rozhraní .NET. Pokud chcete ověřit, která rozhraní jsou podporovány, naleznete v tématu [collection_adapter – (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
+1. Vytvořte obecný kontejner STL/CLR vytvořením objektu [collection_adapter](../dotnet/collection-adapter-stl-clr.md) . Tato třída šablony přebírá rozhraní .NET Collection jako argument. Chcete-li ověřit, která rozhraní jsou podporována, přečtěte si téma [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
 
-1. Zkopírujte obsah .NET collection na kontejner. To můžete udělat pomocí STL/CLR [algoritmus](../dotnet/algorithm-stl-clr.md), nebo podle iterace nad kolekcí .NET a vložením kopie každý prvek do kontejneru STL/CLR.
+1. Zkopírujte obsah kolekce .NET do kontejneru. To lze provést pomocí [algoritmu](../dotnet/algorithm-stl-clr.md)STL/CLR nebo pomocí iterace kolekce .NET a vložením kopie každého prvku do kontejneru STL/CLR.
 
    Druhý příklad ukazuje tento postup.
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu vytvoříme obecný <xref:System.Collections.Generic.List%601> a přidejte do ní 5 elementů. Pak vytvoříme `vector` pomocí konstruktoru, který přijímá <xref:System.Collections.Generic.IEnumerable%601> jako argument.
+V tomto příkladu vytvoříme obecné <xref:System.Collections.Generic.List%601> a do něj přidáte 5 prvků. Pak vytvoříme `vector` pomocí konstruktoru, který jako argument přijímá <xref:System.Collections.Generic.IEnumerable%601>.
 
-```
+```cpp
 // cliext_convert_list_to_vector.cpp
 // compile with: /clr
 
@@ -78,9 +78,9 @@ The contents of the cliext::vector are:
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu vytvoříme obecný <xref:System.Collections.Generic.Dictionary%602> a přidejte do ní 5 elementů. Pak vytvoříme `collection_adapter` zalomení <xref:System.Collections.Generic.Dictionary%602> jako jednoduchý kontejner STL/CLR. Nakonec vytvoříme `map` a zkopírujte obsah <xref:System.Collections.Generic.Dictionary%602> k `map` pomocí provádí iterace `collection_adapter`. Během tohoto procesu jsme vytvořit nový pár pomocí `make_pair` fungovat a vložit nový pár přímo do `map`.
+V tomto příkladu vytvoříme obecné <xref:System.Collections.Generic.Dictionary%602> a do něj přidáte 5 prvků. Pak vytvoříme `collection_adapter` k zabalení <xref:System.Collections.Generic.Dictionary%602> jako jednoduchého kontejneru STL/CLR. Nakonec vytvoříme `map` a zkopírujte obsah <xref:System.Collections.Generic.Dictionary%602> do `map` tak, že na `collection_adapter`provedete iteraci. Během tohoto procesu vytvoříme novou dvojici pomocí funkce `make_pair` a vložíte dvojici New přímo do `map`.
 
-```
+```cpp
 // cliext_convert_dictionary_to_map.cpp
 // compile with: /clr
 

@@ -1,27 +1,27 @@
 ---
-title: 'Postupy: Zjišťování kompilace / clr'
+title: 'Postupy: detekce kompilace CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, detecting /clr
 - /clr compiler option [C++], detecting use of
 ms.assetid: a9310045-4810-4637-a64a-0b31a08791c1
-ms.openlocfilehash: 0b02be1bcd0afc9fd857e689ceafdcab5eaf05d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42b2952e3b63023ca26c6b1f7d0ccb8871082499
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387354"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988213"
 ---
-# <a name="how-to-detect-clr-compilation"></a>Postupy: Zjišťování kompilace/CLR
+# <a name="how-to-detect-clr-compilation"></a>Postupy: Rozpoznání kompilace s volbou /clr
 
-Použití `_MANAGED` nebo `_M_CEE` – makro, pokud chcete zobrazit, pokud modulu je kompilována s **/CLR**. Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Pomocí makra `_MANAGED` nebo `_M_CEE` můžete zjistit, zda je modul zkompilován s možností **/CLR**. Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 
-Další informace o makra, naleznete v tématu [předdefinovaná makra](../preprocessor/predefined-macros.md).
+Další informace o makrech naleznete v tématu [Předdefinovaná makra](../preprocessor/predefined-macros.md).
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // detect_CLR_compilation.cpp
 // compile with: /clr
 #include <stdio.h>

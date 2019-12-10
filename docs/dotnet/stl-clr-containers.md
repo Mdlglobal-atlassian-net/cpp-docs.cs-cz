@@ -6,44 +6,44 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384592"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988115"
 ---
 # <a name="stlclr-containers"></a>STL/CLR – kontejnery
 
-Knihovna STL/CLR se skládá z kontejnerů, které jsou podobné těm, nalezeno ve standardní knihovně jazyka C++, ale běží ve spravovaném prostředí .NET Framework. Není pořád aktuální s skutečné standardní knihovny C++ a je zachován z důvodu stále podporuje starší verze.
+Knihovna STL/CLR se skládá z kontejnerů, které jsou podobné těm, které C++ se nacházejí ve standardní knihovně, ale běží ve spravovaném prostředí .NET Framework. Není stále aktuální se skutečnou C++ standardní knihovnou a je udržována pro podporu starší verze.
 
-Tento dokument obsahuje přehled kontejnery v STL/CLR, jako jsou požadavky na prvky kontejneru, typy prvků, můžete vložit do kontejnerů a vlastnictví problémy s prvky v kontejnerech. Kde je to vhodné, jsou uvedené rozdíly mezi nativní standardní knihovny C++ a STL/CLR.
+Tento dokument poskytuje přehled kontejnerů v STL/CLR, jako jsou požadavky na prvky kontejneru, typy prvků, které lze vložit do kontejnerů, a problémy s vlastnictvím prvků v kontejnerech. V případě potřeby jsou zmíněny rozdíly C++ mezi nativní standardní knihovnou a STL/CLR.
 
-## <a name="requirements-for-container-elements"></a>Požadavky na elementy kontejnerů
+## <a name="requirements-for-container-elements"></a>Požadavky na prvky kontejneru
 
-Všechny prvky vloženy do kontejnerů STL/CLR musí dodržují určitá pravidla. Další informace najdete v tématu [požadavky na elementy kontejnerů STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
+Všechny elementy vložené do kontejnerů STL/CLR musí dodržovat určité pokyny. Další informace naleznete v tématu [požadavky na prvky kontejneru STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
 
-## <a name="valid-container-elements"></a>Platný kontejner elementů
+## <a name="valid-container-elements"></a>Platné elementy kontejneru
 
-Kontejnery STL/CLR může obsahovat jeden ze dvou typů prvků:
+Kontejnery STL/CLR mohou obsahovat jeden ze dvou typů prvků:
 
-- Zpracovává referenční typy.
+- Zpracovává odkazy na typy odkazů.
 
-- Typy odkazů.
+- Odkazové typy.
 
-- Hodnota typů.
+- Nezabalené typy hodnot.
 
-Pevně určené typy hodnot nelze vložit do některé z kontejnerů STL/CLR.
+Do žádného z kontejnerů STL/CLR nemůžete vložit zabalený typ hodnoty.
 
-### <a name="handles-to-reference-types"></a>Obslužné rutiny na typy odkazu
+### <a name="handles-to-reference-types"></a>Zpracovává odkazy na typy odkazů
 
-Popisovač pro typ odkazu můžete vložit do kontejneru STL/CLR. Popisovač v jazyce C++ pro CLR je obdobou ukazatel v nativním kódu C++. Další informace najdete v tématu [operátor popisovače objektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
+Můžete vložit popisovač do typu odkazu do kontejneru STL/CLR. Popisovač v C++ cílící na CLR je podobný ukazateli v nativním režimu C++. Další informace najdete v tématu [operátor zpracování objektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vložit popisovač pro objekt zaměstnance do [cliext::set](../dotnet/set-stl-clr.md).
+Následující příklad ukazuje, jak vložit popisovač do objektu Employee do [cliext –:: set](../dotnet/set-stl-clr.md).
 
-```
+```cpp
 // cliext_container_valid_reference_handle.cpp
 // compile with: /clr
 
@@ -132,13 +132,13 @@ int main()
 
 ### <a name="reference-types"></a>Typy odkazů
 
-Je také možné vložit typ odkazu (spíše než popisovač pro typ odkazu) do kontejneru STL/CLR. Hlavní rozdíl je, že když se odstraní kontejner typy odkazů, je zavolán destruktor pro všechny prvky uvnitř tohoto kontejneru. V kontejneru obslužné rutiny na typy odkazu a by volat destruktory pro tyto elementy.
+Je také možné vložit odkazový typ (spíše než popisovač na odkazový typ) do kontejneru STL/CLR. Hlavní rozdíl je v tom, že při odstranění kontejneru odkazových typů je destruktor volán pro všechny prvky uvnitř daného kontejneru. V kontejneru popisovačů na odkazový typ nebudou volány destruktory pro tyto prvky.
 
 #### <a name="example"></a>Příklad
 
-Následující příklad ukazuje postup vložení objektu do zaměstnance `cliext::set`.
+Následující příklad ukazuje, jak vložit objekt zaměstnance do `cliext::set`.
 
-```
+```cpp
 // cliext_container_valid_reference.cpp
 // compile with: /clr
 
@@ -225,17 +225,17 @@ int main()
 }
 ```
 
-### <a name="unboxed-value-types"></a>Hodnota typů
+### <a name="unboxed-value-types"></a>Nezabalené typy hodnot
 
-Můžete také vložit hodnotový typ bez unboxingu do kontejneru STL/CLR. Hodnotový typ bez unboxingu je hodnotový typ, který nebyl *boxed* do typu odkazu.
+Do kontejneru STL/CLR můžete také vložit nezabalený typ hodnoty. Nezabalený typ hodnoty je typ hodnoty, který nebyl *zabalen* do typu odkazu.
 
-Element type hodnotu může být jeden z typů standardní hodnotu například `int`, nebo může být typ hodnoty definované uživatelem, například `value class`. Další informace najdete v tématu [třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
+Typ hodnoty elementu může být jeden ze standardních typů hodnot, jako je například `int`, nebo může být uživatelem definovaný typ hodnoty, jako je například `value class`. Další informace naleznete v tématu [třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md) .
 
 #### <a name="example"></a>Příklad
 
-Následující příklad upravuje v prvním příkladu tak, že zaměstnanci třídy typu hodnoty. Tento typ hodnoty je potom vložen do `cliext::set` stejně jako v prvním příkladu.
+Následující příklad upraví první příklad tím, že třídu Employee nastaví typ hodnoty. Tento typ hodnoty se pak vloží do `cliext::set` stejně jako v prvním příkladu.
 
-```
+```cpp
 // cliext_container_valid_valuetype.cpp
 // compile with: /clr
 
@@ -296,19 +296,19 @@ int main()
 }
 ```
 
-Pokud se pokusíte vložit popisovač na typ hodnoty do kontejneru, [Chyba kompilátoru C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) je generován.
+Pokud se pokusíte vložit popisovač do typu hodnoty do kontejneru, je vygenerována [Chyba kompilátoru C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) .
 
-### <a name="performance-and-memory-implications"></a>Výkon a paměť důsledky
+### <a name="performance-and-memory-implications"></a>Důsledky výkonu a paměti
 
-Při určování, jestli se má použít k odkazování typy nebo typy hodnot jako prvky kontejneru obslužné rutiny, je nutné zvážit několik faktorů. Pokud se rozhodnete použít typy hodnot, mějte na paměti, že kopii tohoto elementu je proveden při každém vložení elementu do kontejneru. Pro malé objekty nesmí se jednat o problém, ale pokud jsou objekty vloženého velké, může dojít k omezení výkonu. Navíc pokud použijete typy hodnot, není možné ukládat jeden element v několika kontejnerů ve stejnou dobu, protože každý kontejner bude mít svou vlastní kopii elementu.
+Je nutné vzít v úvahu několik faktorů při určování, zda použít popisovače pro odkaz na typy nebo hodnoty jako prvky kontejneru. Pokud se rozhodnete použít typy hodnot, zapamatujte si, že kopie elementu je vytvořena pokaždé, když je do kontejneru vložen element. U malých objektů by to nemělo být problém, ale pokud jsou vložené objekty velké, může dojít ke zhoršení výkonu. Také Pokud používáte typy hodnot, není možné uložit jeden element ve více kontejnerech současně, protože každý kontejner by měl svou vlastní kopii elementu.
 
-Pokud se rozhodnete použít popisovače k odkazování na typy místo toho, může zvýšit výkon, protože není nutné vytvořit kopii elementu, když je vložen do kontejneru. Navíc na rozdíl od s typy hodnot stejného elementu může existovat v několika kontejnerů. Ale pokud se rozhodnete použít obslužné rutiny, můžete musí pečlivě zkontrolujte, že popisovač je platný a, že objekt, který odkazuje na odstraněný jinde v programu.
+Pokud se rozhodnete použít popisovače k odkazování na typy, může dojít ke zvýšení výkonu, protože není nutné vytvářet kopii prvku, když je vložen do kontejneru. Kromě toho, na rozdíl od hodnotových typů, může stejný prvek existovat ve více kontejnerech. Pokud se však rozhodnete použít obslužné rutiny, musíte se ujistit, že je popisovač platný a že objekt, na který odkazuje, nebyl odstraněn jinde v programu.
 
-## <a name="ownership-issues-with-containers"></a>Potíže s vlastnictvím s kontejnery
+## <a name="ownership-issues-with-containers"></a>Problémy s vlastnictvím kontejnerů
 
-Kontejnery v STL/CLR pracovat na hodnotu sémantiku. Pokaždé, když se vkládání elementů do kontejneru, je vložen kopii tohoto prvku. Pokud chcete získat sémantiku jako odkaz, můžete vložit popisovač pro objekt, nikoli samotného objektu.
+Kontejnery v STL/CLR fungují na sémantikě hodnoty. Pokaždé, když vložíte prvek do kontejneru, je vložena kopie tohoto prvku. Chcete-li získat sémantiku s odkazem na odkaz, můžete místo samotného objektu vložit popisovač objektu.
 
-Při volání nezašifrované podobě nebo vymazat metoda kontejner objektů popisovač, nejsou objekty, které je zachyceno uvolněna z paměti. Můžete explicitně odstraňte objekt, nebo, tyto objekty jsou umístěny na spravované haldě, povolit uvolňování paměti uvolnit paměť, jakmile se určí, že objekt již nejsou déle používány.
+Když zavoláte metodu Clear nebo Erase kontejneru objektů popisovače, objekty, na které odkazují popisovače, nejsou uvolněny z paměti. Je nutné buď objekt výslovně odstranit, nebo, protože tyto objekty jsou umístěny ve spravované haldě, aby systém uvolňování paměti uvolnil paměť, jakmile zjistí, že objekt již není používán.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 5e4a5c86e53d74c8b704ee3780991d496fc1802a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64948d81759d415245e741bc6152d56bb35480d2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273583"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988349"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Zachovat poslední kód chyby pro volání PInvoke)
 
-**/ CLRSUPPORTLASTERROR**, který je ve výchozím, zachová poslední chybový kód funkcí zavolaném prostřednictvím mechanismu P/Invoke, který umožňuje volat nativní funkce v knihovnách DLL z kódu zkompilovaná **/CLR**.
+**/CLRSUPPORTLASTERROR**, která je ve výchozím nastavení zapnutá, zachovává poslední chybový kód funkcí volaných pomocí mechanismu volání nespravovaného kódu, který umožňuje volat nativní funkce v knihovnách DLL z kódu zkompilovaného s možností **/CLR**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,65 +26,65 @@ ms.locfileid: "62273583"
 
 ## <a name="remarks"></a>Poznámky
 
-Zachování kódu poslední chyby znamená snížení výkonu.  Pokud nechcete, budou účtovat dopad na výkon zachování kódu poslední chyby, propojte s **/CLRSUPPORTLASTERROR:NO**.
+Zachování kódu poslední chyby implikuje snížení výkonu.  Pokud nechcete mít dopad na výkon při zachování posledního kódu chyby, propojte pomocí **/CLRSUPPORTLASTERROR: No**.
 
-Můžete minimalizovat dopad na výkon díky propojení s **/CLRSUPPORTLASTERROR:SYSTEMDLL**, který pouze zachová poslední chybový kód pro funkce v systémové knihovny DLL.  Systémová knihovna DLL je definován jako jeden z následujících akcí:
+Dopad na výkon můžete minimalizovat propojením s **/CLRSUPPORTLASTERROR: SYSTEMDLL**, který zachovává jenom poslední kód chyby pro funkce v systémových knihovnách DLL.  Systémová knihovna DLL je definována jako jedna z následujících:
 
 |||||
 |-|-|-|-|
-|ACLUI.DLL|ACTIVEDS. KNIHOVNY DLL|ADPTIF.DLL|ADVAPI32.DLL|
-|ASYCFILT.DLL|AUTHZ.DLL|AVICAP32.DLL|AVIFIL32.DLL|
-|CABINET.DLL|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|
+|ACLUI.DLL|ACTIVEDS. DLL|ADPTIF.DLL|ADVAPI32.DLL|
+|ASYCFILT. DLL|Přes. DLL|AVICAP32.DLL|AVIFIL32.DLL|
+|Skříně. DLL|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|
 |COMSVCS.DLL|CREDUI.DLL|CRYPT32.DLL|CRYPTNET.DLL|
-|CRYPTUI.DLL|D3D8THK.DLL|DBGENG.DLL|DBGHELP.DLL|
-|DCIMAN32.DLL|DNSAPI.DLL|DSPROP.DLL|DSUIEXT.DLL|
-|GDI32.DLL|GLU32.DLL|KNIHOVNA HLINK. KNIHOVNY DLL|ICM32.DLL|
-|IMAGEHLP.DLL|IMM32.DLL|IPHLPAPI.DLL|IPROP.DLL|
+|CRYPTUI.DLL|D3D8THK.DLL|DBGENG. DLL|DBGHELP.DLL|
+|DCIMAN32.DLL|DNSAPI.DLL|DSPROP. DLL|DSUIEXT.DLL|
+|GDI32.DLL|GLU32.DLL|Knihovna. DLL|ICM32.DLL|
+|Imagehlp. DLL|IMM32.DLL|IPHLPAPI.DLL|IPROP. DLL|
 |KERNEL32.DLL|KSUSER.DLL|LOADPERF.DLL|LZ32.DLL|
 |MAPI32.DLL|MGMTAPI.DLL|MOBSYNC.DLL|MPR.DLL|
 |MPRAPI.DLL|MQRT.DLL|MSACM32.DLL|MSCMS.DLL|
-|MSI.DLL|MSIMG32.DLL|MSRATING. KNIHOVNY DLL|MSTASK. KNIHOVNY DLL|
-|MSVFW32.DLL|MSWSOCK.DLL|MTXEX.DLL|NDDEAPI.DLL|
-|NETAPI32.DLL|NPPTOOLS.DLL|NTDSAPI.DLL|NTDSBCLI.DLL|
+|MSI.DLL|MSIMG32.DLL|MSRATING. DLL|MSTASK. DLL|
+|MSVFW32.DLL|MSWSOCK. DLL|MTXEX.DLL|NDDEAPI.DLL|
+|NETAPI32.DLL|NPPTOOLS. DLL|NTDSAPI.DLL|NTDSBCLI.DLL|
 |NTMSAPI.DLL|ODBC32.DLL|ODBCBCP.DLL|OLE32.DLL|
-|OLEACC.DLL|OLEAUT32.DLL|OLEDLG. KNIHOVNY DLL|OPENGL32.DLL|
-|PDH.DLL|POWRPROF.DLL|QOSNAME.DLL|DOTAZ. KNIHOVNY DLL|
-|RASAPI32.DLL|RASDLG.DLL|RASSAPI.DLL|RESUTILS.DLL|
+|OLEACC.DLL|OLEAUT32.DLL|OLEDLG. DLL|OPENGL32.DLL|
+|PDH.DLL|POWRPROF. DLL|QOSNAME. DLL|Zadávání. DLL|
+|RASAPI32.DLL|RASDLG. DLL|RASSAPI.DLL|RESUTILS.DLL|
 |RICHED20.DLL|RPCNS4.DLL|RPCRT4.DLL|RTM.DLL|
-|RTUTILS.DLL|SCARDDLG. KNIHOVNY DLL|SECUR32.DLL|SENSAPI.DLL|
-|SETUPAPI.DLL|SFC.DLL|SHELL32.DLL|SHFOLDER.DLL|
-|SHLWAPI.DLL|SISBKUP.DLL|SNMPAPI.DLL|SRCLIENT.DLL|
-|STI.DLL|TAPI32.DLL|PROVOZ. KNIHOVNY DLL|URL.DLL|
-|URLMON. KNIHOVNY DLL|USER32.DLL|USERENV.DLL|USP10.DLL|
-|UXTHEME. KNIHOVNY DLL|VDMDBG.DLL|VERZE. KNIHOVNY DLL|WINFAX.DLL|
-|WINHTTP.DLL|WININET. KNIHOVNY DLL|WINMM. KNIHOVNY DLL|WINSCARD.DLL|
+|RTUTILS.DLL|SCARDDLG. DLL|SECUR32.DLL|SENSAPI.DLL|
+|SETUPAPI.DLL|SFC.DLL|Knihovny. DLL|SHFOLDER. DLL|
+|SHLWAPI.DLL|SISBKUP.DLL|SNMPAPI.DLL|SRCLIENT. DLL|
+|STI.DLL|TAPI32.DLL|Prostřednictvím. DLL|Adresa URL. DLL|
+|Urlmon. DLL|USER32.DLL|Souboru. DLL|USP10.DLL|
+|UXTHEME. DLL|VDMDBG.DLL|Znění. DLL|WINFAX. DLL|
+|WINHTTP.DLL|Souvisejících. DLL|WINMM. DLL|WINSCARD.DLL|
 |WINTRUST.DLL|WLDAP32.DLL|WOW32.DLL|WS2_32.DLL|
-|WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP.DLL|
+|WSNMP32. DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP.DLL|
 
 > [!NOTE]
->  Zachovat poslední chyba není podporována pro nespravované funkce, které se spotřebovávají CLR kódu ve stejném modulu.
+>  Zachování poslední chyby není podporováno pro nespravované funkce, které jsou spotřebovány kódem CLR ve stejném modulu.
 
-- Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](clr-common-language-runtime-compilation.md).
+- Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](clr-common-language-runtime-compilation.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **Linkeru** složky.
+1. Klikněte na složku **linker** .
 
-1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+1. Klikněte na stránku vlastností **příkazový řádek** .
 
-1. Zadejte možnost do **další možnosti** pole.
+1. Zadejte možnost do pole **Další možnosti** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Podívejte se na téma <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad definuje nativní knihovnu DLL pomocí jednoho exportované funkce, která upravuje poslední chyby.
+Následující příklad definuje nativní knihovnu DLL s jednou exportovanou funkcí, která upravuje poslední chybu.
 
-```
+```cpp
 // CLRSUPPORTLASTERROR_dll.cpp
 // compile with: /LD
 #include <windows.h>
@@ -99,9 +99,9 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad využívá knihovnu DLL, který demonstruje použití **/CLRSUPPORTLASTERROR**.
+Následující ukázka používá knihovnu DLL, která demonstruje použití **/CLRSUPPORTLASTERROR**.
 
-```
+```cpp
 // CLRSUPPORTLASTERROR_client.cpp
 // compile with: /clr CLRSUPPORTLASTERROR_dll.lib /link /clrsupportlasterror:systemdll
 // processor: x86

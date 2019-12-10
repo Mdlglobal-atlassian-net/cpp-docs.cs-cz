@@ -9,28 +9,28 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dfdad892261d5ae2d3494734458e1447f8ebd7c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325478"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988463"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Postupy: Zařazování řetězců modelu COM pomocí zprostředkovatele komunikace C++
 
-Toto téma ukazuje, jak BSTR (formát základní řetězce podporuje programování v modelu COM) mohou být předány ze spravované na nespravované funkce a naopak. Spolupráce s jinými typy řetězce, naleznete v následujících tématech:
+Toto téma ukazuje, jak je BSTR (základní formát řetězce přidaný v programování COM) možné předat ze spravovaného do nespravované funkce a naopak. Pro spolupráci s jinými typy řetězců si přečtěte následující témata:
 
 - [Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [Postupy: Zařazování řetězců v kódu ANSI pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma implementace spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Soubory, které obsahují pouze nespravované funkce nemusí být kompilována s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma pro implementaci spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Soubory obsahující pouze nespravované funkce není nutné kompilovat s možností [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak mohou být předány BSTR (formátu řetězce programování v modelu COM) ze spravované na nespravované funkci. Volání spravované funkce používá <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> pro získání adresy BSTR reprezentace obsahu .NET System.String. Tento ukazatel je připnutá pomocí [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) zajistit, že jeho fyzické adresy se nemění během cyklu uvolňování paměti kolekce při nespravovanou funkci provede. Uvolňování paměti je zakázáno přesouvat paměť, dokud [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) dostane mimo rozsah.
+Následující příklad ukazuje, jak lze předat BSTR (formát řetězce použitý v programování modelu COM) ze spravovaného do nespravované funkce. Volající spravovaná funkce používá <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> k získání adresy v řetězci BSTR obsahu rozhraní .NET System. String. Tento ukazatel je připnutý pomocí [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) , aby se zajistilo, že se jeho fyzická adresa během cyklu uvolňování paměti nemění, když se spustí nespravovaná funkce. Systém uvolňování paměti je zakázán z přesunu paměti, dokud [pin_ptrC++(/CLI)](../extensions/pin-ptr-cpp-cli.md) nepřejde do rozsahu.
 
-```
+```cpp
 // MarshalBSTR1.cpp
 // compile with: /clr
 #define WINVER 0x0502
@@ -65,9 +65,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak mohou být předány BSTR z nespravované nespravované funkci. Přijímání spravované funkce můžete použít řetězec BSTR nebo použijte <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> pro převod na <xref:System.String> pro použití s jinými spravované funkce. Protože představující BSTR přidělení paměti na nespravované haldě, připínání je nezbytné, protože není žádná kolekce uvolnění paměti na nespravované haldě.
+Následující příklad ukazuje, jak lze BSTR předat z nespravovaného do nespravované funkce. Přijímající spravovaná funkce může buď použít řetězec v jako BSTR, nebo použít <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> k jeho převodu na <xref:System.String> pro použití s jinými spravovanými funkcemi. Vzhledem k tomu, že paměť představující BSTR je přidělena nespravované haldě, není nutné žádné připnutí, protože neexistuje uvolňování paměti na nespravované haldě.
 
-```
+```cpp
 // MarshalBSTR2.cpp
 // compile with: /clr
 #define WINVER 0x0502

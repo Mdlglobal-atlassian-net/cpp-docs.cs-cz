@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
-ms.openlocfilehash: 2c68e49d58b0fd6b28607eb0ba78c092441f6f4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8431bd2d89fd5df5cf076ad006ab04006f552c4c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352486"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988064"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>Upozornění linkerů LNK4254
 
-část sekci "1" (posun) sloučena sekci "2" (posun) s rozdílnými atributy
+oddíl ' Section1 ' (offset) se sloučil do ' section2 ' (posunu) s různými atributy
 
-Obsah jeden oddíl byly sloučeny do jiné, ale atributy ze dvou částí se liší. Váš program může mít neočekávané výsledky. Například data, která chcete načíst pouze nyní v pravděpodobně oddíl s možností zápisu.
+Obsah jednoho oddílu byl sloučen do jiného, ale atributy dvou sekcí se liší. Váš program může poskytnout neočekávané výsledky. Například data, která jste chtěli číst jen pro čtení, se teď můžou nacházet v části s možností zápisu.
 
-Chcete-li vyřešit LNK4254, změnit nebo odebrat požadavek sloučení.
+Chcete-li vyřešit LINKERŮ LNK4254, upravte nebo odeberte požadavek sloučení.
 
-Při cílení na x86 počítače a cíle Windows CE (ARM, MIPS, architekturu SH4 a Thumb) v jazyce Visual C++. Oddíl CRT je jen pro čtení. Pokud váš kód závisí na předchozím chování (. Oddíly CRT jsou r/w), může docházet k neočekávanému chování.
+Při cílení na počítače x86 a systém Windows CE cíle (ARM, MIPS, SH4 a palec) pomocí C++vizuálu,. Oddíl CRT je jen pro čtení. Pokud váš kód závisí na předchozím chování (. Oddíly CRT jsou pro čtení a zápis), můžete se podívat na neočekávané chování.
 
-Další informace najdete v tématu,
+Další informace najdete v tématu.
 
 - [/MERGE (sloučení oddílů)](../../build/reference/merge-combine-sections.md)
 
@@ -31,9 +31,9 @@ Další informace najdete v tématu,
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje LNK4254.
+Následující ukázka generuje LINKERŮ LNK4254.
 
-```
+```cpp
 // LNK4254.cpp
 // compile with: /W1 /link /WX
 // LNK4254 expected

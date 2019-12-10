@@ -6,24 +6,24 @@ helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 901257b92aaa5e13e6e79d612ca590b734e15881
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f0b462e672de4408d50bf95d65c749bf1881078
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387213"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988435"
 ---
 # <a name="how-to-specify-an-out-parameter"></a>Postupy: Určení výstupního parametru
 
-Tato ukázka předvádí, jak určit, že parametr funkce je výstupní parametr a jak tuto funkci volat z programu v jazyce C#.
+Tento příklad ukazuje, jak určit, že parametr funkce je výstupní parametr a jak tuto funkci volat z C# programu.
 
-Výstupní parametr je zadaný v jazyce Visual C++ s <xref:System.Runtime.InteropServices.OutAttribute> .
+V vizuálu C++ je zadaný výstupní parametr s <xref:System.Runtime.InteropServices.OutAttribute>.
 
 ## <a name="example"></a>Příklad
 
-První část této ukázce se knihovny DLL Visual C++ s typem, který obsahuje funkci s výstupní parametr.
+První část této ukázky je vizuální C++ knihovna DLL s typem, který obsahuje funkci s výstupním parametrem.
 
-```
+```cpp
 // cpp_out_param.cpp
 // compile with: /LD /clr:safe
 using namespace System;
@@ -36,7 +36,7 @@ public value struct TestStruct {
 
 ## <a name="example"></a>Příklad
 
-To je klient jazyka C#, která využívá komponentu jazyka Visual C++ vytvořené v předchozím příkladu.
+Jedná se o C# klienta, který využívá vizuální C++ komponentu vytvořenou v předchozím příkladu.
 
 ```
 // cpp_out_param_2.cs

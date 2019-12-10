@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přístupy ke znakům v datech třídy System::String'
+title: 'Postupy: Přístup ke znakům v datech třídy System::String'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222933"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988643"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>Postupy: Přístupy ke znakům v datech třídy System::String
+# <a name="how-to-access-characters-in-a-systemstring"></a>Postupy: Přístup ke znakům v datech třídy System::String
 
-Dostanete znaků <xref:System.String> objekt pro vysoce výkonné volání nespravovaných funkcí, které přijímají `wchar_t*` řetězce. Metoda poskytuje vnitřní ukazatel na první znak <xref:System.String> objektu. This – ukazatel lze manipulovat přímo nebo připnuté a předaný funkci očekává běžný `wchar_t` řetězec.
+Můžete získat přístup k znakům objektu <xref:System.String> pro vysoce výkonné volání nespravovaných funkcí, které přijímají `wchar_t*` řetězce. Metoda vrací vnitřní ukazatel na první znak objektu <xref:System.String>. Tento ukazatel se může manipulovat přímo nebo připnuté a předávat do funkce, která očekává běžný `wchar_t` řetězec.
 
 ## <a name="example"></a>Příklad
 
-`PtrToStringChars` Vrátí <xref:System.Char>, což je vnitřní ukazatel (označované také jako `byref`). V důsledku toho se časovač uvolněn z paměti. Není nutné tento ukazatel Připnutí, pokud se chystáte předat nativní funkce.
+`PtrToStringChars` vrátí <xref:System.Char>, což je vnitřní ukazatel (označovaný také jako `byref`). V takovém případě je předmětem uvolňování paměti. Tento ukazatel nemusíte připnout, pokud ho nebudete předávat nativní funkci.
 
-Uvažujme následující kód.  Připnutí není nutné, protože `ppchar` je vnitřní ukazatel, a pokud uvolňování paměti přesune odkazuje na řetězec, bude také aktualizovat `ppchar`. Bez [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md), kód bude fungovat a nebude mít potenciální výkon, což je způsobeno připnutím.
+Vezměte v úvahu následující kód.  Připnutí není nutné, protože `ppchar` je vnitřní ukazatel a pokud systém uvolňování paměti přesune řetězec, na který odkazuje, bude také aktualizovat `ppchar`. Bez [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)bude kód fungovat a nebude mít potenciální výkon způsobený připnutím.
 
-Pokud předáte `ppchar` nativní funkcí, pak musí být ukazatel Připnutí; systému uvolňování paměti nebude možné aktualizovat všechny ukazatele na rámce zásobníku nespravované.
+Pokud předáte `ppchar` nativní funkci, musí se jednat o ukazatel připnutí; systém uvolňování paměti nebude moci aktualizovat žádné ukazatele na nespravovaném bloku zásobníku.
 
-```
+```cpp
 // PtrToStringChars.cpp
 // compile with: /clr
 #include<vcclr.h>
@@ -50,7 +50,7 @@ abcdefg
 
 Tento příklad ukazuje, kde je potřeba připnutí.
 
-```
+```cpp
 // PtrToStringChars_2.cpp
 // compile with: /clr
 #include <string.h>
@@ -77,9 +77,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Vnitřní ukazatel má všechny vlastnosti nativní ukazatel jazyka C++. Například můžete použít vás propojená datová struktura a provést vložení a odstranění pomocí pouze jednoho ukazatele:
+Vnitřní ukazatel má všechny vlastnosti nativního C++ ukazatele. Můžete ho například použít k Projděte si propojenou datovou strukturu a vkládat a odstraňovat pomocí jenom jednoho ukazatele:
 
-```
+```cpp
 // PtrToStringChars_3.cpp
 // compile with: /clr /LD
 using namespace System;

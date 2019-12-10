@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2033
 ms.assetid: d61db467-9328-4788-bf54-e2a20537f13f
-ms.openlocfilehash: 7e95823e23215848ff3e5d201171523c9009eb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 407f5eaf94a0e2da43425c3bbdd1955a88c95f14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298903"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991187"
 ---
 # <a name="linker-tools-error-lnk2033"></a>Chyba linkerů LNK2033
 
-Nerozpoznaný token typeref (token) pro 'type'
+Nerozpoznaný token TypeRef (token) pro typ
 
-Typ nemá definici v metadatech jazyka MSIL.
+Typ nemá v metadatech MSIL definici.
 
-LNK2033 může dojít při kompilaci s **/CLR: safe** a ve kterých je Dopředná deklarace pro typ v modulu jazyka MSIL, kde se odkazuje typ v modulu MSIL.
+LINKERŮ LNK2033 může nastat při kompilaci s možností **/clr: Safe** a tam, kde je pouze Dopředná deklarace pro typ v modulu MSIL, kde je typ odkazován v modulu MSIL.
 
-Tento typ musí být definován v rámci **/CLR: safe**.
+Typ musí být definován v oblasti **/clr: Safe**.
 
-Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje LNK2033.
+Následující ukázka generuje LINKERŮ LNK2033.
 
-```
+```cpp
 // LNK2033.cpp
 // compile with: /clr:safe
 // LNK2033 expected

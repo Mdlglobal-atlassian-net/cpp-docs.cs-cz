@@ -8,36 +8,36 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89cca9ef42910d295cbae8bb677fb51927dbcdd2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404478"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988534"
 ---
 # <a name="double-thunking-c"></a>Dvojitý převod adres na jinou bitovou šířku (C++)
 
-Dvojitému odkazuje na dojít ke ztrátě výkonu, které se mohou vyskytnout při volání funkce v kontextu spravovaných volání Visual C++, spravovat funkce a kde provádění programu volání funkce nativní vstupní bod pro volání spravované funkce. Toto téma popisuje, kde dochází k dvojitému a jak se můžete vyhnout je k vylepšení výkonu.
+Dvojitá dvojitýa odkazuje na ztrátu výkonu, ke kterému může dojít, když volání funkce ve spravovaném kontextu volá C++ vizuální spravovanou funkci a kde spuštění programu zavolá nativní vstupní bod funkce, aby mohl volat spravovanou funkci. Toto téma popisuje, kde dochází k dvojitý a jak se můžete vyhnout jeho zvýšení výkonu.
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení při kompilaci s **/CLR**, definici spravované funkce způsobí, že kompilátor generovat spravovaný vstupní bod a nativní vstupní bod. To umožňuje spravované funkce lze volat z lokalit nativního a spravovaného volání. Ale pokud mezi doménami existuje nativní vstupní bod, může být vstupní bod pro všechna volání funkce. Pokud je volání funkce spravované, nativní vstupní bod zavolá spravovaný vstupní bod. V důsledku toho jsou dvě volání požadovaných pro vyvolání funkce (proto tedy dvojitý převod adres). Virtuální funkce jsou vždy volá prostřednictvím nativní vstupní bod.
+Ve výchozím nastavení, při kompilaci s možností **/CLR**, definice spravované funkce způsobí, že kompilátor vygeneruje spravovaný vstupní bod a nativní vstupní bod. To umožňuje, aby se spravovaná funkce volala z nativních a spravovaných webů volání. Pokud však existuje nativní vstupní bod, může být vstupním bodem pro všechna volání funkce. Pokud je volající funkce spravována, nativní vstupní bod pak bude volat spravovaný vstupní bod. V důsledku toho se ke vyvolání funkce vyžadují dvě volání (tedy Double dvojitý). Například virtuální funkce jsou vždy volány prostřednictvím nativního vstupního bodu.
 
-Jedním řešením je předat kompilátoru generování nativní vstupní bod pro spravované funkce, funkce zavolá jenom ze spravovaných kontextu pomocí [__clrcall](../cpp/clrcall.md) konvence volání.
+Jedním z řešení je oznámit kompilátoru, aby negeneroval nativní vstupní bod pro spravovanou funkci, že funkce bude volána pouze ze spravovaného kontextu pomocí [__clrcall](../cpp/clrcall.md) konvence volání.
 
-Podobně pokud exportujete ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) spravované funkce se generuje nativní vstupní bod a všechny funkce, které importuje a volání této funkce bude volat přes nativní vstupní bod. Chcete-li zabránit dvojitému v této situaci, nepoužívejte sémantiky exportu/importu nativní; na ně jednoduše odkázat metadat prostřednictvím `#using` (viz [# direktiva using](../preprocessor/hash-using-directive-cpp.md)).
+Podobně pokud exportujete ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) spravovanou funkci, je vygenerován nativní vstupní bod a jakákoli funkce, která importuje a volá tuto funkci, bude volat prostřednictvím nativního vstupního bodu. Abyste se vyhnuli dvojnásobné dvojitý v této situaci, nepoužívejte nativní sémantiku exportu/importu; jednoduše odkazujte metadata prostřednictvím `#using` (viz [direktiva #using](../preprocessor/hash-using-directive-cpp.md)).
 
-Aktualizovali jsme kompilátor snížit nepotřebné dvojitému. Například všechny funkce se spravovaným typem v podpisu (včetně návratový typ) bude implicitně označeny jako `__clrcall`.
+Kompilátor byl aktualizován, aby snižoval zbytečný dvojitý. Například jakákoli funkce se spravovaným typem v podpisu (včetně návratového typu) bude implicitně označena jako `__clrcall`.
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje dvojitému. Při nativní kompilaci (bez **/CLR**), volání virtuální funkce v `main` vygeneruje volání `T`pro kopírování, konstruktor a destruktor volání. Podobného chování se dosáhne, když je virtuální funkce deklarována s **/CLR** a `__clrcall`. Ale při kompilaci pouze s **/CLR**, volání funkce vygeneruje volání kopie konstruktoru, ale existuje další volání konstruktoru kopie z důvodu převodní rutina nativní spravované.
+Následující příklad ukazuje dvojitou dvojitý. Při kompilování nativní (bez **/CLR**) volání virtuální funkce v `main` generuje jedno volání kopírovacího konstruktoru `T`a jedno volání destruktoru. Podobné chování je dosaženo při deklaraci virtuální funkce s možností **/CLR** a `__clrcall`. Pokud je však pouze zkompilována s možností **/CLR**, volání funkce vygeneruje volání kopírovacího konstruktoru, ale existuje jiné volání kopírovacího konstruktoru z důvodu nativního převodu z nativního na spravovaného kódu.
 
 ### <a name="code"></a>Kód
 
-```
+```cpp
 // double_thunking.cpp
 // compile with: /clr
 #include <stdio.h>
@@ -91,11 +91,11 @@ __thiscall T::~T(void)
 
 ### <a name="description"></a>Popis
 
-Předchozí příklad ukazuje existenci dvojitému. Tento příklad ukazuje jeho vliv. `for` Smyčky volání virtuální funkce a doba provádění sestavy programu. Nejpomalejší dobu je hlášené, když je program zkompilován s **/CLR**. Nejrychlejší doby jsou hlášeny při kompilaci bez **/CLR** nebo pokud virtuální funkce je deklarována s `__clrcall`.
+Předchozí ukázka ukázala existenci dvojité dvojitý. Tato ukázka ukazuje svůj efekt. Smyčka `for` volá virtuální funkci a program oznamuje dobu spuštění. Nejpomalejší čas je hlášena při kompilování programu s možností **/CLR**. Nejrychlejší časy jsou hlášeny při kompilaci bez **/CLR** nebo pokud je virtuální funkce deklarována s `__clrcall`.
 
 ### <a name="code"></a>Kód
 
-```
+```cpp
 // double_thunking_2.cpp
 // compile with: /clr
 #include <time.h>

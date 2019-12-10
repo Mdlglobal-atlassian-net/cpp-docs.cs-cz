@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Převod typu System::String na wchar_t * nebo char *'
+title: 'Postupy: Převod typu System::String na wchar_t* nebo char*'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: c9bf8a6af2d48c4b2624b91e2e85f78c63aee6de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fcea7d54f5b3dcfe5fa75092463465711b1a505
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387497"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988248"
 ---
-# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Postupy: Převod typu System::String na wchar_t * nebo char *
+# <a name="how-to-convert-systemstring-to-wchar_t-or-char"></a>Postupy: Převod typu System::String na wchar_t* nebo char*
 
-Můžete použít `PtrToStringChars` v Vcclr.h k převedou <xref:System.String> na nativní `wchar_t *` nebo `char *`.  Ten vždy vrátí ukazatel na široký řetězec Unicode, protože řetězce CLR jsou interně v Unicode. Pak můžete převést ze širokého tvaru jak je znázorněno v následujícím příkladu.
+Můžete použít `PtrToStringChars` v Vcclr.h k převedou <xref:System.String> na nativní `wchar_t *` nebo `char *`.  Ten vždy vrátí ukazatel na široký řetězec znaků Unicode, protože řetězce CLR jsou interně v Unicode. Potom jej můžete převést ze širokého tvaru, jak je znázorněno v následujícím příkladu.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // convert_string_to_wchar.cpp
 // compile with: /clr
 #include < stdio.h >

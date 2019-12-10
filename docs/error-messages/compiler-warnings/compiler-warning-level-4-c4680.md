@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4680
+title: Upozornění kompilátoru (úroveň 4) C4680
 ms.date: 11/04/2016
 f1_keywords:
 - C4680
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: 9130fa2665452b85c5ec83eef0b3d1d618c995a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21ea9bf54a493a72dc24c607812eaed69f9ef71b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226866"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990455"
 ---
-# <a name="compiler-warning-level-4-c4680"></a>Kompilátor upozornění (úroveň 4) C4680
+# <a name="compiler-warning-level-4-c4680"></a>Upozornění kompilátoru (úroveň 4) C4680
 
-'class': Konstrukt coclass nespecifikuje výchozí rozhraní
+Class: Třída typu coclass nespecifikuje výchozí rozhraní.
 
-A [výchozí](../../windows/default-cpp.md) rozhraní nebyla zadána pro třídu, která byla označena jako [coclass](../../windows/coclass.md) atribut. Aby objekt užitečnost musí implementovat rozhraní.
+Pro třídu, která byla označena atributem [Coclass](../../windows/coclass.md) , nebylo zadáno [výchozí](../../windows/default-cpp.md) rozhraní. Aby byl objekt užitečný, musí implementovat rozhraní.
 
 Následující ukázka generuje C4680:
 
-```
+```cpp
 // C4680.cpp
 // compile with: /W4
 #include <windows.h>

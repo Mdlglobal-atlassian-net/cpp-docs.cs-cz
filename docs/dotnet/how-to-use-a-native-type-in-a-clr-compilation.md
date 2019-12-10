@@ -1,31 +1,31 @@
 ---
-title: 'Postupy: Použití nativního typu v kompilaci - clr'
+title: 'Postupy: použití nativního typu v kompilaci-clr'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387198"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988425"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Postupy: Použití nativního typu v kompilaci/CLR
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Postupy: Použití nativního typu v kompilaci /clr
 
-Můžete definovat v nativním typu **/CLR** kompilace a veškeré jeho používání nativního typu v rámci sestavení je platný. Nativní typy však nebudou k dispozici pro použití z odkazovaných metadat.
+V kompilaci **/CLR** můžete definovat nativní typ a jakékoli použití tohoto nativního typu v rámci sestavení je platné. Nativní typy však nebudou k dispozici pro použití z odkazovaných metadat.
 
-Každé sestavení musí obsahovat definici každý nativní typ, který bude používat.
+Každé sestavení musí obsahovat definici každého nativního typu, který bude používat.
 
-Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka vytvoří komponentu, která definuje a používá nativního typu.
+Tato ukázka vytvoří komponentu, která definuje a používá nativní typ.
 
-```
+```cpp
 // use_native_type_in_clr.cpp
 // compile with: /clr /LD
 public struct NativeClass {
@@ -42,9 +42,9 @@ public ref struct ManagedClass {
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka definuje klienta, který využívá komponentu. Všimněte si, že jedná se o chybu pro přístup k nativním typu, pokud je definována v souboru pro kompilaci.
+Tato ukázka definuje klienta, který využívá komponentu. Všimněte si, že se jedná o chybu pro přístup k nativnímu typu, pokud není definováno v rozhraní kompilantu.
 
-```
+```cpp
 // use_native_type_in_clr_2.cpp
 // compile with: /clr
 #using "use_native_type_in_clr.dll"

@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4709
+title: Upozornění kompilátoru (úroveň 4) C4709
 ms.date: 11/04/2016
 f1_keywords:
 - C4709
 helpviewer_keywords:
 - C4709
 ms.assetid: 8abfdd45-8c70-4c27-b0fb-ca0c3f0fccf9
-ms.openlocfilehash: acc74f55a423f1cd18d385cd4dfbec7dfa01c422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dd06baf9da3ae454bf87747bdafb2639d817fef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395206"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989859"
 ---
-# <a name="compiler-warning-level-4-c4709"></a>Kompilátor upozornění (úroveň 4) C4709
+# <a name="compiler-warning-level-4-c4709"></a>Upozornění kompilátoru (úroveň 4) C4709
 
 operátor čárka v rámci výrazu indexu pole
 
-V případě čárku ve výrazu indexu pole kompilátor používá hodnotu za poslední čárkou.
+V případě, že ve výrazu indexu pole dojde k čárkě, kompilátor použije hodnotu za poslední čárkou.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4709:
 
-```
+```cpp
 // C4709.cpp
 // compile with: /W4
 #include <stdio.h>

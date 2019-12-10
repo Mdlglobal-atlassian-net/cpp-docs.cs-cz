@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4625
+title: Upozornění kompilátoru (úroveň 4) C4625
 ms.date: 11/04/2016
 f1_keywords:
 - C4625
 helpviewer_keywords:
 - C4625
 ms.assetid: 4cc99e50-846c-4784-97da-48b977067851
-ms.openlocfilehash: edcb43bf11c073e6ce721ba999fd99d28a8df15d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d98e295a9a48da16b58202bc172e112b5c0287d9
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220491"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990707"
 ---
-# <a name="compiler-warning-level-4-c4625"></a>Kompilátor upozornění (úroveň 4) C4625
+# <a name="compiler-warning-level-4-c4625"></a>Upozornění kompilátoru (úroveň 4) C4625
 
-'derived class': kopírovací konstuktor byl implicitně definovaný jako odstranit, protože kopírovací konstruktor základní třídy je nedostupné nebo odstraněné
+odvozená třída: konstruktor Copy byl implicitně definovaný jako odstraněný, protože konstruktor kopie základní třídy je nedostupný nebo odstraněný.
 
-Kopírovací konstruktor se odstranil nebo není k dispozici v základní třídě a proto se nevygeneroval pro odvozenou třídu. Jakýkoliv pokus o kopírování objektu tohoto typu způsobí chybu kompilátoru.
+Kopírovací konstruktor byl odstraněn nebo není přístupný v základní třídě, a proto nebyl vygenerován pro odvozenou třídu. Jakýkoli pokus o zkopírování objektu tohoto typu způsobí chybu kompilátoru.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C4625 a ukazuje, jak ho opravit.
+Následující ukázka generuje C4625 a ukazuje, jak ji opravit.
 
-```
+```cpp
 // C4625.cpp
 // compile with: /W4 /c
 #pragma warning(default : 4625)

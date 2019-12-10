@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování struktur pomocí služby PInvoke'
+title: 'Postupy: Zařazení struktur pomocí služby PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,40 +8,40 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe5d2cf4804baea286827e9d5e270c10cd587b30
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387237"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988449"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>Postupy: Zařazování struktur pomocí služby PInvoke
+# <a name="how-to-marshal-structures-using-pinvoke"></a>Postupy: Zařazení struktur pomocí služby PInvoke
 
-Tento dokument popisuje, jak nativní funkce, které přijímají struktury stylu jazyka C lze volat z spravovaných funkcí pomocí pomocí deklarace P/Invoke. Přestože doporučujeme používat funkce zprostředkovatele komunikace C++ místo P/Invoke vzhledem k tomu, že P/Invoke obsahuje malý kompilace zpráv o chybách, není typově bezpečný a může být pracná implementovat, pokud nespravovaná rozhraní API je zabalený jako knihovnu DLL a zdrojový kód není k dispozici, P/Invoke je jedinou možností. V opačném případě najdete v následujících dokumentech:
+Tento dokument vysvětluje, jak mohou být nativní funkce, které přijímají struktury ve stylu jazyka C, volány ze spravovaných funkcí pomocí volání nespravovaného kódu. I když doporučujeme použít funkce C++ spolupráce namísto volání nespravovaného kódu, protože volání nespravovaného kódu poskytuje malou dobu kompilace, není typově bezpečná a může být zdlouhavá k implementaci, pokud je NESPRAVOVANÉ rozhraní API zabaleno jako knihovna DLL a zdrojový kód není k dispozici, je P/Invoke jediná možnost. V opačném případě se podívejte na následující dokumenty:
 
 - [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Postupy: Zařazování řetězců pomocí služby PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+- [Postupy: Zařazení řetězců pomocí služby PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 
-Ve výchozím nastavení nativní a spravovaná struktury jsou stanoveny odlišně v paměti, úspěšném předání struktury přes hranice spravovaného a nespravovaného vyžaduje další kroky k zachování integrity dat.
+Ve výchozím nastavení jsou nativní a spravované struktury v paměti rozloženy jinak, takže úspěšné předávání struktur napříč spravovaným nebo nespravovaným ohraničením vyžaduje dodatečné kroky pro zachování integrity dat.
 
-Tento dokument popisuje kroky potřebné k definování spravované ekvivalenty nativních struktur a jak výsledné struktury mohou být předány nespravované funkci. Tento dokument předpokládá, že jednoduchá struktury – ty, které neobsahují řetězce nebo ukazatelů, se používají. Informace o interoperabilitě nepřenositelné najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke nemůže mít nepřenositelné typy jako návratovou hodnotu. Přenositelné typy zabírají stejné množství spravovaného a nespravovaného kódu. Další informace najdete v tématu [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types).
+Tento dokument vysvětluje kroky nutné k definování spravovaných ekvivalentů nativních struktur a způsobu, jakým mohou být výsledné struktury předány nespravovaným funkcím. Tento dokument předpokládá, že se používají jednoduché struktury – ty, které neobsahují řetězce nebo ukazatele –. Informace o nepřímých interakcích najdete v [tématu C++ použití zprostředkovatele komunikace (implicitní PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). Volání nespravovaného volání nemůže mít jako návratovou hodnotu typy bez jakýchkoli přenositelné. Přenositelné typy mají stejné vyjádření ve spravovaném i nespravovaném kódu. Další informace najdete v tématu přenositelné [a nepřenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types).
 
-Zařazování jednoduchý, blittable struktury přes hranice spravovaného a nespravovaného nejprve vyžaduje definovat spravovaná verze nativní struktury. Tyto struktury mohou mít libovolný platný název. není žádný vztah mezi nativní a spravovaná verze dvě struktury než jejich data rozložení. Proto je důležité, že spravovaná verze obsahuje pole, která budou mít stejné velikosti a ve stejném pořadí jako původní verze. (Neexistuje žádný mechanismus pro zajištění, že spravovaný a nativní verze struktury jsou ekvivalentní, takže nekompatibilita není zřejmé, až do spuštění. Zodpovídá programátor Ujistěte se, že dvě struktury se stejné rozvržení data.)
+Zařazování jednoduchých, přípravných struktur v rámci spravovaného a nespravovaného ohraničení nejprve vyžaduje, aby byly definovány spravované verze každé nativní struktury. Tyto struktury můžou mít jakýkoliv právní název. neexistuje žádný vztah mezi nativní a spravovanou verzí dvou struktur kromě jejich rozvržení dat. Proto je důležité, aby spravovaná verze obsahovala pole, která mají stejnou velikost a ve stejném pořadí jako nativní verze. (Neexistuje žádný mechanismus pro zajištění, že spravované a nativní verze struktury jsou ekvivalentní, takže nekompatibility nebudou zjevné až do doby běhu. Je zodpovědností programátora, aby bylo zajištěno, že obě struktury mají stejné rozložení dat.)
 
-Protože jsou členové struktur spravované někdy přeskupení pro účely výkonu, je nutné použít <xref:System.Runtime.InteropServices.StructLayoutAttribute> atribut označuje, že struktury jsou rozloženy postupně. Je také vhodné obalování nastavení stejný jako, který používá strukturou nativní struktury explicitně nastavit. (I když se ve výchozím nastavení, Visual C++ používá strukturu 8bajtový balení pro spravovaný kód.)
+Vzhledem k tomu, že členové spravovaných struktur jsou někdy znovu uspořádány pro účely výkonu, je nutné použít atribut <xref:System.Runtime.InteropServices.StructLayoutAttribute> k označení toho, že struktura je rozložena postupně. Je také vhodné explicitně nastavit nastavení balení struktury tak, aby bylo stejné jako pro použití v nativní struktuře. (I když ve výchozím nastavení C++ vizuál používá pro spravovaný kód 8 bajtů struktury.)
 
-1. Pak pomocí <xref:System.Runtime.InteropServices.DllImportAttribute> deklarovat vstupních bodů, které odpovídají jakékoli nespravované funkce, které přijímají struktuře, ale používat spravované verzi struktury v podpisech funkcí, což je bod moot, pokud použijete stejný název pro obě verze Struktura.
+1. Dále použijte <xref:System.Runtime.InteropServices.DllImportAttribute> k deklaraci vstupních bodů, které odpovídají jakýmkoli nespravovaným funkcím, které přijímají strukturu, ale používají spravovanou verzi struktury v podpisech funkce, což je moot bod, pokud použijete stejný název pro obě verze struktury.
 
-1. Spravovaný kód teď můžete předat spravovaná verze struktury k nespravovaným funkcím jakoby byly skutečně spravované funkce. Tyto struktury může být předán podle hodnoty nebo podle odkazu, jak je ukázáno v následujícím příkladu.
+1. Spravovaný kód nyní může předat spravovanou verzi struktury nespravovaným funkcím, jako by se jednalo o skutečně spravované funkce. Tyto struktury mohou být předány buď podle hodnoty, nebo podle odkazu, jak je znázorněno v následujícím příkladu.
 
 ## <a name="example"></a>Příklad
 
-Následující kód se skládá z nespravovaného a spravovaný modul. Nespravovaný modul je knihovnu DLL, která definuje strukturu s názvem umístění a funkci s názvem GetDistance, která přijímá dva výskyty struktura umístění. Druhý modul je spravované aplikace příkazového řádku, který importuje GetDistance funkce, ale definuje jde o ekvivalent spravované umístění struktury MLocation. V praxi se stejným názvem se pravděpodobně použije pro obě verze struktury; jiný název se ale používá tady předvést, co se týče spravovaná verze je definován DllImport prototypu.
+Následující kód se skládá z nespravovaného a spravovaného modulu. Nespravovaný modul je knihovna DLL, která definuje strukturu nazvanou umístění a funkci s názvem GetDistance, která přijímá dvě instance struktury umístění. Druhým modulem je spravovaná aplikace příkazového řádku, která importuje funkci GetDistance, ale definuje ji na základě spravovaného ekvivalentu struktury umístění MLocation. V praxi se stejný název pravděpodobně používá pro obě verze struktury. Zde se však používá jiný název, který ukazuje, že prototyp DllImport je definován ve smyslu spravované verze.
 
-Všimněte si, že není žádná část knihovny DLL zpřístupněna spravovaného kódu pomocí tradiční #include. Knihovny DLL ve skutečnosti přistupuje za běhu pouze, takže problémy s funkcí, které jsou importovány pomocí DllImport nebude v době kompilace.
+Všimněte si, že žádná část knihovny DLL není k dispozici pro spravovaný kód pomocí tradiční direktivy #include. Knihovna DLL je ve skutečnosti k dispozici pouze za běhu, takže problémy s funkcemi importovanými pomocí DllImport nebudou v době kompilace zjištěny.
 
-```
+```cpp
 // TraditionalDll3.cpp
 // compile with: /LD /EHsc
 #include <iostream>
@@ -87,7 +87,7 @@ void InitLocation(Location* lp) {
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // MarshalStruct_pi.cpp
 // compile with: /clr
 using namespace System;

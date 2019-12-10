@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-ms.openlocfilehash: 7290a90dfd92d84c4632e7f9dd38d36eccd4ac27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6be2548e277af08f1069a70b26cd761db835bc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386327"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988759"
 ---
 # <a name="linker-tools-error-lnk2020"></a>Chyba linkerů LNK2020
 
-Nerozpoznaný token "token"
+Nerozpoznaný token ' token '
 
-Podobně jako externí nedefinované chybě, s tím rozdílem, že je odkaz prostřednictvím metadat. V metadatech musí být definován všechny funkce a data.
+Podobně jako nedefinovaná externí chyba s tím rozdílem, že odkaz je prostřednictvím metadat. V metadatech musí být definovány všechny funkce a data.
 
-Chcete-li vyřešit:
+Řešení je následující:
 
-- Definovat chybějící funkce nebo data, nebo
+- Definujte chybějící funkci nebo data nebo
 
-- Zahrňte soubor objektu nebo knihovny, ve kterém je již definován chybějící funkce nebo data.
+- Zahrňte soubor nebo knihovnu objektů, ve kterých je již definována chybějící funkce nebo data.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje LNK2020.
+Následující ukázka generuje LINKERŮ LNK2020.
 
-```
+```cpp
 // LNK2020.cpp
 // compile with: /clr /LD
 ref struct A {
@@ -46,11 +46,11 @@ ref struct B {
 
 ## <a name="example"></a>Příklad
 
-LNK2020 se vrátí taky vytvořit proměnnou typu spravované šablony, ale také instanci typu.
+K LINKERŮ LNK2020 dojde také v případě, že vytvoříte proměnnou typu spravované šablony, ale nevytvoříte také instanci typu.
 
-Následující ukázka generuje LNK2020.
+Následující ukázka generuje LINKERŮ LNK2020.
 
-```
+```cpp
 // LNK2020_b.cpp
 // compile with: /clr
 

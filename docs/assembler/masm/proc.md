@@ -1,17 +1,17 @@
 ---
 title: PROC
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROC
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395027"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987929"
 ---
 # <a name="proc"></a>PROC
 
@@ -25,6 +25,8 @@ Označí začátek a konec bloku procedury s názvem *Label*. Příkazy v bloku 
 > **ENDP** popisku
 
 ## <a name="remarks"></a>Poznámky
+
+Argumenty ⟧ ⟦*Distance*⟧ a ⟦*Language-Type*jsou platné pouze v 32-bit MASM.
 
 ⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ je platná pouze pro ml64. exe a způsobí, že MASM vygeneruje položku tabulky funkce v. pdata a unwind informace v souboru. xdata pro zpracování chování unwind pro strukturované výjimky funkce.
 

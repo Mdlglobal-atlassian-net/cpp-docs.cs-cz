@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Uchování odkazu na objekt v nespravované paměti'
+title: 'Postupy: Uchování odkazu na objekt v nespravované paměti'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 0d8dc341d1fe2c61eba098abec9258a2c6dade79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387289"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988207"
 ---
-# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Postupy: Uchování odkazu na objekt v nespravované paměti
+# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Postupy: Uchování odkazu na objekt v nespravované paměti
 
-Můžete použít gcroot.h, která zabalí <xref:System.Runtime.InteropServices.GCHandle>, k uchování odkazu na objekt CLR v nespravované paměti. Alternativně můžete použít `GCHandle` přímo.
+Můžete použít gcroot. h, který zabalí <xref:System.Runtime.InteropServices.GCHandle>, aby obsahoval odkaz na objekt CLR v nespravované paměti. Alternativně můžete použít `GCHandle` přímo.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // hold_object_reference.cpp
 // compile with: /clr
 #include "gcroot.h"
@@ -57,9 +57,9 @@ StringWrapper::x == ManagedString
 
 ## <a name="example"></a>Příklad
 
-`GCHandle` poskytuje prostředky k uchování odkazu na spravovaný objekt v nespravované paměti.  Můžete použít <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> metodu pro vytvoření neprůhledné popisovač na spravovaný objekt a <xref:System.Runtime.InteropServices.GCHandle.Free%2A> pro uvolnění. Také <xref:System.Runtime.InteropServices.GCHandle.Target%2A> metody umožňují získat odkaz na objekt zpět z popisovače ve spravovaném kódu.
+`GCHandle` poskytuje způsob, jak uchovávat odkaz na spravovaný objekt v nespravované paměti.  Pomocí metody <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> vytvoříte neprůhledný popisovač spravovaného objektu a <xref:System.Runtime.InteropServices.GCHandle.Free%2A> jej vydáte. Také metoda <xref:System.Runtime.InteropServices.GCHandle.Target%2A> umožňuje získat odkaz na objekt zpět z popisovače ve spravovaném kódu.
 
-```
+```cpp
 // hold_object_reference_2.cpp
 // compile with: /clr
 using namespace System;

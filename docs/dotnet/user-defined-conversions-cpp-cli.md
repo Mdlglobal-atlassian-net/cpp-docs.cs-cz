@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384527"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988386"
 ---
 # <a name="user-defined-conversions-ccli"></a>Uživatelem definované převody (C++/CLI)
 
-Tato část popisuje uživatelem definované převody (UDC), pokud jeden z typů v převodu je odkaz nebo instanci hodnotového typu nebo typ odkazu.
+Tato část popisuje uživatelsky definované převody (UDC), pokud jeden z typů v převodu je odkazem nebo instancí typu hodnoty nebo odkazu.
 
 ## <a name="implicit-and-explicit-conversions"></a>Implicitní a explicitní převody
 
-Uživatelem definovaný převod může být implicitní nebo explicitní.  UDC by měl být implicitní, pokud převod nemá za následek ztrátu informací. V opačném případě musí být definován explicitní UDC.
+Uživatelsky definovaný převod může být buď implicitní, nebo explicitní.  UDC by měl být implicitní, pokud převod nevede ke ztrátě informací. V opačném případě by měl být definován explicitní UDC.
 
-Konstruktor nativních tříd lze použít pro převod na nativních tříd typu odkazu nebo hodnoty.
+Konstruktor nativní třídy lze použít k převedení typu odkazu nebo hodnoty na nativní třídu.
 
-Další informace o převodech viz [zabalení](../extensions/boxing-cpp-component-extensions.md) a [standardní převody](../cpp/standard-conversions.md).
+Další informace o převodech naleznete v tématu [zabalení](../extensions/boxing-cpp-component-extensions.md) a [standardní převody](../cpp/standard-conversions.md).
 
-```
+```cpp
 // mcpp_User_Defined_Conversions.cpp
 // compile with: /clr
 #include "stdio.h"
@@ -78,25 +78,25 @@ in N::N
 
 ## <a name="convert-from-operators"></a>Operátory Convert-From
 
-Operátory Convert-from vytvoření objektu třídy, ve kterém je operátor definován z objektu jiné třídy.
+Operátory Convert-From vytvoří objekt třídy, ve které je operátor definován z objektu některé jiné třídy.
 
-Standardní C++ nepodporuje operátory convert-from; standardní C++ používá konstruktory pro tento účel. Ale při použití typů CLR, Visual C++ podporují syntaxi volání operátory convert-from.
+Standard C++ nepodporuje operátory Convert-from; standard C++ používá pro tento účel konstruktory. Při použití typů CLR ale Visual C++ poskytuje syntaktickou podporu pro volání operátorů Convert-from.
 
-Pro spolupráci dobře s jinými jazyky kompatibilní se Specifikací CLS, můžete chtít zabalit každý unární uživatelem definovaný konstruktor pro danou třídu s odpovídající operátor convert ze.
+Chcete-li spolupracovat s jinými jazyky kompatibilními se specifikací CLS, můžete chtít zabalit každý uživatelem definovaný unární konstruktor pro danou třídu s odpovídajícím operátorem Convert-from.
 
-Operátory Convert-from:
+Operátory Convert-From:
 
 - Musí být definován jako statické funkce.
 
-- Můžete buď být implicitní (pro převody, které nejsou ztratit přesnost například krátké int) nebo explicitní, může dojít ke ztrátě přesnosti.
+- Může být buď implicitní (pro převody, které neztratí přesnost, jako je například short-to-int) nebo Explicit, pokud může dojít ke ztrátě přesnosti.
 
-- Vrátí objekt obsahující třídy.
+- Musí vrátit objekt obsahující třídu.
 
-- Musí být typu "z" jako jediný parametr.
+- Musí mít jako jediný typ parametru typ "od".
 
-Následující příklad ukazuje implicitní a explicitní "convert-from", uživatelem definovaného převodu (UDC) operátor.
+Následující příklad ukazuje implicitní a explicitní operátor "Convert-z", uživatelsky definovaný převod (UDC).
 
-```
+```cpp
 // clr_udc_convert_from.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -142,11 +142,11 @@ in constructor
 1
 ```
 
-## <a name="convert-to-operators"></a>Operátory Convert-to
+## <a name="convert-to-operators"></a>Operátory převodu na
 
-Operátory Convert-to převést objekt třídy, ve kterém je operátor definován na některý objekt. Následující příklad ukazuje implicitní, convert pro, uživatelem definovaný převod operátor:
+Operátory Convert-to převádějí objekt třídy, ve které je operátor definován pro jiný objekt. Následující příklad ukazuje implicitní operátor převodu, který je definován uživatelem:
 
-```
+```cpp
 // clr_udc_convert_to.cpp
 // compile with: /clr
 using namespace System;
@@ -174,9 +174,9 @@ int main() {
 10
 ```
 
-Operátor převodu explicitního uživatelem definované convert-to je vhodné pro převody, které případně může přijít o data nějakým způsobem. Abyste mohli vyvolat explicitní operátor convert, musí použít přetypování.
+Explicitní operátor převodu na převod, který je definován uživatelem, je vhodný pro převody, které mohou nějakým způsobem přijít o data. Chcete-li vyvolat explicitní operátor Convert-to, je nutné použít přetypování.
 
-```
+```cpp
 // clr_udc_convert_to_2.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -204,11 +204,11 @@ int main() {
 10
 ```
 
-## <a name="to-convert-generic-classes"></a>Chcete-li převést obecné třídy
+## <a name="to-convert-generic-classes"></a>Převod obecných tříd
 
-Obecné třídy lze převést na T.
+Můžete převést obecnou třídu na T.
 
-```
+```cpp
 // clr_udc_generics.cpp
 // compile with: /clr
 generic<class T>
@@ -238,9 +238,9 @@ int main() {
 True
 ```
 
-Převod konstruktor přijímá typ a použije ho k vytvoření objektu.  S přímou inicializací pouze; se nazývá konstruktor převodu přetypování nebude volat konstruktory převodu. Ve výchozím nastavení jsou konstruktory převodu explicitní pro typy CLR.
+Převedený konstruktor přebírá typ a používá ho k vytvoření objektu.  Převedený konstruktor je volán pouze přímou inicializací; přetypování nebudou volat převod konstruktorů. Ve výchozím nastavení jsou převádění konstruktorů explicitní pro typy CLR.
 
-```
+```cpp
 // clr_udc_converting_constructors.cpp
 // compile with: /clr
 public ref struct R {
@@ -274,7 +274,7 @@ int main() {
 R
 ```
 
-V této ukázce kódu implicitní statická funkce pro převod udělá to stejné jako konstruktor explicitní převod.
+V této ukázce kódu má implicitní statická funkce pro převod stejnou věc jako explicitní konstruktor převodu.
 
 ```
 public value struct V {

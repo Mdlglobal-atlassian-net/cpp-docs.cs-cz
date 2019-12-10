@@ -1,17 +1,17 @@
 ---
 title: COMM
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - COMM
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: d36161ba54ca80fc0f576c6f0a7c2a9410bf8075
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 93e7c891b1c964eca5b3ff7fd15956ef25ea05e6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541033"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987943"
 ---
 # <a name="comm"></a>COMM
 
@@ -28,6 +28,8 @@ Obce proměnné jsou přidělovány linkerem a nelze je inicializovat. To znamen
 Každá *definice* má následující formát:
 
 ⟦*Language-Type*⟧ ⟦ v**blízkosti** | **mnohem**⟧ _Label_ **:** _Type_⟦ **:** _Count_⟧
+
+Argumenty *pro typ jazyka*, **blízko**a **daleko** jsou platné pouze v 32 bitů MASM.
 
 Volitelný *typ jazyka* nastaví konvence pojmenování pro následující název. Přepisuje libovolný jazyk určený parametrem **.** Direktiva modelu. Nepovinný **téměř** nebo **úplně** přepsat aktuální paměťový model. *Popisek* je název proměnné. *Typ* může být libovolný specifikátor typu ([Byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)a tak dále) nebo celé číslo určující počet bajtů. Volitelný *počet* určuje počet prvků v deklarovaném datovém objektu. Výchozí *počet* je jeden.
 

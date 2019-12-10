@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-ms.openlocfilehash: cd4108f8bd06ec7a0b2d2eb9fab13917174b797b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 344c219fa1f3daa1e5f9c31431e608f5e7036400
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346957"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991152"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>Upozornění linkerů LNK4247
 
-atribut vlákna; již obsahuje vstupní bod "decorated_function_name. ignoruje atribut
+vstupní bod ' decorated_function_name ' již má atribut vlákna; atribut Attribute se ignoruje.
 
-Vstupní bod, zadaný [/Entry (Symbol vstupního bodu)](../../build/reference/entry-entry-point-symbol.md), měl atribut dělení na vlákna, ale [/CLRTHREADATTRIBUTE (nastavit atribut modulu CLR vlákno)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) byl taky zadaný s jinou model vláken.
+Vstupní bod zadaný pomocí [/entry (symbol vstupního bodu)](../../build/reference/entry-entry-point-symbol.md)má atribut Threading, ale také byl zadán parametr [/CLRTHREADATTRIBUTE (nastavit atribut vlákna CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) s jiným modelem vláken.
 
-Propojovací program ignoruje hodnotu zadanou pomocí /CLRTHREADATTRIBUTE.
+Linker ignoroval hodnotu zadanou pomocí/CLRTHREADATTRIBUTE.
 
-Chcete-li vyřešit tato upozornění:
+Řešení tohoto upozornění:
 
-- Odeberte /CLRTHREADATTRIBUTE z vašeho sestavení.
+- Odeberte/CLRTHREADATTRIBUTE ze svého sestavení.
 
 - Odeberte atribut ze souboru zdrojového kódu.
 
-- Odeberte obě atribut ze zdroje a /CLRTHREADATTRIBUTE z vašeho sestavení a přijměte výchozí model dělení na vlákna modulu CLR.
+- Odeberte oba atributy ze zdroje i/CLRTHREADATTRIBUTE ze svého sestavení a přijměte výchozí model vláken CLR.
 
-- Hodnota předaná /CLRTHREADATTRIBUTE, změňte tak, že souhlasí s atributem ve zdroji.
+- Změňte hodnotu předanou na/CLRTHREADATTRIBUTE, například to, že souhlasí s atributem ve zdroji.
 
-- Změňte atribut ve zdroji, tak, že souhlasí s hodnotu předanou /CLRTHREADATTRIBUTE.
+- Změnit atribut ve zdroji, například, souhlasí s hodnotou předanou do/CLRTHREADATTRIBUTE.
 
-Následující ukázka generuje LNK4247
+Následující ukázka generuje LINKERŮ LNK4247
 
-```
+```cpp
 // LNK4247.cpp
 // compile with: /clr /c
 // post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console

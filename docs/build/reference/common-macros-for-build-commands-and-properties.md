@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 0de96306e645ec85562e414a96283923e93a00ad
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787102"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988325"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Společná makra pro příkazy a vlastnosti MSBuild
 
@@ -131,7 +131,7 @@ Tato tabulka popisuje běžně použitou podmnožinu dostupných maker. Zde je u
 |**$(ProjectFileName)**|Název souboru projektu (definovaný jako základní název + Přípona souboru).|
 |**$(ProjectName)**|Základní název projektu|
 |**$(ProjectPath)**|Absolutní cesta k názvu projektu (definovaná jako jednotka + cesta + základní název + Přípona souboru).|
-|**$ (PublishDir)**|Umístění výstupu pro cíl publikování; obsahuje koncové zpětné lomítko '\\'. Výchozím nastavením je složka **App. Publish\\ pro $ (OutDir).**|
+|**$ (PublishDir)**|Umístění výstupu pro cíl publikování; obsahuje koncové zpětné lomítko '\\'. Výchozí hodnota je **aplikace $ (OutDir). publish\\** složka.|
 |**$ (RemoteMachine)**|Nastavte na hodnotu vlastnosti **vzdálený počítač** na stránce vlastností ladění. Další informace najdete v tématu [Změna nastavení projektuC++ pro konfiguraci C/Debug](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|
 |**$ (RootNameSpace)**|Obor názvů, pokud existuje, obsahující aplikaci.|
 |**$ (SolutionDir)**|Adresář řešení (definovaný jako jednotka + cesta); obsahuje koncové zpětné lomítko '\\'. Definováno pouze při sestavování řešení v integrovaném vývojovém prostředí.|
@@ -144,10 +144,10 @@ Tato tabulka popisuje běžně použitou podmnožinu dostupných maker. Zde je u
 |**$(TargetFileName)**|Název souboru primárního výstupního souboru pro sestavení (definované jako základní název + Přípona souboru).|
 |**$(TargetName)**|Základní název primárního výstupního souboru pro sestavení.|
 |**$(TargetPath)**|Absolutní cesta k primárnímu výstupnímu souboru pro sestavení (definované jako jednotka + cesta + základní název + Přípona souboru).|
-|**$ (VCInstallDir)**|Adresář, který obsahuje C++ obsah vaší instalace sady Visual Studio. Tato vlastnost obsahuje verzi cílené sady nástrojů Microsoft C++ (MSVC), která se může lišit od hostitele sady Visual Studio. Například při sestavování pomocí `$(PlatformToolset) = v140`, **$ (VCInstallDir)** obsahuje cestu k instalaci sady Visual Studio 2015.|
-|**$ (VSInstallDir)**|Adresář, do kterého jste nainstalovali aplikaci Visual Studio. Tato vlastnost obsahuje verzi cílené sady nástrojů sady Visual Studio, která se může lišit od hostitele sady Visual Studio. Například při sestavování pomocí `$(PlatformToolset) = v110`, **$ (VSINSTALLDIR)** obsahuje cestu k instalaci sady Visual Studio 2012.|
-|**$(WebDeployPath)**|Relativní cesta z kořenu nasazení webu, do které patří výstup projektu. Vrací stejnou hodnotu jako <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
-|**$ (WebDeployRoot)**|Absolutní cesta k umístění  **\<místního hostitele >** . Například c:\Inetpub\Wwwroot.|
+|**$ (VCInstallDir)**|Adresář, který obsahuje C++ obsah vaší instalace sady Visual Studio. Tato vlastnost obsahuje verzi cílené sady nástrojů Microsoft C++ (MSVC), která se může lišit od hostitele sady Visual Studio. Například při sestavování pomocí `$(PlatformToolset) = v140`obsahuje **$ (VCInstallDir)** cestu k instalaci sady Visual Studio 2015.|
+|**$ (VSInstallDir)**|Adresář, do kterého jste nainstalovali aplikaci Visual Studio. Tato vlastnost obsahuje verzi cílené sady nástrojů sady Visual Studio, která se může lišit od hostitele sady Visual Studio. Například při sestavování pomocí `$(PlatformToolset) = v110`obsahuje **$ (VSINSTALLDIR)** cestu k instalaci sady Visual Studio 2012.|
+|**$(WebDeployPath)**|Relativní cesta z kořenu nasazení webu, do které patří výstup projektu.|
+|**$ (WebDeployRoot)**|Absolutní cesta k umístění **\<localhost >** . Například c:\Inetpub\Wwwroot.|
 
 ## <a name="obsolete-macros"></a>Zastaralá makra
 
@@ -167,6 +167,6 @@ Sestavovací systém pro C++ byl významně změněn mezi visual Studio 2008 a v
 
 ## <a name="see-also"></a>Viz také:
 
-[Projekty sady Visual Studio –C++](../creating-and-managing-visual-cpp-projects.md)\
-[Průvodce C++ přenosem a upgradem vizuálů](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
+[Projekty sady Visual Studio C++ –](../creating-and-managing-visual-cpp-projects.md)\
+[Průvodce C++ portací a upgradem vizuálů](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
 [Přehled potenciálních problémů s upgradem](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

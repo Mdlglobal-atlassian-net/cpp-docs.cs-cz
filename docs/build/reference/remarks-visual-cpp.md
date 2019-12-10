@@ -1,5 +1,5 @@
 ---
-title: '&lt;REMARKS > (C++ dokumentačních komentářů)'
+title: '&lt;poznámky > (C++ dokumentační dokumentace)'
 ms.date: 11/04/2016
 f1_keywords:
 - remarks
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <remarks> C++ XML tag
 - remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-ms.openlocfilehash: 0d0c63d55de80f498498a6873dacb5e83fc956b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096280526b12feff33377a705f7c03548a1f0f13
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319158"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988659"
 ---
-# <a name="ltremarksgt"></a>&lt;Poznámky&gt;
+# <a name="ltremarksgt"></a>&lt;poznámky&gt;
 
-\<Remarks > Značka se používá k přidání informací o typu, doplňující informace zadaným [ \<summary >](summary-visual-cpp.md). Tyto informace se zobrazují v [prohlížeče objektů](/visualstudio/ide/viewing-the-structure-of-code) a v sestavě webového kódu komentář.
+Značka \<poznámky > se používá k přidání informací o typu, doplňování informací zadaných s [\<souhrn >](summary-visual-cpp.md). Tyto informace se zobrazí v [Prohlížeč objektů](/visualstudio/ide/viewing-the-structure-of-code) a ve webové sestavě komentáře kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,16 +27,16 @@ ms.locfileid: "62319158"
 
 #### <a name="parameters"></a>Parametry
 
-*description*<br/>
-Popis člena.
+*název*<br/>
+Popis člena
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilovat s [/doc](doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+Zkompilujte pomocí [/doc](doc-process-documentation-comments-c-cpp.md) a zpracujte dokumentační komentáře do souboru.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // xml_remarks_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_remarks_tag.dll

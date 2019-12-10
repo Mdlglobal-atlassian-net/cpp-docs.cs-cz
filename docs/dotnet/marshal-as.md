@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-ms.openlocfilehash: 6ab4962f18368f0d896f8b7343baf54e8f59ac52
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 2b2cacb0acf04aa40b3e299bffd7357e04916b16
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861099"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988136"
 ---
-# <a name="marshalas"></a>marshal_as
+# <a name="marshal_as"></a>marshal_as
 
-Tato metoda převádí data mezi nativními a spravovanými prostředími.
+Tato metoda převádí data mezi nativním a spravovaným prostředím.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,28 +30,28 @@ To_Type marshal_as<To_Type>(
 
 #### <a name="parameters"></a>Parametry
 
-*Vstup*<br/>
-[in] Hodnota, kterou chcete zařadit na `To_Type` proměnné.
+*vstup*<br/>
+pro Hodnota, kterou chcete zařadit do proměnné `To_Type`.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Proměnné typu `To_Type` , který je převedená hodnota `input`.
+Proměnná typu `To_Type`, která je převedená hodnota `input`.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato metoda je jednodušší způsob, jak převést dat mezi nativními a spravovanými typy. Pokud chcete zjistit, jaké typy dat jsou podporovány, naleznete v tématu [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md). Některé převodů dat vyžadují kontextu. Tyto typy dat můžete převádět pomocí [marshal_context Class](../dotnet/marshal-context-class.md).
+Tato metoda je zjednodušený způsob, jak převést data mezi nativními a spravovanými typy. Informace o tom, jaké typy dat jsou podporovány, naleznete [v tématu Přehled C++zařazování v ](../dotnet/overview-of-marshaling-in-cpp.md). Některé převody dat vyžadují kontext. Tyto datové typy lze převést pomocí [třídy marshal_context](../dotnet/marshal-context-class.md).
 
-Pokud se pokusíte zařazování pár datových typů, které nejsou podporované. zahrnuje `marshal_as` vygeneruje chybu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) v době kompilace. Přečtěte si zprávy zadané k této chybě Další informace. `C4996` Chyby mohou být generovány pro více než jen zastaralé funkce. Jedním z příkladů je pokusu o zařazení pár datových typů, které nejsou podporovány.
+Pokud se pokusíte o zařazení páru datových typů, které nejsou podporovány, `marshal_as` vygeneruje chybu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) v době kompilace. Další informace si můžete přečíst v této chybové zprávě. Chyba `C4996` může být vygenerována pro více než jenom nepoužívané funkce. Jedním z příkladů je pokus o zařazení páru datových typů, které nejsou podporovány.
 
-Zařazovací knihovna se skládá z několika hlavičkové soubory. Jakýkoli převod vyžaduje pouze jeden soubor, ale pokud je potřeba pro ostatní převody, které můžete zahrnout další soubory. Pokud chcete zjistit, které převody jsou přidruženy soubory, které, podívejte se v tabulce v `Marshaling Overview`. Bez ohledu na to co převodu chcete udělat, požadavek na obor názvů je vždy v platnosti.
+Zařazování knihovny se skládá z několika hlavičkových souborů. Jakýkoli převod vyžaduje pouze jeden soubor, ale pokud potřebujete pro jiné převody, můžete zahrnout další soubory. Chcete-li zjistit, které převody jsou přidruženy k souborům, podívejte se do tabulky v `Marshaling Overview`. Bez ohledu na to, jaký převod chcete udělat, je požadavek na obor názvů vždycky platný.
 
-Vyvolá `System::ArgumentNullException(_EXCEPTION_NULLPTR)` Pokud vstupní parametr má hodnotu null.
+Vyvolá `System::ArgumentNullException(_EXCEPTION_NULLPTR)`, je-li vstupní parametr null.
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu zařazuje z `const char*` k `System::String` typ proměnné.
+Tento příklad zařazování z `const char*` na typ proměnné `System::String`.
 
-```
+```cpp
 // marshal_as_test.cpp
 // compile with: /clr
 #include <stdlib.h>
@@ -71,9 +71,9 @@ int main() {
 
 ## <a name="requirements"></a>Požadavky
 
-**Soubor hlaviček:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, nebo \<msclr\marshal_atl.h >
+**Hlavičkový soubor:** \<msclr\marshal.h >, \<msclr – \ marshal_windows. h >, \<msclr – \ marshal_cppstd. h > nebo \<msclr – \ marshal_atl. h >
 
-**Namespace:** msclr::interop
+**Obor názvů:** msclr –:: Interop
 
 ## <a name="see-also"></a>Viz také:
 

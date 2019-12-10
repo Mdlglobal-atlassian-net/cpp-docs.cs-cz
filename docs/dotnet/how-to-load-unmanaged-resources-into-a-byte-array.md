@@ -7,22 +7,22 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344972"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988203"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Postupy: Načtení nespravovaných prostředků do bajtového pole
 
-Toto téma popisuje několik způsobů, jak načtení nespravovaných prostředků do <xref:System.Byte> pole.
+Toto téma popisuje několik způsobů, jak načíst nespravované prostředky do pole <xref:System.Byte>.
 
 ## <a name="example"></a>Příklad
 
-Pokud znáte velikost nespravovaný prostředek, můžete předem přidělit pole CLR a potom načtěte prostředek do pole pomocí ukazatele na blok pole pole CLR.
+Pokud znáte velikost nespravovaného prostředku, můžete předem přidělit pole CLR a pak načíst prostředek do pole pomocí ukazatele na blok pole v poli CLR.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -56,9 +56,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka předvádí, jak kopírovat data z blok nespravované paměti pro spravované pole.
+Tento příklad ukazuje, jak kopírovat data z nespravovaného bloku paměti do spravovaného pole.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
 // compile with: /clr
 using namespace System;

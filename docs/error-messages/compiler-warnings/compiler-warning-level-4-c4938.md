@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4938
+title: Upozornění kompilátoru (úroveň 4) C4938
 ms.date: 11/04/2016
 f1_keywords:
 - C4938
 helpviewer_keywords:
 - C4938
 ms.assetid: 6acac81a-9d23-465e-b700-ed4b6e8edcd0
-ms.openlocfilehash: da2725a398a99b5943e128038e75622115a9e34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c752b5daea42eac7c7dd0e14581d9e781aac9c96
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280201"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988733"
 ---
-# <a name="compiler-warning-level-4-c4938"></a>Kompilátor upozornění (úroveň 4) C4938
+# <a name="compiler-warning-level-4-c4938"></a>Upozornění kompilátoru (úroveň 4) C4938
 
-příkaz 'var': Plovoucího bodu redukční proměnná může způsobit nekonzistentní výsledky v/FP: strict nebo #pragma fenv_access
+var: proměnlivé omezení desetinné čárky může způsobit nekonzistentní výsledky v/FP: Strict nebo #pragma fenv_access
 
-Neměli byste používat [/FP: strict](../../build/reference/fp-specify-floating-point-behavior.md) nebo [fenv_access](../../preprocessor/fenv-access.md) s OpenMP snížení s plovoucí desetinnou čárkou, protože součet je vypočítán v jiném pořadí. Výsledky se díky tomu se může lišit od výsledky bez/OpenMP.
+Neměli byste používat [/FP: Strict](../../build/reference/fp-specify-floating-point-behavior.md) nebo [fenv_access](../../preprocessor/fenv-access.md) s snížením hodnot OpenMP s plovoucí desetinnou čárkou, protože součet je vypočítáván v jiném pořadí. Proto se výsledky můžou lišit od výsledků bez/OpenMP.
 
 Následující ukázka generuje C4938:
 
-```
+```cpp
 // C4938.cpp
 // compile with: /openmp /W4 /fp:strict /c
 // #pragma fenv_access(on)
@@ -36,13 +36,13 @@ double test(int first, int last) {
 }
 ```
 
-Bez explicitní paralelizace součet vypočítat následujícím způsobem:
+Bez explicitního paralelismu se součet vypočítá takto:
 
 ```
 sum = a[first] + a[first + 1] + ... + a[last];
 ```
 
-Explicitní paralelizace (a dvěma vlákny) součet vypočítat následujícím způsobem:
+V případě explicitního paralelismu (a dvou vláken) se součet vypočítá takto:
 
 ```
 sum1 = a[first] + ... a[first + last / 2];

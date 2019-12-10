@@ -1,25 +1,25 @@
 ---
-title: 'Postupy: Používání událostí v C++vyhodnocovací'
+title: 'Postupy: Používání událostí v jazyce C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387172"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988410"
 ---
-# <a name="how-to-use-events-in-ccli"></a>Postupy: Používání událostí v C++vyhodnocovací
+# <a name="how-to-use-events-in-ccli"></a>Postupy: Používání událostí v jazyce C++/CLI
 
-Tento článek ukazuje, jak použít rozhraní, který deklaruje událost a funkce, která se má vyvolat tuto událost a obslužnou rutinu třídy a události, které implementují rozhraní.
+Tento článek ukazuje, jak použít rozhraní, které deklaruje událost a funkci pro vyvolání této události, a třídu a obslužnou rutinu události, která implementuje rozhraní.
 
 ## <a name="interface-events"></a>Události rozhraní
 
-Následující příklad kódu přidá obslužnou rutinu události, vyvolá událost, což způsobí, že obslužná rutina události pro zápis její název do konzoly a pak taky odebere obslužnou rutinu události.
+Následující příklad kódu přidá obslužnou rutinu události, vyvolá událost, která způsobí, že obslužná rutina události zapíše svůj název do konzoly, a poté odstraní obslužnou rutinu události.
 
-```
+```cpp
 // mcppv2_events2.cpp
 // compile with: /clr
 using namespace System;
@@ -71,11 +71,11 @@ int main () {
 EventReceiver::Handler
 ```
 
-## <a name="custom-accessor-methods"></a>Vlastní přístupové metody
+## <a name="custom-accessor-methods"></a>Metody vlastního přístupového objektu
 
-Následující příklad ukazuje, jak definovat chování události při přidávání nebo odebírání obslužných rutin, a když se vyvolá událost.
+Následující příklad ukazuje, jak definovat chování události při přidání nebo odebrání obslužných rutin a při vyvolání události.
 
-```
+```cpp
 // mcppv2_events6.cpp
 // compile with: /clr
 using namespace System;
@@ -163,11 +163,11 @@ In event handler H1
 In event handler H2 with args 1 and 2.2
 ```
 
-## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Přepsání výchozího přístupu na přidání, odebrání a vyvolání přístupové objekty
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>Přepsat výchozí přístup při přidávání, odebírání a vyvolávání přístupových objektů
 
-Tento příklad ukazuje, jak přepsat výchozí přístup na Přidat, odebrat a vyvolat události metod:
+V této ukázce se dozvíte, jak přepsat výchozí přístup k metodám události přidání, odebrání a vyvolání:
 
-```
+```cpp
 // mcppv2_events3.cpp
 // compile with: /clr
 public delegate void f(int);
@@ -223,9 +223,9 @@ int main() {
 
 ## <a name="multiple-event-handlers"></a>Více obslužných rutin událostí
 
-Přijímače událostí nebo jakýkoli jiný kód klienta, můžete přidat jeden nebo více obslužných rutin události.
+Přijímač událostí nebo jakýkoli jiný klientský kód může přidat jednu nebo více obslužných rutin do události.
 
-```
+```cpp
 // mcppv2_events4.cpp
 // compile with: /clr
 using namespace System;
@@ -302,9 +302,9 @@ DblClickAgain(s=System.Char[])
 
 ## <a name="static-events"></a>Statické události
 
-Následující příklad ukazuje, jak definovat a používání statických událostí.
+Následující příklad ukazuje, jak definovat a používat statické události.
 
-```
+```cpp
 // mcppv2_events7.cpp
 // compile with: /clr
 using namespace System;
@@ -392,9 +392,9 @@ In event handler H2 with args 22 and 22.22
 
 ## <a name="virtual-events"></a>Virtuální události
 
-Tato ukázka implementuje virtuální, spravované události v rozhraní a třídy:
+Tato ukázka implementuje virtuální spravované události v rozhraní a třídě:
 
-```
+```cpp
 // mcppv2_events5.cpp
 // compile with: /clr
 using namespace System;
@@ -476,9 +476,9 @@ In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-Jednoduchá událost nelze zadat přepsání nebo skryjete události základní třídy.  Musíte definovat všechny funkce přístupového objektu události a poté zadejte `new` nebo `override` klíčové slovo u každé funkce přístupového objektu.
+Nelze zadat jednoduchou událost pro přepsání nebo skrytí události základní třídy.  Je nutné definovat všechny funkce přístupového objektu události a poté zadat klíčové slovo `new` nebo `override` u každé přístupové funkce.
 
-```
+```cpp
 // mcppv2_events5_a.cpp
 // compile with: /clr /c
 delegate void Del();
@@ -508,11 +508,11 @@ ref struct C : B {
 };
 ```
 
-## <a name="abstract-events"></a>Abstraktních událostí
+## <a name="abstract-events"></a>Abstraktní události
 
 Následující příklad ukazuje, jak implementovat abstraktní událost.
 
-```
+```cpp
 // mcppv2_events10.cpp
 // compile with: /clr /W1
 using namespace System;
@@ -595,9 +595,9 @@ hello from Event2
 
 ## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>Vyvolávání událostí, které jsou definovány v jiném sestavení
 
-Událostí a obslužnou rutinu události může být definované v jednom sestavení a používané jiné sestavení.
+Událost a obslužná rutina události může být definována v jednom sestavení a spotřebovaná jiným sestavením.
 
-```
+```cpp
 // mcppv2_events8.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -613,9 +613,9 @@ public:
 };
 ```
 
-Tento klientský kód zpracovává událost:
+Tento klientský kód spotřebovává událost:
 
-```
+```cpp
 // mcppv2_events9.cpp
 // compile with: /clr
 #using "mcppv2_events8.dll"

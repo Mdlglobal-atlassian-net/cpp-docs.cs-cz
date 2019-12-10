@@ -1,6 +1,7 @@
 ---
 title: '&lt;atomic&gt;'
-ms.date: 11/04/2016
+description: Popisuje typy a funkce, které jsou k dispozici v atomické C++ hlavičce standardní knihovny.
+ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -48,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688453"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991163"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,13 +69,13 @@ Definuje třídy a šablony tříd, které se použijí k vytváření typů, kt
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
-> V kódu, který je zkompilován pomocí **/CLR**, je tato hlavička zablokována.
+> V kódu, který je zkompilován pomocí [/clr: Pure](../build/reference/clr-common-language-runtime-compilation.md), je tato hlavička zablokována. Možnosti **/clr: Pure** a **/clr: Safe** jsou v aplikaci Visual Studio 2017 a novějších verzích zastaralé.
 
 Atomická operace má dvě klíčové vlastnosti, které vám pomůžou použít více vláken pro správné manipulaci s objektem bez použití zámků mutex.
 
 - Vzhledem k tomu, že atomická operace je nedělitelná, druhá atomická operace na stejném objektu z jiného vlákna může získat stav objektu pouze před nebo po první atomickou operaci.
 
-- Na základě jeho argumentu [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vytvoří atomická operace požadavky na řazení pro viditelnost účinků jiných atomických operací ve stejném vlákně. V důsledku toho znemožňuje optimalizace kompilátoru, které porušují požadavky na řazení.
+- Na základě jeho [memory_orderho](../standard-library/atomic-enums.md#memory_order_enum) argumentu vytváří atomická operace požadavky na řazení pro viditelnost účinků jiných atomických operací ve stejném vlákně. V důsledku toho znemožňuje optimalizace kompilátoru, které porušují požadavky na řazení.
 
 Na některých platformách nemusí být možné efektivně implementovat atomické operace pro některé typy bez použití zámků `mutex`. Atomický typ je *bez zámku* , pokud žádné atomické operace na tomto typu nepoužívají zámky.
 
@@ -88,13 +89,13 @@ Třída [atomic_flag](../standard-library/atomic-flag-structure.md) poskytuje mi
 
 ## <a name="pointer-specializations"></a>Specializace ukazatelů
 
-@No__t_0 částečné specializace se vztahují na všechny typy ukazatelů. Poskytují metody pro aritmetický ukazatel.
+`atomic<T *>` částečné specializace se vztahují na všechny typy ukazatelů. Poskytují metody pro aritmetický ukazatel.
 
 ## <a name="integral-specializations"></a>Celočíselné specializace
 
-@No__t_0 specializace se vztahují na všechny celočíselné typy. Poskytují další operace, které nejsou k dispozici prostřednictvím primární šablony.
+`atomic<integral>` specializace se vztahují na všechny celočíselné typy. Poskytují další operace, které nejsou k dispozici prostřednictvím primární šablony.
 
-Každý typ `atomic<integral>` má odpovídající makro, které lze použít v `if directive` k určení v době kompilace, zda jsou operace s tímto typem bez zámků. Pokud je hodnota makra nula, operace s typem nebudou bez zámků. Pokud je hodnota 1, operace můžou být bez zámků a je nutná kontrolní doba. Pokud je hodnota 2, operace se zablokují bez zámků. Funkci `atomic_is_lock_free` lze použít k určení za běhu, zda jsou operace s typem bez zámku.
+Každý typ `atomic<integral>` má odpovídající makro, které lze použít v `if directive` k určení v době kompilace, zda jsou operace s tímto typem bez zámků. Pokud je hodnota makra nula, operace s typem nejsou bez zámku. Pokud je hodnota 1, operace můžou být bez zámků a je nutná kontrolní doba. Pokud je hodnota 2, operace se zablokují bez zámků. Funkci `atomic_is_lock_free` lze použít k určení za běhu, zda jsou operace s typem bez zámku.
 
 Pro každý z celočíselných typů existuje odpovídající pojmenovaný typ Atom, který spravuje objekt daného integrálního typu. Každý typ `atomic_integral` má stejnou sadu členských funkcí jako odpovídající instance `atomic<T>` a může být předán do kterékoli nečlenské atomické funkce.
 
@@ -161,11 +162,11 @@ Názvy typedef existují pro specializace šablony atomie pro některé typy, kt
 
 |Name|Popis|
 |----------|-----------------|
-|[Výčet memory_order](../standard-library/atomic-enums.md#memory_order_enum)|Poskytuje symbolické názvy pro operace synchronizace v umístěních paměti. Tyto operace mají vliv na to, jak se přiřazení v jednom vlákně budou zobrazovat v jiném.|
+|[Výčet memory_order](../standard-library/atomic-enums.md#memory_order_enum)|Poskytuje symbolické názvy pro operace synchronizace v paměťových místech. Tyto operace ovlivní, jak budou přiřazení v jednom vlákně viditelná v jiném.|
 
 ## <a name="functions"></a>Funkce
 
-V následujícím seznamu funkce, které nekončí `_explicit` mají sémantiku odpovídající `_explicit`, s tím rozdílem, že mají implicitní argumenty [memory_order](../standard-library/atomic-enums.md#memory_order_enum) `memory_order_seq_cst`.
+V následujícím seznamu funkce, které nekončí `_explicit` mají sémantiku odpovídající `_explicit`, s tím rozdílem, že mají implicitní [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumenty `memory_order_seq_cst`.
 
 |Name|Popis|
 |----------|-----------------|
@@ -201,5 +202,5 @@ V následujícím seznamu funkce, které nekončí `_explicit` mají sémantiku 
 
 ## <a name="see-also"></a>Viz také:
 
-@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+\ [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

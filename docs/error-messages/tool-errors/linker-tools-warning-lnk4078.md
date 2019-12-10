@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-ms.openlocfilehash: d20eb0523ffebe9229d05b6316772259661f6020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ce72f476aa85434acd5277d0307ffc61e0a0214
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399930"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990999"
 ---
 # <a name="linker-tools-warning-lnk4078"></a>Upozornění linkerů LNK4078
 
-našlo s rozdílnými atributy více oddílů 'název oddílu.
+našlo se několik oddílů název oddílu s různými atributy.
 
-ODKAZ najít dvě nebo víc oddílů, které mají stejný název ale jiné atributy.
+ODKAZ nalezl dva nebo více oddílů, které mají stejný název, ale různé atributy.
 
-Toto upozornění může být způsobeno importu knihovny nebo exporty soubor, který byl vytvořen pomocí předchozí verze odkaz nebo LIB.
+Toto upozornění může být způsobeno knihovnou importu nebo souborem exportu, který byl vytvořen předchozí verzí LINK nebo LIB.
 
-Znovu vytvořte soubor a znovu připojit.
+Znovu vytvořte soubor a znovu ho připojte.
 
 ## <a name="example"></a>Příklad
 
-LNK4078 může být také způsobeno narušující změně: oddíl s názvem podle [init_seg –](../../preprocessor/init-seg.md) x86 bylo čtení/zápis, je nyní jen pro čtení.
+LINKERŮ LNK4078 může být také způsobena zásadní změnou: oddíl s názvem [init_seg](../../preprocessor/init-seg.md) v systému x86 byl pro čtení a zápis, je nyní pouze pro čtení.
 
-Následující ukázka generuje LNK4078.
+Následující ukázka generuje LINKERŮ LNK4078.
 
-```
+```cpp
 // LNK4078.cpp
 // compile with: /W1
 // LNK4078 expected

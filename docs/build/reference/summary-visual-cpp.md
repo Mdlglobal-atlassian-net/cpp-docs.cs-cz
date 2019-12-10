@@ -1,5 +1,5 @@
 ---
-title: '&lt;Souhrn > (C++ dokumentačních komentářů)'
+title: '> &lt;souhrnuC++ (dokumentační dokumentace)'
 ms.date: 11/04/2016
 f1_keywords:
 - <summary>
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 68bb8b7c269b3406438e5cf21dde7179f7e67646
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0620273f24573539897809b7892d46ad49b7aa57
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318183"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988583"
 ---
-# <a name="ltsummarygt"></a>&lt;Souhrn&gt;
+# <a name="ltsummarygt"></a>Souhrn &lt;&gt;
 
-\<Summary > Značka by měla sloužit k popisu typu nebo člena typu. Použití [ \<remarks >](remarks-visual-cpp.md) přidat doplňující informace pro popis typu.
+K popisu typu nebo členu typu by měla být použita značka \<Summary >. Pomocí [\<poznámky >](remarks-visual-cpp.md) přidat doplňující informace k popisu typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,18 +27,18 @@ ms.locfileid: "62318183"
 
 #### <a name="parameters"></a>Parametry
 
-*description*<br/>
-Přehled objektu.
+*název*<br/>
+Souhrn objektu.
 
 ## <a name="remarks"></a>Poznámky
 
-Text \<summary > značku je jediný zdroj informací o typu v IntelliSense a zobrazí se také v [Prohlížeč objektů](/visualstudio/ide/viewing-the-structure-of-code) a v sestavě webového kódu komentář.
+Text > Značka \<Summary je jediným zdrojem informací o typu v technologii IntelliSense a je také zobrazen v [Prohlížeč objektů](/visualstudio/ide/viewing-the-structure-of-code) a v webové sestavě komentáře kódu.
 
-Kompilovat s [/doc](doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+Zkompilujte pomocí [/doc](doc-process-documentation-comments-c-cpp.md) a zpracujte dokumentační komentáře do souboru.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // xml_summary_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_summary_tag.dll

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: c5854fd1255ab509d8778828de25638dd821d74b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d0cf8e5f628f3f5301f54d7c853bfc2ab63cb7e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272829"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988367"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Zachovat komentáře při předběžném zpracování)
 
@@ -31,17 +31,17 @@ Zachová komentáře při předzpracování.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato možnost kompilátoru vyžaduje **/E**, **/P**, nebo **/EP** možnost.
+Tato možnost kompilátoru vyžaduje možnost **/e**, **/p**nebo **/EP** .
 
-Následující příklad kódu se zobrazí komentář zdrojového kódu.
+Následující ukázka kódu zobrazí komentář ke zdrojovému kódu.
 
-```
+```cpp
 // C_compiler_option.cpp
 // compile with: /E /C /c
 int i;   // a variable
 ```
 
-Tento příklad vytvoří následující výstup.
+Tato ukázka vytvoří následující výstup.
 
 ```
 #line 1 "C_compiler_option.cpp"
@@ -50,17 +50,17 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **C/C++** složky.
+1. Klikněte na složku **CC++ /a** .
 
-1. Klikněte na tlačítko **preprocesor** stránku vlastností.
+1. Klikněte na stránku vlastností **preprocesoru** .
 
-1. Upravit **zachovat komentáře** vlastnost.
+1. Upravte vlastnost **Zachovat komentáře** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>.
+- Podívejte se na téma <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>.
 
 ## <a name="see-also"></a>Viz také:
 

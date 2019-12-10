@@ -2,28 +2,28 @@
 title: Upozornění kompilátoru (úrovně 3 a 4) C4244
 ms.date: 11/04/2016
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
-ms.openlocfilehash: af06dbf5bb4a1dd133c277d63c40da2a8a54770b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a12bee4591df8a7a952dc741c4b26c637bb5256c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359927"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991072"
 ---
 # <a name="compiler-warning-levels-3-and-4-c4244"></a>Upozornění kompilátoru (úrovně 3 a 4) C4244
 
-"conversion" převod z 'type1' na 'type2', možná ztráta dat
+konverze Conversion z ' typ1 ' na ' typ2 ', může dojít ke ztrátě dat
 
-Celočíselný typ je převedena na menší typ celé číslo. Toto je upozornění úrovně 4 Pokud *type1* je `int` a *type2* je menší než `int`. V opačném případě je úroveň 3 (přiřazena hodnota typu [__int64](../../cpp/int8-int16-int32-int64.md) na proměnnou typu `unsigned int`). Může dojít ke ztrátě dat, mohlo dojít.
+Celočíselný typ je převeden na menší celočíselný typ. Toto je upozornění úrovně 4, pokud je *typ1* `int` a *typ2* je menší než `int`. V opačném případě je to úroveň 3 (přiřazena hodnota typu [__int64](../../cpp/int8-int16-int32-int64.md) proměnné typu `unsigned int`). Možná došlo ke ztrátě dat.
 
-Pokud se zobrazí C4244, si změnit program používat typy kompatibilní, nebo přidat nějaké logiky do kódu, aby se zajistilo, že rozsah možných hodnot bude vždy kompatibilní s typy, které používáte.
+Pokud získáte C4244, měli byste buď změnit program na používání kompatibilních typů, nebo přidat do kódu určitou logiku, abyste zajistili, že rozsah možných hodnot bude vždy kompatibilní s typy, které používáte.
 
-Na úrovni 2; můžete také vyvolat C4244 Zobrazit [upozornění kompilátoru (úroveň 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) Další informace.
+C4244 může také být v úrovni 2 požáru. Další informace najdete v tématu [Upozornění kompilátoru (úroveň 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) .
 
-Převod může být problém z důvodu implicitní převody.
+Převod může mít problém z důvodu implicitních převodů.
 
 Následující ukázka generuje C4244:
 
-```
+```cpp
 // C4244_level4.cpp
 // compile with: /W4
 int aa;
@@ -41,7 +41,7 @@ int main() {
 
 Další informace najdete v tématu [obvyklé aritmetické převody](../../c-language/usual-arithmetic-conversions.md).
 
-```
+```cpp
 // C4244_level3.cpp
 // compile with: /W3
 int main() {
@@ -50,11 +50,11 @@ int main() {
 }
 ```
 
-Upozornění C4244 může dojít při sestavování kódu pro 64bitové cíle, který negeneruje upozornění, při sestavování pro 32-bit cíle. Rozdíl mezi ukazatele je například množství 32-bit na 32bitových platformách, ale množství 64-bit na 64bitových platformách.
+Při vytváření kódu pro 64 cíle, které negenerují upozornění při sestavování pro 32 bitové cíle, může dojít k C4244 upozornění. Například rozdíl mezi ukazateli je 32 množství na 32ch platformách, 64 ale množství na 64-bitové platformě.
 
-Následující ukázka generuje C4244 při kompilaci pro 64bitové cíle:
+Následující ukázka generuje C4244 při kompilování pro 64 cíle:
 
-```
+```cpp
 // C4244_level3_b.cpp
 // compile with: /W3
 int main() {

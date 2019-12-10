@@ -10,36 +10,36 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: e2aed98d9131b3d7b96cdc3e3297823d69d0ad38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf241d4e599ad58c2e39680d8ed4e4e250b42b18
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393789"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988547"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Základní koncepce při práci se spravovanými výjimkami
 
-Toto téma popisuje zpracování výjimek v spravovaných aplikací. To znamená, že aplikace, který je kompilován **/CLR** – možnost kompilátoru.
+Toto téma popisuje zpracování výjimek ve spravovaných aplikacích. To znamená, že aplikace kompilována s možností kompilátoru **/CLR** .
 
-## <a name="in-this-topic"></a>V tomto tématu
+## <a name="in-this-topic"></a>V tomto tématu
 
-- [Vyvolání výjimky v rámci/CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
+- [Vyvolání výjimek v/CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
 
-- [Bloky Try/Catch pro rozšíření modulu CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
+- [Bloky try/catch pro rozšíření CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud kompilujete s **/CLR** možnost, můžete zpracovávat výjimky CLR, stejně jako standardní <xref:System.Exception> třídy nabízí spoustu užitečných metod pro zpracování výjimek CLR a doporučuje se jako základní třída pro uživatelem definované výjimky třídy.
+Pokud kompilujete s možností **/CLR** , můžete zpracovat výjimky CLR a standardní <xref:System.Exception> Třída poskytuje mnoho užitečných metod pro zpracování výjimek CLR a doporučuje se jako základní třída pro uživatelem definované třídy výjimek.
 
-Zachycování výjimek typy odvozené od rozhraní není podporován v rámci **/CLR**. Kromě toho modul common language runtime nepovoluje jak zachytávat výjimky přetečení zásobníku; k výjimce přetečení zásobníku se ukončit proces.
+Zachycení typů výjimek odvozených z rozhraní není podporováno v rámci **/CLR**. Také modul CLR (Common Language Runtime) neumožňuje zachytit výjimky přetečení zásobníku; Při výjimce přetečení zásobníku dojde k ukončení procesu.
 
-Další informace o rozdíly ve zpracování výjimek ve spravovaných a nespravovaných aplikacích najdete v tématu [rozdíly ve výjimce zpracování chování v rámci spravovaných rozšíření jazyka C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).
+Další informace o rozdílech ve zpracování výjimek ve spravovaných a nespravovaných aplikacích naleznete v tématu [rozdíly v chování zpracování výjimek C++v části spravovaná rozšíření pro ](../dotnet/differences-in-exception-handling-behavior-under-clr.md).
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> Vyvolání výjimky v rámci/CLR
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Vyvolání výjimek v/CLR
 
-Výraz throw C++ je rozšířená vyvolání popisovač na typ CLR. Následující příklad vytvoří typ vlastní výjimky a potom vyvolá instance tohoto typu:
+Výraz C++ throw je rozšířen, aby vyvolal popisovač typu CLR. Následující příklad vytvoří vlastní typ výjimky a poté vyvolá instanci tohoto typu:
 
-```
+```cpp
 // clr_exception_handling.cpp
 // compile with: /clr /c
 ref struct MyStruct: public System::Exception {
@@ -53,9 +53,9 @@ void GlobalFunction() {
 }
 ```
 
-Hodnotový typ musí být zabaleny před vyvolání:
+Hodnotový typ musí být zabalený před vyvolanou hodnotou:
 
-```
+```cpp
 // clr_exception_handling_2.cpp
 // compile with: /clr /c
 value struct MyValueStruct {
@@ -68,11 +68,11 @@ void GlobalFunction() {
 }
 ```
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Bloky Try/Catch pro rozšíření modulu CLR
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Bloky try/catch pro rozšíření CLR
 
-Stejné **zkuste**/**catch** blokové struktuře lze použít pro zachytávání CLR a nativní výjimky:
+**Stejný/** struktury bloku **catch** lze použít pro zachycení CLR a nativní výjimky:
 
-```
+```cpp
 // clr_exception_handling_3.cpp
 // compile with: /clr
 using namespace System;
@@ -126,27 +126,27 @@ In 'catch(MyStruct^ catchException)'
 11
 ```
 
-### <a name="order-of-unwinding-for-c-objects"></a>Pořadí uvolnění pro objekty C++
+### <a name="order-of-unwinding-for-c-objects"></a>Pořadí unwind pro C++ objekty
 
-Uvolnění dochází u všech objektů jazyka C++ s destruktory, které mohou být v zásobníku za běhu mezi aktivační funkce a funkce zpracování. Protože typy CLR jsou přiděleny do haldy, uvolnění se nevztahuje na ně.
+K vrácení zpět dojde u všech C++ objektů s destruktory, které mohou být v zásobníku run-time mezi aktivační funkcí a funkcí zpracování. Vzhledem k tomu, že typy CLR jsou přiděleny na haldu, neplatí pro ně zpětná vinutí.
 
-Pořadí událostí pro vyvolanou výjimku vypadá takto:
+Pořadí událostí pro vyvolanou výjimku je následující:
 
-1. Modul runtime provede zásobníku pro klauzuli catch. odpovídající nebo v případě SEH, výjimkou filtr pro SEH pro zachycení výjimky. Klauzule catch se nejprve prohledán lexikální popořadě a potom dynamicky dolů v zásobníku volání.
+1. Modul runtime projde zásobníkem, který hledá příslušnou klauzuli catch, nebo v případě SEH filtr s výjimkou SEH pro zachycení výjimky. Klauzule catch jsou nejprve prohledávány v lexikálním pořadí a poté dynamicky v zásobníku volání.
 
-1. Po nalezení obslužnou rutinu správné, když je zásobník odvinut do tohoto bodu. Pro každé volání funkce v zásobníku, jeho místní objekty jsou zničeny a __finally bloky provádějí, od těch s nejvíce vnořené pasivního.
+1. Po nalezení správné obslužné rutiny se zásobník odblokuje do tohoto bodu. Pro každé volání funkce v zásobníku jsou jeho místní objekty destrukturované a jsou spouštěny __finally bloky od nejvíce po celém čísle směrem ven.
 
-1. Jakmile je zásobník odvinut, je proveden v klauzuli catch.
+1. Po odvinutí zásobníku je provedena klauzule catch.
 
-### <a name="catching-unmanaged-types"></a>Zachycení nespravovaného typy
+### <a name="catching-unmanaged-types"></a>Zachycení nespravovaných typů
 
-Při vyvolání typem nespravovaného objektu je zabalený s výjimkou typu <xref:System.Runtime.InteropServices.SEHException>. Při hledání odpovídající **catch** klauzule, existují dvě možnosti.
+Když je vyvolána nespravovaný objekt typu, je zabalen s výjimkou typu <xref:System.Runtime.InteropServices.SEHException>. Při hledání příslušné klauzule **catch** existují dvě možnosti.
 
-- Pokud je nativní typ jazyka C++, výjimky je neobalený a ve srovnání s byl zjištěn typ. Toto porovnání umožňuje nativní typu jazyka C++, chcete-li zachytit běžným způsobem.
+- Pokud dojde k C++ nativnímu typu, výjimka je nezabalená a porovnána s typem, ke kterému došlo. Toto porovnání umožňuje zachycení nativního C++ typu běžným způsobem.
 
-- Nicméně pokud **catch** klauzule typu **SEHException –** nebo některý z jeho základních tříd je zkontrolován nejprve, bude v klauzuli zachycení výjimky. Proto je vhodné umístit všechny klauzule catch, které nejprve catch nativních typů C++ před všechny skutečné klauzule typy CLR.
+- Pokud je však klauzule **catch** typu **SEHException –** nebo kterákoli z jeho základních tříd zkontrolována jako první, klauzule zachytí výjimku. Proto byste měli umístit všechny klauzule catch, které před všechny C++ klauzule catch typů CLR nejprve zachytí nativní typy.
 
-Všimněte si, že
+Je třeba mít na paměti, že:
 
 ```
 catch(Object^)
@@ -158,11 +158,11 @@ and
 catch(...)
 ```
 
-zachytí i všechny vyvolané výjimce typu včetně výjimky SEH.
+bude zachytit jakýkoli vyvolaný typ, včetně výjimek SEH.
 
-Pokud nespravovaným typem se zachycuje prostřednictvím catch(Object^), nezničí Vyvolaný objekt.
+Pokud je nespravovaný typ zachycen pomocí catch (Object ^), neodstraní vyvolaný objekt.
 
-Při vyvolávání a zachycování nespravované výjimky, doporučujeme použít [/EHsc](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru místo **/EHS** nebo **/EHa**.
+Při vyvolávání nebo zachycování nespravovaných výjimek doporučujeme použít možnost kompilátoru [/EHsc](../build/reference/eh-exception-handling-model.md) namísto **/EHS** nebo **/EHa**.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,43 +1,43 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4714
+title: Upozornění kompilátoru (úroveň 4) C4714
 ms.date: 11/04/2016
 f1_keywords:
 - C4714
 helpviewer_keywords:
 - C4714
 ms.assetid: 22c7fd0c-899d-4e9b-95f3-725b2c49fb46
-ms.openlocfilehash: ed94e5b716a697ec96d7fecac75433823c9a67e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ea4212eaddf14546827728b31299063021a959f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395180"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989645"
 ---
-# <a name="compiler-warning-level-4-c4714"></a>Kompilátor upozornění (úroveň 4) C4714
+# <a name="compiler-warning-level-4-c4714"></a>Upozornění kompilátoru (úroveň 4) C4714
 
-Funkce označená jako __forceinline není vložená funkce
+funkce Functions označená jako __forceinline není vložená.
 
-Dané funkce byla vybrána pro vložené rozšíření, ale kompilátor neprovedli vkládání.
+Daná funkce byla vybrána pro vložené rozšíření, ale kompilátor neprováděl vkládání.
 
-I když `__forceinline` je silnější označení kompilátoru než `__inline`, vkládání je stále prováděny uvážení kompilátoru, ale žádné heuristické metody se používají k určení výhody z vložené této funkce.
+I když `__forceinline` je silnější označení kompilátoru než `__inline`, je vkládání stále prováděno podle uvážení kompilátoru, ale k určení výhod z vložení této funkce se nepoužívají žádné heuristiky.
 
-V některých případech kompilátor nevloží určitou funkci mechanických důvodů. Například kompilátor nevloží:
+V některých případech kompilátor nevloží určitou funkci z mechanických důvodů. Například kompilátor nebude vložen:
 
-- Funkce, pokud by výsledkem kombinace SEH a C++ EH.
+- Funkce, pokud by to vedlo k smíchání obou SEH i C++ eh.
 
-- Některé funkce, pomocí kopie vytvořený předán podle hodnoty, když - GX/EHs/EHa na objekty.
+- Některé funkce s kopírováním konstruovaných objektů předávaných hodnotou when-GX/EHs/EHa jsou zapnuty.
 
-- Funkce, která vrátí objekt v nerozvinutelných podle hodnoty, když - GX/EHs/EHa na.
+- Funkce vracející nepřevíjetelné objekty podle hodnoty when-GX/EHs/EHa je zapnuto.
 
-- Funkcí s vloženým sestavením při kompilaci bez - Og/Ox/O1/O2.
+- Funkce s vloženým sestavením při kompilaci bez-Og/Ox/O1/O2.
 
-- Funkce se seznamem argumentů s proměnnou délkou.
+- Funkce se seznamem argumentů proměnných.
 
-- Funkce s **zkuste** – příkaz (zpracování výjimek jazyka C++).
+- Funkce s příkazem **Try** (C++ zpracování výjimek).
 
 Následující ukázka generuje C4714:
 
-```
+```cpp
 // C4714.cpp
 // compile with: /Ob1 /GX /W4
 __forceinline void func1()

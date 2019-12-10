@@ -1,5 +1,5 @@
 ---
-title: '&lt;Zobrazit > (C++ dokumentačních komentářů)'
+title: '&lt;Zobrazit > (C++ dokumentační komentáře)'
 ms.date: 11/04/2016
 f1_keywords:
 - <see>
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-ms.openlocfilehash: be99d3ac156c587888a7c56997d82531cf86ccec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8693646fa37648d1b20c791d99d159f2c81b8ec1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318898"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988627"
 ---
-# <a name="ltseegt"></a>&lt;V tématu&gt;
+# <a name="ltseegt"></a>&lt;zobrazit&gt;
 
-\<Naleznete v tématu > značky umožňuje zadat odkaz v rámci textu. Použití [ \<seealso >](seealso-visual-cpp.md) označuje text, který chcete zobrazit v části Viz také.
+\<Zobrazit značku > umožňuje zadat odkaz v rámci textu. Pomocí [\<seealso >](seealso-visual-cpp.md) označíte text, který se může objevit v části Viz také.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,24 +27,24 @@ ms.locfileid: "62318898"
 
 #### <a name="parameters"></a>Parametry
 
-*Člen*<br/>
+*člen*<br/>
 Odkaz na člena nebo na pole, které lze volat z prostředí aktuální kompilace.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.
 
-Kompilátor kontroluje, zda daný prvek kódu existuje a odstraňuje `member` do názvu prvku ve výstupním souboru XML.  Kompilátor vyvolá upozornění, pokud se nenajde `member`.
+Kompilátor kontroluje, zda daný prvek kódu existuje, a překládá `member` na název elementu ve výstupním souboru XML.  Kompilátor vydá upozornění, pokud nenajde `member`.
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilovat s [/doc](doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+Zkompilujte pomocí [/doc](doc-process-documentation-comments-c-cpp.md) a zpracujte dokumentační komentáře do souboru.
 
-Zobrazit [ \<summary >](summary-visual-cpp.md) pro příklad použití \<naleznete v tématu >.
+Příklad použití \<> naleznete v tématu [\<summary >](summary-visual-cpp.md) .
 
-Kompilátor MSVC pokusila přeložit odkazy cref v jednom průchodu přes komentáře k dokumentaci.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz bude označen jako nevyřešené. Zobrazit [ \<seealso >](seealso-visual-cpp.md) Další informace.
+Kompilátor MSVC se pokusí vyřešit odkazy cref v jednom průchodu pomocí dokumentačních komentářů.  Proto pokud použijete pravidla C++ vyhledávání, symbol nebyl nalezen kompilátorem, odkaz bude označen jako nevyřešený. Další informace najdete v tématu [\<seealso >](seealso-visual-cpp.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak můžete provést cref odkaz na obecný typ, tak, že kompilátor bude přeložit odkaz.
+Následující příklad ukazuje, jak lze vytvořit odkaz cref na obecný typ, například, kompilátor vyřeší odkaz.
 
-```
+```cpp
 // xml_see_cref_example.cpp
 // compile with: /LD /clr /doc
 // the following cref shows how to specify the reference, such that,

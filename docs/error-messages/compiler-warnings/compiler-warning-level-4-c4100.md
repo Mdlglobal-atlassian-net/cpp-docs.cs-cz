@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
-ms.openlocfilehash: 80794d270b40a8f40d44630da70455c015158423
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: bcd51c66359d0553b7657d85f5b45ee22d4648ff
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541234"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991657"
 ---
 # <a name="compiler-warning-level-4-c4100"></a>Upozornění kompilátoru (úroveň 4) C4100
 
-' identifier ': formální parametr bez odkazu
+'identifier': formální neodkazovaný parametr
 
-Na formální parametr se neodkazuje v těle funkce. Parametr, který není odkazem, se ignoruje.
+Na formální parametr se neodkazuje v těle funkce. Parametr, na který se neodkazuje, je ignorován.
 
-C4100 může být také vystavena, pokud kód volá destruktor v jiném neodkazovaném parametru primitivního typu.  Toto je omezení kompilátoru Microsoftu C++ .
+K upozornění C4100 může také dojít v případě, že kód volá destruktor na jinak neodkazovaném parametru primitivního typu.  Toto je omezení kompilátoru Microsoftu C++ .
 
-Následující ukázka generuje C4100:
+Následující ukázka generuje upozornění C4100:
 
 ```cpp
 // C4100.cpp

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Deklarace obslužných rutin v nativních typech'
+title: 'Postupy: Deklarace obslužných rutin v nativních typech'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11dbc196a89a224afe02312fbe4dff99d8467f4c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387406"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988245"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>Postupy: Deklarace obslužných rutin v nativních typech
+# <a name="how-to-declare-handles-in-native-types"></a>Postupy: Deklarace obslužných rutin v nativních typech
 
-Nelze deklarovat typ popisovače v nativním typu. Vcclr.h poskytuje obálku zajišťující bezpečnost typů šablonu `gcroot` k odkazování na objekt CLR z haldy jazyka C++. Tato šablona vám umožní vložit virtuální popisovač v nativním typu a s zacházet, jako by šlo základní typ. Ve většině případů můžete použít `gcroot` objektu jako vložený typ, bez jakékoli přetypování. Nicméně s [u každé v](../dotnet/for-each-in.md), budete muset použít `static_cast` načíst základní referenční informace pro spravované.
+Typ popisovače nelze deklarovat v nativním typu. Vcclr. h poskytuje `gcroot` šablony obálky s bezpečným typem pro odkazování na objekt CLR z C++ haldy. Tato šablona umožňuje vložit virtuální popisovač do nativního typu a nakládat s ním, jako by se jednalo o nadřízený typ. Ve většině případů můžete použít objekt `gcroot` jako vložený typ bez jakéhokoli přetypování. U [každého v](../dotnet/for-each-in.md)je však nutné použít `static_cast` k načtení základního spravovaného odkazu.
 
-`gcroot` Šablony je implementováno pomocí zařízení hodnotová třída System::Runtime, který poskytuje "popisovače" na haldě uvolňování. Všimněte si, že popisovače samy o sobě nejsou vynuceno uvolnění paměti a jsou uvolněny už při použití v destruktoru `gcroot` třídy (Tento destruktor nelze volat ručně). Pokud vytvoříte instanci `gcroot` objektu na nativní haldě, je nutné volat odstranit na tento prostředek.
+Šablona `gcroot` je implementována pomocí zařízení třídy Value System:: Runtime:: InteropServices:: GCHandle, která poskytuje "Handles" do haldy uvolňování paměti. Všimněte si, že samotné popisovače nejsou sbírány do paměti a jsou uvolněny, pokud je již nepoužívá destruktor ve třídě `gcroot` (Tento destruktor nelze volat ručně). Pokud vytváříte instanci `gcroot` objektu na nativní haldě, je nutné volat metodu DELETE pro daný prostředek.
 
-Modul runtime bude udržovat spojení mezi popisovač a objekt CLR, který odkazuje. Přesun pomocí haldy uvolňování objektu CLR popisovač vrátí novou adresu objektu. Není potřeba připnout předtím, než je přiřazen k proměnné `gcroot` šablony.
+Modul runtime bude udržovat přidružení mezi popisovačem a objektem CLR, na který odkazuje. Když objekt CLR přesune s haldou uvolňování paměti, popisovač vrátí novou adresu objektu. Proměnnou není nutné připnout předtím, než je přiřazena k šabloně `gcroot`.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje, jak vytvořit `gcroot` objekt v nativní zásobníku.
+Tento příklad ukazuje, jak vytvořit objekt `gcroot` v nativním zásobníku.
 
-```
+```cpp
 // mcpp_gcroot.cpp
 // compile with: /clr
 #include <vcclr.h>
@@ -53,9 +53,9 @@ hello
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje, jak vytvořit `gcroot` objektu na nativní haldě.
+Tento příklad ukazuje, jak vytvořit objekt `gcroot` v nativní haldě.
 
-```
+```cpp
 // mcpp_gcroot_2.cpp
 // compile with: /clr
 // compile with: /clr
@@ -83,9 +83,9 @@ hello
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje způsob použití `gcroot` k udržení odkazů na typy hodnot (ne odkazové typy) v nativním typu pomocí `gcroot` na zabalený typ.
+Tento příklad ukazuje, jak použít `gcroot` pro blokování odkazů na typy hodnot (ne odkazových typů) v nativním typu pomocí `gcroot` na zabalený typ.
 
-```
+```cpp
 // mcpp_gcroot_3.cpp
 // compile with: /clr
 #include < vcclr.h >

@@ -9,33 +9,33 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50f40cc147daaa26a7fa4e607f0d4dd42cf22d61
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209188"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988666"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Volání nativních funkcí ze spravovaného kódu
 
-Modul common language runtime poskytuje platformu vyvolání služby nebo PInvoke, což umožňuje spravovat kód volat funkce jazyka C v nativní propojenými dynamickými knihovnami (DLL). Stejné zařazování dat se používá také u interoperabilita modelů COM s modulem runtime a pro mechanismus "Prostě to funguje" nebo IJW.
+Modul CLR (Common Language Runtime) poskytuje platformu vyvolání služby, jinak PInvoke, což umožňuje spravovat kód napsaný v jazyce C u volaných funkcí s nativně propojenými dynamickými knihovnami (DLL). Stejné zařazování dat se používá také u vzájemné funkční spolupráce modelu COM s modulem runtime a pro mechanismus "Prostě to funguje" nebo mechanismus IJW.
 
-Další informace naleznete v tématu:
+Další informace najdete v části .
 
 - [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
 - [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-Příklady v tomto oddíle ukazují jak `PInvoke` lze použít. `PInvoke` můžete zjednodušit vlastní zařazování dat, protože poskytnete zařazovací informace deklarativně v atributech namísto v ručně psaném kódu.
+Příklady v tomto oddíle ukazují, jak lez použít `PInvoke`. `PInvoke` umí zjednodušit vlastní zařazování dat, protože poskytnete zařazovací informace deklarativně v atributech namísto v ručně psaném kódu procesního zařazování.
 
 > [!NOTE]
->  Zařazovací knihovna poskytuje alternativní způsob zařazování dat mezi nativními a spravovanými prostředky optimalizované způsobem. Zobrazit [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md) Další informace o zařazovací knihovně. Knihovna zařazování je použitelná pouze pro data a ne pro funkce.
+>  Zařazovací knihovna poskytuje alternativní způsob optimálního zařazování dat mezi nativními a spravovanými prostředími. Další informace o zařazovací knihovně najdete [v C++ tématu Přehled zařazování](../dotnet/overview-of-marshaling-in-cpp.md) . Knihovna zařazování je použitelná pouze pro data, ne pro funkce.
 
-## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke a DllImport atribut
+## <a name="pinvoke-and-the-dllimport-attribute"></a>Atribut PInvoke a DllImport
 
-Následující příklad ukazuje použití `PInvoke` v programu v jazyce Visual C++. Nativní funkce vkládání je definována v souboru msvcrt.dll. Atribut DllImport se používá pro deklaraci vkládání.
+Následující příklad ukazuje použití `PInvoke` v programu napsaném v aplikaci Visual C++. Nativní funkce vkládání je definována v souboru msvcrt.dll. Atribut DllImport se používá pro deklaraci vkládání.
 
-```
+```cpp
 // platform_invocation_services.cpp
 // compile with: /clr
 using namespace System;
@@ -50,9 +50,9 @@ int main() {
 }
 ```
 
-Následující příklad je ekvivalentní k předchozímu příkladu, ale rozdílem použití IJW.
+Následující příklad je ekvivalentní k předchozímu příkladu, s rozdílem použití IJW.
 
-```
+```cpp
 // platform_invocation_services_2.cpp
 // compile with: /clr
 using namespace System;
@@ -71,29 +71,29 @@ int main() {
 
 ### <a name="advantages-of-ijw"></a>Výhody systému souborů IJW
 
-- Není nutné psát `DLLImport` atribut deklarace pro nespravovaná rozhraní API používá program. Obsahuje pouze hlavičku souboru a spojení s importovanou knihovnou.
+- Není nutné deklarovat atribut `DLLImport` pro nespravované rozhraní API, které program používá. Obsahuje pouze hlavičku souboru a spojení s importovanou knihovnou.
 
-- Mechanismus IJW je mírně rychlejší (například zástupné procedury IJW není nutné zjistit třeba PIN kód nebo kopírované datové položky, protože se explicitně provádí vývojář).
+- Mechanismus IJW je mírně rychlejší (například zástupné procedury IJW nepotřebují kontrolovat připnuté nebo kopírované datové položky, protože to explicitně provádí vývojář).
 
-- Jasně ukazuje problémy s výkonem. V tomto případě fakt, že provádíte převod Unicode řetězce na řetězec ANSI a máte odebrání dodatečné paměti přidělování a navracení zpět. V takovém případě by vývojář kód s pomocí IJW Uvědomte si, že volání `_putws` a pomocí `PtrToStringChars` by bylo lepší pro výkon.
+- To jasně ukazuje problémy s výkonem. V tomto případě fakt, že provádíte převod Unicode řetězce na řetězec ANSI a máte přidělení a odebrání dodatečné paměti. V tomto případě by vývojář píšící kód s pomocí IJW zjistil, že volání `_putws` a použití `PtrToStringChars` by bylo lepší pro výkon.
 
-- Pokud voláte mnoho nespravovaných API rozhraní používajících stejná data, provedení jednoho zařazení a předání zařazené kopie je mnohem efektivnější než provádění zařazení vždy znovu.
+- Pokud voláte mnoho nespravovaných API rozhraní používajících stejná data, je provedení jednoho zařazení a předání zařazené kopie mnohem efektivnější než provádění zařazení vždy znovu.
 
 ### <a name="disadvantages-of-ijw"></a>Nevýhody systému souborů IJW
 
-- Zařazování musí být zadané explicitně v kódu namísto pomocí atributů (které mají často vhodné výchozí nastavení).
+- Zařazování musí být zadané explicitně přímo v kódu namísto pomocí atributů (které mají často vhodné výchozí nastavení).
 
-- Kód zařazování je vloženě, kde je v toku aplikační logiky invazivnější.
+- Kód zařazování je vložen tam, kde je v toku aplikační logiky invazivnější.
 
-- Protože explicitní zařazování rozhraní API vrací `IntPtr` typy pro přenositelnost 32bitové na 64bitovou verzi, musíte použít další `ToPointer` volání.
+- Protože explicitní zařazování rozhraní API vrací typy `IntPtr` pro přenositelnost z 32bitové na 64bitovou verzi, musíte použít další volání `ToPointer`.
 
-Konkrétní metoda použitá v jazyce C++ je efektivnější, explicitní metoda, která za cenu některé další složitosti.
+Konkrétní metoda použitá v jazyce C++ je efektivnější, explicitní metoda, která má na druhou stranu některé další složitosti.
 
-Pokud aplikace používá převážně nespravované datové typy nebo pokud volá více nespravované rozhraní API než rozhraní API .NET Framework, doporučujeme použití funkce IJW. Kontaktování občasné nespravované rozhraní API ve většině spravovaných aplikacích je složitější.
+Pokud aplikace používá převážně nespravované datové typy nebo pokud volá více nespravované rozhraní API než rozhraní API .NET Framework, doporučujeme použití funkce IJW. Příležitostné volání nespravovaného API rozhraní ve většině spravovaných aplikacích je složitější.
 
-## <a name="pinvoke-with-windows-apis"></a>PInvoke pomocí rozhraní Windows API
+## <a name="pinvoke-with-windows-apis"></a>PInvoke pomocí rozhraní API systému Windows
 
-PInvoke je vhodné pro volání funkcí ve Windows.
+PInvoke je vhodné pro volání funkcí v systému Windows.
 
 V tomto příkladu spolupracuje program Visual C++ s funkcí MessageBox, která je součástí rozhraní API systému Win32.
 
@@ -113,28 +113,28 @@ int main() {
 }
 ```
 
-Výstupem je okno se zprávou, která má název PInvoke Test a obsahuje text Hello World!.
+Výstupem je okno se zprávou, které má název PInvoke Test a obsahuje text Hello World!.
 
-Zařazovací informace se také používá u PInvoke k vyhledávání funkcí v knihovně DLL. Na user32.dll není ve skutečnosti není funkce MessageBox ale CharSet = CharSet::Ansi umožňuje PInvoke použití ANSI verze namísto funkce, což je verze Unicode. Obecně doporučujeme používat Unicode verze nespravovaného rozhraní API, protože to eliminuje režie na překlad z nativního Unicode formátu řetězcových objektů rozhraní .NET Framework na ANSI.
+Informace zařazování se také používá u PInvoke k vyhledávání funkcí v knihovně DLL. V DLL knihovně user32.dll ve skutečnosti není funkce MessageBox ale CharSet = CharSet::Ansi, která umožňuje PInvoke použití ANSI verze funkce s názvem MessageBoxA místo Unicode verze funkce MessageBoxW. Obecně doporučujeme používat Unicode verze nespravovaného rozhraní API, protože to eliminuje režie na překlad z nativního Unicode formátu používaného u rozhraní .NET Framework na ANSI formát.
 
 ## <a name="when-not-to-use-pinvoke"></a>Kdy se nepoužívá PInvoke
 
-Pomocí služby PInvoke není vhodná pro všechny funkce jazyka C v knihovnách DLL. Předpokládejme například, že je funkce MakeSpecial v mylib.dll deklarována takto:
+PInvoke není vhodná pro všechny funkce jazyka C v knihovnách DLL. Předpokládejme, že je funkce MakeSpecial v DLL knihovně mylib.dll deklarována takto:
 
 `char * MakeSpecial(char * pszString);`
 
-Pokud používáme PInvoke v aplikaci Visual C++, pak doporučujeme psát podobný následujícímu:
+Pokud používáme PInvoke v aplikaci Visual C++, pak doporučujeme psát následující:
 
 ```cpp
 [DllImport("mylib")]
 extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
 ```
 
-Zde je, že nemůžeme odstranit paměť pro nespravovaný řetězec vrácený funkcí MakeSpecial. Jiné funkce volané prostřednictvím PInvoke vrací ukazatel na vnitřní vyrovnávací paměť, která nemá být odebrána uživatelem. V tomto případě použití funkce IJW je jasnou volbou.
+Zde je problémem to, že nemůžeme odstranit paměť pro nespravovaný řetězec vrácený funkcí MakeSpecial. Jiné funkce volané prostřednictvím PInvoke vrací ukazatel na vnitřní vyrovnávací paměť, která nemá být odebrána uživatelem. V tomto případe je použití funkce IJW jasnou volbou.
 
 ## <a name="limitations-of-pinvoke"></a>Omezení PInvoke
 
-Nelze vrátit stejný ukazatel z nativní funkce, který je předáván jako parametr. Pokud nativní funkce vrátí ukazatel, který byl zařazen do ní metodou PInvoke, může následovat poškození paměti a výjimek.
+Nemůžete vracet stejný ukazatel, který je předáván nativní funkci jako parametr. Pokud nativní funkce vrátí ukazatel, který byl zařazen metodou PInvoke, může následovat poškození paměti a výjimky.
 
 ```cpp
 __declspec(dllexport)
@@ -143,9 +143,9 @@ char* fstringA(char* param) {
 }
 ```
 
-Následující příklad ukazuje tento problém, a i v případě, že program může jevit jako správný, výstup přichází z uvolněné paměti.
+Následující příklad ukazuje tento problém, kdy přesto, že se zdá být výstup programu správný, výstup přichází z uvolněné paměti.
 
-```
+```cpp
 // platform_invocation_services_5.cpp
 // compile with: /clr /c
 using namespace System;
@@ -168,39 +168,39 @@ int main() {
 
 ## <a name="marshaling-arguments"></a>Argumenty zařazování
 
-S `PInvoke`, není nutné žádné zařazování mezi spravovanými a primitivními nativními C++ typy stejného formuláře. Například je žádné zařazování mezi Int32 a int nebo mezi Double a double.
+S `PInvoke` není nutné žádné zařazování mezi spravovanými a primitivními nativními typy jazyka C++ stejného formuláře. Například není požadováno žádné zařazování mezi Int32 a int nebo mezi Double a double.
 
-Musíte však zařazovat typy, které nemají stejnou formu. Jedná se o typy char, string a struct. V následující tabulce jsou uvedeny mapování používaná zařazováním pro různé typy:
+Musíte však zařazovat typy, které nemají stejnou formu. Jedná se o typy char, string a struct. V následující tabulce jsou uvedena mapování používaná zařazováním pro různé typy:
 
-|wtypes.h|Visual C++|Visual C++ s parametrem/CLR|Modul common language runtime|
+|wtypes.h|Visual C++ –|Visual C++ s /clr|Common language runtime|
 |--------------|------------------|-----------------------------|-----------------------------|
-|POPISOVAČ|Typ void \*|Typ void \*|IntPtr, UIntPtr|
+|POPISOVAČ|anulovat \*|anulovat \*|IntPtr, UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
-|KRÁTKÉ|short|short|Int16|
+|KRÁTKÝ|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
 |INT|int|int|Int32|
 |UINT|unsigned int|unsigned int|UInt32|
-|LONG|long|long|Int32|
-|BOOL|long|bool|Boolean|
+|DLOUHÝ|long|long|Int32|
+|LOGICK|long|bool|Boolean|
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPCSTR|Char \*|Řetězec ^ [in], StringBuilder ^ [v, out]|Řetězec ^ [in], StringBuilder ^ [v, out]|
-|LPCSTR|const char \*|Řetězec ^|String|
-|LPWSTR|wchar_t \*|Řetězec ^ [in], StringBuilder ^ [v, out]|Řetězec ^ [in], StringBuilder ^ [v, out]|
+|LPCSTR|znak \*|Řetězec ^ [in], StringBuilder ^ [in, out]|Řetězec ^ [in], StringBuilder ^ [in, out]|
+|LPCSTR|\* const char|Řetězec ^|String|
+|LPWSTR|wchar_t \*|Řetězec ^ [in], StringBuilder ^ [in, out]|Řetězec ^ [in], StringBuilder ^ [in, out]|
 |LPCWSTR|const wchar_t \*|Řetězec ^|String|
-|PLOVOUCÍ DESETINNOU ČÁRKOU|float|float|Single|
+|FLOAT|float|float|Jednoduché|
 |DOUBLE|double|double|Double|
 
 Zařazování automaticky připíná paměť přidělenou haldě modulu runtime, pokud je adresa předávána nespravované funkci. Připínání zabraňuje systému uvolňování paměti přesunout přidělený bloku paměti během komprimace.
 
-V příkladu zmíněném výše v tomto tématu určuje parametr CharSet parametru DllImport, jak spravované řetězce by měly být zařazeny; v takovém případě by měl být zařazen do řetězce ANSI na nativní straně.
+V příkladu zmíněném výše v tomto tématu určuje parametr CharSet parametru DllImport, jak by měly být zařazeny spravované řetězce; v tomto případě by měl být zařazen do řetězce ANSI na nativní straně.
 
-Můžete zadat zařazovací informace pro jednotlivé argumenty nativní funkce pomocí atributu MarshalAs. Existuje několik možností pro zařazování řetězce \* argument: BStr, ANSIBStr, TBStr, LPStr, LPWStr a LPTStr. Výchozí hodnota je LPStr.
+Můžete specifikovat zařazovací informace pro jednotlivé argumenty nativní funkce pomocí atributu MarshalAs. Existuje několik možností pro zařazování řetězce \* argument: BStr, ANSIBStr, TBStr, typem LPStr, LPWStr a LPTStr. Výchozí hodnota je LPStr.
 
-V tomto příkladu je řetězec zařazen jako dvoubajtový řetězec znaků Unicode, LPWStr. Výstupem je první písmeno Hello World! protože druhý bajt zařazeného řetězce je null a vloží interprety jako značku ukončení řetězce.
+V tomto příkladu je řetězec zařazen jako dvoubajtový Unicode řetězec znaků, LPWStr. Výstupem je první písmeno Hello World! vzhledem k tomu, že druhý bajt zařazeného řetězce má hodnotu null a přeloží tuto značku jako značku konce řetězce.
 
-```
+```cpp
 // platform_invocation_services_3.cpp
 // compile with: /clr
 using namespace System;
@@ -215,15 +215,15 @@ int main() {
 }
 ```
 
-Atribut MarshalAs je v oboru názvů System::Runtime:: InteropServices. Atribut lze použít s jinými datovými typy, jako je například pole.
+Atribut MarshalAs je v oboru názvů System::Runtime::InteropServices. Atribut lze použít s jinými datovými typy, jako jsou například pole (array).
 
-Jak je uvedeno výše v tomto tématu, zařazovací knihovna poskytuje novou, optimalizovanou metodu zařazování dat mezi nativními a spravovanými prostředími. Další informace najdete v tématu [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md).
+Jak bylo zmíněno výše v tomto tématu, zařazovací knihovna poskytuje novou, optimalizovanou metodu zařazování dat mezi nativními a spravovanými prostředky. Další informace najdete v tématu [Přehled zařazování v C++ ](../dotnet/overview-of-marshaling-in-cpp.md).
 
-## <a name="performance-considerations"></a>Faktory ovlivňující výkon
+## <a name="performance-considerations"></a>Možné problémy s výkonem
 
-PInvoke má režii mezi 10 a 30 x86 pokyny za volání. Vedle těchto pevně stanovených nákladů vytváří zařazování další režii. U přenositelných datových typů, které zabírají stejné množství spravovaného a nespravovaného kódu není žádné zařazovací náklady. Například je zdarma pro převod mezi int a Int32.
+PInvoke má režii mezi 10 a 30 x86 pokyny za volání. Vedle těchto pevně stanovených nákladů vytváří zařazování další režii. U přenositelných datových typů, které zabírají stejné množství spravovaného a nespravovaného kódu, nejsou žádné zařazovací náklady. Například převod mezi int a Int32 je bez nákladů.
 
-Pro zajištění lepšího výkonu máte méně volání PInvoke, která zařazují pro množství dat nejdříve, než více volání, která zařazují pro každé volání méně údajů.
+Pro lepší výkon je vhodnější mít méně volání PInvoke, která zařazují největší možné množství údajů, než více volání, která zařazují pro každé volání méně údajů.
 
 ## <a name="see-also"></a>Viz také:
 

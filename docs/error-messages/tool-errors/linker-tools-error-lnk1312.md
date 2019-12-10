@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-ms.openlocfilehash: 49fa7e7963d6bb561e1602b58fe1f26c5f3d54bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e462d24f2eb54718ba73617146aab96bb14a66df
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160468"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990903"
 ---
 # <a name="linker-tools-error-lnk1312"></a>Chyba linkerů LNK1312
 
-soubor je neplatný nebo poškozený: nelze importovat sestavení
+soubor je neplatný nebo poškozený: nejde importovat sestavení.
 
-Při sestavování sestavení, soubor než modul nebo sestavení zkompilovaná **/CLR** byl předán **/ASSEMBLYMODULE** – možnost linkeru.  Pokud jste předali soubor objektu do **/ASSEMBLYMODULE**, stačí pouze předat objekt přímo do linkeru, místo na **/ASSEMBLYMODULE**.
+Při sestavování sestavení je do Možnosti linkeru **/ASSEMBLYMODULE** předán jiný soubor než modul nebo sestavení kompilovaný s **/CLR** .  Pokud jste předali soubor objektu do **/ASSEMBLYMODULE**, stačí objekt předat přímo linkeru namísto **/ASSEMBLYMODULE**.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad vytvoří soubor .obj.
+Následující ukázka vytvořila soubor. obj.
 
-```
+```cpp
 // LNK1312.cpp
 // compile with: /clr /LD
 public ref class A {
@@ -34,9 +34,9 @@ public:
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje LNK1312.
+Následující ukázka generuje LINKERŮ LNK1312.
 
-```
+```cpp
 // LNK1312_b.cpp
 // compile with: /clr /LD /link /assemblymodule:LNK1312.obj
 // LNK1312 error expected

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování řetězců ANSI pomocí zprostředkovatele komunikace C++'
+title: 'Postupy: Zařazování řetězců v kódu ANSI pomocí zprostředkovatele komunikace C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - C++ Interop, strings
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6987b23311354cfe6fd095e0e811d043e9b9692e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345755"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988466"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Postupy: Zařazování řetězců ANSI pomocí zprostředkovatele komunikace C++
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Postupy: Zařazování řetězců v kódu ANSI pomocí zprostředkovatele komunikace C++
 
-Toto téma ukazuje, jak mohou být řetězce ANSI předaným pomocí zprostředkovatele komunikace C++, ale rozhraní .NET Framework <xref:System.String> představuje řetězce ve formátu Unicode, takže je převod na ANSI přidat další krok. Spolupráce s jinými typy řetězce, naleznete v následujících tématech:
+Toto téma ukazuje, jak lze řetězce ANSI předat pomocí C++ technologie interoperability, ale .NET Framework <xref:System.String> představuje řetězce ve formátu Unicode, takže převod na ANSI je další krok. Pro spolupráci s jinými typy řetězců, přečtěte si následující témata:
 
 - [Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [Postupy: Zařazování řetězců modelu COM pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
-Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma implementace spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Protože soubory, které obsahují pouze nespravované funkce nemusí být zkompilovány s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), mohou si zachovat jejich výkonnostní charakteristice.
+Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma pro implementaci spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Vzhledem k tomu, že soubory obsahující pouze nespravované funkce není nutné kompilovat s možností [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), mohou zachovat jejich charakteristiky výkonu.
 
 ## <a name="example"></a>Příklad
 
-Příklad ukazuje předávání řetězce ANSI ze spravované na nespravované funkce pomocí <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Tato metoda přidělí paměť v nespravované haldě a vrátí adresu, po provedení převodu. To znamená, že není nutné zakázat připínání, (protože paměti v haldě GC. není předána nespravovanou funkci) a že IntPtr vrácená <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> musí být explicitně uvolněn nebo únik paměti.
+Příklad ukazuje předání řetězce ANSI ze spravovaného do nespravované funkce pomocí <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Tato metoda přiděluje paměť na nespravovanou haldě a vrátí adresu po provedení převodu. To znamená, že není nutné žádné připnutí (protože paměť v haldě GC není předávána do nespravované funkci) a že IntPtr, který je vrácený <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>, musí být explicitně vydán nebo jsou vráceny výsledky nevracení paměti.
 
-```
+```cpp
 // MarshalANSI1.cpp
 // compile with: /clr
 #include <iostream>
@@ -62,9 +62,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje zařazování dat, které se vyžadují pro přístup k řetězci ANSI ve spravované funkci, která je volána metodou nespravované funkci. Spravované funkce při přijetí nativní řetězec, můžete použít přímo nebo ho převést na spravované řetězce pomocí <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> způsob, jak je znázorněno.
+Následující příklad ukazuje zařazování dat potřebné pro přístup k řetězci ANSI ve spravované funkci, která je volána nespravovanou funkcí. Spravovaná funkce, při přijetí nativního řetězce, ji může buď použít přímo, nebo ji převést na spravovaný řetězec pomocí metody <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>, jak je znázorněno na obrázku.
 
-```
+```cpp
 // MarshalANSI2.cpp
 // compile with: /clr
 #include <iostream>

@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: be75ec497dff79d75c22bda3b7d24389db2c9c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153232"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988118"
 ---
-# <a name="lockwhen-enum"></a>lock_when – výčet
+# <a name="lock_when-enum"></a>lock_when – výčet
 
-Určuje odložené uzamčení.
+Určuje odložené zamykání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,13 +30,13 @@ enum lock_when {
 
 ## <a name="remarks"></a>Poznámky
 
-Když předána [lock::lock](../dotnet/lock-lock.md), `lock_later` Určuje, že zámek není nyní provést.
+Když se předáte do [zámku:: Lock](../dotnet/lock-lock.md), `lock_later` určí, že zámek nebude nyní vybraný.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad používá jednu instanci třídy napříč více vlákny.  K zajištění, že jsou přístupy k jeho vnitřní data konzistentní vzhledem k aplikacím pro každé vlákno používá třídu zámek na sobě.  Hlavního vlákna aplikace používá zámek na stejnou instanci třídy, aby pravidelně kontrolovaly, zda stále existují jakékoli pracovní vlákna a čekání na ukončení až do všech pracovních vláken dokončení jejich úloh.
+Tento příklad používá jednu instanci třídy napříč více vlákny.  Třída používá zámek sebe sama k zajištění toho, aby přístup k vnitřním datům odpovídal pro každé vlákno.  Hlavní vlákno aplikace používá zámek na stejné instanci třídy, aby pravidelně kontroloval, zda nějaká pracovní vlákna stále existují, a čeká na ukončení, dokud všechna pracovní vlákna nedokončí své úkoly.
 
-```
+```cpp
 // msl_lock_lock_when.cpp
 // compile with: /clr
 #include <msclr/lock.h>
@@ -124,9 +124,9 @@ All threads completed.
 
 ## <a name="requirements"></a>Požadavky
 
-**Soubor hlaviček** \<msclr\lock.h >
+**Hlavičkový soubor** \<msclr\lock.h >
 
-**Namespace** msclr –
+Msclr – **oboru názvů**
 
 ## <a name="see-also"></a>Viz také:
 

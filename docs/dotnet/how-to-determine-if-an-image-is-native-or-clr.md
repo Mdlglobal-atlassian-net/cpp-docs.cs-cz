@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Určit, pokud je bitová kopie nativní nebo CLR'
+title: 'Postupy: Určení, zda je bitová kopie nativní nebo CLR'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5149440e172b764278c5ee816827c2d13e2b4c0e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387341"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988505"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Postupy: Určit, pokud je bitová kopie nativní nebo CLR
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Postupy: Určení, zda je bitová kopie nativní nebo CLR
 
-Jeden ze způsobů, jak určit, jestli obrázek je vytvořený právě pro modul common language runtime, je použít **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).
+Jedním ze způsobů, jak určit, jestli se obrázek vytvořil pro modul CLR (Common Language Runtime), je použití **DUMPBIN**[/CLRHEADER](../build/reference/clrheader.md).
 
-Můžete také programově ověřit, zda byla vytvořena image pro modul common language runtime. Další informace najdete v tématu [jak: Zjišťování kompilace/CLR](../dotnet/how-to-detect-clr-compilation.md).
+Můžete také programově ověřit, zda byla image vytvořena pro modul CLR (Common Language Runtime). Další informace najdete v tématu [Postup: Rozpoznání kompilace/CLR](../dotnet/how-to-detect-clr-compilation.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad určuje, zda byla vytvořena image pro spuštění na modulu common language runtime.
+Následující příklad určuje, zda byl obrázek vytvořen pro spuštění v modulu CLR (Common Language Runtime).
 
-```
+```cpp
 // detect_image_type.cpp
 // compile with: /clr
 using namespace System;

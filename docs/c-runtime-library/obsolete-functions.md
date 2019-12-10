@@ -1,6 +1,7 @@
 ---
 title: Zastaralé funkce
-ms.date: 01/22/2019
+description: Obsahuje seznam zastaralých funkcí, které jsou zastaralé a odebrané z knihovny Microsoft C Runtime Library (CRT).
+ms.date: 12/09/2019
 api_name:
 - _beep
 - _sleep
@@ -53,16 +54,16 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c913e44a4f0d06813e877645bd01855baa6fd4dc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940143"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988781"
 ---
 # <a name="obsolete-functions"></a>Zastaralé funkce
 
-Některé funkce knihovny jsou zastaralé a mají novější ekvivalenty. Doporučujeme, abyste je změnili na aktualizované verze. Jiné zastaralé funkce byly odebrány z CRT. Toto téma obsahuje seznam funkcí, které jsou zastaralé jako zastaralé, a funkce odebrané v konkrétní verzi sady Visual Studio.
+Některé funkce knihovny jsou zastaralé a mají novější ekvivalenty. Tyto funkce doporučujeme změnit na aktualizované verze. Jiné zastaralé funkce byly odebrány z CRT. Tento článek obsahuje seznam funkcí, které jsou zastaralé jako zastaralé, a funkce odebrané v konkrétní verzi sady Visual Studio.
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Zastaralé jako zastaralé v aplikaci Visual Studio 2015
 
@@ -87,10 +88,8 @@ Některé funkce knihovny jsou zastaralé a mají novější ekvivalenty. Doporu
 |[_get_output_format](../c-runtime-library/get-output-format.md)|Žádné|
 |[_heapadd](../c-runtime-library/heapadd.md)|Žádné|
 |[_heapset](../c-runtime-library/heapset.md)|Žádné|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Žádné|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Žádné|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Žádné|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Žádné|
+|[INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Žádné|
+|[outp, outpw, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Žádné|
 |[_set_output_format](../c-runtime-library/set-output-format.md)|Žádné|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Odebráno z CRT v dřívějších verzích sady Visual Studio

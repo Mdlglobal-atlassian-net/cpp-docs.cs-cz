@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování polí pomocí interoperability C++'
+title: 'Postupy: Zařazování polí pomocí zprostředkovatele komunikace C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fddb8b4fa645d6fee3597d098fc67a3006603b9f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324919"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988198"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>Postupy: Zařazování polí pomocí interoperability C++
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Postupy: Zařazování polí pomocí zprostředkovatele komunikace C++
 
-Toto téma popisuje jeden aspekt vzájemná funkční spolupráce jazyka Visual C++. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Toto téma ukazuje jednu omezující vlastnost interoperability vizuálů C++ . Další informace najdete v tématu [použití C++ zprostředkovatele komunikace (implicitní PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma implementace spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Soubory, které obsahují pouze nespravované funkce nemusí být kompilována s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma pro implementaci spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Soubory obsahující pouze nespravované funkce není nutné kompilovat s možností [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak předat spravovaného pole nespravované funkci. Spravované funkce používá [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) potlačit uvolnění pro pole před voláním nespravované funkci. Poskytnutím nespravovanou funkci s připnutou ukazatel do haldy uvolňování paměti se lze vyvarovat nároky na vytvoření kopie pole. K prokázání, že nespravovanou funkci je přístup k paměti haldy uvolňování paměti, upraví obsah pole a změny se projeví při spravované funkce obnoví ovládací prvek.
+Následující příklad ukazuje, jak předat spravované pole nespravované funkci. Spravovaná funkce používá [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) pro potlačení uvolňování paměti pro pole před voláním nespravované funkce. Poskytnutím nespravované funkce s připnutém ukazatelem do haldy GC je možné vyhnout se režii při vytváření kopie pole. Chcete-li předvést, že nespravovanou funkci přistupuje k paměti haldy GC, upraví obsah pole a změny se projeví, když spravovaná funkce obnoví kontrolu.
 
-```
+```cpp
 // PassArray1.cpp
 // compile with: /clr
 #ifndef _CRT_RAND_S
@@ -83,9 +83,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, předá pole nespravované na spravované funkce. Spravované funkce nemá přístup k paměti pole přímo (na rozdíl od vytvoření spravovaného pole a kopírování obsahu pole), což umožní změny provedené ve spravované funkce projeví v nespravované funkci po získání dostatečného množství ovládacího prvku.
+Následující příklad ukazuje předání nespravovaného pole do spravované funkce. Spravovaná funkce přistupuje k paměti pole přímo (na rozdíl od vytvoření spravovaného pole a zkopírování obsahu pole), který umožňuje, aby se změny provedené spravovanou funkcí projevily v nespravované funkci při opětovném získání ovládacího prvku.
 
-```
+```cpp
 // PassArray2.cpp
 // compile with: /clr
 #include <iostream>

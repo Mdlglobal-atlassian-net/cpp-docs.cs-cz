@@ -1,17 +1,17 @@
 ---
 title: PROTO
-ms.date: 10/22/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROTO
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 9df66b6c89498a2cc1a1864a668b7addfbaf593c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394759"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987867"
 ---
 # <a name="proto"></a>PROTO
 
@@ -26,10 +26,10 @@ Vytvoří prototypy funkce nebo procedury. Můžete zavolat funkci, kterou proto
 \ *popisku*
 Název prototypované funkce.
 
-\ *vzdálenosti*
+*Distance* (jenom 32-bit MASM) \
 Volitelné Používá se v 16bitových modelech paměti k přepsání výchozí hodnoty a označení **blízko** nebo **daleko** volání.
 
-\ *typu jazyka*
+*typ jazyka* (jenom 32-bit MASM) \
 Volitelné Nastaví konvenci volání a pojmenování pro procedury a veřejné symboly. Podporované konvence:
 
 - 32 bitová **plochý** model: **C**, **STDCALL**

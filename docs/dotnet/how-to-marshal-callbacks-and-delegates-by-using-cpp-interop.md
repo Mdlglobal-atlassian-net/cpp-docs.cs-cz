@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování zpětných volání a delegátů pomocí zprostředkovatele komunikace C++'
+title: 'Postupy: Zařazování zpětných volání a delegátů pomocí funkcí interoperability C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 592eae0ff59baddb79b810d46669b78ecc801155
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344960"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988187"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Postupy: Zařazování zpětných volání a delegátů pomocí zprostředkovatele komunikace C++
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Postupy: Zařazování zpětných volání a delegátů pomocí funkcí interoperability C++
 
-Toto téma ukazuje zařazování zpětných volání a delegátů (spravovaná verze zpětné volání) mezi spravovaným a nespravovaným kódem pomocí jazyka Visual C++.
+Toto téma ukazuje Zařazování zpětných volání a delegátů (spravované verze zpětného volání) mezi spravovaným a nespravovaným kódem C++pomocí vizuálu.
 
-Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma implementace spravovaných a nespravovaných funkcí ve stejném souboru, ale funkce mohou být také definovány v samostatných souborech. Soubory, které obsahují pouze nespravované funkce nemusí být kompilována s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma pro implementaci spravovaných a nespravovaných funkcí ve stejném souboru, ale funkce lze také definovat v samostatných souborech. Soubory obsahující pouze nespravované funkce není nutné kompilovat s možností [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat nespravovaného rozhraní API pro spuštění spravovaného delegáta. Vytvořili spravovaných delegáta a jednu z metod interoperability <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, slouží k načtení základní vstupní bod pro delegáta. Tato adresa je pak předán nespravovanou funkci, která volá bez znalosti skutečnost, že je implementovaný jako spravované funkce.
+Následující příklad ukazuje, jak nakonfigurovat nespravované rozhraní API pro aktivaci spravovaného delegáta. Je vytvořen spravovaný delegát a jedna z metod spolupráce, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, slouží k načtení základního vstupního bodu pro delegáta. Tato adresa je pak předána nespravované funkci, která ji volá bez vědomí faktu, že je implementována jako spravovaná funkce.
 
-Všimněte si, že je to možné, ale není nezbytné, PIN kód delegáta pomocí [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) zabránit, aby ji znovu umístěný nebo odstraněny pomocí systému uvolňování paměti. Ochrana před předčasné uvolňování paměti je potřeba, ale připnutí poskytuje větší ochranu než je nezbytné, protože brání kolekce, ale také zabraňuje přemístění.
+Všimněte si, že je to možné, ale není nutné připnout delegáta pomocí [pin_ptrC++(/CLI)](../extensions/pin-ptr-cpp-cli.md) a zabránit tak jeho opětovnému umístění nebo likvidaci systémem uvolňování paměti. Ochrana proti předčasnému uvolňování paměti je nutná, ale připnutí poskytuje větší ochranu, než je nutné, protože brání v kolekci, ale také zabraňuje přemístění.
 
-Pokud delegát je přemístěn podle kolekce uvolnění paměti, nebude to mít vliv podkladové zpětné volání, takže <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> se používá k přidání odkazu na delegáta, což přemístění delegáta, ale brání vyřazení. Popisovač GCHandle místo pin_ptr snižuje potenciální fragmentace spravované haldy.
+Pokud je delegát znovu umístěn v uvolňování paměti, nebude mít vliv na spravované zpětné volání, takže <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> slouží k přidání odkazu na delegáta, který umožňuje přemístění delegáta, ale brání vyřazení. Použití GCHandle místo pin_ptr redukuje potenciál fragmentace spravované haldy.
 
-```
+```cpp
 // MarshalDelegate1.cpp
 // compile with: /clr
 #include <iostream>
@@ -79,9 +79,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad je podobný jako předchozí příklad, ale v tomto případě je poskytnutý ukazatel funkce se ukládá pomocí nespravovaného rozhraní API, tak může být vyvolán v každém okamžiku vyžadující, že uvolňování paměti potlačit u libovolné délky času. V důsledku toho následující příklad používá globální instanci <xref:System.Runtime.InteropServices.GCHandle> zabránit delegáta přemístění, nezávisle na rozsah funkce. Jak je popsáno v prvním příkladu, pomocí pin_ptr není nutný pro tyto příklady, ale v takovém případě nebude fungovat i přesto, jako rozsah pin_ptr je omezen na jedinou funkci.
+Následující příklad je podobný předchozímu příkladu, ale v tomto případě je poskytnutý ukazatel na funkci uložen pomocí nespravovaného rozhraní API, takže jej lze vyvolat kdykoli, což vyžaduje, aby se uvolňování paměti potlačilo na libovolnou dobu. V důsledku toho následující příklad používá globální instanci <xref:System.Runtime.InteropServices.GCHandle> k tomu, aby se zabránilo přemístění delegáta, nezávisle na rozsahu funkce. Jak je popsáno v prvním příkladu, použití pin_ptr je pro tyto příklady zbytečné, ale v tomto případě by nefungovalo, protože rozsah pin_ptr je omezený na jedinou funkci.
 
-```
+```cpp
 // MarshalDelegate2.cpp
 // compile with: /clr
 #include <iostream>

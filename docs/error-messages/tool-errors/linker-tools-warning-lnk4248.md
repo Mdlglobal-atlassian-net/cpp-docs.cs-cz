@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: db9432c505b7348c9bef5ed34aac1cb4edecb17b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352515"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988096"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>Upozornění linkerů LNK4248
 
-Nerozpoznaný token typeref (token) pro 'type'; bitové kopie se možná nespustí.
+Nerozpoznaný token TypeRef (token) pro typ Image se možná nespustí.
 
-Typ nemá definici v metadatech jazyka MSIL.
+Typ nemá v metadatech MSIL definici.
 
-LNK4248 může dojít, když je Dopředná deklarace pro typ v modulu jazyka MSIL (zkompilovaná **/CLR**), kde se v modulu jazyka MSIL odkazuje typ a modul MSIL je propojena s nativní modul, který obsahuje definici pro typ.
+LINKERŮ LNK4248 může nastat, pokud je k dispozici pouze Dopředná deklarace pro typ v modulu MSIL (zkompilovaný s **/CLR**), kde je typ odkazován v modulu MSIL a kde je modul MSIL propojený s nativním modulem, který má definici pro daný typ.
 
-V takovém případě linkeru poskytne definici nativního typu v metadatech jazyk MSIL a to může poskytnout pro správné fungování.
+V této situaci linker poskytne definici nativního typu v metadatech MSIL a to může být pro správné chování.
 
-Nicméně pokud deklarace dopředu typu je typ CLR, pak propojovacího programu nativní typ definice nemusí být správný
+Pokud je však deklarace dopředné typu typu CLR, pak definice nativního typu linkeru nemusí být správná.
 
-Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Zadejte definici typu v modulu jazyka MSIL.
+1. Zadejte definici typu v modulu MSIL.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje LNK4248. Definujte strukturu A vyřešit.
+Následující ukázka generuje LINKERŮ LNK4248. Definujte strukturu A, která se má vyřešit.
 
-```
+```cpp
 // LNK4248.cpp
 // compile with: /clr /W1
 // LNK4248 expected
@@ -49,9 +49,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad obsahuje dopředné definici typu.
+Následující ukázka má dopřednou definici typu.
 
-```
+```cpp
 // LNK4248_2.cpp
 // compile with: /clr /c
 class A;   // provide a definition for A here to resolve
@@ -66,9 +66,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje LNK4248.
+Následující ukázka generuje LINKERŮ LNK4248.
 
-```
+```cpp
 // LNK4248_3.cpp
 // compile with: /c
 // post-build command: link LNK4248_2.obj LNK4248_3.obj

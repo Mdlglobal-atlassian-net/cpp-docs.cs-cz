@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: 299c3ef76006b347d6770d45ca317ff0eb941ffa
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: fb355b6d004d9488abac89ef44c9ec38c791ffda
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630807"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988036"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Upozornění linkerů LNK4221
 
@@ -19,12 +19,12 @@ Tento soubor objektu nedefinuje žádné dříve nedefinované veřejné symboly
 
 Vezměte v úvahu následující dva fragmenty kódu.
 
-```
+```cpp
 // a.cpp
 #include <atlbase.h>
 ```
 
-```
+```cpp
 // b.cpp
 #include <atlbase.h>
 int function()
@@ -39,13 +39,13 @@ V druhém scénáři není vydáno žádné upozornění, protože linker funguj
 
 ::: moniker range=">=vs-2019"
 
-Obvyklou příčinou této chyby je, že dva zdrojové soubory určují možnost [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) se stejným názvem souboru hlaviček, který je zadaný v poli Předkompilovaná **Hlavička** . Obvyklou příčinou tohoto problému je soubor *PCH. h* , protože ve výchozím nastavení soubor *PCH. cpp* obsahuje soubor *PCH. h* a nepřidává žádné nové symboly. Pokud jiný zdrojový soubor obsahuje *PCH. h* s **/YC** a přidružený soubor. obj je zpracován před souborem PCH. obj, linker vyvolá linkerů LNK4221.
+Obvyklou příčinou této chyby je, že dva zdrojové soubory určují možnost [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) se stejným názvem souboru hlaviček, který je zadaný v poli **Předkompilovaná hlavička** . Obvyklou příčinou tohoto problému je soubor *PCH. h* , protože ve výchozím nastavení soubor *PCH. cpp* obsahuje soubor *PCH. h* a nepřidává žádné nové symboly. Pokud jiný zdrojový soubor obsahuje *PCH. h* s **/YC** a přidružený soubor. obj je zpracován před souborem PCH. obj, linker vyvolá linkerů LNK4221.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Obvyklou příčinou této chyby je, že dva zdrojové soubory určují možnost [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) se stejným názvem souboru hlaviček, který je zadaný v poli Předkompilovaná **Hlavička** . Obvyklou příčinou tohoto problému je soubor stdafx *. h* , protože ve výchozím nastavení obsahuje *stdafx* . h a nepřidává žádné nové symboly. Pokud jiný zdrojový soubor obsahuje *stdafx. h* s **/YC** a přidružený soubor. obj je zpracován před stdafx. obj, linker vyvolá linkerů LNK4221.
+Obvyklou příčinou této chyby je, že dva zdrojové soubory určují možnost [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) se stejným názvem souboru hlaviček, který je zadaný v poli **Předkompilovaná hlavička** . Obvyklou příčinou tohoto problému je soubor stdafx *. h* , protože ve výchozím nastavení obsahuje *stdafx* *. h a* nepřidává žádné nové symboly. Pokud jiný zdrojový soubor obsahuje *stdafx. h* s **/YC** a přidružený soubor. obj je zpracován před stdafx. obj, linker vyvolá linkerů LNK4221.
 
 ::: moniker-end
 

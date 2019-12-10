@@ -1,6 +1,7 @@
 ---
 title: Kompatibilita
-ms.date: 11/04/2016
+description: Popisuje kompatibilitu knihovny Microsoft Universal C Runtime Library (UCRT) se standardní knihovnou C, POSIX, s bezpečnými CRT a aplikacemi pro Store.
+ms.date: 12/06/2019
 f1_keywords:
 - c.programs
 helpviewer_keywords:
@@ -8,32 +9,32 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: 5e9d2edca8da128343bd14ea86a8c1c0023a244b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446666"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988725"
 ---
 # <a name="compatibility"></a>Kompatibilita
 
-Univerzální knihovna C Run-Time (UCRT) podporuje většinu standardní knihovny jazyka C vyžaduje pro přizpůsobení C++. Implementuje knihovny C99 (ISO/IEC 9899:1999), s výjimkou makra obecný typ definovaný v \<tgmath.h > a kompatibility přísného typu v \<complex.h >. UCRT také implementuje velká podmnožina POSIX.1 (ISO/IEC 9945-1:1996 POSIX systému Application Program Interface) knihovny jazyka C, ale není plně splňující podmínky pro žádné konkrétní standard POSIX.  Kromě toho UCRT implementuje několik specifických pro společnost Microsoft funkcemi a makry, které nejsou součástí standardního.
+Knihovna UCRT (Universal C Run-Time Library) podporuje většinu standardní knihovny jazyka C, která je C++ požadována pro shodu. Implementuje knihovnu C99 (ISO/IEC 9899:1999) s určitými výjimkami: typ – obecná makra definovaná v \<tgmath. h > a striktní kompatibilita typů v \<Complex. h >. UCRT také implementuje velkou podmnožinu knihovny C. 1 (ISO/IEC 9945-1:1996, rozhraní systémové aplikace systému POSIX). Není ale plně v souladu s žádným konkrétním standardem POSIX. UCRT také implementuje několik funkcí a maker specifických pro společnost Microsoft, které nejsou součástí standardu.
 
-Funkce specifické pro implementaci Microsoft Visual C++ se nacházejí v knihovně vcruntime.  Mnohé z těchto funkcí jsou pro interní použití a nemůže být volané kódem uživatele. Některé jsou popsány pro použití v ladění a provádění kompatibility.
+Funkce specifické pro implementaci vizuálu C++ od Microsoftu se nacházejí v knihovně vcruntime.  Mnohé z těchto funkcí jsou pro interní použití a nemohou být volány uživatelským kódem. Některé jsou popsané pro použití při kompatibilitě ladění a implementace.
 
-Standard jazyka C++ vyhrazuje názvy začínající podtržítkem v globálním oboru názvů pro implementaci. Protože funkce POSIX v globálním oboru názvů, ale nejsou součástí standardní knihovny runtime jazyka C, implementace specifické pro společnost Microsoft tyto funkce mají úvodní podtržítka. Pro přenositelnost UCRT také podporuje výchozí názvy, ale Microsoft C++ kompilátor vyvolá upozornění zastarání při kompilaci kódu, který je využívá. Pouze výchozí POSIX – názvy jsou zastaralé, není funkce. Chcete-li potlačit upozornění, definujte `_CRT_NONSTDC_NO_WARNINGS` před zahrnutím záhlaví v kódu, který používá původní názvy POSIX.
+C++ Standardní rezervuje názvy, které začínají podtržítkem v globálním oboru názvů pro implementaci. Funkce subsystému POSIX i funkce knihovny modulu runtime specifické pro společnost Microsoft jsou v globálním oboru názvů, ale nejsou součástí standardní běhové knihovny jazyka C. To je důvod, proč preferované implementace těchto funkcí od Microsoftu mají počáteční podtržítko. Pro přenositelnost UCRT podporuje také výchozí názvy, ale kompilátor Microsoftu C++ vydá upozornění na vyřazení, když je kód, který je používá, zkompilován. Pouze výchozí názvy jsou zastaralé, nikoli samotné funkce. Chcete-li potlačit upozornění, definujte `_CRT_NONSTDC_NO_WARNINGS` před zahrnutím jakýchkoli hlaviček v kódu, který používá původní názvy POSIX.
 
-Některé funkce standardní knihovny jazyka C mít historii nebezpečné používání z důvodu nesprávně použitý parametry a vyrovnávací paměti není zaškrtnuto. Tyto funkce jsou často zdroj bezpečnostní problémy v kódu. Microsoft vytvořil sadu bezpečnější verze těchto funkcí, které ověřte použití parametrů a vyvolat obslužnou rutinu neplatného parametru, když se zjistí problém v době běhu.  Ve výchozím nastavení, Microsoft C++ kompilátor vyvolá upozornění vyřazení když se používá funkce, která má k dispozici bezpečnější variantu. Při kompilaci kódu jako C++ můžete definovat `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1, chcete-li odstranit většinu upozornění. Tento mechanismus využívá přetížení šablon k volání bezpečnější varianty při zachování přenosné zdrojového kódu. Chcete-li potlačit upozornění, definujte `_CRT_SECURE_NO_WARNINGS` před zahrnutím záhlaví v kódu, který používá tyto funkce. Další informace najdete v tématu [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md).
+Některé funkce v standardní knihovně jazyka C mají historii nebezpečného použití z důvodu nepoužívaných parametrů a nezaškrtnutých vyrovnávacích pamětí. Tyto funkce jsou často zdrojem potíží se zabezpečením v kódu. Společnost Microsoft vytvořila sadu bezpečnějších verzí těchto funkcí, které ověřují použití parametrů. Vyvolá neplatnou obslužnou rutinu parametru, když je zjištěn problém za běhu.  Ve výchozím nastavení kompilátor Microsoftu C++ vydá upozornění na vyřazení při použití funkce, která má k dispozici bezpečnější variantu. Při kompilování kódu jako C++můžete definovat `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1 pro odstranění většiny upozornění. Toto makro umožňuje přetížení šablony volat bezpečnější varianty při zachování přenosného zdrojového kódu. Chcete-li potlačit upozornění, definujte `_CRT_SECURE_NO_WARNINGS` před zahrnutím jakýchkoli hlaviček v kódu, které tyto funkce používají. Další informace najdete v tématu [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md).
 
-S výjimkou toho, jak je uvedeno v dokumentaci pro konkrétní funkce, je kompatibilní s rozhraním API pro Windows UCRT.  Některé funkce nejsou podporovány v aplikacích pro Windows 8 Store nebo v aplikacích pro univerzální platformu Windows (UPW) na Windows 10. Tyto funkce jsou uvedeny v [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md), což vytvoří výčet funkce není podporována modulem Windows Runtime a [UPW](/uwp).
+S výjimkou případů uvedených v dokumentaci pro konkrétní funkce je UCRT kompatibilní s rozhraním API systému Windows.  Některé funkce nejsou podporované v aplikacích pro Windows Store nebo Univerzální platforma Windows ([UWP](/uwp)). Tyto funkce jsou uvedené ve [funkcích CRT, které nejsou podporované v aplikacích Univerzální platforma Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="related-articles"></a>Související články
 
 |Název|Popis|
 |-----------|-----------------|
-|[Aplikace pro UPW, prostředí Windows Runtime a knihovna CRT (C Run-Time)](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Popisuje, pokud rutiny UCRT nejsou kompatibilní s Universal Windows apps nebo Microsoft Store aplikace.|
-|[Kompatibilita s ANSI C](../c-runtime-library/ansi-c-compliance.md)|Popisuje, CLS standardní pojmenování v UCRT.|
-|[UNIX](../c-runtime-library/unix.md)|Obsahuje pokyny pro přenesení aplikací do systému UNIX.|
-|[Platformy systému Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Seznam operačních systémů, které jsou podporuje CRT.|
-|[Zpětná kompatibilita](../c-runtime-library/backward-compatibility.md)|Popisuje, jak namapovat staré názvy CRT na nové značky.|
-|[Funkce knihovny CRT](../c-runtime-library/crt-library-features.md)|Poskytuje přehled o soubory CRT knihovny (.lib) a možnosti kompilátoru přidružené.|
+|[Aplikace pro UPW, prostředí Windows Runtime a knihovna CRT (C Run-Time)](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Popisuje, pokud nejsou rutiny UCRT kompatibilní s univerzálními aplikacemi pro Windows nebo s aplikacemi Microsoft Store.|
+|[Kompatibilita s ANSI C](../c-runtime-library/ansi-c-compliance.md)|Popisuje názvy kompatibilní se standardem UCRT.|
+|[UNIX](../c-runtime-library/unix.md)|Poskytuje pokyny pro přenos programů do systému UNIX.|
+|[Platformy systému Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Zobrazuje seznam operačních systémů, které podporuje CRT.|
+|[Zpětná kompatibilita](../c-runtime-library/backward-compatibility.md)|Popisuje, jak namapovat staré názvy CRT na nové.|
+|[Funkce knihovny CRT](../c-runtime-library/crt-library-features.md)|Poskytuje přehled souborů knihovny CRT (. lib) a přidružených možností kompilátoru.|

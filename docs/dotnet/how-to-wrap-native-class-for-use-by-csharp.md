@@ -1,25 +1,25 @@
 ---
-title: 'Postupy: Zabalení nativních tříd pro použitíC#'
+title: 'Postupy: Zabalení nativních tříd pro použití v jazyce C#'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65a1b11578565e08f0be7aa04f96d3da4cbfbf7a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387120"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988123"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Postupy: Zabalení nativních tříd pro použitíC#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Postupy: Zabalení nativních tříd pro použití v jazyce C#
 
-Tento příklad ukazuje postup při zabalení nativních tříd jazyka C++, takže mohou být spotřebovány kód vytvořené v jazyce C# nebo jiném jazyce .NET.
+Tento příklad ukazuje, jak zabalit C++ nativní třídu, aby ji bylo možné spotřebovat pomocí kódu C#vytvořeného v nebo jiném jazyku .NET.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>

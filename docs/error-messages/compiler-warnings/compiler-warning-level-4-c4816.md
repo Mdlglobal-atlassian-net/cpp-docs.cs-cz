@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4816
+title: Upozornění kompilátoru (úroveň 4) C4816
 ms.date: 11/04/2016
 f1_keywords:
 - C4816
 helpviewer_keywords:
 - C4816
 ms.assetid: 60f730ae-d942-4db9-ab97-41d4a874d8da
-ms.openlocfilehash: 719a950f2cc15b51dcbbb7e8f4f476f92fe326c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e96cb81d78b0e49e6978ff6ec78cdbfcfdc89e6d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349588"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990055"
 ---
-# <a name="compiler-warning-level-4-c4816"></a>Kompilátor upozornění (úroveň 4) C4816
+# <a name="compiler-warning-level-4-c4816"></a>Upozornění kompilátoru (úroveň 4) C4816
 
-'param': parametr má pole s nulovou velikostí, které se zkrátí (Pokud v odkazu nebude předaný objekt)
+param: parametr má pole s nulovou velikostí, které se zkrátí (Pokud není objekt předaný odkazem).
 
-Parametr objektu s pole nulové velikosti nebyl předán odkazem. Pole nesmí získat kopírovat, pokud objekt je předán.
+Parametr objektu s nulovou velikostí pole nebyl předán odkazem. Pole nebude kopírováno, je-li objekt předán.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C4816:
 
-```
+```cpp
 // C4816.cpp
 // compile with: /W4
 #include <stdio.h>

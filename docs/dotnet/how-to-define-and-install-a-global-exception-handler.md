@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: d1b8452d19172bf16817c36032189accfd855539
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387393"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988303"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Postupy: Definování a instalace globální obslužné rutiny výjimek
 
-Následující příklad kódu ukazuje, jak neošetřené výjimky mohou být zachyceny. Ukázkový formulář obsahuje tlačítka, který při stisknutí, provádí odkaz s hodnotou null, což způsobí vyvolání výjimky. Tato funkce představuje typické kód selhání. Výsledný výjimka zachycena ve funkci main nainstalované obslužná rutina výjimky celou aplikaci.
+Následující příklad kódu ukazuje, jak lze zachytit neošetřené výjimky. Příklad formuláře obsahuje tlačítko, které při stisknutí provede odkaz s hodnotou null, což způsobí vyvolání výjimky. Tato funkce představuje typický kód chyby. Výsledná výjimka je zachycena obslužnou rutinou výjimky v rámci aplikace nainstalovanou hlavní funkcí.
 
-To lze provést pomocí vazby delegáta, kterého <xref:System.Windows.Forms.Application.ThreadException> událostí. V tomto případě následující výjimky jsou potom odeslány `App::OnUnhandled` metody.
+To je provedeno vazbou delegáta na událost <xref:System.Windows.Forms.Application.ThreadException>. V takovém případě se následné výjimky odesílají do metody `App::OnUnhandled`.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // global_exception_handler.cpp
 // compile with: /clr
 #using <system.dll>

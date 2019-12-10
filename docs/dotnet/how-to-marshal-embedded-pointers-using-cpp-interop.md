@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345742"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988182"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Postupy: Zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++
 
-Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma implementace spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Soubory, které obsahují pouze nespravované funkce nemusí být kompilována s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma pro implementaci spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Soubory obsahující pouze nespravované funkce není nutné kompilovat s možností [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak lze volat nespravovanou funkci, která přebírá strukturu obsahující ukazatele ze spravované funkce. Spravované funkce vytvoří instanci struktury a inicializuje ukazatel vložené pomocí klíčového slova new (místo [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) – klíčové slovo). Protože toto přidělí paměť na nativních haldách, není nutné pro Připnutí pole, které chcete potlačit uvolňování paměti. Ale paměti se musí explicitně odstranit aby se zabránilo úniku paměti.
+Následující příklad ukazuje, jak může být nespravované funkce, která přebírá strukturu obsahující ukazatele, volána ze spravované funkce. Spravovaná funkce vytvoří instanci struktury a inicializuje vložený ukazatel pomocí klíčového slova New (místo klíčového slova [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) ). Vzhledem k tomu, že to přiděluje paměť na nativní haldě, není nutné připnout pole pro potlačení uvolňování paměti. Paměť je však nutné explicitně odstranit, aby nedošlo k úniku paměti.
 
-```
+```cpp
 // marshal_embedded_pointer.cpp
 // compile with: /clr
 #include <iostream>

@@ -1,5 +1,5 @@
 ---
-title: Důležité informace k zápisu kódu prologu / epilogu
+title: Předpoklady pro zápis kódu prologu a epilogu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - stack frame layout
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-ms.openlocfilehash: a70c444af9e1622b3f46837fcfa2d5e8856abf30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a598ddbdd1b5f91c97e32905202e264b444c05d0
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399132"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988698"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Důležité informace k zápisu kódu prologu/epilogu
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Před psaním vlastních sekvencí kódu prologu a epilogu je zapotřebí porozumět rozložení rámce zásobníku. Také je užitečné vědět, jak používat `__LOCAL_SIZE` symbol.
+Před zápisem vlastních sekvencí kódu prologu a epilogu je důležité pochopit, jak je rámec zásobníku rozložen. Je také užitečné zjistit, jak používat symbol `__LOCAL_SIZE`.
 
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Rozložení rámce zásobníku
+##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a>Rozložení rámce zásobníku
 
 Tento příklad ukazuje standardní kód prologu, který se může vyskytnout v 32bitové funkci:
 
@@ -41,22 +41,22 @@ pop         ebp           ; Restore ebp
 ret                       ; Return from function
 ```
 
-Zásobník roste vždy směrem dolů (od vysokých po nízké adresy paměti). Základní ukazatel (`ebp`) ukazuje na vloženou hodnotu proměnné `ebp`. Oblast místních hodnot začíná u `ebp-4`. Chcete-li přistoupit k místním proměnným, vypočítejte posun vůči adrese `ebp` odečtením příslušné hodnoty od adresy `ebp`.
+Zásobník roste vždy směrem dolů (od vysokých po nízké adresy paměti). Základní ukazatel (`ebp`) ukazuje na vloženou hodnotu proměnné `ebp`. Oblast místních hodnot začíná na `ebp-4`. Chcete-li přistoupit k místním proměnným, vypočítejte posun vůči adrese `ebp` odečtením příslušné hodnoty od adresy `ebp`.
 
-##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE
+##  <a name="_pluslang___local_size"></a>__LOCAL_SIZE
 
-Kompilátor poskytuje symbol, `__LOCAL_SIZE`, pro použití ve vloženém bloku assembleru daného kódu prologu funkce. Tento symbol se používá k přidělení místa pro místní proměnné v rámci zásobníku ve vlastním kódu prologu.
+Kompilátor poskytuje symbol, `__LOCAL_SIZE`pro použití v vloženém bloku assembleru kódu prologu funkce. Tento symbol slouží k přidělení prostoru pro lokální proměnné v bloku zásobníku v kódu vlastního prologu.
 
-Kompilátor Určuje hodnotu `__LOCAL_SIZE`. Jeho hodnota je celkový počet bajtů všech místních proměnných definovaných uživateli a dočasných proměnných generovaných kompilátoru. `__LOCAL_SIZE` lze použít pouze jako přímý operand. nelze použít ve výrazu. Nesmí měnit nebo znovu definovat hodnotu tohoto symbolu. Příklad:
+Kompilátor Určuje hodnotu `__LOCAL_SIZE`. Jeho hodnota je celkový počet bajtů všech místních proměnných definovaných uživatelem a dočasných proměnných generovaných kompilátorem. `__LOCAL_SIZE` lze použít pouze jako okamžitý operand; nedá se použít ve výrazu. Hodnotu tohoto symbolu nesmíte změnit ani předefinovat. Příklad:
 
 ```
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error
 ```
 
-Následující příklad neviditelné funkce obsahující vlastní sekvence prologu a epilogu pořadí použití `__LOCAL_SIZE` symbolu v sekvenci prologu:
+Následující příklad holé funkce obsahující vlastní sekvenci prologu a epilog používá symbol `__LOCAL_SIZE` v sekvenci prologu:
 
-```
+```cpp
 // the__local_size_symbol.cpp
 // processor: x86
 __declspec ( naked ) int main() {
@@ -78,7 +78,7 @@ __declspec ( naked ) int main() {
 }
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

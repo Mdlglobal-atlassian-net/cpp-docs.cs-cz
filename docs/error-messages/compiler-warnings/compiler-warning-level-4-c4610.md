@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4610
+title: Upozornění kompilátoru (úroveň 4) C4610
 ms.date: 11/04/2016
 f1_keywords:
 - C4610
 helpviewer_keywords:
 - C4610
 ms.assetid: 23c1a16c-9ca9-4bf6-9911-a72b785560c2
-ms.openlocfilehash: ce671552083f4e6b055c52e7387d3a95e7d47c0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cf8b9bd3194d03f5cb57a32ac78bfe82962d07c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220577"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990686"
 ---
-# <a name="compiler-warning-level-4-c4610"></a>Kompilátor upozornění (úroveň 4) C4610
+# <a name="compiler-warning-level-4-c4610"></a>Upozornění kompilátoru (úroveň 4) C4610
 
-objekt 'class' možné nikdy instancovat - vyžaduje konstruktor definovaný uživatelem.
+objekt Class nemůže nikdy mít vytvořenou instanci – vyžaduje se uživatelsky definovaný konstruktor.
 
-Třída nemá žádné uživatelem definované nebo výchozí konstruktory. Je provedena bez vytvoření instance. Následující ukázka generuje C4610:
+Třída neobsahuje žádné uživatelsky definované nebo výchozí konstruktory. Není provedena žádná instance. Následující ukázka generuje C4610:
 
-```
+```cpp
 // C4610.cpp
 // compile with: /W4
 struct A {

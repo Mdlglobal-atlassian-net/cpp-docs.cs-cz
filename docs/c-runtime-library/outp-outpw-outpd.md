@@ -1,10 +1,13 @@
 ---
-title: _outp, _outpw, _outpd
-ms.date: 11/04/2016
+title: outp, outpw, _outp, _outpw, _outpd
+description: Popisuje zastaralé a odebrané funkce outp, outpw, _outp, _outpw a _outpd v knihovně CRT (Microsoft C Runtime Library).
+ms.date: 12/09/2019
 api_name:
 - _outpd
 - _outp
 - _outpw
+- outp
+- outpw
 api_location:
 - msvcrt.dll
 - msvcr100.dll
@@ -21,6 +24,8 @@ f1_keywords:
 - _outpw
 - _outpd
 - _outp
+- outp
+- outpw
 - outpd
 helpviewer_keywords:
 - outpw function
@@ -36,57 +41,57 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: d1e7028ae833e1358ce3199b7e7079535c84d135
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944135"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988370"
 ---
-# <a name="_outp-_outpw-_outpd"></a>_outp, _outpw, _outpd
+# <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
-Výstupy, na portu, Byte (`_outp`), Word (`_outpw`) nebo Double Word (`_outpd`).
-
-> [!IMPORTANT]
->  Tyto funkce jsou zastaralé. Počínaje verzí Visual Studio 2015 nejsou k dispozici v CRT.
+Vrátí výstup na portu, bajt (`outp`, `_outp`), slovo (`outpw`, `_outpw`) nebo dvojité slovo (`_outpd`).
 
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tyto funkce jsou zastaralé. Počínaje verzí Visual Studio 2015 nejsou k dispozici v CRT.  
+> Toto API nelze použít v aplikacích, které jsou spuštěny v modulu Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-
-      int _outp(
-unsigned short port,
-int databyte
+```cpp
+int _outp(
+   unsigned short port,
+   int databyte
 );
 unsigned short _outpw(
-unsigned short port,
-unsigned short dataword
+   unsigned short port,
+   unsigned short dataword
 );
 unsigned long _outpd(
-unsigned short port,
-unsigned long dataword
+   unsigned short port,
+   unsigned long dataword
 );
 ```
 
-#### <a name="parameters"></a>Parametry
-*přístavní*<br/>
+### <a name="parameters"></a>Parametry
+
+\ *portu*
 Číslo portu.
 
-*databyte, dataword*<br/>
+*databyte,\ datawordu*
 Výstupní hodnoty.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce vrátí výstup dat. Nevrátila se žádná chybová zpráva.
+Funkce vrací datový výstup. Není vrácena žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce `_outp`, `_outpw` a`_outpd` zapisují do zadaného výstupního portu bajt, slovo a Dvojitá slova. Argument *port* může být libovolný unsigned integer v rozsahu 0 – 65 535; *databyte* může být libovolné celé číslo v rozsahu 0-255; a *dataword* může být libovolná hodnota v rozsahu celého čísla, krátké celé číslo bez znaménka a dlouhé celé číslo bez znaménka v uvedeném pořadí.
+Funkce `_outp`, `_outpw` a `_outpd` zapíšou byte, word, resp. double word do zadaného výstupního portu. Argument *port* může být libovolný unsigned integer v rozsahu 0 – 65 535; *databyte* může být libovolné celé číslo v rozsahu 0-255; a *dataword* může být libovolná hodnota v rozsahu celého čísla, krátké celé číslo bez znaménka a dlouhé celé číslo bez znaménka v uvedeném pořadí.
 
-Vzhledem k tomu, že tyto funkce zapisují přímo do vstupně-výstupního portu, nelze je použít v uživatelském kódu. Informace o používání vstupně-výstupních portů v těchto operačních systémech najdete v tématu "sériová komunikace v systému Win32" na webu MSDN.
+Vzhledem k tomu, že tyto funkce zapisují přímo do vstupně-výstupního portu, nelze je použít v uživatelském kódu. Informace o použití I/O portů v těchto operačních systémech získáte po vyhledání "Sériové komunikace ve Win32" na webu MSDN.
+
+Názvy `outp` a `outpw` jsou starší, zastaralé názvy pro `_outp` a `_outpw` funkce. Další informace najdete v tématu [názvy funkcí POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -104,5 +109,5 @@ Všechny verze [knihoven run-time jazyka C](../c-runtime-library/crt-library-fea
 
 ## <a name="see-also"></a>Viz také:
 
-[I/O konzoly a portu](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[I/O\ konzoly a portu](../c-runtime-library/console-and-port-i-o.md)
+[INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)

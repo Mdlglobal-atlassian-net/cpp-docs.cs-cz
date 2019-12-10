@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 1ec3e64548cead53cea906cdf2abd3dd25ee06d4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541699"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991381"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Upozornění kompilátoru (úroveň 4) C4256
 
@@ -19,7 +19,7 @@ ms.locfileid: "74541699"
 
 Možná nekompatibilita.
 
-Vezměte v úvahu následující příklad kódu. Pokud byla definice konstruktoru S2:: S2 (int i,...) zkompilována pomocí verze kompilátoru od společnosti Microsoft C++ před verzí 7, ale následující příklad je zkompilován pomocí aktuální verze, volání konstruktoru pro S3 nebude správně fungovat z důvodu změny konvence volání speciálního případu. Pokud byly obě zkompilovány pomocí sady C++ Visual 6,0, volání nebudou fungovat úplně vpravo, pokud žádné parametry nebyly předány pro tři tečky.
+Uvažujte následující příklad kódu. Pokud byla definice konstruktoru S2:: S2 (int i,...) zkompilována pomocí verze kompilátoru od společnosti Microsoft C++ před verzí 7, ale následující příklad je zkompilován pomocí aktuální verze, volání konstruktoru pro S3 nebude správně fungovat z důvodu změny konvence volání speciálního případu. Pokud byly obě zkompilovány pomocí sady C++ Visual 6,0, volání nebudou fungovat úplně vpravo, pokud žádné parametry nebyly předány pro tři tečky.
 
 Chcete-li toto upozornění opravit,
 

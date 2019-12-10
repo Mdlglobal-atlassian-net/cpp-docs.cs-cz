@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: 6a82d7756f1460c56d87a3d7b1360c140de19827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160604"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990935"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Chyba linkerů LNK1301
 
-Najde, kompatibilní s /LTCG:parameter se moduly clr LTCG.
+Našly se LTCG moduly CLR, nekompatibilní s/LTCG: parametrem.
 
-Modul zkompilovaný s parametrem/CLR a/GL. byl předán linkeru společně s jednou z optimalizace na základě profilu (PGO) parametry parametru/LTCG.
+Do linkeru byl předán modul kompilovaný s parametrem/CLR a/GL spolu s jedním z parametrů PGO (profiled Optimization)/LTCG.
 
-Optimalizace na základě profilu nejsou podporovaná u modulů/CLR.
+Optimalizace na základě profilu nejsou pro moduly/CLR podporované.
 
-Další informace naleznete v tématu:
+Další informace najdete v části .
 
 - [/GL (celková optimalizace programu)](../../build/reference/gl-whole-program-optimization.md)
 
@@ -33,13 +33,13 @@ Další informace naleznete v tématu:
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Nejde zkompilovat s parametrem/CLR nebo nepropojovat s jeden z parametrů PGO do parametru/LTCG.
+1. Nekompilovat pomocí/CLR nebo nepropojit s jedním z parametrů PGO a/LTCG.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje LNK1301:
+Následující ukázka generuje LINKERŮ LNK1301:
 
-```
+```cpp
 // LNK1301.cpp
 // compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
 // LNK1301 expected

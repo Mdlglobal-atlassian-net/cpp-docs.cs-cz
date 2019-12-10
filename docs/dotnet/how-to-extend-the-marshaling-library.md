@@ -5,38 +5,38 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387302"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988487"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Postupy: Rozšíření knihovny zařazování
 
-Toto téma vysvětluje, jak rozšíření knihovny zařazování poskytnout další převody mezi datovými typy. Uživatelé můžou rozšíření knihovny zařazování pro všechny převody dat není aktuálně podporovaná knihovny.
+Toto téma vysvětluje, jak rozšiřuje zařazovací knihovnu tak, aby poskytovala více převodů mezi datovými typy. Uživatelé mohou rozšířenou knihovnu zařazování pro všechny převody dat, které nejsou aktuálně podporovány knihovnou.
 
-Můžete rozšíření knihovny zařazování v jednom ze dvou způsobů - s nebo bez něj [marshal_context Class](../dotnet/marshal-context-class.md). Zkontrolujte [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md) tématu k určení, zda nový převod vyžaduje kontext.
+Zařazování knihovny můžete roztáhnout jedním ze dvou způsobů – s nebo bez [Marshal_context třídy](../dotnet/marshal-context-class.md). Projděte si [Přehled zařazování v C++ ](../dotnet/overview-of-marshaling-in-cpp.md) tématu, abyste zjistili, zda nový převod vyžaduje kontext.
 
-V obou případech se nejprve vytvořit soubor pro nové zařazování převody. Uděláte zachování integrity standard zařazování soubory knihovny. Pokud chcete přenést do projektu do jiného počítače nebo jiné programátora, musíte zkopírovat nový zařazování soubor se zbytkem projektu. Tímto způsobem uživatel, který obdrží projektu budou zaručovat přijímat nové převody a nebude mít úprava všech souborech knihoven.
+V obou případech nejprve vytvoříte soubor pro nové převody zařazování. To uděláte tak, abyste zachovali integritu standardních souborů knihoven. Chcete-li přenést projekt na jiný počítač nebo na jiný programátora, je nutné zkopírovat nový soubor zařazování společně se zbytkem projektu. Tímto způsobem bude uživatel, který obdrží projekt, zaručit, že obdrží nové převody a nebude muset upravovat žádné soubory knihovny.
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>K rozšíření knihovny zařazování se převod, který nevyžaduje, aby kontext
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>Postup rozšiřování zařazovací knihovny s převodem, který nevyžaduje kontext
 
-1. Vytvořte soubor pro uložení nové zařazování funkce, například MyMarshal.h.
+1. Vytvořte soubor pro uložení nových funkcí zařazování, například MyMarshal. h.
 
-1. Zahrnout jednu nebo více souborů knihovny zařazování:
+1. Zahrnout jeden nebo více souborů zařazovací knihovny:
 
-   - Marshal.h základních typů.
+   - zařazování. h pro základní typy
 
-   - marshal_windows.h pro datové typy systému windows.
+   - marshal_windows. h pro datové typy Windows.
 
-   - marshal_cppstd.h pro C++ datové typy standardní knihovny.
+   - marshal_cppstd. h pro C++ standardní datové typy knihovny.
 
-   - marshal_atl.h ATL datových typů.
+   - marshal_atl. h pro datové typy knihovny ATL.
 
-1. Pomocí kódu na konci tyto kroky pro zápis funkce pro převod. V tomto kódu je typ, který chcete převést, od je typ, který chcete převést, a `from` je parametr, který má být převeden.
+1. Použijte kód na konci těchto kroků k zápisu funkce pro převod. V tomto kódu na je typ pro převod na, od je typ, ze kterého se má převést, a `from` je parametr, který má být převeden.
 
-1. Nahraďte kód, který převede komentář o převod logiku `from` parametru do objektu na typ a vrátí objekt převedený.
+1. Nahraďte komentář o logice převodu kódem pro převedení `from` parametru na objekt typu na typ a vraťte převedený objekt.
 
 ```
 namespace msclr {
@@ -49,29 +49,29 @@ namespace msclr {
 }
 ```
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>K rozšíření knihovny zařazování se převod, který vyžaduje kontext
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>Postup rozšiřování zařazovací knihovny s převodem, který vyžaduje kontext
 
-1. Vytvořit soubor pro uložení nové zařazování funkce, například MyMarshal.h
+1. Vytvořte soubor pro uložení nových funkcí zařazování, například MyMarshal. h.
 
-1. Zahrnout jednu nebo více souborů knihovny zařazování:
+1. Zahrnout jeden nebo více souborů zařazovací knihovny:
 
-   - Marshal.h základních typů.
+   - zařazování. h pro základní typy
 
-   - marshal_windows.h pro datové typy systému windows.
+   - marshal_windows. h pro datové typy Windows.
 
-   - marshal_cppstd.h pro C++ datové typy standardní knihovny.
+   - marshal_cppstd. h pro C++ standardní datové typy knihovny.
 
-   - marshal_atl.h ATL datových typů.
+   - marshal_atl. h pro datové typy knihovny ATL.
 
-1. Pomocí kódu na konci tyto kroky pro zápis funkce pro převod. V tomto kódu je typ, který chcete převést, od je typ, který chcete převést, `toObject` je ukazatel, ve kterém k ukládání výsledků, a `fromObject` je parametr, který má být převeden.
+1. Použijte kód na konci těchto kroků k zápisu funkce pro převod. V tomto kódu na je typ, na který chcete převést, od je typ, ze kterého se má převést, `toObject` je ukazatel, do kterého se má výsledek uložit, a `fromObject` je parametr, který má být převeden.
 
-1. Nahraďte komentář o inicializaci pomocí kód pro inicializaci `toPtr` odpovídající prázdnou hodnotu. Například pokud je ukazatel, nastavte ho na `NULL`.
+1. Nahraďte komentář o inicializaci pomocí kódu pro inicializaci `toPtr` k odpovídající prázdné hodnotě. Pokud je například ukazatel, nastavte jej na `NULL`.
 
-1. Nahraďte kód, který převede komentář o převod logiku `from` parametru do objektu *na* typu. Převedený objekt se uloží v `toPtr`.
+1. Nahraďte komentář o logice převodu kódem pro převedení `from` *parametru na objekt typu.* Tento převedený objekt bude uložen v `toPtr`.
 
-1. Nahraďte komentáře týkající se nastavení `toObject` pomocí kódu pro nastavení `toObject` převedený objekt.
+1. Nahraďte komentář o nastavení `toObject` kódem pro nastavení `toObject` převedeného objektu.
 
-1. Nahraďte komentář o čištění nativní prostředky s kód pro uvolnění paměti přidělené `toPtr`. Pokud `toPtr` přidělila paměť pomocí `new`, použijte `delete` uvolnit paměť.
+1. Nahraďte komentář o čištění nativních prostředků kódem pro uvolnění paměti přidělené `toPtr`. Pokud `toPtr` přidělenou paměť pomocí `new`, použijte `delete` k uvolnění paměti.
 
 ```
 namespace msclr {
@@ -104,9 +104,9 @@ namespace msclr {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad rozšiřuje zařazovací knihovna se převod, který nevyžaduje kontextu. V tomto příkladu kód převede informace o zaměstnancích z nativního datového typu na typ spravovaná data.
+Následující příklad rozšiřuje zařazovací knihovnu s převodem, který nevyžaduje kontext. V tomto příkladu kód převede informace o zaměstnanci z nativního datového typu na spravovaný datový typ.
 
-```
+```cpp
 // MyMarshalNoContext.cpp
 // compile with: /clr
 #include <msclr/marshal.h>
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-V předchozím příkladu `marshal_as` vrátí funkce popisovač převedená data. To se dělá jako prevence vytváření další kopie dat. Vrací proměnnou přímo by mít náklady na zbytečně výkon přidruženo.
+V předchozím příkladu funkce `marshal_as` vrací popisovač pro převedená data. To bylo provedeno, aby se zabránilo vytvoření další kopie dat. Vrácení proměnné přímo do by mělo být spojeno s zbytečnými náklady na výkon.
 
 ```Output
 Managed name: Jeff Smith
@@ -166,9 +166,9 @@ Managed zip code: 98111
 
 ## <a name="example"></a>Příklad
 
-Následující příklad převádí informace o zaměstnancích z typu spravovaných dat do nativního datového typu. Tento převod vyžaduje zařazování kontext.
+Následující příklad převede informace o zaměstnanci ze spravovaného datového typu na nativní datový typ. Tento převod vyžaduje zařazovací kontext.
 
-```
+```cpp
 // MyMarshalContext.cpp
 // compile with: /clr
 #include <stdlib.h>

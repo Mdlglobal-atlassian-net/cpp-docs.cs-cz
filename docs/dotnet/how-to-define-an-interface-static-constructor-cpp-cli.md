@@ -1,25 +1,25 @@
 ---
-title: 'Postupy: Definování statického konstruktoru (C++vyhodnocovací)'
+title: 'Postupy: Definice a používání statického konstruktoru (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 326b315e1e6c4defbef3ab6e487c78635e0aa50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 562605a579ac372e4a69953853a6e32668357565
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378957"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988238"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Postupy: Definování statického konstruktoru (C++vyhodnocovací)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Postupy: Definice a používání statického konstruktoru (C++/CLI)
 
-Rozhraní může mít statický konstruktor, který slouží k inicializaci statické datové členy.  Statický konstruktor zavolá se maximálně jednou a bude volána před prvním členem statických rozhraní přistupuje.
+Rozhraní může mít statický konstruktor, který lze použít k inicializaci statických datových členů.  Statický konstruktor se bude volat maximálně jednou a bude volán před prvním tím, než se člen statického rozhraní přistupuje.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // mcppv2_interface_class2.cpp
 // compile with: /clr
 using namespace System;

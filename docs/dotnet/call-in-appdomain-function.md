@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: a7ee0ef9c98ee940ab810abd82f6220da95d7346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351492"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988536"
 ---
-# <a name="callinappdomain-function"></a>call_in_appdomain – funkce
+# <a name="call_in_appdomain-function"></a>call_in_appdomain – funkce
 
-Spustí funkci v doméně zadané aplikace.
+Spustí funkci v zadané doméně aplikace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,28 +42,28 @@ RetType call_in_appdomain(
 #### <a name="parameters"></a>Parametry
 
 *appdomainId*<br/>
-Domény aplikace 00Z pro volání funkce.
+Doména AppDomain, ve které má být volána funkce.
 
 *voidFunc*<br/>
-Ukazatel `void` funkci, která přijímá parametry N (0 < = N < = 15).
+Ukazatel na funkci `void`, která přijímá N parametrů (0 < = N < = 15).
 
 *nonvoidFunc*<br/>
-Ukazatel na non -`void` funkci, která přijímá parametry N (0 < = N < = 15).
+Ukazatel na funkci bez`void`, která přijímá N parametrů (0 < = N < = 15).
 
 *arg1...argN*<br/>
-0 až 15 parametry, které se mají předat `voidFunc` nebo `nonvoidFunc` v jiné doméně aplikace.
+Nula až 15 parametrů, které mají být předány `voidFunc` nebo `nonvoidFunc` v jiné doméně AppDomain.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek provedení `voidFunc` nebo `nonvoidFunc` v doméně zadané aplikace.
+Výsledek spuštění `voidFunc` nebo `nonvoidFunc` v zadané doméně aplikace.
 
 ## <a name="remarks"></a>Poznámky
 
-Argumenty funkci předané `call_in_appdomain` nesmí být typy CLR.
+Argumenty funkce předané `call_in_appdomain` nesmí být typy CLR.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // msl_call_in_appdomain.cpp
 // compile with: /clr
 
@@ -118,6 +118,6 @@ appDomain1 id = 2
 
 ## <a name="requirements"></a>Požadavky
 
-**Soubor hlaviček** \<msclr\appdomain.h >
+**Hlavičkový soubor** \<msclr\appdomain.h >
 
-**Namespace** msclr –
+Msclr – **oboru názvů**

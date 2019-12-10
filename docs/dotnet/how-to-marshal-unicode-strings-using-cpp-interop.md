@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++'
+title: 'Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400549"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988170"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++
 
-Toto téma popisuje jeden aspekt vzájemná funkční spolupráce jazyka Visual C++. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Toto téma ukazuje jednu omezující vlastnost interoperability vizuálů C++ . Další informace najdete v tématu [použití C++ zprostředkovatele komunikace (implicitní PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma implementace spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Soubory, které obsahují pouze nespravované funkce nemusí být kompilována s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma pro implementaci spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Soubory obsahující pouze nespravované funkce není nutné kompilovat s možností [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 
-Toto téma ukazuje, jak můžete řetězců v kódu Unicode být předán ze spravované na nespravované funkce a naopak. Spolupráce s jinými typy řetězce, naleznete v následujících tématech:
+Toto téma ukazuje, jak lze řetězce Unicode předat ze spravovaného do nespravované funkce a naopak. Pro spolupráci s jinými typy řetězců si přečtěte následující témata:
 
 - [Postupy: Zařazování řetězců v kódu ANSI pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
@@ -30,9 +30,9 @@ Toto téma ukazuje, jak můžete řetězců v kódu Unicode být předán ze spr
 
 ## <a name="example"></a>Příklad
 
-Předat řetězec s kódováním Unicode ze spravované na nespravované funkci, PtrToStringChars – funkce (deklarované v Vcclr.h) slouží k přístupu do paměti, kde spravované řetězec uložen. Tato adresa se předají do nativní funkce, proto je důležité, že je paměť připnout s [pin_ptr (C++vyhodnocovací)](../extensions/pin-ptr-cpp-cli.md) Pokud chcete zakázat data řetězce se přemístění, by měla cyklu uvolňování paměti kolekce probíhat během nespravovanou funkci provede.
+K předání řetězce Unicode ze spravovaného do nespravované funkce lze použít funkci PtrToStringChars (deklarovaná v Vcclr. h) k přístupu v paměti, kde je uložen spravovaný řetězec. Vzhledem k tomu, že tato adresa bude předána nativní funkci, je důležité, aby se paměť připnula s [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) , aby se zabránilo přemístění dat řetězce, pokud by se při provádění nespravované funkce prováděl cyklus uvolňování paměti.
 
-```
+```cpp
 // MarshalUnicode1.cpp
 // compile with: /clr
 #include <iostream>
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje zařazování dat, které se vyžadují pro přístup k řetězec znaků Unicode ve spravované funkci volanou třídou nespravované funkci. Převede spravovaný řetězec pomocí spravované funkce při přijetí nativní řetězec znaků Unicode <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> metody.
+Následující příklad ukazuje zařazování dat potřebné pro přístup k řetězci Unicode ve spravované funkci, která je volána nespravovanou funkcí. Spravovaná funkce na základě přijetí nativního řetězce Unicode převede jej na spravovaný řetězec pomocí metody <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>.
 
-```
+```cpp
 // MarshalUnicode2.cpp
 // compile with: /clr
 #include <iostream>

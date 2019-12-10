@@ -1,5 +1,5 @@
 ---
-title: '&lt;SeeAlso > (C++ dokumentačních komentářů)'
+title: '&lt;SeeAlso > (C++ dokumentační dokumentace)'
 ms.date: 11/04/2016
 f1_keywords:
 - <seealso>
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-ms.openlocfilehash: ea399e98723a265ef3c17f2282b7c81299b4abc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 698db2df462f561acd897d0d0e56b3106a915466
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318833"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988602"
 ---
 # <a name="ltseealsogt"></a>&lt;seealso&gt;
 
-\<Seealso > značky umožňuje zadat text, který chcete zobrazit v části Viz také. Použití [ \<naleznete v tématu >](see-visual-cpp.md) zadat odkaz v rámci textu.
+Značka > \<SeeAlso umožňuje určit text, který se může objevit v části Viz také. Použijte [\<v části >](see-visual-cpp.md) určete odkaz z textu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,26 +27,26 @@ ms.locfileid: "62318833"
 
 #### <a name="parameters"></a>Parametry
 
-*Člen*<br/>
+*člen*<br/>
 Odkaz na člena nebo na pole, které lze volat z prostředí aktuální kompilace.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.
 
-Kompilátor kontroluje, zda daný prvek kódu existuje a odstraňuje `member` do názvu prvku ve výstupním souboru XML.  Kompilátor vyvolá upozornění, pokud se nenajde `member`.
+Kompilátor kontroluje, zda daný prvek kódu existuje, a překládá `member` na název elementu ve výstupním souboru XML.  Kompilátor vydá upozornění, pokud nenajde `member`.
 
-Informace o tom, jak vytvořit cref odkaz na obecný typ, naleznete v tématu [ \<naleznete v tématu >](see-visual-cpp.md).
+Informace o tom, jak vytvořit odkaz cref na obecný typ, najdete v tématu [\<](see-visual-cpp.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilovat s [/doc](doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+Zkompilujte pomocí [/doc](doc-process-documentation-comments-c-cpp.md) a zpracujte dokumentační komentáře do souboru.
 
-Zobrazit [ \<summary >](summary-visual-cpp.md) pro příklad použití \<seealso >.
+Příklad použití \<SeeAlso > najdete v článku [> souhrnu\<](summary-visual-cpp.md) .
 
-Kompilátor MSVC pokusila přeložit odkazy cref v jednom průchodu přes komentáře k dokumentaci.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz bude označen jako nevyřešené.
+Kompilátor MSVC se pokusí vyřešit odkazy cref v jednom průchodu pomocí dokumentačních komentářů.  Proto pokud použijete pravidla C++ vyhledávání, symbol nebyl nalezen kompilátorem, odkaz bude označen jako nevyřešený.
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu odkazuje cref nevyřešeného symbolu. Komentář XML u cref k B::Test bude `<seealso cref="!:B::Test" />`, že je odkaz na A::Test ve správném formátu `<seealso cref="M:A.Test" />`.
+V následujícím příkladu je odkaz na nerozpoznaný symbol odkazován v cref. Komentář XML pro cref do B:: test bude `<seealso cref="!:B::Test" />`, zatímco odkaz na:: test je ve správném formátu `<seealso cref="M:A.Test" />`.
 
-```
+```cpp
 // xml_seealso_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_seealso_tag.dll
