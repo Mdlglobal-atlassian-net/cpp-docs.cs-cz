@@ -1,105 +1,112 @@
 ---
 title: Chyba linkerů LNK2001
-ms.date: 05/17/2017
+ms.date: 12/19/2019
 f1_keywords:
 - LNK2001
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: b6d1e53d8f057ddc93e2dfde65cb951d247dfcc0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449621"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302130"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Chyba linkerů LNK2001
 
-Nerozpoznaný externí symbol "*symbol*"
+> Nerozpoznaný externí symbol "*symbol*"
 
-Zkompilovaný kód provede odkaz nebo volání *symbol*, ale tento symbol není definovaný v některém z knihovny nebo objektových souborů zadaný v linkeru.
+Zkompilovaný kód provede odkaz nebo volání *symbolu*. Symbol není definován v žádném z knihoven nebo souborů objektů prohledávaných linkerem.
 
-Tato chybová zpráva je následována závažná chyba [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Je nutné opravit všechny LNK2001 a LNK2019 chyby opravit chyby LNK1120.
+Tato chybová zpráva je následována závažnou chybou [linkerů LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Chcete-li opravit chybu LINKERŮ LNK1120, nejprve opravte všechny chyby LINKERŮ LNK2001 a LINKERŮ LNK2019.
 
-## <a name="possible-causes"></a>Možné příčiny
+Existuje mnoho způsobů, jak získat LINKERŮ LNK2001 chyby. Všechny z nich zahrnují *odkaz* na funkci nebo proměnnou, kterou linker nemůže *přeložit*, nebo najít definici pro. Kompilátor může identifikovat, kdy kód *nedeklaruje* symbol, ale ne, pokud ho *nedefinuje* . Důvodem je, že definice může být v jiném zdrojovém souboru nebo knihovně. Pokud váš kód odkazuje na symbol, ale není nikdy definován, linker vygeneruje chybu.
 
-Existuje mnoho způsobů, jak se tato chyba, ale všechny z nich zahrnuje odkaz na funkci nebo proměnnou, která linker nemůže *vyřešit*, nebo si najděte definici. Kompilátor může identifikovat při symbol nemá *deklarované*, ale ne když není *definované*, protože definice může být v odlišném zdrojovém souboru nebo knihovny. Pokud symbol je uvedené, ale dosud definováno, linker generuje chybu.
+## <a name="what-is-an-unresolved-external-symbol"></a>Co je nevyřešený externí symbol?
 
-### <a name="coding-issues"></a>Chyby v kódování
+*Symbol* je interní název pro funkci nebo globální proměnnou. Je to forma názvu používaného nebo definovaného v souboru kompilovaného objektu nebo v knihovně. Globální proměnná je definována v souboru objektu, kde je pro ni přiděleno úložiště. Funkce je definována v souboru objektu, kde je umístěn zkompilovaný kód pro tělo funkce. *Externí symbol* je jeden odkazovaný v jednom souboru objektu, ale je definován v jiné knihovně nebo souboru objektu. *Exportovaný symbol* je ten, který se veřejně zpřístupňuje souborem objektu nebo knihovnou, která ho definuje.
 
-Tuto chybu může způsobovat neodpovídající v takovém případě zdrojový kód nebo definice modulu (.def) souboru. Například, pokud zadáte název proměnné `var1` v jazyce C++ jednoho zdrojového souboru a zkuste se připojit jako `VAR1` v jiném, vygeneruje se tato chyba. Chcete-li vyřešit tento problém, použijte konzistentně zadány a notaci názvy.
+Chcete-li vytvořit aplikaci nebo knihovnu DLL, každý použitý symbol musí mít definici. Linker musí *přeložit*nebo najít definici porovnání pro, každý externí symbol, na který odkazuje každý soubor objektu. Linker vygeneruje chybu, pokud nemůže přeložit externí symbol. To znamená, že linker nemohl najít vyhovující definici exportovaného symbolu v žádném z propojených souborů.
 
-Tato chyba může být způsobena v projektu, který používá [funkce vkládání](../../error-messages/tool-errors/function-inlining-problems.md) definujete funkce ve zdrojovém souboru, nikoli v souboru hlaviček. Vložené funkce nemohou vidět mimo zdrojového souboru, který definuje. Chcete-li vyřešit tento problém, definování vložené funkce v záhlaví, ve kterém jsou deklarovány.
+## <a name="compilation-and-link-issues"></a>Problémy s kompilací a propojením
 
-Tato chyba může nastat, pokud volání funkce C z programu v jazyce C++ bez použití `extern "C"` deklarace pro funkce C. Kompilátor používá jiný interní symbol zásady vytváření názvů pro kód jazyka C a C++ a jedná se o interní symbol název, který hledá linkeru, při zpracování symbolů. Chcete-li tento problém vyřešit, použijte `extern "C"` obálku kolem všechny deklarace funkce jazyka C za použití ve vašem kódu C++, což způsobí, že kompilátor používal vnitřní zásady vytváření názvů jazyka C pro tyto symboly. Možnosti kompilátoru [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) a [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) způsobit, že kompilátor pro kompilaci souborů jako C++ nebo C, v uvedeném pořadí, bez ohledu na příponu názvu souboru. Tyto možnosti může způsobit, že názvy interní funkce liší od toho, co očekáváte.
+K této chybě může dojít:
 
-Tuto chybu může způsobovat pokus o odkazování funkce nebo data, která nemají vnější propojení. V jazyce C++, vložené funkce a `const` data mají vnitřní propojení, pokud explicitně zadané jako `extern`. Chcete-li tento problém vyřešit, použijte explicitní `extern` deklarace na symboly uvedené mimo definiční zdrojový soubor.
+- V případě, že v projektu chybí odkaz na knihovnu (. LIB) nebo objekt (. OBJ). Chcete-li tento problém vyřešit, přidejte do projektu odkaz na požadovaný soubor knihovny nebo objektu. Další informace naleznete v tématu [soubory LIB jako vstup linkeru](../../build/reference/dot-lib-files-as-linker-input.md).
 
-Tuto chybu může způsobovat [chybí tělo funkce nebo proměnná](../../error-messages/tool-errors/missing-function-body-or-variable.md) definice. Tato chyba je běžná v případě deklarovat, ale nebudete definovat, proměnných, funkcí nebo tříd ve vašem kódu. Kompilátor potřebuje pouze prototypu funkce nebo `extern` deklarace proměnné se vygenerovat soubor objektu bez chyby, ale linkeru nelze vyřešit volání funkce nebo odkaz na proměnnou, protože není kód nebo proměnná místa – funkce vyhrazená. Chcete-li vyřešit tento problém, ujistěte se, že všechny odkazované funkce a proměnné je plně definována ve zdrojovém souboru nebo knihovny zahrnuté ve vašem odkazu.
+- Pokud má projekt odkaz na knihovnu (. LIB) nebo objekt (. OBJ), který zase vyžaduje symboly z jiné knihovny. K tomu může dojít, i když nebudete volat funkce, které způsobují závislost. Chcete-li tento problém vyřešit, přidejte do projektu odkaz na jinou knihovnu. Další informace najdete v tématu [Princip klasického modelu pro propojování: přebírání symbolů pro jízdní](https://devblogs.microsoft.com/oldnewthing/20130108-00/?p=5623)část.
 
-Tuto chybu může způsobovat volání funkce, která používá typy vrácených hodnot a parametrů a konvence volání, které neodpovídají těm v definici funkce. V souborech objektů jazyka C++ [název dekorace](../../error-messages/tool-errors/name-decoration.md) zahrnuje konvence volání, obor třídy nebo oboru názvů a typy vrácených hodnot a parametrů funkce do konečné upravený funkce název, který se použije jako symbol tak, aby odpovídaly při volání funkce z jiné objektové soubory jsou vyřešeny. Chcete-li vyřešit tento problém, ujistěte se, že deklaraci, definici a volání funkce všechny používat stejné rozsahy, typy a konvence volání.
+- Pokud používáte možnosti [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) nebo [/zl](../../build/reference/zl-omit-default-library-name.md) . Když zadáte tyto možnosti, knihovny obsahující požadovaný kód nejsou propojeny do projektu, pokud jste je nezahrnuli explicitně. Chcete-li tento problém vyřešit, explicitně Zahrňte všechny knihovny, které používáte na příkazovém řádku propojení. Pokud při použití těchto možností vidíte mnoho chybějících názvů funkcí CRT nebo standardní knihovny, explicitně do odkazu zahrňte knihovny DLL CRT a standardní knihovny DLL nebo soubory knihoven.
 
-Tato chyba může být způsobena v kódu jazyka C++, když zahrnují prototypu funkce v definici třídy, ale nepovedlo se [zahrnují provádění](../../error-messages/tool-errors/missing-function-body-or-variable.md) funkce a následně ji zavolat. Chcete-li vyřešit tento problém, je potřeba poskytnout definici pro všechny volat členy třídy deklarované.
+- Pokud kompilujete pomocí možnosti **/CLR** . Pravděpodobně chybí odkaz na `.cctor`. Další informace o tom, jak tento problém vyřešit, naleznete v tématu [inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md).
 
-Tato chyba může být způsobeno pokus o volání čistě virtuální funkci z abstraktní základní třídu. Čistě virtuální funkce nemá žádnou implementaci základní třídy. Chcete-li vyřešit tento problém, zkontrolujte, zda jsou implementovány všechny volat virtuální funkce.
+- Pokud propojíte s knihovnami režimu vydání při sestavování ladicí verze aplikace. Podobně platí, že pokud použijete možnosti **/MTD** nebo **/MDD** nebo definujete `_DEBUG` a pak propojíte s knihovnami verzí, měli byste očekávat mnoho potenciálních nevyřešených externích typů, mimo jiné problémy. Propojení sestavení režimu vydání s knihovnami ladění také způsobuje podobné problémy. Chcete-li tento problém vyřešit, ujistěte se, že používáte knihovny ladění v sestavení ladění a v maloobchodních knihovnách v maloobchodních sestaveních.
 
-Tato chyba může být způsobena tak, že zkusíte použít proměnné deklarované v rámci funkce ([lokální proměnná](../../error-messages/tool-errors/automatic-function-scope-variables.md)) nad rámec této funkce. Chcete tento problém vyřešit, odeberte odkaz na proměnnou, která není v oboru nebo přesuňte proměnné vyššího oboru.
+- Pokud váš kód odkazuje na symbol z jedné verze knihovny, ale propojíte jinou verzi knihovny. Obecně není možné kombinovat soubory objektů nebo knihovny, které jsou vytvořeny pro různé verze kompilátoru. Knihovny, které jsou dodávány v jedné verzi, mohou obsahovat symboly, které nelze nalézt v knihovnách, které jsou součástí jiných verzí. Chcete-li tento problém vyřešit, sestavte všechny soubory objektů a knihovny se stejnou verzí kompilátoru předtím, než je propojíte dohromady. Další informace najdete v tématu [ C++ binární kompatibilita 2015-2019](../../porting/binary-compat-2015-2017.md).
 
-Této chybě může dojít při sestavování projektu ATL, verzi vytváření zprávu, že je vyžadována CRT spouštěcí kód. Chcete-li tento problém vyřešit, proveďte jednu z těchto možností
+- Pokud jsou cesty knihovny zastaralé. Dialogové okno **nástroje > možnosti > projekty > dialogovém okně Adresáře VC + +** , v rámci výběru **souborů knihovny** , umožňuje změnit pořadí hledání knihovny. Složka Linkeru v dialogovém okně stránky vlastností projektu může obsahovat také cesty, které mohou být zastaralé.
 
-- Odebrat `_ATL_MIN_CRT` ze seznamu preprocesor definuje umožňující spouštění kódu CRT mají být zahrnuty. Zobrazit [Obecná stránka vlastností (projekt)](../../build/reference/general-property-page-project.md) Další informace.
+- Když je nainstalovaná nová Windows SDK (třeba do jiného umístění). Pořadí hledání knihovny musí být aktualizováno, aby odkazovalo na nové umístění. Obvykle byste měli umístit cestu k novému adresáři SDK include a lib před výchozím vizuálním C++ umístěním. Také projekt obsahující vložené cesty může stále ukazovat na staré cesty, které jsou platné, ale nejsou aktuální. Aktualizujte cesty pro nové funkce přidané novou verzí, která je nainstalovaná v jiném umístění.
 
-- Pokud je to možné odeberte volání funkce CRT, které vyžadují CRT spouštěcí kód. Místo toho použijte ekvivalenty Win32. Například použít `lstrcmp` místo `strcmp`. Známých funkcí, které vyžadují CRT při spuštění kódu jsou některé řetězce a plovoucího bodu funkce.
+- Pokud sestavíte na příkazovém řádku a vytvořili jste vlastní proměnné prostředí. Ověřte, zda cesty k nástrojům, knihovnám a hlavičkovým souborům přejdou na konzistentní verzi. Další informace najdete v tématu [Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md) .
 
-### <a name="compilation-and-link-issues"></a>Kompilace a odkaz problémy
+## <a name="coding-issues"></a>Problémy s kódováním
 
-Této chybě může dojít, když projektu chybí odkaz na knihovnu (. LIB) nebo objekt (. Soubor OBJ). Chcete tento problém vyřešit, přidejte odkaz na soubor objektu a požadované knihovny do projektu. Další informace najdete v tématu [soubory .lib jako vstup Linkeru](../../build/reference/dot-lib-files-as-linker-input.md).
+Tato chyba může být způsobena:
 
-K této chybě může dojít, pokud použijete [: / NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) nebo [/Zl](../../build/reference/zl-omit-default-library-name.md) možnosti. Při zadávání těchto možností knihovny, které obsahují kódu nejsou připojeny do projektu, pokud jste výslovně zahrnuty. Chcete-li vyřešit tento problém, explicitně zahrňte všechny knihovny, které používáte na příkazový řádek propojení. Pokud se zobrazí mnoho chybějící CRT nebo standardní knihovna názvy funkcí při použití těchto možností, explicitně zahrňte soubory CRT a Standard knihoven DLL nebo knihovny v odkazu.
+- Neshodný případ ve zdrojovém kódu nebo souboru definice modulu (. def). Pokud například pojmenujte proměnnou `var1` v jednom C++ zdrojovém souboru a pokusíte se k ní přistupovat jako `VAR1` v jiné, vygeneruje se tato chyba. Chcete-li tento problém vyřešit, použijte konzistentní a použita jména.
 
-Pokud kompilujete pomocí **/CLR** možnost, může být chybějící odkaz na .cctor. Chcete-li vyřešit tento problém, naleznete v tématu [inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md) Další informace.
+- Projekt, který používá [vkládání funkcí](../../error-messages/tool-errors/function-inlining-problems.md) K této chybě může dojít při definování funkcí jako `inline` ve zdrojovém souboru, nikoli v hlavičkovém souboru. Vložené funkce nelze zobrazit mimo zdrojový soubor, který je definuje. Chcete-li tento problém vyřešit, definujte vložené funkce v záhlavích, kde jsou deklarovány.
 
-K této chybě může dojít, pokud můžete propojit ke knihovnám režimu vydání při sestavení ladicí verze aplikace. Podobně pokud použijete možnosti **/MTD** nebo **/MDd** nebo definovat `_DEBUG` a pak se propojit ke knihovnám vydání, měli byste očekávat, mnoho možných nerozpoznané externí typy, mezi další problémy. Propojování sestavení pro vydání režimu knihovny ladění také způsobí, že s podobnými problémy. Chcete-li vyřešit tento problém, ujistěte se, že používat knihovny ladění v sestavení ladění a sestavení knihovny maloobchodního prodeje v vašeho maloobchodního prodeje.
+- Volání funkce jazyka C z C++ programu bez použití deklarace `extern "C"` pro funkci C. Kompilátor používá jiné konvence pojmenovávání symbolů pro jazyk C++ C a kód. Interní název symbolu je to, co linker hledá při překladu symbolů. Chcete-li tento problém vyřešit, použijte `extern "C"` obálku kolem všech deklarací funkcí jazyka C používaných C++ ve vašem kódu, což způsobí, že kompilátor použije pro tyto symboly interní konvenci pojmenování v jazyce c. Možnosti kompilátoru [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) a [/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) způsobí, že kompilátor zkompiluje soubory jako C++ nebo C bez ohledu na to, jaká přípona názvu souboru je. Tyto možnosti mohou způsobit, že názvy vnitřních funkcí se liší od toho, co očekáváte.
 
-K této chybě může dojít, pokud váš kód odkazuje na symbol z jedné verze knihovny, ale můžete zadat jinou verzi knihovny do propojovacího programu. Obecně platí nejde kombinovat soubory objektů nebo knihoven, které jsou vytvořeny pro různé verze kompilátoru. Knihovny, které se dodávají v nové verzi může obsahovat symboly, které se nenašel v knihovnách zahrnutá v předchozích verzích a naopak. Chcete-li vyřešit tento problém, sestavujte všech souborů objektů a knihovny se zmírněními hrozeb stejnou verzi nástroje kompilátor před propojí je dohromady.
+- Pokus o odkazování na funkce nebo data, která nemají vnější propojení. V C++, vložené funkce a data `const` mají interní propojení, pokud není explicitně určeno jako `extern`. Chcete-li tento problém vyřešit, použijte explicitní deklarace `extern` pro symboly, které jsou odkazovány mimo definiční zdrojový soubor.
 
-- Nástroje &#124; možnosti &#124; projekty &#124; adresáře VC ++ dialogového okna, v části Výběr soubory knihovny, umožňuje změnit pořadí hledání knihoven. Složka Linkeru v dialogové okno stránky vlastností projektu může také obsahovat cesty, které může být zastaralá.
+- [Chybějící tělo funkce nebo definice proměnné](../../error-messages/tool-errors/missing-function-body-or-variable.md) . Tato chyba je společná, pokud deklarujete, ale nedefinujete proměnné, funkce nebo třídy v kódu. Kompilátor potřebuje prototyp funkce nebo `extern` deklaraci proměnné pro vygenerování souboru objektu bez chyby, ale linker nemůže vyřešit volání funkce nebo odkaz na proměnnou, protože není k dispozici žádný kód funkce nebo vyhrazené místo proměnné. Chcete-li tento problém vyřešit, je třeba definovat každou odkazovanou funkci a proměnnou ve zdrojovém souboru nebo knihovně, kterou propojíte.
 
-- Tento problém se můžou objevit, když je nainstalován na novou sadu SDK (například do jiného umístění) a pořadí hledání není aktualizován tak, aby odkazoval na nové umístění. Za normálních okolností byste měli umístit cestu novou sadu SDK zahrnout a lib adresáře před Visual C++ výchozí umístění. Projekt obsahující vložené cesty může navíc stále odkazovat na staré cesty, které jsou platné, ale zastaralé pro nové funkce přidá nová verze, který je nainstalován do jiného umístění.
+- Volání funkce, které používá typy vrácených hodnot a parametrů nebo konvence volání, které neodpovídají těm v definici funkce. V C++ souborech objektů, [dekorování názvů](../../error-messages/tool-errors/name-decoration.md) kóduje konvenci volání, třídu nebo obor názvů a návratové a parametrové typy funkce. Kódovaný řetězec se stal součástí konečného názvu dekorované funkce. Tento název používá linker k vyřešení nebo porovnávání volání funkce z jiných souborů objektů. Chcete-li tento problém vyřešit, ujistěte se, že deklarace funkce, definice a volání používají stejné obory, typy a konvence volání.
 
-- Pokud sestavení na příkazovém řádku a vytvořili vlastní proměnné prostředí, ověřte, že cesty k nástrojům, knihovny a soubory hlaviček přejít na konzistentní verzi. Další informace najdete v tématu [nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
+- C++kód, který zavoláte, při zahrnutí prototypu funkce do definice třídy, ale [nezahrnuje implementaci](../../error-messages/tool-errors/missing-function-body-or-variable.md) funkce. Chcete-li tento problém vyřešit, je nutné zadat definici pro všechny členy třídy, které voláte.
 
-Aktuálně nejsou k dispozici žádné standard pro [C++ pojmenování](../../error-messages/tool-errors/name-decoration.md) mezi dodavateli kompilátoru nebo dokonce i mezi různými verzemi kompilátoru. Proto propojování souborů objektů kompilován jinými kompilátory nemusí vytvářejí stejné schéma pojmenování a chyba LNK2001, čímž vznikne.
+- Došlo k pokusu o volání čistě virtuální funkce z abstraktní základní třídy. Čistě virtuální funkce nemá žádnou implementaci základní třídy. Chcete-li tento problém vyřešit, ujistěte se, že jsou implementovány všechny nazvané virtuální funkce.
 
-[Kombinování vložené a které nejsou vložené možnosti kompilace](../../error-messages/tool-errors/function-inlining-problems.md) na různých modulů, může způsobit LNK2001. Pokud knihovnu C++ se vytvoří pomocí funkce vkládání zapnuté ( **/Ob1** nebo **/ob2**), ale má odpovídající soubor záhlaví popisující funkce vkládání vypnuto (žádné `inline` – klíčové slovo), k této chybě Vyvolá se v. Chcete-li vyřešit tento problém, definování funkcí `inline` v hlavičkovém souboru je zahrnout v jiných zdrojových souborech.
+- Pokus o použití proměnné deklarované v rámci funkce ([místní proměnná](../../error-messages/tool-errors/automatic-function-scope-variables.md)) mimo rozsah této funkce. Chcete-li tento problém vyřešit, odeberte odkaz na proměnnou, která není v oboru, nebo přesuňte proměnnou do vyššího rozsahu.
 
-Pokud používáte `#pragma inline_depth` kompilátoru direktiv, ujistěte se, že máte [hodnotu 2 nebo novější sada](../../error-messages/tool-errors/function-inlining-problems.md)a ujistěte se, že použijete také [/Ob1](../../build/reference/ob-inline-function-expansion.md) nebo [/ob2](../../build/reference/ob-inline-function-expansion.md) – možnost kompilátoru.
+- Při vytváření vydání verze projektu ATL vytvoří zprávu, že je požadován spouštěcí kód CRT. Chcete-li tento problém vyřešit, proveďte jednu z následujících akcí:
 
-K této chybě může dojít, pokud vynecháte odkaz možnost NOENTRY při vytváření knihovny DLL pouze prostředků. Chcete-li vyřešit tento problém, přidejte do příkazu link/NOENTRY.
+  - Odebrání `_ATL_MIN_CRT` ze seznamu preprocesoru definuje, aby bylo možné zahrnout spouštěcí kód CRT. Další informace najdete v tématu [Obecná stránka vlastností (projekt)](../../build/reference/general-property-page-project.md).
 
-K této chybě může dojít, pokud používáte nesprávné/Subsystem nebo/Entry nastavení ve vašem projektu. Například pokud napíšeme konzolovou aplikaci a zadáte/Subsystem: Windows, nevyřešené externí bude generována chyba pro `WinMain`. Chcete-li vyřešit tento problém, ujistěte se, že odpovídat možnosti pro typ projektu. Další informace o těchto možnostech a vstupní body, najdete v článku [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) a [/Entry](../../build/reference/entry-entry-point-symbol.md) možnosti linkeru.
+  - Pokud je to možné, odeberte volání funkcí CRT, které vyžadují spouštěcí kód CRT. Místo toho použijte své ekvivalenty Win32. Použijte například `lstrcmp` místo `strcmp`. Známé funkce, které vyžadují spouštěcí kód CRT, jsou některé z funkcí řetězce a plovoucí desetinné čárky.
 
-### <a name="exported-symbol-issues"></a>Exportovanému symbolu problémy
+## <a name="consistency-issues"></a>Problémy konzistence
 
-Tato chyba nastane, pokud nebyl nalezen export uvedené v .def souboru. Důvodem může být buď neexistuje, je nesprávně zadány nebo používá C++ dekorované názvy. Soubor .def dekorované názvy nepřijímá. Chcete tento problém vyřešit, odeberte nepotřebné exporty a pomocí `extern "C"` deklarace pro exportované symboly.
+V současné době není k dispozici žádný standard pro [ C++ dekoraci názvů](../../error-messages/tool-errors/name-decoration.md) mezi dodavateli kompilátoru nebo dokonce mezi různými verzemi stejného kompilátoru. Soubory objektů kompilované s různými kompilátory nemůžou používat stejné schéma pojmenování. Jejich propojení může způsobit chybu LINKERŮ LNK2001.
 
-## <a name="what-is-an-unresolved-external-symbol"></a>Co je nerozpoznaný externí symbol?
+[Kombinování vložených a nevložených možností kompilace](../../error-messages/tool-errors/function-inlining-problems.md) v různých modulech může způsobit linkerů LNK2001. Pokud se C++ vytvoří knihovna se zapnutým vkládáním funkcí ( **/OB1** nebo **/Ob2**), ale odpovídající hlavičkový soubor s popisem funkcí je vypnutý (žádné klíčové slovo `inline`), dojde k této chybě. Chcete-li tento problém vyřešit, definujte funkce `inline` v hlavičkovém souboru, který jste zahrnuli do jiných zdrojových souborů.
 
-A *symbol* je název funkce nebo globální proměnné interně jej využívá kompilovaný objektový soubor nebo knihovny. Symbol je *definované* do souboru objektu Pokud úložiště je alokováno pro globální proměnnou nebo funkci, ve kterém je umístí zkompilovaný kód pro tělo funkce. *Externí symbol* je symbol, která *odkazované*, to znamená, používá nebo volat v souboru jednoho objektu, ale definované v jiném souboru knihovny nebo objekt. *Exportovat symbol* je ten, který má být zpřístupněn veřejně soubor objektu nebo knihovny, který ji definuje. Propojovací program musí *vyřešit*, nebo si najděte odpovídající definice pro každý externí symbol odkazuje objektový soubor propojeného do aplikace nebo knihovny DLL. Linker dojde k chybě, když ho nelze přeložit externí symbol tím, že hledá odpovídající exportovanému symbolu v některém z propojené soubory.
+Použijete-li direktivu `#pragma inline_depth` kompilátoru, ujistěte se, že jste nastavili [hodnotu 2 nebo vyšší](../../error-messages/tool-errors/function-inlining-problems.md), a ujistěte se, že jste také použili možnost kompilátoru [/OB1](../../build/reference/ob-inline-function-expansion.md) nebo [/Ob2](../../build/reference/ob-inline-function-expansion.md) .
 
-## <a name="use-the-decorated-name-to-find-the-error"></a>Najít chyby pomocí upravený název
+K této chybě může dojít, Pokud vynecháte možnost propojení/NOENTRY při vytváření knihovny DLL obsahující pouze prostředky. Chcete-li tento problém vyřešit, přidejte do příkazu Link možnost/NOENTRY.
 
-Použití kompilátoru a linkeru C++ [dekorování názvů](../../error-messages/tool-errors/name-decoration.md), označované také jako *pozměnění názvu*, určený ke kódování Další informace o typu proměnné nebo návratový typ, typy parametrů, oboru a volání konvence funkce v názvu symbolu. Tento upravený název je název symbolu propojovací program vyhledá k překladu externích symbolů.
+K této chybě může dojít, pokud v projektu použijete nesprávná nastavení/SUBSYSTEM nebo/ENTRY. Například pokud napíšete konzolovou aplikaci a zadáte/SUBSYSTEM: WINDOWS, vygeneruje se nerozpoznaná externí chyba pro `WinMain`. Chcete-li tento problém vyřešit, ujistěte se, že odpovídáte možnostem typu projektu. Další informace o těchto možnostech a vstupních bodech naleznete v možnostech linkeru [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) a [/entry](../../build/reference/entry-entry-point-symbol.md) .
 
-Protože dodatečné informace bude část názvu symbolu, chyba odkazu může dojít, pokud deklarace funkce nebo proměnná přesně neodpovídá definici funkce nebo proměnná. K tomu může dojít i v případě stejného souboru hlavičky se používá v volající kód a kód definující, pokud kompilátor jiné příznaky se používají při kompilaci zdrojové soubory. Například můžete získat tuto chybu Pokud váš kód je zkompilován používat `__vectorcall` konvence volání, ale odkaz na knihovnu, která očekává, že klientům pomocí výchozí `__cdecl` nebo `__fastcall` konvence volání. V takovém případě symbolů se neshodují s vzhledem k tomu, že jsou různých konvencí volání
+## <a name="exported-def-file-symbol-issues"></a>Problémy se symboly exportovaných souborů. def
 
-A umožňují najít příčinu předejít těmto chybám, linker chybová zpráva se dozvíte, jak "popisný název," název použitý v zdrojový kód a upravený název (v závorkách) pro nerozpoznaný externí symbol. Nemusíte vědět, jak převést upravený název, abyste mohli porovnat s další dekorované názvy. Můžete použít nástroje příkazového řádku, které jsou součástí kompilátoru k porovnání očekávaný symbol název a název skutečný symbol:
+K této chybě dojde, pokud se nenalezne export uvedený v souboru. def. Důvodem může být to, že export neexistuje, je nesprávně zadán nebo používá C++ dekorované názvy. Soubor. def neprovádí dekorované názvy. Chcete-li tento problém vyřešit, odeberte nepotřebné exporty a použijte `extern "C"` deklarace pro exportované symboly.
 
-- [/EXPORTUJE](../../build/reference/dash-exports.md) a [/symboly](../../build/reference/symbols.md) možnosti příkazového řádku nástroj DUMPBIN vám můžou pomoct odhalit symboly, které jsou definovány v souborech DLL a objektů nebo knihoven. Můžete to ověřit, že exportovaný dekorované názvy neshoduje s dekorované názvy propojovací program vyhledá.
+## <a name="use-the-decorated-name-to-find-the-error"></a>K nalezení chyby použijte upravený název.
 
-V některých případech linker může jenom nahlásit to upravený název pro symbol. Můžete použít nástroj příkazového řádku UNDNAME pro získání upraveného formulář upravený název.
+Kompilátor a linker používají [dekoraci názvů](../../error-messages/tool-errors/name-decoration.md), označované také jako *pojmenování názvů.* C++ Dekorování názvů kóduje Další informace o typu proměnné v názvu symbolu. Název symbolu funkce zakóduje svůj návratový typ, typy parametrů, rozsah a konvence volání. Toto dekorické jméno je název symbolu, který linker hledá, aby vyřešil externí symboly.
 
-## <a name="additional-resources"></a>Další zdroje
+Pokud se deklarace funkce nebo proměnné *přesně* neshoduje s definicí funkce nebo proměnné, může dojít k chybě odkazu. To je proto, že žádný rozdíl se bude součástí názvu symbolu, aby odpovídal. K chybě může dojít i v případě, že se stejný hlavičkový soubor používá jak v kódu volajícího, tak i v definujícím kódu. Jedním ze způsobů, jak se může stát, je, že kompilujete zdrojové soubory pomocí různých příznaků kompilátoru. Například pokud je váš kód zkompilován, aby používal konvenci volání `__vectorcall`, ale odkazujete na knihovnu, která očekává, že klienti budou volat pomocí výchozí `__cdecl` nebo `__fastcall` konvence volání. V takovém případě se symboly neshodují, protože se liší konvence volání.
 
-Další informace o možných příčinách a řešení pro LNK2001 viz otázka na Stack Overflow [co se o chybu nedefinované odkaz/nerozpoznaných externích symbolů a jak ho mám opravit?](https://stackoverflow.com/q/12573816/2002113).
+Aby bylo možné najít příčinu, chybová zpráva zobrazuje dvě verze názvu. Zobrazuje "popisný název", název použitý ve zdrojovém kódu a dekorované jméno (v závorkách). Nemusíte znát, jak interpretovat dekorovaný název. Stále můžete hledat a porovnat je s jinými dekorovanými názvy. Pomocí nástrojů příkazového řádku můžete najít a porovnat očekávaný název symbolu a skutečný název symbolu:
 
+- Možnosti [/EXPORTS](../../build/reference/dash-exports.md) a [/Symbols](../../build/reference/symbols.md) nástroje příkazového řádku DUMPBIN jsou užitečné tady. Můžou vám pomůžou zjistit, které symboly jsou definované v souboru. dll a objektu nebo knihovně. Seznam symboly lze použít k ověření, že exportované dekorované názvy odpovídají dekorovaným názvům, které linker vyhledává.
+
+- V některých případech může linker nahlásit pouze dekorovaný název pro symbol. Pomocí nástroje příkazového řádku UNDNAME můžete získat neupravenou formu dekorované názvu.
+
+## <a name="additional-resources"></a>Další materiály a zdroje informací
+
+Další informace najdete v Stack Overflow otázce ["Co je nedefinovaná reference/nevyřešená chyba externího symbolu a jak ji mám opravit?"](https://stackoverflow.com/q/12573816/2002113).

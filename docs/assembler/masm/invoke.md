@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: a5175252364918ca218e81536b29f084f7fd19cc
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 7a005e5e70a2696ca89fb0ad1a3ff02aab8ffe5a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397302"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317185"
 ---
-# <a name="invoke-32-bit-masm"></a>INVOKE (32-bit MASM)
+# <a name="invoke"></a>INVOKE
 
-Volá proceduru na adrese předané *výrazem*, předává argumenty v zásobníku nebo v registrech v souladu se standardními konvencemi volání typu jazyka. (jenom 32-bitová MASM.)
+(jenom 32-bitová MASM.) Volá proceduru na adrese předané *výrazem*, předává argumenty v zásobníku nebo v registrech v souladu se standardními konvencemi volání typu jazyka.     
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,4 +27,5 @@ Každý argument předaný proceduře může být výrazem, dvojicí registru ne
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na direktivy](../../assembler/masm/directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)
