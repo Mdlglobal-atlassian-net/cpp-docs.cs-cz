@@ -1,17 +1,17 @@
 ---
 title: SWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - SWORD
 helpviewer_keywords:
 - SWORD directive
 ms.assetid: 99228a2a-4ed1-4343-a317-e59302620a55
-ms.openlocfilehash: d0a8c28ea5666ed5d4bd606d08ddfe5455c706a3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: dc34061a14b41220252bbb75537d2ccefa601afe
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393591"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318394"
 ---
 # <a name="sword"></a>SWORD
 
@@ -23,5 +23,6 @@ Přidělí a případně inicializuje podepsané slovo (2 bajty) úložiště pr
 
 ## <a name="see-also"></a>Viz také:
 
-\ – [referenční informace o direktivách](../../assembler/masm/directives-reference.md)
-[WORD](../../assembler/masm/word.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+\ [Word](word.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)
