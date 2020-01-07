@@ -1,6 +1,6 @@
 ---
 title: _aligned_malloc
-ms.date: 11/04/2016
+ms.date: 12/11/2019
 api_name:
 - _aligned_malloc
 api_location:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: b4a2b35e5344757a1269ccb781a0524383a4f792
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c06c822ae4e7584a172c260a5c06e25019a1ce5e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943875"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300128"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -60,11 +60,13 @@ Ukazatel na blok paměti, který byl přidělen nebo NULL v případě, že oper
 
 ## <a name="remarks"></a>Poznámky
 
-_aligned_malloc je založen na [](malloc.md) **za** .
+**_aligned_malloc** je založena na [systému.](malloc.md)
 
-**_aligned_malloc** je označena `__declspec(restrict)`jako `__declspec(noalias)` , což znamená, že funkce zaručuje, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
+**_aligned_malloc** je označen `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce je zaručena, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
 
-Tato funkce nastaví `errno` na `ENOMEM` hodnotu, pokud selhalo přidělení paměti nebo byla požadovaná velikost větší než `_HEAP_MAXREQ`. Další informace o `errno`naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_malloc** také ověří své parametry. Pokud *Zarovnání* není mocninou 2 nebo *Velikost* je nula, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí hodnotu null a nastaví `errno` na. `EINVAL`
+Tato funkce nastaví `errno`, aby `ENOMEM`, pokud se nezdařilo přidělení paměti nebo byla požadovaná velikost větší než `_HEAP_MAXREQ`. Další informace o `errno`najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_malloc** také ověřuje jeho parametry. Pokud *Zarovnání* není mocninou 2 nebo *Velikost* je nula, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí hodnotu NULL a nastaví `errno` na `EINVAL`.
+
+Pomocí [_aligned_free](aligned-free.md) navrátit paměť získanou **_aligned_malloc** a `_aligned_offset_malloc`. Nepoužívejte `free`, který nevrací správně zarovnané paměti a může vést k chybám.
 
 ## <a name="requirements"></a>Požadavky
 

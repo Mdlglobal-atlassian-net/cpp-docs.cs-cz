@@ -12,16 +12,16 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: 6991dfe90e58352b26d7c914e1601a68674b8a5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289075"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300154"
 ---
-# <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
+# <a name="_pgmptr-_wpgmptr"></a>_pgmptr, _wpgmptr
 
-Cesta spustitelného souboru. Zastaralé; použít [_get_pgmptr –](../c-runtime-library/reference/get-pgmptr.md) a [_get_wpgmptr –](../c-runtime-library/reference/get-wpgmptr.md).
+Cesta ke spustitelnému souboru. Zastaralé použijte [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) a [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,15 +32,15 @@ extern wchar_t *_wpgmptr;
 
 ## <a name="remarks"></a>Poznámky
 
-Při spuštění programu ze překladač příkazů (Cmd.exe) `_pgmptr` je automaticky inicializován na úplnou cestu spustitelného souboru. Například pokud Hello.exe C:\BIN a C:\BIN je na cestě `_pgmptr` při spuštění nastavený na C:\BIN\Hello.exe:
+Když se program spustí z překladače příkazu (cmd. exe), `_pgmptr` se automaticky inicializuje na úplnou cestu ke spustitelnému souboru. Pokud je například Hello. exe v C:\BIN a C:\BIN je v cestě, `_pgmptr` je při spuštění nastaveno na C:\BIN\Hello.exe:
 
 ```
 C> hello
 ```
 
-Pokud není program spustit z příkazového řádku `_pgmptr` může být inicializován, název aplikace (základní název pro souboru bez přípony názvu souboru) nebo název souboru, relativní cestu nebo úplnou cestu.
+Když se program nespustí z příkazového řádku, `_pgmptr` se může inicializovat do názvu programu (základní název souboru bez přípony názvu souboru) nebo do názvu souboru, relativní cesty nebo úplné cesty.
 
-`_wpgmptr` je širokoznaká protějškem `_pgmptr` pro použití s programy, které používají `wmain`.
+`_wpgmptr` je protějšek se všemi znaky `_pgmptr` pro použití s programy, které používají `wmain`.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -58,7 +58,7 @@ Pokud není program spustit z příkazového řádku `_pgmptr` může být inici
 
 Následující program ukazuje použití `_pgmptr`.
 
-```
+```c
 // crt_pgmptr.c
 // compile with: /W3
 // The following program demonstrates the use of _pgmptr.
@@ -73,7 +73,7 @@ int main( void )
 }
 ```
 
-Můžete použít `_wpgmptr` změnou `%Fs` k `%S` a `main` k `wmain`.
+Můžete použít `_wpgmptr` změnou `%Fs` na `%S` a `main` na `wmain`.
 
 ## <a name="see-also"></a>Viz také:
 

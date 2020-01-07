@@ -1,45 +1,43 @@
 ---
 title: Použití dialogového pruhu s ovládacím prvkem matrice
 ms.date: 11/04/2016
-f1_keywords:
-- WM_EX_TRANSPARENT
 helpviewer_keywords:
 - WS_EX_TRANSPARENT style
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-ms.openlocfilehash: 33ca3d0a7bf2e60511ea0048ad91b1f0930a2894
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4e786d3670ec74b734739e29aa7e3e33b5af384
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180515"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302364"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Použití dialogového pruhu s ovládacím prvkem matrice
 
-Jak je uvedeno v [matrice – ovládací prvky a pruhy](../mfc/rebar-controls-and-bands.md), každý obsluhy vzdálené správy může obsahovat pouze jeden podřízené okno (nebo ovládací prvek). To může být omezení, pokud chcete mít více než jeden podřízené okno za obsluhy vzdálené správy. Pohodlné alternativním řešením je vytvoření prostředku panel dialogového okna pomocí více ovládacích prvků a pak přidejte matrice obsluhy vzdálené správy (který obsahuje panel dialogového okna) do ovládacího prvku rebar.
+Jak je uvedeno v [ovládacích prvcích a pásmech matrice](../mfc/rebar-controls-and-bands.md), každý pruh může obsahovat pouze jedno podřízené okno (nebo ovládací prvek). To může být omezení, pokud chcete mít více než jedno podřízené okno na jeden panel. Pohodlným řešením je vytvořit prostředek panelu nástrojů s více ovládacími prvky a následně přidat matrice panel (obsahující panel dialogového okna) do ovládacího prvku matrice.
 
-Za normálních okolností kdybys chtěla vzdálené panel dialogového okna se zobrazí transparentní, nastavíte WS_EX_TRANSPARENT rozšířený styl pro objekt panel dialogového okna. Ale protože WS_EX_TRANSPARENT má některé problémy s správně vykreslování pozadí panel dialogového okna, je potřeba udělat trochu práce navíc k dosažení požadovaného efektu.
+Pokud byste chtěli, aby se pruh panelu dialogového okna zobrazil jako průhledný, nastavili jste pro objekt panelu dialogového okna rozšířený styl WS_EX_TRANSPARENT. Vzhledem k tomu, že WS_EX_TRANSPARENT obsahuje nějaké problémy s řádným vykreslením pozadí panelu nástrojů, budete muset provést trochu další práci, abyste dosáhli požadovaného účinku.
 
-Následující podrobnosti o postupu kroky potřebné k dosažení transparentnosti bez použití WS_EX_TRANSPARENT rozšířený styl.
+Následující postup podrobně popisuje kroky potřebné k dosažení transparentnosti bez použití rozšířeného stylu WS_EX_TRANSPARENT.
 
-### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>K implementaci transparentní dialogového pruhu ve svazku matrice
+### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Implementace transparentního dialogového okna v matrice pásmu
 
-1. Použití [dialogové okno Přidat třídu](../mfc/reference/adding-an-mfc-class.md), přidejte novou třídu (například `CMyDlgBar`), který implementuje objekt panel dialogového okna.
+1. Pomocí [dialogového okna Přidat třídu](../mfc/reference/adding-an-mfc-class.md)přidejte novou třídu (například `CMyDlgBar`), která implementuje objekt panelu dialogového okna.
 
-1. Přidání obslužné rutiny pro zprávy WM_ERASEBKGND.
+1. Přidejte obslužnou rutinu pro WM_ERASEBKGNDovou zprávu.
 
-1. V nové obslužné rutiny upravte existující kód tak, aby odpovídaly v následujícím příkladu:
+1. V nové obslužné rutině upravte existující kód tak, aby odpovídal následujícímu příkladu:
 
    [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
 
-1. Přidání obslužné rutiny pro zprávy WM_MOVE.
+1. Přidejte obslužnou rutinu pro WM_MOVEovou zprávu.
 
-1. V nové obslužné rutiny upravte existující kód tak, aby odpovídaly v následujícím příkladu:
+1. V nové obslužné rutině upravte existující kód tak, aby odpovídal následujícímu příkladu:
 
    [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
 
-Nové obslužné rutiny simulovat transparentnosti panel dialogového okna předávání WM_ERASEBKGND zprávu nadřazenému oknu a vynucení repaint pokaždé, když je přesunut objektu panel dialogového okna.
+Nové obslužné rutiny simulují průhlednost panelu dialogového okna tím, že předají zprávu WM_ERASEBKGND do nadřazeného okna a vynutí překreslení pokaždé, když se objekt panelu dialogového okna přesune.
 
 ## <a name="see-also"></a>Viz také:
 

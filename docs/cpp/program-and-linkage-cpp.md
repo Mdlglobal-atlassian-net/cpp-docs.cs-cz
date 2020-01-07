@@ -1,61 +1,64 @@
 ---
-title: Programy a propojení (C++)
-ms.date: 04/09/2018
+title: Jednotky překladu a propojení (C++)
+ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: 4f509979a293f194333e610fbdae7be9d32ec121
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcd66b454da3758996fe827581fe4a73a641407f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301510"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301350"
 ---
-# <a name="program-and-linkage-c"></a>Program a propojení (C++)
+# <a name="translation-units-and-linkage"></a>Jednotky překladu a propojení
 
-V programu v jazyce C++ *symbol*, třeba název proměnné nebo funkce, lze deklarovat libovolný počet v rámci svého oboru, ale to je možné definovat jenom jednou. Toto je jedna definice pravidla (ODR). A *deklarace* zavádí (nebo znovu zavádí) název do programu. A *definice* zavádí název a v případě proměnnou, explicitně inicializuje ji. A *funkce definice* se skládá z podpisu plus tělo funkce.
+V C++ programu může být *symbol*, například název proměnné nebo funkce, deklarován v rámci oboru libovolným počtem výskytů, ale může být definován pouze jednou. Toto pravidlo je pravidlo "jedno definice" (ODR). *Deklarace* zavádí (nebo znovu zavádí) název do programu. *Definice* zavádí název. Pokud název představuje proměnnou, definice ji explicitně inicializuje. *Definice funkce* se skládá z podpisu a textu funkce. Definice třídy se skládá z názvu třídy následovaného blokem, který obsahuje seznam všech členů třídy. (Subjekty členských funkcí mohou být volitelně definovány samostatně v jiném souboru.)
 
-Jde o deklarace:
+Následující příklad ukazuje některé deklarace:
 
 ```cpp
 int i;
 int f(int x);
+class C;
 ```
 
-Následují definice:
+Následující příklad ukazuje některé definice:
 
 ```cpp
 int i{42};
 int f(int x){ return x * i; }
+class C {
+public:
+   void DoSomething();
+};
 ```
 
-Program se skládá z jednoho nebo více *jednotkách překladu*. Jednotky překladu se skládá z implementační soubor (.cpp, .cxx atd.) a všechny hlavičky (.h, .hpp atd.), který zahrnuje přímo nebo nepřímo. Každou jednotku převodu je nezávisle na sobě zkompilovány kompilátorem, po jejímž uplynutí sloučí propojovací program zkompilovaný jednotkami do jednoho *program*. Porušení pravidla ODR obvykle zobrazí jako chyby linkeru Pokud stejný název má dva různé definice v různých jednotkách překladu.
+Program se skládá z jedné nebo více *jednotek překladu*. Jednotka překladu se skládá z implementačního souboru a všech hlaviček, které obsahuje přímo nebo nepřímo. Implementační soubory mají obvykle příponu souboru *cpp* nebo *příponu CXX*. Hlavičkové soubory mají obvykle příponu *h* nebo *HPP*. Jednotlivé jednotky překladu jsou kompilovány nezávisle na kompilátoru. Po dokončení kompilace linker sloučí zkompilované jednotky překladu do jednoho *programu*. Porušení pravidla ODR se obvykle zobrazují jako chyby linkeru. K chybám linkeru dochází, když má stejný název dvě různé definice v různých jednotkách překladu.
 
-Obecně platí, je nejlepší způsob, jak byla proměnná viditelná napříč více souborů a vložit ho do souboru hlaviček přidejte #include – direktiva v každém souboru .cpp, který vyžaduje deklaraci. Přidáním *zahrnují chrání* kolem obsah těchto hlaviček zajistíte, že názvy deklaruje se definovat pouze jednou.
+Obecně je nejlepší způsob, jak nastavit proměnnou jako viditelnou v rámci více souborů, je umístit do hlavičkového souboru. Pak přidejte direktivu #include do každého souboru *cpp* , který vyžaduje deklaraci. Přidáním *ochranných krytí* pro obsah záhlaví zajistíte, že názvy, které deklaruje, budou definovány pouze jednou.
 
-Nicméně v některých případech může být potřeba deklarovat globální proměnnou nebo třída v souboru s příponou .cpp. V takových případech budete potřebovat způsob, jak zjistit kompilátoru a linkeru, určuje, zda název objektu platí pouze pro jeden soubor, nebo všechny soubory.
+V C++ 20 jsou [moduly](modules-cpp.md) představeny jako Vylepšená alternativa k hlavičkovým souborům.
 
-## <a name="linkage-vs-scope"></a>Propojení a oboru
+V některých případech může být nutné deklarovat globální proměnnou nebo třídu v souboru *cpp* . V těchto případech potřebujete způsob, jak říct kompilátoru a linkeru, jaký typ *propojení* má název. Typ propojení určuje, zda se název objektu vztahuje pouze na jeden soubor nebo na všechny soubory. Pojem propojení se vztahuje pouze na globální názvy. Koncept propojení se nevztahuje na názvy, které jsou deklarovány v rámci oboru. Obor je určen sadou ohraničujících složených závorek, například v definicích funkce nebo třídy.
 
-Koncept *propojení* označuje, zda globální symboly (například, názvy typů názvy proměnných a funkcí) v rámci programu jako celek mezi jednotkami překladu. Koncept *oboru* odkazuje na symboly, které jsou deklarovány v rámci bloku, jako je například obor názvů, třídy nebo tělo funkce. Tyto značky jsou viditelné pouze v rámci oboru, ve kterém jsou definovány; Koncept propojení se nevztahuje na ně.
+## <a name="external-vs-internal-linkage"></a>Externí a interní propojení
 
-## <a name="external-vs-internal-linkage"></a>Vnější vs. vnitřní propojení
+*Bezplatná funkce* je funkce, která je definována v oboru názvů Global nebo Namespace. Nekonstantní globální proměnné a bezplatné funkce ve výchozím nastavení mají *vnější propojení*; jsou viditelné z jakékoli jednotky překladu v programu. Proto žádný jiný globální objekt nemůže mít tento název. Symbol s *vnitřním propojením* nebo *bez propojení* je viditelný pouze v rámci jednotky překladu, ve které je deklarována. Pokud má název vnitřní propojení, může stejný název existovat v jiné jednotce překladu. Proměnné deklarované s definicemi třídy nebo texty funkcí nemají žádné propojení.
 
-A *bezplatná funkce* je funkce, která je definována na globální nebo obor názvů. Non-const globální proměnné a funkce bezplatné ve výchozím nastavení mají *vnější propojení*; jsou viditelné v libovolné jednotce překladu programu. Proto může mít žádné jiné globální objekt (proměnnou, definice třídy atd.) tento název. Symbol s *vnitřní propojení* nebo *bez propojení* je viditelná pouze v rámci jednotce překladu, ve kterém je deklarována. Při název má vnitřní propojení, může se stejným názvem existuje v jiné jednotce překladu. Proměnné deklarované s definicí třídy nebo funkce úřadů, které nemají žádné propojení.
+Můžete vynutit, aby globální název měl interní propojení explicitním deklarováním jako **static**. Tím se omezí jeho viditelnost na stejnou jednotku překladu, v níž je deklarována. V tomto kontextu **statický** znamená něco jiného než při použití na lokální proměnné.
 
-Můžete vynutit na globální název pomocí explicitní deklarace to jako mít interní vazbu **statické**. Tím se omezí jeho viditelnost na stejné jednotce překladu, ve kterém je deklarována. Všimněte si, že v tomto kontextu **statické** znamená něco jiného než při použít pro lokální proměnné.
-
-Následující objekty mít interní vazbu. ve výchozím nastavení:
-- objekty konstant
-- objekty constexpr.
+Ve výchozím nastavení mají následující objekty interní propojení:
+- objekty const
+- objekty constexpr
 - definice Typedef
 - statické objekty v oboru názvů
 
-Pokud chcete dát konstantní objekt vnější propojení, deklarujte ho jako **extern** a přiřaďte mu hodnotu:
+Chcete-li přidělit objektu const vnější propojení, deklarujte ho jako **extern** a přiřaďte mu hodnotu:
 
 ```cpp
 extern const int value = 42;
 ```
 
-Zobrazit [extern](extern-cpp.md) Další informace.
+Další informace najdete v tématu [extern](extern-cpp.md) .
 
 ## <a name="see-also"></a>Viz také:
 

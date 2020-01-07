@@ -1,28 +1,28 @@
 ---
-title: Reference jazyka C++
+title: C++ – jazykové referenční informace
 ms.custom: index-page
-ms.date: 05/06/2019
+ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222489"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301584"
 ---
-# <a name="c-language-reference"></a>Reference jazyka C++
+# <a name="c-language-reference"></a>C++ – jazykové referenční informace
 
-Tento přehled popisuje C++ programovací jazyk, jak je implementován v Microsoft C++ kompilátoru. Organizace je založena na [ *The manuálu C++ s poznámkami odkaz* ](http://www.stroustrup.com/arm.html) od Margaret Ellis a Bjarne Stroustrup a ANSI/ISO C++ mezinárodním standardu (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.
+Tento odkaz vysvětluje C++ programovací jazyk, jak je implementován v kompilátoru C++ společnosti Microsoft. Organizace je založena na [ *C++ referenční příručce s poznámkami*](http://www.stroustrup.com/arm.html) od Margaret Ellis a Bjarne Stroustrup a v mezinárodním standardu ANSI/ C++ ISO (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.
 
-Přehled programovací postupy v moderním jazyce C++, naleznete v tématu [Vítejte zpět do C++](welcome-back-to-cpp-modern-cpp.md).
+Přehled moderních C++ postupů programování najdete v tématu [Vítejte zpátky na C++ ](welcome-back-to-cpp-modern-cpp.md).
 
 Pokud chcete rychle vyhledat klíčové slovo nebo operátora, nahlédněte do následujících tabulek:
 
-- [Klíčová slova jazyka C++](../cpp/keywords-cpp.md)
+- [C++Klíčov](../cpp/keywords-cpp.md)
 
-- [Operátory jazyka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [C++Logické](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -32,10 +32,14 @@ Základní lexikální prvky programu C++: tokeny, komentáře, operátory, klí
 [Základní koncepty](../cpp/basic-concepts-cpp.md)<br/>
 Rozsah, navázání, spuštění a ukončení programu, třídy úložiště a typy.
 
-[Standardní převody](../cpp/standard-conversions.md)<br/>
-Převody typů mezi integrovanými nebo „základními“ typy. Také aritmetické převody a převody mezi typy ukazatele, odkazu a ukazatele–odkazu.
+[Předdefinované typy](fundamental-types-cpp.md) Základní typy, které jsou integrovány do C++ kompilátoru a jejich rozsahy hodnot.
 
-[Operátory, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Standardní převody](../cpp/standard-conversions.md)<br/>
+Převody typů mezi vestavěnými typy. Také aritmetické převody a převody mezi typy ukazatele, odkazu a ukazatele–odkazu.
+
+[Deklarace a definice](declarations-and-definitions-cpp.md) Deklarování a definování proměnných, typů a funkcí.
+
+[Operátory, priority a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 Operátory v jazyce C++.
 
 [Výrazy](../cpp/expressions-cpp.md)<br/>
@@ -47,55 +51,55 @@ Programovací technika, která implicitně definuje třídu funkčního objektu 
 [Příkazy](../cpp/statements-cpp.md)<br/>
 Výraz, null, složený příkaz, výběr, iterace, skok a deklarace.
 
-[Deklarace a definice](declarations-and-definitions-cpp.md)<br/>
-Specifikátory paměťových tříd, definice funkce, inicializace, výčty, **třídy**, **struktura**, a **sjednocení** deklarace, a **– typedef**  deklarace. Navíc **vložené** funkce, **const** – klíčové slovo, obory názvů.
+[Třídy a struktury](../cpp/classes-and-structs-cpp.md)<br/>
+Úvod do tříd, struktur a union. Také členské funkce, speciální členské funkce, datové členy, bitová pole, **Tento** ukazatel, vnořené třídy.
 
-[Třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md)<br/>
-Úvod do tříd, struktur a union. Také členské funkce, zvláštní členské funkce, datové členy, bitová pole, **to** ukazatel, vnořené třídy.
+[Sjednocení](unions.md)<br/>
+Uživatelsky definované typy, ve kterých všichni členové sdílejí stejné umístění v paměti.
 
 [Odvozené třídy](../cpp/inheritance-cpp.md)<br/>
-Jednotná a vícenásobná dědičnost, **virtuální** funkce, více základních tříd, **abstraktní** třídy, pravidla rozsahu. Také **__super** a **__interface** klíčová slova.
+Jedna a vícenásobná dědičnost, **virtuální** funkce, více základních tříd, **abstraktní** třídy, pravidla rozsahu. Také klíčová slova **__super** a **__interface** .
 
-[Member-Access Control](../cpp/member-access-control-cpp.md)<br/>
-Řízení přístupu ke členům třídy: **veřejné**, **privátní**, a **chráněné** klíčová slova. Přátelské funkce a třídy.
+[Access Control členů](../cpp/member-access-control-cpp.md)<br/>
+Řízení přístupu ke členům třídy: klíčová slova **Public**, **Private**a **Protected** . Přátelské funkce a třídy.
 
 [Přetížení](operator-overloading.md)<br/>
-Přetížené operátory, pravidla přetížení operátoru.
+Přetížené operátory, pravidla pro Přetěžování operátorů.
 
 [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)<br/>
 Zpracování výjimek v jazyce C++, strukturované zpracování výjimek (SEH), klíčová slova používaná při psaní příkazů pro zpracování výjimek.
 
 [Kontrolní výraz a uživatelem zadané zprávy](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
-`#error` Direktiva, **static_assert** – klíčové slovo, `assert` – makro.
+`#error` direktiva, klíčové slovo **static_assert** , `assert` makro.
 
 [Šablony](../cpp/templates-cpp.md)<br/>
-Specifikace šablony, šablony funkce, šablony třídy **typename** – klíčové slovo, šablony vs. makra, šablony a inteligentní ukazatele.
+Specifikace šablony, šablony funkce, šablony třídy, klíčové slovo **TypeName** , šablony vs. makra, šablony a inteligentní ukazatele.
 
 [Zpracování událostí](../cpp/event-handling.md)<br/>
 Deklarování událostí a obslužných rutin událostí.
 
 [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md)<br/>
-Modifikátory specifické pro jazyk C++ společnosti Microsoft. Paměť adresování, konvence volání, **naked** funkce, rozšířené atributy třídy úložiště (**__declspec**), **__w64**.
+Modifikátory specifické pro jazyk C++ společnosti Microsoft. Adresování paměti, konvence volání, **holé** funkce, rozšířené atributy třídy úložiště ( **__declspec**), **__w64**.
 
 [Vkládaný assembler](../assembler/inline/inline-assembler.md)<br/>
-Použití jazyka sestavení a C++ v **__asm** bloky.
+Použití jazyka sestavení a C++ v blocích **__asm** .
 
 [Podpora kompilátoru COM](../cpp/compiler-com-support.md)<br/>
 Odkaz na třídy specifické pro společnost Microsoft a globální funkce používané pro podporu typů modelu COM.
 
 [Rozšíření Microsoft](../cpp/microsoft-extensions.md)<br/>
-Rozšíření Microsoft C++.
+Rozšíření Microsoft pro C++.
 
 [Nestandardní chování](../cpp/nonstandard-behavior.md)<br/>
-Informace o nestandardní chování Microsoft C++ kompilátoru.
+Informace o nestandardním chování kompilátoru Microsoftu C++
 
-[C++ vás vítá zpět](welcome-back-to-cpp-modern-cpp.md)<br/>
-Přehled o moderním programování C++ postupů pro psaní programů bezpečné, správné a efektivní.
+[Vítejte zpět naC++](welcome-back-to-cpp-modern-cpp.md)<br/>
+Přehled moderních C++ programovacích postupů pro psaní bezpečných, správných a efektivních programů.
 
 ## <a name="related-sections"></a>Související oddíly
 
 [Přípony komponent pro platformy běhového prostředí](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-Referenční materiály k používání Microsoft C++ kompilátor, aby cílové rozhraní .NET.
+Referenční materiály k používání kompilátoru Microsoftu C++ pro cílení na .NET
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Možnosti kompilátoru, možnosti linkeru a další nástroje sestavení.
@@ -103,8 +107,8 @@ Možnosti kompilátoru, možnosti linkeru a další nástroje sestavení.
 [C/C++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 Referenční materiál pro pragmy, direktivy preprocesoru, předdefinovaná makra a preprocesor.
 
-[Knihovny Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
-Seznam odkazů na referenční úvodní stránky pro různé Microsoft C++ knihovny.
+[Knihovny C++ vizuálů](../standard-library/cpp-standard-library-reference.md)<br/>
+Seznam odkazů na úvodní stránky odkazů pro různé knihovny Microsoftu C++
 
 ## <a name="see-also"></a>Viz také:
 

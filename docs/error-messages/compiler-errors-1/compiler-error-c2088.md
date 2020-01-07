@@ -1,27 +1,27 @@
 ---
-title: Compiler Error C2088
+title: Chyba kompilátoru C2088
 ms.date: 11/04/2016
 f1_keywords:
 - C2088
 helpviewer_keywords:
 - C2088
 ms.assetid: b93f7094-185b-423d-8bb9-507cd757dbf5
-ms.openlocfilehash: 6d53f2896fc3b964a4d2652b3bfd0dcebb4a7226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f798774a7735a6aceb0bf75b3c6da9ccb1e4a72
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175170"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301974"
 ---
-# <a name="compiler-error-c2088"></a>Compiler Error C2088
+# <a name="compiler-error-c2088"></a>Chyba kompilátoru C2088
 
-'operator': neplatné pro "klíč třídy.
+' operator ': neplatné pro ' class-Key '
 
-Operátor, který nebyl definovaný pro struktury nebo sjednocení. Tato chyba je platná pouze pro kód jazyka C.
+Operátor nebyl definován pro strukturu nebo sjednocení. Tato chyba je platná pouze pro kód jazyka C.
 
-Následující ukázka generuje C2088 třech místech:
+Následující ukázka vygeneruje C2088 třikrát:
 
-```
+```c
 // C2088.c
 struct S {
    int m_i;

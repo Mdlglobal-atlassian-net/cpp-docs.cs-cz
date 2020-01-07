@@ -1,6 +1,6 @@
 ---
 title: ungetch
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - ungetch
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - ungetch function
 ms.assetid: 6921232f-6317-41cd-948b-91d56a11bc0e
-ms.openlocfilehash: 89262517cefa677d3611ba80bd3c92579f6ca9e2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b64e3b193fb8fde986277f1bf02e26edef3fc095
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945802"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301051"
 ---
 # <a name="ungetch"></a>ungetch
 
-Tato funkce POSIX je zastaralá. Místo toho použijte C++ [_ungetch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md) ISO.
+Název funkce specifický pro společnost Microsoft `ungetch` je zastaralý alias pro funkci [_ungetch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md) . Ve výchozím nastavení vygeneruje [Upozornění kompilátoru (úroveň 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Název je zastaralý, protože nedodržuje standardní pravidla jazyka C pro názvy specifické pro implementaci. Funkce je však stále podporována.
+
+Doporučujeme místo toho použít [_ungetch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md) . Nebo můžete i nadále používat tento název funkce a zakázat upozornění. Další informace najdete v tématu vypnutí názvů funkcí [Upozornění](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) a [funkce POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 > [!IMPORTANT]
 > Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

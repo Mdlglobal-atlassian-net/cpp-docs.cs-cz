@@ -1,6 +1,6 @@
 ---
 title: getw
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - getw
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - getw function
 ms.assetid: d3c347a4-3ff1-403b-8d02-2dd3b429bb5f
-ms.openlocfilehash: 3fe27dec9fc077d163f584c8a0634b962470cab4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: adca9d13a3d835bdb247bff984803b3396c67f1e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950703"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300960"
 ---
 # <a name="getw"></a>getw
 
-Tato funkce POSIX je zastaralá. Místo toho použijte C++ [_getw](getw.md) ISO.
+Název funkce specifický pro společnost Microsoft `getw` je zastaralý alias pro funkci [_getw](getw.md) . Ve výchozím nastavení vygeneruje [Upozornění kompilátoru (úroveň 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Název je zastaralý, protože nedodržuje standardní pravidla jazyka C pro názvy specifické pro implementaci. Funkce je však stále podporována.
+
+Doporučujeme místo toho použít [_getw](getw.md) . Nebo můžete i nadále používat tento název funkce a zakázat upozornění. Další informace najdete v tématu vypnutí názvů funkcí [Upozornění](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) a [funkce POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

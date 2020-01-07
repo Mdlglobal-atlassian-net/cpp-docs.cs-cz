@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313581"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298711"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Proč čísla s plovoucí desetinnou čárkou mohou ztratit přesnost
 
-Desetinná čísla s plovoucí desetinnou čárkou obvykle nemají přesné binárního formátu. Toto je vedlejším účinkem jak představuje procesoru s plovoucí desetinnou čárkou datového bodu. Z tohoto důvodu se můžete setkat s určitou ztrátou přesnosti a některé operace s plovoucí desetinnou čárkou může vést k neočekávaným výsledkům.
+Desítkové hodnoty s plovoucí desetinnou čárkou většinou nemají přesnou binární reprezentaci. Jedná se o vedlejší účinky toho, jak CPU představuje data s plovoucí desetinnou čárkou. Z tohoto důvodu se může stát, že dojde ke ztrátě přesnosti a některé operace s plovoucí desetinnou čárkou můžou způsobit neočekávané výsledky.
 
-Toto chování je výsledkem jednoho z následujících akcí:
+Toto chování je výsledkem jedné z následujících akcí:
 
-- Binární reprezentace desetinné číslo nemusí být přesné.
+- Binární reprezentace desítkového čísla nemůže být přesně.
 
-- Došlo k neshodě typů mezi čísla použít (například kombinování plovoucí desetinnou čárkou a double).
+- Došlo k neshodě typů mezi použitými čísly (například kombinování plovoucích a dvojitých).
 
-Chcete-li vyřešit chování, většina programátoři buď zajistit, že hodnota je větší nebo menší než co je potřeba, nebo získání a použití knihovny Binary programového Decimal (BCD), které bude udržovat přesnost.
+Aby bylo možné chování vyřešit, většina programátorů buď zajistěte, aby byla hodnota větší nebo menší, než je potřeba, nebo získají a používají binární kódované číslo (BCD), které bude uchovávat přesnost.
 
-Binární reprezentace hodnoty s plovoucí desetinnou čárkou ovlivňuje a přesnost výpočtů s plovoucí desetinnou čárkou. Microsoft Visual C++ používá [formátu s plovoucí desetinnou čárkou IEEE](ieee-floating-point-representation.md).
+Binární reprezentace hodnot s plovoucí desetinnou čárkou má vliv na přesnost a přesnost výpočtů s plovoucí desetinnou čárkou. Microsoft vizuálů C++ používá [formát s plovoucí desetinnou čárkou standardu IEEE](ieee-floating-point-representation.md).
 
 ## <a name="example"></a>Příklad
 
-```
+```c
 // Floating-point_number_precision.c
 // Compile options needed: none. Value of c is printed with a decimal
 // point precision of 10 and 6 (printf rounded value by default) to
@@ -60,7 +60,7 @@ They are not equal! The value of c is  2.4679999352 or 2.468000
 
 ## <a name="comments"></a>Komentáře
 
-EPSILON, můžete použít konstanty FLT_EPSILON, která je definována pro plovoucí desetinnou čárkou jako 1.192092896e-07F, nebo DBL_EPSILON, která je definována pro double jako 2.2204460492503131e-016. Je třeba zahrnout float.h pro tyto konstanty. Tyto konstanty jsou definovány jako nejmenší kladné číslo x, například tento x + 1,0 není roven 1,0. Protože jde o velmi malé číslo, by měly používat uživatelem definované proti chybám pro výpočty s velmi velká čísla.
+Pro EPSILON můžete použít konstanty FLT_EPSILON, které jsou definovány pro typ float as 1.192092896 e-07F nebo DBL_EPSILON, který je definován pro Double AS 2.2204460492503131 e-016. Pro tyto konstanty musíte zahrnout float. h. Tyto konstanty jsou definovány jako nejmenší kladné číslo x, což znamená, že x + 1,0 není rovno 1,0. Vzhledem k tomu, že se jedná o velmi malé číslo, měli byste použít uživatelsky definovanou toleranci pro výpočty zahrnující velmi velká čísla.
 
 ## <a name="see-also"></a>Viz také:
 

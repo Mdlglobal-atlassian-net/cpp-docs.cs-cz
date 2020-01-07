@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3005
 ms.assetid: 30bad565-e79f-4c3f-82cb-a74bd0baab8f
-ms.openlocfilehash: 1303fd667c92af6fd8d0476da9468b4c7d090e6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b260879dfafbe40ab13d14f7208f1ffbc90b9826
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350738"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302156"
 ---
 # <a name="compiler-error-c3005"></a>Chyba kompilátoru C3005
 
-"error_text": "direktiva" direktivy OpenMP se našel neočekávaný token
+' error_text ': v direktivě OpenMP direktivy se zjistil neočekávaný token.
 
-Direktivě OpenMP byl chybně vytvořen.
+Direktiva OpenMP byla nesprávně vytvořena.
 
 Následující ukázka generuje C3005:
 
-```
+```c
 // C3005.c
 // compile with: /openmp
 int main()
@@ -30,9 +30,9 @@ int main()
 }
 ```
 
-C3005 může také dojít, pokud je umístit levou složenou závorku na stejném řádku jako direktivy pragma.
+K C3005 může také dojít, pokud vložíte levou složenou závorku na stejný řádek jako direktivu pragma.
 
-```
+```c
 // C3005b.c
 // compile with: /openmp
 int main() {

@@ -1,19 +1,19 @@
 ---
 title: PUBLIC (MASM)
-ms.date: 12/06/2019
+ms.date: 12/16/2019
 f1_keywords:
 - public
 helpviewer_keywords:
 - PUBLIC directive
 ms.assetid: 56e15a68-8a35-4bdd-b1ec-a38cbbf1c582
-ms.openlocfilehash: d02aa6a2894c0d3b251b8cbf32efeef57cff409d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 40dda0641d0f25b9776e072d80bc1d56ad00edf5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988018"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318628"
 ---
-# <a name="public-masm"></a>PUBLIC (MASM)
+# <a name="public"></a>PUBLIC
 
 Zpřístupňuje každou proměnnou, popisek nebo absolutní symbol jako *název* k dispozici pro všechny ostatní moduly v programu.
 
@@ -27,4 +27,5 @@ Argument *Language-Type* je platný pouze v 32 bitové MASM.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na direktivy](../../assembler/masm/directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

@@ -5,12 +5,12 @@ description: Microsoft C++ v aplikaci Visual Studio pokračuje v plném souladu 
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858032"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546429"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Vylepšení shody C++ se sadou Visual Studio
 
@@ -1241,13 +1241,11 @@ Další informace naleznete v tématu [konstruktory](../cpp/constructors-cpp.md#
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-Pokud je konstruktor základní třídy neveřejný, ale přístupný pro odvozenou třídu, pak v části **/std: c++ 17** v aplikaci Visual Studio verze 15,7 již nelze použít prázdné složené závorky pro inicializaci objektu odvozeného typu.
-
+Pokud je konstruktor základní třídy neveřejný, ale přístupný pro odvozenou třídu, pak v části **/std: c++ 17** v systému Visual Studio 2017 verze 15,7 nemůžete nadále používat prázdné složené závorky k inicializaci objektu odvozeného typu.
 Následující příklad ukazuje vyhovující chování C++ 14:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 V C++ 17 se `Derived` nyní považuje za agregovaný typ. To znamená, že inicializace `Base` přes privátní výchozí konstruktor probíhá přímo, jako součást rozšířeného agregačního pravidla inicializace. Dříve byl pomocí konstruktoru `Derived` volán privátní konstruktor `Base` a úspěšně se zdařil z důvodu deklarace typu Friend.
-
 Následující příklad ukazuje chování C++ 17 v aplikaci Visual Studio verze 15,7 v **/std: režim c++ 17** :
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```

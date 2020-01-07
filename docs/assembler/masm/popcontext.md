@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - POPCONTEXT directive
 ms.assetid: 19f59290-a54d-477d-88d8-97d3f63ed417
-ms.openlocfilehash: a1d4106c8f627698fa1df8f810f7c8689c0f5e39
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 31c9bf4b6bb77adecc7a3475d72725617427a0b9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988158"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318680"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 
-Obnoví část nebo celý aktuální *kontext* (uložený direktivou [PUSHCONTEXT](../../assembler/masm/pushcontext.md) ). *Kontext* může být " **předpokládá** se pouze 32-bit MASSM), **základ**, **Výpis**, **CPU** (32 pouze MASSM) nebo **všechny**.
+Obnoví část nebo celý aktuální *kontext* (uložený direktivou [PUSHCONTEXT](pushcontext.md) ). *Kontext* může být " **předpokládá** se pouze 32-bit MASSM), **základ**, **Výpis**, **CPU** (32 pouze MASSM) nebo **všechny**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,5 @@ Obnoví část nebo celý aktuální *kontext* (uložený direktivou [PUSHCONTEX
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na direktivy](directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

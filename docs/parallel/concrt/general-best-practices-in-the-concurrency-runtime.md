@@ -4,46 +4,46 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413915"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302221"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Obecné osvědčené postupy v Concurrency Runtime
 
-Tento dokument popisuje osvědčené postupy, které se vztahují k více oblastem modulu Runtime souběžnosti.
+Tento dokument popisuje osvědčené postupy, které se vztahují na více oblastí Concurrency Runtime.
 
-##  <a name="top"></a> Oddíly
+##  <a name="top"></a>Řezů
 
 Tento dokument obsahuje následující části:
 
-- [Použít kooperativní konstrukce synchronizace Pokud je to možné](#synchronization)
+- [Pokud je to možné, použijte konstruktory synchronizace spolupráce](#synchronization)
 
-- [Vyhněte se zdlouhavým úlohám, které neposkytují](#yield)
+- [Vyhnout se zdlouhavým úlohám, které nepřinesí](#yield)
 
-- [Operace, která blokují nebo vysokou latencí a vytvořením nadbytečného](#oversubscription)
+- [Použití předaného předplatného k posunování operací, které blokují nebo mají vysokou latenci](#oversubscription)
 
-- [Pomocí funkce správy paměti s podporou souběžnosti, pokud je to možné](#memory)
+- [Pokud je to možné, používejte funkce souběžného řízení paměti.](#memory)
 
-- [Použijte vzor RAII pro správu životnosti objektů souběžnosti](#raii)
+- [Použití RAII ke správě životnosti objektů souběžnosti](#raii)
 
 - [Nevytvářejte objekty souběžnosti v globálním oboru](#global-scope)
 
-- [Nepoužívejte objekty souběžnosti ve sdílených datových segmentech](#shared-data)
+- [Nepoužívejte objekty souběžnosti ve sdílených datových segmentech.](#shared-data)
 
-##  <a name="synchronization"></a> Použít kooperativní konstrukce synchronizace Pokud je to možné
+##  <a name="synchronization"></a>Pokud je to možné, použijte konstruktory synchronizace spolupráce
 
-Modul Concurrency Runtime obsahuje mnoho bezpečná pro souběžnost konstrukce, které nevyžadují externí synchronizační objekt. Například [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) třída poskytuje bezpečné na souběžnosti připojit a operace přístup k elementu. Ale pro případy, které požadují výhradní přístup k prostředku, modul runtime poskytuje [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md), [concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md), a [souběžnosti :: události](../../parallel/concrt/reference/event-class.md) třídy. Tyto typy se chovají kooperativně; proto plánovače úloh můžete přidělit jinému uživateli prostředků pro zpracování do jiného kontextu jako první úloha čeká na data. Pokud je to možné, použijte místo další synchronizace mechanismy, například těch, které poskytuje rozhraním Windows API, které nefungují tak kooperativně tyto typy synchronizace. Další informace o těchto typů synchronizace a příklady kódu naleznete v tématu [synchronizačních datových struktur](../../parallel/concrt/synchronization-data-structures.md) a [porovnávání synchronizačních datových struktur s rozhraním API Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
+Concurrency Runtime poskytuje mnoho konstrukcí bezpečných pro souběžnost, které nevyžadují externí objekt synchronizace. Například třída [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) poskytuje operace připojení a přístupu k prvkům souběžného zpracování. V případě bezpečného zpracování v souběžnosti znamená, že ukazatele nebo iterátory jsou vždy platné. Není zárukou pro inicializaci elementu nebo z konkrétního pořadí procházení. Nicméně pro případy, kdy požadujete výhradní přístup k prostředku, modul runtime poskytuje třídy [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)a [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) . Tyto typy se chovají v družstvu; Proto může Plánovač úloh znovu přidělit prostředky zpracování do jiného kontextu, protože první úkol čeká na data. Pokud je to možné, použijte tyto typy synchronizace místo jiných synchronizačních mechanismů, například těch, které poskytuje rozhraní API systému Windows, které se nechovají spolupracuje. Další informace o těchto typech synchronizace a příkladech kódu najdete v tématu [Synchronizace datových struktur](../../parallel/concrt/synchronization-data-structures.md) a [porovnání datových struktur synchronizace s rozhraním API systému Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="yield"></a> Vyhněte se zdlouhavým úlohám, které neposkytují
+##  <a name="yield"></a>Vyhnout se zdlouhavým úlohám, které nepřinesí
 
-Vzhledem k tomu, že Plánovač úloh se chová kooperativně, neposkytuje rovnost mezi úkoly. Proto úkol lze zabránit další úlohy spuštění. I když je to přijatelné, v některých případech, v ostatních případech to může způsobit zablokování nebo vyčerpání.
+Vzhledem k tomu, že se Plánovač úloh chová v družstvu, neposkytuje nerovnost mezi úkoly. Proto může úkol zabránit spuštění jiných úloh. I když je to přijatelné v některých případech, může to způsobit zablokování nebo vyčerpání.
 
-Následující příklad provádí více úloh než je počet elementů prostředky přidělené zpracování. První úkol nevydává pro Plánovač úloh, a proto druhá úloha nespustí až do dokončení první úlohy.
+Následující příklad provádí více úloh než počet přidělených prostředků zpracování. První úkol nepřinese Plánovači úloh, a proto se druhý úkol nespustí až do dokončení prvního úkolu.
 
 [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]
 
@@ -51,7 +51,7 @@ Tento příklad vytvoří následující výstup:
 
 1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
 
-Existuje několik způsobů umožňuje spolupráci mezi dvě úlohy. Jedním ze způsobů je někdy vést k plánovače úloh v rámci dlouhotrvající úlohy. Následující příklad upravuje `task` funkce má být volána [concurrency::Context::Yield](reference/context-class.md#yield) metodu tak, aby mohly běžet jinou úlohu pozastavit provádění pro Plánovač úloh.
+Existuje několik způsobů, jak povolit spolupráci mezi těmito dvěma úkoly. Jednou z možností je občas vracet Plánovači úloh v dlouhodobé úloze. V následujícím příkladu je upravena funkce `task` pro volání metody [Concurrency:: Context:: yield](reference/context-class.md#yield) , která vykonává provádění plánovače úloh, aby bylo možné spustit jiný úkol.
 
 [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_2.cpp)]
 
@@ -68,51 +68,51 @@ Tento příklad vytvoří následující výstup:
 2: 1000000000
 ```
 
-`Context::Yield` Metoda vrací pouze jiné aktivní vlákno na plánovače, do kterého patří aktuální vlákno lehký úkol nebo jinému vláknu operačního systému. Tato metoda nevydává pracovat, který je naplánován ke spuštění v [concurrency::task_group](reference/task-group-class.md) nebo [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objektu, ale nebyla dosud spuštěna.
+Metoda `Context::Yield` poskytuje pouze další aktivní vlákno v plánovači, ke kterému patří aktuální vlákno, lehký úkol nebo jiné vlákno operačního systému. Tato metoda nepřinese práci, která je naplánována na spuštění v objektu [Concurrency:: task_group](reference/task-group-class.md) nebo [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) , ale ještě nebyla spuštěna.
 
-Existují jiné způsoby umožňuje spolupráci mezi dlouho běžících úloh. Velkých úloh můžete rozdělit na menší dílčí úkoly. Můžete také povolit překročení stanovených během dlouhých úloh. Kompenzujte umožňuje vytvořit další vlákna, než je k dispozici počet hardwarových vláken. Překryvný odběr je obzvláště užitečná při dlouhé úloha obsahuje vysoké množství latence, například čtení dat z disku nebo připojení k síti. Další informace o jednoduché úlohy a přepínacími najdete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Existují i jiné způsoby, jak povolit spolupráci mezi dlouhodobě běžícími úkoly. Velkou úlohu můžete rozdělit na menší dílčí úkoly. V průběhu zdlouhavé úlohy můžete také povolit přeregistraci. V rámci předplatného můžete vytvořit více vláken, než kolik jich je k dispozici. Přeplacení je zvlášť užitečné v případě, že úloha s délkou obsahuje vysoké množství latence, například čtení dat z disku nebo ze síťového připojení. Další informace o nenáročných úlohách a předaných předplatných najdete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="oversubscription"></a> Operace, která blokují nebo vysokou latencí a vytvořením nadbytečného
+##  <a name="oversubscription"></a>Použití předaného předplatného k posunování operací, které blokují nebo mají vysokou latenci
 
-Modul Concurrency Runtime poskytuje synchronizací primitiv, například [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md), umožňující úlohy kooperativně blokovat a vést k sobě navzájem. Když jeden úkol kooperativně blokuje nebo výnosy, Plánovač úloh můžete přidělit jinému uživateli prostředků pro zpracování do jiného kontextu jako první úloha čeká na data.
+Concurrency Runtime poskytuje prvky synchronizace, jako je například [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), které umožňují vzájemnou spolupráci a vzájemné navracení úkolů. Pokud jeden úkol pracuje v družstvu nebo jako důsledek, může Plánovač úloh znovu přidělit prostředky zpracování do jiného kontextu, protože první úkol čeká na data.
 
-Existují případy, ve kterých nejde použít spolupráce blokování mechanismus, který je poskytován modulu Runtime souběžnosti. Vnější knihovny, který používáte například může pomocí různých synchronizační mechanismus. Dalším příkladem je při provádění operace, která by mohla mít vysokou velkou latenci, například při použití rozhraní API Windows `ReadFile` funkci na čtení dat z připojení k síti. V těchto případech můžete povolit překročení stanovených další úkoly spouštět, když jiná úloha je v nečinnosti. Kompenzujte umožňuje vytvořit další vlákna, než je k dispozici počet hardwarových vláken.
+V některých případech nemůžete použít mechanizmus pro spolupráci, který je poskytován Concurrency Runtime. Například externí knihovna, kterou použijete, může používat jiný mechanismus synchronizace. Dalším příkladem je, že provedete operaci, která by mohla mít vysokou latenci, například když ke čtení dat ze síťového připojení použijete funkci Windows API `ReadFile`. V těchto případech může nadlimitní povolit spuštění jiných úloh, když je jiná úloha nečinná. V rámci předplatného můžete vytvořit více vláken, než kolik jich je k dispozici.
 
-Vezměte v úvahu následující funkci `download`, která stáhne soubor na dané adrese URL. V tomto příkladu [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metoda dočasně zvýšit počet aktivních podprocesů.
+Vezměte v úvahu následující funkci, `download`, která stáhne soubor na dané adrese URL. Tento příklad používá metodu [Concurrency:: Context:: replacení odběru](reference/context-class.md#oversubscribe) k dočasnému zvýšení počtu aktivních vláken.
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Vzhledem k tomu, `GetHttpFile` funkce provede operaci potenciálně latentní, překryvného odběru můžete povolit další úlohy spustit, protože aktuální úloha čeká na data. Kompletní verze tohoto příkladu naleznete v tématu [jak: Latence vytvořením nadbytečného](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Vzhledem k tomu, že funkce `GetHttpFile` provádí potenciálně latentní operaci, může přerušit předplatné povolit spuštění jiných úloh, protože aktuální úloha počká na data. Úplnou verzi tohoto příkladu naleznete v tématu [How to: use Replace (přepočet) k posunu latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="memory"></a> Pomocí funkce správy paměti s podporou souběžnosti, pokud je to možné
+##  <a name="memory"></a>Pokud je to možné, používejte funkce souběžného řízení paměti.
 
-Pomocí funkce správy paměti [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) a [concurrency::Free](reference/concurrency-namespace-functions.md#free), až budete mít podrobné úkoly, které často přidělovat malé objekty, které mají poměrně krátké doby života. Modul Concurrency Runtime obsahuje samostatný mezipaměti pro každé vlákno spuštěné. `Alloc` a `Free` funkce přidělují a uvolňují paměť z těchto mezipamětí bez použití zámků nebo překážky paměti.
+Použijte funkce správy paměti, [Concurrency:: alokace](reference/concurrency-namespace-functions.md#alloc) a [Concurrency:: Free](reference/concurrency-namespace-functions.md#free), pokud máte jemné úlohy, které často přidělují malé objekty, které mají poměrně krátkou životnost. Concurrency Runtime obsahuje oddělenou paměťovou mezipaměť pro každé spuštěné vlákno. Funkce `Alloc` a `Free` přidělují a uvolňuje paměť z těchto mezipamětí bez použití zámků nebo bariéry paměti.
 
-Další informace o tyto funkce správy paměti naleznete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Příklad použití těchto funkcí, naleznete v tématu [jak: Použití funkcí Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Další informace o těchto funkcích správy paměti najdete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Příklad, který používá tyto funkce, naleznete v tématu [How to: use realokace a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="raii"></a> Použijte vzor RAII pro správu životnosti objektů souběžnosti
+##  <a name="raii"></a>Použití RAII ke správě životnosti objektů souběžnosti
 
-Modul Concurrency Runtime používá k implementaci funkcí, jako je například zrušení zpracování výjimek. Proto napište kód bezpečným pro výjimky při volání do modulu runtime nebo volat jiné knihovny, která volá do modulu runtime.
+Concurrency Runtime používá zpracování výjimek k implementaci funkcí, jako je například zrušení. Proto zapište kód bezpečný pro výjimky při volání do modulu runtime nebo zavolejte jinou knihovnu, která volá do modulu runtime.
 
-*Získání prostředků je inicializace* vzor (RAII) je jedním ze způsobů pro bezpečnou správu životnosti objektů souběžnosti v daném oboru. Podle vzoru RAII je datová struktura přidělené v zásobníku. Struktury dat inicializuje nebo získá prostředek, když se vytvoří a odstraní nebo vydání prostředku při zničení datová struktura. Vzorek RAII, aby zaručuje, že destruktoru je volána před ukončení nadřazeného oboru. Tento model je vhodný, když funkce obsahuje více `return` příkazy. Tento model také pomáhá psát kód bezpečnost výjimek. Když `throw` příkaz způsobí, že zásobník k provedení operace unwind, destruktor pro objekt vzoru RAII, se nazývá; proto se odstraní nebo vydání prostředku vždy správně.
+Vzor *získání prostředku* (RAII) je jedním ze způsobů, jak bezpečně spravovat životnost objektu souběžnosti v daném oboru. V rámci vzoru RAII se datová struktura přiděluje v zásobníku. Tato struktura dat inicializuje nebo získá prostředek při jeho vytvoření a zničí nebo uvolní tento prostředek při zničení struktury dat. Vzor RAII zaručuje, že je destruktor volán před ukončením ohraničujícího oboru. Tento model je užitečný v případě, že funkce obsahuje více příkazů `return`. Tento model také pomáhá psát kód bezpečný pro výjimky. Když příkaz `throw` způsobí unwind zásobníku, je volán destruktor pro objekt RAII; Proto je prostředek vždy správně odstraněn nebo vydán.
 
-Modul runtime definuje několik tříd, které používají vzor RAII, například [concurrency::critical_section::scoped_lock](../../parallel/concrt/reference/critical-section-class.md#critical_section__scoped_lock_class) a [concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class). Tyto pomocné rutiny třídy jsou označovány jako *obor zámků*. Tyto třídy nabízejí několik výhod při práci s [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) nebo [concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) objekty. Konstruktor tyto třídy získá přístup k zadané `critical_section` nebo `reader_writer_lock` objekt; přístup verze destruktor na tento objekt. Protože vymezené zámek uvolní přístup k jeho vzájemné vyloučení objektu automaticky při je zničen, ne odemknutí ručně základní objekt.
+Modul runtime definuje několik tříd, které používají vzor RAII, například [Concurrency:: critical_section:: scoped_lock](../../parallel/concrt/reference/critical-section-class.md#critical_section__scoped_lock_class) a [concurrency:: reader_writer_lock:: scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class). Tyto pomocné třídy se označují jako *zámky s oborem*. Tyto třídy poskytují několik výhod při práci s objekty [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) nebo [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) . Konstruktor těchto tříd získá přístup k poskytnutému objektu `critical_section` nebo `reader_writer_lock`; destruktor uvolní přístup k tomuto objektu. Vzhledem k tomu, že uzamčený zámek uvolňuje k objektu vzájemného vyloučení automaticky, když je zničen, neodemknete tím základní objekt ručně.
 
-Vezměte v úvahu následující třídy `account`, který je definován pomocí externí knihovny a proto jej nelze změnit.
+Vezměte v úvahu následující třídu `account`, která je definována externí knihovnou, a proto ji nelze upravit.
 
 [!code-cpp[concrt-account-transactions#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_4.h)]
 
-Následující příklad provádí více transakcí `account` objekt paralelně. V příkladu se používá `critical_section` k synchronizaci přístupu k objektu `account` objektu, protože `account` třída není bezpečná pro souběžnost. Každý paralelní operace používá `critical_section::scoped_lock` objekt zaručit, že `critical_section` je odemknuté objekt, když operace úspěšná nebo neúspěšná. Když zůstatek na účtu je záporný, `withdraw` selže operace vyvoláním výjimky.
+Následující příklad provádí paralelní více transakcí pro objekt `account`. V příkladu se používá objekt `critical_section` k synchronizaci přístupu k objektu `account`, protože třída `account` není bezpečná pro souběžnost. Každá paralelní operace používá objekt `critical_section::scoped_lock` k zajištění toho, aby byl objekt `critical_section` odemčený, když operace buď proběhne úspěšně, nebo selže. Pokud je zůstatek účtu záporný, operace `withdraw` se nezdařila vyvoláním výjimky.
 
 [!code-cpp[concrt-account-transactions#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_5.cpp)]
 
-Tento příklad vytvoří následující ukázkový výstup:
+Tento příklad vytvoří následující vzorový výstup:
 
 ```Output
 Balance before deposit: 1924
@@ -124,29 +124,29 @@ Error details:
     negative balance: -76
 ```
 
-Další příklady, které používají vzor RAII pro správu životnosti objektů souběžnosti, najdete v článku [názorný postup: Odstranění práce z vlákna uživatelského rozhraní](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [jak: Použití třídy kontextu pro implementaci semaforu pro spolupráci](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), a [jak: Latence vytvořením nadbytečného](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Další příklady, které používají vzor RAII ke správě životního cyklu objektů souběžnosti, naleznete v tématu [Návod: odebrání práce z vlákna uživatelského rozhraní](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [Postupy: použití třídy kontextu pro implementaci semaforu pro spolupráci](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)a [Postup: použití přeměny při posunu](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="global-scope"></a> Nevytvářejte objekty souběžnosti v globálním oboru
+##  <a name="global-scope"></a>Nevytvářejte objekty souběžnosti v globálním oboru
 
-Při vytváření objektu souběžnosti v globálním oboru může způsobit problémy, jako je paměť nebo zablokování porušení přístupu v aplikaci.
+Když vytváříte objekt souběžnosti v globálním rozsahu, můžete způsobit problémy, jako je zablokování nebo narušení přístupu do paměti ve vaší aplikaci.
 
-Například při vytváření objektu modulu Runtime souběžnosti, vytvoří modul runtime výchozí plánovače za vás, pokud dosud nebyla vytvořena. Objekt modulu runtime, který se vytvoří během konstrukce globální objekt odpovídajícím způsobem způsobí, že modul runtime k vytvoření této výchozí plánovače. Nicméně tento proces trvá interní zámek, což může vést k potížím s inicializací jiné objekty, které podporují infrastrukturu Concurrency Runtime. Toto interní zámku může být vyžadováno jiným objektem infrastrukturu, která dosud nebyla inicializována a proto způsobit zablokování aplikace.
+Když například vytvoříte objekt Concurrency Runtime, modul runtime vytvoří výchozí Plánovač, pokud ještě nebyl vytvořen. Běhový objekt, který je vytvořen během vytváření globálních objektů, způsobí, že modul runtime vytvoří tento výchozí Plánovač. Tento proces ale provede interní zámek, což může kolidovat s inicializací dalších objektů, které podporují infrastrukturu Concurrency Runtime. Tento interní zámek může být vyžadován jiným objektem infrastruktury, který ještě nebyl inicializován, a může tak způsobit zablokování ve vaší aplikaci.
 
-Následující příklad ukazuje vytvoření globální [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) objektu. Tento model se týká není pouze `Scheduler` třídy, ale všechny ostatní typy, které jsou k dispozici v modulu Runtime souběžnosti. Doporučujeme, protože to může způsobit neočekávané chování ve vaší aplikaci není podle tohoto vzoru.
+Následující příklad ukazuje vytvoření globálního objektu [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) . Tento model se vztahuje nejen na třídu `Scheduler`, ale na všechny ostatní typy, které jsou k dispozici v Concurrency Runtime. Doporučujeme, abyste tento model nesledovali, protože to může způsobit neočekávané chování v aplikaci.
 
 [!code-cpp[concrt-global-scheduler#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_6.cpp)]
 
-Příklady správný způsob, jak vytvořit `Scheduler` objekty, najdete [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Příklady správného způsobu vytváření `Scheduler` objektů naleznete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="shared-data"></a> Nepoužívejte objekty souběžnosti ve sdílených datových segmentech
+##  <a name="shared-data"></a>Nepoužívejte objekty souběžnosti ve sdílených datových segmentech.
 
-Modulu Runtime souběžnosti nepodporuje použití objekty souběžnosti v části sdílených dat, například data oddíl, který je vytvořen [data_seg](../../preprocessor/data-seg.md) `#pragma` směrnice. Objekt souběžnosti, který se sdílí přes hranice procesu umístit modulu runtime v nekonzistentní nebo neplatném stavu.
+Concurrency Runtime nepodporuje použití objektů souběžnosti v části sdílených dat, například datovou část vytvořenou direktivou [data_seg](../../preprocessor/data-seg.md)`#pragma`. Objekt souběžnosti, který je sdílen napříč hranicemi procesu, může přepnout modul runtime v nekonzistentním nebo neplatném stavu.
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
 ## <a name="see-also"></a>Viz také:
 

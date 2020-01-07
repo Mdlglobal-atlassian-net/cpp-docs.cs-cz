@@ -1,23 +1,23 @@
 ---
-title: Číselné literály, logické a literály typu ukazatele (C++)
+title: Číselné, logické a literály ukazatele (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 467300501ffbbf8063e203d4c7395af34a954ed0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245099"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301363"
 ---
-# <a name="numeric-boolean-and-pointer-literals--c"></a>Číselné literály, logické a literály typu ukazatele (C++)
+# <a name="numeric-boolean-and-pointer-literals"></a>Číselné, logické a literály ukazatele
 
-Literál je prvek programu, který představuje hodnotu přímo. Tento článek se týká literály celočíselného typu s plovoucí desetinnou čárkou, logické a ukazatele. Informace o literálech řetězců a znaků naleznete v tématu [řetězcové a znakové literály (C++)](../cpp/string-and-character-literals-cpp.md). Můžete také definovat vlastní literály založené na kteroukoli z těchto kategorií; Další informace najdete v části [uživatelem definované literály (C++)](../cpp/user-defined-literals-cpp.md)
+Literál je prvek programu, který přímo představuje hodnotu. Tento článek se zabývá literály typu celé číslo, plovoucí desetinná čárka, logická hodnota a ukazatel. Informace o řetězcových a znakových literálech naleznete v tématu [řetězcové a znakovéC++literály ()](../cpp/string-and-character-literals-cpp.md). Můžete také definovat vlastní literály založené na kterékoli z těchto kategorií; Další informace najdete v tématu [uživatelsky definované literályC++()](../cpp/user-defined-literals-cpp.md) .
 
-. Můžete literály v mnoha kontextech, ale většina běžně inicializovat pojmenované proměnné a předání argumentů funkce:
+. Můžete použít literály v mnoha kontextech, ale nejčastěji inicializovat pojmenované proměnné a předat argumenty funkcím:
 
 ```cpp
 const int answer = 42; // integer literal
@@ -26,17 +26,15 @@ bool b = true;              // boolean literal
 MyClass* mc = nullptr;      // pointer literal
 ```
 
-Někdy je důležité, abyste kompilátoru literálem interpretace nebo jaké konkrétní typ, abyste k němu. To provedete přidáním předpony nebo přípony literálu. Například předponu 0 x instruuje kompilátor, aby čísla, která ji následuje jako šestnáctkovou hodnotu, například 0x35 interpretovat. Přípona ULL instruuje kompilátor, aby považovat za hodnotu **unsigned long long.** typ, stejně jako v 5894345ULL. Podívejte se v následujících částech úplný seznam předpon a přípon, pro každý typ literálu.
+V některých případech je důležité sdělit kompilátoru, jak interpretovat literál nebo jaký konkrétní typ k němu dát. Provedete to tak, že do literálu připojíte předpony nebo přípony. Například předpona 0x říká kompilátoru, aby interpretoval číslo, které následuje jako šestnáctková hodnota, například 0x35. Přípona ULL říká kompilátoru, aby považovala hodnotu jako typ **long long typu bez znaménka** , jako v 5894345ULL. Úplný seznam předpon a přípon pro každý typ literálu najdete v následujících oddílech.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="integer-literals"></a>Celočíselné literály
 
-## <a name="integer-literals"></a>Literály celých čísel
+Celočíselné literály začínají číslicí a nemají žádné zlomkové části ani exponenty. Můžete zadat celočíselné literály v desítkové, osmičkové nebo šestnáctkové formě. Je možné určit typy se znaménkem nebo bez znaménka, dlouhé nebo krátké.
 
-Literály celých čísel začínají číslicí a mít žádné zlomkové části nebo exponenty. Literály celých čísel můžete zadat v podobě desítkové, osmičkové nebo šestnáctkové. Je možné určit typy se znaménkem nebo bez znaménka, dlouhé nebo krátké.
+Pokud není přítomna žádná předpona nebo přípona, kompilátor poskytne celočíselnou hodnotu literálu **int** (32 bitů), pokud se hodnota přizpůsobí, jinak poskytne typ **long long** (64 bitů).
 
-Pokud je k dispozici žádná předpona nebo přípona, kompilátor vám poskytne typem celočíselný literál **int** (32bitová verze), pokud se hodnota, jinak poskytne to typ **long long** (64 bitů).
-
-K určení desetinné celočíselný literál, je nutné začněte specifikaci nenulovou číslicí. Příklad:
+Chcete-li zadat desítkový celočíselný literál, spusťte specifikaci s nenulovou číslicí. Příklad:
 
 ```cpp
 int i = 157;   // Decimal literal
@@ -46,21 +44,21 @@ int m = 36'000'000  // digit separators make large values more readable
 int
 ```
 
-K určení osmičkové celočíselný literál, je nutné začněte specifikaci s 0, následovanou posloupností číslic v rozsahu 0 až 7. Číslice 8 a 9 jsou chyby v určení osmičkové literální. Příklad:
+Chcete-li zadat osmičkový celočíselný literál, zahajte specifikaci hodnotou 0, následovanou posloupností číslic v rozsahu 0 až 7. Číslice 8 a 9 jsou chyby při zadávání osmičkového literálu. Příklad:
 
 ```cpp
 int i = 0377;   // Octal literal
 int j = 0397;        // Error: 9 is not an octal digit
 ```
 
-Chcete-li určit šestnáctkové celočíselný literál, je nutné začít specifikaci s `0x` nebo `0X` (případ "x" nezáleží), následované posloupností číslic v rozsahu `0` prostřednictvím `9` a `a` (nebo `A`) prostřednictvím `f` (nebo `F`). Šestnáctkové číslice `a` (nebo `A`) až `f` (nebo `F`) představují hodnoty v rozsahu 10 až 15. Příklad:
+Chcete-li určit hexadecimální celočíselný literál, zahajte specifikaci pomocí `0x` nebo `0X` (nezáleží na velikosti "x") následovaný posloupností číslic v rozsahu `0` až `9` a `a` (nebo `A`) až `f` (nebo `F`). Šestnáctkové číslice `a` (nebo `A`) až `f` (nebo `F`) představují hodnoty v rozsahu 10 až 15. Příklad:
 
 ```cpp
 int i = 0x3fff;   // Hexadecimal literal
 int j = 0X3FFF;        // Equal to i
 ```
 
-Chcete-li určit typ bez znaménka, použijte buď `u` nebo `U` příponu. Chcete-li určit dlouhý typ, použijte buď `l` nebo `L` příponu. Chcete-li určit 64bitového celočíselného typu, použijte LL nebo příponu ll. Přípona i64 stále podporovány, ale mělo by se vyhnout, protože je specifické pro společnost Microsoft a není přenosný. Příklad:
+Chcete-li zadat typ bez znaménka, použijte buď příponu `u` nebo `U`. Chcete-li zadat dlouhý typ, použijte buď příponu `l` nebo `L`. Chcete-li určit 64 integrálový typ, použijte příponu LL nebo LL. Přípona I64 je stále podporovaná, ale měla by se vyhýbat, protože je specifická pro společnost Microsoft a není přenosná. Příklad:
 
 ```cpp
 unsigned val_1 = 328u;             // Unsigned value
@@ -71,17 +69,17 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long
 ```
 
-**Oddělovače číslic:**: Znak jednoduchých uvozovek (apostrof) můžete použít k oddělení místo hodnoty ve větší čísla, aby se daly snadněji číst člověka. Oddělovače nemají žádný vliv při kompilaci.
+**Oddělovače číslic**: pomocí znaku jednoduché uvozovky (apostrof) můžete oddělit hodnoty na větší čísla, aby je lidé snadněji četli. Oddělovače nemají žádný vliv na kompilaci.
 
 ```cpp
 long long i = 24'847'458'121
 ```
 
-## <a name="floating-point-literals"></a>Literály plovoucího bodu
+## <a name="floating-point-literals"></a>Literály s plovoucí desetinnou čárkou
 
-Literály s plovoucí desetinnou čárkou určit hodnoty, které musí mít desetinnou část. Tyto hodnoty obsahují desetinné čárky (**.**) a mohou obsahovat exponenty.
+Literály s plovoucí desetinnou čárkou určují hodnoty, které musí obsahovat zlomkovou část. Tyto hodnoty obsahují desetinná místa ( **.** ) a mohou obsahovat exponenty.
 
-S plovoucí desetinnou čárkou literály mají "mantisu," Určuje hodnotu čísla, "exponentu" Určuje velikost čísla a volitelnou příponu, která určuje typ je literál. Mantisa je zadána jako posloupnost číslic následovaných čárkou a je následována řadou číslic představující zlomkovou část čísla. Příklad:
+Literály s plovoucí desetinnou čárkou mají "mantisu", která určuje hodnotu čísla, exponent, který určuje velikost čísla a volitelnou příponu, která určuje typ literálu. Mantisa je zadána jako posloupnost číslic následovaných čárkou a je následována řadou číslic představující zlomkovou část čísla. Příklad:
 
 ```cpp
 18.46
@@ -95,11 +93,11 @@ Exponent, pokud je k dispozici, určuje velikost čísla jako mocninu 10, jak je
 18.46e1           // 184.6
 ```
 
-Exponent může být určen pomocí `e` nebo `E`, které mají stejný význam, následovaný nepovinným znaménkem (+ nebo -) a posloupností číslic.  Je-li exponent použit, koncová desetinná čárka není nutná u celých čísel, jako je `18E0`.
+Exponent lze zadat pomocí `e` nebo `E`, která má stejný význam následovaný volitelným znaménkem (+ nebo-) a posloupností číslic.  Je-li exponent použit, koncová desetinná čárka není nutná u celých čísel, jako je `18E0`.
 
-Literály s plovoucí desetinnou čárkou ve výchozím stavu typem **double**. Pomocí přípon `f` nebo `l` (nebo `F` nebo `L` – přípona nerozlišuje velká a malá písmena), literálu se dá nastavit jako **float** nebo **long double**, v uvedeném pořadí.
+Literály s plovoucí desetinnou čárkou jsou výchozí pro typ **Double**. Pomocí přípon `f` nebo `l` (nebo `F` nebo `L` – přípona nerozlišuje malá a velká písmena), literál může být zadán jako **float** nebo **Long Double**v uvedeném pořadí.
 
-I když **long double** a **double** stejnou reprezentaci, nejsou stejného typu. Například je možné mít přetížené funkce jako
+I když má **dlouhá dvojitá** a **dvojnásobná** reprezentace stejnou reprezentaci, není stejný typ. Například je možné mít přetížené funkce jako
 
 ```cpp
 void func( double );
@@ -111,36 +109,36 @@ and
 void func( long double );
 ```
 
-## <a name="boolean-literals"></a>Logické hodnoty literálu
+## <a name="boolean-literals"></a>Logické literály
 
-Logické hodnoty literálu jsou **true** a **false**.
+Logické literály jsou **true** a **false**.
 
-## <a name="pointer-literal-c11"></a>Literál ukazatele (C ++ 11)
+## <a name="pointer-literal-c11"></a>Literál ukazatele (C++ 11)
 
-Zavádí C++ [nullptr](../cpp/nullptr.md) literálu pro určení ukazatele inicializována nulou. V přenositelném kódu **nullptr** by měla sloužit místo nula integrálového typu nebo makra, jako je NULL.
+C++zavádí literál [nullptr](../cpp/nullptr.md) pro určení ukazatele s nulovým inicializací. V přenositelném kódu by měla být použita hodnota **nullptr** namísto celočíselného typu nula nebo makra, jako je například null.
 
-## <a name="binary-literals-c14"></a>Binární literály (C ++ 14)
+## <a name="binary-literals-c14"></a>Binární literály (C++ 14)
 
-Binární literál je možné zadat tak použití `0B` nebo `0b` předponu, za nímž následuje posloupnost 1 a uživatele 0:
+Binární literál lze určit pomocí `0B` nebo předpony `0b` následovaný sekvencí 1 a 0:
 
 ```cpp
 auto x = 0B001101 ; // int
 auto y = 0b000001 ; // int
 ```
 
-## <a name="avoid-using-literals-as-magic-constants"></a>Nepoužívejte literály jako "magic konstanty"
+## <a name="avoid-using-literals-as-magic-constants"></a>Vyhněte se použití literálů jako "Magic konstant".
 
-I když to není vždy programování je dobrým zvykem, můžete použít literály přímo v výrazy a příkazy:
+Můžete použít literály přímo ve výrazech a příkazech, i když není vždy dobrým zvykem programování:
 
 ```cpp
 if (num < 100)
     return "Success";
 ```
 
-V předchozím příkladu může být vhodnější použít pojmenované konstanty, která přenáší jasný význam, například "MAXIMUM_ERROR_THRESHOLD". A pokud vrácená hodnota, která se zobrazuje "Success" tak, že koncoví uživatelé, pak může být vhodnější použít pojmenované řetězcová konstanta, která mohou být uloženy v jednom umístění v souboru z kde může být lokalizována do jiných jazyků. Použití pojmenované konstanty pomáhá ostatním také sobě a porozumění záměru kódu.
+V předchozím příkladu může být lepší použít pojmenovanou konstantu, která vyjadřuje jasný význam, například "MAXIMUM_ERROR_THRESHOLD". A Pokud koncoví uživatelé uvidí návratovou hodnotu "úspěch", může být lepší použít pojmenovanou řetězcovou konstantu, která může být uložena v jednom umístění v souboru, ze kterého může být lokalizována do jiných jazyků. Použití pojmenovaných konstant pomáhá ostatním uživatelům a pochopit záměr kódu.
 
 ## <a name="see-also"></a>Viz také:
 
 [Lexikální konvence](../cpp/lexical-conventions.md)<br/>
-[Textové literály jazyka C++](../cpp/string-and-character-literals-cpp.md)<br/>
-[Uživateli definované literály jazyka C++](../cpp/user-defined-literals-cpp.md)
+[C++Řetězcové literály](../cpp/string-and-character-literals-cpp.md)<br/>
+[C++Uživatelsky definované literály](../cpp/user-defined-literals-cpp.md)

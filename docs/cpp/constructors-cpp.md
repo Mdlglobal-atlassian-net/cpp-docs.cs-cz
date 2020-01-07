@@ -1,17 +1,17 @@
 ---
 title: Konstruktory (C++)
-ms.date: 11/19/2019
+ms.date: 12/27/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 6cdf6241542c3f93484097c65015181a91647d49
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246609"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546390"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -477,6 +477,52 @@ Pokud konstruktor vyvolá výjimku, pořadí zničení je obrácené pořadí ko
 1. Základní třída a členské objekty jsou zničeny v obráceném pořadí deklarace.
 
 1. Pokud je konstruktor bez delegování, jsou zničeny všechny úplně vytvořené objekty a členy. Vzhledem k tomu, že objekt samotný není úplně vytvořen, není spuštěn destruktor.
+
+## <a name="extended_aggregate"></a>Odvozené konstruktory a rozšířená agregovaná inicializace
+
+Pokud je konstruktor základní třídy neveřejný, ale přístupný pro odvozenou třídu, pak v části **/std: c++ 17** v systému Visual Studio 2017 a novějších nelze použít prázdné složené závorky pro inicializaci objektu odvozeného typu.
+
+Následující příklad ukazuje vyhovující chování C++ 14:
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {};
+
+Derived d1; // OK. No aggregate init involved.
+Derived d2 {}; // OK in C++14: Calls Derived::Derived()
+               // which can call Base ctor.
+```
+
+V C++ 17 se `Derived` nyní považuje za agregovaný typ. To znamená, že inicializace `Base` přes privátní výchozí konstruktor probíhá přímo, jako součást rozšířeného agregačního pravidla inicializace. Dříve byl pomocí konstruktoru `Derived` volán privátní konstruktor `Base` a úspěšně se zdařil z důvodu deklarace typu Friend.
+
+Následující příklad ukazuje chování C++ 17 v aplikaci Visual Studio 2017 a novější v **/std: režim c++ 17** :
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {
+    Derived() {} // add user-defined constructor
+                 // to call with {} initialization
+};
+
+Derived d1; // OK. No aggregate init involved.
+
+Derived d2 {}; // error C2248: 'Base::Base': cannot access
+               // private member declared in class 'Base'
+```
 
 ### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Konstruktory pro třídy, které mají vícenásobnou dědičnost
 

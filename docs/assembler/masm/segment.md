@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 12/06/2019
+ms.date: 12/16/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 569604bfd6ed11039ce5492223b8d5f986ceea7a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988012"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318459"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -25,7 +25,7 @@ Definuje segment programu *s názvem, který má atributy* segmentů.
 
 #### <a name="parameters"></a>Parametry
 
-*align*<br/>
+*zarovnat*\
 Rozsah adres paměti, ze kterých lze vybrat počáteční adresu segmentu. Typ zarovnání může být jeden z následujících:
 
 |Typ zarovnání|Počáteční adresa|
@@ -64,4 +64,5 @@ Pro `ALIGN(n)`může být *n* jakákoli mocnina 2 od 1 do 8192. Nepodporováno v
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na direktivy](directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

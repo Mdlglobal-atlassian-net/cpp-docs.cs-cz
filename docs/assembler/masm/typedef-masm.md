@@ -1,26 +1,27 @@
 ---
 title: TYPEDEF (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - typedef
 helpviewer_keywords:
 - TYPEDEF directive
 ms.assetid: 0c659890-c9a5-485a-a680-e4fb3272032c
-ms.openlocfilehash: d35966f8db5e8873b8080976aaaab37937cbe192
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bf14b446629a4704491feff44031ecc01267b027
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393170"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319187"
 ---
-# <a name="typedef-masm"></a>TYPEDEF (MASM)
+# <a name="typedef"></a>TYPEDEF
 
-Definuje nový typ nazvaný *název*, který je ekvivalentní *typu*.
+Definuje nový typ nebo se **mu** říká *název*, který je ekvivalentní *typu* nebo *protoDefinition*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *název* *typu* typedef
+> *název* *typu* typedef | **proto** *protoDefinition*
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na direktivy](directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

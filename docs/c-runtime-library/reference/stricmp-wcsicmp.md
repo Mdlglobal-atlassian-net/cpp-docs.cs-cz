@@ -1,6 +1,6 @@
 ---
 title: stricmp, wcsicmp
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - stricmp
 - wcsicmp
@@ -26,13 +26,15 @@ helpviewer_keywords:
 - stricmp function
 - wcsicmp function
 ms.assetid: 2e3c6703-2635-4961-a253-e2c4c5029ed8
-ms.openlocfilehash: 8288aa8c9b631b9c4d5317fb13fdbbfcd9cad40a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d47249a3b41c76bf87ece8ed2e8a0fbbfc05ff09
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958117"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300505"
 ---
 # <a name="stricmp-wcsicmp"></a>stricmp, wcsicmp
 
-Tyto funkce POSIX jsou zastaralé. Místo toho použijte C++ ISO vyhovující [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l a _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) .
+Názvy funkcí specifických pro společnost Microsoft `stricmp` a `wcsicmp` jsou zastaralé aliasy pro [_stricmp a _wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) funkce. Ve výchozím nastavení generují [Upozornění kompilátoru (úroveň 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Názvy jsou zastaralé, protože nenásledují standardní pravidla jazyka C pro názvy specifické pro implementaci. Funkce se ale pořád podporují.
+
+Doporučujeme místo toho použít [_stricmp nebo _wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) . Nebo můžete tyto názvy funkcí i nadále používat a zakázat upozornění. Další informace najdete v tématu vypnutí názvů funkcí [Upozornění](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) a [funkce POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

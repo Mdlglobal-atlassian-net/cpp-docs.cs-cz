@@ -3,12 +3,12 @@ title: C++ – systém typů
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5755c7818182c5e26c5b3df6407fbe259bfdbcf3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246604"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301571"
 ---
 # <a name="c-type-system"></a>C++ – systém typů
 
@@ -24,9 +24,7 @@ Koncept *typu* je velmi důležitý v C++. Všechny proměnné, argumenty funkc�
 
 ## <a name="specifying-variable-and-function-types"></a>Určení typů proměnných a funkcí
 
-C++je jazyk *silného typu* a je také *staticky*typu; Každý objekt má typ a tento typ se nikdy nemění (nepleťte si se statickými datovými objekty).
-**Pokud deklarujete proměnnou** v kódu, je nutné buď zadat typ explicitně, nebo použít klíčové slovo **auto** a instruovat kompilátor, aby odvodit typ z inicializátoru.
-**Pokud deklarujete funkci** v kódu, je nutné zadat typ každého argumentu a jeho návratovou hodnotu nebo **Zrušit** , pokud funkce nevrátí žádnou hodnotu. Výjimkou je použití šablon funkce, které umožňují použití argumentů libovolných typů.
+C++je jazyk *silného typu* a je také *staticky*typu; Každý objekt má typ a tento typ se nikdy nemění (nepleťte si se statickými datovými objekty). Pokud deklarujete proměnnou v kódu, je nutné buď zadat typ explicitně, nebo použít klíčové slovo **auto** a instruovat kompilátor, aby odvodit typ z inicializátoru. Pokud deklarujete funkci v kódu, je nutné zadat typ každého argumentu a jeho návratovou hodnotu nebo **Zrušit** , pokud funkce nevrátí žádnou hodnotu. Výjimkou je použití šablon funkce, které umožňují použití argumentů libovolných typů.
 
 Po prvotním deklarování proměnné nelze její typ později změnit. Můžete však zkopírovat hodnotu proměnné nebo návratové hodnoty funkce do jiné proměnné jiného typu. Tyto operace se nazývají *převody typu*, které jsou někdy nezbytné, ale jsou také potenciálními zdroji ztráty dat nebo nesprávného fungování.
 
@@ -55,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 Na rozdíl od některých jazyků nemá C++ žádný univerzální základní typ, z něhož by byly odvozeny všechny ostatní typy. Jazyk obsahuje mnoho *základních typů*, označovaných také jako *předdefinované typy*. To zahrnuje číselné typy, jako je **int**, **Double**, **Long**, **bool**, plus typ **char** a **wchar_t** pro znaky ASCII a Unicode, v uvedeném pořadí. Většina základních typů (s výjimkou **bool**, **Double**, **wchar_t** a souvisejících typů) mají všechny nepodepsané verze, které upravují rozsah hodnot, které může proměnná ukládat. Například **int**, který ukládá 32 celé číslo se znaménkem, může představovat hodnotu od-2 147 483 648 do 2 147 483 647. Celé **číslo bez znaménka**, které je také uloženo jako 32-bitů, může ukládat hodnotu od 0 do 4 294 967 295. Celkový počet možných hodnot je ve všech případech stejný, liší se pouze rozsah.
 
-Základní typy jsou rozpoznávány kompilátorem, který má vestavěná pravidla určující, jaké operace lze s jednotlivými typy provádět a jak je lze převést na jiné základní typy. Úplný seznam předdefinovaných typů a jejich velikost a číselná omezení najdete v tématu [základní typy](../cpp/fundamental-types-cpp.md).
+Základní typy jsou rozpoznávány kompilátorem, který má vestavěná pravidla určující, jaké operace lze s jednotlivými typy provádět a jak je lze převést na jiné základní typy. Úplný seznam předdefinovaných typů a jejich velikost a číselná omezení naleznete v tématu [vestavěné typy](../cpp/fundamental-types-cpp.md).
 
 Následující ilustrace znázorňuje relativní velikosti předdefinovaných typů:
 
@@ -63,7 +61,7 @@ Následující ilustrace znázorňuje relativní velikosti předdefinovaných ty
 
 V následující tabulce jsou uvedeny nejčastěji používané základní typy:
 
-|Typ|Velikost|Komentář|
+|Type|Velikost|Komentář|
 |----------|----------|-------------|
 |int|4 bajty|Výchozí volba pro integrální hodnoty.|
 |double|8 bajtů|Výchozí volba pro hodnoty s plovoucí desetinnou čárkou.|

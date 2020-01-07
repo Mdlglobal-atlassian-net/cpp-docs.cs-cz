@@ -1,15 +1,15 @@
 ---
 title: Reference ke schématu CMakeSettings. JSON
-ms.date: 10/31/2019
+ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 08ecb5bc55ead207d6e4a0029a21e737d447143b
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303239"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556731"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Reference ke schématu CMakeSettings. JSON
 
@@ -34,11 +34,11 @@ Pole `configurations` obsahuje všechny konfigurace pro projekt CMake. Další i
 - `addressSDanitizerEnabled`: Pokud `true` zkompiluje program pomocí programu pro úpravu adresy (experimentální ve Windows). V systému Linux zkompilujete pomocí-FNO-vynechání ukazatele na rámec a úroveň optimalizace kompilátoru – OS nebo-ó pro dosažení nejlepších výsledků.
 - `addressSanitizerRuntimeFlags`: příznaky modulu runtime předané do AddressSanitizer prostřednictvím proměnné prostředí ASAN_OPTIONS. Formát: příznak1 = hodnota: flag2 = hodnota2.
 - `buildCommandArgs`: Určuje přepínače nativního sestavení předané do CMake po--buildu--. Například v případě, že při použití generátoru expertem vynutí expertem pro výstup příkazových řádků. Další informace o příkazech expertem najdete v tématu [argumenty příkazového řádku expertem](#ninja) .
-- `buildRoot`: Určuje adresář, ve kterém CMake generuje skripty sestavení pro zvolený generátor.  Provede mapování na **DCMAKE_BINARY_DIR** přepínač a určí, kde se vytvoří mezipaměť cmake. Pokud složka neexistuje, vytvoří se. Mezi podporovaná makra patří `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`a `${env.VARIABLE}`.
-- `cacheGenerationCommand`: Určuje nástroj příkazového řádku a argumenty, například *ladění gencache. bat* pro vygenerování mezipaměti. Příkaz se spustí z prostředí v zadaném prostředí pro konfiguraci při obnovení explicitních požadavků uživatele, nebo když se upraví soubor CMakeLists. txt nebo CMakeSettings. JSON.
-- `cacheRoot`: Určuje cestu k mezipaměti CMake. Tento adresář by měl obsahovat existující soubor CMakeCache. txt.
-- `clangTidyChecks`: čárkami oddělený seznam warnigns, který se předává Clang-uklizený; zástupné znaky jsou povoleny a předpona '-' odstraní kontroly.
-- `cmakeCommandArgs`: Určuje další možnosti příkazového řádku předané do CMake při vyvolání za účelem generování mezipaměti.
+- `buildRoot`: Určuje adresář, ve kterém CMake generuje skripty sestavení pro zvolený generátor.  Provede mapování na **DCMAKE_BINARY_DIR** přepínač a určí, kde bude vytvořen *CMakeCache. txt* . Pokud složka neexistuje, vytvoří se. Mezi podporovaná makra patří `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
+- `cacheGenerationCommand`: Určuje nástroj příkazového řádku a argumenty, například *ladění gencache. bat* pro vygenerování mezipaměti. Příkaz se spustí z prostředí v zadaném prostředí pro konfiguraci, když uživatel explicitně vyžádá obnovení, nebo se upraví soubor CMakeLists. txt nebo CMakeSettings. JSON.
+- `cacheRoot`: Určuje cestu k mezipaměti CMake. Tento adresář by měl obsahovat existující soubor *CMakeCache. txt* .
+- `clangTidyChecks`: čárkami oddělený seznam upozornění, které se budou předávat Clang-uklizený; zástupné znaky jsou povoleny a předpona '-' odstraní kontroly.
+- `cmakeCommandArgs`: Určuje další možnosti příkazového řádku předané do CMake při vyvolání za účelem generování souborů projektu.
 - `cmakeToolchain`: Určuje soubor sada nástrojů. To se předává do CMake pomocí-DCMAKE_TOOLCHAIN_FILE. "
 - `codeAnalysisRuleset`: Určuje RuleSet, který se má použít při spuštění nástroje Code Analysis. Může to být úplná cesta nebo název souboru ruleset nainstalovaného aplikací Visual Studio.
 - `configurationType`: Určuje konfiguraci typu sestavení pro vybraný generátor. Může to být jedna z těchto:
@@ -81,22 +81,8 @@ Pokud aktivní konfigurace určuje generátor sady Visual Studio, je ve výchoz�
    "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
    ```
 
-- `configurationType`: Určuje konfiguraci typu sestavení pro vybraný generátor. Může to být jedna z těchto:
-
-  - Ladit
-  - Vydaná verze
-  - MinSizeRel
-  - RelWithDebInfo
- 
-- `buildRoot`: Určuje adresář, ve kterém CMake generuje skripty sestavení pro zvolený generátor.  Provede mapování na **DCMAKE_BINARY_DIR** přepínač a určí, kde bude vytvořen *CMakeCache. txt* . Pokud složka neexistuje, vytvoří se. Mezi podporovaná makra patří `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `installRoot`: Určuje adresář, ve kterém CMake generuje cíle instalace pro zvolený generátor. Mezi podporovaná makra patří `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
-- `cmakeCommandArgs`: Určuje další možnosti příkazového řádku předané do CMake při vyvolání za účelem generování souborů projektu.
-- `cmakeToolchain`: Určuje soubor sada nástrojů. To se předává do CMake pomocí-DCMAKE_TOOLCHAIN_FILE. "
-- `buildCommandArgs`: Určuje přepínače nativního sestavení předané do CMake po--buildu--. Například v případě, že při použití generátoru expertem vynutí expertem pro výstup příkazových řádků. Další informace o příkazech expertem najdete v tématu [argumenty příkazového řádku expertem](#ninja) .
-- `ctestCommandArgs`: Určuje další možnosti příkazového řádku předané do CTest při spuštění testů. "
-- `codeAnalysisRuleset`: Určuje RuleSet, který se má použít při spuštění nástroje Code Analysis. Může to být úplná cesta nebo název souboru ruleset nainstalovaného aplikací Visual Studio.
 - `inheritEnvironments`: Určuje jedno nebo více prostředí kompilátoru, na kterých tato konfigurace závisí. Může se jednat o jakékoli vlastní prostředí nebo některé z předdefinovaných prostředí. Další informace najdete v tématu [prostředí](#environments).
-- `installRoot`: Určuje adresář, ve kterém CMake generuje cíle instalace pro zvolený generátor. Mezi podporovaná makra patří `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `intelliSenseMode`: Určuje režim používaný pro výpočet informací technologie IntelliSense. Může to být jedna z těchto:
 
   - windows-msvc-x86
@@ -119,11 +105,10 @@ Pokud aktivní konfigurace určuje generátor sady Visual Studio, je ve výchoz�
   - linux-gcc-x64
   - linux-gcc-arm"
 
-- `cacheRoot`: Určuje cestu k mezipaměti CMake. Tento adresář by měl obsahovat existující soubor *CMakeCache. txt* .
 - `name`: pojmenuje konfiguraci.  Další informace o předdefinovaných konfiguracích najdete v tématu Referenční dokumentace k předdefinovaným [konfiguracím cmake](cmake-predefined-configuration-reference.md) .
 - `wslPath`: cesta ke Spouštěči instance subsystému Windows pro Linux.
 
-### <a name="additional-settings-for-cmake-linux-projects"></a>Další nastavení pro projekty CMake pro Linux 
+### <a name="additional-settings-for-cmake-linux-projects"></a>Další nastavení pro projekty CMake pro Linux
 
 - `remoteMachineName`: Určuje název vzdáleného počítače se systémem Linux, který je hostitelem CMake, sestavení a ladicího programu. Pomocí Správce připojení přidejte nové počítače se systémem Linux. Mezi podporovaná makra patří `${defaultRemoteMachineName}`.
 - `remoteCopySourcesOutputVerbosity`: Určuje úroveň podrobností operace kopírování zdroje do vzdáleného počítače. Může to být jedna z "" normálního "," Verbose "nebo" Diagnostic ".
@@ -134,6 +119,9 @@ Pokud aktivní konfigurace určuje generátor sady Visual Studio, je ve výchoz�
 - `remoteInstallRoot`: Určuje adresář ve vzdáleném počítači, ve kterém CMake generuje cíle instalace pro zvolený generátor. Mezi podporovaná makra patří `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`a `${env.VARIABLE}`, kde `VARIABLE` je proměnná prostředí definovaná na úrovni systému, uživatele nebo relace.
 - `remoteCopySources`: `boolean`, který určuje, zda má aplikace Visual Studio Kopírovat zdrojové soubory do vzdáleného počítače. Výchozí hodnota je true. Nastavte na hodnotu NEPRAVDA, pokud se synchronizace souborů spravuje sami.
 - `remoteCopyBuildOutput`: `boolean`, který určuje, zda se mají kopírovat výstupy sestavení ze vzdáleného systému.
+- `remoteCopyAdditionalIncludeDirectories`: další adresáře include, které se mají zkopírovat ze vzdáleného počítače, aby podporovaly technologii IntelliSense. Formátujte jako "/path1;/path2...".
+- `remoteCopyExcludeDirectories`: zahrňte adresáře, které se nekopírují ze vzdáleného počítače. Formátujte jako "/path1;/path2...".
+- `remoteCopyUseCompilerDefaults`: Určuje, zda se má použít výchozí definice kompilátoru a zahrnutí cest pro technologii IntelliSense. Hodnota by měla být false pouze v případě, že používané kompilátory nepodporují argumenty ve stylu RSZ.
 - `rsyncCommandArgs`: Určuje sadu dalších možností příkazového řádku předaných do rsync.
 - `remoteCopySourcesExclusionList`: `array`, který určuje seznam cest, které mají být vyloučeny při kopírování zdrojových souborů ': cesta může být název souboru nebo adresáře nebo cesta relativní ke kořenu kopie. Zástupné znaky \\\"*\\\" a \\\"?\\\" lze použít pro porovnávání vzorů glob.
 - `cmakeExecutable`: Určuje úplnou cestu ke spustitelnému souboru programu CMake, včetně názvu souboru a přípony.
@@ -186,7 +174,9 @@ V `CMakeSettings.json`můžete v poli `environments` definovat vlastní proměnn
 - `namespace`: pojmenuje prostředí tak, aby na jeho proměnných bylo možné odkazovat z konfigurace ve formuláři `namespace.variable`. Výchozí objekt prostředí se nazývá `env` a je naplněn určitými proměnnými prostředí systému, včetně `%USERPROFILE%`.
 - `environment`: jednoznačně identifikuje tuto skupinu proměnných. Povolí dědění skupiny později v položce `inheritEnvironments`.
 - `groupPriority`: celé číslo, které určuje prioritu těchto proměnných při jejich vyhodnocování. Nejprve se vyhodnotí položky s vyšším počtem.
-- `inheritEnvironments`: pole hodnot, které určují sadu prostředí děděných touto skupinou. Tato funkce umožňuje dědit výchozí prostředí a vytvořit vlastní proměnné prostředí, které se předávají do CMake. exe při spuštění.
+- `inheritEnvironments`: pole hodnot, které určují sadu prostředí děděných touto skupinou. Tato funkce umožňuje dědit výchozí prostředí a vytvořit vlastní proměnné prostředí, které se předávají do CMake. exe při spuštění. 
+
+**Visual Studio 2019 verze 16,4 a novější:** Cíle ladění se automaticky spustí s prostředím, které zadáte v *CMakeSettings. JSON*. Můžete přepsat nebo přidat proměnné prostředí v závislosti na cíli nebo jednotlivých úkolech v [Launch. vs. JSON](launch-vs-schema-reference-cpp.md) a [Tasks. vs. JSON](tasks-vs-json-schema-reference-cpp.md).
 
 Následující příklad definuje jednu globální proměnnou **builddir**, která je zděděna v konfiguraci x86-Debug i x64-Debug. Každá konfigurace používá proměnnou k určení hodnoty pro vlastnost **buildRoot** pro tuto konfiguraci. Všimněte si také, jak každá konfigurace používá vlastnost **inheritEnvironments** k určení proměnné, která se vztahuje pouze na tuto konfiguraci.
 
