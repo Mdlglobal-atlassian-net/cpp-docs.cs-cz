@@ -1,26 +1,26 @@
 ---
 title: Šablony (C++)
-ms.date: 11/04/2016
+ms.date: 12/27/2019
 f1_keywords:
 - template_cpp
 helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: f1532b5aa4ea712feab08b49b7c035187ca0d042
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36ada3cc3b933e99e9b29b3b58463f6bc526fc7d
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330489"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546403"
 ---
 # <a name="templates-c"></a>Šablony (C++)
 
-Šablony jsou základem pro obecné programování v jazyce C++. Jako silně typovaný jazyk C++ vyžaduje všechny proměnné konkrétního typu, explicitně deklarován s programátor nebo kompilátor odvodit. Nicméně mnoho datových struktur a algoritmů vypadají stejně bez ohledu na to, jaký typ jsou nasazeny na. Šablony umožňují definovat operace třídy nebo funkce a nechat uživatele, určete, jaké konkrétní typy tyto operace by měla fungovat na.
+Šablony jsou základem pro obecné programování v C++. Jako jazyk silného typu vyžaduje, C++ aby všechny proměnné měly konkrétní typ, buď explicitně deklarované programátorem, nebo odvozený kompilátorem. Mnohé datové struktury a algoritmy ale vypadají stejně bez ohledu na to, na jaký typ pracují. Šablony umožňují definovat operace třídy nebo funkce a uživatel může určit, na jaké typy tyto operace mají pracovat.
 
-## <a name="defining-and-using-templates"></a>Definování a používání šablon
+## <a name="defining-and-using-templates"></a>Definice a používání šablon
 
-Šablona je konstrukce, která generuje běžný typ nebo funkce v době kompilace podle argumenty uživatel zadává parametrů šablony. Můžete například definovat šablony funkce takto:
+Šablona je konstrukce, která generuje běžný typ nebo funkci v době kompilace na základě argumentů, které uživatel zadá pro parametry šablony. Například můžete definovat šablonu funkce takto:
 
 ```cpp
 template <typename T>
@@ -30,9 +30,9 @@ T minimum(const T& lhs, const T& rhs)
 }
 ```
 
-Výše uvedený kód Popisuje šablonu pro obecnou funkci s parametrem jednoho typu *T*, jejichž vrácení hodnoty a parametry (lhs a zarovnání indirekce rhs) volání jsou všechny tohoto typu. Parametr typu můžete pojmenovat všechno, co je třeba, ale podle konvence jeden velká písmena se běžně používají. *T* je parametr šablony; **typename** – klíčové slovo říká, že tento parametr je zástupný symbol pro typ. Pokud funkce je volána, kompilátor nahradí všechny instance `T` s konkrétní typ argumentu, který je zadán uživatel nebo odvodit kompilátorem. Proces, ve kterém kompilátor vygeneruje třídu nebo funkci ze šablony se označuje jako *vytváření instancí šablon*; `minimum<int>` je instance šablony `minimum<T>`.
+Výše uvedený kód popisuje šablonu pro obecnou funkci s jediným parametrem typu *T*, jehož návratová hodnota a parametry volání (LHS a zarovnání indirekce RHS) jsou všechny tohoto typu. Parametr typu můžete pojmenovat libovolně, ale podle konvence se nejčastěji používají velká písmena s jedním velkým písmenem. *T* je parametr šablony; klíčové slovo **TypeName** říká, že tento parametr je zástupný symbol pro typ. Když je funkce volána, kompilátor nahradí všechny instance `T` pomocí konkrétního argumentu typu, který je buď zadán uživatelem nebo odvozený kompilátorem. Proces, ve kterém kompilátor generuje třídu nebo funkci ze šablony, je označován jako *vytvoření instance šablony*; `minimum<int>` je instance `minimum<T>`šablony.
 
-Jinde uživatel může deklarovat instanci šablony, která se specializuje na int. Předpokládejme, že get_a() a get_b() jsou funkce, které vrací celé číslo:
+Jinde může uživatel deklarovat instanci šablony, která je specializovaná pro int. předpokládá se, že get_a () a get_b () jsou funkce, které vracejí int:
 
 ```cpp
 int a = get_a();
@@ -46,7 +46,7 @@ Ale protože je to šablonu funkce a kompilátor může odvodit typ `T` z argume
 int i = minimum(a, b);
 ```
 
-Když kompilátor narazí, který tento poslední příkaz, ve které všechny výskyty generuje novou funkci *T* v šabloně je nahrazen **int**:
+Když kompilátor narazí na tento poslední příkaz, vygeneruje novou funkci, ve které se všechny výskyty *T* v šabloně nahradí řetězcem **int**:
 
 ```cpp
 int minimum(const int& lhs, const int& rhs)
@@ -55,25 +55,25 @@ int minimum(const int& lhs, const int& rhs)
 }
 ```
 
-Pravidla pro způsob kompilátor provede odvození typu v rámci šablony funkce jsou na základě pravidel pro běžné funkce. Další informace najdete v tématu [přetížení řešení z volání šablony funkce](../cpp/overload-resolution-of-function-template-calls.md).
+Pravidla pro způsob, jakým kompilátor provádí odvození typu v šablonách funkcí, jsou založena na pravidlech pro běžné funkce. Další informace naleznete v tématu [řešení přetížení volání šablony funkce](../cpp/overload-resolution-of-function-template-calls.md).
 
-## <a id="type_parameters"></a> Parametry typu
+## <a id="type_parameters"></a>Parametry typu
 
-V `minimum` šabloně výše, Všimněte si, že parametr typu *T* není kvalifikován žádným způsobem, dokud se používá v parametry volání funkce, kde jsou přidány const a kvalifikátory odkaz.
+V šabloně `minimum` výše si všimněte, že parametr Type *t* není kvalifikován jakýmkoli způsobem, dokud jej nepoužijete v parametrech volání funkce, kde jsou přidány kvalifikátory const a reference.
 
-Neexistuje žádný praktický limit pro počet parametrů typu. Více parametrů oddělte čárkami:
+Neexistuje žádné praktické omezení počtu parametrů typu. Více parametrů oddělte čárkami:
 
 ```cpp
 template <typename T, typename U, typename V> class Foo{};
 ```
 
-Klíčové slovo **třídy** je ekvivalentní **typename** v tomto kontextu. Můžete vyjádřit jako v předchozím příkladu:
+**Třída** klíčového slova je ekvivalentní typu **TypeName** v tomto kontextu. Předchozí příklad můžete vyjádřit jako:
 
 ```cpp
 template <class T, class U, class V> class Foo{};
 ```
 
-Operátor tří teček (...) můžete použít k definování šablony, která přijímá libovolný počet nula nebo více parametrů typu:
+Pomocí operátoru elipsy (...) můžete definovat šablonu, která přebírá libovolný počet nula nebo více parametrů typu:
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -83,7 +83,7 @@ vtclass<int> vtinstance2;
 vtclass<float, bool> vtinstance3;
 ```
 
-Jakýkoli vestavěný nebo uživatelem definovaný typ může sloužit jako argument typu. Například můžete použít std::vector ve standardní knihovně pro ukládání hodnot datového typu Double celá čísla, řetězce, MyClass, MyClass const *, MyClass &. Primární omezení při použití šablony je, že argument typu musí podporovat všechny operace, které se použijí pro parametry typu. Například, pokud označujeme je jako minimální pomocí MyClass jako v následujícím příkladu:
+Libovolný vestavěný nebo uživatelsky definovaný typ lze použít jako argument typu. Například můžete použít [std:: Vector](../standard-library/vector-class.md) ve standardní knihovně pro ukládání proměnných typu **int**, **Double**, [std:: String](../standard-library/basic-string-class.md), `MyClass`, **const** `MyClass`*, `MyClass&`a tak dále. Primární omezení při použití šablon je, že argument typu musí podporovat všechny operace, které jsou použity pro parametry typu. Například, pokud voláme `minimum` pomocí `MyClass` jako v tomto příkladu:
 
 ```cpp
 class MyClass
@@ -101,9 +101,9 @@ int main()
 }
 ```
 
-Chyba kompilátoru se vygeneruje, protože MyClass neposkytuje přetížení pro < – operátor.
+Dojde k vygenerování chyby kompilátoru, protože `MyClass` neposkytuje přetížení pro operátor **<** .
 
-Přestože můžete definovat šablony, která vynucuje toto omezení se nevyžaduje vlastní, že argumenty typu pro jakékoli konkrétní šablonu všechny patřit do stejné hierarchie objektů. Objektově orientované techniky můžete zkombinovat s šablony. Například můžete ukládat Derived * ve vektoru\<Base\*>.    Všimněte si, že argumenty musí být ukazateli
+Neexistuje žádný podstatný požadavek na to, aby argumenty typu pro konkrétní šablonu patřily do stejné hierarchie objektů, i když můžete definovat šablonu, která toto omezení vynutila. Můžete zkombinovat objektově orientované techniky pomocí šablon; Můžete například uložit odvozené * ve vektorovém\<Base\*>.    Všimněte si, že argumenty musí být ukazatele
 
 ```cpp
 vector<MyClass*> vec;
@@ -115,11 +115,11 @@ vector<MyClass*> vec;
    vec2.push_back(make_shared<MyDerived>());
 ```
 
-Základní požadavky, které vektoru a ostatní kontejnery standardní knihovny kladou na prvky `T` je, že `T` být přiřaditelný kopírování a constructible kopírování.
+Základní požadavky, které `std::vector` a další kontejnery standardní knihovny, jsou kladeny na prvky `T` je `T` zkopírování a kopírování-constructible.
 
 ## <a name="non-type-parameters"></a>Parametry bez typu
 
-Na rozdíl od obecné typy v jiných jazycích, jako je C# nebo Java C++ šablony podporují parametry bez typu, také označované jako parametry hodnotu. Můžete například poskytnout konstantní celočíselnou hodnotu k určení délky pole, stejně jako v tomto příkladu, který je podobný třídě std::array ve standardní knihovně:
+Na rozdíl od generických typů v jiných jazycích C# , jako je C++ například a Java, šablony podporují *parametry bez typu*, nazývané také parametry hodnot. Například můžete zadat konstantní celočíselnou hodnotu pro určení délky pole, jako v tomto příkladu, který je podobný třídě [std:: Array](../standard-library/array-class-stl.md) ve standardní knihovně:
 
 ```cpp
 template<typename T, size_t L>
@@ -131,17 +131,29 @@ public:
 };
 ```
 
-Všimněte si syntaxi v deklaraci šablony. Hodnota size_t je předán jako argument šablony v době kompilace a musí být konstantní nebo výraz constexpr. Použijete ho následujícím způsobem:
+Všimněte si syntaxe v deklaraci šablony. Hodnota `size_t` je předána jako argument šablony v době kompilace a musí být **konstantní** nebo výraz **constexpr** . Použijete ji takto:
 
 ```cpp
 MyArray<MyClass*, 10> arr;
 ```
 
-Jiné typy hodnot včetně ukazatele a reference, je možné předat v jako parametry bez typu. Například můžete předat ukazatel na funkci nebo objektu funkce přizpůsobit některé operace uvnitř kód šablony.
+Jiné druhy hodnot, včetně ukazatelů a odkazů, mohou být předány jako parametry, které nejsou typu. Například můžete předat ukazatel na objekt funkce nebo funkce pro přizpůsobení některé operace uvnitř kódu šablony.
 
-## <a id="template_parameters"></a> Šablony jako parametry šablony
+### <a name="type-deduction-for-non-type-template-parameters"></a>Srážky typu pro parametry šablony bez typu
 
-Parametr šablony může být šablonou. V tomto příkladu MyClass2 má dva parametry šablony: Parametr typename *T* a parametr šablony *směrování žádostí na aplikace*:
+V aplikaci Visual Studio 2017 a novější v **/std: režim c++ 17** kompilátor odvodí typ netypového argumentu šablony, který je deklarován pomocí **auto**:
+
+```cpp
+template <auto x> constexpr auto constant = x;
+
+auto v1 = constant<5>;      // v1 == 5, decltype(v1) is int
+auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
+auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
+```
+
+## <a id="template_parameters"></a>Šablony jako parametry šablony
+
+Šablona může být parametrem šablony. V tomto příkladu má MyClass2 dva parametry šablony: parametr TypeName *T* a parametr šablony *ARR*:
 
 ```cpp
 template<typename T, template<typename U, int I> class Arr>
@@ -153,7 +165,7 @@ class MyClass2
 };
 ```
 
-Vzhledem k tomu, *směrování žádostí na aplikace* parametr sám nemá žádný text, jeho názvy parametrů nejsou potřeba. Ve skutečnosti, jedná se o chybu k odkazování na *směrování žádostí na aplikace*společnosti typename nebo třída názvy parametrů z těla `MyClass2`. Z tohoto důvodu *směrování žádostí na aplikace*názvy parametrů typů lze vynechat, jak je znázorněno v tomto příkladu:
+Vzhledem k tomu, že samotný parametr *ARR* nemá žádné tělo, jejich názvy parametrů nejsou potřeba. Ve skutečnosti se jedná o chybu pro odkazování na názvy parametrů nebo třídy v rámci objektu *ARR*z těla `MyClass2`. Z tohoto důvodu mohou být názvy parametrů typu *ARR*vynechány, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 template<typename T, template<typename, int> class Arr>
@@ -166,27 +178,27 @@ class MyClass2
 
 ## <a name="default-template-arguments"></a>Výchozí argumenty šablony
 
-Šablony třídy a funkce mohou mít výchozí argumenty. Když šablony má výchozí argument, který můžete nechat neurčené, když ji použijete. Například šablona std::vector má výchozí argument pro přidělujícího modulu:
+Šablony třídy a funkce mohou mít výchozí argumenty. Pokud má šablona výchozí argument, můžete ji nechat nespecifikovanou, když ji použijete. Například šablona std:: Vector má výchozí argument pro přidělování:
 
 ```cpp
 template <class T, class Allocator = allocator<T>> class vector;
 ```
 
-Ve většině případů je výchozí třídu std::allocator přijatelné, proto použijete vektor takto:
+Ve většině případů je výchozí třída std:: přidělování přijatelná, takže použijete vektor podobný tomuto:
 
 ```cpp
 vector<int> myInts;
 ```
 
-Ale pokud potřeby můžete zadat vlastní Alokátor tímto způsobem:
+V případě potřeby ale můžete zadat vlastní přidělování, například:
 
 ```cpp
 vector<int, MyAllocator> ints;
 ```
 
-Všechny argumenty za první argument výchozí více argumentů šablony, musí mít výchozí argumenty.
+Pro více argumentů šablony všechny argumenty po prvním výchozím argumentu musí mít výchozí argumenty.
 
-Při použití šablony, jejíž parametry jsou všechny použita jako výchozí, použijte prázdný ostrých závorek:
+Při použití šablony, jejíž parametry jsou nastavené jako výchozí, použijte prázdné lomené závorky:
 
 ```cpp
 template<typename A = int, typename B = double>
@@ -201,9 +213,9 @@ int main()
 }
 ```
 
-## <a name="template-specialization"></a>Specializace šablony
+## <a name="template-specialization"></a>Specializace šablon
 
-V některých případech není možná nebo žádoucí pro šablonu definovat přesně stejný kód libovolného typu. Například budete chtít definovat cesta kódu, který se spustí jenom v případě, že je argument typu ukazatel nebo std::wstring nebo typ odvozený od určité základní třídy.  V takových případech můžete definovat *specializace* šablony pro daný typ. Když uživatel vytvoří šablonu instanci daného typu, kompilátor specializace používá ke generování třídy a pro všechny ostatní typy kompilátor zvolí další Obecné šablony. Specializace, ve kterých jsou specializované všechny parametry jsou *dokončení specializace*. Pokud jen některé parametry jsou specializované, je volána *částečná specializace*.
+V některých případech není možné nebo žádoucí, aby šablona definovala přesně stejný kód pro libovolný typ. Můžete například chtít definovat cestu kódu, který má být proveden pouze v případě, že je argumentem typu ukazatel nebo std:: wstring nebo typ odvozený z konkrétní základní třídy.  V takových případech můžete definovat *specializaci* šablony pro tento konkrétní typ. Když uživatel vytvoří instanci šablony s tímto typem, kompilátor použije specializaci k vygenerování třídy a pro všechny ostatní typy kompilátor zvolí obecnější šablonu. Specializace, ve kterých jsou všechny parametry specializované, jsou *kompletní specializace*. Pokud jsou pouze některé parametry specializované, nazývá se *Částečná specializace*.
 
 ```cpp
 template <typename K, typename V>
@@ -217,6 +229,6 @@ MyMap<int, MyClass> classes; // uses original template
 MyMap<string, MyClass> classes2; // uses the partial specialization
 ```
 
-Šablona může obsahovat libovolný počet specializace, za předpokladu, každý parametr speciálním typem je jedinečný. Pouze šablony třídy mohou být částečně specializovaná. Všechny úplné a částečné specializace šablony musí být deklarovány v oboru názvů stejný jako původní šablony.
+Šablona může mít libovolný počet specializací, pokud je každý parametr specializovaného typu jedinečný. Pouze šablony třídy mohou být částečně specializované. Všechny kompletní a částečné specializace šablony musí být deklarovány ve stejném oboru názvů jako původní šablona.
 
-Další informace najdete v tématu [specializace šablony](../cpp/template-specialization-cpp.md).
+Další informace naleznete v tématu [specializace šablony](../cpp/template-specialization-cpp.md).

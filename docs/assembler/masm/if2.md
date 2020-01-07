@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IF2 directive
 - IF2 directive
 ms.assetid: a0f75564-b51b-4e39-ad3b-f7421e7ecad6
-ms.openlocfilehash: f1b5126d9294c229d773acd29af463164bb46536
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 60f8b0dcedb61ac06de929aff300845e342d7cfc
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397450"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317315"
 ---
 # <a name="if1-and-if2"></a>IF1 a IF2
 
@@ -29,7 +29,7 @@ Blok **IF2** je vyhodnocen u všech průchodů sestavení, pokud je **parametr: 
 
 ## <a name="remarks"></a>Poznámky
 
-Úplnou syntaxi naleznete v tématu [if](../../assembler/masm/if-masm.md) .
+Úplnou syntaxi naleznete v tématu [if](if-masm.md) .
 
 Na rozdíl od verze 5,1, MASM 6,1 a vyšší provádí většinu práce na prvním průchodu, pak provede libovolný počet následných průchodů podle potřeby. Naproti tomu MASM 5,1 vždy sestaví dva zdrojové průchody. V důsledku toho může být nutné upravit nebo odstranit některé konstrukty závislé na průchodech v MASM 6,1 a vyšších.
 
@@ -45,4 +45,5 @@ MASM 6,1 a vyšší než rutina First – passuje jinak. Zpracovává se **.** D
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na direktivy](directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

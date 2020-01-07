@@ -1,18 +1,18 @@
 ---
 title: Méně závažná chyba nástroje ML A2006
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 6c55cb66d6eaeaf620aeedc1dd924f6618cbf817
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 058100984acbd42ac2993732ab619c0a27c0edd2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856780"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317081"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Méně závažná chyba nástroje ML A2006
 
@@ -28,7 +28,7 @@ Mohlo dojít k jedné z následujících akcí:
 
 - V souboru include byl definován symbol, který není zahrnutý.
 
-- Externí symbol byl použit bez direktivy [extern](../../assembler/masm/extern-masm.md) nebo [EXTERNDEF](../../assembler/masm/externdef.md) .
+- Externí symbol byl použit bez direktivy [extern](extern-masm.md) nebo [EXTERNDEF](externdef.md) .
 
 - Název symbolu byl nesprávně napsaný.
 
@@ -36,4 +36,4 @@ Mohlo dojít k jedné z následujících akcí:
 
 ## <a name="see-also"></a>Viz také:
 
-[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Chybové zprávy ML](ml-error-messages.md)

@@ -1,22 +1,22 @@
 ---
 title: alignment_of – třída
-ms.date: 11/04/2016
+ms.date: 12/11/2019
 f1_keywords:
 - type_traits/std::alignment_of
 helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: 5222e70965db69d33ec62039bf9013a52d145705
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d241848edf57fe4876c35e22f1762abf5d6888fa
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456454"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302312"
 ---
-# <a name="alignmentof-class"></a>alignment_of – třída
+# <a name="alignment_of-class"></a>alignment_of – třída
 
-Získá zarovnání určeného typu. Tato struktura je implementována z podmínek [alignof](../cpp/alignof-and-alignas-cpp.md). Použijte `alignof` přímo v případě, že jednoduše potřebujete zadat dotaz na hodnotu zarovnání. Použijte alignment_of, pokud potřebujete integrální konstantu, například při odeslání značky.
+Získá zarovnání určeného typu. Tato struktura je implementována z podmínek [alignof](../cpp/alignment-cpp-declarations.md). **Alignof** použijte přímo v případě, že jednoduše potřebujete zadat dotaz na hodnotu zarovnání. Použijte alignment_of, pokud potřebujete integrální konstantu, například při odeslání značky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,7 +36,7 @@ Dotaz typu obsahuje hodnotu zarovnání *typu.*
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<type_traits >
+**Záhlaví:** \<type_traits >
 
 **Obor názvů:** std
 
