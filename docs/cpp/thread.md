@@ -9,52 +9,52 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: cc21602764a9a3c2584bdd7da62c75974ffdd5fb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221958"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301285"
 ---
 # <a name="thread"></a>vlákno
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-**Vlákno** modifikátor rozšířené paměťové třídy se používá k deklarování místní proměnné vlákna. Přenosná ekvivalentní v C ++ 11 a novějším, použijte [thread_local](../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště pro přenosného kódu. Na Windows `thread_local` je implementováno s **__declspec(thread)**.
+Modifikátor třídy úložiště rozšířených **vlákny** slouží k deklaraci proměnné Thread Local. V případě přenosného ekvivalentu v C++ 11 a novějších používejte specifikátor třídy úložiště [thread_local](../cpp/storage-classes-cpp.md#thread_local) pro přenos přenosného kódu. V systému Windows **thread_local** je implementována s **__declspec (thread)** .
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec (vlákno)** *deklarátorů*
+**__declspec (thread)** *deklarátor*
 
 ## <a name="remarks"></a>Poznámky
 
 Místní úložiště vláken (TLS) je mechanismus, podle kterého všechna vlákna procesu alokují prostor pro data určitého vlákna. U standardních aplikací s více vlákny jsou data sdílena mezi všemi vlákny daného procesu, kde místní úložiště vláken představuje mechanismus pro rozdělení dat pro vlákno. Úplný popis vláken naleznete v tématu [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Deklarace místních proměnných vlákna musí použít [rozšířené syntaxe atributů](../cpp/declspec.md) a **__declspec** – klíčové slovo se **vlákno** – klíčové slovo. Například následující kód deklaruje místní proměnnou vlákna integer a inicializuje ji hodnotou:
+Deklarace thread local proměnných musí použít [syntaxi rozšířeného atributu](../cpp/declspec.md) a klíčové slovo **__declspec** s klíčovým slovem **thread** . Například následující kód deklaruje celočíselnou thread local proměnnou a inicializuje ji hodnotou:
 
 ```cpp
 __declspec( thread ) int tls_i = 1;
 ```
 
-Při použití místní proměnné vlákna v dynamicky načíst knihovny, musíte mít na paměti faktory, které může způsobit, že proměnná místního vlákna nebyla správně inicializována:
+Při použití proměnných místního vlákna v dynamicky načtených knihovnách je nutné znát faktory, které mohou způsobit, že místní proměnná vlákna nebude inicializována správně:
 
-1. Pokud proměnná je inicializována pomocí volání funkce (včetně konstruktory), tato funkce bude volat pouze vlákna, která způsobila binární/knihovny DLL pro načtení do procesu a tato vlákna, které se spustí po načtení binárního souboru knihovny DLL. Inicializační funkce nejsou volány pro ostatní vlákna, který byl již spuštěn při načtení knihovny DLL. Dynamická inicializace probíhá na volání funkce DllMain pro DLL_THREAD_ATTACH, ale knihovny DLL nikdy získá, které zprávy, není-li knihovny DLL v procesu při spuštění vlákna.
+1. Je-li proměnná inicializována voláním funkce (včetně konstruktorů), tato funkce bude volána pouze pro vlákno, které způsobilo načtení binárního souboru nebo knihovny DLL do procesu, a pro ta vlákna, která byla spuštěna po načtení binárního souboru nebo knihovny DLL. Inicializační funkce nejsou volány pro žádné jiné vlákno, které již bylo spuštěno při načtení knihovny DLL. K dynamické inicializaci dojde u volání DllMain pro DLL_THREAD_ATTACH, ale knihovna DLL tuto zprávu nikdy nezíská, pokud knihovna DLL není v procesu, kdy je vlákno spuštěno.
 
-1. Místní proměnné vlákna, které jsou staticky inicializována s konstantní hodnoty jsou obecně správně inicializována na všech vláknech. Však k prosinci 2017 existuje problém známé shoda v Microsoftu C++ kompilátoru kterým přijímat dynamické místo Statická inicializace proměnné constexpr.
+1. Místní proměnné vlákna, které jsou inicializovány staticky s konstantními hodnotami jsou obvykle inicializovány správně na všech vláknech. Od prosince 2017 však existuje známý problém s dodržováním v kompilátoru společnosti Microsoft C++ , který proměnné **constexpr** obdrží dynamickým spíše než statickou inicializací.
 
-   Poznámka: Oba zmíněné problémy se očekává v budoucnu vyřešit aktualizací kompilátoru.
+   Poznámka: v budoucích aktualizacích kompilátoru se očekává, že oba tyto problémy jsou vyřešené.
 
-Kromě toho musí dodržovat tyto pokyny při deklarování proměnné a místními objekty vlákna:
+Kromě toho je nutné při deklaraci thread local objektů a proměnných pozorovat tyto pokyny:
 
-- Můžete použít **vlákno** atribut pouze pro třídy a deklarace a definice dat; **vlákno** nelze použít v deklaracích nebo definicích funkce.
+- Atribut **thread** lze použít pouze na deklarace tříd a dat a definice; **vlákno** nelze použít pro deklarace a definice funkcí.
 
-- Můžete zadat **vlákno** atribut pouze na položky dat s trváním statického úložiště. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a statické datové členy třídy. Nelze deklarovat s automatické datové objekty **vlákno** atribut.
+- Atribut **vlákna** lze zadat pouze pro datové položky s trváním statického úložiště. To zahrnuje globální datové objekty ( **static** i **extern**), místní statické objekty a statické datové členy tříd. Nelze deklarovat automatické datové objekty s atributem **thread** .
 
-- Je nutné použít **vlákno** atribut pro deklarace a definice místního objektu vlákna, zda deklarace a definice objeví ve stejném souboru nebo v samostatných souborech.
+- Je nutné použít atribut **thread** pro deklaraci a definici objektu Thread Local, zda se deklarace a definice vyskytují ve stejném souboru nebo samostatných souborech.
 
-- Nelze použít **vlákno** atribut jako modifikátor typu.
+- Atribut **thread** nelze použít jako modifikátor typu.
 
-- Protože deklarace objektů, které používají **vlákno** atribut je povolen, tyto dva příklady jsou sémanticky ekvivalentní:
+- Vzhledem k tomu, že deklarace objektů, které používají atribut **thread** , jsou povoleny, tyto dva příklady jsou sémanticky ekvivalentní:
 
     ```cpp
     // declspec_thread_2.cpp
@@ -71,7 +71,7 @@ Kromě toho musí dodržovat tyto pokyny při deklarování proměnné a místn�
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- Standard jazyka C umožňuje inicializaci objektu nebo proměnné s výrazem zahrnujícím odkaz sám na sebe, ale pouze pro nestatické objekty. Přestože jazyk C++ obvykle umožňuje takovou dynamickou inicializaci objektu s výrazem zahrnujícím odkaz sám na sebe, tento typ inicializace není povolen s místními objekty vlákna. Příklad:
+- Standard jazyka C umožňuje inicializaci objektu nebo proměnné s výrazem, který zahrnuje odkaz sám na sebe, ale pouze pro nestatické objekty. Přestože C++ obvykle umožňuje takovou dynamickou inicializaci objektu s výrazem, který zahrnuje odkaz sám na sebe, tento typ inicializace není povolen u Thread localch objektů. Příklad:
 
    ```cpp
    // declspec_thread_3.cpp
@@ -81,9 +81,9 @@ Kromě toho musí dodržovat tyto pokyny při deklarování proměnné a místn�
    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
    ```
 
-   Všimněte si, že **sizeof** výraz, který obsahuje inicializovaný objekt, nepředstavuje odkaz sám na sebe a je povolen v jazyce C a C++.
+   Výraz **sizeof** , který obsahuje inicializovaný objekt, nepředstavuje odkaz sám na sebe a je povolen v C a C++.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

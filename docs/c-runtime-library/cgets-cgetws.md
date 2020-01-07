@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: aa258eaba34feec8ea25d780ea6392f195e37508
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 97a8de0a7fd0f278e6b0e3730a52ca3d0be6e07a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944694"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298997"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -73,13 +73,13 @@ Umístění úložiště pro data
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`_cgets`a `_cgetws` vrátí ukazatel na začátek řetězce, v `buffer[2]`. Pokud `buffer` je **null**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **hodnotu null** a nastaví `errno` na `EINVAL`.
+`_cgets` a `_cgetws` vrací ukazatel na začátek řetězce v `buffer[2]`. Pokud je `buffer` **null**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **hodnotu null** a nastaví `errno` na `EINVAL`.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce čtou řetězec znaků z konzoly a uloží řetězec a jeho délku do umístění, na `buffer`které ukazuje. `buffer` Parametr musí být ukazatel na pole znaků. První prvek pole, `buffer[0]`, musí obsahovat maximální délku (ve znacích) řetězce, který se má přečíst. Pole musí obsahovat dostatek prvků pro uložení řetězce, ukončujícího znaku null (' \ 0 ') a dalších 2 bajtů. Funkce přečte znaky, dokud není přečtena kombinace datového kanálu návratového řádku (CR-LF) nebo zadaného počtu znaků. Řetězec je uložen od `buffer[2]`. Pokud funkce přečte CR-LF, uloží znak null (' \ 0 '). Funkce pak uloží skutečnou délku řetězce v druhém prvku pole, `buffer[1]`.
+Tyto funkce čtou řetězec znaků z konzoly a uloží řetězec a jeho délku do umístění, na které ukazuje `buffer`. Parametr `buffer` musí být ukazatelem na pole znaků. První prvek pole `buffer[0]`, musí obsahovat maximální délku (ve znacích) řetězce, který se má přečíst. Pole musí obsahovat dostatek prvků pro uložení řetězce, ukončujícího znaku null (' \ 0 ') a dalších 2 bajtů. Funkce přečte znaky, dokud není přečtena kombinace datového kanálu návratového řádku (CR-LF) nebo zadaného počtu znaků. Řetězec je uložen od `buffer[2]`. Pokud funkce přečte CR-LF, uloží znak null (' \ 0 '). Funkce pak uloží skutečnou délku řetězce v druhém prvku pole `buffer[1]`.
 
-Vzhledem k tomu, že jsou všechny `_cgets` editační `_cgetws` klíče aktivní, když je v okně konzoly volána nebo, klávesa F3 opakuje poslední zadanou položku.
+Vzhledem k tomu, že jsou všechny editační klíče aktivní, když se v okně konzoly zavolá `_cgets` nebo `_cgetws` stiskem klávesy F3 Zopakuje poslední zadaný záznam.
 
 V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../c-runtime-library/secure-template-overloads.md).
 
@@ -100,7 +100,7 @@ Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../c-runt
 
 ## <a name="example"></a>Příklad
 
-```
+```c
 // crt_cgets.c
 // compile with: /c /W3
 // This program creates a buffer and initializes

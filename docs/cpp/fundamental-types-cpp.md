@@ -1,6 +1,6 @@
 ---
-title: Základní typy (C++)
-ms.date: 11/04/2016
+title: Předdefinované typy (C++)
+ms.date: 12/11/2019
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -43,33 +43,33 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857538"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301493"
 ---
-# <a name="fundamental-types--c"></a>Základní typy (C++)
+# <a name="built-in-types-c"></a>Předdefinované typy (C++)
 
-Základní typy v C++ jsou rozděleny do tří kategorií: integrál, plovoucí desetinná čárka a typ void. Integrální typy jsou schopné zpracovat celá čísla. Typy s plovoucí desetinnou čárkou umožňují určit hodnoty, které mohou mít zlomkové části.
+Předdefinované typy (označované také jako *základní typy*) jsou určeny C++ jazykem Standard a jsou integrovány do kompilátoru. Předdefinované typy nejsou definovány v žádném hlavičkovém souboru. Předdefinované typy jsou rozděleny do tří kategorií: integrál, plovoucí desetinná čárka a typ void. Integrální typy jsou schopné zpracovávat celá čísla. Typy s plovoucí desetinnou čárkou umožňují určit hodnoty, které mohou mít zlomkové části.
 
-Typ [void](../cpp/void-cpp.md) popisuje prázdnou sadu hodnot. Není možné zadat žádnou proměnnou typu **void** – používá se primárně k deklarování funkcí, které nevracejí žádné hodnoty, nebo k deklaraci obecných ukazatelů na netypové nebo libovolně typové údaje. Libovolný výraz může být explicitně převeden nebo převeden na typ **void**. Tyto výrazy jsou však omezeny na následující použití:
+Typ [void](void-cpp.md) popisuje prázdnou sadu hodnot. Není možné zadat žádnou proměnnou typu **void** – používá se primárně k deklarování funkcí, které nevracejí žádné hodnoty, nebo k deklaraci obecných ukazatelů na netypové nebo libovolně typové údaje. Libovolný výraz může být explicitně převeden nebo převeden na typ **void**. Tyto výrazy jsou však omezeny na následující použití:
 
-- Příkaz výrazu. (Další informace naleznete v tématu [výrazy](../cpp/expressions-cpp.md).)
+- Příkaz výrazu. (Další informace najdete v tématu [výrazy](expressions-cpp.md).)
 
-- Levý operand operátoru čárky. (Další informace najdete v tématu [operátor čárky](../cpp/comma-operator.md) .)
+- Levý operand operátoru čárky (Další informace naleznete v tématu [operátor čárka](comma-operator.md).)
 
-- Druhý nebo třetí operand podmíněného operátoru (`? :`). (Další informace naleznete v tématu [výrazy s podmíněným operátorem](../cpp/conditional-operator-q.md) .)
+- Druhý nebo třetí operand podmíněného operátoru (`? :`). (Další informace naleznete v tématu [výrazy s podmíněným operátorem](conditional-operator-q.md).)
 
-Následující tabulka popisuje omezení velikostí písma. Tato omezení jsou nezávislé implementace společnosti Microsoft.
+Následující tabulka vysvětluje omezení velikosti typů ve vztahu k sobě navzájem. Tato omezení platí C++ Standard a jsou nezávislá na implementaci Microsoftu. Absolutní velikost některých předdefinovaných typů není v standardu určena.
 
-### <a name="fundamental-types-of-the-c-language"></a>Základní typy jazyka C++
+### <a name="built-in-type-size-restrictions"></a>Vestavěná omezení velikosti typu
 
 |Kategorie|Type|Obsah|
 |--------------|----------|--------------|
-|Integrál|**char**|Typ **char** je integrální typ, který obvykle obsahuje členy základní znakové sady pro spuštění – ve výchozím nastavení je to ASCII v Microsoftu C++.<br /><br /> C++ Kompilátor zpracovává proměnné typu **char**, **signed char**a **unsigned char** s různými typy. Proměnné typu **char** jsou povýšeny na **int** , jako by byly typu **signed char** ve výchozím nastavení, pokud se nepoužije možnost kompilace/j. V tomto případě se považují za typ **char bez znaménka** a jsou povýšeny na **int** bez přípony Sign.|
-||**bool**|Typ **bool** je celočíselný typ, který může mít jednu ze dvou hodnot **true** nebo **false**. Velikost není zadána.|
+|Integrální|**char**|Typ **char** je integrální typ, který obvykle obsahuje členy základní znakové sady pro spuštění – ve výchozím nastavení je to ASCII v Microsoftu C++.<br /><br /> C++ Kompilátor zpracovává proměnné typu **char**, **signed char**a **unsigned char** s různými typy. Proměnné typu **char** jsou povýšeny na **int** , jako by byly typu **signed char** ve výchozím nastavení, pokud se nepoužije možnost kompilace/j. V tomto případě se považují za typ **char bez znaménka** a jsou povýšeny na **int** bez přípony Sign.|
+||**bool**|Typ **bool** je celočíselný typ, který může mít jednu ze dvou hodnot **true** nebo **false**. Jeho velikost není specifikována.|
 ||**short**|Typ **short int** (nebo jen **krátká**) je celočíselný typ, který je větší nebo roven velikosti typu **char**a menší nebo roven velikosti typu **int**.<br /><br /> Objekty typu **short** lze deklarovat jako **signed short** nebo **unsigned short**. **Signed short** je synonymum pro **krátké**.|
 ||**int**|Typ **int** je celočíselný typ, který je větší nebo roven velikosti typu **short int**a menší nebo roven velikosti typu **Long**.<br /><br /> Objekty typu **int** lze deklarovat jako **signed int** nebo **unsigned int**. **Signed int** je synonymem pro **int**.|
 ||**__int8**, **__int16**, **__int32**, **__int64**|Size Integer `__int n`, kde `n` je velikost proměnné Integer v bitech. **__int8**, **__int16**, **__int32** a **__Int64** jsou klíčová slova specifická pro společnost Microsoft. Ne všechny typy jsou k dispozici ve všech architekturách. ( **__int128** se nepodporuje.)|
@@ -82,9 +82,9 @@ Následující tabulka popisuje omezení velikostí písma. Tato omezení jsou n
 
 **Specifické pro společnost Microsoft**
 
-Následující tabulka uvádí velikost úložiště potřebného pro základní typy v jazyce Microsoft C++.
+V následující tabulce je uvedeno množství úložiště potřebné pro předdefinované typy v Microsoftu C++. Zejména Pamatujte, že **dlouhá** je 4 bajty i v 64 operačních systémech.
 
-### <a name="sizes-of-fundamental-types"></a>Velikosti základních typů
+### <a name="sizes-of-built-in-types"></a>Velikosti předdefinovaných typů
 
 |Type|Velikost|
 |----------|----------|
@@ -95,10 +95,10 @@ Následující tabulka uvádí velikost úložiště potřebného pro základní
 
 **Specifické pro konec Microsoftu**
 
-V části rozsahy [datových typů](../cpp/data-type-ranges.md) můžete zobrazit souhrn rozsahu hodnot každého typu.
+V části rozsahy [datových typů](data-type-ranges.md) můžete zobrazit souhrn rozsahu hodnot každého typu.
 
-Další informace o převodu typů naleznete v tématu [standardní převody](../cpp/standard-conversions.md).
+Další informace o převodu typů naleznete v tématu [standardní převody](standard-conversions.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Rozsahy datových typů](../cpp/data-type-ranges.md)
+[Rozsahy datových typů](data-type-ranges.md)

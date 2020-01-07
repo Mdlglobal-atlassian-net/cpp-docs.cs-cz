@@ -8,16 +8,16 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: e5a341f1828bad9f5562c10036779245ac88c79e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b472fceffa6284baaaf4dc1780ab54399fdd42c7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304329"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301675"
 ---
-# <a name="truncate"></a>_TRUNCATE
+# <a name="_truncate"></a>_TRUNCATE
 
-Určuje chování zkracování řetězců.
+Určuje chování při zkracování řetězce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,7 +27,7 @@ Určuje chování zkracování řetězců.
 
 ## <a name="remarks"></a>Poznámky
 
-`_TRUNCATE` zkrácení chování při předání jako `count` parametr pro tyto funkce:
+`_TRUNCATE` umožňuje chování zkrácení při předání jako parametru `count` těmto funkcím:
 
 [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
 
@@ -45,9 +45,9 @@ Určuje chování zkracování řetězců.
 
 [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)
 
-Pokud cílová vyrovnávací paměť je příliš nízká k uložení celý řetězec, běžné chování těchto funkcí je s ní zacházet jako chybový stav (viz [Parameter Validation](../c-runtime-library/parameter-validation.md)). Nicméně pokud je zkrácení řetězce je zapnutá předáním `_TRUNCATE`, tyto funkce budou zkopírovány pouze jako největší část řetězce, který se vejde opuštění cílová vyrovnávací paměť zakončená hodnotou null a vraťte se úspěšně.
+Pokud je cílová vyrovnávací paměť příliš malá pro uložení celého řetězce, je běžné chování těchto funkcí považováno za chybu v případě chyby (viz [ověření parametru](../c-runtime-library/parameter-validation.md)). Nicméně pokud je zkracování řetězců povoleno předáním `_TRUNCATE`, budou tyto funkce zkopírovány pouze tolik řetězce, kolik bude odpovídat, ponechání cílové vyrovnávací paměti ukončené hodnotou null a úspěšné vrácení.
 
-Zkrácení řetězce je změní návratové hodnoty ovlivněné funkce. Tyto funkce vrátí 0 Pokud k žádné zkrácení nebo `STRUNCATE` Pokud dojde ke zkrácení:
+Zkrácení řetězce mění vrácené hodnoty ovlivněných funkcí. Následující funkce vrátí hodnotu 0, pokud nedochází k zkracování, nebo `STRUNCATE`, pokud dojde ke zkrácení:
 
 [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
 
@@ -57,7 +57,7 @@ Zkrácení řetězce je změní návratové hodnoty ovlivněné funkce. Tyto fun
 
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)
 
-Následující funkce vrátí počet znaků zkopírována, pokud dojde k žádnému zkrácení nebo -1, pokud dojde k zkrácení (tzn. odpovídá chování původní snprintf – functions):
+Následující funkce vrátí počet zkopírovaných znaků, pokud nedochází k žádné zkrácení, nebo-1, pokud dojde ke zkrácení (odpovídá chování původních funkcí snprintf):
 
 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)
 
@@ -65,7 +65,7 @@ Následující funkce vrátí počet znaků zkopírována, pokud dojde k žádn�
 
 ## <a name="example"></a>Příklad
 
-```
+```c
 // crt_truncate.c
 #include <stdlib.h>
 #include <errno.h>

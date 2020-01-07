@@ -1,6 +1,6 @@
 ---
 title: PARITY? – operátor
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - PARITY?
 - operator PARITY?
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - PARITY? operator
 - operator PARITY?
 ms.assetid: f8c52def-c4b7-4b81-af96-2b0c2d943f6c
-ms.openlocfilehash: b5abfcf12a22240f5ffe7ef01c0156c0f48845e5
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bf52b83c116d5bf71cf556bd042a6057e890ec55
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396517"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319018"
 ---
 # <a name="operator-parity"></a>PARITY? – operátor
 
-Stav příznaku parity Používáno pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. WHILe](../../assembler/masm/dot-while.md)nebo [. OPAKUJe](../../assembler/masm/dot-repeat.md) bloky a vyhodnocují v době běhu, nikoli v době sestavení.
+Stav příznaku parity Používáno pouze v rámci [. Pokud](dot-if.md), [. WHILe](dot-while.md)nebo [. OPAKUJe](dot-repeat.md) bloky a vyhodnocují v době běhu, nikoli v době sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,4 +25,5 @@ Stav příznaku parity Používáno pouze v rámci [. Pokud](../../assembler/mas
 
 ## <a name="see-also"></a>Viz také:
 
-[Reference operátorů](operators-reference.md)
+\ – [referenční informace o operátorech](operators-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

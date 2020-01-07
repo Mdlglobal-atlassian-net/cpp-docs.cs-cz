@@ -6,27 +6,27 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba57d495553e9622fcece9d036fc4f6eff3fa04
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154705"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301597"
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C++
 
-Třídy a struktury mohou obsahovat členy, které zabírají méně úložného prostoru než celočíselný typ. Tyto členy jsou určeny jako bitová pole. Syntaxe bitového pole *deklarátor členu* následuje specifikace:
+Třídy a struktury mohou obsahovat členy, které zabírají méně úložného prostoru než celočíselný typ. Tyto členy jsou určeny jako bitová pole. Syntaxe bitového pole *-deklarátor specifikace členů* je následující:
 
 ## <a name="syntax"></a>Syntaxe
 
-*deklarátor* **:** *konstantního výrazu.*
+*deklarátor* **:** *konstantní výraz*
 
 ## <a name="remarks"></a>Poznámky
 
-(Volitelné) *deklarátor* je název, kterým se přistupuje členu v programu. Musí být celočíselného typu (včetně výčtových typů). *Konstantní výraz* určuje počet bitů, které člen zaujímá ve struktuře. Anonymní bitová pole, tedy členy bitových polí bez identifikátoru, slouží pro odsazení.
+(Nepovinný) *deklarátor* je název, ke kterému se člen přistupoval v programu. Musí být celočíselného typu (včetně výčtových typů). *Konstantní výraz* určuje počet bitů, které člen zabírá ve struktuře. Anonymní bitová pole, tedy členy bitových polí bez identifikátoru, slouží pro odsazení.
 
 > [!NOTE]
-> Nepojmenované bitové pole šířky 0 vynutí zarovnání dalšího bitového pole na další **typ** hranice, ve kterém **typ** je typ člena.
+> Nepojmenované bitové pole Width 0 nutí zarovnání dalšího bitového pole na další hranici **typu** , kde **Type** je typ člena.
 
 Následující příklad deklaruje strukturu, která obsahuje bitová pole:
 
@@ -43,16 +43,16 @@ struct Date {
 
 Koncepční rozvržení paměti objektu typu `Date` je znázorněno na následujícím obrázku.
 
-![Rozložení paměti objektu date](../cpp/media/vc38uq1.png "rozložení paměti objektu date") <br/>
+![Rozložení paměti objektu Date](../cpp/media/vc38uq1.png "Rozložení paměti objektu Date") <br/>
 Rozložení paměti objektu Date
 
-Všimněte si, že `nYear` je 8 bitů dlouhý a přeteče hranice slova deklarovaného typu **bez znaménka** **krátký**. Proto je zahájen na začátku nového **bez znaménka** **krátký**. Není nutné, aby se všechna bitová pole vešla do jednoho objektu použitého typu. Nové jednotky úložiště jsou přidělovány podle vyžadovaného počtu bitů v deklaraci.
+Všimněte si, že `nYear` je 8 bitů dlouhé a přetečení hranice slova deklarovaného typu, **bez znaménka** **short**. Proto je zahájen na začátku nového **nepodepsaného znaménka** **.** Není nutné, aby se všechna bitová pole vešla do jednoho objektu použitého typu. Nové jednotky úložiště jsou přidělovány podle vyžadovaného počtu bitů v deklaraci.
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Řazení dat, která jsou deklarována jako bitová pole, je od nízkého po vysoký bit, jak je znázorněno na obrázku výše.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 Pokud deklarace struktury obsahuje nepojmenované pole o délce 0, jak je znázorněno v následujícím příkladu,
 
@@ -68,22 +68,22 @@ struct Date {
 };
 ```
 
-potom rozložení paměti je, jak je znázorněno na následujícím obrázku:
+rozložení paměti pak je znázorněno na následujícím obrázku:
 
-![Rozložení objektu Date s nulovou&#45;bitové pole délky](../cpp/media/vc38uq2.png "rozložení datum objektu s nulou&#45;délkou bitového pole") <br/>
+![Rozložení objektu Date s bitovým&#45;polem s nulovou délkou](../cpp/media/vc38uq2.png "Rozložení objektu Date s bitovým&#45;polem s nulovou délkou") <br/>
 Rozložení objektu Date s nulovou délkou bitového pole
 
-Základní typ bitového pole musí být integrálního typu, jak je popsáno v [základní typy](../cpp/fundamental-types-cpp.md).
+Podkladový typ bitového pole musí být integrálního typu, jak je popsáno v [předdefinovaných typech](../cpp/fundamental-types-cpp.md).
 
-Pokud se inicializátor pro odkaz typu `const T&` l-hodnotou, která odkazuje na bitové pole typu `T`, odkaz není vázán na bitové pole přímo. Místo toho odkaz je vázán na dočasný inicializován pro uchování hodnoty bitové pole.
+Pokud inicializátor pro odkaz typu `const T&` je l-hodnota, která odkazuje na bitové pole typu `T`, odkaz není přímo vázán na bitové pole. Místo toho je odkaz svázán s dočasnou inicializací pro uchování hodnoty bitového pole.
 
-## <a name="restrictions-on-bit-fields"></a>Omezení u bitových polí
+## <a name="restrictions-on-bit-fields"></a>Omezení bitových polí
 
 V následujícím seznamu jsou uvedeny chybné operace u bitových polí:
 
 - Převzetí adresy bitového pole.
 
-- Inicializace non -**const** odkazu pomocí bitového pole.
+- Inicializuje se odkaz, který není typu**const** , s bitovým polem.
 
 ## <a name="see-also"></a>Viz také:
 

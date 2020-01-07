@@ -1,18 +1,18 @@
 ---
 title: Méně závažná chyba nástroje ML A2064
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2064
 helpviewer_keywords:
 - A2064
 ms.assetid: 553a5ec5-b404-4321-ab2c-b9ccec6471fc
-ms.openlocfilehash: 7cde53d3b3ddb024a16e26f10923209445b2f8c5
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b4aa14f06a068bd186d7506bfd6461d12f3087d2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856274"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316912"
 ---
 # <a name="ml-nonfatal-error-a2064"></a>Méně závažná chyba nástroje ML A2064
 
@@ -22,4 +22,4 @@ Zarovnání zadané v definici struktury je neplatné.
 
 ## <a name="see-also"></a>Viz také:
 
-[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Chybové zprávy ML](ml-error-messages.md)

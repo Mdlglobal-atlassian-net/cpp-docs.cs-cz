@@ -1,21 +1,21 @@
 ---
 title: '@F'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@F'
 helpviewer_keywords:
 - '@F symbol'
 ms.assetid: fa717dc8-e5a4-420d-ad3c-cb64ed258a60
-ms.openlocfilehash: 82195c216552302f4f0a2a237ce95440249e9854
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 80f75fe9b191db48fd68e7c926b94cb0b9126d20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399115"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315898"
 ---
 # <a name="f"></a>\@F
 
-Umístění dalšího [\@\@:](../../assembler/masm/at-at.md) popisek.
+Umístění dalšího [\@\@:](at-at.md) popisek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,4 +23,5 @@ Umístění dalšího [\@\@:](../../assembler/masm/at-at.md) popisek.
 
 ## <a name="see-also"></a>Viz také:
 
-[Reference k symbolům](symbols-reference.md)
+\ – [referenční informace o symbolech](symbols-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

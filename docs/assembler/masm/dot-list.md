@@ -1,17 +1,17 @@
 ---
 title: .LIST
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LIST
 helpviewer_keywords:
 - .LIST directive
 ms.assetid: f7e134de-6039-4343-b921-f70aea5e1c96
-ms.openlocfilehash: a74034b82a109c12836189b657cceffbfeaab4a6
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 63cf695a1ecf0c2e43322c9d10d832a261185695
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398193"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317692"
 ---
 # <a name="list"></a>.LIST
 
@@ -27,4 +27,5 @@ Toto nastavení je výchozí.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na direktivy](directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

@@ -1,21 +1,21 @@
 ---
 title: TBYTE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - TBYTE
 helpviewer_keywords:
 - TBYTE directive
 ms.assetid: d5f96bb0-403c-413e-9e3c-2af1ce528da7
-ms.openlocfilehash: d0a67133bf38eaaf8f14dfa7f1584bfc12ffe6fd
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 747aaf96b39d7947f33633dba97b8f8a1710639b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393160"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318381"
 ---
 # <a name="tbyte"></a>TBYTE
 
-Přidělí a případně inicializuje 10 bajtů úložiště pro každý *inicializátor*. Lze také použít jako specifikátor typu kdekoli je typ právní.
+Přidělí a případně inicializuje 10 bajtů úložiště pro každý *inicializátor*. Lze také použít jako specifikátor typu kdekoli je typ právní. **DT** je synonymum pro **TBYTE**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,5 +23,6 @@ Přidělí a případně inicializuje 10 bajtů úložiště pro každý *inicia
 
 ## <a name="see-also"></a>Viz také:
 
-\ – [referenční informace o direktivách](../../assembler/masm/directives-reference.md)
-[DT](../../assembler/masm/dt.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+\ [DT](dt.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

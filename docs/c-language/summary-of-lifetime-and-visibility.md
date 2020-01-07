@@ -5,38 +5,38 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345276"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299075"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Souhrn doby platnosti a viditelnosti
 
-V následující tabulce je uveden seznam vlastností doby platnosti a viditelnosti pro většinu identifikátory. První tři sloupce zadejte atributy, které definují doby platnosti a viditelnosti. Doby platnosti a viditelnosti ve sloupci čtvrtý a pátý má identifikátor s atributy Dal první tři sloupce. V tabulce nepopisuje všechny možné případy. Odkazovat na [třídy úložiště](../c-language/c-storage-classes.md) Další informace.
+Následující tabulka představuje souhrn vlastností životnosti a viditelnosti pro většinu identifikátorů. První tři sloupce poskytují atributy, které definují životnost a viditelnost. Identifikátor s atributy, které jsou zadány v prvních třech sloupcích, má životnost a viditelnost zobrazených ve čtvrtém a pátém sloupci. Tabulka ale nepokrývá všechny možné případy. Další informace najdete v tématu [třídy úložiště](../c-language/c-storage-classes.md) .
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Souhrn doby platnosti a viditelnosti
 
-|Atributy:<br /><br /> úroveň|Položka|Třída úložiště<br /><br /> Specifikátor|Výsledek:<br /><br /> Životnost|Viditelnost|
+|Atributy:<br /><br /> Úroveň|Položka|Třída úložiště<br /><br /> Specifikátor|Result:<br /><br /> Doba platnosti|Viditelnost|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Rozsah souboru|Definice proměnných|**static**|Globální|Zbývající část zdrojového souboru, ve kterém se vyskytuje|
-||Deklarace proměnné|**extern**|Globální|Zbývající část zdrojového souboru, ve kterém se vyskytuje|
-||Prototyp funkce nebo definice|**static**|Globální|Jeden zdrojový soubor|
-||Prototyp funkce|**extern**|Globální|Zbývající část zdrojového souboru|
+|Rozsah souboru|Definice proměnné|**static**|Globální|Zbytek zdrojového souboru, ve kterém se vyskytuje|
+||Deklarace proměnné|**extern**|Globální|Zbytek zdrojového souboru, ve kterém se vyskytuje|
+||Prototyp nebo definice funkce|**static**|Globální|Jeden zdrojový soubor|
+||Prototyp funkce|**extern**|Globální|Zbytek zdrojového souboru|
 |Rozsah bloku|Deklarace proměnné|**extern**|Globální|Blok|
-||Definice proměnných|**static**|Globální|Blok|
-||Definice proměnných|**Automatické** nebo **zaregistrovat**|Místní|Blok|
+||Definice proměnné|**static**|Globální|Blok|
+||Definice proměnné|**Automatické** nebo **registrace**|Místní|Blok|
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje bloky, vnoření a viditelnost proměnné:
+Následující příklad znázorňuje bloky, vnořování a viditelnost proměnných:
 
 ### <a name="code"></a>Kód
 
-```
+```c
 // Lifetime_and_Visibility.c
 
 #include <stdio.h>
@@ -64,7 +64,7 @@ int main()  // main function defined at external level
 
 ### <a name="comments"></a>Komentáře
 
-V tomto příkladu jsou čtyři úrovně viditelnosti: na externí úrovni nebo na tři bloku. Na obrazovku, jak je uvedeno v komentářích následujících každého příkazu jsou vypsány hodnoty.
+V tomto příkladu jsou čtyři úrovně viditelnosti: externí úroveň a tři úrovně bloku. Hodnoty se vytisknou na obrazovku, jak je uvedeno v komentářích po jednotlivých příkazech.
 
 ## <a name="see-also"></a>Viz také:
 

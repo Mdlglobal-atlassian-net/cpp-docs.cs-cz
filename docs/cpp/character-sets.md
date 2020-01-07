@@ -1,30 +1,43 @@
 ---
-title: Znakové sady
-ms.date: 05/06/2019
+title: Tokeny a znakové sady
+ms.date: 12/10/2019
 helpviewer_keywords:
+- Tokens (C++)
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 1f6dbe2faa6348d61ec00b411cc35e8ef5ceb57a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222519"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301610"
 ---
-# <a name="character-sets"></a>Znakové sady
+# <a name="tokens-and-character-sets"></a>Tokeny a znakové sady
 
-Text programu v jazyce C++ je uložen ve zdrojových souborech, které používají určitý znak kódování. Standard jazyka C++ určuje základní zdrojové znakové sady zdrojových souborů a základním provedení znakové sady pro zkompilované soubory. Microsoft C++ kompilátor (MSVC) umožňuje další sadu znaků specifických pro národní prostředí pro použití ve zdrojových souborech a zkompilované soubory.
+Text C++ programu se skládá z tokenů a mezer *.* Token je nejmenší prvek programu C++, který je smysluplný pro kompilátor. C++ Analyzátor rozpoznává tyto typy tokenů:
 
-## <a name="character-sets"></a>Znakové sady
+- [Klíčová slova](../cpp/keywords-cpp.md)
+- [Identifikátory](../cpp/identifiers-cpp.md)
+- [Číselné literály, logické a literály typu ukazatele](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [Řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md)
+- [Uživateli definované literály](../cpp/user-defined-literals-cpp.md)
+- [Operátory](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [Interpunkční znaky jazyka](../cpp/punctuators-cpp.md)
 
-Určuje standard jazyka C++ *základní sada zdrojových znaků* , která může být použita ve zdrojových souborech. K reprezentaci znaků mimo tuto sadu, můžete zadat další znaky pomocí *univerzální název znaku*. Při kompilaci, *základní znakové sadě spuštění* a *základním provedení široká charakterová sada* reprezentaci znaků a řetězce, které se mohou objevit v programu. Implementace MSVC umožňuje další znaky ve zdrojovém kódu a zkompilovaného kódu.
+Tokeny jsou obvykle odděleny *prázdným znakem*, což může být jedna nebo více:
 
-### <a name="basic-source-character-set"></a>Základní sada zdrojových znaků
+- Prázdné hodnoty
+- Vodorovné nebo svislé tabulátory
+- Nové řádky
+- Informační kanály formuláře
+- Komentáře
 
-*Základní sada zdrojových znaků* se skládá z 96 znaků, které lze použít ve zdrojových souborech. Tato sada obsahuje znak, horizontálního tabulátoru, vertikálního tabulátoru, posun a nový řádek řídicí znaky, a to sadu grafické znaky:
+## <a name="basic-source-character-set"></a>Základní znaková sada zdroje
+
+C++ Standard Určuje *základní zdrojovou znakovou sadu* , která může být použita ve zdrojových souborech. Pro reprezentaci znaků mimo tuto sadu lze zadat další znaky pomocí *univerzálního názvu znaku*. Implementace MSVC umožňuje další znaky. *Základní Zdrojová znaková sada* se skládá z 96 znaků, které mohou být použity ve zdrojových souborech. Tato sada obsahuje znak mezery, horizontální tabulátor, svislou kartu, kanál formuláře a řídicí znaky nového řádku a tuto sadu grafických znaků:
 
 `a b c d e f g h i j k l m n o p q r s t u v w x y z`
 
@@ -34,31 +47,31 @@ Určuje standard jazyka C++ *základní sada zdrojových znaků* , která může
 
 `_ { } [ ] # ( ) < > % : ; . ? * + - / ^ & | ~ ! = , \ " '`
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Zahrnuje MSVC `$` znak jako člen základní zdrojové znakové sady. MSVC také umožňuje další sadu znaků, které mají použít ve zdrojových souborech založené na kódování souboru. Ve výchozím nastavení Visual Studio ukládá zdrojové soubory s použitím výchozí znakovou stránku. Pokud zdrojové soubory jsou uloženy ve znakové stránce specifických pro národní prostředí nebo znaková stránka Unicode, MSVC umožňuje používat znaky tuto znakovou stránku ve zdrojovém kódu, s výjimkou řídicích kódů nejsou explicitně povolená v základní zdrojové znakové nastavit. Například můžete vložit japonské znaky komentáře, identifikátory nebo řetězcové literály, při uložení souboru pomocí japonské znakovou stránku. MSVC neumožňuje sekvence znaků, které nelze převést na platné vícebajtové znaky nebo kódové body sady Unicode. V závislosti na možnostech kompilátoru můžou objevit všechny povolené znaky v identifikátory. Další informace najdete v tématu [identifikátory](../cpp/identifiers-cpp.md).
+MSVC zahrnuje znak `$` jako člen základní zdrojové znakové sady. MSVC také umožňuje použít další sadu znaků ve zdrojových souborech na základě kódování souboru. Ve výchozím nastavení Visual Studio ukládá zdrojové soubory pomocí výchozí znakové stránky. Když jsou zdrojové soubory uloženy pomocí znakové stránky specifické pro národní prostředí nebo znakové stránky Unicode, umožňuje MSVC použít libovolný ze znaků této znakové stránky ve zdrojovém kódu, s výjimkou řídicích kódů, které nejsou explicitně povoleny v základní zdrojové znakové sadě. Můžete například vložit japonské znaky do komentářů, identifikátorů nebo řetězcových literálů, pokud soubor uložíte pomocí japonské znakové stránky. MSVC nepovoluje sekvence znaků, které nelze přeložit na platné vícebajtové znaky nebo body kódu Unicode. V závislosti na možnostech kompilátoru nemusí být v identifikátorech zobrazeny všechny povolené znaky. Další informace najdete v článku [Identifikátory](../cpp/identifiers-cpp.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ### <a name="universal-character-names"></a>Univerzální názvy znaků
 
-Protože programy v jazyce C++ můžete použít mnoho více znaků, než úlohy uvedené v základní zdrojové znakové sady, můžete zadat tyto znaky v přenosný způsob, jak pomocí *univerzální názvy znaků*. Univerzální název znaku se skládá z posloupnost znaků, které představují bod kódu Unicode.  Tyto dvě různými formami trvat. Použití `\UNNNNNNNN` představující bod kódu Unicode ve formátu U + NNNNNNNN, kde NNNNNNNN je číslo s desetinnou čárkou kód osm číslic v šestnáctkové soustavě. Použití čtyř číslic `\uNNNN` představující bod kódu Unicode U + 0000NNNN ve formuláři.
+Vzhledem C++ k tomu, že programy můžou používat spoustu dalších znaků, než jsou zadané v základní zdrojové znakové sadě, můžete tyto znaky zadat přenositelném způsobem pomocí *názvů univerzálních znaků*. Univerzální název znaku se skládá ze sekvence znaků, které reprezentují bod kódu Unicode.  Ty mají dvě formy. Použijte `\UNNNNNNNN` pro reprezentaci bodu kódu Unicode ve formátu U + NNNNNNNN, kde NNNNNNNN je desítkové číslo bodu kódu v šestnáctkové soustavě. Použijte čtyřmístné `\uNNNN` pro reprezentaci bodu kódu Unicode ve formátu U + 0000NNNN.
 
-V identifikátory a v literálech řetězců a znaků může používat univerzální názvy znaků. Univerzální název znaku nemůže používá k reprezentování náhradní bod kódu v rozsahu 0xD800-0xDFFF. Místo toho použít bod požadovaného kódu; kompilátor automaticky generuje všechny požadované zástupnými typy. Další omezení platí pro názvy univerzálních znaků, které lze použít v identifikátory. Další informace najdete v tématu [identifikátory](../cpp/identifiers-cpp.md) a [řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md).
+Univerzální názvy znaků lze použít v identifikátorech a v řetězcových a znakových literálech. Univerzální název znaku nelze použít k reprezentaci náhradního bodu kódu v rozsahu 0xD800-0xDFFF. Místo toho použijte požadovaný bod kódu; kompilátor automaticky generuje všechny požadované náhrady. Další omezení platí pro názvy univerzálních znaků, které lze použít v identifikátorech. Další informace naleznete v tématu [identifikátory](../cpp/identifiers-cpp.md) a [řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md).
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Microsoft C++ kompilátor zpracovává znak v univerzálních znaků název literálu formuláři a Zaměnitelně. Můžete třeba deklarovat pomocí formuláře univerzálních znaků názvu identifikátor a použít v podobě literálu:
+Kompilátor společnosti C++ Microsoft považuje znak ve formě univerzálního znakového názvu a tvar literálu se zamění. Můžete například deklarovat identifikátor pomocí formuláře univerzálního názvu znaku a použít ho ve formě literálu:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'
 if (キ == 42) return true; // \u30AD and キ are the same to the compiler
 ```
 
-Formát rozšířené znaky do schránky Windows je specifické pro aplikaci nastavení národního prostředí. Vyjímání a vkládání do kódu z jiné aplikace tyto znaky může představovat neočekávaný znak kódování. To může způsobit chyby při analýze bez zjevné příčiny ve vašem kódu. Doporučujeme nastavit váš zdroj kódování souboru na znakovou stránku Unicode před vložením rozšířené znaky. Doporučujeme také použít editor IME nebo aplikace Mapa znaků ke generování rozšířené znaky.
+Formát rozšířených znaků ve schránce systému Windows je specifický pro nastavení národního prostředí aplikace. Vyjmutí a vložení těchto znaků do kódu z jiné aplikace může vést k neočekávaným kódováním znaků. To může vést k analýze chyb bez viditelné příčiny v kódu. Před vložením rozšířených znaků doporučujeme, abyste nastavili kódování zdrojového souboru na znakovou stránku Unicode. Doporučujeme také použít editor IME nebo aplikaci Mapa znaků k vygenerování rozšířených znaků.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-### <a name="basic-execution-character-set"></a>Základní znaková sada spuštění
+### <a name="execution-character-sets"></a>Spouštěcí znakové sady
 
-*Základní znakové sadě spuštění* a *základním provedení široká charakterová sada* obsahovat všechny znaky v základní zdrojové znakové sady a řídicí znaky, které představují oznámení, BACKSPACE, zalomení řádku a znak null. *Znaková sada spuštění* a *provádění široká charakterová sada* jsou nadmnožiny základní sady. Patří mezi ně definované implementací zdroj znaky mimo základní zdrojové znakové sady. Znaková sada spuštění má reprezentaci specifických pro národní prostředí.
+*Znakové sady spuštění* reprezentují znaky a řetězce, které se mohou objevit v kompilovaném programu. Tyto znakové sady se skládají ze všech znaků povolených ve zdrojovém souboru a také řídicích znaků, které reprezentují výstrahy, Backspace, CR a znak null. Znaková sada spuštění má reprezentaci specifickou pro národní prostředí.

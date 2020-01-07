@@ -1,25 +1,25 @@
 ---
 title: Méně závažná chyba nástroje ML A2055
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2055
 helpviewer_keywords:
 - A2055
 ms.assetid: b4c3585f-6e55-4127-ba84-e68a41f1ada8
-ms.openlocfilehash: e2a910f16f650e72074c903484840cb6e639e752
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 179269e98d6fbed123e07e1e2abaffc8244ea407
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856548"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316951"
 ---
 # <a name="ml-nonfatal-error-a2055"></a>Méně závažná chyba nástroje ML A2055
 
 **vynucená Chyba: symbol není definován.**
 
-Direktiva podmíněné chyby [. ERRNDEF](../../assembler/masm/dot-errndef.md) se použil k vygenerování této chyby.
+Direktiva podmíněné chyby [. ERRNDEF](dot-errndef.md) se použil k vygenerování této chyby.
 
 ## <a name="see-also"></a>Viz také:
 
-[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Chybové zprávy ML](ml-error-messages.md)

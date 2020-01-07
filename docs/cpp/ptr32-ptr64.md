@@ -16,18 +16,18 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 0e979ed51f9c34700cef75113018c23e69a304f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244460"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301324"
 ---
-# <a name="ptr32-ptr64"></a>__ptr32, __ptr64
+# <a name="__ptr32-__ptr64"></a>__ptr32, __ptr64
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-**__ptr32** představuje nativní ukazatel v 32bitovém systému, zatímco **__ptr64** představuje nativní ukazatel v 64bitovém systému.
+**__ptr32** představuje nativní ukazatel na 32 systém, zatímco **__ptr64** představuje nativní ukazatel na 64-bitový systém.
 
 Následující příklad ukazuje, jak deklarovat jednotlivé typy ukazatelů:
 
@@ -36,12 +36,12 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
-V 32bitové verzi systému je ukazatel deklarovaný pomocí **__ptr64** zkrácen na 32bitový ukazatel. Na 64bitovém systému je ukazatel deklarovaný pomocí **__ptr32** převeden na 64bitový ukazatel.
+V 32 bitovém systému je ukazatel deklarovaný pomocí **__ptr64** zkrácen na 32 ukazatel. V 64 bitovém systému je ukazatel deklarovaný pomocí **__ptr32** převeden na 64 ukazatel.
 
 > [!NOTE]
-> Nemůžete použít **__ptr32** nebo **__ptr64** při kompilaci s **/CLR: pure**. V opačném případě bude vygenerována chyba kompilátoru C2472. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+> Při kompilaci s možností **/clr: Pure**nelze použít **__ptr32** ani **__ptr64** . V opačném případě se vygeneruje chyba kompilátoru C2472. Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-Z důvodu kompatibility s předchozími verzemi **_ptr32** a **_ptr64** jsou synonyma pro **__ptr32** a **__ptr64** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
+Z důvodu kompatibility s předchozími verzemi jsou **_ptr32** a **_ptr64** synonyma pro **__ptr32** a **__ptr64** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
@@ -73,8 +73,8 @@ int main()
 64
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Základní typy](../cpp/fundamental-types-cpp.md)
+[Předdefinované typy](../cpp/fundamental-types-cpp.md)

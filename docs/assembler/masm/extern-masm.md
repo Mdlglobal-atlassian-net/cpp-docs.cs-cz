@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERN directive
 ms.assetid: 667d703d-3aaf-4139-a586-29bc5dab1aff
-ms.openlocfilehash: 38ea50e75f2a8e19a7a99860f691904053b6739a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 681c4091a3c54a781bed4b01b235dfeb04f552c6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987851"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318095"
 ---
-# <a name="extern-masm"></a>EXTERN (MASM)
+# <a name="extern"></a>EXTERN
 
 Definuje jednu nebo více externích proměnných, popisků nebo symbolů nazvaných *název* , jejichž typ je *typ*.
 
@@ -25,8 +25,9 @@ Definuje jednu nebo více externích proměnných, popisků nebo symbolů nazvan
 
 Argument *Language-Type* je platný pouze v 32 bitové MASM.
 
-*Typ* může být [ABS](../../assembler/masm/operator-abs.md), který importuje *název* jako konstantu. Stejné jako [EXTRN](../../assembler/masm/extrn.md).
+*Typ* může být [ABS](operator-abs.md), který importuje *název* jako konstantu. Stejné jako [EXTRN](extrn.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

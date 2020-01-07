@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
-ms.openlocfilehash: 73ef8bcc33087a56747b80f94482fcd6c50e3bf6
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a74a5336e626f561f1fc61e866792ce193332d84
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399263"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316535"
 ---
-# <a name="assume-32-bit-masm"></a>Předpokládejme (32-bit MASM)
+# <a name="assume"></a>ASSUME
 
 Povoluje kontrolu chyb hodnot registru. (jenom 32-bitová MASM.)
 
@@ -30,4 +30,5 @@ Po navýšení **předpokládáme** , že Assembler sleduje změny v hodnotách 
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

@@ -1,18 +1,18 @@
 ---
 title: Závažná chyba nástroje ML A1010
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A1010
 helpviewer_keywords:
 - A1010
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
-ms.openlocfilehash: 6ec82f7f6d559d977a9aa039ed91689a0ef4d49a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b3141f8819a33281c70e34bd7772d4475886e557
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856875"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312583"
 ---
 # <a name="ml-fatal-error-a1010"></a>Závažná chyba nástroje ML A1010
 
@@ -20,9 +20,9 @@ ms.locfileid: "74856875"
 
 Blok, který začíná, nemá shodný konec, nebo konec bloku neměl shodný začátek. Může být zahrnuta jedna z následujících možností:
 
-- Direktiva vysoké úrovně, například [. Pokud](../../assembler/masm/dot-if.md), [. Opakujte akci](../../assembler/masm/dot-repeat.md), nebo [. WHILe](../../assembler/masm/dot-while.md).
+- Direktiva vysoké úrovně, například [. Pokud](dot-if.md), [. Opakujte akci](dot-repeat.md), nebo [. WHILe](dot-while.md).
 
-- Direktiva podmíněného sestavení, například [if](../../assembler/masm/if-masm.md), [Repeat](../../assembler/masm/repeat.md)nebo **while**.
+- Direktiva podmíněného sestavení, například [if](if-masm.md), [Repeat](repeat.md)nebo **while**.
 
 - Definice struktury nebo sjednocení.
 
@@ -30,10 +30,10 @@ Blok, který začíná, nemá shodný konec, nebo konec bloku neměl shodný za�
 
 - Definice segmentu.
 
-- Direktiva [POPCONTEXT](../../assembler/masm/popcontext.md)
+- Direktiva [POPCONTEXT](popcontext.md)
 
-- Direktiva podmíněného sestavení, jako je například [Else](../../assembler/masm/else-masm.md), [ElseIf](../../assembler/masm/elseif-masm.md)nebo **endif** bez odpovídajícího typu [if](../../assembler/masm/if-masm.md).
+- Direktiva podmíněného sestavení, jako je například [Else](else-masm.md), [ElseIf](elseif-masm.md)nebo **endif** bez odpovídajícího typu [if](if-masm.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Chybové zprávy ML](ml-error-messages.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2449
 ms.assetid: 544bf0b6-daa0-40e8-9f21-8e583d472a2d
-ms.openlocfilehash: f674bbec7cee8c00792848ee7e51b1e46299dd58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fd62813fdf3b50c0e329fc423e100d55a36ae12
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302069"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299020"
 ---
 # <a name="compiler-error-c2449"></a>Chyba kompilátoru C2449
 
-nalezen ' {"v rozsahu souboru (nechybí hlavička funkce?)
+našlo se {v rozsahu souboru (chybí hlavička funkce?)
 
-Vyvolá se v rozsahu souboru levou složenou závorku.
+K otevřené složené závorce dojde v rozsahu souboru.
 
-Tuto chybu může způsobovat středníkem mezi hlavička funkce a levou složenou závorku v definici funkce.
+Tato chyba může být způsobena středníkem mezi hlavičkou funkce a levou složenou závorkou definice funkce.
 
 Následující ukázka generuje C2499:
 
-```
+```c
 // C2449.c
 // compile with: /c
 void __stdcall func(void) {}   // OK

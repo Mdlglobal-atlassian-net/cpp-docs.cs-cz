@@ -1,9 +1,6 @@
 ---
 title: Příjem oznámení z běžných ovládacích prvků
 ms.date: 11/04/2016
-f1_keywords:
-- ON_NOTIFY
-- WM_NOTIFY
 helpviewer_keywords:
 - OnNotify method [MFC]
 - common controls [MFC], notifications
@@ -14,35 +11,35 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-ms.openlocfilehash: fb923374866aa8348f9b895c9b97915817564883
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73315d4a1107204bc6adc885729fdeeaeb7f98d0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399860"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298971"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Příjem oznámení z běžných ovládacích prvků
 
-Běžné ovládací prvky jsou podřízených oken, které odesílají zprávy oznámení nadřazenému oknu, když dojde k události, jako je například vstup od uživatele, v ovládacím prvku.
+Běžné ovládací prvky jsou podřízená okna, která odesílají oznamovací zprávy do nadřazeného okna, když v ovládacím prvku dojde k událostem, jako je například vstup od uživatele.
 
-Aplikace se spoléhá na tyto zprávy oznámení a zjistěte, jakou akci uživatel chce, aby se k provedení. Většina běžných ovládacích prvků zasílání oznámení, jako wm_notify – zprávy. Ovládací prvky Windows většina zpráv s oznámením odeslat jako wm_command – zprávy. [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify) je obslužná rutina wm_notify – zprávy. Stejně jako u `CWnd::OnCommand`, provádění `OnNotify` odešle zprávu do zprávu s oznámením `OnCmdMsg` pro zpracování v mapování zprávy. Položka mapování zpráv pro zpracování oznámení o je ON_NOTIFY. Další informace najdete v tématu [Technická poznámka 61: ON_NOTIFY a wm_notify – zprávy](../mfc/tn061-on-notify-and-wm-notify-messages.md).
+Aplikace spoléhá na tyto oznamovací zprávy a určí, jakou akci uživatel chce provést. Nejběžnější ovládací prvky odesílají oznamovací zprávy jako WM_NOTIFY zprávy. Ovládací prvky Windows odesílají většinu oznamovacích zpráv jako WM_COMMAND zprávy. [CWnd:: s upozorněním](../mfc/reference/cwnd-class.md#onnotify) je obslužná rutina zprávy WM_NOTIFY. Stejně jako u `CWnd::OnCommand`, implementace `OnNotify` odešle zprávu oznámení do `OnCmdMsg` pro zpracování v mapách zpráv. Položka mapování zpráv pro zpracování oznámení je ON_NOTIFY. Další informace najdete v tématu [Technická poznámka 61: ON_NOTIFY a WM_NOTIFY zprávy](../mfc/tn061-on-notify-and-wm-notify-messages.md).
 
-Alternativně odvozená třída může zpracovávat své vlastní zprávy oznámení pomocí "reflexe zprávy." Další informace najdete v tématu [62 technická Poznámka: Zpráva reflexe pro ovládací prvky Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
+Alternativně může odvozená třída zpracovávat své vlastní oznamovací zprávy pomocí příkazu "reflexe zprávy". Další informace naleznete v části [Technická poznámka 62: reflexe zprávy pro ovládací prvky systému Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
 
-## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>Načítání pozice kurzoru v zprávu s oznámením
+## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>Načítání pozice kurzoru v oznamovací zprávě
 
-V některých případech je užitečné určit aktuální pozici kurzoru, kdy některé zprávy oznámení jsou přijímány běžného ovládacího prvku. Například by být užitečná k určení aktuální umístění kurzoru, když běžný ovládací prvek dostane zprávu nm_rclick – oznámení.
+V některých případech je vhodné určit aktuální pozici kurzoru, pokud jsou určité zprávy oznámení přijímány běžným ovládacím prvkem. Například by bylo užitečné určit aktuální umístění kurzoru, když běžný ovládací prvek obdrží zprávu NM_RCLICK oznámení.
 
-Neexistuje jednoduchý způsob, jak to provést pomocí volání `CWnd::GetCurrentMessage`. Tato metoda však pouze načte pozici kurzoru v době, kdy byla zpráva odeslána. Protože kurzor byl pravděpodobně přesunut od odeslání zprávy je nutné volat `CWnd::GetCursorPos` zobrazíte aktuální pozici kurzoru.
+Existuje jednoduchý způsob, jak to provést voláním `CWnd::GetCurrentMessage`. Tato metoda však v okamžiku odeslání zprávy pouze načte pozici kurzoru. Vzhledem k tomu, že se kurzor mohl přesunout od odeslání zprávy, je nutné volat `CWnd::GetCursorPos` pro získání aktuální pozice kurzoru.
 
 > [!NOTE]
->  `CWnd::GetCurrentMessage` by měla být volána pouze v rámci obslužné rutiny zpráv.
+>  `CWnd::GetCurrentMessage` by měla být volána pouze v rámci obslužné rutiny zprávy.
 
-Přidejte následující kód do těla obslužné rutiny zprávy oznámení (v tomto příkladu nm_rclick –):
+Do těla obslužné rutiny zprávy s oznámením přidejte následující kód (v tomto příkladu NM_RCLICK):
 
 [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/cpp/receiving-notification-from-common-controls_1.cpp)]
 
-V tomto okamžiku je umístění kurzoru myši uložené v `cursorPos` objektu.
+V tomto okamžiku je umístění kurzoru myši Uloženo v objektu `cursorPos`.
 
 ## <a name="see-also"></a>Viz také:
 

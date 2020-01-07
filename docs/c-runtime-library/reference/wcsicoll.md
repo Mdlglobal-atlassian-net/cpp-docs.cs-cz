@@ -1,6 +1,6 @@
 ---
 title: wcsicoll
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - wcsicoll
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - wcsicoll function
 ms.assetid: d049022d-cf60-467f-842b-9a508d9aeaff
-ms.openlocfilehash: 42325998612ae7375fd84fad6ca471eee4dabf3b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 37a2ded6e6c28bb850dbdb225a8c64fc613f86d5
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945064"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301727"
 ---
 # <a name="wcsicoll"></a>wcsicoll
 
-Tato funkce POSIX je zastaralá. Místo toho použijte C++ [_wcsicoll](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md) ISO.
+Název funkce specifický pro společnost Microsoft `wcsicoll` je zastaralý alias pro funkci [_wcsicoll](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md) . Ve výchozím nastavení vygeneruje [Upozornění kompilátoru (úroveň 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Název je zastaralý, protože nedodržuje standardní pravidla jazyka C pro názvy specifické pro implementaci. Funkce je však stále podporována.
+
+Doporučujeme místo toho použít [_wcsicoll](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md) . Nebo můžete i nadále používat tento název funkce a zakázat upozornění. Další informace najdete v tématu vypnutí názvů funkcí [Upozornění](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) a [funkce POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

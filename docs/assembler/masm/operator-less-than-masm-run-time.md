@@ -1,22 +1,22 @@
 ---
 title: operátor &lt; (doba běhu MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator <
 helpviewer_keywords:
 - operator <
 - < operator, comparing specific objects
 ms.assetid: 1d5fc8f1-a62f-4a3d-824d-619c6f421a04
-ms.openlocfilehash: 214f503e3d0296efbe99675c967a5a8c8ca079c8
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: f79e6dfeba90c9294d895dbfd1ff412ee97f78bb
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396808"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311140"
 ---
 # <a name="operator-lt-masm-run-time"></a>operátor &lt; (doba běhu MASM)
 
-Je menší než. Používáno pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. WHILe](../../assembler/masm/dot-while.md)nebo [. OPAKUJe](../../assembler/masm/dot-repeat.md) bloky a vyhodnocují v době běhu, nikoli v době sestavení.
+Je menší než. Používáno pouze v rámci [. Pokud](dot-if.md), [. WHILe](dot-while.md)nebo [. OPAKUJe](dot-repeat.md) bloky a vyhodnocují v době běhu, nikoli v době sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,4 +24,5 @@ Je menší než. Používáno pouze v rámci [. Pokud](../../assembler/masm/dot-
 
 ## <a name="see-also"></a>Viz také:
 
-[Reference operátorů](operators-reference.md)
+\ – [referenční informace o operátorech](operators-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

@@ -1,16 +1,16 @@
 ---
 title: Přehled modulů v C++
-ms.date: 07/23/2019
+ms.date: 12/13/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Moduly v C++ 20 poskytují moderní alternativu hlavičkových souborů.
-ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273674"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301376"
 ---
 # <a name="overview-of-modules-in-c"></a>Přehled modulů v C++
 
@@ -20,7 +20,7 @@ Moduly lze použít vedle sebe se soubory hlaviček. C++ Zdrojový soubor může
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Povolení modulů v kompilátoru Microsoftu C++
 
-Od verze Visual Studio 2019 verze 16,2 nejsou moduly v kompilátoru Microsoftu C++ plně implementované. Pomocí funkce moduly můžete vytvořit moduly s jedním oddílem a importovat standardní moduly knihovny poskytované společností Microsoft. Pokud chcete povolit podporu pro moduly, zkompilujte s [/Experimental: Module](../build/reference/experimental-module.md) a [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md). V projektu sady Visual Studio klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**. V rozevíracím seznamu **Konfigurace** nastavte možnost **všechny konfigurace**a pak zvolte možnost **vlastnosti** > konfigurace moduly povolení >  > **C++** **C++ jazyka C/jazyk ( experimentální)** .
+Od verze Visual Studio 2019 verze 16,2 nejsou moduly v kompilátoru Microsoftu C++ plně implementované. Pomocí funkce moduly můžete vytvořit moduly s jedním oddílem a importovat standardní moduly knihovny poskytované společností Microsoft. Pokud chcete povolit podporu pro moduly, zkompilujte s [/Experimental: Module](../build/reference/experimental-module.md) a [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md). V projektu sady Visual Studio klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**. Nastavte rozevírací seznam **Konfigurace** na **všechny konfigurace**a potom zvolte **Vlastnosti konfigurace** > **jazyka** **C/C++**  >  >  **C++ povolit moduly (experimentální)** .
 
 Modul a kód, který ho využívá, musí být kompilovány se stejnými možnostmi kompilátoru.
 
@@ -28,24 +28,24 @@ Modul a kód, který ho využívá, musí být kompilovány se stejnými možnos
 
 I když není určeno standardem C++ 20, společnost Microsoft umožňuje, aby byla C++ vaše implementace standardní knihovny importována jako moduly. Importováním C++ standardní knihovny jako modulů místo jejich #including skrze soubory hlaviček můžete potenciálně zrychlit dobu kompilace v závislosti na velikosti projektu. Knihovna je součástí do následujících modulů:
 
-- STD. Regex poskytuje obsah regulárního výrazu \<Header >
-- STD. FileSystem poskytuje obsah systému souborů hlaviček \<>
-- STD. Memory poskytuje obsah > hlaviček \<paměti.
-- \<std. Threading poskytuje obsah záhlaví atomická >, \<condition_variable >, \<budoucí >, \<mutex >, \<shared_mutex > a \<Thread >
+- STD. Regex poskytuje obsah záhlaví \<regulárního výrazu >
+- STD. FileSystem poskytuje obsah hlaviček \<systému souborů >
+- STD. Memory poskytuje obsah záhlaví \<paměti >
+- STD. Threading poskytuje obsah hlaviček \<atomická >, \<condition_variable >, \<budoucích >, \<mutex >, \<shared_mutex > a \<ch vláken >
 - STD. Core poskytuje vše ostatní ve C++ standardní knihovně.
 
-Chcete-li tyto moduly využívat, stačí přidat příkaz import do horní části souboru zdrojového kódu. Příklad:
+Chcete-li tyto moduly využívat, stačí přidat deklaraci importu na začátek souboru zdrojového kódu. Příklad:
 
 ```cpp
 import std.core;
 import std.regex;
 ```
 
-Chcete-li využívat modul Microsoft Standard Library, je nutné zkompilovat program s možnostmi [/EHsc](../build/reference/eh-exception-handling-model.md) a [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
+Chcete-li využívat modul Microsoft Standard Library, zkompilujte program s možnostmi [/EHsc](../build/reference/eh-exception-handling-model.md) a [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
 
 ## <a name="basic-example"></a>Základní příklad
 
-Následující příklad ukazuje definici jednoduchého modulu ve zdrojovém souboru s názvem **foo. IXX**. Pro soubory rozhraní modulů v aplikaci Visual Studio je vyžadováno rozšíření **. IXX** . V tomto příkladu soubor rozhraní obsahuje definici funkce i deklaraci. Nicméně definice lze také umístit do jednoho nebo více samostatných souborů (jak je znázorněno v pozdějším příkladu). Příkaz **exportovat modul foo** označuje, že tento soubor je primárním rozhraním pro modul s `Foo`názvem. Modifikátor **exportu** na `f()` označuje, že tato funkce bude viditelná, když `Foo` je importována jiným programem nebo modulem. Všimněte si, že modul odkazuje na `Bar`obor názvů.
+Následující příklad ukazuje definici jednoduchého modulu ve zdrojovém souboru s názvem **foo. IXX**. Pro soubory rozhraní modulů v aplikaci Visual Studio je vyžadováno rozšíření **. IXX** . V tomto příkladu soubor rozhraní obsahuje definici funkce i deklaraci. Nicméně definice lze také umístit do jednoho nebo více samostatných souborů (jak je znázorněno v pozdějším příkladu). Příkaz **exportovat modul foo** označuje, že tento soubor je primárním rozhraním pro modul s názvem `Foo`. Modifikátor **exportu** u `f()` označuje, že tato funkce bude viditelná, když `Foo` importuje jiný program nebo modul. Všimněte si, že modul odkazuje na obor názvů `Bar`.
 
 ```cpp
 export module Foo;
@@ -64,7 +64,7 @@ namespace Bar
 }
 ```
 
-Soubor **MyProgram. cpp** používá příkaz **Import** pro přístup k názvu, který je exportován pomocí `Foo`. Všimněte si, že `Bar` název je viditelný, ale ne všechny jeho členy. Všimněte si také, že `ANSWER` makro není viditelné.
+Soubor **MyProgram. cpp** používá deklaraci **Import** pro přístup k názvu, který je exportován pomocí `Foo`. Všimněte si, že název `Bar` je viditelný, ale ne všechny jeho členy. Všimněte si také, že `ANSWER` makra není vidět.
 
 ```cpp
 
@@ -132,7 +132,7 @@ Jednotka primárního rozhraní může importovat soubory implementace oddílu, 
 
 ## <a name="modules-and-header-files"></a>Moduly a hlavičkové soubory
 
-Soubory hlaviček můžete zahrnout do zdrojového souboru modulu vložením `#include` direktivy před deklarací modulu. Tyto soubory se považují za *fragment globálního modulu*. V modulu se můžou zobrazit jenom názvy v *fragmentu globálních modulů* , které jsou v hlavičkách, které explicitně obsahují. Fragment globálních modulů obsahuje pouze symboly, které jsou skutečně použity.
+Soubory hlaviček můžete zahrnout do zdrojového souboru modulu vložením direktivy `#include` před deklaraci modulu. Tyto soubory se považují za *fragment globálního modulu*. V modulu se můžou zobrazit jenom názvy v *fragmentu globálních modulů* , které jsou v hlavičkách, které explicitně obsahují. Fragment globálních modulů obsahuje pouze symboly, které jsou skutečně použity.
 
 ```cpp
 // MyModuleA.cpp

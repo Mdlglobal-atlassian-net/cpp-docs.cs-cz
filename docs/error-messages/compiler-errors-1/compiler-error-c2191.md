@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2191
+title: Chyba kompilátoru C2191
 ms.date: 11/04/2016
 f1_keywords:
 - C2191
 helpviewer_keywords:
 - C2191
 ms.assetid: 051b8350-e5de-4f51-ab6e-96d32366bcef
-ms.openlocfilehash: 23dfe1d95ab75f253fc2a7b4b00dfcd1aaaa3bbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7d70b9010855ada7b9d24fba80915450a685b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302966"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301870"
 ---
-# <a name="compiler-error-c2191"></a>Compiler Error C2191
+# <a name="compiler-error-c2191"></a>Chyba kompilátoru C2191
 
 druhý seznam parametrů je delší než první.
 
-Funkce jazyka C se deklaroval podruhé s delší seznam parametrů. C nepodporuje přetížené funkce.
+Funkce jazyka C byla deklarována podruhé s delším seznamem parametrů. Jazyk C nepodporuje přetížené funkce.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2191:
 
-```
+```c
 // C2191.c
 // compile with: /Za /c
 void func( int );

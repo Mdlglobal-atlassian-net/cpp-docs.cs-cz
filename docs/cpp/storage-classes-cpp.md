@@ -1,58 +1,53 @@
 ---
 title: Třídy úložiště (C++)
-ms.date: 11/04/2016
+description: V C++nástroji, klíčová slova static, extern a thread_local určují dobu života, propojení a umístění paměti proměnné nebo funkce.
+ms.date: 12/11/2019
 f1_keywords:
 - thread_local_cpp
-- external_cpp
+- extern_cpp
 - static_cpp
 - register_cpp
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221995"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301311"
 ---
-# <a name="storage-classes-c"></a>Třídy úložiště (C++)
+# <a name="storage-classes"></a>Třídy úložiště
 
-A *třídu úložiště* deklarace proměnných v rámci jazyka C++ je specifikátor typu, který řídí životnost, propojení a paměti umístění objektů. Předaný objekt může mít pouze jednu třídu úložiště. Proměnné definované v rámci bloku mají automatického úložiště, pokud není stanoveno jinak pomocí **extern**, **statické**, nebo `thread_local` specifikátorů. Automatické objekty a proměnné nemají žádné propojení; nejsou viditelné pro kód mimo blok.
+*Třída úložiště* v kontextu deklarací C++ proměnných je specifikátor typu, který určuje životnost, propojení a umístění paměti objektů. Předaný objekt může mít pouze jednu třídu úložiště. Proměnné definované v rámci bloku mají automatické úložiště, pokud není určeno jinak pomocí specifikátorů **extern**, **static**nebo **thread_local** . Automatické objekty a proměnné nemají žádné propojení. nejsou viditelné pro kód mimo blok. K automatickému přidělování paměti dojde, když spuštění vstoupí do bloku a zruší přidělení při ukončení bloku.
 
 **Poznámky**
 
-1. [Proměnlivé](../cpp/mutable-data-members-cpp.md) – klíčové slovo lze považovat za specifikátor paměťové třídy. Je však pouze k dispozici v sezamu členů definice třídy.
+1. Klíčové slovo [mutable](../cpp/mutable-data-members-cpp.md) může být považováno za specifikátor třídy úložiště. Je však pouze k dispozici v sezamu členů definice třídy.
 
-1. **Visual Studio 2010 a novější:** **Automaticky** – klíčové slovo již není specifikátorem třídy úložiště jazyka C++ a **zaregistrovat** – klíčové slovo je zastaralý. **Visual Studio 2017 verze 15.7 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zaregistrovat** – klíčové slovo se odebere z jazyka C++.
+1. **Visual Studio 2010 a novější:** Klíčové slovo **auto** již není specifikátorem C++ třídy úložiště a klíčové slovo **Register** je zastaralé. **Visual Studio 2017 verze 15,7 a novější:** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): klíčové slovo **Register** je odebráno z C++ jazyka.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="in-this-section"></a>V této části:
+## <a name="static"></a>tras
 
-- [static](#static)
-- [extern](#extern)
-- [thread_local](#thread_local)
+Klíčové slovo **static** lze použít k deklarování proměnných a funkcí v globálním oboru, oboru názvů a oboru třídy. Statické proměnné lze také deklarovat v místním oboru.
 
-## <a name="static"></a> Statická
+Statická doba trvání znamená, že objekt nebo proměnná je přidělena při spuštění programu a je uvolněna při ukončení programu. Externí propojení znamená, že název proměnné je viditelný mimo soubor, ve kterém je proměnná deklarována. V opačném případě interní propojení znamená, že název není viditelný vně souboru, ve kterém je proměnná deklarována. Ve výchozím nastavení má objekt nebo proměnná, která je definována v globálním oboru názvů, statickou dobu trvání a vnější propojení. Klíčové slovo **static** lze použít v následujících situacích.
 
-**Statické** – klíčové slovo lze použít k deklarování proměnných a funkcí v globálním oboru, oboru názvů a oboru třídy. Statické proměnné lze také deklarovat v místním oboru.
+1. Pokud deklarujete proměnnou nebo funkci v rozsahu souboru (globální nebo obor názvů oboru názvů), klíčové slovo **static** určuje, že proměnná nebo funkce má vnitřní propojení. Pokud deklarujete proměnnou, má proměnná statickou dobu trvání a kompilátor ji inicializuje na hodnotu 0, pokud nezadáte jinou hodnotu.
 
-Statické trvání znamená, že objekt nebo proměnná jsou přiděleny po spuštění programu a je uvolněno spolu s ukončením programu. Externí propojení znamená, že je název proměnné viditelné z vnějšku souboru, ve kterém je deklarována. Naopak interní propojení znamená, že název není viditelné z vnějšku souboru, ve kterém je deklarována. Standardně má objekt nebo proměnná, která je definována v globálním oboru názvů statické trvání a vnější propojení. **Statické** – klíčové slovo lze použít v následujících situacích.
+1. Pokud deklarujete proměnnou ve funkci, klíčové slovo **static** určuje, že proměnná zachovává svůj stav mezi voláními této funkce.
 
-1. Pokud deklarujete proměnnou nebo funkci v rozsahu souboru (globální nebo obor názvů), **statické** – klíčové slovo určuje, že proměnná nebo funkce má vnitřní propojení. Při deklarování proměnné proměnná obsahuje statické trvání a kompilátor inicializuje ji na hodnotu 0 neurčíte jinou hodnotu.
+1. Pokud deklarujete datový člen v deklaraci třídy, klíčové slovo **static** určuje, že jedna kopie člena je sdílena všemi instancemi třídy. Statický datový člen musí být definován v rozsahu souboru. Celočíselný datový člen, který deklarujete jako **const static** , může mít inicializátor.
 
-1. Při deklaraci proměnné ve funkci, **statické** – klíčové slovo určuje, že proměnná zůstane ve stavu mezi volání této funkce.
+1. Pokud deklarujete členskou funkci v deklaraci třídy, klíčové slovo **static** určuje, že funkce je sdílena všemi instancemi třídy. Statická členská funkce nemůže získat přístup k členu instance, protože funkce nemá implicitní **Tento** ukazatel. Chcete-li získat přístup k členu instance, Deklarujte funkci s parametrem, který je ukazatelem instance nebo odkazem.
 
-1. Když deklarujete datový člen v deklaraci třídy **statické** – klíčové slovo určuje, že jedna kopie člena je sdílena všemi instancemi třídy. Statický datový člen musí být definován v rozsahu souboru. Integrální datový člen, který deklarujete jako **const static** může mít inicializátor.
+1. Členy sjednocení nelze deklarovat jako statické. Globálně deklarovaný anonymní sjednocení se však musí explicitně deklarovat jako **static**.
 
-1. Když deklarujete člena funkce v deklaraci třídy **statické** – klíčové slovo určuje, že funkce je sdílena všemi instancemi třídy. Statické členské funkce nelze přistupovat k členu instance, protože funkce nemá implicitní **to** ukazatele. Chcete-li získat přístup k instanci člena, deklarujte funkci s parametrem, který je instancí ukazatele nebo odkazu.
-
-1. Nelze deklarovat členy unie jako statické. Nicméně globálně deklarované anonymní sjednocení musí být explicitně deklarovány **statické**.
-
-Tento příklad ukazuje, jak si deklarovaná proměnná **statické** ve funkci zachová svůj stav mezi voláními dané funkce.
+Tento příklad ukazuje, jak proměnná, která je deklarována jako **statická** ve funkci, zachovává svůj stav mezi voláními této funkce.
 
 ```cpp
 // static1.cpp
@@ -127,7 +122,7 @@ int main() {
 3
 ```
 
-Tento příklad ukazuje místní proměnná deklarovaná **statické** v členské funkci. Statická proměnná je k dispozici pro celý program; všechny instance daného typu sdílí stejnou kopii statické proměnné.
+Tento příklad ukazuje místní proměnnou deklarovanou jako **static** v členské funkci. Statická proměnná je k dispozici pro celý program. všechny instance typu sdílejí stejnou kopii statické proměnné.
 
 ```cpp
 // static3.cpp
@@ -159,34 +154,15 @@ var != value
 var == value
 ```
 
-Od verze C ++ 11, statické lokální proměnné inicializace je zaručena bezpečné pro vlákna. Tato funkce se někdy označuje jako *statické objekty magic*. Nicméně ve vícevláknových aplikacích musí být synchronizovány všechny následné úlohy. Statická inicializace bezpečná pro vlákno funkci můžete zakázat s použitím [/Zc: threadsafeinit](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) příznak vyhnete se tak závislosti na CRT.
+Počínaje verzí C++ 11 je statická místní proměnná inicializaci zaručena jako bezpečná pro přístup z více vláken. Tato funkce se někdy nazývá *Magic static*. V aplikaci s více vlákny je však nutné synchronizovat všechna další přiřazení. Statickou inicializační funkci bezpečnou pro přístup z více vláken lze zakázat pomocí příznaku [/Zc: threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) Flag, aby nedošlo k závislosti na CRT.
 
-## <a name="extern"></a> extern
+## <a name="extern"></a>extern
 
-Objekty a proměnné deklarované jako **extern** deklarovat objekt, který je definován v jiné jednotce překladu nebo v ohraničujícím rozsahu, jako kdyby měly vnější propojení.
+Objekty a proměnné deklarované jako **extern** deklarují objekt, který je definován v jiné jednotce překladu nebo v nadřazeném oboru jako s vnějším propojením. Další informace naleznete v tématu [externí](extern-cpp.md) a [jednotky překladu a propojení](program-and-linkage-cpp.md).
 
-Deklarace **const** proměnné **extern** třídu úložiště vynutí vnější propojení u proměnné. Inicializace proměnné **extern const** proměnná je povolený v definici jednotky překladu. Inicializace v jednotkách překladu, které jsou jiné než definující jednotka překladu, vytvářejí nedefinované výsledky. Další informace najdete v tématu [používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)
+## <a name="thread_local"></a>thread_local (C++ 11)
 
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) – možnost kompilátoru způsobí, že kompilátor použije [vnější propojení](../c-language/external-linkage.md) k proměnné deklarované s použitím `extern constexpr`. V dřívějších verzích sady Visual Studio a ve výchozím nastavení nebo pokud **/Zc:externConstexpr-** není zadána, Visual Studio použije vnitřní propojení k **constexpr** i pokud proměnné **extern** klíčové slovo se používá. **/Zc: externconstexpr** možnost je k dispozici od verze Visual Studio 2017 Update 15.6. a je vypnuto ve výchozím nastavení. /Permissive-option/Zc: externconstexpr nepovolí.
-
-Následující kód ukazuje dva **extern** deklarace, `DefinedElsewhere` (odkazuje na název definovaný v jiné jednotce překladu) a `DefinedHere` (odkazuje na název definovaný v ohraničujícím oboru):
-
-```cpp
-// external.cpp
-// DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;
-int main() {
-   int DefinedHere;
-   {
-      // refers to DefinedHere in the enclosing scope
-      extern int DefinedHere;
-   }
-}
-```
-
-## <a name="thread_local"></a> možnost thread_local (C ++ 11)
-
-Proměnná deklarovaná pomocí `thread_local` specifikátor je přístupný jenom ve vlákně, ke kterému se vytvoří. Proměnná se vytvoří při vlákna je vytvořen a zničen při zničení vlákna. Každé vlákno má svou vlastní kopii proměnné. Na Windows `thread_local` je funkčně srovnatelný s specifické pro Microsoft [__declspec (vlákno)](../cpp/thread.md) atribut.
+Proměnná deklarovaná pomocí specifikátoru **thread_local** je přístupná pouze ve vlákně, ve kterém je vytvořena. Proměnná je vytvořena při vytvoření vlákna a zničena při zničení vlákna. Každé vlákno má svou vlastní kopii proměnné. V systému Windows je **thread_local** funkčně ekvivalentní s atributem __declspec specifickým pro Microsoft [(vlákno)](../cpp/thread.md) .
 
 ```cpp
 thread_local float f = 42.0; // Global namespace. Not implicitly static.
@@ -205,33 +181,33 @@ void DoSomething()
 }
 ```
 
-Co je třeba mít na paměti `thread_local` specifikátor:
+Co je třeba si uvědomit o specifikátoru **thread_local** :
 
-- Dynamicky inicializovaná místní proměnné vlákna v knihovnách DLL nemusí být správně inicializován na všechna vlákna volání. Další informace najdete v tématu [vlákno](thread.md).
+- Dynamicky inicializované proměnné místního vlákna v knihovnách DLL nemusí být správně inicializovány na všech volajících vláknech. Další informace naleznete v tématu [thread](thread.md).
 
-- `thread_local` Lze kombinovat se specifikátorem **statické** nebo **extern**.
+- Specifikátor **thread_local** může být kombinován se **statickým** nebo **externým**.
 
-- Můžete použít `thread_local` jenom pro deklarace a definice; dat `thread_local` nelze použít v deklaracích nebo definicích funkce.
+- **Thread_local** můžete použít jenom pro deklarace a definice dat; **thread_local** nelze použít pro deklarace funkce nebo definice.
 
-- Můžete zadat `thread_local` pouze na položky dat s trváním statického úložiště. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a statické datové členy třídy. Všechny místní proměnná deklarovaná `thread_local` je implicitně statická, není-li zadána žádná jiná třída úložiště; jinými slovy, v oboru bloku `thread_local` je ekvivalentní `thread_local static`.
+- Můžete zadat **thread_local** jenom pro datové položky s trváním statického úložiště. To zahrnuje globální datové objekty ( **static** i **extern**), místní statické objekty a statické datové členy tříd. Jakákoli místní Proměnná deklarovaná **thread_local** je implicitně statická, pokud není k dispozici žádná jiná třída úložiště. Jinými slovy, v rozsahu bloku **thread_local** je ekvivalentem `thread_local static`.
 
-- Je nutné zadat `thread_local` pro deklarace a definice místního objektu vlákna, zda deklarace a definice objeví ve stejný soubor nebo samostatné soubory.
+- Je nutné zadat **thread_local** pro deklaraci a definici objektu Thread Local, zda se deklarace a definice vyskytují ve stejném souboru nebo v samostatných souborech.
 
-Na Windows `thread_local` je funkčně srovnatelný s [__declspec(thread)](../cpp/thread.md) s tím rozdílem, že **__declspec(thread)** lze použít s definicí typu a je platný v kódu jazyka C. Kdykoli je to možné, použijte `thread_local` vzhledem k tomu, že je součástí standardu C++ a proto je větší přenositelnost.
+Ve Windows je **thread_local** funkčně ekvivalentní [__declspec (vlákno)](../cpp/thread.md) s tím rozdílem, že **__declspec (vlákno)** lze použít pro definici typu a je platný v kódu jazyka C. Kdykoli je to možné, použijte **thread_local** , protože je součástí C++ standardu a je proto lépe přenosná.
 
-##  <a name="register"></a>  Registrace
+##  <a name="register"></a>Registrace
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Zaregistrovat** – klíčové slovo již není podporovanou třídou úložiště. Klíčové slovo je stále vyhrazené ve standardu pro budoucí použití.
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): klíčové slovo **Register** již není podporovanou třídou úložiště. Klíčové slovo je stále rezervované ve standardu pro budoucí použití.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="example-automatic-vs-static-initialization"></a>Příklad: automatické a statická inicializace
+## <a name="example-automatic-vs-static-initialization"></a>Příklad: automatické vs. Statická inicializace
 
-Místní automatický objekt nebo proměnná je inicializována pokaždé, když se tok řízení dosáhne jeho definici. Lokálního statického objektu nebo proměnné je inicializován při prvním tok řízení dosáhne jeho definici.
+Místní automatický objekt nebo proměnná se inicializuje pokaždé, když tok řízení dosáhne své definice. Místní statický objekt nebo proměnná se inicializuje při prvním průchodu toku řízení s jeho definicí.
 
-Podívejte se na následující příklad definuje třídu, která zaznamenává inicializace a zničení objektů a pak definuje tři objekty, `I1`, `I2`, a `I3`:
+Vezměte v úvahu následující příklad, který definuje třídu, která zaznamená inicializaci a zničení objektů a poté definuje tři objekty, `I1`, `I2`a `I3`:
 
 ```cpp
 // initialization_of_objects.cpp
@@ -300,15 +276,15 @@ Destroying: Auto I1
 Destroying: Static I3
 ```
 
-Tento příklad ukazuje, jak a kdy objekty `I1`, `I2`, a `I3` jsou inicializovány a kdy jsou zničeny.
+Tento příklad ukazuje, jak a kdy objekty `I1`, `I2`a `I3` jsou inicializovány a kdy jsou zničeny.
 
-Existuje několik bodů vědět o program:
+K programu je třeba si uvědomit několik bodů:
 
-- Nejprve je potřeba `I1` a `I2` se automaticky odstraní, když tok řízení opustí blok ve které jsou definovány.
+- První `I1` a `I2` jsou automaticky zničeny, když tok řízení ukončí blok, ve kterém jsou definovány.
 
-- Za druhé v jazyce C++, není nutné deklarovat objekty a proměnné na začátku bloku. Kromě toho tyto objekty jsou inicializovány pouze v případě, že tok řízení dosáhne jejich definice. (`I2` a `I3` jsou příkladem definicemi takovýchto.) Ukazuje výstup, přesně, když jsou inicializovány.
+- Za druhé, C++v není nutné deklarovat objekty nebo proměnné na začátku bloku. Kromě toho jsou tyto objekty inicializovány pouze v případě, že tok řízení dosáhne jejich definice. (příklady takových definic jsou`I2` a `I3`.) Výstup se zobrazí přesně při inicializaci.
 
-- Nakonec statické lokální proměnné jako `I3` zachovat jejich hodnoty doby trvání programu, ale jsou zničeny při ukončení programu.
+- Nakonec statické lokální proměnné, například `I3` uchovávají jejich hodnoty po dobu trvání programu, ale jsou zničeny při ukončení programu.
 
 ## <a name="see-also"></a>Viz také:
 

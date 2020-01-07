@@ -1,5 +1,5 @@
 ---
-title: Začínáme se C++ sestavami Build Insights
+title: Začínáme s C++ Build Insights
 description: Základní přehled o tom, jak používat nástroje pro analýzu výkonu při sestavování, které jsou součástí přehledů C++ buildu.
 ms.date: 11/03/2019
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c31d317cd7b9c6465362e3e532db2128303f602
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633103"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298737"
 ---
-# <a name="get-started-with-c-build-insights"></a>Začínáme se C++ sestavami Build Insights
+# <a name="get-started-with-c-build-insights"></a>Začínáme s C++ Build Insights
 
 ::: moniker range="<=vs-2017"
 
@@ -39,7 +39,9 @@ Verze WPA, která podporuje C++ Build Insights, je aktuálně dostupná jenom ve
 
 ### <a name="to-download-and-install-wpa"></a>Stažení a instalace WPA
 
-1. Přejděte na [stránku pro stažení](https://www.microsoft.com/software-download/windowsinsiderpreviewADK)Windows ADK Insider Preview.
+Poznámka: pro instalaci analyzátoru výkonu Windows se vyžaduje systém Windows 8 nebo novější.
+
+1. Přejděte na [stránku pro stažení](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)Windows ADK Insider Preview.
 
 1. Stáhněte si Windows ADK Insider Preview. Jedná se o bitovou kopii disku.
 

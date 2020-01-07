@@ -3,22 +3,20 @@ title: using – deklarace
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using declaration
-- declaring namespaces, unqualified names in namespaces
 - declarations [C++], using-declaration
 - namespaces [C++], unqualified names in
 - using keyword [C++]
-- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 46d8b1e13b55988efd40643482ffd6123034ccb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a158094141307acb507d5f3e873c600e89135ad7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403344"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301272"
 ---
 # <a name="using-declaration"></a>using – deklarace
 
-Názvu pomocí deklarace zavádí do deklarativní oblast, ve které using – deklarace se zobrazí.
+Deklarace **using** zavádí název do deklarativní oblasti, ve které se zobrazí deklarace using.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,19 +27,19 @@ using declarator-list ;
 
 ### <a name="parameters"></a>Parametry
 
-*vnořené specifikátorem názvu* posloupnost obor názvů, třídy, nebo názvy výčtů a operátory rozlišení oboru (::) byla ukončena operátorem rozlišení oboru. Operátor rozlišení oboru jednoho slouží k zavedení názvu v globálním oboru názvů. Klíčové slovo **typename** je volitelná a můžou sloužit k řešení názvy závislých prvků při zavedení do šablony třídy ze základní třídy.
+*vnořené specifikátory názvu* Sekvence oboru názvů, třídy nebo výčtových názvů a operátorů rozlišení oboru (::), ukončené operátorem rozlišení oboru. K zavedení názvu z globálního oboru názvů se dá použít operátor rozlišení s jedním oborem. Hodnota **TypeName** pro klíčové slovo je volitelná a může být použita k překladu závislých názvů při zavlečení do šablony třídy ze základní třídy.
 
-*nekvalifikované id* nekvalifikované id výraz, který může být identifikátor, název přetíženého operátoru, uživatelem definované literální operátor nebo převod názvu funkce, název destruktor třídy nebo seznamu název a argument šablony.
+*nekvalifikované ID* Nekvalifikovaný výraz ID, který může být identifikátorem, název přetíženého operátoru, uživatelem definovaný operátor literálu nebo název funkce pro převod, název destruktoru třídy nebo název šablony a seznam argumentů.
 
-*seznam deklarátorů* čárkou oddělený seznam [**typename**] *vnořené specifikátorem názvu* *nekvalifikované id* deklarátory, a volitelně podle tlačítko se třemi tečkami.
+*deklarátor – seznam* Seznam oddělený čárkami [**TypeName**] *Nested-Name-specifikátor* *nekvalifikovaného* názvu (deklarátory) následovaný volitelně třemi tečkami.
 
 ## <a name="remarks"></a>Poznámky
 
-A pomocí deklarace zavádí neúplný název jako synonymum pro entitu někde jinde deklarovaný. To umožňuje název jedné z konkrétní obor názvů bez explicitní kvalifikace v deklaraci oblasti, ve kterém se zobrazí. To je v kontrastu s [direktiva using](../cpp/namespaces-cpp.md#using_directives), což umožňuje *všechny* názvů z oboru názvů bez kvalifikace lze používat. **Pomocí** – klíčové slovo se také používá pro [zadejte aliasy](../cpp/aliases-and-typedefs-cpp.md).
+Deklarace using zavádí Nekvalifikovaný název jako synonymum pro entitu deklarovanou jinde. Umožňuje použití jednoho názvu z konkrétního oboru názvů bez explicitní kvalifikace v oblasti deklarace, ve které se zobrazí. To je na rozdíl od [direktivy using](../cpp/namespaces-cpp.md#using_directives), která umožňuje použití *všech* názvů v oboru názvů bez kvalifikace. Klíčové slovo **using** je také použito pro [aliasy typu](../cpp/aliases-and-typedefs-cpp.md).
 
 ## <a name="example"></a>Příklad
 
-A pomocí prohlášení lze použít v definici třídy.
+Deklarace using se dá použít v definici třídy.
 
 ```cpp
 // using_declaration1.cpp
@@ -87,7 +85,7 @@ In B::g()
 
 ## <a name="example"></a>Příklad
 
-Pokud se použije k deklarování člena a s použitím deklarace musí odkazovat na člena základní třídy.
+Při použití k deklaraci člena musí deklarace using odkazovat na člena základní třídy.
 
 ```cpp
 // using_declaration2.cpp
@@ -127,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>Příklad
 
-Členy deklarované pomocí using deklarace můžete odkazovat pomocí explicitní kvalifikace. `::` Předponu odkazuje na globální obor názvů.
+Členy deklarované pomocí deklarace using lze odkazovat pomocí explicitní kvalifikace. Předpona `::` odkazuje na globální obor názvů.
 
 ```cpp
 // using_declaration3.cpp
@@ -167,9 +165,9 @@ In A::g
 
 ## <a name="example"></a>Příklad
 
-Při použití prohlášení, synonymum vytvořené deklarace odkazuje pouze na definice, které jsou platné místě na pomocí deklarace. Definice přidaní do oboru názvů using prohlášení nejsou platná synonyma.
+Pokud je vytvořena deklarace using, synonymum vytvořené deklarací odkazuje pouze na definice, které jsou platné v místě deklarace using. Definice přidané do oboru názvů po deklaraci using nejsou platnými synonymy.
 
-Název určené **pomocí** deklarace je alias pro jeho původní název. To nemá vliv na typ propojení a další atributy původní deklarace.
+Název definovaný deklarací **using** je alias pro jeho původní název. Neovlivňuje typ, propojení ani jiné atributy původní deklarace.
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -196,7 +194,7 @@ void b() {
 
 ## <a name="example"></a>Příklad
 
-S ohledem na funkce v oborech názvů, pokud sadu místní deklarace a používání deklarace pro jeden název jsou uvedeny v deklarativním regionu, všechny musí odkazovat na stejnou entitu, nebo všechny musí odkazovat na funkce.
+V souvislosti s funkcemi v oborech názvů, pokud je v deklarativní oblasti uvedena sada místních deklarací a použití deklarace pro jeden název, musí všechny odkazovat na stejnou entitu nebo musí všechny odkazovat na funkce.
 
 ```cpp
 // functions_in_namespaces1.cpp
@@ -215,11 +213,11 @@ void g() {
 }
 ```
 
-V příkladu výše `using B::i` příkaz způsobí, že druhý `int i` být deklarován v `g()` funkce. `using B::f` Příkaz není v konfliktu s `f(char)` fungovat, protože funkce názvy zavedené `B::f` mají různé typy parametrů.
+V příkladu výše příkaz `using B::i` způsobí, že ve funkci `g()` je deklarován druhý `int i`. Příkaz `using B::f` není v konfliktu s funkcí `f(char)`, protože názvy funkcí zavedené `B::f` mají jiné typy parametrů.
 
 ## <a name="example"></a>Příklad
 
-Deklarace lokální funkce nemůže mít stejný název a typ jako funkce zavedená pomocí deklarace. Příklad:
+Deklarace místní funkce nemůže mít stejný název a typ jako funkce zavedená pomocí deklarace. Příklad:
 
 ```cpp
 // functions_in_namespaces2.cpp
@@ -246,7 +244,7 @@ void h() {
 
 ## <a name="example"></a>Příklad
 
-S ohledem na dědičnost když pomocí deklarace zavádí název ze základní třídy do oboru / / coleserveritem, členské funkce v odvozené třídě přepsat virtuální členská funkce se stejnými typy název a argument v základní třídě.
+S ohledem na dědění, když deklarace using zavádí název ze základní třídy do oboru odvozené třídy, členské funkce v odvozené třídě přepíší virtuální členské funkce se stejným názvem a typy argumentů v základní třídě.
 
 ```cpp
 // using_declaration_inheritance1.cpp
@@ -304,9 +302,9 @@ In D::g(char)
 
 ## <a name="example"></a>Příklad
 
-Všechny výskyty názvu uvedených v pomocí prohlášení musí být přístupná. Zejména pokud odvozená třída používá, a s použitím deklarace pro přístup ke členu základní třídy, název člena musí být přístupná. Pokud je název, který funkce přetíženého členu, všechny funkce s názvem musí být přístupná.
+Všechny instance názvu uvedené v deklaraci using musí být přístupné. Zejména pokud odvozená třída používá deklaraci using pro přístup ke členu základní třídy, musí být název člena přístupný. Pokud je název typu přetížené členské funkce, pak všechny funkce s názvem musí být přístupné.
 
-Další informace o usnadnění přístupu členů, naleznete v tématu [řízení přístupu členů](../cpp/member-access-control-cpp.md).
+Další informace o dostupnosti členů naleznete v tématu [Member-Access Control](../cpp/member-access-control-cpp.md).
 
 ```cpp
 // using_declaration_inheritance2.cpp

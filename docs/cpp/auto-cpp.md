@@ -1,22 +1,25 @@
 ---
 title: auto (C++)
-ms.date: 11/04/2016
+ms.date: 12/10/2019
 f1_keywords:
 - auto_CPP
 - auto
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0991c836d1ade663be3e1b734ec4745796b91abd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303380"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301649"
 ---
 # <a name="auto-c"></a>auto (C++)
 
 Odvodit typ deklarované proměnné z inicializačního výrazu.
+
+> [!NOTE]
+> C++ Standard definuje původní a přepracovaný význam tohoto klíčového slova. Před Visual Studio 2010, klíčové slovo **auto** deklaruje proměnnou v *Automatické* třídě úložiště; To znamená, že proměnná, která má místní životnost. Počínaje sadou Visual Studio 2010, klíčové slovo **auto** deklaruje proměnnou, jejíž typ je odvozen z inicializačního výrazu ve své deklaraci. Možnost [/Zc: auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) Compiler řídí význam klíčového slova **auto** .
 
 ## <a name="syntax"></a>Syntaxe
 
