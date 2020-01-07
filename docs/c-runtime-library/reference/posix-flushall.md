@@ -1,6 +1,6 @@
 ---
 title: flushall
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - flushall
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - flushall function
 ms.assetid: 481429ae-3980-4233-9495-a3ee56e7c838
-ms.openlocfilehash: f601929ddbce2a1beeaab13a6d564e4c8966c22d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 68e09a02bdf098bdefe61779293864a3fa68a70f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950741"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301129"
 ---
 # <a name="flushall"></a>flushall
 
-Tato funkce POSIX je zastaralá. Místo toho použijte C++ [_flushall](flushall.md) ISO.
+Název funkce specifický pro společnost Microsoft `flushall` je zastaralý alias pro funkci [_flushall](flushall.md) . Ve výchozím nastavení vygeneruje [Upozornění kompilátoru (úroveň 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Název je zastaralý, protože nedodržuje standardní pravidla jazyka C pro názvy specifické pro implementaci. Funkce je však stále podporována.
+
+Doporučujeme místo toho použít [_flushall](flushall.md) . Nebo můžete i nadále používat tento název funkce a zakázat upozornění. Další informace najdete v tématu vypnutí názvů funkcí [Upozornění](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) a [funkce POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

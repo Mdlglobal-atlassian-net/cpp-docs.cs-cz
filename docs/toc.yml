@@ -1805,7 +1805,7 @@
           items:
             - name: Editory prostředků
               href: windows/resource-editors.md
-            - name: Editor klávesových zkratek
+            - name: editor akcelerátorů
               expanded: false
               items:
                 - name: Editor klávesových zkratek
@@ -2269,7 +2269,7 @@
                 - name: Module – třída
                   expanded: false
                   items:
-                    - name: Module – třída
+                    - name: Module – třídy
                       href: cppcx/wrl/module-class.md
                     - name: 'Module::GenericReleaseNotifier – třída'
                       href: cppcx/wrl/module-genericreleasenotifier-class.md
@@ -2929,7 +2929,7 @@
                       href: c-language/evaluation-of-tokens.md
                 - name: Klíčová slova jazyka C
                   href: c-language/c-keywords.md
-                - name: Identifikátory jazyka C
+                - name: identifikátory jazyka C
                   expanded: false
                   items:
                     - name: Identifikátory jazyka C
@@ -3024,7 +3024,7 @@
                       href: c-language/parsing-c-command-line-arguments.md
                     - name: Přizpůsobení zpracování příkazového řádku jazyka C
                       href: c-language/customizing-c-command-line-processing.md
-                - name: 'Doba platnosti, rozsah, viditelnost a propojení'
+                - name: 'Životnost, rozsah, viditelnost a propojení'
                   expanded: false
                   items:
                     - name: 'Doba platnosti, rozsah, viditelnost a propojení'
@@ -3058,7 +3058,7 @@
                 - name: Třídy úložiště jazyka C
                   expanded: false
                   items:
-                    - name: Třídy úložiště jazyka C
+                    - name: třídy úložiště jazyka C
                       href: c-language/c-storage-classes.md
                     - name: Specifikátory třídy úložiště pro deklarace na externí úrovni
                       href: c-language/storage-class-specifiers-for-external-level-declarations.md
@@ -3277,7 +3277,7 @@
                     - name: Operátory přiřazení v jazyce C
                       expanded: false
                       items:
-                        - name: Operátory přiřazení v jazyce C
+                        - name: operátory přiřazení jazyka
                           href: c-language/c-assignment-operators.md
                         - name: Jednoduché přiřazení (C)
                           href: c-language/simple-assignment-c.md
@@ -3654,23 +3654,14 @@
               items:
                 - name: Lexikální konvence
                   href: cpp/lexical-conventions.md
-                - name: Přehled převodu souboru
-                  href: cpp/overview-of-file-translation.md
-                - name: Znakové sady
+                - name: Tokeny a znakové sady
                   href: cpp/character-sets.md
-                - name: Tokeny
-                  href: cpp/tokens-cpp.md
                 - name: Komentáře
                   href: cpp/comments-cpp.md
                 - name: Identifikátory
                   href: cpp/identifiers-cpp.md
                 - name: Klíčová slova
-                  expanded: false
-                  items:
-                    - name: Klíčová slova
-                      href: cpp/keywords-cpp.md
-                    - name: auto – klíčové slovo
-                      href: cpp/auto-keyword.md
+                  href: cpp/keywords-cpp.md
                 - name: Interpunkční znaky
                   href: cpp/punctuators-cpp.md
                 - name: 'Číselné literály, logické a literály typu ukazatele'
@@ -3684,165 +3675,99 @@
               items:
                 - name: Základní koncepty
                   href: cpp/basic-concepts-cpp.md
-                - name: Deklarace a definice
-                  expanded: false
-                  items:
-                    - name: C++ – systém typů
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Deklarace a definice
-                      href: cpp/declarations-and-definitions-cpp.md
-                    - name: Přehled deklarátorů
-                      href: cpp/overview-of-declarators.md
-                    - name: Specifikátory
-                      href: cpp/specifiers.md
-                    - name: extern
-                      href: cpp/extern-cpp.md
-                    - name: Soubory hlaviček
-                      href: cpp/header-files-cpp.md
-                    - name: Bod deklarace v C++
-                      href: cpp/point-of-declaration-in-cpp.md
-                    - name: Inicializátory
-                      href: cpp/initializers.md
-                    - name: Aliasy a definice Typedef
-                      href: cpp/aliases-and-typedefs-cpp.md
-                    - name: using – deklarace
-                      href: cpp/using-declaration.md
-                    - name: Řešení nejednoznačných deklarací
-                      href: cpp/resolving-ambiguous-declarations-cpp.md
-                    - name: Třídy úložiště
-                      href: cpp/storage-classes-cpp.md
-                    - name: const
-                      href: cpp/const-cpp.md
-                    - name: constexpr
-                      href: cpp/constexpr-cpp.md
-                    - name: volatile
-                      href: cpp/volatile-cpp.md
-                    - name: auto
-                      href: cpp/auto-cpp.md
-                    - name: decltype
-                      href: cpp/decltype-cpp.md
-                    - name: Atributy
-                      href: cpp/attributes.md
+                - name: C++ – systém typů
+                  href: cpp/cpp-type-system-modern-cpp.md
                 - name: Rozsah
                   href: cpp/scope-visual-cpp.md
                 - name: Soubory hlaviček
                   href: cpp/header-files-cpp.md
-                - name: Program a propojení
-                  expanded: false
-                  items:
-                    - name: Program a propojení
-                      href: cpp/program-and-linkage-cpp.md
-                    - name: extern
-                      href: cpp/using-extern-to-specify-linkage.md
-                - name: Spuštění a ukončení
-                  expanded: false
-                  items:
-                    - name: Spuštění a ukončení
-                      href: cpp/startup-and-termination-cpp.md
-                    - name: 'main: spuštění programu'
-                      expanded: false
-                      items:
-                        - name: 'main: spuštění programu'
-                          href: cpp/main-program-startup.md
-                        - name: Použití funkce wmain namísto main
-                          href: cpp/using-wmain-instead-of-main.md
-                        - name: Definice argumentů
-                          href: cpp/argument-definitions.md
-                        - name: Rozšíření zástupného znaku
-                          href: cpp/wildcard-expansion.md
-                        - name: Analýza argumentů příkazového řádku jazyka C++
-                          href: cpp/parsing-cpp-command-line-arguments.md
-                        - name: Přizpůsobení zpracování příkazového řádku jazyka C++
-                          href: cpp/customizing-cpp-command-line-processing.md
-                        - name: main – omezení funkce
-                          href: cpp/main-function-restrictions.md
-                    - name: Ukončení programu
-                      expanded: false
-                      items:
-                        - name: Ukončení programu
-                          href: cpp/program-termination.md
-                        - name: exit – funkce
-                          href: cpp/exit-function.md
-                        - name: abort – funkce
-                          href: cpp/abort-function.md
-                        - name: Výraz return v ukončení programu
-                          href: cpp/return-statement-in-program-termination-cpp.md
-                    - name: Další důležité informace o spuštění
-                      href: cpp/additional-startup-considerations.md
-                    - name: Další důležité informace o ukončení
-                      expanded: false
-                      items:
-                        - name: Další důležité informace o ukončení
-                          href: cpp/additional-termination-considerations.md
-                        - name: Používání příkazů exit nebo return
-                          href: cpp/using-exit-or-return.md
-                        - name: Používání výrazu atexit
-                          href: cpp/using-atexit.md
-                        - name: Používání příkazu abort
-                          href: cpp/using-abort.md
+                - name: Jednotky překladu a propojení
+                  href: cpp/program-and-linkage-cpp.md
+                - name: hlavní funkce a argumenty příkazového řádku
+                  href: cpp/main-function-command-line-args.md
+                - name: Ukončení programu
+                  href: cpp/program-termination.md
                 - name: Hodnoty lvalue a rvalue
                   href: cpp/lvalues-and-rvalues-visual-cpp.md
                 - name: Dočasné objekty
                   href: cpp/temporary-objects.md
-                - name: Zarovnání (deklarace C++)
+                - name: Zarovnání
                   href: cpp/alignment-cpp-declarations.md
-                - name: alignof a alignas
-                  href: cpp/alignof-and-alignas-cpp.md
                 - name: 'Triviální typy, typy standardního rozložení a typy POD'
                   href: cpp/trivial-standard-layout-and-pod-types.md
-                - name: Systém typů
-                  expanded: false
-                  items:
-                    - name: Systém typů
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Typy hodnot
-                      href: cpp/value-types-modern-cpp.md
-                    - name: Převody a bezpečnost typů
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
-                    - name: Základní typy
-                      expanded: false
-                      items:
-                        - name: Základní typy
-                          href: cpp/fundamental-types-cpp.md
-                        - name: Rozsahy datových typů
-                          href: cpp/data-type-ranges.md
-                        - name: nullptr
-                          href: cpp/nullptr.md
-                        - name: void
-                          href: cpp/void-cpp.md
-                        - name: bool
-                          href: cpp/bool-cpp.md
-                        - name: false
-                          href: cpp/false-cpp.md
-                        - name: true
-                          href: cpp/true-cpp.md
-                        - name: 'char, wchar_t, char16_t, char32_t'
-                          href: cpp/char-wchar-t-char16-t-char32-t.md
-                        - name: '__int8, __int16, __int32, __int64'
-                          href: cpp/int8-int16-int32-int64.md
-                        - name: __m64
-                          href: cpp/m64.md
-                        - name: __m128
-                          href: cpp/m128.md
-                        - name: __m128d
-                          href: cpp/m128d.md
-                        - name: __m128i
-                          href: cpp/m128i.md
-                        - name: '__ptr32, __ptr64'
-                          href: cpp/ptr32-ptr64.md
-                        - name: Numerické limity
-                          expanded: false
-                          items:
-                            - name: Numerické limity
-                              href: cpp/numerical-limits-cpp.md
-                            - name: Omezení celočíselných hodnot
-                              href: cpp/integer-limits.md
-                            - name: Plovoucí omezení
-                              href: cpp/floating-limits.md
-                - name: Standardní převody
-                  href: cpp/standard-conversions.md
+                - name: Typy hodnot
+                  href: cpp/value-types-modern-cpp.md
                 - name: Převody a bezpečnost typů
                   href: cpp/type-conversions-and-type-safety-modern-cpp.md
+                - name: Standardní převody
+                  href: cpp/standard-conversions.md
+            - name: Předdefinované typy
+              expanded: false
+              items:
+                - name: Předdefinované typy
+                  href: cpp/fundamental-types-cpp.md
+                - name: Rozsahy datových typů
+                  href: cpp/data-type-ranges.md
+                - name: nullptr
+                  href: cpp/nullptr.md
+                - name: void
+                  href: cpp/void-cpp.md
+                - name: bool
+                  href: cpp/bool-cpp.md
+                - name: false
+                  href: cpp/false-cpp.md
+                - name: true
+                  href: cpp/true-cpp.md
+                - name: 'char, wchar_t, char16_t, char32_t'
+                  href: cpp/char-wchar-t-char16-t-char32-t.md
+                - name: '__int8, __int16, __int32, __int64'
+                  href: cpp/int8-int16-int32-int64.md
+                - name: __m64
+                  href: cpp/m64.md
+                - name: __m128
+                  href: cpp/m128.md
+                - name: __m128d
+                  href: cpp/m128d.md
+                - name: __m128i
+                  href: cpp/m128i.md
+                - name: '__ptr32, __ptr64'
+                  href: cpp/ptr32-ptr64.md
+                - name: Numerické limity
+                  expanded: false
+                  items:
+                    - name: Numerické limity
+                      href: cpp/numerical-limits-cpp.md
+                    - name: Omezení celočíselných hodnot
+                      href: cpp/integer-limits.md
+                    - name: Plovoucí omezení
+                      href: cpp/floating-limits.md
+            - name: Deklarace a definice
+              expanded: false
+              items:
+                - name: Deklarace a definice
+                  href: cpp/declarations-and-definitions-cpp.md
+                - name: Třídy úložiště
+                  href: cpp/storage-classes-cpp.md
+                - name: auto
+                  href: cpp/auto-cpp.md
+                - name: const
+                  href: cpp/const-cpp.md
+                - name: constexpr
+                  href: cpp/constexpr-cpp.md
+                - name: extern
+                  href: cpp/extern-cpp.md
+                - name: Inicializátory
+                  href: cpp/initializers.md
+                - name: Aliasy a definice Typedef
+                  href: cpp/aliases-and-typedefs-cpp.md
+                - name: using – deklarace
+                  href: cpp/using-declaration.md
+                - name: volatile
+                  href: cpp/volatile-cpp.md
+                - name: decltype
+                  href: cpp/decltype-cpp.md
+                - name: Atributy
+                  href: cpp/attributes.md
             - name: 'Integrované operátory, jejich priorita a asociativita'
               expanded: false
               items:
@@ -4005,7 +3930,7 @@
                       href: cpp/iteration-statements-cpp.md
                     - name: while – příkaz
                       href: cpp/while-statement-cpp.md
-                    - name: příkaz do-while
+                    - name: do-while – příkaz
                       href: cpp/do-while-statement-cpp.md
                     - name: for – příkaz
                       href: cpp/for-statement-cpp.md
@@ -4797,17 +4722,8 @@
                       href: preprocessor/variadic-macros.md
                     - name: Předdefinovaná makra preprocesoru
                       href: preprocessor/predefined-macros.md
-            - name: Shrnutí gramatiky (C/C++)
-              expanded: false
-              items:
-                - name: Shrnutí gramatiky (C/C++)
-                  href: preprocessor/grammar-summary-c-cpp.md
-                - name: Definice shrnutí gramatiky
-                  href: preprocessor/definitions-for-the-grammar-summary.md
-                - name: Gramatické konvence
-                  href: preprocessor/conventions.md
-                - name: Gramatika preprocesoru
-                  href: preprocessor/preprocessor-grammar.md
+            - name: Souhrn gramatiky preprocesoru (C/C++)
+              href: preprocessor/grammar-summary-c-cpp.md
             - name: Direktivy pragma a klíčové slovo __pragma
               expanded: false
               items:
@@ -5264,10 +5180,10 @@
               href: assembler/masm/masm-for-x64-ml64-exe.md
             - name: "Referenční dokumentace pro použití nástroje ML a ML64 na\_příkazovém řádku"
               href: assembler/masm/ml-and-ml64-command-line-reference.md
-            - name: Referenční dokumentace k direktivám
+            - name: Referenční dokumentace k direktivám (MASM)
               expanded: false
               items:
-                - name: Referenční dokumentace k direktivám
+                - name: Referenční dokumentace k direktivám (MASM)
                   href: assembler/masm/directives-reference.md
                 - name: =
                   href: assembler/masm/equal.md
@@ -5289,9 +5205,9 @@
                   href: assembler/masm/dot-686.md
                 - name: .686P
                   href: assembler/masm/dot-686p.md
-                - name: ALIAS (MASM)
+                - name: ALIAS
                   href: assembler/masm/alias-masm.md
-                - name: ALIGN (MASM)
+                - name: ALIGN
                   href: assembler/masm/align-masm.md
                 - name: .ALLOCSTACK
                   href: assembler/masm/dot-allocstack.md
@@ -5301,7 +5217,7 @@
                   href: assembler/masm/assume.md
                 - name: .BREAK
                   href: assembler/masm/dot-break.md
-                - name: BYTE (MASM)
+                - name: BYTE
                   href: assembler/masm/byte-masm.md
                 - name: CATSTR
                   href: assembler/masm/catstr.md
@@ -5309,7 +5225,7 @@
                   href: assembler/masm/dot-code.md
                 - name: COMM
                   href: assembler/masm/comm.md
-                - name: COMMENT (MASM)
+                - name: COMMENT
                   href: assembler/masm/comment-masm.md
                 - name: .CONST
                   href: assembler/masm/dot-const.md
@@ -5343,13 +5259,13 @@
                   href: assembler/masm/echo.md
                 - name: .ELSE
                   href: assembler/masm/dot-else.md
-                - name: ELSE (MASM)
+                - name: ELSE
                   href: assembler/masm/else-masm.md
-                - name: ELSEIF (MASM)
+                - name: ELSEIF
                   href: assembler/masm/elseif-masm.md
                 - name: ELSEIF2
                   href: assembler/masm/elseif2.md
-                - name: END (MASM)
+                - name: END
                   href: assembler/masm/end-masm.md
                 - name: .ENDIF
                   href: assembler/masm/dot-endif.md
@@ -5359,7 +5275,7 @@
                   href: assembler/masm/endp.md
                 - name: .ENDPROLOG
                   href: assembler/masm/dot-endprolog.md
-                - name: ENDS (MASM)
+                - name: ENDS
                   href: assembler/masm/ends-masm.md
                 - name: .ENDW
                   href: assembler/masm/dot-endw.md
@@ -5391,7 +5307,7 @@
                   href: assembler/masm/dot-exit.md
                 - name: EXITM
                   href: assembler/masm/exitm.md
-                - name: EXTERN (MASM)
+                - name: EXTERN
                   href: assembler/masm/extern-masm.md
                 - name: EXTERNDEF
                   href: assembler/masm/externdef.md
@@ -5401,7 +5317,7 @@
                   href: assembler/masm/dot-fardata.md
                 - name: .FARDATA?
                   href: assembler/masm/dot-fardata-q.md
-                - name: FOR (MASM)
+                - name: FOR
                   href: assembler/masm/for-masm.md
                 - name: FORC
                   href: assembler/masm/forc.md
@@ -5409,13 +5325,13 @@
                   href: assembler/masm/dot-fpo.md
                 - name: FWORD
                   href: assembler/masm/fword.md
-                - name: GOTO (MASM)
+                - name: GOTO
                   href: assembler/masm/goto-masm.md
                 - name: GROUP
                   href: assembler/masm/group.md
                 - name: .IF
                   href: assembler/masm/dot-if.md
-                - name: IF (MASM)
+                - name: IF
                   href: assembler/masm/if-masm.md
                 - name: IF2
                   href: assembler/masm/if2.md
@@ -5433,9 +5349,9 @@
                   href: assembler/masm/ifnb.md
                 - name: IFNDEF
                   href: assembler/masm/ifndef.md
-                - name: INCLUDE (MASM)
+                - name: INCLUDE
                   href: assembler/masm/include-masm.md
-                - name: INCLUDELIB (MASM)
+                - name: INCLUDELIB
                   href: assembler/masm/includelib-masm.md
                 - name: INSTR
                   href: assembler/masm/instr.md
@@ -5447,7 +5363,7 @@
                   href: assembler/masm/irpc.md
                 - name: .K3D
                   href: assembler/masm/dot-k3d.md
-                - name: Popisek (MASM)
+                - name: LABEL
                   href: assembler/masm/label-masm.md
                 - name: .LALL
                   href: assembler/masm/dot-lall.md
@@ -5463,7 +5379,7 @@
                   href: assembler/masm/dot-listmacro.md
                 - name: .LISTMACROALL
                   href: assembler/masm/dot-listmacroall.md
-                - name: LOCAL (MASM)
+                - name: LOCAL
                   href: assembler/masm/local-masm.md
                 - name: MACRO
                   href: assembler/masm/macro.md
@@ -5473,7 +5389,7 @@
                   href: assembler/masm/dot-mmx.md
                 - name: .MODEL
                   href: assembler/masm/dot-model.md
-                - name: NAME (MASM)
+                - name: NÁZEV
                   href: assembler/masm/name-masm.md
                 - name: .NOCREF
                   href: assembler/masm/dot-nocref.md
@@ -5483,7 +5399,7 @@
                   href: assembler/masm/dot-nolistif.md
                 - name: .NOLISTMACRO
                   href: assembler/masm/dot-nolistmacro.md
-                - name: OPTION (MASM)
+                - name: OPTION
                   href: assembler/masm/option-masm.md
                 - name: ORG
                   href: assembler/masm/org.md
@@ -5499,7 +5415,7 @@
                   href: assembler/masm/proc.md
                 - name: PROTO
                   href: assembler/masm/proto.md
-                - name: PUBLIC (MASM)
+                - name: PUBLIC
                   href: assembler/masm/public-masm.md
                 - name: PURGE
                   href: assembler/masm/purge.md
@@ -5519,7 +5435,7 @@
                   href: assembler/masm/real4.md
                 - name: REAL8
                   href: assembler/masm/real8.md
-                - name: RECORD (MASM)
+                - name: RECORD
                   href: assembler/masm/record-masm.md
                 - name: .REPEAT
                   href: assembler/masm/dot-repeat.md
@@ -5535,7 +5451,7 @@
                   href: assembler/masm/dot-savereg.md
                 - name: .SAVEXMM128
                   href: assembler/masm/dot-savexmm128.md
-                - name: SBYTE (MASM)
+                - name: SBYTE
                   href: assembler/masm/sbyte-masm.md
                 - name: SDWORD
                   href: assembler/masm/sdword.md
@@ -5557,7 +5473,7 @@
                   href: assembler/masm/dot-startup.md
                 - name: STRUC
                   href: assembler/masm/struc.md
-                - name: STRUCT (MASM)
+                - name: STRUCT
                   href: assembler/masm/struct-masm.md
                 - name: SUBSTR
                   href: assembler/masm/substr.md
@@ -5575,7 +5491,7 @@
                   href: assembler/masm/dot-tfcond.md
                 - name: TITLE
                   href: assembler/masm/title.md
-                - name: TYPEDEF (MASM)
+                - name: TYPEDEF
                   href: assembler/masm/typedef-masm.md
                 - name: UNION
                   href: assembler/masm/union.md
@@ -5585,7 +5501,7 @@
                   href: assembler/masm/dot-untilcxz.md
                 - name: .WHILE
                   href: assembler/masm/dot-while.md
-                - name: WHILE (MASM)
+                - name: WHILE
                   href: assembler/masm/while-masm.md
                 - name: WORD
                   href: assembler/masm/word.md
@@ -5944,6 +5860,8 @@
                       href: assembler/masm/ml-warning-a4012.md
                     - name: Upozornění ML A4014
                       href: assembler/masm/ml-warning-a4014.md
+            - name: MASM BNF – gramatika
+              href: assembler/masm/masm-bnf-grammar.md
         - name: Přípony komponent pro .NET a UPW
           expanded: false
           items:
@@ -10593,7 +10511,7 @@
             - name: Programování v architektuře OLE DB
               expanded: false
               items:
-                - name: Programování v architektuře OLE DB
+                - name: programování technologie OLE DB
                   href: data/oledb/ole-db-programming.md
                 - name: "Přehled programování v\_architektuře OLE DB"
                   expanded: false

@@ -1,26 +1,27 @@
 ---
 title: '@InStr'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@InStr'
 helpviewer_keywords:
 - '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-ms.openlocfilehash: 4b56c176fcbd9bd48e0d97f049d98c55cf5bedf3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3e790204ee6344031018fe79510ff9e064bef3b4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399025"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315755"
 ---
 # <a name="instr"></a>\@InStr
 
-Funkce makra, která vyhledá první výskyt *řetěze* v parametru *řetěze*, počínaje *pozicí* v parametru *řetěze*. Pokud se *pozice* nezobrazí, hledání začíná na začátku *řetězce řetěze*. Vrací celé číslo pozice nebo 0, pokud není nalezena hodnota *řetěze* .
+Funkce makra, která vyhledá první výskyt *řetězec2* v parametru *řetězec1*, počínaje *pozicí* v parametru *řetězec1*. Pokud se *pozice* nezobrazí, hledání začíná na začátku *řetězce řetězec1*. Vrací celé číslo pozice nebo 0, pokud není nalezena hodnota *řetězec2* .
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@InStr (** ⟦*pozice*⟧ __,__ *řetěze* __,__ *řetěze* **)**
+> **\@InStr (** ⟦*pozice*⟧ __,__ *řetězec1* __,__ *řetězec2* **)**
 
 ## <a name="see-also"></a>Viz také:
 
-[Reference k symbolům](symbols-reference.md)
+\ – [referenční informace o symbolech](symbols-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

@@ -1,6 +1,6 @@
 ---
 title: operátor &amp;
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '&'
 - operator &
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - AND operator
 - '& operator'
 ms.assetid: f3c51a54-48ba-4b99-afed-5c45177bf694
-ms.openlocfilehash: e42279961d2ac1fe7a67f5fc7039461c2c41e472
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ca16534000706340441ad0cac0ec77e23d67d843
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397089"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311842"
 ---
 # <a name="operator-amp"></a>operátor &amp;
 
-Bitový operátor **and**. Používáno pouze v rámci [. Pokud](../../assembler/masm/dot-if.md), [. WHILe](../../assembler/masm/dot-while.md)nebo [. OPAKUJe](../../assembler/masm/dot-repeat.md) bloky a vyhodnocují v době běhu, nikoli v době sestavení.
+Bitový operátor **and**. Používáno pouze v rámci [. Pokud](dot-if.md), [. WHILe](dot-while.md)nebo [. OPAKUJe](dot-repeat.md) bloky a vyhodnocují v době běhu, nikoli v době sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,4 +26,5 @@ Bitový operátor **and**. Používáno pouze v rámci [. Pokud](../../assembler
 
 ## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)
+\ – [referenční informace o operátorech](operators-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)
