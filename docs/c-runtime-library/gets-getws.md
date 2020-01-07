@@ -31,16 +31,16 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 722d67336e11250f6a5459078dcea173f69bc2af
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f4e052f91dd2b4adfd5fd7e1ad7c81e0e5b07a11
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944342"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300271"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
-Získá řádek z `stdin` datového proudu. K dispozici jsou bezpečnější verze těchto funkcí; viz [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
+Získá řádek z datového proudu `stdin`. K dispozici jsou bezpečnější verze těchto funkcí; viz [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
 >  Tyto funkce jsou zastaralé. Počínaje verzí Visual Studio 2015 nejsou k dispozici v CRT. Zabezpečené verze těchto funkcí, gets_s a _getws_s, jsou stále k dispozici. Informace o těchto alternativních funkcích naleznete v tématu [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
@@ -74,11 +74,11 @@ Umístění úložiště pro vstupní řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí svůj argument, pokud byl úspěšný. Ukazatel s **hodnotou null** indikuje stav chyby nebo konce souboru. K určení, která z nich se stala, použijte [trajekt](../c-runtime-library/reference/ferror.md) nebo [feof](../c-runtime-library/reference/feof.md) . Pokud `buffer` je **null**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **hodnotu null** a nastaví errno na `EINVAL`.
+Vrátí svůj argument, pokud byl úspěšný. Ukazatel s **hodnotou null** indikuje stav chyby nebo konce souboru. K určení, která z nich se stala, použijte [trajekt](../c-runtime-library/reference/ferror.md) nebo [feof](../c-runtime-library/reference/feof.md) . Pokud je `buffer` **null**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **hodnotu null** a nastaví errno na `EINVAL`.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce přečte řádek ze standardního vstupního proudu `stdin` a uloží jej do `buffer`. `gets` Řádek se skládá ze všech znaků až do a včetně prvního znaku nového řádku (' \n '). `gets`před vrácením řádku nahradí znak nového řádku znakem null (' \ 0 '). Naproti tomu `fgets` funkce zachová znak nového řádku. `_getws`je verze `gets`s velkým znakem; její argument a návratová hodnota jsou řetězce s velkým počtem znaků.
+Funkce `gets` čte řádek ze standardního vstupního streamu `stdin` a ukládá ho do `buffer`. Řádek se skládá ze všech znaků až do a včetně prvního znaku nového řádku (' \n '). před vrácením řádku `gets` pak nahradí znak nového řádku znakem null (' \ 0 '). Naproti tomu funkce `fgets` zachová znak nového řádku. `_getws` je verze `gets`s velkým znakem; jeho argument a návratová hodnota jsou řetězce s velkým znakem.
 
 > [!IMPORTANT]
 >  Vzhledem k tomu, že neexistuje žádný způsob, jak omezit počet čtených znaků načtený, nedůvěryhodný vstup může snadno způsobit přetečení vyrovnávací paměti. Místo nich se používá `fgets`.
@@ -87,7 +87,7 @@ V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají nov
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_getts`|`gets`|`gets`|`_getws`|
 
@@ -102,7 +102,7 @@ Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../c-runt
 
 ## <a name="example"></a>Příklad
 
-```
+```c
 // crt_gets.c
 // compile with: /WX /W3
 

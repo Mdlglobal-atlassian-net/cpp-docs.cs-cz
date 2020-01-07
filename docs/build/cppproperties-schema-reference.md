@@ -1,18 +1,18 @@
 ---
-title: Referenční informace ke schématu CppProperties.json
+title: Odkaz na CppProperties. JSON
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 06029157b4b3826bc9c34a4434ab390f3eaa5a44
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69975955"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556666"
 ---
-# <a name="cpppropertiesjson-schema-reference"></a>Referenční informace ke schématu CppProperties.json
+# <a name="cpppropertiesjson-reference"></a>Odkaz na CppProperties. JSON
 
-Projekty otevřené složky, které nepoužívají CMake, mohou ukládat nastavení konfigurace projektu pro technologii IntelliSense v souboru *CppProperties. JSON* . (Projekty CMake používají soubor [CMakeSettings. JSON](customize-cmake-settings.md) .) Konfigurace se skládá z dvojice název/hodnota a definuje #include cesty, přepínače kompilátoru a další parametry. Další informace o tom, jak přidat konfigurace v projektu otevřené složky, najdete v tématu [Otevřít složku projekty C++ ](open-folder-projects-cpp.md) .
+Projekty otevřené složky, které nepoužívají CMake, mohou ukládat nastavení konfigurace projektu pro technologii IntelliSense v souboru *CppProperties. JSON* . (Projekty CMake používají soubor [CMakeSettings. JSON](customize-cmake-settings.md) .) Konfigurace se skládá z dvojice název/hodnota a definuje #include cesty, přepínače kompilátoru a další parametry. Další informace o tom, jak přidat konfigurace v projektu otevřené složky, najdete v tématu [Otevřít složku projekty C++ ](open-folder-projects-cpp.md) . V následujících částech najdete souhrn různých nastavení. Úplný popis schématu získáte tak, že přejdete na *CppProperties_schema. JSON*, jehož úplná cesta je uvedena v horní části editoru kódu, když je *CppProperties. JSON* otevřený.
 
 ## <a name="configuration-properties"></a>Vlastnosti konfigurace
 
@@ -58,11 +58,11 @@ Podporovány jsou následující hodnoty:
 - linux-gcc-x64
 - Linux – RSZ – ARM
 
-Poznámka: Hodnoty `msvc-x86` a`msvc-x64` jsou podporovány pouze z původních důvodů. Místo toho použijte varianty. `windows-msvc-*`
+Poznámka: hodnoty `msvc-x86` a `msvc-x64` se podporují jenom z původních důvodů. Místo toho použijte `windows-msvc-*` varianty.
 
 ## <a name="pre-defined-environments"></a>Předem definovaná prostředí
 
-Visual Studio poskytuje následující předdefinovaná prostředí pro Microsoft C++ , která se mapují na odpovídající Developer Command Prompt. Při dědění jednoho z těchto prostředí můžete odkazovat na libovolné proměnné prostředí pomocí globální vlastnosti `env` s touto syntaxí makra: $ {env.\< Proměnná >}.
+Visual Studio poskytuje následující předdefinovaná prostředí pro Microsoft C++ , která se mapují na odpovídající Developer Command Prompt. Při dědění jednoho z těchto prostředí můžete na libovolnou z proměnných prostředí odkazovat pomocí `env` globálních vlastností s touto syntaxí makra: $ {env.\<VARIABLE >}.
 
 |Název proměnné|Popis|
 |-----------|-----------------|
@@ -85,9 +85,11 @@ Po instalaci úlohy se systémem Linux jsou k dispozici následující prostřed
 
 ## <a name="user_defined_environments"></a>Uživatelsky definovaná prostředí
 
-Volitelně můžete použít `environments` vlastnost k definování sad proměnných v *CppProperties. JSON* buď globálně, nebo podle konfigurace. Tyto proměnné se chovají podobně jako proměnné prostředí v kontextu projektu otevřené složky a jsou k němu přistupované pomocí $ {env.\< Proměnná >} syntax z *Tasks. vs. JSON* a *Launch. vs. JSON* po jejich definování. Nicméně nejsou nutně nastaveny jako skutečné proměnné prostředí v jakémkoli příkazovém řádku, který aplikace Visual Studio používá interně.
+Volitelně můžete použít vlastnost `environments` k definování sad proměnných v *CppProperties. JSON* buď globálně, nebo podle konfigurace. Tyto proměnné se chovají podobně jako proměnné prostředí v kontextu projektu otevřené složky a jsou k němu přistupované pomocí syntaxe $ {env.\<VARIABLE >} z *Tasks. vs. JSON* a *Launch. vs. JSON* po jejich definování. Nicméně nejsou nutně nastaveny jako skutečné proměnné prostředí v jakémkoli příkazovém řádku, který aplikace Visual Studio používá interně.
 
-Když využijete prostředí, musíte ho zadat ve `inheritsEnvironments` vlastnosti i v případě, že je prostředí definované jako součást stejné konfigurace `environment` . vlastnost určuje název prostředí. Následující příklad ukazuje ukázkovou konfiguraci pro povolení IntelliSense pro RSZ v instalaci MSYS2. Všimněte si, jak konfigurace definuje a dědí `mingw_64` prostředí a jak má `includePath` vlastnost přístup `INCLUDE` k proměnné.
+**Visual Studio 2019 verze 16,4 a novější:** Proměnné specifické pro konfiguraci, které jsou definovány v souboru *CppProperties. JSON* , jsou automaticky vyzvednuty cíli ladění a úkoly, aniž by bylo nutné nastavovat `inheritEnvironments`. Cíle ladění se spustí automaticky s prostředím, které zadáte v *CppProperties. JSON*.
+
+**Visual Studio 2019 verze 16,3 a starší:** Když spotřebováváte prostředí, musíte ho zadat ve vlastnosti `inheritsEnvironments`, i když je prostředí definované jako součást stejné konfigurace. vlastnost `environment` Určuje název prostředí. Následující příklad ukazuje ukázkovou konfiguraci pro povolení IntelliSense pro RSZ v instalaci MSYS2. Všimněte si, jak konfigurace definuje a dědí `mingw_64` prostředí a jak má vlastnost `includePath` přístup k proměnné `INCLUDE`.
 
 ```json
 "configurations": [
@@ -154,14 +156,14 @@ Pokud má váš projekt složku zahrnutí a obsahuje také *Windows. h* a dalš�
 ```
 
 > [!Note]
-> `%WindowsSdkDir%`a `%VCToolsInstallDir%` nejsou nastaveny jako globální proměnné prostředí, takže se ujistěte, že spustíte devenv. exe z Developer Command Prompt, který definuje tyto proměnné. (Zadejte "Developer" v nabídce Windows Start.)
+> `%WindowsSdkDir%` a `%VCToolsInstallDir%` nejsou nastaveny jako globální proměnné prostředí, takže je třeba spustit soubor Devenv. exe z Developer Command Prompt definujícího tyto proměnné. (Zadejte "Developer" v nabídce Windows Start.)
 
 ## <a name="troubleshoot-intellisense-errors"></a>Řešení chyb IntelliSense
 
-Pokud se vám technologie IntelliSense, kterou jste očekávali, nezobrazuje, můžete řešit problémy tak, že v **nabídce nástroje** > kliknete na**možnost** > nástroje > **textový editor** > **C/C++** **Upřesnit** a nastavení **Povolit protokolování** na **hodnotu true**. Pokud chcete začít, zkuste nastavit **úroveň protokolování** na 5 a **filtry protokolování** na 8.
+Pokud nevidíte očekávanou technologii IntelliSense, můžete řešit problémy tak, že v části **nástroje** > **Možnosti** > **textový editor** > **C/C++**  > **Rozšířené** a nastavení **Povolit protokolování** na **hodnotu true**. Pokud chcete začít, zkuste nastavit **úroveň protokolování** na 5 a **filtry protokolování** na 8.
 
 ![Diagnostické protokoly](media/diagnostic-logging.png)
 
-Výstup je připojen do **okno výstup** a zobrazí se, když zvolíte možnost **zobrazit výstup z: Vizuální C++ protokol** Výstup obsahuje mimo jiné seznam skutečných cest, které IntelliSense pokouší použít. Pokud cesty se neshodují s těmi v *CppProperties. JSON*, zkuste zavřít složku a odstranit podsložku *. vs* , která obsahuje data procházení v mezipaměti.
+Výstup je připojen do **okno výstup** a zobrazí se, když zvolíte možnost **Zobrazit výstup z: vizuálního C++ protokolu**. Výstup obsahuje mimo jiné seznam skutečných cest, které IntelliSense pokouší použít. Pokud cesty se neshodují s těmi v *CppProperties. JSON*, zkuste zavřít složku a odstranit podsložku *. vs* , která obsahuje data procházení v mezipaměti.
 
 Chcete-li vyřešit chyby technologie IntelliSense způsobené chybějícími cestami, otevřete **Seznam chyb** a filtrujte jeho výstup na "pouze IntelliSense" a kód chyby E1696 "nemůže otevřít zdrojový soubor...".

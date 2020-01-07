@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: 4e912c905dd7d0f742768da4c7a2acb968b4ca8e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: b5a5985ad6a82d1c7ff45ceb3668273ec96292ec
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218215"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556718"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Podpora Clang/LLVM v projektech sady Visual Studio CMake
 
@@ -23,11 +23,11 @@ Podpora Clang je k dispozici v aplikaci Visual Studio 2019.
 
 Pomocí sady Visual Studio s Clang můžete upravovat a ladit C++ projekty CMAK, které cílí na Windows nebo Linux.
 
-**Windows:** Sada Visual Studio 2019 verze 16,1 zahrnuje podporu pro úpravy, sestavování a ladění pomocí Clang/LLVM v projektech CMak cílících na Windows. 
+**Windows**: Visual Studio 2019 verze 16,1 zahrnuje podporu pro úpravy, sestavování a ladění pomocí CLANG/LLVM v projektech CMAK cílících na Windows.
 
-**Linux:** U projektů pro Linux CMake není nutná žádná speciální podpora sady Visual Studio. Clang můžete nainstalovat pomocí Správce balíčků distribuce a přidat příslušné příkazy do souboru CMakeLists. txt.
+**Linux**: u projektů Linux cmake není nutná žádná speciální podpora sady Visual Studio. Clang můžete nainstalovat pomocí Správce balíčků distribuce a přidat příslušné příkazy do souboru CMakeLists. txt.
 
-## <a name="install"></a>Instalace
+## <a name="install"></a>Instalace produktu
 
 Pro nejlepší podporu IDE v aplikaci Visual Studio doporučujeme použít nejnovější nástroje kompilátoru Clang pro Windows. Pokud je ještě nemáte, můžete je nainstalovat tak, že otevřete instalační program pro Visual Studio a zvolíte  **C++ Clang kompilátor pro Windows** v části **vývoj pro stolní počítače C++ s** volitelnými součástmi. Pokud používáte vlastní instalaci Clang, podívejte se na  **C++ součást Clang-CL pro V142 Build Tools** .
 
@@ -41,7 +41,7 @@ Přidání nové konfigurace Clang do projektu CMake:
 
 1. V části **Konfigurace**stiskněte tlačítko **Přidat konfiguraci** :
 
-   ![Přidat konfiguraci](media/cmake-add-config-icon.png)
+   ![Přidání konfigurace](media/cmake-add-config-icon.png)
 
 1. Zvolte požadovanou konfiguraci Clang (Všimněte si, že pro Windows a Linux jsou k dispozici samostatné konfigurace Clang) a potom stiskněte **Vybrat**:
 
@@ -66,7 +66,7 @@ Ve výchozím nastavení Visual Studio hledá Clang na dvou místech:
 - Systému Interně nainstalovaná kopie Clang/LLVM, která je součástí instalačního programu sady Visual Studio.
 - (Windows a Linux) Proměnná prostředí PATH.
 
-Můžete zadat jiné umístění nastavením proměnných **CMAKE_C_COMPILER** a **CMAKE_CXX_COMPILER** cmake v **Nastavení cmake**:
+Můžete zadat jiné umístění nastavením **CMAKE_C_COMPILER** a **CMAKE_CXX_COMPILER** proměnné cmake v **Nastavení cmake**:
 
 ![Sada nástrojů CMake Clang](media/clang-location-cmake.png)
 
@@ -74,7 +74,7 @@ Můžete zadat jiné umístění nastavením proměnných **CMAKE_C_COMPILER** a
 
 V případě konfigurací systému Windows aplikace CMak ve výchozím nastavení vyvolá Clang v režimu [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) a odkazy s implementací standardní knihovny od společnosti Microsoft. Ve výchozím nastavení se **Clang-CL. exe** nachází v `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`.
 
- Tyto hodnoty můžete upravit v **Nastavení cmake** v části **proměnné a mezipaměť**pro cmake. Klikněte na **Zobrazit pokročilé proměnné**. Posuňte se dolů a vyhledejte **CMAKE_CXX_COMPILER**a potom klikněte na tlačítko **Procházet** a zadejte jinou cestu kompilátoru.
+ Tyto hodnoty můžete upravit v **Nastavení cmake** v části **proměnné a mezipaměť pro cmake**. Klikněte na **Zobrazit pokročilé proměnné**. Přejděte dolů k části najít **CMAKE_CXX_COMPILER**a potom klikněte na tlačítko **Procházet** a zadejte jinou cestu kompilátoru.
 
 ## <a name="edit-build-and-debug"></a>Úpravy, sestavování a ladění
 

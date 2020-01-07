@@ -4,18 +4,18 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - tasks.vs.json file [C++]
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 1e533babafad554e8f7413d2bc1a88933a6eca42
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: cc6b2983d3cc3d40449357a554df5feee38c21d9
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69975912"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556653"
 ---
 # <a name="tasksvsjson-schema-reference-c"></a>Tasks. vs. JSON – referenčníC++dokumentace schématu ()
 
 Chcete-li aplikaci Visual Studio sdělit, jak vytvořit zdrojový kód v projektu otevřené složky, přidejte soubor *Tasks. vs. JSON* . Můžete definovat libovolný libovolný úkol a potom ho vyvolat z místní nabídky **Průzkumník řešení** . Projekty CMake nepoužívají tento soubor, protože všechny příkazy sestavení jsou zadány v souboru *CMakeLists. txt*. Pro jiné systémy sestavení než CMake, *Tasks. vs. JSON* je místo, kde můžete zadat příkazy sestavení a vyvolat skripty sestavení. Obecné informace o použití *Tasks. vs. JSON*najdete v tématu [přizpůsobení úloh sestavování a ladění pro vývoj "otevření složky"](/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio).
 
-Úloha `type` má vlastnost, která může mít jednu ze čtyř hodnot: `default`, `launch`, `remote`nebo `msbuild`. Většina úloh by měla `launch` být použita, pokud není vyžadováno vzdálené připojení.
+Úkol má vlastnost `type`, která může mít jednu ze čtyř hodnot: `default`, `launch`, `remote`nebo `msbuild`. Většina úkolů by se měla použít `launch`, pokud se nevyžaduje vzdálené připojení.
 
 ## <a name="default-properties"></a>Výchozí vlastnosti
 
@@ -23,24 +23,24 @@ Výchozí vlastnosti jsou k dispozici pro všechny typy úloh:
 
 ||||
 |-|-|-|
-|**Majetek**|**Typ**|**Popis**|
+|**Vlastnost**|**Typ**|**Popis**|
 |`taskLabel`|odkazy řetězců| (Povinné.) Určuje popisek úlohy použitý v uživatelském rozhraní.|
 |`appliesTo`|odkazy řetězců| (Povinné.) Určuje, na kterých souborech lze příkaz provést. Je podporováno použití zástupných znaků, například: " *", "* . cpp", "/*. txt"|
 |`contextType`|odkazy řetězců| Povolené hodnoty: "vlastní", "Build", "Vyčištění", "znovu sestavit". Určuje, kde se v místní nabídce zobrazí úkol. Výchozí hodnota je Custom (vlastní).|
 |`output`|odkazy řetězců| Určuje výstupní značku k úkolu.|
-|`inheritEnvironments`|pole| Určuje sadu proměnných prostředí děděných z více zdrojů. Můžete definovat proměnné v souborech, jako je *CMakeSettings. JSON* nebo *CppProperties. JSON* , a zpřístupnit je kontextu úlohy.|
-|`passEnvVars`|Logická hodnota| Určuje, zda zahrnout do kontextu úlohy další proměnné prostředí. Tyto proměnné se liší od těch, které jsou definovány `envVars` pomocí vlastnosti. Výchozí hodnota je "true".|
+|`inheritEnvironments`|pole| Určuje sadu proměnných prostředí děděných z více zdrojů. Můžete definovat proměnné v souborech, jako je *CMakeSettings. JSON* nebo *CppProperties. JSON* , a zpřístupnit je kontextu úlohy. **Visual Studio 16,4:** : zadejte proměnné prostředí pro jednotlivé úlohy pomocí syntaxe `env.VARIABLE_NAME`. Chcete-li proměnnou zrušit, nastavte ji na hodnotu null.|
+|`passEnvVars`|Logická hodnota| Určuje, zda zahrnout do kontextu úlohy další proměnné prostředí. Tyto proměnné se liší od těch definovaných pomocí vlastnosti `envVars`. Výchozí hodnota je "true".|
 
 ## <a name="launch-properties"></a>Vlastnosti spuštění
 
-Když je `launch`typ úkolu, jsou k dispozici tyto vlastnosti:
+Když je `launch`typ úlohy, jsou k dispozici tyto vlastnosti:
 
 ||||
 |-|-|-|
-|**Majetek**|**Typ**|**Popis**|
+|**Vlastnost**|**Typ**|**Popis**|
 |`command`|odkazy řetězců| Určuje úplnou cestu procesu nebo skriptu, který se má spustit.|
 |`args`|pole| Určuje čárkami oddělený seznam argumentů předaných příkazu.|
-|`launchOption`|odkazy řetězců| Povolené hodnoty: None, "ContinueOnError", "IgnoreError". Určuje, jak pokračovat v příkazu, když dojde k chybám.|
+|`launchOption`|odkazy řetězců| Povolené hodnoty: "none", "ContinueOnError", "IgnoreError". Určuje, jak pokračovat v příkazu, když dojde k chybám.|
 |`workingDirectory`|odkazy řetězců| Určuje adresář, ve kterém se příkaz spustí. Použije se výchozí hodnota aktuálního pracovního adresáře projektu.|
 |`customLaunchCommand`|odkazy řetězců| Určuje globální přizpůsobení oboru, které se má použít před provedením příkazu. Užitečné pro nastavení proměnných prostředí, jako je% PATH%.|
 |`customLaunchCommandArgs`|odkazy řetězců| Určuje argumenty pro customLaunchCommand. (Vyžaduje `customLaunchCommand`.)|
@@ -49,7 +49,7 @@ Když je `launch`typ úkolu, jsou k dispozici tyto vlastnosti:
 
 ### <a name="example"></a>Příklad
 
-Následující úlohy vyvolávají příkaz *make. exe* , když je soubor pravidel zadán ve složce a `Mingw64` prostředí bylo definováno v souboru *CppProperties. JSON*, jak je znázorněno v [odkazu schématu CppProperties. JSON](cppproperties-schema-reference.md#user_defined_environments):
+Následující úlohy vyvolávají příkaz *make. exe* , když je soubor pravidel zadán ve složce a prostředí `Mingw64` bylo definováno v souboru *CppProperties. JSON*, jak je znázorněno v [odkazu schématu CppProperties. JSON](cppproperties-schema-reference.md#user_defined_environments):
 
 ```json
  {
@@ -86,24 +86,24 @@ Tyto úlohy lze vyvolat z kontextové nabídky po kliknutí pravým tlačítkem 
 
 Vzdálené úlohy jsou povolené při instalaci vývoje pro Linux pomocí C++ úlohy a přidání připojení ke vzdálenému počítači pomocí Správce připojení sady Visual Studio. Vzdálená úloha spouští příkazy ve vzdáleném systému a může do ní také kopírovat soubory.
 
-Když je `remote`typ úkolu, jsou k dispozici tyto vlastnosti:
+Když je `remote`typ úlohy, jsou k dispozici tyto vlastnosti:
 
 ||||
 |-|-|-|
-|**Majetek**|**Typ**|**Popis**|
+|**Vlastnost**|**Typ**|**Popis**|
 |`remoteMachineName`|odkazy řetězců|Název vzdáleného počítače. Musí odpovídat názvu počítače ve **Správci připojení**.|
 |`command`|odkazy řetězců|Příkaz, který se má odeslat do vzdáleného počítače. Ve výchozím nastavení jsou příkazy spouštěny v $HOME adresáři na vzdáleném systému.|
 |`remoteWorkingDirectory`|odkazy řetězců|Aktuální pracovní adresář na vzdáleném počítači.|
 |`localCopyDirectory`|odkazy řetězců|Místní adresář, který se má zkopírovat do vzdáleného počítače. Výchozí hodnota je aktuální pracovní adresář.|
-|`remoteCopyDirectory`|odkazy řetězců|Adresář ve vzdáleném počítači, do kterého `localCopyDirectory` se kopíruje.|
+|`remoteCopyDirectory`|odkazy řetězců|Adresář ve vzdáleném počítači, do kterého se kopíruje `localCopyDirectory`.|
 |`remoteCopyMethod`|odkazy řetězců| Metoda, která se má použít pro kopírování Povolené hodnoty: "none", "SFTP", "rsync". rsync se doporučuje pro velké projekty.|
-|`remoteCopySourcesOutputVerbosity`|odkazy řetězců| Povolené hodnoty: "Normal", "Verbose", "Diagnostic".|
+|`remoteCopySourcesOutputVerbosity`|odkazy řetězců| Povolené hodnoty: "normální", "Verbose", "Diagnostic".|
 |`rsyncCommandArgs`|odkazy řetězců|Výchozí hodnota je-t--DELETE.|
 |`remoteCopyExclusionList`|pole|Čárkami oddělený seznam souborů v `localCopyDirectory` pro vyloučení z operací kopírování.|
 
 ### <a name="example"></a>Příklad
 
-Následující úloha se zobrazí v místní nabídce, když kliknete pravým tlačítkem myši na *Main. cpp* v **Průzkumník řešení**. Závisí na vzdáleném počítači, který `ubuntu` se nazývá **Správce připojení**. Úloha zkopíruje aktuální otevřenou složku v aplikaci Visual Studio do `sample` adresáře na vzdáleném počítači a potom vyvolá g + +, aby program sestavil.
+Následující úloha se zobrazí v místní nabídce, když kliknete pravým tlačítkem myši na *Main. cpp* v **Průzkumník řešení**. Závisí na vzdáleném počítači, který se jmenuje `ubuntu` ve **Správci připojení**. Úloha zkopíruje aktuální otevřenou složku v aplikaci Visual Studio do `sample` adresáře na vzdáleném počítači a potom vyvolá g + + k sestavování programu.
 
 ```json
 {
@@ -127,13 +127,13 @@ Následující úloha se zobrazí v místní nabídce, když kliknete pravým tl
 
 ## <a name="msbuild-properties"></a>vlastnosti nástroje MSBuild
 
-Když je `msbuild`typ úkolu, jsou k dispozici tyto vlastnosti:
+Když je `msbuild`typ úlohy, jsou k dispozici tyto vlastnosti:
 
 ||||
 |-|-|-|
-|**Majetek**|**Typ**|**Popis**|
-|`verbosity`|odkazy řetězců| Určuje verbosityAllowed hodnoty výstupu sestavení projektu nástroje MSBuild: "Quiet", "minimální", "normální", "podrobná", "Diagnostic".|
+|**Vlastnost**|**Typ**|**Popis**|
+|`verbosity`|odkazy řetězců| Určuje verbosityAllowed hodnoty výstupu sestavení projektu nástroje MSBuild: "quiet", "minimální", "Normal", "detailed", "Diagnostics".|
 |`toolsVersion`|odkazy řetězců| Určuje verzi sady nástrojů pro sestavení projektu, například "2,0", "3,5", "4,0", "Current". Výchozí hodnota je Current (aktuální).|
-|`globalProperties`|odkazy objektů|Určuje seznam klíčových hodnot globálních vlastností, které mají být předány do projektu, například "konfigurace": "Release"|
-|`properties`|odkazy objektů| Určuje seznam klíč-hodnota dalších vlastností pouze projektu.|
+|`globalProperties`|Objekt nástroje|Určuje seznam klíčových hodnot globálních vlastností, které mají být předány do projektu, například "konfigurace": "Release"|
+|`properties`|Objekt nástroje| Určuje seznam klíč-hodnota dalších vlastností pouze projektu.|
 |`targets`|pole| Určuje seznam cílů, které mají být vyvolány, v pořadí v projektu. Výchozí cíl projektu se používá, pokud nejsou zadány žádné.|

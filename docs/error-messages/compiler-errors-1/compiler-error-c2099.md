@@ -1,29 +1,29 @@
 ---
-title: Compiler Error C2099
+title: Chyba kompilátoru C2099
 ms.date: 11/04/2016
 f1_keywords:
 - C2099
 helpviewer_keywords:
 - C2099
 ms.assetid: 30e151ee-d458-4901-b0c0-d45054a913f5
-ms.openlocfilehash: 9c83b4a50cb9cf5c5b1992f0f64e2eeb013b48e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9fb7739111d13a585579455ed97cecaca3266e4
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376939"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301935"
 ---
-# <a name="compiler-error-c2099"></a>Compiler Error C2099
+# <a name="compiler-error-c2099"></a>Chyba kompilátoru C2099
 
-Inicializátor není konstantní
+inicializátor není konstanta.
 
-Tato chyba vydává pouze kompilátor jazyka C a dochází pouze bez automatické proměnné.  Kompilátor inicializuje bez automatické proměnné na začátku programu a musí být konstantní hodnoty, které jsou inicializovány pomocí.
+Tato chyba je vydána pouze kompilátorem jazyka C a probíhá pouze pro proměnné, které nejsou automatické.  Kompilátor inicializuje na začátku programu jiné proměnné než automatické a hodnoty, které jsou inicializovány, musí být konstantní.
 
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2099.
 
-```
+```c
 // C2099.c
 int j;
 int *p;
@@ -32,17 +32,17 @@ j = *p;   // C2099 *p is not a constant
 
 ## <a name="example"></a>Příklad
 
-C2099 může také dojít, protože kompilátor nedokáže provést konstantní skládání na výrazu v rámci **/FP: strict** vzhledem k tomu, že nastavení prostředí přesnost s plovoucí desetinnou čárkou (viz [_controlfp_s –](../../c-runtime-library/reference/controlfp-s.md) pro Další informace) se můžou lišit od kompilace čas spuštění.
+C2099 může také nastat, protože kompilátor nemůže provádět konstantní skládání výrazu v rámci **/FP: Strict** , protože nastavení prostředí přesnosti s plovoucí desetinnou čárkou (viz [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) pro další informace) se může lišit od kompilace po dobu běhu.
 
-Když je konstantní skládání selže, kompilátor vyvolá dynamická inicializace, což není povoleno v jazyce C.
+V případě neúspěchu konstantního skládání vyvolá kompilátor dynamickou inicializaci, která není v jazyce C povolena.
 
-Chcete-li vyřešit tuto chybu, kompilace modulu jako souboru s příponou .cpp nebo zjednodušit.
+Chcete-li tuto chybu vyřešit, zkompilujte modul jako soubor. cpp nebo Zjednodušte výraz.
 
-Další informace najdete v tématu [/fp (určení chování plovoucí desetinné čárky)](../../build/reference/fp-specify-floating-point-behavior.md).
+Další informace najdete v tématu [/FP (určení chování s plovoucí](../../build/reference/fp-specify-floating-point-behavior.md)desetinnou čárkou).
 
 Následující ukázka generuje C2099.
 
-```
+```c
 // C2099_2.c
 // compile with: /fp:strict /c
 float X = 2.0 - 1.0;   // C2099

@@ -1,17 +1,17 @@
 ---
 title: ORG
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ORG
 helpviewer_keywords:
 - ORG directive
 ms.assetid: ab654827-99dd-4018-b27e-f29a7bb392eb
-ms.openlocfilehash: 1ee45442c561ebb429f3aff9227a373c97a975da
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 0f2d84d8430c079173a407bc1f3e4ddabee41cda
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395586"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318732"
 ---
 # <a name="org"></a>ORG
 
@@ -23,4 +23,5 @@ Nastaví čítač umístění na *výraz*.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkazy na direktivy](directives-reference.md)
+\ – [referenční informace o direktivách](directives-reference.md)
+[Gramatika BNF MASM](masm-bnf-grammar.md)

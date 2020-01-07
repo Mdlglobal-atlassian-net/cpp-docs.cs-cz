@@ -25,12 +25,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 65b74798c4b3b513acea0b51ecc0cb7df98391c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944310"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300258"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -54,7 +54,7 @@ Znak Fill.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`_heapset`Vrátí jednu z následujících celočíselných konstant manifestu definovaných ve typu. h.
+`_heapset` vrátí jednu z následujících celočíselných konstant manifestu definovaných ve typu. h.
 
 |||
 |-|-|
@@ -67,9 +67,9 @@ Kromě toho, pokud dojde k chybě, `_heapset` nastaví `errno` na `ENOSYS`.
 
 ## <a name="remarks"></a>Poznámky
 
-`_heapset` Funkce zobrazuje volná umístění paměti nebo uzly, které byly neúmyslně přepsány.
+Funkce `_heapset` zobrazuje volná umístění paměti nebo uzly, které byly neúmyslně přepsány.
 
-`_heapset`kontroluje minimální konzistenci haldy a pak nastaví každý bajt bezplatných záznamů haldy na `fill` hodnotu. Tato známá hodnota ukazuje, která paměťová umístění haldy obsahují volné uzly a která obsahují data, která nebyla záměrně zapsána do uvolněné paměti. Pokud operační systém `_heapset`nepodporuje (například Windows 98), vrátí `_HEAPOK` funkce a nastaví `errno` na `ENOSYS`.
+`_heapset` kontroluje minimální konzistenci haldy a pak nastaví každý bajt bezplatných položek haldy na hodnotu `fill`. Tato známá hodnota ukazuje, která paměťová umístění haldy obsahují volné uzly a která obsahují data, která nebyla záměrně zapsána do uvolněné paměti. Pokud operační systém nepodporuje `_heapset`(například Windows 98), funkce vrátí `_HEAPOK` a nastaví `errno` na `ENOSYS`.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -81,7 +81,7 @@ Další informace o kompatibilitě naleznete v úvodu v tématu [Kompatibilita](
 
 ## <a name="example"></a>Příklad
 
-```
+```c
 // crt_heapset.c
 // This program checks the heap and
 // fills in free entries with the character 'Z'.
