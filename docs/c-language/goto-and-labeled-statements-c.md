@@ -8,38 +8,38 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233070"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299114"
 ---
 # <a name="goto-and-labeled-statements-c"></a>Příkaz goto a příkazy s popiskem (C)
 
-`goto` Příkaz předává řízení k popisku. Dané popisek se musí nacházet ve stejné funkce a může objevit před pouze jeden příkaz ve stejné funkci.
+Příkaz `goto` přenáší řízení na popisek. Daný popisek se musí nacházet ve stejné funkci a může se objevit před pouze jedním příkazem ve stejné funkci.
 
 ## <a name="syntax"></a>Syntaxe
 
 *příkaz*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz s popiskem*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*příkaz-skoku*
+&nbsp;&nbsp;&nbsp;&nbsp;*příkaz skoku*
 
-*příkaz-skoku*:<br/>
+*příkaz skoku*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**příkaz goto** *identifikátor* **;**
 
 *příkaz s popiskem*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* **:** *– příkaz*
 
-Příkaz Popisek má smysl pouze `goto` příkaz v libovolném kontextu, provádí se příkaz s popiskem bez ohledu na popisek.
+Popisek příkazu má smysl pouze pro příkaz `goto`; v jakémkoli jiném kontextu je příkaz s popiskem proveden bez ohledu na popisek.
 
-A *příkaz-skoku* se musí nacházet ve stejné funkce a může objevit před pouze jeden příkaz ve stejné funkci. Sada *identifikátor* následující názvy `goto` má svůj vlastní obor názvů, takže názvy nejsou v konfliktu s další identifikátory. Popisky nelze deklarovat znovu. Zobrazit [obory názvů](../c-language/name-spaces.md) Další informace.
+*Příkaz skoku* se musí nacházet ve stejné funkci a může se objevit před pouze jedním příkazem ve stejné funkci. Sada názvů *identifikátorů* za `goto` má svůj vlastní obor názvů, aby názvy nebránily jiným identifikátorům. Popisky nelze deklarovat znovu. Další informace najdete v tématu o [názvových prostorech](../c-language/name-spaces.md) .
 
-Styl programování je dobrým **přerušení**, **pokračovat**, a `return` příkaz preference a `goto` kdykoli je to možné. Protože **přerušení** příkaz ukončí pouze z jedné úrovně smyčky, `goto` může být nutné pro ukončení smyčky z v rámci smyčky hluboce vnořený.
+Je dobrým programovacím stylem pro použití příkazu **Break**, **Continue**a `return` v předvolbách, pokud je to možné `goto` kdykoli je to možné. Vzhledem k tomu, že příkaz **Break** se ukončuje pouze z jedné úrovně smyčky, může být `goto` nutné pro ukončení smyčky v rámci hluboce vnořené smyčky.
 
-Tento příklad ukazuje, `goto` – příkaz:
+Tento příklad ukazuje příkaz `goto`:
 
-```
+```c
 // goto.c
 #include <stdio.h>
 
@@ -65,7 +65,7 @@ int main()
 }
 ```
 
-V tomto příkladu `goto` příkaz přenese ovládací prvek na bod s názvem `stop` při `i` rovná 5.
+V tomto příkladu příkaz `goto` přenáší řízení na bod označený `stop`, pokud `i` rovná 5.
 
 ## <a name="see-also"></a>Viz také:
 

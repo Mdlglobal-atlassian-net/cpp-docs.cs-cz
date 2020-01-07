@@ -8,34 +8,34 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343175"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299088"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analýza argumentů příkazového řádku jazyka C
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Spouštěcí kód Microsoft C používá při interpretaci argumentů z příkazového řádku operačního systému následující pravidla:
 
-- Argumenty jsou odděleny prázdným znakem, který je mezera nebo tabulátor.
+- Argumenty jsou odděleny prázdným znakem, což je mezera nebo karta.
 
-- Řetězec, který je uzavřen do dvojitých uvozovek, je interpretován jako jeden argument bez ohledu na prázdné znaky uvnitř. Řetězec v uvozovkách, může být vložen do argumentu. Všimněte si, že blikající kurzor (**^**) nebyl rozpoznán jako řídicí znak ani oddělovač.
+- Řetězec, který je uzavřen do dvojitých uvozovek, je interpretován jako jeden argument bez ohledu na prázdné znaky uvnitř. V argumentu může být vložen řetězec v uvozovkách. Všimněte si, že blikající kurzor ( **^** ) není rozpoznán jako řídicí znak nebo oddělovač.
 
-- Dvojitých uvozovek předcházený zpětným lomítkem  **\\"**, je interpretován jako znak dvojitých uvozovek (**"**).
+- Dvojitá uvozovka před znakem zpětného lomítka, **\\"** , je interpretována jako literální dvojité uvozovky ( **"** ).
 
-- Zpětná lomítka jsou interpretovány literálně, pokud jsou bezprostředně předcházet dvojité uvozovky.
+- Zpětná lomítka jsou interpretována doslova, pokud bezprostředně nepředchází uvozovky.
 
-- -Li sudý počet zpětných lomítek následován znakem dvojitých uvozovek a pak jedno zpětné lomítko (**\\**) se umístí do `argv` pole pro každý pár zpětných lomítek (**\\ \\**) a dvojité uvozovky (**"**) je interpretován jako oddělovač řetězců.
+- Je-li sudý počet zpětných lomítek následován znakem dvojitých uvozovek, pak je jedno zpětné lomítko ( **\\** ) umístěno v `argv` poli pro každou dvojici zpětných lomítek ( **\\\\** ) a dvojité uvozovky ( **"** ) jsou interpretovány jako oddělovač řetězců.
 
-- -Li lichý počet zpětných lomítek následován znakem dvojitých uvozovek a pak jedno zpětné lomítko (**\\**) se umístí do `argv` pole pro každý pár zpětných lomítek (**\\ \\**) a dvojité uvozovky, je interpretován jako sekvence escape ve zbývajících zpětné lomítko způsobí znak dvojitých uvozovek (**"**) se mají umístit na `argv`.
+- Je-li lichý počet zpětných lomítek následovaný dvojitou uvozovkou, pak je jedno zpětné lomítko ( **\\** ) umístěno v `argv` poli pro každý pár zpětných lomítek ( **\\\\** ) a Dvojitá uvozovka je interpretována jako řídicí sekvence zbývajícím zpětným lomítkem, což způsobí, že se literální dvojité uvozovky ( **"** ) umístí do `argv`.
 
 Tento seznam ukazuje výše uvedená pravidla zobrazením interpretovaného výsledku předaného do `argv` pro několik příkladů argumentů příkazového řádku. Výstup uvedený v druhém, třetím a čtvrtém sloupci je z aplikace ARGS.C, která následuje seznam.
 
-|Vstup příkazového řádku|argv[1]|argv[2]|argv[3]|
+|Vstup z příkazového řádku|argv[1]|argv[2]|argv[3]|
 |-------------------------|---------------|---------------|---------------|
 |`"a b c" d e`|`a b c`|`d`|`e`|
 |`"ab\"c" "\\" d`|`ab"c`|`\`|`d`|
@@ -47,7 +47,7 @@ Tento seznam ukazuje výše uvedená pravidla zobrazením interpretovaného výs
 
 ### <a name="code"></a>Kód
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -95,7 +95,7 @@ Environment variables:
   WINDIR=c:\nt
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

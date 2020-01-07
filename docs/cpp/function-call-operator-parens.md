@@ -10,16 +10,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154149"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301519"
 ---
 # <a name="function-call-operator-"></a>Operátor volání funkce: ()
 
-Výraz přípony následován operátorem volání funkce **()**, určuje volání funkce.
+Výraz přípony následovaný operátorem volání funkce, **()** , určuje volání funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,31 +30,31 @@ postfix-expression
 
 ## <a name="remarks"></a>Poznámky
 
-Argumenty pro operátor volání funkce se nula nebo více výrazů oddělených čárkami, skutečné argumenty funkce.
+Argumenty operátoru volání funkce jsou nula nebo více výrazů oddělených čárkami – skutečné argumenty funkce.
 
-*Postfix-expression* se musí vyhodnotit na adresu funkce (například identifikátor funkce nebo hodnota ukazatele na funkci), a *argument-expression-list* je seznamem výrazů (oddělených čárkami) jehož hodnoty (argumenty) jsou předány funkci. *Argument-expression-list* argument může být prázdný.
+*Výraz přípony* musí být vyhodnocen jako adresa funkce (například identifikátor funkce nebo hodnota ukazatele na funkci) a *argument-expression-list* je seznam výrazů (oddělených čárkami), jejichž hodnoty (argumenty) jsou předány funkci. Argument *-Expression-list* může být prázdný.
 
-*Postfix-expression* musí být jeden z těchto typů:
+*Výraz přípony* musí být jednoho z těchto typů:
 
-- Funkce vracející typ `T`. Příklad deklarace
+- Funkce vracející typ `T`. Ukázková deklarace je
 
     ```cpp
     T func( int i )
     ```
 
-- Ukazatel na funkci vracející typ `T`. Příklad deklarace
+- Ukazatel na funkci vracející typ `T`. Ukázková deklarace je
 
     ```cpp
     T (*func)( int i )
     ```
 
-- Odkaz na funkci vracející typ `T`. Příklad deklarace
+- Odkaz na funkci vracející typ `T`. Ukázková deklarace je
 
     ```cpp
     T (&func)(int i)
     ```
 
-- Ukazatel na členskou funkci vracející typ přístupu přes ukazatel `T`. Příklad volání funkcí jsou
+- Funkce ukazatele na člen odkazuje na vrácení typu `T`. Příklady volání funkcí jsou
 
     ```cpp
     (pObject->*pmf)();
@@ -63,7 +63,7 @@ Argumenty pro operátor volání funkce se nula nebo více výrazů oddělených
 
 ## <a name="example"></a>Příklad
 
-Následující příklad volá funkce standardní knihovny `strcat_s` s tři argumenty:
+Následující příklad volá funkci standardní knihovny `strcat_s` se třemi argumenty:
 
 ```cpp
 // expre_Function_Call_Operator.cpp
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-Předcházející kód definuje třídu s názvem `Point`, který obsahuje privátní dat objektů, které představují *x* a *y* souřadnice. Tyto datové objekty musejí být upraveny a jejich hodnoty načteny. Tento program je pouze jednou z několika možností pro takovou třídu. Použití funkcí `GetX` a `SetX` nebo `GetY` a `SetY` představuje další možnost.
+Předchozí kód definuje třídu s názvem `Point`, která obsahuje soukromé datové objekty, které reprezentují souřadnice *x* a *y* . Tyto datové objekty musejí být upraveny a jejich hodnoty načteny. Tento program je pouze jednou z několika možností pro takovou třídu. Použití funkcí `GetX` a `SetX` nebo `GetY` a `SetY` představuje další možnost.
 
 Funkce vracející typy tříd, ukazatele na typy tříd nebo odkazy na typy tříd lze použít jako levý operand pro operátory výběru členů. Proto je platný následující kód:
 
@@ -174,7 +174,7 @@ int main() {
 }
 ```
 
-Funkce lze volat rekurzivně. Další informace o deklaracích funkcí naleznete v tématu [funkce](functions-cpp.md). Související materiál se nachází v [Program a propojení](../cpp/program-and-linkage-cpp.md).
+Funkce lze volat rekurzivně. Další informace o deklaracích funkcí naleznete v tématu [Functions](functions-cpp.md). Související materiál je v [jednotkách překladu a propojení](../cpp/program-and-linkage-cpp.md).
 
 ## <a name="see-also"></a>Viz také:
 

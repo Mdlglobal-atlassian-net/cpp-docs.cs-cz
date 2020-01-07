@@ -1,18 +1,18 @@
 ---
 title: Hlavičkové souboryC++()
-ms.date: 04/20/2018
+ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 98d37944f8c037f3ba25d80c7d35b3560ad11d40
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: ca5036ee53372f44e53b5a6452d4ab220fc3977d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980477"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301480"
 ---
 # <a name="header-files-c"></a>Hlavičkové souboryC++()
 
-Názvy prvků programu, jako jsou proměnné, funkce, třídy a tak dále, musí být deklarovány dříve, než mohou být použity. Například nemůžete napsat jenom zápis `x = 42` bez první deklarace "x".
+Názvy prvků programu, jako jsou proměnné, funkce, třídy a tak dále, musí být deklarovány dříve, než mohou být použity. Například nemůžete napsat `x = 42` bez první deklarace ' x '.
 
 ```cpp
 int x; // declaration
@@ -21,11 +21,14 @@ x = 42; // use x
 
 Deklarace instruuje kompilátor, zda je prvek typu **int**, **Double**, **funkce**, **třídy** nebo jiné věci.  Kromě toho musí být každý název deklarován (přímo nebo nepřímo) v každém souboru. cpp, ve kterém je použit. Při kompilaci programu je každý soubor. cpp zkompilován nezávisle na kompilační jednotce. Kompilátor nemá žádné znalosti o tom, jaké názvy jsou deklarovány v jiných jednotkách kompilace. To znamená, že pokud definujete třídu nebo funkci nebo globální proměnnou, je nutné zadat deklaraci této věci v každém dalším souboru. cpp, který ji používá. Každá deklarace této věci musí být přesně shodná se všemi soubory. Lehká nekonzistence způsobí chyby nebo nezamýšlené chování, když se linker pokusí sloučit všechny kompilační jednotky do jednoho programu.
 
-Pro minimalizaci potenciálu chyb C++ přijala konvenci použití hlavičkových *souborů* k zahrnutí deklarací. Deklarace provedete v hlavičkovém souboru a pak použijete direktivu #include v každém souboru. cpp nebo jiném hlavičkovém souboru, který vyžaduje tuto deklaraci. Direktiva #include vloží kopii hlavičkového souboru přímo do souboru. cpp před kompilací.
+Pro minimalizaci potenciálu chyb C++ přijala konvenci použití *hlavičkových souborů* k zahrnutí deklarací. Deklarace provedete v hlavičkovém souboru a pak použijete direktivu #include v každém souboru. cpp nebo jiném hlavičkovém souboru, který vyžaduje tuto deklaraci. Direktiva #include vloží kopii hlavičkového souboru přímo do souboru. cpp před kompilací.
+
+> [!NOTE]
+> V aplikaci Visual Studio 2019 se funkce C++ 20 *modulů* zavedla jako vylepšení a při konečném nahrazení hlavičkových souborů. Další informace najdete v tématu [Přehled modulů v C++ ](modules-cpp.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje běžný způsob, jak deklarovat třídu a pak ji použít v jiném zdrojovém souboru. Začneme souborem hlaviček, `my_class.h`. Obsahuje definici třídy, ale Všimněte si, že definice není kompletní; Členská funkce `do_something` není definovaná:
+Následující příklad ukazuje běžný způsob, jak deklarovat třídu a pak ji použít v jiném zdrojovém souboru. Začneme souborem hlaviček, `my_class.h`. Obsahuje definici třídy, ale Všimněte si, že definice není kompletní; `do_something` členské funkce nejsou definovány:
 
 ```cpp
 // my_class.h
@@ -40,9 +43,9 @@ namespace N
 }
 ```
 
-Dále vytvořte implementační soubor (obvykle s příponou. cpp nebo podobným rozšířením). Zavoláme soubor my_class. cpp a poskytneme definici deklarace členů. Přidáme `#include` direktivu pro soubor my_class. h, aby se v tomto okamžiku v souboru. cpp vložila deklarace my_class, a my jsme zahrnuli `<iostream>` do deklarace pro `std::cout`. Všimněte si, že se používají uvozovky pro hlavičkové soubory ve stejném adresáři jako zdrojový soubor a lomené závorky se používají pro hlavičky standardních knihoven. Mnoho hlaviček standardních knihoven navíc nemá příponu. h ani jinou příponu souboru.
+Dále vytvořte implementační soubor (obvykle s příponou. cpp nebo podobným rozšířením). Zavoláme soubor my_class. cpp a poskytneme definici deklarace členů. Přidáme direktivu `#include` pro soubor my_class. h, aby se v tomto okamžiku v souboru. cpp vložila deklarace my_class. do této chvíle patří i `<iostream>`, které by bylo možné načíst do deklarace pro `std::cout`. Všimněte si, že se používají uvozovky pro hlavičkové soubory ve stejném adresáři jako zdrojový soubor a lomené závorky se používají pro hlavičky standardních knihoven. Mnoho hlaviček standardních knihoven navíc nemá příponu. h ani jinou příponu souboru.
 
-V implementačním souboru můžeme volitelně použít příkaz **using** , abyste se vyhnuli nutnosti kvalifikovat každou zmínku "my_class" nebo "cout" pomocí "N::" nebo "std::".  Nevkládejte příkazy **using** do souborů hlaviček!
+V implementačním souboru můžeme volitelně použít příkaz **using** , abyste se vyhnuli nutnosti kvalifikovat každou zmínku "my_class" nebo "cout" s "N::" nebo "std::".  Nevkládejte příkazy **using** do souborů hlaviček!
 
 ```cpp
 // my_class.cpp
@@ -58,7 +61,7 @@ void my_class::do_something()
 }
 ```
 
-Nyní můžeme použít `my_class` v jiném souboru. cpp. #Include hlavičkového souboru, takže kompilátor vyžádá v deklaraci. Všechny kompilátory musí znát, je to, že my_class je třída, která má veřejnou členskou funkci `do_something()`s názvem.
+Nyní můžeme použít `my_class` v jiném souboru. cpp. #Include hlavičkového souboru, takže kompilátor vyžádá v deklaraci. Všechny kompilátory musí znát, že my_class je třída, která má veřejnou členskou funkci nazvanou `do_something()`.
 
 ```cpp
 // my_program.cpp
@@ -74,11 +77,11 @@ int main()
 }
 ```
 
-Poté, co kompilátor dokončí kompilaci každého souboru. cpp do souborů. obj, předá do linkeru soubory. obj. Když linker sloučí soubory objektů, najde právě jednu definici pro my_class; je v souboru. obj vytvořeném pro my_class. cpp a sestavení je úspěšné.
+Poté, co kompilátor dokončí kompilaci každého souboru. cpp do souborů. obj, předá do linkeru soubory. obj. Když linker sloučí soubory objektů, najde přesně jednu definici pro my_class; je v souboru. obj vytvořeném pro my_class. cpp a sestavení je úspěšné.
 
 ## <a name="include-guards"></a>Zahrnutí Guard
 
-Soubory hlaviček mají obvykle `#pragma once` direktivu *include Guard* nebo direktivu, aby bylo zajištěno, že nejsou vloženy vícekrát do jednoho souboru. cpp.
+Soubory hlaviček mají obvykle direktivu *include Guard* nebo `#pragma once`, aby bylo zajištěno, že nejsou vloženy vícekrát do jednoho souboru. cpp.
 
 ```cpp
 // my_class.h

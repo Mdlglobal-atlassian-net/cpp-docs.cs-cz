@@ -8,16 +8,16 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154133"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301506"
 ---
 # <a name="functions-c"></a>Funkce (C++)
 
-Funkce je blok kódu, který provádí nějaké operace. Funkce Volitelně můžete definovat vstupní parametry, které umožňují volajícím předat argumenty do funkce. Funkce může volitelně vrátit hodnotu jako výstup. Funkce jsou užitečné pro zapouzdření běžných operací v jediné opakovaně použitelné bloku, v ideálním případě s názvem, který jasně popisuje, co funkce dělá. Následující funkce přijímá dvou celých čísel od volajícího a vrátí jejich součet; *a* a *b* jsou *parametry* typu **int**.
+Funkce je blok kódu, který provádí určitou operaci. Funkce může volitelně definovat vstupní parametry, které umožňují volajícím předat argumenty do funkce. Funkce může volitelně vracet hodnotu jako výstup. Funkce jsou užitečné pro zapouzdření běžných operací v jednom opakovaně použitelném bloku, v ideálním případě s názvem, který jasně popisuje, co funkce dělá. Následující funkce přijímá dvou celých čísel od volajícího a vrátí jejich součet; *a* a *b* jsou *parametry* typu **int**.
 
 ```cpp
 int sum(int a, int b)
@@ -26,7 +26,7 @@ int sum(int a, int b)
 }
 ```
 
-Funkci lze vyvolat, nebo *volá*, z různých míst v aplikaci. Hodnoty, které jsou předány do funkce jsou *argumenty*, jejichž typy musí být kompatibilní s typy parametrů v definici funkce.
+Funkci lze vyvolat nebo *volat*z libovolného počtu míst v programu. Hodnoty, které jsou předány funkci, jsou *argumenty*, jejichž typy musí být kompatibilní s typy parametrů v definici funkce.
 
 ```cpp
 int main()
@@ -37,21 +37,21 @@ int main()
 }
 ```
 
-Neexistuje žádné praktické omezení na délku funkce, ale dobrý návrh cíle na funkce, které provádějí jediné dobře definované úlohy. Složité algoritmy by měl být rozdělit do snadno pochopitelné jednodušší funkce kdykoli je to možné.
+Neexistují žádné praktické omezení na délku funkce, ale dobrý návrh pro funkce, které provádějí jednu dobře definovanou úlohu. Složité algoritmy by se měly rozdělit na snadnou pochopení jednodušších funkcí, kdykoli to bude možné.
 
-Funkce, které jsou definovány v oboru třídy jsou volány členské funkce. V jazyce C++ na rozdíl od jiných jazyků, funkce lze také definovat v oboru názvů (včetně implicitní globální obor názvů). Tyto funkce jsou volány *bezplatné funkce* nebo *nečlenské funkce*; se hojně používají ve standardní knihovně.
+Funkce, které jsou definovány v oboru třídy, se nazývají členské funkce. V C++na rozdíl od jiných jazyků lze funkci také definovat v oboru oboru názvů (včetně implicitního globálního oboru názvů). Tyto funkce se nazývají *bezplatné funkce* nebo *nečlenské funkce*; používají se rozsáhle ve standardní knihovně.
 
-Funkce mohou mít *přetížené*, což znamená, že různé verze funkce může sdílet se stejným názvem, pokud se liší podle číslo nebo typ formálních parametrů. Další informace najdete v tématu [přetížení funkce](../cpp/function-overloading.md).
+Funkce mohou být *přetíženy*, což znamená, že různé verze funkce mohou sdílet stejný název, pokud se liší podle počtu nebo typu formálních parametrů. Další informace naleznete v tématu [přetížení funkce](../cpp/function-overloading.md).
 
 ## <a name="parts-of-a-function-declaration"></a>Části deklarace funkce
 
-Minimální funkce *deklarace* obsahuje návratový typ, název funkce a seznam parametrů (který může být prázdné), spolu s volitelné klíčová slova, které obsahují další pokyny pro kompilátor. V následujícím příkladu je deklarace funkce:
+Minimální *deklarace* funkce se skládá z návratového typu, názvu funkce a seznamu parametrů (který může být prázdný), spolu s nepovinnými klíčovými slovy, které poskytují další pokyny pro kompilátor. Následující příklad je deklarace funkce:
 
 ```cpp
 int sum(int a, int b);
 ```
 
-Definice funkce obsahuje deklarace, plus *tělo*, což je veškerý kód ve složených závorkách:
+Definice funkce se skládá z deklarace a *textu*, který je celý kód mezi složenými závorkami:
 
 ```cpp
 int sum(int a, int b)
@@ -60,19 +60,19 @@ int sum(int a, int b)
 }
 ```
 
-Deklarace funkce, za nímž následuje středníkem se můžou objevit na více místech v programu. Musí být uvedena před všechna volání této funkce v každé jednotce překladu. Definice funkce musí být uvedena pouze jednou v programu, podle jednoho pravidla definice (ODR).
+Deklarace funkce následovaná středníkem se může zobrazit na více místech programu. Musí se objevit před jakýmkoli voláním této funkce v každé jednotce překladu. Definice funkce se musí v programu objevit jenom jednou podle pravidla definice (ODR).
 
 Požadované části deklarace funkce jsou:
 
-1. Návratový typ, který určuje typ, který funkce vrátí hodnotu, nebo **void** Pokud není vrácena žádná hodnota. V C ++ 11 **automaticky** platný návratový typ, který instruuje kompilátor, aby se odvodit typ z návratový příkaz. V C ++ 14 je také povolena položka decltype(auto). Další informace najdete v tématu odvození typu v Return Types.
+1. Návratový typ, který určuje typ hodnoty vrácené funkcí nebo **void** , pokud není vrácena žádná hodnota. V jazyce C++ 11 je **automaticky** platný návratový typ, který instruuje kompilátor, aby odvodí typ z příkazu return. V jazyce C++ 14 je také povoleno decltype (auto). Další informace naleznete v části typ srážky v návratových typech níže.
 
-1. Název funkce, které musí začínat písmenem nebo podtržítkem a nemůže obsahovat mezery. Obecně platí úvodní podtržítka v názvech funkce standardní knihovny označení private členské funkce nebo funkce bez členů, které nejsou určeny pro použití ve vašem kódu.
+1. Název funkce, která musí začínat písmenem nebo podtržítkem a nesmí obsahovat mezery. Obecně platí, že přední podtržítka v názvech funkcí standardních knihoven označují soukromé členské funkce nebo nečlenské funkce, které nejsou určeny pro použití ve vašem kódu.
 
-1. Seznam parametrů složenou závorku, oddělené čárkami sadu středníky nula nebo více parametrů, které určují typ a volitelně místní název, podle kterého hodnoty lze získat přístup uvnitř těla funkce.
+1. Seznam parametrů, oddělený čárkami, sada nula nebo více parametrů, které určují typ a volitelně místní název, pomocí kterého lze k hodnotám přicházet uvnitř těla funkce.
 
 Volitelné části deklarace funkce jsou:
 
-1. `constexpr`, což znamená, že návratová hodnota funkce je konstantní hodnotu nelze vypočítat v době kompilace.
+1. `constexpr`, která označuje, že návratová hodnota funkce je konstantní hodnota může být počítána v době kompilace.
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -83,7 +83,7 @@ Volitelné části deklarace funkce jsou:
     };
     ```
 
-1. Specifikace propojení **extern** nebo **statické**.
+1. Její specifikace propojení, **extern** nebo **static**.
 
     ```cpp
     //Declare printf with C linkage.
@@ -91,9 +91,9 @@ Volitelné části deklarace funkce jsou:
 
     ```
 
-   Další informace najdete v tématu [Program a propojení](../cpp/program-and-linkage-cpp.md).
+   Další informace naleznete v tématu [jednotky překladu a propojení](../cpp/program-and-linkage-cpp.md).
 
-1. **vložené**, který instruuje kompilátor, aby každé volání funkce nahraďte samotný kód funkce. vkládání může vám pomůže zvýšit výkon v situacích, kdy funkce rychle spustí a je vyvolána opakovaně v kritickém pro výkon část kódu.
+1. **inline**, který instruuje kompilátor, aby nahradil každé volání funkce samotným kódem funkce. vkládání může pomáhat s výkonem ve scénářích, kdy se funkce spouští rychle a je vyvolána opakovaně v části s kritickým výkonem kódu.
 
     ```cpp
     inline double Account::GetBalance()
@@ -104,7 +104,7 @@ Volitelné části deklarace funkce jsou:
 
    Další informace najdete v tématu [vložené funkce](../cpp/inline-functions-cpp.md).
 
-1. A `noexcept` výraz, který určuje, zda funkce může vyvolat výjimku. V následujícím příkladu se funkce nevyvolá výjimku pokud `is_pod` výraz vyhodnocen jako **true**.
+1. Výraz `noexcept`, který určuje, zda funkce může vyvolat výjimku. V následujícím příkladu funkce nevyvolá výjimku, pokud je výraz `is_pod` vyhodnocen jako **true**.
 
     ```cpp
     #include <type_traits>
@@ -113,24 +113,24 @@ Volitelné části deklarace funkce jsou:
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-   Další informace najdete v tématu [noexcept](../cpp/noexcept-cpp.md).
+   Další informace najdete v tématu [s výjimkou](../cpp/noexcept-cpp.md).
 
-1. (Pouze pro členské funkce) Kvalifikátory cv, které určují, jestli je funkce **const** nebo **volatile**.
+1. (Jenom členské funkce) Kvalifikátory CV, které určují, zda je funkce **const** nebo **volatile**.
 
-1. (Pouze pro členské funkce) **virtuální**, `override`, nebo `final`. **virtuální** Určuje, že funkci můžete přepsat v odvozené třídě. `override` znamená to, že je funkce v odvozené třídě přepisování virtuální funkce. `final` znamená, že funkce nelze přepsat v libovolné další odvozené třídy. Další informace najdete v tématu [virtuální funkce](../cpp/virtual-functions.md).
+1. (Jenom členské funkce) **Virtual**, `override`nebo `final`. **Virtual** určuje, že funkci lze přepsat v odvozené třídě. `override` znamená, že funkce v odvozené třídě Přepisuje virtuální funkci. `final` znamená, že funkci nelze přepsat v žádné další odvozené třídě. Další informace najdete v tématu [virtuální funkce](../cpp/virtual-functions.md).
 
-1. (pouze pro členské funkce) **statické** použít na člen funkce znamená, že funkce není přidružené žádné instance objektů třídy.
+1. (jenom členské funkce) **statické** použití na členskou funkci znamená, že funkce není přidružena k žádné instanci objektu třídy.
 
-1. (Pouze nestatických členských funkcí) Ref – kvalifikátor, který určuje kompilátoru, které přetížení dané funkci, kterou chcete vybrat, kdy se parametr implicitní objektu (\*to) je odkaz rvalue nebo odkaz na lvalue. Další informace najdete v tématu [přetížení funkce](function-overloading.md#ref-qualifiers).
+1. (Jenom nestatické členské funkce) Kvalifikátor ref, který určuje kompilátor, který má být vybrán, když implicitní parametr objektu (\*this) je odkaz rvalue a odkaz na lvalue. Další informace naleznete v tématu [přetížení funkce](function-overloading.md#ref-qualifiers).
 
-Následující obrázek ukazuje části definice funkce. Vystínovaná oblast představuje tělo funkce.
+Následující obrázek ukazuje části definice funkce. Šedivá oblast je tělo funkce.
 
-![Části definice funkce](../cpp/media/vc38ru1.gif "části definice funkce") <br/>
+![Části definice funkce](../cpp/media/vc38ru1.gif "Části definice funkce") <br/>
 Části definice funkce
 
 ## <a name="function-definitions"></a>Definice funkcí
 
-A *funkce definice* obsahuje prohlášení a tělo funkce, ve složených závorkách, která obsahuje deklarace proměnných, příkazy a výrazy. Následující příklad ukazuje definici kompletní funkce:
+*Definice funkce* se skládá z deklarace a těla funkce uzavřené ve složených závorkách, které obsahují deklarace proměnných, příkazy a výrazy. Následující příklad ukazuje úplnou definici funkce:
 
 ```cpp
     int foo(int i, std::string s)
@@ -145,7 +145,7 @@ A *funkce definice* obsahuje prohlášení a tělo funkce, ve složených závor
     }
 ```
 
-Proměnné deklarované uvnitř těla označují jako lokální proměnné nebo místních hodnot. Dostanou mimo rozsah při ukončení funkce; funkce by měla vrátit proto nikdy odkaz na místní!
+Proměnné deklarované uvnitř těla jsou označovány jako lokální proměnné nebo místní. Po ukončení funkce přestanou být v rozsahu. Proto by funkce neměla nikdy vracet odkaz na místní!
 
 ```cpp
     MyClass& boom(int i, std::string s)
@@ -157,15 +157,15 @@ Proměnné deklarované uvnitř těla označují jako lokální proměnné nebo 
     }
 ```
 
-## <a name="const-and-constexpr-functions"></a>Funkce const nebo constexpr.
+## <a name="const-and-constexpr-functions"></a>funkce const a constexpr
 
-Můžete deklarovat členské funkce jako **const** k určení, že funkce nejsou povolené ke změně hodnot žádné datové členy třídy. Deklarováním jako členskou funkci **const**, pomáhají kompilátoru vynutit *správnost const*. Pokud někdo omylem pokusí úpravy objektu pomocí funkce deklarovaná jako **const**, vyvolá chybu kompilátoru. Další informace najdete v tématu [const](const-cpp.md).
+Můžete deklarovat členskou funkci jako **const** k určení, že funkce nemá povoleno změnit hodnoty jakýchkoli datových členů ve třídě. Deklarováním členské funkce jako **const**pomůžete kompilátoru vynutili *konstantní správnost*. Pokud se někdo omylem pokusí změnit objekt pomocí funkce deklarované jako **const**, dojde k chybě kompilátoru. Další informace naleznete v tématu [const](const-cpp.md).
 
-Deklarování funkce jako `constexpr` když hodnota vytvoří pravděpodobně se dá určit v době kompilace. Funkce constexpr obecně je vyhodnocen rychleji než normální funkce. Další informace najdete v tématu [constexpr](constexpr-cpp.md).
+Deklarujete funkci jako `constexpr`, když hodnota, kterou vytváří, může být určena v době kompilace. Funkce constexpr obecně provádí rychlejší než normální funkce. Další informace naleznete v tématu [constexpr](constexpr-cpp.md).
 
 ## <a name="function-templates"></a>Šablony funkcí
 
-Šablonu funkce je podobný šablony třídy; generuje konkrétní funkce založený na argumentech šablony. V mnoha případech je možné odvodit argumenty typu šablony a proto není nutné explicitně zadávat.
+Šablona funkce je podobná šabloně třídy; vygeneruje konkrétní funkce založené na argumentech šablony. V mnoha případech šablona dokáže odvodit argumenty typu, a proto není nutné je explicitně zadat.
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -178,31 +178,31 @@ auto a = Add2(3.13, 2.895); // a is a double
 auto b = Add2(string{ "Hello" }, string{ " World" }); // b is a std::string
 ```
 
-Další informace najdete v tématu [šablony funkcí](../cpp/function-templates.md)
+Další informace najdete v tématu [šablony funkcí](../cpp/function-templates.md) .
 
-## <a name="function-parameters-and-arguments"></a>Funkční parametry a argumenty
+## <a name="function-parameters-and-arguments"></a>Parametry funkce a argumenty
 
-Funkce má seznam čárkami oddělených parametrů nula nebo více typů, z nichž každá má název, pomocí kterého byla přístupná uvnitř těla funkce. Šablona funkce může zadání dalších parametrů typem nebo hodnotou. Volající předá argumenty, které jsou konkrétní hodnoty, jejichž typy jsou kompatibilní se seznamem parametrů.
+Funkce má seznam parametrů oddělených čárkami nula nebo více typů, z nichž každý má název, ke kterému lze přistupovat uvnitř těla funkce. Šablona funkce může určovat další parametry typu nebo hodnoty. Volající předává argumenty, které jsou konkrétními hodnotami, jejichž typy jsou kompatibilní se seznamem parametrů.
 
-Výchozí argumenty jsou předány funkci podle hodnoty, což znamená, že funkce přijímá kopii objektu předávána. Pro velké objekty, vytvoření kopie může být nákladné a není vždy nutné. Způsobí argumenty, které mají být předány podle odkazu (konkrétně odkaz l-hodnota), přidejte odkaz kvantifikátor parametru:
+Ve výchozím nastavení jsou argumenty předány funkci podle hodnoty, což znamená, že funkce obdrží kopii předávaného objektu. V případě rozsáhlých objektů může být kopie náročná a není vždy nutná. Chcete-li způsobit předání argumentů odkazem (konkrétně odkaz lvalue), přidejte do parametru kvantifikátor odkazu:
 
 ```cpp
 void DoSomething(std::string& input){...}
 ```
 
-Pokud funkce upraví argument, který se předá odkazem, upraví původní objekt místní kopii. Chcete-li zabránit ve změně těchto argumentů funkce, kvalifikovat parametr jako const &:
+Když funkce upraví argument, který je předán odkazem, změní původní objekt, nikoli místní kopii. Chcete-li zabránit funkci v úpravách takového argumentu, kvalifikovat parametr jako typ const &:
 
 ```cpp
 void DoSomething(const std::string& input){...}
 ```
 
-**C++11:**  Zpracování explicitně argumenty, které jsou předávány odkaz rvalue nebo odkaz na lvalue, určíte univerzální odkaz pomocí double-ampersand na parametru:
+**C++ 11:**  Aby bylo možné explicitně zpracovat argumenty, které jsou předány odkazem rvalue-reference nebo lvalue-reference, použijte k označení univerzálního odkazu v parametru operátor Double:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
 ```
 
-Funkce deklarovaná pomocí jednoho klíčového slova **void** v deklaraci parametru seznamu nepřijímá žádné argumenty, pokud je klíčové slovo **void** je prvním a jediným členem seznamu deklarace argumentů. Argumenty typu **void** jinde v seznamu způsobí chyby. Příklad:
+Funkce deklarovaná s jedním klíčovým slovem **void** v seznamu deklarací parametrů nepřijímá žádné argumenty, pokud klíčové slovo **void** je první a jediný člen seznamu deklarace argumentů. Argumenty typu **void** jinde v seznamu způsobují chyby. Příklad:
 
 ```cpp
 
@@ -210,11 +210,11 @@ Funkce deklarovaná pomocí jednoho klíčového slova **void** v deklaraci para
 long GetTickCount( void );
 ```
 
-Všimněte si, že i když je neplatné zadat **void** argument s výjimkou uvedenou zde, typy odvozené z typu **void** (například ukazatele na **void** a pole **void**) se může objevit kdekoli v seznamu deklarace argumentů.
+Všimněte si, že v případě, že je neplatné zadat argument **void** s výjimkou zde uvedené, typy odvozené z typu **void** (například ukazatelé na typ **void** a pole typu **void**) mohou být uvedeny kdekoli v seznamu deklarace argumentů.
 
 ### <a name="default-arguments"></a>Výchozí argumenty
 
-Poslední parametrem nebo parametry v signatuře funkce může být přiřazen výchozí argument, což znamená, že volající může vynechat argument při volání funkce, pokud se chcete zadat jinou hodnotu.
+K poslednímu parametru nebo parametrům v podpisu funkce lze přiřadit výchozí argument, což znamená, že volající může při volání funkce opustit argument, pokud nechtějí zadat jinou hodnotu.
 
 ```cpp
 int DoSomething(int num,
@@ -239,11 +239,11 @@ Další informace najdete v tématu [výchozí argumenty](../cpp/default-argumen
 
 ## <a name="function-return-types"></a>Návratové typy funkcí
 
-Funkce nesmí vracet jiné funkci nebo předdefinované pole. však může vrátit odkazy na tyto typy nebo *lambda*, která vytvoří objekt funkce. Kromě těchto případech funkce může vrátit hodnotu typu, který je v oboru nebo ji může vracet žádnou hodnotu, v takovém případě návratový typ je **void**.
+Funkce nesmí vracet jinou funkci ani předdefinované pole; může však vracet ukazatele na tyto typy nebo *lambda*, který vytváří objekt funkce. S výjimkou těchto případů může funkce vracet hodnotu jakéhokoli typu, který je v oboru, nebo nemůže vracet žádnou hodnotu. v takovém případě návratový typ je **void**.
 
 ### <a name="trailing-return-types"></a>Koncové návratové typy
 
-"Běžné" návratový typ je umístěná na levé straně signatura funkce. A *koncovým návratovým typem* se nachází na pravé straně většina podpisu a předchází -> – operátor. Koncové návratové typy jsou zvláště užitečné v rámci šablony funkce, když typ vrácené hodnoty, závisí na parametry šablony.
+"Běžný" návratový typ se nachází na levé straně podpisu funkce. *Koncový návratový typ* je umístěn na pravé straně podpisu a předchází operátor->. Koncové návratové typy jsou obzvláště užitečné v šablonách funkcí, když typ návratové hodnoty závisí na parametrech šablony.
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -253,19 +253,19 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 }
 ```
 
-Když **automaticky** se používá ve spojení s koncovým návratovým typem, stačí slouží jako zástupný symbol pro libovolné decltype výraz vytvoří a sám není provádí odvození typu.
+Pokud se používá **automaticky** ve spojení s koncovým návratovým typem, slouží pouze jako zástupný symbol pro jakékoli vytvoření výrazu decltype a sám neprovede odpočet typů.
 
-## <a name="function-local-variables"></a>Lokální proměnné – funkce
+## <a name="function-local-variables"></a>Místní proměnné funkce
 
-Proměnná, která je deklarována uvnitř těla funkce se volá *lokální proměnná* nebo jednoduše *místní*. Místní hodnoty nestatických viditelné pouze uvnitř těla funkce a pokud jsou deklarovány v zásobníku dostanou mimo rozsah při ukončení funkce. Při vytvoření místní proměnné a vrácení podle hodnoty, kompilátor může obvykle provádět optimalizaci návratovou hodnotu, aby operace zbytečnému kopírování. Pokud vrátíte lokální proměnná podle odkazu, kompilátor vygeneruje upozornění, protože jakýkoliv pokus o volajícím použít tento odkaz dojde po zlikvidování místní.
+Proměnná, která je deklarována uvnitř těla funkce, se nazývá *místní proměnná* nebo pouze *místní*. Nestatické lokální hodnoty jsou viditelné pouze uvnitř těla funkce a pokud jsou deklarovány v zásobníku, přecházejí mimo rozsah, když funkce skončí. Když vytvoříte místní proměnnou a vrátíte ji podle hodnoty, kompilátor může obvykle provést *optimalizaci pojmenované návratové hodnoty* , aby se předešlo zbytečným operacím kopírování. Pokud vrátíte místní proměnnou odkazem, kompilátor vydá upozornění, protože všechny pokusy volajícího k použití tohoto odkazu budou provedeny po zničení místní proměnné.
 
-V jazyce C++ mohou být deklarovány místní proměnné jako statické. Proměnná je viditelná jen v uvnitř těla funkce, ale pro všechny instance funkce existuje jedna kopie proměnné. Místní statické objekty jsou při ukončení zrušeny pomocí `atexit`. Nebyl-li statický objekt vytvořen, protože průběh řízení aplikace obešel jeho deklaraci, není proveden žádný pokus o zrušení objektu.
+C++ Místní proměnná může být deklarována jako statická. Proměnná je viditelná pouze uvnitř těla funkce, ale jedna kopie proměnné existuje pro všechny instance funkce. Místní statické objekty jsou při ukončení zrušeny pomocí `atexit`. Nebyl-li statický objekt vytvořen, protože průběh řízení aplikace obešel jeho deklaraci, není proveden žádný pokus o zrušení objektu.
 
-##  <a name="type_deduction"></a> Odvození typu v návratové typy (C ++ 14)
+##  <a name="type_deduction"></a>Srážky typu v návratových typech (C++ 14)
 
-V C ++ 14, můžete použít **automaticky** abyste instruovali kompilátor odvodit návratový typ z těla funkce bez zadání koncovým návratovým typem. Všimněte si, že **automaticky** vždy odvodí k vrácení podle hodnot. Použití `auto&&` abyste instruovali kompilátor k odvození odkaz.
+V C++ 14 můžete použít **auto** k instruování kompilátoru, aby odvodit návratový typ z těla funkce bez nutnosti zadat koncový návratový typ. Všimněte si, že **auto** vždy se odvodit na hodnotu vrácení podle hodnoty. Použijte `auto&&` k instruování kompilátoru, aby odvodit odkaz.
 
-V tomto příkladu **automaticky** jako kopii nekonstantní hodnotu Součet lhs a zarovnání indirekce rhs se dá odvodit.
+V tomto příkladu bude **automaticky** odvozena jako nekonstantní kopie hodnoty součtu LHS a zarovnání indirekce rhs.
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -275,9 +275,9 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 }
 ```
 
-Všimněte si, že **automaticky** const-ness typu odvodí se nezachová. Pro předávání, vrácená hodnota je potřeba zachovat const-ness nebo ref-ness z jejích argumentů funkce, můžete použít **decltype(auto)** – klíčové slovo, které používá **decltype** zadejte pravidla odvozování a uchovává všechny informace o typu. **Položka decltype(Auto)** může sloužit jako běžný návratovou hodnotu na levé straně, nebo jako koncové návratové hodnoty.
+Všimněte si, že **auto** nezachovává const-Ness typu, který se odvodit. Pro předávání funkcí, jejichž návratová hodnota musí zachovat const-Ness nebo ref-Ness svých argumentů, lze použít klíčové slovo **decltype (auto)** , které používá pravidla odvození typu **decltype** a uchovává všechny informace o typu. **decltype (auto)** se dá použít jako obvyklá návratová hodnota na levé straně nebo jako koncová návratová hodnota.
 
-Následující příklad (na základě kódu z [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)), zobrazí **decltype(auto)** používá k umožnění dokonalé předávání argumentů funkce v návratovém typu, který není znám, dokud se šablony vytvořit instanci.
+Následující příklad (založený na kódu z [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)) zobrazuje **decltype (auto)** , který se používá k umožnění dokonalého předávání argumentů funkce v návratovém typu, který není znám, dokud není vytvořena instance šablony.
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -293,14 +293,13 @@ template<typename F, typename Tuple = tuple<T...>,
 {
     return apply_(std::forward<F>(f), std::forward<Tuple>(args), Indices());
 }
-}
 ```
 
-## <a name="multi_val"></a> Vrátí více hodnot z funkce
+## <a name="multi_val"></a>Vrácení více hodnot z funkce
 
 Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
 
-1. Zapouzdření hodnoty v objektu s názvem třídy nebo struktury. Vyžaduje definici třídy nebo struktury viditelný pro volající:
+1. Zapouzdřuje hodnoty v pojmenované třídě nebo objektu struktury. Vyžaduje, aby byla definice třídy nebo struktury viditelná pro volajícího:
 
     ```cpp
     #include <string>
@@ -329,7 +328,7 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
     }
     ```
 
-1. Vrátí objekt std::tuple nebo std::pair:
+1. Vrátí std:: Tuple nebo std::p Air objekt:
 
     ```cpp
     #include <tuple>
@@ -363,7 +362,7 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
     }
     ```
 
-1. **Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Použijte strukturovaných vazeb. Výhodou strukturované vazby je, že proměnné, které ukládají vrácené hodnoty jsou inicializovány ve stejnou dobu, které jsou deklarovány, což v některých případech může být mnohem efektivnější. V tomto prohlášení –`auto[x, y, z] = f();`--závorky představují a inicializována názvy, které jsou v oboru pro daný blok celou funkci.
+1. **Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Používejte strukturované vazby. Výhodou strukturovaných vazeb je, že proměnné, které ukládají vrácené hodnoty, jsou inicializovány ve stejnou dobu, kdy jsou deklarovány, což v některých případech může být výrazně efektivnější. V tomto příkazu--`auto[x, y, z] = f();`-závorky zavádí a inicializuje názvy, které jsou v oboru pro celý blok funkce.
 
     ```cpp
     #include <tuple>
@@ -403,13 +402,13 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
     }
     ```
 
-1. Kromě použití samotnou návratovou hodnotu, můžete "vrátit" hodnoty tak, že definujete libovolný počet parametry se mají použít pass-by-reference, takže můžete upravit nebo inicializace hodnoty objekty, které poskytuje volající funkci. Další informace najdete v tématu [argumenty funkce typu odkazu](reference-type-function-arguments.md).
+1. Kromě použití samotné návratové hodnoty můžete "vracet" hodnoty definováním libovolného počtu parametrů pro použití předávacího odkazu, aby funkce mohla upravovat nebo inicializovat hodnoty objektů, které poskytuje volající. Další informace naleznete v tématu [argumenty funkce typu odkazu](reference-type-function-arguments.md).
 
 ## <a name="function-pointers"></a>Ukazatele na funkce
 
-Jazyk C++ podporuje stejným způsobem jako jazyk C ukazatelů na funkce. Ale více typově bezpečné alternativou je obvykle použití objektu funkce.
+C++podporuje ukazatele na funkce stejným způsobem jako jazyk C. Nicméně další typově bezpečná alternativa obvykle používá objekt funkce.
 
-Dále je doporučeno **typedef** použít k deklarování aliasu pro typ ukazatele na funkci, pokud deklarace funkce vracející typ ukazatele funkce.  Příklad
+Doporučuje se, aby se **definice typedef** použila k deklarování aliasu pro typ ukazatele na funkci, pokud deklarujete funkci, která vrací typ ukazatele na funkci.  Příklad
 
 ```cpp
 typedef int (*fp)(int);
