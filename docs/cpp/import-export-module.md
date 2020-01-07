@@ -1,6 +1,6 @@
 ---
 title: modul, import, export
-ms.date: 07/15/2019
+ms.date: 12/12/2019
 f1_keywords:
 - module_cpp
 - import_cpp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Použijte příkaz Import pro přístup k typům a funkcím definovaným v zadaném modulu.
-ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+description: Deklarace import a export použijte pro přístup k a k publikování typů a funkcí definovaných v zadaném modulu.
+ms.openlocfilehash: ae28bce8e06840cafa5c92521f6e9a62aa5bfde6
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273627"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301454"
 ---
 # <a name="module-import-export"></a>modul, import, export
 
-Klíčová slova **modul**, **Import**a **Export** jsou k dispozici v c++ 20 a vyžadují přepínač kompilátoru [/Experimental: Module](../build/reference/experimental-module.md) společně s [/std: C + + nejnovější](../build/reference/std-specify-language-standard-version.md). Další informace najdete v tématu [Přehled modulů v C++ ](modules-cpp.md).
+Deklarace **modulu**, **importu**a **exportu** jsou k dispozici v c++ 20 a vyžadují přepínač kompilátoru [/Experimental: Module](../build/reference/experimental-module.md) společně s [/std: C + + nejnovější](../build/reference/std-specify-language-standard-version.md). Další informace najdete v tématu [Přehled modulů v C++ ](modules-cpp.md).
 
 ## <a name="module"></a>module
 
-Pomocí příkazu **Module** na začátku souboru implementace modulu určete, že obsah souboru patří do pojmenovaného modulu. 
+Umístěte deklaraci **modulu** na začátek souboru implementace modulu, abyste určili, že obsah souboru patří do pojmenovaného modulu.
 
 ```cpp
 module ModuleA;
@@ -31,7 +31,7 @@ module ModuleA;
 
 ## <a name="export"></a>export
 
-Použijte příkaz **exportovat modul** pro soubor primárního rozhraní modulu, který musí mít příponu **. IXX**:
+Použijte deklaraci **modulu exportu** pro soubor primárního rozhraní modulu, který musí mít příponu **. IXX**:
 
 ```cpp
 export module ModuleA;
@@ -66,11 +66,11 @@ void main() {
 }
 ```
 
-Klíčové slovo **Export** se nemusí zobrazit v souboru implementace modulu. Při použití modifikátoru **exportu** pro název oboru názvů jsou exportovány všechny názvy v oboru názvů.
+Klíčové slovo **Export** se nemusí zobrazit v souboru implementace modulu. Pokud je pro název oboru názvů použit **Export** , jsou exportovány všechny názvy v oboru názvů.
 
 ## <a name="import"></a>import
 
-Pomocí příkazu **Import** můžete nastavit, aby se v programu zobrazovaly názvy modulů. Příkaz import musí být uveden za příkazem Module a za #include direktivami, ale před všemi deklaracemi v souboru.
+Pomocí deklarace **importu** můžete v programu zviditelnit názvy modulů. Deklarace importu se musí vyskytovat po deklaraci modulu a za direktivami #include, ale před všemi deklaracemi v souboru.
 
 ```cpp
 module ModuleA;
@@ -85,6 +85,45 @@ template <class T>
 class Baz
 {...};
 ```
+
+## <a name="remarks"></a>Poznámky
+
+**Import** i **modul** se považují za klíčová slova pouze v případě, že se zobrazují na začátku logického řádku:
+
+```cpp
+
+// OK:
+module ;
+module module-name
+import :
+import <
+import "
+import module-name
+export module ;
+export module module-name
+export import :
+export import <
+export import "
+export import module-name
+
+// Error:
+int i; module ;
+```
+
+**Specifické pro společnost Microsoft**
+
+V Microsoftu C++jsou tokeny **importu** a **modul** vždycky identifikátory a klíčová slova nikdy, když se používají jako argumenty pro makro.
+
+### <a name="example"></a>Příklad
+
+```cpp
+#define foo(…) __VA_ARGS__
+foo(
+import // Always an identifier, never a keyword
+)
+```
+
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,16 +1,16 @@
 ---
 title: Reference k operátorům MASM
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395215"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318758"
 ---
 # <a name="masm-operators-reference"></a>Reference k operátorům MASM
 
@@ -68,7 +68,7 @@ ms.locfileid: "74395215"
 |[EQ (rovná se)](operator-eq.md)|[GE (větší nebo rovno)](operator-ge.md)|[GT (je větší než)](operator-gt.md)|
 |[LE (menší nebo rovno)](operator-le.md)|[LT (je menší než)](operator-lt.md)|[NE (není rovno)](operator-ne.md)|
 
-## <a name="segment"></a>Letu
+## <a name="segment"></a>Segment
 
 |||
 |-|-|
@@ -77,7 +77,7 @@ ms.locfileid: "74395215"
 |[POSUN (relativní Posun segmentu)](operator-offset.md)|[SECTIONREL – (relativní posun oddílu)](operator-sectionrel.md)|
 |[SEG – (načíst segment)](operator-seg.md)||
 
-## <a name="type"></a>Typ
+## <a name="type"></a>Type
 
 ||||
 |-|-|-|
@@ -90,4 +90,5 @@ ms.locfileid: "74395215"
 
 ## <a name="see-also"></a>Viz také:
 
-[Microsoft Macro Assembler – referenční dokumentace](microsoft-macro-assembler-reference.md)<br/>
+[Referenční informace k Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)\
+[Gramatika BNF MASM](masm-bnf-grammar.md)
