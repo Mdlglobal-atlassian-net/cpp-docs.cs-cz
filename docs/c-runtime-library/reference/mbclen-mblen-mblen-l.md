@@ -1,6 +1,7 @@
 ---
 title: _mbclen, mblen, _mblen_l, _mbclen_l
-ms.date: 01/22/2019
+description: Popisuje funkce knihovny CRT (Microsoft C Runtime Library) _mbclen, mblen, _mblen_l a _mbclen_l.
+ms.date: 01/08/2020
 api_name:
 - _mbclen
 - mblen
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 96775f513b33eb407981480c17cb609dd85383f6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4676d850448af386a5aface69f616a4ac6f85cbf
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952567"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755064"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
@@ -79,29 +80,33 @@ int _mblen_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+\ *jazyka c*
 Vícebajtový znak.
 
-*mbstr*<br/>
+*mbstr*\
 Adresa bajtové sekvence vícebajtových znaků.
 
-*výpočtu*<br/>
+*počet*\
 Počet bajtů, které mají být zkontrolovány.
 
-*jazyka*<br/>
+\ *národního prostředí*
 Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbclen** vrátí 1 nebo 2, podle toho, zda vícebajtový znak *c* je dlouhý 1 nebo 2 bajty. Pro **_mbclen**se nevrátí žádná chyba. Pokud *mbstr* není **null**, **mblen** vrátí délku vícebajtového znaku (v bajtech). Pokud má Mbstr **hodnotu null** nebo odkazuje na znak null s velkým znakem, **mblen** vrátí hodnotu 0. Pokud objekt, na který *mbstr* odkazuje, netvoří platný vícebajtový znak v rámci prvních znaků *Count* , **mblen** vrátí hodnotu-1.
+**_mbclen** a **_mbclen_l** vrací 1 nebo 2 podle délky vícebajtového znaku *c*. Funkce vždycky vrátí 1 pro UTF-8, ať už je *c* vícebajtový nebo ne. Pro **_mbclen**se nevrátila žádná chyba.
+
+Pokud *mbstr* není **null**, **mblen** a **_mblen_l** vrátí délku vícebajtového znaku (v bajtech). Funkce **mblen** a **_mblen_l** fungují správně v kódování UTF-8 a mohou vracet hodnotu mezi 1 a 3. Pokud má Mbstr **hodnotu null** (nebo odkazuje na znak null s velkým znakem), **mblen** a **_mblen_l** vrátí 0. Objekt, na který odkazuje *mbstr* , musí tvořit platný vícebajtový znak v rámci prvních znaků *Count* nebo **mblen** a **_mblen_l** Return-1.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbclen** vrací délku vícebajtového znaku *c*v bajtech. Pokud *c* neodkazuje na vedoucí bajt vícebajtového znaku, jak je určeno implicitním voláním **_ismbblead**, výsledek **_mbclen** je nepředvídatelné.
+Funkce **_mbclen** vrací délku vícebajtového znaku *c*v bajtech. Pokud *c* neodkazuje na vedoucí bajt vícebajtového znaku (jak je určeno implicitním voláním [_ismbblead](ismbblead-ismbblead-l.md), výsledek **_mbclen** je nepředvídatelné.
 
-**mblen** vrací délku v bajtech *mbstr* , pokud se jedná o platný vícebajtový znak a určuje platnost vícebajtových znaků přidružených k znakové stránce. **mblen** prověřuje *počet* nebo méně bajtů obsažených v *mbstr*, ale ne více než **MB_CUR_MAX** bajtů.
+**mblen** vrátí délku v bajtech *mbstr* , pokud se jedná o platný vícebajtový znak. Také určuje, že je k znakové stránce přiřazena Vícebajtová znaková doba. **mblen** prověřuje *počet* nebo méně bajtů obsažených v *mbstr*, ale ne více než **MB_CUR_MAX** bajtů.
 
-Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí. **_L** přípony se chovají stejně, ale používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí. Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí. Verze **_l** s příponou se chovají stejně, ale používají předaný parametr národního prostředí. Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) and [locale](../../c-runtime-library/locale.md).
+
+**_mbclen**, **_mblen_l**a **_Mbclen_l** jsou specifické pro společnost Microsoft, nikoli součástí standardní knihovny jazyka C. Nedoporučujeme je používat tam, kde chcete použít přenosný kód. V případě kompatibility Standard C použijte místo toho **mblen** nebo **mbrlen** .
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -160,8 +165,9 @@ Length in bytes of NULL multibyte character 0: 0
 
 ## <a name="see-also"></a>Viz také:
 
-[Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)<br/>
-[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
+\ [klasifikace znaků](../../c-runtime-library/character-classification.md)
+\ [národního prostředí](../../c-runtime-library/locale.md)
+[Interpretace vícebajtových znakových sekvencí](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
+[_mbccpy _mbccpy_l](mbccpy-mbccpy-l.md)\
+[mbrlen](mbrlen.md)\
+[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
