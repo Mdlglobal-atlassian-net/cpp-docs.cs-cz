@@ -3,12 +3,12 @@ title: 'Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů 
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 8288fc11fd53fdef423a57d0faefbaa7c06326aa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500433"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791667"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe
 
@@ -24,7 +24,7 @@ Tyto nástroje se vyžadují jenom k analýze vlastních souborů. winmd. Soubor
 
 ## <a name="location-of-the-tools"></a>Umístění nástrojů
 
-Ve výchozím nastavení se v [Windows 8.1, nástrojů winmdidl. exe a midlrt. exe nachází v adresáři C:\Program Files (x86)\\\Windows Kits\8.1. Verze nástrojů jsou také k dispozici ve složkách \bin\x86\ a \bin\x64\.
+Ve výchozím nastavení se v [Windows 8.1, nástrojů winmdidl. exe a midlrt. exe nachází v adresáři C:\Program Files (x86) \Windows Kits\8.1\\. Verze nástrojů jsou také k dispozici ve složkách \bin\x86\ a \bin\x64\.
 
 ## <a name="winmdidl-command-line-arguments"></a>Argumenty příkazového řádku nástrojů winmdidl
 
@@ -41,8 +41,8 @@ Nepoužívá se.
 **/time**<br/>
 Zobrazí celkovou dobu provádění ve výstupu konzoly.
 
-**/OutDir:** <em>adresář</em><br/>
-Určuje výstupní adresář. Pokud cesta obsahuje mezery, použijte uvozovky. Výchozí výstupní adresář je  *\<jednotka >* : \Users\\ *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12,0\\.
+**/OutDir:** <em>dir</em><br/>
+Určuje výstupní adresář. Pokud cesta obsahuje mezery, použijte uvozovky. Výchozí výstupní adresář je *\<jednotka >* : \users\\ *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \microsoft Visual Studio 12,0\\.
 
 **/banner:** <em>soubor</em><br/>
 Určuje soubor, který obsahuje vlastní text, který se má předřadit do výchozí zprávy o autorských právech a číslo verze nástrojů winmdidl v horní části generovaného souboru. idl. Pokud cesta obsahuje mezery, použijte uvozovky.
@@ -65,11 +65,11 @@ Následující příklad ukazuje příkaz nástrojů winmdidl na příkazovém �
 
 Následující příklad ukazuje zobrazení konzoly z nástrojů winmdidl, které indikuje, že operace byla úspěšná.
 
-**Generování c:\users\giraffe\documents\\\Test_for_winmdidl.idl**
+**Generování c:\users\giraffe\documents\\\ Test_for_winmdidl. idl**
 
 V dalším kroku se midlrt spustí na vygenerovaném souboru IDL. Všimněte si, že argument **metadata_dir** je zadán za názvem souboru. idl. Cesta k \WinMetadata\ je povinná – jedná se o umístění pro Windows. winmd.
 
-`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
+`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\username\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
 ## <a name="remarks"></a>Poznámky
 

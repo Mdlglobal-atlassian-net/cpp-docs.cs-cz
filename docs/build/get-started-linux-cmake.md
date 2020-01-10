@@ -1,15 +1,14 @@
 ---
 title: Vytváření projektů v jazyce C++ pro různé platformy v sadě Visual Studio
 description: Jak nastavit, zkompilovat a ladit C++ open source projekt cmake v sadě Visual Studio, který cílí na Linux i Windows.
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303252"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791760"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Kurz: vytváření C++ projektů pro různé platformy v aplikaci Visual Studio
 
@@ -44,16 +43,16 @@ V tomto kurzu se naučíte:
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * Můžete zobrazit možnosti spouštění skriptu pomocí `-–help`. Doporučujeme použít `–prefix` k určení instalace v cestě **/usr/local** , protože to je výchozí umístění, kde aplikace Visual Studio hledá cmake. Následující příklad ukazuje skript pro Linux x86_64. Pokud používáte jinou cílovou platformu, změňte ji podle potřeby.
+  * Můžete zobrazit možnosti spouštění skriptu pomocí `-–help`. Doporučujeme použít `–prefix` k určení instalace v cestě **/usr** , protože **/usr/bin** je výchozí umístění, kde aplikace Visual Studio hledá cmake. Následující příklad ukazuje skript pro Linux x86_64. Pokud používáte jinou cílovou platformu, změňte ji podle potřeby.
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * Git pro Windows nainstalovaný na počítači s Windows.
-* Účet GitHubu.
+* Účet GitHub.
 
-## <a name="clone-an-open-source-cmake-project-from-github"></a>naklonování open source projektu CMake z GitHubu
+## <a name="clone-an-open-source-cmake-project-from-github"></a>Naklonování open source projektu CMake z GitHubu
 
 V tomto kurzu se používá sada odrážek sady SDK na GitHubu. Poskytuje detekci kolizí a simulaci fyziky pro mnoho aplikací. Sada SDK obsahuje ukázkové spustitelné programy, které se zkompiluje a spouštějí bez nutnosti psát další kód. V tomto kurzu se nemění žádný zdrojový kód ani skripty sestavení. Začněte tím, že naklonujte úložiště *bullet3* z GitHubu na počítači, na kterém máte nainstalovanou aplikaci Visual Studio.
 

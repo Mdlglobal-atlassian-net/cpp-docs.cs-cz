@@ -2,15 +2,13 @@
 layout: HubPage
 title: Dokumentace C++ k sadě Visual
 description: Naučte se používat C++ k vývoji aplikací, služeb a nástrojů pro vaše platformy a zařízení.
-author: mikeblome
-ms.author: mblome
 ms.topic: hub-page
-ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177500"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793794"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -91,7 +89,7 @@ ms.locfileid: "70177500"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Vývoj pro univerzální platformu Windows</h3>
+                                                    <h3>Vývoj pro Univerzální platformu Windows</h3>
                                                     <p>Vývoj aplikací pro Univerzální platforma Windows (UWP) pomocí nástroje C++.</p>
                                                 </div>
                                             </div>
@@ -234,7 +232,7 @@ ms.locfileid: "70177500"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sestavení</h3>
+                                                    <h3>Sestavit</h3>
                                                     <p>Zkompilujte a propojte svůj kód a optimalizujte maximální propustnost.</p>
                                                 </div>
                                             </div>
@@ -253,7 +251,7 @@ ms.locfileid: "70177500"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Ladění</h3>
+                                                    <h3>Ladit</h3>
                                                     <p>Ladění C++ kódu pomocí ladicího programu sady Visual Studio.</p>
                                                 </div>
                                             </div>
@@ -329,7 +327,7 @@ ms.locfileid: "70177500"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Portování a upgradování</h3>
+                                                    <h3>Portování a upgrade</h3>
                                                     <p>Upgradujte na nejnovější verzi sady Visual Studio a migrujte starší aplikace na moderní platformy.</p>
                                                 </div>
                                             </div>
@@ -378,7 +376,7 @@ ms.locfileid: "70177500"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Rozšíření součásti</h3>
-                                                    <p>Rozšíření součásti na C++: C++/CLI pro programování .NET a C++/CX pro programování v UWP.</p>
+                                                    <p>Rozšíření komponent na C++: C++/CLI pro programování .NET a C++/CX pro programování UWP.</p>
                                                 </div>
                                             </div>
                                         </div>
