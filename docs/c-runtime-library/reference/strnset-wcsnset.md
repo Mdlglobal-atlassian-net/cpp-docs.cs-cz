@@ -1,6 +1,6 @@
 ---
 title: strnset, wcsnset
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - strnset
 - wcsnset
@@ -26,13 +26,15 @@ helpviewer_keywords:
 - strnset function
 - wcsnset function
 ms.assetid: e7868ac9-dc34-4606-bd3c-0fb2e7c51631
-ms.openlocfilehash: ab509e14df9defbb7bf17d373a27069263ab66df
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1f00410dc15a329d6381af893eab44bb938f248
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946949"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301090"
 ---
 # <a name="strnset-wcsnset"></a>strnset, wcsnset
 
-Tyto funkce POSIX jsou zastaralé. Místo toho použijte C++ ISO vyhovující [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) nebo Security-Enhanced [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s a](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md) _mbsnset_s_l.
+Názvy funkcí specifických pro společnost Microsoft `strnset` a `wcsnset` jsou zastaralé aliasy pro [_strnset a _wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) funkce. Ve výchozím nastavení generují [Upozornění kompilátoru (úroveň 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Názvy jsou zastaralé, protože nenásledují standardní pravidla jazyka C pro názvy specifické pro implementaci. Funkce se ale pořád podporují.
+
+Doporučujeme místo toho použít [_strnset a _wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) nebo [_strnset_s a _wcsnset_s](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md) funkce zabezpečení vylepšené zabezpečením. Nebo můžete tyto názvy funkcí i nadále používat a zakázat upozornění. Další informace najdete v tématu vypnutí názvů funkcí [Upozornění](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) a [funkce POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
