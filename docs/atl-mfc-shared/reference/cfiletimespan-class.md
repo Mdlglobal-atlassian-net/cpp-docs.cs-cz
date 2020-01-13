@@ -1,6 +1,7 @@
 ---
 title: CFileTimeSpan – třída
-ms.date: 01/06/2020
+description: Třída knihovny ATL (Active Template Library) a knihovna MFC (Microsoft Foundation Classes) CFileTimeSpan spravuje časové intervaly v jednotkách časových jednotek.
+ms.date: 01/10/2020
 f1_keywords:
 - CFileTimeSpan
 - ATLTIME/ATL::CFileTimeSpan
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 9220ed8373e78db727b43ecb59880dcfbcc98f96
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 89d95759b11ff7e52c2a8fa75cf94f7b7b81fa36
+ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755061"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75914384"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan – třída
 
@@ -61,7 +62,7 @@ class CFileTimeSpan
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje metody pro zpracování relativních časových období v jednotkách, které systém souborů používá. Tyto jednotky se často používají v operacích týkajících se vytvoření, posledního otevření nebo poslední změny souboru. Metody této třídy se často používají ve spojení s objekty [třídy CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md) .
+Třída `CFileTimeSpan` poskytuje metody pro zpracování relativních časových období v jednotkách, které systém souborů používá. Tyto jednotky se často používají při operacích se soubory, jako je například vytvoření souboru, poslední otevření nebo Poslední změna. Metody této třídy se často používají ve spojení s objekty [třídy CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md) .
 
 ## <a name="example"></a>Příklad
 
@@ -87,11 +88,11 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 Existující objekt `CFileTimeSpan`.
 
 *nSpan*\
-Časové období v milisekundách.
+Časové období v jednotkách časových jednotek.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt `CFileTimeSpan` lze vytvořit pomocí existujícího objektu `CFileTimeSpan` nebo vyjádřen jako hodnota 64. Výchozí konstruktor nastaví časový rozsah na 0.
+Objekt `CFileTimeSpan` lze vytvořit pomocí existujícího objektu `CFileTimeSpan` nebo vyjádřený jako 64 hodnota v 100-nanosekund časových jednotek. Další informace najdete v tématu [CFileTime](cfiletime-class.md). Výchozí konstruktor nastaví časový rozsah na 0.
 
 ## <a name="gettimespan"></a>CFileTimeSpan:: GetTimeSpan
 
@@ -103,7 +104,7 @@ LONGLONG GetTimeSpan() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí časové rozpětí v milisekundách.
+Vrátí časové rozpětí v jednotkách času 100-nanosekund. Další informace najdete v tématu [CFileTime](cfiletime-class.md).
 
 ## <a name="operator_-"></a>CFileTimeSpan:: operator-
 
@@ -303,7 +304,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 ### <a name="parameters"></a>Parametry
 
 *nSpan*\
-Nová hodnota pro časový rozsah v jednotkách 100 – nanosekund. Další informace najdete v tématu [CFileTime](cfiletime-class.md).
+Nová hodnota pro časové období v jednotkách času v 100. nanosekund. Další informace najdete v tématu [CFileTime](cfiletime-class.md).
 
 ## <a name="see-also"></a>Viz také:
 
