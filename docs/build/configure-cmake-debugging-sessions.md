@@ -1,16 +1,25 @@
 ---
 title: Konfigurace relací ladění CMake v sadě Visual Studio
-ms.date: 03/21/2019
+description: Popisuje, jak použít Visual Studio ke konfiguraci nastavení ladicího programu CMake.
+ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 41f53c0c3ea46a8a1aa11215968aaee6c13c2dea
-ms.sourcegitcommit: e33126222c418daf977533ea9e2819d99e0d7b8d
+ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
+ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72534101"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946815"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurace ladicích relací CMake
+
+::: moniker range="vs-2015"
+
+Nativní podpora CMake je k dispozici v sadě Visual Studio 2017 a novějších.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 Všechny spustitelné cíle CMake se zobrazí v rozevíracím seznamu **spouštěcí položka** na panelu nástrojů **Obecné** . Chcete-li spustit relaci ladění, stačí vybrat jednu a spustit ladicí program.
 
@@ -24,7 +33,15 @@ Potom klikněte pravým tlačítkem na jakýkoli spustitelný soubor a vyberte *
 
 ## <a name="customize-debugger-settings"></a>Přizpůsobení nastavení ladicího programu
 
-Chcete-li přizpůsobit nastavení ladicího programu pro kterýkoli spustitelný cíl CMake v projektu, klikněte pravým tlačítkem na konkrétní soubor CMakeLists. txt a vyberte **nastavení ladění a spuštění**. (Nebo vyberte cíl v **zobrazení cíle** v **Průzkumník řešení**.) Když v podnabídce vyberete cíl CMake, vytvoří se soubor s názvem **Launch. vs. JSON** . Tento soubor se předem naplní informacemi o vybraném cíli CMake a umožňuje zadat další parametry, jako jsou argumenty programu nebo typ ladicího programu. Chcete-li odkazovat na libovolný klíč v souboru **CMakeSettings. JSON** , před ním `cmake.` v souboru **Launch. vs. JSON**. Následující příklad ukazuje jednoduchý soubor **Launch. vs. JSON** , který se načte do hodnoty `remoteCopySources` klíč v souboru **CMakeSettings. JSON** pro aktuálně vybranou konfiguraci:
+Nastavení ladicího programu můžete přizpůsobit pro libovolný spustitelný cíl CMake v projektu v souboru s názvem *Launch. vs. JSON*. Tento soubor obsahuje tři vstupní body:
+
+- Chcete-li upravit konfiguraci ladění specifickou pro svůj aktivní cíl ladění, vyberte možnost **ladit > nastavení ladění a spouštění pro $ {activeDebugTarget}** v hlavní nabídce. Pokud nemáte vybraný aktivní cíl, tato možnost bude šedá.
+
+- Přejděte do **zobrazení cíle** v Průzkumník řešení. Potom klikněte pravým tlačítkem na cíl ladění a vyberte **nastavení ladění a spouštění** , abyste mohli upravit konfiguraci ladění specifickou pro vybraný cíl.
+
+- Klikněte pravým tlačítkem na kořenový CMakeLists. txt a vyberte **nastavení ladění a spuštění** , aby se otevřelo dialogové okno **Vybrat ladicí program** . V dialogovém okně můžete přidat konfiguraci ladění, ale musíte ručně zadat cíl CMake, který se má vyvolat prostřednictvím vlastnosti `projectTarget`.
+
+Chcete-li odkazovat na libovolný klíč v souboru *CMakeSettings. JSON* , před ním `cmake.` v souboru *Launch. vs. JSON*. Následující příklad ukazuje jednoduchý soubor *Launch. vs. JSON* , který se načte do hodnoty `remoteCopySources` klíč v souboru *CMakeSettings. JSON* pro aktuálně vybranou konfiguraci:
 
 ```json
 {
@@ -42,40 +59,141 @@ Chcete-li přizpůsobit nastavení ladicího programu pro kterýkoli spustiteln�
 }
 ```
 
-Po uložení souboru **Launch. vs. JSON** se v rozevíracím seznamu **položka po spuštění** vytvoří položka s novým názvem. Úpravou souboru **Launch. vs. JSON** můžete vytvořit tolik konfigurací ladění, kolik chcete pro libovolný počet cílů cmake.
+Při uložení souboru *Launch. vs. JSON* sada Visual Studio vytvoří v rozevíracím seznamu **spouštěcí položky** položku pro nový název. Soubor *Launch. vs. JSON* můžete upravit tak, aby bylo možné vytvořit více konfigurací ladění pro libovolný počet cílů cmake.
 
-## <a name="support-for-cmakesettings-variables"></a>Podpora pro proměnné CMakeSettings
+## <a name="launchvsjson-reference"></a>Odkaz Launch. vs. JSON
 
- **Launch. vs. JSON** podporuje proměnné deklarované v **CMakeSettings. JSON** (viz níže) a ty, které se vztahují k aktuálně vybrané konfiguraci. Má také klíč s názvem `currentDir`, který nastaví aktuální adresář aplikace pro spuštění pro místní projekt:
+Pro podporu všech scénářů ladění existuje mnoho vlastností *Launch. vs. JSON* . Následující vlastnosti jsou společné pro všechny konfigurace ladění, vzdálené i místní:
+
+- `projectTarget`: Určuje cíl CMake, který se má vyvolat při sestavování projektu. Sada Visual Studio automaticky vyplní tuto vlastnost, pokud zadáte *Launch. vs. JSON* z **ladění > nastavení ladění a spuštění pro zobrazení $ {ActiveDebugTarget}** nebo **cíle**.
+
+- `program`: úplná cesta ke spustitelnému souboru programu ve vzdáleném systému. `${debugInfo.fullTargetPath}` sem můžete použít makro.
+
+- `args`: argumenty příkazového řádku předané programu k ladění.
+
+## <a name="launchvsjson-reference-for-remote-linux-projects"></a>Odkaz Launch. vs. JSON pro vzdálené projekty Linux
+
+Následující vlastnosti jsou specifické pro **vzdálené konfigurace ladění**. [Příkazy můžete odeslat také přímo do GDB](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) a [Povolit protokolování MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging). Tyto vlastnosti umožňují zobrazit příkazy, které se odešlou do GDB, jaký výstup vrátí GDB a jak dlouho jednotlivé příkazy trvají.
+
+- `cwd`: aktuální pracovní adresář pro hledání závislostí a dalších souborů na vzdáleném počítači. Makro `${debugInfo.defaultWorkingDirectory}` lze použít. Výchozí hodnota je kořenový adresář vzdáleného pracovního prostoru, pokud není přepsán v *CMakeLists. txt*. Tato vlastnost se používá pouze pro vzdálené konfigurace. `currentDir` slouží k nastavení aktuálního adresáře spouštěné aplikace pro místní projekt.
+
+- `environment`: další proměnné prostředí, které se mají přidat do prostředí pro program s touto syntaxí:
 
 ```json
-{
-  "type": "default",
-  "project": "CMakeLists.txt",
-  "projectTarget": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
-  "name": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
-  "currentDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}"
-}
+  "environment": [
+      {
+        "name": "ENV1",
+        "value": "envvalue1"
+      },
+      {
+        "name": "ENV2",
+        "value": "envvalue2"
+      }
+    ]
 ```
 
-Když aplikaci spustíte, hodnota `currentDir` je podobná
+- `pipeArgs`: argumenty příkazového řádku předané programu kanálu ke konfiguraci připojení. K přenosu standardního vstupu/výstupu mezi Visual Studio a GDB se používá program kanálu. Příkaz `${debuggerCommand}` spustí GDB ve vzdáleném systému a dá se upravit na:
 
-```cmd
-C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
-```
+  - Exportujte hodnotu zobrazení proměnné prostředí v systému Linux. V následujícím příkladu je tato hodnota `:1`.
 
-Klíč "CWD" nastaví aktuální adresář spouštějící aplikace pro vzdálený projekt. Výchozí hodnota je $ {debugInfo. defaultWorkingDirectory}, která se vyhodnotí jako. 
+  ```json
+  "pipeArgs": [
+      "/s",
+      "${debugInfo.remoteMachineId}",
+      "/p",
+      "${debugInfo.parentProcessId}",
+      "/c",
+      "export DISPLAY=:1;${debuggerCommand}",
+      "--tty=${debugInfo.tty}"
+    ],
+  ```
 
-```cmd
-/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
-```
+  - Před spuštěním GDB spusťte skript. Ujistěte se, že jsou ve vašem skriptu nastavená oprávnění ke spuštění.
+
+    ```json
+    "pipeArgs": [
+        "/s",
+        "${debugInfo.remoteMachineId}",
+        "/p",
+        "${debugInfo.parentProcessId}",
+        "/c",
+        "/path/to/script.sh;${debuggerCommand}",
+        "--tty=${debugInfo.tty}"
+      ],
+    ```
+
+- `stopOnEntry`: logická hodnota, která určuje, zda se má po spuštění procesu přerušit. Výchozí hodnota je false.
+
+- `visualizerFile`: [soubor. Natvis](/visualstudio/debugger/create-custom-views-of-native-objects) , který se má použít při ladění tohoto procesu. Tato možnost není kompatibilní s tiskem gdb s poměrně. Nastavte také `showDisplayString` při nastavení této vlastnosti.
+
+- `showDisplayString`: logická hodnota, která povoluje řetězec zobrazení, když je zadána `visualizerFile`. Nastavení této možnosti na `true` může způsobit pomalejší výkon během ladění.
+
+- `setupCommands`: jeden nebo více příkazů gdb, které mají být spuštěny, pro nastavení základního ladicího programu.
+
+- `externalConsole`: logická hodnota, která určuje, zda je pro laděného procesu spuštěna konzola.
+
+- `miDebuggerPath`: úplná cesta k GDB. Je-li tento parametr zadán, aplikace Visual Studio nejprve vyhledá cestu k ladicímu programu.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+- `remoteMachineName`: vzdálený systém Linux, který je hostitelem nástroje GDB a programu, který se má ladit.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Následující vlastnosti lze použít k oddělení **vzdáleného sestavovacího systému** od **vzdáleného ladicího systému**. Další informace najdete v tématu [určení různých počítačů pro sestavování a ladění](../linux/deploy-run-and-debug-your-linux-project.md#cmake-projects).
+
+- `remoteMachineName`: vzdálený systém Linux, který je hostitelem nástroje GDB a programu, který se má ladit. Tato položka nemusí odpovídat vzdálenému systému Linux použitému pro sestavení zadané v *CMakeSettings. JSON*. Stisknutím **kombinace kláves CTRL + MEZERNÍK** zobrazíte seznam všech vzdálených připojení uložených ve [Správci připojení](../linux/connect-to-your-remote-linux-computer.md).
+
+- `disableDeploy`: Určuje, zda je oddělení sestavení/ladění zakázáno. Pokud je tato funkce povolená, umožňuje sestavení a ladění výskytu na dvou samostatných počítačích.
+
+- `deployDirectory`: adresář na vzdáleném ladicím počítači (určeném `remoteMachineName`), do kterého se bude spustitelný soubor zkopírovat.
+
+- `deploy`: pole pokročilých nastavení nasazení. Tato nastavení je potřeba nakonfigurovat jenom v případě, že chcete mít přesnější kontrolu nad procesem nasazení. Ve výchozím nastavení budou do vzdáleného ladicího počítače nasazeny pouze soubory, které jsou nezbytné pro ladění procesu.
+
+  - `sourceMachine`: počítač, ze kterého se bude kopírovat soubor nebo adresář. Stisknutím **kombinace kláves CTRL + MEZERNÍK** zobrazíte seznam všech vzdálených připojení uložených ve Správci připojení.
+
+  - `targetMachine`: počítač, do kterého se má zkopírovat soubor nebo adresář. Stisknutím **kombinace kláves CTRL + MEZERNÍK** zobrazíte seznam všech vzdálených připojení uložených ve Správci připojení.
+
+  - `sourcePath`: umístění souboru nebo adresáře v `sourceMachine`.
+
+  - `targetPath`: umístění souboru nebo adresáře v `targetMachine`.
+
+  - `deploymentType`: popis typu nasazení. jsou podporovány `LocalRemote` a `RemoteRemote`. `LocalRemote` znamená kopírování z místního systému souborů do vzdáleného systému zadaného `remoteMachineName` v souboru *Launch. vs. JSON*. `RemoteRemote` znamená kopírování ze vzdáleného sestavovacího systému zadaného v *CMakeSettings. JSON* do jiného vzdáleného systému zadaného v *Launch. vs. JSON*.
+
+  - `executable`: Určuje, zda je nasazený soubor spustitelný.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="attach-to-a-remote-process"></a>Připojit ke vzdálenému procesu
+
+K procesu spuštěnému v systému Linux se můžete připojit nastavením `processId` k ID procesu, ke kterému se má ladicí program připojit. Další informace najdete v tématu [řešení potíží s připojením k procesům pomocí GDB](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+## <a name="debug-on-linux-using-gdbserver"></a>Ladění v systému Linux pomocí gdbserver
+
+Visual Studio 2019 verze 16,5 Preview 1 nebo novější podporuje vzdálené ladění projektů CMake pomocí gdbserver. Další informace najdete v tématu [ladění projektů pro Linux cmake pomocí gdbserver](https://devblogs.microsoft.com/cppblog/debugging-linux-cmake-projects-with-gdbserver/).
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="see-also"></a>Viz také:
 
-[Projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md)<br/>
-[Konfigurace projektu Linux CMake](../linux/cmake-linux-project.md)<br/>
-[Připojení ke vzdálenému počítači s Linuxem](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Vlastní nastavení sestavení CMake](customize-cmake-settings.md)<br/>
-[Konfigurace ladicích relací CMake](configure-cmake-debugging-sessions.md)<br/>
-[Nasazení, spuštění a ladění projektu Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[Odkaz na předdefinovaný konfigurační odkaz CMake](cmake-predefined-configuration-reference.md)<br/>
+[Projekty cmake v sadě Visual Studio](cmake-projects-in-visual-studio.md)\
+[Konfigurace projektu Linux cmake](../linux/cmake-linux-project.md)\
+[Připojte se ke vzdálenému počítači se systémem Linux](../linux/connect-to-your-remote-linux-computer.md)\
+[Přizpůsobení nastavení buildu cmake](customize-cmake-settings.md)\
+[Konfigurace relací ladění cmake](configure-cmake-debugging-sessions.md)\
+[Nasazení, spuštění a ladění projektu pro Linux](../linux/deploy-run-and-debug-your-linux-project.md)\
+[Odkaz na předdefinovaný konfigurační odkaz CMake](cmake-predefined-configuration-reference.md)
+
+::: moniker-end
