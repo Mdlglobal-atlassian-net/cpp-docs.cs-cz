@@ -2,12 +2,12 @@
 title: Konfigurace projektu C++ pro Linux v aplikaci Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960679"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031365"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
@@ -31,7 +31,7 @@ Můžete nakonfigurovat projekt pro Linux pro cíl fyzického počítače se sys
 
 ::: moniker-end
 
-## <a name="general-settings"></a>Obecné nastavení
+## <a name="general-settings"></a>Obecná nastavení
 
 Chcete-li zobrazit možnosti konfigurace, vyberte nabídku **Vlastnosti projektu >** nebo klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a v místní nabídce vyberte možnost **vlastnosti** . Zobrazí se **Obecné** nastavení.
 
@@ -51,13 +51,13 @@ Chcete-li změnit nastavení týkající se vzdáleného počítače se systéme
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 verze 16,1**: cílovou platformu Windows pro systém Linux získáte kliknutím na šipku dolů pro **sadu nástrojů platformy** a zvolením možnosti **WSL_1_0**. Ostatní možnosti vzdálené části zmizí a cesta k výchozímu prostředí WSL se zobrazí na svém místě:
+   **Visual Studio 2019 verze 16,1**: Chcete-li cílit na podsystém Windows pro Linux, klikněte na šipku dolů pro **sadu nástrojů platformy** a vyberte možnost **WSL_1_0**. Ostatní možnosti vzdálené části zmizí a cesta k výchozímu prostředí WSL se zobrazí na svém místě:
 
    ![Počítač Build WSL](media/wsl-remote-vs2019.png)
 
    Pokud máte souběžné instalace WSL, můžete zde zadat jinou cestu. Další informace o správě více distribuce najdete v tématu [Správa a konfigurace subsystému Windows pro Linux](/windows/wsl/wsl-config#set-a-default-distribution).
 
-   Můžete zadat jiný cíl pro ladění na stránce **vlastností konfigurace** > **ladění** .
+   Na stránce **Vlastnosti konfigurace** > **ladění** můžete zadat jiný cíl pro ladění.
 
    ::: moniker-end
 
@@ -78,7 +78,7 @@ Tato část se nevztahuje na cílení na WSL.
 
 Při sestavování vzdálených systémů se zdrojové soubory ve vývojovém počítači zkopírují do počítače se systémem Linux a kompiluje se tam. Ve výchozím nastavení se všechny zdroje v projektu sady Visual Studio zkopírují do umístění nastaveného v nastavení výše. Do seznamu je však možné přidat i další zdroje, nebo je možné také vypnout kopírování zdrojů, což je výchozí hodnota pro projekt makefile.
 
-- **Zdroje ke kopírování** určují, které zdroje se zkopírují do vzdáleného počítače. Ve výchozím nastavení je **\@ (SourcesToCopyRemotely)** standardně všechny soubory zdrojového kódu v projektu, ale nezahrnuje žádné soubory assetů a prostředků, jako jsou například obrázky.
+- **Zdroje ke kopírování** určují, které zdroje se zkopírují do vzdáleného počítače. Ve výchozím nastavení je **\@(SourcesToCopyRemotely)** standardně všechny soubory zdrojového kódu v projektu, ale nezahrnuje žádné soubory assetů a prostředků, jako jsou například obrázky.
 
 - Je možné zapnout nebo vypnout kopírování **zdrojů** a povolit nebo zakázat kopírování zdrojových souborů na vzdáleném počítači.
 
@@ -95,6 +95,9 @@ Vzhledem k tomu, že se na vzdáleném počítači (nebo WSL) koná veškerá ko
 ## <a name="remote_intellisense"></a>IntelliSense pro hlavičky ve vzdálených systémech
 
 Když přidáte nové připojení ve **Správci připojení**, Visual Studio automaticky detekuje adresáře zahrnutí pro kompilátor ve vzdáleném systému. Visual Studio potom zips a zkopíruje tyto soubory do adresáře na místním počítači s Windows. Po každém použití tohoto připojení v projektu sady Visual Studio nebo CMake budou hlavičky v těchto adresářích použity k poskytnutí IntelliSense.
+
+> [!NOTE]
+> V aplikaci Visual Studio 2019 verze 16,5 a novější je naoptimalizovaná kopie vzdálené hlavičky. Hlavičky se teď zkopírují na vyžádání při otevření projektu pro Linux nebo konfigurace CMake pro cíl pro Linux. Kopie probíhá na pozadí na základě jednotlivých projektů, a to na základě zadaných kompilátorů projektu. Další informace najdete v tématu [Vylepšení přesnosti a výkonu pro Linux IntelliSense](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
 
 Tato funkce závisí na počítači se systémem Linux s nainstalovaným zip. Soubor zip můžete nainstalovat pomocí tohoto příkazu apt-get:
 

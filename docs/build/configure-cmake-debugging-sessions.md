@@ -4,12 +4,12 @@ description: Popisuje, jak použít Visual Studio ke konfiguraci nastavení ladi
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946815"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031335"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurace ladicích relací CMake
 
@@ -73,7 +73,7 @@ Pro podporu všech scénářů ladění existuje mnoho vlastností *Launch. vs. 
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>Odkaz Launch. vs. JSON pro vzdálené projekty Linux
 
-Následující vlastnosti jsou specifické pro **vzdálené konfigurace ladění**. [Příkazy můžete odeslat také přímo do GDB](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) a [Povolit protokolování MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging). Tyto vlastnosti umožňují zobrazit příkazy, které se odešlou do GDB, jaký výstup vrátí GDB a jak dlouho jednotlivé příkazy trvají.
+Následující vlastnosti jsou specifické pro **vzdálené konfigurace ladění**. Můžete také [Spustit vlastní příkazy GDB](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) k posílání příkazů přímo do podkladového ladicího programu a [Povolit protokolování MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging) pro zobrazení příkazů, které se odesílají do GDB, jaký výstup GDB vrátí a jak dlouho jednotlivé příkazy trvají.
 
 - `cwd`: aktuální pracovní adresář pro hledání závislostí a dalších souborů na vzdáleném počítači. Makro `${debugInfo.defaultWorkingDirectory}` lze použít. Výchozí hodnota je kořenový adresář vzdáleného pracovního prostoru, pokud není přepsán v *CMakeLists. txt*. Tato vlastnost se používá pouze pro vzdálené konfigurace. `currentDir` slouží k nastavení aktuálního adresáře spouštěné aplikace pro místní projekt.
 
