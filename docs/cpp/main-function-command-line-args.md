@@ -1,26 +1,42 @@
 ---
-title: Hlavní funkce a argumenty příkazového řádku (C++)
-description: Hlavní funkce je vstupním bodem pro C++ program.
-ms.date: 12/10/2019
+title: funkce main a argumenty příkazového řádku (C++)
+description: Funkce main je vstupním bodem pro C++ program.
+ms.date: 01/15/2019
 ms.assetid: c6568ee6-40ab-4ae8-aa44-c99e232f64ac
-ms.openlocfilehash: 95e774700c63dc815f6d814bfda84a38a38d4e6e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- main
+- wmain
+- inline
+- static
+- _tmain
+- void
+- exit
+- argc
+- argv
+- envp
+- CreateProcess
+- GetModuleFileName
+- char
+- wchar_t
+- extern
+ms.openlocfilehash: 33753e30304a9bb63c135979d3f20098e6b6401a
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302396"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123900"
 ---
-# <a name="main-function-and-command-line-arguments"></a>Hlavní funkce a argumenty příkazového řádku
+# <a name="opno-locmain-function-and-command-line-arguments"></a>main funkce a argumenty příkazového řádku
 
-Všechny C++ programy musí mít funkci `main`. Pokud se pokusíte zkompilovat C++ projekt *. exe* bez funkce main, kompilátor vyvolá chybu. (Knihovny Dynamic-Link a statické knihovny nemají funkci `main`.) Funkce `main` je tam, kde začíná provádění zdrojového kódu, ale před tím, než program zadá funkci `main`, jsou všechny členy statické třídy bez explicitních inicializátorů nastaveny na nulu. V Microsoft C++jsou globální statické objekty také inicializovány před vstupem do `main`. U funkce `main`, která neplatí pro žádné jiné C++ funkce, platí několik omezení. Funkce `main`:
+Všechny C++ programy musí mít funkci `main`. Pokud se pokusíte zkompilovat C++ projekt *. exe* bez funkce main, kompilátor vyvolá chybu. (Knihovny Dynamic-Link a knihovny static nemají funkci `main`.) Funkce `main` je tam, kde začíná provádění zdrojového kódu, ale před tím, než program zadá funkci `main`, všechny static členy třídy bez explicitních inicializátorů jsou nastaveny na hodnotu nula. V Microsoft C++se před vstupem do `main`inicializuje také objekty Global static. U funkce `main`, která neplatí pro žádné jiné C++ funkce, platí několik omezení. Funkce `main`:
 
 - Nemůže být přetížen (viz [přetížení funkce](function-overloading.md)).
-- Nelze deklarovat jako **inline**.
-- Nelze deklarovat jako **static**.
+- Nelze deklarovat jako **inline** .
+- Nelze deklarovat jako **static** .
 - Nelze zabrat její adresu.
 - Nelze ji volat.
 
-Syntaxe deklarace pro `main` je následující:
+Funkce main nemá deklaraci, protože je integrována do jazyka. Pokud to bylo, syntaxe deklarace `main` by vypadala takto:
 
 ```cpp
 int main();
@@ -38,7 +54,7 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 
 Můžete také použít `_tmain`, která je definována v Tchar. h. `_tmain` překládá na `main`, pokud není definována _UNICODE. V takovém případě `_tmain` přeloží na `wmain`.
 
-Pokud není zadána žádná návratová hodnota, kompilátor poskytne návratovou hodnotu nula. Alternativně lze funkce `main` a `wmain` deklarovat jako vracející **typ void** (žádná návratová hodnota). Pokud deklarujete `main` nebo `wmain` jako vrácení **void**, nemůžete vrátit ukončovací kód do nadřazeného procesu nebo operačního systému pomocí příkazu [return](../cpp/return-statement-in-program-termination-cpp.md) . Chcete-li vrátit ukončovací kód, pokud je `main` nebo `wmain` deklarován jako **void**, je nutné použít funkci [Exit](../cpp/exit-function.md) .
+Pokud není zadána žádná návratová hodnota, kompilátor poskytne návratovou hodnotu nula. Alternativně lze funkce `main` a `wmain` deklarovat jako vracející **void** (žádná návratová hodnota). Pokud deklarujete `main` nebo `wmain` jako vrácení **void** , nemůžete vrátit kód exit nadřazenému procesu nebo operačnímu systému pomocí příkazu [return](../cpp/return-statement-in-program-termination-cpp.md) . Chcete-li vrátit kód exit, když je `main` nebo `wmain` deklarován jako **void** , je nutné použít funkci [exit](../cpp/exit-function.md) .
 
 **Specifické pro konec Microsoftu**
 
@@ -54,7 +70,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 Definice argumentů jsou následující:
 
 *argc*<br/>
-Celé číslo, které obsahuje počet argumentů, které následují v *argv*. Parametr *argc* je vždycky větší nebo roven 1.
+Celé číslo, které obsahuje počet argumentů, které následují *argv* . Parametr *argc* je vždycky větší nebo roven 1.
 
 *argv*<br/>
 Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv[0]` je příkaz, se kterým se program vyvolá, `argv[1]` je první argument příkazového řádku a tak dále, dokud `argv[argc]`, což je vždycky NULL. Informace o potlačení zpracování příkazového řádku naleznete v tématu [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) .
@@ -62,18 +78,18 @@ Pole řetězců zakončených znakem null představující argumenty příkazov�
 První argument příkazového řádku je vždycky `argv[1]` a poslední z nich je `argv[argc - 1]`.
 
 > [!NOTE]
-> Podle konvence `argv[0]` je příkaz, se kterým se program vyvolá. Je ale možné vytvořit proces pomocí funkce [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) a pokud použijete první i druhý argument (*lpApplicationName* a *lpCommandLine*) `argv[0]`, nesmí být název spustitelného souboru. pomocí [GetModuleFileName –](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) načtěte název spustitelného souboru a jeho plně kvalifikovanou cestu.
+> Podle konvence `argv[0]` je příkaz, se kterým se program vyvolá. Je ale možné vytvořit proces pomocí [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) a pokud použijete první i druhý argument (*lpApplicationName* a *lpCommandLine*), `argv[0]` nemusí být spustitelný název. pomocí [GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) načíst název spustitelného souboru a jeho plně kvalifikovanou cestu.
 
 **Specifické pro společnost Microsoft**
 
 *envp*<br/>
-Pole *envp* , což je společné rozšíření v mnoha systémech UNIX, se používá v Microsoftu C++. Je to pole řetězců, které představují proměnné nastavené v uživatelském prostředí. Toto pole je ukončeno prvkem NULL. Dá se deklarovat jako pole ukazatelů na **char** (`char *envp[]`) nebo jako ukazatel na ukazatele na **char** (`char **envp`). Pokud program používá `wmain` místo `main`, použijte **wchar_t** datový typ místo **char**. Blok prostředí předaný `main` a `wmain` je "zmrazená" kopie aktuálního prostředí. Pokud následně změníte prostředí prostřednictvím volání `putenv` nebo `_wputenv`, bude se změnit aktuální prostředí (vrácené `getenv` nebo `_wgetenv` a proměnná `_environ` nebo `_wenviron`), ale blok, na který envp odkazuje, se nezmění. Informace o potlačení zpracování prostředí naleznete v tématu [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) . Tento argument je kompatibilní se standardem ANSI v jazyce C, ale ne v jazyce C++.
+V Microsoftu C++se používá poleenvp, které je společné rozšíření v mnoha systémech UNIX. Je to pole řetězců, které představují proměnné nastavené v uživatelském prostředí. Toto pole je ukončeno prvkem NULL. Dá se deklarovat jako pole ukazatelů na **char** (`char *envp[]`) nebo jako ukazatel na ukazatele na **char** (`char **envp`). Pokud program používá `wmain` místo `main`, místo **char** použijte datový typ **wchar_t** . Blok prostředí předaný `main` a `wmain` je "zmrazená" kopie aktuálního prostředí. Pokud následně změníte prostředí prostřednictvím volání `putenv` nebo `_wputenv`, bude se změnit aktuální prostředí (vrácené `getenv` nebo `_wgetenv` a proměnná `_environ` nebo `_wenviron`), ale blok, na který envp odkazuje, se nezmění. Informace o potlačení zpracování prostředí naleznete v tématu [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) . Tento argument je kompatibilní se standardem ANSI v jazyce C, ale ne v jazyce C++.
 
 **Specifické pro konec Microsoftu**
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít argumenty *argc*, *argv*a *envp* k `main`:
+Následující příklad ukazuje, jak použít argumenty *argc* , *argv* a *envp* k `main`:
 
 ```cpp
 // argument_definitions.cpp
@@ -174,7 +190,7 @@ Pokud aplikace nepřijímá argumenty příkazového řádku, je možné ušetř
 
 Podobně pokud nikdy nepřistupujete k tabulce prostředí pomocí argumentu `envp`, můžete poskytnout vlastní prázdnou rutinu, která bude použita místo `_setenvp`, rutiny zpracování prostředí. Stejně jako u funkce `_setargv` musí být `_setenvp` deklarované jako **extern "C"** .
 
-Váš program může volat do `spawn` nebo `exec` rodinu rutin v knihovně run-time jazyka C. Jde-li o tento případ, neměla by být rutina zpracování prostředí potlačena, protože slouží k předání prostředí z nadřazeného procesu podřízenému procesu.
+Váš program může volat do `spawn` nebo `exec` rodinu rutin v knihovně run-time jazyka C. Pokud k tomu dojde, neměli byste potlačit rutinu zpracování prostředí, protože tato rutina slouží k předání prostředí z nadřazeného procesu podřízenému procesu.
 
 **Specifické pro konec Microsoftu**
 
