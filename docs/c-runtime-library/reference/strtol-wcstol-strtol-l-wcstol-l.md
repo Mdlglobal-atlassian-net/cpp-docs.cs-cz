@@ -1,6 +1,6 @@
 ---
 title: strtol, wcstol, _strtol_l, _wcstol_l
-ms.date: 11/04/2016
+ms.date: 01/14/2020
 api_name:
 - strtol
 - wcstol
@@ -40,39 +40,71 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-ms.openlocfilehash: b40362e93a41730e46ad0911b5a633118d024e9c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- strtol
+- wcstol
+- _strtol_l
+- _wcstol_l
+- LONG_MAX
+- LONG_MIN
+- errno
+- ERANGE
+- EINVAL
+- LC_NUMERIC
+- _tcstol
+- _tcstol_l
+- localeconv
+- setlocale
+- _wsetlocale
+- strtod
+- _strtod_l
+- wcstod
+- _wcstod_l
+- strtoll
+- _strtoll_l
+- wcstoll
+- _wcstoll_l
+- strtoul
+- _strtoul_l
+- wcstoul
+- _wcstoul_l
+- atof
+- _atof_l
+- _wtof
+- _wtof_l
+ms.openlocfilehash: 83054e1b31b56fda96bdea198ab34d65d633f335
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957640"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123926"
 ---
-# <a name="strtol-wcstol-_strtol_l-_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
+# <a name="opno-locstrtol-opno-locwcstol-opno-loc_strtol_l-opno-loc_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
-Převede řetězce na hodnotu typu long integer.
+Převede řetězce na celočíselnou hodnotu typu **Long** .
 
 ## <a name="syntax"></a>Syntaxe
 
 ```C
 long strtol(
-   const char *strSource,
-   char **endptr,
+   const char *string,
+   char **end_ptr,
    int base
 );
 long wcstol(
-   const wchar_t *strSource,
-   wchar_t **endptr,
+   const wchar_t *string,
+   wchar_t **end_ptr,
    int base
 );
 long _strtol_l(
-   const char *strSource,
-   char **endptr,
+   const char *string,
+   char **end_ptr,
    int base,
    _locale_t locale
 );
 long _wcstol_l(
-   const wchar_t *strSource,
-   wchar_t **endptr,
+   const wchar_t *string,
+   wchar_t **end_ptr,
    int base,
    _locale_t locale
 );
@@ -80,46 +112,44 @@ long _wcstol_l(
 
 ### <a name="parameters"></a>Parametry
 
-*strSource*<br/>
+\ *řetězců*
 Řetězec zakončený hodnotou null pro převod.
 
-*endptr*<br/>
-Ukazatel na znak, který zastaví skenování.
+*end_ptr*\
+Výstupní parametr, který je nastaven tak, aby odkazoval na znak za posledním interpretováným znakem. Ignorováno, pokud **má hodnotu null**.
 
-*base*<br/>
+*základní*\
 Číselná základna, která se má použít.
 
-*jazyka*<br/>
+\ *národního prostředí*
 Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**strtol** vrací hodnotu reprezentovanou v řetězci *strSource*, s výjimkou případů, kdy by reprezentace způsobila přetečení. v takovém případě vrátí **LONG_MAX** nebo **LONG_MIN**. **strtol** vrátí hodnotu 0, pokud převod nelze provést. **wcstol** vrací hodnoty obdobně **strtol**. Pro obě funkce je **errno** nastaveno na **ERANGE** , pokud dojde k přetečení nebo podtečení.
+**strtol** , **wcstol** , **_strtol_l** a **_wcstol_l** vrací hodnotu reprezentovanou v *řetězci*. Vrátí 0, pokud není možné převod. Pokud by reprezentace způsobila přetečení, vrátí **LONG_MAX** nebo **LONG_MIN** .
 
-Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+**errno** je nastavena na **ERANGE** , pokud dojde k přetečení nebo podtečení. Je nastavená na **EINVAL** , pokud má *řetězec* **hodnotu null**. Nebo, pokud *Base* není nula a menší než 2 nebo vyšší než 36. Další informace o **ERANGE** , **EINVAL** a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **strtol** převádí *strSource* na **dlouhou**hodnotu. **strtol** zastaví čtení řetězce *strSource* u prvního znaku, který nelze rozpoznat jako součást čísla. Může to být ukončující znak null nebo se může jednat o první číselný znak, který je větší nebo roven *základní*.
+Funkce **strtol** , **wcstol** , **_strtol_l** a **_wcstol_l** převádějí *řetězec* na hodnotu **Long**. Přestanou číst *řetězec* u prvního znaku, který není rozpoznán jako součást čísla. Může se jednat o ukončovací znak null nebo o první alfanumerický znak, který je větší nebo roven *základní*.
 
-**wcstol** je **strtol**verze s velkým znakem; jeho argument *strSource* je řetězec s velkým znakem. Tyto funkce se chovají identicky jinak.
+**wcstol** a **_wcstol_l** jsou verze systémů **strtol** a **_strtol_l** s velkým počtem znaků. *Řetězcovým* argumentem je řetězec s velkým znakem. Tyto funkce se chovají stejně jako **strtol** a **_strtol_l** jinak. Nastavení **LC_NUMERIC** kategorie národního prostředí Určuje rozpoznávání znaku základu (zlomkovou značku nebo desetinné čárky) v *řetězci*. Funkce **strtol** a **wcstol** používají aktuální národní prostředí. **_strtol_l** a **_wcstol_l** místo toho používají předané národní prostředí. Další informace naleznete v tématu [setlocale] a [národní prostředí](../../c-runtime-library/locale.md).
+
+Pokud *end_ptr* má **hodnotu null**, je ignorována. V opačném případě ukazatel na znak, který zastavil skenování, je uložen v umístění, na které ukazuje *end_ptr*. Převod není možný, pokud nejsou nalezeny žádné platné číslice nebo je zadána neplatná základna. Hodnota *řetězce* je pak uložena v umístění, na které ukazuje *end_ptr*.
+
+**strtol** očekává, že *řetězec* odkazuje na řetězec v následujícím tvaru:
+
+> [*prázdné znaky*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*alfanumerické znaky*]
+
+Hranaté závorky (`[ ]`) ohraničují volitelné prvky. Složené závorky a svislé pruhové (`{ | }`) obklopující alternativy pro jeden prvek. *prázdný znak* se může skládat z mezer a znaků tabulátoru, které jsou ignorovány. *alfanumerické znaky* jsou desítkové číslice nebo písmena "a" až "z" (nebo "a" až "z"). První znak, který nevyhovuje tomuto formuláři, zastaví kontrolu. Pokud je *základ* mezi 2 a 36, použije se jako základ čísla. Pokud je *základní* hodnota 0, pro určení základu se použijí počáteční znaky řetězce, na který se odkazuje pomocí *řetězce* . Pokud je první znak 0 a druhý znak není x nebo X, řetězec je interpretován jako osmičkové celé číslo. Pokud je první znak "0" a druhý znak je "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35. Kontrola umožňuje pouze písmena, jejichž hodnoty jsou nižší než *základní*. První znak mimo rozsah základny zastaví skenování. Předpokládejme například, že *řetězec začíná řetězcem* "01". Pokud je *základní* hodnotou 0, skener předpokládá, že se jedná o osmičkové celé číslo. Znak "8" nebo "9" zastaví skenování.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
-
-Nastavení kategorie **LC_NUMERIC** aktuálního národního prostředí Určuje rozpoznávání znaku základu v *strSource*; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md). Funkce bez přípony **_l** používají aktuální národní prostředí; **_strtol_l** a **_wcstol_l** jsou stejné jako odpovídající funkce bez přípony **_l** s tím rozdílem, že místo toho používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
-
-Pokud *endptr* není **null**, ukazatel na znak, který zastavil skenování, je uložen v umístění, na které odkazuje *endptr*. Pokud převod nelze provést (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložena v umístění, na které odkazuje *endptr*.
-
-**strtol** očekává, že *strSource* odkazuje na řetězec v následujícím tvaru:
-
-> [*prázdné znaky*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [číslice písmen] **-**
-
-*Mezera se může skládat* z mezer a znaků tabulátoru, které jsou ignorovány; *číslice* jsou jednu nebo více desítkových číslic; *písmeny* jsou jedno nebo více písmen "a" až "z" (nebo "a" až "z").  První znak, který se nevejde do tohoto formuláře zastaví kontrolu. Pokud je *základ* mezi 2 a 36, použije se jako základ čísla. Pokud je *základ* 0, pro určení základu se použijí počáteční znaky řetězce, na který odkazuje *strSource* . Pokud je první znak 0 a druhý znak není x nebo X, řetězec je interpretován jako osmičkové celé číslo. Pokud je první znak "0" a druhý znak je "x" nebo "X", řetězec je interpretován jako hexadecimální celé číslo. Pokud je první znak "1" až "9", řetězec je interpretován jako desítkové celé číslo. Písmenům "a" až "z" (nebo "A" až "Z") jsou přiřazeny hodnoty 10 až 35; povolena jsou pouze písmena, jejichž přiřazené hodnoty jsou menší než *Base* . První znak mimo rozsah základny zastaví skenování. Pokud je například *základ* 0 a první naskenovaný znak je "0", předpokládá se osmičkové celé číslo a znak "8" nebo "9" zastaví kontrolu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -128,20 +158,22 @@ Pokud *endptr* není **null**, ukazatel na znak, který zastavil skenování, je
 |**strtol**|\<stdlib.h>|
 |**wcstol**|\<Stdlib. h > nebo \<WCHAR. h >|
 |**_strtol_l**|\<stdlib.h>|
+|**_wcstol_l**|\<Stdlib. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Funkce **_strtol_l** a **_wcstol_l** jsou specifické pro společnost Microsoft, nikoli součástí standardní knihovny jazyka C. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
+Podívejte se na příklad [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[localeconv](localeconv.md)<br/>
-[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Funkce převodu řetězců na numerické hodnoty](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
-[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
-[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
-[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+\ [převodu dat](../data-conversion.md)
+\ [národního prostředí](../locale.md)
+[localeconv](localeconv.md)\
+[setlocale_wsetlocale](setlocale-wsetlocale.md)\
+[Funkce String na číselnou hodnotu](../string-to-numeric-value-functions.md)\
+[strtod, _strtod_l, wcstod_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)\
+[strtoll, _strtoll_l, wcstoll_wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)\
+[strtoul, _strtoul_l, wcstoul_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)\
+[atof, _atof_l, _wtof_wtof_l](atof-atof-l-wtof-wtof-l.md)

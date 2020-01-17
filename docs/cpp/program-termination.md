@@ -1,44 +1,52 @@
 ---
 title: C++ukončení programu
-ms.date: 12/10/2019
+description: Popisuje způsoby, jak exit C++program jazyka.
+ms.date: 01/15/2020
 helpviewer_keywords:
 - terminating execution
 - quitting applications
 - exiting applications
 - programs [C++], terminating
 ms.assetid: fa0ba9de-b5f1-4e7b-aa65-e7932068b48c
-ms.openlocfilehash: a0e86cacd951327d39296a183be5ee4fbc36fd15
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- exit
+- abort
+- return
+- main
+- atexit
+- void
+ms.openlocfilehash: f83c9d5da5b0a1127603a97fd7946e9cca43a7a5
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301337"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123952"
 ---
 # <a name="c-program-termination"></a>C++ukončení programu
 
-V C++nástroji můžete ukončit program následujícími způsoby:
+V C++nástroji můžete exit program tímto způsobem:
 
-- Zavolejte funkci [Exit](exit-function.md) .
-- Zavolejte funkci [Abort](abort-function.md) .
-- Spustit [návratový](return-statement-cpp.md) příkaz z `main`.
+- Zavolejte funkci [exit](exit-function.md) .
+- Zavolejte funkci [abort](abort-function.md) .
+- Spustí příkaz [return](return-statement-cpp.md) z `main`.
 
-## <a name="exit-function"></a>exit – funkce
+## <a name="opno-locexit-function"></a>exit funkce
 
-Funkce [Exit](../c-runtime-library/reference/exit-exit-exit.md) deklarovaná v \<Stdlib. h > ukončí C++ program. Hodnota zadaná jako argument pro `exit` se vrátí do operačního systému jako návratový kód programu nebo ukončovací kód. Dle konvence návratový kód nula znamená, že byl program dokončen úspěšně. Můžete použít konstanty EXIT_FAILURE a EXIT_SUCCESS, definované v \<Stdlib. h > k indikaci úspěchu nebo neúspěchu programu.
+Funkce [exit](../c-runtime-library/reference/exit-exit-exit.md) deklarovaná v \<Stdlib. h > ukončí C++ program. Hodnota zadaná jako argument pro `exit` se vrátí do operačního systému jako kód return programu nebo kód exit. Podle konvence return kód nula znamená, že program byl úspěšně dokončen. Můžete použít konstanty EXIT_FAILURE a EXIT_SUCCESS, definované v \<Stdlib. h > k indikaci úspěchu nebo neúspěchu programu.
 
-Vydání příkazu **return** z funkce `main` je ekvivalentní volání funkce `exit` s návratovou hodnotou jako její argument.
+Vydání příkazu **return** z funkce `main` je ekvivalentní volání funkce `exit` s hodnotou return jako argumentu.
 
-## <a name="abort-function"></a>abort – funkce
+## <a name="opno-locabort-function"></a>abort funkce
 
-Funkce [Abort](../c-runtime-library/reference/abort.md) , která je deklarována také ve standardním souboru include \<Stdlib. h >, ukončí C++ program. Rozdíl mezi `exit` a `abort` je, že `exit` umožňuje provedení C++ zpracování ukončení za běhu (budou volány globální destruktory objektů), zatímco `abort` program ukončí hned. Funkce `abort` obchází normální proces zničení u inicializovaných globálních statických objektů. Obchází také jakékoli speciální zpracování, které bylo zadáno pomocí funkce [atexit](../c-runtime-library/reference/atexit.md) .
+Funkce [abort](../c-runtime-library/reference/abort.md) , která je deklarována také ve standardním souboru include \<Stdlib. h >, ukončí C++ program. Rozdíl mezi `exit` a `abort` je, že `exit` umožňuje provedení C++ zpracování ukončení za běhu (budou volány globální destruktory objektů), zatímco `abort` program ukončí hned. Funkce `abort` obchází normální proces zničení u inicializovaných globálních statických objektů. Obchází také jakékoli speciální zpracování, které bylo zadáno pomocí funkce [atexit](../c-runtime-library/reference/atexit.md) .
 
-## <a name="atexit-function"></a>atexit – funkce
+## <a name="opno-locatexit-function"></a>atexit funkce
 
-Pomocí funkce [atexit](../c-runtime-library/reference/atexit.md) můžete zadat akce, které se spustí před ukončením programu. Žádné globální statické objekty inicializované před voláním funkce **atexit** jsou před provedením funkce Exit-Processing zničeny.
+Pomocí funkce [atexit](../c-runtime-library/reference/atexit.md) můžete určit akce, které se spustí před ukončením programu. Před spuštěním funkce zpracování exitnejsou inicializovány žádné globální statické objekty před voláním **atexit** .
 
-## <a name="return-statement-in-main"></a>příkaz return v Main
+## <a name="opno-locreturn-statement-in-opno-locmain"></a>příkaz return v main
 
-Vystavení [návratového](return-statement-cpp.md) příkazu z `main` je funkčně ekvivalentní volání funkce `exit`. Vezměte v úvahu v následujícím příkladu:
+Vydání příkazu [return](return-statement-cpp.md) z `main` je funkčně ekvivalentní pro volání funkce `exit`. Vezměte v úvahu v následujícím příkladu:
 
 ```cpp
 // return_statement.cpp
@@ -50,15 +58,15 @@ int main()
 }
 ```
 
-Příkazy `exit` a **return** v předchozím příkladu jsou funkčně stejné. Nicméně C++ vyžaduje, aby funkce, které mají návratové typy jiné než **void** , vracely hodnotu. Příkaz **return** umožňuje vrátit hodnotu z `main`.
+Příkazy `exit` a **return** v předchozím příkladu jsou funkčně identické. Nicméně C++ vyžaduje, aby funkce, které mají return jiné typy než **void** return hodnotu. Příkaz **return** umožňuje return hodnotu z `main`.
 
 ## <a name="destruction-of-static-objects"></a>Zničení statických objektů
 
-Když zavoláte `exit` nebo spustíte **návratový** příkaz z `main`, statické objekty jsou zničeny v obráceném pořadí jejich inicializace (po volání `atexit`, pokud existuje). Následující příklad ukazuje, jak taková inicializace a vyčištění funguje.
+Když zavoláte `exit` nebo spustíte příkaz **return** z `main`, statické objekty jsou zničeny v obráceném pořadí jejich inicializace (po volání `atexit`, pokud existuje). Následující příklad ukazuje, jak taková inicializace a vyčištění funguje.
 
 ### <a name="example"></a>Příklad
 
-V následujícím příkladu jsou objekty static `sd1` a `sd2` vytvořeny a inicializovány před vstupem do `main`. Po ukončení tohoto programu pomocí příkazu **return** je nejprve zničena `sd2` a pak `sd1`. Destruktor třídy `ShowData` zavře soubory přidružené k těmto statickým objektům.
+V následujícím příkladu jsou objekty static `sd1` a `sd2` vytvořeny a inicializovány před vstupem do `main`. Po ukončení tohoto programu pomocí příkazu **return** je nejprve zničena `sd2` a poté `sd1`. Destruktor třídy `ShowData` zavře soubory přidružené k těmto statickým objektům.
 
 ```cpp
 // using_exit_or_return1.cpp
@@ -107,7 +115,6 @@ int main() {
 }
 ```
 
-
 ## <a name="see-also"></a>Viz také:
 
-[main: spuštění programu](main-program-startup.md)
+[main funkce a argumenty příkazového řádku](main-function-command-line-args.md)

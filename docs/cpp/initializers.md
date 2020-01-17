@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661619"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123965"
 ---
 # <a name="initializers"></a>Inicializátory
 
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-Další informace o inicializaci globálních statických objektů naleznete v tématu [Další](../cpp/additional-startup-considerations.md)informace o spuštění.
+Další informace o inicializaci globálních statických objektů naleznete v tématu [Main Function a Command-line argumenty](main-function-command-line-args.md).
 
 ### <a name="value-initialization"></a>Inicializace hodnoty
 
@@ -276,7 +276,7 @@ Přímá inicializace je inicializace pomocí (neprázdných) závorek nebo záv
 
 - proměnná je inicializována pomocí klíčového slova **New** a neprázdných složených závorek nebo závorek.
 
-- proměnná je inicializována pomocí **static_cast** .
+- proměnná je inicializována s **static_cast**
 
 - v konstruktoru se pro základní třídy a nestatické členy inicializuje seznam inicializátorů.
 
@@ -417,7 +417,7 @@ int main() {
 }
 ```
 
-Měl by se zobrazit následující výstup:
+Měli byste vidět následující výstup:
 
 ```Output
 agg1: c: 1
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Členy pole, které jsou deklarovány, ale nejsou explicitně inicializovány během inicializace agregace, jsou inicializovány nulou, jak `myArr3` je uvedeno výše.
+> Členy pole, které jsou deklarovány, ale nejsou explicitně inicializovány během inicializace agregace, jsou inicializovány nulou, jak je uvedeno výše v `myArr3` výše.
 
 #### <a name="initializing-unions-and-structs"></a>Inicializace sjednocení a struktur
 
@@ -534,7 +534,7 @@ Při inicializaci proměnné typu odkazu používá kompilátor graf rozhodnutí
 ![Graf rozhodnutí pro inicializaci typů odkazů](../cpp/media/vc38s71.gif "Graf rozhodnutí pro inicializaci typů odkazů") <br/>
 Graf rozhodnutí pro inicializaci typů odkazů
 
-Odkazy na typy volatile (deklarované jako volatile *identifikátor* *TypeName* <strong>&</strong> ) lze inicializovat s nestálými objekty stejného typu nebo s objekty, které nebyly deklarovány jako volatile. . Nelze je však inicializovat pomocí objektů const tohoto typu. Podobně odkazy na typy **const** (deklarované jako **const** *TypeName* <strong>&</strong> *Identifier*) mohou být inicializovány objekty **const** stejného typu (nebo cokoli, co má převod na tento typ nebo s objekty. které nebyly deklarovány jako **const**). Nelze je však inicializovat pomocí nestálých objektů tohoto typu.
+Odkazy na **typy volatile** (deklarované **jako volatile** *TypeName* <strong>&</strong> *Identifier*) mohou být inicializovány s objekty **volatile** stejného typu nebo objekty, které nebyly deklarovány jako **nestálé**. Nelze je však inicializovat pomocí objektů **const** tohoto typu. Podobně odkazy na typy **const** (deklarované jako **const** *TypeName* <strong>&</strong> *Identifier*) lze inicializovat s objekty **const** stejného typu (nebo cokoli, co má převod na tento typ nebo s objekty, které nebyly deklarovány jako **const**). Nelze je však inicializovat pomocí **nestálých** objektů tohoto typu.
 
 Odkazy, které nejsou kvalifikovány buď klíčovým slovem **const** nebo **volatile** , lze inicializovat pouze pomocí objektů deklarovaných jako **konstanta** nebo **volatile**.
 
