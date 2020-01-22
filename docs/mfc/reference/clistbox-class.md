@@ -1,6 +1,7 @@
 ---
 title: CListBox – – třída
-ms.date: 11/04/2016
+description: Popis třídy CListBox – knihovny MFC a jejích členských funkcí.
+ms.date: 01/22/2020
 f1_keywords:
 - CListBox
 - AFXWIN/CListBox
@@ -102,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: e47a580e786572b0741700721a9d1ba4ac925fcd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505691"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518423"
 ---
 # <a name="clistbox-class"></a>CListBox – – třída
 
@@ -125,16 +126,16 @@ class CListBox : public CWnd
 
 |Name|Popis|
 |----------|-----------------|
-|[CListBox –:: CListBox –](#clistbox)|`CListBox` Vytvoří objekt.|
+|[CListBox –:: CListBox –](#clistbox)|Vytvoří objekt `CListBox`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
 |[CListBox –:: AddString](#addstring)|Přidá řetězec do pole se seznamem.|
-|[CListBox –:: CharToItem](#chartoitem)|Přepsáním Poskytněte vlastní zpracování WM_CHAR pro seznamy, které nemají řetězce.|
+|[CListBox –:: CharToItem](#chartoitem)|Přepište, abyste poskytovali vlastní zpracování WM_CHAR pro seznamy, které nemají řetězce.|
 |[CListBox –:: CompareItem](#compareitem)|Volá se rozhraním, aby se určila pozice nové položky v poli seznamu seřazeného vlastníka.|
-|[CListBox –:: Create](#create)|Vytvoří seznam Windows a připojí ho k `CListBox` objektu.|
+|[CListBox –:: Create](#create)|Vytvoří seznam Windows a připojí ho k objektu `CListBox`.|
 |[CListBox –::D eleteItem](#deleteitem)|Volá se rozhraním, když uživatel odstraní položku ze seznamu vykresleného vlastníkem.|
 |[CListBox::DeleteString](#deletestring)|Odstraní řetězec z pole seznamu.|
 |[CListBox –::D IR](#dir)|Přidá do seznamu názvy souborů, jednotky nebo obojí z aktuálního adresáře.|
@@ -177,7 +178,7 @@ class CListBox : public CWnd
 |[CListBox::SetSel](#setsel)|Vybere nebo odškrtne položku seznamu v seznamu vícenásobného výběru.|
 |[CListBox –:: SetTabStops](#settabstops)|Nastaví pozice zarážky tabulátoru v seznamu.|
 |[CListBox::SetTopIndex](#settopindex)|Nastaví index založený na nule prvního viditelného řetězce v seznamu.|
-|[CListBox::VKeyToItem](#vkeytoitem)|Přepsáním Poskytněte vlastní zpracování WM_KEYDOWN pro pole seznamu se sadou stylů LBS_WANTKEYBOARDINPUT.|
+|[CListBox::VKeyToItem](#vkeytoitem)|Přepište k poskytnutí vlastního WM_KEYDOWN manipulace se seznamy se sadou stylů LBS_WANTKEYBOARDINPUT.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -185,9 +186,9 @@ V seznamu se zobrazí seznam položek, jako jsou například názvy souborů, kt
 
 V poli se seznamem s jedním výběrem může uživatel vybrat pouze jednu položku. V poli se seznamem vícenásobného výběru lze vybrat rozsah položek. Když uživatel vybere položku, zvýrazní se a pole se seznamem pošle zprávu s oznámením do nadřazeného okna.
 
-Můžete vytvořit seznam buď ze šablony dialogového okna, nebo přímo v kódu. Chcete-li vytvořit přímo, sestavte `CListBox` objekt a potom zavolejte funkci [vytvořit](#create) členskou funkci pro vytvoření ovládacího prvku seznamu Windows a `CListBox` připojte ho k objektu. Chcete-li použít seznam v šabloně dialogového okna, deklarujte proměnnou pole seznamu ve třídě dialogového okna a pak použijte `DDX_Control` ve `DoDataExchange` funkci třídy dialogového okna pro připojení členské proměnné k ovládacímu prvku. (to se provádí automaticky při přidání proměnné ovládacího prvku do vaší třídy dialogového okna.)
+Můžete vytvořit seznam buď ze šablony dialogového okna, nebo přímo v kódu. Chcete-li vytvořit přímo, Sestavte objekt `CListBox` a potom zavolejte funkci [vytvořit](#create) členskou funkci pro vytvoření ovládacího prvku seznamu Windows a připojte ho k objektu `CListBox`. Chcete-li použít seznam v šabloně dialogového okna, deklarujte proměnnou pole seznamu ve třídě dialogového okna a pak použijte `DDX_Control` ve `DoDataExchange` funkce třídy dialogového okna pro připojení členské proměnné k ovládacímu prvku. (to se provádí automaticky při přidání proměnné ovládacího prvku do vaší třídy dialogového okna.)
 
-Konstrukce může být proces jednoho kroku ve třídě odvozené z `CListBox`. Napište konstruktor pro odvozenou třídu a zavolejte `Create` v rámci konstruktoru.
+Konstrukce může být proces jednoho kroku ve třídě odvozené z `CListBox`. Napište konstruktor pro odvozenou třídu a zavolejte `Create` z konstruktoru.
 
 Chcete-li zpracovat oznamovací zprávy systému Windows odesílané seznamem do své nadřazené položky (obvykle třída odvozená z [CDialog](../../mfc/reference/cdialog-class.md)), přidejte položku mapování zpráv a členskou funkci obslužné rutiny zpráv do nadřazené třídy pro každou zprávu.
 
@@ -195,7 +196,7 @@ Každá položka mapování zpráv má následující podobu:
 
 `ON_Notification( id, memberFxn )`
 
-kde `id` Určuje ID podřízeného okna ovládacího prvku seznamu, který odesílá oznámení, a `memberFxn` je název nadřazené členské funkce, kterou jste napsali pro zpracování oznámení.
+kde `id` Určuje ID podřízeného okna ovládacího prvku seznamu, který odesílá oznámení a `memberFxn` je název nadřazené členské funkce, kterou jste napsali pro zpracování oznámení.
 
 Prototyp funkce nadřazeného objektu je následující:
 
@@ -203,27 +204,27 @@ Prototyp funkce nadřazeného objektu je následující:
 
 Následuje seznam možných položek map zpráv a popis případů, ve kterých by se odesílaly do nadřazeného objektu:
 
-- ON_LBN_DBLCLK uživatel dvakrát klikne na řetězec v seznamu. Tuto zprávu oznámení pošle jenom seznam, který má ve stylu [LBS_NOTIFY](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+- ON_LBN_DBLCLK uživatel dvakrát klikne na řetězec v seznamu. Tuto zprávu oznámení pošle jenom seznam, který má styl [LBS_NOTIFY](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
-- ON_LBN_ERRSPACE pole seznamu nemůže přidělit dostatek paměti pro splnění požadavku.
+- ON_LBN_ERRSPACE seznamu nelze přidělit dostatek paměti pro splnění požadavku.
 
-- ON_LBN_KILLFOCUS v seznamu se ztratí fokus vstupu.
+- ON_LBN_KILLFOCUS rozevírací seznam ztratí fokus vstupu.
 
 - ON_LBN_SELCANCEL se zruší výběr aktuálního seznamu. Tato zpráva se odešle jenom v případě, že má seznam LBS_NOTIFY styl.
 
 - ON_LBN_SELCHANGE výběr v poli se seznamem se změnil. Toto oznámení není odesláno, pokud je změněn výběr pomocí členské funkce [CListBox –:: SetCurSel](#setcursel) . Toto oznámení se vztahuje pouze na seznam, který má styl LBS_NOTIFY. Zpráva s oznámením LBN_SELCHANGE je odeslána pro seznam vícenásobného výběru vždy, když uživatel stiskne klávesu šipka, a to i v případě, že se výběr nemění.
 
-- ON_LBN_SETFOCUS seznamem se přijímá fokus vstupu.
+- ON_LBN_SETFOCUS rozevíracího seznamu přijímá vstupní fokus.
 
-- ON_WM_CHARTOITEM se seznam s vykreslováním vlastníka, který nemá žádné řetězce, obdrží zprávu WM_CHAR.
+- ON_WM_CHARTOITEM seznamu pro vykreslování vlastníka, který nemá žádné řetězce, obdrží zprávu WM_CHAR.
 
-- ON_WM_VKEYTOITEM v seznamu se stylem LBS_WANTKEYBOARDINPUT obdrží zprávu WM_KEYDOWN.
+- ON_WM_VKEYTOITEM seznamu s LBS_WANTKEYBOARDINPUT stylu obdrží zprávu WM_KEYDOWN.
 
-Pokud vytvoříte `CListBox` objekt v rámci dialogového okna (prostřednictvím prostředku dialogového okna) `CListBox` , objekt je automaticky zničen, když uživatel zavře dialogové okno.
+Vytvoříte-li objekt `CListBox` v dialogovém okně (prostřednictvím prostředku dialogového okna), je objekt `CListBox` automaticky zničen, když uživatel zavře dialogové okno.
 
-Pokud vytvoříte `CListBox` objekt v rámci okna, může být nutné `CListBox` zničit objekt. Vytvoříte-li `CListBox` objekt v zásobníku, bude automaticky zničen. Vytvoříte `CListBox` -li objekt na haldě pomocí **nové** funkce, je nutné volat metodu **Delete** u objektu, aby jej bylo možné zničit, když uživatel zavře nadřazené okno.
+Vytvoříte-li objekt `CListBox` v rámci okna, bude pravděpodobně nutné zničit objekt `CListBox`. Vytvoříte-li objekt `CListBox` v zásobníku, bude automaticky zničen. Vytvoříte-li objekt `CListBox` na haldě pomocí **nové** funkce, je nutné volat metodu **Delete** u objektu, aby jej bylo možné zničit, když uživatel zavře nadřazené okno.
 
-Pokud přidělíte paměť v `CListBox` objektu, `CListBox` přepište destruktor k Dispose přidělení.
+Pokud přidělíte jakoukoli paměť v objektu `CListBox`, přepište destruktoru `CListBox`, aby se odstranilo přidělení.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -258,7 +259,7 @@ Index založený na nule do řetězce v poli se seznamem. Návratová hodnota je
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se pole seznamu nevytvořilo ve stylu [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , přidá se na konec seznamu řetězec. V opačném případě je řetězec vložen do seznamu a seznam je seřazen. Pokud se seznam vytvořil se stylem LBS_SORT, ale ne stylem [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , rozhraní seřadí seznam podle jednoho nebo více volání `CompareItem` členské funkce.
+Pokud se pole seznamu nevytvořilo se stylem [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , přidá se na konec seznamu řetězec. V opačném případě je řetězec vložen do seznamu a seznam je seřazen. Pokud byl seznam vytvořen se stylem LBS_SORT, ale nikoli stylem [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , rozhraní seřadí seznam podle jednoho nebo více volání členské funkce `CompareItem`.
 
 Pomocí [InsertString](#insertstring) vložte řetězec do konkrétního umístění v rámci seznamu.
 
@@ -310,7 +311,7 @@ Návratová hodnota 0 nebo vyšší určuje index položky v seznamu a označuje
 
 ##  <a name="clistbox"></a>CListBox –:: CListBox –
 
-`CListBox` Vytvoří objekt.
+Vytvoří objekt `CListBox`.
 
 ```
 CListBox();
@@ -318,7 +319,7 @@ CListBox();
 
 ### <a name="remarks"></a>Poznámky
 
-`CListBox` Vytvoříte objekt ve dvou krocích. Nejdřív zavolejte konstruktor `ClistBox` a potom zavolejte `Create`, který inicializuje seznam Windows a `CListBox`připojí ho k.
+Objekt `CListBox` vytvoříte ve dvou krocích. Nejdřív zavolejte konstruktor `ClistBox` a potom zavolejte `Create`, která inicializuje seznam Windows a připojí ho k `CListBox`.
 
 ### <a name="example"></a>Příklad
 
@@ -335,23 +336,23 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpCompareItemStruct*<br/>
-Dlouhý ukazatel na `COMPAREITEMSTRUCT` strukturu.
+Dlouhý ukazatel na strukturu `COMPAREITEMSTRUCT`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Označuje relativní pozici dvou položek popsaných ve struktuře [COMPAREITEMSTRUCT –](/windows/win32/api/winuser/ns-winuser-compareitemstruct) . Může to být kterákoli z následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |-1|Položka 1 se řadí před položkou 2.|
 |0|Položka 1 a položka 2 mají stejný druh.|
 |1|Položka 1 se řadí za položku 2.|
 
-Popis`COMPAREITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) .
+Popis `COMPAREITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) .
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Pokud vytvoříte seznam pro vykreslení vlastníka se stylem LBS_SORT, je nutné tuto členskou funkci přepsat, aby bylo možné v rámci řazení nových položek přidaných do seznamu přidat do tohoto pole.
+Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Pokud vytvoříte seznam pro vykreslení vlastníka se stylem LBS_SORT, je nutné přepsat tuto členskou funkci, aby bylo možné v rámci řazení nových položek přidaných do seznamu do něj pomáhat rozhraní.
 
 ### <a name="example"></a>Příklad
 
@@ -359,7 +360,7 @@ Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Pokud vy
 
 ##  <a name="create"></a>CListBox –:: Create
 
-Vytvoří seznam Windows a připojí ho k `CListBox` objektu.
+Vytvoří seznam Windows a připojí ho k objektu `CListBox`.
 
 ```
 virtual BOOL Create(
@@ -375,10 +376,10 @@ virtual BOOL Create(
 Určuje styl pole seznamu. Použití libovolné kombinace [stylů seznamů](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) na poli
 
 *OBD*<br/>
-Určuje velikost a umístění seznamu. Může být buď `CRect` objekt, `RECT` nebo struktura.
+Určuje velikost a umístění seznamu. Může být buď objekt `CRect`, nebo struktura `RECT`.
 
 *pParentWnd*<br/>
-Určuje nadřazené okno seznamu (obvykle `CDialog` objektu). Nesmí mít hodnotu NULL.
+Určuje nadřazené okno seznamu (obvykle objekt `CDialog`). Nesmí mít hodnotu NULL.
 
 *nID*<br/>
 Určuje ID ovládacího prvku pole seznamu.
@@ -389,11 +390,11 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`CListBox` Vytvoříte objekt ve dvou krocích. Nejdřív zavolejte konstruktor a potom zavolejte `Create`, který inicializuje seznam Windows a připojí ho `CListBox` k objektu.
+Objekt `CListBox` vytvoříte ve dvou krocích. Nejprve zavolejte konstruktor a potom zavolejte `Create`, který inicializuje seznam Windows a připojí ho k objektu `CListBox`.
 
-Když `Create` se spustí, Windows pošle zprávy [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)a [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) do ovládacího prvku seznam.
+Když se `Create` spustí, Windows pošle zprávy [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)a [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) do ovládacího prvku seznam.
 
-Tyto zprávy jsou ve výchozím nastavení zpracovávány členskými funkcemi [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [Create](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)a [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) v `CWnd` základní třídě. Chcete-li zvětšit výchozí zpracování zprávy, odvodit třídu `CListBox`z, přidat do nové třídy mapu zprávy a přepsat předchozí funkce členů obslužné rutiny zpráv. Přepsání `OnCreate`, například k provedení potřebné inicializace pro novou třídu.
+Tyto zprávy jsou ve výchozím nastavení zpracovávány členskými funkcemi [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [Create](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)a [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) v základní třídě `CWnd`. Chcete-li zvětšit výchozí zpracování zprávy, odvodit třídu z `CListBox`, přidat do nové třídy mapu zprávy a přepsat předchozí funkce členů obslužné rutiny zpráv. Přepsat `OnCreate`, například k provedení potřebné inicializace pro novou třídu.
 
 Použijte následující [Styly okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) pro ovládací prvek seznamu.
 
@@ -401,15 +402,15 @@ Použijte následující [Styly okna](../../mfc/reference/styles-used-by-mfc.md#
 
 - WS_VISIBLE obvykle
 
-- WS_DISABLED málokdy
+- WS_DISABLED zřídka
 
 - WS_VSCROLL pro přidání svislého posuvníku
 
 - WS_HSCROLL pro přidání vodorovného posuvníku
 
-- WS_GROUP do skupinových ovládacích prvků
+- WS_GROUP seskupení ovládacích prvků
 
-- WS_TABSTOP, aby se na tento ovládací prvek povolovalo procházení
+- WS_TABSTOP pro povolení procházení klávesy s tímto ovládacím prvkem
 
 ### <a name="example"></a>Příklad
 
@@ -417,7 +418,7 @@ Použijte následující [Styly okna](../../mfc/reference/styles-used-by-mfc.md#
 
 ##  <a name="deleteitem"></a>CListBox –::D eleteItem
 
-Volá se rozhraním, když uživatel odstraní položku z objektu pro vykreslení `CListBox` vlastníka nebo zničí pole seznamu.
+Volá se rozhraním, když uživatel odstraní položku z objektu `CListBox`ho vykreslování vlastníka nebo zničí pole seznamu.
 
 ```
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
@@ -432,7 +433,7 @@ Dlouhý ukazatel na strukturu [DELETEITEMSTRUCT –](/windows/win32/api/winuser/
 
 Výchozí implementace této funkce neprovede žádnou akci. Potlačením této funkce překreslete podle potřeby seznam vykresleného vlastníka.
 
-Popis`DELETEITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) .
+Popis `DELETEITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) .
 
 ### <a name="example"></a>Příklad
 
@@ -476,9 +477,9 @@ int Dir(
 ### <a name="parameters"></a>Parametry
 
 *attr*<br/>
-Může být libovolná kombinace hodnot **výčtu** popsaných `CFile::GetStatu`v [s](../../mfc/reference/cfile-class.md#getstatus)nebo libovolné kombinace následujících hodnot:
+Může být libovolná kombinace hodnot **výčtu** popsaná v `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)nebo libovolná kombinace následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0x0000|Soubor je možné číst nebo do něj zapisovat.|
 |0x0001|Soubor lze číst, ale nikoli zapisovat do.|
@@ -515,11 +516,11 @@ Dlouhý ukazatel na strukturu [DRAWITEMSTRUCT –](/windows/win32/api/winuser/ns
 
 ### <a name="remarks"></a>Poznámky
 
-Členové `itemAction` a`itemState` struktury definují akci kreslení, která má být provedena. `DRAWITEMSTRUCT`
+`itemAction` a `itemState` členů struktury `DRAWITEMSTRUCT` definují akci kreslení, která má být provedena.
 
-Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Přepište tuto členskou funkci pro implementaci vykreslování pro objekt vykreslený `CListBox` vlastníkem. Aplikace by měla obnovit všechny objekty GDI (Graphic Device Interface) vybrané pro kontext zobrazení zadaný v *lpDrawItemStruct* před ukončením této členské funkce.
+Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Přepište tuto členskou funkci pro implementaci vykreslování pro objekt `CListBox` vykreslený vlastníkem. Aplikace by měla obnovit všechny objekty GDI (Graphic Device Interface) vybrané pro kontext zobrazení zadaný v *lpDrawItemStruct* před ukončením této členské funkce.
 
-Popis`DRAWITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) .
+Popis `DRAWITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) .
 
 ### <a name="example"></a>Příklad
 
@@ -575,11 +576,11 @@ Odkazuje na řetězec zakončený hodnotou null, který má být hledán. Tento 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index vyhovující položky nebo LB_ERR, pokud hledání nebylo úspěšné.
+Index pro shodnou položku nebo LB_ERR, pokud hledání nebylo úspěšné.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud byl seznam vytvořen pomocí stylu vykresleného vlastníkem, ale bez stylu [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , se `FindStringExact` členská funkce pokusí porovnat hodnotu doubleword s hodnotou *lpszFind*.
+Pokud byl seznam vytvořen pomocí stylu vykresleného vlastníkem, ale bez stylu [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , `FindStringExact` členská funkce se pokusí porovnat hodnotu doubleword s hodnotou *lpszFind*.
 
 ### <a name="example"></a>Příklad
 
@@ -595,7 +596,7 @@ int GetAnchorIndex() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index aktuální položky ukotvení, pokud je úspěšný; v opačném případě LB_ERR.
+Index aktuální položky ukotvení, pokud je úspěšný; jinak LB_ERR.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -635,7 +636,7 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v poli se seznamem nebo LB_ERR, pokud dojde k chybě.
+Počet položek v poli se seznamem, nebo LB_ERR, pokud dojde k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -655,13 +656,13 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule aktuálně vybrané položky, pokud se jedná o seznam s jedním výběrem. Je LB_ERR, pokud není aktuálně vybraná žádná položka.
+Index založený na nule aktuálně vybrané položky, pokud se jedná o seznam s jedním výběrem. Je LB_ERR, pokud není aktuálně vybrána žádná položka.
 
 V poli se seznamem vícenásobného výběru index položky, která má fokus.
 
 ### <a name="remarks"></a>Poznámky
 
-Nevolejte `GetCurSel` pro pole seznamu vícenásobného výběru. Místo toho použijte [CListBox –:: GetSelItems](#getselitems) .
+Nevolejte `GetCurSel` pro seznam vícenásobného výběru. Místo toho použijte [CListBox –:: GetSelItems](#getselitems) .
 
 ### <a name="example"></a>Příklad
 
@@ -744,11 +745,11 @@ int GetItemHeight(int nIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Určuje index založený na nule položky v seznamu. Tento parametr se používá pouze v případě, že má pole se stylem LBS_OWNERDRAWVARIABLE. v opačném případě by měl být nastaven na hodnotu 0.
+Určuje index založený na nule položky v seznamu. Tento parametr se používá pouze v případě, že má seznam LBS_OWNERDRAWVARIABLE styl. v opačném případě by měl být nastaven na hodnotu 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výška položek v poli se seznamem (v pixelech). Pokud má pole se stylem [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , návratová hodnota je výška položky určené parametrem *nIndex*. Pokud dojde k chybě, návratová hodnota je LB_ERR.
+Výška položek v poli se seznamem (v pixelech). Pokud má pole se seznamem styl [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , návratová hodnota je výška položky určené parametrem *nIndex*. Pokud dojde k chybě, návratová hodnota je LB_ERR.
 
 ### <a name="example"></a>Příklad
 
@@ -790,7 +791,7 @@ DWORD GetListBoxInfo() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek na sloupec `CListBox` objektu.
+Počet položek na sloupec objektu `CListBox`
 
 ### <a name="remarks"></a>Poznámky
 
@@ -853,7 +854,7 @@ int GetSelCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet vybraných položek v poli se seznamem. Pokud je seznam jediným výběrem, návratová hodnota je LB_ERR.
+Počet vybraných položek v poli se seznamem. Pokud je seznam jedním výběrem, návratová hodnota je LB_ERR.
 
 ### <a name="example"></a>Příklad
 
@@ -879,7 +880,7 @@ Určuje ukazatel na vyrovnávací paměť, která je dostatečně velká pro po�
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Skutečný počet položek umístěných ve vyrovnávací paměti. Pokud je seznam jediným výběrem, návratová hodnota je `LB_ERR`.
+Skutečný počet položek umístěných ve vyrovnávací paměti. Pokud je seznam jedním výběrem, návratová hodnota je `LB_ERR`.
 
 ### <a name="example"></a>Příklad
 
@@ -905,10 +906,10 @@ void GetText(
 Určuje index založený na nule řetězce, který se má načíst.
 
 *lpszBuffer*<br/>
-Odkazuje na vyrovnávací paměť, která přijímá řetězec. Vyrovnávací paměť musí mít dostatek místa pro řetězec a ukončující znak null. Velikost řetězce lze určit před časem voláním `GetTextLen` členské funkce.
+Odkazuje na vyrovnávací paměť, která přijímá řetězec. Vyrovnávací paměť musí mít dostatek místa pro řetězec a ukončující znak null. Velikost řetězce lze určit před časem voláním členské funkce `GetTextLen`.
 
 *rString*<br/>
-Odkaz na `CString` objekt.
+Odkaz na objekt `CString`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -916,7 +917,7 @@ Délka (v bajtech) řetězce s výjimkou ukončujícího znaku null. Pokud *nInd
 
 ### <a name="remarks"></a>Poznámky
 
-Druhá forma této členské funkce vyplní `CString` objekt textem řetězce.
+Druhá forma této členské funkce vyplní objekt `CString` textem řetězce.
 
 ### <a name="example"></a>Příklad
 
@@ -953,7 +954,7 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule první viditelné položky v seznamu, pokud je to úspěšné, LB_ERR jinak.
+Index založený na nule první viditelné položky v seznamu v případě úspěchu LB_ERR jinak.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -987,11 +988,11 @@ Pokud je to úspěšné, maximální počet položek, které může seznam uklá
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci volejte před přidáním velkého počtu položek do `CListBox`.
+Před přidáním velkého počtu položek do `CListBox`volejte tuto funkci.
 
 Tato funkce pomáhá zrychlit inicializaci seznamů polí, které mají velký počet položek (více než 100). Předem alokuje zadanou velikost paměti, aby následné funkce [AddString](#addstring), [InsertString](#insertstring)a [dir](#dir) vybraly nejkratší možnou dobu. Můžete použít odhady pro parametry. Pokud dojde k přeodhadování, je přiděleno několik dalších paměťových paměti; Pokud se podceňují skutečnou, použije se pro položky, které překračují předběžně přidělené množství, normální přidělení.
 
-Jenom Windows 95/98: Parametr *nItems* je omezen na 16 bitů hodnot. To znamená, že pole se seznamem nemůžou obsahovat více než 32 767 položek. I když je počet položek omezený, celková velikost položek v poli seznamu je omezená pouze pomocí dostupné paměti.
+Jenom Windows 95/98: parametr *nItems* je omezený na 16 bitů hodnot. To znamená, že pole se seznamem nemůžou obsahovat více než 32 767 položek. I když je počet položek omezený, celková velikost položek v poli seznamu je omezená pouze pomocí dostupné paměti.
 
 ### <a name="example"></a>Příklad
 
@@ -1021,7 +1022,7 @@ Index založený na nule pozice, do které byl řetězec vložen. Návratová ho
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od [](#addstring) členské funkce `InsertString` AddString nezpůsobí řazení seznamu se stylem [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+Na rozdíl od členské funkce [AddString](#addstring) `InsertString` nezpůsobí řazení seznamu se stylem [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 ### <a name="example"></a>Příklad
 
@@ -1043,7 +1044,7 @@ UINT ItemFromPoint(
 Bod, pro který chcete najít nejbližší položku určenou vzhledem k levému hornímu rohu klientské oblasti seznamu.
 
 *bOutside*<br/>
-Odkaz na proměnnou BOOL, která bude nastavena na hodnotu TRUE, pokud je *bod PT* mimo oblast klienta nejbližší položky seznamu, false, pokud je *bod PT* v oblasti klienta nejbližší položky pole seznamu.
+Odkaz na proměnnou BOOL, která bude nastavena na hodnotu TRUE, pokud je *bod PT* mimo klientskou oblast seznamu, false, pokud je *bod PT* uvnitř klientské oblasti seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1072,11 +1073,11 @@ Dlouhý ukazatel na strukturu [MEASUREITEMSTRUCT –](/windows/win32/api/winuser
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Tuto členskou funkci přepište a vyplňte `MEASUREITEMSTRUCT` strukturu pro informování oken dimenzí seznamu. Pokud je pole se seznamem vytvořeno pomocí stylu [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , rozhraní volá tuto členskou funkci pro každou položku v seznamu. V opačném případě se tento člen volá jenom jednou.
+Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Tuto členskou funkci přepište a naplňte `MEASUREITEMSTRUCT` struktury a informujte okna o dimenzích seznamu. Pokud je pole se seznamem vytvořeno pomocí stylu [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , rozhraní volá tuto členskou funkci pro každou položku v seznamu. V opačném případě se tento člen volá jenom jednou.
 
-Další informace o použití stylu [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) v rozevíracím seznamu `SubclassDlgItem` `CWnd`, který se vytvořil pomocí členské funkce, najdete v diskuzi v technické poznámce [14](../../mfc/tn014-custom-controls.md).
+Další informace o použití stylu [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) v poli se seznamem pro vykreslení vlastníka vytvořeném pomocí členské funkce `SubclassDlgItem` `CWnd`naleznete v diskuzi v [technickém poznámce 14](../../mfc/tn014-custom-controls.md).
 
-Popis`MEASUREITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) .
+Popis `MEASUREITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) .
 
 ### <a name="example"></a>Příklad
 
@@ -1120,11 +1121,11 @@ Index vybrané položky, pokud bylo hledání úspěšné. Pokud hledání nebyl
 
 V případě potřeby se seznam posuňte, pokud je to nutné, aby se vybraná položka zobrazila.
 
-Tato členská funkce se nedá použít s polem seznamu, které má styl [LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+Tuto členskou funkci nelze použít se seznamem, který má styl [LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 Položka je vybrána pouze v případě, že počáteční znaky (z počátečního bodu) odpovídají znakům v řetězci určeném parametrem *lpszItem*.
 
-`FindString` Pomocí členské funkce můžete najít řetězec bez výběru položky.
+K vyhledání řetězce bez výběru položky použijte členskou funkci `FindString`.
 
 ### <a name="example"></a>Příklad
 
@@ -1278,9 +1279,9 @@ Určuje počet pixelů, o které se může seznam vodorovně posunout.
 
 Pokud je velikost pole seznamu menší než tato hodnota, vodorovný posuvník bude vodorovně posouvat položky v poli se seznamem. Pokud je seznam velký nebo větší než tato hodnota, je vodorovný posuvník skrytý.
 
-Chcete-li reagovat na volání `SetHorizontalExtent`, musí být pole seznamu definováno stylem [WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles) .
+Chcete-li reagovat na volání `SetHorizontalExtent`, pole seznamu musí být definováno se stylem [WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles) .
 
-Tato členská funkce není užitečná pro pole se seznamem s více sloupci. Pro pole se seznamem více sloupců volejte `SetColumnWidth` členskou funkci.
+Tato členská funkce není užitečná pro pole se seznamem s více sloupci. Pro pole se seznamem s více sloupci Zavolejte členskou funkci `SetColumnWidth`.
 
 ### <a name="example"></a>Příklad
 
@@ -1355,7 +1356,7 @@ int SetItemHeight(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Určuje index založený na nule položky v seznamu. Tento parametr se používá pouze v případě, že má pole se stylem LBS_OWNERDRAWVARIABLE. v opačném případě by měl být nastaven na hodnotu 0.
+Určuje index založený na nule položky v seznamu. Tento parametr se používá pouze v případě, že má seznam LBS_OWNERDRAWVARIABLE styl. v opačném případě by měl být nastaven na hodnotu 0.
 
 *cyItemHeight*<br/>
 Určuje výšku položky v pixelech.
@@ -1366,7 +1367,7 @@ LB_ERR, pokud je index nebo výška neplatný.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má pole se stylem [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , tato funkce nastaví výšku položky určené parametrem *nIndex*. V opačném případě tato funkce nastaví výšku všech položek v seznamu.
+Pokud má pole se seznamem styl [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , tato funkce nastaví výšku položky určené parametrem *nIndex*. V opačném případě tato funkce nastaví výšku všech položek v seznamu.
 
 ### <a name="example"></a>Příklad
 
@@ -1391,7 +1392,7 @@ Předchozí hodnota identifikátoru národního prostředí (LCID) pro tento sez
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `SetLocale` není volána, je ze systému získáno výchozí národní prostředí. Toto výchozí národní prostředí systému lze upravit pomocí regionální (nebo mezinárodní) aplikace v Ovládacích panelech.
+Pokud není volána `SetLocale`, je ze systému získáno výchozí národní prostředí. Toto výchozí národní prostředí systému lze upravit pomocí regionální (nebo mezinárodní) aplikace v Ovládacích panelech.
 
 ### <a name="example"></a>Příklad
 
@@ -1451,7 +1452,7 @@ Zarážky tabulátoru se nastavují v každé jednotce dialogového okna *cxEach
 Určuje počet zarážek tabulátorů v seznamu.
 
 *rgTabStops*<br/>
-Odkazuje na prvního člena pole celých čísel obsahující pozice zarážky tabulátorem v jednotkách dialogových oken. Jednotka dialogového okna je vodorovná nebo svislá vzdálenost. Jedna vodorovná jednotka dialogového okna se rovná jedné čtvrté jednotky základní šířky a jedna svislá jednotka dialogového okna je rovna jedné 8 aktuální jednotky základní výšky dialogového okna. Základní jednotky dialogového okna jsou vypočítány na základě výšky a šířky aktuálního systémového písma. Funkce `GetDialogBaseUnits` Windows vrátí aktuální základní jednotky dialogu v pixelech. Zarážky tabulátoru musí být seřazeny ve vzestupném pořadí; Zpětná ouška nejsou povolena.
+Odkazuje na prvního člena pole celých čísel obsahující pozice zarážky tabulátorem v jednotkách dialogových oken. Jednotka dialogového okna je vodorovná nebo svislá vzdálenost. Jedna vodorovná jednotka dialogového okna se rovná jedné čtvrté jednotky základní šířky a jedna svislá jednotka dialogového okna je rovna jedné 8 aktuální jednotky základní výšky dialogového okna. Základní jednotky dialogového okna jsou vypočítány na základě výšky a šířky aktuálního systémového písma. Funkce `GetDialogBaseUnits` systému Windows vrátí aktuální základní jednotky dialogu v pixelech. Zarážky tabulátoru musí být seřazeny ve vzestupném pořadí; Zpětná ouška nejsou povolena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1463,7 +1464,7 @@ Pro nastavení zarážky tabulátoru na výchozí velikost 2 jednotky dialogové
 
 K nastavení zarážek tabulátoru na pole velikostí použijte verzi s argumenty *rgTabStops* a *nTabStops* . Pro každou hodnotu v *rgTabStops*se nastaví zarážka tabulátoru až do čísla zadaného parametrem *nTabStops*.
 
-Chcete-li reagovat na volání `SetTabStops` členské funkce, musí být seznam vytvořen se stylem [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+Chcete-li reagovat na volání členské funkce `SetTabStops`, musí být seznam vytvořen se stylem [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 ### <a name="example"></a>Příklad
 
@@ -1518,9 +1519,9 @@ Vrátí hodnotu-2 pro žádnou další akci,-1 pro výchozí akci nebo nezáporn
 
 ### <a name="remarks"></a>Poznámky
 
-Zpráva WM_VKEYTOITEM se pošle seznamem, když obdrží zprávu WM_KEYDOWN, ale jenom v případě, že je v seznamu splněná obě z následujících možností:
+WM_VKEYTOITEM zpráva je odeslána seznamem, když obdrží zprávu WM_KEYDOWN, ale pouze v případě, že seznam splňuje obě následující:
 
-- Má nastaven styl [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+- Má sadu stylů [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 - Má alespoň jednu položku.
 

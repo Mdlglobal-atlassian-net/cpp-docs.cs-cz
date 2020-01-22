@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: referencebinding (vynucení pravidel vazby referencí)'
+title: /Zc:referenceBinding (vynucení pravidel vazby odkazů)
 ms.date: 03/06/2018
 f1_keywords:
 - referenceBinding
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
-ms.openlocfilehash: 9dfe8f5b4713d9567f6e98af6685c552fb51160e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7e297d6fd913ddda4d44a42298a361e314af0b5
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316103"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518475"
 ---
-# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/ Zc: referencebinding (vynucení pravidel vazby referencí)
+# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding (vynucení pravidel vazby odkazů)
 
-Když **/Zc: referencebinding** je zadána možnost, kompilátor neumožňuje nekonstantní l-odkaz k vytvoření vazby dočasné.
+Pokud je zadána možnost **/Zc: referenceBinding** , kompilátor nepovoluje odkazování nekonstantní hodnoty lvalue na vytvoření vazby na dočasné.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:referenceBinding**[**-**]
+> **/Zc:referenceBinding**[ **-** ]
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud **/Zc: referencebinding** není zadán, kompilátor následuje oddíl 8.5.3 standardu C ++ 11 a neumožňuje výrazy, kteří jsou navázáni uživatelem definovaného typu dočasný odkaz na nekonstantní l-hodnoty. Ve výchozím nastavení nebo pokud **/Zc:referenceBinding-** není zadán, kompilátor umožňuje tyto výrazy jako rozšíření společnosti Microsoft, ale je vydáno upozornění úrovně 4. Zabezpečení kódu, přenositelnost a shoda, doporučujeme použít **/Zc: referencebinding**.
+Je-li zadán parametr **/Zc: referenceBinding** , kompilátor sleduje oddíl 8.5.3 standardu c++ 11: nepovoluje výrazy, které vážou uživatelem definovaný typ dočasnou na odkaz nekonstantní hodnoty lvalue. Ve výchozím nastavení, nebo pokud je zadán parametr **/Zc: referenceBinding-** , kompilátor umožňuje tyto výrazy jako rozšíření společnosti Microsoft, ale je vydáno upozornění úrovně 4. V případě zabezpečení a přenositelnosti kódu doporučujeme použít parametr **/Zc: referenceBinding**.
 
-**/Zc: referencebinding** možnost je vypnuto ve výchozím nastavení. [/ Permissive-](permissive-standards-conformance.md) – možnost kompilátoru implicitně nastaví tuto možnost, ale lze přepsat pomocí **/Zc:referenceBinding-**.
+Možnost **/Zc: referenceBinding** je ve výchozím nastavení vypnutá. Možnost kompilátoru [/Permissive-](permissive-standards-conformance.md) implicitně nastaví tuto možnost, ale je možné ji přepsat pomocí příkazu **/Zc: referenceBinding-** .
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje rozšíření společnosti Microsoft, který umožňuje dočasný uživatelem definovaného typu vázat na nekonstantní l-odkaz.
+V této ukázce se zobrazuje rozšíření společnosti Microsoft, které umožňuje vytvořit dočasný typ uživatelsky definovaného typu, který je vázán na odkaz, který není const na lvalue.
 
 ```cpp
 // zcreferencebinding.cpp
@@ -48,22 +48,22 @@ S g() {
     return S{};
 }
 
-void main() {
+int main() {
     S& s = g();         // warning C4239 at /W4
     const S& cs = g();  // okay, bound to const ref
     f(g());             // Extension: error C2664 only if /Zc:referenceBinding
 }
 ```
 
-Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech s kompatibilitou ve vizuálu C++najdete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
+1. Vyberte **Vlastnosti konfigurace** > stránce vlastností **příkazového řádku** **jazyka C/C++**  > .
 
-1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zc: referencebinding** a klikněte na tlačítko **OK**.
+1. Upravte vlastnost **Další možnosti** tak, aby zahrnovala **/Zc: referenceBinding** a pak zvolte **OK**.
 
 ## <a name="see-also"></a>Viz také:
 

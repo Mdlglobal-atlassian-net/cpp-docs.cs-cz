@@ -1,39 +1,39 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4789
+title: Upozornění kompilátoru (úroveň 1) C4789
 ms.date: 03/25/2019
 f1_keywords:
 - C4789
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36278615631d017db1d1c2fc4eecf8c1612892de
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187228"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518397"
 ---
-# <a name="compiler-warning-level-1-c4789"></a>Kompilátor upozornění (úroveň 1) C4789
+# <a name="compiler-warning-level-1-c4789"></a>Upozornění kompilátoru (úroveň 1) C4789
 
-> vyrovnávací paměť "*identifikátor*" velikosti *N* bajtů bude mít přeběhnutí; *M* bajtů se zapíše s posunem *L*
+> vyrovnávací paměť '*identifikátor*' velikosti *N* bajtů bude přetečení. *M* bajtů se zapíše s posunem *L* .
 
 ## <a name="remarks"></a>Poznámky
 
-**C4789** upozorní o přetečení vyrovnávací paměti, když se používají konkrétní funkce jazyka C za běhu (CRT). Když jsou předávány parametry nebo přiřazení dojde ke ho může také nahlásit neshody velikost. Upozornění je možné, pokud jsou velikosti dat v době kompilace znám. Toto upozornění se používá v situacích, které může elude typické neshoda velikost dat zjišťování.
+**C4789** upozorňuje na přetečení vyrovnávací paměti při použití specifických funkcí jazyka C run-time (CRT). Může také nahlásit neshodu velikosti, pokud jsou předány parametry nebo jsou vytvořeny přiřazení. Upozornění je možné, pokud jsou velikosti dat známy v době kompilace. Toto upozornění je vhodné pro situace, které mohou elude typickou detekci neshody datových velikostí.
 
-**C4789** vás upozorní, když se data zkopírovala do bloku dat, který je známý jako moc malé v době kompilace.
+**C4789** upozorňuje na to, že se data zkopírují do bloku dat, u kterého se ví, že je v době kompilace příliš malá.
 
-Upozornění v případě kopírování používá vnitřní formu některou z těchto funkcí CRT:
+K upozornění dojde, pokud kopie používá vnitřní formu jedné z těchto funkcí CRT:
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
 - [memset](../../c-runtime-library/reference/memset-wmemset.md)
 
-- [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy –](../../c-runtime-library/reference/memcpy-wmemcpy.md)
+- [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-Upozornění se zobrazí také při přetypování parametr větší datový typ a pak proveďte přiřazení kopie z reference na lvalue.
+Upozornění se zobrazí také při přetypování parametru na větší datový typ a pak vytvořit přiřazení kopírování z odkazu lvalue.
 
-Visual C++ může vytvořit toto upozornění pro cestu kódu, který se nikdy neprovede. Upozornění můžete dočasně zakázat s použitím `#pragma`, jak je znázorněno v tomto příkladu:
+Vizuál C++ může toto upozornění vygenerovat pro cestu kódu, která se nikdy nespustí. Upozornění můžete dočasně zakázat pomocí `#pragma`, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 #pragma warning( push )
@@ -42,7 +42,7 @@ Visual C++ může vytvořit toto upozornění pro cestu kódu, který se nikdy n
 #pragma warning( pop )
 ```
 
-Tohoto idiomu uchovává Visual C++ ze generování upozornění pro tento konkrétní blok kódu. `#pragma warning(push)` Zachová stávající stav před `#pragma warning(disable: 4789)` změní. `#pragma warning(pop)` Obnoví vložené stavu a odebere účinky `#pragma warning(disable:4789)`. Další informace o C++ direktivy preprocesoru `#pragma`, naleznete v tématu [upozornění](../../preprocessor/warning.md) a [direktivy Pragma a klíčové slovo __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Tento idiom zachovává C++ vizuální generování upozornění pro konkrétní blok kódu. `#pragma warning(push)` zachovává stávající stav před tím, než ho `#pragma warning(disable: 4789)` změní. `#pragma warning(pop)` obnoví stav nabízení a odstraní důsledky `#pragma warning(disable:4789)`. Další informace o C++ direktivách preprocesoru `#pragma`naleznete v tématech [Upozornění](../../preprocessor/warning.md) a direktivy [pragma a klíčové slovo __pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Příklad
 
@@ -70,7 +70,7 @@ int main()
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka rovněž vygeneruje C4789.
+Následující ukázka také generuje C4789.
 
 ```cpp
 // C4789b.cpp
@@ -78,7 +78,7 @@ Následující ukázka rovněž vygeneruje C4789.
 // processor: x86
 short G;
 
-void main()
+int main()
 {
    int * p = (int *)&G;
    *p = 3;   // C4789 - writes an int through a pointer to short

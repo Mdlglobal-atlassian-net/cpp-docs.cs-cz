@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: d002fd4c4edc99775e62023dda7998fba2c6a44f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051514"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518167"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Návod: Kompilace nativního programu C++ v příkazovém řádku
 
@@ -78,7 +78,7 @@ Před vytvořením C nebo C++ programu na příkazovém řádku je nutné ověř
    ```cpp
    #include <iostream>
    using namespace std;
-   void main()
+   int main()
    {
        cout << "Hello, world, from Visual C++!" << endl;
    }

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890150"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518462"
 ---
 # <a name="ltiomanipgt-functions"></a>funkce &lt;iomanip&gt;
 
@@ -42,7 +42,7 @@ ms.locfileid: "72890150"
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
 |[setprecision](#setprecision)|[setw](#setw)|
 
-## <a name="iomanip_get_money"></a>get_money
+## <a name="iomanip_get_money"></a>  get_money
 
 Extrahuje peněžní hodnotu z datového proudu pomocí požadovaného formátu a vrátí hodnotu v parametru.
 
@@ -57,11 +57,11 @@ T7 get_money(Money& amount, bool use_intl);
 Extrahovaná peněžní hodnota.
 
 *use_intl*\
-Pokud **má hodnotu true**, použijte mezinárodní formát. Výchozí hodnota je **false (NEPRAVDA**).
+Pokud **má hodnotu true**, použijte mezinárodní formát. Výchozí hodnota je **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor vrátí objekt, který při extrakci z datového proudu `str`chová jako `formatted input function`, který volá členskou funkci `get` pro omezující vlastnost národního prostředí `money_get` přidružených k `str`, pomocí *use_intl* k označení mezinárodního formátu. . V případě úspěchu se volání ukládají v *množství* extrahované peněžní hodnoty. Manipulátor pak vrátí `str`.
+Manipulátor vrátí objekt, který při extrakci z datového proudu `str`chová jako `formatted input function`, který volá členskou funkci `get` pro omezující vlastnost národního prostředí `money_get` přidružených k `str`, pomocí *use_intl* k označení mezinárodního formátu. V případě úspěchu se volání ukládají v *množství* extrahované peněžní hodnoty. Manipulátor pak vrátí `str`.
 
 `Money` musí být typu `long double` nebo instance `basic_string` se stejnými parametry elementu a vlastností jako `str`.
 
@@ -84,7 +84,7 @@ Požadovaný formát, který se má použít k získání hodnoty času.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor vrátí objekt, který při extrakci z datového proudu `str`chová jako `formatted input function`, který volá členskou funkci `get` pro omezující vlastnost národního prostředí `time_get` přidružených k `str`, pomocí `tptr` k označení časové struktury a `fmt` k označení začátku formátovacího řetězce zakončeného hodnotou null. V případě úspěchu se volání ukládají do struktury času, které jsou přidruženy k polím s extrahovanými časovými poli. Manipulátor pak vrátí `str`.
+Manipulátor vrátí objekt, který při extrakci z datového proudu `str`chová jako `formatted input function`, který volá členskou funkci `get` pro omezující vlastnost národního prostředí `time_get` přidružených k `str`, pomocí `tptr` k označení časové struktury a `fmt` k označení začátku řetězce formátu zakončeného hodnotou null. V případě úspěchu se volání ukládají do struktury času, které jsou přidruženy k polím s extrahovanými časovými poli. Manipulátor pak vrátí `str`.
 
 ## <a name="iomanip_put_money"></a>put_money
 
@@ -105,7 +105,7 @@ Nastavte na **hodnotu true** , pokud má manipulátor používat mezinárodní f
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí `str`.
+Vrací objekt `str`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -132,7 +132,7 @@ Požadovaný formát pro zápis hodnoty času.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor vrátí objekt, který při vložení do datového proudu `str`chová jako `formatted output function`. Funkce Output volá členskou funkci `put` pro omezující vlastnost národního prostředí `time_put` přidružená ke `str`. Funkce Output používá *time_ptr* k označení časové struktury a *TIME_FORMAT* k indikaci začátku řetězce formátu zakončeného hodnotou null. V případě úspěchu volání vloží literálový text z řetězce formátu a převede hodnoty z časové struktury. Manipulátor pak vrátí `str`.
+Manipulátor vrátí objekt, který při vložení do datového proudu `str`chová jako `formatted output function`. Funkce Output volá členskou funkci `put` pro omezující vlastnost národního prostředí `time_put` přidružená ke `str`. Funkce Output používá *time_ptr* k označení časové struktury a *TIME_FORMAT* k označení začátku řetězce formátu zakončeného hodnotou null. V případě úspěchu volání vloží literálový text z řetězce formátu a převede hodnoty z časové struktury. Manipulátor pak vrátí `str`.
 
 ## <a name="quoted"></a>uvedená
 
@@ -195,7 +195,7 @@ void show_quoted_v_nonquoted()
     cout << "Quoted          : " << extracted_quoted << endl;
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     show_quoted_v_nonquoted();
 
@@ -271,7 +271,7 @@ void show_custom_escape()
     // after round-tripping.
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     cout << "Custom delimiter:" << endl;
     show_custom_delimiter();
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* \
+*Ch*\
 Znak, který bude použit k vyplňování mezer v zobrazení zarovnané na pravé straně.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -653,4 +653,4 @@ l5 = 65536
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iomanip >](../standard-library/iomanip.md)
+[\<iomanip>](../standard-library/iomanip.md)

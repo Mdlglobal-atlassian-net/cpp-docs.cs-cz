@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 08ecb5bc55ead207d6e4a0029a21e737d447143b
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556731"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518202"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Reference ke schématu CMakeSettings. JSON
 
@@ -146,6 +146,7 @@ Pokud aktivní konfigurace určuje generátor sady Visual Studio, je ve výchoz�
 ```
 
 Všimněte si, že pokud nedefinujete `"type"`, bude ve výchozím nastavení předpokládána typ `"STRING"`.
+- `remoteCopyOptimizations`: vlastnosti sady **Visual Studio 2019 verze 16,5 nebo novější** pro řízení zdrojové kopie na vzdáleném cíli. Ve výchozím nastavení jsou povolené optimalizace. Zahrnuje `remoteCopyUseOptimizations`, `rsyncSingleDirectoryCommandArgs`a `remoteCopySourcesMaxSmallChange`.
 
 ## <a name="environments"></a>Environment
 

@@ -1,21 +1,21 @@
 ---
-title: Atributy v jazyce C++
+title: Atributy vC++
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 5967974d419299778e4aadaa235ee21c62e16d34
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222301"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518293"
 ---
-# <a name="attributes-in-c"></a>Atributy v jazyce C++
+# <a name="attributes-in-c"></a>Atributy vC++
 
-Standard jazyka C++ definuje sadu atributů a také umožňuje dodavatelům kompilátor definovat vlastní atributy (v oboru názvů specifického pro dodavatele), ale je potřeba kompilátory rozpoznat pouze tyto atributy, které jsou definované ve standardu.
+C++ Standard definuje sadu atributů a také umožňuje dodavatelům kompilátoru definovat jejich vlastní atributy (v rámci oboru názvů specifického pro dodavatele), ale kompilátory jsou požadovány pro rozpoznání pouze těch atributů definovaných ve standardu.
 
-V některých případech se standardní atributy překrývat s parametry declspec specifických pro kompilátor. V jazyce Visual C++, můžete použít `[[deprecated]]` atribut namísto použití `declspec(deprecated)` a atribut bude rozpoznán kompilátorem jakékoli splňující podmínky. Pro všechny ostatní declspec parametry, jako je například dllimport a dllexport není dosud žádný ekvivalent atribut tak nutné nadále používat declspec syntaxe. Atributy nemají vliv na systém typů a nemění se význam programu. Kompilátory ignorují atribut hodnoty, které není povědomý.
+V některých případech se standardní atributy překrývají s parametry declspec specifickými pro kompilátor. V jazyce C++Visual můžete použít atribut `[[deprecated]]` namísto použití `declspec(deprecated)` a atribut bude rozpoznán jakýmkoli podformou kompilátoru. Pro všechny ostatní parametry declspec, jako je dllimport a dllexport, neexistuje žádný ekvivalent atributu, takže musíte dál používat syntaxi declspec. Atributy neovlivňují systém typů a nezmění význam programu. Kompilátory ignorují hodnoty atributů, které nerozpoznávají.
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): V rámci seznam atributů, můžete zadat obor názvů pro všechny názvy pomocí jediného **pomocí** představení:
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): v oboru seznamu atributů můžete zadat obor názvů pro všechny názvy s jedním **pomocí** představení:
 
 ```cpp
 void g() {
@@ -24,26 +24,26 @@ void g() {
 }
 ```
 
-## <a name="c-standard-attributes"></a>Standard jazyka C++ atributy
+## <a name="c-standard-attributes"></a>C++Standardní atributy
 
-V C ++ 11 atributy poskytují standardizovaný způsob, jak anotovat konstruktory jazyka C++ (včetně, ale jiné třídy, funkce, proměnné a bloky) společně s dalšími informacemi, který může nebo nemusí být specifické pro výrobce. Kompilátor můžete použít tyto informace ke generování informační zprávy, nebo použít zvláštní logiku při kompilaci kódu s atributy. Kompilátor ignoruje všechny atributy, které nebylo rozpoznáno, což znamená, že nelze definovat vlastní atributy pomocí této syntaxe. Atributy jsou uzavřeny v dvojitých hranatými závorkami:
+V jazyce C++ 11 poskytují atributy standardizované možnosti pro anotaci C++ konstrukcí (mimo jiné třídy, funkce, proměnné a bloky) s dalšími informacemi, které mohou nebo nemusí být specifické pro dodavatele. Kompilátor může tyto informace využít ke generování informativních zpráv nebo k použití speciální logiky při kompilování kódu s atributy. Kompilátor ignoruje všechny atributy, které nerozpoznají, což znamená, že nemůžete definovat vlastní atributy pomocí této syntaxe. Atributy jsou uzavřeny dvojitými hranatými závorkami:
 
 ```cpp
 [[deprecated]]
 void Foo(int);
 ```
 
-Atributy představují standardizované alternativou k rozšíření specifické pro výrobce, jako je například direktivy #pragma __declspec() (Visual C++), nebo &#95; &#95;atribut&#95; &#95; (GNU). Nicméně stále musíte použít konstrukce specifické pro výrobce pro většinu účelů. Standardní aktuálně určuje následující atributy, které by měl rozpoznávat vyhovující kompilátoru:
+Atributy představuje standardizovanou alternativu k rozšířením specifickým pro dodavatele, jako jsou direktivy #pragma, __declspec C++() ( &#95; &#95;vizuál&#95; &#95; ) nebo atribut (GNU). Pro většinu účelů ale budete stále muset použít konstrukce specifické pro konkrétní dodavatele. Standard aktuálně určuje následující atributy, které má vyhovující kompilátor rozpoznat:
 
-- `[[noreturn]]` Určuje, že funkce nikdy nevrátí; jinými slovy vždy vyvolá výjimku. Kompilátor můžete upravit jeho kompilace pravidla pro `[[noreturn]]` entity.
+- `[[noreturn]]` určuje, že funkce nikdy nevrátí hodnotu; Jinými slovy, vždy vyvolá výjimku. Kompilátor může upravit svá pravidla kompilace pro entity `[[noreturn]]`.
 
-- `[[carries_dependency]]` Určuje, že funkce šíří data závislostí řazení s ohledem na synchronizaci vláken. Atribut lze použít na jeden nebo více parametrů, chcete-li určit, že argument předaný přenáší závislostí do těla funkce. Atribut lze použít pro funkce samotná, chcete-li určit, že návratová hodnota představuje závislost mimo funkci. Kompilátor může použít tyto informace pro generování kódu efektivnější.
+- `[[carries_dependency]]` určuje, že funkce šíří řazení závislosti dat s ohledem na synchronizaci vláken. Atribut lze použít na jeden nebo více parametrů, chcete-li určit, že argument předaný argumentu přenese závislost na tělo funkce. Atribut lze použít pro samotnou funkci, chcete-li určit, že návratová hodnota přenese závislost mimo funkci. Kompilátor může tyto informace použít ke generování efektivnějšího kódu.
 
-- `[[deprecated]]` **Visual Studio 2015 a novější:** Určuje, že funkce není určena pro použití a nemusí existovat v budoucích verzích rozhraní knihovny. Kompilátor může být využit k vygenerování informační zpráva, když kód klienta se pokusí o volání funkce. Můžete použít k deklaraci třídy, název typedef, proměnné, nestatický datový člen, funkce, obor názvů, výčtu, enumerátor nebo specializace šablony.
+- `[[deprecated]]` **Visual Studio 2015 a novější:** určuje, že funkce není určena pro použití, a v budoucích verzích rozhraní knihovny nemusí existovat. Kompilátor může použít k vygenerování informační zprávy, když se klientský kód pokusí zavolat funkci. Dá se použít na deklaraci třídy, definice typu typedef-Name, proměnné, nestatického datového člena, funkce, oboru názvů, výčtu, výčtu nebo specializace šablony.
 
-- `[[fallthrough]]` **Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atribut lze použít v kontextu [přepnout](switch-statement-cpp.md) příkazy jako Nápověda pro kompilátor (nebo každému, kdo čte kód), která je určena fallthrough chování. Microsoft C++ kompilátor aktuálně nevyvolá upozornění na fallthrough chování, takže tento atribut nemá žádný účinek chování kompilátoru.
+- `[[fallthrough]]` **Visual Studio 2017 a novější:** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) atribut `[[fallthrough]]` lze použít v kontextu příkazů [Switch](switch-statement-cpp.md) jako pomocný parametr kompilátoru (nebo kdokoli, kdo čte kód), že chování fallthrough je určeno. Kompilátor společnosti C++ Microsoft aktuálně neupozorňuje na chování fallthrough, takže tento atribut nemá žádný vliv na chování kompilátoru.
 
-- `[[nodiscard]]` **Visual Studio 2017 verze 15.3 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že návratová hodnota funkce není určena pro zahodí. Vyvolá upozornění C4834, jak je znázorněno v tomto příkladu:
+- `[[nodiscard]]` **Visual Studio 2017 verze 15,3 a novější:** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že návratová hodnota funkce není určena k zahození. Vyvolává upozornění C4834, jak je znázorněno v následujícím příkladu:
 
     ```cpp
     [[nodiscard]]
@@ -56,14 +56,14 @@ Atributy představují standardizované alternativou k rozšíření specifické
     }
     ```
 
-- `[[maybe_unused]]` **Visual Studio 2017 verze 15.3 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že proměnné, funkce, třídy, definice typedef, nestatický datový člen, výčtu nebo specializace šablony záměrně nelze použít. Kompilátor nevyvolá upozornění při označení entity `[[maybe_unused]]` se nepoužívá. Entita, která je deklarována bez atributu můžete později se znova deklarovat s atributem a naopak. Entity se považuje za označené po jeho první deklaraci, která je označena se analyzují a zbytek překlad aktuální překladové jednotce.
+- `[[maybe_unused]]` **Visual Studio 2017 verze 15,3 a novější:** (k dispozici s [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že proměnná, funkce, třída, typedef, nestatický datový člen, výčet nebo specializace šablon mohou být záměrně nepoužitelné. Kompilátor neupozorní, pokud není použita entita označená `[[maybe_unused]]`. Entita, která je deklarována bez atributu, může být později znovu deklarována s atributem a naopak. Entita se považuje za označenou jako první deklaraci, která je označena jako analyzovaná, a pro zbytek překladu aktuální jednotky překladu.
 
 ## <a name="microsoft-specific-attributes"></a>Atributy specifické pro společnost Microsoft
 
-- `[[gsl::suppress(rules)]]` Tento atribut specifické pro společnost Microsoft se používá pro potlačení varování z programů, které vynucují [pokyny pro podporu knihovny (GSL)](https://github.com/Microsoft/GSL) pravidla v kódu. Zvažte například tento fragment kódu:
+- `[[gsl::suppress(rules)]]` tento atribut specifický pro společnost Microsoft se používá pro potlačení varování od kontrol, které vynutilí [pokyny pro podporu knihoven (GSL)](https://github.com/Microsoft/GSL) v kódu. Zvažte například tento fragment kódu:
 
     ```cpp
-    void main()
+    int main()
     {
         int arr[10]; // GSL warning 26494 will be fired
         int* p = arr; // GSL warning 26485 will be fired
@@ -75,12 +75,13 @@ Atributy představují standardizované alternativou k rozšíření specifické
     }
     ```
 
-  V příkladu vyvolává tato upozornění:
+  Tento příklad vyvolává tato upozornění:
 
-  - 26494 (zadejte pravidlo 5: Vždy objekt inicializujte.)
+  - 26494 (pravidlo typu 5: vždy inicializace objektu.)
 
-  - 26485 (rozsah pravidla 3: Rozklad pole na ukazatel.)
+  - 26485 (pravidlo hranice 3: žádné pole pro ukazatel Decay)
 
-  - 26481 (pravidlo 1 hranice: Nepoužívejte aritmetiku ukazatele. Použijte rozsah.)
+  - 26481 (pravidlo vazby 1: Nepoužívejte aritmetický ukazatel. Místo toho použijte rozpětí.)
 
-  První dva upozornění vyvolat při kompilaci tohoto kódu s nástrojem analýza kódu CppCoreCheck nainstalovaná a aktivovaná. Ale třetí upozornění neaktivuje z důvodu atribut. Celý profil můžete potlačit pomocí zápisu [[gsl::suppress(bounds)]] bez zahrnutí příslušné pravidlo číslo. Podle dokumentu C++ Core Guidelines jsou navrženy k usnadnění psaní kódu lepší a bezpečnější. Atribut potlačit usnadňuje Chcete-li vypnout upozornění, pokud nejsou potřebná.
+  První dvě upozornění se aktivují při kompilování tohoto kódu s nainstalovaným a aktivovaným nástrojem pro analýzu kódu CppCoreCheck. Ale třetí upozornění se neaktivuje kvůli atributu. Celý profil mezí můžete potlačit zápisem [[GSL:: potlačit (bounds)]] bez zahrnutí konkrétního čísla pravidla. C++ Základní pokyny jsou navržené tak, aby vám pomohly psát lepší a bezpečnější kód. Atribut potlačit usnadňuje vypnutí upozornění, když nejsou žádoucí.
+  

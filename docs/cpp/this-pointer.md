@@ -1,6 +1,7 @@
 ---
-title: this – ukazatel
-ms.date: 11/04/2016
+title: this ukazatel
+description: Ukazatel this je ukazatel generovaný kompilátorem na aktuální objekt v nestatických členských funkcích.
+ms.date: 01/22/2020
 f1_keywords:
 - this_cpp
 helpviewer_keywords:
@@ -8,16 +9,24 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- this
+- class
+- struct
+- union
+- sizeof
+- const
+- volatile
+ms.openlocfilehash: 58bba2edd7a457c624b747b5a65d209995852848
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330476"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518332"
 ---
-# <a name="this-pointer"></a>this – ukazatel
+# <a name="opno-locthis-pointer"></a>this ukazatel
 
-**To** ukazatel je ukazatel přístupný pouze v rámci nestatické členské funkce **třídy**, **struktura**, nebo **sjednocení** typu. Odkazuje na objekt, pro který je členská funkce volána. Statické členské funkce nemají **to** ukazatele.
+Ukazatel **this** je ukazatel přístupný pouze v rámci nestatických členských funkcí **class** , **struct** nebo **union** typu. Odkazuje na objekt, pro který je členská funkce volána. Statické členské funkce nemají ukazatel **this** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,19 +37,19 @@ this->member-identifier
 
 ## <a name="remarks"></a>Poznámky
 
-Objektu **to** ukazatel není součástí objektu samotného, není zohledněn ve výsledku **sizeof** příkaz v objektu. Při volání nestatické členské funkce objektu je namísto toho adresa objektu kompilátorem předána funkci jako skrytý argument. Například následující volání funkce:
+Ukazatel **this** objektu není součástí samotného objektu. Nereflektuje se v důsledku příkazu **sizeof** objektu. Když je pro objekt volána nestatická členská funkce, kompilátor předá adresu objektu funkci jako skrytý argument. Například následující volání funkce:
 
 ```cpp
 myDate.setMonth( 3 );
 ```
 
-lze interpretovat takto:
+lze interpretovat jako:
 
 ```cpp
 setMonth( &myDate, 3 );
 ```
 
-Adresa objektu je dostupné v rámci členská funkce, jako **to** ukazatele. Většina použití **to** jsou implicitní. Je možné, i když je to nezbytné, explicitně **to** k odkazování na členy třídy. Příklad:
+Adresa objektu je v rámci členské funkce k dispozici jako ukazatel **this** . Většina použití ukazatele **this** je implicitní. Je právní, ale zbytečný, aby při odkazování na členy classpoužíval explicitní **this** . Příklad:
 
 ```cpp
 void Date::setMonth( int mn )
@@ -57,7 +66,7 @@ Výraz `*this` se běžně používá k vrácení aktuálního objektu z člensk
 return *this;
 ```
 
-**To** ukazatel slouží také pro ochranu proti odkazů na sebe sama:
+**this** ukazatel se používá také k ochraně proti odkazování na sebe:
 
 ```cpp
 if (&Object != this) {
@@ -65,9 +74,9 @@ if (&Object != this) {
 ```
 
 > [!NOTE]
->  Protože **to** ukazatel je neupravitelnými, přiřazení **to** nejsou povoleny. Starší implementace jazyka C++ umožňovaly přiřazení k **to**.
+> Protože ukazatel **this** není upravitelný, přiřazení k ukazateli **this** nejsou povolena. Dřívější implementace C++ povoleného přiřazení do **this** .
 
-V některých případech **to** ukazatel je přímo použít – například k manipulaci s daty odkazující na sebe struktury, ve kterém jsou vyžadována adresa aktuálního objektu.
+V některých případech se **this** ukazatel používá přímo – například pro manipulaci s referenčními strukturami, kde je vyžadována adresa aktuálního objektu.
 
 ## <a name="example"></a>Příklad
 
@@ -139,11 +148,11 @@ my buffer
 your buffer
 ```
 
-## <a name="type-of-the-this-pointer"></a>Typ tohoto ukazatele
+## <a name="type-of-the-opno-locthis-pointer"></a>Typ ukazatele this
 
-**To** typ ukazatele, lze upravit v deklaraci funkce **const** a **volatile** klíčová slova. Chcete-li deklarovat funkci tak, aby měla atributy jednoho nebo více těchto klíčových slov, přidejte tato klíčová slova za seznam argumentů funkce.
+Typ ukazatele **this** lze upravit v deklaraci funkce pomocí klíčových slov **const** a **volatile** . Chcete-li deklarovat funkci, která má některý z těchto atributů, přidejte klíčová slova za seznam argumentů funkce.
 
-Podívejte se například:
+Vezměte v úvahu příklad:
 
 ```cpp
 // type_of_this_pointer1.cpp
@@ -156,7 +165,7 @@ int main()
 }
 ```
 
-Předchozí kód deklaruje členskou funkci, `X`, ve kterém **to** je považován za ukazatel **const** ukazatel na **const** objektu. Kombinace *cv-mod-list* možnosti se dají použít, ale ty vždy upravují objekt, na které odkazuje **to**, nikoli **to** ukazatel sám. Proto následující deklarace deklaruje funkci `X`; **to** je ukazatel **const** ukazatel na **const** objektu:
+Předchozí kód deklaruje členskou funkci `X`, ve které je ukazatel **this** považován za **const** ukazatel na objekt **const** . Lze použít kombinace možností *CV-mod-list* , ale vždy upraví objekt, na který odkazuje ukazatel **this** , nikoli ukazatel sám na sebe. Následující deklarace deklaruje `X`funkcí, kde je ukazatel **this** **const** ukazatel na objekt **const** :
 
 ```cpp
 // type_of_this_pointer2.cpp
@@ -169,27 +178,29 @@ int main()
 }
 ```
 
-Typ **to** v členské funkci je popsán následující syntaxí, kde *cv-qualifier-list* je určen z deklarátorů členských funkcí a může být **const**nebo **volatile** (nebo obojí), a *typu třídy* je název třídy:
+Typ **this** v členské funkci je popsán následující syntaxí. *Seznam kvalifikátorů CV-list* je určen z deklarátor členské funkce. Může být **const** nebo **volatile** (nebo obojí). *class-Type* je název class:
 
-*[cv-qualifier-list] typu třídy* **&#42; const to**
+[*CV-kvalifikátor-list*] *class\* typu* **const this**
 
-Jinými slovy **to** je vždy konstantním ukazatelem; nelze přiřadit.  **Const** nebo **volatile** kvalifikátory použít v deklaracích členských funkcí platí pro instanci třídy, na které odkazuje **to** v rozsahu dané funkce.
+Jinými slovy, **this** ukazatel je vždy const ukazatel. Nedá se znovu přiřadit.  Kvalifikátory **const** nebo **volatile** používané v deklaraci členské funkce se vztahují na instanci class **this** ukazatel myši v rozsahu této funkce.
 
 Následující tabulka obsahuje další informace o tom, jak tyto modifikátory fungují.
 
-### <a name="semantics-of-this-modifiers"></a>Sémantika modifikátorů this
+### <a name="semantics-of-opno-locthis-modifiers"></a>Sémantika this modifikátory
 
 |Modifikátor|Význam|
 |--------------|-------------|
-|**const**|Nelze změnit členská data; Nelze vyvolat členskou funkci, která nejsou **const**.|
-|**volatile**|Členská data jsou načtena z paměti při každém přístupu k nim. Zakáže některé optimalizace.|
+|**const**|Nelze změnit Členská data; nelze vyvolat členské funkce, které nejsou **const** .|
+|**volatile**|Data členů jsou načtena z paměti pokaždé, když k ní dojde; zakáže určité optimalizace.|
 
-Jedná se o chybu k předání **const** objektu na členskou funkci, která není **const**. Obdobně je chybou předání **volatile** objektu na členskou funkci, která není **volatile**.
+Je to chyba při předání objektu **const** do členské funkce, která není **const** .
 
-Členské funkce deklarované jako **const** nemohou změnit členská data – v takových funkcích **to** je ukazatel na ukazatel **const** objektu.
+Podobně je také chyba předat objekt **volatile** členské funkci, která není **volatile** .
+
+Členské funkce deklarované jako **const** nemohou měnit data členů – v takových funkcích je ukazatel **this** ukazatelem na objekt **const** .
 
 > [!NOTE]
->  Konstruktory a destruktory nelze deklarovat jako **const** nebo **volatile**. Může však být vyvolána při **const** nebo **volatile** objekty.
+> Konstruktory a destruktory nelze deklarovat jako **const** nebo **volatile** . Lze je však vyvolat pro objekty **const** nebo **volatile** .
 
 ## <a name="see-also"></a>Viz také:
 

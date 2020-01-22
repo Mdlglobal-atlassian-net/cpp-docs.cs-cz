@@ -2,84 +2,84 @@
 title: 'Návod: Násobení matic'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: afa9dba8938f9d701b8f21ca3575eb06eb688ac0
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877485"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518488"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Návod: Násobení matic
 
-Tento podrobný návod ukazuje, jak použít C++ AMP zrychlí provádění násobení matic. Jsou uvedeny dva algoritmy, jeden bez dlaždic a druhý s dělení do bloků.
+V tomto podrobném návodu se dozvíte, jak pomocí C++ amp zrychlit provádění násobení matic. K dispozici jsou dva algoritmy, a to bez dlaždic a jednoho s dlaždicí.
 
 ## <a name="prerequisites"></a>Požadavky
 
 Než začnete:
 
-- Čtení [přehled modelu C++ AMP](../../parallel/amp/cpp-amp-overview.md).
+- Přečtěte si [ C++ přehled amp](../../parallel/amp/cpp-amp-overview.md).
 
-- Čtení [pomocí dlaždice](../../parallel/amp/using-tiles.md).
+- Přečtěte si [použití dlaždic](../../parallel/amp/using-tiles.md).
 
 - Ujistěte se, že používáte minimálně Windows 7 nebo Windows Server 2008 R2.
 
 ### <a name="to-create-the-project"></a>Vytvoření projektu
 
-Pokyny pro vytvoření nového projektu se liší v závislosti na tom, kterou verzi sady Visual Studio jste nainstalovali. Ujistěte se, že máte volič verze v horním vlevo nastavené na správné verzi.
+Pokyny pro vytvoření nového projektu se liší v závislosti na verzi sady Visual Studio, kterou jste nainstalovali. Ujistěte se, že máte selektor verzí v levém horním rohu nastavený na správnou verzi.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-the-project-in-visual-studio-2019"></a>Vytvoření projektu v aplikaci Visual Studio 2019
 
-1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogové okno.
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
 
-1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
+1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**. 
 
-1. Filtrované seznamu typů projektů zvolte **prázdný projekt** klikněte na tlačítko **Další**. Na další stránce zadejte *MatrixMultiply* v **název** zadat název projektu a zadejte umístění projektu, v případě potřeby.
+1. Z filtrovaného seznamu typů projektů zvolte možnost **prázdný projekt** a pak zvolte možnost **Další**. Na další stránce zadejte do pole **název** *MatrixMultiply* a zadejte název projektu a v případě potřeby určete umístění projektu.
 
-   ![Nových konzolovou aplikaci](../../build/media/mathclient-project-name-2019.png "nových konzolovou aplikaci")
+   ![Nová aplikace konzoly](../../build/media/mathclient-project-name-2019.png "Nová aplikace konzoly")
 
-1. Zvolte **vytvořit** pro vytvoření projektu klienta.
+1. Pro vytvoření projektu klienta klikněte na tlačítko **vytvořit** .
 
-1. V **Průzkumníka řešení**, otevřete místní nabídku pro **zdrojové soubory**a klikněte na tlačítko **přidat** > **nová položka**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro **zdrojové soubory**a zvolte možnost **Přidat** > **novou položku**.
 
-1. V **přidat novou položku** dialogu **soubor C++ (.cpp)**, zadejte *MatrixMultiply.cpp* v **název** pole a klikněte na tlačítko  **Přidat** tlačítko.
+1. V dialogovém okně **Přidat novou položku** vyberte  **C++ soubor (. cpp)** , do pole **název** zadejte *MatrixMultiply. cpp* a poté klikněte na tlačítko **Přidat** .
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Vytvoření projektu v sadě Visual Studio 2017 nebo 2015
+### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Vytvoření projektu v aplikaci Visual Studio 2017 nebo 2015
 
-1. V panelu nabídek v sadě Visual Studio zvolte **souboru** > **nový** > **projektu**.
+1. Na panelu nabídek v aplikaci Visual Studio vyberte **soubor** > **Nový** > **projekt**.
 
-1. V části **nainstalováno** v podokně šablony vyberte **Visual C++**.
+1. V části **nainstalováno** v podokně šablony vyberte **možnost C++Visual** .
 
-1. Vyberte **prázdný projekt**, zadejte *MatrixMultiply* v **název** pole a klikněte na tlačítko **OK** tlačítko.
+1. Vyberte **prázdný projekt**, do pole **název** zadejte *MatrixMultiply* a pak klikněte na tlačítko **OK** .
 
 1. Zvolte **Další** tlačítko.
 
-1. V **Průzkumníka řešení**, otevřete místní nabídku pro **zdrojové soubory**a klikněte na tlačítko **přidat** > **nová položka**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro **zdrojové soubory**a zvolte možnost **Přidat** > **novou položku**.
 
-1. V **přidat novou položku** dialogu **soubor C++ (.cpp)**, zadejte *MatrixMultiply.cpp* v **název** pole a klikněte na tlačítko  **Přidat** tlačítko.
+1. V dialogovém okně **Přidat novou položku** vyberte  **C++ soubor (. cpp)** , do pole **název** zadejte *MatrixMultiply. cpp* a poté klikněte na tlačítko **Přidat** .
 
 ::: moniker-end
 
-## <a name="multiplication-without-tiling"></a>Násobení bez dělení do bloků
+## <a name="multiplication-without-tiling"></a>Násobení bez dláždění
 
-V této části vezměte v úvahu Násobení dvou matice A a B, které jsou definovány takto:
+V této části zvažte násobení dvou matric, a a B, které jsou definovány takto:
 
-![3&#45;podle&#45;2 matice](../../parallel/amp/media/campmatrixanontiled.png "3&#45;podle&#45;2 matice")
+![3&#45;podle&#45;2 matice A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;podle&#45;2 matice A")
 
 ![2&#45;podle&#45;3 matice B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;podle&#45;3 matice B")
 
-Matice 3 2 je A a B je 2 x 3 matice. Součin hodnot a b je následující matice 3 číslem 3. Produkt se počítá vynásobením řádků A sloupců B prvek po prvku.
+A je matice 3 – 2 a B je matice 2-po 3. Součin vynásobení hodnotou B je následující matice 3 po 3. Produkt je vypočítán vynásobením řádků A sloupci elementu B elementem.
 
-![3&#45;podle&#45;3 produktu matice](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;podle&#45;3 produktu matice")
+![matice&#45;3&#45;podle 3 produktu](../../parallel/amp/media/campmatrixproductnontiled.png "matice&#45;3&#45;podle 3 produktu")
 
-### <a name="to-multiply-without-using-c-amp"></a>Pokud chcete vynásobit bez používání modelu C++ AMP
+### <a name="to-multiply-without-using-c-amp"></a>Vynásobení bez C++ použití amp
 
-1. Otevřete MatrixMultiply.cpp a pomocí následujícího kódu nahraďte stávající kód.
+1. Otevřete MatrixMultiply. cpp a pomocí následujícího kódu nahraďte stávající kód.
 
    ```cpp
    #include <iostream>
@@ -101,23 +101,23 @@ Matice 3 2 je A a B je 2 x 3 matice. Součin hodnot a b je následující matice
        }
    }
 
-   void main() {
+   int main() {
        MultiplyWithOutAMP();
        getchar();
    }
    ```
 
-   Algoritmus je jednoduchá implementace definice násobení matic. Zkrátit čas výpočtu nepoužívá žádné algoritmy paralelní nebo vláken.
+   Algoritmus je jednoduchá implementace definice násobení matice. Nevyužívá žádné paralelní ani zřetězené algoritmy ke snížení doby výpočtu.
 
-1. V panelu nabídky zvolte **souboru** > **Uložit vše**.
+1. Na panelu nabídek vyberte možnost **soubor** > **Uložit vše**.
 
-1. Zvolte **F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
+1. Kliknutím na klávesovou zkratku **F5** spusťte ladění a ověřte, zda je výstup správný.
 
-1. Zvolte **Enter** ukončíte aplikaci.
+1. Pokud chcete aplikaci ukončit, klikněte na tlačítko **ENTER** .
 
-### <a name="to-multiply-by-using-c-amp"></a>Pro násobení pomocí jazyka C++ AMP
+### <a name="to-multiply-by-using-c-amp"></a>Vynásobení pomocí C++ amp
 
-1. V MatrixMultiply.cpp, přidejte následující kód před `main` metody.
+1. V MatrixMultiply. cpp přidejte následující kód před metodu `main`.
 
    ```cpp
    void MultiplyWithAMP() {
@@ -152,72 +152,72 @@ Matice 3 2 je A a B je 2 x 3 matice. Součin hodnot a b je následující matice
    }
    ```
 
-   Kód AMP se podobá kódu bez AMP. Volání `parallel_for_each` spouští jedno vlákno pro každý prvek v `product.extent`a nahradí `for` smyčky pro řádků a sloupců. Hodnota buňky v řádku a sloupce je k dispozici v `idx`. Dostanete prvky `array_view` s použitím buď `[]` operátor a indexovaná proměnná, nebo `()` řádků a sloupců proměnných a operátor. Tento příklad ukazuje obě metody. `array_view::synchronize` Metoda zkopíruje hodnoty `product` proměnné zpět `productMatrix` proměnné.
+   Kód AMP se podobá kódu, který není AMP. Volání `parallel_for_each` spustí jedno vlákno pro každý prvek v `product.extent`a nahradí `for` smyčky pro řádek a sloupec. Hodnota buňky na řádku a ve sloupci je k dispozici v `idx`. K prvkům objektu `array_view` můžete přistupovat pomocí operátoru `[]` a proměnné indexu nebo operátoru `()` a proměnných řádku a sloupce. Příklad ukazuje obě metody. Metoda `array_view::synchronize` zkopíruje hodnoty `product` proměnné zpět do proměnné `productMatrix`.
 
-1. Přidejte následující `include` a `using` příkazů v horní části MatrixMultiply.cpp.
+1. Přidejte následující příkazy `include` a `using` v horní části MatrixMultiply. cpp.
 
    ```cpp
    #include <amp.h>
    using namespace concurrency;
    ```
 
-1. Upravit `main` metoda se má volat `MultiplyWithAMP` metody.
+1. Upravte metodu `main` pro volání metody `MultiplyWithAMP`.
 
    ```cpp
-   void main() {
+   int main() {
        MultiplyWithOutAMP();
        MultiplyWithAMP();
        getchar();
    }
    ```
 
-1. Stisknutím klávesy **Ctrl**+**F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
+1. Stisknutím klávesové zkratky **Ctrl**+**F5** spusťte ladění a ověřte, zda je výstup správný.
 
-1. Stisknutím klávesy **MEZERNÍK** ukončíte aplikaci.
+1. Stisknutím **mezerníku** aplikaci ukončete.
 
-## <a name="multiplication-with-tiling"></a>Násobení s dělení do bloků
+## <a name="multiplication-with-tiling"></a>Násobení s dlážděním
 
-Dělení do bloků je technika, ve kterém můžete dělit data do stejné velikosti podmnožiny, které jsou známé jako dlaždice. Tři věci změnit při použití dělení do bloků.
+Dláždění je technika, ve které můžete rozdělit data na stejné podmnožiny, které jsou označovány jako dlaždice. Při použití dlaždic se mění tři věci.
 
-- Můžete vytvořit `tile_static` proměnné. Přístup k datům v `tile_static` prostor může být mnohem rychlejší než přístup k datům v globálním prostoru. Instance `tile_static` proměnné je vytvořena pro každou dlaždici a všechna vlákna v dlaždici mají k této proměnné přístup. Hlavní výhodou dělení do bloků je výkonový zisk plynoucí z důvodu `tile_static` přístup.
+- Můžete vytvořit `tile_static` proměnných. Přístup k datům v `tile_static`m prostoru může být mnohokrát rychlejší než přístup k datům v globálním prostoru. Instance `tile_static` proměnné je vytvořena pro každou dlaždici a všechna vlákna v dlaždici mají přístup k proměnné. Hlavní výhodou dělení na dlaždice je zvýšení výkonu z důvodu `tile_static`ho přístupu.
 
-- Můžete volat [tile_barrier::wait](reference/tile-barrier-class.md#wait) metoda zastavení všech vláken v jednu dlaždici na určený řádek kódu. Nelze zaručit pořadí, ve kterém budou vlákna spuštěna, pouze že všechna vlákna v dlaždici jeden zastaví volání `tile_barrier::wait` před jejich pokračování v provádění.
+- Můžete zavolat metodu [tile_barrier:: wait](reference/tile-barrier-class.md#wait) pro zastavení všech vláken v jedné dlaždici na zadaném řádku kódu. Pořadí, ve kterém budou vlákna spuštěná, nemůžete zaručit, jenom když všechna vlákna v jedné dlaždici skončí při volání `tile_barrier::wait` před pokračováním v provádění.
 
-- Máte přístup k indexu vlákna relativnímu k celým `array_view` objektu a indexu relativnímu k dlaždici. Pomocí místního indexu lze usnadnit kódu ke čtení a ladění.
+- Máte přístup k indexu vlákna vzhledem k celému objektu `array_view` a indexu relativně k dlaždici. Pomocí místního indexu můžete usnadnit čtení a ladění kódu.
 
-Pro využití dělení do bloku v násobení matic musí algoritmus rozdělit matici na dlaždice a potom zkopírujte data dlaždice do `tile_static` proměnné pro rychlejší přístup. V tomto příkladu je rozdělená matici na submatrices stejnou velikost. Produkt je tak, submatrices nalezen. Jsou dva matice a jejich produktů v tomto příkladu:
+Aby bylo možné využít výhod dělení do násobení, musí algoritmus rozdělit matici na dlaždice a následně zkopírovat data dlaždice do `tile_static` proměnných pro rychlejší přístup. V tomto příkladu je matice rozdělena do podmatic stejné velikosti. Produkt se najde vynásobením dílčích matric. V tomto příkladu jsou dvě matice a jejich produkt:
 
-![4&#45;podle&#45;matice 4](../../parallel/amp/media/campmatrixatiled.png "4&#45;podle&#45;matice 4")
+![4&#45;–&#45;4 matice A](../../parallel/amp/media/campmatrixatiled.png "4&#45;–&#45;4 matice A")
 
-![4&#45;podle&#45;4 matice B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;podle&#45;4 matice B")
+![4&#45;–&#45;4 matice B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;–&#45;4 matice B")
 
-![4&#45;podle&#45;matice 4 produktu](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;podle&#45;matice 4 produktu")
+![4&#45;.&#45;4 matice produktů](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;.&#45;4 matice produktů")
 
-Matricí jsou rozdělené do matice čtyři 2 x 2, které jsou definovány takto:
+Matice jsou rozdělené do čtyř matic 2x2, které jsou definovány takto:
 
-![4&#45;podle&#45;4 matice A rozdělené do 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;podle&#45;4 matice A rozdělené do 2&#45;podle&#45;2 sub&#45;matice")
+![4&#45;–&#45;4 matice dělené do 2&#45;podle&#45;2 dílčích&#45;matric](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;–&#45;4 matice dělené do 2&#45;podle&#45;2 dílčích&#45;matric")
 
-![4&#45;podle&#45;4 matice B rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;podle&#45;4 matice B rozdělená na 2&#45;podle&#45;2 sub&#45;matice")
+![4&#45;–&#45;4 matice B rozdělené do 2&#45;podle&#45;2 dílčích&#45;matric](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;–&#45;4 matice B rozdělené do 2&#45;podle&#45;2 dílčích&#45;matric")
 
-Produkt A a B teď může zapisovat a vypočítávány následujícím způsobem:
+Produkt a a B lze nyní zapsat a vypočítat následujícím způsobem:
 
-![4&#45;podle&#45;4 matice A B rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;podle&#45;4 matice A B rozdělená na 2&#45;podle&#45;2 sub&#45;matice")
+![4&#45;o&#45;4 matice A B dělené 2&#45;podle&#45;2 dílčích&#45;matric](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;o&#45;4 matice A B dělené 2&#45;podle&#45;2 dílčích&#45;matric")
 
-Protože matice `a` prostřednictvím `h` jsou maticích 2 x 2, všechny produkty a součtů z nich jsou také maticích 2 x 2. Také vyplývá, že produkt A a B je matice 4 x 4, podle očekávání. Můžete rychle zjistit, že algoritmus, vypočítá hodnotu elementu v prvním řádku, první sloupec v rámci produktu. V příkladu, bylo by hodnota elementu v prvním řádku a první sloupec `ae + bg`. Stačí vypočítat prvního sloupce, první řádek `ae` a `bg` ke každému termínu. Tuto hodnotu pro `ae` je `(1 * 1) + (2 * 5) = 11`. Hodnota pro `bg` je `(3 * 1) + (4 * 5) = 23`. Konečná hodnota je `11 + 23 = 34`, která je správná.
+Vzhledem k tomu, že matice `a` přes `h` jsou matice 2x2, všechny produkty a jejich součty se také řadí do těchto matric. Sleduje také, že produkt a a B je 4x4 matice, jak je očekáváno. Chcete-li rychle ověřit algoritmus, Vypočítejte hodnotu prvku v prvním řádku, první sloupec v produktu. V příkladu, který by byl hodnotou prvku v prvním řádku a prvním sloupcem `ae + bg`. Pro každý termín musíte vypočítat jenom první sloupec, první řádek `ae` a `bg`. Tato hodnota pro `ae` je `(1 * 1) + (2 * 5) = 11`. Hodnota pro `bg` je `(3 * 1) + (4 * 5) = 23`. Konečná hodnota je `11 + 23 = 34`, což je správné.
 
-K implementaci tento algoritmus, kód:
+Pro implementaci tohoto algoritmu kód:
 
-- Používá `tiled_extent` místo objektu `extent` objekt `parallel_for_each` volání.
+- Používá `tiled_extent` objekt namísto `extent` objektu ve volání `parallel_for_each`.
 
-- Používá `tiled_index` místo objektu `index` objekt `parallel_for_each` volání.
+- Používá `tiled_index` objekt namísto `index` objektu ve volání `parallel_for_each`.
 
-- Vytvoří `tile_static` proměnné pro uložení submatrices.
+- Vytvoří proměnné `tile_static` pro uložení podmatic.
 
-- Používá `tile_barrier::wait` metoda vláken pro výpočet produkty submatrices zastavit.
+- Používá metodu `tile_barrier::wait` k zastavení vláken pro výpočet produktů podmatric.
 
-### <a name="to-multiply-by-using-amp-and-tiling"></a>Pro násobení pomocí AMP a dělení do bloků
+### <a name="to-multiply-by-using-amp-and-tiling"></a>Vynásobení pomocí AMP a dlaždic
 
-1. V MatrixMultiply.cpp, přidejte následující kód před `main` metody.
+1. V MatrixMultiply. cpp přidejte následující kód před metodu `main`.
 
    ```cpp
    void MultiplyWithTiling() {
@@ -288,27 +288,27 @@ K implementaci tento algoritmus, kód:
    }
    ```
 
-   V tomto příkladu se značně liší od tohoto příkladu bez dlaždic. Tento kód použije koncepční takto:
-   1. Zkopírujte prvky dlaždici [0; 0] `a` do `locA`. Zkopírujte prvky dlaždici [0; 0] `b` do `locB`. Všimněte si, že `product` rozložen formou dlaždic, ne `a` a `b`. Proto použít globální indexy pro přístup k `a, b`, a `product`. Volání `tile_barrier::wait` je velmi důležité. Zastaví všechna vlákna v dlaždici do obou `locA` a `locB` jsou vyplněny.
+   Tento příklad se výrazně liší od příkladu bez dlaždic. Kód používá tyto koncepční kroky:
+   1. Zkopírujte prvky dlaždice [0, 0] `a` do `locA`. Zkopírujte prvky dlaždice [0, 0] `b` do `locB`. Všimněte si, že `product` je dlážděn, není `a` a `b`. Proto pomocí globálních indexů získáte přístup k `a, b`a `product`. Volání `tile_barrier::wait` je nezbytné. Zastaví všechna vlákna v dlaždici, dokud nejsou vyplněny `locA` i `locB`.
 
-   1. Vynásobit `locA` a `locB` a uložte výsledky do `product`.
+   1. Vynásobení `locA` a `locB` a vložení výsledků do `product`.
 
-   1. Zkopírujte prvky dlaždici [0,1] `a` do `locA`. Zkopírujte prvky dlaždici [1,0] `b` do `locB`.
+   1. Zkopírujte prvky dlaždice [0, 1] `a` do `locA`. Zkopírování prvků dlaždice [1, 0] z `b` do `locB`.
 
-   1. Vynásobit `locA` a `locB` a přidat je do výsledky, které se již nacházejí v `product`.
+   1. Vynásobte `locA` a `locB` a přidejte je do výsledků, které jsou již v `product`.
 
-   1. Násobení dlaždice [0; 0] je dokončena.
+   1. Násobení dlaždice [0, 0] je dokončeno.
 
-   1. Opakujte pro další čtyři dlaždice. Neexistuje žádné indexování speciálně pro dlaždice a vlákna můžete spustit v libovolném pořadí. Jak spustí každé vlákno `tile_static` proměnné se vytvářejí odpovídajícím způsobem pro každou dlaždici a volání `tile_barrier::wait` řídí tok programu.
+   1. Opakujte pro ostatní čtyři dlaždice. Pro dlaždice není k dispozici žádné indexování a vlákna lze spustit v libovolném pořadí. Při každém spuštění vlákna se `tile_static` proměnné pro každou dlaždici vytvoří správně a volání `tile_barrier::wait` řídí tok programu.
 
-   1. Při prohlížení algoritmus úzce, Všimněte si, že každý submatrix je načten do `tile_static` paměti dvakrát. Přenos dat trvat dobu. Nicméně jakmile jsou data v `tile_static` paměti, je mnohem rychlejší přístup k datům. Protože výpočet produkty vyžaduje opakované přístup k hodnotám v submatrices, není zvýšení celkového výkonu. Pro každý algoritmus experimentování ve službě je potřeba najít optimálního algoritmu a velikost dlaždice.
+   1. Při prohlédnutí algoritmu pečlivě si všimněte, že každá podmatice je načtena do `tile_static` paměti dvakrát. Tento přenos dat trvá čas. Jakmile se ale data nacházejí v `tile_static` paměti, je přístup k datům mnohem rychlejší. Vzhledem k tomu, že výpočet produktů vyžaduje opakovaný přístup k hodnotám v podmatricích, dojde k celkovému nárůstu výkonu. Pro každý algoritmus je nutné experimenty najít optimální algoritmus a velikost dlaždice.
 
-   V příkladech bez AMP a mimo dlaždicí každý prvek A a B přistupuje čtyřikrát z globální paměti k výpočtu produktu. V příkladu dlaždice každý prvek přistupuje dvakrát z globální paměti a čtyřikrát `tile_static` paměti. To není důležité výkonnější. 1 024 x 1 024 šlo A a B matice a velikost dlaždice se 16, by bylo zvýšení výkonu. V takovém případě každý prvek má být zkopírováno do `tile_static` paměti pouze 16 a k němu přistupovat z `tile_static` paměti 1024 časy.
+   V příkladech, které nejsou AMP a non-dlaždice, jsou každý prvek a a B dostupné čtyřikrát z globální paměti pro výpočet produktu. V příkladu dlaždice je každý element k dispozici dvakrát z globální paměti a čtyřikrát z `tile_static` paměti. Nejedná se o významný nárůst výkonu. Pokud by však byly a a B 1024x1024 matice a velikost dlaždice byla 16, došlo k výraznému nárůstu výkonu. V takovém případě by každý prvek byl zkopírován do `tile_static` paměti pouze 16 časů a byl k němu přihlédnuto z `tile_static` paměti 1024.
 
-1. Změnit hlavní metoda k volání `MultiplyWithTiling` způsob, jak je znázorněno.
+1. Upravte metodu Main pro volání metody `MultiplyWithTiling`, jak je znázorněno na obrázku.
 
    ```cpp
-   void main() {
+   int main() {
        MultiplyWithOutAMP();
        MultiplyWithAMP();
        MultiplyWithTiling();
@@ -316,9 +316,9 @@ K implementaci tento algoritmus, kód:
    }
    ```
 
-1. Stisknutím klávesy **Ctrl**+**F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
+1. Stisknutím klávesové zkratky **Ctrl**+**F5** spusťte ladění a ověřte, zda je výstup správný.
 
-1. Stisknutím klávesy **místo** panelu ukončíte aplikaci.
+1. Stisknutím **mezerníku** aplikaci ukončete.
 
 ## <a name="see-also"></a>Viz také:
 

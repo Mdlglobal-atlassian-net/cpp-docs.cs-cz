@@ -3,16 +3,16 @@ title: Launch. vs. JSON – Referenční dokumentaceC++schématu ()
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556640"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518228"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>Launch. vs. JSON – Referenční dokumentaceC++schématu ()
 
-K nakonfigurování parametrů ladění použijte soubor *Launch. vs. JSON* . Pro vytvoření souboru. pravým tlačítkem myši klikněte na spustitelný soubor v **Průzkumník řešení** a vyberte **nastavení ladění a spouštění**. Zvolte možnost, která nejlépe odpovídá vašemu projektu, a pak pomocí následujících vlastností upravte konfiguraci podle potřeby:
+K nakonfigurování parametrů ladění použijte soubor *Launch. vs. JSON* . Pro vytvoření souboru. pravým tlačítkem myši klikněte na spustitelný soubor v **Průzkumník řešení** a vyberte **nastavení ladění a spouštění**. Zvolte možnost, která nejlépe odpovídá vašemu projektu, a pak podle potřeby upravte konfiguraci pomocí následujících vlastností. Další informace o ladění projektů CMake najdete v tématu [Konfigurace relací ladění cmake](/cpp/build/configure-cmake-debugging-sessions).
 
 ## <a name="default-properties"></a>Výchozí vlastnosti
 
