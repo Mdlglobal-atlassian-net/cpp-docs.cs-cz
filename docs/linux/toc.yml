@@ -3,7 +3,14 @@
 - name: 'Stažení, instalace a nastavení úloh pro vývoj pro Linux'
   href: download-install-and-setup-the-linux-development-workload.md
 - name: Připojení ke vzdálenému počítači s Linuxem
-  href: connect-to-your-remote-linux-computer.md
+  expanded: true
+  items:
+    - name: Připojení ke vzdálenému počítači s Linuxem
+      href: connect-to-your-remote-linux-computer.md
+    - name: Nastavení zabezpečeného vzdáleného vývoje pro Linux kompatibilního se standardem FIPS
+      href: set-up-fips-compliant-secure-remote-linux-development.md
+    - name: ConnectionManager – referenční dokumentace
+      href: connectionmanager-reference.md
 - name: Vytvoření nového projektu Linux
   href: create-a-new-linux-project.md
 - name: Konfigurace projektu Linux
