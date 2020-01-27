@@ -1,7 +1,7 @@
 ---
 title: /DEPENDENTLOADFLAG (nastavení výchozích příznaků načítání závislých knihoven DLL)
-description: Možnost/DEPENDENTLOADFLAG nastaví výchozí příznaky pro knihovny DLL načtené pomocí funkce LoadLibrary.
-ms.date: 12/22/2018
+description: Možnost/DEPENDENTLOADFLAG nastaví výchozí závislé příznaky načtení pro knihovny DLL načtené tímto modulem.
+ms.date: 01/22/2020
 f1_keywords:
 - dependentloadflag
 helpviewer_keywords:
@@ -10,16 +10,24 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 3a403f22c88ccd3e25ba95c183656ad2ffafd05a
-ms.sourcegitcommit: ef34a11cb04511221bf5c7b9f4f55ad91a7a603f
+ms.openlocfilehash: 5e31a0d747e7186814cba3ae1c4cf243569d87a8
+ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75329995"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725705"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (nastavení výchozích příznaků načítání závislých knihoven DLL)
 
-Nastaví výchozí příznaky načtení používané při použití `LoadLibrary` k načtení knihoven DLL.
+::: moniker range="vs-2015"
+
+Možnost **/DEPENDENTLOADFLAG** vyžaduje Visual Studio 2017 nebo novější.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+Nastaví výchozí příznaky zatížení, které se použijí, když operační systém vyřeší staticky propojený import modulu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,17 +36,23 @@ Nastaví výchozí příznaky načtení používané při použití `LoadLibrary
 ### <a name="arguments"></a>Arguments
 
 *load_flags*<br/>
-Volitelná celočíselná celočíselná hodnota "C" ve formátu Decimal, osmičková s počáteční nulou nebo hexadecimální s počátečním `0x`, která určuje příznaky závislého načtení pro použití na všechna volání [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) . Výchozí hodnota je 0.
+Volitelná celočíselná hodnota, která určuje příznaky zatížení, které mají být použity při překladu staticky propojených závislostí importu modulu. Výchozí hodnota je 0. Seznam podporovaných hodnot příznaků najdete v `LOAD_LIBRARY_SEARCH_*`ch položkách v [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato možnost je v aplikaci Visual Studio 2017 novinkou. Platí jenom pro aplikace, které běží na Windows 10 RS1 a novějších verzích. Tato možnost je ignorována jinými operačními systémy, ve kterých je spuštěna aplikace.
+Když operační systém vyřeší staticky propojený import modulu, používá [výchozí pořadí hledání](/windows/win32/dlls/dynamic-link-library-search-order). Pomocí možnosti **/DEPENDENTLOADFLAG** zadejte hodnotu *load_flags* , která mění cestu pro hledání použitou k vyřešení těchto importů. V podporovaných operačních systémech se změní pořadí hledání statického řešení importu, podobně jako [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) při použití parametrů `LOAD_LIBRARY_SEARCH`. Informace o pořadí hledání nastaveném pomocí *load_flags*najdete v tématu [pořadí hledání pomocí příznaků LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
 
-V podporovaných operačních systémech má tato možnost vliv na změnu volání `LoadLibrary("dependent.dll")` na ekvivalent `LoadLibraryEx("dependent.dll", 0, load_flags)`. Volání [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) nejsou nijak ovlivněna. Tato možnost se rekurzivně neaplikuje na knihovny DLL načtené vaší aplikací.
+Tento příznak lze použít k tomu, aby jeden vektor [útoku na knihovnu DLL](/windows/win32/dlls/dynamic-link-library-security) byl obtížnější. Zvažte například aplikaci, která má staticky propojenou knihovnu DLL:
 
-Tento příznak lze použít k obtížnějšímu [útoku na rozmnožovací knihovnu DLL](/windows/win32/dlls/dynamic-link-library-security) . Například pokud aplikace používá `LoadLibrary` k načtení závislé knihovny DLL, útočník by mohl vytvořit knihovnu DLL se stejným názvem v cestě hledání, kterou používá `LoadLibrary`, jako je například aktuální adresář, který může být zkontrolován před systémovými adresáři, pokud je vypnutý režim bezpečného vyhledávání DLL. Bezpečný režim hledání knihovny DLL umístí aktuální adresář uživatele později do pořadí hledání a ve výchozím nastavení je povolen v systému Windows XP SP2 a novějších verzích. Další informace najdete v tématu [pořadí hledání dynamické knihovny](/windows/win32/Dlls/dynamic-link-library-search-order).
+- Útočník by mohl nakládat knihovnu DLL se stejným názvem dříve v cestě pro vyhledávání rozlišení importu, jako je například adresář aplikace. Chráněné adresáře jsou obtížnější, ale nejsou možné, aby se mohl útočník změnit.
 
-Zadáte-li možnost propojení `/DEPENDENTLOADFLAG:0xA00` (hodnota kombinovaných příznaků `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), pak i v případě, že je v počítači uživatele zakázán režim vyhledávání v zabezpečené knihovně DLL, je cesta pro vyhledávání knihovny DLL omezena na adresář aplikace a za ním i adresář%Windows%\System32. Možnost `/DEPENDENTLOADFLAG:0x800` je ještě více omezující a omezuje hledání do adresáře%Windows%\System32. Chráněné adresáře jsou obtížnější, ale nejsou možné, aby se mohl útočník změnit. Informace o dostupných příznacích a jejich symbolické a číselné hodnoty naleznete v popisu parametru *dwFlags* v [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw). Informace o pořadí hledání, které se používá při použití různých příznaků závislého zatížení, najdete v tématu [pořadí hledání pomocí příznaků LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
+- Pokud knihovna DLL chybí v adresářích aplikace,%Windows%\System32 a% Windows%, řešení importu spadá do aktuálního adresáře. Útočník by mohl nasázet knihovnu DLL.
+
+V obou případech, pokud zadáte možnost odkazu `/DEPENDENTLOADFLAG:0x800` (hodnota `LOAD_LIBRARY_SEARCH_SYSTEM32`příznak), cesta hledání modulu je omezená na adresář%Windows%\System32. V ostatních adresářích nabízí ochranu před útoky na výsadbu. Další informace najdete v tématu [zabezpečení knihovny Dynamic-Link](/windows/win32/dlls/dynamic-link-library-security).
+
+Chcete-li zobrazit hodnotu nastavenou možností **/DEPENDENTLOADFLAG** v jakékoli knihovně DLL, použijte příkaz [DUMPBIN](dumpbin-reference.md) s možností [/LOADCONFIG](loadconfig.md) .
+
+Možnost **/DEPENDENTLOADFLAG** je v aplikaci Visual Studio 2017 novinkou. Platí jenom pro aplikace, které běží na Windows 10 RS1 a novějších verzích. Tato možnost je ignorována jinými operačními systémy, ve kterých je spuštěna aplikace.
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Nastavení Možnosti linkeru DEPENDENTLOADFLAG ve vývojovém prostředí sady Visual Studio
 
@@ -56,7 +70,10 @@ Zadáte-li možnost propojení `/DEPENDENTLOADFLAG:0xA00` (hodnota kombinovanýc
 
 - [Referenční zdroje k linkeru MSVC](linking.md)
 - [Možnosti linkeru MSVC](linker-options.md)
-- [Propojení spustitelného souboru s knihovnou DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [Propojení spustitelného souboru s knihovnou DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Implicitně propojit spustitelný soubor s knihovnou DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Určete, kterou propojovací metodu použít](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)
 - [Pořadí hledání dynamických propojených knihoven](/windows/win32/Dlls/dynamic-link-library-search-order)
+- [Zabezpečení knihovny Dynamic-Link](/windows/win32/dlls/dynamic-link-library-security)
+
+::: moniker-end
