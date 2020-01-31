@@ -1,18 +1,18 @@
 ---
-title: 'Návod: Vytvoření aplikace pásu karet pomocí knihovny MFC'
+title: 'Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC'
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
-- creating a ribbon aplication (MFC)
+- creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 41084a78287521610ba400deab32d1052c9217c1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907395"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821919"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření aplikace pásu karet pomocí knihovny MFC
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC
 
 Tento návod ukazuje, jak pomocí **Průvodce aplikací knihovny MFC** vytvořit aplikaci, která má ve výchozím nastavení pás karet. Pás karet pak můžete rozbalit přidáním **vlastní** kategorie pásu karet, která má panel pásu karet **Oblíbené** a následně na panel Přidat některé často používané příkazy.
 
@@ -22,7 +22,7 @@ Tento návod předpokládá, že jste nastavili sadu Visual Studio tak, aby pou�
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Vytvoření aplikace MFC obsahující pás karet
 
-1. Použijte **Průvodce aplikací knihovny MFC** k vytvoření aplikace MFC, která má pás karet. Viz [Návod: Použití nových ovládacích prvků](walkthrough-using-the-new-mfc-shell-controls.md) prostředí MFC pro pokyny k otevření Průvodce pro vaši verzi sady Visual Studio.
+1. Použijte **Průvodce aplikací knihovny MFC** k vytvoření aplikace MFC, která má pás karet. Pokyny k otevření Průvodce pro vaši verzi sady Visual Studio najdete v tématu [Návod: použití nových ovládacích prvků prostředí MFC](walkthrough-using-the-new-mfc-shell-controls.md) .
 
 1. V **Průvodci aplikací knihovny MFC**nastavte následující možnosti:
 
@@ -54,7 +54,7 @@ Tento návod předpokládá, že jste nastavili sadu Visual Studio tak, aby pou�
 
     Klikněte pravým tlačítkem na **Category1** a pak klikněte na **vlastnosti**. V okně **vlastnosti** změňte **Titulek** na *vlastní*.
 
-    Vlastnosti **velkých obrázků** a **malých obrázků** určují rastrové obrázky, které se používají jako ikony pro prvky pásu karet v této kategorii. Jelikož je tvorba vlastních rastrových obrázků nad rámec tohoto návodu, stačí použít obrázky vytvořené průvodcem. Malé rastrové obrázky mají velikost 16 × 16 pixelů. U malých imagí použijte rastrové obrázky, ke kterým je přistupované `IDB_FILESMALL` ID prostředku. Velké rastrové obrázky mají velikost 32 × 32 pixelů. U rozsáhlých imagí použijte rastrové obrázky, ke kterým je přistupované `IDB_FILELARGE` ID prostředku.
+    Vlastnosti **velkých obrázků** a **malých obrázků** určují rastrové obrázky, které se používají jako ikony pro prvky pásu karet v této kategorii. Jelikož je tvorba vlastních rastrových obrázků nad rámec tohoto návodu, stačí použít obrázky vytvořené průvodcem. Malé rastrové obrázky mají velikost 16 × 16 pixelů. U malých imagí použijte rastrové obrázky, ke kterým se přistupuje `IDB_FILESMALL`m ID prostředku. Velké rastrové obrázky mají velikost 32 × 32 pixelů. U rozsáhlých imagí použijte rastrové obrázky, ke kterým se přistupuje `IDB_FILELARGE`m ID prostředku.
 
     > [!NOTE]
     > Na displejích s vysokým počtem bodů na palec (HDPI) jsou automaticky použity HDPI verze obrázků.
@@ -75,7 +75,7 @@ Tento návod předpokládá, že jste nastavili sadu Visual Studio tak, aby pou�
 
     V okně **vlastnosti** změňte vlastnost **ID** na **ID_FILE_PRINT**, která by již měla být definována. Změňte **Titulek** k *tisku*. Změňte **index obrázku** na *4*.
 
-    Chcete-li vytvořit tlačítko **Rychlý tisk** , klikněte na sloupec hodnoty vlastnosti vedle **položky nabídky**a potom klikněte na tlačítko se třemi tečkami ( **...** ). V **editoru položek**klikněte na tlačítko neoznačené **Přidat** a vytvořte položku nabídky. V okně **vlastnosti** změňte **Titulek** na *rychlé tisk*, **ID** na *ID_FILE_PRINT_DIRECT*a **Obrázek** na *5*. Vlastnost image Určuje ikonu **rychlého tisku** v `IDB_FILESMALL` prostředku rastrového obrázku.
+    Chcete-li vytvořit tlačítko **Rychlý tisk** , klikněte na sloupec hodnoty vlastnosti vedle **položky nabídky**a potom klikněte na tlačítko se třemi tečkami ( **...** ). V **editoru položek**klikněte na tlačítko neoznačené **Přidat** a vytvořte položku nabídky. V okně **vlastnosti** změňte **Titulek** na *rychlé tisk*, **ID** na *ID_FILE_PRINT_DIRECT*a **Obrázek** na *5*. Vlastnost image Určuje ikonu **rychlého tisku** v prostředku `IDB_FILESMALL` rastrového obrázku.
 
 1. Chcete-li ověřit, zda byla tlačítka přidána na panel pásu karet, sestavte a spusťte aplikaci. Chcete-li sestavit aplikaci, klikněte v nabídce **sestavení** na příkaz **Sestavit řešení**. Pokud se aplikace úspěšně sestaví, spusťte aplikaci kliknutím na příkaz **Spustit ladění** v nabídce **ladění** . Mělo by se zobrazit tlačítko **Tisk** a pole se seznamem na panelu **Oblíbené** na **vlastní** kartě na pásu karet.
 

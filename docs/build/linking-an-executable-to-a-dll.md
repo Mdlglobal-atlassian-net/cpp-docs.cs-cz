@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: fe0a4fc37291b4ccc904f889a9d38748fc38195c
-ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
+ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026010"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821379"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Propojení spustitelného souboru s knihovnou DLL
 
@@ -42,11 +42,11 @@ Knihovna importů obsahuje pouze kód pro načtení knihovny DLL a k implementac
 
 Když systém spustí program, který obsahuje dynamicky propojené odkazy, použije informace ve spustitelném souboru programu k vyhledání požadovaných knihoven DLL. Pokud knihovna DLL nenajde, systém ukončí proces a zobrazí dialogové okno, které hlásí chybu. V opačném případě systém mapuje moduly DLL do adresního prostoru procesu.
 
-Pokud má kterákoli z knihoven DLL funkci vstupního bodu pro inicializaci a ukončovací kód `DllMain`, například, operační systém zavolá funkci. Jeden z parametrů předaných funkci vstupního bodu Určuje kód, který označuje, že se knihovna DLL připojuje k procesu. Pokud funkce vstupního bodu nevrátí hodnotu TRUE, systém ukončí proces a ohlásí chybu.
+Pokud má kterákoli z knihoven DLL funkci vstupního bodu pro inicializaci a ukončovací kód, jako je například `DllMain`, operační systém zavolá funkci. Jeden z parametrů předaných funkci vstupního bodu Určuje kód, který označuje, že se knihovna DLL připojuje k procesu. Pokud funkce vstupního bodu nevrátí hodnotu TRUE, systém ukončí proces a ohlásí chybu.
 
 Nakonec systém upraví spustitelný kód procesu tak, aby poskytoval počáteční adresy pro funkce knihovny DLL.
 
-Podobně jako zbytek kódu programu, zavaděč mapuje kód knihovny DLL do adresního prostoru procesu při spuštění procesu. Operační systém ho načte do paměti pouze v případě potřeby. V důsledku toho `PRELOAD` atributy kódu a `LOADONCALL` používané soubory. def k řízení načítání v předchozích verzích systému Windows již nemají význam.
+Podobně jako zbytek kódu programu, zavaděč mapuje kód knihovny DLL do adresního prostoru procesu při spuštění procesu. Operační systém ho načte do paměti pouze v případě potřeby. V důsledku toho atributy kódu `PRELOAD` a `LOADONCALL` používané soubory. def k řízení načítání v předchozích verzích systému Windows již nemají význam.
 
 ### <a name="explicit-linking"></a>Explicitní propojování
 
@@ -56,7 +56,7 @@ Většina aplikací používá implicitní propojení, protože je nejjednoduš�
 
 - Proces, který používá implicitní propojení, je ukončen operačním systémem, pokud se knihovna DLL nenajde při spuštění procesu. Proces, který používá explicitní propojování, není v této situaci ukončený a může se pokusit o zotavení z chyby. Proces může například uživateli oznamovat chybu a nechat si zadat jinou cestu ke knihovně DLL.
 
-- Proces, který používá implicitní propojení, je ukončen také v `DllMain` případě, že některá z knihoven DLL, ke kterým je propojena, má funkci, která je neúspěšná. Proces, který používá explicitní propojování, není v této situaci ukončen.
+- Proces, který používá implicitní propojení, je ukončen také v případě, že některá z knihoven DLL, se kterými je propojena, má funkci `DllMain`, která se nezdařila. Proces, který používá explicitní propojování, není v této situaci ukončen.
 
 - Aplikace, která implicitně odkazuje na mnoho knihoven DLL, může být pomalá, protože systém Windows načítá všechny knihovny DLL při načtení aplikace. Pro zlepšení výkonu při spuštění může aplikace použít pouze implicitní propojování pro knihovny DLL vyžadované ihned po načtení. Může použít explicitní propojení k načtení jiných knihoven DLL pouze v případě potřeby.
 
@@ -64,9 +64,9 @@ Většina aplikací používá implicitní propojení, protože je nejjednoduš�
 
 Tady jsou dvě rizika explicitního propojení, na které byste měli vědět:
 
-- Pokud má `DllMain` knihovna DLL funkci vstupního bodu, operační systém zavolá funkci v kontextu vlákna, které volalo `LoadLibrary`. Funkce vstupního bodu není volána, pokud je již knihovna DLL připojena k procesu z důvodu předchozího volání metody `LoadLibrary` , které nemá odpovídající volání `FreeLibrary` funkce. Explicitní propojování může způsobit problémy, pokud knihovna DLL `DllMain` používá funkci pro inicializaci jednotlivých vláken procesu, protože žádná vlákna, která již existují při `LoadLibrary` volání ( `AfxLoadLibrary`nebo), nejsou inicializována.
+- Pokud má knihovna DLL funkci vstupního bodu `DllMain`, operační systém zavolá funkci v kontextu vlákna, které se nazývá `LoadLibrary`. Funkce vstupního bodu není volána, pokud je již knihovna DLL připojena k procesu z důvodu předchozího volání `LoadLibrary`, které nemá žádné odpovídající volání funkce `FreeLibrary`. Explicitní propojování může způsobit problémy, pokud knihovna DLL používá funkci `DllMain` k inicializaci každého vlákna procesu, protože všechna vlákna, která již existují při volání `LoadLibrary` (nebo `AfxLoadLibrary`), nejsou inicializována.
 
-- Pokud knihovna DLL deklaruje statická velikost dat jako `__declspec(thread)`, může dojít k chybě ochrany, pokud je explicitně propojena. Poté `LoadLibrary`, co je knihovna DLL načtena voláním, způsobí selhání ochrany vždy, když kód odkazuje na tato data. (Statická velikost dat zahrnuje globální i místní statické položky.) To je důvod, proč při vytváření knihovny DLL byste se měli vyhnout použití úložiště místního vlákna. Pokud nemůžete, informujte uživatele knihovny DLL o potenciálním nástrahi dynamického načítání vaší knihovny DLL. Další informace najdete v tématu [použití Thread localho úložiště v dynamické knihovně (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
+- Pokud knihovna DLL deklaruje statická velikost dat jako `__declspec(thread)`, může při explicitním propojení způsobit chybu ochrany. Poté, co je knihovna DLL načtena voláním `LoadLibrary`, způsobí chyba ochrany vždy, když kód odkazuje na tato data. (Statická velikost dat zahrnuje globální i místní statické položky.) To je důvod, proč při vytváření knihovny DLL byste se měli vyhnout použití úložiště místního vlákna. Pokud nemůžete, informujte uživatele knihovny DLL o potenciálním nástrahi dynamického načítání vaší knihovny DLL. Další informace najdete v tématu [použití Thread localho úložiště v dynamické knihovně (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
 
 <a name="linking-implicitly"></a>
 
@@ -92,13 +92,13 @@ Operační systém musí být schopný najít soubor DLL při načtení volajíc
 
 Chcete-li použít knihovnu DLL explicitním propojením, aplikace musí provést volání funkce pro explicitní načtení knihovny DLL v době běhu. Pro explicitní propojení s knihovnou DLL musí aplikace:
 
-- Zavolejte [](loadlibrary-and-afxloadlibrary.md)funkci LoadLibrary `LoadLibraryEx`, nebo podobnou funkci pro načtení knihovny DLL a získání popisovače modulu.
+- Zavolejte [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) nebo podobnou funkci pro načtení knihovny DLL a získání obslužné rutiny modulu.
 
-- Volání [GetProcAddress](getprocaddress.md) pro získání ukazatele funkce na každou exportovanou funkci, kterou aplikace volá. Vzhledem k tomu, že aplikace volají funkce knihovny DLL přes ukazatel, kompilátor negeneruje externí odkazy, takže není nutné propojení s knihovnou import. Je však nutné mít `typedef` příkaz nebo `using` , který definuje podpis volání exportovaných funkcí, které voláte.
+- Volání [GetProcAddress](getprocaddress.md) pro získání ukazatele funkce na každou exportovanou funkci, kterou aplikace volá. Vzhledem k tomu, že aplikace volají funkce knihovny DLL přes ukazatel, kompilátor negeneruje externí odkazy, takže není nutné propojení s knihovnou import. Je však nutné mít příkaz `typedef` nebo `using`, který definuje podpis volání exportovaných funkcí, které voláte.
 
 - Při práci s knihovnou DLL volejte [FreeLibrary](freelibrary-and-afxfreelibrary.md) .
 
-Například Tato ukázková funkce volá `LoadLibrary` načtení knihovny DLL s názvem "MyDll", volání `GetProcAddress` pro získání ukazatele na funkci s názvem "DLLFunc1", volá funkci a uloží výsledek a pak volání `FreeLibrary` k uvolnění knihovny DLL.
+Například Tato ukázková funkce volá `LoadLibrary` pro načtení knihovny DLL s názvem "MyDLL", volání `GetProcAddress` k získání ukazatele na funkci nazvanou "DLLFunc1", volá funkci a uloží výsledek a poté volá `FreeLibrary` pro uvolnění knihovny DLL.
 
 ```C
 #include "windows.h"
@@ -135,7 +135,7 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 }
 ```
 
-Na rozdíl od tohoto příkladu, ve většině případů byste měli `LoadLibrary` volat `FreeLibrary` a pouze jednou v aplikaci pro danou knihovnu DLL. To je obzvláště true, pokud budete volat více funkcí v knihovně DLL nebo opakovaně volat funkce knihovny DLL.
+Na rozdíl od tohoto příkladu, ve většině případů byste měli volat `LoadLibrary` a `FreeLibrary` pouze jednou v aplikaci pro danou knihovnu DLL. To je obzvláště true, pokud budete volat více funkcí v knihovně DLL nebo opakovaně volat funkce knihovny DLL.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 

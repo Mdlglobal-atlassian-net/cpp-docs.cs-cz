@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 2c84ce888e37b2a8985ca63cf3544205bc61f69f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491536"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821366"
 ---
 # <a name="crect-class"></a>CRect – třída
 
@@ -57,7 +57,7 @@ class CRect : public tagRECT
 
 |Name|Popis|
 |----------|-----------------|
-|[CRect::CRect](#crect)|`CRect` Vytvoří objekt.|
+|[CRect::CRect](#crect)|Vytvoří objekt `CRect`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -67,60 +67,60 @@ class CRect : public tagRECT
 |[CRect::CenterPoint](#centerpoint)|Vrátí Centerpoint `CRect`.|
 |[CRect::CopyRect](#copyrect)|Zkopíruje rozměry zdrojového obdélníku do `CRect`.|
 |[CRect::DeflateRect](#deflaterect)|Zmenší šířku a výšku `CRect`.|
-|[CRect::EqualRect](#equalrect)|Určuje, `CRect` zda se rovná danému obdélníku.|
+|[CRect::EqualRect](#equalrect)|Určuje, zda je `CRect` rovny danému obdélníku.|
 |[CRect:: Height](#height)|Vypočítá výšku `CRect`.|
 |[CRect::InflateRect](#inflaterect)|Zvětší šířku a výšku `CRect`.|
-|[CRect::IntersectRect](#intersectrect)|Nastaví `CRect` se jako průnik dvou obdélníků.|
-|[CRect::IsRectEmpty](#isrectempty)|Určuje, `CRect` zda je prázdný. `CRect`je prázdné, pokud je šířka nebo výška 0.|
-|[CRect::IsRectNull](#isrectnull)|Určuje `top`, zda proměnné `bottom`členů `left`,, `right` a jsou všechny rovny 0.|
-|[CRect::MoveToX](#movetox)|Přesune `CRect` se na zadanou souřadnici x.|
-|[CRect::MoveToXY](#movetoxy)|Přesune `CRect` se na zadané souřadnice x a y.|
-|[CRect::MoveToY](#movetoy)|Přesune `CRect` se na zadanou souřadnici y.|
-|[CRect::NormalizeRect](#normalizerect)|Standardizace výšky a šířky `CRect`.|
-|[CRect::OffsetRect](#offsetrect)|Přesune `CRect` se o zadané posuny.|
-|[CRect::PtInRect](#ptinrect)|Určuje, zda zadaný bod leží v `CRect`rámci.|
+|[CRect::IntersectRect](#intersectrect)|Nastaví `CRect` rovny průniku dvou obdélníků.|
+|[CRect::IsRectEmpty](#isrectempty)|Určuje, zda je `CRect` prázdné. `CRect` je prázdné, pokud je šířka nebo výška 0.|
+|[CRect::IsRectNull](#isrectnull)|Určuje, zda jsou všechny členské proměnné `top`, `bottom`, `left`a `right` rovny 0.|
+|[CRect::MoveToX](#movetox)|Přesune `CRect` na určenou souřadnici x.|
+|[CRect::MoveToXY](#movetoxy)|Přesune `CRect` na zadané souřadnice x a y.|
+|[CRect::MoveToY](#movetoy)|Přesune `CRect` na zadanou souřadnici y.|
+|[CRect::NormalizeRect](#normalizerect)|Sjednotí výšku a šířku `CRect`.|
+|[CRect::OffsetRect](#offsetrect)|Přesune `CRect` o zadané posuny.|
+|[CRect::PtInRect](#ptinrect)|Určuje, zda zadaný bod leží v rámci `CRect`.|
 |[CRect::SetRect](#setrect)|Nastaví rozměry `CRect`.|
-|[CRect::SetRectEmpty](#setrectempty)|Nastaví `CRect` prázdný obdélník (všechny souřadnice se rovnají 0).|
+|[CRect::SetRectEmpty](#setrectempty)|Nastaví `CRect` prázdnému obdélníku (všechny souřadnice se rovnají 0).|
 |[CRect:: size](#size)|Vypočítá velikost `CRect`.|
 |[CRect::SubtractRect](#subtractrect)|Odečte jeden obdélník od druhého.|
 |[CRect::TopLeft](#topleft)|Vrátí levý horní bod `CRect`.|
-|[CRect::UnionRect](#unionrect)|Nastaví `CRect` se jako sjednocení dvou obdélníků.|
+|[CRect::UnionRect](#unionrect)|Nastaví `CRect` se rovná sjednocení dvou obdélníků.|
 |[CRect:: Width](#width)|Vypočítá šířku `CRect`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Name|Popis|
 |----------|-----------------|
-|[CRect:: operator-](#operator_-)|Odečte zadané posuny od `CRect` nebo `CRect` deplochí a vrátí výslednou `CRect`hodnotu.|
-|[CRect:: operator LPCRECT](#operator_lpcrect)|`CRect` Převede`LPCRECT`na.|
-|[CRect:: operator LPRECT](#operator_lprect)|`CRect` Převede`LPRECT`na.|
-|[CRect:: operator! =](#operator_neq)|Určuje, `CRect` zda se nerovná obdélníku.|
-|[CRect:: operator&amp;](#operator_amp)|Vytvoří průnik `CRect` a obdélník a vrátí výslednou `CRect`hodnotu.|
-|[CRect:: operator&amp;=](#operator_amp_eq)|Nastaví `CRect` se jako `CRect` průsečík a obdélník.|
-|[CRect:: operator&#124;](#operator_or)|Vytvoří sjednocení `CRect` a obdélník a vrátí výslednou `CRect`hodnotu.|
-|[CRect:: operator &#124;=](#operator_or_eq)|Nastaví `CRect` se jako `CRect` sjednocení a obdélník.|
-|[CRect:: operator + – operátor](#operator_add)|Přidá dané posunutí do `CRect` nebo `CRect` neplochý a vrátí výslednou `CRect`hodnotu.|
-|[CRect:: operator + =](#operator_add_eq)|Přidá zadané posuny do `CRect` nebo `CRect`neploché.|
+|[CRect:: operator-](#operator_-)|Odečte zadaný posun od `CRect` nebo rozplochí `CRect` a vrátí výsledné `CRect`.|
+|[CRect:: operator LPCRECT](#operator_lpcrect)|Převede `CRect` na `LPCRECT`.|
+|[CRect:: operator LPRECT](#operator_lprect)|Převede `CRect` na `LPRECT`.|
+|[CRect:: operator! =](#operator_neq)|Určuje, zda `CRect` není rovno obdélníku.|
+|[CRect:: operator &amp;](#operator_amp)|Vytvoří průnik `CRect` a obdélník a vrátí výsledný `CRect`.|
+|[CRect:: operator &amp;=](#operator_amp_eq)|Nastaví `CRect` rovny průniku `CRect` a obdélníku.|
+|[CRect:: operator&#124;](#operator_or)|Vytvoří sjednocení `CRect` a obdélník a vrátí výsledný `CRect`.|
+|[CRect:: operator &#124;=](#operator_or_eq)|Nastaví `CRect` se rovná sjednocení `CRect` a obdélníku.|
+|[CRect:: operator + – operátor](#operator_add)|Přidá posunutí pro `CRect` nebo neplochý `CRect` a vrátí výsledné `CRect`.|
+|[CRect:: operator + =](#operator_add_eq)|Přidá zadané posuny k `CRect` nebo neploché `CRect`.|
 |[CRect:: operator =](#operator_eq)|Zkopíruje rozměry obdélníku do `CRect`.|
-|[CRect:: operator-=](#operator_-_eq)|Odečte zadané posuny od nebo `CRect` `CRect`z.|
-|[CRect:: operator = = – operátor](#operator_eq_eq)|Určuje, `CRect` zda se rovná obdélník.|
+|[CRect:: operator-=](#operator_-_eq)|Odečte zadané posuny od `CRect` nebo `CRect`.|
+|[CRect:: operator = = – operátor](#operator_eq_eq)|Určuje, zda je `CRect` rovno obdélníku.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CRect`zahrnuje také členské funkce pro manipulaci s `CRect` objekty a strukturami systému Windows. `RECT`
+`CRect` také zahrnuje členské funkce pro manipulaci s `CRect` objekty a struktury Windows `RECT`.
 
-Objekt může být předán jako parametr funkce všude, kde je `RECT` struktura, `LPCRECT`nebo `LPRECT` může být předána. `CRect`
+Objekt `CRect` lze předat jako parametr funkce všude, kde lze předat strukturu `RECT`, `LPCRECT`nebo `LPRECT`.
 
 > [!NOTE]
-> Tato třída je odvozena z `tagRECT` struktury. (Název `tagRECT` je méně často používaný název `RECT` pro strukturu.) To znamená, že datové členy (`left`, `top`, `right` `bottom`a) `RECT` struktury jsou přístupné datovým členům `CRect`.
+> Tato třída je odvozena z `tagRECT` struktury. (Název `tagRECT` je méně často používaný název pro `RECT` strukturu.) To znamená, že datové členy (`left`, `top`, `right`a `bottom`) struktury `RECT` jsou přístupné datovým členům `CRect`.
 
-`CRect` Obsahuje proměnné členů, které definují levý horní a dolní pravý bod obdélníku.
+`CRect` obsahuje proměnné členů, které definují horní levý a dolní pravý bod obdélníku.
 
-Když zadáte `CRect`, musíte být opatrní, aby se vytvořila, aby byla normalizovaná – jinými slovy, aby byla hodnota levého souřadnice menší než vpravo a horní hranice je menší než dolní. Například levý horní okraj (10, 10) a vpravo dole od (20, 20) definuje normalizovaný obdélník, ale v levém horním rohu (20, 20) a vpravo dole od (10, 10) definuje nenormalizovaný obdélník. Pokud obdélník není normalizován, mnoho `CRect` členských funkcí může vracet nesprávné výsledky. (Další informace najdete v tématu [CRect:: NormalizeRect](#normalizerect) .) Před voláním funkce, která vyžaduje normalizované obdélníky, můžete normalizovat nenormalizované obdélníky voláním `NormalizeRect` funkce.
+Při zadání `CRect`musíte být opatrní, aby se vytvořila, aby byla normalizovaná – jinými slovy, aby byla hodnota levého souřadnice menší než vpravo a horní hranice je menší než dolní. Například levý horní okraj (10, 10) a vpravo dole od (20, 20) definuje normalizovaný obdélník, ale v levém horním rohu (20, 20) a vpravo dole od (10, 10) definuje nenormalizovaný obdélník. Pokud obdélník není normalizován, mnoho `CRect` členských funkcí může vracet nesprávné výsledky. (Další informace najdete v tématu [CRect:: NormalizeRect](#normalizerect) .) Před voláním funkce, která vyžaduje normalizované obdélníky, můžete normalizovat nenormalizované obdélníky voláním funkce `NormalizeRect`.
 
-Buďte opatrní při manipulaci `CRect` s pomocí členských funkcí [CDC::D ptolp](../../mfc/reference/cdc-class.md#dptolp) a [CDC:: LPtoDP](../../mfc/reference/cdc-class.md#lptodp) . Je-li režim mapování kontextu zobrazení tak, že hodnota y je záporná, jako v `MM_LOENGLISH`, pak `CDC::DPtoLP` bude transformovat `CRect` tak, aby jeho horní hodnota byla větší než dolní. Funkce `CRect`, jako `Height` například `Size` a, pak vrátí záporné hodnoty pro výšku transformované a obdélník bude nenormalizovaný.
+Při manipulaci s `CRect` pomocí členských funkcí [CDC::D ptolp](../../mfc/reference/cdc-class.md#dptolp) a [CDC:: LPtoDP](../../mfc/reference/cdc-class.md#lptodp) buďte opatrní. Je-li režim mapování kontextu zobrazení tak, že je hodnota y záporná, jako v `MM_LOENGLISH`, `CDC::DPtoLP` transformuje `CRect` tak, aby jeho horní část byla větší než dolní. Funkce jako `Height` a `Size` pak vrátí záporné hodnoty pro výšku transformovanýho `CRect`a obdélník bude nenormalizovaný.
 
-Při `CRect` použití přetížených operátorů musí být prvním operandem `CRect`a; druhým může být struktura [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt.
+Při použití přetížených operátorů `CRect` musí být prvním operandem `CRect`; druhým může být struktura [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -177,7 +177,7 @@ ASSERT(rect2 == CRect(10, 10, 180, 180));
 
 ##  <a name="centerpoint"></a>CRect::CenterPoint
 
-Vypočítá centerpointy `CRect` přidáním levé a pravé hodnoty a vydělením dvěma a přidáním horních a dolních hodnot a vydělením dvěma.
+Vypočítá Centerpoint `CRect` přidáním levé a pravé hodnoty a vydělením dvěma a přidáním horních a dolních hodnot a vydělením dvěma.
 
 ```
 CPoint CenterPoint() const throw();
@@ -185,7 +185,7 @@ CPoint CenterPoint() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt, který je `CRect`Centerpoint. `CPoint`
+Objekt `CPoint`, který je Centerpoint `CRect`.
 
 ### <a name="example"></a>Příklad
 
@@ -240,7 +240,7 @@ void CMyDlg::OnPaint()
 
 ##  <a name="copyrect"></a>CRect::CopyRect
 
-Zkopíruje obdélník do `CRect`. `lpSrcRect`
+Zkopíruje obdélník `lpSrcRect` do `CRect`.
 
 ```
 void CopyRect(LPCRECT lpSrcRect) throw();
@@ -249,7 +249,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpSrcRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt, který má být zkopírován.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`, který se má zkopírovat.
 
 ### <a name="example"></a>Příklad
 
@@ -275,7 +275,7 @@ rectDest.CopyRect(&rectSource2);
 
 ##  <a name="crect"></a>CRect::CRect
 
-`CRect` Vytvoří objekt.
+Vytvoří objekt `CRect`.
 
 ```
 CRect() throw();
@@ -295,7 +295,7 @@ Určuje levou pozici `CRect`.
 Určuje začátek `CRect`.
 
 *r*<br/>
-Určuje správnou pozici `CRect`.
+Určuje pravou pozici `CRect`.
 
 *b*<br/>
 Určuje dolní část `CRect`.
@@ -304,7 +304,7 @@ Určuje dolní část `CRect`.
 Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) s souřadnicemi pro `CRect`.
 
 *lpSrcRect*<br/>
-Odkazuje na `RECT` strukturu s souřadnicemi pro `CRect`.
+Odkazuje na strukturu `RECT` s souřadnicemi pro `CRect`.
 
 *Vyberte*<br/>
 Určuje počáteční bod pro vykonstrukci obdélníku. Odpovídá levému hornímu rohu.
@@ -313,16 +313,16 @@ Určuje počáteční bod pro vykonstrukci obdélníku. Odpovídá levému horn�
 Určuje posun z levého horního rohu do pravého dolního rohu obdélníku, který má být vytvořen.
 
 *topLeft*<br/>
-Určuje pozici `CRect`v levém horním rohu.
+Určuje pozici v levém horním rohu `CRect`.
 
 *bottomRight*<br/>
-Určuje pravou pozici `CRect`v pravém dolním rohu.
+Určuje pravou spodní pozici `CRect`.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nejsou zadány žádné argumenty `left`, `top` `right`,, a `bottom` členy nejsou inicializovány.
+Pokud nejsou zadány žádné argumenty, `left`, `top`, `right`a členy `bottom` nejsou inicializovány.
 
-[](#copyrect)Konstruktory`const RECT&` `CRect`() a(`LPCRECT`) provádějí CopyRect. `CRect` Ostatní konstruktory inicializují proměnné členů objektu přímo.
+Konstruktory `CRect`(`const RECT&`) a `CRect`(`LPCRECT`) provádějí [CopyRect](#copyrect). Ostatní konstruktory inicializují proměnné členů objektu přímo.
 
 ### <a name="example"></a>Příklad
 
@@ -335,7 +335,7 @@ CRect rect(0, 0, 100, 50);
 ASSERT(rect.Width() == 100);
 ASSERT(rect.Height() == 50);
 
-// Initialize from RECT stucture
+// Initialize from RECT structure
 RECT sdkRect;
 sdkRect.left = 0;
 sdkRect.top = 0;
@@ -364,7 +364,7 @@ ASSERT(rect5 == rect4);
 
 ##  <a name="deflaterect"></a>CRect::D eflateRect
 
-`DeflateRect`rozplochý `CRect` přesunutím jeho stran směrem ke středu.
+`DeflateRect` deflace `CRect` přesunutím stran směrem ke středu.
 
 ```
 void DeflateRect(int x, int y) throw();
@@ -379,31 +379,31 @@ void DeflateRect(int l, int t, int r, int b) throw();
 Určuje počet jednotek pro zúžení levé a pravé strany `CRect`.
 
 *y*<br/>
-Určuje počet jednotek, které se mají uprostřed nahoru a dolů `CRect`.
+Určuje počet jednotek, které se mají uprostřed horní a dolní části `CRect`.
 
 *hodnota*<br/>
-[Velikost](/windows/win32/api/windef/ns-windef-size) nebo [CSize](csize-class.md) , která určuje počet jednotek k zúžení `CRect`. Hodnota určuje počet jednotek pro zúžení levé a pravé strany `cy` a hodnota určuje počet jednotek, které se mají uprostřed nahoru a dolů. `cx`
+[Velikost](/windows/win32/api/windef/ns-windef-size) nebo [CSize](csize-class.md) , která určuje počet jednotek k zúžení `CRect`. Hodnota `cx` určuje počet jednotek pro zúžení levé a pravé strany a hodnota `cy` určuje počet jednotek, které se mají uprostřed nahoru a dolů.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` určuje počet jednotek, které se mají uprostřed umístit.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect`, která určuje počet jednotek pro zúžení jednotlivých stran.
 
 *l*<br/>
-Určuje počet jednotek, ve kterých se má uprostřed levá strana `CRect`.
+Určuje počet jednotek, ve kterých se má uprostřed `CRect`.
 
 *t*<br/>
-Určuje počet jednotek, které se mají uprostřed horní `CRect`části.
+Určuje počet jednotek pro zúžení horní části `CRect`.
 
 *r*<br/>
 Určuje počet jednotek pro zúžení pravé strany `CRect`.
 
 *b*<br/>
-Určuje počet jednotek, ve kterých se má uprostřed dolů `CRect`.
+Určuje počet jednotek, které se mají ve spodní části `CRect`.
 
 ### <a name="remarks"></a>Poznámky
 
-K tomu `DeflateRect` přidají jednotky vlevo a dolů a odečtou se jednotky od pravého a dolního okraje. Parametry `DeflateRect` jsou podepsané hodnoty; kladné hodnoty zúžené `CRect` a záporné hodnoty jsou neploché.
+K tomu `DeflateRect` přidá jednotky vlevo a dolů a odečtou se jednotky od pravého a dolního okraje. Parametry `DeflateRect` jsou podepsané hodnoty; kladné hodnoty se Deflate `CRect` a záporné hodnoty ji neplochě.
 
-První dvě přetížení rozdeflate obě páry protilehlých stran `CRect` , aby celková šířka byla snížena o dvojnásobku *hodnoty* *x* (nebo `cx`) a celková výška je snížena o dvě časy (nebo `cy`). Druhá dvě přetížení uprostřed každou stranu `CRect` nezávisle na ostatních.
+První dvě přetížení rozdeflate obě páry protilehlých stran `CRect` tak, aby celková šířka byla snížena o dvojnásobek *hodnoty* *x* (nebo `cx`) a celková výška je snížena o dvojnásobku času (nebo `cy`). Druhá dvě přetížení na každou stranu `CRect` nezávisle na ostatních.
 
 ### <a name="example"></a>Příklad
 
@@ -422,7 +422,7 @@ ASSERT(rect2.top == 12 && rect2.bottom == 46);
 
 ##  <a name="equalrect"></a>CRect::EqualRect
 
-Určuje, `CRect` zda se rovná danému obdélníku.
+Určuje, zda je `CRect` rovny danému obdélníku.
 
 ```
 BOOL EqualRect(LPCRECT lpRect) const throw();
@@ -431,7 +431,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt, který obsahuje souřadnice levého horního a dolního rohu obdélníku.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`, který obsahuje souřadnice levého horního a dolního pravého rohu obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -461,7 +461,7 @@ ASSERT(rect1.EqualRect(&test));
 
 ##  <a name="height"></a>CRect:: Height
 
-Vypočítá výšku `CRect` odečtením nejvyšší hodnoty od nejnižší hodnoty.
+Vypočítá výšku `CRect` tím, že odečte horní hodnotu od nejnižší hodnoty.
 
 ```
 int Height() const throw();
@@ -490,7 +490,7 @@ ASSERT(nHt == 40);
 
 ##  <a name="inflaterect"></a>CRect::InflateRect
 
-`InflateRect`se nerovná `CRect` přesunutím stran mimo střed.
+`InflateRect` neplochý `CRect` přesunutím stran mimo střed.
 
 ```
 void InflateRect(int x, int y) throw();
@@ -505,31 +505,31 @@ void InflateRect(int l, int t, int r,  int b) throw();
 Určuje počet jednotek, které mají být nahuštěny na levou a pravou stranu `CRect`.
 
 *y*<br/>
-Určuje počet jednotek, které mají být vyrovny horní a dolní `CRect`části.
+Určuje počet jednotek, které mají být vyrovny hornímu a dolnímu `CRect`.
 
 *hodnota*<br/>
-[Velikost](/windows/win32/api/windef/ns-windef-size) nebo [CSize](csize-class.md) , která určuje počet jednotek, které mají být neploché `CRect`. Hodnota určuje počet jednotek, které mají být nahuštěny na levou a pravou stranu `cy` , a hodnota určuje počet jednotek, které mají být vyrovny horní a dolní. `cx`
+[Velikost](/windows/win32/api/windef/ns-windef-size) nebo [CSize](csize-class.md) , která určuje počet jednotek, které mají být neploché `CRect`. Hodnota `cx` určuje počet jednotek, které mají být neploché vlevo a vpravo a hodnota `cy` určuje počet jednotek, které mají být v horní a dolní části.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` , která určuje počet jednotek, které mají být pro každou stranu ploché.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect`, která určuje, kolik jednotek má být každá strana neplochá.
 
 *l*<br/>
-Určuje počet jednotek, které mají být umístěny na levé straně `CRect`.
+Určuje počet jednotek pro neplochou levou stranu `CRect`.
 
 *t*<br/>
-Určuje počet jednotek, které mají být v horní `CRect`části.
+Určuje počet jednotek, které mají být v horní části `CRect`.
 
 *r*<br/>
 Určuje počet jednotek, které mají být nahuštěny na pravé straně `CRect`.
 
 *b*<br/>
-Určuje počet jednotek, které mají být vyrovny dolnímu `CRect`okraji.
+Určuje počet jednotek, které mají být v dolní části `CRect`neploché.
 
 ### <a name="remarks"></a>Poznámky
 
-To uděláte tak, `InflateRect` že odečtete jednotky od levého a horního okraje a do pravého a dolního rohu přidáte jednotky. Parametry `InflateRect` jsou podepsané hodnoty; kladné hodnoty jsou `CRect` neploché a jejich zúžené hodnoty.
+K tomu `InflateRect` odečtou jednotky od levého a horního okraje a do pravého a dolního okraje přidají jednotky. Parametry `InflateRect` jsou podepsané hodnoty; kladné hodnoty jsou neploché `CRect` a jejich hodnoty jsou ve zúžení.
 
-První dvě přetížení rozplochí obě dvojice protilehlých stran `CRect` , aby celková šířka byla zvýšena o dvojnásobek hodnoty *x* (nebo `cx`) a celková výška je zvýšena o dvojnásobku *y* (nebo `cy`). Druhá dvě přetížení mají neplochou každou stranu `CRect` nezávisle na ostatních.
+První dvě přetížení rozplochí obě páry protilehlých stran `CRect` tak, aby celková šířka byla zvyšována dvakrát *x* (nebo `cx`) a její celková výška se zvýšila o dvojnásobku *y* (nebo `cy`). Druhá dvě přetížení rozplochí každou stranu `CRect` nezávisle na ostatních.
 
 ### <a name="example"></a>Příklad
 
@@ -543,7 +543,7 @@ ASSERT(rect == CRect(-50, -200, 350, 500));
 
 ##  <a name="intersectrect"></a>CRect::IntersectRect
 
-`CRect` Je rovno průniku dvou existujících obdélníků.
+Vytvoří `CRect` rovno průniku dvou existujících obdélníků.
 
 ```
 BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
@@ -552,10 +552,10 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRect1*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt, který obsahuje zdrojový obdélník.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`, který obsahuje zdrojový obdélník.
 
 *lpRect2*<br/>
-Odkazuje na `RECT` strukturu nebo `CRect` objekt, který obsahuje zdrojový obdélník.
+Odkazuje na strukturu `RECT` nebo objekt `CRect`, který obsahuje zdrojový obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -586,7 +586,7 @@ ASSERT(rectInter2 == CRect(125, 75, 150, 95));
 
 ##  <a name="isrectempty"></a>CRect::IsRectEmpty
 
-Určuje, `CRect` zda je prázdný.
+Určuje, zda je `CRect` prázdné.
 
 ```
 BOOL IsRectEmpty() const throw();
@@ -594,7 +594,7 @@ BOOL IsRectEmpty() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, `CRect` Pokud je prázdné; 0 `CRect` , pokud není prázdné.
+Nenulové, pokud je `CRect` prázdné; 0, pokud `CRect` není prázdné.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -616,7 +616,7 @@ ASSERT(rectEmpty.IsRectEmpty());
 
 ##  <a name="isrectnull"></a>CRect::IsRectNull
 
-Určuje, zda `CRect` jsou všechny hodnoty nahoře, vlevo, dole a Right rovny 0.
+Určuje, zda jsou hodnoty horní, levý, dolní a pravé `CRect` všechny rovny 0.
 
 ```
 BOOL IsRectNull() const throw();
@@ -624,7 +624,7 @@ BOOL IsRectNull() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, `CRect`Pokud hodnoty Top, Left, Bottom a Right jsou všechny rovny 0; jinak 0.
+Nenulové, pokud jsou hodnoty horní, levý, dolní a pravé `CRect`všechny rovny 0; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -684,7 +684,7 @@ Absolutní souřadnice x levého horního rohu obdélníku.
 Absolutní souřadnice y levého horního rohu obdélníku.
 
 *Vyberte*<br/>
-`POINT` Struktura určující absolutní levý horní roh obdélníku.
+Struktura `POINT` určující absolutní levý horní roh obdélníku.
 
 ### <a name="example"></a>Příklad
 
@@ -727,10 +727,10 @@ void NormalizeRect() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Obdélník je normalizován na umístění čtvrtého kvadrantu, které systém Windows obvykle používá pro souřadnice. `NormalizeRect`Porovná horní a dolní hodnotu a zahodí je, pokud je horní hodnota větší než dolní. Obdobně zamění levou a pravou hodnotu, pokud je levý větší než vpravo. Tato funkce je užitečná při práci s různými režimy mapování a obrácenými obdélníky.
+Obdélník je normalizován na umístění čtvrtého kvadrantu, které systém Windows obvykle používá pro souřadnice. `NormalizeRect` porovná horní a dolní hodnotu a zahodí je, pokud je horní hodnota větší než dolní. Obdobně zamění levou a pravou hodnotu, pokud je levý větší než vpravo. Tato funkce je užitečná při práci s různými režimy mapování a obrácenými obdélníky.
 
 > [!NOTE]
-> Následující `CRect` členské funkce vyžadují normalizované obdélníky, aby fungovaly správně: [Výška](#height), [Šířka](#width), [Velikost](#size), [IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [operátor = =](#operator_eq_eq), [operátor! =](#operator_neq), [operátor &#124; ](#operator_or), [operátor &#124;=](#operator_or_eq), [operátor &](#operator_amp)a [operátor & =](#operator_amp_eq).
+> Následující `CRect` členské funkce vyžadují normalizované obdélníky, aby fungovaly správně: [Výška](#height), [Šířka](#width), [Velikost](#size), [IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [operátor = =](#operator_eq_eq), [operátor! =](#operator_neq), [ &#124;operátor, operátor ](#operator_or) [ &#124;=](#operator_or_eq), [operátor &](#operator_amp)a [operátor & =](#operator_amp_eq).
 
 ### <a name="example"></a>Příklad
 
@@ -744,7 +744,7 @@ ASSERT(rect1 == rect2);
 
 ##  <a name="offsetrect"></a>CRect::OffsetRect
 
-Přesune `CRect` se o zadané posuny.
+Přesune `CRect` o zadané posuny.
 
 ```
 void OffsetRect(int x, int y) throw();
@@ -768,7 +768,7 @@ Obsahuje strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo ob
 
 ### <a name="remarks"></a>Poznámky
 
-Přesune `CRect`jednotky *x* podél osy x a *y* podél osy y. Parametry *x* a *y* jsou podepsané, takže `CRect` se dají přesunout doleva nebo doprava a nahoru nebo dolů.
+Přesune `CRect`*x* jednotky podél osy x a *y* podél osy y. Parametry *x* a *y* jsou podepsané, takže `CRect` lze přesunout doleva nebo doprava a nahoru nebo dolů.
 
 ### <a name="example"></a>Příklad
 
@@ -788,11 +788,11 @@ operator LPCRECT() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Použijete-li tuto funkci, nepotřebujete operátor address-of **&** (). Tento operátor bude automaticky použit při předání `CRect` objektu do funkce, která `LPCRECT`očekává.
+Když použijete tuto funkci, nepotřebujete operátor address-of ( **&** ). Tento operátor bude automaticky použit při předání objektu `CRect` do funkce, která očekává `LPCRECT`.
 
 ##  <a name="operator_lprect"></a>CRect:: operator LPRECT
 
-Převede na lpRect. [](../../mfc/reference/data-types-mfc.md) `CRect`
+Převede `CRect` na [lpRect](../../mfc/reference/data-types-mfc.md).
 
 ```
 operator LPRECT() throw();
@@ -800,7 +800,7 @@ operator LPRECT() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Použijete-li tuto funkci, nepotřebujete operátor address-of **&** (). Tento operátor bude automaticky použit při předání `CRect` objektu do funkce, která `LPRECT`očekává.
+Když použijete tuto funkci, nepotřebujete operátor address-of ( **&** ). Tento operátor bude automaticky použit při předání objektu `CRect` do funkce, která očekává `LPRECT`.
 
 ### <a name="example"></a>Příklad
 
@@ -831,7 +831,7 @@ ASSERT(rect2 == CRect(0, 0, 127, 168));
 
 ##  <a name="operator_eq_eq"></a>CRect:: operator = = – operátor
 
-Určuje, `rect` zda je `CRect` rovno porovnání souřadnic jejich levého horního a dolního rohu.
+Určuje, zda je `rect` rovna `CRect` porovnáním souřadnic jejich levého horního a dolního rohu.
 
 ```
 BOOL operator==(const RECT& rect) const throw();
@@ -871,7 +871,7 @@ ASSERT(rect1 == test);
 
 ##  <a name="operator_neq"></a>CRect:: operator! =
 
-Určuje, zda není *Rect* rovno `CRect` porovnáním souřadnic jejich levého horního a dolního rohu.
+Určuje, zda se v *Rect* nerovná `CRect` porovnáním souřadnic jejich levého horního a dolního rohu.
 
 ```
 BOOL operator!=(const RECT& rect) const throw();
@@ -911,7 +911,7 @@ ASSERT(rect3 != test);
 
 ##  <a name="operator_add_eq"></a>CRect:: operator + =
 
-První dvě přetížení se přesunou `CRect` podle zadaného posunu.
+První dvě přetížení přesunou `CRect` o zadané posuny.
 
 ```
 void operator+=(POINT point) throw();
@@ -928,13 +928,13 @@ Struktura [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint]
 Struktura [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](csize-class.md) , který určuje počet jednotek pro přesunutí obdélníku.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt, který obsahuje počet jednotek, které mají být rozploché pro každou `CRect`stranu.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`, který obsahuje počet jednotek, které mají být rozploché pro každou stranu `CRect`.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnoty parametrů *x* a *y* (nebo `cx` a `cy`) jsou přidány do `CRect`.
+Hodnoty parametru *x* a *y* (nebo `cx` a `cy`) jsou přidány do `CRect`.
 
-Třetí přetížení `CRect` má za následek počet jednotek specifikovaných v každém členu parametru.
+Třetí přetížení nepoužívá `CRect` počtu jednotek specifikovaných v každém členu parametru.
 
 ### <a name="example"></a>Příklad
 
@@ -949,7 +949,7 @@ ASSERT(rect1 == rect2);
 
 ##  <a name="operator_-_eq"></a>CRect:: operator-=
 
-První dvě přetížení se přesunou `CRect` podle zadaného posunu.
+První dvě přetížení přesunou `CRect` o zadané posuny.
 
 ```
 void operator-=(POINT point) throw();
@@ -966,13 +966,13 @@ Struktura [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint]
 Struktura [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](csize-class.md) , který určuje počet jednotek pro přesunutí obdélníku.
 
 *lpRect*<br/>
-Odkazuje na strukturu [](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt Rect, který obsahuje počet jednotek pro `CRect`zúžení jednotlivých stran.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`, který obsahuje počet jednotek pro zúžení všech stran `CRect`.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnoty *x* a *y* (nebo `cx` a `cy`) parametru se odečtou od `CRect`.
+Hodnoty parametrů *x* a *y* (nebo `cx` a `cy`) se odečtou od `CRect`.
 
-Třetí přetížení rozrovná `CRect` počet jednotek specifikovaných v každém členu parametru. Všimněte si, že tato přetížená funkce, jako je [DeflateRect](#deflaterect).
+Třetí přetížení rozrůstat `CRect` podle počtu jednotek specifikovaných v každém členu parametru. Všimněte si, že tato přetížená funkce, jako je [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Příklad
 
@@ -985,9 +985,9 @@ CRect   rectResult(65, 170, 165, 270);
 ASSERT(rect1 == rectResult);
 ```
 
-##  <a name="operator_amp_eq"></a>CRect:: operator&amp;=
+##  <a name="operator_amp_eq"></a>CRect:: operator &amp;=
 
-Sada `CRect` je rovna `CRect` průsečíku a `rect`.
+Nastaví `CRect` rovny průniku `CRect` a `rect`.
 
 ```
 void operator&=(const RECT& rect) throw();
@@ -1011,7 +1011,7 @@ Podívejte se na příklad pro [CRect:: IntersectRect](#intersectrect).
 
 ##  <a name="operator_or_eq"></a>CRect:: operator &#124;=
 
-Sada `CRect` je rovna `CRect` sjednocení a `rect`.
+Nastaví `CRect` se rovnají sjednocení `CRect` a `rect`.
 
 ```
 void operator|=(const RECT& rect) throw();
@@ -1020,7 +1020,7 @@ void operator|=(const RECT& rect) throw();
 ### <a name="parameters"></a>Parametry
 
 *OBD*<br/>
-Obsahuje a `CRect` nebo [Rect](/windows/win32/api/windef/ns-windef-rect).
+Obsahuje `CRect` nebo [Rect](/windows/win32/api/windef/ns-windef-rect).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1042,7 +1042,7 @@ ASSERT(rectResult == rect1);
 
 ##  <a name="operator_add"></a>CRect:: operator + – operátor
 
-První dvě přetížení vrátí `CRect` objekt, který je `CRect` roven zadaným posunům.
+První dvě přetížení vrátí objekt `CRect`, který je roven `CRect` posunuta zadanými posuny.
 
 ```
 CRect operator+(POINT point) const throw();
@@ -1059,17 +1059,17 @@ Struktura [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint]
 Struktura [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](csize-class.md) , který určuje počet jednotek pro přesunutí vrácené hodnoty.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt, který obsahuje počet jednotek pro deflaci každé strany návratové hodnoty.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`, který obsahuje počet jednotek pro deflaci každé strany návratové hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek přesunutí nebo `CRect` rozplochý podle počtu jednotek zadaných v parametru. `CRect`
+`CRect`, která vyplývají z přesunu nebo neplochého `CRect` podle počtu jednotek zadaných v parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametry *x* a *y* (nebo `cx` a `cy`) parametru jsou přidány do `CRect`pozice.
+Parametry *x* a *y* (nebo `cx` a `cy`) parametru jsou přidány do pozice `CRect`.
 
-Třetí přetížení vrátí nový `CRect` , který je `CRect` roven hodnotě vynásobené počtem jednotek specifikovaných v každém členu parametru.
+Třetí přetížení vrátí nový `CRect`, který se rovná `CRect` vynásobený počtem jednotek specifikovaných v každém členu parametru.
 
 ### <a name="example"></a>Příklad
 
@@ -1085,7 +1085,7 @@ ASSERT(rectResult == rect2);
 
 ##  <a name="operator_-"></a>CRect:: operator-
 
-První dvě přetížení vrátí `CRect` objekt, který je `CRect` roven zadaným posunům.
+První dvě přetížení vrátí objekt `CRect`, který je roven `CRect` posunuta zadanými posuny.
 
 ```
 CRect operator-(POINT point) const throw();
@@ -1096,23 +1096,23 @@ CRect operator-(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Vyberte*<br/>
-Struktura [bodu](/windows/win32/api/windef/ns-windef-point) nebo `CPoint` objekt, který určuje počet jednotek pro přesunutí vrácené hodnoty.
+Struktura [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt `CPoint`, který určuje počet jednotek pro přesun návratové hodnoty.
 
 *hodnota*<br/>
-[Velikost](/windows/win32/api/windef/ns-windef-size) struktury nebo `CSize` objektu, který určuje počet jednotek pro přesunutí vrácené hodnoty.
+Struktura [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt `CSize`, který určuje počet jednotek pro přesunutí vrácené hodnoty.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt, který obsahuje počet jednotek pro zúžení všech stran návratové hodnoty.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`, který obsahuje počet jednotek pro zúžení všech stran návratové hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek přesunutí nebo `CRect` zúžení podle počtu jednotek zadaných v parametru. `CRect`
+`CRect`, která vyplývají z přesunu nebo deflace `CRect` počtem jednotek zadaných v parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametry *x* a *y* (nebo `cx` a `cy`) parametru se odečtou od `CRect`pozice.
+Parametry *x* a *y* (nebo `cx` a `cy`) parametrů se odečtou od pozice `CRect`.
 
-Třetí přetížení vrátí nový `CRect` , který je `CRect` roven hodnotě oddělený počtem jednotek specifikovaných v každém členu parametru. Všimněte si, že tato přetížení funguje jako [DeflateRect](#deflaterect), ne [SubtractRect](#subtractrect).
+Třetí přetížení vrátí novou `CRect`, která se rovná `CRect`, která je rovna počtu jednotek specifikovaných v každém členu parametru. Všimněte si, že tato přetížení funguje jako [DeflateRect](#deflaterect), ne [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Příklad
 
@@ -1126,9 +1126,9 @@ CRect   rectResult(65, 170, 165, 270);
 ASSERT(rect2 == rectResult);
 ```
 
-##  <a name="operator_amp"></a>CRect:: operator&amp;
+##  <a name="operator_amp"></a>CRect:: operator &amp;
 
-Vrátí objekt `CRect` , který je `CRect` průsečíkem a *rect2*.
+Vrátí `CRect`, který je průnikem `CRect` a *rect2*.
 
 ```
 CRect operator&(const RECT& rect2) const throw();
@@ -1141,7 +1141,7 @@ Obsahuje [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt `CRect` , který je `CRect` průsečíkem a *rect2*.
+`CRect`, který je průnikem `CRect` a *rect2*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1164,7 +1164,7 @@ ASSERT(rectResult == rect3);
 
 ##  <a name="operator_or"></a>CRect:: operator&#124;
 
-Vrátí hodnotu `CRect` , která je sjednocením a *rect2.* `CRect`
+Vrátí `CRect`, který je sjednocením `CRect` a *rect2*.
 
 ```
 CRect operator|(const RECT&
@@ -1178,7 +1178,7 @@ Obsahuje [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`CRect` A to je sjednocení a *rect2.* `CRect`
+`CRect`, který je sjednocení `CRect` a *rect2*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1201,7 +1201,7 @@ ASSERT(rectResult == rect3);
 
 ##  <a name="ptinrect"></a>CRect::P tInRect
 
-Určuje, zda zadaný bod leží v `CRect`rámci.
+Určuje, zda zadaný bod leží v rámci `CRect`.
 
 ```
 BOOL PtInRect(POINT point) const throw();
@@ -1214,11 +1214,11 @@ Obsahuje strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bod leží v `CRect`; jinak 0.
+Nenulové, pokud se bod nachází v `CRect`; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Bod je v rámci `CRect` , pokud leží na levé nebo horní straně nebo je ve všech čtyřech stranách. Bod na pravé nebo dolní straně je mimo `CRect`.
+Bod je v rámci `CRect`, pokud leží na levé nebo horní straně nebo je ve všech čtyřech stranách. Bod na pravé nebo dolní straně je mimo `CRect`.
 
 > [!NOTE]
 >  Obdélník musí být normalizován nebo tato funkce může selhat. Před voláním této funkce můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníku.
@@ -1301,7 +1301,7 @@ ASSERT(rect.IsRectEmpty());
 
 ##  <a name="size"></a>CRect:: SIZE
 
-Členové `cx` `CRect`a `cy` návratové hodnoty obsahují výšku a šířku.
+Členy `cx` a `cy` návratové hodnoty obsahují výšku a šířku `CRect`.
 
 ```
 CSize Size() const throw();
@@ -1328,7 +1328,7 @@ ASSERT(sz.cx == 40 && sz.cy == 40);
 
 ##  <a name="subtractrect"></a>CRect::SubtractRect
 
-Nastaví rozměry `CRect` rovnající se `lpRectSrc2` odčítání z `lpRectSrc1`.
+Nastaví rozměry `CRect` rovnající se odčítání `lpRectSrc2` z `lpRectSrc1`.
 
 ```
 BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
@@ -1337,10 +1337,10 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRectSrc1*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt, ze kterého se má odčítat obdélník.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`, ze kterého se má obdélník odečíst.
 
 *lpRectSrc2*<br/>
-Odkazuje na `RECT` strukturu nebo `CRect` objekt, který má být odečten od obdélníku, na který odkazuje parametr *lpRectSrc1* .
+Odkazuje na strukturu `RECT` nebo objekt `CRect`, který má být odečten od obdélníku, na který odkazuje parametr *lpRectSrc1* .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1354,7 +1354,7 @@ Obdélník určený parametrem *lpRectSrc1* nebude změněn, pokud obdélník ur
 
 Například pokud byl *lpRectSrc1* (10, 10, 100 100) a *lpRectSrc2* (50, 50, 150 150), obdélník, na který se odkazuje pomocí *lpRectSrc1* , by se při vrácení funkce nezměnil. Pokud byl *lpRectSrc1* (10, 10, 100 100) a *lpRectSrc2* (50 150 150, 10,), ale obdélník, na který *lpRectSrc1* odkazuje, obsahuje souřadnice (10, 10, 50 100), až funkce vrátí.
 
-`SubtractRect`není stejný jako [operátor](#operator_-) ani [operátor-=](#operator_-_eq). Žádná z těchto operátorů nikdy `SubtractRect`nevolá.
+`SubtractRect` není totožný s operátorem [and](#operator_-) [a =](#operator_-_eq). Žádný z těchto operátorů nikdy nevolá `SubtractRect`.
 
 > [!NOTE]
 >  Oba obdélníky musí být normalizovány nebo tato funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) pro normalizaci obdélníků před voláním této funkce.
@@ -1416,7 +1416,7 @@ Podívejte se na příklad pro [CRect:: Centerpoint](#centerpoint).
 
 ##  <a name="unionrect"></a>CRect::UnionRect
 
-Nastaví rozměry `CRect` rovnající se sjednocení dvou zdrojových obdélníků.
+Nastaví rozměry `CRect` rovny sjednocení dvou zdrojových obdélníků.
 
 ```
 BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
@@ -1425,10 +1425,10 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpRect1*<br/>
-Odkazuje na [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` obsahující zdrojový obdélník.
+Odkazuje na [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect`, který obsahuje zdrojový obdélník.
 
 *lpRect2*<br/>
-Odkazuje na `RECT` nebo `CRect` , který obsahuje zdrojový obdélník.
+Odkazuje na `RECT` nebo `CRect` obsahující zdrojový obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1457,7 +1457,7 @@ ASSERT(rectResult == rect3);
 
 ##  <a name="width"></a>CRect:: Width
 
-Vypočítá šířku `CRect` odčítáním levé hodnoty od pravé hodnoty.
+Vypočítá šířku `CRect` odečtením levé hodnoty od pravé hodnoty.
 
 ```
 int Width() const throw();

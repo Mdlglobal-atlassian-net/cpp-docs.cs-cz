@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 6919f2ece4ed846cd80f791af91797373dea33b2
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 08620e0ae6b54b106daba8e0b0a392ceb1a6577d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051508"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821906"
 ---
 # <a name="basic_string-class"></a>basic_string – třída
 
@@ -136,14 +136,14 @@ class basic_string;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* \
+*CharType*\
 Datový typ jednoho znaku, který má být uložen v řetězci. C++ Standardní knihovna poskytuje specializace této šablony třídy s definicemi typu [řetězec](../standard-library/string-typedefs.md#string) pro prvky typu **char**, [wstring](../standard-library/string-typedefs.md#wstring), pro **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) pro `char16_t`a [u32string](../standard-library/string-typedefs.md#u32string) pro `char32_t`.
 
 \ *vlastností*
 Různé důležité vlastnosti `CharType` prvků v specializaci basic_string jsou popsány `Traits`třídy. Výchozí hodnota je `char_traits`< `CharType`>.
 
 \ *přidělování*
-Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování a navracení paměti v řetězci. Výchozí hodnota je **přidělování** <  `CharType` >.
+Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování a navracení paměti v řetězci. Výchozí hodnota je **přidělování**< `CharType`>.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -161,10 +161,10 @@ Typ, který představuje uložený objekt přidělování, který zapouzdřuje i
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na prvek **const** uložený v řetězci pro čtení a provádění operací **const** .|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst libovolný element **const** v řetězci.|
 |[difference_type](#difference_type)|Typ, který poskytuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejného řetězce.|
-|[iterátor](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v řetězci.|
+|[iterator](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v řetězci.|
 |[npos](#npos)|Celočíselná hodnota bez znaménka byla inicializována na hodnotu-1, která označuje buď "nenalezen", nebo "všechny zbývající znaky", když funkce hledání dojde k chybě.|
-|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek znaku v řetězci nebo poli znaků.|
-|[odkaz](#reference)|Typ, který poskytuje odkaz na prvek uložený v řetězci.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek znaku v řetězci nebo poli znaků.|
+|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v řetězci.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat prvek v obráceném řetězci.|
 |[size_type](#size_type)|Celočíselný typ bez znaménka pro počet prvků v řetězci.|
 |[traits_type](#traits_type)|Typ znaků pro vlastnosti prvků uložených v řetězci.|
@@ -175,8 +175,8 @@ Typ, který představuje uložený objekt přidělování, který zapouzdřuje i
 |Členská funkce|Popis|
 |-|-|
 |[příloh](#append)|Přidá znaky na konec řetězce.|
-|[řadit](#assign)|Přiřadí nové znakové hodnoty k obsahu řetězce.|
-|[Počínaje](#at)|Vrátí odkaz na prvek v zadaném umístění v řetězci.|
+|[assign](#assign)|Přiřadí nové znakové hodnoty k obsahu řetězce.|
+|[at](#at)|Vrátí odkaz na prvek v zadaném umístění v řetězci.|
 |[návrat](#back)||
 |[ifunctiondiscovery](#begin)|Vrátí iterátor adresující první prvek v řetězci.|
 |[c_str](#c_str)|Převede obsah řetězce jako typ C zakončený hodnotou null.|
@@ -184,13 +184,13 @@ Typ, který představuje uložený objekt přidělování, který zapouzdřuje i
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek v řetězci.|
 |[cend](#cend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v řetězci.|
 |[jejich](#clear)|Smaže všechny prvky řetězce.|
-|[porovnán](#compare)|Porovná řetězec se zadaným řetězcem a určí, zda jsou dva řetězce stejné, nebo pokud je jedna z nich lexikograficky menší než druhá.|
+|[compare](#compare)|Porovná řetězec se zadaným řetězcem a určí, zda jsou dva řetězce stejné, nebo pokud je jedna z nich lexikograficky menší než druhá.|
 |[kopií](#copy)|Kopíruje maximálně zadaný počet znaků z indexované pozice ve zdrojovém řetězci do cílového pole znaků. Zastaralé Místo toho použijte [basic_string:: _Copy_s](#copy_s) .|
-|[crbegin –](#crbegin)|Vrátí konstantní iterátor, který adresuje první prvek v obráceném řetězci.|
+|[crbegin](#crbegin)|Vrátí konstantní iterátor, který adresuje první prvek v obráceném řetězci.|
 |[crend](#crend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném řetězci.|
 |[_Copy_s](#copy_s)|Kopíruje maximálně zadaný počet znaků z indexované pozice ve zdrojovém řetězci do cílového pole znaků.|
-|[údajů](#data)|Převede obsah řetězce na pole znaků.|
-|[obsahovat](#empty)|Testuje, zda řetězec obsahuje znaky.|
+|[data](#data)|Převede obsah řetězce na pole znaků.|
+|[empty](#empty)|Testuje, zda řetězec obsahuje znaky.|
 |[účelu](#end)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v řetězci.|
 |[ověřování](#erase)|Odebere prvek nebo rozsah prvků v řetězci ze zadané pozice.|
 |[najít](#find)|Vyhledá řetězec ve směru směrem nahoru pro první výskyt podřetězce, který odpovídá zadané posloupnosti znaků.|
@@ -201,26 +201,26 @@ Typ, který představuje uložený objekt přidělování, který zapouzdřuje i
 |[dopředu](#front)|Vrátí odkaz na první prvek v řetězci.|
 |[get_allocator](#get_allocator)|Vrátí kopii objektu `allocator`, který se používá k vytvoření řetězce.|
 |[zadat](#insert)|Vloží prvek nebo počet prvků nebo rozsah prvků do řetězce na zadané pozici.|
-|[časový](#length)|Vrátí aktuální počet prvků v řetězci.|
+|[Délka](#length)|Vrátí aktuální počet prvků v řetězci.|
 |[max_size](#max_size)|Vrátí maximální počet znaků, které může řetězec obsahovat.|
 |[pop_back](#pop_back)|Vymaže poslední prvek v řetězci.|
 |[push_back](#push_back)|Přidá prvek na konec řetězce.|
 |[rbegin](#rbegin)|Vrátí iterátor na první prvek v obráceném řetězci.|
 |[rend](#rend)|Vrátí iterátor, který odkazuje hned za poslední prvek v obráceném řetězci.|
-|[náhrady](#replace)|Nahradí prvky v řetězci na zadané pozici se zadanými znaky nebo znaky zkopírovanými z jiných rozsahů nebo řetězců nebo řetězců jazyka C.|
-|[rezervační](#reserve)|Nastaví kapacitu řetězce na číslo alespoň tak skvělé jako zadané číslo.|
+|[replace](#replace)|Nahradí prvky v řetězci na zadané pozici se zadanými znaky nebo znaky zkopírovanými z jiných rozsahů nebo řetězců nebo řetězců jazyka C.|
+|[reserve](#reserve)|Nastaví kapacitu řetězce na číslo alespoň tak skvělé jako zadané číslo.|
 |[velikost](#resize)|Určuje novou velikost pro řetězec, připojení nebo mazání prvků podle potřeby.|
 |[rfind](#rfind)|Vyhledá řetězec v opačném směru pro první výskyt podřetězce, který odpovídá zadané posloupnosti znaků.|
 |[shrink_to_fit](#shrink_to_fit)|Zahodí nadbytečnou kapacitu řetězce.|
 |[hodnota](#size)|Vrátí aktuální počet prvků v řetězci.|
 |[substr –](#substr)|Zkopíruje podřetězec s maximálně několika znaky z řetězce, který začíná na zadané pozici.|
-|[adresu](#swap)|Výměna obsahu dvou řetězců.|
+|[swap](#swap)|Výměna obsahu dvou řetězců.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operator + = – operátor](#op_add_eq)|Připojí znaky k řetězci.|
+|[operator+=](#op_add_eq)|Připojí znaky k řetězci.|
 |[operátor =](#op_eq)|Přiřadí nové znakové hodnoty k obsahu řetězce.|
 |[podnikatel&#91;&#93;](#op_at)|Poskytuje odkaz na znak se zadaným indexem v řetězci.|
 
@@ -232,7 +232,7 @@ Odkazy, ukazatele a iterátory, které určují prvky řízené sekvence, mohou 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<string >
+**Header:** \<řetězec >
 
 **Obor názvů:** std
 
@@ -316,16 +316,16 @@ basic_string<CharType, Traits, Allocator>& append(
 *posunutí*\
 Index části zdrojového řetězce, který dodává znaky, které mají být připojeny.
 
-*počet* \
+*počet*\
 Počet znaků, které mají být připojeny, nejvíce ze zdrojového řetězce.
 
 *char_value*\
 Hodnota znaku, která má být připojena.
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být přidán.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor, const_pointer nebo const_iterator adresování pozice nad posledním prvkem v rozsahu, který má být přidán.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -471,7 +471,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 \ *PTR*
 Ukazatel na znaky řetězce jazyka C, které mají být přiřazeny k cílovému řetězci.
 
-*počet* \
+*počet*\
 Počet znaků, které mají být přiřazeny, ze zdrojového řetězce.
 
 \ *str*
@@ -480,13 +480,13 @@ Zdrojový řetězec, jehož znaky mají být přiřazeny cílovému řetězci.
 *char_value*\
 Hodnota znaku, která má být přiřazena.
 
-*první* \
+*první*\
 Vstupní iterátor, const_pointer nebo const_iterator adresování prvního znaku v rozsahu zdrojového řetězce, který má být přiřazen k cílovému rozsahu.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor, const_pointer nebo const_iterator adresující jeden za poslední znak v rozsahu zdrojového řetězce, který má být přiřazen k cílovému rozsahu.
 
-*vypnuto* \
+*vypnuto*\
 Pozice, při které se začnou přiřazovat nové znaky
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -495,7 +495,7 @@ Odkaz na objekt String, kterému je přiřazena nová znaky členskou funkcí.
 
 ### <a name="remarks"></a>Poznámky
 
-K řetězcům lze přiřadit nové znakové hodnoty. Nová hodnota může být buď String, C-String nebo jeden znak. [Operátor =](#op_eq) lze použít, pokud lze novou hodnotu popsat pomocí jednoho parametru; v opačném případě `assign` členské funkce, která má více parametrů, lze použít k určení, která část řetězce má být přiřazena k cílovému řetězci.
+K řetězcům lze přiřadit nové znakové hodnoty. Nová hodnota může být buď String, C-String nebo jeden znak. [Operátor =](#op_eq) lze použít, pokud lze novou hodnotu popsat pomocí jednoho parametru; v opačném případě `assign`členské funkce, která má více parametrů, lze použít k určení, která část řetězce má být přiřazena k cílovému řetězci.
 
 ### <a name="example"></a>Příklad
 
@@ -753,10 +753,10 @@ basic_string(
 *alloc_type*\
 Třída přidělování úložiště pro objekt řetězce, který se má sestavit
 
-*počet* \
+*počet*\
 Počet znaků, které mají být inicializovány.
 
-*pravé* \
+*pravé*\
 Řetězec pro inicializaci vytvořeného řetězce.
 
 *right_offset*\
@@ -765,10 +765,10 @@ Index znaku v řetězci, který je první, který má být použit k inicializac
 *char_value*\
 Hodnota znaku, která má být zkopírována do vytvořeného řetězce.
 
-*první* \
+*první*\
 Vstupní iterátor, const_pointer nebo const_iterator adresování prvního prvku ve zdrojovém rozsahu, který má být vložen.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor, const_pointer nebo const_iterator adresování pozice, která překračuje poslední prvek ve zdrojovém rozsahu, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1028,7 +1028,7 @@ Iterátor **náhodného** přístupu, který odkazuje na první prvek rozsahu ne
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin` nelze upravovat elementy v rozsahu.
+S návratovou hodnotou `cbegin`nelze upravovat elementy v rozsahu.
 
 Tuto členskou funkci lze použít místo `begin()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `begin()` a `cbegin()`.
 
@@ -1171,7 +1171,7 @@ Maximální počet znaků z řetězce parametru, který má být porovnán.
 *posunutí*\
 Index řetězce parametru, u kterého je zahájeno porovnání.
 
-*počet* \
+*počet*\
 Maximální počet znaků z řetězce parametru, který má být porovnán.
 
 \ *PTR*
@@ -1590,7 +1590,7 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*cílový* \
+*cílový*\
 Cílové pole znaků, do kterého mají být kopírovány elementy.
 
 *dest_size*\
@@ -1725,7 +1725,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="difference_type"></a>basic_string::d ifference_type
+## <a name="difference_type"></a>  basic_string::difference_type
 
 Typ, který poskytuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejného řetězce.
 
@@ -1860,7 +1860,7 @@ int main( )
    str1_Iter--;
    str1_Iter--;
    cout << "The last character-letter of the string str1 is: " << *str1_Iter << endl;
-   cout << "The full orginal string str1 is: " << str1 << endl;
+   cout << "The full original string str1 is: " << str1 << endl;
 
    // end used to test when an iterator has reached the end of its string
    cout << "The string is now: ";
@@ -1887,7 +1887,7 @@ int main( )
 
 ```Output
 The last character-letter of the string str1 is: t
-The full orginal string str1 is: No way out.
+The full original string str1 is: No way out.
 The string is now: No way out.
 The last character-letter of the modified str1 is now: T
 The modified string str1 is now: No way ouT.
@@ -1913,10 +1913,10 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Iterátor adresující pozici prvního prvku v rozsahu, který má být smazán.
 
-*poslední* \
+*poslední*\
 Iterátor adresující pozici jednu za poslední prvek v rozsahu, který má být smazán.
 
 \ *ITER*
@@ -1925,7 +1925,7 @@ Iterátor adresující pozici prvku v řetězci, který má být smazán.
 *posunutí*\
 Index prvního znaku v řetězci, který má být odebrán.
 
-*počet* \
+*počet*\
 Počet elementů, které budou odstraněny, pokud je v rozsahu řetězce začínajícího *posunem*až mnoho.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2031,7 +2031,7 @@ Index pozice, na které má vyhledávání začít.
 \ *PTR*
 Řetězec znaků, který má členská funkce vyhledat.
 
-*počet* \
+*počet*\
 Počet znaků, počítaných vpřed od prvního znaku v řetězci znaků, které má členská funkce vyhledat.
 
 \ *str*
@@ -2206,7 +2206,7 @@ Index pozice, na které má vyhledávání začít.
 \ *PTR*
 Řetězec znaků, který má členská funkce vyhledat.
 
-*počet* \
+*počet*\
 Počet znaků, počítaných vpřed od prvního znaku v řetězci znaků, které má členská funkce vyhledat.
 
 \ *str*
@@ -2394,7 +2394,7 @@ Index pozice, na které má vyhledávání začít.
 \ *PTR*
 Řetězec znaků, který má členská funkce vyhledat.
 
-*počet* \
+*počet*\
 Počet znaků, počítaných vpřed od prvního znaku v řetězci znaků, které má členská funkce vyhledat.
 
 \ *str*
@@ -2547,7 +2547,7 @@ The index of the 1st occurrence of an element of 'a2' in str4 after
 the 0th position is: 1
 ```
 
-## <a name="find_last_not_of"></a>basic_string:: find_last_not_of
+## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
 
 Vyhledá řetězec pro poslední znak, který není libovolný prvek zadaného řetězce.
 
@@ -2581,7 +2581,7 @@ Index pozice, na které se má hledání dokončit
 \ *PTR*
 Řetězec znaků, který má členská funkce vyhledat.
 
-*počet* \
+*počet*\
 Počet znaků, počítaných vpřed od prvního znaku v řetězci znaků, které má členská funkce vyhledat.
 
 \ *str*
@@ -2736,7 +2736,7 @@ The index of the last occurrence of an element not in '12'
 in str4 before the end position is: 10
 ```
 
-## <a name="find_last_of"></a>basic_string:: find_last_of
+## <a name="find_last_of"></a>  basic_string::find_last_of
 
 Vyhledá řetězec pro poslední znak, který odpovídá jakémukoli prvku zadaného řetězce.
 
@@ -2770,7 +2770,7 @@ Index pozice, na které se má hledání dokončit
 \ *PTR*
 Řetězec znaků, který má členská funkce vyhledat.
 
-*počet* \
+*počet*\
 Počet znaků, počítaných vpřed od prvního znaku v řetězci znaků, které má členská funkce vyhledat.
 
 \ *str*
@@ -3034,7 +3034,7 @@ Index pozice za bodem vložení nových znaků
 \ *PTR*
 Řetězec jazyka C, který bude zcela nebo částečně vložen do řetězce.
 
-*počet* \
+*počet*\
 Počet znaků, které mají být vloženy.
 
 \ *str*
@@ -3049,10 +3049,10 @@ Hodnota znaku prvků, které mají být vloženy.
 \ *ITER*
 Iterátor adresující pozici, za kterou má být vložen znak.
 
-*první* \
+*první*\
 Vstupní iterátor, const_pointer nebo const_iterator adresování prvního prvku ve zdrojovém rozsahu, který má být vložen.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor, const_pointer nebo const_iterator adresování pozice, která překračuje poslední prvek ve zdrojovém rozsahu, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3127,7 +3127,7 @@ int main( )
    cout << "The string with a character inserted from a range is: "
         << str7a << endl;
 
-   // The eigth member function inserts a number of
+   // The eighth member function inserts a number of
    // characters at a specified position in the string
    string str8 ( "ABCDHIJ" );
    basic_string <char>::iterator str8_Iter = ( str8.begin ( ) + 4 );
@@ -3339,7 +3339,7 @@ Znak, který má být přidán.
 \ *PTR*
 Znaky řetězce jazyka C, který má být přidán.
 
-*pravé* \
+*pravé*\
 Znaky řetězce, který se má připojit
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3431,7 +3431,7 @@ Hodnota znaku, která má být přiřazena.
 \ *PTR*
 Ukazatel na znaky řetězce jazyka C, které mají být přiřazeny k cílovému řetězci.
 
-*pravé* \
+*pravé*\
 Zdrojový řetězec, jehož znaky mají být přiřazeny cílovému řetězci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3945,19 +3945,19 @@ Maximální počet znaků, který má být použit z parametru C-String.
 *char_value*\
 Znak, který má být zkopírován do řetězce operandu.
 
-*first0* \
+*first0*\
 Iterátor adresující první znak, který má být odstraněn v řetězci operandu.
 
-*last0* \
+*last0*\
 Iterátor adresující poslední znak, který má být odstraněn v řetězci operandu.
 
-*první* \
+*první*\
 Iterátor, const_pointer nebo const_iterator adresování prvního znaku, který má být zkopírován v řetězci parametru.
 
-*poslední* \
+*poslední*\
 Iterátor, const_pointer nebo const_iterator adresování posledního znaku, který má být zkopírován v řetězci parametru.
 
-*počet* \
+*počet*\
 Počet, kolikrát je *char_value* zkopírován do řetězce operandu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4153,7 +4153,7 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*počet* \
+*počet*\
 Počet znaků, pro které je paměť vyhrazena.
 
 ### <a name="remarks"></a>Poznámky
@@ -4248,7 +4248,7 @@ void resize(
 
 ### <a name="parameters"></a>Parametry
 
-*počet* \
+*počet*\
 Nová velikost řetězce
 
 *char_value*\
@@ -4393,7 +4393,7 @@ Index pozice, na které má vyhledávání začít.
 \ *PTR*
 Řetězec znaků, který má členská funkce vyhledat.
 
-*počet* \
+*počet*\
 Počet znaků, počítaných vpřed od prvního znaku v řetězci znaků, které má členská funkce vyhledat.
 
 \ *str*
@@ -4481,7 +4481,7 @@ int main( )
    const char *cstr3b = "am";
    indexCh3b = str3.rfind ( cstr3b , indexCh3a + 25 , 2 );
    if ( indexCh3b != npos )
-      cout << "The index of the next occurrance of 'am' in "
+      cout << "The index of the next occurrence of 'am' in "
            << "str3 begins at: " << indexCh3b << endl << endl;
    else
       cout << "There is no next occurrence of 'am' in str3 ."
@@ -4527,14 +4527,14 @@ The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
 The index of the 1st element of 'nice' in str3 is: 8
-The index of the next occurrance of 'am' in str3 begins at: 20
+The index of the next occurrence of 'am' in str3 begins at: 20
 
 The original string str4 is: This perfectly unclear.
 The substring 'clear' was not found in str4 before the 15th position.
 The index of the 1st element of 'clear' in str4 is: 17
 ```
 
-## <a name="shrink_to_fit"></a>basic_string:: shrink_to_fit
+## <a name="shrink_to_fit"></a>  basic_string::shrink_to_fit
 
 Zahodí nadbytečnou kapacitu řetězce.
 
@@ -4612,7 +4612,7 @@ int main( )
 }
 ```
 
-## <a name="size_type"></a>basic_string:: size_type
+## <a name="size_type"></a>  basic_string::size_type
 
 Typ unsigned integer, který může představovat počet prvků a indexů v řetězci.
 
@@ -4655,7 +4655,7 @@ The current size of string str1 is: 11.
 The capacity of string str1 is: 15.
 ```
 
-## <a name="substr"></a>basic_string:: substr
+## <a name="substr"></a>  basic_string::substr
 
 Zkopíruje podřetězec s maximálně několika znaky z řetězce, který začíná na zadané pozici.
 
@@ -4670,7 +4670,7 @@ basic_string<CharType, Traits, Allocator> substr(
 *posunutí*\
 Index, který vyhledává element na pozici, ze které je vytvořená kopie řetězce, má výchozí hodnotu 0.
 
-*počet* \
+*počet*\
 Počet znaků, které mají být zkopírovány, pokud jsou k dispozici.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4714,7 +4714,7 @@ Heterological paradoxes are persistent.
 which is the entire original string.
 ```
 
-## <a name="swap"></a>basic_string:: swap
+## <a name="swap"></a>  basic_string::swap
 
 Výměna obsahu dvou řetězců.
 
@@ -4833,5 +4833,5 @@ The character ch2 is: H.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<string >](../standard-library/string.md) \
+[\<> řetězce](../standard-library/string.md)\
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

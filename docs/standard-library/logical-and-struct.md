@@ -7,16 +7,16 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 86b780c71a0b0265cbd0c8829fb5aea70f0fa42e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243276"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821613"
 ---
-# <a name="logicaland-struct"></a>logical_and – struktura
+# <a name="logical_and-struct"></a>logical_and – struktura
 
-Předdefinovaný objekt funkce, který provádí operace logického spojení (`operator&&`) na svých argumentů.
+Předdefinovaný objekt funkce, který provádí operaci logického spojení (`operator&&`) na svých argumentech.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,22 +39,22 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U*\
-Libovolný typ, který podporuje `operator&&` , která přebírá operandů zadaný nebo odvozené typy.
+*Type*, *T*, *U*\
+Jakýkoli typ, který podporuje `operator&&`, které přebírají operandy zadaných nebo odvozených typů.
 
-*doleva*\
-Levý operand operace logického spojení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*Levý*\
+Levý operand operace logického spojení. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *T*.
 
-*doprava*\
-Pravý operand operace logického spojení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*Pravé*\
+Pravý operand operace logického spojení. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left && Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator&&`.
+Výsledek `Left && Right`. Specializovaná šablona provede dokonalé přesměrování výsledku, který má typ vrácený `operator&&`.
 
 ## <a name="remarks"></a>Poznámky
 
-Pro typy definované uživatelem neexistuje žádné krátký cyklus vyhodnocení operand. Oba argumenty jsou vyhodnocovány pomocí `operator&&`.
+Pro uživatelsky definované typy neexistuje žádné krátkodobé okruhy vyhodnocení operandů. Oba argumenty jsou vyhodnocovány `operator&&`.
 
 ## <a name="example"></a>Příklad
 
@@ -112,7 +112,7 @@ int main( )
    // of d1 & d2, use the logical_and function object
    transform( d1.begin( ), d1.end( ), d2.begin( ),
       d3.begin( ), logical_and<bool>( ) );
-   cout << "The deque which is the conjuction of d1 & d2 is:\n d3 = ( " ;
+   cout << "The deque which is the conjunction of d1 & d2 is:\n d3 = ( " ;
    for ( iter3 = d3.begin( ) ; iter3 != d3.end( ) ; iter3++ )
       cout << *iter3 << " ";
    cout << ")" << endl;
@@ -124,6 +124,6 @@ Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
-The deque which is the conjuction of d1 & d2 is:
+The deque which is the conjunction of d1 & d2 is:
 d3 = ( true false true true false false false )
 ```

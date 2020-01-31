@@ -1,6 +1,7 @@
 ---
 title: extern (C++)
-ms.date: 04/12/2018
+description: Průvodce C++ jazykovým externovým klíčovým slovem
+ms.date: 01/28/2020
 f1_keywords:
 - extern
 - extern_CPP
@@ -9,27 +10,35 @@ helpviewer_keywords:
 - declarations, external
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
-ms.openlocfilehash: d42a32202f7fa67751ea36757c13b2c6af4953b2
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- extern
+- const
+- constexpr
+- permissive
+ms.openlocfilehash: 422b6960802c59f1c45e0c22a4a85988c808a5b3
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301532"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821763"
 ---
-# <a name="extern-c"></a>extern (C++)
+# <a name="opno-locextern-c"></a>extern (C++)
 
-Klíčové slovo **extern** se používá pro deklaraci globální proměnné, funkce nebo šablony k určení toho, že název tohoto objektu má *vnější propojení*. Informace o propojení a o tom, proč použití globálních proměnných není doporučeno, naleznete v části [jednotky překladu a propojení](program-and-linkage-cpp.md).
+Klíčové slovo **extern** lze použít pro globální proměnnou, funkci nebo deklaraci šablony. Určuje, že má symbol *vnější propojení*. Informace o propojení a o tom, proč použití globálních proměnných není doporučeno, naleznete v části [jednotky překladu a propojení](program-and-linkage-cpp.md).
 
 Klíčové slovo **extern** má v závislosti na kontextu čtyři významy:
 
-1. v deklaraci globální proměnné, která není const, **externí** určuje, že proměnná nebo funkce je definována v jiné jednotce překladu. **Extern** musí být použit ve všech souborech s výjimkou toho, kde je proměnná definována.
-1. v deklaraci proměnné const určuje, že proměnná má vnější propojení. **Extern** musí být použit pro všechny deklarace ve všech souborech. (Globální proměnné const mají ve výchozím nastavení vnitřní propojení.)
-1. **extern "C"** určuje, že funkce je definována jinde a používá konvenci volání jazyka C. Modifikátor extern "C" může být použit také pro více deklarací funkcí v bloku.
-1. v deklaraci šablony určuje, že šablona již byla vytvořena jinde. Toto je optimalizace, která instruuje kompilátor, že může znovu použít jiné vytváření instancí místo vytvoření nové v aktuálním umístění. Další informace o tomto použití typu **extern**naleznete v tématu [Templates](templates-cpp.md).
+- V deklaraci globální proměnné bez **const** **extern** určuje, že proměnná nebo funkce je definována v jiné jednotce překladu. **extern** musí být použito ve všech souborech s výjimkou toho, kde je proměnná definována.
 
-## <a name="extern-linkage-for-non-const-globals"></a>externí propojení pro globální a nekonstantní
+- V deklaraci proměnné **const** určuje, zda má proměnná vnější propojení. **extern** musí být použita na všechny deklarace ve všech souborech. (Globální proměnné **const** mají ve výchozím nastavení interní propojení.)
 
-Když linker vidí **extern** před deklarací globální proměnné, vyhledá definici v jiné jednotce překladu. Deklarace nekonstantních proměnných v globálním oboru jsou ve výchozím nastavení externí; použijte pouze **extern** na deklarace, které neposkytují definici.
+- **extern "C"** určuje, že funkce je definována jinde a používá konvenci volání jazyka C. Modifikátor extern "C" může být použit také pro více deklarací funkcí v bloku.
+
+- V deklaraci šablony **extern** určuje, že šablona již byla vytvořena jinde. **extern** instruuje kompilátor, může znovu použít jiné vytváření instancí namísto vytvoření nové v aktuálním umístění. Další informace o tomto použití **extern** naleznete v tématu [explicitní vytváření instancí](explicit-instantiation.md).
+
+## <a name="opno-locextern-linkage-for-non-opno-locconst-globals"></a>extern propojení pro neconstou globální obsah
+
+Když linker uvidí **extern** před deklarací globální proměnné, vyhledá definici v jiné jednotce překladu. Deklarace proměnných, které nejsou **const** v globálním oboru, jsou ve výchozím nastavení externí. U deklarací, které neposkytují definici, použijte pouze **extern** .
 
 ```cpp
 //fileA.cpp
@@ -46,9 +55,9 @@ int i = 43; // LNK2005! 'i' already has a definition.
 extern int i = 43; // same error (extern is ignored on definitions)
 ```
 
-## <a name="extern-linkage-for-const-globals"></a>externí propojení pro konstantní Globals
+## <a name="opno-locextern-linkage-for-opno-locconst-globals"></a>extern propojení pro const Globals
 
-**Konstantní** globální proměnná má ve výchozím nastavení vnitřní propojení. Pokud chcete, aby měla proměnná vnější propojení, použijte klíčové slovo **extern** na definici a také na všechny ostatní deklarace v jiných souborech:
+Globální proměnná **const** má ve výchozím nastavení vnitřní propojení. Chcete-li, aby měla proměnná vnější propojení, použijte klíčové slovo **extern** pro definici a pro všechny ostatní deklarace v jiných souborech:
 
 ```cpp
 //fileA.cpp
@@ -58,25 +67,25 @@ extern const int i = 42; // extern const definition
 extern const int i;  // declaration only. same as i in FileA
 ```
 
-## <a name="extern-constexpr-linkage"></a>externí propojení constexpr
+## <a name="opno-locextern-opno-locconstexpr-linkage"></a>propojení extern constexpr
 
-V aplikaci Visual Studio 2017 verze 15,3 a dřívější kompilátor vždy přiřadil vnitřní propojení proměnné constexpr i v případě, že proměnná byla označena jako extern. V aplikaci Visual Studio 2017 verze 15,5 nový přepínač kompilátoru ([/Zc: externConstexpr](../build/reference/zc-externconstexpr.md)) umožňuje správné chování vyhovující standardům. Nakonec se stane výchozí. Možnost/Permissive-nepovoluje/Zc: externConstexpr.
+V aplikaci Visual Studio 2017 verze 15,3 a starší má kompilátor vždy **constexpr** interní propojení proměnné, a to i v případě, že proměnná byla označena **extern** . V aplikaci Visual Studio 2017 verze 15,5 a novější umožňuje přepínač [/Zc: externConstexpr](../build/reference/zc-externconstexpr.md) správné chování vyhovující standardům. Nakonec se stane výchozí možností. Možnost [/permissive-](../build/reference/permissive-standards-conformance.md) nepovoluje **/Zc: externConstexpr**.
 
 ```cpp
 extern constexpr int x = 10; //error LNK2005: "int const x" already defined
 ```
 
-Pokud hlavičkový soubor obsahuje proměnnou deklarovanou extern constexpr, musí být označena jako **__declspec (selectany)** , aby správně obsahovala své duplicitní deklarace:
+Pokud hlavičkový soubor obsahuje proměnnou deklarovanou **extern** **constexpr** , musí být označena `__declspec(selectany)`, aby správně měla své duplicitní deklarace v kombinaci:
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
 ```
 
-## <a name="extern-c-and-extern-c-function-declarations"></a>extern "C" a extern "C++" deklarace funkcí
+## <a name="opno-locextern-c-and-opno-locextern-c-function-declarations"></a>extern "C" a extern "C++" deklarace funkcí
 
-V C++, při použití s řetězcem **extern** určuje, že jsou použity konvence propojení jiného jazyka pro deklarátor. Funkce a data jazyka C mohou být zpřístupněny pouze v případě, že byly dříve deklarovány s propojením jazyka C. Musí však být definovány v odděleně kompilované jednotce překladu.
+V C++, pokud se používá s řetězcem, **extern** určuje, zda jsou používány konvence propojení jiného jazyka pro deklarátor (y). K funkcím a datům jazyka c lze přistupovat pouze v případě, že jsou již dříve deklarovány jako propojení jazyka C. Musí však být definovány v odděleně kompilované jednotce překladu.
 
-Microsoft C++ podporuje řetězce **"C"** a **C++""** v poli *řetězcové literály* . Všechny standardní zahrnuté soubory používají syntaxi **extern** "C", aby bylo možné používat funkce běhové knihovny v C++ programech.
+Microsoft C++ podporuje řetězce **"C"** a **C++""** v poli *řetězcové literály* . Všechny standardní vložené soubory používají syntaxi **extern "C"** , aby bylo možné používat funkce knihovny run-time v C++ programech.
 
 ## <a name="example"></a>Příklad
 
@@ -117,7 +126,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
-Pokud funkce obsahuje více specifikací propojení, musejí tato propojení souhlasit. U deklarace funkcí, které mají propojení jazyka C i C++, se jedná o chybu. Pokud se navíc v jednom programu vyskytují dvě deklarace funkce – jedna se specifikací propojení a jedna bez ní – musí být deklarace se specifikací propojení jako první. Jakékoli nadbytečné deklarace funkcí, které již specifikaci propojení obsahují, obdrží propojení zadané v první deklaraci. Příklad:
+Pokud má funkce více než jednu specifikaci propojení, musí souhlasit. Jedná se o chybu pro deklarování funkcí, které mají obojí C++ C i propojení. Pokud se navíc v jednom programu vyskytují dvě deklarace funkce – jedna se specifikací propojení a jedna bez ní – musí být deklarace se specifikací propojení jako první. Jakékoli nadbytečné deklarace funkcí, které již specifikaci propojení obsahují, obdrží propojení zadané v první deklaraci. Příklad:
 
 ```cpp
 extern "C" int CFunc1();
@@ -134,8 +143,8 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 
 ## <a name="see-also"></a>Viz také:
 
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
-[Jednotky překladu a propojení](program-and-linkage-cpp.md)<br/>
-[extern – specifikátor třídy úložiště v jazyce C](../c-language/extern-storage-class-specifier.md)<br/>
-[Chování identifikátorů v jazyce C](../c-language/behavior-of-identifiers.md)<br/>
+\ [klíčových slov](../cpp/keywords-cpp.md)
+[Jednotky překladu a propojení](program-and-linkage-cpp.md)\
+[extern specifikátoru třídy úložiště v jazyce C](../c-language/extern-storage-class-specifier.md)\
+[Chování identifikátorů v jazyce C](../c-language/behavior-of-identifiers.md)\
 [Propojení v jazyce C](../c-language/linkage.md)

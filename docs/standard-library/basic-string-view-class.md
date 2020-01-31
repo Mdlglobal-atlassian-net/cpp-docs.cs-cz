@@ -119,16 +119,16 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: e5d89eeb9f663c8699ddad469a8189008671ed3b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7bd6d02304e86b50d33bdaa3e07c95b08da31f7a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447858"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821893"
 ---
-# <a name="basicstringview-class"></a>basic_string_view – třída
+# <a name="basic_string_view-class"></a>basic_string_view – třída
 
-Šablona `basic_string_view<charT>` třídy byla přidána do c++ 17, aby sloužila jako bezpečný a účinný způsob, jak přijmout funkce pro příjem různých nesouvisejících řetězcových typů bez funkce, která by měla být založena na těchto typech. Třída obsahuje nevlastnící ukazatel na souvislou sekvenci znakových dat a délku, která určuje počet znaků v sekvenci. Bez ohledu na to, jestli je sekvence zakončená hodnotou null, se neprovádí žádný předpoklad.
+Šablona třídy `basic_string_view<charT>` byla přidána do C++ 17, aby sloužila jako bezpečný a účinný způsob, jak funkce přijímat různé nesouvisející typy řetězců bez funkce, která by měla být založena na těchto typech. Třída obsahuje nevlastnící ukazatel na souvislou sekvenci znakových dat a délku, která určuje počet znaků v sekvenci. Bez ohledu na to, jestli je sekvence zakončená hodnotou null, se neprovádí žádný předpoklad.
 
 Standardní knihovna definuje několik specializací na základě typu prvků:
 
@@ -139,11 +139,11 @@ Standardní knihovna definuje několik specializací na základě typu prvků:
 
 V tomto dokumentu pojem "string_view" odkazuje obecně na některý z těchto definice typedef.
 
-String_view popisuje minimální společné rozhraní nezbytné pro čtení řetězcových dat. Poskytuje přístup k podkladovým datům const; neprovede žádné kopie (s výjimkou `copy` funkce). Data mohou nebo nemusí obsahovat hodnoty null (' \ 0 ') na libovolné pozici. String_view nemá žádnou kontrolu nad životností objektu. Je zodpovědností volajícího, aby se zajistilo, že základní řetězcová data jsou platná.
+String_view popisuje minimální společné rozhraní nezbytné pro čtení řetězcových dat. Poskytuje přístup k podkladovým datům const; neprovede žádné kopie (s výjimkou funkce `copy`). Data mohou nebo nemusí obsahovat hodnoty null (' \ 0 ') na libovolné pozici. String_view nemá žádnou kontrolu nad životností objektu. Je zodpovědností volajícího, aby se zajistilo, že základní řetězcová data jsou platná.
 
-Funkce, která přijímá parametr typu string_view, může být vytvořena pro práci s libovolným typem podobným řetězci, bez toho, aby se funkce nastavila na šablonu nebo omezila funkce na určitou podmnožinu typů řetězců. Jediným požadavkem je, že implicitní převod existuje z typu řetězce na string_view. Všechny standardní řetězcové typy jsou implicitně převoditelné na string_view, který obsahuje stejný typ elementu. Jinými slovy, `std::string` je převoditelné `string_view` na, ale ne na `wstring_view`.
+Funkce, která přijímá parametr typu string_view, může být vytvořena pro práci s jakýmkoli řetězcovým typem, bez toho, aby se funkce nastavila na šablonu nebo omezila funkce na určitou podmnožinu typů řetězců. Jediným požadavkem je, že implicitní převod existuje z typu řetězce na string_view. Všechny standardní řetězcové typy jsou implicitně převoditelné na string_view, které obsahují stejný typ elementu. Jinými slovy `std::string` je převoditelné na `string_view`, ale ne na `wstring_view`.
 
-Následující příklad ukazuje funkci `f` , která není šablonou, která přijímá parametr typu. `wstring_view` Může být volána s argumenty typu `std::wstring`, `wchar_t*`a `winrt::hstring`.
+Následující příklad ukazuje funkci, která není šablonou, `f`, která přebírá parametr typu `wstring_view`. Může být volána s argumenty typu `std::wstring`, `wchar_t*`a `winrt::hstring`.
 
 ```cpp
 // compile with: /std:c++17
@@ -184,20 +184,20 @@ Typ znaků, které jsou uloženy v string_view. C++ Standardní knihovna poskytu
 - [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) pro **char16_t**
 - [u32string_view](../standard-library/string-view-typedefs.md#u32string_view) pro **char32_t**.
 
-*Traits*\
-Výchozí hodnota je [char_traits](char-traits-struct.md)<*CharType*>.
+\ *vlastností*
+Výchozí hodnota [char_traits](char-traits-struct.md)<*CharType*>.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[basic_string_view](#basic_string_view)|Vytvoří string_view, který je prázdný nebo jinak odkazuje na všechny nebo jen některé jiné datové objekty řetězce nebo na pole znaků ve stylu jazyka C.|
+|[basic_string_view](#basic_string_view)|Vytvoří string_view, která je prázdná nebo jinak odkazuje na všechny nebo jen některé jiné datové objekty řetězce nebo na pole znaků ve stylu jazyka C.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|**const_iterator**|Iterátor náhodného přístupu, který může  číst elementy const.|
+|**const_iterator**|Iterátor náhodného přístupu, který může číst elementy **const** .|
 |**const_pointer**|`using const_pointer = const value_type*;`|
 |**const_reference**|`using const_reference = const value_type&;`|
 |**const_reverse_iterator**|`using const_reverse_iterator = std::reverse_iterator<const_iterator>;`|
@@ -215,8 +215,8 @@ Výchozí hodnota je [char_traits](char-traits-struct.md)<*CharType*>.
 
 |Operátor|Popis|
 |-|-|
-|[operátor =](#op_eq)|Přiřadí objekt řetězce string_view nebo převoditelné na jiný string_view.|
-|[podnikatel\[\]](#op_at)|Vrátí prvek na zadaném indexu.|
+|[operátor =](#op_eq)|Přiřadí string_view nebo převoditelné objekty řetězce k jinému string_view.|
+|[operátor\[\]](#op_at)|Vrátí prvek na zadaném indexu.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -236,21 +236,21 @@ Výchozí hodnota je [char_traits](char-traits-struct.md)<*CharType*>.
 |[empty](#empty)|Testuje, zda string_view obsahuje znaky.|
 |[účelu](#end)|Stejné jako [cend](#cend).|
 |[najít](#find)|Vyhledá v směrem nahoru směr prvního výskytu podřetězce, který odpovídá zadané posloupnosti znaků.|
-|[find_first_not_of](#find_first_not_of)|Vyhledá první znak, který není žádným prvkem zadaného objektu string_view nebo konvertibilní řetězec.|
-|[find_first_of](#find_first_of)|Vyhledá první znak, který odpovídá jakémukoli prvku zadaného objektu string_view nebo typu převoditelné řetězce.|
-|[find_last_not_of](#find_last_not_of)|Vyhledá poslední znak, který není žádným prvkem zadaného objektu string_view nebo typu konvertibilní řetězec.|
-|[find_last_of](#find_last_of)|Vyhledá poslední znak, který je prvkem zadaného objektu string_view nebo konvertibilní řetězec.|
+|[find_first_not_of](#find_first_not_of)|Vyhledá první znak, který není libovolný prvek zadaného string_view nebo převoditelné řetězcové objekty.|
+|[find_first_of](#find_first_of)|Vyhledá první znak, který odpovídá jakémukoli prvku zadaného string_view nebo objektu s převoditelné řetězce.|
+|[find_last_not_of](#find_last_not_of)|Vyhledá poslední znak, který není libovolný prvek zadaného string_view nebo převoditelné řetězcové objekty.|
+|[find_last_of](#find_last_of)|Vyhledá poslední znak, který je prvkem zadaného string_view nebo převoditelné řetězcové objekty.|
 |[dopředu](#front)|Vrátí const_reference k prvnímu prvku.|
-|[length](#length)|Vrátí aktuální počet prvků.|
+|[Délka](#length)|Vrátí aktuální počet prvků.|
 |[max_size](#max_size)|Vrátí maximální počet znaků, které může string_view obsahovat.|
-|[rbegin](#rbegin)|Vrátí konstantní iterátor, který adresuje první prvek v obráceném string_viewě.|
+|[rbegin](#rbegin)|Vrátí konstantní iterátor, který adresuje první prvek v obráceném string_view.|
 |[remove_prefix](#remove_prefix)|Přesune ukazatel směrem nahoru o zadaný počet prvků.|
 |[remove_suffix](#remove_suffix)|Zmenší velikost zobrazení o zadaný počet prvků počínaje od zpátky.|
-|[rend](#rend)|Vrátí konstantní iterátor, který odkazuje na jeden za poslední prvek v obráceném string_viewě.|
+|[rend](#rend)|Vrátí konstantní iterátor, který odkazuje na jeden za poslední prvek v obráceném string_view.|
 |[rfind](#rfind)|Vyhledá string_view v obráceném pořadí pro první výskyt podřetězce, který odpovídá zadané posloupnosti znaků.|
 |[hodnota](#size)|Vrátí aktuální počet prvků.|
 |[substr –](#substr)|Vrátí podřetězec zadané délky začínající zadaným indexem.|
-|[swap](#swap)|Výměna obsahu dvou string_views|
+|[swap](#swap)|Výměna obsahu dvou string_views.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -260,7 +260,7 @@ Pokud je funkce požádána o vygenerování sekvence delší než [max_size](#m
 
 [std: c++ 17](../build/reference/std-specify-language-standard-version.md) nebo novější
 
-**Hlavička:** \<string_view >
+**Záhlaví:** \<string_view >
 
 **Obor názvů:** std
 
@@ -274,20 +274,20 @@ constexpr const_reference at(size_type offset) const;
 
 ### <a name="parameters"></a>Parametry
 
-*polohy*\
+*posunutí*\
 Index elementu, na který se má odkazovat
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const_reference na znak na pozici určené indexem parametru.
+Const_reference k znaku na pozici určené indexem parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-První prvek má index nula a následující prvky jsou následně indexovány na základě kladného počtu celých čísel, aby string_view délky *n* měly *n*-tý element indexovaný číslem *n-* 1. **v** vyvolá výjimku pro neplatné indexy, na rozdíl od operátoru [\[\]](#op_at). 
+První prvek má index nula a následující prvky jsou následně indexovány po kladné celé číslo, takže string_view délky *n* má *n*-tý element indexovaný číslem *n-* 1. **v** vyvolá výjimku pro neplatné indexy, na rozdíl od [operátoru\[\]](#op_at). 
 
-Obecně doporučujeme, aby **v** pro sekvence `std::vector` jako a string_view nikdy neměly být používány. Neplatný index předaný sekvenci je logická chyba, která by měla být zjištěna a opravena během vývoje. Pokud program není naprosto jistý, že jeho indexy jsou platné, měli byste je otestovat, nevolat v () a spoléhat na výjimky pro obranu před nepozorný programováním.
+Obecně doporučujeme, aby **v** případě sekvencí, jako je například `std::vector` a string_view, neměly být nikdy použity. Neplatný index předaný sekvenci je logická chyba, která by měla být zjištěna a opravena během vývoje. Pokud program není naprosto jistý, že jeho indexy jsou platné, měli byste je otestovat, nevolat v () a spoléhat na výjimky pro obranu před nepozorný programováním.
 
-Další informace naleznete v tématu [basic_string_view:: operator\[ \] ](#op_at) .
+Další informace naleznete v tématu [basic_string_view:: operator\[\]](#op_at) .
 
 ### <a name="example"></a>Příklad
 
@@ -316,7 +316,7 @@ constexpr const_reference back() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const_reference na poslední prvek v string_view.
+Const_reference k poslednímu prvku v string_view.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -326,7 +326,7 @@ Mějte na paměti, že po změně string_view, například voláním `remove_suf
 
 ### <a name="example"></a>Příklad
 
-String_view, která je vytvořena pomocí řetězcového literálu jazyka C, nezahrnuje ukončující hodnotu null, takže v následujícím `back` příkladu vrátí hodnotu ' p ' a ne ' \ 0 '.
+String_view, která je vytvořena pomocí řetězcového literálu jazyka C, nezahrnuje ukončující hodnotu null, takže v následujícím příkladu `back` vrátí ' p ' a ne ' \ 0 '.
 
 ```cpp
 char c[] = "Help"; // char[5]
@@ -342,9 +342,9 @@ string_view e = "embedded\0nulls"sv;
 cout << boolalpha << (e.back() == 's'); // true
 ```
 
-## <a name="basic_string_view"></a>basic_string_view::basic_string_view
+## <a name="basic_string_view"></a>basic_string_view:: basic_string_view
 
-Vytvoří objekt string_view.
+Vytvoří string_view.
 
 ```cpp
 constexpr basic_string_view() noexcept;
@@ -355,15 +355,15 @@ constexpr basic_string_view(const charT* str, size_type len);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
+\ *str*
 Ukazatel na hodnoty znaků.
 
-*funkce*\
+*délka*\
 Počet znaků, které mají být zahrnuty do zobrazení.
 
 ## <a name="remarks"></a>Poznámky
 
-Konstruktory s parametrem charT * předpokládají, že vstup je zakončený hodnotou null, ale ukončující hodnota null není obsažena v string_view.
+Konstruktory s parametrem charT * předpokládají, že vstup je zakončený hodnotou null, ale ukončovací hodnota null není zahrnuta v string_view.
 
 Můžete také vytvořit string_view s literálem. Viz [Operator "" sv](string-view-operators.md#op_sv).
 
@@ -376,7 +376,7 @@ constexpr const_iterator begin() const noexcept;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
-Vrátí const_iterator adresující první prvek.
+Vrací const_iterator adresování prvního prvku.
 
 ## <a name="cbegin"></a>basic_string_view:: cbegin
 
@@ -388,7 +388,7 @@ constexpr const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor  náhodného přístupu const, který odkazuje na první prvek rozsahu nebo umístění hned za konec prázdného rozsahu (pro prázdný rozsah `cbegin() == cend()`).
+Iterátor **náhodného** přístupu, který odkazuje na první prvek rozsahu nebo umístění hned za konec prázdného rozsahu (pro prázdný rozsah `cbegin() == cend()`).
 
 ## <a name="cend"></a>basic_string_view:: cend
 
@@ -400,7 +400,7 @@ constexpr const_iterator cend() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor  náhodného přístupu const, který odkazuje hned za konec rozsahu.
+Iterátor náhodného přístupu **const** , který odkazuje hned za konec rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -408,7 +408,7 @@ Hodnota vrácená `cend` by neměla být zpětně odkazovaná.
 
 ## <a name="compare"></a>basic_string_view:: Compare
 
-Provede porovnání rozlišující malá a velká písmena se zadaným string_view (nebo převoditelné řetězcové typy) k určení, zda jsou dva objekty stejné nebo pokud je jedna z nich lexikograficky menší než druhá. [Operátory > string_viewpoužívajítutočlenskoufunkcikporovnání.\<](string-view-operators.md)
+Provede porovnání rozlišující malá a velká písmena se zadaným string_view (nebo typem konvertibilní řetězec) k určení, zda jsou dva objekty stejné nebo pokud je jedna lexikograficky menší než druhá. [Operátory\<string_view >](string-view-operators.md) používají tuto členskou funkci k provádění porovnání.
 
 ```cpp
 constexpr int compare(basic_string_view strv) const noexcept;
@@ -422,30 +422,30 @@ constexpr int compare(size_type pos, size_type num, const charT* ptr, size_type 
 ### <a name="parameters"></a>Parametry
 
 *strv*\
-String_view, který se má porovnat s tímto string_view.
+String_view, které mají být porovnány s tímto string_view.
 
-*POS*\
-Index tohoto string_view, na kterém začíná porovnávání.
+\ *POS*
+Index tohoto string_view, ve kterém je zahájeno porovnání.
 
 *počet*\
-Maximální počet znaků z tohoto string_viewu, které se mají porovnat.
+Maximální počet znaků z této string_view, které se mají porovnat.
 
 *num2*\
 Maximální počet znaků z *Strv* , které se mají porovnat.
 
-*polohy*\
+*posunutí*\
 Index *Strv* , na kterém začíná porovnávání.
 
-*střed*\
+\ *PTR*
 Řetězec jazyka C, který má být porovnán s tímto string_view.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Záporná hodnota, pokud je tento string_view menší než *Strv* nebo *PTR*; nula, pokud jsou dvě sekvence znaků stejné; nebo kladnou hodnotu, pokud je tento string_view větší než *Strv* nebo *PTR*.
+Záporná hodnota, pokud je tato string_view menší než *Strv* nebo *PTR*; nula, pokud jsou dvě sekvence znaků stejné; nebo kladnou hodnotu, pokud je tato string_view větší než *Strv* nebo *PTR*.
 
 ### <a name="remarks"></a>Poznámky
 
-`compare` Členské funkce provádějí porovnání rozlišující velká a malá písmena každé sekvence znaků nebo jejich části. 
+Členské funkce `compare` provádějí porovnání rozlišovat velká a malá písmena obou sekvencí znaků. 
 
 ### <a name="example"></a>Příklad
 
@@ -557,7 +557,7 @@ The 3 characters from position 1 of sv_I are equal to the first 3 characters of 
 
 ## <a name="copy"></a>basic_string_view:: Copy
 
-Kopíruje maximálně zadaný počet znaků z indexované pozice ve zdrojovém string_view do cílového pole znaků. Doporučujeme místo toho použít funkci Secure Function [basic_string_view:: _Copy_s](#_copy_s) .
+Kopíruje maximálně zadaný počet znaků z indexované pozice ve zdrojovém string_view do cílového pole znaků. Doporučujeme místo toho použít funkci Secure [basic_string_view:: _Copy_s](#_copy_s) .
 
 ```cpp
 size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
@@ -565,14 +565,14 @@ size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+\ *PTR*
 Cílové pole znaků, do kterého mají být kopírovány elementy.
 
-*výpočtu*\
+*počet*\
 Počet znaků, které mají být zkopírovány nejvíce ze zdrojového string_view.
 
-*polohy*\
-Počáteční pozice ve zdrojovém string_view, ze které se mají vytvořit kopie.
+*posunutí*\
+Počáteční pozice ve zdrojovém string_view, ze které mají být kopie provedeny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -582,7 +582,7 @@ Počet skutečně zkopírovaných znaků.
 
 Znak null není připojen ke konci kopie.
 
-## <a name="_copy_s"></a>basic_string_view::_Copy_s
+## <a name="_copy_s"></a>basic_string_view:: _Copy_s
 
 Zabezpečená funkce kopírování CRT, která se má použít místo [kopírování](#copy)
 
@@ -596,7 +596,7 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*propojovací*\
+*cílový*\
 Cílové pole znaků, do kterého mají být kopírovány elementy.
 
 *dest_size*\
@@ -639,11 +639,11 @@ constexpr const_reverse_iterator crend() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí const_reverse_iterator, který se zabývá jednou za koncem reverzního string_view.
+Vrátí const_reverse_iterator, který adresuje po konci reverzního string_view.
 
 ## <a name="data"></a>basic_string_view::d ATA
 
-Vrací nezpracovaný nevlastnící ukazatel na posloupnost konstantních znaků objektu, který byl použit k vytvoření string_view.
+Vrací nezpracovaný nevlastnící ukazatel na posloupnost znaků const objektu, který byl použit k vytvoření string_view.
 
 ```cpp
 constexpr value_type *data() const noexcept;
@@ -657,7 +657,7 @@ Ukazatel na konstantu na první prvek sekvence znaků.
 
 Ukazatel nemůže měnit znaky.
 
-Sekvence string_view znaků není nutně zakončená hodnotou null. Návratový typ pro `data` není platný řetězec jazyka C, protože není připojen žádný znak null. Znak null ' \ 0 ' nemá žádný zvláštní význam v objektu typu string_view a může být součástí objektu string_view stejně jako jakýkoli jiný znak.
+Sekvence string_viewch znaků není nutně zakončená hodnotou null. Návratový typ pro `data` není platný řetězec jazyka C, protože není připojen žádný znak null. Znak null ' \ 0 ' nemá žádný zvláštní význam v objektu typu string_view a může být součástí objektu string_view stejným způsobem jako jakýkoli jiný znak.
 
 ## <a name="empty"></a>basic_string_view:: Empty
 
@@ -689,11 +689,11 @@ Vrátí const_iterator s náhodným přístupem, který odkazuje na jeden za pos
 
 ### <a name="remarks"></a>Poznámky
 
-`end`slouží k otestování, zda const_iterator dosáhl konce jeho string_view. Hodnota vrácená `end` by neměla být zpětně odkazovaná.
+`end` slouží k otestování, zda const_iterator dosáhl konce jeho string_view. Hodnota vrácená `end` by neměla být zpětně odkazovaná.
 
 ## <a name="find"></a>basic_string_view:: Find
 
-Vyhledá string_view ve směru směrem nahoru pro první výskyt znaku nebo podřetězce, který odpovídá zadané posloupnosti znaků.
+Vyhledá string_view v směrem nahoru pro první výskyt znaku nebo podřetězce, který odpovídá zadané posloupnosti znaků.
 
 ```cpp
 constexpr size_type find(basic_string_view str, size_type offset = 0) const noexcept;
@@ -704,28 +704,28 @@ constexpr size_type find(const charT* ptr, size_type offset = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-String_view, pro který má členská funkce Hledat.
+\ *str*
+String_view, pro kterou má členská funkce Hledat
 
 *chVal*\
 Hodnota znaku, kterou má členská funkce vyhledat.
 
-*polohy*\
+*posunutí*\
 Index, na kterém má začít hledání.
 
-*střed*\
+\ *PTR*
 Řetězec jazyka C, pro který má členská funkce Hledat.
 
-*výpočtu*\
+*počet*\
 Počet znaků v *PTR*, počítáno od prvního znaku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Index prvního znaku nalezeného podřetězce, v opačném případě `npos`.
 
-## <a name="find_first_not_of"></a>basic_string_view::find_first_not_of
+## <a name="find_first_not_of"></a>basic_string_view:: find_first_not_of
 
-Vyhledá první znak, který není prvkem zadaného objektu string_view nebo převoditelné řetězcové objekty.
+Vyhledá první znak, který není prvkem zadaného string_view nebo převoditelné řetězcové objekty.
 
 ```cpp
 constexpr size_type find_first_not_of(basic_string_view str, size_type offset = 0) const noexcept;
@@ -736,26 +736,26 @@ constexpr size_type find_first_not_of(const charT* ptr, size_type offset = 0) co
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-String_view, pro který má členská funkce Hledat.
+\ *str*
+String_view, pro kterou má členská funkce Hledat
 
 *chVal*\
 Hodnota znaku, kterou má členská funkce vyhledat.
 
-*polohy*\
+*posunutí*\
 Index, na kterém má začít hledání.
 
-*střed*\
+\ *PTR*
 Řetězec jazyka C, pro který má členská funkce Hledat.
 
-*výpočtu*\
+*počet*\
 Počet znaků, který je počítán od prvního znaku v řetězci jazyka C, pro který má členská funkce Hledat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Index prvního znaku nalezeného podřetězce, v opačném případě `npos`.
 
-## <a name="find_first_of"></a>basic_string_view::find_first_of
+## <a name="find_first_of"></a>basic_string_view:: find_first_of
 
 Vyhledá první znak, který odpovídá jakémukoli prvku zadaného string_view.
 
@@ -771,17 +771,17 @@ constexpr size_type find_first_of(const charT* str, size_type offset = 0) const;
 *chVal*\
 Hodnota znaku, kterou má členská funkce vyhledat.
 
-*polohy*\
+*posunutí*\
 Index, na kterém má začít hledání.
 
-*střed*\
+\ *PTR*
 Řetězec jazyka C, pro který má členská funkce Hledat.
 
-*výpočtu*\
+*počet*\
 Počet znaků, který je počítán od prvního znaku v řetězci jazyka C, pro který má členská funkce Hledat.
 
-*str*\
-String_view, pro který má členská funkce Hledat.
+\ *str*
+String_view, pro kterou má členská funkce Hledat
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -800,19 +800,19 @@ constexpr size_type find_last_not_of(const charT* ptr, size_type offset = npos) 
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-String_view, pro který má členská funkce Hledat.
+\ *str*
+String_view, pro kterou má členská funkce Hledat
 
 *chVal*\
 Hodnota znaku, kterou má členská funkce vyhledat.
 
-*polohy*\
+*posunutí*\
 Index, ve kterém má být hledání dokončeno.
 
-*střed*\
+\ *PTR*
 Řetězec jazyka C, pro který má členská funkce Hledat.
 
-*výpočtu*\
+*počet*\
 Počet znaků, který se počítá od prvního znaku v *PTR*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -832,24 +832,24 @@ constexpr size_type find_last_of(const charT* ptr, size_type offset = npos) cons
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-String_view, pro který má členská funkce Hledat.
+\ *str*
+String_view, pro kterou má členská funkce Hledat
 
 *chVal*\
 Hodnota znaku, kterou má členská funkce vyhledat.
 
-*polohy*\
+*posunutí*\
 Index, ve kterém má být hledání dokončeno.
 
-*střed*\
+\ *PTR*
 Řetězec jazyka C, pro který má členská funkce Hledat.
 
-*výpočtu*\
+*počet*\
 Počet znaků, který je počítán od prvního znaku v řetězci jazyka C, pro který má členská funkce Hledat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index posledního znaku podřetězce, který byl nalezen v případě úspěchu; v `npos`opačném případě.
+Index posledního znaku podřetězce, který byl nalezen v případě úspěchu; jinak `npos`.
 
 ## <a name="front"></a>basic_string_view:: front
 
@@ -861,7 +861,7 @@ constexpr const_reference front() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const_reference na první prvek.
+Const_reference k prvnímu prvku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -879,7 +879,7 @@ constexpr size_type length() const noexcept;
 
 Členská funkce je stejná jako [Velikost](#size).
 
-## <a name="max_size"></a>basic_string_view::max_size
+## <a name="max_size"></a>basic_string_view:: max_size
 
 Vrátí maximální počet znaků, které může string_view obsahovat.
 
@@ -897,7 +897,7 @@ Výjimka typu [length_error](../standard-library/length-error-class.md) je vyvol
 
 ## <a name="op_eq"></a>basic_string_view:: operator =
 
-Přiřadí objekt řetězce string_view nebo převoditelné na jiný string_view.
+Přiřadí string_view nebo převoditelné objekty řetězce k jinému string_view.
 
 ```cpp
 constexpr basic_string_view& operator=(const basic_string_view&) noexcept = default;
@@ -910,7 +910,7 @@ constexpr basic_string_view& operator=(const basic_string_view&) noexcept = defa
 ```
 ## <a name="op_at"></a>basic_string_view:: operator [] – operátor
 
-Poskytuje const_reference k znaku se zadaným indexem.
+Poskytuje const_reference ke znaku se zadaným indexem.
 
 ```cpp
 constexpr const_reference operator[](size_type offset) const;
@@ -918,28 +918,28 @@ constexpr const_reference operator[](size_type offset) const;
 
 ### <a name="parameters"></a>Parametry
 
-*polohy*\
+*posunutí*\
 Index elementu, na který se má odkazovat
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const_reference na znak na pozici určené indexem parametru.
+Const_reference k znaku na pozici určené indexem parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-První prvek má index nula a následující prvky jsou následně indexovány na základě kladného počtu celých čísel, aby string_view délky *n* měly *n*-tý element indexovaný číslem *n* -1.
+První prvek má index nula a následující prvky jsou následně indexovány po kladné celé číslo, takže string_view délky *n* má *n*-tý element indexovaný číslem *n* -1.
 
-`operator[]`je rychlejší než členská funkce [v](#at) pro poskytnutí přístupu pro čtení k prvkům string_view.
+`operator[]` je rychlejší než členská funkce [v](#at) pro poskytnutí přístupu pro čtení k prvkům string_view.
 
-`operator[]`nekontroluje, zda je index předaný jako argument platný. Do `operator[]` výsledků nedefinovaného chování byl předán neplatný index.
+`operator[]` nekontroluje, zda je index předaný jako argument platný. Neplatný index předaný do `operator[]` má za následek nedefinované chování.
 
 Vrácené odkazy mohou být zrušeny, pokud je podkladová data změněna nebo smazána vlastníkem objektu.
 
-Při kompilaci s [ \_úrovní\_ladění\_iterátoru](../standard-library/iterator-debug-level.md) nastavenou na 1 nebo 2 dojde k chybě za běhu, pokud se pokusíte o přístup k prvku mimo hranice string_view. Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Při kompilaci s [\_iterátor\_úroveň\_ladění](../standard-library/iterator-debug-level.md) nastavenou na 1 nebo 2, dojde k chybě za běhu, pokud se pokusíte o přístup k prvku mimo hranice string_view. Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
 
 ## <a name="rbegin"></a>basic_string_view:: rbegin
 
-Vrátí konstantní iterátor na první prvek v obráceném string_viewě.
+Vrátí konstantní iterátor na první prvek v obráceném string_view.
 
 ```cpp
 constexpr const_reverse_iterator rbegin() const noexcept;
@@ -947,13 +947,13 @@ constexpr const_reverse_iterator rbegin() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí iterátor náhodného přístupu k prvnímu prvku v obráceném string_viewě a adresování, co by bylo posledním prvkem v odpovídající nereverzní string_view.
+Vrátí iterátor náhodného přístupu k prvnímu prvku v obráceném string_view a adresování, co by bylo posledním prvkem v odpovídající nereverzní string_view.
 
 ### <a name="remarks"></a>Poznámky
 
-`rbegin`se používá s obráceným string_view stejně jako [Begin](#begin) se používá s string_view. `rbegin`lze použít k inicializaci iterace zpět.
+`rbegin` se používá s obráceným string_view stejně jako [Begin](#begin) se používá s string_view. `rbegin` lze použít k inicializaci iterace zpět.
 
-## <a name="remove_prefix"></a>basic_string_view::remove_prefix
+## <a name="remove_prefix"></a>basic_string_view:: remove_prefix
 
 Přesune ukazatel směrem nahoru o zadaný počet prvků.
 
@@ -963,9 +963,9 @@ constexpr void remove_prefix(size_type n);
 
 ### <a name="remarks"></a>Poznámky
 
-Ponechá podkladová data beze změny. Přesune ukazatel string_view směrem nahoru o n prvků a nastaví privátní `size` datový člen na velikost n.
+Ponechá podkladová data beze změny. Přesune ukazatel string_view směrem nahoru o n prvků a nastaví soukromý `size` datový člen na velikost-n.
 
-## <a name="remove_suffix"></a>basic_string_view::remove_suffix
+## <a name="remove_suffix"></a>basic_string_view:: remove_suffix
 
 Zmenší velikost zobrazení o zadaný počet prvků počínaje od zpátky.
 
@@ -975,11 +975,11 @@ constexpr void remove_suffix(size_type n);
 
 ### <a name="remarks"></a>Poznámky
 
-Ponechá podkladová data a ukazatel na ni beze změny. Nastaví soukromý `size` datový člen na velikost-n.
+Ponechá podkladová data a ukazatel na ni beze změny. Nastaví soukromý datový člen `size` na velikost-n.
 
 ## <a name="rend"></a>basic_string_view:: rend
 
-Vrátí konstantní iterátor, který odkazuje na jeden za poslední prvek v obráceném string_viewě.
+Vrátí konstantní iterátor, který odkazuje na jeden za poslední prvek v obráceném string_view.
 
 ```cpp
 constexpr reverse_iterator rend() const noexcept;
@@ -987,13 +987,13 @@ constexpr reverse_iterator rend() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor s náhodným přístupem const, který odkazuje na jeden za poslední prvek v obráceném string_viewě.
+Iterátor s náhodným přístupem const, který odkazuje na jeden za poslední prvek v obráceném string_view.
 
 ### <a name="remarks"></a>Poznámky
 
-`rend`se používá s obráceným string_view jako [End](#end) se používá s string_view. `rend`dá se použít k otestování, jestli reverzní iterátor dosáhl konce jeho string_view. Hodnota vrácená `rend` by neměla být zpětně odkazovaná.
+`rend` se používá s obráceným string_view stejně jako [End](#end) se používá s string_view. `rend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho string_view. Hodnota vrácená `rend` by neměla být zpětně odkazovaná.
 
-## <a name="rfind"></a>basic_string_view::rfind
+## <a name="rfind"></a>basic_string_view:: rfind
 
 Vyhledá string_view v obráceném pořadí pro podřetězec, který odpovídá zadané posloupnosti znaků.
 
@@ -1009,21 +1009,21 @@ constexpr size_type rfind(const charT* ptr, size_type offset = npos) const;
 *chVal*\
 Hodnota znaku, kterou má členská funkce vyhledat.
 
-*polohy*\
+*posunutí*\
 Index, na kterém má začít hledání.
 
-*střed*\
+\ *PTR*
 Řetězec jazyka C, pro který má členská funkce Hledat.
 
-*výpočtu*\
+*počet*\
 Počet znaků, který je počítán od prvního znaku v řetězci jazyka C, pro který má členská funkce Hledat.
 
-*str*\
-String_view, pro který má členská funkce Hledat.
+\ *str*
+String_view, pro kterou má členská funkce Hledat
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index prvního znaku podřetězce po úspěchu; v `npos`opačném případě.
+Index prvního znaku podřetězce po úspěchu; jinak `npos`.
 
 ## <a name="size"></a>basic_string_view:: size
 
@@ -1035,11 +1035,11 @@ constexpr size_type size() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Délka string_view.
+Délka string_view
 
 ### <a name="remarks"></a>Poznámky
 
-String_view může upravit jeho délku, například pomocí `remove_prefix` a. `remove_suffix` Vzhledem k tomu, že se nezmění základní řetězcová data, není velikost string_view nutně velikost podkladových dat.
+String_view může změnit jeho délku, například pomocí `remove_prefix` a `remove_suffix`. Vzhledem k tomu, že se nezmění základní řetězcová data, není velikost string_view nutně velikost podkladových dat.
 
 ## <a name="substr"></a>  basic_string_view::substr
 
@@ -1051,10 +1051,10 @@ constexpr basic_string_view substr(size_type offset = 0, size_type count = npos)
 
 ### <a name="parameters"></a>Parametry
 
-*polohy*\
+*posunutí*\
 Index, který vyhledává prvek na pozici, ze které je vytvořena kopie, s výchozí hodnotou 0.
 
-*výpočtu*\
+*počet*\
 Počet znaků, které mají být zahrnuty v podřetězci, pokud jsou k dispozici.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1071,8 +1071,8 @@ constexpr void swap(basic_string_view& sv) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*činí*\
-Zdroj string_view, jehož hodnoty ukazatele a velikosti se mají vyměňovat s cílovou string_view.
+*sv*\
+Zdroj string_view, jehož hodnoty ukazatele a velikosti mají být vyměněny pomocí cílového string_view.
 
 ## <a name="see-also"></a>Viz také:
 

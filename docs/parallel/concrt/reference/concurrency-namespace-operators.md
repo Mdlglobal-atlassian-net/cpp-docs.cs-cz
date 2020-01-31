@@ -1,28 +1,28 @@
 ---
-title: Concurrency – operátory oboru názvů
+title: concurrency – operátory oboru názvů
 ms.date: 11/04/2016
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: d790833e7dcecb5776d2adecd5e6bc1f681db1cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00accee4f28167b94b9193aec6d90f32ed242dbe
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337684"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821125"
 ---
-# <a name="concurrency-namespace-operators"></a>Concurrency – operátory oboru názvů
+# <a name="concurrency-namespace-operators"></a>concurrency – operátory oboru názvů
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[– Operátor&amp;&amp;](#operator_amp_amp)|[– Operátor&gt;](#operator_gt)|
-|[– Operátor&gt;=](#operator_gt_eq)|[– Operátor&lt;](#operator_lt)|[– Operátor&lt;=](#operator_lt_eq)|
+|[operator!=](#operator_neq)|[operátor&amp;&amp;](#operator_amp_amp)|[operátor&gt;](#operator_gt)|
+|[operátor&gt;=](#operator_gt_eq)|[operátor&lt;](#operator_lt)|[operátor&lt;=](#operator_lt_eq)|
 |[operator==](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
 
-##  <a name="operator_lor"></a>  operátor&#124; &#124; – operátor
+##  <a name="operator_lor"></a>&#124; &#124; operátor operátora
 
-Vytvoří úlohu, která bude dokončena úspěšně, pokud jeden z úkolů zadané jako argumenty úspěšně dokončena.
+Vytvoří úkol, který se úspěšně dokončí, když se kterákoli z úkolů dodaných jako argumenty úspěšně dokončí.
 
 ```
 template<typename ReturnType>
@@ -47,26 +47,26 @@ inline task<void> operator||(
 
 ### <a name="parameters"></a>Parametry
 
-*Vlastnost ReturnType*<br/>
-Typ vrácené úlohy.
+*ReturnType*<br/>
+Typ vráceného úkolu.
 
 *lhs*<br/>
-První úkol ke sloučení do výsledného úkolu.
+První úkol, který se má zkombinovat do výsledného úkolu.
 
-*Zarovnání indirekce RHS*<br/>
+*zarovnání indirekce RHS*<br/>
 Druhý úkol ke sloučení do výsledného úkolu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úloha, která se úspěšně dokončí, když některý vstupní úlohy byla úspěšně dokončena. Pokud jsou vstupní úlohy typu `T`, bude výstup této funkce `task<std::vector<T>`. Pokud jsou vstupní úlohy typu `void` výstupní úloha bude také `task<void>`.
+Úkol, který se úspěšně dokončí, když se jedna z vstupních úloh úspěšně dokončí. Pokud jsou vstupní úlohy typu `T`, výstup této funkce bude `task<std::vector<T>`. Pokud jsou vstupní úlohy typu `void` bude výstupní úloha také `task<void>`.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud obě úlohy zrušení nebo vyvolat výjimku, vrácené úlohy budou dokončeny ve zrušeném stavu a jednu z výjimek, pokud nedojde k žádné jsou, bude vyvolána výjimka při volání `get()` nebo `wait()` pro tento úkol.
+Pokud se obě úlohy zruší nebo vyvolají výjimky, vrácený úkol se dokončí ve zrušeném stavu a jedna z výjimek, pokud existuje, bude vyvolána při volání `get()` nebo `wait()` na tomto úkolu.
 
-##  <a name="operator_amp_amp"></a>  operátor&amp; &amp; – operátor
+##  <a name="operator_amp_amp"></a>operator&amp;– operátor &amp;
 
-Vytvoří úlohu, která bude dokončena úspěšně, pokud obě úlohy uvedené jako argumenty úspěšně dokončena.
+Vytvoří úkol, který se úspěšně dokončí, když se obě úlohy dodají jako argumenty úspěšně dokončí.
 
 ```
 template<typename ReturnType>
@@ -96,26 +96,26 @@ inline task<void>  operator&&(
 
 ### <a name="parameters"></a>Parametry
 
-*Vlastnost ReturnType*<br/>
-Typ vrácené úlohy.
+*ReturnType*<br/>
+Typ vráceného úkolu.
 
 *lhs*<br/>
-První úkol ke sloučení do výsledného úkolu.
+První úkol, který se má zkombinovat do výsledného úkolu.
 
-*Zarovnání indirekce RHS*<br/>
+*zarovnání indirekce RHS*<br/>
 Druhý úkol ke sloučení do výsledného úkolu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úloha, která se úspěšně dokončí, když oba vstupní úkoly byly úspěšně dokončeny. Pokud jsou vstupní úlohy typu `T`, bude výstup této funkce `task<std::vector<T>>`. Pokud jsou vstupní úlohy typu `void` výstupní úloha bude také `task<void>`.
+Úkol, který se úspěšně dokončí, když se obě vstupní úlohy úspěšně dokončí. Pokud jsou vstupní úlohy typu `T`, výstup této funkce bude `task<std::vector<T>>`. Pokud jsou vstupní úlohy typu `void` bude výstupní úloha také `task<void>`.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jeden z úkolů zrušen nebo vyvolá výjimku, vrácené úlohy budou dokončeny včas ve zrušeném stavu a, pokud je encoutered, bude vyvolána výjimka při volání `get()` nebo `wait()` pro tento úkol.
+Pokud se jedna z úloh zruší nebo vyvolá výjimku, vrácený úkol bude dokončen včas, ve zrušeném stavu a výjimka, pokud je jedna z nich (Jestliže, bude vyvolána, pokud zavoláte `get()` nebo `wait()` na daném úkolu.
 
-##  <a name="operator_eq_eq"></a>  Operator == – operátor
+##  <a name="operator_eq_eq"></a>operator = = – operátor
 
-Testuje, zda `concurrent_vector` objekt na levé straně operátoru rovná `concurrent_vector` objekt na pravé straně.
+Testuje, zda je objekt `concurrent_vector` na levé straně operátoru roven objektu `concurrent_vector` na pravé straně.
 
 ```
 template<typename T, class A1, class A2>
@@ -127,13 +127,13 @@ inline bool operator== (
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Datový typ prvků uložených v souběžné vektorů.
+Datový typ prvků uložených v souběžných vektorech.
 
 *A1*<br/>
-Typ alokátoru prvního `concurrent_vector` objektu.
+Typ přidělujícího objektu prvního `concurrent_vector`.
 
 *A2*<br/>
-Typ alokátoru druhého `concurrent_vector` objektu.
+Typ přidělování druhého objektu `concurrent_vector`.
 
 *_A*<br/>
 Objekt typu `concurrent_vector`.
@@ -143,17 +143,17 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** souběžného vektoru na levé straně operátoru je jinak souběžného vektoru na pravé straně operátoru roven **false**.
+**true** , pokud je souběžný vektor na levé straně operátoru roven souběžnému vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Dva vektory souběžných jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
+Dva souběžné vektory jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
-Tato metoda není bezpečná pro souběžnost s ohledem na dalších metodách, které může změnit buď souběžných vektorů `_A` nebo `_B`.
+Tato metoda není bezpečná pro souběžnost s ohledem na jiné metody, které by mohly změnit jeden ze současných vektorů `_A` nebo `_B`.
 
-##  <a name="operator_neq"></a>  Operator! = – operátor
+##  <a name="operator_neq"></a>operator! = – operátor
 
-Testuje, zda `concurrent_vector` objekt na levé straně operátoru není roven `concurrent_vector` objekt na pravé straně.
+Testuje, zda `concurrent_vector` objekt na levé straně operátoru není roven objektu `concurrent_vector` na pravé straně.
 
 ```
 template<typename T, class A1, class A2>
@@ -165,13 +165,13 @@ inline bool operator!= (
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Datový typ prvků uložených v souběžné vektorů.
+Datový typ prvků uložených v souběžných vektorech.
 
 *A1*<br/>
-Typ alokátoru prvního `concurrent_vector` objektu.
+Typ přidělujícího objektu prvního `concurrent_vector`.
 
 *A2*<br/>
-Typ alokátoru druhého `concurrent_vector` objektu.
+Typ přidělování druhého objektu `concurrent_vector`.
 
 *_A*<br/>
 Objekt typu `concurrent_vector`.
@@ -181,17 +181,17 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud souběžných vektory nejsou stejné; **false** Pokud jsou souběžný vektory stejné.
+**true** , pokud se souběžné vektory nerovnají; **false** , pokud jsou souběžné vektory stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Dva vektory souběžných jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
+Dva souběžné vektory jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
-Tato metoda není bezpečná pro souběžnost s ohledem na dalších metodách, které může změnit buď souběžných vektorů `_A` nebo `_B`.
+Tato metoda není bezpečná pro souběžnost s ohledem na jiné metody, které by mohly změnit jeden ze současných vektorů `_A` nebo `_B`.
 
-##  <a name="operator_lt"></a>  operátor&lt; – operátor
+##  <a name="operator_lt"></a>operator&lt; – operátor
 
-Testuje, zda `concurrent_vector` objekt na levé straně operátoru menší než `concurrent_vector` objekt na pravé straně.
+Testuje, zda je objekt `concurrent_vector` na levé straně operátoru menší než objekt `concurrent_vector` na pravé straně.
 
 ```
 template<typename T, class A1, class A2>
@@ -203,13 +203,13 @@ inline bool operator<(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Datový typ prvků uložených v souběžné vektorů.
+Datový typ prvků uložených v souběžných vektorech.
 
 *A1*<br/>
-Typ alokátoru prvního `concurrent_vector` objektu.
+Typ přidělujícího objektu prvního `concurrent_vector`.
 
 *A2*<br/>
-Typ alokátoru druhého `concurrent_vector` objektu.
+Typ přidělování druhého objektu `concurrent_vector`.
 
 *_A*<br/>
 Objekt typu `concurrent_vector`.
@@ -219,17 +219,17 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud souběžného vektoru na levé straně operátoru menší než souběžného vektoru na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je souběžný vektor na levé straně operátoru menší než souběžný vektor na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Chování tohoto operátoru je ekvivalentní operátor pro stejné jako `vector` třídy v `std` oboru názvů.
+Chování tohoto operátoru je stejné jako ekvivalentní operátor pro třídu `vector` v oboru názvů `std`.
 
-Tato metoda není bezpečná pro souběžnost s ohledem na dalších metodách, které může změnit buď souběžných vektorů `_A` nebo `_B`.
+Tato metoda není bezpečná pro souběžnost s ohledem na jiné metody, které by mohly změnit jeden ze současných vektorů `_A` nebo `_B`.
 
-##  <a name="operator_lt_eq"></a>  operátor&lt;= – operátor
+##  <a name="operator_lt_eq"></a>operator&lt;= – operátor
 
-Testuje, zda `concurrent_vector` je objekt na levé straně operátoru menší než nebo rovna hodnotě `concurrent_vector` objekt na pravé straně.
+Testuje, zda je objekt `concurrent_vector` na levé straně operátoru menší než nebo roven `concurrent_vector`mu objektu na pravé straně.
 
 ```
 template<typename T, class A1, class A2>
@@ -241,13 +241,13 @@ inline bool operator<= (
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Datový typ prvků uložených v souběžné vektorů.
+Datový typ prvků uložených v souběžných vektorech.
 
 *A1*<br/>
-Typ alokátoru prvního `concurrent_vector` objektu.
+Typ přidělujícího objektu prvního `concurrent_vector`.
 
 *A2*<br/>
-Typ alokátoru druhého `concurrent_vector` objektu.
+Typ přidělování druhého objektu `concurrent_vector`.
 
 *_A*<br/>
 Objekt typu `concurrent_vector`.
@@ -257,17 +257,17 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud souběžného vektoru na levé straně operátoru menší než nebo rovna hodnotě souběžného vektoru na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je souběžný vektor na levé straně operátoru menší než nebo roven souběžnému vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Chování tohoto operátoru je ekvivalentní operátor pro stejné jako `vector` třídy v `std` oboru názvů.
+Chování tohoto operátoru je stejné jako ekvivalentní operátor pro třídu `vector` v oboru názvů `std`.
 
-Tato metoda není bezpečná pro souběžnost s ohledem na dalších metodách, které může změnit buď souběžných vektorů `_A` nebo `_B`.
+Tato metoda není bezpečná pro souběžnost s ohledem na jiné metody, které by mohly změnit jeden ze současných vektorů `_A` nebo `_B`.
 
-##  <a name="operator_gt"></a>  operátor&gt; – operátor
+##  <a name="operator_gt"></a>operator&gt; – operátor
 
-Testuje, zda `concurrent_vector` je objekt na levé straně operátoru větší než `concurrent_vector` objekt na pravé straně.
+Testuje, zda je objekt `concurrent_vector` na levé straně operátoru větší než objekt `concurrent_vector` na pravé straně.
 
 ```
 template<typename T, class A1, class A2>
@@ -279,13 +279,13 @@ inline bool operator>(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Datový typ prvků uložených v souběžné vektorů.
+Datový typ prvků uložených v souběžných vektorech.
 
 *A1*<br/>
-Typ alokátoru prvního `concurrent_vector` objektu.
+Typ přidělujícího objektu prvního `concurrent_vector`.
 
 *A2*<br/>
-Typ alokátoru druhého `concurrent_vector` objektu.
+Typ přidělování druhého objektu `concurrent_vector`.
 
 *_A*<br/>
 Objekt typu `concurrent_vector`.
@@ -295,17 +295,17 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud souběžného vektoru na levé straně operátoru větší než souběžného vektoru na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je souběžný vektor na levé straně operátoru větší než souběžný vektor na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Chování tohoto operátoru je ekvivalentní operátor pro stejné jako `vector` třídy v `std` oboru názvů.
+Chování tohoto operátoru je stejné jako ekvivalentní operátor pro třídu `vector` v oboru názvů `std`.
 
-Tato metoda není bezpečná pro souběžnost s ohledem na dalších metodách, které může změnit buď souběžných vektorů `_A` nebo `_B`.
+Tato metoda není bezpečná pro souběžnost s ohledem na jiné metody, které by mohly změnit jeden ze současných vektorů `_A` nebo `_B`.
 
-##  <a name="operator_gt_eq"></a>  operátor&gt;= – operátor
+##  <a name="operator_gt_eq"></a>operator&gt;= – operátor
 
-Testuje, zda `concurrent_vector` je objekt na levé straně operátoru větší než nebo rovna hodnotě `concurrent_vector` objekt na pravé straně.
+Testuje, zda je objekt `concurrent_vector` na levé straně operátoru větší než nebo roven `concurrent_vector`mu objektu na pravé straně.
 
 ```
 template<typename T, class A1, class A2>
@@ -317,13 +317,13 @@ inline bool operator>= (
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Datový typ prvků uložených v souběžné vektorů.
+Datový typ prvků uložených v souběžných vektorech.
 
 *A1*<br/>
-Typ alokátoru prvního `concurrent_vector` objektu.
+Typ přidělujícího objektu prvního `concurrent_vector`.
 
 *A2*<br/>
-Typ alokátoru druhého `concurrent_vector` objektu.
+Typ přidělování druhého objektu `concurrent_vector`.
 
 *_A*<br/>
 Objekt typu `concurrent_vector`.
@@ -333,13 +333,13 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud souběžného vektoru na levé straně operátoru větší než nebo rovna hodnotě souběžného vektoru na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je souběžný vektor na levé straně operátoru větší než nebo roven souběžnému vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Chování tohoto operátoru je ekvivalentní operátor pro stejné jako `vector` třídy v `std` oboru názvů.
+Chování tohoto operátoru je stejné jako ekvivalentní operátor pro třídu `vector` v oboru názvů `std`.
 
-Tato metoda není bezpečná pro souběžnost s ohledem na dalších metodách, které může změnit buď souběžných vektorů `_A` nebo `_B`.
+Tato metoda není bezpečná pro souběžnost s ohledem na jiné metody, které by mohly změnit jeden ze současných vektorů `_A` nebo `_B`.
 
 ## <a name="see-also"></a>Viz také:
 

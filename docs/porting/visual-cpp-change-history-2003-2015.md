@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 6d994ca3af1386d9c2f94dbf6b9f972ee139613f
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778531"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821802"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie změn Visual C++ 2003–2015
 
@@ -66,7 +66,7 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` a `long double` verze funkcí s plovoucí desetinnou čárkou `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2``expm1``fabs``fdim``floor``fma``fmax``fmin``fmod``frexp``hypot`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round``scalbln``scalbn``sin``ilogb``sinh``sqrt``tan``tanh``tgamma``trunc`
+  - `float` a `long double` verze funkcí s plovoucí desetinnou čárkou `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2``expm1``fabs``fdim``floor``fma``fmax``fmin``fmod``frexp``hypot`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round``scalbln``scalbn``sin`
 
   Pokud máte kód, který používá `abs` s typem s plovoucí desetinnou čárkou, který obsahuje pouze hlavičku \<Math. h >, verze s plovoucí desetinnou čárkou již nebudou k dispozici. Volání nyní překládá na `abs(int)`, a to i v argumentu s plovoucí desetinnou čárkou, což způsobí chybu:
 
@@ -287,13 +287,13 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
 
 - **asctime**
 
-   V předchozích verzích [asctime](../c-runtime-library/reference/asctime-wasctime.md) funkce odvolala jednociferné číslo dnů s úvodní nulou, například: `Fri Jun 06 08:00:00 2014`. Specifikace vyžaduje, aby tyto dny byly doplněny na počáteční místo, jak je uvedeno v `Fri Jun  6 08:00:00 2014`. Tento problém byl vyřešen.
+   V předchozích verzích [asctime](../c-runtime-library/reference/asctime-wasctime.md) funkce odvolala jednociferné číslo dnů s úvodní nulou, například: `Fri Jun 06 08:00:00 2014`. Specifikace vyžaduje, aby tyto dny byly doplněny na počáteční místo, jak je uvedeno v `Fri Jun  6 08:00:00 2014`. Tento problém byl opraven.
 
 - **strftime a wcsftime**
 
    Funkce `strftime` a `wcsftime` nyní podporují specifikátory formátu% C,% D,% e,% F,% g,% G,% h,% n,% r,% R,% t,% T,% u a% V. Kromě toho modifikátory E a O jsou analyzovány, ale ignorovány.
 
-   Specifikátor formátu% c je zadán jako označení "vhodné reprezentace data a času" pro aktuální národní prostředí. V národním prostředí jazyka C musí být tato reprezentace stejná jako `%a %b %e %T %Y`, což je stejný tvar, který je vytvořen pomocí `asctime`. V předchozích verzích specifikátor formátu% c nesprávně formátované časy pomocí `MM/DD/YY HH:MM:SS` reprezentace. Tento problém byl vyřešen.
+   Specifikátor formátu% c je zadán jako označení "vhodné reprezentace data a času" pro aktuální národní prostředí. V národním prostředí jazyka C musí být tato reprezentace stejná jako `%a %b %e %T %Y`, což je stejný tvar, který je vytvořen pomocí `asctime`. V předchozích verzích specifikátor formátu% c nesprávně formátované časy pomocí `MM/DD/YY HH:MM:SS` reprezentace. Tento problém byl opraven.
 
 - **timespec a TIME_UTC**
 
@@ -3048,7 +3048,7 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 - C++ 11 17.6.4.3.1 [makro. Names]/2 zakazuje nahrazení klíčových slov makrem C++ při zahrnutí standardních hlaviček knihovny. Hlavičky nyní generují chyby kompilátoru, pokud zjišťují klíčová slova nahrazená makrem. (Definování _ALLOW_KEYWORD_MACROS umožňuje zkompilovat tento kód, ale důrazně na něj nemůžeme.) Jako výjimka je ve výchozím nastavení povolená forma `new` makra, protože hlavičky se samyně chrání pomocí `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")`. Definování _ENFORCE_BAN_OF_MACRO_NEW přesně s tím, co jeho název implikuje.
 
-- Chcete-li implementovat různé optimalizace a kontroly ladění, C++ implementace standardní knihovny úmyslně přerušuje binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Při použití C++ standardní knihovny zakazuje kombinování souborů objektů a statických knihoven, které jsou kompilovány pomocí různých verzí do jednoho binárního souboru (exe nebo DLL), a zakazují předávání objektů C++ standardních knihoven mezi binárními soubory, které jsou kompilováno pomocí různých verzí. Kombinování souborů objektů a statických knihoven (pomocí C++ standardní knihovny, které byly zkompilovány pomocí sady visual Studio 2010 s těmi, které byly zkompilovány C++ pomocí kompilátoru v aplikaci Visual Studio 2012, generuje chyby linkeru o neshodu _MSC_VER, kde _MSC_VER je makro, které obsahuje hlavní verzi kompilátoru ( C++ 1700 pro vizuál v aplikaci Visual Studio 2012). Tato kontrola nedokáže detekovat kombinování knihoven DLL a nemůže detekovat kombinování, které zahrnuje Visual Studio 2008 nebo starší.
+- Chcete-li implementovat různé optimalizace a kontroly ladění, C++ implementace standardní knihovny úmyslně přerušuje binární kompatibilitu mezi verzemi sady Visual Studio (2005, 2008, 2010, 2012). Při použití C++ standardní knihovny zakazuje kombinování souborů objektů a statických knihoven, které jsou kompilovány pomocí různých verzí do jednoho binárního souboru (exe nebo DLL), a zakazuje předávání objektů C++ standardních knihoven mezi binárními soubory, které jsou kompilovány pomocí různých verzí. Kombinování souborů objektů a statických knihoven (pomocí C++ standardní knihovny, které byly zkompilovány pomocí sady visual Studio 2010 s těmi, které byly zkompilovány C++ pomocí kompilátoru v aplikaci Visual Studio 2012, generuje chyby linkeru o neshodu _MSC_VER, kde _MSC_VER je makro, které obsahuje hlavní verzi kompilátoru ( C++ 1700 pro vizuál v aplikaci Visual Studio 2012). Tato kontrola nedokáže detekovat kombinování knihoven DLL a nemůže detekovat kombinování, které zahrnuje Visual Studio 2008 nebo starší.
 
 - Kromě zjištění _ITERATOR_DEBUG_LEVEL neshody, které byly implementovány v aplikaci Visual Studio 2010, C++ kompilátor v aplikaci visual Studio 2012 detekuje neshody běhové knihovny. K těmto neshoděm dochází, když jsou možnosti kompilátoru `/MT` (statická verze), `/MTd` (statický ladicí program), `/MD` (dynamická verze) a `/MDd` (dynamický ladění), jsou smíšené.
 

@@ -1,6 +1,7 @@
 ---
 title: LoadLibrary a AfxLoadLibrary
-ms.date: 05/24/2018
+description: Použití LoadLibrary a AfxLoadLibrary pro explicitní načítání knihoven DLL v MSVC.
+ms.date: 01/28/2020
 f1_keywords:
 - LoadLibrary
 helpviewer_keywords:
@@ -10,27 +11,27 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: c7700dd865e320686a2ad8bd036f207b9ecee6ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f803212c4485f7517dc42802f1ff581ffa4e609d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493212"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821535"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary a AfxLoadLibrary
 
-Procesy volají [LoadLibraryExA](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) nebo [LoadLibraryExW](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) (nebo [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) pro explicitní propojení s knihovnou DLL. Pokud je funkce úspěšná, mapuje zadanou knihovnu DLL do adresního prostoru volajícího procesu a vrátí popisovač knihovny DLL, kterou lze použít s jinými funkcemi v explicitním propojení, například `GetProcAddress` a. `FreeLibrary`
+Procesy volají funkci [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) nebo [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) k explicitnímu propojení s knihovnou DLL. (Aplikace MFC používají [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary) nebo [AfxLoadLibraryEx](../mfc/reference/application-information-and-management.md#afxloadlibraryex).) Pokud je funkce úspěšná, namapuje zadanou knihovnu DLL do adresního prostoru volajícího procesu a vrátí popisovač do knihovny DLL. Popisovač je vyžadován v dalších funkcích používaných pro explicitní propojení, například `GetProcAddress` a `FreeLibrary`. Další informace najdete v tématu [explicitní propojování](linking-an-executable-to-a-dll.md#linking-explicitly).
 
-`LoadLibrary`pokusí se najít knihovnu DLL pomocí stejné vyhledávací sekvence, která se používá pro implicitní propojení. Pokud systém nemůže najít knihovnu DLL nebo pokud funkce vstupního bodu vrátí hodnotu false, `LoadLibrary` vrátí hodnotu null. Pokud volání `LoadLibrary` určuje modul knihovny DLL, který je již namapován do adresního prostoru volajícího procesu, funkce vrátí popisovač knihovny DLL a zvýší počet odkazů modulu.
+`LoadLibrary` se pokusí najít knihovnu DLL pomocí stejné vyhledávací sekvence, která se používá pro implicitní propojení. `LoadLibraryEx` nabízí větší kontrolu nad pořadím cesty pro hledání. Další informace najdete v tématu [pořadí hledání knihovny dynamického propojení](/windows/win32/dlls/dynamic-link-library-search-order). Pokud systém nemůže najít knihovnu DLL nebo pokud funkce vstupního bodu vrátí hodnotu FALSE, `LoadLibrary` vrátí hodnotu NULL. Pokud volání `LoadLibrary` určuje modul knihovny DLL, který je již namapován do adresního prostoru volajícího procesu, funkce vrátí popisovač knihovny DLL a zvýší počet odkazů modulu.
 
-Pokud má knihovna DLL funkci vstupního bodu, operační systém zavolá funkci v kontextu vlákna, které volalo `LoadLibrary`. Funkce vstupního bodu není volána, pokud je knihovna DLL již připojena k procesu z důvodu předchozího volání `LoadLibrary` , které nemá odpovídající volání `FreeLibrary` funkce.
+Pokud má knihovna DLL funkci vstupního bodu, operační systém zavolá funkci v kontextu vlákna, které se říká `LoadLibrary` nebo `LoadLibraryEx`. Funkce vstupního bodu není volána, je-li knihovna DLL již k procesu připojena. K tomu dojde v případě, že předchozí volání `LoadLibrary` nebo `LoadLibraryEx` pro knihovnu DLL nemá odpovídající volání funkce `FreeLibrary`.
 
-Pro aplikace MFC, které načítají knihovny DLL rozšíření knihovny MFC, doporučujeme `AfxLoadLibrary` použít `LoadLibrary`místo. `AfxLoadLibrary`zpracovává synchronizaci vlákna před voláním `LoadLibrary`. Rozhraní (prototyp funkce) na `AfxLoadLibrary` je stejné jako. `LoadLibrary`
+Pro aplikace MFC, které načítají knihovny DLL rozšíření knihovny MFC, doporučujeme použít `AfxLoadLibrary` nebo `AfxLoadLibraryEx` namísto `LoadLibrary` nebo `LoadLibraryEx`. Funkce knihovny MFC zpracovává synchronizaci vláken před explicitním načtením knihovny DLL. Rozhraní (prototypy funkcí) pro `AfxLoadLibrary` a `AfxLoadLibraryEx` jsou stejná jako `LoadLibrary` a `LoadLibraryEx`.
 
-Pokud systém Windows nemůže načíst knihovnu DLL, proces se může pokusit o zotavení z chyby. Proces může například uživateli oznamovat chybu a požádat uživatele, aby určil jinou cestu ke knihovně DLL.
+Pokud systém Windows nemůže načíst knihovnu DLL, váš proces se může pokusit o zotavení z chyby. Například může uživatele s chybou informovat a pak požádat o další cestu k knihovně DLL.
 
 > [!IMPORTANT]
-> Nezapomeňte zadat úplnou cestu všech knihoven DLL. Při načtení souborů se nejprve vyhledá aktuální adresář. Pokud neurčíte cestu k souboru, může být načten soubor, který není zamýšleným souborem. Dalším způsobem, jak to zabránit, je použití možnosti linkeru [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) .
+> Nezapomeňte zadat úplnou cestu všech knihoven DLL. Při načítání souborů pomocí `LoadLibrary`se může aktuální adresář vyhledat jako první. Pokud plně neurčíte cestu k souboru, může být načten jiný soubor, než který je určen. Při vytváření knihovny DLL použijte možnost linkeru [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) a určete pořadí vyhledávání staticky propojených ZÁVISLOSTÍ knihoven DLL. V rámci knihoven DLL použijte jak úplné cesty k explicitně načteny závislosti, a `LoadLibraryEx` nebo `AfxLoadLibraryEx` parametry volání pro určení pořadí hledání modulu. Další informace najdete v tématu [zabezpečení knihovny dynamického propojení](/windows/win32/dlls/dynamic-link-library-security) a [pořadí hledání dynamické knihovny](/windows/win32/dlls/dynamic-link-library-search-order).
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 

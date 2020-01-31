@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398898"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821685"
 ---
 # <a name="callback-function-wrl"></a>Funkce zpětného volání (WRL)
 
@@ -192,13 +192,13 @@ ComPtr<TDelegateInterface> Callback(
 ### <a name="parameters"></a>Parametry
 
 *TDelegateInterface*<br/>
-Parametr šablony určuje rozhraní delegáta pro volání při výskytu události.
+Parametr šablony, který určuje rozhraní delegáta, které má být voláno při výskytu události.
 
 *TCallback*<br/>
-Parametr šablony určující typ objektu, který reprezentuje objekt a jeho členskou funkci zpětného volání.
+Parametr šablony, který určuje typ objektu, který představuje objekt a jeho členskou funkci zpětného volání.
 
 *TCallbackObject*<br/>
-Parametr šablony, který určuje objekt, jehož členská funkce je metoda volání při výskytu události.
+Parametr šablony, který určuje objekt, jehož členská funkce je metoda, která má být volána, když dojde k události.
 
 *TArg1*<br/>
 Parametr šablony, který určuje typ prvního argumentu metody zpětného volání.
@@ -227,18 +227,18 @@ Parametr šablony, který určuje typ osmého argumentu metody zpětného volán
 *TArg9*<br/>
 Parametr šablony, který určuje typ devátého argumentu metody zpětného volání.
 
-*callback*<br/>
-Objekt představující objekt zpětného volání a jeho členskou funkci.
+*onCuePoint*<br/>
+Objekt, který reprezentuje objekt zpětného volání a jeho členskou funkci.
 
 *object*<br/>
 Objekt, jehož členská funkce je volána, když dojde k události.
 
-*– Metoda*<br/>
-Členská funkci volat při výskytu události.
+*method*<br/>
+Členská funkce, která se má zavolat při výskytu události
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Objekt, jehož členská funkce je metoda zpětného volání zadané.
+Objekt, jehož členská funkce je zadanou metodou zpětného volání.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -246,9 +246,9 @@ Základ objektu delegáta musí být `IUnknown`, nikoli `IInspectable`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** event.h
+**Záhlaví:** Event. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
 ## <a name="see-also"></a>Viz také:
 

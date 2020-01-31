@@ -1,5 +1,5 @@
 ---
-title: Agileeventsource – třída
+title: AgileEventSource – třída
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223030"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821737"
 ---
-# <a name="agileeventsource-class"></a>Agileeventsource – třída
+# <a name="agileeventsource-class"></a>AgileEventSource – třída
 
-Představuje událost, která je vyvolána agilní komponentu, která je komponenta, která je přístupná z libovolného vlákna. Dědí z [EventSource](eventsource-class.md) a přepíše `Add` členskou funkci s parametrem další typu pro zadání možností pro vyvolání události agile.
+Představuje událost, která je vyvolána agilní komponentou, což je komponenta, ke které lze přistupovat z libovolného vlákna. Dědí z objektu [EventSource](eventsource-class.md) a Přepisuje `Add` členskou funkci s dalším parametrem typu pro zadání možností pro vyvolání agilní události.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ class AgileEventSource :
 ## <a name="parameters"></a>Parametry
 
 *TDelegateInterface*<br/>
-Rozhraní pro delegáta, který představuje obslužnou rutinu události.
+Rozhraní k delegátovi, který představuje obslužnou rutinu události.
 
 *TEventSourceOptions*<br/>
-[Invokemodeoptions –](invokemodeoptions-structure.md) stucture jehož invokeMode je nastaveno na `InvokeMode::StopOnFirstError` nebo `InvokeMode::FireAll`.
+Struktura [InvokeModeOptions](invokemodeoptions-structure.md) , jejíž pole invokeMode je nastaveno na `InvokeMode::StopOnFirstError` nebo `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Poznámky
 
-Většinu komponent v prostředí Windows Runtime jsou agilní komponenty. Další informace najdete v tématu [vláken a zařazování (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
+Velká většina komponent v prostředí Windows Runtime je agilní komponenty. Další informace najdete v tématu [dělení na vlákna a zařazováníC++(/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -50,21 +50,21 @@ Většinu komponent v prostředí Windows Runtime jsou agilní komponenty. Dalš
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** event.h
+**Záhlaví:** Event. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[AgileEventSource::Add – metoda](#add)|Připojí obslužnou rutinu události agilní reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální **agileeventsource –** objektu.|
+|[AgileEventSource:: Add – metoda](#add)|Připojí událost agilní události reprezentované zadaným rozhraním delegáta k sadě obslužných rutin událostí pro aktuální objekt **AgileEventSource** .|
 
-## <a name="add"></a> AgileEventSource::Add – metoda
+## <a name="add"></a>AgileEventSource:: Add – metoda
 
-Připojí obslužnou rutinu události reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální [EventSource](eventsource-class.md) objektu.
+Připojí obslužnou rutinu události reprezentované zadaným rozhraním delegáta k sadě obslužných rutin událostí pro aktuální objekt [EventSource](eventsource-class.md) .
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -78,14 +78,14 @@ HRESULT Add(
 ### <a name="parameters"></a>Parametry
 
 *delegateInterface*<br/>
-Rozhraní pro objekt delegáta, který představuje obslužnou rutinu události.
+Rozhraní objektu delegáta, který představuje obslužnou rutinu události.
 
-*token*<br/>
-Po dokončení této operace, popisovač, který představuje událost. Používat tento token parametru `Remove()` metoda zahodíte obslužné rutiny události.
+*klíčové*<br/>
+Po dokončení této operace bude popisovač reprezentující událost. Tento token použijte jako parametr pro metodu `Remove()` pro zahození obslužné rutiny události.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; v opačném případě hodnota HRESULT, která označuje chybu.
 
 ## <a name="see-also"></a>Viz také:
 

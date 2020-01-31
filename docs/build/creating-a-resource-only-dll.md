@@ -1,34 +1,62 @@
 ---
 title: Vytvoření knihovny DLL obsahující pouze prostředky
-ms.date: 11/04/2016
+description: Jak vytvořit knihovnu DLL pouze prostředků v aplikaci Visual Studio.
+ms.date: 01/27/2020
 helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: 0d729be60ebec7a37d07fed1d14c4fd5330c7242
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+no-loc:
+- noentry
+ms.openlocfilehash: ef79de77e35cbef6acd4af1cec82a4edc1b7d105
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220834"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821340"
 ---
 # <a name="creating-a-resource-only-dll"></a>Vytvoření knihovny DLL obsahující pouze prostředky
 
-Knihovny DLL pouze prostředků je knihovnu DLL, která obsahuje prostředky, jako jsou ikony, bitmapy, řetězce a dialogová okna. Použití knihovny DLL pouze prostředků je dobrým způsobem, jak sdílet stejnou sadu prostředků mezi více aplikacemi. Je také vhodný způsob aplikace s prostředky lokalizovanými pro více jazyků (viz [lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL](localized-resources-in-mfc-applications-satellite-dlls.md)).
+Knihovna DLL, která je pouze prostředky, je knihovna DLL, která neobsahuje žádné prostředky, jako jsou ikony, bitmapy, řetězce a dialogová okna. Použití knihovny DLL pouze prostředků je dobrým způsobem, jak sdílet stejnou sadu prostředků mezi více programy. Je také dobrým způsobem, jak poskytnout aplikaci s prostředky lokalizovanými pro více jazyků. Další informace naleznete v tématu [lokalizované prostředky v aplikacích MFC: satelitní knihovny DLL](localized-resources-in-mfc-applications-satellite-dlls.md).
 
-Pokud chcete vytvořit knihovnu DLL pouze prostředků, vytvořte nový projekt Win32 DLL (non-MFC) a přidat prostředky do projektu.
+## <a name="create-a-resource-only-dll"></a>Vytvoření knihovny DLL s pouze prostředky
 
-- Vyberte projekt Win32 v **nový projekt** dialogové okno a zadejte typ projektu knihovny DLL v Průvodci vytvořením projektu Win32.
+Chcete-li vytvořit knihovnu DLL pouze pro prostředky, vytvořte nový projekt Windows DLL (mimo MFC) a přidejte své prostředky do projektu:
 
-- Vytvořte nový skript prostředků, která obsahuje prostředky (například řetězce nebo nabídka) pro knihovnu DLL a uložte soubor .rc.
+::: moniker range="vs-2015"
 
-- Na **projektu** nabídky, klikněte na tlačítko **přidat existující položku**a pak vloží nový soubor .rc do projektu.
+1. V dialogovém okně **Nový projekt** vyberte **projekt Win32** . Zadejte název projektu a řešení a klikněte na **tlačítko OK**.
 
-- Zadejte [NOENTRY](reference/noentry-no-entry-point.md) – možnost linkeru. / NOENTRY brání linkeru v propojení odkazu na `_main` do knihovny DLL; tato možnost je vyžadována pro vytvoření knihovny DLL pouze prostředků.
+1. V **Průvodci aplikací Win32**vyberte **nastavení aplikace**. Vyberte **Typ aplikace** **knihovny DLL**. V části **Další možnosti**vyberte **prázdný projekt**. Kliknutím na tlačítko **Dokončit** vytvořte projekt.
 
-- Sestavení knihovny DLL.
+1. Vytvořte nový skript prostředků, který obsahuje prostředky pro knihovnu DLL (například řetězec nebo nabídku). Uložte soubor `.rc`.
 
-Aplikace, která používá knihovnu DLL pouze prostředků by měly volat [LoadLibrary](loadlibrary-and-afxloadlibrary.md) pro explicitní propojení ke knihovně DLL. Přístup k prostředkům, volání obecné funkce `FindResource` a `LoadResource`, pracovat na libovolný typ prostředku nebo volání jednoho z následujících funkcí specifických pro prostředky:
+1. V nabídce **projekt** vyberte možnost **Přidat existující položku**a poté do projektu vložte nový soubor `.rc`.
+
+1. Zadejte možnost linkeru [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` zabraňuje linkeru v propojení odkazu s `_main` do knihovny DLL; Tato možnost je nutná k vytvoření knihovny DLL, která je jen pro prostředky.
+
+1. Sestavení knihovny DLL.
+
+::: moniker-end
+::: moniker range=">=vs-2017"
+
+1. V dialogovém okně **Nový projekt** vyberte **Průvodce desktopovou plochu systému Windows** a klikněte na tlačítko **Další**. Na stránce **Konfigurace nového projektu** zadejte název projektu a řešení a klikněte na tlačítko **vytvořit**.
+
+1. V dialogovém okně **pracovní projekt systému Windows** vyberte **Typ aplikace** **dynamické knihovny**. V části **Další možnosti**vyberte **prázdný projekt**. Kliknutím na **tlačítko OK** vytvořte projekt.
+
+1. Vytvořte nový skript prostředků, který obsahuje prostředky pro knihovnu DLL (například řetězec nebo nabídku). Uložte soubor `.rc`.
+
+1. V nabídce **projekt** vyberte možnost **Přidat existující položku**a poté do projektu vložte nový soubor `.rc`.
+
+1. Zadejte možnost linkeru [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` zabraňuje linkeru v propojení odkazu s `_main` do knihovny DLL; Tato možnost je nutná k vytvoření knihovny DLL, která je jen pro prostředky.
+
+1. Sestavení knihovny DLL.
+
+::: moniker-end
+
+## <a name="use-a-resource-only-dll"></a>Použít knihovnu DLL pouze pro prostředky
+
+Aplikace, která používá knihovnu DLL pouze prostředků, by měla volat [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) nebo související funkce pro explicitní propojení s knihovnou DLL. Chcete-li získat přístup k prostředkům, zavolejte obecné funkce `FindResource` a `LoadResource`, které fungují na jakémkoli druhu prostředku. Nebo zavolejte jednu z následujících funkcí specifických pro prostředky:
 
 - `FormatMessage`
 
@@ -44,9 +72,9 @@ Aplikace, která používá knihovnu DLL pouze prostředků by měly volat [Load
 
 - `LoadString`
 
-Aplikace by měly volat `FreeLibrary` po dokončení používání prostředků.
+Aplikace by měla volat `FreeLibrary` po jejím dokončení pomocí prostředků.
 
 ## <a name="see-also"></a>Viz také:
 
-[Práce se zdrojovými soubory](../windows/working-with-resource-files.md)<br/>
-[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)
+[Práce se soubory prostředků](../windows/working-with-resource-files.md)\
+[Vytváření C/C++ knihoven DLL v aplikaci Visual Studio](dlls-in-visual-cpp.md)
