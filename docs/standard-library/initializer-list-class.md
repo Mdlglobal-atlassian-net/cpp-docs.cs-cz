@@ -1,6 +1,7 @@
 ---
 title: initializer_list – třída
-ms.date: 11/04/2016
+description: Odkaz na třídu initializer_list ve C++ standardní knihovně, jak je implementováno společností Microsoft v aplikaci Visual Studio.
+ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
 - initializer_list/std::initializer_list::begin
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be51835958a07162ce22ff9d619fb793102669f
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455360"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894330"
 ---
-# <a name="initializerlist-class"></a>initializer_list – třída
+# <a name="initializer_list-class"></a>initializer_list – třída
 
 Poskytuje přístup k poli prvků, ve kterých je každý člen zadaného typu.
 
@@ -32,36 +33,35 @@ class initializer_list
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*Typ*|Datový typ prvku, který bude uložen v `initializer_list`.|
+*Zadejte*\
+Typ dat prvku, který bude uložen v `initializer_list`.
 
 ## <a name="remarks"></a>Poznámky
 
-`initializer_list` Může být vytvořen pomocí seznamu inicializátorů v závorkách:
+`initializer_list` může být vytvořen pomocí seznamu inicializátorů v závorkách:
 
 ```cpp
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-Kompilátor transformuje seznam inicializátorů v závorkách s homogenními prvky na `initializer_list` vždy, když signatura funkce `initializer_list`vyžaduje. Další informace o použití `initializer_list`naleznete v tématu [jednotná inicializace a delegování konstruktorů](../cpp/uniform-initialization-and-delegating-constructors.md) .
+Kompilátor transformuje seznam inicializátorů v závorkách s homogenními prvky na `initializer_list` vždy, když signatura funkce vyžaduje `initializer_list`. Další informace o použití `initializer_list`najdete v tématu [jednotná inicializace a delegování konstruktorů](../cpp/uniform-initialization-and-delegating-constructors.md) .
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[initializer_list](../standard-library/forward-list-class.md#forward_list)|Vytvoří objekt typu `initializer_list`.|
+|[initializer_list](#initializer_list)|Vytvoří objekt typu `initializer_list`.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|value_type|Typ prvků v `initializer_list`.|
-|reference|Typ, který poskytuje odkaz na prvek v `initializer_list`.|
-|const_reference|Typ, který poskytuje konstantní odkaz na prvek v `initializer_list`.|
-|size_type|Typ, který představuje počet prvků v `initializer_list`.|
-|iterátor|Typ, který poskytuje iterátor pro `initializer_list`.|
-|const_iterator|Typ, který poskytuje konstantní iterátor pro `initializer_list`.|
+|`value_type`|Typ prvků v `initializer_list`.|
+|`reference`|Typ, který poskytuje odkaz na prvek v `initializer_list`.|
+|`const_reference`|Typ, který poskytuje konstantní odkaz na prvek v `initializer_list`.|
+|`size_type`|Typ, který představuje počet prvků v `initializer_list`.|
+|`iterator`|Typ, který poskytuje iterátor pro `initializer_list`.|
+|`const_iterator`|Typ, který poskytuje konstantní iterátor pro `initializer_list`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -73,7 +73,7 @@ Kompilátor transformuje seznam inicializátorů v závorkách s homogenními pr
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<initializer_list >
+**Záhlaví:** \<initializer_list >
 
 **Obor názvů:** std
 
@@ -89,8 +89,6 @@ constexpr const InputIterator* begin() const noexcept;
 
 Ukazatel na první prvek `initializer_list`. Pokud je seznam prázdný, ukazatel je stejný jako na začátku a na konci seznamu.
 
-### <a name="remarks"></a>Poznámky
-
 ## <a name="end"></a>initializer_list:: end
 
 Vrátí ukazatel na jeden za poslední prvek v `initializer list`.
@@ -103,7 +101,7 @@ constexpr const InputIterator* end() const noexcept;
 
 Ukazatel na jeden za poslední prvek v seznamu. Pokud je seznam prázdný, je stejný jako ukazatel na první prvek v seznamu.
 
-## <a name="initializer_list"></a>initializer_list::initializer_list
+## <a name="initializer_list"></a>initializer_list:: initializer_list
 
 Vytvoří objekt typu `initializer_list`.
 
@@ -114,14 +112,15 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*První*|Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.|
-|*Posledního*|Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.|
+*První*\
+Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.
+
+*Poslední*\
+Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.
 
 ### <a name="remarks"></a>Poznámky
 
-`initializer_list` Je založen na poli objektů zadaného typu. `initializer_list` Kopírování vytvoří druhou instanci seznamu ukazující na stejné objekty; zdrojové objekty nejsou zkopírovány.
+`initializer_list` je založena na poli objektů zadaného typu. Zkopírování `initializer_list` vytvoří druhou instanci seznamu ukazující na stejné objekty; zdrojové objekty se nekopírují.
 
 ### <a name="example"></a>Příklad
 
@@ -170,11 +169,6 @@ int main()
         cout << " " << c;
     cout << endl;
 
-    cout << "c4 =";
-    for (auto c : c4)
-        cout << " " << c;
-    cout << endl;
-
     cout << "c5 =";
     for (auto c : c5)
         cout << " " << c;
@@ -183,7 +177,10 @@ int main()
 ```
 
 ```Output
-c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4
+c1 = 3
+c2 = 5 4 3 2 1
+c3 = 5 4 3 2 1
+c5 = 5 4
 ```
 
 ## <a name="size"></a>initializer_list:: size
@@ -197,8 +194,6 @@ constexpr size_t size() const noexcept;
 ### <a name="return-value"></a>Návratová hodnota
 
 Počet prvků v seznamu.
-
-### <a name="remarks"></a>Poznámky
 
 ## <a name="see-also"></a>Viz také:
 

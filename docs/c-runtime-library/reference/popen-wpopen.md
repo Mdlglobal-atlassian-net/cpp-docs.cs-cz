@@ -1,6 +1,7 @@
 ---
 title: _popen, _wpopen
-ms.date: 11/04/2016
+description: Odkaz na funkce knihovny modulu runtime jazyka Microsoft (CRT) _popen a _wpopen.
+ms.date: 01/28/2020
 api_name:
 - _popen
 - _wpopen
@@ -36,12 +37,21 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- _popen
+- _wpopen
+- _tpopen
+- _doserrno
+- errno
+- _sys_errlist
+- _sys_nerr
+- EINVAL
+ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950987"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894317"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -65,21 +75,21 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>Parametry
 
-*systému*<br/>
+\ *příkazu*
 Příkaz, který má být spuštěn.
 
-*Mode*<br/>
+\ *režimu*
 Režim vráceného datového proudu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí datový proud přidružený k jednomu konci vytvořeného kanálu. Druhý konec kanálu je přidružený ke standardnímu vstupnímu nebo standardnímu výstupu příkazu vytvořenému příkazem. Funkce vrací **hodnotu null** u chyby. Pokud je chyba neplatným parametrem, například pokud je *příkaz* nebo *režim* ukazatel s hodnotou null, nebo *režim* není platným režimem, **errno** je nastaven na **EINVAL**. Platné režimy najdete v části s poznámkami.
+Vrátí datový proud přidružený k jednomu konci vytvořeného kanálu. Druhý konec kanálu je přidružený ke standardnímu vstupnímu nebo standardnímu výstupu příkazu vytvořenému příkazem. Funkce vrací **hodnotu null** u chyby. Pokud je chyba způsobená neplatným parametrem, je **errno** nastaven na **EINVAL**. Platné režimy najdete v části s poznámkami.
 
 Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_popen** vytvoří kanál a asynchronně spustí vytvořenou kopii příkazového procesoru se zadaným řetězcovým *příkazem*. *Režim* řetězce znaků Určuje typ požadovaného přístupu, jak je uvedeno níže.
+Funkce **_popen** vytvoří kanál. Poté asynchronně spustí vytvořenou kopii procesoru příkazů a použije *příkaz* jako příkazový řádek. *Režim* řetězce znaků Určuje typ požadovaného přístupu, jak je uvedeno níže.
 
 |Režim přístupu|Popis|
 |-|-|
@@ -91,7 +101,7 @@ Funkce **_popen** vytvoří kanál a asynchronně spustí vytvořenou kopii př�
 > [!NOTE]
 > Při použití v programu systému Windows vrátí funkce **_popen** neplatný ukazatel na soubor, který způsobí, že program přestane reagovat po neomezenou dobu. **_popen** funguje správně v konzolové aplikaci. Chcete-li vytvořit aplikaci systému Windows, která přesměruje vstup a výstup, viz téma [Vytvoření podřízeného procesu s přesměrovaným vstupem a výstupem](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) v Windows SDK.
 
-**_wpopen** je **_popen**verze s velkým znakem; Argument *cesty* pro **_wpopen** je řetězec s velkým znakem. **_wpopen** a **_popen** se chovají stejně jinak.
+**_wpopen** je verze **_popen**s velkým znakem; Argument *cesty* pro **_wpopen** je řetězec s velkým znakem. **_wpopen** a **_popen** se chovají identicky jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -141,7 +151,7 @@ int main( void )
 
    while(fgets(psBuffer, 128, pPipe))
    {
-      printf(psBuffer);
+      puts(psBuffer);
    }
 
    /* Close pipe and print return value of pPipe. */
@@ -156,9 +166,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Vzorový výstup
-
-Tento výstup předpokládá, že v aktuálním adresáři je pouze jeden soubor s příponou názvu souboru. c.
+Tento výstup předpokládá, že existuje pouze jeden soubor v aktuálním adresáři, který má příponu názvu souboru `.c`.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -175,6 +183,6 @@ Process returned 0
 
 ## <a name="see-also"></a>Viz také:
 
-[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_pclose](pclose.md)<br/>
-[_pipe](pipe.md)<br/>
+[Procesy a\ řízení prostředí](../../c-runtime-library/process-and-environment-control.md)
+[_pclose](pclose.md)\
+[_pipe](pipe.md)

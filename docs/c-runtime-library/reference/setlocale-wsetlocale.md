@@ -1,6 +1,7 @@
 ---
 title: setlocale, _wsetlocale
-ms.date: 11/04/2016
+description: Popisuje funkce knihovny modulu runtime jazyka Microsoft (CRT) setlocale a _wsetlocale.
+ms.date: 01/28/2020
 api_name:
 - _wsetlocale
 - setlocale
@@ -33,12 +34,15 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 375b1de82f72447d7e41b051c2aa1307716fb0dd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- setlocale
+- _wsetlocale
+ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948247"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894343"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -59,15 +63,15 @@ wchar_t *_wsetlocale(
 
 ### <a name="parameters"></a>Parametry
 
-*Kategorie*<br/>
+\ *kategorie*
 Kategorie ovlivněná národním prostředím
 
-*jazyka*<br/>
+\ *národního prostředí*
 Specifikátor národního prostředí
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je zadáno platné *národní prostředí* a *kategorie* , vrátí ukazatel na řetězec přidružený k zadanému *národnímu prostředí* a *kategorii*. Pokud *národní prostředí* nebo *kategorie* není platná, vrátí ukazatel s hodnotou null a aktuální nastavení národního prostředí programu se nezmění.
+Pokud je zadáno platné *národní prostředí* a *kategorie* , vrátí ukazatel na řetězec přidružený k zadanému *národnímu prostředí* a *kategorii*. Pokud *národní prostředí* nebo *kategorie* nejsou platné, vrátí ukazatel s hodnotou null a aktuální nastavení národního prostředí programu se nezmění.
 
 Například volání
 
@@ -87,11 +91,11 @@ Můžete zkopírovat řetězec vrácený funkcí **setlocale** pro obnovení té
 
 Funkci **setlocale** použijte k nastavení, změně nebo dotazování některých nebo všech informací o národním prostředí aktuálního programu určených *národním prostředím* a *kategorií*. *národní prostředí* odkazuje na místní (země/oblast a jazyk), pro které můžete přizpůsobit některé aspekty programu. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty. Pokud nastavíte *národní prostředí* na výchozí řetězec pro jazyk, který má v počítači více podporovaných formulářů, měli byste zjistit, který jazyk je platný, v případě, že použijete návratový parametr **setlocale** . Pokud jste například nastavili *locale* na "čínština", vrácená hodnota může být buď "Čínština-zjednodušená", nebo "tradiční čínština".
 
-**_wsetlocale** je verze " **setlocale**" s nejrůznějšími znaky; Argument *locale* a návratová hodnota **_wsetlocale** jsou řetězce s velkým počtem znaků. **_wsetlocale** a **setlocale** se chovají identicky jinak.
+**_wsetlocale** je verze s libovolným znakem **.** Argument *locale* a návratová hodnota **_wsetlocale** jsou řetězce s velkým počtem znaků. **_wsetlocale** a **setlocale** se chovají identicky jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
 
@@ -103,7 +107,7 @@ Argument *Category* určuje části informací o národním prostředí programu
 | **LC_COLLATE** | Funkce **strcoll –** , **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**a **Wcsxfrm** . |
 | **LC_CTYPE** | Funkce pro zpracování znaků (s výjimkou **číslic**, **isxdigit**, **mbstowcs**a **mbtowc**, které nejsou ovlivněny). |
 | **LC_MONETARY** | Informace o formátování měny vrácené funkcí **localeconv** . |
-| **LC_NUMERIC** | Znak desetinné čárky pro naformátované výstupní rutiny (například **printf**) pro rutiny převodu dat a pro nepeněžní informace o formátování vrácené funkcí **localeconv**. Kromě znaku desetinné čárky **LC_NUMERIC** nastaví oddělovač tisíců a řídicí řetězec seskupení vrácený [localeconv](localeconv.md). |
+| **LC_NUMERIC** | Znak desetinné čárky pro naformátované výstupní rutiny (například **printf**) pro rutiny převodu dat a pro nepeněžní informace o formátování vrácené funkcí **localeconv**. Kromě znaku desetinné čárky **LC_NUMERIC** nastaví oddělovač tisíců a řetězec ovládacího prvku seskupení vrácený funkcí [localeconv](localeconv.md). |
 | **LC_TIME** | Funkce **strftime** a **wcsftime** . |
 
 Tato funkce ověřuje parametr kategorie. Pokud parametr Category není jedna z hodnot uvedených v předchozí tabulce, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví **errno** na **EINVAL** a vrátí **hodnotu null**.
@@ -132,33 +136,33 @@ vrací
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 ```
 
-což je řetězec, který je přidružen k **LC_ALL** kategorii.
+což je řetězec, který je spojen s kategorií **LC_ALL** .
 
-Následující příklady se týkají kategorie **LC_ALL** . Každý z řetězců .OCP a .AKT lze použít místo čísla znakové stránky a určit tak výchozí znakovou stránku OEM nebo případně výchozí znakovou stránku ANSI pro uživatele.
+Následující příklady se týkají kategorie **LC_ALL** . Oba řetězce ". OCP "a". K určení použití znakové stránky OEM default a uživatele výchozí znakové stránky ANSI pro daný název národního prostředí (v uvedeném pořadí) se dá použít AKT (AKT) místo čísla kódové stránky.
 
 - `setlocale( LC_ALL, "" );`
 
-   Nastaví národní prostředí na výchozí hodnotu, což je výchozí znaková stránka ANSI pro uživatele získaná z operačního systému.
+   Nastaví národní prostředí na výchozí hodnotu, což je výchozí znaková stránka ANSI pro uživatele získaná z operačního systému. Název národního prostředí je nastaven na hodnotu vrácenou funkcí [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). Znaková stránka je nastavena na hodnotu vrácenou funkcí [GetACP](/windows/win32/api/winnls/nf-winnls-getacp).
 
 - `setlocale( LC_ALL, ".OCP" );`
 
-   Explicitně nastaví národní prostředí na aktuální znakovou stránku OEM získanou z operačního systému.
+   Nastaví národní prostředí na aktuální znakovou stránku OEM získanou z operačního systému. Název národního prostředí je nastaven na hodnotu vrácenou funkcí [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). Znaková stránka je nastavena na hodnotu [LOCALE_IDEFAULTCODEPAGE](/windows/win32/intl/locale-idefault-constants) pro výchozí název národního prostředí pro uživatele pomocí [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, ".ACP" );`
 
-   Nastaví národní prostředí na znakovou stránku ANSI získanou z operačního systému.
+   Nastaví národní prostředí na znakovou stránku ANSI získanou z operačního systému. Název národního prostředí je nastaven na hodnotu vrácenou funkcí [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). Znaková stránka je nastavena na hodnotu [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pro výchozí název národního prostředí pro uživatele pomocí [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<localename>" );`
 
-   Nastaví národní prostředí na název národního prostředí, který je určen  *\<názvem locale >* .
+   Nastaví národní prostředí na název národního prostředí, který je určen *\<locale >* . Znaková stránka je nastavena na hodnotu [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pro zadaný název národního prostředí [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>" );`
 
-   Nastaví národní prostředí na jazyk a zemi/oblast  *\<* , které určuje jazyk > a  *\<země >* , spolu s výchozí znakovou stránkou získanou z hostitelského operačního systému.
+   Nastaví národní prostředí na jazyk a zemi/oblast, které uvádí *\<language >* a *\<země >* , spolu s výchozí znakovou stránkou získanou z hostitelského operačního systému. Znaková stránka je nastavena na hodnotu [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pro zadaný název národního prostředí [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Nastaví národní prostředí na jazyk, zemi nebo oblast a znakovou stránku, kterou uvádí  *\<jazyk >* ,  *\<> země*a  *\<řetězce code_page >* . Můžete použít různé kombinace jazyka, země/oblasti a znakové stránky. Například toto volání nastaví národní prostředí na hodnotu francouzština, Kanada se znakovou stránkou 1252:
+   Nastaví národní prostředí na jazyk, zemi nebo oblast a znakovou stránku určenou *\<jazyka*, *\<země >* a *\<* code_page > řetězců. Můžete použít různé kombinace jazyka, země/oblasti a znakové stránky. Například toto volání nastaví národní prostředí na hodnotu francouzština, Kanada se znakovou stránkou 1252:
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -172,7 +176,7 @@ Následující příklady se týkají kategorie **LC_ALL** . Každý z řetězc�
 
 - `setlocale( LC_ALL, "<language>" );`
 
-   Nastaví národní prostředí na jazyk, který je určen  *\<jazykovým >* , a použije výchozí zemi nebo oblast pro zadaný jazyk a výchozí znakovou stránku ANSI pro danou zemi nebo oblast získanou z hostitelského operačního systému. Například následující volání funkce **setlocale** jsou funkčně ekvivalentní:
+   Nastaví národní prostředí na jazyk, který je určen *\<m jazykovým >* a používá výchozí zemi nebo oblast pro zadaný jazyk a výchozí znakovou stránku ANSI pro danou zemi nebo oblast získanou z hostitelského operačního systému. Například následující volání funkce **setlocale** jsou funkčně ekvivalentní:
 
    `setlocale( LC_ALL, "en-US" );`
 
@@ -184,9 +188,9 @@ Následující příklady se týkají kategorie **LC_ALL** . Každý z řetězc�
 
 - `setlocale( LC_ALL, ".<code_page>" );`
 
-   Nastaví znakovou stránku na hodnotu určenou *< code_page >* spolu s výchozí zemí/oblastí a jazykem (jak je definováno hostitelským operačním systémem) pro zadanou znakovou stránku.
+   Nastaví znakovou stránku na hodnotu určenou v *< code_page >* spolu s výchozí zemí/oblastí a jazykem (jak je definováno hostitelským operačním systémem) pro zadanou znakovou stránku.
 
-Kategorie musí být buď **LC_ALL** , nebo **LC_CTYPE** , aby se projevila Změna znakové stránky. Pokud například výchozí země/oblast a jazyk hostitelského operačního systému jsou "USA" a "English", jsou následující dvě volání funkce **setlocale** funkčně ekvivalentní:
+Aby bylo možné změnit znakovou stránku, musí být kategorie buď **LC_ALL** , nebo **LC_CTYPE** . Pokud například výchozí země/oblast a jazyk hostitelského operačního systému jsou "USA" a "English", jsou následující dvě volání funkce **setlocale** funkčně ekvivalentní:
 
 `setlocale( LC_ALL, ".1252" );`
 
@@ -311,18 +315,18 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 
 ## <a name="see-also"></a>Viz také:
 
-[Názvy národních prostředí, jazyky a řetězce země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[_configthreadlocale](configthreadlocale.md)<br/>
-[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>
-[Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[localeconv](localeconv.md)<br/>
-[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
-[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
-[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
-[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
-[_setmbcp](setmbcp.md)<br/>
-[strcoll – funkce](../../c-runtime-library/strcoll-functions.md)<br/>
-[strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
-[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
-[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
+[Názvy národních prostředí, jazyky a řetězce země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[_configthreadlocale](configthreadlocale.md)\
+[_create_locale _wcreate_locale](create-locale-wcreate-locale.md)\
+\ [národního prostředí](../../c-runtime-library/locale.md)
+[localeconv](localeconv.md)\
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)\
+[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
+[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)\
+[_setmbcp](setmbcp.md)\
+\ [funkcí strcoll –](../../c-runtime-library/strcoll-functions.md)
+[strftime, wcsftime, _strftime_l _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
+[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\
+[wctomb, _wctomb_l](wctomb-wctomb-l.md)
