@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7590ba9431892c07a32c27fdc97604c8b005fe33
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328689"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912860"
 ---
 # <a name="compiler-error-c3391"></a>Chyba kompilátoru C3391
 
-'type_arg': Neplatný argument typu pro obecný parametr 'param' z obecného "generic_type", musí být typu hodnotu Null
+' type_arg ': neplatný argument typu pro obecný parametr ' param ' obecného ' generic_type ' musí být typ hodnoty, která není null.
 
-Byla nesprávně vytvořena instance obecného typu. Zkontrolujte definici typu. Další informace najdete v tématu <xref:System.Nullable> a [obecných typů](../../extensions/generics-cpp-component-extensions.md).
+Došlo k chybnému vytvoření instance obecného typu. Ověřte definici typu. Další informace najdete v tématu <xref:System.Nullable> a [Obecné typy](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázkový používá C# vytvořit komponentu, která obsahuje obecný typ, který má určitá omezení, které nejsou podporovány při vytváření obecné typy v C++vyhodnocovací. Další informace najdete v tématu [omezení parametrů typů](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Následující ukázka používá C# k vytvoření komponenty, která obsahuje obecný typ, který má určitá omezení, která nejsou podporována při vytváření obecných typů v C++/CLI. Další informace najdete v tématu [omezení parametrů typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3391.cs
 // Compile by using: csc /target:library C3391.cs
 // a C# program
@@ -31,7 +31,7 @@ public class GR<N>
 where N : struct {}
 ```
 
-Pokud komponentu C3391.dll je k dispozici, následující ukázka generuje C3391.
+Když je k dispozici komponenta C3391. dll, následující ukázka vygeneruje C3391.
 
 ```cpp
 // C3391_b.cpp

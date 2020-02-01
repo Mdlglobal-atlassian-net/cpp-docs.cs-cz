@@ -1,5 +1,5 @@
 ---
-title: literál (C++vyhodnocovací a C++/CX)
+title: literál (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,50 +8,50 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254487"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912830"
 ---
-# <a name="literal-ccli-and-ccx"></a>literál (C++vyhodnocovací a C++/CX)
+# <a name="literal-ccli-and-ccx"></a>literál (C++/CLI a C++/CX)
 
-Proměnné (datový člen) označené jako **literálu** v **/CLR** je ekvivalentem nativní kompilace **konstrukce static const** proměnné.
+Proměnná (datový člen), která je označena jako **literál** v kompilaci **/CLR** , je nativní ekvivalent **statické proměnné const** .
 
 ## <a name="all-platforms"></a>Všechny platformy
 
 ### <a name="remarks"></a>Poznámky
 
-(Neexistují žádné poznámky o této funkci jazyka, které platí pro všechny moduly runtime.)
+(Žádné poznámky k této funkci jazyka se nevztahují na všechny moduly runtime.)
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
 ### <a name="remarks"></a>Poznámky
 
-(Neexistují žádné poznámky o této funkci jazyka, které se vztahují jenom Windows Runtime.)
+(Pro tuto funkci jazyka neexistují žádné poznámky, které platí jenom pro prostředí Windows Runtime.)
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
 ## <a name="remarks"></a>Poznámky
 
-Datový člen označen jako **literálu** musí být při deklaraci inicializovány a hodnota musí být konstantní integrál, výčet nebo typ řetězce. Převod z typu výrazu inicializace typ const statických dat – člen nesmí vyžadovat uživatelsky definovaný převod.
+Datový člen označený jako **literál** musí být inicializován při deklaraci a hodnota musí být konstantní celočíselný, Výčtový nebo řetězcový typ. Převod z typu inicializačního výrazu na typ statického datového členu const nesmí vyžadovat převod definovaný uživatelem.
 
-Žádná paměť je přidělena pro pole literálu za běhu; kompilátor vloží jenom její hodnotu v metadatech pro třídu.
+Za běhu není přidělena žádná paměť pro pole literálu. Kompilátor vloží svou hodnotu do metadat pro třídu.
 
-Proměnné označené **konstrukce static const** nebude k dispozici v metadatech na jiné kompilátory.
+Proměnná označená jako **statická const** nebude v metadatech k ostatním kompilátorům k dispozici.
 
-Další informace najdete v tématu [statické](../cpp/storage-classes-cpp.md) a [const](../cpp/const-cpp.md).
+Další informace naleznete v tématu [static](../cpp/storage-classes-cpp.md) a [const](../cpp/const-cpp.md).
 
-**literál** je kontextové klíčové slovo. Zobrazit [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md) Další informace.
+**literál** je kontextově závislé klíčové slovo. Další informace najdete v tématu [Kontextově závislá klíčová slova](context-sensitive-keywords-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje, že **literálu** proměnné znamená **statické**.
+Tento příklad ukazuje, že proměnná **literálu** implikuje **statickou**.
 
 ```cpp
 // mcppv2_literal.cpp
@@ -78,7 +78,7 @@ public ref struct A {
 };
 ```
 
-Všimněte si rozdílu v metadatech pro `sc` a `lit`: `modopt` – direktiva se použije pro `sc`, což znamená, ho můžete ignorovat jinými kompilátory.
+Všimněte si rozdílu v metadatech pro `sc` a `lit`: direktiva `modopt` se použije na `sc`, což znamená, že je může ignorovat jiné kompilátory.
 
 ```
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
@@ -90,9 +90,9 @@ Všimněte si rozdílu v metadatech pro `sc` a `lit`: `modopt` – direktiva se 
 
 ## <a name="example"></a>Příklad
 
-Následující příklad a vytvořené v jazyce C#, odkazuje na metadata vytvořili v předchozí ukázce a ukazuje vliv **literálu** a **konstrukce static const** proměnné:
+Následující ukázka, která je vytvořena v C#, odkazuje na metadata vytvořená v předchozí ukázce a ukazuje vliv **literálových** a **statických proměnných const** :
 
-```cs
+```csharp
 // mcppv2_literal3.cs
 // compile with: /reference:mcppv2_literal2.dll
 // A C# program
@@ -123,7 +123,7 @@ class B {
 
 ## <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru: `/clr`
 
 ## <a name="see-also"></a>Viz také:
 

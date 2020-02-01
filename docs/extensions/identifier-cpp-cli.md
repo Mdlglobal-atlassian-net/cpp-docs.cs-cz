@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 80aade53bf1d1c9aa30c4b8c8fe59c2247fe3cfb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 395f1443f4eef16d9eea44c23a6e3288daf03d14
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254555"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912840"
 ---
-# <a name="identifier-ccli"></a>__identifier (C++/CLI)
+# <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
-Umožňuje použít klíčová slova jazyka C++ jako identifikátory.
+Povoluje použití C++ klíčových slov jako identifikátorů.
 
 ## <a name="all-platforms"></a>Všechny platformy
 
@@ -29,21 +29,21 @@ __identifier(C++_keyword)
 
 ### <a name="remarks"></a>Poznámky
 
-Použití **__identifier** – klíčové slovo pro identifikátory, které nejsou klíčových slov je povolené, ale důrazně nedoporučuje jak stylu.
+Použití klíčového slova **__identifier** u identifikátorů, které nejsou klíčovými slovy, je povoleno, ale důrazně nedoporučujeme, aby se jednalo o styl.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru: `/ZW`
 
 ### <a name="examples"></a>Příklady
 
 **Příklad**
 
-V následujícím příkladu třída s názvem **šablony** se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V C++vyhodnocovací program, který používá **šablony** třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standard C++ – klíčové slovo.
+V následujícím příkladu je třída s názvem **template** vytvořena v C# a distribuována jako knihovna DLL. V programu C++/CLI, který používá třídu **šablony** , klíčové slovo **__identifier** skrývá fakt, že **Šablona** je standardní C++ klíčové slovo.
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
@@ -65,17 +65,17 @@ int main() {
 
 ### <a name="remarks"></a>Poznámky
 
-**__Identifier** – klíčové slovo je platná `/clr` – možnost kompilátoru.
+Klíčové slovo **__identifier** je platné s možností kompilátoru `/clr`.
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru: `/clr`
 
 ### <a name="examples"></a>Příklady
 
-V následujícím příkladu třída s názvem **šablony** se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V C++vyhodnocovací program, který používá **šablony** třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standard C++ – klíčové slovo.
+V následujícím příkladu je třída s názvem **template** vytvořena v C# a distribuována jako knihovna DLL. V programu C++/CLI, který používá třídu **šablony** , klíčové slovo **__identifier** skrývá fakt, že **Šablona** je standardní C++ klíčové slovo.
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {

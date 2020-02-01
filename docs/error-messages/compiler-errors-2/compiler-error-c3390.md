@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400315"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912865"
 ---
 # <a name="compiler-error-c3390"></a>Chyba kompilátoru C3390
 
-'type_arg': Neplatný argument typu pro obecný parametr 'param' z obecného "generic_type", musí být typ odkazu
+' type_arg ': neplatný argument typu pro obecný parametr ' param ' obecného ' generic_type ', musí se jednat o typ odkazu
 
-Byla nesprávně vytvořena instance obecného typu.  Zkontrolujte definici typu.  Další informace najdete v tématu [obecných typů](../../extensions/generics-cpp-component-extensions.md).
+Došlo k chybnému vytvoření instance obecného typu.  Ověřte definici typu.  Další informace najdete v tématu [Obecné typy](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
-První příklad používá C# vytvořit komponentu, která obsahuje obecný typ, který má určitá omezení, které nejsou podporovány při vytváření obecné typy v C++/CLR. Další informace najdete v tématu [omezení parametrů typů](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+První ukázka používá C# k vytvoření komponenty, která obsahuje obecný typ, který má určitá omezení, která nejsou podporována při vytváření obecných typů v C++parametrem/CLR. Další informace najdete v tématu [omezení parametrů typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
-```cs
+```csharp
 // C3390.cs
 // Compile by using: csc /target:library C3390.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-Pokud komponentu C3390.dll je k dispozici, následující ukázka generuje C3390.
+Když je k dispozici komponenta C3390. dll, následující ukázka vygeneruje C3390.
 
 ```cpp
 // C3390_b.cpp

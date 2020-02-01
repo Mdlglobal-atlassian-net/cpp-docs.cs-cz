@@ -1,31 +1,31 @@
 ---
-title: 'Postupy: Určení výstupního parametru'
+title: 'Postupy: určení výstupního parametru'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 5f0b462e672de4408d50bf95d65c749bf1881078
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 4bd6ad1d3009adcc124bdeb90d9d67de07112de2
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988435"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912795"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>Postupy: Určení výstupního parametru
+# <a name="how-to-specify-an-out-parameter"></a>Postupy: určení výstupního parametru
 
-Tento příklad ukazuje, jak určit, že parametr funkce je výstupní parametr a jak tuto funkci volat z C# programu.
+Tento příklad ukazuje, jak určit, že parametr funkce je `out` parametr a jak tuto funkci volat z C# programu.
 
-V vizuálu C++ je zadaný výstupní parametr s <xref:System.Runtime.InteropServices.OutAttribute>.
+Parametr `out` je určen v C++ pomocí <xref:System.Runtime.InteropServices.OutAttribute>.
 
 ## <a name="example"></a>Příklad
 
-První část této ukázky je vizuální C++ knihovna DLL s typem, který obsahuje funkci s výstupním parametrem.
+První část této ukázky vytvoří C++ knihovnu DLL. Definuje typ, který obsahuje funkci s parametrem `out`.
 
 ```cpp
 // cpp_out_param.cpp
-// compile with: /LD /clr:safe
+// compile with: /LD /clr
 using namespace System;
 public value struct TestStruct {
    static void Test([Runtime::InteropServices::Out] String^ %s) {
@@ -34,11 +34,9 @@ public value struct TestStruct {
 };
 ```
 
-## <a name="example"></a>Příklad
+Tento zdrojový soubor je C# klient, který využívá C++ komponentu vytvořenou v předchozím příkladu.
 
-Jedná se o C# klienta, který využívá vizuální C++ komponentu vytvořenou v předchozím příkladu.
-
-```
+```csharp
 // cpp_out_param_2.cs
 // compile with: /reference:cpp_out_param.dll
 using System;

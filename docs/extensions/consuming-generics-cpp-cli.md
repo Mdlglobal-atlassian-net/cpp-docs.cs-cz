@@ -5,26 +5,26 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 116d12b301af2769c4d4571a07ce604f18f67152
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4307213341ff7c20be273e52aa4d44dee926e84
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345952"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912802"
 ---
 # <a name="consuming-generics-ccli"></a>Použití obecných typů (C++/CLI)
 
-Obecné typy vytvořené v jednom jazyce .NET (nebo UPW) lze v jiných jazycích. Na rozdíl od šablon obecný ve zkompilovaném sestavení stále zůstává obecný. Proto jeden může vytvořit instanci obecného typu v jiném sestavení a dokonce i v jiném jazyce než sestavení, ve kterém byl definován obecného typu.
+Obecné typy vytvořené v jednom jazyku .NET (nebo UWP) se dají použít v jiných jazycích. Na rozdíl od šablon stále zůstává obecný ve zkompilovaném sestavení. Proto jedna může vytvořit instanci obecného typu v jiném sestavení a dokonce i v jiném jazyce, než sestavení, ve kterém byl obecný typ definován.
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Tento příklad ukazuje obecné třídy definované v jazyce C#.
+Tento příklad ukazuje obecnou třídu definovanou v C#.
 
 ### <a name="code"></a>Kód
 
-```cs
+```csharp
 // consuming_generics_from_other_NET_languages.cs
 // compile with: /target:library
 // a C# program
@@ -84,7 +84,7 @@ public class CircularList<ItemType> {
 
 ### <a name="description"></a>Popis
 
-Tento příklad využívá sestavení vytvořené v jazyce C#.
+Tento příklad využívá sestavení, které je vytvořeno v C#.
 
 ### <a name="code"></a>Kód
 
