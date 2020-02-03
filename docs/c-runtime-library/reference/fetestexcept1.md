@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e70ae1b74420b8186cccd8fc8a817423df618adf
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941011"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972162"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -55,7 +55,7 @@ Při úspěchu vrátí bitovou masku obsahující bitovou nebo logickou makra v�
 
 ## <a name="remarks"></a>Poznámky
 
-Použijte funkci fetestexcept k určení, které výjimky byly vyvolány operací s plovoucí desetinnou čárkou. Použijte parametr *s výjimkou* k určení, které příznaky stavu výjimek mají být testovány. Funkce **fetestexcept** používá tato makra výjimek definovaná v \<fenv. h > v části *s výjimkou* a návratovou hodnotou:
+Použijte funkci fetestexcept k určení, které výjimky byly vyvolány operací s plovoucí desetinnou čárkou. Použijte parametr *s výjimkou* k určení, které příznaky stavu výjimek mají být testovány. Funkce **fetestexcept** používá tato makra výjimek definovaná v \<fenv. h > v *s výjimkou* a návratovou hodnotou:
 
 |Makro výjimky|Popis|
 |---------------------|-----------------|
@@ -64,11 +64,11 @@ Použijte funkci fetestexcept k určení, které výjimky byly vyvolány operac�
 |FE_INVALID|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě domény.|
 |FE_OVERFLOW|Došlo k chybě rozsahu; předchozí výsledek operace s plovoucí desetinnou čárkou byl pro reprezentaci příliš velký.|
 |FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malý, aby byl reprezentován s plnou přesností. byla vytvořena deběžná hodnota.|
-|FE_ALLEXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
+|FE_ALL_EXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
 
 Zadaný *s výjimkou* argumentu může mít hodnotu 0, jednu z podporovaných maker výjimek s plovoucí desetinnou čárkou nebo bitovou nebo dvě či více maker. Účinek jakékoli jiné *s výjimkou* hodnoty argumentu není definován.
 
-Chcete-li použít tuto funkci, je nutné vypnout optimalizace plovoucí desetinné čárky, které by mohly zabránit přístupu `#pragma fenv_access(on)` pomocí direktivy před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
+Chcete-li použít tuto funkci, je nutné vypnout optimalizace s plovoucí desetinnou čárkou, které by mohly zabránit přístupu pomocí direktivy `#pragma fenv_access(on)` před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Požadavky
 

@@ -1,13 +1,14 @@
 ---
 title: Události (C++/CX)
-ms.date: 07/15/2019
+description: Jak použít C++/CX k vytváření a používání obslužných rutin událostí v prostředí Windows Runtime.
+ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740530"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972203"
 ---
 # <a name="events-ccx"></a>Události (C++/CX)
 
@@ -21,7 +22,7 @@ Mnoho komponent v prostředí Windows Runtime zpřístupňuje události. Napří
 
 ### <a name="declaration"></a>Deklarace
 
-Můžete deklarovat událost v referenční třídě nebo rozhraní a může mít veřejné, interní (veřejné nebo soukromé), veřejné chráněné, chráněné, soukromé chráněné nebo privátní přístupnost. Při deklaraci události interně kompilátor vytvoří objekt, který zveřejňuje dvě metody přístupového objektu: Přidat a odebrat. Při odběru obslužných rutin událostí v registraci objektů, objekt události je uloží do kolekce. Při vyvolání události vyvolá objekt události všechny obslužné rutiny v jejím seznamu. Triviální událost – podobně jako v následujícím příkladu – má implicitní záložní úložiště a také metody implicitního `add` a `remove` přístupového objektu. Můžete také zadat vlastní přistupující objekty tak, aby bylo možné zadat vlastní `get` a `set` přístupové objekty pro vlastnost.  Implementující třída nemůže manuálně přepínat seznam odběratelů událostí v triviální události.
+Můžete deklarovat událost v referenční třídě nebo rozhraní a může mít veřejné, interní (veřejné nebo soukromé), veřejné chráněné, chráněné, soukromé chráněné nebo privátní přístupnost. Při deklaraci události interně kompilátor vytvoří objekt, který zveřejňuje dvě metody přístupového objektu: Přidat a odebrat. Při odběru obslužných rutin událostí v registraci objektů, objekt události je uloží do kolekce. Při vyvolání události vyvolá objekt události všechny obslužné rutiny v jejím seznamu. Triviální událost – podobně jako v následujícím příkladu – má implicitní záložní úložiště a také implicitní `add` a přístupové metody `remove`. Můžete také zadat vlastní přistupující objekty tak, aby bylo možné zadat vlastní `get` a přístupové objekty `set` na vlastnost.  Implementující třída nemůže manuálně přepínat seznam odběratelů událostí v triviální události.
 
 Následující příklad ukazuje, jak deklarovat a vyvolat událost. Všimněte si, že událost má typ delegáta a je deklarována pomocí symbolu "^".
 
@@ -29,7 +30,7 @@ Následující příklad ukazuje, jak deklarovat a vyvolat událost. Všimněte 
 
 ### <a name="usage"></a>Použití
 
-Následující příklad ukazuje, jak třída předplatného používá `+=` operátor k přihlášení k odběru události a poskytuje obslužnou rutinu události, která má být vyvolána při vyvolání události. Všimněte si, že zadaná funkce odpovídá signatuře delegáta, který je definován na straně vydavatele v `EventTest` oboru názvů.
+Následující příklad ukazuje, jak třída pro odběr používá operátor `+=` k přihlášení k odběru události a poskytnutí obslužné rutiny události, která má být vyvolána při vyvolání události. Všimněte si, že zadaná funkce odpovídá signatuře delegáta, který je definován na straně vydavatele v oboru názvů `EventTest`.
 
 [!code-cpp[cx_events#02](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#02)]
 
@@ -48,7 +49,7 @@ Další příklad ukazuje, jak přidat vlastní metody přidání, odebrání a 
 
 ## <a name="removing-an-event-handler-from-the-subscriber-side"></a>Odebrání obslužné rutiny události ze strany odběratele
 
-V některých vzácných případech může být vhodné odebrat obslužnou rutinu události pro událost, kterou jste předtím přihlásili k odběru. Například můžete chtít nahradit jinou obslužnou rutinu události nebo můžete chtít odstranit některé prostředky, které jsou v něm uloženy. Chcete-li odebrat obslužnou rutinu, je nutné uložit EventRegistrationToken, který je `+=` vrácen z operace. Pak můžete použít `-=` operátor na tokenu k odebrání obslužné rutiny události.  Původní obslužná rutina však může být stále vyvolána i po jejím odebrání. Proto pokud máte v úmyslu odebrat obslužnou rutinu události, vytvořte příznak člena a nastavte jej, pokud je událost odebrána, a poté v obslužné rutině události zaškrtněte příznak a vraťte se okamžitě, pokud je nastaven. Následující příklad ukazuje základní vzor.
+V některých vzácných případech může být vhodné odebrat obslužnou rutinu události pro událost, kterou jste předtím přihlásili k odběru. Například můžete chtít nahradit jinou obslužnou rutinu události nebo můžete chtít odstranit některé prostředky, které jsou v něm uloženy. Chcete-li odebrat obslužnou rutinu, je nutné uložit EventRegistrationToken, který je vrácen z operace `+=`. Pak můžete použít operátor `-=` na tokenu k odebrání obslužné rutiny události.  Původní obslužná rutina však může být stále vyvolána i po jejím odebrání. Například konflikt časování může nastat, když zdroj události získá seznam obslužných rutin a začne je volat. Pokud dojde k odebrání obslužné rutiny události, seznam se stane neaktuálním. Takže pokud máte v úmyslu odebrat obslužnou rutinu události, vytvořte příznak členu. Nastavte jej, pokud je událost odebrána, a poté v obslužné rutině události zaškrtněte příznak a ihned vraťte, pokud je nastavena. Následující příklad ukazuje základní vzor.
 
 [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]
 

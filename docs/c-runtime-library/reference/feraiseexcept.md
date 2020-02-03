@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857824"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972212"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -61,7 +61,7 @@ Funkce **feraiseexcept** se pokusí vyvolat výjimky s plovoucí desetinnou čá
 |FE_INVALID|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě domény.|
 |FE_OVERFLOW|Došlo k chybě rozsahu; předchozí výsledek operace s plovoucí desetinnou čárkou byl pro reprezentaci příliš velký.|
 |FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malý, aby byl reprezentován s plnou přesností. byla vytvořena deběžná hodnota.|
-|FE_ALLEXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
+|FE_ALL_EXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
 
 Argument *excepts* může být nula, jedna z hodnot makra výjimky nebo bitová nebo druhá z podporovaných maker výjimek. Pokud je jedno ze zadaných maker výjimek FE_OVERFLOW nebo FE_UNDERFLOW, může být výjimka FE_INEXACT vyvolána jako vedlejší efekt.
 

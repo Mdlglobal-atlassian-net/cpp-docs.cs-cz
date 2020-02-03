@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-ms.openlocfilehash: 3d3bf59b28a464dc163dc027b867e890c3c8797b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b840408ce704ad5519fbf233de41c8d5422006ad
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941234"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972179"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -59,7 +59,7 @@ Po úspěchu vrátí hodnotu 0. V opačném případě vrátí nenulovou hodnotu
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **fegetexceptflag** ukládá aktuální stav příznaků stavu výjimky s plovoucí desetinnou čárkou, které jsou určeny *s výjimkou* v objektu **fexcept_t** , na který odkazuje *pStatus*.  *pStatus* musí odkazovat na platný objekt **fexcept_t** nebo následné chování není definováno. Funkce **fegetexceptflag** podporuje tato makra výjimek definovaná v \<fenv. h >:
+Funkce **fegetexceptflag** ukládá aktuální stav příznaků stavu výjimky s plovoucí desetinnou čárkou, které jsou určeny *výjimkou* v objektu **fexcept_t** , na který odkazuje *pStatus*.  *pStatus* musí ukazovat na platný objekt **fexcept_t** , nebo následné chování není definováno. Funkce **fegetexceptflag** podporuje tato makra výjimek definovaná v \<fenv. h >:
 
 |Makro výjimky|Popis|
 |---------------------|-----------------|
@@ -68,11 +68,11 @@ Funkce **fegetexceptflag** ukládá aktuální stav příznaků stavu výjimky s
 |FE_INVALID|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě domény.|
 |FE_OVERFLOW|Došlo k chybě rozsahu; předchozí výsledek operace s plovoucí desetinnou čárkou byl pro reprezentaci příliš velký.|
 |FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malý, aby byl reprezentován s plnou přesností. byla vytvořena deběžná hodnota.|
-|FE_ALLEXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
+|FE_ALL_EXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
 
 Argument *excepts* může být nula, jedna z podporovaných maker výjimek s plovoucí desetinnou čárkou nebo bitovou nebo dvou nebo více makrů. Účinek jakékoli jiné hodnoty argumentu není definován.
 
-Chcete-li použít tuto funkci, je nutné vypnout optimalizace plovoucí desetinné čárky, které by mohly zabránit přístupu `#pragma fenv_access(on)` pomocí direktivy před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
+Chcete-li použít tuto funkci, je nutné vypnout optimalizace s plovoucí desetinnou čárkou, které by mohly zabránit přístupu pomocí direktivy `#pragma fenv_access(on)` před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Požadavky
 

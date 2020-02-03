@@ -1,19 +1,20 @@
 ---
 title: dynamic_cast – operátor
-ms.date: 11/19/2018
+description: Přehled operátoru C++ jazyka dynamic_cast.
+ms.date: 02/03/2020
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0073aaa886bba33a0ec6c07fb89d6eee032765c8
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399038"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972223"
 ---
-# <a name="dynamiccast-operator"></a>dynamic_cast – operátor
+# <a name="dynamic_cast-operator"></a>dynamic_cast – operátor
 
 Převede operand `expression` na objekt typu `type-id`.
 
@@ -25,17 +26,17 @@ dynamic_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>Poznámky
 
-`type-id` Musí být ukazatel nebo odkaz na typ dříve definicí třídy nebo "ukazatel na typ void". Typ `expression` musí být ukazatel, pokud `type-id` je ukazatel nebo l hodnotou, pokud `type-id` je odkaz.
+`type-id` musí být ukazatel nebo odkaz na dříve definovaný typ třídy nebo "ukazatel na void". Typ `expression` musí být ukazatel, pokud `type-id` je ukazatel nebo l-hodnota, pokud je `type-id` odkazem.
 
-Zobrazit [static_cast](../cpp/static-cast-operator.md) vysvětlení rozdílu mezi statickými a dynamickými převody a kdy je vhodné je použít.
+V tématu [static_cast](../cpp/static-cast-operator.md) naleznete vysvětlení rozdílu mezi převody statického a dynamického přetypování a v případě, kdy je vhodné je použít.
 
-Existují dvě rozbíjející změny v chování nástroje **dynamic_cast** ve spravovaném kódu:
+Existují dva zásadní změny v chování **dynamic_cast** ve spravovaném kódu:
 
-- **přetypování dynamic_cast** na ukazatel na základní typ zabalené výčtu za běhu selže, vrátí 0, a ne ukazatel na převedený.
+- **dynamic_cast** k ukazateli na nadřízený typ zabaleného výčtu selže za běhu a vrátí hodnotu 0 namísto převedeného ukazatele.
 
-- **přetypování dynamic_cast** už nevyvolá výjimku při `type-id` je vnitřní ukazatel na typ hodnoty, s přetypování selhání za běhu.  Přetypování nyní vrátí hodnotu 0 ukazatele namísto vyvolání.
+- **dynamic_cast** přestane vyvolat výjimku, pokud `type-id` je vnitřním ukazatelem na typ hodnoty, přičemž přetypování selže za běhu.  Přetypování nyní vrátí hodnotu ukazatele 0 namísto vyvolání.
 
-Pokud `type-id` je ukazatel na jednoznačný přístupné přímou nebo nepřímou základní třídou `expression`, ukazatel na jedinečné podřízený typ `type-id` je výsledek. Příklad:
+Pokud je `type-id` ukazatel na nejednoznačnou dostupnou přímou nebo nepřímou základní třídu `expression`, je výsledkem ukazatel na jedinečný podobjekt typu `type-id`. Příklad:
 
 ```cpp
 // dynamic_cast_1.cpp
@@ -52,9 +53,9 @@ void f(D* pd) {
 }
 ```
 
-Tento typ převodu se nazývá "povýšení", protože ji přesune ukazatel myši nahoru hierarchie tříd, z odvozené třídy, která je odvozena z třídy. Povýšení je implicitní převod.
+Tento typ převodu se nazývá "přetypování", protože přesouvá ukazatel nahoru na třídu, od odvozené třídy až po třídu, ze které je odvozena. Přetypování je implicitní převod.
 
-Pokud `type-id` je typ void *, určit skutečný typ se provede kontrola za běhu `expression`. Výsledkem je ukazatelem na kompletní objekt, na které odkazuje `expression`. Příklad:
+Je-li `type-id` je typu void *, je provedena kontroly za běhu, aby bylo možné určit skutečný typ `expression`. Výsledkem je ukazatel na úplný objekt, na který ukazuje `expression`. Příklad:
 
 ```cpp
 // dynamic_cast_2.cpp
@@ -73,9 +74,9 @@ void f() {
 }
 ```
 
-Pokud `type-id` není void *, kontrolu za běhu se provede, pokud objekt, na který podle `expression` lze převést na typ, na které odkazuje `type-id`.
+Pokud `type-id` není typu void *, je provedena kontrolní rutina, aby bylo možné zjistit, zda objekt, na který je odkazováno pomocí `expression`, lze převést na typ, na který ukazuje `type-id`.
 
-Pokud typ `expression` je základní třídu typu `type-id`, a zjistěte, jestli se provede kontrola za běhu `expression` skutečně ukazuje na kompletní objekt typu `type-id`. Pokud je to pravda, výsledkem je ukazatel na kompletní objekt typu `type-id`. Příklad:
+Pokud je typ `expression` základní třídou typu `type-id`, je provedena kontrolní rutina pro zjištění, zda `expression` skutečně odkazuje na úplný objekt typu `type-id`. Pokud je to pravda, výsledek je ukazatel na úplný objekt typu `type-id`. Příklad:
 
 ```cpp
 // dynamic_cast_3.cpp
@@ -92,13 +93,13 @@ void f() {
 }
 ```
 
-Tento typ převodu se nazývá z něj odvozenou "downcast", protože přesunete ukazatel o hierarchii tříd, z dané třídy do třídy.
+Tento typ převodu se nazývá "downcast", protože přesouvá ukazatel dolů na hierarchii tříd z dané třídy na třídu odvozenou od ní.
 
-V případě vícenásobné dědičnosti se vydávají možnosti nejednoznačnost. Vezměte v úvahu hierarchii tříd znázorněnou na následujícím obrázku.
+V případě vícenásobné dědičnosti jsou zavedeny možnosti nejednoznačnosti. Vezměte v úvahu hierarchii tříd znázorněnou na následujícím obrázku.
 
-Pro typy CLR **dynamic_cast** výsledkem no-op. Pokud převod lze provést implicitně nebo MSIL `isinst` instrukce, která provede kontrolu dynamické a vrátí **nullptr** Pokud převod nezdaří.
+U typů CLR **dynamic_cast** výsledkem buď no-op, pokud je možné převod provést implicitně, nebo MSIL `isinst` instrukci, která provede dynamickou kontrolu a vrátí **nullptr** , pokud převod selhává.
 
-Následující ukázkový používá **dynamic_cast** k určení, zda třída je instance určitého typu:
+Následující příklad používá **dynamic_cast** k určení, zda je třída instancí konkrétního typu:
 
 ```cpp
 // dynamic_cast_clr.cpp
@@ -121,38 +122,40 @@ int main() {
 }
 ```
 
-![Hierarchie, která zobrazuje vícenásobná dědičnost třídy](../cpp/media/vc39011.gif "hierarchie, která zobrazuje vícenásobná dědičnost třídy") <br/>
-Hierarchie tříd, který zobrazuje vícenásobná dědičnost
+![Hierarchie tříd, která zobrazuje vícenásobnou dědičnost](../cpp/media/vc39011.gif "Hierarchie tříd, která zobrazuje vícenásobnou dědičnost") <br/>
+Hierarchie tříd, která zobrazuje vícenásobnou dědičnost
 
-Ukazatel na objekt typu `D` lze jej bezpečně přetypovat tak `B` nebo `C`. Ale pokud `D` přetypovat tak, aby odkazovala na `A` objektu, která instance `A` , by stálo? To způsobí chybu nejednoznačný přetypování. Chcete-li tento problém vyřešit, můžete provádět dvěma jednoznačný přetypování. Příklad:
+Ukazatel na objekt typu `D` lze bezpečně přetypovat na `B` nebo `C`. Pokud je však `D` přetypování tak, aby odkazovalo na objekt `A`, která instance `A` by měla výsledek? Výsledkem je nejednoznačná Chyba při přetypování. Chcete-li se tomuto problému vyhnout, můžete provést dvě nejednoznačná přetypování. Příklad:
 
 ```cpp
 // dynamic_cast_4.cpp
 // compile with: /c /GR
 class A {virtual void f();};
-class B {virtual void f();};
-class D : public B {virtual void f();};
+class B : public A {virtual void f();};
+class C : public A {virtual void f();};
+class D : public B, public C {virtual void f();};
 
 void f() {
    D* pd = new D;
+   A* pa = dynamic_cast<A*>(pd);   // C4540, ambiguous cast fails at runtime
    B* pb = dynamic_cast<B*>(pd);   // first cast to B
    A* pa2 = dynamic_cast<A*>(pb);   // ok: unambiguous
 }
 ```
 
-Použijete-li virtuální základní třídy je možné vytvářet další nejednoznačnosti. Vezměte v úvahu hierarchii tříd znázorněnou na následujícím obrázku.
+Pokud používáte virtuální základní třídy, můžete zavádět další nejednoznačnosti. Vezměte v úvahu hierarchii tříd znázorněnou na následujícím obrázku.
 
-![Třída hierarchie, která ukazuje virtuální základní třídy](../cpp/media/vc39012.gif "třídy hierarchie, která ukazuje virtuální třídy base") <br/>
-Hierarchie tříd, který ukazuje virtuální třídy base
+![Hierarchie tříd, která zobrazuje virtuální základní třídy](../cpp/media/vc39012.gif "Hierarchie tříd, která zobrazuje virtuální základní třídy") <br/>
+Hierarchie tříd, která zobrazuje virtuální základní třídy
 
-V této hierarchii `A` je virtuální základní třídy. Dána instance třídy `E` a ukazatel `A` podobjekt, **dynamic_cast** na ukazatel na `B` se nezdaří z důvodu nejednoznačnosti. Nejprve musíte přetypovat zpět na úplnou `E` a pak nahlíželi zpět nahoru hierarchii jednoznačně, k dosažení správné `B` objektu.
+V této hierarchii je `A` virtuální základní třídou. Vzhledem k instanci třídy `E` a ukazatele na podobjektu `A`, **dynamic_cast** na ukazatel na `B` se nezdaří z důvodu nejednoznačnosti. Je nutné nejprve přetypování zpátky na dokončený objekt `E` a pak můžete pracovat způsobem, který je v hierarchii jednoznačným způsobem, aby se dosáhlo správného objektu `B`.
 
 Vezměte v úvahu hierarchii tříd znázorněnou na následujícím obrázku.
 
-![Hierarchie, která zobrazuje duplicitní základní třídy třídy](../cpp/media/vc39013.gif "třídy hierarchie, která ukazuje duplicitní základní třídy") <br/>
-Hierarchie tříd, který zobrazuje duplicitní základní třídy
+![Hierarchie tříd, která zobrazuje duplicitní základní třídy](../cpp/media/vc39013.gif "Hierarchie tříd, která zobrazuje duplicitní základní třídy") <br/>
+Hierarchie tříd, která zobrazuje duplicitní základní třídy
 
-Zadaný objekt typu `E` a ukazatel `D` podobjekt přejít z `D` podobjekt k nejvíce vlevo `A` podobjekt, můžete provést tři převody. Můžete provádět **dynamic_cast** převod `D` ukazatel na `E` ukazatele a pak převod (buď **dynamic_cast** nebo implicitní převod) z `E`k `B`a nakonec implicitní převod z `B` k `A`. Příklad:
+Vzhledem k objektu typu `E` a ukazatel na podobjektu `D`, aby bylo možné přejít z podobjektu `D` na levou stranu `A`, lze vytvořit tři převody. Můžete provést **dynamic_cast** převod z ukazatele `D` na ukazatel `E`, pak převod (buď **dynamic_cast** nebo implicitní převod) z `E` na `B`, a nakonec implicitní převod z `B` na `A`. Příklad:
 
 ```cpp
 // dynamic_cast_5.cpp
@@ -170,9 +173,9 @@ void f(D* pd) {
 }
 ```
 
-**Dynamic_cast** operátor je také možné provádět "mezi přetypování". Pomocí stejné hierarchie třídy, je možné přetypovat ukazatel, například z `B` podobjekt k `D` podobjekt, jako je kompletní objekt typu `E`.
+Operátor **dynamic_cast** lze také použít k provedení "vzájemného přetypování". Pomocí stejné hierarchie třídy je možné přetypovat ukazatel, například z podobjektu `B` na `D` podobjekt, pokud je kompletní objekt typu `E`.
 
-Vzhledem k tomu různé přetypování, je skutečně možné provést převod z ukazatele na `D` na ukazatel na nejvíce vlevo `A` podobjekt v pouhých dvou kroků. Můžete provádět různé přetypování z `D` k `B`, pak implicitní převod z `B` k `A`. Příklad:
+S ohledem na křížové přetypování je ve skutečnosti možné provést převod z ukazatele na `D` ukazatel na levou krajní `A` podobjekt v pouze dvou krocích. Můžete provést přetypování z `D` na `B`a pak implicitní převod z `B` na `A`. Příklad:
 
 ```cpp
 // dynamic_cast_6.cpp
@@ -189,9 +192,9 @@ void f(D* pd) {
 }
 ```
 
-Hodnota ukazatele s hodnotou null je převedena na hodnotu ukazatele s hodnotou null typu cílového podle **dynamic_cast**.
+Hodnota nulového ukazatele je převedena na hodnotu nulového ukazatele cílového typu **dynamic_cast**.
 
-Při použití `dynamic_cast < type-id > ( expression )`, pokud `expression` nelze bezpečně převést na typ `type-id`, kontrola běhu způsobí, že přetypování selhání. Příklad:
+Pokud použijete `dynamic_cast < type-id > ( expression )`, pokud `expression` nelze bezpečně převést na typ `type-id`, bude při spuštění přetypování příčinou selhání. Příklad:
 
 ```cpp
 // dynamic_cast_7.cpp
@@ -206,15 +209,15 @@ void f() {
 }
 ```
 
-Hodnota neúspěšného přetypování na typ ukazatele je ukazatel s hodnotou null. Neúspěšného přetypování na odkaz typu vyvolá [bad_cast – výjimka](../cpp/bad-cast-exception.md).   Pokud `expression` přejděte nebo odkazovat na platný objekt `__non_rtti_object` je vyvolána výjimka.
+Hodnota neúspěšného přetypování na typ ukazatele je ukazatel s hodnotou null. Neúspěšné přetypování na odkazový typ vyvolá [výjimku bad_cast](../cpp/bad-cast-exception.md).   Pokud `expression` nesměruje na platný objekt nebo na něj odkazuje, je vyvolána výjimka `__non_rtti_object`.
 
-Zobrazit [typeid](../cpp/typeid-operator.md) vysvětlení `__non_rtti_object` výjimky.
+Vysvětlení výjimky `__non_rtti_object` naleznete v tématu [typeid](../cpp/typeid-operator.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující příklad vytvoří ukazatel základní třídy (struktura A) na objekt (struktura jazyka C).  To, a navíc skutečnost, že jsou virtuální funkce, umožňuje modul runtime polymorfismu.
+Následující příklad vytvoří ukazatel základní třídy (struktura A) na objekt (struct C).  A navíc k tomu, že existují virtuální funkce, umožňují polymorfismus za běhu.
 
-Ukázka volá také bez virtuální funkce v hierarchii.
+Ukázka také volá nevirtuální funkci v hierarchii.
 
 ```cpp
 // dynamic_cast_8.cpp
