@@ -1,48 +1,55 @@
 ---
-title: Soubory .netmodule jako vstup linkeru
-ms.date: 05/16/2019
+title: .netmodule soubory jako vstup linkeru
+description: Popisuje, jak používat Mixed.obj ani.netmodule soubory jako vstup linkeru při vytváření sestavení .NET.
+ms.date: 01/30/2020
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
-- .netmodules
+- .netmodule files
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 50a0f0a1ff5f65a7512e8372de2fe5296c866dca
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+no-loc:
+- obj
+- netmodule
+- clr
+- pure
+- safe
+ms.openlocfilehash: 83eab25624bdb81ba9191e4efe6a774551502ee0
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837429"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912816"
 ---
-# <a name="netmodule-files-as-linker-input"></a>Soubory .netmodule jako vstup linkeru
+# <a name="opno-locnetmodule-files-as-linker-input"></a>.netmodule soubory jako vstup linkeru
 
-Link.exe přijímá jako vstup nyní .obj jazyka MSIL a modulů .NET. Výstupní soubor vytvořený pomocí linkeru je sestavení nebo modul .NET se bez závislostí za běhu na žádném z .obj nebo modulů .NET, které byly vstup do linkeru.
+Link. exe přijímá *`.obj`* MSIL a *`.netmodule`* soubory jako vstup. Výstupní soubor vytvořený linkerem je sestavení nebo *`.netmodule`* soubor bez závislosti za běhu na žádném z *`.obj`* nebo *`.netmodule`* souborů, které byly zadány do linkeru.
 
-modulů .NET vytvářejí a kompilátorem MSVC s [/LN (vytvoření modulu MSIL)](ln-create-msil-module.md) nebo pomocí linkeru spuštěného s [parametr/noassembly (vytvoření modulu MSIL)](noassembly-create-a-msil-module.md). .objs se vždy vytvářejí ve kompilace jazyka Visual C++. U dalších kompilátorů aplikace Visual Studio, použijte **/target: Module** – možnost kompilátoru.
+## <a name="remarks"></a>Poznámky
 
-Je nutné předat do linkeru soubor .obj z kompilace jazyka Visual C++, který vytvořili .netmodule. Předávání .netmodule se už nepodporuje, protože **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v sadě Visual Studio 2017 a novější.
+*`.netmodule`* soubory jsou vytvářeny pomocí kompilátoru MSVC s [/ln (vytvořit modul MSIL)](ln-create-msil-module.md) nebo linkerem s [/NOASSEMBLY (vytvořit modul MSIL)](noassembly-create-a-msil-module.md). *`.obj`* soubory jsou vždy vytvářeny v C++ kompilaci. Pro ostatní kompilátory sady Visual Studio použijte možnost kompilátoru **/target: Module** .
 
-Informace o tom, jak vyvolání linkeru z příkazového řádku najdete v tématu [syntaxe příkazového řádku Linkeru](linking.md), [použít MSVC nástrojů z příkazového řádku](../building-on-the-command-line.md), a [nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../setting-the-path-and-environment-variables-for-command-line-builds.md).
+Linker musí předat *`.obj`* soubor ze C++ kompilace, která vytvořila *`.netmodule`* . Předání do *`.netmodule`* již není podporováno, protože **/clr:pure** a/clr **:** možnosti kompilátorusafejsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017 a novější.
 
-Předání soubor .netmodule nebo DLL linkeru, který byl zkompilován kompilátorem MSVC s **/CLR** může vést k chybě propojovacího programu. Další informace najdete v tématu [výběr formátu vstupních souborů .netmodule](choosing-the-format-of-netmodule-input-files.md).
+Informace o tom, jak volat linker z příkazového řádku, naleznete v tématu [syntaxe příkazového řádku linkeru](linking.md), [použití sady nástrojů MSVC z příkazového řádku](../building-on-the-command-line.md)a [Nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Linker přijímá nativní .obj soubory, jakož i soubory .obj jazyka MSIL zkompilována pomocí **/CLR**. Při předávání smíšených .objs ve stejném sestavení, je ověřitelnost výsledného výstupního souboru, ve výchozím nastavení, bude rovna nejnižší úrovni ověřitelnosti výstupních modulů.
+Předání *`.netmodule`* nebo *`.dll`* souboru linkeru, který je zkompilován kompilátorem MSVC s **/clr** může mít za následek chybu linkeru. Další informace najdete v tématu [Volba formátu vstupních souborů .netmodule ](choosing-the-format-of-netmodule-input-files.md).
 
-Pokud aktuálně máte aplikaci, která se skládá ze dvou nebo více sestavení a chcete, aby aplikace, které mají být obsažena v jednom sestavení, musíte znovu zkompilovat sestavení a potom propojte .objs nebo modulů .NET pro tvoří jedno sestavení.
+Linker přijímá jak nativní soubory *`.obj`* , tak soubory *`.obj`* jazyka MSIL zkompilované pomocí **/clr** . Můžete předat smíšené *`.obj`* soubory ve stejném sestavení. Výsledná výchozí ověřitel výstupního souboru je stejná jako u nejnižší ověřitelného vstupního modulu.
 
-Je nutné zadat vstupní bod pomocí [/Entry (Symbol vstupního bodu)](entry-entry-point-symbol.md) při vytváření spustitelné bitové kopie.
+Můžete změnit aplikaci, která se skládá ze dvou nebo více sestavení, aby byla obsažena v jednom sestavení. Znovu zkompilujte zdroje sestavení a potom propojte soubory *`.obj`* nebo soubory *`.netmodule`* a vytvořte jedno sestavení.
 
-Při propojování s soubor .obj nebo modul .NET MSIL, použijte [parametru/LTCG (generování kódu při propojování odkaz)](ltcg-link-time-code-generation.md), v opačném případě pokud linker zjistí .obj jazyka MSIL nebo modul .NET, se restartuje propojení pomocí parametru/LTCG.
+Při vytváření spustitelné image určete vstupní bod s použitím [/entry (symbol vstupního bodu)](entry-entry-point-symbol.md) .
 
-Soubory .obj nebo modul .NET MSIL může také předaných do cl.exe.
+Při propojování s *`.obj`* nebo *`.netmodule`* souboru jazyka MSIL, použijte [/LTCG (generování kódu při propojování)](ltcg-link-time-code-generation.md), jinak, pokud linker zjistí *`.obj`* nebo *`.netmodule`* jazyka MSIL, restartuje propojení s **/LTCG**. Zobrazí se informační zpráva s informacemi o restartování tohoto odkazu. Tuto zprávu můžete ignorovat, ale chcete-li zlepšit výkon linkeru, explicitně zadejte **/LTCG**.
 
-Vstupní soubory .obj nebo modul .NET MSIL, nemůže mít vložené prostředky. Prostředek je vložen do výstupního souboru (modulu nebo sestavení) s [narozdíl od (vložení spravovaného prostředku)](assemblyresource-embed-a-managed-resource.md) – možnost linkeru nebo se **/Resource** – možnost kompilátoru v dalších kompilátorů aplikace Visual Studio.
+Do cl. exe lze také předat soubory MSIL *`.obj`* nebo *`.netmodule`* .
 
-Při provádění MSIL propojování a také nezadáte [parametru/LTCG (generování kódu při propojování odkaz)](ltcg-link-time-code-generation.md), zobrazí se informační zpráva oznámení, že propojení se restartuje. Tuto zprávu můžete ignorovat, ale chcete-li zlepšit výkon linkeru s propojení jazyka MSIL, explicitně určete **parametru/LTCG**.
+Vstupní prostředky MSIL *`.obj`* nebo *`.netmodule`* soubory nemůžou mít vložené prostředky. Vložení prostředků do výstupního modulu nebo souboru sestavení pomocí možnosti linkeru [/ASSEMBLYRESOURCE (vložení spravovaného prostředku)](assemblyresource-embed-a-managed-resource.md) Nebo použijte možnost kompilátoru **/Resource** v dalších kompilátorech sady Visual Studio.
 
-## <a name="example"></a>Příklad
+## <a name="examples"></a>Příklady
 
-V kódu jazyka C++ **catch** blok odpovídající **zkuste** bude vyvolána výjimka Nesystémová. Ale ve výchozím nastavení, modul CLR zabalí nesystémové výjimek pomocí <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Když se vytvoří sestavení z modulů Visual C++ a jiné než Visual C++ a chcete, aby **catch** blokovat v kódu jazyka C++, které mají být vyvolány z odpovídající **zkuste** klauzule při **zkuste**nesystémové bloku výjimku, je nutné přidat `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` atribut ke zdrojovému kódu pro moduly než C++.
+V C++ kódu se pro výjimku bez`System` vyvolá **`catch`** blok odpovídající **`try`** . Ve výchozím nastavení však CLR balí výjimky, které nejsou`System`, s <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Když C++ je sestavení vytvořeno z aC++ nemoduly a chcete, aby byl **`catch`** blok v C++ kódu vyvolán z odpovídající klauzule **`try`** , když blok **`try`** vyvolá výjimku, která není`System`, je nutné přidat atribut `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` do zdrojového kódu pro jiné nežC++ moduly.
 
 ```cpp
 // MSIL_linking.cpp
@@ -67,11 +74,9 @@ int main() {
 */
 ```
 
-## <a name="example"></a>Příklad
+Změnou `Boolean` hodnoty atributu `WrapNonExceptionThrows` upravíte schopnost C++ kódu zachytit výjimku, která není`System`.
 
-Změnou logickou hodnotu `WrapNonExceptionThrows` atributů, změníte schopnost kód jazyka Visual C++ – Nesystémová výjimku zachytit.
-
-```cpp
+```csharp
 // MSIL_linking_2.cs
 // compile with: /target:module /addmodule:MSIL_linking.obj
 // post-build command: link /LTCG MSIL_linking.obj MSIL_linking_2.netmodule /entry:MLinkTest.Main /out:MSIL_linking_2.exe /subsystem:console
