@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 9dd3675f200be4f0ec66620bcf3cf05706991b66
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518166"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034516"
 ---
 # <a name="q-options-low-level-operations"></a>/Q – možnosti (operace nízké úrovně)
 
@@ -34,9 +34,13 @@ K provedení následujících operací kompilátoru nižší úrovně můžete p
 
 - [/Qspectre](qspectre.md): vygeneruje pokyny pro zmírnění některých ohrožení zabezpečení Spectre.
 
+- [/Qspectre-Load](qspectre-load.md): vygeneruje pokyny pro zmírnění ohrožení zabezpečení Spectre na základě zatížení.
+
+- [/Qspectre-Load-CF](qspectre-load-cf.md): vygeneruje pokyny pro zmírnění ohrožení zabezpečení Spectre v závislosti na pokynech toku ovládacích prvků, které se načítají.
+
 - [/Qvec-Report (úroveň vytváření sestav auto vektorizace)](qvec-report-auto-vectorizer-reporting-level.md): povoluje úrovně generování sestav pro automatické rozkládání.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
