@@ -11,32 +11,32 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88944b2d935eebd0e031be1431c2a0f4efa3d760
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409944"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139472"
 ---
-# <a name="messageprocessor-class"></a>message_processor – třída
+# <a name="message_processor-class"></a>message_processor – třída
 
-`message_processor` Třída je abstraktní základní třída pro zpracování `message` objekty. Neexistuje žádná záruka na pořadí zpráv.
+Třída `message_processor` je abstraktní základní třída pro zpracování objektů `message`. Na řazení zpráv není nijak zaručeno.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class T>
 class message_processor;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Datový typ datové části v rámci zprávy zpracovává situace `message_processor` objektu.
+*Š*<br/>
+Datový typ datové části v rámci zpráv zpracovávaných tímto objektem `message_processor`.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -46,15 +46,15 @@ Datový typ datové části v rámci zprávy zpracovává situace `message_proce
 
 |Název|Popis|
 |----------|-----------------|
-|[async_send](#async_send)|Při přepisu v odvozené třídě, umístí zprávy asynchronně do bloku.|
-|[sync_send](#sync_send)|Při přepisu v odvozené třídě, umístí zprávy synchronně do bloku.|
-|[Počkej](#wait)|Při přepisu v odvozené třídě, čeká na dokončení všech asynchronních operací.|
+|[async_send](#async_send)|Při přepsání v odvozené třídě umístí zprávy do bloku asynchronně.|
+|[sync_send](#sync_send)|Při přepsání v odvozené třídě umístí zprávy do bloku synchronně.|
+|[Počkej](#wait)|Při přepsání v odvozené třídě čeká na dokončení všech asynchronních operací.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|Při přepisu v odvozené třídě, provádí dopředu zpracování zpráv do bloku. Volá se jednou pokaždé, když se přidá nová zpráva a fronta je nalezena prázdný.|
+|[process_incoming_message](#process_incoming_message)|Při přepsání v odvozené třídě provede zpracování zpráv do bloku. Volá se jednou při každém přidání nové zprávy a ta se najde jako prázdná.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -62,69 +62,69 @@ Datový typ datové části v rámci zprávy zpracovává situace `message_proce
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="async_send"></a> async_send –
+## <a name="async_send"></a>async_send
 
-Při přepisu v odvozené třídě, umístí zprávy asynchronně do bloku.
+Při přepsání v odvozené třídě umístí zprávy do bloku asynchronně.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Msg*<br/>
-A `message` objektu k odesílání asynchronně.
+Objekt `message`, který se má odeslat asynchronně.
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace by měly přepsat tuto metodu.
+Implementace procesoru by měla přepsat tuto metodu.
 
-##  <a name="process_incoming_message"></a> process_incoming_message –
+## <a name="process_incoming_message"></a>process_incoming_message
 
-Při přepisu v odvozené třídě, provádí dopředu zpracování zpráv do bloku. Volá se jednou pokaždé, když se přidá nová zpráva a fronta je nalezena prázdný.
+Při přepsání v odvozené třídě provede zpracování zpráv do bloku. Volá se jednou při každém přidání nové zprávy a ta se najde jako prázdná.
 
-```
+```cpp
 virtual void process_incoming_message() = 0;
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace bloku zpráv by měly přepsat tuto metodu.
+Implementace bloku zprávy by měly přepsat tuto metodu.
 
-##  <a name="sync_send"></a> sync_send –
+## <a name="sync_send"></a>sync_send
 
-Při přepisu v odvozené třídě, umístí zprávy synchronně do bloku.
+Při přepsání v odvozené třídě umístí zprávy do bloku synchronně.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Msg*<br/>
-A `message` objekt se má poslat synchronně.
+Objekt `message`, který se má synchronně odeslat.
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace by měly přepsat tuto metodu.
+Implementace procesoru by měla přepsat tuto metodu.
 
-##  <a name="wait"></a> Počkej
+## <a name="wait"></a>Počkej
 
-Při přepisu v odvozené třídě, čeká na dokončení všech asynchronních operací.
+Při přepsání v odvozené třídě čeká na dokončení všech asynchronních operací.
 
-```
+```cpp
 virtual void wait() = 0;
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace by měly přepsat tuto metodu.
+Implementace procesoru by měla přepsat tuto metodu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [ordered_message_processor – třída](ordered-message-processor-class.md)

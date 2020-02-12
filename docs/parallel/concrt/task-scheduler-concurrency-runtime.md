@@ -16,44 +16,44 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4a2e66afe656f9588ed3040218d1f70b3684190
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180053"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143313"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Plánovač úloh (Concurrency Runtime)
 
-Témata v této části dokumentace popisují důležité funkce plánovače úloh modulu Runtime souběžnosti. Plánovač úloh je užitečné, pokud chcete optimalizovat výkon váš stávající kód, který používá modulu Runtime souběžnosti.
+Témata v této části dokumentace popisují důležité funkce Concurrency Runtime Plánovač úloh. Plánovač úloh je užitečné, pokud chcete vyladit výkon stávajícího kódu, který používá Concurrency Runtime.
 
 > [!IMPORTANT]
->  Plánovač úloh není k dispozici z aplikace pro univerzální platformu Windows (UPW). Další informace najdete v tématu [vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
+> Plánovač úloh není k dispozici z aplikace Univerzální platforma Windows (UWP). Další informace najdete v tématu [Vytváření asynchronních operací C++ v pro aplikace pro UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 >
->  V sadě Visual Studio 2015 a novější [concurrency::task](../../parallel/concrt/reference/task-class.md) třídy a souvisejících typů v ppltasks.h používat Windows fondu vláken jako jejich plánovače. Toto téma se týká už na typy, které jsou definovány v ppltasks.h. Paralelní algoritmy, jako je například parallel_for dál používat jako výchozí plánovač Concurrency Runtime.
+> V aplikaci Visual Studio 2015 nebo novější má třída [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) a související typy v ppltasks. h použít jako svůj Plánovač fondu Windows. Toto téma již neplatí pro typy, které jsou definovány v ppltasks. h. Paralelní algoritmy jako parallel_for nadále používají Concurrency Runtime jako výchozí Plánovač.
 
 > [!TIP]
->  Poskytuje výchozí plánovač Concurrency Runtime, a proto není nutné vytvořit ve vaší aplikaci. Vzhledem k tomu, že Plánovač úloh umožňuje optimalizovat výkon vašich aplikací, doporučujeme začít s [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) máte nového modulu runtime souběžnosti.
+> Concurrency Runtime poskytuje výchozí Plánovač, a proto není nutné ho v aplikaci vytvořit. Vzhledem k tomu, že Plánovač úloh pomáhá doladit výkon aplikací, doporučujeme začít s knihovnou [paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo s [knihovnou asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md) , pokud s Concurrency Runtime začínáte.
 
-Plánovač úloh plánuje a koordinuje úkoly v době běhu. A *úloh* je jednotka práce, která provádí určitou úlohu. Úlohy lze zpravidla běží paralelně s jinými úkoly. Práce, která se provádí tak, že úkol skupiny položek, paralelní algoritmy a asynchronních agentů jsou všechny příklady úloh.
+Plánovač úloh plány a koordinuje úlohy za běhu. *Úkol* je jednotka práce, která provádí určitou úlohu. Úkol obvykle může běžet paralelně s jinými úkoly. Práce, která je prováděna položkami skupiny úloh, paralelní algoritmy a asynchronní agenti, jsou všechny příklady úloh.
 
-Plánovač úloh spravuje podrobnosti, které se vztahují k efektivnímu plánování úkolů na počítače, které mají víc výpočetních prostředků. Plánovač úloh také využívá nejnovější funkce základního operačního systému. Proto aplikace, které automaticky používají modulu Runtime souběžnosti škálování a zlepšit hardware, který se má rozšířit možnosti.
+Plánovač úloh spravuje podrobnosti, které se týkají efektivního plánování úloh v počítačích, které mají více výpočetních prostředků. Plánovač úloh také využívá nejnovější funkce základního operačního systému. Proto aplikace, které používají Concurrency Runtime automaticky škálují a zlepšují na hardwaru, který má rozšířené možnosti.
 
-[Porovnání s další modely souběžného zpracování](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) popisuje rozdíly mezi plánování mechanismy preemptive a spolupráci. Plánovač úloh používá k dosažení maximální využití prostředků zpracování plánování spolupráce a algoritmus přebírající práci spolu s plánovači preemptive operačního systému.
+[Porovnání s jinými modely souběžnosti](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) popisuje rozdíly mezi mechanismy pro nečinnost a postupy plánování pro spolupráci. Plánovač úloh využívá plánování spolupráce a algoritmus pro pracovní krádeže spolu s nedostupným plánovačem operačního systému za účelem dosažení maximálního využití prostředků zpracování.
 
-Concurrency Runtime poskytuje výchozí plánovače, takže není nutné spravovat infrastrukturu podrobnosti. Proto je obvykle velmi riskantní používat Plánovač úloh přímo. Podle potřeb kvality vaší aplikace, ale můžete použít Plánovač úloh poskytnout vlastní plánování zásad nebo přidružení plánovači s konkrétními úlohami. Předpokládejme například, že máte paralelní řazení rutinu, která není škálovat na více než čtyři procesory. Můžete použít *zásady plánovače* k vytvoření plánovače, která generuje více než čtyři souběžné úkoly. Spuštění rutiny řazení na tento plánovač umožňuje další aktivní plánovači používat všechny zbývající prostředky na zpracování.
+Concurrency Runtime poskytuje výchozí Plánovač, takže nemusíte spravovat podrobnosti o infrastruktuře. Proto obvykle nepoužíváte Plánovač úloh přímo. Pro splnění potřeb kvality aplikace ale můžete použít Plánovač úloh k poskytnutí vlastních zásad plánování nebo k přidružení plánovačů ke konkrétním úlohám. Předpokládejme například, že máte paralelní řadicí rutinu, která neškáluje více než čtyři procesory. Pomocí *zásad Scheduleru* můžete vytvořit Plánovač, který negeneruje víc než čtyři souběžné úlohy. Spuštění řadicí rutiny v tomto plánovači umožňuje jiným aktivním plánovačům používat libovolné zbývající prostředky zpracování.
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[Instance plánovače](../../parallel/concrt/scheduler-instances.md)|Popisuje instance plánovače a jak používat `concurrency::Scheduler` a `concurrency::CurrentScheduler` třídy k jejich správě. Instance plánovače použijte, pokud chcete přidružit explicitní zásady plánování určité druhy úloh.|
-|[Zásady plánovače](../../parallel/concrt/scheduler-policies.md)|Popisuje roli zásady plánovače. Použijte zásady plánovače, pokud chcete řídit strategie, Plánovač používá při správě úloh.|
-|[Skupiny plánů](../../parallel/concrt/schedule-groups.md)|Popisuje roli skupiny plánu. Použití skupin plánů Pokud vyžadujete vysoký stupeň lokality mezi úkoly, třeba když skupinu úkoly související s výhodou spuštěna ve stejném uzlu procesoru.|
-|[Prosté úlohy](../../parallel/concrt/lightweight-tasks.md)|Popisuje využití jednoduché úlohy. Prosté úlohy jsou užitečné při přizpůsobení stávajícího kódu pro použití funkce plánování modulu Runtime souběžnosti.|
-|[Kontexty](../../parallel/concrt/contexts.md)|Popisuje roli kontextů, `concurrency::wait` funkce a `concurrency::Context` třídy. Tuto funkci používejte, když potřebují mít kontrolu nad při kontexty blokovat, odblokovat a pozastavit nebo pokud chcete povolit překročení stanovených ve vaší aplikaci.|
-|[Funkce správy paměti](../../parallel/concrt/memory-management-functions.md)|Popisuje `concurrency::Alloc` a `concurrency::Free` funkce. Tyto funkce lze vylepšit výkon paměti přidělování a uvolňování paměti souběžných způsobem.|
-|[Porovnání s jinými modely souběžného zpracování](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Popisuje rozdíly mezi plánování mechanismy preemptive a spolupráci.|
-|[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Popisuje způsob použití různých paralelních vzorů, třeba paralelní algoritmy, ve svých aplikacích.|
-|[Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)|Popisuje způsob použití asynchronních agentů ve svých aplikacích.|
-|[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)|Popisuje modulu Runtime souběžnosti, který zjednodušuje paralelní programování a obsahuje odkazy na související témata.|
+|[Instance plánovače](../../parallel/concrt/scheduler-instances.md)|Popisuje instance Scheduleru a způsob použití tříd `concurrency::Scheduler` a `concurrency::CurrentScheduler` ke správě těchto instancí. Instance Scheduleru použijte, když chcete přidružit explicitní zásady plánování ke konkrétním typům úloh.|
+|[Zásady plánovače](../../parallel/concrt/scheduler-policies.md)|Popisuje roli zásad plánovače. Zásady plánovače použijte, když chcete řídit strategii, kterou Plánovač používá při správě úkolů.|
+|[Skupiny plánů](../../parallel/concrt/schedule-groups.md)|Popisuje roli skupin plánování. Skupiny plánů se používají, když budete potřebovat vysoký stupeň lokálních operací mezi úkoly, například když se skupina souvisejících úloh vykonává ve stejném uzlu procesoru.|
+|[Prosté úlohy](../../parallel/concrt/lightweight-tasks.md)|Popisuje roli zjednodušených úloh. Jednoduché úlohy jsou užitečné, když upravujete existující kód pro použití funkce plánování Concurrency Runtime.|
+|[Kontexty](../../parallel/concrt/contexts.md)|Popisuje roli kontextů, funkci `concurrency::wait` a třídu `concurrency::Context`. Tuto funkci použijte, pokud potřebujete kontrolu nad tím, kdy kontexty zablokují, odblokuje a vrátí nebo když chcete v aplikaci povolit převzetí služeb při selhání.|
+|[Funkce správy paměti](../../parallel/concrt/memory-management-functions.md)|Popisuje funkce `concurrency::Alloc` a `concurrency::Free`. Tyto funkce mohou zlepšit výkon paměti tím, že přidělíte a uvolníte paměť souběžným způsobem.|
+|[Porovnání s jinými modely souběžnosti](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Popisuje rozdíly mezi mechanismy pro přerušení a spolupráci.|
+|[Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Popisuje, jak používat různé paralelní vzory, například paralelní algoritmy, ve vašich aplikacích.|
+|[Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)|Popisuje způsob použití asynchronních agentů ve vašich aplikacích.|
+|[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)|Popisuje Concurrency Runtime, který zjednodušuje paralelní programování a obsahuje odkazy na Příbuzná témata.|

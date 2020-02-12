@@ -9,28 +9,28 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: dac74085278418153ddec502f6257ce13885704d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd8f50a8c9829ff9de3e2412b89aa4de88d90db6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394374"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138776"
 ---
-# <a name="progressreporter-class"></a>progress_reporter – třída
+# <a name="progress_reporter-class"></a>progress_reporter – třída
 
-Třída zpravodaj pokroku umožňuje vykazování průběhu oznámení určitého typu. Každý objekt progress_reporter je vázán na konkrétní asynchronní akci nebo operaci.
+Třída zpravodaj průběhu umožňuje vytváření sestav o průběhu konkrétního typu. Každý objekt progress_reporter je vázán na určitou asynchronní akci nebo operaci.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<typename _ProgressType>
 class progress_reporter;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_ProgressType*<br/>
-Typ datové části každého oznámení o pokroku vykázaného prostřednictvím.
+Typ datové části pro každé oznámení o průběhu hlášené prostřednictvím zpravodajového procesu.
 
 ## <a name="members"></a>Členové
 
@@ -44,11 +44,11 @@ Typ datové části každého oznámení o pokroku vykázaného prostřednictví
 
 |Název|Popis|
 |----------|-----------------|
-|[Sestavy](#report)|Odešle zprávu o pokroku asynchronní akce nebo operace, ke kterému je vázán tento zpravodaj pokroku.|
+|[slouží](#report)|Odešle zprávu o průběhu asynchronní akci nebo operaci, na kterou je vázán tento přístavů průběhu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tento typ je pouze k dispozici pro aplikace Windows Runtime.
+Tento typ je k dispozici jenom pro prostředí Windows Runtime aplikace.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -56,29 +56,29 @@ Tento typ je pouze k dispozici pro aplikace Windows Runtime.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ppltasks.h
+**Záhlaví:** ppltasks. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> progress_reporter –
+## <a name="ctor"></a>progress_reporter
 
-```
+```cpp
 progress_reporter();
 ```
 
-##  <a name="report"></a> Sestavy
+## <a name="report"></a>slouží
 
-Odešle zprávu o pokroku asynchronní akce nebo operace, ke kterému je vázán tento zpravodaj pokroku.
+Odešle zprávu o průběhu asynchronní akci nebo operaci, na kterou je vázán tento přístavů průběhu.
 
-```
+```cpp
 void report(const _ProgressType& val) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
-Datové zprávy prostřednictvím oznámení postupu.
+*počítává*<br/>
+Datová část, která se má ohlásit pomocí oznámení o průběhu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

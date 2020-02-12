@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-ms.openlocfilehash: 326a2dfc6837665adb4d46a6aaa8780052ad2b22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eed5dd242beb4c4cd481f22635e0d5f71c28d7e6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296095"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139180"
 ---
-# <a name="defaultschedulerexists-class"></a>default_scheduler_exists – třída
+# <a name="default_scheduler_exists-class"></a>default_scheduler_exists – třída
 
-Tato třída popisuje výjimku vyvolána, když `Scheduler::SetDefaultSchedulerPolicy` metoda se volá, když je výchozím plánovačem již existuje v rámci procesu.
+Tato třída popisuje výjimku vyvolanou při volání metody `Scheduler::SetDefaultSchedulerPolicy`, když výchozí Plánovač již v rámci procesu existuje.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class default_scheduler_exists : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class default_scheduler_exists : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[default_scheduler_exists](#ctor)|Přetíženo. Vytvoří `default_scheduler_exists` objektu.|
+|[default_scheduler_exists](#ctor)|Přetíženo. Vytvoří objekt `default_scheduler_exists`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,15 +41,15 @@ class default_scheduler_exists : public std::exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> default_scheduler_exists –
+## <a name="ctor"></a>default_scheduler_exists
 
-Vytvoří `default_scheduler_exists` objektu.
+Vytvoří objekt `default_scheduler_exists`.
 
-```
+```cpp
 explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
 
 default_scheduler_exists() throw();
@@ -58,8 +58,8 @@ default_scheduler_exists() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

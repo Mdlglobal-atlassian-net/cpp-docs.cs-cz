@@ -12,32 +12,32 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 700d052b6f22c970387a3ab45d299538a5b74e1b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343854"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139532"
 ---
 # <a name="message-class"></a>message – třída
 
-Obálky základní zprávy obsahující datovou část předávaný mezi bloky zasílání zpráv.
+Základní obálka zprávy obsahující datovou část dat, která se předává mezi bloky pro zasílání zpráv.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class T>
 class message : public ::Concurrency::details::_Runtime_object;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Datový typ datové části v rámci zprávy.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -47,22 +47,22 @@ Datový typ datové části v rámci zprávy.
 
 |Název|Popis|
 |----------|-----------------|
-|[message](#ctor)|Přetíženo. Vytvoří `message` objektu.|
-|[~ message – destruktor](#dtor)|Odstraní `message` objektu.|
+|[message](#ctor)|Přetíženo. Vytvoří objekt `message`.|
+|[~ Message – destruktor](#dtor)|Odstraní objekt `message`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[add_ref](#add_ref)|Přidá počet odkazů `message` objektu. Používá se pro bloky zpráv, které potřebují k určení doby života zprávy pro počítání odkazů.|
-|[msg_id](#msg_id)|Vrátí ID `message` objektu.|
-|[remove_ref](#remove_ref)|Odečte od počet odkazů `message` objektu. Používá se pro bloky zpráv, které potřebují k určení doby života zprávy pro počítání odkazů.|
+|[add_ref](#add_ref)|Přidá do počtu odkazů pro objekt `message`. Používá se pro bloky zpráv, které vyžadují počítání odkazů, aby bylo možné určit dobu života zprávy.|
+|[msg_id](#msg_id)|Vrátí ID objektu `message`.|
+|[remove_ref](#remove_ref)|Odečte od počtu odkazů pro objekt `message`. Používá se pro bloky zpráv, které vyžadují počítání odkazů, aby bylo možné určit dobu života zprávy.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Název|Popis|
 |----------|-----------------|
-|[datová část](#payload)|Datová část `message` objektu.|
+|[Délka](#payload)|Datová část objektu `message`.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -74,27 +74,27 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="add_ref"></a> add_ref –
+## <a name="add_ref"></a>add_ref
 
-Přidá počet odkazů `message` objektu. Používá se pro bloky zpráv, které potřebují k určení doby života zprávy pro počítání odkazů.
+Přidá do počtu odkazů pro objekt `message`. Používá se pro bloky zpráv, které vyžadují počítání odkazů, aby bylo možné určit dobu života zprávy.
 
-```
+```cpp
 long add_ref();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nová hodnota počet odkazů.
+Nová hodnota počtu odkazů
 
-##  <a name="ctor"></a> Zpráva
+## <a name="ctor"></a>Zpráva
 
-Vytvoří `message` objektu.
+Vytvoří objekt `message`.
 
-```
+```cpp
 message(
     T const& _P);
 
@@ -112,58 +112,58 @@ message(
 ### <a name="parameters"></a>Parametry
 
 *_P*<br/>
-Datová část této zprávy.
+Datová část této zprávy
 
-*ID _ovládacího*<br/>
-Jedinečné ID této zprávy.
+*_Id*<br/>
+Jedinečné ID této zprávy
 
 *_Msg*<br/>
-Odkaz nebo ukazatel `message` objektu.
+Odkaz nebo ukazatel na objekt `message`.
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor, který bere ukazatel na `message` jak argument vyvolá [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimka Pokud parametr `_Msg` je `NULL`.
+Konstruktor, který přebírá ukazatel na objekt `message` jako argument vyvolá výjimku [invalid_argument](../../../standard-library/invalid-argument-class.md) , pokud je parametr `_Msg` `NULL`.
 
-##  <a name="dtor"></a> ~ zprávy
+## <a name="dtor"></a>~ Zpráva
 
-Odstraní `message` objektu.
+Odstraní objekt `message`.
 
-```
+```cpp
 virtual ~message();
 ```
 
-##  <a name="msg_id"></a> msg_id
+## <a name="msg_id"></a>msg_id
 
-Vrátí ID `message` objektu.
+Vrátí ID objektu `message`.
 
-```
+```cpp
 runtime_object_identity msg_id() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`runtime_object_identity` z `message` objektu.
+`runtime_object_identity` objektu `message`
 
-##  <a name="payload"></a> datová část
+## <a name="payload"></a>Délka
 
-Datová část `message` objektu.
+Datová část objektu `message`.
 
-```
+```cpp
 T const payload;
 ```
 
-##  <a name="remove_ref"></a> remove_ref –
+## <a name="remove_ref"></a>remove_ref
 
-Odečte od počet odkazů `message` objektu. Používá se pro bloky zpráv, které potřebují k určení doby života zprávy pro počítání odkazů.
+Odečte od počtu odkazů pro objekt `message`. Používá se pro bloky zpráv, které vyžadují počítání odkazů, aby bylo možné určit dobu života zprávy.
 
-```
+```cpp
 long remove_ref();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nová hodnota počet odkazů.
+Nová hodnota počtu odkazů
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

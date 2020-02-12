@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c72b4b086e932f4fe404259c25f8d2c8be2be31
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262388"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138848"
 ---
 # <a name="event-class"></a>event – třída
 
-Ruční obnovení události, která je explicitně vědoma souběžnosti modulu runtime.
+Událost ručního resetování, která je výslovně informována o Concurrency Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class event;
 ```
 
@@ -35,26 +35,26 @@ class event;
 
 |Název|Popis|
 |----------|-----------------|
-|[~ event – destruktor](#dtor)|Zničí událost.|
+|[~ Event – destruktor](#dtor)|Zničí událost.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[reset](#reset)|Obnoví událost do nesignálového stavu.|
+|[nové](#reset)|Obnoví událost na stav bez signalizace.|
 |[set](#set)|Signalizuje událost.|
-|[Počkej](#wait)|Čeká na signálování události.|
-|[wait_for_multiple](#wait_for_multiple)|Čeká na signálování více událostí.|
+|[Počkej](#wait)|Čeká, až se událost přestane signalizovat.|
+|[wait_for_multiple](#wait_for_multiple)|Čeká, až se zasignalizují více událostí.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
 |Název|Popis|
 |----------|-----------------|
-|[timeout_infinite](#timeout_infinite)|Hodnota označující, že čekání by nemělo nikdy vypršet.|
+|[timeout_infinite](#timeout_infinite)|Hodnota označující, že čas čekání by neměl nikdy trvat.|
 
 ## <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [synchronizačních datových struktur](../../../parallel/concrt/synchronization-data-structures.md).
+Další informace najdete v tématu [Synchronizace datových struktur](../../../parallel/concrt/synchronization-data-structures.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -62,85 +62,85 @@ Další informace najdete v tématu [synchronizačních datových struktur](../.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> Události
+## <a name="ctor"></a>událostí
 
 Vytvoří novou událost.
 
-```
+```cpp
 _CRTIMP event();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="dtor"></a> ~ události
+## <a name="dtor"></a>~ – událost
 
 Zničí událost.
 
-```
+```cpp
 ~event();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Očekává se, že neexistují žádná vlákna čekající na událost při spuštění destruktoru. Povolení událostí k destrukci pomocí vláken, která stále čekají způsobí nedefinované chování.
+Očekává se, že při spuštění destruktoru nečekají na událost žádná vlákna. Umožnění destrukci události s vlákny, na kterých stále čeká, má za následek nedefinované chování.
 
-##  <a name="reset"></a> Resetovat
+## <a name="reset"></a>nové
 
-Obnoví událost do nesignálového stavu.
+Obnoví událost na stav bez signalizace.
 
-```
+```cpp
 void reset();
 ```
 
-##  <a name="set"></a> Nastavit
+## <a name="set"></a>stanovenými
 
 Signalizuje událost.
 
-```
+```cpp
 void set();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Signalizace události může způsobit, že libovolný počet kontextů čekat na spustitelnost události.
+Signalizace události může způsobit, že libovolný počet kontextů čeká na událost, která má být spustitelný.
 
-##  <a name="timeout_infinite"></a> timeout_infinite
+## <a name="timeout_infinite"></a>timeout_infinite
 
-Hodnota označující, že čekání by nemělo nikdy vypršet.
+Hodnota označující, že čas čekání by neměl nikdy trvat.
 
-```
+```cpp
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-##  <a name="wait"></a> Počkej
+## <a name="wait"></a>Počkej
 
-Čeká na signálování události.
+Čeká, až se událost přestane signalizovat.
 
-```
+```cpp
 size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Vypršení časového limitu*<br/>
-Určuje počet milisekund před vypršením čekání. Hodnota `COOPERATIVE_TIMEOUT_INFINITE` znamená, že neexistuje žádný časový limit.
+*_Timeout*<br/>
+Označuje počet milisekund, po jejichž uplynutí vypršel časový limit. Hodnota `COOPERATIVE_TIMEOUT_INFINITE` znamená, že neexistuje žádný časový limit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud bylo čekání splněno, hodnota `0` je vrácena; jinak hodnota `COOPERATIVE_WAIT_TIMEOUT` k označení, že vypršení čekání bez signalizace události.
+Pokud bylo čekání splněno, je vrácena hodnota `0`. v opačném případě hodnota `COOPERATIVE_WAIT_TIMEOUT` označuje, že čekání vypršel časový limit, aniž by došlo k signalizaci události.
 
 > [!IMPORTANT]
->  V aplikaci pro univerzální platformu Windows (UPW), nevolejte `wait` na ASTA vlákno, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane reagovat.
+> V aplikaci Univerzální platforma Windows (UWP) Nevolejte `wait` ve vlákně ASTA, protože toto volání může zablokovat aktuální vlákno a může způsobit, že aplikace přestane reagovat.
 
-##  <a name="wait_for_multiple"></a> wait_for_multiple –
+## <a name="wait_for_multiple"></a>wait_for_multiple
 
-Čeká na signálování více událostí.
+Čeká, až se zasignalizují více událostí.
 
-```
+```cpp
 static size_t __cdecl wait_for_multiple(
     _In_reads_(count) event** _PPEvents,
     size_t count,
@@ -151,28 +151,28 @@ static size_t __cdecl wait_for_multiple(
 ### <a name="parameters"></a>Parametry
 
 *_PPEvents*<br/>
-Pole událostí pro čekání. Počet událostí v poli je indikován `count` parametru.
+Pole událostí, na které se má čekat. Počet událostí v poli je označen parametrem `count`.
 
-*Počet*<br/>
-Počet událostí v poli v `_PPEvents` parametru.
+*count*<br/>
+Počet událostí v poli, které jsou zadány v parametru `_PPEvents`.
 
 *_FWaitAll*<br/>
-Pokud nastaveno na hodnotu **true**, parametr určuje, že všechny události v poli dodané v `_PPEvents` parametr musí být signalizovány, aby vyhověly čekání. Pokud nastaveno na hodnotu **false**, určuje, že všechny události v poli dodané v `_PPEvents` parametr stávají signalizovanými vyhoví čekání.
+Pokud je nastavena na hodnotu **true**, parametr určuje, že všechny události v poli, které jsou zadány v parametru `_PPEvents`, musí být oznámeny, aby bylo možné vyhovět čekání. Pokud je nastavena na hodnotu **false**, určuje, že jakákoli událost v poli, která je uvedena v parametru `_PPEvents` přestala signalizovat, bude vyhovovat čekání.
 
-*_Vypršení časového limitu*<br/>
-Určuje počet milisekund před vypršením čekání. Hodnota `COOPERATIVE_TIMEOUT_INFINITE` znamená, že neexistuje žádný časový limit.
+*_Timeout*<br/>
+Označuje počet milisekund, po jejichž uplynutí vypršel časový limit. Hodnota `COOPERATIVE_TIMEOUT_INFINITE` znamená, že neexistuje žádný časový limit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud bylo čekání uspokojeno, index v poli dodané v `_PPEvents` parametr, který splnil čekací podmínku; v opačném případě hodnota `COOPERATIVE_WAIT_TIMEOUT` k označení, že vypršení čekání bez splnění podmínky.
+Pokud bylo čekání splněno, index v poli dodaném v parametru `_PPEvents`, který splnil čekací podmínku; v opačném případě hodnota `COOPERATIVE_WAIT_TIMEOUT` označuje, že čekání vypršela bez splněné podmínky.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud parametr `_FWaitAll` je nastaveno na hodnotu `true` k označení, že všechny události musí být signalizovány, aby splnily čekání, index vrácený funkcí nemá žádný speciální význam mimo skutečnost, že není hodnota `COOPERATIVE_WAIT_TIMEOUT`.
+Pokud je parametr `_FWaitAll` nastaven na hodnotu `true`, aby označoval, že všechny události musí být signalizaci, aby splňovaly čekání, index vrácený funkcí nepřenese žádný zvláštní význam, než fakt, že se nejedná o hodnotu `COOPERATIVE_WAIT_TIMEOUT`.
 
 > [!IMPORTANT]
-> V aplikaci pro univerzální platformu Windows (UPW), nevolejte `wait_for_multiple` na ASTA vlákno, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane reagovat.
+> V aplikaci Univerzální platforma Windows (UWP) Nevolejte `wait_for_multiple` ve vlákně ASTA, protože toto volání může zablokovat aktuální vlákno a může způsobit, že aplikace přestane reagovat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

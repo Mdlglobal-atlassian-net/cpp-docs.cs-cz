@@ -18,32 +18,32 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75c7697087b8b3ad8ff15ae4d08f2b4701aaa36a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408066"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142358"
 ---
 # <a name="transformer-class"></a>Třída transformer
 
-A `transformer` blok zpráv je jeden cíl, více zdroje, seřazený `propagator_block` který může přijmout zprávy z jednoho typu a umožňuje ukládání množství zpráv jiného typu.
+`transformer` blok zasílání zpráv je jeden cíl, více zdrojů seřazený `propagator_block`, který může přijímat zprávy jednoho typu a je schopný ukládat neohraničený počet zpráv jiného typu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class _Input, class _Output>
 class transformer : public propagator_block<single_link_registry<ITarget<_Output>>,
     multi_link_registry<ISource<_Input>>>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_Input*<br/>
-Typ datové části zprávy přijal vyrovnávací paměti.
+Typ datové části zpráv přijatých vyrovnávací pamětí.
 
 *_Output*<br/>
-Typ datové části zprávy, uloženy a šířen mimo ve vyrovnávací paměti.
+Typ datové části zpráv uložených a šířených vyrovnávací pamětí.
 
 ## <a name="members"></a>Členové
 
@@ -51,23 +51,23 @@ Typ datové části zprávy, uloženy a šířen mimo ve vyrovnávací paměti.
 
 |Název|Popis|
 |----------|-----------------|
-|[transformer](#ctor)|Přetíženo. Vytvoří `transformer` blok zpráv.|
-|[~transformer Destructor](#dtor)|Odstraní `transformer` blok zpráv.|
+|[Transformer](#ctor)|Přetíženo. Vytvoří blok pro zasílání zpráv `transformer`.|
+|[~ Transformer – destruktor](#dtor)|Odstraní blok zasílání zpráv `transformer`.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[accept_message](#accept_message)|Přijme zprávu, která byly nabízeny situace `transformer` blok zpráv, přenos vlastnictví volajícímu.|
-|[consume_message](#consume_message)|Využívá dříve nabízená zpráva `transformer` a vyhrazená v cíli, přenos vlastnictví volajícímu.|
-|[link_target_notification](#link_target_notification)|Zpětné volání, která upozorňuje, že nový cíl je propojená s tím `transformer` blok zpráv.|
-|[propagate_message](#propagate_message)|Asynchronně předává zprávy ze `ISource` bloku k tomuto `transformer` blok zpráv. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Provede funkci transformer na vstupní zprávy.|
-|[release_message](#release_message)|Uvolní předchozí rezervace zprávy. (Přepíše [source_block::release_message –](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Vyhradí zprávu nabízely dříve v tomto `transformer` blok zpráv. (Přepíše [source_block::reserve_message –](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Obnoví šíření po rezervaci byla uvolněna. (Přepíše [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|
-|[send_message](#send_message)|Synchronně předává zprávy ze `ISource` bloku k tomuto `transformer` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.|
-|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
+|[accept_message](#accept_message)|Přijme zprávu, kterou nabídl tento `transformer` blok pro zasílání zpráv a přenáší vlastnictví volajícímu.|
+|[consume_message](#consume_message)|Spotřebovává zprávu, kterou dřív nabídl `transformer` a rezervovala cíl, a přenáší vlastnictví volajícímu.|
+|[link_target_notification](#link_target_notification)|Zpětné volání upozorňující na to, že nový cíl byl propojen s tímto `transformer`m blokem zasílání zpráv.|
+|[propagate_message](#propagate_message)|Asynchronně předává zprávu z `ISource` bloku do tohoto `transformer` bloku zpráv. Je vyvolána metodou `propagate`, když je volána pomocí zdrojového bloku.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Spustí funkci Transformer na vstupních zprávách.|
+|[release_message](#release_message)|Uvolní předchozí rezervaci zprávy. (Potlačení [source_block:: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Vyhradí zprávu, kterou dřív nabídl tento `transformer` blok pro zasílání zpráv. (Potlačení [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Po vydání rezervace pokračuje v šíření. (Potlačení [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[send_message](#send_message)|Synchronně předává zprávu z `ISource` bloku do tohoto `transformer` bloku zpráv. Je vyvolána metodou `send`, když je volána pomocí zdrojového bloku.|
+|[supports_anonymous_source](#supports_anonymous_source)|Přepíše metodu `supports_anonymous_source`, aby označovala, že tento blok může přijímat zprávy, které mu byly nabídnuty zdrojem, který není propojen. (Overrides [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -87,61 +87,61 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Přijme zprávu, která byly nabízeny situace `transformer` blok zpráv, přenos vlastnictví volajícímu.
+Přijme zprávu, kterou nabídl tento `transformer` blok pro zasílání zpráv a přenáší vlastnictví volajícímu.
 
-```
+```cpp
 virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` Nabízených `message` objektu.
+`runtime_object_identity` nabízeného objektu `message`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `message` volající má teď vlastnictví objektu.
+Ukazatel na objekt `message`, u kterého má volající nyní vlastnictví.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Využívá dříve nabízená zpráva `transformer` a vyhrazená v cíli, přenos vlastnictví volajícímu.
+Spotřebovává zprávu, kterou dřív nabídl `transformer` a rezervovala cíl, a přenáší vlastnictví volajícímu.
 
-```
+```cpp
 virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objektu spotřebovává.
+`runtime_object_identity` spotřebovaného objektu `message`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `message` volající má teď vlastnictví objektu.
+Ukazatel na objekt `message`, u kterého má volající nyní vlastnictví.
 
 ### <a name="remarks"></a>Poznámky
 
 Podobně jako `accept`, ale vždy předchází volání `reserve`.
 
-##  <a name="link_target_notification"></a> link_target_notification –
+## <a name="link_target_notification"></a>link_target_notification
 
-Zpětné volání, která upozorňuje, že nový cíl je propojená s tím `transformer` blok zpráv.
+Zpětné volání upozorňující na to, že nový cíl byl propojen s tímto `transformer`m blokem zasílání zpráv.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Asynchronně předává zprávy ze `ISource` bloku k tomuto `transformer` blok zpráv. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.
+Asynchronně předává zprávu z `ISource` bloku do tohoto `transformer` bloku zpráv. Je vyvolána metodou `propagate`, když je volána pomocí zdrojového bloku.
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<_Input>* _PMessage,
     _Inout_ ISource<_Input>* _PSource);
@@ -150,70 +150,70 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Ukazatel `message` objektu.
+Ukazatel na objekt `message`.
 
 *_PSource*<br/>
-Ukazatele na blok zdroje nabídky zprávy.
+Ukazatel na zdrojový blok, který nabízí zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.
+[Message_status](concurrency-namespace-enums.md) údaj o tom, co se cíli rozhodl s touto zprávou.
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Provede funkci transformer na vstupní zprávy.
+Spustí funkci Transformer na vstupních zprávách.
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Uvolní předchozí rezervace zprávy.
+Uvolní předchozí rezervaci zprávy.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objektu se vydávají.
+`runtime_object_identity` vydaných `message` objektu.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Vyhradí zprávu nabízely dříve v tomto `transformer` blok zpráv.
+Vyhradí zprávu, kterou dřív nabídl tento `transformer` blok pro zasílání zpráv.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objekt dochází k rezervaci.
+`runtime_object_identity` rezervovaného objektu `message`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud zpráva byla úspěšně vyhrazené, **false** jinak.
+**true** , pokud byla zpráva úspěšně rezervována, jinak **false** .
 
 ### <a name="remarks"></a>Poznámky
 
-Po `reserve` je volána, pokud se vrátí **true**– buď `consume` nebo `release` využít nebo uvolnit vlastnictví zprávy musí být volána.
+Po volání `reserve`, pokud vrátí **hodnotu true**, musí být buď volána `consume` nebo `release`, aby bylo možné převzít nebo uvolnit vlastnictví zprávy.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Obnoví šíření po rezervaci byla uvolněna.
+Po vydání rezervace pokračuje v šíření.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-Synchronně předává zprávy ze `ISource` bloku k tomuto `transformer` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.
+Synchronně předává zprávu z `ISource` bloku do tohoto `transformer` bloku zpráv. Je vyvolána metodou `send`, když je volána pomocí zdrojového bloku.
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<_Input>* _PMessage,
     _Inout_ ISource<_Input>* _PSource);
@@ -222,32 +222,32 @@ virtual message_status send_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Ukazatel `message` objektu.
+Ukazatel na objekt `message`.
 
 *_PSource*<br/>
-Ukazatele na blok zdroje nabídky zprávy.
+Ukazatel na zdrojový blok, který nabízí zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.
+[Message_status](concurrency-namespace-enums.md) údaj o tom, co se cíli rozhodl s touto zprávou.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source –
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený.
+Přepíše metodu `supports_anonymous_source`, aby označovala, že tento blok může přijímat zprávy, které mu byly nabídnuty zdrojem, který není propojen.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** protože bloku není odložit nabízené zprávy.
+**true** , protože blok odloží nabízené zprávy.
 
-##  <a name="ctor"></a> Transformer
+## <a name="ctor"></a>Transformer
 
-Vytvoří `transformer` blok zpráv.
+Vytvoří blok pro zasílání zpráv `transformer`.
 
-```
+```cpp
 transformer(
     _Transform_method const& _Func,
     _Inout_opt_ ITarget<_Output>* _PTarget = NULL);
@@ -283,37 +283,37 @@ transformer(
 ### <a name="parameters"></a>Parametry
 
 *_Func*<br/>
-Funkce, která bude volána pro každé přijaté zprávy.
+Funkce, která bude vyvolána pro každou přijatou zprávu.
 
 *_PTarget*<br/>
-Ukazatel na cílový blok pro propojení transformátoru.
+Ukazatel na cílový blok, který se má propojit s transformátorem.
 
 *_Filter*<br/>
-Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.
+Funkce filtru, která určuje, zda mají být přijaty nabízené zprávy.
 
 *_PScheduler*<br/>
-`Scheduler` Objekt v rámci kterého Úloha šíření pro `transformer` naplánovaný zasílání zpráv bloku.
+Objekt `Scheduler`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `transformer`
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Objekt v rámci kterého Úloha šíření pro `transformer` naplánovaný zasílání zpráv bloku. `Scheduler` Skupina plánování předpokládá používaný objekt.
+Objekt `ScheduleGroup`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `transformer` Použitý objekt `Scheduler` je odvozen skupinou plánu.
 
 ### <a name="remarks"></a>Poznámky
 
-Modul runtime používá výchozí plánovač, pokud není zadán `_PScheduler` nebo `_PScheduleGroup` parametry.
+Modul runtime používá výchozí Plánovač, pokud nezadáte parametry `_PScheduler` nebo `_PScheduleGroup`.
 
-Typ `_Transform_method` je funktor s podpisem `_Output (_Input const &)` která je vyvolána situace `transformer` blok zpráv ke zpracování zprávy.
+Typ `_Transform_method` je funktor s podpisovým `_Output (_Input const &)`, který je vyvolán pomocí tohoto `transformer` bloku zpráv pro zpracování zprávy.
 
-Typ `filter_method` je funktor s podpisem `bool (_Input const &)` která je vyvolána situace `transformer` blok zpráv k určení, zda by měla přijímat nabízená zpráva.
+Typ `filter_method` je funktor s podpisovým `bool (_Input const &)`, který je vyvolán pomocí tohoto `transformer` bloku zpráv k určení, zda by měla přijmout nabízenou zprávu.
 
-##  <a name="dtor"></a> ~ transformer
+## <a name="dtor"></a>~ – transformátor
 
-Odstraní `transformer` blok zpráv.
+Odstraní blok zasílání zpráv `transformer`.
 
-```
+```cpp
 ~transformer();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [call – třída](call-class.md)

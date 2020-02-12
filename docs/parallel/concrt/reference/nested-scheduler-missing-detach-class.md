@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-ms.openlocfilehash: db51f7b083cc0cbd9337fbbe5c672d190208f328
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c9553b036890c4ce28f1060bfe2f58ee1904935
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394387"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138855"
 ---
-# <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach – třída
+# <a name="nested_scheduler_missing_detach-class"></a>nested_scheduler_missing_detach – třída
 
-Tato třída popisuje výjimku vyvolanou při modulu Runtime souběžnosti zjistí, že opominul volání `CurrentScheduler::Detach` metody u objektu context, který připojuje k druhé pomocí plánovače `Attach` metodu `Scheduler` objektu.
+Tato třída popisuje výjimku vyvolanou při Concurrency Runtime zjistí, že jste opomíjeni zavolat metodu `CurrentScheduler::Detach` v kontextu, který je připojen k druhému plánovači pomocí metody `Attach` objektu `Scheduler`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class nested_scheduler_missing_detach : public std::exception;
 ```
 
@@ -31,11 +31,11 @@ class nested_scheduler_missing_detach : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[nested_scheduler_missing_detach](#ctor)|Přetíženo. Vytvoří `nested_scheduler_missing_detach` objektu.|
+|[nested_scheduler_missing_detach](#ctor)|Přetíženo. Vytvoří objekt `nested_scheduler_missing_detach`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato výjimka je vyvolána pouze v případě, že byste vnořit jeden Plánovač uvnitř jiného voláním `Attach` metodu `Scheduler` objektu v kontextu, který je již vlastněn nebo připojené k jiné plánovače. Modul Concurrency Runtime vyvolá tuto výjimku tj při scénáři může zjistit jako vodítko k vyhledání problém. Ne každá instance zanedbání volat `CurrentScheduler::Detach` je zaručeno, že metoda vyvolávají tuto výjimku.
+Tato výjimka je vyvolána pouze při vnoření jednoho plánovače do jiného voláním metody `Attach` objektu `Scheduler` v kontextu, který je již vlastněn nebo připojen k jinému plánovači. Concurrency Runtime vyvolá tuto výjimku oportunisticky, když dokáže detekovat scénář jako pomůcku k nalezení problému. Ne každá instance opomíjení volání metody `CurrentScheduler::Detach` je zaručena vyvolat tuto výjimku.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -45,15 +45,15 @@ Tato výjimka je vyvolána pouze v případě, že byste vnořit jeden Plánova�
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> nested_scheduler_missing_detach
+## <a name="ctor"></a>nested_scheduler_missing_detach
 
-Vytvoří `nested_scheduler_missing_detach` objektu.
+Vytvoří objekt `nested_scheduler_missing_detach`.
 
-```
+```cpp
 explicit _CRTIMP nested_scheduler_missing_detach(_In_z_ const char* _Message) throw();
 
 nested_scheduler_missing_detach() throw();
@@ -62,9 +62,9 @@ nested_scheduler_missing_detach() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)

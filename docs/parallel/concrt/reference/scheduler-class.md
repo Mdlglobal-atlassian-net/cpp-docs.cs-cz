@@ -21,20 +21,20 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160130"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142002"
 ---
 # <a name="scheduler-class"></a>Třída plánovače
 
-Představuje abstrakci pro Plánovač Concurrency Runtime.
+Představuje abstrakci pro Concurrency Runtime Scheduler.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class Scheduler;
 ```
 
@@ -44,32 +44,32 @@ class Scheduler;
 
 |Název|Popis|
 |----------|-----------------|
-|[Scheduler](#ctor)|Objekt `Scheduler` třída může pouze vytvořit pomocí metody pro vytváření objektů, nebo implicitně.|
-|[~Scheduler Destructor](#dtor)|Objekt `Scheduler` třídy implicitně zničen při všechny externí odkazy na něj přestávají existovat.|
+|[Scheduler](#ctor)|Objekt třídy `Scheduler` lze vytvořit pouze pomocí metod Factory nebo implicitně.|
+|[~ Scheduler – destruktor](#dtor)|Objekt `Scheduler` třídy je implicitně zničen, pokud všechny externí odkazy na něj přestanou existovat.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[Attach](#attach)|Plánovač se připojuje k volání kontextu. Po návratu tato metoda volání kontextu spravuje Plánovač a Plánovač stane aktuálního plánovače.|
-|[Vytvoření](#create)|Vytvoří nový Plánovač, jehož chování je popsán `_Policy` parametr, uvádí počáteční odkaz na plánovači a vrátí ukazatel na něj.|
-|[CreateScheduleGroup](#createschedulegroup)|Přetíženo. Vytvoří novou skupinu plán v rámci plánovače. Verze, která přebírá parametr `_Placement` způsobí, že úlohy ve skupině nově vytvořený plán tendenční směrem k provádění v místě určeném v parametru.|
-|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Vrátí aktuální počet virtuálních procesorů pro Plánovač.|
-|[GetPolicy](#getpolicy)|Vrátí kopii objektu zásad, který byl vytvořen plánovač.|
-|[ID](#id)|Vrací jedinečný identifikátor pro Plánovač.|
-|[IsAvailableLocation](#isavailablelocation)|Určuje, zda je na dané místo k dispozici na Plánovač.|
+|[Attach](#attach)|Připojí Plánovač k volajícímu kontextu. Po návratu této metody bude volající kontext spravován plánovačem a plánovačem se zobrazí aktuální Plánovač.|
+|[Vytvoření](#create)|Vytvoří nový Plánovač, jehož chování je popsané parametrem `_Policy`, umístí do plánovače počáteční odkaz a vrátí ukazatel na něj.|
+|[CreateScheduleGroup –](#createschedulegroup)|Přetíženo. Vytvoří novou skupinu plánu v rámci plánovače. Verze, která přebírá parametr `_Placement` způsobí, že úlohy v nově vytvořené skupině Schedule budou posunuty ke spuštění v umístění určeném parametrem.|
+|[Getnumberofvirtualprocessors –](#getnumberofvirtualprocessors)|Vrátí aktuální počet virtuálních procesorů pro Plánovač.|
+|[GetPolicy –](#getpolicy)|Vrátí kopii zásady, se kterou se vytvořil Scheduler.|
+|[ID](#id)|Vrátí jedinečný identifikátor plánovače.|
+|[Isavailablelocation –](#isavailablelocation)|Určuje, zda je dané umístění k dispozici v plánovači.|
 |[Referenční informace](#reference)|Zvýší počet odkazů plánovače.|
-|[RegisterShutdownEvent](#registershutdownevent)|Způsobí, že obslužná rutina události Windows předaný `_Event` parametru má být signalizován, když Plánovač vypne a odstraní sama. V době, kdy událost je signalizována všechny práce, která má naplánované Plánovač je dokončena. Prostřednictvím této metody lze registrovat více událostí vypnutí.|
-|[Vydaná verze](#release)|Sníží počet referenční plánovače.|
-|[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Obnoví výchozí zásadu plánovače pro výchozí modul runtime. Další čas, který je výchozím plánovačem vytvořili, použije výchozí nastavení zásady modulu runtime.|
-|[Scheduletask –](#scheduletask)|Přetíženo. Naplánuje lehký úkol v rámci plánovače. Lehký úkol se umístí do skupiny plánu určeno modulem runtime. Verze, která přebírá parametr `_Placement` způsobí, že úkol tendenční směrem k provádění v zadaném umístění.|
-|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Povolí zásady definované uživatelem se použije k vytvoření výchozího plánovače. Tuto metodu lze volat pouze v případě, že neexistuje žádný výchozí plánovače v rámci procesu. Po nastavení výchozí zásady zůstává v platnosti až do další platné volání na buď `SetDefaultSchedulerPolicy` nebo [resetdefaultschedulerpolicy –](#resetdefaultschedulerpolicy) metody.|
+|[RegisterShutdownEvent –](#registershutdownevent)|Způsobí, že popisovač události systému Windows předaný parametrem `_Event`, který se má signalizovat, když se Plánovač vypne a zničí sám sebe. V okamžiku signalizace události je dokončena veškerá práce, která byla naplánována do plánovače. Pomocí této metody lze zaregistrovat více událostí vypnutí.|
+|[Vydaná verze](#release)|Sníží počet odkazů plánovače.|
+|[Resetdefaultschedulerpolicy –](#resetdefaultschedulerpolicy)|Obnoví výchozí zásadu plánovače na výchozí nastavení modulu runtime. Při příštím vytvoření výchozího plánovače použije výchozí nastavení zásad modulu runtime.|
+|[ScheduleTask –](#scheduletask)|Přetíženo. Naplánuje v Plánovači úlohu s lehkým zatížením. Úloha s lehkým zatížením bude umístěna do skupiny plánování určené modulem runtime. Verze, která přebírá parametr `_Placement` způsobí, že se úloha na zadaném umístění posune směrem k provedení.|
+|[SetDefaultSchedulerPolicy –](#setdefaultschedulerpolicy)|Umožňuje, aby se pro vytvoření výchozího plánovače použila zásada definovaná uživatelem. Tuto metodu lze volat pouze v případě, že v rámci procesu neexistuje žádný výchozí Plánovač. Po nastavení výchozí zásady zůstane v platnosti, dokud nedojde k dalšímu platnému volání metody `SetDefaultSchedulerPolicy` nebo [resetdefaultschedulerpolicy –](#resetdefaultschedulerpolicy) .|
 
 ## <a name="remarks"></a>Poznámky
 
-Plánovač Concurrency Runtime používá kontexty spuštění, které mapují na kontexty spuštění operačního systému, jako je například vlákno, k provedení práce ve frontě v aplikaci. V každém okamžiku úroveň souběžnosti plánovače rovná počtu virtuálních procesorů udělen Resource Manageru. Virtuální procesor je abstrakcí pro zpracování zdrojů a map pro vlákno hardwaru v podkladovém systému. Pouze jeden kontext plánovače může provádět na virtuální procesor v daném okamžiku.
+Plánovač Concurrency Runtime používá kontexty spuštění, které se mapují na kontexty provádění operačního systému, jako je například vlákno, a spustí tak pracovní zařazení do fronty v aplikaci. V každém okamžiku se úroveň souběžnosti plánovače rovná počtu virtuálních procesorů, které mu Správce prostředků udělily. Virtuální procesor představuje abstrakci pro zpracování prostředku a mapuje se na hardwarové vlákno v podkladovém systému. U virtuálního procesoru v daném okamžiku může běžet pouze jeden kontext plánovače.
 
-Modulu Runtime souběžnosti vytvoří výchozí plánovač proces ke spuštění paralelní práci. Kromě toho můžete vytvořit vlastní plánovač instancí a manipulaci s pomocí této třídy.
+Concurrency Runtime vytvoří výchozí Plánovač pro každý proces, který provede paralelní práci. Kromě toho můžete vytvořit vlastní instance plánovače a manipulovat s ní pomocí této třídy.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -77,15 +77,15 @@ Modulu Runtime souběžnosti vytvoří výchozí plánovač proces ke spuštěn�
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="attach"></a> Připojení
+## <a name="attach"></a>Pojovat
 
-Plánovač se připojuje k volání kontextu. Po návratu tato metoda volání kontextu spravuje Plánovač a Plánovač stane aktuálního plánovače.
+Připojí Plánovač k volajícímu kontextu. Po návratu této metody bude volající kontext spravován plánovačem a plánovačem se zobrazí aktuální Plánovač.
 
-```
+```cpp
 virtual void Attach() = 0;
 ```
 
@@ -93,42 +93,42 @@ virtual void Attach() = 0;
 
 Připojení plánovače implicitně umístí odkaz na Plánovač.
 
-V určitém okamžiku v budoucnu, je třeba zavolat [currentscheduler::detach –](currentscheduler-class.md#detach) metody, aby bylo možné povolit, aby vypnout.
+V určitém okamžiku v budoucnu musíte zavolat metodu [CurrentScheduler::D etach](currentscheduler-class.md#detach) , aby bylo možné Plánovač vypnout.
 
-Pokud tato metoda se volá z kontextu, který je již připojena k jiné plánovače, stávající plánování se uloží, jako předchozí Plánovač a nově vytvořený scheduleru se stane aktuálního plánovače. Při volání `CurrentScheduler::Detach` metoda později předchozí scheduleru se obnoví jako aktuálního plánovače.
+Pokud je tato metoda volána z kontextu, který je již připojen k jinému plánovači, existující Plánovač je zapamatovat jako předchozí Plánovač a nově vytvořený Plánovač se bude považovat za aktuálního plánovače. Při volání metody `CurrentScheduler::Detach` v pozdějším bodě bude předchozí Plánovač obnoven jako aktuální Plánovač.
 
-Tato metoda vyvolá výjimku [improper_scheduler_attach –](improper-scheduler-attach-class.md) výjimku, pokud je tento plánovač aktuálního plánovače kontext volání.
+Tato metoda vyvolá výjimku [improper_scheduler_attach](improper-scheduler-attach-class.md) , pokud je tento Plánovač aktuálním plánovačem volajícího kontextu.
 
-##  <a name="create"></a> Vytvoření
+## <a name="create"></a>Vytvořeny
 
-Vytvoří nový Plánovač, jehož chování je popsán `_Policy` parametr, uvádí počáteční odkaz na plánovači a vrátí ukazatel na něj.
+Vytvoří nový Plánovač, jehož chování je popsané parametrem `_Policy`, umístí do plánovače počáteční odkaz a vrátí ukazatel na něj.
 
-```
+```cpp
 static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Policy*<br/>
-Zásady plánovače, která popisuje chování nově vytvořený plánovače.
+Zásady plánovače, které popisují chování nově vytvořeného plánovače.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nově vytvořený plánovače. To `Scheduler` objekt má počet počáteční odkazů na ní umístěny.
+Ukazatel na nově vytvořený Plánovač. Na tento objekt `Scheduler` je umístěn počáteční počet odkazů.
 
 ### <a name="remarks"></a>Poznámky
 
-Po vytvoření plánovače s `Create` metoda, je třeba zavolat `Release` metoda v určitém okamžiku v budoucnu za účelem odeberte počet počáteční odkazů a umožnit, aby vypnout.
+Po vytvoření plánovače pomocí metody `Create` je nutné zavolat metodu `Release` v určitém bodě budoucnosti, aby bylo možné odebrat počáteční počet odkazů a aby bylo možné Plánovač vypnout.
 
-Plánovač vytvořené pomocí této metody není připojen k volání kontextu. Může být připojen k pomocí kontextu [připojit](#attach) metody.
+Plánovač vytvořený pomocí této metody není připojen k volajícímu kontextu. Dá se připojit ke kontextu pomocí metody [Attach](#attach) .
 
-Tato metoda může vyvolat výjimky, včetně různých [scheduler_resource_allocation_error –](scheduler-resource-allocation-error-class.md) a [invalid_scheduler_policy_value –](invalid-scheduler-policy-value-class.md).
+Tato metoda může vyvolat různé výjimky, včetně [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) a [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).
 
-##  <a name="createschedulegroup"></a> CreateScheduleGroup
+## <a name="createschedulegroup"></a>CreateScheduleGroup –
 
-Vytvoří novou skupinu plán v rámci plánovače. Verze, která přebírá parametr `_Placement` způsobí, že úlohy ve skupině nově vytvořený plán tendenční směrem k provádění v místě určeném v parametru.
+Vytvoří novou skupinu plánu v rámci plánovače. Verze, která přebírá parametr `_Placement` způsobí, že úlohy v nově vytvořené skupině Schedule budou posunuty ke spuštění v umístění určeném parametrem.
 
-```
+```cpp
 virtual ScheduleGroup* CreateScheduleGroup() = 0;
 
 virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
@@ -136,24 +136,24 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*_Umístění.*<br/>
-Odkaz na umístění, ve kterém se úlohy ve skupině plánování tendenční směrem k provedení.
+*_Placement*<br/>
+Odkaz na umístění, kde se úlohy v rámci skupiny plán posunou ke spuštění na.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nově vytvořený plán skupiny. To `ScheduleGroup` objekt má počet počáteční odkazů na ní umístěny.
+Ukazatel na nově vytvořenou skupinu plánu. Na tento objekt `ScheduleGroup` je umístěn počáteční počet odkazů.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné vyvolat [vydání](schedulegroup-class.md#release) metodu na skupinu plánování po dokončení plánování práce. Plánovač zničí plánu skupiny, pokud veškerou práci ve frontě byla dokončena.
+Až skončíte s plánováním práce, musíte vyvolat metodu [release](schedulegroup-class.md#release) pro skupinu plánů. Plánovač odstraní skupinu plánů, když je dokončená veškerá práce zařazená do fronty.
 
-Všimněte si, že pokud explicitně vytvořeny tento plánovač musí uvolnit všechny odkazy na skupiny v ní, plánů, ještě před vydáním vaše odkazy na Plánovač.
+Všimněte si, že pokud jste tento Plánovač výslovně vytvořili, musíte před vydáním odkazů na Plánovač vydávat všechny odkazy na jejich plánování ve skupinách.
 
-##  <a name="getnumberofvirtualprocessors"></a> Getnumberofvirtualprocessors –
+## <a name="getnumberofvirtualprocessors"></a>Getnumberofvirtualprocessors –
 
 Vrátí aktuální počet virtuálních procesorů pro Plánovač.
 
-```
+```cpp
 virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ```
 
@@ -161,23 +161,23 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 
 Aktuální počet virtuálních procesorů pro Plánovač.
 
-##  <a name="getpolicy"></a> GetPolicy
+## <a name="getpolicy"></a>GetPolicy –
 
-Vrátí kopii objektu zásad, který byl vytvořen plánovač.
+Vrátí kopii zásady, se kterou se vytvořil Scheduler.
 
-```
+```cpp
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kopie zásad, který byl vytvořen plánovač.
+Kopie zásady, se kterou byl Plánovač vytvořen.
 
-##  <a name="id"></a> Id
+## <a name="id"></a>Účet
 
-Vrací jedinečný identifikátor pro Plánovač.
+Vrátí jedinečný identifikátor plánovače.
 
-```
+```cpp
 virtual unsigned int Id() const = 0;
 ```
 
@@ -185,113 +185,113 @@ virtual unsigned int Id() const = 0;
 
 Jedinečný identifikátor pro Plánovač.
 
-##  <a name="isavailablelocation"></a> Isavailablelocation –
+## <a name="isavailablelocation"></a>Isavailablelocation –
 
-Určuje, zda je na dané místo k dispozici na Plánovač.
+Určuje, zda je dané umístění k dispozici v plánovači.
 
-```
+```cpp
 virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Umístění.*<br/>
-Odkaz na umístění o dotazování plánovače.
+*_Placement*<br/>
+Odkaz na umístění pro dotazování plánovače o.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Označení, zda je nebo není umístění určeném `_Placement` argument je k dispozici na Plánovač.
+Označení, zda je umístění určené argumentem `_Placement` k dispozici v plánovači.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že vrácená hodnota je okamžité vzorkování Určuje, zda je k dispozici daného umístění. Dynamickou správu prostředků za přítomnosti více plánovače, můžete přidat nebo odnést prostředky z plánovače v libovolném bodě. Se to stane, daného umístění můžete změnit dostupnost.
+Všimněte si, že návratová hodnota je okamžitý odběr vzorkování, zda je dané umístění k dispozici. V případě existence více schedulerů může dynamická správa prostředků přidávat nebo odbírat prostředky z schedulerů v jakémkoli okamžiku. K tomu by se mohlo stát, že dané umístění může změnit dostupnost.
 
-##  <a name="reference"></a> Referenční dokumentace
+## <a name="reference"></a>Odkaz
 
 Zvýší počet odkazů plánovače.
 
-```
+```cpp
 virtual unsigned int Reference() = 0 ;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet nově zvýšena odkazů.
+Nově zvýšený počet odkazů.
 
 ### <a name="remarks"></a>Poznámky
 
-To se obvykle používá ke správě životnosti Plánovač složení. Když počet odkazů Plánovač klesne na nulu, Plánovač se vypne a destruct samotného koneckonců pracovat na Plánovač byla dokončena.
+Obvykle se používá ke správě životnosti Scheduleru pro účely složení. Pokud počet odkazů plánovače klesne na nulu, Plánovač se ukončí a destrukci sám po dokončení veškeré práce v plánovači.
 
-Metoda vyvolá výjimku [improper_scheduler_reference –](improper-scheduler-reference-class.md) výjimku, pokud odkaz na počet před voláním `Reference` metode nula a při volání z kontextu, které není vlastněno plánovače.
+Metoda vyvolá výjimku [improper_scheduler_reference](improper-scheduler-reference-class.md) , pokud je počet odkazů před voláním metody `Reference` nula a volání je provedeno z kontextu, který není vlastněn plánovačem.
 
-##  <a name="registershutdownevent"></a> Registershutdownevent –
+## <a name="registershutdownevent"></a>RegisterShutdownEvent –
 
-Způsobí, že obslužná rutina události Windows předaný `_Event` parametru má být signalizován, když Plánovač vypne a odstraní sama. V době, kdy událost je signalizována všechny práce, která má naplánované Plánovač je dokončena. Prostřednictvím této metody lze registrovat více událostí vypnutí.
+Způsobí, že popisovač události systému Windows předaný parametrem `_Event`, který se má signalizovat, když se Plánovač vypne a zničí sám sebe. V okamžiku signalizace události je dokončena veškerá práce, která byla naplánována do plánovače. Pomocí této metody lze zaregistrovat více událostí vypnutí.
 
-```
+```cpp
 virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Event*<br/>
-Popisovač objektu události Windows, který bude signál modulem runtime, když Plánovač vypne a odstraní sama.
+Popisovač objektu události systému Windows, který bude signalizovat modulem runtime při vypnutí a zničení služby.
 
-##  <a name="release"></a> Vydání verze
+## <a name="release"></a>Předběžné
 
-Sníží počet referenční plánovače.
+Sníží počet odkazů plánovače.
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na nově snížen počet.
+Nově snížený počet odkazů.
 
 ### <a name="remarks"></a>Poznámky
 
-To se obvykle používá ke správě životnosti Plánovač složení. Když počet odkazů Plánovač klesne na nulu, Plánovač se vypne a destruct samotného koneckonců pracovat na Plánovač byla dokončena.
+Obvykle se používá ke správě životnosti Scheduleru pro účely složení. Pokud počet odkazů plánovače klesne na nulu, Plánovač se ukončí a destrukci sám po dokončení veškeré práce v plánovači.
 
-##  <a name="resetdefaultschedulerpolicy"></a> Resetdefaultschedulerpolicy –
+## <a name="resetdefaultschedulerpolicy"></a>Resetdefaultschedulerpolicy –
 
-Obnoví výchozí zásadu plánovače pro výchozí modul runtime. Další čas, který je výchozím plánovačem vytvořili, použije výchozí nastavení zásady modulu runtime.
+Obnoví výchozí zásadu plánovače na výchozí nastavení modulu runtime. Při příštím vytvoření výchozího plánovače použije výchozí nastavení zásad modulu runtime.
 
-```
+```cpp
 static void __cdecl ResetDefaultSchedulerPolicy();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze volat při výchozím plánovačem existuje v rámci procesu. Nebude to mít vliv zásad existující výchozí plánovače. Ale pokud výchozím plánovačem byly vypnout a nové výchozí nastavení chtěli vytvořit později, nové Plánovač byste použili výchozí nastavení zásady modulu runtime.
+Tuto metodu lze volat, pokud v rámci procesu existuje výchozí Plánovač. Nebude to mít vliv na zásady existujícího výchozího plánovače. Pokud se ale výchozí Plánovač vypnul a později se vytvořila nová výchozí hodnota, bude nový Plánovač používat výchozí nastavení zásad modulu runtime.
 
-##  <a name="ctor"></a> Scheduler
+## <a name="ctor"></a>Plánovač
 
-Objekt `Scheduler` třída může pouze vytvořit pomocí metody pro vytváření objektů, nebo implicitně.
+Objekt třídy `Scheduler` lze vytvořit pouze pomocí metod Factory nebo implicitně.
 
-```
+```cpp
 Scheduler();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozím plánovačem procesu se vytvářejí implicitně, když využívat řadu funkce modulu runtime, které vyžadují Plánovač, připojí se k volání kontextu. Metody v rámci `CurrentScheduler` třídy a funkce vrstvy PPL a agentů obvykle provádí implicitní přílohy.
+Výchozí Plánovač procesu je implicitně vytvořen, pokud využíváte mnoho běhových funkcí, které vyžadují, aby byl Plánovač připojen k volajícímu kontextu. Metody v rámci `CurrentScheduler` třídy a funkce vrstev PPL a agentů obvykle provádějí implicitní přílohy.
 
-Můžete také vytvořit plánovače explicitně pomocí kteréhokoliv `CurrentScheduler::Create` metoda nebo `Scheduler::Create` metoda.
+Můžete také vytvořit Plánovač explicitně pomocí metody `CurrentScheduler::Create` nebo `Scheduler::Create`.
 
-##  <a name="dtor"></a> ~ Scheduler
+## <a name="dtor"></a>~ Scheduler
 
-Objekt `Scheduler` třídy implicitně zničen při všechny externí odkazy na něj přestávají existovat.
+Objekt `Scheduler` třídy je implicitně zničen, pokud všechny externí odkazy na něj přestanou existovat.
 
-```
+```cpp
 virtual ~Scheduler();
 ```
 
-##  <a name="scheduletask"></a> Scheduletask –
+## <a name="scheduletask"></a>ScheduleTask –
 
-Naplánuje lehký úkol v rámci plánovače. Lehký úkol se umístí do skupiny plánu určeno modulem runtime. Verze, která přebírá parametr `_Placement` způsobí, že úkol tendenční směrem k provádění v zadaném umístění.
+Naplánuje v Plánovači úlohu s lehkým zatížením. Úloha s lehkým zatížením bude umístěna do skupiny plánování určené modulem runtime. Verze, která přebírá parametr `_Placement` způsobí, že se úloha na zadaném umístění posune směrem k provedení.
 
-```
+```cpp
 virtual void ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data) = 0;
@@ -305,34 +305,34 @@ virtual void ScheduleTask(
 ### <a name="parameters"></a>Parametry
 
 *_Proc*<br/>
-Ukazatel na funkci, která se má spustit provádění těla lehký úkol.
+Ukazatel na funkci, která se má provést, aby provedla tělo úlohy s lehkým zatížením.
 
 *_Data*<br/>
-Ukazatel void data, která se předá jako parametr do těla úkolu.
+Anulování ukazatele na data, která budou předána do těla úkolu jako parametr.
 
-*_Umístění.*<br/>
-Odkaz na umístění, ve kterém bude možné lehký úkol tendenční směrem k provedení.
+*_Placement*<br/>
+Odkaz na umístění, kde bude úloha s lehkým zatížením posunuta k provedení v.
 
-##  <a name="setdefaultschedulerpolicy"></a> Setdefaultschedulerpolicy –
+## <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy –
 
-Povolí zásady definované uživatelem se použije k vytvoření výchozího plánovače. Tuto metodu lze volat pouze v případě, že neexistuje žádný výchozí plánovače v rámci procesu. Po nastavení výchozí zásady zůstává v platnosti až do další platné volání na buď `SetDefaultSchedulerPolicy` nebo [resetdefaultschedulerpolicy –](#resetdefaultschedulerpolicy) metody.
+Umožňuje, aby se pro vytvoření výchozího plánovače použila zásada definovaná uživatelem. Tuto metodu lze volat pouze v případě, že v rámci procesu neexistuje žádný výchozí Plánovač. Po nastavení výchozí zásady zůstane v platnosti, dokud nedojde k dalšímu platnému volání metody `SetDefaultSchedulerPolicy` nebo [resetdefaultschedulerpolicy –](#resetdefaultschedulerpolicy) .
 
-```
+```cpp
 static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Policy*<br/>
-Zásady pro nastavení jako výchozí zásadu plánovače.
+Zásady, které se mají nastavit jako výchozí zásady plánovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `SetDefaultSchedulerPolicy` metoda se volá, když je výchozím plánovačem již existuje v rámci procesu, modul runtime vyvolá výjimku [default_scheduler_exists –](default-scheduler-exists-class.md) výjimky.
+Pokud je volána metoda `SetDefaultSchedulerPolicy`, když výchozí Plánovač již v rámci procesu existuje, modul runtime vyvolá výjimku [default_scheduler_exists](default-scheduler-exists-class.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)<br/>
-[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey –](concurrency-namespace-enums.md)<br/>
 [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
