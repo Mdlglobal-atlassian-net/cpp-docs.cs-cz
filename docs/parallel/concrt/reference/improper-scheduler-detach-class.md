@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
-ms.openlocfilehash: 7e85ff8ea7ffb817c141094649cd39b8becccf53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f5ad16893a898d4258762b25fea3d557607a3f8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262343"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141154"
 ---
-# <a name="improperschedulerdetach-class"></a>improper_scheduler_detach – třída
+# <a name="improper_scheduler_detach-class"></a>improper_scheduler_detach – třída
 
-Tato třída popisuje výjimku vyvolána, když `CurrentScheduler::Detach` metoda je volána u objektu context, která nebyla připojena k žádné scheduleru pomocí `Attach` metodu `Scheduler` objektu.
+Tato třída popisuje výjimku vyvolanou při volání metody `CurrentScheduler::Detach` v kontextu, který nebyl připojen k žádnému plánovači pomocí metody `Attach` objektu `Scheduler`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class improper_scheduler_detach : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class improper_scheduler_detach : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[improper_scheduler_detach](#ctor)|Přetíženo. Vytvoří `improper_scheduler_detach` objektu.|
+|[improper_scheduler_detach](#ctor)|Přetíženo. Vytvoří objekt `improper_scheduler_detach`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,15 +41,15 @@ class improper_scheduler_detach : public std::exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> improper_scheduler_detach
+## <a name="ctor"></a>improper_scheduler_detach
 
-Vytvoří `improper_scheduler_detach` objektu.
+Vytvoří objekt `improper_scheduler_detach`.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_detach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_detach() throw();
@@ -58,9 +58,9 @@ improper_scheduler_detach() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)

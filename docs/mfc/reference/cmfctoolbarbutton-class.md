@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 0793c1cecf07ddab8de93e9e5a2bc3af3513be97
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cfdde6aea42ff96957c18ef73f62a4e4f49292ff
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504861"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127441"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton – třída
 
@@ -181,27 +181,27 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Vytvoří a inicializuje `CMFCToolBarButton` objekt.|
+|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Vytvoří a inicializuje objekt `CMFCToolBarButton`.|
 |`CMFCToolBarButton::~CMFCToolBarButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Určuje, zda může uživatel umístit tlačítko na panelu nástrojů nebo v nabídce během přizpůsobení.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Určuje, zda lze tlačítko Uložit.|
 |[CMFCToolBarButton::CanBeStretched](#canbestretched)|Určuje, zda může uživatel roztáhnout tlačítko během přizpůsobení.|
-|[CMFCToolBarButton::CompareWith](#comparewith)|Porovná tuto instanci se zadaným `CMFCToolBarButton` objektem.|
+|[CMFCToolBarButton:: compareWith –](#comparewith)|Porovná tuto instanci s dodaným objektem `CMFCToolBarButton`.|
 |[CMFCToolBarButton::CopyFrom](#copyfrom)|Zkopíruje vlastnosti jiného tlačítka panelu nástrojů na aktuální tlačítko.|
-|[CMFCToolBarButton::CreateFromOleData](#createfromoledata)|Vytvoří objekt ze zadaného `COleDataObject` objektu. `CMFCToolBarButton`|
+|[CMFCToolBarButton::CreateFromOleData](#createfromoledata)|Vytvoří objekt `CMFCToolBarButton` ze zadaného objektu `COleDataObject`.|
 |`CMFCToolBarButton::CreateObject`|Používá se rozhraním k vytvoření dynamické instance tohoto typu třídy.|
 |[CMFCToolBarButton::EnableWindow](#enablewindow)|Povolí nebo zakáže vstup z klávesnice a myši.|
 |[CMFCToolBarButton::ExportToMenuButton](#exporttomenubutton)|Kopíruje text z tlačítka panelu nástrojů do nabídky.|
 |[CMFCToolBarButton::GetClipboardFormat](#getclipboardformat)|Načte globální formát schránky pro aplikaci.|
-|[CMFCToolBarButton::GetHwnd](#gethwnd)|Načte popisovač okna, který je přidružený k tlačítku panelu nástrojů.|
-|[CMFCToolBarButton::GetImage](#getimage)|Načte index obrázku tlačítka.|
+|[CMFCToolBarButton:: GetHwnd](#gethwnd)|Načte popisovač okna, který je přidružený k tlačítku panelu nástrojů.|
+|[CMFCToolBarButton:: GetImage](#getimage)|Načte index obrázku tlačítka.|
 |[CMFCToolBarButton::GetInvalidateRect](#getinvalidaterect)|Načte oblast klientské oblasti tlačítka, které musí být překresleny.|
 |[CMFCToolBarButton::GetParentWnd](#getparentwnd)|Načte nadřazené okno tlačítka.|
 |[CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands)|Načte seznam příkazů, které uživatel nemůže přizpůsobit.|
@@ -211,15 +211,15 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::IsDrawImage](#isdrawimage)|Určuje, zda je na tlačítku zobrazen obrázek.|
 |[CMFCToolBarButton::IsDrawText](#isdrawtext)|Určuje, zda je na tlačítku zobrazen textový popisek.|
 |[CMFCToolBarButton::IsDroppedDown](#isdroppeddown)|Určuje, zda tlačítko zobrazí podnabídku.|
-|[CMFCToolBarButton::IsEditable](#iseditable)|Určuje, zda lze tlačítko přizpůsobit.|
+|[CMFCToolBarButton::-upravitelné](#iseditable)|Určuje, zda lze tlačítko přizpůsobit.|
 |[CMFCToolBarButton::IsExtraSize](#isextrasize)|Určuje, zda lze tlačítko Zobrazit s rozšířeným ohraničením.|
 |[CMFCToolBarButton::IsFirstInGroup](#isfirstingroup)|Určuje, zda je tlačítko v první pozici ve své skupině tlačítek.|
-|[CMFCToolBarButton::IsHidden](#ishidden)|Určuje, zda je tlačítko skryté.|
-|[CMFCToolBarButton::IsHorizontal](#ishorizontal)|Určuje, zda je tlačítko umístěno na vodorovném panelu nástrojů.|
+|[CMFCToolBarButton:: Hidden](#ishidden)|Určuje, zda je tlačítko skryté.|
+|[CMFCToolBarButton::-Horizontal](#ishorizontal)|Určuje, zda je tlačítko umístěno na vodorovném panelu nástrojů.|
 |[CMFCToolBarButton::IsLastInGroup](#islastingroup)|Určuje, zda je tlačítko ve své skupině tlačítek ve své poslední pozici.|
-|[CMFCToolBarButton::IsLocked](#islocked)|Určuje, zda je tlačítko na uzamčeném panelu nástrojů (nepřizpůsobitelný).|
+|[CMFCToolBarButton::-lockd](#islocked)|Určuje, zda je tlačítko na uzamčeném panelu nástrojů (nepřizpůsobitelný).|
 |[CMFCToolBarButton::IsOwnerOf](#isownerof)|Určuje, zda je tlačítko vlastníkem zadaného popisovače okna.|
-|[CMFCToolBarButton::IsVisible](#isvisible)|Určuje, zda je tlačítko panelu nástrojů viditelné.|
+|[CMFCToolBarButton:: Visible](#isvisible)|Určuje, zda je tlačítko panelu nástrojů viditelné.|
 |[CMFCToolBarButton::IsWindowVisible](#iswindowvisible)|Určuje, zda je podkladové okno tlačítka viditelné.|
 |[CMFCToolBarButton::NotifyCommand](#notifycommand)|Určuje, zda tlačítko zpracovává zprávu [WM_COMMAND](/windows/win32/menurc/wm-command) .|
 |[CMFCToolBarButton::OnAddToCustomizePage](#onaddtocustomizepage)|Volá se rozhraním, když se přidá tlačítko do dialogového okna **přizpůsobit** .|
@@ -228,27 +228,27 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::OnCalculateSize](#oncalculatesize)|Volá se rozhraním, aby se počítala velikost tlačítka pro zadaný kontext zařízení a stav docking.|
 |[CMFCToolBarButton::OnCancelMode](#oncancelmode)|Volá se rozhraním, aby se zpracovala zpráva [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) .|
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Volá se rozhraním, když se na nový panel nástrojů Vloží tlačítko.|
-|[CMFCToolBarButton::OnClick](#onclick)|Volá se rozhraním, když uživatel klikne na tlačítko myši.|
+|[CMFCToolBarButton:: Click](#onclick)|Volá se rozhraním, když uživatel klikne na tlačítko myši.|
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Volá se rozhraním, když uživatel uvolní tlačítko myši.|
 |[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Volá se rozhraním, když nadřazený panel nástrojů zpracovává zprávu WM_HELPHITTEST.|
 |[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Volá se rozhraním, když nadřazený panel nástrojů zpracovává zprávu WM_CTLCOLOR.|
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Umožňuje tlačítku změnit poskytnutou nabídku, když aplikace zobrazuje místní nabídku na nadřazeném panelu nástrojů.|
 |[CMFCToolBarButton::OnDblClk](#ondblclk)|Volá se rozhraním, když nadřazený panel nástrojů zpracovává zprávu [WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk) .|
-|[CMFCToolBarButton::OnDraw](#ondraw)|Volá se rozhraním, aby se vykreslilo tlačítko pomocí zadaných stylů a možností.|
+|[CMFCToolBarButton:: Draw](#ondraw)|Volá se rozhraním, aby se vykreslilo tlačítko pomocí zadaných stylů a možností.|
 |[CMFCToolBarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Volá se rozhraním, aby se nakreslilo tlačítko v podokně **příkazy** dialogového okna **přizpůsobit** .|
 |[CMFCToolBarButton::OnGetCustomToolTipText](#ongetcustomtooltiptext)|Volá se rozhraním, aby se získal text vlastního popisu tlačítka.|
 |[CMFCToolBarButton::OnGlobalFontsChanged](#onglobalfontschanged)|Volá se rozhraním, když se změní globální písmo.|
-|[CMFCToolBarButton::OnMove](#onmove)|Volá se rozhraním, když se přesune nadřazený panel nástrojů.|
-|[CMFCToolBarButton::OnShow](#onshow)|Volá se rozhraním, když se tlačítko zobrazí jako viditelné nebo neviditelné.|
+|[CMFCToolBarButton::-Move](#onmove)|Volá se rozhraním, když se přesune nadřazený panel nástrojů.|
+|[CMFCToolBarButton:: inshow](#onshow)|Volá se rozhraním, když se tlačítko zobrazí jako viditelné nebo neviditelné.|
 |[CMFCToolBarButton::-size](#onsize)|Volá se rozhraním, když nadřazený panel nástrojů změní svou velikost nebo polohu a tato změna vyžaduje změnu velikosti tlačítka.|
 |[CMFCToolBarButton::OnToolHitTest](#ontoolhittest)|Volá se rozhraním, když nadřazený panel nástrojů musí určit, jestli je bod v ohraničujícím obdélníku tlačítka.|
 |[CMFCToolBarButton::OnUpdateToolTip](#onupdatetooltip)|Volá se rozhraním, když nadřazený panel nástrojů aktualizuje svůj text popisku.|
-|[CMFCToolBarButton::PrepareDrag](#preparedrag)|Volá se rozhraním, když má tlačítko k provedení operace přetažení.|
+|[CMFCToolBarButton::P repareDrag](#preparedrag)|Volá se rozhraním, když má tlačítko k provedení operace přetažení.|
 |[CMFCToolBarButton:: Rect](#rect)|Načte ohraničující obdélník tlačítka.|
 |[CMFCToolBarButton::ResetImageToDefault](#resetimagetodefault)|Nastaví výchozí hodnotu na obrázek, který je přidružený k tlačítku.|
 |[CMFCToolBarButton::SaveBarState](#savebarstate)|Uloží stav tlačítka panelu nástrojů.|
 |[CMFCToolBarButton:: serializovat](#serialize)|Přečte tento objekt z archivu nebo ho zapíše do archivu. (Overrides [CObject:: serializovat](../../mfc/reference/cobject-class.md#serialize).)|
-|[CMFCToolBarButton::SetACCData](#setaccdata)|Naplní poskytnutý `CAccessibilityData` objekt daty přístupnosti z tlačítka panelu nástrojů.|
+|[CMFCToolBarButton::SetACCData](#setaccdata)|Naplní poskytnutý objekt `CAccessibilityData` s daty přístupnosti z tlačítka panelu nástrojů.|
 |[CMFCToolBarButton::SetClipboardFormatName](#setclipboardformatname)|Přejmenuje globální formát schránky.|
 |[CMFCToolBarButton::SetImage](#setimage)|Nastaví index obrázku tlačítka.|
 |[CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands)|Nastaví seznam příkazů, které uživatel nemůže přizpůsobit.|
@@ -260,34 +260,34 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CMFCToolBarButton::m_bImage](#m_bimage)|Určuje, zda je na tlačítku zobrazen obrázek.|
-|[CMFCToolBarButton::m_bText](#m_btext)|Určuje, zda je na tlačítku zobrazen textový popisek.|
-|[CMFCToolBarButton::m_bTextBelow](#m_btextbelow)|Určuje, zda je textový popisek zobrazen pod obrázkem na tlačítku.|
-|[CMFCToolBarButton::m_bUserButton](#m_buserbutton)|Určuje, zda má tlačítko uživatelem definovanou bitovou kopii.|
-|[CMFCToolBarButton::m_bWholeText](#m_bwholetext)|Určuje, zda tlačítko zobrazí úplný text popisku, i když se nevejde do ohraničujícího obdélníku.|
-|[CMFCToolBarButton::m_bWrap](#m_bwrap)|Určuje, zda bude tlačítko vedle oddělovače vloženo na další řádek.|
-|[CMFCToolBarButton::m_bWrapText](#m_bwraptext)|Určuje, zda jsou povoleny víceřádkové textové popisky.|
-|[CMFCToolBarButton::m_nID](#m_nid)|ID příkazu tlačítka|
-|[CMFCToolBarButton::m_nStyle](#m_nstyle)|Styl tlačítka|
-|[CMFCToolBarButton::m_strText](#m_strtext)|Textový popisek tlačítka|
+|[CMFCToolBarButton:: m_bImage](#m_bimage)|Určuje, zda je na tlačítku zobrazen obrázek.|
+|[CMFCToolBarButton:: m_bText](#m_btext)|Určuje, zda je na tlačítku zobrazen textový popisek.|
+|[CMFCToolBarButton:: m_bTextBelow](#m_btextbelow)|Určuje, zda je textový popisek zobrazen pod obrázkem na tlačítku.|
+|[CMFCToolBarButton:: m_bUserButton](#m_buserbutton)|Určuje, zda má tlačítko uživatelem definovanou bitovou kopii.|
+|[CMFCToolBarButton:: m_bWholeText](#m_bwholetext)|Určuje, zda tlačítko zobrazí úplný text popisku, i když se nevejde do ohraničujícího obdélníku.|
+|[CMFCToolBarButton:: m_bWrap](#m_bwrap)|Určuje, zda bude tlačítko vedle oddělovače vloženo na další řádek.|
+|[CMFCToolBarButton:: m_bWrapText](#m_bwraptext)|Určuje, zda jsou povoleny víceřádkové textové popisky.|
+|[CMFCToolBarButton:: m_nID](#m_nid)|ID příkazu tlačítka|
+|[CMFCToolBarButton:: m_nStyle](#m_nstyle)|Styl tlačítka|
+|[CMFCToolBarButton:: m_strText](#m_strtext)|Textový popisek tlačítka|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCToolbarButton` Objekt je ovládací prvek, který se nachází na panelu nástrojů. Chování je podobné jako běžné tlačítko. Tomuto objektu můžete přiřadit obrázek a textový popisek. Tlačítko panelu nástrojů může mít také ID příkazu. Když uživatel klikne na tlačítko panelu nástrojů, rozhraní provede příkaz, který toto ID určuje.
+Objekt `CMFCToolbarButton` je ovládací prvek, který se nachází na panelu nástrojů. Chování je podobné jako běžné tlačítko. Tomuto objektu můžete přiřadit obrázek a textový popisek. Tlačítko panelu nástrojů může mít také ID příkazu. Když uživatel klikne na tlačítko panelu nástrojů, rozhraní provede příkaz, který toto ID určuje.
 
-Tlačítka panelu nástrojů lze obvykle přizpůsobit: uživatel může přetahovat tlačítka z jednoho panelu nástrojů na jiný a kopírovat, vkládat, odstraňovat a upravovat textové popisky a obrázky. Chcete-li uživateli zabránit v přizpůsobení panelu nástrojů, můžete panel nástrojů uzamknout jedním ze dvou způsobů. Buď nastavte `bLocked` příznak na hodnotu true při volání [CMFCToolBar:: LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)nebo přidejte ID příkazu individuálního tlačítka do globálního seznamu chráněných příkazů pomocí metody [CMFCToolBarButton:: SetProtectedCommands](#setprotectedcommands) .
+Tlačítka panelu nástrojů lze obvykle přizpůsobit: uživatel může přetahovat tlačítka z jednoho panelu nástrojů na jiný a kopírovat, vkládat, odstraňovat a upravovat textové popisky a obrázky. Chcete-li uživateli zabránit v přizpůsobení panelu nástrojů, můžete panel nástrojů uzamknout jedním ze dvou způsobů. Buď nastavte příznak `bLocked` na hodnotu TRUE při volání [CMFCToolBar:: LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)nebo přidejte ID příkazu jednotlivého tlačítka do globálního seznamu chráněných příkazů pomocí metody [CMFCToolBarButton:: SetProtectedCommands](#setprotectedcommands) .
 
-`CMFCToolBarButton`objekty zobrazují obrázky z globálních kolekcí imagí panelů nástrojů v aplikaci. Tyto kolekce jsou spravovány nadřazeným panelem nástrojů [CMFCToolBar třídy](../../mfc/reference/cmfctoolbar-class.md). Další informace naleznete v tématu [Třída CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md).
+`CMFCToolBarButton` objektů zobrazuje obrázky z globálních kolekcí imagí panelů nástrojů v aplikaci. Tyto kolekce jsou spravovány nadřazeným panelem nástrojů [CMFCToolBar třídy](../../mfc/reference/cmfctoolbar-class.md). Další informace naleznete v tématu [Třída CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md).
 
-Když uživatel klikne na tlačítko panelu nástrojů, jeho nadřazený panel nástrojů zpracuje zprávu myši a na tlačítko sdělí příslušné akce. Pokud má tlačítko platné ID příkazu, nadřazený panel nástrojů pošle zprávu WM_COMMAND nadřazenému snímku.
+Když uživatel klikne na tlačítko panelu nástrojů, jeho nadřazený panel nástrojů zpracuje zprávu myši a na tlačítko sdělí příslušné akce. Pokud má tlačítko platné ID příkazu, nadřazený ovládací prvek Toolbar odešle zprávu WM_COMMAND nadřazenému snímku.
 
-Třída je základní třídou pro jiné třídy tlačítek panelu nástrojů, jako je například [Třída CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md), Třída CMFCToolBarEditBoxButton a [Třída CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). [](../../mfc/reference/cmfctoolbareditboxbutton-class.md) `CMFCToolBarButton`
+Třída `CMFCToolBarButton` je základní třídou pro jiné třídy tlačítek na panelu nástrojů, jako je [Třída CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md), třída [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md)a [Třída CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarButton` objekt pomocí různých metod `CMFCToolBarButton` ve třídě. Příklad ukazuje, jak povolit vstup myši a klávesnice, nastavit index obrázku tlačítka, nastavit ohraničující obdélník tlačítka a nastavit tlačítko jako viditelné. Tento fragment kódu je součástí [ukázky ovládacího prvku karta](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat `CMFCToolBarButton` objekt pomocí různých metod `CMFCToolBarButton` třídy. Příklad ukazuje, jak povolit vstup myši a klávesnice, nastavit index obrázku tlačítka, nastavit ohraničující obdélník tlačítka a nastavit tlačítko jako viditelné. Tento fragment kódu je součástí [ukázky ovládacího prvku karta](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]
@@ -341,7 +341,7 @@ Tato metoda vrátí hodnotu TRUE.
 
 Rozhraní používá tuto metodu k určení, zda se může tlačítko účastnit operace přetažení.
 
-Výchozí implementace vrátí hodnotu TRUE. Tuto metodu přepište, pokud tlačítko nelze uložit jako součást operace přetažení. Další informace o operacích přetažení naleznete v tématu přetažení [(OLE)](../../mfc/drag-and-drop-ole.md).
+Výchozí implementace vrátí hodnotu TRUE. Tuto metodu přepište, pokud tlačítko nelze uložit jako součást operace přetažení. Další informace o operacích přetažení najdete v tématu přetažení [OLE](../../mfc/drag-and-drop-ole.md).
 
 ##  <a name="canbestretched"></a>CMFCToolBarButton::CanBeStretched
 
@@ -365,7 +365,7 @@ Další informace o režimu přizpůsobení naleznete v tématu [CMFCToolBar:: S
 
 ##  <a name="cmfctoolbarbutton"></a>CMFCToolBarButton::CMFCToolBarButton
 
-Vytvoří a inicializuje `CMFCToolBarButton` objekt.
+Vytvoří a inicializuje objekt `CMFCToolBarButton`.
 
 ```
 CMFCToolBarButton(
@@ -395,7 +395,7 @@ pro Logická hodnota, která určuje, zda lze tlačítko přizpůsobit. Pokud m�
 
 ##  <a name="comparewith"></a>CMFCToolBarButton:: compareWith –
 
-Porovná tuto instanci se zadaným `CMFCToolBarButton` objektem.
+Porovná tuto instanci s dodaným objektem `CMFCToolBarButton`.
 
 ```
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
@@ -412,7 +412,7 @@ Nenulové, pokud se zadaný objekt rovná hodnotě této instance; v opačném p
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace určuje, zda ID příkazu zadaného objektu odpovídá ID příkazu této instance. Tuto metodu přepište, pokud je nutné provést další zpracování, aby `CMFCToolBarButton` bylo možné zjistit, zda jsou dva objekty stejné.
+Výchozí implementace určuje, zda ID příkazu zadaného objektu odpovídá ID příkazu této instance. Tuto metodu přepište, pokud je nutné provést další zpracování, aby bylo možné určit, zda jsou dva objekty `CMFCToolBarButton` stejné.
 
 ##  <a name="copyfrom"></a>CMFCToolBarButton::CopyFrom
 
@@ -431,9 +431,9 @@ pro Odkaz na zdrojové tlačítko, ze kterého se má kopírovat.
 
 Voláním této metody zkopírujte další tlačítko panelu nástrojů na toto tlačítko panelu nástrojů.
 
-##  <a name="createfromoledata"></a>  CMFCToolBarButton::CreateFromOleData
+##  <a name="createfromoledata"></a>CMFCToolBarButton::CreateFromOleData
 
-Vytvoří objekt ze zadaného `COleDataObject` objektu. `CMFCToolBarButton`
+Vytvoří objekt `CMFCToolBarButton` ze zadaného objektu `COleDataObject`.
 
 ```
 static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObject);
@@ -446,11 +446,11 @@ pro Zdrojový datový objekt OLE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vytvořený `CMFCToolBarButton` objekt.
+Vytvořený objekt `CMFCToolBarButton`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je používána rozhraním k provádění přenosu dat v různých formátech. Například `CMFCOutlookBarPane::OnDragOver` metoda používá tuto metodu k provádění operací přetažení.
+Tato metoda je používána rozhraním k provádění přenosu dat v různých formátech. Například metoda `CMFCOutlookBarPane::OnDragOver` používá tuto metodu k provádění operací přetažení.
 
 ##  <a name="enablewindow"></a>CMFCToolBarButton::EnableWindow
 
@@ -467,7 +467,7 @@ pro Nastavte tento parametr na hodnotu TRUE, pokud chcete vstup povolit, nebo na
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá `EnableWindow` funkci pro povolení nebo zakázání vstupu. Další informace najdete v tématu [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) v Windows SDK.
+Tato metoda volá funkci `EnableWindow` pro povolení nebo zakázání vstupu. Další informace najdete v tématu [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) v Windows SDK.
 
 ##  <a name="exporttomenubutton"></a>CMFCToolBarButton::ExportToMenuButton
 
@@ -544,7 +544,7 @@ Index obrázku přidruženého k tomuto tlačítku
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má tlačítko uživatelem definovanou Image (to znamená, pokud *bUserButton* byl v konstruktoru true), vrácený index určuje obrázek v kolekci uživatelsky definovaných imagí (viz [CMFCToolBar:: GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). V opačném případě index určuje obrázek v kolekci imagí načtených ze souboru prostředků (viz [CMFCToolBar::](../../mfc/reference/cmfctoolbar-class.md#getimages)getimages). Další informace o souborech prostředků naleznete v tématu [práce se soubory prostředků](../../windows/working-with-resource-files.md).
+Pokud má tlačítko uživatelem definovanou Image (to znamená, pokud *bUserButton* byl v konstruktoru true), vrácený index určuje obrázek v kolekci uživatelsky definovaných imagí (viz [CMFCToolBar:: GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). V opačném případě index určuje obrázek v kolekci imagí načtených ze souboru prostředků (viz [CMFCToolBar:: Getimages](../../mfc/reference/cmfctoolbar-class.md#getimages)). Další informace o souborech prostředků naleznete v tématu [práce se soubory prostředků](../../windows/working-with-resource-files.md).
 
 ##  <a name="getinvalidaterect"></a>CMFCToolBarButton::GetInvalidateRect
 
@@ -556,7 +556,7 @@ virtual const CRect GetInvalidateRect() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`CRect` Objekt, který určuje oblast, která musí být překreslena.
+Objekt `CRect`, který určuje oblast, která musí být překreslena.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -668,7 +668,7 @@ Nenulové, pokud je zobrazen textový popisek; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vrátí hodnotu FALSE, pokud tlačítko na panelu nástrojů nemá přidružený textový popisek ( [CMFCToolBarButton:: m_strText](#m_strtext) je prázdný), nebo [CMFCToolBarButton:: m_bText](#m_btext) je nastaveno na false.
+Tato metoda vrátí hodnotu FALSE, pokud tlačítko na panelu nástrojů nemá přidružený textový popisek ( [CMFCToolBarButton:: m_strText](#m_strtext) je prázdné) nebo [CMFCToolBarButton:: m_bText](#m_btext) je nastavena na hodnotu false.
 
 ##  <a name="isdroppeddown"></a>CMFCToolBarButton::IsDroppedDown
 
@@ -702,7 +702,7 @@ Nenulové, pokud může být tlačítko přizpůsobeno uživatelem; v opačném 
 
 Rozhraní volá tuto metodu, aby určila, jestli uživatel může přizpůsobit tlačítko panelu nástrojů pomocí operací přetažení nebo úprav.
 
-Výchozí implementace vrátí hodnotu false, pokud je ID příkazu standardního příkazu (můžete to zjistit voláním `IsStandardCommand` funkce) nebo v případě, že je ID příkazu v seznamu chráněných příkazů. Další informace o chráněných příkazech naleznete v tématu [CMFCToolBarButton:: GetProtectedCommands](#getprotectedcommands) a [CMFCToolBarButton:: SetProtectedCommands](#setprotectedcommands).
+Výchozí implementace vrátí hodnotu FALSE, pokud je ID příkazu standardního příkazu (můžete určit voláním funkce `IsStandardCommand`), nebo pokud se ID příkazu nachází v seznamu chráněných příkazů. Další informace o chráněných příkazech naleznete v tématu [CMFCToolBarButton:: GetProtectedCommands](#getprotectedcommands) a [CMFCToolBarButton:: SetProtectedCommands](#setprotectedcommands).
 
 Tuto metodu přepište, pokud chcete přizpůsobit její chování.
 
@@ -778,7 +778,7 @@ Nenulové, pokud je tlačítko panelu nástrojů umístěno na vodorovném panel
 
 Rozhraní volá tuto metodu, aby určila rozložení tlačítek panelu nástrojů.
 
-Tato metoda vrací `m_bHorz` datový člen. Výchozí hodnota `m_bHorz` datového členu je true. při každém volání metody [CMFCToolBarButton:: Draw](#ondraw) se resetuje.
+Tato metoda vrací datový člen `m_bHorz`. Výchozí hodnota datového členu `m_bHorz` je TRUE; u každého volání metody [CMFCToolBarButton:: Draw](#ondraw) se resetuje.
 
 ##  <a name="islastingroup"></a>CMFCToolBarButton::IsLastInGroup
 
@@ -794,7 +794,7 @@ TRUE, pokud je tlačítko posledním tlačítkem ve své skupině tlačítek; v 
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda definuje *skupinu tlačítek* jako sousední sadu tlačítek, která jsou umístěna na stejném řádku a jsou ohraničena oddělovači nebo ohraničením panelu nástrojů. Tato metoda vrátí hodnotu false, pokud tlačítko panelu nástrojů nemá žádný nadřazený panel nástrojů nebo tlačítko panelu nástrojů odkazuje na tlačítko **přizpůsobit** . Další informace o tlačítku pro **přizpůsobení** naleznete v tématu [CMFCToolBar:: GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton).
+Tato metoda definuje *skupinu tlačítek* jako sousední sadu tlačítek, která jsou umístěna na stejném řádku a jsou ohraničena oddělovači nebo ohraničením panelu nástrojů. Tato metoda vrátí hodnotu false, pokud tlačítko panelu nástrojů nemá žádný nadřazený panel nástrojů nebo tlačítko panelu nástrojů, které odkazuje na tlačítko **přizpůsobit** . Další informace o tlačítku pro **přizpůsobení** naleznete v tématu [CMFCToolBar:: GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton).
 
 Voláním metody [CMFCToolBarButton:: IsFirstInGroup](#isfirstingroup) určíte, zda je tlačítko ve své skupině tlačítek ve své první pozici.
 
@@ -867,7 +867,7 @@ Nenulové, pokud je podkladové okno ovládacího tlačítka viditelné; v opač
 
 Tato metoda vrátí nenulovou hodnotu, pokud atribut Style podkladového popisovače okna obsahuje styl WS_VISIBLE. Tato metoda vrátí hodnotu FALSE, pokud je podkladová obslužná rutina tlačítka NULL.
 
-##  <a name="m_bimage"></a>  CMFCToolBarButton::m_bImage
+##  <a name="m_bimage"></a>CMFCToolBarButton:: m_bImage
 
 Určuje, zda je na tlačítku zobrazen obrázek.
 
@@ -879,7 +879,7 @@ BOOL m_bImage;
 
 Pokud je tento datový člen nastaven na hodnotu TRUE, rozhraní zobrazí obrázek, který je přidružen k tlačítku panelu nástrojů. v opačném případě architektura obrázek nezobrazuje. Tento člen ovlivňuje návratovou hodnotu metody [CMFCToolBarButton:: m_bImage](#m_bimage) .
 
-##  <a name="m_btext"></a>  CMFCToolBarButton::m_bText
+##  <a name="m_btext"></a>CMFCToolBarButton:: m_bText
 
 Určuje, zda je na tlačítku zobrazen textový popisek.
 
@@ -891,7 +891,7 @@ BOOL m_bText;
 
 Pokud je tento datový člen nastaven na hodnotu TRUE, rozhraní zobrazí popisek text tlačítka panelu nástrojů. v opačném případě se v rozhraní nezobrazí textový popisek. Tento člen ovlivňuje návratovou hodnotu metody [CMFCToolBarButton:: m_bText](#m_btext) .
 
-##  <a name="m_btextbelow"></a>  CMFCToolBarButton::m_bTextBelow
+##  <a name="m_btextbelow"></a>CMFCToolBarButton:: m_bTextBelow
 
 Určuje, zda je textový popisek zobrazen pod obrázkem na tlačítku.
 
@@ -903,7 +903,7 @@ BOOL m_bTextBelow;
 
 Pokud je tato proměnná členů nastavena na hodnotu TRUE, rozhraní zobrazí text tlačítka pod obrázkem. Výchozí hodnota tohoto člena je FALSE.
 
-##  <a name="m_buserbutton"></a>CMFCToolBarButton::m_bUserButton
+##  <a name="m_buserbutton"></a>CMFCToolBarButton:: m_bUserButton
 
 Určuje, jestli má tlačítko uživatelsky definovaný obrázek.
 
@@ -915,7 +915,7 @@ BOOL m_bUserButton;
 
 Tento datový člen je nastaven na hodnotu TRUE, pokud k tlačítku je přiřazena uživatelem definovaná image.
 
-##  <a name="m_bwholetext"></a>  CMFCToolBarButton::m_bWholeText
+##  <a name="m_bwholetext"></a>CMFCToolBarButton:: m_bWholeText
 
 Určuje, zda tlačítko zobrazí úplný text popisku, i když se nevejde do ohraničujícího obdélníku.
 
@@ -927,7 +927,7 @@ BOOL m_bWholeText;
 
 Pokud je tento datový člen nastaven na hodnotu TRUE, rozhraní zobrazí úplný textový popisek zvětšením tlačítka. V opačném případě architektura zkrátí a připojí tři tečky ( **...** ) k textovému popisku.
 
-##  <a name="m_bwrap"></a>  CMFCToolBarButton::m_bWrap
+##  <a name="m_bwrap"></a>CMFCToolBarButton:: m_bWrap
 
 Určuje, zda bude tlačítko vedle oddělovače vloženo na další řádek.
 
@@ -943,7 +943,7 @@ Rozhraní umístí toto tlačítko na další řádek, pokud je tento datový č
 
 Výchozí hodnota tohoto datového členu je FALSE.
 
-##  <a name="m_bwraptext"></a>  CMFCToolBarButton::m_bWrapText
+##  <a name="m_bwraptext"></a>CMFCToolBarButton:: m_bWrapText
 
 Určuje, zda jsou povoleny víceřádkové textové popisky.
 
@@ -957,7 +957,7 @@ Pokud má tuto statickou členskou proměnnou hodnotu TRUE, rozhraní umožní v
 
 Výchozí hodnota tohoto datového členu je FALSE.
 
-##  <a name="m_nid"></a>CMFCToolBarButton::m_nID
+##  <a name="m_nid"></a>CMFCToolBarButton:: m_nID
 
 ID příkazu tlačítka
 
@@ -969,7 +969,7 @@ UINT m_nID;
 
 ID příkazu-1 označuje, že tlačítko je oddělovačem. Všechny oddělovače tlačítek mají styl TBBS_SEPARATOR. Další informace o stylech tlačítek naleznete v tématu [CMFCToolBarButton:: m_nStyle](#m_nstyle) .
 
-##  <a name="m_nstyle"></a>CMFCToolBarButton::m_nStyle
+##  <a name="m_nstyle"></a>CMFCToolBarButton:: m_nStyle
 
 Styl tlačítka
 
@@ -981,7 +981,7 @@ UINT m_nStyle;
 
 Seznam dostupných stylů tlačítek panelu nástrojů najdete v tématu [styly ovládacích prvků panelu nástrojů](../../mfc/reference/toolbar-control-styles.md) .
 
-##  <a name="m_strtext"></a>  CMFCToolBarButton::m_strText
+##  <a name="m_strtext"></a>CMFCToolBarButton:: m_strText
 
 Textový popisek tlačítka
 
@@ -1082,7 +1082,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 pro Kontext zařízení, který zobrazí tlačítko.
 
 *sizeDefault*<br/>
@@ -1093,7 +1093,7 @@ pro Stav Dock ovládacího prvku ToolBar Tento parametr má hodnotu TRUE, pokud 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`SIZE` Struktura obsahující rozměry tlačítka v pixelech
+`SIZE` struktura obsahující rozměry tlačítka v pixelech.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1201,7 +1201,7 @@ Tato metoda vrátí hodnotu FALSE.
 
 Výchozí implementace této metody neprovede žádnou akci a vrátí hodnotu FALSE. Tuto metodu přepište, pokud chcete vrátit nenulovou hodnotu, pokud tlačítko zpracovává zprávu v nápovědě.
 
-Další informace o zprávě WM_HELPHITTEST naleznete v tématu [TN028: Podpora](../../mfc/tn028-context-sensitive-help-support.md)kontextové pomoci.
+Další informace o WM_HELPHITTEST zprávě naleznete v tématu [TN028: kontextová podpora kontextové pomoci](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>CMFCToolBarButton::OnCtlColor
 
@@ -1215,7 +1215,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 pro Kontext zařízení, který zobrazí tlačítko.
 
 *nCtlColor*<br/>
@@ -1254,7 +1254,7 @@ Tato metoda vrátí hodnotu FALSE.
 
 Výchozí implementace neprovede žádnou akci a vrátí hodnotu FALSE. Potlačí tuto metodu a vrátí nenulovou hodnotu, pokud chcete upravit obsah poskytnuté nabídky.
 
-##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk
+##  <a name="ondblclk"></a>CMFCToolBarButton::OnDblClk
 
 Volá se rozhraním, když nadřazený panel nástrojů zpracovává zprávu [WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk) .
 
@@ -1269,7 +1269,7 @@ virtual void OnDblClk(CWnd* pWnd);
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána `CMFCToolBar::OnLButtonDblClk` metodou, když nadřazený panel nástrojů zpracuje zprávu [WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk) .
+Tato metoda je volána metodou `CMFCToolBar::OnLButtonDblClk`, když nadřazený panel nástrojů zpracovává zprávu [WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk) .
 
 Výchozí implementace této metody neprovádí žádnou akci.
 
@@ -1291,7 +1291,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 pro Kontext zařízení, který zobrazí tlačítko.
 
 *OBD*<br/>
@@ -1332,7 +1332,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 pro Kontext zařízení, který zobrazí tlačítko.
 
 *OBD*<br/>
@@ -1364,7 +1364,7 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ### <a name="parameters"></a>Parametry
 
 *strToolTip*<br/>
-mimo `CString` Objekt, který obdrží text vlastního popisu tlačítka.
+mimo Objekt `CString`, který obdrží text vlastního popisu tlačítka.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1376,7 +1376,7 @@ Rozhraní volá tuto metodu, když zobrazí popis tlačítka panelu nástrojů. 
 
 Výchozí implementace neprovede žádnou akci a vrátí hodnotu FALSE. Potlačí tuto metodu a vrátí nenulovou hodnotu pro zadání vlastního textu popisku pro tlačítko panelu nástrojů.
 
-##  <a name="onglobalfontschanged"></a>  CMFCToolBarButton::OnGlobalFontsChanged
+##  <a name="onglobalfontschanged"></a>CMFCToolBarButton::OnGlobalFontsChanged
 
 Volá se rozhraním, když se změní globální písmo.
 
@@ -1450,11 +1450,11 @@ virtual BOOL OnToolHitTest(
 pro Nadřazené okno tlačítka Může mít hodnotu NULL.
 
 *pTI*<br/>
-pro `TOOLINFO` Struktura, která obsahuje informace o nástroji v ovládacím prvku ToolTip.
+pro Struktura `TOOLINFO`, která obsahuje informace o nástroji v ovládacím prvku ToolTip.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek, `OnMenuButtonToolHitTest` Pokud tlačítko může načíst ukazatel do okna nadřazeného rámce; v opačném případě false.
+Výsledek `OnMenuButtonToolHitTest`, pokud tlačítko může načíst ukazatel do okna nadřazeného rámce; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1490,7 +1490,7 @@ pro Index tlačítka založený na nule v nadřazené kolekci tlačítek.
 pro Ovládací prvek, který zobrazuje text popisku
 
 *str*<br/>
-mimo `CString` Objekt, který obdrží aktualizovaný text popisku.
+mimo Objekt `CString`, který obdrží aktualizovaný text popisku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1511,7 +1511,7 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ### <a name="parameters"></a>Parametry
 
 *srcItem*<br/>
-pro `COleDataSource` Objekt, který ukládá informace o stavu operace přetažení.
+pro Objekt `COleDataSource`, který ukládá informace o stavu operace přetažení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1519,11 +1519,11 @@ TRUE, pokud je operace úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu pro přípravu tlačítka panelu nástrojů pro uložení stavu v poskytnutém `COleDataSource` objektu. Tato metoda ukládá svůj stav pomocí serializace sebe sama do sdíleného souboru a poté předává tento soubor do metody [COleDataSource –:: CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata) . Další informace o serializaci tlačítek na panelu nástrojů naleznete v tématu [CMFCToolBarButton:: serializovat](#serialize).
+Rozhraní volá tuto metodu pro přípravu tlačítka panelu nástrojů k uložení stavu v zadaném objektu `COleDataSource`. Tato metoda ukládá svůj stav pomocí serializace sebe sama do sdíleného souboru a poté předává tento soubor do metody [COleDataSource –:: CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata) . Další informace o serializaci tlačítek na panelu nástrojů naleznete v tématu [CMFCToolBarButton:: serializovat](#serialize).
 
 Tato metoda neprovede žádnou akci a vrátí hodnotu TRUE, pokud tlačítko nelze uložit (metoda [CMFCToolBarButton:: CanBeStored](#canbestored) vrátí hodnotu false). Vrátí hodnotu FALSE, pokud dojde k výjimce při serializaci objektu.
 
-Další informace o operacích přetahování OLE naleznete v tématu přetažení [(OLE)](../../mfc/drag-and-drop-ole.md).
+Další informace o operacích přetahování OLE naleznete v tématu [OLE](../../mfc/drag-and-drop-ole.md)přetažení.
 
 ##  <a name="rect"></a>CMFCToolBarButton:: Rect
 
@@ -1535,7 +1535,7 @@ const CRect& Rect() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`CRect` Objekt, který obsahuje ohraničující obdélník tlačítka.
+Objekt `CRect`, který obsahuje ohraničující obdélník tlačítka.
 
 ##  <a name="resetimagetodefault"></a>CMFCToolBarButton::ResetImageToDefault
 
@@ -1561,7 +1561,7 @@ virtual void SaveBarState();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu, když vytvoří `CMFCToolBarButton` objekt jako výsledek operace přetažení.
+Rozhraní volá tuto metodu, když vytvoří objekt `CMFCToolBarButton` jako výsledek operace přetažení.
 
 Výchozí implementace této metody neprovádí žádnou akci. Tuto metodu přepište, pokud chcete uložit stav tlačítka panelu nástrojů na externí zdroj dat.
 
@@ -1576,17 +1576,17 @@ virtual void Serialize(CArchive& ar);
 ### <a name="parameters"></a>Parametry
 
 *snížen*<br/>
-pro `CArchive` Objekt, ze kterého se má serializovat.
+pro Objekt `CArchive`, ze kterého má být serializován.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda podporuje procesy přenosu dat, jako je například schránka nebo operace přetažení. Čte nebo zapisuje vlastnosti tlačítka, jako je ID, textový popisek a ID obrázku z nebo na poskytnutý `CArchive` objekt.
+Tato metoda podporuje procesy přenosu dat, jako je například schránka nebo operace přetažení. Čte nebo zapisuje vlastnosti tlačítka, jako je ID, textový popisek a ID obrázku z nebo na poskytnutý objekt `CArchive`.
 
-Příklady serializace naleznete v [tématu serializace: Serializace objektu](../../mfc/serialization-serializing-an-object.md).
+Příklady serializace naleznete v tématu [serializace: serializace objektu](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setaccdata"></a>CMFCToolBarButton::SetACCData
 
-Naplní poskytnutý `CAccessibilityData` objekt daty přístupnosti z tlačítka panelu nástrojů.
+Naplní poskytnutý objekt `CAccessibilityData` s daty přístupnosti z tlačítka panelu nástrojů.
 
 ```
 virtual BOOL SetACCData(
@@ -1599,8 +1599,8 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 pro Nadřazené okno tlačítka panelu nástrojů
 
-*data*<br/>
-pro `CAccessibilityData` Objekt, který je vyplněn daty přístupnosti tlačítka panelu nástrojů.
+*údajů*<br/>
+pro Objekt `CAccessibilityData`, který je vyplněn daty přístupnosti tlačítka panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1751,7 +1751,7 @@ K nastavení Obecné viditelnosti tlačítka použijte metodu [CMFCToolBarButton
 
 Tato metoda volá metodu [CMFCToolBarButton:: inshow](#onshow) poté, co aktualizuje stav viditelnosti tlačítka.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -11,20 +11,20 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 9f8f5c5629e9794ca8ee2cc6bedbc4ba6bfdb24d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40799d1ed6e21e6932f1adfbad117c436918b792
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262512"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141280"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource – struktura
 
-Abstrakce pro vlákno hardwaru.
+Abstrakce pro hardwarové vlákno.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 struct IExecutionResource;
 ```
 
@@ -34,14 +34,14 @@ struct IExecutionResource;
 
 |Název|Popis|
 |----------|-----------------|
-|[Iexecutionresource::currentsubscriptionlevel –](#currentsubscriptionlevel)|Vrátí počet aktivovaných virtuálního procesoru kořeny a odběru externí aktuálně přiřazen k podkladové vlákno hardwaru, kterou představuje tento prostředek spuštění vlákna.|
-|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Vrací jedinečný identifikátor pro vlákno hardwaru, který představuje tento prostředek spuštění.|
-|[IExecutionResource::GetNodeId](#getnodeid)|Vrátí jedinečný identifikátor pro uzel procesoru, které patří tento prostředek spuštění.|
-|[Iexecutionresource::Remove –](#remove)|Vrátí toto spuštění prostředků Resource Manageru.|
+|[IExecutionResource:: CurrentSubscriptionLevel –](#currentsubscriptionlevel)|Vrátí počet aktivovaných kořenových adresářů virtuálních procesorů a odběr externích vláken aktuálně přidružených k základnímu hardwarovému vláknu, které tento prostředek spuštění představuje.|
+|[IExecutionResource:: Getexecutionresourceid –](#getexecutionresourceid)|Vrátí jedinečný identifikátor hardwarového vlákna, které tento prostředek spuštění představuje.|
+|[IExecutionResource:: Getnodeid –](#getnodeid)|Vrátí jedinečný identifikátor uzlu procesoru, do kterého patří tento prostředek spuštění.|
+|[IExecutionResource:: Remove](#remove)|Vrátí tento prostředek spuštění do Správce prostředků.|
 
 ## <a name="remarks"></a>Poznámky
 
-Spuštění prostředků může být samostatný nebo přidružené kořenových adresářů virtuálního procesoru. Samostatný prostředek spuštění se vytvoří při vytvoří odběr vlákno na vlákno v aplikaci. Metody [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) a [ischedulerproxy::requestinitialvirtualprocessors –](ischedulerproxy-structure.md#requestinitialvirtualprocessors) vytvářet předplatná vlákna a vrátit `IExecutionResource` rozhraní zastupující předplatné. Vytváří se předplatné vlákna je způsob, jak informovat správce prostředků, který dané vlákno se bude podílet na práci ve frontě do fronty plánovače, spolu s kořenových adresářů virtuálního procesoru, které přiřadí Resource Manageru pro Plánovač. Resource Manager používá informace oversubscribing vláken hardwaru, aby ve kterém můžete.
+Prostředky spuštění můžou být samostatné nebo přidružené k kořenovým adresářům virtuálních procesorů. Samostatný prostředek spuštění se vytvoří, když vlákno ve vaší aplikaci vytvoří odběr vlákna. Metody [ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) a [ISchedulerProxy:: RequestInitialVirtualProcessors –](ischedulerproxy-structure.md#requestinitialvirtualprocessors) vytvořit odběry vlákna a vracet `IExecutionResource` rozhraní představující předplatné. Vytvořením předplatného vlákna je způsob, jak informovat Správce prostředků, že se dané vlákno bude podílet na práci zařazené do fronty plánovače spolu s kořeny virtuálního procesoru Správce prostředků přiřadí plánovači. Správce prostředků používá informace k tomu, abyste se vyhnuli přepočtu neodběrů hardwarových vláken, kde může.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -49,15 +49,15 @@ Spuštění prostředků může být samostatný nebo přidružené kořenových
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm.h
+**Záhlaví:** concrtrm. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="currentsubscriptionlevel"></a>  Iexecutionresource::currentsubscriptionlevel – metoda
+## <a name="currentsubscriptionlevel"></a>IExecutionResource:: CurrentSubscriptionLevel – – metoda
 
-Vrátí počet aktivovaných virtuálního procesoru kořeny a odběru externí aktuálně přiřazen k podkladové vlákno hardwaru, kterou představuje tento prostředek spuštění vlákna.
+Vrátí počet aktivovaných kořenových adresářů virtuálních procesorů a odběr externích vláken aktuálně přidružených k základnímu hardwarovému vláknu, které tento prostředek spuštění představuje.
 
-```
+```cpp
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
 ```
 
@@ -67,74 +67,74 @@ Aktuální úroveň předplatného.
 
 ### <a name="remarks"></a>Poznámky
 
-Počet spuštěných vláken jsou přidružené vlákno hardwaru říká úrovně předplatného. To zahrnuje pouze vláken, která je seznámen ve formě předplacenému vláken a kořenových adresářů virtuálního procesoru, které aktivně spouštíte proxy vlákna Resource Manageru.
+Úroveň předplatného oznamuje, kolik spuštěných vláken je přidruženo k hardwarovému vláknu. To zahrnuje jenom vlákna, o kterých Správce prostředků ví ve formě přihlášených vláken, a kořenových adresářích virtuálních procesorů, které aktivně spouštějí proxy vlákna.
 
-Volání metody [ischedulerproxy::subscribecurrentthread –](ischedulerproxy-structure.md#subscribecurrentthread), nebo metodu [ischedulerproxy::requestinitialvirtualprocessors –](ischedulerproxy-structure.md#requestinitialvirtualprocessors) s parametrem `doSubscribeCurrentThread` nastaven na hodnotu **true** zvýší o jednu úroveň předplatného vlákno hardwaru. Navíc vracejí `IExecutionResource` rozhraní představující předplatné. Odpovídající volání [iexecutionresource::Remove –](#remove) sníží úroveň předplatného vlákno hardwaru o jednu.
+Volání metody [ISchedulerProxy:: SubscribeCurrentThread –](ischedulerproxy-structure.md#subscribecurrentthread)nebo metody [ISchedulerProxy:: RequestInitialVirtualProcessors –](ischedulerproxy-structure.md#requestinitialvirtualprocessors) s parametrem `doSubscribeCurrentThread` nastaveným na hodnotu **true** zvýší úroveň předplatného hardwarového vlákna o jednu. Také vracejí `IExecutionResource` rozhraní představující předplatné. Odpovídající volání metody [IExecutionResource:: Remove](#remove) sníží úroveň předplatného hardwarového vlákna o jednu.
 
-V rámci aktivaci kořenu virtuálního procesoru pomocí metody [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate) zvýší o jednu úroveň předplatného vlákno hardwaru. Metody [ivirtualprocessorroot::Deactivate –](ivirtualprocessorroot-structure.md#deactivate), nebo [iexecutionresource::Remove –](#remove) jednou při vyvolání na kořen virtuálního procesoru aktivované snížení úrovně předplatného.
+Způsob aktivace kořene virtuálního procesoru pomocí metody [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate) zvyšuje úroveň předplatného hardwarového vlákna o jednu. Metody [IVirtualProcessorRoot::D eactivate](ivirtualprocessorroot-structure.md#deactivate)nebo [IExecutionResource:: Remove](#remove) při vyvolání v aktivovaném kořenovém adresáři virtuálního procesoru sníží úroveň předplatného o jednu.
 
-Resource Manager používá jako jeden ze způsobů, jak ve kterých se mají při přesouvání prostředků mezi plánovači informace na úrovni předplatného.
+Správce prostředků používá informace na úrovni předplatného jako jeden ze způsobů, jak určit, kdy se mají přesouvat prostředky mezi plánovači.
 
-##  <a name="getexecutionresourceid"></a>  Iexecutionresource::getexecutionresourceid – metoda
+## <a name="getexecutionresourceid"></a>IExecutionResource:: Getexecutionresourceid – – metoda
 
-Vrací jedinečný identifikátor pro vlákno hardwaru, který představuje tento prostředek spuštění.
+Vrátí jedinečný identifikátor hardwarového vlákna, které tento prostředek spuštění představuje.
 
-```
+```cpp
 virtual unsigned int GetExecutionResourceId() const = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedinečný identifikátor pro vlákno hardwaru základního tento prostředek spuštění.
+Jedinečný identifikátor pro hardwarové vlákno podkladu tohoto prostředku provádění.
 
 ### <a name="remarks"></a>Poznámky
 
-Každé vlákno hardwaru je přiřazen jedinečný identifikátor modulem Runtime souběžnost. Pokud více zdrojů provádění přiřazeném hardwarovém vlákno, bude mít stejný identifikátor prostředku spuštění.
+Každému hardwarovému vláknu je Concurrency Runtime přiřazen jedinečný identifikátor. Pokud je k dispozici více prostředků spuštění, bude mít každý z nich stejný identifikátor prostředku spuštění.
 
-##  <a name="getnodeid"></a>  Iexecutionresource::getnodeid – metoda
+## <a name="getnodeid"></a>IExecutionResource:: Getnodeid – – metoda
 
-Vrátí jedinečný identifikátor pro uzel procesoru, které patří tento prostředek spuštění.
+Vrátí jedinečný identifikátor uzlu procesoru, do kterého patří tento prostředek spuštění.
 
-```
+```cpp
 virtual unsigned int GetNodeId() const = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedinečný identifikátor pro uzel procesoru.
+Jedinečný identifikátor uzlu procesoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Modul Concurrency Runtime představuje hardwarových vláken v systému ve skupinách procesoru uzlů. Uzly jsou obvykle odvozena z hardwarovou topologii systému. Všechny procesory na soket zvláštní nebo konkrétní uzel NUMA může například patřit do stejného uzlu procesoru. Resource Manager přiřadí tyto uzly počínaje jedinečné identifikátory `0` včetně `nodeCount - 1`, kde `nodeCount` představuje celkový počet uzlů procesoru v systému.
+Concurrency Runtime představuje hardwarová vlákna v systému v rámci skupin uzlů procesorů. Uzly jsou obvykle odvozeny od hardwarové topologie systému. Například všechny procesory určitého soketu nebo konkrétního uzlu NUMA mohou patřit do stejného uzlu procesoru. Správce prostředků přiřadí těmto uzlům jedinečné identifikátory počínaje `0` až do `nodeCount - 1`, kde `nodeCount` představuje celkový počet uzlů procesoru v systému.
 
-Počet uzlů, které se získají z funkce [getprocessornodecount –](concurrency-namespace-functions.md).
+Počet uzlů lze získat z [GetProcessorNodeCount –](concurrency-namespace-functions.md)funkce.
 
-##  <a name="remove"></a>  Iexecutionresource::Remove – metoda
+## <a name="remove"></a>IExecutionResource:: Remove – metoda
 
-Vrátí toto spuštění prostředků Resource Manageru.
+Vrátí tento prostředek spuštění do Správce prostředků.
 
-```
+```cpp
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pScheduler*<br/>
-Rozhraní plánovači, že žádost o odebrání tohoto prostředku spuštění.
+Rozhraní Scheduleru, které vydává požadavek na odebrání tohoto prostředku spuštění.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody vrátit samostatné spuštění zdrojů, jakož i provádění prostředky spojené s kořenových adresářů virtuálního procesoru na Resource Manager.
+Tuto metodu použijte, chcete-li vracet samostatné prostředky pro spuštění i prostředky spuštění přidružené k kořenům virtuálního procesoru Správce prostředků.
 
-Pokud je to prostředek spuštění samostatného jste dostali od některou z metod [ischedulerproxy::subscribecurrentthread –](ischedulerproxy-structure.md#subscribecurrentthread) nebo [ischedulerproxy::requestinitialvirtualprocessors –](ischedulerproxy-structure.md#requestinitialvirtualprocessors), volání Metoda `Remove` se ukončí vlákno předplatné, prostředek se vytvořil pro reprezentaci. Je potřeba ukončit všechny odběry vlákna před ukončením Plánovač proxy server a musí volat `Remove` z vlákna, která vytvoří odběr.
+Pokud se jedná o samostatný prostředek spuštění, který jste dostali z některé z metod [ISchedulerProxy:: SubscribeCurrentThread –](ischedulerproxy-structure.md#subscribecurrentthread) nebo [ISchedulerProxy:: RequestInitialVirtualProcessors –](ischedulerproxy-structure.md#requestinitialvirtualprocessors), volání metody `Remove` ukončí předplatné vlákna, které se prostředek vytvořil, aby představoval. Před vypínáním proxy serveru Scheduler je nutné ukončit všechna předplatná vlákna a musí volat `Remove` z vlákna, které vytvořilo odběr.
 
-Kořenových adresářů virtuálního procesoru, mohou být vráceny do Správce prostředků vyvoláním `Remove` metody, protože rozhraní `IVirtualProcessorRoot` dědí z `IExecutionResource` rozhraní. Možná budete muset vrátit odpověď na volání v kořenovém adresáři virtuálního procesoru [ischeduler::removevirtualprocessors –](ischeduler-structure.md#removevirtualprocessors) metodu, nebo až budete hotovi s přetížený kořen virtuálního procesoru jste získali z [ Ischedulerproxy::createoversubscriber –](ischedulerproxy-structure.md#createoversubscriber) metody. Kořenových adresářů virtuálního procesoru, neexistují žádná omezení ve vlákně, které můžete vyvolat `Remove` metody.
+Kořene virtuálního procesoru, je také možné vrátit do Správce prostředků vyvoláním metody `Remove`, protože rozhraní `IVirtualProcessorRoot` dědí z rozhraní `IExecutionResource`. Je možné, že budete muset vrátit kořen virtuálního procesoru buď jako reakci na volání metody [IScheduler:: RemoveVirtualProcessors –](ischeduler-structure.md#removevirtualprocessors) , nebo když jste hotovi s nadplatným kořenem virtuálního procesoru, který jste získali z metody [ISchedulerProxy:: CreateOversubscriber –](ischedulerproxy-structure.md#createoversubscriber) . U kořenových adresářů virtuálních procesorů neexistují žádná omezení, která může vlákno vyvolat metodu `Remove`.
 
-`invalid_argument` je vyvolána, pokud parametr `pScheduler` je nastavena na `NULL`.
+`invalid_argument` je vyvolána, pokud je parametr `pScheduler` nastaven na `NULL`.
 
-`invalid_operation` je vyvolána, pokud parametr `pScheduler` se liší od plánovači, že tento prostředek provádění vytvořil pro, nebo pomocí samostatné spuštění zdroje, pokud aktuální vlákno se liší od vlákna, které vlákno předplatné vytvořili.
+`invalid_operation` je vyvolána, pokud se `pScheduler` parametru liší od Scheduleru, pro který byl vytvořen tento prostředek spuštění pro, nebo pomocí samostatného prostředku spuštění, pokud se aktuální vlákno liší od vlákna, které vytvořilo odběr vlákna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [IVirtualProcessorRoot – struktura](ivirtualprocessorroot-structure.md)

@@ -9,20 +9,20 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: eddcf44966d197068113c5e7817dad37841261a3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 9a3f6f349fc3103893639fe209dcf23a07ffec56
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524844"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127121"
 ---
-# <a name="acceleratorviewremoved-class"></a>accelerator_view_removed – třída
+# <a name="accelerator_view_removed-class"></a>accelerator_view_removed – třída
 
-Výjimka, která je vyvolána, když podkladové volání rozhraní DirectX selže z důvodu vypršení časového limitu Windows mechanismus detekce a obnovení.
+Výjimka, která je vyvolána, když se podkladové volání rozhraní DirectX nepovede z důvodu detekce a obnovení časového limitu systému Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class accelerator_view_removed : public runtime_exception;
 ```
 
@@ -30,15 +30,15 @@ class accelerator_view_removed : public runtime_exception;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[accelerator_view_removed Constructor](#ctor)|Inicializuje novou instanci třídy `accelerator_view_removed` třídy.|
+|[accelerator_view_removed – konstruktor](#ctor)|Inicializuje novou instanci třídy `accelerator_view_removed`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[get_view_removed_reason](#get_view_removed_reason)|Vrátí kód chyby HRESULT označující příčinu `accelerator_view` odebírání příslušného objektu.|
+|[get_view_removed_reason](#get_view_removed_reason)|Vrátí kód chyby HRESULT označující příčinu odebrání objektu `accelerator_view`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -50,17 +50,17 @@ class accelerator_view_removed : public runtime_exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amprt.h
+**Záhlaví:** amprt. h
 
-**Namespace:** Souběžnost
+**Obor názvů:** Concurrency
 
-## <a name="ctor"></a> accelerator_view_removed –
+## <a name="ctor"></a>accelerator_view_removed
 
-Inicializuje novou instanci třídy [accelerator_view_removed –](accelerator-view-removed-class.md) třídy.
+Inicializuje novou instanci třídy [accelerator_view_removed](accelerator-view-removed-class.md) .
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 explicit accelerator_view_removed(
     const char * message,
     HRESULT view_removed_reason ) throw();
@@ -72,25 +72,25 @@ explicit accelerator_view_removed(
 ### <a name="parameters"></a>Parametry
 
 *message*<br/>
-Popis chyby.
+Popis chyby
 
 *view_removed_reason*<br/>
-Kód chyby HRESULT označující důvod odebrání `accelerator_view` objektu.
+Kód chyby HRESULT označující příčinu odebrání objektu `accelerator_view`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Novou instanci třídy `accelerator_view_removed` třídy.
+Nová instance třídy `accelerator_view_removed`.
 
-## <a name="get_view_removed_reason"></a> get_view_removed_reason
+## <a name="get_view_removed_reason"></a>get_view_removed_reason
 
-Vrátí kód chyby HRESULT označující příčinu `accelerator_view` odebírání příslušného objektu.
+Vrátí kód chyby HRESULT označující příčinu odebrání objektu `accelerator_view`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 HRESULT get_view_removed_reason() const throw();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,28 +1,28 @@
 ---
-title: 'Postupy: Odesílání zpráv v pravidelných intervalech'
+title: 'Postupy: Odesílání zpráv v pravidelných intervalech'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - timer class, example
 - sending messages at regular intervals [Concurrency Runtime]
 ms.assetid: 4b60ea6c-97c8-4d69-9f7b-ad79f3548026
-ms.openlocfilehash: 0bf5f93e2a570761874232a88a23289e59e58d94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c51a5cab6fcae5eb45b9d9b54c0dad8e8ec393b2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321959"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142466"
 ---
-# <a name="how-to-send-a-message-at-a-regular-interval"></a>Postupy: Odesílání zpráv v pravidelných intervalech
+# <a name="how-to-send-a-message-at-a-regular-interval"></a>Postupy: Odesílání zpráv v pravidelných intervalech
 
-Tento příklad ukazuje způsob použití souběžnost::[timer – třída](../../parallel/concrt/reference/timer-class.md) k odesílání zpráv v pravidelných intervalech.
+Tento příklad ukazuje, jak použít třídu concurrency::[Timer](../../parallel/concrt/reference/timer-class.md) k odeslání zprávy v pravidelných intervalech.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad používá `timer` objekt sestavy pokroku během operace s delším průběhem. Tento příklad obsahuje odkazy `timer` do objektu [concurrency::call](../../parallel/concrt/reference/call-class.md) objektu. `call` Objekt zobrazí indikátor průběhu do konzoly nástroje v pravidelných intervalech. [Concurrency::timer::start](reference/timer-class.md#start) metoda spustí časovač v samostatných kontextu. `perform_lengthy_operation` Volání funkce [concurrency::wait](reference/concurrency-namespace-functions.md#wait) funkce do hlavní kontextu pro simulaci časově náročná operace.
+Následující příklad používá objekt `timer` k hlášení průběhu během operace s zdlouhavou operací. Tento příklad propojuje objekt `timer` s objektem [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) . Objekt `call` v pravidelných intervalech tiskne indikátor průběhu. Metoda [Concurrency:: Timer:: Start](reference/timer-class.md#start) spustí časovač samostatného kontextu. Funkce `perform_lengthy_operation` volá funkci [Concurrency:: wait](reference/concurrency-namespace-functions.md#wait) v hlavním kontextu pro simulaci časově náročné operace.
 
 [!code-cpp[concrt-report-progress#1](../../parallel/concrt/codesnippet/cpp/how-to-send-a-message-at-a-regular-interval_1.cpp)]
 
-Tento příklad vytvoří následující ukázkový výstup:
+Tento příklad vytvoří následující vzorový výstup:
 
 ```Output
 Performing a lengthy operation..........done.
@@ -30,11 +30,11 @@ Performing a lengthy operation..........done.
 
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `report-progress.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo ho vložte do souboru s názvem `report-progress.cpp` a potom spusťte následující příkaz v okně příkazového řádku sady Visual Studio.
 
-**cl.exe /EHsc report-progress.cpp**
+> **CL. exe/EHsc Report-Progress. cpp**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

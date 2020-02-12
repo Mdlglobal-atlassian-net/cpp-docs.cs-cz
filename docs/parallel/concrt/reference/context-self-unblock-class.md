@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-ms.openlocfilehash: 900dc68eac4441bd1db3818d3c1f30698b80a6e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883d5630251a6ea13afba1164f221a0da1773c17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296173"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143115"
 ---
-# <a name="contextselfunblock-class"></a>context_self_unblock – třída
+# <a name="context_self_unblock-class"></a>context_self_unblock – třída
 
-Tato třída popisuje výjimku vyvolána, když `Unblock` metodu `Context` objektu je volána z stejný kontext. Pokus o by jít odblokujete samotné podle daného kontextu.
+Tato třída popisuje výjimku vyvolanou při volání metody `Unblock` objektu `Context` ze stejného kontextu. To by znamenalo, že pokus o odblokování samotného daného kontextu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class context_self_unblock : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class context_self_unblock : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[context_self_unblock](#ctor)|Přetíženo. Vytvoří `context_self_unblock` objektu.|
+|[context_self_unblock](#ctor)|Přetíženo. Vytvoří objekt `context_self_unblock`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,15 +41,15 @@ class context_self_unblock : public std::exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> context_self_unblock
+## <a name="ctor"></a>context_self_unblock
 
-Vytvoří `context_self_unblock` objektu.
+Vytvoří objekt `context_self_unblock`.
 
-```
+```cpp
 explicit _CRTIMP context_self_unblock(_In_z_ const char* _Message) throw();
 
 context_self_unblock() throw();
@@ -58,8 +58,8 @@ context_self_unblock() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

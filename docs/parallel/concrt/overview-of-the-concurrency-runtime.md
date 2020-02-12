@@ -7,113 +7,113 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b50c943bb83c587ab4001556b1143f9d5f868a0b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412690"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142924"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Přehled Concurrency Runtime
 
-Tento dokument poskytuje přehled o modulu Runtime souběžnosti. Popisuje výhody modulu Runtime souběžnosti, kdy ji použít, a způsob, jakým jeho komponenty komunikovat mezi sebou a s operačním systémem a aplikace.
+Tento dokument poskytuje přehled Concurrency Runtime. Popisuje výhody Concurrency Runtime, kdy je použít a jak spolu jejich součásti vzájemně spolupracují a s operačním systémem a aplikacemi.
 
-##  <a name="top"></a> Oddíly
+## <a name="top"></a>Řezů
 
 Tento dokument obsahuje následující části:
 
-- [Historie provádění Concurrency Runtime](#dlls)
+- [Historie implementace Concurrency Runtime](#dlls)
 
-- [Proč je rozhraní Concurrency Runtime důležité](#runtime)
+- [Proč je modul runtime pro souběžnost důležitý](#runtime)
 
 - [Architektura](#architecture)
 
-- [Výrazy Lambda v jazyce C++](#lambda)
+- [C++Výrazy lambda](#lambda)
 
 - [Požadavky](#requirements)
 
-## <a name="dlls"></a> Historie provádění Concurrency Runtime
+## <a name="dlls"></a>Historie implementace Concurrency Runtime
 
-V sadě Visual Studio 2010 prostřednictvím 2013 Concurrency Runtime byl zahrnut msvcr100.dll prostřednictvím msvcr120.dll.  Když UCRT refaktoring došlo k chybě v sadě Visual Studio 2015, že knihovna DLL se teď vyčleněný do tří částí:
+V sadě Visual Studio 2010 až 2013 byl Concurrency Runtime začleněn do souboru msvcr100. dll prostřednictvím msvcr120. dll.  V případě refaktoringu UCRT v aplikaci Visual Studio 2015 byla tato knihovna DLL refaktorovaná na tři části:
 
-- ucrtbase.dll – rozhraní API jazyka C, dodáno ve Windows 10 a udržovat nižší úrovně prostřednictvím Windows Update-
+- ucrtbase. dll – rozhraní API, dodávané ve Windows 10 a se zavedením nižší úrovně prostřednictvím web Windows Update-
 
-- Podpora kompilátoru knihovny vcruntime140.dll – funkce a modulu runtime EH dodáno prostřednictvím sady Visual Studio
+- knihovny vcruntime140. dll – funkce podpory kompilátoru a modul runtime EH, dodávané prostřednictvím sady Visual Studio
 
-- concrt140.dll – Concurrency Runtime dodáno prostřednictvím sady Visual Studio. Vyžaduje se pro paralelní kontejnery a algoritmy, jako `concurrency::parallel_for`. Navíc STL potřebuje tuto knihovnu DLL na Windows XP k power primitiv synchronizace, protože Windows XP nemá podmínku proměnné.
+- concrt140. dll – Concurrency Runtime dodávané prostřednictvím sady Visual Studio. Vyžaduje se u paralelních kontejnerů a algoritmů, jako je `concurrency::parallel_for`. STL také vyžaduje, aby tato knihovna DLL v systému Windows XP měla k dispozici základní možnosti synchronizace, protože systém Windows XP neobsahuje proměnné podmínky.
 
-V sadě Visual Studio 2015 a novější Plánovač úloh Concurrency Runtime není nadále Plánovač úloh třídy a souvisejících typů v ppltasks.h. Tyto typy teď použít Windows fondu vláken pro lepší výkon a vzájemná funkční spolupráce s primitiv synchronizace Windows.
+V aplikaci Visual Studio 2015 a novějších Concurrency Runtime Plánovač úloh již není plánovačem pro třídu úlohy a související typy v ppltasks. h. Tyto typy nyní používají fondu Windows pro lepší výkon a interoperabilitu s prvky synchronizace systému Windows.
 
-##  <a name="runtime"></a> Proč je rozhraní Concurrency Runtime důležité
+## <a name="runtime"></a>Proč je modul runtime pro souběžnost důležitý
 
-Rozhraní concurrency runtime poskytuje jednotné a předvídatelnost aplikace a součásti aplikace, na kterých běží současně. Jsou dva příklady výhody modulu Runtime souběžnosti *plánování spolupráce úkolů* a *spolupráce blokování*.
+Modul runtime pro souběžnost poskytuje jednotnost a předvídatelnost pro aplikace a komponenty aplikace, které běží současně. Dva příklady výhod Concurrency Runtime jsou *kooperativní plánování úloh* a *kooperativní blokování*.
 
-Modulu Runtime souběžnosti používá plánovače úloh spolupráce, který implementuje algoritmus přebírající práci pro efektivní distribuci práce mezi výpočetními prostředky. Zvažte například aplikaci, která má dvě vlákna, která se spravují pomocí stejných modulů runtime. Pokud jedno vlákno skončí její naplánované úlohy, ho přenést práce z jiného podprocesu. Tento mechanismus vyrovnává celkové zatížení aplikace.
+Concurrency Runtime používá spolupráci plánovače úloh, který implementuje algoritmus pro efektivní distribuci práce mezi výpočetními prostředky. Zvažte například aplikaci, která má dvě vlákna, která jsou spravovaná stejným modulem runtime. Pokud jedno vlákno dokončí svou naplánovanou úlohu, může přesměrovat práci z druhého vlákna. Tento mechanismus vyrovnává celkové zatížení aplikace.
 
-Modul Concurrency Runtime poskytuje také synchronizací primitiv, které používají k synchronizaci přístupu k prostředkům spolupráce blokování. Představte si třeba úlohu, která musí mít exkluzivní přístup ke sdíleným prostředkům. Zákonné zodpovědnosti organizací blokováním kooperativně, můžete použít modul runtime zbývající quantum provést jinou úlohu, protože první úloha čeká na prostředek. Tento mechanismus podporuje maximální využití výpočetních prostředků.
+Concurrency Runtime také poskytuje prvky synchronizace, které k synchronizaci přístupu k prostředkům používají funkci pro spolupráci. Představte si třeba úlohu, která musí mít výhradní přístup ke sdílenému prostředku. Díky blokování spolupracuje modul runtime za účelem provedení jiné úlohy, když bude první úkol čekat na prostředek. Tento mechanismus podporuje maximální využití výpočetních prostředků.
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="architecture"></a> Architektura
+## <a name="architecture"></a>Architektura
 
-Modulu Runtime souběžnosti je rozdělena do čtyř komponent: Knihovna paralelních vzorů (PPL), asynchronní knihovnou agentů, Plánovač úloh a Resource Manageru. Tyto součásti jsou umístěny mezi operačního systému a aplikací. Následující obrázek znázorňuje, jak pracují komponenty modulu Runtime souběžnosti mezi operačního systému a aplikací:
+Concurrency Runtime je rozdělena do čtyř komponent: knihovna paralelních vzorů (PPL), Knihovna asynchronních agentů, Plánovač úloh a Správce prostředků. Tyto součásti jsou umístěné mezi operačním systémem a aplikacemi. Následující obrázek ukazuje, jak Concurrency Runtime komponenty vzájemně spolupracují mezi operačním systémem a aplikacemi:
 
-**Architektura modulu Runtime souběžnosti**
+**Architektura Concurrency Runtime**
 
-![Architektura modulu Runtime souběžnosti](../../parallel/concrt/media/concurrencyrun.png "architektura modulu Runtime souběžnosti")
+![Architektura Concurrency Runtime](../../parallel/concrt/media/concurrencyrun.png "Architektura Concurrency Runtime")
 
 > [!IMPORTANT]
-> Součástí plánovače úloh a Resource Manageru nejsou k dispozici z aplikace pro univerzální platformu Windows (UPW) nebo při použití třídy úkolu nebo jiné typy v ppltasks.h.
+> Komponenty Plánovač úloh a Správce prostředků nejsou k dispozici v aplikaci Univerzální platforma Windows (UWP) ani při použití třídy Task nebo jiných typů v ppltasks. h.
 
-Modulu Runtime souběžnosti je vysoce *sestavitelné*, to znamená, můžete kombinovat existující funkce lepší. Modulu Runtime souběžnosti lze kombinovat mnoho funkcí, jako je například paralelní algoritmy, ze součástí nižší úrovně.
+Concurrency Runtime je vysoce *sestavitelná*, to znamená, že můžete kombinovat stávající funkce, abyste mohli víc dělat. Concurrency Runtime vytváří mnoho funkcí, jako jsou například paralelní algoritmy, ze součástí nižší úrovně.
 
-Modul Concurrency Runtime poskytuje také synchronizací primitiv, které používají k synchronizaci přístupu k prostředkům spolupráce blokování. Další informace o těchto primitivních hodnot synchronizace najdete v tématu [synchronizačních datových struktur](../../parallel/concrt/synchronization-data-structures.md).
+Concurrency Runtime také poskytuje prvky synchronizace, které k synchronizaci přístupu k prostředkům používají funkci pro spolupráci. Další informace o těchto primitivách synchronizace najdete v tématu [Synchronizace datových struktur](../../parallel/concrt/synchronization-data-structures.md).
 
-Stručný přehled, co jednotlivé komponenty obsahuje a kdy ji použít v následujících částech.
+V následujících částech najdete stručný přehled toho, co jednotlivé komponenty poskytují a kdy je použít.
 
 ### <a name="parallel-patterns-library"></a>Knihovna PPL (Parallel Patterns Library)
 
-Knihovna paralelních vzorů (PPL) poskytuje kontejnery pro obecné účely a algoritmy pro provádění dosáhnout jemně odstupňovaného paralelismu. Umožňuje PPL *imperativní datový paralelismus* poskytnutím paralelní algoritmy, které distribuovat výpočty na kolekcích nebo sad dat napříč výpočetních prostředků. Umožňuje také *paralelismus úloh* tím, že poskytuje objekty úloh, které se distribuuje více nezávislých operací mezi výpočetních prostředků.
+Knihovna PPL (Parallel Patterns Library) poskytuje obecné kontejnery a algoritmy pro provádění jemně odstupňovaného paralelismu. PPL umožňuje *imperativní datové paralelismuy* tím, že poskytuje paralelní algoritmy, které distribuují výpočty na kolekcích nebo na sady dat napříč výpočetními prostředky. Umožňuje taky *úkol paralelismus* tím, že poskytuje objekty úlohy, které distribuují víc nezávislých operací mezi výpočetními prostředky.
 
-Používejte knihovny Ppl, pokud máte místní výpočtu, který může přinést paralelního provádění. Například můžete použít [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus transformace existující `for` smyčky tak, aby fungoval paralelně.
+Knihovnu paralelních vzorů použijte v případě, že máte místní výpočet, který může využít paralelního spuštění. Například můžete použít algoritmus [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) k transformaci existující smyčky `for`, aby fungovala paralelně.
 
-Další informace o paralelních vzorcích knihovny najdete v tématu [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).
+Další informace o knihovně paralelních vzorů naleznete v tématu [Knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).
 
 ### <a name="asynchronous-agents-library"></a>Knihovna asynchronních agentů
 
-Asynchronní knihovnou agentů (nebo jen *knihovna agentů*) poskytuje programovací model založený na objektu actor i message passing rozhraní pro hrubých toku dat a paralelní zpracování úloh. Asynchronní agenti umožňují vytvářet produktivní použití latencí tím, že provádí práci jako ostatní součásti čekat na data.
+Asynchronní agenti knihovny (nebo pouze *agenti knihovny*) poskytují programovací model založený na objektech actor a rozhraní předávání zpráv pro hrubý úlohy toku dat a zpracování. Asynchronní agenti umožňují zvýšit efektivitu tím, že provádí práci, protože jiné komponenty čekají na data.
 
-Používejte knihovnu agentů v případě, že máte více entit, které komunikují asynchronně. Můžete například vytvořit agenta, který čte data ze souboru nebo síťového připojení a pak používá předávání rozhraní zpráv k odesílání dat do jiného agenta.
+Použijte knihovnu agenti, pokud máte více entit, které spolu komunikují asynchronně. Můžete například vytvořit agenta, který čte data ze souboru nebo síťového připojení, a pak pomocí rozhraní předávání zpráv odesílat tato data jinému agentovi.
 
-Další informace o knihovna agentů najdete v tématu [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md).
+Další informace o knihovně agentů najdete v tématu [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md).
 
 ### <a name="task-scheduler"></a>Plánovač úloh
 
-Plánovač úloh plánuje a koordinuje úkoly v době běhu. Plánovač úloh je spolupráce a používá algoritmus přebírající práci pro dosažení maximální využití prostředků zpracování.
+Plánovač úloh plány a koordinuje úlohy za běhu. Plánovač úloh je družstvo a využívá algoritmus pro práci, který se používá k dosažení maximálního využití prostředků zpracování.
 
-Concurrency Runtime poskytuje výchozí plánovače, takže není nutné spravovat infrastrukturu podrobnosti. Podle potřeb kvality vaší aplikace, můžete však také poskytnout vlastní plánování zásad nebo přidružit konkrétní plánovači s konkrétními úlohami.
+Concurrency Runtime poskytuje výchozí Plánovač, takže nemusíte spravovat podrobnosti o infrastruktuře. Pro splnění potřeb kvality aplikace ale můžete také zadat vlastní zásady plánování nebo přidružit konkrétní plánovače k určitým úkolům.
 
-Další informace o Plánovači úloh naleznete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Další informace o Plánovač úloh najdete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
 ### <a name="resource-manager"></a>Správce prostředků
 
-Role správce prostředků je spravovat výpočetní prostředky, jako jsou procesory a paměť. Správce prostředků reaguje na úlohy, když se změní za běhu kde může být nejúčinnější přiřazením prostředky.
+Role Správce prostředků slouží ke správě výpočetních prostředků, jako jsou procesory a paměť. Správce prostředků reaguje na úlohy při změně v době běhu přiřazením prostředků do místa, kde mohou být nejefektivnější.
 
-Správce prostředků slouží jako o abstrakci přes výpočetní prostředky a primárně komunikuje pomocí plánovače úloh. Přestože Resource Manageru můžete optimalizovat výkon aplikací a knihoven, můžete obvykle použít funkci, která je poskytována knihovny Ppl, knihovna agentů a Plánovač úloh. Tyto knihovny jako úlohy změnit dynamicky obnovit rovnováhu prostředků pomocí Resource Manageru.
+Správce prostředků slouží jako abstrakce oproti výpočetním prostředkům a primárně spolupracuje s Plánovač úloh. I když můžete použít Správce prostředků k vyladění výkonu knihoven a aplikací, obvykle používáte funkce, které jsou poskytovány pomocí knihovny paralelních vzorů, knihovny agentů a Plánovač úloh. Tyto knihovny používají Správce prostředků k dynamickému rozložení prostředků při změně zatížení.
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="lambda"></a> Výrazy Lambda v jazyce C++
+## <a name="lambda"></a>C++ Výrazy lambda
 
-Mnoho typů a algoritmy, které jsou definovány pomocí modulu Runtime souběžnosti, jsou implementovány jako šablony jazyka C++. Některé z těchto typů a algoritmy trvat jako parametr rutiny, která provádí práci. Tento parametr může být funkce lambda, objekt funkce nebo ukazatele na funkci. Tyto entity se také označují jako *pracovní funkce* nebo *fungovat rutiny*.
+Mnoho typů a algoritmů, které jsou definovány Concurrency Runtime, jsou implementovány jako C++ šablony. Některé z těchto typů a algoritmů přebírají jako parametr rutinu, která provádí práci. Tento parametr může být funkce lambda, objekt funkce nebo ukazatel na funkci. Tyto entity se také označují jako *pracovní funkce* nebo *pracovní postupy*.
 
-Výrazy lambda jsou o důležitou novou funkci jazyka Visual C++, protože poskytují stručné způsob, jak definovat pracovní funkce pro paralelní zpracování. Objekty funkce a ukazatelů na funkce umožňují používat Concurrency Runtime s existujícím kódem. Doporučujeme však použít výrazy lambda, pokud píšete nový kód z důvodu bezpečnosti a produktivity výhody, které poskytují.
+Výrazy lambda jsou důležitou novou funkcí C++ vizuálního jazyka, protože poskytují stručný způsob, jak definovat pracovní funkce pro paralelní zpracování. Objekty funkcí a ukazatele na funkce umožňují použít Concurrency Runtime s existujícím kódem. Nicméně doporučujeme používat výrazy lambda při psaní nového kódu v důsledku výhod zabezpečení a produktivity, které poskytují.
 
-Následující příklad porovnává syntaxe funkce lambda, objektů funkce a ukazatelů na funkce ve více voláních [: concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus. Každé volání `parallel_for_each` používá jiný postup k výpočtu druhou mocninu každý prvek v [std::array](../../standard-library/array-class-stl.md) objektu.
+Následující příklad porovnává syntaxi funkcí lambda, objektů funkcí a ukazatelů funkcí v několika voláních algoritmu [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) . Každé volání `parallel_for_each` používá jinou metodu pro výpočet čtverce jednotlivých prvků v objektu [std:: Array](../../standard-library/array-class-stl.md) .
 
 [!code-cpp[concrt-comparing-work-functions#1](../../parallel/concrt/codesnippet/cpp/overview-of-the-concurrency-runtime_1.cpp)]
 
-**Output**
+**Výstup**
 
 ```Output
 1
@@ -123,23 +123,23 @@ Následující příklad porovnává syntaxe funkce lambda, objektů funkce a uk
 390625
 ```
 
-Další informace o funkcích lambda v jazyce C++, naleznete v tématu [výrazy Lambda](../../cpp/lambda-expressions-in-cpp.md).
+Další informace o funkcích lambda v naleznete C++v tématu [lambda Expressions](../../cpp/lambda-expressions-in-cpp.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="requirements"></a> Požadavky
+## <a name="requirements"></a>Požadavků
 
-V následující tabulce jsou uvedeny soubory hlaviček, které jsou spojené s každou komponentu modulu Runtime souběžnosti:
+V následující tabulce jsou uvedeny hlavičkové soubory, které jsou spojeny s jednotlivými součástmi Concurrency Runtime:
 
-|Součást|Soubory hlaviček|
+|Komponenta|Soubory hlaviček|
 |---------------|------------------|
-|Knihovna PPL (Parallel Patterns Library)|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|
-|Knihovna asynchronních agentů|agents.h|
-|Plánovač úloh|concrt.h|
+|Knihovna PPL (Parallel Patterns Library)|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector. h|
+|Knihovna asynchronních agentů|Agents. h|
+|Plánovač úloh|ConcRT. h|
 |Správce prostředků|concrtrm.h|
 
-Modulu Runtime souběžnosti je deklarován v [souběžnosti](../../parallel/concrt/reference/concurrency-namespace.md) oboru názvů. (Můžete také použít [souběžnosti](../../parallel/concrt/reference/concurrency-namespace.md), což je alias pro tento obor názvů.) `concurrency::details` Obor názvů podporuje rozhraní Concurrency Runtime a není určena pro použití přímo v kódu.
+Concurrency Runtime je deklarován v oboru názvů [Concurrency](../../parallel/concrt/reference/concurrency-namespace.md) . (Můžete také použít [Concurrency](../../parallel/concrt/reference/concurrency-namespace.md), což je alias pro tento obor názvů.) Obor názvů `concurrency::details` podporuje Concurrency Runtime Framework a není určen pro použití přímo v kódu.
 
-Modulu Runtime souběžnosti je dodáván jako součást z knihovny C Runtime (CRT). Další informace o tom, jak vytvořit aplikaci, která používá CRT naleznete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
+Concurrency Runtime je k dispozici jako součást běhové knihovny jazyka C (CRT). Další informace o tom, jak vytvořit aplikaci, která používá CRT, najdete v tématu [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]

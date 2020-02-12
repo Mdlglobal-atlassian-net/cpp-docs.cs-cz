@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 023607ff142b7fa39165cc9b5280a8e9345a3645
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337762"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142847"
 ---
-# <a name="badtarget-class"></a>bad_target – třída
+# <a name="bad_target-class"></a>bad_target – třída
 
-Tato třída popisuje výjimku vyvolanou při blok zpráv je dán ukazatel cíl, který není platný pro právě prováděnou operaci.
+Tato třída popisuje výjimku vyvolanou v případě, že je bloku zasílání zpráv uveden ukazatel na cíl, který není pro prováděnou operaci platný.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class bad_target : public std::exception;
 ```
 
@@ -31,11 +31,11 @@ class bad_target : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[bad_target](#ctor)|Přetíženo. Vytvoří `bad_target` objektu.|
+|[bad_target](#ctor)|Přetíženo. Vytvoří objekt `bad_target`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto se obvykle výjimka z důvodů, jako je například cíl pokusu o zpracování zprávy, která je vyhrazena pro jiný cíl nebo uvolnění rezervace, který nemá.
+Tato výjimka se obvykle vydává z důvodů, jako je například pokus o zpracování zprávy, která je vyhrazena pro jiný cíl, nebo uvolnění rezervace, kterou nedrží.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -45,15 +45,15 @@ Toto se obvykle výjimka z důvodů, jako je například cíl pokusu o zpracová
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> bad_target
+## <a name="ctor"></a>bad_target
 
-Vytvoří `bad_target` objektu.
+Vytvoří objekt `bad_target`.
 
-```
+```cpp
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
 
 bad_target() throw();
@@ -62,9 +62,9 @@ bad_target() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md)

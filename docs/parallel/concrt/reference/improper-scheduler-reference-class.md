@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
-ms.openlocfilehash: 121e61447775cdcb5d7f5f1187c5d4cc6b7d68b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18536043b0d46a6f27f1e5c60778a22af82ad2d3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262902"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141115"
 ---
-# <a name="improperschedulerreference-class"></a>improper_scheduler_reference – třída
+# <a name="improper_scheduler_reference-class"></a>improper_scheduler_reference – třída
 
-Tato třída popisuje výjimku vyvolána, když `Reference` metoda je volána na `Scheduler` objekt, který se vypíná, z kontextu, který není součástí tohoto plánovače.
+Tato třída popisuje výjimku vyvolanou při volání metody `Reference` u objektu `Scheduler`, který se vypíná od kontextu, který není součástí tohoto plánovače.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class improper_scheduler_reference : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class improper_scheduler_reference : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[improper_scheduler_reference](#ctor)|Přetíženo. Vytvoří `improper_scheduler_reference` objektu.|
+|[improper_scheduler_reference](#ctor)|Přetíženo. Vytvoří objekt `improper_scheduler_reference`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,15 +41,15 @@ class improper_scheduler_reference : public std::exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> improper_scheduler_reference
+## <a name="ctor"></a>improper_scheduler_reference
 
-Vytvoří `improper_scheduler_reference` objektu.
+Vytvoří objekt `improper_scheduler_reference`.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
 
 improper_scheduler_reference() throw();
@@ -58,9 +58,9 @@ improper_scheduler_reference() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)

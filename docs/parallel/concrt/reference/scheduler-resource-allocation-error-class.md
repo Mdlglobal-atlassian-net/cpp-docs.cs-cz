@@ -9,20 +9,20 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160049"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143327"
 ---
-# <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error – třída
+# <a name="scheduler_resource_allocation_error-class"></a>scheduler_resource_allocation_error – třída
 
-Tato třída popisuje výjimku vyvolána, protože se nepodařilo získat důležitých prostředků v modulu Runtime souběžnosti.
+Tato třída popisuje výjimku vyvolanou v důsledku neúspěšného získání důležitého prostředku v Concurrency Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class scheduler_resource_allocation_error : public std::exception;
 ```
 
@@ -32,7 +32,7 @@ class scheduler_resource_allocation_error : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[scheduler_resource_allocation_error](#ctor)|Přetíženo. Vytvoří `scheduler_resource_allocation_error` objektu.|
+|[scheduler_resource_allocation_error](#ctor)|Přetíženo. Vytvoří objekt `scheduler_resource_allocation_error`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -42,7 +42,7 @@ class scheduler_resource_allocation_error : public std::exception;
 
 ## <a name="remarks"></a>Poznámky
 
-Toto se obvykle výjimka při volání do operačního systému z v rámci modulu Runtime souběžnosti selže. Kód chyby, která by obvykle vrácená z volání metody Win32 `GetLastError` je převedena na hodnotu typu `HRESULT` a je možné načíst pomocí `get_error_code` metody.
+Tato výjimka je obvykle vyvolána, když dojde k chybě volání operačního systému z Concurrency Runtime. Kód chyby, který by byl obvykle vrácen z volání metody Win32 `GetLastError`, je převeden na hodnotu typu `HRESULT` a lze jej načíst pomocí metody `get_error_code`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -52,27 +52,27 @@ Toto se obvykle výjimka při volání do operačního systému z v rámci modul
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
 Vrátí kód chyby, který způsobil výjimku.
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`HRESULT` Hodnotou chyby, který způsobil výjimku.
+Hodnota `HRESULT` chyby, která způsobila výjimku.
 
-##  <a name="ctor"></a> scheduler_resource_allocation_error –
+## <a name="ctor"></a>scheduler_resource_allocation_error
 
-Vytvoří `scheduler_resource_allocation_error` objektu.
+Vytvoří objekt `scheduler_resource_allocation_error`.
 
-```
+```cpp
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -84,11 +84,11 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
 *_Hresult*<br/>
-`HRESULT` Hodnotou chyby, který způsobil výjimku.
+Hodnota `HRESULT` chyby, která způsobila výjimku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

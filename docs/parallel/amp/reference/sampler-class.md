@@ -12,16 +12,16 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f47bf6e9b88dba1e94e9e2ed2b93c8d2d3f9b8c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352590"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126347"
 ---
 # <a name="sampler-class"></a>sampler – třída
 
-Třída vzorkovače agreguje informace o konfiguraci odběru vzorků má být použit pro vzorkování textury.
+Třída vzorkovače agreguje informace o konfiguraci vzorkování, které se mají použít pro vzorkování textury.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,29 +35,29 @@ class sampler;
 
 |Název|Popis|
 |----------|-----------------|
-|[vzorkování konstruktor](#ctor)|Přetíženo. Vytvoří instanci vzorkovače.|
+|[Vzorkovník – konstruktor](#ctor)|Přetíženo. Vytvoří instanci vzorkovače.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[get_address_mode](#get_address_mode)|Vrátí `address_mode` , který je asociován s objektem vzorkovače.|
-|[get_border_color](#get_border_color)|Vrátí barvu ohraničení, který je spojen s objektem vzorkovače.|
-|[get_filter_mode](#get_filter_mode)|Vrátí `filter_mode` , který je asociován s objektem vzorkovače.|
+|[get_address_mode](#get_address_mode)|Vrátí `address_mode`, která je přidružena k objektu vzorkovače.|
+|[get_border_color](#get_border_color)|Vrátí barvu ohraničení, která je přidružena k objektu vzorkovače.|
+|[get_filter_mode](#get_filter_mode)|Vrátí `filter_mode`, která je přidružena k objektu vzorkovače.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[operátor =](#operator_eq)|Přetíženo. Operátor přiřazení.|
+|[operátor =](#operator_eq)|Přetíženo. Operátor přiřazení|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Název|Popis|
 |----------|-----------------|
-|[address_mode](#address_mode)|Načte režim adresy objektu `sampler` objektu.|
-|[border_color](#border_color)|Získá barvu ohraničení `sampler` objektu.|
-|[filter_mode](#filter_mode)|Načte režim filtru objektu `sampler` objektu.|
+|[address_mode](#address_mode)|Získá režim adresy objektu `sampler`.|
+|[border_color](#border_color)|Získá barvu ohraničení objektu `sampler`.|
+|[filter_mode](#filter_mode)|Získá režim filtru objektu `sampler`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -65,13 +65,13 @@ class sampler;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_graphics.h
+**Záhlaví:** amp_graphics. h
 
-**Namespace:** concurrency::graphics
+**Obor názvů:** concurrency:: Graphics
 
-##  <a name="ctor"></a> vzorkování
+## <a name="ctor"></a>vzorkovače
 
-Vytvoří instanci objektu [sampler – třída](sampler-class.md).
+Vytvoří instanci [třídy vzorkovače](sampler-class.md).
 
 ```cpp
 sampler() restrict(cpu);    // [1] default constructor
@@ -106,46 +106,46 @@ sampler(                    // [6] move constructor
 ### <a name="parameters"></a>Parametry
 
 *_Filter_mode*<br/>
-Režim filtru, který má být použit při vzorkování.
+Režim filtru, který se má použít při vzorkování.
 
 *_Address_mode*<br/>
-Režim adresování má být použit při vzorkování pro všechny dimenze.
+Režim adresování, který se má použít při vzorkování pro všechny dimenze.
 
 *_Border_color*<br/>
-Barva ohraničení, která se použije, pokud je režim adresy address_border. Výchozí hodnota je `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
+Barva ohraničení, která se má použít, pokud je režim adresy address_border. Výchozí hodnota je `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
-*Ji_né*<br/>
-[5] Kopírovat konstruktor `sampler` objekt ke zkopírování do nové `sampler` instance.
+*_Other*<br/>
+[5] zkopírování objektu `sampler` a zkopírování do nové instance `sampler`.
 
-[6] přesunout konstruktor `sampler` objektu přesunout do nové `sampler` instance.
+[6] přesunutí konstruktoru objekt `sampler`, který se má přesunout do nové instance `sampler`.
 
-##  <a name="address_mode"></a> address_mode
+## <a name="address_mode"></a>address_mode
 
-Načte režim adresy objektu `sampler` objektu.
+Získá režim adresy objektu `sampler`.
 
 ```cpp
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;
 ```
 
-##  <a name="border_color"></a> border_color
+## <a name="border_color"></a>border_color
 
-Získá barvu ohraničení `sampler` objektu.
+Získá barvu ohraničení objektu `sampler`.
 
 ```cpp
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;
 ```
 
-##  <a name="filter_mode"></a> filter_mode –
+## <a name="filter_mode"></a>filter_mode
 
-Načte režim filtru objektu `sampler` objektu.
+Získá režim filtru objektu `sampler`.
 
 ```cpp
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;
 ```
 
-##  <a name="get_address_mode"></a> get_address_mode
+## <a name="get_address_mode"></a>get_address_mode
 
-Vrátí režim filtru, který je nakonfigurovaný pro tento `sampler`.
+Vrátí režim filtru, který je nakonfigurován pro tento `sampler`.
 
 ```cpp
 Concurrency::graphics::address_mode get_address_mode() const __GPU;
@@ -153,11 +153,11 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Režim adresy, který je nakonfigurován pro vzorkovač.
+Režim adresy, který je nakonfigurován pro vzorkovník.
 
-##  <a name="get_border_color"></a> get_border_color
+## <a name="get_border_color"></a>get_border_color
 
-Vrátí barvu ohraničení, která je nakonfigurována pro tento `sampler`.
+Vrátí barvu ohraničení, která je konfigurována pro tento `sampler`.
 
 ```cpp
 Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
@@ -165,11 +165,11 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Float_4 obsahující barvu ohraničení.
+Float_4, který obsahuje barvu ohraničení.
 
-##  <a name="get_filter_mode"></a> get_filter_mode
+## <a name="get_filter_mode"></a>get_filter_mode
 
-Vrátí režim filtru, který je nakonfigurovaný pro tento `sampler`.
+Vrátí režim filtru, který je nakonfigurován pro tento `sampler`.
 
 ```cpp
 Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
@@ -177,9 +177,9 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Režim filtru, který je nakonfigurován pro vzorkovač.
+Režim filtru, který je nakonfigurován pro vzorkovník.
 
-##  <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
 Přiřadí hodnotu jiného objektu vzorkovače existujícímu vzorkovači.
 
@@ -193,15 +193,15 @@ sampler& operator= (    // [2] move assignment operator
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-[1] zkopírujte operátor přiřazení `sampler` ke zkopírování do tohoto objektu `sampler`.
+*_Other*<br/>
+[1] zkopírovat operátor přiřazení: objekt `sampler` ke zkopírování do tohoto `sampler`.
 
-[2] přesuňte operátor přiřazení `sampler` k přesunutí do tohoto objektu `sampler`.
+[2] operátor přiřazení přesunu `sampler` objekt, který se má přesunout do tohoto `sampler`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Odkaz na tuto instanci vzorkovače.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

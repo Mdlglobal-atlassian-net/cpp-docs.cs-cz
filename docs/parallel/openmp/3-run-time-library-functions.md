@@ -2,12 +2,12 @@
 title: 3. Funkce knihovny prostředí Runtime
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 553c9ff2ceff02dc7b72e9f11899dac9d1f0f612
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857954"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142959"
 ---
 # <a name="3-run-time-library-functions"></a>3. funkce běhové knihovny
 
@@ -59,8 +59,8 @@ Další informace najdete v tématu [omp_set_dynamic](#317-omp_set_dynamic-funct
 
 #### <a name="cross-references"></a>Křížové odkazy
 
-- [omp_set_dynamic](#317-omp_set_dynamic-function) function
-- [omp_get_dynamic](#318-omp_get_dynamic-function) function
+- [omp_set_dynamic](#317-omp_set_dynamic-function) funkce
+- [omp_get_dynamic](#318-omp_get_dynamic-function) funkce
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) proměnná prostředí
 - klauzule [num_threads](2-directives.md#23-parallel-construct)
 
@@ -96,13 +96,9 @@ int omp_get_max_threads(void);
 
 Následující vyjadřuje dolní mez hodnoty `omp_get_max_threads`:
 
-```
+> *vlákna-použití-for-Next-team* <= `omp_get_max_threads`
 
-threads-used-for-next-team
-<= omp_get_max_threads
-```
-
-Všimněte si, že pokud jiná paralelní oblast používá klauzuli `num_threads` pro vyžádání konkrétního počtu vláken, záruka dolní meze výsledku `omp_get_max_threads` žádného typu Long neplatí.
+Všimněte si, že pokud jiná paralelní oblast používá klauzuli `num_threads` pro vyžádání konkrétního počtu vláken, záruka dolní meze výsledku `omp_get_max_threads` již nedrží.
 
 Návratovou hodnotu funkce `omp_get_max_threads` lze použít k dynamickému přidělení dostatečného úložiště pro všechna vlákna v týmu vytvořená v další paralelní oblasti.
 
@@ -171,7 +167,7 @@ Výchozí hodnota pro dynamickou úpravu vláken je definovaná implementací. V
 
 #### <a name="microsoft-specific"></a>specifické pro společnost Microsoft
 
-Aktuální podpora `omp_get_dynamic` a `omp_set_dynamic` je následující: 
+Aktuální podpora `omp_get_dynamic` a `omp_set_dynamic` je následující:
 
 Vstupní parametr `omp_set_dynamic` nemá vliv na zásady vláken a nemění počet vláken. `omp_get_num_threads` vždy vrátí buď uživatelem definované číslo, pokud je nastaveno, nebo výchozí číslo vlákna. V současné implementaci společnosti Microsoft `omp_set_dynamic(0)` vypne dynamické zřetězení, aby se existující sada vláken mohla znovu použít pro následující paralelní oblast. `omp_set_dynamic(1)` zapne dynamické zřetězení tím, že zahodí stávající sadu vláken a vytvoří novou sadu pro nadcházející paralelní oblast. Počet vláken v nové sadě je stejný jako stará sada a je založen na vrácené hodnotě `omp_get_num_threads`. Proto pro nejlepší výkon použijte `omp_set_dynamic(0)` k opakovanému použití stávajících vláken.
 

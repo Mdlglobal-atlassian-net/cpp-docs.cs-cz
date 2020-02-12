@@ -1,30 +1,30 @@
 ---
-title: 'Postupy: Použití skupin plánů k ovlivnění pořadí provádění'
+title: 'Postupy: Použití skupin plánů k ovlivnění pořadí provádění'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84829664603999893f32caab39af250059bf9788
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367041"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141920"
 ---
-# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Postupy: Použití skupin plánů k ovlivnění pořadí provádění
+# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Postupy: Použití skupin plánů k ovlivnění pořadí provádění
 
-V modulu Runtime souběžnosti je Nedeterministický pořadí, ve kterém úkoly jsou naplánovány. Plánování zásad můžete však použít k ovlivnění pořadí, ve kterém je spuštěný úkoly. Toto téma ukazuje způsob použití skupin plánů spolu s [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) zásadu plánovače k ovlivnění pořadí, ve kterém je spuštěný úkoly.
+V Concurrency Runtime je pořadí, ve kterém jsou úkoly plánovány, nedeterministické. Zásady plánování ale můžete použít k ovlivnění pořadí, ve kterém se úlohy spouštějí. V tomto tématu se dozvíte, jak používat skupiny plánů společně se zásadami plánovače [Concurrency:: SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) , aby bylo ovlivněno pořadí, ve kterém se úlohy spouštějí.
 
-V příkladu spustí sadu úloh dvakrát, každý s různé zásady plánování. Obě zásady omezit maximální počet prostředků pro zpracování do dvou. Při prvním spuštění používá `EnhanceScheduleGroupLocality` zásad, což je výchozí a druhá spuštění používá `EnhanceForwardProgress` zásad. V části `EnhanceScheduleGroupLocality` zásad, Plánovač spustí všechny úlohy ve skupině pro jeden plán dokud každý úkol dokončí nebo provede. V části `EnhanceForwardProgress` zásad, Plánovač přesune do další skupiny plánu způsobem kruhové dotazování po dokončení pouze jeden úkol nebo provede.
+V příkladu se dvakrát spustí sada úloh, z nichž každá má jinou zásadu plánování. Obě zásady omezují maximální počet zpracovávaných prostředků na dva. První spuštění používá zásady `EnhanceScheduleGroupLocality`, což je výchozí nastavení, přičemž druhý běh používá zásady `EnhanceForwardProgress`. V rámci zásad `EnhanceScheduleGroupLocality` spustí Plánovač všechny úlohy v jedné skupině plánů do doby, než každý úkol dokončí nebo neposkytne. V rámci zásad `EnhanceForwardProgress` se Plánovač při kruhovém dotazování dokončí na další skupinu plánů, a to po dokončení jednoho úkolu nebo výsledkem.
 
-Když každá skupina plánu obsahuje související úlohy `EnhanceScheduleGroupLocality` zásad obvykle za následek vylepšení výkonu vzhledem k tomu, že umístění mezipaměti je zachováno mezi úkoly. `EnhanceForwardProgress` Zásad umožňuje úkoly a postup směrem vpřed a je užitečné, když budete potřebovat plánování rovnost napříč skupinami pro plán.
+Když každá skupina plánu obsahuje související úlohy, zásada `EnhanceScheduleGroupLocality` obvykle vede ke zvýšení výkonu, protože mezi úlohami se zachovává mezipamětí mezipaměti. Zásady `EnhanceForwardProgress` umožňují, aby úkoly probíhaly v průběhu plánování a byly užitečné v případě, že budete vyžadovat, aby plánování v rámci skupin plánů bylo spravedlivé.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad definuje `work_yield_agent` třída, která je odvozena z [concurrency::agent](../../parallel/concrt/reference/agent-class.md). `work_yield_agent` Třídy provádějí určitou jednotku práce, vrací aktuální kontext a poté provede jinou jednotku práce. Agent použije [concurrency::wait](reference/concurrency-namespace-functions.md#wait) funkce tak, aby mohly běžet jiných kontextech kooperativně výnosu aktuálního kontextu.
+Tento příklad definuje třídu `work_yield_agent`, která je odvozena z [: concurrency:: Agent](../../parallel/concrt/reference/agent-class.md). Třída `work_yield_agent` provede pracovní jednotku, vypočítá aktuální kontext a pak provede další pracovní jednotku. Agent používá funkci [Concurrency:: wait](reference/concurrency-namespace-functions.md#wait) k kooperativnímu získání aktuálního kontextu, aby bylo možné spustit ostatní kontexty.
 
-Tento příklad vytvoří čtyři `work_yield_agent` objekty. Si ukážeme, jak nastavit zásady plánovače na vliv na pořadí, ve kterém je spuštěný agenty, v příkladu přidruží první dva agenty skupiny jeden plán a další dva agenty s jinou skupinu plánu. V příkladu se používá [concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup) metodu pro vytvoření [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objekty. V příkladu spustí všechny čtyři agenty dvakrát, pokaždé, když se různé zásady plánování.
+Tento příklad vytvoří čtyři objekty `work_yield_agent`. Pro ilustraci, jak nastavit zásady plánovače tak, aby ovlivnilo pořadí, ve kterém se agenti spouštějí, příklad přidruží první dva agenty jednu skupinu plánů a další dva agenty s jinou skupinou plánování. V příkladu se používá metoda [Concurrency:: CurrentScheduler:: CreateScheduleGroup –](reference/currentscheduler-class.md#createschedulegroup) k vytvoření objektů [Concurrency:: Schedule](../../parallel/concrt/reference/schedulegroup-class.md) . Tento příklad spustí všechny čtyři agenty dvakrát, pokaždé s jinou zásadou plánování.
 
 [!code-cpp[concrt-scheduling-protocol#1](../../parallel/concrt/codesnippet/cpp/how-to-use-schedule-groups-to-influence-order-of-execution_1.cpp)]
 
@@ -100,15 +100,15 @@ group 1,
     task 1: finished...
 ```
 
-Obě zásady vytvořit stejnou posloupnost událostí. Nicméně jsou zásady, která používá `EnhanceScheduleGroupLocality` spustí oba agenty, které jsou součástí první skupinu plánu před spuštěním agenty, které jsou součástí druhé skupině. Zásady, které využívají `EnhanceForwardProgress` začne jednoho agenta z první skupinu a pak spustí první agent v druhé skupině.
+Obě zásady vytváří stejnou posloupnost událostí. Zásady, které používá `EnhanceScheduleGroupLocality`, však spustí obě agenty, kteří jsou součástí první skupiny plán, než spustí agenty, kteří jsou součástí druhé skupiny. Zásada, která používá `EnhanceForwardProgress` spustí jednoho agenta z první skupiny a potom spustí prvního agenta ve druhé skupině.
 
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `scheduling-protocol.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo ho vložte do souboru s názvem `scheduling-protocol.cpp` a potom spusťte následující příkaz v okně příkazového řádku sady Visual Studio.
 
-**cl.exe /EHsc scheduling-protocol.cpp**
+> **CL. exe/EHsc Scheduling-Protocol. cpp**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Skupiny plánů](../../parallel/concrt/schedule-groups.md)<br/>
 [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)

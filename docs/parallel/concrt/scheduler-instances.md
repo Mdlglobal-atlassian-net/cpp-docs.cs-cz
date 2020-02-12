@@ -4,125 +4,125 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e9b8124254084ac30191d37d49f2ef72bd677e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180164"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142296"
 ---
 # <a name="scheduler-instances"></a>Instance plánovače
 
-Tento dokument popisuje roli instance plánovače v Concurrency Runtime a jak používat [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) a [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) tříd pro vytvoření a Správa instance plánovače. Instance plánovače jsou užitečné, pokud chcete přidružit explicitní zásady plánování určité druhy úloh. Můžete například vytvořit jednu instanci plánovač spustit některé úlohy důležitostí vlákna se zvýšenými oprávněními a používají výchozí plánovač spustit další úkoly vláknu s normální prioritou.
+Tento dokument popisuje roli instancí Scheduleru v Concurrency Runtime a způsob použití tříd [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) a [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) k vytváření a správě instancí plánovače. Instance plánovače jsou užitečné, pokud chcete přidružit explicitní zásady plánování ke konkrétním typům úloh. Můžete například vytvořit jednu instanci Scheduleru, která bude spouštět některé úlohy se zvýšenou prioritou, a použít výchozí Plánovač pro spouštění dalších úloh s normální prioritou vlákna.
 
 > [!TIP]
->  Poskytuje výchozí plánovač Concurrency Runtime, a proto není nutné vytvořit ve vaší aplikaci. Vzhledem k tomu, že Plánovač úloh umožňuje optimalizovat výkon vašich aplikací, doporučujeme začít s [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) máte nového modulu runtime souběžnosti.
+> Concurrency Runtime poskytuje výchozí Plánovač, a proto není nutné ho v aplikaci vytvořit. Vzhledem k tomu, že Plánovač úloh pomáhá doladit výkon aplikací, doporučujeme začít s knihovnou [paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo s [knihovnou asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md) , pokud s Concurrency Runtime začínáte.
 
-##  <a name="top"></a> Oddíly
+## <a name="top"></a>Řezů
 
-- [Currentscheduler – třídy a Plánovač](#classes)
+- [Třídy Scheduler a CurrentScheduler](#classes)
 
-- [Vytvoření Instance plánovače](#creating)
+- [Vytvoření instance Scheduleru](#creating)
 
-- [Správa životního cyklu Instance plánovače](#managing)
+- [Správa životnosti instance Scheduleru](#managing)
 
 - [Metody a funkce](#features)
 
 - [Příklad](#example)
 
-##  <a name="classes"></a> Currentscheduler – třídy a Plánovač
+## <a name="classes"></a>Třídy Scheduler a CurrentScheduler
 
-Plánovač úloh umožňuje aplikacím používat jeden nebo více *instance plánovače* na plánování práce. [Concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) třída představuje instance plánovače a zapouzdřuje funkce, které se vztahují k plánování úloh.
+Plánovač úloh umožňuje aplikacím použít jednu nebo více *instancí plánovače* k naplánování práce. Třída [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) reprezentuje instanci Scheduleru a zapouzdřuje funkčnost související s plánováním úloh.
 
-Podproces, který je připojen k plánovače se označuje jako *kontextu spuštění*, nebo jen *kontextu*. V každém okamžiku může být aktivní v aktuálním kontextu jeden plánovače. Aktivní Plánovač se také označuje jako *aktuálního plánovače*. Modul Concurrency Runtime používá [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) třídy pro zajištění přístupu k aktuálního plánovače. Pro jeden kontext aktuálního plánovače může lišit od aktuálního plánovače pro jiný kontext. Modul runtime neposkytuje úrovni procesu reprezentaci aktuálního plánovače.
+Vlákno, které je připojeno ke Scheduleru, je známé jako *kontext spuštění*nebo pouze *kontext*. Jeden Plánovač může být kdykoli aktivní v aktuálním kontextu. Aktivní Plánovač se také označuje jako *aktuální Plánovač*. Concurrency Runtime používá třídu [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) k poskytnutí přístupu k aktuálnímu plánovači. Aktuální Plánovač pro jeden kontext se může od aktuálního plánovače lišit pro jiný kontext. Modul runtime neposkytuje reprezentace na úrovni procesu aktuálního plánovače.
 
-Obvykle `CurrentScheduler` třída se používá pro přístup k aktuálního plánovače. `Scheduler` Třídy je užitečné, když je potřeba spravovat plánovače, která není aktuální.
+Třída `CurrentScheduler` se obvykle používá pro přístup k aktuálnímu plánovači. Třída `Scheduler` je užitečná v případě, že potřebujete spravovat Plánovač, který není aktuálním členem.
 
-Následující části popisují postup vytvoření a Správa instance plánovače. Kompletní příklad, který ilustruje tyto úkoly, naleznete v tématu [jak: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Následující části popisují, jak vytvořit a spravovat instanci plánovače. Úplný příklad, který znázorňuje tyto úkoly, naleznete v tématu [How to: manage a Scheduler instance](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="creating"></a> Vytvoření Instance plánovače
+## <a name="creating"></a>Vytvoření instance Scheduleru
 
-Existují tyto tři způsoby, jak vytvořit `Scheduler` objektu:
+Existují tři způsoby, jak vytvořit objekt `Scheduler`:
 
-- Pokud neexistuje žádný Plánovač, modul runtime vytvoří výchozí plánovače za vás při použití funkce modulu runtime, například paralelního algoritmu, k provedení práce. Výchozím plánovačem se změní aktuální Plánovač pro kontext, který se spustí paralelní práci.
+- Pokud žádný Plánovač neexistuje, modul runtime vytvoří výchozí Plánovač při použití běhových funkcí, například paralelního algoritmu k provedení práce. Výchozí Plánovač se bude aktuálním plánovačem pro kontext, který iniciuje paralelní práci.
 
-- [Concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create) metoda vytvoří `Scheduler` objekt, který používá specifické zásady a přidruží tomto plánovači aktuálního kontextu.
+- Metoda [Concurrency:: CurrentScheduler:: Create](reference/currentscheduler-class.md#create) vytvoří objekt `Scheduler`, který používá konkrétní zásadu a přidruží k tomuto plánovači aktuální kontext.
 
-- [Concurrency::Scheduler::Create](reference/scheduler-class.md#create) metoda vytvoří `Scheduler` objekt, který používá určité zásady, ale nepřidruží k aktuálním kontextu.
+- Metoda [Concurrency:: Scheduler:: Create](reference/scheduler-class.md#create) vytvoří objekt `Scheduler`, který používá konkrétní zásadu, ale nepřidruží ho k aktuálnímu kontextu.
 
-Povolení vytvoření plánovače výchozí modul runtime umožňuje všechny souběžných úloh sdílet stejnou plánovače. Obvykle, funkce, která je poskytována [knihovny Ppl](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) nebo [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) slouží k provádění paralelní práci. Proto nemáte pracovat přímo s plánovači řídit její zásady nebo doba života. Při použití PPL nebo knihovna agentů, modul runtime vytvoří výchozí plánovač, pokud neexistuje a díky tomu pro každý kontext aktuálního plánovače. Při vytvoření plánovače a nastavte ji jako aktuální Plánovač, modul runtime používá tento scheduler k plánování úloh. Vytvoření instance plánovače další jenom v případě, že budete vyžadovat konkrétní zásady plánování. Další informace o zásadách, které jsou spojeny s plánovače, naleznete v tématu [zásady plánovače](../../parallel/concrt/scheduler-policies.md).
+Povolení modulu runtime pro vytvoření výchozího plánovače umožní všem souběžným úlohám sdílet stejný Plánovač. Obvykle se funkce, která je poskytována [knihovnou PPL (Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) ) nebo [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md) , používá k provedení paralelní práce. Proto není nutné pracovat přímo s plánovačem a řídit jeho zásady nebo dobu života. Použijete-li knihovnu PPL nebo agentů, modul runtime vytvoří výchozí Plánovač, pokud neexistuje, a provede ho pro každý kontext aktuálním plánovačem. Když vytvoříte Plánovač a nastavíte ho jako aktuální Plánovač, modul runtime použije tento Plánovač k plánování úloh. Další instance Scheduleru můžete vytvořit pouze v případě, že vyžadujete konkrétní zásadu plánování. Další informace o zásadách přidružených ke Scheduleru najdete v tématu [zásady plánovače](../../parallel/concrt/scheduler-policies.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="managing"></a> Správa životního cyklu Instance plánovače
+## <a name="managing"></a>Správa životnosti instance Scheduleru
 
-Modul runtime používá mechanismus pro počítání odkazů k řízení životnosti `Scheduler` objekty.
+Modul runtime používá mechanismus počítání odkazů k řízení životnosti `Scheduler` objektů.
 
-Při použití `CurrentScheduler::Create` metoda nebo `Scheduler::Create` metodu pro vytvoření `Scheduler` objektu, modul runtime nastaví na jednu počáteční referenčního počtu tomto plánovači. Modul runtime zvýší počet odkazů při volání [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) metody. `Scheduler::Attach` Metoda přidruží `Scheduler` společně s aktuálním kontextu. Díky tomu aktuálního plánovače. Při volání `CurrentScheduler::Create` vytvoří modul runtime obě metody `Scheduler` objektu a připojí ho k aktuální kontext (a nastaví počet odkazů na jeden). Můžete také použít [concurrency::Scheduler::Reference](reference/scheduler-class.md#reference) metoda se zvýší počet odkazů `Scheduler` objektu.
+Použijete-li metodu `CurrentScheduler::Create` nebo metodu `Scheduler::Create` k vytvoření objektu `Scheduler`, modul runtime nastaví počáteční počet odkazů tohoto plánovače na jeden. Modul runtime zvýší počet odkazů při volání metody [Concurrency:: Scheduler:: Attach](reference/scheduler-class.md#attach) . Metoda `Scheduler::Attach` přidruží objekt `Scheduler` spolu s aktuálním kontextem. Tím se vytvoří aktuální Plánovač. Když zavoláte metodu `CurrentScheduler::Create`, modul runtime vytvoří objekt `Scheduler` a připojí ho k aktuálnímu kontextu (a nastaví počet odkazů na jeden). Můžete také použít metodu [Concurrency:: Scheduler:: Reference](reference/scheduler-class.md#reference) k zvýšení počtu odkazů objektu `Scheduler`.
 
-Runtime sníží počet referenční při volání [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) metoda odpojit aktuálního plánovače nebo volání [concurrency::Scheduler::Release](reference/scheduler-class.md#release) metoda. Když počet odkazů dosáhne nuly, odstraní modul runtime `Scheduler` objekt za všechny plánované úlohy dokončení. Spuštěná úloha může zvýšit počet odkazů z aktuálního plánovače. Proto pokud počet odkazů dosáhne nuly a zvýší počet odkazů úlohy, modul runtime nezničí `Scheduler` objektu, dokud počet odkazů dosáhne znovu nula a dokončení všech úkolů.
+Modul runtime sníží počet odkazů při volání metody [Concurrency:: CurrentScheduler::D etach](reference/currentscheduler-class.md#detach) pro odpojení aktuálního plánovače nebo volání metody [Concurrency:: Scheduler:: Release](reference/scheduler-class.md#release) . Když počet odkazů dosáhne nuly, modul runtime zničí objekt `Scheduler` po dokončení všech naplánovaných úloh. Spuštěný úkol může zvýšit počet odkazů aktuálního plánovače. Proto pokud počet odkazů dosáhne nuly a úkol zvýší počet odkazů, modul runtime neodstraní objekt `Scheduler`, dokud počet odkazů opět nedosáhne hodnoty nula a všechny úkoly budou dokončeny.
 
-Modul runtime udržuje interní zásobníku `Scheduler` objekty pro každý kontext. Při volání `Scheduler::Attach` nebo `CurrentScheduler::Create` metody, modul runtime nabídek, které nebyly `Scheduler` objektu do zásobníku pro aktuální kontext. Díky tomu aktuálního plánovače. Při volání `CurrentScheduler::Detach`, modul runtime vyjme ze zásobníku pro aktuální kontext aktuálního plánovače a nastaví předchozímu jako aktuálního plánovače.
+Modul runtime udržuje interní zásobník `Scheduler` objektů pro každý kontext. Když zavoláte metodu `Scheduler::Attach` nebo `CurrentScheduler::Create`, modul runtime doručí, že `Scheduler` objekt do zásobníku pro aktuální kontext. Tím se vytvoří aktuální Plánovač. Když zavoláte `CurrentScheduler::Detach`, modul runtime pro aktuální kontext zobrazí aktuální Plánovač a nastaví předchozí Plánovač jako aktuální.
 
-Modul runtime poskytuje několik způsobů, jak spravovat dobu života instance plánovače. V následující tabulce jsou uvedeny odpovídající metodu, která uvolní nebo odpojí plánovače z aktuálního kontextu pro každou metodu, která vytvoří a připojí plánovače na aktuální kontext.
+Modul runtime poskytuje několik způsobů, jak spravovat životnost instance Scheduleru. V následující tabulce je uvedena odpovídající metoda, která vydává nebo odpojuje Plánovač z aktuálního kontextu pro každou metodu, která vytváří nebo připojuje Plánovač k aktuálnímu kontextu.
 
-|Vytvořit nebo připojit – metoda|Cesty k vydaným nebo detach – metoda|
+|Vytvořit nebo připojit metodu|Metoda uvolnění nebo odpojení|
 |-----------------------------|------------------------------|
 |`CurrentScheduler::Create`|`CurrentScheduler::Detach`|
 |`Scheduler::Create`|`Scheduler::Release`|
 |`Scheduler::Attach`|`CurrentScheduler::Detach`|
 |`Scheduler::Reference`|`Scheduler::Release`|
 
-Volání nevhodný vydání nebo odpojit metoda vytvoří neurčené chování v modulu runtime.
+Voláním metody uvolnění nebo odpojení vznikne nespecifikované chování v modulu runtime.
 
-Při použití funkce, například PPL, který způsobí, že modul runtime k vytvoření výchozího plánovače za vás, uvolnit nebo odpojit tento plánovač. Modul runtime spravuje životnost libovolné Plánovač, který vytvoří.
+Když použijete funkci, například PPL, která způsobí, že modul runtime vytvoří výchozí Plánovač pro vás, neuvolní ani nepojí tohoto plánovače. Modul runtime spravuje životnost všech plánovačů, které vytvoří.
 
-Vzhledem k tomu, že modul runtime nezničí `Scheduler` objekt před všechny úlohy nedokončí, můžete použít [concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) metoda nebo [concurrency::CurrentScheduler:: Registershutdownevent –](reference/currentscheduler-class.md#registershutdownevent) metodu pro příjem oznámení při `Scheduler` objekt zničen. To je užitečné, když každý úkol, který je naplánován podle musíte počkat `Scheduler` objektu na dokončení.
+Vzhledem k tomu, že modul runtime nezničí objekt `Scheduler` před dokončením všech úloh, můžete použít metodu [Concurrency:: Scheduler:: RegisterShutdownEvent –](reference/scheduler-class.md#registershutdownevent) nebo metodu [Concurrency:: CurrentScheduler:: RegisterShutdownEvent –](reference/currentscheduler-class.md#registershutdownevent) pro příjem oznámení, když dojde k zničení objektu `Scheduler`. To je užitečné v případě, že je nutné počkat na dokončení všech úloh, které jsou naplánovány objektem `Scheduler`.
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="features"></a> Metody a funkce
+## <a name="features"></a>Metody a funkce
 
-Tento oddíl shrnuje důležité metody `CurrentScheduler` a `Scheduler` třídy.
+Tato část shrnuje důležité metody `CurrentScheduler` a `Scheduler` třídy.
 
-Představte si, že `CurrentScheduler` třídy jako pomůcka pro vytvoření plánovače pro použití v aktuálním kontextu. `Scheduler` Třída umožňuje řídit, která patří do jiného kontextu plánovače.
+Třídu `CurrentScheduler` si můžete představit jako pomocníka pro vytvoření plánovače pro použití v aktuálním kontextu. Třída `Scheduler` umožňuje řídit Plánovač, který patří do jiného kontextu.
 
-V následující tabulce jsou uvedeny důležité metody, které jsou definovány `CurrentScheduler` třídy.
-
-|Metoda|Popis|
-|------------|-----------------|
-|[Vytvoření](reference/currentscheduler-class.md#create)|Vytvoří `Scheduler` objekt, který používá určené zásadě a přidruží ji k aktuálním kontextu.|
-|[získat](reference/currentscheduler-class.md#get)|Načte ukazatel `Scheduler` objekt, který je přidružený k aktuální kontext. Tato metoda se nezvyšuje počet odkazů `Scheduler` objektu.|
-|[Detach](reference/currentscheduler-class.md#detach)|Odpojí aktuální Plánovač z aktuálního kontextu a nastaví předchozímu jako aktuálního plánovače.|
-|[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|Zaregistruje událost, která modul runtime nastaví při zničení aktuálního plánovače.|
-|[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|Vytvoří [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objektu v aktuálního plánovače.|
-|[Scheduletask –](reference/currentscheduler-class.md#scheduletask)|Lehký úkol přidá do plánování fronty aktuálního plánovače.|
-|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|Načte kopii zásad, který je přidružený aktuální plánovač.|
-
-V následující tabulce jsou uvedeny důležité metody, které jsou definovány `Scheduler` třídy.
+V následující tabulce jsou uvedeny důležité metody, které jsou definovány třídou `CurrentScheduler`.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Vytvoření](reference/scheduler-class.md#create)|Vytvoří `Scheduler` objekt, který používá zadanou zásadu.|
-|[Attach](reference/scheduler-class.md#attach)|Přidruží `Scheduler` společně s aktuálním kontextu.|
-|[Referenční informace](reference/scheduler-class.md#reference)|Zvýší čítač odkaz `Scheduler` objektu.|
-|[Vydaná verze](reference/scheduler-class.md#release)|Dekrementuje čítače odkaz `Scheduler` objektu.|
-|[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|Zaregistruje událost, která modul runtime nastaví, kdy `Scheduler` objekt zničen.|
-|[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|Vytvoří [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objekt `Scheduler` objektu.|
-|[Scheduletask –](reference/scheduler-class.md#scheduletask)|Naplánuje lehký úkol z `Scheduler` objektu.|
-|[GetPolicy](reference/scheduler-class.md#getpolicy)|Načte kopii zásad, který je přidružen `Scheduler` objektu.|
-|[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|Nastavit zásady pro modul runtime pro použití při vytváření výchozím plánovačem.|
-|[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|Obnoví výchozí zásady ten, který byl aktivní před voláním `SetDefaultSchedulerPolicy`. Pokud je výchozím plánovačem vytvořené po tomto volání, modul runtime používá výchozí nastavení zásady k vytvoření plánovače.|
+|[Vytvoření](reference/currentscheduler-class.md#create)|Vytvoří objekt `Scheduler`, který používá zadanou zásadu a přidruží ho k aktuálnímu kontextu.|
+|[Get](reference/currentscheduler-class.md#get)|Načte ukazatel na objekt `Scheduler`, který je přidružen k aktuálnímu kontextu. Tato metoda nezvyšuje počet odkazů objektu `Scheduler`.|
+|[Detach](reference/currentscheduler-class.md#detach)|Odpojí aktuálního plánovače od aktuálního kontextu a nastaví předchozí Plánovač jako aktuální.|
+|[RegisterShutdownEvent –](reference/currentscheduler-class.md#registershutdownevent)|Registruje událost, kterou nastaví modul runtime při zničení aktuálního plánovače.|
+|[CreateScheduleGroup –](reference/currentscheduler-class.md#createschedulegroup)|Vytvoří v aktuálním plánovači objekt [Concurrency:: Schedule](../../parallel/concrt/reference/schedulegroup-class.md) .|
+|[ScheduleTask –](reference/currentscheduler-class.md#scheduletask)|Přidá odlehčený úkol do fronty plánování aktuálního plánovače.|
+|[GetPolicy –](reference/currentscheduler-class.md#getpolicy)|Načte kopii zásady, která je přidružená k aktuálnímu plánovači.|
 
-[[Horní](#top)]
+V následující tabulce jsou uvedeny důležité metody, které jsou definovány třídou `Scheduler`.
 
-##  <a name="example"></a> Příklad
+|Metoda|Popis|
+|------------|-----------------|
+|[Vytvoření](reference/scheduler-class.md#create)|Vytvoří objekt `Scheduler`, který používá zadanou zásadu.|
+|[Attach](reference/scheduler-class.md#attach)|Přidruží objekt `Scheduler` spolu s aktuálním kontextem.|
+|[Referenční informace](reference/scheduler-class.md#reference)|Zvýší referenční čítač objektu `Scheduler`.|
+|[Vydaná verze](reference/scheduler-class.md#release)|Sníží referenční čítač objektu `Scheduler`.|
+|[RegisterShutdownEvent –](reference/scheduler-class.md#registershutdownevent)|Registruje událost, která je nastavena za běhu, když je objekt `Scheduler` zničen.|
+|[CreateScheduleGroup –](reference/scheduler-class.md#createschedulegroup)|Vytvoří objekt [Concurrency:: Schedule](../../parallel/concrt/reference/schedulegroup-class.md) v objektu `Scheduler`.|
+|[ScheduleTask –](reference/scheduler-class.md#scheduletask)|Naplánuje odlehčenou úlohu z objektu `Scheduler`.|
+|[GetPolicy –](reference/scheduler-class.md#getpolicy)|Načte kopii zásady, která je přidružená k objektu `Scheduler`.|
+|[SetDefaultSchedulerPolicy –](reference/scheduler-class.md#setdefaultschedulerpolicy)|Nastaví zásady pro modul runtime, které se použijí při vytváření výchozího plánovače.|
+|[Resetdefaultschedulerpolicy –](reference/scheduler-class.md#resetdefaultschedulerpolicy)|Obnoví výchozí zásadu na tu, která byla aktivní před voláním `SetDefaultSchedulerPolicy`. Pokud se po tomto volání vytvoří výchozí Plánovač, modul runtime pro vytvoření plánovače použije výchozí nastavení zásad.|
 
-Základní příklady vytvoření a Správa instance plánovače, najdete v článku [jak: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+[[Nahoře](#top)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="example"></a>Případě
+
+Základní příklady vytváření a správy instance Scheduleru najdete v tématu [How to: manage a Scheduler instance](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+
+## <a name="see-also"></a>Viz také
 
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Postupy: Správa instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>

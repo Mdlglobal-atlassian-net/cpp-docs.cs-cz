@@ -268,26 +268,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180281"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142170"
 ---
-# <a name="float4-class"></a>float_4 – třída
+# <a name="float_4-class"></a>float_4 – třída
 
-Představuje krátký vektor čtyř hodnot float.
+Představuje krátký vektor čtyř floatů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class float_4;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -297,7 +297,7 @@ class float_4;
 
 |Název|Popis|
 |----------|-----------------|
-|[float_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[float_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -335,19 +335,19 @@ class float_4;
 |float_4::get_xzwy||
 |float_4::get_xzy||
 |float_4::get_xzyw||
-|float_4::get_y||
-|float_4::get_yw||
-|float_4::get_ywx||
+|float_4:: get_y||
+|float_4:: get_yw||
+|float_4:: get_ywx||
 |float_4::get_ywxz||
-|float_4::get_ywz||
+|float_4:: get_ywz||
 |float_4::get_ywzx||
 |float_4::get_yx||
 |float_4::get_yxw||
 |float_4::get_yxwz||
 |float_4::get_yxz||
 |float_4::get_yxzw||
-|float_4::get_yz||
-|float_4::get_yzw||
+|float_4:: get_yz||
+|float_4:: get_yzw||
 |float_4::get_yzwx||
 |float_4::get_yzx||
 |float_4::get_yzxw||
@@ -373,7 +373,7 @@ class float_4;
 |float_4::ref_r||
 |float_4::ref_w||
 |float_4::ref_x||
-|float_4::ref_y||
+|float_4:: ref_y||
 |float_4::ref_z||
 |float_4::set_w||
 |float_4::set_wx||
@@ -444,13 +444,13 @@ class float_4;
 
 |Název|Popis|
 |----------|-----------------|
-|float_4::operator-||
+|float_4:: operator-||
 |float_4::operator--||
 |float_4::operator*=||
-|float_4::Operator / =||
-|float_4::Operator ++||
+|float_4:: operator/=||
+|float_4:: operator + +||
 |float_4::operator+=||
-|float_4::Operator =||
+|float_4:: operator =||
 |float_4::operator-=||
 
 ### <a name="public-constants"></a>Veřejné konstanty
@@ -469,10 +469,10 @@ class float_4;
 |float_4::abgr||
 |float_4::abr||
 |float_4::abrg||
-|float_4::ag||
-|float_4::agb||
+|float_4:: AG||
+|float_4:: AGB||
 |float_4::agbr||
-|float_4::AGR||
+|float_4:: AGR||
 |float_4::agrb||
 |float_4::ar||
 |float_4::arb||
@@ -485,47 +485,47 @@ class float_4;
 |float_4::bagr||
 |float_4::bar||
 |float_4::barg||
-|float_4::bg||
+|float_4:: BG||
 |float_4::bga||
 |float_4::bgar||
-|float_4::bgr||
+|float_4:: BGR||
 |float_4::bgra||
 |float_4::br||
 |float_4::bra||
 |float_4::brag||
 |float_4::brg||
 |float_4::brga||
-|float_4::g||
-|float_4::GA||
-|float_4::GAB||
-|float_4::gabr||
-|float_4::gar||
-|float_4::garb||
-|float_4::GB||
-|float_4::GBA||
-|float_4::gbar||
-|float_4::GBR||
-|float_4::gbra||
-|float_4::GR||
-|float_4::gra||
-|float_4::grab||
-|float_4::grb||
-|float_4::grba||
-|float_4::r||
+|float_4:: g||
+|float_4:: GA||
+|float_4:: GAB||
+|float_4:: gabr||
+|float_4:: Gar||
+|float_4:: Garb||
+|float_4:: GB||
+|float_4:: GBA||
+|float_4:: gbar||
+|float_4:: GBR||
+|float_4:: GBRA||
+|float_4:: gr||
+|float_4:: GRA||
+|float_4:: drapák||
+|float_4:: GRB||
+|float_4:: Grba||
+|float_4:: r||
 |float_4::ra||
-|float_4::rab||
-|float_4::rabg||
-|float_4::rag||
-|float_4::ragb||
+|float_4:: Rab||
+|float_4:: rabg||
+|float_4:: RAG||
+|float_4:: ragb||
 |float_4::rb||
 |float_4::rba||
-|float_4::rbag||
+|float_4:: rbag||
 |float_4::rbg||
 |float_4::rbga||
 |float_4::rg||
 |float_4::rga||
 |float_4::rgab||
-|float_4::RGB||
+|float_4:: RGB||
 |float_4::rgba||
 |float_4::w||
 |float_4::wx||
@@ -533,7 +533,7 @@ class float_4;
 |float_4::wxyz||
 |float_4::wxz||
 |float_4::wxzy||
-|float_4::wy||
+|float_4:: WY||
 |float_4::wyx||
 |float_4::wyxz||
 |float_4::wyz||
@@ -559,7 +559,7 @@ class float_4;
 |float_4::xzwy||
 |float_4::xzy||
 |float_4::xzyw||
-|float_4::y||
+|float_4:: y||
 |float_4::yw||
 |float_4::ywx||
 |float_4::ywxz||
@@ -575,18 +575,18 @@ class float_4;
 |float_4::yzwx||
 |float_4::yzx||
 |float_4::yzxw||
-|float_4::z||
-|float_4::zw||
+|float_4:: z||
+|float_4:: ZW||
 |float_4::zwx||
 |float_4::zwxy||
-|float_4::zwy||
-|float_4::zwyx||
+|float_4:: zwy||
+|float_4:: zwyx||
 |float_4::zx||
 |float_4::zxw||
 |float_4::zxwy||
 |float_4::zxy||
 |float_4::zxyw||
-|float_4::zy||
+|float_4:: ZY||
 |float_4::zyw||
 |float_4::zywx||
 |float_4::zyx||
@@ -598,15 +598,15 @@ class float_4;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline float_4(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V2*<br/>
-Hodnota inicializace elementu 2.
+Hodnota pro inicializaci elementu 2.
 
 *_V3*<br/>
-Hodnota inicializace element 3.
+Hodnota pro inicializaci elementu 3.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-##  <a name="float_4__size"></a> Velikost
+## <a name="float_4__size"></a>hodnota
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

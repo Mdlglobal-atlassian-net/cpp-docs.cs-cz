@@ -8,28 +8,28 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 5226440e49aab5766fc7992e0651e2b5ee5d4981
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06a5fa9a2d7e645c46b90ace957d31251baed81c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180231"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127800"
 ---
 # <a name="index-class"></a>index – třída
 
-Definuje *N*-multidimenzionálním index pographics-cpp-amp.md.
+Definuje *N*-dimenzionální vektor indexu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <int _Rank>
 class index;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Řád, neboli počet rozměrů.
+Rozměr nebo počet rozměrů.
 
 ## <a name="members"></a>Členové
 
@@ -37,27 +37,27 @@ class index;
 
 |Název|Popis|
 |----------|-----------------|
-|[index konstruktor](#index_ctor)|Inicializuje novou instanci třídy `index` třídy.|
+|[index – konstruktor](#index_ctor)|Inicializuje novou instanci třídy `index`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[operator--](#operator--)|Sníží každý prvek `index` objektu.|
-|[operator%=](#operator_mod_eq)|Vypočítá modulo (zbytek) každého prvku `index` objektu při dělení podle čísla.|
-|[Operator * =](#operator_star_eq)|Vynásobí každý prvek `index` číslem.|
-|[/ = – operátor](#operator_div_eq)|Vydělí každý prvek `index` číslem.|
-|[index::operator\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
-|[Operator ++](#operator_add_add)|Zvýší všechny prvky objektu `index` objektu.|
-|[operator+=](#operator_add_eq)|Přičte zadané číslo ke každému prvku objektu `index` objektu.|
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `index` do tohoto objektu.|
-|[operator-=](#operator_-_eq)|Odečte zadané číslo od každého prvku objektu `index` objektu.|
+|[--– operátor](#operator--)|Sníží všechny prvky objektu `index`.|
+|[% = – operátor](#operator_mod_eq)|Vypočítá zbytek (zbytek) každého prvku v objektu `index`, pokud je tento prvek dělen číslem.|
+|[operator * = – operátor](#operator_star_eq)|Vynásobí každý prvek `index` objektu číslem.|
+|[operator/= – operátor](#operator_div_eq)|Vydělí každý prvek `index` objektu číslem.|
+|[index:: operator\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
+|[operator + + – operátor](#operator_add_add)|Zvýší všechny prvky objektu `index`.|
+|[operator + = – operátor](#operator_add_eq)|Přidá zadané číslo do každého prvku `index` objektu.|
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného objektu `index` do tohoto objektu.|
+|[-= – operátor](#operator_-_eq)|Odečte zadané číslo od každého prvku `index` objektu.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
 |Název|Popis|
 |----------|-----------------|
-|[RANK – konstanta](#rank)|Udržuje řád objektu `index` objektu.|
+|[Konstanta Rank](#rank)|Ukládá pořadí objektu `index`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -65,19 +65,19 @@ class index;
 
 ## <a name="remarks"></a>Poznámky
 
-`index` Struktura představuje vektor souřadnic *N* celých čísel, které určují jedinečné umístění v *N*-rozměrného prostoru. Hodnoty ve vektoru jsou seřazeny od nejvýznamnější po nejméně významnou. Můžete načíst hodnoty komponent pomocí [operátoru =](#operator_eq).
+Struktura `index` představuje vektor souřadnic *n* celých čísel, která určují jedinečnou pozici v *n*-dimenzionálním prostoru. Hodnoty ve vektoru jsou seřazené od nejvýznamnějších po nejméně významné. Hodnoty komponent můžete načíst pomocí [operátoru =](#operator_eq).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp.h
+**Hlavička:** amp. h
 
-**Namespace:** Souběžnost
+**Obor názvů:** Concurrency
 
-## <a name="index_ctor"></a> index konstruktor
+## <a name="index_ctor"></a>index – konstruktor
 
-Inicializuje novou instanci třídy indexu.
+Inicializuje novou instanci třídy index.
 
-```
+```cpp
 index() restrict(amp,cpu);
 
 index(
@@ -106,8 +106,8 @@ explicit index(
 
 ### <a name="parameters"></a>Parametry
 
-*_Pole*<br/>
-Jednorozměrné pole s hodnotami řádů.
+*_Array*<br/>
+Jednorozměrné pole s hodnotami pořadí.
 
 *_I*<br/>
 Umístění indexu v jednorozměrném indexu.
@@ -116,18 +116,19 @@ Umístění indexu v jednorozměrném indexu.
 Délka nejvýznamnějšího rozměru.
 
 *_I1*<br/>
-Délka další na nejvýznamnější dimenze.
+Délka dalšího významného rozměru.
 
 *_I2*<br/>
-Velikost nejméně významného rozměru.
+Délka nejméně významného rozměru.
 
-*Ji_né*<br/>
-Index objektu, na kterých je založena na nový objekt indexu.
+*_Other*<br/>
+Indexový objekt, na kterém je založen nový index objektu.
 
-## <a name="operator--"></a>  Operator--
+## <a name="operator--"></a>--– operátor
 
-Sníží každý prvek objektu indexu.
-```
+Sníží všechny prvky objektu index.
+
+```cpp
 index<_Rank>& operator--() restrict(amp,cpu);
 
 index operator--(
@@ -137,13 +138,13 @@ index operator--(
 
 ### <a name="return-values"></a>Vrácené hodnoty
 
-Pro prefixový operátor objekt indexu (* to). Pro sufixový operátor nový objekt v indexu.
+Pro operátor prefix, objekt index (* this). Pro operátor přípona nový objekt index.
 
-## <a name="operator_mod_eq"></a>  Operator % =
+## <a name="operator_mod_eq"></a>% = – operátor
 
-Vypočítá modulo (zbytek) jednotlivých prvků v objektu indexu při dělení zadaným číslem.
+Vypočítá zbytek (zbytek) každého prvku v objektu indexu, pokud je tento prvek rozdělen podle zadaného čísla.
 
-```
+```cpp
 index<_Rank>& operator%=(
    int _Rhs
 ) restrict(cpu, amp);
@@ -152,15 +153,17 @@ index<_Rank>& operator%=(
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Číslo, které má rozdělit podle najít zbytek.
+Číslo, které má být rozděleno, aby bylo možné najít zbytky.
 
 ## <a name="return-value"></a>Návratová hodnota
-Index objektu.
 
-## <a name="operator_star_eq"></a>  Operator * =
+Objekt index.
 
-Vynásobí každý prvek v objektu indexu zadaným číslem.
-```
+## <a name="operator_star_eq"></a>operator * = – operátor
+
+Vynásobí každý prvek v objektu index zadaným číslem.
+
+```cpp
 index<_Rank>& operator*=(
    int _Rhs
 ) restrict(amp,cpu);
@@ -169,13 +172,13 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Násobené číslo.
+Číslo, které se má vynásobit.
 
-## <a name="operator_div_eq"></a>  / = – operátor
+## <a name="operator_div_eq"></a>operator/= – operátor
 
-Vydělí každý prvek v objektu indexu zadaným číslem.
+Vydělí každý prvek v objektu index zadaným číslem.
 
-```
+```cpp
 index<_Rank>& operator/=(
    int _Rhs
 ) restrict(amp,cpu);
@@ -184,13 +187,13 @@ index<_Rank>& operator/=(
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Číslo, které má dělit.
+Číslo, kterým se má dělit.
 
-## <a name="operator_at"></a>  – Operátor\[\]
+## <a name="operator_at"></a>operátor\[\]
 
 Vrátí komponentu indexu v zadaném umístění.
 
-```
+```cpp
 int operator[] (
    unsigned _Index
 ) const restrict(amp,cpu);
@@ -203,16 +206,17 @@ int& operator[] (
 ### <a name="parameters"></a>Parametry
 
 *_Index*<br/>
-Celé číslo od 0 do řádu mínus 1.
+Celé číslo od 0 do pořadí minus 1.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek, který je v zadaném indexu.
+Prvek na zadaném indexu.
 
 ### <a name="remarks"></a>Poznámky
 
-Následující příklad zobrazí hodnoty komponent indexu.
-```
+Následující příklad zobrazí hodnoty součásti indexu.
+
+```cpp
 // Prints 1 2 3.
 concurrency::index<3> idx(1, 2, 3);
 std::cout << idx[0] << "\n";
@@ -220,10 +224,11 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  Operator ++
+## <a name="operator_add_add"></a>operator + + – operátor
 
-Zvýší hodnotu všech prvků objektu indexu.
-```
+Zvýší všechny prvky objektu index.
+
+```cpp
 index<_Rank>& operator++() restrict(amp,cpu);
 
 index<_Rank> operator++(
@@ -233,12 +238,13 @@ index<_Rank> operator++(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro prefixový operátor objekt indexu (* to). Pro sufixový operátor nový objekt v indexu.
+Pro operátor prefix, objekt index (* this). Pro operátor přípona nový objekt index.
 
-## <a name="operator_add_eq"></a>  += – operátor
+## <a name="operator_add_eq"></a>operator + = – operátor
 
-Přičte zadané číslo ke každému prvku objektu indexu.
-```
+Přidá zadané číslo do každého prvku objektu index.
+
+```cpp
 index<_Rank>& operator+=(
    const index<_Rank>& _Rhs
 ) restrict(amp,cpu);
@@ -251,16 +257,17 @@ index<_Rank>& operator+=(
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Přičítané číslo.
+Číslo, které se má přidat
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index objektu.
+Objekt index.
 
-## <a name="operator_eq"></a>  operátor =
+## <a name="operator_eq"></a>operátor =
 
-Zkopíruje obsah zadaného indexu objektu do tohoto objektu.
-```
+Zkopíruje obsah zadaného objektu indexu do tohoto typu.
+
+```cpp
 index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
@@ -268,17 +275,18 @@ index<_Rank>& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-Index objektu bude kopírováno.
+*_Other*<br/>
+Objekt indexu, ze kterého se má kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Odkaz na tento objekt indexu.
 
-## <a name="operator_-_eq"></a>  operátor-=
+## <a name="operator_-_eq"></a>-= – operátor
 
-Odečte zadané číslo od každého prvku objektu indexu.
-```
+Odečte zadané číslo od každého prvku objektu index.
+
+```cpp
 index<_Rank>& operator-=(
    const index<_Rank>& _Rhs
 ) restrict(amp,cpu);
@@ -291,18 +299,20 @@ index<_Rank>& operator-=(
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Odečítané číslo.
+Číslo, které má být odečteno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index objektu.
+Objekt index.
 
-## <a name="rank"></a>  pořadí
-  Zjistí řád objektu indexu.
-```
+## <a name="rank"></a>Pořadí
+
+Získá pořadí objektu indexu.
+
+```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

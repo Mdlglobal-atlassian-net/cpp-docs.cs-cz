@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae8ac425f035839cdddc0b19f4f40d3b6369202a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212854"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142579"
 ---
-# <a name="taskcontinuationcontext-class"></a>task_continuation_context – třída
+# <a name="task_continuation_context-class"></a>task_continuation_context – třída
 
-`task_continuation_context` Třída umožňuje určit, kde byste chtěli pokračování má být proveden. Je vhodné použít tuto třídu z aplikace pro Windows Runtime. Pro aplikace Windows Runtime je kontext pokračování úlohy určován v modulu runtime a nelze jej konfigurovat.
+Třída `task_continuation_context` umožňuje určit, kde má být pokračování spuštěno. Tuto třídu je užitečné použít jenom z aplikace prostředí Windows Runtime. Pro aplikace, které nejsou prostředí Windows Runtime, je kontext provádění pokračování úlohy určený modulem runtime a nelze jej konfigurovat.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class task_continuation_context : public details::_ContextCallback;
 ```
 
@@ -35,11 +35,11 @@ class task_continuation_context : public details::_ContextCallback;
 
 |Název|Popis|
 |----------|-----------------|
-|[get_current_winrt_context](#get_current_winrt_context)|Vrátí objekt kontextu pokračování úlohy, představující aktuální kontext vlákna winrt.|
-|[use_arbitrary](#use_arbitrary)|Vytvoří kontext pokračování úlohy, která umožňuje zvolit kontext pokračování spuštění modulu Runtime.|
-|[use_current](#use_current)|Vrátí objekt kontextu pokračování úlohy, představující aktuální kontext spuštění.|
+|[get_current_winrt_context](#get_current_winrt_context)|Vrátí objekt kontextu pokračování úlohy, který představuje aktuální kontext vlákna WinRT.|
+|[use_arbitrary](#use_arbitrary)|Vytvoří kontext pokračování úlohy, který umožňuje modulu runtime zvolit kontext spuštění pro pokračování.|
+|[use_current](#use_current)|Vrátí objekt kontextu pokračování úlohy, který představuje aktuální kontext spuštění.|
 |[use_default](#use_default)|Vytvoří výchozí kontext pokračování úlohy.|
-|[use_synchronous_execution](#use_synchronous_execution)|Vrátí objekt kontextu pokračování úlohy, představující kontext synchronní provádění.|
+|[use_synchronous_execution](#use_synchronous_execution)|Vrátí objekt kontextu pokračování úlohy, který představuje synchronní kontext spuštění.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -49,37 +49,39 @@ class task_continuation_context : public details::_ContextCallback;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ppltasks.h
+**Záhlaví:** ppltasks. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-## <a name="get_current_winrt_context"></a> get_current_winrt_context
+## <a name="get_current_winrt_context"></a>get_current_winrt_context
 
-Vrátí objekt kontextu pokračování úlohy, představující aktuální kontext vlákna WinRT.
+Vrátí objekt kontextu pokračování úlohy, který představuje aktuální kontext vlákna WinRT.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 static task_continuation_context get_current_winrt_context();
 ```
 
-## <a name="return-value"></a>Návratová hodnota
+### <a name="return-value"></a>Návratová hodnota
 
-Aktuální kontext vlákna modulu Windows Runtime. Vrátí prázdný task_continuation_context – Pokud se volá z kontextu Windows Runtime.
+Aktuální kontext vlákna prostředí Windows Runtime. Vrací prázdné task_continuation_context, je-li voláno z kontextu, který není prostředí Windows Runtime.
 
-## <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>Poznámky
 
-`get_current_winrt_context` Metoda zachycuje kontext vlákna volajícího prostředí Windows Runtime. Vrátí prázdnému kontextu volajícím Windows Runtime.
+Metoda `get_current_winrt_context` zachytí kontext vlákna prostředí Windows Runtime volajícího. Vrátí prázdný kontext volajícím jiným než prostředí Windows Runtime.
 
-Hodnota vrácená `get_current_winrt_context` slouží k oznámení modulu Runtime, že pokračování má být spuštěno v modelu objektu apartment zachyceném kontextu (STA vs MTA) bez ohledu na to, zda je předchozí úloha vědoma objektu apartment. Úkol je úkol, který rozbalí Windows Runtime komplexu `IAsyncInfo` rozhraní nebo úloha, která je potomkem takového úkolu.
+Hodnota vrácená `get_current_winrt_context` může být použita k označení modulu runtime, že pokračování má být spuštěno v modelu Apartment zachyceného kontextu (STA vs MTA) bez ohledu na to, zda je předchozí úloha v rámci prostředí typu apartment. Úkol využívající prostředí typu Apartment je úkol, který rozbalí rozhraní prostředí Windows Runtime `IAsyncInfo` nebo úkol, který je následníkem tohoto úkolu.
 
-Tato metoda je podobný `use_current` metody, ale je také k dispozici na nativní C++ kódu bez C++/CX rozšíření podpory. Je určena pro použití zkušení uživatelé psaní C++/CX-agnostic kód knihovny pro nativní a volající modulu Windows Runtime. Pokud potřebujete tuto funkci, doporučujeme `use_current` metodu, která je dostupná jenom pro C++/CX klientů.
+Tato metoda je podobná metodě `use_current`, ale je také k dispozici pro nativní C++ kód bez C++podpory rozšíření/CX. Je určena pro použití pokročilými uživateli, kteří C++zapisují/CX-agnostic kód knihovny pro nativní i prostředí Windows Runtime volající. Pokud tuto funkci nepotřebujete, doporučujeme `use_current` metodu, která je k dispozici pouze C++pro klienty/CX.
 
-##  <a name="use_arbitrary"></a> use_arbitrary –
+## <a name="use_arbitrary"></a>use_arbitrary
 
-Vytvoří kontext pokračování úlohy, která umožňuje zvolit kontext pokračování spuštění modulu Runtime.
+Vytvoří kontext pokračování úlohy, který umožňuje modulu runtime zvolit kontext spuštění pro pokračování.
 
-```
+### <a name="syntax"></a>Syntaxe
+
+```cpp
 static task_continuation_context use_arbitrary();
 ```
 
@@ -89,17 +91,17 @@ Kontext pokračování úlohy, který představuje libovolné umístění.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je použit tento kontext pokračování, pokračování bude spuštěno v kontextu, který modul runtime zvolí i v případě, že je předchozí úloha vědoma objektu apartment.
+Pokud je tento kontext pokračování používán, pokračování bude spuštěno v kontextu, který modul runtime zvolí i v případě, že je předchozí úloha vědoma prostředí typu apartment.
 
-`use_arbitrary` slouží k vypnutí výchozího chování pro pokračování na vědom objektu Apartment vytvořené v STA.
+`use_arbitrary` lze použít k vypnutí výchozího chování pro pokračování na úkolu, který je zaměřen na použití v rámci STA.
 
-Tato metoda je pouze k dispozici pro aplikace Windows Runtime.
+Tato metoda je k dispozici pouze pro prostředí Windows Runtime aplikace.
 
-##  <a name="use_current"></a> use_current –
+## <a name="use_current"></a>use_current
 
-Vrátí objekt kontextu pokračování úlohy, představující aktuální kontext spuštění.
+Vrátí objekt kontextu pokračování úlohy, který představuje aktuální kontext spuštění.
 
-```
+```cpp
 static task_continuation_context use_current();
 ```
 
@@ -109,17 +111,17 @@ Aktuální kontext spuštění.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zachycuje kontext modulu Runtime Windows volajícího tak, aby pokračování mohla být provedena ve správném objektu apartment.
+Tato metoda zachycuje kontext prostředí Windows Runtime volajícího, aby bylo možné spustit pokračování v pravém podoblasti.
 
-Hodnota vrácená `use_current` slouží k oznámení modulu Runtime, že pokračování má být spuštěno v zachyceném kontextu (STA vs MTA) bez ohledu na to, zda je předchozí úloha vědoma objektu apartment. Úkol je úkol, který rozbalí Windows Runtime komplexu `IAsyncInfo` rozhraní nebo úloha, která je potomkem takového úkolu.
+Hodnota vrácená `use_current` může být použita k označení modulu runtime, že pokračování má být spuštěno v zachyceném kontextu (STA vs MTA) bez ohledu na to, zda je předchozí úloha v rámci prostředí typu apartment. Úkol využívající prostředí typu Apartment je úkol, který rozbalí rozhraní prostředí Windows Runtime `IAsyncInfo` nebo úkol, který je následníkem tohoto úkolu.
 
-Tato metoda je pouze k dispozici pro aplikace Windows Runtime.
+Tato metoda je k dispozici pouze pro prostředí Windows Runtime aplikace.
 
-##  <a name="use_default"></a> use_default –
+## <a name="use_default"></a>use_default
 
 Vytvoří výchozí kontext pokračování úlohy.
 
-```
+```cpp
 static task_continuation_context use_default();
 ```
 
@@ -129,32 +131,32 @@ Výchozí kontext pokračování.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí kontext se používá, pokud nezadáte pokračování kontextu při volání `then` metody. Ve Windows aplikací pro Windows 7 a níže, jakož i aplikace klasické pracovní plochy v systému Windows 8 a vyšší modul runtime určuje, kde budou prováděna pokračování úlohy. Ale v aplikaci Windows Runtime, je výchozí kontext pokračování pro pokračování na vědom objektu Apartment apartment kde `then` je vyvolána.
+Výchozí kontext je použit, pokud nezadáte kontext pokračování při volání metody `then`. V aplikacích systému Windows pro systém Windows 7 a níže i v aplikacích klasické pracovní plochy v systému Windows 8 a vyšší modul runtime určuje, kde budou spouštěny pokračování úlohy. V aplikaci prostředí Windows Runtime však výchozí kontext pokračování pro pokračování v rámci úlohy s podporou na práci s Apartment je objekt Apartment, ve kterém je vyvoláno `then`.
 
-Úkol je úkol, který rozbalí Windows Runtime komplexu `IAsyncInfo` rozhraní nebo úloha, která je potomkem takového úkolu. Proto pokud plánujete pokračování na vědom objektu Apartment v Windows Runtime STA, pokračování bude spuštěno v tomto STA
+Úkol využívající prostředí typu Apartment je úkol, který rozbalí rozhraní prostředí Windows Runtime `IAsyncInfo` nebo úkol, který je následníkem tohoto úkolu. Proto Pokud naplánujete pokračování v rámci úlohy, která je na základě typu Apartment v prostředí Windows Runtime STA, pokračování bude provedeno v tomto modelu STA.
 
-Pokračování na úkolu vědět-objektu apartment bude spuštěno v kontextu, který modul Runtime zvolí.
+Pokračování úlohy, která nepracuje na typu apartment, se spustí v kontextu, který modul runtime zvolí.
 
-## <a name="use_synchronous_execution"></a> task_continuation_context::use_synchronous_execution
+## <a name="use_synchronous_execution"></a>task_continuation_context:: use_synchronous_execution
 
-Vrátí objekt kontextu pokračování úlohy, představující kontext synchronní provádění.
+Vrátí objekt kontextu pokračování úlohy, který představuje synchronní kontext spuštění.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 static task_continuation_context use_synchronous_execution();
 ```
 
-## <a name="return-value"></a>Návratová hodnota
+### <a name="return-value"></a>Návratová hodnota
 
-Synchronní provádění kontextu.
+Kontext synchronního spuštění.
 
-## <a name="remarks"></a>Poznámky
+### <a name="remarks"></a>Poznámky
 
-`use_synchronous_execution` Metoda donutí úkol pokračování, aby běžel synchronně v kontextu, což způsobí jeho předchozí úloha dokončení.
+Metoda `use_synchronous_execution` vynutí, aby úloha pokračování běžela synchronně v kontextu, což způsobilo dokončení jeho předchozí úlohy.
 
-Pokud je předchozí úloha již dokončena případě, že pokračování, pokračování pracuje synchronně, na kontextu, který se připojí pokračování.
+Pokud již předchozí úloha byla dokončena, když je pokračování připojeno, pokračování bude spuštěno synchronně v kontextu, který připojení dokončí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

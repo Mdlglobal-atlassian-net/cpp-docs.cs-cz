@@ -2,12 +2,12 @@
 title: Používání bloků
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518254"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126263"
 ---
 # <a name="using-tiles"></a>Používání bloků
 
@@ -15,7 +15,7 @@ K maximalizaci akcelerace aplikace můžete použít dlaždici. Dělení rozděl
 
 - proměnné `tile_static`. Hlavní výhodou dělení na dlaždice je zvýšení výkonu z `tile_static` přístupu. Přístup k datům v `tile_static` paměti může být výrazně rychlejší než přístup k datům v globálním prostoru (`array` nebo `array_view` objektů). Instance `tile_static` proměnné je vytvořena pro každou dlaždici a všechna vlákna v dlaždici mají přístup k proměnné. V typických algoritmech, které jsou v typickém režimu, se data zkopírují do `tile_static` paměti jednou z globální paměti a pak se v `tile_static` paměti několikrát přistupovalo.
 
-- [tile_barrier:: wait – metoda](reference/tile-barrier-class.md#wait) Volání `tile_barrier::wait` pozastaví provádění aktuálního vlákna, dokud všechna vlákna ve stejné dlaždici dosáhnou volání `tile_barrier::wait`. Pořadí, v jakém se vlákna budou spouštět, nemůžete zaručit, že se za voláním `tile_barrier::wait` nespustí žádná vlákna na dlaždici, dokud všechna vlákna nedosáhnou volání. To znamená, že pomocí metody `tile_barrier::wait` můžete provádět úlohy na dlaždici, a ne na bázi vláken. Typický algoritmus dláždění má kód pro inicializaci `tile_static` paměti pro celou dlaždici následovanou voláním `tile_barrer::wait`. Kód, který následuje `tile_barrier::wait` obsahuje výpočty, které vyžadují přístup ke všem hodnotám `tile_static`.
+- [tile_barrier:: wait – metoda](reference/tile-barrier-class.md#wait) Volání `tile_barrier::wait` pozastaví provádění aktuálního vlákna, dokud všechna vlákna ve stejné dlaždici dosáhnou volání `tile_barrier::wait`. Pořadí, v jakém se vlákna budou spouštět, nemůžete zaručit, že se za voláním `tile_barrier::wait` nespustí žádná vlákna na dlaždici, dokud všechna vlákna nedosáhnou volání. To znamená, že pomocí metody `tile_barrier::wait` můžete provádět úlohy na dlaždici, a ne na bázi vláken. Typický algoritmus dláždění má kód pro inicializaci `tile_static` paměti pro celou dlaždici následovanou voláním `tile_barrier::wait`. Kód, který následuje `tile_barrier::wait` obsahuje výpočty, které vyžadují přístup ke všem hodnotám `tile_static`.
 
 - Místní a globální indexování. Máte přístup k indexu vlákna relativně k celému `array_view` nebo `array`mu objektu a indexu relativně k dlaždici. Použití místního indexu může usnadnit čtení a ladění kódu. Obvykle používáte místní indexování pro přístup k proměnným `tile_static` a globální indexování pro přístup k proměnným `array` a `array_view`.
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static Keyword](../../cpp/tile-static-keyword.md)

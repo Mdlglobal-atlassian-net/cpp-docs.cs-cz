@@ -1,6 +1,7 @@
 ---
 title: vector – třída
-ms.date: 01/04/2020
+description: Referenční informace pro C++ implementaci vektoru třídy standardní knihovny Microsoft
+ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 8c4284fecf09044ceab326d858d6ffccccdeaf45
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676961"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126224"
 ---
 # <a name="vector-class"></a>vector – třída
 
@@ -140,9 +141,9 @@ K přerozdělení vektoru dojde, když členská funkce musí zvětšit sekvenci
 |[const_reference](#const_reference)|Typ, který poskytuje odkaz na prvek **const** uložený ve vektoru. Používá se pro čtení a provádění operací **const** .|
 |[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst libovolný element **const** ve vektoru.|
 |[difference_type](#difference_type)|Typ, který poskytuje rozdíl mezi adresami dvou prvků ve vektoru.|
-|[iterator](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek ve vektoru.|
-|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek ve vektoru.|
-|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený ve vektoru.|
+|[iterátor](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek ve vektoru.|
+|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek ve vektoru.|
+|[odkaz](#reference)|Typ, který poskytuje odkaz na prvek uložený ve vektoru.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v obráceném vektoru.|
 |[size_type](#size_type)|Typ, který počítá počet prvků ve vektoru.|
 |[value_type](#value_type)|Typ, který představuje datový typ uložený ve vektoru.|
@@ -151,20 +152,20 @@ K přerozdělení vektoru dojde, když členská funkce musí zvětšit sekvenci
 
 |||
 |-|-|
-|[assign](#assign)|Smaže vektor a zkopíruje zadané prvky do prázdného vektoru.|
-|[at](#at)|Vrátí odkaz na prvek v zadaném umístění ve vektoru.|
+|[řadit](#assign)|Smaže vektor a zkopíruje zadané prvky do prázdného vektoru.|
+|[Počínaje](#at)|Vrátí odkaz na prvek v zadaném umístění ve vektoru.|
 |[návrat](#back)|Vrátí odkaz na poslední prvek vektoru.|
 |[ifunctiondiscovery](#begin)|Vrátí iterátor náhodného přístupu k prvnímu prvku ve vektoru.|
 |[klíčivost](#capacity)|Vrátí počet prvků, které může vektor obsahovat, aniž by bylo potřeba přidělit větší úložiště.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor s náhodným přístupem k prvnímu prvku ve vektoru.|
 |[cend](#cend)|Vrátí konstantní iterátor s náhodným přístupem, který odkazuje hned za konec vektoru.|
-|[crbegin](#crbegin)|Vrátí konstantní iterátor na první prvek v obráceném vektoru.|
+|[crbegin –](#crbegin)|Vrátí konstantní iterátor na první prvek v obráceném vektoru.|
 |[crend](#crend)|Vrátí konstantní iterátor na konec obráceného vektoru.|
 |[jejich](#clear)|Vymaže prvky vektoru.|
-|[data](#data)|Vrátí ukazatel na první prvek ve vektoru.|
+|[údajů](#data)|Vrátí ukazatel na první prvek ve vektoru.|
 |[emplace](#emplace)|Vloží prvek sestavený na místo do vektoru na zadané pozici.|
 |[emplace_back](#emplace_back)|Přidá prvek konstruovaný na konec vektoru.|
-|[empty](#empty)|Testuje, zda je vektorový kontejner prázdný.|
+|[obsahovat](#empty)|Testuje, zda je vektorový kontejner prázdný.|
 |[účelu](#end)|Vrátí iterátor náhodného přístupu, který odkazuje na konec vektoru.|
 |[ověřování](#erase)|Odebere prvek nebo rozsah prvků ve vektoru ze zadané pozice.|
 |[dopředu](#front)|Vrátí odkaz na první prvek ve vektoru.|
@@ -175,11 +176,11 @@ K přerozdělení vektoru dojde, když členská funkce musí zvětšit sekvenci
 |[push_back](#push_back)|Přidejte prvek na konec vektoru.|
 |[rbegin](#rbegin)|Vrátí iterátor na první prvek v obráceném vektoru.|
 |[rend](#rend)|Vrátí iterátor na konec obráceného vektoru.|
-|[reserve](#reserve)|Vyhrazuje minimální délku úložiště pro vektorový objekt.|
+|[rezervační](#reserve)|Vyhrazuje minimální délku úložiště pro vektorový objekt.|
 |[velikost](#resize)|Určuje novou velikost vektoru.|
 |[shrink_to_fit](#shrink_to_fit)|Zahodí nadbytečnou kapacitu.|
 |[hodnota](#size)|Vrátí počet prvků ve vektoru.|
-|[swap](#swap)|Vyměňuje prvky dvou vektorů.|
+|[adresu](#swap)|Vyměňuje prvky dvou vektorů.|
 
 ### <a name="operators"></a>Operátory
 
@@ -790,7 +791,7 @@ int main()
 {
     using namespace std;
     vector<int> c1;
-    vector<int>::pointer c1 ptr;
+    vector<int>::pointer c1_ptr;
     vector<int>::const_pointer c1_cPtr;
 
     c1.push_back(1);
@@ -805,11 +806,11 @@ int main()
     cout << endl;
 
     cout << "The vector c1 now contains elements:";
-    c1 ptr = c1.data();
-    *c1 ptr = 20;
-    for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
+    c1_ptr = c1.data();
+    *c1_ptr = 20;
+    for (size_t n = c1.size(); 0 < n; --n, c1_ptr++)
     {
-        cout << " " << *c1 ptr;
+        cout << " " << *c1_ptr;
     }
     cout << endl;
 }
@@ -2233,7 +2234,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

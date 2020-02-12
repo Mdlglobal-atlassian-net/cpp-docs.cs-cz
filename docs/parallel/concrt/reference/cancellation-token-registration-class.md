@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-ms.openlocfilehash: c6ca8061181ec057110282fa297666235e898ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9342841e207c93b66521c2fc742c1b1114682f78
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414188"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142241"
 ---
-# <a name="cancellationtokenregistration-class"></a>cancellation_token_registration – třída
+# <a name="cancellation_token_registration-class"></a>cancellation_token_registration – třída
 
-`cancellation_token_registration` Třída představuje zpětné volání upozornění z `cancellation_token`. Když `register` metodu na `cancellation_token` slouží k přijímání oznámení tom, kdy kde zrušení dojde, `cancellation_token_registration` objekt je vrácen jako popisovač pro zpětné volání tak, aby volající mohl požadovat konkrétní zpětné volání již nebude provedeno pomocí `deregister` metody.
+Třída `cancellation_token_registration` představuje oznámení zpětného volání z `cancellation_token`. Pokud je metoda `register` v `cancellation_token` použita pro příjem oznámení o tom, že dojde k zrušení, je objekt `cancellation_token_registration` vrácen jako popisovač zpětného volání, aby volající mohl požadovat konkrétní zpětné volání, které již není provedeno pomocí metody `deregister`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class cancellation_token_registration;
 ```
 
@@ -32,7 +32,7 @@ class cancellation_token_registration;
 |Název|Popis|
 |----------|-----------------|
 |[cancellation_token_registration](#ctor)||
-|[~ cancellation_token_registration – destruktor](#dtor)||
+|[~ cancellation_token_registration destruktor](#dtor)||
 
 ### <a name="public-operators"></a>Veřejné operátory
 
@@ -40,7 +40,7 @@ class cancellation_token_registration;
 |----------|-----------------|
 |[operator!=](#operator_neq)||
 |[operátor =](#operator_eq)||
-|[operator==](#operator_eq_eq)||
+|[operator = = – operátor](#operator_eq_eq)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -48,19 +48,19 @@ class cancellation_token_registration;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** pplcancellation_token.h
+**Záhlaví:** pplcancellation_token. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="dtor"></a> ~cancellation_token_registration
+## <a name="dtor"></a>~ cancellation_token_registration
 
-```
+```cpp
 ~cancellation_token_registration();
 ```
 
-##  <a name="ctor"></a> cancellation_token_registration –
+## <a name="ctor"></a>cancellation_token_registration
 
-```
+```cpp
 cancellation_token_registration();
 
 cancellation_token_registration(const cancellation_token_registration& _Src);
@@ -71,11 +71,11 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ### <a name="parameters"></a>Parametry
 
 *_Src*<br/>
-`cancellation_token_registration` Má zkopírovat nebo přesunout.
+`cancellation_token_registration` ke zkopírování nebo přesunutí.
 
-##  <a name="operator_neq"></a> Operator! =
+## <a name="operator_neq"></a>! = – operátor
 
-```
+```cpp
 bool operator!= (const cancellation_token_registration& _Rhs) const;
 ```
 
@@ -86,9 +86,9 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-##  <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
-```
+```cpp
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
 
 cancellation_token_registration& operator= (cancellation_token_registration&& _Src);
@@ -97,13 +97,13 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ### <a name="parameters"></a>Parametry
 
 *_Src*<br/>
-`cancellation_token_registration` Přiřadit.
+`cancellation_token_registration` k přiřazení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-##  <a name="operator_eq_eq"></a> Operator ==
+## <a name="operator_eq_eq"></a>operator = = – operátor
 
-```
+```cpp
 bool operator== (const cancellation_token_registration& _Rhs) const;
 ```
 
@@ -114,6 +114,6 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

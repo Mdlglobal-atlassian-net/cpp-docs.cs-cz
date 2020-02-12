@@ -13,51 +13,51 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90a23ce111f7307610de3f0ad4bcec05d8de27df
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180385"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126893"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkce oboru názvů Concurrency (AMP)
 
 ||||
 |-|-|-|
 |[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
-|[atomic_exchange – funkce (C++ AMP)](#atomic_exchange)|[atomic_fetch_add – funkce (C++ AMP)](#atomic_fetch_add)|[atomic_fetch_and – funkce (C++ AMP)](#atomic_fetch_and)|
+|[atomic_exchange – funkceC++ (amp)](#atomic_exchange)|[atomic_fetch_add – funkceC++ (amp)](#atomic_fetch_add)|[atomic_fetch_and – funkceC++ (amp)](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
-|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or – funkce (C++ AMP)](#atomic_fetch_or)|[atomic_fetch_sub – funkce (C++ AMP)](#atomic_fetch_sub)|
-|[atomic_fetch_xor – funkce (C++ AMP)](#atomic_fetch_xor)|[kopírování](#copy)|[copy_async](#copy_async)|
+|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or – funkceC++ (amp)](#atomic_fetch_or)|[atomic_fetch_sub – funkceC++ (amp)](#atomic_fetch_sub)|
+|[atomic_fetch_xor – funkceC++ (amp)](#atomic_fetch_xor)|[kopií](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
-|[global_memory_fence](#global_memory_fence)|[parallel_for_each – funkce (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
+|[global_memory_fence](#global_memory_fence)|[parallel_for_each – funkceC++ (amp)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
-##  <a name="all_memory_fence"></a>  all_memory_fence –
+## <a name="all_memory_fence"></a>all_memory_fence
 
-Pozastaví spuštění všech vláken v dlaždici, dokud nejsou dokončeny všechny přístupy do paměti. Tím se zajistí, že všechny přístupy do paměti viditelné pro ostatní vlákna v dlaždici vlákna a jsou provedeny v pořadí programu.
+Blokuje spuštění všech vláken v dlaždici, dokud nejsou dokončeny všechny přístupy do paměti. Tím se zajistí, že všechny přístupy do paměti jsou viditelné pro ostatní vlákna v dlaždici vlákna a jsou spouštěny v pořadí programu.
 
-```
+```cpp
 inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Barrier*<br/>
-A `tile_barrier` objektu.
+Objekt `tile_barrier`.
 
-##  <a name="amp_uninitialize"></a>  amp_uninitialize –
+## <a name="amp_uninitialize"></a>amp_uninitialize
 
-Zruší inicializaci modulu runtime C++ AMP. Je možné tuto funkci volat vícekrát během životního cyklu aplikace. Volání jakékoli C++ AMP API po volání této funkce spustí opětovnou inicializaci modulu runtime C++ AMP. Všimněte si, že není povoleno použití objektů C++ AMP mezi volání této funkce a to proto způsobí nedefinované chování. Také souběžné volání této funkce a jakékoliv jiné API AMP je neplatná a bude mít za následek nedefinované chování.
+Zruší inicializaci modulu runtime C++ amp. Je právním voláním této funkce během života aplikací několikrát volat. Volání všech C++ rozhraní API amp po volání této funkce způsobí opětovnou C++ inicializaci modulu runtime amp. Všimněte si, že je nedovoleno používat C++ v volání této funkce objekty amp a v důsledku toho dojde k nedefinovanému chování. Také souběžné volání této funkce a všech dalších rozhraní API AMP je neplatné a by mohlo vést k nedefinovanému chování.
 
-```
+```cpp
 void __cdecl amp_uninitialize();
 ```
 
-##  <a name="atomic_compare_exchange"></a>  atomic_compare_exchange –
+## <a name="atomic_compare_exchange"></a>atomic_compare_exchange
 
-Atomicky porovná hodnotu uloženou v paměti umístění určené v prvním argumentu rovnosti s hodnotou druhého zadaného argumentu, a pokud jsou hodnoty stejné, hodnota v umístění v paměti se změní na, že ve třetím zadaném argumentu.
+Atomicky porovnává hodnotu uloženou v paměťovém umístění určeném v prvním argumentu pro rovnost s hodnotou druhého zadaného argumentu, a pokud jsou hodnoty stejné, hodnota v umístění paměti je změněna na hodnotu třetího zadaného argumentu.
 
-```
+```cpp
 inline bool atomic_compare_exchange(
     _Inout_ int* _Dest,
     _Inout_ int* _Expected_value,
@@ -74,23 +74,23 @@ inline bool atomic_compare_exchange(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Čtení umístění, ze které jedna z porovnávaných hodnot, a ke kterému novou hodnotu, pokud existuje, se uloží.
+Umístění, ze kterého se má porovnat jedna z hodnot, a do které se má uložit nová hodnota (pokud nějaká je).
 
 *_Expected_value*<br/>
-Umístění, ze kterých je druhá hodnota, která se má porovnat číst.
+Umístění, ze kterého se má porovnat druhá hodnota, je čtena.
 
 *value*<br/>
-Hodnota, která má být uložena do umístění paměti zadaného parametrem `_Dest` Pokud `_Dest` rovná `_Expected_value`.
+Hodnota, která má být uložena do umístění v paměti určené v parametru `_Dest`, pokud je `_Dest` rovna `_Expected_value`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud je operace úspěšná, jinak **false**.
+**true** , pokud je operace úspěšná; v opačném případě **false**.
 
-##  <a name="atomic_exchange"></a>  atomic_exchange – funkce (C++ AMP)
+## <a name="atomic_exchange"></a>atomic_exchange – funkceC++ (amp)
 
-Nastaví hodnotu vlastnosti cílové umístění jako atomická operace.
+Nastaví hodnotu cílového umístění jako atomickou operaci.
 
-```
+```cpp
 inline int atomic_exchange(
     _Inout_ int* _Dest,
     int value
@@ -110,20 +110,20 @@ inline float atomic_exchange(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Ukazatel na cílová umístění.
+Ukazatel na cílové umístění.
 
 *value*<br/>
 Nová hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Původní hodnota cílové umístění.
+Původní hodnota cílového umístění.
 
-##  <a name="atomic_fetch_add"></a>  atomic_fetch_add – funkce (C++ AMP)
+## <a name="atomic_fetch_add"></a>atomic_fetch_add – funkceC++ (amp)
 
-Atomicky přidá hodnotu do hodnoty vlastnosti umístění v paměti.
+Atomicky přidejte hodnotu do hodnoty umístění v paměti.
 
-```
+```cpp
 inline int atomic_fetch_add(
     _Inout_ int* _Dest,
     int value
@@ -141,17 +141,17 @@ inline unsigned int atomic_fetch_add(
 Ukazatel na umístění v paměti.
 
 *value*<br/>
-Hodnota má být přidán.
+Hodnota, která má být přidána.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Původní hodnota umístění v paměti.
 
-##  <a name="atomic_fetch_and"></a>  atomic_fetch_and – funkce (C++ AMP)
+## <a name="atomic_fetch_and"></a>atomic_fetch_and – funkceC++ (amp)
 
-Provádí atomicky bitové operace AND hodnotu a hodnotu umístění v paměti.
+Atomicky provádí bitové a operace s hodnotou a hodnotou umístění v paměti.
 
-```
+```cpp
 inline int atomic_fetch_and(
     _Inout_ int* _Dest,
     int value
@@ -169,17 +169,17 @@ inline unsigned int atomic_fetch_and(
 Ukazatel na umístění v paměti.
 
 *value*<br/>
-Hodnota, která chcete použít bitový AND výpočtu.
+Hodnota, která má být použita v bitovém a výpočtovém.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Původní hodnota umístění v paměti.
 
-##  <a name="atomic_fetch_dec"></a>  atomic_fetch_dec –
+## <a name="atomic_fetch_dec"></a>atomic_fetch_dec
 
-Atomicky sníží hodnotu uloženou v zadaném umístění v paměti.
+Atomicky snižuje hodnotu uloženou v zadaném umístění v paměti.
 
-```
+```cpp
 inline int atomic_fetch_dec(_Inout_ int* _Dest
     ) restrict(amp)
 
@@ -189,17 +189,17 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Umístění v paměti hodnota, která má být snížena.
+Umístění v paměti hodnoty, která se má snížit
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Původní hodnota uložená v umístění v paměti.
 
-##  <a name="atomic_fetch_inc"></a>  atomic_fetch_inc –
+## <a name="atomic_fetch_inc"></a>atomic_fetch_inc
 
 Atomicky zvýší hodnotu uloženou v zadaném umístění v paměti.
 
-```
+```cpp
 inline int atomic_fetch_inc(_Inout_ int* _Dest) restrict(amp);
 
 inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
@@ -208,17 +208,17 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Umístění v paměti hodnota, která má být zvýšen.
+Umístění v paměti hodnoty, která se má zvýšit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Původní hodnota uložená v umístění v paměti.
 
-##  <a name="atomic_fetch_max"></a>  atomic_fetch_max –
+## <a name="atomic_fetch_max"></a>atomic_fetch_max
 
-Atomicky vypočítá maximální hodnotu mezi hodnotou uloženou v paměti umístění zadaném v prvním argumentu a hodnotu zadanou ve druhém argumentu a uloží ji na stejné místo v paměti.
+Atomicky vypočítá maximální hodnotu mezi hodnotou uloženou v umístění v paměti zadaném v prvním argumentu a hodnotou zadanou ve druhém argumentu a uloží ji na stejné místo v paměti.
 
-```
+```cpp
 inline int atomic_fetch_max(
     _Inout_ int* _Dest,
     int value
@@ -233,20 +233,20 @@ inline unsigned int atomic_fetch_max(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Čtení umístění, ze které jedna z porovnávaných hodnot, a do kterého má být uloženy maximálně dvě hodnoty.
+Umístění, ze kterého se má porovnat jedna z hodnot, a do kterých se mají uložit maximum ze dvou hodnot.
 
 *value*<br/>
-Hodnota, která se má porovnat s hodnotou v zadaném umístění.
+Hodnota, která má být porovnána s hodnotou v zadaném umístění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Původní hodnota uložená v uvedeném umístění.
+Původní hodnota uložená v zadaném umístění.
 
-##  <a name="atomic_fetch_min"></a>  atomic_fetch_min –
+## <a name="atomic_fetch_min"></a>atomic_fetch_min
 
-Atomicky vypočítá minimální hodnotu mezi hodnotou uloženou v paměti umístění zadaném v prvním argumentu a hodnotu zadanou ve druhém argumentu a uloží ji na stejné místo v paměti.
+Atomicky vypočítá minimální hodnotu mezi hodnotou uloženou v umístění v paměti zadaném v prvním argumentu a hodnotou zadanou ve druhém argumentu a uloží ji na stejné místo v paměti.
 
-```
+```cpp
 inline int atomic_fetch_min(
     _Inout_ int* _Dest,
     int value
@@ -261,20 +261,20 @@ inline unsigned int atomic_fetch_min(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Čtení umístění, ze které jedna z porovnávaných hodnot, a do kterého má být uloženy minimálně dvě hodnoty.
+Umístění, ze kterého se má porovnat jedna z hodnot, a do kterých se budou ukládat minimální hodnoty dvou hodnot.
 
 *value*<br/>
-Hodnota, která se má porovnat s hodnotou v zadaném umístění.
+Hodnota, která má být porovnána s hodnotou v zadaném umístění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Původní hodnota uložená v uvedeném umístění.
+Původní hodnota uložená v zadaném umístění.
 
-##  <a name="atomic_fetch_or"></a>  atomic_fetch_or – funkce (C++ AMP)
+## <a name="atomic_fetch_or"></a>atomic_fetch_or – funkceC++ (amp)
 
-Provádí atomicky bitová operace OR s hodnotu a hodnotu umístění v paměti.
+Atomicky provádí bitové operace nebo operaci s hodnotou a hodnotou umístění v paměti.
 
-```
+```cpp
 inline int atomic_fetch_or(
     _Inout_ int* _Dest,
     int value
@@ -292,17 +292,17 @@ inline unsigned int atomic_fetch_or(
 Ukazatel na umístění v paměti.
 
 *value*<br/>
-Hodnota, která chcete použít bitový OR výpočtu.
+Hodnota, která má být použita v bitovém nebo výpočtovém.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Původní hodnota umístění v paměti.
 
-##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub – funkce (C++ AMP)
+## <a name="atomic_fetch_sub"></a>atomic_fetch_sub – funkceC++ (amp)
 
 Atomicky odečte hodnotu z umístění v paměti.
 
-```
+```cpp
 inline int atomic_fetch_sub(
     _Inout_ int* _Dest,
     int value
@@ -317,20 +317,20 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Ukazatel na cílová umístění.
+Ukazatel na cílové umístění.
 
 *value*<br/>
-Hodnota určená k mít odečíst.
+Hodnota, která má být odečtena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Původní hodnota umístění v paměti.
 
-##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor – funkce (C++ AMP)
+## <a name="atomic_fetch_xor"></a>atomic_fetch_xor – funkceC++ (amp)
 
-Atomicky peforms bitové operace XOR hodnotu a umístění v paměti.
+Atomicky provádí operaci bitové operace XOR hodnoty a umístění v paměti.
 
-```
+```cpp
 inline int atomic_fetch_xor(
     _Inout_ int* _Dest,
     int value
@@ -348,17 +348,17 @@ inline unsigned int atomic_fetch_xor(
 Ukazatel na umístění v paměti.
 
 *value*<br/>
-Hodnoty pro výpočet XOR.
+Hodnota, která se má použít při výpočtu XOR.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Původní hodnota umístění v paměti.
 
-##  <a name="copy"></a>  kopírování
+## <a name="copy"></a>kopií
 
-Zkopíruje objekt jazyka C++ AMP. Jsou splněny všechny požadavky synchronního přenosu dat. Data nelze kopírovat, li kód spuštěn na akcelerátoru. Obecný tvar této funkce je `copy(src, dest)`.
+Zkopíruje objekt C++ amp. Jsou splněné všechny požadavky synchronního přenosu dat. Data nelze kopírovat při spuštění kódu v akcelerátoru. Obecná forma této funkce je `copy(src, dest)`.
 
-```
+```cpp
 template <typename value_type, int _Rank>
 void copy(
     const array<value_type, _Rank>& _Src,
@@ -425,10 +425,10 @@ void copy(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Objekt, který chcete zkopírovat do.
+Objekt, do kterého se má kopírovat.
 
 *_DestIter*<br/>
-Výstupní iterátor na počáteční pozici cíle.
+Výstupní iterátor na počáteční pozici v cíli.
 
 *InputIterator*<br/>
 Typ vstupního iterátoru.
@@ -437,10 +437,10 @@ Typ vstupního iterátoru.
 Typ výstupního iterátoru.
 
 *_Rank*<br/>
-Řád objektu, který chcete kopírovat z nebo objekt, který chcete zkopírovat.
+Pořadí objektu, ze kterého se má kopírovat, nebo objekt, do kterého se mají kopírovat.
 
 *_Src*<br/>
-Kopírovaný objekt.
+Do objektu ke zkopírování.
 
 *_SrcFirst*<br/>
 Počáteční iterátor do zdrojového kontejneru.
@@ -451,11 +451,11 @@ Koncový iterátor do zdrojového kontejneru.
 *value_type*<br/>
 Datový typ prvků, které jsou zkopírovány.
 
-##  <a name="copy_async"></a>  copy_async
+## <a name="copy_async"></a>copy_async
 
-Kopie C++ objekt AMP a vrátí [completion_future](completion-future-class.md) objekt, který lze čekat. Data nelze kopírovat, li kód spuštěn na akcelerátoru.  Obecný tvar této funkce je `copy(src, dest)`.
+Zkopíruje objekt C++ amp a vrátí objekt [completion_future](completion-future-class.md) , na kterém může být očekáváno. Data nelze kopírovat při spuštění kódu v akcelerátoru.  Obecná forma této funkce je `copy(src, dest)`.
 
-```
+```cpp
 template <typename value_type, int _Rank>
 concurrency::completion_future copy_async(
     const array<value_type, _Rank>& _Src,
@@ -514,10 +514,10 @@ concurrency::completion_future copy_async(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Objekt, který chcete zkopírovat do.
+Objekt, do kterého se má kopírovat.
 
 *_DestIter*<br/>
-Výstupní iterátor na počáteční pozici cíle.
+Výstupní iterátor na počáteční pozici v cíli.
 
 *InputIterator*<br/>
 Typ vstupního iterátoru.
@@ -526,10 +526,10 @@ Typ vstupního iterátoru.
 Typ výstupního iterátoru.
 
 *_Rank*<br/>
-Řád objektu, který chcete kopírovat z nebo objekt, který chcete zkopírovat.
+Pořadí objektu, ze kterého se má kopírovat, nebo objekt, do kterého se mají kopírovat.
 
 *_Src*<br/>
-Kopírovaný objekt.
+Do objektu ke zkopírování.
 
 *_SrcFirst*<br/>
 Počáteční iterátor do zdrojového kontejneru.
@@ -542,41 +542,41 @@ Datový typ prvků, které jsou zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `future<void>` , který lze čekat.
+`future<void>`, na které může být očekáváno.
 
-##  <a name="direct3d_abort"></a>  direct3d_abort –
+## <a name="direct3d_abort"></a>direct3d_abort
 
-Zruší spuštění funkce se `restrict(amp)` podmínkou. Modulu runtime AMP zachytí volání, vyvolá [runtime_exception](runtime-exception-class.md) výjimka s chybovou zprávou "rasterizéru referenčního: Instrukce stiskněte přerušit shaderu".
+Přeruší provádění funkce s klauzulí omezení `restrict(amp)`. Když modul runtime AMP detekuje volání, vyvolá výjimku [runtime_exception](runtime-exception-class.md) s chybovou zprávou "rastrový obraz odkazu: volání metody přerušení shaderu".
 
-```
+```cpp
 void direct3d_abort() restrict(amp);
 ```
 
-##  <a name="direct3d_errorf"></a>  direct3d_errorf –
+## <a name="direct3d_errorf"></a>direct3d_errorf
 
-Vytiskne formátovaný řetězec v okně výstupu sady Visual Studio. Je volána z funkce s `restrict(amp)` podmínkou. Modulu runtime AMP zachytí volání, vyvolá [runtime_exception](runtime-exception-class.md) výjimka se stejným formátovacím řetězcem.
+Vytiskne formátovaný řetězec do okna výstupu sady Visual Studio. Je volána z funkce s klauzulí omezení `restrict(amp)`. Když modul runtime AMP detekuje volání, vyvolá výjimku [runtime_exception](runtime-exception-class.md) se stejným formátovacím řetězcem.
 
-```
+```cpp
 void direct3d_errorf(
     const char *,
 ...) restrict(amp);
 ```
 
-##  <a name="direct3d_printf"></a>  direct3d_printf –
+## <a name="direct3d_printf"></a>direct3d_printf
 
-Vytiskne formátovaný řetězec v okně výstupu sady Visual Studio. Je volána z funkce s `restrict(amp)` podmínkou.
+Vytiskne formátovaný řetězec do okna výstupu sady Visual Studio. Je volána z funkce s klauzulí omezení `restrict(amp)`.
 
-```
+```cpp
 void direct3d_printf(
     const char *,
 ...) restrict(amp);
 ```
 
-##  <a name="global_memory_fence"></a>  global_memory_fence –
+## <a name="global_memory_fence"></a>global_memory_fence
 
-Pozastaví spuštění všech vláken v dlaždici, dokud nejsou všechny globální přístupy dokončeny. Tím se zajistí, že přístupy do globální paměti viditelné pro ostatní vlákna v dlaždici vlákna a jsou provedeny v pořadí programu.
+Blokuje spuštění všech vláken v dlaždici, dokud nejsou dokončeny všechny přístupy do globální paměti. Tím se zajistí, že globální přístup k paměti bude viditelný pro ostatní vlákna v dlaždici vlákna a spustí se v pořadí programu.
 
-```
+```cpp
 inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
@@ -585,11 +585,11 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 *_Barrier*<br/>
 Objekt tile_barrier
 
-##  <a name="parallel_for_each"></a>  parallel_for_each – funkce (C++ AMP)
+## <a name="parallel_for_each"></a>parallel_for_each – funkceC++ (amp)
 
-Spustí funkci napříč výpočetní doménou. Další informace najdete v tématu [přehled modelu C++ AMP](../../../parallel/amp/cpp-amp-overview.md).
+Spustí funkci napříč výpočetní doménou. Další informace najdete v tématu [ C++ věnovaném amp Overview](../../../parallel/amp/cpp-amp-overview.md).
 
-```
+```cpp
 template <int _Rank, typename _Kernel_type>
 void parallel_for_each(
     const extent<_Rank>& _Compute_domain,
@@ -638,34 +638,34 @@ void parallel_for_each(
 ### <a name="parameters"></a>Parametry
 
 *_Accl_view*<br/>
-`accelerator_view` Objekt spouštět paralelní výpočet.
+Objekt `accelerator_view` pro spuštění paralelního výpočtu.
 
 *_Compute_domain*<br/>
-`extent` Objekt, který obsahuje data pro výpočet.
+Objekt `extent`, který obsahuje data pro výpočet.
 
 *_Dim0*<br/>
-Dimenzi `tiled_extent` objektu.
+Dimenze objektu `tiled_extent`.
 
 *_Dim1*<br/>
-Dimenzi `tiled_extent` objektu.
+Dimenze objektu `tiled_extent`.
 
 *_Dim2*<br/>
-Dimenzi `tiled_extent` objektu.
+Dimenze objektu `tiled_extent`.
 
 *_Kernel*<br/>
-Výraz lambda nebo funkce objektu, který přebírá argument typu "index\<_Rank >" a provádí paralelní výpočet.
+Výraz lambda nebo objekt funkce, který přebírá argument typu index\<_Rank > a provádí paralelní výpočet.
 
 *_Kernel_type*<br/>
-Výraz lambda nebo funktor.
+Lambda nebo funktor.
 
 *_Rank*<br/>
-Řád rozsahu.
+Rozměr rozsahu.
 
-##  <a name="tile_static_memory_fence"></a>  tile_static_memory_fence –
+## <a name="tile_static_memory_fence"></a>tile_static_memory_fence
 
-Pozastaví spuštění všech vláken v dlaždici, dokud všichni zbývající `tile_static` nejsou dokončeny přístupy do paměti. To zajistí, že `tile_static` jsou přístupy do paměti viditelné pro ostatní vlákna v dlaždici vlákna a že jsou provedeny v pořadí programu.
+Blokuje spuštění všech vláken v dlaždici, dokud nebudou dokončeny všechny zbývající `tile_static` přístupy k paměti. Tím je zajištěno, že přístup `tile_static` paměti je viditelný pro ostatní vlákna v dlaždici vlákna a že se k nim budou spouštět v pořadí programu.
 
-```
+```cpp
 inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
@@ -674,6 +674,6 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
 *_Barrier*<br/>
 Objekt tile_barrier.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

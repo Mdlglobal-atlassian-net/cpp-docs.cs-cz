@@ -1,43 +1,43 @@
 ---
-title: Výčty oboru názvů Concurrency::Graphics
+title: Výčty oboru názvů Concurrency::graphics
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
 - amp_graphics/concurrency::graphics::filter_mode
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-ms.openlocfilehash: 15499de29c70a4015f1412cab8e803d0a7fb043c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504de780a5db70def61fb47c7805b32e7de780b4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375649"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126889"
 ---
-# <a name="concurrencygraphics-namespace-enums"></a>Výčty oboru názvů Concurrency::Graphics
+# <a name="concurrencygraphics-namespace-enums"></a>Výčty oboru názvů Concurrency::graphics
 
 |||
 |-|-|
-|[reži_m výčet](#address_mode)|[filter_mode Enumeration](#filter_mode)|
+|[Výčet _mode](#address_mode)|[Výčet filter_mode](#filter_mode)|
 
-##  <a name="address_mode"></a>  address_mode – výčet
+## <a name="address_mode"></a>Výčet address_mode
 
-Typ výčtu použije režimy k označení adresy podporované pro vzorkování textur.
+Typ výčtu použijte k označení režimů adres, které jsou podporované pro vzorkování textury.
 
-```
+```cpp
 enum address_mode;
 ```
 
-##  <a name="filter_mode"></a>  filter_mode – výčet
+## <a name="filter_mode"></a>Výčet filter_mode
 
-Typ výčtu použije režimy k označení filtry podporované pro vzorkování textur.
+Typ výčtu použijte k označení režimů filtrování, které jsou podporované pro vzorkování textury.
 
-```
+```cpp
 enum filter_mode;
 ```
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_graphics.h **Namespace:** Concurrency::Graphics
+**Header:** amp_graphics. h **obor názvů:** concurrency:: Graphics
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

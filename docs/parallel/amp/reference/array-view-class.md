@@ -26,20 +26,20 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2aef75eedcde2a2064fe12815d9afd21fee2c293
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405557"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127134"
 ---
-# <a name="arrayview-class"></a>array_view – třída
+# <a name="array_view-class"></a>array_view – třída
 
-Představuje N-rozměrné zobrazení nad daty udržovanými v jiném kontejneru.
+Představuje N-dimenzionální zobrazení nad daty uchovávanými v jiném kontejneru.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <
     typename value_type,
     int _Rank = 1
@@ -53,13 +53,13 @@ template <
 class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeof(value_type)/sizeof(int)>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *value_type*<br/>
-Datový typ prvků v `array_view` objektu.
+Datový typ prvků v objektu `array_view`.
 
 *_Rank*<br/>
-Řád objektu `array_view` objektu.
+Pořadí objektu `array_view`.
 
 ## <a name="members"></a>Členové
 
@@ -67,77 +67,77 @@ Datový typ prvků v `array_view` objektu.
 
 |Název|Popis|
 |----------|-----------------|
-|[array_view – konstruktor](#ctor)|Inicializuje novou instanci třídy `array_view` třídy. Neexistuje žádný výchozí konstruktor pro `array<T,N>`. Všechny konstruktory jsou spuštěny pouze na CPU a nelze ho provést na cíli Direct3D.|
-|[~ array_view – destruktor](#ctor)|Odstraní `array_view` objektu.|
+|[array_view – konstruktor](#ctor)|Inicializuje novou instanci třídy `array_view`. Pro `array<T,N>`není k dispozici žádný výchozí konstruktor. Všechny konstruktory jsou omezené tak, aby se spouštěly jenom na procesoru, a nejde je spustit na cíli Direct3D.|
+|[~ array_view destruktor](#ctor)|Odstraní objekt `array_view`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[copy_to](#copy_to)|Zkopíruje obsah `array_view` objektu do určeného cíle voláním `copy(*this, dest)`.|
-|[data](#data)|Vrací ukazatel na nezpracovaná data `array_view`.|
-|[discard_data](#discard_data)|Zahodí aktuální data tohoto zobrazení.|
-|[get_extent](#get_extent)|Vrátí objekt extent objektu array_view.|
-|[get_ref](#get_ref)|Vrátí odkaz na indexovaný prvek.|
-|[get_source_accelerator_view](#get_source_accelerator_view)|Vrátí [accelerator_view](accelerator-view-class.md) kde zdroj dat `array_view` nachází.|
-|[Aktualizace](#refresh)|Upozorní `array_view` objekt, který jemu přidružená paměť byla upravena mimo `array_view` rozhraní. Volání tato metoda vykreslí všechny informace uložené v mezipaměti zastaralá.|
-|[reinterpret_as](#reinterpret_as)|Vrátí jednorozměrné pole, která obsahuje všechny prvky `array_view` objektu.|
-|[section](#section)|Vrátí dílčí část objektu `array_view` nacházející se na zadaném umístění a volitelně, který se zadaným rozsahem.|
-|[synchronize](#synchronize)|Synchronizuje všechny změny provedené `array_view` objekt jeho zdrojovými daty.|
-|[synchronize_async](#synchronize_async)|Asynchronně synchronizuje všechny změny provedené `array_view` objekt jeho zdrojovými daty.|
-|[synchronize_to](#synchronize_to)|Synchronizuje všechny změny provedené `array_view` objekt do zadané [accelerator_view](accelerator-view-class.md).|
-|[synchronize_to_async](#synchronize_to_async)|Asynchronně synchronizuje všechny změny provedené `array_view` objekt do zadané [accelerator_view](accelerator-view-class.md).|
-|[view_as](#view_as)|Vytvoří `array_view` objektu jiného řádu za použití `array_view` dat tohoto objektu.|
+|[copy_to](#copy_to)|Zkopíruje obsah objektu `array_view` do zadaného cíle voláním `copy(*this, dest)`.|
+|[údajů](#data)|Vrátí ukazatel na nezpracovaná data `array_view`.|
+|[discard_data](#discard_data)|Zahodí aktuální data, která jsou základem tohoto zobrazení.|
+|[get_extent](#get_extent)|Vrátí objekt rozsahu objektu array_view.|
+|[get_ref](#get_ref)|Vrátí odkaz na indexovaný element.|
+|[get_source_accelerator_view](#get_source_accelerator_view)|Vrátí [accelerator_view](accelerator-view-class.md) , kde se nachází zdroj dat `array_view`.|
+|[téhle](#refresh)|Upozorní objekt `array_view`, že jeho vázaná paměť byla upravena mimo rozhraní `array_view`. Volání této metody vykreslí všechny zastaralé informace v mezipaměti.|
+|[reinterpret_as](#reinterpret_as)|Vrátí jednorozměrné pole, které obsahuje všechny prvky v objektu `array_view`.|
+|[section](#section)|Vrátí dílčí část objektu `array_view`, která se nachází na zadaném umístění, a volitelně, která má zadaný rozsah.|
+|[synchronize](#synchronize)|Synchronizuje všechny změny provedené v objektu `array_view` zpátky do zdrojových dat.|
+|[synchronize_async](#synchronize_async)|Asynchronně synchronizuje všechny změny provedené v objektu `array_view` zpět do zdrojových dat.|
+|[synchronize_to](#synchronize_to)|Synchronizuje všechny změny provedené v objektu `array_view` do zadaného [accelerator_view](accelerator-view-class.md).|
+|[synchronize_to_async](#synchronize_to_async)|Asynchronně synchronizuje všechny změny provedené v objektu `array_view` do zadaného [accelerator_view](accelerator-view-class.md).|
+|[view_as](#view_as)|Vytvoří objekt `array_view` jiného pořadí pomocí dat tohoto objektu `array_view`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[operator()](#operator_call)|Vrátí hodnotu prvku určeného parametrem nebo parametry.|
-|[– Operátor\[\]](#operator_at)|Vrátí hodnotu prvku určeného parametry.|
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `array_view` do tohoto objektu.|
+|[operator () – operátor](#operator_call)|Vrátí hodnotu prvku, který je určen parametrem nebo parametry.|
+|[operátor\[\]](#operator_at)|Vrátí prvek, který je určen parametry.|
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného objektu `array_view` do tohoto objektu.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
 |Název|Popis|
 |----------|-----------------|
-|[RANK – konstanta](#rank)|Udržuje řád objektu `array_view` objektu.|
+|[Konstanta Rank](#rank)|Ukládá pořadí objektu `array_view`.|
 
 ### <a name="data-members"></a>Datové členy
 
 |Název|Popis|
 |----------|-----------------|
-|[rozsah](#extent)|Získá `extent` objekt, který definuje tvar `array_view` objektu.|
-|[source_accelerator_view](#source_accelerator_view)|Získá [accelerator_view](accelerator-view-class.md) kde zdroj dat `array_view` nachází|
+|[stavební](#extent)|Získá objekt `extent`, který definuje tvar objektu `array_view`.|
+|[source_accelerator_view](#source_accelerator_view)|Získá [accelerator_view](accelerator-view-class.md) , kde se nachází zdroj dat `array_view`.|
 |[value_type](#value_type)|Typ hodnoty `array_view` a vázaného pole.|
 
 ## <a name="remarks"></a>Poznámky
 
-`array_view` Třída představuje pohled data, která je součástí [pole](array-class.md) objektu nebo dílčí část objektu `array` objektu.
+Třída `array_view` představuje zobrazení dat, která jsou obsažena v objektu [Array](array-class.md) nebo v dílčí části objektu `array`.
 
-Můžete přistupovat `array_view` objektu (místně) se nachází zdroj dat nebo na jiném akcelerátoru nebo doméně koherence (vzdáleně). Při přístupu k objektu vzdáleně, jsou zobrazení zkopírovat a uložit do mezipaměti podle potřeby. Kromě účinků automatického ukládání do mezipaměti `array_view` objekty mají podobný profil výkonu `array` objekty. Při přístupu k datům prostřednictvím zobrazení je snížení výkonu.
+K objektu `array_view`, kde jsou umístěna zdrojová data (místně) nebo v jiném akcelerátoru nebo doméně s kosouvislostí (vzdáleně), můžete přistupovat. Při vzdáleném přístupu k objektu se zobrazení zkopírují a ukládají do mezipaměti podle potřeby. S výjimkou účinků automatického ukládání do mezipaměti má `array_view` objektů profil výkonu podobný tomuto: `array` objektů. Při přístupu k datům prostřednictvím zobrazení dojde k menšímu snížení výkonu.
 
-Existují tři scénáře použití vzdáleného přístupu:
+Existují tři scénáře použití vzdáleného používání:
 
-- Zobrazení ukazatele systémové paměti je předáno [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each) volání akcelerátoru a zpřístupněno v akcelerátoru.
+- Zobrazení ukazatele systémové paměti je předáno prostřednictvím [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each) volání akcelerátoru a k němu přistupovalo v akcelerátoru.
 
-- Zobrazení pole umístěného v akcelerátoru je předáno `parallel_for_each` volání jiného akcelerátoru a zpřístupněno.
+- Zobrazení pole umístěného v akcelerátoru je předáno prostřednictvím `parallel_for_each` volání jiného akcelerátoru a je tam k němu přistupované.
 
-- Zobrazení pole umístěného v akcelerátoru je zpřístupněno na CPU.
+- Zobrazení pole umístěného v akcelerátoru je dostupné na CPU.
 
-V některém z těchto scénářích jsou odkazovaná zobrazení zkopírovaná modulem runtime do vzdáleného umístění a pokud autor volání `array_view` objektu, zkopírovány zpět na místní umístění. Modul runtime může optimalizovat proces kopírování změn zpět, může zkopírovat pouze změněné prvky nebo může být také zkopírovat části beze změny. Překrývající se `array_view` objektů v jednom zdroji dat nemají zaručenu referenční integritu ze vzdáleného umístění.
+V některém z těchto scénářů se odkazovaná zobrazení zkopírují do vzdáleného umístění a při změně voláním objektu `array_view` se zkopírují zpátky do místního umístění. Modul runtime může optimalizovat proces kopírování změn zpět, může kopírovat pouze změněné prvky nebo může zkopírovat také nezměněné části. U překrývajících se `array_view` objektů na jednom zdroji dat není zaručeno zachování referenční integrity ve vzdáleném umístění.
 
-Je nutné synchronizovat všechny vícevláknové přístupy ke stejnému zdroji dat.
+Je nutné synchronizovat jakýkoli vícevláknový přístup ke stejnému zdroji dat.
 
-Modul runtime zaručuje následující skutečnosti týkající se ukládání do mezipaměti dat v `array_view` objekty:
+Modul runtime provádí následující záruky týkající se ukládání dat do mezipaměti v `array_view`ch objektech:
 
-- Všechny dobře synchronizované přístupy k `array` objektu a `array_view` sériovým jeho objektu v pořadí programu se stane-před vztah.
+- Všechny dobře synchronizované přístupy k objektu `array` a objektu `array_view` v pořadí programu, které se řídí sériovým průběhem, se zobrazí před vztahem.
 
-- Všechny dobře synchronizované přístupy k překrývajícím `array_view` objekty ve stejném akcelerátoru v rámci jednoho `array` mají zaveden alias přes objekt `array` objektu. Vyvolávají celkový dochází-před vztah, který dodržuje pořadí programu. Neexistuje žádné ukládání do mezipaměti. Pokud `array_view` objekty jsou spuštěny v různých akcelerátorech, není pořadí přístupu definováno, časování.
+- Všechny dobře synchronizované přístupy k překrývání `array_view` objektů na jednom akcelerátoru u jednoho objektu `array` jsou aliasem prostřednictvím objektu `array`. Vyvolávat celkový součet výskytů, než je vztah, který dodržuje pořadí programu. Neexistuje žádné ukládání do mezipaměti. Pokud se `array_view` objekty spouštějí v různých akcelerátorech, pořadí přístupu není definováno a vytvoří se konflikt časování.
 
-Při vytváření `array_view` objektu použití ukazatele do systémové paměti, je nutné změnit zobrazení `array_view` pouze prostřednictvím objektu `array_view` ukazatele. Alternativně lze zavolat `refresh()` na jednom z `array_view` objekty, které jsou připojeny k systémovému ukazateli, je-li příslušná nativní paměť změněna přímo namísto prostřednictvím `array_view` objektu.
+Když vytvoříte objekt `array_view` pomocí ukazatele v systémové paměti, je nutné změnit objekt zobrazení `array_view` pouze prostřednictvím ukazatele `array_view`. Alternativně je nutné volat `refresh()` na jednom z `array_view` objektů, které jsou připojeny k systémovému ukazateli, pokud je základní nativní paměť změněna přímo místo objektu `array_view`.
 
-Obě akce upozorní `array_view` objektu, že se změní příslušné nativní paměti a že všechny kopie umístěné v akcelerátoru jsou již zastaralé. Pokud budete postupovat podle těchto pokynů, jsou stejné jako ty poskytována pro zobrazení polí paralelních dat. zobrazení založená na ukazatel.
+Buď akce upozorní objekt `array_view`, že se změnila základní nativní paměť a že všechny kopie, které jsou umístěny v akcelerátoru, jsou zastaralé. Pokud budete postupovat podle těchto pokynů, jsou zobrazení založená na ukazateli shodná s hodnotami uvedenými pro zobrazení polí paralelních dat.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -149,23 +149,23 @@ Obě akce upozorní `array_view` objektu, že se změní příslušné nativní 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp.h
+**Hlavička:** amp. h
 
-**Namespace:** Souběžnost
+**Obor názvů:** Concurrency
 
-##  <a name="dtor"></a> ~ array_view
+## <a name="dtor"></a>~ array_view
 
-Odstraní `array_view` objektu.
+Odstraní objekt `array_view`.
 
-```
+```cpp
 ~array_view()restrict(amp,cpu);
 ```
 
-##  <a name="ctor"></a> array_view
+## <a name="ctor"></a>array_view
 
-Inicializuje novou instanci třídy `array_view` třídy.
+Inicializuje novou instanci třídy `array_view`.
 
-```
+```cpp
 array_view(
     array<value_type, _Rank>& _Src)restrict(amp,cpu);
 
@@ -328,37 +328,37 @@ array_view(
 ### <a name="parameters"></a>Parametry
 
 *_Arr_type*<br/>
-Typ elementu pole stylu C, ze které pochází data.
+Typ prvku pole ve stylu jazyka C, ze kterého jsou dodána data.
 
 *_Container*<br/>
-Argument šablony, který musí specifikovat lineární kontejner podporující `data()` a `size()` členy.
+Argument šablony, který musí určovat lineární kontejner, který podporuje členy `data()` a `size()`.
 
 *_E0*<br/>
-Nejvýznamnější komponenta rozsahu tohoto oddílu.
+Nejvýznamnější součást rozsahu této části.
 
 *_E1*<br/>
-Další na nejvýznamnější komponenta rozsahu tohoto oddílu.
+Další nejvýznamnější součást rozsahu této části...
 
 *_E2*<br/>
 Nejméně významná komponenta rozsahu tohoto oddílu.
 
 *_Extent*<br/>
-Rozsah v každé dimenzi tohoto objektu `array_view`.
+Rozsah v každé dimenzi tohoto `array_view`.
 
-*Ji_né*<br/>
-Objekt typu `array_view<T,N>` ze kterého je inicializován nový `array_view`.
+*_Other*<br/>
+Objekt typu `array_view<T,N>`, ze kterého se má inicializovat nový `array_view`
 
-*_Velikost*<br/>
-Velikost pole stylu C, ze které pochází data.
+*_Size*<br/>
+Velikost pole ve stylu jazyka C, ze kterého jsou data dodána.
 
 *_Src*<br/>
-Ukazatel na zdrojová data, která budou zkopírovány do nového pole.
+Ukazatel na zdrojová data, která budou zkopírována do nového pole.
 
-##  <a name="copy_to"></a> copy_to –
+## <a name="copy_to"></a>copy_to
 
-Zkopíruje obsah `array_view` do zadaného cílového objektu voláním `copy(*this, dest)`.
+Zkopíruje obsah objektu `array_view` do zadaného cílového objektu voláním `copy(*this, dest)`.
 
-```
+```cpp
 void copy_to(
     array<value_type, _Rank>& _Dest) const;
 
@@ -369,13 +369,13 @@ void copy_to(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Objekt, který chcete zkopírovat do.
+Objekt, do kterého se má kopírovat.
 
-##  <a name="data"></a> Data
+## <a name="data"></a>údajů
 
-Vrací ukazatel na nezpracovaná data `array_view`.
+Vrátí ukazatel na nezpracovaná data `array_view`.
 
-```
+```cpp
 value_type* data() const restrict(amp,
     cpu);
 
@@ -385,41 +385,41 @@ const value_type* data() const restrict(amp,
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nezpracovaná data objektu `array_view`.
+Ukazatel na nezpracovaná data `array_view`.
 
-##  <a name="discard_data"></a> discard_data
+## <a name="discard_data"></a>discard_data
 
-Zahodí aktuální data tohoto zobrazení. Jedná se optimalizaci nápovědu pro modul runtime používá pro zabránění kopírování aktuálního obsahu zobrazení do cílového `accelerator_view` , který je přístupný na a použití náznaku je doporučeno, pokud není existující obsah zapotřebí. Tato metoda je no-op. při použití v kontextu restrict(amp) operaci
+Zahodí aktuální data, která jsou základem tohoto zobrazení. Toto je pomocný parametr pro optimalizaci za běhu, který se používá k tomu, aby nedocházelo k kopírování aktuálního obsahu zobrazení do cílového `accelerator_view`, na kterém je k němu přistupované, a jeho použití se doporučuje, pokud není potřeba existující obsah. Tato metoda je při použití v kontextu restrict (amp) neop.
 
-```
+```cpp
 void discard_data() const restrict(cpu);
 ```
 
-##  <a name="extent"></a> rozsah
+## <a name="extent"></a>stavební
 
-Získá `extent` objekt, který definuje tvar `array_view` objektu.
+Získá objekt `extent`, který definuje tvar objektu `array_view`.
 
-```
+```cpp
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;
 ```
 
-##  <a name="get_extent"></a> get_extent –
+## <a name="get_extent"></a>get_extent
 
-Vrátí [rozsahu](extent-class.md) objektu `array_view` objektu.
+Vrátí objekt [rozsahu](extent-class.md) objektu `array_view`.
 
-```
+```cpp
 Concurrency::extent<_Rank> get_extent() const restrict(cpu, amp);
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`extent` Objektu `array_view` objektu
+Objekt `extent` objektu `array_view`
 
-##  <a name="get_ref"></a> get_ref
+## <a name="get_ref"></a>get_ref
 
-Získejte odkaz na prvek indexovaný pomocí _Index. Na rozdíl od jiných operátorů indexování pro přístup do zobrazení array_view v procesoru tato metoda není implicitně synchronizována s obsahem array_view procesoru. Po přístupu k objektu array_view ve vzdáleném umístění nebo provedení operace kopie zahrnující tento pohled array_view jsou uživatelé za explicitní synchronizaci objektu array_view s Procesorem před voláním této metody. Pokud tak neučiníte způsobí nedefinované chování.
+Získat odkaz na element indexovaný pomocí _Index. Na rozdíl od ostatních operátorů indexování pro přístup k array_view na procesoru, tato metoda implicitně nesynchronizuje obsah této array_view s PROCESORem. Po přístupu k array_view na vzdáleném umístění nebo provedení operace kopírování zahrnující tento array_view se uživatelé před voláním této metody zodpovídají array_view na CPU. V důsledku tohoto selhání dojde k nedefinovanému chování.
 
-```
+```cpp
 value_type& get_ref(
     const index<_Rank>& _Index) const restrict(amp, cpu);
 ```
@@ -431,23 +431,23 @@ Index.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na prvek indexovaný pomocí _Index
+Odkaz na element indexovaný _Index
 
-##  <a name="get_source_accelerator_view"></a> get_source_accelerator_view
+## <a name="get_source_accelerator_view"></a>get_source_accelerator_view
 
-Vrátí accelerator_view, kde se nachází zdroj dat pro array_view. Pokud array_view nemá zdroj dat, toto rozhraní API vyvolá runtime_exception
+Vrátí accelerator_view, kde se nachází zdroj dat array_view. Pokud array_view nemá zdroj dat, toto rozhraní API vyvolá runtime_exception
 
-```
+```cpp
 accelerator_view get_source_accelerator_view() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-##  <a name="operator_call"></a> Operator()
+## <a name="operator_call"></a>operator () – operátor
 
-Vrátí hodnotu prvku určeného parametrem nebo parametry.
+Vrátí hodnotu prvku, který je určen parametrem nebo parametry.
 
-```
+```cpp
 value_type& operator() (
     const index<_Rank>& _Index) const restrict(amp,cpu);
 
@@ -473,10 +473,10 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 Umístění elementu.
 
 *_I0*<br/>
-Index prvního rozměru.
+Index v prvním rozměru.
 
 *_I1*<br/>
-Index druhého rozměru.
+Index ve druhém rozměru.
 
 *_I2*<br/>
 Index třetího rozměru.
@@ -486,13 +486,13 @@ Umístění elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota prvku určeného parametrem nebo parametry.
+Hodnota prvku, který je určen parametrem nebo parametry.
 
-##  <a name="operator_at"></a> Operator [].
+## <a name="operator_at"></a>operator [] – operátor
 
-Vrátí hodnotu prvku určeného parametry.
+Vrátí prvek, který je určen parametry.
 
-```
+```cpp
 typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type operator[] (
     int _I) const restrict(amp,cpu);
 
@@ -510,13 +510,13 @@ Index.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota elementu v indexu, nebo `array_view` projektovaná v nejvýznamnější dimenzi.
+Hodnota elementu v indexu nebo `array_view` prochází z nejvýznamnější dimenze.
 
-##  <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
-Zkopíruje obsah zadaného `array_view` do tohoto objektu.
+Zkopíruje obsah zadaného objektu `array_view` do tohoto objektu.
 
-```
+```cpp
 array_view& operator= (
     const array_view& _Other) restrict(amp,cpu);
 
@@ -526,36 +526,36 @@ array_view& operator= (
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-`array_view` Objektu, který chcete kopírovat.
+*_Other*<br/>
+Objekt `array_view`, ze kterého se má kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na tento `array_view` objektu.
+Odkaz na tento objekt `array_view`.
 
-##  <a name="rank"></a> pořadí
+## <a name="rank"></a>pořadí
 
-Udržuje řád objektu `array_view` objektu.
+Ukládá pořadí objektu `array_view`.
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-##  <a name="refresh"></a> Aktualizace
+## <a name="refresh"></a>téhle
 
-Upozorní `array_view` objekt, který jemu přidružená paměť byla upravena mimo `array_view` rozhraní. Volání tato metoda vykreslí všechny informace uložené v mezipaměti zastaralá.
+Upozorní objekt `array_view`, že jeho vázaná paměť byla upravena mimo rozhraní `array_view`. Volání této metody vykreslí všechny zastaralé informace v mezipaměti.
 
-```
+```cpp
 void refresh() const restrict(cpu);
 ```
 
-## <a name="reinterpret_as"></a> reinterpret_as
+## <a name="reinterpret_as"></a>reinterpret_as
 
-Opětovně interpretuje objekt array_view skrze jednorozměrný prvek array_view, který případně může mít typ jinou hodnotu než zdrojový prvek array_view.
+Opětovně interpretuje array_view pomocí jednorozměrné array_view, který jako možnost může mít jiný typ hodnoty než zdrojový array_view.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <
     typename _Value_type2
 >
@@ -570,17 +570,17 @@ array_view<const _Value_type2, _Rank> reinterpret_as() const restrict(amp,cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Value_type2*<br/>
-Datový typ nového `array_view` objektu.
+Datový typ nového objektu `array_view`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`array_view` Nebo objekt konstanty `array_view` objekt, který je na základě toho `array_view`, s typem elementu převést z `T` k `_Value_type2`, a řádem redukovaným z *N* na hodnotu 1.
+Objekt `array_view` nebo objekt const `array_view`, který je založen na tomto `array_view`, s typem elementu převedeným z `T` na `_Value_type2`a pořadím sníženým z *N* na 1.
 
 ### <a name="remarks"></a>Poznámky
 
-Někdy je vhodné zobrazit vícerozměrné pole jako lineární jednorozměrné pole, která může mít typ jinou hodnotu než zdrojového pole. Lze toho dosáhnout na `array_view` tímto způsobem.
+Někdy je vhodné zobrazit multidimenzionální pole jako lineární jednorozměrné pole, které může mít jiný typ hodnoty než zdrojové pole. Tuto možnost můžete dosáhnout u `array_view` pomocí této metody.
 
-**Upozornění** opětovná interpretace objektu array_view pomocí jiného typu hodnoty je potenciálně nebezpečná operace. Tato funkce by měla být používána opatrně.
+**Upozornění** Opětovná interpretace objektu array_view pomocí jiného typu hodnoty je potenciálně nebezpečná operace. Tato funkce by se měla používat opatrně.
 
 Tady je příklad:
 
@@ -593,11 +593,11 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);
 ```
 
-##  <a name="section"></a> Oddíl
+## <a name="section"></a>section
 
-Vrátí dílčí část objektu `array_view` nacházející se na zadaném umístění a volitelně, který se zadaným rozsahem.
+Vrátí dílčí část objektu `array_view`, která se nachází na zadaném umístění, a volitelně, která má zadaný rozsah.
 
-```
+```cpp
 array_view section(
     const Concurrency::index<_Rank>& _Section_origin,
     const Concurrency::extent<_Rank>& _Section_extent) const restrict(amp,cpu);
@@ -630,55 +630,55 @@ array_view section(
 ### <a name="parameters"></a>Parametry
 
 *_E0*<br/>
-Nejvýznamnější komponenta rozsahu tohoto oddílu.
+Nejvýznamnější součást rozsahu této části.
 
 *_E1*<br/>
-Další na nejvýznamnější komponenta rozsahu tohoto oddílu.
+Další nejvýznamnější součást rozsahu této části...
 
 *_E2*<br/>
 Nejméně významná komponenta rozsahu tohoto oddílu.
 
 *_Ext*<br/>
-[Rozsahu](extent-class.md) určující rozsah oddílu. Počátek je 0.
+Objekt [rozsahu](extent-class.md) , který určuje rozsah oddílu. Počátek je 0.
 
 *_Idx*<br/>
-[Index](index-class.md) určující umístění počátku. Dílčím oddílem je zbytek rozsahu.
+Objekt [indexu](index-class.md) , který určuje umístění původu. Dílčí část je zbývající část rozsahu.
 
 *_I0*<br/>
-Nejvýznamnější komponenta počátku tohoto oddílu.
+Nejvýznamnější součást počátku této části.
 
 *_I1*<br/>
-Další na nejvýznamnější komponenta počátku tohoto oddílu.
+Další důležitou součást počátku této části.
 
 *_I2*<br/>
-Nejméně významná komponenta počátku tohoto oddílu.
+Nejméně významná součást počátku této části.
 
 *_Rank*<br/>
-Řád oddílu.
+Pořadí oddílu
 
 *_Section_extent*<br/>
-[Rozsahu](extent-class.md) určující rozsah oddílu.
+Objekt [rozsahu](extent-class.md) , který určuje rozsah oddílu.
 
 *_Section_origin*<br/>
-[Index](index-class.md) určující umístění počátku.
+Objekt [indexu](index-class.md) , který určuje umístění původu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Dílčí část objektu `array_view` nacházející se na zadaném umístění a volitelně, který se zadaným rozsahem. Když pouze `index` objektu je zadán, obsahuje dílčí část všechny prvky přidruženého rozsahu, které mají indexy větší než indexy prvků v `index` objektu.
+Dílčí část objektu `array_view`, která se nachází na zadaném umístění, a volitelně, která má zadaný rozsah. Je-li zadán pouze objekt `index`, obsahuje dílčí část všechny prvky v přidruženém rozsahu, které mají indexy větší než indexy prvků v objektu `index`.
 
-##  <a name="source_accelerator_view"></a> source_accelerator_view
+## <a name="source_accelerator_view"></a>source_accelerator_view
 
-Získá zdroj accelerator_view, který je přidružený tento pohled array_view.
+Získá zdroj accelerator_view, ke kterému je přidružen tento array_view.
 
-```
+```cpp
 __declspec(property(get= get_source_accelerator_view)) accelerator_view source_accelerator_view;
 ```
 
-##  <a name="synchronize"></a> Synchronizovat
+## <a name="synchronize"></a>Synchronize
 
-Synchronizuje všechny změny provedené `array_view` objekt jeho zdrojovými daty.
+Synchronizuje všechny změny provedené v objektu `array_view` zpátky do zdrojových dat.
 
-```
+```cpp
 void synchronize(access_type _Access_type = access_type_read) const restrict(cpu);
 
 void synchronize() const restrict(cpu);
@@ -687,13 +687,13 @@ void synchronize() const restrict(cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Access_type*<br/>
-Určené [access_type](concurrency-namespace-enums-amp.md#access_type) na cíli [accelerator_view](accelerator-view-class.md). Tento parametr má výchozí hodnotu `access_type_read`.
+Zamýšlená [access_type](concurrency-namespace-enums-amp.md#access_type) na cílovém [accelerator_view](accelerator-view-class.md). Tento parametr má výchozí hodnotu `access_type_read`.
 
-##  <a name="synchronize_async"></a> synchronize_async
+## <a name="synchronize_async"></a>synchronize_async
 
-Asynchronně synchronizuje všechny změny provedené `array_view` objekt jeho zdrojovými daty.
+Asynchronně synchronizuje všechny změny provedené v objektu `array_view` zpět do zdrojových dat.
 
-```
+```cpp
 concurrency::completion_future synchronize_async(access_type _Access_type = access_type_read) const restrict(cpu);
 
 concurrency::completion_future synchronize_async() const restrict(cpu);
@@ -702,17 +702,17 @@ concurrency::completion_future synchronize_async() const restrict(cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Access_type*<br/>
-Určené [access_type](concurrency-namespace-enums-amp.md#access_type) na cíli [accelerator_view](accelerator-view-class.md). Tento parametr má výchozí hodnotu `access_type_read`.
+Zamýšlená [access_type](concurrency-namespace-enums-amp.md#access_type) na cílovém [accelerator_view](accelerator-view-class.md). Tento parametr má výchozí hodnotu `access_type_read`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt future, na který se má čekat na dokončení operace.
+Budoucí, na které se má čekat na dokončení operace.
 
-##  <a name="synchronize_to"></a> synchronize_to
+## <a name="synchronize_to"></a>synchronize_to
 
-Synchronizuje všechny změny provedené pro tento pohled array_view pro zadaný accelerator_view.
+Synchronizuje všechny změny provedené v tomto array_view v zadaném accelerator_view.
 
-```
+```cpp
 void synchronize_to(
     const accelerator_view& _Accl_view,
     access_type _Access_type = access_type_read) const restrict(cpu);
@@ -724,16 +724,16 @@ void synchronize_to(
 ### <a name="parameters"></a>Parametry
 
 *_Accl_view*<br/>
-Cílové zobrazení accelerator_view pro synchronizaci.
+Cílová accelerator_view pro synchronizaci.
 
 *_Access_type*<br/>
-Požadovaný access_type v cílovém accelerator_view. Tento parametr má výchozí hodnotu access_type_read.
+Požadovaná access_type na cílovém accelerator_view. Tento parametr má výchozí hodnotu access_type_read.
 
-##  <a name="synchronize_to_async"></a> synchronize_to_async
+## <a name="synchronize_to_async"></a>synchronize_to_async
 
-Asynchronně synchronizuje všechny změny provedené pro tento pohled array_view pro zadaný accelerator_view.
+Asynchronně synchronizuje všechny změny provedené v tomto array_view zadaného accelerator_view.
 
-```
+```cpp
 concurrency::completion_future synchronize_to_async(
     const accelerator_view& _Accl_view,
     access_type _Access_type = access_type_read) const restrict(cpu);
@@ -745,28 +745,28 @@ concurrency::completion_future synchronize_to_async(
 ### <a name="parameters"></a>Parametry
 
 *_Accl_view*<br/>
-Cílové zobrazení accelerator_view pro synchronizaci.
+Cílová accelerator_view pro synchronizaci.
 
 *_Access_type*<br/>
-Požadovaný access_type v cílovém accelerator_view. Tento parametr má výchozí hodnotu access_type_read.
+Požadovaná access_type na cílovém accelerator_view. Tento parametr má výchozí hodnotu access_type_read.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt future, na který se má čekat na dokončení operace.
+Budoucí, na které se má čekat na dokončení operace.
 
-##  <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Typ hodnoty array_view a vázaného pole.
 
-```
+```cpp
 typedef typenamevalue_type value_type;
 ```
 
-##  <a name="view_as"></a> view_as –
+## <a name="view_as"></a>view_as
 
-Opětovně interpretuje toto pole `array_view` jako `array_view` jiné hodnosti.
+Přeinterpretuje tento `array_view` jako `array_view` jiného pořadí.
 
-```
+```cpp
 template <
     int _New_rank
 >
@@ -783,18 +783,18 @@ array_view<const value_type,_New_rank> view_as(
 ### <a name="parameters"></a>Parametry
 
 *_New_rank*<br/>
-Řád nového `array_view` objektu.
+Pořadí nového objektu `array_view`.
 
 *_View_extent*<br/>
-Měnící tvar `extent`.
+`extent`přetvarování.
 
 *value_type*<br/>
-Datový typ prvků v původním [pole](array-class.md) objektu a ve vráceném `array_view` objektu.
+Datový typ prvků v původním objektu [Array](array-class.md) a vrácený objekt `array_view`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`array_view` , Který je vytvořen.
+Objekt `array_view`, který je vytvořen.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

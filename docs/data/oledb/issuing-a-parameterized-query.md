@@ -4,16 +4,16 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4964d63846e14c0eaf4ff7c7fc80e14237673f69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390656"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127635"
 ---
 # <a name="issuing-a-parameterized-query"></a>Zadání parametrizovaného dotazu
 
-V následujícím příkladu vystavuje jednoduché parametrický dotaz, který načte záznamy s polem stáří (která je větší než 30) z tabulky v databázi Microsoft Access. Pro podporu parametru, musí mít uživatelský záznam další mapy. Následující kód v projektu ATL, použije `CCommand` místo na třídě `CTable` třída používaná v předchozím příkladu [procházení jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md).
+Následující příklad vydá jednoduchý parametrizovaný dotaz, který načte záznamy s polem stáří (které je větší než 30) z tabulky v databázi aplikace Microsoft Access. Aby bylo možné parametr podporovat, musí mít záznam uživatele další mapu. Následující kód v projektu ATL používá třídu `CCommand` namísto `CTable` třídy použité v předchozím příkladu, [přecházení do jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md).
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-Uživatelský záznam `CArtists`, vypadá podobně jako v tomto příkladu:
+Uživatelský záznam `CArtists`vypadá jako v tomto příkladu:
 
 ```cpp
 class CArtists
@@ -77,6 +77,6 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

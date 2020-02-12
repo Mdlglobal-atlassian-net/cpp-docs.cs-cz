@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 272ac3685539eb03f773c8bc60d5938ed6c53876
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351560"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126510"
 ---
 # <a name="norm-class"></a>norm – třída
 
-Představují normu číslo. Každý prvek je plovoucí bodu číslo v rozsahu [-1.0f, 1.0f].
+Představuje číslo normy. Každý prvek je číslo s plovoucí desetinnou čárkou v rozsahu [-1.0 f, 1,0 f].
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class norm;
 ```
 
@@ -29,21 +29,21 @@ class norm;
 
 |Název|Popis|
 |----------|-----------------|
-|[Norm – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor. Inicializujte na 0,0 f.|
+|[Norm – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor Inicializovat na 0,0 f.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
 |norm::operator-||
-|norm::operator--||
-|Norm::Operator float|Operátor převodu. Převést norm číslo plovoucí desetinnou čárkou.|
-|Norm::Operator * =||
-|Norm::Operator / =||
-|Norm::Operator ++||
-|Norm::Operator +=||
-|Norm::Operator =||
-|Norm::Operator-=||
+|Norm:: operator--||
+|Norm:: operator float|Operátor převodu Převede normu číslo na hodnotu s plovoucí desetinnou čárkou.|
+|Norm:: operator * =||
+|Norm:: operator/=||
+|Norm:: operator + +||
+|Norm:: operator + =||
+|Norm:: operator =||
+|Norm:: operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -51,15 +51,15 @@ class norm;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> Norm –
+## <a name="ctor"></a>Norm
 
-Výchozí konstruktor. Inicializujte na 0,0 f.
+Výchozí konstruktor Inicializovat na 0,0 f.
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);
@@ -92,11 +92,11 @@ norm(
 ### <a name="parameters"></a>Parametry
 
 *_V*<br/>
-Hodnoty použité k inicializaci.
+Hodnota, která se má použít k inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

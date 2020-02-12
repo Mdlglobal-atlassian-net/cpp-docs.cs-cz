@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4fb43a4223cad8cc63049d2a0f8345e48b90f17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345510"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139964"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy – struktura
 
-Abstrakce vlákna exekuce. Pokud má váš Plánovač udělit uživatelským režimem plánovatelná vlákna (UMS) nastavte hodnotu pro element zásad plánovače `SchedulerKind` k `UmsThreadDefault`a implementovat `IUMSScheduler` rozhraní. UMS vlákna jsou pouze podporované v 64bitových systémech s verzí Windows 7 a vyšší.
+Abstrakce pro vlákno provádění. Pokud chcete, aby váš Plánovač měl udělená vlákna v uživatelském režimu plánovatelná (UMS), nastavte hodnotu pro element Scheduler Policy `SchedulerKind` na `UmsThreadDefault`a implementujte rozhraní `IUMSScheduler`. UMS vlákna jsou podporována pouze v 64 operačních systémech s verzí Windows 7 a vyšší.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 struct IUMSThreadProxy : public IThreadProxy;
 ```
 
@@ -35,11 +35,11 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 |Název|Popis|
 |----------|-----------------|
-|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Volá se, aby bylo možné zadat důležité oblasti. Když uvnitř důležité oblasti, nebudou sledovat Plánovač asynchronní blokující operace, ke kterým dochází při oblast. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vlákna, volá asynchronní procedury jádra (APCs) a tak dále, UMS vlákna.|
-|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Volá se, aby bylo možné zadat hyper důležité oblasti. Když uvnitř hyper důležité oblasti, nebude Plánovač sledovat všechny blokující operace, ke kterým dochází při oblast. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku vlákna pozastavení, volání asynchronní procedury jádra (APCs), který blok, stránkování a tak dále, pro UMS vlákna.|
-|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Volá se, aby bylo možné ukončit důležité oblasti.|
-|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Volá se, aby bylo možné ukončit hyper důležité oblasti.|
-|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Vrátí druhu kritických proxy vlákna je v rámci oblasti. Protože hyper důležité oblasti jsou nadmnožina o důležitých oblastech, pokud je zadán kód důležité oblasti a pak hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.|
+|[IUMSThreadProxy:: Entercriticalregion –](#entercriticalregion)|Volá se, aby se zadala kritická oblast. V případě nepostradatelné oblasti Plánovač nebude sledovat asynchronní blokující operace, ke kterým dojde během dané oblasti. To znamená, že Plánovač nebude znovu zadán pro chyby stránky, pozastavení vlákna, volání asynchronních procedur v jádru (APCs) a tak dále pro vlákno UMS.|
+|[IUMSThreadProxy:: Enterhypercriticalregion –](#enterhypercriticalregion)|Volá se, aby se zadal region kritická pro Hyper-v. V případě kritické oblasti technologie Hyper nebude Plánovač sledovat žádné blokující operace, ke kterým dojde během dané oblasti. To znamená, že Plánovač nebude znovu zadán pro blokující volání funkcí, uzamknout pokusy o získání, které blok, chyby stránkování, pozastavení vlákna, volání asynchronní procedury jádra (APCs) a tak dále, pro vlákno UMS.|
+|[IUMSThreadProxy:: Exitcriticalregion –](#exitcriticalregion)|Volá se, aby se ukončila kritická oblast.|
+|[IUMSThreadProxy:: Exithypercriticalregion –](#exithypercriticalregion)|Volá se, aby se ukončila oblast kritická pro Hyper-v.|
+|[IUMSThreadProxy:: Getcriticalregiontype –](#getcriticalregiontype)|Vrátí typ kritické oblasti, v rámci které je umístěn proxy vlákna. Vzhledem k tomu, že kritické oblasti technologie Hyper-v jsou nadmnožině kritických oblastí, pokud kód zadal kritickou oblast a pak je kritická oblast technologie Hyper-v, `InsideHyperCriticalRegion` se vrátí.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -49,75 +49,75 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm.h
+**Záhlaví:** concrtrm. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="entercriticalregion"></a>  Iumsthreadproxy::entercriticalregion – metoda
+## <a name="entercriticalregion"></a>IUMSThreadProxy:: Entercriticalregion – – metoda
 
-Volá se, aby bylo možné zadat důležité oblasti. Když uvnitř důležité oblasti, nebudou sledovat Plánovač asynchronní blokující operace, ke kterým dochází při oblast. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vlákna, volá asynchronní procedury jádra (APCs) a tak dále, UMS vlákna.
+Volá se, aby se zadala kritická oblast. V případě nepostradatelné oblasti Plánovač nebude sledovat asynchronní blokující operace, ke kterým dojde během dané oblasti. To znamená, že Plánovač nebude znovu zadán pro chyby stránky, pozastavení vlákna, volání asynchronních procedur v jádru (APCs) a tak dále pro vlákno UMS.
 
-```
+```cpp
 virtual int EnterCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nová hloubka důležité oblasti. Důležité oblasti jsou vícenásobné.
+Nová hloubka kritické oblasti. Kritické oblasti se připravují.
 
-##  <a name="enterhypercriticalregion"></a>  Iumsthreadproxy::enterhypercriticalregion – metoda
+## <a name="enterhypercriticalregion"></a>IUMSThreadProxy:: Enterhypercriticalregion – – metoda
 
-Volá se, aby bylo možné zadat hyper důležité oblasti. Když uvnitř hyper důležité oblasti, nebude Plánovač sledovat všechny blokující operace, ke kterým dochází při oblast. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku vlákna pozastavení, volání asynchronní procedury jádra (APCs), který blok, stránkování a tak dále, pro UMS vlákna.
+Volá se, aby se zadal region kritická pro Hyper-v. V případě kritické oblasti technologie Hyper nebude Plánovač sledovat žádné blokující operace, ke kterým dojde během dané oblasti. To znamená, že Plánovač nebude znovu zadán pro blokující volání funkcí, uzamknout pokusy o získání, které blok, chyby stránkování, pozastavení vlákna, volání asynchronní procedury jádra (APCs) a tak dále, pro vlákno UMS.
 
-```
+```cpp
 virtual int EnterHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nová hloubka hyper důležité oblasti. Hyper důležité oblasti jsou vícenásobné.
+Nová Hloubka oblasti kritické pro technologii Hyper-v. V oblastech kritických pro technologii Hyper se přecházejí.
 
 ### <a name="remarks"></a>Poznámky
 
-Plánovači musí být opatrní neobyčejně metody, které volá, a co uzamkne ji proti získá v těchto oblastech. Pokud na zámek, který se nachází použito cokoli, co scheduler je zodpovědná za plánování bloky kódu v těchto oblastech, může následovat zablokování.
+Plánovač musí být neobyčejně uvážlivě o tom, jaké metody volá a co v těchto oblastech získává. Pokud se kód v takové oblasti zablokuje na zámek, který je držený něco, co Plánovač zodpovídá za plánování, může se zablokování následovat.
 
-##  <a name="exitcriticalregion"></a>  Iumsthreadproxy::exitcriticalregion – metoda
+## <a name="exitcriticalregion"></a>IUMSThreadProxy:: Exitcriticalregion – – metoda
 
-Volá se, aby bylo možné ukončit důležité oblasti.
+Volá se, aby se ukončila kritická oblast.
 
-```
+```cpp
 virtual int ExitCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nová hloubka důležité oblasti. Důležité oblasti jsou vícenásobné.
+Nová hloubka kritické oblasti. Kritické oblasti se připravují.
 
-##  <a name="exithypercriticalregion"></a>  Iumsthreadproxy::exithypercriticalregion – metoda
+## <a name="exithypercriticalregion"></a>IUMSThreadProxy:: Exithypercriticalregion – – metoda
 
-Volá se, aby bylo možné ukončit hyper důležité oblasti.
+Volá se, aby se ukončila oblast kritická pro Hyper-v.
 
-```
+```cpp
 virtual int ExitHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nová hloubka hyper důležité oblasti. Hyper důležité oblasti jsou vícenásobné.
+Nová Hloubka oblasti kritické pro technologii Hyper-v. V oblastech kritických pro technologii Hyper se přecházejí.
 
-##  <a name="getcriticalregiontype"></a>  Iumsthreadproxy::getcriticalregiontype – metoda
+## <a name="getcriticalregiontype"></a>IUMSThreadProxy:: Getcriticalregiontype – – metoda
 
-Vrátí druhu kritických proxy vlákna je v rámci oblasti. Protože hyper důležité oblasti jsou nadmnožina o důležitých oblastech, pokud je zadán kód důležité oblasti a pak hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.
+Vrátí typ kritické oblasti, v rámci které je umístěn proxy vlákna. Vzhledem k tomu, že kritické oblasti technologie Hyper-v jsou nadmnožině kritických oblastí, pokud kód zadal kritickou oblast a pak je kritická oblast technologie Hyper-v, `InsideHyperCriticalRegion` se vrátí.
 
-```
+```cpp
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Typ důležité oblasti proxy vlákna je v rámci.
+Typ kritické oblasti, v rámci které je umístěn proxy vlákna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [IUMSScheduler – struktura](iumsscheduler-structure.md)

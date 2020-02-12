@@ -72,26 +72,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc35562466ee33585be03739695d24da043415c2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180235"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127813"
 ---
-# <a name="int3-class"></a>int_3 – třída
+# <a name="int_3-class"></a>int_3 – třída
 
 Představuje krátký vektor tří celých čísel.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class int_3;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -101,7 +101,7 @@ class int_3;
 
 |Název|Popis|
 |----------|-----------------|
-|[int_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[int_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -112,7 +112,7 @@ class int_3;
 |int_3::get_xyz||
 |int_3::get_xz||
 |int_3::get_xzy||
-|int_3::get_y||
+|int_3:: get_y||
 |int_3::get_yx||
 |int_3::get_yxz||
 |int_3::get_yz||
@@ -153,13 +153,13 @@ class int_3;
 |int_3::operator%=||
 |int_3::operator&=||
 |int_3::operator*=||
-|int_3::Operator / =||
+|int_3:: operator/=||
 |int_3::operator^=||
 |int_3::operator&#124;=||
 |int_3::operator~||
 |int_3::operator++||
 |int_3::operator+=||
-|int_3::operator<\<=||
+|int_3:: operator <\<=||
 |int_3::operator=||
 |int_3::operator-=||
 |int_3::operator>>=||
@@ -179,22 +179,22 @@ class int_3;
 |int_3::bgr||
 |int_3::br||
 |int_3::brg||
-|int_3::g||
-|int_3::GB||
+|int_3:: g||
+|int_3:: GB||
 |int_3::gbr||
-|int_3::gr||
+|int_3:: gr||
 |int_3::grb||
 |int_3::r||
 |int_3::rb||
 |int_3::rbg||
 |int_3::rg||
-|int_3::rgb||
+|int_3:: RGB||
 |int_3::x||
 |int_3::xy||
 |int_3::xyz||
 |int_3::xz||
 |int_3::xzy||
-|int_3::y||
+|int_3:: y||
 |int_3::yx||
 |int_3::yxz||
 |int_3::yz||
@@ -211,17 +211,17 @@ class int_3;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-## <a name="ctor"></a> int_3
+## <a name="ctor"></a>int_3
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 int_3() restrict(amp,cpu);
 int_3(
    int _V0,
@@ -254,28 +254,28 @@ explicit inline int_3(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V2*<br/>
-Hodnota inicializace elementu 2.
+Hodnota pro inicializaci elementu 2.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-## <a name="size"></a> Velikost
+## <a name="size"></a>hodnota
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

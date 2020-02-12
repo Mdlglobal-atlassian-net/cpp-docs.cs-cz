@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 46af59708ef3f0d91883c52502bce4d09676ca77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8dae7b76ea2efc852486a19f5d298cda477012
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181941"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126718"
 ---
 # <a name="extent-class-c-amp"></a>extent – třída (C++ AMP)
 
-Představuje vektor *N* celočíselných hodnot určujících hranice *N*-rozměrného prostoru s počátkem 0. Hodnoty ve vektoru jsou seřazeny od nejvýznamnější po nejméně významnou.
+Představuje vektor *n* celočíselných hodnot, které určují meze *n*-dimenzionálního prostoru, který má počátek 0. Hodnoty ve vektoru jsou seřazené od nejvýznamnějších po nejméně významné.
 
-### <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <int _Rank>
 class extent;
 ```
@@ -33,13 +33,13 @@ class extent;
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Řád objektu `extent` objektu.
+Pořadí objektu `extent`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp.h
+**Hlavička:** amp. h
 
-**Namespace:** Souběžnost
+**Obor názvů:** Concurrency
 
 ## <a name="members"></a>Členové
 
@@ -47,68 +47,68 @@ class extent;
 
 |Název|Popis|
 |----------|-----------------|
-|[v rozsahu konstruktoru](#ctor)|Inicializuje novou instanci třídy `extent` třídy.|
+|[Rozsah – konstruktor](#ctor)|Inicializuje novou instanci třídy `extent`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[Obsahuje](#contains)|Ověřuje, že zadaný `extent` objektu má určený řád.|
-|[Velikost](#size)|Vrátí celkovou lineární velikost rozsahu (v jednotkách prvků).|
-|[dlaždice](#tile)|Vytvoří `tiled_extent` objekt s rozsahy bloku dle zadaných rozměrů.|
+|[zobrazí](#contains)|Ověřuje, že zadaný objekt `extent` má zadané pořadí.|
+|[hodnota](#size)|Vrátí celkovou lineární velikost rozsahu (v jednotkách prvků).|
+|[podobě](#tile)|Vytvoří objekt `tiled_extent` s rozsahy dlaždic, které jsou zadané v zadaných dimenzích.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[Operator-](#operator_min)|Vrátí nový `extent` objekt, který je vytvořen tak, že se `index` prvků z odpovídajících `extent` elementy.|
-|[operator--](#operator_min_min)|Sníží každý prvek `extent` objektu.|
-|[operator%=](#operator_mod_eq)|Vypočítá modulo (zbytek) každého prvku `extent` objektu při dělení podle čísla.|
-|[Operator * =](#operator_star_eq)|Vynásobí každý prvek `extent` číslem.|
-|[/ = – operátor](#operator_min_eq)|Vydělí každý prvek `extent` číslem.|
-|[Extent::Operator\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
-|[Operator +](#operator_add)|Vrátí nový `extent` objekt, který je vytvořený přidáním odpovídajících `index` a `extent` elementy.|
-|[Operator ++](#operator_add_add)|Zvýší všechny prvky objektu `extent` objektu.|
-|[operator+=](#operator_add_eq)|Přičte zadané číslo ke každému prvku objektu `extent` objektu.|
-|[operátor =](#operator_eq)|Zkopíruje obsah jiného `extent` do tohoto objektu.|
-|[operator-=](#operator_min_eq)|Odečte zadané číslo od každého prvku objektu `extent` objektu.|
+|[podnikatel](#operator_min)|Vrátí nový objekt `extent`, který je vytvořen odečtením `index` prvků z odpovídajících prvků `extent`.|
+|[--– operátor](#operator_min_min)|Sníží všechny prvky objektu `extent`.|
+|[% = – operátor](#operator_mod_eq)|Vypočítá zbytek (zbytek) každého prvku v objektu `extent`, pokud je tento prvek dělen číslem.|
+|[operator * = – operátor](#operator_star_eq)|Vynásobí každý prvek `extent` objektu číslem.|
+|[operator/= – operátor](#operator_min_eq)|Vydělí každý prvek `extent` objektu číslem.|
+|[Rozsah:: operator\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
+|[operator + – operátor](#operator_add)|Vrátí nový objekt `extent`, který je vytvořen přidáním odpovídajícího prvku `index` a `extent`.|
+|[operator + + – operátor](#operator_add_add)|Zvýší všechny prvky objektu `extent`.|
+|[operator + = – operátor](#operator_add_eq)|Přidá zadané číslo do každého prvku `extent` objektu.|
+|[operátor =](#operator_eq)|Zkopíruje obsah jiného objektu `extent` do tohoto typu.|
+|[-= – operátor](#operator_min_eq)|Odečte zadané číslo od každého prvku `extent` objektu.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
 |Název|Popis|
 |----------|-----------------|
-|[RANK – konstanta](#rank_constant)|Zjistí řád objektu `extent` objektu.|
+|[Konstanta Rank](#rank_constant)|Získá pořadí objektu `extent`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
 `extent`
 
-## <a name="contains"></a> Obsahuje
+## <a name="contains"></a>zobrazí
 
-Určuje, zda zadaný [index](index-class.md) hodnota je obsažen v objektu "rozsah".
+Určuje, zda je zadaná hodnota [indexu](index-class.md) obsažena v objektu "rozsah".
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Index*<br/>
-`index` Hodnotu k testování.
+Hodnota `index` k otestování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** Pokud zadaný *index* hodnota je obsažen v `extent` objektu; v opačném případě **false**.
+**true** , pokud je zadaná hodnota *indexu* obsažena v objektu `extent`; v opačném případě **false**.
 
-##  <a name="ctor"></a> rozsah
+## <a name="ctor"></a>stavební
 
 Inicializuje novou instanci třídy "rozsah".
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent() restrict(amp,cpu);
 extent(const extent<_Rank>& _Other) restrict(amp,cpu);
 explicit extent(int _I) restrict(amp,cpu);
@@ -119,8 +119,8 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pole*<br/>
-Pole `_Rank` celých čísel, která se používá k vytvoření nového `extent` objektu.
+*_Array*<br/>
+Pole `_Rank` celé číslo, které se používá k vytvoření nového objektu `extent`.
 
 *_I*<br/>
 Délka rozsahu.
@@ -129,99 +129,99 @@ Délka rozsahu.
 Délka nejvýznamnějšího rozměru.
 
 *_I1*<br/>
-Délka další na nejvýznamnější dimenze.
+Délka dalšího významného rozměru.
 
 *_I2*<br/>
-Velikost nejméně významného rozměru.
+Délka nejméně významného rozměru.
 
-*Ji_né*<br/>
-`extent` Objekt, kterému nové `extent` objektu je založen.
+*_Other*<br/>
+Objekt `extent`, na kterém je založen nový objekt `extent`.
 
 ## <a name="remarks"></a>Poznámky
 
-Konstruktor bez parametru inicializuje `extent` objekt, který stupně tři.
+Výchozí konstruktor inicializuje objekt `extent`, který má pořadí tří.
 
-Pokud pole se používá ke konstrukci `extent` objekt, musí délka pole odpovídat stupni objektu `extent` objektu.
+Pokud je pole použito k vytvoření objektu `extent`, délka pole musí odpovídat rozměru objektu `extent`.
 
-##  <a name="operator_mod_eq"></a> Operator % =
+## <a name="operator_mod_eq"></a>% = – operátor
 
-Vypočítá modulo (zbytek) každého prvku v rozsahu při dělení podle čísla.
+Vypočítá zbytek (zbytek) každého prvku v ' rozsahu ', pokud je tento prvek dělen číslem.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Číslo, které chcete najít zbytek z.
+Číslo, ve kterém se mají najít zbytky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`extent` Objektu.
+Objekt `extent`
 
-##  <a name="operator_star_eq"></a> Operator * =
+## <a name="operator_star_eq"></a>operator * = – operátor
 
 Vynásobí každý prvek v objektu "rozsah" zadaným číslem.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Násobené číslo.
+Číslo, které se má vynásobit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`extent` Objektu.
+Objekt `extent`
 
-## <a name="operator_add"></a> Operator +
+## <a name="operator_add"></a>operator + – operátor
 
-Vrátí nový `extent` objekt vytvořený přidáním odpovídajících `index` a `extent` elementy.
+Vrátí nový objekt `extent` vytvořený přidáním odpovídajícího prvku `index` a `extent`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-`index` Objekt, který obsahuje prvky pro přidání.
+Objekt `index`, který obsahuje prvky, které mají být přidány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nové `extent` objektu.
+Nový objekt `extent`
 
-##  <a name="operator_add_add"></a> Operator ++
+## <a name="operator_add_add"></a>operator + + – operátor
 
-Zvýší hodnotu všech prvků objektu "rozsah".
+Zvýší všechny prvky objektu "rozsah".
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank>& operator++() restrict(amp,cpu);
 extent<_Rank> operator++(int)restrict(amp,cpu);
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro prefixový operátor `extent` objektu (`*this`). Pro sufixový operátor nový `extent` objektu.
+Pro operátor prefix, objekt `extent` (`*this`). Pro operátor přípona nový objekt `extent`.
 
-##  <a name="operator_add_eq"></a> += – operátor
+## <a name="operator_add_eq"></a>operator + = – operátor
 
 Přičte zadané číslo ke každému prvku objektu "rozsah".
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank>& operator+=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
@@ -230,72 +230,72 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Číslo, index nebo rozsah má přidat.
+Číslo, index nebo rozsah, který chcete přidat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledná `extent` objektu.
+Výsledný objekt `extent`.
 
-##  <a name="operator_min"></a> Operator-
+## <a name="operator_min"></a>podnikatel
 
-Vytvoří novou `extent` objekt odečtením každého prvku v zadaném `index` objekt z odpovídajícího prvku v tomto `extent` objektu.
+Vytvoří nový objekt `extent` odečtením každého elementu v zadaném `index` objektu z odpovídajícího prvku v tomto objektu `extent`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-`index` Objekt, který obsahuje prvky pro odečtení.
+Objekt `index`, který obsahuje prvky, které mají být odečteny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nové `extent` objektu.
+Nový objekt `extent`
 
-##  <a name="operator_min_min"></a> Operator--
+## <a name="operator_min_min"></a>--– operátor
 
-Sníží každý prvek v objektu "rozsah".
+Sníží všechny prvky v objektu "rozsah".
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank>& operator--() restrict(amp,cpu);
 extent<_Rank> operator--(int)restrict(amp,cpu);
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro prefixový operátor `extent` objektu (`*this`). Pro sufixový operátor nový `extent` objektu.
+Pro operátor prefix, objekt `extent` (`*this`). Pro operátor přípona nový objekt `extent`.
 
-##  <a name="operator_div_eq"></a> / = – operátor
+## <a name="operator_div_eq"></a>operator/= – operátor
 
 Vydělí každý prvek v objektu "rozsah" zadaným číslem.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Číslo, které má dělit.
+Číslo, kterým se má dělit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`extent` Objektu.
+Objekt `extent`
 
-##  <a name="operator_min_eq"></a> operátor-=
+## <a name="operator_min_eq"></a>-= – operátor
 
 Odečte zadané číslo od každého prvku objektu "rozsah".
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank>& operator-=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
@@ -304,38 +304,38 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Odečítané číslo.
+Číslo, které má být odečteno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledná `extent` objektu.
+Výsledný objekt `extent`.
 
-##  <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
 Zkopíruje obsah jiného objektu "rozsah" do tohoto objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-`extent` Objektu, který chcete kopírovat.
+*_Other*<br/>
+Objekt `extent`, ze kterého se má kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na tento `extent` objektu.
+Odkaz na tento objekt `extent`.
 
-##  <a name="operator_at"></a> Extent::Operator \[\]
+## <a name="operator_at"></a>Rozsah:: operator \[\]
 
 Vrátí prvek, který je v zadaném indexu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 int operator[](unsigned int _Index) const restrict(amp,cpu);
 int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```
@@ -343,37 +343,37 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Index*<br/>
-Celé číslo od 0 do řádu mínus 1.
+Celé číslo od 0 do pořadí minus 1.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek, který je v zadaném indexu.
+Prvek na zadaném indexu.
 
-##  <a name="rank_constant"></a> pořadí
+## <a name="rank_constant"></a>pořadí
 
-Udržuje řád objektu "rozsah".
+Ukládá pořadí objektu "rozsah".
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-##  <a name="size"></a> Velikost
+## <a name="size"></a>hodnota
 
-Vrátí celkovou lineární velikost `extent` objekt (v jednotkách prvků).
+Vrátí celkovou lineární velikost objektu `extent` (v jednotkách prvků).
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 unsigned int size() const restrict(amp,cpu);
 ```
 
-## <a name="tile"></a> dlaždice
+## <a name="tile"></a>podobě
 
-Vytvoří objekt tiled_extent se specifikovanou dimenzí dlaždice.
+Vytvoří objekt tiled_extent se zadanými Rozměry dlaždice.
 
-```
+```cpp
 template <int _Dim0>
 tiled_extent<_Dim0> tile() const ;
 
@@ -387,12 +387,12 @@ tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ### <a name="parameters"></a>Parametry
 
 *_Dim0*<br/>
-Nejvýznamnější komponenta dlaždic.
+Nejvýznamnější komponenta v rozsahu vedle sebe.
 *_Dim1*<br/>
-Další na nejvýznamnější komponenta dlaždic.
+Další nejvýznamnější součást v rozsahu.
 *_Dim2*<br/>
-Nejméně významná komponenta dlaždic.
+Nejméně významná komponenta rozsahu, který je v dlaždicích.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512810"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141333"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porovnání modelu Concurrency Runtime s jinými modely souběžného zpracování
 
@@ -19,7 +19,7 @@ Pokud aktuálně používáte jiný programovací model, jako je například fon
 
 Můžete využít výhody funkcí a produktivity Concurrency Runtime k doplnění existující aplikace, která používá jiný model souběžnosti. Concurrency Runtime nemůže zaručit vyrovnávání zatížení, pokud více plánovačů úloh soutěží o stejné výpočetní prostředky. Pokud se ale úlohy nepřekrývají, je tento efekt minimální.
 
-##  <a name="top"></a>Řezů
+## <a name="top"></a>Řezů
 
 - [Porovnání nepřerušeného plánování s kooperativním plánováním](#models)
 
@@ -27,13 +27,13 @@ Můžete využít výhody funkcí a produktivity Concurrency Runtime k doplněn�
 
 - [Porovnání Concurrency Runtime s OpenMP](#openmp)
 
-##  <a name="models"></a>Porovnání nepřerušeného plánování s kooperativním plánováním
+## <a name="models"></a>Porovnání nepřerušeného plánování s kooperativním plánováním
 
 Modely bezpostupné modelu a plánování spolupráce jsou dva běžné způsoby, jak povolit více úloh sdílení výpočetních prostředků, například procesorů nebo hardwarových vláken.
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Preventivní a kooperativní plánování
 
-Beznabídkovým plánováním je mechanismus založený na prioritách, který poskytuje každému úkolu výhradní přístup k výpočetnímu prostředku za dané časové období a pak přepne na jiný úkol. Při práci s více úlohami, jako je Windows, se běžně používá přerušení plánování. *Kooperativní plánování* je mechanismus, který poskytuje všem úlohám výhradní přístup k výpočetnímu prostředku, dokud úloha neskončí nebo dokud úloha nevrátí svůj přístup k prostředku. Concurrency Runtime používá kooperativní plánování spolu s nespojitým plánovačem operačního systému za účelem dosažení maximálního využití prostředků zpracování.
+Beznabídkovým *plánováním* je mechanismus založený na prioritách, který poskytuje každému úkolu výhradní přístup k výpočetnímu prostředku za dané časové období a pak přepne na jiný úkol. Při práci s více úlohami, jako je Windows, se běžně používá přerušení plánování. *Kooperativní plánování* je mechanismus, který poskytuje všem úlohám výhradní přístup k výpočetnímu prostředku, dokud úloha neskončí nebo dokud úloha nevrátí svůj přístup k prostředku. Concurrency Runtime používá kooperativní plánování spolu s nespojitým plánovačem operačního systému za účelem dosažení maximálního využití prostředků zpracování.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Rozdíly mezi bezoperativními a kooperativními plánovači
 
@@ -51,7 +51,7 @@ Plánování spolupráce neřeší všechny problémy s plánováním. Napříkl
 
 [[Nahoře](#top)]
 
-##  <a name="winapi"></a>Porovnání Concurrency Runtime s rozhraním API systému Windows
+## <a name="winapi"></a>Porovnání Concurrency Runtime s rozhraním API systému Windows
 
 Programovací rozhraní aplikace systému Microsoft Windows, které se obvykle označuje jako rozhraní API systému Windows (dříve označované jako Win32), poskytuje programovací model, který ve vašich aplikacích povoluje souběžnost. Concurrency Runtime vytváří rozhraní Windows API, které poskytuje další programovací modely, které nejsou k dispozici v podkladovém operačním systému.
 
@@ -77,11 +77,11 @@ V systému Windows XP a Windows Vista se aplikace, které používají Concurren
 
 V systémech Windows 7 a Windows Server 2008 R2 podporuje operační systém i souběžnost a škálovatelnost. Tyto operační systémy například podporují počítače, které mají více než 64 hardwarových vláken. Aby bylo možné využít tyto nové funkce, je nutné upravit existující aplikaci, která používá rozhraní API systému Windows. Aplikace používající Concurrency Runtime ale tyto funkce automaticky používá a nevyžaduje úpravy.
 
-[base.user-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
+[základní. uživatel – mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
 [[Nahoře](#top)]
 
-##  <a name="openmp"></a>Porovnání Concurrency Runtime s OpenMP
+## <a name="openmp"></a>Porovnání Concurrency Runtime s OpenMP
 
 Concurrency Runtime povoluje celou řadu programovacích modelů. Tyto modely mohou překrývat nebo doplnit modely jiných knihoven. Tato část porovnává Concurrency Runtime se [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).
 
@@ -95,7 +95,7 @@ Další informace o tom, jak Concurrency Runtime porovnává se OpenMP a jak mig
 
 [[Nahoře](#top)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Přehled](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

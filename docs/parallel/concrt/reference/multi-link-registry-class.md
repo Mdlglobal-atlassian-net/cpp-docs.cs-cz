@@ -14,28 +14,28 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22df5ee65d0219a46065044385dca46aac297a3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394452"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142375"
 ---
-# <a name="multilinkregistry-class"></a>multi_link_registry – třída
+# <a name="multi_link_registry-class"></a>multi_link_registry – třída
 
-`multi_link_registry` Je objekt `network_link_registry` , který spravuje více zdrojových bloků nebo více cílových bloků.
+Objekt `multi_link_registry` je `network_link_registry`, který spravuje více zdrojových bloků nebo více cílových bloků.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class _Block>
 class multi_link_registry : public network_link_registry<_Block>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_Block*<br/>
-Zadejte bloku dat ukládají do `multi_link_registry` objektu.
+Datový typ Block uložený v objektu `multi_link_registry`.
 
 ## <a name="members"></a>Členové
 
@@ -43,19 +43,19 @@ Zadejte bloku dat ukládají do `multi_link_registry` objektu.
 
 |Název|Popis|
 |----------|-----------------|
-|[multi_link_registry](#ctor)|Vytvoří `multi_link_registry` objektu.|
-|[~multi_link_registry Destructor](#dtor)|Odstraní `multi_link_registry` objektu.|
+|[multi_link_registry](#ctor)|Vytvoří objekt `multi_link_registry`.|
+|[~ multi_link_registry destruktor](#dtor)|Odstraní objekt `multi_link_registry`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[add](#add)|Přidá odkaz `multi_link_registry` objektu. (Přepíše [network_link_registry::Add –](network-link-registry-class.md#add).)|
-|[začít](#begin)|Vrátí iterátor na první prvek `multi_link_registry` objektu. (Overrides [network_link_registry::begin](network-link-registry-class.md#begin).)|
-|[Obsahuje](#contains)|Hledání `multi_link_registry` objekt pro zadaný blok. (Přepíše [network_link_registry::contains –](network-link-registry-class.md#contains).)|
-|[Počet](#count)|Vrátí počet položek v `multi_link_registry` objektu. (Přepíše [network_link_registry::Count –](network-link-registry-class.md#count).)|
-|[remove](#remove)|Odebere odkaz `multi_link_registry` objektu. (Přepíše [network_link_registry::Remove –](network-link-registry-class.md#remove).)|
-|[set_bound](#set_bound)|Nastaví horní mez počtu odkazů `multi_link_registry` objekt může obsahovat.|
+|[add](#add)|Přidá odkaz na objekt `multi_link_registry`. (Potlačení [network_link_registry:: Add](network-link-registry-class.md#add).)|
+|[ifunctiondiscovery](#begin)|Vrátí iterátor na první prvek objektu `multi_link_registry`. (Overrides [network_link_registry:: begin](network-link-registry-class.md#begin).)|
+|[zobrazí](#contains)|Vyhledá zadaný blok v objektu `multi_link_registry`. (Potlačení [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[count](#count)|Spočítá počet položek v objektu `multi_link_registry`. (Potlačení [network_link_registry:: Count](network-link-registry-class.md#count).)|
+|[remove](#remove)|Odebere propojení z objektu `multi_link_registry`. (Potlačení [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
+|[set_bound](#set_bound)|Nastaví horní mez počtu odkazů, které může objekt `multi_link_registry` uchovávat.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -65,127 +65,127 @@ Zadejte bloku dat ukládají do `multi_link_registry` objektu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="add"></a> Přidat
+## <a name="add"></a>přidávání
 
-Přidá odkaz `multi_link_registry` objektu.
+Přidá odkaz na objekt `multi_link_registry`.
 
-```
+```cpp
 virtual void add(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který chcete přidat.
+*_Link*<br/>
+Ukazatel na blok, který má být přidán.
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda vyvolá [invalid_link_target –](invalid-link-target-class.md) výjimka Pokud odkaz je již v registru, nebo pokud vazby již byl nastaven s `set_bound` funkce a odkaz byl v mezičase odebrán.
+Metoda vyvolá výjimku [invalid_link_target](invalid-link-target-class.md) , je-li odkaz již přítomen v registru, nebo pokud již byla nastavena vazba s funkcí `set_bound` a odkaz byl od odebrání odstraněn.
 
-##  <a name="begin"></a> začít
+## <a name="begin"></a>ifunctiondiscovery
 
-Vrátí iterátor na první prvek `multi_link_registry` objektu.
+Vrátí iterátor na první prvek objektu `multi_link_registry`.
 
-```
+```cpp
 virtual iterator begin();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor adresující první prvek `multi_link_registry` objektu.
+Iterátor adresující první prvek v objektu `multi_link_registry`.
 
 ### <a name="remarks"></a>Poznámky
 
-Koncový stav je indikován `NULL` odkaz.
+Koncový stav je označen odkazem `NULL`.
 
-##  <a name="contains"></a> Obsahuje
+## <a name="contains"></a>zobrazí
 
-Hledání `multi_link_registry` objekt pro zadaný blok.
+Vyhledá zadaný blok v objektu `multi_link_registry`.
 
-```
+```cpp
 virtual bool contains(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který má být vyhledán v `multi_link_registry` objektu.
+*_Link*<br/>
+Ukazatel na blok, který má být prohledán v objektu `multi_link_registry`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud byl nalezen zadaný blok, **false** jinak.
+**true** , pokud byl nalezen zadaný blok, jinak **false** .
 
-##  <a name="count"></a> Počet
+## <a name="count"></a>výpočtu
 
-Vrátí počet položek v `multi_link_registry` objektu.
+Spočítá počet položek v objektu `multi_link_registry`.
 
-```
+```cpp
 virtual size_t count();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v `multi_link_registry` objektu.
+Počet položek v objektu `multi_link_registry`.
 
-##  <a name="ctor"></a> multi_link_registry –
+## <a name="ctor"></a>multi_link_registry
 
-Vytvoří `multi_link_registry` objektu.
+Vytvoří objekt `multi_link_registry`.
 
-```
+```cpp
 multi_link_registry();
 ```
 
-##  <a name="dtor"></a> ~multi_link_registry
+## <a name="dtor"></a>~ multi_link_registry
 
-Odstraní `multi_link_registry` objektu.
+Odstraní objekt `multi_link_registry`.
 
-```
+```cpp
 virtual ~multi_link_registry();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda vyvolá [invalid_operation](invalid-operation-class.md) výjimku, pokud je volána před odstraněním všechny odkazy.
+Metoda vyvolá výjimku [invalid_operation](invalid-operation-class.md) , pokud je volána před odebráním všech propojení.
 
-##  <a name="remove"></a> odebrat
+## <a name="remove"></a>odebrány
 
-Odebere odkaz `multi_link_registry` objektu.
+Odebere propojení z objektu `multi_link_registry`.
 
-```
+```cpp
 virtual bool remove(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který se odeberou, pokud se nenašel.
+*_Link*<br/>
+Ukazatel na blok, který má být odebrán, pokud je nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud odkazu byl nalezen a odebrání **false** jinak.
+**true** , pokud byl odkaz nalezen a odebrán, jinak **false** .
 
-##  <a name="set_bound"></a> set_bound –
+## <a name="set_bound"></a>set_bound
 
-Nastaví horní mez počtu odkazů `multi_link_registry` objekt může obsahovat.
+Nastaví horní mez počtu odkazů, které může objekt `multi_link_registry` uchovávat.
 
-```
+```cpp
 void set_bound(size_t _MaxLinks);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MaxLinks*<br/>
-Maximální počet, který odkazuje `multi_link_registry` objekt může obsahovat.
+Maximální počet odkazů, které může objekt `multi_link_registry` uchovávat.
 
 ### <a name="remarks"></a>Poznámky
 
-Po nastavení vazbu způsobí odpojení položku `multi_link_registry` objektu zadejte neměnného stavu kde další volání `add` vyvolá výjimku `invalid_link_target` výjimky.
+Po nastavení vazby, zrušení propojení položky způsobí, že objekt `multi_link_registry` zadá neměnný stav, kde další volání `add` vyvolá výjimku `invalid_link_target`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [single_link_registry – třída](single-link-registry-class.md)

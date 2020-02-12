@@ -13,28 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c29caf6d31df316e80b15fe6827c81e34ece8a18
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160064"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142725"
 ---
-# <a name="singlelinkregistry-class"></a>single_link_registry – třída
+# <a name="single_link_registry-class"></a>single_link_registry – třída
 
-`single_link_registry` Je objekt `network_link_registry` , který spravuje pouze jeden blok zdroje nebo cíle.
+Objekt `single_link_registry` je `network_link_registry`, který spravuje pouze jeden zdrojový nebo cílový blok.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class _Block>
 class single_link_registry : public network_link_registry<_Block>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_Block*<br/>
-Zadejte bloku dat ukládají do `single_link_registry` objektu.
+Datový typ Block uložený v objektu `single_link_registry`.
 
 ## <a name="members"></a>Členové
 
@@ -42,18 +42,18 @@ Zadejte bloku dat ukládají do `single_link_registry` objektu.
 
 |Název|Popis|
 |----------|-----------------|
-|[single_link_registry](#ctor)|Vytvoří `single_link_registry` objektu.|
-|[~single_link_registry Destructor](#dtor)|Odstraní `single_link_registry` objektu.|
+|[single_link_registry](#ctor)|Vytvoří objekt `single_link_registry`.|
+|[~ single_link_registry destruktor](#dtor)|Odstraní objekt `single_link_registry`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[add](#add)|Přidá odkaz `single_link_registry` objektu. (Přepíše [network_link_registry::Add –](network-link-registry-class.md#add).)|
-|[začít](#begin)|Vrátí iterátor na první prvek `single_link_registry` objektu. (Overrides [network_link_registry::begin](network-link-registry-class.md#begin).)|
-|[Obsahuje](#contains)|Hledání `single_link_registry` objekt pro zadaný blok. (Přepíše [network_link_registry::contains –](network-link-registry-class.md#contains).)|
-|[Počet](#count)|Vrátí počet položek v `single_link_registry` objektu. (Přepíše [network_link_registry::Count –](network-link-registry-class.md#count).)|
-|[remove](#remove)|Odebere odkaz `single_link_registry` objektu. (Přepíše [network_link_registry::Remove –](network-link-registry-class.md#remove).)|
+|[add](#add)|Přidá odkaz na objekt `single_link_registry`. (Potlačení [network_link_registry:: Add](network-link-registry-class.md#add).)|
+|[ifunctiondiscovery](#begin)|Vrátí iterátor na první prvek objektu `single_link_registry`. (Overrides [network_link_registry:: begin](network-link-registry-class.md#begin).)|
+|[zobrazí](#contains)|Vyhledá zadaný blok v objektu `single_link_registry`. (Potlačení [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[count](#count)|Spočítá počet položek v objektu `single_link_registry`. (Potlačení [network_link_registry:: Count](network-link-registry-class.md#count).)|
+|[remove](#remove)|Odebere propojení z objektu `single_link_registry`. (Potlačení [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -63,110 +63,110 @@ Zadejte bloku dat ukládají do `single_link_registry` objektu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="add"></a> Přidat
+## <a name="add"></a>přidávání
 
-Přidá odkaz `single_link_registry` objektu.
+Přidá odkaz na objekt `single_link_registry`.
 
-```
+```cpp
 virtual void add(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který chcete přidat.
+*_Link*<br/>
+Ukazatel na blok, který má být přidán.
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda vyvolá [invalid_link_target –](invalid-link-target-class.md) výjimku, pokud už existuje odkaz v registru.
+Metoda vyvolá výjimku [invalid_link_target](invalid-link-target-class.md) , pokud v registru již existuje odkaz.
 
-##  <a name="begin"></a> začít
+## <a name="begin"></a>ifunctiondiscovery
 
-Vrátí iterátor na první prvek `single_link_registry` objektu.
+Vrátí iterátor na první prvek objektu `single_link_registry`.
 
-```
+```cpp
 virtual iterator begin();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor adresující první prvek `single_link_registry` objektu.
+Iterátor adresující první prvek v objektu `single_link_registry`.
 
 ### <a name="remarks"></a>Poznámky
 
-Koncový stav je indikován `NULL` odkaz.
+Koncový stav je označen odkazem `NULL`.
 
-##  <a name="contains"></a> Obsahuje
+## <a name="contains"></a>zobrazí
 
-Hledání `single_link_registry` objekt pro zadaný blok.
+Vyhledá zadaný blok v objektu `single_link_registry`.
 
-```
+```cpp
 virtual bool contains(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který má být vyhledán v `single_link_registry` objektu.
+*_Link*<br/>
+Ukazatel na blok, který má být prohledán v objektu `single_link_registry`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud byl nalezen odkaz, **false** jinak.
+**hodnota true** , pokud byl odkaz nalezen, jinak **false** .
 
-##  <a name="count"></a> Počet
+## <a name="count"></a>výpočtu
 
-Vrátí počet položek v `single_link_registry` objektu.
+Spočítá počet položek v objektu `single_link_registry`.
 
-```
+```cpp
 virtual size_t count();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v `single_link_registry` objektu.
+Počet položek v objektu `single_link_registry`.
 
-##  <a name="remove"></a> odebrat
+## <a name="remove"></a>odebrány
 
-Odebere odkaz `single_link_registry` objektu.
+Odebere propojení z objektu `single_link_registry`.
 
-```
+```cpp
 virtual bool remove(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který se odeberou, pokud se nenašel.
+*_Link*<br/>
+Ukazatel na blok, který má být odebrán, pokud je nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud odkazu byl nalezen a odebrání **false** jinak.
+**true** , pokud byl odkaz nalezen a odebrán, jinak **false** .
 
-##  <a name="ctor"></a> single_link_registry –
+## <a name="ctor"></a>single_link_registry
 
-Vytvoří `single_link_registry` objektu.
+Vytvoří objekt `single_link_registry`.
 
-```
+```cpp
 single_link_registry();
 ```
 
-##  <a name="dtor"></a> ~single_link_registry
+## <a name="dtor"></a>~ single_link_registry
 
-Odstraní `single_link_registry` objektu.
+Odstraní objekt `single_link_registry`.
 
-```
+```cpp
 virtual ~single_link_registry();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda vyvolá [invalid_operation](invalid-operation-class.md) výjimku, pokud je volána před odebráním odkazu.
+Metoda vyvolá výjimku [invalid_operation](invalid-operation-class.md) , pokud je volána před odebráním odkazu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [multi_link_registry – třída](multi-link-registry-class.md)

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-ms.openlocfilehash: f377d6079017266630434ce71602a7e70e58ae21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45df744a9850510006e4bf887c8ed61b000a8e5c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301861"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139997"
 ---
 # <a name="iumsscheduler-structure"></a>Struktura rozhraní IUMSScheduler
 
-Rozhraní pro abstrakci plánovače, která chce, aby správce prostředků modulu Runtime souběžnosti k předání zařízení uživatelského režimu plánovatelná vlákna (UMS). Resource Manager používá ke komunikaci s podprocesu plánovače UMS toto rozhraní. `IUMSScheduler` Rozhraní zdědí `IScheduler` rozhraní.
+Rozhraní pro abstrakci pracovního plánovače, které chce Správce prostředků Concurrency Runtime zaplánovatelná vlákna v uživatelském režimu (UMS). Správce prostředků toto rozhraní používá ke komunikaci s plánovači vláken UMS. Rozhraní `IUMSScheduler` dědí z rozhraní `IScheduler`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 struct IUMSScheduler : public IScheduler;
 ```
 
@@ -31,15 +31,15 @@ struct IUMSScheduler : public IScheduler;
 
 |Název|Popis|
 |----------|-----------------|
-|[Iumsscheduler::setcompletionlist –](#setcompletionlist)|Přiřadí `IUMSCompletionList` rozhraní do fronty plánovače UMS vlákna.|
+|[IUMSScheduler –:: Setcompletionlist –](#setcompletionlist)|Přiřadí rozhraní `IUMSCompletionList` plánovači vláken UMS.|
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud implementujete vlastní plánovač, který komunikuje s Resource Managerem a má být předán vaší plánovačem namísto běžné vlákna Win32 UMS vláken, by měla poskytnout implementaci položky `IUMSScheduler` rozhraní. Kromě toho byste měli nastavit hodnotu klíče zásad plánovače zásady `SchedulerKind` bude `UmsThreadDefault`. Pokud tato zásada určuje UMS vlákno `IScheduler` rozhraní, který je předán jako parametr, který se [iresourcemanager::registerscheduler –](iresourcemanager-structure.md#registerscheduler) metoda musí být `IUMSScheduler` rozhraní.
+Pokud implementujete vlastního plánovače, který komunikuje s Správce prostředků a chcete, aby se vlákna UMS do plánovače namísto běžných vláken Win32, měli byste poskytnout implementaci rozhraní `IUMSScheduler`. Kromě toho byste měli nastavit hodnotu zásad pro klíč zásad Scheduler `SchedulerKind` `UmsThreadDefault`. Pokud zásada určuje vlákno UMS, rozhraní `IScheduler`, které je předáno jako parametr metodě [IResourceManager:: registerscheduler –](iresourcemanager-structure.md#registerscheduler) , musí být rozhraní `IUMSScheduler`.
 
-Správce prostředků se předá UMS vlákna pouze v operačních systémech, které mají funkci UMS. 64bitová verze operačních systémů s Windows 7 a vyšší verze podporují UMS vlákna. Pokud jste vytvořili zásadu plánovače s `SchedulerKind` klíč nastavený na hodnotu `UmsThreadDefault` a podkladová platforma nepodporuje UMS, hodnota `SchedulerKind` klíč na tuto zásadu se změní na hodnotu `ThreadScheduler`. Byste si měli vždy přečíst zpět tuto hodnotu zásady před očekává příjem UMS vlákna.
+Správce prostředků je možné doUMS vlákna pouze v operačních systémech, které mají funkci UMS. 64 – bitové operační systémy s verzí Windows 7 a vyšší podporují UMS vlákna. Pokud vytvoříte zásadu plánovače s klíčem `SchedulerKind` nastaveným na hodnotu `UmsThreadDefault` a podkladová platforma nepodporuje UMS, hodnota klíče `SchedulerKind` v této zásadě se změní na hodnotu `ThreadScheduler`. Před tím, než očekáváte příjem UMSch vláken, byste měli vždycky číst tuto hodnotu této zásady.
 
-`IUMSScheduler` Rozhraní je jeden konec obousměrný kanál komunikace mezi plánovače a Resource Manageru. Druhém konci je reprezentována `IResourceManager` a `ISchedulerProxy` rozhraní, které jsou implementované pomocí Správce prostředků.
+Rozhraní `IUMSScheduler` je jedním z konců obousměrné komunikace mezi plánovačem a Správce prostředků. Druhý konec je reprezentován rozhraním `IResourceManager` a `ISchedulerProxy`, která jsou implementována Správce prostředků.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -49,31 +49,31 @@ Správce prostředků se předá UMS vlákna pouze v operačních systémech, kt
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm.h
+**Záhlaví:** concrtrm. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="setcompletionlist"></a>  Iumsscheduler::setcompletionlist – metoda
+## <a name="setcompletionlist"></a>IUMSScheduler –:: Setcompletionlist – – metoda
 
-Přiřadí `IUMSCompletionList` rozhraní do fronty plánovače UMS vlákna.
+Přiřadí rozhraní `IUMSCompletionList` plánovači vláken UMS.
 
-```
+```cpp
 virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pCompletionList*<br/>
-Rozhraní seznamu dokončení pro Plánovač. Existuje jeden seznam za scheduler.
+Rozhraní seznamu dokončení pro Plánovač. Každý Plánovač obsahuje jeden seznam.
 
 ### <a name="remarks"></a>Poznámky
 
-Správce prostředků se vyvolat tuto metodu na plánovače, která určuje, že chce UMS vlákna po Plánovač požádal o počáteční přidělení prostředků. Můžete použít Plánovač `IUMSCompletionList` rozhraní k určení, kdy mají odblokováno UMS proxy vlákna. Je platný jenom pro přístup k tomuto rozhraní z proxy vlákno spuštěné na kořenovém adresáři virtuálního procesoru přiřazená plánovače UMS.
+Správce prostředků vyvolá tuto metodu v plánovači, který určuje, že chce UMS vlákna, poté, co Plánovač vyžádá počáteční přidělení prostředků. Plánovač může použít rozhraní `IUMSCompletionList` k určení, kdy odblokování proxy vláken UMS bylo odblokováno. Je platný jenom pro přístup k tomuto rozhraní z proxy vlákna, které běží na kořenovém adresáři virtuálního procesoru přiřazeného ke službě UMS Scheduler.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
-[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey –](concurrency-namespace-enums.md)<br/>
 [IScheduler – struktura](ischeduler-structure.md)<br/>
 [IUMSCompletionList – struktura](iumscompletionlist-structure.md)<br/>
 [IResourceManager – struktura](iresourcemanager-structure.md)

@@ -72,26 +72,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351651"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142169"
 ---
-# <a name="norm3-class"></a>norm_3 – třída
+# <a name="norm_3-class"></a>norm_3 – třída
 
 Představuje krátký vektor tří normálních čísel.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class norm_3;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -101,21 +101,21 @@ class norm_3;
 
 |Název|Popis|
 |----------|-----------------|
-|[norm_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[norm_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|norm_3::get_x||
+|norm_3:: get_x||
 |norm_3::get_xy||
 |norm_3::get_xyz||
 |norm_3::get_xz||
 |norm_3::get_xzy||
-|norm_3::get_y||
+|norm_3:: get_y||
 |norm_3::get_yx||
 |norm_3::get_yxz||
-|norm_3::get_yz||
+|norm_3:: get_yz||
 |norm_3::get_yzx||
 |norm_3::get_z||
 |norm_3::get_zx||
@@ -126,7 +126,7 @@ class norm_3;
 |norm_3::ref_g||
 |norm_3::ref_r||
 |norm_3::ref_x||
-|norm_3::ref_y||
+|norm_3:: ref_y||
 |norm_3::ref_z||
 |norm_3::set_x||
 |norm_3::set_xy||
@@ -151,7 +151,7 @@ class norm_3;
 |norm_3::operator-||
 |norm_3::operator--||
 |norm_3::operator*=||
-|norm_3::Operator / =||
+|norm_3:: operator/=||
 |norm_3::operator++||
 |norm_3::operator+=||
 |norm_3::operator=||
@@ -167,36 +167,36 @@ class norm_3;
 
 |Název|Popis|
 |----------|-----------------|
-|norm_3::b||
-|norm_3::BG||
+|norm_3:: b||
+|norm_3:: BG||
 |norm_3::bgr||
 |norm_3::br||
 |norm_3::brg||
-|norm_3::g||
-|norm_3::GB||
-|norm_3::GBR||
-|norm_3::GR||
-|norm_3::grb||
-|norm_3::r||
+|norm_3:: g||
+|norm_3:: GB||
+|norm_3:: GBR||
+|norm_3:: gr||
+|norm_3:: GRB||
+|norm_3:: r||
 |norm_3::rb||
 |norm_3::rbg||
-|norm_3::rg||
-|norm_3::RGB||
-|norm_3::x||
-|norm_3::XY||
+|norm_3:: RG||
+|norm_3:: RGB||
+|norm_3:: x||
+|norm_3:: XY||
 |norm_3::xyz||
 |norm_3::xz||
 |norm_3::xzy||
-|norm_3::y||
-|norm_3::yx||
+|norm_3:: y||
+|norm_3:: yx||
 |norm_3::yxz||
-|norm_3::YZ||
+|norm_3:: YZ||
 |norm_3::yzx||
-|norm_3::z||
+|norm_3:: z||
 |norm_3::zx||
 |norm_3::zxy||
-|norm_3::Zy||
-|norm_3::Zyx||
+|norm_3:: ZY||
+|norm_3:: ZYX||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -204,17 +204,17 @@ class norm_3;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-## <a name="ctor"></a> norm_3 – konstruktor
+## <a name="ctor"></a>norm_3 – konstruktor
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,31 +257,31 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V2*<br/>
-Hodnota inicializace elementu 2.
+Hodnota pro inicializaci elementu 2.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-## <a name="a-namesize-size-constant"></a><a name="size"> velikost – konstanta
+## <a name="a-namesize-size-constant"></a>Konstanta velikosti <a name="size">
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

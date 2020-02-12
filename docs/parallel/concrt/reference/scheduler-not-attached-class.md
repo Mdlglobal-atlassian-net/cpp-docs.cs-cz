@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_not_attached class
 ms.assetid: 26001970-b400-463b-be3d-8623359c399a
-ms.openlocfilehash: be8a04c7cf6ef5aa4d6070e92df14e643395ef00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3b1c113e5c6c5feb5b2fa1940ee9b984233e4af
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160117"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142196"
 ---
-# <a name="schedulernotattached-class"></a>scheduler_not_attached – třída
+# <a name="scheduler_not_attached-class"></a>scheduler_not_attached – třída
 
-Tato třída popisuje výjimku vyvolána, když probíhá operace vyžadující plánovače bude připojený k aktuálnímu kontextu a není spuštěná.
+Tato třída popisuje výjimku vyvolanou při provedení operace, která vyžaduje, aby byl Plánovač připojen k aktuálnímu kontextu a jeden není.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class scheduler_not_attached : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class scheduler_not_attached : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[scheduler_not_attached](#ctor)|Přetíženo. Vytvoří `scheduler_not_attached` objektu.|
+|[scheduler_not_attached](#ctor)|Přetíženo. Vytvoří objekt `scheduler_not_attached`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,15 +41,15 @@ class scheduler_not_attached : public std::exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> scheduler_not_attached –
+## <a name="ctor"></a>scheduler_not_attached
 
-Vytvoří `scheduler_not_attached` objektu.
+Vytvoří objekt `scheduler_not_attached`.
 
-```
+```cpp
 explicit _CRTIMP scheduler_not_attached(_In_z_ const char* _Message) throw();
 
 scheduler_not_attached() throw();
@@ -58,9 +58,9 @@ scheduler_not_attached() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)

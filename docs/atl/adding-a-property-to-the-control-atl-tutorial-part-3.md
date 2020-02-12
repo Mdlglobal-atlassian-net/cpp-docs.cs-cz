@@ -3,67 +3,67 @@ title: Přidání vlastnosti do ovládacího prvku (ATL – tutoriál, část 3)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: b5f9f9c8fde44dd67a9a05aeae0f91fb7b5f2f4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 288dc9f5af57c02639d15a9a971419a633cfc08d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252603"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127584"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Přidání vlastnosti do ovládacího prvku (ATL – tutoriál, část 3)
 
-`IPolyCtl` je rozhraní, které obsahuje ovládacího prvku vlastní metody a vlastnosti a přidáte do jeho vlastnosti.
+`IPolyCtl` je rozhraní, které obsahuje vlastní metody a vlastnosti ovládacího prvku a přidáte do něj vlastnost.
 
-### <a name="to-add-the-property-definitions-to-your-project"></a>Chcete-li přidat definice vlastností do projektu
+### <a name="to-add-the-property-definitions-to-your-project"></a>Přidání definice vlastností do projektu
 
-1. V **zobrazení tříd**, rozbalte `Polygon` větve.
+1. V **zobrazení tříd**rozbalte větev `Polygon`.
 
-1. Klikněte pravým tlačítkem na `IPolyCtl`.
+1. Pravým tlačítkem myši klikněte na `IPolyCtl`.
 
-1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat vlastnost**. **Přidat vlastnost** průvodce se zobrazí.
+1. V místní nabídce klikněte na **Přidat**a potom klikněte na **Přidat vlastnost**. Zobrazí se průvodce **přidáním vlastnosti** .
 
-1. Typ `Sides` jako **název vlastnosti**.
+1. Jako **název vlastnosti**zadejte `Sides`.
 
-1. V rozevíracím seznamu **typ vlastnosti**vyberte `short`.
+1. V rozevíracím seznamu **typ vlastnosti**vyberte možnost `short`.
 
-1. Klikněte na tlačítko **OK** mohli dokončit přidávání vlastnost.
+1. Kliknutím na tlačítko **OK** dokončete přidávání vlastnosti.
 
-1. Z **Průzkumníka řešení**Polygon.idl otevřete a nahraďte následující řádky na konci `IPolyCtl : IDispatch` rozhraní:
+1. Z **Průzkumník řešení**otevřete mnohoúhelník. idl a na konci `IPolyCtl : IDispatch` rozhraní nahraďte následující řádky:
 
     ```cpp
     short get_Sides();
     void set_Sides(short value);
     ```
 
-    with
+    následující adresou:
 
     ```cpp
     [propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
     [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
     ```
 
-1. Z **Průzkumníka řešení**otevřete souboru PolyCtl.h a přidejte následující řádky po definování `m_clrFillColor`:
+1. Z **Průzkumník řešení**otevřete PolyCtl. h a přidejte následující řádky za definici `m_clrFillColor`:
 
     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
-I když Teď máte kostru funkce pro nastavení a načtení vlastnost a proměnnou pro uložení vlastnost, je nutné implementovat funkce odpovídajícím způsobem.
+I když máte nyní k dispozici kostru funkcí pro nastavení a načtení vlastnosti a proměnné pro uložení vlastnosti, musíte implementovat funkce odpovídajícím způsobem.
 
-### <a name="to-update-the-get-and-put-methods"></a>Aktualizace get a put metody
+### <a name="to-update-the-get-and-put-methods"></a>Aktualizace metod get a Put
 
-1. Nastavit výchozí hodnotu `m_nSides`. Nastavit jako výchozí obrazce Trojúhelník konstruktoru v souboru PolyCtl.h přidejte řádek:
+1. Nastavte výchozí hodnotu `m_nSides`. Nastaví výchozí tvar trojúhelníku přidáním čáry do konstruktoru v PolyCtl. h:
 
     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-1. Implementace `Get` a `Put` metody. `get_Sides` a `put_Sides` deklarace funkce byly přidány do souboru PolyCtl.h. Teď přidejte kód pro `get_Sides` a `put_Sides` k PolyCtl.cpp následujícím kódem:
+1. Implementujte metody `Get` a `Put`. Deklarace funkce `get_Sides` a `put_Sides` byly přidány do PolyCtl. h. Nyní přidejte kód pro `get_Sides` a `put_Sides` do PolyCtl. cpp následujícím způsobem:
 
     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
-`get_Sides` Metoda vrátí aktuální hodnotu `Sides` vlastnosti prostřednictvím `pVal` ukazatele. V `put_Sides` zajišťuje kód metodu, nastavení uživatele `Sides` vlastnost přijatelné hodnoty. Minimální hodnota musí být 3 a vzhledem k tomu, že pole body se použije pro každé straně, 100, je rozumné limit pro maximální hodnotu.
+Metoda `get_Sides` vrátí aktuální hodnotu vlastnosti `Sides` prostřednictvím ukazatele `pVal`. V metodě `put_Sides` kód zajišťuje, že uživatel nastaví vlastnost `Sides` na přijatelnou hodnotu. Minimální hodnota musí být 3 a vzhledem k tomu, že pole bodů bude použito pro každou stranu, 100 je přiměřeným omezením pro maximální hodnotu.
 
-Teď mají vlastnost zvanou `Sides`. V dalším kroku změníte výkresu kód pro jeho použití.
+Nyní máte vlastnost s názvem `Sides`. V dalším kroku změníte kód pro kreslení, abyste ho mohli používat.
 
-[Zpátky ke kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [ke kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+[Zpátky ke kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [na krok 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Kurz](../atl/active-template-library-atl-tutorial.md)

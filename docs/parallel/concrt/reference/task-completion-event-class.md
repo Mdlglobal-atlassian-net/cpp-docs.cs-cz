@@ -10,20 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: 9d0ab271b20eb02c1dc4cb8e54cf2632eead4325
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212882"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142593"
 ---
-# <a name="taskcompletionevent-class"></a>task_completion_event – třída
+# <a name="task_completion_event-class"></a>task_completion_event – třída
 
-`task_completion_event` Třída umožňuje zpoždění spuštění úlohy, dokud není splněna podmínka, nebo spuštění úlohy jako odpověď na vnější události.
+Třída `task_completion_event` umožňuje zpozdit provádění úlohy, dokud není splněna podmínka, nebo spustit úlohu jako odpověď na externí událost.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<typename _ResultType>
 class task_completion_event;
 
@@ -31,10 +31,10 @@ template<>
 class task_completion_event<void>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_ResultType*<br/>
-Typ výsledku této `task_completion_event` třídy.
+Typ výsledku této `task_completion_event` třídy
 
 ## <a name="members"></a>Členové
 
@@ -42,22 +42,22 @@ Typ výsledku této `task_completion_event` třídy.
 
 |Název|Popis|
 |----------|-----------------|
-|[task_completion_event](#ctor)|Vytvoří `task_completion_event` objektu.|
+|[task_completion_event](#ctor)|Vytvoří objekt `task_completion_event`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
 |[set](#set)|Přetíženo. Nastaví událost dokončení úkolu.|
-|[set_exception](#set_exception)|Přetíženo. Rozšíří výjimku pro všechny úkoly spojené s touto událostí.|
+|[set_exception](#set_exception)|Přetíženo. Šíří výjimku pro všechny úlohy přidružené k této události.|
 
 ## <a name="remarks"></a>Poznámky
 
-Použijte úlohu vytvořenou z události dokončení úkolu když vaše situace vyžaduje vytvoření úlohy, která bude dokončena, a tím bude její pokračování naplánováno ke spuštění v určitém okamžiku v budoucnu. `task_completion_event` Musí být stejného typu jako úkol vytvoříte a volání metody set na událost dokončení úkolu s hodnotou tohoto typu způsobí dokončení přidruženého úkolu a poskytne tuto hodnotu v důsledku jeho pokračování.
+Použijte úlohu vytvořenou z události dokončení úkolu, když váš scénář vyžaduje, abyste vytvořili úkol, který se dokončí, a tím i jejich pokračování naplánovat na spuštění, a to v nějakém okamžiku v budoucnu. `task_completion_event` musí mít stejný typ jako úloha, kterou vytvoříte, a volání metody set na událost dokončení úkolu s hodnotou tohoto typu způsobí, že se přidružený úkol dokončí, a poskytne tuto hodnotu v důsledku jejich pokračování.
 
-Pokud událost dokončení úlohy není signalizována, všechny úlohy z ní vytvořené budou zrušeny při její destrukci.
+Pokud událost dokončení úkolu není nikdy signalizována, všechny úkoly, které se z něho vytvoří, se při destruktuře zruší.
 
-`task_completion_event` se chová jako inteligentní ukazatel a musí být předán podle hodnoty.
+`task_completion_event` se chová jako inteligentní ukazatel a měl by být předán podle hodnoty.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -65,15 +65,15 @@ Pokud událost dokončení úlohy není signalizována, všechny úlohy z ní vy
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ppltasks.h
+**Záhlaví:** ppltasks. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="set"></a> Nastavit
+## <a name="set"></a>stanovenými
 
 Nastaví událost dokončení úkolu.
 
-```
+```cpp
 bool set(_ResultType _Result) const ;
 
 bool set() const ;
@@ -82,21 +82,21 @@ bool set() const ;
 ### <a name="parameters"></a>Parametry
 
 *_Result*<br/>
-Výsledek, který má tato událost nastavit.
+Výsledek, pomocí kterého se má tato událost nastavit
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Metoda vrátí **true** Pokud bylo nastavení události úspěšné. Vrátí **false** -li událost již nastavena.
+Metoda vrátí **hodnotu true** , pokud byla úspěšná při nastavení události. Vrátí **hodnotu false** , pokud je již událost nastavena.
 
 ### <a name="remarks"></a>Poznámky
 
-Za přítomnosti více nebo souběžných volání `set`, bude úspěšné pouze první volání a jeho výsledek (pokud existují) budou uložena v události dokončení úkolu. Zbývající sady jsou ignorovány a metoda vrátí hodnotu false. Při nastavení události dokončení úkolu budou všechny úkoly vytvořené z, že události okamžitě dokončeny a její pokračování, pokud existuje, bude naplánováno. Úloha dokončení objekty, které mají `_ResultType` jiné než **void** předají hodnotu svým následovníkům.
+V případě existence více nebo souběžných volání `set`, pouze první volání bude úspěšné a výsledek (pokud existuje) bude uložen v události dokončení úkolu. Zbývající sady budou ignorovány a metoda vrátí hodnotu false. Když nastavíte událost dokončení úkolu, všechny úlohy vytvořené z této události se okamžitě dokončí a jejich pokračování (pokud nějaké) se naplánuje. Objekty dokončování úloh, které mají `_ResultType` jiné než **void** , předají hodnotu jejich pokračování.
 
-##  <a name="set_exception"></a> set_exception
+## <a name="set_exception"></a>set_exception
 
-Rozšíří výjimku pro všechny úkoly spojené s touto událostí.
+Šíří výjimku pro všechny úlohy přidružené k této události.
 
-```
+```cpp
 template<typename _E>
 __declspec(noinline) bool set_exception(_E _Except) const;
 
@@ -106,24 +106,24 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ### <a name="parameters"></a>Parametry
 
 *_E*<br/>
-Typ výjimky.
+Typ výjimky
 
 *_Except*<br/>
-Výjimka k nastavení.
+Výjimka, která se má nastavit
 
 *_ExceptionPtr*<br/>
-Výjimka ukazatel k nastavení.
+Ukazatel na výjimku, který má být nastaven.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-##  <a name="ctor"></a> task_completion_event –
+## <a name="ctor"></a>task_completion_event
 
-Vytvoří `task_completion_event` objektu.
+Vytvoří objekt `task_completion_event`.
 
-```
+```cpp
 task_completion_event();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

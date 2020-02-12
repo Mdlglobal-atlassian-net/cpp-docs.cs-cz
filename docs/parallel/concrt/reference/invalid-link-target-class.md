@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-ms.openlocfilehash: 3ef34ab7607c444044b6dde17f3db3f73d0d7086
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd3d82c06c174c69c60dec33592110f4de72ac99
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205652"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141040"
 ---
-# <a name="invalidlinktarget-class"></a>invalid_link_target – třída
+# <a name="invalid_link_target-class"></a>invalid_link_target – třída
 
-Tato třída popisuje výjimku vyvolána, když `link_target` je volána metoda blok zpráv a blok zpráv se nejde připojit k cíli. To může být vyšší než počet odkazů, které je povoleno blok zpráv nebo pokus o odkaz konkrétní cílovou dvakrát ke stejnému zdroji.
+Tato třída popisuje výjimku vyvolanou při volání metody `link_target` bloku zasílání zpráv a blok zasílání zpráv se nemůže připojit k cíli. Může to být výsledek překročení počtu odkazů, které je povolený, nebo pokus o připojení konkrétního cíle dvakrát ke stejnému zdroji.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class invalid_link_target : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class invalid_link_target : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[invalid_link_target](#ctor)|Přetíženo. Vytvoří `invalid_link_target` objektu.|
+|[invalid_link_target](#ctor)|Přetíženo. Vytvoří objekt `invalid_link_target`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,15 +41,15 @@ class invalid_link_target : public std::exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> invalid_link_target
+## <a name="ctor"></a>invalid_link_target
 
-Vytvoří `invalid_link_target` objektu.
+Vytvoří objekt `invalid_link_target`.
 
-```
+```cpp
 explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
 
 invalid_link_target() throw();
@@ -58,9 +58,9 @@ invalid_link_target() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md)

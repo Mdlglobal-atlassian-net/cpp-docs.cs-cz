@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 5e90dd3b23b33f6699f2df4ce0df9178f95816b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375454"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139827"
 ---
 # <a name="location-class"></a>location – třída
 
@@ -23,7 +23,7 @@ Abstrakce fyzického umístění na hardwaru.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class location;
 ```
 
@@ -33,23 +33,23 @@ class location;
 
 |Název|Popis|
 |----------|-----------------|
-|[location](#ctor)|Přetíženo. Vytvoří `location` objektu.|
-|[~ location – destruktor](#dtor)|Odstraní `location` objektu.|
+|[location](#ctor)|Přetíženo. Vytvoří objekt `location`.|
+|[~ Location – destruktor](#dtor)|Odstraní objekt `location`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[aktuální](#current)|Vrátí `location` objekt představující nejspecifičtější místo provádění volajícího vlákna.|
-|[from_numa_node](#from_numa_node)|Vrátí `location` objekt, který představuje daný uzel NUMA.|
+|[aktivní](#current)|Vrátí objekt `location` reprezentující nejvíce specifické místo, které je volající vlákno prováděno.|
+|[from_numa_node](#from_numa_node)|Vrátí objekt `location`, který představuje daný uzel NUMA.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Určuje, zda dva `location` objekty představují jiné umístění.|
-|[operátor =](#operator_eq)|Přiřadí obsah jiného `location` do tohoto objektu.|
-|[operator==](#operator_eq_eq)|Určuje, zda dva `location` objekty představují stejné umístění.|
+|[operator!=](#operator_neq)|Určuje, zda dva objekty `location` reprezentují jiné umístění.|
+|[operátor =](#operator_eq)|Přiřadí k tomuto jednomu obsahu jiný objekt `location`.|
+|[operator = = – operátor](#operator_eq_eq)|Určuje, zda dva objekty `location` reprezentují stejné umístění.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -57,52 +57,52 @@ class location;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="dtor"></a> ~ umístění
+## <a name="dtor"></a>~ umístění
 
-Odstraní `location` objektu.
+Odstraní objekt `location`.
 
-```
+```cpp
 ~location();
 ```
 
-##  <a name="current"></a> aktuální
+## <a name="current"></a>aktivní
 
-Vrátí `location` objekt představující nejspecifičtější místo provádění volajícího vlákna.
+Vrátí objekt `location` reprezentující nejvíce specifické místo, které je volající vlákno prováděno.
 
-```
+```cpp
 static location __cdecl current();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Umístění představující nejspecifičtější místo provádí volajícího vlákna.
+Umístění, které představuje nejvíce specifické místo, které je volající vlákno prováděno.
 
-##  <a name="from_numa_node"></a> from_numa_node –
+## <a name="from_numa_node"></a>from_numa_node
 
-Vrátí `location` objekt, který představuje daný uzel NUMA.
+Vrátí objekt `location`, který představuje daný uzel NUMA.
 
-```
+```cpp
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_NumaNodeNumber*<br/>
-Číslo uzlu NUMA pro umístění pro sestavení.
+Číslo uzlu NUMA, pro které se má vytvořit umístění
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Umístění představující uzel NUMA určený `_NumaNodeNumber` parametru.
+Umístění, které představuje uzel NUMA určený parametrem `_NumaNodeNumber`.
 
-##  <a name="ctor"></a> umístění
+## <a name="ctor"></a>oblasti
 
-Vytvoří `location` objektu.
+Vytvoří objekt `location`.
 
-```
+```cpp
 location();
 
 location(
@@ -121,22 +121,22 @@ location(
 
 *_LocationType*<br/>
 
-*ID _ovládacího*<br/>
+*_Id*<br/>
 
 *_BindingId*<br/>
 
 *_PBinding*<br/>
-(Volitelné) Ukazatel na vazbu.
+Volitelné Ukazatel vazby
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí vyrobený umístění představuje systém jako celek.
+Výchozí vytvořená poloha představuje systém jako celek.
 
-##  <a name="operator_neq"></a> Operator! =
+## <a name="operator_neq"></a>! = – operátor
 
-Určuje, zda dva `location` objekty představují jiné umístění.
+Určuje, zda dva objekty `location` reprezentují jiné umístění.
 
-```
+```cpp
 bool operator!= (const location& _Rhs) const;
 ```
 
@@ -147,28 +147,28 @@ Operand `location`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud dvou míst je jiný, **false** jinak.
+**true** , pokud jsou dvě umístění odlišná, jinak **false** .
 
-##  <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
-Přiřadí obsah jiného `location` do tohoto objektu.
+Přiřadí k tomuto jednomu obsahu jiný objekt `location`.
 
-```
+```cpp
 location& operator= (const location& _Rhs);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Zdroj `location` objektu.
+Zdrojový objekt `location`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-##  <a name="operator_eq_eq"></a> Operator ==
+## <a name="operator_eq_eq"></a>operator = = – operátor
 
-Určuje, zda dva `location` objekty představují stejné umístění.
+Určuje, zda dva objekty `location` reprezentují stejné umístění.
 
-```
+```cpp
 bool operator== (const location& _Rhs) const;
 ```
 
@@ -179,8 +179,8 @@ Operand `location`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud dvou míst je stejné, a **false** jinak.
+**true** , pokud jsou dvě umístění shodná, a jinak **false** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

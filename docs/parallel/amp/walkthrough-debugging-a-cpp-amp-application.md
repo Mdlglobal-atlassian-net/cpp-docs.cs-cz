@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Ladění aplikace C++ amp'
+title: 'Návod: Ladění aplikace C++ AMP'
 ms.date: 04/23/2019
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 0c9fb5588cfd44c83d8fe72c7c4aede0fedab672
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 54fff4421fbf6accf8ed3e37bb80ed09ec83165c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69631589"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126328"
 ---
-# <a name="walkthrough-debugging-a-c-amp-application"></a>Návod: Ladění aplikace C++ amp
+# <a name="walkthrough-debugging-a-c-amp-application"></a>Návod: Ladění aplikace C++ AMP
 
 Toto téma ukazuje, jak ladit aplikaci, která používá C++ akcelerované paralelismuy (C++ amp) k využití výhod grafického procesoru (GPU). Používá program s paralelním omezením, který sečte velké pole celých čísel. Tento návod znázorňuje následující úlohy:
 
@@ -36,9 +36,9 @@ Než začnete tento návod:
 
 - Přečtěte si [ C++ přehled amp](../../parallel/amp/cpp-amp-overview.md).
 
-- Ujistěte se, že v textovém editoru jsou zobrazena čísla řádků. Další informace najdete v tématu [jak: Zobrazení čísel řádků v editoru](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)
+- Ujistěte se, že v textovém editoru jsou zobrazena čísla řádků. Další informace najdete v tématu [Postup: zobrazení čísel řádků v editoru](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
-- Ujistěte se, že používáte aspoň Windows 8 nebo Windows Server 2012 pro podporu ladění v emulátoru softwaru. 
+- Ujistěte se, že používáte aspoň Windows 8 nebo Windows Server 2012 pro podporu ladění v emulátoru softwaru.
 
 [!INCLUDE[note_settings_general](../../mfc/includes/note_settings_general_md.md)]
 
@@ -50,11 +50,11 @@ Pokyny k vytvoření projektu se liší v závislosti na verzi sady Visual Studi
 
 ### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>Vytvoření ukázkového projektu v aplikaci Visual Studio 2019
 
-1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** a otevřete tak dialogové okno **vytvořit nový projekt** .
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
 
-1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**. 
+1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**.
 
-1. Z filtrovaného seznamu typů projektů zvolte Konzolová **aplikace** a pak zvolte **Další**. Na další stránce `AMPMapReduce` do pole **název** zadejte název projektu a v případě potřeby zadejte umístění projektu.
+1. Z filtrovaného seznamu typů projektů zvolte **Konzolová aplikace** a pak zvolte **Další**. Na další stránce zadejte do pole **název** `AMPMapReduce` a zadejte název projektu a v případě potřeby určete umístění projektu.
 
    ![Pojmenovat projekt](../../build/media/mathclient-project-name-2019.png "Pojmenovat projekt")
 
@@ -68,13 +68,13 @@ Pokyny k vytvoření projektu se liší v závislosti na verzi sady Visual Studi
 
 1. Spusťte Visual Studio.
 
-1. Na panelu nabídek vyberte **soubor** > **Nový** > **projekt**.
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**.
 
 1. V části **nainstalováno** v podokně šablony vyberte **možnost C++Visual** .
 
-1. Zvolte **Konzolová aplikace Win32**, `AMPMapReduce` do pole **název** zadejte a pak klikněte na tlačítko **OK** .
+1. Zvolte **Konzolová aplikace Win32**, do pole **název** zadejte `AMPMapReduce` a pak klikněte na tlačítko **OK** .
 
-1. Zvolte **Další** tlačítko.
+1. Klikněte na tlačítko **Další** .
 
 1. Zrušte zaškrtnutí políčka **Předkompilovaná hlavička** a pak klikněte na tlačítko **Dokončit** .
 
@@ -82,9 +82,9 @@ Pokyny k vytvoření projektu se liší v závislosti na verzi sady Visual Studi
 
 ::: moniker-end
 
-Generace
+Další:
 
-8. Otevřete AMPMapReduce. cpp a nahraďte jeho obsah následujícím kódem.
+1. Otevřete AMPMapReduce. cpp a nahraďte jeho obsah následujícím kódem.
 
 ```cpp
     // AMPMapReduce.cpp defines the entry point for the program.
@@ -203,19 +203,19 @@ Generace
     }
 ```
 
-9. V řádku nabídek vyberte **soubor** > **Uložit vše**.
+1. Na panelu nabídek vyberte možnost **soubor** > **Uložit vše**.
 
-10. V **Průzkumník řešení**otevřete místní nabídku pro **AMPMapReduce**a pak zvolte **vlastnosti**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro **AMPMapReduce**a pak zvolte **vlastnosti**.
 
-11. V dialogovém okně **stránky vlastností** v části **Vlastnosti konfigurace**vyberte možnost **C/C++**  > předkompilované hlavičky.
+1. V dialogovém okně **stránky vlastností** v části **Vlastnosti konfigurace**vyberte možnost **C/C++**  > **předkompilovaných hlaviček**.
 
-12. Pro vlastnost **předkompilované hlavičky** vyberte **Nepoužívat předkompilované hlavičky**a pak klikněte na tlačítko **OK** .
+1. Pro vlastnost **předkompilované hlavičky** vyberte **Nepoužívat předkompilované hlavičky**a pak klikněte na tlačítko **OK** .
 
-13. Na řádku nabídek klikněte na **sestavit** > sestavení**řešení**.
+1. Na panelu nabídek vyberte **sestavení** **řešení**sestavení > .
 
 ## <a name="debugging-the-cpu-code"></a>Ladění kódu CPU
 
-V tomto postupu použijete místní ladicí program systému Windows k ujištění, že kód CPU v této aplikaci je správný. Segment kódu CPU v této aplikaci, který je obzvláště zajímavý, je `for` smyčka `reduction_sum_gpu_kernel` ve funkci. Řídí paralelní snižování na základě stromové struktury, které se spouští na GPU.
+V tomto postupu použijete místní ladicí program systému Windows k ujištění, že kód CPU v této aplikaci je správný. Segment kódu CPU v této aplikaci, který je zvlášť zajímavý, je `for` smyčka ve funkci `reduction_sum_gpu_kernel`. Řídí paralelní snižování na základě stromové struktury, které se spouští na GPU.
 
 ### <a name="to-debug-the-cpu-code"></a>Ladění kódu CPU
 
@@ -230,15 +230,15 @@ V tomto postupu použijete místní ladicí program systému Windows k ujištěn
    ![Zarážky procesoru](../../parallel/amp/media/campcpubreakpoints.png "Zarážky procesoru") <br/>
    Zarážky procesoru
 
-5. Na panelu nabídek vyberte **ladit** > **Spustit ladění**.
+5. Na panelu nabídek vyberte možnost **ladění** > **Spustit ladění**.
 
-6. V okně **místní** hodnoty Sledujte hodnotu `stride_size` , dokud se nedosáhne zarážky na řádku 70.
+6. V okně **místní** hodnoty Sledujte hodnotu pro `stride_size`, dokud se nedosáhne zarážky na řádku 70.
 
-7. Na řádku nabídek klikněte na položku **ladit** > **Zastavit ladění**.
+7. Na panelu nabídek vyberte možnost **ladění** > **Zastavit ladění**.
 
 ## <a name="debugging-the-gpu-code"></a>Ladění kódu GPU
 
-V této části se dozvíte, jak ladit kód GPU, což je kód obsažený `sum_kernel_tiled` ve funkci. Kód GPU vypočítá součet celých čísel pro každý blok paralelně.
+V této části se dozvíte, jak ladit kód GPU, což je kód obsažený ve funkci `sum_kernel_tiled`. Kód GPU vypočítá součet celých čísel pro každý blok paralelně.
 
 ### <a name="to-debug-the-gpu-code"></a>Ladění kódu GPU
 
@@ -252,18 +252,18 @@ V této části se dozvíte, jak ladit kód GPU, což je kód obsažený `sum_ke
 
     Výchozí hodnota je **auto** . Před Windows 10 je **grafický procesor jenom** požadovaná hodnota místo **auto**.
 
-5. Zvolte **OK** tlačítko.
+5. Klikněte na tlačítko **OK** .
 
 6. Nastavte zarážku na řádku 30, jak je znázorněno na následujícím obrázku.
 
    ![Zarážky GPU](../../parallel/amp/media/campgpubreakpoints.png "Zarážky GPU") <br/>
    Zarážka GPU
 
-7. Na panelu nabídek vyberte **ladit** > **Spustit ladění**. Zarážky v kódu CPU na řádcích 67 a 70 nejsou spouštěny během ladění GPU, protože tyto řádky kódu jsou spouštěny na procesoru.
+7. Na panelu nabídek vyberte možnost **ladění** > **Spustit ladění**. Zarážky v kódu CPU na řádcích 67 a 70 nejsou spouštěny během ladění GPU, protože tyto řádky kódu jsou spouštěny na procesoru.
 
 ### <a name="to-use-the-gpu-threads-window"></a>Použití okna vlákna GPU
 
-1. Chcete-li otevřít okno **vlákna GPU** , v panelu nabídek vyberte možnost **ladit** > **vlákna GPU** **systému Windows** > .
+1. Chcete-li otevřít okno **vlákna GPU** , v panelu nabídek vyberte možnost **ladit** >  ** > ** **vlákny GPU**.
 
    Můžete zkontrolovat stav vláken GPU v zobrazeném okně **vlákna GPU** .
 
@@ -274,7 +274,7 @@ V této části se dozvíte, jak ladit kód GPU, což je kód obsažený `sum_ke
 
    Pro tento výpočet jsou přiřazeny 313 dlaždice. Každá dlaždice obsahuje 32 vláken. Vzhledem k tomu, že dojde k místnímu ladění GPU na emulátoru softwaru, existují čtyři aktivní vlákna GPU. Čtyři vlákna provádějí tyto pokyny současně a pak se vzájemně přesunou k další instrukci.
 
-   V okně **vlákna GPU** jsou aktivní čtyři vlákna GPU a 28 vláken GPU se zablokovala v příkazu [tile_barrier:: wait](reference/tile-barrier-class.md#wait) , který je definován na řádku 21`t_idx.barrier.wait();`(). Všechna 32 vláken GPU patří do první dlaždice `tile[0]`. Šipka odkazuje na řádek, který obsahuje aktuální vlákno. Chcete-li přepnout na jiné vlákno, použijte jednu z následujících metod:
+   V okně **vláken GPU** jsou aktivní čtyři vlákna GPU a 28 vláken GPU se zablokovala na [tile_barrier:: wait](reference/tile-barrier-class.md#wait) v příkazu o řádku 21 (`t_idx.barrier.wait();`). Všechna 32 vláken GPU patří do první dlaždice `tile[0]`. Šipka odkazuje na řádek, který obsahuje aktuální vlákno. Chcete-li přepnout na jiné vlákno, použijte jednu z následujících metod:
 
     - V řádku vlákna, na které chcete přejít v okně **vlákna GPU** otevřete místní nabídku a vyberte možnost **Přepnout do vlákna**. Pokud řádek představuje více než jedno vlákno, přejdete do prvního vlákna podle souřadnic vlákna.
 
@@ -284,7 +284,7 @@ V této části se dozvíte, jak ladit kód GPU, což je kód obsažený `sum_ke
 
 ### <a name="to-use-the-parallel-stacks-window"></a>Použití okna Paralelní zásobníky
 
-1. Chcete-li otevřít okno **paralelní zásobníky** , v panelu nabídek vyberte možnost **ladit** > **paralelní zásobníky** **systému Windows** > .
+1. Chcete-li otevřít okno **paralelní zásobníky** , v řádku nabídek vyberte možnost **ladění** > **Windows** > **Parallel Stacks**.
 
    Okno **paralelní zásobníky** můžete použít k současné kontrole snímků zásobníku více vláken GPU.
 
@@ -295,7 +295,7 @@ V této části se dozvíte, jak ladit kód GPU, což je kód obsažený `sum_ke
    ![Okno paralelní zásobníky se čtyřmi aktivními vlákny](../../parallel/amp/media/campd.png "Okno paralelní zásobníky se čtyřmi aktivními vlákny") <br/>
    Okno paralelní zásobníky
 
-   32 vláken `_kernel_stub` do příkazu lambda `parallel_for_each` ve `sum_kernel_tiled` volání funkce a následně do funkce, kde dojde k paralelnímu zmenšení. 28 z vláken 32 bylo dokončeno na příkaz [tile_barrier:: wait](reference/tile-barrier-class.md#wait) a zůstane blokované na řádku 22, zatímco ostatní 4 vlákna zůstávají aktivní ve `sum_kernel_tiled` funkci na řádku 30.
+   32 vlákna z `_kernel_stub` do příkazu lambda ve volání funkce `parallel_for_each` a následně do funkce `sum_kernel_tiled`, kde dojde k paralelnímu snížení. 28 z vláken 32 bylo dokončeno na příkaz [tile_barrier:: wait](reference/tile-barrier-class.md#wait) a zůstane blokované na řádku 22, zatímco ostatní 4 vlákna zůstávají aktivní ve funkci `sum_kernel_tiled` na řádku 30.
 
    Můžete zkontrolovat vlastnosti vlákna GPU, které jsou k dispozici v okně **vlákna GPU** v bohatém DataTip okna **paralelní zásobníky** . Chcete-li to provést, umístěte ukazatel myši na rámec zásobníku **sum_kernel_tiled**. Na následujícím obrázku je znázorněno DataTip.
 
@@ -306,13 +306,13 @@ V této části se dozvíte, jak ladit kód GPU, což je kód obsažený `sum_ke
 
 ### <a name="to-use-the-parallel-watch-window"></a>Použití paralelního okno Kukátko
 
-1. Chcete-li otevřít okno **paralelní kukátko** , v panelu nabídek vyberte možnost **ladit** > **Windows** > **paralelní sledování** > **paralelní sledování 1**.
+1. Chcete-li otevřít okno **paralelní kukátko** , na panelu nabídek vyberte možnost **ladit** > **Windows** > **paralelní sledování** > **paralelní sledování 1**.
 
    Můžete použít okno **paralelní kukátko** pro kontrolu hodnot výrazu ve více vláknech.
 
 2. Ukotvěte okno **paralelní kukátko 1** k dolnímu okraji sady Visual Studio. V tabulce okna **paralelního kukátka** jsou 32 řádky. Každý odpovídá vláknu GPU, který se zobrazil v okně vlákna GPU a v okně **paralelní zásobníky** . Nyní můžete zadat výrazy, jejichž hodnoty chcete kontrolovat v rámci všech 32 vláken GPU.
 
-3. Vyberte záhlaví sloupce **Přidat kukátko** , zadejte `localIdx`a pak stiskněte klávesu **ENTER** .
+3. Vyberte záhlaví sloupce **Přidat kukátko** , zadejte `localIdx`a pak zvolte klávesu **ENTER** .
 
 4. Znovu vyberte záhlaví sloupce **Přidat kukátko** , zadejte `globalIdx`a potom zvolte klávesu **ENTER** .
 
@@ -322,14 +322,14 @@ V této části se dozvíte, jak ladit kód GPU, což je kód obsažený `sum_ke
 
    Vyberte záhlaví sloupce **Local-[localIdx [0]]** pro řazení sloupce. Následující ilustrace znázorňuje výsledky řazení podle **lokální hodnoty [localIdx [0]]** .
 
-   ![Paralelní okno kukátko s seřazenými výsledky](../../parallel/amp/media/campf.png "Paralelní okno kukátko s seřazenými výsledky") <br/>
+   ![Paralelní okno Kukátko s seřazenými výsledky](../../parallel/amp/media/campf.png "Paralelní okno Kukátko s seřazenými výsledky") <br/>
    Výsledky řazení
 
    Obsah můžete exportovat v okně **paralelní kukátko** do aplikace Excel tak, že kliknete na tlačítko **Excel** a pak zvolíte možnost **otevřít v aplikaci Excel**. Pokud máte ve vývojovém počítači nainstalovaný Excel, otevře se excelový list, který obsahuje obsah.
 
-6. V pravém horním rohu okna **paralelní kukátko** je ovládací prvek filtru, který můžete použít k filtrování obsahu pomocí logických výrazů. Do `localA[localIdx[0]] > 20000` textového pole Filtr zadejte a potom zvolte klávesu **ENTER** .
+6. V pravém horním rohu okna **paralelní kukátko** je ovládací prvek filtru, který můžete použít k filtrování obsahu pomocí logických výrazů. Do textového pole ovládací prvek filtru zadejte `localA[localIdx[0]] > 20000` a pak stiskněte klávesu **ENTER** .
 
-   Okno nyní obsahuje pouze vlákna, na kterých `localA[localIdx[0]]` je hodnota větší než 20000. Obsah je stále seřazen podle `localA[localIdx[0]]` sloupce, což je akce řazení, kterou jste provedli dříve.
+   Okno nyní obsahuje pouze vlákna, na kterých je `localA[localIdx[0]]` hodnota větší než 20000. Obsah je stále seřazen podle sloupce `localA[localIdx[0]]`, což je akce řazení, kterou jste provedli dříve.
 
 ## <a name="flagging-gpu-threads"></a>Označení vláken GPU
 
@@ -339,7 +339,7 @@ Konkrétní vlákna GPU můžete označit příznakem v okně **vlákna GPU** , 
 
 1. V okně **paralelní kukátko 1** vyberte záhlaví sloupce **[Thread]** , které chcete seřadit podle indexu dlaždic a indexu vlákna.
 
-2. Na panelu nabídek vyberte možnost**pokračovat**v **ladění** > , což způsobí, že čtyři vlákna, která byla aktivní pro průběh další bariéry (definované na řádku 32 AMPMapReduce. cpp).
+2. Na panelu nabídek vyberte možnost **ladit** > **pokračovat**, což způsobí, že čtyři vlákna, která byla aktivní pro průběh další bariéry (definované na řádku 32 AMPMapReduce. cpp).
 
 3. Na levé straně řádku, který obsahuje čtyři aktuálně aktivní vlákna, vyberte symbol označení.
 
@@ -361,13 +361,13 @@ Konkrétní vlákna GPU můžete označit příznakem v okně **vlákna GPU** , 
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Mrznutí a rozmrazení vláken GPU
 
-Vlákna GPU můžete zablokovat (pozastavit) a uvolnit (obnovit) z okna **vlákna GPU** nebo okna **paralelního sledování** . Můžete zablokovat a rozmrazit vlákna procesoru stejným způsobem; informace naleznete v tématu [How to: Použijte okno](/visualstudio/debugger/how-to-use-the-threads-window)vlákna.
+Vlákna GPU můžete zablokovat (pozastavit) a uvolnit (obnovit) z okna **vlákna GPU** nebo okna **paralelního sledování** . Můžete zablokovat a rozmrazit vlákna procesoru stejným způsobem; informace naleznete v tématu [How to: Use a Window Threads](/visualstudio/debugger/how-to-use-the-threads-window).
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Zablokování a odmrazení vláken GPU
 
 1. Kliknutím na tlačítko **Zobrazit pouze s příznakem** zobrazíte všechna vlákna.
 
-2. Na panelu nabídek vyberte možnost**pokračovat**v **ladění** > .
+2. Na panelu nabídek vyberte možnost **ladění** > **pokračovat**.
 
 3. Otevřete místní nabídku pro aktivní řádek a pak zvolte možnost **ukotvit**.
 
@@ -388,7 +388,7 @@ Vlákna GPU můžete zablokovat (pozastavit) a uvolnit (obnovit) z okna **vlákn
 
 1. V místní nabídce pro jedno z podprocesů v okně **vlákna GPU** vyberte **Seskupit podle**, **adresa**.
 
-   Vlákna v okně **vláken GPU** se seskupují podle adres. Adresa odpovídá instrukci v zpětném překladu, kde je umístěna každá skupina vláken. 24 vláken na řádku 22, kde je spuštěna [Metoda tile_barrier:: wait](reference/tile-barrier-class.md#wait) . 12 vláken je v pokynech pro bariéru na řádku 32. Čtyři z těchto vláken jsou označena příznakem. Osm vláken na zarážce na řádku 30. Čtyři z těchto vláken jsou zmrazeny. Následující ilustrace znázorňuje seskupená vlákna v okně **vláken GPU** .
+   Vlákna v okně **vláken GPU** se seskupují podle adres. Adresa odpovídá instrukci v zpětném překladu, kde je umístěna každá skupina vláken. 24 vláken na řádku 22, kde je spuštěna [metoda tile_barrier:: wait](reference/tile-barrier-class.md#wait) . 12 vláken je v pokynech pro bariéru na řádku 32. Čtyři z těchto vláken jsou označena příznakem. Osm vláken na zarážce na řádku 30. Čtyři z těchto vláken jsou zmrazeny. Následující ilustrace znázorňuje seskupená vlákna v okně **vláken GPU** .
 
    ![Okno vláken GPU s vlákny seskupenými podle adresy](../../parallel/amp/media/campl.png "Okno vláken GPU s vlákny seskupenými podle adresy") <br/>
    Seskupená vlákna v okně **vláken GPU**
@@ -409,10 +409,10 @@ Všechna vlákna v dané dlaždici se spouštějí na řádek, který obsahuje k
 
    24 vláken, která byla dříve blokovaná na bariérě na řádku 21, probíhala na řádku 32. To se zobrazuje v okně **vlákna GPU** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přehled modelu C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code)<br/>
 [Postupy: Použití okna vláken GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
-[Postupy: Použití okna Paralelní sledování](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
+[Postupy: Použití okna paralelního sledování](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
 [Analýza C++ kódu amp pomocí Vizualizátor souběžnosti](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

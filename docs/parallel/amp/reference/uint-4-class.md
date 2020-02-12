@@ -268,26 +268,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a795ed3c04f114b6e15d5d9161605988bab2778a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405440"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142404"
 ---
-# <a name="uint4-class"></a>uint_4 – třída
+# <a name="uint_4-class"></a>uint_4 – třída
 
 Představuje krátký vektor čtyř celých čísel bez znaménka.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class uint_4;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -297,7 +297,7 @@ class uint_4;
 
 |Název|Popis|
 |----------|-----------------|
-|[uint_4 – konstruktor](#uint_4__ctor) |Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[uint_4 – konstruktor](#uint_4__ctor) |Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -324,7 +324,7 @@ class uint_4;
 |uint_4::get_xwy||
 |uint_4::get_xwyz||
 |uint_4::get_xwz||
-|uint_4::get_xwzy||
+|uint_4:: get_xwzy||
 |uint_4::get_xy||
 |uint_4::get_xyw||
 |uint_4::get_xywz||
@@ -335,19 +335,19 @@ class uint_4;
 |uint_4::get_xzwy||
 |uint_4::get_xzy||
 |uint_4::get_xzyw||
-|uint_4::get_y||
-|uint_4::get_yw||
+|uint_4:: get_y||
+|uint_4:: get_yw||
 |uint_4::get_ywx||
 |uint_4::get_ywxz||
-|uint_4::get_ywz||
+|uint_4:: get_ywz||
 |uint_4::get_ywzx||
 |uint_4::get_yx||
 |uint_4::get_yxw||
 |uint_4::get_yxwz||
 |uint_4::get_yxz||
 |uint_4::get_yxzw||
-|uint_4::get_yz||
-|uint_4::get_yzw||
+|uint_4:: get_yz||
+|uint_4:: get_yzw||
 |uint_4::get_yzwx||
 |uint_4::get_yzx||
 |uint_4::get_yzxw||
@@ -447,7 +447,7 @@ class uint_4;
 |uint_4::operator-||
 |uint_4::operator--||
 |uint_4::operator*=||
-|uint_4::Operator / =||
+|uint_4:: operator/=||
 |uint_4::operator++||
 |uint_4::operator+=||
 |uint_4::operator=||
@@ -469,10 +469,10 @@ class uint_4;
 |uint_4::abgr||
 |uint_4::abr||
 |uint_4::abrg||
-|uint_4::ag||
+|uint_4:: AG||
 |uint_4::agb||
 |uint_4::agbr||
-|uint_4::agr||
+|uint_4:: AGR||
 |uint_4::agrb||
 |uint_4::ar||
 |uint_4::arb||
@@ -495,28 +495,28 @@ class uint_4;
 |uint_4::brag||
 |uint_4::brg||
 |uint_4::brga||
-|uint_4::g||
-|uint_4::GA||
+|uint_4:: g||
+|uint_4:: GA||
 |uint_4::gab||
-|uint_4::gabr||
-|uint_4::gar||
+|uint_4:: gabr||
+|uint_4:: Gar||
 |uint_4::garb||
-|uint_4::GB||
+|uint_4:: GB||
 |uint_4::gba||
-|uint_4::gbar||
-|uint_4::gbr||
+|uint_4:: gbar||
+|uint_4:: GBR||
 |uint_4::gbra||
-|uint_4::GR||
-|uint_4::gra||
-|uint_4::grab||
-|uint_4::grb||
+|uint_4:: gr||
+|uint_4:: GRA||
+|uint_4:: drapák||
+|uint_4:: GRB||
 |uint_4::grba||
 |uint_4::r||
 |uint_4::ra||
 |uint_4::rab||
 |uint_4::rabg||
-|uint_4::rag||
-|uint_4::ragb||
+|uint_4:: RAG||
+|uint_4:: ragb||
 |uint_4::rb||
 |uint_4::rba||
 |uint_4::rbag||
@@ -525,7 +525,7 @@ class uint_4;
 |uint_4::rg||
 |uint_4::rga||
 |uint_4::rgab||
-|uint_4::RGB||
+|uint_4:: RGB||
 |uint_4::rgba||
 |uint_4::w||
 |uint_4::wx||
@@ -559,7 +559,7 @@ class uint_4;
 |uint_4::xzwy||
 |uint_4::xzy||
 |uint_4::xzyw||
-|uint_4::y||
+|uint_4:: y||
 |uint_4::yw||
 |uint_4::ywx||
 |uint_4::ywxz||
@@ -576,11 +576,11 @@ class uint_4;
 |uint_4::yzx||
 |uint_4::yzxw||
 |uint_4::z||
-|uint_4::zw||
+|uint_4:: ZW||
 |uint_4::zwx||
 |uint_4::zwxy||
-|uint_4::zwy||
-|uint_4::zwyx||
+|uint_4:: zwy||
+|uint_4:: zwyx||
 |uint_4::zx||
 |uint_4::zxw||
 |uint_4::zxwy||
@@ -598,17 +598,17 @@ class uint_4;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-## <a name="uint_4__ctor"></a> uint_4
+## <a name="uint_4__ctor"></a>uint_4
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 uint_4() restrict(amp,cpu);
 uint_4(
    unsigned int _V0,
@@ -639,34 +639,34 @@ explicit inline uint_4(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V2*<br/>
-Hodnota inicializace elementu 2.
+Hodnota pro inicializaci elementu 2.
 
 *_V3*<br/>
-Hodnota inicializace element 3.
+Hodnota pro inicializaci elementu 3.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-## <a name="size"></a>velikost
+## <a name="size"></a>size
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

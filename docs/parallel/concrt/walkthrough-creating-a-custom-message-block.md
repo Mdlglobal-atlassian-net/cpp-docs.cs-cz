@@ -5,190 +5,190 @@ helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: e7dfc5d78d2281d77b9ce882b302c4d7db776d3b
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a29ed382d67b91443bd13e029af2a37c42ee834d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856988"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142831"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Návod: Vytvoření vlastního bloku zpráv
 
-Tento dokument popisuje, jak vytvořit typ bloku vlastní zprávy, který řadí příchozích zprávy podle priority.
+Tento dokument popisuje, jak vytvořit vlastní typ bloku zpráv, který vyřadí příchozí zprávy podle priority.
 
-Přestože typy bloků předdefinovaných zpráv poskytují celou řadu funkcí, můžete vytvořit vlastní typ bloku zprávy a přizpůsobit tak, aby vyhovovala požadavkům vaší aplikace. Popis typů bloků vestavěné zprávy, které jsou poskytovány asynchronní knihovnou agentů najdete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md).
+I když integrované typy bloků zpráv poskytují široké spektrum funkcí, můžete vytvořit vlastní typ bloku zpráv a přizpůsobit ho tak, aby splňoval požadavky vaší aplikace. Popis integrovaných typů bloků zpráv, které jsou k dispozici v knihovně asynchronních agentů, naleznete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="prerequisites"></a>Požadavky
 
-Před zahájením tohoto návodu, přečtěte si následující dokumenty:
+Než začnete tento návod, přečtěte si následující dokumenty:
 
 - [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)
 
 - [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)
 
-##  <a name="top"></a> Oddíly
+## <a name="top"></a>Řezů
 
-Tento návod obsahuje následující části:
+Tento návod obsahuje následující oddíly:
 
 - [Návrh vlastního bloku zpráv](#design)
 
-- [Definice třídy priority_buffer](#class)
+- [Definování třídy priority_buffer](#class)
 
-- [Kompletní příklad](#complete)
+- [Úplný příklad](#complete)
 
-##  <a name="design"></a> Návrh vlastního bloku zpráv
+## <a name="design"></a>Návrh vlastního bloku zpráv
 
-Bloky zpráv se účastní aktu odesílání a příjem zpráv. Blok zpráv, který odesílá zprávy se označuje jako *zdrojovým blokem*. Blok zpráv, který přijímá zprávy, se nazývá *cílový blok*. Blok zpráv, který odesílá a přijímá zprávy, se nazývá *propagátor*. Knihovna agentů používá abstraktní třídu [concurrency::ISource](../../parallel/concrt/reference/isource-class.md) pro reprezentaci zdrojových bloků a abstraktní třídu [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) pro reprezentaci cílových bloků. Typy bloků zpráv, které se chovají jako zdroje, jsou odvozeny z `ISource`; typy bloků zpráv, které se chovají jako cíle, jsou odvozeny z `ITarget`.
+Bloky zpráv se účastní jednání o posílání a přijímání zpráv. Blok zpráv, který odesílá zprávy, se označuje jako *Zdrojový blok*. Blok zpráv, který přijímá zprávy, se označuje jako *cílový blok*. Blok zpráv, který odesílá i přijímá zprávy, se označuje jako *blok šíření*. Knihovna agentů používá abstraktní třídu [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) , která představuje zdrojové bloky a abstraktní třídu [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) , která představuje cílové bloky. Typy bloků zpráv, které fungují jako zdroje odvozené od `ISource`; typy bloků zpráv, které fungují jako cíle, jsou odvozeny od `ITarget`.
 
-Ačkoli lze odvodit váš typ bloku zprávy přímo z `ISource` a `ITarget`, knihovna agentů definuje tři základní třídy, které provádějí většinu funkcí, které jsou společné pro všechny typy bloků zpráv, například zpracování chyb a propojení blokům zpráv v souběžným bezpečným způsobem. [Concurrency::source_block](../../parallel/concrt/reference/source-block-class.md) třída odvozena z `ISource` a odesílá zprávy jiným blokům. [Concurrency::target_block](../../parallel/concrt/reference/target-block-class.md) třída odvozena z `ITarget` a přijímá zprávy z jiných bloků. [Concurrency::propagator_block](../../parallel/concrt/reference/propagator-block-class.md) třída odvozena z `ISource` a `ITarget` a odesílá zprávy jiným blokům a přijímá zprávy z jiných bloků. Doporučujeme používat tyto tři základní třídy pro zpracování podrobností infrastrukturu tak, aby se mohli soustředit na chování vašeho bloku zpráv.
+I když můžete odvodit typ bloku zprávy přímo z `ISource` a `ITarget`, knihovna agentů definuje tři základní třídy, které provádějí většinu funkcí, které jsou společné pro všechny typy bloků zpráv, například zpracování chyb a spojování bloků zpráv v rámci zajištění bezpečného souběžnosti. Třída [Concurrency:: source_block](../../parallel/concrt/reference/source-block-class.md) je odvozena z `ISource` a odesílá zprávy do jiných bloků. Třída [Concurrency:: target_block](../../parallel/concrt/reference/target-block-class.md) je odvozena z `ITarget` a přijímá zprávy z jiných bloků. Třída [Concurrency::p ropagator_block](../../parallel/concrt/reference/propagator-block-class.md) je odvozena z `ISource` a `ITarget` a odesílá zprávy jiným blokům a přijímá zprávy z jiných bloků. Doporučujeme používat tyto tři základní třídy pro zpracování podrobností infrastruktury, abyste se mohli zaměřit na chování vašeho bloku zpráv.
 
-`source_block`, `target_block`, A `propagator_block` třídy jsou šablony, které jsou parametrizovány na typ, který spravuje připojení nebo propojení mezi zdrojovými a cílovými bloky a typ, který spravuje zpracování zpráv. Knihovna agentů definuje dva typy, které provádějí správu odkazů, [concurrency::single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md) a [concurrency::multi_link_registry](../../parallel/concrt/reference/multi-link-registry-class.md). `single_link_registry` Třída umožňuje bloku zprávy být spojen s jedním zdrojem nebo jedním cílem. `multi_link_registry` Třída umožňuje bloku zprávy být spojen s více zdroji nebo více cílů. Knihovna agentů definuje jednu třídu, která provádí správu zprávy, [concurrency::ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md). `ordered_message_processor` Třída umožňuje blokům zpráv zpracovávat zprávy v pořadí, ve kterém je obdrží.
+Třídy `source_block`, `target_block`a `propagator_block` jsou šablony, které jsou parametrizované na typu, který spravuje připojení, nebo propojení mezi zdrojovými a cílovými bloky a na typu, který spravuje zpracování zpráv. Knihovna agentů definuje dva typy, které provádějí správu odkazů, [Concurrency:: single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md) a [concurrency:: multi_link_registry](../../parallel/concrt/reference/multi-link-registry-class.md). Třída `single_link_registry` umožňuje, aby byl blok zprávy propojen s jedním zdrojem nebo na jednom cíli. Třída `multi_link_registry` umožňuje, aby byl blok zprávy propojen s více zdroji nebo více cíli. Knihovna agentů definuje jednu třídu, která provádí správu zpráv, [Concurrency:: ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md). Třída `ordered_message_processor` umožňuje blokům zpráv zpracovávat zprávy v pořadí, ve kterém je přijímá.
 
-Abyste lépe pochopili vztah bloků zpráv a jejich zdrojů a cílů, podívejte se na následující příklad. Tento příklad ukazuje deklaraci třídy [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) třídy.
+Chcete-li lépe pochopit, jak bloky zpráv souvisejí s jejich zdroji a cíli, vezměte v úvahu následující příklad. Tento příklad ukazuje deklaraci třídy [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) .
 
 [!code-cpp[concrt-priority-buffer#20](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_1.cpp)]
 
-`transformer` Třída odvozena z `propagator_block`a proto se chová jako blok zdrojový a cílový blok. Přijímá zprávy typu `_Input` a odesílá zprávy typu `_Output`. `transformer` Určuje třída `single_link_registry` jako správce odkazu pro všechny cílové bloky a `multi_link_registry` jako správce odkazu pro všechny zdrojové bloky. Proto `transformer` objekt může mít až jeden cíl a neomezený počet zdrojů.
+Třída `transformer` je odvozena z `propagator_block`a proto funguje jako zdrojový blok i jako cílový blok. Přijímá zprávy typu `_Input` a odesílá zprávy typu `_Output`. Třída `transformer` určuje `single_link_registry` jako správce odkazů pro všechny cílové bloky a `multi_link_registry` jako správce odkazů pro všechny zdrojové bloky. Proto objekt `transformer` může mít až jeden cíl a neomezený počet zdrojů.
 
-Třída, která je odvozena z `source_block` musí implementovat šest metod: [propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets), [accept_message](reference/source-block-class.md#accept_message), [reserve_message](reference/source-block-class.md#reserve_message), [ consume_message](reference/source-block-class.md#consume_message), [release_message](reference/source-block-class.md#release_message), a [resume_propagation](reference/source-block-class.md#resume_propagation). Třídu, která je odvozena z `target_block` musí implementovat [propagate_message](reference/propagator-block-class.md#propagate_message) metody a může volitelně implementovat [send_message](reference/propagator-block-class.md#send_message) metoda. Odvozování z `propagator_block` je funkčně ekvivalentní odvození z `source_block` a `target_block`.
+Třída, která je odvozena z `source_block` musí implementovat šest metod: [propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets), [accept_message](reference/source-block-class.md#accept_message), [reserve_message](reference/source-block-class.md#reserve_message), [consume_message](reference/source-block-class.md#consume_message), [release_message](reference/source-block-class.md#release_message)a [resume_propagation](reference/source-block-class.md#resume_propagation). Třída, která je odvozena z `target_block` musí implementovat metodu [propagate_message](reference/propagator-block-class.md#propagate_message) a může volitelně implementovat metodu [send_message](reference/propagator-block-class.md#send_message) . Odvození od `propagator_block` je funkčně ekvivalentní k odvození z `source_block` a `target_block`.
 
-`propagate_to_any_targets` Metoda je volána modulem runtime pro synchronní nebo asynchronní zpracování všech příchozích zpráv a propagaci všech odchozích zpráv. `accept_message` Metoda je volána cílovými bloky pro příjem zpráv. Mnoho typů bloků zpráv, jako `unbounded_buffer`, odesílá zprávy pouze prvnímu cíli, který přijme. Proto převede vlastnictví zprávy na cíl. Další typy bloků zpráv, jako například [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md), nabízejí zprávy každému svému cílovému bloku. Proto `overwrite_buffer` vytvoří kopii zprávy pro každý svůj cíl.
+Metoda `propagate_to_any_targets` je volána modulem runtime k asynchronnímu nebo synchronnímu zpracování všech příchozích zpráv a šíření všech odchozích zpráv. Metoda `accept_message` je volána cílovými bloky pro příjem zpráv. Mnoho typů bloků zpráv, například `unbounded_buffer`, odesílá zprávy pouze do prvního cíle, který je obdrží. Proto přenáší vlastnictví zprávy na cíl. Jiné typy bloků zpráv, například [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md), nabízejí zprávy každému z jeho cílových bloků. Proto `overwrite_buffer` vytvoří kopii zprávy pro každý z jejích cílů.
 
-`reserve_message`, `consume_message`, `release_message`, A `resume_propagation` metody umožňují blokům zpráv účastnit se rezervace zpráv. Cílové bloky volají `reserve_message` metoda při nabídnuta zpráva a máte ji rezervovat pro pozdější použití. Poté, co cílový blok vyhradí zprávu, může zavolat `consume_message` metodu ke zpracování zprávy nebo `release_message` metoda ke zrušení rezervace. Stejně jako u `accept_message` metoda, provádění `consume_message` můžete převést vlastnictví zprávy nebo vrátit kopii zprávy. Poté, co cílový blok spotřebuje nebo uvolní vyhrazenou zprávu, modul runtime volá `resume_propagation` metody. Tato metoda obvykle pokračuje v šíření zpráv, počínaje další zprávou ve frontě.
+Metody `reserve_message`, `consume_message`, `release_message`a `resume_propagation` umožňují, aby se bloky zpráv účastnily rezervace zpráv. Cílové bloky volají metodu `reserve_message`, když jsou nabízena zpráva a musí ji rezervovat pro pozdější použití. Po tom, co cílový blok rezervuje zprávu, může zavolat metodu `consume_message` pro využití této zprávy nebo metody `release_message` pro zrušení rezervace. Stejně jako u metody `accept_message` může implementace `consume_message` buď přenést vlastnictví zprávy, nebo vracet kopii zprávy. Poté, co cílový blok spotřebuje nebo uvolní vyhrazenou zprávu, modul runtime zavolá metodu `resume_propagation`. Tato metoda obvykle pokračuje v šíření zpráv, počínaje další zprávou ve frontě.
 
-Modul runtime zavolá `propagate_message` metody pro asynchronní přenos zprávy z jiného bloku do aktuálního. `send_message` Způsob se podobá `propagate_message`, s tím rozdílem, že ho synchronně, místo asynchronně, odesílá zprávu cílovým blokům. Výchozí implementace `send_message` odmítne všechny příchozí zprávy. Modul runtime nevolá ani jednu z těchto metod Pokud zpráva neprojde funkcí volitelného filtru, který je přidružený k cílovému bloku. Další informace o filtrech zpráv naleznete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md).
+Modul runtime volá metodu `propagate_message` k asynchronnímu přenosu zprávy z jiného bloku do aktuálního. Metoda `send_message` se podobá `propagate_message`, s tím rozdílem, že synchronně místo asynchronně odesílá zprávu do cílových bloků. Výchozí implementace `send_message` odmítne všechny příchozí zprávy. Modul runtime nevolá žádnou z těchto metod, pokud zpráva neprojde volitelnou funkcí filtru, která je přidružena k cílovému bloku. Další informace o filtrech zpráv naleznete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md).
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="class"></a> Definice třídy priority_buffer
+## <a name="class"></a>Definování třídy priority_buffer
 
-`priority_buffer` Třída je typu blok vlastní zprávy, která řadí příchozí zprávy nejprve podle priority a pak podle pořadí, ve kterém jsou zprávy přijímány. `priority_buffer` Třídy vypadá podobně jako [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) třídy, protože obsahuje frontu zpráv a také protože funguje jako zdrojový i cílový blok zpráv a může mít více zdrojů i více cíle. Ale `unbounded_buffer` zakládá šíření jenom na pořadí, ve kterém přijímá zprávy ze zdrojů zprávy.
+Třída `priority_buffer` je vlastní typ bloku zprávy, který nejprve vyřadí příchozí zprávy podle priority a pak podle pořadí, ve kterém jsou zprávy přijímány. Třída `priority_buffer` se podobá třídě [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) , protože obsahuje frontu zpráv a také proto, že funguje jako zdrojový i cílový blok zprávy a může mít jak více zdrojů, tak i více cílů. Nicméně `unbounded_buffer` základy šíření zpráv pouze v pořadí, ve kterém přijímá zprávy ze svých zdrojů.
 
-`priority_buffer` Třídy přijímá zprávy typu std::[řazené kolekce členů](../../standard-library/tuple-class.md) , které obsahují `PriorityType` a `Type` elementy. `PriorityType` odkazuje na typ, který má prioritu každé zprávy; `Type` odkazuje na datovou část zprávy. `priority_buffer` Třídy odesílá zprávy typu `Type`. `priority_buffer` Třídy také spravuje dvě fronty zpráv: [std::priority_queue](../../standard-library/priority-queue-class.md) pro příchozí zprávy a std::[fronty](../../standard-library/queue-class.md) pro odchozí zprávy. Řazení zpráv podle priority je užitečné, když `priority_buffer` objektu přijímá více zpráv najednou nebo když přijímá více zpráv předtím, než jsou nějaké zprávy přečteny spotřebitelem.
+Třída `priority_buffer` přijímá zprávy typu std::[Tuple](../../standard-library/tuple-class.md) , které obsahují prvky `PriorityType` a `Type`. `PriorityType` odkazuje na typ, který má prioritu každé zprávy; `Type` odkazuje na datovou část zprávy. Třída `priority_buffer` odesílá zprávy typu `Type`. Třída `priority_buffer` také spravuje dvě fronty zpráv: objekt [riority_queue std::p](../../standard-library/priority-queue-class.md) pro příchozí zprávy a objekt std::[Queue](../../standard-library/queue-class.md) pro odchozí zprávy. Řazení zpráv podle priority je užitečné v případě, že objekt `priority_buffer` obdrží více zpráv současně nebo když obdrží více zpráv, než je uživatelé přečtou.
 
-Kromě sedmi metod, že třída odvozená z `propagator_block` musí implementovat, `priority_buffer` třídy také přepsání `link_target_notification` a `send_message` metody. `priority_buffer` Třída definuje také dvě veřejné pomocné metody `enqueue` a `dequeue`a soukromou pomocnou metodu `propagate_priority_order`.
+Kromě sedmi metod, které třída odvozená z `propagator_block` musí implementovat, třída `priority_buffer` také přepisuje metody `link_target_notification` a `send_message`. Třída `priority_buffer` také definuje dvě veřejné pomocné metody, `enqueue` a `dequeue`a soukromou pomocnou metodu, `propagate_priority_order`.
 
-Následující postup popisuje, jak implementovat `priority_buffer` třídy.
+Následující postup popisuje, jak implementovat třídu `priority_buffer`.
 
-#### <a name="to-define-the-prioritybuffer-class"></a>Definice třídy priority_buffer
+#### <a name="to-define-the-priority_buffer-class"></a>Definice třídy priority_buffer
 
-1. Vytvořte soubor hlaviček jazyka C++ a pojmenujte ho `priority_buffer.h`. Alternativně můžete použít existující hlavičkový soubor, který je součástí projektu.
+1. Vytvořte C++ hlavičkový soubor a pojmenujte ho `priority_buffer.h`. Alternativně můžete použít existující hlavičkový soubor, který je součástí projektu.
 
-1. V `priority_buffer.h`, přidejte následující kód.
+1. V `priority_buffer.h`přidejte následující kód.
 
 [!code-cpp[concrt-priority-buffer#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_2.h)]
 
-1. V `std` obor názvů, definujte specializace z [std::less](../../standard-library/less-struct.md) a [std::greater](../../standard-library/greater-struct.md) , které působí na souběžnost::[zpráva](../../parallel/concrt/reference/message-class.md) objekty.
+1. V oboru názvů `std` definujte specializace [std:: minus](../../standard-library/less-struct.md) a [std:: vyšší](../../standard-library/greater-struct.md) , které fungují v objektech concurrency::[Message](../../parallel/concrt/reference/message-class.md) .
 
 [!code-cpp[concrt-priority-buffer#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_3.h)]
 
-   `priority_buffer` Třídy úložiště `message` objekty v `priority_queue` objektu. Tyto specializace umožňují frontě priorit řadit zprávy podle jejich priority. Priorita je první prvek `tuple` objektu.
+   Třída `priority_buffer` ukládá `message` objektů do objektu `priority_queue`. Tyto specializace typu umožňují, aby fronta priorit seřadila zprávy podle jejich priority. Priorita je prvním prvkem objektu `tuple`.
 
-1. V `concurrencyex` oboru názvů deklarovat `priority_buffer` třídy.
+1. V oboru názvů `concurrencyex` Deklarujte třídu `priority_buffer`.
 
 [!code-cpp[concrt-priority-buffer#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_4.h)]
 
-   `priority_buffer` Třída odvozena z `propagator_block`. Proto ji můžete odesílat i přijímat zprávy. `priority_buffer` Třída může mít více cílů, které přijímají zprávy typu `Type`. Můžete mít také více zdrojů, které odesílají zprávy typu `tuple<PriorityType, Type>`.
+   Třída `priority_buffer` je odvozena z `propagator_block`. Proto může odesílat i přijímat zprávy. Třída `priority_buffer` může mít více cílů, které přijímají zprávy typu `Type`. Může mít také více zdrojů, které odesílají zprávy typu `tuple<PriorityType, Type>`.
 
-1. V `private` část `priority_buffer` třídy, přidejte následující proměnné členů.
+1. V části `private` `priority_buffer` třídy přidejte následující proměnné členů.
 
 [!code-cpp[concrt-priority-buffer#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_5.h)]
 
-   `priority_queue` Objekt obsahuje příchozí zprávy; `queue` objekt obsahuje odchozí zprávy. A `priority_buffer` objekt může přijmout více zpráv najednou; `critical_section` objekt synchronizuje přístup k frontě vstupních zpráv.
+   Objekt `priority_queue` obsahuje příchozí zprávy; objekt `queue` obsahuje odchozí zprávy. Objekt `priority_buffer` může přijímat více zpráv současně. objekt `critical_section` synchronizuje přístup do fronty vstupních zpráv.
 
-1. V `private` části, definujte konstruktor kopie a operátor přiřazení. To zabraňuje `priority_queue` objekty v přiřaditelnosti.
+1. V části `private` definujte kopírovací konstruktor a operátor přiřazení. Tím se zabrání přiřazení objektů `priority_queue`.
 
 [!code-cpp[concrt-priority-buffer#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_6.h)]
 
-1. V `public` části, definujte konstruktory, které jsou společné pro mnoho typů bloků zprávy. Také definujte destruktor.
+1. V části `public` definujte konstruktory, které jsou společné pro mnoho typů bloků zpráv. Také definujte destruktor.
 
 [!code-cpp[concrt-priority-buffer#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_7.h)]
 
-1. V `public` části, definovat metody `enqueue` a `dequeue`. Tyto pomocné metody poskytují alternativní způsob odesílání a příjem zpráv `priority_buffer` objektu.
+1. V části `public` definujte metody `enqueue` a `dequeue`. Tyto pomocné metody poskytují alternativní způsob, jak odesílat zprávy do a přijímat zprávy z objektu `priority_buffer`.
 
 [!code-cpp[concrt-priority-buffer#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_8.h)]
 
-9. V `protected` části, definujte `propagate_to_any_targets` metody.
+9. V části `protected` Definujte metodu `propagate_to_any_targets`.
 
 [!code-cpp[concrt-priority-buffer#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_9.h)]
 
-   `propagate_to_any_targets` Metoda převede zprávu, která je na začátku vstupní fronty do výstupní fronty a šíří všechny zprávy ve výstupní frontě.
+   Metoda `propagate_to_any_targets` přenáší zprávu, která je na začátku vstupní fronty, do výstupní fronty a šíří všechny zprávy ve výstupní frontě.
 
-10. V `protected` části, definujte `accept_message` metody.
+10. V části `protected` Definujte metodu `accept_message`.
 
 [!code-cpp[concrt-priority-buffer#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_10.h)]
 
-   Když cílový blok volá `accept_message` metody `priority_buffer` třídy převede vlastnictví zprávy na první cílový blok, který ji přijímá. (To se podobá chování `unbounded_buffer`.)
+   Když cílový blok volá metodu `accept_message`, třída `priority_buffer` přenáší vlastnictví zprávy na první cílový blok, který je přijímá. (To se podobá chování `unbounded_buffer`.)
 
-11. V `protected` části, definujte `reserve_message` metody.
+11. V části `protected` Definujte metodu `reserve_message`.
 
 [!code-cpp[concrt-priority-buffer#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_11.h)]
 
-   `priority_buffer` Třída umožňuje cílovému bloku vyhradit zprávu, když poskytnutý identifikátor zprávy odpovídá identifikátoru zprávy, která je na začátku fronty. Jinými slovy, cíl může rezervovat zprávu, pokud `priority_buffer` objekt dosud nepřijal další zprávu a nebyla dosud šířen mimo stávající.
+   Třída `priority_buffer` umožňuje cílovému bloku rezervovat zprávu, pokud zadaný identifikátor zprávy odpovídá identifikátoru zprávy, která je na začátku fronty. Jinými slovy cíl může rezervovat zprávu, pokud objekt `priority_buffer` ještě nedostal další zprávu a ještě nerozšířila aktuální.
 
-12. V `protected` části, definujte `consume_message` metody.
+12. V části `protected` Definujte metodu `consume_message`.
 
 [!code-cpp[concrt-priority-buffer#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_12.h)]
 
-   Cílový blok zavolá `consume_message` chcete převést vlastnictví zprávy, která je vyhrazena.
+   Cílový blok volá `consume_message` pro přenos vlastnictví zprávy, kterou rezervoval.
 
-13. V `protected` části, definujte `release_message` metody.
+13. V části `protected` Definujte metodu `release_message`.
 
 [!code-cpp[concrt-priority-buffer#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_13.h)]
 
-   Cílový blok zavolá `release_message` pro zrušení rezervace zprávy.
+   Cílový blok volá `release_message` pro zrušení jeho rezervace na zprávu.
 
-14. V `protected` části, definujte `resume_propagation` metody.
+14. V části `protected` Definujte metodu `resume_propagation`.
 
 [!code-cpp[concrt-priority-buffer#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_14.h)]
 
-   Modul runtime zavolá `resume_propagation` poté, co cílový blok spotřebuje nebo uvolní vyhrazenou zprávu. Tato metoda šíří všechny zprávy, které jsou ve výstupní frontě.
+   Volání za běhu `resume_propagation` po cílovém bloku buď spotřebují, nebo uvolní rezervovanou zprávu. Tato metoda šíří všechny zprávy, které jsou ve výstupní frontě.
 
-15. V `protected` části, definujte `link_target_notification` metody.
+15. V části `protected` Definujte metodu `link_target_notification`.
 
 [!code-cpp[concrt-priority-buffer#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_15.h)]
 
-   `_M_pReservedFor` Členskou proměnnou je definována základní třídou `source_block`. Tato členská proměnná ukazuje na cílový blok, pokud existuje, který drží rezervaci na zprávu, která je na začátku výstupní fronty. Modul runtime zavolá `link_target_notification` když je připojen nový cíl k `priority_buffer` objektu. Tato metoda šíří všechny zprávy, které jsou ve výstupní frontě, pokud žádný cíl nedrží rezervaci.
+   Členská proměnná `_M_pReservedFor` je definována základní třídou `source_block`. Tato členská proměnná odkazuje na cílový blok (pokud existuje), který drží rezervaci na zprávu, která je na začátku výstupní fronty. Běhové volání `link_target_notification`, když je nový cíl propojen s objektem `priority_buffer`. Tato metoda šíří všechny zprávy, které jsou ve výstupní frontě, pokud žádný cíl nedrží rezervaci.
 
-16. V `private` části, definujte `propagate_priority_order` metody.
+16. V části `private` Definujte metodu `propagate_priority_order`.
 
 [!code-cpp[concrt-priority-buffer#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_16.h)]
 
-   Tato metoda šíří všechny zprávy z výstupní fronty. Všechny zprávy ve frontě jsou nabízeny každému cílovému bloku, dokud jeden z cílových bloků zprávu nepřijme. `priority_buffer` Třídy zachovává pořadí odchozích zpráv. Proto první zpráva ve výstupní frontě musí být přijata cílovým blokem předtím, než tato metoda nabídne jakoukoli jinou zprávu cílovým blokům.
+   Tato metoda šíří všechny zprávy z výstupní fronty. Všechny zprávy ve frontě jsou nabízeny každému cílovému bloku, dokud některý z cílových bloků zprávu nepřijme. Třída `priority_buffer` zachovává pořadí odchozích zpráv. Proto musí být první zpráva ve frontě výstupu přijata cílovým blokem před tím, než tato metoda nabídne jakékoli jiné zprávě cílovým blokům.
 
-17. V `protected` části, definujte `propagate_message` metody.
+17. V části `protected` Definujte metodu `propagate_message`.
 
 [!code-cpp[concrt-priority-buffer#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_17.h)]
 
-   `propagate_message` Metoda umožňuje `priority_buffer` třídy tak, aby fungoval jako příjemce zprávy neboli cíl. Tato metoda obdrží zprávu, která je nabízena poskytnutým zdrojovým blokem a vloží ji do prioritní fronty. `propagate_message` Metoda pak asynchronně odešle všechny výstupní zprávy cílovým blokům.
+   Metoda `propagate_message` umožňuje, aby třída `priority_buffer` pracovala jako příjemce zprávy nebo cíl. Tato metoda obdrží zprávu, kterou nabízí poskytnutý zdrojový blok, a vloží tuto zprávu do fronty priorit. Metoda `propagate_message` pak asynchronně pošle všechny výstupní zprávy do cílových bloků.
 
-   Modul runtime volá tuto metodu při volání [concurrency::asend](reference/concurrency-namespace-functions.md#asend) funkce nebo když je blok zpráv připojen k jinému bloku zpráv.
+   Modul runtime volá tuto metodu při volání funkce [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) nebo v případě, že je blok zpráv připojen k jiným blokům zpráv.
 
-18. V `protected` části, definujte `send_message` metody.
+18. V části `protected` Definujte metodu `send_message`.
 
 [!code-cpp[concrt-priority-buffer#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_18.h)]
 
-   `send_message` Způsob se podobá `propagate_message`. Odešle však výstupní zprávy synchronně místo asynchronně.
+   Metoda `send_message` se podobá `propagate_message`. Ale odešle výstupní zprávy synchronně namísto asynchronního.
 
-   Modul runtime volá tuto metodu při odesílání synchronní operace, například při volání [concurrency::send](reference/concurrency-namespace-functions.md#send) funkce.
+   Modul runtime volá tuto metodu během operace synchronního odeslání, například při volání funkce [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) .
 
-`priority_buffer` Třída obsahuje přetížení konstruktoru, která jsou běžná v mnoha typech bloku zprávy. Některá přetížení konstruktoru přijímají [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) nebo [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objekty, které umožňují bloku zprávy být spravován určitým plánovačem úloh. Další přetížení konstruktoru přebírají funkci filtru. Funkce filtru povolují blokům zpráv přijmout nebo odmítnout zprávu na základě její datové části. Další informace o filtrech zpráv naleznete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md). Další informace o plánovačích úkolů naleznete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Třída `priority_buffer` obsahuje přetížení konstruktoru, která jsou typická v mnoha typech bloků zpráv. Některá přetížení konstruktoru přijímají objekty [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) nebo [Concurrency:: Schedule](../../parallel/concrt/reference/schedulegroup-class.md) , které umožňují spravovat blok zpráv konkrétním plánovačem úloh. Další přetížení konstruktoru přebírají funkci filtru. Funkce filtru umožňují blokům zpráv přijmout nebo odmítnout zprávu na základě její datové části. Další informace o filtrech zpráv naleznete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md). Další informace o Plánovači úloh naleznete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-Vzhledem k tomu, `priority_buffer` třídy seřadí zprávy podle priority a pak podle pořadí, ve kterém jsou zprávy přijímány, tato třída je nejužitečnější, když obdrží zprávy asynchronně, například při volání [concurrency::asend](reference/concurrency-namespace-functions.md#asend)funkce nebo když je blok zpráv připojen k jinému bloku zpráv.
+Vzhledem k tomu, že třída `priority_buffer` řadí zprávy podle priority a pak podle pořadí, ve kterém jsou zprávy přijímány, je tato třída nejužitečnější, když přijímá zprávy asynchronně, například při volání funkce [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) nebo při připojení bloku zpráv k jiným blokům zpráv.
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="complete"></a> Kompletní příklad
+## <a name="complete"></a>Úplný příklad
 
-Následující příklad ukazuje úplnou definici `priority_buffer` třídy.
+Následující příklad ukazuje úplnou definici třídy `priority_buffer`.
 
 [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]
 
-Následující příklad provádí souběžně několik `asend` a [concurrency::receive](reference/concurrency-namespace-functions.md#receive) operace `priority_buffer` objektu.
+Následující příklad současně provádí několik `asend` a [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) pro objekt `priority_buffer`.
 
 [!code-cpp[concrt-priority-buffer#19](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_20.cpp)]
 
-Tento příklad vytvoří následující ukázkový výstup.
+Tento příklad vytvoří následující vzorový výstup.
 
 ```Output
 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36 36
@@ -196,17 +196,17 @@ Tento příklad vytvoří následující ukázkový výstup.
 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12
 ```
 
-`priority_buffer` Třídy seřadí zprávy nejprve podle priority a pak podle pořadí, ve kterém zprávy příjme. V tomto příkladu jsou zprávy s vyšší číselnou prioritou vloženy směrem k začátku fronty.
+Třída `priority_buffer` řadí zprávy nejprve podle priority a pak podle pořadí, ve kterém přijímá zprávy. V tomto příkladu se do přední části fronty vloží zprávy s větší číselnou prioritou.
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit definici třídy `priority_buffer` třída v souboru s názvem `priority_buffer.h` a testovací program do souboru s názvem `priority_buffer.cpp` a pak spusťte následující příkaz v sadě Visual Studio Okno příkazového řádku.
+Zkopírujte vzorový kód a vložte ho do projektu sady Visual Studio nebo vložte definici třídy `priority_buffer` do souboru s názvem `priority_buffer.h` a testovací program v souboru s názvem `priority_buffer.cpp` a potom spusťte následující příkaz v okně příkazového řádku sady Visual Studio.
 
-**cl.exe /EHsc priority_buffer.cpp**
+**CL. exe/EHsc priority_buffer. cpp**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

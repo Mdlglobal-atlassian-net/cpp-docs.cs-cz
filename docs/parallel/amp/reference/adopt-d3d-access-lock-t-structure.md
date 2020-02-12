@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 f1_keywords:
 - amprt/concurrency::direct3d::adopt_d3d_access_lock_t
 ms.assetid: ef10bb06-88d6-420b-bb81-35895b2e02e6
-ms.openlocfilehash: 7d72902a0a11ff7e9c76db2b8b6a8a76199a40dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a52632134a8e386390a88a326d4ca870951a8288
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405611"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127147"
 ---
-# <a name="adoptd3daccesslockt-structure"></a>adopt_d3d_access_lock_t – struktura
+# <a name="adopt_d3d_access_lock_t-structure"></a>adopt_d3d_access_lock_t – struktura
 
-Typ tagu pro označení uzamčení přístupu D3D by měla být přijata spíše než získána.
+Typ značky označující, že by měl být přijat zámek přístupu D3D místo získání.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 struct adopt_d3d_access_lock_t;
 ```
 
@@ -29,10 +29,10 @@ struct adopt_d3d_access_lock_t;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amprt.h
+**Záhlaví:** amprt. h
 
-**Namespace:** concurrency::direct3d
+**Obor názvů:** concurrency::d irect3d
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::direct3d – obor názvů](concurrency-direct3d-namespace.md)

@@ -17,64 +17,64 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35c7cc72520cdb0675abf9c15574a49e33741d0b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337580"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142698"
 ---
-# <a name="sourcelinkmanager-class"></a>source_link_manager – třída
+# <a name="source_link_manager-class"></a>source_link_manager – třída
 
-`source_link_manager` Objekt spravuje zasílání zpráv bloku síťová propojení k `ISource` bloky.
+Objekt `source_link_manager` spravuje zprávy blokující síťové odkazy na bloky `ISource`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class _LinkRegistry>
 class source_link_manager;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_LinkRegistry*<br/>
-Síťového propojení registru.
+Registr síťového propojení.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
-|`const_pointer`|Typ, který poskytuje ukazatel na `const` prvek `source_link_manager` objektu.|
-|`const_reference`|Typ, který poskytuje odkaz na `const` element uložené v `source_link_manager` objekt pro čtení a provádění operací const.|
-|`iterator`|Typ, který poskytuje iterátor, který může číst nebo upravovat libovolný prvek v `source_link_manager` objektu.|
-|`type`|Typ odkazu registru spravovaných `source_link_manager` objektu.|
+|`const_pointer`|Typ, který poskytuje ukazatel na prvek `const` v objektu `source_link_manager`.|
+|`const_reference`|Typ, který poskytuje odkaz na `const` prvek uložený v objektu `source_link_manager` pro čtení a provádění operací const.|
+|`iterator`|Typ, který poskytuje iterátor, který může číst nebo upravovat libovolný prvek v objektu `source_link_manager`.|
+|`type`|Typ registru propojení, který je spravován objektem `source_link_manager`.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
 |Název|Popis|
 |----------|-----------------|
-|[source_link_manager](#ctor)|Vytvoří `source_link_manager` objektu.|
-|[~source_link_manager Destructor](#dtor)|Odstraní `source_link_manager` objektu.|
+|[source_link_manager](#ctor)|Vytvoří objekt `source_link_manager`.|
+|[~ source_link_manager destruktor](#dtor)|Odstraní objekt `source_link_manager`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[add](#add)|Přidá odkaz na zdroj `source_link_manager` objektu.|
-|[začít](#begin)|Vrátí iterátor na první prvek `source_link_manager` objektu.|
-|[Obsahuje](#contains)|Hledání `network_link_registry` v rámci této `source_link_manager` objekt pro zadaný blok.|
-|[Počet](#count)|Spočítá počet propojených bloky v `source_link_manager` objektu.|
-|[Referenční dokumentace](#reference)|Získá odkaz na `source_link_manager` objektu.|
-|[register_target_block](#register_target_block)|Zaregistruje cílový blok, který obsahuje tato `source_link_manager` objektu.|
-|[Vydání verze](#release)|Verze odkazu na `source_link_manager` objektu.|
-|[remove](#remove)|Odebere odkaz `source_link_manager` objektu.|
-|[set_bound](#set_bound)|Nastaví maximální počet odkazů zdroje, které mohou být přidány do tohoto `source_link_manager` objektu.|
+|[add](#add)|Přidá zdrojový odkaz na objekt `source_link_manager`.|
+|[ifunctiondiscovery](#begin)|Vrátí iterátor na první prvek objektu `source_link_manager`.|
+|[zobrazí](#contains)|Vyhledá `network_link_registry` v rámci tohoto objektu `source_link_manager` pro zadaný blok.|
+|[count](#count)|Spočítá počet propojených bloků v objektu `source_link_manager`.|
+|[odkaz](#reference)|Získá odkaz na objekt `source_link_manager`.|
+|[register_target_block](#register_target_block)|Zaregistruje cílový blok, který obsahuje tento objekt `source_link_manager`.|
+|[předběžné](#release)|Uvolní odkaz na objekt `source_link_manager`.|
+|[remove](#remove)|Odebere propojení z objektu `source_link_manager`.|
+|[set_bound](#set_bound)|Nastaví maximální počet zdrojových odkazů, které lze přidat k tomuto objektu `source_link_manager`.|
 
 ## <a name="remarks"></a>Poznámky
 
-V současné době zdrojových bloků je počítáno referenčně. Toto je obálka na `network_link_registry` objekt, který umožňuje souběžný přístup k odkazy a umožňuje odkazovat na odkazy pomocí zpětných volání. Zpráva bloky ( `target_block`s nebo `propagator_block`s) by měla tuto třídu použít odkazy na jejich zdroj.
+V současné době jsou zdrojové bloky zjištěny odkazem. Toto je obálka objektu `network_link_registry`, který umožňuje souběžný přístup k odkazům a poskytuje možnost odkazovat na odkazy prostřednictvím zpětných volání. Bloky zpráv (`target_block`s nebo `propagator_block`) by měly tuto třídu používat pro své zdrojové odkazy.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -82,144 +82,144 @@ V současné době zdrojových bloků je počítáno referenčně. Toto je obál
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="add"></a> Přidat
+## <a name="add"></a>přidávání
 
-Přidá odkaz na zdroj `source_link_manager` objektu.
+Přidá zdrojový odkaz na objekt `source_link_manager`.
 
-```
+```cpp
 void add(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který chcete přidat.
+*_Link*<br/>
+Ukazatel na blok, který má být přidán.
 
-##  <a name="begin"></a> začít
+## <a name="begin"></a>ifunctiondiscovery
 
-Vrátí iterátor na první prvek `source_link_manager` objektu.
+Vrátí iterátor na první prvek objektu `source_link_manager`.
 
-```
+```cpp
 iterator begin();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor adresující první prvek `source_link_manager` objektu.
+Iterátor adresující první prvek v objektu `source_link_manager`.
 
 ### <a name="remarks"></a>Poznámky
 
-Je indikován stav koncový iterátor `NULL` odkaz.
+Koncový stav iterátoru je označen odkazem `NULL`.
 
-##  <a name="contains"></a> Obsahuje
+## <a name="contains"></a>zobrazí
 
-Hledání `network_link_registry` v rámci této `source_link_manager` objekt pro zadaný blok.
+Vyhledá `network_link_registry` v rámci tohoto objektu `source_link_manager` pro zadaný blok.
 
-```
+```cpp
 bool contains(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který má být vyhledán v `source_link_manager` objektu.
+*_Link*<br/>
+Ukazatel na blok, který má být prohledán v objektu `source_link_manager`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud byl nalezen zadaný blok, **false** jinak.
+**true** , pokud byl nalezen zadaný blok, jinak **false** .
 
-##  <a name="count"></a> Počet
+## <a name="count"></a>výpočtu
 
-Spočítá počet propojených bloky v `source_link_manager` objektu.
+Spočítá počet propojených bloků v objektu `source_link_manager`.
 
-```
+```cpp
 size_t count();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet propojených bloků v `source_link_manager` objektu.
+Počet propojených bloků v objektu `source_link_manager`.
 
-##  <a name="reference"></a> Referenční dokumentace
+## <a name="reference"></a>odkaz
 
-Získá odkaz na `source_link_manager` objektu.
+Získá odkaz na objekt `source_link_manager`.
 
-```
+```cpp
 void reference();
 ```
 
-##  <a name="register_target_block"></a> register_target_block
+## <a name="register_target_block"></a>register_target_block
 
-Zaregistruje cílový blok, který obsahuje tato `source_link_manager` objektu.
+Zaregistruje cílový blok, který obsahuje tento objekt `source_link_manager`.
 
-```
+```cpp
 void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Cílový blok uchovávající to `source_link_manager` objektu.
+Cílový blok, který drží tento objekt `source_link_manager`.
 
-##  <a name="release"></a> Vydání verze
+## <a name="release"></a>předběžné
 
-Verze odkazu na `source_link_manager` objektu.
+Uvolní odkaz na objekt `source_link_manager`.
 
-```
+```cpp
 void release();
 ```
 
-##  <a name="remove"></a> odebrat
+## <a name="remove"></a>odebrány
 
-Odebere odkaz `source_link_manager` objektu.
+Odebere propojení z objektu `source_link_manager`.
 
-```
+```cpp
 bool remove(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který se odeberou, pokud se nenašel.
+*_Link*<br/>
+Ukazatel na blok, který má být odebrán, pokud je nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud odkazu byl nalezen a odebrání **false** jinak.
+**true** , pokud byl odkaz nalezen a odebrán, jinak **false** .
 
-##  <a name="set_bound"></a> set_bound –
+## <a name="set_bound"></a>set_bound
 
-Nastaví maximální počet odkazů zdroje, které mohou být přidány do tohoto `source_link_manager` objektu.
+Nastaví maximální počet zdrojových odkazů, které lze přidat k tomuto objektu `source_link_manager`.
 
-```
+```cpp
 void set_bound(size_t _MaxLinks);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MaxLinks*<br/>
-Maximální počet odkazů.
+Maximální počet odkazů
 
-##  <a name="ctor"></a> source_link_manager –
+## <a name="ctor"></a>source_link_manager
 
-Vytvoří `source_link_manager` objektu.
+Vytvoří objekt `source_link_manager`.
 
-```
+```cpp
 source_link_manager();
 ```
 
-##  <a name="dtor"></a> ~source_link_manager
+## <a name="dtor"></a>~ source_link_manager
 
-Odstraní `source_link_manager` objektu.
+Odstraní objekt `source_link_manager`.
 
-```
+```cpp
 ~source_link_manager();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [single_link_registry – třída](single-link-registry-class.md)<br/>

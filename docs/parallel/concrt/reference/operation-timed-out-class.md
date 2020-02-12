@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-ms.openlocfilehash: 2511be4669bc4abf75d5188e3aeabd7863f42dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a2513d30aa68798707f3bb16318db9b594b9e16
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394400"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138868"
 ---
-# <a name="operationtimedout-class"></a>operation_timed_out – třída
+# <a name="operation_timed_out-class"></a>operation_timed_out – třída
 
-Tato třída popisuje výjimku vyvolanou při vypršel časový limit operace.
+Tato třída popisuje výjimku vyvolanou při vypršení časového limitu operace.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class operation_timed_out : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class operation_timed_out : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[operation_timed_out](#ctor)|Přetíženo. Vytvoří `operation_timed_out` objektu.|
+|[operation_timed_out](#ctor)|Přetíženo. Vytvoří objekt `operation_timed_out`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,15 +41,15 @@ class operation_timed_out : public std::exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> operation_timed_out –
+## <a name="ctor"></a>operation_timed_out
 
-Vytvoří `operation_timed_out` objektu.
+Vytvoří objekt `operation_timed_out`.
 
-```
+```cpp
 explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();
 
 operation_timed_out() throw();
@@ -58,8 +58,8 @@ operation_timed_out() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-ms.openlocfilehash: f4f385cde2a27665afa5eb9869eb52bc42c70111
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 261ec96c1a83fbec423e6dbbfe403c4db53a2962
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296213"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143098"
 ---
-# <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced – třída
+# <a name="context_unblock_unbalanced-class"></a>context_unblock_unbalanced – třída
 
-Tato třída popisuje výjimku vyvolanou při volání `Block` a `Unblock` metody `Context` nejsou správně spárované objektu.
+Tato třída popisuje výjimku vyvolanou při volání `Block` a `Unblock` metody objektu `Context` nejsou správně spárovány.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class context_unblock_unbalanced : public std::exception;
 ```
 
@@ -31,11 +31,11 @@ class context_unblock_unbalanced : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[context_unblock_unbalanced](#ctor)|Přetíženo. Vytvoří `context_unblock_unbalanced` objektu.|
+|[context_unblock_unbalanced](#ctor)|Přetíženo. Vytvoří objekt `context_unblock_unbalanced`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Volání `Block` a `Unblock` metody `Context` objekt musí být vždy správně párovaný. Modul Concurrency Runtime umožňuje operace v obou pořadí chtěli. Například volání `Block` může být následován volání `Unblock`, nebo naopak. Tato výjimka by být vyvolána, pokud například dvě volání `Unblock` metoda byly provedeny v řádku, na `Context` objekt, který se zablokoval.
+Volání metody `Block` a `Unblock` objektu `Context` musí být vždy správně spárována. Concurrency Runtime umožňuje, aby se operace prováděly v libovolném pořadí. Například volání `Block` může následovat po volání `Unblock`nebo naopak. Tato výjimka by se vyvolala v případě, že například dvě volání metody `Unblock` byla provedena v řádku na objektu `Context`, který nebyl zablokován.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -45,15 +45,15 @@ Volání `Block` a `Unblock` metody `Context` objekt musí být vždy správně 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> context_unblock_unbalanced –
+## <a name="ctor"></a>context_unblock_unbalanced
 
-Vytvoří `context_unblock_unbalanced` objektu.
+Vytvoří objekt `context_unblock_unbalanced`.
 
-```
+```cpp
 explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
 
 context_unblock_unbalanced() throw();
@@ -62,8 +62,8 @@ context_unblock_unbalanced() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

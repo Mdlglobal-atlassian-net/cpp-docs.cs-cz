@@ -8,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: 88a027a24f8ab817f793f101f9f128e1fc0c61c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 874c8372074838cd614d1fe17727871ca6e5f21a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389148"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127642"
 ---
 # <a name="traversing-a-simple-rowset"></a>Procházení jednoduché sady řádků
 
-Následující příklad ukazuje databázový rychlý a snadný přístup, který nezahrnuje příkazy. Následující kód příjemce v projektu ATL, načte záznamy z tabulky nazvané *umělci* v aplikaci Microsoft Access database s využitím zprostředkovatele Microsoft OLE DB pro ODBC. Kód vytvoří [CTable](../../data/oledb/ctable-class.md) objekt tabulky s přistupujícím objektem založené na třídě záznamů uživatele `CArtists`. Otevře připojení, otevře relaci připojení a otevře se v tabulce v relaci.
+Následující příklad ukazuje rychlý a snadný přístup k databázím, který nezahrnuje příkazy. Následující kód příjemce v projektu ATL načte záznamy z tabulky s názvem *interprety* v databázi aplikace Microsoft Access s použitím poskytovatele Microsoft OLE DB Provider pro rozhraní ODBC. Kód vytvoří objekt tabulky [CTable](../../data/oledb/ctable-class.md) s objektem pro přístup na základě třídy záznamu uživatele `CArtists`. Otevře připojení, otevře relaci připojení a otevře tabulku v relaci.
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-Uživatelský záznam `CArtists`, vypadá podobně jako v tomto příkladu:
+Uživatelský záznam `CArtists`vypadá jako v tomto příkladu:
 
 ```cpp
 class CArtists
@@ -74,6 +74,6 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

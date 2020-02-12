@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 06134838494e38c182d7c8328497666862f40fd6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821841"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143229"
 ---
 # <a name="concurrency-namespace"></a>concurrency – obor názvů
 
@@ -33,7 +33,7 @@ Obor názvů `Concurrency` poskytuje třídy a funkce, které vám umožní př�
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 namespace concurrency;
 ```
 
@@ -41,7 +41,7 @@ namespace concurrency;
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`runtime_object_identity`|Každá instance zprávy má identitu, která ji následuje, protože je klonována a předána mezi součástmi zasílání zpráv. Nejedná se o adresu objektu zprávy.|
 |`task_status`|Typ, který představuje stav terminálu úkolu. Platné hodnoty jsou `completed` a `canceled`.|
@@ -50,7 +50,7 @@ namespace concurrency;
 
 ### <a name="classes"></a>Třídy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[affinity_partitioner – třída](affinity-partitioner-class.md)|Třída `affinity_partitioner` je podobná `static_partitioner` třídě, ale vylepšuje spřažení mezipaměti podle výběru mapování dílčích rozsahů na pracovní vlákna. Může výrazně zvýšit výkon, když se smyčka znovu spustí přes stejnou datovou sadu a data se vejdou do mezipaměti. Všimněte si, že stejný objekt `affinity_partitioner` musí být použit s následnými iteracemi paralelní smyčky spouštěné přes konkrétní datovou sadu, aby bylo možné využít data z místního prostředí.|
 |[agent – třída](agent-class.md)|Třída určená pro použití jako základní třída pro všechny nezávislé agenty. Slouží ke skrytí stavu od jiných agentů a k interakci s použitím předávání zpráv.|
@@ -116,7 +116,7 @@ namespace concurrency;
 |[single_link_registry – třída](single-link-registry-class.md)|Objekt `single_link_registry` je `network_link_registry`, který spravuje pouze jeden zdrojový nebo cílový blok.|
 |[source_block – třída](source-block-class.md)|Třída `source_block` je abstraktní základní třída pro bloky pouze ve zdroji. Třída poskytuje základní funkce pro správu odkazů a také běžné kontroly chyb.|
 |[source_link_manager – třída](source-link-manager-class.md)|Objekt `source_link_manager` spravuje zprávy blokující síťové odkazy na bloky `ISource`.|
-|[static_partitioner – třída](static-partitioner-class.md)|Třída `static_partitioner` představuje statický segmentování rozsahu, na které prochází `parallel_for`. Dělicí metoda rozdělí rozsah do tolika bloků dat, kolik jsou zaměstnanci k dispozici pro Plánovač základního.|
+|[static_partitioner – třída](static-partitioner-class.md)|Třída `static_partitioner` představuje statický segmentování rozsahu, na které prochází `parallel_for`. Dělicí metoda rozdělí rozsah do tolika bloků dat, kolik jsou zaměstnanci k dispozici pro základní Plánovač.|
 |[structured_task_group – třída](structured-task-group-class.md)|Třída `structured_task_group` představuje vysoce strukturovaná kolekce paralelní práce. Jednotlivé paralelní úkoly lze zařadit do fronty `structured_task_group` pomocí objektů `task_handle` a počkat na jejich dokončení, nebo zrušit skupinu úloh předtím, než budou dokončeny. tím dojde k přerušení všech úloh, které nezačaly běžet.|
 |[target_block – třída](target-block-class.md)|Třída `target_block` je abstraktní základní třída, která poskytuje základní funkce pro správu odkazů a kontrolu chyb pouze pro cílové bloky.|
 |[task – třída (Concurrency Runtime)](task-class.md)|Knihovna PPL (Parallel Patterns Library) `task` třídy. Objekt `task` představuje práci, kterou lze provádět asynchronně a souběžně s jinými úkoly a paralelní práci vytvořenou paralelními algoritmy v Concurrency Runtime. Vytvoří výsledek typu `_ResultType` po úspěšném dokončení. Úlohy typu `task<void>` nevydávají žádný výsledek. Úkol může čekat a zrušit nezávisle na jiných úkolech. Může se také skládat s ostatními úkoly pomocí pokračování (`then`) a vzorů spojení (`when_all`) a volby (`when_any`).|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Struktury
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[DispatchState – struktura](dispatchstate-structure.md)|Struktura `DispatchState` slouží k přenosu stavu do metody `IExecutionContext::Dispatch`. Popisuje okolnosti, za kterých je metoda `Dispatch` vyvolána v rozhraní `IExecutionContext`.|
 |[IExecutionContext – struktura](iexecutioncontext-structure.md)|Rozhraní do kontextu spuštění, který může běžet na daném virtuálním procesoru a musí být přepnuty do komutovaného kontextu.|
@@ -154,33 +154,33 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Výčty
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Platné stavy pro `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Typy událostí, které lze trasovat pomocí funkce trasování nabízené knihovnou agentů|
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|Typy událostí, které lze trasovat pomocí funkce trasování, které nabízí Concurrency Runtime.|
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|Příznaky trasování pro typy událostí|
 |[CriticalRegionType –](concurrency-namespace-enums.md#criticalregiontype)|Typ kritické oblasti, ke které je kontext uvnitř.|
-|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|Používá se v zásadách `DynamicProgressFeedback` k popisu, zda budou prostředky pro Plánovač znovu vyrovnávatelné podle statistických informací shromážděných z plánovače nebo pouze na základě virtuálních procesorů, které přecházejí do nečinného stavu prostřednictvím volání metod `Activate` a `Deactivate` na `IVirtualProcessorRoot` rozhraní. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md#policyelementkey).|
+|[DynamicProgressFeedbackType –](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|Používá se v zásadách `DynamicProgressFeedback` k popisu, zda budou prostředky pro Plánovač znovu vyrovnávatelné podle statistických informací shromážděných z plánovače nebo pouze na základě virtuálních procesorů, které přecházejí do nečinného stavu prostřednictvím volání metod `Activate` a `Deactivate` na `IVirtualProcessorRoot` rozhraní. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md#policyelementkey).|
 |[join_type](concurrency-namespace-enums.md#join_type)|Typ `join`ového bloku pro zasílání zpráv.|
 |[message_status](concurrency-namespace-enums.md#message_status)|Platné odpovědi na nabídku objektu `message` do bloku.|
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|Klíče zásad popisující aspekty chování plánovače. Jednotlivé prvky zásad jsou popsány dvojicí klíč-hodnota. Další informace o zásadách plánovače a jejich vlivu na plánovače najdete v tématu [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|
-|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|Používá se zásadami `SchedulerKind` k popisu typu vláken, které by měl Plánovač využít pro podkladové kontexty provádění. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md#policyelementkey).|
+|[PolicyElementKey –](concurrency-namespace-enums.md#policyelementkey)|Klíče zásad popisující aspekty chování plánovače. Jednotlivé prvky zásad jsou popsány dvojicí klíč-hodnota. Další informace o zásadách plánovače a jejich vlivu na plánovače najdete v tématu [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|
+|[SchedulerType –](concurrency-namespace-enums.md#schedulertype)|Používá se zásadami `SchedulerKind` k popisu typu vláken, které by měl Plánovač využít pro podkladové kontexty provádění. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md#policyelementkey).|
 |[SchedulingProtocolType –](concurrency-namespace-enums.md#schedulingprotocoltype)|Používá se v zásadách `SchedulingProtocol` k popisu, který algoritmus plánování bude pro Plánovač využíván. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md#policyelementkey).|
-|[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|Slouží k označení stavu, ve kterém se nachází proxy vlákna, pokud je spuštěný kontext spolupráce, přepnutí na jiný proxy vlákna.|
+|[SwitchingProxyState –](concurrency-namespace-enums.md#switchingproxystate)|Slouží k označení stavu, ve kterém se nachází proxy vlákna, pokud je spuštěný kontext spolupráce, přepnutí na jiný proxy vlákna.|
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|Popisuje stav spuštění objektu `task_group` nebo `structured_task_group`. Hodnota tohoto typu je vrácena mnoha metodami, které čekají na dokončení úloh naplánovaných na skupinu úloh.|
 |[WinRTInitializationType –](concurrency-namespace-enums.md#winrtinitializationtype)|Používá se v zásadách `WinRTInitialization` k popisu, jestli a jak se prostředí Windows Runtime inicializuje na vláknech Scheduleru pro aplikaci, která běží na operačních systémech s verzí Windows 8 nebo vyšší. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md#policyelementkey).|
 
 ### <a name="functions"></a>Funkce
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Funkce alokace](concurrency-namespace-functions.md#alloc)|Přidělí blok paměti, která je určená od Concurrency Runtimeho subalokátoru pro ukládání do mezipaměti.|
-|[asend – funkce](concurrency-namespace-functions.md#asend)|Přetížené Operace asynchronního odeslání, která Naplánuje úkol, aby rozšířil data do cílového bloku.|
-|[cancel_current_task Function](concurrency-namespace-functions.md#cancel_current_task)|Zruší právě prováděnou úlohu. Tato funkce může být volána z těla úkolu, aby přerušila provádění úlohy a způsobila, že vstoupí do stavu `canceled`.<br /><br /> Nejedná se o podporovaný scénář pro volání této funkce, pokud nejste v těle `task`. V důsledku toho dojde k nedefinovanému chování, jako je například selhání nebo zablokování aplikace.|
-|[create_async Function](concurrency-namespace-functions.md#create_async)|Vytvoří asynchronní konstrukci prostředí Windows Runtime na základě uživatelem zadaného výrazu lambda nebo objektu funkce. Návratový typ `create_async` je jedna z `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^`nebo `IAsyncOperationWithProgress<TResult, TProgress>^` na základě signatury lambda předané metodě.|
-|[create_task funkce](concurrency-namespace-functions.md#create_task)|Přetížené Vytvoří objekt [úlohy](task-class.md) PPL. `create_task` lze použít všude, kde byste použili konstruktor úlohy. Je poskytován hlavně pro pohodlí, protože umožňuje použití klíčového slova `auto` při vytváření úloh.|
-|[CreateResourceManager Function](concurrency-namespace-functions.md#createresourcemanager)|Vrátí rozhraní, které představuje instanci typu Singleton Správce prostředků Concurrency Runtime. Správce prostředků zodpovídá za přiřazení prostředků plánovačům, které chtějí vzájemně spolupracovat.|
+|[asend – funkce](concurrency-namespace-functions.md#asend)|Přetíženo. Operace asynchronního odeslání, která Naplánuje úkol, aby rozšířil data do cílového bloku.|
+|[cancel_current_task funkce](concurrency-namespace-functions.md#cancel_current_task)|Zruší právě prováděnou úlohu. Tato funkce může být volána z těla úkolu, aby přerušila provádění úlohy a způsobila, že vstoupí do stavu `canceled`.<br /><br /> Nejedná se o podporovaný scénář pro volání této funkce, pokud nejste v těle `task`. V důsledku toho dojde k nedefinovanému chování, jako je například selhání nebo zablokování aplikace.|
+|[create_async funkce](concurrency-namespace-functions.md#create_async)|Vytvoří asynchronní konstrukci prostředí Windows Runtime na základě uživatelem zadaného výrazu lambda nebo objektu funkce. Návratový typ `create_async` je jedna z `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^`nebo `IAsyncOperationWithProgress<TResult, TProgress>^` na základě signatury lambda předané metodě.|
+|[create_task funkce](concurrency-namespace-functions.md#create_task)|Přetíženo. Vytvoří objekt [úlohy](task-class.md) PPL. `create_task` lze použít všude, kde byste použili konstruktor úlohy. Je poskytován hlavně pro pohodlí, protože umožňuje použití klíčového slova `auto` při vytváření úloh.|
+|[CreateResourceManager – – funkce](concurrency-namespace-functions.md#createresourcemanager)|Vrátí rozhraní, které představuje instanci typu Singleton Správce prostředků Concurrency Runtime. Správce prostředků zodpovídá za přiřazení prostředků plánovačům, které chtějí vzájemně spolupracovat.|
 |[DisableTracing – – funkce](concurrency-namespace-functions.md#disabletracing)|Zakáže trasování v Concurrency Runtime. Tato funkce je zastaralá, protože trasování ETW je ve výchozím nastavení neregistrované.|
 |[EnableTracing – – funkce](concurrency-namespace-functions.md#enabletracing)|Povolí trasování v Concurrency Runtime. Tato funkce je zastaralá, protože trasování ETW je teď ve výchozím nastavení zapnuté.|
 |[Free – funkce](concurrency-namespace-functions.md#free)|Uvolní blok paměti dříve přidělený `Alloc` metodou do meziConcurrency Runtime ukládání do mezipaměti.|
@@ -190,74 +190,74 @@ namespace concurrency;
 |[GetProcessorCount – – funkce](concurrency-namespace-functions.md#getprocessorcount)|Vrátí počet hardwarových vláken v podkladovém systému.|
 |[GetProcessorNodeCount – – funkce](concurrency-namespace-functions.md#getprocessornodecount)|Vrátí počet uzlů NUMA nebo balíčků procesorů v podkladovém systému.|
 |[GetSchedulerId – – funkce](concurrency-namespace-functions.md#getschedulerid)|Vrátí jedinečný identifikátor, který lze přiřadit k plánovači, který implementuje rozhraní `IScheduler`.|
-|[interruption_point Function](concurrency-namespace-functions.md#interruption_point)|Vytvoří bod přerušení pro zrušení. Pokud probíhá zrušení v kontextu, ve kterém je tato funkce volána, vyvolá se vnitřní výjimka, která přeruší provádění aktuálně prováděné paralelní práce. Pokud zrušení neprobíhá, funkce neprovede žádnou akci.|
+|[interruption_point funkce](concurrency-namespace-functions.md#interruption_point)|Vytvoří bod přerušení pro zrušení. Pokud probíhá zrušení v kontextu, ve kterém je tato funkce volána, vyvolá se vnitřní výjimka, která přeruší provádění aktuálně prováděné paralelní práce. Pokud zrušení neprobíhá, funkce neprovede žádnou akci.|
 |[is_current_task_group_canceling funkce](concurrency-namespace-functions.md#is_current_task_group_canceling)|Vrací údaj o tom, zda je skupina úloh, která aktuálně provádí inlineing v aktuálním kontextu, v průběhu aktivního zrušení (nebo bude brzy). Všimněte si, že pokud v aktuálním kontextu není žádná skupina úloh aktuálně prováděna s vloženým kontextem, bude vrácena `false`.|
-|[make_choice funkce](concurrency-namespace-functions.md#make_choice)|Přetížené Vytvoří `choice` blok pro zasílání zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dvou nebo více vstupních zdrojů.|
-|[make_greedy_join Function](concurrency-namespace-functions.md#make_greedy_join)|Přetížené Vytvoří `greedy multitype_join` blok pro zasílání zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dvou nebo více vstupních zdrojů.|
-|[make_join funkce](concurrency-namespace-functions.md#make_join)|Přetížené Vytvoří `non_greedy multitype_join` blok pro zasílání zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dvou nebo více vstupních zdrojů.|
+|[make_choice funkce](concurrency-namespace-functions.md#make_choice)|Přetíženo. Vytvoří `choice` blok pro zasílání zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dvou nebo více vstupních zdrojů.|
+|[make_greedy_join funkce](concurrency-namespace-functions.md#make_greedy_join)|Přetíženo. Vytvoří `greedy multitype_join` blok pro zasílání zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dvou nebo více vstupních zdrojů.|
+|[make_join funkce](concurrency-namespace-functions.md#make_join)|Přetíženo. Vytvoří `non_greedy multitype_join` blok pro zasílání zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dvou nebo více vstupních zdrojů.|
 |[make_task funkce](concurrency-namespace-functions.md#make_task)|Výrobní metoda pro vytvoření objektu `task_handle`.|
-|[parallel_buffered_sort Function](concurrency-namespace-functions.md#parallel_buffered_sort)|Přetížené Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle kritéria řazení, které je určeno binárním predikátem paralelně. Tato funkce je sémanticky podobná `std::sort` v tom, že se jedná o porovnání, nestabilní, místní řazení s výjimkou toho, že potřebuje `O(n)` dodatečné místo a vyžaduje výchozí inicializaci pro prvky, které jsou setříděny.|
-|[parallel_for funkce](concurrency-namespace-functions.md#parallel_for)|Přetížené `parallel_for` iterovat na určitou škálu indexů a v každé iteraci spustí uživatelsky zadanou funkci, paralelně.|
-|[parallel_for_each Function](concurrency-namespace-functions.md#parallel_for_each)|Přetížené `parallel_for_each` aplikuje zadanou funkci na každý prvek v rozsahu paralelně. Je sémanticky ekvivalentní funkci `for_each` v oboru názvů `std`, s tím rozdílem, že iterace nad prvky je prováděna paralelně a pořadí iterace není specifikováno. Argument `_Func` musí podporovat operátor volání funkce ve formě `operator()(T)` kde parametr `T` je typ položky kontejneru, na který se provádí iterace.|
-|[parallel_invoke funkce](concurrency-namespace-functions.md#parallel_invoke)|Přetížené Spustí objekty funkce, které jsou zadány jako parametry paralelně, a zablokuje, dokud se nedokončí jejich spuštění. Každý objekt funkce může být výraz lambda, ukazatel na funkci nebo libovolný objekt, který podporuje operátor volání funkce s podpisem `void operator()()`.|
-|[parallel_radixsort Function](concurrency-namespace-functions.md#parallel_radixsort)|Přetížené Uspořádá prvky v zadaném rozsahu do nesestupného pořadí pomocí algoritmu řazení číselné řady. Toto je stabilní funkce řazení, která vyžaduje funkci projekce, která může prvky projektu seřadit do unsigned integer klíčů jako. Pro prvky, které jsou řazeny, je vyžadována výchozí inicializace.|
-|[parallel_reduce Function](concurrency-namespace-functions.md#parallel_reduce)|Přetížené Vypočítá součet všech prvků v zadaném rozsahu tím, že provede výpočet po sobě jdoucích částečných součtů, nebo vypočítá výsledek po sobě jdoucích částečných výsledků podobně jako u paralelního použití zadané binární operace, která je jiná než součet. `parallel_reduce` je sémanticky podobná `std::accumulate`, s tím rozdílem, že vyžaduje asociativní binární operaci a vyžaduje hodnotu identity namísto počáteční hodnoty.|
-|[parallel_sort funkce](concurrency-namespace-functions.md#parallel_sort)|Přetížené Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle kritéria řazení, které je určeno binárním predikátem paralelně. Tato funkce je sémanticky podobná `std::sort` v tom, že se jedná o porovnání nestabilního a místního řazení na místě.|
-|[parallel_transform Function](concurrency-namespace-functions.md#parallel_transform)|Přetížené Aplikuje zadaný objekt funkce na každý prvek ve zdrojovém rozsahu nebo na dvojici prvků ze dvou zdrojových rozsahů a kopíruje návratové hodnoty objektu Functions do cílového rozsahu paralelně. Tato funkce je sémanticky rovnocenná `std::transform`.|
-|[Receive – funkce](concurrency-namespace-functions.md#receive)|Přetížené Obecná implementace příjmu, která umožňuje kontextu počkat na data z přesně jednoho zdroje a filtrovat hodnoty, které jsou přijaty.|
-|[run_with_cancellation_token Function](concurrency-namespace-functions.md#run_with_cancellation_token)|Spustí objekt funkce okamžitě a synchronně v kontextu daného tokenu zrušení.|
-|[send – funkce](concurrency-namespace-functions.md#send)|Přetížené Operace synchronního odeslání, která čeká, až cíl zprávu buď přijme, nebo odmítne.|
+|[parallel_buffered_sort funkce](concurrency-namespace-functions.md#parallel_buffered_sort)|Přetíženo. Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle kritéria řazení určeného binárním predikátem paralelně. Tato funkce je sémanticky podobná `std::sort` v tom, že se jedná o porovnání, nestabilní, místní řazení s výjimkou toho, že potřebuje `O(n)` dodatečné místo a vyžaduje výchozí inicializaci pro prvky, které jsou setříděny.|
+|[parallel_for funkce](concurrency-namespace-functions.md#parallel_for)|Přetíženo. `parallel_for` iterovat na určitou škálu indexů a v každé iteraci spustí uživatelsky zadanou funkci, paralelně.|
+|[parallel_for_each funkce](concurrency-namespace-functions.md#parallel_for_each)|Přetíženo. `parallel_for_each` aplikuje zadanou funkci na každý prvek v rozsahu paralelně. Je sémanticky ekvivalentní funkci `for_each` v oboru názvů `std`, s tím rozdílem, že iterace nad prvky je prováděna paralelně a pořadí iterace není specifikováno. Argument `_Func` musí podporovat operátor volání funkce ve formě `operator()(T)` kde parametr `T` je typ položky kontejneru, na který se provádí iterace.|
+|[parallel_invoke funkce](concurrency-namespace-functions.md#parallel_invoke)|Přetíženo. Spustí objekty funkce, které jsou zadány jako parametry paralelně, a zablokuje, dokud se nedokončí jejich spuštění. Každý objekt funkce může být výraz lambda, ukazatel na funkci nebo libovolný objekt, který podporuje operátor volání funkce s podpisem `void operator()()`.|
+|[parallel_radixsort funkce](concurrency-namespace-functions.md#parallel_radixsort)|Přetíženo. Uspořádá prvky v zadaném rozsahu do nesestupného pořadí pomocí algoritmu řazení číselné řady. Toto je stabilní funkce řazení, která vyžaduje funkci projekce, která může prvky projektu seřadit do unsigned integer klíčů jako. Pro prvky, které jsou řazeny, je vyžadována výchozí inicializace.|
+|[parallel_reduce funkce](concurrency-namespace-functions.md#parallel_reduce)|Přetíženo. Vypočítá součet všech prvků v zadaném rozsahu tím, že provede výpočet po sobě jdoucích částečných součtů, nebo vypočítá výsledek po sobě jdoucích částečných výsledků podobně jako u paralelního použití zadané binární operace, která je jiná než součet. `parallel_reduce` je sémanticky podobná `std::accumulate`, s tím rozdílem, že vyžaduje asociativní binární operaci a vyžaduje hodnotu identity namísto počáteční hodnoty.|
+|[parallel_sort funkce](concurrency-namespace-functions.md#parallel_sort)|Přetíženo. Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle kritéria řazení určeného binárním predikátem paralelně. Tato funkce je sémanticky podobná `std::sort` v tom, že se jedná o porovnání nestabilního a místního řazení na místě.|
+|[parallel_transform funkce](concurrency-namespace-functions.md#parallel_transform)|Přetíženo. Aplikuje zadaný objekt funkce na každý prvek ve zdrojovém rozsahu nebo na dvojici prvků ze dvou zdrojových rozsahů a kopíruje návratové hodnoty objektu Functions do cílového rozsahu paralelně. Tato funkce je sémanticky rovnocenná `std::transform`.|
+|[Receive – funkce](concurrency-namespace-functions.md#receive)|Přetíženo. Obecná implementace příjmu, která umožňuje kontextu počkat na data z přesně jednoho zdroje a filtrovat hodnoty, které jsou přijaty.|
+|[run_with_cancellation_token funkce](concurrency-namespace-functions.md#run_with_cancellation_token)|Spustí objekt funkce okamžitě a synchronně v kontextu daného tokenu zrušení.|
+|[send – funkce](concurrency-namespace-functions.md#send)|Přetíženo. Operace synchronního odeslání, která čeká, až cíl zprávu buď přijme, nebo odmítne.|
 |[Funkce set_ambient_scheduler (Concurrency Runtime)](concurrency-namespace-functions.md#set_ambient_scheduler)||
-|[set_task_execution_resources Function](concurrency-namespace-functions.md#set_task_execution_resources)|Přetížené Omezí prostředky spouštění používané Concurrency Runtime interními pracovními vlákny do zadané sady vztahů.<br /><br /> Volání této metody je platné pouze před vytvořením Správce prostředků nebo mezi dvěma životnostmi Správce prostředků. Dá se vyvolat víckrát, dokud Správce prostředků v době vyvolání neexistují. Po nastavení omezení spřažení zůstane v platnosti, dokud nebude další platné volání metody `set_task_execution_resources`.<br /><br /> Zadaná maska spřažení nemusí být podmnožinou masky spřažení procesu. Spřažení procesů bude v případě potřeby aktualizováno.|
+|[set_task_execution_resources funkce](concurrency-namespace-functions.md#set_task_execution_resources)|Přetíženo. Omezí prostředky spouštění používané Concurrency Runtime interními pracovními vlákny do zadané sady vztahů.<br /><br /> Volání této metody je platné pouze před vytvořením Správce prostředků nebo mezi dvěma životnostmi Správce prostředků. Dá se vyvolat víckrát, dokud Správce prostředků v době vyvolání neexistují. Po nastavení omezení spřažení zůstane v platnosti, dokud nebude další platné volání metody `set_task_execution_resources`.<br /><br /> Zadaná maska spřažení nemusí být podmnožinou masky spřažení procesu. Spřažení procesů bude v případě potřeby aktualizováno.|
 |[swap – funkce](concurrency-namespace-functions.md#swap)|Vyměňuje prvky dvou `concurrent_vector` objektů.|
 |[Funkce task_from_exception (Concurrency Runtime)](concurrency-namespace-functions.md#task_from_exception)||
 |[Funkce task_from_result (Concurrency Runtime)](concurrency-namespace-functions.md#task_from_result)||
 |[Trace_agents_register_name funkce](concurrency-namespace-functions.md#trace_agents_register_name)|Přidruží daný název k bloku zprávy nebo agentovi v trasování ETW.|
-|[try_receive funkce](concurrency-namespace-functions.md#try_receive)|Přetížené Obecná implementace try-Receive, která umožňuje kontextu vyhledat data z přesně jednoho zdroje a filtrovat hodnoty, které jsou přijaty. Pokud data nejsou připravena, bude metoda vracet hodnotu false.|
+|[try_receive funkce](concurrency-namespace-functions.md#try_receive)|Přetíženo. Obecná implementace try-Receive, která umožňuje kontextu vyhledat data z přesně jednoho zdroje a filtrovat hodnoty, které jsou přijaty. Pokud data nejsou připravena, bude metoda vracet hodnotu false.|
 |[Wait – funkce](concurrency-namespace-functions.md#wait)|Pozastaví aktuální kontext na určenou dobu.|
 |[when_all funkce](concurrency-namespace-functions.md#when_all)|Vytvoří úkol, který se úspěšně dokončí po úspěšném dokončení všech úloh zadaných jako argumenty.|
-|[when_any funkce](concurrency-namespace-functions.md#when_any)|Přetížené Vytvoří úkol, který se úspěšně dokončí, když se kterákoli z úkolů dodaných jako argumenty úspěšně dokončí.|
+|[when_any funkce](concurrency-namespace-functions.md#when_any)|Přetíženo. Vytvoří úkol, který se úspěšně dokončí, když se kterákoli z úkolů dodaných jako argumenty úspěšně dokončí.|
 
 ### <a name="operators"></a>Operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|Testuje, zda `concurrent_vector` objekt na levé straně operátoru není roven objektu `concurrent_vector` na pravé straně.|
-|[operátor & &](concurrency-namespace-operators.md#operator_amp_amp)|Přetížené Vytvoří úkol, který se úspěšně dokončí, když se obě úlohy dodají jako argumenty úspěšně dokončí.|
-|[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|Přetížené Vytvoří úkol, který se úspěšně dokončí, když se kterákoli z úkolů dodaných jako argumenty úspěšně dokončí.|
+|[operátor & &](concurrency-namespace-operators.md#operator_amp_amp)|Přetíženo. Vytvoří úkol, který se úspěšně dokončí, když se obě úlohy dodají jako argumenty úspěšně dokončí.|
+|[podnikatel&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|Přetíženo. Vytvoří úkol, který se úspěšně dokončí, když se kterákoli z úkolů dodaných jako argumenty úspěšně dokončí.|
 |[operátor <](concurrency-namespace-operators.md#operator_lt)|Testuje, zda je objekt `concurrent_vector` na levé straně operátoru menší než objekt `concurrent_vector` na pravé straně.|
 |[operátor < =](concurrency-namespace-operators.md#operator_lt_eq)|Testuje, zda je objekt `concurrent_vector` na levé straně operátoru menší než nebo roven `concurrent_vector`mu objektu na pravé straně.|
-|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|Testuje, zda je objekt `concurrent_vector` na levé straně operátoru roven objektu `concurrent_vector` na pravé straně.|
+|[operator = = – operátor](concurrency-namespace-operators.md#operator_eq_eq)|Testuje, zda je objekt `concurrent_vector` na levé straně operátoru roven objektu `concurrent_vector` na pravé straně.|
 |[operátor >](concurrency-namespace-operators.md#operator_gt)|Testuje, zda je objekt `concurrent_vector` na levé straně operátoru větší než objekt `concurrent_vector` na pravé straně.|
 |[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|Testuje, zda je objekt `concurrent_vector` na levé straně operátoru větší než nebo roven `concurrent_vector`mu objektu na pravé straně.|
 
 ### <a name="constants"></a>Konstanty
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Agenteventguid –](concurrency-namespace-constants1.md#agenteventguid)|Identifikátor GUID kategorie ({B9B5B78C-0713-4898-A21A-C67949DCED07}) popisující události ETW, které vyvolala knihovna agentů v Concurrency Runtime.|
-|[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s rutinní nebo úkoly.|
+|[Choreeventguid –](concurrency-namespace-constants1.md#choreeventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s rutinní nebo úkoly.|
 |[ConcRT_ProviderGuid](concurrency-namespace-constants1.md#concrt_providerguid)|Identifikátor GUID zprostředkovatele ETW pro Concurrency Runtime.|
 |[CONCRT_RM_VERSION_1](concurrency-namespace-constants1.md#concrt_rm_version_1)|Určuje podporu rozhraní Správce prostředků definovaného v aplikaci Visual Studio 2010.|
-|[ConcRTEventGuid](concurrency-namespace-constants1.md#concrteventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které nejsou speciálně popsané jinou kategorií.|
-|[ContextEventGuid](concurrency-namespace-constants1.md#contexteventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s kontexty.|
+|[Concrteventguid –](concurrency-namespace-constants1.md#concrteventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které nejsou speciálně popsané jinou kategorií.|
+|[Contexteventguid –](concurrency-namespace-constants1.md#contexteventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s kontexty.|
 |[COOPERATIVE_TIMEOUT_INFINITE](concurrency-namespace-constants1.md#cooperative_timeout_infinite)|Hodnota označující, že čas čekání by neměl nikdy trvat.|
 |[COOPERATIVE_WAIT_TIMEOUT](concurrency-namespace-constants1.md#cooperative_wait_timeout)|Hodnota označující, že čekání vypršel časový limit.|
 |[INHERIT_THREAD_PRIORITY](concurrency-namespace-constants1.md#inherit_thread_priority)|Speciální hodnota pro klíč zásady `ContextPriority` označující, že priorita vlákna všech kontextů v Plánovači musí být stejná jako u vlákna, které vytvořil Plánovač.|
-|[LockEventGuid](concurrency-namespace-constants1.md#lockeventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s zámky.|
+|[Lockeventguid –](concurrency-namespace-constants1.md#lockeventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s zámky.|
 |[MaxExecutionResources –](concurrency-namespace-constants1.md#maxexecutionresources)|Speciální hodnota klíčů zásad `MinConcurrency` a `MaxConcurrency` Ve výchozím nastavení se jedná o počet hardwarových vláken v počítači při absenci jiných omezení.|
-|[PPLParallelForeachEventGuid](concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které přímo souvisejí s používáním funkce `parallel_for_each`.|
-|[PPLParallelForEventGuid](concurrency-namespace-constants1.md#pplparallelforeventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které přímo souvisejí s používáním funkce `parallel_for`.|
-|[PPLParallelInvokeEventGuid](concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které přímo souvisejí s používáním funkce `parallel_invoke`.|
-|[ResourceManagerEventGuid](concurrency-namespace-constants1.md#resourcemanagereventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které přímo souvisejí s Resource Managerem.|
-|[ScheduleGroupEventGuid](concurrency-namespace-constants1.md#schedulegroupeventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí se skupinami plánů|
-|[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s aktivitou Scheduleru.|
-|[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s virtuálními procesory.|
+|[Pplparallelforeacheventguid –](concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které přímo souvisejí s používáním funkce `parallel_for_each`.|
+|[PPLParallelForEventGuid –](concurrency-namespace-constants1.md#pplparallelforeventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které přímo souvisejí s používáním funkce `parallel_for`.|
+|[Pplparallelinvokeeventguid –](concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které přímo souvisejí s používáním funkce `parallel_invoke`.|
+|[Resourcemanagereventguid –](concurrency-namespace-constants1.md#resourcemanagereventguid)|Identifikátor GUID kategorie popisující události ETW, které jsou vyvolány Concurrency Runtime, které přímo souvisejí s Resource Managerem.|
+|[Schedulegroupeventguid –](concurrency-namespace-constants1.md#schedulegroupeventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí se skupinami plánů|
+|[Schedulereventguid –](concurrency-namespace-constants1.md#schedulereventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s aktivitou Scheduleru.|
+|[Virtualprocessoreventguid –](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Identifikátor GUID kategorie popisující události ETW spouštěné Concurrency Runtime, které přímo souvisejí s virtuálními procesory.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h
+**Header:** Agents. h, ConcRT. h, concrtrm. h, concurrent_priority_queue. h, concurrent_queue. h, concurrent_unordered_map. h, concurrent_unordered_set. h, concurrent_vector. h, internal_concurrent_hash. h, internal_split_ordered_list. h, PPL. h, pplcancellation_token. h, pplconcrt. h, pplinterface. h, ppltasks. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Odkazy](reference-concurrency-runtime.md)
+[Referenční informace](reference-concurrency-runtime.md)

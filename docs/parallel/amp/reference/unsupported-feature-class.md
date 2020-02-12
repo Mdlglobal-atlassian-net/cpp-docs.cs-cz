@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525420"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127709"
 ---
-# <a name="unsupportedfeature-class"></a>unsupported_feature – třída
+# <a name="unsupported_feature-class"></a>unsupported_feature – třída
 
 Výjimka, která je vyvolána při použití nepodporované funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
@@ -29,9 +29,9 @@ class unsupported_feature : public runtime_exception;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[unsupported_feature Constructor](#unsupported_feature)|Vytvoří novou instanci třídy `unsupported_feature` výjimky.|
+|[unsupported_feature – konstruktor](#unsupported_feature)|Sestaví novou instanci výjimky `unsupported_feature`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature –
+## <a name="unsupported_feature"></a>unsupported_feature
 
-  Vytvoří novou instanci třídy `unsupported_feature` výjimky.
+  Sestaví novou instanci výjimky `unsupported_feature`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -57,18 +57,18 @@ unsupported_feature() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popis chyby.
+Popis chyby
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`unsupported_feature` Objektu.
+Objekt `unsupported_feature`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amprt.h
+**Záhlaví:** amprt. h
 
-**Namespace:** Souběžnost
+**Obor názvů:** Concurrency
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

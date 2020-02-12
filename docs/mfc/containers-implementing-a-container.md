@@ -5,64 +5,64 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed95324b8df978a6ab2f7582c0ddf626a45e7fe1
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302192"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127917"
 ---
 # <a name="containers-implementing-a-container"></a>Kontejnery: Implementace kontejneru
 
-Tento článek shrnuje postup implementace kontejneru a odkazuje na další články, které poskytují podrobnější vysvětlení o implementaci kontejnery. Obsahuje také seznam některých volitelných funkcí OLE, které můžete implementovat a články popisující, tyto funkce.
+Tento článek shrnuje postup pro implementaci kontejneru a odkazuje na další články, které poskytují podrobnější vysvětlení implementace kontejnerů. Také obsahuje seznam některých volitelných funkcí OLE, které můžete chtít implementovat, a článků, které tyto funkce popisují.
 
-#### <a name="to-prepare-your-cwinapp-derived-class"></a>Příprava vašich CWinApp odvozených tříd
+#### <a name="to-prepare-your-cwinapp-derived-class"></a>Příprava vaší odvozené třídy CWinApp
 
-1. Inicializace knihoven OLE voláním `AfxOleInit` v `InitInstance` členskou funkci.
+1. Inicializujte knihovny OLE voláním `AfxOleInit` ve členské funkci `InitInstance`.
 
-1. Volání `CDocTemplate::SetContainerInfo` v `InitInstance` přiřazení v nabídce a akcelerátor prostředky používané při vloženou položku je zrovna místně aktivuje. Další informace o tomto tématu najdete v tématu [aktivace](../mfc/activation-cpp.md).
+1. Zavolejte `CDocTemplate::SetContainerInfo` v `InitInstance` k přiřazení prostředků nabídky a akcelerátoru, které se použijí, když se vložená položka aktivuje místně. Další informace o tomto tématu najdete v tématu [Aktivace](../mfc/activation-cpp.md).
 
-Tyto funkce jsou k dispozici pro vás automaticky při použití Průvodce aplikací knihovny MFC k vytvoření aplikace typu kontejner. Zobrazit [vytvoření aplikace MFC EXE](../mfc/reference/mfc-application-wizard.md).
+Tyto funkce jsou k dispozici automaticky při použití Průvodce aplikací knihovny MFC k vytvoření aplikace typu kontejner. Viz [vytvoření programu MFC exe](../mfc/reference/mfc-application-wizard.md).
 
-#### <a name="to-prepare-your-view-class"></a>Příprava vaší třídy zobrazení
+#### <a name="to-prepare-your-view-class"></a>Příprava třídy zobrazení
 
-1. Mějte přehled o vybrané položky pomocí ukazatele nebo seznamu ukazatelů, pokud podporujete vícenásobný výběr pro vybrané položky. Vaše `OnDraw` funkce musí kreslení všech položek OLE.
+1. Můžete sledovat vybrané položky tím, že zachováte ukazatel nebo seznam ukazatelů, Pokud podporujete vícenásobný výběr, na vybrané položky. Vaše funkce `OnDraw` musí nakreslit všechny položky OLE.
 
-1. Přepsat `IsSelected` ke kontrole, jestli je aktuálně vybrána položka předaná.
+1. Přepište `IsSelected` a ověřte, zda je položka předaná do ní aktuálně vybrána.
 
-1. Implementace `OnInsertObject` obslužná rutina zprávy pro zobrazení **vložit objekt** dialogové okno.
+1. Implementací obslužné rutiny zprávy `OnInsertObject` pro zobrazení dialogového okna **Vložit objekt** .
 
-1. Implementace `OnSetFocus` zpráva obslužná rutina se má převést fokus z zobrazení do místní active OLE vložené položky.
+1. Implementací obslužné rutiny zprávy `OnSetFocus` můžete přenést fokus ze zobrazení na místo na místní aktivní vložené položky OLE.
 
-1. Implementace `OnSize` obslužné rutiny zpráv informovat OLE vložené položky, že je nutné změnit jeho obdélník tak, aby odrážely změny velikosti jeho nadřazeného zobrazení.
+1. Implementujte obslužnou rutinu `OnSize` zprávy pro informování vložené položky OLE, kterou potřebuje změnit její obdélník, aby odrážela změnu velikosti nadřazeného zobrazení.
 
-Protože implementaci těchto funkcí se výrazně liší od jedné aplikace na další, Průvodce aplikací poskytuje základní implementaci. Budete pravděpodobně muset upravit tyto funkce pro uvedení aplikace fungovat správně. Příkladem, najdete v článku [KONTEJNERU](../overview/visual-cpp-samples.md) vzorku.
+Vzhledem k tomu, že implementace těchto funkcí se výrazně liší od jedné aplikace po další, Průvodce aplikací poskytuje jenom základní implementaci. Bude pravděpodobně nutné přizpůsobit tyto funkce, aby aplikace správně fungovala. Příklad najdete v ukázce [kontejneru](../overview/visual-cpp-samples.md) .
 
-#### <a name="to-handle-embedded-and-linked-items"></a>Pro zpracování vložené a propojené položky
+#### <a name="to-handle-embedded-and-linked-items"></a>Zpracování vložených a propojených položek
 
-1. Odvodit třídu z [COleClientItem](../mfc/reference/coleclientitem-class.md). Objekty této třídy představují položky, které byly součástí nebo propojené s dokumentu OLE.
+1. Odvodit třídu z [COleClientItem](../mfc/reference/coleclientitem-class.md). Objekty této třídy reprezentují položky, které byly vloženy do nebo připojeny k vašemu dokumentu OLE.
 
-1. Přepsat `OnChange`, `OnChangeItemPosition`, a `OnGetItemPosition`. Tyto funkce zpracování pro změnu velikosti, umístění a úpravy vložené a propojené položky.
+1. Přepsat `OnChange`, `OnChangeItemPosition`a `OnGetItemPosition`. Tyto funkce zpracovávají velikost, umístění a úpravy vložených a propojených položek.
 
-Průvodce aplikace odvodí třídy za vás, ale bude pravděpodobně nutné přepsat `OnChange` a další funkce uvedené s ním v kroku 2 v předchozím postupu. Kostru implementace muset lze přizpůsobit pro většinu aplikací, protože tyto funkce jsou implementované jinak z jedné aplikace na další. Příklady, najdete v ukázkách MFC [DRAWCLI](../overview/visual-cpp-samples.md) a [KONTEJNERU](../overview/visual-cpp-samples.md).
+Průvodce aplikací bude třídu odvodit za vás, ale pravděpodobně bude nutné přepsat `OnChange` a další funkce uvedené v tomto postupu v kroku 2 v předchozím postupu. Kostru implementací je nutné přizpůsobit pro většinu aplikací, protože tyto funkce jsou implementovány jinak než jedna z aplikací do další. Příklady naleznete v tématu MFC Samples [DRAWCLI](../overview/visual-cpp-samples.md) a [Container](../overview/visual-cpp-samples.md).
 
-Počet položek, které je třeba přidat do nabídky struktury aplikace typu kontejner pro podporu technologie OLE. Další informace naleznete v tématu [nabídky a prostředky: Kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).
+Je nutné přidat počet položek do struktury nabídky aplikace kontejneru, aby bylo možné podporovat OLE. Další informace o těchto tématech naleznete v tématu [nabídky a prostředky: Přidání kontejneru](../mfc/menus-and-resources-container-additions.md).
 
-Můžete také podporovat některé z následujících funkcí v kontejneru aplikace:
+V aplikaci typu kontejner možná budete chtít podporovat i některé z následujících funkcí:
 
-- Aktivace na místě při úpravách vloženou položku.
+- Místní aktivace při úpravě vložené položky
 
-   Další informace najdete v tématu [aktivace](../mfc/activation-cpp.md).
+   Další informace najdete v tématu [Aktivace](../mfc/activation-cpp.md).
 
-- Vytvoření OLE položky přetahováním výběr ze serverové aplikace.
+- Vytvoření položek OLE přetažením z serverové aplikace.
 
-   Další informace najdete v tématu [oblast pro přetažení přetažení (OLE)](../mfc/drag-and-drop-ole.md).
+   Další informace najdete v tématu [přetahování OLE](../mfc/drag-and-drop-ole.md).
 
-- Obsahuje odkazy na vložené objekty nebo kombinaci typu server/kontejner aplikace.
+- Odkazy na vložené objekty nebo kombinované aplikace kontejneru/serveru.
 
-   Další informace najdete v tématu [kontejnerů: Pokročilé funkce](../mfc/containers-advanced-features.md).
+   Další informace najdete v tématu [kontejnery: pokročilé funkce](../mfc/containers-advanced-features.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Kontejnery](../mfc/containers.md)<br/>
 [Kontejnery: Klientské položky](../mfc/containers-client-items.md)

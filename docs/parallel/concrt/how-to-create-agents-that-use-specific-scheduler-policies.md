@@ -5,30 +5,30 @@ helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-ms.openlocfilehash: 5aac86801015549b5552b51c06a30f8398346a06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece6b113e3fe10c2c3179517f73137df281acf87
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411367"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141738"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Postupy: Vytváření agentů využívajících specifické zásady plánovače
 
-Agent je součástí aplikace, která funguje asynchronně s jinými součástmi řešení větší výpočetní úlohy. Agent obvykle má nastavení životního cyklu a udržuje svůj stav.
+Agent je součást aplikace, která asynchronně spolupracuje s ostatními komponentami k řešení větších výpočetních úloh. Agent má obvykle nastavený životní cyklus a udržuje stav.
 
-Každý agent může mít jedinečné požadavky. Agenta, který umožňuje interakci uživatele (Načítání vstupu nebo zobrazení výstupu) může například vyžadovat vyšší prioritní přístup k výpočetní prostředky. Zásady plánovače umožňují ovládat strategie, Plánovač používá při správě úloh. Toto téma ukazuje, jak vytváření agentů využívajících specifické zásady plánovače.
+Každý agent může mít jedinečné požadavky na aplikaci. Například agent, který umožňuje interakci uživatele (načtení vstupu nebo zobrazení výstupu), může vyžadovat vyšší prioritu přístupu k výpočetním prostředkům. Zásady plánovače umožňují řídit strategii, kterou Plánovač používá při správě úkolů. Toto téma ukazuje, jak vytvořit agenty, které používají konkrétní zásady plánovače.
 
-Základní příklad, který používá vlastní plánovač zásady spolu s asynchronní bloky zpráv, najdete v části [jak: Určení specifických zásad plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Základní příklad, který používá vlastní zásady plánovače spolu s asynchronními bloky zpráv, najdete v tématu [How to: zadat konkrétní zásady plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
-Toto téma používá funkci z asynchronní knihovnou agentů, například agenti, blokům zpráv a funkce předávání zpráv a provádí práci. Další informace o asynchronní knihovnou agentů najdete v tématu [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md).
+Toto téma používá funkce z knihovny asynchronních agentů, jako jsou agenti, bloky zpráv a funkce předávající zprávy, k provedení práce. Další informace o knihovně asynchronních agentů najdete v tématu [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad definuje dvě třídy, které jsou odvozeny z [concurrency::agent](../../parallel/concrt/reference/agent-class.md): `permutor` a `printer`. `permutor` Třídy vypočítá všechny permutací daný vstupní řetězec. `printer` Třídy vytiskne zprávy o průběhu do konzoly. `permutor` Třída provádí výpočetně náročné operace, kterou může použít všechny dostupné výpočetní prostředky. Užitečnost `printer` třídy musí každá zpráva o průběhu tisk včas.
+Následující příklad definuje dvě třídy, které jsou odvozeny z [: concurrency:: Agent](../../parallel/concrt/reference/agent-class.md): `permutor` a `printer`. Třída `permutor` vypočítá všechny permutace daného vstupního řetězce. Třída `printer` vytiskne zprávy o průběhu do konzoly. Třída `permutor` provádí výpočetní náročnou operaci, která může využívat všechny dostupné výpočetní prostředky. Aby bylo možné použít třídu `printer` musí včas tisknout každou zprávu o průběhu.
 
-K poskytování `printer` třídy spravedlivého přístupu k výpočetním prostředkům, v tomto příkladu kroky, které jsou popsány v [jak: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) k vytvoření instance plánovače, která má vlastní zásady. Vlastní zásada určuje priorita vlákna bude s nejvyšší prioritou.
+V tomto příkladu se pro zajištění spravedlivého přístupu `printer` třídy k výpočetním prostředkům používá postup, který je popsán v tématu [Postupy: Správa instance Scheduleru](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) pro vytvoření instance Scheduleru, která má vlastní zásadu. Vlastní zásady určují, že priorita vlákna bude mít nejvyšší prioritní třídu.
 
-Pro ilustraci výhody použití, který má vlastní zásadu plánovače, provede v tomto příkladu celkové úlohu dvakrát. V prvním příkladu výchozím plánovačem naplánování úlohy i. Příklad poté použije výchozí scheduler k plánování `permutor` objektu a Plánovač, který má vlastní zásady pro naplánování `printer` objektu.
+K ilustraci výhod používání Scheduleru, který má vlastní zásady, tento příklad provede celou úlohu dvakrát. První příklad používá výchozí Plánovač k naplánování obou úloh. Příklad pak pomocí výchozího plánovače naplánuje objekt `permutor` a Scheduler, který má vlastní zásadu pro naplánování objektu `printer`.
 
 [!code-cpp[concrt-permute-strings#1](../../parallel/concrt/codesnippet/cpp/how-to-create-agents-that-use-specific-scheduler-policies_1.cpp)]
 
@@ -44,15 +44,15 @@ Computing all permutations of 'Grapefruit'...
 100% complete...
 ```
 
-I když obě sady úkolů přinesou stejný výsledek, verzi, která používá vlastní zásady umožňuje `printer` objektu, který chcete spustit se zvýšenými oprávněními důležitostí tak, aby se chová více responzivně.
+I když obě sady úloh tvoří stejný výsledek, verze, která používá vlastní zásady, umožňuje, aby se objekt `printer` spouštěl se zvýšenou prioritou, takže se chová rychleji.
 
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `permute-strings.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo ho vložte do souboru s názvem `permute-strings.cpp` a potom spusťte následující příkaz v okně příkazového řádku sady Visual Studio.
 
-**cl.exe /EHsc permute-strings.cpp**
+> **CL. exe/EHsc permute-Strings. cpp**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zásady plánovače](../../parallel/concrt/scheduler-policies.md)<br/>
 [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)

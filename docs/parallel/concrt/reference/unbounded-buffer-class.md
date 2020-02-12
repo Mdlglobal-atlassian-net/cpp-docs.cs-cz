@@ -19,30 +19,30 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0f2f81957ee88d4263c6acd879bd286c95631eb
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407832"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142337"
 ---
-# <a name="unboundedbuffer-class"></a>Třída unbounded_buffer
+# <a name="unbounded_buffer-class"></a>Třída unbounded_buffer
 
-`unbounded_buffer` Je více cílový blok zpráv více zdroje, seřazený `propagator_block` umožňující ukládání množství zpráv.
+`unbounded_buffer` blok zasílání zpráv je více cílů, seřazené `propagator_block` umožňující ukládání neohraničeného počtu zpráv.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<
    class             _Type
 >
 class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<            _Type>>, multi_link_registry<ISource<            _Type>>>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_Type*<br/>
-Typ datové části zprávy, uloženy a následně vyrovnávací paměti.
+Typ datové části zpráv uložených a šířených vyrovnávací pamětí.
 
 ## <a name="members"></a>Členové
 
@@ -50,31 +50,31 @@ Typ datové části zprávy, uloženy a následně vyrovnávací paměti.
 
 |Název|Popis|
 |----------|-----------------|
-|[unbounded_buffer](#ctor)|Přetíženo. Vytvoří `unbounded_buffer` blok zpráv.|
-|[~ unbounded_buffer – destruktor](#dtor)|Odstraní `unbounded_buffer` blok zpráv.|
+|[unbounded_buffer](#ctor)|Přetíženo. Vytvoří blok pro zasílání zpráv `unbounded_buffer`.|
+|[~ unbounded_buffer destruktor](#dtor)|Odstraní blok zasílání zpráv `unbounded_buffer`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[dequeue](#dequeue)|Odebere položku z `unbounded_buffer` blok zpráv.|
-|[enqueue](#enqueue)|Přidá položku do `unbounded_buffer` blok zpráv.|
+|[odstranění z fronty](#dequeue)|Odebere položku z `unbounded_buffer`ho bloku pro zasílání zpráv.|
+|[zařazování](#enqueue)|Přidá položku do `unbounded_buffer`ho bloku pro zasílání zpráv.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[accept_message](#accept_message)|Přijme zprávu, která byly nabízeny situace `unbounded_buffer` blok zpráv, přenos vlastnictví volajícímu.|
-|[consume_message](#consume_message)|Využívá dříve nabízená zpráva `unbounded_buffer` bloku zpráv a vyhrazená v cíli, přenos vlastnictví volajícímu.|
-|[link_target_notification](#link_target_notification)|Zpětné volání, která upozorňuje, že nový cíl je propojená s tím `unbounded_buffer` blok zpráv.|
-|[process_input_messages](#process_input_messages)|Místa `message` `_PMessage` v tomto `unbounded_buffer` blok zpráv a pokouší se nabízejí na všechny propojené cíle.|
-|[propagate_message](#propagate_message)|Asynchronně předává zprávy ze `ISource` bloku k tomuto `unbounded_buffer` blok zpráv. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.|
-|[propagate_output_messages](#propagate_output_messages)|Místa `message` `_PMessage` v tomto `unbounded_buffer` blok zpráv a pokouší se nabízejí na všechny propojené cíle. (Přepíše [source_block::propagate_output_messages –](source-block-class.md#propagate_output_messages).)|
-|[release_message](#release_message)|Uvolní předchozí rezervace zprávy. (Přepíše [source_block::release_message –](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Vyhradí zprávu nabízely dříve v tomto `unbounded_buffer` blok zpráv. (Přepíše [source_block::reserve_message –](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Obnoví šíření po rezervaci byla uvolněna. (Přepíše [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|
-|[send_message](#send_message)|Synchronně předává zprávy ze `ISource` bloku k tomuto `unbounded_buffer` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.|
-|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený. (Přepíše [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|
+|[accept_message](#accept_message)|Přijme zprávu, kterou nabídl tento `unbounded_buffer` blok pro zasílání zpráv a přenáší vlastnictví volajícímu.|
+|[consume_message](#consume_message)|Spotřebovává zprávu, kterou předtím nabízela služba `unbounded_buffer` pro zasílání zpráv a kterou rezervoval cíl, a převádí vlastnictví na volajícího.|
+|[link_target_notification](#link_target_notification)|Zpětné volání upozorňující na to, že nový cíl byl propojen s tímto `unbounded_buffer`m blokem zasílání zpráv.|
+|[process_input_messages](#process_input_messages)|Umístí do tohoto `unbounded_buffer` bloku pro zasílání zpráv `message` `_PMessage` a pokusí se ho nabídnout všem propojeným cílům.|
+|[propagate_message](#propagate_message)|Asynchronně předává zprávu z `ISource` bloku do tohoto `unbounded_buffer` bloku zpráv. Je vyvolána metodou `propagate`, když je volána pomocí zdrojového bloku.|
+|[propagate_output_messages](#propagate_output_messages)|Umístí do tohoto `unbounded_buffer` bloku pro zasílání zpráv `message` `_PMessage` a pokusí se ho nabídnout všem propojeným cílům. (Overrides [source_block::p ropagate_output_messages](source-block-class.md#propagate_output_messages).)|
+|[release_message](#release_message)|Uvolní předchozí rezervaci zprávy. (Potlačení [source_block:: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Vyhradí zprávu, kterou dřív nabídl tento `unbounded_buffer` blok pro zasílání zpráv. (Potlačení [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Po vydání rezervace pokračuje v šíření. (Potlačení [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[send_message](#send_message)|Synchronně předává zprávu z `ISource` bloku do tohoto `unbounded_buffer` bloku zpráv. Je vyvolána metodou `send`, když je volána pomocí zdrojového bloku.|
+|[supports_anonymous_source](#supports_anonymous_source)|Přepíše metodu `supports_anonymous_source`, aby označovala, že tento blok může přijímat zprávy, které mu byly nabídnuty zdrojem, který není propojen. (Overrides [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
 Další informace najdete v tématu [asynchronní bloky zpráv](../asynchronous-message-blocks.md).
 
@@ -92,15 +92,15 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../asynchronous-
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Přijme zprávu, která byly nabízeny situace `unbounded_buffer` blok zpráv, přenos vlastnictví volajícímu.
+Přijme zprávu, kterou nabídl tento `unbounded_buffer` blok pro zasílání zpráv a přenáší vlastnictví volajícímu.
 
-```
+```cpp
 virtual message<_Type> * accept_message(
    runtime_object_identity                 _MsgId
 );
@@ -109,17 +109,17 @@ virtual message<_Type> * accept_message(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` Nabízených `message` objektu.
+`runtime_object_identity` nabízeného objektu `message`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `message` volající má teď vlastnictví objektu.
+Ukazatel na objekt `message`, u kterého má volající nyní vlastnictví.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Využívá dříve nabízená zpráva `unbounded_buffer` bloku zpráv a vyhrazená v cíli, přenos vlastnictví volajícímu.
+Spotřebovává zprávu, kterou předtím nabízela služba `unbounded_buffer` pro zasílání zpráv a kterou rezervoval cíl, a převádí vlastnictví na volajícího.
 
-```
+```cpp
 virtual message<_Type> * consume_message(
    runtime_object_identity                 _MsgId
 );
@@ -128,33 +128,33 @@ virtual message<_Type> * consume_message(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objektu spotřebovává.
+`runtime_object_identity` spotřebovaného objektu `message`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `message` volající má teď vlastnictví objektu.
+Ukazatel na objekt `message`, u kterého má volající nyní vlastnictví.
 
 ### <a name="remarks"></a>Poznámky
 
 Podobně jako `accept`, ale vždy předchází volání `reserve`.
 
-##  <a name="dequeue"></a> Odstranění z fronty
+## <a name="dequeue"></a>odstranění z fronty
 
-Odebere položku z `unbounded_buffer` blok zpráv.
+Odebere položku z `unbounded_buffer`ho bloku pro zasílání zpráv.
 
-```
+```cpp
 _Type dequeue();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Datová část zprávy odebrán z `unbounded_buffer`.
+Datová část zprávy, která byla odebrána z `unbounded_buffer`.
 
-##  <a name="enqueue"></a> Zařazení do fronty
+## <a name="enqueue"></a>zařazování
 
-Přidá položku do `unbounded_buffer` blok zpráv.
+Přidá položku do `unbounded_buffer`ho bloku pro zasílání zpráv.
 
-```
+```cpp
 bool enqueue(
    _Type const&                 _Item
 );
@@ -162,18 +162,18 @@ bool enqueue(
 
 ### <a name="parameters"></a>Parametry
 
-*_Položku*<br/>
-Položka k přidání.
+*_Item*<br/>
+Položka k přidání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud položka byla přijata, **false** jinak.
+**true** , pokud byla položka přijata, jinak **false** .
 
-##  <a name="link_target_notification"></a> link_target_notification –
+## <a name="link_target_notification"></a>link_target_notification
 
-Zpětné volání, která upozorňuje, že nový cíl je propojená s tím `unbounded_buffer` blok zpráv.
+Zpětné volání upozorňující na to, že nový cíl byl propojen s tímto `unbounded_buffer`m blokem zasílání zpráv.
 
-```
+```cpp
 virtual void link_target_notification(
    _Inout_ ITarget<_Type> *                 _PTarget
 );
@@ -182,13 +182,13 @@ virtual void link_target_notification(
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Ukazatel na nově odkazovaný cíl.
+Ukazatel na nově propojený cíl.
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Asynchronně předává zprávy ze `ISource` bloku k tomuto `unbounded_buffer` blok zpráv. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.
+Asynchronně předává zprávu z `ISource` bloku do tohoto `unbounded_buffer` bloku zpráv. Je vyvolána metodou `propagate`, když je volána pomocí zdrojového bloku.
 
-```
+```cpp
 virtual message_status propagate_message(
    _Inout_ message<_Type> *                 _PMessage,
    _Inout_ ISource<_Type> *                 _PSource
@@ -198,32 +198,32 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Ukazatel `message` objektu.
+Ukazatel na objekt `message`.
 
 *_PSource*<br/>
-Ukazatele na blok zdroje nabídky zprávy.
+Ukazatel na zdrojový blok, který nabízí zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [message_status –](concurrency-namespace-enums.md#message_status) označení cíl rozhodla se zprávy.
+[Message_status](concurrency-namespace-enums.md#message_status) údaj o tom, co se cíli rozhodl s touto zprávou.
 
-##  <a name="propagate_output_messages"></a> propagate_output_messages
+## <a name="propagate_output_messages"></a>propagate_output_messages
 
-Místa `message` `_PMessage` v tomto `unbounded_buffer` blok zpráv a pokouší se nabízejí na všechny propojené cíle.
+Umístí do tohoto `unbounded_buffer` bloku pro zasílání zpráv `message` `_PMessage` a pokusí se ho nabídnout všem propojeným cílům.
 
-```
+```cpp
 virtual void propagate_output_messages();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud už před touto možností v další zprávu `unbounded_buffer`, šíření na propojené cíle nedojde, dokud všechny předchozí zprávy byla přijata nebo spotřebovanými. První propojení cíl, aby se úspěšně vytvořilo `accept` nebo `consume` zprávy převezme vlastnictví a žádný cíl pak můžete získat zprávu.
+Je-li již v `unbounded_buffer`jiná zpráva, dojde k šíření do propojených cílů, dokud nebudou přijaty nebo spotřebovány žádné předchozí zprávy. První propojený cíl, který má úspěšně `accept` nebo `consume` zprávu převezme vlastnictví, a žádný jiný cíl pak nemůže získat zprávu.
 
-##  <a name="process_input_messages"></a> process_input_messages –
+## <a name="process_input_messages"></a>process_input_messages
 
-Místa `message` `_PMessage` v tomto `unbounded_buffer` blok zpráv a pokouší se nabízejí na všechny propojené cíle.
+Umístí do tohoto `unbounded_buffer` bloku pro zasílání zpráv `message` `_PMessage` a pokusí se ho nabídnout všem propojeným cílům.
 
-```
+```cpp
 virtual void process_input_messages(
    _Inout_ message<_Type> *                 _PMessage
 );
@@ -234,11 +234,11 @@ virtual void process_input_messages(
 *_PMessage*<br/>
 Ukazatel na zprávu, která má být zpracována.
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Uvolní předchozí rezervace zprávy.
+Uvolní předchozí rezervaci zprávy.
 
-```
+```cpp
 virtual void release_message(
    runtime_object_identity                 _MsgId
 );
@@ -247,13 +247,13 @@ virtual void release_message(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objektu se vydávají.
+`runtime_object_identity` vydaných `message` objektu.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Vyhradí zprávu nabízely dříve v tomto `unbounded_buffer` blok zpráv.
+Vyhradí zprávu, kterou dřív nabídl tento `unbounded_buffer` blok pro zasílání zpráv.
 
-```
+```cpp
 virtual bool reserve_message(
    runtime_object_identity                 _MsgId
 );
@@ -262,29 +262,29 @@ virtual bool reserve_message(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objekt dochází k rezervaci.
+`runtime_object_identity` rezervovaného objektu `message`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud zpráva byla úspěšně vyhrazené, **false** jinak.
+**true** , pokud byla zpráva úspěšně rezervována, jinak **false** .
 
 ### <a name="remarks"></a>Poznámky
 
-Po `reserve` je volána, pokud se vrátí **true**– buď `consume` nebo `release` využít nebo uvolnit vlastnictví zprávy musí být volána.
+Po volání `reserve`, pokud vrátí **hodnotu true**, musí být buď volána `consume` nebo `release`, aby bylo možné převzít nebo uvolnit vlastnictví zprávy.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Obnoví šíření po rezervaci byla uvolněna.
+Po vydání rezervace pokračuje v šíření.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-Synchronně předává zprávy ze `ISource` bloku k tomuto `unbounded_buffer` blok zpráv. Je vyvolán `send` metodu, když se zavolá pomocí zdrojového bloku.
+Synchronně předává zprávu z `ISource` bloku do tohoto `unbounded_buffer` bloku zpráv. Je vyvolána metodou `send`, když je volána pomocí zdrojového bloku.
 
-```
+```cpp
 virtual message_status send_message(
    _Inout_ message<_Type> *                 _PMessage,
    _Inout_ ISource<_Type> *                 _PSource
@@ -294,32 +294,32 @@ virtual message_status send_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Ukazatel `message` objektu.
+Ukazatel na objekt `message`.
 
 *_PSource*<br/>
-Ukazatele na blok zdroje nabídky zprávy.
+Ukazatel na zdrojový blok, který nabízí zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [message_status –](concurrency-namespace-enums.md#message_status) označení cíl rozhodla se zprávy.
+[Message_status](concurrency-namespace-enums.md#message_status) údaj o tom, co se cíli rozhodl s touto zprávou.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source –
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Přepsání `supports_anonymous_source` indikace, že tento blok můžete přijímat zprávy, které jsou nabízeny zdrojem, který není spojený.
+Přepíše metodu `supports_anonymous_source`, aby označovala, že tento blok může přijímat zprávy, které mu byly nabídnuty zdrojem, který není propojen.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** protože bloku není odložit nabízené zprávy.
+**true** , protože blok odloží nabízené zprávy.
 
-##  <a name="ctor"></a> unbounded_buffer
+## <a name="ctor"></a>unbounded_buffer
 
-Vytvoří `unbounded_buffer` blok zpráv.
+Vytvoří blok pro zasílání zpráv `unbounded_buffer`.
 
-```
+```cpp
 unbounded_buffer();
 
 unbounded_buffer(
@@ -348,29 +348,29 @@ unbounded_buffer(
 ### <a name="parameters"></a>Parametry
 
 *_Filter*<br/>
-Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.
+Funkce filtru, která určuje, zda mají být přijaty nabízené zprávy.
 
 *_PScheduler*<br/>
-`Scheduler` Objekt v rámci kterého Úloha šíření pro `unbounded_buffer` naplánovaný zasílání zpráv bloku.
+Objekt `Scheduler`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `unbounded_buffer`
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Objekt v rámci kterého Úloha šíření pro `unbounded_buffer` naplánovaný zasílání zpráv bloku. `Scheduler` Skupina plánování předpokládá používaný objekt.
+Objekt `ScheduleGroup`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `unbounded_buffer` Použitý objekt `Scheduler` je odvozen skupinou plánu.
 
 ### <a name="remarks"></a>Poznámky
 
-Modul runtime používá výchozí plánovač, pokud není zadán `_PScheduler` nebo `_PScheduleGroup` parametry.
+Modul runtime používá výchozí Plánovač, pokud nezadáte parametry `_PScheduler` nebo `_PScheduleGroup`.
 
-Typ `filter_method` je funktor s podpisem `bool (_Type const &)` která je vyvolána situace `unbounded_buffer` blok zpráv k určení, zda by měla přijímat nabízená zpráva.
+Typ `filter_method` je funktor s podpisovým `bool (_Type const &)`, který je vyvolán pomocí tohoto `unbounded_buffer` bloku zpráv k určení, zda by měla přijmout nabízenou zprávu.
 
-##  <a name="dtor"></a> ~ unbounded_buffer
+## <a name="dtor"></a>~ unbounded_buffer
 
-Odstraní `unbounded_buffer` blok zpráv.
+Odstraní blok zasílání zpráv `unbounded_buffer`.
 
-```
+```cpp
 ~unbounded_buffer();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [overwrite_buffer – třída](overwrite-buffer-class.md)<br/>

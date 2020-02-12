@@ -14,20 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337502"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142318"
 ---
 # <a name="ischeduler-structure"></a>Struktura rozhraní IScheduler
 
-Rozhraní pro abstrakci pracovní plánovače. Správce prostředků modulu Runtime souběžnosti používá ke komunikaci s plánovači pracovní toto rozhraní.
+Rozhraní pro abstrakci pracovního plánovače. Správce prostředků Concurrency Runtime používá toto rozhraní ke komunikaci s plánovači práce.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 struct IScheduler;
 ```
 
@@ -37,17 +37,17 @@ struct IScheduler;
 
 |Název|Popis|
 |----------|-----------------|
-|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Poskytuje plánovače sadu kořenových adresářů virtuálního procesoru pro jeho použití. Každý `IVirtualProcessorRoot` rozhraní představuje oprávnění ke spuštění jedno vlákno, které provádí práci jménem plánovače.|
-|[Ischeduler::getid –](#getid)|Vrací jedinečný identifikátor pro Plánovač.|
-|[Ischeduler::getpolicy –](#getpolicy)|Vrátí kopii objektu zásad plánovače. Další informace o zásadách plánovače naleznete v tématu [schedulerpolicy –](schedulerpolicy-class.md).|
-|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Upozorní tento plánovač, která hardwarových vláken reprezentována sadu kořenových adresářů virtuálního procesoru v poli `ppVirtualProcessorRoots` nyní používá jiné plánovače.|
-|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Upozorní tento plánovač, která hardwarových vláken reprezentována sadu kořenových adresářů virtuálního procesoru v poli `ppVirtualProcessorRoots` nejsou používány jiné plánovače.|
-|[Ischeduler::removevirtualprocessors –](#removevirtualprocessors)|Inicializuje odstranění kořenových adresářů virtuálního procesoru, které byly dříve přiděleny na Plánovač.|
-|[Ischeduler::Statistics –](#statistics)|Obsahuje informace související s míry přijetí a dokončení úlohy a změna v délka fronty plánovače.|
+|[IScheduler:: AddVirtualProcessors –](#addvirtualprocessors)|Poskytuje Plánovač se sadou kořenů virtuálních procesorů pro jeho použití. Každé rozhraní `IVirtualProcessorRoot` představuje právo spustit jedno vlákno, které může provádět práci jménem plánovače.|
+|[IScheduler:: getId –](#getid)|Vrátí jedinečný identifikátor plánovače.|
+|[IScheduler:: GetPolicy](#getpolicy)|Vrátí kopii zásady plánovače. Další informace o zásadách plánovače najdete v tématu [SchedulerPolicy](schedulerpolicy-class.md).|
+|[IScheduler:: Notifyresourcesexternallybusy –](#notifyresourcesexternallybusy)|Upozorní tohoto plánovače, že hardwarová vlákna reprezentovaná sadou kořenů virtuálních procesorů v poli `ppVirtualProcessorRoots` jsou nyní používána jinými plánovači.|
+|[IScheduler:: Notifyresourcesexternallyidle –](#notifyresourcesexternallyidle)|Oznámí tomuto plánovači, že hardwarová vlákna reprezentovaná sadou kořenů virtuálních procesorů v poli `ppVirtualProcessorRoots` nepoužívají jiné plánovače.|
+|[IScheduler:: RemoveVirtualProcessors –](#removevirtualprocessors)|Inicializuje odebrání kořenových adresářů virtuálních procesorů, které byly dříve přiděleny tomuto plánovači.|
+|[IScheduler:: Statistics](#statistics)|Poskytuje informace týkající se doručení a sazeb dokončení úloh a změny ve frontě pro Plánovač.|
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud implementujete vlastní plánovač, který komunikuje s Resource Managerem, by měla poskytnout implementaci položky `IScheduler` rozhraní. Toto rozhraní je na jednom konci obousměrný kanál komunikace mezi plánovače a Resource Manageru. Druhém konci je reprezentována `IResourceManager` a `ISchedulerProxy` rozhraní, které jsou implementované pomocí Správce prostředků.
+Pokud implementujete vlastního plánovače, který komunikuje s Správce prostředků, měli byste poskytnout implementaci rozhraní `IScheduler`. Toto rozhraní představuje jeden konec obousměrného komunikačního kanálu mezi plánovačem a Správce prostředků. Druhý konec je reprezentován rozhraním `IResourceManager` a `ISchedulerProxy`, která jsou implementována Správce prostředků.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -55,15 +55,15 @@ Pokud implementujete vlastní plánovač, který komunikuje s Resource Managerem
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm.h
+**Záhlaví:** concrtrm. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="addvirtualprocessors"></a>  Ischeduler::addvirtualprocessors – metoda
+## <a name="addvirtualprocessors"></a>IScheduler:: AddVirtualProcessors – – metoda
 
-Poskytuje plánovače sadu kořenových adresářů virtuálního procesoru pro jeho použití. Každý `IVirtualProcessorRoot` rozhraní představuje oprávnění ke spuštění jedno vlákno, které provádí práci jménem plánovače.
+Poskytuje Plánovač se sadou kořenů virtuálních procesorů pro jeho použití. Každé rozhraní `IVirtualProcessorRoot` představuje právo spustit jedno vlákno, které může provádět práci jménem plánovače.
 
-```
+```cpp
 virtual void AddVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -72,50 +72,50 @@ virtual void AddVirtualProcessors(
 ### <a name="parameters"></a>Parametry
 
 *ppVirtualProcessorRoots*<br/>
-Pole `IVirtualProcessorRoot` rozhraní představující virtuální procesor kořeny přidávaný do plánovače.
+Pole rozhraní `IVirtualProcessorRoot` reprezentujících kořeny virtuálního procesoru přidávané do plánovače.
 
-*Počet*<br/>
-Počet `IVirtualProcessorRoot` rozhraní jako pole.
+*count*<br/>
+Počet `IVirtualProcessorRoot` rozhraní v poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá správce prostředků `AddVirtualProcessor` metoda udělit počáteční sadu kořenových adresářů virtuálního procesoru do fronty plánovače. Také to může vyvolat metodu se při jej znovu vytvoří rovnováhu mezi plánovači prostředky přidat do plánovače kořenových adresářů virtuálního procesoru.
+Správce prostředků vyvolá metodu `AddVirtualProcessor` pro udělení počáteční sady kořenových adresářů virtuálního procesoru do plánovače. Může také vyvolat metodu pro přidání kořenů virtuálního procesoru do plánovače při přerovnávání prostředků mezi plánovači.
 
-##  <a name="getid"></a>  Ischeduler::getid – metoda
+## <a name="getid"></a>IScheduler:: getId – – metoda
 
-Vrací jedinečný identifikátor pro Plánovač.
+Vrátí jedinečný identifikátor plánovače.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo jedinečný identifikátor.
+Jedinečný celočíselný identifikátor.
 
 ### <a name="remarks"></a>Poznámky
 
-Měli byste použít [getschedulerid –](concurrency-namespace-functions.md) funkce získat jedinečný identifikátor pro objekt, který implementuje `IScheduler` rozhraní, než použijete rozhraní jako parametr metodám zadaný správcem prostředků. Očekává se vrátit stejný identifikátor při `GetId` vyvolání funkce.
+Použijte funkci [GetSchedulerId –](concurrency-namespace-functions.md) k získání jedinečného identifikátoru pro objekt, který implementuje rozhraní `IScheduler`, před použitím rozhraní jako parametru pro metody dodané správce prostředků. Očekává se, že vrátíte stejný identifikátor při vyvolání funkce `GetId`.
 
-Identifikátor získané z jiného zdroje může způsobit nedefinované chování.
+Identifikátor získaný z jiného zdroje může mít za následek nedefinované chování.
 
-##  <a name="getpolicy"></a>  Ischeduler::getpolicy – metoda
+## <a name="getpolicy"></a>IScheduler:: GetPolicy – metoda
 
-Vrátí kopii objektu zásad plánovače. Další informace o zásadách plánovače naleznete v tématu [schedulerpolicy –](schedulerpolicy-class.md).
+Vrátí kopii zásady plánovače. Další informace o zásadách plánovače najdete v tématu [SchedulerPolicy](schedulerpolicy-class.md).
 
-```
+```cpp
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kopírovat zásady plánovače.
+Kopie zásad plánovače.
 
-##  <a name="notifyresourcesexternallybusy"></a>  Ischeduler::notifyresourcesexternallybusy – metoda
+## <a name="notifyresourcesexternallybusy"></a>IScheduler:: Notifyresourcesexternallybusy – – metoda
 
-Upozorní tento plánovač, která hardwarových vláken reprezentována sadu kořenových adresářů virtuálního procesoru v poli `ppVirtualProcessorRoots` nyní používá jiné plánovače.
+Upozorní tohoto plánovače, že hardwarová vlákna reprezentovaná sadou kořenů virtuálních procesorů v poli `ppVirtualProcessorRoots` jsou nyní používána jinými plánovači.
 
-```
+```cpp
 virtual void NotifyResourcesExternallyBusy(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -124,26 +124,26 @@ virtual void NotifyResourcesExternallyBusy(
 ### <a name="parameters"></a>Parametry
 
 *ppVirtualProcessorRoots*<br/>
-Pole `IVirtualProcessorRoot` rozhraní přidružené k vláken hardwaru, na kterých staly další plánovači zaneprázdněn.
+Pole rozhraní `IVirtualProcessorRoot` přidružených k hardwarovým vláknům, u kterých se jiné plánovače stali zaneprázdněnými.
 
-*Počet*<br/>
-Počet `IVirtualProcessorRoot` rozhraní jako pole.
+*count*<br/>
+Počet `IVirtualProcessorRoot` rozhraní v poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Je možné pro konkrétní hardware vlákno má být přiřazena k více plánovače ve stejnou dobu. Jedním z důvodů může být, že na systém a splňovat minimální souběžnost pro všechny plánovače, bez sdílení prostředků nejsou dost hardwarových vláken. Další možností je, že prostředky jsou dočasně přiřazené k jiné plánovači při vlastnící Plánovač, není použití prostřednictvím všech jeho kořenových adresářů virtuálního procesoru v daném vláknu hardwaru právě deaktivována.
+Je možné, aby bylo konkrétní hardwarové vlákno přiřazeno více plánovačům současně. Důvodem může být to, že v systému není k dispozici dostatek hardwarových vláken pro splnění minimální souběžnosti pro všechny plánovače bez sdílení prostředků. Další možností je to, že prostředky se dočasně přiřazují jiným plánovačům, když ji vlastnící Plánovač nepoužívají, a to prostřednictvím všech kořenových adresářů virtuálních procesorů v tomto hardwarovém vlákně, které je deaktivované.
 
-Úroveň předplatného vlákno hardwaru je označené podle počtu předplacenému vláken a aktivovat kořenových adresářů virtuálního procesoru, které jsou spojené s tímto vláknem hardwaru. Z určitého plánovače úroveň předplatného externí vlákno hardwaru je část předplatné, které další plánovači přispívat do. Oznámení, že prostředky jsou externě zaneprázdněný odesílají do fronty plánovače posune úrovni externí předplatného pro vlákno hardwaru od nuly do kladnou území.
+Úroveň předplatného hardwarového vlákna vychází z počtu přihlášených vláken a aktivovaných kořenových adresářů virtuálních procesorů přidružených k tomuto hardwarovému vláknu. Z pohledu konkrétního plánovače je externí úroveň předplatného hardwarového vlákna součástí předplatného, ke kterému přispěje jiné plánovače. Oznámení o tom, že prostředky jsou externě zaneprázdněná, se odesílají do Scheduleru, když se externí předplatné na hardwarovém vlákně pohybuje od nuly po kladné území.
 
-Oznámení prostřednictvím této metody se odesílají jenom plánovačům, které mají zásady kde hodnota `MinConcurrency` klíče zásad je rovna hodnotě pro `MaxConcurrency` klíče zásad. Další informace o zásadách plánovače naleznete v tématu [schedulerpolicy –](schedulerpolicy-class.md).
+Oznámení prostřednictvím této metody jsou odesílána pouze do schedulerů, které mají zásadu, kde je hodnota klíče zásad `MinConcurrency` rovna hodnotě pro klíč zásad `MaxConcurrency`. Další informace o zásadách plánovače najdete v tématu [SchedulerPolicy](schedulerpolicy-class.md).
 
-Plánovače, která kvalifikuje oznámení získá sady počáteční oznámení při jeho vytváření, informuje, zda jsou prostředky, které právě přiřazené externě přetížena nebo nečinnosti.
+Plánovač, který v oznámeních vyhovuje, získá sadu počátečních oznámení při jejich vytvoření, informuje o tom, jestli prostředky, které jste právě přiřadili, jsou externě zaneprázdněné nebo nečinné.
 
-##  <a name="notifyresourcesexternallyidle"></a>  Ischeduler::notifyresourcesexternallyidle – metoda
+## <a name="notifyresourcesexternallyidle"></a>IScheduler:: Notifyresourcesexternallyidle – – metoda
 
-Upozorní tento plánovač, která hardwarových vláken reprezentována sadu kořenových adresářů virtuálního procesoru v poli `ppVirtualProcessorRoots` nejsou používány jiné plánovače.
+Oznámí tomuto plánovači, že hardwarová vlákna reprezentovaná sadou kořenů virtuálních procesorů v poli `ppVirtualProcessorRoots` nepoužívají jiné plánovače.
 
-```
+```cpp
 virtual void NotifyResourcesExternallyIdle(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -152,26 +152,26 @@ virtual void NotifyResourcesExternallyIdle(
 ### <a name="parameters"></a>Parametry
 
 *ppVirtualProcessorRoots*<br/>
-Pole `IVirtualProcessorRoot` rozhraní přidružené k vláken hardwaru, na kterých staly další plánovači nečinnosti.
+Pole rozhraní `IVirtualProcessorRoot` přidružených k hardwarovým vláknům, u kterých se jiné schedulery staly nečinnými.
 
-*Počet*<br/>
-Počet `IVirtualProcessorRoot` rozhraní jako pole.
+*count*<br/>
+Počet `IVirtualProcessorRoot` rozhraní v poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Je možné pro konkrétní hardware vlákno má být přiřazena k více plánovače ve stejnou dobu. Jedním z důvodů může být, že na systém a splňovat minimální souběžnost pro všechny plánovače, bez sdílení prostředků nejsou dost hardwarových vláken. Další možností je, že prostředky jsou dočasně přiřazené k jiné plánovači při vlastnící Plánovač, není použití prostřednictvím všech jeho kořenových adresářů virtuálního procesoru v daném vláknu hardwaru právě deaktivována.
+Je možné, aby bylo konkrétní hardwarové vlákno přiřazeno více plánovačům současně. Důvodem může být to, že v systému není k dispozici dostatek hardwarových vláken pro splnění minimální souběžnosti pro všechny plánovače bez sdílení prostředků. Další možností je to, že prostředky se dočasně přiřazují jiným plánovačům, když ji vlastnící Plánovač nepoužívají, a to prostřednictvím všech kořenových adresářů virtuálních procesorů v tomto hardwarovém vlákně, které je deaktivované.
 
-Úroveň předplatného vlákno hardwaru je označené podle počtu předplacenému vláken a aktivovat kořenových adresářů virtuálního procesoru, které jsou spojené s tímto vláknem hardwaru. Z určitého plánovače úroveň předplatného externí vlákno hardwaru je část předplatné, které další plánovači přispívat do. Oznámení, že prostředky jsou externě zaneprázdněný odesílají do fronty plánovače úroveň externí předplatného pro vlákno hardwaru klesne na nulu z předchozí kladnou hodnotu.
+Úroveň předplatného hardwarového vlákna vychází z počtu přihlášených vláken a aktivovaných kořenových adresářů virtuálních procesorů přidružených k tomuto hardwarovému vláknu. Z pohledu konkrétního plánovače je externí úroveň předplatného hardwarového vlákna součástí předplatného, ke kterému přispěje jiné plánovače. Oznámení o tom, že prostředky jsou na externě zaneprázdněná, se odesílají do Scheduleru, když je externí předplatné na hardwarovém vlákně z předchozí kladné hodnoty nula.
 
-Oznámení prostřednictvím této metody se odesílají jenom plánovačům, které mají zásady kde hodnota `MinConcurrency` klíče zásad je rovna hodnotě pro `MaxConcurrency` klíče zásad. Další informace o zásadách plánovače naleznete v tématu [schedulerpolicy –](schedulerpolicy-class.md).
+Oznámení prostřednictvím této metody jsou odesílána pouze do schedulerů, které mají zásadu, kde je hodnota klíče zásad `MinConcurrency` rovna hodnotě pro klíč zásad `MaxConcurrency`. Další informace o zásadách plánovače najdete v tématu [SchedulerPolicy](schedulerpolicy-class.md).
 
-Plánovače, která kvalifikuje oznámení získá sady počáteční oznámení při jeho vytváření, informuje, zda jsou prostředky, které právě přiřazené externě přetížena nebo nečinnosti.
+Plánovač, který v oznámeních vyhovuje, získá sadu počátečních oznámení při jejich vytvoření, informuje o tom, jestli prostředky, které jste právě přiřadili, jsou externě zaneprázdněné nebo nečinné.
 
-##  <a name="removevirtualprocessors"></a>  Ischeduler::removevirtualprocessors – metoda
+## <a name="removevirtualprocessors"></a>IScheduler:: RemoveVirtualProcessors – – metoda
 
-Inicializuje odstranění kořenových adresářů virtuálního procesoru, které byly dříve přiděleny na Plánovač.
+Inicializuje odebrání kořenových adresářů virtuálních procesorů, které byly dříve přiděleny tomuto plánovači.
 
-```
+```cpp
 virtual void RemoveVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -180,22 +180,22 @@ virtual void RemoveVirtualProcessors(
 ### <a name="parameters"></a>Parametry
 
 *ppVirtualProcessorRoots*<br/>
-Pole `IVirtualProcessorRoot` rozhraní představující kořenových adresářů virtuálního procesoru, která se má odebrat.
+Pole rozhraní `IVirtualProcessorRoot` reprezentujících kořeny virtuálních procesorů, které se mají odebrat.
 
-*Počet*<br/>
-Počet `IVirtualProcessorRoot` rozhraní jako pole.
+*count*<br/>
+Počet `IVirtualProcessorRoot` rozhraní v poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá správce prostředků `RemoveVirtualProcessors` metoda vzít zpět sadu kořenových adresářů virtuálního procesoru z plánovače. Plánovač má vyvolat [odebrat](iexecutionresource-structure.md#remove) metodu na každé rozhraní, když se provádí pomocí kořenových adresářů virtuálního procesoru. Nepoužívejte `IVirtualProcessorRoot` rozhraní, když jste vyvolali `Remove` metoda na něj.
+Správce prostředků vyvolá metodu `RemoveVirtualProcessors`, která vrátí sadu kořenových adresářů virtuálních procesorů z plánovače. Je očekáváno, že Scheduler vyvolá metodu [Remove](iexecutionresource-structure.md#remove) pro každé rozhraní, když se provede s kořeny virtuálního procesoru. Nepoužívejte rozhraní `IVirtualProcessorRoot`, když jste v něm vyvolali metodu `Remove`.
 
-Parametr `ppVirtualProcessorRoots` odkazuje na pole rozhraní. Mezi sadu kořenových adresářů virtuálního procesoru, která se má odebrat, kořeny mít nikdy neaktivoval mohou být vráceny za použití okamžitě `Remove` metody. Adresáře, které jste aktivovali a jsou buď provádí práci, nebo byly deaktivovány a čekají na práci můžete přejít, má být vrácen asynchronně. Plánovač musíte provést všechny pokusy o co nejrychleji odebrat kořen virtuálního procesoru. Neúmyslnému Překryvný odběr v rámci plánovače, může způsobit zpoždění odebrání kořenových adresářů virtuálního procesoru.
+Parametr `ppVirtualProcessorRoots` odkazuje na pole rozhraní. V rámci sady kořenových adresářů virtuálních procesorů, které se mají odebrat, nejsou kořeny nikdy aktivované pomocí metody `Remove`. Kořeny, které byly aktivovány a jsou buď vykonávány do práce, nebo byly deaktivovány a čekají na doručení práce, by měly být vráceny asynchronně. Plánovač musí provést pokus o odebrání kořenového virtuálního procesoru co nejrychlejší. Zpoždění odebrání kořenových adresářů virtuálních procesorů může mít za následek neúmyslné neúmyslné předplatné v rámci plánovače.
 
-##  <a name="statistics"></a>  Ischeduler::Statistics – metoda
+## <a name="statistics"></a>IScheduler:: Statistics – metoda
 
-Obsahuje informace související s míry přijetí a dokončení úlohy a změna v délka fronty plánovače.
+Poskytuje informace týkající se doručení a sazeb dokončení úloh a změny ve frontě pro Plánovač.
 
-```
+```cpp
 virtual void Statistics(
     _Out_ unsigned int* pTaskCompletionRate,
     _Out_ unsigned int* pTaskArrivalRate,
@@ -208,23 +208,23 @@ virtual void Statistics(
 Počet úloh, které byly dokončeny plánovačem od posledního volání této metody.
 
 *pTaskArrivalRate*<br/>
-Počet úloh, které jste dostali v Plánovači od posledního volání této metody.
+Počet úkolů, které byly doručeny do plánovače od posledního volání této metody.
 
 *pNumberOfTasksEnqueued*<br/>
 Celkový počet úloh ve všech frontách plánovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu je spustit Resource Manageru, aby bylo možné shromažďovat statistiky pro Plánovač. Statistiky shromážděné tady se používá k řízení algoritmy dynamického zpětnou vazbu k určení, kdy je třeba přiřadit více zdrojů pro Plánovač a kdy odnést prostředky. Hodnoty poskytnuté Plánovač může být optimistické a není potřeba přesně odrážet aktuální počet.
+Tuto metodu vyvolá Správce prostředků, aby bylo možné shromáždit statistiky pro Plánovač. Zde shromážděné statistiky budou sloužit k tomu, aby bylo možné určit, kdy je vhodné k plánovači přiřadit více prostředků a kdy se prostředky mají opustit. Hodnoty, které poskytuje Scheduler, můžou být optimistické a nemusí nutně odpovídat aktuálnímu počtu.
 
-Tato metoda by měly implementovat, pokud chcete, aby správce prostředků použít zpětnou vazbu o takové věci jako úloha doručení k určení způsobu vyvážit prostředků mezi váš Plánovač a dalších plánovačům zaregistrované pomocí Resource Manageru. Pokud zvolíte ne ke shromažďování statistik, můžete nastavit klíče zásad `DynamicProgressFeedback` hodnotě `DynamicProgressFeedbackDisabled` váš Plánovač zásad a prostředek správce nebude volat tuto metodu na váš plánovač.
+Tuto metodu byste měli implementovat, pokud chcete, aby Správce prostředků používala zpětnou vazbu týkající se takových věcí jako doručení úkolu, aby bylo možné určit, jak vyrovnávat prostředky mezi plánovačem a dalšími plánovači zaregistrovanými v Správce prostředků. Pokud se rozhodnete Neshromažďovat statistiky, můžete nastavit klíč zásady `DynamicProgressFeedback` na hodnotu `DynamicProgressFeedbackDisabled` v zásadách plánovače a Správce prostředků tuto metodu ve vašem plánovači vyvolat.
 
-Chybí statistické údaje Resource Manageru pomocí úrovní předplatného vlákno hardwaru rozhodování prostředků přidělení a migrace. Další informace na úrovni předplatného najdete v tématu [iexecutionresource::currentsubscriptionlevel –](iexecutionresource-structure.md#currentsubscriptionlevel).
+V případě nepřítomnosti statistických informací Správce prostředků použijí úrovně předplatného hardwarového vlákna k provedení rozhodnutí o přidělení a migraci prostředků. Další informace o úrovních předplatného najdete v tématu [IExecutionResource:: CurrentSubscriptionLevel –](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
-[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey –](concurrency-namespace-enums.md)<br/>
 [SchedulerPolicy – třída](schedulerpolicy-class.md)<br/>
 [IExecutionContext – struktura](iexecutioncontext-structure.md)<br/>
 [IThreadProxy – struktura](ithreadproxy-structure.md)<br/>

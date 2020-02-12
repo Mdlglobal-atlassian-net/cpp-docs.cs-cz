@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 415dc9bd89346d9b5bddb2cdc52e10276646aa1f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 002f1e3f691de3315810efed8f7d8f6c547cf653
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302117"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143139"
 ---
 # <a name="concurrent_vector-class"></a>concurrent_vector – třída
 
@@ -46,16 +46,16 @@ Třída `concurrent_vector` je třída kontejneru sekvence, která umožňuje n�
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<typename T, class _Ax>
 class concurrent_vector: protected details::_Allocator_base<T,
     _Ax>,
 private details::_Concurrent_vector_base_v4;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Datový typ prvků, které mají být uloženy ve vektoru.
 
 *_Ax*<br/>
@@ -65,7 +65,7 @@ Typ, který představuje uložený objekt přidělování, který zapouzdřuje i
 
 ### <a name="public-typedefs"></a>Veřejné definice typedef
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`allocator_type`|Typ, který představuje třídu přidělování pro souběžný vektor.|
 |`const_iterator`|Typ, který poskytuje iterátor náhodného přístupu, který může číst `const` element v souběžném vektoru.|
@@ -82,47 +82,47 @@ Typ, který představuje uložený objekt přidělování, který zapouzdřuje i
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[concurrent_vector](#ctor)|Přetížené Sestaví souběžný vektor.|
+|[concurrent_vector](#ctor)|Přetíženo. Sestaví souběžný vektor.|
 |[~ concurrent_vector destruktor](#dtor)|Smaže všechny prvky a zničí tento souběžný vektor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[assign](#assign)|Přetížené Vymaže prvky souběžného vektoru a přiřadí ho buď `_N` kopie `_Item`nebo hodnoty zadané pomocí rozsahu iterátoru [`_Begin`, `_End`). Tato metoda není bezpečná pro souběžnost.|
-|[at](#at)|Přetížené Poskytuje přístup k prvku na daném indexu v souběžném vektoru. Tato metoda je bezpečná pro operace čtení a také při rostoucím vektoru, pokud jste zajistili, že hodnota `_Index` je menší než velikost souběžného vektoru.|
-|[návrat](#back)|Přetížené Vrátí odkaz nebo `const` odkaz na poslední prvek v souběžném vektoru. Pokud je souběžný vektor prázdný, návratová hodnota není definována. Tato metoda je bezpečná pro souběžnost.|
-|[ifunctiondiscovery](#begin)|Přetížené Vrátí iterátor typu `iterator` nebo `const_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
+|[řadit](#assign)|Přetíženo. Vymaže prvky souběžného vektoru a přiřadí ho buď `_N` kopie `_Item`nebo hodnoty zadané pomocí rozsahu iterátoru [`_Begin`, `_End`). Tato metoda není bezpečná pro souběžnost.|
+|[Počínaje](#at)|Přetíženo. Poskytuje přístup k prvku na daném indexu v souběžném vektoru. Tato metoda je bezpečná pro operace čtení a také při rostoucím vektoru, pokud jste zajistili, že hodnota `_Index` je menší než velikost souběžného vektoru.|
+|[návrat](#back)|Přetíženo. Vrátí odkaz nebo `const` odkaz na poslední prvek v souběžném vektoru. Pokud je souběžný vektor prázdný, návratová hodnota není definována. Tato metoda je bezpečná pro souběžnost.|
+|[ifunctiondiscovery](#begin)|Přetíženo. Vrátí iterátor typu `iterator` nebo `const_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[klíčivost](#capacity)|Vrátí maximální velikost, na kterou může souběžný vektor růst, aniž by bylo nutné přidělit více paměti. Tato metoda je bezpečná pro souběžnost.|
 |[cbegin](#cbegin)|Vrátí iterátor typu `const_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[cend](#cend)|Vrátí iterátor typu `const_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[jejich](#clear)|Vymaže všechny prvky v souběžném vektoru. Tato metoda není bezpečná pro souběžnost.|
-|[crbegin](#crbegin)|Vrátí iterátor typu `const_reverse_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
+|[crbegin –](#crbegin)|Vrátí iterátor typu `const_reverse_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
 |[crend](#crend)|Vrátí iterátor typu `const_reverse_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[empty](#empty)|Testuje, zda je souběžný vektor prázdný v době volání této metody. Tato metoda je bezpečná pro souběžnost.|
-|[účelu](#end)|Přetížené Vrátí iterátor typu `iterator` nebo `const_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[dopředu](#front)|Přetížené Vrátí odkaz nebo `const` odkaz na první prvek v souběžném vektoru. Pokud je souběžný vektor prázdný, návratová hodnota není definována. Tato metoda je bezpečná pro souběžnost.|
+|[obsahovat](#empty)|Testuje, zda je souběžný vektor prázdný v době volání této metody. Tato metoda je bezpečná pro souběžnost.|
+|[účelu](#end)|Přetíženo. Vrátí iterátor typu `iterator` nebo `const_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
+|[dopředu](#front)|Přetíženo. Vrátí odkaz nebo `const` odkaz na první prvek v souběžném vektoru. Pokud je souběžný vektor prázdný, návratová hodnota není definována. Tato metoda je bezpečná pro souběžnost.|
 |[get_allocator](#get_allocator)|Vrátí kopii přidělujícího modulu, který slouží k vytvoření souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[grow_by](#grow_by)|Přetížené Rozroste tento souběžný vektor pomocí `_Delta` prvků. Tato metoda je bezpečná pro souběžnost.|
+|[grow_by](#grow_by)|Přetíženo. Rozroste tento souběžný vektor pomocí `_Delta` prvků. Tato metoda je bezpečná pro souběžnost.|
 |[grow_to_at_least](#grow_to_at_least)|Rozroste tento souběžný vektor, dokud neobsahuje alespoň `_N` prvky. Tato metoda je bezpečná pro souběžnost.|
 |[max_size](#max_size)|Vrátí maximální počet prvků, které může souběžný vektor uchovávat. Tato metoda je bezpečná pro souběžnost.|
-|[push_back](#push_back)|Přetížené Připojí danou položku ke konci souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[rbegin](#rbegin)|Přetížené Vrátí iterátor typu `reverse_iterator` nebo `const_reverse_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[rend](#rend)|Přetížené Vrátí iterátor typu `reverse_iterator` nebo `const_reverse_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[reserve](#reserve)|Přidělí dostatek místa pro zvětšení souběžného vektoru na velikost `_N` bez nutnosti přidělit více paměti později. Tato metoda není bezpečná pro souběžnost.|
-|[velikost](#resize)|Přetížené Změní velikost souběžného vektoru na požadovanou velikost, odstraní nebo přidá prvky podle potřeby. Tato metoda není bezpečná pro souběžnost.|
+|[push_back](#push_back)|Přetíženo. Připojí danou položku ke konci souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
+|[rbegin](#rbegin)|Přetíženo. Vrátí iterátor typu `reverse_iterator` nebo `const_reverse_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
+|[rend](#rend)|Přetíženo. Vrátí iterátor typu `reverse_iterator` nebo `const_reverse_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.|
+|[rezervační](#reserve)|Přidělí dostatek místa pro zvětšení souběžného vektoru na velikost `_N` bez nutnosti přidělit více paměti později. Tato metoda není bezpečná pro souběžnost.|
+|[velikost](#resize)|Přetíženo. Změní velikost souběžného vektoru na požadovanou velikost, odstraní nebo přidá prvky podle potřeby. Tato metoda není bezpečná pro souběžnost.|
 |[shrink_to_fit](#shrink_to_fit)|Zkomprimuje interní reprezentace souběžného vektoru, aby se snížila fragmentace a optimalizoval využití paměti. Tato metoda není bezpečná pro souběžnost.|
 |[hodnota](#size)|Vrátí počet prvků v souběžném vektoru. Tato metoda je bezpečná pro souběžnost.|
-|[swap](#swap)|Zamění obsah dvou souběžných vektorů. Tato metoda není bezpečná pro souběžnost.|
+|[adresu](#swap)|Zamění obsah dvou souběžných vektorů. Tato metoda není bezpečná pro souběžnost.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[operátor\[\]](#operator_at)|Přetížené Poskytuje přístup k prvku na daném indexu v souběžném vektoru. Tato metoda je bezpečná pro operace čtení a také při rostoucím vektoru, pokud jste zajistili, že hodnota `_Index` je menší než velikost souběžného vektoru.|
-|[operátor =](#operator_eq)|Přetížené Přiřadí obsah jiného objektu `concurrent_vector` k tomuto. Tato metoda není bezpečná pro souběžnost.|
+|[operátor\[\]](#operator_at)|Přetíženo. Poskytuje přístup k prvku na daném indexu v souběžném vektoru. Tato metoda je bezpečná pro operace čtení a také při rostoucím vektoru, pokud jste zajistili, že hodnota `_Index` je menší než velikost souběžného vektoru.|
+|[operátor =](#operator_eq)|Přetíženo. Přiřadí obsah jiného objektu `concurrent_vector` k tomuto. Tato metoda není bezpečná pro souběžnost.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -142,11 +142,11 @@ Podrobné informace o třídě `concurrent_vector` naleznete v tématu [Parallel
 
 **Obor názvů:** souběžnost
 
-##  <a name="assign"></a>řadit
+## <a name="assign"></a>řadit
 
 Vymaže prvky souběžného vektoru a přiřadí ho buď `_N` kopie `_Item`nebo hodnoty zadané pomocí rozsahu iterátoru [`_Begin`, `_End`). Tato metoda není bezpečná pro souběžnost.
 
-```
+```cpp
 void assign(
     size_type _N,
     const_reference _Item);
@@ -177,11 +177,11 @@ Iterátor k jednomu za posledním prvkem zdrojového rozsahu.
 
 `assign` není bezpečná pro souběžnost. Je nutné zajistit, aby žádná jiná vlákna nevolala metody pro souběžný vektor při volání této metody.
 
-##  <a name="at"></a>Počínaje
+## <a name="at"></a>Počínaje
 
 Poskytuje přístup k prvku na daném indexu v souběžném vektoru. Tato metoda je bezpečná pro operace čtení a také při rostoucím vektoru, pokud jste zajistili, že hodnota `_Index` je menší než velikost souběžného vektoru.
 
-```
+```cpp
 reference at(size_type _Index);
 
 const_reference at(size_type _Index) const;
@@ -202,11 +202,11 @@ Verze funkce `at`, která vrací odkaz bez `const` nelze použít k souběžném
 
 Metoda vyvolá `out_of_range`, pokud `_Index` je větší než nebo rovno velikosti souběžného vektoru a `range_error`, pokud je index pro poškozenou část vektoru. Podrobnosti o tom, jak se vektor může rozdělit, najdete v tématu [Parallel Containers and Objects](../../../parallel/concrt/parallel-containers-and-objects.md).
 
-##  <a name="back"></a>návrat
+## <a name="back"></a>návrat
 
 Vrátí odkaz nebo `const` odkaz na poslední prvek v souběžném vektoru. Pokud je souběžný vektor prázdný, návratová hodnota není definována. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 reference back();
 
 const_reference back() const;
@@ -216,11 +216,11 @@ const_reference back() const;
 
 Odkaz nebo `const` odkaz na poslední prvek v souběžném vektoru.
 
-##  <a name="begin"></a>ifunctiondiscovery
+## <a name="begin"></a>ifunctiondiscovery
 
 Vrátí iterátor typu `iterator` nebo `const_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 iterator begin();
 
 const_iterator begin() const;
@@ -230,11 +230,11 @@ const_iterator begin() const;
 
 Iterátor typu `iterator` nebo `const_iterator` na začátek souběžného vektoru.
 
-##  <a name="capacity"></a>klíčivost
+## <a name="capacity"></a>klíčivost
 
 Vrátí maximální velikost, na kterou může souběžný vektor růst, aniž by bylo nutné přidělit více paměti. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 size_type capacity() const;
 ```
 
@@ -246,11 +246,11 @@ Maximální velikost, na kterou může souběžný vektor růst, aniž by bylo n
 
 Na rozdíl od C++ standardní knihovny `vector`, objekt `concurrent_vector` nepřesouvá existující prvky, pokud přiděluje více paměti.
 
-##  <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a>cbegin
 
 Vrátí iterátor typu `const_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 const_iterator cbegin() const;
 ```
 
@@ -258,11 +258,11 @@ const_iterator cbegin() const;
 
 Iterátor typu `const_iterator` na začátek souběžného vektoru.
 
-##  <a name="cend"></a>cend
+## <a name="cend"></a>cend
 
 Vrátí iterátor typu `const_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 const_iterator cend() const;
 ```
 
@@ -270,11 +270,11 @@ const_iterator cend() const;
 
 Iterátor typu `const_iterator` na konec souběžného vektoru.
 
-##  <a name="clear"></a>jejich
+## <a name="clear"></a>jejich
 
 Vymaže všechny prvky v souběžném vektoru. Tato metoda není bezpečná pro souběžnost.
 
-```
+```cpp
 void clear();
 ```
 
@@ -282,11 +282,11 @@ void clear();
 
 `clear` není bezpečná pro souběžnost. Je nutné zajistit, aby žádná jiná vlákna nevolala metody pro souběžný vektor při volání této metody. `clear` neuvolňují interní pole. Chcete-li uvolnit interní pole, zavolejte funkci `shrink_to_fit` po `clear`.
 
-##  <a name="ctor"></a>concurrent_vector
+## <a name="ctor"></a>concurrent_vector
 
 Sestaví souběžný vektor.
 
-```
+```cpp
 explicit concurrent_vector(
     const allocator_type& _Al = allocator_type());
 
@@ -358,19 +358,19 @@ Pátý konstruktor určuje opakování zadaného počtu (`_N`) prvků výchozí 
 
 Poslední konstruktor určuje hodnoty poskytované rozsahem iterátoru [`_Begin`, `_End`).
 
-##  <a name="dtor"></a>~ concurrent_vector
+## <a name="dtor"></a>~ concurrent_vector
 
 Smaže všechny prvky a zničí tento souběžný vektor.
 
-```
+```cpp
 ~concurrent_vector();
 ```
 
-##  <a name="crbegin"></a>crbegin –
+## <a name="crbegin"></a>crbegin –
 
 Vrátí iterátor typu `const_reverse_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 const_reverse_iterator crbegin() const;
 ```
 
@@ -378,11 +378,11 @@ const_reverse_iterator crbegin() const;
 
 Iterátor typu `const_reverse_iterator` na začátek souběžného vektoru.
 
-##  <a name="crend"></a>crend
+## <a name="crend"></a>crend
 
 Vrátí iterátor typu `const_reverse_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 const_reverse_iterator crend() const;
 ```
 
@@ -390,11 +390,11 @@ const_reverse_iterator crend() const;
 
 Iterátor typu `const_reverse_iterator` na konec souběžného vektoru.
 
-##  <a name="empty"></a>obsahovat
+## <a name="empty"></a>obsahovat
 
 Testuje, zda je souběžný vektor prázdný v době volání této metody. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 bool empty() const;
 ```
 
@@ -402,11 +402,11 @@ bool empty() const;
 
 **true** , pokud byl vektor prázdný v okamžiku, kdy byla funkce volána, jinak **false** .
 
-##  <a name="end"></a>účelu
+## <a name="end"></a>účelu
 
 Vrátí iterátor typu `iterator` nebo `const_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 iterator end();
 
 const_iterator end() const;
@@ -416,11 +416,11 @@ const_iterator end() const;
 
 Iterátor typu `iterator` nebo `const_iterator` na konec souběžného vektoru.
 
-##  <a name="front"></a>dopředu
+## <a name="front"></a>dopředu
 
 Vrátí odkaz nebo `const` odkaz na první prvek v souběžném vektoru. Pokud je souběžný vektor prázdný, návratová hodnota není definována. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 reference front();
 
 const_reference front() const;
@@ -430,11 +430,11 @@ const_reference front() const;
 
 Odkaz nebo `const` odkaz na první prvek v souběžném vektoru.
 
-##  <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Vrátí kopii přidělujícího modulu, který slouží k vytvoření souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -442,11 +442,11 @@ allocator_type get_allocator() const;
 
 Kopie přidělování, která se používá k vytvoření objektu `concurrent_vector`.
 
-##  <a name="grow_by"></a>grow_by
+## <a name="grow_by"></a>grow_by
 
 Rozroste tento souběžný vektor pomocí `_Delta` prvků. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 iterator grow_by(
     size_type _Delta);
 
@@ -471,11 +471,11 @@ Iterátor na první položku, která je připojena.
 
 Pokud není zadán `_Item`, jsou nové prvky vytvořeny jako výchozí.
 
-##  <a name="grow_to_at_least"></a>grow_to_at_least
+## <a name="grow_to_at_least"></a>grow_to_at_least
 
 Rozroste tento souběžný vektor, dokud neobsahuje alespoň `_N` prvky. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 iterator grow_to_at_least(size_type _N);
 ```
 
@@ -488,11 +488,11 @@ Nová minimální velikost objektu `concurrent_vector`.
 
 Iterátor, který odkazuje na začátek připojené sekvence nebo na element na indexu `_N`, pokud nebyly připojeny žádné prvky.
 
-##  <a name="max_size"></a>max_size
+## <a name="max_size"></a>max_size
 
 Vrátí maximální počet prvků, které může souběžný vektor uchovávat. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 size_type max_size() const;
 ```
 
@@ -500,11 +500,11 @@ size_type max_size() const;
 
 Maximální počet prvků, které může objekt `concurrent_vector` uchovávat.
 
-##  <a name="operator_eq"></a>operátor =
+## <a name="operator_eq"></a>operátor =
 
 Přiřadí obsah jiného objektu `concurrent_vector` k tomuto. Tato metoda není bezpečná pro souběžnost.
 
-```
+```cpp
 concurrent_vector& operator= (
     const concurrent_vector& _Vector);
 
@@ -528,11 +528,11 @@ Zdrojový objekt `concurrent_vector`.
 
 Odkaz na tento objekt `concurrent_vector`.
 
-##  <a name="operator_at"></a>operator [] – operátor
+## <a name="operator_at"></a>operator [] – operátor
 
 Poskytuje přístup k prvku na daném indexu v souběžném vektoru. Tato metoda je bezpečná pro operace čtení a také při rostoucím vektoru, pokud jste zajistili, že hodnota `_Index` je menší než velikost souběžného vektoru.
 
-```
+```cpp
 reference operator[](size_type _index);
 
 const_reference operator[](size_type _index) const;
@@ -553,11 +553,11 @@ Verze `operator []`, která vrací odkaz bez `const` nelze použít k souběžn�
 
 Neprovádí se žádná kontrola mezí, aby se zajistilo, že `_Index` je platným indexem souběžného vektoru.
 
-##  <a name="push_back"></a>push_back
+## <a name="push_back"></a>push_back
 
 Připojí danou položku ke konci souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 iterator push_back(const_reference _Item);
 
 iterator push_back(T&& _Item);
@@ -572,11 +572,11 @@ Hodnota, která má být připojena.
 
 Iterátor na položku, která je připojena.
 
-##  <a name="rbegin"></a>rbegin
+## <a name="rbegin"></a>rbegin
 
 Vrátí iterátor typu `reverse_iterator` nebo `const_reverse_iterator` na začátek souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 reverse_iterator rbegin();
 
 const_reverse_iterator rbegin() const;
@@ -586,11 +586,11 @@ const_reverse_iterator rbegin() const;
 
 Iterátor typu `reverse_iterator` nebo `const_reverse_iterator` na začátek souběžného vektoru.
 
-##  <a name="rend"></a>rend
+## <a name="rend"></a>rend
 
 Vrátí iterátor typu `reverse_iterator` nebo `const_reverse_iterator` na konec souběžného vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 reverse_iterator rend();
 
 const_reverse_iterator rend() const;
@@ -600,11 +600,11 @@ const_reverse_iterator rend() const;
 
 Iterátor typu `reverse_iterator` nebo `const_reverse_iterator` na konec souběžného vektoru.
 
-##  <a name="reserve"></a>rezervační
+## <a name="reserve"></a>rezervační
 
 Přidělí dostatek místa pro zvětšení souběžného vektoru na velikost `_N` bez nutnosti přidělit více paměti později. Tato metoda není bezpečná pro souběžnost.
 
-```
+```cpp
 void reserve(size_type _N);
 ```
 
@@ -617,11 +617,11 @@ Počet prvků, pro které má být vyhrazen prostor.
 
 `reserve` není bezpečná pro souběžnost. Je nutné zajistit, aby žádná jiná vlákna nevolala metody pro souběžný vektor při volání této metody. Kapacita souběžného vektoru po vrácení metody může být větší než požadovaná rezervace.
 
-##  <a name="resize"></a>velikost
+## <a name="resize"></a>velikost
 
 Změní velikost souběžného vektoru na požadovanou velikost, odstraní nebo přidá prvky podle potřeby. Tato metoda není bezpečná pro souběžnost.
 
-```
+```cpp
 void resize(
     size_type _N);
 
@@ -644,11 +644,11 @@ Pokud je velikost kontejneru menší než požadovaná velikost, prvky jsou při
 
 `resize` není v bezpečí. Je nutné zajistit, aby žádná jiná vlákna nevolala metody pro souběžný vektor při volání této metody.
 
-##  <a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a>shrink_to_fit
 
 Zkomprimuje interní reprezentace souběžného vektoru, aby se snížila fragmentace a optimalizoval využití paměti. Tato metoda není bezpečná pro souběžnost.
 
-```
+```cpp
 void shrink_to_fit();
 ```
 
@@ -656,11 +656,11 @@ void shrink_to_fit();
 
 Tato metoda interně znovu přidělí prvky pro přesun paměti, čímž zruší platnost všech iterátorů. `shrink_to_fit` není bezpečná pro souběžnost. Při volání této funkce je nutné zajistit, aby žádná jiná vlákna nevolala metody pro souběžný vektor.
 
-##  <a name="size"></a>hodnota
+## <a name="size"></a>hodnota
 
 Vrátí počet prvků v souběžném vektoru. Tato metoda je bezpečná pro souběžnost.
 
-```
+```cpp
 size_type size() const;
 ```
 
@@ -672,11 +672,11 @@ Počet prvků v tomto objektu `concurrent_vector`.
 
 Vrácená velikost je zaručena zahrnout všechny prvky, které jsou připojeny voláním funkce `push_back`, nebo rozšířit operace, které byly dokončeny před vyvoláním této metody. Může však také zahrnovat prvky, které jsou přiděleny, ale stále jsou v souladu se sestavou souběžným voláním libovolné metody růstu.
 
-##  <a name="swap"></a>adresu
+## <a name="swap"></a>adresu
 
 Zamění obsah dvou souběžných vektorů. Tato metoda není bezpečná pro souběžnost.
 
-```
+```cpp
 void swap(concurrent_vector& _Vector);
 ```
 
@@ -685,7 +685,7 @@ void swap(concurrent_vector& _Vector);
 *_Vector*<br/>
 Objekt `concurrent_vector`, pomocí kterého má prohození obsahu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md)

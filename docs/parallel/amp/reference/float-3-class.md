@@ -74,26 +74,26 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: ff9d9391efaeef5051424675dacf1f14c35b30df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 259d008c9819eed631026fd106c01644bb1179cc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180307"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126679"
 ---
-# <a name="float3-class"></a>float_3 – třída
+# <a name="float_3-class"></a>float_3 – třída
 
-Představuje krátký vektor tří hodnot float.
+Představuje krátký vektor tří floatů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class float_3;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -103,21 +103,21 @@ class float_3;
 
 |Název|Popis|
 |----------|-----------------|
-|[float_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[float_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|float_3::get_x||
+|float_3:: get_x||
 |float_3::get_xy||
 |float_3::get_xyz||
 |float_3::get_xz||
 |float_3::get_xzy||
-|float_3::get_y||
+|float_3:: get_y||
 |float_3::get_yx||
 |float_3::get_yxz||
-|float_3::get_yz||
+|float_3:: get_yz||
 |float_3::get_yzx||
 |float_3::get_z||
 |float_3::get_zx||
@@ -128,7 +128,7 @@ class float_3;
 |float_3::ref_g||
 |float_3::ref_r||
 |float_3::ref_x||
-|float_3::ref_y||
+|float_3:: ref_y||
 |float_3::ref_z||
 |float_3::set_x||
 |float_3::set_xy||
@@ -153,10 +153,10 @@ class float_3;
 |float_3::operator-||
 |float_3::operator--||
 |float_3::operator*=||
-|float_3::Operator / =||
-|float_3::Operator ++||
+|float_3:: operator/=||
+|float_3:: operator + +||
 |float_3::operator+=||
-|float_3::Operator =||
+|float_3:: operator =||
 |float_3::operator-=||
 
 ### <a name="public-constants"></a>Veřejné konstanty
@@ -170,34 +170,34 @@ class float_3;
 |Název|Popis|
 |----------|-----------------|
 |float_3::b||
-|float_3::bg||
-|float_3::bgr||
+|float_3:: BG||
+|float_3:: BGR||
 |float_3::br||
 |float_3::brg||
-|float_3::g||
-|float_3::GB||
-|float_3::GBR||
-|float_3::GR||
-|float_3::grb||
-|float_3::r||
-|float_3::rb||
+|float_3:: g||
+|float_3:: GB||
+|float_3:: GBR||
+|float_3:: gr||
+|float_3:: GRB||
+|float_3:: r||
+|float_3:: RB||
 |float_3::rbg||
 |float_3::rg||
-|float_3::RGB||
-|float_3::x||
+|float_3:: RGB||
+|float_3:: x||
 |float_3::xy||
 |float_3::xyz||
 |float_3::xz||
 |float_3::xzy||
-|float_3::y||
+|float_3:: y||
 |float_3::yx||
 |float_3::yxz||
-|float_3::YZ||
+|float_3:: YZ||
 |float_3::yzx||
-|float_3::z||
+|float_3:: z||
 |float_3::zx||
 |float_3::zxy||
-|float_3::zy||
+|float_3:: ZY||
 |float_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -206,15 +206,15 @@ class float_3;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> float_3
+## <a name="ctor"></a>float_3
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-```
+```cpp
 float_3() restrict(amp,
     cpu);
 
@@ -256,26 +256,26 @@ explicit inline float_3(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V2*<br/>
-Hodnota inicializace elementu 2.
+Hodnota pro inicializaci elementu 2.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-##  <a name="float_3__size"></a> Velikost
+## <a name="float_3__size"></a>hodnota
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

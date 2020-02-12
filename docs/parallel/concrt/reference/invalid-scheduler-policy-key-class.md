@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
-ms.openlocfilehash: 1bc2f1cffdeba5f81bd96932ecef23a563fac351
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 60d5a57ff9cb33a3d522c14514f5107844216852
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341099"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143015"
 ---
-# <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key – třída
+# <a name="invalid_scheduler_policy_key-class"></a>invalid_scheduler_policy_key – třída
 
-Tato třída popisuje výjimku vyvolanou při neplatný nebo je předán neznámý klíč `SchedulerPolicy` konstruktor objektu nebo `SetPolicyValue` metodu `SchedulerPolicy` objekt je předán klíč, který musí být změněno pomocí jiným způsobem, jako `SetConcurrencyLimits` – metoda.
+Tato třída popisuje výjimku vyvolanou při předání neplatného nebo neznámého klíče do konstruktoru objektu `SchedulerPolicy`, nebo je-li metoda `SetPolicyValue` objektu `SchedulerPolicy`, předána klíč, který musí být změněn pomocí jiných prostředků, jako je například metoda `SetConcurrencyLimits`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class invalid_scheduler_policy_key : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class invalid_scheduler_policy_key : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[invalid_scheduler_policy_key](#ctor)|Přetíženo. Vytvoří `invalid_scheduler_policy_key` objektu.|
+|[invalid_scheduler_policy_key](#ctor)|Přetíženo. Vytvoří objekt `invalid_scheduler_policy_key`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,15 +41,15 @@ class invalid_scheduler_policy_key : public std::exception;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> invalid_scheduler_policy_key –
+## <a name="ctor"></a>invalid_scheduler_policy_key
 
-Vytvoří `invalid_scheduler_policy_key` objektu.
+Vytvoří objekt `invalid_scheduler_policy_key`.
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_key() throw();
@@ -58,9 +58,9 @@ invalid_scheduler_policy_key() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [SchedulerPolicy – třída](schedulerpolicy-class.md)

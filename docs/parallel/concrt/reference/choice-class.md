@@ -20,34 +20,34 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e718d0d34580d3bf2f13937159e431134631218
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337567"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142219"
 ---
 # <a name="choice-class"></a>Třída choice
 
-A `choice` blok zpráv je více zdroje, jeden cílový blok, který představuje tok řízení interakce sadu zdrojů. Výběr bloku počká na některou z několika zdrojů do výsledné zprávu a rozšíří index zdroj, který vytvořil zprávu.
+`choice` blok pro zasílání zpráv je vícenásobný zdroj s jedním cílovým blokem, který představuje interakci toku řízení se sadou zdrojů. Blok voleb počká, až jeden z několika zdrojů vytvoří zprávu, a bude rozšiřovat index zdroje, který zprávu vytvořil.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<
     class T
 >
 class choice: public ISource<size_t>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-A `tuple`– základní typ představující datové části ze vstupních zdrojů.
+*Š*<br/>
+Typ založený `tuple`reprezentující datové části vstupních zdrojů.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -57,29 +57,29 @@ A `tuple`– základní typ představující datové části ze vstupních zdroj
 
 |Název|Popis|
 |----------|-----------------|
-|[choice](#ctor)|Přetíženo. Vytvoří `choice` blok zpráv.|
-|[~ choice – destruktor](#dtor)|Odstraní `choice` blok zpráv.|
+|[libovolném](#ctor)|Přetíženo. Vytvoří blok pro zasílání zpráv `choice`.|
+|[~ Choice – destruktor](#dtor)|Odstraní blok zasílání zpráv `choice`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[Přijmout](#accept)|Přijme zprávu, která byly nabízeny situace `choice` bloku, přenos vlastnictví volajícímu.|
-|[acquire_ref](#acquire_ref)|Získá počet odkazů na tomto `choice` blok zpráv, abyste zabránili odstranění.|
-|[využívání](#consume)|Využívá zprávu nabízely dříve v tomto `choice` bloku zpráv a úspěšně vyhrazen v cíli, přenos vlastnictví volajícímu.|
-|[has_value](#has_value)|Zkontroluje, jestli to `choice` blok zpráv byl inicializován s hodnotou ještě.|
-|[index](#index)|Vrátí index do `tuple` představující prvek zvolila `choice` blok zpráv.|
-|[link_target](#link_target)|K této propojuje cílový blok `choice` blok zpráv.|
-|[Vydání verze](#release)|Uvolní předchozí vyhrazení úspěšné zprávy.|
-|[release_ref](#release_ref)|Počet odkazů v tomto vydání `choice` blok zpráv.|
-|[reserve](#reserve)|Vyhradí zprávu nabízely dříve v tomto `choice` blok zpráv.|
-|[unlink_target](#unlink_target)|Cílový blok z tohoto nebude odpojen `choice` blok zpráv.|
-|[unlink_targets](#unlink_targets)|Zruší všechny cíle z tohoto propojení `choice` blok zpráv. (Přepíše [isource::unlink_targets –](isource-class.md#unlink_targets).)|
-|[value](#value)|Získá zprávu, jejíž index se zvolila `choice` blok zpráv.|
+|[vyjádřit](#accept)|Přijme zprávu, kterou nabídl tento `choice` blok, a přenáší vlastnictví volajícímu.|
+|[acquire_ref](#acquire_ref)|Získá počet odkazů na tomto `choice`ovém bloku pro zasílání zpráv, aby se zabránilo odstranění.|
+|[každém](#consume)|Využívá zprávu, kterou dřív nabídl tento `choice` blok pro zasílání zpráv a který je úspěšně rezervovaný cílem a přenáší vlastnictví volajícímu.|
+|[has_value](#has_value)|Kontroluje, zda byl tento blok zasílání zpráv `choice` inicializován s hodnotou.|
+|[indexovacím](#index)|Vrátí index do `tuple` představující prvek vybraný v bloku `choice` pro zasílání zpráv.|
+|[link_target](#link_target)|Propojí cílový blok s tímto `choice`m blokem pro zasílání zpráv.|
+|[předběžné](#release)|Uvolní předchozí úspěšnou rezervaci zprávy.|
+|[release_ref](#release_ref)|Uvolní počet odkazů v tomto `choice`ovém bloku pro zasílání zpráv.|
+|[rezervační](#reserve)|Vyhradí zprávu, kterou dřív nabídl tento `choice` blok pro zasílání zpráv.|
+|[unlink_target](#unlink_target)|Odpojí cílový blok od tohoto `choice`ho bloku pro zasílání zpráv.|
+|[unlink_targets](#unlink_targets)|Odpojí všechny cíle od tohoto `choice`ho bloku pro zasílání zpráv. (Overrides [ISource:: unlink_targets](isource-class.md#unlink_targets).)|
+|[value](#value)|Získá zprávu, jejíž index byl vybrán v rámci `choice`ho bloku pro zasílání zpráv.|
 
 ## <a name="remarks"></a>Poznámky
 
-Výběr bloku zajišťuje využívat jenom jeden z příchozí zprávy.
+Blok voleb zajistí, že se bude používat jenom jedna z příchozích zpráv.
 
 Další informace najdete v tématu [asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md).
 
@@ -91,15 +91,15 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="accept"></a> Přijmout
+## <a name="accept"></a>vyjádřit
 
-Přijme zprávu, která byly nabízeny situace `choice` bloku, přenos vlastnictví volajícímu.
+Přijme zprávu, kterou nabídl tento `choice` blok, a přenáší vlastnictví volajícímu.
 
-```
+```cpp
 virtual message<size_t>* accept(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<size_t>* _PTarget);
@@ -108,37 +108,37 @@ virtual message<size_t>* accept(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` Nabízených `message` objektu.
+`runtime_object_identity` nabízeného objektu `message`
 
 *_PTarget*<br/>
-Ukazatel na cílový blok, který volá `accept` metody.
+Ukazatel na cílový blok, který volá metodu `accept`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na zprávu, která má volající nyní vlastnictví.
+Ukazatel na zprávu, na kterou má volající nyní vlastnictví.
 
-##  <a name="acquire_ref"></a> acquire_ref –
+## <a name="acquire_ref"></a>acquire_ref
 
-Získá počet odkazů na tomto `choice` blok zpráv, abyste zabránili odstranění.
+Získá počet odkazů na tomto `choice`ovém bloku pro zasílání zpráv, aby se zabránilo odstranění.
 
-```
+```cpp
 virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Ukazatel na cílový blok, který je volání této metody.
+Ukazatel na cílový blok, který volá tuto metodu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána `ITarget` objekt, který se odkazuje tento zdroj během `link_target` metody.
+Tato metoda je volána objektem `ITarget`, který je propojen s tímto zdrojem během metody `link_target`.
 
-##  <a name="ctor"></a> podle výběru
+## <a name="ctor"></a>libovolném
 
-Vytvoří `choice` blok zpráv.
+Vytvoří blok pro zasílání zpráv `choice`.
 
-```
+```cpp
 explicit choice(
     T _Tuple);
 
@@ -157,36 +157,36 @@ choice(
 ### <a name="parameters"></a>Parametry
 
 *_Tuple*<br/>
-A `tuple` zdrojů pro výběr.
+`tuple` zdrojů pro výběr.
 
 *_PScheduler*<br/>
-`Scheduler` Objekt v rámci kterého Úloha šíření pro `choice` naplánovaný zasílání zpráv bloku.
+Objekt `Scheduler`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `choice`
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Objekt v rámci kterého Úloha šíření pro `choice` naplánovaný zasílání zpráv bloku. `Scheduler` Skupina plánování předpokládá používaný objekt.
+Objekt `ScheduleGroup`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `choice` Použitý objekt `Scheduler` je odvozen skupinou plánu.
 
 *_Choice*<br/>
-A `choice` blok zpráv bude kopírováno. Všimněte si, že je osamocené na původní objekt, takže jde konstruktor move.
+`choice` blok pro zasílání zpráv, ze kterého se má kopírovat. Všimněte si, že původní objekt je osamocený, takže se tento konstruktor přesune.
 
 ### <a name="remarks"></a>Poznámky
 
-Modul runtime používá výchozí plánovač, pokud není zadán `_PScheduler` nebo `_PScheduleGroup` parametry.
+Modul runtime používá výchozí Plánovač, pokud nezadáte parametry `_PScheduler` nebo `_PScheduleGroup`.
 
-Přesun konstrukce neprovádí pod zámek, což znamená, že je až uživatele, aby se neobjeví žádné úlohy s nižšími nároky na cestě v době přesunutí. V opačném případě mnoha bude situace může nastat, což vede k výjimky nebo nekonzistentním stavu.
+Konstrukce přesunutí se neprovádí za zámkem, což znamená, že je až pro uživatele, aby se zajistilo, že v době přesunutí nejsou v letadle žádné nevýznamové úlohy. Jinak může dojít k mnoha Races, což vede k výjimkám nebo nekonzistentnímu stavu.
 
-##  <a name="dtor"></a> ~choice
+## <a name="dtor"></a>~ volba
 
-Odstraní `choice` blok zpráv.
+Odstraní blok zasílání zpráv `choice`.
 
-```
+```cpp
 ~choice();
 ```
 
-##  <a name="consume"></a> využívání
+## <a name="consume"></a>každém
 
-Využívá zprávu nabízely dříve v tomto `choice` bloku zpráv a úspěšně vyhrazen v cíli, přenos vlastnictví volajícímu.
+Využívá zprávu, kterou dřív nabídl tento `choice` blok pro zasílání zpráv a který je úspěšně rezervovaný cílem a přenáší vlastnictví volajícímu.
 
-```
+```cpp
 virtual message<size_t>* consume(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<size_t>* _PTarget);
@@ -195,65 +195,65 @@ virtual message<size_t>* consume(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z vyhrazených `message` objektu.
+`runtime_object_identity` rezervovaného objektu `message`
 
 *_PTarget*<br/>
-Ukazatel na cílový blok, který volá `consume` metody.
+Ukazatel na cílový blok, který volá metodu `consume`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `message` volající má teď vlastnictví objektu.
+Ukazatel na objekt `message`, u kterého má volající nyní vlastnictví.
 
 ### <a name="remarks"></a>Poznámky
 
-`consume` Metoda je podobná `accept`, ale musí vždy předcházet volání `reserve` vrácená **true**.
+Metoda `consume` je podobná `accept`, ale vždy musí předcházet volání `reserve`, které vrátilo **hodnotu true**.
 
-##  <a name="has_value"></a> has_value –
+## <a name="has_value"></a>has_value
 
-Zkontroluje, jestli to `choice` blok zpráv byl inicializován s hodnotou ještě.
+Kontroluje, zda byl tento blok zasílání zpráv `choice` inicializován s hodnotou.
 
-```
+```cpp
 bool has_value() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** pokud blok obsahuje přijala se hodnota, **false** jinak.
+**true** , pokud blok obdržel hodnotu, jinak **false** .
 
-##  <a name="index"></a> Index
+## <a name="index"></a>indexovacím
 
-Vrátí index do `tuple` představující prvek zvolila `choice` blok zpráv.
+Vrátí index do `tuple` představující prvek vybraný v bloku `choice` pro zasílání zpráv.
 
-```
+```cpp
 size_t index();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index zprávy.
+Index zprávy
 
 ### <a name="remarks"></a>Poznámky
 
-Datovou část zprávy může být extrahována pomocí `get` metody.
+Datovou část zprávy lze extrahovat pomocí metody `get`.
 
-##  <a name="link_target"></a> link_target –
+## <a name="link_target"></a>link_target
 
-K této propojuje cílový blok `choice` blok zpráv.
+Propojí cílový blok s tímto `choice`m blokem pro zasílání zpráv.
 
-```
+```cpp
 virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Ukazatel `ITarget` bloku k propojení této `choice` blok zpráv.
+Ukazatel na blok `ITarget`, který se má připojit k tomuto `choice` bloku zpráv.
 
-##  <a name="release"></a> Vydání verze
+## <a name="release"></a>předběžné
 
-Uvolní předchozí vyhrazení úspěšné zprávy.
+Uvolní předchozí úspěšnou rezervaci zprávy.
 
-```
+```cpp
 virtual void release(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<size_t>* _PTarget);
@@ -262,33 +262,33 @@ virtual void release(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objektu se vydávají.
+`runtime_object_identity` vydaných `message` objektu.
 
 *_PTarget*<br/>
-Ukazatel na cílový blok, který volá `release` metody.
+Ukazatel na cílový blok, který volá metodu `release`.
 
-##  <a name="release_ref"></a> release_ref –
+## <a name="release_ref"></a>release_ref
 
-Počet odkazů v tomto vydání `choice` blok zpráv.
+Uvolní počet odkazů v tomto `choice`ovém bloku pro zasílání zpráv.
 
-```
+```cpp
 virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Ukazatel na cílový blok, který je volání této metody.
+Ukazatel na cílový blok, který volá tuto metodu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána `ITarget` objekt, který je právě byl odpojen od tohoto zdroje. Zdrojový blok může uvolnit všechny prostředky, které jsou vyhrazené pro cílový blok.
+Tato metoda je volána objektem `ITarget`, který je odpojování od tohoto zdroje. Zdrojový blok může uvolnit všechny prostředky rezervované pro cílový blok.
 
-##  <a name="reserve"></a> Rezervovat
+## <a name="reserve"></a>rezervační
 
-Vyhradí zprávu nabízely dříve v tomto `choice` blok zpráv.
+Vyhradí zprávu, kterou dřív nabídl tento `choice` blok pro zasílání zpráv.
 
-```
+```cpp
 virtual bool reserve(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<size_t>* _PTarget);
@@ -297,49 +297,49 @@ virtual bool reserve(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objekt dochází k rezervaci.
+`runtime_object_identity` rezervovaného objektu `message`
 
 *_PTarget*<br/>
-Ukazatel na cílový blok, který volá `reserve` metody.
+Ukazatel na cílový blok, který volá metodu `reserve`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud zpráva byla úspěšně vyhrazené, **false** jinak. Rezervace může selhat z mnoha důvodů včetně: byla zpráva již vyhrazena nebo přijatý jiný cíl, zdroj může zamítnout rezervace a tak dále.
+**true** , pokud byla zpráva úspěšně rezervována, jinak **false** . Rezervace mohou selhat z mnoha důvodů, včetně: zpráva byla již rezervována nebo přijata jiným cílem, zdroj může zamítnout rezervace atd.
 
 ### <a name="remarks"></a>Poznámky
 
-Po zavolání `reserve`, pokud je úspěšná, musí buď volat `consume` nebo `release` aby bylo možné provést nebo vzdát vlastnictví zprávy, v uvedeném pořadí.
+Po volání `reserve`, je-li tato operace úspěšná, je nutné volat buď `consume` nebo `release`, aby bylo možné převzít nebo dát k dispozici zprávu, v uvedeném pořadí.
 
-##  <a name="unlink_target"></a> unlink_target –
+## <a name="unlink_target"></a>unlink_target
 
-Cílový blok z tohoto nebude odpojen `choice` blok zpráv.
+Odpojí cílový blok od tohoto `choice`ho bloku pro zasílání zpráv.
 
-```
+```cpp
 virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Ukazatel `ITarget` bloku se zrušit propojení z tohoto `choice` blok zpráv.
+Ukazatel na blok `ITarget`, který se má odpojit od `choice` bloku zpráv.
 
-##  <a name="unlink_targets"></a> unlink_targets –
+## <a name="unlink_targets"></a>unlink_targets
 
-Zruší všechny cíle z tohoto propojení `choice` blok zpráv.
+Odpojí všechny cíle od tohoto `choice`ho bloku pro zasílání zpráv.
 
-```
+```cpp
 virtual void unlink_targets();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda není nutné volat z destruktoru, protože destruktor pro vnitřní `single_assignment` bloku zrušíte propojení správně.
+Tuto metodu není nutné volat z destruktoru, protože destruktor interního `single_assignment`ho bloku se odpojí správně.
 
-##  <a name="value"></a> Hodnota
+## <a name="value"></a>osa
 
-Získá zprávu, jejíž index se zvolila `choice` blok zpráv.
+Získá zprávu, jejíž index byl vybrán v rámci `choice`ho bloku pro zasílání zpráv.
 
-```
+```cpp
 template <
     typename _Payload_type
 >
@@ -349,7 +349,7 @@ _Payload_type const& value();
 ### <a name="parameters"></a>Parametry
 
 *_Payload_type*<br/>
-Typ datové části zprávy.
+Typ datové části zprávy
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -357,9 +357,9 @@ Datová část zprávy.
 
 ### <a name="remarks"></a>Poznámky
 
-Protože `choice` blok zpráv může přijímat vstupy s různé datové typy, je nutné zadat typ datové části Přejme během načítání. Můžete určit typ na základě výsledku z `index` metody.
+Vzhledem k tomu, že blok zasílání zpráv `choice` může přebírat vstupy s různými typy datových částí, je nutné v bodě načtení zadat typ datové části. Můžete určit typ založený na výsledku `index` metody.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [join – třída](join-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; operátory'
+title: operátory &lt;string_view&gt;
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: caa6e515428cc0ea767eef20e819753c8f7ff8f9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459223"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127735"
 ---
-# <a name="ltstringviewgt-operators"></a>&lt;string_view&gt; operátory
+# <a name="ltstring_viewgt-operators"></a>operátory &lt;string_view&gt;
 
-Tyto operátory použijte k porovnání dvou objektů string_view nebo string_view a nějakého jiného objektu řetězce (například [std:: String](basic-string-class.md)nebo **char\*** ), pro který je k dispozici implicitní převod. 
+Tyto operátory použijte k porovnání dvou string_view objektů nebo string_view a nějakého jiného objektu řetězce (například [std:: String](basic-string-class.md)nebo **char\*** ), pro který je k dispozici implicitní převod. 
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[podnikatel&gt;](#op_gt)|[podnikatel&gt;=](#op_gt_eq)|
-|[podnikatel&lt;](#op_lt)|[podnikatel&lt;&lt;](#op_lt_lt)|[podnikatel&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|[sv – operátor](#op_sv)|
+|[operator!=](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;=](#op_gt_eq)|
+|[operátor&lt;](#op_lt)|[operátor&lt;&lt;](#op_lt_lt)|[operátor&lt;=](#op_lt_eq)|
+|[operator = = – operátor](#op_eq_eq)|[sv – operátor](#op_sv)|
 
 ## <a name="op_neq"></a>! = – operátor
 
@@ -57,11 +57,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*levý*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
-*Kliknutím*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*pravé*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -96,11 +96,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*levý*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
-*Kliknutím*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*pravé*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -113,7 +113,7 @@ Implicitní převod musí existovat z *convertible_string_type* na string_view n
 Porovnání je založeno na lexicographical porovnání sekvencí znaků. Pokud mají stejný počet prvků a všechny elementy jsou stejné, jsou oba objekty stejné.
 
 
-## <a name="op_lt"></a>podnikatel&lt;
+## <a name="op_lt"></a>operátor&lt;
 
 Testuje, zda je objekt na levé straně operátoru menší než objekt na pravé sidestring_view
 ```cpp
@@ -135,11 +135,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*levý*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
-*Kliknutím*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*pravé*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -173,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>podnikatel&lt;=
+## <a name="op_lt_eq"></a>operátor&lt;=
 
 Testuje, zda je objekt na levé straně operátoru menší než nebo roven objektu na pravé straně.
 
@@ -196,11 +196,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*levý*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
-*Kliknutím*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*pravé*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -210,7 +210,7 @@ Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt
 
 Viz [operátor&lt;](#op_lt).
 
-## <a name="op_lt_lt"></a>podnikatel&lt;&lt;
+## <a name="op_lt_lt"></a>operátor&lt;&lt;
 
 Zapíše string_view do výstupního datového proudu.
 
@@ -225,7 +225,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 *Ostr*\
 výstupní datový proud, do kterého se zapisuje.
 
-*Str*\
+\ *str*
 String_view, který se má zadat do výstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -236,7 +236,7 @@ výstupní datový proud, do kterého se zapisuje.
 
 Tento operátor použijte k vložení obsahu string_view do výstupního datového proudu, například pomocí [std:: cout](iostream.md#cout).
 
-## <a name="op_gt"></a>podnikatel&gt;
+## <a name="op_gt"></a>operátor&gt;
 
 Testuje, zda je objekt na levé straně operátoru větší než objekt na pravé straně.
 
@@ -259,11 +259,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*levý*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
-*Kliknutím*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*pravé*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -273,7 +273,7 @@ Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt
 
 Viz [operátor&lt;](#op_lt).
 
-## <a name="op_gt_eq"></a>podnikatel&gt;=
+## <a name="op_gt_eq"></a>operátor&gt;=
 
 Testuje, zda je objekt na levé straně operátoru větší než nebo roven objektu na pravé straně.
 
@@ -296,11 +296,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*levý*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
-*Kliknutím*\
-Jakýkoli typ řetězce, který se má porovnat, `basic_string_view` nebo objekt typu, který se má porovnat.
+*pravé*\
+Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string_view`, který se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -312,7 +312,7 @@ Viz [operátor&lt;](#op_lt).
 
 ## <a name="op_sv"></a>operátor "" sv (string_view Literal)
 
-Sestaví string_view z řetězcového literálu. Vyžaduje obor `std::literals::string_view_literals`názvů. 
+Sestaví string_view z řetězcového literálu. Vyžaduje `std::literals::string_view_literals`oboru názvů. 
 
 ### <a name="example"></a>Příklad
 
@@ -327,6 +327,6 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<string_view>](../standard-library/string-view.md)
+[\<string_view >](../standard-library/string-view.md)

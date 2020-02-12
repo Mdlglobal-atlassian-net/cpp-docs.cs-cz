@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: 66e7485787606c22aba2970dbe481a7d29e66621
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337359"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142756"
 ---
-# <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error – třída
+# <a name="scheduler_worker_creation_error-class"></a>scheduler_worker_creation_error – třída
 
-Tato třída popisuje výjimku vyvolanou z důvodu selhání při vytváření kontextu spuštění pracovního procesu v modulu Runtime souběžnosti.
+Tato třída popisuje výjimku vyvolanou v důsledku selhání vytvoření kontextu spuštění pracovního procesu v Concurrency Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
@@ -31,11 +31,11 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 
 |Název|Popis|
 |----------|-----------------|
-|[scheduler_worker_creation_error](#ctor)|Přetíženo. Vytvoří `scheduler_worker_creation_error` objektu.|
+|[scheduler_worker_creation_error](#ctor)|Přetíženo. Vytvoří objekt `scheduler_worker_creation_error`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto se obvykle výjimka při volání do operačního systému vytvořit kontexty provádění z v rámci modulu Runtime souběžnosti se nezdaří. Kontexty spuštění jsou vlákna, které jsou spouštěny úkoly v modulu Runtime souběžnosti. Kód chyby, která by obvykle vrácená z volání metody Win32 `GetLastError` je převedena na hodnotu typu `HRESULT` a je možné načíst pomocí metody základní třídy `get_error_code`.
+Tato výjimka je obvykle vyvolána v případě, že volání operačního systému vytvoří kontexty provádění z Concurrency Runtime se nezdařila. Kontexty provádění jsou vlákna, která spouštějí úlohy v Concurrency Runtime. Kód chyby, který by byl obvykle vrácen z volání metody Win32 `GetLastError`, je převeden na hodnotu typu `HRESULT` a lze jej načíst pomocí metody základní třídy `get_error_code`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -47,15 +47,15 @@ Toto se obvykle výjimka při volání do operačního systému vytvořit kontex
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> scheduler_worker_creation_error
+## <a name="ctor"></a>scheduler_worker_creation_error
 
-Vytvoří `scheduler_worker_creation_error` objektu.
+Vytvoří objekt `scheduler_worker_creation_error`.
 
-```
+```cpp
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -67,11 +67,11 @@ explicit _CRTIMP scheduler_worker_creation_error(
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
 *_Hresult*<br/>
-`HRESULT` Hodnotou chyby, který způsobil výjimku.
+Hodnota `HRESULT` chyby, která způsobila výjimku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

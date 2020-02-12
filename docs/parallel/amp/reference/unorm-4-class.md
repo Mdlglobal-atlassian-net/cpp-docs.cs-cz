@@ -268,26 +268,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0164f595ba44999718895f5221250f12bd6b7344
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405401"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142941"
 ---
-# <a name="unorm4-class"></a>unorm_4 – třída
+# <a name="unorm_4-class"></a>unorm_4 – třída
 
 Představuje krátký vektor čtyř normálních čísel bez znaménka.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class unorm_4;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -297,7 +297,7 @@ class unorm_4;
 
 |Název|Popis|
 |----------|-----------------|
-|[unorm_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[unorm_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -373,7 +373,7 @@ class unorm_4;
 |unorm_4::ref_r||
 |unorm_4::ref_w||
 |unorm_4::ref_x||
-|unorm_4::ref_y||
+|unorm_4:: ref_y||
 |unorm_4::ref_z||
 |unorm_4::set_w||
 |unorm_4::set_wx||
@@ -447,10 +447,10 @@ class unorm_4;
 |unorm_4::operator-||
 |unorm_4::operator--||
 |unorm_4::operator*=||
-|unorm_4::Operator / =||
-|unorm_4::operator++||
+|unorm_4:: operator/=||
+|unorm_4:: operator + +||
 |unorm_4::operator+=||
-|unorm_4::operator=||
+|unorm_4:: operator =||
 |unorm_4::operator-=||
 
 ### <a name="public-constants"></a>Veřejné konstanty
@@ -469,63 +469,63 @@ class unorm_4;
 |unorm_4::abgr||
 |unorm_4::abr||
 |unorm_4::abrg||
-|unorm_4::ag||
-|unorm_4::agb||
+|unorm_4:: AG||
+|unorm_4:: AGB||
 |unorm_4::agbr||
-|unorm_4::agr||
-|unorm_4::agrb||
+|unorm_4:: AGR||
+|unorm_4:: agrb||
 |unorm_4::ar||
 |unorm_4::arb||
 |unorm_4::arbg||
 |unorm_4::arg||
-|unorm_4::argb||
+|unorm_4:: ARGB||
 |unorm_4::b||
 |unorm_4::ba||
 |unorm_4::bag||
 |unorm_4::bagr||
 |unorm_4::bar||
 |unorm_4::barg||
-|unorm_4::bg||
+|unorm_4:: BG||
 |unorm_4::bga||
 |unorm_4::bgar||
-|unorm_4::bgr||
+|unorm_4:: BGR||
 |unorm_4::bgra||
 |unorm_4::br||
 |unorm_4::bra||
 |unorm_4::brag||
 |unorm_4::brg||
 |unorm_4::brga||
-|unorm_4::g||
-|unorm_4::GA||
-|unorm_4::gab||
-|unorm_4::gabr||
-|unorm_4::gar||
-|unorm_4::garb||
-|unorm_4::GB||
+|unorm_4:: g||
+|unorm_4:: GA||
+|unorm_4:: GAB||
+|unorm_4:: gabr||
+|unorm_4:: Gar||
+|unorm_4:: Garb||
+|unorm_4:: GB||
 |unorm_4::gba||
-|unorm_4::gbar||
-|unorm_4::gbr||
+|unorm_4:: gbar||
+|unorm_4:: GBR||
 |unorm_4::gbra||
-|unorm_4::GR||
-|unorm_4::gra||
-|unorm_4::grab||
-|unorm_4::grb||
+|unorm_4:: gr||
+|unorm_4:: GRA||
+|unorm_4:: drapák||
+|unorm_4:: GRB||
 |unorm_4::grba||
-|unorm_4::r||
-|unorm_4::ra||
+|unorm_4:: r||
+|unorm_4:: RA||
 |unorm_4::rab||
-|unorm_4::rabg||
-|unorm_4::rag||
-|unorm_4::ragb||
-|unorm_4::RB||
+|unorm_4:: rabg||
+|unorm_4:: RAG||
+|unorm_4:: ragb||
+|unorm_4:: RB||
 |unorm_4::rba||
-|unorm_4::rbag||
-|unorm_4::rbg||
+|unorm_4:: rbag||
+|unorm_4:: RBG||
 |unorm_4::rbga||
-|unorm_4::rg||
+|unorm_4:: RG||
 |unorm_4::rga||
 |unorm_4::rgab||
-|unorm_4::RGB||
+|unorm_4:: RGB||
 |unorm_4::rgba||
 |unorm_4::w||
 |unorm_4::wx||
@@ -543,13 +543,13 @@ class unorm_4;
 |unorm_4::wzxy||
 |unorm_4::wzy||
 |unorm_4::wzyx||
-|unorm_4::x||
+|unorm_4:: x||
 |unorm_4::xw||
 |unorm_4::xwy||
 |unorm_4::xwyz||
 |unorm_4::xwz||
 |unorm_4::xwzy||
-|unorm_4::xy||
+|unorm_4:: XY||
 |unorm_4::xyw||
 |unorm_4::xywz||
 |unorm_4::xyz||
@@ -557,27 +557,27 @@ class unorm_4;
 |unorm_4::xz||
 |unorm_4::xzw||
 |unorm_4::xzwy||
-|unorm_4::xzy||
+|unorm_4:: XZY||
 |unorm_4::xzyw||
-|unorm_4::y||
-|unorm_4::yw||
+|unorm_4:: y||
+|unorm_4:: YW||
 |unorm_4::ywx||
 |unorm_4::ywxz||
 |unorm_4::ywz||
 |unorm_4::ywzx||
-|unorm_4::yx||
+|unorm_4:: yx||
 |unorm_4::yxw||
 |unorm_4::yxwz||
 |unorm_4::yxz||
 |unorm_4::yxzw||
-|unorm_4::YZ||
-|unorm_4::yzw||
+|unorm_4:: YZ||
+|unorm_4:: yzw||
 |unorm_4::yzwx||
 |unorm_4::yzx||
 |unorm_4::yzxw||
 |unorm_4::z||
 |unorm_4::zw||
-|unorm_4::zwx||
+|unorm_4:: zwx||
 |unorm_4::zwxy||
 |unorm_4::zwy||
 |unorm_4::zwyx||
@@ -586,10 +586,10 @@ class unorm_4;
 |unorm_4::zxwy||
 |unorm_4::zxy||
 |unorm_4::zxyw||
-|unorm_4::zy||
+|unorm_4:: ZY||
 |unorm_4::zyw||
 |unorm_4::zywx||
-|unorm_4::zyx||
+|unorm_4:: ZYX||
 |unorm_4::zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -598,15 +598,15 @@ class unorm_4;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm_4 –
+## <a name="ctor"></a>unorm_4
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-```
+```cpp
 unorm_4() restrict(amp,
     cpu);
 
@@ -660,29 +660,29 @@ explicit inline unorm_4(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V2*<br/>
-Hodnota inicializace elementu 2.
+Hodnota pro inicializaci elementu 2.
 
 *_V3*<br/>
-Hodnota inicializace element 3.
+Hodnota pro inicializaci elementu 3.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-##  <a name="unorm_4__size"></a> Velikost
+## <a name="unorm_4__size"></a>hodnota
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

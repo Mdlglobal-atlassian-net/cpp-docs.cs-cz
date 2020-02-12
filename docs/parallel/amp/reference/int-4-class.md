@@ -268,26 +268,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ca8eb4c93b3e9cd9108712727d1f83421c9d679
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180205"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126666"
 ---
-# <a name="int4-class"></a>int_4 – třída
+# <a name="int_4-class"></a>int_4 – třída
 
 Představuje krátký vektor čtyř celých čísel.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class int_4;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -297,7 +297,7 @@ class int_4;
 
 |Název|Popis|
 |----------|-----------------|
-|[int_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[int_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -335,7 +335,7 @@ class int_4;
 |int_4::get_xzwy||
 |int_4::get_xzy||
 |int_4::get_xzyw||
-|int_4::get_y||
+|int_4:: get_y||
 |int_4::get_yw||
 |int_4::get_ywx||
 |int_4::get_ywxz||
@@ -449,13 +449,13 @@ class int_4;
 |int_4::operator%=||
 |int_4::operator&=||
 |int_4::operator*=||
-|int_4::Operator / =||
+|int_4:: operator/=||
 |int_4::operator^=||
 |int_4::operator&#124;=||
 |int_4::operator~||
 |int_4::operator++||
 |int_4::operator+=||
-|int_4::operator<\<=||
+|int_4:: operator <\<=||
 |int_4::operator=||
 |int_4::operator-=||
 |int_4::operator>>=||
@@ -502,20 +502,20 @@ class int_4;
 |int_4::brag||
 |int_4::brg||
 |int_4::brga||
-|int_4::g||
+|int_4:: g||
 |int_4::ga||
 |int_4::gab||
 |int_4::gabr||
-|int_4::gar||
+|int_4:: Gar||
 |int_4::garb||
-|int_4::GB||
+|int_4:: GB||
 |int_4::gba||
 |int_4::gbar||
 |int_4::gbr||
 |int_4::gbra||
-|int_4::gr||
+|int_4:: gr||
 |int_4::gra||
-|int_4::grab||
+|int_4:: drapák||
 |int_4::grb||
 |int_4::grba||
 |int_4::r||
@@ -586,7 +586,7 @@ class int_4;
 |int_4::zw||
 |int_4::zwx||
 |int_4::zwxy||
-|int_4::zwy||
+|int_4:: zwy||
 |int_4::zwyx||
 |int_4::zx||
 |int_4::zxw||
@@ -605,15 +605,15 @@ class int_4;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> int_4 –
+## <a name="ctor"></a>int_4
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-```
+```cpp
 int_4() restrict(amp,
     cpu);
 
@@ -656,29 +656,29 @@ explicit inline int_4(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V2*<br/>
-Hodnota inicializace elementu 2.
+Hodnota pro inicializaci elementu 2.
 
 *_V3*<br/>
-Hodnota inicializace element 3.
+Hodnota pro inicializaci elementu 3.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-##  <a name="int_4__size"></a> Velikost
+## <a name="int_4__size"></a>hodnota
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

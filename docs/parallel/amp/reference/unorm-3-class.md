@@ -72,26 +72,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efca9b51f44a9eb64e6e9d89cc156ab0b2df5ae5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405518"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126185"
 ---
-# <a name="unorm3-class"></a>unorm_3 – třída
+# <a name="unorm_3-class"></a>unorm_3 – třída
 
 Představuje krátký vektor tří normálních čísel bez znaménka.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class unorm_3;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -101,21 +101,21 @@ class unorm_3;
 
 |Název|Popis|
 |----------|-----------------|
-|[unorm_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[unorm_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|unorm_3::get_x||
+|unorm_3:: get_x||
 |unorm_3::get_xy||
 |unorm_3::get_xyz||
 |unorm_3::get_xz||
 |unorm_3::get_xzy||
-|unorm_3::get_y||
-|unorm_3::get_yx||
+|unorm_3:: get_y||
+|unorm_3:: get_yx||
 |unorm_3::get_yxz||
-|unorm_3::get_yz||
+|unorm_3:: get_yz||
 |unorm_3::get_yzx||
 |unorm_3::get_z||
 |unorm_3::get_zx||
@@ -126,7 +126,7 @@ class unorm_3;
 |Unorm_3::ref_g||
 |Unorm_3::ref_r||
 |Unorm_3::ref_x||
-|Unorm_3::ref_y||
+|Unorm_3:: ref_y||
 |Unorm_3::ref_z||
 |unorm_3::set_x||
 |unorm_3::set_xy||
@@ -150,10 +150,10 @@ class unorm_3;
 |----------|-----------------|
 |unorm_3::operator--||
 |unorm_3::operator*=||
-|unorm_3::Operator / =||
-|unorm_3::Operator ++||
+|unorm_3:: operator/=||
+|unorm_3:: operator + +||
 |unorm_3::operator+=||
-|unorm_3::Operator =||
+|unorm_3:: operator =||
 |unorm_3::operator-=||
 
 ### <a name="public-constants"></a>Veřejné konstanty
@@ -167,35 +167,35 @@ class unorm_3;
 |Název|Popis|
 |----------|-----------------|
 |unorm_3::b||
-|unorm_3::BG||
-|unorm_3::BGR||
+|unorm_3:: BG||
+|unorm_3:: BGR||
 |unorm_3::br||
 |unorm_3::brg||
-|unorm_3::g||
-|unorm_3::GB||
-|unorm_3::GBR||
-|unorm_3::GR||
-|unorm_3::grb||
-|unorm_3::r||
+|unorm_3:: g||
+|unorm_3:: GB||
+|unorm_3:: GBR||
+|unorm_3:: gr||
+|unorm_3:: GRB||
+|unorm_3:: r||
 |unorm_3::rb||
 |unorm_3::rbg||
-|unorm_3::rg||
-|unorm_3::RGB||
-|unorm_3::x||
-|unorm_3::xy||
+|unorm_3:: RG||
+|unorm_3:: RGB||
+|unorm_3:: x||
+|unorm_3:: XY||
 |unorm_3::xyz||
 |unorm_3::xz||
 |unorm_3::xzy||
-|unorm_3::y||
-|unorm_3::yx||
+|unorm_3:: y||
+|unorm_3:: yx||
 |unorm_3::yxz||
-|unorm_3::YZ||
+|unorm_3:: YZ||
 |unorm_3::yzx||
-|unorm_3::z||
+|unorm_3:: z||
 |unorm_3::zx||
 |unorm_3::zxy||
-|unorm_3::zy||
-|unorm_3::Zyx||
+|unorm_3:: ZY||
+|unorm_3:: ZYX||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -203,15 +203,15 @@ class unorm_3;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm_3 –
+## <a name="ctor"></a>unorm_3
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-```
+```cpp
 unorm_3() restrict(amp,
     cpu);
 
@@ -263,26 +263,26 @@ explicit inline unorm_3(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V2*<br/>
-Hodnota inicializace elementu 2.
+Hodnota pro inicializaci elementu 2.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-##  <a name="unorm_3__size"></a> Velikost
+## <a name="unorm_3__size"></a>hodnota
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

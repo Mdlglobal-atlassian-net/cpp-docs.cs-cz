@@ -11,20 +11,20 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: c755675a69ce86bc03a3fdb59fa7d43a20676495
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69e00893373ccca6e2ed676fbb7f5a109c49efdf
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295913"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143046"
 ---
 # <a name="dispatchstate-structure"></a>DispatchState – struktura
 
-`DispatchState` Struktura se používá k přenosu stavu `IExecutionContext::Dispatch` metody. Popisuje okolností, pod kterým `Dispatch` metoda se vyvolá u `IExecutionContext` rozhraní.
+Struktura `DispatchState` slouží k přenosu stavu do metody `IExecutionContext::Dispatch`. Popisuje okolnosti, za kterých je metoda `Dispatch` vyvolána v rozhraní `IExecutionContext`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 struct DispatchState;
 ```
 
@@ -34,15 +34,15 @@ struct DispatchState;
 
 |Název|Popis|
 |----------|-----------------|
-|[Dispatchstate::dispatchstate –](#ctor)|Sestaví nový `DispatchState` objektu.|
+|[DispatchState::D ispatchState](#ctor)|Vytvoří nový objekt `DispatchState`.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Název|Popis|
 |----------|-----------------|
-|[DispatchState::m_dispatchStateSize](#m_dispatchstatesize)|Velikost struktury, který se používá pro správu verzí.|
-|[DispatchState::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Určuje, zda má zadaný kontext `Dispatch` metoda vzhledem k tomu, že předchozí kontext asynchronně blokované. To se používá pouze v rámci plánování UMS a je nastaveno na hodnotu `0` u všech ostatních kontextech spuštění.|
-|[DispatchState::m_reserved](#m_reserved)|Služba BITS vyhrazené pro budoucí informace o předávání.|
+|[DispatchState:: m_dispatchStateSize](#m_dispatchstatesize)|Velikost této struktury, která se používá pro správu verzí.|
+|[DispatchState:: m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Určuje, zda tento kontext zadal metodu `Dispatch`, protože předchozí kontext byl asynchronně zablokován. Tato hodnota se používá pouze v kontextu plánování UMS a je nastavena na hodnotu `0` pro všechny ostatní kontexty spuštění.|
+|[DispatchState:: m_reserved](#m_reserved)|Služba BITS vyhrazena pro předávání budoucích informací.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -50,42 +50,42 @@ struct DispatchState;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm.h
+**Záhlaví:** concrtrm. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a>  Dispatchstate::dispatchstate – konstruktor
+## <a name="ctor"></a>DispatchState::D ispatchState – konstruktor
 
-Sestaví nový `DispatchState` objektu.
+Vytvoří nový objekt `DispatchState`.
 
-```
+```cpp
 DispatchState();
 ```
 
-##  <a name="m_dispatchstatesize"></a>  Dispatchstate::m_dispatchstatesize – datový člen
+## <a name="m_dispatchstatesize"></a>Datový člen DispatchState:: m_dispatchStateSize
 
-Velikost struktury, který se používá pro správu verzí.
+Velikost této struktury, která se používá pro správu verzí.
 
-```
+```cpp
 unsigned long m_dispatchStateSize;
 ```
 
-##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  Dispatchstate::m_fispreviouscontextasynchronouslyblocked – datový člen
+## <a name="m_fispreviouscontextasynchronouslyblocked"></a>Datový člen DispatchState:: m_fIsPreviousContextAsynchronouslyBlocked
 
-Určuje, zda má zadaný kontext `Dispatch` metoda vzhledem k tomu, že předchozí kontext asynchronně blokované. To se používá pouze v rámci plánování UMS a je nastaveno na hodnotu `0` u všech ostatních kontextech spuštění.
+Určuje, zda tento kontext zadal metodu `Dispatch`, protože předchozí kontext byl asynchronně zablokován. Tato hodnota se používá pouze v kontextu plánování UMS a je nastavena na hodnotu `0` pro všechny ostatní kontexty spuštění.
 
-```
+```cpp
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```
 
-##  <a name="m_reserved"></a>  Dispatchstate::m_reserved – datový člen
+## <a name="m_reserved"></a>Datový člen DispatchState:: m_reserved
 
-Služba BITS vyhrazené pro budoucí informace o předávání.
+Služba BITS vyhrazena pro předávání budoucích informací.
 
-```
+```cpp
 unsigned int m_reserved : 31;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

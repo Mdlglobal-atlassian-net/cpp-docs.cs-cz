@@ -1,5 +1,5 @@
 ---
-title: CMFCTabDropTarget Class
+title: CMFCTabDropTarget – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabDropTarget
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0090386b1ebb4d89b9a7613a0b2a28529decbe5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252981"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127425"
 ---
-# <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget Class
+# <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget – třída
 
-Poskytuje mechanismus pro komunikaci mezi ovládacím prvkem karta a knihovnami OLE.
+Poskytuje komunikační mechanismus mezi ovládacím prvkem karta a knihovnami OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,34 +40,34 @@ class CMFCTabDropTarget : public COleDropTarget
 |||
 |-|-|
 |Název|Popis|
-|`CMFCTabDropTarget::CMFCTabDropTarget`|Výchozí konstruktor.|
+|`CMFCTabDropTarget::CMFCTabDropTarget`|Výchozí konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |||
 |-|-|
 |Název|Popis|
-|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Volá se rozhraním, když uživatel přetáhne objekt do okna Karta. (Přepíše [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
-|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Volá se rozhraním, když uživatel přetáhne objekt mimo časové období kartu, která má fokus. (Přepíše [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
-|[CMFCTabDropTarget::OnDragOver](#ondragover)|Volá se rozhraním, když uživatel přetáhne objektu na kartě okna, který má právě fokus. (Přepíše [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
-|[CMFCTabDropTarget::OnDropEx](#ondropex)|Volá se rozhraním, když uživatel uvolní tlačítko myši na konci operace přetažení. (Přepíše [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).)|
-|[CMFCTabDropTarget::Register](#register)|Ovládací prvek se zaregistruje jako ten, který může sloužit jako cíl operace přetažení myší OLE.|
+|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Volá se rozhraním, když uživatel přetáhne objekt do okna karty. (Overrides [COleDropTarget:: OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
+|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Volá se rozhraním, když uživatel přetáhne objekt mimo okno karty, které má fokus. (Overrides [COleDropTarget:: OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
+|[CMFCTabDropTarget::OnDragOver](#ondragover)|Volá se rozhraním, když uživatel přetáhne objekt na okno karty, které má fokus. (Overrides [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
+|[CMFCTabDropTarget::OnDropEx](#ondropex)|Volá se rozhraním, když uživatel uvolní tlačítko myši na konci operace přetažení. (Overrides [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).)|
+|[CMFCTabDropTarget:: Register](#register)|Registruje ovládací prvek jako ten, který může být cílem operace přetažení OLE.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato třída podporuje přetahování myší `CMFCBaseTabCtrl` třídy. Pokud vaše aplikace inicializuje s použitím knihovny OLE [AfxOleInit](ole-initialization.md#afxoleinit) funkci `CMFCBaseTabCtrl` objekty zaregistrovat pro operace a přetažení.
+Tato třída poskytuje podporu přetažení pro třídu `CMFCBaseTabCtrl`. Pokud vaše aplikace inicializuje knihovny OLE pomocí funkce [AfxOleInit](ole-initialization.md#afxoleinit) , `CMFCBaseTabCtrl` objekty, které se registrují pro operace přetažení.
 
-`CMFCTabDropTarget` Třída rozšiřuje své základní třídy tak, že na kartě, které je pod kurzor, když dojde k operaci přetažení aktivní. Další informace týkající se operací přetažení myší, naleznete v tématu [oblast pro přetažení přetažení (OLE)](../../mfc/drag-and-drop-ole.md).
+Třída `CMFCTabDropTarget` rozšiřuje svou základní třídu tím, že při aktivní operaci přetažení vykoná kartu, která je pod kurzorem. Další informace o operacích přetažení najdete v tématu přetažení [OLE](../../mfc/drag-and-drop-ole.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCTabDropTarget` objektu a použít jeho `Register` metoda.
+Následující příklad ukazuje, jak vytvořit objekt `CMFCTabDropTarget` a použít jeho metodu `Register`.
 
 [!code-cpp[NVC_MFC_RibbonApp#39](../../mfc/reference/codesnippet/cpp/cmfctabdroptarget-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -77,11 +77,11 @@ Následující příklad ukazuje, jak vytvořit `CMFCTabDropTarget` objektu a po
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxbasetabctrl.h
+**Záhlaví:** afxbasetabctrl. h
 
-##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter
+##  <a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter
 
-Volá se rozhraním, když uživatel přetáhne objekt do okna Karta.
+Volá se rozhraním, když uživatel přetáhne objekt do okna karty.
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -96,14 +96,14 @@ virtual DROPEFFECT OnDragEnter(
 |||
 |-|-|
 |Parametr|Popis|
-|*pWnd*|[in] Nevyužité.|
-|*pDataObject*|[in] Ukazatel na objekt, který uživatel přetáhne.|
-|*dwKeyState*|[in] Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|
-|*point*|[in] Umístění kurzoru v souřadnicích klienta.|
+|*pWnd*|pro Nepoužívané.|
+|*pDataObject*|pro Ukazatel na objekt, který uživatel přetáhne.|
+|*dwKeyState*|pro Obsahuje stav modifikačních kláves. Jedná se o kombinaci libovolného počtu následujících: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|
+|*Vyberte*|pro Umístění kurzoru v souřadnicích klienta.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Efekt, který je výsledkem v případě v místě určeném v rozevíracím *bodu*. Může být jeden nebo více z následujících akcí:
+Výsledek, který je výsledkem, pokud dojde k přerušení v umístění určeném *bodem*. Může to být jedna nebo víc z těchto možností:
 
 - DROPEFFECT_NONE
 
@@ -117,13 +117,13 @@ Efekt, který je výsledkem v případě v místě určeném v rozevíracím *bo
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vrátí DROPEFFECT_NONE, pokud není v režimu vlastního nastavení rozhraní nástrojů nebo formát dat schránky není k dispozici. V opačném případě vrátí výsledek volání `CMFCBaseTabCtrl::OnDragEnter` pomocí zadaných parametrů.
+Tato metoda vrací DROPEFFECT_NONE, pokud není rozhraní panelu nástrojů v režimu přizpůsobení nebo není k dispozici formát dat ve schránce. V opačném případě vrátí výsledek volání `CMFCBaseTabCtrl::OnDragEnter` se zadanými parametry.
 
-Další informace o režimu přizpůsobení, najdete v části [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Další informace o formátech dat schránky najdete v tématu [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Další informace o režimu přizpůsobení naleznete v tématu [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Další informace o formátech dat ve schránce najdete v tématu [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-##  <a name="ondragleave"></a>  CMFCTabDropTarget::OnDragLeave
+##  <a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave
 
-Volá se rozhraním, když uživatel přetáhne objekt mimo časové období kartu, která má fokus.
+Volá se rozhraním, když uživatel přetáhne objekt mimo okno karty, které má fokus.
 
 ```
 virtual void OnDragLeave(CWnd* pWnd);
@@ -134,15 +134,15 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||
 |-|-|
 |Parametr|Popis|
-|*pWnd*|[in] Nevyužité.|
+|*pWnd*|pro Nepoužívané.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá `CMFCBaseTabCtrl::OnDragLeave` metody k provedení operace přetažení.
+Tato metoda volá metodu `CMFCBaseTabCtrl::OnDragLeave` k provedení operace přetažení.
 
-##  <a name="ondragover"></a>  CMFCTabDropTarget::OnDragOver
+##  <a name="ondragover"></a>CMFCTabDropTarget::OnDragOver
 
-Volá se rozhraním, když uživatel přetáhne objektu na kartě okna, který má právě fokus.
+Volá se rozhraním, když uživatel přetáhne objekt na okno karty, které má fokus.
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -157,14 +157,14 @@ virtual DROPEFFECT OnDragOver(
 |||
 |-|-|
 |Parametr|Popis|
-|*pWnd*|[in] Nevyužité.|
-|*pDataObject*|[in] Ukazatel na objekt, který uživatel přetáhne.|
-|*dwKeyState*|[in] Obsahuje informace o stavu modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|
-|*point*|[in] Umístění ukazatele myši v souřadnice klienta.|
+|*pWnd*|pro Nepoužívané.|
+|*pDataObject*|pro Ukazatel na objekt, který uživatel přetáhne.|
+|*dwKeyState*|pro Obsahuje stav modifikačních kláves. Jedná se o kombinaci libovolného počtu následujících: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.|
+|*Vyberte*|pro Umístění ukazatele myši v souřadnicích klienta.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Efekt, který je výsledkem v případě v místě určeném v rozevíracím *bodu*. Může být jeden nebo více z následujících akcí:
+Výsledek, který je výsledkem, pokud dojde k přerušení v umístění určeném *bodem*. Může to být jedna nebo víc z těchto možností:
 
 - DROPEFFECT_NONE
 
@@ -178,11 +178,11 @@ Efekt, který je výsledkem v případě v místě určeném v rozevíracím *bo
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda provádí kartu, která je pod kurzorem při výskytu aktivní operace přetažení. Vrátí DROPEFFECT_NONE, pokud není v režimu vlastního nastavení rozhraní nástrojů nebo formát dat schránky není k dispozici. V opačném případě vrátí výsledek volání `CMFCBaseTabCtrl::OnDragOver` pomocí zadaných parametrů.
+Tato metoda vytvoří kartu, která je pod kurzorem, když dojde k operaci přetažení aktivní. Vrátí DROPEFFECT_NONE, pokud není rozhraní panelu nástrojů v režimu přizpůsobení nebo není k dispozici formát dat ve schránce. V opačném případě vrátí výsledek volání `CMFCBaseTabCtrl::OnDragOver` se zadanými parametry.
 
-Další informace o režimu přizpůsobení, najdete v části [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Další informace o formátech dat schránky najdete v tématu [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Další informace o režimu přizpůsobení naleznete v tématu [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Další informace o formátech dat ve schránce najdete v tématu [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-##  <a name="ondropex"></a>  CMFCTabDropTarget::OnDropEx
+##  <a name="ondropex"></a>CMFCTabDropTarget::OnDropEx
 
 Volá se rozhraním, když uživatel uvolní tlačítko myši na konci operace přetažení.
 
@@ -200,15 +200,15 @@ virtual DROPEFFECT OnDropEx(
 |||
 |-|-|
 |Parametr|Popis|
-|*pWnd*|[in] Nevyužité.|
-|*pDataObject*|[in] Ukazatel na objekt, který uživatel přetáhne.|
-|*dropEffect*|[in] Výchozí operaci přetažení.|
-|*dropList*|[in] Nevyužité.|
-|*point*|[in] Umístění ukazatele myši v souřadnice klienta.|
+|*pWnd*|pro Nepoužívané.|
+|*pDataObject*|pro Ukazatel na objekt, který uživatel přetáhne.|
+|*dropEffect*|pro Výchozí operace drop.|
+|*Seznamu*|pro Nepoužívané.|
+|*Vyberte*|pro Umístění ukazatele myši v souřadnicích klienta.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledný efekt přetažení. Může být jeden nebo více z následujících akcí:
+Výsledný efekt zrušení. Může to být jedna nebo víc z těchto možností:
 
 - DROPEFFECT_NONE
 
@@ -222,13 +222,13 @@ Výsledný efekt přetažení. Může být jeden nebo více z následujících a
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá `CMFCBaseTabCtrl::OnDrop` Pokud rozhraní nástrojů je v režimu vlastního nastavení a formát dat schránky je k dispozici. Pokud volání `CMFCBaseTabCtrl::OnDrop` vrátí nenulovou hodnotu, tato metoda vrátí výchozí odkládací efekt určené *dropEffect*. V opačném případě vrátí tato metoda DROPEFFECT_NONE. Další informace o rozevírací efektů, naleznete v tématu [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).
+Tato metoda volá `CMFCBaseTabCtrl::OnDrop`, pokud je rozhraní panelu nástrojů v režimu přizpůsobení a je k dispozici formát dat ve schránce. Pokud volání `CMFCBaseTabCtrl::OnDrop` vrátí nenulovou hodnotu, vrátí tato metoda výchozí efekt odtažení určený parametrem *DROPEFFECT*. V opačném případě vrátí tato metoda DROPEFFECT_NONE. Další informace o účincích přetažení naleznete v tématu [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).
 
-Další informace o režimu přizpůsobení, najdete v části [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Další informace o formátech dat schránky najdete v tématu [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Další informace o režimu přizpůsobení naleznete v tématu [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Další informace o formátech dat ve schránce najdete v tématu [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-##  <a name="register"></a>  CMFCTabDropTarget::Register
+##  <a name="register"></a>CMFCTabDropTarget:: Register
 
-Ovládací prvek se zaregistruje jako ten, který může sloužit jako cíl operace přetažení myší OLE.
+Registruje ovládací prvek jako ten, který může být cílem operace přetažení OLE.
 
 ```
 BOOL Register(CMFCBaseTabCtrl *pOwner);
@@ -239,18 +239,18 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||
 |-|-|
 |Parametr|Popis|
-|*pOwner*|[in] Ovládací prvek karty zaregistrovat jako cíl přetažení.|
+|*pOwner*|pro Ovládací prvek karta, který se má zaregistrovat jako cíl přetažení|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byla registrace úspěšná. jinak 0.
+Nenulová, pokud byla registrace úspěšná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [COleDropTarget::Register](../../mfc/reference/coledroptarget-class.md#register) zaregistrovat ovládací prvky pro operace a přetažení.
+Tato metoda volá [COleDropTarget:: Register](../../mfc/reference/coledroptarget-class.md#register) pro registraci ovládacího prvku pro operace přetažení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[Přetažení (OLE)](../../mfc/drag-and-drop-ole.md)
+[OLE – přetažení](../../mfc/drag-and-drop-ole.md)

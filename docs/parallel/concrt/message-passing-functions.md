@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: 1a1790a08403bcc1d016a39e27c7a121c288af4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e1052a59f355c4ad5a7c6b57724268c24a209b4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185994"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143288"
 ---
 # <a name="message-passing-functions"></a>Funkce usnadnění
 
-Asynchronní knihovnou agentů poskytuje několik funkcí, které umožňují předávání zpráv mezi součástmi.
+Knihovna asynchronních agentů poskytuje několik funkcí, které umožňují předávat zprávy mezi komponentami.
 
-Tyto funkce předávání zpráv se používají s různými typy bloku zpráv. Další informace o typech bloku zpráv, které jsou definovány pomocí modulu Runtime souběžnosti, naleznete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md).
+Tyto funkce předávání zpráv se používají s různými typy bloku zpráv. Další informace o typech bloků zpráv, které jsou definovány Concurrency Runtime, naleznete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md).
 
-##  <a name="top"></a> Oddíly
+## <a name="top"></a>Řezů
 
-Toto téma popisuje následující funkce předávání zpráv:
+V tomto tématu jsou popsány následující funkce pro předávání zpráv:
 
-- [odesílání a asend –](#send)
+- [Odeslat a asend](#send)
 
-- [přijímat a try_receive –](#receive)
+- [přijmout a try_receive](#receive)
 
 - [Příklady](#examples)
 
-##  <a name="send"></a> odesílání a asend –
+## <a name="send"></a>Odeslat a asend
 
-[Concurrency::send](reference/concurrency-namespace-functions.md#send) funkce odešle zprávu do zadané cílové synchronně a [concurrency::asend](reference/concurrency-namespace-functions.md#asend) funkce odešle zprávu do zadané cílové asynchronně. Jak `send` a `asend` funkce Počkejte, až cílový označuje, že bude nakonec přijmout nebo odmítnout zprávu.
+Funkce [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) odesílá zprávu do zadaného cíle synchronně a funkce [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) posílá zprávu do zadaného cíle asynchronně. Funkce `send` i `asend` čekají na to, dokud cíl neindikuje, že bude zprávu nakonec akceptovat nebo odmítnout.
 
-`send` Funkce počká, až cílový přijme nebo odmítne zprávy ještě před jeho vrácením. `send` Vrací funkce **true** Pokud byla zpráva doručena a **false** jinak. Vzhledem k tomu, `send` funkce pracuje synchronně, `send` funkce čeká na cíl, který chcete zobrazit zpráva, před jeho vrácením.
+Funkce `send` počká, dokud cíl nepřijme nebo odmítne zprávu před tím, než se vrátí. Funkce `send` vrátí **hodnotu true** , pokud byla zpráva doručena a jinak **false** . Vzhledem k tomu, že funkce `send` funguje synchronně, funkce `send` počká, než cíl obdrží zprávu, než se vrátí.
 
-Naopak `asend` funkce nečeká cíl, který chcete přijmout nebo odmítnout zprávu, před jeho vrácením. Místo toho `asend` vrací funkce **true** Pokud cíl přijme zprávu a bude nakonec trvat. V opačném případě `asend` vrátí **false** k označení, že cíl odmítl zprávu, nebo odloženo rozhodnutí o tom, jestli se zpráva.
+Naopak funkce `asend` nečeká na cíl přijmout nebo odmítnout zprávu předtím, než se vrátí. Místo toho funkce `asend` vrátí **hodnotu true** , pokud cíl přijme zprávu a nakonec ji převezme. Jinak `asend` vrátí **hodnotu false** , aby označovala, že cíl odmítl zprávu, nebo odložil rozhodnutí o tom, jestli se má zpráva provést.
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="receive"></a> přijímat a try_receive –
+## <a name="receive"></a>přijmout a try_receive
 
-[Concurrency::receive](reference/concurrency-namespace-functions.md#receive) a [concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive) funkce čtou data z daného zdroje. `receive` Funkce čeká data k dispozici, že `try_receive` funkce vrátí hodnotu okamžitě.
+Funkce [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) a [concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) čtou data z daného zdroje. Funkce `receive` čeká na zpřístupnění dat, zatímco funkce `try_receive` vrátí hodnotu okamžitě.
 
-Použití `receive` fungovat v případě, že musíte mít data, abyste mohli pokračovat. Použití `try_receive` fungovat, pokud nesmí blokovat aktuální kontext nebo nemusíte mít data, abyste mohli pokračovat.
+Použijte funkci `receive`, pokud je nutné mít data, aby bylo možné pokračovat. Použijte funkci `try_receive`, pokud nesmíte blokovat aktuální kontext nebo nemusíte mít data, aby bylo možné pokračovat.
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-##  <a name="examples"></a> Příklady
+## <a name="examples"></a>4.6
 
-Příklady, které používají `send` a `asend`, a `receive` funkce, najdete v následujících tématech:
+Příklady použití funkcí `send` a `asend`a `receive` funkce naleznete v následujících tématech:
 
 - [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -63,13 +63,13 @@ Příklady, které používají `send` a `asend`, a `receive` funkce, najdete v 
 
 - [Postupy: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-[[Horní](#top)]
+[[Nahoře](#top)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[Send – funkce](reference/concurrency-namespace-functions.md#send)<br/>
+[send – funkce](reference/concurrency-namespace-functions.md#send)<br/>
 [asend – funkce](reference/concurrency-namespace-functions.md#asend)<br/>
 [Receive – funkce](reference/concurrency-namespace-functions.md#receive)<br/>
-[try_receive – funkce](reference/concurrency-namespace-functions.md#try_receive)
+[try_receive funkce](reference/concurrency-namespace-functions.md#try_receive)

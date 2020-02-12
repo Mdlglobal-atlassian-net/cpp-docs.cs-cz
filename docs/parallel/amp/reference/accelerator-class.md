@@ -40,20 +40,20 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180432"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127160"
 ---
 # <a name="accelerator-class"></a>accelerator – třída
 
-Akcelerátor je funkce hardwaru, která je optimalizovaná pro paralelní výpočty. Akcelerátor může být zařízení připojené k sběrnici PCIe (například GPU), nebo může být rozšířená instrukční sada v hlavním CPU.
+Akcelerátor je hardwarová schopnost, která je optimalizovaná pro náročné zpracování dat. Akcelerátor může být zařízení připojené ke sběrnici PCIe (například GPU), nebo se může jednat o rozšířenou sadu instrukcí v hlavním procesoru.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class accelerator;
 ```
 
@@ -63,58 +63,58 @@ class accelerator;
 
 |Název|Popis|
 |----------|-----------------|
-|[accelerator Constructor](#ctor)|Inicializuje novou instanci třídy `accelerator` třídy.|
-|[~ accelerator – destruktor](#ctor)|Odstraní `accelerator` objektu.|
+|[akcelerátor – konstruktor](#ctor)|Inicializuje novou instanci třídy `accelerator`.|
+|[~ akcelerátorový destruktor](#ctor)|Odstraní objekt `accelerator`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[create_view](#create_view)|Vytvoří a vrátí `accelerator_view` objekt na tomto akcelerátoru.|
-|[get_all](#get_all)|Vrátí vektor `accelerator` objekty, které představují všechny dostupné akcelerátory.|
-|[get_auto_selection_view](#get_auto_selection_view)|Vrátí automatický výběr `accelerator_view`.|
-|[get_dedicated_memory](#get_dedicated_memory)|Vrátí velikost vyhrazené paměti pro `accelerator`, v kilobajtech.|
+|[create_view](#create_view)|Vytvoří a vrátí objekt `accelerator_view` v tomto akcelerátoru.|
+|[get_all](#get_all)|Vrátí Vektor objektů `accelerator`, které reprezentují všechny dostupné akcelerátory.|
+|[get_auto_selection_view](#get_auto_selection_view)|Vrátí `accelerator_view`automatického výběru.|
+|[get_dedicated_memory](#get_dedicated_memory)|Vrátí vyhrazenou paměť pro `accelerator`v kilobajtech.|
 |[get_default_cpu_access_type](#get_default_cpu_access_type)|Vrátí výchozí [access_type](concurrency-namespace-enums-amp.md#access_type) pro vyrovnávací paměti vytvořené na tomto akcelerátoru.|
-|[get_default_view](#get_default_view)|Vrátí výchozí `accelerator_view` objekt, který je přidružený `accelerator`.|
-|[get_description](#get_description)|Vrátí krátký popis `accelerator` zařízení.|
+|[get_default_view](#get_default_view)|Vrátí výchozí `accelerator_view` objekt, který je spojen s `accelerator`.|
+|[get_description](#get_description)|Vrátí krátký popis zařízení `accelerator`.|
 |[get_device_path](#get_device_path)|Vrátí cestu k zařízení.|
-|[get_has_display](#get_has_display)|Určuje, zda `accelerator` je připojen k displeji.|
-|[get_is_debug](#get_is_debug)|Určuje, zda `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.|
-|[get_is_emulated](#get_is_emulated)|Určuje, zda `accelerator` je emulován.|
-|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|Určuje, zda `accelerator` podporuje sdílenou paměť|
-|[get_supports_double_precision](#get_supports_double_precision)|Určuje, zda `accelerator` je připojen k displeji.|
-|[get_supports_limited_double_precision](#get_supports_limited_double_precision)|Určuje, zda `accelerator` má omezenou podporu pro matematiku s dvojitou přesností.|
+|[get_has_display](#get_has_display)|Určuje, zda je `accelerator` připojeno k zobrazení.|
+|[get_is_debug](#get_is_debug)|Určuje, zda `accelerator` má povolenou vrstvu ladění pro rozsáhlé hlášení chyb.|
+|[get_is_emulated](#get_is_emulated)|Určuje, zda je `accelerator` emulované.|
+|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|Určuje, jestli `accelerator` podporuje sdílenou paměť.|
+|[get_supports_double_precision](#get_supports_double_precision)|Určuje, zda je `accelerator` připojeno k zobrazení.|
+|[get_supports_limited_double_precision](#get_supports_limited_double_precision)|Určuje, zda má `accelerator` omezená podpora pro matematiku s dvojitou přesností.|
 |[get_version](#get_version)|Vrátí verzi `accelerator`.|
-|[set_default](#set_default)|Vrátí cestu k výchozí akcelerátor.|
-|[set_default_cpu_access_type](#set_default_cpu_access_type)|Nastaví výchozí procesor [access_type](concurrency-namespace-enums-amp.md#access_type)pro pole a implicitní přidělení paměti provedené v tomto `accelerator`.|
+|[set_default](#set_default)|Vrátí cestu k výchozímu akcelerátoru.|
+|[set_default_cpu_access_type](#set_default_cpu_access_type)|Nastaví výchozí [ACCESS_TYPE](concurrency-namespace-enums-amp.md#access_type)procesoru pro pole a implicitní přidělení paměti provedené v tomto `accelerator`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Porovná tento `accelerator` objekt s jiným a vrátí **false** případě, že jsou totožné; v opačném případě vrátí **true**.|
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator` do tohoto objektu.|
-|[operator==](#operator_eq_eq)|Porovná tento `accelerator` objekt s jiným a vrátí **true** případě, že jsou totožné; v opačném případě vrátí **false**.|
+|[operator!=](#operator_neq)|Porovná tento objekt `accelerator` s jiným objektem a vrátí **hodnotu false** , pokud jsou stejné. v opačném případě vrátí **hodnotu true**.|
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného objektu `accelerator` do tohoto objektu.|
+|[operator = = – operátor](#operator_eq_eq)|Porovná tento objekt `accelerator` s jiným objektem a vrátí **hodnotu true** , pokud jsou stejné. v opačném případě vrátí **hodnotu false**.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Název|Popis|
 |----------|-----------------|
-|[cpu_accelerator](#cpu_accelerator)|Získá konstantní řetězec CPU `accelerator`.|
-|[dedicated_memory](#dedicated_memory)|Získá velikost vyhrazené paměti pro `accelerator`, v kilobajtech.|
-|[default_accelerator](#default_accelerator)|Získá konstantní řetězec pro výchozí `accelerator`.|
-|[default_cpu_access_type](#default_cpu_access_type)|Získá nebo nastaví výchozí procesor [access_type](concurrency-namespace-enums-amp.md#access_type)pro pole a implicitní přidělení paměti provedené v tomto `accelerator`.|
-|[default_view](#default_view)|Získá výchozí `accelerator_view` objekt, který je přidružený `accelerator`.|
-|[description](#description)|Získá krátký popis `accelerator` zařízení.|
+|[cpu_accelerator](#cpu_accelerator)|Načte řetězcovou konstantu pro `accelerator`procesoru.|
+|[dedicated_memory](#dedicated_memory)|Načte vyhrazenou paměť pro `accelerator`v kilobajtech.|
+|[default_accelerator](#default_accelerator)|Načte řetězcovou konstantu pro výchozí `accelerator`.|
+|[default_cpu_access_type](#default_cpu_access_type)|Získá nebo nastaví výchozí [ACCESS_TYPE](concurrency-namespace-enums-amp.md#access_type)procesoru pro pole a implicitní přidělení paměti provedené v tomto `accelerator`.|
+|[default_view](#default_view)|Získá výchozí objekt `accelerator_view`, který je spojen s `accelerator`.|
+|[název](#description)|Získá krátký popis zařízení `accelerator`.|
 |[device_path](#device_path)|Získá cestu k zařízení.|
-|[direct3d_ref](#direct3d_ref)|Získá konstantní řetězec pro odkaz rozhraní Direct3D `accelerator`.|
-|[direct3d_warp](#direct3d_warp)|Získá konstantní řetězec `accelerator` objektu, lze použít pro spuštění kódu jazyka C++ AMP na vícejádrových procesorech pomocí Streaming SIMD Extensions (SSE).|
-|[has_display](#has_display)|Získá logickou hodnotu, která určuje, zda `accelerator` je připojen k displeji.|
-|[is_debug](#is_debug)|Určuje, zda `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.|
-|[is_emulated](#is_emulated)|Určuje, zda `accelerator` je emulován.|
+|[direct3d_ref](#direct3d_ref)|Načte řetězcovou konstantu pro referenční `accelerator`Direct3D.|
+|[direct3d_warp](#direct3d_warp)|Získává řetězcovou konstantu pro objekt `accelerator`, který můžete použít ke spouštění C++ kódu amp na vícejádrových procesorech, které používají streaming SIMD Extensions (SSE).|
+|[has_display](#has_display)|Získá logickou hodnotu, která označuje, zda je `accelerator` připojen k zobrazení.|
+|[is_debug](#is_debug)|Určuje, zda `accelerator` má povolenou vrstvu ladění pro rozsáhlé hlášení chyb.|
+|[is_emulated](#is_emulated)|Určuje, zda je `accelerator` emulované.|
 |[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Určuje, zda `accelerator` podporuje sdílenou paměť.|
-|[supports_double_precision](#supports_double_precision)|Určuje, zda akcelerátor podporuje výpočty s dvojitou přesností.|
-|[supports_limited_double_precision](#supports_limited_double_precision)|Určuje, zda má akcelerátor omezenou podporu pro matematiku s dvojitou přesností.|
+|[supports_double_precision](#supports_double_precision)|Označuje, zda akcelerátor podporuje matematiku s dvojitou přesností.|
+|[supports_limited_double_precision](#supports_limited_double_precision)|Označuje, zda akcelerátor má omezené podpory pro matematiku s dvojitou přesností.|
 |[version](#version)|Získá verzi `accelerator`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -123,31 +123,31 @@ class accelerator;
 
 ## <a name="remarks"></a>Poznámky
 
-Akcelerátor je funkce hardwaru, která je optimalizovaná pro paralelní výpočty. Akcelerátorem je často diskrétní GPU, ale může být virtuální hostitelské entity, jako je například zařízení DirectX REF, WARP (zařízení straně CPU, které je akcelerováno pomocí instrukcí SSE) nebo samotné CPU.
+Akcelerátor je hardwarová schopnost, která je optimalizovaná pro náročné zpracování dat. Akcelerátor je často diskrétní grafický procesor, ale může se jednat o virtuální entitu na straně hostitele, jako je například zařízení s ODKAZem na rozhraní DirectX, pokřivení (zařízení na straně procesoru, které je urychleno pomocí instrukcí SSE) nebo samotného procesoru.
 
-Můžete vytvořit `accelerator` objekt výčtu dostupných zařízení, nebo získáním výchozího zařízení, odkazovacího zařízení nebo zařízení WARP.
+Objekt `accelerator` můžete vytvořit vytvořením výčtu dostupných zařízení nebo získáním výchozího zařízení, referenčního zařízení nebo zařízení v OSNOVě.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amprt.h
+**Záhlaví:** amprt. h
 
-**Namespace:** Souběžnost
+**Obor názvů:** Concurrency
 
-##  <a name="dtor"></a> </a> ~ accelerator
+## <a name="dtor"></a></a> ~ akcelerátor
 
-Odstraní `accelerator` objektu.
+Odstraní objekt `accelerator`.
 
-```
+```cpp
 ~accelerator();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-##  <a name="ctor"></a> akcelerátor
+## <a name="ctor"></a>Accelerator
 
-Inicializuje novou instanci třídy [accelerator – třída](accelerator-class.md).
+Inicializuje novou instanci [třídy akcelerátoru](accelerator-class.md).
 
-```
+```cpp
 accelerator();
 
 explicit accelerator(const std::wstring& _Device_path);
@@ -160,103 +160,103 @@ accelerator(const accelerator& _Other);
 *_Device_path*<br/>
 Cesta fyzického zařízení.
 
-*Ji_né*<br/>
-Akcelerátor, který má kopírovat.
+*_Other*<br/>
+Akcelerátor, který chcete zkopírovat.
 
-##  <a name="cpu_accelerator"></a> cpu_accelerator –
+## <a name="cpu_accelerator"></a>cpu_accelerator
 
-Získá konstantní řetězec pro akcelerátor CPU.
+Načte řetězcovou konstantu pro akcelerátor procesoru.
 
-```
+```cpp
 static const wchar_t cpu_accelerator[];
 ```
 
-##  <a name="create_view"></a> create_view –
+## <a name="create_view"></a>create_view
 
-Vytvoří a vrátí `accelerator_view` objekt na tomto akcelerátoru, pomocí zadané režim zařazování do fronty. Pokud není zadaný režim zařazování do fronty, nové `accelerator_view` používá [queuing_mode::immediate](concurrency-namespace-enums-amp.md#queuing_mode) režim zařazování do fronty.
+Vytvoří a vrátí objekt `accelerator_view` v tomto akcelerátoru pomocí zadaného režimu služby Řízení front zpráv. Pokud není zadán režim služby Řízení front zpráv, používá nový `accelerator_view` režim služby [queuing_mode:: Immediate](concurrency-namespace-enums-amp.md#queuing_mode) Queuing.
 
-```
+```cpp
 accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *qmode*<br/>
-Režim zařazování do fronty.
+Režim služby Řízení front zpráv.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nový `accelerator_view` objektu na tomto akcelerátoru, pomocí zadané režim zařazování do fronty.
+Nový objekt `accelerator_view` v tomto akcelerátoru pomocí zadaného režimu služby Řízení front zpráv.
 
-##  <a name="dedicated_memory"></a> dedicated_memory –
+## <a name="dedicated_memory"></a>dedicated_memory
 
-Získá velikost vyhrazené paměti pro `accelerator`, v kilobajtech.
+Načte vyhrazenou paměť pro `accelerator`v kilobajtech.
 
-```
+```cpp
 __declspec(property(get= get_dedicated_memory)) size_t dedicated_memory;
 ```
 
-##  <a name="default_accelerator"></a> default_accelerator –
+## <a name="default_accelerator"></a>default_accelerator
 
-Získá konstantní řetězec pro výchozí `accelerator`.
+Načte řetězcovou konstantu pro výchozí `accelerator`.
 
-```
+```cpp
 static const wchar_t default_accelerator[];
 ```
 
-##  <a name="default_cpu_access_type"></a> default_cpu_access_type
+## <a name="default_cpu_access_type"></a>default_cpu_access_type
 
-Výchozí procesor [access_type](concurrency-namespace-enums-amp.md#access_type)pro pole a implicitní přidělení paměti provedené v tomto `accelerator`.
+Výchozí [access_type](concurrency-namespace-enums-amp.md#access_type)procesoru pro pole a implicitní přidělení paměti provedené v tomto `accelerator`.
 
-```
+```cpp
 __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_access_type;
 ```
 
-##  <a name="default_view"></a> default_view –
+## <a name="default_view"></a>default_view
 
-Získá výchozí zobrazení akcelerátoru, který je přidružen `accelerator`.
+Získá výchozí zobrazení akcelerátoru, které je přidruženo k `accelerator`.
 
-```
+```cpp
 __declspec(property(get= get_default_view)) accelerator_view default_view;
 ```
 
-##  <a name="description"></a> Popis
+## <a name="description"></a>název
 
-Získá krátký popis `accelerator` zařízení.
+Získá krátký popis zařízení `accelerator`.
 
-```
+```cpp
 __declspec(property(get= get_description)) std::wstring description;
 ```
 
-##  <a name="device_path"></a> device_path –
+## <a name="device_path"></a>device_path
 
-Získá cestu k akcelerátoru. Cesta je jedinečná v systému.
+Získá cestu akcelerátoru. Cesta je v systému jedinečná.
 
-```
+```cpp
 __declspec(property(get= get_device_path)) std::wstring device_path;
 ```
 
-##  <a name="direct3d_ref"></a> direct3d_ref –
+## <a name="direct3d_ref"></a>direct3d_ref
 
-Získá konstantní řetězec pro odkaz akcelerátorem Direct3D.
+Načte řetězcovou konstantu pro referenční akcelerátor Direct3D.
 
-```
+```cpp
 static const wchar_t direct3d_ref[];
 ```
 
-##  <a name="direct3d_warp"></a> direct3d_warp
+## <a name="direct3d_warp"></a>direct3d_warp
 
-Získá konstantní řetězec `accelerator` objektu, lze použít pro spuštění kódu C++ AMP na vícejádrových procesorech pomocí Streaming SIMD Extensions (SSE).
+Získá řetězcovou konstantu pro objekt `accelerator`, který můžete použít ke spuštění kódu C++ amp na vícejádrových procesorech pomocí streaming SIMD Extensions (SSE).
 
-```
+```cpp
 static const wchar_t direct3d_warp[];
 ```
 
-##  <a name="get_all"></a> get_all
+## <a name="get_all"></a>get_all
 
-Vrátí vektor `accelerator` objekty, které představují všechny dostupné akcelerátory.
+Vrátí Vektor objektů `accelerator`, které reprezentují všechny dostupné akcelerátory.
 
-```
+```cpp
 static inline std::vector<accelerator> get_all();
 ```
 
@@ -264,35 +264,35 @@ static inline std::vector<accelerator> get_all();
 
 Vektor dostupných akcelerátorů
 
-##  <a name="get_auto_selection_view"></a> get_auto_selection_view
+## <a name="get_auto_selection_view"></a>get_auto_selection_view
 
-Vrátí automatický výběr accelerator_view, který se při zadat jako cíl výsledků parallel_for_each způsobí cílový objekt accelerator_view pro spouštění jádra parallel_for_each bude automaticky vybrán modulem runtime. Pro jiné účely akcelerátor_view vrácený tato metoda je stejný jako akcelerátor _view výchozího akcelerátoru
+Vrátí accelerator_view automatického výběru, který je v případě, že je zadán jako cílový parallel_for_each výsledků, v cílovém accelerator_view pro spuštění jádra parallel_for_each, které má modul runtime automaticky vybrat. Pro všechny ostatní účely je accelerator_view vrácená touto metodou stejná jako výchozí accelerator_view výchozího akcelerátoru.
 
-```
+```cpp
 static accelerator_view __cdecl get_auto_selection_view();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Automatický výběr accelerator_view.
+Accelerator_view automatického výběru.
 
-##  <a name="get_dedicated_memory"></a> get_dedicated_memory –
+## <a name="get_dedicated_memory"></a>get_dedicated_memory
 
-Vrátí velikost vyhrazené paměti pro `accelerator`, v kilobajtech.
+Vrátí vyhrazenou paměť pro `accelerator`v kilobajtech.
 
-```
+```cpp
 size_t get_dedicated_memory() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost vyhrazené paměti pro `accelerator`, v kilobajtech.
+Vyhrazená paměť pro `accelerator`v kilobajtech.
 
-##  <a name="get_default_cpu_access_type"></a> get_default_cpu_access_type
+## <a name="get_default_cpu_access_type"></a>get_default_cpu_access_type
 
-Získá výchozí access_type procesoru pro vyrovnávací paměti vytvořené na tomto akcelerátoru
+Získá výchozí access_type procesoru pro vyrovnávací paměti vytvořené na tomto akcelerátoru.
 
-```
+```cpp
 access_type get_default_cpu_access_type() const;
 ```
 
@@ -300,119 +300,119 @@ access_type get_default_cpu_access_type() const;
 
 Výchozí access_type procesoru pro vyrovnávací paměti vytvořené na tomto akcelerátoru.
 
-##  <a name="get_default_view"></a> get_default_view –
+## <a name="get_default_view"></a>get_default_view
 
-Vrátí výchozí `accelerator_view` objekt, který je přidružený `accelerator`.
+Vrátí výchozí `accelerator_view` objekt, který je spojen s `accelerator`.
 
-```
+```cpp
 accelerator_view get_default_view() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí hodnota `accelerator_view` objekt, který je přidružený `accelerator`.
+Výchozí `accelerator_view` objekt, který je spojen s `accelerator`.
 
-##  <a name="get_description"></a> get_description –
+## <a name="get_description"></a>get_description
 
-Vrátí krátký popis `accelerator` zařízení.
+Vrátí krátký popis zařízení `accelerator`.
 
-```
+```cpp
 std::wstring get_description() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Krátký popis `accelerator` zařízení.
+Krátký popis zařízení `accelerator`.
 
-##  <a name="get_device_path"></a> get_device_path
+## <a name="get_device_path"></a>get_device_path
 
-Vrátí cestu k akcelerátoru. Cesta je jedinečná v systému.
+Vrátí cestu akcelerátoru. Cesta je v systému jedinečná.
 
-```
+```cpp
 std::wstring get_device_path() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Cesta instance systémová zařízení jedinečné.
+Jedinečná cesta k instanci zařízení v rámci systému
 
-##  <a name="get_has_display"></a> get_has_display
+## <a name="get_has_display"></a>get_has_display
 
-Vrátí logickou hodnotu, která určuje, zda `accelerator` zvládne výstup na monitor.
+Vrací logickou hodnotu, která označuje, zda `accelerator` může výstup zobrazit.
 
-```
+```cpp
 bool get_has_display() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud `accelerator` zvládne výstup na monitor; v opačném případě **false**.
+**true** , pokud `accelerator` může výstup zobrazit; v opačném případě **false**.
 
-##  <a name="get_is_debug"></a> get_is_debug
+## <a name="get_is_debug"></a>get_is_debug
 
-Určuje, zda `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
+Určuje, zda `accelerator` má povolenou vrstvu ladění pro rozsáhlé hlášení chyb.
 
-```
+```cpp
 bool get_is_debug() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb. V opačném případě **false**.
+**true** , pokud `accelerator` má povolenou vrstvu ladění pro rozsáhlé hlášení chyb. V opačném případě **false**.
 
-##  <a name="get_is_emulated"></a> get_is_emulated –
+## <a name="get_is_emulated"></a>get_is_emulated
 
-Určuje, zda `accelerator` je emulován.
+Určuje, zda je `accelerator` emulované.
 
-```
+```cpp
 bool get_is_emulated() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud `accelerator` je emulován. V opačném případě **false**.
+**true** , pokud je `accelerator` emulované. V opačném případě **false**.
 
-##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
+## <a name="get_supports_cpu_shared_memory"></a>get_supports_cpu_shared_memory
 
-Vrátí logickou hodnotu označující, zda akcelerátor podporuje paměť dostupnou akcelerátorem i Procesorem.
+Vrátí logickou hodnotu, která označuje, zda akcelerátor podporuje paměť přístupná akcelerátorem i PROCESORem.
 
-```
+```cpp
 bool get_supports_cpu_shared_memory() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud akcelerátor podporuje procesoru sdílené paměti; v opačném případě **false**.
+**true** , pokud akcelerátor podporuje sdílenou paměť procesoru; v opačném případě **false**.
 
-##  <a name="get_supports_double_precision"></a> get_supports_double_precision
+## <a name="get_supports_double_precision"></a>get_supports_double_precision
 
-Vrátí logickou hodnotu, která určuje, zda akcelerátor podporuje výpočty s dvojitou přesností, včetně začleněny vynásobit sčítání (FMA), dělení, obrácené hodnoty a přetypování mezi **int** a **double**
+Vrátí logickou hodnotu, která označuje, zda akcelerátor podporuje matematiku s dvojitou přesností, včetně pojistky (FMA), dělení, vzájemnosti a přetypování mezi **int** a **dvojitou** přesností.
 
-```
+```cpp
 bool get_supports_double_precision() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud akcelerátor podporuje výpočty s dvojitou přesností, jinak **false**.
+**true** , pokud akcelerátor podporuje matematiku s dvojitou přesností; v opačném případě **false**.
 
-##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
+## <a name="get_supports_limited_double_precision"></a>get_supports_limited_double_precision
 
-Vrátí logickou hodnotu, která určuje, zda má akcelerátor omezenou podporu pro výpočty s dvojitou přesností. Pokud akcelerátor podporuje pouze omezená, pak začleněny vícenásobně sčítání (FMA), dělení, obrácené hodnoty a přetypování mezi **int** a **double** nejsou podporovány.
+Vrací logickou hodnotu, která označuje, zda akcelerátor má omezené podpory pro matematiku s dvojitou přesností. Pokud akcelerátor má pouze omezené podpory, pak se nepodporují pojistá vynásobené násobení (FMA), dělení, reciproční a přetypování mezi **int** a **Double** .
 
-```
+```cpp
 bool get_supports_limited_double_precision() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud má akcelerátor omezenou podporu pro výpočty s dvojitou přesností, jinak **false**.
+**true** , pokud má akcelerátor omezené podpory pro matematiku s dvojitou přesností; v opačném případě **false**.
 
-##  <a name="get_version"></a> get_version –
+## <a name="get_version"></a>get_version
 
 Vrátí verzi `accelerator`.
 
-```
+```cpp
 unsigned int get_version() const;
 ```
 
@@ -420,86 +420,86 @@ unsigned int get_version() const;
 
 Verze `accelerator`.
 
-##  <a name="has_display"></a> has_display –
+## <a name="has_display"></a>has_display
 
-Získá logickou hodnotu, která určuje, zda `accelerator` zvládne výstup na monitor.
+Získá logickou hodnotu, která označuje, zda `accelerator` může výstup zobrazit.
 
-```
+```cpp
 __declspec(property(get= get_has_display)) bool has_display;
 ```
 
-##  <a name="is_debug"></a> is_debug –
+## <a name="is_debug"></a>is_debug
 
-Získá logickou hodnotu, která určuje, zda `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
+Získá logickou hodnotu, která označuje, zda `accelerator` má povolenou vrstvu ladění pro rozsáhlé hlášení chyb.
 
-```
+```cpp
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-##  <a name="is_emulated"></a> is_emulated –
+## <a name="is_emulated"></a>is_emulated
 
-Získá logickou hodnotu, která určuje, zda `accelerator` je emulován.
+Získá logickou hodnotu, která označuje, zda je `accelerator` emulovana.
 
-```
+```cpp
 __declspec(property(get= get_is_emulated)) bool is_emulated;
 ```
 
-##  <a name="operator_neq"></a> Operator! =
+## <a name="operator_neq"></a>! = – operátor
 
-Porovná tento `accelerator` objekt s jiným a vrátí **false** případě, že jsou totožné; v opačném případě vrátí **true**.
+Porovná tento objekt `accelerator` s jiným objektem a vrátí **hodnotu false** , pokud jsou stejné. v opačném případě vrátí **hodnotu true**.
 
-```
+```cpp
 bool operator!= (const accelerator& _Other) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-`accelerator` Objekt k porovnání s touto položkou.
+*_Other*<br/>
+Objekt `accelerator`, který se má porovnat s tímto.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**false** Pokud dva `accelerator` jsou objekty stejné; jinak **true**.
+**false** , pokud jsou dva objekty `accelerator` stejné; v opačném případě **true**.
 
-##  <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
-Zkopíruje obsah zadaného `accelerator` do tohoto objektu.
+Zkopíruje obsah zadaného objektu `accelerator` do tohoto objektu.
 
-```
+```cpp
 accelerator& operator= (const accelerator& _Other);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-`accelerator` Objektu, který chcete kopírovat.
+*_Other*<br/>
+Objekt `accelerator`, ze kterého se má kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na tento `accelerator` objektu.
+Odkaz na tento objekt `accelerator`.
 
-##  <a name="operator_eq_eq"></a> Operator ==
+## <a name="operator_eq_eq"></a>operator = = – operátor
 
-Porovná tento `accelerator` objekt s jiným a vrátí **true** případě, že jsou totožné; v opačném případě vrátí **false**.
+Porovná tento objekt `accelerator` s jiným objektem a vrátí **hodnotu true** , pokud jsou stejné. v opačném případě vrátí **hodnotu false**.
 
-```
+```cpp
 bool operator== (const accelerator& _Other) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-`accelerator` Objekt k porovnání s touto položkou.
+*_Other*<br/>
+Objekt `accelerator`, který se má porovnat s tímto.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** Pokud druhá `accelerator` objekt je stejné jako to `accelerator` objektu; v opačném případě **false**.
+**true** , pokud je jiný objekt `accelerator` stejný jako tento objekt `accelerator`; v opačném případě **false**.
 
-##  <a name="set_default"></a> set_default
+## <a name="set_default"></a>set_default
 
-Nastaví výchozí akcelerátor pro jakoukoli operaci, která implicitně používá výchozí akcelerátor. Tato metoda bude úspěšná pouze pokud ještě nebyl použit vybrané výchozí akcelerátor modulu runtime v operaci, která implicitně používá výchozí akcelerátor
+Nastaví výchozí akcelerátor, který se má použít pro libovolnou operaci, která implicitně používá výchozí akcelerátor. Tato metoda je úspěšná pouze v případě, že v operaci, která implicitně používá výchozí akcelerátor, již nebyl použit výchozí akcelerátor vybraný pro modul runtime.
 
-```
+```cpp
 static inline bool set_default(std::wstring _Path);
 ```
 
@@ -510,267 +510,57 @@ Cesta k akcelerátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud bude volání úspěšné při nastavování výchozího akcelerátoru. V opačném případě **false**.
+**true** , pokud je volání úspěšné při nastavení výchozího akcelerátoru. V opačném případě **false**.
 
-##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
+## <a name="set_default_cpu_access_type"></a>set_default_cpu_access_type
 
-Nastavte výchozí access_type procesoru pro pole vytvořené na tomto akcelerátoru nebo implicitní přidělení paměti jako část hodnoty array_views přístupnou přístup na tento akcelerátor. Tato metoda bude úspěšná pouze pokud přepsat předchozí volání této metody již nebyla default_cpu_access_type pro akcelerátor a default_cpu_access_type runtime, vybrané pro tento akcelerátor nebyla použita ještě pro přidělení matici nebo pro zálohování array_view přístup na tento akcelerátor implicitní paměť přidělení.
+Nastavte výchozí access_type procesoru pro pole vytvořená v tomto akcelerátoru nebo pro implicitní přidělení paměti jako součást array_views k tomuto akcelerátoru. Tato metoda je úspěšná pouze v případě, že default_cpu_access_type pro akcelerátor již nebyl potlačen předchozím voláním této metody a modul runtime vybraný default_cpu_access_type pro tento akcelerátor ještě nebyl použit pro přidělení pole nebo pro implicitní přidělení paměti při zálohování array_view k tomuto akcelerátoru.
 
-```
+```cpp
 bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Default_cpu_access_type*<br/>
-Výchozí access_type procesoru pro přidělení paměti pro array/array_view na tomto akcelerátoru.
+Výchozí access_type procesoru, který se má použít pro přidělení paměti Array/array_view v tomto akcelerátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Logická hodnota označující, pokud byl úspěšně nastaven výchozí objekt access_type pro akcelerátor.
+Logická hodnota označující, zda byl úspěšně nastaven výchozí access_type procesoru pro akcelerátor.
 
-##  <a name="supports_cpu_shared_memory"></a> supports_cpu_shared_memory
+## <a name="supports_cpu_shared_memory"></a>supports_cpu_shared_memory
 
-Získá logickou hodnotu označující, zda `accelerator` podporuje sdílenou paměť.
+Získá logickou hodnotu, která označuje, zda `accelerator` podporuje sdílenou paměť.
 
-```
+```cpp
 __declspec(property(get= get_supports_cpu_shared_memory)) bool supports_cpu_shared_memory;
 ```
 
-##  <a name="supports_double_precision"></a> supports_double_precision
+## <a name="supports_double_precision"></a>supports_double_precision
 
-Získá logickou hodnotu, která určuje, zda akcelerátor podporuje výpočty s dvojitou přesností.
+Získá logickou hodnotu, která označuje, zda akcelerátor podporuje matematiku s dvojitou přesností.
 
-```
+```cpp
 __declspec(property(get= get_supports_double_precision)) bool supports_double_precision;
 ```
 
-##  <a name="supports_limited_double_precision"></a> supports_limited_double_precision
+## <a name="supports_limited_double_precision"></a>supports_limited_double_precision
 
-Získá logickou hodnotu, která určuje, zda má akcelerátor omezenou podporu pro výpočty s dvojitou přesností. Pokud akcelerátor podporuje pouze omezená, pak začleněny vícenásobně sčítání (FMA), dělení, obrácené hodnoty a přetypování mezi `int` a `double` nejsou podporovány.
+Získá logickou hodnotu, která označuje, zda akcelerátor má omezené podpory pro matematiku s dvojitou přesností. Pokud akcelerátor má jenom omezené podpory, pak se v něm nepodporují pojistá vynásobení doplňku (FMA), dělení, přetypování a přetypování mezi `int` a `double`.
 
-```
+```cpp
 __declspec(property(get= get_supports_limited_double_precision)) bool supports_limited_double_precision;
 ```
 
-##  <a name="version"></a> Verze
+## <a name="version"></a>znění
 
 Získá verzi `accelerator`.
 
-```
+```cpp
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-##  <a name="dtor"></a> </a> ~ accelerator_view
-
-Odstraní [accelerator_view](accelerator-view-class.md) objektu.
-
-```
-~accelerator_view();
-```
-
-### <a name="return-value"></a>Návratová hodnota
-
-##  <a name="accelerator"></a> akcelerátor
-
-Získá `accelerator` objekt pro [accelerator_view](accelerator-view-class.md) objektu.
-
-```
-__declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;
-```
-
-##  <a name="ctor"></a> accelerator_view
-
-Inicializuje novou instanci třídy [accelerator_view](accelerator-view-class.md) zkopírováním existující `accelerator_view` objektu.
-
-```
-accelerator_view(const accelerator_view& _Other);
-```
-
-### <a name="parameters"></a>Parametry
-
-*Ji_né*<br/>
-`accelerator_view` Objektu, který chcete zkopírovat.
-
-##  <a name="create_marker"></a> create_marker
-
-Vrátí objekt future ke sledování dokončení všech příkazů dosud zaslaných tomuto `accelerator_view` objektu.
-
-```
-concurrency::completion_future create_marker();
-```
-
-### <a name="return-value"></a>Návratová hodnota
-
-Objekt future ke sledování dokončení všech příkazů dosud zaslaných tomuto `accelerator_view` objektu.
-
-##  <a name="flush"></a> Vyprázdnění
-
-Odešle všechny příkazy čekající ve frontě [accelerator_view](accelerator-view-class.md) objekt akcelerátoru ke spuštění.
-
-```
-void flush();
-```
-
-### <a name="return-value"></a>Návratová hodnota
-
-Vrátí `void`.
-
-##  <a name="get_accelerator"></a> get_accelerator –
-
-Vrátí `accelerator` objekt pro [accelerator_view](accelerator-view-class.md) objektu.
-
-```
-accelerator get_accelerator() const;
-```
-
-### <a name="return-value"></a>Návratová hodnota
-
-`accelerator` Objekt pro `accelerator_view` objektu.
-
-##  <a name="get_is_auto_selection"></a> get_is_auto_selection
-
-Vrátí logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátor Pokud je předán accelerator_view [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).
-
-```
-bool get_is_auto_selection() const;
-```
-
-### <a name="return-value"></a>Návratová hodnota
-
-**Hodnota TRUE** Pokud modul runtime automaticky vybere odpovídající akcelerátor; v opačném případě **false**.
-
-##  <a name="get_is_debug"></a> get_is_debug
-
-Vrátí logickou hodnotu, která určuje, zda [accelerator_view](accelerator-view-class.md) objekt má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
-
-```
-bool get_is_debug() const;
-```
-
-### <a name="return-value"></a>Návratová hodnota
-
-Logická hodnota, která určuje, zda `accelerator_view` objekt má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
-
-##  <a name="get_queuing_mode"></a> get_queuing_mode –
-
-Vrátí režim zařazování do fronty pro [accelerator_view](accelerator-view-class.md) objektu.
-
-```
-queuing_mode get_queuing_mode() const;
-```
-
-### <a name="return-value"></a>Návratová hodnota
-
-Režim zařazování do fronty pro `accelerator_view` objektu.
-
-##  <a name="get_version"></a> get_version –
-
-Vrátí verzi [accelerator_view](accelerator-view-class.md).
-
-```
-unsigned int get_version() const;
-```
-
-### <a name="return-value"></a>Návratová hodnota
-
-Verze `accelerator_view`.
-
-##  <a name="is_auto_selection"></a> is_auto_selection
-
-Získá logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátor Pokud je předán accelerator_view [parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each).
-
-```
-__declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
-```
-
-##  <a name="is_debug"></a> is_debug –
-
-Získá logickou hodnotu, která určuje, zda [accelerator_view](accelerator-view-class.md) objekt má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.
-
-```
-__declspec(property(get= get_is_debug)) bool is_debug;
-```
-
-##  <a name="operator_neq"></a> Operator! =
-
-Porovná tento [accelerator_view](accelerator-view-class.md) objekt s jiným a vrátí `false` případě, že jsou totožné; v opačném případě vrátí `true`.
-
-```
-bool operator!= (const accelerator_view& _Other) const;
-```
-
-### <a name="parameters"></a>Parametry
-
-*Ji_né*<br/>
-`accelerator_view` Objekt k porovnání s touto položkou.
-
-### <a name="return-value"></a>Návratová hodnota
-
-**false** Pokud jsou oba objekty stejné; jinak **true**.
-
-##  <a name="operator_eq"></a> operátor =
-
-Zkopíruje obsah zadaného [accelerator_view](accelerator-view-class.md) do tohoto objektu.
-
-```
-accelerator_view& operator= (const accelerator_view& _Other);
-```
-
-### <a name="parameters"></a>Parametry
-
-*Ji_né*<br/>
-`accelerator_view` Objektu, který chcete kopírovat.
-
-### <a name="return-value"></a>Návratová hodnota
-
-Odkaz na upravené `accelerator_view` objektu.
-
-##  <a name="operator_eq_eq"></a> Operator ==
-
-Porovná tento [accelerator_view](accelerator-view-class.md) objekt s jiným a vrátí **true** případě, že jsou totožné; v opačném případě vrátí **false**.
-
-```
-bool operator== (const accelerator_view& _Other) const;
-```
-
-### <a name="parameters"></a>Parametry
-
-*Ji_né*<br/>
-`accelerator_view` Objekt k porovnání s touto položkou.
-
-### <a name="return-value"></a>Návratová hodnota
-
-**Hodnota TRUE** Pokud jsou oba objekty stejné; jinak **false**.
-
-##  <a name="queuing_mode"></a> queuing_mode –
-
-Načte režim zařazování do fronty pro [accelerator_view](accelerator-view-class.md) objektu.
-
-```
-__declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;
-```
-
-##  <a name="version"></a> Verze
-
-Získá verzi [accelerator_view](accelerator-view-class.md).
-
-```
-__declspec(property(get= get_version)) unsigned int version;
-```
-
-##  <a name="wait"></a> Počkej
-
-Čeká na všech příkazů zaslaných [accelerator_view](accelerator-view-class.md) objektu na dokončení.
-
-```
-void wait();
-```
-
-### <a name="return-value"></a>Návratová hodnota
-
-Vrátí `void`.
-
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

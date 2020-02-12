@@ -28,26 +28,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-ms.openlocfilehash: 94a0936c1e5630ae53af9d9386d3c9248061ed71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af5116118c9821f5c1801789bff13f3de8d4026a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180268"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126653"
 ---
-# <a name="float2-class"></a>float_2 – třída
+# <a name="float_2-class"></a>float_2 – třída
 
-Představuje krátký vektor dvou hodnot float.
+Představuje krátký vektor dvou floatů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class float_2;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -57,37 +57,37 @@ class float_2;
 
 |Název|Popis|
 |----------|-----------------|
-|[float_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[float_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|float_2::get_x||
+|float_2:: get_x||
 |float_2::get_xy||
-|float_2::get_y||
+|float_2:: get_y||
 |float_2::get_yx||
 |float_2::ref_g||
 |float_2::ref_r||
 |float_2::ref_x||
-|float_2::ref_y||
+|float_2:: ref_y||
 |float_2::set_x||
 |float_2::set_xy||
-|float_2::set_y||
+|float_2:: set_y||
 |float_2::set_yx||
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|float_2::operator-||
-|float_2::Operator-||
-|float_2::Operator * =||
-|float_2::Operator / =||
-|float_2::Operator ++||
-|float_2::Operator +=||
-|float_2::Operator =||
-|operátor float_2::Operator-=||
+|float_2:: operator-||
+|float_2:: operator--||
+|float_2:: operator * =||
+|float_2:: operator/=||
+|float_2:: operator + +||
+|float_2:: operator + =||
+|float_2:: operator =||
+|float_2:: operator-=||
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
@@ -99,13 +99,13 @@ class float_2;
 
 |Název|Popis|
 |----------|-----------------|
-|float_2::g||
-|float_2::GR||
-|float_2::r||
-|float_2::rg||
-|float_2::x||
-|float_2::XY||
-|float_2::y||
+|float_2:: g||
+|float_2:: gr||
+|float_2:: r||
+|float_2:: RG||
+|float_2:: x||
+|float_2:: XY||
+|float_2:: y||
 |float_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -114,15 +114,15 @@ class float_2;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> float_2
+## <a name="ctor"></a>float_2
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-```
+```cpp
 float_2() restrict(amp,
     cpu);
 
@@ -163,23 +163,23 @@ explicit inline float_2(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-##  <a name="float_2__size"></a> Velikost
+## <a name="float_2__size"></a>hodnota
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

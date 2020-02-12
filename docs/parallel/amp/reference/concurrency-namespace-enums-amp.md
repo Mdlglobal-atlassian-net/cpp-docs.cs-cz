@@ -5,24 +5,24 @@ f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4feb2f98fc288fa79c0f9d81e4ed882027eddf8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180450"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126946"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Výčty oboru názvů Concurrency (AMP)
 
 |||
 |-|-|
-|[access_type Enumeration](#access_type)|[queuing_mode Enumeration](#queuing_mode)|
+|[Výčet access_type](#access_type)|[Výčet queuing_mode](#queuing_mode)|
 
-##  <a name="access_type"></a>  access_type – výčet
+## <a name="access_type"></a>Výčet access_type
 
-Typ výčtu se používá k označení různých typů přístupu k datům.
+Typ výčtu, který slouží k označení různých typů přístupu k datům.
 
-```
+```cpp
 enum access_type;
 ```
 
@@ -30,17 +30,17 @@ enum access_type;
 
 |Název|Popis|
 |----------|-----------------|
-|`access_type_auto`|Automaticky vybrat nejlepší `access_type` pro akcelerátor.|
-|`access_type_none`|Vyhrazená. Rozdělení je přístupné u akcelerátoru a ne v procesoru jen.|
-|`access_type_read`|Sdílet. Rozdělení je přístupné u akcelerátoru a číst v procesoru.|
-|`access_type_read_write`|Sdílet. Rozdělení je přístupné u akcelerátoru a umožňuje zapisovat v procesoru.|
-|`access_type_write`|Sdílet. Rozdělení je přístupné u akcelerátoru a číst i zapisovat v procesoru.|
+|`access_type_auto`|Automaticky zvolit nejlepší `access_type` akcelerátoru.|
+|`access_type_none`|Personál. Přidělení je dostupné jenom v akcelerátoru a ne na procesoru.|
+|`access_type_read`|Sdíleného. Přidělení je dostupné v akcelerátoru a je čitelné na CPU.|
+|`access_type_read_write`|Sdíleného. Přidělení je přístupné v akcelerátoru a je zapisovatelné na CPU.|
+|`access_type_write`|Sdíleného. Přidělení je přístupné v akcelerátoru a je čitelné i zapisovatelné v procesoru.|
 
-##  <a name="queuing_mode"></a>  queuing_mode – výčet
+## <a name="queuing_mode"></a>Výčet queuing_mode
 
-Určuje režimy zařazování do fronty, které jsou podporovány v akcelerátoru.
+Určuje režimy služby Řízení front, které jsou podporovány v akcelerátoru.
 
-```
+```cpp
 enum queuing_mode;
 ```
 
@@ -48,9 +48,9 @@ enum queuing_mode;
 
 |Název|Popis|
 |----------|-----------------|
-|`queuing_mode_immediate`|Režim zařazování do fronty, která určuje, že všechny příkazy, například [parallel_for_each – funkce (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), odesílají do odpovídajících zařízení akcelerátoru ihned po jejich vrácení volajícímu.|
-|`queuing_mode_automatic`|Režim zařazování do fronty, která určuje, že se příkazy zařazeny příkazové fronty odpovídající [accelerator_view](accelerator-view-class.md) objektu. Příkazy jsou odesílány na zařízení při [accelerator_view::flush](accelerator-view-class.md#flush) je volána.|
+|`queuing_mode_immediate`|Režim řazení do fronty, který určuje, že všechny příkazy, například [Parallel_for_each funkceC++ (amp)](concurrency-namespace-functions-amp.md#parallel_for_each), jsou odesílány do odpovídajícího zařízení akcelerátoru, jakmile se vrátí volajícímu.|
+|`queuing_mode_automatic`|Režim služby Řízení front, který určuje, že se příkazy zařadí do fronty příkazů, které odpovídají objektu [accelerator_view](accelerator-view-class.md) . Příkazy se odesílají do zařízení, když se zavolá [accelerator_view:: flush](accelerator-view-class.md#flush) .|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

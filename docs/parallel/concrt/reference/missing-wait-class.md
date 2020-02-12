@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: 68d24d710eec4fd602e64cc3cbde810db2b1a495
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf81d1ee6c144da210da5b1f37aca7910ae37bc8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409964"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142380"
 ---
-# <a name="missingwait-class"></a>missing_wait – třída
+# <a name="missing_wait-class"></a>missing_wait – třída
 
-Tato třída popisuje výjimku vyvolanou při stále naplánované úlohy `task_group` nebo `structured_task_group` objektu v době tento objekt destruktor. Tato výjimka bude vyvolána nikdy destruktor při dosažení z důvodu výjimky v důsledku uvolnění zásobníku.
+Tato třída popisuje výjimku vyvolanou v případě, že jsou úlohy stále naplánovány na `task_group` nebo `structured_task_group` objekt v době, kdy se spustí destruktor objektu. Tato výjimka nebude nikdy vyvolána, pokud je dosaženo destruktoru z důvodu zrušení zásobníku v důsledku výjimky.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class missing_wait : public std::exception;
 ```
 
@@ -31,11 +31,11 @@ class missing_wait : public std::exception;
 
 |Název|Popis|
 |----------|-----------------|
-|[missing_wait –](#ctor)|Přetíženo. Vytvoří `missing_wait` objektu.|
+|[missing_wait](#ctor)|Přetíženo. Vytvoří objekt `missing_wait`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Chybějící výjimka toku, zodpovídáte za volání buď `wait` nebo `run_and_wait` metodu `task_group` nebo `structured_task_group` objekt předtím, než tento objekt k destrukci. Modul runtime vyvolá tuto výjimku jako znamením, že jste zapomněli volání `wait` nebo `run_and_wait` metody.
+Nepřítomen tok výjimky, zodpovídáte za volání metody `wait` nebo `run_and_wait` objektu `task_group` nebo `structured_task_group` před tím, než povolíte tomuto objektu destrukci. Modul runtime tuto výjimku vyvolá jako indikaci, že jste zapomněli volat metodu `wait` nebo `run_and_wait`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -45,15 +45,15 @@ Chybějící výjimka toku, zodpovídáte za volání buď `wait` nebo `run_and_
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> missing_wait –
+## <a name="ctor"></a>missing_wait
 
-Vytvoří `missing_wait` objektu.
+Vytvoří objekt `missing_wait`.
 
-```
+```cpp
 explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
 
 missing_wait() throw();
@@ -62,9 +62,9 @@ missing_wait() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [task_group – třída](task-group-class.md)<br/>

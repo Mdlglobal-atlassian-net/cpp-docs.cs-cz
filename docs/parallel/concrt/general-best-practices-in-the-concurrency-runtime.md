@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 15bae5ba25da4987b076cf3de67cd8484fe47df8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302221"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141777"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Obecné osvědčené postupy v Concurrency Runtime
 
 Tento dokument popisuje osvědčené postupy, které se vztahují na více oblastí Concurrency Runtime.
 
-##  <a name="top"></a>Řezů
+## <a name="top"></a>Řezů
 
 Tento dokument obsahuje následující části:
 
@@ -33,13 +33,13 @@ Tento dokument obsahuje následující části:
 
 - [Nepoužívejte objekty souběžnosti ve sdílených datových segmentech.](#shared-data)
 
-##  <a name="synchronization"></a>Pokud je to možné, použijte konstruktory synchronizace spolupráce
+## <a name="synchronization"></a>Pokud je to možné, použijte konstruktory synchronizace spolupráce
 
 Concurrency Runtime poskytuje mnoho konstrukcí bezpečných pro souběžnost, které nevyžadují externí objekt synchronizace. Například třída [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) poskytuje operace připojení a přístupu k prvkům souběžného zpracování. V případě bezpečného zpracování v souběžnosti znamená, že ukazatele nebo iterátory jsou vždy platné. Není zárukou pro inicializaci elementu nebo z konkrétního pořadí procházení. Nicméně pro případy, kdy požadujete výhradní přístup k prostředku, modul runtime poskytuje třídy [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)a [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) . Tyto typy se chovají v družstvu; Proto může Plánovač úloh znovu přidělit prostředky zpracování do jiného kontextu, protože první úkol čeká na data. Pokud je to možné, použijte tyto typy synchronizace místo jiných synchronizačních mechanismů, například těch, které poskytuje rozhraní API systému Windows, které se nechovají spolupracuje. Další informace o těchto typech synchronizace a příkladech kódu najdete v tématu [Synchronizace datových struktur](../../parallel/concrt/synchronization-data-structures.md) a [porovnání datových struktur synchronizace s rozhraním API systému Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
 [[Nahoře](#top)]
 
-##  <a name="yield"></a>Vyhnout se zdlouhavým úlohám, které nepřinesí
+## <a name="yield"></a>Vyhnout se zdlouhavým úlohám, které nepřinesí
 
 Vzhledem k tomu, že se Plánovač úloh chová v družstvu, neposkytuje nerovnost mezi úkoly. Proto může úkol zabránit spuštění jiných úloh. I když je to přijatelné v některých případech, může to způsobit zablokování nebo vyčerpání.
 
@@ -74,7 +74,7 @@ Existují i jiné způsoby, jak povolit spolupráci mezi dlouhodobě běžícím
 
 [[Nahoře](#top)]
 
-##  <a name="oversubscription"></a>Použití předaného předplatného k posunování operací, které blokují nebo mají vysokou latenci
+## <a name="oversubscription"></a>Použití předaného předplatného k posunování operací, které blokují nebo mají vysokou latenci
 
 Concurrency Runtime poskytuje prvky synchronizace, jako je například [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), které umožňují vzájemnou spolupráci a vzájemné navracení úkolů. Pokud jeden úkol pracuje v družstvu nebo jako důsledek, může Plánovač úloh znovu přidělit prostředky zpracování do jiného kontextu, protože první úkol čeká na data.
 
@@ -88,7 +88,7 @@ Vzhledem k tomu, že funkce `GetHttpFile` provádí potenciálně latentní oper
 
 [[Nahoře](#top)]
 
-##  <a name="memory"></a>Pokud je to možné, používejte funkce souběžného řízení paměti.
+## <a name="memory"></a>Pokud je to možné, používejte funkce souběžného řízení paměti.
 
 Použijte funkce správy paměti, [Concurrency:: alokace](reference/concurrency-namespace-functions.md#alloc) a [Concurrency:: Free](reference/concurrency-namespace-functions.md#free), pokud máte jemné úlohy, které často přidělují malé objekty, které mají poměrně krátkou životnost. Concurrency Runtime obsahuje oddělenou paměťovou mezipaměť pro každé spuštěné vlákno. Funkce `Alloc` a `Free` přidělují a uvolňuje paměť z těchto mezipamětí bez použití zámků nebo bariéry paměti.
 
@@ -96,7 +96,7 @@ Další informace o těchto funkcích správy paměti najdete v tématu [Plánov
 
 [[Nahoře](#top)]
 
-##  <a name="raii"></a>Použití RAII ke správě životnosti objektů souběžnosti
+## <a name="raii"></a>Použití RAII ke správě životnosti objektů souběžnosti
 
 Concurrency Runtime používá zpracování výjimek k implementaci funkcí, jako je například zrušení. Proto zapište kód bezpečný pro výjimky při volání do modulu runtime nebo zavolejte jinou knihovnu, která volá do modulu runtime.
 
@@ -128,7 +128,7 @@ Další příklady, které používají vzor RAII ke správě životního cyklu 
 
 [[Nahoře](#top)]
 
-##  <a name="global-scope"></a>Nevytvářejte objekty souběžnosti v globálním oboru
+## <a name="global-scope"></a>Nevytvářejte objekty souběžnosti v globálním oboru
 
 Když vytváříte objekt souběžnosti v globálním rozsahu, můžete způsobit problémy, jako je zablokování nebo narušení přístupu do paměti ve vaší aplikaci.
 
@@ -142,13 +142,13 @@ Příklady správného způsobu vytváření `Scheduler` objektů naleznete v t�
 
 [[Nahoře](#top)]
 
-##  <a name="shared-data"></a>Nepoužívejte objekty souběžnosti ve sdílených datových segmentech.
+## <a name="shared-data"></a>Nepoužívejte objekty souběžnosti ve sdílených datových segmentech.
 
 Concurrency Runtime nepodporuje použití objektů souběžnosti v části sdílených dat, například datovou část vytvořenou direktivou [data_seg](../../preprocessor/data-seg.md)`#pragma`. Objekt souběžnosti, který je sdílen napříč hranicemi procesu, může přepnout modul runtime v nekonzistentním nebo neplatném stavu.
 
 [[Nahoře](#top)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Osvědčené postupy v Concurrency Runtime](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Knihovna PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

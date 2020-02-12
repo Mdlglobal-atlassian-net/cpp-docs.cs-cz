@@ -1,60 +1,60 @@
 ---
-title: 'Postupy: Použijte zpracování výjimek pro přerušení paralelní smyčky'
+title: 'Postupy: Přerušení paralelní smyčky pomocí zpracování výjimek'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: 19d732d98f24172471d96cd5e2962b2a99ab0203
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5576e8f2416804cac89f5ec34005f4e08b99c47
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409990"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142117"
 ---
-# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Postupy: Použijte zpracování výjimek pro přerušení paralelní smyčky
+# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Postupy: Přerušení paralelní smyčky pomocí zpracování výjimek
 
-Toto téma ukazuje, jak zápis vyhledávacího algoritmu pro základní stromové struktury.
+Toto téma ukazuje, jak napsat algoritmus vyhledávání pro základní stromovou strukturu.
 
-Téma [zrušení](cancellation-in-the-ppl.md) vysvětluje roli zrušení v paralelních vzorcích knihovny. Použijte zpracování výjimek je méně efektivní způsob, jak zrušení paralelně prováděných úloh než použití [concurrency::task_group::cancel](reference/task-group-class.md#cancel) a [Concurrency::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) metody. Jeden scénář, kde je vhodné použít zpracování výjimek zrušení prováděných ale při volání do knihovny třetí strany, který používá úkoly a paralelní algoritmy, ale neposkytuje `task_group` nebo `structured_task_group` objekt pro zrušení.
+[Zrušení](cancellation-in-the-ppl.md) tématu vysvětluje roli zrušení v knihovně paralelních vzorů. Použití zpracování výjimek je méně efektivní způsob, jak zrušit paralelní práci, než použití metod [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) a [concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) . V jednom scénáři, kde je použití zpracování výjimek pro zrušení práce, je však vhodné použít při volání knihovny třetí strany, která používá úkoly nebo paralelní algoritmy, ale neposkytuje `task_group` nebo `structured_task_group` objekt pro zrušení.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje základní `tree` typ, který obsahuje datový prvek a seznam podřízených uzlů. Následující části zobrazuje text `for_all` metoda, která opakovaně provede pracovní funkce na každý podřízený uzel.
+Následující příklad ukazuje základní typ `tree`, který obsahuje datový prvek a seznam podřízených uzlů. Následující část ukazuje tělo metody `for_all`, která rekurzivně provádí pracovní funkci na každém podřízeném uzlu.
 
 [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje `for_all` metody. Používá [: concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus pracovní funkce na každý uzel stromu paralelně.
+Následující příklad ukazuje kód metody `for_all`. Používá algoritmus [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) k provedení pracovní funkce na každém uzlu stromu paralelně.
 
 [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje `search_for_value` funkce, která hledá hodnotu v poskytnutých `tree` objektu. Tato funkce se předá `for_all` metoda pracovní funkci, která vyvolá výjimku, pokud se najde uzel stromu, který obsahuje zadanou hodnotou.
+Následující příklad ukazuje funkci `search_for_value`, která vyhledá hodnotu v zadaném objektu `tree`. Tato funkce předává do metody `for_all` pracovní funkci, která je vyvolána, když najde uzel stromu, který obsahuje poskytnutou hodnotu.
 
-Předpokládejme, že `tree` třída poskytuje knihovnu třetí strany, a už ho nelze změnit. V takovém případě je vhodné použít zpracování výjimek vzhledem k tomu `for_all` metoda neposkytuje `task_group` nebo `structured_task_group` objekt volajícímu. Pracovní funkce je proto nelze přímo zrušit své nadřazené skupiny úloh.
+Předpokládejme, že je třída `tree` poskytovaná knihovnou třetí strany a že ji nemůžete upravovat. V tomto případě je použití zpracování výjimek vhodné, protože metoda `for_all` neposkytuje volajícímu objekt `task_group` nebo `structured_task_group`. Funkce Work proto nemůže přímo zrušit nadřazenou skupinu úloh.
 
-Pokud je pracovní funkce, které zadáte skupinu úloh vyvolá výjimku, modul runtime zastaví všechny úlohy, které jsou ve skupině úloh (včetně všech podřízených skupin úloh) a zahodí všechny úkoly, které ještě nebyly spuštěny. `search_for_value` Funkce používá `try` - `catch` bloku zachytit výjimku a vytiskne výsledek do konzoly.
+Když pracovní funkce, kterou zadáte do skupiny úloh, vyvolá výjimku, modul runtime zastaví všechny úlohy ve skupině úloh (včetně všech podřízených skupin úloh) a zahodí všechny úlohy, které ještě nebyly spuštěny. Funkce `search_for_value` používá blok `catch` `try`-k zachycení výjimky a k vytištění výsledku do konzoly.
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]
 
 ## <a name="example"></a>Příklad
 
-Následující příklad vytvoří `tree` objekt a hledá několik hodnot současně. `build_tree` Funkce je uveden dále v tomto tématu.
+Následující příklad vytvoří objekt `tree` a vyhledá v něm více hodnot paralelně. Funkce `build_tree` je uvedena dále v tomto tématu.
 
 [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]
 
-V tomto příkladu [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmus pro hledání hodnot současně. Další informace o tento algoritmus, najdete v části [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).
+V tomto příkladu se používá algoritmus [Concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) k hledání hodnot paralelně. Další informace o tomto algoritmu najdete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="example"></a>Příklad
 
-Následující kompletní příklad používá pro vyhledávání hodnoty v základní stromovou strukturu zpracování výjimek.
+Následující kompletní příklad používá zpracování výjimek pro vyhledávání hodnot v základní stromové struktuře.
 
 [!code-cpp[concrt-task-tree-search#5](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_5.cpp)]
 
-Tento příklad vytvoří následující ukázkový výstup.
+Tento příklad vytvoří následující vzorový výstup.
 
 ```Output
 Found a node with value 32614.
@@ -64,16 +64,16 @@ Did not find node with value 17522.
 
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `task-tree-search.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo ho vložte do souboru s názvem `task-tree-search.cpp` a potom spusťte následující příkaz v okně příkazového řádku sady Visual Studio.
 
-**cl.exe /EHsc task-tree-search.cpp**
+> **CL. exe/EHsc Task-Tree-Search. cpp**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zrušení v knihovně PPL](cancellation-in-the-ppl.md)<br/>
 [Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[Funkční paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
+[Paralelní úkoly](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)<br/>
 [task_group – třída](reference/task-group-class.md)<br/>
 [structured_task_group – třída](../../parallel/concrt/reference/structured-task-group-class.md)<br/>
-[parallel_for_each Function](reference/concurrency-namespace-functions.md#parallel_for_each)
+[parallel_for_each funkce](reference/concurrency-namespace-functions.md#parallel_for_each)

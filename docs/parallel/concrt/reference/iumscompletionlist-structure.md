@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-ms.openlocfilehash: 567b8668934d81c49757660d1a60ca74eb033e68
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 02382ef4606a6e73804fcbd5ce7735ecf2f0dcc7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339511"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140040"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList – struktura
 
-Představuje seznam pro doplňování UMS. Při plánování určené plánovače vlákno blokováno UMS kontext je odeslána k provedení rozhodnutí toho, jak naplánovat na základního kořenového virtuálního procesoru, zatímco původní vlákno blokované. Když se původní vlákno odblokuje, operační systém zařadí do fronty se do seznamu dokončení, která je dostupná prostřednictvím tohoto rozhraní. Plánovač můžete dotazovat v seznamu dokončení na určené plánování kontextu nebo druhém místě, které prohledává pro práci.
+Představuje seznam pro doplňování UMS. Když vlákno UMS blokuje, je určený plánovací kontext plánovače odeslán, aby bylo možné rozhodnout o tom, co naplánovat na podkladovém kořenu virtuálního procesoru v době, kdy je původní vlákno blokované. Když původní vlákno odblokuje, operační systém je zařadí do seznamu dokončení, který je přístupný prostřednictvím tohoto rozhraní. Plánovač může zadat dotaz na seznam pro doplňování v určeném kontextu plánování nebo na jakémkoli jiném místě, kde hledá práci.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 struct IUMSCompletionList;
 ```
 
@@ -31,11 +31,11 @@ struct IUMSCompletionList;
 
 |Název|Popis|
 |----------|-----------------|
-|[Iumscompletionlist::getunblocknotifications –](#getunblocknotifications)|Načte řetězec `IUMSUnblockNotification` rozhraní představující kontexty provádění, jejíž přidružené vlákno proxy servery mají odblokováno od posledního tato metoda byla vyvolána.|
+|[IUMSCompletionList –:: GetUnblockNotifications –](#getunblocknotifications)|Načítá řetěz `IUMSUnblockNotification` rozhraní reprezentující kontexty spuštění, jejichž proxy servery přidruženého vlákna byly odblokovány od posledního vyvolání této metody.|
 
 ## <a name="remarks"></a>Poznámky
 
-Plánovač musí být neobyčejně pozor, o jaké akce se provádí po použití tohoto rozhraní k vyřazení položek v seznamu dokončení. Položky musí být umístěny na plánovače seznam spustitelných kontextů a být obecně přístupné co nejdříve. Je zcela je to možné, že jednu z položek dequeued bylo přiděleno vlastnictví libovolného zámku. Plánovač můžete volat žádné libovolné funkce, které mohou blokovat mezi volání k vyřazení položek a umístění těchto položek na seznam, který je všeobecně přístupná z v rámci plánovače.
+Plánovač musí být neobyčejně pečlivě o tom, jaké akce se provádějí po použití tohoto rozhraní k vyřazení položek ze seznamu dokončení. Položky by se měly umístit do seznamu kontextů v Plánovači spustitelný a budou všeobecně dostupné, jakmile to bude možné. Je možné, že jedna z položek odstraněných z fronty dostala vlastnictví libovolného zámku. Scheduler nemůže bez jakýchkoli volání funkcí zablokovat volání vyřadit položky do fronty a umístění těchto položek v seznamu, ke kterému se dá všeobecně přistupovat v rámci plánovače.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -43,27 +43,27 @@ Plánovač musí být neobyčejně pozor, o jaké akce se provádí po použití
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm.h
+**Záhlaví:** concrtrm. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="getunblocknotifications"></a>  Iumscompletionlist::getunblocknotifications – metoda
+## <a name="getunblocknotifications"></a>IUMSCompletionList –:: GetUnblockNotifications – – metoda
 
-Načte řetězec `IUMSUnblockNotification` rozhraní představující kontexty provádění, jejíž přidružené vlákno proxy servery mají odblokováno od posledního tato metoda byla vyvolána.
+Načítá řetěz `IUMSUnblockNotification` rozhraní reprezentující kontexty spuštění, jejichž proxy servery přidruženého vlákna byly odblokovány od posledního vyvolání této metody.
 
-```
+```cpp
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec `IUMSUnblockNotification` rozhraní.
+Řetěz `IUMSUnblockNotification` rozhraní.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrácené oznámení jsou neplatné, jakmile se znovu naplánována kontexty provádění.
+Po přeplánování kontextů spuštění jsou vrácená oznámení neplatná.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [IUMSScheduler – struktura](iumsscheduler-structure.md)<br/>

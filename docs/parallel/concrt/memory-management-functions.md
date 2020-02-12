@@ -4,35 +4,35 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-ms.openlocfilehash: 9a7810267c3eaa11ad7592774440365620e7e8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa1951211283ddf7e4823a920d5cdf19bd6d977d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413863"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141842"
 ---
 # <a name="memory-management-functions"></a>Funkce správy paměti
 
-Tento dokument popisuje funkce správy paměti, které poskytuje modulu Runtime souběžnosti můžete přidělují a uvolňují paměť souběžných způsobem.
+Tento dokument popisuje funkce správy paměti, které poskytuje Concurrency Runtime k tomu, aby vám pomohla přidělit a uvolnit paměť souběžným způsobem.
 
 > [!TIP]
->  Poskytuje výchozí plánovač Concurrency Runtime, a proto není nutné vytvořit ve vaší aplikaci. Vzhledem k tomu, že Plánovač úloh umožňuje optimalizovat výkon vašich aplikací, doporučujeme začít s [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) máte nového modulu runtime souběžnosti.
+> Concurrency Runtime poskytuje výchozí Plánovač, a proto není nutné ho v aplikaci vytvořit. Vzhledem k tomu, že Plánovač úloh pomáhá doladit výkon aplikací, doporučujeme začít s knihovnou [paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo s [knihovnou asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md) , pokud s Concurrency Runtime začínáte.
 
-Modul Concurrency Runtime poskytuje dvě funkce správy paměti, které jsou optimalizovány pro přidělení a uvolnění bloky paměti souběžných způsobem. [Concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) funkce přidělí blok paměti s použitím zadané velikosti. [Concurrency::Free](reference/concurrency-namespace-functions.md#free) uvolnění paměti, která byla přidělena pomocí funkce `Alloc`.
-
-> [!NOTE]
->  `Alloc` a `Free` funkce závisí na sebe navzájem. Použití `Free` funkce pouze k uvolnění paměti, kterou přidělíte pomocí `Alloc` funkce. Navíc při použití `Alloc` funkce přidělení paměti, použijte pouze `Free` funkce, tato paměť uvolnit.
-
-Použití `Alloc` a `Free` funkce při přidělují a uvolňují pevná sada přidělení velikosti z různých vláken nebo úloh. Modul Concurrency Runtime přiděluje z modulu C Runtime haldy paměti ukládá do mezipaměti. Modul Concurrency Runtime obsahuje samostatný mezipaměti pro každé vlákno spuštěné; Proto se modul runtime spravuje paměť bez použití zámků nebo překážky paměti. Aplikace výhody naplno `Alloc` a `Free` funkce při mezipaměti se využívají častěji. Například vlákna, která často volá obě `Alloc` a `Free` výhod více než vlákno, které se primárně volá `Alloc` nebo `Free`.
+Concurrency Runtime poskytuje dvě funkce správy paměti, které jsou optimalizované pro přidělování a uvolňování bloků paměti souběžným způsobem. Funkce [Concurrency:: alokace](reference/concurrency-namespace-functions.md#alloc) přiděluje blok paměti pomocí zadané velikosti. Funkce [Concurrency:: Free](reference/concurrency-namespace-functions.md#free) uvolní paměť, která byla přidělena `Alloc`.
 
 > [!NOTE]
->  Pokud používáte tyto funkce správy paměti, a vaše aplikace používá velké množství paměti, aplikace může zadat podmínku nedostatku paměti dříve, než na kolik máte očekávat. Protože paměťových bloků, které jsou uložené v mezipaměti jedním vláknem nejsou k dispozici pro ostatní vlákna, pokud jedno vlákno obsahuje velké množství paměti, že paměť není k dispozici.
+> Funkce `Alloc` a `Free` spoléhají na sebe navzájem. Použijte funkci `Free` jenom k uvolnění paměti, kterou přidělíte pomocí funkce `Alloc`. Kromě toho, když použijete funkci `Alloc` k přidělení paměti, použijte k uvolnění této paměti pouze funkci `Free`.
+
+Použijte funkce `Alloc` a `Free`, když přidělíte a uvolníte pevnou sadu velikostí alokace z různých vláken nebo úloh. Concurrency Runtime ukládá do mezipaměti paměť, kterou přiděluje z haldy modulu runtime jazyka C. Concurrency Runtime obsahuje samostatnou paměťovou mezipaměť pro každé běžící vlákno; modul runtime proto spravuje paměť bez použití zámků nebo bariéry paměti. Pokud je mezipaměť paměti k dispozici častěji, aplikace využívá `Alloc` a `Free` funkce. Například vlákno, které často volá jak `Alloc`, tak `Free` výhody více než vlákno, které primárně volá `Alloc` nebo `Free`.
+
+> [!NOTE]
+> Když použijete tyto funkce správy paměti a vaše aplikace využívá spoustu paměti, může aplikace zadat stav s nízkou pamětí dřív, než očekáváte. Vzhledem k tomu, že bloky paměti, které jsou uloženy v mezipaměti v jednom vlákně, nejsou k dispozici pro žádné jiné vlákno, pokud jedno vlákno uchovává hodně paměti, není tato paměť k dispozici.
 
 ## <a name="example"></a>Příklad
 
-Příklad, který se používá `Alloc` a `Free` funkce ke zlepšení výkonu paměti naleznete v tématu [jak: Použití funkcí Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Příklad, který používá funkce `Alloc` a `Free` ke zlepšení výkonu paměti, naleznete v tématu [How to: Use a Free pro zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Postupy: Použití funkcí Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)

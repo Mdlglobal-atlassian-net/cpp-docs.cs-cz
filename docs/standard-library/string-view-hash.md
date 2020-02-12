@@ -1,20 +1,20 @@
 ---
-title: Hodnota hash&lt;string_view&gt; specializace
+title: hodnota hash&lt;string_view&gt; specializace
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 60b6fdecc371ee950532dee3f69cc8dd07b8b5eb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346641"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126172"
 ---
-# <a name="hashltstringviewgt-specialization"></a>Hodnota hash&lt;string_view&gt; specializace
+# <a name="hashltstring_viewgt-specialization"></a>hodnota hash&lt;string_view&gt; specializace
 
-Specializace šablony, který vytvoří hodnotu hash, který je uveden string_view.
+Specializace šablony, která vytváří hodnotu hash s ohledem na string_view.
 
 ```cpp
 template <class CharType, class Traits>
@@ -29,7 +29,7 @@ struct hash<basic_string_view<CharType, Traits>>
 ```
 ### <a name="remarks"></a>Poznámky
 
-Hodnota hash string_view rovná se hodnota hash základního objektu string.
+Hodnota hash string_view se rovná hodnotě hash objektu základního řetězce.
 
 ### <a name="example"></a>Příklad
 

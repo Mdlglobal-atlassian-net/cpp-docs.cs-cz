@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
-ms.openlocfilehash: 2d8bbb8e8af17dd19953487c47e5fd40343fe349
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d1d8f19069412240de8e9d69cdcfb34618f2796
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391085"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142869"
 ---
-# <a name="autopartitioner-class"></a>auto_partitioner – třída
+# <a name="auto_partitioner-class"></a>auto_partitioner – třída
 
-`auto_partitioner` Třída představuje výchozí metodu `parallel_for`, `parallel_for_each` a `parallel_transform` použít při vytváření oddílů rozsah se Iteruje přes. Tato metoda dělení employes rozsahu zcizování pro vyrovnávání zatížení také na iterovat zrušení.
+Třída `auto_partitioner` představuje výchozí metodu `parallel_for`, `parallel_for_each` a `parallel_transform` použít k rozdělení rozsahu, na který iterovat. Tato metoda vytváření oddílů využívá krádež rozsahu pro vyrovnávání zatížení a zrušení iterací za sekundu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class auto_partitioner;
 ```
 
@@ -31,8 +31,8 @@ class auto_partitioner;
 
 |Název|Popis|
 |----------|-----------------|
-|[auto_partitioner](#ctor)|Vytvoří `auto_partitioner` objektu.|
-|[~auto_partitioner Destructor](#dtor)|Odstraní `auto_partitioner` objektu.|
+|[auto_partitioner](#ctor)|Vytvoří objekt `auto_partitioner`.|
+|[~ auto_partitioner destruktor](#dtor)|Odstraní objekt `auto_partitioner`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -40,26 +40,26 @@ class auto_partitioner;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ppl.h
+**Záhlaví:** PPL. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="dtor"></a> ~auto_partitioner
+## <a name="dtor"></a>~ auto_partitioner
 
-Odstraní `auto_partitioner` objektu.
+Odstraní objekt `auto_partitioner`.
 
-```
+```cpp
 ~auto_partitioner();
 ```
 
-##  <a name="ctor"></a> auto_partitioner –
+## <a name="ctor"></a>auto_partitioner
 
-Vytvoří `auto_partitioner` objektu.
+Vytvoří objekt `auto_partitioner`.
 
-```
+```cpp
 auto_partitioner();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

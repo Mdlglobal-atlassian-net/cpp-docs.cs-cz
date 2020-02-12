@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-ms.openlocfilehash: c10a7f302b63c33869425c4e5bddb36a15373ea8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 886444f3e856234be010715a8ee0c707cf919bb4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262590"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142402"
 ---
-# <a name="improperlock-class"></a>improper_lock – třída
+# <a name="improper_lock-class"></a>improper_lock – třída
 
-Tato třída popisuje výjimku vyvolanou při nesprávně získán zámek.
+Tato třída popisuje výjimku vyvolanou při nesprávném získání zámku.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class improper_lock : public std::exception;
 ```
 
@@ -35,7 +35,7 @@ class improper_lock : public std::exception;
 
 ## <a name="remarks"></a>Poznámky
 
-Obvykle tato výjimka je vyvolána při pokusu o získání zámku mimo reentrant rekurzivně na stejném kontextu.
+Tato výjimka je obvykle vyvolána, když se provede pokus o získání rekurzivního uzamčení bez opětovného využití ve stejném kontextu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -45,15 +45,15 @@ Obvykle tato výjimka je vyvolána při pokusu o získání zámku mimo reentran
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="ctor"></a> improper_lock –
+## <a name="ctor"></a>improper_lock
 
 Vytvoří `improper_lock exception`.
 
-```
+```cpp
 explicit _CRTIMP improper_lock(_In_z_ const char* _Message) throw();
 
 improper_lock() throw();
@@ -62,9 +62,9 @@ improper_lock() throw();
 ### <a name="parameters"></a>Parametry
 
 *_Message*<br/>
-Popisná zpráva chyby.
+Popisná zpráva o chybě
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [critical_section – třída](critical-section-class.md)<br/>

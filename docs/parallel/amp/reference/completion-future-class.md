@@ -13,20 +13,20 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69aacad02df5290f161e9d8d311be347668be9f9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405570"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127017"
 ---
-# <a name="completionfuture-class"></a>completion_future – třída
+# <a name="completion_future-class"></a>completion_future – třída
 
-Představuje budoucí odpovídající asynchronní operaci C++ AMP.
+Představuje budoucí odpovídající asynchronní operaci C++ amp.
 
-### <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class completion_future;
 ```
 
@@ -36,27 +36,27 @@ class completion_future;
 
 |Název|Popis|
 |----------|-----------------|
-|[completion_future – konstruktor](#ctor)|Inicializuje novou instanci třídy `completion_future` třídy.|
-|[~ completion_future – destruktor](#dtor)|Odstraní `completion_future` objektu.|
+|[completion_future – konstruktor](#ctor)|Inicializuje novou instanci třídy `completion_future`.|
+|[~ completion_future destruktor](#dtor)|Odstraní objekt `completion_future`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[get](#get)|Čeká na dokončení přidružené asynchronní operace.|
-|[Potom](#then)|Zřetězí objekt funkce zpětného volání k `completion_future` objekt, který se spustí po dokončení spouštění přidružené asynchronní operace.|
-|[to_task](#to_task)|Vrátí `task` objekt odpovídající přidružené asynchronní operace.|
-|[platný](#valid)|Získá logickou hodnotu určující, zda je objekt přidružené asynchronní operace.|
-|[Počkej](#wait)|Blokuje, dokud nebude dokončena přidružená asynchronní operace.|
-|[wait_for](#wait_for)|Blokuje, dokud není dokončena přidružená asynchronní operace nebo časový limit určený parametrem `_Rel_time` uplynul.|
-|[wait_until](#wait_until)|Blokuje, dokud není dokončena přidružená asynchronní operace nebo aktuální čas nepřekročí hodnotu zadanou pomocí `_Abs_time`.|
+|[get](#get)|Počká, až se dokončí přidružená asynchronní operace.|
+|[Stisknutím](#then)|Zřetězí objekt funkce zpětného volání na objekt `completion_future`, který se má provést, když přidružená asynchronní operace dokončí provádění.|
+|[to_task](#to_task)|Vrátí objekt `task`, který odpovídá přidružené asynchronní operaci.|
+|[platný](#valid)|Získá logickou hodnotu, která označuje, zda je objekt přidružen k asynchronní operaci.|
+|[Počkej](#wait)|Blokuje, dokud není dokončena přidružená asynchronní operace.|
+|[wait_for](#wait_for)|Blokuje, dokud se nedokončí přidružená asynchronní operace nebo dokud neuplyne čas zadaný v `_Rel_time`.|
+|[wait_until](#wait_until)|Blokuje, dokud není dokončena přidružená asynchronní operace nebo dokud aktuální čas nepřekračuje hodnotu zadanou v `_Abs_time`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[operátor std::shared_future\<void >](#operator_shared_future)|Implicitně převede `completion_future` objektu `std::shared_future` objektu.|
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `completion_future` do tohoto objektu.|
+|[operátor std:: shared_future\<void >](#operator_shared_future)|Implicitně převede objekt `completion_future` na objekt `std::shared_future`.|
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného objektu `completion_future` do tohoto objektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -64,17 +64,17 @@ class completion_future;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amprt.h
+**Záhlaví:** amprt. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-## <a name="ctor"></a> completion_future –
+## <a name="ctor"></a>completion_future
 
-Inicializuje novou instanci třídy `completion_future` třídy.
+Inicializuje novou instanci třídy `completion_future`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 completion_future();
 
 completion_future(
@@ -86,75 +86,75 @@ completion_future(
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-`completion_future` Objektu, který chcete zkopírovat nebo přesunout.
+*_Other*<br/>
+Objekt `completion_future`, který se má zkopírovat nebo přesunout.
 
 ### <a name="overloads-list"></a>Seznam přetížení
 
 |Název|Popis|
 |----------|-----------------|
-|`completion_future();`|Inicializuje novou instanci třídy `completion_future` třídy|
-|`completion_future(const completion_future& _Other);`|Inicializuje novou instanci třídy `completion_future` zkopírováním konstruktor.|
-|`completion_future(completion_future&& _Other);`|Inicializuje novou instanci třídy `completion_future` přesunutím konstruktor třídy.|
+|`completion_future();`|Inicializuje novou instanci třídy `completion_future`.|
+|`completion_future(const completion_future& _Other);`|Inicializuje novou instanci třídy `completion_future` zkopírováním konstruktoru.|
+|`completion_future(completion_future&& _Other);`|Inicializuje novou instanci třídy `completion_future` přesunutím konstruktoru.|
 
-## <a name="get"></a> získat
+## <a name="get"></a>Čtěte
 
-Čeká na dokončení přidružené asynchronní operace. Vyvolá uložené výjimku, pokud jeden došlo během asynchronní operace.
+Počká, až se dokončí přidružená asynchronní operace. Vyvolá uloženou výjimku, pokud byla během asynchronní operace zjištěna jedna.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void get() const;
 ```
 
-## <a name="operator_shared_future"></a> std::shared_future – operátor<void>
+## <a name="operator_shared_future"></a>operátor std:: shared_future\<void >
 
-Implicitně převede `completion_future` objektu `std::shared_future` objektu.
+Implicitně převede objekt `completion_future` na objekt `std::shared_future`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 operator std::shared_future<void>() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`std::shared_future` Objektu.
+Objekt `std::shared_future`.
 
-## <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
-Zkopíruje obsah zadaného `completion_future` do tohoto objektu.
+Zkopíruje obsah zadaného objektu `completion_future` do tohoto objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 completion_future&  operator= (const completion_future& _Other );
 completion_future&  operator= (completion_future&& _Other );
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-Objekt, který bude kopírováno.
+*_Other*<br/>
+Objekt, ze kterého se má kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na tento `completion_future` objektu.
+Odkaz na tento objekt `completion_future`.
 
 ## <a name="overloads-list"></a>Seznam přetížení
 
 |Název|Popis|
 |----------|-----------------|
-|`completion_future& operator=(const completion_future& _Other);`|Zkopíruje obsah zadaného `completion_future` objektu do tohoto objektu za použití hlubokého kopírování.|
-|`completion_future& operator=(completion_future&& _Other);`|Zkopíruje obsah zadaného `completion_future` objektu do tohoto objektu za použití přiřazení pro přesun.|
+|`completion_future& operator=(const completion_future& _Other);`|Zkopíruje obsah zadaného objektu `completion_future` do tohoto objektu pomocí hlubokého kopírování.|
+|`completion_future& operator=(completion_future&& _Other);`|Zkopíruje obsah zadaného objektu `completion_future` do tohoto objektu pomocí přiřazení přesunutí.|
 
-## <a name="then"></a> Potom
+## <a name="then"></a>Stisknutím
 
-Zřetězí objekt funkce zpětného volání k `completion_future` objekt, který se spustí po dokončení spouštění přidružené asynchronní operace.
+Zřetězí objekt funkce zpětného volání na objekt `completion_future`, který se má provést, když přidružená asynchronní operace dokončí provádění.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <typename _Functor>
 void then(const _Functor & _Func ) const;
 ```
@@ -162,56 +162,56 @@ void then(const _Functor & _Func ) const;
 ### <a name="parameters"></a>Parametry
 
 *_Functor*<br/>
-Zpětné volání funktor.
+Funktor zpětného volání.
 
 *_Func*<br/>
 Objekt funkce zpětného volání.
 
-## <a name="to_task"></a> to_task
+## <a name="to_task"></a>to_task
 
-Vrátí `task` objekt odpovídající přidružené asynchronní operace.
+Vrátí objekt `task`, který odpovídá přidružené asynchronní operaci.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 concurrency::task<void> to_task() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `task` objekt odpovídající přidružené asynchronní operace.
+Objekt `task` odpovídající přidružené asynchronní operaci.
 
-## <a name="valid"></a> platný
+## <a name="valid"></a>platný
 
-Získá logickou hodnotu určující, zda je objekt přidružené asynchronní operace.
+Získá logickou hodnotu, která označuje, zda je objekt přidružen k asynchronní operaci.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 bool valid() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** -li přidružená asynchronní operace; v opačném případě je objekt **false**.
+**true** , pokud je objekt přidružen k asynchronní operaci; v opačném případě **false**.
 
-## <a name="wait"></a> Počkej
+## <a name="wait"></a>Počkej
 
-Blokuje, dokud nebude dokončena přidružená asynchronní operace.
+Blokuje, dokud není dokončena přidružená asynchronní operace.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void wait() const;
 ```
 
-## <a name="wait_for"></a> wait_for
+## <a name="wait_for"></a>wait_for
 
-Blokuje, dokud není dokončena přidružená asynchronní operace nebo čas, který je určen `_Rel_time` uplynul.
+Blokuje, dokud se nedokončí přidružená asynchronní operace nebo dokud neuplyne čas zadaný v `_Rel_time`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <
     class _Rep,
     class _Period
@@ -223,31 +223,31 @@ std::future_status::future_status wait_for(
 ### <a name="parameters"></a>Parametry
 
 *_Rep*<br/>
-Aritmetický typ, který reprezentuje počet taktů.
+Aritmetický typ, který představuje počet tiků.
 
 *_Period*<br/>
-Poměr std::ratio, který představuje počet sekund, po které uplynou na impulz.
+Std:: poměr, který představuje počet sekund, které uplynou na jednu značku.
 
 *_Rel_time*<br/>
-Maximální dobu čekání na dokončení operace.
+Maximální doba, po kterou se má čekat na dokončení operace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí:
+Vrátí
 
-- `std::future_status::deferred` je-li přidružená asynchronní operace neběží.
+- `std::future_status::deferred`, pokud přidružená asynchronní operace neběží.
 
-- `std::future_status::ready` Pokud je dokončena přidružená asynchronní operace.
+- `std::future_status::ready`, je-li přidružená asynchronní operace dokončena.
 
-- `std::future_status::timeout` Pokud zadané časové období uplynul.
+- `std::future_status::timeout`, pokud uplynulo zadané časové období.
 
-## <a name="wait_until"></a> wait_until
+## <a name="wait_until"></a>wait_until
 
-Blokuje, dokud není dokončena přidružená asynchronní operace nebo aktuální čas nepřekročí hodnotu zadanou pomocí `_Abs_time`.
+Blokuje, dokud není dokončena přidružená asynchronní operace nebo dokud aktuální čas nepřekračuje hodnotu zadanou v `_Abs_time`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <
     class _Clock,
     class _Duration
@@ -259,34 +259,34 @@ std::future_status::future_status wait_until(
 ### <a name="parameters"></a>Parametry
 
 *_Clock*<br/>
-Hodiny, ve kterém se měří tento časový bod.
+Čas měření tohoto časového bodu.
 
 *_Duration*<br/>
-Časový interval od začátku `_Clock`od epochy, po jejímž uplynutí vyprší časový limit funkce.
+Časový interval od začátku `_Clock`epocha, po jehož uplynutí vyprší časový limit funkce.
 
 *_Abs_time*<br/>
-Bod v čase, po jejímž uplynutí funkce bude ukončen časový limit.
+Bod v čase, po jehož uplynutí bude funkce vyprší.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí:
+Vrátí
 
-1. `std::future_status::deferred` je-li přidružená asynchronní operace neběží.
+1. `std::future_status::deferred`, pokud přidružená asynchronní operace neběží.
 
-1. `std::future_status::ready` Pokud je dokončena přidružená asynchronní operace.
+1. `std::future_status::ready`, je-li přidružená asynchronní operace dokončena.
 
-1. `std::future_status::timeout` Pokud zadaný časový limit uplynul.
+1. `std::future_status::timeout`, pokud zadané časové období uplynulo.
 
-## <a name="dtor"></a> ~ completion_future –
+## <a name="dtor"></a>~ completion_future
 
-Odstraní `completion_future` objektu.
+Odstraní objekt `completion_future`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 ~completion_future();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

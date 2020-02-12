@@ -2,26 +2,26 @@
 title: Operátory oboru názvů Concurrency (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: e2957aa84ffbf420dcf2672359a442b754866649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180411"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126914"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operátory oboru názvů Concurrency (AMP)
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[% – operátor](#operator_mod)|[Operator *](#operator_star)|
-|[Operator +](#operator_add)|[Operator-](#operator-)|[Operator /](#operator_div)|
-|[operator==](#operator_eq_eq)|
+|[operator!=](#operator_neq)|[podnikatel](#operator_mod)|[podnikatel](#operator_star)|
+|[operator + – operátor](#operator_add)|[podnikatel](#operator-)|[podnikatel](#operator_div)|
+|[operator = = – operátor](#operator_eq_eq)|
 
-##  <a name="operator_eq_eq"></a>  Operator ==
+## <a name="operator_eq_eq"></a>operator = = – operátor
 
-Určuje, jestli jsou zadané argumenty jsou stejné.
+Určuje, zda jsou zadané argumenty stejné.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -34,23 +34,23 @@ bool operator== (
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Pořadí argumentů n-tice.
+Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Jedna z n-tic pro srovnání.
+Jedna z řazených kolekcí členů k porovnání
 
 *_Rhs*<br/>
-Jedna z n-tic pro srovnání.
+Jedna z řazených kolekcí členů k porovnání
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud jsou záznamy stejné; jinak **false**.
+**true** , pokud se řazené kolekce členů rovnají; v opačném případě **false**.
 
-##  <a name="operator_neq"></a>  Operator! =
+## <a name="operator_neq"></a>! = – operátor
 
-Určuje, zda jsou zadané argumenty nejsou stejné.
+Určuje, zda zadané argumenty nejsou stejné.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -63,23 +63,23 @@ bool operator!= (
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Pořadí argumentů n-tice.
+Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Jedna z n-tic pro srovnání.
+Jedna z řazených kolekcí členů k porovnání
 
 *_Rhs*<br/>
-Jedna z n-tic pro srovnání.
+Jedna z řazených kolekcí členů k porovnání
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud záznamy nejsou stejné; jinak **false**.
+**true** , pokud řazené kolekce členů nejsou stejné; v opačném případě **false**.
 
-##  <a name="operator_add"></a>  Operator +
+## <a name="operator_add"></a>operator + – operátor
 
-Vypočítá součet zadaných argumentů podle komponent.
+Vypočítá součet zadaných argumentů ze součásti.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -108,23 +108,23 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Pořadí argumentů n-tice.
+Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Jeden z argumentů, které chcete přidat.
+Jeden z argumentů, které mají být přidány.
 
 *_Rhs*<br/>
-Jeden z argumentů, které chcete přidat.
+Jeden z argumentů, které mají být přidány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podle komponent součet zadaných argumentů.
+Součet zadaných argumentů ze součásti.
 
-##  <a name="operator-"></a>  Operator-
+## <a name="operator-"></a>podnikatel
 
-Vypočítá rozdíl mezi zadanými argumenty podle komponent.
+Vypočítá rozdíl mezi zadanými argumenty v rámci součásti.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -153,23 +153,23 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Pořadí argumentů n-tice.
+Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Argument, který chcete odečíst od.
+Argument, od kterého má být odečtena.
 
 *_Rhs*<br/>
-Argument, který se má odečíst.
+Argument, který má být odečten.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozdíl mezi zadanými argumenty podle komponent.
+Rozdíl mezi zadanými argumenty v součásti.
 
-##  <a name="operator_star"></a>  Operator *
+## <a name="operator_star"></a>podnikatel
 
-Vypočítá součin zadaných argumentů.
+Vypočítá produkt určený argumenty v rámci součásti.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -190,23 +190,23 @@ _Tuple_type<_Rank>   operator*(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Pořadí argumentů n-tice.
+Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Jeden ze záznamů pro násobení.
+Jedna z řazených kolekcí členů k násobení.
 
 *_Rhs*<br/>
-Jeden ze záznamů pro násobení.
+Jedna z řazených kolekcí členů k násobení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Součin zadaných argumentů.
+Produkt, který je součástí zadaných argumentů.
 
-##  <a name="operator_div"></a>  Operator /
+## <a name="operator_div"></a>podnikatel
 
-Vypočítá podíl zadaných argumentů podle komponent.
+Vypočítá podíl zadaných argumentů v rámci součásti.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -227,7 +227,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Pořadí argumentů n-tice.
+Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
 Řazená kolekce členů k rozdělení.
@@ -237,13 +237,13 @@ Pořadí argumentů n-tice.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podle komponent podíl zadaných argumentů.
+Podíl zadaných argumentů v rámci součásti.
 
-##  <a name="operator_mod"></a>  % – operátor
+## <a name="operator_mod"></a>podnikatel
 
-Vypočítá zbytek z prvního zadaného argumentu pomocí druhého zadaného argumentu.
+Vypočítá zbytky prvního zadaného argumentu druhým zadaným argumentem.
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -264,18 +264,18 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="parameters"></a>Parametry
 
 *_Rank*<br/>
-Pořadí argumentů n-tice.
+Pořadí argumentů řazené kolekce členů.
 
 *_Lhs*<br/>
-Řazené kolekce členů, ze kterého modul počítá.
+Řazená kolekce členů, ze které se počítá modulo.
 
 *_Rhs*<br/>
-Řazené kolekce členů k modulo podle.
+Řazená kolekce členů do modulo podle.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek prvního zadaného argumentu mění druhý zadaný argument.
+Výsledkem prvního zadaného argumentu je druhý zadaný argument.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[souběžnost Namespace ](concurrency-namespace-cpp-amp.md)
+[Concurrency – obor názvů](concurrency-namespace-cpp-amp.md)

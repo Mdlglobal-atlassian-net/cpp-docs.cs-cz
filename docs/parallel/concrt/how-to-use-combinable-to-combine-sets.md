@@ -5,26 +5,26 @@ helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-ms.openlocfilehash: bf8a5bee65ea0ba1718c1d4d436b6af3e0b95961
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ccbb3e8bad5c4d3b6f4177afbfdba3e200681a5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345575"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142118"
 ---
 # <a name="how-to-use-combinable-to-combine-sets"></a>Postupy: Použití objektu combinable ke slučování množin
 
-Toto téma ukazuje, jak používat [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) třídy pro výpočet sadu prvočísel.
+V tomto tématu se dozvíte, jak použít třídu [Concurrency::](../../parallel/concrt/reference/combinable-class.md) kombinovat k výpočtu sady číselných čísel.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad vypočítá sadu prvočísel dvakrát. Každý výpočetní ukládá výsledek [std::bitset](../../standard-library/bitset-class.md) objektu. V příkladu nejdřív sériově vypočítá sadu a pak vypočítá sadě paralelně. V příkladu také tiskne na konzolu čas, který je potřeba provést i výpočty.
+Následující příklad vypočítá sadu primárních čísel dvakrát. Každý výpočet ukládá výsledek do objektu [std:: bitset](../../standard-library/bitset-class.md) . V příkladu je nejprve vypočítána množina sériově a pak je tato sada souběžně vypočítána. Tento příklad také vytiskne do konzoly čas potřebný k provedení výpočtů.
 
-V tomto příkladu [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus a `combinable` objektu generuje sady místního vlákna. Poté použije [concurrency::combinable::combine_each](reference/combinable-class.md#combine_each) metoda kombinování sad místního vlákna do poslední sady.
+Tento příklad používá algoritmus [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) a objekt `combinable` pro generování místních sad vláken. Potom používá metodu [Concurrency:: kombinovatelné:: combine_each](reference/combinable-class.md#combine_each) ke kombinování sad místních vláken do konečné sady.
 
 [!code-cpp[concrt-parallel-combine-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-combine-sets_1.cpp)]
 
-Následující ukázkový výstup je pro počítač, který má čtyři procesory.
+Následující vzorový výstup je určen pro počítač se čtyřmi procesory.
 
 ```Output
 serial time: 312 ms
@@ -34,12 +34,12 @@ parallel time: 78 ms
 
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-combine-primes.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo ho vložte do souboru s názvem `parallel-combine-primes.cpp` a potom spusťte následující příkaz v okně příkazového řádku sady Visual Studio.
 
-**cl.exe /EHsc parallel-combine-primes.cpp**
+> **CL. exe/EHsc Parallel-Combine-PRIMES. cpp**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [combinable – třída](../../parallel/concrt/reference/combinable-class.md)<br/>
-[combinable::combine_each – metoda](reference/combinable-class.md#combine_each)
+[kombinace:: combine_each – metoda](reference/combinable-class.md#combine_each)

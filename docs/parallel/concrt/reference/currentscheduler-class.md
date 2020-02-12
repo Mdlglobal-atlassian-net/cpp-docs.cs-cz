@@ -17,20 +17,20 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296149"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143068"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler – třída
 
-Představuje abstrakci pro aktuální Plánovač přidružený kontext volání.
+Představuje abstrakci aktuálního plánovače přidruženého k volajícímu kontextu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class CurrentScheduler;
 ```
 
@@ -40,20 +40,20 @@ class CurrentScheduler;
 
 |Název|Popis|
 |----------|-----------------|
-|[Vytvoření](#create)|Vytvoří nový Plánovač, jehož chování je popsán `_Policy` parametr a připojí ho k volání kontextu. Nově vytvořený scheduleru se stanou aktuálního plánovače pro kontext volání.|
-|[CreateScheduleGroup](#createschedulegroup)|Přetíženo. Vytvoří novou skupinu plán v rámci plánovače, přidružený k volání kontextu. Verze, která přebírá parametr `_Placement` způsobí, že úlohy ve skupině nově vytvořený plán tendenční směrem k provádění v místě určeném v parametru.|
-|[Detach](#detach)|Odpojí aktuální Plánovač z volání kontextu a obnoví dříve připojené služby Plánovač jako aktuálního plánovače, pokud existuje. Po návratu tato metoda volání kontextu potom spravuje plánovače, který byl dříve připojena ke kontextu buď pomocí `CurrentScheduler::Create` nebo `Scheduler::Attach` metody.|
-|[získat](#get)|Vrací ukazatel na Plánovač přidružený k volání kontextu označuje také jako aktuálního plánovače.|
-|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Vrátí aktuální počet virtuálních procesorů pro Plánovač přidružený kontext volání.|
-|[GetPolicy](#getpolicy)|Vrátí kopii objektu zásad, který byl vytvořen aktuálního plánovače.|
-|[ID](#id)|Vrací jedinečný identifikátor pro aktuální plánovač.|
-|[IsAvailableLocation](#isavailablelocation)|Určuje, zda je k dispozici pro aktuální Plánovač na dané místo.|
-|[RegisterShutdownEvent](#registershutdownevent)|Způsobí, že obslužná rutina události Windows předaný `_ShutdownEvent` parametru má být signalizován, když Plánovač spojené s aktuálním kontextu vypne a odstraní sama. V době, kdy událost je signalizována všechny práce, která má naplánované Plánovač je dokončena. Prostřednictvím této metody lze registrovat více událostí vypnutí.|
-|[Scheduletask –](#scheduletask)|Přetíženo. Naplánuje lehký úkol v rámci plánovače, přidružený k volání kontextu. Lehký úkol se umístí do skupiny plánu určeno modulem runtime. Verze, která přebírá parametr `_Placement` způsobí, že úkol tendenční směrem k provádění v zadaném umístění.|
+|[Vytvoření](#create)|Vytvoří nový Plánovač, jehož chování je popsáno parametrem `_Policy` a připojí ho k volajícímu kontextu. Nově vytvořený Plánovač se stane aktuálním plánovačem pro volající kontext.|
+|[CreateScheduleGroup –](#createschedulegroup)|Přetíženo. Vytvoří novou skupinu plánu v rámci plánovače přidruženého k volajícímu kontextu. Verze, která přebírá parametr `_Placement` způsobí, že úlohy v nově vytvořené skupině Schedule budou posunuty ke spuštění v umístění určeném parametrem.|
+|[Detach](#detach)|Odpojí aktuálního plánovače od volajícího kontextu a obnoví dříve připojeného plánovače jako aktuální Plánovač, pokud existuje. Po návratu této metody je volající kontext spravován plánovačem, který byl dříve připojen k kontextu pomocí metody `CurrentScheduler::Create` nebo `Scheduler::Attach`.|
+|[Get](#get)|Vrátí ukazatel na Scheduler přidružený k volajícímu kontextu, označovaný také jako aktuální Plánovač.|
+|[Getnumberofvirtualprocessors –](#getnumberofvirtualprocessors)|Vrátí aktuální počet virtuálních procesorů pro Plánovač přidružený k volajícímu kontextu.|
+|[GetPolicy –](#getpolicy)|Vrátí kopii zásady, pomocí které byl vytvořen aktuální Plánovač.|
+|[ID](#id)|Vrátí jedinečný identifikátor aktuálního plánovače.|
+|[Isavailablelocation –](#isavailablelocation)|Určuje, zda je dané umístění k dispozici v aktuálním plánovači.|
+|[RegisterShutdownEvent –](#registershutdownevent)|Způsobí, že popisovač události systému Windows předaný parametrem `_ShutdownEvent` bude signalizované, když se Plánovač přidružený k aktuálnímu kontextu ukončí a zničí sám sebe. V okamžiku signalizace události je dokončena veškerá práce, která byla naplánována do plánovače. Pomocí této metody lze zaregistrovat více událostí vypnutí.|
+|[ScheduleTask –](#scheduletask)|Přetíženo. Naplánuje úlohu s lehkým zatížením v rámci plánovače přidruženého k volajícímu kontextu. Úloha s lehkým zatížením bude umístěna do skupiny plánování určené modulem runtime. Verze, která přebírá parametr `_Placement` způsobí, že se úloha na zadaném umístění posune směrem k provedení.|
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud není žádný Plánovač (naleznete v tématu [Plánovač](scheduler-class.md)) přidružený k volání kontextu mnoho metod v rámci `CurrentScheduler` třídy způsobí přílohy procesu výchozím plánovačem. Může to také znamenat, že procesu výchozím plánovačem se vytvoří během těchto volání.
+Pokud není k volajícímu kontextu přidružen žádný Plánovač (viz [Scheduler](scheduler-class.md)), mnoho metod v rámci třídy `CurrentScheduler` bude mít za následek připojení výchozího plánovače procesu. To může také znamenat, že výchozí Plánovač procesu se vytvoří během takového volání.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -61,38 +61,38 @@ Pokud není žádný Plánovač (naleznete v tématu [Plánovač](scheduler-clas
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrt.h
+**Záhlaví:** ConcRT. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="create"></a> Vytvoření
+## <a name="create"></a>Vytvořeny
 
-Vytvoří nový Plánovač, jehož chování je popsán `_Policy` parametr a připojí ho k volání kontextu. Nově vytvořený scheduleru se stanou aktuálního plánovače pro kontext volání.
+Vytvoří nový Plánovač, jehož chování je popsáno parametrem `_Policy` a připojí ho k volajícímu kontextu. Nově vytvořený Plánovač se stane aktuálním plánovačem pro volající kontext.
 
-```
+```cpp
 static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Policy*<br/>
-Zásady plánovače, která popisuje chování nově vytvořený plánovač.
+Zásady plánovače, které popisují chování nově vytvořeného plánovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Plánovač přílohu kontext volání implicitně uvádí počet odkazů na Plánovač.
+Příloha plánovače do volajícího kontextu implicitně umístí počet odkazů do plánovače.
 
-Po vytvoření plánovače s `Create` metoda, je třeba zavolat [currentscheduler::detach –](#detach) metoda v určitém okamžiku v budoucnu, aby bylo možné povolit, aby vypnout.
+Po vytvoření plánovače pomocí metody `Create` je třeba zavolat metodu [CurrentScheduler::D etach](#detach) v určitém okamžiku v budoucnu, aby bylo možné Plánovač vypnout.
 
-Pokud tato metoda se volá z kontextu, který je již připojena k jiné plánovače, stávající plánování se uloží, jako předchozí Plánovač a nově vytvořený scheduleru se stane aktuálního plánovače. Při volání `CurrentScheduler::Detach` metoda později předchozí scheduleru se obnoví jako aktuálního plánovače.
+Pokud je tato metoda volána z kontextu, který je již připojen k jinému plánovači, existující Plánovač je zapamatovat jako předchozí Plánovač a nově vytvořený Plánovač se bude považovat za aktuálního plánovače. Při volání metody `CurrentScheduler::Detach` v pozdějším bodě bude předchozí Plánovač obnoven jako aktuální Plánovač.
 
-Tato metoda může vyvolat výjimky, včetně různých [scheduler_resource_allocation_error –](scheduler-resource-allocation-error-class.md) a [invalid_scheduler_policy_value –](invalid-scheduler-policy-value-class.md).
+Tato metoda může vyvolat různé výjimky, včetně [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) a [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).
 
-##  <a name="createschedulegroup"></a> CreateScheduleGroup
+## <a name="createschedulegroup"></a>CreateScheduleGroup –
 
-Vytvoří novou skupinu plán v rámci plánovače, přidružený k volání kontextu. Verze, která přebírá parametr `_Placement` způsobí, že úlohy ve skupině nově vytvořený plán tendenční směrem k provádění v místě určeném v parametru.
+Vytvoří novou skupinu plánu v rámci plánovače přidruženého k volajícímu kontextu. Verze, která přebírá parametr `_Placement` způsobí, že úlohy v nově vytvořené skupině Schedule budou posunuty ke spuštění v umístění určeném parametrem.
 
-```
+```cpp
 static ScheduleGroup* __cdecl CreateScheduleGroup();
 
 static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
@@ -100,148 +100,148 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 
 ### <a name="parameters"></a>Parametry
 
-*_Umístění.*<br/>
-Odkaz na umístění, kde bude možné úlohy ve skupině plánování tendenční směrem k provedení.
+*_Placement*<br/>
+Odkaz na umístění, kde budou úkoly v rámci skupiny plánování posunuty k provedení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nově vytvořený plán skupiny. To `ScheduleGroup` objekt má počet počáteční odkazů na ní umístěny.
+Ukazatel na nově vytvořenou skupinu plánu. Na tento objekt `ScheduleGroup` je umístěn počáteční počet odkazů.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.
+Tato metoda způsobí, že se vytvoří výchozí Plánovač procesu a/nebo připojí se k volajícímu kontextu, pokud není momentálně k volajícímu kontextu přidružen žádný Plánovač.
 
-Je nutné vyvolat [vydání](schedulegroup-class.md#release) metodu na skupinu plánování po dokončení plánování práce. Plánovač zničí plánu skupiny, pokud veškerou práci ve frontě byla dokončena.
+Až skončíte s plánováním práce, musíte vyvolat metodu [release](schedulegroup-class.md#release) pro skupinu plánů. Plánovač odstraní skupinu plánů, když je dokončená veškerá práce zařazená do fronty.
 
-Všimněte si, že pokud explicitně vytvořeny tento plánovač musí uvolnit všechny odkazy na skupiny v ní, plánů, ještě před vydáním referenci na plánovači, odpojíte aktuální kontext z něj.
+Všimněte si, že pokud jste tento Plánovač výslovně vytvořili, musíte před vydáním aktuálního kontextu z něj uvolnit všechny odkazy na jejich plánování ve skupinách.
 
-##  <a name="detach"></a> Odpojení
+## <a name="detach"></a>Dělitel
 
-Odpojí aktuální Plánovač z volání kontextu a obnoví dříve připojené služby Plánovač jako aktuálního plánovače, pokud existuje. Po návratu tato metoda volání kontextu potom spravuje plánovače, který byl dříve připojena ke kontextu buď pomocí `CurrentScheduler::Create` nebo `Scheduler::Attach` metody.
+Odpojí aktuálního plánovače od volajícího kontextu a obnoví dříve připojeného plánovače jako aktuální Plánovač, pokud existuje. Po návratu této metody je volající kontext spravován plánovačem, který byl dříve připojen k kontextu pomocí metody `CurrentScheduler::Create` nebo `Scheduler::Attach`.
 
-```
+```cpp
 static void __cdecl Detach();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-`Detach` Metoda se implicitně odeberou počet odkazů z plánovače.
+Metoda `Detach` implicitně odstraní počet odkazů z plánovače.
 
-Pokud neexistuje žádný Plánovač připojit ke kontextu volání, bude výsledkem volání této metody [scheduler_not_attached –](scheduler-not-attached-class.md) vyvolání výjimky.
+Pokud není k volajícímu kontextu připojen žádný Plánovač, volání této metody způsobí, že bude vyvolána výjimka [scheduler_not_attached](scheduler-not-attached-class.md) .
 
-Voláním této metody z kontextu, který je interní a spravované pomocí plánovače nebo kontext, který se připojil pomocí jiné metody než pomocí [Scheduler::Attach –](scheduler-class.md#attach) nebo [currentscheduler::Create –](#create) metod Výsledkem bude [improper_scheduler_detach –](improper-scheduler-detach-class.md) vyvolání výjimky.
+Volání této metody z kontextu, který je interní a spravovaný plánovačem, nebo kontextu, který byl připojen pomocí metody jiné než [Scheduler:: Attach](scheduler-class.md#attach) nebo [CurrentScheduler:: Create](#create) , bude mít za následek vyvolanou výjimku [improper_scheduler_detach](improper-scheduler-detach-class.md) .
 
-##  <a name="get"></a> získat
+## <a name="get"></a>Čtěte
 
-Vrací ukazatel na Plánovač přidružený k volání kontextu označuje také jako aktuálního plánovače.
+Vrátí ukazatel na Scheduler přidružený k volajícímu kontextu, označovaný také jako aktuální Plánovač.
 
-```
+```cpp
 static Scheduler* __cdecl Get();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na Plánovač spojený s kontextem volání (aktuální plánovač).
+Ukazatel na Plánovač přidružený k volajícímu kontextu (aktuální Plánovač).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu. Žádný další odkaz je umístěn na `Scheduler` objekt vrácený touto metodou.
+Tato metoda způsobí, že se vytvoří výchozí Plánovač procesu a/nebo připojí se k volajícímu kontextu, pokud není momentálně k volajícímu kontextu přidružen žádný Plánovač. Do objektu `Scheduler` vráceného touto metodou se neumísťují žádné další odkazy.
 
-##  <a name="getnumberofvirtualprocessors"></a> Getnumberofvirtualprocessors –
+## <a name="getnumberofvirtualprocessors"></a>Getnumberofvirtualprocessors –
 
-Vrátí aktuální počet virtuálních procesorů pro Plánovač přidružený kontext volání.
+Vrátí aktuální počet virtuálních procesorů pro Plánovač přidružený k volajícímu kontextu.
 
-```
+```cpp
 static unsigned int __cdecl GetNumberOfVirtualProcessors();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je přidružený kontext volání, aktuální počet virtuálních procesorů pro Plánovač; plánovače v opačném případě hodnota `-1`.
+Pokud je Plánovač přidružen k volajícímu kontextu, aktuální počet virtuálních procesorů tohoto plánovače; v opačném případě hodnota `-1`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda opozdí v scheduleru přílohy Pokud není kontext volání již přidružen plánovače.
+Tato metoda nebude mít za následek přílohu Scheduleru, pokud volající kontext ještě není přidružen ke Scheduleru.
 
-Vrácená hodnota z této metody je okamžité vzorkování počet virtuálních procesorů pro Plánovač přidružený kontext volání. Tato hodnota může být zastaralá v okamžiku, kdy bude vrácen.
+Návratová hodnota z této metody je okamžitý odběr vzorkování počtu virtuálních procesorů pro Plánovač přidružený k volajícímu kontextu. Tato hodnota může být zastaralá na okamžik, kdy se vrátí.
 
-##  <a name="getpolicy"></a> GetPolicy
+## <a name="getpolicy"></a>GetPolicy –
 
-Vrátí kopii objektu zásad, který byl vytvořen aktuálního plánovače.
+Vrátí kopii zásady, pomocí které byl vytvořen aktuální Plánovač.
 
-```
+```cpp
 static SchedulerPolicy __cdecl GetPolicy();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kopie zásad, který byl vytvořen aktuálního plánovače.
+Kopie zásady, pomocí které byl vytvořen aktuální Plánovač.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.
+Tato metoda způsobí, že se vytvoří výchozí Plánovač procesu a/nebo připojí se k volajícímu kontextu, pokud není momentálně k volajícímu kontextu přidružen žádný Plánovač.
 
-##  <a name="id"></a> Id
+## <a name="id"></a>Účet
 
-Vrací jedinečný identifikátor pro aktuální plánovač.
+Vrátí jedinečný identifikátor aktuálního plánovače.
 
-```
+```cpp
 static unsigned int __cdecl Id();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je přidružený kontext volání jedinečný identifikátor pro Plánovač; plánovače v opačném případě hodnota `-1`.
+Pokud je Plánovač spojen s volajícím kontextem, jedinečný identifikátor pro tohoto plánovače; v opačném případě hodnota `-1`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda opozdí v scheduleru přílohy Pokud není kontext volání již přidružen plánovače.
+Tato metoda nebude mít za následek přílohu Scheduleru, pokud volající kontext ještě není přidružen ke Scheduleru.
 
-##  <a name="isavailablelocation"></a> Isavailablelocation –
+## <a name="isavailablelocation"></a>Isavailablelocation –
 
-Určuje, zda je k dispozici pro aktuální Plánovač na dané místo.
+Určuje, zda je dané umístění k dispozici v aktuálním plánovači.
 
-```
+```cpp
 static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Umístění.*<br/>
-Odkaz na umístění o dotazování aktuálního plánovače.
+*_Placement*<br/>
+Odkaz na umístění pro dotazování aktuálního plánovače o.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Označení, zda je nebo není umístění určeném `_Placement` argument je k dispozici pro aktuální plánovač.
+Označení, zda je umístění zadané v argumentu `_Placement` k dispozici v aktuálním plánovači.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda opozdí v scheduleru přílohy Pokud není kontext volání již přidružen plánovače.
+Tato metoda nebude mít za následek přílohu Scheduleru, pokud volající kontext ještě není přidružen ke Scheduleru.
 
-Všimněte si, že vrácená hodnota je okamžité vzorkování Určuje, zda je k dispozici daného umístění. Dynamickou správu prostředků za přítomnosti více plánovače, můžete přidat nebo odnést prostředky z plánovače v libovolném bodě. Se to stane, daného umístění můžete změnit dostupnost.
+Všimněte si, že návratová hodnota je okamžitý odběr vzorkování, zda je dané umístění k dispozici. V případě existence více schedulerů může dynamická správa prostředků přidávat nebo odbírat prostředky z schedulerů v jakémkoli okamžiku. K tomu by se mohlo stát, že dané umístění může změnit dostupnost.
 
-##  <a name="registershutdownevent"></a> Registershutdownevent –
+## <a name="registershutdownevent"></a>RegisterShutdownEvent –
 
-Způsobí, že obslužná rutina události Windows předaný `_ShutdownEvent` parametru má být signalizován, když Plánovač spojené s aktuálním kontextu vypne a odstraní sama. V době, kdy událost je signalizována všechny práce, která má naplánované Plánovač je dokončena. Prostřednictvím této metody lze registrovat více událostí vypnutí.
+Způsobí, že popisovač události systému Windows předaný parametrem `_ShutdownEvent` bude signalizované, když se Plánovač přidružený k aktuálnímu kontextu ukončí a zničí sám sebe. V okamžiku signalizace události je dokončena veškerá práce, která byla naplánována do plánovače. Pomocí této metody lze zaregistrovat více událostí vypnutí.
 
-```
+```cpp
 static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_ShutdownEvent*<br/>
-Popisovač objektu události Windows, který bude signál modulem runtime, když Plánovač spojené s aktuálním kontextu vypne a odstraní sama.
+Popisovač objektu události systému Windows, který bude signalizovat modulem runtime při ukončení plánovače přidruženého k aktuálnímu kontextu a zničení sám sebe.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud neexistuje žádný Plánovač připojit ke kontextu volání, bude výsledkem volání této metody [scheduler_not_attached –](scheduler-not-attached-class.md) vyvolání výjimky.
+Pokud není k volajícímu kontextu připojen žádný Plánovač, volání této metody způsobí, že bude vyvolána výjimka [scheduler_not_attached](scheduler-not-attached-class.md) .
 
-##  <a name="scheduletask"></a> Scheduletask –
+## <a name="scheduletask"></a>ScheduleTask –
 
-Naplánuje lehký úkol v rámci plánovače, přidružený k volání kontextu. Lehký úkol se umístí do skupiny plánu určeno modulem runtime. Verze, která přebírá parametr `_Placement` způsobí, že úkol tendenční směrem k provádění v zadaném umístění.
+Naplánuje úlohu s lehkým zatížením v rámci plánovače přidruženého k volajícímu kontextu. Úloha s lehkým zatížením bude umístěna do skupiny plánování určené modulem runtime. Verze, která přebírá parametr `_Placement` způsobí, že se úloha na zadaném umístění posune směrem k provedení.
 
-```
+```cpp
 static void __cdecl ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data);
@@ -255,21 +255,21 @@ static void __cdecl ScheduleTask(
 ### <a name="parameters"></a>Parametry
 
 *_Proc*<br/>
-Ukazatel na funkci, která se má spustit provádění těla lehký úkol.
+Ukazatel na funkci, která se má provést, aby provedla tělo úlohy s lehkým zatížením.
 
 *_Data*<br/>
-Ukazatel void data, která se předá jako parametr do těla úkolu.
+Anulování ukazatele na data, která budou předána do těla úkolu jako parametr.
 
-*_Umístění.*<br/>
-Odkaz na umístění, ve kterém bude možné lehký úkol tendenční směrem k provedení.
+*_Placement*<br/>
+Odkaz na umístění, kde bude úloha s lehkým zatížením posunuta k provedení v.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.
+Tato metoda způsobí, že se vytvoří výchozí Plánovač procesu a/nebo připojí se k volajícímu kontextu, pokud není momentálně k volajícímu kontextu přidružen žádný Plánovač.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [Scheduler – třída](scheduler-class.md)<br/>
-[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey –](concurrency-namespace-enums.md)<br/>
 [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

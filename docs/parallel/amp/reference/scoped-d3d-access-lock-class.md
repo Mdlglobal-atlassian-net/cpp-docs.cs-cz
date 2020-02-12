@@ -6,20 +6,20 @@ f1_keywords:
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-ms.openlocfilehash: e36c3c2cfa9d1b617e377a7e340f98875457bdf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a2d9dab9cba7b19fa0d0b1627f653f2c7fdc57
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352868"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126393"
 ---
-# <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock – třída
+# <a name="scoped_d3d_access_lock-class"></a>scoped_d3d_access_lock – třída
 
-Obálka RAII pro uzamčení přístupu D3D v objektu accelerator_view.
+Obálka RAII pro zámek přístupu D3D u objektu accelerator_view.
 
-### <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class scoped_d3d_access_lock;
 ```
 
@@ -29,14 +29,14 @@ class scoped_d3d_access_lock;
 
 |Název|Popis|
 |----------|-----------------|
-|[scoped_d3d_access_lock Constructor](#ctor)|Přetíženo. Vytvoří `scoped_d3d_access_lock` objektu. Zámek je uvolněn, když tento objekt dostane mimo rozsah.|
-|[~scoped_d3d_access_lock Destructor](#dtor)|Uvolní zámek přístupu D3D přidruženého `accelerator_view` objektu.|
+|[scoped_d3d_access_lock – konstruktor](#ctor)|Přetíženo. Vytvoří objekt `scoped_d3d_access_lock`. Zámek se uvolní, když se tento objekt dostane mimo rozsah.|
+|[~ scoped_d3d_access_lock destruktor](#dtor)|Uvolní zámek přístupu D3D u přidruženého objektu `accelerator_view`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[operátor =](#operator_eq)|Převezme vlastnictví zámku z jiného `scoped_d3d_access_lock`.|
+|[operátor =](#operator_eq)|Převezme vlastnictví zámku z jiné `scoped_d3d_access_lock`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -44,15 +44,15 @@ class scoped_d3d_access_lock;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amprt.h
+**Záhlaví:** amprt. h
 
-**Namespace:** concurrency::direct3d
+**Obor názvů:** concurrency::d irect3d
 
-##  <a name="ctor"></a> scoped_d3d_access_lock
+## <a name="ctor"></a>scoped_d3d_access_lock
 
-Vytvoří `scoped_d3d_access_lock` objektu. Zámek je uvolněn, když tento objekt dostane mimo rozsah.
+Vytvoří objekt `scoped_d3d_access_lock`. Zámek se uvolní, když se tento objekt dostane mimo rozsah.
 
-```
+```cpp
 explicit scoped_d3d_access_lock(// [1] constructor
     accelerator_view& _Av);
 
@@ -67,47 +67,47 @@ scoped_d3d_access_lock(// [3] move constructor
 ### <a name="parameters"></a>Parametry
 
 *_Av*<br/>
-`accelerator_view` Pro zámek přijmout.
+`accelerator_view`, který má zámek přijmout.
 
 *_T*<br/>
-`adopt_d3d_access_lock_t` Objektu.
+Objekt `adopt_d3d_access_lock_t`
 
-*Ji_né*<br/>
-`scoped_d3d_access_lock` Objektu, ze kterého se má přesunout existující uzamčení.
+*_Other*<br/>
+Objekt `scoped_d3d_access_lock`, ze kterého se má přesunout existující zámek.
 
-## <a name="construction"></a>Konstrukce
+## <a name="construction"></a>Stavbě
 
-[1] konstruktoru získá zámek přístupu D3D na daný [accelerator_view](accelerator-view-class.md) objektu. Vytvoření je blokováno, dokud je požadován zámek.
+[1] konstruktor získá zámek přístupu D3D na daném objektu [accelerator_view](accelerator-view-class.md) . Stavební bloky, dokud se zámek nezíská.
 
-[2] konstruktor přijme zámek přístupu D3D z daný [accelerator_view](accelerator-view-class.md) objektu.
+[2] konstruktor přijímá zámek přístupu D3D z daného objektu [accelerator_view](accelerator-view-class.md) .
 
-[3] přesunout konstruktor přebírá stávající uzamčení přístupu D3D z jiného `scoped_d3d_access_lock` objektu. Konstrukce neblokuje.
+Konstruktor Move [3] přebírá existující zámek přístupu D3D z jiného objektu `scoped_d3d_access_lock`. Konstrukce neblokuje.
 
-##  <a name="dtor"></a> ~scoped_d3d_access_lock
+## <a name="dtor"></a>~ scoped_d3d_access_lock
 
-Uvolní zámek přístupu D3D přidruženého `accelerator_view` objektu.
+Uvolní zámek přístupu D3D u přidruženého objektu `accelerator_view`.
 
-```
+```cpp
 ~scoped_d3d_access_lock();
 ```
 
-## <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
-Převezme vlastnictví zámku přístupu D3D z jiného `scoped_d3d_access_lock` objekt uvolní uzamčení předchozího.
+Převezme vlastnictví zámku přístupu D3D z jiného objektu `scoped_d3d_access_lock` a uvolní předchozí zámek.
 
-```
+```cpp
 scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-Accelerator_view, ze kterého chcete přemístit zámek přístupu D3D.
+*_Other*<br/>
+Accelerator_view, ze kterého se má přesunout zámek přístupu D3D
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Odkaz na tento `scoped_accelerator_view_lock`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::direct3d – obor názvů](concurrency-direct3d-namespace.md)

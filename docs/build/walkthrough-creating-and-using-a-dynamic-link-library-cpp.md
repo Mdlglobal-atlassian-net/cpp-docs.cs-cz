@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření a použití vlastní knihovny DLL (C++)'
+title: 'Návod: vytvoření a použití vlastní knihovny DLL (C++)'
 description: Slouží C++ k vytvoření knihovny DLL (Dynamic-Link Library) systému Windows v aplikaci Visual Studio.
 ms.custom: conceptual
 ms.date: 08/22/2019
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 37dc59dfb77af9fff240c0d44b21de84b17d073b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70026034"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127839"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Návod: Vytvoření a použití vlastní knihovny DLL (C++)
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Návod: vytvoření a použití vlastní knihovny DLL (C++)
 
 Tento podrobný návod ukazuje, jak použít integrované vývojové prostředí (IDE) sady Visual Studio k vytvoření vlastní knihovny DLL (Dynamic Link Library) napsané C++ v Microsoft (MSVC). Pak ukazuje, jak použít knihovnu DLL z jiné C++ aplikace. Knihovny DLL (známé také jako *sdílené knihovny* v operačních systémech UNIX) jsou jedním z nejužitečnějších typů součástí Windows. Můžete je použít jako způsob, jak sdílet kód a prostředky a zmenšit velikost svých aplikací. Knihovny DLL také usnadňují službu a rozšiřování aplikací.
 
@@ -48,7 +48,7 @@ Odkazy na Další informace o knihovnách DLL naleznete v tématu [CreateC++ C/d
 
 - Kopie sady Visual Studio. Informace o tom, jak stáhnout a nainstalovat Visual Studio, najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio). Když spustíte instalační program, ujistěte se, že je zaškrtnuté políčko **vývoj pro stolní počítače pomocí C++**  úlohy. Nedělejte si starosti, pokud jste při instalaci sady Visual Studio nenainstalovali tuto úlohu. Instalační program můžete spustit znovu a nainstalovat hned.
 
-   ![Vývoj desktopových C++ aplikací pomocí](media/desktop-development-with-cpp.png "Vývoj desktopových C++ aplikací pomocí")
+   ![Vývoj desktopových aplikací pomocíC++](media/desktop-development-with-cpp.png "Vývoj desktopových aplikací pomocí C++")
 
 ::: moniker-end
 
@@ -77,7 +77,7 @@ V této sadě úkolů vytvoříte projekt pro knihovnu DLL, přidáte kód a ses
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2019"></a>Vytvoření projektu knihovny DLL v aplikaci Visual Studio 2019
 
-1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** a otevřete tak dialogové okno **vytvořit nový projekt** .
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
 
    ![Vytvořit nový projekt knihovny DLL](media/create-new-dll-project-2019.png "Vytvoření projektu MathLibrary")
 
@@ -101,7 +101,7 @@ Po vytvoření řešení můžete zobrazit vygenerovaný projekt a zdrojové sou
 
 1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **Nový projekt** .
 
-1. V levém podokně dialogového okna **Nový projekt** vyberte možnost **nainstalované** >   > **prostředí Visual C++**  **Windows Desktop**. V prostředním podokně vyberte **Knihovna DLL (Dynamic-Link Library)** . Do pole **název** zadejte *MathLibrary* a zadejte název projektu. Ponechte výchozí **umístění** a hodnoty **názvu řešení** . Nastavte **řešení** na **vytvořit nové řešení**. Pokud není zaškrtnuté, vyhledejte **v řešení vytvořit adresář** .
+1. V levém podokně dialogového okna **Nový projekt** vyberte možnost **nainstalováno** >  **C++ Visual** > **Windows Desktop**. V prostředním podokně vyberte **Knihovna DLL (Dynamic-Link Library)** . Do pole **název** zadejte *MathLibrary* a zadejte název projektu. Ponechte výchozí **umístění** a hodnoty **názvu řešení** . Nastavte **řešení** na **vytvořit nové řešení**. Pokud není zaškrtnuté, vyhledejte **v řešení vytvořit adresář** .
 
    ![Pojmenování projektu MathLibrary](media/mathlibrary-new-project-name-159.png "Pojmenování projektu MathLibrary")
 
@@ -117,7 +117,7 @@ Po vytvoření řešení můžete zobrazit vygenerovaný projekt a zdrojové sou
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2015-and-older-versions"></a>Vytvoření projektu knihovny DLL v aplikaci Visual Studio 2015 a starších verzích
 
-1. Na panelu nabídek vyberte **soubor** > **Nový** > **projekt**.
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**.
 
 1. V levém podokně dialogového okna **Nový projekt** rozbalte položku **nainstalované** > **šablony**a vyberte možnost **vizuál C++** a potom v prostředním podokně vyberte položku **Konzolová aplikace Win32**. Zadáním *MathLibrary* do textového pole **název** zadejte název projektu. Ponechte výchozí **umístění** a hodnoty **názvu řešení** . Nastavte **řešení** na **vytvořit nové řešení**. Pokud není zaškrtnuté, vyhledejte **v řešení vytvořit adresář** .
 
@@ -127,7 +127,7 @@ Po vytvoření řešení můžete zobrazit vygenerovaný projekt a zdrojové sou
 
    ![Průvodce aplikací Win32 – přehled](media/mathlibrary-project-wizard-1.png "Průvodce aplikací Win32 – přehled")
 
-1. Zvolte **Další** tlačítko. Na stránce **nastavení aplikace** klikněte v části **Typ aplikace**na položku **Knihovna DLL**.
+1. Klikněte na tlačítko **Další** . Na stránce **nastavení aplikace** klikněte v části **Typ aplikace**na položku **Knihovna DLL**.
 
    ![Průvodce vytvořením knihovny DLL v aplikaci Win32](media/mathlibrary-project-wizard-2.png "Průvodce vytvořením knihovny DLL v aplikaci Win32")
 
@@ -192,11 +192,11 @@ Nyní tato knihovna DLL nemá příliš mnoho. V dalším kroku vytvoříte hlav
    extern "C" MATHLIBRARY_API unsigned fibonacci_index();
    ```
 
-Tento hlavičkový soubor deklaruje některé funkce pro vytvoření generalizované sekvence Fibonacci, pro které jsou zadány dvě počáteční hodnoty. Volání, které `fibonacci_init(1, 1)` generuje známou sekvenci Fibonacci čísla.
+Tento hlavičkový soubor deklaruje některé funkce pro vytvoření generalizované sekvence Fibonacci, pro které jsou zadány dvě počáteční hodnoty. Volání `fibonacci_init(1, 1)` generuje známou sekvenci Fibonacci čísla.
 
-Všimněte si příkazů preprocesoru v horní části souboru. Nová šablona projektu pro projekt knihovny DLL přidává **exporty _ProjectName_&#95;EXPORTS** do definovaných maker preprocesoru. V tomto příkladu definuje Visual Studio **exporty&#95;MATHLIBRARY** při sestavení projektu knihovny DLL MATHLIBRARY.
+Všimněte si příkazů preprocesoru v horní části souboru. Nová šablona projektu pro projekt knihovny DLL přidává **exporty _ProjectName_&#95;** do definovaných maker preprocesoru. V tomto příkladu definuje Visual Studio **exporty&#95;MATHLIBRARY** při sestavení projektu knihovny DLL MATHLIBRARY.
 
-Když je definováno makro **MATHLIBRARY&#95;EXPORTS** , makro **rozhraní&#95;MATHLIBRARY API** nastaví `__declspec(dllexport)` modifikátor v deklaracích funkce. Tento modifikátor instruuje kompilátor a linker, aby exportovali funkci nebo proměnnou z knihovny DLL pro použití v jiných aplikacích. Pokud **MATHLIBRARY&#95;exporty** nejsou definovány, například když je hlavičkový soubor součástí klientské aplikace, `__declspec(dllimport)` **rozhraní MATHLIBRARY&#95;API** použije pro deklarace modifikátor. Tento modifikátor optimalizuje import funkce nebo proměnné v aplikaci. Další informace naleznete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Když je definováno makro **&#95;MATHLIBRARY EXPORTS** , makro **rozhraní&#95;MATHLIBRARY API** nastaví modifikátor `__declspec(dllexport)` v deklaracích funkce. Tento modifikátor instruuje kompilátor a linker, aby exportovali funkci nebo proměnnou z knihovny DLL pro použití v jiných aplikacích. Pokud **MATHLIBRARY&#95;exporty** nejsou definovány, například když je hlavičkový soubor obsažený v klientské aplikaci, použije **rozhraní MATHLIBRARY&#95;API** modifikátor `__declspec(dllimport)` v deklaracích. Tento modifikátor optimalizuje import funkce nebo proměnné v aplikaci. Další informace naleznete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>Přidání implementace do knihovny DLL
 
@@ -336,7 +336,7 @@ Když je definováno makro **MATHLIBRARY&#95;EXPORTS** , makro **rozhraní&#95;M
 
 ::: moniker-end
 
-Chcete-li ověřit, že vše funguje zatím, zkompilujte dynamickou knihovnu. Chcete-li kompilovat, klikněte na tlačítko **sestavit** > **sestavení** na řádku nabídek. Knihovna DLL a související výstupy kompilátoru jsou umístěny do složky s názvem *ladění* přímo pod složkou řešení. Pokud vytvoříte sestavení pro vydání, výstup se umístí do složky s názvem *release*. Výstup by měl vypadat přibližně takto:
+Chcete-li ověřit, že vše funguje zatím, zkompilujte dynamickou knihovnu. Chcete-li kompilovat, klikněte na tlačítko **sestavit** > **Sestavit řešení** na panelu nabídek. Knihovna DLL a související výstupy kompilátoru jsou umístěny do složky s názvem *ladění* přímo pod složkou řešení. Pokud vytvoříte sestavení pro vydání, výstup se umístí do složky s názvem *release*. Výstup by měl vypadat přibližně takto:
 
 ::: moniker range=">=vs-2019"
 
@@ -397,11 +397,11 @@ Chcete-li předejít nesynchronizaci kódu, doporučujeme nastavit cestu zahrnut
 
 ### <a name="to-create-a-client-app-in-visual-studio"></a>Vytvoření klientské aplikace v aplikaci Visual Studio
 
-1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** a otevřete tak dialogové okno **vytvořit nový projekt** .
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
 
 1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**.
 
-1. Z filtrovaného seznamu typů projektů zvolte Konzolová **aplikace** a pak zvolte **Další**.
+1. Z filtrovaného seznamu typů projektů zvolte **Konzolová aplikace** a pak zvolte **Další**.
 
 1. Na stránce **Konfigurovat nový projekt** zadejte do pole **název projektu** *MathClient* a zadejte název projektu. Ponechte výchozí **umístění** a hodnoty **názvu řešení** . Nastavte **řešení** na **vytvořit nové řešení**. Zrušte zaškrtnutí políčka **umístit řešení a projekt do stejného adresáře** , pokud je zaškrtnuto.
 
@@ -417,9 +417,9 @@ Pro vás se vytvoří projekt s minimální konzolou aplikace. Název pro hlavn�
 
 ### <a name="to-create-a-client-app-in-visual-studio-2017"></a>Vytvoření klientské aplikace v aplikaci Visual Studio 2017
 
-1. Chcete-li C++ vytvořit aplikaci, která používá knihovnu DLL, kterou jste vytvořili, v řádku nabídek klikněte na položku **soubor** > **Nový** > **projekt**.
+1. Chcete-li C++ vytvořit aplikaci, která používá knihovnu DLL, kterou jste vytvořili, v panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**.
 
-1. V levém podokně dialogového okna **Nový projekt** vyberte v části nainstalovaná > **C++aplikace**možnost **plocha Windows** . V prostředním podokně vyberte **Konzolová aplikace systému Windows**. Do pole **název** upravte zadejte název projektu *MathClient*.  Ponechte výchozí **umístění** a hodnoty **názvu řešení** . Nastavte **řešení** na **vytvořit nové řešení**. Pokud není zaškrtnuté, vyhledejte **v řešení vytvořit adresář** .
+1. V levém podokně dialogového okna **Nový projekt** vyberte **Desktop Windows** pod položkou **nainstalované** > **vizuál C++** . V prostředním podokně vyberte **Konzolová aplikace systému Windows**. Do pole **název** upravte zadejte název projektu *MathClient*.  Ponechte výchozí **umístění** a hodnoty **názvu řešení** . Nastavte **řešení** na **vytvořit nové řešení**. Pokud není zaškrtnuté, vyhledejte **v řešení vytvořit adresář** .
 
    ![Pojmenovat klientský projekt](media/mathclient-new-project-name-159.png "Pojmenovat klientský projekt")
 
@@ -433,7 +433,7 @@ Pro vás se vytvoří projekt s minimální konzolou aplikace. Název pro hlavn�
 
 ### <a name="to-create-a-client-app-in-visual-studio-2015"></a>Vytvoření klientské aplikace v aplikaci Visual Studio 2015
 
-1. Chcete-li C++ vytvořit aplikaci, která používá knihovnu DLL, kterou jste vytvořili, v řádku nabídek klikněte na položku **soubor** > **Nový** > **projekt**.
+1. Chcete-li C++ vytvořit aplikaci, která používá knihovnu DLL, kterou jste vytvořili, v panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**.
 
 1. V levém podokně dialogového okna **Nový projekt** vyberte v části **nainstalované** > **šablony** > **vizuál C++** položku **Win32** . V prostředním podokně vyberte **Konzolová aplikace Win32**. Do pole **název** upravte zadejte název projektu *MathClient*. Ponechte výchozí **umístění** a hodnoty **názvu řešení** . Nastavte **řešení** na **vytvořit nové řešení**. Pokud není zaškrtnuté, vyhledejte **v řešení vytvořit adresář** .
 
@@ -457,11 +457,11 @@ Dále pro volání funkcí MathLibrary ve zdrojovém kódu musí projekt zahrnov
 
 1. V rozevíracím seznamu **Konfigurace** vyberte možnost **všechny konfigurace** , pokud ještě není vybraná.
 
-1. V levém podokně vyberte **vlastnosti** >  > konfigurace**C/C++** **Obecné**.
+1. V levém podokně vyberte možnost **Vlastnosti konfigurace** > **C/C++**  > **Obecné**.
 
 1. V podokně vlastností zaškrtněte políčko vedle rozevíracího seznamu **Další vložené adresáře** a pak zvolte **Upravit**.
 
-   ![Upravte vlastnost další adresáře zahrnutí](media/mathclient-additional-include-directories-property.png "Upravte vlastnost další adresáře zahrnutí")
+   ![Upravte vlastnost další adresáře zahrnutí.](media/mathclient-additional-include-directories-property.png "Upravte vlastnost další adresáře zahrnutí.")
 
 1. Pokud chcete povolit ovládací prvek pro úpravy, poklikejte na horní podokno dialogového okna **Další vložené adresáře** . Případně můžete vybrat ikonu složky a vytvořit novou položku.
 
@@ -477,7 +477,7 @@ Dále pro volání funkcí MathLibrary ve zdrojovém kódu musí projekt zahrnov
 
    Pokud jsou knihovny DLL a klientské projekty v jiných složkách, upravte relativní cestu tak, aby odpovídala. Případně můžete vyhledat složku pomocí ovládacího prvku tři tečky.
 
-   ![Přidejte umístění záhlaví do vlastnosti další adresáře zahrnutí](media/mathclient-additional-include-directories.png "Přidejte umístění záhlaví do vlastnosti další adresáře zahrnutí")
+   ![Přidejte umístění záhlaví do vlastnosti další adresáře zahrnutí.](media/mathclient-additional-include-directories.png "Přidejte umístění záhlaví do vlastnosti další adresáře zahrnutí.")
 
 1. Po zadání cesty k souboru hlaviček v dialogovém okně **Další vložené adresáře** klikněte na tlačítko **OK** . V dialogovém okně **stránky vlastností** kliknutím na tlačítko **OK** uložte změny.
 
@@ -505,7 +505,7 @@ int main()
 }
 ```
 
-Tento kód může být zkompilován, ale není propojen. Pokud nyní vytvoříte klientskou aplikaci, zobrazí se v seznamu chyb několik chyb LINKERŮ LNK2019. Důvodem je, že v projektu chybí nějaké informace: Neurčili jste, že váš projekt ještě není závislý na knihovně *MathLibrary. lib* . A, neřekli jste linker, jak najít soubor *MathLibrary. lib* .
+Tento kód může být zkompilován, ale není propojen. Pokud nyní vytvoříte klientskou aplikaci, zobrazí se v seznamu chyb několik chyb LINKERŮ LNK2019. To je způsobeno tím, že v projektu chybí některé informace: neurčili jste, že váš projekt má ještě závislost na knihovně *MathLibrary. lib* . A, neřekli jste linker, jak najít soubor *MathLibrary. lib* .
 
 Chcete-li tento problém vyřešit, můžete zkopírovat soubor knihovny přímo do projektu klientské aplikace. Linker ho najde a použije automaticky. Pokud je však knihovna i klientská aplikace ve vývoji, může to vést k změnám v jedné kopii, která není zobrazená v druhé. Chcete-li se tomuto problému vyhnout, můžete nastavit vlastnost **Další závislosti** a sdělit systému sestavení, že váš projekt závisí na *MathLibrary. lib*. A v projektu můžete nastavit další cestu k **adresářům knihovny** , aby při propojení zahrnovala cestu k původní knihovně.
 
@@ -515,7 +515,7 @@ Chcete-li tento problém vyřešit, můžete zkopírovat soubor knihovny přímo
 
 1. V rozevíracím seznamu **Konfigurace** vyberte možnost **všechny konfigurace** , pokud ještě není vybraná. Zajišťuje, aby se všechny změny vlastností projevily pro sestavení ladění i vydaných verzí.
 
-1. V levém podokně vyberte **Konfigurace vlastnosti** > **linker** > **input**. V podokně vlastností zaškrtněte políčko vedle rozevíracího seznamu **Další závislosti** a pak zvolte **Upravit**.
+1. V levém podokně vyberte **Vlastnosti konfigurace** > **linker** > **vstupu**. V podokně vlastností zaškrtněte políčko vedle rozevíracího seznamu **Další závislosti** a pak zvolte **Upravit**.
 
    ![Úprava vlastnosti Další závislosti](media/mathclient-additional-dependencies-property.png "Úprava vlastnosti Další závislosti")
 
@@ -525,17 +525,15 @@ Chcete-li tento problém vyřešit, můžete zkopírovat soubor knihovny přímo
 
 1. Kliknutím na **tlačítko OK** se vraťte do dialogového okna **stránky vlastností** .
 
-1. V levém podokně vyberte **konfigurační vlastnosti** > **linker** > **Obecné**. V podokně vlastností vyberte rozevírací seznam vedle pole **Další adresáře knihovny** upravit a pak zvolte **Upravit**.
+1. V levém podokně vyberte možnost **Vlastnosti konfigurace** > **linker** > **Obecné**. V podokně vlastností vyberte rozevírací seznam vedle pole **Další adresáře knihovny** upravit a pak zvolte **Upravit**.
 
-   ![Upravte vlastnost další adresáře knihovny.](media/mathclient-additional-library-directories-property.png "Upravte vlastnost další adresáře knihovny")
+   ![Upravte vlastnost další adresáře knihovny.](media/mathclient-additional-library-directories-property.png "Upravte vlastnost další adresáře knihovny.")
 
-1. Dvojitým kliknutím v horním podokně dialogového okna **Další adresáře knihovny** povolíte ovládací prvek pro úpravy. V ovládacím prvku pro úpravy zadejte cestu k umístění souboru **MathLibrary. lib** . Ve výchozím nastavení se nachází ve složce s názvem *ladění* přímo ve složce řešení dll. Pokud vytvoříte sestavení pro vydání, soubor se umístí do složky s názvem *release*. Můžete použít `$(IntDir)` makro, aby linker mohl najít vaši knihovnu DLL bez ohledu na to, který typ sestavení vytvoříte. Pokud jste postupovali podle pokynů k umístění projektu klienta do samostatného řešení z projektu knihovny DLL, relativní cesta by měla vypadat takto:
+1. Dvojitým kliknutím v horním podokně dialogového okna **Další adresáře knihovny** povolíte ovládací prvek pro úpravy. V ovládacím prvku pro úpravy zadejte cestu k umístění souboru **MathLibrary. lib** . Ve výchozím nastavení se nachází ve složce s názvem *ladění* přímo ve složce řešení dll. Pokud vytvoříte sestavení pro vydání, soubor se umístí do složky s názvem *release*. Můžete použít makro `$(IntDir)`, aby linker mohl najít vaši knihovnu DLL bez ohledu na to, který typ sestavení vytvoříte. Pokud jste postupovali podle pokynů k umístění projektu klienta do samostatného řešení z projektu knihovny DLL, relativní cesta by měla vypadat takto:
 
    `..\..\MathLibrary\$(IntDir)`
 
-   Pokud je vaše knihovna DLL a klientské projekty ve stejném řešení, relativní cesta by měla vypadat takto:
-
-   `..\MathLibrary\$(IntDir)`
+   Pokud je vaše knihovna DLL a klientské projekty v jiných umístěních, upravte relativní cestu tak, aby odpovídala.
 
    ![Přidat adresář knihovny](media/mathclient-additional-library-directories.png "Přidat adresář knihovny")
 
@@ -553,21 +551,19 @@ Jedním ze způsobů, jak se tomuto problému vyhnout, je zkopírovat knihovnu D
 
 1. V rozevíracím seznamu **Konfigurace** vyberte možnost **všechny konfigurace** , pokud ještě není vybraná.
 
-1. V levém podokně vyberte **vlastnosti** > konfigurace událost**sestavení** > události**po sestavení**.
+1. V levém podokně vyberte možnost **Vlastnosti konfigurace** > **události sestavení** > **událost po sestavení**.
 
 1. V podokně vlastností vyberte v poli **příkazový řádek** ovládací prvek pro úpravy. Pokud jste postupovali podle pokynů k umístění projektu klienta do samostatného řešení z projektu knihovny DLL, pak zadejte tento příkaz:
 
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
-   Pokud je vaše knihovna DLL a klientské projekty ve stejném adresáři řešení, zadejte tento příkaz:
-
-   `xcopy /y /d "..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
+   Pokud je vaše knihovna DLL a klientské projekty v jiných adresářích, změňte relativní cestu k knihovně DLL tak, aby odpovídala.
 
    ![Přidání příkazu po sestavení](media/mathclient-post-build-command-line.png "Přidání příkazu po sestavení")
 
 1. Kliknutím na tlačítko **OK** uložte změny vlastností projektu.
 
-Klientská aplikace teď má všechno, co potřebuje k sestavování a spouštění. Sestavte aplikaci tak, že na řádku nabídek kliknete na **sestavit** > **řešení sestavení** . Okno **výstup** v aplikaci Visual Studio by mělo mít něco podobného jako v následujícím příkladu v závislosti na vaší verzi sady Visual Studio:
+Klientská aplikace teď má všechno, co potřebuje k sestavování a spouštění. Sestavte aplikaci výběrem možnosti **sestavit** > **Sestavit řešení** na řádku nabídek. Okno **výstup** v aplikaci Visual Studio by mělo mít něco podobného jako v následujícím příkladu v závislosti na vaší verzi sady Visual Studio:
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------
@@ -587,6 +583,6 @@ Teď, když jste vytvořili knihovnu DLL a klientskou aplikaci, můžete experim
 
 Při nasazení aplikace je nutné také nasadit knihovny DLL, které používá. Nejjednodušší způsob, jak vytvořit knihovny DLL, které sestavíte, nebo které jste zahrnuli ze třetích stran, je k dispozici, aby byly vloženy do stejného adresáře jako vaše aplikace. Je známý jako *nasazení v místní aplikaci*. Další informace o nasazení najdete v tématu [nasazení v vizuálu C++ ](../windows/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Volání funkcí knihovny DLL z aplikací Visual Basic](calling-dll-functions-from-visual-basic-applications.md)

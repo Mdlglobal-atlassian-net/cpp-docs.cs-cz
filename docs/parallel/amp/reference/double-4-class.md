@@ -268,26 +268,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ca413573ebd741ea2a9a813a25ec2679aff5b7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180320"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139359"
 ---
-# <a name="double4-class"></a>double_4 – třída
+# <a name="double_4-class"></a>double_4 – třída
 
-Představuje krátký vektor čtyř hodnot datového typu Double.
+Představuje krátký vektor čtyř dvojitých hodnot.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class double_4;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -297,7 +297,7 @@ class double_4;
 
 |Název|Popis|
 |----------|-----------------|
-|[double_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[double_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -324,18 +324,18 @@ class double_4;
 |double_4::get_xwy||
 |double_4::get_xwyz||
 |double_4::get_xwz||
-|double_4::get_xwzy||
+|double_4:: get_xwzy||
 |double_4::get_xy||
 |double_4::get_xyw||
 |double_4::get_xywz||
 |double_4::get_xyz||
 |double_4::get_xyzw||
-|double_4::get_xz||
+|double_4:: get_xz||
 |double_4::get_xzw||
-|double_4::get_xzwy||
-|double_4::get_xzy||
+|double_4:: get_xzwy||
+|double_4:: get_xzy||
 |double_4::get_xzyw||
-|double_4::get_y||
+|double_4:: get_y||
 |double_4::get_yw||
 |double_4::get_ywx||
 |double_4::get_ywxz||
@@ -368,12 +368,12 @@ class double_4;
 |double_4::get_zyx||
 |double_4::get_zyxw||
 |double_4::ref_a||
-|double_4::ref_b||
+|double_4:: ref_b||
 |double_4::ref_g||
 |double_4::ref_r||
 |double_4::ref_w||
 |double_4::ref_x||
-|double_4::ref_y||
+|double_4:: ref_y||
 |double_4::ref_z||
 |double_4::set_w||
 |double_4::set_wx||
@@ -444,14 +444,14 @@ class double_4;
 
 |Název|Popis|
 |----------|-----------------|
-|double_4::Operator-||
-|double_4::Operator-||
-|double_4::Operator * =||
-|double_4::Operator / =||
-|double_4::Operator ++||
-|double_4::Operator +=||
-|double_4::Operator =||
-|operátor double_4::Operator-=||
+|double_4:: operator-||
+|double_4:: operator--||
+|double_4:: operator * =||
+|double_4:: operator/=||
+|double_4:: operator + +||
+|double_4:: operator + =||
+|double_4:: operator =||
+|double_4:: operator-=||
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
@@ -463,77 +463,77 @@ class double_4;
 
 |Název|Popis|
 |----------|-----------------|
-|double_4::a||
+|double_4:: a||
 |double_4::ab||
 |double_4::abg||
 |double_4::abgr||
-|double_4::abr||
+|double_4:: ABR||
 |double_4::abrg||
-|double_4::AG||
-|double_4::agb||
-|double_4::agbr||
-|double_4::AGR||
-|double_4::agrb||
-|double_4::ar||
-|double_4::arb||
+|double_4:: AG||
+|double_4:: AGB||
+|double_4:: agbr||
+|double_4:: AGR||
+|double_4:: agrb||
+|double_4:: ar||
+|double_4:: ARB||
 |double_4::arbg||
-|double_4::arg||
-|double_4::ARGB||
-|double_4::b||
+|double_4:: arg||
+|double_4:: ARGB||
+|double_4:: b||
 |double_4::ba||
-|double_4::bag||
-|double_4::bagr||
+|double_4:: penalta||
+|double_4:: bagr||
 |double_4::bar||
-|double_4::barg||
-|double_4::bg||
-|double_4::bga||
-|double_4::bgar||
-|double_4::bgr||
+|double_4:: barg||
+|double_4:: BG||
+|double_4:: BGA||
+|double_4:: bgar||
+|double_4:: BGR||
 |double_4::bgra||
-|double_4::br||
+|double_4:: br||
 |double_4::bra||
 |double_4::brag||
 |double_4::brg||
 |double_4::brga||
-|double_4::g||
-|double_4::GA||
-|double_4::GAB||
-|double_4::gabr||
-|double_4::gar||
-|double_4::garb||
-|double_4::GB||
-|double_4::gba||
-|double_4::gbar||
-|double_4::GBR||
-|double_4::gbra||
-|double_4::GR||
-|double_4::gra||
-|double_4::grab||
-|double_4::grb||
-|double_4::grba||
-|double_4::r||
-|double_4::ra||
-|double_4::rab||
-|double_4::rabg||
-|double_4::rag||
-|double_4::ragb||
-|double_4::RB||
-|double_4::rba||
-|double_4::rbag||
-|double_4::rbg||
-|double_4::rbga||
-|double_4::rg||
-|double_4::rga||
-|double_4::rgab||
-|double_4::RGB||
-|double_4::rgba||
-|double_4::w||
-|double_4::wx||
+|double_4:: g||
+|double_4:: GA||
+|double_4:: GAB||
+|double_4:: gabr||
+|double_4:: Gar||
+|double_4:: Garb||
+|double_4:: GB||
+|double_4:: GBA||
+|double_4:: gbar||
+|double_4:: GBR||
+|double_4:: GBRA||
+|double_4:: gr||
+|double_4:: GRA||
+|double_4:: drapák||
+|double_4:: GRB||
+|double_4:: Grba||
+|double_4:: r||
+|double_4:: RA||
+|double_4:: Rab||
+|double_4:: rabg||
+|double_4:: RAG||
+|double_4:: ragb||
+|double_4:: RB||
+|double_4:: RBA||
+|double_4:: rbag||
+|double_4:: RBG||
+|double_4:: rbga||
+|double_4:: RG||
+|double_4:: RGA||
+|double_4:: rgab||
+|double_4:: RGB||
+|double_4:: RGBA||
+|double_4:: w||
+|double_4:: WX||
 |double_4::wxy||
 |double_4::wxyz||
 |double_4::wxz||
 |double_4::wxzy||
-|double_4::wy||
+|double_4:: WY||
 |double_4::wyx||
 |double_4::wyxz||
 |double_4::wyz||
@@ -543,13 +543,13 @@ class double_4;
 |double_4::wzxy||
 |double_4::wzy||
 |double_4::wzyx||
-|double_4::x||
-|double_4::xw||
-|double_4::xwy||
-|double_4::xwyz||
+|double_4:: x||
+|double_4:: XW||
+|double_4:: xwy||
+|double_4:: xwyz||
 |double_4::xwz||
 |double_4::xwzy||
-|double_4::xy||
+|double_4:: XY||
 |double_4::xyw||
 |double_4::xywz||
 |double_4::xyz||
@@ -557,39 +557,39 @@ class double_4;
 |double_4::xz||
 |double_4::xzw||
 |double_4::xzwy||
-|double_4::xzy||
+|double_4:: XZY||
 |double_4::xzyw||
-|double_4::y||
-|double_4::yw||
+|double_4:: y||
+|double_4:: YW||
 |double_4::ywx||
 |double_4::ywxz||
-|double_4::ywz||
+|double_4:: ywz||
 |double_4::ywzx||
-|double_4::yx||
-|double_4::yxw||
+|double_4:: yx||
+|double_4:: yxw||
 |double_4::yxwz||
 |double_4::yxz||
 |double_4::yxzw||
-|double_4::YZ||
-|double_4::yzw||
-|double_4::yzwx||
+|double_4:: YZ||
+|double_4:: yzw||
+|double_4:: yzwx||
 |double_4::yzx||
 |double_4::yzxw||
-|double_4::z||
-|double_4::zw||
-|double_4::zwx||
-|double_4::zwxy||
-|double_4::zwy||
-|double_4::zwyx||
+|double_4:: z||
+|double_4:: ZW||
+|double_4:: zwx||
+|double_4:: zwxy||
+|double_4:: zwy||
+|double_4:: zwyx||
 |double_4::zx||
 |double_4::zxw||
 |double_4::zxwy||
 |double_4::zxy||
 |double_4::zxyw||
-|double_4::zy||
-|double_4::zyw||
+|double_4:: ZY||
+|double_4:: zyw||
 |double_4::zywx||
-|double_4::zyx||
+|double_4:: ZYX||
 |double_4::zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -598,15 +598,15 @@ class double_4;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_4 –
+## <a name="ctor"></a>double_4
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-```
+```cpp
 double_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline double_4(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V2*<br/>
-Hodnota inicializace elementu 2.
+Hodnota pro inicializaci elementu 2.
 
 *_V3*<br/>
-Hodnota inicializace element 3.
+Hodnota pro inicializaci elementu 3.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-##  <a name="double_4__size"></a> Velikost
+## <a name="double_4__size"></a>hodnota
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

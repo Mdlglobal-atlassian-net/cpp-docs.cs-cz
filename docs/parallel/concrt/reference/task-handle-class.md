@@ -8,55 +8,55 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: eda4fa84dd4e7c3fa8ffb5a09e273afac2acd8f8
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: a61e72f14448d5033d5be9069ffeec7d3bb08061
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975188"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142556"
 ---
-# <a name="taskhandle-class"></a>task_handle – třída
+# <a name="task_handle-class"></a>task_handle – třída
 
-`task_handle` Třída představuje jednotlivé paralelní pracovní položku. Zapouzdřuje pokynů a data potřebná k provedení práce.
+Třída `task_handle` představuje jednotlivé paralelní pracovní položky. Tyto pokyny zapouzdřuje a data potřebná ke spuštění nějaké práce.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<
     typename _Function
 >
 class task_handle : public ::Concurrency::details::_UnrealizedChore;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ objektu funkce, která bude volána k provedení práce reprezentována `task_handle` objektu.
+Typ objektu funkce, který bude vyvolán pro provedení práce reprezentované objektem `task_handle`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[task_handle](#task_handle)|Sestaví nový `task_handle` objektu. Pracovní úloha provádí volání funkce zadat jako parametr do konstruktoru.|
-|[~task_handle Destructor](#dtor)|Odstraní `task_handle` objektu.|
+|[task_handle](#task_handle)|Vytvoří nový objekt `task_handle`. Práce úkolu je provedena vyvoláním funkce určené jako parametru konstruktoru.|
+|[~ task_handle destruktor](#dtor)|Odstraní objekt `task_handle`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[operator()](#task_handle__operator_call)|Operátor volání funkce, která volá modul runtime pro provedení úlohy popisovače.|
+|[operator () – operátor](#task_handle__operator_call)|Operátor volání funkce, který modul runtime vyvolá k provedení práce s popisovačem úlohy.|
 
 ## <a name="remarks"></a>Poznámky
 
-`task_handle` objekty lze použít ve spojení s `structured_task_group` nebo obecnějším `task_group` objektu k rozložení práce na paralelní úlohy. Další informace najdete v tématu [paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+`task_handle` objekty lze použít ve spojení s `structured_task_group` nebo obecnější `task_group` objekt pro rozloží práci na paralelní úlohy. Další informace najdete v tématu [Task paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-Všimněte si, že Autor `task_handle` objekt je odpovědná za správu životního cyklu vytvořeného `task_handle` objektu, dokud ho už není nutné v Concurrency Runtime. Obvykle to znamená, že `task_handle` objektu nesmí destrukce dokud buď `wait` nebo `run_and_wait` metodu `task_group` nebo `structured_task_group` na kterém je zařazeno do fronty byla volána.
+Všimněte si, že tvůrce objektu `task_handle` zodpovídá za zachování životnosti vytvořeného `task_handle` objektu, dokud jej Concurrency Runtime nepožaduje. Obvykle to znamená, že objekt `task_handle` nesmí destrukci, dokud není volána metoda `wait` nebo `run_and_wait` `task_group` nebo `structured_task_group`, na kterou je zařazena do fronty.
 
-`task_handle` objekty se obvykle používají ve spojení s lambda výrazy jazyka C++. Protože si nejste jisti skutečný typ výrazu lambda, [make_task –](concurrency-namespace-functions.md#make_task) funkce se obvykle používá k vytvoření `task_handle` objektu.
+`task_handle` objekty se obvykle používají ve spojení s C++ výrazy lambda. Vzhledem k tomu, že neznáte skutečný typ výrazu lambda, funkce [make_task](concurrency-namespace-functions.md#make_task) se obvykle používá k vytvoření objektu `task_handle`.
 
-Modul runtime vytvoří kopii pracovní funkce, které můžete předat `task_handle` objektu. Proto objekt změny stavu, ke kterým dochází ve funkci předání `task_handle` objektu se nezobrazí v kopii tohoto objektu funkce.
+Modul runtime vytvoří kopii pracovní funkce, kterou předáte objektu `task_handle`. Proto všechny změny stavu, ke kterým dojde v objektu funkce, který předáte objektu `task_handle`, se nezobrazí ve vaší kopii objektu funkce.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -64,44 +64,44 @@ Modul runtime vytvoří kopii pracovní funkce, které můžete předat `task_ha
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ppl.h
+**Záhlaví:** PPL. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="task_handle__operator_call"></a> Operator()
+## <a name="task_handle__operator_call"></a>operator () – operátor
 
-Operátor volání funkce, která volá modul runtime pro provedení úlohy popisovače.
+Operátor volání funkce, který modul runtime vyvolá k provedení práce s popisovačem úlohy.
 
-```
+```cpp
 void operator()() const;
 ```
 
-## <a name="task_handle"></a> task_handle –
+## <a name="task_handle"></a>task_handle
 
-Sestaví nový `task_handle` objektu. Pracovní úloha provádí volání funkce zadat jako parametr do konstruktoru.
+Vytvoří nový objekt `task_handle`. Práce úkolu je provedena vyvoláním funkce určené jako parametru konstruktoru.
 
-```
+```cpp
 task_handle(const _Function& _Func);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Func*<br/>
-Funkce, která bude volána k provedení práce reprezentována `task_handle` objektu. To může být funktor lambda, ukazatele na funkci, nebo žádný objekt, který podporuje verzi operátoru volání funkce s podpisem `void operator()()`.
+Funkce, která bude vyvolána pro provedení práce reprezentované objektem `task_handle`. Může to být lambda funktor, ukazatel na funkci nebo libovolný objekt, který podporuje verzi operátoru volání funkce s podpisem `void operator()()`.
 
 ### <a name="remarks"></a>Poznámky
 
-Modul runtime vytvoří kopii pracovní funkce, které můžete předat konstruktoru. Proto objekt změny stavu, ke kterým dochází ve funkci předání `task_handle` objektu se nezobrazí v kopii tohoto objektu funkce.
+Modul runtime vytvoří kopii pracovní funkce, kterou předáte konstruktoru. Proto všechny změny stavu, ke kterým dojde v objektu funkce, který předáte objektu `task_handle`, se nezobrazí ve vaší kopii objektu funkce.
 
-##  <a name="dtor"></a> ~task_handle
+## <a name="dtor"></a>~ task_handle
 
-Odstraní `task_handle` objektu.
+Odstraní objekt `task_handle`.
 
-```
+```cpp
 ~task_handle();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [task_group – třída](task-group-class.md)<br/>

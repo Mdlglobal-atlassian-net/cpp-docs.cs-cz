@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 012a70ae628a896c8202e46a5624f37f58b0781b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351544"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126432"
 ---
-# <a name="shortvector-structure"></a>short_vector – struktura
+# <a name="short_vector-structure"></a>short_vector – struktura
 
-short_vector – poskytuje metaprogramování definice, které jsou užitečné pro krátké vektory programování obecně.
+short_vector poskytuje definice metaprogramování šablonou, které jsou užitečné pro obecné programování krátkých vektorů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<
     typename _Scalar_type,
     int _Size
@@ -75,15 +75,15 @@ template<>
 struct short_vector<double, 4>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_Scalar_type*<br/>
 
-*_Velikost*<br/>
+*_Size*<br/>
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -93,7 +93,7 @@ struct short_vector<double, 4>;
 
 |Název|Popis|
 |----------|-----------------|
-|[short_vector::short_vector – konstruktor](#ctor)||
+|[short_vector:: short_vector – konstruktor](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -101,16 +101,16 @@ struct short_vector<double, 4>;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a>  short_vector::short_vector – konstruktor
+## <a name="ctor"></a>short_vector:: short_vector – konstruktor
 
-```
+```cpp
 short_vector();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

@@ -1,42 +1,42 @@
 ---
-title: 'Postupy: Smyčky parallel_for'
+title: 'Postupy: Programování smyčky parallel_for'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for loop [Concurrency Runtime]
 - parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-ms.openlocfilehash: d6ac30a5de0ff45adad1064aeab708e6a84f5e9f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5903114a12de46dc06929c83e9995b39d0136810
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346362"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141864"
 ---
-# <a name="how-to-write-a-parallelfor-loop"></a>Postupy: Smyčky parallel_for
+# <a name="how-to-write-a-parallel_for-loop"></a>Postupy: Programování smyčky parallel_for
 
-Tento příklad ukazuje, jak používat [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) vypočítat součin dvou matice.
+Tento příklad ukazuje, jak použít [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) k výpočtu součinu dvou matic.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje `matrix_multiply` funkce, která vypočítá součin dvou čtvercové matice.
+Následující příklad ukazuje funkci `matrix_multiply`, která vypočítá součin dvou čtvercových matic.
 
 [!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_1.cpp)]
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje `parallel_matrix_multiply` funkci, která používá `parallel_for` algoritmus paralelní provádění vnější smyčky.
+Následující příklad ukazuje funkci `parallel_matrix_multiply`, která používá algoritmus `parallel_for` k paralelnímu provedení vnější smyčky.
 
 [!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_2.cpp)]
 
-V tomto příkladu parallelizes vnější smyčky pouze, protože provádí dostatek práce, abyste využili výhod režie pro paralelní zpracování. Pokud jste paralelizovat vnitřní smyčky, neobdržíte žádné zvýšení výkonu vzhledem k tomu, že malé množství práce, které provádí vnitřní smyčku neodstraní režie pro paralelní zpracování. Paralelní provádění vnější smyčky pouze tedy nejlepší způsob, jak zvýšit výhody souběžnosti ve většině systémů.
+V tomto příkladu se parallelizes vnější smyčka pouze proto, že provádí dostatečnou práci, aby mohla těžit z režie pro paralelní zpracování. Pokud paralelizovat vnitřní smyčku, nebudete dostávat žádné zvýšení výkonu, protože malé množství práce, které vnitřní smyčka provede, neprovádí překonání režie na paralelní zpracování. Proto virtuálního pouze vnější smyčka je nejlepším způsobem, jak maximalizovat výhody souběžnosti ve většině systémů.
 
 ## <a name="example"></a>Příklad
 
-Následující kompletní příklad porovná výkon `matrix_multiply` fungovat oproti `parallel_matrix_multiply` funkce.
+Následující příklad kompletní porovnává výkon funkce `matrix_multiply` oproti funkci `parallel_matrix_multiply`.
 
 [!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_3.cpp)]
 
-Následující ukázkový výstup je pro počítač, který má čtyři procesory.
+Následující vzorový výstup je určen pro počítač se čtyřmi procesory.
 
 ```Output
 serial: 3853
@@ -45,11 +45,11 @@ parallel: 1311
 
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-matrix-multiply.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+Chcete-li zkompilovat kód, zkopírujte jej a vložte jej do projektu aplikace Visual Studio nebo jej vložte do souboru s názvem `parallel-matrix-multiply.cpp` a poté spusťte následující příkaz v okně příkazového řádku sady Visual Studio.
 
-**cl.exe /EHsc parallel-matrix-multiply.cpp**
+> **CL. exe/EHsc Parallel-Matrix-Multiply. cpp**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)<br/>
-[parallel_for – funkce](reference/concurrency-namespace-functions.md#parallel_for)
+[parallel_for funkce](reference/concurrency-namespace-functions.md#parallel_for)

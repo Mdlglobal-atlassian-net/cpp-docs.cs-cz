@@ -22,31 +22,31 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efea8dabb69a48e69d68a86110fdf9bc7664948b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405505"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127109"
 ---
 # <a name="array-class"></a>array – třída
 
-Představuje datový kontejner, který se používá k přesunutí dat na akcelerátor.
+Představuje datový kontejner, který slouží k přesunu dat do akcelerátoru.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <typename value_type, int _Rank>
 friend class array;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *value_type*<br/>
-Typ elementu data.
+Typ elementu dat.
 
 *_Rank*<br/>
-Řád objektu array.
+Rozměr pole.
 
 ## <a name="members"></a>Členové
 
@@ -54,64 +54,64 @@ Typ elementu data.
 
 |Název|Popis|
 |----------|-----------------|
-|[Array – konstruktor](#ctor)|Inicializuje novou instanci třídy `array` třídy.|
-|[~ array – destruktor](#dtor)|Odstraní `array` objektu.|
+|[Array – konstruktor](#ctor)|Inicializuje novou instanci třídy `array`.|
+|[~ Array – destruktor](#dtor)|Odstraní objekt `array`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[copy_to](#copy_to)|Zkopíruje obsah pole do jiného objektu array.|
-|[data](#data)|Vrací ukazatel na nezpracovaná data objektu array.|
-|[get_accelerator_view](#get_accelerator_view)|Vrátí [accelerator_view](accelerator-view-class.md) objekt, který představuje umístění, kde je přidělena pole. Tato vlastnost je přístupná pouze na CPU.|
-|[get_associated_accelerator_view](#get_associated_accelerator_view)|Získá druhý [accelerator_view](accelerator-view-class.md) objekt, který je předán jako parametr při zavolání pracovního konstruktoru pro vytvoření instance `array` objektu.|
-|[get_cpu_access_type](#get_cpu_access_type)|Vrátí [access_type](concurrency-namespace-enums-amp.md#access_type) pole. Tato metoda je přístupná pouze na CPU.|
-|[get_extent](#get_extent)|Vrátí [rozsahu](extent-class.md) objektu array.|
-|[reinterpret_as](#reinterpret_as)|Vrátí jednorozměrné pole, která obsahuje všechny prvky `array` objektu.|
-|[section](#section)|Vrátí dílčí část objektu `array` nacházející se na zadaném umístění a volitelně, který se zadaným rozsahem.|
-|[view_as](#view_as)|Vrátí [array_view](array-view-class.md) objekt, který je vytvořen z `array` objektu.|
+|[copy_to](#copy_to)|Zkopíruje obsah pole do jiného pole.|
+|[údajů](#data)|Vrátí ukazatel na nezpracovaná data pole.|
+|[get_accelerator_view](#get_accelerator_view)|Vrátí objekt [accelerator_view](accelerator-view-class.md) , který představuje umístění, kde je pole přiděleno. Tato vlastnost je k dispozici pouze na CPU.|
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|Získá druhý objekt [accelerator_view](accelerator-view-class.md) , který je předán jako parametr při volání pracovního konstruktoru pro vytvoření instance objektu `array`.|
+|[get_cpu_access_type](#get_cpu_access_type)|Vrátí [access_type](concurrency-namespace-enums-amp.md#access_type) pole. Tato metoda je k dispozici pouze na CPU.|
+|[get_extent](#get_extent)|Vrátí objekt [rozsahu](extent-class.md) pole.|
+|[reinterpret_as](#reinterpret_as)|Vrátí jednorozměrné pole, které obsahuje všechny prvky v objektu `array`.|
+|[section](#section)|Vrátí dílčí část objektu `array`, která se nachází na zadaném umístění, a volitelně, která má zadaný rozsah.|
+|[view_as](#view_as)|Vrátí objekt [array_view](array-view-class.md) , který je vytvořen z objektu `array`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[operátor std::vector&lt;value_type&gt;](#operator_vec)|Používá `copy(*this, vector)` implicitně převést pole std::[vektoru](../../../standard-library/vector-class.md) objektu.|
-|[operator()](#operator_call)|Vrátí hodnotu prvku určeného parametry.|
-|[– Operátor\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
-|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `array` do tohoto objektu.|
+|[operátor std:: Vector&lt;value_type&gt;](#operator_vec)|Používá `copy(*this, vector)` k implicitnímu převodu pole na objekt std::[Vector](../../../standard-library/vector-class.md) .|
+|[operator () – operátor](#operator_call)|Vrátí hodnotu prvku určenou parametry.|
+|[operátor\[\]](#operator_at)|Vrátí prvek, který je na zadaném indexu.|
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného objektu `array` do tohoto objektu.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
 |Název|Popis|
 |----------|-----------------|
-|[RANK – konstanta](#rank)|Udržuje řád objektu pole.|
+|[Konstanta Rank](#rank)|Ukládá rozměr pole.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Název|Popis|
 |----------|-----------------|
-|[accelerator_view](#accelerator_view)|Získá [accelerator_view](accelerator-view-class.md) objekt, který představuje umístění, kde je přidělena pole. Tato vlastnost je přístupná pouze na CPU.|
-|[associated_accelerator_view](#associated_accelerator_view)|Získá druhý [accelerator_view](accelerator-view-class.md) objekt, který je předán jako parametr při zavolání pracovního konstruktoru pro vytvoření instance `array` objektu.|
-|[cpu_access_type](#cpu_access_type)|Získá [access_type](concurrency-namespace-enums-amp.md#access_type) , která představuje, jak CPU může získat přístup k úložišti pole.|
-|[rozsah](#extent)|Vrátí rozsah, který definuje tvar objektu array.|
+|[accelerator_view](#accelerator_view)|Získá objekt [accelerator_view](accelerator-view-class.md) , který představuje umístění, kde je pole přiděleno. Tato vlastnost je k dispozici pouze na CPU.|
+|[associated_accelerator_view](#associated_accelerator_view)|Získá druhý objekt [accelerator_view](accelerator-view-class.md) , který je předán jako parametr při volání pracovního konstruktoru pro vytvoření instance objektu `array`.|
+|[cpu_access_type](#cpu_access_type)|Získá [access_type](concurrency-namespace-enums-amp.md#access_type) , který představuje, jak má procesor získat přístup k úložišti daného pole.|
+|[stavební](#extent)|Získá rozsah definující tvar pole.|
 
 ## <a name="remarks"></a>Poznámky
 
-Typ `array<T,N>` odpovídá hustému a běžné (nikoli roztřepenému) *N*-rozměrné pole, který je umístěný v určitém umístění, například akcelerátoru nebo procesoru. Datový typ prvků v poli je `T`, která musí být typu, který je kompatibilní s cílovým akcelerátorem. I když se přes řád je `N`, (z pole je určeno staticky a je součástí typu, rozsahu objektu array je určeno modulem runtime a je vyjádřeno pomocí třídy `extent<N>`.
+Typ `array<T,N>` představuje husté a běžné (nezubaté) *N*-dimenzionální pole, které je umístěno v konkrétním umístění, například akcelerátoru nebo procesoru. Datový typ prvků v poli je `T`, který musí být typu, který je kompatibilní s cílovým akcelerátorem. I když je pořadí, `N`(pole je určeno staticky a je součástí typu, je rozsah pole určen modulem runtime a je vyjádřen pomocí `extent<N>`třídy.
 
-Pole může mít libovolný počet dimenzí, i když některé funkce jsou specializované pro `array` objekty s hodností jeden, dva a tři. Pokud vynecháte argument dimenze, výchozí hodnota je 1.
+Pole může mít libovolný počet rozměrů, i když některé funkce jsou specializované pro `array` objekty s pořadím jedna, dvě a tři. Vynecháte-li argument dimenze, výchozí hodnota je 1.
 
-Pole data uložena souvisle v paměti. Prvky, které se liší jednou nejméně významnou dimenzí v paměti sousedí.
+Data pole jsou rozložena souvisle v paměti. Prvky, které se liší v nejméně významném rozměru, jsou sousední v paměti.
 
-Pole jsou logicky považovány za hodnotové typy, protože když objekt array zkopírován do jiného objektu array, provádí se hluboká kopie. Dva objekty Array nikdy neukazují na stejná data.
+Pole jsou logicky považovány za typy hodnot, protože když je pole zkopírováno do jiného pole, je provedena hluboká kopie. Dvě pole nikdy neodkazují na stejná data.
 
-`array<T,N>` Typ se používá v několika situacích:
+Typ `array<T,N>` se používá v několika scénářích:
 
-- Jako datový zásobník, který lze použít při výpočtech na akcelerátoru.
+- Jako kontejner dat, který lze použít v výpočtech v akcelerátoru.
 
-- Jako datový zásobník pro uložení paměti v procesoru hostitele (které je možné zkopírovat do a z jiných objektů Array).
+- Jako datový kontejner pro ukládání paměti na CPU hostitele (který lze použít ke kopírování do a z jiných polí).
 
-- Jako pracovní objekt, který slouží jako rychlý zprostředkovatel při kopiích v hostitele do zařízení.
+- Jako pracovní objekt, který bude fungovat jako rychlý prostředník při kopiích z hostitelů na zařízení.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -119,31 +119,31 @@ Pole jsou logicky považovány za hodnotové typy, protože když objekt array z
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp.h
+**Hlavička:** amp. h
 
-**Namespace:** Souběžnost
+**Obor názvů:** Concurrency
 
-##  <a name="dtor"></a> ~ pole
+## <a name="dtor"></a>~ pole
 
-Odstraní `array` objektu.
+Odstraní objekt `array`.
 
-```
+```cpp
 ~array() restrict(cpu);
 ```
 
-##  <a name="accelerator_view"></a> accelerator_view
+## <a name="accelerator_view"></a>accelerator_view
 
-Získá [accelerator_view](accelerator-view-class.md) objekt, který představuje umístění, kde je přidělena pole. Tato vlastnost je přístupná pouze na CPU.
+Získá objekt [accelerator_view](accelerator-view-class.md) , který představuje umístění, kde je pole přiděleno. Tato vlastnost je k dispozici pouze na CPU.
 
-```
+```cpp
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;
 ```
 
-##  <a name="ctor"></a> Pole
+## <a name="ctor"></a>skupin
 
-Inicializuje novou instanci třídy [array – třída](array-class.md). Neexistuje žádný výchozí konstruktor pro `array<T,N>`. Všechny konstruktory jsou spouštěny pouze na CPU. Nelze je spustit na cíli Direct3D.
+Inicializuje novou instanci [třídy Array](array-class.md). Pro `array<T,N>`není k dispozici žádný výchozí konstruktor. Všechny konstruktory jsou spuštěny pouze na CPU. Nelze je spustit na cíli Direct3D.
 
-```
+```cpp
 explicit array(
     const Concurrency::extent<_Rank>& _Extent) restrict(cpu);
 
@@ -401,22 +401,22 @@ array(array&& _Other) restrict(cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Associated_Av*<br/>
-Objekt typu accelerator_view určující preferované cílové umístění pole.
+Accelerator_view, která určuje preferované cílové umístění pole.
 
 *_Av*<br/>
-[Accelerator_view](accelerator-view-class.md) objekt, který určuje umístění pole.
+Objekt [accelerator_view](accelerator-view-class.md) , který určuje umístění pole.
 
 *_Cpu_access_type*<br/>
-Požadovaný [access_type](concurrency-namespace-enums-amp.md#access_type) pro toto pole na CPU. Tento parametr má výchozí hodnotu `access_type_auto` byste museli opustit procesoru `access_type` určení modulu runtime. Aktuálního procesoru `access_type` pro pole může být dotázán pomocí `get_cpu_access_type` metody.
+Požadovaná [access_type](concurrency-namespace-enums-amp.md#access_type) pro pole na procesoru. Tento parametr má výchozí hodnotu `access_type_auto` opustit procesor `access_type` určení modulu runtime. Skutečný `access_type` procesoru pro pole lze dotazovat pomocí metody `get_cpu_access_type`.
 
 *_Extent*<br/>
-Rozsah v každém rozměru pole.
+Rozsah v každé dimenzi pole.
 
 *_E0*<br/>
-Nejvýznamnější komponenta rozsahu tohoto oddílu.
+Nejvýznamnější součást rozsahu této části.
 
 *_E1*<br/>
-Další na nejvýznamnější komponenta rozsahu tohoto oddílu.
+Další nejvýznamnější součást rozsahu této části...
 
 *_E2*<br/>
 Nejméně významná komponenta rozsahu tohoto oddílu.
@@ -425,7 +425,7 @@ Nejméně významná komponenta rozsahu tohoto oddílu.
 Typ vstupního iterátoru.
 
 *_Src*<br/>
-Kopírovaný objekt.
+Do objektu ke zkopírování.
 
 *_Src_first*<br/>
 Počáteční iterátor do zdrojového kontejneru.
@@ -433,28 +433,28 @@ Počáteční iterátor do zdrojového kontejneru.
 *_Src_last*<br/>
 Koncový iterátor do zdrojového kontejneru.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Jiný zdroj dat.
 
 *_Rank*<br/>
-Řád oddílu.
+Pořadí oddílu
 
 *value_type*<br/>
 Datový typ prvků, které jsou zkopírovány.
 
-##  <a name="associated_accelerator_view"></a> associated_accelerator_view –
+## <a name="associated_accelerator_view"></a>associated_accelerator_view
 
-Získá druhý [accelerator_view](accelerator-view-class.md) objekt, který je předán jako parametr při zavolání pracovního konstruktoru pro vytvoření instance `array` objektu.
+Získá druhý objekt [accelerator_view](accelerator-view-class.md) , který je předán jako parametr při volání pracovního konstruktoru pro vytvoření instance objektu `array`.
 
-```
+```cpp
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-##  <a name="copy_to"></a> copy_to –
+## <a name="copy_to"></a>copy_to
 
 Zkopíruje obsah `array` do jiného `array`.
 
-```
+```cpp
 void copy_to(
     array<value_type, _Rank>& _Dest) const ;
 
@@ -465,21 +465,21 @@ void copy_to(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-[Array_view](array-view-class.md) do kterého chcete zkopírovat.
+Objekt [array_view](array-view-class.md) ke zkopírování.
 
-##  <a name="cpu_access_type"></a> cpu_access_type
+## <a name="cpu_access_type"></a>cpu_access_type
 
-Získá access_type procesoru povolený pro toto pole.
+Získá access_type pro toto pole povolený procesor.
 
-```
+```cpp
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;
 ```
 
-##  <a name="data"></a> Data
+## <a name="data"></a>údajů
 
-Vrací ukazatel na nezpracovaná data `array`.
+Vrátí ukazatel na nezpracovaná data `array`.
 
-```
+```cpp
 value_type* data() restrict(amp, cpu);
 
 const value_type* data() const restrict(amp, cpu);
@@ -487,84 +487,84 @@ const value_type* data() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nezpracovaná data objektu array.
+Ukazatel na nezpracovaná data pole.
 
-##  <a name="extent"></a> rozsah
+## <a name="extent"></a>stavební
 
-Získá [rozsahu](extent-class.md) objekt, který definuje tvar `array`.
+Získá objekt [rozsahu](extent-class.md) , který definuje tvar `array`.
 
-```
+```cpp
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;
 ```
 
-##  <a name="get_accelerator_view"></a> get_accelerator_view –
+## <a name="get_accelerator_view"></a>get_accelerator_view
 
-Vrátí [accelerator_view](accelerator-view-class.md) objekt, který představuje umístění ve kterém `array` objektu je přiřazen. Tato vlastnost je přístupná pouze na CPU.
+Vrátí objekt [accelerator_view](accelerator-view-class.md) , který představuje umístění, kde je objekt `array` přidělen. Tato vlastnost je k dispozici pouze na CPU.
 
-```
+```cpp
 Concurrency::accelerator_view get_accelerator_view() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`accelerator_view` Objekt, který představuje umístění ve kterém `array` objektu je přiřazen.
+Objekt `accelerator_view`, který představuje umístění, kde je přidělen objekt `array`.
 
-##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
 
-Získá druhý [accelerator_view](accelerator-view-class.md) objekt, který je předán jako parametr při zavolání pracovního konstruktoru pro vytvoření instance `array` objektu.
+Získá druhý objekt [accelerator_view](accelerator-view-class.md) , který je předán jako parametr při volání pracovního konstruktoru pro vytvoření instance objektu `array`.
 
-```
+```cpp
 Concurrency::accelerator_view get_associated_accelerator_view() const ;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Druhá [accelerator_view](accelerator-view-class.md) předán objekt pracovního konstruktoru.
+Druhý objekt [accelerator_view](accelerator-view-class.md) předaný pracovnímu konstruktoru.
 
-##  <a name="get_cpu_access_type"></a> get_cpu_access_type
+## <a name="get_cpu_access_type"></a>get_cpu_access_type
 
-Vrátí access_type procesoru povolený pro toto pole.
+Vrátí access_type procesoru, který je povolený pro toto pole.
 
-```
+```cpp
 access_type get_cpu_access_type() const restrict(cpu);
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-##  <a name="get_extent"></a> get_extent –
+## <a name="get_extent"></a>get_extent
 
-Vrátí [rozsahu](extent-class.md) objektu `array`.
+Vrátí objekt [rozsahu](extent-class.md) `array`.
 
-```
+```cpp
 Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`extent` Objektu `array`.
+Objekt `extent` `array`
 
-##  <a name="operator_vec"></a> operátor std::vector&lt;value_type&gt;
+## <a name="operator_vec"></a>operátor std:: Vector&lt;value_type&gt;
 
-Používá `copy(*this, vector)` implicitně převést pole na std::vector objektu.
+Používá `copy(*this, vector)` k implicitnímu převodu pole na objekt std:: vector.
 
-```
+```cpp
 operator std::vector<value_type>() const restrict(cpu);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *value_type*<br/>
-Datový typ prvků objektu vektoru.
+Datový typ prvků vektoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt typu `vector<T>` , který obsahuje kopii dat obsažených v poli.
+Objekt typu `vector<T>` obsahující kopii dat, která je obsažena v poli.
 
-##  <a name="operator_call"></a> Operator()
+## <a name="operator_call"></a>operator () – operátor
 
-Vrátí hodnotu prvku určeného parametry.
+Vrátí hodnotu prvku určenou parametry.
 
-```
+```cpp
 value_type& operator() (const index<_Rank>& _Index) restrict(amp,cpu);
 
 const value_type& operator() (const index<_Rank>& _Index) cons  t restrict(amp,cpu);
@@ -588,26 +588,26 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 Umístění elementu.
 
 *_I0*<br/>
-Nejvýznamnější komponenta počátku tohoto oddílu.
+Nejvýznamnější součást počátku této části.
 
 *_I1*<br/>
-Další na nejvýznamnější komponenta počátku tohoto oddílu.
+Další důležitou součást počátku této části.
 
 *_I2*<br/>
-Nejméně významná komponenta počátku tohoto oddílu.
+Nejméně významná součást počátku této části.
 
 *_I*<br/>
 Umístění elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota prvku určeného parametry.
+Hodnota prvku zadaná parametry.
 
-##  <a name="operator_at"></a> Operator [].
+## <a name="operator_at"></a>operator [] – operátor
 
-Vrátí prvek, který je v zadaném indexu.
+Vrátí prvek, který je na zadaném indexu.
 
-```
+```cpp
 value_type& operator[](const index<_Rank>& _Index) restrict(amp,cpu);
 
 const value_type& operator[]
@@ -628,13 +628,13 @@ Index.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek, který je v zadaném indexu.
+Element, který je na zadaném indexu.
 
-##  <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
-Zkopíruje obsah zadaného `array` objektu.
+Zkopíruje obsah zadaného objektu `array`.
 
-```
+```cpp
 array& operator= (const array& _Other) restrict(cpu);
 
 array& operator= (array&& _Other) restrict(cpu);
@@ -645,31 +645,31 @@ array& operator= (
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-`array` Objektu, který chcete kopírovat.
+*_Other*<br/>
+Objekt `array`, ze kterého se má kopírovat.
 
 *_Src*<br/>
-`array` Objektu, který chcete kopírovat.
+Objekt `array`, ze kterého se má kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na tento `array` objektu.
+Odkaz na tento objekt `array`.
 
-##  <a name="rank"></a> pořadí
+## <a name="rank"></a>pořadí
 
-Udržuje řád objektu `array`.
+Ukládá pořadí `array`.
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="reinterpret_as"></a> reinterpret_as
+## <a name="reinterpret_as"></a>reinterpret_as
 
-Opětovně interpretuje objekt array skrze jednorozměrný prvek array_view, který volitelně může mít typ jinou hodnotu než zdrojového pole.
+Znovu interpretuje pole pomocí jednorozměrného array_view, který volitelně může mít jiný typ hodnoty než zdrojové pole.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <typename _Value_type2>
 array_view<_Value_type2,1> reinterpret_as() restrict(amp,cpu);
 
@@ -680,18 +680,18 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 ### <a name="parameters"></a>Parametry
 
 *_Value_type2*<br/>
-Datový typ vrácená data.
+Datový typ vrácených dat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Array_view nebo const objektu array_view, který je založen na poli, s typem elementu přetypovaným z T ElementType a řádem redukovaným z N na hodnotu 1.
+Objekt array_view array_view nebo const, který je založen na poli, s typem prvku, který je překládán z T na ElementType a pořadím sníženým od N do 1.
 
 ### <a name="remarks"></a>Poznámky
 
-Někdy je vhodné zobrazit vícerozměrné pole jako by byl lineární jednorozměrné pole, může mít typ jinou hodnotu než zdrojového pole. Tuto metodu můžete použít k dosažení tohoto cíle.
-**Upozornění:** opětovná interpretace objektu array pomocí jiného typu hodnoty je potenciálně nebezpečná operace. Doporučujeme vám, že jste tuto funkci používat opatrně.
+Někdy je vhodné zobrazit multidimenzionální pole, jako by se jedná o lineární jednorozměrné pole, které může mít jiný typ hodnoty než zdrojové pole. Tuto metodu můžete dosáhnout pomocí této metody.
+**Upozornění** Přeinterpretace objektu Array pomocí jiného typu hodnoty je potenciálně nebezpečná operace. Tuto funkci doporučujeme používat pečlivě.
 
-Následující kód obsahuje příklad.
+Následující kód poskytuje příklad.
 
 ```cpp
 struct RGB { float r; float g; float b; };
@@ -702,11 +702,11 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);
 ```
 
-##  <a name="section"></a> Oddíl
+## <a name="section"></a>section
 
-Vrátí dílčí část objektu `array` nacházející se na zadaném umístění a volitelně, který se zadaným rozsahem.
+Vrátí dílčí část objektu `array`, která se nachází na zadaném umístění, a volitelně, která má zadaný rozsah.
 
-```
+```cpp
 array_view<value_type,_Rank> section(
     const Concurrency::index<_Rank>& _Section_origin,
     const Concurrency::extent<_Rank>& _Section_extent) restrict(amp,cpu);
@@ -767,50 +767,50 @@ array_view<const value_type,3> section(
 ### <a name="parameters"></a>Parametry
 
 *_E0*<br/>
-Nejvýznamnější komponenta rozsahu tohoto oddílu.
+Nejvýznamnější součást rozsahu této části.
 
 *_E1*<br/>
-Další na nejvýznamnější komponenta rozsahu tohoto oddílu.
+Další nejvýznamnější součást rozsahu této části...
 
 *_E2*<br/>
 Nejméně významná komponenta rozsahu tohoto oddílu.
 
 *_Ext*<br/>
-[Rozsahu](extent-class.md) určující rozsah oddílu. Počátek je 0.
+Objekt [rozsahu](extent-class.md) , který určuje rozsah oddílu. Počátek je 0.
 
 *_Idx*<br/>
-[Index](index-class.md) určující umístění počátku. Dílčím oddílem je zbytek rozsahu.
+Objekt [indexu](index-class.md) , který určuje umístění původu. Dílčí část je zbývající část rozsahu.
 
 *_I0*<br/>
-Nejvýznamnější komponenta počátku tohoto oddílu.
+Nejvýznamnější součást počátku této části.
 
 *_I1*<br/>
-Další na nejvýznamnější komponenta počátku tohoto oddílu.
+Další důležitou součást počátku této části.
 
 *_I2*<br/>
-Nejméně významná komponenta počátku tohoto oddílu.
+Nejméně významná součást počátku této části.
 
 *_Rank*<br/>
-Řád oddílu.
+Pořadí oddílu
 
 *_Section_extent*<br/>
-[Rozsahu](extent-class.md) určující rozsah oddílu.
+Objekt [rozsahu](extent-class.md) , který určuje rozsah oddílu.
 
 *_Section_origin*<br/>
-[Index](index-class.md) určující umístění počátku.
+Objekt [indexu](index-class.md) , který určuje umístění původu.
 
 *value_type*<br/>
 Datový typ prvků, které jsou zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí dílčí část objektu `array` nacházející se na zadaném umístění a volitelně, který se zadaným rozsahem. Když pouze `index` objektu je zadán, obsahuje dílčí část všechny prvky přidružené k mřížce, které mají indexy větší než indexy prvků v `index` objektu.
+Vrátí dílčí část objektu `array`, která se nachází na zadaném umístění, a volitelně, která má zadaný rozsah. Je-li zadán pouze objekt `index`, obsahuje dílčí část všechny prvky v přidružené mřížce, které mají indexy větší než indexy prvků v objektu `index`.
 
-##  <a name="view_as"></a> view_as –
+## <a name="view_as"></a>view_as
 
-Opětovně interpretuje objekt toto pole jako [array_view](array-view-class.md) jiné hodnosti.
+Přeloží toto pole jako [array_view](array-view-class.md) jiného pořadí.
 
-```
+```cpp
 template <int _New_rank>
 array_view<value_type,_New_rank> view_as(
     const Concurrency::extent<_New_rank>& _View_extent) restrict(amp,cpu);
@@ -823,18 +823,18 @@ array_view<const value_type,_New_rank> view_as(
 ### <a name="parameters"></a>Parametry
 
 *_New_rank*<br/>
-Řád objektu `extent` objekt předán jako parametr.
+Pořadí objektu `extent` předaného jako parametr.
 
 *_View_extent*<br/>
-Rozsah, který se používá pro tvorbu nového [array_view](array-view-class.md) objektu.
+Rozsah, který se používá k vytvoření nového objektu [array_view](array-view-class.md) .
 
 *value_type*<br/>
-Datový typ prvků v původním `array` objektu a ve vráceném `array_view` objektu.
+Datový typ prvků v původním objektu `array` a vráceném objektu `array_view`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Array_view](array-view-class.md) , který je vytvořen.
+Objekt [array_view](array-view-class.md) , který je vytvořen.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

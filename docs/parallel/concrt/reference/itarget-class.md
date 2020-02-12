@@ -13,59 +13,59 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: dc9eacad744536e640417a4ebf51b975bd05bcc7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339535"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142033"
 ---
 # <a name="itarget-class"></a>ITarget – třída
 
-`ITarget` Třídy je rozhraní pro všechny cílové bloky. Cílovým blokům využívat zprávy, nabízí jim `ISource` bloky.
+Třída `ITarget` je rozhraní pro všechny cílové bloky. Cílové bloky využívají pro `ISource` bloků zprávy, které jim nabízí.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class T>
 class ITarget;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Datový typ datové části v rámci přijal cílový blok zpráv.
+*Š*<br/>
+Datový typ datové části v rámci zpráv přijatých cílovým blokem.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
-|`filter_method`|Podpis blokem, který vrátí všechny metody `bool` hodnotu, která určí, zda by měl být přijat nabízené zprávy.|
+|`filter_method`|Signatura jakékoli metody používané blokem, která vrací `bool` hodnotu k určení, zda má být nabídnutá zpráva přijata.|
 |`type`|Alias typu pro `T`.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
 |Název|Popis|
 |----------|-----------------|
-|[~ITarget Destructor](#dtor)|Odstraní `ITarget` objektu.|
+|[~ ITarget destruktor](#dtor)|Odstraní objekt `ITarget`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[propagate](#propagate)|Při přepisu v odvozené třídě, asynchronně předává zprávy z zdrojový blok pro tento cílový blok.|
-|[Odeslat](#send)|Při přepisu v odvozené třídě, synchronně předává zprávy na cílový blok.|
-|[supports_anonymous_source](#supports_anonymous_source)|Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, zda blok zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Přepsané metody vrátí-li **true**, cílem nelze odložit nabízené zprávy, jako využití odloženou zprávu později vyžaduje zdroj musí identifikovat jeho sourse odkaz registru.|
+|[šířit](#propagate)|Při přepsání v odvozené třídě asynchronně předává zprávu ze zdrojového bloku do tohoto cílového bloku.|
+|[posílají](#send)|Při přepsání v odvozené třídě synchronně předává zprávu cílovému bloku.|
+|[supports_anonymous_source](#supports_anonymous_source)|Při přepsání v odvozené třídě vrátí hodnotu true nebo false v závislosti na tom, zda blok zprávy akceptuje zprávy nabízené zdrojem, který není propojen s ním. Pokud přepsaná metoda vrátí **hodnotu true**, nemůže cíl odložit nabízenou zprávu, protože spotřeba odložené zprávy v pozdější době vyžaduje, aby byl zdroj identifikován v registru zdrojového odkazu.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[link_source](#link_source)|Při přepisu v odvozené třídě, odkazuje na tento blok zadaný zdroj `ITarget` bloku.|
-|[unlink_source](#unlink_source)|Při přepisu v odvozené třídě, nebude odpojen blok zadaný zdroj z tohoto `ITarget` bloku.|
-|[unlink_sources](#unlink_sources)|Při přepisu v odvozené třídě, nebude odpojen všechny zdrojové bloky z tohoto `ITarget` bloku.|
+|[link_source](#link_source)|Při přepsání v odvozené třídě propojí zadaný zdrojový blok s tímto `ITarget`m blokem.|
+|[unlink_source](#unlink_source)|Při přepsání v odvozené třídě odpojí zadaný zdrojový blok od tohoto bloku `ITarget`.|
+|[unlink_sources](#unlink_sources)|Při přepsání v odvozené třídě odpojí všechny zdrojové bloky z tohoto bloku `ITarget`.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -77,40 +77,40 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="dtor"></a> ~ Itarget –
+## <a name="dtor"></a>~ ITarget
 
-Odstraní `ITarget` objektu.
+Odstraní objekt `ITarget`.
 
-```
+```cpp
 virtual ~ITarget();
 ```
 
-##  <a name="link_source"></a> link_source –
+## <a name="link_source"></a>link_source
 
-Při přepisu v odvozené třídě, odkazuje na tento blok zadaný zdroj `ITarget` bloku.
+Při přepsání v odvozené třídě propojí zadaný zdrojový blok s tímto `ITarget`m blokem.
 
-```
+```cpp
 virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PSource*<br/>
-`ISource` Blokovat, na které se odkazuje na tuto `ITarget` bloku.
+`ISource` blok, který je propojen s tímto blokem `ITarget`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by neměla být volána přímo na `ITarget` bloku. Bloky by měly být propojeny pomocí `link_target` metoda `ISource` bloků, které se vyvolá `link_source` metodu na odpovídající cíle.
+Tato funkce by neměla být volána přímo v bloku `ITarget`. Bloky by měly být propojeny společně pomocí metody `link_target` v blocích `ISource`, která vyvolá metodu `link_source` na odpovídajícím cíli.
 
-##  <a name="propagate"></a> rozšíření
+## <a name="propagate"></a>šířit
 
-Při přepisu v odvozené třídě, asynchronně předává zprávy z zdrojový blok pro tento cílový blok.
+Při přepsání v odvozené třídě asynchronně předává zprávu ze zdrojového bloku do tohoto cílového bloku.
 
-```
+```cpp
 virtual message_status propagate(
     _Inout_opt_ message<T>* _PMessage,
     _Inout_opt_ ISource<T>* _PSource) = 0;
@@ -119,24 +119,24 @@ virtual message_status propagate(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Ukazatel `message` objektu.
+Ukazatel na objekt `message`.
 
 *_PSource*<br/>
-Ukazatele na blok zdroje nabídky zprávy.
+Ukazatel na zdrojový blok, který nabízí zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.
+[Message_status](concurrency-namespace-enums.md) údaj o tom, co se cíli rozhodl s touto zprávou.
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda vyvolá [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimku, pokud buď `_PMessage` nebo `_PSource` parametr je `NULL`.
+Metoda vyvolá výjimku [invalid_argument](../../../standard-library/invalid-argument-class.md) , pokud je `NULL`parametr `_PMessage` nebo `_PSource`.
 
-##  <a name="send"></a> Odeslat
+## <a name="send"></a>posílají
 
-Při přepisu v odvozené třídě, synchronně předává zprávy na cílový blok.
+Při přepsání v odvozené třídě synchronně předává zprávu cílovému bloku.
 
-```
+```cpp
 virtual message_status send(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource) = 0;
@@ -145,61 +145,61 @@ virtual message_status send(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Ukazatel `message` objektu.
+Ukazatel na objekt `message`.
 
 *_PSource*<br/>
-Ukazatele na blok zdroje nabídky zprávy.
+Ukazatel na zdrojový blok, který nabízí zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.
+[Message_status](concurrency-namespace-enums.md) údaj o tom, co se cíli rozhodl s touto zprávou.
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda vyvolá [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimku, pokud buď `_PMessage` nebo `_PSource` parametr je `NULL`.
+Metoda vyvolá výjimku [invalid_argument](../../../standard-library/invalid-argument-class.md) , pokud je `NULL`parametr `_PMessage` nebo `_PSource`.
 
-Použití `send` metoda mimo zahájení zprávu a šíření zpráv v rámci sítě je nebezpečné a může vést k zablokování.
+Použití metody `send` mimo zahájení zprávy a šíření zpráv v síti je nebezpečné a může vést k zablokování.
 
-Když `send` vrátí zprávy buď již byla přijata a přenést na cílový blok, nebo byla zamítnuta v cíli.
+Když `send` vrátí, zpráva buď již byla přijata, a převedena do cílového bloku, nebo byla odmítnuta cílem.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source –
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, zda blok zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Přepsané metody vrátí-li **true**, cílem nelze odložit nabízené zprávy, jako využití odloženou zprávu později vyžaduje zdroj musí identifikovat jeho sourse odkaz registru.
+Při přepsání v odvozené třídě vrátí hodnotu true nebo false v závislosti na tom, zda blok zprávy akceptuje zprávy nabízené zdrojem, který není propojen s ním. Pokud přepsaná metoda vrátí **hodnotu true**, nemůže cíl odložit nabízenou zprávu, protože spotřeba odložené zprávy bude v pozdější době vyžadovat identifikaci zdroje v registru odkazů sourse.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud bloku může přijmout zprávy ze zdroje, který není přidružený k němu **false** jinak.
+**true** , pokud blok může přijmout zprávu ze zdroje, který je neodkazuje na **NEPRAVDA** , jinak.
 
-##  <a name="unlink_source"></a> unlink_source –
+## <a name="unlink_source"></a>unlink_source
 
-Při přepisu v odvozené třídě, nebude odpojen blok zadaný zdroj z tohoto `ITarget` bloku.
+Při přepsání v odvozené třídě odpojí zadaný zdrojový blok od tohoto bloku `ITarget`.
 
-```
+```cpp
 virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_PSource*<br/>
-`ISource` Bloku je byl odpojen od to `ITarget` bloku.
+Odpojování `ISource`ho bloku z tohoto bloku `ITarget`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by neměla být volána přímo na `ITarget` bloku. Bloky by měl odpojení pomocí `unlink_target` nebo `unlink_targets` metody `ISource` bloků, které se vyvolá `unlink_source` metodu na odpovídající cíle.
+Tato funkce by neměla být volána přímo v bloku `ITarget`. Bloky by měly být odpojeny pomocí `unlink_target` nebo `unlink_targets` metody v `ISource` blocích, což vyvolá metodu `unlink_source` na odpovídajícím cíli.
 
-##  <a name="unlink_sources"></a> unlink_sources –
+## <a name="unlink_sources"></a>unlink_sources
 
-Při přepisu v odvozené třídě, nebude odpojen všechny zdrojové bloky z tohoto `ITarget` bloku.
+Při přepsání v odvozené třídě odpojí všechny zdrojové bloky z tohoto bloku `ITarget`.
 
-```
+```cpp
 virtual void unlink_sources() = 0;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [ISource – třída](isource-class.md)

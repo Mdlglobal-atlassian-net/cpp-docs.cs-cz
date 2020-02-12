@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351141"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126370"
 ---
-# <a name="shortvectortraits-structure"></a>short_vector_traits – struktura
+# <a name="short_vector_traits-structure"></a>short_vector_traits – struktura
 
-short_vector_traits – umožňuje načtení základní délku vektoru a skalárním typu typu short vector nebo skalární typ.
+short_vector_traits umožňuje načtení základní délky vektoru a skalárního typu typu krátkého vektoru nebo skalárního typu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,13 +75,13 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 `T`
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -91,13 +91,13 @@ struct short_vector_traits<double_4>;
 
 |Název|Popis|
 |----------|-----------------|
-|[short_vector_traits::short_vector_traits Constructor](#ctor)||
+|[short_vector_traits:: short_vector_traits – konstruktor](#ctor)||
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
 |Název|Popis|
 |----------|-----------------|
-|[short_vector_traits::size – konstanta](#size)||
+|[short_vector_traits:: size – konstanta](#size)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -105,22 +105,22 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a>  short_vector_traits::short_vector_traits – konstruktor
+## <a name="ctor"></a>short_vector_traits:: short_vector_traits – konstruktor
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits::size – konstanta
+## <a name="size"></a>short_vector_traits:: size – konstanta
 
-```
+```cpp
 static int const size = 1;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

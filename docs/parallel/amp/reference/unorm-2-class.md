@@ -28,26 +28,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 33411511809fc9798f6fdf65f5331e2e587990ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405492"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126198"
 ---
-# <a name="unorm2-class"></a>unorm_2 – třída
+# <a name="unorm_2-class"></a>unorm_2 – třída
 
 Představuje krátký vektor dvou normálních čísel bez znaménka.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class unorm_2;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -57,20 +57,20 @@ class unorm_2;
 
 |Název|Popis|
 |----------|-----------------|
-|[unorm_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[unorm_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|unorm_2::get_x||
+|unorm_2:: get_x||
 |unorm_2::get_xy||
-|unorm_2::get_y||
-|unorm_2::get_yx||
+|unorm_2:: get_y||
+|unorm_2:: get_yx||
 |unorm_2::ref_g||
 |unorm_2::ref_r||
 |unorm_2::ref_x||
-|unorm_2::ref_y||
+|unorm_2:: ref_y||
 |unorm_2::set_x||
 |unorm_2::set_xy||
 |unorm_2::set_y||
@@ -80,13 +80,13 @@ class unorm_2;
 
 |Název|Popis|
 |----------|-----------------|
-|unorm_2::Operator--||
-|unorm_2::Operator * =||
-|unorm_2::Operator / =||
-|unorm_2::Operator ++||
-|unorm_2::Operator +=||
-|unorm_2::Operator =||
-|operátor unorm_2::Operator-=||
+|unorm_2:: operator--||
+|unorm_2:: operator * =||
+|unorm_2:: operator/=||
+|unorm_2:: operator + +||
+|unorm_2:: operator + =||
+|unorm_2:: operator =||
+|unorm_2:: operator-=||
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
@@ -98,14 +98,14 @@ class unorm_2;
 
 |Název|Popis|
 |----------|-----------------|
-|unorm_2::g||
-|unorm_2::GR||
-|unorm_2::r||
-|unorm_2::rg||
-|unorm_2::x||
-|unorm_2::XY||
-|unorm_2::y||
-|unorm_2::yx||
+|unorm_2:: g||
+|unorm_2:: gr||
+|unorm_2:: r||
+|unorm_2:: RG||
+|unorm_2:: x||
+|unorm_2:: XY||
+|unorm_2:: y||
+|unorm_2:: yx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -113,15 +113,15 @@ class unorm_2;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm_2 –
+## <a name="ctor"></a>unorm_2
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-```
+```cpp
 unorm_2() restrict(amp,
     cpu);
 
@@ -171,23 +171,23 @@ explicit inline unorm_2(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-##  <a name="unorm_2__size"></a> Velikost
+## <a name="unorm_2__size"></a>hodnota
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

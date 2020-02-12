@@ -12,53 +12,53 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 430190c11ec06a4f26eb9d8c4237552848420ad7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385229"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138890"
 ---
-# <a name="networklinkregistry-class"></a>network_link_registry – třída
+# <a name="network_link_registry-class"></a>network_link_registry – třída
 
-`network_link_registry` Abstraktní základní třída spravuje propojení mezi zdrojovými a cílovými bloky.
+Abstraktní základní třída `network_link_registry` spravuje propojení mezi zdrojovými a cílovými bloky.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class _Block>
 class network_link_registry;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *_Block*<br/>
-Zadejte bloku dat ukládají do `network_link_registry`.
+Datový typ Block, který je uložen v `network_link_registry`.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
-|`const_pointer`|Typ, který poskytuje ukazatel na `const` prvek `network_link_registry` objektu.|
-|`const_reference`|Typ, který poskytuje odkaz na `const` element uložené v `network_link_registry` objekt pro čtení a provádění operací const.|
-|`iterator`|Typ, který poskytuje iterátor, který může číst nebo upravovat libovolný prvek v `network_link_registry` objektu.|
-|`type`|Typ, který představuje typ bloku, které jsou uložené v `network_link_registry` objektu.|
+|`const_pointer`|Typ, který poskytuje ukazatel na prvek `const` v objektu `network_link_registry`.|
+|`const_reference`|Typ, který poskytuje odkaz na `const` prvek uložený v objektu `network_link_registry` pro čtení a provádění operací const.|
+|`iterator`|Typ, který poskytuje iterátor, který může číst nebo upravovat libovolný prvek v objektu `network_link_registry`.|
+|`type`|Typ, který představuje typ bloku uložený v objektu `network_link_registry`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[add](#add)|Při přepisu v odvozené třídě, přidá odkaz `network_link_registry` objektu.|
-|[začít](#begin)|Při přepisu v odvozené třídě vrátí iterátor na první prvek `network_link_registry` objektu.|
-|[Obsahuje](#contains)|Při přepisu v odvozené třídě, hledá `network_link_registry` objekt pro zadaný blok.|
-|[Počet](#count)|Při přepisu v odvozené třídě vrátí počet položek v `network_link_registry` objektu.|
-|[remove](#remove)|Při přepisu v odvozené třídě Odstraní zadaný blok z `network_link_registry` objektu.|
+|[add](#add)|Při přepsání v odvozené třídě přidá odkaz na objekt `network_link_registry`.|
+|[ifunctiondiscovery](#begin)|Při přepsání v odvozené třídě vrátí iterátor na první prvek v objektu `network_link_registry`.|
+|[zobrazí](#contains)|Při přepsání v odvozené třídě vyhledá objekt `network_link_registry` pro zadaný blok.|
+|[count](#count)|Při přepsání v odvozené třídě vrátí počet položek v objektu `network_link_registry`.|
+|[remove](#remove)|Při přepsání v odvozené třídě Odebere zadaný blok z objektu `network_link_registry`.|
 
 ## <a name="remarks"></a>Poznámky
 
-`network link registry` Není bezpečné pro souběžný přístup.
+`network link registry` není bezpečný pro souběžný přístup.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -66,86 +66,86 @@ Zadejte bloku dat ukládají do `network_link_registry`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="add"></a> Přidat
+## <a name="add"></a>přidávání
 
-Při přepisu v odvozené třídě, přidá odkaz `network_link_registry` objektu.
+Při přepsání v odvozené třídě přidá odkaz na objekt `network_link_registry`.
 
-```
+```cpp
 virtual void add(_EType _Link) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který chcete přidat.
+*_Link*<br/>
+Ukazatel na blok, který má být přidán.
 
-##  <a name="begin"></a> začít
+## <a name="begin"></a>ifunctiondiscovery
 
-Při přepisu v odvozené třídě vrátí iterátor na první prvek `network_link_registry` objektu.
+Při přepsání v odvozené třídě vrátí iterátor na první prvek v objektu `network_link_registry`.
 
-```
+```cpp
 virtual iterator begin() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor adresující první prvek `network_link_registry` objektu.
+Iterátor adresující první prvek v objektu `network_link_registry`.
 
 ### <a name="remarks"></a>Poznámky
 
-Je indikován stav koncový iterátor `NULL` odkaz.
+Koncový stav iterátoru je označen odkazem `NULL`.
 
-##  <a name="contains"></a> Obsahuje
+## <a name="contains"></a>zobrazí
 
-Při přepisu v odvozené třídě, hledá `network_link_registry` objekt pro zadaný blok.
+Při přepsání v odvozené třídě vyhledá objekt `network_link_registry` pro zadaný blok.
 
-```
+```cpp
 virtual bool contains(_EType _Link) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který má být vyhledán v `network_link_registry` objektu.
+*_Link*<br/>
+Ukazatel na blok, který je prohledáván v objektu `network_link_registry`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud bloku byla nalezena, **false** jinak.
+**hodnota true** , pokud byl blok nalezen, jinak **false** .
 
-##  <a name="count"></a> Počet
+## <a name="count"></a>výpočtu
 
-Při přepisu v odvozené třídě vrátí počet položek v `network_link_registry` objektu.
+Při přepsání v odvozené třídě vrátí počet položek v objektu `network_link_registry`.
 
-```
+```cpp
 virtual size_t count() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v `network_link_registry` objektu.
+Počet položek v objektu `network_link_registry`.
 
-##  <a name="remove"></a> odebrat
+## <a name="remove"></a>odebrány
 
-Při přepisu v odvozené třídě Odstraní zadaný blok z `network_link_registry` objektu.
+Při přepsání v odvozené třídě Odebere zadaný blok z objektu `network_link_registry`.
 
-```
+```cpp
 virtual bool remove(_EType _Link) = 0;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Propojit*<br/>
-Ukazatele na blok, který se odeberou, pokud se nenašel.
+*_Link*<br/>
+Ukazatel na blok, který má být odebrán, pokud je nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud odkazu byl nalezen a odebrání **false** jinak.
+**true** , pokud byl odkaz nalezen a odebrán, jinak **false** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [single_link_registry – třída](single-link-registry-class.md)<br/>

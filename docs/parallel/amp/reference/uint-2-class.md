@@ -28,26 +28,26 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f01e4d50dc3fab8d7cb909d1ea2f3d1801f0db0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405531"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126207"
 ---
-# <a name="uint2-class"></a>uint_2 – třída
+# <a name="uint_2-class"></a>uint_2 – třída
 
 Představuje krátký vektor dvou celých čísel bez znaménka.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class uint_2;
 ```
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
@@ -57,20 +57,20 @@ class uint_2;
 
 |Název|Popis|
 |----------|-----------------|
-|[uint_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+|[uint_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor inicializuje všechny prvky s 0.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|uint_2::get_x||
+|uint_2:: get_x||
 |uint_2::get_xy||
-|uint_2::get_y||
-|uint_2::get_yx||
+|uint_2:: get_y||
+|uint_2:: get_yx||
 |uint_2::ref_g_Method||
 |uint_2::ref_r_Method||
-|uint_2::ref_x_Method||
-|uint_2::ref_y_Method||
+|uint_2:: ref_x_Method||
+|uint_2:: ref_y_Method||
 |uint_2::set_x||
 |uint_2::set_xy||
 |uint_2::set_y||
@@ -84,16 +84,16 @@ class uint_2;
 |uint_2::operator%=||
 |uint_2::operator&=||
 |uint_2::operator*=||
-|uint_2::Operator / =||
+|uint_2:: operator/=||
 |uint_2::operator^=||
 |uint_2::operator&#124;=||
 |uint_2::operator~||
-|uint_2::Operator ++||
+|uint_2:: operator + +||
 |uint_2::operator+=||
-|uint_2::Operator <\<=||
+|uint_2:: operator <\<=||
 |uint_2::operator=||
 |uint_2::operator-=||
-|uint_2::Operator >> =||
+|uint_2:: operator > > =||
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
@@ -105,13 +105,13 @@ class uint_2;
 
 |Název|Popis|
 |----------|-----------------|
-|uint_2::g||
-|uint_2::GR||
-|uint_2::r||
-|uint_2::rg||
+|uint_2:: g||
+|uint_2:: gr||
+|uint_2:: r||
+|uint_2:: RG||
 |uint_2::x||
 |uint_2::xy||
-|uint_2::y||
+|uint_2:: y||
 |uint_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
@@ -120,15 +120,15 @@ class uint_2;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors.h
+**Záhlaví:** amp_short_vectors. h
 
-**Namespace:** Concurrency::Graphics
+**Obor názvů:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> uint_2 –
+## <a name="ctor"></a>uint_2
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.
+Výchozí konstruktor inicializuje všechny prvky s 0.
 
-```
+```cpp
 uint_2() restrict(amp,
     cpu);
 
@@ -169,23 +169,23 @@ explicit inline uint_2(
 ### <a name="parameters"></a>Parametry
 
 *_V0*<br/>
-Hodnota inicializace prvek 0.
+Hodnota pro inicializaci elementu 0.
 
 *_V1*<br/>
-Hodnota inicializace element 1.
+Hodnota pro inicializaci elementu 1.
 
 *_V*<br/>
-Hodnota inicializace.
+Hodnota pro inicializaci.
 
-*Ji_né*<br/>
+*_Other*<br/>
 Objekt použitý k inicializaci.
 
-##  <a name="uint_2__size"></a> Velikost
+## <a name="uint_2__size"></a>hodnota
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

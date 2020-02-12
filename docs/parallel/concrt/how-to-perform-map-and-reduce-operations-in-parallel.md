@@ -1,47 +1,47 @@
 ---
-title: 'Postupy: Proveďte mapování a redukční operace paralelně'
+title: 'Postupy: Paralelní provádění operací mapování a redukce'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_transform function, example
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 599e46c05a91a1f2ea6e317fe024d3c98a78977f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412706"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141712"
 ---
-# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Postupy: Proveďte mapování a redukční operace paralelně
+# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Postupy: Paralelní provádění operací mapování a redukce
 
-Tento příklad ukazuje způsob použití [concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) a [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algoritmy a [concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)třídy počítání výskytů slova v souborech.
+Tento příklad ukazuje, jak použít algoritmus [Concurrency::p arallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) a [concurrency::p arallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) a třídu [Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) k počítání výskytů slov v souborech.
 
-A *mapy* operace platí funkce pro každou hodnotu v pořadí. A *snížit* operace kombinuje elementy sekvence do jedné hodnoty. Můžete použít standardní knihovny C++ [std::transform](../../standard-library/algorithm-functions.md#transform) a [std::accumulate](../../standard-library/numeric-functions.md#accumulate) functions k provádění mapování a redukční operace. Kvůli zvýšení výkonu pro mnoho problémů se však můžete použít `parallel_transform` algoritmus paralelní provádění operací mapování a `parallel_reduce` algoritmus k provedení této operace zmenšení paralelně. V některých případech můžete použít `concurrent_unordered_map` provádět na mapě a snížit v rámci jedné operace.
+Operace *mapování* aplikuje funkci na každou hodnotu v sekvenci. Operace *snížení* kombinuje prvky sekvence do jedné hodnoty. Pomocí C++ standardních knihoven funkce [std:: Transform](../../standard-library/algorithm-functions.md#transform) a [std:: Akumulovaná](../../standard-library/numeric-functions.md#accumulate) můžete provádět mapování a snižovat operace. Pro zlepšení výkonu mnoha problémů však můžete použít algoritmus `parallel_transform` k paralelnímu provedení operace mapování a algoritmus `parallel_reduce` k paralelnímu provedení operace zmenšení. V některých případech můžete použít `concurrent_unordered_map` k provedení mapy a zmenšení v jedné operaci.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad počítá výskyty slov v souborech. Používá [std::vector](../../standard-library/vector-class.md) představující obsah dva soubory. Operace mapy vypočítá výskyty jednotlivých slov v každé vektoru. Operace zmenšení nahromadí počty slov v obou vektorů.
+Následující příklad spočítá výskyt slov v souborech. Používá [std:: Vector](../../standard-library/vector-class.md) k reprezentaci obsahu dvou souborů. Operace map počítá výskyty každého slova v každém vektoru. Operace zmenšení nashromáždí počet slov v obou vektorech.
 
 [!code-cpp[concrt-parallel-map-reduce#1](../../parallel/concrt/codesnippet/cpp/how-to-perform-map-and-reduce-operations-in-parallel_1.cpp)]
 
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `parallel-map-reduce.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+Chcete-li zkompilovat kód, zkopírujte jej a vložte jej do projektu aplikace Visual Studio nebo jej vložte do souboru s názvem `parallel-map-reduce.cpp` a poté spusťte následující příkaz v okně příkazového řádku sady Visual Studio.
 
-**cl.exe /EHsc parallel-map-reduce.cpp**
+> **CL. exe/EHsc Parallel-map-Reduce. cpp**
 
 ## <a name="robust-programming"></a>Robustní programování
 
-V tomto příkladu můžete použít `concurrent_unordered_map` třída, která je definovaná v concurrent_unordered_map.h—to provádět mapy a omezení v rámci jedné operace.
+V tomto příkladu můžete použít třídu `concurrent_unordered_map`, která je definována v concurrent_unordered_map. h – pro provedení mapy a zmenšení v jedné operaci.
 
 [!code-cpp[concrt-parallel-map-reduce#2](../../parallel/concrt/codesnippet/cpp/how-to-perform-map-and-reduce-operations-in-parallel_2.cpp)]
 
-Obvykle paralelizovat zůstal jenom vnější nebo vnitřní smyčku. Paralelní zpracování vnitřní smyčky, pokud máte relativně malý počet souborů a každý soubor obsahuje mnoho slova. Paralelní zpracování vnější smyčky, pokud máte relativně velkým množstvím souborů a každý soubor obsahuje několik slov.
+Obvykle se paralelizovat jenom vnější nebo vnitřní smyčka. Paralelizovat vnitřní smyčku, pokud máte relativně málo souborů a každý soubor obsahuje mnoho slov. Paralelizovat vnější smyčka, pokud máte relativně mnoho souborů a každý soubor obsahuje několik slov.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)<br/>
-[parallel_transform Function](reference/concurrency-namespace-functions.md#parallel_transform)<br/>
-[parallel_reduce Function](reference/concurrency-namespace-functions.md#parallel_reduce)<br/>
+[parallel_transform funkce](reference/concurrency-namespace-functions.md#parallel_transform)<br/>
+[parallel_reduce funkce](reference/concurrency-namespace-functions.md#parallel_reduce)<br/>
 [concurrent_unordered_map – třída](../../parallel/concrt/reference/concurrent-unordered-map-class.md)

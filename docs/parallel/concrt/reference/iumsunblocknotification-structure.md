@@ -9,20 +9,20 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: bdf083e2ad418269e49e53dc164f2a60f693d5d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4fd95b1f11ed6edac26cb03e41e8b650acfafa3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180209"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139973"
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification – struktura
 
-Představuje oznámení ze Správce prostředků, že proxy vlákna, která zablokuje a aktivuje návrat do plánovače určené plánování kontextu má odblokováno a je připravený k naplánování. Toto rozhraní je neplatný, jakmile vrácený kontext spuštění přidružené vlákno proxy, `GetContext` přeplánovat metody.
+Představuje oznámení z Správce prostředků, který proxy vlákno zablokovalo a aktivovalo návrat do určeného časového kontextu plánovače, který je odblokovaný a připravený k naplánování. Toto rozhraní je po přeplánování přidruženého kontextu spuštění, který je vrácen z metody `GetContext`, neplatné.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 struct IUMSUnblockNotification;
 ```
 
@@ -32,8 +32,8 @@ struct IUMSUnblockNotification;
 
 |Název|Popis|
 |----------|-----------------|
-|[Iumsunblocknotification::getcontext –](#getcontext)|Vrátí `IExecutionContext` rozhraní pro provádění kontextu přidruženého k proxy vlákna, která má odblokováno. Po návratu tato metoda a změnil základního kontextu spuštění prostřednictvím volání `IThreadProxy::SwitchTo` metody tohoto rozhraní už není platný.|
-|[Iumsunblocknotification::getnextunblocknotification –](#getnextunblocknotification)|Vrátí Další `IUMSUnblockNotification` rozhraní v řetězu certifikátů, metoda vrátí `IUMSCompletionList::GetUnblockNotifications`.|
+|[IUMSUnblockNotification –:: GetContext](#getcontext)|Vrátí rozhraní `IExecutionContext` pro kontext spuštění přidružený k proxy vlákna, které bylo odblokováno. Až tato metoda vrátí a podkladový kontext spuštění byl přeplánován prostřednictvím volání metody `IThreadProxy::SwitchTo`, toto rozhraní již není platné.|
+|[IUMSUnblockNotification –:: Getnextunblocknotification –](#getnextunblocknotification)|Vrátí další `IUMSUnblockNotification` rozhraní v řetězci vráceném z metody `IUMSCompletionList::GetUnblockNotifications`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,35 +41,35 @@ struct IUMSUnblockNotification;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm.h
+**Záhlaví:** concrtrm. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="getcontext"></a>  Iumsunblocknotification::getcontext – metoda
+## <a name="getcontext"></a>IUMSUnblockNotification –:: GetContext – Metoda
 
-Vrátí `IExecutionContext` rozhraní pro provádění kontextu přidruženého k proxy vlákna, která má odblokováno. Po návratu tato metoda a změnil základního kontextu spuštění prostřednictvím volání `IThreadProxy::SwitchTo` metody tohoto rozhraní už není platný.
+Vrátí rozhraní `IExecutionContext` pro kontext spuštění přidružený k proxy vlákna, které bylo odblokováno. Až tato metoda vrátí a podkladový kontext spuštění byl přeplánován prostřednictvím volání metody `IThreadProxy::SwitchTo`, toto rozhraní již není platné.
 
-```
+```cpp
 virtual IExecutionContext* GetContext() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`IExecutionContext` Rozhraní pro kontext spuštění pro proxy vlákna, která má odblokováno.
+Rozhraní `IExecutionContext` pro kontext spuštění do proxy vlákna, které odblokovalo.
 
-##  <a name="getnextunblocknotification"></a>  Iumsunblocknotification::getnextunblocknotification – metoda
+## <a name="getnextunblocknotification"></a>IUMSUnblockNotification –:: Getnextunblocknotification – – metoda
 
-Vrátí Další `IUMSUnblockNotification` rozhraní v řetězu certifikátů, metoda vrátí `IUMSCompletionList::GetUnblockNotifications`.
+Vrátí další `IUMSUnblockNotification` rozhraní v řetězci vráceném z metody `IUMSCompletionList::GetUnblockNotifications`.
 
-```
+```cpp
 virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Další `IUMSUnblockNotification` rozhraní v řetězu certifikátů, metoda vrátí `IUMSCompletionList::GetUnblockNotifications`.
+Další `IUMSUnblockNotification` rozhraní v řetězci vráceném z metody `IUMSCompletionList::GetUnblockNotifications`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [IUMSScheduler – struktura](iumsscheduler-structure.md)<br/>

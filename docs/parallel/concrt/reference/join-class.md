@@ -16,33 +16,33 @@ f1_keywords:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f75cf8483e7d6d65d118cc8f0ea756302d1b1d7c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343867"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139850"
 ---
 # <a name="join-class"></a>join – třída
 
-A `join` blok zpráv je jeden cíl, více zdroje, seřazený `propagator_block` který spojuje dohromady zprávy typu `T` ze všech zdrojů.
+`join` blok pro zasílání zpráv je jeden cíl, řazený `propagator_block`, který kombinuje zprávy typu `T` od každého ze svých zdrojů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class T,
     join_type _Jtype = non_greedy>
 class join : public propagator_block<single_link_registry<ITarget<std::vector<T>>>,
     multi_link_registry<ISource<T>>>;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ datové části zprávy připojený a následně bloku.
+*Š*<br/>
+Typ datové části zpráv, které byly připojeny a šířeny blokem.
 
 *_Jtype*<br/>
-Druh nástroje `join` bloku jedná buď `greedy` nebo `non_greedy`
+Typ `join` blok je, buď `greedy` nebo `non_greedy`
 
 ## <a name="members"></a>Členové
 
@@ -50,21 +50,21 @@ Druh nástroje `join` bloku jedná buď `greedy` nebo `non_greedy`
 
 |Název|Popis|
 |----------|-----------------|
-|[join](#ctor)|Přetíženo. Vytvoří `join` blok zpráv.|
-|[~join Destructor](#dtor)|Odstraní `join` bloku.|
+|[join](#ctor)|Přetíženo. Vytvoří blok pro zasílání zpráv `join`.|
+|[~ Join – destruktor](#dtor)|Odstraní blok `join`.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[accept_message](#accept_message)|Přijme zprávu, která byly nabízeny situace `join` blok zpráv, přenos vlastnictví volajícímu.|
-|[consume_message](#consume_message)|Využívá dříve nabízená zpráva `join` bloku zpráv a vyhrazená v cíli, přenos vlastnictví volajícímu.|
-|[link_target_notification](#link_target_notification)|Zpětné volání, která upozorňuje, že nový cíl je propojená s tím `join` blok zpráv.|
-|[propagate_message](#propagate_message)|Asynchronně předává zprávy ze `ISource` bloku k tomuto `join` blok zpráv. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Vytvoří zprávu výstup obsahující vstupní zprávy z každého zdroje, když máte šíří zprávy. Odešle tento výstupní zprávu pro každý svůj cíl.|
-|[release_message](#release_message)|Uvolní předchozí rezervace zprávy. (Přepíše [source_block::release_message –](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Vyhradí zprávu nabízely dříve v tomto `join` blok zpráv. (Přepíše [source_block::reserve_message –](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Obnoví šíření po rezervaci byla uvolněna. (Přepíše [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|
+|[accept_message](#accept_message)|Přijme zprávu, kterou nabídl tento `join` blok pro zasílání zpráv a přenáší vlastnictví volajícímu.|
+|[consume_message](#consume_message)|Spotřebovává zprávu, kterou předtím nabízela služba `join` pro zasílání zpráv a kterou rezervoval cíl, a převádí vlastnictví na volajícího.|
+|[link_target_notification](#link_target_notification)|Zpětné volání upozorňující na to, že nový cíl byl propojen s tímto `join`m blokem zasílání zpráv.|
+|[propagate_message](#propagate_message)|Asynchronně předává zprávu z `ISource` bloku do tohoto `join` bloku zpráv. Je vyvolána metodou `propagate`, když je volána pomocí zdrojového bloku.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Vytvoří výstupní zprávu obsahující vstupní zprávu z každého zdroje, pokud všechna rozšířila zprávu. Pošle tuto výstupní zprávu do každého cíle.|
+|[release_message](#release_message)|Uvolní předchozí rezervaci zprávy. (Potlačení [source_block:: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Vyhradí zprávu, kterou dřív nabídl tento `join` blok pro zasílání zpráv. (Potlačení [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Po vydání rezervace pokračuje v šíření. (Potlačení [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -84,53 +84,53 @@ Další informace najdete v tématu [asynchronní bloky zpráv](../../../paralle
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** agents.h
+**Záhlaví:** Agents. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Přijme zprávu, která byly nabízeny situace `join` blok zpráv, přenos vlastnictví volajícímu.
+Přijme zprávu, kterou nabídl tento `join` blok pro zasílání zpráv a přenáší vlastnictví volajícímu.
 
-```
+```cpp
 virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` Nabízených `message` objektu.
+`runtime_object_identity` nabízeného objektu `message`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `message` volající má teď vlastnictví objektu.
+Ukazatel na objekt `message`, u kterého má volající nyní vlastnictví.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Využívá dříve nabízená zpráva `join` bloku zpráv a vyhrazená v cíli, přenos vlastnictví volajícímu.
+Spotřebovává zprávu, kterou předtím nabízela služba `join` pro zasílání zpráv a kterou rezervoval cíl, a převádí vlastnictví na volajícího.
 
-```
+```cpp
 virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objektu spotřebovává.
+`runtime_object_identity` spotřebovaného objektu `message`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `message` volající má teď vlastnictví objektu.
+Ukazatel na objekt `message`, u kterého má volající nyní vlastnictví.
 
 ### <a name="remarks"></a>Poznámky
 
 Podobně jako `accept`, ale vždy předchází volání `reserve`.
 
-##  <a name="ctor"></a> Připojte se k
+## <a name="ctor"></a>zúčastnit
 
-Vytvoří `join` blok zpráv.
+Vytvoří blok pro zasílání zpráv `join`.
 
-```
+```cpp
 join(
     size_t _NumInputs);
 
@@ -160,44 +160,44 @@ join(
 ### <a name="parameters"></a>Parametry
 
 *_NumInputs*<br/>
-Počet vstupů to `join` bude možné blokovat.
+Počet vstupů, které tento blok `join`, bude povolen.
 
 *_Filter*<br/>
-Funkce filtru, která určuje, zda by měl být přijat nabízené zprávy.
+Funkce filtru, která určuje, zda mají být přijaty nabízené zprávy.
 
 *_PScheduler*<br/>
-`Scheduler` Objekt v rámci kterého Úloha šíření pro `join` naplánovaný zasílání zpráv bloku.
+Objekt `Scheduler`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `join`
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Objekt v rámci kterého Úloha šíření pro `join` naplánovaný zasílání zpráv bloku. `Scheduler` Skupina plánování předpokládá používaný objekt.
+Objekt `ScheduleGroup`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `join` Použitý objekt `Scheduler` je odvozen skupinou plánu.
 
 ### <a name="remarks"></a>Poznámky
 
-Modul runtime používá výchozí plánovač, pokud není zadán `_PScheduler` nebo `_PScheduleGroup` parametry.
+Modul runtime používá výchozí Plánovač, pokud nezadáte parametry `_PScheduler` nebo `_PScheduleGroup`.
 
-Typ `filter_method` je funktor s podpisem `bool (T const &)` která je vyvolána situace `join` blok zpráv k určení, zda by měla přijímat nabízená zpráva.
+Typ `filter_method` je funktor s podpisovým `bool (T const &)`, který je vyvolán pomocí tohoto `join` bloku zpráv k určení, zda by měla přijmout nabízenou zprávu.
 
-##  <a name="dtor"></a> ~ join
+## <a name="dtor"></a>~ Join
 
-Odstraní `join` bloku.
+Odstraní blok `join`.
 
-```
+```cpp
 ~join();
 ```
 
-##  <a name="link_target_notification"></a> link_target_notification –
+## <a name="link_target_notification"></a>link_target_notification
 
-Zpětné volání, která upozorňuje, že nový cíl je propojená s tím `join` blok zpráv.
+Zpětné volání upozorňující na to, že nový cíl byl propojen s tímto `join`m blokem zasílání zpráv.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Asynchronně předává zprávy ze `ISource` bloku k tomuto `join` blok zpráv. Je vyvolán `propagate` metodu, když se zavolá pomocí zdrojového bloku.
+Asynchronně předává zprávu z `ISource` bloku do tohoto `join` bloku zpráv. Je vyvolána metodou `propagate`, když je volána pomocí zdrojového bloku.
 
-```
+```cpp
 message_status propagate_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -206,66 +206,66 @@ message_status propagate_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Ukazatel `message` objektu.
+Ukazatel na objekt `message`.
 
 *_PSource*<br/>
-Ukazatele na blok zdroje nabídky zprávy.
+Ukazatel na zdrojový blok, který nabízí zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [message_status –](concurrency-namespace-enums.md) označení cíl rozhodla se zprávy.
+[Message_status](concurrency-namespace-enums.md) údaj o tom, co se cíli rozhodl s touto zprávou.
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Vytvoří zprávu výstup obsahující vstupní zprávy z každého zdroje, když máte šíří zprávy. Odešle tento výstupní zprávu pro každý svůj cíl.
+Vytvoří výstupní zprávu obsahující vstupní zprávu z každého zdroje, pokud všechna rozšířila zprávu. Pošle tuto výstupní zprávu do každého cíle.
 
-```
+```cpp
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Uvolní předchozí rezervace zprávy.
+Uvolní předchozí rezervaci zprávy.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` z `message` objektu se vydávají.
+`runtime_object_identity` vydaných `message` objektu.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Vyhradí zprávu nabízely dříve v tomto `join` blok zpráv.
+Vyhradí zprávu, kterou dřív nabídl tento `join` blok pro zasílání zpráv.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` Nabízených `message` objektu.
+`runtime_object_identity` nabízeného objektu `message`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud zpráva byla úspěšně vyhrazené, **false** jinak.
+**true** , pokud byla zpráva úspěšně rezervována, jinak **false** .
 
 ### <a name="remarks"></a>Poznámky
 
-Po `reserve` je volána, pokud se vrátí **true**– buď `consume` nebo `release` využít nebo uvolnit vlastnictví zprávy musí být volána.
+Po volání `reserve`, pokud vrátí **hodnotu true**, musí být buď volána `consume` nebo `release`, aby bylo možné převzít nebo uvolnit vlastnictví zprávy.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Obnoví šíření po rezervaci byla uvolněna.
+Po vydání rezervace pokračuje v šíření.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
 [choice – třída](choice-class.md)<br/>

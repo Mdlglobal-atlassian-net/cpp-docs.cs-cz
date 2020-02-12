@@ -12,28 +12,28 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1954cd3a69233deed053da5b5fdef0dbc183b80
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252968"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141435"
 ---
 # <a name="combinable-class"></a>combinable – třída
 
-`combinable<T>` Objektu je určená k zajištění vlákno soukromé kopie dat, provádět výpočty bez zámku thread local dílčí během paralelních algoritmů. Na konci paralelní operace můžete vlákno privátní dílčí výpočty pak sloučen do konečný výsledek. Tato třída je možné použít místo sdílené proměnné a může vést k zlepšení výkonu, pokud by jinak byly velké množství kolizí v dané sdílené proměnné.
+Objekt `combinable<T>` je určen k poskytování kopií dat v soukromém vlákně, aby bylo možné provádět místní výpočty bez omezení na více vláken během paralelních algoritmů. Na konci paralelní operace mohou být dílčí výpočty privátních vláken sloučeny do konečného výsledku. Tato třída se dá použít místo sdílené proměnné a může mít za následek zlepšení výkonu, pokud by se v této sdílené proměnné mohlo nacházet hodně sporů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<typename T>
 class combinable;
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Datový typ konečný výsledek sloučení. Typ musí mít konstruktor kopie a výchozí konstruktor.
+*Š*<br/>
+Datový typ finálního sloučeného výsledku. Typ musí mít kopírovací konstruktor a výchozí konstruktor.
 
 ## <a name="members"></a>Členové
 
@@ -41,27 +41,27 @@ Datový typ konečný výsledek sloučení. Typ musí mít konstruktor kopie a v
 
 |Název|Popis|
 |----------|-----------------|
-|[combinable](#ctor)|Přetíženo. Sestaví nový `combinable` objektu.|
-|[~ combinable – destruktor](#dtor)|Odstraní `combinable` objektu.|
+|[combinable](#ctor)|Přetíženo. Vytvoří nový objekt `combinable`.|
+|[~ kombinace destruktoru](#dtor)|Odstraní objekt `combinable`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[clear](#clear)|Vymaže všechny výpočetní mezivýsledků z předchozí spotřeby.|
-|[combine](#combine)|Vypočítá konečnou hodnotu ze sady dílčích výpočty místního vlákna voláním Zadaná kombinace funktor.|
-|[combine_each](#combine_each)|Vypočítá konečnou hodnotu ze sady dílčích výpočty místního vlákna voláním funktor Zadaná kombinace jednou za dílčí výpočtu místního vlákna. Konečný výsledek je shromážděných řešením objektu funkce.|
-|[local](#local)|Přetíženo. Vrátí odkaz na dílčí výpočtu privátní vlákna.|
+|[jejich](#clear)|Vymaže všechny mezilehlé výsledky výpočtů z předchozího použití.|
+|[spojen](#combine)|Vypočítá konečnou hodnotu ze sady dílčích výpočtů místních vláken voláním poskytnuté kombinace funktor.|
+|[combine_each](#combine_each)|Vypočítá konečnou hodnotu ze sady dílčích výpočtů místních vláken voláním dodané kombinace funktor jednou pro místní dílčí výpočet vlákna. Konečný výsledek je shromážděn objektem funkce.|
+|[local](#local)|Přetíženo. Vrátí odkaz na podprocesově privátní výpočet.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[operátor =](#operator_eq)|Přiřadí `combinable` objektu z jiného `combinable` objektu.|
+|[operátor =](#operator_eq)|Přiřadí objekt `combinable` z jiného objektu `combinable`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).
+Další informace naleznete v tématu [Parallel Containers and Objects](../../../parallel/concrt/parallel-containers-and-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -69,23 +69,23 @@ Další informace najdete v tématu [paralelní kontejnery a objekty](../../../p
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ppl.h
+**Záhlaví:** PPL. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="clear"></a> Vymazat
+## <a name="clear"></a>jejich
 
-Vymaže všechny výpočetní mezivýsledků z předchozí spotřeby.
+Vymaže všechny mezilehlé výsledky výpočtů z předchozího použití.
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a> combinable –
+## <a name="ctor"></a>combinable
 
-Sestaví nový `combinable` objektu.
+Vytvoří nový objekt `combinable`.
 
-```
+```cpp
 combinable();
 
 template <typename _Function>
@@ -97,35 +97,35 @@ combinable(const combinable& _Copy);
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ objektu inicializace funktor.
+Typ inicializačního objektu funktor
 
 *_FnInitialize*<br/>
-Funkce, která bude volána k inicializaci každé nové vlákno privátní hodnotu typu `T`. Operátor volání funkce s podpisem musí podporovat `T ()`.
+Funkce, která bude volána pro inicializaci každé nové soukromé hodnoty pro vlákno typu `T`. Musí podporovat operátor volání funkce s podpisem `T ()`.
 
 *_Copy*<br/>
-Existující `combinable` objektu, které se mají zkopírovat do tohoto objektu.
+Existující objekt `combinable`, který se má zkopírovat do tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje nové prvky s výchozí konstruktor pro typ `T`.
+První konstruktor inicializuje nové prvky s výchozím konstruktorem pro typ `T`.
 
-Druhý konstruktor inicializuje nové prvky pomocí inicializace funktor zadaný jako `_FnInitialize` parametru.
+Druhý konstruktor inicializuje nové prvky pomocí inicializačního funktor zadaného jako parametr `_FnInitialize`.
 
 Třetí konstruktor je kopírovací konstruktor.
 
-##  <a name="dtor"></a> ~ combinable –
+## <a name="dtor"></a>~ kombinace
 
-Odstraní `combinable` objektu.
+Odstraní objekt `combinable`.
 
-```
+```cpp
 ~combinable();
 ```
 
-##  <a name="combine"></a> kombinování
+## <a name="combine"></a>spojen
 
-Vypočítá konečnou hodnotu ze sady dílčích výpočty místního vlákna voláním Zadaná kombinace funktor.
+Vypočítá konečnou hodnotu ze sady dílčích výpočtů místních vláken voláním poskytnuté kombinace funktor.
 
-```
+```cpp
 template<typename _Function>
 T combine(_Function _FnCombine) const;
 ```
@@ -133,20 +133,20 @@ T combine(_Function _FnCombine) const;
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ objektu funkce, která bude volána ke sloučení dvou dílčích výpočty místního vlákna.
+Typ objektu funkce, který bude vyvolán pro kombinování dvou dílčích výpočtů místních vláken.
 
 *_FnCombine*<br/>
-Funktor, který se používá ke sloučení dílčí výpočty. Jeho podpis je `T (T, T)` nebo `T (const T&, const T&)`, a musí být asociativních a komutativní.
+Funktor, který se používá ke kombinování dílčích výpočtů. Jeho podpis je `T (T, T)` nebo `T (const T&, const T&)`a musí být asociativní a komutativní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konečný výsledek kombinace všechny dílčí výpočty privátní vlákna.
+Konečný výsledek kombinace všech dílčích výpočtů privátních vláken.
 
-##  <a name="combine_each"></a> combine_each –
+## <a name="combine_each"></a>combine_each
 
-Vypočítá konečnou hodnotu ze sady dílčích výpočty místního vlákna voláním funktor Zadaná kombinace jednou za dílčí výpočtu místního vlákna. Konečný výsledek je shromážděných řešením objektu funkce.
+Vypočítá konečnou hodnotu ze sady dílčích výpočtů místních vláken voláním dodané kombinace funktor jednou pro místní dílčí výpočet vlákna. Konečný výsledek je shromážděn objektem funkce.
 
-```
+```cpp
 template<typename _Function>
 void combine_each(_Function _FnCombine) const;
 ```
@@ -154,16 +154,16 @@ void combine_each(_Function _FnCombine) const;
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ objektu funkce, která bude vyvolána zkombinovat jeden dílčí výpočtu místního vlákna.
+Typ objektu funkce, který bude vyvolán pro kombinování jednoho dílčího výpočtu místního vlákna.
 
 *_FnCombine*<br/>
-Funktor, který se používá ke sloučení jeden dílčí výpočtu. Jeho podpis je `void (T)` nebo `void (const T&)`a musí být asociativní a komutativní.
+Funktor, který slouží ke kombinování jednoho dílčího výpočtu. Jeho signatura je `void (T)` nebo `void (const T&)`a musí být asociativní a komutativní.
 
-##  <a name="local"></a> místní
+## <a name="local"></a>místní
 
-Vrátí odkaz na dílčí výpočtu privátní vlákna.
+Vrátí odkaz na podprocesově privátní výpočet.
 
-```
+```cpp
 T& local();
 
 T& local(bool& _Exists);
@@ -172,29 +172,29 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Parametry
 
 *_Exists*<br/>
-Odkaz na logickou hodnotu. Logická hodnota, odkazuje tento argument se nastaví **true** Pokud dílčí výpočtu již existoval v tomto vláknu a nastavte na **false** Pokud jste to byli první dílčí výpočet v tomto vlákně.
+Odkaz na logickou hodnotu. Logická hodnota, na kterou je odkazováno pomocí tohoto argumentu, bude nastavena na **hodnotu true** , pokud dílčí výpočet již existoval v tomto vlákně, a nastavte na **hodnotu false** , pokud se jednalo o první dílčí výpočet v tomto vlákně.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na dílčí výpočtu privátní vlákna.
+Odkaz na dílčí výpočet privátního vlákna.
 
-##  <a name="operator_eq"></a> operátor =
+## <a name="operator_eq"></a>operátor =
 
-Přiřadí `combinable` objektu z jiného `combinable` objektu.
+Přiřadí objekt `combinable` z jiného objektu `combinable`.
 
-```
+```cpp
 combinable& operator= (const combinable& _Copy);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *_Copy*<br/>
-Existující `combinable` objektu, které se mají zkopírovat do tohoto objektu.
+Existující objekt `combinable`, který se má zkopírovat do tohoto objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na tento `combinable` objektu.
+Odkaz na tento objekt `combinable`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [concurrency – obor názvů](concurrency-namespace.md)

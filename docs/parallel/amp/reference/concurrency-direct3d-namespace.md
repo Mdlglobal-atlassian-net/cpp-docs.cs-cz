@@ -10,20 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1374acbd7061afaba372100cf6e69d9d717da8a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405479"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127030"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d – obor názvů
 
-`direct3d` Obor názvů poskytuje funkce podporující spolupráci rozhraní D3D. To umožňuje bezproblémové použití zdrojů rozhraní D3D pro výpočet kódu Knihovny i využití zdrojů vytvořených v knihovně AMP v kódu D3D bez nutnosti vytvářet nadbytečné pomocné kopie. Postupně zrychlí provádění výpočetně náročných oddílů DirectX aplikace s použitím jazyka C++ AMP a použít rozhraní D3D API nad daty vytvořenými výpočty AMP.
+Obor názvů `direct3d` poskytuje funkce, které podporují interoperabilitu rozhraní D3D. Umožňuje použít prostředky D3D k výpočtům v kódu AMP. V kódu D3D taky umožňuje používat prostředky vytvořené v AMP v kódu, aniž byste museli vytvářet nadbytečné mezilehlé kopie. Pomocí C++ amp můžete postupně zrychlit oddíly náročné na výpočetní výkon aplikací rozhraní DirectX a použít rozhraní D3D API pro data vytvořená pomocí výpočtů amp.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 namespace direct3d;
 ```
 
@@ -33,50 +33,50 @@ namespace direct3d;
 
 |Název|Popis|
 |----------|-----------------|
-|[scoped_d3d_access_lock – třída](scoped-d3d-access-lock-class.md)|Obálka RAII pro uzamčení přístupu D3D na `accelerator_view` objektu.|
+|[scoped_d3d_access_lock – třída](scoped-d3d-access-lock-class.md)|Obálka RAII pro zámek přístupu D3D u objektu `accelerator_view`.|
 
 ### <a name="structures"></a>Struktury
 
 |Název|Popis|
 |----------|-----------------|
-|[adopt_d3d_access_lock_t – struktura](adopt-d3d-access-lock-t-structure.md)|Typ tagu pro označení uzamčení přístupu D3D by měla být přijata spíše než získána.|
+|[adopt_d3d_access_lock_t – struktura](adopt-d3d-access-lock-t-structure.md)|Typ značky označující, že by měl být přijat zámek přístupu D3D místo získání.|
 
 ### <a name="functions"></a>Funkce
 
 |Název|Popis|
 |----------|-----------------|
-|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Vrátí absolutní hodnotu argumentu|
-|[Stažení](concurrency-direct3d-namespace-functions-amp.md#clamp)|Přetíženo. Omezí hodnotu proměnné _X na zadaném rozsahu _min do _max|
-|[countbits –](concurrency-direct3d-namespace-functions-amp.md#countbits)|Spočítá počet nastavených bitů v proměnné _X|
-|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Vytvoří [accelerator_view – třída](accelerator-view-class.md) z ukazatele na rozhraní zařízení Direct3D|
-|[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Získá zámek na accelerator_view pro účely bezpečného provádění operací D3D na prostředcích sdílených s accelerator_view|
-|[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|Pokus o získání zámku přístupu D3D na accelerator_view bez blokování.|
-|[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|Uvolněte zámek přístupu D3D na daný objekt accelerator_view.|
-|[firstbithigh –](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Zjistí umístění prvního nastaveného bitu v _X, počínaje bitem nejvyšší a funguje směrem dolů|
-|[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Zjistí umístění prvního nastaveného bitu v _X, počínaje bitem nejnižší a funguje směrem nahoru|
-|[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Získejte rozhraní vyrovnávací paměti rozhraní D3D podkládajícího pole.|
+|[ABS](concurrency-direct3d-namespace-functions-amp.md#abs)|Vrátí absolutní hodnotu argumentu.|
+|[Clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Přetíženo. Svorky _X do zadaného _Min a rozsahu _Max|
+|[countbits –](concurrency-direct3d-namespace-functions-amp.md#countbits)|Spočítá počet sad bitů v _X.|
+|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Vytvoří [třídu accelerator_view](accelerator-view-class.md) z ukazatele na rozhraní zařízení Direct3D.|
+|[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Získá zámek na accelerator_view pro bezpečné provádění operací D3D na prostředcích sdílených s accelerator_view|
+|[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|Došlo k pokusu o získání zámku přístupu D3D na accelerator_view bez blokování.|
+|[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|Uvolněte zámek přístupu D3D na daném accelerator_view.|
+|[firstbithigh –](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Získá umístění prvního nastaveného bitu v _X počínaje nejvyšším bitem pořadí a prací směrem dolů.|
+|[firstbitlow –](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Získá umístění prvního nastaveného bitu v _X počínaje nejnižším bitem pořadí a spolupracuje nahoru.|
+|[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Získá rozhraní vyrovnávací paměti rozhraní D3D, které je podkladové.|
 |[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Porovná dvě hodnoty a vrátí hodnotu, která je větší.|
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Porovná dvě hodnoty a vrátí hodnotu, která je menší.|
-|[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Vrátí příznak logické hodnoty označující, pokud vypršení časového limitu je zakázáno pro zadaný accelerator_view.|
-|[MAD –](concurrency-direct3d-namespace-functions-amp.md#mad)|Přetíženo. Provede operaci aritmetické násobení/sčítání nad třemi argumenty: _X \* _Y + _Z|
+|[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Vrátí logický příznak označující, zda je časový limit pro zadaný accelerator_view zakázán.|
+|[Mad –](concurrency-direct3d-namespace-functions-amp.md#mad)|Přetíženo. Provede aritmetickou operaci násobení nebo přidání na třech argumentech: _X \* _Y + _Z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Vytvoří pole z ukazatele na rozhraní vyrovnávací paměti rozhraní D3D.|
-|[šumu](concurrency-direct3d-namespace-functions-amp.md#noise)|Vygeneruje náhodnou hodnotu pomocí algoritmu Perlinova šumu.|
-|[RADIANS](concurrency-direct3d-namespace-functions-amp.md#radians)|Převede proměnnou _X ze stupňů na radiány.|
-|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Vypočítá rychlou, přibližnou převrácenou hodnotu argumentu|
-|[reversebits –](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Obrátí pořadí bitů v proměnné _X|
-|[Saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Omezí hodnotu proměnné _X z rozsahu 0 až 1|
-|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Přetíženo. Vrátí znaménko argumentu|
-|[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Vrátí smooth Hermitovu interpolaci mezi 0 a 1, pokud _X je v rozsahu [_Min, _Max].|
-|[Krok](concurrency-direct3d-namespace-functions-amp.md#step)|Porovná dvě hodnoty a vrátí hodnotu 0 nebo 1 podle toho, která hodnota je větší|
-|[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Porovná dvě nepodepsané hodnoty a vrátí hodnotu, která je větší.|
+|[neobsažných](concurrency-direct3d-namespace-functions-amp.md#noise)|Generuje náhodnou hodnotu pomocí algoritmu Perlin šumu.|
+|[rad](concurrency-direct3d-namespace-functions-amp.md#radians)|Převede _X ze stupňů na radiány.|
+|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Vypočítá rychlou a přibližnou převrácenou hodnotu argumentu.|
+|[reversebits –](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Obrátí pořadí bitů v _X|
+|[saturate –](concurrency-direct3d-namespace-functions-amp.md#saturate)|Svorky _X v rozsahu od 0 do 1.|
+|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Přetíženo. Vrátí znaménko argumentu.|
+|[smoothstep –](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Vrátí plynulou Hermitovu interpolaci mezi 0 a 1, pokud je _X v rozsahu [_Min, _Max].|
+|[Krok](concurrency-direct3d-namespace-functions-amp.md#step)|Porovná dvě hodnoty, vrátí hodnotu 0 nebo 1 podle toho, která hodnota je větší.|
+|[společnosti](concurrency-direct3d-namespace-functions-amp.md#umax)|Porovná dvě nepodepsané hodnoty a vrátí hodnotu, která je větší.|
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Porovná dvě nepodepsané hodnoty a vrátí hodnotu, která je menší.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp.h
+**Hlavička:** amp. h
 
-**Namespace:** Souběžnost
+**Obor názvů:** Concurrency
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

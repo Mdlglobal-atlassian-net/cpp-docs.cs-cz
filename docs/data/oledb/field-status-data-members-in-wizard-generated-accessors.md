@@ -5,28 +5,28 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 41be62627d79c7207816818f09956a60e8b3facc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707561"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127649"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Datoví členové stavu pole v přístupových objektech generovaných průvodcem
 
 ::: moniker range="vs-2019"
 
-Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](creating-a-consumer-without-using-a-wizard.md).
+Průvodce příjemcem OLE DB ATL není v aplikaci Visual Studio 2019 a novějších k dispozici. Tuto funkci můžete přesto přidat ručně. Další informace najdete v tématu [Vytvoření příjemce bez použití Průvodce](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Při použití **průvodce příjemcem ATL OLE DB** vytvořte příjemce, vygeneruje průvodce datový člen třídy uživatelského záznamu pro každé pole, které jste zadali v mapě sloupců. Každý datový člen je typu `DWORD` a obsahuje stav hodnota odpovídající jeho odpovídající pole.
+Při vytváření příjemce pomocí **průvodce OLE DB příjemce ATL** vygeneruje průvodce datový člen v třídě záznamu uživatele pro každé pole, které zadáte v mapě sloupce. Každý datový člen je typu `DWORD` a obsahuje hodnotu stavu odpovídající příslušnému poli.
 
-Například pro datový člen *m_OwnerID*, průvodce vygeneruje další datové členy stavu pole (*dwOwnerIDStatus*) a jinou pro délky pole (*dwOwnerIDLength*). Také vygeneruje mapu sloupců s COLUMN_ENTRY_LENGTH_STATUS položky.
+Například pro datový člen *m_OwnerID*průvodce vygeneruje další datový člen pro stav pole (*dwOwnerIDStatus*) a druhý pro délku pole (*dwOwnerIDLength*). Také generuje mapu sloupce s položkami COLUMN_ENTRY_LENGTH_STATUS.
 
-To je ukázáno v následujícím kódu:
+Zobrazuje se v následujícím kódu:
 
 ```cpp
 class CAuthorsAccessor
@@ -44,39 +44,39 @@ public:
    DBLENGTH m_dwAuthorLength;
    DBLENGTH m_dwYearBornLength;
 
-    DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
-    SELECT \
-        AuID, \
-        Author, \
-        YearBorn \
-        FROM dbo.Authors")
+   DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
+   SELECT \
+      AuID, \
+      Author, \
+      YearBorn \
+      FROM dbo.Authors")
 
-    BEGIN_COLUMN_MAP(CAuthorsAccessor)
-       COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
-    END_COLUMN_MAP()
+   BEGIN_COLUMN_MAP(CAuthorsAccessor)
+      COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
+   END_COLUMN_MAP()
 ...
 ```
 
 > [!NOTE]
-> Pokud změníte název třídy záznamu uživatele nebo napsat vlastní příjemce, datových proměnných musí předcházet proměnné stavu a délky.
+> Pokud upravíte třídu záznamu uživatele nebo zapíšete vlastního příjemce, musí se datové proměnné nacházet před proměnnými stav a délka.
 
-Můžete použít hodnoty stavu pro účely ladění. Pokud kód vytvořen **průvodce příjemcem ATL OLE DB** generuje chyby kompilace, jako je například DB_S_ERRORSOCCURRED nebo DB_E_ERRORSOCCURRED, měli byste nejdříve zkusit na aktuální hodnoty datoví členové stavu pole. Ty, které obsahují nenulové hodnoty odpovídají sloupcům problematické.
+Hodnoty stavu můžete použít pro účely ladění. Pokud kód generovaný **průvodcem OLE DB příjemce ATL** generuje chyby kompilace, například DB_S_ERRORSOCCURRED nebo DB_E_ERRORSOCCURRED, měli byste se nejprve podívat na aktuální hodnoty datových členů stavu pole. Ty, které mají nenulové hodnoty, odpovídají problematickým sloupcům.
 
-Hodnoty stavu můžete použít také k nastavení hodnoty NULL pro určité pole. To vám pomůže v případech, ve kterých chcete odlišit hodnotu pole jako hodnotu NULL, spíše než nula. Je jenom na vás rozhodnout, zda je platná hodnota nebo hodnota NULL a rozhodnout, jak vaše aplikace bude pracovat. OLE DB definuje DBSTATUS_S_ISNULL jako správný způsob určení na obecné hodnotě NULL. Pokud příjemce čte data a hodnota je null, pole stavu nastavená na DBSTATUS_S_ISNULL. Pokud uživatel chce nastavit hodnotu NULL, příjemce nastaví stav hodnotu DBSTATUS_S_ISNULL před voláním metody zprostředkovatele.
+Hodnoty stavu můžete použít také k nastavení hodnoty NULL konkrétního pole. To vám pomůže v případech, kdy chcete odlišit hodnotu pole jako hodnotu NULL, nikoli nula. Můžete se rozhodnout, jestli je NULL platnou hodnotou nebo speciální hodnotou a rozhodnout, jak ji má aplikace zpracovat. OLE DB definuje DBSTATUS_S_ISNULL jako správný způsob určení obecné hodnoty NULL. Pokud příjemce čte data a hodnota je null, pole stav je nastaveno na DBSTATUS_S_ISNULL. Pokud chce příjemce nastavit hodnotu NULL, příjemce nastaví hodnotu stavu na DBSTATUS_S_ISNULL před voláním zprostředkovatele.
 
-Dále otevřete Oledb.h a vyhledejte DBSTATUSENUM. Pak můžete porovnat číselnou hodnotu nenulovou stavu proti DBSTATUSENUM hodnot výčtu. Pokud název výčtu nestačí říct, co je špatně, přečtěte si téma **stav** tématu **vazby hodnoty dat** část [Příručka programátora technologie OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Toto téma obsahuje tabulky stav hodnot použitá při načtení nebo nastavení data. Informace o délce hodnot najdete v tématu **délka** tématu ve stejném oddílu.
+Pak otevřete OLEDB. h a vyhledejte DBSTATUSENUM. Pak můžete porovnat číselnou hodnotu nenulového stavu s hodnotami výčtu DBSTATUSENUM. Pokud název výčtu není dostačující, abychom vám sdělili, co je chybné, přečtěte si téma **stav** v části **hodnoty dat vazby** v [příručce OLE DB Programmer 's Guide](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Toto téma obsahuje tabulky hodnot stavu používaných při získávání nebo nastavování dat. Informace o délkových hodnotách naleznete v tématu **Length (délka** ) ve stejné části.
 
-## <a name="retrieving-the-length-or-status-of-a-column"></a>Načítání délku nebo stav sloupce
+## <a name="retrieving-the-length-or-status-of-a-column"></a>Načtení délky nebo stavu sloupce
 
-Můžete získat délku sloupce s proměnlivou délkou nebo stav sloupce (Chcete-li zkontrolovat DBSTATUS_S_ISNULL, například):
+Můžete načíst délku sloupce s proměnlivou délkou nebo stav sloupce (pro kontrolu DBSTATUS_S_ISNULL například):
 
-- Chcete-li získat délku, použijte COLUMN_ENTRY_LENGTH – makro.
+- Chcete-li získat délku, použijte makro COLUMN_ENTRY_LENGTH.
 
-- Pokud chcete získat stav, použijte COLUMN_ENTRY_STATUS – makro.
+- Chcete-li získat stav, použijte makro COLUMN_ENTRY_STATUS.
 
-- Obě získáte pomocí COLUMN_ENTRY_LENGTH_STATUS, jak je znázorněno:
+- K získání obou použijte COLUMN_ENTRY_LENGTH_STATUS, jak je znázorněno níže:
 
     ```cpp
     class CProducts
@@ -94,7 +94,7 @@ Můžete získat délku sloupce s proměnlivou délkou nebo stav sloupce (Chcete
     };
     ```
 
-- Jak je znázorněno pak přístup k délku a/nebo stav:
+- Pak přejděte na délku a/nebo stav, jak je znázorněno níže:
 
     ```cpp
     CTable<CAccessor<CProducts >> product;
@@ -110,10 +110,10 @@ Můžete získat délku sloupce s proměnlivou délkou nebo stav sloupce (Chcete
     }
     ```
 
-Při použití `CDynamicAccessor`, délku a stav je vázána pro vás automaticky. Chcete-li načíst hodnoty délky a stavu, použijte `GetLength` a `GetStatus` členské funkce.
+Když použijete `CDynamicAccessor`, bude se pro vás automaticky svázat délka a stav. Pro načtení hodnot Length a status použijte členské funkce `GetLength` a `GetStatus`.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
