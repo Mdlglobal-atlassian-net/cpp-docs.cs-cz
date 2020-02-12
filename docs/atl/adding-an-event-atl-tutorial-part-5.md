@@ -3,69 +3,69 @@ title: Přidání události (ATL – tutoriál, část 5)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-ms.openlocfilehash: 57fc2adaadcca52cfc25736b5f9010fcb65a2ff0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a7c6f38a2f47ec808081e440a200737ad1928a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252560"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127571"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Přidání události (ATL – tutoriál, část 5)
 
-V tomto kroku přidáte `ClickIn` a `ClickOut` událostí do ovládacího prvku ATL. Bude platit `ClickIn` událost, když uživatel klikne v rámci mnohoúhelníků a fire `ClickOut` Pokud uživatel klikne na tlačítko mimo. Úlohy pro přidání události jsou následující:
+V tomto kroku přidáte `ClickIn` a událost `ClickOut` k ovládacímu prvku ATL. Pokud uživatel klikne na možnost mimo jiné, dojde k události `ClickIn`, pokud uživatel klikne v rámci mnohoúhelníku a požáru `ClickOut`. Úkoly pro přidání události jsou následující:
 
-- Přidávání `ClickIn` a `ClickOut` metody
+- Přidání metod `ClickIn` a `ClickOut`
 
-- Generuje knihovnu typů
+- Generování knihovny typů
 
 - Implementace rozhraní bodu připojení
 
-## <a name="adding-the-clickin-and-clickout-methods"></a>Přidání metody clickin – a ClickOut
+## <a name="adding-the-clickin-and-clickout-methods"></a>Přidání metod ClickIn a kliknutí
 
-Pokud jste vytvořili v kroku 2 ovládací prvek ATL, vyberete **spojovací body** zaškrtávací políčko. To vytvoří `_IPolyCtlEvents` rozhraní v souboru Polygon.idl. Všimněte si, že název rozhraní začíná podtržítkem. Toto je konvence, že rozhraní je vnitřní rozhraní. Programy, které umožňují procházet objekty modelu COM proto můžete nechcete zobrazit rozhraní pro uživatele. Všimněte si také, že vyberete **spojovací body** přidejte následující řádek v souboru Polygon.idl označuje, že `_IPolyCtlEvents` je výchozím zdrojovém rozhraní:
+Při vytvoření ovládacího prvku ATL v kroku 2 jste zaškrtli políčko **spojovací body** . Tímto se vytvořilo rozhraní `_IPolyCtlEvents` v souboru mnohoúhelník. idl. Všimněte si, že název rozhraní začíná podtržítkem. Toto je konvence, která označuje, že rozhraní je interní rozhraní. Programy, které umožňují procházení objektů COM, tedy mohou zvolit, že se má pro uživatele zobrazit rozhraní. Všimněte si také, že při výběru **bodů připojení** do souboru mnohoúhelník. idl byly přidány následující řádky, které označují, že `_IPolyCtlEvents` výchozí zdrojové rozhraní:
 
 `[default, source] dispinterface _IPolyCtlEvents;`
 
-Zdrojový atribut označuje, že je zdroj oznámení, takže bude volat toto rozhraní v kontejneru.
+Zdrojový atribut označuje, že ovládací prvek je zdrojem oznámení, takže bude volat toto rozhraní na kontejneru.
 
-Nyní přidejte `ClickIn` a `ClickOut` metod `_IPolyCtlEvents` rozhraní.
+Nyní do rozhraní `_IPolyCtlEvents` přidejte metody `ClickIn` a `ClickOut`.
 
-### <a name="to-add-the-clickin-and-clickout-methods"></a>Chcete-li přidat metody clickin – a ClickOut
+### <a name="to-add-the-clickin-and-clickout-methods"></a>Postup přidání ClickIn a kliknutí na metody
 
-1. V **Průzkumníka řešení**, otevřete Polygon.idl a přidejte následující kód pod `methods:` v `dispInterface_IPolyCtlEvents` deklarace PolygonLib knihovny:
+1. V **Průzkumník řešení**otevřete mnohoúhelník. idl a přidejte následující kód do části `methods:` v deklaraci `dispInterface_IPolyCtlEvents` knihovny PolygonLib:
 
     ```cpp
    [id(1), helpstring("method ClickIn")] void ClickIn([in] LONG x,[in] LONG y);
    [id(2), helpstring("method ClickOut")] void ClickOut([in] LONG x,[in] LONG y);
     ```
 
-`ClickIn` a `ClickOut` metody vzít x a y souřadnice místem kliknutí jako parametry.
+Metody `ClickIn` a `ClickOut` přebírají souřadnice x a y kliklého bodu jako parametry.
 
-## <a name="generating-the-type-library"></a>Generuje knihovnu typů
+## <a name="generating-the-type-library"></a>Generování knihovny typů
 
-Generovat knihovnu typů v tomto okamžiku vzhledem k tomu, že projekt bude používat k získání informací, které potřebuje k vytvoření rozhraní bodu připojení a bod připojení kontejneru rozhraní ovládacího prvku.
+V tomto okamžiku vygenerujte knihovnu typů, protože projekt bude používat k získání informací, které potřebuje k vytvoření rozhraní bodu připojení a rozhraní kontejneru spojovacího bodu pro váš ovládací prvek.
 
-### <a name="to-generate-the-type-library"></a>Vytvoření knihovny typů
+### <a name="to-generate-the-type-library"></a>Generování knihovny typů
 
 1. Znovu sestavte projekt.
 
      -nebo-
 
-1. Klikněte pravým tlačítkem na soubor Polygon.idl v **Průzkumníka řešení** a klikněte na tlačítko **kompilaci** v místní nabídce.
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na soubor mnohoúhelník. idl a v místní nabídce klikněte na **kompilovat** .
 
-Tím se vytvoří soubor Polygon.tlb, což je knihovna typů. Soubor Polygon.tlb není viditelná z **Průzkumníka řešení**, protože to je binární soubor a nemůžete zobrazit nebo upravit přímo.
+Tím se vytvoří soubor mnohoúhelník. tlb, který je vaší knihovnou typů. Soubor mnohoúhelník. tlb není viditelný z **Průzkumník řešení**, protože se jedná o binární soubor a nedá se přímo zobrazit nebo upravit.
 
 ## <a name="implementing-the-connection-point-interfaces"></a>Implementace rozhraní bodu připojení
 
-Implementujte rozhraní bodu připojení a bod připojení kontejneru rozhraní ovládacího prvku. V modelu COM jsou události implementované pomocí mechanismu spojovací body. Přijímat události z objektu modelu COM, vytváří kontejner advisory připojení k bodu připojení, která implementuje objekt modelu COM. Protože objekt modelu COM může mít více bodů připojení, objekt modelu COM také implementuje rozhraní kontejneru bodu připojení. Prostřednictvím tohoto rozhraní můžete určit kontejneru, který spojovací body jsou podporovány.
+Implementujte rozhraní bodu připojení a rozhraní kontejneru spojovacího bodu pro váš ovládací prvek. V modelu COM jsou události implementovány pomocí mechanismu spojovacích bodů. Pokud chcete přijímat události z objektu modelu COM, kontejner vytvoří poradní připojení k bodu připojení, který implementuje objekt COM. Vzhledem k tomu, že objekt COM může mít více spojovacích bodů, objekt COM také implementuje rozhraní kontejneru spojovacího bodu. Prostřednictvím tohoto rozhraní může kontejner určit, které spojovací body se podporují.
 
-Rozhraní, které implementuje bod připojení je volána `IConnectionPoint`, a rozhraní, které implementuje kontejner bod připojení se nazývá `IConnectionPointContainer`.
+Rozhraní, které implementuje spojovací bod, se nazývá `IConnectionPoint`a rozhraní, které implementuje kontejner spojovacího bodu, se nazývá `IConnectionPointContainer`.
 
-Implementaci `IConnectionPoint`, použije průvodce implementace bodu připojení. Tento průvodce vytvoří `IConnectionPoint` rozhraní tak, že knihovna typů pro čtení a provádění funkce pro každou událost, která může být aktivována.
+K implementaci `IConnectionPoint`budete používat Průvodce implementací bodu připojení. Tento průvodce vygeneruje rozhraní `IConnectionPoint` přečtením knihovny typů a implementací funkce pro každou událost, kterou lze aktivovat.
 
-### <a name="to-implement-the-connection-points"></a>K implementaci spojovacích bodů
+### <a name="to-implement-the-connection-points"></a>Implementace přípojných bodů
 
-1. V **Průzkumníku řešení**, otevřete _IPolyCtlEvents_CP.h a přidejte následující kód `public:` výroky `CProxy_IPolyCtlEvents` třídy:
+1. V **Průzkumník řešení**otevřete _IPolyCtlEvents_CP. h a do příkazu `public:` v `CProxy_IPolyCtlEvents` třídy přidejte následující kód:
 
     ```cpp
     VOID Fire_ClickIn(LONG x, LONG y)
@@ -122,40 +122,40 @@ Implementaci `IConnectionPoint`, použije průvodce implementace bodu připojen�
     }
     ```
 
-Zobrazí se, že tento soubor obsahuje třídu s názvem `CProxy_IPolyCtlEvents` , která je odvozena z `IConnectionPointImpl`. _IPolyCtlEvents_CP.h teď definuje dvě metody `Fire_ClickIn` a `Fire_ClickOut`, které přebírají dva parametry souřadnic. Tyto metody volat, pokud chcete vyvolat událost z ovládacího prvku.
+Uvidíte, že tento soubor obsahuje třídu s názvem `CProxy_IPolyCtlEvents`, která je odvozena z `IConnectionPointImpl`. _IPolyCtlEvents_CP. h nyní definuje dvě metody `Fire_ClickIn` a `Fire_ClickOut`, které přebírají dva parametry souřadnic. Tyto metody zavoláte, pokud chcete vyvolat událost z vašeho ovládacího prvku.
 
-Tím, že vytvoříte ovládací prvek s **spojovací body** možnost aktivní, soubor _IPolyCtlEvents_CP.h byla vygenerována. Také přidala `CProxy_PolyEvents` a `IConnectionPointContainerImpl` do ovládacího prvku seznamu více dědičnosti a zveřejnění `IConnectionPointContainer` vám tak, že přidáte odpovídající položky do mapy modelu COM.
+Vytvořením vybraného ovládacího prvku s vybranými **body připojení** se pro vás vygeneroval soubor _IPolyCtlEvents_CP. h. Přidal také `CProxy_PolyEvents` a `IConnectionPointContainerImpl` do seznamu vícenásobné dědičnosti vašeho ovládacího prvku a zpřístupněné `IConnectionPointContainer` pro vás přidáním vhodných položek do mapy modelu COM.
 
-Budete mít, provádění kódu, který podporuje události. Teď přidejte nějaký kód, aby se mohly aktivovat události v tuto chvíli odpovídající. Nezapomeňte, že chcete vyvolat `ClickIn` nebo `ClickOut` událost, když uživatel klikne levým tlačítkem myši v ovládacím prvku. Chcete-li zjistit, když uživatel klikne na tlačítko, přidejte obslužnou rutinu pro `WM_LBUTTONDOWN` zprávy.
+Dokončili jste implementaci kódu pro podporu událostí. Nyní přidejte nějaký kód, který události spustí v příslušném okamžiku. Nezapomeňte, že budete chtít vyvolat událost `ClickIn` nebo `ClickOut`, když uživatel klikne levým tlačítkem myši v ovládacím prvku. Chcete-li zjistit, kdy uživatel klikne na tlačítko, přidejte obslužnou rutinu pro `WM_LBUTTONDOWN`ovou zprávu.
 
-### <a name="to-add-a-handler-for-the-wmlbuttondown-message"></a>Chcete-li přidat obslužné rutiny pro zprávy WM_LBUTTONDOWN
+### <a name="to-add-a-handler-for-the-wm_lbuttondown-message"></a>Přidání obslužné rutiny pro zprávu WM_LBUTTONDOWN
 
-1. V **zobrazení tříd**, klikněte pravým tlačítkem myši `CPolyCtl` třídy a klikněte na tlačítko **vlastnosti** v místní nabídce.
+1. V **zobrazení tříd**klikněte pravým tlačítkem myši na třídu `CPolyCtl` a v místní nabídce klikněte na možnost **vlastnosti** .
 
-1. V **vlastnosti** okna, klikněte na tlačítko **zprávy** ikonu a pak klikněte na tlačítko `WM_LBUTTONDOWN` ze seznamu na levé straně.
+1. V okně **vlastnosti** klikněte na ikonu **zprávy** a potom v seznamu na levé straně klikněte na `WM_LBUTTONDOWN`.
 
-1. V rozevíracím seznamu, který se zobrazí, klikněte na  **\<Přidat > onlbuttondown –**. `OnLButtonDown` Deklaraci obslužné rutiny se přidají do souboru PolyCtl.h a implementaci obslužné rutiny se přidají do PolyCtl.cpp.
+1. V rozevíracím seznamu, který se zobrazí, klikněte **\<přidat > OnLButtonDown**. Deklarace obslužné rutiny `OnLButtonDown` bude přidána do PolyCtl. h a implementace obslužné rutiny bude přidána do PolyCtl. cpp.
 
 Dále upravte obslužnou rutinu.
 
-### <a name="to-modify-the-onlbuttondown-method"></a>Chcete-li změnit onlbuttondown – metoda
+### <a name="to-modify-the-onlbuttondown-method"></a>Postup úpravy metody OnLButtonDown
 
-1. Změňte kód, který se skládá z `OnLButtonDown` metoda ve PolyCtl.cpp (odstranění libovolný kód umístěný v průvodci) tak, aby vypadal takto:
+1. Změňte kód, který zahrnuje metodu `OnLButtonDown` v PolyCtl. cpp (odstranění libovolného kódu uloženého průvodcem) tak, aby vypadal takto:
 
     [!code-cpp[NVC_ATL_Windowing#57](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_2.cpp)]
 
-Tento kód provede použití bodů počítá v `OnDraw` funkci, která vytvoří oblast, která zjistí uživatele myší volání `PtInRegion`.
+Tento kód využívá body, které jsou vypočítány ve funkci `OnDraw` k vytvoření oblasti, která detekuje kliknutí myší uživatele s voláním `PtInRegion`.
 
-*UMsg* parametru je ID zprávy Windows zpracovává. Můžete mít jednu funkci, která zpracovává řadu zpráv. *WParam* a *lParam* parametry jsou standardní hodnoty pro zpracovávanou zprávu. Parametr *bHandled* umožňuje určit, zda funkce zpracování zprávy, nebo ne. Ve výchozím nastavení je hodnota nastavena na hodnotu TRUE označuje, že funkce zpracování zprávy, ale můžete ho nastavit na hodnotu FALSE. To způsobí, že ATL, abyste mohli pokračovat, hledá další funkci obslužné rutiny zprávy k odeslání zprávy do.
+Parametr *uMsg* je ID zpracovávané zprávy systému Windows. To vám umožní mít jednu funkci, která zpracuje určitý rozsah zpráv. Parametry *wParam* a *lParam* jsou standardními hodnotami pro zpracovávanou zprávu. Parametr *bHandled* umožňuje určit, zda funkce zpracovala zprávu, nebo ne. Ve výchozím nastavení je hodnota nastavena na TRUE, aby označovala, že funkce zpracovala zprávu, ale můžete ji nastavit na FALSE. To způsobí, že knihovna ATL bude pokračovat ve vyhledávání jiné funkce obslužné rutiny zpráv, do které se zpráva pošle.
 
-## <a name="building-and-testing-the-control"></a>Vytváření a testování ovládacího prvku
+## <a name="building-and-testing-the-control"></a>Sestavování a testování ovládacího prvku
 
-Vyzkoušejte teď události. Vytvoření ovládacího prvku a znovu spusťte kontejner testů ovládacích prvků ActiveX. Tentokrát, zobrazte okno protokolu událostí. Směrování událostí do okna výstup, klikněte na tlačítko **protokolování** z **možnosti** nabídky a vybereme **protokolu do okna výstup**. Vložit ovládací prvek a akci kliknutím v okně. Všimněte si, že `ClickIn` se aktivuje, pokud klepnete na tlačítko v rámci plného mnohoúhelníku a `ClickOut` se spustí po kliknutí mimo ní.
+Teď Vyzkoušejte své události. Sestavte ovládací prvek a znovu spusťte kontejner testu ovládacího prvku ActiveX. Tentokrát si prohlédněte okno Protokol událostí. Chcete-li směrovat události do okna výstup, klikněte na **protokolování** v nabídce **Možnosti** a vyberte možnost **protokol do okna výstup**. Vložte ovládací prvek a zkuste kliknout v okně. Všimněte si, že `ClickIn` je vyvolána, pokud kliknete na vyplněný mnohoúhelník a `ClickOut` je aktivována, když kliknete na mimo ni.
 
 V dalším kroku přidáte stránku vlastností.
 
-[Zpátky ke kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [ke kroku 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)
+[Zpět ke kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; pro [Krok 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Kurz](../atl/active-template-library-atl-tutorial.md)
