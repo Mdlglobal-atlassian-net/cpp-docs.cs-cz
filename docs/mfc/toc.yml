@@ -323,7 +323,7 @@
           items:
             - name: Automatizace
               href: automation.md
-            - name: Klienti automatizace
+            - name: klienti automatizace
               expanded: false
               items:
                 - name: Klienti automatizace
@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: 'Datové objekty a zdroje dat: Manipulace'
               href: data-objects-and-data-sources-manipulation.md
-        - name: Přetažení (OLE)
-          expanded: false
-          items:
-            - name: Přetažení (OLE)
-              href: drag-and-drop-ole.md
-            - name: 'Přetažení: Implementace zdroje přetažení'
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 'Přetažení: Implementace cíle přetažení'
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 'Přetažení: Přizpůsobení'
-              href: drag-and-drop-customizing.md
+        - name: OLE – přetažení
+          href: drag-and-drop-ole.md
         - name: "Nabídky a\_prostředky (OLE)"
           expanded: false
           items:
@@ -523,7 +514,7 @@
             - name: MFC – ovládací prvky ActiveX
               expanded: false
               items:
-                - name: MFC – ovládací prvky ActiveX
+                - name: ovládací prvky MFC ActiveX
                   href: mfc-activex-controls.md
                 - name: 'MFC – ovládací prvky ActiveX: Optimalizace'
                   expanded: false
@@ -1666,7 +1657,7 @@
     - name: OLE – třídy
       expanded: false
       items:
-        - name: OLE – třídy
+        - name: třídy OLE
           href: ole-classes.md
         - name: OLE – třídy kontejnerů
           href: ole-container-classes.md
@@ -1711,7 +1702,7 @@
     - name: MFC – třídy
       expanded: false
       items:
-        - name: MFC – třídy
+        - name: třídy MFC
           href: reference/mfc-classes.md
         - name: CAccelerateDecelerateTransition – třída
           href: reference/cacceleratedeceleratetransition-class.md
