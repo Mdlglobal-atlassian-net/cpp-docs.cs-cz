@@ -1,23 +1,23 @@
 ---
-title: '&lt;paměť&gt; výčty'
+title: výčty &lt;paměti&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - memory/std::pointer_safety
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
-ms.openlocfilehash: b2f5b50dc1344b95e88742d346e32fc55f821336
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 78cdb0fe6c0d9487500804d21fe4ad4870fcad0f
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243852"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257829"
 ---
-# <a name="ltmemorygt-enums"></a>&lt;paměť&gt; výčty
+# <a name="ltmemorygt-enums"></a>výčty &lt;paměti&gt;
 
-## <a name="pointer_safety"></a> pointer_safety – výčet
+## <a name="pointer_safety"></a>Výčet pointer_safety
 
-Výčet možných hodnot vrácených `get_pointer_safety`.
+Výčet možných hodnot vrácených funkcí `get_pointer_safety`.
 
-```
+```cpp
 class pointer_safety {
    relaxed,
    preferred,
@@ -27,10 +27,10 @@ class pointer_safety {
 
 ### <a name="remarks"></a>Poznámky
 
-Rámci oboru **výčtu** definuje hodnoty, které může být vrácen `get_pointer_safety()`:
+Rozsah **výčtu** definuje hodnoty, které mohou být vráceny `get_pointer_safety()`:
 
-`relaxed` --odvozené neprovádí bezpečné (samozřejmě ukazatelů na objekty deklarované nebo bez přidělení) s ukazateli stejné jako ty bezpečně odvozené.
+`relaxed` ukazatelé nejsou bezpečně odvozené (zjevným ukazatelům na deklarované nebo přidělené objekty) se považují za stejné jako bezpečně odvozené.
 
-`preferred` – stejně jako předtím, ale neprovádí bezpečné odvozené ukazatele by neměla být dereferencována.
+`preferred` – stejně jako dřív, ale nemusíte odvodit ukazatele, které nejsou bezpečně odvozené.
 
-`strict` --odvozené neprovádí bezpečné ukazatele může být zpracovány jinak než tyto bezpečně odvozené.
+`strict` ukazatele, které nejsou bezpečně odvozené, mohou být zpracovány jinak než ty, které jsou bezpečně odvozené.

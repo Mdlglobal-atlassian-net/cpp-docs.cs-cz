@@ -1,5 +1,5 @@
 ---
-title: '&lt;komplexní&gt; operátory'
+title: '&lt;komplexní operátory&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - xcomplex/std::operator!=
@@ -15,20 +15,20 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: a8f8b623ad53b84b8e614a1831d1a060df890931
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244709"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257959"
 ---
-# <a name="ltcomplexgt-operators"></a>&lt;komplexní&gt; operátory
+# <a name="ltcomplexgt-operators"></a>&lt;komplexní operátory&gt;
 
-## <a name="op_neq"></a> Operator! =
+## <a name="op_neq"></a>! = – operátor
 
-Testy pro nerovnost mezi dvěma komplexní čísla, jeden nebo oba z nich může patřit do dílčí typ pro reálné a imaginární části.
+Testy nerovnosti mezi dvěma komplexními čísly, jednu nebo obě mohou patřit do podmnožiny typu pro reálné a imaginární části.
 
-```
+```cpp
 template <class Type>
 bool operator!=(
     const complex<Type>& left,
@@ -47,21 +47,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Komplexní čísla nebo objektu typu jeho parametru má být testována nerovnost.
+*levý*\
+Komplexní číslo nebo objekt typu parametru, který má být testován pro nerovnost.
 
-*doprava*\
-Komplexní čísla nebo objektu typu jeho parametru má být testována nerovnost.
+*pravé*\
+Komplexní číslo nebo objekt typu parametru, který má být testován pro nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud čísla nejsou stejné; **false** Pokud čísla jsou si rovny.
+**true** , pokud čísla nejsou rovna; **false** , pokud jsou čísla shodná.
 
 ### <a name="remarks"></a>Poznámky
 
-Dva komplexní čísla jsou stejné, a pouze v případě jejich skutečné části jsou stejné, a jejich imaginární části jsou si rovny. V opačném případě nerovnost.
+Dvě složitá čísla jsou shodná, pokud jsou jejich skutečné části stejné a jejich imaginární části jsou stejné. V opačném případě jsou nerovné.
 
-Operace je přetížena tak, aby porovnání testy můžete spouštět bez převodu dat na konkrétní formát.
+Operace je přetížena, aby bylo možné provést srovnávací testy bez převodu dat do konkrétního formátu.
 
 ### <a name="example"></a>Příklad
 
@@ -163,12 +163,11 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a> – Operátor\*
+## <a name="op_star"></a>operátor\*
 
-Vynásobí dvě komplexní čísla, jeden nebo oba z nich může patřit do dílčí typ pro reálné a imaginární části.
+Vynásobí dvě složitá čísla, jedno nebo obě, které mohou patřit do podmnožiny typu pro reálné a imaginární části.
 
-```
-
+```cpp
 template <class Type>
 complex<Type> operator*(
     const complex<Type>& left,
@@ -187,19 +186,19 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-První dva komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou \* operace.
+*levý*\
+První ze dvou komplexních čísel nebo číslo, které je typu parametru pro komplexní číslo, které má být vynásobeno operací \*.
 
-*doprava*\
-Druhé dvě komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou \* operace.
+*pravé*\
+Druhý ze dvou komplexních čísel nebo číslo, které je typu parametru pro komplexní číslo, které má být vynásobeno operací \*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komplexní čísla, která je výsledkem násobení dvou čísel, jehož hodnotu a typ jsou určena pomocí parametru vstupy.
+Komplexní číslo, které je výsledkem násobení dvou čísel, jejichž hodnota a typ jsou určeny vstupy parametrů.
 
 ### <a name="remarks"></a>Poznámky
 
-Operace je přetížena tak, aby jednoduché aritmetické operace se můžou provádět bez převodu dat na konkrétní formát.
+Operace je přetížena, aby bylo možné provést jednoduché aritmetické operace bez převodu dat do konkrétního formátu.
 
 ### <a name="example"></a>Příklad
 
@@ -261,12 +260,11 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a> Operator +
+## <a name="op_add"></a>operator + – operátor
 
-Přidá dvě komplexní čísla, jeden nebo oba z nich může patřit do dílčí typ pro reálné a imaginární části.
+Přidává dvě složitá čísla, jedno nebo obě, které mohou patřit do podmnožiny typu pro reálné a imaginární části.
 
-```
-
+```cpp
 template <class Type>
 complex<Type> operator+(
     const complex<Type>& left,
@@ -288,19 +286,19 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-První dva komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, který se přidal + operace.
+*levý*\
+První ze dvou komplexních čísel nebo číslo, které je typu parametru pro komplexní číslo, které má být přidáno operací +.
 
-*doprava*\
-Druhé dvě komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, který se přidal + operace.
+*pravé*\
+Druhý ze dvou komplexních čísel nebo číslo, které je typu parametru pro komplexní číslo, které má být přidáno operací +.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komplexní čísla, která je výsledkem přidání dvou čísel, jehož hodnotu a typ jsou určena pomocí parametru vstupy.
+Komplexní číslo, které je výsledkem sčítání dvou čísel, jejichž hodnota a typ jsou určeny vstupy parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-Operace je přetížena tak, aby jednoduché aritmetické operace se můžou provádět bez převodu dat na konkrétní formát. Unární operátor vrátí *levé*.
+Operace je přetížena, aby bylo možné provést jednoduché aritmetické operace bez převodu dat do konkrétního formátu. Unární operátor vrátí hodnotu *Left*.
 
 ### <a name="example"></a>Příklad
 
@@ -402,9 +400,9 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a> Operator-
+## <a name="operator-"></a>podnikatel
 
-Odečte dva komplexní čísla, jeden nebo oba z nich může patřit do dílčí typ pro reálné a imaginární části.
+Odečte dvě složitá čísla, jedno nebo obě, které mohou patřit do podmnožiny typu pro reálné a imaginární části.
 
 ```cpp
 template <class Type>
@@ -428,21 +426,21 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-První dvě komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, která se bude odečítat-operací.
+*levý*\
+První ze dvou komplexních čísel nebo číslo, které je typu parametru pro komplexní číslo, které má být odečteno operací-.
 
-*doprava*\
-Druhé dvě komplexní čísla nebo čísla, který je parametr typu pro komplexní čísla, která se bude odečítat-operací.
+*pravé*\
+Druhý ze dvou komplexních čísel nebo číslo, které je typu parametru pro komplexní číslo, které má být odečteno operací-.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komplexní čísla, která je výsledkem odečtení *správné* z *levé*, dvě čísla, jejichž hodnoty jsou určena pomocí parametru vstupy.
+Komplexní číslo, které je výsledkem odčítání *zprava* *doleva*, dvě čísla, jejichž hodnoty jsou určeny vstupy parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-Operace je přetížena tak, aby jednoduché aritmetické operace se můžou provádět bez převodu dat na konkrétní formát.
+Operace je přetížena, aby bylo možné provést jednoduché aritmetické operace bez převodu dat do konkrétního formátu.
 
-Unární operátor změní znaménko komplexního čísla a vrátí hodnotu, jejíž skutečné součást je záporné hodnoty z část skutečný počet a jejichž imaginární části je záporné hodnoty imaginární části počet.
+Unární operátor změní znaménko komplexního čísla a vrátí hodnotu, jejíž reálná část je záporná skutečná část vstupní hodnoty a jehož imaginární část je záporná, což je negativní část čísla imaginární části.
 
 ### <a name="example"></a>Příklad
 
@@ -544,9 +542,9 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a> Operator /
+## <a name="op_div"></a>podnikatel
 
-Vydělí dvě komplexní čísla, jeden nebo oba z nich může patřit do dílčí typ pro reálné a imaginární části.
+Rozdělí dvě složitá čísla, jedno nebo obě, které mohou patřit do podmnožiny typu pro reálné a imaginární části.
 
 ```cpp
 template <class Type>
@@ -567,19 +565,19 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Komplexní čísla nebo číslo, které je parametr typu pro komplexní čísla, která je čítač rozdělit podle jmenovatel s / operace.
+*levý*\
+Komplexní číslo nebo číslo, které je typu parametru pro komplexní číslo, které je čitatel vydělené jmenovatelem s operací/.
 
-*doprava*\
-Komplexní čísla nebo číslo, které je parametr typu pro komplexní čísla, která je jmenovatel pro použití se má dělit dělenec s / operace.
+*pravé*\
+Komplexní číslo nebo číslo, které je typu parametru pro komplexní číslo, které je jmenovatelem, který se má použít k rozdělení čitatele na operaci/.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komplexní čísla, která je výsledkem dělení čítači podle jmenovatel hodnoty, které jsou určeny parametrem vstupy.
+Komplexní číslo, které je výsledkem dělení čitatel hodnotou jmenovatele, hodnoty, které jsou určeny vstupy parametrů.
 
 ### <a name="remarks"></a>Poznámky
 
-Operace je přetížena tak, aby jednoduché aritmetické operace se můžou provádět bez převodu dat na konkrétní formát.
+Operace je přetížena, aby bylo možné provést jednoduché aritmetické operace bez převodu dat do konkrétního formátu.
 
 ### <a name="example"></a>Příklad
 
@@ -664,9 +662,9 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a> – Operátor&lt;&lt;
+## <a name="op_lt_lt"></a>operátor&lt;&lt;
 
-Vloží komplexního čísla zadané do výstupního datového proudu.
+Vloží komplexní číslo zadané do výstupního datového proudu.
 
 ```cpp
 template <class Type, class Elem, class Traits>
@@ -678,18 +676,18 @@ basic_ostream<Elem, Traits>& operator<<(
 ### <a name="parameters"></a>Parametry
 
 *Ostr*\
-Výstupní datový proud, do kterého se zadá komplexního čísla.
+Výstupní datový proud, do kterého se zadává komplexní číslo.
 
-*doprava*\
-Komplexní čísla se zapisují do výstupního datového proudu
+*pravé*\
+Komplexní číslo, které se má zadat do výstupního proudu
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zapíše hodnotu zadaného komplexního čísla do *Ostr* v Kartézském formát: ( *skutečné část, imaginární části* ).
+Zapíše hodnotu zadaného komplexního čísla do *OSTR* ve formátu kartézském: ( *skutečná část, imaginární část* ).
 
 ### <a name="remarks"></a>Poznámky
 
-Výstupní datový proud je přetížena tak, aby přijímal jakoukoli formu komplexního čísla a jeho výchozí formát výstupu je Kartézském formátu.
+Výstupní datový proud je přetížený, takže bude akceptovat jakoukoli formu komplexního čísla a výchozí výstupní formát je formát kartézském.
 
 ### <a name="example"></a>Příklad
 
@@ -726,12 +724,11 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>operator = = – operátor
 
-Ověřuje rovnost mezi dvěma komplexní čísla, jeden nebo oba z nich může patřit do dílčí typ pro reálné a imaginární části.
+Testy pro rovnost mezi dvěma komplexními čísly, jeden nebo oba, které mohou patřit do podmnožiny typu pro reálné a imaginární části.
 
-```
-
+```cpp
 template <class Type>
 bool operator==(
     const complex<Type>& left,
@@ -750,21 +747,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Komplexní čísla nebo objektu typu jeho parametru má být testována nerovnost.
+*levý*\
+Komplexní číslo nebo objekt typu parametru, který má být testován pro nerovnost.
 
-*doprava*\
-Komplexní čísla nebo objektu typu jeho parametru má být testována nerovnost.
+*pravé*\
+Komplexní číslo nebo objekt typu parametru, který má být testován pro nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud jsou si rovny; čísla **false** Pokud čísla nejsou stejné.
+**true** , pokud jsou čísla shodná; **false** , pokud nejsou čísla shodná.
 
 ### <a name="remarks"></a>Poznámky
 
-Dva komplexní čísla jsou stejné, a pouze v případě jejich skutečné části jsou stejné, a jejich imaginární části jsou si rovny. V opačném případě nerovnost.
+Dvě složitá čísla jsou shodná, pokud jsou jejich skutečné části stejné a jejich imaginární části jsou stejné. V opačném případě jsou nerovné.
 
-Operace je přetížena tak, aby porovnání testy můžete spouštět bez převodu dat na konkrétní formát.
+Operace je přetížena, aby bylo možné provést srovnávací testy bez převodu dat do konkrétního formátu.
 
 ### <a name="example"></a>Příklad
 
@@ -866,12 +863,11 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a> – Operátor&gt;&gt;
+## <a name="op_gt_gt"></a>operátor&gt;&gt;
 
-Extrahuje komplexní hodnoty ze vstupního datového proudu.
+Extrahuje komplexní hodnotu ze vstupního datového proudu.
 
-```
-
+```cpp
 template <class Type, class Elem, class Traits>
 basic_istream<Elem, Traits>& operator>>(
    basic_istream<Elem, Traits>& Istr,
@@ -881,24 +877,24 @@ basic_istream<Elem, Traits>& operator>>(
 ### <a name="parameters"></a>Parametry
 
 *Istr*\
-Vstupní datový proud, ze které je extrahován komplexního čísla.
+Vstupní datový proud, ze kterého se provádí extrahování komplexního čísla.
 
-*doprava*\
-Komplexní čísla, rozbalený ze vstupního datového proudu.
+*pravé*\
+Komplexní číslo, které je extrahováno ze vstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Načte hodnotu zadaného komplexní čísla z *Istr* a vrátí ji do *správné*.
+Přečte hodnotu zadaného komplexního čísla z *ISTR* a vrátí ji do *pravého*.
 
 ### <a name="remarks"></a>Poznámky
 
-Neplatný vstupní formáty
+Platné vstupní formáty jsou
 
-- *(skutečné část, imaginární části)*
+- *(skutečná část, imaginární část)*
 
-- *(skutečné část)*
+- *(skutečná část)*
 
-- *skutečné část*
+- *Skutečná část*
 
 ### <a name="example"></a>Příklad
 

@@ -1,6 +1,7 @@
 ---
 title: Spuštění příkazu NMAKE
-ms.date: 10/29/2019
+description: Referenční příručka k možnostem příkazového řádku Microsoft NMAKE
+ms.date: 02/09/2020
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: ed56b7cd69b683caa84f184d9d72e70aac12add3
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144537"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257586"
 ---
 # <a name="running-nmake"></a>Spuštění příkazu NMAKE
 
@@ -40,7 +41,7 @@ Možnosti nástroje NMAKE jsou popsány v následující tabulce. Možnosti pře
 | **/C** | Potlačí výchozí výstup, včetně méně závažné chyby nebo varování, časová razítka a Copyright zprávy NMAKE. Potlačí upozornění vydaná v **/k**. |
 | **Parametr** | Zobrazí časová razítka každého vyhodnoceného cíle a závislého a zprávu, pokud cíl neexistuje. Užitečné s parametrem **/p** pro ladění souboru pravidel. Pomocí `!CMDSWITCHES` nastavte nebo zrušte zaškrtnutí políčka **/d** pro část souboru pravidel. |
 | **/E** | Způsobí, že proměnné prostředí přepíší definice makra souboru pravidel. |
-| **/errorreport** [ **žádné** &#124; &#124; **odeslání** **fronty** **výzvy** &#124; ] | Pokud soubor NMAKE. exe během běhu selhává, můžete použít **/errorreport** k odeslání informací společnosti Microsoft o těchto interních chybách.<br /><br /> Další informace najdete v tématu [/errorreport (hlášení chyb interních kompilátorů)](errorreport-report-internal-compiler-errors.md). |
+| **/errorreport** [ **žádné** &#124; &#124; **odeslání** **fronty** **výzvy** &#124; ] | Zastaralé Nastavení [zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting) řízení sestav. |
 | *Název souboru* /f | Určuje *název souboru* jako soubor pravidel. *Název souboru*může předcházet mezera nebo tabulátory. U každého souboru pravidel zadejte **/f** . Chcete-li zadat soubor pravidel ze standardního vstupu, zadejte pomlčku (`-`) pro *název souboru*a ukončete vstup klávesnice buď pomocí **klávesy F6** , nebo **kombinací kláves CTRL + Z**. |
 | **/G** | Zobrazuje soubory pravidel zahrnuté v direktivě `!INCLUDE`. Další informace naleznete v tématu [direktivy předběžného zpracování souboru pravidel](makefile-preprocessing-directives.md). |
 | **/Help**, **/?** | Zobrazí stručný souhrn syntaxe příkazového řádku NMAKE. |
@@ -67,12 +68,12 @@ NMAKE vrátí následující ukončovací kódy:
 
 | Kód | Význam |
 | ---------- | ------------- |
-| 0,8 | Žádná chyba (možná upozornění) |
-| první | Neúplné sestavení (vydáno pouze při použití **/k** ) |
-| odst | Chyba programu, pravděpodobně způsobená jedním z těchto problémů:<br /> – Chyba syntaxe v souboru pravidel<br /> – Chyba nebo ukončení kódu z příkazu<br /> – Přerušení uživatelem |
+| 0 | Žádná chyba (možná upozornění) |
+| 1 | Neúplné sestavení (vydáno pouze při použití **/k** ) |
+| 2 | Chyba programu, pravděpodobně způsobená jedním z těchto problémů:<br /> – Chyba syntaxe v souboru pravidel<br /> – Chyba nebo ukončení kódu z příkazu<br /> – Přerušení uživatelem |
 | 4 | Systémová chyba – nedostatek paměti |
 | 255 | Cíl není aktuální (vydáno pouze při použití **/q** ). |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [NMAKE – referenční zdroje](nmake-reference.md)

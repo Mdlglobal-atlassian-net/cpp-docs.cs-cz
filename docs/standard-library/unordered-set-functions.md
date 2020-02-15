@@ -1,25 +1,24 @@
 ---
-title: '&lt;unordered_set –&gt; funkce'
+title: '&lt;unordered_set&gt; funkce'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243414"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257764"
 ---
-# <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set –&gt; funkce
+# <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt; funkce
 
-## <a name="swap"></a> swap (unordered_set)
+## <a name="swap"></a>swap (unordered_set)
 
 Zamění obsah dvou kontejnerů.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_set <Key, Hash, Pred, Alloc>& left,
@@ -28,27 +27,27 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*\
+\ *klíčů*
 Klíčový typ
 
-*Hodnota hash*\
+\ *hash*
 Typ objektu hashovací funkce
 
 *Před*\
 Typ objektu funkce porovnání rovnosti
 
-*ALLOC*\
+\ *přidělení*
 Třída alokátoru
 
-*doleva*\
-První kontejner přepínat.
+*levý*\
+První kontejner, který se má prohodit.
 
-*doprava*\
-Druhý kontejner přepínat.
+*pravé*\
+Druhý kontejner pro prohození.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony provede `left.` [unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`.
+Funkce šablony provede `left.`[unordered_set:: swap](../standard-library/unordered-set-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -103,11 +102,11 @@ return (0);
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a>swap (unordered_multiset)
 
 Zamění obsah dvou kontejnerů.
 
-```
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -116,27 +115,27 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*\
+\ *klíčů*
 Klíčový typ
 
-*Hodnota hash*\
+\ *hash*
 Typ objektu hashovací funkce
 
 *Před*\
 Typ objektu funkce porovnání rovnosti
 
-*ALLOC*\
+\ *přidělení*
 Třída alokátoru
 
-*doleva*\
-První kontejner přepínat.
+*levý*\
+První kontejner, který se má prohodit.
 
-*doprava*\
-Druhý kontejner přepínat.
+*pravé*\
+Druhý kontejner pro prohození.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony provede `left.` [unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.
+Funkce šablony provede `left.`[unordered_multiset:: swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Příklad
 

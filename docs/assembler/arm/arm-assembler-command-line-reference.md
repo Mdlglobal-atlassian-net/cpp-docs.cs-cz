@@ -1,90 +1,88 @@
 ---
-title: Referenční dokumentace pro použití nástroje assembleru ARM v příkazovém řádku
-ms.date: 08/30/2018
+title: Referenční dokumentace pro použití nástroje assembleru ARM na příkazovém řádku
+description: Referenční příručka k možnostem příkazového řádku Microsoft ARM assembleru
+ms.date: 02/09/2020
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-ms.openlocfilehash: f49b59a81fbe5f11c0f219d1e1fe83a4ee811c7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63273e8d21e7a28574ec79d62c15f29ee59cd50
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62162132"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257376"
 ---
-# <a name="arm-assembler-command-line-reference"></a>Referenční dokumentace pro použití nástroje assembleru ARM v příkazovém řádku
+# <a name="arm-assembler-command-line-reference"></a>Referenční dokumentace pro použití nástroje assembleru ARM na příkazovém řádku
 
-Tento článek obsahuje informace o assembler Microsoft ARM *armasm*, které zkompiluje jazyk sestavení ARMv7 Thumb do implementace společnosti Microsoft z Common Object File Format (COFF). Propojovací program můžete propojit COFF kód s kódem v objektu, který je vytvořen assembleru ARM nebo kompilátor jazyka C, společně s objekt knihovny, které jsou vytvořené nástrojem librarian.
+Tento článek poskytuje informace z příkazového řádku pro Microsoft ARM Assembler, **armasm**. **armasm** sestaví ARMv7 jazyk pro sestavení miniatur do implementace formátu COFF (Common Object File Format) společnosti Microsoft. Linker může propojit objekty kódu COFF vytvořené pomocí rozhraní ARM Assembler i kompilátoru jazyka C. Může se propojit buď s knihovnami objektů vytvořenými pomocí Librarian.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **armasm** [*možnosti*] *zdrojový soubor* *objectfile*
-> **armasm**  [*možnosti*]  **-o**  *objectfile*  *zdrojový soubor*
+> **`armasm`** [*možnosti*] *source_file* *object_file*\
+> **`armasm`** [*možnosti*] **`-o`** *object_file* *source_file*
 
 ### <a name="parameters"></a>Parametry
 
-*Možnosti*<br/>
-Kombinace nuly nebo více z následujících akcí:
+*možnosti*\
+Kombinace nuly nebo více z následujících možností:
 
-- **-chyby** *název souboru*<br/>
-   Přesměrovat chybové zprávy a upozornění na *filename*.
+- **`-errors`** *název souboru*\
+   Přesměruje chyby a varovné zprávy na *název souboru*.
 
-- **-i** *dir*[**;** <em>dir</em>]<br/>
-   Přidáte do cesty hledání zahrnutí zadaných adresářích.
+- **`-i`** *dir*[ **`;`** <em>dir</em>] \
+   Přidejte zadané adresáře do cesty pro hledání vložených souborů.
 
-- **-předdefinovat** *– direktiva*<br/>
-   Zadejte direktivu SETA, SETL nebo sady pro předdefinování symbol.<br/>
-   Příklad: **armasm.exe-předdefinovat source.asm "COUNT SETA 150"**<br/>
-   Další informace najdete v tématu [kompilátoru ARM armasm referenční příručka](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
+- **`-predefine`** *direktiva*\
+   Pro předdefinovaný symbol zadejte direktivu SETA, SETL nebo SETS. \
+   Příklad: `armasm.exe -predefine "COUNT SETA 150" source.asm`\
+   Další informace najdete v [Referenční příručce k armasm kompilátoru ARM](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
 
-- **-nowarn**<br/>
-   Zakážete všechna upozornění.
+- **`-nowarn`**\
+   Zakáže všechny varovné zprávy.
 
-- **-Ignorovat** *upozornění*<br/>
-   Zadané upozornění vypněte. Možné hodnoty najdete v části o upozornění.
+- **`-ignore`** *Upozornění*\
+   Zakáže zadané upozornění. Možné hodnoty najdete v části o upozorněních.
 
-- **– Nápověda**<br/>
-   Vytisknout zprávu Nápověda k příkazovému řádku.
+- **`-help`**\
+   Vytiskněte zprávu Help příkazového řádku.
 
-- **-machine** *počítače*<br/>
-   Zadejte typ počítače nastavit v záhlaví PE.  Možné hodnoty pro *počítač* jsou:<br/>
-   **ARM**– nastaví typ počítače IMAGE_FILE_MACHINE_ARMNT. Toto nastavení je výchozí.<br/>
-   **JEZDEC**– nastaví typ počítače IMAGE_FILE_MACHINE_THUMB.
+- **`-machine`** *počítač*\
+   Zadejte typ počítače, který se má nastavit v hlavičce PE.  Možné hodnoty pro *počítač* : \
+   **ARM**– nastaví typ počítače na IMAGE_FILE_MACHINE_ARMNT. Tato možnost je výchozí. \
+   **Palec**– nastaví typ počítače na IMAGE_FILE_MACHINE_THUMB.
 
-- **-oldit**<br/>
-   Vygenerování ARMv7 style IT bloky.  Ve výchozím nastavení jsou kompatibilní s ARMv8 IT bloky jsou generovány.
+- **`-oldit`**\
+   Vygenerujte bloky ARMv7-Style.  Ve výchozím nastavení jsou vygenerovány bloky IT kompatibilní s ARMv8.
 
-- **-prostřednictvím** *název souboru*<br/>
-   Přečtěte si další argumenty příkazového řádku z *filename*.
+- **`-via`** *název souboru*\
+   Přečtěte si další argumenty příkazového řádku z *názvu souboru*.
 
-- **-16**<br/>
-   Poskládejte si zdroj jako pokyny Thumb 16 bitů.  Toto nastavení je výchozí.
+- **`-16`**\
+   Sestavte zdroj jako 16bitové instrukce pro palec.  Tato možnost je výchozí.
 
-- **-32**<br/>
-   Poskládejte si zdroj jako 32-bit ARM pokyny.
+- **`-32`**\
+   Sestavte zdroj jako 32 instrukcí ARM.
 
-- **-g**<br/>
-   Generovat ladicí informace.
+- **`-g`**\
+   Vygeneruje ladicí informace.
 
-- **-errorReport:** *možnost*<br/>
-   Zadejte jak interní assembler jsou hlášeny chyby do Microsoftu.  Možné hodnoty pro *možnost* jsou:<br/>
-   **žádný**– Neodesílat sestavy.<br/>
-   **řádek**– výzva k zprávy odesílat hned.<br/>
-   **fronty**– výzva k odeslání zprávy při dalším přihlášení správce. Toto nastavení je výchozí.<br/>
-   **Odeslat**– odeslání sestavy automaticky.
+- *možnost*`-errorReport:`\
+   Tato možnost je zastaralá. Od Windows Vista se hlášení chyb řídí nastavením [zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-*zdrojový soubor*<br/>
+*source_file*\
 Název zdrojového souboru.
 
-*objectfile*<br/>
-Název souboru objektu (výstup).
+*object_file*\
+Název souboru objektu (Output).
 
 ## <a name="remarks"></a>Poznámky
 
-Následující příklad ukazuje, jak používat armasm v rámci typického scénáře. Nejprve pomocí armasm sestavení souboru jazyka assembleru zdroje (asm) do souboru objektů (.obj). Potom použijte cl – kompilátor příkazového řádku jazyka C pro kompilaci zdrojového (.c) a také určit možnost propojit soubor objektu ARM.
+Následující příklad ukazuje, jak používat armasm v typickém scénáři. Nejprve pomocí armasm Sestavte soubor zdrojového jazyka (. ASM) na soubor objektu (. obj). Pak použijte kompilátor C příkazového řádku CL ke kompilaci zdrojového souboru (. C) a také Určete možnost linkeru k propojení souboru objektu ARM.
 
-**armasm myasmcode.asm -o myasmcode.obj**
+```cmd
+armasm myasmcode.asm -o myasmcode.obj
+cl myccode.c /link myasmcode.obj
+```
 
-**cl myccode.c/Link myasmcode.obj**
+## <a name="see-also"></a>Viz také
 
-## <a name="see-also"></a>Viz také:
-
-[Diagnostické zprávy assembleru ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>
-[Direktivy assembleru ARM](../../assembler/arm/arm-assembler-directives.md)<br/>
+[Diagnostické zprávy assembleru ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)\
+[Direktivy assembleru ARM](../../assembler/arm/arm-assembler-directives.md)

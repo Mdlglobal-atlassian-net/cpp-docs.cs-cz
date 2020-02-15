@@ -1,7 +1,7 @@
 ---
 title: Možnosti linkeru MSVC
 description: Seznam možností podporovaných linkerem odkazů společnosti Microsoft.
-ms.date: 09/24/2019
+ms.date: 02/09/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
-ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
+ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712691"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257543"
 ---
 # <a name="linker-options"></a>Možnosti linkeru
 
@@ -31,7 +31,7 @@ V následující tabulce jsou uvedeny možnosti pro soubor LINK. exe. Další in
 
 - [Vyhrazená slova](reserved-words.md)
 
-V příkazovém řádku Možnosti linkeru nerozlišují velká a malá písmena; například/Base a/BASE znamenají stejnou věc. Podrobnosti o tom, jak zadat jednotlivé možnosti na příkazovém řádku nebo v sadě Visual Studio, najdete v dokumentaci k této možnosti.
+V příkazovém řádku Možnosti linkeru nerozlišují velká a malá písmena; například `/base` a `/BASE` znamenají stejnou věc. Podrobnosti o tom, jak zadat jednotlivé možnosti na příkazovém řádku nebo v sadě Visual Studio, najdete v dokumentaci k této možnosti.
 
 K určení některých možností linkeru můžete použít direktivu pragma [Komentáře](../../preprocessor/comment-c-cpp.md) .
 
@@ -64,21 +64,21 @@ K určení některých možností linkeru můžete použít direktivu pragma [Ko
 |[/DEPENDENTLOADFLAG](dependentloadflag.md)|Nastaví výchozí příznaky při načtení závislých knihoven DLL.|
 |[/DLL](dll-build-a-dll.md)|Vytvoří knihovnu DLL.|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|Vytvoří ovladač režimu jádra.|
-|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Určuje, jestli se má vygenerovat spustitelná image, která se dá náhodně využít při načítání, pomocí funkce pro náhodnost rozložení adresního prostoru (ASLR).|
+|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Určuje, zda se má generovat spustitelná bitová kopie, která je založena na čase načítání pomocí funkce náhodnosti rozložení adresního prostoru (ASLR).|
 |[/ENTRY](entry-entry-point-symbol.md)|Nastaví počáteční adresu.|
-|[/errorReport](errorreport-report-internal-linker-errors.md)|Oznamuje interní chyby linkeru společnosti Microsoft.|
+|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| Zastaralé Zasílání zpráv o chybách se řídí nastavením [zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/EXPORT](export-exports-a-function.md)|Vyexportuje funkci.|
 |[/FILEALIGN](filealign.md)|Zarovná oddíly v rámci výstupního souboru na násobcích zadané hodnoty.|
 |[/FIXED](fixed-fixed-base-address.md)|Vytvoří program, který se dá načíst jenom na upřednostňovanou základní adresu.|
 |[/Force.](force-force-file-output.md)|Vynutí odkaz na dokončení, a to i s nevyřešenými symboly nebo symboly, které jsou definovány více než jednou.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Vytvoří Image, která může být Hot patchovaná.|
-|[/GENPROFILE,/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Obě tyto možnosti specifikují generování souboru. pgd linkerem pro podporu optimalizace na základě profilu (PGO). /GENPROFILE a/FASTGENPROFILE používají jiné výchozí parametry.|
+|[/GENPROFILE,/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Obě tyto možnosti specifikují generování *`.pgd`* souboru linkerem pro podporu optimalizace na základě profilu (PGO). /GENPROFILE a/FASTGENPROFILE používají jiné výchozí parametry.|
 |[/GUARD](guard-enable-guard-checks.md)|Povolí ochranu před ochranou toku řízení.|
 |[/HEAP](heap-set-heap-size.md)|Nastaví velikost haldy (v bajtech).|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|Určuje podporu náhodnosti rozložení adresního prostoru s vysokou entropií 64 (ASLR).|
-|[/IDLOUT](idlout-name-midl-output-files.md)|Určuje název souboru. idl a další výstupní soubory MIDL.|
+|[/IDLOUT](idlout-name-midl-output-files.md)|Určuje název souboru *`.idl`* a dalších výstupních souborů MIDL.|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|Potlačí výstup zadaného upozornění linkeru.|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Zabraňuje zpracování informací o atributu do souboru. idl.|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Zabraňuje zpracování informací o atributu do souboru *`.idl`* .|
 |[/IMPLIB](implib-name-import-library.md)|Přepíše výchozí název knihovny importu.|
 |[/INCLUDE](include-force-symbol-references.md)|Vynutí odkazy na symboly.|
 |[/INCREMENTAL](incremental-link-incrementally.md)|Řídí přírůstkové propojování.|
@@ -100,7 +100,7 @@ K určení některých možností linkeru můžete použít direktivu pragma [Ko
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|Zahrnuje zadané informace v souboru mapování.|
 |[/MERGE](merge-combine-sections.md)|Kombinuje oddíly.|
 |[/MIDL](midl-specify-midl-command-line-options.md)|Určuje možnosti příkazového řádku MIDL.|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|Přidá do souboru PDB nástroje pro vizualizace ladicího programu ze souboru Natvis.|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|Přidá vizualizace ladicího programu ze souboru Natvis do databáze programu (PDB).|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|Potlačí vytváření sestavení .NET Framework.|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|Při vyřešení externích odkazů ignoruje všechny (nebo zadané) výchozí knihovny.|
 |[/NOENTRY](noentry-no-entry-point.md)|Vytvoří knihovnu DLL, která je jen pro prostředky.|
@@ -109,22 +109,22 @@ K určení některých možností linkeru můžete použít direktivu pragma [Ko
 |[/OPT](opt-optimizations.md)|Ovládá optimalizace odkazů.|
 |[/ORDER](order-put-functions-in-order.md)|Umístí sekvence COMDAT do obrázku v předem určeném pořadí.|
 |[/OUT](out-output-file-name.md)|Určuje název výstupního souboru.|
-|[/PDB](pdb-use-program-database.md)|Vytvoří soubor databáze programu (PDB).|
+|[/PDB](pdb-use-program-database.md)|Vytvoří soubor PDB.|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Používá alternativní umístění k uložení souboru PDB.|
-|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Vytvoří soubor databáze programu (PDB), který nemá žádné soukromé symboly.|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Určuje soubor. pgd pro optimalizace na základě profilu.|
+|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Vytvoří soubor PDB, který nemá žádné soukromé symboly.|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Určuje *`.pgd`* soubor pro optimalizace na základě profilu.|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Zastaralé** Vytvoří instrumentované sestavení PGO bezpečné pro přístup z více vláken.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Vytvoří výstupní soubor, který se dá použít s profilerem Performance Tools.|
-|[/RELEASE](release-set-the-checksum.md)|Nastaví kontrolní součet v hlavičce. exe.|
+|[/RELEASE](release-set-the-checksum.md)|Nastaví kontrolní součet v hlavičce *`.exe`* .|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Určuje, že bitová kopie bude obsahovat tabulku bezpečných obslužných rutin výjimek.|
 |[/SECTION](section-specify-section-attributes.md)|Přepisuje atributy oddílu.|
 |[PŘEPÍNAČ/SOURCELINK](sourcelink.md)|Určuje soubor SourceLink, který se má přidat do souboru PDB.|
 |[/STACK](stack-stack-allocations.md)|Nastaví velikost zásobníku v bajtech.|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Připojí k programu Win32 programový zástupný program v režimu MS-DOS.|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Oznamuje operačnímu systému, jak spustit soubor. exe.|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Oznamuje operačnímu systému, jak spustit soubor *`.exe`* .|
 |[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|Oznamuje operačnímu systému, aby před spuštěním zkopíroval výstup linkeru do odkládacího souboru.|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Určuje ID prostředku knihovny typů generované linkerem.|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Určuje název souboru. tlb a dalších výstupních souborů MIDL.|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Určuje název souboru *`.tlb`* a dalších výstupních souborů MIDL.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Vytvoří aplikaci, která je navržená speciálně pro spouštění v rámci terminálového serveru.|
 |[/USEPROFILE](useprofile.md)|Používá školicí data optimalizace na základě profilu k vytvoření optimalizované bitové kopie.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Zobrazí zprávy o průběhu linkeru.|
@@ -139,7 +139,7 @@ K určení některých možností linkeru můžete použít direktivu pragma [Ko
 
 <sup>16,1</sup> Tato možnost je k dispozici počínaje verzí Visual Studio 2019 16,1.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [C/C++ sestavit\ odkazu](c-cpp-building-reference.md)
 [Referenční zdroje k linkeru MSVC](linking.md)

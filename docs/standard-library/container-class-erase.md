@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - erase method
 ms.assetid: abc091c5-5a80-4bd8-93a8-a2d9bde2efec
-ms.openlocfilehash: 1463a854c314884f0b3b6bffa5d37dfb7fec4a6f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1fa3fe7dee10f3033b84a671fdc35c193cd6ec3c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454511"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257894"
 ---
 # <a name="container-classerase"></a>Třída kontejneru::erase
 
@@ -20,9 +20,8 @@ Vymaže element.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-
-    iterator erase(
+```cpp
+iterator erase(
     iterator _Where);
 
 iterator erase(
@@ -36,6 +35,6 @@ První členská funkce odstraní prvek řízené sekvence, na kterou ukazuje *_
 
 Členské funkce vyvolávají výjimku pouze v případě, že operace kopírování vyvolá výjimku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - end method
 ms.assetid: 6fa38a20-3798-4387-9c6e-20fc3e90d813
-ms.openlocfilehash: db2563fff62d05765ad98c3405f1a658f5ce23e9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c947ecb0dd81aa805cefd0b5861c80e5bc1cf90b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453347"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258182"
 ---
 # <a name="container-classend"></a>Třída kontejneru::end
 
@@ -20,13 +20,12 @@ Vrátí iterátor, který odkazuje hned za konec sekvence.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-
-    const_iterator end() const;
+```cpp
+const_iterator end() const;
 
 iterator end();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)

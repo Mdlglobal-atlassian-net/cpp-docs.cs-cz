@@ -1,6 +1,7 @@
 ---
 title: /errorReport (sestava s interními chybami kompilátoru)
-ms.date: 11/04/2016
+description: Referenční informace pro možnost příkazovéhoC++ řádku Microsoft C/kompilátor/errorreport
+ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
 - /errorreport
@@ -8,60 +9,42 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 52909cb42180bf8b778d73fd709be05faf3f5714
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d4a3c4d5fd918973bbf8057e0c073c680e6995e
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271785"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257647"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (sestava s interními chybami kompilátoru)
 
-Umožňuje poskytnout informace o kompilátoru vnitřní chybě (ICE) přímo společnosti Microsoft.
+> [!NOTE]
+> Možnost **/errorreport** je zastaralá. Od Windows Vista se hlášení chyb řídí nastavením [zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-/errorReport:[ none | prompt | queue | send ]
-```
-
-## <a name="arguments"></a>Arguments
-
-**None**<br/>
-Sestavy o vnitřních chybách kompilátoru nebudou shromážděné nebo odeslané společnosti Microsoft.
-
-**prompt**<br/>
-Zobrazí výzvu k odeslání hlášení, pokud obdržíte chybu kompilátoru. **řádek** výchozí nastavení je při kompilaci aplikace ve vývojovém prostředí.
-
-**fronty**<br/>
-Zařadí do fronty zprávy o chybách. Při přihlašování s použitím oprávnění správce, takže můžete nahlásit všechny chyby od posledního byly zaznamenány v, zobrazí se okno (nezobrazí se výzva k odeslání zprávy o chybách více než jednou za tři dny). **fronty** výchozí nastavení je při kompilaci aplikace příkazového řádku.
-
-**Odeslat**<br/>
-Automaticky odesílá zprávy o vnitřních chybách kompilátoru společnosti Microsoft, pokud vytváření sestav je povolené nastavení systému Windows zasílání zpráv o chybách.
+> **/errorreport:** \[**none** \| **prompt** \| **Queue** \| **Send** ]
 
 ## <a name="remarks"></a>Poznámky
 
-Vnitřní chyba kompilátoru (ICE) výsledky, když kompilátor nemůže zpracovat soubor zdrojového kódu. Pokud dojde k ICE, kompilátor nevytvoří výstupní soubor nebo užitečnou diagnostiku, která můžete použít jak kód opravit.
+Vnitřní chyba kompilátoru (ICE) má za následek, že kompilátor nemůže zpracovat soubor zdrojového kódu. Když dojde k ICE, kompilátor nevytvoří výstupní soubor nebo žádnou užitečnou diagnostiku, kterou můžete použít k opravě kódu.
 
-V dřívějších verzích když jste se dostali ICE jste ukončena. doporučujeme volat Microsoft Product Support Services nahlásit problém. S **/errorreport**, můžete zadat informace ICE přímo společnosti Microsoft. Zprávy o chybách můžete zvýšit kompilátoru budoucích verzí.
+Argumenty **/errorreport** jsou přepsané nastavením služby zasílání zpráv o chybách systému Windows. Kompilátor automaticky odesílá společnosti Microsoft zprávy o vnitřních chybách, pokud je generování sestav povoleno pomocí Zasílání zpráv o chybách systému Windows. Pokud je zakázána Zasílání zpráv o chybách systému Windows, není odeslána žádná sestava.
 
-Uživatele umožňuje odeslat sestavy závisí na oprávnění zásad počítače a uživatele.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Další informace najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **C/C++** složky.
+1. Otevřete stránku **Vlastnosti konfigurace** > stránce **Upřesnit** vlastnost **C++ C/**  > .
 
-1. Klikněte na tlačítko **Upřesnit** stránku vlastností.
-
-1. Upravit **zpráv o chybách** vlastnost.
+1. Upravte vlastnost **zasílání zpráv o chybách** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Parametry kompilátoru MSVC](compiler-options.md)<br/>
+\ [možností kompilátoru MSVC](compiler-options.md)
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

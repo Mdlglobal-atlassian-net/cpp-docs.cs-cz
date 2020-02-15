@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - const_reference method
 ms.assetid: 7a5cfddb-3abf-4c98-b4ad-bbe4da9a5c1b
-ms.openlocfilehash: 03bd3971778c01362fa72d2cbcf79dc5ebe273c2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3960934b075ae43db0dd14a7754fface5a8d44cf
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457161"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258208"
 ---
-# <a name="container-classconstreference"></a>Třída kontejneru::const_reference
+# <a name="container-classconst_reference"></a>Třída kontejneru::const_reference
 
 > [!NOTE]
 > Toto téma se nachází v dokumentaci C++ společnosti Microsoft jako nefunkční příklad kontejnerů použitých ve C++ standardní knihovně. Další informace najdete v tématu [ C++ standardní kontejnery knihovny](../standard-library/stl-containers.md).
@@ -20,15 +20,14 @@ Popisuje objekt, který může sloužit jako konstantní odkaz na prvek řízen�
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-
+```cpp
 typedef T3 const_reference;
 ```
 
 ## <a name="remarks"></a>Poznámky
 
-Je zde popsána jako synonymum pro neurčený `T3` typ ( `Alloc::const_reference`obvykle).
+Je zde popsána jako synonymum pro nespecifikovaný typ `T3` (obvykle `Alloc::const_reference`).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)

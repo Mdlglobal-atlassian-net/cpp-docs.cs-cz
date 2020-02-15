@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890131"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257985"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;operátory&gt; bitset
 
@@ -35,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 První ze dvou Bitsets, jejichž příslušné prvky mají být kombinovány s bitovým `AND`.
 
-*pravé* \
+*pravé*\
 Druhý ze dvou valarrays, jejichž příslušné prvky mají být kombinovány s bitovým `AND`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -77,7 +77,7 @@ bitset 3: 0001
 
 Vloží textovou reprezentaci bitové sekvence do výstupního datového proudu.
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -86,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Objekt typu **bitset\<N >** , který má být vložen do výstupního datového proudu jako řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -134,7 +134,7 @@ int main( )
 
 Přečte řetězec bitových znaků do bitset.
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
@@ -146,7 +146,7 @@ basic_istream<CharType, Traits>& operator>> (
 *i_str*\
 Řetězec, který je zadán do vstupního datového proudu, který má být vložen do bitset.
 
-*pravé* \
+*pravé*\
 Bitset, který přijímá bity ze vstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -157,7 +157,7 @@ Funkce šablony vrátí řetězec *i_str*.
 
 Funkce šablony přetěžuje `operator>>` pro uložení *v bitset hodnotu* `bitset(str)`, kde `str` je objekt typu [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` extrakce z *i_str*.
 
-Funkce šablony extrahuje prvky z *i_str* a vloží je do bitset, dokud:
+Funkce šablony extrahuje prvky z *i_str* a vloží je do bitset až do:
 
 - Všechny bitové prvky byly extrahovány ze vstupního datového proudu a uloženy do bitset.
 
@@ -228,10 +228,10 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 První ze dvou Bitsets, jejichž příslušné prvky mají být kombinovány s bitovým `EXCLUSIVE-OR`.
 
-*pravé* \
+*pravé*\
 Druhý ze dvou valarrays, jejichž příslušné prvky mají být kombinovány s bitovým `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -280,10 +280,10 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 První ze dvou Bitsets, jejichž příslušné prvky mají být kombinovány s bitovým `OR`.
 
-*pravé* \
+*pravé*\
 Druhý ze dvou valarrays, jejichž příslušné prvky mají být kombinovány s bitovým `OR`.
 
 ### <a name="return-value"></a>Návratová hodnota

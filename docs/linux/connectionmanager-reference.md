@@ -1,18 +1,18 @@
 ---
-title: Odkaz ConnectionManager
+title: ConnectionManager – referenční dokumentace
 ms.date: 01/17/2020
 f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 2b01bfbcd81984e7ddf32cd5ab0485fff17b3d2b
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520898"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258030"
 ---
-# <a name="connectionmanager-reference"></a>Odkaz ConnectionManager
+# <a name="connectionmanager-reference"></a>ConnectionManager – referenční dokumentace
 
 ::: moniker range="<=vs-2017"
 
@@ -22,7 +22,7 @@ Soubor ConnectionManager. exe je k dispozici v aplikaci Visual Studio 2019 verze
 
 ::: moniker range="vs-2019"
 
-ConnectionManager. exe je nástroj příkazového řádku pro správu připojení vzdáleného vývoje mimo sadu Visual Studio. Je vhodný pro úlohy, jako je například zřízení nového vývojového počítače. Nebo ho použijte k nastavení sady Visual Studio pro průběžnou integraci. Můžete ho použít v Developer Command Promptm okně. Další informace o Developer Command Prompt najdete v tématu [použití sady nástrojů Microsoft C++ z příkazového řádku](..\build\building-on-the-command-line.md).
+ConnectionManager. exe je nástroj příkazového řádku pro správu připojení vzdáleného vývoje mimo sadu Visual Studio. Je vhodný pro úlohy, jako je například zřízení nového vývojového počítače. Nebo ho použijte k nastavení sady Visual Studio pro průběžnou integraci. Můžete ho použít v Developer Command Promptm okně. Další informace o Developer Command Prompt najdete v tématu [použití sady nástrojů Microsoft C++ z příkazového řádku](../build/building-on-the-command-line.md).
 
 Soubor ConnectionManager. exe je k dispozici v aplikaci Visual Studio 2019 verze 16,5 a novější. Je součástí **vývoje pro Linux s C++**  úlohou v instalační program pro Visual Studio. Také se nainstaluje automaticky při výběru komponenty **Správce připojení** v instalačním programu. Instaluje se do *% VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager. exe*.
 
@@ -88,7 +88,7 @@ Funkce nástroje ConnectionManager. exe je také k dispozici v aplikaci Visual S
 
   Stejné jako **--Password**.
 
-- **-i**
+- **– i**
 
   Stejné jako **--PrivateKey**.
 
@@ -106,7 +106,7 @@ Tento příkaz odebere ze seznamu připojení připojení, které má ID 1975957
 ConnectionManager.exe remove 1975957870
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Připojení k cílovému systému Linux v aplikaci Visual Studio](connect-to-your-remote-linux-computer.md)
 

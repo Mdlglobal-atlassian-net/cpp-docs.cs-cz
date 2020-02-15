@@ -1,39 +1,45 @@
 ---
-title: / WHOLEARCHIVE (zahrnutí všech souborů objektů knihovny)
-ms.date: 11/04/2016
+title: /WHOLEARCHIVE (zahrnout všechny soubory objektů knihovny)
+ms.date: 02/12/2020
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: db99816b18110b424647603196040997044e7fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95685c9c0dfde45c42449bbcad67228a0e21b36a
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316428"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257530"
 ---
-# <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (zahrnutí všech souborů objektů knihovny)
+# <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE (zahrnout všechny soubory objektů knihovny)
 
-Platnost linkeru, aby zahrnutí všech souborů objektů ze statické knihovny v propojený spustitelný soubor.
+Vynutit, aby linker zahrnoval všechny soubory objektů ve statické knihovně v propojeném spustitelném souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
-> / WHOLEARCHIVE [:*knihovny*]
+> **/WHOLEARCHIVE**\
+> **/WHOLEARCHIVE:** _Library_
+
+### <a name="arguments"></a>Argumenty
+
+\ *knihovny*
+Volitelná cesta ke statické knihovně. Linker zahrnuje všechny soubory objektů z této knihovny.
 
 ## <a name="remarks"></a>Poznámky
 
-Možnost /WHOLEARCHIVE vynutí linkeru pro zahrnutí každého objektu souboru buď z zadané statické knihovny, nebo pokud není zadána žádná knihovna, ze všech statických knihoven zadaný odkaz na příkaz. Zadejte možnost /WHOLEARCHIVE pro více knihoven, můžete více než jeden /WHOLEARCHIVE přepínat do příkazového řádku linkeru. Ve výchozím nastavení linker obsahuje soubory objektů v propojené výstup jenom v případě, že jsou symboly, které odkazují jiné objektové soubory ve spustitelném souboru exportu. Možnost /WHOLEARCHIVE díky linkeru považoval všechny soubory objekt archivovat ve statické knihovně, jako kdyby byly jednotlivě zadány do příkazového řádku linkeru.
+Možnost/WHOLEARCHIVE vynutí linkeru zahrnout všechny soubory objektů ze zadané statické knihovny, nebo pokud není zadána žádná knihovna, ze všech statických knihoven zadaných do příkazu LINK. Chcete-li určit možnost/WHOLEARCHIVE pro více knihoven, můžete použít více než jeden/WHOLEARCHIVE přepínač na příkazovém řádku linkeru. Ve výchozím nastavení linker obsahuje soubory objektů v propojeném výstupu pouze v případě, že exportují symboly, na které odkazuje jiný objekt Files ve spustitelném souboru. Možnost/WHOLEARCHIVE zpřístupňuje linkeru všechny soubory objektů archivované ve statické knihovně, jako kdyby byly zadány jednotlivě na příkazovém řádku linkeru.
 
-Možnost /WHOLEARCHIVE je možné znovu exportovat všechny symboly ze statické knihovny. To umožňuje Ujistěte se, že všechny knihovny kódu, prostředky a metadata jsou zahrnuty při vytvoření komponenty z více než jednu statickou knihovnu. Pokud se zobrazí upozornění LNK4264 při vytváření statickou knihovnu, která obsahuje součásti prostředí Windows Runtime pro export, použijte možnost /WHOLEARCHIVE při propojování knihovny do jiné aplikace nebo komponenty.
+Možnost/WHOLEARCHIVE lze použít k opětovnému exportu všech symbolů ze statické knihovny. To vám umožní zajistit, aby veškerý kód knihovny, prostředky a metadata byly zahrnuty při vytváření komponenty z více než jedné statické knihovny. Pokud se zobrazí upozornění LNK4264 při vytváření statické knihovny, která obsahuje komponenty prostředí Windows Runtime pro export, použijte možnost/WHOLEARCHIVE při propojování této knihovny s jinou komponentou nebo aplikací.
 
-Možnost /WHOLEARCHIVE byla zavedena v aplikaci Visual Studio 2015 Update 2.
+Možnost/WHOLEARCHIVE byla představena v aktualizaci Visual Studio 2015 Update 2.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Nastavení této možnosti linkeru v sadě Visual Studio
 
-1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Další informace najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **příkazového řádku** stránka vlastností v rámci **vlastnosti konfigurace**, **Linkeru**.
+1. Vyberte stránku vlastností **příkazový řádek** v části **Vlastnosti konfigurace**, **linker**.
 
-1. Přidat možnost /WHOLEARCHIVE **další možnosti** textového pole.
+1. Do textového pole **Další možnosti** přidejte možnost/WHOLEARCHIVE.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční zdroje k linkeru MSVC](linking.md)<br/>
 [Možnosti linkeru MSVC](linker-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688252"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257972"
 ---
 # <a name="complex-class"></a>complex – třída
 
@@ -56,7 +56,7 @@ Pro tři typy s plovoucí desetinnou čárkou existují explicitní specializace
 |-|-|
 |[value_type](#value_type)|Typ, který představuje datový typ, který reprezentuje reálné a imaginární části komplexního čísla.|
 
-### <a name="functions"></a>Funkce
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -72,8 +72,6 @@ Pro tři typy s plovoucí desetinnou čárkou existují explicitní specializace
 |[-= – operátor](#operator-_eq)|Odečte číslo od cílového komplexního čísla, kde odečtené číslo může být složité nebo stejného typu, jako jsou reálné a imaginární části komplexního čísla, ke kterému je přidána.|
 |[operator/= – operátor](#op_div_eq)|Vydělí cílové komplexní číslo dělitelem, což může být složité, nebo musí být stejného typu jako reálné a imaginární části komplexního čísla.|
 |[operátor =](#op_eq)|Přiřadí číslo cílovému komplexnímu číslu, kde přiřazené číslo může být složité nebo stejného typu, jako jsou reálné a imaginární části komplexního čísla, ke kterému se přiřazuje.|
-
-
 
 ## <a name="complex"></a>složit
 
@@ -91,13 +89,13 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal* \
+*_RealVal*\
 Hodnota reálné části, která se používá k inicializaci komplexního čísla.
 
-*_ImagVal* \
+*_ImagVal*\
 Hodnota imaginární části používaná k inicializaci komplexního čísla, které je konstruováno.
 
-*complexNum* \
+*complexNum*\
 Komplexní číslo, jehož reálné a imaginární části jsou použity k inicializaci komplexního čísla, které je konstruováno.
 
 ### <a name="remarks"></a>Poznámky
@@ -113,7 +111,7 @@ complex(const complex<Other>& right);
 
 je nahrazeno:
 
-```
+```cpp
 complex(const complex& right);
 ```
 
@@ -171,7 +169,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Komplexní číslo, jehož imaginární hodnota má být extrahována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -228,7 +226,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Komplexní číslo nebo číslo, které je stejného typu jako parametr cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -313,7 +311,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Komplexní číslo nebo číslo, které je stejného typu jako parametr cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -416,10 +414,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* \
+*complexNum*\
 Komplexní číslo, které má být odečteno od cílového komplexního čísla.
 
-*_RealPart* \
+*_RealPart*\
 Reálné číslo, které má být odečteno od cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -524,10 +522,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* \
+*complexNum*\
 Komplexní číslo, které má být odečteno od cílového komplexního čísla.
 
-*_RealPart* \
+*_RealPart*\
 Reálné číslo, které má být odečteno od cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -626,7 +624,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Komplexní číslo nebo číslo, které je stejného typu jako parametr cílového komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -703,7 +701,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Komplexní číslo, jehož skutečná hodnota má být extrahována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -749,7 +747,7 @@ The imaginary part of c1 is c1.imag() = 3.
 
 Typ, který představuje datový typ, který reprezentuje reálné a imaginární části komplexního čísla.
 
-```
+```cpp
 typedef Type value_type;
 ```
 
@@ -782,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

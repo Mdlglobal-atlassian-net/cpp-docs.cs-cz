@@ -1,20 +1,20 @@
 ---
-title: Přehled knihovny LIB
+title: Přehled LIB
 description: Přehled použití a možností nástroje knihovna, LIB. exe.
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 7223ef0a624cf15c43bd067db8a7919efd27df17
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 5829a65ab0dc4ef193236c9ae480856a17c5874c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685491"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257609"
 ---
-# <a name="overview-of-lib"></a>Přehled knihovny LIB
+# <a name="overview-of-lib"></a>Přehled LIB
 
 LIB (lib. exe) vytvoří standardní knihovny, importovat knihovny a exportovat soubory, které můžete použít s [odkazem](linker-options.md) při sestavování programu. LIB spouští z příkazového řádku.
 
@@ -35,7 +35,7 @@ V následující tabulce jsou uvedeny možnosti pro lib. exe s odkazem na Dalš�
 |Možnost|Popis|
 |-|-|
 |**/DEF**|Vytvořte knihovnu importu a soubor exportu.<br/><br/>Další informace najdete v tématu [sestavování knihovny importu a souboru exportu](building-an-import-library-and-export-file.md).|
-|**/ERRORREPORT**|   Odeslat Microsoftu informace o interních chybách pomocí lib. exe.<br/><br/>Další informace najdete v tématu [spuštění knihovny LIB](running-lib.md).|
+|**/ERRORREPORT**| Zastaralé Další informace najdete v tématu [spuštění knihovny LIB](running-lib.md).|
 |**/EXPORT**|   Vyexportuje funkci z programu.<br/><br/>Další informace najdete v tématu [sestavování knihovny importu a souboru exportu](building-an-import-library-and-export-file.md).|
 |**/EXTRACT**|   Vytvořte soubor objektu (. obj), který obsahuje kopii člena existující knihovny.<br/><br/>Další informace naleznete v tématu [extrahování člena knihovny](extracting-a-library-member.md).|
 |**/INCLUDE**|   Přidá symbol do tabulky symbolů.<br/><br/>Další informace najdete v tématu [sestavování knihovny importu a souboru exportu](building-an-import-library-and-export-file.md).|
@@ -54,10 +54,10 @@ V následující tabulce jsou uvedeny možnosti pro lib. exe s odkazem na Dalš�
 |**/VERBOSE**|   Zobrazí podrobnosti o průběhu relace, včetně názvů přidávaných souborů. obj.<br/><br/>Další informace najdete v tématu [spuštění knihovny LIB](running-lib.md).|
 |**/WX**|   Považovat upozornění za chyby.<br/><br/>Další informace najdete v tématu [spuštění knihovny LIB](running-lib.md).|
 
-## <a name="see-also"></a>Další informace najdete v tématech
+## <a name="see-also"></a>Viz také
 
-[LIB – Referenční dokumentace](lib-reference.md)<br/>
-[Vstupní soubory LIB](lib-input-files.md)<br/>
-[LIB – výstupní soubory](lib-output-files.md)<br/>
-[Další výstup knihovny LIB](other-lib-output.md)<br/>
+[Lib – referenční](lib-reference.md)\
+[Vstupní soubory LIB](lib-input-files.md)\
+\ [výstupních souborů lib](lib-output-files.md)
+[Další výstupy LIB](other-lib-output.md)\
 [Struktura knihovny](structure-of-a-library.md)

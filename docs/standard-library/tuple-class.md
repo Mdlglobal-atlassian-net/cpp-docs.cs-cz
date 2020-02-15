@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688867"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257101"
 ---
 # <a name="tuple-class"></a>tuple – třída
 
@@ -20,7 +20,7 @@ Zabalí posloupnost prvků s pevnou délkou.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class tuple {
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
@@ -41,7 +41,7 @@ class tuple {
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *TN*
+\ *TN*
 Typ n-tý prvek řazené kolekce členů.
 
 ## <a name="remarks"></a>Poznámky
@@ -137,10 +137,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit* \
+*Zrušit*\
 Typ n-tý zkopírovaný element řazené kolekce členů.
 
-*pravé* \
+*pravé*\
 Řazená kolekce členů ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
@@ -209,10 +209,10 @@ template <class... Types>
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 Řazená kolekce členů, jejíž prvky mají být vyměňovány pomocí *práv*řazené kolekce členů.
 
-*pravé* \
+*pravé*\
 Řazená kolekce členů, jejíž prvky mají být vyměněny pomocí těch řazené kolekce členů *doleva*.
 
 ### <a name="remarks"></a>Poznámky
@@ -246,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-*Zrušit* \
+*Zrušit*\
 Typ n-tý zkopírovaný element řazené kolekce členů.
 
-*pravé* \
+*pravé*\
 Řazená kolekce členů ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky

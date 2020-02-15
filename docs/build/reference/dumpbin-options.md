@@ -1,17 +1,18 @@
 ---
 title: DUMPBIN – možnosti
-ms.date: 10/24/2019
+description: Referenční příručka k možnostem příkazového řádku Microsoft DUMPBIN Utility
+ms.date: 02/09/2020
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 98a4fd221d66b93f945667deadaba3180f8d3e66
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144554"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257725"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN – možnosti
 
@@ -33,7 +34,7 @@ Nástroj DUMPBIN obsahuje následující možnosti:
 
 - [/DISASM\[: počet bajtů\|bajtů}\]](disasm.md)
 
-- [/ERRORREPORT: {NONE | VÝZVA | FRONTA | POSÍLAJÍ](errorreport-dumpbin-exe.md)
+- [/errorreport: {none | VÝZVA | FRONTA | Odeslat}](errorreport-dumpbin-exe.md) (zastaralé)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -73,7 +74,7 @@ Nástroj DUMPBIN obsahuje následující možnosti:
 
 Pokud chcete zobrazit seznam možností podporovaných nástrojem DUMPBIN na příkazovém řádku, použijte parametr **/?** . nastavení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Další nástroje pro sestavení MSVC](c-cpp-build-tools.md)\
 \ [příkazového řádku DUMPBIN](dumpbin-command-line.md)

@@ -1,18 +1,19 @@
 ---
 title: Vlastnosti CC++ /Project (Visual Studio)
-ms.date: 07/18/2019
+description: Referenční příručka k vlastnostem stránky vlastností Microsoft CC++ /Project sady Visual Studio.
+ms.date: 02/09/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 2f7fe025eb69fc1977713c638eef0742074bd9fb
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fdfcaaebe8394fedd160c6c02e8c938543f845e2
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927752"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257751"
 ---
 # <a name="cc-property-pages"></a>Stránky vlastnostíC++ C/a
 
- > Následující stránky vlastností se nacházejí v části vlastnosti**Konfigurace** >  **projektu** > **C/C++** :
+Následující stránky vlastností se nacházejí v nabídce > **vlastnosti** **projektu** > **Vlastnosti konfigurace** > **C/C++** :
 
 ## <a name="cc-general-properties"></a>Vlastnosti CC++ /obecné
 
@@ -26,13 +27,13 @@ Určuje jeden nebo více adresářů (oddělené názvy adresářů a středník
 
 ### <a name="debug-information-format"></a>Formát ladicích informací
 
-Určuje typ ladicích informací generovaných kompilátorem.  To vyžaduje kompatibilní nastavení linkeru. Nastaví [/Z7,/Zi,/Zi (formát ladicích informací)](z7-zi-zi-debug-information-format.md).
+Určuje typ ladicích informací generovaných kompilátorem.  Tato vlastnost vyžaduje kompatibilní nastavení linkeru. Nastaví [/Z7,/Zi,/Zi (formát ladicích informací)](z7-zi-zi-debug-information-format.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **None** – nevytváří žádné ladicí informace, takže kompilace může být rychlejší.
 - **Kompatibilní s C7** – vyberte typ informací o ladění vytvořených pro program a zda jsou tyto informace uloženy v souborech objektů (. obj) nebo v databázi programu (PDB).
-- **Databáze programu** – vytvoří databázi programu (PDB) obsahující informace o typech a symbolickém ladění pro použití s ladicím programem. Symbolické ladicí informace obsahují názvy a typy proměnných a také funkce a čísla řádků.
+- **Databáze programu** – vytvoří databázi programu (PDB) obsahující informace o typech a symbolickém ladění pro použití s ladicím programem. Symbolické ladicí informace obsahují názvy a typy proměnných a funkcí a čísla řádků.
 - **Databáze programu pro funkci upravit a pokračovat** – vytvoří databázi programu, jak je popsáno výše, ve formátu, který podporuje funkci [Upravit a pokračovat](/visualstudio/debugger/edit-and-continue) .
 
 ### <a name="support-just-my-code-debugging"></a>Podpora ladění Pouze můj kód
@@ -43,10 +44,10 @@ Přidá podpůrný kód pro povolení ladění [pouze můj kód](/visualstudio/d
 
 Použijte službu .NET Runtime.  Tento přepínač není kompatibilní s některými jinými přepínači. Podrobnosti najdete v dokumentaci k přepínačům [/CLR](clr-common-language-runtime-compilation.md) .
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Bez podpory modulu** CLR – žádná podpora modulu CLR (Common Language Runtime)
-- **Podpora modulu CLR (Common Language RunTime)** – vytvoří metadata pro aplikaci, která mohou být spotřebována jinými aplikacemi CLR, a umožňuje vaší aplikaci využívat typy a data v metadatech jiných komponent CLR.
+- **Podpora modulu CLR (Common Language RunTime)** – vytvoří metadata pro vaši aplikaci, která mohou být spotřebována jinými aplikacemi CLR. Umožňuje aplikaci také využívat typy a data v metadatech jiných komponent CLR.
 - **Podpora modulu CLR (Common Language RunTime) čistě MSIL** – vytvoří výstupní soubor pouze [MSIL](/dotnet/standard/managed-code)bez nativního spustitelného kódu, ačkoli může obsahovat nativní typy zkompilované do jazyka MSIL.
 - **Bezpečná podpora jazyka MSIL modulu** CLR – vytvoří pouze jazyk MSIL (bez nativního spustitelného kódu) a ověřitelný výstupní soubor.
 
@@ -62,18 +63,18 @@ Potlačí zobrazení nápisu přihlášení při spuštění kompilátoru a zobr
 
 Vyberte, jak striktní má kompilátor obsahovat chyby kódu. Nastaví [/W0-/W4](compiler-option-warning-level.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - Vypnout **všechna upozornění** – 0 úrovně 0 zakáže všechna upozornění.
 - **Level1** -Level 1 zobrazuje závažná upozornění. Úroveň 1 je výchozí úroveň pro upozornění na příkazovém řádku.
 - **Level2** -Level 2 zobrazuje všechna upozornění úrovně 1 a upozornění méně závažná než úroveň 1.
 - **Level3** -Level 3 zobrazuje všechna upozornění úrovně 2 a všechna ostatní upozornění doporučená pro produkční účely.
 - **Level4** 4 zobrazuje všechna upozornění úrovně 3 a informační upozornění, která lze ve většině případů bezpečně ignorovat.
-- **Povolit všechna upozornění** – povolí všechna upozornění, včetně těch, která jsou ve výchozím nastavení zakázaná.
+- **Povolit všechna upozornění** – povolí všechna upozornění, včetně těch, které jsou ve výchozím nastavení zakázané.
 
 ### <a name="treat-warnings-as-errors"></a>Zpracovávat upozornění jako chyby
 
-Zpracovává všechna upozornění kompilátoru jako chyby. Pro nový projekt může být nejvhodnější používat [/WX](wx-treat-linker-warnings-as-errors.md) ve všech kompilacích; řešení všech upozornění zajistí nejmenší možné nedostatky v obtížném hledání kódu.
+Zpracovává upozornění kompilátoru jako chyby. Pro nový projekt může být nejvhodnější použít [/WX](wx-treat-linker-warnings-as-errors.md) při každé kompilaci. Vyřešte všechna upozornění, abyste minimalizovali nedostatky v obtížném hledání kódu.
 
 ### <a name="warning-version"></a>Verze upozornění
 
@@ -83,11 +84,11 @@ Skrýt upozornění zavedená po určité verzi kompilátoru. Nastaví [/WV: xx\
 
 Povolí bohatou diagnostiku s informacemi o sloupci a zdrojovém kontextu v diagnostických zprávách.
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
-- **Blikající kurzor** – poskytuje informace o sloupci v diagnostické zprávě a také výstup příslušného řádku zdrojového kódu se znakem stříšky, který označuje problematický sloupec.
+- **Blikající kurzor** – poskytuje informace o sloupci v diagnostické zprávě. A vypíše relevantní řádek zdrojového kódu se blikajícím kurzorem, který označuje problematický sloupec.
 - **Informace o sloupci** – dále uvádí číslo sloupce v řádku, kde se Diagnostika vydá, pokud je to možné.
-- **Classic** – uchová předchozí stručné diagnostické zprávy s číslem řádku.
+- **Classic** – vypíše jenom předchozí stručné diagnostické zprávy s číslem řádku.
 
 ### <a name="sdl-checks"></a>Kontroly SDL
 
@@ -103,7 +104,7 @@ Kompilace s více procesory.
 
 Vyberte možnost pro optimalizaci kódu; Pokud chcete použít konkrétní možnosti optimalizace, klikněte na vlastní. Nastaví [/od](od-disable-debug.md), [/O1,/O2](o-options-optimize-code.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Vlastní** optimalizace.
 - **Zakázáno** – zakázat optimalizaci.
@@ -115,12 +116,12 @@ Vyberte možnost pro optimalizaci kódu; Pokud chcete použít konkrétní možn
 
 Vyberte úroveň rozšíření [vložené funkce](../../cpp/inline-functions-cpp.md) pro sestavení. Nastaví [/OB1,/Ob2](ob-inline-function-expansion.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
-- **Default**
+- **Výchozí**
 - **Disabled** – zakáže vložené rozšíření, které je ve výchozím nastavení zapnuté.
-- **Pouze __inline** -rozbalí pouze funkce označené jako inline, __inline, __forceinline nebo __inline nebo v C++ členské funkci definované v rámci deklarace třídy.
-- **Všechny vhodné** funkce rozšíření označené jako inline nebo __inline a všechny další funkce, které kompilátor zvolí (rozšíření probíhá na uvážení kompilátoru, často označované jako automatické vkládání).
+- **Pouze __inline** – rozbalí pouze funkce označené jako **inline**, `__inline`, `__forceinline`nebo `__inline`. Nebo v C++ členské funkci definované v rámci deklarace třídy.
+- **Všechny vhodné** funkce rozšíření označené jako **vložené** nebo `__inline` a všechny další funkce, které kompilátor zvolí. (K rozšíření dochází na uvážení kompilátoru, často se označuje jako *Automatické vkládání*.)
 
 ### <a name="enable-intrinsic-functions"></a>Povolit vnitřní funkce
 
@@ -130,11 +131,11 @@ Povolí vnitřní funkce.  Použití vnitřních funkcí generuje rychlejší, a
 
 Zda se má upřednostnit velikost kódu nebo rychlost kódu; Je nutné zapnout globální optimalizaci. Nastaví [/ot,/OS](os-ot-favor-small-code-favor-fast-code.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Upřednostnit malý** kód pro upřednostnění kódu. Minimalizuje velikost exe a knihoven DLL tím, že instruuje kompilátor, aby upřednostňuje velikost před rychlostí.
-- **Upřednostnit rychlý** kód pro rychlé upřednostnění kódu Maximalizuje rychlost exe a knihoven DLL tím, že instruuje kompilátor o upřednostnění rychlosti. (Toto je výchozí nastavení.)
-- Bez optimalizace velikosti ani rychlosti.
+- **Upřednostnit rychlý** kód pro rychlé upřednostnění kódu Maximalizuje rychlost exe a knihoven DLL tím, že instruuje kompilátor o upřednostnění rychlosti. (Výchozí hodnota je.)
+- **Není k** dispozici žádná Optimalizace velikosti a rychlosti.
 
 ### <a name="omit-frame-pointers"></a>Vynechat ukazatele na rámec
 
@@ -146,7 +147,7 @@ Povoluje optimalizaci paměťového prostoru při použití vláken a přístup 
 
 ### <a name="whole-program-optimization"></a>Optimalizace celého programu
 
-Umožňuje optimalizaci mezi moduly tím, že se odloží generování kódu na čas propojení. vyžaduje, aby byla zapnuta možnost linkeru pro generování kódu při propojování. Nastaví [/GL](gl-whole-program-optimization.md).
+Umožňuje optimalizaci mezi moduly tím, že se odloží generování kódu na čas propojení. Vyžaduje možnost linkeru "generování kódu při propojování". Nastaví [/GL](gl-whole-program-optimization.md).
 
 ## <a name="cc-preprocessor-properties"></a>Vlastnosti CC++ /preprocesoru
 
@@ -168,7 +169,7 @@ Zabraňuje kompilátoru v hledání souborů k zahrnutí v adresářích zadaný
 
 ### <a name="preprocess-to-a-file"></a>Předzpracovat do souboru
 
-Předzpracovává C a C++ zdrojové soubory a zapisuje předzpracovaný výstup do souboru. Tato možnost potlačí kompilaci, takže nevytvoří soubor. obj.
+Předzpracovává C a C++ zdrojové soubory a zapisuje předzpracovaný výstup do souboru. Tato možnost potlačí kompilaci a nevytvoří soubor *`.obj`* .
 
 ### <a name="preprocess-suppress-line-numbers"></a>Potlačit čísla řádků při předzpracování
 
@@ -182,17 +183,17 @@ Potlačí pruh komentáře ze zdrojového kódu; vyžaduje, aby byla nastavena j
 
 ### <a name="enable-string-pooling"></a>Povolit sdružování řetězců
 
-Umožňuje kompilátoru vytvořit jednu kopii stejného řetězce jen pro čtení v imagi programu a v paměti během provádění, což vede k menším programům, což je optimalizace nazývané sdružování řetězců. [/O1,/O2](o-options-optimize-code.md)a [/Zi](z7-zi-zi-debug-information-format.md) automaticky nastaví možnost [/GF](gf-eliminate-duplicate-strings.md) .
+Kompilátor vytvoří v imagi programu pouze jednu kopii stejného řetězce jen pro čtení. Výsledkem je menší programy, optimalizace označované jako *sdružování řetězců*. [/O1,/O2](o-options-optimize-code.md)a [/Zi](z7-zi-zi-debug-information-format.md) automaticky nastaví možnost [/GF](gf-eliminate-duplicate-strings.md) .
 
 ### <a name="enable-minimal-rebuild"></a>Povolit minimální opětovné sestavení
 
-Povoluje minimální opětovné sestavení, které určuje, C++ zda je nutné znovu zkompilovat C++ zdrojové soubory, které obsahují změněné definice tříd (uložené v hlavičkových souborech (. h)).
+Povoluje minimální opětovné sestavení, které určuje, zda se mají C++ znovu kompilovat zdrojové soubory, C++ které obsahují změněné definice třídy, uložené v hlavičkách *`.h`* soubory.
 
 ### <a name="enable-c-exceptions"></a>Povolit C++ výjimky
 
 Určuje model zpracování výjimek, který má kompilátor použít.
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Ano, s výjimkami SEH** – model zpracování výjimek, který zachytává asynchronní (strukturované) aC++synchronní () výjimky. Nastaví [/EHa](eh-exception-handling-model.md).
 - **Ano** – model zpracování výjimek, který zachytává C++ pouze výjimky a instruuje kompilátor, aby předpokládal, že externí funkce jazyka C C++ nikdy nevyvolají výjimku. Nastaví [/EHsc](eh-exception-handling-model.md).
@@ -205,9 +206,9 @@ Povolte kontrolu převodu na menší typy, nekompatibilní s jinými typy optima
 
 ### <a name="basic-runtime-checks"></a>Základní kontroly za běhu
 
-Provede základní kontroly chyb za běhu, které jsou nekompatibilní s jinými typy optimalizace než s laděním. Nastaví [/RTCs,/RTCu,/RTC1](rtc-run-time-error-checks.md).
+Povolit základní kontroly chyb za běhu, nekompatibilní s žádným typem optimalizace jiným než ladění. Nastaví [/RTCs,/RTCu,/RTC1](rtc-run-time-error-checks.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Rámce zásobníku** – povolí kontrolu chyb rámce zásobníku za běhu.
 - **Neinicializované proměnné** – sestavy při použití proměnné bez inicializace.
@@ -218,40 +219,40 @@ Provede základní kontroly chyb za běhu, které jsou nekompatibilní s jinými
 
 Zadejte běhovou knihovnu pro propojování. Nastaví [/Mt,/MTD,/MD,/MDD](md-mt-ld-use-run-time-library.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Vícevláknové** – způsobí, že aplikace použije vícevláknovou statickou verzi knihovny run-time.
-- **Vícevláknové ladění** – definuje _DEBUG a _MT. Tento parametr navíc způsobí, že kompilátor umístí knihovnu s názvem LIBCMTD.lib do souboru .obj, aby linker použil k překladu externích symbolů soubor LIBCMTD.lib.
-- **Vícevláknová knihovna DLL** – způsobí, že vaše aplikace bude používat knihovnu run-time specifickou pro knihovnu DLL určenou pro více vláken a. Definuje _MT a _DLL a způsobí, že kompilátor umístí do souboru. obj název knihovny MSVCRT. lib.
-- **Vícevláknová knihovna DLL pro ladění** – definuje _DEBUG, _MT a _DLL a způsobí, že aplikace použije ladění běhové knihovny, která je specifická pro knihovnu DLL. Navíc způsobí, že kompilátor umístí knihovnu s názvem MSVCRTD.lib do souboru .obj.
+- **Vícevláknové ladění** – definuje _DEBUG a _MT. Tato možnost také způsobí, že kompilátor umístí knihovnu *LIBCMTD. lib* do souboru *`.obj`* , takže linker použije *LIBCMTD. lib* k vyřešení externích symbolů.
+- **Vícevláknová knihovna DLL** – způsobí, že vaše aplikace bude používat knihovnu run-time specifickou pro knihovnu DLL určenou pro více vláken a. Definuje _MT a _DLL a způsobí, že kompilátor umístí do souboru *`.obj`* knihovnu s názvem *Msvcrt. lib* .
+- **Vícevláknová knihovna DLL pro ladění** – definuje _DEBUG, _MT a _DLL a způsobí, že vaše aplikace použije ladění běhové knihovny, která je specifická pro knihovnu DLL. Také způsobí, že kompilátor umístí do souboru *`.obj`* název knihovny *msvcrtd. lib* .
 
 ### <a name="struct-member-alignment"></a>Zarovnání členů struktury
 
 Určuje hranice 1, 2, 4 nebo 8 bajtů pro zarovnání členů struktury. Nastaví [/zp](zp-struct-member-alignment.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
-- **1 bajtové** sady strukturují hranice na 1 bajtech. Stejné jako/zp.
+- **1 bajtové** sady strukturují hranice na 1 bajtech. Stejné jako **`/Zp`** .
 - **2 bajty** – sady se strukturují na hranicích na dvou bajtech.
-- **4** struktury bajtových balíčků na hranicích na 4 bajtech.
+- **4 bajty** – sady se strukturují na hranicích na 4 bajtech.
 - **8 bajtů** – sady pro struktury na hranici 8 bajtů (výchozí).
 - **16 bajtů** – sady se strukturují na hranici 16 bajtů.
 - **Výchozí** nastavení – výchozí zarovnání
 
 ### <a name="security-check"></a>Kontrolu zabezpečení
 
-Kontrola zabezpečení pomáhá detekovat přetečení vyrovnávací paměti zásobníku, což je běžný pokus o útok na zabezpečení programu. 
+Kontrola zabezpečení pomáhá detekovat přetečení vyrovnávací paměti zásobníku, což je běžný pokus o útok na zabezpečení programu.
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Zakázat kontrolu zabezpečení** – zakázat kontrolu zabezpečení. Nastaví [/GS-](gs-buffer-security-check.md).
 - **Povolit kontrolu zabezpečení** – povolit kontrolu zabezpečení. Nastaví [/GS](gs-buffer-security-check.md).
 
 ### <a name="control-flow-guard"></a>Ochrana toku řízení
 
-Kontrola zabezpečení Guard pomáhá detekovat pokusy o odeslání do neplatného bloku kódu. 
+Kontrola zabezpečení Guard pomáhá detekovat pokusy o odeslání do neplatného bloku kódu.
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Ano** – povolit kontrolu zabezpečení pomocí sady Guard [/Guard: CF](guard-enable-control-flow-guard.md).
 - **Ne**
@@ -262,44 +263,44 @@ Umožňuje kompilátoru zabalit jednotlivé funkce ve formě zabalených funkcí
 
 ### <a name="enable-parallel-code-generation"></a>Povolit generování paralelního kódu
 
-Umožňuje kompilátoru generovat paralelní kód pro cykly identifikované pomocí smyčky\[#pragma (n)]), pokud je povolena optimalizace.
+Umožňuje kompilátoru generovat paralelní kód pro cykly identifikované pomocí `#pragma loop(hint_parallel[(n)])`, pokud je povolena optimalizace.
 
 ### <a name="enable-enhanced-instruction-set"></a>Povolit rozšířenou sadu instrukcí
 
-Povolit používání instrukcí, které se nacházejí na procesorech podporujících rozšířené sady instrukcí, třeba na vylepšeních SSE, SSE2, AVX a AVX2, na platformu IA-32; AVX a AVX2 na x64. Aktuálně **/arch: SSE** a **/arch: SSE2** jsou k dispozici pouze při sestavování pro architekturu x86. Pokud není zadána žádná možnost, kompilátor použije pokyny nalezené u procesorů, které podporují SSE2. Použití rozšířených instrukcí se dá zakázat pomocí/arch: IA32. Další informace najdete v tématu [/arch (x86)](arch-x86.md), [/arch (x64)](arch-x64.md) a [/arch (ARM)](arch-arm.md) .
+Povolí použití instrukcí, které se nacházejí na procesorech podporujících rozšířené sady instrukcí. Například vylepšení SSE, SSE2, AVX a AVX2 pro platformu IA-32. A, AVX a AVX2 vylepšení na platformě x64. Aktuálně **`/arch:SSE`** a **`/arch:SSE2`** jsou k dispozici pouze při sestavování pro architekturu x86. Pokud není zadána žádná možnost, kompilátor použije pokyny nalezené u procesorů, které podporují SSE2. Použití rozšířených instrukcí se dá v **`/arch:IA32`** zakázat. Další informace najdete v tématu [/arch (x86)](arch-x86.md), [/arch (x64)](arch-x64.md) a [/arch (ARM)](arch-arm.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
-- **Streaming SIMD Extensions** -streaming SIMD Extensions. Nastaví **/arch: SSE**
-- **Streaming SIMD Extensions 2** – streaming SIMD Extensions 2. Nastaví **/arch: SSE2**
-- **Rozšířená rozšíření vektoru** – Pokročilá rozšíření vektoru. Nastaví **/arch: AVX**
-- **Rozšířená rozšíření vektorů 2** – rozšířená rozšíření vektoru 2. Nastaví **/arch: AVX2**
-- **Bez rozšířených instrukcí** – bez rozšířených instrukcí Nastaví **/arch: IA32**
-- Nenastaveno-není nastaveno.
+- **Streaming SIMD Extensions** -streaming SIMD Extensions. Nastaví **`/arch:SSE`**
+- **Streaming SIMD Extensions 2** – streaming SIMD Extensions 2. Nastaví **`/arch:SSE2`**
+- **Rozšířená rozšíření vektoru** – Pokročilá rozšíření vektoru. Nastaví **`/arch:AVX`**
+- **Rozšířená rozšíření vektorů 2** – rozšířená rozšíření vektoru 2. Nastaví **`/arch:AVX2`**
+- **Bez rozšířených instrukcí** – bez rozšířených instrukcí Nastaví **`/arch:IA32`**
+- **Nenastaveno** -není nastaveno.
 
 ### <a name="floating-point-model"></a>Model plovoucí desetinné čárky
 
 Nastaví model plovoucí desetinné čárky. Nastaví [/FP: Restricted,/FP: Strict,/FP: Fast](fp-specify-floating-point-behavior.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Přesné** – výchozí. Vylepšuje konzistenci testů s plovoucí desetinnou čárkou pro rovnost a nerovnost.
-- **Striktní** – nejpřísnější model plovoucí desetinné čárky. /FP: Strict způsobí vypnutí fp_contract a fenv_access. /FP: výjimkou je předpokládaná a může být zakázána explicitním zadáním/FP: except-. Při použití s/FP: s výjimkou-,/FP: Strict vynutila striktní sémantiku s plovoucí desetinnou čárkou, ale bez ohledu na výjimečné události.
+- **Striktní** – nejpřísnější model plovoucí desetinné čárky. **`/fp:strict`** způsobí, že **`fp_contract`** vypnuto a **`fenv_access`** být zapnuté. **`/fp:except`** je předpokládaná a je možné ji zakázat explicitním zadáním **`/fp:except-`** . Při použití s **`/fp:except-`** **`/fp:strict`** vynutila striktní sémantiku s plovoucí desetinnou čárkou, ale bez ohledu na výjimečné události.
 - **Fast** – vytvoří ve většině případů nejrychlejší kód.
 
 ### <a name="enable-floating-point-exceptions"></a>Povolit výjimky s plovoucí desetinnou čárkou
 
-Spolehlivý model výjimek s plovoucí desetinnou čárkou Výjimky budou vyvolány okamžitě po aktivaci.  Nastaví [/FP: except](fp-specify-floating-point-behavior.md).
+Spolehlivý model výjimek s plovoucí desetinnou čárkou Výjimky budou vyvolány okamžitě po aktivaci. Nastaví [/FP: except](fp-specify-floating-point-behavior.md).
 
 ### <a name="create-hotpatchable-image"></a>Vytvoření image opravitelnou za provozu
 
-Pokud je technologie HotPatching zapnutá, kompilátor zajistí, že první instrukce každé funkce jsou dvě bajty, což je vyžadováno pro Hot patching.  Nastaví [/hotpatch](hotpatch-create-hotpatchable-image.md).
+Když je technologie HotPatching zapnutá, kompilátor zajistí, že první instrukce každé funkce jsou dvě bajty, jak je potřeba pro Hot patching. Nastaví [/hotpatch](hotpatch-create-hotpatchable-image.md).
 
 ### <a name="spectre-mitigation"></a>Zmírnění Spectre
 
 Spectre zmírnění hrozeb pro CVE 2017-5753. Nastaví [/Qspectre](qspectre.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Povoleno** – povolit funkci zmírnění Spectre pro CVE 2017-5753
 - **Zakázané** – nenastavené
@@ -316,7 +317,7 @@ Povolí nebo potlačí režim shody. Nastaví [/Permissive-](permissive-standard
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>Považovat WChar_t za vestavěný typ
 
-Je-li tento parametr zadán, typ wchar_t se změní na nativní typ, který se mapuje na __wchar_t stejným způsobem jako krátká mapování na __int16. Parametr [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) je ve výchozím nastavení zapnutý.
+Je-li tato možnost zadána, typ **wchar_t** se změní do nativního typu, který se mapuje na `__wchar_t` stejným způsobem jako **krátká** mapování na `__int16`. [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) je ve výchozím nastavení zapnuté.
 
 ### <a name="force-conformance-in-for-loop-scope"></a>Vynutit shodu oboru smyčky for
 
@@ -328,7 +329,7 @@ Je-li zadán parametr, kompilátor již negeneruje informace o symbolech pro neo
 
 ### <a name="enforce-type-conversion-rules"></a>Vynucení pravidel převodu typů
 
-Slouží k identifikaci typu odkazu rvalue jako výsledku operace přetypování v souladu se standardem C++ 11.
+Slouží k identifikaci typu odkazu rvalue jako výsledku operace přetypování na Standard C++ 11.
 
 ### <a name="enable-run-time-type-information"></a>Povolit informace běhového typu
 
@@ -336,15 +337,15 @@ Přidá kód pro kontrolu C++ typů objektů v době běhu (informace o typu mod
 
 ### <a name="open-mp-support"></a>Otevřít podporu MP
 
-Povolit jazyková rozšíření OpenMP 2,0. Nastaví [/OpenMP](openmp-enable-openmp-2-0-support.md).
+Povolí jazykové rozšíření OpenMP 2,0. Nastaví [/OpenMP](openmp-enable-openmp-2-0-support.md).
 
 ### <a name="c-language-standard"></a>C++Standardní jazyk
 
-Určuje C++ jazykovou Standard, který bude kompilátor vymáhat. Pokud je to možné, doporučuje se použít nejnovější verzi. Nastaví [/std: c++ 14,/std: c++ 17,/std: c + + nejnovější](std-specify-language-standard-version.md).
+Určuje C++ jazykový Standard, který kompilátor povoluje. Pokud je to možné, použijte nejnovější verzi. Nastaví [/std: c++ 14,/std: c++ 17,/std: c + + nejnovější](std-specify-language-standard-version.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
-- **Default**
+- **Výchozí**
 - **Standard ISO C++ 14**
 - **Standard ISO C++ 17**
 - **Náhled – funkce z nejnovější C++ pracovní verze**
@@ -355,11 +356,11 @@ Experimentální podpora C++ modulů TS a standardní moduly knihovny.
 
 ## <a name="cc-precompiled-headers-properties"></a>Vlastnosti předkompilovaných hlaviček jazyka C/C++
 
-### <a name="precompiled-header"></a>Předkompilovaná hlavička
+### <a name="createuse-precompiled-header"></a>Vytvořit/použít předkompilovanou hlavičku
 
-Vytvořit/použít předkompilovanou hlavičku: Povolí vytvoření nebo použití předkompilované hlavičky během sestavení. Nastaví [/YC](yc-create-precompiled-header-file.md), [/Yu](yu-use-precompiled-header-file.md).
+Povolí vytvoření nebo použití předkompilované hlavičky během sestavení. Nastaví [/YC](yc-create-precompiled-header-file.md), [/Yu](yu-use-precompiled-header-file.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Create** – instruuje kompilátor, aby vytvořil soubor předkompilované hlavičky (. pch), který představuje stav kompilace v určitém bodě.
 - **Pomocí** -instruuje kompilátor, aby v aktuální kompilaci použil existující soubor předkompilované hlavičky (. pch).
@@ -383,13 +384,13 @@ Vytvoří soubor výpisu s rozbalenými atributy vloženými do zdrojového soub
 
 Určuje obsah výstupního souboru jazyka sestavení. Nastaví [/FA,/FAc,/FAS,/FAcs](fa-fa-listing-file.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Žádný výpis** – žádný výpis
-- **Výpis pouze sestavení** – kód sestavení;. asm
-- **Sestavení pomocí strojového kódu** a kódu sestavení;. COD
-- **Sestavení se** zdrojovým kódem a kódem sestavení;. asm
-- **Sestavení, strojové kódy a zdrojové** sestavení, strojový kód a zdrojový kód; COD
+- **Výpis pouze sestavení** – kód sestavení; *`.asm`*
+- **Sestavení s počítačovým kódem** – počítač a kód sestavení; *`.cod`*
+- **Sestavení se** zdrojovým kódem a kódem sestavení; *`.asm`*
+- **Sestavení, strojové kódy a zdrojové** sestavení, strojový kód a zdrojový kód; *`.cod`*
 
 ### <a name="use-unicode-for-assembler-listing"></a>Použití Unicode pro výpis assembleru
 
@@ -397,7 +398,7 @@ Způsobí, že se výstupní soubor vytvoří ve formátu UTF-8.
 
 ### <a name="asm-list-location"></a>Umístění seznamu ASM
 
-Určuje relativní cestu a/nebo název souboru výpisu ASM; může být název souboru nebo adresáře. Nastaví [/FA](fa-fa-listing-file.md).
+Určuje relativní cestu nebo název souboru výpisu ASM; může být název souboru nebo adresáře. Nastaví [/FA](fa-fa-listing-file.md).
 
 ### <a name="object-file-name"></a>Název souboru objektu
 
@@ -413,17 +414,17 @@ Určuje, že má kompilátor generovat soubory komentáře dokumentace XML (. XD
 
 ### <a name="xml-documentation-file-name"></a>Název souboru dokumentace XML
 
-Určuje název generovaných souborů dokumentace XML; může být název souboru nebo adresáře. Nastaví [/DOC:\<Name >](doc-process-documentation-comments-c-cpp.md).
+Určuje název generovaných souborů dokumentace XML; může být název souboru nebo adresáře. Nastaví [/DOC: > název\<](doc-process-documentation-comments-c-cpp.md).
 
 ## <a name="cc-browse-information-properties"></a>Vlastnosti informacíC++ o C/Procházet
 
 ### <a name="enable-browse-information"></a>Povolit informace o procházení
 
-Povolit informace o procházení: Určuje úroveň informací o procházení v souboru. BSC. Nastaví [/fr](fr-fr-create-dot-sbr-file.md).
+Určuje úroveň informací o procházení v souboru *`.bsc`* . Nastaví [/fr](fr-fr-create-dot-sbr-file.md).
 
 ### <a name="browse-information-file"></a>Soubor s informacemi o procházení
 
-Procházet soubor: Určuje nepovinný název souboru s informacemi o prohlížeči. Nastaví [název\</fr >](fr-fr-create-dot-sbr-file.md).
+Určuje nepovinný název souboru s informacemi o prohlížeči. Nastaví [/FR\<název >](fr-fr-create-dot-sbr-file.md).
 
 ## <a name="cc-advanced-properties"></a>Vlastnosti CC++ /pokročilé
 
@@ -431,18 +432,18 @@ Procházet soubor: Určuje nepovinný název souboru s informacemi o prohlíže�
 
 Vyberte výchozí konvenci volání aplikace (může být přepsána funkcí). Nastaví [/GD,/GR,/GZ,/GV](gd-gr-gv-gz-calling-convention.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
-- **__cdecl** – určuje konvenci volání __cdecl pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených jako __stdcall nebo __fastcall.
-- **__fastcall** – určuje konvenci volání __fastcall pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených jako __cdecl nebo __stdcall. Všechny funkce __fastcall musí mít prototypy.
-- **__stdcall** – určuje konvenci volání __stdcall pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených jako __cdecl nebo __fastcall. Všechny funkce __stdcall musí mít prototypy.
-- **__vectorcall** – určuje konvenci volání __vectorcall pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených jako __cdecl, __fastcall nebo __stdcall. Všechny funkce __vectorcall musí mít prototypy.
+- **__cdecl** – určuje __cdecl konvenci volání pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených __stdcall nebo __fastcall.
+- **__fastcall** – určuje __fastcall konvenci volání pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených __cdecl nebo __stdcall. Všechny funkce __fastcall musí mít prototypy.
+- **__stdcall** – určuje __stdcall konvenci volání pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených __cdecl nebo __fastcall. Všechny funkce __stdcall musí mít prototypy.
+- **__vectorcall** – určuje __vectorcall konvenci volání pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených __cdecl, __fastcall nebo __stdcall. Všechny funkce __vectorcall musí mít prototypy.
 
 ### <a name="compile-as"></a>Kompilovat jako
 
-Umožňuje vybrat možnost jazyka kompilace pro soubory. c a. cpp. Nastaví [/TC,/TP](tc-tp-tc-tp-specify-source-file-type.md).
+Umožňuje vybrat možnost jazyka kompilace pro soubory *`.c`* a *`.cpp`* . Nastaví [/TC,/TP](tc-tp-tc-tp-specify-source-file-type.md).
 
-**Vlastnit**
+#### <a name="choices"></a>Vlastnit
 
 - **Výchozí** – výchozí.
 - **Kompilovat jako kód jazyka c** – kompilovat jako kód jazyka c.
@@ -450,15 +451,15 @@ Umožňuje vybrat možnost jazyka kompilace pro soubory. c a. cpp. Nastaví [/TC
 
 ### <a name="disable-specific-warnings"></a>Zakázat specifická upozornění
 
-Zakažte požadovaná čísla upozornění; Vloží čísla do seznamu oddělených středníkem. Nastaví [/WD\<NUM >](compiler-option-warning-level.md).
+Zakáže zadaná čísla upozornění. Číslice upozornění uveďte v seznamu oddělených středníky. Nastaví [/wd\<num >](compiler-option-warning-level.md).
 
 ### <a name="forced-include-file"></a>Vynucený soubor k zahrnutí
 
-jeden nebo více souborů s vynuceným zahrnutím. Nastaví [/Fi\<Name >](fi-name-forced-include-file.md).
+jeden nebo více souborů s vynuceným zahrnutím. Nastaví [/fi\<název >](fi-name-forced-include-file.md).
 
 ### <a name="forced-using-file"></a>Vynucený soubor #using
 
-Určuje jeden nebo více vynucených #using souborů. Nastaví [název\</Fu >](fu-name-forced-hash-using-file.md).
+Určuje jeden nebo více vynucených #using souborů. Nastaví [/fu\<název >](fu-name-forced-hash-using-file.md).
 
 ### <a name="show-includes"></a>Zobrazit zahrnutí
 
@@ -470,18 +471,12 @@ Používejte v diagnostických zprávách úplné cesty. Nastaví [/FC](fc-full-
 
 ### <a name="omit-default-library-name"></a>Vynechat název výchozí knihovny
 
-Do souborů. obj nezahrnujte názvy výchozích knihoven. Nastaví [/zl](zl-omit-default-library-name.md).
+Nezahrnuje názvy výchozích knihoven v *`.obj`* soubory. Nastaví [/zl](zl-omit-default-library-name.md).
 
 ### <a name="internal-compiler-error-reporting"></a>Zasílání zpráv o vnitřních chybách kompilátoru
 
-Určuje, jak by měly být vnitřní chyby nástrojů hlášeny zpět společnosti Microsoft.  Výchozí hodnota v rozhraní IDE je prompt.  Výchozí hodnota z příkazového řádku sestavení je Queue. Nastaví [/errorreport:\[method]] (errorreport-Report-Internal-Compiler-Errors.MD).
-
-**Vlastnit**
-
-- **Neodesílat zprávu** – sestavy o vnitřních chybách kompilátoru nebudou shromažďovány ani odesílány společnosti Microsoft.
-- **Výzva okamžitě** – vyzve k odeslání sestavy, když dojde k vnitřní chybě kompilátoru.
-- **Zařadit do fronty pro další přihlášení** – zařadí do fronty zprávu o chybě. Když se přihlásíte s oprávněními správce, zobrazí se automaticky otevírané okno, které vám umožní nahlásit všechny chyby od posledního přihlášení (nebudete vyzváni k odeslání zpráv o selhání více než jednou za tři dny). Při kompilování aplikace z příkazového řádku je fronta výchozí.
-- **Odeslat automaticky** – automaticky odesílá zprávy o vnitřních chybách kompilátoru společnosti Microsoft. Pokud chcete povolit tuto možnost, musíte nejdřív souhlasit se zásadou pro shromažďování dat Microsoft% sběru. Při prvním zadání/errorReport: Send v počítači se zobrazí zpráva s kompilátorem, na které se odkazuje na web, který obsahuje zásadu shromažďování dat Microsoft% sběru.
+> [!NOTE]
+> Tato možnost je zastaralá. Od Windows Vista se hlášení chyb řídí nastavením [zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
 ### <a name="treat-specific-warnings-as-errors"></a>Považovat specifická upozornění za chyby
 

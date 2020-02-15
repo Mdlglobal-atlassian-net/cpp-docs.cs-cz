@@ -1,18 +1,21 @@
 ---
-title: Možnosti kompilátoru (abecední pořadí)
-ms.date: 01/08/2020
+title: Možnosti kompilátoru v abecedním pořadí
+description: Seznam odkazů v abecedním pořadí možností příkazového řádkuC++ Microsoft C/Compiler.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: 6b3412378aa4bb36ea861a81758d2227df3432c6
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034594"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257738"
 ---
-# <a name="compiler-options-listed-alphabetically"></a>Možnosti kompilátoru (abecední pořadí)
+# <a name="compiler-options-listed-alphabetically"></a>Možnosti kompilátoru v abecedním pořadí
 
-Následuje úplný Abecední seznam možností kompilátoru. Seznam kategorií naleznete v tématu [Možnosti kompilátoru uvedené podle kategorie](compiler-options-listed-by-category.md).
+Tato tabulka obsahuje abecední seznam možností kompilátoru. Seznam možností kompilátoru podle kategorií naleznete v tématu [Možnosti kompilátoru uvedené podle článku kategorie](compiler-options-listed-by-category.md) .
+
+## <a name="compiler-options"></a>Možnosti kompilátoru
 
 |Možnost|Účel|
 |------------|-------------|
@@ -27,19 +30,19 @@ Následuje úplný Abecední seznam možností kompilátoru. Seznam kategorií n
 |[/c](c-compile-without-linking.md)|Zkompiluje bez propojení.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Určuje počet vláken CL. exe, který se má použít pro optimalizaci a generování kódu.|
 |[možností](clr-common-language-runtime-compilation.md)|Vytvoří výstupní soubor pro spuštění v modulu CLR (Common Language Runtime).|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Řídí vyhodnocení constexpr v době kompilace.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Řídí vyhodnocení **constexpr** v době kompilace.|
 |[Parametr](d-preprocessor-definitions.md)|Definuje konstanty a makra.|
 |[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Určuje formát diagnostických zpráv.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Zpracuje komentáře dokumentace do souboru XML.|
 |[/E](e-preprocess-to-stdout.md)|Zkopíruje výstup preprocesoru do standardního výstupu.|
 |[/EH](eh-exception-handling-model.md)|Určuje model zpracování výjimek.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Zkopíruje výstup preprocesoru do standardního výstupu.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Umožňuje poskytnout informace o vnitřní chybě kompilátoru (ICE) přímo týmu společnosti Microsoft C++ .|
-|[/Execution-charset](execution-charset-set-execution-character-set.md)|Nastavit znakovou sadu spuštění.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Zastaralé Zasílání zpráv o chybách se řídí nastavením [zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+|[/Execution-charset](execution-charset-set-execution-character-set.md)|Nastavte znakovou sadu spuštění.|
 |[/Experimental: modul](experimental-module.md)|Povolí experimentální podporu modulu.|
 |[/Experimental: preprocesor](experimental-preprocessor.md)|Povoluje experimentální vyhovující s podporou preprocesoru.|
 |[Přepínač](f-set-stack-size.md)|Nastaví velikost zásobníku.|
-|[/Favor](favor-optimize-for-architecture-specifics.md)|Vytvoří kód, který je optimalizován pro konkrétní architekturu x64 nebo pro konkrétní mikroarchitektury v architektuře AMD64 a rozšířené paměti 64 technologie (EM64T).|
+|[/Favor](favor-optimize-for-architecture-specifics.md)|Vytvoří kód optimalizovaný pro konkrétní architekturu x64. Nebo pro konkrétní mikroarchitektury v architektuře AMD64 a EM64T.|
 |[/FA](fa-fa-listing-file.md)|Vytvoří soubor výpisu.|
 |[/FA](fa-fa-listing-file.md)|Nastaví název souboru výpisu.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Zobrazí úplnou cestu souborů se zdrojovým kódem předaných do cl. exe v diagnostickém textu.|
@@ -52,7 +55,7 @@ Následuje úplný Abecední seznam možností kompilátoru. Seznam kategorií n
 |[/FP](fp-specify-floating-point-behavior.md)|Určuje chování s plovoucí desetinnou čárkou.|
 |[/FP](fp-name-dot-pch-file.md)|Určuje název souboru předkompilované hlavičky.|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|Generuje soubory prohlížeče. **/Fr** je zastaralá.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|Vynutí zápisy do souboru databáze programu (PDB) k serializaci pomocí MSPDBSRV. Programu.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Vynutí serializaci všech zápisů do souboru programu databáze (PDB) prostřednictvím MSPDBSRV. Programu.|
 |[/FU](fu-name-forced-hash-using-file.md)|Vynutí použití názvu souboru, jako kdyby byl předán direktivě [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/FX](fx-merge-injected-code.md)|Sloučí vložený kód se zdrojovým souborem.|
 |[/GA](ga-optimize-for-windows-application.md)|Optimalizuje kód pro aplikaci pro Windows.|
@@ -172,5 +175,5 @@ Následuje úplný Abecední seznam možností kompilátoru. Seznam kategorií n
 
 ## <a name="see-also"></a>Viz také
 
-[Parametry kompilátoru MSVC](compiler-options.md)<br/>
+\ [možností kompilátoru MSVC](compiler-options.md)
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
