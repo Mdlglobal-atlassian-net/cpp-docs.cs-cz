@@ -47,19 +47,19 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: a50e37b41c6e90428bed5ae113d2d9f064e042d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77b934010b7f76b556a4c7ba9826fbedfc36b95e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390864"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415841"
 ---
 # <a name="sal-annotations"></a>Poznámky SAL
 
-Když si zblízka souborech hlaviček knihovny, můžete si všimnout některých neobvyklé poznámky, například `_In_z` a `_Out_z_cap_(_Size)`. Toto jsou příklady jazyka anotace zdrojového kódu Microsoft (SAL), poskytuje sadu poznámky a popisují, jak se funkce používá parametry, například předpoklady, které provádí o nich a záruky, které provádí na dokončení. Soubor hlaviček \<sal.h > definuje poznámky.
+Pokud prohlížíte soubory hlaviček knihovny, můžete si všimnout některých neobvyklých poznámek, například `_In_z` a `_Out_z_cap_(_Size)`. Jedná se o příklady od společnosti Microsoft pro poznámky ke zdroji (SAL), která poskytuje sadu poznámek k popisu způsobu, jakým funkce používá své parametry, například předpoklady, které se o nich týkají, a záruky, které při dokončení dokončí. Hlavičkový soubor \<Sal. h > definuje poznámky.
 
-Další informace o použití poznámek SAL v sadě Visual Studio najdete v tématu [použití anotací SAL k omezení defektů kódu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+Další informace o použití poznámek SAL v aplikaci Visual Studio naleznete v tématu [Použití poznámek SAL ke snížení vadC++ C/kódu](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny CRT](../c-runtime-library/crt-library-features.md)

@@ -2,18 +2,18 @@
 title: Atributy vC++
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 5967974d419299778e4aadaa235ee21c62e16d34
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: b3ed21b033c0e606d02d3aa845f09f72118a3c5e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518293"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416078"
 ---
 # <a name="attributes-in-c"></a>Atributy vC++
 
 C++ Standard definuje sadu atributů a také umožňuje dodavatelům kompilátoru definovat jejich vlastní atributy (v rámci oboru názvů specifického pro dodavatele), ale kompilátory jsou požadovány pro rozpoznání pouze těch atributů definovaných ve standardu.
 
-V některých případech se standardní atributy překrývají s parametry declspec specifickými pro kompilátor. V jazyce C++Visual můžete použít atribut `[[deprecated]]` namísto použití `declspec(deprecated)` a atribut bude rozpoznán jakýmkoli podformou kompilátoru. Pro všechny ostatní parametry declspec, jako je dllimport a dllexport, neexistuje žádný ekvivalent atributu, takže musíte dál používat syntaxi declspec. Atributy neovlivňují systém typů a nezmění význam programu. Kompilátory ignorují hodnoty atributů, které nerozpoznávají.
+V některých případech se standardní atributy překrývají s parametry declspec specifickými pro kompilátor. V jazyce C++Visual můžete použít atribut `[[deprecated]]` namísto použití `declspec(deprecated)` a atribut bude rozpoznán všemi vyhovujícími kompilátory. Pro všechny ostatní parametry declspec, jako je dllimport a dllexport, neexistuje žádný ekvivalent atributu, takže musíte dál používat syntaxi declspec. Atributy neovlivňují systém typů a nezmění význam programu. Kompilátory ignorují hodnoty atributů, které nerozpoznávají.
 
 **Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): v oboru seznamu atributů můžete zadat obor názvů pro všechny názvy s jedním **pomocí** představení:
 
@@ -65,12 +65,12 @@ Atributy představuje standardizovanou alternativu k rozšířením specifickým
     ```cpp
     int main()
     {
-        int arr[10]; // GSL warning 26494 will be fired
-        int* p = arr; // GSL warning 26485 will be fired
+        int arr[10]; // GSL warning C26494 will be fired
+        int* p = arr; // GSL warning C26485 will be fired
         [[gsl::suppress(bounds.1)]] // This attribute suppresses Bounds rule #1
         {
-            int* q = p + 1; // GSL warning 26481 suppressed
-            p = q--; // GSL warning 26481 suppressed
+            int* q = p + 1; // GSL warning C26481 suppressed
+            p = q--; // GSL warning C26481 suppressed
         }
     }
     ```

@@ -3,12 +3,12 @@ title: Vytvoření a konfigurace projektu Linux CMake v sadě Visual Studio
 description: Jak vytvořit, konfigurovat, upravit a zkompilovat projekt pro Linux CMake v sadě Visual Studio
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625950"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416089"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Vytvoření a konfigurace projektu Linux CMake
 
@@ -41,10 +41,10 @@ Nejdřív se ujistěte, že máte nainstalovaný **vývoj pro Linux C++ s** nain
 
 V systému Linux se ujistěte, že jsou nainstalovány následující: 
 
-- RSZ
-- GDB
+- gcc
+- gdb
 - rsync
-- věřitel 
+- zip 
 
 ::: moniker range="vs-2019"
 
@@ -175,7 +175,7 @@ Následující příklad ukazuje výchozí konfiguraci pro Linux-Debug v aplikac
 
 ::: moniker range="vs-2019"
 
- Výchozí konfigurace Linux-Debug v aplikaci Visual Studio 2019 verze 16,1 a novější je znázorněna zde:
+Výchozí konfigurace Linux-Debug v aplikaci Visual Studio 2019 verze 16,1 a novější je znázorněna zde:
 
 ```json
 {
@@ -223,7 +223,7 @@ Tyto možnosti umožňují spustit příkazy v systému Linux před a po sestave
 
 
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce s vlastnostmi projektu](../build/working-with-project-properties.md)<br/>
 [Projekty CMake v sadě Visual Studio](../build/cmake-projects-in-visual-studio.md)<br/>

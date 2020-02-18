@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 678816ce455d2a982ff8218becd805a0b2cdd896
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320198"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416036"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (profiler nástrojů výkonu)
 
-Vytvoří výstupní soubor, který lze použít s profilerem Performance Tools.
+Vytvoří výstupní soubor, který se dá použít s profilerem Performance Tools.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,43 +26,43 @@ Vytvoří výstupní soubor, který lze použít s profilerem Performance Tools.
 
 ## <a name="remarks"></a>Poznámky
 
-/ PROFILE zahrnuje následující možnosti linkeru:
+/PROFILE implikuje následující možnosti linkeru:
 
-- [/ OPT: REF](opt-optimizations.md)
+- [/OPT: REF](opt-optimizations.md)
 
 - /OPT:NOICF
 
-- [/ INCREMENTAL: NO](incremental-link-incrementally.md)
+- [/INCREMENTAL: NE](incremental-link-incrementally.md)
 
-- [/ FIXED: NO](fixed-fixed-base-address.md)
+- [/FIXED: NE](fixed-fixed-base-address.md)
 
-/ PROFILE přikazuje linkeru vygenerování části přemístění v bitové kopii programu.  Oddíl pro přemístění umožňuje profileru pro transformaci bitové kopie programu k získání dat profilu.
+/PROFILE způsobí, že linker vygeneruje v imagi programu oddíl pro přemístění.  Oddíl přemístění umožňuje profileru transformovat image programu, aby získala data profilu.
 
-**/ PROFILE** je k dispozici pouze ve verzi Enterprise (vývoj v týmu).  Další informace o nástroj PREfast najdete v tématu [analýzy kódu pro C/C++ přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+**/Profile** je k dispozici pouze ve verzích Enterprise (vývoj týmu).  Další informace o tom, jak rychle, najdete v tématu [Analýza kóduC++ pro C/přehled](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Rozbalte **vlastnosti konfigurace** uzlu.
+1. Rozbalte uzel **Vlastnosti konfigurace** .
 
-1. Rozbalte **Linkeru** uzlu.
+1. Rozbalte uzel **linker** .
 
-1. Vyberte **Upřesnit** stránku vlastností.
+1. Vyberte stránku vlastností **Upřesnit** .
 
-1. Upravit **profilu** vlastnost.
+1. Upravte vlastnost **Profile** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-1. Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
+1. Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
-### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Nastavení této možnosti linkeru v rámci projektu Visual Studio CMake
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Nastavení této možnosti linkeru v rámci projektu sady Visual Studio CMake
 
-**CMake** projekt nemá **stránky vlastností**, možnosti linkeru lze nastavit pomocí modifing souboru CMakeLists.txt.
+Projekt **cmake** neobsahuje **stránky vlastností**, Možnosti linkeru lze nastavit pomocí modifing souboru CMakeLists. txt.
 
-1. Otevření souboru CMakeLists.txt v kořenovém adresáři projektu.
+1. Otevřete CMakeLists. txt v kořenovém adresáři projektu.
 
-1. Přidejte následující kód. Podrobnosti najdete v tématu [odkazy CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
+1. Níže přidejte kód. Podrobnosti najdete v tématu [odkazy cmake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html) .
 
 1. Znovu sestavte své řešení.
 

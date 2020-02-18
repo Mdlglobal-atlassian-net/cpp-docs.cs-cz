@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793784"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416106"
 ---
 # <a name="c-in-visual-studio"></a>C++ v sadě Visual Studio
 
@@ -82,10 +82,10 @@ Použití funkcí produktivity v C++ editoru k refaktorování, procházení, po
 [Ladění nativního kódu](/visualstudio/debugger/debugging-native-code)<br/>
 Použijte ladicí program sady Visual Studio C++ s projekty.
 
-[Analýza kódu pro C/C++ přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Analýza kódu pro C/C++ přehled](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Použijte poznámky SAL nebo C++ základní pokyny pro kontrolu a proveďte statickou analýzu.
 
-[Zápis testů jednotek pro C/C++ v sadě Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+[Zápis testů jednotek pro C/C++ v aplikaci Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
 Vytvářejte testy jednotek pomocí architektury testování částí od společnosti Microsoft C++pro, Google test, zvýšení. test nebo CTest.
 
 ## <a name="write-applications-in-c"></a>Psát aplikace vC++
@@ -114,7 +114,7 @@ Zjistěte, jak chránit aplikace před nebezpečným kódem a neoprávněným p
 [Cloudové a webové programování](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
 V C++nástroji máte několik možností, jak se připojit k webu a ke cloudu.
 
-[Přístup k datům](../data/data-access-in-cpp.md)<br/>
+[Přístup k datům](../data/data-access-in-cpp.md)<br/>
 Připojení k databázím pomocí rozhraní ODBC a OLE DB.
 
 [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)<br/>
@@ -128,7 +128,7 @@ Přečtěte si o práci s různými formáty textu a řetězce a kódování pro
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)
 
-[Vnitřní prvky kompilátoru a jazyk sestavení](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+[Vnitřní funkce kompilátoru a jazyk sestavení](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>C++Knihovny v aplikaci Visual Studio
 
@@ -170,11 +170,11 @@ Naučte se vytvářet efektivní zprávy o chybách proti vizuální C++ sadě n
 [ C++ Blog týmu Microsoftu](https://devblogs.microsoft.com/cppblog/)<br/>
 Přečtěte si další informace o nových funkcích a nejnovějších informacích od vývojářů C++ nástrojů v aplikaci Visual Studio.
 
-[Visual Studio Developer Community](https://developercommunity.visualstudio.com/)<br/>
+[Komunita vývojářů sady Visual Studio](https://developercommunity.visualstudio.com/)<br/>
 Zjistěte, jak získat nápovědu, oznamovat chyby a posílat návrhy na vylepšení pro sadu Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)
 - [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)
-- [Vnitřní prvky kompilátoru a jazyk sestavení](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [Vnitřní funkce kompilátoru a jazyk sestavení](../intrinsics/compiler-intrinsics-and-assembly-language.md)

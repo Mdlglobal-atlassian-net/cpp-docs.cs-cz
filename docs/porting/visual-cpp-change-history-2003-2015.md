@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821802"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415698"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie změn Visual C++ 2003–2015
 
@@ -64,9 +64,9 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
 
   - `double abs(double)` a `float abs(float)`
 
-  - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
+  - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)``long double pow(long double, int)`
 
-  - `float` a `long double` verze funkcí s plovoucí desetinnou čárkou `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2``expm1``fabs``fdim``floor``fma``fmax``fmin``fmod``frexp``hypot`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round``scalbln``scalbn``sin`
+  - `float` a `long double` verze funkcí s plovoucí desetinnou čárkou `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2``expm1``fabs``fdim``floor``fma``fmax``fmin``fmod``frexp``hypot`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round``scalbln``scalbn``sin``ilogb``sinh``sqrt``tan``tanh``tgamma``trunc`
 
   Pokud máte kód, který používá `abs` s typem s plovoucí desetinnou čárkou, který obsahuje pouze hlavičku \<Math. h >, verze s plovoucí desetinnou čárkou již nebudou k dispozici. Volání nyní překládá na `abs(int)`, a to i v argumentu s plovoucí desetinnou čárkou, což způsobí chybu:
 
@@ -100,7 +100,7 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
 
    Funkce [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) a [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) nyní obsahují odkaz na modul, ve kterém je procedura vlákna definována pro dobu trvání vlákna. To pomáhá zajistit, že moduly nebudou uvolněny, dokud vlákno nebude dokončeno.
 
-#### <a name="stdargh"></a>\<stdarg.h>
+#### <a name="stdargh"></a>\<STDARG. h >
 
 - **va_start a odkazové typy**
 
@@ -273,7 +273,7 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
 
    Byla přidána nová funkce `_wcstok` se starým podpisem pro usnadnění přenosu. Při kompilování C++ kódu existuje také vložené přetížení `wcstok`, které má starý podpis. Toto přetížení je deklarováno jako zastaralé. V kódu jazyka C můžete define_CRT_NON_CONFORMING_WCSTOK, že `_wcstok` použít místo `wcstok`.
 
-#### <a name="timeh"></a>\<time.h>
+#### <a name="timeh"></a>\<Time. h >
 
 - **clock**
 
@@ -522,7 +522,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
    Chcete-li vyřešit tuto chybu ve vašem kódu, ujistěte se, že typ argumentu šablony, který použijete, odpovídá deklarovanému typu parametru šablony.
 
-- **__declspec(align)**
+- **__declspec (zarovnání)**
 
    Kompilátor už nepřijímá `__declspec(align)` na funkcích. Tento konstruktor se vždycky ignoruje, ale teď vytvoří chybu kompilátoru.
 
@@ -1739,7 +1739,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-   \- nebo –
+   \- nebo-
 
     ```cpp
     class base;  // as above
@@ -2583,7 +2583,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Nejprve vytvořte soubor \*.idl; vc140\*.idl vygeneruje soubor lze použít k získání obsahující rozhraní a poznámky souboru IDL.
+   Nejprve vytvořte soubor *. idl; soubor vygenerovaný pomocí vc140. idl lze použít k získání \*souboru. idl obsahujícího rozhraní a poznámky.
 
    Dále přidejte do sestavení krok MIDL, abyste se ujistili, že jsou C++ vygenerovány definice rozhraní.
 
@@ -2883,7 +2883,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li najít místa v kódu, který se pokusil o optimalizaci dříve, použijte kompilátor z této verze společně s možností kompilátoru `/W3` a zapněte upozornění 4370. Příklad:
+   Chcete-li najít místa v kódu, který by se mohl pokusit optimalizovat, použijte kompilátor z této verze společně s možností kompilátoru `/W3` a zapněte C4370 upozornění. Například:
 
     ```cpp
     #pragma warning(default:4370)
@@ -3080,7 +3080,7 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 - Změnili jste podpis `CMFCEditBrowseCtrl::EnableBrowseButton`.
 
-- Odebrání `m_fntTabs` a `m_fntTabsBold` z `CMFCBaseTabCtrl`.
+- Byly odebrány vlastnosti `m_fntTabs` a `m_fntTabsBold` ze třídy `CMFCBaseTabCtrl`.
 
 - Byl přidán parametr do konstruktorů `CMFCRibbonStatusBarPane`. (Jedná se o výchozí parametr, a proto se nejedná o derozdělení do zdrojového kódu.)
 
@@ -3522,6 +3522,6 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 - Kompilátor nyní hlásí nedosažitelný kód (C4702).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Novinky pro vizuál C++ v aplikaci Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

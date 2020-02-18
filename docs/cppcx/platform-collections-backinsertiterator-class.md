@@ -1,5 +1,5 @@
 ---
-title: 'Platform::Collections:: backinsertiterator – třída'
+title: 'Platform:: Collections:: BackInsertIterator – třída'
 ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161599"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416061"
 ---
-# <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections:: backinsertiterator – třída
+# <a name="platformcollectionsbackinsertiterator-class"></a>Platform:: Collections:: BackInsertIterator – třída
 
-Představuje iterátor, který vloží, spíše než přepíše, prvky do zadní části sekvenční kolekcí.
+Představuje iterátor, který vkládá místo přepsání prvky do back-endu sekvenční kolekce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,12 +28,12 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Typ položky v aktuální kolekci.
 
 ### <a name="remarks"></a>Poznámky
 
-Třída BackInsertIterator implementuje pravidla vyžadované [back_insert_iterator – třída](../standard-library/back-insert-iterator-class.md).
+Třída BackInsertIterator implementuje pravidla, která vyžaduje [třída back_insert_iterator](../standard-library/back-insert-iterator-class.md).
 
 ### <a name="members"></a>Členové
 
@@ -47,9 +47,9 @@ Třída BackInsertIterator implementuje pravidla vyžadované [back_insert_itera
 
 |Název|Popis|
 |----------|-----------------|
-|[BackInsertIterator::operator * – operátor](#operator-dereference)|Získá odkaz na aktuální BackInsertIterator.|
-|[BackInsertIterator::operator++ Operator](#operator-increment)|Vrátí odkaz na aktuální BackInsertIterator. Iterátor zůstává nezměněna.|
-|[BackInsertIterator::operator= Operator](#operator-assign)|Připojí zadaný objekt na konec aktuální sekvenční kolekcí.|
+|[BackInsertIterator:: operator * – operátor](#operator-dereference)|Načte odkaz na aktuální BackInsertIterator.|
+|[Operátor BackInsertIterator:: operator + +](#operator-increment)|Vrátí odkaz na aktuální BackInsertIterator. Iterátor je nezměněný.|
+|[BackInsertIterator:: operator = – operátor](#operator-assign)|Připojí zadaný objekt ke konci aktuální sekvenční kolekce.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -57,14 +57,13 @@ Třída BackInsertIterator implementuje pravidla vyžadované [back_insert_itera
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** collection.h
+**Header:** Collection. h
 
-**Namespace:** Platform::Collections –
-
+<a name="namespace-platformcollections"></a>**Obor názvů:** Platform:: Collections
 ---
-## <a name="ctor"></a>  BackInsertIterator::BackInsertIterator konstruktor
+## <a name="ctor"></a>BackInsertIterator:: BackInsertIterator – konstruktor
 
-Inicializuje novou instanci třídy `BackInsertIterator` třídy.
+Inicializuje novou instanci třídy `BackInsertIterator`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,16 +75,16 @@ explicit BackInsertIterator(
 
 #### <a name="parameters"></a>Parametry
 
-*v*<br/>
-IVector\<T > objektu.
+*ICES*<br/>
+Objekt IVector\<T >.
 
 ### <a name="remarks"></a>Poznámky
 
-A `BackInsertIterator` vloží prvky za poslední prvek objektu určeného parametrem `v`.
+`BackInsertIterator` vloží prvky za poslední prvek objektu určeného parametrem `v`.
 
-## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
+## <a name="operator-assign"></a>BackInsertIterator:: operator = – operátor
 
-Připojí zadaný objekt na konec aktuální sekvenční kolekcí.
+Připojí zadaný objekt ke konci aktuální sekvenční kolekce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -95,16 +94,16 @@ BackInsertIterator& operator=( const T& t);
 
 #### <a name="parameters"></a>Parametry
 
-*t*<br/>
-Objekt, který chcete připojit s aktuální kolekcí.
+*š*<br/>
+Objekt, který se má připojit k aktuální kolekci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Odkaz na aktuální BackInsertIterator.
 
-## <a name="operator-dereference"></a>  BackInsertIterator::operator * – operátor
+## <a name="operator-dereference"></a>BackInsertIterator:: operator * – operátor
 
-Získá odkaz na aktuální BackInsertIterator.
+Načte odkaz na aktuální BackInsertIterator.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -118,11 +117,11 @@ Odkaz na aktuální BackInsertIterator.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor vrátí odkaz na aktuální BackInsertIterator; není k libovolnému prvku v aktuální kolekci.
+Tento operátor vrátí odkaz na aktuální BackInsertIterator; není k žádnému prvku v aktuální kolekci.
 
-## <a name="operator-increment"></a>  BackInsertIterator::operator ++ – operátor
+## <a name="operator-increment"></a>Operátor BackInsertIterator:: operator + +
 
-Vrátí odkaz na aktuální BackInsertIterator. Iterátor zůstává nezměněna.
+Vrátí odkaz na aktuální BackInsertIterator. Iterátor je nezměněný.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -139,10 +138,10 @@ Odkaz na aktuální BackInsertIterator.
 
 ### <a name="remarks"></a>Poznámky
 
-Návrh první příklad syntaxe předem zvýší aktuální BackInsertIterator a druhá syntaxe po zvětší aktuální BackInsertIterator. `int` v druhé syntaxi označuje operaci po přírůstku není skutečný celočíselný operand.
+Podle návrhu první příklad syntaxe předem zvýší aktuální BackInsertIterator a druhý syntax po přírůstcích aktuální BackInsertIterator. Typ `int` ve druhé syntaxi označuje operaci po přírůstcích, nikoli skutečný celočíselný operand.
 
-Ale tento operátor neprovede žádné změny ve skutečnosti BackInsertIterator. Místo toho tento operátor vrátí odkaz na iterátor bez úprav, aktuální. Jedná se o stejné chování jako [operátor *](#operator-dereference).
+Tento operátor však ve skutečnosti nemění BackInsertIterator. Místo toho vrátí tento operátor odkaz na neupravený aktuální iterátor. Jedná se o stejné chování jako [operátor *](#operator-dereference).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Platforma Namespace](platform-namespace-c-cx.md)
+[Obor názvů platformy](platform-namespace-c-cx.md)

@@ -3,12 +3,12 @@ title: Novinky v jazyce C++ v sadě Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793968"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415717"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novinky v jazyce C++ v sadě Visual Studio
 
@@ -231,7 +231,7 @@ Experimentální součást Clang/C2 se odebrala. Použijte sadu nástrojů MSVC 
 
 - Nové rychlé opravy pro neinicializované kontroly proměnných. Další informace najdete v tématu [nové opravy pro analýzu kódu pro neinicializovaná paměť (C6001) a použití před upozorněními init (C26494)](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/).
 
-## <a name="unit-testing"></a>Testování jednotek
+## <a name="unit-testing"></a>Testování částí
 
 Šablona spravovaného testovacího projektu C++ už není dostupná. Můžete pokračovat v používání spravovaného C++ testovacího rozhraní ve stávajících projektech. Pro nové testy jednotek zvažte použití jednoho z nativních testovacích rozhraní, pro které aplikace Visual Studio poskytuje šablony (MSTest, Google Test) nebo šablonu spravovaného C# testovacího projektu.
 
@@ -516,7 +516,7 @@ Několik C++ operací, které používají modul IntelliSense pro refaktoring a 
 |||
 |-|-|
 |Funkce|Zlepšení výkonu|
-|přejmenování|5.3 x|
+|Přejmenovat|5.3 x|
 |Změnit signaturu |4.5 x|
 |Najít všechny odkazy|4.7 x|
 
@@ -596,7 +596,7 @@ Když chcete úspěšně vytvářet projekty Win32 v úloze vývoje desktopovýc
 
 Nástroje pro C++ vizuální sestavení (dříve dostupné jako samostatný produkt) jsou teď zahrnuté jako úlohy v instalační program pro Visual Studio. Tato úloha nainstaluje pouze nástroje potřebné pro sestavení C++ projektů bez instalace prostředí IDE sady Visual Studio. Zahrnují se sady nástrojů v140 i v141. Sada nástrojů v141 obsahuje nejnovější vylepšení sady Visual Studio 2017 verze 15,5. Další informace najdete v tématu [Visual Studio Build Tools nyní zahrnují sady nástrojů MSVC a VS2015](https://devblogs.microsoft.com/cppblog/visual-studio-build-tools-now-include-the-vs2017-and-vs2015-msvc-toolsets/).
 
-## <a name="linux-development-with-c"></a>Vývoj pro Linux v C++
+## <a name="linux-development-with-c"></a>Vývoj linuxových aplikací v jazyce C++
 
 Oblíbené rozšíření [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) je teď součástí sady Visual Studio. Tato instalace nabízí všechno, co potřebujete k vývoji a ladění aplikací v jazyce C++, které se spouštějí v prostředí systému Linux.
 
@@ -617,7 +617,7 @@ Další informace najdete v tématu [konfigurace projektu Linux cmake](../linux/
 - Různá vylepšení scénářů pro úlohy Linux. Další informace najdete v tématu [vylepšení C++ úloh Linux v systému projektu, okně konzoly pro Linux, rsync a připojení k procesu](https://devblogs.microsoft.com/cppblog/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 - Technologie IntelliSense pro záhlaví na vzdálených připojeních systému Linux. Další informace najdete v tématech [technologie IntelliSense pro vzdálené systémy Linux](https://devblogs.microsoft.com/cppblog/intellisense-for-remote-linux-headers/) a [konfigurace projektu pro Linux cmake](../linux/cmake-linux-project.md).
 
-## <a name="game-development-with-c"></a>Vývoj her v C++
+## <a name="game-development-with-c"></a>Vývoj her v jazyce C++
 
 Využijte naplno potenciál C++ k vytváření profesionálních her využívajících technologii DirectX nebo Cocos2d.
 
@@ -647,7 +647,7 @@ Sada nástrojů Clang/C2, která se dodává se sadou Visual Studio 2017, teď p
 
 ## <a name="c-code-analysis"></a>C++Analýza kódu
 
-Se sadou Visual Studio se nyní distribuují moduly pro kontrolu jádra C++, které vynucují [pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines). Stačí povolit rutiny na stránce **rozšíření pro analýzu kódu** na stránkách vlastností projektu a rozšíření budou zahrnuty při spuštění analýzy kódu. Další informace najdete v tématu [použití C++ hlavních pokynů pro kontrolu](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+Se sadou Visual Studio se nyní distribuují moduly pro kontrolu jádra C++, které vynucují [pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines). Stačí povolit rutiny na stránce **rozšíření pro analýzu kódu** na stránkách vlastností projektu a rozšíření budou zahrnuty při spuštění analýzy kódu. Další informace najdete v tématu [použití C++ hlavních pokynů pro kontrolu](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ![CppCoreCheck](media/CppCoreCheck.png "Stránka vlastností CppCoreCheck")
 
@@ -668,13 +668,13 @@ Se sadou Visual Studio se nyní distribuují moduly pro kontrolu jádra C++, kte
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 verze 15,7
 
 - Byla přidána podpora pro [/analyze: RuleSet](../build/reference/analyze-code-analysis.md), která umožňuje určit pravidla analýzy kódu, která se mají spustit.
-- Přidala se podpora C++ pro další pravidla základní směrnice.  Další informace najdete v tématu [použití C++ hlavních pokynů pro kontrolu](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+- Přidala se podpora C++ pro další pravidla základní směrnice.  Další informace najdete v tématu [použití C++ hlavních pokynů pro kontrolu](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
-## <a name="unit-testing"></a>Testování jednotek
+## <a name="unit-testing"></a>Testování částí
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 verze 15.5
 
-Google test adaptér a zvýšení. adaptér testu je nyní k dispozici jako komponenty **vývoje plochy s C++**  úlohou a jsou integrovány v **Průzkumníku testů**. Pro projekty cmake (pomocí otevřené složky) se přidala podpora CTest, i když plná integrace s **průzkumníkem testů** ještě není dostupná. Další informace najdete v tématu [zápis testů jednotek pro C/C++](/visualstudio/test/writing-unit-tests-for-c-cpp).
+Google test adaptér a zvýšení. adaptér testu je nyní k dispozici jako komponenty **vývoje plochy s C++**  úlohou a jsou integrovány v **Průzkumníku testů**. Pro projekty cmake (pomocí otevřené složky) se přidala podpora CTest, i když plná integrace s **průzkumníkem testů** ještě není dostupná. Další informace naleznete v tématu [zápis testů jednotek pro C/C++](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
 ##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 verze 15.6
 
@@ -697,7 +697,7 @@ Visual Studio Diagnostika grafiky je sada nástrojů pro zaznamenávání a anal
 
 - **Hledání a filtrování v tabulce objektů:** Poskytuje rychlý a snadný způsob, jak najít prostředky, které hledáte.
 
-  ![Hledat](media/search.png)
+  ![Hledání](media/search.png)
 
 - **Historie prostředků:** Toto nové zobrazení nabízí zjednodušený způsob, jak zobrazit celou historii změn prostředku, jak bylo použito při vykreslování zachyceného snímku. Pokud chcete vyvolat historii pro libovolný prostředek, jednoduše klikněte na ikonu hodiny vedle libovolného hypertextového odkazu prostředku.
 

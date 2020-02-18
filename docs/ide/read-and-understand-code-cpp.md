@@ -2,12 +2,12 @@
 title: Čtení a pochopení C++ kódu v aplikaci Visual Studio
 description: Použijte Editor C++ kódu v aplikaci Visual Studio k formátování a pochopení kódu.
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303003"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416120"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Čtení a pochopení C++ kódu v aplikaci Visual Studio
 
@@ -19,9 +19,9 @@ Prvky syntaxe sady Visual Studio vybarvuje k rozlišení mezi typy symbolů, jak
 
 ![Barevné zabarvení kódu](../ide/media/code-outline-colorization.png "C++zabarvení")
 
- Nepoužitý kód (například kód pod #if 0) je barevně vybledlější.
+Nepoužitý kód (například kód pod #if 0) je barevně vybledlější.
 
- ![Neaktivní kód](../ide/media/inactive-code-cpp.png "C++Neaktivní kód")
+![Neaktivní kód](../ide/media/inactive-code-cpp.png "C++Neaktivní kód")
 
 Barvy můžete přizpůsobit tak, že v okně **Snadné spuštění**zadáte "písma" a pak zvolíte **písma a barvy**. V dialogovém okně **písma a barvy** se posuňte dolů k možnostem C/C++ a pak zvolte vlastní písmo a barvu.
 

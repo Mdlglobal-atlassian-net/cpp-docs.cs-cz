@@ -3,12 +3,12 @@ title: Visual Studio IDE Tools pro upgrade C++ kódu
 description: Editor C++ kódu a nástroje pro analýzu kódu v aplikaci Visual Studio vám pomůžou modernizovat C++ svůj základ kódu.
 ms.date: 11/13/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3f85b955b688489bfc04c4bfc0605201e883e3d4
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 409fc0a2fa6cd39c7751dc34b20b231ffbea3956
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119531"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416156"
 ---
 # <a name="visual-studio-ide-tools-for-upgrading-c-code"></a>Visual Studio IDE Tools pro upgrade C++ kódu
 
@@ -24,7 +24,7 @@ Visual Studio pomáhá s upgradem C++ starší verze kódu pomocí možností ko
 
 - Kód, který odpovídá všem verzím Standard, ale již není považována za osvědčený postup v moderních C++verzích.
 
-   Pro identifikaci kódu, kde jsou doporučeny změny, spusťte [analýzu kódu](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+   Pro identifikaci kódu, kde jsou doporučeny změny, spusťte [analýzu kódu](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="open-and-convert-a-legacy-project"></a>Otevření a převod starší verze projektu
 
@@ -74,7 +74,7 @@ Chyby a upozornění analýzy kódu se zobrazí také v **Seznam chyb** stejně 
 
 ![Upozornění analýzy kódu v Seznam chyb](media/code-analysis-error-list.png "Upozornění analýzy kódu v Seznam chyb")
 
-Můžete změnit, která pravidla jsou aktivní, a vytvořit vlastní RuleSets. Další informace o použití analýzy kódu naleznete v tématu [Analýza kódu pro C/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Můžete změnit, která pravidla jsou aktivní, a vytvořit vlastní RuleSets. Další informace o použití analýzy kódu naleznete v tématu [Analýza kódu pro C/C++ Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="use-quick-actions-to-modernize-code"></a>Použití rychlých akcí k modernizovat kódu
 
@@ -101,7 +101,7 @@ A volání `AVERAGE` je nyní barevně zabarvené jako volání funkce a Rychlé
 
 ![volání funkce constexpr](media/constexpr-function-call.png "volání funkce constexpr")
 
-### <a name="initialize-variables"></a>Inicializovat proměnné
+### <a name="initialize-variables"></a>Inicializace proměnných
 
 Neinicializované proměnné mohou uchovávat náhodné hodnoty, které vedou k závažným chybám. Analýza kódu tyto instance označí a editor nabízí rychlou akci:
 

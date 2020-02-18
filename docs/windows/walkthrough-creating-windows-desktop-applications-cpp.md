@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cebc748f207cb1283add4b494b422a13bdc17f8c
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627482"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416135"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: vytvoření tradiční desktopové aplikace systému WindowsC++()
 
@@ -23,7 +23,7 @@ Rozhraní API systému Windows (označované také jako Win32 API, rozhraní Win
 > [!IMPORTANT]
 > V zájmu zkrácení jsou v textu vynechány některé příkazy kódu. Část [sestavení kódu](#build-the-code) na konci tohoto dokumentu zobrazuje kompletní kód.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Počítač se systémem Microsoft Windows 7 nebo novější verzí. Pro nejlepší vývojové prostředí doporučujeme Windows 10.
 
@@ -71,9 +71,9 @@ Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li p
 
 1. V nabídce **soubor** klikněte na příkaz **Nový** a pak zvolte možnost **projekt**.
 
-1. V dialogovém okně **Nový projekt** rozbalte v levém podokně položku **nainstalované**  > **vizuál C++** a pak vyberte možnost **desktopová plocha systému Windows**. V prostředním podokně vyberte možnost **Průvodce desktopovou plochou systému Windows**.
+1. V dialogovém okně **Nový projekt** rozbalte v levém podokně položku **nainstalované** > **vizuál C++** a pak vyberte možnost **desktopová plocha systému Windows**. V prostředním podokně vyberte možnost **Průvodce desktopovou plochou systému Windows**.
 
-   Do pole **název** zadejte název projektu, například *DesktopApp*. Klikněte na **tlačítko OK**.
+   Do pole **název** zadejte název projektu, například *DesktopApp*. Zvolte **OK**.
 
    ![Pojmenování projektu DesktopApp](../build/media/desktop-app-new-project-name-153.png "Pojmenování projektu DesktopApp")
 
@@ -97,9 +97,9 @@ Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li p
 
 1. V nabídce **soubor** klikněte na příkaz **Nový** a pak zvolte možnost **projekt**.
 
-1. V dialogovém okně **Nový projekt** rozbalte v levém podokně položku **nainstalované**  > **šablony**  > **vizuál C++** a pak vyberte **Win32**. V prostředním podokně vyberte **projekt Win32**.
+1. V dialogovém okně **Nový projekt** rozbalte v levém podokně položku **nainstalované** > **šablony** > **vizuál C++** a pak vyberte **Win32**. V prostředním podokně vyberte **projekt Win32**.
 
-   Do pole **název** zadejte název projektu, například *DesktopApp*. Klikněte na **tlačítko OK**.
+   Do pole **název** zadejte název projektu, například *DesktopApp*. Zvolte **OK**.
 
    ![Pojmenování projektu DesktopApp](../build/media/desktop-app-new-project-name-150.png "Pojmenování projektu DesktopApp")
 
@@ -141,9 +141,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    Informace o parametrech a návratové hodnotě této funkce naleznete v tématu [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Jaká jsou všechna další slova, například `CALLBACK`nebo `HINSTANCE`nebo `_In_`? Tradiční rozhraní API systému Windows používá rozsáhly definice typedef a makra preprocesoru pro abstrakci některých podrobností o typech a kódu specifického pro platformu, jako jsou konvence volání, deklarace **__declspec** a direktivy pragma kompilátoru. V aplikaci Visual Studio můžete pomocí funkce [rychlá informace](/visualstudio/ide/using-intellisense#quick-info) technologie IntelliSense zobrazit, co tyto definice typedef a makra definují. Najeďte myší na slovo, které vás zajímá, nebo ho vyberte a stiskněte **ctrl** +**K**, **CTRL** +**I** pro malé automaticky otevírané okno, které obsahuje definici. Další informace najdete v tématu [použití technologie IntelliSense](/visualstudio/ide/using-intellisense). Parametry a návratové typy často používají *poznámky SAL* , které vám pomůžou zachytit programové chyby. Další informace najdete v tématu [Použití poznámek SAL ke snížení vad CC++ /kódu](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Jaká jsou všechna další slova, například `CALLBACK`nebo `HINSTANCE`nebo `_In_`? Tradiční rozhraní API systému Windows používá rozsáhly definice typedef a makra preprocesoru pro abstrakci některých podrobností o typech a kódu specifického pro platformu, jako jsou konvence volání, **__declspec** deklarace a direktivy kompilátoru kompilátoru. V aplikaci Visual Studio můžete pomocí funkce [rychlá informace](/visualstudio/ide/using-intellisense#quick-info) technologie IntelliSense zobrazit, co tyto definice typedef a makra definují. Najeďte myší na slovo, které vás zajímá, nebo ho vyberte a stiskněte **ctrl**+**K**, **CTRL**+**I** pro malé automaticky otevírané okno, které obsahuje definici. Další informace najdete v tématu [použití technologie IntelliSense](/visualstudio/ide/using-intellisense). Parametry a návratové typy často používají *poznámky SAL* , které vám pomůžou zachytit programové chyby. Další informace najdete v tématu [Použití poznámek SAL ke snížení vad CC++ /kódu](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Desktopové programy Windows vyžadují &lt;windows. h >. &lt;TCHAR. h > definuje makro `TCHAR`, které se nakonec překládá na **wchar_t** , pokud je v projektu definován symbol Unicode, v opačném případě se překládá na **char**.  Pokud vždy sestavíte s povoleným kódováním UNICODE, nepotřebujete TCHAR a můžete pouze použít **wchar_t** přímo.
+1. Desktopové programy Windows vyžadují &lt;Windows. h >. &lt;TCHAR. h > definuje makro `TCHAR`, které se nakonec překládá na **wchar_t** , pokud je v projektu definován symbol Unicode, v opačném případě se překládá na **char**.  Pokud vždy sestavíte s povoleným kódováním UNICODE, nepotřebujete TCHAR a můžete použít **wchar_t** přímo.
 
    ```cpp
    #include <windows.h>
@@ -361,7 +361,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
 
 1. Chcete-li povolit funkci `WndProc` pro zpracování zpráv, které aplikace obdrží, implementujte příkaz switch.
 
-   Jednu důležitou zprávu, která se má zpracovat, je zpráva [WM_PAINT](/windows/win32/gdi/wm-paint) . Aplikace obdrží zprávu `WM_PAINT`, když se část zobrazeného okna musí aktualizovat. K události může dojít, když uživatel přesune okno před okno a pak ho znovu přesune. Vaše aplikace neví, kdy dojde k těmto událostem. Jenom systém Windows ví, takže vaši aplikaci upozorní na `WM_PAINT`ou zprávu. Po prvním zobrazení okna se musí aktualizovat všechny.
+   Jednu důležitou zprávu, která se má zpracovat, je [WM_PAINT](/windows/win32/gdi/wm-paint) zpráva. Aplikace obdrží zprávu `WM_PAINT`, když se část zobrazeného okna musí aktualizovat. K události může dojít, když uživatel přesune okno před okno a pak ho znovu přesune. Vaše aplikace neví, kdy dojde k těmto událostem. Jenom systém Windows ví, takže vaši aplikaci upozorní na `WM_PAINT`ou zprávu. Po prvním zobrazení okna se musí aktualizovat všechny.
 
    Chcete-li zpracovat zprávu `WM_PAINT`, nejdříve zavolejte [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint)a potom zpracujte veškerou logiku pro rozložení textu, tlačítek a dalších ovládacích prvků v okně a pak zavolejte [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint). Pro aplikaci logika mezi počátečním voláním a koncovým voláním je zobrazení řetězce "Hello, Windows Desktop!" v okně. V následujícím kódu si všimněte, že funkce [text](/windows/win32/api/wingdi/nf-wingdi-textoutw) je použita k zobrazení řetězce.
 
@@ -590,6 +590,6 @@ Jak jste slíbili, tady je kompletní kód pro funkční aplikaci.
 
 Blahopřejeme! Dokončili jste tento návod a vytvořili tradiční desktopovou aplikaci pro Windows.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Desktopové aplikace pro Windows](../windows/windows-desktop-applications-cpp.md)

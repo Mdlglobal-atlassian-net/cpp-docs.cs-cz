@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7bd6d02304e86b50d33bdaa3e07c95b08da31f7a
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821893"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416172"
 ---
 # <a name="basic_string_view-class"></a>basic_string_view – třída
 
@@ -202,10 +202,10 @@ Výchozí hodnota [char_traits](char-traits-struct.md)<*CharType*>.
 |**const_reference**|`using const_reference = const value_type&;`|
 |**const_reverse_iterator**|`using const_reverse_iterator = std::reverse_iterator<const_iterator>;`|
 |**difference_type**|`using difference_type = ptrdiff_t;`|
-|**iterator**|`using iterator = const_iterator;`|
+|**iterátor**|`using iterator = const_iterator;`|
 |**npos**|`static constexpr size_type npos = size_type(-1);`|
-|**pointer**|`using pointer = value_type*;`|
-|**Referenční dokumentace**|`using reference = value_type&;`|
+|**ukazatele**|`using pointer = value_type*;`|
+|**odkaz**|`using reference = value_type&;`|
 |**reverse_iterator**|`using reverse_iterator = const_reverse_iterator;`|
 |**size_type**|`using size_type = size_t;`|
 |**traits_type**|`using traits_type = Traits;`|
@@ -222,26 +222,26 @@ Výchozí hodnota [char_traits](char-traits-struct.md)<*CharType*>.
 
 |Členská funkce|Popis|
 |-|-|
-|[at](#at)|Vrátí const_reference k elementu v zadaném umístění.|
+|[Počínaje](#at)|Vrátí const_reference k elementu v zadaném umístění.|
 |[návrat](#back)|Vrátí const_reference k poslednímu prvku.|
 |[ifunctiondiscovery](#begin)|Vrátí konstantní iterátor adresující první prvek. (string_views jsou neměnné.)|
 |[cbegin](#cbegin)|Totéž jako na [začátku](#begin).|
 |[cend](#cend)|Vrátí konstantní iterátor, který odkazuje na jeden za poslední prvek.|
 |[kopií](#copy)|Kopíruje maximálně zadaný počet znaků z indexované pozice ve zdrojovém string_view do cílového pole znaků. (Nedoporučuje se. Místo toho použijte _Copy_s.)|
 |[_Copy_s](#_copy_s)|Zabezpečená funkce kopírování CRT|
-|[compare](#compare)|Porovná string_view se zadaným string_view a určí, jestli jsou stejné, nebo pokud je jedna lexikograficky menší než druhá.|
-|[crbegin](#crbegin)|Stejné jako [rbegin](#rbegin).|
+|[porovnán](#compare)|Porovná string_view se zadaným string_view a určí, jestli jsou stejné, nebo pokud je jedna lexikograficky menší než druhá.|
+|[crbegin –](#crbegin)|Stejné jako [rbegin](#rbegin).|
 |[crend](#crend)|Stejné jako [rend](#rend).|
-|[data](#data)|Vrací nezpracovaný nevlastnící ukazatel na posloupnost znaků.|
-|[empty](#empty)|Testuje, zda string_view obsahuje znaky.|
+|[údajů](#data)|Vrací nezpracovaný nevlastnící ukazatel na posloupnost znaků.|
+|[obsahovat](#empty)|Testuje, zda string_view obsahuje znaky.|
 |[účelu](#end)|Stejné jako [cend](#cend).|
-|[najít](#find)|Vyhledá v směrem nahoru směr prvního výskytu podřetězce, který odpovídá zadané posloupnosti znaků.|
+|[find](#find)|Vyhledá v směrem nahoru směr prvního výskytu podřetězce, který odpovídá zadané posloupnosti znaků.|
 |[find_first_not_of](#find_first_not_of)|Vyhledá první znak, který není libovolný prvek zadaného string_view nebo převoditelné řetězcové objekty.|
 |[find_first_of](#find_first_of)|Vyhledá první znak, který odpovídá jakémukoli prvku zadaného string_view nebo objektu s převoditelné řetězce.|
 |[find_last_not_of](#find_last_not_of)|Vyhledá poslední znak, který není libovolný prvek zadaného string_view nebo převoditelné řetězcové objekty.|
 |[find_last_of](#find_last_of)|Vyhledá poslední znak, který je prvkem zadaného string_view nebo převoditelné řetězcové objekty.|
 |[dopředu](#front)|Vrátí const_reference k prvnímu prvku.|
-|[Délka](#length)|Vrátí aktuální počet prvků.|
+|[časový](#length)|Vrátí aktuální počet prvků.|
 |[max_size](#max_size)|Vrátí maximální počet znaků, které může string_view obsahovat.|
 |[rbegin](#rbegin)|Vrátí konstantní iterátor, který adresuje první prvek v obráceném string_view.|
 |[remove_prefix](#remove_prefix)|Přesune ukazatel směrem nahoru o zadaný počet prvků.|
@@ -250,7 +250,7 @@ Výchozí hodnota [char_traits](char-traits-struct.md)<*CharType*>.
 |[rfind](#rfind)|Vyhledá string_view v obráceném pořadí pro první výskyt podřetězce, který odpovídá zadané posloupnosti znaků.|
 |[hodnota](#size)|Vrátí aktuální počet prvků.|
 |[substr –](#substr)|Vrátí podřetězec zadané délky začínající zadaným indexem.|
-|[swap](#swap)|Výměna obsahu dvou string_views.|
+|[adresu](#swap)|Výměna obsahu dvou string_views.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -615,7 +615,7 @@ Počet skutečně zkopírovaných znaků.
 
 Znak null není připojen ke konci kopie.
 
- Další informace naleznete v tématu [c-Runtime-Library/Security-Features-in-the-CRT](../c-runtime-library/security-features-in-the-crt.md).
+Další informace naleznete v tématu [c-Runtime-Library/Security-Features-in-the-CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="crbegin"></a>basic_string_view:: crbegin –
 
@@ -787,7 +787,7 @@ String_view, pro kterou má členská funkce Hledat
 
 Index prvního znaku nalezeného podřetězce, v opačném případě `npos`.
 
-## <a name="find_last_not_of"></a>  basic_string_view::find_last_not_of
+## <a name="find_last_not_of"></a>basic_string_view:: find_last_not_of
 
 Vyhledá poslední znak, který není žádným prvkem zadaného string_view.
 
@@ -819,7 +819,7 @@ Počet znaků, který se počítá od prvního znaku v *PTR*.
 
 Index prvního znaku nalezeného podřetězce, v opačném případě `string_view::npos`.
 
-## <a name="find_last_of"></a>  basic_string_view::find_last_of
+## <a name="find_last_of"></a>basic_string_view:: find_last_of
 
 Vyhledá poslední znak, který odpovídá jakémukoli prvku zadaného string_view.
 
@@ -1041,7 +1041,7 @@ Délka string_view
 
 String_view může změnit jeho délku, například pomocí `remove_prefix` a `remove_suffix`. Vzhledem k tomu, že se nezmění základní řetězcová data, není velikost string_view nutně velikost podkladových dat.
 
-## <a name="substr"></a>  basic_string_view::substr
+## <a name="substr"></a>basic_string_view:: substr
 
 Vrátí string_view, který představuje (nejvíce) zadaný počet znaků ze zadané pozice.
 
@@ -1061,7 +1061,7 @@ Počet znaků, které mají být zahrnuty v podřetězci, pokud jsou k dispozici
 
 Objekt string_view, který představuje zadanou dílčí sekvenci prvků.
 
-## <a name="swap"></a>  basic_string_view::swap
+## <a name="swap"></a>basic_string_view:: swap
 
 Vyměňuje dvě string_views, jinými slovy ukazatelé na podkladová řetězcová data a hodnoty velikosti.
 
@@ -1074,7 +1074,7 @@ constexpr void swap(basic_string_view& sv) noexcept;
 *sv*\
 Zdroj string_view, jehož hodnoty ukazatele a velikosti mají být vyměněny pomocí cílového string_view.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [\<string_view >](../standard-library/string-view.md)\
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

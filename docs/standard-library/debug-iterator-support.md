@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450593"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416208"
 ---
 # <a name="debug-iterator-support"></a>Podpora ladění iterátorů
 
@@ -26,7 +26,7 @@ C++ Standard popisuje, jak mohou členské funkce způsobit, že iterátory do k
 
 - Mazání elementu z kontejneru způsobí, že iterátory elementu se stanou neplatnými.
 
-- Zvětšení velikosti vektoru pomocí [](../standard-library/vector.md) operace push nebo INSERT způsobí, že `vector` iterátory se stanou neplatnými.
+- Zvětšení velikosti [vektoru](../standard-library/vector.md) pomocí vložení nebo vložení způsobí, že iterátory do `vector` stanou neplatnými.
 
 ## <a name="invalid-iterators"></a>Neplatné iterátory
 
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Použití _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>Použití _ITERATOR_DEBUG_LEVEL
 
-Pomocí makra preprocesoru [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) můžete vypnout funkci iterátoru ladění v sestavení ladění. Tento program neuplatňuje, ale stále spouští nedefinované chování.
+Můžete použít [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) makra preprocesoru pro vypnutí funkce iterátor ladění v sestavení ladění. Tento program neuplatňuje, ale stále spouští nedefinované chování.
 
 ```cpp
 // iterator_debugging_1.cpp
@@ -106,7 +106,7 @@ int main() {
 
 ## <a name="incompatible-iterators"></a>Nekompatibilní iterátory
 
-Následující příklad kódu vyvolá kontrolní výraz, protože dva iterátory k [for_each](../standard-library/algorithm-functions.md#for_each) algoritmu jsou nekompatibilní. Zkontrolujte algoritmy a určete, zda iterátory, které jsou dodány, odkazují na stejný kontejner.
+Následující příklad kódu vyvolá kontrolní výraz, protože dva iterátory [for_eachho](../standard-library/algorithm-functions.md#for_each) algoritmu jsou nekompatibilní. Zkontrolujte algoritmy a určete, zda iterátory, které jsou dodány, odkazují na stejný kontejner.
 
 ```cpp
 // iterator_debugging_3.cpp
@@ -126,7 +126,7 @@ int main()
 }
 ```
 
-Všimněte si, že tento příklad používá výraz `[] (int& elem) { elem *= 2; }` lambda namísto funktor. I když tato volba nemá žádný vliv na chybu kontrolního výrazu – podobný funktor by způsobil stejné selhání – výrazy lambda představují velmi užitečný způsob, jak provádět úlohy kompaktních objektů funkce. Další informace o výrazech lambda naleznete v tématu [lambda Expressions](../cpp/lambda-expressions-in-cpp.md).
+Všimněte si, že tento příklad používá výraz lambda `[] (int& elem) { elem *= 2; }` namísto funktor. I když tato volba nemá žádný vliv na chybu kontrolního výrazu – podobný funktor by způsobil stejné selhání – výrazy lambda představují velmi užitečný způsob, jak provádět úlohy kompaktních objektů funkce. Další informace o výrazech lambda naleznete v tématu [lambda Expressions](../cpp/lambda-expressions-in-cpp.md).
 
 ## <a name="iterators-going-out-of-scope"></a>Iterátory vycházející z rozsahu
 
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()
@@ -173,6 +173,6 @@ struct derived : base {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988070"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416166"
 ---
 # <a name="security-best-practices-for-c"></a>Doporučené postupy zabezpečení pro jazyk C++
 
@@ -35,7 +35,7 @@ Instruuje linker, aby se zahrnul do výstupního obrázku tabulka, která obsahu
 [/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (kompatibilní s zabráněním spuštění dat)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) tyto možnosti kompilátoru a linkeru umožňují kompatibilitu s funkcí Zabránění spuštění dat (DEP). DEP chrání procesor před spouštěním nekódových stránek.
 
 [/analyze (analýza kódu)](../build/reference/analyze-code-analysis.md)<br/>
-Tato možnost kompilátoru aktivuje analýzu kódu, která hlásí potenciální problémy se zabezpečením, jako je přetečení vyrovnávací paměti, neinicializovaná paměť, přesměrování ukazatele null a nevracení paměti. Tento parametr je standardně vypnutý. Další informace naleznete v tématu [Analýza kódu pro C/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Tato možnost kompilátoru aktivuje analýzu kódu, která hlásí potenciální problémy se zabezpečením, jako je přetečení vyrovnávací paměti, neinicializovaná paměť, přesměrování ukazatele null a nevracení paměti. Tento parametr je standardně vypnutý. Další informace naleznete v tématu [Analýza kódu pro C/C++ Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 [/DYNAMICBASE (použití modulu pro náhodné rozložení adresního prostoru)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Tato možnost linkeru umožňuje sestavovat spustitelnou bitovou kopii, která může být načtena do různých umístění v paměti na začátku provádění. Tato možnost také způsobí, že umístění zásobníku v paměti bude mnohem méně předvídatelné.
@@ -64,11 +64,11 @@ Analýza kódu pro spravovaný kód, označovaná také jako FxCop, kontroluje s
 
 - Lokalizace
 
-- Konvence zadávání názvů
+- Zásady vytváření názvů
 
 - Výkon
 
-- Zabezpečení –
+- Zabezpečení
 
 ## <a name="windows-application-verifier"></a>nástroj Ověřovatel aplikací Windows
 
@@ -92,7 +92,7 @@ Pomocí uživatelských účtů Windows, které patří do skupiny Administrator
 
 Informace o tom, jak usnadní a zmírnit proti spekulativním softwarovým ohrožením zabezpečení kanálu na C++ straně služby, najdete v tématu [ C++ pokyny pro vývojáře pro spekulativní kanály na straně spuštění](developer-guidance-speculative-execution.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 <xref:System.Security> <br/>
 [Zabezpečení](/dotnet/standard/security/index)<br/>

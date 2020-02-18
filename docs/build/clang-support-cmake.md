@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: b5a5985ad6a82d1c7ff45ceb3668273ec96292ec
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: a71f9dc98f74247788558d1b7dccf3e117f43072
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556718"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416025"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Podpora Clang/LLVM v projektech sady Visual Studio CMake
 
@@ -27,7 +27,7 @@ Pomocí sady Visual Studio s Clang můžete upravovat a ladit C++ projekty CMAK,
 
 **Linux**: u projektů Linux cmake není nutná žádná speciální podpora sady Visual Studio. Clang můžete nainstalovat pomocí Správce balíčků distribuce a přidat příslušné příkazy do souboru CMakeLists. txt.
 
-## <a name="install"></a>Instalace produktu
+## <a name="install"></a>Instalace
 
 Pro nejlepší podporu IDE v aplikaci Visual Studio doporučujeme použít nejnovější nástroje kompilátoru Clang pro Windows. Pokud je ještě nemáte, můžete je nainstalovat tak, že otevřete instalační program pro Visual Studio a zvolíte  **C++ Clang kompilátor pro Windows** v části **vývoj pro stolní počítače C++ s** volitelnými součástmi. Pokud používáte vlastní instalaci Clang, podívejte se na  **C++ součást Clang-CL pro V142 Build Tools** .
 
@@ -41,7 +41,7 @@ Přidání nové konfigurace Clang do projektu CMake:
 
 1. V části **Konfigurace**stiskněte tlačítko **Přidat konfiguraci** :
 
-   ![Přidání konfigurace](media/cmake-add-config-icon.png)
+   ![Přidat konfiguraci](media/cmake-add-config-icon.png)
 
 1. Zvolte požadovanou konfiguraci Clang (Všimněte si, že pro Windows a Linux jsou k dispozici samostatné konfigurace Clang) a potom stiskněte **Vybrat**:
 
@@ -74,7 +74,7 @@ Můžete zadat jiné umístění nastavením **CMAKE_C_COMPILER** a **CMAKE_CXX_
 
 V případě konfigurací systému Windows aplikace CMak ve výchozím nastavení vyvolá Clang v režimu [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) a odkazy s implementací standardní knihovny od společnosti Microsoft. Ve výchozím nastavení se **Clang-CL. exe** nachází v `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`.
 
- Tyto hodnoty můžete upravit v **Nastavení cmake** v části **proměnné a mezipaměť pro cmake**. Klikněte na **Zobrazit pokročilé proměnné**. Přejděte dolů k části najít **CMAKE_CXX_COMPILER**a potom klikněte na tlačítko **Procházet** a zadejte jinou cestu kompilátoru.
+Tyto hodnoty můžete upravit v **Nastavení cmake** v části **proměnné a mezipaměť pro cmake**. Klikněte na **Zobrazit pokročilé proměnné**. Přejděte dolů k části najít **CMAKE_CXX_COMPILER**a potom klikněte na tlačítko **Procházet** a zadejte jinou cestu kompilátoru.
 
 ## <a name="edit-build-and-debug"></a>Úpravy, sestavování a ladění
 

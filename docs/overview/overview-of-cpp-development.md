@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810621"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415714"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Přehled vývoje v jazyce C++ v sadě Visual Studio
 
@@ -19,7 +19,7 @@ V rámci integrovaného vývojového prostředí (IDE) sady Visual Studio sdíl�
 
 Kromě sdílených nástrojů v integrovaném vývojovém prostředí sady Visual Studio má MSVC několik nástrojů konkrétně pro vývoj nativních kódu. Tyto nástroje jsou také uvedeny v tomto článku. Seznam nástrojů, které jsou k dispozici v jednotlivých edicích aplikace Visual Studio, naleznete v tématu [ C++ nástroje a funkce v edicích sady Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md).
 
-## <a name="create-projects"></a>vytvářet projekty,
+## <a name="create-projects"></a>Vytváření projektů
 
 *Projekt* je v podstatě sada souborů zdrojového kódu a prostředků, jako jsou obrázky nebo datové soubory, které jsou integrovány do spustitelného programu nebo knihovny.
 
@@ -47,7 +47,7 @@ Visual Studio poskytuje podporu pro všechny projektové systémy nebo nástroje
 
 ## <a name="add-to-source-control"></a>Přidat do správy zdrojového kódu
 
-Správa zdrojového kódu umožňuje koordinovat práci mezi několika vývojáři, izolovat probíhající práci z produkčního kódu a zálohovat zdrojový kód. Visual Studio podporuje Git a [Správa verzí Team Foundation \(TFVC\)](/azure/devops/repos/tfvc/) prostřednictvím svého **Team Explorer** okna. 
+Správa zdrojového kódu umožňuje koordinovat práci mezi několika vývojáři, izolovat probíhající práci z produkčního kódu a zálohovat zdrojový kód. Visual Studio podporuje Git a [Správa verzí Team Foundation \(TFVC\)](/azure/devops/repos/tfvc/) prostřednictvím svého **Team Explorer** okna.
 
 ::: moniker range="vs-2019"
 
@@ -99,13 +99,13 @@ Další informace o konfiguraci sestavení naleznete v tématu [práce s vlastno
 
 Můžete také použít kompilátor (CL. exe) a mnoho dalších samostatných nástrojů souvisejících s sestavením, jako je například NMAKE a LIB přímo z příkazového řádku. Další informace naleznete v tématu [sestavováníC++ c/Code na příkazovém řádku a v](../build/building-on-the-command-line.md) tématu [C/C++ Building reference](../build/reference/c-cpp-building-reference.md).
 
-## <a name="debug"></a>Ladit
+## <a name="debug"></a>Ladění
 
 Ladění můžete spustit stisknutím klávesy **F5**. Spuštění se pozastaví u všech zarážek, které jste nastavili (stisknutím klávesy **F9**). Můžete také krokovat kód jedním řádkem v čase (**F10**), zobrazit hodnoty proměnných nebo registrů a dokonce i v některých případech provádět změny v kódu a pokračovat v ladění bez nutnosti opětovné kompilace. Následující ilustrace znázorňuje relaci ladění, ve které je spuštění zastaveno na zarážce. Hodnoty členů struktury dat jsou viditelné v **okně kukátko**.
 
 ![Relace ladění](media/vs2017-debug-watch.png "Relace ladění sady Visual Studio 2017")
 
-Další informace najdete v tématu [ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
+Další informace naleznete v tématu [ladění v aplikaci Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
 ## <a name="test"></a>Test
 
@@ -115,9 +115,9 @@ Sada Visual Studio obsahuje rozhraní pro testování částí společnosti C++M
 
 Další informace naleznete v tématu [ověřování kódu pomocí testů jednotek](/visualstudio/test/unit-test-your-code) a [zápis testů jednotek pro C/C++ v aplikaci Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
-## <a name="analyze"></a>Analyzovat
+## <a name="analyze"></a>Analýza
 
-Visual Studio obsahuje nástroje pro analýzu statického kódu, které mohou detekovat potenciální problémy ve zdrojovém kódu. Tyto nástroje zahrnují implementaci kontrol [ C++ základních pravidel pokynů](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) . Další informace naleznete v tématu [Analýza kódu pro C/C++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Visual Studio obsahuje nástroje pro analýzu statického kódu, které mohou detekovat potenciální problémy ve zdrojovém kódu. Tyto nástroje zahrnují implementaci kontrol [ C++ základních pravidel pokynů](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) . Další informace naleznete v tématu [Analýza kódu pro C/C++ Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="deploy-completed-applications"></a>Nasazení dokončených aplikací
 
@@ -135,4 +135,4 @@ Prozkoumejte další Visual Studio na základě společně s některou z těchto
 > [Naučte se používat editor kódu.](/visualstudio/get-started/tutorial-editor)
 
 > [!div class="nextstepaction"]
-> [Seznamte se s projekty a řešení](/visualstudio/get-started/tutorial-projects-solutions)
+> [Další informace o projektech a řešeních](/visualstudio/get-started/tutorial-projects-solutions)
