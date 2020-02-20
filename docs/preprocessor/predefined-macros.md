@@ -226,12 +226,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305478"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473850"
 ---
 # <a name="predefined-macros"></a>Předdefinovaná makra
 
@@ -461,7 +461,7 @@ MSVC podporuje tato další předdefinovaná makra.
    |Visual Studio .NET 2002 (7,0)|1300|
    |Visual Studio .NET 2003 (7,1)|1310|
    |Visual Studio 2005 (8,0)|1400|
-   |Visual Studio 2008 (9,0)|1500|
+   |Visual Studio 2008 (9,0)|1 500|
    |Visual Studio 2010 (10,0)|1600|
    |Visual Studio 2012 (11,0)|1700|
    |Visual Studio 2013 (12,0)|1800|
@@ -477,6 +477,9 @@ MSVC podporuje tato další předdefinovaná makra.
    |Visual Studio 2019 verze 16,1|1921|
    |Visual Studio 2019 verze 16,2|1922|
    |Visual Studio 2019 verze 16,3|1923|
+   |Visual Studio 2019 verze 16,4|1924|
+   |Visual Studio 2019 verze 16,5|1925|
+   |Visual Studio 2019 verze 16,6|1926|
 
    Chcete-li otestovat verze kompilátoru nebo aktualizace v dané verzi sady Visual Studio nebo po, použijte operátor `>=`. Můžete ji použít v podmíněných direktivách pro porovnání `_MSC_VER` s touto známou verzí. Pokud máte několik vzájemně se vylučujících verzí, které je třeba porovnat, porovnejte je podle čísla verze v sestupném pořadí. Například tento kód kontroluje kompilátory vydané v aplikaci Visual Studio 2017 nebo novější. Dále kontroluje kompilátory vydané v nebo po aplikaci Visual Studio 2015. Pak zkontroluje všechny kompilátory vydané před Visual Studio 2015:
 
@@ -541,7 +544,7 @@ MSVC podporuje tato další předdefinovaná makra.
 
 - `_MFC_VER` definováno v \<afxver_. h > jako celočíselný literál, který kóduje číslo verze knihovny MFC.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [Operátory preprocesoru](../preprocessor/preprocessor-operators.md)<br/>

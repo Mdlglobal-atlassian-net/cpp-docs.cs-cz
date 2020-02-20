@@ -37,12 +37,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894343"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473863"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -118,7 +118,7 @@ Při spuštění programu se spustí ekvivalent následujícího příkazu:
 
 `setlocale( LC_ALL, "C" );`
 
-Argument *locale* může mít název národního prostředí, řetězec jazyka, řetězec jazyka a kód země nebo oblasti, znakovou stránku nebo řetězec jazyka, kód země/oblasti a znakovou stránku. Sada dostupných názvů národního prostředí, jazyků, kódů země/oblasti a znakových stránek obsahuje všechny prvky, které jsou podporovány v rozhraní API Windows NLS, kromě znakových stránek, které vyžadují více než dva bajty na znak, například UTF-7 a UTF-8. Pokud zadáte hodnotu znakové stránky UTF-7 nebo UTF-8, příkaz **setlocale** se nezdaří a vrátí **hodnotu null**. Sada názvů národních prostředí podporovaných pomocí funkce **setlocale** je popsána v tématu [názvy národních prostředí, jazyky a řetězce země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Sada řetězců jazyka a země/oblasti, kterou podporuje **setlocale** , je uvedena v části [jazykové řetězce](../../c-runtime-library/language-strings.md) a [řetězce země/oblasti](../../c-runtime-library/country-region-strings.md). Doporučujeme, abyste s ohledem na výkon a údržbu řetězců národního prostředí formu národního prostředí integrovali do kódu nebo serializovali do úložiště. U řetězců názvu národního prostředí je méně pravděpodobné, že aktualizací operačního systému dojde k jejich změně, než v případě formy pro název jazyka a země či oblasti.
+Argument *locale* může mít název národního prostředí, řetězec jazyka, řetězec jazyka a kód země nebo oblasti, znakovou stránku nebo řetězec jazyka, kód země/oblasti a znakovou stránku. Sada dostupných názvů národního prostředí, jazyků, kódů zemí a oblastí a znakových stránek obsahuje všechny, které jsou podporovány rozhraním API Windows NLS. Sada názvů národních prostředí podporovaných pomocí funkce **setlocale** je popsána v tématu [názvy národních prostředí, jazyky a řetězce země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Sada řetězců jazyka a země/oblasti, kterou podporuje **setlocale** , je uvedena v části [jazykové řetězce](../../c-runtime-library/language-strings.md) a [řetězce země/oblasti](../../c-runtime-library/country-region-strings.md). Doporučujeme, abyste s ohledem na výkon a údržbu řetězců národního prostředí formu národního prostředí integrovali do kódu nebo serializovali do úložiště. U řetězců názvu národního prostředí je méně pravděpodobné, že aktualizací operačního systému dojde k jejich změně, než v případě formy pro název jazyka a země či oblasti.
 
 Ukazatel s hodnotou null, který je předán jako argument *národního prostředí* , říká příkazu **setlocale** na dotaz namísto na nastavení mezinárodního prostředí. Pokud argument *locale* je ukazatel s hodnotou null, aktuální nastavení národního prostředí programu se nezmění. Místo toho příkaz **setlocale** vrátí ukazatel na řetězec, který je přidružený ke *kategorii* aktuálního národního prostředí vlákna. Pokud je argument *kategorie* **LC_ALL**, funkce vrátí řetězec, který označuje aktuální nastavení každé kategorie, oddělené středníky. Například sekvence volání
 
@@ -162,7 +162,7 @@ Následující příklady se týkají kategorie **LC_ALL** . Oba řetězce ". OC
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Nastaví národní prostředí na jazyk, zemi nebo oblast a znakovou stránku určenou *\<jazyka*, *\<země >* a *\<* code_page > řetězců. Můžete použít různé kombinace jazyka, země/oblasti a znakové stránky. Například toto volání nastaví národní prostředí na hodnotu francouzština, Kanada se znakovou stránkou 1252:
+   Nastaví národní prostředí na jazyk, zemi nebo oblast a znakovou stránku určenou *>\<jazyka*, *\<země >* a *\<* code_page > řetězců. Můžete použít různé kombinace jazyka, země/oblasti a znakové stránky. Například toto volání nastaví národní prostředí na hodnotu francouzština, Kanada se znakovou stránkou 1252:
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -313,7 +313,7 @@ The thread locale is now set to de-DE.
 The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Názvy národních prostředí, jazyky a řetězce země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\
@@ -327,6 +327,6 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 [_setmbcp](setmbcp.md)\
 \ [funkcí strcoll –](../../c-runtime-library/strcoll-functions.md)
 [strftime, wcsftime, _strftime_l _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
-[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
+[strxfrm, Wcsxfrm, _strxfrm_l _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)

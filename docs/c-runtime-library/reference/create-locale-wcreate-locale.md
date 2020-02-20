@@ -31,12 +31,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: a7098dc572ecdbefd891efc8443e977b01850fa4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938853"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473834"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -57,7 +57,7 @@ _locale_t _wcreate_locale(
 
 ### <a name="parameters"></a>Parametry
 
-*Kategorie*<br/>
+*kategorií*<br/>
 Kategorií.
 
 *jazyka*<br/>
@@ -69,9 +69,9 @@ Pokud je zadáno platné *národní prostředí* a *kategorie* , vrátí zadané
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_create_locale** umožňuje vytvořit objekt, který představuje určitá nastavení konkrétní oblasti pro použití ve verzích různých funkcí CRT specifických pro národní prostředí (funkce s příponou **_l** ). Chování je podobné jako **setlocale**, s tím rozdílem, že místo použití zadaného nastavení národního prostředí pro aktuální prostředí je nastavení uloženo ve **_locale_t** struktuře, která je vrácena. Struktura **_locale_t** by měla být uvolněna pomocí [_free_locale](free-locale.md) , pokud již není potřebná.
+Funkce **_create_locale** umožňuje vytvořit objekt, který představuje určitá nastavení konkrétní oblasti pro použití ve verzích různých funkcí CRT specifických pro národní prostředí (funkce s příponou **_l** ). Chování je podobné jako **setlocale**, s tím rozdílem, že místo použití zadaného nastavení národního prostředí pro aktuální prostředí se nastavení uloží do **_locale_té** struktury, která se vrátí. **_Locale_t** struktura by měla být uvolněna pomocí [_free_locale](free-locale.md) , pokud již nepotřebujete.
 
-**_wcreate_locale** je **_create_locale**verze s velkým znakem; Argument *locale* pro **_wcreate_locale** je řetězec s velkým znakem. **_wcreate_locale** a **_create_locale** se chovají stejně jinak.
+**_wcreate_locale** je verze **_create_locale**s velkým znakem; Argument *locale* pro **_wcreate_locale** je řetězec s velkým znakem. **_wcreate_locale** a **_create_locale** se chovají identicky jinak.
 
 Argument *Category* určuje části chování specifického pro národní prostředí, které jsou ovlivněny. Příznaky používané pro *kategorii* a části programu, které ovlivňují, jsou uvedené v této tabulce:
 
@@ -81,14 +81,14 @@ Argument *Category* určuje části chování specifického pro národní prost�
 | **LC_COLLATE** |Funkce **strcoll –** , **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**a **Wcsxfrm** . |
 | **LC_CTYPE** | Funkce pro zpracování znaků (s výjimkou **číslic**, **isxdigit**, **mbstowcs**a **mbtowc**, které nejsou ovlivněny). |
 | **LC_MONETARY** | Informace o formátování měny vrácené funkcí **localeconv** . |
-| **LC_NUMERIC** | Znak desetinné čárky pro naformátované výstupní rutiny (například **printf**) pro rutiny převodu dat a pro nepeněžní informace o formátování vrácené funkcí **localeconv**. Kromě znaku desetinné čárky **LC_NUMERIC** nastaví oddělovač tisíců a řídicí řetězec seskupení vrácený [localeconv](localeconv.md). |
+| **LC_NUMERIC** | Znak desetinné čárky pro naformátované výstupní rutiny (například **printf**) pro rutiny převodu dat a pro nepeněžní informace o formátování vrácené funkcí **localeconv**. Kromě znaku desetinné čárky **LC_NUMERIC** nastaví oddělovač tisíců a řetězec ovládacího prvku seskupení vrácený funkcí [localeconv](localeconv.md). |
 | **LC_TIME** | Funkce **strftime** a **wcsftime** . |
 
 Tato funkce ověří parametry *kategorie* a *národního prostředí* . Pokud parametr Category není jedna z hodnot uvedených v předchozí tabulce nebo pokud má *národní prostředí* **hodnotu null**, vrátí funkce **hodnotu null**.
 
 Argument *locale* je ukazatel na řetězec, který určuje národní prostředí. Informace o formátu argumentu *národního prostředí* najdete v tématu [názvy národních prostředí, jazyky a řetězce země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-Argument *locale* může mít název národního prostředí, řetězec jazyka, řetězec jazyka a kód země nebo oblasti, znakovou stránku nebo řetězec jazyka, kód země/oblasti a znakovou stránku. Sada dostupných názvů národního prostředí, jazyků, kódů zemí a oblastí a znakových stránek obsahuje všechny, které jsou podporovány rozhraním API systému Windows NLS s výjimkou znakových stránek, které vyžadují více než dva bajty na znak, například UTF-7 a UTF-8. Pokud zadáte znakovou stránku jako UTF-7 nebo UTF-8, **_create_locale** se nezdaří a vrátí **hodnotu null**. Sada názvů národních prostředí podporovaných nástrojem **_create_locale** je popsána v tématu [názvy národních prostředí, jazyky a řetězce země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Sada řetězců jazyka a země/oblasti, kterou podporuje **_create_locale** , jsou uvedeny v části [jazyky](../../c-runtime-library/language-strings.md) řetězce a [země/oblasti](../../c-runtime-library/country-region-strings.md).
+Argument *locale* může mít název národního prostředí, řetězec jazyka, řetězec jazyka a kód země nebo oblasti, znakovou stránku nebo řetězec jazyka, kód země/oblasti a znakovou stránku. Sada dostupných názvů národního prostředí, jazyků, kódů zemí a oblastí a znakových stránek obsahuje všechny, které jsou podporovány rozhraním API Windows NLS. Sada názvů národních prostředí podporovaných nástrojem **_create_locale** jsou popsány v tématu [názvy národních prostředí, jazyky a řetězce země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Sada řetězců jazyka a země/oblasti, kterou **_create_locale** podporuje, jsou uvedené v části [jazykové řetězce](../../c-runtime-library/language-strings.md) a [řetězce země/oblasti](../../c-runtime-library/country-region-strings.md).
 
 Další informace o nastavení národního prostředí naleznete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 
@@ -165,7 +165,7 @@ In de-CH locale, _strftime_l returns 'Samstag, 9. Februar 2002'
 In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Názvy národních prostředí, jazyky a řetězce země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Řetězce jazyků](../../c-runtime-library/language-strings.md)<br/>

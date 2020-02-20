@@ -2,12 +2,12 @@
 title: Ošetření výjimek ARM64
 description: Popisuje konvence zpracování výjimek a data používaná systémem Windows na ARM64.
 ms.date: 11/19/2018
-ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276831"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504479"
 ---
 # <a name="arm64-exception-handling"></a>Ošetření výjimek ARM64
 
@@ -23,7 +23,7 @@ Konvence unwind dat a tento popis jsou určeny pro:
 
    - Analýza kódu je složitá; Kompilátor musí být pečlivý, aby vygeneroval pouze pokyny, které může unwinder dekódovat.
 
-   - Pokud unwind nemůže být plně popsané pomocí unwind kódů, pak v některých případech musí přejít zpět k dekódování instrukcí. Tím se zvyšuje celková složitost a ideálně se jim vyhne.
+   - Pokud unwind nemůže být plně popsané pomocí unwind kódů, pak v některých případech musí přejít zpět k dekódování instrukcí. Tím se zvyšuje celková složitost a ideálně by se mělo vyhnout.
 
 1. Podpora unwindy v polovině prologu a polovině epilogu.
 
@@ -39,7 +39,7 @@ Konvence unwind dat a tento popis jsou určeny pro:
 
 Tyto předpoklady jsou provedeny v popisu zpracování výjimek:
 
-1. Protokoly a epilogy se obvykle zrcadlí jako jiné. Když využijete tento společný druh, může se výrazně snížit velikost metadat potřebných k popsání zrušení. V těle funkce bez ohledu na to, zda jsou operace prologu vráceny, nebo jsou operace epilogu dokončeny způsobem. Obě by měly mít stejné výsledky.
+1. Protokoly a epilogy jsou obvykle zrcadlově navzájem. Když využijete tento společný druh, může se výrazně snížit velikost metadat potřebných k popsání zrušení. V těle funkce bez ohledu na to, zda jsou operace prologu vráceny, nebo jsou operace epilogu dokončeny způsobem. Obě by měly mít stejné výsledky.
 
 1. Funkce, které jsou celkově relativně malé. Několik optimalizací pro prostor spoléhají na tento fakt, aby bylo možné dosáhnout nejúčinnějšího balení dat.
 
@@ -53,7 +53,7 @@ Tyto předpoklady jsou provedeny v popisu zpracování výjimek:
 
 ## <a name="arm64-stack-frame-layout"></a>Rozložení rámce zásobníku ARM64
 
-(media/arm64-exception-handling-stack-frame.png "rozložení rámce zásobníku") ![rozložení rámce zásobníku]
+![rozložení rámce zásobníku](media/arm64-exception-handling-stack-frame.png "rozložení rámce zásobníku")
 
 V případě funkcí zřetězených podle rámců lze dvojici FP a LR uložit na libovolné místo v oblasti místní proměnné v závislosti na optimalizaci optimalizace. Cílem je maximalizovat počet lokálních hodnot, které mohou být dostupné jedinou instrukcí na základě ukazatele na rámec (x29) nebo ukazatel zásobníku (SP). U `alloca`ch funkcí však musí být zřetězena a x29 musí ukazovat na dolní část zásobníku. Aby bylo možné zajistit lepší pokrytí v rámci adresování, je možné nestálé oblasti uložení registru umístit v horní části zásobníku místní oblasti. Tady jsou příklady, které ilustrují několik nejúčinnějších sekvencí prologu. V zájmu přehlednosti a lepšího prostředí mezipaměti je pořadí ukládání volaných a uložených registrů ve všech kanonických protokolech v pořadí "rostoucího". `#framesz` níže představuje velikost celého zásobníku (kromě oblasti přidělení). `#localsz` a `#outsz` si poznamenejte velikost místní oblasti (včetně oblasti ukládání pro \<x29, dvojici >) a velikosti odchozího parametru v uvedeném pořadí.
 
@@ -188,7 +188,7 @@ Záznamy. pdata jsou seřazené pole položek s pevnou délkou, které popisují
 
 Každý záznam. pdata pro ARM64 má délku 8 bajtů. Obecný formát každého záznamu umístí 32-bitovou adresu RVA funkce, kterou začíná v prvním slově následovaný druhým slovem, které obsahuje buď ukazatel na proměnnou length. xdata blok, nebo zabalený text, který popisuje kanonickou sekvenci unwind funkce.
 
-![PDATA rozložení záznamu].(media/arm64-exception-handling-pdata-record.png "PDATA rozložení záznamu")
+![rozložení záznamu. pdata](media/arm64-exception-handling-pdata-record.png "rozložení záznamu. pdata")
 
 Pole jsou následující:
 
@@ -204,7 +204,7 @@ Pole jsou následující:
 
 Pokud je zabalený unwind formát nedostatečný pro popis odvíjení funkce, je nutné vytvořit záznam s proměnnou délkou. xdata. Adresa tohoto záznamu je uložena ve druhém slově záznamu. pdata. Formát. xdata je zabalená sada slov s proměnlivou délkou:
 
-![XData rozložení záznamu].(media/arm64-exception-handling-xdata-record.png "XData rozložení záznamu")
+![rozložení záznamu. xdata](media/arm64-exception-handling-xdata-record.png "rozložení záznamu. xdata")
 
 Tato data jsou rozdělená do čtyř oddílů:
 
@@ -336,7 +336,7 @@ Pro funkce, jejichž protokoly a epilogy následují podle kanonického tvaru po
 
 Formát záznamu. pdata se zabalenými unwind daty vypadá takto:
 
-![záznam. pdata s zabalenými unwind daty](media/arm64-exception-handling-packed-unwind-data.png ". pdata záznam se sbalenými newindými daty")
+![záznam. pdata se zabalenými unwind daty](media/arm64-exception-handling-packed-unwind-data.png "záznam. pdata se zabalenými unwind daty")
 
 Pole jsou následující:
 
@@ -374,10 +374,10 @@ Krok 5: přidělení zbývajícího zásobníku, včetně místní oblasti, \<x2
 Krok #|Hodnoty příznaků|počet instrukcí|Operačních|Unwind kód
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **blast** < = 10|RegI / 2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+1|0 < **blast** < = 10|Blast/2 + **Blast** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
 3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
 5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** = = 11 & &<br/>512 < #locsz < = 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5c|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
@@ -415,7 +415,7 @@ Vedle každého operačního kódu je odpovídající unwind kód popisující t
 
 Pro prolog i epilog ale jsme opustili společnou sadu unwind kódů:
 
-`set_fp`, `save_regp 0,240`, `save_fregp,0,224`, `save_fplr_x_256`, `end`
+`set_fp`, `save_regp 0,240`, `save_fregp,0,224`, `save_fplr_x_256``end`
 
 Případ epilogu je jednoduchý, protože je v normálním pořadí. Počínaje posunem 0 v rámci epilogu (který začíná na posunu 0x100 ve funkci) očekáváme, že se spustí úplná unwind sekvence, protože se ještě neudělalo žádné vyčištění. Pokud jsme našli dodržovali jednu instrukci (na posunu 2 v epilogu), můžeme úspěšně vrátit zpět vynecháním prvního kódu unwind. Tuto situaci můžeme zobecnit a předpokládat mapování 1:1 mezi opcodemi a unwind kódy. Potom pro zahájení odvíjení z instrukcí *n* ve epilogu doporučujeme přeskočit prvních *n* unwind kódů a začít z něj.
 
@@ -628,7 +628,7 @@ Epilog začátek indexu [0] odkazuje na stejné pořadí unwind kódu prologu.
 
 Epilog začátek indexu [4] odkazuje na střed unwind kódu prologu (částečné opakované použití unwind pole).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přehled konvencí ARM64 ABI](arm64-windows-abi-conventions.md)<br/>
 [Zpracování výjimek ARM](arm-exception-handling.md)

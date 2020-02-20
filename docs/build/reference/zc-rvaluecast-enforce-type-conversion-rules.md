@@ -1,6 +1,6 @@
 ---
 title: /Zc:rvalueCast (Vynucení pravidel převodu typů)
-ms.date: 03/06/2018
+ms.date: 02/18/2020
 f1_keywords:
 - rvaluecast
 - /Zc:rvalueCast
@@ -12,28 +12,29 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
-ms.openlocfilehash: e5a6abd3b85136b05ae58ebc8750aa9120cabc33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac74192cad8a62e4c82b480038e727b114362cdd
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315778"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504570"
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (Vynucení pravidel převodu typů)
 
-Když **/Zc: rvaluecast** je zadána možnost, kompilátor správně identifikuje referenční typ rvalue jako výsledku operace přetypování v souladu s standardu C ++ 11. Pokud není zadán parametr, chování kompilátoru je stejné jako v sadě Visual Studio 2012.
+Pokud je zadána možnost **`/Zc:rvalueCast`** , kompilátor správně identifikuje odkazový typ rvalue jako výsledek operace přetypování. Jeho chování odpovídá standardu C++ 11. Není-li parametr zadán, je chování kompilátoru stejné jako v aplikaci Visual Studio 2012.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:rvalueCast**[**-**]
+> **`/Zc:rvalueCast`**\
+> **`/Zc:rvalueCast-`**
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud **/Zc: rvaluecast** není zadán, kompilátor následuje oddíl 5.4 standardu C ++ 11 a zpracuje pouze výrazy přetypování, které vedou mimo referenční typy a výrazy přetypování, jejichž výsledkem jsou odkazy na typy funkcí jiné než jako typy r-hodnoty. Ve výchozím nastavení nebo pokud **/Zc:rvalueCast-** není zadán, kompilátor nesplňuje podmínky shody a zpracovává všechny výrazy cast, jejichž výsledkem odkazy rvalue jako rvalues. Pro přizpůsobení a odstranění chyb v užívání přetypování, doporučujeme použít **/Zc: rvaluecast**.
+Je-li zadán **`/Zc:rvalueCast`** , kompilátor následuje oddíl 5,4 standardu c++ 11 a zpracovává pouze výrazy přetypování, jejichž výsledkem jsou neodkazové typy a výrazy přetypování, jejichž výsledkem jsou odkazy rvalue na typy bez funkce jako rvalue typy. Ve výchozím nastavení, nebo pokud je zadána **`/Zc:rvalueCast-`** , kompilátor nevyhovuje a zpracovává všechny výrazy přetypování, jejichž výsledkem jsou odkazy rvalue jako rvalue. Pro účely shody a odstranění chyb v používání přetypování doporučujeme použít **`/Zc:rvalueCast`** .
 
-Ve výchozím nastavení **/Zc: rvaluecast** je vypnuto (**/Zc:rvalueCast-**). [/ Permissive-](permissive-standards-conformance.md) – možnost kompilátoru implicitně nastaví tuto možnost, ale lze přepsat pomocí **/Zc:rvalueCast-**.
+Ve výchozím nastavení je **`/Zc:rvalueCast`** vypnuto ( **`/Zc:rvalueCast-`** ). Možnost kompilátoru [/Permissive-](permissive-standards-conformance.md) implicitně nastaví tuto možnost, ale je možné ji přepsat pomocí **`/Zc:rvalueCast-`** .
 
-Použití **/Zc: rvaluecast** Pokud předáte výraz přetypování jako argument funkci, která přebírá typ odkazu rvalue. Výchozí chování způsobí chybu kompilátoru [upozornění C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) Pokud kompilátor nesprávně určí typ výrazu přetypování. Tento příklad ukazuje chybu kompilátoru ve správném kódu, kdy **/Zc: rvaluecast** nezadáte:
+Použijte **`/Zc:rvalueCast`** , Pokud předáte výraz přetypování jako argument funkci, která přebírá typ odkazu rvalue. Výchozí chování způsobí chybu kompilátoru [Upozornění C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) , když kompilátor nesprávně určí typ výrazu přetypování. Tento příklad ukazuje chybu kompilátoru ve správném kódu, když není zadána **`/Zc:rvalueCast`** :
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -71,7 +72,7 @@ struct Test1 {
 };
 ```
 
-Výchozí chování kompilátoru nemusí hlásit chybu C2102. V tomto příkladu kompilátor nehlásí chybu Pokud adresa rvalue vytvořená pomocí přetypování identita se používá při **/Zc: rvaluecast** nezadáte:
+Výchozí chování kompilátoru nemusí hlásit chybu C2102, pokud je to vhodné. V tomto příkladu kompilátor nehlásí chybu, pokud je převedená adresa rvalue vytvořená přetypováním identity, když je **`/Zc:rvalueCast`** neurčený:
 
 ```cpp
 int main() {
@@ -82,16 +83,16 @@ int main() {
 }
 ```
 
-Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech s kompatibilitou ve vizuálu C++najdete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
+1. Vyberte **Vlastnosti konfigurace** > stránce vlastností **jazyka** **CC++ /**  > .
 
-1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zc: rvaluecast** a klikněte na tlačítko **OK**.
+1. Nastavte vlastnost **Vynutilit pravidla konverze typu** na **`/Zc:rvalueCast`** nebo **`/Zc:rvalueCast-`** . Změny uložte kliknutím na **OK** nebo **použít** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[/Zc (shoda)](zc-conformance.md)<br/>
+[/Zc (shoda)](zc-conformance.md)

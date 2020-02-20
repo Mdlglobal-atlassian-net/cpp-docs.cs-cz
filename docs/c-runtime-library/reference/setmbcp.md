@@ -27,12 +27,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 1db6a83bd864180d513f61cf255bd862283a6cd0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3408f04eb60a33a84c628c989ebc9c4c4a261df
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948216"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473868"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -48,7 +48,7 @@ int _setmbcp(
 
 ### <a name="parameters"></a>Parametry
 
-*codepage*<br/>
+*stránky*<br/>
 Nové nastavení znakové stránky pro vícebajtové rutiny nezávislé na národním prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -57,7 +57,7 @@ Vrátí hodnotu 0, pokud je znaková stránka nastavena úspěšně. Pokud je za
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_setmbcp** Určuje novou vícebajtovou znakovou stránku. Ve výchozím nastavení systém za běhu automaticky nastaví vícebajtovou znakovou stránku na znakovou stránku ANSI systému výchozí. Nastavení vícebajtových znakových stránek má vliv na všechny vícebajtové rutiny, které nejsou závislé na národním prostředí. Je však možné dát **_setmbcp** pokyn, aby používal znakovou stránku definovanou pro aktuální národní prostředí (viz následující seznam konstant manifestů a přidružených výsledků chování). Seznam vícebajtových rutin, které jsou závislé na znakové stránce národního prostředí, nikoli na vícebajtové znakové stránce, naleznete v tématu [Interpretace vícebajtových znakových sekvencí](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+Funkce **_setmbcp** Určuje novou vícebajtovou znakovou stránku. Ve výchozím nastavení systém za běhu automaticky nastaví vícebajtovou znakovou stránku na znakovou stránku ANSI systému výchozí. Nastavení vícebajtových znakových stránek má vliv na všechny vícebajtové rutiny, které nejsou závislé na národním prostředí. Je však možné zadat **_setmbcp** pro použití znakové stránky definované pro aktuální národní prostředí (viz následující seznam konstant manifestu a související výsledky chování). Seznam vícebajtových rutin, které jsou závislé na znakové stránce národního prostředí, nikoli na vícebajtové znakové stránce, naleznete v tématu [Interpretace vícebajtových znakových sekvencí](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
 Vícebajtová znaková stránka také ovlivňuje zpracování vícebajtových znaků pomocí následujících rutin knihovny run-time:
 
@@ -67,7 +67,7 @@ Vícebajtová znaková stránka také ovlivňuje zpracování vícebajtových zn
 |[_fullpath](fullpath-wfullpath.md)|[funkce _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-Kromě toho všechny rutiny běhové knihovny, které přijímají vícebajtové znakové *argv* nebo argumenty programu *envp* jako parametry (například **_exec** a **_spawn** ) zpracovávají tyto řetězce podle vícebajtové znakové stránky. Proto jsou tyto rutiny ovlivněny také voláním **_setmbcp** , které mění vícebajtovou znakovou stránku.
+Kromě toho všechny rutiny běhové knihovny, které přijímají vícebajtové znakové *argv* nebo argumenty programu *envp* jako parametry (například **_exec** a **_spawn** rodin) zpracovávají tyto řetězce podle vícebajtové znakové stránky. Proto jsou tyto rutiny ovlivněny také voláním **_setmbcp** , které mění vícebajtovou znakovou stránku.
 
 Argument *codepage* lze nastavit na některou z následujících hodnot:
 
@@ -79,7 +79,9 @@ Argument *codepage* lze nastavit na některou z následujících hodnot:
 
 - **_MB_CP_SBCS** Použijte znakovou stránku s jedním bajtem. Když je znaková stránka nastavená na **_MB_CP_SBCS**, rutina jako [_ismbblead](ismbblead-ismbblead-l.md) vždycky vrátí hodnotu false.
 
-- Jakákoli jiná platná hodnota znakové stránky bez ohledu na to, zda je hodnota ANSI, OEM nebo jiná znaková stránka podporovaná operačním systémem (s výjimkou UTF-7 a UTF-8, která není podporována).
+- **_MB_CP_UTF8** Použijte UTF-8.  Když je znaková stránka nastavená na **_MB_CP_UTF8**, rutina jako [_ismbblead](ismbblead-ismbblead-l.md) vždycky vrátí hodnotu false.
+
+- Jakákoli jiná platná hodnota znakové stránky bez ohledu na to, zda je hodnota ANSI, OEM nebo jiná znaková stránka podporovaná operačním systémem (s výjimkou kódování UTF-7, což není podporováno).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -89,7 +91,7 @@ Argument *codepage* lze nastavit na některou z následujících hodnot:
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_getmbcp](getmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
