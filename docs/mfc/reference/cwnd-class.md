@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: bbd1f60c3628d5fcd103e220362004ec34ab2c41
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
+ms.sourcegitcommit: 21e168731b8fe0eaff18f070cee5d54aa5782c2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740997"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567883"
 ---
 # <a name="cwnd-class"></a>CWnd – třída
 
@@ -839,65 +839,65 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CWnd:: CWnd](#cwnd)|`CWnd` Vytvoří objekt.|
+|[CWnd:: CWnd](#cwnd)|Vytvoří objekt `CWnd`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWnd:: accDoDefaultAction](#accdodefaultaction)|Volá se rozhraním, aby se provedla výchozí akce objektu.|
-|[CWnd::accHitTest](#acchittest)|Volá se rozhraním, aby se načetl podřízený element nebo podřízený objekt v daném bodě na obrazovce.|
+|[CWnd:: accHitTest](#acchittest)|Volá se rozhraním, aby se načetl podřízený element nebo podřízený objekt v daném bodě na obrazovce.|
 |[CWnd:: accLocation](#acclocation)|Volá se rozhraním, aby se načetlo aktuální umístění obrazovky zadaného objektu.|
 |[CWnd:: accNavigate](#accnavigate)|Volá se rozhraním, aby se přesměroval na jiný prvek uživatelského rozhraní v rámci kontejneru, a pokud je to možné, načtěte objekt.|
 |[CWnd:: accSelect](#accselect)|Volá se rozhraním, aby se změnil výběr nebo přesunul fokus klávesnice zadaného objektu.|
 |[CWnd:: AnimateWindow](#animatewindow)|Animuje přidružený objekt okna.|
 |[CWnd:: ArrangeIconicWindows](#arrangeiconicwindows)|Uspořádá všechna minimalizovaná (ikonickým) podřízená okna.|
-|[CWnd:: Attach](#attach)|Připojí popisovač systému Windows k `CWnd` objektu.|
+|[CWnd:: Attach](#attach)|Připojí popisovač systému Windows k objektu `CWnd`.|
 |[CWnd:: BeginModalState](#beginmodalstate)|Zavolejte tuto členskou funkci, aby bylo okno rámce modální.|
-|[CWnd:: BeginPaint](#beginpaint)|Připravuje se `CWnd` na malování.|
+|[CWnd:: BeginPaint](#beginpaint)|Připraví `CWnd` pro malování.|
 |[CWnd:: BindDefaultProperty](#binddefaultproperty)|Vytvoří vazbu na výchozí jednoduchou vlastnost vázaného objektu, jak je označena v knihovně typů, na kurzor přidružený k ovládacímu prvku zdroje dat.|
 |[CWnd:: BindProperty](#bindproperty)|Vytvoří vazbu na ovládací prvek vázaný na data na ovládací prvek zdroje dat a zaregistruje tento vztah ke Správci vazeb knihovny MFC.|
-|[CWnd:: BringWindowToTop](#bringwindowtotop)|Přinese `CWnd` do horní části zásobníku překrývajících se oken.|
+|[CWnd:: BringWindowToTop](#bringwindowtotop)|Přesune `CWnd` do horní části zásobníku překrývajících se oken.|
 |[CWnd:: CalcWindowRect](#calcwindowrect)|Volá se, aby se vypočítal obdélník okna z obdélníku klienta.|
 |[CWnd:: CancelToolTips](#canceltooltips)|Zakáže ovládací prvek ToolTip.|
 |[CWnd:: CenterWindow](#centerwindow)|Vycentruje okno vzhledem k nadřazenému.|
-|[CWnd:: ChangeClipboardChain](#changeclipboardchain)|Odebere `CWnd` se z řetězce prohlížečů schránky.|
+|[CWnd:: ChangeClipboardChain](#changeclipboardchain)|Odebere `CWnd` z řetězce prohlížečů schránky.|
 |[CWnd:: CheckDlgButton](#checkdlgbutton)|Umístí značku zaškrtnutí nebo zruší zaškrtnutí u ovládacího prvku tlačítko.|
-|[CWnd::CheckRadioButton](#checkradiobutton)|Zkontroluje zadaný přepínač a odebere zaškrtnutí všech ostatních přepínačů v zadané skupině tlačítek.|
+|[CWnd:: CheckRadioButton](#checkradiobutton)|Zkontroluje zadaný přepínač a odebere zaškrtnutí všech ostatních přepínačů v zadané skupině tlačítek.|
 |[CWnd:: ChildWindowFromPoint](#childwindowfrompoint)|Určuje, který, pokud některý z podřízených oken obsahuje zadaný bod.|
 |[CWnd:: ClientToScreen](#clienttoscreen)|Převede souřadnice klienta daného bodu nebo obdélníku na obrazovkách zobrazení na souřadnice obrazovky.|
 |[CWnd:: CloseWindow](#closewindow)|Minimalizuje okno.|
 |[CWnd:: ContinueModal](#continuemodal)|Pokračuje v modálním stavu okna.|
-|[CWnd:: Create](#create)|Vytvoří a inicializuje podřízené okno přidružené `CWnd` k objektu.|
+|[CWnd:: Create](#create)|Vytvoří a inicializuje podřízené okno přidružené k objektu `CWnd`.|
 |[CWnd:: CreateAccessibleProxy](#createaccessibleproxy)|Vytvoří aktivní proxy server přístupnosti pro zadaný objekt.|
-|[CWnd::CreateCaret](#createcaret)|Vytvoří nový obrazec pro systémový blikající kurzor a získá vlastnictví blikajícího kurzoru.|
-|[CWnd:: CreateControl](#createcontrol)|Vytvoří ovládací prvek ActiveX, který bude reprezentován v programu `CWnd` knihovny MFC objektem.|
-|[CWnd:: CreateEx](#createex)|Vytvoří překryté, automaticky otevírané nebo podřízené okno systému Windows a připojí ho k `CWnd` objektu.|
-|[CWnd::CreateGrayCaret](#creategraycaret)|Vytvoří šedý blok pro systémový blikající kurzor a získá vlastnictví blikajícího kurzoru.|
-|[CWnd::CreateSolidCaret](#createsolidcaret)|Vytvoří plný blok pro systémový blikající kurzor a získá vlastnictví blikajícího kurzoru.|
-|[CWnd::D eleteTempMap](#deletetempmap)|Volána automaticky `CWinApp` obslužnou rutinou nečinnosti a odstraní všechny dočasné `CWnd` objekty, které `FromHandle`vytvořil.|
+|[CWnd:: CreateCaret](#createcaret)|Vytvoří nový obrazec pro systémový blikající kurzor a získá vlastnictví blikajícího kurzoru.|
+|[CWnd:: CreateControl](#createcontrol)|Vytvořte ovládací prvek ActiveX, který bude reprezentován v programu knihovny MFC pomocí objektu `CWnd`.|
+|[CWnd:: CreateEx](#createex)|Vytvoří překryté, automaticky otevírané nebo podřízené okno systému Windows a připojí ho k objektu `CWnd`.|
+|[CWnd:: CreateGrayCaret](#creategraycaret)|Vytvoří šedý blok pro systémový blikající kurzor a získá vlastnictví blikajícího kurzoru.|
+|[CWnd:: CreateSolidCaret](#createsolidcaret)|Vytvoří plný blok pro systémový blikající kurzor a získá vlastnictví blikajícího kurzoru.|
+|[CWnd::D eleteTempMap](#deletetempmap)|Volána automaticky `CWinApp` obslužným rutinou nečinnosti za běhu a odstraní všechny dočasné objekty `CWnd` vytvořené `FromHandle`.|
 |[CWnd::D estroyWindow](#destroywindow)|Odstraní připojené okno systému Windows.|
-|[CWnd::D etach](#detach)|Odpojí popisovač systému Windows od `CWnd` objektu a vrátí popisovač.|
+|[CWnd::D etach](#detach)|Odpojí popisovač systému Windows od objektu `CWnd` a vrátí popisovač.|
 |[CWnd::D lgDirList](#dlgdirlist)|Vyplní seznam se seznamem souborů nebo adresářů.|
-|[CWnd::DlgDirListComboBox](#dlgdirlistcombobox)|Vyplní seznam v poli se seznamem se seznamem souborů nebo adresářů.|
+|[CWnd::D lgDirListComboBox](#dlgdirlistcombobox)|Vyplní seznam v poli se seznamem se seznamem souborů nebo adresářů.|
 |[CWnd::D lgDirSelect](#dlgdirselect)|Načte aktuální výběr ze seznamu.|
-|[CWnd::DlgDirSelectComboBox](#dlgdirselectcombobox)|Načte aktuální výběr ze seznamu pole se seznamem.|
+|[CWnd::D lgDirSelectComboBox](#dlgdirselectcombobox)|Načte aktuální výběr ze seznamu pole se seznamem.|
 |[CWnd::D ragAcceptFiles](#dragacceptfiles)|Indikuje, že okno bude přijímat přetažené soubory.|
 |[CWnd::D ragDetect](#dragdetect)|Zachytí myš a sleduje její pohyb, dokud uživatel neuvolní tlačítko vlevo, stiskne klávesu ESC nebo přesune myš mimo obdélník kolem zadaného bodu.|
 |[CWnd::D rawAnimatedRects](#drawanimatedrects)|Nakreslí rámeček drátěného rámečku a animuje ho, aby označoval otevření ikony nebo minimalizaci nebo maximalizaci okna.|
 |[CWnd::D rawCaption](#drawcaption)|Nakreslí titulek.|
 |[CWnd::D rawMenuBar](#drawmenubar)|Překreslí panel nabídek.|
-|[CWnd:: EnableActiveAccessibility](#enableactiveaccessibility)|Povolí uživatelsky definované `Active Accessibility` funkce.|
-|[CWnd::EnableDynamicLayout](#enabledynamiclayout)|Umožňuje, aby se pozice a velikost podřízených oken dynamicky nastavily, když uživatel změní velikost okna.|
-|[CWnd:: EnableD2DSupport](#enabled2dsupport)|Povolí nebo zakáže podporu `D2D` okna. Před inicializací hlavního okna volejte tuto metodu.|
-|[CWnd::EnableScrollBar](#enablescrollbar)|Povolí nebo zakáže jednu nebo obě šipky posuvníku.|
-|[CWnd::EnableScrollBarCtrl](#enablescrollbarctrl)|Povolí nebo zakáže ovládací prvek posuvníku na stejné úrovni.|
+|[CWnd:: EnableActiveAccessibility](#enableactiveaccessibility)|Povoluje uživatelsky definované funkce `Active Accessibility`.|
+|[CWnd:: EnableDynamicLayout](#enabledynamiclayout)|Umožňuje, aby se pozice a velikost podřízených oken dynamicky nastavily, když uživatel změní velikost okna.|
+|[CWnd:: EnableD2DSupport](#enabled2dsupport)|Povolí nebo zakáže podporu `D2D` oken. Před inicializací hlavního okna volejte tuto metodu.|
+|[CWnd:: EnableScrollBar](#enablescrollbar)|Povolí nebo zakáže jednu nebo obě šipky posuvníku.|
+|[CWnd:: EnableScrollBarCtrl](#enablescrollbarctrl)|Povolí nebo zakáže ovládací prvek posuvníku na stejné úrovni.|
 |[CWnd:: EnableToolTips](#enabletooltips)|Povoluje ovládací prvek ToolTip.|
 |[CWnd:: EnableTrackingToolTips](#enabletrackingtooltips)|Povolí ovládací prvek ToolTip v režimu sledování.|
 |[CWnd:: EnableWindow](#enablewindow)|Povolí nebo zakáže vstup z klávesnice a myši.|
-|[CWnd::EndModalLoop](#endmodalloop)|Ukončí modální stav okna.|
+|[CWnd:: EndModalLoop](#endmodalloop)|Ukončí modální stav okna.|
 |[CWnd:: EndModalState](#endmodalstate)|Chcete-li změnit okno rámce z modální na nemodální, zavolejte tuto členskou funkci.|
 |[CWnd:: EndPaint](#endpaint)|Označuje konec vykreslování.|
 |[CWnd:: ExecuteDlgInit](#executedlginit)|Inicializuje prostředek dialogového okna.|
@@ -905,68 +905,68 @@ class CWnd : public CCmdTarget
 |[CWnd:: FindWindow](#findwindow)|Vrátí popisovač okna, který je identifikován jeho názvem okna a třídou okna.|
 |[CWnd:: FindWindowEx](#findwindowex)|Vrátí popisovač okna, který je identifikován jeho názvem okna a třídou okna.|
 |[CWnd:: FlashWindow](#flashwindow)|Okno zabliká jednou.|
-|[CWnd::FlashWindowEx](#flashwindowex)|Zabliká okno dalšími funkcemi.|
-|[CWnd:: FromHandle](#fromhandle)|Vrátí ukazatel na `CWnd` objekt, pokud je předána obslužná rutina oknu. Pokud objekt není připojen k popisovači, je vytvořen a připojen `CWnd` dočasný objekt. `CWnd`|
-|[CWnd:: FromHandlePermanent](#fromhandlepermanent)|Vrátí ukazatel na `CWnd` objekt, pokud je předána obslužná rutina oknu. Pokud objekt není připojen k popisovači, je vytvořen a připojen `CWnd` dočasný objekt. `CWnd`|
-|[CWnd::get_accChild](#get_accchild)|Volá se rozhraním, aby se načetla `IDispatch` adresa rozhraní pro zadanou podřízenou položku.|
-|[CWnd::get_accChildCount](#get_accchildcount)|Volá se rozhraním, aby se získal počet podřízených prvků, které patří k tomuto objektu.|
+|[CWnd:: FlashWindowEx](#flashwindowex)|Zabliká okno dalšími funkcemi.|
+|[CWnd:: FromHandle](#fromhandle)|Vrací ukazatel na objekt `CWnd`, pokud je předána obslužná rutina oknu. Pokud objekt `CWnd` není připojen k popisovači, je vytvořen a připojen dočasný objekt `CWnd`.|
+|[CWnd:: FromHandlePermanent](#fromhandlepermanent)|Vrací ukazatel na objekt `CWnd`, pokud je předána obslužná rutina oknu.|
+|[CWnd:: get_accChild](#get_accchild)|Volá se rozhraním, aby se načetla adresa `IDispatch`ho rozhraní pro zadanou podřízenou položku.|
+|[CWnd:: get_accChildCount](#get_accchildcount)|Volá se rozhraním, aby se získal počet podřízených prvků, které patří k tomuto objektu.|
 |[CWnd:: get_accDefaultAction](#get_accdefaultaction)|Volá se rozhraním, aby se načetl řetězec, který popisuje výchozí akci objektu.|
 |[CWnd:: get_accDescription](#get_accdescription)|Volá se rozhraním, aby se načetl řetězec, který popisuje vizuální vzhled zadaného objektu.|
-|[CWnd::get_accFocus](#get_accfocus)|Volá se rozhraním, aby se načetl objekt, který má fokus klávesnice.|
+|[CWnd:: get_accFocus](#get_accfocus)|Volá se rozhraním, aby se načetl objekt, který má fokus klávesnice.|
 |[CWnd:: get_accHelp](#get_acchelp)|Volá se rozhraním, aby se načetl řetězec vlastnosti **help** objektu.|
-|[CWnd::get_accHelpTopic](#get_acchelptopic)|Volá se rozhraním, aby se načetla úplná `WinHelp` cesta k zadanému objektu a identifikátor příslušného tématu v rámci tohoto souboru.|
-|[CWnd::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Volá se rozhraním, aby se načetla klávesová zkratka nebo přístupový klíč zadaného objektu.|
-|[CWnd::get_accName](#get_accname)|Volá se rozhraním, aby se načetl název zadaného objektu.|
-|[CWnd::get_accParent](#get_accparent)|Volá se rozhraním, aby se `IDispatch` načetlo rozhraní nadřazeného objektu.|
-|[CWnd::get_accRole](#get_accrole)|Volá se rozhraním, aby se načetly informace, které popisují roli zadaného objektu.|
+|[CWnd:: get_accHelpTopic](#get_acchelptopic)|Volá se rozhraním, aby se načetla úplná cesta k `WinHelp` souboru přidruženého k zadanému objektu, a identifikátor příslušného tématu v rámci tohoto souboru.|
+|[CWnd:: get_accKeyboardShortcut](#get_acckeyboardshortcut)|Volá se rozhraním, aby se načetla klávesová zkratka nebo přístupový klíč zadaného objektu.|
+|[CWnd:: get_accName](#get_accname)|Volá se rozhraním, aby se načetl název zadaného objektu.|
+|[CWnd:: get_accParent](#get_accparent)|Volá se rozhraním, aby se načetlo rozhraní `IDispatch` nadřazeného objektu.|
+|[CWnd:: get_accRole](#get_accrole)|Volá se rozhraním, aby se načetly informace, které popisují roli zadaného objektu.|
 |[CWnd:: get_accSelection](#get_accselection)|Volá se rozhraním, aby se načetly vybrané podřízené objekty tohoto objektu.|
 |[CWnd:: get_accState](#get_accstate)|Volá se rozhraním, aby se načetl aktuální stav zadaného objektu.|
-|[CWnd::get_accValue](#get_accvalue)|Volá se rozhraním, aby se načetla hodnota zadaného objektu.|
+|[CWnd:: get_accValue](#get_accvalue)|Volá se rozhraním, aby se načetla hodnota zadaného objektu.|
 |[CWnd:: GetActiveWindow](#getactivewindow)|Načte aktivní okno.|
 |[CWnd:: GetAncestor](#getancestor)|Načte objekt okna předchůdce zadaného okna.|
-|[CWnd:: getcapture](#getcapture)|`CWnd` Načte, který má zachycení myši.|
-|[CWnd::GetCaretPos](#getcaretpos)|Načte souřadnice klienta aktuální pozice blikajícího kurzoru.|
-|[CWnd::GetCheckedRadioButton](#getcheckedradiobutton)|Vrátí ID aktuálně kontrolovaného přepínacího tlačítka ve skupině tlačítek.|
-|[CWnd:: GetClientRect](#getclientrect)|Získá rozměry `CWnd` klientské oblasti.|
+|[CWnd:: getcapture](#getcapture)|Načte `CWnd`, který má zachycení myši.|
+|[CWnd:: GetCaretPos](#getcaretpos)|Načte souřadnice klienta aktuální pozice blikajícího kurzoru.|
+|[CWnd:: GetCheckedRadioButton](#getcheckedradiobutton)|Vrátí ID aktuálně kontrolovaného přepínacího tlačítka ve skupině tlačítek.|
+|[CWnd:: GetClientRect](#getclientrect)|Získá dimenze `CWnd` oblasti klienta.|
 |[CWnd:: GetClipboardOwner](#getclipboardowner)|Načte ukazatel na aktuálního vlastníka schránky.|
 |[CWnd:: GetClipboardViewer](#getclipboardviewer)|Načte ukazatel na první okno v řetězci prohlížečů schránky.|
 |[CWnd:: GetControlUnknown](#getcontrolunknown)|Načte ukazatel na neznámý ovládací prvek ActiveX.|
-|[CWnd::GetDC](#getdc)|Načte kontext zobrazení pro klientskou oblast.|
-|[CWnd::GetDCEx](#getdcex)|Načte kontext zobrazení pro klientskou oblast a při vykreslování povolí oříznutí.|
-|[CWnd:: GetDCRenderTarget](#getdcrendertarget)|Načte cíl vykreslování kontextu zařízení (DC) pro toto `CWnd` okno.|
-|[CWnd::GetDescendantWindow](#getdescendantwindow)|Vyhledá všechny následníky v oknech a vrátí okno se zadaným ID.|
-|[CWnd::GetDesktopWindow](#getdesktopwindow)|Načte okno plochy systému Windows.|
-|[CWnd::GetDlgCtrlID](#getdlgctrlid)|Pokud se `CWnd` jedná o podřízené okno, voláním této funkce se vrátí jeho hodnota ID.|
+|[CWnd:: GetDC](#getdc)|Načte kontext zobrazení pro klientskou oblast.|
+|[CWnd:: GetDCEx](#getdcex)|Načte kontext zobrazení pro klientskou oblast a při vykreslování povolí oříznutí.|
+|[CWnd:: GetDCRenderTarget](#getdcrendertarget)|Načte cíl vykreslování kontextu zařízení (DC) pro `CWnd` okno.|
+|[CWnd:: GetDescendantWindow](#getdescendantwindow)|Vyhledá všechny následníky v oknech a vrátí okno se zadaným ID.|
+|[CWnd:: GetDesktopWindow](#getdesktopwindow)|Načte okno plochy systému Windows.|
+|[CWnd:: GetDlgCtrlID](#getdlgctrlid)|Pokud `CWnd` je podřízené okno, voláním této funkce se vrátí jeho hodnota ID.|
 |[CWnd:: GetDlgItem](#getdlgitem)|Načte ovládací prvek se zadaným ID ze zadaného dialogového okna.|
 |[CWnd:: GetDlgItemInt](#getdlgitemint)|Přeloží text ovládacího prvku v daném dialogovém okně na celočíselnou hodnotu.|
-|[CWnd::GetDlgItemText](#getdlgitemtext)|Načte titulek nebo text přidružený k ovládacímu prvku.|
+|[CWnd:: GetDlgItemText](#getdlgitemtext)|Načte titulek nebo text přidružený k ovládacímu prvku.|
 |[CWnd:: GetDSCCursor](#getdsccursor)|Načte ukazatel na základní kurzor, který je definován vlastnostmi DataSource, UserName, Password a SQL ovládacího prvku zdroje dat.|
-|[CWnd::GetDynamicLayout](#getdynamiclayout)|Načte ukazatel na objekt dynamického Správce rozložení.|
+|[CWnd:: GetDynamicLayout](#getdynamiclayout)|Načte ukazatel na objekt dynamického Správce rozložení.|
 |[CWnd:: GetExStyle](#getexstyle)|Vrátí rozšířený styl okna.|
-|[CWnd:: GetFocus](#getfocus)|`CWnd` Načte, který aktuálně má fokus vstupu.|
+|[CWnd:: GetFocus](#getfocus)|Načte `CWnd`, který aktuálně má fokus vstupu.|
 |[CWnd:: GetFont](#getfont)|Načte aktuální písmo.|
 |[CWnd:: GetForegroundWindow](#getforegroundwindow)|Vrátí ukazatel na okno v popředí (okno nejvyšší úrovně, se kterým uživatel aktuálně pracuje).|
 |[CWnd:: GetIcon](#geticon)|Načte popisovač na ikonu.|
-|[CWnd::GetLastActivePopup](#getlastactivepopup)|Určuje, které místní okno vlastněné nástrojem `CWnd` bylo naposledy aktivní.|
+|[CWnd:: GetLastActivePopup](#getlastactivepopup)|Určuje, které místní okno vlastněné `CWnd` bylo naposledy aktivní.|
 |[CWnd:: GetLayeredWindowAttributes](#getlayeredwindowattributes)|Načte klíč barvy neprůhlednosti a průhlednosti v vrstveném okně.|
 |[CWnd:: getmenu](#getmenu)|Načte ukazatel na určenou nabídku.|
-|[CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)|Vyhledá další (nebo předchozí) ovládací prvek v rámci skupiny ovládacích prvků.|
+|[CWnd:: GetNextDlgGroupItem](#getnextdlggroupitem)|Vyhledá další (nebo předchozí) ovládací prvek v rámci skupiny ovládacích prvků.|
 |[CWnd:: GetNextDlgTabItem](#getnextdlgtabitem)|Načte první ovládací prvek se stylem [WS_TABSTOP](styles-used-by-mfc.md#window-styles) , který následuje (nebo předchází) určenému ovládacímu prvku.|
-|[CWnd::GetNextWindow](#getnextwindow)|Vrátí další (nebo předchozí) okno v seznamu Správce oken.|
-|[CWnd::GetOleControlSite](#getolecontrolsite)|Načte vlastní web pro určený ovládací prvek ActiveX.|
+|[CWnd:: GetNextWindow](#getnextwindow)|Vrátí další (nebo předchozí) okno v seznamu Správce oken.|
+|[CWnd:: GetOleControlSite](#getolecontrolsite)|Načte vlastní web pro určený ovládací prvek ActiveX.|
 |[CWnd:: GetOpenClipboardWindow](#getopenclipboardwindow)|Načte ukazatel na okno, ve kterém je právě otevřená schránka.|
 |[CWnd:: GetOwner](#getowner)|Načte ukazatel na vlastníka `CWnd`.|
-|[CWnd::GetParent](#getparent)|Načte nadřazené okno `CWnd` (pokud existuje).|
-|[CWnd:: GetParentFrame](#getparentframe)|Načte nadřazené okno rámce objektu.`CWnd`|
+|[CWnd:: GetParent](#getparent)|Načte nadřazené okno `CWnd` (pokud existuje).|
+|[CWnd:: GetParentFrame](#getparentframe)|Načte nadřazený rámec okna objektu `CWnd`.|
 |[CWnd:: GetParentOwner](#getparentowner)|Vrátí ukazatel na nadřazené okno podřízeného okna.|
 |[CWnd:: GetProperty](#getproperty)|Načte vlastnost ovládacího prvku ActiveX.|
 |[CWnd:: GetRenderTarget](#getrendertarget)|Získá cíl vykreslování, který je spojen s tímto oknem.|
-|[CWnd:: GetSafeHwnd](#getsafehwnd)|Vrátí `m_hWnd`nebo hodnotu null, pokud je **Tento** ukazatel null.|
+|[CWnd:: GetSafeHwnd](#getsafehwnd)|Vrátí `m_hWnd`, nebo hodnotu NULL, pokud je **Tento** ukazatel null.|
 |[CWnd:: GetSafeOwner](#getsafeowner)|Načte bezpečného vlastníka pro dané okno.|
-|[CWnd::GetScrollBarCtrl](#getscrollbarctrl)|Vrátí ovládací prvek posuvníku na stejné úrovni.|
-|[CWnd::GetScrollBarInfo](#getscrollbarinfo)|Načte informace o určeném posuvníku.|
-|[CWnd::GetScrollInfo](#getscrollinfo)|Načte informace, které `SCROLLINFO` struktura udržuje o posuvníku.|
-|[CWnd::GetScrollLimit](#getscrolllimit)|Načte limit posuvníku.|
+|[CWnd:: GetScrollBarCtrl](#getscrollbarctrl)|Vrátí ovládací prvek posuvníku na stejné úrovni.|
+|[CWnd:: GetScrollBarInfo](#getscrollbarinfo)|Načte informace o určeném posuvníku.|
+|[CWnd:: GetScrollInfo](#getscrollinfo)|Načte informace, které struktura `SCROLLINFO` udržuje o posuvníku.|
+|[CWnd:: GetScrollLimit](#getscrolllimit)|Načte limit posuvníku.|
 |[CWnd:: GetScrollPos](#getscrollpos)|Načte aktuální pozici rolovacího pole.|
 |[CWnd:: GetScrollRange](#getscrollrange)|Zkopíruje aktuální minimální a maximální polohu posuvníku pro daný posuvník.|
 |[CWnd:: GetStyle](#getstyle)|Vrátí aktuální styl okna.|
@@ -974,40 +974,40 @@ class CWnd : public CCmdTarget
 |[CWnd:: GetTitleBarInfo](#gettitlebarinfo)|Načte informace o zadaném záhlaví.|
 |[CWnd:: GetTopLevelFrame](#gettoplevelframe)|Načte okno rámce nejvyšší úrovně okna.|
 |[CWnd:: GetTopLevelOwner](#gettoplevelowner)|Načte okno nejvyšší úrovně.|
-|[CWnd::GetTopLevelParent](#gettoplevelparent)|Načte nadřazený prvek nejvyšší úrovně okna.|
+|[CWnd:: GetTopLevelParent](#gettoplevelparent)|Načte nadřazený prvek nejvyšší úrovně okna.|
 |[CWnd:: GetTopWindow](#gettopwindow)|Vrátí první podřízené okno, které patří do `CWnd`.|
-|[CWnd::GetUpdateRect](#getupdaterect)|Načte souřadnice nejmenšího obdélníku, který zcela uzavře `CWnd` oblast aktualizace.|
-|[CWnd::GetUpdateRgn](#getupdatergn)|Načte oblast `CWnd` aktualizace.|
+|[CWnd:: GetUpdateRect](#getupdaterect)|Načte souřadnice nejmenšího obdélníku, který zcela obklopuje oblast `CWnd` aktualizace.|
+|[CWnd:: GetUpdateRgn](#getupdatergn)|Načte oblast aktualizace `CWnd`.|
 |[CWnd:: GetWindow](#getwindow)|Vrátí okno se zadaným vztahem k tomuto oknu.|
-|[CWnd::GetWindowContextHelpId](#getwindowcontexthelpid)|Načte identifikátor kontextu v nápovědě.|
-|[CWnd::GetWindowDC](#getwindowdc)|Načte kontext zobrazení pro celé okno, včetně panelu titulků, nabídek a posuvníků.|
+|[CWnd:: GetWindowContextHelpId](#getwindowcontexthelpid)|Načte identifikátor kontextu v nápovědě.|
+|[CWnd:: GetWindowDC](#getwindowdc)|Načte kontext zobrazení pro celé okno, včetně panelu titulků, nabídek a posuvníků.|
 |[CWnd:: GetWindowedChildCount](#getwindowedchildcount)|Vrátí počet přidružených podřízených oken.|
-|[CWnd::GetWindowInfo](#getwindowinfo)|Vrátí informace o okně.|
-|[CWnd::GetWindowlessChildCount](#getwindowlesschildcount)|Vrátí počet přidružených podřízených oken bez oken.|
+|[CWnd:: GetWindowInfo](#getwindowinfo)|Vrátí informace o okně.|
+|[CWnd:: GetWindowlessChildCount](#getwindowlesschildcount)|Vrátí počet přidružených podřízených oken bez oken.|
 |[CWnd:: GetWindowPlacement](#getwindowplacement)|Načte stav zobrazení a normální (obnovené), minimalizované a maximalizované pozice okna.|
-|[CWnd::GetWindowRect](#getwindowrect)|Získá souřadnice `CWnd`obrazovky.|
+|[CWnd:: GetWindowRect](#getwindowrect)|Získá souřadnice obrazovky `CWnd`.|
 |[CWnd:: GetWindowRgn](#getwindowrgn)|Načte kopii oblasti okna okna.|
-|[CWnd::GetWindowText](#getwindowtext)|Vrátí text okna nebo nadpis titulku (Pokud má nějaký).|
-|[CWnd::GetWindowTextLength](#getwindowtextlength)|Vrátí délku textu okna nebo nadpisu titulku.|
-|[CWnd::HideCaret](#hidecaret)|Skryje blikající kurzor odebráním z obrazovky zobrazení.|
+|[CWnd:: GetWindowText](#getwindowtext)|Vrátí text okna nebo nadpis titulku (Pokud má nějaký).|
+|[CWnd:: GetWindowTextLength](#getwindowtextlength)|Vrátí délku textu okna nebo nadpisu titulku.|
+|[CWnd:: HideCaret](#hidecaret)|Skryje blikající kurzor odebráním z obrazovky zobrazení.|
 |[CWnd:: HiliteMenuItem](#hilitemenuitem)|Zvýrazní nebo odebere zvýraznění z položky nabídky nejvyšší úrovně (panelu nabídek).|
 |[CWnd:: HtmlHelp](#htmlhelp)|Volá se, aby se iniciovala aplikace HTMLHelp.|
 |[CWnd:: Invalidate](#invalidate)|Zruší platnost celé klientské oblasti.|
 |[CWnd:: InvalidateRect](#invalidaterect)|Zruší platnost klientské oblasti v rámci daného obdélníku přidáním tohoto obdélníku do aktuální oblasti aktualizace.|
 |[CWnd:: InvalidateRgn](#invalidatergn)|Zruší platnost klientské oblasti v rámci dané oblasti přidáním této oblasti do aktuální oblasti aktualizace.|
 |[CWnd:: InvokeHelper](#invokehelper)|Vyvolá metodu nebo vlastnost ovládacího prvku ActiveX.|
-|[CWnd::-Child](#ischild)|Označuje, `CWnd` zda se jedná o podřízené okno nebo jiného přímého následníka určeného okna.|
+|[CWnd::-Child](#ischild)|Označuje, zda `CWnd` je podřízené okno nebo jiný přímý následník určeného okna.|
 |[CWnd:: IsD2DSupportEnabled](#isd2dsupportenabled)|Určuje, jestli je povolená podpora D2D.|
 |[CWnd:: IsDialogMessage](#isdialogmessage)|Určuje, zda je daná zpráva určena pro nemodální dialogové okno, a pokud ano, zpracuje ji.|
 |[CWnd:: IsDlgButtonChecked](#isdlgbuttonchecked)|Určuje, zda je zaškrtnuto políčko ovládací prvek tlačítko.|
-|[CWnd::IsDynamicLayoutEnabled](#isdynamiclayoutenabled)|Určuje, zda je v tomto okně povoleno dynamické rozložení. Pokud je povoleno dynamické rozložení, umístění a velikost podřízených oken se může změnit, když uživatel změní velikost nadřazeného okna.|
-|[CWnd::-Icon](#isiconic)|Určuje, `CWnd` zda je minimalizován (ikonickým).|
-|[CWnd:: IsTouchWindow](#istouchwindow)|Určuje, `CWnd` jestli má dotykovou podporu.|
+|[CWnd:: IsDynamicLayoutEnabled](#isdynamiclayoutenabled)|Určuje, zda je v tomto okně povoleno dynamické rozložení. Pokud je povoleno dynamické rozložení, umístění a velikost podřízených oken se může změnit, když uživatel změní velikost nadřazeného okna.|
+|[CWnd::-Icon](#isiconic)|Určuje, zda je `CWnd` minimalizováno (ikonickým).|
+|[CWnd:: IsTouchWindow](#istouchwindow)|Určuje, jestli má `CWnd` podporu dotykového ovládání.|
 |[CWnd:: IsWindowEnabled](#iswindowenabled)|Určuje, zda je v okně povoleno zadání myši a klávesnice.|
 |[CWnd:: IsWindowVisible](#iswindowvisible)|Určuje, zda je okno viditelné.|
-|[CWnd:: s přiblížením](#iszoomed)|Určuje, `CWnd` zda je maximalizováno.|
+|[CWnd:: s přiblížením](#iszoomed)|Určuje, zda je `CWnd` maximalizováno.|
 |[CWnd:: KillTimer](#killtimer)|Ukončuje systémový časovač.|
-|[CWnd::LockWindowUpdate](#lockwindowupdate)|Zakáže nebo znovu povolí kreslení v daném okně.|
+|[CWnd:: LockWindowUpdate](#lockwindowupdate)|Zakáže nebo znovu povolí kreslení v daném okně.|
 |[CWnd:: MapWindowPoints](#mapwindowpoints)|Převede (mapuje) sadu bodů z souřadnicového prostoru `CWnd` do souřadnicového prostoru jiného okna.|
 |[CWnd:: MessageBox](#messagebox)|Vytvoří a zobrazí okno, které obsahuje zprávu a titulek dodané aplikace.|
 |[CWnd:: ModifyStyle](#modifystyle)|Upraví aktuální styl okna.|
@@ -1015,18 +1015,18 @@ class CWnd : public CCmdTarget
 |[CWnd:: MoveWindow](#movewindow)|Změní pozici a rozměry `CWnd`.|
 |[CWnd:: NotifyWinEvent](#notifywinevent)|Signalizuje systému, že došlo k předdefinované události.|
 |[CWnd:: OnAmbientProperty](#onambientproperty)|Implementujte hodnoty vlastností okolí.|
-|[CWnd::OnDrawIconicThumbnailOrLivePreview](#ondrawiconicthumbnailorlivepreview)|Volá se rozhraním, když potřebuje získat rastrový obrázek, který se má zobrazit na miniatuře karty Windows 7, nebo v náhledu klienta pro aplikaci.|
+|[CWnd:: OnDrawIconicThumbnailOrLivePreview](#ondrawiconicthumbnailorlivepreview)|Volá se rozhraním, když potřebuje získat rastrový obrázek, který se má zobrazit na miniatuře karty Windows 7, nebo v náhledu klienta pro aplikaci.|
 |[CWnd:: help](#onhelp)|Zpracovává nápovědu F1 v rámci aplikace (pomocí aktuálního kontextu).|
 |[CWnd:: OnHelpFinder](#onhelpfinder)|Zpracovává příkazy ID_HELP_FINDER a ID_DEFAULT_HELP.|
-|[CWnd:: OnHelpIndex](#onhelpindex)|Zpracuje příkaz ID_HELP_INDEX a poskytne výchozí téma nápovědy.|
+|[CWnd:: OnHelpIndex](#onhelpindex)|Zpracovává příkaz ID_HELP_INDEX a poskytuje výchozí téma nápovědy.|
 |[CWnd:: OnHelpUsing](#onhelpusing)|Zpracuje příkaz ID_HELP_USING.|
-|[CWnd::OnToolHitTest](#ontoolhittest)|Určuje, jestli je bod v ohraničujícím obdélníku zadaného nástroje, a načte informace o nástroji.|
+|[CWnd:: OnToolHitTest](#ontoolhittest)|Určuje, jestli je bod v ohraničujícím obdélníku zadaného nástroje, a načte informace o nástroji.|
 |[CWnd:: OpenClipboard](#openclipboard)|Otevře schránku. Ostatní aplikace nebudou moci měnit schránku, dokud nebude volána funkce [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) systému Windows.|
 |[CWnd::P aintWindowlessControls](#paintwindowlesscontrols)|Vykresluje ovládací prvky bez oken na kontejneru ovládacích prvků.|
 |[CWnd::P ostMessage](#postmessage)|Umístí zprávu do fronty aplikace a vrátí se, aniž by se čekalo na zpracování zprávy oknem.|
-|[CWnd::PreCreateWindow](#precreatewindow)|Volá se před vytvořením okna Windows připojeného k tomuto `CWnd` objektu.|
-|[CWnd::PreSubclassWindow](#presubclasswindow)|Umožňuje, aby před voláním [SubclassWindow](#subclasswindow) došlo k dalším potřebným podtřídm.|
-|[CWnd::P reTranslateMessage](#pretranslatemessage)|Používá se pro filtrování zpráv oken předtím, než se odesílají `TranslateMessage` do funkcí a `DispatchMessage` Windows. `CWinApp`|
+|[CWnd::P recreatewindow](#precreatewindow)|Volá se před vytvořením okna Windows připojeného k tomuto objektu `CWnd`.|
+|[CWnd::P reSubclassWindow](#presubclasswindow)|Umožňuje, aby před voláním [SubclassWindow](#subclasswindow) došlo k dalším potřebným podtřídm.|
+|[CWnd::P reTranslateMessage](#pretranslatemessage)|Používá se `CWinApp` k filtrování zpráv oken předtím, než se odesílají do `TranslateMessage` a `DispatchMessage` funkcí Windows.|
 |[CWnd::P isknout](#print)|Vykreslí aktuální okno v zadaném kontextu zařízení.|
 |[CWnd::P rintClient](#printclient)|Nakreslí všechna okna v zadaném kontextu zařízení (obvykle kontext zařízení tiskárny).|
 |[CWnd::P rintWindow](#printwindow)|Zkopíruje vizuální okno do určeného kontextu zařízení, obvykle z tiskárny DC.|
@@ -1036,18 +1036,18 @@ class CWnd : public CCmdTarget
 |[CWnd:: RepositionBars](#repositionbars)|Přemístí ovládací panely v klientské oblasti.|
 |[CWnd:: RunModalLoop aby](#runmodalloop)|Načítá, překládá nebo odesílá zprávy pro okno, které je v modálním stavu.|
 |[CWnd:: ScreenToClient](#screentoclient)|Převede souřadnice obrazovky daného bodu nebo obdélníku na zobrazení na souřadnice klienta.|
-|[CWnd::ScrollWindow](#scrollwindow)|Posune obsah oblasti klienta.|
-|[CWnd::ScrollWindowEx](#scrollwindowex)|Posune obsah oblasti klienta. `ScrollWindow`Podobně jako u s dalšími funkcemi.|
-|[CWnd::SendChildNotifyLastMsg](#sendchildnotifylastmsg)|Poskytuje oznamovací zprávu podřízenému oknu z nadřazeného okna, takže podřízené okno může úlohu zpracovat.|
+|[CWnd:: ScrollWindow](#scrollwindow)|Posune obsah oblasti klienta.|
+|[CWnd:: ScrollWindowEx](#scrollwindowex)|Posune obsah oblasti klienta. Podobně jako u `ScrollWindow`s dalšími funkcemi.|
+|[CWnd:: SendChildNotifyLastMsg](#sendchildnotifylastmsg)|Poskytuje oznamovací zprávu podřízenému oknu z nadřazeného okna, takže podřízené okno může úlohu zpracovat.|
 |[CWnd:: SendDlgItemMessage](#senddlgitemmessage)|Odešle zprávu na určený ovládací prvek.|
-|[CWnd:: SendMessage](#sendmessage)|Pošle zprávu `CWnd` objektu a nevrátí se, dokud zprávu nezpracuje.|
+|[CWnd:: SendMessage](#sendmessage)|Pošle zprávu do objektu `CWnd` a nevrátí se do doby, než se zprávu zpracuje.|
 |[CWnd:: SendMessageToDescendants](#sendmessagetodescendants)|Odešle zprávu do všech oken následníků okna.|
 |[CWnd:: SendNotifyMessage](#sendnotifymessage)|Odešle určenou zprávu do okna a vrátí co nejdříve, v závislosti na tom, zda volající vlákno vytvořilo okno.|
 |[CWnd:: SetActiveWindow](#setactivewindow)|Aktivuje okno.|
-|[CWnd:: SetCapture](#setcapture)|Způsobí, že `CWnd`se všechny následné vstupy myši odešlou do.|
+|[CWnd:: SetCapture](#setcapture)|Způsobí odeslání veškerého následného vstupu myši na `CWnd`.|
 |[CWnd:: SetCaretPos](#setcaretpos)|Přesune blikající kurzor na určenou pozici.|
-|[CWnd:: SetClipboardViewer](#setclipboardviewer)|Přidá `CWnd` do řetězce oken, které jsou upozorňovány vždy, když dojde ke změně obsahu schránky.|
-|[CWnd::SetDlgCtrlID](#setdlgctrlid)|Nastaví okno nebo ID ovládacího prvku pro okno (což může být jakékoli podřízené okno, nikoli pouze ovládací prvek v dialogovém okně).|
+|[CWnd:: SetClipboardViewer](#setclipboardviewer)|Přidá `CWnd` do řetězce oken, které jsou oznámeny vždy, když se změní obsah schránky.|
+|[CWnd:: SetDlgCtrlID](#setdlgctrlid)|Nastaví okno nebo ID ovládacího prvku pro okno (což může být jakékoli podřízené okno, nikoli pouze ovládací prvek v dialogovém okně).|
 |[CWnd:: SetDlgItemInt](#setdlgitemint)|Nastaví text ovládacího prvku na řetězec, který představuje celočíselnou hodnotu.|
 |[CWnd:: SetDlgItemText](#setdlgitemtext)|Nastaví titulek nebo text ovládacího prvku v určeném dialogovém okně.|
 |[CWnd:: SetFocus](#setfocus)|Deklaruje fokus vstupu.|
@@ -1059,28 +1059,28 @@ class CWnd : public CCmdTarget
 |[CWnd:: SetOwner](#setowner)|Změní vlastníka `CWnd`.|
 |[CWnd:: setParent –](#setparent)|Změní nadřazené okno.|
 |[CWnd:: SetProperty](#setproperty)|Nastaví vlastnost ovládacího prvku ActiveX.|
-|[CWnd:: SetRedraw](#setredraw)|Umožňuje překreslit `CWnd` změny v, nebo brání překreslování změn.|
-|[CWnd::SetScrollInfo](#setscrollinfo)|Nastaví informace o posuvníku.|
+|[CWnd:: SetRedraw](#setredraw)|Umožňuje překreslit změny v `CWnd` nebo zabrání překreslování změn.|
+|[CWnd:: SetScrollInfo](#setscrollinfo)|Nastaví informace o posuvníku.|
 |[CWnd:: SetScrollPos](#setscrollpos)|Nastaví aktuální pozici posuvníku a pokud je tento parametr zadán, překreslí posuvník tak, aby odrážel novou pozici.|
 |[CWnd:: SetScrollRange](#setscrollrange)|Nastaví minimální a maximální hodnoty pozice pro daný posuvník.|
-|[CWnd:: SetTimer](#settimer)|Nainstaluje systémový časovač, který po aktivaci pošle zprávu [WM_TIMER](#ontimer) .|
-|[CWnd::SetWindowContextHelpId](#setwindowcontexthelpid)|Nastaví identifikátor kontextu help.|
+|[CWnd:: SetTimer](#settimer)|Nainstaluje systémový časovač, který po aktivaci pošle [WM_TIMERovou](#ontimer) zprávu.|
+|[CWnd:: SetWindowContextHelpId](#setwindowcontexthelpid)|Nastaví identifikátor kontextu help.|
 |[CWnd:: SetWindowPlacement](#setwindowplacement)|Nastaví stav zobrazení a normální (obnovené), minimalizované a maximalizované pozice okna.|
 |[CWnd:: SetWindowPos](#setwindowpos)|Změní velikost, umístění a pořadí podřízených, automaticky otevíraných oken a oken nejvyšší úrovně.|
 |[CWnd:: SetWindowRgn](#setwindowrgn)|Nastaví oblast okna.|
-|[CWnd::SetWindowText](#setwindowtext)|Nastaví text okna nebo nadpis titulku (Pokud má nějaký) na zadaný text.|
+|[CWnd:: SetWindowText](#setwindowtext)|Nastaví text okna nebo nadpis titulku (Pokud má nějaký) na zadaný text.|
 |[CWnd:: ShowCaret](#showcaret)|Zobrazuje blikající kurzor na displeji na aktuální pozici blikajícího kurzoru. Po zobrazení blikající kurzor začne automaticky blikat.|
 |[CWnd:: ShowOwnedPopups](#showownedpopups)|Zobrazí nebo skryje všechna automaticky otevíraná okna ve vlastnictví okna.|
 |[CWnd:: ShowScrollBar](#showscrollbar)|Zobrazí nebo skryje posuvník.|
 |[CWnd::: ShowWindow](#showwindow)|Zobrazí nebo skryje okno.|
-|[CWnd:: SubclassDlgItem](#subclassdlgitem)|Připojí ovládací prvek systému Windows k `CWnd` objektu a provede směrování zpráv `CWnd`prostřednictvím mapy zpráv.|
-|[CWnd:: SubclassWindow](#subclasswindow)|Připojí okno k `CWnd` objektu a provede směrování zpráv `CWnd`přes mapu zpráv.|
-|[CWnd::UnlockWindowUpdate](#unlockwindowupdate)|Odemkne okno, které bylo uzamčeno `CWnd::LockWindowUpdate`.|
+|[CWnd:: SubclassDlgItem](#subclassdlgitem)|Připojí ovládací prvek systému Windows k objektu `CWnd` a provede směrování zpráv prostřednictvím mapy zpráv `CWnd`.|
+|[CWnd:: SubclassWindow](#subclasswindow)|Připojí okno k objektu `CWnd` a provede směrování zpráv prostřednictvím mapy zpráv `CWnd`.|
+|[CWnd:: UnlockWindowUpdate](#unlockwindowupdate)|Odemkne okno, které bylo uzamčené s `CWnd::LockWindowUpdate`.|
 |[CWnd:: UnsubclassWindow](#unsubclasswindow)|Odpojí okno od `CWnd` objektu.|
-|[CWnd::UpdateData](#updatedata)|Inicializuje nebo načítá data z dialogového okna.|
+|[CWnd:: UpdateData](#updatedata)|Inicializuje nebo načítá data z dialogového okna.|
 |[CWnd:: UpdateDialogControls](#updatedialogcontrols)|Volá se, aby se aktualizoval stav tlačítek dialogů a dalších ovládacích prvků.|
-|[CWnd::UpdateLayeredWindow](#updatelayeredwindow)|Aktualizuje pozici, velikost, tvar, obsah a průsvitnost okna vrstev.|
-|[CWnd::UpdateWindow](#updatewindow)|Aktualizuje klientskou oblast.|
+|[CWnd:: UpdateLayeredWindow](#updatelayeredwindow)|Aktualizuje pozici, velikost, tvar, obsah a průsvitnost okna vrstev.|
+|[CWnd:: UpdateWindow](#updatewindow)|Aktualizuje klientskou oblast.|
 |[CWnd:: ValidateRect](#validaterect)|V rámci daného obdélníku ověří oblast klienta odebráním obdélníku z aktuální oblasti aktualizace.|
 |[CWnd:: ValidateRgn](#validatergn)|Ověří oblast klienta v rámci dané oblasti odebráním oblasti z aktuální oblasti aktualizace.|
 |[CWnd:: WindowFromPoint](#windowfrompoint)|Identifikuje okno, které obsahuje daný bod.|
@@ -1088,47 +1088,47 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWnd::D valifikátor](#default)|Volá výchozí proceduru okna, která poskytuje výchozí zpracování pro všechny zprávy oken, které aplikace nezpracovává.|
-|[CWnd::DefWindowProc](#defwindowproc)|Volá výchozí proceduru okna, která poskytuje výchozí zpracování pro všechny zprávy oken, které aplikace nezpracovává.|
-|[CWnd::DoDataExchange](#dodataexchange)|Pro výměnu a ověřování dat dialogových oken. Volal ( `UpdateData`a).|
-|[CWnd:: GetCurrentMessage](#getcurrentmessage)|Vrátí ukazatel na zprávu, kterou toto okno právě zpracovává. By měla být volána pouze v případě `On`v členské funkci obslužné rutiny zprávy *zprávy* .|
-|[CWnd::InitDynamicLayout](#initdynamiclayout)|Volá se rozhraním, aby se inicializoval dynamické rozložení okna.|
+|[CWnd::D efWindowProc](#defwindowproc)|Volá výchozí proceduru okna, která poskytuje výchozí zpracování pro všechny zprávy oken, které aplikace nezpracovává.|
+|[CWnd::D oDataExchange](#dodataexchange)|Pro výměnu a ověřování dat dialogových oken. Volá se `UpdateData`.|
+|[CWnd:: GetCurrentMessage](#getcurrentmessage)|Vrátí ukazatel na zprávu, kterou toto okno právě zpracovává. By měla být volána pouze v případě v prvku `On`*zpráva* -obslužná rutina funkce.|
+|[CWnd:: InitDynamicLayout](#initdynamiclayout)|Volá se rozhraním, aby se inicializoval dynamické rozložení okna.|
 |[CWnd:: LoadDynamicLayoutResource](#loaddynamiclayoutresource)|Načte informace o dynamickém rozložení ze souboru prostředků.|
-|[CWnd:: Activate](#onactivate)|Volá se `CWnd` , když se aktivuje nebo deaktivuje.|
+|[CWnd:: Activate](#onactivate)|Volá se, když se aktivuje nebo deaktivuje `CWnd`.|
 |[CWnd:: OnActivateApp](#onactivateapp)|Volá se, když se aplikace chystá aktivovat nebo deaktivovat.|
 |[CWnd:: OnAppCommand](#onappcommand)|Volá se, když uživatel vygeneruje událost příkazu aplikace.|
-|[CWnd::OnAskCbFormatName](#onaskcbformatname)|Volá se aplikací prohlížeč schránky, když vlastník schránky zobrazí obsah schránky.|
-|[CWnd:: OnCancelMode](#oncancelmode)|Volá se, `CWnd` aby se povolilo zrušení všech vnitřních režimů, jako je třeba zachycení myši.|
+|[CWnd:: OnAskCbFormatName](#onaskcbformatname)|Volá se aplikací prohlížeč schránky, když vlastník schránky zobrazí obsah schránky.|
+|[CWnd:: OnCancelMode](#oncancelmode)|Volá se, aby se povolilo `CWnd` zrušit všechny interní režimy, jako je třeba zachycení myši.|
 |[CWnd:: OnCaptureChanged](#oncapturechanged)|Pošle zprávu do okna, které ztratí zachycení myši.|
 |[CWnd:: OnChangeCbChain](#onchangecbchain)|Upozorní, že zadané okno je odebíráno z řetězce.|
 |[CWnd:: OnChangeUIState](#onchangeuistate)|Volá se, když se má změnit stav uživatelského rozhraní (UI).|
 |[CWnd::. Char](#onchar)|Volá se, když se klávesová zkratka převede na jiný než systémový znak.|
 |[CWnd:: OnCharToItem](#onchartoitem)|Volá se podřízeným seznamem se stylem [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) v reakci na zprávu [WM_CHAR](#onchar) .|
-|[CWnd:: OnChildActivate](#onchildactivate)|Volá se pro podřízená okna rozhraní více dokumentů (MDI) vždy, když se `CWnd` změní velikost `CWnd` nebo pozice změn nebo aktivuje se.|
+|[CWnd:: OnChildActivate](#onchildactivate)|Volá se pro podřízená okna rozhraní více dokumentů (MDI) vždy, když se změní velikost nebo pozice `CWnd` nebo se aktivuje `CWnd`.|
 |[CWnd:: OnChildNotify](#onchildnotify)|Volá se nadřazeným oknem, aby bylo možné ovládacímu prvku oznámit možnost reagovat na oznámení ovládacího prvku.|
-|[CWnd::OnClipboardUpdate](#onclipboardupdate)|Volá se, když se změní obsah schránky.|
-|[CWnd::-Close](#onclose)|Volá se jako signál, `CWnd` který by se měl zavřít.|
+|[CWnd:: OnClipboardUpdate](#onclipboardupdate)|Volá se, když se změní obsah schránky.|
+|[CWnd::-Close](#onclose)|Volá se jako signál, který by `CWnd` měl zavřít.|
 |[CWnd:: OnColorizationColorChanged](#oncolorizationcolorchanged)|Volá se, když se změní zásada vykreslování pro neklientskou oblast.|
 |[CWnd:: s – příkaz](#oncommand)|Volá se, když uživatel vybere příkaz.|
 |[CWnd:: inkomprimace](#oncompacting)|Volá se, když systém Windows detekuje nedostatek systémové paměti.|
 |[CWnd:: OnCompareItem](#oncompareitem)|Volá se, aby se určila relativní pozice nové položky v podřízeném poli se seznamem nebo seznamu pole se seznamem seřazeného vlastníkem.|
 |[CWnd:: OnCompositionChanged](#oncompositionchanged)|Volá se pro všechna okna nejvyšší úrovně, když se povolí nebo zakáže kompozice Správce oken plochy (DWM).|
-|[CWnd::OnContextMenu](#oncontextmenu)|Volá se, když uživatel klikne pravým tlačítkem myši v okně.|
-|[CWnd::OnCopyData](#oncopydata)|Kopíruje data z jedné aplikace do jiné.|
+|[CWnd::](#oncontextmenu)|Volá se, když uživatel klikne pravým tlačítkem myši v okně.|
+|[CWnd:: OnCopyData](#oncopydata)|Kopíruje data z jedné aplikace do jiné.|
 |[CWnd:: Create](#oncreate)|Volána jako součást vytváření okna.|
-|[CWnd:: OnCtlColor](#onctlcolor)|Volá se `CWnd` , pokud je nadřazená položka ovládacího prvku, když se má vykreslit ovládací prvek.|
-|[CWnd::OnDeadChar](#ondeadchar)|Volá se, když se klávesová zkratka převede na nesystémem mrtvý znak (například znaky akcentů).|
-|[CWnd::OnDeleteItem](#ondeleteitem)|Volá se, když je zničený podřízený seznam nebo pole se seznamem, nebo když se položky z ovládacího prvku odeberou.|
-|[CWnd:: Destroy zničení](#ondestroy)|Volá se `CWnd` , když se zničí.|
+|[CWnd:: OnCtlColor](#onctlcolor)|Volá se, pokud je `CWnd` nadřazený ovládací prvek, když se má vykreslit ovládací prvek.|
+|[CWnd:: OnDeadChar](#ondeadchar)|Volá se, když se klávesová zkratka převede na nesystémem mrtvý znak (například znaky akcentů).|
+|[CWnd:: OnDeleteItem](#ondeleteitem)|Volá se, když je zničený podřízený seznam nebo pole se seznamem, nebo když se položky z ovládacího prvku odeberou.|
+|[CWnd:: Destroy zničení](#ondestroy)|Volá se při zničení `CWnd`.|
 |[CWnd:: OnDestroyClipboard](#ondestroyclipboard)|Volá se, když se schránka vyprázdní prostřednictvím volání funkce [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) Windows.|
 |[CWnd:: OnDeviceChange](#ondevicechange)|Upozorní aplikaci nebo ovladač zařízení na změnu v konfiguraci hardwaru zařízení nebo počítače.|
 |[CWnd:: OnDevModeChange](#ondevmodechange)|Volá se pro všechna okna nejvyšší úrovně, když uživatel změní nastavení v režimu zařízení.|
 |[CWnd:: OnDrawClipboard](#ondrawclipboard)|Volá se, když se změní obsah schránky.|
 |[CWnd:: OnDrawItem](#ondrawitem)|Volá se, když je potřeba vykreslit vizuální aspekt podřízeného ovládacího prvku, ovládacího prvku pole se seznamem, ovládacího prvku seznam-pole nebo nabídky.|
 |[CWnd:: OnDropFiles](#ondropfiles)|Volá se, když uživatel uvolní levé tlačítko myši nad oknem, které se zaregistrovalo jako příjemce vynechaných souborů.|
-|[CWnd:: Enable](#onenable)|Volá se `CWnd` , když je povolená nebo zakázaná.|
+|[CWnd:: Enable](#onenable)|Volá se, když je povolený nebo zakázaný `CWnd`.|
 |[CWnd:: OnEndSession](#onendsession)|Volá se při ukončování relace.|
 |[CWnd:: OnEnterIdle](#onenteridle)|Volá se, aby se informovalo o postupu v hlavním okně aplikace, že modální dialogové okno nebo nabídka přechází do stavu nečinnosti.|
 |[CWnd:: OnEnterMenuLoop](#onentermenuloop)|Volá se, když se zadala modální smyčka v nabídce.|
@@ -1137,29 +1137,29 @@ class CWnd : public CCmdTarget
 |[CWnd:: OnExitMenuLoop](#onexitmenuloop)|Volá se, když se ukončila modální smyčka nabídky.|
 |[CWnd:: OnExitSizeMove](#onexitsizemove)|Volá se poté, co ovlivněné okno ukončí modální smyčku přesunutí nebo změny velikosti.|
 |[CWnd:: OnFontChange](#onfontchange)|Volá se, když se změní fond zdrojů písem.|
-|[CWnd::OnGetDlgCode](#ongetdlgcode)|Volá se pro ovládací prvek, aby ovládací prvek mohl zpracovávat samotný vstup klávesami a klávesou TAB.|
+|[CWnd:: OnGetDlgCode](#ongetdlgcode)|Volá se pro ovládací prvek, aby ovládací prvek mohl zpracovávat samotný vstup klávesami a klávesou TAB.|
 |[CWnd:: OnGetMinMaxInfo](#ongetminmaxinfo)|Volá se vždycky, když systém Windows potřebuje znát maximalizovat pozici nebo rozměry nebo minimální nebo maximální velikost sledování.|
 |[CWnd:: OnHelpInfo](#onhelpinfo)|Volá se rozhraním, když uživatel stiskne klávesu F1.|
-|[CWnd::OnHotKey](#onhotkey)|Volá se, když uživatel stiskne klávesovou zkratku pro velké systémy.|
-|[CWnd::OnHScroll](#onhscroll)|Volá se, když uživatel klikne na vodorovný `CWnd`posuvník.|
+|[CWnd::-klávesové zkratky](#onhotkey)|Volá se, když uživatel stiskne klávesovou zkratku pro velké systémy.|
+|[CWnd:: OnHScroll](#onhscroll)|Volá se, když uživatel klikne na vodorovný posuvník `CWnd`.|
 |[CWnd:: OnHScrollClipboard](#onhscrollclipboard)|Volá se, když vlastník schránky by měl posunout obrázek schránky, zrušit platnost příslušné části a aktualizovat hodnoty posuvníku.|
-|[CWnd:: OnIconEraseBkgnd](#oniconerasebkgnd)|Volána, `CWnd` když je minimalizován (ikonickým) a před vykreslením ikony musí být pozadí ikony vyplněno.|
+|[CWnd:: OnIconEraseBkgnd](#oniconerasebkgnd)|Volána, když je minimalizována `CWnd` (ikonickým) a před vykreslením ikony musí být pozadí ikony vyplněno.|
 |[CWnd:: OnInitMenu](#oninitmenu)|Volá se v případě, že se bude aktivní nabídka.|
 |[CWnd:: OnInitMenuPopup](#oninitmenupopup)|Volá se, když se bude zobrazovat aktivní místní nabídka.|
 |[CWnd:: OnInputDeviceChange](#oninputdevicechange)|Volá se, když se do systému přidá nebo odebere vstupně-výstupní zařízení.|
 |[CWnd:: OnInputLangChange](#oninputlangchange)|Volá se po změně jazyka vstupu aplikace.|
-|[CWnd::OnInputLangChangeRequest](#oninputlangchangerequest)|Volá se, když uživatel zvolí nový jazyk zadávání.|
+|[CWnd:: OnInputLangChangeRequest](#oninputlangchangerequest)|Volá se, když uživatel zvolí nový jazyk zadávání.|
 |[CWnd:: OnKeyDown](#onkeydown)|Volá se, když se stiskne nesystémový klíč.|
 |[CWnd:: KeyUp](#onkeyup)|Volá se, když se uvolní nesystémový klíč.|
-|[CWnd::OnKillFocus](#onkillfocus)|Volá se bezprostředně `CWnd` před tím, než ztratí vstupní fokus.|
-|[CWnd::OnLButtonDblClk](#onlbuttondblclk)|Volá se, když uživatel dvakrát klikne na levé tlačítko myši.|
+|[CWnd:: OnKillFocus](#onkillfocus)|Volá se bezprostředně před tím, než `CWnd` ztratí fokus vstupu.|
+|[CWnd:: OnLButtonDblClk](#onlbuttondblclk)|Volá se, když uživatel dvakrát klikne na levé tlačítko myši.|
 |[CWnd:: OnLButtonDown](#onlbuttondown)|Volá se, když uživatel stiskne levé tlačítko myši.|
 |[CWnd:: OnLButtonUp](#onlbuttonup)|Volá se, když uživatel uvolní levé tlačítko myši.|
 |[CWnd:: OnMButtonDblClk](#onmbuttondblclk)|Volá se, když uživatel dvakrát klikne na prostřední tlačítko myši.|
 |[CWnd:: OnMButtonDown](#onmbuttondown)|Volá se, když uživatel stiskne prostřední tlačítko myši.|
 |[CWnd:: OnMButtonUp](#onmbuttonup)|Volá se, když uživatel uvolní prostřední tlačítko myši.|
 |[CWnd:: OnMDIActivate](#onmdiactivate)|Volá se při aktivaci nebo deaktivaci podřízeného okna MDI.|
-|[CWnd:: OnMeasureItem](#onmeasureitem)|Volá se pro Podřízená pole se seznamem, seznam nebo položku nabídky vlastníka vykreslené při vytvoření ovládacího prvku. `CWnd`informuje okna o rozměrech ovládacího prvku.|
+|[CWnd:: OnMeasureItem](#onmeasureitem)|Volá se pro Podřízená pole se seznamem, seznam nebo položku nabídky vlastníka vykreslené při vytvoření ovládacího prvku. `CWnd` informuje okna o rozměrech ovládacího prvku.|
 |[CWnd:: OnMenuChar](#onmenuchar)|Volá se, když uživatel stiskne symbol nabídky, který se neshoduje s žádným z předdefinovaných instrukcí v aktuální nabídce.|
 |[CWnd:: OnMenuDrag](#onmenudrag)|Volá se, když uživatel začne přetahovat položku nabídky.|
 |[CWnd:: OnMenuGetObject](#onmenugetobject)|Volá se, když ukazatel myši přejde na položku nabídky nebo se přesune ze středu položky na horní nebo dolní část položky.|
@@ -1171,95 +1171,95 @@ class CWnd : public CCmdTarget
 |[CWnd:: OnMouseLeave](#onmouseleave)|Volá se, když ukazatel opustí klientskou oblast okna zadané v předchozím volání [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
 |[CWnd::-MouseMove](#onmousemove)|Volá se, když se kurzor myši přesune.|
 |[CWnd:: OnMouseWheel](#onmousewheel)|Volá se, když uživatel otáčí kolečkem myši. Používá zpracování zpráv systému Windows NT 4,0.|
-|[CWnd::-Move](#onmove)|Volá se po změně pozice `CWnd` .|
-|[CWnd:: Probíhá přesun](#onmoving)|Indikuje, že uživatel přesouvá `CWnd` objekt.|
+|[CWnd::-Move](#onmove)|Volá se po změně pozice `CWnd`.|
+|[CWnd:: Probíhá přesun](#onmoving)|Indikuje, že uživatel přesouvá objekt `CWnd`.|
 |[CWnd:: OnNcActivate](#onncactivate)|Volá se, když je potřeba změnit neklientskou oblast, aby označovala aktivní nebo neaktivní stav.|
 |[CWnd:: OnNcCalcSize](#onnccalcsize)|Volá se, když je potřeba vypočítat velikost a polohu oblasti klienta.|
 |[CWnd:: OnNcCreate](#onnccreate)|Volá se před [vytvořením](#oncreate) při vytváření neklientské oblasti.|
 |[CWnd:: OnNcDestroy](#onncdestroy)|Voláno, když je zničena mimo klientská oblast.|
-|[CWnd::OnNcHitTest](#onnchittest)|Volá se systémem Windows pokaždé, když se přesune `CWnd` myš, pokud obsahuje kurzor nebo má zachycený `SetCapture`vstup z myši.|
-|[CWnd::OnNcLButtonDblClk](#onnclbuttondblclk)|Volá se, když uživatel dvakrát klikne na levé tlačítko myši, zatímco ukazatel je v oblasti `CWnd`mimo klienta.|
-|[CWnd::OnNcLButtonDown](#onnclbuttondown)|Volá se, když uživatel stiskne levé tlačítko myši, zatímco ukazatel je v oblasti `CWnd`mimo klienta.|
-|[CWnd::OnNcLButtonUp](#onnclbuttonup)|Volá se, když uživatel uvolní levé tlačítko myši, zatímco ukazatel je v oblasti `CWnd`mimo klienta.|
-|[CWnd:: OnNcMButtonDblClk](#onncmbuttondblclk)|Volá se, když uživatel dvakrát klikne na prostřední tlačítko myši, zatímco ukazatel je v oblasti `CWnd`mimo klienta.|
-|[CWnd:: OnNcMButtonDown](#onncmbuttondown)|Volá se, když uživatel stiskne prostřední tlačítko myši, zatímco ukazatel je v oblasti `CWnd`mimo klienta.|
-|[CWnd:: OnNcMButtonUp](#onncmbuttonup)|Volá se, když uživatel uvolní prostřední tlačítko myši, zatímco ukazatel je v oblasti `CWnd`mimo klienta.|
+|[CWnd:: OnNcHitTest](#onnchittest)|Volá se systémem Windows pokaždé, když se přesune myš, pokud `CWnd` obsahuje kurzor nebo má zachycení vstupu myši pomocí `SetCapture`.|
+|[CWnd:: OnNcLButtonDblClk](#onnclbuttondblclk)|Volá se, když uživatel dvakrát klikne na levé tlačítko myši, zatímco ukazatel je v oblasti mimo klienta `CWnd`.|
+|[CWnd:: OnNcLButtonDown](#onnclbuttondown)|Volá se, když uživatel stiskne levé tlačítko myši, zatímco ukazatel je v oblasti mimo klienta `CWnd`.|
+|[CWnd:: OnNcLButtonUp](#onnclbuttonup)|Volá se, když uživatel uvolní levé tlačítko myši, zatímco ukazatel je v oblasti mimo klienta `CWnd`.|
+|[CWnd:: OnNcMButtonDblClk](#onncmbuttondblclk)|Volá se, když uživatel dvakrát klikne na prostřední tlačítko myši, zatímco ukazatel je v oblasti mimo klienta `CWnd`.|
+|[CWnd:: OnNcMButtonDown](#onncmbuttondown)|Volá se, když uživatel stiskne prostřední tlačítko myši, zatímco ukazatel je v oblasti mimo klienta `CWnd`.|
+|[CWnd:: OnNcMButtonUp](#onncmbuttonup)|Volá se, když uživatel uvolní prostřední tlačítko myši, zatímco ukazatel je v oblasti mimo klienta `CWnd`.|
 |[CWnd:: OnNcMouseHover](#onncmousehover)|Volá se, když se ukazatel myši pohybuje v neklientské oblasti okna po dobu zadanou v předchozím volání [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
 |[CWnd:: OnNcMouseLeave](#onncmouseleave)|Rozhraní volá tuto členskou funkci, když kurzor opustí neklientskou oblast okna specifikovaného v předchozím volání [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
-|[CWnd:: OnNcMouseMove](#onncmousemove)|Volá se, když se kurzor přesune v oblasti `CWnd`mimo klienta.|
+|[CWnd:: OnNcMouseMove](#onncmousemove)|Volá se, když se kurzor přesune do jiné než klientské oblasti `CWnd`.|
 |[CWnd:: OnNcPaint](#onncpaint)|Volá se, když je potřeba malovat oblast mimo klienta.|
-|[CWnd::OnNcRButtonDblClk](#onncrbuttondblclk)|Volá se, když uživatel dvakrát klikne na pravé tlačítko myši, zatímco ukazatel je v oblasti `CWnd`mimo klienta.|
-|[CWnd:: OnNcRButtonDown](#onncrbuttondown)|Volá se, když uživatel stiskne pravé tlačítko myši, zatímco ukazatel je v oblasti `CWnd`mimo klienta.|
-|[CWnd:: OnNcRButtonUp](#onncrbuttonup)|Volá se, když uživatel uvolní pravé tlačítko myši, zatímco ukazatel je v oblasti `CWnd`mimo klienta.|
+|[CWnd:: OnNcRButtonDblClk](#onncrbuttondblclk)|Volá se, když uživatel dvakrát klikne na pravé tlačítko myši, zatímco ukazatel je v oblasti mimo klienta `CWnd`.|
+|[CWnd:: OnNcRButtonDown](#onncrbuttondown)|Volá se, když uživatel stiskne pravé tlačítko myši, zatímco ukazatel je v oblasti mimo klienta `CWnd`.|
+|[CWnd:: OnNcRButtonUp](#onncrbuttonup)|Volá se, když uživatel uvolní pravé tlačítko myši, zatímco ukazatel je v oblasti mimo klienta `CWnd`.|
 |[CWnd:: OnNcRenderingChanged](#onncrenderingchanged)|Volá se, když se změní zásada vykreslování pro neklientskou oblast.|
-|[CWnd::OnNcXButtonDblClk](#onncxbuttondblclk)|Volá se, když uživatel dvakrát klikne na XBUTTON1 nebo XBUTTON2, zatímco ukazatel je v neklientské oblasti okna.|
-|[CWnd::OnNcXButtonDown](#onncxbuttondown)|Volá se, když uživatel stiskne XBUTTON1 nebo XBUTTON2 myši, když je ukazatel v oblasti mimo klienta okna.|
+|[CWnd:: OnNcXButtonDblClk](#onncxbuttondblclk)|Volá se, když uživatel dvakrát klikne na XBUTTON1 nebo XBUTTON2, zatímco ukazatel je v neklientské oblasti okna.|
+|[CWnd:: OnNcXButtonDown](#onncxbuttondown)|Volá se, když uživatel stiskne XBUTTON1 nebo XBUTTON2 myši, když je ukazatel v oblasti mimo klienta okna.|
 |[CWnd:: OnNcXButtonUp](#onncxbuttonup)|Volá se, když uživatel uvolní XBUTTON1 nebo XBUTTON2 myši, když je ukazatel v oblasti mimo klienta okna.|
-|[CWnd::OnNextMenu](#onnextmenu)|Volá se, když se pomocí pravé nebo levé klávesy se šipkou přepne mezi řádkem nabídek a systémovou nabídkou.|
+|[CWnd:: OnNextMenu](#onnextmenu)|Volá se, když se pomocí pravé nebo levé klávesy se šipkou přepne mezi řádkem nabídek a systémovou nabídkou.|
 |[CWnd::-Notify](#onnotify)|Volá se rozhraním, aby informovalo nadřazené okno, že došlo k události v jednom z jeho ovládacích prvků nebo že ovládací prvek potřebuje informace.|
-|[CWnd:: OnNotifyFormat](#onnotifyformat)|Volá se, aby se zjistilo, jestli aktuální okno přijímá struktury ANSI nebo Unicode ve zprávě oznámení WM_NOTIFY.|
+|[CWnd:: OnNotifyFormat](#onnotifyformat)|Volá se, aby se zjistilo, jestli aktuální okno přijímá struktury ANSI nebo Unicode ve zprávě WM_NOTIFY oznámení.|
 |[CWnd:: propaintt](#onpaint)|Volá se, aby se mohla překreslit část okna.|
 |[CWnd:: OnPaintClipboard](#onpaintclipboard)|Volá se, když se klientská oblast prohlížeče schránky potřebuje překreslit.|
-|[CWnd::OnPaletteChanged](#onpalettechanged)|Volá se, aby se povolil systém Windows, který používá paletu barev k navýšení svých logických palet a aktualizaci jejich klientských oblastí.|
+|[CWnd:: OnPaletteChanged](#onpalettechanged)|Volá se, aby se povolil systém Windows, který používá paletu barev k navýšení svých logických palet a aktualizaci jejich klientských oblastí.|
 |[CWnd:: OnPaletteIsChanging](#onpaletteischanging)|Informuje jiné aplikace, když aplikace bude realizovat svou logickou paletu.|
 |[CWnd:: OnParentNotify](#onparentnotify)|Volá se při vytvoření nebo zničení podřízeného okna nebo když uživatel klikne na tlačítko myši, zatímco ukazatel myši je nad podřízeným oknem.|
-|[CWnd::OnPowerBroadcast](#onpowerbroadcast)|Volá se, když dojde k události řízení spotřeby.|
-|[CWnd:: OnQueryDragIcon](#onquerydragicon)|Volá se, když uživatel přetáhne `CWnd` minimalizovaný (ikonickým).|
+|[CWnd:: OnPowerBroadcast](#onpowerbroadcast)|Volá se, když dojde k události řízení spotřeby.|
+|[CWnd:: OnQueryDragIcon](#onquerydragicon)|Volá se, když uživatel přetáhne minimalizovaný (ikonickým) `CWnd`.|
 |[CWnd:: OnQueryEndSession](#onqueryendsession)|Volá se, když se uživatel rozhodne ukončit relaci Windows.|
-|[CWnd::OnQueryNewPalette](#onquerynewpalette)|Informuje o tom, že se chystá získat fokus vstupu. `CWnd`|
-|[CWnd:: OnQueryOpen](#onqueryopen)|Volá se `CWnd` , když je ikona a uživatel požaduje, aby se ikona otevřela.|
-|[CWnd::OnQueryUIState](#onqueryuistate)|Volá se, aby se načetl stav uživatelského rozhraní (UI) pro okno.|
+|[CWnd:: OnQueryNewPalette](#onquerynewpalette)|Informuje `CWnd`, že se chystá získat fokus vstupu.|
+|[CWnd:: OnQueryOpen](#onqueryopen)|Volá se, když `CWnd` je ikona a uživatel požaduje, aby se ikona otevřela.|
+|[CWnd:: OnQueryUIState](#onqueryuistate)|Volá se, aby se načetl stav uživatelského rozhraní (UI) pro okno.|
 |[CWnd:: OnRawInput](#onrawinput)|Volá se, když aktuální okno získá nezpracovaný vstup.|
-|[CWnd::OnRButtonDblClk](#onrbuttondblclk)|Volá se, když uživatel dvakrát klikne na pravé tlačítko myši.|
+|[CWnd:: OnRButtonDblClk](#onrbuttondblclk)|Volá se, když uživatel dvakrát klikne na pravé tlačítko myši.|
 |[CWnd:: OnRButtonDown](#onrbuttondown)|Volá se, když uživatel stiskne pravé tlačítko myši.|
 |[CWnd:: OnRButtonUp](#onrbuttonup)|Volá se, když uživatel uvolní pravé tlačítko myši.|
 |[CWnd:: OnRenderAllFormats](#onrenderallformats)|Volá se, když se zničí aplikace vlastníka a potřebuje vykreslit všechny její formáty.|
 |[CWnd:: OnRenderFormat](#onrenderformat)|Volá se pro vlastníka schránky, když je potřeba vykreslit konkrétní formát s opožděným vykreslováním.|
 |[CWnd:: OnSessionChange](#onsessionchange)|Volá se, aby se upozornila aplikace na změnu stavu relace.|
 |[CWnd:: OnSetCursor](#onsetcursor)|Volá se, pokud se nezachytí vstup myši a myš způsobí pohyb kurzoru v rámci okna.|
-|[CWnd:: OnSetFocus](#onsetfocus)|Volá se `CWnd` po tom, co získá fokus vstupu.|
-|[CWnd:: OnSettingChange](#onsettingchange)|Volá se, když `SystemParametersInfo` funkce Win32 změní nastavení v rámci systému.|
-|[CWnd:: OnShowWindow](#onshowwindow)|Volá se `CWnd` , když má být skrytý nebo zobrazený.|
-|[CWnd::-size](#onsize)|Volá se po změně velikosti `CWnd` .|
+|[CWnd:: OnSetFocus](#onsetfocus)|Volá se, když `CWnd` získá fokus vstupu.|
+|[CWnd:: OnSettingChange](#onsettingchange)|Volá se, když funkce Win32 `SystemParametersInfo` změní nastavení v rámci systému.|
+|[CWnd:: OnShowWindow](#onshowwindow)|Volá se, když `CWnd` být skryté nebo zobrazené.|
+|[CWnd::-size](#onsize)|Volá se po změně velikosti `CWnd`.|
 |[CWnd:: OnSizeClipboard](#onsizeclipboard)|Volá se v případě, že se změnila velikost oblasti klienta okna prohlížeče schránky.|
 |[CWnd:: při změně velikosti](#onsizing)|Indikuje, že uživatel mění velikost obdélníku.|
 |[CWnd:: OnSpoolerStatus](#onspoolerstatus)|Volá se z správce tisku při přidání nebo odebrání úlohy z fronty správce tisku.|
 |[CWnd:: OnStyleChanged](#onstylechanged)|Označuje, že funkce [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) systému Windows změnila jeden nebo více stylů okna.|
 |[CWnd:: OnStyleChanging](#onstylechanging)|Označuje, že funkce [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) systému Windows chystá změnu jednoho nebo více stylů okna.|
-|[CWnd::OnSysChar](#onsyschar)|Volá se, když se klávesová zkratka převede na systémový znak.|
+|[CWnd:: OnSysChar](#onsyschar)|Volá se, když se klávesová zkratka převede na systémový znak.|
 |[CWnd:: OnSysColorChange](#onsyscolorchange)|Volá se pro všechna okna nejvyšší úrovně, když se v nastavení systémové barvy provede změna.|
 |[CWnd:: OnSysCommand](#onsyscommand)|Volá se, když uživatel vybere příkaz z nabídky ovládacího prvku nebo když uživatel vybere tlačítko maximalizovat nebo minimalizovat.|
-|[CWnd::OnSysDeadChar](#onsysdeadchar)|Volá se, když se klávesová zkratka přeloží na systémový nemrtvý znak (například znaky akcentu).|
+|[CWnd:: OnSysDeadChar](#onsysdeadchar)|Volá se, když se klávesová zkratka přeloží na systémový nemrtvý znak (například znaky akcentu).|
 |[CWnd:: OnSysKeyDown](#onsyskeydown)|Volá se, když uživatel drží klávesu ALT a pak stiskne jiný klíč.|
-|[CWnd::OnSysKeyUp](#onsyskeyup)|Volá se, když uživatel uvolní klávesu, která se stiskla při stisknutí klávesy ALT.|
+|[CWnd:: OnSysKeyUp](#onsyskeyup)|Volá se, když uživatel uvolní klávesu, která se stiskla při stisknutí klávesy ALT.|
 |[CWnd:: OnTCard](#ontcard)|Volá se, když uživatel klikne na uživatelem vytvořené tlačítko.|
 |[CWnd:: OnTimeChange](#ontimechange)|Volá se pro všechna okna nejvyšší úrovně po změně systémového času.|
 |[CWnd::-Timeer](#ontimer)|Volá se po každém intervalu zadaném v [SetTimer](#settimer).|
 |[CWnd:: OnTouchInput](#ontouchinput)|Zpracujte jednotlivé vstupy z Windows Touch.|
 |[CWnd:: OnTouchInputs](#ontouchinputs)|Zpracování vstupů z Windows Touch.|
-|[CWnd:: OnUniChar](#onunichar)|Volá se při stisknutí klávesy. To znamená, že aktuální okno má fokus klávesnice a zpráva [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown) je přeložena funkcí [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) .|
+|[CWnd:: OnUniChar](#onunichar)|Volá se při stisknutí klávesy. To znamená, že aktuální okno má fokus klávesnice a [WM_KEYDOWNová](/windows/win32/inputdev/wm-keydown) zpráva je přeložena funkcí [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) .|
 |[CWnd:: OnUnInitMenuPopup](#onuninitmenupopup)|Volá se při zničení rozevírací nabídky nebo podnabídky.|
-|[CWnd::OnUpdateUIState](#onupdateuistate)|Volá se, aby se změnil stav uživatelského rozhraní (UI) pro zadané okno a všechna jeho podřízená okna.|
+|[CWnd:: OnUpdateUIState](#onupdateuistate)|Volá se, aby se změnil stav uživatelského rozhraní (UI) pro zadané okno a všechna jeho podřízená okna.|
 |[CWnd:: OnUserChanged](#onuserchanged)|Volá se poté, co se uživatel přihlásí nebo vypnul.|
-|[CWnd:: OnVKeyToItem](#onvkeytoitem)|Volá se seznamem, ve kterém `CWnd` se nachází v reakci na zprávu [WM_KEYDOWN](#onkeydown) .|
+|[CWnd:: OnVKeyToItem](#onvkeytoitem)|Volá se seznamem, který vlastní `CWnd` v reakci na zprávu [WM_KEYDOWN](#onkeydown) .|
 |[CWnd:: OnVScroll](#onvscroll)|Volá se, když uživatel klikne na svislý posuvník okna.|
 |[CWnd:: OnVScrollClipboard](#onvscrollclipboard)|Volá se, když se má vlastník posunout na obrázek schránky, zruší platnost příslušné části a aktualizuje hodnoty posuvníku.|
-|[CWnd::OnWindowPosChanged](#onwindowposchanged)|Volá se, když se změní velikost, pozice nebo pořadí Z-v důsledku volání [SetWindowPos](#setwindowpos) nebo jiné funkce pro správu oken.|
-|[CWnd::OnWindowPosChanging](#onwindowposchanging)|Volá se v případě, že se chystá Změna velikosti, pozice nebo pořadí Z v důsledku volání [SetWindowPos](#setwindowpos) nebo jiné funkce pro správu oken.|
+|[CWnd:: OnWindowPosChanged](#onwindowposchanged)|Volá se, když se změní velikost, pozice nebo pořadí Z-v důsledku volání [SetWindowPos](#setwindowpos) nebo jiné funkce pro správu oken.|
+|[CWnd:: OnWindowPosChanging](#onwindowposchanging)|Volá se v případě, že se chystá Změna velikosti, pozice nebo pořadí Z v důsledku volání [SetWindowPos](#setwindowpos) nebo jiné funkce pro správu oken.|
 |[CWnd:: OnWinIniChange](#onwininichange)|Volá se pro všechna okna nejvyšší úrovně po inicializačním souboru Windows, WIN. INI se změnila.|
 |[CWnd:: OnWndMsg](#onwndmsg)|Označuje, zda byla zpracována zpráva systému Windows.|
-|[CWnd::OnXButtonDblClk](#onxbuttondblclk)|Volá se, když uživatel dvakrát klikne na XBUTTON1 nebo XBUTTON2, zatímco ukazatel je v klientské oblasti okna.|
+|[CWnd:: OnXButtonDblClk](#onxbuttondblclk)|Volá se, když uživatel dvakrát klikne na XBUTTON1 nebo XBUTTON2, zatímco ukazatel je v klientské oblasti okna.|
 |[CWnd:: OnXButtonDown](#onxbuttondown)|Volá se, když uživatel stiskne XBUTTON1 nebo XBUTTON2, zatímco ukazatel je v klientské oblasti okna.|
 |[CWnd:: OnXButtonUp](#onxbuttonup)|Volá se, když uživatel uvolní XBUTTON1 nebo XBUTTON2, zatímco ukazatel je v klientské oblasti okna.|
 |[CWnd::P ostNcDestroy](#postncdestroy)|Tato virtuální funkce je volána výchozí funkcí [OnNcDestroy](#onncdestroy) po zničení okna.|
 |[CWnd:: ReflectChildNotify](#reflectchildnotify)|Pomocná funkce, která odráží zprávu ke zdroji.|
 |[CWnd:: ReflectLastMsg](#reflectlastmsg)|Odráží poslední zprávu do podřízeného okna.|
 |[CWnd:: ResizeDynamicLayout](#resizedynamiclayout)|Volá se rozhraním, když se změní velikost okna pro úpravu rozložení podřízených oken, pokud je pro toto okno povolené dynamické rozložení.|
-|[CWnd::WindowProc](#windowproc)|Poskytuje procedura okna pro `CWnd`. Výchozí odesílá zprávy přes mapu zpráv.|
+|[CWnd:: WindowProc](#windowproc)|Poskytuje postup okna pro `CWnd`. Výchozí odesílá zprávy přes mapu zpráv.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWnd:: operator HWND](#operator_hwnd)|Volání pro získání popisovače okna.|
 |[CWnd:: operator! =](#operator_neq)|Určuje, zda okno není stejné jako okno, jehož popisovač je [m_hWnd](#m_hwnd).|
@@ -1267,23 +1267,23 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CWnd::m_hWnd](#m_hwnd)|Označuje prvek HWND připojený k tomuto `CWnd`.|
+|[CWnd:: m_hWnd](#m_hwnd)|Určuje prvek HWND připojený k tomuto `CWnd`.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CWnd` Objekt se liší od okna systému Windows, ale tyto dva jsou pevně spojené. Objekt je vytvořen nebo zničen `CWnd` konstruktorem a destruktorem. `CWnd` Okno systému Windows na druhé straně je struktura dat interní pro systém Windows, která je vytvořena `Create` členskou funkcí a zničena `CWnd` virtuálním destruktorem. Funkce [DestroyWindow](#destroywindow) zničí okno systému Windows bez zničení objektu.
+Objekt `CWnd` se liší od okna systému Windows, ale tyto dvě jsou úzce propojené. Objekt `CWnd` je vytvořen nebo zničen `CWnd`m konstruktorem a destruktorem. Okno systému Windows na druhé straně je struktura dat interní pro systém Windows, která je vytvořena pomocí členské funkce `Create` a zničena `CWnd` virtuálním destruktorem. Funkce [DestroyWindow](#destroywindow) zničí okno systému Windows bez zničení objektu.
 
-Třída a mechanismus mapování zpráv `WndProc` skryjí funkci. `CWnd` Příchozí zprávy **s**oznámením systému Windows jsou automaticky směrovány přes mapu zpráv do správného fungování funkcí členů<em>zprávy</em> `CWnd` . Přepíšete funkci **na**člen<em>zprávy</em> pro zpracování konkrétní zprávy člena v odvozených třídách.
+Třída `CWnd` a mechanismus mapování zpráv skryjí funkci `WndProc`. Příchozí zprávy s oznámením systému Windows jsou automaticky směrovány přes mapu zpráv do správného fungování **v**`CWnd` členských funkcích<em>zprávy</em> . Přepíšete funkci **na**člen<em>zprávy</em> pro zpracování konkrétní zprávy člena v odvozených třídách.
 
-`CWnd` Třída také umožňuje vytvořit pro vaši aplikaci podřízené okno systému Windows. Odvodit třídu z `CWnd`a pak přidat členské proměnné do odvozené třídy pro uložení dat specifických pro vaši aplikaci. Implementací členských funkcí obslužných rutin zpráv a mapy zpráv v odvozené třídě určíte, co se stane, když se zprávy přesměrují do okna.
+Třída `CWnd` také umožňuje vytvořit pro vaši aplikaci podřízené okno systému Windows. Odvodit třídu z `CWnd`a pak přidat členské proměnné do odvozené třídy pro uložení dat specifických pro vaši aplikaci. Implementací členských funkcí obslužných rutin zpráv a mapy zpráv v odvozené třídě určíte, co se stane, když se zprávy přesměrují do okna.
 
-Podřízené okno vytvoříte ve dvou krocích. Nejprve zavolejte konstruktor `CWnd` pro `CWnd` vytvoření objektu a potom zavolejte funkci [vytvořit](#create) členskou funkci pro vytvoření `CWnd` podřízeného okna a připojte ho k objektu.
+Podřízené okno vytvoříte ve dvou krocích. Nejdřív zavolejte konstruktor `CWnd` pro vytvoření objektu `CWnd` a pak zavolejte funkci [Create](#create) member, aby se vytvořilo podřízené okno, a připojte ho k objektu `CWnd`.
 
-Když uživatel ukončí vaše podřízené okno, zničí `CWnd` objekt nebo `DestroyWindow` Zavolejte členskou funkci pro odebrání okna a zničení jeho datových struktur.
+Když uživatel ukončí vaše podřízené okno, zničí objekt `CWnd`, nebo zavolejte členskou funkci `DestroyWindow` a odstraní okno a zničí jeho datové struktury.
 
-V rámci knihovna Microsoft Foundation Class jsou další třídy odvozeny z `CWnd` pro poskytnutí specifických typů oken. Mnoho z těchto tříd, včetně [CFrameWnd](../../mfc/reference/cframewnd-class.md), [CMDIFrameWnd –](../../mfc/reference/cmdiframewnd-class.md), [CMDIChildWnd –](../../mfc/reference/cmdichildwnd-class.md), [CView](../../mfc/reference/cview-class.md)a [CDialog](../../mfc/reference/cdialog-class.md), je navrženo pro další odvození. Třídy ovládacího prvku odvozené z `CWnd`, například [CButton](../../mfc/reference/cbutton-class.md), lze použít přímo nebo lze použít pro další odvození tříd.
+V rámci knihovna Microsoft Foundation Class jsou další třídy odvozeny z `CWnd` pro poskytování specifických typů oken. Mnoho z těchto tříd, včetně [CFrameWnd](../../mfc/reference/cframewnd-class.md), [CMDIFrameWnd –](../../mfc/reference/cmdiframewnd-class.md), [CMDIChildWnd –](../../mfc/reference/cmdichildwnd-class.md), [CView](../../mfc/reference/cview-class.md)a [CDialog](../../mfc/reference/cdialog-class.md), je navrženo pro další odvození. Třídy ovládacího prvku odvozené od `CWnd`, jako je například [CButton](../../mfc/reference/cbutton-class.md), lze použít přímo nebo lze použít pro další odvození tříd.
 
 Další informace o použití `CWnd`naleznete v tématu okna s [rámečkem](../../mfc/frame-windows.md) a [objekty okna](../../mfc/window-objects.md).
 
@@ -1314,13 +1314,13 @@ Určuje, zda je výchozí akce, která má být vyvolána, objekt nebo jeden z p
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete přepsat v `CWnd`odvozené třídě, aby se provedla výchozí akce vašeho objektu. Další informace naleznete v tématu [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) v Windows SDK.
+Přepište tuto funkci ve vaší třídě odvozené `CWnd`, aby se provedla výchozí akce vašeho objektu. Další informace naleznete v tématu [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) v Windows SDK.
 
 ##  <a name="acchittest"></a>CWnd:: accHitTest
 
@@ -1346,13 +1346,13 @@ Přijímá informace identifikující objekt v bodě určeném parametrem *xLeft
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::accHitTest` v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::accHitTest` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
 Další informace naleznete v tématu [IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) v Windows SDK.
 
@@ -1388,13 +1388,13 @@ Určuje, zda umístění, které má být načteno, je objekt nebo jeden z podř
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::accLocation` v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::accLocation` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
-Další informace najdete v části `IAccessible::accLocation` v Windows SDK.
+Další informace najdete v tématu `IAccessible::accLocation` v Windows SDK.
 
 ##  <a name="accnavigate"></a>CWnd:: accNavigate
 
@@ -1413,20 +1413,20 @@ virtual HRESULT accNavigate(
 Určuje směr navigace. Viz *navDir* v [IAccessible:: accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) v Windows SDK.
 
 *varStart*<br/>
-Určuje počáteční objekt. Viz *varStart* v `IAccessible::accNavigate` tématu Windows SDK.
+Určuje počáteční objekt. Přečtěte si téma *varStart* in `IAccessible::accNavigate` v Windows SDK.
 
 *pvarEndUpAt*<br/>
-Přijímá informace o cílovém objektu uživatelského rozhraní. Viz *pvarEnd* v `IAccessible::accNavigate` tématu Windows SDK.
+Přijímá informace o cílovém objektu uživatelského rozhraní. Přečtěte si téma *pvarEnd* in `IAccessible::accNavigate` v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::accNavigate` v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::accNavigate` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
 Další informace naleznete v tématu [IAccessible:: accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) v Windows SDK.
 
@@ -1450,13 +1450,13 @@ Určuje objekt, který má být vybrán. Tento parametr může být buď CHILDID
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::accSelect` v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::accSelect` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
 Další informace naleznete v tématu [IAccessible:: accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) v Windows SDK.
 
@@ -1510,7 +1510,7 @@ Chcete-li uspořádat podřízená okna MDI ikonickým v okně klienta MDI, zavo
 
 ##  <a name="attach"></a>CWnd:: Attach
 
-Připojí okno systému Windows k `CWnd` objektu.
+Připojí okno systému Windows k objektu `CWnd`.
 
 ```
 BOOL Attach(HWND hWndNew);
@@ -1545,7 +1545,7 @@ virtual void BeginModalState();
 
 ##  <a name="beginpaint"></a>CWnd:: BeginPaint
 
-Připraví `PAINTSTRUCT` pro vykreslování a vyplní strukturu dat informacemi o vykreslování. `CWnd`
+Připraví `CWnd` pro vykreslování a vyplní datovou strukturu `PAINTSTRUCT` informace o vykreslování.
 
 ```
 CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
@@ -1564,9 +1564,9 @@ Identifikuje kontext zařízení pro `CWnd`. Ukazatel může být dočasný a ne
 
 Struktura Malování obsahuje datovou strukturu RECT, která má nejmenší obdélník, který kompletně obklopuje oblast aktualizace a příznak, který určuje, zda bylo pozadí smazáno.
 
-Oblast aktualizace je nastavena členskými funkcemi [Invalidate](#invalidate), [InvalidateRect](#invalidaterect)nebo [InvalidateRgn](#invalidatergn) a systémem po velikosti, přesunutí, vytvoření, posunu nebo provedení jakékoli jiné operace, která má vliv na oblast klienta. Pokud je oblast aktualizace označená pro mazání, `BeginPaint` pošle zprávu [WM_ONERASEBKGND](#onerasebkgnd) .
+Oblast aktualizace je nastavena členskými funkcemi [Invalidate](#invalidate), [InvalidateRect](#invalidaterect)nebo [InvalidateRgn](#invalidatergn) a systémem po velikosti, přesunutí, vytvoření, posunu nebo provedení jakékoli jiné operace, která má vliv na oblast klienta. Pokud je oblast aktualizace označená pro mazání, `BeginPaint` odešle zprávu [WM_ONERASEBKGND](#onerasebkgnd) .
 
-Nevolejte `BeginPaint` členskou funkci s výjimkou odpovědi na zprávu [WM_PAINT](#onpaint) . Každé volání `BeginPaint` členské funkce musí mít volání [EndPaint](#endpaint) členské funkce. Pokud je blikající kurzor v oblasti, která se má vykreslit `BeginPaint` , členská funkce automaticky skryje blikající kurzor, aby se zabránilo jeho vymazání.
+Nevolejte členskou funkci `BeginPaint`, s výjimkou odpovědi na zprávu [WM_PAINT](#onpaint) . Každé volání členské funkce `BeginPaint` musí mít stejné volání členské funkci [EndPaint](#endpaint) . Pokud je blikající kurzor v oblasti, která se má vykreslit, členská funkce `BeginPaint` automaticky skryje blikající kurzor, aby se zabránilo jeho vymazání.
 
 ### <a name="example"></a>Příklad
 
@@ -1590,21 +1590,21 @@ void BindDefaultProperty(
 Určuje DISPID vlastnosti ovládacího prvku vázaného na data, který má být svázán s ovládacím prvkem zdroje dat.
 
 *vtProp*<br/>
-Určuje typ vlastnosti, která má být svázána, například VT_BSTR, VT_VARIANT a tak dále.
+Určuje typ vlastnosti, která má být vázaná – například VT_BSTR, VT_VARIANT a tak dále.
 
 *szFieldName*<br/>
 Určuje název sloupce v kurzoru, který poskytuje ovládací prvek zdroje dat, na který bude tato vlastnost vázaná.
 
 *pDSCWnd*<br/>
-Odkazuje na okno, které je hostitelem ovládacího prvku zdroje dat, do kterého bude vlastnost svázána. Pokud `GetDlgItem` chcete načíst tento ukazatel, zavolejte s ID prostředku hostitelského okna řadičů domény.
+Odkazuje na okno, které je hostitelem ovládacího prvku zdroje dat, do kterého bude vlastnost svázána. Pokud chcete načíst tento ukazatel, zavolejte `GetDlgItem` s ID prostředku hostitelského okna řadičů domény.
 
 ### <a name="remarks"></a>Poznámky
 
-`CWnd` Objekt, na kterém zavoláte tuto funkci, musí být ovládací prvek vázaný na data.
+Objekt `CWnd`, na kterém zavoláte tuto funkci, musí být ovládací prvek vázaný na data.
 
 ### <a name="example"></a>Příklad
 
-`BindDefaultProperty`může být použito v následujícím kontextu:
+`BindDefaultProperty` lze použít v následujícím kontextu:
 
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]
 
@@ -1624,21 +1624,21 @@ void BindProperty(
 Určuje DISPID vlastnosti ovládacího prvku vázaného na data, který má být svázán s ovládacím prvkem zdroje dat.
 
 *pWndDSC*<br/>
-Odkazuje na okno, které je hostitelem ovládacího prvku zdroje dat, do kterého bude vlastnost svázána. Pokud `GetDlgItem` chcete načíst tento ukazatel, zavolejte s ID prostředku hostitelského okna řadičů domény.
+Odkazuje na okno, které je hostitelem ovládacího prvku zdroje dat, do kterého bude vlastnost svázána. Pokud chcete načíst tento ukazatel, zavolejte `GetDlgItem` s ID prostředku hostitelského okna řadičů domény.
 
 ### <a name="remarks"></a>Poznámky
 
-`CWnd` Objekt, na kterém zavoláte tuto funkci, musí být ovládací prvek vázaný na data.
+Objekt `CWnd`, na kterém zavoláte tuto funkci, musí být ovládací prvek vázaný na data.
 
 ### <a name="example"></a>Příklad
 
-`BindProperty`může být použito v následujícím kontextu:
+`BindProperty` lze použít v následujícím kontextu:
 
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]
 
 ##  <a name="bringwindowtotop"></a>CWnd:: BringWindowToTop
 
-Přinese `CWnd` do horní části zásobníku překrývajících se oken.
+Přesune `CWnd` do horní části zásobníku překrývajících se oken.
 
 ```
 void BringWindowToTop();
@@ -1646,9 +1646,9 @@ void BringWindowToTop();
 
 ### <a name="remarks"></a>Poznámky
 
-Navíc `BringWindowToTop` aktivuje automaticky otevíraná okna, okna nejvyšší úrovně a podřízená okna MDI. `BringWindowToTop` Členská funkce by se měla použít k odkrytí kteréhokoli okna, které je částečně nebo zcela zakryté všemi překrývajícími se okny.
+Kromě toho `BringWindowToTop` aktivuje automaticky otevíraná okna, podřízená okna na nejvyšší úrovni a MDI. Členská funkce `BringWindowToTop` by měla být použita k odkrytí kteréhokoli okna, které je částečně nebo zcela zakryté všemi překrývajícími se okny.
 
-Tato funkce volá pouze funkci Win32 [BringWindowToTop](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) . Chcete-li změnit pozici okna v pořadí vykreslování, zavolejte funkci [SetWindowPos](#setwindowpos) . `BringWindowToTop` Funkce nemění styl okna tak, aby byl v okně nejvyšší úrovně. Další informace najdete v tématu [co je rozdíl mezi HWND_TOP a HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263) .
+Tato funkce volá pouze funkci Win32 [BringWindowToTop](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) . Chcete-li změnit pozici okna v pořadí vykreslování, zavolejte funkci [SetWindowPos](#setwindowpos) . Funkce `BringWindowToTop` nemění styl okna tak, aby byla v okně nejvyšší úrovně. Další informace najdete v tématu [co je rozdíl mezi HWND_TOP a HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Příklad
 
@@ -1670,7 +1670,7 @@ virtual void CalcWindowRect(
 [in, out] Ukazatel na strukturu obdélníku. V případě vstupu Tato struktura obsahuje obdélník klienta. Po dokončení metody obsahuje tato struktura obdélník okna, který může obsahovat zadaný obdélník klienta.
 
 *nAdjustType*<br/>
-pro Slouží `CWnd::adjustBorder` k výpočtu souřadnic oken bez stylu WS_EX_CLIENTEDGE; v opačném případě `CWnd::adjustOutside`použijte.
+pro Použijte `CWnd::adjustBorder` k výpočtu souřadnic oken bez stylu WS_EX_CLIENTEDGE; v opačném případě použijte `CWnd::adjustOutside`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1727,7 +1727,7 @@ Obvykle se volá z dialogových oken [CDialog:: OnInitDialog](../../mfc/referenc
 
 ##  <a name="changeclipboardchain"></a>CWnd:: ChangeClipboardChain
 
-Odebere `CWnd` se z řetězce prohlížečů schránky a změní okno určené *hWndNext* následníkem `CWnd` předchůdce v řetězci.
+Odebere `CWnd` z řetězce prohlížečů schránky a změní okno zadané pomocí *hWndNext* následníka `CWnd` předchůdce v řetězci.
 
 ```
 BOOL ChangeClipboardChain(HWND hWndNext);
@@ -1758,11 +1758,11 @@ void CheckDlgButton(
 Určuje tlačítko, které má být upraveno.
 
 *Npokuste*<br/>
-Určuje akci, která má být provedena. Pokud je *npokuste* nenulové, `CheckDlgButton` členská funkce umístí vedle tlačítka značku zaškrtnutí; Pokud je hodnota 0, zaškrtnutí se odebere. U tlačítek se třemi stavy, pokud je *npokuste* 2, je stav tlačítka neurčitý.
+Určuje akci, která má být provedena. Pokud je *npokuste* nenulové, členská funkce `CheckDlgButton` umístí značku zaškrtnutí vedle tlačítka; Pokud je nastaveno na 0, zaškrtnutí se odebere. U tlačítek se třemi stavy, pokud je *npokuste* 2, je stav tlačítka neurčitý.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce pošle na určené tlačítko zprávu [BM_SETCHECK.](/windows/win32/Controls/bm-setcheck) `CheckDlgButton`
+Funkce `CheckDlgButton` odešle zprávu [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) na určené tlačítko.
 
 ### <a name="example"></a>Příklad
 
@@ -1792,7 +1792,7 @@ Určuje celočíselný identifikátor přepínacího přepínače, který má b�
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce pošle zprávu BM_SETCHECK určenému přepínači. [](/windows/win32/Controls/bm-setcheck) `CheckRadioButton`
+Funkce `CheckRadioButton` odesílá zprávu [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) na určený přepínač.
 
 ### <a name="example"></a>Příklad
 
@@ -1800,7 +1800,7 @@ Funkce pošle zprávu BM_SETCHECK určenému přepínači. [](/windows/win32/Con
 
 ##  <a name="childwindowfrompoint"></a>CWnd:: ChildWindowFromPoint
 
-Určuje, který (pokud existuje) podřízeného okna patřícího `CWnd` k obsahuje zadaný bod.
+Určuje, který z podřízených oken patřících k `CWnd` obsahuje určený bod.
 
 ```
 CWnd* ChildWindowFromPoint(POINT point) const;
@@ -1818,7 +1818,7 @@ Určuje souřadnice klienta bodu, který má být testován.
 *nflags*<br/>
 Určuje, která podřízená okna se mají přeskočit. Tento parametr může být kombinací následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |CWP_ALL|Nepřeskočí žádná podřízená okna.|
 |CWP_SKIPINVISIBLE|Přeskočit neviditelná podřízená okna|
@@ -1827,13 +1827,13 @@ Určuje, která podřízená okna se mají přeskočit. Tento parametr může b�
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje podřízené okno, které obsahuje bod. Má hodnotu NULL, pokud daný bod leží mimo klientskou oblast. Pokud je bod v oblasti klienta, ale není obsažen v žádném podřízeném okně, `CWnd` je vrácena.
+Určuje podřízené okno, které obsahuje bod. Má hodnotu NULL, pokud daný bod leží mimo klientskou oblast. Pokud je bod v oblasti klienta, ale není obsažen v žádném podřízeném okně, `CWnd` je vráceno.
 
 Tato členská funkce vrátí skryté nebo zakázané podřízené okno, které bude obsahovat zadaný bod.
 
-Daný bod může obsahovat více než jedno okno. Tato funkce však vrátí pouze `CWnd`znak * prvního okna, které obsahuje bod.
+Daný bod může obsahovat více než jedno okno. Tato funkce však vrátí pouze `CWnd`* prvního okna, které obsahuje bod.
 
-Vrácený `CWnd`znak * může být dočasný a neměl by být uložen pro pozdější použití.
+Vrácená `CWnd`* mohou být dočasná a neměla by být uložena pro pozdější použití.
 
 ### <a name="example"></a>Příklad
 
@@ -1850,16 +1850,16 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="parameters"></a>Parametry
 
 *lpPoint*<br/>
-Odkazuje na [strukturu](/windows/win32/api/windef/ns-windef-point) nebo `CPoint` objekt bodu, který obsahuje souřadnice klienta, které mají být převedeny.
+Odkazuje na [strukturu bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt `CPoint`, který obsahuje souřadnice klienta, které mají být převedeny.
 
 *lpRect*<br/>
-Odkazuje na [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt, který obsahuje souřadnice klienta, které mají být převedeny.
+Odkazuje na [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect`, který obsahuje souřadnice klienta k převodu.
 
 ### <a name="remarks"></a>Poznámky
 
-`CPoint` `CRect` `RECT` `POINT` Členská funkce používá souřadnice klienta ve struktuře nebo nebo objektu nebo, na který odkazuje lpPoint nebo lpRect, aby bylo možné vypočítat nové souřadnice obrazovky. `ClientToScreen` nahradí souřadnice ve struktuře novými souřadnicemi. Nové souřadnice obrazovky jsou relativní vzhledem k levému hornímu rohu zobrazení systému.
+Členská funkce `ClientToScreen` používá souřadnice klienta ve struktuře `POINT` nebo `RECT` nebo objekt `CPoint` nebo `CRect`, na který odkazuje *lpPoint* nebo *lpRect* , aby vypočítal nové souřadnice obrazovky. pak nahradí souřadnice ve struktuře novými souřadnicemi. Nové souřadnice obrazovky jsou relativní vzhledem k levému hornímu rohu zobrazení systému.
 
-`ClientToScreen` Členská funkce předpokládá, že daný bod nebo obdélník jsou v souřadnicích klienta.
+Členská funkce `ClientToScreen` předpokládá, že daný bod nebo obdélník jsou v souřadnicích klienta.
 
 ### <a name="example"></a>Příklad
 
@@ -1891,7 +1891,7 @@ Nenulové, pokud má pokračovat modální smyčka; 0 při volání [EndModalLoo
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení vrátí nenulovou hodnotu, dokud `EndModalLoop` není volána hodnota.
+Ve výchozím nastavení vrátí nenulovou hodnotu, dokud není volána `EndModalLoop`.
 
 ##  <a name="create"></a>CWnd:: Create
 
@@ -1938,13 +1938,13 @@ TRUE, pokud byla metoda úspěšná; v opačném případě FALSE.
 ### <a name="remarks"></a>Poznámky
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`nyní přiřadí člena HMENU svého `CREATESTRUCT` parametru **tomuto** ukazateli, pokud má nabídka hodnotu null a styl obsahuje WS_CHILD. Pro správné fungování zajistěte, aby měl ovládací prvek dialogu ID, které není NULL.
+> `CWnd::PreCreateWindow` nyní přiřadí člena hMenu svého parametru `CREATESTRUCT` **tomuto** ukazateli, pokud je nabídka null a styl obsahuje WS_CHILD. Pro správné fungování zajistěte, aby měl ovládací prvek dialogu ID, které není NULL.
 >
-> Tato změna opravuje chybu ve spravovaných a nativních scénářích spolupráce. Příkaz trace v `CWnd::Create` upozorní vývojáře problému.
+> Tato změna opravuje chybu ve spravovaných a nativních scénářích spolupráce. Příkaz TRACE v `CWnd::Create` upozorní vývojáře problému.
 
 Použijte funkci [AfxRegisterWndClass –](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) k registraci tříd oken. Uživatelem definované třídy okna jsou k dispozici v modulu, ve kterém jsou zaregistrované.
 
-Metoda [CWnd:: Create](#oncreate) je volána před tím, než `Create` se metoda vrátí, a před tím, než se okno zobrazí.
+Metoda [CWnd:: Create](#oncreate) je volána před vrácením metody `Create` a před tím, než se okno zobrazí.
 
 ### <a name="example"></a>Příklad
 
@@ -1966,7 +1966,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 Určuje objekt, k němuž přistupoval aktivní proxy server usnadnění. Může to být jedna z následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |OBJID_CLIENT|Odkazuje na klientskou oblast okna.|
 
@@ -1997,9 +1997,9 @@ Určuje rastr, který definuje tvar blikajícího kurzoru.
 
 Rastrový obrázek musí být dříve vytvořen pomocí členské funkce [CBitmap –:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap) , funkce [CreateDIBitmap](/windows/win32/api/wingdi/nf-wingdi-createdibitmap) systému Windows nebo členské funkce [CBitmap –:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap) .
 
-`CreateCaret`automaticky odstraní předchozí tvar stříšky, pokud je nějaký, bez ohledu na to, které okno vlastní blikající kurzor. Po vytvoření se stříška zpočátku skryje. Chcete-li zobrazit blikající kurzor, musí být volána členská funkce [ShowCaret](#showcaret) .
+`CreateCaret` automaticky odstraní předchozí tvar stříšky (pokud nějaký existuje) bez ohledu na to, které okno vlastní blikající kurzor. Po vytvoření se stříška zpočátku skryje. Chcete-li zobrazit blikající kurzor, musí být volána členská funkce [ShowCaret](#showcaret) .
 
-Systémový znak stříšky je sdílený prostředek. `CWnd`znak stříšky by měl být vytvořen pouze v případě, že má vstupní fokus nebo je aktivní. Před tím, než ztratí vstupní fokus nebo přestane být aktivní, by měl odstranit blikající kurzor.
+Systémový znak stříšky je sdílený prostředek. znak stříšky by `CWnd` měl vytvořit pouze v případě, že má vstupní fokus nebo je aktivní. Před tím, než ztratí vstupní fokus nebo přestane být aktivní, by měl odstranit blikající kurzor.
 
 ### <a name="example"></a>Příklad
 
@@ -2007,7 +2007,7 @@ Systémový znak stříšky je sdílený prostředek. `CWnd`znak stříšky by m
 
 ##  <a name="createcontrol"></a>CWnd:: CreateControl
 
-Tuto členskou funkci použijte k vytvoření ovládacího prvku ActiveX, který bude reprezentován v programu MFC pomocí `CWnd` objektu.
+Tuto členskou funkci použijte k vytvoření ovládacího prvku ActiveX, který bude reprezentován v programu knihovny MFC pomocí objektu `CWnd`.
 
 ```
 BOOL CreateControl(
@@ -2059,11 +2059,11 @@ Styly Windows. Dostupné styly jsou uvedeny v části poznámky.
 *OBD*<br/>
 Určuje velikost a polohu ovládacího prvku. Může to být buď objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , nebo [Struktura Rect](/windows/win32/api/windef/ns-windef-rect).
 
-*ppt*<br/>
-Odkazuje na [strukturu bodu](/windows/win32/api/windef/ns-windef-point) nebo `CPoint` objekt, který obsahuje levý horní roh ovládacího prvku.
+*PowerPoint*<br/>
+Odkazuje na [strukturu bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt `CPoint`, který obsahuje levý horní roh ovládacího prvku.
 
 *pSize*<br/>
-Odkazuje na [Velikost](/windows/win32/api/windef/ns-windef-size) struktury nebo `CSize` objektu, který obsahuje velikost ovládacího prvku.
+Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt `CSize`, který obsahuje velikost ovládacího prvku.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku. Nesmí mít hodnotu NULL.
@@ -2072,7 +2072,7 @@ Určuje nadřazené okno ovládacího prvku. Nesmí mít hodnotu NULL.
 Určuje ID ovládacího prvku.
 
 *pPersist*<br/>
-Ukazatel na [CFile –](../../mfc/reference/cfile-class.md) obsahující trvalý stav ovládacího prvku. Výchozí hodnota je NULL, což značí, že se ovládací prvek inicializuje sám bez obnovení jeho stavu z jakéhokoli trvalého úložiště. Pokud hodnota není null, mělo by se jednat o ukazatel `CFile`na objekt odvozený od ovládacího prvku, který obsahuje trvalá data ovládacího prvku, a to ve formě datového proudu nebo úložiště. Tato data mohla být uložena v předchozí aktivaci klienta. Může obsahovat další data, ale musí mít ukazatel pro čtení i zápis nastavený na první bajt trvalých dat v době `CreateControl`volání. `CFile`
+Ukazatel na [CFile –](../../mfc/reference/cfile-class.md) obsahující trvalý stav ovládacího prvku. Výchozí hodnota je NULL, což značí, že se ovládací prvek inicializuje sám bez obnovení jeho stavu z jakéhokoli trvalého úložiště. Pokud není NULL, mělo by se jednat o ukazatel na objekt odvozený od `CFile`, který obsahuje trvalá data ovládacího prvku, ve formě datového proudu nebo úložiště. Tato data mohla být uložena v předchozí aktivaci klienta. `CFile` může obsahovat další data, ale musí mít ukazatel pro čtení i zápis nastavený na první bajt trvalých dat v době volání `CreateControl`.
 
 *bStorage*<br/>
 Určuje, zda mají být data v *pPersist* interpretována jako data IStorage nebo IStream. Pokud jsou data v *pPersist* úložiště, *bStorage* by měla být true. Pokud jsou data v *pPersist* datový proud, *bStorage* by měl mít hodnotu false. Výchozí hodnota je FALSE (NEPRAVDA).
@@ -2089,9 +2089,9 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateControl`je přímým analogem funkce [CWnd:: Create](#create) , která vytvoří okno pro `CWnd`. `CreateControl`Vytvoří ovládací prvek ActiveX místo obyčejného okna.
+`CreateControl` je přímým analogem funkce [CWnd:: Create](#create) , která vytvoří okno pro `CWnd`. `CreateControl` vytvoří ovládací prvek ActiveX místo obyčejného okna.
 
-Pro`CreateControl`je podporována pouze podmnožina příznaků *dwStyle* systému Windows:
+Pro `CreateControl`je podporována pouze podmnožina příznaků Windows *dwStyle* :
 
 - WS_VISIBLE vytvoří okno, které je zpočátku viditelné. Vyžaduje se, pokud chcete, aby byl ovládací prvek viditelný hned, například v běžných oknech.
 
@@ -2099,9 +2099,9 @@ Pro`CreateControl`je podporována pouze podmnožina příznaků *dwStyle* systé
 
 - WS_BORDER vytvoří okno s ohraničením tenké čáry. Lze nastavit, pokud má ovládací prvek vlastnost BorderStyle.
 
-- WS_GROUP Určuje první ovládací prvek skupiny ovládacích prvků. Uživatel může změnit fokus klávesnice z jednoho ovládacího prvku ve skupině na další pomocí směrových kláves. Všechny ovládací prvky definované pomocí stylu WS_GROUP po prvním ovládacím prvku patří do stejné skupiny. Další ovládací prvek se stylem WS_GROUP ukončí skupinu a spustí další skupinu.
+- WS_GROUP Určuje první ovládací prvek skupiny ovládacích prvků. Uživatel může změnit fokus klávesnice z jednoho ovládacího prvku ve skupině na další pomocí směrových kláves. Všechny ovládací prvky definované pomocí stylu WS_GROUP po prvním ovládacím prvku patří do stejné skupiny. Následující ovládací prvek s Style WS_GROUP ukončí skupinu a spustí další skupinu.
 
-- WS_TABSTOP určuje ovládací prvek, který může obdržet fokus klávesnice, když uživatel stiskne klávesu TAB. Stisknutí klávesy TAB změní fokus klávesnice na další ovládací prvek WS_TABSTOP stylu.
+- WS_TABSTOP určuje ovládací prvek, který může obdržet fokus klávesnice, když uživatel stiskne klávesu TAB. Stisknutí klávesy TAB změní fokus klávesnice na další ovládací prvek stylu WS_TABSTOP.
 
 ### <a name="example"></a>Příklad
 
@@ -2109,7 +2109,7 @@ Pro`CreateControl`je podporována pouze podmnožina příznaků *dwStyle* systé
 
 ##  <a name="createex"></a>CWnd:: CreateEx
 
-Vytvoří zadané okno a připojí ho k `CWnd` objektu.
+Vytvoří zadané okno a připojí ho k objektu `CWnd`.
 
 ```
 virtual BOOL CreateEx(
@@ -2150,10 +2150,10 @@ Ukazatel na řetězec zakončený hodnotou null, který obsahuje zobrazovaný n�
 *dwStyle*<br/>
 Bitová kombinace (nebo) [stylů oken](styles-used-by-mfc.md#window-styles); jinak má hodnotu NULL pro výchozí styl okna.
 
-*x*<br/>
+*znak*<br/>
 Počáteční vodorovná vzdálenost okna od levé strany obrazovky nebo nadřazeného okna
 
-*y*<br/>
+*požadované*<br/>
 Počáteční svislá vzdálenost okna od horního okraje obrazovky nebo nadřazeného okna
 
 *nWidth*<br/>
@@ -2187,9 +2187,9 @@ TRUE, pokud byla metoda úspěšná; v opačném případě FALSE.
 ### <a name="remarks"></a>Poznámky
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`nyní přiřadí člena HMENU svého `CREATESTRUCT` parametru **tomuto** ukazateli, pokud má nabídka hodnotu null a styl obsahuje WS_CHILD. Pro správné fungování zajistěte, aby měl ovládací prvek dialogu ID, které není NULL.
+> `CWnd::PreCreateWindow` nyní přiřadí člena hMenu svého parametru `CREATESTRUCT` **tomuto** ukazateli, pokud je nabídka null a styl obsahuje WS_CHILD. Pro správné fungování zajistěte, aby měl ovládací prvek dialogu ID, které není NULL.
 >
-> Tato změna opravuje chybu ve spravovaných a nativních scénářích spolupráce. `TRACE` Příkaz v`CWnd::Create` upozorní vývojáře problému.
+> Tato změna opravuje chybu ve spravovaných a nativních scénářích spolupráce. Příkaz `TRACE` v `CWnd::Create` upozorní vývojáře problému.
 
 Výchozí rozšířený styl okna je WS_EX_LEFT. Výchozí styl okna je WS_OVERLAPPED.
 
@@ -2197,7 +2197,7 @@ Použijte funkci [AfxRegisterWndClass –](../../mfc/reference/application-infor
 
 Dimenze pro podřízená okna jsou relativní vzhledem k levému hornímu rohu klientské oblasti nadřazeného okna. Rozměry oken nejvyšší úrovně jsou relativní vzhledem k levému hornímu rohu obrazovky.
 
-Metoda [CWnd:: Create](#oncreate) je volána před tím, než `CreateEx` se metoda vrátí, a před tím, než se okno zobrazí.
+Metoda [CWnd:: Create](#oncreate) je volána před vrácením metody `CreateEx` a před tím, než se okno zobrazí.
 
 ### <a name="example"></a>Příklad
 
@@ -2227,11 +2227,11 @@ Obrazec blikajícího kurzoru může být řádek nebo blok.
 
 Parametry *nWidth* a *nHeight* určují šířku a výšku blikajícího kurzoru (v logických jednotkách); přesná Šířka a výška (v pixelech) závisí na režimu mapování.
 
-Velikost a Šířka okraje okna systému lze načíst pomocí funkce [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) systému Windows pomocí indexů SM_CXBORDER a SM_CYBORDER. Použití šířky a výšky ohraničení okna zajišťuje, že se blikající kurzor bude zobrazovat v zobrazení s vysokým rozlišením.
+Velikost a Šířka okraje okna systému lze načíst funkcí [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) systému Windows pomocí indexů SM_CXBORDER a SM_CYBORDER. Použití šířky a výšky ohraničení okna zajišťuje, že se blikající kurzor bude zobrazovat v zobrazení s vysokým rozlišením.
 
-`CreateGrayCaret` Členská funkce automaticky odstraní předchozí tvar stříšky, pokud je nějaký, bez ohledu na to, které okno vlastní blikající kurzor. Po vytvoření se stříška zpočátku skryje. Chcete-li zobrazit blikající kurzor, musí být volána členská funkce [ShowCaret](#showcaret) .
+Členská funkce `CreateGrayCaret` automaticky odstraní předchozí tvar stříšky, pokud existuje, bez ohledu na to, které okno vlastní blikající kurzor. Po vytvoření se stříška zpočátku skryje. Chcete-li zobrazit blikající kurzor, musí být volána členská funkce [ShowCaret](#showcaret) .
 
-Systémový znak stříšky je sdílený prostředek. `CWnd`znak stříšky by měl být vytvořen pouze v případě, že má vstupní fokus nebo je aktivní. Před tím, než ztratí vstupní fokus nebo přestane být aktivní, by měl odstranit blikající kurzor.
+Systémový znak stříšky je sdílený prostředek. znak stříšky by `CWnd` měl vytvořit pouze v případě, že má vstupní fokus nebo je aktivní. Před tím, než ztratí vstupní fokus nebo přestane být aktivní, by měl odstranit blikající kurzor.
 
 ### <a name="example"></a>Příklad
 
@@ -2261,11 +2261,11 @@ Obrazec blikajícího kurzoru může být řádek nebo blok.
 
 Parametry *nWidth* a *nHeight* určují šířku a výšku blikajícího kurzoru (v logických jednotkách); přesná Šířka a výška (v pixelech) závisí na režimu mapování.
 
-Velikost a Šířka okraje okna systému lze načíst pomocí funkce [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) systému Windows pomocí indexů SM_CXBORDER a SM_CYBORDER. Použití šířky a výšky ohraničení okna zajišťuje, že se blikající kurzor bude zobrazovat v zobrazení s vysokým rozlišením.
+Velikost a Šířka okraje okna systému lze načíst funkcí [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) systému Windows pomocí indexů SM_CXBORDER a SM_CYBORDER. Použití šířky a výšky ohraničení okna zajišťuje, že se blikající kurzor bude zobrazovat v zobrazení s vysokým rozlišením.
 
-`CreateSolidCaret` Členská funkce automaticky odstraní předchozí tvar stříšky, pokud je nějaký, bez ohledu na to, které okno vlastní blikající kurzor. Po vytvoření se stříška zpočátku skryje. Chcete-li zobrazit blikající kurzor, musí být volána členská funkce [ShowCaret](#showcaret) .
+Členská funkce `CreateSolidCaret` automaticky odstraní předchozí tvar stříšky, pokud existuje, bez ohledu na to, které okno vlastní blikající kurzor. Po vytvoření se stříška zpočátku skryje. Chcete-li zobrazit blikající kurzor, musí být volána členská funkce [ShowCaret](#showcaret) .
 
-Systémový znak stříšky je sdílený prostředek. `CWnd`znak stříšky by měl být vytvořen pouze v případě, že má vstupní fokus nebo je aktivní. Před tím, než ztratí vstupní fokus nebo přestane být aktivní, by měl odstranit blikající kurzor.
+Systémový znak stříšky je sdílený prostředek. znak stříšky by `CWnd` měl vytvořit pouze v případě, že má vstupní fokus nebo je aktivní. Před tím, než ztratí vstupní fokus nebo přestane být aktivní, by měl odstranit blikající kurzor.
 
 ### <a name="example"></a>Příklad
 
@@ -2273,7 +2273,7 @@ Systémový znak stříšky je sdílený prostředek. `CWnd`znak stříšky by m
 
 ##  <a name="cwnd"></a>CWnd:: CWnd
 
-`CWnd` Vytvoří objekt.
+Vytvoří objekt `CWnd`.
 
 ```
 CWnd();
@@ -2335,7 +2335,7 @@ Tato členská funkce zajišťuje zpracování každé zprávy. Měla by být vo
 
 ##  <a name="deletetempmap"></a>CWnd::D eleteTempMap
 
-Je volána automaticky obslužnou rutinou `CWinApp` času nečinnosti objektu.
+Volána automaticky obslužnou rutinou času nečinnosti objektu `CWinApp`.
 
 ```
 static void PASCAL DeleteTempMap();
@@ -2343,7 +2343,7 @@ static void PASCAL DeleteTempMap();
 
 ### <a name="remarks"></a>Poznámky
 
-Odstraní všechny dočasné `CWnd` objekty vytvořené `FromHandle` členskou funkcí.
+Odstraní všechny dočasné `CWnd` objekty vytvořené pomocí `FromHandle` členské funkce.
 
 ### <a name="example"></a>Příklad
 
@@ -2351,7 +2351,7 @@ Odstraní všechny dočasné `CWnd` objekty vytvořené `FromHandle` členskou f
 
 ##  <a name="destroywindow"></a>CWnd::D estroyWindow
 
-Odstraní okno systému Windows připojené k `CWnd` objektu.
+Odstraní okno systému Windows připojené k objektu `CWnd`.
 
 ```
 virtual BOOL DestroyWindow();
@@ -2363,17 +2363,17 @@ Nenulové, pokud je okno zničeno; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`DestroyWindow` Členská funkce pošle příslušné zprávy do okna, aby je deaktivovala a odebrala vstupní fokus. Také odstraní nabídku okna, vyprázdní frontu aplikace, odstraní nedokončené časovače, odebere vlastnictví schránky a přeruší řetěz prohlížeče schránky, pokud `CWnd` je v horní části řetězce prohlížeče. Odesílá [WM_DESTROY](#ondestroy) a [WM_NCDESTROY](#onncdestroy) zprávy do okna. Nezničí `CWnd` objekt.
+Členská funkce `DestroyWindow` odesílá příslušné zprávy do okna, aby je deaktivovala a odebrala vstupní fokus. Také odstraní nabídku okna, vyprázdní frontu aplikace, odstraní nedokončené časovače, odebere vlastnictví schránky a přeruší řetězec prohlížeče schránky, pokud `CWnd` v horní části řetězce prohlížeče. Odesílá [WM_DESTROY](#ondestroy) a [WM_NCDESTROY](#onncdestroy) zprávy do okna. Nezničí objekt `CWnd`.
 
-`DestroyWindow`je zástupný symbol pro provádění čištění. Vzhledem `DestroyWindow` k tomu, že je virtuální funkce, je zobrazena `CWnd`v jakékoli odvozené třídě v zobrazení tříd. Ale i v případě, že tuto funkci potlačíte v `CWnd`odvozené třídě, `DestroyWindow` není nutně volána. Pokud `DestroyWindow` není volána v kódu knihovny MFC, je nutné ji explicitně volat ve vlastním kódu, pokud chcete volat.
+`DestroyWindow` je držitelem místa pro provádění čištění. Vzhledem k tomu, že `DestroyWindow` je virtuální funkce, je zobrazena v jakékoli třídě odvozené `CWnd`v Zobrazení tříd. Ale i v případě, že tuto funkci potlačíte ve vaší třídě odvozené `CWnd`, `DestroyWindow` není nutně volána. Pokud `DestroyWindow` není volána v kódu knihovny MFC, je nutné ji explicitně volat ve vlastním kódu, pokud chcete volat.
 
-Předpokládejme například, že jste přepsali `DestroyWindow` `CView`v odvozené třídě. Vzhledem k tomu, že zdrojový kód `DestroyWindow` MFC nevolá žádné `CFrameWnd`z jeho odvozených tříd, `DestroyWindow` přepsání nebude voláno, pokud je explicitně nebudete volat.
+Předpokládejme například, že jste přepsali `DestroyWindow` ve třídě odvozené `CView`. Vzhledem k tomu, že zdrojový kód MFC nevolá `DestroyWindow` v žádné z jeho `CFrameWnd`odvozených tříd, přepsané `DestroyWindow` nebudou volány, pokud je explicitně nebudete volat.
 
-Pokud je okno nadřazeným systémem všech oken, tato podřízená okna budou automaticky zničena při zničení nadřazeného okna. `DestroyWindow` Členská funkce nejprve zničí podřízená okna a pak samotné okno.
+Pokud je okno nadřazeným systémem všech oken, tato podřízená okna budou automaticky zničena při zničení nadřazeného okna. Členská funkce `DestroyWindow` nejprve zničí podřízená okna a pak samotné okno.
 
-Členská funkce také ničí nemodální dialogová okna vytvořená pomocí funkce [CDialog:: Create.](../../mfc/reference/cdialog-class.md#create) `DestroyWindow`
+Členská funkce `DestroyWindow` také zničí nemodální dialogová okna vytvořená pomocí funkce [CDialog:: Create](../../mfc/reference/cdialog-class.md#create).
 
-Pokud je zničeno podřízené okno a nemá nastaven styl [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) , zpráva WM_PARENTNOTIFY se pošle nadřazenému. [](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) `CWnd`
+Pokud je `CWnd` zničeno podřízené okno a nemá sadu [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) sady stylů, bude zpráva [WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) odeslána nadřazenému.
 
 ### <a name="example"></a>Příklad
 
@@ -2381,7 +2381,7 @@ Pokud je zničeno podřízené okno a nemá nastaven styl [WS_EX_NOPARENTNOTIFY]
 
 ##  <a name="detach"></a>CWnd::D etach
 
-Odpojí popisovač systému Windows od `CWnd` objektu a vrátí popisovač.
+Odpojí popisovač systému Windows od objektu `CWnd` a vrátí popisovač.
 
 ```
 HWND Detach();
@@ -2410,10 +2410,10 @@ int DlgDirList(
 ### <a name="parameters"></a>Parametry
 
 *lpPathSpec*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který obsahuje cestu nebo název souboru. `DlgDirList`upraví tento řetězec, který by měl být dostatečně dlouhý na to, aby obsahoval změny. Další informace najdete v následující části "poznámky".
+Odkazuje na řetězec zakončený hodnotou null, který obsahuje cestu nebo název souboru. `DlgDirList` upraví tento řetězec, který by měl být dostatečně dlouhý na to, aby obsahoval změny. Další informace najdete v následující části "poznámky".
 
 *nIDListBox*<br/>
-Určuje identifikátor pole seznamu. Pokud je *nIDListBox* 0, `DlgDirList` předpokládá, že žádný seznam neexistuje a nepokusí se ho vyplňovat.
+Určuje identifikátor pole seznamu. Pokud je *nIDListBox* 0, `DlgDirList` předpokládá, že neexistuje žádný seznam a nepokusí se ji vyplňovat.
 
 *nIDStaticPath*<br/>
 Určuje identifikátor ovládacího prvku statického textu, který slouží k zobrazení aktuální jednotky a adresáře. Pokud je *nIDStaticPath* 0, `DlgDirList` předpokládá, že žádný takový textový ovládací prvek není k dispozici.
@@ -2431,13 +2431,13 @@ Určuje atributy souborů, které se mají zobrazit. Může to být libovolná k
 
 - DDL_DIRECTORY adresáře.
 
-- DDL_ARCHIVE archivy.
+- Archivy DDL_ARCHIVE.
 
-- Příznak DDL_POSTMSGS LB_DIR. Pokud je nastaven příznak LB_DIR, systém Windows umístí zprávy generované `DlgDirList` ve frontě aplikace. v opačném případě jsou odesílány přímo do postupu dialogového okna.
+- Příznak LB_DIR DDL_POSTMSGS. Pokud je nastaven příznak LB_DIR, Windows umístí zprávy vygenerované `DlgDirList` ve frontě aplikace. v opačném případě jsou odesílány přímo do postupu dialogového okna.
 
-- Jednotky DDL_DRIVES. Pokud je nastaven příznak DDL_DRIVES, je automaticky nastaven příznak DDL_EXCLUSIVE. Proto pokud chcete vytvořit výpis adresáře, který obsahuje jednotky a soubory, je nutné zavolat `DlgDirList` dvakrát: jednou se sadou příznaků DDL_DRIVES a jednou s příznaky pro zbytek seznamu.
+- DDL_DRIVES jednotky. Pokud je nastaven příznak DDL_DRIVES, automaticky se nastaví příznak DDL_EXCLUSIVE. Proto pokud chcete vytvořit výpis adresáře, který obsahuje jednotky a soubory, musíte volat `DlgDirList` dvakrát: jednou se sadou příznaku DDL_DRIVES a jednou s příznaky pro zbytek seznamu.
 
-- DDL_EXCLUSIVE výhradní bit. Je-li nastaven výhradní bit, jsou uvedeny pouze soubory zadaného typu; jinak jsou v seznamu uvedeny běžné soubory a soubory zadaného typu.
+- DDL_EXCLUSIVE exkluzivní bit. Je-li nastaven výhradní bit, jsou uvedeny pouze soubory zadaného typu; jinak jsou v seznamu uvedeny běžné soubory a soubory zadaného typu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2445,13 +2445,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`DlgDirList`odešle zprávy [LB_RESETCONTENT](/windows/win32/Controls/lb-resetcontent) a [LB_DIR](/windows/win32/Controls/lb-dir) do pole se seznamem. Vyplní seznam zadaný pomocí *nIDListBox* názvy všech souborů, které odpovídají cestě zadané pomocí *lpPathSpec*.
+`DlgDirList` odesílá zprávy [LB_RESETCONTENT](/windows/win32/Controls/lb-resetcontent) a [LB_DIR](/windows/win32/Controls/lb-dir) do seznamu. Vyplní seznam zadaný pomocí *nIDListBox* názvy všech souborů, které odpovídají cestě zadané pomocí *lpPathSpec*.
 
 Parametr *lpPathSpec* má následující tvar:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-V tomto příkladu je *jednotka* písmeno jednotky, *adresář* je platným názvem adresáře a *název souboru* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník ( **?** ), což znamená, že odpovídá libovolnému znaku a hvězdička<strong>\*</strong>(), což znamená, že odpovídá libovolnému počtu znaků.
+V tomto příkladu je *jednotka* písmeno jednotky, *adresář* je platným názvem adresáře a *název souboru* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník ( **?** ), což znamená, že odpovídá libovolnému znaku a hvězdička (<strong>\*</strong>), což znamená, že odpovídá jakémukoli počtu znaků.
 
 Pokud zadáte pro *lpPathSpec*řetězec o délce 0, nebo pokud zadáte pouze název adresáře, ale nezahrnete žádné specifikace souboru, bude řetězec změněn na "\*.\*".
 
@@ -2478,7 +2478,7 @@ int DlgDirListComboBox(
 ### <a name="parameters"></a>Parametry
 
 *lpPathSpec*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který obsahuje cestu nebo název souboru. `DlgDirListComboBox`upraví tento řetězec, takže tato data by neměla být ve formátu řetězcového literálu. Přečtěte si následující část "poznámky".
+Odkazuje na řetězec zakončený hodnotou null, který obsahuje cestu nebo název souboru. `DlgDirListComboBox` upraví tento řetězec, takže tato data by neměla být ve formě řetězcového literálu. Přečtěte si následující část "poznámky".
 
 *nIDComboBox*<br/>
 Určuje identifikátor pole se seznamem v dialogovém okně. Pokud je *nIDComboBox* 0, `DlgDirListComboBox` předpokládá, že žádné pole se seznamem neexistuje a nepokusí se ho vyplňovat.
@@ -2499,13 +2499,13 @@ Určuje atributy souborů systému DOS, které se mají zobrazit. Může to být
 
 - DDL_DIRECTORY adresáře.
 
-- DDL_ARCHIVE archivy.
+- Archivy DDL_ARCHIVE.
 
-- Příznak DDL_POSTMSGS CB_DIR. Pokud je nastaven příznak CB_DIR, systém Windows umístí zprávy generované `DlgDirListComboBox` ve frontě aplikace. v opačném případě jsou odesílány přímo do postupu dialogového okna.
+- Příznak CB_DIR DDL_POSTMSGS. Pokud je nastaven příznak CB_DIR, Windows umístí zprávy vygenerované `DlgDirListComboBox` ve frontě aplikace. v opačném případě jsou odesílány přímo do postupu dialogového okna.
 
-- Jednotky DDL_DRIVES. Pokud je nastaven příznak DDL_DRIVES, je automaticky nastaven příznak DDL_EXCLUSIVE. Proto pokud chcete vytvořit výpis adresáře, který obsahuje jednotky a soubory, je nutné zavolat `DlgDirListComboBox` dvakrát: jednou se sadou příznaků DDL_DRIVES a jednou s příznaky pro zbytek seznamu.
+- DDL_DRIVES jednotky. Pokud je nastaven příznak DDL_DRIVES, automaticky se nastaví příznak DDL_EXCLUSIVE. Proto pokud chcete vytvořit výpis adresáře, který obsahuje jednotky a soubory, musíte volat `DlgDirListComboBox` dvakrát: jednou se sadou příznaku DDL_DRIVES a jednou s příznaky pro zbytek seznamu.
 
-- DDL_EXCLUSIVE výhradní bit. Je-li nastaven výhradní bit, jsou uvedeny pouze soubory zadaného typu; jinak jsou v seznamu uvedeny běžné soubory a soubory zadaného typu.
+- DDL_EXCLUSIVE exkluzivní bit. Je-li nastaven výhradní bit, jsou uvedeny pouze soubory zadaného typu; jinak jsou v seznamu uvedeny běžné soubory a soubory zadaného typu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2513,15 +2513,15 @@ Určuje výsledek funkce. Není nula, pokud byl proveden výpis, dokonce i práz
 
 ### <a name="remarks"></a>Poznámky
 
-`DlgDirListComboBox`odešle zprávy [CB_RESETCONTENT](/windows/win32/Controls/cb-resetcontent) a [CB_DIR](/windows/win32/Controls/cb-dir) do pole se seznamem. Vyplní seznam pole se seznamem určeného parametrem *nIDComboBox* názvy všech souborů, které odpovídají cestě dané *lpPathSpec*.
+`DlgDirListComboBox` odesílá zprávy [CB_RESETCONTENT](/windows/win32/Controls/cb-resetcontent) a [CB_DIR](/windows/win32/Controls/cb-dir) do pole se seznamem. Vyplní seznam pole se seznamem určeného parametrem *nIDComboBox* názvy všech souborů, které odpovídají cestě dané *lpPathSpec*.
 
 Parametr *lpPathSpec* má následující tvar:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-V tomto příkladu je *jednotka* písmeno jednotky, *adresář* je platným názvem adresáře a *název souboru* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník ( **?** ), což znamená, že odpovídá libovolnému znaku a hvězdička<strong>\*</strong>(), což znamená, že odpovídá libovolnému počtu znaků.
+V tomto příkladu je *jednotka* písmeno jednotky, *adresář* je platným názvem adresáře a *název souboru* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník ( **?** ), což znamená, že odpovídá libovolnému znaku a hvězdička (<strong>\*</strong>), což znamená, že odpovídá jakémukoli počtu znaků.
 
-Pokud zadáte řetězec s nulovou délkou pro *lpPathSpec*, použije se aktuální adresář a *lpPathSpec* se neupraví. Pokud zadáte pouze název adresáře, ale nezahrnete žádné specifikace souboru, bude řetězec změněn na\*"".
+Pokud zadáte řetězec s nulovou délkou pro *lpPathSpec*, použije se aktuální adresář a *lpPathSpec* se neupraví. Pokud zadáte pouze název adresáře, ale nezahrnete žádné specifikace souboru, řetězec bude změněn na "\*".
 
 Pokud *lpPathSpec* zahrnuje název jednotky a adresáře, aktuální jednotka a adresář se změní na určenou jednotku a adresář, než se vyplní seznam. Textový ovládací prvek identifikovaný pomocí *nIDStaticPath* se aktualizuje také pomocí nového disku nebo názvu adresáře.
 
@@ -2557,9 +2557,9 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 Předpokládá, že pole seznamu bylo vyplněno členskou funkcí [DlgDirList](#dlgdirlist) a že výběr je písmeno jednotky, soubor nebo název adresáře.
 
-Členská funkce zkopíruje výběr do vyrovnávací paměti dané pomocí *lpString.* `DlgDirSelect` Pokud žádný výběr není, *lpString* se nezmění.
+Členská funkce `DlgDirSelect` zkopíruje výběr do vyrovnávací paměti dané pomocí *lpString*. Pokud žádný výběr není, *lpString* se nezmění.
 
-`DlgDirSelect`odešle zprávy [LB_GETCURSEL](/windows/win32/Controls/lb-getcursel) a [LB_GETTEXT](/windows/win32/Controls/lb-gettext) do pole se seznamem.
+`DlgDirSelect` odesílá zprávy [LB_GETCURSEL](/windows/win32/Controls/lb-getcursel) a [LB_GETTEXT](/windows/win32/Controls/lb-gettext) do seznamu.
 
 Neumožňuje vracet více než jeden název souboru z pole seznamu. Pole se seznamem nesmí být seznamem vícenásobného výběru.
 
@@ -2589,9 +2589,9 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 Předpokládá, že pole seznamu bylo vyplněno členskou funkcí [DlgDirListComboBox](#dlgdirlistcombobox) a že výběr je písmeno jednotky, soubor nebo název adresáře.
 
-`DlgDirSelectComboBox` Členská funkce zkopíruje výběr do zadané vyrovnávací paměti. Pokud žádný výběr není, obsah vyrovnávací paměti se nezmění.
+Členská funkce `DlgDirSelectComboBox` zkopíruje výběr do zadané vyrovnávací paměti. Pokud žádný výběr není, obsah vyrovnávací paměti se nezmění.
 
-`DlgDirSelectComboBox`odešle zprávy [CB_GETCURSEL](/windows/win32/Controls/cb-getcursel) a [CB_GETLBTEXT](/windows/win32/Controls/cb-getlbtext) do pole se seznamem.
+`DlgDirSelectComboBox` odesílá zprávy [CB_GETCURSEL](/windows/win32/Controls/cb-getcursel) a [CB_GETLBTEXT](/windows/win32/Controls/cb-getlbtext) do pole se seznamem.
 
 Neumožňuje vracet více než jeden název souboru z pole se seznamem.
 
@@ -2606,7 +2606,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel na `CDataExchange` objekt.
+Ukazatel na objekt `CDataExchange`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2614,17 +2614,17 @@ Tuto funkci nikdy Nevolejte přímo. Je volána členskou funkcí [UpdateData](#
 
 Když odvozujete třídu dialogu specifickou pro aplikaci z [CDialog](../../mfc/reference/cdialog-class.md), je nutné tuto členskou funkci přepsat, pokud chcete využít automatické výměny dat a ověřování v rozhraní. Průvodce přidáním proměnné zapíše přepsanou verzi této členské funkce, která obsahuje požadované mapování dat pro volání globálních funkcí výměny dat dialogových oken (DDX) a validace (DDV).
 
-Chcete-li automaticky vygenerovat přepsanou verzi této členské funkce, nejprve vytvořte dialogové okno s editorem dialogového okna a potom odvodit třídu dialogu specifickou pro aplikaci. Pak pomocí Průvodce přidáním proměnné přidružte proměnné, data a rozsahy ověřování k různým ovládacím prvkům v novém dialogovém okně. Průvodce pak zapíše přepsané `DoDataExchange`, které obsahuje datovou mapu. Následuje příklad příkladu kódu DDX/DDV generovaného průvodcem přidáním proměnné:
+Chcete-li automaticky vygenerovat přepsanou verzi této členské funkce, nejprve vytvořte dialogové okno s editorem dialogového okna a potom odvodit třídu dialogu specifickou pro aplikaci. Pak pomocí Průvodce přidáním proměnné přidružte proměnné, data a rozsahy ověřování k různým ovládacím prvkům v novém dialogovém okně. Průvodce pak zapíše přepsanou `DoDataExchange`, která obsahuje datovou mapu. Následuje příklad příkladu kódu DDX/DDV generovaného průvodcem přidáním proměnné:
 
 [!code-cpp[NVC_MFCWindowing#90](../../mfc/reference/codesnippet/cpp/cwnd-class_29.cpp)]
 
-`DoDataExchange` Přepsaná členská funkce musí předcházet příkazům makra ve zdrojovém souboru.
+Přepsaná členská funkce `DoDataExchange` musí předcházet příkazům makra ve zdrojovém souboru.
 
-Další informace o výměně a ověřování dat dialogových oken najdete [v tématu zobrazení a manipulace s daty ve formuláři a v](../../data/odbc/displaying-and-manipulating-data-in-a-form.md) [dialogových oknech výměna a ověřování dat](../../mfc/dialog-data-exchange-and-validation.md). Popis maker zobrazením a DDV_ vygenerovaných průvodcem přidáním proměnné naleznete v části [technická Poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md).
+Další informace o výměně a ověřování dat dialogových oken najdete [v tématu zobrazení a manipulace s daty ve formuláři a v](../../data/odbc/displaying-and-manipulating-data-in-a-form.md) [dialogových oknech výměna a ověřování dat](../../mfc/dialog-data-exchange-and-validation.md). Popis DDX_ a DDV_ makra vygenerovaných průvodcem přidáním proměnné naleznete v části [technická Poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md).
 
 ##  <a name="dragacceptfiles"></a>CWnd::D ragAcceptFiles
 
-Tuto členskou funkci volejte v rámci okna pomocí `CWnd` ukazatele ve funkci [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) vaší aplikace, která označuje, že okno přijímá odložené soubory ze Správce souborů systému Windows nebo z Průzkumníka souborů.
+Tuto členskou funkci volejte v rámci okna pomocí ukazatele `CWnd` ve funkci [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) aplikace, která označuje, že okno přijímá odložené soubory ze Správce souborů systému Windows nebo z Průzkumníka souborů.
 
 ```
 void DragAcceptFiles(BOOL bAccept = TRUE);
@@ -2637,7 +2637,7 @@ Příznak, který označuje, zda jsou přetažené soubory přijaty.
 
 ### <a name="remarks"></a>Poznámky
 
-Pouze okno, které volá `DragAcceptFiles` parametr *bAccept* nastavené na hodnotu true, je identifikováno jako schopné zpracovat zprávu Windows WM_DROPFILES. Například v aplikaci MDI, pokud se ve volání `CMDIFrameWnd` `DragAcceptFiles` `CMDIFrameWnd` funkce používá ukazatel na okno, získá WM_DROPFILES zprávu pouze okno. Tato zpráva se neposílá do všech otevřených `CMDIChildWnd` oken. Chcete- `CMDIChildWnd` li, aby okno dostalo tuto zprávu, `DragAcceptFiles` je nutné `CMDIChildWnd` volat s ukazatelem okna.
+Pouze okno, které volá `DragAcceptFiles` s parametrem *bAccept* nastaveným na hodnotu true, je identifikováno jako schopné zpracovat WM_DROPFILES zprávy systému Windows. Například v aplikaci MDI, pokud je ve volání funkce `DragAcceptFiles` použit ukazatel okna `CMDIFrameWnd`, získá WM_DROPFILES zprávu pouze okno `CMDIFrameWnd`. Tato zpráva se neposílá do všech otevřených `CMDIChildWnd` Windows. Aby `CMDIChildWnd` okno obdrželo tuto zprávu, je nutné volat `DragAcceptFiles` s ukazatelem `CMDIChildWnd` okna.
 
 Chcete-li ukončit přijímání přetažených souborů, zavolejte členskou funkci s *bAccept* nastavenou na hodnotu false.
 
@@ -2707,7 +2707,7 @@ BOOL DrawCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Ukazatel na kontext zařízení. Funkce nakreslí titulek okna do tohoto kontextu zařízení.
 
 *lprc*<br/>
@@ -2750,7 +2750,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí aktivní podpora přístupnosti knihovny MFC je dostačující pro standardní okna a ovládací prvky, včetně ovládacích prvků ActiveX; Pokud však vaše `CWnd`odvozená třída obsahuje prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní, knihovna MFC nemá žádný způsob, jak je o nich vědět. V takovém případě musíte přepsat příslušné [aktivní členské funkce přístupnosti](/windows/win32/winauto/sdk-components) ve vaší třídě a musíte volat `EnableActiveAccessibility` v konstruktoru třídy.
+Výchozí aktivní podpora přístupnosti knihovny MFC je dostačující pro standardní okna a ovládací prvky, včetně ovládacích prvků ActiveX; Nicméně pokud vaše třída odvozená od `CWnd`obsahuje prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní, knihovna MFC nemá žádný způsob, jak je o nich vědět. V takovém případě musíte přepsat příslušné [aktivní členské funkce přístupnosti](/windows/win32/winauto/sdk-components) ve vaší třídě a musíte volat `EnableActiveAccessibility` v konstruktoru třídy.
 
 ##  <a name="enabledynamiclayout"></a>CWnd:: EnableDynamicLayout
 
@@ -2802,7 +2802,7 @@ BOOL EnableScrollBar(
 *nSBFlags*<br/>
 Určuje typ posuvných pruhů. Může mít jednu z následujících hodnot:
 
-- SB_BOTH povolí nebo zakáže šipky vodorovného a svislého posuvníku přidruženého k oknu.
+- SB_BOTH povoluje nebo zakazuje šipky vodorovného a svislého posuvníku přidruženého k oknu.
 
 - SB_HORZ povolí nebo zakáže šipky vodorovného posuvníku přidruženého k oknu.
 
@@ -2811,7 +2811,7 @@ Určuje typ posuvných pruhů. Může mít jednu z následujících hodnot:
 *nArrowFlags*<br/>
 Určuje, zda jsou povoleny nebo zakázány šipky posuvníku a jsou povoleny nebo zakázány šipky. Může mít jednu z následujících hodnot:
 
-- ESB_ENABLE_BOTH povolí obě šipky posuvníku (výchozí).
+- ESB_ENABLE_BOTH povoluje obě šipky posuvníku (výchozí).
 
 - ESB_DISABLE_LTUP zakáže levou šipku vodorovného posuvníku nebo šipku nahoru svislého posuvníku.
 
@@ -2871,9 +2871,9 @@ Přepište [OnToolHitTest](#ontoolhittest) a poskytněte [TOOLINFO](/windows/win
 
 Další informace o této struktuře naleznete v tématu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) v Windows SDK.
 
-Jednoduché volání `EnableToolTips` není dostačující pro zobrazení tipů nástrojů pro podřízené ovládací prvky, pokud není nadřazené okno odvozeno z `CFrameWnd`. Důvodem je `CFrameWnd` , že poskytuje výchozí obslužnou rutinu pro oznámení TTN_NEEDTEXT. Pokud vaše nadřazené okno není odvozeno z `CFrameWnd`, to znamená, že pokud se jedná o dialogové okno nebo zobrazení formuláře, popisy tlačítek pro podřízené ovládací prvky se nezobrazí správně, pokud neposkytnete obslužnou rutinu pro oznámení TTN_NEEDTEXT Tool. Viz [tipy nástrojů](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
+Pouhým voláním `EnableToolTips` není dostatek pro zobrazení tipů nástrojů pro podřízené ovládací prvky, pokud není nadřazené okno odvozeno od `CFrameWnd`. Důvodem je to, že `CFrameWnd` poskytuje výchozí obslužnou rutinu pro TTN_NEEDTEXT oznámení. Pokud vaše nadřazené okno není odvozeno od `CFrameWnd`, to znamená, že pokud se jedná o dialogové okno nebo zobrazení formuláře, popisy tlačítek pro podřízené ovládací prvky se nezobrazí správně, pokud neposkytnete obslužnou rutinu pro oznámení s popisem nástroje TTN_NEEDTEXT. Viz [tipy nástrojů](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
-Výchozí tipy k nástrojům, které jsou k `EnableToolTips` dispozici pro vaše Windows, nemají k sobě přiřazený text. Chcete-li načíst text pro popis tlačítka, který se má zobrazit, pošle se oznámení TTN_NEEDTEXT do nadřazeného okna ovládacího prvku Tip nástroje těsně před zobrazením okna s popisem tlačítka. Není-li pro tuto zprávu k dispozici žádná obslužná rutina pro přiřazení nějaké hodnoty pszText `TOOLTIPTEXT` členu struktury, nebude zobrazen žádný text pro popis tlačítka.
+Výchozí tipy k nástrojům, které jsou k dispozici pro vaše Windows `EnableToolTips`, nemají k sobě přidružený text. Chcete-li načíst text pro popis tlačítka, který se má zobrazit, pošle se TTN_NEEDTEXT oznámení do nadřazeného okna ovládacího prvku Tip nástroje těsně před zobrazením okna s popisem tlačítka. Není-li pro tuto zprávu k dispozici žádná obslužná rutina pro přiřazení nějaké hodnoty *pszText* členu struktury `TOOLTIPTEXT`, nebude zobrazen žádný text pro popis tohoto nástroje.
 
 ### <a name="example"></a>Příklad
 
@@ -2896,7 +2896,7 @@ Určuje, jestli jsou povolené nebo zakázané tipy nástrojů pro sledování. 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje stav před `EnableWindow` voláním členské funkce. Návratová hodnota je nenulová, pokud bylo okno dříve zakázáno. Návratová hodnota je 0, pokud bylo okno dříve povoleno nebo došlo k chybě.
+Určuje stav před voláním členské funkce `EnableWindow`. Návratová hodnota je nenulová, pokud bylo okno dříve zakázáno. Návratová hodnota je 0, pokud bylo okno dříve povoleno nebo došlo k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2917,19 +2917,19 @@ Určuje, zda má být dané okno povoleno nebo zakázáno. Pokud má tento param
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje stav před `EnableWindow` voláním členské funkce. Návratová hodnota je nenulová, pokud bylo okno dříve zakázáno. Návratová hodnota je 0, pokud bylo okno dříve povoleno nebo došlo k chybě.
+Určuje stav před voláním členské funkce `EnableWindow`. Návratová hodnota je nenulová, pokud bylo okno dříve zakázáno. Návratová hodnota je 0, pokud bylo okno dříve povoleno nebo došlo k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
 Když je vstup zakázán, bude vstup, jako je kliknutí myší a stisknutí kláves, ignorován. Když je vstup povolený, okno zpracuje všechny vstupy.
 
-Pokud se stav povoleno mění, zpráva [WM_ENABLE](#onenable) se pošle před vrácením této funkce.
+Pokud je povolen stav povoleno, zpráva [WM_ENABLE](#onenable) bude odeslána před vrácením této funkce.
 
-V případě zakázání jsou všechna podřízená okna implicitně zakázaná, i když nejsou odesílána WM_ENABLE zprávy.
+V případě zakázání jsou všechna podřízená okna implicitně zakázaná, i když se neodesílají WM_ENABLE zpráv.
 
 Okno musí být povoleno, aby bylo možné jej aktivovat. Například pokud aplikace zobrazuje nemodální dialogové okno a zakázala své hlavní okno, musí být hlavní okno povoleno před zničením dialogového okna. V opačném případě se zobrazí vstupní fokus a aktivuje se další okno. Pokud je podřízené okno zakázané, ignoruje se, když se systém Windows pokusí určit, které okno má obdržet zprávy myši.
 
-Ve výchozím nastavení je okno povoleno při jeho vytvoření. Aplikace může určit styl WS_DISABLED ve členské funkci [Create](#create) nebo [CreateEx](#createex) a vytvořit tak okno, které je zpočátku zakázané. Po vytvoření okna může aplikace také pomocí `EnableWindow` členské funkce povolit nebo zakázat okno.
+Ve výchozím nastavení je okno povoleno při jeho vytvoření. Aplikace může určit styl WS_DISABLED v členské funkci [Create](#create) nebo [CreateEx](#createex) k vytvoření okna, které je zpočátku zakázané. Po vytvoření okna může aplikace také použít členskou funkci `EnableWindow` k povolení nebo zakázání okna.
 
 Aplikace může tuto funkci použít k povolení nebo zakázání ovládacího prvku v dialogovém okně. Zakázaný ovládací prvek nemůže přijmout fokus vstupu a nemůže k němu přistupovat uživatel.
 
@@ -2952,7 +2952,7 @@ Obsahuje hodnotu, která má být vrácena volajícímu [RunModalLoop aby](#runm
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *nvýsledek* je rozšířen na návratovou hodnotu z `RunModalLoop`.
+Parametr *nvýsledek* se rozšíří na návratovou hodnotu z `RunModalLoop`.
 
 ##  <a name="endmodalstate"></a>CWnd:: EndModalState
 
@@ -2977,9 +2977,9 @@ Odkazuje na strukturu [PAINTSTRUCT –](/windows/win32/api/winuser/ns-winuser-pa
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce je vyžadována pro každé volání `BeginPaint` členské funkce, ale pouze po dokončení malování. `EndPaint`
+Členská funkce `EndPaint` je vyžadována pro každé volání členské funkce `BeginPaint`, ale pouze po dokončení malování.
 
-Pokud byla funkce stříšky skrytá `BeginPaint` členskou funkcí, `EndPaint` obnoví kurzor na obrazovku.
+Pokud byla blikající kurzor skryta pomocí členské funkce `BeginPaint`, `EndPaint` kurzor obnoví na obrazovku.
 
 ### <a name="example"></a>Příklad
 
@@ -3008,7 +3008,7 @@ TRUE, pokud se spustí prostředek dialogu; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`ExecuteDlgInit`použije prostředky svázané se spuštěným modulem nebo prostředky z jiných zdrojů. K tomuto `ExecuteDlgInit` účelu najde popisovač prostředku voláním `AfxFindResourceHandle`. Pokud vaše aplikace MFC nepoužívá sdílenou knihovnu DLL (MFCx0 [U] [D]. DLL) `AfxFindResourceHandle` volá [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), která vrací aktuální popisovač prostředku pro spustitelný soubor. Pokud aplikace MFC, která používá MFCx0 [U] [D]. Knihovna DLL `CDynLinkLibrary` projde seznam objektů sdílených knihoven DLL knihovny MFC a hledá správný popisovač prostředku. `AfxFindResourceHandle`
+`ExecuteDlgInit` bude používat prostředky svázané se spuštěným modulem nebo prostředky z jiných zdrojů. K tomu `ExecuteDlgInit` najde popisovač prostředku voláním `AfxFindResourceHandle`. Pokud vaše aplikace MFC nepoužívá sdílenou knihovnu DLL (MFCx0 [U] [D]. DLL) `AfxFindResourceHandle` volá [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), který vrací aktuální popisovač prostředku pro spustitelný soubor. Pokud aplikace MFC, která používá MFCx0 [U] [D]. DLL `AfxFindResourceHandle` projde seznam objektů `CDynLinkLibrary` Shared a DLL rozšíření MFC, které hledají správný popisovač prostředku.
 
 ##  <a name="filtertooltipmessage"></a>CWnd:: FilterToolTipMessage
 
@@ -3031,7 +3031,7 @@ Nicméně v některých aplikacích, například některé ovládací prvky Acti
 
 ##  <a name="findwindow"></a>CWnd:: FindWindow
 
-Vrátí hodnotu nejvyšší úrovně `CWnd` , jejíž Třída okna je dána *lpszClassName* a jejíž název okna nebo název je dán *lpszWindowName*.
+Vrátí `CWnd` nejvyšší úrovně, jejichž třída Window je dána *lpszClassName* a jejíž název okna nebo název je dán *lpszWindowName*.
 
 ```
 static CWnd* PASCAL FindWindow(
@@ -3042,7 +3042,7 @@ static CWnd* PASCAL FindWindow(
 ### <a name="parameters"></a>Parametry
 
 *lpszClassName*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který určuje název třídy okna ( `WNDCLASS` struktura). Pokud má *lpClassName* hodnotu null, všechny názvy tříd se shodují.
+Odkazuje na řetězec zakončený hodnotou null, který určuje název třídy okna (`WNDCLASS` struktura). Pokud má *lpClassName* hodnotu null, všechny názvy tříd se shodují.
 
 *lpszWindowName*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který určuje název okna (název okna). Pokud má *lpWindowName* hodnotu null, všechny názvy oken se shodují.
@@ -3051,7 +3051,7 @@ Odkazuje na řetězec zakončený hodnotou null, který určuje název okna (ná
 
 Identifikuje okno, které má zadaný název třídy a název okna. Pokud žádné takové okno nenajde, je NULL.
 
-`CWnd`Znak * může být dočasný a neměl by být uložen pro pozdější použití.
+`CWnd`* může být dočasná a neměla by být uložena pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -3106,21 +3106,21 @@ BOOL FlashWindow(BOOL bInvert);
 ### <a name="parameters"></a>Parametry
 
 *bInvert*<br/>
-Určuje, zda `CWnd` má být bliknutí nebo návrat do původního stavu. Je-li hodnota bInvert true, je z jednoho stavu zablikat. `CWnd` Pokud je *BINVERT* false, okno se vrátí do původního stavu (aktivní nebo neaktivní).
+Určuje, zda má být `CWnd` blikat nebo vrácen do původního stavu. `CWnd` je z jednoho stavu do druhého, pokud je *BINVERT* true. Pokud je *BINVERT* false, okno se vrátí do původního stavu (aktivní nebo neaktivní).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo okno aktivní před voláním do `FlashWindow` členské funkce; jinak 0.
+Nenulové, pokud bylo okno aktivní před voláním členské funkce `FlashWindow`; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro následný bliknutí vytvořte systémový časovač a opakovaně zavolejte `FlashWindow`. Blikání znamená změnu vzhledu jeho záhlaví, jako `CWnd` by došlo k přechodu z neaktivního stavu na aktivní nebo naopak. `CWnd` (Neaktivní záhlaví se změní na aktivní záhlaví; aktivní záhlaví se změní na neaktivní záhlaví.)
+Pro následný bliknutí vytvořte systémový časovač a opakovaně zavolejte `FlashWindow`. Blikání `CWnd` znamená změnu vzhledu jeho záhlaví, jako by se změnila `CWnd` z neaktivního stavu na aktivní nebo naopak. (Neaktivní záhlaví se změní na aktivní záhlaví; aktivní záhlaví se změní na neaktivní záhlaví.)
 
 Obvykle je okno spuštěno, aby informovalo uživatele o tom, že vyžaduje pozornost, ale že aktuálně nemá fokus vstupu.
 
 Parametr *bInvert* by měl mít hodnotu false pouze v případě, že okno načítá vstupní fokus a již nebude blikat. měla by být pravdivá při následných voláních při čekání na získání fokusu vstupu.
 
-Tato funkce vždy vrátí nenulovou hodnotu pro minimalizovaná okna. Pokud je okno minimalizováno, `FlashWindow` bude ikonu okna jednoduše zablikat. *bInvert* se pro minimalizovaná okna ignoruje.
+Tato funkce vždy vrátí nenulovou hodnotu pro minimalizovaná okna. Pokud je okno minimalizováno, `FlashWindow` bude jednoduše blikat ikonou okna. *bInvert* se pro minimalizovaná okna ignoruje.
 
 ### <a name="example"></a>Příklad
 
@@ -3150,7 +3150,7 @@ Určuje rychlost (v milisekundách), po kterou bude okno blikat. Pokud je *dwTim
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota určuje stav okna před voláním `FlashWindowEx` funkce. Pokud je popisek okna vykreslen jako aktivní před voláním, vrácená hodnota je nenulová. V opačném případě je vrácená hodnota nulová.
+Vrácená hodnota určuje stav okna před voláním funkce `FlashWindowEx`. Pokud je popisek okna vykreslen jako aktivní před voláním, vrácená hodnota je nenulová. V opačném případě je vrácená hodnota nulová.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -3158,7 +3158,7 @@ Tato metoda emuluje funkčnost funkce [FlashWindowEx](/windows/win32/api/winuser
 
 ##  <a name="fromhandle"></a>CWnd:: FromHandle
 
-Vrátí ukazatel na `CWnd` objekt, pokud je předána obslužná rutina oknu. Pokud objekt není připojen k popisovači, je vytvořen a připojen `CWnd` dočasný objekt. `CWnd`
+Vrací ukazatel na objekt `CWnd`, pokud je předána obslužná rutina oknu. Pokud objekt `CWnd` není připojen k popisovači, je vytvořen a připojen dočasný objekt `CWnd`.
 
 ```
 static CWnd* PASCAL FromHandle(HWND hWnd);
@@ -3171,13 +3171,13 @@ HWND okna Windows
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na `CWnd` objekt, pokud je předána obslužná rutina oknu. Pokud objekt není připojen k popisovači, je vytvořen a připojen `CWnd` dočasný objekt. `CWnd`
+Vrací ukazatel na objekt `CWnd`, pokud je předána obslužná rutina oknu. Pokud objekt `CWnd` není připojen k popisovači, je vytvořen a připojen dočasný objekt `CWnd`.
 
 Ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
 
 ##  <a name="fromhandlepermanent"></a>CWnd:: FromHandlePermanent
 
-Vrátí ukazatel na `CWnd` objekt, pokud je předána obslužná rutina oknu.
+Vrací ukazatel na objekt `CWnd`, pokud je předána obslužná rutina oknu.
 
 ```
 static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
@@ -3190,17 +3190,17 @@ HWND okna Windows
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `CWnd` objekt.
+Ukazatel na objekt `CWnd`.
 
 ### <a name="remarks"></a>Poznámky
 
-`CWnd` Pokud objekt není připojen k popisovači, je vrácena hodnota null.
+Pokud objekt `CWnd` není připojen k popisovači, je vrácena hodnota NULL.
 
 Tato funkce, na rozdíl od [FromHandle](#fromhandle), nevytváří dočasné objekty.
 
 ##  <a name="get_accchild"></a>CWnd:: get_accChild
 
-Volá se rozhraním, aby se načetla `IDispatch` adresa rozhraní pro zadanou podřízenou položku.
+Volá se rozhraním, aby se načetla adresa `IDispatch`ho rozhraní pro zadanou podřízenou položku.
 
 ```
 virtual HRESULT get_accChild(
@@ -3211,20 +3211,20 @@ virtual HRESULT get_accChild(
 ### <a name="parameters"></a>Parametry
 
 *varChild*<br/>
-Identifikuje podřízenou položku `IDispatch` , jejíž rozhraní má být načteno.
+Identifikuje podřízenou položku, jejíž rozhraní `IDispatch` má být načteno.
 
 *ppdispChild*<br/>
-Přijímá adresu `IDispatch` rozhraní podřízeného objektu.
+Přijímá adresu `IDispatch`ho rozhraní podřízeného objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
 Další informace naleznete v tématu [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) v Windows SDK.
 
@@ -3243,13 +3243,13 @@ Přijímá počet podřízených položek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC). Zavolejte na verzi základní třídy a pak přidejte podřízené prvky bez okna.
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC). Zavolejte na verzi základní třídy a pak přidejte podřízené prvky bez okna.
 
 Další informace naleznete v tématu [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) v Windows SDK.
 
@@ -3273,13 +3273,13 @@ Adresa řetězce BSTR, který obdrží lokalizovaný řetězec popisující výc
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Popište tuto funkci v `CWnd`odvozené třídě, abyste popsali výchozí akci vašeho objektu.
+Popište tuto funkci ve vaší třídě odvozené `CWnd`, abyste popsali výchozí akci vašeho objektu.
 
 Další informace naleznete v tématu [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) v Windows SDK.
 
@@ -3303,13 +3303,13 @@ Adresa řetězce BSTR, který obdrží lokalizovaný řetězec popisující zada
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Popište tuto funkci v `CWnd`odvozené třídě, abyste popsali váš objekt. Zavolejte verzi základní třídy a přidejte svůj popis.
+Popište tuto funkci ve vaší třídě odvozené `CWnd`a popište svůj objekt. Zavolejte verzi základní třídy a přidejte svůj popis.
 
 Další informace naleznete v tématu [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) v Windows SDK.
 
@@ -3328,13 +3328,13 @@ Přijímá informace o objektu, který má fokus. Viz *pvarID* v [IAccessible:: 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accFocus` v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accFocus` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
 Další informace naleznete v tématu [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) v Windows SDK.
 
@@ -3358,13 +3358,13 @@ Adresa typu BSTR, který obdrží lokalizovaný řetězec obsahující informace
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete přepsat v `CWnd`odvozené třídě a poskytnout tak text nápovědu pro váš objekt.
+Přepište tuto funkci v odvozené třídě `CWnd`pro poskytnutí textu nápovědu pro váš objekt.
 
 Další informace naleznete v tématu [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) v Windows SDK.
 
@@ -3382,7 +3382,7 @@ virtual HRESULT get_accHelpTopic(
 ### <a name="parameters"></a>Parametry
 
 *pszHelpFile*<br/>
-Adresa typu BSTR, který obdrží úplnou cestu `WinHelp` k souboru přidruženému k zadanému objektu, pokud existuje.
+Adresa typu BSTR, který obdrží úplnou cestu k `WinHelp` souboru přidruženého k zadanému objektu, pokud existuje.
 
 *varChild*<br/>
 Určuje, zda je téma nápovědy, které má být načteno, objekt nebo jeden z podřízených prvků objektu. Tento parametr může být buď CHILDID_SELF (pro získání tématu nápovědy pro objekt) nebo podřízené ID (pro získání tématu nápovědy pro jeden z podřízených prvků objektu).
@@ -3392,13 +3392,13 @@ Určuje téma souboru nápovědy přidružené k zadanému objektu. Viz *pidTopi
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accHelpTopic` v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accHelpTopic` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete přepsat v `CWnd`odvozené třídě, aby poskytovala informace o nápovědě k vašemu objektu.
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`a poskytnout tak informace o nápovědě k vašemu objektu.
 
 Další informace naleznete v tématu [IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) v Windows SDK.
 
@@ -3422,13 +3422,13 @@ Adresa řetězce BSTR, který přijímá lokalizovaný řetězec identifikujíc�
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete přepsat v `CWnd`odvozené třídě k identifikaci klávesové zkratky pro váš objekt.
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`k identifikaci klávesové zkratky pro váš objekt.
 
 Další informace naleznete v tématu [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) v Windows SDK.
 
@@ -3452,19 +3452,19 @@ Adresa typu BSTR, který přijímá řetězec obsahující název zadaného obje
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Přepsat tuto funkci v `CWnd`odvozené třídě, aby vrátila název vašeho objektu.
+Přepište tuto funkci ve vaší třídě odvozené `CWnd`a vraťte název vašeho objektu.
 
 Další informace naleznete v tématu [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) v Windows SDK.
 
 ##  <a name="get_accparent"></a>CWnd:: get_accParent
 
-Volá se rozhraním, aby se `IDispatch` načetlo rozhraní nadřazeného objektu.
+Volá se rozhraním, aby se načetlo rozhraní `IDispatch` nadřazeného objektu.
 
 ```
 virtual HRESULT get_accParent(IDispatch** ppdispParent);
@@ -3473,11 +3473,11 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 ### <a name="parameters"></a>Parametry
 
 *ppdispParent*<br/>
-Přijímá adresu `IDispatch` rozhraní nadřazeného objektu. Proměnná je nastavena na hodnotu NULL, pokud neexistuje žádná nadřazená položka, nebo pokud dítě nemá přístup k nadřazenému objektu.
+Přijímá adresu rozhraní `IDispatch` nadřazeného objektu. Proměnná je nastavena na hodnotu NULL, pokud neexistuje žádná nadřazená položka, nebo pokud dítě nemá přístup k nadřazenému objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -3507,13 +3507,13 @@ Obdrží informace o roli. Viz *pvarRole* v [IAccessible:: get_accRole](/windows
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accRole` v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accRole` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
 Další informace naleznete v tématu [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) v Windows SDK.
 
@@ -3532,13 +3532,13 @@ Přijímá informace o tom, které podřízené položky jsou vybrány. Viz *pva
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accSelection` v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accSelection` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
 Další informace naleznete v tématu [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) v Windows SDK.
 
@@ -3562,13 +3562,13 @@ Přijímá informace o stavu objektu. Viz *pvarState* v [IAccessible:: get_accSt
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accState` v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v `IAccessible::get_accState` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
 Další informace naleznete v tématu [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) v Windows SDK.
 
@@ -3592,13 +3592,13 @@ Adresa BSTR, která přijímá lokalizovaný řetězec obsahující aktuální h
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) v Windows SDK.
+Vrátí S_OK při úspěchu, kód chyby COM při selhání. Viz **návratové hodnoty** v [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce je součástí [aktivní podpory usnadnění přístupu](/windows/win32/WinAuto/microsoft-active-accessibility) knihovny MFC.
 
-Tuto funkci můžete `CWnd`přepsat v odvozené třídě, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
+Tuto funkci můžete přepsat ve vaší třídě odvozené `CWnd`, pokud máte prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní (kromě ovládacích prvků ActiveX bez oken, které zpracovávají knihovny MFC).
 
 Další informace naleznete v tématu [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) v Windows SDK.
 
@@ -3671,7 +3671,7 @@ Objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obsahující sou
 
 ### <a name="remarks"></a>Poznámky
 
-Pozice blikajícího kurzoru je uvedena v souřadnicích `CWnd` klienta okna.
+Pozice blikajícího kurzoru je uvedena v souřadnicích klienta okna `CWnd`.
 
 ##  <a name="getcheckedradiobutton"></a>CWnd:: GetCheckedRadioButton
 
@@ -3697,7 +3697,7 @@ ID kontrolovaného přepínače nebo 0, pokud je vybráno žádné.
 
 ##  <a name="getclientrect"></a>CWnd:: GetClientRect
 
-Zkopíruje souřadnice `CWnd` klienta klientské oblasti do struktury, na kterou odkazuje *lpRect*.
+Zkopíruje souřadnice klienta `CWnd` oblasti klienta do struktury, na kterou odkazuje *lpRect*.
 
 ```
 void GetClientRect(LPRECT lpRect) const;
@@ -3706,11 +3706,11 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt pro příjem souřadnic klienta. Členové `left` a`top` budou mít hodnotu 0. Členové `right` a`bottom` budou obsahovat šířku a výšku okna.
+Odkazuje na [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt `CRect` pro příjem souřadnic klienta. Členové `left` a `top` budou 0. Členové `right` a `bottom` budou obsahovat šířku a výšku okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Souřadnice klienta určují levý horní a dolní roh oblasti klienta. Vzhledem k tomu, že souřadnice klienta jsou relativní vzhledem k levému `CWnd` hornímu rohu klientské oblasti, jsou souřadnice levého horního rohu (0, 0).
+Souřadnice klienta určují levý horní a dolní roh oblasti klienta. Vzhledem k tomu, že souřadnice klienta jsou relativní vzhledem k levému hornímu rohu `CWnd` klientské oblasti, jsou souřadnice levého horního rohu (0, 0).
 
 ### <a name="example"></a>Příklad
 
@@ -3758,13 +3758,13 @@ LPUNKNOWN GetControlUnknown();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) ovládacího prvku OLE reprezentovaného tímto `CWnd` objektem. Pokud tento objekt nepředstavuje ovládací prvek OLE, vrácená hodnota je NULL.
+Ukazatel na rozhraní [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) ovládacího prvku OLE reprezentovaný tímto objektem `CWnd`. Pokud tento objekt nepředstavuje ovládací prvek OLE, vrácená hodnota je NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento `IUnknown` ukazatel byste neměli vydávat. Obvykle byste použili k získání konkrétního rozhraní ovládacího prvku.
+Tento ukazatel `IUnknown` byste neměli vydávat. Obvykle byste použili k získání konkrétního rozhraní ovládacího prvku.
 
-Ukazatel rozhraní vrácený `GetControlUnknown` neodkazuje na odkaz. Nevolejte [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) na ukazatel, pokud jste předtím nevolali [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) .
+Ukazatel rozhraní vrácený `GetControlUnknown` nemá na vypočítané odkazy. Nevolejte [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) na ukazatel, pokud jste předtím nevolali [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) .
 
 ### <a name="example"></a>Příklad
 
@@ -3796,15 +3796,15 @@ CDC* GetDC();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Identifikuje kontext zařízení pro `CWnd` klientskou oblast, pokud bylo úspěšné. v opačném případě návratová hodnota je null. Ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
+Identifikuje kontext zařízení pro `CWnd` klientské oblasti, pokud je úspěšný. v opačném případě návratová hodnota má hodnotu NULL. Ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
 
-U běžných kontextů zařízení `GetDC` přiřadí kontextu výchozí atributy pokaždé, když je načten. U tříd a privátních kontextů `GetDC` ponechá dřív přiřazené atributy beze změny. Kontext zařízení se dá použít v dalších funkcích rozhraní GDI (Graphic Device Interface) k vykreslování v klientské oblasti.
+U běžných kontextů zařízení `GetDC` přiřazuje každému kontextu výchozí atributy pokaždé, když je načten. Pro třídy a soukromé kontexty `GetDC` ponechá dříve přiřazené atributy beze změny. Kontext zařízení se dá použít v dalších funkcích rozhraní GDI (Graphic Device Interface) k vykreslování v klientské oblasti.
 
 Pokud kontext zařízení nepatří do třídy okna, musí být volána členská funkce [ReleaseDC](#releasedc) pro uvolnění kontextu po malování.
 
-Kontext zařízení patřící do `CWnd` třídy je vrácen `GetDC` členskou funkcí, pokud byla CS_CLASSDC, CS_OWNDC nebo CS_PARENTDC zadána `WNDCLASS` jako styl ve struktuře při registraci třídy.
+Kontext zařízení, který patří do třídy `CWnd`, je vrácen funkcí `GetDC` členu, pokud byla CS_CLASSDC, CS_OWNDC nebo CS_PARENTDC zadána jako styl ve struktuře `WNDCLASS` při registraci třídy.
 
 ##  <a name="getdcex"></a>CWnd:: GetDCEx
 
@@ -3824,19 +3824,19 @@ Určuje oblast oříznutí, která může být kombinována se viditelnou oblast
 *Flag*<br/>
 Může mít jednu z následujících přednastavených hodnot:
 
-- DCX_CACHE vrací kontext zařízení z mezipaměti, nikoli OWNDC nebo CLASSDC okno. Potlačí CS_OWNDC a CS_CLASSDC.
+- DCX_CACHE vrátí kontext zařízení z mezipaměti, nikoli okno OWNDC nebo CLASSDC. Přepisuje CS_OWNDC a CS_CLASSDC.
 
-- DCX_CLIPCHILDREN vyloučí viditelné oblasti všech podřízených oken pod `CWnd` oknem.
+- DCX_CLIPCHILDREN vyloučí viditelné oblasti všech podřízených oken pod oknem `CWnd`.
 
-- DCX_CLIPSIBLINGS vyloučí viditelné oblasti všech oken na stejné úrovni nad `CWnd` oknem.
+- DCX_CLIPSIBLINGS vyloučí viditelné oblasti všech oken na stejné úrovni nad `CWnd` okno.
 
 - DCX_EXCLUDERGN vyloučí oblast oříznutí identifikovanou *prgnClip* z viditelné oblasti vráceného kontextu zařízení.
 
 - DCX_INTERSECTRGN protínají oblast oříznutí identifikovanou *prgnClip* v rámci viditelné oblasti vráceného kontextu zařízení.
 
-- DCX_LOCKWINDOWUPDATE umožňuje kreslení i v případě `LockWindowUpdate` , že dojde k volání, které by jinak vyloučilo toto okno. Tato hodnota se používá pro vykreslování během sledování.
+- DCX_LOCKWINDOWUPDATE umožňuje kreslení i v případě, že dojde k `LockWindowUpdate`mu volání, které by jinak vyloučilo toto okno. Tato hodnota se používá pro vykreslování během sledování.
 
-- DCX_PARENTCLIP používá viditelnou oblast nadřazeného okna a ignoruje WS_CLIPCHILDREN a formát WS_PARENTDC nadřazeného okna. Tato hodnota Nastaví počátek kontextu zařízení na levý horní roh `CWnd` okna.
+- DCX_PARENTCLIP používá viditelnou oblast nadřazeného okna a ignoruje WS_CLIPCHILDREN nadřazeného okna a WS_PARENTDC. Tato hodnota Nastaví počátek kontextu zařízení na levý horní roh okna `CWnd`.
 
 - DCX_WINDOW vrátí kontext zařízení, který odpovídá obdélníku okna, nikoli k obdélníku klienta.
 
@@ -3852,15 +3852,15 @@ Tato funkce, která je rozšířením funkce [GetDC](/windows/win32/api/winuser/
 
 Pokud kontext zařízení nepatří do třídy okna, musí být volána funkce [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) pro uvolnění kontextu po vykreslení. Vzhledem k tomu, že v jednom okamžiku jsou k dispozici jenom pět běžných kontextů zařízení, může selhání uvolnění kontextu zařízení zabránit ostatním aplikacím v získání přístupu k kontextu zařízení.
 
-Aby bylo možné získat kontext zařízení v mezipaměti, musí aplikace zadat [DCX_CACHE](/windows/win32/api/winuser/nf-winuser-getdcex). Pokud není zadaný DCX_CACHE a okno není CS_OWNDC ani [CS_CLASSDC](/windows/win32/api/winuser/ns-winuser-wndclassw), vrátí tato funkce hodnotu null.
+Chcete-li získat kontext zařízení v mezipaměti, musí aplikace zadat [DCX_CACHE](/windows/win32/api/winuser/nf-winuser-getdcex). Pokud není zadán DCX_CACHE a okno není ani CS_OWNDC ani [CS_CLASSDC](/windows/win32/api/winuser/ns-winuser-wndclassw), vrátí tato funkce hodnotu null.
 
-Kontext zařízení se speciálními charakteristikami je vrácen funkcí [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) , pokud byl ve struktuře [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) zadán styl CS_CLASSDC, [CS_OWNDC](/windows/win32/api/winuser/ns-winuser-wndclassw)nebo [CS_PARENTDC](/windows/win32/api/winuser/ns-winuser-wndclassw) při registraci třídy.
+Kontext zařízení se speciálními charakteristikami se vrátí funkcí [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) , pokud je ve struktuře [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) zadaný styl CS_CLASSDC, [CS_OWNDC](/windows/win32/api/winuser/ns-winuser-wndclassw)nebo [CS_PARENTDC](/windows/win32/api/winuser/ns-winuser-wndclassw) při registraci třídy.
 
-Další informace o těchto vlastnostech naleznete v popisu `WNDCLASS` struktury v Windows SDK.
+Další informace o těchto vlastnostech naleznete v tématu Popis struktury `WNDCLASS` v Windows SDK.
 
 ##  <a name="getdcrendertarget"></a>CWnd:: GetDCRenderTarget
 
-Načte cíl vykreslování kontextu zařízení (DC) pro toto `CWnd` okno.
+Načte cíl vykreslování kontextu zařízení (DC) pro `CWnd` okno.
 
 ```
 CDCRenderTarget* GetDCRenderTarget();
@@ -3892,7 +3892,7 @@ Určuje, zda může být okno vráceno jako dočasné. Je-li nastavena hodnota T
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `CWnd` objekt nebo hodnotu null, pokud není nalezeno žádné podřízené okno.
+Ukazatel na objekt `CWnd` nebo hodnotu NULL, pokud není nalezeno žádné podřízené okno.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -3924,11 +3924,11 @@ int GetDlgCtrlID() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Číselný identifikátor `CWnd` podřízeného okna, je-li funkce úspěšná; jinak 0.
+Číselný identifikátor podřízeného okna `CWnd`, je-li funkce úspěšná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že okna nejvyšší úrovně nemají hodnotu ID, návratová hodnota této funkce není platná, pokud `CWnd` se jedná o okno nejvyšší úrovně.
+Vzhledem k tomu, že okna nejvyšší úrovně nemají hodnotu ID, návratová hodnota této funkce je neplatná, pokud `CWnd` je okno nejvyšší úrovně.
 
 ### <a name="example"></a>Příklad
 
@@ -3996,13 +3996,13 @@ Určuje přeloženou hodnotu textu položky dialogového okna. Protože 0 je pla
 
 Funkce vrátí hodnotu 0, pokud je přeložené číslo větší než INT_MAX (pro čísla se znaménkem) nebo UINT_MAX (pro nepodepsané).
 
-Pokud dojde k chybám, například zjištění nenumerických znaků a překročení výše uvedeného `GetDlgItemInt` maxima, zkopíruje 0 do umístění, na které ukazuje *lpTrans*. Pokud nejsou k dispozici žádné chyby, *lpTrans* obdrží nenulovou hodnotu. Pokud má *lpTrans* hodnotu null `GetDlgItemInt` , neupozorní na chyby.
+Pokud dojde k chybám, například zjištění nenumerických znaků a překročení výše uvedeného maxima, `GetDlgItemInt` zkopíruje 0 do umístění, na které ukazuje *lpTrans*. Pokud nejsou k dispozici žádné chyby, *lpTrans* obdrží nenulovou hodnotu. Pokud má *lpTrans* hodnotu NULL, `GetDlgItemInt` neupozorní na chyby.
 
 ### <a name="remarks"></a>Poznámky
 
 Převede text zadaného ovládacího prvku v daném dialogovém okně na celočíselnou hodnotu tak, že se na začátku textu odpustí mezery a Převede desítkové číslice. Zastaví překlad, když dosáhne konce textu nebo dojde k jakémukoli nenumerickému znaku.
 
-Pokud má *bSigned* hodnotu true `GetDlgItemInt` , zkontroluje znaménko mínus (-) na začátku textu a převede text na číslo se znaménkem. V opačném případě vytvoří hodnotu bez znaménka.
+Pokud má *bSigned* hodnotu TRUE, `GetDlgItemInt` zkontroluje znaménko mínus (-) na začátku textu a převede text na číslo se znaménkem. V opačném případě vytvoří hodnotu bez znaménka.
 
 Pošle zprávu [WM_GETTEXT](/windows/win32/winmsg/wm-gettext) ovládacímu prvku.
 
@@ -4026,7 +4026,7 @@ int GetDlgItemText(
 *nID*<br/>
 Určuje celočíselný identifikátor ovládacího prvku, jehož název má být načten.
 
-*lpStr*<br/>
+*Typem LPStr*<br/>
 Odkazuje na vyrovnávací paměť, aby získala název ovládacího prvku nebo text.
 
 *nMaxCount*<br/>
@@ -4041,7 +4041,7 @@ Určuje skutečný počet znaků zkopírovaných do vyrovnávací paměti, včet
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce kopíruje text do umístění, na které ukazuje typem LPStr, a vrátí počet bajtů, které kopíruje. `GetDlgItemText`
+Členská funkce `GetDlgItemText` kopíruje text do umístění, na které ukazuje *typem LPStr* , a vrátí počet bajtů, které kopíruje.
 
 ##  <a name="getdsccursor"></a>CWnd:: GetDSCCursor
 
@@ -4053,11 +4053,11 @@ IUnknown* GetDSCCursor();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na ukazatel, který je definován ovládacím prvkem zdroje dat. Knihovna MFC má za starosti `AddRef` volání ukazatele.
+Ukazatel na ukazatel, který je definován ovládacím prvkem zdroje dat. Knihovna MFC se postará o volání `AddRef` pro ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte vrácený ukazatel k nastavení vlastnosti ICursor komplexního ovládacího prvku vázaného na data, jako je například ovládací prvek mřížky vázaný na data. Řízení zdrojů dat nebude aktivní, dokud první vázaný ovládací prvek nepožaduje kurzor. K `GetDSCCursor` tomu může dojít explicitně voláním nebo implicitně voláním správce vazeb knihovny MFC. V obou případech můžete vynutit, aby se ovládací prvek zdroje dat stal aktivním voláním `GetDSCCursor` a následně voláním `Release` na vrácený ukazatel `IUnknown`na. Aktivace způsobí, že se ovládací prvek zdroje dat pokusí připojit k základnímu zdroji dat. Vrácený ukazatel může být použit v následujícím kontextu:
+Použijte vrácený ukazatel k nastavení vlastnosti ICursor komplexního ovládacího prvku vázaného na data, jako je například ovládací prvek mřížky vázaný na data. Řízení zdrojů dat nebude aktivní, dokud první vázaný ovládací prvek nepožaduje kurzor. K tomu může dojít explicitně voláním `GetDSCCursor` nebo implicitně správcem vazby knihovny MFC. V obou případech můžete vynutit, aby se ovládací prvek zdroje dat stal aktivním voláním `GetDSCCursor` a následným voláním `Release` na vráceném ukazateli na `IUnknown`. Aktivace způsobí, že se ovládací prvek zdroje dat pokusí připojit k základnímu zdroji dat. Vrácený ukazatel může být použit v následujícím kontextu:
 
 ### <a name="example"></a>Příklad
 
@@ -4093,7 +4093,7 @@ Rozšířený styl okna Další informace o rozšířených oknech stylů použ�
 
 ##  <a name="getfocus"></a>CWnd:: GetFocus
 
-Načte ukazatel na `CWnd` , který aktuálně má fokus vstupu.
+Načte ukazatel na `CWnd`, který aktuálně má fokus vstupu.
 
 ```
 static CWnd* PASCAL GetFocus();
@@ -4119,7 +4119,7 @@ Ukazatel na objekt [CFont –](../../mfc/reference/cfont-class.md) , který je p
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda nemá žádný vliv, pokud okno nezpracovává zprávu WM_GETFONT. Mnoho tříd knihovny MFC, které `CWnd` jsou odvozeny od zpracování této zprávy, protože jsou připojeny k předdefinované třídě okna, která obsahuje obslužnou rutinu zprávy pro zprávu WM_GETFONT. Chcete-li použít tuto metodu, třídy, které `CWnd` jsou odvozeny z, musí definovat obslužnou rutinu metody pro zprávu WM_GETFONT.
+Tato metoda nemá žádný vliv, pokud okno nezpracovává zprávu WM_GETFONT. Mnoho tříd knihovny MFC, které jsou odvozeny z `CWnd` zpracovává tuto zprávu, protože jsou připojeny k předdefinované třídě okna, která obsahuje popisovač zprávy pro WM_GETFONT zprávu. Chcete-li použít tuto metodu, třídy, které jsou odvozeny z `CWnd` musí definovat obslužnou rutinu metody pro zprávu WM_GETFONT.
 
 ##  <a name="getforegroundwindow"></a>CWnd:: GetForegroundWindow
 
@@ -4131,7 +4131,7 @@ static CWnd* PASCAL GetForegroundWindow();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na okno v popředí. Může se jednat o dočasný `CWnd` objekt.
+Ukazatel na okno v popředí. Může se jednat o dočasný objekt `CWnd`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -4156,7 +4156,7 @@ Popisovač ikony. V případě neúspěchu vrátí hodnotu NULL.
 
 ##  <a name="getlastactivepopup"></a>CWnd:: GetLastActivePopup
 
-Určuje, které místní okno vlastněné nástrojem `CWnd` bylo naposledy aktivní.
+Určuje, které místní okno vlastněné `CWnd` bylo naposledy aktivní.
 
 ```
 CWnd* GetLastActivePopup() const;
@@ -4218,7 +4218,7 @@ CMenu* GetMenu() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Identifikuje nabídku. Pokud `CWnd` nemá žádná nabídka, hodnota je null. Návratová hodnota není definována, pokud `CWnd` se jedná o podřízené okno.
+Identifikuje nabídku. Pokud `CWnd` nemá žádnou nabídku, hodnota je NULL. Návratová hodnota není definována, pokud `CWnd` je podřízené okno.
 
 Vrácený ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
 
@@ -4282,7 +4282,7 @@ Určuje ovládací prvek, který se má použít jako výchozí bod hledání.
 Určuje, jak má funkce vyhledat skupinu ovládacích prvků v dialogovém okně. Je-li nastavena hodnota TRUE, funkce vyhledá předchozí ovládací prvek ve skupině. Pokud má hodnotu FALSE, vyhledá další ovládací prvek ve skupině.
 
 *pCurSiteOrWnd*<br/>
-`COleControlSiteOrWnd` Identifikuje ovládací prvek. Další informace o `COleControlSiteOrWnd`najdete v tématu **poznámky**.
+Identifikuje ovládací prvek `COleControlSiteOrWnd`. Další informace o `COleControlSiteOrWnd`najdete v tématu **poznámky**.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4294,16 +4294,16 @@ Vrácený ukazatel může být dočasný a neměl by být uložen pro pozdějš�
 
 Skupina ovládacích prvků začíná ovládacím prvkem, který byl vytvořen pomocí stylu [WS_GROUP](styles-used-by-mfc.md#window-styles) a končí posledním ovládacím prvkem, který nebyl vytvořen pomocí stylu WS_GROUP.
 
-Ve výchozím nastavení `GetNextDlgGroupItem` vrací členská funkce ukazatel na další ovládací prvek ve skupině. Pokud *pWndCtl* identifikuje první ovládací prvek ve skupině a *bPrevious* je true, `GetNextDlgGroupItem` vrátí ukazatel na poslední ovládací prvek ve skupině.
+Ve výchozím nastavení vrací členská funkce `GetNextDlgGroupItem` ukazatel na další ovládací prvek ve skupině. Pokud *pWndCtl* identifikuje první ovládací prvek ve skupině a *bPrevious* je true, `GetNextDlgGroupItem` vrátí ukazatel na poslední ovládací prvek ve skupině.
 
 > [!NOTE]
-> Protože knihovna MFC podporuje ovládací prvky ActiveX bez oken, standardní ovládací prvky ActiveX a okna, které odkazují na ovládací prvek pouze pomocí HWND, již není dostačující. `COleControlSiteOrWnd` Objekt obsahuje informace, které identifikují objekt jako ovládací prvek ActiveX v okně, ovládací prvek ActiveX bez oken nebo okno, jak je znázorněno níže:
+> Protože knihovna MFC podporuje ovládací prvky ActiveX bez oken, standardní ovládací prvky ActiveX a okna, které odkazují na ovládací prvek pouze pomocí HWND, již není dostačující. Objekt `COleControlSiteOrWnd` obsahuje informace, které identifikují objekt jako ovládací prvek ActiveX v okně, ovládací prvek ActiveX bez oken nebo okno, jak je znázorněno níže:
 
 |Typ ovládacího prvku nebo okna|Identifikace informací|
 |----------------------------|-----------------------------|
-|Ovládací prvek ActiveX v okně|Obsahuje HWND a přidruží k němu objekt [COleControlSite](../../mfc/reference/colecontrolsite-class.md) . Člen je nastaven na HWND ovládacího prvku a `m_pSite` člen odkazuje na ovládací prvek `COleControlSite`. `m_hWnd` `COleControlSiteOrWnd`|
-|Ovládací prvek ActiveX bez oken|Neobsahuje prvek HWND. Člen odkazuje na`m_hWnd` ovládací prvek ačlenmáhodnotunull.`COleControlSite` `m_pSite` `COleControlSiteOrWnd`|
-|Standardní okno|Obsahuje pouze HWND. Člen je nastaven na HWND okna a `m_pSite` člen má hodnotu null. `COleControlSiteOrWnd` `m_hWnd`|
+|Ovládací prvek ActiveX v okně|Obsahuje HWND a přidruží k němu objekt [COleControlSite](../../mfc/reference/colecontrolsite-class.md) . `m_hWnd` člen `COleControlSiteOrWnd` je nastaven na HWND ovládacího prvku a `m_pSite` člen odkazuje na `COleControlSite`ovládacího prvku.|
+|Ovládací prvek ActiveX bez oken|Neobsahuje prvek HWND. `m_pSite` člen `COleControlSiteOrWnd` odkazuje na `COleControlSite`ovládacího prvku a člen `m_hWnd` má hodnotu NULL.|
+|Standardní okno|Obsahuje pouze HWND. `m_hWnd` člen `COleControlSiteOrWnd` je nastaven na HWND okna a člen `m_pSite` má hodnotu NULL.|
 
 ##  <a name="getnextdlgtabitem"></a>CWnd:: GetNextDlgTabItem
 
@@ -4325,7 +4325,7 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
 Určuje ovládací prvek, který se má použít jako výchozí bod hledání.
 
 *pCurSiteOrWnd*<br/>
-`COleControlSiteOrWnd` Identifikuje ovládací prvek. Další informace o `COleControlSiteOrWnd`naleznete v tématu [CWnd:: GetNextDlgGroupItem](#getnextdlggroupitem).
+Identifikuje ovládací prvek `COleControlSiteOrWnd`. Další informace o `COleControlSiteOrWnd`naleznete v tématu [CWnd:: GetNextDlgGroupItem](#getnextdlggroupitem).
 
 *bPrevious*<br/>
 Určuje, jak má funkce Hledat v dialogovém okně. Je-li nastavena hodnota TRUE, funkce vyhledá předchozí ovládací prvek v dialogovém okně; Pokud má hodnotu FALSE, vyhledá další ovládací prvek.
@@ -4349,7 +4349,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 ### <a name="parameters"></a>Parametry
 
 *načit*<br/>
-Určuje, zda funkce vrací ukazatel na další okno nebo předchozí okno. Může to být buď GW_HWNDNEXT, což vrátí okno, které následuje za `CWnd` objektem v seznamu Správce oken, nebo GW_HWNDPREV, které vrátí předchozí okno v seznamu Správce oken.
+Určuje, zda funkce vrací ukazatel na další okno nebo předchozí okno. Může to být buď GW_HWNDNEXT, což vrátí okno, které následuje za objektem `CWnd` v seznamu Správce oken, nebo GW_HWNDPREV, které vrátí předchozí okno v seznamu Správce oken.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4361,7 +4361,7 @@ Vrácený ukazatel může být dočasný a neměl by být uložen pro pozdějš�
 
 Seznam správce oken obsahuje položky pro všechna okna nejvyšší úrovně, jejich přidružená podřízená okna a podřízená okna všech podřízených oken.
 
-Pokud `CWnd` se jedná o okno nejvyšší úrovně, funkce vyhledá další (nebo předchozí) okno nejvyšší úrovně; Pokud `CWnd` je podřízeným oknem, funkce vyhledá následující (nebo předchozí) podřízené okno.
+Pokud je `CWnd` oknem nejvyšší úrovně, funkce vyhledá další (nebo předchozí) okno nejvyšší úrovně; Pokud `CWnd` je podřízené okno, funkce vyhledá další (nebo předchozí) podřízené okno.
 
 ##  <a name="getolecontrolsite"></a>CWnd:: GetOleControlSite
 
@@ -4398,7 +4398,7 @@ CWnd* GetOwner() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `CWnd` objekt.
+Ukazatel na objekt `CWnd`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -4420,7 +4420,7 @@ Viz část návratové hodnoty v [GetParent](/windows/win32/api/winuser/nf-winus
 
 ### <a name="remarks"></a>Poznámky
 
-`GetParent` Funkce vrátí ukazatel na bezprostřední nadřazený prvek (pokud existuje). Naproti tomu funkce [GetParentOwner](#getparentowner) vrací ukazatel na nejbezprostředního nadřazeného nebo vlastníka okna, které není podřízené okno (nemá styl WS_CHILD). Pokud máte podřízené okno v rámci podřízeného okna `GetParent` a `GetParentOwner` vrátíte různé výsledky.
+Funkce `GetParent` vrací ukazatel na bezprostřední nadřazený prvek (pokud existuje). Naproti tomu funkce [GetParentOwner](#getparentowner) vrací ukazatel na nejbezprostředního nadřazeného nebo vlastníka okna, které není podřízené okno (nemá styl WS_CHILD). Pokud máte podřízené okno v rámci podřízeného okna `GetParent` a `GetParentOwner` vracet různé výsledky.
 
 ##  <a name="getparentframe"></a>CWnd:: GetParentFrame
 
@@ -4448,13 +4448,13 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `CWnd` objekt. Pokud objekt není připojen k popisovači, je vytvořen a připojen `CWnd` dočasný objekt. `CWnd` Ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
+Ukazatel na objekt `CWnd`. Pokud objekt `CWnd` není připojen k popisovači, je vytvořen a připojen dočasný objekt `CWnd`. Ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetParentOwner`vrátí ukazatel na nejvíce bezprostředního nadřazeného nebo vlastnických oken, které není podřízené okno (nemá styl WS_CHILD). Aktuální okno vlastníka lze nastavit pomocí [SetOwner](#setowner). Ve výchozím nastavení je nadřazeným oknem okna jeho vlastník.
+`GetParentOwner` vrací ukazatel na nejbezprostředního nadřazeného nebo vlastníka okna, které není podřízené okno (nemá styl WS_CHILD). Aktuální okno vlastníka lze nastavit pomocí [SetOwner](#setowner). Ve výchozím nastavení je nadřazeným oknem okna jeho vlastník.
 
-Naproti tomu funkce [GetParent](#getparent) vrátí ukazatel na bezprostřední nadřazený prvek, ať už jde o podřízené okno, nebo ne. Pokud máte podřízené okno v rámci podřízeného okna `GetParent` a `GetParentOwner` vrátíte různé výsledky.
+Naproti tomu funkce [GetParent](#getparent) vrátí ukazatel na bezprostřední nadřazený prvek, ať už jde o podřízené okno, nebo ne. Pokud máte podřízené okno v rámci podřízeného okna `GetParent` a `GetParentOwner` vracet různé výsledky.
 
 ##  <a name="getproperty"></a>CWnd:: GetProperty
 
@@ -4480,12 +4480,12 @@ Adresa proměnné, která bude přijímat hodnotu vlastnosti. Musí odpovídat t
 
 ### <a name="remarks"></a>Poznámky
 
-`GetProperty`Vrátí hodnotu prostřednictvím *pvProp*.
+`GetProperty` vrací hodnotu prostřednictvím *pvProp*.
 
 > [!NOTE]
-> Tato funkce by měla být volána pouze pro `CWnd` objekt, který představuje ovládací prvek ActiveX.
+> Tato funkce by měla být volána pouze pro objekt `CWnd`, který představuje ovládací prvek ActiveX.
 
-Další informace o použití této členské funkce s kontejnery ovládacích prvků ActiveX naleznete v článku [kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru](../../mfc/programming-activex-controls-in-a-activex-control-container.md)ovládacího prvku ActiveX.
+Další informace o použití této členské funkce s kontejnery ovládacích prvků ActiveX naleznete v článku [kontejnery ovládacích prvků ActiveX: programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
 ##  <a name="getrendertarget"></a>CWnd:: GetRenderTarget
 
@@ -4501,7 +4501,7 @@ Ukazatel na cíl vykreslování nebo hodnota NULL.
 
 ##  <a name="getsafehwnd"></a>CWnd:: GetSafeHwnd
 
-Vrátí `m_hWnd`nebo hodnotu null, pokud je **Tento** ukazatel null.
+Vrátí `m_hWnd`, nebo hodnotu NULL, pokud je **Tento** ukazatel null.
 
 ```
 HWND GetSafeHwnd() const;
@@ -4509,7 +4509,7 @@ HWND GetSafeHwnd() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač okna pro okno. Vrátí hodnotu null, `CWnd` Pokud není připojena k oknu nebo je-li použita s ukazatelem s `CWnd` hodnotou null.
+Vrátí popisovač okna pro okno. Vrátí hodnotu NULL, pokud `CWnd` není připojen k oknu nebo je-li použita s NULOVÝm `CWnd` ukazatelem.
 
 ### <a name="example"></a>Příklad
 
@@ -4528,7 +4528,7 @@ static CWnd* GetSafeOwner(
 ### <a name="parameters"></a>Parametry
 
 *pParent*<br/>
-Ukazatel na nadřazené `CWnd` okno. Může mít hodnotu NULL.
+Ukazatel na nadřazený `CWnd` okno. Může mít hodnotu NULL.
 
 *pWndTop*<br/>
 Ukazatel na okno, které je aktuálně nahoře. Může mít hodnotu NULL.
@@ -4567,7 +4567,7 @@ Ovládací prvek posuvníku na stejné úrovni nebo NULL, pokud žádný není.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce nefunguje na posuvníkech vytvořených při nastavení WS_HSCROLL nebo WS_VSCROLL, které jsou nastaveny během vytváření okna. `CWnd` Implementace této funkce jednoduše vrátí hodnotu null. Odvozené třídy, jako `CView`je, implementují popsané funkce.
+Tato členská funkce nefunguje na posouvaných panelech, které se vytvoří, když se WS_HSCROLL nebo WS_VSCROLLí bity nastaví během vytváření okna. `CWnd` implementace této funkce jednoduše vrátí hodnotu NULL. Odvozené třídy, jako je například `CView`, implementují popsané funkce.
 
 ##  <a name="getscrollbarinfo"></a>CWnd:: GetScrollBarInfo
 
@@ -4597,7 +4597,7 @@ Tato členská funkce emuluje funkčnost funkce [GetScrollBarInfo](/windows/win3
 
 ##  <a name="getscrollinfo"></a>CWnd:: GetScrollInfo
 
-Zavolejte tuto členskou funkci pro načtení informací, které `SCROLLINFO` struktura udržuje o posuvníku.
+Zavolejte tuto členskou funkci pro načtení informací, které struktura `SCROLLINFO` udržuje o posuvníku.
 
 ```
 BOOL GetScrollInfo(
@@ -4611,7 +4611,7 @@ BOOL GetScrollInfo(
 *nBar*<br/>
 Určuje, zda se posuvník nachází v neklientské oblasti okna nebo v něm. Pokud je součástí neklientské oblasti, *nBar* také indikuje, zda je posuvník umístěn vodorovně, svisle nebo obojí. Musí to být jedna z následujících:
 
-- SB_CTL načte parametry ovládacího prvku posuvníku. `m_hWnd` Datový člen musí mít popisovač ovládacího prvku posuvníku.
+- SB_CTL načte parametry ovládacího prvku posuvníku. Datový člen `m_hWnd` musí být popisovačem ovládacího prvku posuvníku.
 
 - SB_HORZ načte parametry standardního vodorovného posuvníku okna.
 
@@ -4621,7 +4621,7 @@ Určuje, zda se posuvník nachází v neklientské oblasti okna nebo v něm. Pok
 Ukazatel na strukturu [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) . Další informace o této struktuře najdete v Windows SDK.
 
 *nMask*<br/>
-Určuje parametry posouvaných panelů, které se mají načíst. Výchozí Určuje kombinaci hodnot SIF_PAGE, SIF_POS, SIF_TRACKPOS a SIF_RANGE. Další `SCROLLINFO` informace o hodnotách *nMask* najdete v tématu.
+Určuje parametry posouvaných panelů, které se mají načíst. Výchozí hodnota určuje kombinaci SIF_PAGE, SIF_POS, SIF_TRACKPOS a SIF_RANGE. Další informace o hodnotách *nMask* najdete v tématu `SCROLLINFO`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4629,11 +4629,11 @@ Pokud zpráva načetla jakékoli hodnoty, vrátí se hodnota TRUE. V opačném p
 
 ### <a name="remarks"></a>Poznámky
 
-`GetScrollInfo`umožňuje aplikacím používat 32 pozice posunutí.
+`GetScrollInfo` umožňuje aplikacím používat 32 poloh posunutí.
 
-Struktura [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) obsahuje informace o posuvníku, včetně minimální a maximální pozice pro posouvání, velikosti stránky a polohy rolovacího pole (palec). Další informace o změně výchozího nastavení struktury najdete v tématu strukturavWindowsSDK.`SCROLLINFO`
+Struktura [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) obsahuje informace o posuvníku, včetně minimální a maximální pozice pro posouvání, velikosti stránky a polohy rolovacího pole (palec). Další informace o změně výchozích hodnot struktury najdete v tématu `SCROLLINFO` struktury v Windows SDK.
 
-Obslužné rutiny zpráv systému Windows knihovny MFC, které označují pozici posuvníku, [CWnd:: OnHScroll](#onhscroll) a [CWnd:: OnVScroll](#onvscroll), poskytují pouze 16 bitů dat pozice. `GetScrollInfo`a `SetScrollInfo` poskytují 32 bitů dat umístění posuvníku. Proto může aplikace volat `GetScrollInfo` během zpracování buď `CWnd::OnHScroll` nebo `CWnd::OnVScroll` , aby získala 32-bit dat o poloze posuvníku.
+Obslužné rutiny zpráv systému Windows knihovny MFC, které označují pozici posuvníku, [CWnd:: OnHScroll](#onhscroll) a [CWnd:: OnVScroll](#onvscroll), poskytují pouze 16 bitů dat pozice. `GetScrollInfo` a `SetScrollInfo` poskytují 32 bitů dat o poloze posouvaných pruhů. Aplikace proto může volat `GetScrollInfo` při zpracování `CWnd::OnHScroll` nebo `CWnd::OnVScroll` k získání dat pozice na posuvníku 32-bit.
 
 ##  <a name="getscrolllimit"></a>CWnd:: GetScrollLimit
 
@@ -4648,9 +4648,9 @@ int GetScrollLimit(int nBar);
 *nBar*<br/>
 Určuje typ posunutí posuvníku. Parametr může mít jednu z následujících hodnot:
 
-- SB_HORZ načte limit posouvání vodorovného posuvníku.
+- SB_HORZ načte limit posunu vodorovného posuvníku.
 
-- SB_VERT načte limit posouvání svislého posuvníku.
+- SB_VERT načte limit posunu svislého posuvníku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4709,7 +4709,7 @@ Odkazuje na celočíselnou proměnnou, která má přijmout maximální pozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CWnd` nemá posuvník, `GetScrollRange` pak členská funkce zkopíruje hodnotu 0 do *lpMinPos* a *lpMaxPos*.
+Pokud `CWnd` nemá posuvník, pak `GetScrollRange` členská funkce zkopíruje hodnotu 0 do *lpMinPos* a *lpMaxPos*.
 
 Výchozí rozsah standardního posuvníku je 0 až 100. Výchozí rozsah ovládacího prvku posuvníku je prázdný (obě hodnoty jsou 0).
 
@@ -4736,7 +4736,7 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 ### <a name="parameters"></a>Parametry
 
 *bRevert*<br/>
-Určuje akci, která má být provedena. Pokud je *bRevert* false, `GetSystemMenu` vrátí popisovač pro kopii řídicí nabídky, která se právě používá. Tato kopie je zpočátku totožná s nabídkou ovládacích prvků, ale je možné ji upravit. Pokud má *bRevert* hodnotu true `GetSystemMenu` , obnoví řídicí nabídku zpět do výchozího stavu. Předchozí, možná upravená, řídicí nabídka, pokud existuje, je zničena. V tomto případě není definována návratová hodnota.
+Určuje akci, která má být provedena. Pokud je *BREVERT* FALSE, `GetSystemMenu` vrátí popisovač pro kopii nabídky ovládacího prvku, která se právě používá. Tato kopie je zpočátku totožná s nabídkou ovládacích prvků, ale je možné ji upravit. Pokud má *bRevert* hodnotu TRUE, `GetSystemMenu` obnovení řídicí nabídky zpět do výchozího stavu. Předchozí, možná upravená, řídicí nabídka, pokud existuje, je zničena. V tomto případě není definována návratová hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4746,13 +4746,13 @@ Vrácený ukazatel může být dočasný a neměl by být uložen pro pozdějš�
 
 ### <a name="remarks"></a>Poznámky
 
-Jakékoli okno, které nepoužívá `GetSystemMenu` k vytvoření vlastní kopie řídicí nabídky, obdrží standardní nabídku ovládacího prvku.
+Jakékoli okno, které nepoužívá `GetSystemMenu` k vytvoření vlastní kopie řídicí nabídky obdrží standardní nabídku ovládacího prvku.
 
-`GetSystemMenu` Ukazatel vrácený členskou funkcí lze použít s funkcemi [CMenu –:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), [CMenu –:: InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)nebo [CMenu –:: ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) pro změnu nabídky ovládacího prvku.
+Ukazatel vrácený `GetSystemMenu` členskou funkcí lze použít s funkcemi [CMenu –:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), [CMenu –:: InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)nebo [CMenu –:: ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) pro změnu nabídky ovládacího prvku.
 
-Nabídka ovládacího prvku zpočátku obsahuje položky identifikované s různými hodnotami ID, například SC_CLOSE, SC_MOVE a SC_SIZE. Položky v nabídce řízení generují zprávy [WM_SYSCOMMAND](#onsyscommand) . Všechny předdefinované položky nabídky ovládacího prvku mají čísla ID větší než 0xF000. Pokud aplikace přidá položky do nabídky ovládacího prvku, měla by používat čísla ID menší než F000.
+Nabídka ovládacího prvku zpočátku obsahuje položky identifikované s různými hodnotami ID, například SC_CLOSE, SC_MOVE a SC_SIZE. Položky v nabídce ovládacího prvku generují [WM_SYSCOMMAND](#onsyscommand) zprávy. Všechny předdefinované položky nabídky ovládacího prvku mají čísla ID větší než 0xF000. Pokud aplikace přidá položky do nabídky ovládacího prvku, měla by používat čísla ID menší než F000.
 
-Systém Windows může automaticky vytvářet položky nedostupné v nabídce standardního ovládacího prvku. `CWnd`může provést svůj vlastní výběr nebo nedostupnost tím, že odpoví na zprávy [WM_INITMENU](#oninitmenu) , které se odesílají před zobrazením jakékoli nabídky.
+Systém Windows může automaticky vytvářet položky nedostupné v nabídce standardního ovládacího prvku. `CWnd` může provést vlastní výběr nebo nedostupnost tím, že reaguje na zprávy [WM_INITMENU](#oninitmenu) , které se odesílají před zobrazením jakékoli nabídky.
 
 ### <a name="example"></a>Příklad
 
@@ -4807,7 +4807,7 @@ Identifikuje okno nejvyšší úrovně. Vrácený ukazatel může být dočasný
 
 ### <a name="remarks"></a>Poznámky
 
-Okno nejvyšší úrovně je okno, které je podřízenou plochou. Pokud `CWnd` nemá žádné připojené okno, vrátí tato funkce hodnotu null.
+Okno nejvyšší úrovně je okno, které je podřízenou plochou. Pokud `CWnd` nemá žádné připojené okno, vrátí tato funkce hodnotu NULL.
 
 ##  <a name="gettoplevelparent"></a>CWnd:: GetTopLevelParent
 
@@ -4825,7 +4825,7 @@ Vrácený ukazatel může být dočasný a neměl by být uložen pro pozdějš�
 
 ### <a name="remarks"></a>Poznámky
 
-`GetTopLevelParent`je podobný jako [GetTopLevelFrame](#gettoplevelframe) a [GetTopLevelOwner](#gettoplevelowner); Nicméně ignoruje hodnotu nastavenou jako aktuální vlastník okna.
+`GetTopLevelParent` se podobá [GetTopLevelFrame](#gettoplevelframe) a [GetTopLevelOwner](#gettoplevelowner); Nicméně ignoruje hodnotu nastavenou jako aktuální vlastník okna.
 
 ##  <a name="gettopwindow"></a>CWnd:: GetTopWindow
 
@@ -4837,13 +4837,13 @@ CWnd* GetTopWindow() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Identifikuje podřízené okno nejvyšší úrovně v `CWnd` propojeném seznamu podřízených oken. Pokud neexistuje žádný podřízený systém Windows, hodnota je NULL.
+Identifikuje podřízené okno nejvyšší úrovně v `CWnd` propojený seznam podřízených oken. Pokud neexistuje žádný podřízený systém Windows, hodnota je NULL.
 
 Vrácený ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CWnd` nemá žádné podřízené položky, tato funkce vrátí hodnotu null.
+Pokud `CWnd` nemá žádné podřízené položky, tato funkce vrátí hodnotu NULL.
 
 ##  <a name="getupdaterect"></a>CWnd:: GetUpdateRect
 
@@ -4858,9 +4858,9 @@ BOOL GetUpdateRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na `CRect` objekt nebo [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) , která má přijmout souřadnice klienta aktualizace, která obklopuje oblast aktualizace.
+Odkazuje na objekt `CRect` nebo [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) , která má přijmout souřadnice klienta aktualizace, která obklopuje oblast aktualizace.
 
-Nastavením tohoto parametru na hodnotu NULL určíte, zda oblast aktualizace existuje v `CWnd`rámci. Pokud má *lpRect* hodnotu null, `GetUpdateRect` vrátí členská funkce nenulovou hodnotu, pokud oblast aktualizace existuje a 0, pokud není. To poskytuje způsob, jak určit, zda zpráva WM_PAINT vyplynula z neplatné oblasti. V systému Windows verze 3,0 a starší nenastavujte tento parametr na hodnotu NULL.
+Nastavením tohoto parametru na hodnotu NULL určíte, zda oblast aktualizace existuje v rámci `CWnd`. Pokud má *lpRect* hodnotu null, vrátí členská funkce `GetUpdateRect` nenulovou hodnotu, pokud oblast aktualizace existuje a 0, pokud není. To poskytuje způsob, jak určit, zda WM_PAINT zpráva vyplynula z neplatné oblasti. V systému Windows verze 3,0 a starší nenastavujte tento parametr na hodnotu NULL.
 
 *bErase*<br/>
 Určuje, zda má být pozadí v oblasti aktualizace smazáno.
@@ -4873,13 +4873,13 @@ Pokud je parametr *lpRect* nastaven na hodnotu null, návratová hodnota je nenu
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CWnd` byl vytvořen pomocí stylu CS_OWNDC a režim mapování není MM_TEXT `GetUpdateRect` , členská funkce poskytne obdélník v logických souřadnicích. V opačném případě poskytuje obdélník v souřadnicích klienta. `GetUpdateRect` Pokud není k dispozici žádná oblast `GetUpdateRect` aktualizace, nastaví obdélník jako prázdný (nastaví všechny souřadnice na 0).
+Pokud byla vytvořena `CWnd` se stylem CS_OWNDC a režimem mapování není MM_TEXT, členská funkce `GetUpdateRect` poskytuje obdélník v logických souřadnicích. V opačném případě `GetUpdateRect` poskytuje obdélník v souřadnicích klienta. Pokud není k dispozici žádná oblast aktualizace, `GetUpdateRect` nastaví obdélník jako prázdný (nastaví všechny souřadnice na 0).
 
-Parametr *bErase* určuje, zda `GetUpdateRect` má být pozadí oblasti aktualizace smazáno. Pokud má *bErase* hodnotu true a oblast aktualizace není prázdná, pozadí se vymaže. Chcete-li vymazat pozadí `GetUpdateRect` , odešle zprávu [WM_ERASEBKGND](#onerasebkgnd) .
+Parametr *bErase* určuje, zda má `GetUpdateRect` Vymazat pozadí oblasti aktualizace. Pokud má *bErase* hodnotu true a oblast aktualizace není prázdná, pozadí se vymaže. Chcete-li vymazat pozadí, `GetUpdateRect` odesílá zprávu [WM_ERASEBKGND](#onerasebkgnd) .
 
-Obdélník aktualizace načtený členskou funkcí [BeginPaint](#beginpaint) je stejný jako, který byl načten `GetUpdateRect` členskou funkcí.
+Obdélník aktualizace načtený členskou funkcí [BeginPaint](#beginpaint) je stejný jako, který byl načten funkcí členské funkce `GetUpdateRect`.
 
-Členská funkce automaticky ověří oblast aktualizace, takže jakékoli `GetUpdateRect` volání provede okamžitě po volání k `BeginPaint` načtení prázdné oblasti aktualizace. `BeginPaint`
+Členská funkce `BeginPaint` automaticky ověřuje oblast aktualizace, takže jakékoli volání `GetUpdateRect` provedeno ihned po volání funkce `BeginPaint` načte prázdnou oblast aktualizace.
 
 ##  <a name="getupdatergn"></a>CWnd:: GetUpdateRgn
 
@@ -4915,7 +4915,7 @@ Určuje příznak krátkého celého čísla, který označuje typ výsledné ob
 
 Souřadnice této oblasti jsou relativní vzhledem k levému hornímu rohu (souřadnice klientů).
 
-Členská funkce [BeginPaint](#beginpaint) automaticky ověřuje oblast aktualizace, takže jakékoli volání `GetUpdateRgn` provede okamžitě po volání za účelem `BeginPaint` načtení prázdné oblasti aktualizace.
+Členská funkce [BeginPaint](#beginpaint) automaticky ověřuje oblast aktualizace, takže jakékoli volání `GetUpdateRgn` provedeno ihned po volání `BeginPaint` načte prázdnou oblast aktualizace.
 
 ##  <a name="getwindow"></a>CWnd:: GetWindow
 
@@ -4930,17 +4930,17 @@ CWnd* GetWindow(UINT nCmd) const;
 *nCmd*<br/>
 Určuje vztah mezi `CWnd` a vráceným oknem. Může mít jednu z následujících hodnot:
 
-- GW_CHILD identifikuje `CWnd` první podřízené okno.
+- GW_CHILD identifikuje první podřízené okno `CWnd`.
 
-- GW_HWNDFIRST Pokud `CWnd` je podřízené okno, vrátí první okno na stejné úrovni. V opačném případě vrátí první okno nejvyšší úrovně v seznamu.
+- GW_HWNDFIRST Pokud je `CWnd` podřízené okno, vrátí první okno na stejné úrovni. V opačném případě vrátí první okno nejvyšší úrovně v seznamu.
 
-- GW_HWNDLAST Pokud `CWnd` je podřízené okno, vrátí poslední okno na stejné úrovni. V opačném případě vrátí poslední okno nejvyšší úrovně v seznamu.
+- GW_HWNDLAST Pokud je `CWnd` podřízené okno, vrátí poslední okno na stejné úrovni. V opačném případě vrátí poslední okno nejvyšší úrovně v seznamu.
 
 - GW_HWNDNEXT vrátí další okno v seznamu Správce oken.
 
 - GW_HWNDPREV vrátí předchozí okno v seznamu Správce oken.
 
-- GW_OWNER identifikuje `CWnd` vlastníka.
+- GW_OWNER identifikuje vlastníka `CWnd`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4968,7 +4968,7 @@ long GetWindowedChildCount();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet podřízených oken přidružených `CWnd` k objektu.
+Počet podřízených oken přidružených k objektu `CWnd`.
 
 ##  <a name="getwindowdc"></a>CWnd:: GetWindowDC
 
@@ -4986,11 +4986,11 @@ Vrácený ukazatel může být dočasný a neměl by být uložen pro pozdějš�
 
 ### <a name="remarks"></a>Poznámky
 
-Kontext zobrazení okna povoluje Malování kdekoliv v `CWnd`, protože počátek kontextu je levý horní `CWnd` roh místo klientské oblasti.
+Kontext zobrazení okna povoluje Malování kdekoli v `CWnd`, protože počátek kontextu je levý horní roh `CWnd` namísto klientské oblasti.
 
 Výchozí atributy jsou přiřazeny ke kontextu zobrazení pokaždé, když načítá kontext. Předchozí atributy jsou ztraceny.
 
-`GetWindowDC`je určeno pro použití pro speciální efekty malování v `CWnd` neklientské oblasti. Nedoporučuje se malovat v neklientních oblastech jakéhokoli okna.
+`GetWindowDC` mají být použity pro speciální efekty malování v oblasti `CWnd` mimo klienta. Nedoporučuje se malovat v neklientních oblastech jakéhokoli okna.
 
 Funkci [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) systému Windows lze použít k načtení dimenzí různých částí neklientské oblasti, jako je například záhlaví, nabídka a posuvníky.
 
@@ -5006,7 +5006,7 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pwi*<br/>
+*nevše*<br/>
 Ukazatel na strukturu [WINDOWINFO](/windows/win32/api/winuser/ns-winuser-windowinfo) .
 
 ### <a name="remarks"></a>Poznámky
@@ -5023,7 +5023,7 @@ long GetWindowlessChildCount();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet podřízených oken bez `CWnd` oken přidružených k objektu.
+Počet podřízených oken bez oken přidružených k objektu `CWnd`.
 
 ##  <a name="getwindowplacement"></a>CWnd:: GetWindowPlacement
 
@@ -5036,7 +5036,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 ### <a name="parameters"></a>Parametry
 
 *lpwndpl*<br/>
-Odkazuje na `WINDOWPLACEMENT` strukturu, která přijímá informace o stavu a umístění.
+Odkazuje na strukturu `WINDOWPLACEMENT`, která přijímá informace o stavu a umístění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5044,11 +5044,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Člen struktury windowplacement – načtený touto funkcí je vždy 0. [](/windows/win32/api/winuser/ns-winuser-windowplacement) `flags` Pokud `CWnd` je maximalizován `showCmd` , je členem `WINDOWPLACEMENT` SW_SHOWMAXIMIZED. Pokud je okno minimalizováno, je SW_SHOWMINIMIZED. V opačném případě je to SW_SHOWNORMAL.
+`flags` člen struktury [windowplacement –](/windows/win32/api/winuser/ns-winuser-windowplacement) načtený touto funkcí je vždy 0. Pokud je `CWnd` maximalizováno, je SW_SHOWMAXIMIZED členem `WINDOWPLACEMENT` `showCmd`. Pokud je okno minimalizováno, je SW_SHOWMINIMIZED. V opačném případě je SW_SHOWNORMAL.
 
 ##  <a name="getwindowrect"></a>CWnd:: GetWindowRect
 
-Zkopíruje rozměry ohraničujícího obdélníku `CWnd` objektu do struktury, na kterou odkazuje *lpRect*.
+Zkopíruje rozměry ohraničujícího obdélníku objektu `CWnd` do struktury, na kterou odkazuje *lpRect*.
 
 ```
 void GetWindowRect(LPRECT lpRect) const;
@@ -5057,7 +5057,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na `CRect` objekt nebo [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) , která obdrží souřadnice obrazovky levého horního a pravého dolního rohu.
+Odkazuje na objekt `CRect` nebo [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) , která obdrží souřadnice obrazovky levého horního a pravého dolního rohu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -5098,7 +5098,7 @@ Chcete-li nastavit oblast okna okna, zavolejte [CWnd:: SetWindowRgn](#setwindowr
 
 ##  <a name="getwindowtext"></a>CWnd:: GetWindowText
 
-Zkopíruje nadpis titulku (Pokud má nějaký) do vyrovnávací paměti, na kterou odkazuje lpszStringBuf nebo do cílového řetězce rString. `CWnd`
+Zkopíruje název titulku `CWnd` (Pokud má jeden) do vyrovnávací paměti, na kterou odkazuje *lpszStringBuf* nebo do cílového řetězce *rString*.
 
 ```
 int GetWindowText(
@@ -5122,13 +5122,13 @@ Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který při
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje délku kopírovaného řetězce ve znacích, včetně ukončujícího znaku null. Je 0, pokud `CWnd` nemá žádný titulek nebo pokud je popisek prázdný.
+Určuje délku kopírovaného řetězce ve znacích, včetně ukončujícího znaku null. Je 0, pokud `CWnd` nemá žádný titulek nebo pokud je titulek prázdný.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetWindowText` Pokud je `CWnd` objekt ovládacím prvkem, členská funkce zkopíruje text v ovládacím prvku místo kopírování titulku.
+Pokud je objekt `CWnd` ovládacím prvkem, `GetWindowText` členská funkce zkopíruje text v ovládacím prvku místo kopírování titulku.
 
-Tato členská funkce způsobí [](/windows/win32/winmsg/wm-gettext) , že se do `CWnd` objektu pošle zpráva WM_GETTEXT.
+Tato členská funkce způsobí, že se [WM_GETTEXT](/windows/win32/winmsg/wm-gettext) zpráva pošle do objektu `CWnd`.
 
 ### <a name="example"></a>Příklad
 
@@ -5136,7 +5136,7 @@ Tato členská funkce způsobí [](/windows/win32/winmsg/wm-gettext) , že se do
 
 ##  <a name="getwindowtextlength"></a>CWnd:: GetWindowTextLength
 
-Vrátí délku `CWnd` názvu titulku objektu.
+Vrátí délku nadpisu titulku `CWnd` objektu.
 
 ```
 int GetWindowTextLength() const;
@@ -5148,9 +5148,9 @@ Určuje délku textu ve znacích, včetně žádného znaku pro ukončení hodno
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CWnd` je ovládací prvek `GetWindowTextLength` , vrátí členská funkce délku textu v ovládacím prvku namísto titulku.
+Pokud `CWnd` je ovládací prvek, `GetWindowTextLength` členská funkce vrátí délku textu v ovládacím prvku namísto titulku.
 
-Tato členská funkce způsobí [](/windows/win32/winmsg/wm-gettextlength) , že se do `CWnd` objektu pošle zpráva WM_GETTEXTLENGTH.
+Tato členská funkce způsobí, že se [WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength) zpráva pošle do objektu `CWnd`.
 
 ### <a name="example"></a>Příklad
 
@@ -5168,7 +5168,7 @@ void HideCaret();
 
 I když se blikající kurzor už nezobrazuje, můžete ho znovu zobrazit pomocí členské funkce [ShowCaret](#showcaret) . Skrytím blikajícího kurzoru se nezničí aktuální tvar.
 
-Skrytí je kumulativní. Pokud `HideCaret` byl tento řádek volán pětkrát za pět časů `ShowCaret` , musí být členská funkce volána pětkrát před zobrazením blikajícího kurzoru.
+Skrytí je kumulativní. Pokud je `HideCaret` na řádku pětkrát volána dvakrát, musí být před zobrazením blikajícího kurzoru `ShowCaret` členská funkce volána pětkrát.
 
 ##  <a name="hilitemenuitem"></a>CWnd:: HiliteMenuItem
 
@@ -5190,7 +5190,7 @@ Identifikuje nabídku nejvyšší úrovně, která obsahuje položku, která má
 Určuje položku nabídky, která má být zvýrazněna v závislosti na hodnotě parametru *nHilite* .
 
 *nHilite*<br/>
-Určuje, zda je položka nabídky zvýrazněna nebo je zvýraznění odebráno. Může to být kombinace MF_HILITE nebo MF_UNHILITE s MF_BYCOMMAND nebo MF_BYPOSITION. Hodnoty lze kombinovat pomocí bitového operátoru OR. Tyto hodnoty mají následující význam:
+Určuje, zda je položka nabídky zvýrazněna nebo je zvýraznění odebráno. Může se jednat o kombinaci MF_HILITE nebo MF_UNHILITE s MF_BYCOMMAND nebo MF_BYPOSITION. Hodnoty lze kombinovat pomocí bitového operátoru OR. Tyto hodnoty mají následující význam:
 
 - MF_BYCOMMAND interpretuje *nIDHiliteItem* jako ID položky nabídky (výchozí interpretace).
 
@@ -5198,7 +5198,7 @@ Určuje, zda je položka nabídky zvýrazněna nebo je zvýraznění odebráno. 
 
 - MF_HILITE zvýrazní položku. Pokud tato hodnota není zadána, zvýrazní se Zvýrazněná položka.
 
-- MF_UNHILITE odebere zvýraznění z položky.
+- MF_UNHILITE odstraní zvýraznění z položky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5244,7 +5244,7 @@ Nevolejte tuto metodu přímo.
 
 ##  <a name="invalidate"></a>CWnd:: Invalidate
 
-Zruší platnost celé klientské oblasti `CWnd`nástroje.
+Zruší platnost celé `CWnd`oblasti klienta.
 
 ```
 void Invalidate(BOOL bErase = TRUE);
@@ -5261,7 +5261,7 @@ Klientská oblast je označena pro malování, když dojde k další [WM_PAINT](
 
 Parametr *bErase* určuje, zda má být pozadí v rámci oblasti aktualizace smazáno při zpracování oblasti aktualizace. Pokud má *bErase* hodnotu true, pozadí se vymaže při volání členské funkce [BeginPaint](#beginpaint) ; Pokud má *bErase* hodnotu false, pozadí zůstane beze změny. Pokud má *bErase* hodnotu true pro libovolnou část oblasti aktualizace, je vymazáno pozadí v celé oblasti, nikoli pouze v dané části.
 
-Systém Windows pošle zprávu [WM_PAINT](#onpaint) vždy `CWnd` , když oblast aktualizace není prázdná a ve frontě aplikací pro toto okno nejsou žádné další zprávy.
+Systém Windows pošle [WM_PAINTovou](#onpaint) zprávu pokaždé, když je oblast aktualizace `CWnd` prázdná a ve frontě aplikací pro toto okno nejsou žádné další zprávy.
 
 ### <a name="example"></a>Příklad
 
@@ -5269,7 +5269,7 @@ Systém Windows pošle zprávu [WM_PAINT](#onpaint) vždy `CWnd` , když oblast 
 
 ##  <a name="invalidaterect"></a>CWnd:: InvalidateRect
 
-Zruší platnost klientské oblasti v rámci daného obdélníku přidáním tohoto obdélníku do `CWnd` oblasti aktualizace.
+Zruší platnost klientské oblasti v rámci daného obdélníku přidáním tohoto obdélníku do oblasti aktualizace `CWnd`.
 
 ```
 void InvalidateRect(
@@ -5280,22 +5280,22 @@ void InvalidateRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na `CRect` objekt nebo [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) obsahující obdélník (v souřadnicích klienta), který má být přidán do oblasti aktualizace. Pokud má *lpRect* hodnotu null, do oblasti se přidá celá klientská oblast.
+Odkazuje na objekt `CRect` nebo [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) obsahující obdélník (v souřadnicích klienta), který má být přidán do oblasti aktualizace. Pokud má *lpRect* hodnotu null, do oblasti se přidá celá klientská oblast.
 
 *bErase*<br/>
 Určuje, zda má být pozadí v rámci oblasti aktualizace smazáno.
 
 ### <a name="remarks"></a>Poznámky
 
-Neověřený obdélník, spolu se všemi ostatními oblastmi v oblasti aktualizace, je při odeslání další zprávy [WM_PAINT](#onpaint) označen pro malování. Neověřené oblasti se sčítají v oblasti aktualizace až do zpracování oblasti, když dojde k dalšímu volání WM_PAINT nebo dokud není oblast ověřena členskou funkcí [ValidateRect](#validaterect) nebo [ValidateRgn](#validatergn) .
+Neověřený obdélník, společně se všemi ostatními oblastmi v oblasti aktualizace, je při odeslání další [WM_PAINT](#onpaint) zprávy označen pro malování. Neověřené oblasti se sčítají v oblasti aktualizace, dokud se nezpracuje oblast, když dojde k dalšímu WM_PAINT volání, nebo dokud se oblast neověřuje pomocí členské funkce [ValidateRect](#validaterect) nebo [ValidateRgn](#validatergn) .
 
 Parametr *bErase* určuje, zda má být pozadí v rámci oblasti aktualizace smazáno při zpracování oblasti aktualizace. Pokud má *bErase* hodnotu true, pozadí se vymaže při volání členské funkce [BeginPaint](#beginpaint) ; Pokud má *bErase* hodnotu false, pozadí zůstane beze změny. Pokud má *bErase* hodnotu true pro jakoukoli část oblasti aktualizace, pozadí v celé oblasti je smazáno, nikoli pouze v dané části.
 
-Systém Windows pošle zprávu [WM_PAINT](#onpaint) vždy `CWnd` , když oblast aktualizace není prázdná a ve frontě aplikací pro toto okno nejsou žádné další zprávy.
+Systém Windows pošle [WM_PAINTovou](#onpaint) zprávu pokaždé, když je oblast aktualizace `CWnd` prázdná a ve frontě aplikací pro toto okno nejsou žádné další zprávy.
 
 ##  <a name="invalidatergn"></a>CWnd:: InvalidateRgn
 
-Zruší platnost klientské oblasti v rámci dané oblasti tak, že ji přidáte do aktuální oblasti `CWnd`aktualizace.
+Zruší platnost klientské oblasti v rámci dané oblasti tak, že ji přidáte do aktuální oblasti aktualizace `CWnd`.
 
 ```
 void InvalidateRgn(
@@ -5313,11 +5313,11 @@ Určuje, zda má být pozadí v rámci oblasti aktualizace smazáno.
 
 ### <a name="remarks"></a>Poznámky
 
-Neověřená oblast spolu se všemi ostatními oblastmi v oblasti aktualizace je označena pro malování při příštím odeslání zprávy [WM_PAINT](#onpaint) . Neověřené oblasti se sčítají v oblasti aktualizace, dokud se nezpracuje oblast při příštím odeslání zprávy WM_PAINT nebo dokud není tato oblast ověřena členskou funkcí [ValidateRect](#validaterect) nebo [ValidateRgn](#validatergn) .
+Neověřená oblast, společně se všemi ostatními oblastmi v oblasti aktualizace, je při příštím odeslání [WM_PAINT](#onpaint) označena pro malování. Neověřené oblasti se sčítají v oblasti aktualizace, dokud se nezpracuje oblast, když se pošle WM_PAINT zpráva nebo dokud se tato oblast neověřuje pomocí členské funkce [ValidateRect](#validaterect) nebo [ValidateRgn](#validatergn) .
 
 Parametr *bErase* určuje, zda má být pozadí v rámci oblasti aktualizace smazáno při zpracování oblasti aktualizace. Pokud má *bErase* hodnotu true, pozadí se vymaže při volání členské funkce [BeginPaint](#beginpaint) ; Pokud má *bErase* hodnotu false, pozadí zůstane beze změny. Pokud má *bErase* hodnotu true pro libovolnou část oblasti aktualizace, je vymazáno pozadí v celé oblasti, nikoli pouze v dané části.
 
-Systém Windows pošle zprávu [WM_PAINT](#onpaint) vždy `CWnd` , když oblast aktualizace není prázdná a ve frontě aplikací pro toto okno nejsou žádné další zprávy.
+Systém Windows pošle [WM_PAINTovou](#onpaint) zprávu pokaždé, když je oblast aktualizace `CWnd` prázdná a ve frontě aplikací pro toto okno nejsou žádné další zprávy.
 
 Daná oblast musí být dřív vytvořená jednou z funkcí region.
 
@@ -5341,7 +5341,7 @@ void AFX_CDECL InvokeHelper(
 Určuje metodu nebo vlastnost, která má být vyvolána.
 
 *wFlags*<br/>
-Příznaky popisující kontext volání metody `IDispatch::Invoke`.
+Příznaky popisující kontext volání `IDispatch::Invoke`.
 
 *vtRet*<br/>
 Určuje typ vrácené hodnoty. Možné hodnoty naleznete v části poznámky pro [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
@@ -5350,7 +5350,7 @@ Určuje typ vrácené hodnoty. Možné hodnoty naleznete v části poznámky pro
 Adresa proměnné, která bude přijímat hodnotu vlastnosti nebo návratovou hodnotu. Musí odpovídat typu zadanému parametrem *vtRet*.
 
 *pbParamInfo*<br/>
-Ukazatel na řetězec zakončený hodnotou NULL bajtů, který určuje typy parametrů následující po *pbParamInfo*. Možné hodnoty naleznete v části poznámky pro `COleDispatchDriver::InvokeHelper`.
+Ukazatel na řetězec zakončený hodnotou NULL bajtů, který určuje typy parametrů následující po *pbParamInfo*. Možné hodnoty najdete v části poznámky pro `COleDispatchDriver::InvokeHelper`.
 
 *...*<br/>
 Seznam proměnných parametrů typu určených v *pbParamInfo*.
@@ -5359,16 +5359,16 @@ Seznam proměnných parametrů typu určených v *pbParamInfo*.
 
 Parametr *pbParamInfo* určuje typy parametrů předaných metodě nebo vlastnosti. Seznam proměnných argumentů je reprezentován *...* v deklaraci syntaxe.
 
-Tato funkce převede parametry na hodnoty VARIANTARG a potom vyvolá `IDispatch::Invoke` metodu na ovládacím prvku ActiveX. Pokud volání `IDispatch::Invoke` selže, tato funkce vyvolá výjimku. Pokud Code (Stavový kód) vrácený funkcí `IDispatch::Invoke` je DISP_E_EXCEPTION, tato funkce vyvolá objekt [COleException](../../mfc/reference/coleexception-class.md) , jinak vyvolá [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
+Tato funkce převede parametry na hodnoty VARIANTARG a poté vyvolá metodu `IDispatch::Invoke` v ovládacím prvku ActiveX. Pokud volání `IDispatch::Invoke` selže, tato funkce vyvolá výjimku. Pokud je Code (Stavový kód) vrácený `IDispatch::Invoke` DISP_E_EXCEPTION, tato funkce vyvolá objekt [COleException](../../mfc/reference/coleexception-class.md) , jinak vyvolá [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
 > [!NOTE]
-> Tato funkce by měla být volána pouze pro `CWnd` objekt, který představuje ovládací prvek ActiveX.
+> Tato funkce by měla být volána pouze pro objekt `CWnd`, který představuje ovládací prvek ActiveX.
 
-Další informace o použití této členské funkce s kontejnery ovládacích prvků ActiveX naleznete v článku [kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru](../../mfc/programming-activex-controls-in-a-activex-control-container.md)ovládacího prvku ActiveX.
+Další informace o použití této členské funkce s kontejnery ovládacích prvků ActiveX naleznete v článku [kontejnery ovládacích prvků ActiveX: programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
 ##  <a name="ischild"></a>CWnd::-Child
 
-Označuje, zda je okno určené parametrem *pWnd* podřízeným oknem nebo jiným přímým `CWnd`potomkem.
+Označuje, zda je okno určené parametrem *pWnd* podřízeným oknem nebo jiným přímým potomkem `CWnd`.
 
 ```
 BOOL IsChild(const CWnd* pWnd) const;
@@ -5381,11 +5381,11 @@ Identifikuje okno, které se má testovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje výsledek funkce. Hodnota je nenulová, pokud okno identifikovaný *pWnd* je podřízené okno `CWnd`; jinak 0.
+Určuje výsledek funkce. Hodnota je nenulová, pokud okno identifikovaný *pWnd* je podřízené okno `CWnd`; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Podřízené okno je přímým potomkem `CWnd` , `CWnd` Pokud je objekt v řetězu nadřazených oken, který vede z původního překryvného okna do podřízeného okna.
+Podřízené okno je přímým potomkem `CWnd`, pokud je objekt `CWnd` v řetězci nadřazeného okna, které vede z původního překryvného okna do podřízeného okna.
 
 ##  <a name="isd2dsupportenabled"></a>CWnd:: IsD2DSupportEnabled
 
@@ -5414,15 +5414,15 @@ Odkazuje na strukturu [MSG](/windows/win32/api/winuser/ns-winuser-msg) , která 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje, zda členská funkce zpracovala danou zprávu. Je nenulové, pokud byla zpráva zpracována; v opačném případě 0. Pokud je vrácená hodnota 0, zavolejte členskou funkci [CWnd::P retranslatemessage](#pretranslatemessage) základní třídy pro zpracování zprávy. V přepsání `CWnd::PreTranslateMessage` členské funkce kód vypadá takto:
+Určuje, zda členská funkce zpracovala danou zprávu. Je nenulové, pokud byla zpráva zpracována; v opačném případě 0. Pokud je vrácená hodnota 0, zavolejte členskou funkci [CWnd::P retranslatemessage](#pretranslatemessage) základní třídy pro zpracování zprávy. V přepsání `CWnd::PreTranslateMessage` členské funkce vypadá kód takto:
 
 [!code-cpp[NVC_MFCWindowing#100](../../mfc/reference/codesnippet/cpp/cwnd-class_40.cpp)]
 
 ### <a name="remarks"></a>Poznámky
 
-`IsDialogMessage` Když funkce zpracuje zprávu, zkontroluje zprávy klávesnice a převede je na příkazy výběru pro příslušné dialogové okno. Například Klávesa TAB vybere další ovládací prvek nebo skupinu ovládacích prvků a klávesa šipka dolů vybere další ovládací prvek ve skupině.
+Když funkce `IsDialogMessage` zpracuje zprávu, zkontroluje zprávy klávesnice a převede je na příkazy výběru pro příslušné dialogové okno. Například Klávesa TAB vybere další ovládací prvek nebo skupinu ovládacích prvků a klávesa šipka dolů vybere další ovládací prvek ve skupině.
 
-Nemusíte předat zprávu zpracovávanou `IsDialogMessage` funkcí Windows Functions [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) nebo [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) , protože již byla zpracována.
+Nemusíte předat zprávu zpracovávanou `IsDialogMessage` [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) nebo [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows Functions, protože již byla zpracována.
 
 ##  <a name="isdlgbuttonchecked"></a>CWnd:: IsDlgButtonChecked
 
@@ -5461,7 +5461,7 @@ TRUE, pokud je povoleno dynamické rozložení; v opačném případě FALSE.
 
 ##  <a name="isiconic"></a>CWnd::-Icon
 
-Určuje, `CWnd` jestli je minimalizováný (ikonickým).
+Určuje, zda je `CWnd` minimalizováno (ikonickým).
 
 ```
 BOOL IsIconic() const;
@@ -5469,7 +5469,7 @@ BOOL IsIconic() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, `CWnd` Pokud je minimalizováno; jinak 0.
+Nenulové, pokud je `CWnd` minimalizováno; v opačném případě 0.
 
 ### <a name="example"></a>Příklad
 
@@ -5477,7 +5477,7 @@ Nenulové, `CWnd` Pokud je minimalizováno; jinak 0.
 
 ##  <a name="istouchwindow"></a>CWnd:: IsTouchWindow
 
-Určuje, `CWnd` jestli má dotykovou podporu.
+Určuje, jestli má `CWnd` podporu dotykového ovládání.
 
 ```
 BOOL IsTouchWindow() const;
@@ -5485,13 +5485,13 @@ BOOL IsTouchWindow() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, `CWnd` Pokud má dotykovou podporu; v opačném případě false.
+TRUE, pokud má `CWnd` podporu dotykového ovládání; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="iswindowenabled"></a>CWnd:: IsWindowEnabled
 
-Určuje, `CWnd` jestli je povolený vstup z myši a klávesnice.
+Určuje, zda je u vstupu myší a klávesnicí povoleno `CWnd`.
 
 ```
 BOOL IsWindowEnabled() const;
@@ -5499,7 +5499,7 @@ BOOL IsWindowEnabled() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, `CWnd` Pokud je povoleno; jinak 0.
+Nenulové, pokud je povoleno `CWnd`; v opačném případě 0.
 
 ### <a name="example"></a>Příklad
 
@@ -5515,13 +5515,13 @@ BOOL IsWindowVisible() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, `CWnd` Pokud je viditelné (má nastaven bit stylu [WS_VISIBLE](styles-used-by-mfc.md#window-styles) a je viditelné nadřazené okno). Vzhledem k tomu, že vrácená hodnota odráží stav bitu ve stylu WS_VISIBLE, návratová hodnota může být nenulová, `CWnd` i když je zcela zakryta jinými okny.
+Nenulové, pokud je `CWnd` viditelné (má nastaven bit stylu [WS_VISIBLE](styles-used-by-mfc.md#window-styles) a nadřazené okno je viditelné). Vzhledem k tomu, že vrácená hodnota odráží stav bitu WS_VISIBLEho stylu, návratová hodnota může být nenulová, přestože `CWnd` je zcela zakryta jinými okny.
 
 ### <a name="remarks"></a>Poznámky
 
 Okno má stav viditelnosti, který ukazuje bit stylu WS_VISIBLE. Pokud je tento bit stylu nastaven s voláním členské funkce [: ShowWindow](#showwindow) , okno se zobrazí a následné vykreslení okna se zobrazí, pokud má okno nastaven bit stylu.
 
-Všechny kresby na okno, které má styl WS_VISIBLE, se nezobrazí, pokud je okno pokryto jinými okny nebo je oříznuto jeho nadřazeným oknem.
+Jakýkoli výkres do okna, které má WS_VISIBLE styl, nebude zobrazen, pokud je okno pokryto jinými okny nebo oříznuto jeho nadřazeným oknem.
 
 ### <a name="example"></a>Příklad
 
@@ -5529,7 +5529,7 @@ Všechny kresby na okno, které má styl WS_VISIBLE, se nezobrazí, pokud je okn
 
 ##  <a name="iszoomed"></a>CWnd:: s přiblížením
 
-Určuje, `CWnd` zda byl maximalizován.
+Určuje, zda byl `CWnd` maximalizován.
 
 ```
 BOOL IsZoomed() const;
@@ -5537,11 +5537,11 @@ BOOL IsZoomed() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, `CWnd` Pokud je maximalizováno; jinak 0.
+Nenulové, pokud je `CWnd` maximalizováno; v opačném případě 0.
 
 ##  <a name="killtimer"></a>CWnd:: KillTimer
 
-Ukončuje událost časovače identifikovanou *nIDEvent* ze staršího volání metody `SetTimer`.
+Ukončuje událost časovače identifikovanou *nIDEvent* ze staršího volání `SetTimer`.
 
 ```
 BOOL KillTimer(UINT_PTR nIDEvent);
@@ -5554,11 +5554,11 @@ Hodnota události časovače předaná metodě [SetTimer](#settimer)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje výsledek funkce. Hodnota je nenulová, pokud byla událost ukončena. Pokud `KillTimer` členská funkce nemůže najít zadanou událost časovače, je 0.
+Určuje výsledek funkce. Hodnota je nenulová, pokud byla událost ukončena. Je 0, pokud členská funkce `KillTimer` nenašla zadanou událost časovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Nedokončené zprávy [WM_TIMER](#ontimer) přidružené k časovači se z fronty zpráv neodstraňují.
+Čekající zprávy [WM_TIMER](#ontimer) přidružené k časovači se z fronty zpráv neodstraňují.
 
 ### <a name="example"></a>Příklad
 
@@ -5595,21 +5595,21 @@ BOOL LockWindowUpdate();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je funkce úspěšná. Je 0, pokud dojde k chybě nebo pokud se `LockWindowUpdate` funkce použila k uzamknutí jiného okna.
+Nenulové, pokud je funkce úspěšná. Je 0, pokud dojde k chybě nebo pokud byla funkce `LockWindowUpdate` použita k uzamknutí jiného okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Uzamčené okno nelze přesunout. V jednom okamžiku může být uzamčeno pouze jedno okno. Chcete-li odemknout okno uzamčeno `LockWindowUpdate`, zavolejte [UnlockWindowUpdate](#unlockwindowupdate).
+Uzamčené okno nelze přesunout. V jednom okamžiku může být uzamčeno pouze jedno okno. Chcete-li odemknout okno uzamčené s `LockWindowUpdate`, zavolejte [UnlockWindowUpdate](#unlockwindowupdate).
 
-Pokud aplikace s uzamčeným oknem (nebo libovolnými uzamčenými podřízenými okny) volá funkci Windows [GetDC,](/windows/win32/api/winuser/nf-winuser-getdc) [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) nebo [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) , volaná funkce vrátí kontext zařízení, jehož viditelná oblast je prázdná. K této chybě dojde, dokud aplikace nezamkne okno voláním `UnlockWindowUpdate` členské funkce.
+Pokud aplikace s uzamčeným oknem (nebo libovolnými uzamčenými podřízenými okny) volá funkci Windows [GetDC,](/windows/win32/api/winuser/nf-winuser-getdc) [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) nebo [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) , volaná funkce vrátí kontext zařízení, jehož viditelná oblast je prázdná. K této chybě dojde, dokud aplikace nezamkne okno voláním členské funkce `UnlockWindowUpdate`.
 
-V případě, že jsou aktualizace oken zamčeny, systém sleduje ohraničující obdélník všech operací vykreslování na kontextech zařízení přidružených k uzamčenému oknu. Když je vykreslování znovu povoleno, v uzamčeném okně a v jeho podřízených oknech dojde k zrušení platnosti tohoto ohraničujícího obdélníku k vynucení, aby obrazovka aktualizovala [WM_PAINT](/windows/win32/gdi/wm-paint) zprávu. Pokud nedošlo k žádnému vykreslení v době, kdy byly aktualizace okna zamčeny, není neověřena žádná oblast.
+V případě, že jsou aktualizace oken zamčeny, systém sleduje ohraničující obdélník všech operací vykreslování na kontextech zařízení přidružených k uzamčenému oknu. Když je vykreslování znovu povoleno, v uzamčeném okně a v jeho podřízených oknech dojde k zrušení platnosti tohoto ohraničujícího obdélníku k vynucení, aby se při aktualizaci obrazovky mohla [WM_PAINT](/windows/win32/gdi/wm-paint) zpráva. Pokud nedošlo k žádnému vykreslení v době, kdy byly aktualizace okna zamčeny, není neověřena žádná oblast.
 
-Členská funkce neumožňuje, aby dané okno bylo neviditelné a nevymazalo WS_VISIBLEový bit stylu. [](styles-used-by-mfc.md#window-styles) `LockWindowUpdate`
+Členská funkce `LockWindowUpdate` nezobrazuje dané okno jako neviditelné a nemaže [WS_VISIBLE](styles-used-by-mfc.md#window-styles) bit stylu.
 
 ##  <a name="m_hwnd"></a>CWnd:: m_hWnd
 
-Popisovač okna připojeného k tomuto `CWnd`systému Windows.
+Popisovač okna systému Windows připojeného k tomuto `CWnd`.
 
 ```
 HWND m_hWnd;
@@ -5617,7 +5617,7 @@ HWND m_hWnd;
 
 ### <a name="remarks"></a>Poznámky
 
-`m_hWnd` Datový člen je veřejná proměnná typu HWND.
+Datový člen `m_hWnd` je veřejná proměnná typu HWND.
 
 ##  <a name="mapwindowpoints"></a>CWnd:: MapWindowPoints
 
@@ -5646,7 +5646,7 @@ Určuje obdélník, jehož body mají být převedeny. První verze této funkce
 Ukazatel na pole [struktury bodu](/windows/win32/api/windef/ns-windef-point) , který obsahuje sadu bodů, které mají být převedeny.
 
 *nCount*<br/>
-Určuje počet `POINT` struktur v poli, na které odkazuje *lpPoint*.
+Určuje počet `POINT` struktur v poli, na který odkazuje *lpPoint*.
 
 ##  <a name="messagebox"></a>CWnd:: MessageBox
 
@@ -5662,12 +5662,12 @@ int MessageBox(
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-Odkazuje na `CString` objekt nebo řetězec zakončený hodnotou null obsahující zprávu, která se má zobrazit.
+Odkazuje na objekt `CString` nebo řetězec zakončený hodnotou null obsahující zprávu, která se má zobrazit.
 
 *lpszCaption*<br/>
-Odkazuje na `CString` objekt nebo řetězec zakončený hodnotou null, který bude použit pro titulek zprávy-box. Pokud má *lpszCaption* hodnotu null, použije se výchozí titulek "Error".
+Odkazuje na objekt `CString` nebo řetězec zakončený hodnotou null, který bude použit pro titulek zprávy-box. Pokud má *lpszCaption* hodnotu null, použije se výchozí titulek "Error".
 
-*nType*<br/>
+*Noznámení*<br/>
 Určuje obsah a chování okna se zprávou.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5682,10 +5682,10 @@ Následující příklad ukazuje různé systémové ikony, které lze použít 
 
 |||
 |-|-|
-|![Ikona &#40;zastavení&#41; x]–(../../mfc/reference/media/vc364f1.gif "&#41; ikona &#40;zastavení")|MB_ICONHAND, MB_ICONSTOP a MB_ICONERROR|
-|![Máte &#40;lepší informace? ikona &#41; ](../../mfc/reference/media/vc364f2.gif " &#40;pomocníka&#41; ? ikona")|MB_ICONQUESTION|
-|![&#41; Důležitá &#40; &#33; ikona](../../mfc/reference/media/vc364f3.gif "důležité &#40; &#33; &#41; ")|MB_ICONEXCLAMATION a MB_ICONWARNING|
-|![Informace o&#41; &#40;]i ikona(../../mfc/reference/media/vc364f4.gif " &#40;&#41; ")|MB_ICONASTERISK a MB_ICONINFORMATION|
+|![Ikona &#40;zastavení&#41; x](../../mfc/reference/media/vc364f1.gif "Ikona &#40;zastavení&#41; x")|MB_ICONHAND, MB_ICONSTOP a MB_ICONERROR|
+|![Máte &#40;lepší informace? &#41; ikona](../../mfc/reference/media/vc364f2.gif "Máte &#40;lepší informace? &#41; ikona")|MB_ICONQUESTION|
+|![&#40; &#33; Důležitá &#41; ikona](../../mfc/reference/media/vc364f3.gif "&#40; &#33; Důležitá &#41; ikona")|MB_ICONEXCLAMATION a MB_ICONWARNING|
+|![&#41; Ikona &#40;informace](../../mfc/reference/media/vc364f4.gif "&#41; Ikona &#40;informace")|MB_ICONASTERISK a MB_ICONINFORMATION|
 
 ### <a name="example"></a>Příklad
 
@@ -5711,7 +5711,7 @@ Určuje styly oken, které mají být odebrány během úpravy stylu.
 Určuje styly oken, které mají být přidány během úpravy stylu.
 
 *nFlags*<br/>
-Příznaky, které mají být předány do [SetWindowPos](#setwindowpos)nebo `SetWindowPos` nula, pokud by neměly být volány. Výchozí hodnota je nula. Seznam přednastavených příznaků najdete v části s poznámkami.
+Příznaky, které mají být předány do [SetWindowPos](#setwindowpos), nebo nula, pokud by neměla být volána `SetWindowPos`. Výchozí hodnota je nula. Seznam přednastavených příznaků najdete v části s poznámkami.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5721,7 +5721,7 @@ Nenulové, pokud se styl úspěšně upravil; v opačném případě 0.
 
 Styly, které mají být přidány nebo odebrány, lze kombinovat pomocí operátoru OR&#124;(). Informace o dostupných stylech oken najdete v tématu věnovaném [stylům okna](/windows/win32/winmsg/window-styles) v tématech a funkci [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v Windows SDK.
 
-Pokud je *nFlags* nenulové, `ModifyStyle` zavolá funkci rozhraní Windows API [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) a znovu vykreslí okno kombinováním *nFlags* s následujícími čtyřmi příznaky:
+Pokud je *nFlags* nenulová, `ModifyStyle` zavolá funkci rozhraní Windows API [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) a znovu vykreslí okno kombinováním *nFlags* s následujícími čtyřmi příznaky:
 
 - SWP_NOSIZE zachová aktuální velikost.
 
@@ -5729,12 +5729,12 @@ Pokud je *nFlags* nenulové, `ModifyStyle` zavolá funkci rozhraní Windows API 
 
 - SWP_NOZORDER zachová aktuální pořadí Z.
 
-- SWP_NOACTIVATE neaktivuje okno.
+- SWP_NOACTIVATE okno neaktivuje.
 
 Chcete-li upravit rozšířené styly okna, přečtěte si téma [ModifyStyleEx](#modifystyleex).
 
 > [!NOTE]
-> Pro některé styly v určitých ovládacích prvcích (například styl ES_READONLY v ovládacím prvku pro úpravy) nemusí správně `ModifyStyle` změnit styl, protože ovládací prvek může potřebovat provést speciální interní zpracování. V těchto případech bude k dispozici odpovídající zpráva pro změnu stylu (EM_SETREADONLY v uvedeném příkladu).
+> Pro některé styly v určitých ovládacích prvcích (například styl ES_READONLY v ovládacím prvku pro úpravy) `ModifyStyle` nemusí správně změnit styl, protože ovládací prvek může potřebovat provést speciální interní zpracování. V těchto případech bude k dispozici odpovídající zpráva pro změnu stylu (EM_SETREADONLY v uvedeném příkladu).
 
 ### <a name="example"></a>Příklad
 
@@ -5760,7 +5760,7 @@ Určuje rozšířené styly, které mají být odebrány během úpravy stylu.
 Určuje rozšířené styly, které mají být přidány během úpravy stylu.
 
 *nFlags*<br/>
-Příznaky, které mají být předány do [SetWindowPos](#setwindowpos)nebo `SetWindowPos` nula, pokud by neměly být volány. Výchozí hodnota je nula. Seznam přednastavených příznaků najdete v části s poznámkami.
+Příznaky, které mají být předány do [SetWindowPos](#setwindowpos), nebo nula, pokud by neměla být volána `SetWindowPos`. Výchozí hodnota je nula. Seznam přednastavených příznaků najdete v části s poznámkami.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5770,7 +5770,7 @@ Nenulové, pokud se styl úspěšně upravil; v opačném případě 0.
 
 Styly, které mají být přidány nebo odebrány, lze kombinovat pomocí operátoru OR&#124;(). Další informace o dostupných rozšířených stylech najdete v tématech [Rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) v této příručce a [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v Windows SDK.
 
-Pokud je *nFlags* nenulové, `ModifyStyleEx` zavolá funkci rozhraní Windows API [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) a znovu vykreslí okno kombinováním *nFlags* s následujícími čtyřmi příznaky:
+Pokud je *nFlags* nenulová, `ModifyStyleEx` zavolá funkci rozhraní Windows API [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) a znovu vykreslí okno kombinováním *nFlags* s následujícími čtyřmi příznaky:
 
 - SWP_NOSIZE zachová aktuální velikost.
 
@@ -5778,7 +5778,7 @@ Pokud je *nFlags* nenulové, `ModifyStyleEx` zavolá funkci rozhraní Windows AP
 
 - SWP_NOZORDER zachová aktuální pořadí Z.
 
-- SWP_NOACTIVATE neaktivuje okno.
+- SWP_NOACTIVATE okno neaktivuje.
 
 Chcete-li upravit systém Windows pomocí běžných stylů oken, přečtěte si téma [ModifyStyle](#modifystyle).
 
@@ -5805,10 +5805,10 @@ void MoveWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Určuje novou pozici levé strany `CWnd`.
 
-*y*<br/>
+*požadované*<br/>
 Určuje novou pozici horní části `CWnd`.
 
 *nWidth*<br/>
@@ -5818,16 +5818,16 @@ Určuje novou šířku `CWnd`.
 Určuje novou výšku `CWnd`.
 
 *bRepaint*<br/>
-Určuje, `CWnd` zda má být překresleno. Je-li `CWnd` nastavena hodnota true, obdrží zprávu [WM_PAINT](/windows/win32/gdi/wm-paint) [ve své obslužné](#onpaint) rutině zprávy o tom, jak je obvyklé. Pokud má tento parametr hodnotu FALSE, nedochází k žádnému překreslení jakéhokoli druhu. To platí pro klientskou oblast, na neklientskou oblast (včetně názvu a posuvníků) a do jakékoli části nadřazeného okna, které se v důsledku `CWnd`přesunu nekryje. Pokud má tento parametr hodnotu false, aplikace musí explicitně zrušit platnost nebo překreslit všechny části `CWnd` a nadřazené okno, které musí být překresleny.
+Určuje, zda má být překreslena `CWnd`. Pokud má hodnotu TRUE, `CWnd` obdrží zprávu [WM_PAINT](/windows/win32/gdi/wm-paint) ve [své obslužné](#onpaint) rutině zprávy o tom, že je to obvyklé. Pokud má tento parametr hodnotu FALSE, nedochází k žádnému překreslení jakéhokoli druhu. To platí pro klientskou oblast, na neklientskou oblast (včetně názvu a posuvníků) a do jakékoli části nadřazeného okna, které se v důsledku přesunutí `CWnd`nekryje. Je-li tento parametr FALSE, aplikace musí explicitně zrušit platnost nebo překreslit všechny části `CWnd` a nadřazené okno, které musí být překresleny.
 
 *lpRect*<br/>
 Objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [Struktura Rect](/windows/win32/api/windef/ns-windef-rect) , která určuje novou velikost a polohu.
 
 ### <a name="remarks"></a>Poznámky
 
-V případě objektu nejvyšší úrovně `CWnd` jsou parametry *x* a *y* relativní vzhledem k levému hornímu rohu obrazovky. U podřízeného `CWnd` objektu jsou relativní vzhledem k levému hornímu rohu klientské oblasti v nadřazeném okně.
+Pro objekt `CWnd` nejvyšší úrovně jsou parametry *x* a *y* relativní vzhledem k levému hornímu rohu obrazovky. Pro podřízený objekt `CWnd` jsou relativní vzhledem k levému hornímu rohu klientské oblasti v nadřazeném okně.
 
-Funkce pošle zprávu [WM_GETMINMAXINFO.](#ongetminmaxinfo) `MoveWindow` Zpracování této zprávy vám `CWnd` dává příležitost změnit výchozí hodnoty pro největší a nejmenší možné Windows. Překročí- `MoveWindow` li parametry členské funkce tyto hodnoty, mohou být hodnoty nahrazeny minimální nebo maximální hodnotou v obslužné rutině WM_GETMINMAXINFO.
+Funkce `MoveWindow` odesílá zprávu [WM_GETMINMAXINFO](#ongetminmaxinfo) . Při zpracování této zprávy je `CWnd` příležitost upravit výchozí hodnoty pro největší a nejmenší možné Windows. Překročí-li parametry členské funkce `MoveWindow` tyto hodnoty, mohou být hodnoty nahrazeny minimální nebo maximální hodnotou v obslužné rutině WM_GETMINMAXINFO.
 
 ### <a name="example"></a>Příklad
 
@@ -5861,7 +5861,7 @@ Tato členská funkce emuluje funkčnost funkce [NotifyWinEvent](/windows/win32/
 
 ##  <a name="onactivate"></a>CWnd:: Activate
 
-Rozhraní volá tuto členskou funkci při `CWnd` aktivaci nebo deaktivaci objektu.
+Rozhraní volá tuto členskou funkci, když se aktivuje nebo deaktivuje objekt `CWnd`.
 
 ```
 afx_msg void OnActivate(
@@ -5873,25 +5873,25 @@ afx_msg void OnActivate(
 ### <a name="parameters"></a>Parametry
 
 *nInformace*<br/>
-Určuje, zda `CWnd` se má aktivovat nebo deaktivovat. Může to být jedna z následujících hodnot:
+Určuje, jestli se `CWnd` aktivuje nebo deaktivuje. Může to být jedna z následujících hodnot:
 
-- WA_INACTIVE okno se deaktivuje.
+- WA_INACTIVE dojde k deaktivaci okna.
 
-- WA_ACTIVE okno se aktivuje pomocí jiné metody než kliknutí myší (například pomocí rozhraní klávesnice pro výběr okna).
+- WA_ACTIVE okno je aktivováno pomocí jiné metody než kliknutí myší (například pomocí rozhraní klávesnice pro výběr okna).
 
-- WA_CLICKACTIVE okno se aktivuje kliknutím myši.
+- WA_CLICKACTIVE okno je aktivováno kliknutím myši.
 
 *pWndOther*<br/>
-Ukazatel na `CWnd` aktivovaný nebo deaktivovaný. Ukazatel může mít hodnotu NULL a může být dočasný.
+Ukazatel na aktivaci nebo deaktivaci `CWnd`. Ukazatel může mít hodnotu NULL a může být dočasný.
 
 *bMinimized*<br/>
 Určuje minimalizovaný stav `CWnd` aktivace nebo deaktivace. Hodnota TRUE značí, že okno je minimalizováno.
 
-Při hodnotě true `CWnd` se aktivuje. v opačném případě se deaktivuje.
+Při hodnotě TRUE se `CWnd` aktivuje; jinak deaktivováno.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je objekt aktivován kliknutím myši, bude také obdržet volání členské funkce [OnMouseActivate.](#onmouseactivate) `CWnd`
+Pokud je objekt `CWnd` aktivován pomocí kliknutí myší, zobrazí se také volání členské funkce [OnMouseActivate](#onmouseactivate) .
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -5909,10 +5909,10 @@ afx_msg void OnActivateApp(
 ### <a name="parameters"></a>Parametry
 
 *bActive*<br/>
-Určuje, zda `CWnd` se má aktivovat nebo deaktivovat. Hodnota true znamená `CWnd` , že se aktivuje. FALSE znamená, `CWnd` že dojde k deaktivaci.
+Určuje, jestli se `CWnd` aktivuje nebo deaktivuje. Hodnota TRUE znamená, že se aktivuje `CWnd`. FALSE znamená, že se deaktivuje `CWnd`.
 
 *dwThreadID*<br/>
-Určuje hodnotu ID vlákna. Pokud má *bActive* hodnotu true, *dwThreadId* identifikuje vlákno `CWnd` , které vlastní deaktivované. Pokud je *bActive* false, *dwThreadId* identifikuje vlákno `CWnd` , které vlastní aktivované.
+Určuje hodnotu ID vlákna. Pokud má *bActive* hodnotu true, *dwThreadId* identifikuje vlákno, které vlastní deaktivovaný `CWnd`. Pokud je *BACTIVE* false, *dwThreadId* identifikuje vlákno, které vlastní aktivované `CWnd`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -5935,11 +5935,11 @@ virtual BOOL OnAmbientProperty(
 *pSite*<br/>
 Ukazatel na web ovládacího prvku, který požadoval vlastnost Ambient.
 
-*dispid*<br/>
+*DISPID*<br/>
 ID odeslání požadované vnější vlastnosti.
 
 *pvar*<br/>
-Ukazatel na strukturu přidělenou `VARIANT` volajícím, přes kterou se vrátí hodnota okolní vlastnosti.
+Ukazatel na strukturu `VARIANT` přidělenou volajícímu, pomocí které se vrátí hodnota okolní vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5965,8 +5965,8 @@ afx_msg void OnAppCommand(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pWnd*|pro Ukazatel na `CWnd` objekt, který představuje okno, ve kterém uživatel klikl na příkazové tlačítko nebo stiskl klávesu Command. Toto okno může být podřízené okno okna, které přijímá zprávu.|
-|*nCmd*|pro Určuje příkaz aplikace. Seznam možných hodnot naleznete v příkazech v oddílu cmd parametru *lParam* *příkazu* [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand).|
+|*pWnd*|pro Ukazatel na objekt `CWnd`, který představuje okno, ve kterém uživatel klikl na příkazové tlačítko nebo stiskl klávesu Command. Toto okno může být podřízené okno okna, které přijímá zprávu.|
+|*nCmd*|pro Určuje příkaz aplikace. Seznam možných hodnot naleznete v tématu příkazy v oddílu *cmd* parametru *lParam* [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand).|
 |*nDevice*|pro Vstupní zařízení, které vygenerovalo vstupní událost. Seznam možných hodnot naleznete v části zařízení v parametru *uDevice* parametru *lParam* [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand).|
 |*nKey*|pro Označuje všechny virtuální klíče, které jsou mimo provoz, například klávesu CTRL nebo levé tlačítko myši. Seznam možných hodnot naleznete v tématu klíče v části *dwKeys* parametru *lParam* [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand). Další informace naleznete v části "parametry zprávy" v tématu [o vstupu myši](/windows/win32/inputdev/about-mouse-input).|
 
@@ -5979,7 +5979,7 @@ Tato metoda obdrží oznámení [WM_APPCOMMAND](/windows/win32/inputdev/wm-appco
 
 ##  <a name="onaskcbformatname"></a>CWnd:: OnAskCbFormatName
 
-Rozhraní volá tuto členskou funkci, když schránka obsahuje datový popisovač pro formát CF_OWNERDISPLAY (to znamená, když vlastník schránky zobrazí obsah schránky).
+Rozhraní volá tuto členskou funkci, když schránka obsahuje datový popisovač pro formát CF_OWNERDISPLAY (tj. když vlastník schránky zobrazí obsah schránky).
 
 ```
 afx_msg void OnAskCbFormatName(
@@ -5999,14 +5999,14 @@ Odkazuje na vyrovnávací paměť, do které se uloží kopie názvu formátu.
 
 Vlastník schránky by měl zadat název pro svůj formát.
 
-Přepište tuto členskou funkci a zkopírujte název formátu CF_OWNERDISPLAY do zadané vyrovnávací paměti, což nepřekračuje maximální počet zadaných bajtů.
+Přepište tuto členskou funkci a zkopírujte název CF_OWNERDISPLAY formátu do zadané vyrovnávací paměti, což nepřekračuje maximální počet zadaných bajtů.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
 
 ##  <a name="oncancelmode"></a>CWnd:: OnCancelMode
 
-Rozhraní volá tuto členskou funkci, aby informovala `CWnd` o zrušení všech vnitřních režimů.
+Rozhraní volá tuto členskou funkci, aby informovala `CWnd` zrušení jakéhokoli interního režimu.
 
 ```
 afx_msg void OnCancelMode();
@@ -6014,7 +6014,7 @@ afx_msg void OnCancelMode();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt má fokus, jeho `OnCancelMode` členská funkce se volá, když se zobrazí dialogové okno nebo okno se zprávou. `CWnd` Tato možnost umožňuje `CWnd` zrušit režimy, jako je například zachycení myši.
+Pokud objekt `CWnd` má fokus, je volána jeho `OnCancelMode` členská funkce, když se zobrazí dialogové okno nebo okno se zprávou. To umožňuje `CWnd` příležitost zrušit režimy, jako je například zachycení myši.
 
 Výchozí implementace reaguje voláním funkce [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) systému Windows. Přepište tuto členskou funkci v odvozené třídě, aby zpracovávala jiné režimy.
 
@@ -6035,7 +6035,7 @@ Ukazatel na okno, aby se získalo zachycení myši
 
 Okno obdrží tuto zprávu, i když volá [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) sebe sama. Aplikace by se neměla pokoušet o nastavení zachycení myši na reakci na tuto zprávu. Pokud je tato zpráva obdržena, okno by se v případě potřeby mělo v závislosti na novém stavu zachycení myši znovu nakreslit.
 
-Informace o `ReleaseCapture` funkci Windows najdete v Windows SDK.
+Informace o funkci `ReleaseCapture` Windows najdete v Windows SDK.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -6060,7 +6060,7 @@ Určuje popisovač okna, který následuje za oknem odebraným z řetězce prohl
 
 ### <a name="remarks"></a>Poznámky
 
-Každý `CWnd` objekt, který `OnChangeCbChain` přijímá volání, by měl použít funkci [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows k odeslání zprávy [WM_CHANGECBCHAIN](/windows/win32/dataxchg/wm-changecbchain) do dalšího okna v řetězci prohlížeče schránky (popisovač vrácený funkcí `SetClipboardViewer`). Pokud je *hWndRemove* dalším oknem v řetězci, okno určené parametrem *hWndAfter* se zobrazí v dalším okně a do něj budou předány zprávy ze schránky.
+Každý objekt `CWnd`, který přijímá volání `OnChangeCbChain`, by měl použít funkci [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows k odeslání zprávy [WM_CHANGECBCHAIN](/windows/win32/dataxchg/wm-changecbchain) dalšímu oknu v řetězu prohlížeče schránky (popisovač vrácený `SetClipboardViewer`). Pokud je *hWndRemove* dalším oknem v řetězci, okno určené parametrem *hWndAfter* se zobrazí v dalším okně a do něj budou předány zprávy ze schránky.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -6093,7 +6093,7 @@ Určuje, které prvky stavu uživatelského rozhraní jsou ovlivněny nebo stylu
 
 - UISF_HIDEFOCUS indikátory fokusu.
 
-- UISF_ACTIVE Windows XP: Ovládací prvek by měl být vykreslen ve stylu používaném pro aktivní ovládací prvky.
+- UISF_ACTIVE Windows XP: ovládací prvek by měl být vykreslen ve stylu používaném pro aktivní ovládací prvky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -6121,7 +6121,7 @@ Obsahuje počet opakování, kolikrát se klávesová zkratka opakuje, když už
 *nFlags*<br/>
 Obsahuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-15|Určuje počet opakování. Hodnota představuje počet opakování klávesových zkratek v důsledku toho, že uživatel drží klávesu.|
 |16-23|Určuje kód pro kontrolu. Hodnota závisí na výrobci OEM (Original Equipment Manufacturer).|
@@ -6133,9 +6133,9 @@ Obsahuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kó
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se volá před členskou funkcí [prokeyup](#onkeyup) a po volání členské funkce [OnKeyDown](#onkeydown) . `OnChar`obsahuje hodnotu stisknuté nebo vydané klávesy klávesnice.
+Tato funkce se volá před členskou funkcí [prokeyup](#onkeyup) a po volání členské funkce [OnKeyDown](#onkeydown) . `OnChar` obsahuje hodnotu stisknuté nebo vydané klávesy klávesnice.
 
-Vzhledem k tomu, že mezi stisknutými klíči a `OnChar` vygenerovanými voláními není nutně žádná korespondence 1:1, informace v *nFlags* většinou nejsou užitečné pro aplikace. Informace v *nFlags* platí pouze pro poslední volání `OnKeyUp` `OnKeyDown` členské funkce nebo členskou `OnChar`funkci, která předchází volání.
+Vzhledem k tomu, že mezi stisknutými klávesami `OnChar` a vygenerovanými voláními není nutně shoda 1:1, informace v *nFlags* nejsou všeobecně užitečné pro aplikace. Informace v *nFlags* platí pouze pro poslední volání členské funkce `OnKeyUp` nebo členská funkce `OnKeyDown`, která předchází volání `OnChar`.
 
 U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou klávesou ALT a pravou klávesovou zkratkou v hlavní části klávesnice. klávesy INS, DEL, domů, konec, stránka nahoru, stránka dolů a šipky v clusterech nalevo od číselné klávesnice; a lomítkem (/) a klávesy ENTER na numerické klávesnici. Některé další klávesnice můžou podporovat bit rozšířených klíčů v *nFlags*.
 
@@ -6144,7 +6144,7 @@ U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou kl�
 
 ##  <a name="onchartoitem"></a>CWnd:: OnCharToItem
 
-Volá se, když se v seznamu se stylem [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) pošle vlastníkovi zpráva [WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem) v reakci na zprávu [WM_CHAR](#onchar) .
+Volá se, když se v seznamu s [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu pošle vlastníkovi zpráva [WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem) v reakci na zprávu [WM_CHAR](#onchar) .
 
 ```
 afx_msg int OnCharToItem(
@@ -6175,7 +6175,7 @@ Rozhraní volá tuto členskou funkci, aby určila akci, kterou aplikace provedl
 
 ##  <a name="onchildactivate"></a>CWnd:: OnChildActivate
 
-Je-li `OnChildActivate` objektpodřízenýmoknemMDI(MultipleDocumentInterface),jevolánarozhraním,kdyžuživatelkliknenazáhlavíoknanebokdyžjeoknoaktivováno,přesunuto`CWnd` nebo zvětšeno.
+Pokud je objekt `CWnd` podřízené okno rozhraní MDI (Multiple Document Interface), `OnChildActivate` je voláno rozhraním, když uživatel klikne na záhlaví okna nebo když je okno aktivováno, přesunuto nebo zvětšeno.
 
 ```
 afx_msg void OnChildActivate();
@@ -6229,7 +6229,7 @@ afx_msg void OnClipboardUpdate();
 
 ##  <a name="onclose"></a>CWnd::-Close
 
-Rozhraní volá tuto členskou funkci jako signál, že `CWnd` je aplikace ukončena.
+Rozhraní volá tuto členskou funkci jako signál, že `CWnd` nebo aplikace mají skončit.
 
 ```
 afx_msg void OnClose();
@@ -6237,7 +6237,7 @@ afx_msg void OnClose();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí volání `DestroyWindow`implementace.
+Výchozí implementace volá `DestroyWindow`.
 
 ##  <a name="oncolorizationcolorchanged"></a>CWnd:: OnColorizationColorChanged
 
@@ -6287,9 +6287,9 @@ Aplikace vrátí nenulovou hodnotu, pokud zpracovává tuto zprávu; v opačném
 
 ### <a name="remarks"></a>Poznámky
 
-`OnCommand`zpracovává mapu zpráv pro kontrolní oznámení a položky ON_COMMAND a volá příslušnou členskou funkci.
+`OnCommand` zpracovává mapu zpráv pro kontrolní oznámení a položky ON_COMMAND a volá příslušnou členskou funkci.
 
-Přepište tuto členskou funkci v odvozené třídě pro zpracování zprávy [WM_COMMAND](/windows/win32/menurc/wm-command) . Přepsání nebude zpracovávat mapu zprávy, pokud není volána základní třída `OnCommand` .
+Přepište tuto členskou funkci v odvozené třídě pro zpracování zprávy [WM_COMMAND](/windows/win32/menurc/wm-command) . Přepsání nebude zpracovávat mapu zprávy, pokud není volána základní třída `OnCommand`.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -6311,7 +6311,7 @@ Určuje poměr času procesoru, který je aktuálně strávený komprimací pam�
 
 To znamená, že je systémová paměť nízká.
 
-`CWnd` Když objekt obdrží toto volání, měla by uvolnit co nejvíce paměti, přičemž vezme v úvahu aktuální úroveň aktivity aplikace a celkový počet aplikací spuštěných v systému Windows. Aplikace může zavolat funkci systému Windows, aby určila, kolik aplikací je spuštěno.
+Když objekt `CWnd` obdrží toto volání, měla by uvolnit co nejvíc paměti, přičemž vezme v úvahu aktuální úroveň aktivity aplikace a celkový počet aplikací spuštěných v systému Windows. Aplikace může zavolat funkci systému Windows, aby určila, kolik aplikací je spuštěno.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -6338,7 +6338,7 @@ Obsahuje dlouhý ukazatel na strukturu dat [COMPAREITEMSTRUCT –](/windows/win3
 
 Určuje relativní pozici dvou položek. Může to být kterákoli z následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |-1|Položka 1 se řadí před položkou 2.|
 |0|Položka 1 a položka 2 mají stejný druh.|
@@ -6346,11 +6346,11 @@ Určuje relativní pozici dvou položek. Může to být kterákoli z následují
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se pole se seznamem nebo seznamem vytvoří se stylem [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) nebo [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , Windows pošle vlastníkovi pole se seznamem nebo seznamu zprávu WM_COMPAREITEM pokaždé, když aplikace přidá novou položku.
+Pokud se pole se seznamem nebo seznamem vytvoří pomocí stylu [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) nebo [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , Windows odešle vlastníkovi pole se seznamem nebo seznamu WM_COMPAREITEM zprávu pokaždé, když aplikace přidá novou položku.
 
-Dvě položky v poli se seznamem nebo v seznamu jsou reformované ve `COMPAREITEMSTRUCT` struktuře, na kterou odkazuje *lpCompareItemStruct*. `OnCompareItem`měla by vracet hodnotu, která označuje, které položky by se měly zobrazit před druhou. Systém Windows obvykle toto volání provede několikrát, dokud neurčí přesné umístění pro novou položku.
+Dvě položky v poli se seznamem nebo v seznamu se přeformátují ve `COMPAREITEMSTRUCT` struktuře, na kterou odkazuje *lpCompareItemStruct*. `OnCompareItem` by měla vracet hodnotu, která označuje, které položky se mají zobrazit před druhou. Systém Windows obvykle toto volání provede několikrát, dokud neurčí přesné umístění pro novou položku.
 
-[](../../mfc/reference/clistbox-class.md) [](../../mfc/reference/ccombobox-class.md) `CompareItem` Pokud člen `hwndItem` `COMPAREITEMSTRUCT` struktury patří objektu CListBox – nebo CComboBox –, pak je volána virtuální funkce příslušné třídy. Pro `CComboBox::CompareItem` porovnání `CListBox::CompareItem` položek můžete přepsat `CListBox` nebo `CComboBox` v odvozeném nebo třídě.
+Pokud `hwndItem` člen struktury `COMPAREITEMSTRUCT` patří do objektu [CListBox –](../../mfc/reference/clistbox-class.md) nebo [CComboBox –](../../mfc/reference/ccombobox-class.md) , je volána virtuální funkce `CompareItem` příslušné třídy. Přepsáním `CComboBox::CompareItem` nebo `CListBox::CompareItem` v odvozené `CListBox` nebo `CComboBox` třídě provedete porovnání položek.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -6392,7 +6392,7 @@ Pozice kurzoru v okamžiku kliknutí myší v souřadnicích obrazovky
 
 Tuto zprávu můžete zpracovat zobrazením kontextové nabídky pomocí [TrackPopupMenu](../../mfc/reference/cmenu-class.md#trackpopupmenu).
 
-Pokud nezobrazovat kontextovou nabídku, měli byste tuto zprávu předat funkci [DefWindowProc](#defwindowproc) . Pokud je vaše okno podřízeným oknem, `DefWindowProc` pošle zprávu nadřazenému. V opačném případě zobrazí výchozí kontextovou nabídku, `DefWindowProc` Pokud je zadaná pozice v popisku okna.
+Pokud nezobrazovat kontextovou nabídku, měli byste tuto zprávu předat funkci [DefWindowProc](#defwindowproc) . Pokud je okno podřízeným oknem, `DefWindowProc` odesílá zprávu nadřazenému. V opačném případě `DefWindowProc` zobrazí výchozí kontextovou nabídku, pokud je zadaná pozice v popisku okna.
 
 ##  <a name="oncopydata"></a>CWnd:: OnCopyData
 
@@ -6407,7 +6407,7 @@ afx_msg BOOL OnCopyData(
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Ukazatel na `CWnd` objekt, který odesílá data.
+Ukazatel na objekt `CWnd`, který odesílá data.
 
 *pCopyDataStruct*<br/>
 Ukazatel na strukturu [COPYDATASTRUCT](/windows/win32/api/winuser/ns-winuser-copydatastruct) , která obsahuje odesílaná data.
@@ -6440,19 +6440,19 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpCreateStruct*<br/>
-Odkazuje na strukturu [CREATESTRUCT –](/windows/win32/api/winuser/ns-winuser-createstructw) , která obsahuje informace o `CWnd` vytvářeném objektu.
+Odkazuje na strukturu [CREATESTRUCT –](/windows/win32/api/winuser/ns-winuser-createstructw) , která obsahuje informace o vytvářeném objektu `CWnd`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`OnCreate`aby bylo možné pokračovat v vytváření `CWnd` objektu, je nutné vrátit 0. Pokud aplikace vrátí hodnotu-1, okno bude zničeno.
+`OnCreate` musí vrátit 0, aby bylo možné pokračovat v vytváření objektu `CWnd`. Pokud aplikace vrátí hodnotu-1, okno bude zničeno.
 
 ### <a name="remarks"></a>Poznámky
 
-`CWnd` Objekt obdrží toto volání po vytvoření okna, ale předtím, než se zobrazí. `OnCreate`se volá před tím `Create` , `CreateEx` než se vrátí členská funkce nebo.
+Objekt `CWnd` obdrží toto volání po vytvoření okna, ale předtím, než se zobrazí. `OnCreate` je volána před vrácením `Create` nebo `CreateEx` členské funkce.
 
 Přepište tuto členskou funkci, aby prováděla veškerou potřebnou inicializaci odvozené třídy.
 
-`CREATESTRUCT` Struktura obsahuje kopie parametrů použitých k vytvoření okna.
+Struktura `CREATESTRUCT` obsahuje kopie parametrů použitých k vytvoření okna.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -6470,7 +6470,7 @@ afx_msg HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Obsahuje ukazatel na kontext zobrazení podřízeného okna. Může být dočasný.
 
 *pWnd*<br/>
@@ -6481,34 +6481,34 @@ Obsahuje jednu z následujících hodnot, která určuje typ ovládacího prvku:
 
 - Ovládací prvek tlačítko CTLCOLOR_BTN
 
-- Dialogové okno CTLCOLOR_DLG
+- CTLCOLOR_DLG – dialogové okno
 
 - CTLCOLOR_EDIT – ovládací prvek pro úpravy
 
-- Ovládací prvek seznamu CTLCOLOR_LISTBOX
+- CTLCOLOR_LISTBOX ovládací prvek seznamu
 
-- Okno se zprávou CTLCOLOR_MSGBOX
+- CTLCOLOR_MSGBOX okno se zprávou
 
-- CTLCOLOR_SCROLLBAR – ovládací prvek posuvníku
+- Ovládací prvek posuvník CTLCOLOR_SCROLLBAR
 
-- Statické řízení CTLCOLOR_STATIC
+- CTLCOLOR_STATIC statické řízení
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`OnCtlColor`musí vracet popisovač štětce, který se má použít pro vykreslování pozadí ovládacího prvku.
+`OnCtlColor` musí vracet popisovač štětce, který se má použít pro vykreslování pozadí ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
 Většina ovládacích prvků posílá tuto zprávu nadřazenému (obvykle se jedná o dialogové okno) pro přípravu *primárního řadiče domény* pro vykreslení ovládacího prvku pomocí správných barev.
 
-Chcete-li změnit barvu textu, zavolejte `SetTextColor` členskou funkci s požadovanými hodnotami červené, zelené a modré (RGB).
+Chcete-li změnit barvu textu, zavolejte členskou funkci `SetTextColor` s požadovanými hodnotami červené, zelené a modré (RGB).
 
-Chcete-li změnit barvu pozadí víceřádkového ovládacího prvku pro úpravy, nastavte popisovač štětce v kódu zprávy CTLCOLOR_EDIT i CTLCOLOR_MSGBOX a zavolejte funkci [CDC:: SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) v reakci na kód CTLCOLOR_EDIT.
+Chcete-li změnit barvu pozadí víceřádkového ovládacího prvku pro úpravy, nastavte popisovač štětce v kódu CTLCOLOR_EDIT i CTLCOLOR_MSGBOX a zavolejte funkci [CDC:: SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) v reakci na kód CTLCOLOR_EDIT.
 
-`OnCtlColor`nebude volána pro pole seznamu rozevíracího seznamu, protože rozevírací seznam je vlastně podřízeným polem se seznamem a nikoli podřízenou položkou okna. Chcete-li změnit barvu rozevíracího seznamu, vytvořte `CComboBox` pomocí `OnCtlColor` přepsání pro CTLCOLOR_LISTBOX v `nCtlColor` parametru. V této obslužné rutině `SetBkColor` musí být členská funkce použita k nastavení barvy pozadí textu.
+`OnCtlColor` nebude volána pro seznam pole rozevíracího seznamu, protože rozevírací seznam je ve skutečnosti podřízeným polem se seznamem a nikoli podřízenou položkou okna. Chcete-li změnit barvu rozevíracího seznamu, vytvořte `CComboBox` s přepsáním `OnCtlColor`, které v parametru `nCtlColor` kontroluje CTLCOLOR_LISTBOX. V této obslužné rutině je nutné použít členskou funkci `SetBkColor` k nastavení barvy pozadí textu.
 
 > [!NOTE]
-> Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce. Chcete-li přidat následující metodu do třídy dialogu, použijte podokno Vlastnosti sady Visual Studio k přidání obslužné rutiny zpráv pro WM_CTLCOLOR. Alternativně můžete ručně přidat položku ON_WM_CTLCOLOR () na mapu zpráv.
+> Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce. Chcete-li přidat následující metodu do třídy dialogu, použijte podokno Vlastnosti sady Visual Studio k přidání popisovače zprávy pro WM_CTLCOLOR. Alternativně můžete ručně přidat položku ON_WM_CTLCOLOR () do mapy zpráv.
 
 ### <a name="example"></a>Příklad
 
@@ -6536,7 +6536,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |0-7|Kontrola kódu (hodnota závislá na výrobci OEM). Dolní bajt v aplikaci s vysokým pořadím|
 |8|Rozšířený klíč, například klíč funkce nebo klíč na numerické klávesnici (1, pokud se jedná o rozšířený klíč, jinak 0).|
@@ -6550,9 +6550,9 @@ Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód
 
 Tato členská funkce se dá použít k zadání znaku pro nedoručený klíč. Mrtvý klíč je klíč, jako je například znak umlaut (Double-tečka), který je kombinován s jinými znaky pro vytvoření složeného znaku. Například znak umlaut-O se skládá z mrtvého klíče, umlaut a klíče O.
 
-Aplikace obvykle používá `OnDeadChar` k poskytnutí zpětné vazby ke každému stisknutí klávesy uživatelem. Například aplikace může zobrazit zvýraznění v aktuálním znaku pozice bez přesunutí blikajícího kurzoru.
+Aplikace obvykle používá `OnDeadChar` k poskytnutí zpětné vazby uživatele o každém stisknutí klávesy. Například aplikace může zobrazit zvýraznění v aktuálním znaku pozice bez přesunutí blikajícího kurzoru.
 
-Vzhledem k tomu, že mezi stisknutými klávesami a `OnDeadChar` voláními není nutně shoda 1:1, informace v *nFlags* většinou nejsou užitečné pro aplikace. Informace v *nFlags* se vztahují pouze na nejnovější volání členské funkce [prokeyup](#onkeyup) nebo na členskou `OnDeadChar` funkci [OnKeyDown](#onkeydown) , která předchází volání.
+Vzhledem k tomu, že mezi stisknutými klávesami a `OnDeadChar` voláními není nutně shoda 1:1, informace v *nFlags* většinou nejsou užitečné pro aplikace. Informace v *nFlags* platí pouze pro poslední volání členské funkce [prokeyup](#onkeyup) nebo členská funkce [OnKeyDown](#onkeydown) , která předchází `OnDeadChar` volání.
 
 U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou klávesou ALT a pravou klávesovou zkratkou v hlavní části klávesnice. klávesy INS, DEL, domů, konec, stránka nahoru, stránka dolů a šipky v clusterech nalevo od číselné klávesnice; a lomítkem (/) a klávesy ENTER na numerické klávesnici. Některé další klávesnice můžou podporovat bit rozšířených klíčů v *nFlags*.
 
@@ -6561,7 +6561,7 @@ U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou kl�
 
 ##  <a name="ondeleteitem"></a>CWnd:: OnDeleteItem
 
-Rozhraní volá tuto členskou funkci, aby informovala vlastníka seznamu nebo pole se seznamem, že se seznam nebo pole se seznamem zničil nebo že se odstranily položky [CComboBox –::D eletestring](../../mfc/reference/ccombobox-class.md#deletestring), [CListBox –::D eletestring](../../mfc/reference/clistbox-class.md#deletestring), [CComboBox –:: ResetContent](../../mfc/reference/ccombobox-class.md#resetcontent)nebo [CListBox –:: ResetContent](../../mfc/reference/clistbox-class.md#resetcontent).
+Rozhraní volá tuto členskou funkci, aby informovala vlastníka seznamu nebo pole se seznamem, který je v seznamu nebo poli se seznamem zničený, nebo že se odstranily položky [CComboBox –::D eletestring](../../mfc/reference/ccombobox-class.md#deletestring), [CListBox –::D eletestring](../../mfc/reference/clistbox-class.md#deletestring), [CComboBox –:: ResetContent](../../mfc/reference/ccombobox-class.md#resetcontent)nebo [CListBox –:: ResetContent](../../mfc/reference/clistbox-class.md#resetcontent).
 
 ```
 afx_msg void OnDeleteItem(
@@ -6579,14 +6579,14 @@ Určuje dlouhý ukazatel na datovou strukturu [DELETEITEMSTRUCT –](/windows/wi
 
 ### <a name="remarks"></a>Poznámky
 
-`hwndItem` Pokud člen `DELETEITEMSTRUCT` struktury patří do pole se seznamem nebo do pole se seznamem, `DeleteItem` je volána virtuální funkce příslušné třídy. Chcete-li odstranit data specifická pro danou položku, přepište členskoufunkcipříslušnétřídyovládacíhoprvku.`DeleteItem`
+Pokud `hwndItem` člen struktury `DELETEITEMSTRUCT` patří do pole se seznamem nebo do pole se seznamem, je volána virtuální funkce `DeleteItem` příslušné třídy. Chcete-li odstranit data specifická pro danou položku, přepište `DeleteItem` členskou funkci příslušné třídy ovládacího prvku.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
 
 ##  <a name="ondestroy"></a>CWnd:: Destroy zničení
 
-Rozhraní volá tuto členskou funkci, aby informovala `CWnd` o objektu, který je zničen.
+Rozhraní volá tuto členskou funkci, aby informovala objekt `CWnd`, který je zničen.
 
 ```
 afx_msg void OnDestroy();
@@ -6594,11 +6594,11 @@ afx_msg void OnDestroy();
 
 ### <a name="remarks"></a>Poznámky
 
-`OnDestroy`se volá po `CWnd` odebrání objektu z obrazovky.
+`OnDestroy` se volá po odebrání objektu `CWnd` z obrazovky.
 
-`OnDestroy`je volána jako první pro `CWnd` zničení a pak pro podřízená `CWnd` okna v případě, že jsou zničena. Je možné předpokládat, že všechna podřízená okna stále existují `OnDestroy` při spuštění.
+`OnDestroy` se jako první zavolalo pro `CWnd` zničení a pak pro podřízená okna `CWnd` při jejich zničení. Je možné předpokládat, že všechna podřízená okna stále existují při `OnDestroy` spuštění.
 
-Pokud je zničený [](#setclipboardviewer) `CWnd` objektsoučástířetězuprohlížečeschránky(nastavítetak,žezavolátečlenskoufunkciSetClipboardViewer),musíseodebratsámzřetězceprohlížečeschránky`CWnd` voláním [ ](#changeclipboardchain)Před vrácením z funkce se `OnDestroy` členská funkce ChangeClipboardChain.
+Pokud je zničený objekt `CWnd` součástí řetězu prohlížeče schránky (nastaví se voláním členské funkce [SetClipboardViewer](#setclipboardviewer) ), `CWnd` se musí odvolat z řetězce prohlížeče schránky voláním členské funkce [ChangeClipboardChain](#changeclipboardchain) před vrácením z funkce `OnDestroy`.
 
 ##  <a name="ondestroyclipboard"></a>CWnd:: OnDestroyClipboard
 
@@ -6628,9 +6628,9 @@ Adresa struktury, která obsahuje data specifická pro událost. Jeho význam z�
 
 ### <a name="remarks"></a>Poznámky
 
-U zařízení, která nabízejí funkce, jako je například vysunutí a uzamykání, operační systém obvykle odesílá zprávu DBT_DEVICEREMOVEPENDING, která umožňuje aplikacím a ovladačům zařízení docílit jejich používání v zařízení.
+U zařízení, která nabízejí funkce, jako je například vysunutí a uzamykání, operační systém obvykle odesílá zprávu DBT_DEVICEREMOVEPENDING, aby aplikace a ovladače zařízení ukončily používání zařízení bez problémů.
 
-Pokud operační systém zařízení vynuceně odebere, nemusí před tím, než to uděláte, poslat zprávu DBT_DEVICEQUERYREMOVE.
+Pokud operační systém zařízení vynuceně odebere, může se stát, že se před tím nepošle DBT_DEVICEQUERYREMOVE zpráva.
 
 Parametr *nEvent* může být jedna z těchto hodnot:
 
@@ -6655,7 +6655,7 @@ Parametr *nEvent* může být jedna z těchto hodnot:
 
 ##  <a name="ondevmodechange"></a>CWnd:: OnDevModeChange
 
-Rozhraní volá tuto členskou funkci pro všechny objekty nejvyšší úrovně `CWnd` , když uživatel změní nastavení v režimu zařízení.
+Rozhraní volá tuto členskou funkci pro všechny objekty `CWnd` nejvyšší úrovně, když uživatel změní nastavení v režimu zařízení.
 
 ```
 afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
@@ -6668,9 +6668,9 @@ Odkazuje na název zařízení zadaný v inicializačním souboru Windows, WIN. 
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace, které zpracovávají zprávu WM_DEVMODECHANGE, mohou znovu inicializovat nastavení režimu zařízení. Aplikace, které používají funkci `ExtDeviceMode` Windows k uložení a obnovení nastavení zařízení, obvykle tuto funkci nezpracovávají.
+Aplikace, které zpracovávají zprávu WM_DEVMODECHANGE mohou znovu inicializovat nastavení v režimu zařízení. Aplikace, které používají funkci Windows `ExtDeviceMode` k uložení a obnovení nastavení zařízení, obvykle tuto funkci nezpracovávají.
 
-Tato funkce není volána, když uživatel změní výchozí tiskárnu z ovládacích panelů. V tomto případě `OnWinIniChange` je funkce volána.
+Tato funkce není volána, když uživatel změní výchozí tiskárnu z ovládacích panelů. V tomto případě je volána funkce `OnWinIniChange`.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -6687,9 +6687,9 @@ afx_msg void OnDrawClipboard();
 
 Pouze aplikace, které byly spojeny s řetězem prohlížeče schránky voláním členské funkce [SetClipboardViewer](#setclipboardviewer) , musí reagovat na toto volání.
 
-Každé okno, které přijímá `OnDrawClipboard` volání, by mělo zavolat funkci [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows, která předáte zprávu [WM_DRAWCLIPBOARD](/windows/win32/dataxchg/wm-drawclipboard) k dalšímu oknu v řetězci prohlížeče schránky. Obslužná rutina dalšího okna je vrácena členskou funkcí [SetClipboardViewer](#setclipboardviewer) ; může být upraveno v reakci na volání členské funkce [OnChangeCbChain](#onchangecbchain) .
+Každé okno, které přijímá `OnDrawClipboard` volání, by mělo volat funkci [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows k [WM_DRAWCLIPBOARD](/windows/win32/dataxchg/wm-drawclipboard) předání zprávy do dalšího okna v řetězci prohlížeče schránky. Obslužná rutina dalšího okna je vrácena členskou funkcí [SetClipboardViewer](#setclipboardviewer) ; může být upraveno v reakci na volání členské funkce [OnChangeCbChain](#onchangecbchain) .
 
-##  <a name="ondrawiconicthumbnailorlivepreview"></a>  CWnd::OnDrawIconicThumbnailOrLivePreview
+##  <a name="ondrawiconicthumbnailorlivepreview"></a>CWnd:: OnDrawIconicThumbnailOrLivePreview
 
 Volá se rozhraním, když potřebuje získat rastrový obrázek, který se má zobrazit na miniatuře karty Windows 7, nebo v náhledu klienta pro aplikaci.
 
@@ -6704,7 +6704,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 
 ### <a name="parameters"></a>Parametry
 
-*dc*<br/>
+*DC*<br/>
 Určuje kontext zařízení.
 
 *OBD*<br/>
@@ -6721,7 +6721,7 @@ mimo Nastavte na hodnotu TRUE, pokud vaše implementace inicializuje alfa kanál
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu můžete přepsat v odvozené třídě a nakreslit do určeného kontextu zařízení, aby bylo možné přizpůsobit miniaturu a náhled. Pokud má *bThumbnail* hodnotu true, *szRequiredThumbnailSize* se dá ignorovat. V takovém případě byste si měli být vědomi, že nakreslíte plnou velikost rastrového obrázku (tj. rastrový obrázek, který pokrývá celou klientskou oblast). Kontext zařízení ( *DC*) se dodává se zvoleným rastrovým obrázkem 32 bitů. Výchozí implementace pošle do tohoto okna WM_PRINT s příznaky PRF_CLIENT, PRF_CHILDREN a PRF_NONCLIENT.
+Tuto metodu můžete přepsat v odvozené třídě a nakreslit do určeného kontextu zařízení, aby bylo možné přizpůsobit miniaturu a náhled. Pokud má *bThumbnail* hodnotu true, *szRequiredThumbnailSize* se dá ignorovat. V takovém případě byste si měli být vědomi, že nakreslíte plnou velikost rastrového obrázku (tj. rastrový obrázek, který pokrývá celou klientskou oblast). Kontext zařízení ( *DC*) se dodává se zvoleným rastrovým obrázkem 32 bitů. Výchozí implementace odešle WM_PRINT do tohoto okna s příznaky PRF_CLIENT, PRF_CHILDREN a PRF_NONCLIENT.
 
 ##  <a name="ondrawitem"></a>CWnd:: OnDrawItem
 
@@ -6743,11 +6743,11 @@ Určuje dlouhý ukazatel na `DRAWITEMSTRUCT` datovou strukturu, která obsahuje 
 
 ### <a name="remarks"></a>Poznámky
 
-Člen struktury DRAWITEMSTRUCT – definuje operaci kreslení, která má být provedena. [](/windows/win32/api/winuser/ns-winuser-drawitemstruct) `itemAction` Data v tomto členovi umožňují, aby vlastník ovládacího prvku určil, jakou akci kresby potřebujete.
+`itemAction` člen struktury [DRAWITEMSTRUCT –](/windows/win32/api/winuser/ns-winuser-drawitemstruct) definuje operaci kreslení, která má být provedena. Data v tomto členovi umožňují, aby vlastník ovládacího prvku určil, jakou akci kresby potřebujete.
 
-Před vrácením ze zpracování této zprávy by aplikace měla zajistit, aby byl kontext zařízení identifikovaný `DRAWITEMSTRUCT` členem *HDC* ve struktuře obnoven do výchozího stavu.
+Před vrácením ze zpracování této zprávy musí aplikace zajistit, aby byl kontext zařízení identifikovaný členem `DRAWITEMSTRUCT` struktury *HDC* obnoven do výchozího stavu.
 
-`DrawItem` [](../../mfc/reference/ccombobox-class.md) [](../../mfc/reference/cbutton-class.md) [](../../mfc/reference/clistbox-class.md) [](../../mfc/reference/cmenu-class.md)Pokud člen patří do objektu CButton, CMenu –, CListBox – nebo CComboBox –, je volána virtuální funkce příslušné třídy. `hwndItem` Přepište `DrawItem` členskou funkci příslušné třídy ovládacího prvku pro vykreslení položky.
+Pokud `hwndItem` člen patří do objektu [CButton](../../mfc/reference/cbutton-class.md), [CMenu –](../../mfc/reference/cmenu-class.md), [CListBox –](../../mfc/reference/clistbox-class.md)nebo [CComboBox –](../../mfc/reference/ccombobox-class.md) , je volána virtuální funkce `DrawItem` příslušné třídy. Přepište členskou funkci `DrawItem` třídy příslušného ovládacího prvku pro vykreslení položky.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -6763,7 +6763,7 @@ afx_msg void OnDropFiles(HDROP hDropInfo);
 ### <a name="parameters"></a>Parametry
 
 *hDropInfo*<br/>
-Ukazatel na vnitřní datovou strukturu, která popisuje Vynechané soubory. Tento popisovač používají `DragFinish`funkce, `DragQueryFile`a `DragQueryPoint` Windows k načtení informací o vynechaných souborech.
+Ukazatel na vnitřní datovou strukturu, která popisuje Vynechané soubory. Tento popisovač používají funkce `DragFinish`, `DragQueryFile`a `DragQueryPoint` Windows k načtení informací o vynechaných souborech.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -6774,7 +6774,7 @@ Obvykle bude odvozená třída navržena tak, aby podporovala odložené soubory
 
 ##  <a name="onenable"></a>CWnd:: Enable
 
-Rozhraní volá tuto členskou funkci, když aplikace změní stav `CWnd` povoleno objektu.
+Rozhraní volá tuto členskou funkci, když aplikace změní stav povoleno objektu `CWnd`.
 
 ```
 afx_msg void OnEnable(BOOL bEnable);
@@ -6783,18 +6783,18 @@ afx_msg void OnEnable(BOOL bEnable);
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-Určuje, jestli `CWnd` je objekt povolený nebo zakázaný. Tento parametr má hodnotu true, `CWnd` Pokud byla povolena; `CWnd` Pokud byl zakázán, je hodnota false.
+Určuje, jestli je objekt `CWnd` povolený nebo zakázaný. Tento parametr má hodnotu TRUE, pokud byla povolena `CWnd`; Pokud je `CWnd` zakázaná, má hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`OnEnable`se volá před tím, než se vrátí členská funkce [EnableWindow](#enablewindow) , ale po změně stavu povoleného okna ( [WS_DISABLED](styles-used-by-mfc.md#window-styles) stylu).
+`OnEnable` se volá před tím, než se vrátí členská funkce [EnableWindow](#enablewindow) , ale po změně stavu povoleného okna (bit stylu [WS_DISABLED](styles-used-by-mfc.md#window-styles) ) došlo ke změně.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
 
 ##  <a name="onendsession"></a>CWnd:: OnEndSession
 
-Rozhraní volá tuto členskou funkci poté, `CWnd` co objekt vrátí nenulovou hodnotu z volání členské funkce [OnQueryEndSession](#onqueryendsession) .
+Rozhraní volá tuto členskou funkci poté, co objekt `CWnd` vrátil nenulovou hodnotu z volání členské funkce [OnQueryEndSession](#onqueryendsession) .
 
 ```
 afx_msg void OnEndSession(BOOL bEnding);
@@ -6807,9 +6807,9 @@ Určuje, zda je relace ukončena. Má hodnotu TRUE, pokud je relace ukončena; v
 
 ### <a name="remarks"></a>Poznámky
 
-Volání informuje objekt o `CWnd` tom, zda je relace ve skutečnosti zakončena. `OnEndSession`
+`OnEndSession` volání informuje objekt `CWnd`, zda je relace skutečně zakončena.
 
-Pokud je *ohybová* hodnota true, může systém Windows ukončit kdykoli po vrácení všech aplikací ze zpracování tohoto volání. V důsledku toho aplikace provede všechny úlohy vyžadované k ukončení v rámci `OnEndSession`.
+Pokud je *ohybová* hodnota true, může systém Windows ukončit kdykoli po vrácení všech aplikací ze zpracování tohoto volání. V důsledku toho aplikace provede všechny úkoly potřebné k ukončení v rámci `OnEndSession`.
 
 Při ukončování relace není nutné volat členskou funkci [DestroyWindow](#destroywindow) ani funkci Windows [PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) .
 
@@ -6833,10 +6833,10 @@ Určuje, zda je zpráva výsledkem dialogového okna nebo zobrazené nabídky. T
 
 - MSGF_DIALOGBOX je systém nečinný, protože se zobrazuje dialogové okno.
 
-- MSGF_MENU systém je nečinný, protože se zobrazuje nabídka.
+- MSGF_MENU je systém nečinný, protože se zobrazuje nabídka.
 
 *pWho*<br/>
-Určuje ukazatel na dialogové okno (Pokud je *NWHY* MSGF_DIALOGBOX) nebo okno, které obsahuje zobrazenou nabídku (Pokud *nWhy* je MSGF_MENU). Tento ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
+Určuje ukazatel na dialogové okno (Pokud je *nWhy* MSGF_DIALOGBOX) nebo okno, které obsahuje zobrazenou nabídku (Pokud *nWhy* je MSGF_MENU). Tento ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -6875,14 +6875,14 @@ afx_msg void OnEnterSizeMove();
 
 Tato metoda obdrží oznámení [WM_ENTERSIZEMOVE](/windows/win32/winmsg/wm-entersizemove) , které je popsáno v Windows SDK.
 
-Okno vstoupí do modální smyčky přesunutí nebo změny velikosti, když uživatel klikne na záhlaví okna nebo na hranici velikosti nebo když okno předává zprávu [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) do funkce [CWnd::D Efwindowproc](#defwindowproc) a parametr *wParam* této zprávy. Určuje SC_MOVE nebo SC_SIZE.
+Okno vstoupí do modální smyčky přesunutí nebo změny velikosti, když uživatel klikne na záhlaví okna nebo na hranici velikosti nebo když okno předává zprávu [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) do funkce [CWnd::D Efwindowproc](#defwindowproc) a parametr *wParam* této zprávy určuje SC_MOVE nebo SC_SIZE.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
 
 ##  <a name="onerasebkgnd"></a>CWnd:: OnEraseBkgnd
 
-Rozhraní volá tuto členskou funkci, když je `CWnd` potřeba vymazat pozadí objektu (například při změně velikosti).
+Rozhraní volá tuto členskou funkci, když je potřeba vymazat pozadí objektu `CWnd` (například při změně velikosti).
 
 ```
 afx_msg BOOL OnEraseBkgnd(CDC* pDC);
@@ -6890,7 +6890,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Určuje objekt kontextu zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6903,9 +6903,9 @@ Je volána pro přípravu neověřené oblasti pro malování.
 
 Výchozí implementace smaže pozadí pomocí štětce na pozadí třídy zadaného `hbrBackground` členem struktury třídy okna.
 
-Pokud je `OnEraseBkgnd` člen null, vaše přepsaná verze by měla vymazat barvu pozadí. `hbrBackground` Vaše verze by měla také zarovnat počátek zamýšleného štětce s `CWnd` souřadnicemi, a to tak, že nejprve navolají [UnrealizeObject](/windows/win32/api/wingdi/nf-wingdi-unrealizeobject) štětce a pak vyberete štětec.
+Pokud má člen `hbrBackground` hodnotu NULL, měla by přepsaná verze `OnEraseBkgnd` vymazat barvu pozadí. Vaše verze by měla také zarovnat počátek zamýšleného štětce s souřadnicemi `CWnd`, a to prvním voláním [UnrealizeObject](/windows/win32/api/wingdi/nf-wingdi-unrealizeobject) pro štětec a následným výběrem štětce.
 
-Přepsaná `OnEraseBkgnd` hodnota by měla vrátit nenulovou hodnotu v reakci na WM_ERASEBKGND, pokud zpracovává zprávu a maže pozadí. to znamená, že není nutné žádné další mazání. Pokud vrátí hodnotu 0, zůstane okno označeno jako nutné pro vymazání. (Obvykle to znamená, že `fErase` bude mít člen `PAINTSTRUCT` struktury hodnotu true.)
+Přepsaný `OnEraseBkgnd` by měl vrátit nenulovou hodnotu v reakci na WM_ERASEBKGND, pokud zpracovává zprávu a maže pozadí. To znamená, že se nevyžaduje žádné další mazání. Pokud vrátí hodnotu 0, zůstane okno označeno jako nutné pro vymazání. (Obvykle to znamená, že `fErase` člen struktury `PAINTSTRUCT` bude TRUE.)
 
 Systém Windows předpokládá, že pozadí je vypočítáváno pomocí režimu mapování MM_TEXT. Pokud je kontext zařízení v jiném režimu mapování, nesmí být oblast smazána v viditelné části klientské oblasti.
 
@@ -6942,7 +6942,7 @@ afx_msg void OnExitSizeMove();
 
 Tato metoda obdrží oznámení [WM_EXITSIZEMOVE](/windows/win32/winmsg/wm-exitsizemove) , které je popsáno v Windows SDK.
 
-Okno vstoupí do modální smyčky přesunutí nebo změny velikosti, když uživatel klikne na záhlaví okna nebo na hranici velikosti nebo když okno předává zprávu [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) do funkce [CWnd::D Efwindowproc](#defwindowproc) a parametr *wParam* této zprávy. Určuje SC_MOVE nebo SC_SIZE.
+Okno vstoupí do modální smyčky přesunutí nebo změny velikosti, když uživatel klikne na záhlaví okna nebo na hranici velikosti nebo když okno předává zprávu [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) do funkce [CWnd::D Efwindowproc](#defwindowproc) a parametr *wParam* této zprávy určuje SC_MOVE nebo SC_SIZE.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -6977,9 +6977,9 @@ Jedna nebo více následujících hodnot, které označují typ vstupu, které a
 
 - DLGC_DEFPUSHBUTTON výchozí (pushbutton).
 
-- DLGC_HASSETSEL zprávy EM_SETSEL.
+- DLGC_HASSETSEL EM_SETSEL zprávy.
 
-- DLGC_UNDEFPUSHBUTTON žádné výchozí zpracování (pushbutton). (Aplikace může tento příznak použít s DLGC_BUTTON k označení toho, že zpracovává vstup tlačítka, ale spoléhá se na systém pro výchozí zpracování (pushbutton).)
+- DLGC_UNDEFPUSHBUTTON žádné výchozí zpracování (pushbutton). (Aplikace může pomocí tohoto příznaku DLGC_BUTTON značit, že zpracovává vstup tlačítek, ale spoléhá se na systém pro výchozí zpracování (pushbutton).)
 
 - Přepínač DLGC_RADIOBUTTON
 
@@ -6987,17 +6987,17 @@ Jedna nebo více následujících hodnot, které označují typ vstupu, které a
 
 - DLGC_WANTALLKEYS všechny vstupy klávesnice.
 
-- Klávesy se šipkami DLGC_WANTARROWS
+- DLGC_WANTARROWS klávesy se šipkami.
 
-- DLGC_WANTCHARS zprávy WM_CHAR.
+- DLGC_WANTCHARS WM_CHAR zprávy.
 
 - DLGC_WANTMESSAGE všechny vstupy klávesnice. Aplikace předá tuto zprávu k ovládacímu prvku.
 
-- DLGC_WANTTAB Klávesa TAB.
+- DLGC_WANTTAB Klávesa TAB
 
 ### <a name="remarks"></a>Poznámky
 
-V normálním případě systém Windows zpracovává všechny vstupy kláves a kláves TAB a klávesy `CWnd` na ovládacím prvku. `OnGetDlgCode` Přepsáním`CWnd` může ovládací prvek zvolit konkrétní typ vstupu pro vlastní zpracování.
+V normálním případě systém Windows zpracovává všechny vstupy kláves se šipkami a klávesy TAB a klávesy na ovládacím prvku `CWnd`. Přepsáním `OnGetDlgCode`může ovládací prvek `CWnd` zvolit konkrétní typ vstupu pro vlastní zpracování.
 
 Výchozí `OnGetDlgCode` funkce pro předdefinované třídy ovládacího prvku vrátí kód vhodný pro každou třídu.
 
@@ -7012,7 +7012,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ### <a name="parameters"></a>Parametry
 
 *lpMMI*<br/>
-Odkazuje na `MINMAXINFO` strukturu, která obsahuje informace o maximalizované velikosti a umístění okna a jeho minimální a maximální velikost sledování. Další informace o této struktuře naleznete v tématu struktura [minmaxinfo –](/windows/win32/api/winuser/ns-winuser-minmaxinfo) .
+Odkazuje na strukturu `MINMAXINFO`, která obsahuje informace o maximalizované velikosti a umístění okna a jeho minimální a maximální velikost sledování. Další informace o této struktuře naleznete v tématu struktura [minmaxinfo –](/windows/win32/api/winuser/ns-winuser-minmaxinfo) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -7049,7 +7049,7 @@ Další informace naleznete v části [CWinApp:: OnHelpFinder](../../mfc/referen
 
 ##  <a name="onhelpindex"></a>CWnd:: OnHelpIndex
 
-Zpracuje příkaz ID_HELP_INDEX a poskytne výchozí téma nápovědy.
+Zpracovává příkaz ID_HELP_INDEX a poskytuje výchozí téma nápovědy.
 
 ```
 afx_msg void OnHelpIndex();
@@ -7078,7 +7078,7 @@ Vrátí hodnotu TRUE, pokud má okno fokus klávesnice nebo je-li nabídka aktiv
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je nabídka aktivní při stisknutí klávesy F1, pošle se WM_HELP do okna přidruženého k této nabídce. v opačném případě se WM_HELP odešle do okna, které má fokus klávesnice. Pokud nemá fokus klávesnice žádné okno, WM_HELP se pošle do aktuálně aktivního okna.
+Pokud je při stisknutí klávesy F1 aktivní nabídka, WM_HELP je odeslána do okna přidruženého k této nabídce. v opačném případě se WM_HELP odešle do okna, které má fokus klávesnice. Pokud nemá fokus klávesnice žádné okno, WM_HELP se pošle do aktuálně aktivního okna.
 
 ##  <a name="onhelpusing"></a>CWnd:: OnHelpUsing
 
@@ -7107,8 +7107,8 @@ afx_msg void OnHotKey(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nHotKeyId*|pro Identifikátor horké klávesy, která generovala zprávu. Pokud byla zpráva vygenerována systémem definovaným klíčem Hot, bude tento parametr jednu z následujících hodnot:<br /><br /> -IDHOT_SNAPDESKTOP – stiskla se klávesová zkratka pro přitahování z pracovní plochy.<br />-IDHOT_SNAPWINDOW – stiskla se klávesová zkratka pro okno přichycení.|
-|*nKey1*|pro Bitových kombinací (nebo) příznaků, které označují stisknuté klávesy v kombinaci s klíčem určeným parametrem *nKey2* . Možné hodnoty jsou:<br /><br /> -MOD_ALT-byla podržena klávesa ALT.<br />-MOD_CONTROL-byla stisknuta klávesa CTRL.<br />-MOD_SHIFT-stisknutí klávesy SHIFT.<br />-MOD_WIN – buď byl uložený klíč WINDOWS. Tyto klíče jsou označeny logem systému Microsoft Windows.|
+|*nHotKeyId*|pro Identifikátor horké klávesy, která generovala zprávu. Pokud byla zpráva vygenerována systémem definovaným klíčem Hot, bude tento parametr jednu z následujících hodnot:<br /><br /> -IDHOT_SNAPDESKTOP – stiskla se klávesová zkratka pro modul snap-in Desktop.<br />-IDHOT_SNAPWINDOW – stiskla se klávesová zkratka pro okno přichycení.|
+|*nKey1*|pro Bitových kombinací (nebo) příznaků, které označují stisknuté klávesy v kombinaci s klíčem určeným parametrem *nKey2* . Možné hodnoty jsou:<br /><br /> -MOD_ALT – buď byl stisknut klávesa ALT.<br />-MOD_CONTROL – buď byl stisknut klávesa CTRL.<br />-MOD_SHIFT – stisknutí klávesy SHIFT bylo vypnuté.<br />-MOD_WIN – buď byl klíč WINDOWS vypnutý. Tyto klíče jsou označeny logem systému Microsoft Windows.|
 |*nKey2*|pro Kód virtuálního klíče pro klávesovou zkratku.|
 
 ### <a name="remarks"></a>Poznámky
@@ -7134,23 +7134,23 @@ afx_msg void OnHScroll(
 *nSBCode*<br/>
 Určuje kód posouvaných řádků, který indikuje požadavek na posunutí uživatele. Tento parametr může být jeden z následujících:
 
-- SB_LEFT posun na zcela vlevo.
+- SB_LEFT posun na levou stranu.
 
-- SB_ENDSCROLL konec posuvníku.
+- SB_ENDSCROLL koncový posun.
 
-- Posun SB_LINELEFT doleva.
+- SB_LINELEFT posun doleva.
 
-- Posun SB_LINERIGHT doprava.
+- SB_LINERIGHT posun doprava.
 
-- SB_PAGELEFT posun o jednu stránku doleva.
+- SB_PAGELEFT posunou o jednu stránku doleva
 
-- SB_PAGERIGHT posun o jednu stránku doprava.
+- SB_PAGERIGHT posunutí o jednu stránku doprava.
 
-- SB_RIGHT posun na úplně vpravo.
+- SB_RIGHT posuňte se úplně doprava.
 
-- SB_THUMBPOSITION posun na absolutní pozici. Aktuální pozice je určena parametrem *nPos* .
+- SB_THUMBPOSITION posuňte se na absolutní pozici. Aktuální pozice je určena parametrem *nPos* .
 
-- SB_THUMBTRACK přetáhněte rolovací pole na určenou pozici. Aktuální pozice je určena parametrem *nPos* .
+- SB_THUMBTRACK přetáhněte posuvník na určenou pozici. Aktuální pozice je určena parametrem *nPos* .
 
 *nPos*<br/>
 Určuje polohu posouvaných box, pokud je kód rolovacího panelu SB_THUMBPOSITION nebo SB_THUMBTRACK; v opačném případě se nepoužije. V závislosti na počátečním rozsahu posouvání může být *nPos* záporný a v případě potřeby by měl být převeden na **int** .
@@ -7160,7 +7160,7 @@ Pokud se posuňte zpráva od ovládacího prvku posuvníku, obsahuje ukazatel na
 
 ### <a name="remarks"></a>Poznámky
 
-SB_THUMBTRACK posouvaný kód se obvykle používá v aplikacích, které poskytují určitou zpětnou vazbu při přetahování posuvníku.
+SB_THUMBTRACK rolovací kód se obvykle používá aplikacemi, které poskytují určitou zpětnou vazbu při přetahování posuvníku.
 
 Pokud aplikace posouvá obsah řízený posuvníkem, musí také resetovat pozici rolovacího pole pomocí členské funkce [SetScrollPos](#setscrollpos) .
 
@@ -7173,7 +7173,7 @@ Pokud aplikace posouvá obsah řízený posuvníkem, musí také resetovat pozic
 
 ##  <a name="onhscrollclipboard"></a>CWnd:: OnHScrollClipboard
 
-`OnHScrollClipboard` Členská funkce vlastníka schránky je volána prohlížečem schránky, pokud data ve schránce `CF_OWNERDISPLAY` mají formát a v horizontálním posuvníku prohlížeče schránky je událost.
+Členská funkce `OnHScrollClipboard` vlastníka schránky je volána prohlížečem schránky, pokud data ve schránce mají formát `CF_OWNERDISPLAY` a v horizontálním posuvníku prohlížeče schránky je událost.
 
 ```
 afx_msg void OnHScrollClipboard(
@@ -7190,24 +7190,24 @@ Určuje ukazatel na okno prohlížeče schránky. Ukazatel může být dočasný
 *nSBCode*<br/>
 Určuje jeden z následujících posouvaných kódů v aplikaci s nízkým pořadím:
 
-- Posune SB_BOTTOM dolů doprava.
+- SB_BOTTOM posuňte se dolů doprava.
 
-- SB_ENDSCROLL konec posuvníku.
+- SB_ENDSCROLL koncový posun.
 
-- SB_LINEDOWN posun o jeden řádek dolů.
+- SB_LINEDOWN posuňte se o jeden řádek dolů.
 
 - SB_LINEUP posun o jeden řádek nahoru.
 
-- SB_PAGEDOWN posun o jednu stránku dolů.
+- SB_PAGEDOWN posunete o jednu stránku dolů.
 
-- SB_PAGEUP posun o jednu stránku nahoru.
+- SB_PAGEUP posunete o jednu stránku nahoru.
 
-- SB_THUMBPOSITION se posuňte na absolutní pozici. Aktuální pozice je k dispozici v *nPos*.
+- SB_THUMBPOSITION posuňte se na absolutní pozici. Aktuální pozice je k dispozici v *nPos*.
 
-- SB_TOP posun nahoru doleva.
+- SB_TOP posunutí doleva nahoru.
 
 *nPos*<br/>
-Obsahuje polohu posouvaných box, pokud je kód rolovacího panelu SB_THUMBPOSITION; jinak se nepoužívá.
+Obsahuje polohu posouvaných box, pokud je kód posuvníku SB_THUMBPOSITION. jinak se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -7218,7 +7218,7 @@ Vlastník by měl posunout obrázek schránky, zrušit platnost příslušné č
 
 ##  <a name="oniconerasebkgnd"></a>CWnd:: OnIconEraseBkgnd
 
-Rozhraní volá tuto členskou funkci pro minimalizovaný objekt (ikonickým) `CWnd` , pokud musí být pozadí ikony vyplněno před vykreslením ikony.
+Rozhraní volá tuto členskou funkci pro minimalizovaný objekt (ikonickým) `CWnd`, když je nutné před vykreslením ikony vyplnit pozadí ikony.
 
 ```
 afx_msg void OnIconEraseBkgnd(CDC* pDC);
@@ -7226,12 +7226,12 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Určuje objekt kontextu zařízení ikony. Může být dočasný a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
 
-`CWnd`přijímá toto volání pouze v případě, že je pro výchozí implementaci okna definována ikona třídy; jinak se zavolá [OnEraseBkgnd](#onerasebkgnd) .
+`CWnd` obdrží toto volání pouze v případě, že je pro výchozí implementaci okna definována ikona třídy; jinak se zavolá [OnEraseBkgnd](#onerasebkgnd) .
 
 Členská funkce [DefWindowProc](#defwindowproc) vyplní pozadí ikony pomocí štětce na pozadí nadřazeného okna.
 
@@ -7253,9 +7253,9 @@ Určuje nabídku, která má být inicializována. Může být dočasný a nemě
 
 ### <a name="remarks"></a>Poznámky
 
-`OnInitMenu`se volá, když uživatel klikne na položku na řádku nabídek nebo stiskne klávesu v nabídce. Přepište tuto členskou funkci pro úpravu nabídky předtím, než se zobrazí.
+`OnInitMenu` se volá, když uživatel klikne na položku na řádku nabídek nebo stiskne klávesu v nabídce. Přepište tuto členskou funkci pro úpravu nabídky předtím, než se zobrazí.
 
-`OnInitMenu`je volána pouze jednou, při prvním otevření nabídky (například když uživatel klikne na položku na řádku nabídek). Tato metoda neposkytuje informace o položkách nabídky. Když se uživatel přesune k položkám v nabídce (například přesunutím myši mezi několik položek nabídky), funkce se nevolá znovu. Jakmile se uživatel z nabídky ukončí (například kliknutím na oblast klienta aplikace) a později klikne na položku na řádku nabídek, funkce bude volána znovu.
+`OnInitMenu` se volá jenom jednou, při prvním použití nabídky (například když uživatel klikne na položku na řádku nabídek). Tato metoda neposkytuje informace o položkách nabídky. Když se uživatel přesune k položkám v nabídce (například přesunutím myši mezi několik položek nabídky), funkce se nevolá znovu. Jakmile se uživatel z nabídky ukončí (například kliknutím na oblast klienta aplikace) a později klikne na položku na řádku nabídek, funkce bude volána znovu.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -7301,7 +7301,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*uFlag*|pro Tento příznak může obsahovat následující hodnoty:<br /><br /> -GIDC_ARRIVAL – do systému se přidalo nové zařízení.<br />-GIDC_REMOVAL – zařízení se odebralo ze systému.|
+|*uFlag*|pro Tento příznak může obsahovat následující hodnoty:<br /><br /> -GIDC_ARRIVAL – do systému se přidalo nové zařízení.<br />-GIDC_REMOVAL – ze systému bylo odebráno zařízení.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -7380,7 +7380,7 @@ Počet opakování (kolikrát se klávesová zkratka opakuje v důsledku, kdy u�
 *nFlags*<br/>
 Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |0-7|Kontrola kódu (hodnota závislá na výrobci OEM).|
 |8|Rozšířený klíč, například klíč funkce nebo klíč na numerické klávesnici (1, pokud se jedná o rozšířený klíč).|
@@ -7390,13 +7390,13 @@ Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód
 |14|Předchozí stav klíče (1, pokud klíč nefunguje před voláním, 0, pokud je klíč v pořádku).|
 |15|Přechodový stav (1, pokud je klíč vydaný, 0, pokud se klíč stiskne).|
 
-Pro zprávu WM_KEYDOWN má bit přechodu na klíč (bit 15) hodnotu 0 a bit kontextového kódu (bit 13) je 0.
+Pro WM_KEYDOWNovou zprávu má bit přechodu na klíč (bit 15) hodnotu 0 a bit kontextu kódu (bit 13) je 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Nesystémový klíč je klávesová zkratka, která se stiskne při stisknutí klávesy ALT nebo stisknutí klávesy klávesnice, která se stiskne `CWnd` , když má fokus vstupu.
+Nesystémový klíč je klávesa klávesnice, která se stiskne při stisknutí klávesy ALT nebo stisknutí klávesy klávesnice, která se stiskne, když `CWnd` má fokus vstupu.
 
-Z důvodu automatického opakování může dojít k více než `OnKeyDown` jednomu volání před tím, než je provedeno volání členské funkce [webkeyup](#onkeyup) . Bit, který označuje předchozí stav klíče, lze použít k určení, zda `OnKeyDown` je volání první přechod nebo opakovaný přechod.
+Z důvodu automatického opakování může dojít k více než jednomu `OnKeyDown` volání před provedením volání členské funkce [prokeyup](#onkeyup) . Bit, který označuje předchozí stav klíče, lze použít k určení, zda je `OnKeyDown` volání prvního nebo po přechodu na opakovaný přechod.
 
 U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou klávesou ALT a pravou klávesovou zkratkou v hlavní části klávesnice. klávesy INS, DEL, domů, konec, stránka nahoru, stránka dolů a šipky v clusterech nalevo od číselné klávesnice; a lomítkem (/) a klávesy ENTER na numerické klávesnici. Některé další klávesnice můžou podporovat bit rozšířených klíčů v *nFlags*.
 
@@ -7425,7 +7425,7 @@ Počet opakování (kolikrát se klávesová zkratka opakuje v důsledku, kdy u�
 *nFlags*<br/>
 Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |0-7|Kontrola kódu (hodnota závislá na výrobci OEM). Dolní bajt v aplikaci s vysokým pořadím|
 |8|Rozšířený klíč, například klíč funkce nebo klíč na numerické klávesnici (1, pokud se jedná o rozšířený klíč, jinak 0).|
@@ -7435,11 +7435,11 @@ Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód
 |14|Předchozí stav klíče (1, pokud klíč nefunguje před voláním, 0, pokud je klíč v pořádku).|
 |15|Přechodový stav (1, pokud je klíč vydaný, 0, pokud se klíč stiskne).|
 
-Pro zprávu WM_KEYUP má bit přechodu na klíč (bit 15) hodnotu 1 a bit kontextového kódu (bit 13) je 0.
+Pro WM_KEYUPovou zprávu má bit přechodu na klíč (bit 15) hodnotu 1 a bit kontextu kódu (bit 13) je 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Nesystémový klíč je klávesa klávesnice, která se stiskne při stisknutí klávesy ALT nebo stisknuté klávesy, která se stiskne, když `CWnd` má fokus vstupu.
+Nesystémový klíč je klávesa klávesnice, která se stiskne při stisknutí klávesy ALT nebo stisknutí klávesy klávesnice, která se stiskne, když `CWnd` má fokus vstupu.
 
 U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou klávesou ALT a pravou klávesovou zkratkou v hlavní části klávesnice. klávesy INS, DEL, domů, konec, stránka nahoru, stránka dolů a šipky v clusterech nalevo od číselné klávesnice; a lomítkem (/) a klávesy ENTER na numerické klávesnici. Některé další klávesnice můžou podporovat bit rozšířených klíčů v *nFlags*.
 
@@ -7461,7 +7461,7 @@ Určuje ukazatel na okno, které přijímá vstupní fokus (může mít hodnotu 
 
 ### <a name="remarks"></a>Poznámky
 
-`CWnd` Pokud objekt zobrazuje blikající kurzor, měl by se na tomto místě zničit blikající kurzor.
+Pokud objekt `CWnd` zobrazuje blikající kurzor, v tomto okamžiku by měl být tento kurzor zničen.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -7481,22 +7481,22 @@ afx_msg void OnLButtonDblClk(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastaveno, pokud klávesa CTRL nefunguje.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši nefunguje.
+- MK_LBUTTON nastaveno, pokud levé tlačítko myši nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté.
+- MK_MBUTTON nastaveno, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_RBUTTON sada, pokud pravé tlačítko myši nefunguje.
+- MK_RBUTTON nastavte, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT se nastaví, pokud klávesa SHIFT nefunguje.
+- MK_SHIFT nastaveno, pokud klávesa SHIFT nefunguje.
 
 *Vyberte*<br/>
 Určuje souřadnici x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání budou přijímat `OnLButtonDblClk` jenom okna, která mají ve stylu CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) . Toto je výchozí nastavení pro okna Microsoft Foundation Class. Windows volá `OnLButtonDblClk` , když uživatel stiskne, uvolní a pak znovu stiskne levé tlačítko myši v rámci časového limitu dvojitého kliknutí v systému. Dvojitým kliknutím levým tlačítkem myši dojde k vygenerování čtyř událostí: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) zprávy, volání WM_LBUTTONDBLCLK a další zprávy WM_LBUTTONUP při uvolnění tlačítka.
+`OnLButtonDblClk` volání obdrží pouze systém Windows, který má CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) Style. Toto je výchozí nastavení pro okna Microsoft Foundation Class. Systém Windows volá `OnLButtonDblClk`, když uživatel stiskne, uvolní a pak znovu stiskne levé tlačítko myši v rámci časového limitu dvojitého kliknutí v systému. Dvojitým kliknutím na levé tlačítko myši dojde k vygenerování čtyř událostí: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) zprávy, volání WM_LBUTTONDBLCLK a další zpráva WM_LBUTTONUP po uvolnění tlačítka.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -7516,15 +7516,15 @@ afx_msg void OnLButtonDown(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastaveno, pokud klávesa CTRL nefunguje.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši nefunguje.
+- MK_LBUTTON nastaveno, pokud levé tlačítko myši nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté.
+- MK_MBUTTON nastaveno, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_RBUTTON sada, pokud pravé tlačítko myši nefunguje.
+- MK_RBUTTON nastavte, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT se nastaví, pokud klávesa SHIFT nefunguje.
+- MK_SHIFT nastaveno, pokud klávesa SHIFT nefunguje.
 
 *Vyberte*<br/>
 Určuje souřadnici x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
@@ -7549,13 +7549,13 @@ afx_msg void OnLButtonUp(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastaveno, pokud klávesa CTRL nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté.
+- MK_MBUTTON nastaveno, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_RBUTTON sada, pokud pravé tlačítko myši nefunguje.
+- MK_RBUTTON nastavte, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT se nastaví, pokud klávesa SHIFT nefunguje.
+- MK_SHIFT nastaveno, pokud klávesa SHIFT nefunguje.
 
 *Vyberte*<br/>
 Určuje souřadnici x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
@@ -7580,22 +7580,22 @@ afx_msg void OnMButtonDblClk(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastaveno, pokud klávesa CTRL nefunguje.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši nefunguje.
+- MK_LBUTTON nastaveno, pokud levé tlačítko myši nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté.
+- MK_MBUTTON nastaveno, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_RBUTTON sada, pokud pravé tlačítko myši nefunguje.
+- MK_RBUTTON nastavte, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT se nastaví, pokud klávesa SHIFT nefunguje.
+- MK_SHIFT nastaveno, pokud klávesa SHIFT nefunguje.
 
 *Vyberte*<br/>
 Určuje souřadnici x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání budou přijímat `OnMButtonDblClk` jenom okna, která mají ve stylu CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) . Toto je výchozí nastavení pro všechna okna Microsoft Foundation Class. Windows vygeneruje `OnMButtonDblClk` volání, když uživatel stiskne, uvolní a pak znovu stiskne prostřední tlačítko myši v rámci časového limitu dvojitého kliknutí v systému. Dvojitým kliknutím na prostřední tlačítko myši dojde k vygenerování čtyř událostí: [WM_MBUTTONDOWN](#onmbuttondown) a [WM_MBUTTONUP](#onmbuttonup) zprávy, volání WM_MBUTTONDBLCLK a další zprávy WM_MBUTTONUP.
+`OnMButtonDblClk` volání obdrží pouze systém Windows, který má CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) Style. Toto je výchozí nastavení pro všechna okna Microsoft Foundation Class. Windows vygeneruje volání `OnMButtonDblClk`, když uživatel stiskne, uvolní a pak znovu stiskne prostřední tlačítko myši v rámci časového limitu dvojitého kliknutí v systému. Dvojitým kliknutím na prostřední tlačítko myši dojde k vygenerování čtyř událostí: [WM_MBUTTONDOWN](#onmbuttondown) a [WM_MBUTTONUP](#onmbuttonup) zprávy, volání WM_MBUTTONDBLCLK a další zpráva WM_MBUTTONUP.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -7615,15 +7615,15 @@ afx_msg void OnMButtonDown(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastaveno, pokud klávesa CTRL nefunguje.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši nefunguje.
+- MK_LBUTTON nastaveno, pokud levé tlačítko myši nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté.
+- MK_MBUTTON nastaveno, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_RBUTTON sada, pokud pravé tlačítko myši nefunguje.
+- MK_RBUTTON nastavte, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT se nastaví, pokud klávesa SHIFT nefunguje.
+- MK_SHIFT nastaveno, pokud klávesa SHIFT nefunguje.
 
 *Vyberte*<br/>
 Určuje souřadnici x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
@@ -7648,13 +7648,13 @@ afx_msg void OnMButtonUp(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastaveno, pokud klávesa CTRL nefunguje.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši nefunguje.
+- MK_LBUTTON nastaveno, pokud levé tlačítko myši nefunguje.
 
-- MK_RBUTTON sada, pokud pravé tlačítko myši nefunguje.
+- MK_RBUTTON nastavte, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT se nastaví, pokud klávesa SHIFT nefunguje.
+- MK_SHIFT nastaveno, pokud klávesa SHIFT nefunguje.
 
 *Vyberte*<br/>
 Určuje souřadnici x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
@@ -7688,7 +7688,7 @@ Obsahuje ukazatel na deaktivaci podřízeného okna MDI. Tento ukazatel může b
 
 ### <a name="remarks"></a>Poznámky
 
-Podřízené okno MDI je aktivováno nezávisle na okně rámce MDI. Když je rámec aktivní, podřízené okno, které bylo naposledy aktivováno s `OnMDIActivate` voláním, obdrží zprávu [WM_NCACTIVATE](#onncactivate) a nakreslí aktivní rámec okna a záhlaví, ale neobdrží jiné `OnMDIActivate` volání.
+Podřízené okno MDI je aktivováno nezávisle na okně rámce MDI. Když je rámec aktivní, podřízené okno, které bylo naposledy aktivováno pomocí `OnMDIActivate` volání obdrží zprávu [WM_NCACTIVATE](#onncactivate) , aby nakreslila aktivní rámec okna a záhlaví, ale neobdrží jiné `OnMDIActivate` volání.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -7712,15 +7712,15 @@ Odkazuje na strukturu dat [MEASUREITEMSTRUCT –](/windows/win32/api/winuser/ns-
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište tuto členskou funkci a vyplňte `MEASUREITEMSTRUCT` datovou strukturu, na kterou odkazuje *lpMeasureItemStruct* a vrátí. Tato funkce informuje okna o rozměrech ovládacího prvku a umožní systému Windows zpracovat interakci uživatele s ovládacím prvkem správně.
+Přepište tuto členskou funkci a vyplňte `MEASUREITEMSTRUCT` datovou strukturu, na kterou odkazoval *lpMeasureItemStruct* a Return; Tato možnost informuje okna o rozměrech ovládacího prvku a umožní systému Windows zpracovat interakci uživatele s ovládacím prvkem správně.
 
-Pokud se seznam nebo pole se seznamem vytvoří pomocí stylu [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) nebo [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , rozhraní zavolá tuto funkci pro vlastníka pro každou položku v ovládacím prvku. v opačném případě je tato funkce volána jednou.
+Pokud se seznam nebo pole se seznamem vytvoří pomocí stylu [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) nebo [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , rozhraní volá tuto funkci pro vlastníka pro každou položku v ovládacím prvku. v opačném případě je tato funkce volána jednou.
 
-Systém Windows iniciuje volání `OnMeasureItem` pro vlastníka polí se seznamem a seznamů vytvořených pomocí stylu OwnerDrawFixed před odesláním zprávy [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) . V důsledku toho, když vlastník obdrží toto volání, systém Windows ještě neurčil výšku a šířku písma použitého v ovládacím prvku; volání funkcí a výpočty, které vyžadují tyto hodnoty, by měly být prováděny v hlavní funkci aplikace nebo knihovny.
+Systém Windows zahájí volání `OnMeasureItem` pro vlastníka polí se seznamem a seznamů vytvořených pomocí stylu OWNERDRAWFIXED před odesláním zprávy [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) . V důsledku toho, když vlastník obdrží toto volání, systém Windows ještě neurčil výšku a šířku písma použitého v ovládacím prvku; volání funkcí a výpočty, které vyžadují tyto hodnoty, by měly být prováděny v hlavní funkci aplikace nebo knihovny.
 
-Pokud je `CMenu`položka měřená jako objekt, `CListBox` `MeasureItem` nebo `CComboBox` , pak je volána virtuální funkce příslušné třídy. Přepište `MeasureItem` členskou funkci příslušné třídy ovládacího prvku pro výpočet a nastavení velikosti každé položky.
+Pokud je položka měřená jako `CMenu`, `CListBox` nebo `CComboBox` objekt, je volána `MeasureItem` virtuální funkce příslušné třídy. Přepište členskou funkci `MeasureItem` příslušné třídy ovládacího prvku pro výpočet a nastavení velikosti každé položky.
 
-`OnMeasureItem`bude volána pouze v případě, že je třída ovládacího prvku vytvořena v době běhu, nebo je vytvořena pomocí stylu LBS_OWNERDRAWVARIABLE nebo CBS_OWNERDRAWVARIABLE. Pokud ovládací prvek je vytvořen editorem dialogového okna, `OnMeasureItem` nebude volána. Důvodem je skutečnost, že se zpráva [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) odesílá do začátku procesu vytváření ovládacího prvku. Pokud jste podtřídou pomocí `DDX_Control`, `SubclassDlgItem`nebo `SubclassWindow`, obvykle k podtříd dochází po procesu vytváření. Proto neexistuje žádný způsob, jak zpracovat zprávu [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) ve `OnChildNotify` funkci ovládacího prvku, což je mechanismus, který knihovna MFC používá k implementaci ON_WM_MEASUREITEM_REFLECT.
+`OnMeasureItem` bude volána pouze v případě, že je třída ovládacího prvku vytvořena v době běhu, nebo je vytvořena pomocí stylu LBS_OWNERDRAWVARIABLE nebo CBS_OWNERDRAWVARIABLE. Je-li ovládací prvek vytvořen editorem dialogového okna, `OnMeasureItem` nebude volána. Důvodem je to, že zpráva [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) se pošle včas v procesu vytváření ovládacího prvku. Pokud podtřídou pomocí `DDX_Control`, `SubclassDlgItem`nebo `SubclassWindow`, k podtříd obvykle dochází po procesu vytváření. Proto neexistuje žádný způsob, jak zpracovat zprávu [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) ve funkci `OnChildNotify` ovládacího prvku, což je mechanismus, který knihovna MFC používá k implementaci ON_WM_MEASUREITEM_REFLECT.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -7751,7 +7751,7 @@ Obsahuje ukazatel na vybraný `CMenu`. Ukazatel může být dočasný a neměl b
 
 Slovo s vyšším pořadím vrácené hodnoty by mělo obsahovat jeden z následujících kódů příkazů:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |0|Určuje, že systém Windows zahodí znak, který uživatel stiskne, a vytvoří krátký zvukový signál na reproduktoru systému.|
 |1|Oznamuje systému Windows, aby zavřel aktuální nabídku.|
@@ -7761,7 +7761,7 @@ Slovo s nižším pořadím se ignoruje, pokud slovo s vysokým pořadím obsahu
 
 ### <a name="remarks"></a>Poznámky
 
-Odesílá se do `CWnd` nabídky, která vlastní v nabídce. `OnMenuChar`je také volána, když uživatel stiskne klávesu ALT a jakýkoli jiný klíč, a to i v případě, že klíč neodpovídá symbolickému znaku. V tomto případě *pMenu* odkazuje na nabídku `CWnd`, kterou vlastní, a *nFlags* je 0.
+Pošle se na `CWnd`, která vlastní nabídku. `OnMenuChar` se také volá, když uživatel stiskne klávesu ALT a jakýkoli jiný klíč, a to i v případě, že klíč neodpovídá symbolickému znaku. V tomto případě *pMenu* odkazuje na nabídku, která je vlastněna `CWnd`a *nFlags* je 0.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -7815,7 +7815,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 |Návratová hodnota|Význam|
 |------------------|-------------|
-|MNGO_NOERROR|V `pvObj` členu struktury [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) se vrátí ukazatel rozhraní, který podporuje operace přetažení. V současné době je podporováno pouze rozhraní [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) .|
+|MNGO_NOERROR|V `pvObj` členu struktury [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) se vrátí ukazatel rozhraní, který podporuje operace přetažení myší. V současné době je podporováno pouze rozhraní [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) .|
 |MNGO_NOINTERFACE|Není podporováno žádné rozhraní přetažení myší.|
 
 ### <a name="remarks"></a>Poznámky
@@ -7844,14 +7844,14 @@ afx_msg void OnMenuRButtonUp(
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda obdrží oznámení [WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup) , které je popsáno v Windows SDK. Zpráva [WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup) umožňuje aplikaci poskytnout kontextovou nabídku pro položku nabídky určenou ve zprávě.
+Tato metoda obdrží oznámení [WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup) , které je popsáno v Windows SDK. [WM_MENURBUTTONUPová](/windows/win32/menurc/wm-menurbuttonup) zpráva umožňuje aplikaci poskytnout kontextovou nabídku pro položku nabídky určenou ve zprávě.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
 
 ##  <a name="onmenuselect"></a>CWnd:: OnMenuSelect
 
-Pokud je `OnMenuSelect` objekt přidružen k nabídce, je volána rozhraním, když uživatel vybere položku nabídky. `CWnd`
+Pokud je objekt `CWnd` přidružený k nabídce, `OnMenuSelect` je volána rozhraním, když uživatel vybere položku nabídky.
 
 ```
 afx_msg void OnMenuSelect(
@@ -7868,23 +7868,23 @@ Identifikuje vybranou položku. Pokud je vybraná položka položka nabídky, *n
 *nFlags*<br/>
 Obsahuje kombinaci následujících příznaků nabídky:
 
-- Položka MF_BITMAP je rastrový obrázek.
+- MF_BITMAP položka je rastrový obrázek.
 
-- Položka MF_CHECKED je zaškrtnuta.
+- MF_CHECKED položka je zaškrtnuta.
 
 - Položka MF_DISABLED je zakázána.
 
-- Položka MF_GRAYED je ztlumená.
+- MF_GRAYED položka je ztlumená.
 
-- Byla vybrána položka MF_MOUSESELECT pomocí myši.
+- Byla vybrána položka MF_MOUSESELECT s myší.
 
 - Položka MF_OWNERDRAW je položkou vykreslování vlastníka.
 
-- Položka MF_POPUP obsahuje místní nabídku.
+- MF_POPUP položka obsahuje místní nabídku.
 
-- Položka MF_SEPARATOR je oddělovačem položky nabídky.
+- Položka MF_SEPARATOR je oddělovačem položek nabídky.
 
-- Položka MF_SYSMENU je obsažena v nabídce ovládacího prvku.
+- MF_SYSMENU položka je obsažena v nabídce ovládacího prvku.
 
 *hSysMenu*<br/>
 Pokud *nFlags* obsahuje MF_SYSMENU, identifikuje nabídku přidruženou ke zprávě. Pokud *nFlags* obsahuje MF_POPUP, identifikuje popisovač hlavní nabídky. Pokud *nFlags* neobsahuje ani MF_SYSMENU ani MF_POPUP, nepoužívá se.
@@ -7920,15 +7920,15 @@ Určuje číslo zprávy myši.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje, zda má být `CWnd` aktivován a zda má být událost myši zahozena. Musí to být jedna z následujících hodnot:
+Určuje, zda se má aktivovat `CWnd` a zda má být událost myši zahozena. Musí to být jedna z následujících hodnot:
 
-- MA_ACTIVATE aktivovat `CWnd` objekt.
+- MA_ACTIVATE aktivovat objekt `CWnd`.
 
-- MA_NOACTIVATE neaktivovat `CWnd` objekt.
+- MA_NOACTIVATE neaktivovat objekt `CWnd`.
 
-- MA_ACTIVATEANDEAT aktivovat `CWnd` objekt a zahodí událost myši.
+- MA_ACTIVATEANDEAT aktivovat objekt `CWnd` a zahodit událost myši.
 
-- MA_NOACTIVATEANDEAT neaktivuje `CWnd` objekt a zahodí událost myši.
+- MA_NOACTIVATEANDEAT neaktivovat objekt `CWnd` a zahodit událost myši.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -7957,7 +7957,7 @@ afx_msg void OnMouseHover(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje stisknutou klávesu CTRL.|
+|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje, že se stiskla klávesa CTRL.|
 |*Vyberte*|pro Objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , který určuje souřadnice *x* a *y* kurzoru relativně k levému hornímu rohu klientské oblasti.|
 
 ### <a name="remarks"></a>Poznámky
@@ -7994,7 +7994,7 @@ afx_msg void OnMouseHWheel(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje stisknutou klávesu CTRL.<br /><br /> Seznam příznaků naleznete v záhlaví "parametry zprávy" v tématu [o vstupu myši](/windows/win32/inputdev/about-mouse-input).|
+|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje, že se stiskla klávesa CTRL.<br /><br /> Seznam příznaků naleznete v záhlaví "parametry zprávy" v tématu [o vstupu myši](/windows/win32/inputdev/about-mouse-input).|
 |*zDelta*|pro Označuje vzdálenost otáčení kolečkem, vyjádřená v násobcích nebo divizích WHEEL_DELTA, což je 120. Kladná hodnota označuje, že kolečko bylo otočené doprava; záporná hodnota znamená, že kolečko bylo otočeno doleva.|
 |*bodů*|pro Objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , který určuje souřadnice *x* a *y* kurzoru relativně k levému hornímu rohu klientské oblasti.|
 
@@ -8035,22 +8035,22 @@ afx_msg void OnMouseMove(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastaveno, pokud klávesa CTRL nefunguje.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši nefunguje.
+- MK_LBUTTON nastaveno, pokud levé tlačítko myši nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté.
+- MK_MBUTTON nastaveno, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_RBUTTON sada, pokud pravé tlačítko myši nefunguje.
+- MK_RBUTTON nastavte, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT se nastaví, pokud klávesa SHIFT nefunguje.
+- MK_SHIFT nastaveno, pokud klávesa SHIFT nefunguje.
 
 *Vyberte*<br/>
 Určuje souřadnici x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud myš není zachycena, je zpráva WM_MOUSEMOVE přijímána `CWnd` objektem pod kurzorem myši. v opačném případě bude zpráva přenesena do okna, které zachytil myš.
+Pokud myš není zachycena, WM_MOUSEMOVE objektem `CWnd` pod kurzorem myši je přijata zpráva. v opačném případě zpráva přejde do okna, ve kterém je zachycena myš.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -8071,15 +8071,15 @@ afx_msg BOOL OnMouseWheel(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastaveno, pokud klávesa CTRL nefunguje.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši nefunguje.
+- MK_LBUTTON nastaveno, pokud levé tlačítko myši nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté.
+- MK_MBUTTON nastaveno, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_RBUTTON sada, pokud pravé tlačítko myši nefunguje.
+- MK_RBUTTON nastavte, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT se nastaví, pokud klávesa SHIFT nefunguje.
+- MK_SHIFT nastaveno, pokud klávesa SHIFT nefunguje.
 
 *zDelta*<br/>
 Indikuje, že se vzdálenost otáčí. Hodnota *zDelta* je vyjádřena v násobcích nebo divizích WHEEL_DELTA, což je 120. Hodnota menší než nula znamená převrácení (směrem k uživateli), zatímco hodnota větší než nula znamená otočení vpřed (od uživatele). Uživatel může tuto odpověď vrátit zpět změnou nastavení kolečka v softwaru myši. Další informace o tomto parametru najdete v tématu poznámky.
@@ -8097,16 +8097,16 @@ Pokud není přepsáno, `OnMouseWheel` volá výchozí hodnotu [WM_MOUSEWHEEL](/
 
 Parametr *zDelta* je násobek WHEEL_DELTA, který je nastaven na 120. Tato hodnota je prahová hodnota pro akci, která má být provedena, a jedna taková akce (například posouvání posunutí o jeden stupeň) by měla být provedena pro každou rozdílovou hodnotu.
 
-WHEEL_DELTA je nastavené na 120, aby se povolily kolečka pro jemnější rozlišení, jako je volně rotující kolo bez zářez. Kolečko pro jemnější rozlišení odesílá více zpráv na každé otočení, ale každá zpráva má menší rozdílovou hodnotu. Chcete-li použít takové kolo, přidejte příchozí hodnoty *zDelta* do chvíle, kdy se dosáhne WHEEL_DELTA (takže získáte stejnou odpověď pro dané rozdílové otočení), nebo posuňte částečné řádky jako odpověď na častější zprávy. Můžete také zvolit členitost posuvníku a nahromadění rozdílů, dokud nedosáhnete WHEEL_DELTA.
+WHEEL_DELTA bylo nastaveno na 120, aby bylo možné považovat kola pro jemnější rozlišení, jako je volně rotující kolo bez zářez. Kolečko pro jemnější rozlišení odesílá více zpráv na každé otočení, ale každá zpráva má menší rozdílovou hodnotu. Chcete-li použít takové kolo, přidejte příchozí hodnoty *zDelta* , dokud nedosáhnete WHEEL_DELTA (takže získáte stejnou reakci pro dané rozdílové otočení), nebo posuňte částečné řádky jako odpověď na častější zprávy. Můžete také zvolit členitost posuvníku a nahromadění rozdílů, dokud nedosáhnete WHEEL_DELTA.
 
 Přepište tuto členskou funkci tak, aby poskytovala vlastní chování posouvání myši.
 
 > [!NOTE]
-> `OnMouseWheel`zpracovává zprávy pro Windows NT 4,0 a novější verze. Pro zpracování zpráv systému Windows 95/98 nebo Windows NT 3,51 použijte [OnRegisteredMouseWheel](#onregisteredmousewheel).
+> `OnMouseWheel` zpracovává zprávy pro Windows NT 4,0 a novější verze. Pro zpracování zpráv systému Windows 95/98 nebo Windows NT 3,51 použijte [OnRegisteredMouseWheel](#onregisteredmousewheel).
 
 ##  <a name="onmove"></a>CWnd::-Move
 
-Rozhraní volá tuto členskou funkci po `CWnd` přesunutí objektu.
+Rozhraní volá tuto členskou funkci po přesunutí objektu `CWnd`.
 
 ```
 afx_msg void OnMove(
@@ -8116,10 +8116,10 @@ afx_msg void OnMove(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Určuje nové umístění souřadnic x v levém horním rohu klientské oblasti. Toto nové umístění je uvedené v souřadnicích obrazovky pro překrývající se a automaticky otevíraná okna a souřadnice nadřazeného klienta pro podřízená okna.
 
-*y*<br/>
+*požadované*<br/>
 Určuje nové umístění souřadnic y v levém horním rohu klientské oblasti. Toto nové umístění je uvedené v souřadnicích obrazovky pro překrývající se a automaticky otevíraná okna a souřadnice nadřazeného klienta pro podřízená okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -8129,7 +8129,7 @@ Určuje nové umístění souřadnic y v levém horním rohu klientské oblasti.
 
 ##  <a name="onmoving"></a>CWnd:: Probíhá přesun
 
-Rozhraní volá tuto členskou funkci, zatímco uživatel přesouvá `CWnd` objekt.
+Rozhraní volá tuto členskou funkci, zatímco uživatel přesouvá objekt `CWnd`.
 
 ```
 afx_msg void OnMoving(
@@ -8190,15 +8190,15 @@ afx_msg void OnNcCalcSize(
 Určuje, zda má aplikace určit, která část klientské oblasti obsahuje platné informace. Systém Windows zkopíruje platné informace do zadané oblasti v rámci nové oblasti klienta. Pokud má tento parametr hodnotu TRUE, aplikace by měla určit, která část klientské oblasti je platná.
 
 *lpncsp*<br/>
-Odkazuje na [NCCALCSIZE_PARAMS](/windows/win32/api/winuser/ns-winuser-nccalcsize_params) datovou strukturu obsahující informace, které aplikace může použít k výpočtu nové velikosti a pozice `CWnd` obdélníku (včetně klientské oblasti, ohraničení, titulku, posuvníků atd.).
+Odkazuje na [NCCALCSIZE_PARAMS](/windows/win32/api/winuser/ns-winuser-nccalcsize_params) datovou strukturu obsahující informace, které aplikace může použít k výpočtu nové velikosti a pozice `CWnd` obdélníku (včetně oblasti klienta, ohraničení, titulků, posuvníků atd.).
 
 ### <a name="remarks"></a>Poznámky
 
 Při zpracování této zprávy může aplikace řídit obsah klientské oblasti okna, když se změní velikost nebo poloha okna.
 
-Bez ohledu na hodnotu *bCalcValidRects*obsahuje první obdélník v poli určeném `rgrc` členem `NCCALCSIZE_PARAMS` struktury souřadnice okna. V případě podřízeného okna jsou souřadnice relativní vzhledem k klientské oblasti v nadřazeném okně. V případě oken nejvyšší úrovně jsou souřadnice obrazovkové souřadnice. Aplikace by měla upravit `rgrc[0]` obdélník tak, aby odrážela velikost a polohu klientské oblasti.
+Bez ohledu na hodnotu *bCalcValidRects*, první obdélník v poli určeném členem `rgrc` struktury struktury `NCCALCSIZE_PARAMS` obsahuje souřadnice okna. V případě podřízeného okna jsou souřadnice relativní vzhledem k klientské oblasti v nadřazeném okně. V případě oken nejvyšší úrovně jsou souřadnice obrazovkové souřadnice. Aplikace by měla upravit `rgrc[0]` obdélník tak, aby odrážela velikost a polohu klientské oblasti.
 
-`rgrc[1]` Obdélníky `rgrc[2]` a jsou platné pouze v případě, že je hodnota *bCalcValidRects* pravdivá. V tomto případě `rgrc[1]` obdélník obsahuje souřadnice okna před jeho přesunutím nebo změnou jeho velikosti. `rgrc[2]` Obdélník obsahuje souřadnice klientské oblasti okna před tím, než se okno přesunulo. Všechny souřadnice jsou relativní vzhledem k nadřazenému oknu nebo obrazovce.
+Obdélníky `rgrc[1]` a `rgrc[2]` jsou platné pouze v případě, že je hodnota *bCalcValidRects* pravdivá. V tomto případě `rgrc[1]` obdélník obsahuje souřadnice okna před jeho přesunutím nebo změnou jeho velikosti. `rgrc[2]` obdélník obsahuje souřadnice klientské oblasti okna před tím, než se okno přesunulo. Všechny souřadnice jsou relativní vzhledem k nadřazenému oknu nebo obrazovce.
 
 Výchozí implementace vypočítá velikost klientské oblasti podle vlastností okna (stav posouvaných panelů, nabídek atd.) a umístí výsledek do *lpncsp*.
 
@@ -8207,7 +8207,7 @@ Výchozí implementace vypočítá velikost klientské oblasti podle vlastností
 
 ##  <a name="onnccreate"></a>CWnd:: OnNcCreate
 
-Rozhraní volá tuto členskou funkci před zprávou [WM_CREATE](#oncreate) při `CWnd` prvním vytvoření objektu.
+Rozhraní volá tuto členskou funkci před [WM_CREATEovou](#oncreate) zprávou při prvním vytvoření objektu `CWnd`.
 
 ```
 afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
@@ -8220,7 +8220,7 @@ Odkazuje na strukturu dat [CREATESTRUCT –](/windows/win32/api/winuser/ns-winus
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je vytvořena neklientská oblast. Pokud dojde k chybě, je 0. funkce vrátí v tomto případě **chybu.** `Create`
+Nenulové, pokud je vytvořena neklientská oblast. Pokud dojde k chybě, je 0. funkce `Create` v tomto případě vrátí **chybu** .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8239,11 +8239,11 @@ afx_msg void OnNcDestroy();
 
 Výchozí implementace provede nějaké vyčištění a pak zavolá virtuální členskou funkci [PostNcDestroy](#postncdestroy).
 
-Přepsat `PostNcDestroy` , pokud chcete provést vlastní vyčištění, například **Odstranit tuto** operaci. Pokud přepíšete `OnNcDestroy`, je nutné `OnNcDestroy` volat v základní třídě, aby bylo zajištěno, že je uvolněna paměť interního přidělení pro toto okno.
+Přepsat `PostNcDestroy`, pokud chcete provést vlastní vyčištění, například **Odstranit tuto** operaci. Pokud přepíšete `OnNcDestroy`, je nutné volat `OnNcDestroy` v základní třídě, aby bylo zajištěno, že je uvolněna paměť interního přidělení pro toto okno.
 
 ##  <a name="onnchittest"></a>CWnd:: OnNcHitTest
 
-Rozhraní volá tuto členskou funkci pro `CWnd` objekt, který obsahuje kurzor ( `CWnd` nebo objekt, který použil členskou funkci [SetCapture](#setcapture) k zachycení vstupu myši) při každém přesunu myši.
+Rozhraní volá tuto členskou funkci pro objekt `CWnd`, který obsahuje kurzor (nebo objekt `CWnd`, který používal členskou funkci [SetCapture](#setcapture) k zachycení vstupu myši) při každém přesunutí myši.
 
 ```
 afx_msg LRESULT OnNcHitTest(CPoint point);
@@ -8279,18 +8279,18 @@ afx_msg void OnNcLButtonDblClk(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru. Seznam hodnot naleznete v tématu [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
-V případě potřeby se pošle zpráva [WM_SYSCOMMAND](#onsyscommand) .
+V případě potřeby se pošle [WM_SYSCOMMAND](#onsyscommand) zpráva.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
 
 ##  <a name="onnclbuttondown"></a>CWnd:: OnNcLButtonDown
 
-Rozhraní volá tuto členskou funkci, když uživatel stiskne levé tlačítko myši, zatímco ukazatel je v neklientské oblasti `CWnd` objektu.
+Rozhraní volá tuto členskou funkci, když uživatel stiskne levé tlačítko myši, zatímco ukazatel je v neklientské oblasti objektu `CWnd`.
 
 ```
 afx_msg void OnNcLButtonDown(
@@ -8304,11 +8304,11 @@ afx_msg void OnNcLButtonDown(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru. Seznam hodnot naleznete v tématu [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
-V případě potřeby se [WM_SYSCOMMAND](#onsyscommand) pošle.
+V případě potřeby se [WM_SYSCOMMAND](#onsyscommand) odešle.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -8329,11 +8329,11 @@ afx_msg void OnNcLButtonUp(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru. Seznam hodnot naleznete v tématu [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
-V případě potřeby se pošle [WM_SYSCOMMAND](#onsyscommand) .
+V případě potřeby [WM_SYSCOMMAND](#onsyscommand) odeslat.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -8354,7 +8354,7 @@ afx_msg void OnNcMButtonDblClk(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru.
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8377,7 +8377,7 @@ afx_msg void OnNcMButtonDown(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru.
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8400,7 +8400,7 @@ afx_msg void OnNcMButtonUp(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru.
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8462,11 +8462,11 @@ afx_msg void OnNcMouseMove(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru.
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
-V případě potřeby se pošle zpráva [WM_SYSCOMMAND](#onsyscommand) .
+V případě potřeby se pošle [WM_SYSCOMMAND](#onsyscommand) zpráva.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -8501,7 +8501,7 @@ afx_msg void OnNcRButtonDblClk(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru.
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8524,7 +8524,7 @@ afx_msg void OnNcRButtonDown(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru.
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8547,7 +8547,7 @@ afx_msg void OnNcRButtonUp(
 Určuje [kód testu](#onnchittest)spuštění. Test volání je test, který určuje umístění kurzoru.
 
 *Vyberte*<br/>
-`CPoint` Určuje objekt, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
+Určuje objekt `CPoint`, který obsahuje souřadnice obrazovky x a y pozice kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8667,12 +8667,12 @@ afx_msg void OnNextMenu(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nKey*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje stisknutou klávesu CTRL.<br /><br /> Seznam příznaků naleznete v záhlaví "parametry zprávy" v tématu [o vstupu myši](/windows/win32/inputdev/about-mouse-input).|
+|*nKey*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje, že se stiskla klávesa CTRL.<br /><br /> Seznam příznaků naleznete v záhlaví "parametry zprávy" v tématu [o vstupu myši](/windows/win32/inputdev/about-mouse-input).|
 |*lpMdiNextMenu*|pro Ukazatel na strukturu [MDINEXTMENU](/windows/win32/api/winuser/ns-winuser-mdinextmenu) , která obsahuje informace o aktivované nabídce.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda obdrží oznámení [WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup) , které je popsáno v Windows SDK. V reakci na tuto zprávu může vaše aplikace nastavit `hmenuNext` člen struktury [MDINEXTMENU](/windows/win32/api/winuser/ns-winuser-mdinextmenu) tak, aby určovala nabídku, na kterou se má přepnout, a `hwndNext` člen, který určí okno pro příjem zpráv s oznámeními v nabídce.
+Tato metoda obdrží oznámení [WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup) , které je popsáno v Windows SDK. V reakci na tuto zprávu může vaše aplikace nastavit `hmenuNext` člen struktury [MDINEXTMENU](/windows/win32/api/winuser/ns-winuser-mdinextmenu) tak, aby určovala nabídku, na kterou se má přepnout, a člen `hwndNext`, který určí okno pro příjem zpráv s oznámením o nabídkách.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -8694,7 +8694,7 @@ virtual BOOL OnNotify(
 Určuje ovládací prvek, který odesílá zprávu, pokud je zpráva z ovládacího prvku. V opačném případě je *wParam* 0.
 
 *lParam*<br/>
-Ukazatel na strukturu zprávy oznámení (`NMHDR`), která obsahuje kód oznámení a další informace. U některých oznamovacích zpráv tento parametr odkazuje na větší strukturu, která má `NMHDR` strukturu jako svůj první člen.
+Ukazatel na strukturu zprávy oznámení (`NMHDR`), která obsahuje kód oznámení a další informace. U některých oznamovacích zpráv tento parametr odkazuje na větší strukturu, která má jako první člen strukturu `NMHDR`.
 
 *pResult*<br/>
 Ukazatel na proměnnou získání výsledku LRESULT, do které se uloží kód výsledku, pokud je zpracována zpráva.
@@ -8705,15 +8705,15 @@ Aplikace vrátí nenulovou hodnotu, pokud zpracovává tuto zprávu; v opačném
 
 ### <a name="remarks"></a>Poznámky
 
-`OnNotify`zpracuje mapu zprávy pro kontrolní oznámení.
+`OnNotify` zpracovává mapu zpráv pro kontrolní oznámení.
 
-Přepište tuto členskou funkci v odvozené třídě pro zpracování zprávy WM_NOTIFY. Přepsání nebude zpracovávat mapu zprávy, pokud není volána základní třída `OnNotify` .
+Přepište tuto členskou funkci v odvozené třídě pro zpracování zprávy WM_NOTIFY. Přepsání nebude zpracovávat mapu zprávy, pokud není volána základní třída `OnNotify`.
 
-Další informace o zprávě WM_NOTIFY najdete v článku technické poznámky 61 (TN061), [ON_NOTIFY a WM_NOTIFY zprávy](../../mfc/tn061-on-notify-and-wm-notify-messages.md). Může vás také zajímat související témata, která jsou popsána v [tématech řízení](../../mfc/controls-mfc.md)a TN062, [reflexe zprávy pro ovládací prvky systému Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
+Další informace o WM_NOTIFY zprávě naleznete v části technická Poznámka 61 (TN061), [ON_NOTIFY a WM_NOTIFY zprávy](../../mfc/tn061-on-notify-and-wm-notify-messages.md). Může vás také zajímat související témata, která jsou popsána v [tématech řízení](../../mfc/controls-mfc.md)a TN062, [reflexe zprávy pro ovládací prvky systému Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
 
 ##  <a name="onnotifyformat"></a>CWnd:: OnNotifyFormat
 
-Rozhraní volá tuto členskou funkci, aby určila, jestli aktuální okno přijímá struktury ANSI nebo Unicode ve zprávě oznámení WM_NOTIFY.
+Rozhraní volá tuto členskou funkci, aby určila, jestli aktuální okno přijímá struktury ANSI nebo Unicode ve zprávě WM_NOTIFY oznámení.
 
 ```
 afx_msg UINT OnNotifyFormat(
@@ -8725,20 +8725,20 @@ afx_msg UINT OnNotifyFormat(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pWnd*|pro Ukazatel na `CWnd` objekt, který představuje okno odesílající zprávu [WM_NOTIFY](/windows/win32/controls/wm-notify) .<br /><br /> Tento parametr je ukazatel na ovládací prvek, pokud je parametr *NPŘÍKAZOVÝ* NF_QUERY, nebo ukazatel na nadřazené okno ovládacího prvku, pokud je *npříkazový* NF_REQUERY.|
-|*Npříkazový*|pro Hodnota příkazu, která se specializuje na zprávu WM_NOTIFY. Možné hodnoty jsou:<br /><br /> - NF_QUERY -<br />     Zpráva je dotaz, který určuje, zda se mají ve zprávách WM_NOTIFY používat struktury ANSI nebo Unicode. Tato zpráva se pošle z ovládacího prvku do svého nadřazeného okna během vytváření ovládacího prvku a v reakci na NF_REQUERY formulář této zprávy.<br />- NF_REQUERY -<br />     Zpráva je požadavek na ovládací prvek, který odešle NF_QUERY formulář této zprávy do svého nadřazeného okna. Tato žádost je odeslána z nadřazeného okna a požádá ovládací prvek o dotazování nadřazené položky typu struktury, která se má použít v WM_NOTIFY zprávách. Pokud je parametr *NPŘÍKAZOVÝ* NF_REQUERY, vrácená hodnota je výsledkem operace Requery.|
+|*pWnd*|pro Ukazatel na objekt `CWnd`, který představuje okno odesílající zprávu [WM_NOTIFY](/windows/win32/controls/wm-notify) .<br /><br /> Tento parametr je ukazatel na ovládací prvek, pokud je NF_QUERY parametr *npříkazový* nebo ukazatel na nadřazené okno ovládacího prvku, pokud je *npříkazový* NF_REQUERY.|
+|*Npříkazový*|pro Hodnota příkazu, která se specializuje WM_NOTIFY zprávě. Možné hodnoty jsou:<br /><br /> - NF_QUERY -<br />     Zpráva je dotaz, který určuje, zda se mají v WM_NOTIFYch zprávách používat struktury ANSI nebo Unicode. Tato zpráva je odeslána z ovládacího prvku do svého nadřazeného okna během vytváření ovládacího prvku a jako odpověď na NF_REQUERY formu této zprávy.<br />-NF_REQUERY-<br />     Zpráva je požadavek na ovládací prvek, který odešle NF_QUERYovou formu této zprávy do svého nadřazeného okna. Tento požadavek se odešle z nadřazeného okna a požádá ovládací prvek o dotazování nadřazené položky na typ struktury, která se má použít v WM_NOTIFYch zprávách. Pokud je parametr *npříkazový* NF_REQUERY, vrácená hodnota je výsledkem operace Requery.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
 |Návratová hodnota|Význam|
 |------------------|-------------|
-|NFR_ANSI|Ve zprávách WM_NOTIFY odesílaných ovládacím prvkem by měly být použity struktury ANSI.|
-|NFR_UNICODE|Ve zprávách WM_NOTIFY odesílaných ovládacím prvkem by měly být použity struktury Unicode.|
+|NFR_ANSI|Struktury ANSI by se měly používat v WM_NOTIFY zprávy odesílané ovládacím prvkem.|
+|NFR_UNICODE|Struktury Unicode by se měly používat v WM_NOTIFY zprávy odesílané ovládacím prvkem.|
 |0|Došlo k chybě.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda obdrží oznámení [WM_NOTIFYFORMAT](/windows/win32/Controls/wm-notifyformat) , které je popsáno v Windows SDK. Zprávy WM_NOTIFY jsou odesílány ze společného ovládacího prvku do svého nadřazeného okna a z nadřazeného okna na běžný ovládací prvek.
+Tato metoda obdrží oznámení [WM_NOTIFYFORMAT](/windows/win32/Controls/wm-notifyformat) , které je popsáno v Windows SDK. WM_NOTIFY zprávy jsou odesílány ze společného ovládacího prvku do svého nadřazeného okna a z nadřazeného okna na běžný ovládací prvek.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -8755,15 +8755,15 @@ afx_msg void OnPaint();
 
 Zpráva [WM_PAINT](/windows/win32/gdi/the-wm-paint-message) je odeslána při volání členské funkce [UpdateWindow](#updatewindow) nebo [RedrawWindow](#redrawwindow) .
 
-Okno může obdržet zprávy interního malování v důsledku volání `RedrawWindow` členské funkce se sadou příznaku RDW_INTERNALPAINT. V takovém případě okno nemusí mít oblast aktualizace. Aplikace by měla zavolat členskou funkci [GetUpdateRect](#getupdaterect) , aby určila, zda má okno oblast aktualizace. Pokud `GetUpdateRect` vrátí hodnotu 0, aplikace by neměla volat členské funkce [BeginPaint](#beginpaint) a [EndPaint](#endpaint) .
+Okno může obdržet zprávy interního vykreslování v důsledku volání členské funkce `RedrawWindow` se sadou příznaku RDW_INTERNALPAINT. V takovém případě okno nemusí mít oblast aktualizace. Aplikace by měla zavolat členskou funkci [GetUpdateRect](#getupdaterect) , aby určila, zda má okno oblast aktualizace. Pokud `GetUpdateRect` vrátí hodnotu 0, aplikace by neměla volat členské funkce [BeginPaint](#beginpaint) a [EndPaint](#endpaint) .
 
-Je zodpovědností aplikace, aby kontrolovala veškerou potřebnou vnitřní překreslení nebo aktualizaci, a to zobrazením vnitřních datových struktur pro každou zprávu WM_PAINT, protože zpráva WM_PAINT mohla být způsobena neplatnou oblastí a voláním `RedrawWindow`členská funkce s nastaveným příznakem RDW_INTERNALPAINT
+Je zodpovědností aplikace při kontrole všech nezbytných interních překreslení nebo aktualizace, a to zobrazením vnitřních datových struktur pro každou WM_PAINTovou zprávu, protože WM_PAINT zpráva mohla být způsobena neplatnou oblastí a voláním členské funkce `RedrawWindow` s nastaveným příznakem RDW_INTERNALPAINT.
 
-Interní zpráva WM_PAINT se v systému Windows pošle jenom jednou. Po odeslání interní zprávy WM_PAINT do okna `UpdateWindow` členskou funkcí nebudou odesílány ani odeslány žádné další zprávy WM_PAINT, dokud není zrušeno platnost okna nebo `RedrawWindow` dokud není znovu volána členská funkce s RDW_INTERNALPAINT příznak set
+Zpráva interního WM_PAINT se v systému Windows pošle jenom jednou. Po odeslání interní zprávy WM_PAINT do okna pomocí členské funkce `UpdateWindow` nebudou odeslány ani odesílány žádné další WM_PAINT zprávy, dokud nebude zrušeno platnost okna nebo dokud není znovu volána členská funkce `RedrawWindow` s nastaveným příznakem RDW_INTERNALPAINT.
 
 Informace o vykreslování obrázku v dokumentu nebo zobrazení aplikací naleznete v tématu [CView:: Draw](../../mfc/reference/cview-class.md#ondraw).
 
-Další informace o použití nástroje `WM_Paint`najdete v následujících tématech Windows SDK:
+Další informace o použití `WM_Paint`naleznete v následujících tématech v Windows SDK:
 
 - [Zpráva WM_PAINT](/windows/win32/gdi/the-wm-paint-message)
 
@@ -8771,7 +8771,7 @@ Další informace o použití nástroje `WM_Paint`najdete v následujících té
 
 ##  <a name="onpaintclipboard"></a>CWnd:: OnPaintClipboard
 
-`OnPaintClipboard` Členská funkce v schránce je volána prohlížečem schránky, pokud vlastník schránky umístil data do schránky ve formátu CF_OWNERDISPLAY a oblast klienta v prohlížeči schránky potřebuje překreslit.
+Členská funkce `OnPaintClipboard` vlastníka schránky je volána prohlížečem schránky, pokud vlastník schránky umístil data do schránky ve formátu CF_OWNERDISPLAY a v klientské oblasti prohlížeče schránky je nutné překreslit.
 
 ```
 afx_msg void OnPaintClipboard(
@@ -8789,9 +8789,9 @@ Identifikuje datovou strukturu [PAINTSTRUCT –](/windows/win32/api/winuser/ns-w
 
 ### <a name="remarks"></a>Poznámky
 
-Aby bylo možné určit, zda celá klientská oblast nebo pouze část IT potřebuje překreslit, musí vlastník schránky porovnat rozměry kreslicí oblasti zadané v rámci `rcpaint` `PAINTSTRUCT` struktury s dimenzemi zadanými v posledních. [ ](#onsizeclipboard)Volání členské funkce OnSizeClipboard
+Aby bylo možné určit, zda celá klientská oblast nebo pouze část IT potřebuje překreslit, musí vlastník schránky porovnat dimenze oblasti kreslení zadané v `rcpaint` členu `PAINTSTRUCT` struktury až k dimenzím uvedeným v nejnovějším volání členské funkce [OnSizeClipboard](#onsizeclipboard) .
 
-`OnPaintClipboard`použijte funkci [GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) Windows k uzamknutí paměti `PAINTSTRUCT` obsahující datovou strukturu a k odemknutí této paměti pomocí funkce [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows, než se ukončí.
+`OnPaintClipboard` by měla použít funkci [GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) Windows k uzamknutí paměti, která obsahuje datovou strukturu `PAINTSTRUCT`, a před ukončením této paměti ji odemknout pomocí funkce [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -8813,7 +8813,7 @@ Určuje ukazatel na okno, které způsobilo změnu systémové palety. Ukazatel 
 
 Toto volání umožňuje oknu bez vstupu fokusu, který používá paletu barev ke realizují svých logických palet a aktualizaci jeho klientské oblasti.
 
-`OnPaletteChanged` Členská funkce je volána pro všechna okna nejvyšší úrovně a překrytí, včetně toho, který změnil systémovou paletu a způsobil odeslání zprávy WM_PALETTECHANGED. Pokud libovolné podřízené okno používá barevnou paletu, musí se mu tato zpráva předat.
+Členská funkce `OnPaletteChanged` se volá pro všechna okna nejvyšší úrovně a překrytá Windows, včetně toho, která změnila systémovou paletu a způsobila odeslání zprávy WM_PALETTECHANGED. Pokud libovolné podřízené okno používá barevnou paletu, musí se mu tato zpráva předat.
 
 Aby nedošlo k nekonečné smyčce, okno by nemělo realizovat svou paletu, pokud nezjistí, že *pFocusWnd* neobsahuje ukazatel na sebe sama.
 
@@ -8839,7 +8839,7 @@ Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracováv
 
 ##  <a name="onparentnotify"></a>CWnd:: OnParentNotify
 
-`OnParentNotify` Členská funkce nadřazeného objektu je volána rozhraním, když je jeho podřízené okno vytvořeno nebo zničeno nebo když uživatel klikne na tlačítko myši, zatímco ukazatel myši je nad podřízeným oknem.
+Členská funkce `OnParentNotify` nadřazeného objektu je volána rozhraním, když je jeho podřízené okno vytvořeno nebo zničeno nebo když uživatel klikne na tlačítko myši, zatímco ukazatel myši je nad podřízeným oknem.
 
 ```
 afx_msg void OnParentNotify(
@@ -8850,28 +8850,28 @@ afx_msg void OnParentNotify(
 ### <a name="parameters"></a>Parametry
 
 *message*<br/>
-Určuje událost, pro kterou se nadřízený objekt oznamuje, a identifikátor podřízeného okna. Událost je slovo v dolním pořadí *zprávy*. Je-li událost WM_CREATE nebo WM_DESTROY, je ve slově v horním pořadí slovo *zprávy* identifikátor podřízeného okna; v opačném případě není definováno slovo ve velkém pořadí. Událost (slovo *zprávy*s nižším pořadím) může být libovolná z těchto hodnot:
+Určuje událost, pro kterou se nadřízený objekt oznamuje, a identifikátor podřízeného okna. Událost je slovo v dolním pořadí *zprávy*. Pokud je událost WM_CREATE nebo WM_DESTROY, je slovo s horním pořadím ve *zprávě* identifikátor podřízeného okna; v opačném případě není definováno slovo ve velkém pořadí. Událost (slovo *zprávy*s nižším pořadím) může být libovolná z těchto hodnot:
 
 - WM_CREATE se vytváří podřízené okno.
 
-- WM_DESTROY podřízené okno je zničeno.
+- WM_DESTROY dojde k zničení podřízeného okna.
 
-- WM_LBUTTONDOWN, že uživatel umístil ukazatel myši nad podřízené okno a kliknul na levé tlačítko myši.
+- WM_LBUTTONDOWN uživatel umístil kurzor myši nad podřízené okno a klikl na levé tlačítko myši.
 
-- WM_MBUTTONDOWN, že uživatel umístil ukazatel myši nad podřízené okno a klikne na prostřední tlačítko myši.
+- WM_MBUTTONDOWN uživatel umístil ukazatel myši nad podřízené okno a kliknul na prostřední tlačítko myši.
 
-- WM_RBUTTONDOWN, že uživatel umístil kurzor myši nad podřízené okno a kliknul na pravé tlačítko myši.
+- WM_RBUTTONDOWN uživatel umístil kurzor myši nad podřízené okno a klikl na pravé tlačítko myši.
 
 *lParam*<br/>
-Pokud je událost (slovo s nižším pořadím) *zprávy* WM_CREATE nebo WM_DESTROY, *lParam* Určuje popisovač okna podřízeného okna; jinak *lParam* obsahuje souřadnice x a y kurzoru. Souřadnice x je ve slově s nižším pořadím a souřadnice y se nachází v aplikaci s vysokým pořadím.
+Je-li událost (slovo s malým pořadím) *zprávy* WM_CREATE nebo WM_DESTROY, *lParam* Určuje popisovač okna podřízeného okna; jinak *lParam* obsahuje souřadnice x a y kurzoru. Souřadnice x je ve slově s nižším pořadím a souřadnice y se nachází v aplikaci s vysokým pořadím.
 
 ### <a name="remarks"></a>Poznámky
 
-Při vytváření podřízeného okna se systém zavolá `OnParentNotify` těsně před [vytvořením](#create) členské funkce, která vytvoří okno vrátí. Po zničení podřízeného okna bude systém volat `OnParentNotify` před jakýmkoli zpracováním ke zničení okna.
+Po vytvoření podřízeného okna systém zavolá `OnParentNotify` těsně před [vytvořením](#create) členské funkce, která vytvoří okno vrátí. Po zničení podřízeného okna systém zavolá `OnParentNotify` před jakýmkoli zpracováním ke zničení okna.
 
-`OnParentNotify`je volána pro všechna okna nadřazených prvků podřízeného okna, včetně okna nejvyšší úrovně.
+`OnParentNotify` se volá pro všechna okna předchůdce podřízeného okna, včetně okna nejvyšší úrovně.
 
-Všechna podřízená okna s výjimkou těch, která mají ve stylu [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) , odesílají tuto zprávu do svých nadřazených oken. Ve výchozím nastavení mají podřízené okna v dialogovém okně styl WS_EX_NOPARENTNOTIFY, pokud nebylo vytvořeno podřízené okno bez tohoto stylu voláním členské funkce [CreateEx](#createex) .
+Všechna podřízená okna s výjimkou těch, která mají styl [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) odesílají tuto zprávu do svých nadřazených oken. Ve výchozím nastavení mají podřízené okna v dialogovém okně styl WS_EX_NOPARENTNOTIFY, pokud nebylo vytvořeno podřízené okno bez tohoto stylu voláním členské funkce [CreateEx](#createex) .
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -8895,13 +8895,13 @@ afx_msg UINT OnPowerBroadcast(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je událost požadavkem, vraťte hodnotu TRUE pro udělení žádosti nebo BROADCAST_QUERY_DENY zamítne požadavek.
+Pokud je událost požadavkem, vraťte hodnotu TRUE pro udělení žádosti nebo BROADCAST_QUERY_DENY pro zamítnutí žádosti.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda obdrží zprávu [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) , která je popsána v Windows SDK.
 
-Parametr *nPowerEvent* určuje události, jako je například napájení z baterie, stav napájení se změnilo, oprávnění k pozastavení operace je požadováno nebo zamítnuto. operace se automaticky obnovuje po události, systém operaci pozastavuje nebo operace se po pozastavení obnovuje. Parametr *nEventData* se obvykle nepoužívá. Další informace najdete v parametrech *wParam* a *lParam* zprávy [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) .
+Parametr *nPowerEvent* určuje události, jako je například napájení z baterie, stav napájení se změnilo, oprávnění k pozastavení operace je požadováno nebo zamítnuto. operace se automaticky obnovuje po události, systém se pozastavuje a operace se po pozastavení obnovuje. Parametr *nEventData* se obvykle nepoužívá. Další informace naleznete v parametrech *wParam* a *lParam* zprávy [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) .
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -8936,11 +8936,11 @@ Nenulové, pokud je možné aplikaci snadno vypnout; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nějaká aplikace vrátí hodnotu 0, relace systému Windows není ukončena. Systém Windows zastaví `OnQueryEndSession` volání, jakmile jedna aplikace vrátí hodnotu 0 a pošle zprávu [WM_ENDSESSION](#onendsession) s hodnotou parametru false pro jakoukoliv aplikaci, která již vrátila nenulovou hodnotu.
+Pokud nějaká aplikace vrátí hodnotu 0, relace systému Windows není ukončena. Systém Windows zastaví volání `OnQueryEndSession`, jakmile jedna aplikace vrátí hodnotu 0 a pošle zprávu [WM_ENDSESSION](#onendsession) s hodnotou parametru false pro jakoukoliv aplikaci, která už vrátila nenulovou hodnotu.
 
 ##  <a name="onquerynewpalette"></a>CWnd:: OnQueryNewPalette
 
-Rozhraní volá tuto členskou funkci v případě, `CWnd` že se objekt dostane na vstupní fokus, který dává možnost `CWnd` realizovat svou logickou paletu, když dostane fokus.
+Rozhraní volá tuto členskou funkci, když `CWnd` objekt se chystá získat fokus vstupu, čímž `CWnd` příležitost realizovat svoji logickou paletu, když dostane fokus.
 
 ```
 afx_msg BOOL OnQueryNewPalette();
@@ -8948,11 +8948,11 @@ afx_msg BOOL OnQueryNewPalette();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud `CWnd` se realizuje jeho logická paleta; jinak 0.
+Nenulové, pokud `CWnd` realizuje svou logickou paletu; v opačném případě 0.
 
 ##  <a name="onqueryopen"></a>CWnd:: OnQueryOpen
 
-Rozhraní volá tuto členskou funkci, když `CWnd` je objekt minimalizován a uživatel požaduje `CWnd` , aby byl obnoven do své předminimalizováné velikosti a umístění.
+Rozhraní volá tuto členskou funkci, když je objekt `CWnd` minimalizován a uživatel požaduje, aby se `CWnd` obnovil do jeho předminimalizováné velikosti a pozice.
 
 ```
 afx_msg BOOL OnQueryOpen();
@@ -8964,7 +8964,7 @@ Nenulová, pokud lze ikonu otevřít, nebo 0, chcete-li zabránit otevření iko
 
 ### <a name="remarks"></a>Poznámky
 
-`OnQueryOpen` V`CWnd` nástroji by neměl provádět žádnou akci, která by způsobila změnu aktivace nebo fokus (například vytvoření dialogového okna).
+V `OnQueryOpen``CWnd` neměli provádět žádnou akci, která by způsobila změnu aktivace nebo fokus (například vytvoření dialogového okna).
 
 ##  <a name="onqueryuistate"></a>CWnd:: OnQueryUIState
 
@@ -8978,11 +8978,11 @@ afx_msg UINT OnQueryUIState();
 
 Návratová hodnota má hodnotu NULL, pokud jsou indikátory fokusu a klávesové zkratky viditelné. V opačném případě může být návratová hodnota jedna nebo více z následujících hodnot:
 
-- Indikátory fokusu UISF_HIDEFOCUS jsou skryté.
+- UISF_HIDEFOCUS indikátory fokusu jsou skryté.
 
 - Klávesové zkratky UISF_HIDEACCEL jsou skryté.
 
-- UISF_ACTIVE Windows XP: Ovládací prvek by měl být vykreslen ve stylu používaném pro aktivní ovládací prvky.
+- UISF_ACTIVE Windows XP: ovládací prvek by měl být vykreslen ve stylu používaném pro aktivní ovládací prvky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -9027,22 +9027,22 @@ afx_msg void OnRButtonDblClk(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastavená, pokud je vypnutá klávesa CTRL.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši rozchází.
+- MK_LBUTTON nastavené, pokud levé tlačítko myši nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté
+- MK_MBUTTON nastavená, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_RBUTTON nastavená, pokud je vypnuté pravé tlačítko myši.
+- MK_RBUTTON nastaveno, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT sada, pokud je vypnutá klávesa SHIFT
+- Pokud je vypnutá klávesa SHIFT, MK_SHIFT nastavit.
 
 *Vyberte*<br/>
 Určuje souřadnice x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání mohou přijímat `OnRButtonDblClk` pouze okna, která mají ve stylu CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) . Toto je výchozí nastavení pro Windows v rámci knihovna Microsoft Foundation Class. Windows volá `OnRButtonDblClk` , když uživatel stiskne, uvolní a pak znovu stiskne pravé tlačítko myši v rámci časového limitu dvojitého kliknutí v systému. Poklikáním na pravé tlačítko myši se ve skutečnosti generují čtyři události: [WM_RBUTTONDOWN](#onrbuttondown) a [WM_RBUTTONUP](#onrbuttonup) `OnRButtonDblClk` zprávy, volání a další zprávu WM_RBUTTONUP po uvolnění tlačítka.
+`OnRButtonDblClk` volání mohou přijímat pouze okna CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) Style. Toto je výchozí nastavení pro Windows v rámci knihovna Microsoft Foundation Class. Systém Windows volá `OnRButtonDblClk`, když uživatel stiskne, uvolní a znovu stiskne pravé tlačítko myši v rámci časového limitu dvojitého kliknutí v systému. Dvojím kliknutím na pravé tlačítko myši dojde k vygenerování čtyř událostí: [WM_RBUTTONDOWN](#onrbuttondown) a [WM_RBUTTONUP](#onrbuttonup) zprávy, volání `OnRButtonDblClk` a další zpráva WM_RBUTTONUP po uvolnění tlačítka.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -9062,15 +9062,15 @@ afx_msg void OnRButtonDown(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastavená, pokud je vypnutá klávesa CTRL.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši rozchází.
+- MK_LBUTTON nastavené, pokud levé tlačítko myši nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté
+- MK_MBUTTON nastavená, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_RBUTTON nastavená, pokud je vypnuté pravé tlačítko myši.
+- MK_RBUTTON nastaveno, pokud je vypnuté pravé tlačítko myši.
 
-- MK_SHIFT sada, pokud je vypnutá klávesa SHIFT
+- Pokud je vypnutá klávesa SHIFT, MK_SHIFT nastavit.
 
 *Vyberte*<br/>
 Určuje souřadnice x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
@@ -9094,13 +9094,13 @@ afx_msg void OnRButtonUp(
 *nFlags*<br/>
 Označuje, zda jsou různé virtuální klíče mimo provoz. Tento parametr může být libovolná kombinace následujících hodnot:
 
-- MK_CONTROL sada, pokud je vypnutá klávesa CTRL
+- MK_CONTROL nastavená, pokud je vypnutá klávesa CTRL.
 
-- MK_LBUTTON sada, pokud levé tlačítko myši rozchází.
+- MK_LBUTTON nastavené, pokud levé tlačítko myši nefunguje.
 
-- MK_MBUTTON sada, pokud je prostřední tlačítko myši vypnuté
+- MK_MBUTTON nastavená, pokud je prostřední tlačítko myši vypnuté.
 
-- MK_SHIFT sada, pokud je vypnutá klávesa SHIFT
+- Pokud je vypnutá klávesa SHIFT, MK_SHIFT nastavit.
 
 *Vyberte*<br/>
 Určuje souřadnice x a y kurzoru. Tyto souřadnice jsou vždy relativní vzhledem k levému hornímu rohu okna.
@@ -9138,11 +9138,11 @@ Pokud není přepsáno, `OnRegisteredMouseWheel` směruje zprávu do příslušn
 Tuto členskou funkci můžete přepsat tak, aby poskytovala vlastní směrování zpráv nebo změnila chování posouvání kolečkem myši.
 
 > [!NOTE]
-> `OnRegisteredMouseWheel`zpracovává zprávy pro systémy Windows 95/98 a Windows NT 3,51. Pro zpracování zpráv systému Windows NT 4,0 použijte [OnMouseWheel](#onmousewheel).
+> `OnRegisteredMouseWheel` zpracovává zprávy pro systémy Windows 95/98 a Windows NT 3,51. Pro zpracování zpráv systému Windows NT 4,0 použijte [OnMouseWheel](#onmousewheel).
 
 ##  <a name="onrenderallformats"></a>CWnd:: OnRenderAllFormats
 
-`OnRenderAllFormats` Členská funkce vlastníka schránky je volána rozhraním, když je zničena aplikace vlastníka.
+Členská funkce `OnRenderAllFormats` vlastníka schránky je volána rozhraním, když je zničena aplikace vlastníka.
 
 ```
 afx_msg void OnRenderAllFormats();
@@ -9154,7 +9154,7 @@ Vlastník schránky by měl vykreslovat data ve všech formátech, které doká�
 
 ##  <a name="onrenderformat"></a>CWnd:: OnRenderFormat
 
-`OnRenderFormat` Členská funkce, která je vlastníkem schránky, je volána rozhraním v případě, že je nutné vykreslit konkrétní formát s opožděným vykreslením.
+Členská funkce `OnRenderFormat` vlastníka schránky je volána rozhraním, když je nutné vykreslit konkrétní formát s opožděným vykreslením.
 
 ```
 afx_msg void OnRenderFormat(UINT nFormat);
@@ -9169,7 +9169,7 @@ Určuje formát schránky.
 
 Přijímač by měl vykreslovat data v tomto formátu a předávat je do schránky voláním funkce [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) systému Windows.
 
-Nevolejte `OpenClipboard` členskou funkci `CloseClipboard` ani funkci Windows v rámci `OnRenderFormat`.
+Nevolejte členskou funkci `OpenClipboard` ani funkci `CloseClipboard` Windows v rámci `OnRenderFormat`.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -9195,14 +9195,14 @@ afx_msg void OnSessionChange(
 
 Tato metoda obdrží oznámení [WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change) , které je popsáno v Windows SDK.
 
-Parametr *nSessionState* určuje, že relace je připojená nebo odpojená od konzoly nebo vzdáleného terminálu, zda je uživatel přihlášený nebo vypnutý, zda je relace uzamčena nebo odemčena, nebo když se relace změnila na stav vzdáleného řízení. Další informace najdete v parametru *wParam* zprávy [WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change) .
+Parametr *nSessionState* určuje, že relace je připojená nebo odpojená od konzoly nebo vzdáleného terminálu, zda je uživatel přihlášený nebo vypnutý, zda je relace uzamčena nebo odemčena, nebo když se relace změnila na stav vzdáleného řízení. Další informace naleznete v parametru *wParam* zprávy [WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change) .
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
 
 ##  <a name="onsetcursor"></a>CWnd:: OnSetCursor
 
-Rozhraní volá tuto členskou funkci, pokud není zachyceno zadání myši a myš způsobuje pohyb kurzoru v rámci `CWnd` objektu.
+Rozhraní volá tuto členskou funkci, pokud není zachyceno zadání myši a myš způsobuje pohyb kurzoru v rámci objektu `CWnd`.
 
 ```
 afx_msg BOOL OnSetCursor(
@@ -9228,13 +9228,13 @@ Nenulové pro zastavení dalšího zpracování nebo 0 pro pokračování.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá `OnSetCursor` před zpracováním nadřazené okno. Pokud nadřazené okno vrátí hodnotu TRUE, další zpracování se zastaví. Volání nadřazeného okna umožní ovládacímu prvku nadřazeného okna nad nastavením kurzoru v podřízeném okně.
+Výchozí implementace před zpracováním volá `OnSetCursor` nadřazeného okna. Pokud nadřazené okno vrátí hodnotu TRUE, další zpracování se zastaví. Volání nadřazeného okna umožní ovládacímu prvku nadřazeného okna nad nastavením kurzoru v podřízeném okně.
 
 Výchozí implementace nastaví kurzor na šipku, pokud není v klientské oblasti nebo na ukazatel registrované třídy, pokud je.
 
-Pokud je *nHitTest* HTERROR a *zpráva* je zpráva tlačítkem myši, `MessageBeep` je volána členská funkce.
+Pokud je *NHITTEST* HTERROR a *zpráva* je zpráva tlačítkem myši, je volána členská funkce `MessageBeep`.
 
-Parametr *zprávy* je 0 při `CWnd` vstupu do režimu nabídky.
+Parametr *zprávy* je 0, když `CWnd` vstup do režimu nabídky.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -9250,11 +9250,11 @@ afx_msg void OnSetFocus(CWnd* pOldWnd);
 ### <a name="parameters"></a>Parametry
 
 *pOldWnd*<br/>
-`CWnd` Obsahuje objekt, který ztratí vstupní fokus (může mít hodnotu null). Ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
+Obsahuje objekt `CWnd`, který ztratí vstupní fokus (může mít hodnotu NULL). Ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zobrazit blikající `CWnd` kurzor, měli byste v tomto okamžiku volat příslušné funkce blikajícího kurzoru.
+Chcete-li zobrazit blikající kurzor, `CWnd` by měl v tuto chvíli zavolat příslušné funkce blikající kurzor.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -9272,7 +9272,7 @@ afx_msg void OnSettingChange(
 ### <a name="parameters"></a>Parametry
 
 *uFlags*<br/>
-Když systém odešle zprávu jako výsledek `SystemParametersInfo` volání, je tento parametr příznak, který označuje systémový parametr, který byl změněn. Seznam hodnot naleznete v tématu [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) v Windows SDK. Když aplikace zprávu pošle, musí mít tento parametr hodnotu 0.
+Když systém odešle zprávu jako výsledek volání `SystemParametersInfo`, je tento parametr příznak, který označuje systémový parametr, který byl změněn. Seznam hodnot naleznete v tématu [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) v Windows SDK. Když aplikace zprávu pošle, musí mít tento parametr hodnotu 0.
 
 *lpszSection*<br/>
 Odkazuje na řetězec, který určuje název oddílu, který se změnil. (Řetězec neobsahuje hranaté závorky, které obsahují název oddílu.)
@@ -9281,17 +9281,17 @@ Odkazuje na řetězec, který určuje název oddílu, který se změnil. (Řetě
 
 Aplikace by měla zprávu poslat všem oknům nejvyšší úrovně, když provede změny systémových parametrů, a Windows zprávu pošle, pokud uživatel změní nastavení přes ovládací panely.
 
-Zpráva ON_WM_SETTINGCHANGE je podobná zprávě ON_WM_WININICHANGE s následujícím rozdílem:
+Zpráva ON_WM_SETTINGCHANGE je podobná ON_WM_WININICHANGE zprávě s následujícím rozdílem:
 
-- Použijte ON_WM_SETTINGCHANGE při spuštění Windows NT 4,0 nebo novější nebo v části Windows 95/98.
+- Používejte ON_WM_SETTINGCHANGE, když používáte Windows NT 4,0 nebo novější, nebo ve Windows 95/98.
 
-- Použijte ON_WININICHANGE při spuštění systému Windows NT 3,51 nebo starší verze. Tato zpráva je nyní zastaralá.
+- Použijte ON_WININICHANGE, když používáte Windows NT 3,51 nebo starší. Tato zpráva je nyní zastaralá.
 
-V mapě zpráv byste měli mít jenom jedno z těchto maker. Chcete-li napsat program, který funguje pro systémy Windows 95/98 a Windows NT 4,0, zapište obslužnou rutinu pro ON_WM_SETTINGCHANGE. V rámci systému Windows NT 3,51 bude obslužná rutina volána `OnSettingChange` pomocí a *uFlags* a bude vždy nula.
+V mapě zpráv byste měli mít jenom jedno z těchto maker. Chcete-li napsat program, který funguje pro systémy Windows 95/98 a Windows NT 4,0, zapište obslužnou rutinu pro ON_WM_SETTINGCHANGE. V rámci systému Windows NT 3,51 bude obslužná rutina volána `OnSettingChange` a *uFlags* a bude vždy nula.
 
 ##  <a name="onshowwindow"></a>CWnd:: OnShowWindow
 
-Rozhraní volá tuto členskou funkci, když `CWnd` bude objekt skrytý nebo zobrazený.
+Rozhraní volá tuto členskou funkci, když bude objekt `CWnd` skrytý nebo zobrazený.
 
 ```
 afx_msg void OnShowWindow(
@@ -9305,15 +9305,15 @@ afx_msg void OnShowWindow(
 Určuje, zda je zobrazeno okno. Je TRUE, pokud je zobrazeno okno; Pokud je okno skryto, je hodnota FALSE.
 
 *nStatus*<br/>
-Určuje stav zobrazeného okna. Je-li zpráva odeslána z `ShowWindow` důvodu volání členské funkce, je 0. v opačném případě *nStatus* je jedním z následujících:
+Určuje stav zobrazeného okna. Je-li zpráva odeslána z důvodu `ShowWindow` volání členské funkce, je 0. v opačném případě *nStatus* je jedním z následujících:
 
-- SW_PARENTCLOSING nadřazené okno se zavírá (provádí ikonickým) nebo je skryté automaticky otevírané okno.
+- SW_PARENTCLOSING nadřazené okno se zavírá (provádí se ikonickým) nebo se skrývá automaticky otevírané okno.
 
-- Otevírá se nadřazené okno SW_PARENTOPENING (zobrazuje se) nebo se zobrazuje automaticky otevírané okno.
+- Probíhá otevírání nadřazeného okna SW_PARENTOPENING (zobrazuje se) nebo se zobrazuje automaticky otevírané okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Okno je skryté nebo zobrazené při `ShowWindow` volání členské funkce, když se Překryté okno maximalizuje nebo obnoví, nebo když se překryté nebo automaticky otevírané okno zavře (nastavilo ikonickým) nebo otevřené (zobrazí se na obrazovce). Po zavření překrytého okna jsou všechna automaticky otevíraná okna přidružená k tomuto oknu skrytá.
+Okno je skryté nebo zobrazené při volání členské funkce `ShowWindow`, když se Překryté okno maximalizuje nebo obnoví, nebo když se překryté nebo automaticky otevírané okno zavře (nastaví ikonickým) nebo otevřené (zobrazí na obrazovce). Po zavření překrytého okna jsou všechna automaticky otevíraná okna přidružená k tomuto oknu skrytá.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -9331,20 +9331,20 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Parametry
 
-*nType*<br/>
+*Noznámení*<br/>
 Určuje typ požadované změny velikosti. Tento parametr může být jedna z následujících hodnot:
 
 - Okno SIZE_MAXIMIZED bylo maximalizováno.
 
 - Okno SIZE_MINIMIZED bylo minimalizováno.
 
-- Změnila se velikost okna SIZE_RESTORED, ale neplatí ani SIZE_MINIMIZED ani SIZE_MAXIMIZED.
+- Změnila se velikost okna SIZE_RESTORED, ale není SIZE_MINIMIZED ani SIZE_MAXIMIZED.
 
-- Zpráva SIZE_MAXHIDE se pošle do všech automaticky otevíraných oken, když se nějaké jiné okno maximalizuje.
+- SIZE_MAXHIDE zpráva se pošle do všech automaticky otevíraných oken, když se nějaké jiné okno maximalizuje.
 
-- Zpráva SIZE_MAXSHOW se pošle do všech automaticky otevíraných oken, když se nějaké jiné okno obnovilo do původní velikosti.
+- SIZE_MAXSHOW zpráva se pošle do všech automaticky otevíraných oken, když se nějaké jiné okno obnovilo do původní velikosti.
 
-*cx*<br/>
+*CX*<br/>
 Určuje novou šířku oblasti klienta.
 
 *kr*<br/>
@@ -9352,7 +9352,7 @@ Určuje novou výšku klientské oblasti.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je členská funkce [SetScrollPos](#setscrollpos) nebo [MoveWindow](#movewindow) volána pro `OnSize`podřízené okno `MoveWindow` `bRedraw` z, parametr `SetScrollPos` nebo by neměl být nenulový, aby `CWnd` mohl být překreslen.
+Pokud je členská funkce [SetScrollPos](#setscrollpos) nebo [MoveWindow](#movewindow) volána pro podřízené okno z `OnSize`, `bRedraw` parametr `SetScrollPos` nebo `MoveWindow` by neměl být nenulový, aby bylo možné `CWnd` překreslit.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -9363,7 +9363,7 @@ Pokud je členská funkce [SetScrollPos](#setscrollpos) nebo [MoveWindow](#movew
 
 ##  <a name="onsizeclipboard"></a>CWnd:: OnSizeClipboard
 
-`OnSizeClipboard` Členská funkce vlastníka schránky je volána prohlížečem schránky, Pokud schránka obsahuje data `CF_OWNERDISPLAY` s atributem a velikost klientské oblasti okna prohlížeče schránky se změnila.
+V případě, že schránka obsahuje data s atributem `CF_OWNERDISPLAY` a velikost klientské oblasti okna prohlížeče schránky se změnila, je volána prohlížeč schránky `OnSizeClipboard` členská funkce.
 
 ```
 afx_msg void OnSizeClipboard(
@@ -9381,9 +9381,9 @@ Identifikuje objekt globální paměti. Objekt paměti obsahuje strukturu dat RE
 
 ### <a name="remarks"></a>Poznámky
 
-`OnSizeClipboard` Členská funkce je volána s obdélníkem s hodnotou null (0, 0, 0, 0) jako novou velikostí, která bude zničena nebo minimalizována aplikace v schránce. To umožňuje vlastníkovi schránky uvolnit své zobrazované prostředky.
+Členská funkce `OnSizeClipboard` je volána s obdélníkem s hodnotou null (0, 0, 0, 0) jako novou velikostí v případě, že bude aplikace v schránce zničena nebo minimalizována. To umožňuje vlastníkovi schránky uvolnit své zobrazované prostředky.
 
-V `OnSizeClipboard`aplikaci musí aplikace používat funkci [GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) Windows k uzamknutí paměti, která obsahuje datovou strukturu Rect. Musí aplikace odemknout tuto paměť pomocí funkce [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows předtím, než vrátí nebo vrátí ovládací prvek.
+V rámci `OnSizeClipboard`aplikace musí použít funkci [GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) Windows k uzamknutí paměti, která obsahuje datovou strukturu Rect. Musí aplikace odemknout tuto paměť pomocí funkce [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows předtím, než vrátí nebo vrátí ovládací prvek.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -9457,9 +9457,9 @@ afx_msg void OnStyleChanged(
 *nStyleType*<br/>
 Určuje, zda došlo ke změně rozšířených nebo nerozšířených stylů okna. Tento parametr může být kombinací následujících hodnot:
 
-- GWL_EXSTYLE se změnilo rozšířené styly okna.
+- GWL_EXSTYLE rozšířených stylů okna se změnily.
 
-- GWL_STYLE nerozšířené styly okna se změnily.
+- GWL_STYLE nerozšířených stylů okna se změnily.
 
 *lpStyleStruct*<br/>
 Odkazuje na strukturu [STYLESTRUCT](/windows/win32/api/winuser/ns-winuser-stylestruct) , která obsahuje nové styly okna. Aplikace může prošetřit styly, ale nemůže je změnit.
@@ -9484,9 +9484,9 @@ afx_msg void OnStyleChanging(
 *nStyleType*<br/>
 Určuje, zda došlo ke změně rozšířených nebo nerozšířených stylů okna. Tento parametr může být kombinací následujících hodnot:
 
-- GWL_EXSTYLE se změnilo rozšířené styly okna.
+- GWL_EXSTYLE rozšířených stylů okna se změnily.
 
-- GWL_STYLE nerozšířené styly okna se změnily.
+- GWL_STYLE nerozšířených stylů okna se změnily.
 
 *lpStyleStruct*<br/>
 Odkazuje na strukturu [STYLESTRUCT](/windows/win32/api/winuser/ns-winuser-stylestruct) , která obsahuje nové styly okna. Aplikace může kontrolovat styly a měnit je.
@@ -9498,7 +9498,7 @@ Odkazuje na strukturu [STYLESTRUCT](/windows/win32/api/winuser/ns-winuser-styles
 
 ##  <a name="onsyschar"></a>CWnd:: OnSysChar
 
-Rozhraní volá tuto členskou funkci, pokud `CWnd` má vstupní fokus a zprávy [WM_SYSKEYUP](#onsyskeyup) a [WM_SYSKEYDOWN](#onsyskeydown) jsou přeloženy.
+Rozhraní volá tuto členskou funkci, pokud `CWnd` má fokus vstupu a [WM_SYSKEYUP](#onsyskeyup) a [WM_SYSKEYDOWN](#onsyskeydown) zprávy jsou přeloženy.
 
 ```
 afx_msg void OnSysChar(
@@ -9518,7 +9518,7 @@ Určuje počet opakování (kolikrát se klávesová zkratka opakuje v důsledku
 *nFlags*<br/>
 Parametr *nFlags* může mít tyto hodnoty:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-15|Určuje počet opakování. Hodnota představuje počet opakování klávesových zkratek v důsledku toho, že uživatel drží klávesu..|
 |16-23|Určuje kód pro kontrolu. Hodnota závisí na výrobci OEM (Original Equipment Manufacturer).|
@@ -9549,7 +9549,7 @@ afx_msg void OnSysColorChange();
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `OnSysColorChange` systému Windows pro všechna okna, která jsou ovlivněna změnou systémové barvy.
+Systém Windows volá `OnSysColorChange` pro každé okno, které je ovlivněné změnou systémové barvy.
 
 Aplikace, které mají štětce používající stávající systémové barvy, by měly tyto štětce odstranit a znovu je vytvořit s novými systémovými barvami.
 
@@ -9568,61 +9568,61 @@ afx_msg void OnSysCommand(
 *nID*<br/>
 Určuje typ požadovaného systémového příkazu. Tento parametr může mít jednu z následujících hodnot:
 
-- SC_CLOSE zavřít `CWnd` objekt.
+- SC_CLOSE zavřít objekt `CWnd`.
 
-- SC_HOTKEY aktivuje `CWnd` objekt přidružený k horkému klíči zadaného aplikací. *LParam* slovo v dolním pořadí určuje HWND okna, které se má aktivovat.
+- SC_HOTKEY aktivovat objekt `CWnd` přidružený k horkému klíči zadaného aplikací. *LParam* slovo v dolním pořadí určuje HWND okna, které se má aktivovat.
 
 - SC_HSCROLL posuňte vodorovně.
 
 - SC_KEYMENU načíst nabídku pomocí klávesových zkratek.
 
-- SC_MAXIMIZE (nebo SC_ZOOM) maximalizuje `CWnd` objekt.
+- SC_MAXIMIZE (nebo SC_ZOOM) Maximalizujte objekt `CWnd`.
 
-- SC_MINIMIZE (nebo SC_ICON) minimalizuje `CWnd` objekt.
+- SC_MINIMIZE (nebo SC_ICON) minimalizujte objekt `CWnd`.
 
 - SC_MOUSEMENU načíst nabídku pomocí kliknutí myší.
 
-- SC_MOVE přesune `CWnd` objekt.
+- SC_MOVE přesunout objekt `CWnd`.
 
-- SC_NEXTWINDOW přejít k dalšímu oknu.
+- SC_NEXTWINDOW přejděte k dalšímu oknu.
 
-- SC_PREVWINDOW přejít na předchozí okno.
+- SC_PREVWINDOW přesun do předchozího okna.
 
-- SC_RESTORE obnovení okna na normální pozici a velikost.
+- SC_RESTORE obnovení okna do normální pozice a velikosti.
 
 - SC_SCREENSAVE spustí aplikaci spořič obrazovky určenou v oddílu [Boot] systému. Soubor INI.
 
-- SC_SIZE velikost `CWnd` objektu.
+- SC_SIZE velikost objektu `CWnd`.
 
 - SC_TASKLIST spustit nebo aktivovat aplikaci Správce úloh systému Windows.
 
-- SC_VSCROLL posouvá se vertikálně.
+- SC_VSCROLL posuňte svisle.
 
 *lParam*<br/>
 Pokud je zvolen příkaz nabídky ovládacího prvku pomocí myši, *lParam* obsahuje souřadnice kurzoru. Slovo s nižším pořadím obsahuje souřadnici x a horní slovo obsahuje souřadnici y. V opačném případě se tento parametr nepoužívá.
 
-- SC_HOTKEY aktivuje okno přidružené k horkému klíči zadaného aplikací. *LParam* slovo s nižším pořadím identifikuje okno, které se má aktivovat.
+- SC_HOTKEY aktivuje okno přidružené k klávesové zkratce určené aplikací. *LParam* slovo s nižším pořadím identifikuje okno, které se má aktivovat.
 
-- SC_SCREENSAVE spustí aplikaci uloženou v části plocha v Ovládacích panelech.
+- SC_SCREENSAVE spustit aplikaci, která je určená v části plocha ovládacích panelů, na obrazovce.
 
 ### <a name="remarks"></a>Poznámky
 
 Ve výchozím nastavení `OnSysCommand` provede požadavek ovládacího prvku nabídky pro předdefinované akce zadané v předchozí tabulce.
 
-V WM_SYSCOMMAND zprávách se v systému Windows interně používá čtyři bity dolního řádu parametru *NID* . Když aplikace testuje hodnotu *NID*, musí kombinovat hodnotu 0xFFF0 s hodnotou *NID* pomocí BITOVÉHO operátoru and a získat tak správný výsledek.
+V WM_SYSCOMMAND zprávy se interně používá čtyři bity s nižším pořadím parametru *NID* . Když aplikace testuje hodnotu *NID*, musí kombinovat hodnotu 0xFFF0 s hodnotou *NID* pomocí BITOVÉHO operátoru and a získat tak správný výsledek.
 
-Položky nabídky v nabídce ovládacího `GetSystemMenu`prvku lze upravit pomocí funkcí členů, `AppendMenu`, `InsertMenu`a `ModifyMenu` . Aplikace, které upravují nabídku ovládacího prvku, musí zpracovat zprávy WM_SYSCOMMAND a všechny zprávy WM_SYSCOMMAND, které aplikace nezpracovávají, musí být předány do `OnSysCommand`. Všechny hodnoty příkazu přidané aplikací musí zpracovat aplikace a nelze je předat do `OnSysCommand`.
+Položky nabídky v nabídce ovládacího prvku lze upravit pomocí `GetSystemMenu`, `AppendMenu`, `InsertMenu`a `ModifyMenu` členské funkce. Aplikace, které upravují nabídku ovládacího prvku, musí zpracovávat WM_SYSCOMMAND zprávy a jakékoli WM_SYSCOMMAND zprávy, které aplikace nezpracovává, musí být předány do `OnSysCommand`. Všechny hodnoty příkazu přidané aplikací musí zpracovat aplikace a nelze je předat `OnSysCommand`.
 
-Aplikace může provést kdykoli jakýkoli systémový příkaz předáním zprávy WM_SYSCOMMAND do `OnSysCommand`.
+Aplikace může provést libovolný systémový příkaz kdykoliv předáním WM_SYSCOMMAND zprávy do `OnSysCommand`.
 
-Stisknutí klávesových zkratek (Klávesová zkratka), která jsou definována pro výběr položek z nabídky `OnSysCommand` ovládacího prvku, jsou překládána na volání. všechny ostatní úhozy klávesových zkratek jsou přeloženy do zpráv [WM_COMMAND](#oncommand) .
+Stisknutí klávesových zkratek (Klávesová zkratka), která jsou definována pro výběr položek z nabídky ovládacího prvku, jsou přeložena do `OnSysCommand` volání; všechny ostatní úhozy kláves jsou přeloženy do [WM_COMMAND](#oncommand) zpráv.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
 
 ##  <a name="onsysdeadchar"></a>CWnd:: OnSysDeadChar
 
-Rozhraní volá tuto členskou funkci, pokud `CWnd` objekt má fokus vstupu při volání členské funkce [OnSysKeyUp](#onsyskeyup) nebo [OnSysKeyDown](#onsyskeydown) .
+Rozhraní volá tuto členskou funkci, pokud objekt `CWnd` má fokus vstupu při volání členské funkce [OnSysKeyUp](#onsyskeyup) nebo [OnSysKeyDown](#onsyskeydown) .
 
 ```
 afx_msg void OnSysDeadChar(
@@ -9642,7 +9642,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-7|Kontrola kódu (hodnota závislá na výrobci OEM). Dolní bajt v aplikaci s vysokým pořadím|
 |8|Rozšířený klíč, například klíč funkce nebo klíč na numerické klávesnici (1, pokud se jedná o rozšířený klíč, jinak 0).|
@@ -9661,7 +9661,7 @@ Určuje hodnotu znaku mrtvého klíče.
 
 ##  <a name="onsyskeydown"></a>CWnd:: OnSysKeyDown
 
-`OnSysKeyDown` Pokud má `CWnd` objekt vstupní fokus, členská funkce je volána rozhraním, když uživatel drží klávesu Alt a pak stiskne jiný klíč.
+Pokud má objekt `CWnd` vstupní fokus, `OnSysKeyDown` členská funkce je volána rozhraním, když uživatel drží klávesu ALT a pak stiskne jiný klíč.
 
 ```
 afx_msg void OnSysKeyDown(
@@ -9681,7 +9681,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-7|Kontrola kódu (hodnota závislá na výrobci OEM). Dolní bajt v aplikaci s vysokým pořadím|
 |8|Rozšířený klíč, například klíč funkce nebo klíč na numerické klávesnici (1, pokud se jedná o rozšířený klíč, jinak 0).|
@@ -9691,15 +9691,15 @@ Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód
 |14|Předchozí stav klíče (1, pokud klíč nefunguje před odesláním zprávy, 0, je-li klíč zapnutý).|
 |15|Přechodový stav (1, pokud je klíč vydaný, 0, pokud se klíč stiskne).|
 
-V `OnSysKeyDown` případě volání má bit přechodu na klíč (bit 15) hodnotu 0. Bit kontextového kódu (bit 13) je 1, pokud klávesa ALT nefunguje při stisknutí klávesy. je 0, pokud je zpráva odeslána do aktivního okna, protože vstupní fokus nemá žádné okno.
+U `OnSysKeyDown` volání je bit přechodu mezi klíči (bit 15) 0. Bit kontextového kódu (bit 13) je 1, pokud klávesa ALT nefunguje při stisknutí klávesy. je 0, pokud je zpráva odeslána do aktivního okna, protože vstupní fokus nemá žádné okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud v současné době nemá žádné okno vstupní fokus, je volána `OnSysKeyDown` členská funkce aktivního okna. Objekt, který přijímá zprávu, může rozlišovat mezi těmito dvěma kontexty tím, že kontroluje kód kontextu v `nFlags`. `CWnd`
+Pokud v současné době nemá žádné okno vstupní fokus, je volána členská funkce aktivního okna `OnSysKeyDown`. Objekt `CWnd`, který přijímá zprávu, může rozlišovat mezi těmito dvěma kontexty tím, že kontroluje kód kontextu v `nFlags`.
 
-Pokud je kód kontextu 0, zpráva WM_SYSKEYDOWN přijatá nástrojem `OnSysKeyDown` může být předána funkci [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) systému Windows, která ji zpracuje, jako by se jednalo o normální klíčovou zprávu místo zprávy systémového klíče. To umožňuje používat klávesové zkratky s aktivním oknem i v případě, že aktivní okno nemá fokus vstupu.
+Pokud je kód kontextu 0, WM_SYSKEYDOWN zpráva obdržená `OnSysKeyDown` může být předána funkci [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) systému Windows, která ji zpracuje, jako by se jednalo o běžnou klíčovou zprávu místo zprávy systémového klíče. To umožňuje používat klávesové zkratky s aktivním oknem i v případě, že aktivní okno nemá fokus vstupu.
 
-Z důvodu automatického opakování může dojít k více než `OnSysKeyDown` jednomu volání před přijetím zprávy [WM_SYSKEYUP](#onsyskeyup) . Předchozí stav klíče (bit 14) lze použít k určení, zda `OnSysKeyDown` volání označuje první přechod nebo opakovaný přechod.
+Z důvodu automatického opakování může před přijetím [WM_SYSKEYUP](#onsyskeyup) zprávy dojít k více než jednomu `OnSysKeyDown` volání. Předchozí stav klíče (bit 14) lze použít k určení, zda `OnSysKeyDown` volání označuje první přechod nebo opakovaný přechod.
 
 U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou klávesou ALT a pravou klávesovou zkratkou v hlavní části klávesnice. klávesy INS, DEL, domů, konec, stránka nahoru, stránka dolů a šipky v clusterech nalevo od číselné klávesnice; a lomítkem (/) a klávesy ENTER na numerické klávesnici. Některé další klávesnice můžou podporovat bit rozšířených klíčů v *nFlags*.
 
@@ -9708,7 +9708,7 @@ U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou kl�
 
 ##  <a name="onsyskeyup"></a>CWnd:: OnSysKeyUp
 
-Pokud objekt má fokus, členská funkce je volána rozhraním, když uživatel uvolní klávesu, která byla stisknuta při stisknutí klávesy ALT. `OnSysKeyUp` `CWnd`
+Pokud objekt `CWnd` má fokus, je `OnSysKeyUp` členské funkce volána rozhraním, když uživatel uvolní klávesu, která byla stisknuta při stisknutí klávesy ALT.
 
 ```
 afx_msg void OnSysKeyUp(
@@ -9728,7 +9728,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-7|Kontrola kódu (hodnota závislá na výrobci OEM). Dolní bajt v aplikaci s vysokým pořadím|
 |8|Rozšířený klíč, například klíč funkce nebo klíč na numerické klávesnici (1, pokud se jedná o rozšířený klíč, jinak 0).|
@@ -9738,17 +9738,17 @@ Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód
 |14|Předchozí stav klíče (1, pokud klíč nefunguje před odesláním zprávy, 0, je-li klíč zapnutý).|
 |15|Přechodový stav (1, pokud je klíč vydaný, 0, pokud se klíč stiskne).|
 
-V `OnSysKeyUp` případě volání má bit přechodu na klíč (bit 15) hodnotu 1. Bit kontextového kódu (bit 13) je 1, pokud klávesa ALT nefunguje při stisknutí klávesy. je 0, pokud je zpráva odeslána do aktivního okna, protože vstupní fokus nemá žádné okno.
+U `OnSysKeyUp` volání je bit přechodu mezi klíči (bit 15) 1. Bit kontextového kódu (bit 13) je 1, pokud klávesa ALT nefunguje při stisknutí klávesy. je 0, pokud je zpráva odeslána do aktivního okna, protože vstupní fokus nemá žádné okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud v současné době nemá žádné okno vstupní fokus, je volána `OnSysKeyUp` členská funkce aktivního okna. Objekt, který přijímá volání, může rozlišovat mezi těmito dvěma kontexty tím, že kontroluje kód kontextu v *nFlags.* `CWnd`
+Pokud v současné době nemá žádné okno vstupní fokus, je volána členská funkce aktivního okna `OnSysKeyUp`. Objekt `CWnd`, který přijímá volání, může rozlišovat mezi těmito dvěma kontexty tím, že kontroluje kód kontextu v *nFlags*.
 
-Pokud je kód kontextu 0, zpráva WM_SYSKEYUP přijatá nástrojem `OnSysKeyUp` může být předána funkci [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) systému Windows, která ji zpracuje, jako by se jednalo o normální klíčovou zprávu místo zprávy systémového klíče. To umožňuje používat klávesy akcelerátoru (klávesovou zkratku) spolu s aktivním oknem i v případě, že aktivní okno nemá fokus vstupu.
+Pokud je kód kontextu 0, WM_SYSKEYUP zpráva obdržená `OnSysKeyUp` může být předána funkci [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) systému Windows, která ji zpracuje, jako by se jednalo o běžnou klíčovou zprávu místo zprávy systémového klíče. To umožňuje používat klávesy akcelerátoru (klávesovou zkratku) spolu s aktivním oknem i v případě, že aktivní okno nemá fokus vstupu.
 
 U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou klávesou ALT a pravou klávesovou zkratkou v hlavní části klávesnice. klávesy INS, DEL, domů, konec, stránka nahoru, stránka dolů a šipky v clusterech nalevo od číselné klávesnice; a lomítkem (/) a klávesy ENTER na numerické klávesnici. Některé další klávesnice můžou podporovat bit rozšířených klíčů v *nFlags*.
 
-Pro jiné než U. S. Vylepšená klávesnice 102 – klávesová zkratka se jako kombinace kláves CTRL + ALT zpracuje. Následující text zobrazuje posloupnost zpráv a volání, která jsou výsledkem, když uživatel stiskne a uvolní tento klíč:
+U jiných než U. S. Vylepšená klávesnice 102 se jako kombinace kláves CTRL + ALT zpracuje pravá klávesová zkratka. Následující text zobrazuje posloupnost zpráv a volání, která jsou výsledkem, když uživatel stiskne a uvolní tento klíč:
 
 |Sequence|Dostupná funkce|Zpráva byla předána|
 |--------------|-----------------------|--------------------|
@@ -9800,7 +9800,7 @@ Určuje akci, kterou uživatel učinil. Tento parametr může být jedna z těch
 - IDYES uživatel kliknul na tlačítko Ano.
 
 *dwActionData*<br/>
-Pokud *idAction* určuje HELP_TCARD_DATA, je tento parametr dlouhé celé číslo určené autorem help. V opačném případě je tento parametr nula.
+Pokud *idAction* specifikuje HELP_TCARD_DATA, je tento parametr dlouhé celé číslo určené autorem help. V opačném případě je tento parametr nula.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -9816,7 +9816,7 @@ afx_msg void OnTimeChange();
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny aplikace, které mění systémový čas, odesílají tuto zprávu do všech oken nejvyšší úrovně. Chcete-li odeslat zprávu WM_TIMECHANGE do všech oken nejvyšší úrovně, aplikace může použít funkci [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows s parametrem *HWND* nastaveným na HWND_BROADCAST.
+Všechny aplikace, které mění systémový čas, odesílají tuto zprávu do všech oken nejvyšší úrovně. Chcete-li odeslat zprávu WM_TIMECHANGE do všech oken nejvyšší úrovně, aplikace může použít funkci [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows s parametrem *HWND* nastaveným na hodnotu HWND_BROADCAST.
 
 ##  <a name="ontimer"></a>CWnd::-Timeer
 
@@ -9860,11 +9860,11 @@ Určuje souřadnici x a y kurzoru. Tyto souřadnice jsou vždycky relativní vzh
 *pTI*<br/>
 Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) . Ve výchozím nastavení jsou nastaveny následující hodnoty struktury:
 
-- *popisovač HWND*  =  dookna`m_hWnd`
+- Popisovač *hwnd* = `m_hWnd` do okna
 
-- *UID popisovače do podřízeného*  =  `(UINT)hWndChild` okna
+- *uId* = `(UINT)hWndChild` popisovačem do podřízeného okna
 
-- *uFlags* &#124;= TTF_IDISHWND popisovač nástroje
+- *uFlags* &#124;= TTF_IDISHWND popisovačem nástroje
 
 - *lpszText* = LPSTR_TEXTCALLBACK ukazatel na řetězec, který se má zobrazit v zadaném okně
 
@@ -9876,9 +9876,9 @@ Pokud byl ovládací prvek ToolTip nalezen, ID ovládacího prvku okna. Pokud ov
 
 Pokud je bod v obdélníku, načte informace o nástroji.
 
-Pokud oblast, ke které je popis tlačítka přidružen, není tlačítko, `OnToolHitTest` nastaví příznaky struktury na TTF_NOTBUTTON a TTF_CENTERTIP.
+Pokud oblast, ke které je popis tlačítka přidružený, není tlačítko, `OnToolHitTest` nastaví příznaky struktury na TTF_NOTBUTTON a TTF_CENTERTIP.
 
-Přepsáním `OnToolHitTest` poskytnete jiné informace, než je výchozí hodnota.
+Přepsat `OnToolHitTest` k poskytnutí různých informací, než je výchozí hodnota.
 
 Další informace o struktuře naleznete v tématu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)v Windows SDK.
 
@@ -9940,7 +9940,7 @@ TRUE, pokud aplikace zpracovává vstupy Windows Touch; v opačném případě F
 
 ##  <a name="onunichar"></a>CWnd:: OnUniChar
 
-Rozhraní volá tuto členskou funkci při stisknutí klávesy. To znamená, že aktuální okno má fokus klávesnice a zpráva [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown) je přeložena funkcí [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) .
+Rozhraní volá tuto členskou funkci při stisknutí klávesy. To znamená, že aktuální okno má fokus klávesnice a [WM_KEYDOWNová](/windows/win32/inputdev/wm-keydown) zpráva je přeložena funkcí [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) .
 
 ```
 afx_msg void OnUniChar(
@@ -9955,11 +9955,11 @@ afx_msg void OnUniChar(
 |---------------|-----------------|
 |*nChar*|pro Určuje kód znaku stisknuté klávesy.|
 |*nRepCnt*|pro Určuje počet opakování pro aktuální zprávu. Hodnota je počet, kolikrát se klávesová zkratka automaticky opakuje v důsledku toho, že uživatel drží klávesu. Pokud se klávesová zkratka drží dostatečně dlouho, pošle se několik zpráv. Počet opakování však není kumulativní.|
-|*nFlags*|pro Příznaky, které určují kód kontroly, rozšířený klíč, kód kontextu, předchozí stav klíče a přechodový stav, jak je znázorněno v následující tabulce:<br /><br /> **0-7:** Určuje kód pro kontrolu. Hodnota závisí na výrobci OEM (Original Equipment Manufacturer).<br /><br /> **8** Určuje rozšířený klíč, jako je například pravá klávesa ALT a CTRL, která se zobrazí na vylepšené klávesnici 101 nebo 102-Key. Příznak je 1, pokud je klíč rozšířeným klíčem; v opačném případě je 0.<br /><br /> **9-12:**  Používáno interně systémem Windows.<br /><br /> **13:**  Určuje kód kontextu. Příznak je 1, pokud je klávesa ALT při stisknutí klávesy vypnutá. v opačném případě je hodnota 0.<br /><br /> **14:**  Určuje předchozí stav klíče. Příznak je 1, pokud klíč nefunguje před odesláním zprávy, nebo 0, pokud je klíč zapnutý.<br /><br /> **15:**  Určuje stav přechodu. Příznak je 1, pokud se klíč uvolňuje, nebo 0, pokud se klávesa stiskne.|
+|*nFlags*|pro Příznaky, které určují kód kontroly, rozšířený klíč, kód kontextu, předchozí stav klíče a přechodový stav, jak je znázorněno v následující tabulce:<br /><br /> **0-7:** Určuje kód pro kontrolu. Hodnota závisí na výrobci OEM (Original Equipment Manufacturer).<br /><br /> **8:** Určuje rozšířený klíč, jako je například pravá klávesa ALT a CTRL, která se zobrazí na vylepšené klávesnici 101 nebo 102-Key. Příznak je 1, pokud je klíč rozšířeným klíčem; v opačném případě je 0.<br /><br /> **9-12:**  Používáno interně systémem Windows.<br /><br /> **13:**  Určuje kód kontextu. Příznak je 1, pokud je klávesa ALT při stisknutí klávesy vypnutá. v opačném případě je hodnota 0.<br /><br /> **14:**  Určuje předchozí stav klíče. Příznak je 1, pokud klíč nefunguje před odesláním zprávy, nebo 0, pokud je klíč zapnutý.<br /><br /> **15:**  Určuje stav přechodu. Příznak je 1, pokud se klíč uvolňuje, nebo 0, pokud se klávesa stiskne.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda obdrží oznámení [WM_UNICHAR](/windows/win32/inputdev/wm-unichar) , které je popsáno v Windows SDK. Zpráva [WM_UNICHAR](/windows/win32/inputdev/wm-unichar) je navržena pro posílání nebo odesílání znaků Unicode do oken ANSI. Je ekvivalentní ke zprávě [WM_CHAR](/windows/win32/inputdev/wm-char) , ale používá transformační formát Unicode-32 kódování (UTF-32), zatímco zpráva [WM_CHAR](/windows/win32/inputdev/wm-char) používá UTF-16.
+Tato metoda obdrží oznámení [WM_UNICHAR](/windows/win32/inputdev/wm-unichar) , které je popsáno v Windows SDK. [WM_UNICHAR](/windows/win32/inputdev/wm-unichar) zpráva je navržena pro posílání nebo odesílání znaků Unicode do oken ANSI. Je ekvivalentní zprávě [WM_CHAR](/windows/win32/inputdev/wm-char) , ale používá transformační formát Unicode – 32 kódování (UTF-32), zatímco [WM_CHAR](/windows/win32/inputdev/wm-char) zpráva používá UTF-16.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -10016,7 +10016,7 @@ Určuje, které prvky stavu uživatelského rozhraní jsou ovlivněny nebo stylu
 
 - UISF_HIDEFOCUS indikátory fokusu.
 
-- UISF_ACTIVE Windows XP: Ovládací prvek by měl být vykreslen ve stylu používaném pro aktivní ovládací prvky.
+- UISF_ACTIVE Windows XP: ovládací prvek by měl být vykreslen ve stylu používaném pro aktivní ovládací prvky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -10039,7 +10039,7 @@ Tato metoda obdrží zprávu s oznámením [WM_USERCHANGED](/windows/win32/winms
 
 ##  <a name="onvkeytoitem"></a>CWnd:: OnVKeyToItem
 
-Pokud objekt vlastní seznam se stylem LBS_WANTKEYBOARDINPUT, pole se seznamem odešle zprávu WM_VKEYTOITEM v reakci na zprávu WM_KEYDOWN. [](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) `CWnd`
+Pokud objekt `CWnd` vlastní seznam se stylem [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , pole se seznamem odešle zprávu WM_VKEYTOITEM v reakci na WM_KEYDOWN zprávu.
 
 ```
 afx_msg int OnVKeyToItem(
@@ -10065,7 +10065,7 @@ Určuje akci, kterou aplikace provedla v reakci na zprávu. Návratová hodnota-
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je volána v rámci architektury pouze pro seznamy, které mají styl [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+Tato členská funkce je volána pouze v seznamu polí, která mají styl [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -10088,40 +10088,40 @@ Určuje kód posouvaných řádků, který indikuje požadavek na posunutí uži
 
 - SB_BOTTOM posuňte se dolů.
 
-- SB_ENDSCROLL konec posuvníku.
+- SB_ENDSCROLL koncový posun.
 
-- SB_LINEDOWN posun o jeden řádek dolů.
+- SB_LINEDOWN posuňte se o jeden řádek dolů.
 
 - SB_LINEUP posun o jeden řádek nahoru.
 
-- SB_PAGEDOWN posun o jednu stránku dolů.
+- SB_PAGEDOWN posunete o jednu stránku dolů.
 
-- SB_PAGEUP posun o jednu stránku nahoru.
+- SB_PAGEUP posunete o jednu stránku nahoru.
 
-- SB_THUMBPOSITION se posuňte na absolutní pozici. Aktuální pozice je k dispozici v *nPos*.
+- SB_THUMBPOSITION posuňte se na absolutní pozici. Aktuální pozice je k dispozici v *nPos*.
 
-- SB_THUMBTRACK přetáhněte rolovací pole na určenou pozici. Aktuální pozice je k dispozici v *nPos*.
+- SB_THUMBTRACK přetáhněte posuvník na určenou pozici. Aktuální pozice je k dispozici v *nPos*.
 
-- SB_TOP posun na začátek.
+- SB_TOP posunout na začátek.
 
 *nPos*<br/>
-Obsahuje aktuální polohu posouvaných box, pokud je kód rolovacího panelu SB_THUMBPOSITION nebo SB_THUMBTRACK; jinak se nepoužívá. V závislosti na počátečním rozsahu posouvání může být *nPos* záporný a v případě potřeby by měl být převeden na **int** .
+Obsahuje aktuální pozici posouvání, pokud je kód rolovacího panelu SB_THUMBPOSITION nebo SB_THUMBTRACK; jinak se nepoužívá. V závislosti na počátečním rozsahu posouvání může být *nPos* záporný a v případě potřeby by měl být převeden na **int** .
 
 *pScrollBar*<br/>
 Pokud se posuňte zpráva od ovládacího prvku posuvníku, obsahuje ukazatel na ovládací prvek. Pokud uživatel klikl na posuvník okna, tento parametr má hodnotu NULL. Ukazatel může být dočasný a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
 
-`OnVScroll`obvykle se používají aplikacemi, které poskytují určitou zpětnou vazbu při přetahování rolovacího pole.
+`OnVScroll` obvykle používá aplikace, které poskytují určitou zpětnou vazbu při přetahování rolovacího pole.
 
-Pokud `OnVScroll` posune obsah `CWnd` objektu, musí také resetovat pozici rolovacího pole pomocí členské funkce [SetScrollPos](#setscrollpos) .
+Pokud `OnVScroll` posune obsah objektu `CWnd`, musí také resetovat pozici rolovacího pole pomocí členské funkce [SetScrollPos](#setscrollpos) .
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
 
 ##  <a name="onvscrollclipboard"></a>CWnd:: OnVScrollClipboard
 
-`OnVScrollClipboard` Členská funkce pro schránku je volána prohlížečem schránky, pokud data ve schránce mají formát CF_OWNERDISPLAY a na svislém posuvníku v prohlížeči schránky je událost.
+Členská funkce `OnVScrollClipboard` vlastníka schránky je volána prohlížečem schránky, pokud data ve schránce mají formát CF_OWNERDISPLAY a v svislém posuvníku prohlížeče schránky je událost.
 
 ```
 afx_msg void OnVScrollClipboard(
@@ -10140,22 +10140,22 @@ Určuje jednu z následujících hodnot rolovacího panelu:
 
 - SB_BOTTOM posuňte se dolů.
 
-- SB_ENDSCROLL konec posuvníku.
+- SB_ENDSCROLL koncový posun.
 
-- SB_LINEDOWN posun o jeden řádek dolů.
+- SB_LINEDOWN posuňte se o jeden řádek dolů.
 
 - SB_LINEUP posun o jeden řádek nahoru.
 
-- SB_PAGEDOWN posun o jednu stránku dolů.
+- SB_PAGEDOWN posunete o jednu stránku dolů.
 
-- SB_PAGEUP posun o jednu stránku nahoru.
+- SB_PAGEUP posunete o jednu stránku nahoru.
 
-- SB_THUMBPOSITION se posuňte na absolutní pozici. Aktuální pozice je k dispozici v *nPos*.
+- SB_THUMBPOSITION posuňte se na absolutní pozici. Aktuální pozice je k dispozici v *nPos*.
 
-- SB_TOP posun na začátek.
+- SB_TOP posunout na začátek.
 
 *nPos*<br/>
-Obsahuje polohu posouvaných box, pokud je kód rolovacího panelu SB_THUMBPOSITION; jinak se *nPos* nepoužívá.
+Obsahuje polohu posouvaných box, pokud je kód posuvníku SB_THUMBPOSITION. jinak se *nPos* nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -10200,7 +10200,7 @@ Odkazuje na strukturu dat [WINDOWPOS –](/windows/win32/api/winuser/ns-winuser-
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace pošle do okna zprávy [WM_SIZE](/windows/win32/winmsg/wm-size) a [WM_MOVE](/windows/win32/winmsg/wm-move) . Tyto zprávy nejsou odeslány, pokud aplikace zpracovává `OnWindowPosChanged` volání bez volání své základní třídy. Při volání `OnWindowPosChanged` bez volání základní třídy je efektivnější provést jakékoliv zpracování změn nebo změny velikosti.
+Výchozí implementace odesílá [WM_SIZE](/windows/win32/winmsg/wm-size) a [WM_MOVE](/windows/win32/winmsg/wm-move) zprávy do okna. Tyto zprávy se neodesílají, pokud aplikace zpracovává volání `OnWindowPosChanged` bez volání základní třídy. Je efektivnější provést jakékoliv zpracování změn nebo změny velikosti během volání `OnWindowPosChanged` bez volání základní třídy.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -10216,13 +10216,13 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 ### <a name="parameters"></a>Parametry
 
 *lpwndpos*<br/>
-Odkazuje na `WINDOWPOS` strukturu dat, která obsahuje informace o nové velikosti a umístění okna.
+Odkazuje na `WINDOWPOS` datovou strukturu, která obsahuje informace o nové velikosti a umístění okna.
 
 ### <a name="remarks"></a>Poznámky
 
 Aplikace může zabránit změnám v okně nastavením nebo zrušením příslušných bitů v rámci **příznaků** členů struktury [WINDOWPOS –](/windows/win32/api/winuser/ns-winuser-windowpos) .
 
-Pro okno se stylem [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) nebo [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) pošle výchozí implementace do okna zprávu [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) . Tato funkce ověří novou velikost a polohu okna a vynutila styly klientů CS_BYTEALIGNCLIENT a CS_BYTEALIGN. Aplikace může tuto funkci přepsat tím, že nevolá svou základní třídu.
+Pro okno se stylem [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) nebo [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) pošle výchozí implementace do okna zprávu [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) . K tomu je potřeba ověřit novou velikost a polohu okna a vyhodnotit CS_BYTEALIGNCLIENT a CS_BYTEALIGN styly klientů. Aplikace může tuto funkci přepsat tím, že nevolá svou základní třídu.
 
 > [!NOTE]
 > Tato členská funkce je volána rozhraním, aby mohla vaše aplikace zpracovávat zprávy systému Windows. Parametry předané funkci odpovídají parametrům přijatým rozhraním, když byla zpráva přijata. Pokud zavoláte implementaci této funkce základní třídy, tato implementace použije parametry původně předané zprávou, nikoli parametry, které zadáte do funkce.
@@ -10242,11 +10242,11 @@ Odkazuje na řetězec, který určuje název oddílu, který se změnil. (Řetě
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) systému Windows volá `OnWinIniChange` po použití funkce ke změně nastavení v souboru Win. Soubor INI.
+Funkce [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) systému Windows volá `OnWinIniChange` poté, co aplikace používá funkci ke změně nastavení v souboru Win. Soubor INI.
 
-Chcete-li odeslat zprávu WM_WININICHANGE do všech oken nejvyšší úrovně, aplikace může použít funkci [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows s parametrem *HWND* nastaveným na HWND_BROADCAST.
+Chcete-li odeslat zprávu WM_WININICHANGE do všech oken nejvyšší úrovně, aplikace může použít funkci [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows s parametrem *HWND* nastaveným na hodnotu HWND_BROADCAST.
 
-Pokud aplikace změní mnoho různých oddílů v souboru WIN. INI současně by aplikace měla odeslat jednu zprávu WM_WININICHANGE s *lpszSection* nastavenou na hodnotu null. V opačném případě by aplikace měla odeslat WM_WININICHANGE pokaždé, když se změní na WIN. Užívaný.
+Pokud aplikace změní mnoho různých oddílů v souboru WIN. INI současně by aplikace měla odeslat jednu WM_WININICHANGEovou zprávu s *lpszSection* nastavenou na hodnotu null. V opačném případě by aplikace měla odeslat WM_WININICHANGE pokaždé, když se změní na WIN. Užívaný.
 
 Pokud aplikace přijme `OnWinIniChange` volání s *lpszSection* nastavenou na hodnotu null, aplikace by měla kontrolovat všechny oddíly v souboru Win. INI, který má vliv na aplikaci.
 
@@ -10255,7 +10255,7 @@ Pokud aplikace přijme `OnWinIniChange` volání s *lpszSection* nastavenou na h
 
 ##  <a name="onwndmsg"></a>CWnd:: OnWndMsg
 
-Tato členská funkce je volána `WindowProc`nástrojem nebo je volána během reflexe zprávy.
+Tato členská funkce je volána `WindowProc`, nebo je volána během reflexe zprávy.
 
 ```
 virtual BOOL OnWndMsg(
@@ -10285,7 +10285,7 @@ Hodnota TRUE, pokud byla zpráva zpracována; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`OnWndMsg`Určuje typ zprávy a buď volá příslušnou funkci rozhraní (například [příkaz](#oncommand) WM_COMMAND pro), nebo najde příslušnou zprávu v mapě zpráv.
+`OnWndMsg` určuje typ zprávy a buď volá příslušnou funkci rozhraní (například [příkaz](#oncommand) pro WM_COMMAND), nebo najde příslušnou zprávu v mapě zpráv.
 
 Další informace o reflexi zprávy naleznete v tématu [manipulace s reflektující](../../mfc/handling-reflected-messages.md)se zprávami.
 
@@ -10304,7 +10304,7 @@ afx_msg void OnXButtonDblClk(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje stisknutou klávesu CTRL.|
+|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje, že se stiskla klávesa CTRL.|
 |*nNový*|pro Hodnota XBUTTON1 při dvojitém kliknutí na tlačítko Microsoft IntelliMouse X, nebo XBUTTON2 při dvojitém kliknutí na tlačítko X.|
 |*Vyberte*|pro Objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , který určuje souřadnice *x* a *y* kurzoru relativně k levému hornímu rohu klientské oblasti.|
 
@@ -10342,7 +10342,7 @@ afx_msg void OnXButtonDown(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje stisknutou klávesu CTRL.|
+|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje, že se stiskla klávesa CTRL.|
 |*nNový*|pro Hodnota XBUTTON1, pokud se kliklo na první tlačítko Microsoft IntelliMouse X, nebo když se na tlačítko X klikne XBUTTON2.|
 |*Vyberte*|pro Objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , který určuje souřadnice *x* a *y* kurzoru relativně k levému hornímu rohu klientské oblasti.|
 
@@ -10380,7 +10380,7 @@ afx_msg void OnXButtonUp(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje stisknutou klávesu CTRL.|
+|*nFlags*|pro Bitových kombinací (nebo) příznaků, které označují, které modifikační klávesy jsou stisknuty. Například příznak MK_CONTROL označuje, že se stiskla klávesa CTRL.|
 |*nNový*|pro Hodnota XBUTTON1, pokud bylo na prvním tlačítku Microsoft IntelliMouse X dvakrát kliknuto, nebo XBUTTON2, pokud se dvakrát kliknulo na druhé tlačítko X.|
 |*Vyberte*|pro Objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , který určuje souřadnice *x* a *y* kurzoru relativně k levému hornímu rohu klientské oblasti.|
 
@@ -10413,13 +10413,13 @@ BOOL OpenClipboard();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se schránka otevírá `CWnd`přes, nebo 0, pokud je schránka otevřená pro jinou aplikaci nebo okno.
+Nenulová, pokud je schránka otevřena pomocí `CWnd`nebo 0, pokud je schránka otevřená pro jinou aplikaci nebo okno.
 
 ### <a name="remarks"></a>Poznámky
 
 Ostatní aplikace nebudou moci měnit schránku, dokud nebude volána funkce [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) systému Windows.
 
-Aktuální `CWnd` objekt se nestane vlastníkem schránky, dokud nebude volána funkce [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) systému Windows.
+Aktuální objekt `CWnd` nebude vlastníkem schránky, dokud nebude volána funkce [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) systému Windows.
 
 ### <a name="example"></a>Příklad
 
@@ -10427,7 +10427,7 @@ Aktuální `CWnd` objekt se nestane vlastníkem schránky, dokud nebude volána 
 
 ##  <a name="operator_hwnd"></a>CWnd:: operator HWND
 
-Tento operátor použijte k získání popisovače `CWnd` objektu.
+Tento operátor použijte k získání popisovače objektu `CWnd`.
 
 ```
 operator HWND() const;
@@ -10435,7 +10435,7 @@ operator HWND() const;
 
 ##  <a name="operator_neq"></a>CWnd:: operator! =
 
-Porovná `CWnd` dva objekty a určí, zda nemají stejné [m_hWnd](#m_hwnd).
+Porovná dva `CWnd` objekty a určí, zda nemají stejný [m_hWnd](#m_hwnd).
 
 ```
 BOOL operator!=(const CWnd& wnd) const;
@@ -10444,7 +10444,7 @@ BOOL operator!=(const CWnd& wnd) const;
 ### <a name="parameters"></a>Parametry
 
 *wnd*<br/>
-Odkaz na `CWnd` objekt.
+Odkaz na objekt `CWnd`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -10452,7 +10452,7 @@ Nenulové, pokud je rovno; v opačném případě 0.
 
 ##  <a name="operator_eq_eq"></a>CWnd:: operator = =
 
-Porovná `CWnd` dva objekty a určí, zda mají stejné [m_hWnd](#m_hwnd).
+Porovná dva `CWnd` objekty a určí, jestli mají stejný [m_hWnd](#m_hwnd).
 
 ```
 BOOL operator==(const CWnd& wnd) const;
@@ -10461,7 +10461,7 @@ BOOL operator==(const CWnd& wnd) const;
 ### <a name="parameters"></a>Parametry
 
 *wnd*<br/>
-Odkaz na `CWnd` objekt.
+Odkaz na objekt `CWnd`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -10477,7 +10477,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Kontext zařízení, ve kterém mají být vykreslovány ovládací prvky bez oken.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10534,7 +10534,7 @@ Odvozené třídy mohou tuto funkci použít pro vlastní vyčištění, jako je
 
 ##  <a name="precreatewindow"></a>CWnd::P recreatewindow
 
-Volá se rozhraním před vytvořením okna Windows připojeného k tomuto `CWnd` objektu.
+Volá se rozhraním před vytvořením okna Windows připojeného k tomuto objektu `CWnd`.
 
 ```
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -10552,15 +10552,15 @@ Nenulové, pokud by mělo vytvoření okna pokračovat; 0 pro indikaci selhání
 ### <a name="remarks"></a>Poznámky
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`nyní přiřadí člen hMenu *cs* k **tomuto** ukazateli, pokud má nabídka hodnotu null a styl obsahuje WS_CHILD. Pro správné fungování zajistěte, aby měl ovládací prvek dialogu ID, které není NULL.
+> `CWnd::PreCreateWindow` nyní přiřadí člen hMenu *cs* k **tomuto** ukazateli, pokud je nabídka NULL a styl obsahuje WS_CHILD. Pro správné fungování zajistěte, aby měl ovládací prvek dialogu ID, které není NULL.
 >
-> Tato změna opravuje chybu ve spravovaných a nativních scénářích spolupráce. Příkaz trace v `CWnd::Create` upozorní vývojáře problému.
+> Tato změna opravuje chybu ve spravovaných a nativních scénářích spolupráce. Příkaz TRACE v `CWnd::Create` upozorní vývojáře problému.
 
 Tuto funkci nikdy Nevolejte přímo.
 
-Výchozí implementace této funkce kontroluje název třídy okna s hodnotou NULL a nahradí vhodnou výchozí hodnotu. Přepište tuto členskou funkci pro úpravu `CREATESTRUCT` struktury před vytvořením okna.
+Výchozí implementace této funkce kontroluje název třídy okna s hodnotou NULL a nahradí vhodnou výchozí hodnotu. Před vytvořením okna přepište tuto členskou funkci, aby se změnila struktura `CREATESTRUCT`.
 
-Každá třída odvozená `CWnd` od přidává vlastní funkce k `PreCreateWindow`přepsání. V takovém případě tyto odvozené `PreCreateWindow` označení nejsou dokumentovány. Chcete-li určit styly vhodné pro jednotlivé třídy a vzájemné závislosti mezi styly, můžete prostudovat zdrojový kód MFC pro základní třídu vaší aplikace. Pokud se rozhodnete přepsat `PreCreateWindow,` , můžete určit, zda styly použité v základní třídě vaší aplikace poskytují funkcionalitu, kterou potřebujete, pomocí informací shromážděných ze zdrojového kódu knihovny MFC.
+Každá třída odvozená z `CWnd` přidá svou vlastní funkci do svého přepsání `PreCreateWindow`. Podle návrhu nejsou tyto odvozené `PreCreateWindow` popsané. Chcete-li určit styly vhodné pro jednotlivé třídy a vzájemné závislosti mezi styly, můžete prostudovat zdrojový kód MFC pro základní třídu vaší aplikace. Pokud se rozhodnete přepsat `PreCreateWindow,` můžete určit, zda styly použité v základní třídě vaší aplikace poskytují funkcionalitu, kterou potřebujete, pomocí informací shromážděných ze zdrojového kódu knihovny MFC.
 
 Další informace o změně stylů oken naleznete v tématu [Změna stylů okna vytvořeného pomocí knihovny MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
 
@@ -10609,39 +10609,39 @@ void Print(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Ukazatel na kontext zařízení.
 
 *dwFlags*<br/>
 Určuje možnosti kreslení. Tento parametr může být jedním nebo více následujícími příznaky:
 
-- PRF_CHECKVISIBLE vykreslí okno pouze v případě, že je viditelné.
+- PRF_CHECKVISIBLE okno nakreslit pouze v případě, že je viditelné.
 
-- PRF_CHILDREN vykreslí všechna viditelná podřízená okna.
+- PRF_CHILDREN nakreslit všechna viditelná podřízená okna.
 
-- PRF_CLIENT vykreslí klientskou oblast okna.
+- PRF_CLIENT nakreslete oblast klienta okna.
 
-- PRF_ERASEBKGND Vymazat pozadí před kreslením okna.
+- Před kreslením okna PRF_ERASEBKGND Vymazat pozadí.
 
-- PRF_NONCLIENT vykreslí neklientskou oblast okna.
+- PRF_NONCLIENT nakreslit neklientskou oblast okna.
 
-- PRF_OWNED vykreslí všechna vlastněná okna.
+- PRF_OWNED nakreslit všechna vlastněná okna.
 
 ### <a name="remarks"></a>Poznámky
 
 [CWnd::D funkce efwindowproc](#defwindowproc) zpracovává tuto zprávu v závislosti na tom, která možnost kreslení je určena:
 
-- Pokud je zadaný PRF_CHECKVISIBLE a okno není viditelné, neprovádějte žádnou akci.
+- Pokud je zadána PRF_CHECKVISIBLE a okno není viditelné, neprovádějte žádnou akci.
 
-- Je-li zadán parametr PRF_NONCLIENT, nakreslete neklientskou oblast v daném kontextu zařízení.
+- Je-li zadána PRF_NONCLIENT, nakreslete neklientskou oblast v daném kontextu zařízení.
 
-- Pokud je zadán PRF_ERASEBKGND, odešle okno zprávu [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) .
+- Je-li zadán PRF_ERASEBKGND, odešle okno zprávu [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) .
 
-- Pokud je zadán PRF_CLIENT, odešle okno zprávu [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) .
+- Je-li zadán PRF_CLIENT, odešle okno zprávu [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) .
 
-- Pokud je nastavená PRF_CHILDREN, pošlete každé viditelné podřízené okno zprávu [WM_PRINT](/windows/win32/gdi/wm-print) .
+- Je-li nastavena PRF_CHILDREN, odešlete každé viditelné podřízené okno [WM_PRINT](/windows/win32/gdi/wm-print) zprávě.
 
-- Pokud je nastavená PRF_OWNED, pošlete každému viditelnému oknu zprávu WM_PRINT.
+- Je-li nastavena PRF_OWNED, odešlete každé viditelné okno, které je ve vlastnictví, WM_PRINT zprávu.
 
 ##  <a name="printclient"></a>CWnd::P rintClient
 
@@ -10655,23 +10655,23 @@ void PrintClient(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Ukazatel na kontext zařízení.
 
 *dwFlags*<br/>
 Určuje možnosti kreslení. Tento parametr může být jedním nebo více následujícími příznaky:
 
-- PRF_CHECKVISIBLE vykreslí okno pouze v případě, že je viditelné.
+- PRF_CHECKVISIBLE okno nakreslit pouze v případě, že je viditelné.
 
-- PRF_CHILDREN vykreslí všechna viditelná podřízená okna.
+- PRF_CHILDREN nakreslit všechna viditelná podřízená okna.
 
-- PRF_CLIENT vykreslí klientskou oblast okna.
+- PRF_CLIENT nakreslete oblast klienta okna.
 
-- PRF_ERASEBKGND Vymazat pozadí před kreslením okna.
+- Před kreslením okna PRF_ERASEBKGND Vymazat pozadí.
 
-- PRF_NONCLIENT vykreslí neklientskou oblast okna.
+- PRF_NONCLIENT nakreslit neklientskou oblast okna.
 
-- PRF_OWNED vykreslí všechna vlastněná okna.
+- PRF_OWNED nakreslit všechna vlastněná okna.
 
 ##  <a name="printwindow"></a>CWnd::P rintWindow
 
@@ -10685,7 +10685,7 @@ BOOL PrintWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Ukazatel na kontext zařízení, na který se má tisknout.
 
 *nFlags*<br/>
@@ -10721,35 +10721,35 @@ Identifikuje oblast aktualizace. Pokud mají hodnoty *prgnUpdate* i *lpRectUpdat
 *Flag*<br/>
 Pro zrušení platnosti okna se používají následující příznaky:
 
-- RDW_ERASE způsobí, že okno obdrží zprávu [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) při překreslení okna. Je také nutné zadat příznak RDW_INVALIDATE; jinak RDW_ERASE nemá žádný vliv.
+- RDW_ERASE způsobí, že okno obdrží zprávu [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) při překreslení okna. Je také nutné zadat příznak RDW_INVALIDATE. jinak RDW_ERASE nemá žádný vliv.
 
-- RDW_FRAME způsobí, že všechny části neklientové oblasti okna, které protínají oblast aktualizace, obdrží zprávu [WM_NCPAINT](/windows/win32/gdi/wm-ncpaint) . Je také nutné zadat příznak RDW_INVALIDATE; jinak RDW_FRAME nemá žádný vliv.
+- RDW_FRAME způsobí, že jakákoli část neklientové oblasti okna, která se protínají oblasti aktualizace, aby přijímala zprávu [WM_NCPAINT](/windows/win32/gdi/wm-ncpaint) . Je také nutné zadat příznak RDW_INVALIDATE. jinak RDW_FRAME nemá žádný vliv.
 
-- RDW_INTERNALPAINT způsobí odeslání zprávy [WM_PAINT](/windows/win32/gdi/wm-paint) do okna bez ohledu na to, zda okno obsahuje neplatnou oblast.
+- RDW_INTERNALPAINT způsobí, že se do okna bude publikovat [WM_PAINT](/windows/win32/gdi/wm-paint) zpráva bez ohledu na to, zda okno obsahuje neplatnou oblast.
 
-- RDW_INVALIDATE Invalidate *lpRectUpdate* nebo *prgnUpdate* (pouze jeden nemůže mít hodnotu null). Pokud jsou obě hodnoty NULL, celé okno se zruší.
+- RDW_INVALIDATE Invalidate *lpRectUpdate* nebo *prgnUpdate* (pouze jeden může mít hodnotu null). Pokud jsou obě hodnoty NULL, celé okno se zruší.
 
 K ověření okna se používají následující příznaky:
 
-- RDW_NOERASE potlačí všechny nedokončené zprávy WM_ERASEBKGND.
+- RDW_NOERASE potlačí všechny nevyřízené zprávy WM_ERASEBKGND.
 
-- RDW_NOFRAME potlačí všechny nedokončené zprávy WM_NCPAINT. Tento příznak musí být použit s RDW_VALIDATE a obvykle se používá s RDW_NOCHILDREN. Tato možnost by se měla používat opatrně, protože by mohla zabránit tomu, aby se části okna vymalováníly správně.
+- RDW_NOFRAME potlačí všechny nevyřízené zprávy WM_NCPAINT. Tento příznak se musí použít s RDW_VALIDATE a obvykle se používá s RDW_NOCHILDREN. Tato možnost by se měla používat opatrně, protože by mohla zabránit tomu, aby se části okna vymalováníly správně.
 
-- RDW_NOINTERNALPAINT potlačí všechny nevyřízené interní zprávy WM_PAINT. Tento příznak nemá vliv na WM_PAINT zprávy, které vyplývají z neplatných oblastí.
+- RDW_NOINTERNALPAINT potlačí všechny nevyřízené interní WM_PAINT zprávy. Tento příznak nemá vliv na WM_PAINT zprávy, které jsou výsledkem neplatných oblastí.
 
-- RDW_VALIDATE ověří *lpRectUpdate* nebo *prgnUpdate* (pouze jeden může mít hodnotu null). Pokud jsou obě hodnoty NULL, je ověřeno celé okno. Tento příznak nemá vliv na vnitřní zprávy WM_PAINT.
+- RDW_VALIDATE ověří *lpRectUpdate* nebo *prgnUpdate* (pouze jeden může mít hodnotu null). Pokud jsou obě hodnoty NULL, je ověřeno celé okno. Tento příznak nemá vliv na interní WM_PAINT zprávy.
 
-Následující příznaky řídí, když dojde k překreslení. Malování není prováděno funkcí, `RedrawWindow` Pokud není zadána jedna z těchto bitů.
+Následující příznaky řídí, když dojde k překreslení. Malování není provedeno funkcí `RedrawWindow`, pokud není zadána jedna z těchto bitů.
 
-- RDW_ERASENOW způsobí, že ovlivněná okna (uvedená v příznacích RDW_ALLCHILDREN a RDW_NOCHILDREN) obdrží zprávy WM_NCPAINT a WM_ERASEBKGND, pokud je to nutné, před vrácením funkce. WM_PAINT zprávy jsou odloženy.
+- RDW_ERASENOW způsobí, že ovlivněná okna (uvedená v příznacích RDW_ALLCHILDREN a RDW_NOCHILDREN) obdrží WM_NCPAINT a WM_ERASEBKGND zprávy, pokud je to nutné, před vrácením funkce. WM_PAINT zprávy jsou odloženy.
 
-- RDW_UPDATENOW způsobí, že ovlivněná okna (uvedená v příznacích RDW_ALLCHILDREN a RDW_NOCHILDREN) obdrží v případě potřeby zprávy WM_NCPAINT, WM_ERASEBKGND a WM_PAINT, než se funkce vrátí.
+- RDW_UPDATENOW způsobí, že ovlivněná okna (uvedená v příznacích RDW_ALLCHILDREN a RDW_NOCHILDREN) obdrží WM_NCPAINT, WM_ERASEBKGND a WM_PAINT zprávy, pokud je to nutné, než se funkce vrátí.
 
-Ve výchozím nastavení systém Windows ovlivněný `RedrawWindow` funkcí závisí na tom, zda má určené okno styl WS_CLIPCHILDREN. V podřízených oknech Windows WS_CLIPCHILDREN nejsou ovlivněny. Nicméně tato okna, která nejsou WS_CLIPCHILDREN Windows, se rekurzivně ověřují nebo zruší, dokud se nezjistí okno WS_CLIPCHILDREN. Následující příznaky řídí, která okna jsou ovlivněná `RedrawWindow` funkcí:
+Ve výchozím nastavení jsou okna ovlivněná funkcí `RedrawWindow` závislá na tom, zda má určené okno styl WS_CLIPCHILDREN. Podřízená okna WS_CLIPCHILDREN systému Windows nejsou ovlivněna. Nicméně tato okna, která nejsou WS_CLIPCHILDREN Windows, se rekurzivně ověřují nebo zruší, dokud se nezjistí WS_CLIPCHILDREN okno. Následující příznaky řídí, která okna jsou ovlivněná funkcí `RedrawWindow`:
 
 - RDW_ALLCHILDREN zahrnuje podřízená okna, pokud existují, v operaci překreslení.
 
-- RDW_NOCHILDREN vyloučí podřízená okna (pokud nějaká existují) z operace překreslení.
+- RDW_NOCHILDREN z operace překreslení vyloučí podřízená okna (pokud nějaká existují).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -10757,7 +10757,7 @@ Nenulové, pokud bylo okno úspěšně překresleno; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je členská funkce použita k devalidaci části okna plochy, neobdrží toto okno zprávu WM_PAINT. [](/windows/win32/gdi/wm-paint) `RedrawWindow` Aby bylo možné znovu nakreslit plochu, aplikace by měla používat [CWnd:: ValidateRgn](#validatergn), [CWnd:: InvalidateRgn](#invalidatergn), [CWnd:: UpdateWindow](#updatewindow)nebo [RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) .
+V případě, že se k Invalidate části okna plochy používá členská funkce `RedrawWindow`, neobdrží toto okno [WM_PAINTovou](/windows/win32/gdi/wm-paint) zprávu. Aby bylo možné znovu nakreslit plochu, aplikace by měla používat [CWnd:: ValidateRgn](#validatergn), [CWnd:: InvalidateRgn](#invalidatergn), [CWnd:: UpdateWindow](#updatewindow)nebo [RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) .
 
 ##  <a name="reflectchildnotify"></a>CWnd:: ReflectChildNotify
 
@@ -10835,7 +10835,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Identifikuje kontext zařízení, který se má uvolnit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10846,7 +10846,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 Účinek `ReleaseDC` členské funkce závisí na typu kontextu zařízení.
 
-Aplikace musí volat `ReleaseDC` členskou funkci pro každé volání členské funkce [GetWindowDC](#getwindowdc) a pro každé volání členské funkce [GetDC](#getdc) .
+Aplikace musí volat členskou funkci `ReleaseDC` pro každé volání členské funkce [GetWindowDC](#getwindowdc) a pro každé volání členské funkce [GetDC](#getdc) .
 
 ##  <a name="repositionbars"></a>CWnd:: RepositionBars
 
@@ -10876,11 +10876,11 @@ Určuje ID podokna, které vyplní zbývající část klientské oblasti.
 *načit*<br/>
 Může mít jednu z následujících hodnot:
 
-- `CWnd::reposDefault`Provede rozložení ovládacích panelů. *lpRectParam* se nepoužívá a může mít hodnotu null.
+- `CWnd::reposDefault` provádí rozložení ovládacích panelů. *lpRectParam* se nepoužívá a může mít hodnotu null.
 
-- `CWnd::reposQuery`Rozložení ovládacích panelů není provedeno; místo toho se *lpRectParam* inicializuje s velikostí klientské oblasti, jako kdyby bylo rozložení skutečně hotové.
+- `CWnd::reposQuery` rozložení ovládacích panelů není provedeno. místo toho se *lpRectParam* inicializuje s velikostí klientské oblasti, jako kdyby bylo rozložení skutečně hotové.
 
-- `CWnd::reposExtra`Přidá hodnoty *lpRectParam* do klientské oblasti *nIDLast* a také provede rozložení.
+- `CWnd::reposExtra` přidá hodnoty *lpRectParam* do klientské oblasti *nIDLast* a také provede rozložení.
 
 *lpRectParam*<br/>
 Odkazuje na [strukturu Rect](/windows/win32/api/windef/ns-windef-rect); použití, které závisí na hodnotě *načit*.
@@ -10908,11 +10908,11 @@ int RunModalLoop(DWORD dwFlags = 0);
 *dwFlags*<br/>
 Určuje zprávu systému Windows, která se má odeslat. Může to být jedna z následujících hodnot:
 
-- MLF_NOIDLEMSG neodesílají [WM_ENTERIDLE](/windows/win32/dlgbox/wm-enteridle) zprávy do nadřazeného objektu.
+- MLF_NOIDLEMSG Neodesílat [WM_ENTERIDLE](/windows/win32/dlgbox/wm-enteridle) zprávy nadřazenému objektu.
 
-- MLF_NOKICKIDLE neodesílají WM_KICKIDLE zprávy do okna.
+- MLF_NOKICKIDLE Neodesílat WM_KICKIDLE zprávy do okna.
 
-- MLF_SHOWONIDLE zobrazí okno při nečinnosti fronty zpráv.
+- MLF_SHOWONIDLE zobrazit okno při nečinnosti fronty zpráv.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -10920,7 +10920,7 @@ Určuje hodnotu parametru *nvýsledek* předaného členské funkci [EndModalLoo
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `ContinueModal` vrátí hodnotu false `EndModalLoop` po volání funkce. Vrátí hodnotu poskytnutou jako *nvýsledek* do `EndModalLoop`.
+Ve výchozím nastavení po volání `EndModalLoop` `ContinueModal` vrátí hodnotu FALSE. Vrátí hodnotu poskytnutou jako *nvýsledek* pro `EndModalLoop`.
 
 ##  <a name="screentoclient"></a>CWnd:: ScreenToClient
 
@@ -10940,7 +10940,7 @@ Odkazuje na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce nahradí souřadnice obrazovky zadané v *lpPoint* nebo lpRect pomocí souřadnic klienta. `ScreenToClient` Nové souřadnice jsou relativní vzhledem k levému hornímu rohu `CWnd` klientské oblasti.
+Členská funkce `ScreenToClient` nahradí souřadnice obrazovky zadané v *lpPoint* nebo *lpRect* pomocí souřadnic klienta. Nové souřadnice jsou relativní vzhledem k levému hornímu rohu `CWnd` klientské oblasti.
 
 ### <a name="example"></a>Příklad
 
@@ -10948,7 +10948,7 @@ Odkazuje na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [
 
 ##  <a name="scrollwindow"></a>CWnd:: ScrollWindow
 
-Posune obsah oblasti klienta aktuálního `CWnd` objektu.
+Posune obsah oblasti klienta aktuálního objektu `CWnd`.
 
 ```
 void ScrollWindow(
@@ -10970,17 +10970,17 @@ Určuje velikost svislého posouvání v jednotkách zařízení. Aby bylo možn
 Odkazuje na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) , která určuje část klientské oblasti, která se má posunout. Pokud má *lpRect* hodnotu null, celá klientská oblast se posune. Stříška se přemístí, pokud obdélník kurzoru protíná obdélník s posuvníkem.
 
 *lpClipRect*<br/>
-Odkazuje na `CRect` objekt nebo `RECT` strukturu, které určují Obdélník ořezu, který se má posunout. Budou posunuty pouze bity uvnitř tohoto obdélníku. Bity mimo tento obdélník nejsou ovlivněny ani v případě, že jsou v obdélníku *lpRect* . Pokud má *lpClipRect* hodnotu null, na posuvníku se neprovede žádné oříznutí.
+Odkazuje na objekt `CRect` nebo strukturu `RECT`, která určuje obdélník oříznutí pro posouvání. Budou posunuty pouze bity uvnitř tohoto obdélníku. Bity mimo tento obdélník nejsou ovlivněny ani v případě, že jsou v obdélníku *lpRect* . Pokud má *lpClipRect* hodnotu null, na posuvníku se neprovede žádné oříznutí.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je blikající kurzor v `CWnd` posunu, nástroj automaticky skrývá blikající kurzor, aby nedocházelo k jeho vymazání, `ScrollWindow` a poté po dokončení posouvání obnoví blikající kurzor. Pozice blikajícího kurzoru se odpovídajícím způsobem upraví.
+Pokud je blikající kurzor v `CWnd` posouváte, `ScrollWindow` automaticky skrývá blikající kurzor, aby se zabránilo jeho vymazání, a poté po dokončení posouvání obnoví blikající kurzor. Pozice blikajícího kurzoru se odpovídajícím způsobem upraví.
 
-Plocha odkrytá `ScrollWindow` členskou funkcí není překreslená, ale je Sloučená do oblasti aktualizace aktuálního `CWnd` objektu. Aplikace bude nakonec dostávat zprávu [WM_PAINT](/windows/win32/gdi/wm-paint) s upozorněním, že oblast bude potřebovat překreslit. Chcete-li překreslit nerozpoznatelnou oblast ve stejnou chvíli, než se posune, zavolejte členskou funkci [UpdateWindow](#updatewindow) hned po volání `ScrollWindow`.
+Oblast, na kterou se odkryla členská funkce `ScrollWindow`, není překreslená, ale je Sloučená do oblasti aktualizace aktuálního objektu `CWnd`. Aplikace bude nakonec dostávat zprávu [WM_PAINT](/windows/win32/gdi/wm-paint) informující o tom, že oblast potřebuje překreslit. Chcete-li překreslit nerozpoznatelnou oblast ve stejnou chvíli, než se posune, zavolejte členskou funkci [UpdateWindow](#updatewindow) ihned po volání `ScrollWindow`.
 
-Pokud má *lpRect* hodnotu null, pozice všech podřízených oken v okně jsou posunuty o hodnotu zadanou v *xAmount* a *yAmount*a všechny neplatné (vybarvené) oblasti v `CWnd` jsou také posunuty. `ScrollWindow`je rychlejší, pokud má *lpRect* hodnotu null.
+Pokud má *lpRect* hodnotu null, pozice všech podřízených oken v okně jsou posunuty o hodnotu zadanou v *xAmount* a *yAmount*a všechny neplatné (vybarvené) oblasti v `CWnd` jsou také posunuty. `ScrollWindow` je rychlejší, pokud má *lpRect* hodnotu null.
 
-Pokud *lpRect* není null, pozice podřízených oken se nezmění a neplatné oblasti v `CWnd` nejsou posunuty. Chcete-li zabránit aktualizaci problémů, pokud *lpRect* není null, `UpdateWindow` Zavolejte členskou funkci `CWnd` pro překreslení před voláním `ScrollWindow`.
+Pokud *lpRect* není null, pozice podřízených oken se nezmění a neplatné oblasti v `CWnd` nejsou posunuty. Chcete-li zabránit aktualizaci problémů, pokud *lpRect* není null, zavolejte členskou funkci `UpdateWindow` pro repainting `CWnd` před voláním `ScrollWindow`.
 
 ##  <a name="scrollwindowex"></a>CWnd:: ScrollWindowEx
 
@@ -10999,7 +10999,7 @@ int ScrollWindowEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dx*<br/>
+*DX*<br/>
 Určuje velikost vodorovného posouvání v jednotkách zařízení. Tento parametr musí mít zápornou hodnotu pro posun doleva.
 
 *dy*<br/>
@@ -11009,22 +11009,22 @@ Určuje velikost svislého posouvání v jednotkách zařízení. Aby se mohl te
 Odkazuje na [strukturu Rect](/windows/win32/api/windef/ns-windef-rect) , která určuje část klientské oblasti, která se má posunout. Pokud má tento parametr hodnotu NULL, celá klientská oblast se posune.
 
 *lpRectClip*<br/>
-Odkazuje na `RECT` strukturu, která určuje obdélník oříznutí pro posouvání. Tato struktura má přednost před obdélníkem, na který odkazuje *lpRectScroll*. Budou posunuty pouze bity uvnitř tohoto obdélníku. Bity mimo tento obdélník nejsou ovlivněny ani v případě, že jsou v obdélníku *lpRectScroll* . Pokud má tento parametr hodnotu NULL, není u posuvníku proveden žádný výstřižek.
+Odkazuje na strukturu `RECT`, která určuje obdélník oříznutí, který se má posunout. Tato struktura má přednost před obdélníkem, na který odkazuje *lpRectScroll*. Budou posunuty pouze bity uvnitř tohoto obdélníku. Bity mimo tento obdélník nejsou ovlivněny ani v případě, že jsou v obdélníku *lpRectScroll* . Pokud má tento parametr hodnotu NULL, není u posuvníku proveden žádný výstřižek.
 
 *prgnUpdate*<br/>
 Určuje oblast, která je upravena pro uložení oblasti jako neověřené posouváním. Tento parametr může mít hodnotu NULL.
 
 *lpRectUpdate*<br/>
-Odkazuje na `RECT` strukturu, která bude přijímat hranice rámečku zrušením jeho platnosti posouváním. Tento parametr může mít hodnotu NULL.
+Odkazuje na strukturu `RECT`, která obdrží ohraničení obdélníku neověřeného posouváním. Tento parametr může mít hodnotu NULL.
 
 *Flag*<br/>
 Může mít jednu z následujících hodnot:
 
-- SW_ERASE je-li zadána pomocí SW_INVALIDATE, smaže nově neověřenou oblast odesláním zprávy [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) do okna.
+- SW_ERASE je-li zadána v SW_INVALIDATE, smaže nově neověřenou oblast odesláním zprávy [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) do okna.
 
-- SW_INVALIDATE po posouvání neověřuje oblast identifikovanou v *prgnUpdate* .
+- SW_INVALIDATE po posouvání neověřuje oblast identifikovanou *prgnUpdate* .
 
-- SW_SCROLLCHILDREN posouvá všechna podřízená okna, která se protínají kolem obdélníku, na který odkazuje *lpRectScroll* , o počet pixelů zadaný v *DX* a *dy*. Systém Windows pošle zprávu [WM_MOVE](/windows/win32/winmsg/wm-move) všem podřízeným okenm, která protínají *lpRectScroll*, i když se nepřesunou. Stříška se přemístí při procházení podřízeného okna a obdélník kurzoru protínají obdélník.
+- SW_SCROLLCHILDREN posouvá všechna podřízená okna, která se protínají kolem obdélníku, na který odkazuje *lpRectScroll* , podle počtu pixelů zadaných v *DX* a *dy*. Windows pošle zprávu [WM_MOVE](/windows/win32/winmsg/wm-move) všem podřízeným okenm, která protínají *lpRectScroll*, i když se nepřesunou. Stříška se přemístí při procházení podřízeného okna a obdélník kurzoru protínají obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -11034,13 +11034,13 @@ Návratová hodnota je SIMPLEREGION (obdélníková neověřená oblast), COMPLE
 
 Tato funkce je podobná funkci [ScrollWindow](/windows/win32/api/winuser/nf-winuser-scrollwindow) s některými dalšími funkcemi.
 
-Pokud [](/windows/win32/api/winuser/nf-winuser-scrollwindowex) nejsou [](/windows/win32/api/winuser/nf-winuser-scrollwindowex) zadány SW_INVALIDATE a SW_ERASE, členskáfunkceneověřujeoblast,nakterouseposouvá.`ScrollWindowEx` Pokud je některý z těchto příznaků nastaven, `ScrollWindowEx` zruší platnost této oblasti. Oblast není aktualizována, dokud aplikace nevolá členskou funkci [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow) , volá členskou funkci [RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) (zadáním [RDW_UPDATENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow) nebo [RDW_ERASENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow)) nebo načte zprávu [WM_PAINT](/windows/win32/gdi/wm-paint) z fronta aplikace
+Pokud nejsou zadány [SW_INVALIDATE](/windows/win32/api/winuser/nf-winuser-scrollwindowex) a [SW_ERASE](/windows/win32/api/winuser/nf-winuser-scrollwindowex) , nevrátí členská funkce `ScrollWindowEx` neplatnou oblast, ze které se posouvá. Pokud je nastaven některý z těchto příznaků, `ScrollWindowEx` zruší platnost této oblasti. Oblast není aktualizována, dokud aplikace nevolá členskou funkci [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow) , volá členskou funkci [RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) (zadáním [RDW_UPDATENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow) nebo [RDW_ERASENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow)) nebo načte zprávu [WM_PAINT](/windows/win32/gdi/wm-paint) z fronty aplikace.
 
 Pokud má okno styl [WS_CLIPCHILDREN](/windows/win32/api/winuser/nf-winuser-createwindoww) , vrácené oblasti určené parametrem *prgnUpdate* a *lpRectUpdate* reprezentují celkovou oblast okna s posuvníky, které je třeba aktualizovat, včetně všech oblastí v podřízených oknech, které je potřeba aktualizovat.
 
-Pokud je zadán příznak [SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex) , systém Windows nebude aktualizovat obrazovku, pokud dojde k posunutí části podřízeného okna. Část posunutého podřízeného okna, které leží mimo zdrojový obdélník, nebude smazána a nebude znovu vykreslena v novém cíli. Použijte funkci [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) Windows k přesunu podřízených oken, která se zcela nenacházejí v obdélníku *lpRectScroll* . Kurzor se přemístí, pokud je nastaven příznak SW_SCROLLCHILDREN a obdélník blikajícího obdélníku.
+Pokud je zadaný příznak [SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex) , Windows nebude aktualizovat obrazovku, pokud se část podřízeného okna posouvá. Část posunutého podřízeného okna, které leží mimo zdrojový obdélník, nebude smazána a nebude znovu vykreslena v novém cíli. Použijte funkci [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) Windows k přesunu podřízených oken, která se zcela nenacházejí v obdélníku *lpRectScroll* . Kurzor se přemístí, pokud je nastaven příznak SW_SCROLLCHILDREN a obdélník blikajícího obdélníku.
 
-Pro všechny vstupní a výstupní souřadnice (pro *lpRectScroll*, *lpRectClip*, *lpRectUpdate*a *prgnUpdate*) se předpokládá, že jsou v souřadnicích klienta bez ohledu na to, zda má okno styl třídy CS_OWNDC nebo CS_CLASSDC. Pomocí funkcí Windows [LPtoDP](/windows/win32/api/wingdi/nf-wingdi-lptodp) a [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) můžete v případě potřeby převést do logických souřadnic a z nich.
+Pro všechny vstupní a výstupní souřadnice (pro *lpRectScroll*, *lpRectClip*, *lpRectUpdate*a *prgnUpdate*) se předpokládá, že jsou v souřadnicích klienta bez ohledu na to, zda má okno CS_OWNDC nebo CS_CLASSDC styl třídy. Pomocí funkcí Windows [LPtoDP](/windows/win32/api/wingdi/nf-wingdi-lptodp) a [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) můžete v případě potřeby převést do logických souřadnic a z nich.
 
 ##  <a name="sendchildnotifylastmsg"></a>CWnd:: SendChildNotifyLastMsg
 
@@ -11061,7 +11061,7 @@ Nenulové, pokud podřízené okno zpracovalo zprávu odeslanou její nadřazen�
 
 ### <a name="remarks"></a>Poznámky
 
-`SendChildNotifyLastMsg`Odeslat aktuální zprávu do zdroje, pokud se jedná o zprávu, která se odrazí.
+Pokud se jedná o zprávu, která se projeví, `SendChildNotifyLastMsg` Odeslat aktuální zprávu do zdroje.
 
 Další informace o reflexi zprávy naleznete v tématu [manipulace s reflektující](../../mfc/handling-reflected-messages.md)se zprávami.
 
@@ -11097,9 +11097,9 @@ Určuje hodnotu vrácenou procedurou okna ovládacího prvku nebo 0, pokud ovlá
 
 ### <a name="remarks"></a>Poznámky
 
-`SendDlgItemMessage` Členská funkce se nevrátí, dokud zpráva nebyla zpracována.
+Členská funkce `SendDlgItemMessage` nevrátí, dokud není zpráva zpracována.
 
-Použití `SendDlgItemMessage` je stejné jako `CWnd`získání * do daného ovládacího prvku a volání členské funkce [SendMessage](#sendmessage) .
+Použití `SendDlgItemMessage` je stejné jako získání `CWnd`* na daný ovládací prvek a volání členské funkce [SendMessage](#sendmessage) .
 
 ### <a name="example"></a>Příklad
 
@@ -11133,7 +11133,7 @@ Výsledek zpracování zprávy; jeho hodnota závisí na odeslané zprávě.
 
 ### <a name="remarks"></a>Poznámky
 
-`SendMessage` Členská funkce přímo volá proceduru okna a nevrátí se do doby, než ji okno zpracovalo. To je na rozdíl od členské funkce [PostMessage](#postmessage) , která umístí zprávu do fronty zpráv okna a okamžitě se vrátí.
+Členská funkce `SendMessage` volá proceduru okna přímo a nevrátí se, dokud procedura okna nezpracovala zprávu. To je na rozdíl od členské funkce [PostMessage](#postmessage) , která umístí zprávu do fronty zpráv okna a okamžitě se vrátí.
 
 ### <a name="example"></a>Příklad
 
@@ -11207,11 +11207,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud bylo okno vytvořeno volajícím vláknem, `SendNotifyMessage` volá proceduru okna pro okno a nebude vráceno, dokud procedura okna nezpracovala zprávu. Pokud bylo okno vytvořeno jiným vláknem, `SendNotifyMessage` předá zprávu proceduře okna a okamžitě se vrátí. nečeká na dokončení zpracování zprávy v rámci procesu okna.
+Pokud bylo okno vytvořeno volajícím vláknem, `SendNotifyMessage` volá proceduru okna okna a nevrátí, dokud procedura okna nezpracovala zprávu. Pokud bylo okno vytvořeno jiným vláknem, `SendNotifyMessage` předá zprávu proceduře okna a okamžitě se vrátí. nečeká na dokončení zpracování zprávy procesem okna.
 
 ##  <a name="setactivewindow"></a>CWnd:: SetActiveWindow
 
-Provede `CWnd` aktivní okno.
+Vytvoří `CWnd` aktivní okno.
 
 ```
 CWnd* SetActiveWindow();
@@ -11225,11 +11225,11 @@ Vrácený ukazatel může být dočasný a neměl by být uložen pro pozdějš�
 
 ### <a name="remarks"></a>Poznámky
 
-`SetActiveWindow` Členská funkce by se měla používat opatrně, protože umožňuje aplikaci libovolně převzít aktivní okno a vstupní fokus. V normálním případě se systém Windows bude starat o veškerou aktivaci.
+Členská funkce `SetActiveWindow` by se měla používat opatrně, protože umožňuje aplikaci libovolně převzít aktivní okno a vstupní fokus. V normálním případě se systém Windows bude starat o veškerou aktivaci.
 
 ##  <a name="setcapture"></a>CWnd:: SetCapture
 
-Způsobí, že se všechny následné vstupy myši odešlou do `CWnd` aktuálního objektu bez ohledu na pozici kurzoru.
+Způsobí, že všechny následné vstupy myši budou odesílány do aktuálního objektu `CWnd` bez ohledu na pozici kurzoru.
 
 ```
 CWnd* SetCapture();
@@ -11241,9 +11241,9 @@ Ukazatel na objekt okna, který dříve přijal všechny vstupy myši. Pokud ž�
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CWnd` již nepotřebujete všechny vstupy myší, aplikace by měla zavolat funkci [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) , aby ostatní okna mohly přijímat vstupy myši.
+Pokud `CWnd` již nevyžaduje všechny vstupy myši, aplikace by měla zavolat funkci [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) , aby ostatní okna mohly přijímat vstupy myši.
 
-Při zachytávání vstupu myši se do aktivního okna neodesílají žádné zprávy WM_NCHITTEST ani WM_SETCURSOR.
+Při zachytávání vstupu myši se do aktivního okna neodesílají žádné WM_NCHITTEST ani WM_SETCURSOR zprávy.
 
 ##  <a name="setcaretpos"></a>CWnd:: SetCaretPos
 
@@ -11260,7 +11260,7 @@ Určuje nové souřadnice x a y (v souřadnicích klienta) blikajícího kurzoru
 
 ### <a name="remarks"></a>Poznámky
 
-`SetCaretPos` Členská funkce přesune blikající kurzor pouze v případě, že je vlastněn oknem v aktuální úloze. `SetCaretPos`Přesune blikající kurzor, zda je znak stříšky skrytý.
+Členská funkce `SetCaretPos` přesune kurzor pouze v případě, že je vlastněn oknem v aktuální úloze. `SetCaretPos` přesune blikající kurzor bez ohledu na to, zda je blikající kurzor skrytý.
 
 Stříška je sdíleným prostředkem. Okno by neměl přesunout blikající kurzor, pokud mu nevlastní blikající kurzor.
 
@@ -11270,7 +11270,7 @@ Stříška je sdíleným prostředkem. Okno by neměl přesunout blikající kur
 
 ##  <a name="setclipboardviewer"></a>CWnd:: SetClipboardViewer
 
-Přidá toto okno do řetězce oken, které jsou oznámeny (prostřednictvím zprávy WM_DRAWCLIPBOARD), kdykoli se změní obsah schránky.
+Přidá toto okno do řetězce oken s oznámením (prostřednictvím WM_DRAWCLIPBOARDové zprávy), kdykoli se změní obsah schránky.
 
 ```
 HWND SetClipboardViewer();
@@ -11282,9 +11282,9 @@ Popisovač dalšího okna v řetězu prohlížeče schránky, pokud je úspěšn
 
 ### <a name="remarks"></a>Poznámky
 
-Okno, které je součástí řetězce prohlížeče schránky, musí reagovat na zprávy [WM_DRAWCLIPBOARD](#ondrawclipboard), [WM_CHANGECBCHAIN](#onchangecbchain)a [WM_DESTROY](#ondestroy) a předat zprávu do dalšího okna v řetězci.
+Okno, které je součástí řetězu prohlížeče schránky, musí reagovat na [WM_DRAWCLIPBOARD](#ondrawclipboard), [WM_CHANGECBCHAIN](#onchangecbchain)a [WM_DESTROY](#ondestroy) zprávy a předat zprávy do dalšího okna v řetězci.
 
-Tato členská funkce pošle do okna zprávu WM_DRAWCLIPBOARD. Vzhledem k tomu, že popisovač pro další okno v řetězu prohlížeče schránka ještě nebyl vrácen, by aplikace neměla předat zprávu WM_DRAWCLIPBOARD, kterou obdrží během volání `SetClipboardViewer`.
+Tato členská funkce pošle do okna zprávu WM_DRAWCLIPBOARD. Vzhledem k tomu, že popisovač pro další okno v řetězu prohlížeče ve schránce nebyl dosud vrácen, aplikace by neměla předat zprávu WM_DRAWCLIPBOARD, kterou obdrží během volání `SetClipboardViewer`.
 
 Chcete-li odebrat sebe sama z řetězce prohlížeče schránky, musí aplikace zavolat členskou funkci [ChangeClipboardChain](#changeclipboardchain) .
 
@@ -11333,7 +11333,7 @@ Určuje, zda je celočíselná hodnota podepsaná, nebo bez znaménka. Pokud má
 
 ### <a name="remarks"></a>Poznámky
 
-`SetDlgItemInt`odešle do daného ovládacího prvku zprávu [WM_SETTEXT](/windows/win32/winmsg/wm-settext) .
+`SetDlgItemInt` odešle danému ovládacímu prvku zprávu [WM_SETTEXT](/windows/win32/winmsg/wm-settext) .
 
 ### <a name="example"></a>Příklad
 
@@ -11359,7 +11359,7 @@ Odkazuje na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) n
 
 ### <a name="remarks"></a>Poznámky
 
-`SetDlgItemText`odešle do daného ovládacího prvku zprávu [WM_SETTEXT](/windows/win32/winmsg/wm-settext) .
+`SetDlgItemText` odešle danému ovládacímu prvku zprávu [WM_SETTEXT](/windows/win32/winmsg/wm-settext) .
 
 ### <a name="example"></a>Příklad
 
@@ -11401,7 +11401,7 @@ Ukazatel na objekt okna, který dříve měl vstupní fokus. Pokud žádné tako
 
 Vstupní fokus nasměruje všechny následné vstupy klávesnice do tohoto okna. Jakékoli okno, které dříve mělo fokus vstupu, ztratí.
 
-Členská funkce pošle do okna zprávu [WM_KILLFOCUS](/windows/win32/inputdev/wm-killfocus) , která ztratí fokus vstupu a zprávu WM_SETFOCUS do okna, které obdrží fokus vstupu. [](/windows/win32/inputdev/wm-setfocus) `SetFocus` Aktivuje také buď okno, nebo jeho nadřazenou položku.
+Členská funkce `SetFocus` pošle do okna zprávu [WM_KILLFOCUS](/windows/win32/inputdev/wm-killfocus) , která ztratí fokus vstupu a [WM_SETFOCUS](/windows/win32/inputdev/wm-setfocus) zprávu do okna, které obdrží fokus vstupu. Aktivuje také buď okno, nebo jeho nadřazenou položku.
 
 Pokud je aktuální okno aktivní, ale nemá fokus (to znamená, že žádné okno nemá fokus), všechna Stisknutá klávesa vytvoří zprávy [WM_SYSCHAR](#onsyschar), [WM_SYSKEYDOWN](#onsyskeydown)nebo [WM_SYSKEYUP](#onsyskeyup).
 
@@ -11418,14 +11418,14 @@ void SetFont(
 ### <a name="parameters"></a>Parametry
 
 *pFont*<br/>
-Ukazatel na `CFont` objekt.
+Ukazatel na objekt `CFont`.
 
 *bRedraw*<br/>
-TRUE, pokud se okno překreslí hned po zpracování zprávy WM_SETFONT; v opačném případě FALSE.
+TRUE pro překreslení okna ihned po zpracování zprávy WM_SETFONT; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda nemá žádný vliv, pokud okno nezpracovává zprávu WM_SETFONT. Mnoho tříd knihovny MFC, které `CWnd` jsou odvozeny od zpracování této zprávy, protože jsou připojeny k předdefinované třídě okna, která obsahuje obslužnou rutinu zprávy pro zprávu WM_SETFONT. Chcete-li použít tuto metodu, třídy, které `CWnd` jsou odvozeny z, musí definovat obslužnou rutinu metody pro zprávu WM_SETFONT.
+Tato metoda nemá žádný vliv, pokud okno nezpracovává zprávu WM_SETFONT. Mnoho tříd knihovny MFC, které jsou odvozeny z `CWnd` zpracovává tuto zprávu, protože jsou připojeny k předdefinované třídě okna, která obsahuje popisovač zprávy pro WM_SETFONT zprávu. Chcete-li použít tuto metodu, třídy, které jsou odvozeny z `CWnd` musí definovat obslužnou rutinu metody pro zprávu WM_SETFONT.
 
 ##  <a name="seticon"></a>CWnd:: SetIcon
 
@@ -11508,7 +11508,7 @@ Nenulové, pokud je nabídka změněna; v opačném případě 0.
 
 Způsobí, že okno bude překresleno tak, aby odráželo změnu v nabídce.
 
-`SetMenu`nedojde k zničení předchozí nabídky. Aplikace by měla zavolat členskou funkci [CMenu –::D estroymenu](../../mfc/reference/cmenu-class.md#destroymenu) k provedení této úlohy.
+`SetMenu` nebude zničit předchozí nabídku. Aplikace by měla zavolat členskou funkci [CMenu –::D estroymenu](../../mfc/reference/cmenu-class.md#destroymenu) k provedení této úlohy.
 
 ### <a name="example"></a>Příklad
 
@@ -11531,7 +11531,7 @@ Identifikuje nového vlastníka objektu window. Pokud má tento parametr hodnotu
 
 Tento vlastník pak může přijímat zprávy příkazů z aktuálního objektu okna. Ve výchozím nastavení je nadřazeným prvkem aktuálního okna jeho vlastník.
 
-Je často vhodné navázat spojení mezi objekty okna, které nesouvisí s hierarchií okna. Například [CToolBar –](../../mfc/reference/ctoolbar-class.md) odesílá oznámení vlastníkovi, nikoli svému nadřazenému. To umožňuje, aby se panel nástrojů stal podřízenou položkou jednoho okna (například okno aplikace kontejneru OLE) při posílání oznámení do jiného okna (jako je místní okno rámce). Kromě toho, když dojde k deaktivaci nebo aktivaci okna serveru při místních úpravách, jakékoliv okno vlastněné oknem rámců je skryté nebo zobrazené. Toto vlastnictví je explicitně nastaveno s voláním metody `SetOwner`.
+Je často vhodné navázat spojení mezi objekty okna, které nesouvisí s hierarchií okna. Například [CToolBar –](../../mfc/reference/ctoolbar-class.md) odesílá oznámení vlastníkovi, nikoli svému nadřazenému. To umožňuje, aby se panel nástrojů stal podřízenou položkou jednoho okna (například okno aplikace kontejneru OLE) při posílání oznámení do jiného okna (jako je místní okno rámce). Kromě toho, když dojde k deaktivaci nebo aktivaci okna serveru při místních úpravách, jakékoliv okno vlastněné oknem rámců je skryté nebo zobrazené. Toto vlastnictví je explicitně nastaveno s voláním `SetOwner`.
 
 Koncept vlastnictví této funkce se liší od konceptu vlastnictví [GetWindow](/windows/win32/api/winuser/nf-winuser-getwindow).
 
@@ -11580,13 +11580,13 @@ Jeden parametr typu určený parametrem *vtProp*.
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
-> Tato funkce by měla být volána pouze pro `CWnd` objekt, který představuje ovládací prvek OLE.
+> Tato funkce by měla být volána pouze pro objekt `CWnd`, který představuje ovládací prvek OLE.
 
-Další informace o použití této členské funkce s kontejnery ovládacích prvků OLE naleznete v článku [kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru](../../mfc/programming-activex-controls-in-a-activex-control-container.md)ovládacího prvku ActiveX.
+Další informace o použití této členské funkce s kontejnery ovládacích prvků OLE naleznete v článku [kontejnery ovládacích prvků ActiveX: programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
 ##  <a name="setredraw"></a>CWnd:: SetRedraw
 
-Aplikace volá `SetRedraw` , aby bylo možné překreslit změny nebo zabránit překreslování změn.
+Aplikace volá `SetRedraw`, aby bylo možné překreslit změny nebo zabránit překreslování změn.
 
 ```
 void SetRedraw(BOOL bRedraw = TRUE);
@@ -11607,7 +11607,7 @@ Tato členská funkce nastaví nebo zruší příznak překreslení. I když je 
 
 ##  <a name="setscrollinfo"></a>CWnd:: SetScrollInfo
 
-Zavolejte tuto členskou funkci pro nastavení informací, které `SCROLLINFO` struktura udržuje o posuvníku.
+Zavolejte tuto členskou funkci pro nastavení informací, které struktura `SCROLLINFO` udržuje o posuvníku.
 
 ```
 BOOL SetScrollInfo(
@@ -11621,11 +11621,11 @@ BOOL SetScrollInfo(
 *nBar*<br/>
 Určuje, zda se posuvník nachází v neklientské oblasti okna nebo v něm. Pokud je součástí neklientské oblasti, nBar také indikuje, zda je posuvník umístěn vodorovně, svisle nebo obojí. Musí to být jedna z následujících:
 
-- SB_CTL obsahuje parametry pro ovládací prvek posuvníku. `m_hWnd` Datový člen musí mít popisovač ovládacího prvku posuvníku.
+- SB_CTL obsahuje parametry ovládacího prvku posuvníku. Datový člen `m_hWnd` musí být popisovačem ovládacího prvku posuvníku.
 
 - SB_HORZ určuje, že okno je vodorovný posuvník.
 
-- SB_VERT určuje, že okno je svislý posuvník.
+- SB_VERT určuje, zda je okno svislý posuvník.
 
 *lpScrollInfo*<br/>
 Ukazatel na strukturu [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) . Další informace o této struktuře najdete v Windows SDK.
@@ -11639,9 +11639,9 @@ V případě úspěchu se vrátí hodnota TRUE. V opačném případě je hodnot
 
 ### <a name="remarks"></a>Poznámky
 
-Struktura [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) obsahuje informace o posuvníku, včetně minimální a maximální pozice pro posouvání, velikosti stránky a polohy rolovacího pole (palec). Další informace o změně výchozího nastavení struktury najdete v tématu strukturavWindowsSDK.`SCROLLINFO`
+Struktura [ScrollInfo](/windows/win32/api/winuser/ns-winuser-scrollinfo) obsahuje informace o posuvníku, včetně minimální a maximální pozice pro posouvání, velikosti stránky a polohy rolovacího pole (palec). Další informace o změně výchozích hodnot struktury najdete v tématu `SCROLLINFO` struktury v Windows SDK.
 
-Obslužné rutiny zpráv systému Windows knihovny MFC, které označují pozici posuvníku, [CWnd:: OnHScroll](#onhscroll) a [CWnd:: OnVScroll](#onvscroll), poskytují pouze 16 bitů dat pozice. [GetScrollInfo](#getscrollinfo) a `SetScrollInfo` poskytněte 32 bitů dat umístění posuvníku. Proto může aplikace volat `GetScrollInfo` během zpracování buď `CWnd::OnHScroll` nebo `CWnd::OnVScroll` , aby získala 32-bit dat o poloze posuvníku.
+Obslužné rutiny zpráv systému Windows knihovny MFC, které označují pozici posuvníku, [CWnd:: OnHScroll](#onhscroll) a [CWnd:: OnVScroll](#onvscroll), poskytují pouze 16 bitů dat pozice. [GetScrollInfo](#getscrollinfo) a `SetScrollInfo` poskytují 32 bitů dat o poloze posouvaných pruhů. Aplikace proto může volat `GetScrollInfo` při zpracování `CWnd::OnHScroll` nebo `CWnd::OnVScroll` k získání dat pozice na posuvníku 32-bit.
 
 > [!NOTE]
 > [CWnd:: GetScrollInfo](#getscrollinfo) umožňuje aplikacím používat 32 poloh posuvníku.
@@ -11716,7 +11716,7 @@ Můžete ji také použít ke skrytí nebo zobrazení standardních posuvníků.
 
 Aplikace by neměla volat tuto funkci, aby se skryl posuvník při zpracování zprávy s upozorněním na posuvníku.
 
-Pokud volání `SetScrollRange` bezprostředně následuje volání členské funkce [SetScrollPos](#setscrollpos) , parametr *bRedraw* v `SetScrollPos` členské funkci by měl být 0, aby se předešlo tomu, že posuvník nebude vykreslen dvakrát.
+Pokud volání `SetScrollRange` hned následuje volání členské funkce [SetScrollPos](#setscrollpos) , musí být parametr *bRedraw* v členské funkci `SetScrollPos` 0, aby se předešlo tomu, že posuvník nebude vykreslen dvakrát.
 
 Výchozí rozsah standardního posuvníku je 0 až 100. Výchozí rozsah ovládacího prvku posuvníku je prázdný (hodnoty *nMinPos* i *nMaxPos* jsou 0). Rozdíl mezi hodnotami zadanými v *nMinPos* a *nMaxPos* nesmí být větší než INT_MAX.
 
@@ -11737,13 +11737,13 @@ UINT_PTR SetTimer(
 ### <a name="parameters"></a>Parametry
 
 *nIDEvent*<br/>
-Určuje nenulový identifikátor časovače. Pokud je identifikátor časovače jedinečný, vrátí `SetTimer`Tato stejná hodnota. V opačném případě určí novou jedinečnou hodnotu a vrátí ji. `SetTimer` Pro časovač okna (který má funkci zpětného volání NULL) musí být hodnota jedinečná pouze pro jiné časovače systému Windows, které jsou spojeny s aktuálním oknem. U časovače zpětného volání musí být hodnota jedinečná pro všechny časovače ve všech procesech. Proto při vytváření časovače zpětného volání je pravděpodobnější, že vrácená hodnota se může lišit od hodnoty, kterou zadáte.
+Určuje nenulový identifikátor časovače. Pokud je identifikátor časovače jedinečný, je stejná hodnota vrácena pomocí `SetTimer`. V opačném případě `SetTimer` určí novou jedinečnou hodnotu a vrátí ji. Pro časovač okna (který má funkci zpětného volání NULL) musí být hodnota jedinečná pouze pro jiné časovače systému Windows, které jsou spojeny s aktuálním oknem. U časovače zpětného volání musí být hodnota jedinečná pro všechny časovače ve všech procesech. Proto při vytváření časovače zpětného volání je pravděpodobnější, že vrácená hodnota se může lišit od hodnoty, kterou zadáte.
 
 *nElapse*<br/>
 Určuje hodnotu časového limitu nebo interval v milisekundách.
 
 *lpfnTimer*<br/>
-Určuje adresu funkce zpětného volání dodaného `TimerProc` aplikací, která zpracovává zprávy [WM_TIMER](/windows/win32/winmsg/wm-timer) . Pokud má tento parametr hodnotu null, zprávy WM_TIMER jsou umístěny do fronty zpráv aplikace a zpracovávány `CWnd` objektem.
+Určuje adresu funkce zpětného volání `TimerProc` zadaného aplikací, která zpracovává zprávy [WM_TIMER](/windows/win32/winmsg/wm-timer) . Pokud má tento parametr hodnotu NULL, WM_TIMER zprávy jsou umístěny do fronty zpráv aplikace a zpracovávány objektem `CWnd`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -11751,7 +11751,7 @@ Identifikátor časovače nového časovače, je-li funkce úspěšná. Tato hod
 
 ### <a name="remarks"></a>Poznámky
 
-Je zadána hodnota intervalu a pokaždé, když interval uplyne, systém odešle zprávu WM_TIMER do fronty zpráv instalace aplikace nebo předá zprávu do funkce zpětného volání definované `TimerProc` aplikací.
+Je zadána hodnota intervalu a pokaždé, když interval uplyne, systém odešle WM_TIMERovou zprávu do fronty zpráv instalace aplikace nebo předá zprávu do funkce zpětného volání `TimerProc` definovaného aplikací.
 
 Funkce zpětného volání *lpfnTimer* nemusí být pojmenována `TimerProc`, ale musí být deklarována jako statická a definována následujícím způsobem.
 
@@ -11765,7 +11765,7 @@ void CALLBACK TimerProc(
 
 ### <a name="example"></a>Příklad
 
-Tento příklad používá `CWnd::SetTimer`, `CWnd::OnTimer`a `CWnd::KillTimer` ke zpracování zpráv WM_TIMER. První časovač je nastaven tak, aby odesílal zprávu WM_TIMER do hlavního okna rámce každé 2 sekundy v `OnStartTimer`. Obslužná `OnTimer` rutina události zpracovává zprávy WM_TIMER pro hlavní okno rámce. Tato metoda způsobí, že se mluvčí počítače každých 2 sekund zazní. Druhý časovač pošle zprávu funkci zpětného volání každých 3,75 sekund. `OnStopTimer`ukončí oba časovače voláním `CWnd::KillTimer` pro každé ID časovače.
+V tomto příkladu se ke zpracování zpráv WM_TIMER používá `CWnd::SetTimer`, `CWnd::OnTimer`a `CWnd::KillTimer`. První časovač je nastaven tak, aby odesílal zprávu WM_TIMER do hlavního okna rámce každé 2 sekundy v `OnStartTimer`. Obslužná rutina události `OnTimer` zpracovává WM_TIMER zprávy pro hlavní okno rámce. Tato metoda způsobí, že se mluvčí počítače každých 2 sekund zazní. Druhý časovač pošle zprávu funkci zpětného volání každých 3,75 sekund. `OnStopTimer` zastaví oba časovače voláním `CWnd::KillTimer` pro každé ID časovače.
 
 [!code-cpp[NVC_MFCWindowing#118](../../mfc/reference/codesnippet/cpp/cwnd-class_59.cpp)]
 
@@ -11828,25 +11828,25 @@ BOOL SetWindowPos(
 ### <a name="parameters"></a>Parametry
 
 *pWndInsertAfter*<br/>
-Určuje objekt, který bude před (větší než) Tento `CWnd` objekt v pořadí vykreslování. `CWnd` Tento parametr může být ukazatel na `CWnd` nebo ukazatel na jednu z následujících hodnot:
+Identifikuje objekt `CWnd`, který bude předcházet (bude vyšší než) Tento objekt `CWnd` v pořadí vykreslování. Tento parametr může být ukazatel na `CWnd` nebo ukazatel na jednu z následujících hodnot:
 
-- `wndBottom`Umístí okno na konec pořadí vykreslování. Pokud se `CWnd` jedná o nejvrchnější okno, okno ztratí svůj stav nejvyšší úrovně. systém umístí okno do dolní části všech ostatních oken.
+- `wndBottom` umístí okno na konec pořadí vykreslování. Pokud je toto `CWnd` horním oknem, okno ztratí svůj stav nejvyšší úrovně; systém umístí okno do dolní části všech ostatních oken.
 
-- `wndTop`Umístí okno na začátek pořadí vykreslování.
+- `wndTop` umístí okno na začátek pořadí vykreslování.
 
-- `wndTopMost`Umístí okno nad všechna okna, která nejsou na nejvyšší úrovni. Okno uchovává svou vrchní polohu, i když je deaktivována.
+- `wndTopMost` umístí okno nad všechna okna, která nejsou na nejvyšší úrovni. Okno uchovává svou vrchní polohu, i když je deaktivována.
 
-- `wndNoTopMost`Přemístí okno na horní část všech oken bez nejvyšší úrovně (tj. za všechna nejvrchnější okna). Tento příznak nemá žádný vliv, pokud je okno již v nehorním intervalu.
+- `wndNoTopMost` přemístí okno na horní část všech oken, která nejsou na nejvyšší úrovni (to znamená za všechna nejvrchnější okna). Tento příznak nemá žádný vliv, pokud je okno již v nehorním intervalu.
 
 Pravidla týkající se použití tohoto parametru naleznete v části "poznámky" v tomto tématu.
 
-*x*<br/>
+*znak*<br/>
 Určuje novou pozici levé strany okna.
 
-*y*<br/>
+*požadované*<br/>
 Určuje novou pozici horní části okna.
 
-*cx*<br/>
+*CX*<br/>
 Určuje novou šířku okna.
 
 *kr*<br/>
@@ -11855,25 +11855,25 @@ Určuje novou výšku okna.
 *nFlags*<br/>
 Určuje možnosti změny velikosti a umístění. Tento parametr může být kombinací následujících příznaků:
 
-- SWP_DRAWFRAME vykreslí snímek (definovaný při vytvoření okna) kolem okna.
+- SWP_DRAWFRAME nakreslí rámec (definovaný při vytvoření okna) kolem okna.
 
-- SWP_FRAMECHANGED odešle do okna zprávu WM_NCCALCSIZE, i když velikost okna není měněna. Pokud tento příznak není zadán, bude WM_NCCALCSIZE odeslána pouze v případě, že se mění velikost okna.
+- SWP_FRAMECHANGED do okna pošle zprávu WM_NCCALCSIZE, i když se velikost okna nemění. Pokud tento příznak není zadán, je WM_NCCALCSIZE odeslána pouze v případě, že se mění velikost okna.
 
 - SWP_HIDEWINDOW skryje okno.
 
-- SWP_NOACTIVATE neaktivuje okno. Není-li tento příznak nastaven, je okno aktivováno a přesunuto na začátek skupiny nejvyšší úrovně nebo mimo nejvyšší hodnotu (v závislosti na nastavení parametru *pWndInsertAfter* ).
+- SWP_NOACTIVATE okno neaktivuje. Není-li tento příznak nastaven, je okno aktivováno a přesunuto na začátek skupiny nejvyšší úrovně nebo mimo nejvyšší hodnotu (v závislosti na nastavení parametru *pWndInsertAfter* ).
 
 - SWP_NOCOPYBITS zahodí celý obsah klientské oblasti. Pokud tento příznak není zadán, bude platný obsah oblasti klienta uložen a zkopírován zpět do klientské oblasti po změně velikosti nebo přemístění okna.
 
 - SWP_NOMOVE zachová aktuální pozici (ignoruje parametry *x* a *y* ).
 
-- SWP_NOOWNERZORDER nemění pozici nadřazeného okna v pořadí Z.
+- SWP_NOOWNERZORDER nemění pozici vlastníka okna v pořadí vykreslování.
 
 - SWP_NOREDRAW nepřekreslí změny. Pokud je tento příznak nastaven, nedojde k žádnému překreslení jakéhokoli druhu. To platí pro klientskou oblast, neklientskou oblast (včetně názvu a posuvníků) a jakákoli část nadřazeného okna se v důsledku přesunutého okna nekryje. Pokud je tento příznak nastaven, aplikace musí explicitně zrušit platnost nebo překreslit všechny části okna a nadřazené okno, které musí být překresleny.
 
 - SWP_NOREPOSITION stejné jako SWP_NOOWNERZORDER.
 
-- SWP_NOSENDCHANGING zabraňuje oknu přijmout zprávu WM_WINDOWPOSCHANGING.
+- SWP_NOSENDCHANGING zabrání oknu přijmout zprávu WM_WINDOWPOSCHANGING.
 
 - SWP_NOSIZE zachová aktuální velikost (ignoruje parametry *CX* a *CY* ).
 
@@ -11891,11 +11891,11 @@ Okna jsou seřazená na obrazovce podle jejich pořadí Z. okno v horní části
 
 Všechny souřadnice pro podřízená okna jsou souřadnicemi klienta (vzhledem k levému hornímu rohu klientské oblasti v nadřazeném okně).
 
-Okno lze přesunout na začátek pořadí vykreslování buď nastavením parametru *pWndInsertAfter* na **& wndTopMost** a zajištěním, že příznak SWP_NOZORDER není nastaven, nebo nastavením pořadí vykreslování okna tak, aby bylo nad stávajícími okny. V případě, že se v nejvyšší úrovni stane navrch, jeho vlastněná okna jsou také vytvořena na nejvyšší úrovni. Vlastníci se nezměnili.
+Okno lze přesunout do horní části pořadí vykreslování buď nastavením parametru *pWndInsertAfter* na **& wndTopMost** a zajištěním, že příznak SWP_NOZORDER není nastaven nebo když nastavíte pořadí vykreslování okna tak, aby bylo nad stávajícími okny. V případě, že se v nejvyšší úrovni stane navrch, jeho vlastněná okna jsou také vytvořena na nejvyšší úrovni. Vlastníci se nezměnili.
 
 Vrchní okno již není zcela nahoře, pokud je přemístěné na spodní ( **& wndBottom**) pořadí vykreslování nebo po jakémkoli nestránkovaném okně. V případě, že je nejvrchnější okno v nestránkovaném stavu, všechny jeho vlastníci a vlastní okna jsou také k dishornímu systému Windows.
 
-Pokud není zadán ani SWP_NOACTIVATE ani SWP_NOZORDER (to znamená, když aplikace požaduje, aby se okno současně aktivovalo a umístilo do zadaného pořadí Z), hodnota zadaná v *pWndInsertAfter* se používá pouze v následujících případech: žádný
+Pokud není zadána žádná z SWP_NOACTIVATE ani SWP_NOZORDER (tj. když aplikace požaduje, aby se okno současně aktivovalo a umístilo do zadaného pořadí Z), hodnota zadaná v *pWndInsertAfter* se použije pouze v následujících případech:
 
 - V parametru *pWndInsertAfter* není uveden ani **& WndTopMost** ani **& wndNoTopMost** .
 
@@ -11905,13 +11905,13 @@ Aplikace nemůže aktivovat neaktivní okno bez toho, aby se převedla na začá
 
 Okno, které není nejvrchnější, může vlastnit nejvyšší okno, ale ne naopak. Jakékoli okno (například dialogové okno) vlastněné nejvyšším oknem se skládá z vrchního okna, které zajistí, že všechna vlastněná okna zůstanou nad jejich vlastníkem.
 
-V systému Windows verze 3,1 a novější se dá Windows přesunout na začátek pořadí vykreslování a uzamknout ho nastavením jejich WS_EX_TOPMOST stylů. Takové horní okno zachovává svou vrchní polohu, i když je deaktivované. Například při výběru příkazu WinHelp Always On Top se zobrazí okno nápovědy na nejvyšší úrovni, které pak zůstane viditelné při návratu do aplikace.
+V systému Windows verze 3,1 a novějších lze Windows přesunout na začátek pořadí vykreslování a uzamknout je nastavením jejich WS_EX_TOPMOST stylů. Takové horní okno zachovává svou vrchní polohu, i když je deaktivované. Například při výběru příkazu WinHelp Always On Top se zobrazí okno nápovědy na nejvyšší úrovni, které pak zůstane viditelné při návratu do aplikace.
 
-Chcete-li vytvořit horní okno, `SetWindowPos` zavolejte parametr *pWndInsertAfter* , který se rovná **& wndTopMost**, nebo nastavte styl WS_EX_TOPMOST při vytváření okna.
+Chcete-li vytvořit horní okno, zavolejte `SetWindowPos` s parametrem *pWndInsertAfter* , který se rovná **& wndTopMost**, nebo nastavte styl WS_EX_TOPMOST při vytváření okna.
 
-Pokud pořadí Z-order obsahuje všechna okna se stylem WS_EX_TOPMOST, okno přesunuté s hodnotou **& wndTopMost** je umístěno v horní části všech oken, která nejsou v nejvyšší úrovni, ale pod jakákoli nejvrchnější okna. Když aplikace aktivuje neaktivní okno bez WS_EX_TOPMOST bitu, okno se přesune nad všechna nevrchní Windows, ale pod jakákoli nejvyšší část okna.
+Pokud pořadí Z-order obsahuje všechna okna s WS_EX_TOPMOST stylem, okno přesunuté s hodnotou **& wndTopMost** je umístěno v horní části všech oken, která nejsou v nejvyšší úrovni, ale pod jakákoli nejvyšší část okna. Když aplikace aktivuje neaktivní okno bez WS_EX_TOPMOSTho bitu, okno se přesune nad všechna nevrchní Windows, ale pod jakákoli nejvrchnější okna.
 
-Pokud `SetWindowPos` je volána, když je parametr pWndInsertAfter **& wndBottom** a `CWnd` je nejvrchnějším oknem, okno ztratí svůj stav (WS_EX_TOPMOST je vymazán) a systém umístí okno na konec Pořadí vykreslování.
+Pokud je volána `SetWindowPos`, když je parametr PWndInsertAfter **& wndBottom** a `CWnd` je nejvyšší okno, okno ztratí jeho nejvyšší stav (WS_EX_TOPMOST je vymazáno) a systém umístí okno do dolní části pořadí z.
 
 ### <a name="example"></a>Příklad
 
@@ -11933,7 +11933,7 @@ int SetWindowRgn(
 Popisovač do oblasti.
 
 *bRedraw*<br/>
-Pokud je hodnota TRUE, operační systém okno po nastavení této oblasti znovu vykreslí. v opačném případě to není. Obvykle nastavte *bRedraw* na hodnotu true, pokud je okno viditelné. Pokud je nastaveno na hodnotu TRUE, systém odešle zprávy WM_WINDOWPOSCHANGING a WM_WINDOWPOSCHANGED do okna.
+Pokud je hodnota TRUE, operační systém okno po nastavení této oblasti znovu vykreslí. v opačném případě to není. Obvykle nastavte *bRedraw* na hodnotu true, pokud je okno viditelné. Pokud je nastavena hodnota TRUE, systém odešle WM_WINDOWPOSCHANGING a WM_WINDOWPOSCHANGED zprávy do okna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -11943,7 +11943,7 @@ Pokud je funkce úspěšná, vrácená hodnota je nenulová. Pokud dojde k chyb�
 
 Souřadnice oblasti okna okna jsou relativní vzhledem k levému hornímu rohu okna, nikoli klientské oblasti okna.
 
-Po úspěšném volání do `SetWindowRgn`bude operační systém vlastníkem oblasti určené *hRgn*popisovačem oblasti. Operační systém nevytvoří kopii této oblasti, proto neprovádějte žádná další volání funkcí s tímto popisovačem oblasti a nezavírejte tento popisovač oblasti.
+Po úspěšném volání `SetWindowRgn`vlastní operační systém oblast určenou *hRgn*popisovačem oblasti. Operační systém nevytvoří kopii této oblasti, proto neprovádějte žádná další volání funkcí s tímto popisovačem oblasti a nezavírejte tento popisovač oblasti.
 
 ##  <a name="setwindowtext"></a>CWnd:: SetWindowText
 
@@ -11980,7 +11980,7 @@ void ShowCaret();
 
 Po zobrazení blikající kurzor začne automaticky blikat.
 
-`ShowCaret` Členská funkce zobrazuje blikající kurzor pouze v případě, že má aktuální tvar a nebyl po sobě skryt dvakrát nebo vícekrát. Není-li blikající kurzor vlastněn tímto oknem, není zobrazen kurzor.
+Členská funkce `ShowCaret` zobrazí blikající kurzor pouze v případě, že má aktuální tvar a nebyl po sobě dvakrát skrytý. Není-li blikající kurzor vlastněn tímto oknem, není zobrazen kurzor.
 
 Skrytí blikajícího kurzoru je kumulativní. Pokud je členská funkce [HideCaret](#hidecaret) volána pětkrát po sobě, `ShowCaret` musí být volána pětkrát pro zobrazení blikajícího kurzoru.
 
@@ -12026,14 +12026,14 @@ Určuje, zda se posuvník nachází v neklientské oblasti okna nebo v něm. Pok
 
 - SB_HORZ určuje, že okno je vodorovný posuvník.
 
-- SB_VERT určuje, že okno je svislý posuvník.
+- SB_VERT určuje, zda je okno svislý posuvník.
 
 *bShow*<br/>
 Určuje, zda systém Windows zobrazí nebo skryje posuvník. Pokud má tento parametr hodnotu TRUE, zobrazí se posuvník. v opačném případě je posuvník skrytý.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace by neměla volat `ShowScrollBar` pro skrytí posuvníku při zpracování zprávy s oznámením posuvníku.
+Aplikace by neměla volat `ShowScrollBar` pro skrytí posuvníku při zpracování zprávy s posouvaným posuvníkem.
 
 ##  <a name="showwindow"></a>CWnd::: ShowWindow
 
@@ -12046,9 +12046,9 @@ BOOL ShowWindow(int nCmdShow);
 ### <a name="parameters"></a>Parametry
 
 *nCmdShow*<br/>
-Určuje, `CWnd` jak se má zobrazit. Musí to být jedna z následujících hodnot:
+Určuje způsob zobrazení `CWnd`. Musí to být jedna z následujících hodnot:
 
-- SW_HIDE skrývá toto okno a předá aktivaci do jiného okna.
+- SW_HIDE skryje toto okno a předá aktivaci do jiného okna.
 
 - SW_MINIMIZE minimalizuje okno a aktivuje okno nejvyšší úrovně v seznamu systému.
 
@@ -12066,15 +12066,15 @@ Určuje, `CWnd` jak se má zobrazit. Musí to být jedna z následujících hodn
 
 - SW_SHOWNOACTIVATE zobrazí okno v jeho poslední velikosti a umístění. Okno, které je aktuálně aktivní, zůstává aktivní.
 
-- SW_SHOWNORMAL aktivuje a zobrazí okno. Pokud je okno minimalizované nebo maximalizované, Windows ho obnoví do původní velikosti a pozice.
+- SW_SHOWNORMAL aktivuje a zobrazuje okno. Pokud je okno minimalizované nebo maximalizované, Windows ho obnoví do původní velikosti a pozice.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo okno dříve viditelné; 0, `CWnd` Pokud byl dříve skrytý.
+Nenulové, pokud bylo okno dříve viditelné; 0, pokud byla `CWnd` dříve skrytá.
 
 ### <a name="remarks"></a>Poznámky
 
-`ShowWindow`musí být volána pouze jednou pro každou aplikaci pro hlavní okno s názvem [CWinApp:: m_nCmdShow](../../mfc/reference/cwinapp-class.md#m_ncmdshow). Následná volání `ShowWindow` musí použít jednu z výše uvedených hodnot namísto hodnoty určené parametrem `CWinApp::m_nCmdShow`.
+`ShowWindow` je třeba volat pouze jednou pro každou aplikaci pro hlavní okno s [CWinApp:: m_nCmdShow](../../mfc/reference/cwinapp-class.md#m_ncmdshow). Následná volání `ShowWindow` musí použít jednu z výše uvedených hodnot namísto zadání zadaného parametrem `CWinApp::m_nCmdShow`.
 
 ### <a name="example"></a>Příklad
 
@@ -12082,7 +12082,7 @@ Nenulové, pokud bylo okno dříve viditelné; 0, `CWnd` Pokud byl dříve skryt
 
 ##  <a name="subclassdlgitem"></a>CWnd:: SubclassDlgItem
 
-Tuto členskou funkci zavolejte na "dynamickou podtřídu" a vytvořte ovládací prvek vytvořený ze šablony dialogového okna a `CWnd` připojte ho k tomuto objektu.
+Tuto členskou funkci zavolejte na "dynamickou podtřídu" a vytvořte ovládací prvek vytvořený ze šablony dialogu a připojte ho k tomuto `CWnd` objektu.
 
 ```
 BOOL SubclassDlgItem(
@@ -12104,9 +12104,9 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Při dynamickém roztřídění ovládacího prvku budou zprávy systému Windows směrovány přes `CWnd`mapu zpráv a obslužné rutiny zpráv volání `CWnd`ve třídě 's First. Zprávy, které jsou předány základní třídě, budou předány do výchozí obslužné rutiny zpráv v ovládacím prvku.
+Při dynamickém roztřídění ovládacího prvku budou zprávy systému Windows směrovány přes mapu zpráv `CWnd`a obslužné rutiny zpráv volání ve třídě `CWnd`. Zprávy, které jsou předány základní třídě, budou předány do výchozí obslužné rutiny zpráv v ovládacím prvku.
 
-Tato členská funkce připojí ovládací prvek Windows k `CWnd` objektu a nahradí `WndProc` ovládací prvek a `AfxWndProc` funkce. Funkce ukládá starou `WndProc` v umístění vráceném `GetSuperWndProcAddr` členskou funkcí.
+Tato členská funkce připojí ovládací prvek Windows k objektu `CWnd` a nahradí funkce ovládacího prvku `WndProc` a `AfxWndProc`. Funkce ukládá staré `WndProc` do umístění vráceného členskou funkcí `GetSuperWndProcAddr`.
 
 ### <a name="example"></a>Příklad
 
@@ -12114,7 +12114,7 @@ Tato členská funkce připojí ovládací prvek Windows k `CWnd` objektu a nahr
 
 ##  <a name="subclasswindow"></a>CWnd:: SubclassWindow
 
-Tuto členskou funkci zavolejte na "dynamickou podtřídu" a připojte ji k tomuto `CWnd` objektu.
+Tuto členskou funkci volejte pro "dynamickou podtřídu" a připojte ji k tomuto `CWnd` objektu.
 
 ```
 BOOL SubclassWindow(HWND hWnd);
@@ -12131,9 +12131,9 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Při dynamickém roztřídění okna budou zprávy systému Windows směrovány přes `CWnd`mapu zpráv a obslužné rutiny zpráv volání `CWnd`ve třídě 's First. Zprávy, které jsou předány základní třídě, budou předány do výchozí obslužné rutiny zpráv v okně.
+Při dynamickém roztřídění okna budou zprávy systému Windows směrovány přes mapu zpráv `CWnd`a obslužné rutiny zpráv volání ve třídě `CWnd`jako první. Zprávy, které jsou předány základní třídě, budou předány do výchozí obslužné rutiny zpráv v okně.
 
-Tato členská funkce připojí ovládací prvek Windows k `CWnd` objektu a nahradí `WndProc` `AfxWndProc` jeho funkce. Funkce ukládá ukazatel na starý `WndProc` `CWnd` v objektu.
+Tato členská funkce připojí ovládací prvek Windows k objektu `CWnd` a nahradí `WndProc` a `AfxWndProc` funkce okna. Funkce ukládá ukazatel na starý `WndProc` v objektu `CWnd`.
 
 > [!NOTE]
 > Při volání této funkce nesmí být okno již připojeno k objektu knihovny MFC.
@@ -12144,7 +12144,7 @@ Tato členská funkce připojí ovládací prvek Windows k `CWnd` objektu a nahr
 
 ##  <a name="unlockwindowupdate"></a>CWnd:: UnlockWindowUpdate
 
-Voláním této členské funkce odemknete okno, které bylo uzamčeno `CWnd::LockWindowUpdate`.
+Voláním této členské funkce odemknete okno, které bylo uzamčeno pomocí `CWnd::LockWindowUpdate`.
 
 ```
 void UnlockWindowUpdate();
@@ -12152,11 +12152,11 @@ void UnlockWindowUpdate();
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí `LockWindowUpdate`se dá uzamknout jenom jedno okno. Další informace o uzamykání oken najdete v tématu [CWnd:: LockWindowUpdate](#lockwindowupdate) nebo Win32 Function [LockWindowUpdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) .
+Pomocí `LockWindowUpdate`lze uzamknout pouze jedno okno v jednom okamžiku. Další informace o uzamykání oken najdete v tématu [CWnd:: LockWindowUpdate](#lockwindowupdate) nebo Win32 Function [LockWindowUpdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) .
 
 ##  <a name="unsubclasswindow"></a>CWnd:: UnsubclassWindow
 
-Zavolejte tuto členskou funkci pro nastavení `WndProc` zpět na původní hodnotu a odpojte okno identifikované HWND `CWnd` z objektu.
+Zavolejte tuto členskou funkci pro nastavení `WndProc` zpátky na původní hodnotu a odpojte okno identifikované HWND z objektu `CWnd`.
 
 ```
 HWND UnsubclassWindow();
@@ -12189,7 +12189,7 @@ Nenulové, pokud je operace úspěšná; v opačném případě 0. Pokud má *bS
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní automaticky volá `UpdateData` s *bSaveAndValidate* nastavenou na hodnotu false, pokud se ve výchozí implementaci pole [CDialog:: OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)vytvoří modální dialogové okno. K vyvolání dojde předtím, než se zobrazí dialogové okno. Výchozí implementace [CDialog:: OnOK –](../../mfc/reference/cdialog-class.md#onok) volá tuto členskou funkci s *bSaveAndValidate* nastavenou na hodnotu true pro načtení dat, a pokud je úspěšná, dialogové okno se zavře. (Při kliknutí na tlačítko Storno v dialogovém okně je dialogové okno zavřeno bez načtení dat.)
+Rozhraní automaticky volá `UpdateData` s *bSaveAndValidate* nastavenou na hodnotu false při vytvoření modálního dialogového okna ve výchozí implementaci pole [CDialog:: OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog). K vyvolání dojde předtím, než se zobrazí dialogové okno. Výchozí implementace [CDialog:: OnOK –](../../mfc/reference/cdialog-class.md#onok) volá tuto členskou funkci s *bSaveAndValidate* nastavenou na hodnotu true pro načtení dat, a pokud je úspěšná, dialogové okno se zavře. (Při kliknutí na tlačítko Storno v dialogovém okně je dialogové okno zavřeno bez načtení dat.)
 
 ##  <a name="updatedialogcontrols"></a>CWnd:: UpdateDialogControls
 
@@ -12239,10 +12239,10 @@ Ukazatel na kontext zařízení pro obrazovku. Používá se pro porovnání bar
 Pokud má *pDCSrc* hodnotu null, *pDCDst* musí mít hodnotu null.
 
 *pptDst*<br/>
-Ukazatel na `POINT` strukturu, která určuje novou polohu obrazovky vrstveného okna. Pokud se aktuální pozice nemění, *pptDst* může mít hodnotu null.
+Ukazatel na `POINT` strukturu určující novou polohu obrazovky vrstveného okna. Pokud se aktuální pozice nemění, *pptDst* může mít hodnotu null.
 
 *psize*<br/>
-Ukazatel na `SIZE` strukturu, která určuje novou velikost vrstveného okna. Pokud se velikost okna nemění, *psize* může mít hodnotu null.
+Ukazatel na strukturu `SIZE`, která určuje novou velikost vrstveného okna. Pokud se velikost okna nemění, *psize* může mít hodnotu null.
 
 Pokud má *pDCSrc* hodnotu null, *psize* musí mít hodnotu null.
 
@@ -12250,7 +12250,7 @@ Pokud má *pDCSrc* hodnotu null, *psize* musí mít hodnotu null.
 Ukazatel na řadič domény pro plochu, která definuje vrstvené okno. Pokud se tvar a vizuální kontext okna nemění, *pDCSrc* může mít hodnotu null.
 
 *pptSrc*<br/>
-Ukazatel na `POINT` strukturu, která určuje umístění vrstvy v kontextu zařízení.
+Ukazatel na strukturu `POINT`, která určuje umístění vrstvy v kontextu zařízení.
 
 Pokud má *pDCSrc* hodnotu null, *pptSrc* by měl mít hodnotu null.
 
@@ -12281,7 +12281,7 @@ void UpdateWindow();
 
 ### <a name="remarks"></a>Poznámky
 
-`UpdateWindow` Členská funkce pošle zprávu WM_PAINT přímo a vynechá frontu aplikace. Pokud je oblast aktualizace prázdná, WM_PAINT se neposílá.
+Členská funkce `UpdateWindow` odesílá zprávu WM_PAINT přímo a vynechá frontu aplikace. Pokud je oblast aktualizace prázdná, WM_PAINT se neposílá.
 
 ### <a name="example"></a>Příklad
 
@@ -12302,9 +12302,9 @@ Odkazuje na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce [BeginPaint](#beginpaint) automaticky ověří celou oblast klienta. Ani členská `ValidateRect` funkce [ValidateRgn](#validatergn) by neměla být volána, pokud je před dalším vygenerováním [WM_PAINT](/windows/win32/gdi/wm-paint) nutné ověřit část oblasti aktualizace.
+Členská funkce [BeginPaint](#beginpaint) automaticky ověří celou oblast klienta. `ValidateRect` ani členská funkce [ValidateRgn](#validatergn) by se neměly volat, pokud je před dalším vygenerováním [WM_PAINT](/windows/win32/gdi/wm-paint) nutné ověřit část oblasti aktualizace.
 
-Systém Windows bude nadále generovat zprávy WM_PAINT, dokud není ověřena aktuální oblast aktualizace.
+Systém Windows nadále generuje zprávy WM_PAINT, dokud není ověřena aktuální oblast aktualizace.
 
 ##  <a name="validatergn"></a>CWnd:: ValidateRgn
 
@@ -12323,7 +12323,7 @@ Ukazatel na objekt [CRgn](../../mfc/reference/crgn-class.md) , který identifiku
 
 Daná oblast musí být vytvořená dříve funkcí region. U souřadnic oblasti se předpokládá, že se jedná o souřadnice klienta.
 
-Členská funkce [BeginPaint](#beginpaint) automaticky ověří celou oblast klienta. Ani [ValidateRect](#validaterect) ani `ValidateRgn` členská funkce by neměly být volány, pokud část oblasti aktualizace musí být ověřena před vygenerováním další zprávy [WM_PAINT](/windows/win32/gdi/wm-paint) .
+Členská funkce [BeginPaint](#beginpaint) automaticky ověří celou oblast klienta. [ValidateRect](#validaterect) `ValidateRgn` ani členská funkce by neměly být volány, pokud část oblasti aktualizace musí být ověřena před vygenerováním další zprávy [WM_PAINT](/windows/win32/gdi/wm-paint) .
 
 ##  <a name="windowfrompoint"></a>CWnd:: WindowFromPoint
 
@@ -12344,11 +12344,11 @@ Ukazatel na objekt okna, ve kterém leží bod. Pokud v daném bodě neexistuje 
 
 ### <a name="remarks"></a>Poznámky
 
-`WindowFromPoint`nenačte skryté nebo zakázané okno, i když je bod v rámci okna. Aplikace by měla používat členskou funkci [ChildWindowFromPoint](#childwindowfrompoint) pro hledání, které není omezením.
+`WindowFromPoint` nenačte skryté nebo zakázané okno, a to i v případě, že je bod v rámci okna. Aplikace by měla používat členskou funkci [ChildWindowFromPoint](#childwindowfrompoint) pro hledání, které není omezením.
 
 ##  <a name="windowproc"></a>CWnd:: WindowProc
 
-Poskytuje proceduru systému Windows `WindowProc`() `CWnd` pro objekt.
+Poskytuje proceduru Windows (`WindowProc`) pro objekt `CWnd`.
 
 ```
 virtual LRESULT WindowProc(
@@ -12432,7 +12432,7 @@ virtual void ResizeDynamicLayout();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

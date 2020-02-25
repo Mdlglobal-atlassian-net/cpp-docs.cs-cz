@@ -1,27 +1,36 @@
 ---
 title: Použití Clang-uklizený v aplikaci Visual Studio
-ms.date: 10/04/2019
+description: Jak používat Clang-uklizený v aplikaci Visual Studio pro analýzu C++ kódu společnosti Microsoft.
+ms.date: 02/19/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.clangtidy
 author: frozenpandaman
 ms.author: efessler
-ms.openlocfilehash: 19ec35ee931822d6952512f417bbbdba14ee04b9
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 3dbe66e9d7117c027c0ec867011189824c59ce31
+ms.sourcegitcommit: 21e168731b8fe0eaff18f070cee5d54aa5782c2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418884"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567875"
 ---
 # <a name="using-clang-tidy-in-visual-studio"></a>Použití Clang-uklizený v aplikaci Visual Studio
 
-Analýza kódu nativně podporuje [Clang-uklizený](https://clang.llvm.org/extra/clang-tidy/) pro projekty MSBuild i cmake bez ohledu na to, jestli používáte sady nástrojů pro CLANG nebo MSVC. Clang-uklizený kontroly mohou běžet jako součást analýzy kódu na pozadí, zobrazují se jako upozornění v editoru (vlnovky) a zobrazují se v Seznam chyb.
+::: moniker range="<=vs-2017"
 
-Aby bylo možné používat Clang-uklizený, musí býtC++ nainstalována součást Clang Tools for Windows prostřednictvím instalační program pro Visual Studio.
+Podpora pro Clang-uklizený vyžaduje Visual Studio 2019 verze 16,4 nebo novější. Pokud si chcete prohlédnout dokumentaci, vyberte v selektoru verze dokumentace možnost Visual Studio 2019.
 
-Clang-uklizený je výchozím nástrojem analýzy při použití sady nástrojů LLVM/Clang-CL, která je dostupná jak v MSBuild, tak i v CMaki. Můžete ji nakonfigurovat tak, aby běžela souběžně, nebo aby při použití sady nástrojů MSVC používala standardní prostředí pro analýzu kódu; Pokud používáte sadu nástrojů Clang-CL, Microsoft Code Analysis nebude k dispozici.
+::: moniker-end
 
-Clang-uklizený se spouští po úspěšné kompilaci; Možná budete muset vyřešit chyby zdrojového kódu a získat výsledky Clang-uklizený.
+::: moniker range=">=vs-2019"
+
+Analýza kódu nativně podporuje [Clang-uklizený](https://clang.llvm.org/extra/clang-tidy/) pro projekty MSBuild i cmake bez ohledu na to, jestli používáte sady nástrojů pro CLANG nebo MSVC. Clang-uklizený kontroly mohou běžet jako součást analýzy kódu na pozadí. Zobrazují se jako upozornění v editoru (vlnovky) a zobrazují se v Seznam chyb.
+
+Podpora Clang-uklizený je k dispozici počínaje verzí Visual Studio 2019 verze 16,4. Je automaticky zahrnutý při výběru C++ úlohy v instalační program pro Visual Studio.
+
+Clang-uklizený je výchozím nástrojem analýzy při použití sady nástrojů LLVM/Clang-CL, která je dostupná jak v MSBuild, tak i v CMaki. Můžete ji nakonfigurovat při použití sady nástrojů MSVC ke spuštění společně nebo nahradit standardní prostředí pro analýzu kódu. Pokud používáte sadu nástrojů Clang-CL, analýza kódu společnosti Microsoft není k dispozici.
+
+Clang-uklizený se spustí po úspěšné kompilaci. Možná budete muset vyřešit chyby zdrojového kódu a získat výsledky Clang-uklizený.
 
 ## <a name="msbuild"></a>MSBuild
 
@@ -35,19 +44,21 @@ V projektech CMake můžete nakonfigurovat kontroly Clang-uklizený v rámci `CM
 
 - `enableMicrosoftCodeAnalysis`: povolí analýzu kódu společnosti Microsoft.
 - `enableClangTidyCodeAnalysis`: povoluje analýzu Clang-uklizený.
-- `clangTidyChecks`: Konfigurace Clang-uklizený zadaná jako seznam oddělený čárkami, tj. kontroly, které mají být povoleny nebo zakázány.
+- `clangTidyChecks`: Konfigurace Clang-uklizený zadaná jako seznam oddělený čárkami, to znamená, že šeky budou povolené nebo zakázané.
 
 Pokud není zadána žádná z možností "Enable", sada Visual Studio vybere Nástroj pro analýzu, který odpovídá použité sadě nástrojů platformy.
 
 ## <a name="warning-display"></a>Zobrazení upozornění
 
-Clang-uklizený spustí výsledek v upozorněních zobrazených v Seznam chyb a jako editor vlnovek pod relevantními oddíly kódu. Použijte sloupec Category v Seznam chyb k řazení a uspořádání upozornění Clang-uklizený. Můžete nakonfigurovat upozornění v editoru tak, že v nabídce **nástroje** > **Možnosti**zakážete nastavení zakázat vlnovky analýzy kódu.
+Clang-uklizený spustí výsledek v upozorněních zobrazených v Seznam chyb a jako editor vlnovek pod relevantními částmi kódu. Použijte sloupec Category v Seznam chyb k řazení a uspořádání upozornění Clang-uklizený. Můžete nakonfigurovat upozornění v editoru tak, že v nabídce **nástroje** > **Možnosti**zakážete nastavení zakázat vlnovky analýzy kódu.
 
 ## <a name="clang-tidy-configuration"></a>Konfigurace Clang-uklizený
 
-Můžete nakonfigurovat kontroly, které Clang-uklizený spouští v rámci sady Visual Studio prostřednictvím možnosti **Clang-uklizený Checks** . Tento vstup je poskytován argumentem **--Checks** nástroje. Do vlastních souborů **. Clang-uklizený** je možné zahrnout jakoukoli další konfiguraci. Další podrobnosti najdete v [dokumentaci k Clang-uklizený na LLVM.org](https://clang.llvm.org/extra/clang-tidy/) .
+Můžete nakonfigurovat kontroly, které Clang-uklizený spouští v rámci sady Visual Studio prostřednictvím možnosti **Clang-uklizený Checks** . Tento vstup je poskytován argumentem **--Checks** nástroje. Jakákoli další konfigurace může být součástí vlastních *`.clang-tidy`* souborů. Další informace najdete v dokumentaci k [Clang-uklizený v LLVM.org](https://clang.llvm.org/extra/clang-tidy/).
 
 ## <a name="see-also"></a>Viz také
 
 - [Podpora Clang/LLVM pro projekty MSBuild](https://devblogs.microsoft.com/cppblog/clang-llvm-support-for-msbuild-projects/)
 - [Podpora Clang/LLVM pro projekty CMake](https://devblogs.microsoft.com/cppblog/visual-studio-cmake-support-clang-llvm-cmake-3-14-vcpkg-and-performance-improvements/)
+
+::: moniker-end
