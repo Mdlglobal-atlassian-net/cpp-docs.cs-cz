@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518202"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600031"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Reference ke schématu CMakeSettings. JSON
 
@@ -31,7 +31,7 @@ Pole `configurations` obsahuje všechny konfigurace pro projekt CMake. Další i
 
 `configuration` má tyto vlastnosti:
 
-- `addressSDanitizerEnabled`: Pokud `true` zkompiluje program pomocí programu pro úpravu adresy (experimentální ve Windows). V systému Linux zkompilujete pomocí-FNO-vynechání ukazatele na rámec a úroveň optimalizace kompilátoru – OS nebo-ó pro dosažení nejlepších výsledků.
+- `addressSanitizerEnabled`: Pokud `true` zkompiluje program pomocí programu pro úpravu adresy (experimentální ve Windows). V systému Linux zkompilujete pomocí-FNO-vynechání ukazatele na rámec a úroveň optimalizace kompilátoru – OS nebo-ó pro dosažení nejlepších výsledků.
 - `addressSanitizerRuntimeFlags`: příznaky modulu runtime předané do AddressSanitizer prostřednictvím proměnné prostředí ASAN_OPTIONS. Formát: příznak1 = hodnota: flag2 = hodnota2.
 - `buildCommandArgs`: Určuje přepínače nativního sestavení předané do CMake po--buildu--. Například v případě, že při použití generátoru expertem vynutí expertem pro výstup příkazových řádků. Další informace o příkazech expertem najdete v tématu [argumenty příkazového řádku expertem](#ninja) .
 - `buildRoot`: Určuje adresář, ve kterém CMake generuje skripty sestavení pro zvolený generátor.  Provede mapování na **DCMAKE_BINARY_DIR** přepínač a určí, kde bude vytvořen *CMakeCache. txt* . Pokud složka neexistuje, vytvoří se. Mezi podporovaná makra patří `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
@@ -43,8 +43,8 @@ Pole `configurations` obsahuje všechny konfigurace pro projekt CMake. Další i
 - `codeAnalysisRuleset`: Určuje RuleSet, který se má použít při spuštění nástroje Code Analysis. Může to být úplná cesta nebo název souboru ruleset nainstalovaného aplikací Visual Studio.
 - `configurationType`: Určuje konfiguraci typu sestavení pro vybraný generátor. Může to být jedna z těchto:
 
-  - Ladit
-  - Vydaná verze
+  - Ladění
+  - Vydat
   - MinSizeRel
   - RelWithDebInfo
   
