@@ -2455,7 +2455,7 @@
 - name: Vývoj pro Linux
   href: linux/
 - name: Vývoj mobilních řešení napříč platformami
-  href: /visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development
+  href: cross-platform/
 - name: Vývoj pro .NET v C++/CLI
   expanded: false
   items:
