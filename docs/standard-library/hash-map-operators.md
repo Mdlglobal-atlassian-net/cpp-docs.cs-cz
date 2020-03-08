@@ -1,30 +1,30 @@
 ---
-title: '&lt;hash_map&gt; operátory'
+title: operátory &lt;hash_map&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448731"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856693"
 ---
-# <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; operátory
+# <a name="lthash_mapgt-operators"></a>operátory &lt;hash_map&gt;
 
 |||
 |-|-|
 |[operator!=](#op_neq)|[operator! = (multimap) – operátor](#op_neq_mm)|
-|[operator==](#op_eq_eq)|[operator== (multimap)](#op_eq_eq_mm)|
+|[operator = = – operátor](#op_eq_eq)|[operator = = (multimap) – operátor](#op_eq_eq_mm)|
 
 ## <a name="op_neq"></a>! = – operátor
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativou je [Unordered_map třída](unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](unordered-map-class.md).
 
-Testuje, zda objekt hash_map na levé straně operátoru není roven objektu hash_map na pravé straně.
+Testuje, zda hash_map objekt na levé straně operátoru není roven objektu hash_map na pravé straně.
 
 ```cpp
 bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_map <Key, Type, Traits, Allocator>& right);
@@ -32,21 +32,21 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `hash_map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `hash_map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud se hash_maps nerovná; **false** , pokud jsou hash_maps stejné.
+**true** , Pokud hash_maps nejsou stejné; **false** , pokud je hash_maps rovna.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty hash_map je založeno na párovým porovnání jejich prvků. Dva hash_maps jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
+Porovnání mezi hash_map objekty je založeno na porovnávacím porovnání jejich prvků. Dva hash_maps jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
-Členové [< hash_map >](hash-map.md) a [< > hash_set](hash-set.md) soubory hlaviček v [oboru názvů stdext](stdext-namespace.md).
+Členové [< hash_map >](hash-map.md) a < soubory hlaviček [hash_set >](hash-set.md) v [oboru názvů stdext](stdext-namespace.md).
 
 ### <a name="example"></a>Příklad
 
@@ -91,7 +91,7 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_eq_eq"></a>operator = = – operátor
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativou je [Unordered_map třída](unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](unordered-map-class.md).
 
 Testuje, zda je objekt hash_map na levé straně operátoru roven objektu hash_map na pravé straně.
 
@@ -101,10 +101,10 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `hash_map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `hash_map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -113,7 +113,7 @@ Objekt typu `hash_map`.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty hash_map je založeno na párovým porovnání jejich prvků. Dva hash_maps jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
+Porovnání mezi hash_map objekty je založeno na porovnávacím porovnání jejich prvků. Dva hash_maps jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -158,9 +158,9 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_neq_mm"></a>operator! = (hash_multimap) – operátor
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativou je [Unordered_multimap třída](unordered-multimap-class.md).
+> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multimap třídy](unordered-multimap-class.md).
 
-Testuje, zda objekt hash_multimap na levé straně operátoru není roven objektu hash_multimap na pravé straně.
+Testuje, zda hash_multimap objekt na levé straně operátoru není roven objektu hash_multimap na pravé straně.
 
 ```cpp
 bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const hash_multimap <Key, Type, Traits, Allocator>& right);
@@ -168,19 +168,19 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `hash_multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `hash_multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud se hash_multimaps nerovná; **false** , pokud jsou hash_multimaps stejné.
+**true** , Pokud hash_multimaps nejsou stejné; **false** , pokud je hash_multimaps rovna.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty hash_multimap je založeno na párovým porovnání jejich prvků. Dva hash_multimaps jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
+Porovnání mezi hash_multimap objekty je založeno na porovnávacím porovnání jejich prvků. Dva hash_multimaps jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -225,7 +225,7 @@ The hash_multimaps hm1 and hm3 are equal.
 ## <a name="op_eq_eq_mm"></a>operator = = (hash_multimap) – operátor
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativou je [Unordered_multimap třída](unordered-multimap-class.md).
+> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multimap třídy](unordered-multimap-class.md).
 
 Testuje, zda je objekt hash_multimap na levé straně operátoru roven objektu hash_multimap na pravé straně.
 
@@ -235,10 +235,10 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `hash_multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `hash_multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -247,7 +247,7 @@ Objekt typu `hash_multimap`.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty hash_multimap je založeno na párovým porovnání jejich prvků. Dva hash_multimaps jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
+Porovnání mezi hash_multimap objekty je založeno na porovnávacím porovnání jejich prvků. Dva hash_multimaps jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -289,6 +289,6 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [<hash_map>](hash-map.md)

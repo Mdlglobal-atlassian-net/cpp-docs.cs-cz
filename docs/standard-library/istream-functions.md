@@ -1,22 +1,22 @@
 ---
-title: '&lt;funkce&gt; IStream'
+title: funkce &lt;IStream&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
 ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458763"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874800"
 ---
-# <a name="ltistreamgt-functions"></a>&lt;funkce&gt; IStream
+# <a name="ltistreamgt-functions"></a>funkce &lt;IStream&gt;
 
 |||
 |-|-|
-|[swap](#istream_swap)|[ws](#ws)|
+|[adresu](#istream_swap)|[specifikace](#ws)|
 
 ## <a name="istream_swap"></a>adresu
 
@@ -36,13 +36,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Datový proud.
 
-*Kliknutím*\
+*pravé*\
 Datový proud.
 
-## <a name="ws"></a>  ws
+## <a name="ws"></a>specifikace
 
 Přeskočí prázdné znaky v datovém proudu.
 
@@ -61,14 +61,14 @@ Datový proud.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor extrahuje a zahodí `ch` všechny prvky, pro které [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType** \< **elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **je** ( **CType** \< **elem**>:: **Space**, **ch**) má hodnotu true.
+Manipulátor extrahuje a zahodí všechny prvky `ch`, pro které [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **je**( **ctype**\< **elem**>:: **Space**, **ch**) má hodnotu true.
 
 Funkce volá [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**), pokud při extrakci prvků narazí na konec souboru. Vrátí *_Istr*.
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `ws`prvku naleznete v tématu [operátor > >](../standard-library/istream-operators.md#op_gt_gt) .
+Příklad použití `ws`naleznete v tématu [operátor > >](../standard-library/istream-operators.md#op_gt_gt) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [\<IStream >](../standard-library/istream.md)

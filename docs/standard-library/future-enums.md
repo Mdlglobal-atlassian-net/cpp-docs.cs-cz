@@ -1,5 +1,5 @@
 ---
-title: '&lt;budoucí&gt; výčty'
+title: '&lt;budoucích výčtů&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - future/std::future_errc
@@ -7,13 +7,13 @@ f1_keywords:
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
 ms.openlocfilehash: a5bcebd80b296a0b8416580aa03acc59ce3750cd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448223"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865167"
 ---
-# <a name="ltfuturegt-enums"></a>&lt;budoucí&gt; výčty
+# <a name="ltfuturegt-enums"></a>&lt;budoucích výčtů&gt;
 
 ||||
 |-|-|-|
@@ -21,7 +21,7 @@ ms.locfileid: "68448223"
 
 ## <a name="future_errc"></a>Výčet future_errc
 
-Poskytuje symbolické názvy pro všechny chyby, které jsou hlášeny třídou [future_error](../standard-library/future-error-class.md) .
+Poskytuje symbolické názvy pro všechny chyby, které jsou hlášeny [future_error](../standard-library/future-error-class.md) třídou.
 
 ```cpp
 class future_errc {
@@ -55,6 +55,6 @@ class launch{
    };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<budoucí >](../standard-library/future.md)
+[\<budoucích >](../standard-library/future.md)

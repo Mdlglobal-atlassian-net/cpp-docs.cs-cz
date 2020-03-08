@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627448"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854095"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;číselné&gt; funkce
 
@@ -61,25 +61,25 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
 
-*poslední* \
-Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+*poslední*\
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, což je jedna pozice nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
 *inicializace*\
-Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+Počáteční hodnota, na kterou je každý prvek v sobě, přičten nebo kombinován pomocí *binary_op*.
 
 *binary_op*\
 Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Součet *init* a všech prvků v zadaném rozsahu pro první funkci šablony, nebo pro druhou funkci šablony, výsledek použití binární operace *binary_op* místo operace Sum na (* PartialResult, *IN_ ITER*), kde *PartialResult* je výsledkem předchozích aplikací operace a *in_iter* je iterátor ukazující na další prvek v rozsahu.
+Součet funkce *init* a všech prvků v zadaném rozsahu pro první funkci šablony nebo pro druhou funkci šablony výsledek použití binární operace *binary_op* místo operace Sum, na (* PartialResult, *in_iter*), kde *PartialResult* je výsledkem předchozích aplikací operace a *in_iter* je iterátor ukazující na další prvek v rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-Počáteční hodnota zajistí, že bude k dispozici správný výsledek, pokud je rozsah prázdný. v takovém případě se vrátí *init* . Binární operace nemusí být asociativní ani komutativní. Výsledek je inicializován na počáteční hodnotu *init* a pak *výsledek* = *binary_op*(*Result*, *in_iter*) se vypočítává iterativním rozsahem, kde *in_iter* je iterátor ukazující na každý. po sobě jdoucí prvek v rozsahu. Rozsah musí být platný a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převoditelné na **typ** , aby se zajistilo uzavření během iterace.
+Počáteční hodnota zajistí, že bude k dispozici správný výsledek, pokud je rozsah prázdný. v takovém případě se vrátí *init* . Binární operace nemusí být asociativní ani komutativní. Výsledek je inicializován na počáteční hodnotu *init* a pak *výsledek* = *binary_op*(*výsledek*, *in_iter*) je vypočítán iterativním rozsahem, kde *in_iter* je iterátor ukazující na každý následný prvek v rozsahu. Rozsah musí být platný a složitost je lineární s velikostí rozsahu. Návratový typ binárního operátoru musí být převoditelné na **typ** , aby se zajistilo uzavření během iterace.
 
 ### <a name="example"></a>Příklad
 
@@ -220,10 +220,10 @@ ForwardIterator2 adjacent_difference(
 *exec*\
 Zásady spouštění.
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými předchůdci nebo ve kterém použije dvojice hodnot jiná zadaná binární operace.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující poslední prvek ve vstupním rozsahu, jehož prvky mají být diferencovány s příslušnými předchůdci nebo ve kterém použije dvojice hodnot jiná zadaná binární operace.
 
 \ *výsledku*
@@ -242,9 +242,9 @@ Výstupní iterátor adresující konec cílového rozsahu: `result` + (`last` -
 
 Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá první funkce šablony po sobě jdoucí `adjacent_difference` hodnoty *a*1, *a*2- *a*1, a3- *a*2 v cílovém rozsahu.
 
-Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá druhá funkce šablony po sobě následující `adjacent_difference` hodnoty *a*1, *a*2 *binary_op* *a*1, *a*3 *binary_op* *a*2, v cílový rozsah.
+Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá druhá funkce šablony po sobě následující `adjacent_difference` hodnoty *a*1, *a*2 *binary_op* *a*1, *a*3 *binary_op* *a*2 v cílovém rozsahu.
 
-Binární operace *binary_op* nemusí být asociativní ani komutativní, protože je zadané pořadí operací.
+*Binary_op* binární operace není nutné použít asociativní ani komutativní, protože je zadané pořadí operací.
 
 ### <a name="example"></a>Příklad
 
@@ -350,17 +350,17 @@ ForwardIterator2 exclusive_scan(
 *exec*\
 Zásady spouštění.
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
 
-*poslední* \
-Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+*poslední*\
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, což je jedna pozice nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
 \ *výsledku*
 Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
 
 *inicializace*\
-Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+Počáteční hodnota, na kterou je každý prvek v sobě, přičten nebo kombinován pomocí *binary_op*.
 
 *binary_op*\
 Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
@@ -445,17 +445,17 @@ ForwardIterator2 inclusive_scan(
 *exec*\
 Zásady spouštění.
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
 
-*poslední* \
-Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+*poslední*\
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, což je jedna pozice nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
 \ *výsledku*
 Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
 
 *inicializace*\
-Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+Počáteční hodnota, na kterou je každý prvek v sobě, přičten nebo kombinován pomocí *binary_op*.
 
 *binary_op*\
 Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
@@ -488,13 +488,13 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* \
+*first1*\
 Vstupní iterátor adresující první prvek v prvním rozsahu, jehož vnitřní produkt nebo zobecněný vnitřní produkt s druhým rozsahem mají být počítány.
 
-*last1* \
+*last1*\
 Vstupní iterátor adresující poslední prvek v prvním rozsahu, jehož vnitřní produkt nebo zobecněný vnitřní produkt s druhým rozsahem mají být počítány.
 
-*first2* \
+*first2*\
 Vstupní iterátor adresující první prvek ve druhém rozsahu, jehož vnitřní produkt nebo zobecněný vnitřní produkt s prvním rozsahem je vypočítáván.
 
 *inicializace*\
@@ -516,9 +516,9 @@ iterativním nahrazením *init* pomocí *init* + (*a*i \* *b*i).
 
 Druhá členská funkce vrátí:
 
-*init* *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
+*init* *binary_op1* (*1* *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
 
-iterativním nahrazením *init* pomocí *init* *binary_op1* (*a*i *binary_op2* *b*i).
+iterativním nahrazením *init* pomocí *inicializační* *binary_op1* (*a*i *binary_op2* *b*i).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -625,18 +625,18 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být vyplněn.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující poslední prvek v rozsahu, který má být vyplněn.
 
-*hodnota* \
+*hodnota*\
 Počáteční hodnota, která má být uložena v prvním prvku a v případě pozdějšího zvýšení pro pozdější prvky.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje některé použití funkce `iota` vyplněním [seznamu](../standard-library/list.md) celých čísel a následně vyplněním [vektoru](../standard-library/vector.md) pomocí `list`, aby bylo možné použít funkci [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) .
+Následující příklad demonstruje některá použití funkce `iota` vyplněním [seznamu](../standard-library/list.md) celých čísel a naplněním [vektoru](../standard-library/vector.md) pomocí `list`, aby bylo možné použít funkci [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) .
 
 ```cpp
 // compile by using: cl /EHsc /nologo /W4 /MTd
@@ -704,10 +704,10 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, u kterého bude proveden částečný součet nebo který bude zkombinován podle zadané binární operace.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující poslední prvek v rozsahu, u kterého bude proveden částečný součet nebo který bude zkombinován podle zadané binární operace, který se nachází o jednu pozici za posledním prvkem, který je skutečně zahrnut do iterovaného souhrnu.
 
 \ *výsledku*
@@ -728,7 +728,7 @@ Pro sekvenci hodnot *a*1, *a*2,... *x ve*vstupním rozsahu ukládá první funkc
 
 Pro sekvenci hodnot *a*1, *a*2, *a*3 ve vstupním rozsahu ukládá druhá funkce šablony po sobě jdoucí částečné výsledky do cílového rozsahu. *N*-tý element je dán ((... ((*a*1 *binary_op* *a*2) *binary_op* *a*3) *binary_op* ...) *binary_op* *a*n).
 
-Binární operace *binary_op* nemusí být asociativní ani komutativní, protože je zadané pořadí operací.
+*Binary_op* binární operace není nutné použít asociativní ani komutativní, protože je zadané pořadí operací.
 
 ### <a name="example"></a>Příklad
 
@@ -840,28 +840,28 @@ Type reduce(
 *exec*\
 Zásady spouštění.
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
 
-*poslední* \
-Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+*poslední*\
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, což je jedna pozice nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
 \ *výsledku*
 Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
 
 *inicializace*\
-Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+Počáteční hodnota, na kterou je každý prvek v sobě, přičten nebo kombinován pomocí *binary_op*.
 
 *binary_op*\
 Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek použití *binary_op* nebo `std::plus<>()` k *inicializaci* a všech prvků v zadaném rozsahu na (* PartialResult, *in_iter*), kde *PartialResult* je výsledkem předchozích aplikací operace a *in_iter* je iterátor ukazující na některý prvek v rozsahu. V přetížení, které nespecifikují *init*, je použitá hodnota *init* ekvivalentní `typename iterator_traits<InputIterator>::value_type{}`.
+Výsledek použití *binary_op* nebo `std::plus<>()` k *inicializaci* a všech prvků v zadaném rozsahu na (* PartialResult, *in_iter*), kde *PartialResult* je výsledkem předchozích aplikací operace a *in_iter* je iterátor ukazující na určitý prvek v rozsahu. V přetížení, které nespecifikují *init*, je použitá hodnota *init* ekvivalentní `typename iterator_traits<InputIterator>::value_type{}`.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je *binary_op* asociativní a komutativní, chování `reduce` není deterministické. Chování není definováno, pokud *binary_op* upraví libovolný element, nebo zruší platnost libovolného iterátoru v intervalu \[*First*, *Last*] včetně.
+chování `reduce` není deterministické, pokud *binary_op* asociativní a komutativní. Chování není definováno, pokud *binary_op* upravuje libovolný prvek nebo zruší platnost každého iterátoru v intervalu \[*First*, *Last*] včetně.
 
 ## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
@@ -893,17 +893,17 @@ ForwardIterator2 transform_exclusive_scan(
 *exec*\
 Zásady spouštění.
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
 
-*poslední* \
-Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+*poslední*\
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, což je jedna pozice nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
 \ *výsledku*
 Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
 
 *inicializace*\
-Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+Počáteční hodnota, na kterou je každý prvek v sobě, přičten nebo kombinován pomocí *binary_op*.
 
 *binary_op*\
 Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací
@@ -958,11 +958,11 @@ ForwardIterator2 transform_inclusive_scan(
 *exec*\
 Zásady spouštění.
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
 
-*poslední* \
-Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+*poslední*\
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, což je jedna pozice nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
 \ *výsledku*
 Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
@@ -974,7 +974,7 @@ Binární operace, která se má použít u každého prvku v zadaném rozsahu a
 Unární operace, která se má použít u každého prvku v zadaném rozsahu.
 
 *inicializace*\
-Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+Počáteční hodnota, na kterou je každý prvek v sobě, přičten nebo kombinován pomocí *binary_op*.
 
 ## <a name="transform_reduce"></a>transform_reduce
 
@@ -1038,23 +1038,23 @@ Type transform_reduce(
 *exec*\
 Zásady spouštění.
 
-*první* \
+*první*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op*.
 
-*first1* \
+*first1*\
 Vstupní iterátor adresující první prvek v rozsahu, který má být buď sečten, nebo sloučen pomocí *binary_op1*.
 
-*poslední* \
-Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+*poslední*\
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op*, což je jedna pozice nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
-*last1* \
-Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op1*, to je jedna pozice nad konečným prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
+*last1*\
+Vstupní iterátor adresující poslední prvek v rozsahu pro sečtení nebo kombinování pomocí *binary_op1*, což je jedna pozice nad posledním prvkem, který je ve skutečnosti zahrnutý v iteraci akumulace.
 
 \ *výsledku*
 Výstupní iterátor adresující první prvek v cílovém rozsahu, ve kterém mají být uloženy řady součtů nebo výsledky zadané operace.
 
 *inicializace*\
-Počáteční hodnota, na kterou jsou jednotlivé prvky v kombinaci, a pomocí *binary_op*.
+Počáteční hodnota, na kterou je každý prvek v sobě, přičten nebo kombinován pomocí *binary_op*.
 
 *binary_op*\
 Binární operace, která se má použít u každého prvku v zadaném rozsahu a výsledku jeho předchozích aplikací

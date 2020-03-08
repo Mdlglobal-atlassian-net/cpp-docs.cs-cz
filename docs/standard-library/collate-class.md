@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689809"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866149"
 ---
 # <a name="collate-class"></a>collate – třída
 
@@ -42,12 +42,12 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* \
+*CharType*\
 Typ používaný v rámci programu ke kódování znaků.
 
 ## <a name="remarks"></a>Poznámky
 
-Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k uložené hodnotě ukládá v `id` jedinečnou kladnou hodnotu. V některých jazycích jsou znaky seskupeny a považovány za jeden znak a v jiných jsou jednotlivé znaky zpracovány tak, jako by se jednalo o dva znaky. Kolační služby poskytované kolační třídou poskytují způsob řazení těchto případů.
+Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k uložené hodnotě ukládá v `id`jedinečnou kladnou hodnotu. V některých jazycích jsou znaky seskupeny a považovány za jeden znak a v jiných jsou jednotlivé znaky zpracovány tak, jako by se jednalo o dva znaky. Kolační služby poskytované kolační třídou poskytují způsob řazení těchto případů.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -75,7 +75,7 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<locale >
+**Záhlaví:** \<národní prostředí >
 
 **Obor názvů:** std
 
@@ -108,10 +108,10 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+*_Refs*\
 Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
-*_Locname* \
+*_Locname*\
 Název národního prostředí.
 
 ### <a name="remarks"></a>Poznámky
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1* \
+*first1*\
 Ukazatel na první prvek v první sekvenci, která se má porovnat.
 
-*last1* \
+*last1*\
 Ukazatel na poslední prvek v první sekvenci, která se má porovnat.
 
-*first2* \
+*first2*\
 Ukazatel na první prvek v druhé sekvenci, která se má porovnat.
 
-*last2* \
+*last2*\
 Ukazatel na poslední prvek ve druhé sekvenci, která se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -165,7 +165,7 @@ Ukazatel na poslední prvek ve druhé sekvenci, která se má porovnat.
 
 První sekvence porovná méně, pokud má menší prvek v nejbližším nerovnosti v sekvencích, nebo, pokud žádné nestejné páry neexistují, ale první sekvence je kratší.
 
-Členská funkce vrátí [do_compare](#do_compare)(`first1`, `last1`, `first2`, `last2`).
+Členská funkce vrací [do_compare](#do_compare)(`first1`, `last1`, `first2`, `last2`).
 
 ### <a name="example"></a>Příklad
 
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1* \
+*first1*\
 Ukazatel na první prvek v první sekvenci, která se má porovnat.
 
-*last1* \
+*last1*\
 Ukazatel na poslední prvek v první sekvenci, která se má porovnat.
 
-*first2* \
+*first2*\
 Ukazatel na první prvek v druhé sekvenci, která se má porovnat.
 
-*last2* \
+*last2*\
 Ukazatel na poslední prvek ve druhé sekvenci, která se má porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Ukazatel na první znak v sekvenci, jejíž hodnota má být určena.
 
-*poslední* \
+*poslední*\
 Ukazatel na poslední znak v sekvenci, jejíž hodnota má být určena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Ukazatel na první znak v sekvenci, která má být převedena.
 
-*poslední* \
+*poslední*\
 Ukazatel na poslední znak v sekvenci, která má být převedena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -285,7 +285,7 @@ Ukazatel na poslední znak v sekvenci, která má být převedena.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce vrátí objekt třídy [string_type](#string_type) , jehož řízená sekvence je kopií sekvence [`first`, `last`). Pokud třída odvozená z COLLATE \< **CharType**> Přepisuje [do_compare](#do_compare), měla by také přepsat `do_transform`, aby odpovídala. Při předání do `collate::compare` by dva transformované řetězce měly vracet stejný výsledek, který byste získali z předání netransformované řetězce pro porovnání v odvozené třídě.
+Chráněná virtuální členská funkce vrátí objekt třídy [string_type](#string_type) , jehož řízená sekvence je kopií sekvence [`first`, `last`). Pokud třída odvozená z COLLATE\< **CharType**> Přepisuje [do_compare](#do_compare), měla by také přepsat `do_transform` tak, aby odpovídala. Při předání do `collate::compare`by dva transformované řetězce měly vracet stejný výsledek, který byste získali z předání netransformované řetězce pro porovnání v odvozené třídě.
 
 ### <a name="example"></a>Příklad
 
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Ukazatel na první znak v sekvenci, jejíž hodnota má být určena.
 
-*poslední* \
+*poslední*\
 Ukazatel na poslední znak v sekvenci, jejíž hodnota má být určena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -355,7 +355,7 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) , jejíž objekty mohou ukládat kopie zdrojové sekvence.
+Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) jejichž objekty mohou ukládat kopie zdrojové sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Ukazatel na první znak v sekvenci, která má být převedena.
 
-*poslední* \
+*poslední*\
 Ukazatel na poslední znak v sekvenci, která má být převedena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -427,7 +427,7 @@ int main( )
 -1-11
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<locale >](../standard-library/locale.md) \
+[\<> národního prostředí](../standard-library/locale.md)\
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

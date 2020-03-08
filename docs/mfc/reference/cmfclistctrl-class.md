@@ -29,15 +29,15 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
 ms.openlocfilehash: 599a00af28ee5b8effbabbe5b334022ceb49f91a
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682349"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78869968"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl – třída
 
-Třída rozšiřuje funkčnost třídy [třídy CListCtrl](../../mfc/reference/clistctrl-class.md) podporou pokročilé funkce ovládacího prvku záhlaví [třídy CMFCHeaderCtrl.](../../mfc/reference/cmfcheaderctrl-class.md) `CMFCListCtrl`
+Třída `CMFCListCtrl` rozšiřuje funkčnost třídy [třídy CListCtrl](../../mfc/reference/clistctrl-class.md) podporou rozšířených funkcí ovládacího prvku záhlaví [třídy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,7 +49,7 @@ class CMFCListCtrl : public CListCtrl
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|Povoluje možnost označit seřazený sloupec jinou barvou pozadí.|
 |[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|Povoluje vícenásobný režim řazení.|
@@ -61,15 +61,15 @@ class CMFCListCtrl : public CListCtrl
 |[CMFCListCtrl::OnGetCellTextColor](#ongetcelltextcolor)|Volá se rozhraním, když se musí určit barva textu pro jednotlivou buňku.|
 |[CMFCListCtrl::RemoveSortColumn](#removesortcolumn)|Odebere sloupec řazení ze seznamu seřazených sloupců.|
 |[CMFCListCtrl::SetSortColumn](#setsortcolumn)|Nastaví aktuální seřazený sloupec a pořadí řazení.|
-|[CMFCListCtrl::Sort](#sort)|Seřadí ovládací prvek seznam.|
+|[CMFCListCtrl:: Sort](#sort)|Seřadí ovládací prvek seznam.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCListCtrl`nabízí dvě vylepšení třídy [třídy CListCtrl](../../mfc/reference/clistctrl-class.md) . Nejprve indikuje, že řazení sloupce je k dispozici možnost automatického kreslení šipky řazení v hlavičce. Za druhé podporuje řazení dat na více sloupcích současně.
+`CMFCListCtrl` nabízí dvě vylepšení třídy [třídy CListCtrl](../../mfc/reference/clistctrl-class.md) . Nejprve indikuje, že řazení sloupce je k dispozici možnost automatického kreslení šipky řazení v hlavičce. Za druhé podporuje řazení dat na více sloupcích současně.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody ve `CMFCListCtrl` třídě. Tento příklad ukazuje, jak vytvořit ovládací prvek seznamu, Vložit sloupce, vložit položky, nastavit text položky a nastavit písmo ovládacího prvku seznam. Tento fragment kódu je součástí ukázkového [vzorku sady Visual Studio](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody v `CMFCListCtrl` třídy. Tento příklad ukazuje, jak vytvořit ovládací prvek seznamu, Vložit sloupce, vložit položky, nastavit text položky a nastavit písmo ovládacího prvku seznam. Tento fragment kódu je součástí [ukázkového vzorku sady Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#26](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]
@@ -110,7 +110,7 @@ pro Logický parametr, který určuje, zda má být ovládací prvek okamžitě 
 
 ### <a name="remarks"></a>Poznámky
 
-`EnableMarkSortedColumn`používá metodu `CDrawingManager::PixelAlpha` k výpočtu barvy, která se má použít pro seřazené sloupce. Vyzvednutá barva je založená na běžné barvě pozadí.
+`EnableMarkSortedColumn` používá `CDrawingManager::PixelAlpha` metody k výpočtu barvy, která se má použít pro seřazené sloupce. Vyzvednutá barva je založená na běžné barvě pozadí.
 
 ##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort
 
@@ -129,7 +129,7 @@ pro Logická hodnota, která určuje, zda má být povolen více režimů řazen
 
 Pokud povolíte řazení založené na více sloupcích, mají sloupce hierarchii. Řádky dat budou nejprve seřazeny podle primárního sloupce. Jakékoli ekvivalentní hodnoty jsou následně seřazeny podle každého následujícího sloupce podle priority.
 
-##  <a name="getheaderctrl"></a>  CMFCListCtrl::GetHeaderCtrl
+##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl
 
 Vrátí odkaz na ovládací prvek záhlaví.
 
@@ -145,7 +145,7 @@ Odkaz na podkladový objekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-
 
 Ovládací prvek záhlaví pro ovládací prvek seznam je okno, které obsahuje názvy sloupců. Obvykle je umístěn přímo nad sloupci.
 
-##  <a name="ismultiplesort"></a>  CMFCListCtrl::IsMultipleSort
+##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort
 
 Kontroluje, zda ovládací prvek seznam aktuálně podporuje řazení více sloupců.
 
@@ -191,7 +191,7 @@ Celé číslo, které označuje relativní pozici dvou položek. Záporná hodno
 
 Výchozí implementace vždy vrátí hodnotu 0. Tuto funkci můžete přepsat tak, aby poskytovala vlastní algoritmus řazení.
 
-##  <a name="ongetcellbkcolor"></a>  CMFCListCtrl::OnGetCellBkColor
+##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor
 
 Rozhraní volá tuto metodu, když musí určit barvu pozadí jednotlivé buňky.
 
@@ -215,9 +215,9 @@ Hodnota COLOREF, která určuje barvu pozadí buňky.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace `OnGetCellBkColor` nepoužívá zadané vstupní parametry a místo toho pouze volání `GetBkColor`. Proto ve výchozím nastavení bude mít celý ovládací prvek seznam stejnou barvu pozadí. Můžete přepsat `OnGetCellBkColor` odvozenou třídu a označit jednotlivé buňky samostatnou barvou pozadí.
+Výchozí implementace `OnGetCellBkColor` nepoužívá zadané vstupní parametry a místo toho jednoduše volá `GetBkColor`. Proto ve výchozím nastavení bude mít celý ovládací prvek seznam stejnou barvu pozadí. Můžete přepsat `OnGetCellBkColor` v odvozené třídě a označit jednotlivé buňky samostatnou barvou pozadí.
 
-##  <a name="ongetcellfont"></a>  CMFCListCtrl::OnGetCellFont
+##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont
 
 Rozhraní volá tuto metodu, když získá písmo pro jednotlivou buňku.
 
@@ -247,7 +247,7 @@ Popisovač písma, který se používá pro aktuální buňku.
 
 Ve výchozím nastavení tato metoda vrací hodnotu NULL. Všechny buňky v ovládacím prvku seznam mají stejné písmo. Tuto metodu přepište, pokud chcete pro různé buňky zadat různá písma.
 
-##  <a name="ongetcelltextcolor"></a>  CMFCListCtrl::OnGetCellTextColor
+##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor
 
 Rozhraní volá tuto metodu, když musí určit barvu textu jednotlivé buňky.
 
@@ -271,7 +271,7 @@ Hodnota COLOREF, která určuje barvu textu buňky.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tato metoda volá `GetTextColor` bez ohledu na vstupní parametry. Celý ovládací prvek seznamu bude mít stejnou barvu textu. Můžete přepsat `OnGetCellTextColor` odvozenou třídu a označit jednotlivé buňky samostatnou barvou textu.
+Ve výchozím nastavení tato metoda volá `GetTextColor` bez ohledu na vstupní parametry. Celý ovládací prvek seznamu bude mít stejnou barvu textu. Můžete přepsat `OnGetCellTextColor` v odvozené třídě a označit jednotlivé buňky samostatnou barvou textu.
 
 ##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn
 
@@ -316,7 +316,7 @@ pro Logická hodnota určující, zda metoda přidá sloupec uvedený v *iColumn
 
 Tato metoda předá vstupní parametry ovládacímu prvku Header pomocí metody [CMFCHeaderCtrl:: SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).
 
-##  <a name="sort"></a>  CMFCListCtrl::Sort
+##  <a name="sort"></a>CMFCListCtrl:: Sort
 
 Seřadí ovládací prvek seznam.
 
@@ -338,7 +338,7 @@ pro Logická hodnota, která určuje pořadí řazení.
 *bAdd*<br/>
 pro Logická hodnota, která určuje, zda tato metoda přidá sloupec uvedený v *iColumn* do seznamu sloupců řazení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
