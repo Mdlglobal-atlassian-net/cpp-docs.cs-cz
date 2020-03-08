@@ -1,5 +1,5 @@
 ---
-title: operátory &lt;forward_list &gt;
+title: operátory &lt;forward_list&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - forward_list/std::operator!=
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689688"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874753"
 ---
-# <a name="ltforward_listgt-operators"></a>operátory &lt;forward_list &gt;
+# <a name="ltforward_listgt-operators"></a>operátory &lt;forward_list&gt;
 
 ## <a name="op_eq_eq"></a>operator = = – operátor
 
@@ -37,15 +37,15 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 Objekt typu `forward_list`.
 
-*pravé* \
+*pravé*\
 Objekt typu `forward_list`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce šablony přetěžuje `operator==` k porovnání dvou objektů `forward_list` šablony třídy. Funkce vrátí `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Tato funkce šablony přetěžuje `operator==` k porovnání dvou objektů `forward_list`šablony třídy. Funkce vrátí `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
 ## <a name="op_neq"></a>! = – operátor
 
@@ -59,10 +59,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 Objekt typu `forward_list`.
 
-*pravé* \
+*pravé*\
 Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -73,7 +73,7 @@ Objekt typu `forward_list`.
 
 Tato funkce šablony vrací `!(left == right)`.
 
-## <a name="op_lt"></a>operátor &lt;
+## <a name="op_lt"></a>operátor&lt;
 
 Testuje, zda je objekt předávaného seznamu na levé straně operátoru menší než objekt dopředný seznam na pravé straně.
 
@@ -85,10 +85,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 Objekt typu `forward_list`.
 
-*pravé* \
+*pravé*\
 Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -97,9 +97,9 @@ Objekt typu `forward_list`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce šablony přetěžuje `operator<` k porovnání dvou objektů `forward_list` šablony třídy. Funkce vrátí `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Tato funkce šablony přetěžuje `operator<` k porovnání dvou objektů `forward_list`šablony třídy. Funkce vrátí `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>operátor &lt; =
+## <a name="op_lt_eq"></a>operátor&lt;=
 
 Testuje, zda je objekt předávaného seznamu na levé straně operátoru menší než nebo roven objektu dopředný seznam na pravé straně.
 
@@ -111,10 +111,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 Objekt typu `forward_list`.
 
-*pravé* \
+*pravé*\
 Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -125,7 +125,7 @@ Objekt typu `forward_list`.
 
 Tato funkce šablony vrací `!(right < left)`.
 
-## <a name="op_gt"></a>operátor &gt;
+## <a name="op_gt"></a>operátor&gt;
 
 Testuje, zda je objekt předávaného seznamu na levé straně operátoru větší než objekt dopředný seznam na pravé straně.
 
@@ -137,10 +137,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 Objekt typu `forward_list`.
 
-*pravé* \
+*pravé*\
 Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -151,7 +151,7 @@ Objekt typu `forward_list`.
 
 Tato funkce šablony vrací `right < left`.
 
-## <a name="op_gt_eq"></a>operátor &gt; =
+## <a name="op_gt_eq"></a>operátor&gt;=
 
 Testuje, zda je objekt předávaného seznamu na levé straně operátoru větší než nebo roven objektu dopředný seznam na pravé straně.
 
@@ -163,10 +163,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*levý* \
+*levý*\
 Objekt typu `forward_list`.
 
-*pravé* \
+*pravé*\
 Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota

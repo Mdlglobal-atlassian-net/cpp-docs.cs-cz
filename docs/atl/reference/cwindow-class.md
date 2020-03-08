@@ -154,11 +154,11 @@ helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
 ms.openlocfilehash: f6d52c8fce8e1437e87f9f251b7f5f050efa6fed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496167"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864727"
 ---
 # <a name="cwindow-class"></a>CWindow – třída
 
@@ -177,18 +177,18 @@ class CWindow
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWindow::CWindow](#cwindow)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWindow::ArrangeIconicWindows](#arrangeiconicwindows)|Uspořádá všechna minimalizovaná podřízená okna.|
-|[CWindow::Attach](#attach)|Připojí okno k `CWindow` objektu.|
+|[CWindow:: Attach](#attach)|Připojí okno k objektu `CWindow`.|
 |[CWindow::BeginPaint](#beginpaint)|Připraví okno pro malování.|
-|[CWindow::BringWindowToTop](#bringwindowtotop)|Přesune okno na začátek objednávky Z.|
+|[CWindow:: BringWindowToTop](#bringwindowtotop)|Přesune okno na začátek objednávky Z.|
 |[CWindow::CenterWindow](#centerwindow)|Vycentruje okno v rámci daného okna.|
 |[CWindow::ChangeClipboardChain](#changeclipboardchain)|Odebere okno z řetězce prohlížečů schránky.|
 |[CWindow::CheckDlgButton](#checkdlgbutton)|Změní stav kontroly zadaného tlačítka.|
@@ -200,21 +200,21 @@ class CWindow
 |[CWindow::CreateCaret](#createcaret)|Vytvoří nový tvar pro systémový znak stříšky.|
 |[CWindow::CreateGrayCaret](#creategraycaret)|Vytvoří šedý obdélník pro systémový znak stříšky.|
 |[CWindow::CreateSolidCaret](#createsolidcaret)|Vytvoří pro systémový blikající znak plný obdélník.|
-|[CWindow::DeferWindowPos](#deferwindowpos)|Aktualizuje zadanou strukturu více oken na pozici pro zadané okno.|
-|[CWindow::DestroyWindow](#destroywindow)|Odstraní okno přidružené `CWindow` k objektu.|
-|[CWindow::Detach](#detach)|Odpojí okno od `CWindow` objektu.|
-|[CWindow::DlgDirList](#dlgdirlist)|Vyplní seznam názvy všech souborů, které odpovídají zadané cestě nebo názvu souboru.|
-|[CWindow::DlgDirListComboBox](#dlgdirlistcombobox)|Vyplní pole se seznamem názvy všech souborů, které odpovídají zadané cestě nebo názvu souboru.|
-|[CWindow::DlgDirSelect](#dlgdirselect)|Načte aktuální výběr ze seznamu.|
-|[CWindow::DlgDirSelectComboBox](#dlgdirselectcombobox)|Načte aktuální výběr z pole se seznamem.|
-|[CWindow::DragAcceptFiles](#dragacceptfiles)|Registruje, zda okno přijímá přetažené soubory.|
+|[CWindow::D eferWindowPos](#deferwindowpos)|Aktualizuje zadanou strukturu více oken na pozici pro zadané okno.|
+|[CWindow::D estroyWindow](#destroywindow)|Odstraní okno přidružené k objektu `CWindow`.|
+|[CWindow::D etach](#detach)|Odpojí okno od objektu `CWindow`.|
+|[CWindow::D lgDirList](#dlgdirlist)|Vyplní seznam názvy všech souborů, které odpovídají zadané cestě nebo názvu souboru.|
+|[CWindow::D lgDirListComboBox](#dlgdirlistcombobox)|Vyplní pole se seznamem názvy všech souborů, které odpovídají zadané cestě nebo názvu souboru.|
+|[CWindow::D lgDirSelect](#dlgdirselect)|Načte aktuální výběr ze seznamu.|
+|[CWindow::D lgDirSelectComboBox](#dlgdirselectcombobox)|Načte aktuální výběr z pole se seznamem.|
+|[CWindow::D ragAcceptFiles](#dragacceptfiles)|Registruje, zda okno přijímá přetažené soubory.|
 |[CWindow::D rawMenuBar](#drawmenubar)|Překreslí panel nabídek okna.|
 |[CWindow::EnableScrollBar](#enablescrollbar)|Povolí nebo zakáže šipky posuvníku.|
 |[CWindow::EnableWindow](#enablewindow)|Povolí nebo zakáže vstup.|
 |[CWindow::EndPaint](#endpaint)|Označuje konec vykreslování.|
 |[CWindow::FlashWindow](#flashwindow)|Okno zabliká jednou.|
 |[CWindow::GetClientRect](#getclientrect)|Načte souřadnice klientské oblasti.|
-|[CWindow::GetDC](#getdc)|Načte kontext zařízení pro klientskou oblast.|
+|[CWindow:: GetDC](#getdc)|Načte kontext zařízení pro klientskou oblast.|
 |[CWindow::GetDCEx](#getdcex)|Načte kontext zařízení pro klientskou oblast a povolí možnosti oříznutí.|
 |[CWindow::GetDescendantWindow](#getdescendantwindow)|Načte zadané odvozené okno.|
 |[CWindow::GetDlgControl](#getdlgcontrol)|Načte rozhraní na zadaném ovládacím prvku.|
@@ -224,14 +224,14 @@ class CWindow
 |[CWindow::GetDlgItemInt](#getdlgitemint)|Přeloží text ovládacího prvku na celé číslo.|
 |[CWindow::GetDlgItemText](#getdlgitemtext)|Načte text ovládacího prvku.|
 |[CWindow::GetExStyle](#getexstyle)|Načte rozšířené styly oken.|
-|[CWindow::GetFont](#getfont)|Načte aktuální písmo okna.|
+|[CWindow:: GetFont](#getfont)|Načte aktuální písmo okna.|
 |[CWindow:: getklávesa](#gethotkey)|Určuje klávesovou zkratku spojenou s oknem.|
-|[CWindow::GetIcon](#geticon)|Načte velkou nebo malou ikonu okna.|
+|[CWindow:: GetIcon](#geticon)|Načte velkou nebo malou ikonu okna.|
 |[CWindow::GetLastActivePopup](#getlastactivepopup)|Načte naposledy aktivní překryvné okno.|
 |[CWindow:: Get– nabídka](#getmenu)|Načte nabídku okna.|
 |[CWindow::GetNextDlgGroupItem](#getnextdlggroupitem)|Načte předchozí nebo následující ovládací prvek ve skupině ovládacích prvků.|
 |[CWindow::GetNextDlgTabItem](#getnextdlgtabitem)|Načte předchozí nebo další ovládací prvek se stylem WS_TABSTOP.|
-|[CWindow::GetParent](#getparent)|Načte bezprostřední nadřazené okno.|
+|[CWindow:: GetParent](#getparent)|Načte bezprostřední nadřazené okno.|
 |[CWindow::GetScrollInfo](#getscrollinfo)|Načte parametry posuvníku.|
 |[CWindow::GetScrollPos](#getscrollpos)|Načte pozici rolovacího pole.|
 |[CWindow::GetScrollRange](#getscrollrange)|Načte rozsah posuvníku.|
@@ -261,27 +261,27 @@ class CWindow
 |[CWindow:: unvalidate](#invalidate)|Zruší platnost celé klientské oblasti.|
 |[CWindow::InvalidateRect](#invalidaterect)|Zruší platnost klientské oblasti v zadaném obdélníku.|
 |[CWindow::InvalidateRgn](#invalidatergn)|Zruší platnost klientské oblasti v zadané oblasti.|
-|[CWindow::IsChild](#ischild)|Určuje, zda je zadané okno podřízeným oknem.|
+|[CWindow::-Child](#ischild)|Určuje, zda je zadané okno podřízeným oknem.|
 |[CWindow::IsDialogMessage](#isdialogmessage)|Určuje, zda je zpráva určena pro zadané dialogové okno.|
 |[CWindow::IsDlgButtonChecked](#isdlgbuttonchecked)|Určuje stav kontroly tlačítka.|
-|[CWindow::IsIconic](#isiconic)|Určuje, zda je okno minimalizováno.|
+|[CWindow::-Icond](#isiconic)|Určuje, zda je okno minimalizováno.|
 |[CWindow::IsParentDialog](#isparentdialog)|Určuje, zda je nadřazené okno ovládacího prvku dialogové okno.|
-|[CWindow::IsWindow](#iswindow)|Určuje, zda určený popisovač okna identifikuje existující okno.|
+|[CWindow::-Window](#iswindow)|Určuje, zda určený popisovač okna identifikuje existující okno.|
 |[CWindow::IsWindowEnabled](#iswindowenabled)|Určuje, zda je u okna povoleno zadání.|
 |[CWindow::IsWindowUnicode](#iswindowunicode)|Určuje, zda je zadané okno nativním oknem sady Unicode.|
 |[CWindow::IsWindowVisible](#iswindowvisible)|Určuje stav viditelnosti okna.|
-|[CWindow::IsZoomed](#iszoomed)|Určuje, zda se okno maximalizuje.|
+|[CWindow:: s přiblížením](#iszoomed)|Určuje, zda se okno maximalizuje.|
 |[CWindow::KillTimer](#killtimer)|Odstraní událost časovače.|
 |[CWindow::LockWindowUpdate](#lockwindowupdate)|Zakáže nebo povolí kreslení v okně.|
 |[CWindow::MapWindowPoints](#mapwindowpoints)|Převede sadu bodů z souřadnicového prostoru okna na souřadnicový prostor jiného okna.|
-|[CWindow::MessageBox](#messagebox)|Zobrazí okno se zprávou.|
+|[CWindow:: MessageBox](#messagebox)|Zobrazí okno se zprávou.|
 |[CWindow::ModifyStyle](#modifystyle)|Upraví styly oken.|
 |[CWindow::ModifyStyleEx](#modifystyleex)|Upraví rozšířené styly oken.|
 |[CWindow::MoveWindow](#movewindow)|Změní velikost a polohu okna.|
 |[CWindow::NextDlgCtrl](#nextdlgctrl)|Nastaví fokus klávesnice na další ovládací prvek v dialogovém okně.|
 |[CWindow::OpenClipboard](#openclipboard)|Otevře schránku.|
-|[CWindow::PostMessage](#postmessage)|Umístí zprávu do fronty zpráv přidružené k vláknu, které okno vytvořilo. Vrátí se bez čekání na zpracování zprávy vláknem.|
-|[CWindow::PrevDlgCtrl](#prevdlgctrl)|Nastaví fokus klávesnice na předchozí ovládací prvek v dialogovém okně.|
+|[CWindow::P ostMessage](#postmessage)|Umístí zprávu do fronty zpráv přidružené k vláknu, které okno vytvořilo. Vrátí se bez čekání na zpracování zprávy vláknem.|
+|[CWindow::P revDlgCtrl](#prevdlgctrl)|Nastaví fokus klávesnice na předchozí ovládací prvek v dialogovém okně.|
 |[CWindow::P isknout](#print)|Požaduje, aby se okno vykreslilo v zadaném kontextu zařízení.|
 |[CWindow::P rintClient](#printclient)|Požaduje, aby se v určitém kontextu zařízení vykreslila klientská oblast okna.|
 |[CWindow::RedrawWindow](#redrawwindow)|Aktualizuje zadaný obdélník nebo oblast v klientské oblasti.|
@@ -293,7 +293,7 @@ class CWindow
 |[CWindow::SendDlgItemMessage](#senddlgitemmessage)|Odešle zprávu ovládacímu prvku.|
 |[CWindow:: SendMessage](#sendmessage)|Odešle zprávu do okna a nevrátí, dokud procedura okna nezpracovala zprávu.|
 |[CWindow::SendMessageToDescendants](#sendmessagetodescendants)|Pošle zprávu na zadané odvozené okna.|
-|[CWindow::SendNotifyMessage](#sendnotifymessage)|Odešle zprávu do okna. Pokud okno bylo vytvořeno volajícím vláknem, nebude `SendNotifyMessage` vráceno, dokud procedura okna nezpracovala zprávu. V opačném případě se vrátí hned.|
+|[CWindow::SendNotifyMessage](#sendnotifymessage)|Odešle zprávu do okna. Pokud bylo okno vytvořeno volajícím vláknem, `SendNotifyMessage` nevrátí, dokud procedura okna nezpracovala zprávu. V opačném případě se vrátí hned.|
 |[CWindow::SetActiveWindow](#setactivewindow)|Aktivuje okno.|
 |[CWindow::SetCapture](#setcapture)|Odešle všechny následné vstupy myši do okna.|
 |[CWindow::SetClipboardViewer](#setclipboardviewer)|Přidá okno do řetězce prohlížeče schránky.|
@@ -321,7 +321,7 @@ class CWindow
 |[CWindow::SetWindowWord](#setwindowword)|Nastaví 16bitovou hodnotu u zadaného posunu do nadbytečné paměti okna.|
 |[CWindow::ShowCaret](#showcaret)|Zobrazí systémový znak stříšky.|
 |[CWindow::ShowOwnedPopups](#showownedpopups)|Zobrazí nebo skryje automaticky otevíraná okna vlastněná oknem.|
-|[CWindow::ShowScrollBar](#showscrollbar)|Zobrazí nebo skryje posuvník.|
+|[CWindow:: ShowScrollBar](#showscrollbar)|Zobrazí nebo skryje posuvník.|
 |[CWindow::: ShowWindow](#showwindow)|Nastaví stav zobrazení okna.|
 |[CWindow::ShowWindowAsync](#showwindowasync)|Nastaví stav zobrazení okna vytvořeného jiným vláknem.|
 |[CWindow::UpdateWindow](#updatewindow)|Aktualizuje klientskou oblast.|
@@ -331,38 +331,38 @@ class CWindow
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CWindow:: operator HWND](#operator_hwnd)|`CWindow` Převede objekt na HWND.|
-|[CWindow:: operator =](#operator_eq)|Přiřadí `CWindow` objekt HWND k objektu.|
+|[CWindow:: operator HWND](#operator_hwnd)|Převede objekt `CWindow` na HWND.|
+|[CWindow:: operator =](#operator_eq)|Přiřadí HWND k objektu `CWindow`.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CWindow::m_hWnd](#m_hwnd)|Popisovač okna přidruženého `CWindow` k objektu.|
+|[CWindow:: m_hWnd](#m_hwnd)|Popisovač okna přidruženého k objektu `CWindow`.|
 |[CWindow::rcDefault](#rcdefault)|Obsahuje výchozí rozměry okna.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CWindow`poskytuje základní funkce pro manipulaci s oknem v ATL. Mnohé z `CWindow` metod jednoduše zabalí jednu z Win32 API funkcí. Porovnejte například prototypy pro `CWindow::ShowWindow` a: `ShowWindow`
+`CWindow` poskytuje základní funkce pro manipulaci s oknem v ATL. Mnohé z `CWindow` metod jednoduše zabalí jednu z Win32 API funkcí. Porovnejte například prototypy pro `CWindow::ShowWindow` a `ShowWindow`:
 
 |Metoda CWindow|Funkce Win32|
 |--------------------|--------------------|
 |**Bool: ShowWindow (int** `nCmdShow` **);**|**Bool: ShowWindow (HWND** `hWnd` **, int** `nCmdShow` **);**|
 
-`CWindow::ShowWindow`volá funkci `ShowWindow` Win32 předáním `CWindow::m_hWnd` jako prvního parametru. Každá `CWindow` metoda, která přímo zabalí funkci Win32, `m_hWnd` předává člena. `CWindow` proto většina dokumentace vás bude odkazovat na Windows SDK.
+`CWindow::ShowWindow` volá funkci Win32 `ShowWindow` předáním `CWindow::m_hWnd` jako prvního parametru. Každá `CWindow` metoda, která přímo zabalí funkci Win32, předává `m_hWnd` členu; Proto se většina dokumentace `CWindow` vás bude týkat Windows SDK.
 
 > [!NOTE]
->  Ne všechny funkce Win32 související s oknem jsou zabaleny `CWindow`pomocí, a ne `CWindow` každá metoda zabalí funkci Win32.
+>  Ne všechny funkce Win32 související s oknem jsou zabaleny pomocí `CWindow`a ne každá metoda `CWindow` zabalí funkci Win32.
 
-`CWindow::m_hWnd`ukládá HWND, který identifikuje okno. HWND se k objektu připojí, když:
+`CWindow::m_hWnd` ukládá HWND, který identifikuje okno. HWND se k objektu připojí, když:
 
-- Zadejte HWND v `CWindow`konstruktoru.
+- Zadejte HWND v konstruktoru `CWindow`.
 
-- Volání `CWindow::Attach`.
+- Zavolejte `CWindow::Attach`.
 
-- Operátor `CWindow`použití **=** .
+- Použijte operátor `CWindow` **=** .
 
 - Vytvořte nebo podtřídou okno pomocí jedné z následujících tříd odvozených z `CWindow`:
 
@@ -392,7 +392,7 @@ Viz [ArrangeIconicWindows](/windows/win32/api/winuser/nf-winuser-arrangeiconicwi
 
 ##  <a name="attach"></a>CWindow:: Attach
 
-Připojí okno identifikované *hWndNew* k `CWindow` objektu.
+Připojí okno identifikované *hWndNew* k objektu `CWindow`.
 
 ```
 void Attach(HWND hWndNew) throw();
@@ -563,7 +563,7 @@ pro Ukazatel na třídu okna.
 pro Popisovač nadřazeného nebo vlastníka okna.
 
 *OBD*<br/>
-pro Proměnná typu [_U_RECT](../../atl/reference/u-rect-class.md) určující pozici okna. Výchozí hodnota je NULL. Pokud má tento parametr hodnotu null, `CWindow::rcDefault` je použita hodnota.
+pro Proměnná typu [_U_RECT](../../atl/reference/u-rect-class.md) určující pozici okna. Výchozí hodnota je NULL. Pokud má tento parametr hodnotu NULL, je použita hodnota `CWindow::rcDefault`.
 
 *szWindowName*<br/>
 pro Určuje název okna. Výchozí hodnota je NULL.
@@ -575,18 +575,18 @@ pro Styl okna Výchozí hodnota je 0, což znamená, že není zadán žádný s
 pro Rozšířený styl okna Výchozí hodnota je 0, což znamená, že není zadán rozšířený styl. Seznam možných hodnot naleznete v tématu [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v Windows SDK.
 
 *MenuOrID*<br/>
-pro Proměnná typu [_U_MENUorID](../../atl/reference/u-menuorid-class.md) určující popisovač pro nabídku nebo identifikátor okna. Výchozí hodnota je 0U.
+pro Proměnná typu [_U_MENUorID](../../atl/reference/u-menuorid-class.md) určení popisovače nabídky nebo identifikátoru okna. Výchozí hodnota je 0U.
 
 *lpCreateParam*<br/>
 Ukazatel na data vytváření oken obsažená ve struktuře [CREATESTRUCT –](/windows/win32/api/winuser/ns-winuser-createstructw)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu se popisovač nově vytvořeného okna určí pomocí [m_hWnd](#m_hwnd). V opačném případě hodnota NULL.
+V případě úspěchu se popisovač nově vytvořeného okna určí [m_hWnd](#m_hwnd). V opačném případě hodnota NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-`CWindow::rcDefault`je definován jako `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`.
+`CWindow::rcDefault` je definován jako `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`.
 
 Další informace najdete v části [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v Windows SDK.
 
@@ -604,7 +604,7 @@ BOOL CreateCaret(HBITMAP pBitmap) throw();
 
 Viz [CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) v Windows SDK.
 
-##  <a name="creategraycaret"></a>  CWindow::CreateGrayCaret
+##  <a name="creategraycaret"></a>CWindow::CreateGrayCaret
 
 Vytvoří šedý obdélník pro systémový znak stříšky.
 
@@ -650,7 +650,7 @@ pro Popisovač okna.
 Inicializuje člen [m_hWnd](#m_hwnd) na *HWND*, který má ve výchozím nastavení hodnotu null.
 
 > [!NOTE]
-> `CWindow::CWindow`nevytváří okno. Třídy [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)a [CDialogImpl –](../../atl/reference/cdialogimpl-class.md) (všechny z nich odvozené z `CWindow`) poskytují metodu pro vytvoření okna nebo `CWindow::m_hWnd`dialogového okna, které je pak přiřazeno. Můžete také použít funkci [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) Win32.
+> `CWindow::CWindow` nevytváří okno. Třídy [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)a [CDialogImpl –](../../atl/reference/cdialogimpl-class.md) (všechny z nich odvozené z `CWindow`) poskytují metodu pro vytvoření okna nebo dialogového okna, které se pak přiřadí k `CWindow::m_hWnd`. Můžete také použít funkci [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) Win32.
 
 ##  <a name="deferwindowpos"></a>CWindow::D eferWindowPos
 
@@ -673,7 +673,7 @@ Viz [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) v Win
 
 ##  <a name="destroywindow"></a>CWindow::D estroyWindow
 
-Odstraní okno přidružené `CWindow` k objektu a nastaví [m_hWnd](#m_hwnd) na hodnotu null.
+Odstraní okno přidružené k objektu `CWindow` a nastaví [m_hWnd](#m_hwnd) na hodnotu null.
 
 ```
 BOOL DestroyWindow() throw();
@@ -683,7 +683,7 @@ BOOL DestroyWindow() throw();
 
 Viz [DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow) v Windows SDK.
 
-Neničí `CWindow` samotný objekt.
+Nezničí samotný objekt `CWindow`.
 
 ### <a name="example"></a>Příklad
 
@@ -691,7 +691,7 @@ Neničí `CWindow` samotný objekt.
 
 ##  <a name="detach"></a>CWindow::D etach
 
-Odpojí [m_hWnd](#m_hwnd) od `CWindow` objektu a nastaví `m_hWnd` na hodnotu null.
+Odpojí [m_hWnd](#m_hwnd) od objektu `CWindow` a nastaví `m_hWnd` na hodnotu null.
 
 ```
 HWND Detach() throw();
@@ -699,7 +699,7 @@ HWND Detach() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-HWND přidružený `CWindow` k objektu
+HWND přidružený k objektu `CWindow`.
 
 ### <a name="example"></a>Příklad
 
@@ -721,7 +721,7 @@ int DlgDirList(
 
 Viz [DlgDirList](/windows/win32/api/winuser/nf-winuser-dlgdirlistw) v Windows SDK.
 
-##  <a name="dlgdirlistcombobox"></a>  CWindow::DlgDirListComboBox
+##  <a name="dlgdirlistcombobox"></a>CWindow::D lgDirListComboBox
 
 Vyplní pole se seznamem názvy všech souborů, které odpovídají zadané cestě nebo názvu souboru.
 
@@ -910,7 +910,7 @@ Popisovač okna následníka.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetDescendantWindow`vyhledá celý strom podřízených oken, nejen okna, která jsou bezprostředně podřízená.
+`GetDescendantWindow` prohledá celý strom podřízených oken, nejen okna, která jsou bezprostředně podřízená.
 
 ##  <a name="getdlgcontrol"></a>CWindow::GetDlgControl
 
@@ -928,7 +928,7 @@ HRESULT GetDlgControl(
 *nID*<br/>
 pro ID prostředku ovládacího prvku, který se má načíst
 
-*iid*<br/>
+*identifikátor*<br/>
 pro ID rozhraní, které se má z ovládacího prvku získat
 
 *ppCtrl*<br/>
@@ -936,7 +936,7 @@ mimo Ukazatel na rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo jakoukoli platnou chybu HRESULT. Například funkce vrátí E_FAIL, pokud ovládací prvek určený parametrem *NID* nebyl nalezen a vrátí E_NOINTERFACE, pokud je ovládací prvek nalezen, ale nepodporuje rozhraní určené *identifikátorem IID*.
+Vrátí S_OK při úspěchu nebo jakékoli platné chybě HRESULT. Funkce například vrátí E_FAIL, pokud ovládací prvek určený parametrem *NID* nebyl nalezen a vrátí E_NOINTERFACE, pokud byl ovládací prvek nalezen, ale nepodporuje rozhraní určené *identifikátorem IID*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -970,7 +970,7 @@ HRESULT GetDlgHost(
 *nID*<br/>
 pro ID prostředku ovládacího prvku, který se má načíst
 
-*iid*<br/>
+*identifikátor*<br/>
 pro ID rozhraní, které se má z ovládacího prvku získat
 
 *ppHost*<br/>
@@ -978,7 +978,7 @@ mimo Ukazatel na rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací S_OK, pokud je okno určené *identifikátorem IID* řídicí kontejner a požadované rozhraní bylo načteno. Vrátí E_FAIL, pokud se nejedná o kontejner ovládacího prvku, nebo pokud nelze načíst požadované rozhraní. Pokud nebylo nalezeno okno se zadaným ID, vrácená hodnota se rovná HRESULT_FROM_WIN32 (ERROR_CONTROL_ID_NOT_FOUND).
+Vrátí S_OK, pokud je okno určené *identifikátorem IID* kontejnerem ovládacího prvku a bylo načteno požadované rozhraní. Vrátí E_FAIL, pokud okno není kontejner ovládacího prvku, nebo pokud požadované rozhraní nebylo možné načíst. Pokud nebylo nalezeno okno se zadaným ID, návratová hodnota se rovná HRESULT_FROM_WIN32 (ERROR_CONTROL_ID_NOT_FOUND).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1011,7 +1011,7 @@ UINT GetDlgItemInt(
 
 Viz [GetDlgItemInt](/windows/win32/api/winuser/nf-winuser-getdlgitemint) v Windows SDK.
 
-##  <a name="getdlgitemtext"></a>  CWindow::GetDlgItemText
+##  <a name="getdlgitemtext"></a>CWindow::GetDlgItemText
 
 Načte text ovládacího prvku.
 
@@ -1048,7 +1048,7 @@ Rozšířené styly okna
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li načíst běžné styly oken, [](#getstyle)zavolejte GetStyle.
+Chcete-li načíst běžné styly oken, zavolejte [GetStyle](#getstyle).
 
 ### <a name="example"></a>Příklad
 
@@ -1056,7 +1056,7 @@ Chcete-li načíst běžné styly oken, [](#getstyle)zavolejte GetStyle.
 
 ##  <a name="getfont"></a>CWindow:: GetFont
 
-Načte aktuální písmo okna odesláním zprávy [WM_GETFONT](/windows/win32/winmsg/wm-getfont) do okna.
+Načte aktuální písmo okna odesláním [WM_GETFONT](/windows/win32/winmsg/wm-getfont) zprávy do okna.
 
 ```
 HFONT GetFont() const throw();
@@ -1097,7 +1097,7 @@ Popisovač ikony.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetIcon`pošle zprávu [WM_GETICON](/windows/win32/winmsg/wm-geticon) oknu.
+`GetIcon` odešle do okna zprávu [WM_GETICON](/windows/win32/winmsg/wm-geticon) .
 
 ##  <a name="getlastactivepopup"></a>CWindow::GetLastActivePopup
 
@@ -1367,7 +1367,7 @@ Viz [GetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-getwindowlongptrw) 
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud načítáte ukazatel nebo popisovač, tato funkce nahrazuje `CWindow::GetWindowLong` metodu.
+Pokud načítáte ukazatel nebo popisovač, tato funkce nahrazuje metodu `CWindow::GetWindowLong`.
 
 > [!NOTE]
 >  Ukazatelé a popisovače jsou 32 bitů na 32 bitových oknech a 64 bitů v systému Windows s 64.
@@ -1448,7 +1448,7 @@ Velikost vyrovnávací paměti ve znacích; také maximální počet znaků, kte
 BSTR, do kterého se má uložit text okna
 
 *strText*<br/>
-A `CString` do kterého se má text okna Uložit.
+`CString`, do kterého se má text okna Uložit
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1458,7 +1458,7 @@ Pokud je text úspěšně zkopírován, vrácená hodnota je TRUE; v opačném p
 
 Viz [GetWindowText](/windows/win32/api/winuser/nf-winuser-getwindowtextw) v Windows SDK.
 
-Druhá verze této metody umožňuje uložení textu do BSTR; třetí verze umožňuje uložit výsledek do [CString](../../atl-mfc-shared/reference/cstringt-class.md), protože `CSimpleString` je základní třídou třídy `CString`.
+Druhá verze této metody umožňuje uložení textu do BSTR; třetí verze umožňuje uložit výsledek do [CString](../../atl-mfc-shared/reference/cstringt-class.md), protože `CSimpleString` je základní třídou `CString`.
 
 ##  <a name="getwindowtextlength"></a>CWindow::GetWindowTextLength
 
@@ -1500,7 +1500,7 @@ WORD GetWindowWord(int nIndex) const throw();
 
 Viz [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) v Windows SDK.
 
-##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl
+##  <a name="gotodlgctrl"></a>CWindow::GotoDlgCtrl
 
 Nastaví fokus klávesnice na ovládací prvek v dialogovém okně.
 
@@ -1555,7 +1555,7 @@ BOOL Invalidate(BOOL bErase = TRUE) throw();
 
 Viz [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) v Windows SDK.
 
-Předává hodnotu null `RECT` pro parametr `InvalidateRect` do funkce Win32.
+Předává hodnotu NULL pro parametr `RECT` do funkce `InvalidateRect` Win32.
 
 ### <a name="example"></a>Příklad
 
@@ -1587,7 +1587,7 @@ Viz [InvalidateRgn](/windows/win32/api/winuser/nf-winuser-invalidatergn) v Windo
 
 ### <a name="remarks"></a>Poznámky
 
-Určuje návratový typ **void** , zatímco `InvalidateRgn` funkce Win32 vždy vrátí hodnotu true.
+Určuje návratový typ **void** , zatímco funkce `InvalidateRgn` Win32 vždycky vrátí hodnotu true.
 
 ##  <a name="ischild"></a>CWindow::-Child
 
@@ -1731,7 +1731,7 @@ Viz [zmenšení](/windows/win32/api/winuser/nf-winuser-iszoomed) v Windows SDK.
 
 ##  <a name="killtimer"></a>CWindow::KillTimer
 
-Odstraní událost časovače vytvořenou `CWindow::SetTimer`.
+Zničí událost časovače vytvořenou `CWindow::SetTimer`.
 
 ```
 BOOL KillTimer(UINT nIDEvent) throw();
@@ -1741,7 +1741,7 @@ BOOL KillTimer(UINT nIDEvent) throw();
 
 Viz [KillTimer](/windows/win32/api/winuser/nf-winuser-killtimer) v Windows SDK.
 
-##  <a name="lockwindowupdate"></a>  CWindow::LockWindowUpdate
+##  <a name="lockwindowupdate"></a>CWindow::LockWindowUpdate
 
 Zakáže nebo povolí vykreslování v okně voláním funkce [LockWindowUpdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) Win32.
 
@@ -1760,11 +1760,11 @@ TRUE, pokud je okno úspěšně uzamčené; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má *blok* hodnotu true, tato metoda předá [m_hWnd](#m_hwnd) funkci Win32; v opačném případě předává hodnotu NULL.
+Pokud má *blok* hodnotu true, tato metoda předává [m_hWnd](#m_hwnd) funkci Win32; v opačném případě předává hodnotu NULL.
 
-##  <a name="m_hwnd"></a>CWindow::m_hWnd
+##  <a name="m_hwnd"></a>CWindow:: m_hWnd
 
-Obsahuje popisovač okna přidruženého `CWindow` k objektu.
+Obsahuje popisovač okna přidruženého k objektu `CWindow`.
 
 ```
 HWND m_hWnd throw() throw();
@@ -1812,7 +1812,7 @@ Viz [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) v Windows SDK
 
 ##  <a name="modifystyle"></a>CWindow::ModifyStyle
 
-Upraví styly `CWindow` oken objektu.
+Upraví styly oken objektu `CWindow`.
 
 ```
 BOOL ModifyStyle(
@@ -1840,7 +1840,7 @@ TRUE, pokud se mění styly oken; v opačném případě FALSE.
 
 Styly, které mají být přidány nebo odebrány, lze kombinovat pomocí operátoru OR &#124; (). Další informace o dostupných stylech oken najdete v tématu funkce [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v SDKfor systému Windows.
 
-Pokud *nFlags* není nula, `ModifyStyle` volá funkci `SetWindowPos`Win32 a znovu vykreslí okno kombinací *nFlags* s následujícími čtyřmi příznaky:
+Pokud je *nFlags* nenulové, `ModifyStyle` volá `SetWindowPos`funkce Win32 a znovu vykreslí okno kombinací *nFlags* s následujícími čtyřmi příznaky:
 
 - SWP_NOSIZE zachová aktuální velikost.
 
@@ -1848,7 +1848,7 @@ Pokud *nFlags* není nula, `ModifyStyle` volá funkci `SetWindowPos`Win32 a znov
 
 - SWP_NOZORDER zachová aktuální pořadí Z.
 
-- SWP_NOACTIVATE neaktivuje okno.
+- SWP_NOACTIVATE okno neaktivuje.
 
 Chcete-li upravit rozšířené styly okna, zavolejte [ModifyStyleEx](#modifystyleex).
 
@@ -1858,7 +1858,7 @@ Chcete-li upravit rozšířené styly okna, zavolejte [ModifyStyleEx](#modifysty
 
 ##  <a name="modifystyleex"></a>CWindow::ModifyStyleEx
 
-Upraví rozšířené styly `CWindow` oken objektu.
+Upraví rozšířené styly oken objektu `CWindow`.
 
 ```
 BOOL ModifyStyleEx(
@@ -1886,7 +1886,7 @@ TRUE, pokud se upraví rozšířené styly oken; v opačném případě FALSE.
 
 Styly, které mají být přidány nebo odebrány, lze kombinovat pomocí operátoru OR &#124; (). Podívejte se na funkci [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v informacích o dostupných rozšířených stylech Windows SDKfor.
 
-Pokud *nFlags* není nula, `ModifyStyleEx` volá funkci `SetWindowPos`Win32 a znovu vykreslí okno kombinací *nFlags* s následujícími čtyřmi příznaky:
+Pokud je *nFlags* nenulové, `ModifyStyleEx` volá `SetWindowPos`funkce Win32 a znovu vykreslí okno kombinací *nFlags* s následujícími čtyřmi příznaky:
 
 - SWP_NOSIZE zachová aktuální velikost.
 
@@ -1894,7 +1894,7 @@ Pokud *nFlags* není nula, `ModifyStyleEx` volá funkci `SetWindowPos`Win32 a zn
 
 - SWP_NOZORDER zachová aktuální pořadí Z.
 
-- SWP_NOACTIVATE neaktivuje okno.
+- SWP_NOACTIVATE okno neaktivuje.
 
 Chcete-li upravit systém Windows pomocí běžných stylů oken, zavolejte [ModifyStyle](#modifystyle).
 
@@ -1925,7 +1925,7 @@ V případě objektu okna nejvyšší úrovně jsou parametry x a y relativní v
 
 Druhá verze této metody používá strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) k určení nové pozice, šířky a výšky okna.
 
-##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
+##  <a name="nextdlgctrl"></a>CWindow::NextDlgCtrl
 
 Nastaví fokus klávesnice na další ovládací prvek v dialogovém okně.
 
@@ -1951,7 +1951,7 @@ Viz [OpenClipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) v Windo
 
 ##  <a name="operator_hwnd"></a>CWindow:: operator HWND
 
-`CWindow` Převede objekt na HWND.
+Převede objekt `CWindow` na HWND.
 
 ```
 operator HWND() const throw();
@@ -1959,7 +1959,7 @@ operator HWND() const throw();
 
 ##  <a name="operator_eq"></a>CWindow:: operator =
 
-Přiřadí `CWindow` objekt HWND k objektu nastavením člena [m_hWnd](#m_hwnd) na `hWnd`.
+Přiřadí HWND k objektu `CWindow` nastavením [m_hWndho](#m_hwnd) člena na `hWnd`.
 
 ```
 CWindow& operator= (HWND hWnd) throw();
@@ -2014,21 +2014,21 @@ pro Popisovač kontextu zařízení.
 *dwFlags*<br/>
 pro Určuje možnosti kreslení. Můžete zkombinovat jeden nebo více z následujících příznaků:
 
-- PRF_CHECKVISIBLE vykreslí okno pouze v případě, že je viditelné.
+- PRF_CHECKVISIBLE okno nakreslit pouze v případě, že je viditelné.
 
-- PRF_CHILDREN vykreslí všechna viditelná podřízená okna.
+- PRF_CHILDREN nakreslit všechna viditelná podřízená okna.
 
-- PRF_CLIENT vykreslí klientskou oblast okna.
+- PRF_CLIENT nakreslete oblast klienta okna.
 
-- PRF_ERASEBKGND Vymazat pozadí před kreslením okna.
+- Před kreslením okna PRF_ERASEBKGND Vymazat pozadí.
 
-- PRF_NONCLIENT vykreslí neklientskou oblast okna.
+- PRF_NONCLIENT nakreslit mimo klientské oblasti okna.
 
-- PRF_OWNED vykreslí všechna vlastněná okna.
+- PRF_OWNED nakreslit všechna vlastněná okna.
 
 ##  <a name="printclient"></a>CWindow::P rintClient
 
-Pošle do okna zprávu [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) , která si vyžádá, že nakreslí jeho klientskou oblast v zadaném kontextu zařízení.
+Pošle do okna [WM_PRINTCLIENTovou](/windows/win32/gdi/wm-printclient) zprávu, která požaduje, aby nakreslila svoji klientskou oblast v zadaném kontextu zařízení.
 
 ```
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
@@ -2042,17 +2042,17 @@ pro Popisovač kontextu zařízení.
 *dwFlags*<br/>
 pro Určuje možnosti kreslení. Můžete zkombinovat jeden nebo více z následujících příznaků:
 
-- PRF_CHECKVISIBLE vykreslí okno pouze v případě, že je viditelné.
+- PRF_CHECKVISIBLE okno nakreslit pouze v případě, že je viditelné.
 
-- PRF_CHILDREN vykreslí všechna viditelná podřízená okna.
+- PRF_CHILDREN nakreslit všechna viditelná podřízená okna.
 
-- PRF_CLIENT vykreslí klientskou oblast okna.
+- PRF_CLIENT nakreslete oblast klienta okna.
 
-- PRF_ERASEBKGND Vymazat pozadí před kreslením okna.
+- Před kreslením okna PRF_ERASEBKGND Vymazat pozadí.
 
-- PRF_NONCLIENT vykreslí neklientskou oblast okna.
+- PRF_NONCLIENT nakreslit mimo klientské oblasti okna.
 
-- PRF_OWNED vykreslí všechna vlastněná okna.
+- PRF_OWNED nakreslit všechna vlastněná okna.
 
 ##  <a name="rcdefault"></a>CWindow::rcDefault
 
@@ -2214,7 +2214,7 @@ Viz [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) v Windows S
 
 ##  <a name="sendmessagetodescendants"></a>CWindow::SendMessageToDescendants
 
-Odešle zadanou zprávu všem okamžitým podřízeným `CWindow` objektům objektu.
+Odešle zadanou zprávu všem okamžitým podřízeným objektům `CWindow`.
 
 ```
 void SendMessageToDescendants(
@@ -2257,7 +2257,7 @@ BOOL SendNotifyMessage(
 
 Viz [SendNotifyMessage](/windows/win32/api/winuser/nf-winuser-sendnotifymessagew) v Windows SDK.
 
-Pokud okno bylo vytvořeno volajícím vláknem, nebude `SendNotifyMessage` vráceno, dokud procedura okna nezpracovala zprávu. V opačném případě se vrátí hned.
+Pokud bylo okno vytvořeno volajícím vláknem, `SendNotifyMessage` nevrátí, dokud procedura okna nezpracovala zprávu. V opačném případě se vrátí hned.
 
 ##  <a name="setactivewindow"></a>CWindow::SetActiveWindow
 
@@ -2361,7 +2361,7 @@ Viz [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) v Windows SDK.
 
 ##  <a name="setfont"></a>CWindow::SetFont
 
-Změní aktuální písmo okna odesláním zprávy [WM_SETFONT](/windows/win32/winmsg/wm-setfont) do okna.
+Změní aktuální písmo okna odesláním [WM_SETFONT](/windows/win32/winmsg/wm-setfont) zprávy do okna.
 
 ```
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
@@ -2377,7 +2377,7 @@ pro Pokud je hodnota TRUE (výchozí hodnota), okno se překreslí. V opačném 
 
 ##  <a name="sethotkey"></a>CWindow::SetHotKey
 
-Přidružuje klávesovou zkratku k oknu odesláním zprávy WM_SETHOTKEY.
+Přidružuje klávesovou zkratku k oknu odesláním WM_SETHOTKEY zprávy.
 
 ```
 int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
@@ -2417,7 +2417,7 @@ Popisovač na předchozí ikonu.
 
 ### <a name="remarks"></a>Poznámky
 
-`SetIcon`pošle zprávu [WM_SETICON](/windows/win32/winmsg/wm-seticon) oknu.
+`SetIcon` odešle do okna zprávu [WM_SETICON](/windows/win32/winmsg/wm-seticon) .
 
 ##  <a name="setmenu"></a>CWindow::SetMenu
 
@@ -2449,7 +2449,7 @@ Viz [setParent –](/windows/win32/api/winuser/nf-winuser-setparent) v Windows S
 
 ##  <a name="setredraw"></a>CWindow::SetRedraw
 
-Nastaví nebo zruší příznak překreslení odesláním zprávy [WM_SETREDRAW](/windows/win32/gdi/wm-setredraw) do okna.
+Nastaví nebo zruší příznak překreslování odesláním [WM_SETREDRAW](/windows/win32/gdi/wm-setredraw) zprávy do okna.
 
 ```
 void SetRedraw(BOOL bRedraw = TRUE) throw();
@@ -2462,7 +2462,7 @@ pro Určuje stav příznaku překreslení. Je-li nastavena hodnota TRUE (výchoz
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `SetRedraw` , aby bylo možné překreslit změny nebo zabránit překreslování změn.
+Zavolejte `SetRedraw`, aby se povolily změny překreslování nebo aby se zabránilo překreslování změn.
 
 ### <a name="example"></a>Příklad
 
@@ -2568,7 +2568,7 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 
 Viz [SetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-setwindowlongptrw) v Windows SDK.
 
-Tato funkce nahrazuje `CWindow::SetWindowLong` metodu. Chcete-li napsat kód, který je kompatibilní s 32 a 64 bitovými verzemi Windows, použijte `CWindow::SetWindowLongPtr`.
+Tato funkce nahrazuje metodu `CWindow::SetWindowLong`. Chcete-li napsat kód, který je kompatibilní s 32 a 64 bitovými verzemi Windows, použijte `CWindow::SetWindowLongPtr`.
 
 ##  <a name="setwindowplacement"></a>CWindow::SetWindowPlacement
 
@@ -2770,6 +2770,6 @@ BOOL WinHelp(
 
 Viz [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) v Windows SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přehled třídy](../../atl/atl-class-overview.md)

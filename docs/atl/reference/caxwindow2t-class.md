@@ -1,5 +1,5 @@
 ---
-title: CAxWindow2T Class
+title: CAxWindow2T – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAxWindow2T
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
 ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260025"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864723"
 ---
-# <a name="caxwindow2t-class"></a>CAxWindow2T Class
+# <a name="caxwindow2t-class"></a>CAxWindow2T – třída
 
-Tato třída poskytuje metody pro práci s okno, které hostuje ovládací prvek ActiveX a také zahrnuje podporu pro hostování licencované ovládací prvky ActiveX.
+Tato třída poskytuje metody pro práci s oknem, který je hostitelem ovládacího prvku ActiveX, a také podporuje hostování licencovaných ovládacích prvků ActiveX.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,7 +37,7 @@ template <class TBase = CWindow>
 #### <a name="parameters"></a>Parametry
 
 *TBase*<br/>
-Třída, ze které `CAxWindowT` je odvozena.
+Třída, ze které `CAxWindowT` odvozena.
 
 ## <a name="members"></a>Členové
 
@@ -45,35 +45,35 @@ Třída, ze které `CAxWindowT` je odvozena.
 
 |Název|Popis|
 |----------|-----------------|
-|[CAxWindow2T::CAxWindow2T](#caxwindow2t)|Vytvoří `CAxWindow2T` objektu.|
+|[CAxWindow2T::CAxWindow2T](#caxwindow2t)|Vytvoří objekt `CAxWindow2T`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[CAxWindow2T::Create](#create)|Vytvoří okno hostitele.|
+|[CAxWindow2T:: Create](#create)|Vytvoří hostitelské okno.|
 |[CAxWindow2T::CreateControlLic](#createcontrollic)|Vytvoří, licencuje a hostuje ovládací prvek ActiveX v zadaném okně.|
-|[CAxWindow2T::CreateControlLicEx](#createcontrollicex)|Vytvoří licencovaného ovládacího prvku ActiveX, inicializuje ji, hostuje v zadaném okně a načte ukazatel rozhraní (nebo ukazatele) z ovládacího prvku.|
+|[CAxWindow2T::CreateControlLicEx](#createcontrollicex)|Vytvoří licencovaný ovládací prvek ActiveX, inicializuje ho, hostuje ho v zadaném okně a načte ukazatel rozhraní (nebo ukazatele) z ovládacího prvku.|
 |[CAxWindow2T::GetWndClassName](#getwndclassname)|Statická metoda, která načte název třídy okna.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[CAxWindow2T::operator =](#operator_eq)|Přiřadí existující popisovačem HWND `CAxWindow2T` objektu.|
+|[CAxWindow2T:: operator =](#operator_eq)|Přiřadí HWND k existujícímu objektu `CAxWindow2T`.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CAxWindow2T` poskytuje metody pro práci, který je hostitelem okna ovládacího prvku ActiveX. `CAxWindow2T` má také podporu hostování licencované ovládací prvky ActiveX. Hostování je poskytován " **AtlAxWinLic80**", která je zabalena `CAxWindow2T`.
+`CAxWindow2T` poskytuje metody pro práci s oknem, který je hostitelem ovládacího prvku ActiveX. `CAxWindow2T` také podporuje hostování licencovaných ovládacích prvků ActiveX. Hostování poskytuje " **AtlAxWinLic80**", který je zabalen pomocí `CAxWindow2T`.
 
-Třída `CAxWindow2` je implementovaný jako specializací `CAxWindow2T` třídy. Tato specializace je deklarován jako:
+`CAxWindow2` třídy je implementována jako specializace `CAxWindow2T` třídy. Tato specializace je deklarována jako:
 
 `typedef CAxWindow2T <CWindow> CAxWindow2;`
 
 > [!NOTE]
-> `CAxWindowT` Členové jsou popsány v části [caxwindow –](../../atl/reference/caxwindow-class.md).
+> `CAxWindowT` členové jsou popsány v části [CAxWindow](../../atl/reference/caxwindow-class.md).
 
-Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku, která používá členy této třídy.
+Viz [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pro ukázku, která používá členy této třídy.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -85,11 +85,11 @@ Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h
+**Záhlaví:** atlwin. h
 
-##  <a name="caxwindow2t"></a>  CAxWindow2T::CAxWindow2T
+##  <a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T
 
-Vytvoří `CAxWindow2T` objektu.
+Vytvoří objekt `CAxWindow2T`.
 
 ```
 CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
@@ -98,11 +98,11 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 ### <a name="parameters"></a>Parametry
 
 *hWnd*<br/>
-Popisovač existujícímu oknu.
+Popisovač stávajícího okna.
 
-##  <a name="create"></a>  CAxWindow2T::Create
+##  <a name="create"></a>CAxWindow2T:: Create
 
-Vytvoří okno hostitele.
+Vytvoří hostitelské okno.
 
 ```
 HWND Create(
@@ -117,17 +117,17 @@ HWND Create(
 
 ### <a name="remarks"></a>Poznámky
 
-`CAxWindow2T::Create` volání [CWindow::Create](../../atl/reference/cwindow-class.md#create) s LPCTSTR *lpstrWndClass* parametr nastaven na třídu okna, která poskytuje hostování ovládacího prvku (`AtlAxWinLic80`).
+`CAxWindow2T::Create` volá [CWindow:: Create](../../atl/reference/cwindow-class.md#create) s parametrem *lpstrWndClass* LPCTSTR nastaveným na třídu Window, která poskytuje hostování ovládacího prvku (`AtlAxWinLic80`).
 
-Zobrazit `CWindow::Create` popis parametrů a návratové hodnoty.
+Popis parametrů a návratové hodnoty naleznete v tématu `CWindow::Create`.
 
-**Poznámka:** Pokud se použije jako hodnota 0 *MenuOrID* parametru, musí být zadán jako 0U (výchozí hodnota), aby chybu kompilátoru.
+**Poznámka:** Pokud se hodnota 0 používá jako hodnota parametru *MenuOrID* , musí být zadána jako 0U (výchozí hodnota), aby se předešlo chybě kompilátoru.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku, která používá `CAxWindow2T::Create`.
+Ukázku, která používá `CAxWindow2T::Create`, najdete v tématu [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-##  <a name="createcontrollic"></a>  CAxWindow2T::CreateControlLic
+##  <a name="createcontrollic"></a>CAxWindow2T::CreateControlLic
 
 Vytvoří, licencuje a hostuje ovládací prvek ActiveX v zadaném okně.
 
@@ -148,19 +148,19 @@ HRESULT CreateControlLic(
 ### <a name="parameters"></a>Parametry
 
 *bstrLicKey*<br/>
-Licenční klíč pro ovládací prvek; Pokud vytváříte nonlicensed ovládacího prvku s hodnotou NULL.
+Licenční klíč pro ovládací prvek; Hodnota NULL při vytváření nelicencovaného ovládacího prvku
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [CAxWindow::CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) popis zbývající parametry a návratové hodnoty.
+Popis zbývajících parametrů a návratové hodnoty naleznete v tématu [CAxWindow:: CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) .
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku, která používá `CAxWindow2T::CreateControlLic`.
+Ukázku, která používá `CAxWindow2T::CreateControlLic`, najdete v tématu [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-##  <a name="createcontrollicex"></a>  CAxWindow2T::CreateControlLicEx
+##  <a name="createcontrollicex"></a>CAxWindow2T::CreateControlLicEx
 
-Vytvoří licencovaného ovládacího prvku ActiveX, inicializuje ji, hostuje v zadaném okně a načte ukazatel rozhraní (nebo ukazatele) z ovládacího prvku.
+Vytvoří licencovaný ovládací prvek ActiveX, inicializuje ho, hostuje ho v zadaném okně a načte ukazatel rozhraní (nebo ukazatele) z ovládacího prvku.
 
 ```
 HRESULT CreateControlLicEx(
@@ -185,17 +185,17 @@ HRESULT CreateControlLicEx(
 ### <a name="parameters"></a>Parametry
 
 *bstrLicKey*<br/>
-Licenční klíč pro ovládací prvek; Pokud vytváříte nonlicensed ovládacího prvku s hodnotou NULL.
+Licenční klíč pro ovládací prvek; Hodnota NULL při vytváření nelicencovaného ovládacího prvku
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [CAxWindow::CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) popis zbývající parametry a návratové hodnoty.
+Popis zbývajících parametrů a návratové hodnoty naleznete v tématu [CAxWindow:: CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) .
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku, která používá `CAxWindow2T::CreateControlLicEx`.
+Ukázku, která používá `CAxWindow2T::CreateControlLicEx`, najdete v tématu [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-##  <a name="getwndclassname"></a>  CAxWindow2T::GetWndClassName
+##  <a name="getwndclassname"></a>CAxWindow2T::GetWndClassName
 
 Načte název třídy okna.
 
@@ -205,11 +205,11 @@ static LPCTSTR GetWndClassName();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na řetězec obsahující název třídy okna (`AtlAxWinLic80`), který může hostovat licencovanou a nonlicensed ovládací prvky ActiveX.
+Ukazatel na řetězec obsahující název třídy okna (`AtlAxWinLic80`), která může hostovat licencované a nelicencované ovládací prvky ActiveX.
 
-##  <a name="operator_eq"></a>  CAxWindow2T::operator =
+##  <a name="operator_eq"></a>CAxWindow2T:: operator =
 
-Přiřadí existující popisovačem HWND `CAxWindow2T` objektu.
+Přiřadí HWND k existujícímu objektu `CAxWindow2T`.
 
 ```
 CAxWindow2T<TBase>& operator= (HWND hWnd);
@@ -218,9 +218,9 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 ### <a name="parameters"></a>Parametry
 
 *hWnd*<br/>
-Popisovač existujícímu oknu.
+Popisovač stávajícího okna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
-[Nejčastější dotazy k používání kontejnerů ovládacích prvků](../../atl/atl-control-containment-faq.md)
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
+[Nejčastější dotazy k omezením řízení](../../atl/atl-control-containment-faq.md)

@@ -7,11 +7,11 @@ ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
 ms.openlocfilehash: 3d94f607fc6b7bdf22d7f573f590b451dbaa718d
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273829"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873932"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;náhodné&gt; funkce
 
@@ -27,17 +27,17 @@ RealType generate_canonical(Generator& Gen);
 ### <a name="parameters"></a>Parametry
 
 *RealType*\
-Celočíselný typ s plovoucí desetinnou čárkou. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
+Celočíselný typ s plovoucí desetinnou čárkou. Možné typy naleznete v tématu [\<random >](../standard-library/random.md).
 
-*Bit*\
+\ *BITS*
 Počet bitů náhodnosti, které se mají použít.
 
-*Zdrojové*\
+\ *generátoru*
 Třída generátoru náhodných čísel.
 
-*Pole*\
+*Obecné*\
 Odkaz na instanci generátoru náhodných čísel typu *generátor*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony volá metodu `operator()` *gen* opakovaně a zabalí vrácené hodnoty do hodnoty `x` s plovoucí desetinnou čárkou typu *RealType* , dokud neshromáždí zadaný počet bitů mantisy v. `x` Zadané číslo je menší z *bitů* (které musí být nenulové) a plný počet bitů mantisy v *RealType*. První volání dodá nejnižší počet bitů. Funkce vrátí `x`.
+Funkce šablony volá `operator()` pro *Obecné* opakované operace a zabalí vrácené hodnoty do hodnoty s plovoucí desetinnou čárkou `x` typu *RealType* , dokud neshromáždí zadaný počet bitů mantisy v `x`. Zadané číslo je menší z *bitů* (které musí být nenulové) a plný počet bitů mantisy v *RealType*. První volání dodá nejnižší počet bitů. Funkce vrátí `x`.

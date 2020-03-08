@@ -9,15 +9,15 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301506"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884149"
 ---
 # <a name="functions-c"></a>Funkce (C++)
 
-Funkce je blok kódu, který provádí určitou operaci. Funkce může volitelně definovat vstupní parametry, které umožňují volajícím předat argumenty do funkce. Funkce může volitelně vracet hodnotu jako výstup. Funkce jsou užitečné pro zapouzdření běžných operací v jednom opakovaně použitelném bloku, v ideálním případě s názvem, který jasně popisuje, co funkce dělá. Následující funkce přijímá dvou celých čísel od volajícího a vrátí jejich součet; *a* a *b* jsou *parametry* typu **int**.
+Funkce je blok kódu, který provádí určitou operaci. Funkce může volitelně definovat vstupní parametry, které umožňují volajícím předat argumenty do funkce. Funkce může volitelně vracet hodnotu jako výstup. Funkce jsou užitečné pro zapouzdření běžných operací v jednom opakovaně použitelném bloku, v ideálním případě s názvem, který jasně popisuje, co funkce dělá. Následující funkce přijímá dvě celá čísla od volajícího a vrací jejich součet; *a* a *b* jsou *parametry* typu **int**.
 
 ```cpp
 int sum(int a, int b)
@@ -408,7 +408,7 @@ Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
 
 C++podporuje ukazatele na funkce stejným způsobem jako jazyk C. Nicméně další typově bezpečná alternativa obvykle používá objekt funkce.
 
-Doporučuje se, aby se **definice typedef** použila k deklarování aliasu pro typ ukazatele na funkci, pokud deklarujete funkci, která vrací typ ukazatele na funkci.  Příklad
+Doporučuje se, aby se **definice typedef** použila k deklarování aliasu pro typ ukazatele na funkci, pokud deklarujete funkci, která vrací typ ukazatele na funkci.  Například
 
 ```cpp
 typedef int (*fp)(int);
@@ -423,7 +423,7 @@ int (*myFunction(char* s))(int);
 
 Předchozí deklarace je ekvivalentem deklarace pomocí direktivy typedef výše.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přetížení funkce](../cpp/function-overloading.md)<br/>
 [Funkce se seznamy argumentů proměnných](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>

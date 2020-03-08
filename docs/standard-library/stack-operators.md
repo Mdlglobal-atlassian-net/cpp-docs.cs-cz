@@ -1,5 +1,5 @@
 ---
-title: '&lt;zásobník&gt; operátory'
+title: operátory&gt; &lt;Stack
 ms.date: 11/04/2016
 f1_keywords:
 - stack/std::operator!=
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - std::operator&lt;= (stack)
 - std::operator== (stack)
 ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243651"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865896"
 ---
-# <a name="ltstackgt-operators"></a>&lt;zásobník&gt; operátory
+# <a name="ltstackgt-operators"></a>operátory&gt; &lt;Stack
 
-## <a name="op_neq"></a> Operator! =
+## <a name="op_neq"></a>! = – operátor
 
-Testuje, zda je objekt stack na levé straně operátoru není roven zásobníku objekt na pravé straně.
+Testuje, zda objekt stack na levé straně operátoru není roven objektu Stack na pravé straně.
 
 ```cpp
 bool operator!=(const stack <Type, Container>& left, const stack <Type, Container>& right,);
@@ -35,19 +35,19 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `stack`.
 
-*doprava*\
+*pravé*\
 Objekt typu `stack`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud balíčky nebo balíčky nejsou stejné; **false** Pokud balíčky nebo balíčky jsou si rovny.
+**true** , pokud zásobníky nebo zásobníky nejsou stejné; **false** , pokud jsou zásobníky nebo zásobníky stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty zásobníky je založen na pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dva balíčky jsou si rovny. V opačném případě nerovnost.
+Porovnání objektů zásobníků je založeno na porovnávacím porovnání jejich prvků. Dva zásobníky jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -90,9 +90,9 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt"></a> – Operátor&lt;
+## <a name="op_lt"></a>operátor&lt;
 
-Testuje, zda je objekt stack na levé straně operátoru menší než objekt stack na pravé straně.
+Testuje, zda je objekt zásobníku na levé straně operátoru menší než objekt zásobníku na pravé straně.
 
 ```cpp
 bool operator<(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -100,19 +100,19 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `stack`.
 
-*doprava*\
+*pravé*\
 Objekt typu `stack`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud zásobníku na levé straně operátoru menší než a není rovno zásobníku na pravé straně operátoru; jinak vrátí **false**.
+**true** , pokud je zásobník na levé straně operátoru menší než a roven zásobníku na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty zásobníku je založen na pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty zásobníku je založen na porovnání první pár prvků nerovnost.
+Porovnání mezi objekty zásobníku je založeno na porovnávacím porovnání jejich prvků. Vztah menší než mezi dvěma objekty zásobníku je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -174,9 +174,9 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a> – Operátor&lt;=
+## <a name="op_lt_eq"></a>operátor&lt;=
 
-Testuje, zda je objekt zásobníku na levé straně operátoru je menší než nebo roven objektu stack na pravé straně.
+Testuje, zda je objekt zásobníku na levé straně operátoru menší než nebo roven objektu zásobníku na pravé straně.
 
 ```cpp
 bool operator<=(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -184,19 +184,19 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `stack`.
 
-*doprava*\
+*pravé*\
 Objekt typu `stack`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud zásobníku na levé straně operátoru menší než nebo rovna hodnotě zásobníku na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je zásobník na levé straně operátoru menší než nebo roven zásobníku na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty zásobníku je založen na pairwise porovnání jejich prvky. Je menší než nebo rovna hodnotě vztah mezi dvěma objekty zásobníku je založen na porovnání první pár prvků nerovnost.
+Porovnání mezi objekty zásobníku je založeno na porovnávacím porovnání jejich prvků. Vztah menší nebo rovno mezi dvěma objekty zásobníku je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -241,9 +241,9 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>operator = = – operátor
 
-Testuje, zda objekt stack na levé straně operátoru roven objektu stack na pravé straně.
+Testuje, zda je objekt zásobníku na levé straně operátoru roven objektu Stack na pravé straně.
 
 ```cpp
 bool operator==(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -251,19 +251,19 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `stack`.
 
-*doprava*\
+*pravé*\
 Objekt typu `stack`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud balíčky nebo balíčky jsou si rovny; **false** Pokud balíčky nebo balíčky nejsou stejné.
+**true** , pokud jsou zásobníky nebo zásobníky stejné; **false** , pokud zásobníky nebo zásobníky nejsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty zásobníku je založen na pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dva balíčky jsou si rovny. V opačném případě nerovnost.
+Porovnání mezi objekty zásobníku je založeno na porovnávacím porovnání jejich prvků. Dva zásobníky jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -306,9 +306,9 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a> – Operátor&gt;
+## <a name="op_gt"></a>operátor&gt;
 
-Testuje, zda je objekt stack na levé straně operátoru větší než objekt stack na pravé straně.
+Testuje, zda je objekt zásobníku na levé straně operátoru větší než objekt zásobníku na pravé straně.
 
 ```cpp
 bool operator>(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -316,19 +316,19 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `stack`.
 
-*doprava*\
+*pravé*\
 Objekt typu `stack`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud zásobníku na levé straně operátoru větší než a není rovno zásobníku na pravé straně operátoru jinak **false**.
+**true** , pokud je zásobník na levé straně operátoru větší než a roven zásobníku na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty zásobníku je založen na pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty zásobníku je založen na porovnání první pár prvků nerovnost.
+Porovnání mezi objekty zásobníku je založeno na porovnávacím porovnání jejich prvků. Větší vztah mezi dvěma objekty zásobníku je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -375,9 +375,9 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a> – Operátor&gt;=
+## <a name="op_gt_eq"></a>operátor&gt;=
 
-Testuje, zda je objekt stack na levé straně operátoru větší než nebo roven objektu stack na pravé straně.
+Testuje, zda je objekt zásobníku na levé straně operátoru větší než nebo roven objektu zásobníku na pravé straně.
 
 ```cpp
 bool operator>=(const stack <Type, Container>& left, const stack <Type, Container>& right);
@@ -385,19 +385,19 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `stack`.
 
-*doprava*\
+*pravé*\
 Objekt typu `stack`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud stack na levé straně operátoru je striktně menší než zásobníku na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je zásobník na levé straně operátoru striktně menší než zásobník na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty zásobníku je založen na pairwise porovnání jejich prvky. Větší než nebo rovna hodnotě vztah mezi dvěma zásobníku objekty podle porovnání první pár prvků nerovnost.
+Porovnání mezi objekty zásobníku je založeno na porovnávacím porovnání jejich prvků. Relace větší než nebo rovna mezi dvěma objekty zásobníku je založena na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 

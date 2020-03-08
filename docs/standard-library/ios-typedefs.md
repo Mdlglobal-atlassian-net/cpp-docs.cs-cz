@@ -1,5 +1,5 @@
 ---
-title: '&lt;ios &gt; definice typedef'
+title: '&lt;iOS&gt; definice typedef'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::ios
@@ -10,13 +10,13 @@ f1_keywords:
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687874"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856391"
 ---
-# <a name="ltiosgt-typedefs"></a>&lt;ios &gt; definice typedef
+# <a name="ltiosgt-typedefs"></a>&lt;iOS&gt; definice typedef
 
 ## <a name="ios"></a>iOS
 
@@ -56,7 +56,7 @@ typedef fpos<mbstate_t> streampos;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro [fpos](../standard-library/fpos-class.md) <  `mbstate_t` >.
+Typ je synonymum pro [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 
 ### <a name="example"></a>Příklad
 
@@ -139,7 +139,7 @@ typedef fpos<mbstate_t> wstreampos;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro [fpos](../standard-library/fpos-class.md) <  `mbstate_t` >.
+Typ je synonymum pro [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 
 ### <a name="example"></a>Příklad
 

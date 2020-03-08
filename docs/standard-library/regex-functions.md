@@ -1,5 +1,5 @@
 ---
-title: '&lt;regulární&gt; funkce'
+title: funkce &lt;Regex&gt;
 ms.date: 09/10/2018
 f1_keywords:
 - regex/std::regex_match
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451594"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876131"
 ---
-# <a name="ltregexgt-functions"></a>&lt;regulární&gt; funkce
+# <a name="ltregexgt-functions"></a>funkce &lt;Regex&gt;
 
 |||
 |-|-|
 |[regex_match](#regex_match)|Testuje, zda regulární výraz odpovídá celému cílovému řetězci.|
 |[regex_replace](#regex_replace)|Nahradí párové regulární výrazy.|
 |[regex_search](#regex_search)|Vyhledá shodu regulárního výrazu.|
-|[swap](#swap)|Zahodí dva `basic_regex` objekty `match_results` nebo.|
+|[adresu](#swap)|Prohodí dva objekty `basic_regex` nebo `match_results`.|
 
 ## <a name="regex_match"></a>regex_match
 
@@ -84,14 +84,14 @@ bool regex_match(
 
 ### <a name="parameters"></a>Parametry
 
-*BidI*\
-Typ iterátoru pro podshody. `string::const_iterator`Pro běžné případy toto `wstring::const_iterator` `const char*` je, nebo. `const wchar_t*`
+\ *BiDi*
+Typ iterátoru pro podshody. V některých případech je tato jedna z `string::const_iterator`, `wstring::const_iterator`, `const char*` nebo `const wchar_t*`.
 
-*Vyhrazen*\
+\ *přidělení*
 Třída přidělování výsledků shody
 
 *Elem*\
-Typ prvků, které se mají spárovat. V běžných případech to znamená `string` `char*` , `wstring`nebo `wchar_t*`.
+Typ prvků, které se mají spárovat. V běžných případech se jedná o `string`, `wstring`, `char*` nebo `wchar_t*`.
 
 *RXtraits*\
 Třída vlastností prvků.
@@ -105,32 +105,32 @@ Třída řetězcových vlastností.
 *IOalloc*\
 Třída přidělování řetězců
 
-*Flag*\
+\ *příznaků*
 Příznaky pro shody
 
 *první*\
 Začátek sekvence, která se má shodovat
 
-*posledního*\
+*poslední*\
 Konec sekvence, která se má shodovat.
 
-*přes*\
+*shoda*\
 Výsledky shody Odpovídá elem typu: [Smatch –](../standard-library/regex-typedefs.md#smatch) pro `string`, [wsmatch –](../standard-library/regex-typedefs.md#wsmatch) pro `wstring`, [cmatch –](../standard-library/regex-typedefs.md#cmatch) pro `char*` nebo [wcmatch –](../standard-library/regex-typedefs.md#wcmatch) pro `wchar_t*`.
 
-*střed*\
-Ukazatel na začátek sekvence, který se má shodovat. Pokud  je `char*`PTR, použijte `cmatch` a `regex`. Pokud *PTR* `wchar_t*` , pak použijte `wcmatch` a `wregex`.
+\ *PTR*
+Ukazatel na začátek sekvence, který se má shodovat. Pokud je *ptr* `char*`, použijte `cmatch` a `regex`. Pokud je *ptr* `wchar_t*` pak použijte `wcmatch` a `wregex`.
 
-*odebrat*\
-Regulární výraz, který se má shodovat. Typ `regex` pro `string` a ,nebo`wregex` pro`wchar_t*`a. `char*` `wstring`
+*znovu*\
+Regulární výraz, který se má shodovat. Zadejte `regex` pro `string` a `char*`nebo `wregex` pro `wstring` a `wchar_t*`.
 
-*str*\
+\ *str*
 Řetězec, který se má shodovat. Odpovídá typu *elem*.
 
 ### <a name="remarks"></a>Poznámky
 
-Každá funkce šablony vrátí hodnotu true pouze v případě, že se *celá sekvence* operandů přesně shoduje *s argumentem*regulárního výrazu. Použijte [regex_search](../standard-library/regex-functions.md#regex_search) , aby odpovídal podřetězci v cílové sekvenci a `regex_iterator` našli více shod. Funkce, které přijímají `match_results` objekt, jsou členy tak, aby odrážely, zda shoda proběhla úspěšně, a pokud ano, jaké jsou v regulárním výrazu zachyceny různé skupiny zachycení.
+Každá funkce šablony vrátí hodnotu true pouze v případě, že se *celá sekvence* operandů přesně shoduje *s argumentem*regulárního výrazu. Použijte [regex_search](../standard-library/regex-functions.md#regex_search) , aby odpovídal podřetězci v cílové sekvenci a `regex_iterator` najít více shod. Funkce, které přijímají objekt `match_results`, nastaví své členy tak, aby odrážely, zda byla shoda úspěšná, a pokud ano, jaké jsou různé skupiny zachycení v regulárním výrazu.
 
-Funkce, které přijímají `match_results` objekt, jsou členy tak, aby odrážely, zda shoda proběhla úspěšně, a pokud ano, jaké jsou v regulárním výrazu zachyceny různé skupiny zachycení.
+Funkce, které přijímají objekt `match_results`, nastaví své členy tak, aby odrážely, zda byla shoda úspěšná, a pokud ano, jaké jsou různé skupiny zachycení v regulárním výrazu.
 
 ### <a name="example"></a>Příklad
 
@@ -223,44 +223,44 @@ basic_string<Elem> regex_replace(
 *OutIt*\
 Typ iterátoru pro náhrady.
 
-*BidI*\
+\ *BiDi*
 Typ iterátoru pro podshody.
 
 *RXtraits*\
 Třída vlastností prvků.
 
-*Vyhrazen*\
+\ *přidělení*
 Třída přidělování regulárních výrazů
 
 *Elem*\
 Typ prvků, které se mají spárovat.
 
-*Flag*\
+\ *příznaků*
 Příznaky pro shody
 
 *první*\
 Začátek sekvence, která se má shodovat
 
-*Formát*\
+*fmt*\
 Formát pro nahrazení.
 
-*posledního*\
+*poslední*\
 Konec sekvence, která se má shodovat.
 
-*mimo*\
+*\*
 Výstupní iterátor
 
-*odebrat*\
+*znovu*\
 Regulární výraz, který se má shodovat.
 
-*str*\
+\ *str*
 Řetězec, který se má shodovat.
 
 ### <a name="remarks"></a>Poznámky
 
-První funkce vytvoří objekt `iter(first, last, re, flags)` [třídy regex_iterator](../standard-library/regex-iterator-class.md) a použije ho k rozdělení vstupního `T0 M0 T1 M1...TN-1 MN-1 TN`rozsahu `[first, last)` do řady dílčích sekvencí, kde `Mn` je n-tou shodu zjištěné iterátorem. Pokud nejsou nalezeny žádné shody, `T0` je celý vstupní rozsah a `N` je nula. Pokud `(flags & format_first_only) != 0` je použita pouze první shoda, `T1` je celý vstupní text, který následuje za shodou, a `N` je 1. Pro každou `i` oblast v rozsahu `[0, N)`, pokud `(flags & format_no_copy) == 0` kopíruje text v rozsahu `Ti` *do iterátoru*. `m.format(out, fmt, flags)`Pak volá `Mi`, kde `m` je `match_results` objekt vrácený objektem `iter` iterátoru pro dílčí sekvenci. Nakonec, pokud `(flags & format_no_copy) == 0` kopíruje text v rozsahu `TN` *do iterátoru*. Funkce vrátí *výstup*.
+První funkce vytvoří objekt [Regex_iterator třídy](../standard-library/regex-iterator-class.md) `iter(first, last, re, flags)` a použije jej k rozdělení vstupního rozsahu `[first, last)` do řady dílčích sekvencí `T0 M0 T1 M1...TN-1 MN-1 TN`, kde `Mn` je n-tý porovnávání zjištěné iterátorem. Pokud se nenajde žádná shoda, `T0` je celý vstupní rozsah a `N` je nula. Pokud se používá `(flags & format_first_only) != 0` jenom první shoda, `T1` je celý vstupní text, který odpovídá shodě, a `N` je 1. Pro každý `i` v rozsahu `[0, N)`, pokud `(flags & format_no_copy) == 0` zkopíruje text v `Ti` rozsahu *do iterátoru*. Poté volá `m.format(out, fmt, flags)`, kde `m` je objekt `match_results` vrácený objektem iterátoru `iter` pro dílčí sekvenci `Mi`. Nakonec, pokud `(flags & format_no_copy) == 0` zkopíruje text v rozsahu `TN` *do iterátoru*. Funkce vrátí *výstup*.
 
-Druhá funkce vytvoří místní proměnnou `result` typu `basic_string<charT>` a volání `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Vrátí `result`.
+Druhá funkce vytvoří místní proměnnou `result` typu `basic_string<charT>` a zavolá `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Vrátí `result`.
 
 ### <a name="example"></a>Příklad
 
@@ -353,10 +353,10 @@ bool regex_search(
 
 ### <a name="parameters"></a>Parametry
 
-*BidI*\
+\ *BiDi*
 Typ iterátoru pro podshody.
 
-*Vyhrazen*\
+\ *přidělení*
 Třída přidělování výsledků shody
 
 *Elem*\
@@ -374,30 +374,30 @@ Třída řetězcových vlastností.
 *IOalloc*\
 Třída přidělování řetězců
 
-*Flag*\
+\ *příznaků*
 Příznaky pro shody
 
 *první*\
 Začátek sekvence, která se má shodovat
 
-*posledního*\
+*poslední*\
 Konec sekvence, která se má shodovat.
 
-*přes*\
+*shoda*\
 Výsledky shody
 
-*střed*\
+\ *PTR*
 Ukazatel na začátek sekvence, který se má shodovat.
 
-*odebrat*\
+*znovu*\
 Regulární výraz, který se má shodovat.
 
-*str*\
+\ *str*
 Řetězec, který se má shodovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každá funkce šablony vrátí hodnotu true pouze v případě, že vyhledávání jeho argumentu regulárního výrazu *znovu* v jeho sekvenci operandů je úspěšné. Funkce, které přijímají `match_results` objekt, jsou členy, aby odrážely, zda bylo hledání úspěšné, a pokud ano, jaké jsou různé skupiny zachycení v regulárním výrazu.
+Každá funkce šablony vrátí hodnotu true pouze v případě, že vyhledávání jeho argumentu regulárního výrazu *znovu* v jeho sekvenci operandů je úspěšné. Funkce, které přijímají objekt `match_results`, nastaví své členy tak, aby odrážely, zda bylo hledání úspěšné, a pokud tak chcete, aby byly v rámci regulárního výrazu zachyceny různé skupiny zachycení.
 
 ### <a name="example"></a>Příklad
 
@@ -457,7 +457,7 @@ search(string, "abc") == true
 
 ## <a name="swap"></a>adresu
 
-Zahodí dva `basic_regex` objekty `match_results` nebo.
+Prohodí dva objekty `basic_regex` nebo `match_results`.
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -518,13 +518,13 @@ length == 3
 string == aaa
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<regex>](../standard-library/regex.md)\
-[regex_constants – třída](../standard-library/regex-constants-class.md)\
-[regex_error – třída](../standard-library/regex-error-class.md)\
-[regex_iterator – třída](../standard-library/regex-iterator-class.md)\
-[\<operátory > Regex](../standard-library/regex-operators.md)\
-[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)\
-[regex_traits – třída](../standard-library/regex-traits-class.md)\
+[\<regulárního výrazu >](../standard-library/regex.md)\
+[regex_constants\ třídy](../standard-library/regex-constants-class.md)
+[regex_error\ třídy](../standard-library/regex-error-class.md)
+[regex_iterator\ třídy](../standard-library/regex-iterator-class.md)
+[\<operátory regulárního výrazu >](../standard-library/regex-operators.md)\
+[regex_token_iterator\ třídy](../standard-library/regex-token-iterator-class.md)
+[regex_traits\ třídy](../standard-library/regex-traits-class.md)
 [\<Regex > definice typedef](../standard-library/regex-typedefs.md)
