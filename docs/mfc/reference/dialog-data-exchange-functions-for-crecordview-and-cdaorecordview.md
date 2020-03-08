@@ -21,11 +21,11 @@ helpviewer_keywords:
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303446"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866591"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView
 
@@ -673,6 +673,6 @@ Následující funkce `DoDataExchange` pro funkci [CRecordView](../../mfc/refere
 
   **Header** afxdao. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra a globální prvky](mfc-macros-and-globals.md)

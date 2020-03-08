@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: ec9060ba60c4d9877e5ee32bc68da0134f0ccf20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506997"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866931"
 ---
 # <a name="cdatetimectrl-class"></a>Atributu CDateTimeCtrl – třída
 
@@ -61,30 +61,30 @@ class CDateTimeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|`CDateTimeCtrl` Vytvoří objekt.|
+|[Atributu CDateTimeCtrl:: atributu CDateTimeCtrl](#cdatetimectrl)|Vytvoří objekt `CDateTimeCtrl`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CDateTimeCtrl::CloseMonthCal](#closemonthcal)|Zavře aktuální ovládací prvek pro výběr data a času.|
-|[CDateTimeCtrl::Create](#create)|Vytvoří ovládací prvek pro výběr data a času a připojí ho k `CDateTimeCtrl` objektu.|
-|[CDateTimeCtrl::GetDateTimePickerInfo](#getdatetimepickerinfo)|Načte informace o aktuálním ovládacím prvku pro výběr data a času.|
-|[CDateTimeCtrl::GetIdealSize](#getidealsize)|Vrátí ideální velikost ovládacího prvku pro výběr data a času, který je požadován k zobrazení aktuálního data nebo času.|
-|[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)|Načte barvu pro danou část měsíčního kalendáře v rámci ovládacího prvku pro výběr data a času.|
-|[CDateTimeCtrl::GetMonthCalCtrl](#getmonthcalctrl)|`CMonthCalCtrl` Načte objekt přidružený k ovládacímu prvku pro výběr data a času.|
-|[CDateTimeCtrl::GetMonthCalFont](#getmonthcalfont)|Načte písmo, které je aktuálně použito ovládacím prvkem pro výběr data a času v ovládacím prvku měsíční kalendář.|
-|[CDateTimeCtrl::GetMonthCalStyle](#getmonthcalstyle)|Získá styl aktuálního ovládacího prvku pro výběr data a času.|
-|[CDateTimeCtrl::GetRange](#getrange)|Načte aktuální minimální a maximální povolené systémové časy pro ovládací prvek pro výběr data a času.|
-|[CDateTimeCtrl::GetTime](#gettime)|Načte aktuálně vybraný čas z ovládacího prvku pro výběr data a času a vloží ho do zadané `SYSTEMTIME` struktury.|
-|[CDateTimeCtrl::SetFormat](#setformat)|Nastaví zobrazení ovládacího prvku pro výběr data a času v souladu s daným formátovacím řetězcem.|
-|[CDateTimeCtrl::SetMonthCalColor](#setmonthcalcolor)|Nastaví barvu pro danou část měsíčního kalendáře v rámci ovládacího prvku pro výběr data a času.|
-|[CDateTimeCtrl::SetMonthCalFont](#setmonthcalfont)|Nastaví písmo, které bude používat ovládací prvek měsíčního kalendáře ovládacího prvku pro výběr data a času.|
-|[CDateTimeCtrl::SetMonthCalStyle](#setmonthcalstyle)|Nastaví styl aktuálního ovládacího prvku pro výběr data a času.|
-|[CDateTimeCtrl::SetRange](#setrange)|Nastaví minimální a maximální povolené systémové časy pro ovládací prvek pro výběr data a času.|
-|[CDateTimeCtrl::SetTime](#settime)|Nastaví čas v ovládacím prvku pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: CloseMonthCal](#closemonthcal)|Zavře aktuální ovládací prvek pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: Create](#create)|Vytvoří ovládací prvek pro výběr data a času a připojí ho k objektu `CDateTimeCtrl`.|
+|[Atributu CDateTimeCtrl:: GetDateTimePickerInfo](#getdatetimepickerinfo)|Načte informace o aktuálním ovládacím prvku pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: GetIdealSize](#getidealsize)|Vrátí ideální velikost ovládacího prvku pro výběr data a času, který je požadován k zobrazení aktuálního data nebo času.|
+|[Atributu CDateTimeCtrl:: GetMonthCalColor](#getmonthcalcolor)|Načte barvu pro danou část měsíčního kalendáře v rámci ovládacího prvku pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: GetMonthCalCtrl](#getmonthcalctrl)|Načte objekt `CMonthCalCtrl` přidružený k ovládacímu prvku pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: GetMonthCalFont](#getmonthcalfont)|Načte písmo, které je aktuálně použito ovládacím prvkem pro výběr data a času v ovládacím prvku měsíční kalendář.|
+|[Atributu CDateTimeCtrl:: GetMonthCalStyle](#getmonthcalstyle)|Získá styl aktuálního ovládacího prvku pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: GetRange](#getrange)|Načte aktuální minimální a maximální povolené systémové časy pro ovládací prvek pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: GetTime](#gettime)|Načte aktuálně vybraný čas z ovládacího prvku pro výběr data a času a umístí jej do zadané struktury `SYSTEMTIME`.|
+|[Atributu CDateTimeCtrl:: SetFormat](#setformat)|Nastaví zobrazení ovládacího prvku pro výběr data a času v souladu s daným formátovacím řetězcem.|
+|[Atributu CDateTimeCtrl:: SetMonthCalColor](#setmonthcalcolor)|Nastaví barvu pro danou část měsíčního kalendáře v rámci ovládacího prvku pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: SetMonthCalFont](#setmonthcalfont)|Nastaví písmo, které bude používat ovládací prvek měsíčního kalendáře ovládacího prvku pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: SetMonthCalStyle](#setmonthcalstyle)|Nastaví styl aktuálního ovládacího prvku pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: SetRange](#setrange)|Nastaví minimální a maximální povolené systémové časy pro ovládací prvek pro výběr data a času.|
+|[Atributu CDateTimeCtrl:: SetTime –](#settime)|Nastaví čas v ovládacím prvku pro výběr data a času.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -110,7 +110,7 @@ Ovládací prvek pro výběr data a času používá také oznámení a zpětná
 
 ##  <a name="cdatetimectrl"></a>Atributu CDateTimeCtrl:: atributu CDateTimeCtrl
 
-`CDateTimeCtrl` Vytvoří objekt.
+Vytvoří objekt `CDateTimeCtrl`.
 
 ```
 CDateTimeCtrl();
@@ -130,7 +130,7 @@ Tato metoda pošle zprávu [DTM_CLOSEMONTHCAL](/windows/win32/Controls/dtm-close
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou *m_dateTimeCtrl*, která se používá k programovému přístupu k ovládacímu prvku pro výběr data a času. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, *m_dateTimeCtrl*, která se používá pro programový přístup k ovládacímu prvku pro výběr data a času. Tato proměnná se používá v následujícím příkladu.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -142,7 +142,7 @@ Následující příklad kódu zavírá rozevírací kalendář pro aktuální o
 
 ##  <a name="create"></a>Atributu CDateTimeCtrl:: Create
 
-Vytvoří ovládací prvek pro výběr data a času a připojí ho k `CDateTimeCtrl` objektu.
+Vytvoří ovládací prvek pro výběr data a času a připojí ho k objektu `CDateTimeCtrl`.
 
 ```
 virtual BOOL Create(
@@ -174,9 +174,9 @@ Nenulové, pokud bylo vytváření úspěšné; v opačném případě 0.
 
 ##### <a name="to-create-a-date-and-time-picker-control"></a>Vytvoření ovládacího prvku pro výběr data a času
 
-1. Volání [atributu CDateTimeCtrl](#cdatetimectrl) k vytvoření `CDateTimeCtrl` objektu.
+1. Voláním [atributu CDateTimeCtrl](#cdatetimectrl) vytvořte objekt `CDateTimeCtrl`.
 
-1. Zavolejte tuto členskou funkci, která vytvoří ovládací prvek pro výběr data a času v systému Windows a připojí ho `CDateTimeCtrl` k objektu.
+1. Zavolejte tuto členskou funkci, která vytvoří ovládací prvek pro výběr data a času v systému Windows a připojí ho k objektu `CDateTimeCtrl`.
 
 Při volání `Create`jsou inicializovány běžné ovládací prvky.
 
@@ -184,7 +184,7 @@ Při volání `Create`jsou inicializovány běžné ovládací prvky.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]
 
-##  <a name="getdatetimepickerinfo"></a>  CDateTimeCtrl::GetDateTimePickerInfo
+##  <a name="getdatetimepickerinfo"></a>Atributu CDateTimeCtrl:: GetDateTimePickerInfo
 
 Načte informace o aktuálním ovládacím prvku pro výběr data a času.
 
@@ -208,7 +208,7 @@ Tato metoda pošle zprávu [DTM_GETDATETIMEPICKERINFO](/windows/win32/Controls/d
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou *m_dateTimeCtrl*, která se používá k programovému přístupu k ovládacímu prvku pro výběr data a času. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, *m_dateTimeCtrl*, která se používá pro programový přístup k ovládacímu prvku pro výběr data a času. Tato proměnná se používá v následujícím příkladu.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -245,7 +245,7 @@ Tato členská funkce implementuje chování zprávy Win32 [DTM_GETMCCOLOR](/win
 
 ##  <a name="getmonthcalctrl"></a>Atributu CDateTimeCtrl:: GetMonthCalCtrl
 
-`CMonthCalCtrl` Načte objekt přidružený k ovládacímu prvku pro výběr data a času.
+Načte objekt `CMonthCalCtrl` přidružený k ovládacímu prvku pro výběr data a času.
 
 ```
 CMonthCalCtrl* GetMonthCalCtrl() const;
@@ -257,13 +257,13 @@ Ukazatel na objekt [atributu CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-cl
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvky pro výběr data a času vytvoří podřízený ovládací prvek měsíčního kalendáře, když uživatel klikne na šipku rozevíracího seznamu. `CMonthCalCtrl` Když objekt již není potřeba, je zničen, takže vaše aplikace nesmí spoléhat na uložení objektu představujícího měsíc podřízeného kalendáře ovládacího prvku Výběr data a času.
+Ovládací prvky pro výběr data a času vytvoří podřízený ovládací prvek měsíčního kalendáře, když uživatel klikne na šipku rozevíracího seznamu. Když objekt `CMonthCalCtrl` již není potřeba, je zničen, takže aplikace nesmí spoléhat na uložení objektu představujícího měsíc podřízeného kalendáře ovládacího prvku Výběr data a času.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]
 
-##  <a name="getmonthcalfont"></a>  CDateTimeCtrl::GetMonthCalFont
+##  <a name="getmonthcalfont"></a>Atributu CDateTimeCtrl:: GetMonthCalFont
 
 Načte písmo aktuálně používané ovládacím prvkem měsíční kalendář pro výběr data a času.
 
@@ -277,7 +277,7 @@ Ukazatel na objekt [CFont –](../../mfc/reference/cfont-class.md) nebo hodnota 
 
 ### <a name="remarks"></a>Poznámky
 
-`CFont` Objekt, na který je odkazováno návratovou hodnotou, je dočasný objekt a je zničen během příštího nečinnosti při zpracování.
+Objekt `CFont` odkazoval návratovou hodnotou je dočasný objekt a je zničen během příštího nečinného času zpracování.
 
 ##  <a name="getmonthcalstyle"></a>Atributu CDateTimeCtrl:: GetMonthCalStyle
 
@@ -312,26 +312,26 @@ DWORD GetRange(
 ### <a name="parameters"></a>Parametry
 
 *pMinRange*<br/>
-Ukazatel na objekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) , který obsahuje Nejdřívější čas `CDateTimeCtrl` povolený v objektu.
+Ukazatel na objekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) , který obsahuje Nejdřívější čas povolený v objektu `CDateTimeCtrl`.
 
 *pMaxRange*<br/>
-Ukazatel na `COleDateTime` objekt `CTime` nebo objekt obsahující `CDateTimeCtrl` nejnovější čas povolený v objektu.
+Ukazatel na objekt `COleDateTime` nebo objekt `CTime` obsahující nejnovější čas povolený v objektu `CDateTimeCtrl`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota DWORD obsahující příznaky, které označují, které rozsahy jsou nastaveny. If
+Hodnota DWORD obsahující příznaky, které označují, které rozsahy jsou nastaveny. Pokud uživatel
 
-`return value & GDTR_MAX` == 0
+`return value & GDTR_MAX` = = 0
 
 pak je druhý parametr platný. Podobně, pokud
 
-`return value & GDTR_MIN` == 0
+`return value & GDTR_MIN` = = 0
 
 pak je první parametr platný.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [DTM_GETRANGE](/windows/win32/Controls/dtm-getrange), jak je popsáno v Windows SDK. V implementaci knihovny MFC můžete zadat buď `COleDateTime` nebo `CTime` použití.
+Tato členská funkce implementuje chování zprávy Win32 [DTM_GETRANGE](/windows/win32/Controls/dtm-getrange), jak je popsáno v Windows SDK. V implementaci knihovny MFC můžete zadat buď `COleDateTime`, nebo `CTime` použití.
 
 ### <a name="example"></a>Příklad
 
@@ -339,7 +339,7 @@ Tato členská funkce implementuje chování zprávy Win32 [DTM_GETRANGE](/windo
 
 ##  <a name="gettime"></a>Atributu CDateTimeCtrl:: GetTime
 
-Načte aktuálně vybraný čas z ovládacího prvku pro výběr data a času a vloží ho do zadané `SYSTEMTIME` struktury.
+Načte aktuálně vybraný čas z ovládacího prvku pro výběr data a času a umístí jej do zadané struktury `SYSTEMTIME`.
 
 ```
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -349,7 +349,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 
 ### <a name="parameters"></a>Parametry
 
-*timeDest*<br/>
+*Časově omezená*<br/>
 V první verzi odkaz na objekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , který obdrží informace o čase systému. Ve druhé verzi odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) , který obdrží informace o čase systému.
 
 *pTimeDest*<br/>
@@ -357,13 +357,13 @@ Ukazatel na strukturu [SYSTEMTIME –](/windows/win32/api/minwinbase/ns-minwinba
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V první verzi, nenulové, pokud je čas úspěšně zapsán do `COleDateTime` objektu; jinak 0. Ve druhé a třetí verzi se hodnota DWORD rovná sadě členů *dwFlag* ve struktuře [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) . Další informace najdete níže v části s poznámkami.
+V první verzi, nenulové, pokud je čas úspěšně zapsán do objektu `COleDateTime`; v opačném případě 0. Ve druhé a třetí verzi se hodnota DWORD rovná sadě členů *dwFlag* ve struktuře [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) . Další informace najdete níže v části s **poznámkami** .
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [DTM_GETSYSTEMTIME](/windows/win32/Controls/dtm-getsystemtime), jak je popsáno v Windows SDK. V implementaci knihovny MFC systému `GetTime`lze použít `COleDateTime` třídy nebo `CTime` , nebo můžete použít `SYSTEMTIME` strukturu pro uložení informací o času.
+Tato členská funkce implementuje chování zprávy Win32 [DTM_GETSYSTEMTIME](/windows/win32/Controls/dtm-getsystemtime), jak je popsáno v Windows SDK. V implementaci knihovny MFC `GetTime`lze použít třídy `COleDateTime` nebo `CTime`, případně můžete použít strukturu `SYSTEMTIME` k uložení informací o času.
 
-Návratová hodnota DWORD v druhé a třetí verzi (výše) označuje, zda je ovládací prvek pro výběr data a času nastaven na stav "bez data", jak je uvedeno v členu struktury [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) *dwFlags*. Pokud se hodnota vrátí jako GDT_NONE, ovládací prvek je nastaven na hodnotu "bez data" a použije styl DTS_SHOWNONE. Pokud se hodnota vrátí jako GDT_VALID, je systémový čas úspěšně uložen do cílového umístění.
+Návratová hodnota DWORD v druhé a třetí verzi (výše) označuje, zda je ovládací prvek pro výběr data a času nastaven na stav "bez data", jak je uvedeno v členu struktury [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) *dwFlags*. Pokud se hodnota vrátí GDT_NONE, je ovládací prvek nastaven na hodnotu "bez data" a používá DTS_SHOWNONE styl. Pokud se hodnota vrátila jako GDT_VALID, je systémový čas úspěšně uložen do cílového umístění.
 
 ### <a name="example"></a>Příklad
 
@@ -393,7 +393,7 @@ Tato metoda pošle zprávu [DTM_GETIDEALSIZE](/windows/win32/Controls/dtm-getide
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou *m_dateTimeCtrl*, která se používá k programovému přístupu k ovládacímu prvku pro výběr data a času. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, *m_dateTimeCtrl*, která se používá pro programový přístup k ovládacímu prvku pro výběr data a času. Tato proměnná se používá v následujícím příkladu.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 hodnota typu **int** určující, která oblast ovládacího prvku měsíční kalendář se má nastavit. Tato hodnota může být jedna z následujících.
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |MCSC_BACKGROUND|Nastaví barvu pozadí zobrazenou mezi měsíci.|
 |MCSC_MONTHBK|Nastaví barvu pozadí zobrazenou v rámci měsíce.|
@@ -497,7 +497,7 @@ Tato členská funkce implementuje chování zprávy Win32 [DTM_SETMCFONT](/wind
 [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]
 
 > [!NOTE]
->  Pokud použijete tento kód, budete chtít vytvořit člena vaší `CDialog`odvozené třídy s názvem *m_MonthFont* typu. `CFont`
+>  Použijete-li tento kód, budete chtít vytvořit člena vaší `CDialog`odvozené třídy nazvané *m_MonthFont* typu `CFont`.
 
 ##  <a name="setmonthcalstyle"></a>Atributu CDateTimeCtrl:: SetMonthCalStyle
 
@@ -523,7 +523,7 @@ Tato metoda pošle zprávu [DTM_SETMCSTYLE](/windows/win32/Controls/dtm-setmcsty
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou *m_dateTimeCtrl*, která se používá k programovému přístupu k ovládacímu prvku pro výběr data a času. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, *m_dateTimeCtrl*, která se používá pro programový přístup k ovládacímu prvku pro výběr data a času. Tato proměnná se používá v následujícím příkladu.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -550,10 +550,10 @@ BOOL SetRange(
 ### <a name="parameters"></a>Parametry
 
 *pMinRange*<br/>
-Ukazatel na objekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) , který obsahuje Nejdřívější čas `CDateTimeCtrl` povolený v objektu.
+Ukazatel na objekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) , který obsahuje Nejdřívější čas povolený v objektu `CDateTimeCtrl`.
 
 *pMaxRange*<br/>
-Ukazatel na `COleDateTime` objekt `CTime` nebo objekt obsahující `CDateTimeCtrl` nejnovější čas povolený v objektu.
+Ukazatel na objekt `COleDateTime` nebo objekt `CTime` obsahující nejnovější čas povolený v objektu `CDateTimeCtrl`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -561,7 +561,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [DTM_SETRANGE](/windows/win32/Controls/dtm-setrange), jak je popsáno v Windows SDK. V implementaci knihovny MFC můžete zadat buď `COleDateTime` nebo `CTime` použití. Pokud má `COleDateTime` objekt stav null, rozsah bude odstraněn. Pokud je `COleDateTime` ukazatel nebo ukazatel null, rozsah se odebere. `CTime`
+Tato členská funkce implementuje chování zprávy Win32 [DTM_SETRANGE](/windows/win32/Controls/dtm-setrange), jak je popsáno v Windows SDK. V implementaci knihovny MFC můžete zadat buď `COleDateTime`, nebo `CTime` použití. Pokud má objekt `COleDateTime` stav NULL, rozsah bude odstraněn. Pokud je ukazatel `CTime` nebo ukazatel `COleDateTime` NULL, rozsah se odebere.
 
 ### <a name="example"></a>Příklad
 
@@ -591,13 +591,13 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [DTM_SETSYSTEMTIME](/windows/win32/Controls/dtm-setsystemtime), jak je popsáno v Windows SDK. V implementaci knihovny MFC systému `SetTime`lze `COleDateTime` použít třídy nebo `CTime` , nebo můžete použít `SYSTEMTIME` strukturu pro nastavení časových údajů.
+Tato členská funkce implementuje chování zprávy Win32 [DTM_SETSYSTEMTIME](/windows/win32/Controls/dtm-setsystemtime), jak je popsáno v Windows SDK. V implementaci knihovny MFC `SetTime`lze použít třídy `COleDateTime` nebo `CTime`, případně můžete použít strukturu `SYSTEMTIME` k nastavení časových údajů.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CMNCTRL1 Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451667"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876130"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants namespace
+# <a name="regex_constants-namespace"></a>regex_constants – obor názvů
 
 Obor názvů pro příznaky regulárního výrazu
 
@@ -115,11 +115,11 @@ Obor názvů `regex_constants` zapouzdřuje několik typů příznaků a jejich 
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> regulárního výrazu
+**Header:** \<Regex >
 
 **Obor názvů:** std
 
-## <a name="error_type"></a>  regex_constants::error_type
+## <a name="error_type"></a>regex_constants:: error_type
 
 Příznaky pro vytváření sestav chyb syntaxe regulárních výrazů.
 
@@ -148,39 +148,39 @@ enum error_type
 
 Typ je výčtový typ, který popisuje objekt, který může obsahovat příznaky chyby. Jednotlivé hodnoty příznaku jsou:
 
-`error_backref`--výraz obsahoval neplatný odkaz zpět.
+`error_backref` – výraz obsahoval neplatný odkaz zpět.
 
-`error_badbrace`--výraz obsahoval neplatný počet ve výrazu {}.
+`error_badbrace` – výraz obsahoval neplatný počet ve výrazu {}.
 
-`error_badrepeat`--výraz opakování (jedna z těchto ' * ', ' ', ' + ', ' {' v největším kontextu) nebyl před výrazem.
+`error_badrepeat` – výraz opakování (jedna z těchto ' * ', ' ', ' + ', ' {' v největším kontextu) nebyl před výrazem.
 
-`error_brace`--výraz obsahoval nespárované "{" nebo "}"
+`error_brace` – výraz obsahoval nespárované "{" nebo "}"
 
-`error_brack`--výraz obsahoval nespárované závorky [nebo].
+`error_brack` – výraz obsahoval nespárované závorky [nebo].
 
-`error_collate`--výraz obsahoval neplatný název řadicího elementu.
+`error_collate` – výraz obsahoval neplatný název řadicího elementu.
 
-`error_complexity`--shoda se nezdařila, protože byla příliš složitá.
+`error_complexity` – pokus o shodu se nezdařil, protože byl příliš složitý.
 
-`error_ctype`--výraz obsahoval neplatný název třídy znaků.
+`error_ctype` – výraz obsahoval neplatný název třídy znaků.
 
-`error_escape`--výraz obsahoval neplatnou řídicí sekvenci.
+`error_escape` – výraz obsahoval neplatnou řídicí sekvenci.
 
-`error_paren`--výraz obsahoval nespárovaný znak (nebo).
+`error_paren` – výraz obsahoval nespárované klíčové slovo (nebo).
 
-`error_parse`--výraz se nepovedlo analyzovat.
+`error_parse` – výraz se nepovedlo analyzovat.
 
-`error_range`--výraz obsahoval Neplatný specifikátor rozsahu znaků.
+`error_range` – výraz obsahoval Neplatný specifikátor rozsahu znaků.
 
-`error_space`--Analýza regulárního výrazu se nezdařila, protože k dispozici není dostatek prostředků.
+`error_space` – analýza regulárního výrazu se nezdařila, protože k dispozici není dostatek prostředků.
 
-`error_stack`--shoda se nezdařila, protože k dispozici není dostatek paměti.
+`error_stack` – pokus o shodu se nezdařil, protože není k dispozici dostatek paměti.
 
-`error_syntax`--při analýze došlo k chybě syntaxe.
+`error_syntax` – při syntaktické chybě se nepovedlo analyzovat chybu.
 
-`error_backref`--výraz obsahoval neplatný odkaz zpět.
+`error_backref` – výraz obsahoval neplatný odkaz zpět.
 
-## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+## <a name="match_flag_type"></a>regex_constants:: match_flag_type
 
 Příznaky pro možnosti odpovídajícího regulárního výrazu.
 
@@ -212,33 +212,33 @@ Možnosti shody jsou:
 
 `match_default`
 
-`match_not_bol`--nepovažuje první pozici v cílové sekvenci za začátek řádku.
+`match_not_bol` – nepovažuje první pozici v cílové sekvenci za začátek řádku.
 
-`match_not_eol`--nepovažuje za konec řádku pozici za poslední a koncovou pozicí v cílové sekvenci.
+`match_not_eol` – nepovažuje za konec řádku pozici za poslední a koncovou pozicí v cílové sekvenci.
 
-`match_not_bow`– nepovažujte první pozici v cílové sekvenci za začátek slova.
+`match_not_bow` – nepovažuje první pozici v cílové sekvenci za začátek slova.
 
-`match_not_eow`--nepovažuje za konec slova pozici za poslední a koncovou pozicí v cílové sekvenci.
+`match_not_eow` – nepovažujte za konec slova na pozici za poslední a koncovou pozicí v cílové sekvenci.
 
-`match_any`--Pokud je možné, že je k dispozici více než jedna shoda, je přijatelná shoda.
+`match_any` – Pokud je možné, že je k dispozici více než jedna shoda, je přijatelná shoda.
 
-`match_not_null`nepovažujte za shodu prázdnou dílčí sekvenci.
+`match_not_null` – nepovažuje se za shodu prázdnou dílčí sekvenci.
 
-`match_continuous`--Nevyhledávat shody jiné než na začátku cílové sekvence
+`match_continuous` – Nevyhledávat shody jiné než na začátku cílové sekvence
 
-`match_prev_avail` -- `--first`je platný iterátor; ignorovat `match_not_bol` a`match_not_bow` v případě nastavení
+`match_prev_avail` -- `--first` je platný iterátor; ignorovat `match_not_bol` a `match_not_bow`, pokud je nastavená
 
 Příznaky formátu jsou:
 
-`format_default`--použít pravidla formátu ECMAScript
+`format_default` – použít pravidla formátu ECMAScript
 
-`format_sed`--použít pravidla formátu SED
+`format_sed` – použít pravidla formátu SED
 
-`format_no_copy`nekopíruje text, který se neshoduje s regulárním výrazem.
+`format_no_copy` – nekopíruje text, který se neshoduje s regulárním výrazem.
 
-`format_first_only`--Nevyhledávat shody za první z nich
+`format_first_only` – nehledat shody za první z nich
 
-## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+## <a name="syntax_option_type"></a>regex_constants:: syntax_option_type
 
 Příznaky pro výběr možností syntaxe
 
@@ -266,35 +266,35 @@ Typ je typ maskování, který popisuje specifikátory jazyka a modifikátory sy
 
 Specifikátory jazyka jsou:
 
-`ECMAScript`--kompilovat jako ECMAScript
+`ECMAScript` – zkompilovat jako ECMAScript
 
-`basic`--kompilovat jako BRE
+`basic` – kompilovat jako BRE
 
-`extended`--kompilovat jako ERE
+`extended` – kompilovat jako ERE
 
-`awk`--kompilovat jako awk mají
+`awk` – kompilovat jako awk mají
 
-`grep`--kompilovat jako grep
+`grep` – zkompilovat jako grep
 
-`egrep`--kompilovat jako egrep
+`egrep` – kompilovat jako egrep
 
 Modifikátory syntaxe jsou:
 
-`icase`– Zajistěte, aby odpovídaly malá a velká písmena.
+`icase` – zajistěte, aby odpovídaly malá a velká písmena
 
-`nosubs`--implementaton nemusí sledovat obsah skupin zachycení.
+`nosubs` – implementaton nemusí sledovat obsah skupin zachycení
 
-`optimize`--Implementace by měla zdůraznit rychlost porovnání namísto rychlosti kompilace regulárního výrazu.
+`optimize` – implementace by měla zdůraznit rychlost porovnání namísto rychlosti kompilace regulárního výrazu.
 
-`collate`--Udělejte shodu s národním prostředím.
+`collate` – zajistěte shodu s národním prostředím
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<regex>](../standard-library/regex.md)\
-[regex_error – třída](../standard-library/regex-error-class.md)\
-[\<regulární funkce >](../standard-library/regex-functions.md)\
-[regex_iterator – třída](../standard-library/regex-iterator-class.md)\
-[\<operátory > Regex](../standard-library/regex-operators.md)\
-[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)\
-[regex_traits – třída](../standard-library/regex-traits-class.md)\
+[\<regulárního výrazu >](../standard-library/regex.md)\
+[regex_error\ třídy](../standard-library/regex-error-class.md)
+[\<funkce regulárního výrazu >](../standard-library/regex-functions.md)\
+[regex_iterator\ třídy](../standard-library/regex-iterator-class.md)
+[\<operátory regulárního výrazu >](../standard-library/regex-operators.md)\
+[regex_token_iterator\ třídy](../standard-library/regex-token-iterator-class.md)
+[regex_traits\ třídy](../standard-library/regex-traits-class.md)
 [\<Regex > definice typedef](../standard-library/regex-typedefs.md)

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
 ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497751"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857137"
 ---
 # <a name="catlmodule-class"></a>CAtlModule – třída
 
@@ -41,14 +41,14 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|Konstruktor|
-|[CAtlModule::~CAtlModule](#dtor)|Destruktor.|
+|[CAtlModule:: ~ CAtlModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Tuto metodu přepište, pokud chcete přidat parametry do náhradní mapy komponenty registru ATL (registrátor).|
 |[CAtlModule::AddTermFunc](#addtermfunc)|Přidá novou funkci, která bude volána, když se modul ukončí.|
@@ -58,15 +58,15 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |[CAtlModule:: Term](#term)|Uvolní všechny datové členy.|
 |[CAtlModule:: Unlock](#unlock)|Sníží počet zámků.|
 |[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu.|
-|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Tato metoda je volána nástrojem `UpdateRegistryFromResourceD` k provedení aktualizace registru.|
+|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Tato metoda je volána `UpdateRegistryFromResourceD` k provedení aktualizace registru.|
 |[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu. Tato metoda staticky odkazuje na komponentu registru ATL.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CAtlModule::m_libid](#m_libid)|Obsahuje identifikátor GUID aktuálního modulu.|
-|[CAtlModule::m_pGIT](#m_pgit)|Ukazatel na tabulku globálních rozhraní.|
+|[CAtlModule:: m_libid](#m_libid)|Obsahuje identifikátor GUID aktuálního modulu.|
+|[CAtlModule:: m_pGIT](#m_pgit)|Ukazatel na tabulku globálních rozhraní.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -101,7 +101,7 @@ Rezervovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -122,12 +122,12 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 *pFunc*<br/>
 Ukazatel na funkci, kterou chcete přidat.
 
-*dw*<br/>
+*DW*<br/>
 Data definovaná uživatelem, která jsou předána do funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ##  <a name="catlmodule"></a>CAtlModule::CAtlModule
 
@@ -168,7 +168,7 @@ Ukazatel na proměnnou, která získá ukazatel na globální tabulku rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybový kód při selhání. E_POINTER se vrátí, pokud je *ppGIT* rovno null.
+Vrátí S_OK při úspěchu nebo chybový kód při selhání. E_POINTER se vrátí, pokud je *ppGIT* ROVNO hodnotě null.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -202,7 +202,7 @@ virtual LONG Lock() throw();
 
 Zvýší počet zámků a vrátí aktualizovanou hodnotu. Tato hodnota může být užitečná pro diagnostiku a ladění.
 
-##  <a name="m_libid"></a>CAtlModule::m_libid
+##  <a name="m_libid"></a>CAtlModule:: m_libid
 
 Obsahuje identifikátor GUID aktuálního modulu.
 
@@ -210,7 +210,7 @@ Obsahuje identifikátor GUID aktuálního modulu.
 static GUID m_libid;
 ```
 
-##  <a name="m_pgit"></a>CAtlModule::m_pGIT
+##  <a name="m_pgit"></a>CAtlModule:: m_pGIT
 
 Ukazatel na tabulku globálních rozhraní.
 
@@ -274,7 +274,7 @@ Ukazatel na náhradní mapu ukládá hodnoty přidružené k nahraditelným para
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -286,7 +286,7 @@ Tato metoda volá [CAtlModule:: UpdateRegistryFromResourceDHelper](#updateregist
 
 ##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper
 
-Tato metoda je volána nástrojem `UpdateRegistryFromResourceD` k provedení aktualizace registru.
+Tato metoda je volána `UpdateRegistryFromResourceD` k provedení aktualizace registru.
 
 ```
 inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
@@ -308,7 +308,7 @@ Ukazatel na náhradní mapu ukládá hodnoty přidružené k nahraditelným para
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -346,13 +346,13 @@ Ukazatel na náhradní mapu ukládá hodnoty přidružené k nahraditelným para
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Podobně jako [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) s `CAtlModule::UpdateRegistryFromResourceS` tím rozdílem, že vytvoří statický odkaz na komponentu registru ATL (registrátor).
+Podobně jako [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) s výjimkou `CAtlModule::UpdateRegistryFromResourceS` vytvoří statický odkaz na komponentu registru ATL (registrátor).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)<br/>

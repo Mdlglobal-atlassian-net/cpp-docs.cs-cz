@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkce&gt; vlákna'
+title: funkce&gt; &lt;vlákna
 ms.date: 11/04/2016
 f1_keywords:
 - thread/std::get_id
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458504"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876166"
 ---
-# <a name="ltthreadgt-functions"></a>&lt;funkce&gt; vlákna
+# <a name="ltthreadgt-functions"></a>funkce&gt; &lt;vlákna
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+|[adresu](#swap)|[yield](#yield)|
 
 ## <a name="get_id"></a>get_id
 
@@ -57,7 +57,7 @@ Objekt [Duration](../standard-library/duration-class.md) , který určuje časov
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce blokuje volající vlákno alespoň v čase určeném funkcí *Rel_time*. Tato funkce nevyvolá žádné výjimky.
+Funkce blokuje volající vlákno alespoň v čase určeném pomocí *Rel_time*. Tato funkce nevyvolá žádné výjimky.
 
 ## <a name="sleep_until"></a>sleep_until
 
@@ -89,15 +89,15 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Zbývá*\
+*Levý*\
 Levý objekt **vlákna** .
 
-*Kliknutím*\
+*Pravé*\
 Pravý objekt **vlákna** .
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `Left.swap(Right)`funkce.
+Funkce volá `Left.swap(Right)`.
 
 ## <a name="yield"></a>Výsledkem
 
@@ -107,6 +107,6 @@ Signalizuje operačnímu systému, aby spouštěl další vlákna, i v případ�
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<> vlákna](../standard-library/thread.md)
+[> \<vlákna](../standard-library/thread.md)

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927759"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857135"
 ---
 # <a name="iregistrar-interface"></a>Rozhraní IRegistrar
 
@@ -40,7 +40,7 @@ Další podrobnosti najdete v tématu [Použití nahraditelných parametrů (pre
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Zaregistruje prostředek. |
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Zruší registraci prostředku.|
@@ -135,7 +135,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití nahraditelných parametrů (preprocesor registrátoru)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)<br/>
