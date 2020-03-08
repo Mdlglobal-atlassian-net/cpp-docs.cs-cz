@@ -1,5 +1,5 @@
 ---
-title: '&lt;operátory&gt; mapování'
+title: operátory&gt; &lt;map
 ms.date: 03/27/2019
 f1_keywords:
 - map/std::operator!=
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956966"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883955"
 ---
-# <a name="ltmapgt-operators"></a>&lt;operátory&gt; mapování
+# <a name="ltmapgt-operators"></a>operátory&gt; &lt;map
 
 ## <a name="op_neq"></a>! = – operátor
 
@@ -37,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_lt"></a>podnikatel&lt;
+## <a name="op_lt"></a>operátor&lt;
 
 Testuje, zda je objekt mapy na levé straně operátoru menší než objekt mapy na pravé straně.
 
@@ -102,10 +102,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a>podnikatel&lt;=
+## <a name="op_lt_eq"></a>operátor&lt;=
 
 Testuje, zda je objekt mapy na levé straně operátoru menší než nebo roven objektu mapy na pravé straně.
 
@@ -167,10 +167,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -235,10 +235,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_gt"></a>podnikatel&gt;
+## <a name="op_gt"></a>operátor&gt;
 
 Testuje, zda je objekt mapy na levé straně operátoru větší než objekt mapy na pravé straně.
 
@@ -300,10 +300,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -352,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="op_gt_eq"></a>podnikatel&gt;=
+## <a name="op_gt_eq"></a>operátor&gt;=
 
 Testuje, zda je objekt mapy na levé straně operátoru větší než nebo roven objektu mapy na pravé straně.
 
@@ -364,10 +364,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -432,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="op_lt_multimap"></a>podnikatel&lt;
+## <a name="op_lt_multimap"></a>operátor&lt;
 
 Testuje, zda je objekt multimap na levé straně operátoru menší než objekt multimap na pravé straně.
 
@@ -497,10 +497,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -550,7 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-## <a name="op_lt_eq_multimap"></a>podnikatel&lt;=
+## <a name="op_lt_eq_multimap"></a>operátor&lt;=
 
 Testuje, zda je objekt multimap na levé straně operátoru menší než nebo roven objektu multimap na pravé straně.
 
@@ -562,10 +562,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -630,10 +630,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="op_gt_multimap"></a>podnikatel&gt;
+## <a name="op_gt_multimap"></a>operátor&gt;
 
 Testuje, zda je objekt multimap na levé straně operátoru větší než objekt multimap na pravé straně.
 
@@ -695,10 +695,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a>podnikatel&gt;=
+## <a name="op_gt_eq_multimap"></a>operátor&gt;=
 
 Testuje, zda je objekt multimap na levé straně operátoru větší než nebo roven objektu multimap na pravé straně.
 
@@ -760,10 +760,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
