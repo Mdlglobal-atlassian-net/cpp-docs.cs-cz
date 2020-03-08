@@ -1,5 +1,5 @@
 ---
-title: '&lt;výjimka&gt; funkce'
+title: '&lt;&gt; funkce výjimky'
 ms.date: 11/04/2016
 f1_keywords:
 - exception/std::current_exception
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
 ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246059"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854900"
 ---
-# <a name="ltexceptiongt-functions"></a>&lt;výjimka&gt; funkce
+# <a name="ltexceptiongt-functions"></a>&lt;&gt; funkce výjimky
 
-## <a name="current_exception"></a> current_exception
+## <a name="current_exception"></a>current_exception
 
 Získá inteligentní ukazatel na aktuální výjimku.
 
@@ -43,21 +43,21 @@ exception_ptr current_exception();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) ukazující na aktuální výjimku.
+Objekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) ukazující na aktuální výjimku.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `current_exception` funkce v bloku catch. Je-li výjimka v letu a blok catch může zachytit výjimku, `current_exception` vrací funkce `exception_ptr` objekt, který na výjimku odkazuje. V opačném případě vrátí hodnotu null `exception_ptr` objektu.
+Volání funkce `current_exception` v bloku catch. Je-li výjimka v letu a blok catch může výjimku zachytit, funkce `current_exception` vrátí objekt `exception_ptr`, který na výjimku odkazuje. V opačném případě funkce vrátí objekt `exception_ptr` s hodnotou null.
 
-`current_exception` Funkce zachytí výjimku, která je v letu, bez ohledu na to, zda **catch** příkaz určuje, [deklarace výjimky](../cpp/try-throw-and-catch-statements-cpp.md) příkazu.
+Funkce `current_exception` zachycuje výjimku, která je v letadle bez ohledu na to, zda příkaz **catch** Určuje příkaz [deklarace výjimky](../cpp/try-throw-and-catch-statements-cpp.md) .
 
-Na konci je volán destruktor aktuální výjimky **catch** blokovat, pokud není výjimka znovu. Ale i v případě, že zavoláte `current_exception` fungovat v destruktoru vrátí funkce hodnotu `exception_ptr` objekt, který odkazuje na aktuální výjimku.
+Destruktor pro aktuální výjimku je volána na konci bloku **catch** , pokud výjimku nevyvoláte znovu. Nicméně i v případě, že zavoláte funkci `current_exception` v destruktoru, funkce vrátí objekt `exception_ptr`, který odkazuje na aktuální výjimku.
 
-Následná volání `current_exception` funkce vrátit `exception_ptr` objekty, které odkazují na různé kopie aktuální výjimky. V důsledku toho se objekty při porovnání jeví jako nerovné, protože odkazují na jiné kopie, i přesto, že kopie mají stejné binární hodnoty.
+Po sobě jdoucí volání funkce `current_exception` vrací objekty `exception_ptr`, které odkazují na různé kopie aktuální výjimky. V důsledku toho se objekty při porovnání jeví jako nerovné, protože odkazují na jiné kopie, i přesto, že kopie mají stejné binární hodnoty.
 
-## <a name="make_exception_ptr"></a> make_exception_ptr
+## <a name="make_exception_ptr"></a>make_exception_ptr
 
-Vytvoří [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) objekt, který obsahuje kopii výjimky.
+Vytvoří objekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) , který obsahuje kopii výjimky.
 
 ```cpp
 template <class E>
@@ -67,19 +67,19 @@ template <class E>
 ### <a name="parameters"></a>Parametry
 
 *S výjimkou*\
-Třída s výjimkou pro kopírování Obvykle, zadejte [třída výjimky](../standard-library/exception-class.md) jako argument pro objekt `make_exception_ptr` fungovat, i když jakýkoli objekt třídy může být argumentem.
+Třída s výjimkou pro kopírování Obvykle určíte objekt [třídy výjimky](../standard-library/exception-class.md) jako argument funkce `make_exception_ptr`, i když libovolný objekt třídy může být argumentem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) ukazující na kopii aktuální výjimky pro *s výjimkou*.
+Objekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) , který odkazuje na kopii aktuální výjimky pro *s výjimkou*.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `make_exception_ptr` funkce je ekvivalentní k vyvolání C++ výjimky, jejímu zachycení v bloku catch a následným voláním [current_exception](../standard-library/exception-functions.md#current_exception) funkce, která se vrátí `exception_ptr` objekt, který na výjimku odkazuje. Implementace společnosti Microsoft `make_exception_ptr` funkce je efektivnější než vyvolávání a následné zachycování výjimky.
+Volání funkce `make_exception_ptr` je ekvivalentní k vyvolání C++ výjimky, jejímu zachycení v bloku catch a následným voláním funkce [current_exception](../standard-library/exception-functions.md#current_exception) pro vrácení objektu `exception_ptr`, který na výjimku odkazuje. Implementace funkce `make_exception_ptr` od Microsoftu je efektivnější než vyvolání a pak zachytí výjimku.
 
-Aplikace obvykle nevyžaduje, aby `make_exception_ptr` funkce a zabraňte jejich použití.
+Aplikace obvykle nevyžaduje funkci `make_exception_ptr` a neodrazí se k jejímu použití.
 
-## <a name="rethrow_exception"></a> rethrow_exception
+## <a name="rethrow_exception"></a>rethrow_exception
 
 Vyvolá výjimku předanou jako parametr.
 
@@ -90,23 +90,23 @@ void rethrow_exception(exception_ptr P);
 ### <a name="parameters"></a>Parametry
 
 *P*\
-Zachycená výjimka, kterou chcete znovu vyvolat. Pokud *P* nulový [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), funkce vyvolá [std::bad_exception](../standard-library/bad-exception-class.md).
+Zachycená výjimka, kterou chcete znovu vyvolat. Pokud *P* je [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)null, funkce vyvolá [std:: bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Poznámky
 
-Po uložení zachycené výjimky v `exception_ptr` objektu, může primární vlákno zpracovat objektu. V primárním vlákně, zavolejte `rethrow_exception` společně s funkcí `exception_ptr` objektu jako svůj argument. `rethrow_exception` Extrahuje výjimku z funkce `exception_ptr` objekt a potom vyvolá výjimku v kontextu primárního vlákna.
+Po uložení zachycené výjimky do objektu `exception_ptr` může primární vlákno objekt zpracovat. V primárním vlákně zavolejte funkci `rethrow_exception` společně s objektem `exception_ptr` jako jeho argument. Funkce `rethrow_exception` extrahuje výjimku z objektu `exception_ptr` a poté vyvolá výjimku v kontextu primárního vlákna.
 
-## <a name="get_terminate"></a> get_terminate –
+## <a name="get_terminate"></a>get_terminate
 
-Získá aktuální `terminate_handler` funkce.
+Získá aktuální funkci `terminate_handler`.
 
 ```cpp
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a> set_terminate
+## <a name="set_terminate"></a>set_terminate
 
-Vytvoří novou `terminate_handler` která se má volat při ukončení programu.
+Vytvoří nový `terminate_handler`, který se má volat při ukončení programu.
 
 ```cpp
 terminate_handler set_terminate(terminate_handler fnew) throw();
@@ -115,15 +115,15 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 ### <a name="parameters"></a>Parametry
 
 *fnew*\
-Funkce, která se má volat při ukončení.
+Funkce, která má být volána při ukončení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa předchozí funkci, která se používá k volání při ukončení.
+Adresa předchozí funkce, která se používá k volání při ukončení.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří novou funkci [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) jako funkce * *fnew*. Proto *fnew* nesmí být nulový ukazatel. Funkce vrátí adresu předchozí obslužnou rutinu ukončení.
+Funkce vytvoří novou [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) jako funkci * *fnew*. Proto *fnew* nesmí být ukazatel s hodnotou null. Funkce vrátí adresu předchozí obslužné rutiny ukončení.
 
 ### <a name="example"></a>Příklad
 
@@ -153,15 +153,15 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a> get_unexpected –
+## <a name="get_unexpected"></a>get_unexpected
 
-Získá aktuální `unexpected_handler` funkce.
+Získá aktuální funkci `unexpected_handler`.
 
 ```cpp
 unexpected_handler get_unexpected();
 ```
 
-## <a name="rethrow_if_nested"></a> rethrow_if_nested
+## <a name="rethrow_if_nested"></a>rethrow_if_nested
 
 ```cpp
 template <class E> 
@@ -170,11 +170,11 @@ template <class E>
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud není polymorfního typu třídy, nebo pokud `nested_exception` je nedostupný nebo nejednoznačný, neexistuje žádný vliv. V opačném případě provádí dynamické přetypování.
+Pokud není typ polymorfní třídy nebo pokud je `nested_exception` nepřístupná nebo nejednoznačná, neexistuje žádný vliv. V opačném případě provede dynamické přetypování.
 
-## <a name="set_unexpected"></a> set_unexpected
+## <a name="set_unexpected"></a>set_unexpected
 
-Vytvoří novou `unexpected_handler` bude při k neočekávané výjimce.
+Vytvoří nový `unexpected_handler`, který má být v případě, že došlo k neočekávané výjimce.
 
 ```cpp
 unexpected_handler set_unexpected(unexpected_handler fnew) throw();
@@ -183,7 +183,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 ### <a name="parameters"></a>Parametry
 
 *fnew*\
-Funkce se volá, když je došlo k neočekávané výjimce.
+Funkce, která má být volána, když dojde k neočekávané výjimce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -191,9 +191,9 @@ Adresa předchozí `unexpected_handler`.
 
 ### <a name="remarks"></a>Poznámky
 
-*fnew* nesmí být nulový ukazatel.
+*fnew* nesmí být ukazatel s hodnotou null.
 
-Standard jazyka C++ vyžaduje, aby `unexpected` se volá, když funkce vyvolá výjimku, která se nenachází ve svém seznamu vyvolání výjimky. Aktuální implementace to nepodporuje. Následující příklad volá `unexpected` přímo, který pak volá `unexpected_handler`.
+C++ Standard vyžaduje, aby `unexpected` volána, když funkce vyvolá výjimku, která není v seznamu throw. Aktuální implementace to nepodporuje. Následující příklad volá `unexpected` přímo, což pak volá `unexpected_handler`.
 
 ### <a name="example"></a>Příklad
 
@@ -220,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a> ukončit
+## <a name="terminate"></a>ruší
 
 Zavolá obslužnou rutinu ukončení.
 
@@ -230,15 +230,15 @@ void terminate();
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce volá obslužná rutina ukončení, – funkce typu **void**. Pokud `terminate` přímo volá obslužná rutina ukončení programu je ten poslední nastavení voláním [set_terminate](../standard-library/exception-functions.md#set_terminate). Pokud `terminate` je volána pro některý z několika důvodů během vyhodnocení výraz throw, obslužná rutina ukončení je v platnosti okamžitě po vyhodnocení výraz throw.
+Funkce volá obslužnou rutinu ukončení, funkci typu **void**. Pokud je `terminate` volána přímo programem, obslužná rutina ukončení je ta, která byla naposledy nastavena voláním [set_terminate](../standard-library/exception-functions.md#set_terminate). Pokud je při vyhodnocování výrazu throw volána metoda `terminate` pro některý z několika dalších důvodů, obslužná rutina ukončení je ta, která se projeví okamžitě po vyhodnocení výrazu throw.
 
-Obslužná rutina ukončení nesmí vracet volajícímu. Při spuštění programu, je obslužná rutina ukončení funkce, která volá `abort`.
+Obslužná rutina ukončení se nemůže vrátit volajícímu. Při spuštění programu je obslužná rutina ukončení funkce, která volá `abort`.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [set_unexpected](../standard-library/exception-functions.md#set_unexpected) příklad použití `terminate`.
+Příklad použití `terminate`naleznete v tématu [set_unexpected](../standard-library/exception-functions.md#set_unexpected) .
 
-## <a name="throw_with_nested"></a> throw_with_nested
+## <a name="throw_with_nested"></a>throw_with_nested
 
 ```cpp
 template <class T> [[noreturn]]
@@ -247,11 +247,11 @@ template <class T> [[noreturn]]
 
 ### <a name="remarks"></a>Poznámky
 
-Vyvolá výjimku s vnořené výjimky.
+Vyvolá výjimku s vnořenými výjimkami.
 
-## <a name="uncaught_exception"></a> uncaught_exception
+## <a name="uncaught_exception"></a>uncaught_exception
 
-Vrátí **true** pouze v případě, že je vyvolaná výjimka právě zpracovávána.
+Vrátí **hodnotu true** pouze v případě, že právě probíhá zpracování vyvolané výjimky.
 
 ```cpp
 bool uncaught_exception();
@@ -259,7 +259,7 @@ bool uncaught_exception();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí **true** po dokončení hodnocení výraz throw a před dokončením inicializace deklaraci výjimky v odpovídající obslužná rutina nebo volání [neočekávané](../standard-library/exception-functions.md#unexpected) kvůli výraz throw. Zejména `uncaught_exception` vrátí **true** při volání z destruktoru, který je právě vyvolána při unwind výjimek. Na zařízeních `uncaught_exception` je podporován pouze ve Windows CE 5.00 a vyšších verzích, včetně platforem Windows Mobile 2005.
+Vrátí **hodnotu pravda** po dokončení vyhodnocení výrazu throw a před dokončením inicializace deklarace výjimky v rámci vyhovující obslužné rutiny nebo volání [neočekávaného](../standard-library/exception-functions.md#unexpected) jako výsledek výrazu throw. Konkrétně `uncaught_exception` vrátí **hodnotu true** při volání z destruktoru, který je vyvolán během výjimky unwind. V zařízeních se `uncaught_exception` podporuje jenom v systém Windows CE 5,00 a vyšších verzích, včetně platforem Windows Mobile 2005.
 
 ### <a name="example"></a>Příklad
 
@@ -314,9 +314,9 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a> neočekávané
+## <a name="unexpected"></a>neočekávané
 
-Volá obslužnou rutinu neočekávané.
+Volá neočekávanou obslužnou rutinu.
 
 ```cpp
 void unexpected();
@@ -324,20 +324,20 @@ void unexpected();
 
 ### <a name="remarks"></a>Poznámky
 
-Standard jazyka C++ vyžaduje, aby `unexpected` se volá, když funkce vyvolá výjimku, která se nenachází ve svém seznamu vyvolání výjimky. Aktuální implementace to nepodporuje. Příklad volá `unexpected` přímo, která volá obslužnou rutinu neočekávané.
+C++ Standard vyžaduje, aby `unexpected` volána, když funkce vyvolá výjimku, která není v seznamu throw. Aktuální implementace to nepodporuje. Příklad volá `unexpected` přímo, která volá neočekávanou obslužnou rutinu.
 
-Funkce vyvolá obslužnou rutinu neočekávané, – funkce typu **void**. Pokud `unexpected` je volán přímo program obslužnou rutinu neočekávané je ten poslední nastavení voláním [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+Funkce volá neočekávanou obslužnou rutinu, funkci typu **void**. Pokud je `unexpected` volána přímo programem, je neočekávaná obslužná rutina ta, která byla naposledy nastavena voláním [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
 
-Obslužnou rutinu neočekávané nemusí vrátí výsledek volajícímu. To může ukončit provádění podle:
+Neočekávaná obslužná rutina se nemůže vrátit volajícímu. Může ukončit provádění pomocí:
 
-- Aktivační objekt typu uvedené v specifikace výjimky nebo objekt jakéhokoli typu, pokud volá obslužnou rutinu neočekávané přímo do programu.
+- Vyvolání objektu typu uvedeného ve specifikaci výjimky nebo objektu libovolného typu, pokud je neočekávaná obslužná rutina volána přímo programem.
 
-- Aktivační objekt typu [bad_exception –](../standard-library/bad-exception-class.md).
+- Došlo k vyvolání objektu typu [bad_exception](../standard-library/bad-exception-class.md).
 
-- Volání [ukončit](../standard-library/exception-functions.md#terminate), `abort` nebo **ukončit**(`int`).
+- Volání příkazu [ukončit](../standard-library/exception-functions.md#terminate), `abort` nebo **ukončit**(`int`).
 
-Při spuštění programu obslužnou rutinu neočekávané je funkce, která volá [ukončit](../standard-library/exception-functions.md#terminate).
+Při spuštění programu je neočekávaná obslužná rutina funkce, která volá funkci [ukončit](../standard-library/exception-functions.md#terminate).
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [set_unexpected](../standard-library/exception-functions.md#set_unexpected) příklad použití `unexpected`.
+Příklad použití `unexpected`naleznete v tématu [set_unexpected](../standard-library/exception-functions.md#set_unexpected) .

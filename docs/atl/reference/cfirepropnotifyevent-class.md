@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496942"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864915"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent Class
 
@@ -35,16 +35,16 @@ class CFirePropNotifyEvent
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|Tras Upozorní jímku kontejneru, že došlo ke změně vlastnosti ovládacího prvku.|
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|Tras Upozorní jímku kontejneru na změnu vlastnosti ovládacího prvku.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CFirePropNotifyEvent`má dvě metody, které oznamují jímku kontejneru, že došlo ke změně vlastnosti ovládacího prvku nebo se chystá změnit.
+`CFirePropNotifyEvent` má dvě metody, které upozorňují na jímku kontejneru, že došlo ke změně vlastnosti ovládacího prvku nebo se chystá změnit.
 
-Pokud třída implementující váš ovládací prvek `IPropertyNotifySink`je odvozena z `CFirePropNotifyEvent` , metody jsou vyvolány při `FireOnChanged`volání `FireOnRequestEdit` nebo. Pokud vaše třída ovládacího prvku není odvozena `IPropertyNotifySink`od, volání těchto funkcí vrátí S_OK.
+Pokud je třída implementovaná vaším ovládacím prvkem odvozena od `IPropertyNotifySink`, metody `CFirePropNotifyEvent` jsou vyvolány při volání `FireOnRequestEdit` nebo `FireOnChanged`. Pokud vaše třída ovládacího prvku není odvozena od `IPropertyNotifySink`, volání těchto funkcí vrátí S_OK.
 
 Další informace o vytváření ovládacích prvků naleznete v [kurzu ATL](../../atl/active-template-library-atl-tutorial.md).
 
@@ -63,7 +63,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-pro Ukazatel na `IUnknown` objekt, který odesílá oznámení.
+pro Ukazatel na `IUnknown` objektu odesílajícího oznámení.
 
 *dispID*<br/>
 pro Identifikátor vlastnosti, která se změnila.
@@ -87,7 +87,7 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-pro Ukazatel na `IUnknown` objekt, který odesílá oznámení.
+pro Ukazatel na `IUnknown` objektu odesílajícího oznámení.
 
 *dispID*<br/>
 pro Identifikátor vlastnosti, kterou chcete změnit.
@@ -100,6 +100,6 @@ Jedna ze standardních hodnot HRESULT.
 
 Tato funkce je bezpečná pro volání, i když váš ovládací prvek nepodporuje spojovací body.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přehled třídy](../../atl/atl-class-overview.md)

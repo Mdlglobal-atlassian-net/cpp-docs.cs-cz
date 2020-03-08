@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898712"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875819"
 ---
 # <a name="ltfilesystemgt-functions"></a>funkce&gt; systému souborů &lt;
 
@@ -105,7 +105,7 @@ Funkce vrátí absolutní cestu odpovídající *Pval* vzhledem k cestě `base`:
 
 1. Pokud `pval.has_root_name() && pval.has_root_directory()` vrátí funkce hodnotu *Pval*.
 
-1. Pokud funkce `pval.has_root_name() && !pval.has_root_directory()` vrátí `pval.root_name()` / `absolute(base).root_directory()` / `absolute(base).relative_path()` / .
+1. Pokud funkce `pval.has_root_name() && !pval.has_root_directory()` vrátí `pval.root_name()` / `absolute(base).root_directory()` / `absolute(base).relative_path()` / .`pval.relative_path()`
 
 1. Pokud `!pval.has_root_name() && pval.has_root_directory()` funkce vrátí `absolute(base).root_name()` / *Pval*.
 
@@ -150,11 +150,11 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 Funkce všechny mohou kopírovat nebo propojit jeden nebo více souborů *z* *na k pod kontrolou* *výslovný*, která je pořízena jako `copy_options::none` pro přetížení bez parametru *výslovný* . *výslovný* musí obsahovat nejvýše jednu z těchto:
 
-- `skip_existing`, `overwrite_existing` nebo `update_existing`
+- `skip_existing`, `overwrite_existing`nebo `update_existing`
 
-- `copy_symlinks` Nebo `skip_symlinks`
+- `copy_symlinks` nebo `skip_symlinks`
 
-- `directories_only`, `create_symlinks` nebo `create_hard_links`
+- `directories_only`, `create_symlinks`nebo `create_hard_links`
 
 Funkce nejprve určí file_status hodnoty `f` pro *od* a `t` *pro:*
 

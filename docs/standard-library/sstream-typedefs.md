@@ -1,5 +1,5 @@
 ---
-title: '&lt;sstream &gt; definice typedef'
+title: '&lt;sstream&gt; definice typedef'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::istringstream
@@ -12,13 +12,13 @@ f1_keywords:
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
 ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686285"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865913"
 ---
-# <a name="ltsstreamgt-typedefs"></a>&lt;sstream &gt; definice typedef
+# <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; definice typedef
 
 ||||
 |-|-|-|
@@ -122,6 +122,6 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 Typ je synonymum pro šablonu třídy [basic_stringstream](../standard-library/basic-stringstream-class.md)specializované pro prvky typu **wchar_t**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [\<sstream >](../standard-library/sstream.md)

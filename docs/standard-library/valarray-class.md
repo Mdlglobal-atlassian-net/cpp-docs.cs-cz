@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684099"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866246"
 ---
 # <a name="valarray-class"></a>valarray – třída
 
@@ -69,7 +69,7 @@ Zejména, mezi konstrukcí kopírování a výchozím konstrukcí, které násle
 |-|-|
 |[value_type](#value_type)|Typ, který představuje typ elementu uložený ve `valarray`.|
 
-### <a name="functions"></a>Funkce
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -96,10 +96,10 @@ Zejména, mezi konstrukcí kopírování a výchozím konstrukcí, které násle
 |[operator * = – operátor](#op_star_eq)|Vynásobí prvky zadaného `valarray` nebo hodnotu typu prvku, přítyp prvku, k operandu `valarray`.|
 |[operator + – operátor](#op_add)|Unární operátor, který používá znaménko plus pro každý prvek v `valarray`.|
 |[operator + = – operátor](#op_add_eq)|Přidá prvky zadaného `valarray` nebo hodnotu typu prvku, vhodné prvku, do operandu `valarray`.|
-|[podnikatel](#operator-)|Unární operátor, který u každého prvku v `valarray` aplikuje mínus.|
+|[podnikatel](#operator-)|Unární operátor, který u každého prvku v `valarray`aplikuje mínus.|
 |[-= – operátor](#operator-_eq)|Odečte prvky zadaného `valarray` nebo hodnotu typu prvku, z prvku, z operandu `valarray`.|
 |[operator/= – operátor](#op_div_eq)|Vydělí operand `valarray` elementu, který je ovlivněn prvky zadaného `valarray` nebo hodnotou typu prvku.|
-|[operátor =](#op_eq)|Přiřadí prvky `valarray`, jejichž hodnoty jsou zadány přímo nebo jako součást nějakého jiného `valarray` nebo `slice_array`, `gslice_array`, `mask_array` nebo `indirect_array`.|
+|[operátor =](#op_eq)|Přiřadí prvky `valarray`, jejichž hodnoty jsou zadány přímo nebo jako součást nějakého jiného `valarray` nebo `slice_array`, `gslice_array`, `mask_array`nebo `indirect_array`.|
 |[podnikatel&#91;&#93;](#op_at)|Vrátí odkaz na element nebo jeho hodnotu v zadaném indexu nebo v zadané podmnožině.|
 |[operátor ^ =](#op_xor_eq)|Získá výhradní logický operátor OR (`XOR`) pole s buď zadaným valarray nebo hodnotou typu prvku.|
 |[operátor&#124;=](#op_or_eq)|Získá bitové `OR` prvků v poli buď pomocí odpovídajících prvků v zadaném `valarray` nebo s hodnotou typu prvku.|
@@ -129,7 +129,7 @@ Valarray, jehož prvky měly `_Func` aplikovaný na prvky valarray operandu.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí objekt třídy [valarray](../standard-library/valarray-class.md)  **\<Type >** [, jehož délka je](#size), každý z *jehož prvků je* `_Func((*this)[I])`.
+Členská funkce vrátí objekt třídy [valarray](../standard-library/valarray-class.md) **\<typ >** [, jehož délka je](#size), každý z *jehož prvků je* `_Func((*this)[I])`.
 
 ### <a name="example"></a>Příklad
 
@@ -191,7 +191,7 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Parametry
 
-*počet* \
+*počet*\
 Počet míst, po který mají být prvky posunuty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -292,7 +292,7 @@ Maximální hodnota prvků v operandu valarray.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce porovnává hodnoty pomocí **operátoru \<** nebo **operátoru >** mezi páry prvků třídy `Type`, pro které musí být pro prvek `Type` k dispozici operátory.
+Členská funkce porovnává hodnoty pomocí **operátoru\<** nebo **operátoru >** mezi páry prvků třídy `Type`, pro které musí být pro prvek `Type`k dispozici operátory.
 
 ### <a name="example"></a>Příklad
 
@@ -345,7 +345,7 @@ Minimální hodnota prvků v operandu valarray.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce porovnává hodnoty pomocí **operátoru \<** nebo **operátoru >** mezi páry prvků třídy `Type`, pro které musí být pro prvek `Type` k dispozici operátory.
+Členská funkce porovnává hodnoty pomocí **operátoru\<** nebo **operátoru >** mezi páry prvků třídy `Type`, pro které musí být pro prvek `Type`k dispozici operátory.
 
 ### <a name="example"></a>Příklad
 
@@ -454,7 +454,7 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Valarray nebo hodnota typu prvku se shoduje s hodnotou valarray operandu, která má být rozdělena, přechází na prvek, operand valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -509,7 +509,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="op_and_eq"></a>operátor &amp; =
+## <a name="op_and_eq"></a>operátor&amp;=
 
 Získá bitové **a** prvky v poli buď s odpovídajícími prvky v zadaném valarray nebo s hodnotou typu prvku.
 
@@ -521,7 +521,7 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Valarray nebo hodnota typu prvku se shoduje s typem operandu valarray, který má být kombinován, což je prvek ovlivněn logickým `AND` s operandem valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -582,7 +582,7 @@ The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
 ```
 
-## <a name="op_gt_gt_eq"></a>operátor &gt; &gt; =
+## <a name="op_gt_gt_eq"></a>operátor&gt;&gt;=
 
 Posune pravou hodnotu bitů pro každý prvek valarray operandu za zadaný počet pozic nebo podle prvku, který je určený druhým valarray.
 
@@ -594,7 +594,7 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Hodnota, která označuje množství pravého posunutí nebo valarray, jehož prvky ukazují množství správného posunu posunutého prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -653,7 +653,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="op_lt_lt_eq"></a>operátor &lt; &lt; =
+## <a name="op_lt_lt_eq"></a>operátor&lt;&lt;=
 
 Posune hodnotu bitů pro každý prvek valarray operandu a zadaného počtu pozic nebo podle prvku, který je určený druhým valarray.
 
@@ -665,7 +665,7 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Hodnota, která označuje množství levého posunu nebo valarray, jehož prvky označují množství posunutého posunu doleva.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -738,7 +738,7 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Valarray nebo hodnota typu elementu se shoduje s typem operandu valarray, který se má vynásobit, z prvku na operand valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -857,7 +857,7 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Valarray nebo hodnota typu prvku se shoduje s typem operandu valarray, který má být přidán, z prvku na operand valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -977,7 +977,7 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Valarray nebo hodnota typu elementu se shoduje s typem operandu valarray, který má být odečten, z operandů valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1044,7 +1044,7 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Valarray nebo hodnota typu prvku se shoduje s typem operandu valarray, který má být rozdělen, z prvku do operandu valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1101,7 +1101,7 @@ valarray: ( inf -50 25 -16.6667 12.5 -10 ).
 
 ## <a name="op_eq"></a>operátor =
 
-Přiřadí prvky do valarray, jehož hodnoty jsou zadány přímo nebo jako součást některých jiných valarray nebo v rámci slice_array, gslice_array, mask_array nebo indirect_array.
+Přiřadí prvky do valarray, jehož hodnoty jsou zadány přímo nebo jako součást nějakého jiného valarray nebo slice_array, gslice_array, mask_array nebo indirect_array.
 
 ```cpp
 valarray<Type>& operator=(const valarray<Type>& right);
@@ -1121,23 +1121,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Valarray ke zkopírování do valarray operandu.
 
 \ *Val*
 Hodnota, která má být přiřazena k prvkům valarray operandu.
 
-*_Slicearray* \
-Slice_array ke zkopírování do valarray operandu.
+*_Slicearray*\
+Slice_array pro zkopírování do operandu valarray.
 
-*_Gslicearray* \
-Gslice_array ke zkopírování do valarray operandu.
+*_Gslicearray*\
+Gslice_array pro zkopírování do operandu valarray.
 
-*_Maskarray* \
-Mask_array ke zkopírování do valarray operandu.
+*_Maskarray*\
+Mask_array pro zkopírování do operandu valarray.
 
-*_Indarray* \
-Indirect_array ke zkopírování do valarray operandu.
+*_Indarray*\
+Indirect_array pro zkopírování do operandu valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1237,20 +1237,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* \
+*_Off*\
 Index elementu, kterému má být přiřazena hodnota
 
-*_Slicearray* \
-Slice_array valarray, který určuje podmnožinu, která se má vybrat nebo vrátit do nového valarray.
+*_Slicearray*\
+Slice_array valarray, který určuje podmnožinu, která se má vybrat nebo vrátit k novému valarray.
 
-*_Gslicearray* \
-Gslice_array valarray, který určuje podmnožinu, která se má vybrat nebo vrátit do nového valarray.
+*_Gslicearray*\
+Gslice_array valarray, který určuje podmnožinu, která se má vybrat nebo vrátit k novému valarray.
 
-*_Boolarray* \
-Bool_array valarray, který určuje podmnožinu, která se má vybrat nebo vrátit do nového valarray.
+*_Boolarray*\
+Bool_array valarray, který určuje podmnožinu, která se má vybrat nebo vrátit k novému valarray.
 
-*_Indarray* \
-Indirect_array valarray, který určuje podmnožinu, která se má vybrat nebo vrátit do nového valarray.
+*_Indarray*\
+Indirect_array valarray, který určuje podmnožinu, která se má vybrat nebo vrátit k novému valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1258,7 +1258,7 @@ Odkaz na element nebo jeho hodnotu v zadaném indexu nebo v zadané podmnožině
 
 ### <a name="remarks"></a>Poznámky
 
-Členský operátor je přetížen, aby poskytoval několik způsobů výběru sekvencí prvků z těch, které jsou ovládány <strong>\*this</strong>. První skupina pěti členských operátorů pracuje ve spojení s různými přetíženími [operátoru =](#op_eq) (a jinými operátory přiřazení), aby bylo možné selektivní nahrazování (dělení) řízené sekvence. Vybrané elementy musí existovat.
+Členský operátor je přetížen, aby poskytoval několik způsobů výběru sekvencí prvků z těch, které jsou ovládány <strong>\*</strong>. První skupina pěti členských operátorů pracuje ve spojení s různými přetíženími [operátoru =](#op_eq) (a jinými operátory přiřazení), aby bylo možné selektivní nahrazování (dělení) řízené sekvence. Vybrané elementy musí existovat.
 
 Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definovaného jako 1 nebo 2 dojde k chybě modulu runtime, pokud se pokusíte o přístup k prvku mimo hranice valarray.  Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md) .
 
@@ -1278,7 +1278,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Valarray nebo hodnota typu prvku se shoduje s hodnotou valarray operandu, která má být kombinována, s prvkem, a to exkluzivní logickou **XOR** s operandem valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1353,7 +1353,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Valarray nebo hodnota typu prvku se shoduje s hodnotou valarray operandu, která má být kombinována, což je element `OR`-s operandem valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1440,7 +1440,7 @@ Valarray logických hodnot, které jsou bitové `NOT` hodnot prvků valarray ope
 
 Bitová operace se dá použít jenom k manipulaci s bity v datových typech **char** a **int** a variantách, ne na **float**, **Double**, **longdouble**, **void**, **bool** nebo jiném, složitějších datových typech.
 
-Bitový `NOT` má stejnou tabulku pravdy jako logický `NOT`, ale vztahuje se na datový typ na úrovni jednotlivých bitů. V případě *, že b je false* a hodnota false, pokud je hodnota *b* true *, má dané* *bity b hodnotu*true. Logický operátor **Not**[!](#op_not) platí na úrovni elementu, počítání všech nenulových hodnot jako **true**a výsledkem je valarray logických hodnot. Bitový `NOToperator~` naproti tomu může mít za následek valarray hodnoty jiné než 0 nebo 1, v závislosti na výsledku bitové operace.
+Bitový `NOT` má stejnou tabulku pravdy jako logický `NOT`, ale vztahuje se na datový typ na úrovni jednotlivých bitů. V případě *, že b je false* a hodnota false, pokud je hodnota *b* true *, má dané* *bity b hodnotu*true. Logický operátor **Not**[!](#op_not) platí na úrovni elementu, počítání všech nenulových hodnot jako **true**a výsledkem je valarray logických hodnot. Bitový `NOToperator~`naproti tomu může mít za následek valarray hodnoty jiné než 0 nebo 1, v závislosti na výsledku bitové operace.
 
 ### <a name="example"></a>Příklad
 
@@ -1538,7 +1538,7 @@ void resize(
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize* \
+*_Newsize*\
 Počet prvků v valarray se změněnou velikostí
 
 \ *Val*
@@ -1609,7 +1609,7 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Parametry
 
-*počet* \
+*počet*\
 Počet míst, po který mají být prvky posunuty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1811,8 +1811,8 @@ void swap(valarray& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
-@No__t_0, které poskytují prvky pro záměnu.
+*pravé*\
+`valarray`, které poskytují prvky pro záměnu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1860,44 +1860,44 @@ valarray(
 
 ### <a name="parameters"></a>Parametry
 
-*Počet* \
+*Počet*\
 Počet prvků, které mají být v valarray.
 
-@No__t_1 *Val*
+\ *Val*
 Hodnota, která se má použít při inicializaci prvků v valarray.
 
-@No__t_1 *PTR*
+\ *PTR*
 Ukazatel na hodnoty, které mají být použity k inicializaci prvků v valarray.
 
-*Pravé* \
+*Pravé*\
 Existující valarray pro inicializaci nového valarray.
 
-*SliceArray* \
-Slice_array, jehož hodnoty elementů mají být použity při inicializaci prvků valarray konstrukce.
+*SliceArray*\
+Slice_array, jejichž hodnoty elementů mají být použity při inicializaci prvků valarray konstrukce.
 
-*GsliceArray* \
-Gslice_array, jehož hodnoty elementů mají být použity při inicializaci prvků valarray konstrukce.
+*GsliceArray*\
+Gslice_array, jejichž hodnoty elementů mají být použity při inicializaci prvků valarray konstrukce.
 
-*MaskArray* \
-Mask_array, jehož hodnoty elementů mají být použity při inicializaci prvků valarray konstrukce.
+*MaskArray*\
+Mask_array, jejichž hodnoty elementů mají být použity při inicializaci prvků valarray konstrukce.
 
-*IndArray* \
-Indirect_array, jehož hodnoty elementů mají být použity při inicializaci prvků valarray konstrukce.
+*IndArray*\
+Indirect_array, jejichž hodnoty elementů mají být použity při inicializaci prvků valarray konstrukce.
 
-@No__t_1 *IList*
+\ *IList*
 Initializer_list obsahující prvky ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
 První (výchozí) konstruktor inicializuje objekt do prázdného pole. Následující tři konstruktory každý inicializuje objekt na pole *počtu elementů* následujícím způsobem:
 
-- Pro explicitní `valarray(size_t Count)` je každý element inicializován s výchozím konstruktorem.
+- Pro explicitní `valarray(size_t Count)`je každý element inicializován s výchozím konstruktorem.
 
-- Pro `valarray(const Type& Val, Count)` je každý prvek inicializován pomocí *Val*.
+- Pro `valarray(const Type& Val, Count)`je každý prvek inicializován pomocí *Val*.
 
-- Pro `valarray(const Type* Ptr, Count)` je prvek na pozici `I` inicializován s `Ptr` [`I`].
+- Pro `valarray(const Type* Ptr, Count)`je prvek na pozici `I` inicializován s `Ptr`[`I`].
 
-Každý zbývající konstruktor inicializuje objekt na valarray \<Type > objekt určený podmnožinou určenou v argumentu.
+Každý zbývající konstruktor inicializuje objekt na valarray typ\<> objekt určený podmnožinou určenou v argumentu.
 
 Poslední konstruktor je stejný jako u poslední, ale s [odkazem rvalue deklarátor: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -2008,6 +2008,6 @@ The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

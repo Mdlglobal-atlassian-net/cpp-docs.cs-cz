@@ -11,18 +11,18 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
 ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398937"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884148"
 ---
 # <a name="enumerations-c"></a>Výčty (C++)
 
-Výčet je uživatelem definovaný typ, který se skládá z sadu pojmenovaných integrálních konstant nazývaných enumerátory.
+Výčet je uživatelsky definovaný typ, který se skládá ze sady pojmenovaných integrálních konstant, které jsou známé jako enumerátory.
 
 > [!NOTE]
->  Tento článek se týká jazyka C++ podle standardu ISO **výčtu** typu a rozsahu (nebo silný) **výčet tříd** typ, který je uveden v C ++ 11. Informace o **veřejný výčet tříd** nebo **soukromý výčet tříd** napíše C++vyhodnocovací a C++/CX, naleznete v tématu [výčet tříd](../extensions/enum-class-cpp-component-extensions.md).
+>  Tento článek popisuje typ **výčtu** standard C++ jazyka ISO a typ **třídy výčtu** s oborem (nebo silně typované), který je představený v c++ 11. Informace o **veřejné třídě výčtu** nebo typech **tříd typu Private enum** v C++/CLI a C++/CX naleznete v tématu [enum class](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,21 +46,21 @@ enum class C : short;  // ... may have any integral underlying type
 
 ## <a name="parameters"></a>Parametry
 
-*identifier*<br/>
-Název typu daný pro výčet.
+*RID*<br/>
+Název typu předaný výčtu.
 
 *type*<br/>
-Základní typ čítačů; všechny čítače mají stejný základní typ. Může být libovolný integrální typ.
+Základní typ enumerátorů; všechny enumerátory mají stejný základní typ. Může být libovolný integrální typ.
 
-*seznam výčtu*<br/>
-Čárkami oddělený seznam čítačů ve výčtu. Všechny čítače výčtu nebo název proměnné v oboru musí být jedinečný. Však mohou být duplicitní hodnoty. Ve výčtu mimo rozsah je rozsah obklopujícím rozsahem; ve výčtovém rozsahu je *seznam výčtu* samotný.  V rozsahu výčtového typu seznamu může být prázdný určující platit nový integrálního typu.
+*výčet – seznam*<br/>
+Čárkami oddělený seznam enumerátorů ve výčtu. Každý název enumerátoru nebo proměnné v oboru musí být jedinečný. Hodnoty však mohou být duplikovány. V nevymezeném výčtu je rozsah okolním oborem; v oboru výčtu je oborem samotný *seznam výčtu* .  V oboru výčtu může být seznam prázdný, což v důsledku toho definuje nový integrální typ.
 
 *class*<br/>
-Pomocí tohoto klíčového slova v deklaraci zadáte obor výčtu a objekt *identifikátor* musí být zadaná. Můžete také použít **struktura** – klíčové slovo místo **třída**, jako jsou sémanticky rovnocenné v tomto kontextu.
+Pomocí tohoto klíčového slova v deklaraci zadáte rozsah výčtu a je nutné zadat *identifikátor* . Klíčové slovo **struct** můžete také použít místo **třídy**, protože jsou sémanticky ekvivalentní v tomto kontextu.
 
-## <a name="enumerator-scope"></a>Čítač rozsahu
+## <a name="enumerator-scope"></a>Rozsah enumerátoru
 
-Výčet poskytuje kontext k popisu rozsahu hodnot, které jsou reprezentovány jako pojmenované konstanty a se také nazývají enumerátory. V původní C a C++ typy výčtu jsou nekvalifikované enumerátory viditelné v celém oboru, ve kterém je tento výčet deklarován. V rámci oboru výčtů musí být název enumerátoru kvalifikován názvem typu výčtu. Následující příklad ukazuje tento základní rozdíl mezi dvěma druhy výčtů:
+Výčet poskytuje kontext pro popis rozsahu hodnot, které jsou reprezentovány jako pojmenované konstanty a jsou označovány také jako enumerátory. V původních typech C a C++ enum jsou nekvalifikované výčty viditelné v rámci oboru, ve kterém je výčet deklarován. V oboru výčtů musí být název enumerátoru kvalifikován názvem typu výčtu. Následující příklad ukazuje tento základní rozdíl mezi dvěma druhy výčtů:
 
 ```cpp
 namespace CardGame_Scoped
@@ -87,25 +87,25 @@ namespace CardGame_NonScoped
 }
 ```
 
-Každému názvu ve výčtu je přiřazena celočíselná hodnota odpovídající jeho umístění v pořadí hodnot ve výčtu. Ve výchozím nastavení první hodnotě přiřazena 0, další je přiřazena 1 a tak dále, ale můžete explicitně nastavit hodnotu čítače, jak je znázorněno zde:
+Každému názvu ve výčtu je přiřazena celočíselná hodnota odpovídající jeho umístění v pořadí hodnot ve výčtu. Ve výchozím nastavení je první hodnota přiřazena 0, další je přiřazena 1 a tak dále, ale můžete explicitně nastavit hodnotu čítače výčtu, jak je znázorněno zde:
 
 ```cpp
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };
 ```
 
-Enumerátor `Diamonds` je přiřazena hodnota `1`. Následující čítače, pokud jim není uvedena explicitní hodnota, získávají hodnotu z předchozího výčtu navýšenou o jeden. V předchozím příkladu `Hearts` by měla hodnotu 2, `Clubs` by obsahovat 3 a tak dále.
+`Diamonds` výčtu je přiřazena hodnota `1`. Další enumerátory, pokud nemají přiřazenou explicitní hodnotu, obdrží hodnotu předchozího výčtu plus jedna. V předchozím příkladu má `Hearts` hodnotu 2, `Clubs` by měla být 3 atd.
 
-Každý výčet je považován za konstantu a musí mít jedinečný název v rámci oboru kde **výčtu** definován (pro výčty bez oboru) nebo v rámci **výčtu** samotného (pro výčty v oboru). Hodnoty, použité pro názvy nemusí být jedinečný. Například pokud deklarace výčtu mimo obor `Suit` je toto:
+Každý enumerátor je považován za konstantu a musí mít jedinečný název v rámci oboru, ve kterém je definován **výčet** (pro výčty bez oboru) nebo v rámci samotného **výčtu** (pro vymezené výčty). Hodnoty zadané pro názvy nemusí být jedinečné. Například pokud deklarace výčtu bez oboru `Suit` je tato:
 
 ```cpp
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 ```
 
-Potom hodnoty `Diamonds`, `Hearts`, `Clubs`, a `Spades` jsou 5, 6, 4 a 5 v uvedeném pořadí. Všimněte si, že 5 je použita více než jednou; To je povoleno, i když nemusí být žádoucí. Tato pravidla jsou stejná pro výčty.
+Hodnoty `Diamonds`, `Hearts`, `Clubs`a `Spades` jsou tedy 5, 6, 4 a 5 v uvedeném pořadí. Všimněte si, že 5 se používá více než jednou; Tato možnost je povolená, i když nemusí být zamýšlená. Tato pravidla jsou stejná pro vymezené výčty.
 
 ## <a name="casting-rules"></a>Pravidla přetypování
 
-Konstanty typu nevymezeného výčtu lze implicitně převést na **int**, ale **int** není nikdy implicitně převést na hodnotu výčtu. Následující příklad ukazuje, co se stane, pokud se pokusíte přiřadit `hand` hodnotu, která není `Suit`:
+Konstanty výčtu bez oboru lze implicitně převést na typ **int**, ale hodnota **int** není nikdy implicitně převoditelná na hodnotu výčtu. Následující příklad ukazuje, co se stane, když se pokusíte přiřadit `hand` hodnotu, která není `Suit`:
 
 ```cpp
 int account_num = 135692;
@@ -113,13 +113,13 @@ Suit hand;
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
 ```
 
-Přetypování vyžaduje převedení **int** do oboru nebo typu nevymezeného výčtu. Můžete však povýšit čítač mimo obor na celočíselnou hodnotu bez přetypování.
+K převodu **int** na rozsah nebo nevymezený enumerátor se vyžaduje přetypování. Můžete ale zvýšit úroveň výčtu bez oboru na celočíselnou hodnotu bez přetypování.
 
 ```cpp
 int account_num = Hearts; //OK if Hearts is in a unscoped enum
 ```
 
-Použití implicitních převodů tímto způsobem může způsobit nežádoucí vedlejší účinky. Chcete-li vyloučit programové chyby související s výčty bez oboru, jsou hodnoty výčtu s oborem psané tučně. Čítače v oboru musí být kvalifikován názvem typu výčtu (identifikátor) a nejde implicitně převést, jak je znázorněno v následujícím příkladu:
+Použití implicitních převodů tímto způsobem může vést k nezamýšleným vedlejším účinkům. Chcete-li zabránit chybám při programování přidružených k výčtům bez oboru, jsou typově silné hodnoty výčtu silně typované. Enumerátory vymezené oborem musí být kvalifikovány názvem typu výčtu (identifikátor) a nelze je implicitně převést, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 namespace ScopedEnumConversions
@@ -141,17 +141,17 @@ namespace ScopedEnumConversions
 }
 ```
 
-Všimněte si, že na řádku `hand = account_num;` stále způsobuje chybu, ke které dochází u výčtů bez oboru, jak je uvedeno výše. Je povoleno s explicitním přetypováním. Nicméně s oborem výčtů pokus o převod do dalšího příkazu `account_num = Suit::Hearts;`, již není povolen bez explicitního přetypování.
+Všimněte si, že řádek `hand = account_num;` stále způsobuje chybu, ke které dochází v rámci výčtů bez oboru, jak je uvedeno výše. Je povolená s explicitním přetypováním. Nicméně s vymezenými výčty, pokus o převod v dalším příkazu `account_num = Suit::Hearts;`, již není povolen bez explicitního přetypování.
 
-## <a name="no_enumerators"></a> Výčty pomocí žádné čítače
+## <a name="no_enumerators"></a>Výčty bez enumerátorů
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Definuje výčet (pravidelných nebo s vymezeným oborem) s explicitní nadřazeného typu a žádné čítače, můžete platit zavést nové integrální typ, který nemá žádný implicitní převod na jiný typ. Pomocí tohoto typu namísto integrovaných základního typu může eliminovat riziko drobné chyby způsobené zvyšuje ochranu před nechtěnými implicitní převody.
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici s [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): definováním výčtu (pravidelný nebo vymezený) pomocí explicitního základního typu a žádného enumerátoru v tomto efektu můžete zavést nový integrální typ, který nemá implicitní převod na žádný jiný typ. Pomocí tohoto typu namísto předdefinovaného základního typu můžete eliminovat potenciál drobných chyb způsobených neúmyslnými implicitními převody.
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-Nový typ je přesnou kopii základní typ a proto má stejnou volací konvenci, což znamená, že je možné použít napříč instrukce ABI bez žádné snížení výkonu. Nepoužívat přetypování je potřeba při proměnné typu jsou inicializovány pomocí seznamu přímé inicializaci. Následující příklad ukazuje způsob inicializace výčty pomocí žádné čítače v různých kontextech:
+Nový typ je přesná kopie základního typu, a proto má stejnou konvenci volání, což znamená, že se dá použít napříč instrukce ABI bez jakékoliv penalizace výkonu. Pokud jsou proměnné typu inicializovány pomocí inicializace přímého seznamu, není vyžadováno žádné přetypování. Následující příklad ukazuje, jak inicializovat výčty bez enumerátorů v různých kontextech:
 
 ```cpp
 enum class byte : unsigned char { };
@@ -181,7 +181,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace výčtů v jazyce C](../c-language/c-enumeration-declarations.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

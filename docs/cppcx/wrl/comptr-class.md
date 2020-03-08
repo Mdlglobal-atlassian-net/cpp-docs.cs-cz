@@ -52,15 +52,15 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
 ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498417"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865705"
 ---
 # <a name="comptr-class"></a>ComPtr – třída
 
-Vytvoří typ *inteligentního ukazatele* , který představuje rozhraní určené parametrem šablony. `ComPtr`automaticky udržuje počet odkazů pro základní ukazatel rozhraní a uvolní rozhraní, když počet odkazů překročí nulu.
+Vytvoří typ *inteligentního ukazatele* , který představuje rozhraní určené parametrem šablony. `ComPtr` automaticky udržuje počet odkazů pro základní ukazatel rozhraní a uvolní rozhraní, když počet odkazů překročí nulu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,15 +74,15 @@ friend class ComPtr;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Rozhraní, které `ComPtr` představuje.
 
-*U*<br/>
+*H*<br/>
 Třída, na kterou je aktuální `ComPtr` přítel. (Šablona, která používá tento parametr je chráněná.)
 
 ## <a name="remarks"></a>Poznámky
 
-`ComPtr<>`Deklaruje typ, který reprezentuje ukazatel základního rozhraní. Slouží `ComPtr<>` k deklaraci proměnné a následnému použití operátoru přístupu členů (`->`) k přístupu k členské funkci rozhraní.
+`ComPtr<>` deklaruje typ, který reprezentuje ukazatel základního rozhraní. Použijte `ComPtr<>` k deklaraci proměnné a pak použijte operátor přístupu členů (`->`) k přístupu k členské funkci rozhraní.
 
 Další informace o inteligentních ukazatelích naleznete v pododdílu inteligentních ukazatelů COM v tématu [postupy psaní kódu modelu COM](/windows/win32/LearnWin32/com-coding-practices) v knihovně MSDN.
 
@@ -90,54 +90,54 @@ Další informace o inteligentních ukazatelích naleznete v pododdílu intelige
 
 ### <a name="public-typedefs"></a>Veřejné definice typedef
 
-Name            | Popis
+Název            | Popis
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | Synonymum pro typ určený parametrem šablony *T* .
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                             | Popis
+Název                             | Popis
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
-[ComPtr:: ComPtr](#comptr)        | Inicializuje novou instanci `ComPtr` třídy. Přetížení poskytují konstruktory Default, Copy, Move a Conversion.
-[ComPtr::~ComPtr](#tilde-comptr) | Zruší inicializaci instance `ComPtr`.
+[ComPtr:: ComPtr](#comptr)        | Inicializuje novou instanci třídy `ComPtr`. Přetížení poskytují konstruktory Default, Copy, Move a Conversion.
+[ComPtr:: ~ ComPtr](#tilde-comptr) | Zruší inicializaci instance `ComPtr`.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                                                      | Popis
+Název                                                      | Popis
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtr:: as](#as)                                         | `ComPtr` Vrátí objekt, který představuje rozhraní identifikované zadaným parametrem šablony.
-[ComPtr:: AsIID –](#asiid)                                   | `ComPtr` Vrátí objekt, který představuje rozhraní identifikované zadaným ID rozhraní.
+[ComPtr:: as](#as)                                         | Vrátí objekt `ComPtr`, který představuje rozhraní identifikované zadaným parametrem šablony.
+[ComPtr:: AsIID –](#asiid)                                   | Vrátí objekt `ComPtr`, který představuje rozhraní identifikované zadaným ID rozhraní.
 [ComPtr:: AsWeak –](#asweak)                                 | Načte slabý odkaz na aktuální objekt.
-[ComPtr:: Attach](#attach)                                 | `ComPtr` Přidruží k typu rozhraní určenému parametrem typu aktuální šablony.
-[ComPtr:: CopyTo](#copyto)                                 | Zkopíruje aktuální nebo zadané rozhraní přidružené `ComPtr` k zadanému výstupnímu ukazateli.
-[ComPtr::Detach](#detach)                                 | Zruší přidružení této `ComPtr` k rozhraní, které představuje.
-[ComPtr:: Get](#get)                                       | Načte ukazatel na rozhraní, které je k tomuto `ComPtr`typu přidruženo.
-[ComPtr::GetAddressOf](#getaddressof)                     | Načte adresu datového členu [ptr_](#ptr) , který obsahuje ukazatel na rozhraní reprezentované tímto `ComPtr`.
-[ComPtr:: Releaseandgetaddressof –](#releaseandgetaddressof) | Uvolní rozhraní přidružené k tomuto `ComPtr` a potom načte adresu [ptr_](#ptr) datového člena, který obsahuje ukazatel na rozhraní, které bylo vydány.
+[ComPtr:: Attach](#attach)                                 | Přidruží tuto `ComPtr` k typu rozhraní určenému parametrem aktuálního typu šablony.
+[ComPtr:: CopyTo](#copyto)                                 | Zkopíruje aktuální nebo zadané rozhraní přidružené k tomuto `ComPtr` k zadanému výstupnímu ukazateli.
+[ComPtr::D etach](#detach)                                 | Zruší přidružení tohoto `ComPtr` k rozhraní, které představuje.
+[ComPtr:: Get](#get)                                       | Načte ukazatel na rozhraní, které je přidruženo k tomuto `ComPtr`.
+[ComPtr:: GetAddressOf –](#getaddressof)                     | Načte adresu datového členu [ptr_](#ptr) , který obsahuje ukazatel na rozhraní reprezentované tímto `ComPtr`.
+[ComPtr:: Releaseandgetaddressof –](#releaseandgetaddressof) | Uvolní rozhraní přidružené k tomuto `ComPtr` a potom načte adresu datového členu [ptr_](#ptr) , který obsahuje ukazatel na rozhraní, které bylo vydány.
 [ComPtr::Reset](#reset)                                   | Uvolní všechny odkazy pro ukazatel na rozhraní, které je přidruženo k tomuto `ComPtr`.
-[ComPtr:: swap](#swap)                                     | Vyměňuje rozhraní spravované pomocí aktuální `ComPtr` s rozhraním spravovaném zadaným. `ComPtr`
+[ComPtr:: swap](#swap)                                     | Vyměňuje rozhraní spravované aktuální `ComPtr` s rozhraním spravovaným zadanou `ComPtr`.
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Name                                        | Popis
+Název                                        | Popis
 ------------------------------------------- | --------------------------------------------------------------------------------
 [ComPtr:: InternalAddRef –](#internaladdref)   | Zvýší počet odkazů rozhraní přidruženého k tomuto `ComPtr`.
 [ComPtr:: InternalRelease –](#internalrelease) | Provede operaci uvolnění modelu COM na rozhraní, které je přidruženo k tomuto `ComPtr`.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Name                                                                                           | Popis
+Název                                                                                           | Popis
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
 [ComPtr:: operator &](#operator-ampersand)                                                       | Načte adresu aktuálního `ComPtr`.
 [ComPtr:: operator->](#operator-arrow)                                                          | Načte ukazatel na typ určený aktuálním parametrem šablony.
-[ComPtr:: operator =](#operator-assign)                                                          | Přiřadí hodnotu k aktuálnímu `ComPtr`.
-[ComPtr:: operator = = – operátor](#operator-equality)                                                       | Určuje, zda `ComPtr` jsou dva objekty stejné.
-[ComPtr:: operator! =](#operator-inequality)                                                     | Určuje, zda `ComPtr` dva objekty nejsou stejné.
-[ComPtr:: operator Microsoft:: WRL::D etails:: BoolType –](#operator-microsoft-wrl-details-booltype) | Označuje, zda `ComPtr` je nebo není spravována životnost objektu rozhraní.
+[ComPtr:: operator =](#operator-assign)                                                          | Přiřadí hodnotu aktuálnímu `ComPtr`.
+[ComPtr:: operator = = – operátor](#operator-equality)                                                       | Určuje, zda jsou dva objekty `ComPtr` stejné.
+[ComPtr:: operator! =](#operator-inequality)                                                     | Určuje, zda se dva objekty `ComPtr` neshodují.
+[ComPtr:: operator Microsoft:: WRL::D etails:: BoolType –](#operator-microsoft-wrl-details-booltype) | Označuje, zda `ComPtr` Správa životnosti objektu rozhraní.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-Name                 | Popis
+Název                 | Popis
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr::p tr_](#ptr) | Obsahuje ukazatel na rozhraní, které je přidruženo a spravováno tímto `ComPtr`.
 
@@ -149,7 +149,7 @@ Name                 | Popis
 
 **Záhlaví:** Client. h
 
-**Hosting** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
 ## <a name="tilde-comptr"></a>ComPtr:: ~ ComPtr
 
@@ -161,7 +161,7 @@ WRL_NOTHROW ~ComPtr();
 
 ## <a name="as"></a>ComPtr:: as
 
-`ComPtr` Vrátí objekt, který představuje rozhraní identifikované zadaným parametrem šablony.
+Vrátí objekt `ComPtr`, který představuje rozhraní identifikované zadaným parametrem šablony.
 
 ```cpp
 template<typename U>
@@ -177,11 +177,11 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parametry
 
-*U*<br/>
+*H*<br/>
 Rozhraní, které má být reprezentované parametrem *p*.
 
-*p*<br/>
-Objekt, který představuje rozhraní určené parametrem *U.* `ComPtr` Parametr *p* nesmí odkazovat na aktuální `ComPtr` objekt.
+*trub*<br/>
+Objekt `ComPtr`, který představuje rozhraní určené parametrem *U*. Parametr *p* nesmí odkazovat na aktuální objekt `ComPtr`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -193,7 +193,7 @@ S_OK v případě úspěchu; v opačném případě hodnota HRESULT, která ozna
 
 ## <a name="asiid"></a>ComPtr:: AsIID –
 
-`ComPtr` Vrátí objekt, který představuje rozhraní identifikované zadaným ID rozhraní.
+Vrátí objekt `ComPtr`, který představuje rozhraní identifikované zadaným ID rozhraní.
 
 ```cpp
 WRL_NOTHROW HRESULT AsIID(
@@ -207,8 +207,8 @@ WRL_NOTHROW HRESULT AsIID(
 *riid*<br/>
 ID rozhraní.
 
-*p*<br/>
-Pokud má objekt rozhraní, jehož ID je rovno *riid*, dvakrát nepřímý ukazatel na rozhraní určené parametrem *riid* ; v opačném případě ukazatel `IUnknown`na.
+*trub*<br/>
+Pokud má objekt rozhraní, jehož ID je rovno *riid*, dvakrát nepřímý ukazatel na rozhraní určené parametrem *riid* ; v opačném případě ukazatel na `IUnknown`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -235,7 +235,7 @@ S_OK v případě úspěchu; v opačném případě hodnota HRESULT, která ozna
 
 ## <a name="attach"></a>ComPtr:: Attach
 
-`ComPtr` Přidruží k typu rozhraní určenému parametrem typu aktuální šablony.
+Přidruží tuto `ComPtr` k typu rozhraní určenému parametrem aktuálního typu šablony.
 
 ```cpp
 void Attach(
@@ -250,7 +250,7 @@ Typ rozhraní.
 
 ## <a name="comptr"></a>ComPtr:: ComPtr
 
-Inicializuje novou instanci `ComPtr` třídy. Přetížení poskytují konstruktory Default, Copy, Move a Conversion.
+Inicializuje novou instanci třídy `ComPtr`. Přetížení poskytují konstruktory Default, Copy, Move a Conversion.
 
 ```cpp
 WRL_NOTHROW ComPtr();
@@ -286,7 +286,7 @@ WRL_NOTHROW ComPtr(
 
 ### <a name="parameters"></a>Parametry
 
-*U*<br/>
+*H*<br/>
 Typ *druhého* parametru.
 
 *jiná*<br/>
@@ -306,7 +306,7 @@ Třetí konstruktor vytvoří objekt z objektu určeného ukazatelem. ComPtr nyn
 
 ## <a name="copyto"></a>ComPtr:: CopyTo
 
-Zkopíruje aktuální nebo zadané rozhraní přidružené `ComPtr` k zadanému ukazateli.
+Zkopíruje aktuální nebo zadané rozhraní přidružené k tomuto `ComPtr` k zadanému ukazateli.
 
 ```cpp
 HRESULT CopyTo(
@@ -326,7 +326,7 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parametry
 
-*U*<br/>
+*H*<br/>
 Název typu.
 
 *ptr*<br/>
@@ -337,19 +337,19 @@ ID rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě hodnota HRESULT, která indikuje `QueryInterface` , proč se implicitní operace nezdařila.
+S_OK v případě úspěchu; v opačném případě hodnota HRESULT, která indikuje, proč se operace implicitního `QueryInterface` nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-První funkce vrátí kopii ukazatele na rozhraní přidružené k tomuto `ComPtr`. Tato funkce vždy vrátí hodnotu S_OK.
+První funkce vrátí kopii ukazatele na rozhraní přidruženého k tomuto `ComPtr`. Tato funkce vždy vrátí S_OK.
 
-Druhá funkce provede `QueryInterface` operaci na rozhraní, které je přidružené k tomuto `ComPtr` pro rozhraní určené parametrem *riid* .
+Druhá funkce provede operaci `QueryInterface` na rozhraní přidruženém k této `ComPtr` pro rozhraní určené parametrem *riid* .
 
-Třetí funkce provede `QueryInterface` operaci na rozhraní, které je přidružené k tomuto `ComPtr` pro základní rozhraní parametru *U* .
+Třetí funkce provádí operaci `QueryInterface` na rozhraní přidruženém k tomuto `ComPtr` pro základní rozhraní parametru *u* .
 
 ## <a name="detach"></a>ComPtr::D etach
 
-Zruší přidružení tohoto `ComPtr` objektu z rozhraní, které představuje.
+Zruší přidružení tohoto objektu `ComPtr` z rozhraní, které představuje.
 
 ```cpp
 T* Detach();
@@ -357,11 +357,11 @@ T* Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní, které bylo reprezentované tímto `ComPtr` objektem.
+Ukazatel na rozhraní, které bylo reprezentované tímto objektem `ComPtr`.
 
 ## <a name="get"></a>ComPtr:: Get
 
-Načte ukazatel na rozhraní, které je k tomuto `ComPtr`typu přidruženo.
+Načte ukazatel na rozhraní, které je přidruženo k tomuto `ComPtr`.
 
 ```cpp
 T* Get() const;
@@ -369,9 +369,9 @@ T* Get() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní, které je přidruženo k `ComPtr`tomuto.
+Ukazatel na rozhraní, které je přidruženo k tomuto `ComPtr`.
 
-## <a name="getaddressof"></a>ComPtr::GetAddressOf
+## <a name="getaddressof"></a>ComPtr:: GetAddressOf –
 
 Načte adresu datového členu [ptr_](#ptr) , který obsahuje ukazatel na rozhraní reprezentované tímto `ComPtr`.
 
@@ -410,7 +410,7 @@ Tato metoda je chráněná.
 
 ## <a name="operator-ampersand"></a>ComPtr:: operator&amp;
 
-Uvolní rozhraní přidružené k tomuto `ComPtr` objektu a potom načte adresu `ComPtr` objektu.
+Uvolní rozhraní přidružené k tomuto objektu `ComPtr` a potom načte adresu `ComPtr` objektu.
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&()
@@ -424,7 +424,7 @@ Slabý odkaz na aktuální `ComPtr`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se liší od [ComPtr:: GetAddressOf –](#getaddressof) v tom, že tato metoda uvolní odkaz na ukazatel rozhraní. Použijte `ComPtr::GetAddressOf` , pokud požadujete adresu ukazatele rozhraní, ale nechcete toto rozhraní uvolnit.
+Tato metoda se liší od [ComPtr:: GetAddressOf –](#getaddressof) v tom, že tato metoda uvolní odkaz na ukazatel rozhraní. Použijte `ComPtr::GetAddressOf`, pokud požadujete adresu ukazatele rozhraní, ale nechcete toto rozhraní uvolnit.
 
 ## <a name="operator-arrow"></a>ComPtr:: operator-&gt;
 
@@ -440,11 +440,11 @@ Ukazatel na typ určený aktuálním názvem typu šablony.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato pomocná funkce odebere nepotřebnou režii způsobenou použitím makra STDMETHOD. Tato funkce `IUnknown` zpřístupňuje `private` typy místo `virtual`.
+Tato pomocná funkce odebere nepotřebnou režii způsobenou použitím makra STDMETHOD. Tato funkce zpřístupňuje `IUnknown` typy `private` namísto `virtual`.
 
 ## <a name="operator-assign"></a>ComPtr:: operator =
 
-Přiřadí hodnotu k aktuálnímu `ComPtr`.
+Přiřadí hodnotu aktuálnímu `ComPtr`.
 
 ```cpp
 WRL_NOTHROW ComPtr& operator=(
@@ -475,11 +475,11 @@ WRL_NOTHROW ComPtr& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*U*<br/>
+*H*<br/>
 Třída.
 
 *jiná*<br/>
-Odkaz na ukazatel, odkaz nebo rvalue na typ nebo jiný `ComPtr`typ.
+Odkaz na ukazatel, odkaz nebo rvalue na typ nebo jiný `ComPtr`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -487,23 +487,23 @@ Odkaz na aktuální `ComPtr`.
 
 ### <a name="remarks"></a>Poznámky
 
-První verze tohoto operátoru přiřadí k aktuální `ComPtr`hodnotě prázdnou hodnotu.
+První verze tohoto operátoru přiřadí aktuálnímu `ComPtr`prázdnou hodnotu.
 
-V druhé verzi platí, že pokud ukazatel na přiřazení rozhraní není stejný jako ukazatel na aktuální `ComPtr` rozhraní, druhý ukazatel rozhraní je přiřazen aktuálnímu. `ComPtr`
+V druhé verzi platí, že pokud ukazatel přiřazení rozhraní není stejný jako aktuální `ComPtr` ukazatel rozhraní, druhý ukazatel rozhraní je přiřazen aktuálnímu `ComPtr`.
 
-Ve třetí verzi je ukazatel přiřazení rozhraní přiřazen k aktuálnímu `ComPtr`.
+Ve třetí verzi je ukazatel přiřazení rozhraní přiřazen aktuálnímu `ComPtr`.
 
-Pokud se ve čtvrté verzi ukazatel rozhraní v hodnotě přiřazení neshoduje s aktuálním `ComPtr` ukazatelem rozhraní, je druhý ukazatel rozhraní přiřazen k aktuálnímu. `ComPtr`
+Pokud se ve čtvrté verzi ukazatel rozhraní v hodnotě přiřazení neshoduje s aktuálním `ComPtr` ukazatel rozhraní, je druhý ukazatel rozhraní přiřazen aktuálnímu `ComPtr`.
 
-Pátá verze je operátor kopírování; odkaz na `ComPtr` je přiřazen k aktuálnímu `ComPtr`.
+Pátá verze je operátor kopírování; k aktuálnímu `ComPtr`je přiřazen odkaz na `ComPtr`.
 
-Šestá verze je operátor kopírování, který používá sémantiku přesunutí; odkaz rvalue na typ, `ComPtr` Pokud je libovolný typ statické přetypování a pak se přiřadí `ComPtr`k aktuálnímu.
+Šestá verze je operátor kopírování, který používá sémantiku přesunutí; odkaz rvalue na `ComPtr`, pokud je nějaký typ statické přetypování a pak se přiřadí k aktuálnímu `ComPtr`.
 
-Sedmá verze je operátor kopírování, který používá sémantiku přesunutí; odkaz rvalue na `ComPtr` typ *U* je statické přetypování a přiřazený k aktuálnímu `ComPtr`.
+Sedmá verze je operátor kopírování, který používá sémantiku přesunutí; odkaz rvalue na `ComPtr` typu *U* je statické přetypování a přiřazený k aktuálnímu `ComPtr`.
 
 ## <a name="operator-equality"></a>ComPtr:: operator = = – operátor
 
-Určuje, zda `ComPtr` jsou dva objekty stejné.
+Určuje, zda jsou dva objekty `ComPtr` stejné.
 
 ```cpp
 bool operator==(
@@ -524,21 +524,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Odkaz na `ComPtr` objekt.
+*určitého*<br/>
+Odkaz na objekt `ComPtr`.
 
 *b*<br/>
-Odkaz na jiný `ComPtr` objekt.
+Odkaz na jiný objekt `ComPtr`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor výnosy `true` Pokud objekt *a* rovná objektu *b*; v opačném případě `false`.
+První operátor vrací `true`, pokud je objekt *a* roven objektu *b*; v opačném případě `false`.
 
-Druhý a třetí operátory yield `true` Pokud objekt *a* rovná `nullptr`; v opačném případě `false`.
+Druhý a třetí operátor poskytují `true`, pokud je objekt *a* roven `nullptr`; v opačném případě `false`.
 
 ## <a name="operator-inequality"></a>ComPtr:: operator! =
 
-Určuje, zda `ComPtr` dva objekty nejsou stejné.
+Určuje, zda se dva objekty `ComPtr` neshodují.
 
 ```cpp
 bool operator!=(
@@ -559,21 +559,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Odkaz na `ComPtr` objekt.
+*určitého*<br/>
+Odkaz na objekt `ComPtr`.
 
 *b*<br/>
-Odkaz na jiný `ComPtr` objekt.
+Odkaz na jiný objekt `ComPtr`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor výnosy `true` Pokud objekt *a* není roven objektu *b*; v opačném případě `false`.
+První operátor vrací `true`, pokud objekt *a* není rovna objektu *b*; v opačném případě `false`.
 
-Druhý a třetí operátory yield `true` Pokud objekt *a* není roven `nullptr`; v opačném případě `false`.
+Druhý a třetí operátor poskytují `true`, pokud objekt *a* není rovna `nullptr`; v opačném případě `false`.
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D etails:: BoolType –
 
-Označuje, zda `ComPtr` je nebo není spravována životnost objektu rozhraní.
+Označuje, zda `ComPtr` Správa životnosti objektu rozhraní.
 
 ```cpp
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
@@ -581,7 +581,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je k tomuto `ComPtr`rozhraní přidruženo rozhraní, adresa `nullptr`člena [BoolStruct –:: member](boolstruct-structure.md#member) DataMember; v opačném případě.
+Pokud je k tomuto `ComPtr`přidruženo rozhraní, adresa člena data member [BoolStruct –:: member](boolstruct-structure.md#member) ; v opačném případě `nullptr`.
 
 ## <a name="ptr"></a>ComPtr::p tr_
 
@@ -593,11 +593,11 @@ InterfaceType *ptr_;
 
 ### <a name="remarks"></a>Poznámky
 
-`ptr_`je interní chráněný datový člen.
+`ptr_` je interní chráněný datový člen.
 
 ## <a name="releaseandgetaddressof"></a>ComPtr:: Releaseandgetaddressof –
 
-Uvolní rozhraní přidružené k tomuto `ComPtr` a potom načte adresu [ptr_](#ptr) datového člena, který obsahuje ukazatel na rozhraní, které bylo vydány.
+Uvolní rozhraní přidružené k tomuto `ComPtr` a potom načte adresu datového členu [ptr_](#ptr) , který obsahuje ukazatel na rozhraní, které bylo vydány.
 
 ```cpp
 T** ReleaseAndGetAddressOf();
@@ -605,7 +605,7 @@ T** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa datového `ComPtr`členu [ptr_](#ptr) .
+Adresa datového členu [ptr_](#ptr) této `ComPtr`.
 
 ## <a name="reset"></a>ComPtr:: Reset
 
@@ -621,7 +621,7 @@ Počet vydaných odkazů, pokud existují.
 
 ## <a name="swap"></a>ComPtr:: swap
 
-Vyměňuje rozhraní spravované pomocí aktuální `ComPtr` s rozhraním spravovaném zadaným. `ComPtr`
+Vyměňuje rozhraní spravované aktuální `ComPtr` s rozhraním spravovaným zadanou `ComPtr`.
 
 ```cpp
 void Swap(
@@ -635,6 +635,6 @@ void Swap(
 
 ### <a name="parameters"></a>Parametry
 
-*r*<br/>
-A `ComPtr`.
+*í*<br/>
+Úloha `ComPtr`.
 

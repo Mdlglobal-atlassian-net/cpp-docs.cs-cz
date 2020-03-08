@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689212"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856507"
 ---
 # <a name="numpunct-class"></a>numpunct – třída
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* \
+*CharType*\
 Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
 ## <a name="remarks"></a>Poznámky
@@ -87,7 +87,7 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<locale >
+**Záhlaví:** \<národní prostředí >
 
 **Obor názvů:** std
 
@@ -117,7 +117,7 @@ Prvek specifický pro národní prostředí, který se použije jako desetinná 
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_decimal_point](#do_decimal_point).
+Členská funkce vrací [do_decimal_point](#do_decimal_point).
 
 ### <a name="example"></a>Příklad
 
@@ -256,7 +256,7 @@ string_type falsename() const;
 
 Členská funkce vrátí řetězec "false", který bude reprezentovat hodnotu **false** ve všech národních prostředích.
 
-Členská funkce vrátí [do_falsename](#do_falsename).
+Členská funkce vrací [do_falsename](#do_falsename).
 
 ### <a name="example"></a>Příklad
 
@@ -303,7 +303,7 @@ Pravidlo specifické pro národní prostředí pro určení, jak jsou číslice 
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_grouping](#do_grouping).
+Členská funkce vrací [do_grouping](#do_grouping).
 
 ### <a name="example"></a>Příklad
 
@@ -345,7 +345,7 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+*_Refs*\
 Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
 ### <a name="remarks"></a>Poznámky
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) , jejíž objekty mohou ukládat kopie sekvencí interpunkce.
+Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) jejichž objekty mohou ukládat kopie sekvencí interpunkce.
 
 ## <a name="thousands_sep"></a>numpunct:: thousands_sep
 
@@ -388,7 +388,7 @@ Prvek specifický pro národní prostředí, který se použije jako oddělovač
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_thousands_sep](#do_thousands_sep).
+Členská funkce vrací [do_thousands_sep](#do_thousands_sep).
 
 ### <a name="example"></a>Příklad
 
@@ -431,7 +431,7 @@ string_type falsename() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_truename](#do_truename).
+Členská funkce vrací [do_truename](#do_truename).
 
 Všechna národní prostředí vrátí řetězec "true", který bude představovat hodnotu **true**.
 
@@ -466,8 +466,8 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<locale >](../standard-library/locale.md) \
+[\<> národního prostředí](../standard-library/locale.md)\
 \ [třídy omezující vlastnosti](../standard-library/locale-class.md#facet_class)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

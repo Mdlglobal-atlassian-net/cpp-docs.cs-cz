@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518423"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865519"
 ---
 # <a name="clistbox-class"></a>CListBox – – třída
 
@@ -124,41 +124,41 @@ class CListBox : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CListBox –:: CListBox –](#clistbox)|Vytvoří objekt `CListBox`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CListBox –:: AddString](#addstring)|Přidá řetězec do pole se seznamem.|
 |[CListBox –:: CharToItem](#chartoitem)|Přepište, abyste poskytovali vlastní zpracování WM_CHAR pro seznamy, které nemají řetězce.|
 |[CListBox –:: CompareItem](#compareitem)|Volá se rozhraním, aby se určila pozice nové položky v poli seznamu seřazeného vlastníka.|
 |[CListBox –:: Create](#create)|Vytvoří seznam Windows a připojí ho k objektu `CListBox`.|
 |[CListBox –::D eleteItem](#deleteitem)|Volá se rozhraním, když uživatel odstraní položku ze seznamu vykresleného vlastníkem.|
-|[CListBox::DeleteString](#deletestring)|Odstraní řetězec z pole seznamu.|
+|[CListBox –::D eleteString](#deletestring)|Odstraní řetězec z pole seznamu.|
 |[CListBox –::D IR](#dir)|Přidá do seznamu názvy souborů, jednotky nebo obojí z aktuálního adresáře.|
 |[CListBox –::D rawItem](#drawitem)|Volá se rozhraním, když se změní vizuální aspekt seznamu vykreslování vlastníka.|
 |[CListBox –:: FindString](#findstring)|Vyhledá řetězec v poli se seznamem.|
 |[CListBox –:: FindStringExact](#findstringexact)|Najde první řetězec seznamu – pole, který odpovídá zadanému řetězci.|
 |[CListBox –:: GetAnchorIndex](#getanchorindex)|Načte index aktuální položky kotvy založený na nule v seznamu.|
-|[CListBox::GetCaretIndex](#getcaretindex)|Určuje index položky, která má obdélník výběru v seznamu vícenásobného výběru.|
+|[CListBox –:: GetCaretIndex](#getcaretindex)|Určuje index položky, která má obdélník výběru v seznamu vícenásobného výběru.|
 |[CListBox –:: GetCount](#getcount)|Vrátí počet řetězců v poli se seznamem.|
-|[CListBox::GetCurSel](#getcursel)|Vrátí index aktuálně vybraného řetězce v seznamu s nulovým základem.|
+|[CListBox –::](#getcursel)|Vrátí index aktuálně vybraného řetězce v seznamu s nulovým základem.|
 |[CListBox –:: GetHorizontalExtent](#gethorizontalextent)|Vrátí šířku v pixelech, kterou může být seznam zobrazen vodorovně.|
-|[CListBox::GetItemData](#getitemdata)|Vrátí hodnotu přidruženou k položce se seznamem.|
-|[CListBox::GetItemDataPtr](#getitemdataptr)|Vrátí ukazatel na položku rozevíracího seznamu.|
+|[CListBox –:: GetItemData](#getitemdata)|Vrátí hodnotu přidruženou k položce se seznamem.|
+|[CListBox –:: GetItemDataPtr](#getitemdataptr)|Vrátí ukazatel na položku rozevíracího seznamu.|
 |[CListBox –:: GetItemHeight](#getitemheight)|Určuje výšku položek v poli se seznamem.|
 |[CListBox –:: GetItemRect](#getitemrect)|Vrátí ohraničující obdélník položky seznamu, jak je aktuálně zobrazen.|
 |[CListBox –:: GetListBoxInfo](#getlistboxinfo)|Načte počet položek na sloupec.|
 |[CListBox –:: getLocal](#getlocale)|Načte identifikátor národního prostředí pro pole seznamu.|
-|[CListBox::GetSel](#getsel)|Vrátí stav výběru položky v poli se seznamem.|
+|[CListBox –:: GetSel](#getsel)|Vrátí stav výběru položky v poli se seznamem.|
 |[CListBox –:: GetSelCount](#getselcount)|Vrátí počet aktuálně vybraných řetězců v seznamu vícenásobného výběru.|
 |[CListBox –:: GetSelItems](#getselitems)|Vrátí indexy aktuálně vybraných řetězců v seznamu.|
-|[CListBox::GetText](#gettext)|Zkopíruje položku seznamu se seznamem do vyrovnávací paměti.|
-|[CListBox::GetTextLen](#gettextlen)|Vrátí délku položky pole seznamu v bajtech.|
-|[CListBox::GetTopIndex](#gettopindex)|Vrátí index prvního viditelného řetězce v seznamu.|
+|[CListBox –:: GetText](#gettext)|Zkopíruje položku seznamu se seznamem do vyrovnávací paměti.|
+|[CListBox –:: GetTextLen](#gettextlen)|Vrátí délku položky pole seznamu v bajtech.|
+|[CListBox –:: GetTopIndex](#gettopindex)|Vrátí index prvního viditelného řetězce v seznamu.|
 |[CListBox –:: InitStorage](#initstorage)|Předem přidělí bloky paměti pro položky seznamu a řetězce.|
 |[CListBox –:: InsertString](#insertstring)|Vloží řetězec do konkrétního umístění v seznamu.|
 |[CListBox –:: ItemFromPoint](#itemfrompoint)|Vrátí index položky rozevíracího seznamu nejbližšího bodu.|
@@ -167,18 +167,18 @@ class CListBox : public CWnd
 |[CListBox –:: SelectString](#selectstring)|Vyhledá a vybere řetězec v seznamu s jedním výběrem.|
 |[CListBox –:: SelItemRange](#selitemrange)|Vybere nebo odškrtne rozsah řetězců v seznamu vícenásobného výběru.|
 |[CListBox –:: SetAnchorIndex](#setanchorindex)|Nastaví kotvu do pole se seznamem vícenásobného výběru, aby se začaly rozšířit výběr.|
-|[CListBox::SetCaretIndex](#setcaretindex)|Nastaví v poli se seznamem vícenásobného výběru rámeček fokusu na položku na zadaném indexu.|
+|[CListBox –:: SetCaretIndex](#setcaretindex)|Nastaví v poli se seznamem vícenásobného výběru rámeček fokusu na položku na zadaném indexu.|
 |[CListBox –:: SetColumnWidth](#setcolumnwidth)|Nastaví šířku sloupce seznamu s více sloupci.|
-|[CListBox::SetCurSel](#setcursel)|Vybere řetězec seznamu se seznamem.|
+|[CListBox –:: SetCurSel](#setcursel)|Vybere řetězec seznamu se seznamem.|
 |[CListBox –:: SetHorizontalExtent](#sethorizontalextent)|Nastaví šířku v pixelech, kterou může být seznam zobrazen vodorovně.|
-|[CListBox::SetItemData](#setitemdata)|Nastaví hodnotu přidruženou k položce seznamu.|
-|[CListBox::SetItemDataPtr](#setitemdataptr)|Nastaví ukazatel na položku rozevíracího seznamu.|
+|[CListBox –:: SetItemData](#setitemdata)|Nastaví hodnotu přidruženou k položce seznamu.|
+|[CListBox –:: SetItemDataPtr](#setitemdataptr)|Nastaví ukazatel na položku rozevíracího seznamu.|
 |[CListBox –:: SetItemHeight](#setitemheight)|Nastaví výšku položek v poli se seznamem.|
 |[CListBox –:: SetLocale –](#setlocale)|Nastaví identifikátor národního prostředí pro seznam.|
-|[CListBox::SetSel](#setsel)|Vybere nebo odškrtne položku seznamu v seznamu vícenásobného výběru.|
+|[CListBox –:: SetSel](#setsel)|Vybere nebo odškrtne položku seznamu v seznamu vícenásobného výběru.|
 |[CListBox –:: SetTabStops](#settabstops)|Nastaví pozice zarážky tabulátoru v seznamu.|
-|[CListBox::SetTopIndex](#settopindex)|Nastaví index založený na nule prvního viditelného řetězce v seznamu.|
-|[CListBox::VKeyToItem](#vkeytoitem)|Přepište k poskytnutí vlastního WM_KEYDOWN manipulace se seznamy se sadou stylů LBS_WANTKEYBOARDINPUT.|
+|[CListBox –:: SetTopIndex](#settopindex)|Nastaví index založený na nule prvního viditelného řetězce v seznamu.|
+|[CListBox –:: VKeyToItem](#vkeytoitem)|Přepište k poskytnutí vlastního WM_KEYDOWN manipulace se seznamy se sadou stylů LBS_WANTKEYBOARDINPUT.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -476,7 +476,7 @@ int Dir(
 
 ### <a name="parameters"></a>Parametry
 
-*attr*<br/>
+*ATTR*<br/>
 Může být libovolná kombinace hodnot **výčtu** popsaná v `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)nebo libovolná kombinace následujících hodnot:
 
 |Hodnota|Význam|
@@ -1243,7 +1243,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametry
 
-*nSelect*<br/>
+*nVyberte*<br/>
 Určuje index založený na nule řetězce, který má být vybrán. Pokud je *nVyberte* -1, pole se seznamem je nastaveno na možnost bez výběru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1537,7 +1537,7 @@ Návratová hodnota 0 nebo vyšší určuje index položky v seznamu a označuje
 
 [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CTRLTEST Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
 ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502030"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855741"
 ---
 # <a name="persistence-of-ole-controls"></a>Trvalost ovládacích prvků OLE
 
@@ -37,11 +37,11 @@ Jedna z možností ovládacích prvků OLE je trvalá vlastnost (neboli serializ
 |[PXstring](#px_string)|Vyměňuje vlastnost ovládacího prvku řetězce znaků.|
 |[PX_VBXFontConvert](#px_vbxfontconvert)|Vyměňuje vlastnosti související se písemou ovládacího prvku VBX do vlastnosti písma ovládacího prvku OLE.|
 
-Kromě toho `AfxOleTypeMatchGuid` je k dispozici globální funkce pro testování shody mezi TYPEDESC a daným identifikátorem GUID.
+Kromě toho je k dispozici globální funkce `AfxOleTypeMatchGuid` k otestování shody mezi TYPEDESC a daným identifikátorem GUID.
 
-##  <a name="px_blob"></a>  PX_Blob
+##  <a name="px_blob"></a>PX_Blob
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost, která ukládá binární data rozsáhlých objektů (BLOB).
+Voláním této funkce v rámci členské funkce `DoPropExchange` ovládacího prvku můžete serializovat nebo inicializovat vlastnost, která ukládá data binárního rozsáhlého objektu (BLOB).
 
 ```
 BOOL PX_Blob(
@@ -54,7 +54,7 @@ BOOL PX_Blob(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -71,7 +71,7 @@ Nenulové, pokud bylo Exchange úspěšné; 0, pokud neproběhla úspěšně.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota vlastnosti bude načtena z nebo zapsána do proměnné, na kterou odkazuje *hBlob*, podle potřeby. Tato proměnná by měla být inicializována na hodnotu null `PX_Blob` před prvním voláním metody First (obvykle to lze provést v konstruktoru ovládacího prvku). Je-li zadán parametr *hBlobDefault* , bude použit jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z jakéhokoli důvodu dojde k chybě inicializace nebo procesu serializace ovládacího prvku.
+Hodnota vlastnosti bude načtena z nebo zapsána do proměnné, na kterou odkazuje *hBlob*, podle potřeby. Tato proměnná by měla být inicializována na hodnotu NULL před prvním voláním `PX_Blob` (obvykle to lze provést v konstruktoru ovládacího prvku). Je-li zadán parametr *hBlobDefault* , bude použit jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z jakéhokoli důvodu dojde k chybě inicializace nebo procesu serializace ovládacího prvku.
 
 Obslužné rutiny *hBlob* a *hBlobDefault* odkazují na blok paměti, který obsahuje následující:
 
@@ -79,11 +79,11 @@ Obslužné rutiny *hBlob* a *hBlobDefault* odkazují na blok paměti, který obs
 
 - Blok paměti obsahující skutečná binární data.
 
-Počítejte s `PX_Blob` tím, že při načítání vlastností typu objektu BLOB přidělí paměť pomocí rozhraní API pro Windows [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) . Zodpovídáte za uvolnění této paměti. Proto by destruktor vašeho ovládacího prvku měl volat [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) na jakékoli obslužné rutiny vlastností typu BLOB, aby uvolnila veškerou paměť přidělenou vašemu ovládacímu prvku.
+Všimněte si, že `PX_Blob` při načítání vlastností typu objektu BLOB přiděluje paměť pomocí rozhraní API pro Windows [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) . Zodpovídáte za uvolnění této paměti. Proto by destruktor vašeho ovládacího prvku měl volat [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) na jakékoli obslužné rutiny vlastností typu BLOB, aby uvolnila veškerou paměť přidělenou vašemu ovládacímu prvku.
 
-##  <a name="px_bool"></a>  PX_Bool
+##  <a name="px_bool"></a>PX_Bool
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu bool.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti typu BOOL.
 
 ```
 BOOL PX_Bool(
@@ -101,7 +101,7 @@ BOOL PX_Bool(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -122,7 +122,7 @@ Hodnota vlastnosti bude načtena z nebo zapsána do proměnné, na kterou odkazu
 
 ##  <a name="px_color"></a>PX_Color
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu OLE_COLOR.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti typu OLE_COLOR.
 
 ```
 BOOL PX_Color(
@@ -140,7 +140,7 @@ BOOL PX_Color(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -161,7 +161,7 @@ Hodnota vlastnosti bude načtena z nebo zapsána do proměnné, na kterou odkazu
 
 ##  <a name="px_currency"></a>PX_Currency
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu **Currency**.
+Voláním této funkce v rámci členské funkce `DoPropExchange` ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu **Currency**.
 
 ```
 BOOL PX_Currency(
@@ -179,7 +179,7 @@ BOOL PX_Currency(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -198,9 +198,9 @@ Nenulové, pokud bylo Exchange úspěšné; 0, pokud neproběhla úspěšně.
 
 Hodnota vlastnosti bude načtena z nebo zapsána do proměnné, na kterou odkazuje *cyValue*, podle potřeby. Je-li zadán parametr *cyDefault* , bude použit jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z jakéhokoli důvodu neproběhne proces serializace ovládacího prvku.
 
-##  <a name="px_datapath"></a>  PX_DataPath
+##  <a name="px_datapath"></a>PX_DataPath
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost cesty dat typu [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti cesty dat typu [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).
 
 ```
 BOOL PX_DataPath(
@@ -216,7 +216,7 @@ BOOL PX_DataPath(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -234,7 +234,7 @@ Vlastnosti cesty k datům implementují vlastnosti asynchronního řízení. Hod
 
 ##  <a name="px_double"></a>PX_Double
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu **Double**.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti typu **Double**.
 
 ```
 BOOL PX_Double(
@@ -252,7 +252,7 @@ BOOL PX_Double(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -273,7 +273,7 @@ Hodnota vlastnosti je čtena nebo zapsána do proměnné, na kterou odkazuje *do
 
 ##  <a name="px_font"></a>PX_Font
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu Font.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti typu Font.
 
 ```
 BOOL PX_Font(
@@ -287,19 +287,19 @@ BOOL PX_Font(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
 
 *písma*<br/>
-Odkaz na `CFontHolder` objekt, který obsahuje vlastnost font.
+Odkaz na objekt `CFontHolder`, který obsahuje vlastnost font.
 
 *pFontDesc*<br/>
-Ukazatel na `FONTDESC` strukturu obsahující hodnoty, které mají být použity při inicializaci výchozího stavu vlastnosti Font, v případě, že *pFontDispAmbient* má hodnotu null.
+Ukazatel na `FONTDESC`ovou strukturu obsahující hodnoty, které mají být použity při inicializaci výchozího stavu vlastnosti Font v případě, že *pFontDispAmbient* má hodnotu null.
 
 *pFontDispAmbient*<br/>
-Ukazatel na `IFontDisp` rozhraní písma, které má být použito při inicializaci výchozího stavu vlastnosti Font.
+Ukazatel na `IFontDisp` rozhraní písma, které se má použít při inicializaci výchozího stavu vlastnosti Font.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -307,11 +307,11 @@ Nenulové, pokud bylo Exchange úspěšné; 0, pokud neproběhla úspěšně.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota vlastnosti je přečtena nebo zapsána na `font` `CFontHolder` odkaz, pokud je to vhodné. Pokud jsou zadány *pFontDesc* a *pFontDispAmbient* , používají se k inicializaci výchozí hodnoty vlastnosti v případě potřeby. Tyto hodnoty se používají, pokud z jakéhokoli důvodu neproběhne proces serializace ovládacího prvku. Obvykle předáte null pro *pFontDesc* a okolní hodnotu vrácenou `COleControl::AmbientFont` pro *pFontDispAmbient*. Všimněte si, že objekt Font vrácený `COleControl::AmbientFont` musí být vydán voláním `IFontDisp::Release` členské funkce.
+Hodnota vlastnosti je čtena nebo zapsána do `font`, `CFontHolder` odkaz, pokud je to vhodné. Pokud jsou zadány *pFontDesc* a *pFontDispAmbient* , používají se k inicializaci výchozí hodnoty vlastnosti v případě potřeby. Tyto hodnoty se používají, pokud z jakéhokoli důvodu neproběhne proces serializace ovládacího prvku. Obvykle předáte NULL pro *pFontDesc* a okolní hodnotu vrácenou `COleControl::AmbientFont` pro *pFontDispAmbient*. Všimněte si, že objekt Font vrácený `COleControl::AmbientFont` musí být uvolněn voláním členské funkce `IFontDisp::Release`.
 
 ##  <a name="px_float"></a>PX_Float
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu **float**.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti typu **float**.
 
 ```
 BOOL PX_Float(
@@ -329,7 +329,7 @@ BOOL PX_Float(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -350,7 +350,7 @@ Hodnota vlastnosti je čtena nebo zapsána do proměnné, na kterou odkazuje *fl
 
 ##  <a name="px_iunknown"></a>PX_IUnknown
 
-Volání této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku k serializaci nebo inicializaci vlastnosti reprezentované objektem, který `IUnknown`má odvozené rozhraní.
+Volání této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti reprezentované objektem, který má rozhraní odvozené `IUnknown`.
 
 ```
 BOOL PX_IUnknown(
@@ -364,7 +364,7 @@ BOOL PX_IUnknown(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -372,7 +372,7 @@ Název vyměněné vlastnosti.
 *pUnk*<br/>
 Odkaz na proměnnou obsahující rozhraní objektu, který představuje hodnotu vlastnosti.
 
-*iid*<br/>
+*identifikátor*<br/>
 ID rozhraní, které určuje, které rozhraní objektu vlastnosti je používáno ovládacím prvkem.
 
 *pUnkDefault*<br/>
@@ -388,7 +388,7 @@ Hodnota vlastnosti je čtena nebo zapsána do proměnné, na kterou odkazuje *pu
 
 ##  <a name="px_long"></a>PX_Long
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu **Long**.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti typu **Long**.
 
 ```
 BOOL PX_Long(
@@ -406,7 +406,7 @@ BOOL PX_Long(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -427,7 +427,7 @@ Hodnota vlastnosti je čtena nebo zapsána do proměnné, na kterou odkazuje hod
 
 ##  <a name="px_picture"></a>PX_Picture
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost obrázku vašeho ovládacího prvku.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti obrázku vašeho ovládacího prvku.
 
 ```
 BOOL PX_Picture(
@@ -445,7 +445,7 @@ BOOL PX_Picture(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -466,7 +466,7 @@ Hodnota vlastnosti je čtena nebo zapsána do proměnné, na kterou odkazuje *PI
 
 ##  <a name="px_short"></a>PX_Short
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu **short**.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti typu **short**.
 
 ```
 BOOL PX_Short(
@@ -484,7 +484,7 @@ BOOL PX_Short(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -503,9 +503,9 @@ Nenulové, pokud bylo Exchange úspěšné; 0, pokud neproběhla úspěšně.
 
 Hodnota vlastnosti je čtena nebo zapsána do proměnné, na kterou odkazuje *sValue*, podle potřeby. Je-li zadán parametr *sDefault* , bude použit jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z jakéhokoli důvodu neproběhne proces serializace ovládacího prvku.
 
-##  <a name="px_ulong"></a>  PX_ULong
+##  <a name="px_ulong"></a>PX_ULong
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu **ulong**.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti typu **ulong**.
 
 ```
 BOOL PX_ULong(
@@ -523,7 +523,7 @@ BOOL PX_ULong(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -542,9 +542,9 @@ Nenulové, pokud bylo Exchange úspěšné; 0, pokud neproběhla úspěšně.
 
 Hodnota vlastnosti je čtena nebo zapsána do proměnné, na kterou odkazuje *ulValue*, podle potřeby. Je-li zadán parametr *ulDefault* , bude použit jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z jakéhokoli důvodu neproběhne proces serializace ovládacího prvku.
 
-##  <a name="px_ushort"></a>  PX_UShort
+##  <a name="px_ushort"></a>PX_UShort
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu **short bez znaménka**.
+Voláním této funkce v rámci členské funkce `DoPropExchange` ovládacího prvku můžete serializovat nebo inicializovat vlastnost typu **short bez znaménka**.
 
 ```
 BOOL PX_UShort(
@@ -562,7 +562,7 @@ BOOL PX_UShort(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -583,7 +583,7 @@ Hodnota vlastnosti je čtena nebo zapsána do proměnné, na kterou odkazuje *us
 
 ##  <a name="px_string"></a>PXstring
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete serializovat nebo inicializovat vlastnost řetězce znaků.
+Voláním této funkce v rámci členské funkce ovládacího prvku `DoPropExchange` k serializaci nebo inicializaci vlastnosti řetězce znaků.
 
 ```
 BOOL PXstring(
@@ -601,7 +601,7 @@ BOOL PXstring(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *pszPropName*<br/>
 Název vyměněné vlastnosti.
@@ -622,7 +622,7 @@ Hodnota vlastnosti je čtena nebo zapsána do proměnné, na kterou odkazuje *st
 
 ##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert
 
-Voláním této funkce v rámci `DoPropExchange` členské funkce ovládacího prvku můžete inicializovat vlastnost písma převedením vlastností souvisejících s písmem ovládacího prvku VBX.
+Voláním této funkce v rámci členské funkce `DoPropExchange` ovládacího prvku můžete inicializovat vlastnost písma převedením vlastností souvisejících s písmem ovládacího prvku VBX.
 
 ```
 BOOL PX_VBXFontConvert(
@@ -633,7 +633,7 @@ BOOL PX_VBXFontConvert(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předaný jako parametr do `DoPropExchange`).
+Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) (obvykle předán jako parametr pro `DoPropExchange`).
 
 *písma*<br/>
 Vlastnost font ovládacího prvku OLE, který bude obsahovat převedené vlastnosti týkající se písma VBX
@@ -644,13 +644,13 @@ Nenulové, pokud bylo Exchange úspěšné; 0, pokud neproběhla úspěšně.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být používána pouze ovládacím prvkem OLE, který je navržen jako přímá náhrada pro ovládací prvek VBX. Když Visual Basic vývojové prostředí převede formulář obsahující ovládací prvek VBX tak, aby používal odpovídající náhradní ovládací prvek OLE, vyvolá `IDataObject::SetData` funkci ovládacího prvku, která předává sadu vlastností, která obsahuje data vlastnosti ovládacího prvku VBX. Tato operace zase způsobí vyvolání `DoPropExchange` funkce ovládacího prvku. `DoPropExchange`může zavolat `PX_VBXFontConvert` , aby se převedly vlastnosti související se fonty ovládacího prvku VBX (například "font", "FontSize" atd.) do odpovídajících komponent vlastnosti Font ovládacího prvku OLE.
+Tato funkce by měla být používána pouze ovládacím prvkem OLE, který je navržen jako přímá náhrada pro ovládací prvek VBX. Když Visual Basic vývojové prostředí převede formulář, který obsahuje ovládací prvek VBX, aby používal odpovídající náhradní ovládací prvek OLE, vyvolá funkci ovládacího prvku `IDataObject::SetData` a předává sadu vlastností, která obsahuje data vlastnosti ovládacího prvku VBX. Tato operace zase způsobí vyvolání funkce `DoPropExchange` ovládacího prvku. `DoPropExchange` mohou volat `PX_VBXFontConvert` k převodu vlastností souvisejících se písma ovládacího prvku VBX (například "font", "FontSize" atd.) do odpovídajících prvků vlastnosti Font ovládacího prvku OLE.
 
-`PX_VBXFontConvert`by měla být volána pouze v případě, že je ovládací prvek skutečně převáděn z aplikace VBX Form. Příklad:
+`PX_VBXFontConvert` by měla být volána pouze v případě, že se ovládací prvek skutečně převádí z aplikace formuláře v VBX. Příklad:
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

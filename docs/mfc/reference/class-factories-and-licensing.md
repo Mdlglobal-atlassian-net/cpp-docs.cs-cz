@@ -5,33 +5,33 @@ helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
 ms.openlocfilehash: 18d86122e57af056a50a4d94bac89d65a7b71c7d
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611852"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855720"
 ---
 # <a name="class-factories-and-licensing"></a>Objekty pro vytváření tříd a licencování
 
-K vytvoření instance ovládacího prvku OLE, volá aplikace typu kontejner pro členské funkce objektu pro vytváření tříd ovládacího prvku. Protože váš ovládací prvek je skutečný objekt OLE, zodpovídá za vytvoření instance ovládacího prvku objektu pro vytváření tříd. Každá třída ovládacího prvku OLE, musí mít objekt pro vytváření tříd.
+Chcete-li vytvořit instanci ovládacího prvku OLE, kontejnerová aplikace volá členskou funkci objektu factory třídy ovládacího prvku. Vzhledem k tomu, že váš ovládací prvek je skutečný objekt OLE, je objekt factory třídy zodpovědný za vytváření instancí vašeho ovládacího prvku. Každá třída ovládacího prvku OLE musí mít objekt factory třídy.
 
-Další důležitou funkcí ovládacích prvků OLE je jejich schopnost vynutit licenci. ControlWizard umožňuje začlenit licencování během vytváření projektu ovládacího prvku. Další informace o licencování ovládacích prvků, najdete v článku [ovládací prvky ActiveX: Licencování ovládacího prvku ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Další důležitou funkcí ovládacích prvků OLE je jejich schopnost vymáhat licenci. ControlWizard umožňuje začlenit licencování během vytváření projektu řízení. Další informace o řízení licencování najdete v článku [ovládací prvky ActiveX: licencování ovládacího prvku ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
-Následující tabulka uvádí několik makra a funkce, které slouží k deklaraci a implementaci ovládacího prvku pro vytváření tříd a licenci ovládacího prvku.
+Následující tabulka uvádí několik maker a funkcí, které slouží k deklaraci a implementaci objektu pro vytváření tříd ovládacího prvku a k licencování vašeho ovládacího prvku.
 
 ### <a name="class-factories-and-licensing"></a>Objekty pro vytváření tříd a licencování
 
 |||
 |-|-|
-|[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|Deklaruje objekt pro vytváření tříd pro stránku ovládací prvek nebo vlastnost OLE.|
-|[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|Implementuje ovládací prvek `GetClassID` funkce a deklaruje instanci objektu pro vytváření tříd.|
-|[BEGIN_OLEFACTORY](#begin_olefactory)|Začíná deklarace všechny funkce správy licencí.|
-|[END_OLEFACTORY](#end_olefactory)|Ukončí deklarace všechny funkce správy licencí.|
-|[AfxVerifyLicFile](#afxverifylicfile)|Ověří, zda ovládací prvek je licencovaná pro použití v určitém počítači.|
+|[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|Deklaruje objekt pro vytváření tříd pro ovládací prvek OLE nebo stránku vlastností.|
+|[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|Implementuje funkci `GetClassID` ovládacího prvku a deklaruje instanci objektu pro vytváření tříd.|
+|[BEGIN_OLEFACTORY](#begin_olefactory)|Zahájí deklaraci všech licenčních funkcí.|
+|[END_OLEFACTORY](#end_olefactory)|Ukončí deklaraci všech licenčních funkcí.|
+|[AfxVerifyLicFile](#afxverifylicfile)|Ověřuje, zda je ovládací prvek licencován pro použití v určitém počítači.|
 
-##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX
+##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX
 
-Deklaruje objekt pro vytváření tříd a `GetClassID` členské funkce třídy ovládacího prvku.
+Deklaruje objekt pro vytváření tříd a členskou funkci `GetClassID` vaší třídy ovládacího prvku.
 
 ```
 DECLARE_OLECREATE_EX(class_name)
@@ -40,7 +40,7 @@ DECLARE_OLECREATE_EX(class_name)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Název třídy ovládacího prvku.
+Název třídy ovládacího prvku
 
 ### <a name="remarks"></a>Poznámky
 
@@ -52,11 +52,11 @@ Všimněte si, že toto makro slouží stejnému účelu jako následující uk�
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Header** AFXCTL. h
 
-##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX
+##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX
 
-Implementuje objekt pro vytváření tříd ovládacího prvku a [Funkce GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) členské funkce třídy ovládacího prvku.
+Implementuje objekt pro vytváření tříd ovládacího prvku a členskou funkci [GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) vaší třídy ovládacího prvku.
 
 ```
 IMPLEMENT_OLECREATE_EX(
@@ -78,25 +78,25 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Název třídy stránky vlastností ovládacího prvku.
+Název třídy stránky vlastností ovládacího prvku
 
 *external_name*<br/>
-Název objektu vystaveni aplikací.
+Název objektu vystavený aplikacím.
 
-*l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8*<br/>
-Součástí CLSID pro třídu. Další informace o těchto parametrech naleznete v tématu poznámky pro [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate).
+*l, W1, W2, B1, B2, B3, B4, B5, B6, B7, B8*<br/>
+Komponenty CLSID třídy. Další informace o těchto parametrech naleznete v tématu poznámky k [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate).
 
 ### <a name="remarks"></a>Poznámky
 
-Toto makro musí být uvedena v souboru implementace pro ovládací prvek třídy, které používá DECLARE_OLECREATE_EX – makro nebo BEGIN_OLEFACTORY a END_OLEFACTORY makra. Externí název je identifikátor ovládacího prvku OLE, který je přístupný ostatním aplikacím. Kontejnery používat tento název pro žádost o objekt této třídy ovládacího prvku.
+Toto makro se musí nacházet v implementačním souboru pro jakoukoliv třídu ovládacího prvku, která používá makro DECLARE_OLECREATE_EX nebo makra BEGIN_OLEFACTORY a END_OLEFACTORY. Externí název je identifikátor ovládacího prvku OLE, který je vystavený ostatním aplikacím. Kontejnery používají tento název k vyžádání objektu této třídy ovládacího prvku.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Header** AFXCTL. h
 
-##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY
+##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY
 
-Začíná deklaraci objektu pro vytváření vaší třídy v souboru hlaviček třídy vašeho ovládacího prvku.
+Zahájí deklaraci vašeho objektu pro vytváření tříd v hlavičkovém souboru vaší třídy ovládacího prvku.
 
 ```
 BEGIN_OLEFACTORY(class_name)
@@ -105,19 +105,19 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Určuje název třídy ovládacího prvku, jehož objekt pro vytváření tříd jde.
+Určuje název třídy ovládacího prvku, jejíž objekt pro vytváření tříd je to.
 
 ### <a name="remarks"></a>Poznámky
 
-Deklarace objektu pro vytváření tříd licencování funkce chcete spustit ihned po BEGIN_OLEFACTORY.
+Deklarace funkcí licencování factory třídy by měly začít hned po BEGIN_OLEFACTORY.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Header** AFXCTL. h
 
-##  <a name="end_olefactory"></a>  END_OLEFACTORY
+##  <a name="end_olefactory"></a>END_OLEFACTORY
 
-Ukončí deklaraci objektu pro vytváření tříd ovládacího prvku.
+Ukončí deklaraci objektu factory třídy ovládacího prvku.
 
 ```
 END_OLEFACTORY(class_name)
@@ -126,15 +126,15 @@ END_OLEFACTORY(class_name)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Název třídy ovládacího prvku, jehož objekt pro vytváření tříd jde.
+Název třídy ovládacího prvku, jejíž objekt pro vytváření tříd je to.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Header** AFXCTL. h
 
-##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile
+##  <a name="afxverifylicfile"></a>AfxVerifyLicFile
 
-Voláním této funkce zkontrolujte, že licenční soubor s názvem podle `pszLicFileName` platí pro ovládací prvek OLE.
+Voláním této funkce ověříte, že licenční soubor nazvaný `pszLicFileName` je platný pro ovládací prvek OLE.
 
 ```
 BOOL AFXAPI AfxVerifyLicFile(
@@ -147,31 +147,31 @@ BOOL AFXAPI AfxVerifyLicFile(
 ### <a name="parameters"></a>Parametry
 
 *hInstance*<br/>
-Popisovač instance přidružené k licencovaného ovládacího prvku knihovny DLL.
+Obslužná rutina instance knihovny DLL přidružené k Licencovanému ovládacímu prvku.
 
 *pszLicFileName*<br/>
-Odkazuje na řetězec znaků zakončené znakem null obsahující název souboru licencí.
+Odkazuje na řetězec znaků zakončený hodnotou null obsahující název souboru licence.
 
 *pszLicFileContents*<br/>
-Body sekvence bajtů, který musí odpovídat pořadí nalezen na začátku souboru licencí.
+Odkazuje na sekvenci bajtů, která musí odpovídat sekvenci nalezené na začátku licenčního souboru.
 
 *cch*<br/>
 Počet znaků v *pszLicFileContents*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bude licenční soubor existuje a začíná sekvence znaků v *pszLicFileContents*; jinak 0.
+Nenulová, pokud soubor s licencí existuje a začíná sekvencí znaků v *pszLicFileContents*; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *cch* -1, je tato funkce využívá:
+Pokud je *CCH* -1, tato funkce používá:
 
 [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Header** AFXCTL. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkce&gt; pole'
+title: funkce&gt; pole &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - array/std::array::get
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - std::get [C++]
 - std::swap [C++]
 ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456776"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875884"
 ---
-# <a name="ltarraygt-functions"></a>&lt;funkce&gt; pole
+# <a name="ltarraygt-functions"></a>funkce&gt; pole &lt;
 
-Pole > záhlaví obsahuje dvě nečlenské `get` funkce a `swap`, které pracují s objekty **Array** . \<
+Záhlaví > pole \<obsahuje dvě nečlenské funkce, `get` a `swap`, které pracují s objekty **Array** .
 
 |||
 |-|-|
-|[get](#get)|[swap](#swap)|
+|[get](#get)|[adresu](#swap)|
 
 ## <a name="get"></a>Čtěte
 
@@ -42,16 +42,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Indexovacím*\
+*Index*\
 Posunutí elementu.
 
-*Š*\
+*T*\
 Typ prvku
 
 *N*\
 Počet prvků v poli.
 
-*šipka*\
+\ *ARR*
 Pole, ze kterého se má vybírat
 
 ### <a name="example"></a>Příklad
@@ -88,7 +88,7 @@ int main()
 
 ## <a name="swap"></a>adresu
 
-Specializace `std::swap` šablony bez člena, která zahodí dva objekty **Array** .
+Specializace šablony nečlenu `std::swap`, která zahodí dva objekty **Array** .
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -103,15 +103,15 @@ Typ prvku
 *N*\
 Velikost pole.
 
-*zbývá*\
+*levý*\
 První pole k proměně.
 
-*Kliknutím*\
+*pravé*\
 Druhé pole pro prohození.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony se spustí `left.swap(right)`.
+Funkce šablony provede `left.swap(right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -159,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<> pole](../standard-library/array.md)
+[> pole \<](../standard-library/array.md)

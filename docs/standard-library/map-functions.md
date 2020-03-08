@@ -1,20 +1,20 @@
 ---
-title: '&lt;Mapa&gt; funkce'
+title: '&lt;&gt; funkcí map'
 ms.date: 11/04/2016
 f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
 ms.openlocfilehash: e7876b37bfc006eaecf2f1e36273c5ae8689dad4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243293"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883954"
 ---
-# <a name="ltmapgt-functions"></a>&lt;Mapa&gt; funkce
+# <a name="ltmapgt-functions"></a>&lt;&gt; funkcí map
 
-## <a name="swap_multimap"></a> swap (map)
+## <a name="swap_multimap"></a>swap (map)
 
 Zamění prvky dvou objektů map.
 
@@ -27,23 +27,23 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*\
-Mapa poskytující prvky pro záměnu nebo mapu, jehož prvky mají být zaměněny mapy *levé*.
+*pravé*\
+Mapa poskytující prvky, které mají být zaměněny, nebo mapa, jejíž prvky mají být vyměňovány pomocí těch z mapy *vlevo*.
 
-*doleva*\
-Na mapě, jehož prvky mají být zaměněny mapy *správné*.
+*levý*\
+Mapa, jejíž prvky mají být vyměňovány s *právy*mapy.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablon je algoritmus specializované na mapě třídy kontejneru ke spuštění funkce člena `left`.[ Prohození](../standard-library/map-class.md#swap)( `right`). Toto je instance částečné řazení šablon funkcí v kompilátoru. Pokud funkce šablony jsou přetížené tak, že shoda šablony pomocí volání funkce není jedinečný, pak kompilátor zvolit nejvíce specializovanou verzi šablony funkce. Obecné verzi funkce šablony **šablony** \< **třída T**> **void prohození**( **T &** , **T &** ), v algoritmu třída pracuje podle přiřazení a je pomalá operace. Specializované verze v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s vnitřní reprezentaci třídy kontejneru.
+Funkce šablony je algoritmus specializovaný na mapě třídy kontejneru, aby bylo možné spustit členskou funkci `left`. [swap](../standard-library/map-class.md#swap)(`right`). Toto je instance částečného řazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejvíce specializované verze funkce šablony. Obecná verze funkce šablony, **template** \< **Class t**> **void swap**( **t &** , **t &** ), ve třídě algoritmu funguje podle přiřazení a jedná se o pomalou operaci. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s interní reprezentace třídy kontejneru.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad kódu pro členské funkce [map::swap](../standard-library/map-class.md#swap) příklad, který používá verzi šablony `swap`.
+Viz příklad kódu pro mapu členské funkce [:: swap](../standard-library/map-class.md#swap) pro příklad, který používá verzi šablony `swap`.
 
-## <a name="swap"></a> swap (multimap)
+## <a name="swap"></a>swap (multimap)
 
-Vymění prvky dvou multimaps.
+Vyměňuje prvky dvou více map.
 
 ```cpp
 template <class key, class T, class _Pr, class _Alloc>
@@ -54,16 +54,16 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*\
-Multimap poskytující prvky pro záměnu nebo objektu multimap, jehož prvky mají být zaměněny objektu multimap *levé*.
+*pravé*\
+Multimap poskytuje prvky, které mají být měněny, nebo multimap, jejichž prvky mají být vyměňovány s multimap *doleva*.
 
-*doleva*\
-Multimap, jehož prvky mají být zaměněny objektu multimap *správné*.
+*levý*\
+Multimap, jehož prvky mají být vyměňovány pomocí multimap *práva*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablon je algoritmus specializované na mapě třídy kontejneru se promítnou u třída multimap kontejneru ke spuštění funkce člena `left`.[ Prohození](../standard-library/multimap-class.md#swap) (`right`). Toto je instance částečné řazení šablon funkcí v kompilátoru. Pokud funkce šablony jsou přetížené tak, že shoda šablony pomocí volání funkce není jedinečný, pak kompilátor zvolit nejvíce specializovanou verzi šablony funkce. Obecné verzi funkce šablony **šablony** \< **třída T**> **void prohození**( **T &** , **T &** ), v algoritmu třída pracuje podle přiřazení a je pomalá operace. Specializované verze v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s vnitřní reprezentaci třídy kontejneru.
+Funkce šablony je algoritmus specializovaný na mapě třídy kontejneru, který se má spustit u třídy kontejneru multimap, aby se spustila členská funkce `left`. [swap](../standard-library/multimap-class.md#swap) (`right`). Toto je instance částečného řazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejvíce specializované verze funkce šablony. Obecná verze funkce šablony, **template** \< **Class t**> **void swap**( **t &** , **t &** ), ve třídě algoritmu funguje podle přiřazení a jedná se o pomalou operaci. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s interní reprezentace třídy kontejneru.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad kódu pro členské funkce [multimap::swap](../standard-library/multimap-class.md#swap) příklad, který používá verzi šablony `swap`.
+Viz příklad kódu pro členskou funkci [multimap:: swap](../standard-library/multimap-class.md#swap) pro příklad, který používá verzi šablony `swap`.

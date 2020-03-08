@@ -5,11 +5,11 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869710"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857013"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: správce C++ balíčků pro Windows, Linux a MacOS
 
@@ -27,13 +27,13 @@ Můžete také vytvořit klon vcpkg, který má v kolekci portů soukromé kniho
 
 <sup>1</sup> *Poznámka: zdroje nejsou pro některé proprietární knihovny k dispozici. V těchto případech vcpkg stáhne kompatibilní předem připravené binární soubory.*
 
-## <a name="installation"></a>Instalace služby
+## <a name="installation"></a>Instalace
 
 Naklonujte úložiště vcpkg z GitHubu: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). Můžete si stáhnout do libovolného umístění složky, které dáváte přednost.
 
 Spusťte zaváděcí nástroj v kořenové složce:
 
-- **bootstrap-vcpkg.bat** (Windows)
+- **bootstrap-vcpkg. bat** (Windows)
 - **./bootstrap-vcpkg.sh** (Linux, MacOS)
 
 ## <a name="search-the-list-of-available-libraries"></a>Hledat v seznamu dostupných knihoven
@@ -217,8 +217,8 @@ Obsah instance vcpkg je:
 |**vcpkg Integration Install**|Zpřístupněte nainstalované balíčky na úrovni uživatele. Při prvním použití vyžaduje oprávnění správce.|
 |**vcpkg Integration Remove**|Odebrat integraci na úrovni uživatele|
 |**vcpkg Integration Project**|Vygenerujte odkaz na balíček NuGet pro individuální použití projektu VS.|
-|**vcpkg export \<pkg >... \[opt]...**|Export balíčku|
-|**vcpkg edit \<pkg>**|Otevřete port pro úpravy (používá% EDITOR%, výchozí kód).|
+|**vcpkg export \<pkg >... \[opt]...**|Exportovat balíček|
+|**vcpkg upravit \<pkg >**|Otevřete port pro úpravy (používá% EDITOR%, výchozí kód).|
 |**vcpkg Create \<pkg > \<URL > \[Archive]**|Vytvořit nový balíček|
 |**vcpkg cache**|Vypsat zkompilované balíčky v mezipaměti|
 |**verze vcpkg**|Zobrazit informace o verzi|
@@ -229,4 +229,4 @@ Obsah instance vcpkg je:
 |Možnost|Popis|
 |---------|---------|
 |**--s trojicí \<t >**|Zadejte cílovou architekturu s trojicí. (výchozí: `%VCPKG_DEFAULT_TRIPLET%`, viz také **vcpkg Help s trojicí**)|
-|**--vcpkg-root \<path>**|Zadejte kořenový adresář vcpkg (výchozí: `%VCPKG_ROOT%`).|
+|**--vcpkg-root \<cesta >**|Zadejte kořenový adresář vcpkg (výchozí: `%VCPKG_ROOT%`).|

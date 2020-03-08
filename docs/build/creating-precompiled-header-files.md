@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920100"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884089"
 ---
 # <a name="precompiled-header-files"></a>Předkompilované soubory hlaviček
 
@@ -116,9 +116,9 @@ Použijete-li předkompilovanou hlavičku vytvořenou pomocí/YC nebo/Yu, kompil
 
 Tato tabulka uvádí možnosti kompilátoru, které mohou při použití předkompilované hlavičky aktivovat upozornění na nekonzistenci:
 
-|Možnost|Name|Pravidlo|
+|Možnost|Název|Pravidlo|
 |------------|----------|----------|
-|Parametr|Definovat konstanty a makra|Musí být stejné mezi kompilací, která vytvořila předkompilovanou hlavičku a aktuální kompilaci. Stav definovaných konstant není zaškrtnuto, ale může dojít k nepředvídatelným výsledkům, pokud jsou soubory závislé na hodnotách změněných konstant.|
+|/D|Definovat konstanty a makra|Musí být stejné mezi kompilací, která vytvořila předkompilovanou hlavičku a aktuální kompilaci. Stav definovaných konstant není zaškrtnuto, ale může dojít k nepředvídatelným výsledkům, pokud jsou soubory závislé na hodnotách změněných konstant.|
 |/E nebo/EP|Kopírovat výstup preprocesoru do standardního výstupu|Předkompilované hlavičky nefungují s možností/E nebo/EP.|
 |/FR nebo/FR|Generování informací o prohlížeči zdrojového kódu Microsoftu|Aby byly možnosti/fr a/FR platné s možností/Yu, musí být také v platnosti, když byla vytvořena Předkompilovaná hlavička. Další kompilace, které používají předkompilovanou hlavičku, generují také informace o prohlížeči zdrojového kódu. Informace o prohlížeči jsou umístěny v jednom souboru. sbr a jsou odkazovány jinými soubory stejným způsobem jako informace CodeView. Umístění informací o zdrojovém prohlížeči nelze přepsat.|
 |/GA,/GD,/GE,/GW nebo/GW|Možnosti protokolu Windows|Musí být stejné mezi kompilací, která vytvořila předkompilovanou hlavičku a aktuální kompilaci. Pokud se tyto možnosti liší, zobrazí se zpráva s upozorněním.|
@@ -306,7 +306,7 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](reference/c-cpp-building-reference.md)<br/>
 [Parametry kompilátoru MSVC](reference/compiler-options.md)

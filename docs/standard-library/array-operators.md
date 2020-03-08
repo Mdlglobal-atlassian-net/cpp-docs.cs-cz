@@ -1,5 +1,5 @@
 ---
-title: operátory &lt;array &gt;
+title: operátory&gt; pole &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - array/std::array::operator!=
@@ -10,20 +10,20 @@ f1_keywords:
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688460"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875885"
 ---
-# <a name="ltarraygt-operators"></a>operátory &lt;array &gt;
+# <a name="ltarraygt-operators"></a>operátory&gt; pole &lt;
 
-Hlavička \<array > zahrnuje tyto funkce šablon porovnání nečlenského **pole** .
+Záhlaví > pole \<obsahuje tyto funkce šablon porovnání, které nečlení **pole** .
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operátor &gt;](#op_gt)|[operátor &gt; =](#op_gt_eq)|
-|[operátor &lt;](#op_lt)|[operátor &lt; =](#op_lt_eq)|[operator = = – operátor](#op_eq_eq)|
+|[operator!=](#op_neq)|[operátor&gt;](#op_gt)|[operátor&gt;=](#op_gt_eq)|
+|[operátor&lt;](#op_lt)|[operátor&lt;=](#op_lt_eq)|[operator = = – operátor](#op_eq_eq)|
 
 ## <a name="op_neq"></a>! = – operátor
 
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ prvku
 
-*N* \
+*N*\
 Velikost pole.
 
-*levý* \
+*levý*\
 Levý kontejner, který se má porovnat
 
-*pravé* \
+*pravé*\
 Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>operátor &lt;
+## <a name="op_lt"></a>operátor&lt;
 
 Porovnání pole, je menší než.
 
@@ -111,16 +111,16 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ prvku
 
-*N* \
+*N*\
 Velikost pole.
 
-*levý* \
+*levý*\
 Levý kontejner, který se má porovnat
 
-*pravé* \
+*pravé*\
 Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>operátor &lt; =
+## <a name="op_lt_eq"></a>operátor&lt;=
 
 Porovnání pole, je menší než nebo rovno.
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ prvku
 
-*N* \
+*N*\
 Velikost pole.
 
-*levý* \
+*levý*\
 Levý kontejner, který se má porovnat
 
-*pravé* \
+*pravé*\
 Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
@@ -257,16 +257,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ prvku
 
-*N* \
+*N*\
 Velikost pole.
 
-*levý* \
+*levý*\
 Levý kontejner, který se má porovnat
 
-*pravé* \
+*pravé*\
 Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>operátor &gt;
+## <a name="op_gt"></a>operátor&gt;
 
 Porovnání pole, je větší než.
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ prvku
 
-*N* \
+*N*\
 Velikost pole.
 
-*levý* \
+*levý*\
 Levý kontejner, který se má porovnat
 
-*pravé* \
+*pravé*\
 Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>operátor &gt; =
+## <a name="op_gt_eq"></a>operátor&gt;=
 
 Porovnání pole, je větší nebo rovno.
 
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* \
+*Ty*\
 Typ prvku
 
-*N* \
+*N*\
 Velikost pole.
 
-*levý* \
+*levý*\
 Levý kontejner, který se má porovnat
 
-*pravé* \
+*pravé*\
 Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
@@ -463,6 +463,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<array >](../standard-library/array.md)
+[> pole \<](../standard-library/array.md)

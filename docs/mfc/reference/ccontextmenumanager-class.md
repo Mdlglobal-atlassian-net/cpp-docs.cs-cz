@@ -1,5 +1,5 @@
 ---
-title: CContextMenuManager Class
+title: CContextMenuManager – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CContextMenuManager
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
 ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182222"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78868987"
 ---
-# <a name="ccontextmenumanager-class"></a>CContextMenuManager Class
+# <a name="ccontextmenumanager-class"></a>CContextMenuManager – třída
 
-`CContextMenuManager` Objektu spravuje místní nabídky, také známé jako kontextové nabídky.
+Objekt `CContextMenuManager` spravuje místní nabídky, označované také jako kontextové nabídky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,53 +51,53 @@ class CContextMenuManager : public CObject
 
 |Název|Popis|
 |----------|-----------------|
-|[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|Vytvoří `CContextMenuManager` objektu.|
+|[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|Vytvoří objekt `CContextMenuManager`.|
 |`CContextMenuManager::~CContextMenuManager`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[CContextMenuManager::AddMenu](#addmenu)|Přidá novou nabídku.|
-|[CContextMenuManager::GetMenuById](#getmenubyid)|Vrátí popisovač do nabídky přidružené k ID zadaného prostředku.|
-|[CContextMenuManager::GetMenuByName](#getmenubyname)|Vrátí popisovač do nabídky, která odpovídá názvu zadaná nabídky.|
-|[CContextMenuManager::GetMenuNames](#getmenunames)|Vrátí seznam hodnot názvy nabídek.|
-|[CContextMenuManager::LoadState](#loadstate)|Načte místní nabídky, které jsou uložené v registru Windows.|
-|[CContextMenuManager::ResetState](#resetstate)|Vymaže nabídek z nabídky Správce kontextu.|
-|[CContextMenuManager::SaveState](#savestate)|Uloží místní nabídky do registru Windows.|
-|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Ovládací prvky, zda `CContextMenuManager` při ukazuje novou nabídku ukončí aktivní nabídku.|
-|[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|Zobrazí Zadaná místní nabídce.|
-|[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|Zobrazí Zadaná místní nabídce. Vrátí index příkaz vybrané nabídky.|
+|[CContextMenuManager:: PřidatNabídku](#addmenu)|Přidá novou místní nabídku.|
+|[CContextMenuManager::GetMenuById](#getmenubyid)|Vrátí popisovač do nabídky přidružené k zadanému ID prostředku.|
+|[CContextMenuManager::GetMenuByName](#getmenubyname)|Vrátí popisovač nabídky, který odpovídá zadanému názvu nabídky.|
+|[CContextMenuManager::GetMenuNames](#getmenunames)|Vrátí seznam názvů nabídek.|
+|[CContextMenuManager:: LoadState](#loadstate)|Načte místní nabídky uložené v registru Windows.|
+|[CContextMenuManager:: funkce ResetState](#resetstate)|Vymaže místní nabídky ze správce místní nabídky.|
+|[CContextMenuManager:: SaveState](#savestate)|Uloží místní nabídky do registru systému Windows.|
+|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Určuje, zda `CContextMenuManager` zavře aktivní místní nabídku, když se zobrazí nová místní nabídka.|
+|[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|Zobrazí určenou místní nabídku.|
+|[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|Zobrazí určenou místní nabídku. Vrátí index vybraného příkazu nabídky.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CContextMenuManager` Spravuje místní nabídky a zajišťuje, že mají konzistentní vzhled.
+`CContextMenuManager` spravuje místní nabídky a zajišťuje konzistentní vzhled.
 
-Nevytvářejte `CContextMenuManager` objekt ručně. Vytvoří rozhraní framework vaší aplikace `CContextMenuManager` objektu. Nicméně byste měli volat [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) při inicializaci vaší aplikace. Po inicializaci správce kontextu, použijte metodu [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) získat ukazatel na místní správce pro vaši aplikaci.
+Objekt `CContextMenuManager` byste neměli vytvářet ručně. Rozhraní aplikace vytvoří objekt `CContextMenuManager`. Nicméně při inicializaci aplikace byste měli zavolat metodu [CWinAppEx:: InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) . Po inicializaci správce kontextu použijte metodu [CWinAppEx:: GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) a získejte ukazatel na správce kontextu vaší aplikace.
 
-Můžete vytvořit místní nabídky za běhu pomocí volání `AddMenu`. Pokud chcete zobrazit v nabídce bez první přijímání vstupu uživatele, zavolejte `ShowPopupMenu`. `TrackPopupMenu` se používá, pokud chcete vytvořit nabídku a počkat na vstup uživatele. `TrackPopupMenu` Vrátí index vybraného příkazu nebo 0, pokud uživatel ale ukončila se bez provedení výběru.
+Můžete vytvořit místní nabídky za běhu voláním `AddMenu`. Chcete-li zobrazit nabídku bez prvotního vstupu uživatele, zavolejte `ShowPopupMenu`. `TrackPopupMenu` se používá v případě, že chcete vytvořit nabídku a počkat na vstup uživatele. `TrackPopupMenu` vrátí index vybraného příkazu nebo 0, pokud byl uživatel ukončen bez výběru všeho.
 
-`CContextMenuManager` Můžete také uložit a načíst jeho stav do registru Windows.
+`CContextMenuManager` také může uložit a načíst svůj stav do registru systému Windows.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak přidat nabídku `CContextMenuManager` objektu a jak není zavřít aktivní rozbalovací nabídky při `CContextMenuManager` objekt zobrazuje nové místní nabídky. Tento fragment kódu je součástí [ukázková vlastní stránky](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak přidat nabídku do objektu `CContextMenuManager` a jak nezavřít aktivní místní nabídku, když se v objektu `CContextMenuManager` zobrazí nová místní nabídka. Tento fragment kódu je součástí [ukázky vlastních stránek](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CContextMenuManager`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcontextmenumanager.h
+**Záhlaví:** afxcontextmenumanager. h
 
-##  <a name="addmenu"></a>  CContextMenuManager::AddMenu
+##  <a name="addmenu"></a>CContextMenuManager:: PřidatNabídku
 
-Přidá novou místní nabídku [ccontextmenumanager –](../../mfc/reference/ccontextmenumanager-class.md).
+Přidá novou místní nabídku do [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
 ```
 BOOL AddMenu(
@@ -112,25 +112,25 @@ BOOL AddMenu(
 ### <a name="parameters"></a>Parametry
 
 *uiMenuNameResId*<br/>
-[in] ID prostředku pro řetězec, který obsahuje název nové nabídky.
+pro ID prostředku pro řetězec, který obsahuje název nové nabídky.
 
 *uiMenuResId*<br/>
-[in] ID nabídky prostředku.
+pro ID prostředku nabídky
 
 *lpszName*<br/>
-[in] Řetězec, který obsahuje název nové nabídky.
+pro Řetězec, který obsahuje název nové nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud metoda byla úspěšná. 0, jestliže metoda selže.
+Nenulové, pokud byla metoda úspěšná; 0, pokud se metoda nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda selže, pokud *uiMenuResId* je neplatný nebo pokud jiné nabídky se stejným názvem již probíhá `CContextMenuManager`.
+Tato metoda se nezdařila, pokud je *uiMenuResId* neplatný nebo pokud už je v `CContextMenuManager`jiná nabídka se stejným názvem.
 
-##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager
+##  <a name="ccontextmenumanager"></a>CContextMenuManager::CContextMenuManager
 
-Vytvoří [ccontextmenumanager –](../../mfc/reference/ccontextmenumanager-class.md) objektu.
+Vytvoří objekt [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) .
 
 ```
 CContextMenuManager();
@@ -138,11 +138,11 @@ CContextMenuManager();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve většině případů by neměl vytvářet `CContextMenuManager` ručně. Vytvoří rozhraní framework vaší aplikace `CContextMenuManager` objektu. Měli byste zavolat [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) během inicializace vaší aplikace. Chcete-li ukazatel vrátit do správce kontextu, zavolejte [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).
+Ve většině případů byste neměli `CContextMenuManager` vytvořit ručně. Rozhraní aplikace vytvoří objekt `CContextMenuManager`. Během inicializace aplikace byste měli zavolat metodu [CWinAppEx:: InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) . Chcete-li získat ukazatel na správce kontextu, zavolejte [CWinAppEx:: GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).
 
-##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById
+##  <a name="getmenubyid"></a>CContextMenuManager::GetMenuById
 
-Vrátí popisovač do nabídky přidružené k ID daného prostředku.
+Vrátí popisovač do nabídky přidružené k danému ID prostředku.
 
 ```
 HMENU GetMenuById(UINT nMenuResId) const;
@@ -151,13 +151,13 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ### <a name="parameters"></a>Parametry
 
 *nMenuResId*<br/>
-[in] ID prostředku pro nabídku.
+pro ID prostředku pro nabídku
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač pro příslušné nabídky nebo `NULL` Pokud nebyl nalezen v nabídce.
+Popisovač přidružené nabídky nebo `NULL`, pokud se nabídka nenajde.
 
-##  <a name="getmenubyname"></a>  CContextMenuManager::GetMenuByName
+##  <a name="getmenubyname"></a>CContextMenuManager::GetMenuByName
 
 Vrátí popisovač do konkrétní nabídky.
 
@@ -170,22 +170,22 @@ HMENU GetMenuByName(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-[in] Řetězec, který obsahuje název nabídky k načtení.
+pro Řetězec, který obsahuje název nabídky, která se má načíst.
 
 *puiOrigResID*<br/>
-[out] Ukazatel UINT. Tento parametr obsahuje ID prostředku zadaného nabídky, pokud nalezen.
+mimo Ukazatel na objekt UINT. Tento parametr obsahuje ID prostředku zadané nabídky, pokud je nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V nabídce, která odpovídá názvu, který byl zadán popisovač *lpszName*. Hodnota NULL, pokud neexistuje žádné nabídky s názvem *lpszName*.
+Popisovač nabídky, který odpovídá názvu určenému parametrem *lpszName*. Hodnota NULL, pokud není k dispozici žádná nabídka s názvem *lpszName*.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud tato metoda vyhledá nabídka, která odpovídá *lpszName*, `GetMenuByName` ukládá ID prostředku nabídky v parametru *puiOrigResID*.
+Pokud tato metoda najde nabídku, která odpovídá *lpszName*, `GetMenuByName` ukládá ID prostředku nabídky do parametru *puiOrigResID*.
 
-##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames
+##  <a name="getmenunames"></a>CContextMenuManager::GetMenuNames
 
-Vrátí seznam názvů nabídek, které jsou přidány do [ccontextmenumanager –](../../mfc/reference/ccontextmenumanager-class.md).
+Vrátí seznam názvů nabídek přidaných do [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
 ```
 void GetMenuNames(CStringList& listOfNames) const;
@@ -194,11 +194,11 @@ void GetMenuNames(CStringList& listOfNames) const;
 ### <a name="parameters"></a>Parametry
 
 *listOfNames*<br/>
-[out] Odkaz na [CStringList](../../mfc/reference/cstringlist-class.md) parametru. Tato metoda zapíše seznam názvů nabídek, které tomuto parametru.
+mimo Odkaz na parametr [CStringList](../../mfc/reference/cstringlist-class.md) . Tato metoda zapíše seznam názvů nabídek do tohoto parametru.
 
-##  <a name="loadstate"></a>  CContextMenuManager::LoadState
+##  <a name="loadstate"></a>CContextMenuManager:: LoadState
 
-Načte informace o přidružené [ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md) z registru Windows.
+Načte informace spojené s [třídou CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) z registru systému Windows.
 
 ```
 virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -207,21 +207,21 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Řetězec, který obsahuje relativní cestu klíče registru.
+pro Řetězec, který obsahuje relativní cestu ke klíči registru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je metoda úspěšná. jinak 0.
+Nenulové, pokud je metoda úspěšná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-*LpszProfileName* parametr není absolutní cestu pro položky registru. Je relativní cestu, která se přidá na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) a [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) v uvedeném pořadí.
+Parametr *lpszProfileName* není absolutní cesta pro položku registru. Jedná se o relativní cestu, která se přidá na konec výchozího klíče registru pro vaši aplikaci. Chcete-li získat nebo nastavit výchozí klíč registru, použijte metody [CWinAppEx:: GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) a [CWinAppEx:: SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) v uvedeném pořadí.
 
-Pomocí této metody [CContextMenuManager::SaveState](#savestate) uložit místní nabídky do registru.
+Pomocí metody [CContextMenuManager:: SaveState](#savestate) uložte místní nabídky do registru.
 
-##  <a name="resetstate"></a>  CContextMenuManager::ResetState
+##  <a name="resetstate"></a>CContextMenuManager:: funkce ResetState
 
-Vymaže všechny položky z místní nabídky přidružené [ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md).
+Vymaže všechny položky z místních nabídek přidružených ke [třídě CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
 ```
 virtual BOOL ResetState();
@@ -229,15 +229,15 @@ virtual BOOL ResetState();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je metoda úspěšná. FALSE, pokud dojde k chybě.
+TRUE, pokud je metoda úspěšná; FALSE, pokud dojde k selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vymaže rozbalovací nabídky a odebere je ze `CContextMenuManager`.
+Tato metoda vymaže místní nabídky a odebere je z `CContextMenuManager`.
 
-##  <a name="savestate"></a>  CContextMenuManager::SaveState
+##  <a name="savestate"></a>CContextMenuManager:: SaveState
 
-Uloží informace o přidružené [ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md) do registru Windows.
+Uloží informace přidružené ke [třídě CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) do registru systému Windows.
 
 ```
 virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -246,21 +246,21 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Řetězec, který obsahuje relativní cestu klíče registru.
+pro Řetězec, který obsahuje relativní cestu ke klíči registru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je metoda úspěšná. jinak 0.
+Nenulové, pokud je metoda úspěšná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-*LpszProfileName* parametr není absolutní cestu pro položky registru. Je relativní cestu, která se přidá na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) a [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) v uvedeném pořadí.
+Parametr *lpszProfileName* není absolutní cesta pro položku registru. Jedná se o relativní cestu, která se přidá na konec výchozího klíče registru pro vaši aplikaci. Chcete-li získat nebo nastavit výchozí klíč registru, použijte metody [CWinAppEx:: GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) a [CWinAppEx:: SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) v uvedeném pořadí.
 
-Pomocí této metody [CContextMenuManager::LoadState](#loadstate) načíst místní nabídky z registru.
+K načtení místních nabídek z registru použijte metodu [CContextMenuManager:: LoadState](#loadstate) .
 
-##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu
+##  <a name="setdontcloseactivemenu"></a>CContextMenuManager::SetDontCloseActiveMenu
 
-Ovládací prvky, zda [ccontextmenumanager –](../../mfc/reference/ccontextmenumanager-class.md) zavře aktivní v rozbalovací nabídce poznat novou místní nabídky.
+Určuje, zda [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) zavře aktivní místní nabídku při zobrazení nové místní nabídky.
 
 ```
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
@@ -269,15 +269,15 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSet*<br/>
-[in] Parametr logické hodnoty, která určuje, zda se zavřít aktivní rozbalovací nabídky. Hodnota TRUE označuje, že není uzavřená v rozbalovací nabídce aktivní. Hodnota FALSE označuje, že je uzavřena v rozbalovací nabídce aktivní.
+pro Logický parametr, který určuje, zda má být zavřena aktivní místní nabídka. Hodnota TRUE značí, že aktivní místní nabídka není zavřena. Hodnota FALSE označuje, že aktivní místní nabídka je zavřena.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `CContextMenuManager` zavře aktivní rozbalovací nabídky.
+Ve výchozím nastavení `CContextMenuManager` zavře aktivní místní nabídku.
 
-##  <a name="showpopupmenu"></a>  CContextMenuManager::ShowPopupMenu
+##  <a name="showpopupmenu"></a>CContextMenuManager::ShowPopupMenu
 
-Zobrazí Zadaná místní nabídce.
+Zobrazí určenou místní nabídku.
 
 ```
 virtual BOOL ShowPopupMenu(
@@ -301,42 +301,42 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ### <a name="parameters"></a>Parametry
 
 *uiMenuResId*<br/>
-[in] ID prostředku v nabídce, která se zobrazí takto.
+pro ID prostředku nabídky, kterou bude tato metoda zobrazovat.
 
-*x*<br/>
-[in] Vodorovný posun nabídku souřadnice klienta.
+*znak*<br/>
+pro Vodorovný posun místní nabídky v souřadnicích klienta.
 
-*y*<br/>
-[in] Svislý posun pro nabídku souřadnice klienta
+*požadované*<br/>
+pro Svislý posun místní nabídky v souřadnicích klienta
 
 *pWndOwner*<br/>
-[in] Ukazatel na nadřazené okno místní nabídky.
+pro Ukazatel na nadřazené okno místní nabídky.
 
 *bOwnMessage*<br/>
-[in] Parametr logické hodnoty, která určuje, jak se směrují zprávy. Pokud *bOwnMessage* je FALSE, standardní knihovny MFC směrování se používá. V opačném případě *pWndOwner* přijme zprávy.
+pro Logický parametr, který určuje, jak jsou zprávy směrovány. Pokud je *BOWNMESSAGE* false, použije se standardní směrování MFC. V opačném případě *pWndOwner* obdrží zprávy.
 
 *hmenuPopup*<br/>
-[in] Popisovač nabídky, která se zobrazí takto.
+pro Popisovač nabídky, kterou tato metoda zobrazí
 
 *bAutoDestroy*<br/>
-[in] Parametr logické hodnoty označující, zda v nabídce se automaticky odstraní.
+pro Logický parametr, který označuje, zda bude nabídka automaticky zničena.
 
 *bRightAlign*<br/>
-[in] Parametr logické hodnoty, která určuje, jak jsou zarovnány položky nabídky. Pokud *bRightAlign* má hodnotu TRUE, v nabídce zarovnán doprava pro pořadí čtení zprava doleva.
+pro Logický parametr, který určuje, jak jsou zarovnány položky nabídky. Pokud má *bRightAlign* hodnotu true, je nabídka zarovnána vpravo ke směru čtení zprava doleva.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První přetížení metody vrátí nenulovou hodnotu, pokud metoda zobrazí v nabídce úspěšně; jinak 0. Druhé přetížení metody vrací ukazatel na [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) Pokud v místní nabídce se zobrazí správně; v opačném případě hodnota NULL.
+První přetížení metody vrátí nenulovou hodnotu, pokud metoda zobrazí nabídku úspěšně. v opačném případě 0. Druhá metoda Overload vrátí ukazatel na [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , pokud se místní nabídka zobrazuje správně. jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento způsob se podobá metodě [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) v tom, že obě metody zobrazit místní nabídku. Ale `TrackPopupMenu` vrátí index příkaz vybrané nabídky.
+Tato metoda se podobá metodě [CContextMenuManager:: TrackPopupMenu](#trackpopupmenu) v tom, že obě metody zobrazují místní nabídku. `TrackPopupMenu` však vrátí index vybraného příkazu nabídky.
 
-Pokud parametr *bAutoDestroy* má hodnotu FALSE, je nutné volat ručně zděděnou `DestroyMenu` metodu pro uvolnění paměťových prostředků. Výchozí implementace `ShowPopupMenu` nepoužívá parametr *bAutoDestroy*. Je k dispozici pro budoucí použití nebo pro vlastní třídy odvozené od `CContextMenuManager` třídy.
+Pokud je parametr *BAUTODESTROY* false, je nutné ručně volat zděděnou `DestroyMenu` metodu pro uvolnění paměťových prostředků. Výchozí implementace `ShowPopupMenu` nepoužívá parametr *bAutoDestroy*. Je k dispozici pro budoucí použití nebo pro vlastní třídy odvozené od třídy `CContextMenuManager`.
 
-##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu
+##  <a name="trackpopupmenu"></a>CContextMenuManager::TrackPopupMenu
 
-Zadaná místní nabídce se zobrazí a vrátí index příkazu vybrané místní nabídky.
+Zobrazí zadanou místní nabídku a vrátí index vybraného příkazu místní nabídky.
 
 ```
 virtual UINT TrackPopupMenu(
@@ -350,29 +350,29 @@ virtual UINT TrackPopupMenu(
 ### <a name="parameters"></a>Parametry
 
 *hmenuPopup*<br/>
-[in] Popisovač nabídku, která zobrazuje tuto metodu.
+pro Popisovač místní nabídky, kterou tato metoda zobrazuje
 
-*x*<br/>
-[in] Vodorovný posun nabídku souřadnice klienta.
+*znak*<br/>
+pro Vodorovný posun místní nabídky v souřadnicích klienta.
 
-*y*<br/>
-[in] Svislý posun pro nabídku souřadnice klienta.
+*požadované*<br/>
+pro Svislý posun místní nabídky v souřadnicích klienta.
 
 *pWndOwner*<br/>
-[in] Ukazatel na nadřazené okno místní nabídky.
+pro Ukazatel na nadřazené okno místní nabídky.
 
 *bRightAlign*<br/>
-[in] Parametr logické hodnoty, která určuje, jak jsou zarovnány položky nabídky. Pokud *bRightAlign* má hodnotu TRUE, v nabídce zarovnán doprava pro pořadí čtení zprava doleva. Pokud *bRightAlign* má hodnotu FALSE, v nabídce zarovnané vlevo pořadí čtení zleva doprava.
+pro Logický parametr, který určuje, jak jsou zarovnány položky nabídky. Pokud má *bRightAlign* hodnotu true, je nabídka zarovnána vpravo ke směru čtení zprava doleva. Pokud je *BRIGHTALIGN* false, nabídka je zarovnána vlevo pro pořadí čtení zleva doprava.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-ID nabídky příkazu příkazu, který uživatel vybere; 0, pokud uživatel nezavře nabídku bez výběru příkazu nabídky.
+ID příkazu nabídky, který uživatel zvolí; 0, pokud uživatel zavře místní nabídku bez výběru příkazu nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda funguje jako modální volání zobrazit místní nabídku. Aplikace nebude pokračovat na následující řádek kódu, dokud uživatel zavře nabídku nebo vybere příkaz. Je alternativní metoda, která slouží k zobrazení místní nabídky [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Tato metoda není modální volání a nevrátí ID vybraného příkazu.
+Tato metoda funguje jako modální volání pro zobrazení místní nabídky. V kódu aplikace nebude pokračovat následující řádek, dokud uživatel buď nezavře místní nabídku, nebo nevybere příkaz. Alternativná metoda, kterou lze použít k zobrazení místní nabídky, je [CContextMenuManager:: ShowPopupMenu](#showpopupmenu). Tato metoda není modálním voláním a nebude vracet ID vybraného příkazu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

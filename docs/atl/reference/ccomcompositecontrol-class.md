@@ -17,11 +17,11 @@ helpviewer_keywords:
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497326"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864947"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl – třída
 
@@ -39,50 +39,50 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Vaše třída odvozená z [třídy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)a také z dalších rozhraní, která chcete pro složený ovládací prvek podporovat.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|Konstruktor|
-|[CComCompositeControl::~CComCompositeControl](#dtor)|Destruktor.|
+|[CComCompositeControl:: ~ CComCompositeControl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Voláním této metody můžete poradit nebo odradit všechny ovládací prvky hostované složeným ovládacím prvkem.|
 |[CComCompositeControl::CalcExtent](#calcextent)|Zavolejte tuto metodu pro výpočet velikosti v jednotkách HIMETRIC prostředku dialogového okna, který se používá pro hostování složeného ovládacího prvku.|
-|[CComCompositeControl::Create](#create)|Tato metoda je volána k vytvoření okna ovládacího prvku pro složený ovládací prvek.|
+|[CComCompositeControl:: Create](#create)|Tato metoda je volána k vytvoření okna ovládacího prvku pro složený ovládací prvek.|
 |[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Voláním této metody vytvoříte okno ovládacího prvku a upozorníte všechny hostované ovládací prvky.|
 |[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|Voláním této metody nastavíte barvu pozadí složeného ovládacího prvku pomocí barvy pozadí kontejneru.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Štětec pozadí.|
-|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Popisovač okna, které aktuálně má fokus.|
+|[CComCompositeControl:: m_hbrBackground](#m_hbrbackground)|Štětec pozadí.|
+|[CComCompositeControl:: m_hWndFocus](#m_hwndfocus)|Popisovač okna, které aktuálně má fokus.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třídy odvozené od třídy `CComCompositeControl` dědí funkce složeného ovládacího prvku ActiveX. Ovládací prvky ActiveX odvozené `CComCompositeControl` z jsou hostovány standardním dialogovým oknem. Tyto typy ovládacích prvků se nazývají složené ovládací prvky, protože jsou schopny hostovat jiné ovládací prvky (nativní ovládací prvky systému Windows a ovládací prvky ActiveX).
+Třídy odvozené od třídy `CComCompositeControl` dědí funkce složeného ovládacího prvku ActiveX. Ovládací prvky ActiveX odvozené z `CComCompositeControl` jsou hostovány standardním dialogovým oknem. Tyto typy ovládacích prvků se nazývají složené ovládací prvky, protože jsou schopny hostovat jiné ovládací prvky (nativní ovládací prvky systému Windows a ovládací prvky ActiveX).
 
-`CComCompositeControl`Identifikuje prostředek dialogového okna, který se má použít při vytváření složeného ovládacího prvku, a to tak, že vyhledá Výčtový datový člen v podřízené třídě. Člen IDD této podřízené třídy je nastaven na ID prostředku pro prostředek dialogu, který bude použit jako okno ovládacího prvku. Následuje příklad datového člena, který třída odvozená od `CComCompositeControl` by měla obsahovat k identifikaci prostředku dialogového okna, který se má použít pro okno ovládacího prvku:
+`CComCompositeControl` identifikuje prostředek dialogového okna, který se má použít při vytváření složeného ovládacího prvku, a to tak, že vyhledá Výčtový datový člen v podřízené třídě. Člen IDD této podřízené třídy je nastaven na ID prostředku pro prostředek dialogu, který bude použit jako okno ovládacího prvku. Následuje příklad datového členu, který třída odvozená z `CComCompositeControl` by měla obsahovat k identifikaci prostředku dialogového okna, který se má použít pro okno ovládacího prvku:
 
 [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]
 
 > [!NOTE]
 >  Složené ovládací prvky jsou vždy ovládací prvky okna, i když mohou obsahovat ovládací prvky bez oken.
 
-Ovládací prvek implementovaný `CComCompositeControl`třídou odvozenou má výchozí chování při procházení tabulátorů. Když ovládací prvek dostane fokus se zaměřením na kartu v rámci obsahující aplikace, Poklikáním na klávesu TAB dojde k cyklickému procházení fokusu všemi obsaženými ovládacími prvky složeného ovládacího prvku, a poté mimo složený ovládací prvek a na další položku v pořadí prvků kontejneru. Pořadí karet hostovaných ovládacích prvků je určeno pomocí prostředku dialogového okna a určuje pořadí, ve kterém budou klávesy TAB provedeny.
+Ovládací prvek implementovaný třídou odvozenou od `CComCompositeControl`má vestavěné výchozí chování při procházení. Když ovládací prvek dostane fokus se zaměřením na kartu v rámci obsahující aplikace, Poklikáním na klávesu TAB dojde k cyklickému procházení fokusu všemi obsaženými ovládacími prvky složeného ovládacího prvku, a poté mimo složený ovládací prvek a na další položku v pořadí prvků kontejneru. Pořadí karet hostovaných ovládacích prvků je určeno pomocí prostředku dialogového okna a určuje pořadí, ve kterém budou klávesy TAB provedeny.
 
 > [!NOTE]
->  Aby akcelerátory správně pracovaly s nástrojem `CComCompositeControl`, je nutné načíst tabulku akcelerátorů, když je ovládací prvek vytvořen, předat popisovač a počet akcelerátorů zpět do [IOleControlImpl:: GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)a nakonec zničit tabulku. po vydání ovládacího prvku.
+>  Aby akcelerátory správně fungovaly s `CComCompositeControl`, je nutné načíst tabulku akcelerátorů, když je ovládací prvek vytvořen, předat popisovač a počet akcelerátorů zpět do [IOleControlImpl:: GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)a nakonec zničit tabulku při vydání ovládacího prvku.
 
 ## <a name="example"></a>Příklad
 
@@ -102,7 +102,7 @@ Ovládací prvek implementovaný `CComCompositeControl`třídou odvozenou má v�
 
 **Záhlaví:** atlctl. h
 
-##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap
+##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap
 
 Voláním této metody můžete poradit nebo odradit všechny ovládací prvky hostované složeným ovládacím prvkem.
 
@@ -121,10 +121,10 @@ True, pokud jsou všechny ovládací prvky doporučeno; v opačném případě f
 |-|-|
 |S_OK  |Všechny ovládací prvky v mapě jímky událostí byly úspěšně připojeny nebo odpojeny od svého zdroje událostí.|
 |E_FAIL  |Ne všechny ovládací prvky v mapě jímky událostí by mohly být připojeny nebo odpojeny od svého zdroje událostí úspěšně.|
-|E_POINTER  |Tato chyba obvykle označuje problém s položkou v mapě jímky událostí ovládacího prvku nebo problém s argumentem šablony použitým v `IDispEventImpl` základní třídě nebo. `IDispEventSimpleImpl`|
+|E_POINTER  |Tato chyba obvykle označuje problém s položkou v mapě jímky událostí ovládacího prvku nebo problém s argumentem šablony použitým v `IDispEventImpl` nebo `IDispEventSimpleImpl` základní třídy.|
 |CONNECT_E_ADVISELIMIT  |Spojovací bod již dosáhl svého limitu připojení a nemůže přijmout žádné další.|
 |CONNECT_E_CANNOTCONNECT  |Jímka nepodporuje rozhraní požadované tímto spojovacím bodem.|
-|CONNECT_E_NOCONNECTION  |Hodnota souboru cookie nepředstavuje platné připojení. Tato chyba obvykle označuje problém s položkou v mapě jímky událostí ovládacího prvku nebo problém s argumentem šablony použitým v `IDispEventImpl` základní třídě nebo. `IDispEventSimpleImpl`|
+|CONNECT_E_NOCONNECTION  |Hodnota souboru cookie nepředstavuje platné připojení. Tato chyba obvykle označuje problém s položkou v mapě jímky událostí ovládacího prvku nebo problém s argumentem šablony použitým v `IDispEventImpl` nebo `IDispEventSimpleImpl` základní třídy.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -141,7 +141,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="parameters"></a>Parametry
 
 *hodnota*<br/>
-Odkaz na `SIZE` strukturu, která má být vyplněna touto metodou.
+Odkaz na strukturu `SIZE`, kterou chcete vyplnit touto metodou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -171,7 +171,7 @@ Popisovač nadřazeného okna ovládacího prvku.
 Rezervovaný.
 
 *dwInitParam*<br/>
-Data, která mají být předána ovládacímu prvku během vytváření ovládacího prvku. Data předaná jako *dwInitParam* se zobrazí jako parametr lParam zprávy [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) , která se pošle do složeného ovládacího prvku, když se vytvoří.
+Data, která mají být předána ovládacímu prvku během vytváření ovládacího prvku. Data předaná jako *dwInitParam* se zobrazí jako parametr LPARAM zprávy [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) , která se pošle do složeného ovládacího prvku, když se vytvoří.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -231,7 +231,7 @@ Vrátí popisovač do nově vytvořeného dialogového okna složeného ovládac
 
 Tato metoda volá [CComCompositeControl:: Create](#create) a [CComCompositeControl:: AdviseSinkMap](#advisesinkmap).
 
-##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground
+##  <a name="m_hbrbackground"></a>CComCompositeControl:: m_hbrBackground
 
 Štětec pozadí.
 
@@ -239,7 +239,7 @@ Tato metoda volá [CComCompositeControl:: Create](#create) a [CComCompositeContr
 HBRUSH m_hbrBackground;
 ```
 
-##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus
+##  <a name="m_hwndfocus"></a>CComCompositeControl:: m_hWndFocus
 
 Popisovač okna, které aktuálně má fokus.
 
@@ -257,9 +257,9 @@ HRESULT SetBackgroundColorFromAmbient();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
 [Složené základní prvky](../../atl/atl-composite-control-fundamentals.md)<br/>

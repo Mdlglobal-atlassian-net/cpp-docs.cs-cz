@@ -1,5 +1,5 @@
 ---
-title: '&lt;iterátor&gt; funkce'
+title: funkce iterátoru&gt; &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - xutility/std::advance
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244026"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874036"
 ---
-# <a name="ltiteratorgt-functions"></a>&lt;iterátor&gt; funkce
+# <a name="ltiteratorgt-functions"></a>funkce iterátoru&gt; &lt;
 
-## <a name="advance"></a> zálohy
+## <a name="advance"></a>předem
 
 Zvýší iterátor o zadaný počet pozic.
 
@@ -55,16 +55,16 @@ template <class InputIterator, class Distance>
 *Inicializace*\
 Iterátor, který má být zvýšen a který musí splňovat požadavky pro vstupní iterátor.
 
-*Vypnout*\
+*Vypnuto*\
 Integrální typ, který lze převést na typ rozdílu iterátoru a určuje počet přírůstků pozice, o které má být iterátor zvýšen.
 
 ### <a name="remarks"></a>Poznámky
 
 Procházený rozsah nesmí být singulární, pokud musí být iterátory přesměrovatelné nebo musí následovat za koncem.
 
-Pokud `InputIterator` splňuje požadavky pro typ obousměrného iterátoru, pak *vypnout* může být záporná. Pokud `InputIterator` je typ vstupního nebo dopředného iterátoru, *vypnout* musí být nezáporná.
+Pokud `InputIterator` splňuje požadavky pro typ obousměrného iterátoru, může být hodnota *off* záporná. Je-li `InputIterator` typ vstupního nebo předávacího iterátoru, nesmí být hodnota *off* záporná.
 
-Funkce postoupení má konstantní složitost při `InputIterator` splňuje požadavky iterátor s náhodným přístupem; jinak má lineární složitost a je tak potenciálně náročná.
+Funkce Advance má konstantní složitost, když `InputIterator` splňuje požadavky na iterátor náhodného přístupu; v opačném případě má lineární složitost a proto je potenciálně nákladný.
 
 ### <a name="example"></a>Příklad
 
@@ -113,7 +113,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.
 ```
 
-## <a name="back_inserter"></a> back_inserter –
+## <a name="back_inserter"></a>back_inserter
 
 Vytvoří iterátor, který může vložit prvky do zadní části zadaného kontejneru.
 
@@ -125,15 +125,15 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 ### <a name="parameters"></a>Parametry
 
 *_Cont*\
-Kontejner, do kterého má být zpracována zpětné vložení.
+Kontejner, do kterého má být provedeno zpětné vložení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `back_insert_iterator` přidružená k objektu kontejneru *_Cont*.
+`back_insert_iterator` přidružený k objektu kontejneru *_Cont*.
 
 ### <a name="remarks"></a>Poznámky
 
-V rámci standardní knihovny C++ argumentu musí odkazovat na jeden z kontejnerů tři pořadí, které mají členské funkce `push_back`: [třídou deque](../standard-library/deque-class.md), [list – třída](../standard-library/list-class.md), nebo [vektoru Třída](../standard-library/vector-class.md).
+V rámci C++ standardní knihovny musí argument odkazovat na jeden ze tří sekvenčních kontejnerů, které mají členskou funkci `push_back`: [Třída deque](../standard-library/deque-class.md), [Třída seznamu](../standard-library/list-class.md)nebo [Třída Vector](../standard-library/vector-class.md).
 
 ### <a name="example"></a>Příklad
 
@@ -184,7 +184,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```
 
-## <a name="begin"></a> začít
+## <a name="begin"></a>ifunctiondiscovery
 
 Načte iterátor na první prvek v zadaném kontejneru.
 
@@ -206,18 +206,18 @@ Ty *begin(Ty (& array)[Size]);
 *pokračování*\
 Kontejner.
 
-*Pole*\
+\ *pole*
 Pole objektů typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První dvě funkce šablony vrátí `cont.begin()`. První funkce není konstantní, druhá je konstantní.
+První dvě funkce šablony vracejí `cont.begin()`. První funkce není konstantní, druhá je konstantní.
 
-Třetí funkce šablony vrátí *pole*.
+Třetí funkce šablony vrátí *Array*.
 
 ### <a name="example"></a>Příklad
 
-Doporučujeme použít tuto funkci místě člena kontejneru `begin()` při obecnější chování je povinný.
+Tuto funkci šablony doporučujeme použít místo členu kontejneru `begin()`, pokud je potřeba obecnější chování.
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -267,7 +267,7 @@ int main() {
 160 106 80 70 53 40 35 23 20 16 10 8 5 4 2 1
 ```
 
-Funkce `reverse_sort` podporuje jakéhokoli druhu, mimo pravidelných polí také kontejnery, protože volá třetí verzi `begin()`. Pokud `reverse_sort` bylo kódováno k použití člena kontejneru `begin()`:
+Funkce `reverse_sort` podporuje i kontejnery libovolného druhu, kromě regulárních polí, protože volá nečlenskou verzi `begin()`. Pokud byla `reverse_sort` kódována pro použití `begin()`členů kontejneru:
 
 ```cpp
 template <typename C>
@@ -286,7 +286,7 @@ Pak zasláním pole způsobíte tuto chybu kompilátoru:
 error C2228: left of '.begin' must have class/struct/union
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin
 
 Načte konstantní iterátor na první prvek v zadaném kontejneru.
 
@@ -307,9 +307,9 @@ Konstanta `cont.begin()`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce funguje se všemi C++ kontejnery standardní knihovny a s [initializer_list](../standard-library/initializer-list-class.md).
+Tato funkce funguje se všemi C++ standardními kontejnery knihoven a s [initializer_list](../standard-library/initializer-list-class.md).
 
-Můžete použít tuto členskou funkci místo `begin()` šablona funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než **const**) kontejner nebo `initializer_list` jakéhokoli druhu, který podporuje `begin()` a `cbegin()`.
+Tuto členskou funkci můžete použít místo funkce šablony `begin()`, abyste zajistili, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) nebo `initializer_list` jakéhokoli druhu, který podporuje `begin()` a `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -319,7 +319,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> cend
+## <a name="cend"></a>cend
 
 Načte iterátor const na prvek, který následuje po posledním prvku v zadaném kontejneru.
 
@@ -340,9 +340,9 @@ Konstanta `cont.end()`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce funguje se všemi C++ kontejnery standardní knihovny a s [initializer_list](../standard-library/initializer-list-class.md).
+Tato funkce funguje se všemi C++ standardními kontejnery knihoven a s [initializer_list](../standard-library/initializer-list-class.md).
 
-Můžete použít tuto členskou funkci místo [end()](../standard-library/iterator-functions.md#end) šablona funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než **const**) kontejner nebo `initializer_list` jakéhokoli druhu, který podporuje `end()` a `cend()`.
+Tuto členskou funkci můžete použít namísto funkce šablony [end ()](../standard-library/iterator-functions.md#end) k zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) nebo `initializer_list` jakéhokoli druhu, který podporuje `end()` a `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -352,19 +352,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="crbegin"></a> crbegin –
+## <a name="crbegin"></a>crbegin –
 
 ```cpp
 template <class C> constexpr auto crbegin(const C& c) -> decltype(std::rbegin(c));
 ```
 
-## <a name="crend"></a> crend –
+## <a name="crend"></a>crend
 
 ```cpp
 template <class C> constexpr auto crend(const C& c) -> decltype(std::rend(c));
 ```
 
-## <a name="data"></a> Data
+## <a name="data"></a>údajů
 
 ```cpp
 template <class C> constexpr auto data(C& c) -> decltype(c.data());
@@ -373,7 +373,7 @@ template <class T, size_t N> constexpr T* data(T (&array)[N]) noexcept;
 template <class E> constexpr const E* data(initializer_list<E> il) noexcept;
 ```
 
-## <a name="distance"></a> vzdálenost
+## <a name="distance"></a>délku
 
 Určuje počet kroků mezi polohami řešenými dvěma iterátory.
 
@@ -385,18 +385,18 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 ### <a name="parameters"></a>Parametry
 
 *první*\
-První iterátor, který má být stanovena jehož vzdálenost od druhé.
+První iterátor, jehož vzdálenost od druhé má být určena.
 
 *poslední*\
-Druhý iterátor, jehož vzdálenost od první má být stanovena.
+Druhý iterátor, jehož vzdálenost od prvního má být určena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet opakování, který *první* musí být zvýšena dokud rovná *poslední*.
+Počet, kolikrát se *první* musí zvýšit, dokud se nevrátí jako *Poslední*.
 
 ### <a name="remarks"></a>Poznámky
 
-Distance – funkce má konstantní složitost při `InputIterator` splňuje požadavky iterátor s náhodným přístupem; jinak má lineární složitost a je tak potenciálně náročná.
+Funkce Distance má konstantní složitost, když `InputIterator` splňuje požadavky na iterátor náhodného přístupu; v opačném případě má lineární složitost a proto je potenciálně nákladný.
 
 ### <a name="example"></a>Příklad
 
@@ -446,7 +446,7 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.
 ```
 
-## <a name="empty"></a> prázdný
+## <a name="empty"></a>obsahovat
 
 ```cpp
 template <class C> constexpr auto empty(const C& c) -> decltype(c.empty());
@@ -454,7 +454,7 @@ template <class T, size_t N> constexpr bool empty(const T (&array)[N]) noexcept;
 template <class E> constexpr bool empty(initializer_list<E> il) noexcept;
 ```
 
-## <a name="end"></a> ukončení
+## <a name="end"></a>účelu
 
 Načte iterátor na prvek, který následuje po posledním prvku v zadaném kontejneru.
 
@@ -476,20 +476,20 @@ Ty *end(Ty (& array)[Size]);
 *pokračování*\
 Kontejner.
 
-*Pole*\
+\ *pole*
 Pole objektů typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První dvě funkce šablony vrátí `cont.end()` (první není a druhá je konstantní).
+První dvě funkce šablony vracejí `cont.end()` (první je nekonstantní a druhá je konstantní).
 
-Třetí funkce šablony vrátí `array + Size`.
+Třetí funkce šablony vrací `array + Size`.
 
 ### <a name="remarks"></a>Poznámky
 
-Příklad kódu naleznete v tématu [začít](../standard-library/iterator-functions.md#begin).
+Příklad kódu naleznete v tématu [Begin](../standard-library/iterator-functions.md#begin).
 
-## <a name="front_inserter"></a> front_inserter
+## <a name="front_inserter"></a>front_inserter
 
 Vytvoří iterátor, který může vložit prvky do přední části zadaného kontejneru.
 
@@ -501,17 +501,17 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 ### <a name="parameters"></a>Parametry
 
 *_Cont*\
-Objekt kontejneru, jehož přední dochází k danému elementu vložen.
+Objekt kontejneru, jehož přední prvek má vložený element.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `front_insert_iterator` přidružená k objektu kontejneru *_Cont*.
+`front_insert_iterator` přidružený k objektu kontejneru *_Cont*.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator) z front_insert_iterator třídy mohou být využity také.
+Může být také použita členská funkce [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator) třídy front_insert_iterator.
 
-V rámci standardní knihovny C++ argumentu musí odkazovat na jeden z kontejnerů dvě pořadí, které mají členské funkce `push_back`: [třídou deque](../standard-library/deque-class.md) nebo "list – třída".
+V rámci C++ standardní knihovny musí argument odkazovat na jeden ze dvou kontejnerů sekvence, které mají členskou funkci `push_back`: [třídy deque](../standard-library/deque-class.md) nebo "list Class".
 
 ### <a name="example"></a>Příklad
 
@@ -560,9 +560,9 @@ After the front insertions, the list L is:
 ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
-## <a name="inserter"></a> Vkládací modul
+## <a name="inserter"></a>Inserter
 
-Pomocná funkce šablony, které vám umožní používat `inserter(_Cont, _Where)` místo `insert_iterator<Container>(_Cont, _Where)`.
+Pomocná funkce šablony, která umožňuje použít `inserter(_Cont, _Where)` místo `insert_iterator<Container>(_Cont, _Where)`.
 
 ```cpp
 template <class Container>
@@ -575,14 +575,14 @@ inserter(
 ### <a name="parameters"></a>Parametry
 
 *_Cont*\
-Kontejner, ke kterému jsou nové prvky mají být přidány.
+Kontejner, do kterého mají být přidány nové prvky.
 
 *_Where*\
-Iterátor vyhledání bodu vložení.
+Iterátor, který vyhledává bod vložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`.
+Funkce šablony vrací [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`.
 
 ### <a name="example"></a>Příklad
 
@@ -631,12 +631,12 @@ After the insertions, the list L is:
 ( 1 20 30 40 500 ).
 ```
 
-## <a name="make_checked_array_iterator"></a> make_checked_array_iterator
+## <a name="make_checked_array_iterator"></a>make_checked_array_iterator
 
-Vytvoří [checked_array_iterator](../standard-library/checked-array-iterator-class.md) , který mohou používat ostatní algoritmy.
+Vytvoří [checked_array_iterator](../standard-library/checked-array-iterator-class.md) , kterou mohou používat jiné algoritmy.
 
 > [!NOTE]
-> Tato funkce je rozšířením společnosti Microsoft pro standardní knihovnu jazyka C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.
+> Tato funkce je rozšířením společnosti Microsoft pro C++ standardní knihovnu. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.
 
 ```cpp
 template <class Iter>
@@ -649,7 +649,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*\
+\ *PTR*
 Ukazatel na cílové pole.
 
 *Velikost*\
@@ -664,13 +664,13 @@ Instance `checked_array_iterator`.
 
 ### <a name="remarks"></a>Poznámky
 
-`make_checked_array_iterator` Funkce je definována v `stdext` oboru názvů.
+Funkce `make_checked_array_iterator` je definována v oboru názvů `stdext`.
 
-Tato funkce příjme nezpracovaný ukazatel – což by normálně vyvolalo obavy o překročení hranic – a zabalí jej [checked_array_iterator](../standard-library/checked-array-iterator-class.md) třídu, která provádí kontrolu. Protože tato třída je označena jako kontrolovaná, standardní knihovny C++ ni nezobrazí upozornění. Další informace a příklady kódu naleznete v tématu [Checked Iterators](../standard-library/checked-iterators.md).
+Tato funkce přijímá nezpracovaný ukazatel, který by obvykle způsobil obavy z přetečení hranic, a zabalí jej do [checked_array_iterator](../standard-library/checked-array-iterator-class.md) třídy, která provádí kontrolu. Vzhledem k C++ tomu, že je tato třída označena jako zaškrtnutá, standardní knihovna o ní neupozorňuje. Další informace a příklady kódu naleznete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
-V následujícím příkladu [vektoru](../standard-library/vector-class.md) je vytvořen a vyplní se 10 položkami. Obsah vektoru se zkopíruje do pole pomocí algoritmu kopírování a potom `make_checked_array_iterator` slouží k určení cíle. Následuje úmyslné porušení kontroly hranic, aby se spustilo selhání kontrolního výrazu ladění.
+V následujícím příkladu se vytvoří [vektor](../standard-library/vector-class.md) a naplní se 10 položkami. Obsah vektoru se zkopíruje do pole pomocí algoritmu kopírování a pak `make_checked_array_iterator` použít k určení cíle. Následuje úmyslné porušení kontroly hranic, aby se spustilo selhání kontrolního výrazu ladění.
 
 ```cpp
 // make_checked_array_iterator.cpp
@@ -725,9 +725,9 @@ int main()
 }
 ```
 
-## <a name="make_move_iterator"></a> make_move_iterator
+## <a name="make_move_iterator"></a>make_move_iterator
 
-Vytvoří `move iterator` obsahující zadaný iterátor jako `stored` iterátoru.
+Vytvoří `move iterator`, který obsahuje poskytnutý iterátor jako `stored` iterátor.
 
 ```cpp
 template <class Iterator>
@@ -738,18 +738,18 @@ make_move_iterator(const Iterator& _It);
 ### <a name="parameters"></a>Parametry
 
 *_It*\
-Iterátor uložené v nové iterátorem pohybu.
+Iterátor uložený v novém iterátoru přesunutí.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí `move_iterator` `<Iterator>(_It)`.
+Funkce šablony vrací `move_iterator` `<Iterator>(_It)`.
 
-## <a name="make_unchecked_array_iterator"></a> make_unchecked_array_iterator
+## <a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator
 
-Vytvoří [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) , který mohou používat ostatní algoritmy.
+Vytvoří [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) , kterou mohou používat jiné algoritmy.
 
 > [!NOTE]
-> Tato funkce je rozšířením společnosti Microsoft pro standardní knihovnu jazyka C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.
+> Tato funkce je rozšířením společnosti Microsoft pro C++ standardní knihovnu. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.
 
 ```cpp
 template <class Iter>
@@ -759,7 +759,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*\
+\ *PTR*
 Ukazatel na cílové pole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -768,13 +768,13 @@ Instance `unchecked_array_iterator`.
 
 ### <a name="remarks"></a>Poznámky
 
-`make_unchecked_array_iterator` Funkce je definována v `stdext` oboru názvů.
+Funkce `make_unchecked_array_iterator` je definována v oboru názvů `stdext`.
 
-Tato funkce příjme nezpracovaný ukazatel a zabalí jej do třídy, která neprovádí žádnou kontrolu a tedy na hodnotu nothing, ale neoptimalizuje upozornění kompilátoru jako [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Proto se jedná o cílený způsob řešení upozornění nekontrolovaného ukazatele bez jejich globálního umlčení nebo nákladů na kontrolu. Další informace a příklady kódu naleznete v tématu [Checked Iterators](../standard-library/checked-iterators.md).
+Tato funkce přijímá nezpracovaný ukazatel a zabalí jej do třídy, která neprovede žádnou kontrolu, a proto je neoptimalizuje bez jakýchkoli potřeb, ale také neticha upozornění kompilátoru, například [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Proto se jedná o cílený způsob řešení upozornění nekontrolovaného ukazatele bez jejich globálního umlčení nebo nákladů na kontrolu. Další informace a příklady kódu naleznete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
-V následujícím příkladu [vektoru](../standard-library/vector-class.md) je vytvořen a vyplní se 10 položkami. Obsah vektoru se zkopíruje do pole pomocí algoritmu kopírování a potom `make_unchecked_array_iterator` slouží k určení cíle.
+V následujícím příkladu se vytvoří [vektor](../standard-library/vector-class.md) a naplní se 10 položkami. Obsah vektoru se zkopíruje do pole pomocí algoritmu kopírování a pak `make_unchecked_array_iterator` použít k určení cíle.
 
 ```cpp
 // make_unchecked_array_iterator.cpp
@@ -823,7 +823,7 @@ int main()
 }
 ```
 
-## <a name="next"></a> Další
+## <a name="next"></a>generace
 
 Iteruje zadaný počet iterací a vrátí novou pozici iterace.
 
@@ -840,17 +840,17 @@ InputIterator next(
 Aktuální pozice.
 
 *_Off*\
-Počet pokusů pro iteraci.
+Počet opakování iterace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí novou pozici iterace po iterace *_Off* časy.
+Vrátí novou pozici iterátoru po iteraci *_Off* časy.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí `next` zvýšena *_Off* časy
+Funkce šablony vrací `next` zvýšení *_Off* časů
 
-## <a name="prev"></a> předchozí
+## <a name="prev"></a>prohlížen
 
 Iteruje v opačném pořadí zadaný počet iterací a vrátí novou pozici iterace.
 
@@ -867,27 +867,27 @@ BidirectionalIterator prev(
 Aktuální pozice.
 
 *_Off*\
-Počet pokusů pro iteraci.
+Počet opakování iterace.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí `next` snížen `off` časy.
+Funkce šablony vrací `next` snížené `off` časy.
 
-## <a name="rbegin"></a> rbegin –
+## <a name="rbegin"></a>rbegin
 
 ```cpp
 template <class C> constexpr auto rbegin(C& c) -> decltype(c.rbegin());
 template <class C> constexpr auto rbegin(const C& c) -> decltype(c.rbegin());
 ```
 
-## <a name="rend"></a> rend –
+## <a name="rend"></a>rend
 
 ```cpp
 template <class C> constexpr auto rend(C& c) -> decltype(c.rend());
 template <class C> constexpr auto rend(const C& c) -> decltype(c.rend());
 ```
 
-## <a name="size"></a> Velikost
+## <a name="size"></a>hodnota
 
 ```cpp
 template <class C> constexpr auto size(const C& c) -> decltype(c.size());

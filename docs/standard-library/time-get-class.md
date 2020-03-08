@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685506"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876188"
 ---
 # <a name="time_get-class"></a>time_get – třída
 
@@ -59,10 +59,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* \
+*CharType*\
 Typ používaný v rámci programu ke kódování znaků.
 
-*InputIterator* \
+*InputIterator*\
 Iterátor, ze kterého se čtou hodnoty času.
 
 ## <a name="remarks"></a>Poznámky
@@ -103,11 +103,11 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<locale >
+**Záhlaví:** \<národní prostředí >
 
 **Obor názvů:** std
 
-## <a name="char_type"></a>time_get::char_type
+## <a name="char_type"></a>time_get:: char_type
 
 Typ, který se používá k popisu znaku používaného národním prostředním.
 
@@ -133,7 +133,7 @@ Pořadí data používané omezující vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_date_order](#do_date_order).
+Členská funkce vrací [do_date_order](#do_date_order).
 
 ### <a name="example"></a>Příklad
 
@@ -193,11 +193,11 @@ Pořadí data používané omezující vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Protected vrací hodnotu typu **time_base::d ateorder**, která popisuje pořadí, ve kterém jsou komponenty data porovnány s [do_get_date](#do_get_date). V této implementaci je hodnota **time_base:: MDY**, která odpovídá datům ve formátu 2. prosince 1979.
+Členská funkce Protected vrací hodnotu typu **time_base::d ateorder**, která popisuje pořadí, ve kterém jsou komponenty data porovnány [do_get_date](#do_get_date). V této implementaci je hodnota **time_base:: MDY**, která odpovídá datům ve formátu 2. prosince 1979.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [date_order](#date_order), který volá `do_date_order`.
+Podívejte se na příklad [date_order](#date_order), který volá `do_date_order`.
 
 ## <a name="do_get"></a>time_get::d o_get
 
@@ -217,22 +217,22 @@ iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor, který označuje začátek sekvence, která se má převést.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor, který označuje konec sekvence.
 
-*iosbase* \
+*iosbase*\
 Objekt Stream.
 
 \ *stavu*
 Pole v iosbase, kde jsou pro indikaci chyb nastaveny odpovídající prvky maskování.
 
-*ptm* \
+*ptm*\
 Ukazatel na časovou strukturu, ve které má být čas uložen.
 
-*fmt* \
+*fmt*\
 Znak specifikátoru převodu.
 
 \ *mod*
@@ -250,7 +250,7 @@ Specifikátory převodu jsou:
 
 `'a'` nebo `'A'` – se chovají stejně jako [time_get:: get_weekday](#get_weekday).
 
-`'b'`, `'B'` nebo `'h'` – se chovají stejně jako [time_get:: get_monthname](#get_monthname).
+`'b'`, `'B'`nebo `'h'` – se chovají stejně jako [time_get:: get_monthname](#get_monthname).
 
 `'c'` – se chová stejně jako `"%b %d %H : %M : %S %Y"`.
 
@@ -310,19 +310,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
+*iosbase*\
 Příznak formátu, který po nastavení označuje, že symbol měny je nepovinný; v opačném případě se vyžaduje.
 
 \ *stavu*
 Nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kde budou uloženy informace o datu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -331,21 +331,21 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající první v sekvenci [`first`, `last`), dokud nerozpozná celé neprázdné vstupní pole data. Je-li to úspěšné, převede toto pole na jeho ekvivalentní hodnotu, jako součásti **TM:: tm \_mon**, **TM:: TM \_day**a **TM:: TM \_year**, a ukládá výsledky v `ptm->tm_mon`, `ptm->tm_day` a `ptm->tm_year` v uvedeném pořadí. Vrátí iterátor, který určuje první prvek za polem pro zadání data. V opačném případě funkce nastaví `iosbase::failbit` ve *stavu*. Vrátí iterátor určení prvního prvku nad rámec libovolné předpony platného vstupního pole data. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
+Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající první v sekvenci [`first`, `last`), dokud nerozpozná celé neprázdné vstupní pole data. Je-li to úspěšné, převede toto pole na jeho ekvivalentní hodnotu jako komponenty **TM:: tm\_Mon**, **TM:: TM\_Day**a **TM:: TM\_year**a ukládá výsledky do `ptm->tm_mon`, `ptm->tm_day`a `ptm->tm_year`v uvedeném pořadí. Vrátí iterátor, který určuje první prvek za polem pro zadání data. V opačném případě funkce nastaví `iosbase::failbit` ve *stavu*. Vrátí iterátor určení prvního prvku nad rámec libovolné předpony platného vstupního pole data. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
 
 Formát pole pro zadání data je závislý na národním prostředí. Pro výchozí národní prostředí má pole pro zadání data formulář MMM DD, rrrr, kde:
 
-- MMM se bude shodovat s voláním [get_monthname](#get_monthname), který poskytuje měsíc.
+- MMM se bude shodovat s voláním [get_monthname](#get_monthname), což dává v měsíci.
 
 - DD je posloupnost desítkových číslic, jejichž odpovídající číselná hodnota musí být v rozsahu [1, 31], který poskytuje den v měsíci.
 
-- RRRR se shoduje se voláním [get_year](#get_year), který poskytuje rok.
+- RRRR se shoduje se voláním [get_year](#get_year), což dává rok.
 
 Mezery literálů a čárky musí odpovídat odpovídajícím prvkům ve vstupní sekvenci.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [get_date](#get_date), který volá `do_get_date`.
+Podívejte se na příklad [get_date](#get_date), který volá `do_get_date`.
 
 ## <a name="do_get_monthname"></a>time_get::d o_get_monthname
 
@@ -361,19 +361,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
-Nepoužívané.
+*iosbase*\
+Nepoužívá se.
 
 \ *stavu*
 Výstupní parametr, který nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kam mají být uloženy informace o měsíci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -382,13 +382,13 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající první v sekvenci [`first`, `last`), dokud nerozpozná celé, neprázdné vstupní pole měsíce. V případě úspěchu převede toto pole na jeho ekvivalentní hodnotu jako součást **TM:: tm \_mon**a výsledek uloží do `ptm->tm_mon`. Vrátí iterátor, který určuje první prvek za vstupním polem měsíc. V opačném případě funkce nastaví `ios_base::failbit` ve *stavu*. Vrátí iterátor, který určuje první prvek nad rámec libovolné předpony vstupního pole platný měsíc. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
+Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající první v sekvenci [`first`, `last`), dokud nerozpozná celé, neprázdné vstupní pole měsíce. V případě úspěchu převede toto pole na jeho ekvivalentní hodnotu jako součást **TM:: tm\_Mon**a uloží výsledek do `ptm->tm_mon`. Vrátí iterátor, který určuje první prvek za vstupním polem měsíc. V opačném případě funkce nastaví `ios_base::failbit` ve *stavu*. Vrátí iterátor, který určuje první prvek nad rámec libovolné předpony vstupního pole platný měsíc. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
 
 Vstupní pole měsíc je sekvence, která odpovídá nejdelší sadě sekvencí specifických pro národní prostředí, jako jsou leden, leden, únor, únor a tak dále. Převedená hodnota je počet měsíců od ledna.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [get_monthname](#get_monthname), který volá `do_get_monthname`.
+Podívejte se na příklad [get_monthname](#get_monthname), který volá `do_get_monthname`.
 
 ## <a name="do_get_time"></a>time_get::d o_get_time
 
@@ -404,19 +404,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
-Nepoužívané.
+*iosbase*\
+Nepoužívá se.
 
 \ *stavu*
 Nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kde budou uloženy informace o datu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -425,7 +425,7 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající první v sekvenci [`first`, `last`), dokud nerozpozná celé, neprázdné vstupní pole Time. V případě úspěchu převede toto pole na jeho ekvivalentní hodnotu, protože komponenty `tm::tm_hour`, `tm::tm_min` a `tm::tm_sec` a výsledky ukládá `ptm->tm_hour`, `ptm->tm_min` a `ptm->tm_sec` v uvedeném pořadí. Vrátí iterátor, který určuje první prvek za vstupním polem Time. V opačném případě funkce nastaví `ios_base::failbit` ve *stavu*. Vrátí iterátor určení prvního prvku nad rámec libovolné předpony platného vstupního pole Time. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
+Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající první v sekvenci [`first`, `last`), dokud nerozpozná celé, neprázdné vstupní pole Time. V případě úspěchu převede toto pole na jeho ekvivalentní hodnotu, protože komponenty `tm::tm_hour`, `tm::tm_min`a `tm::tm_sec`a výsledky ukládá `ptm->tm_hour`, `ptm->tm_min`a `ptm->tm_sec`v uvedeném pořadí. Vrátí iterátor, který určuje první prvek za vstupním polem Time. V opačném případě funkce nastaví `ios_base::failbit` ve *stavu*. Vrátí iterátor určení prvního prvku nad rámec libovolné předpony platného vstupního pole Time. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
 
 V této implementaci má pole Time Input tvar HH: MM: SS, kde:
 
@@ -439,7 +439,7 @@ Dvojtečky literálů musí odpovídat odpovídajícím prvkům ve vstupní sekv
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [get_time](#get_time), který volá `do_get_time`.
+Podívejte se na příklad [get_time](#get_time), který volá `do_get_time`.
 
 ## <a name="do_get_weekday"></a>time_get::d o_get_weekday
 
@@ -455,19 +455,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
+*iosbase*\
 Příznak formátu, který po nastavení označuje, že symbol měny je nepovinný; v opačném případě se vyžaduje.
 
 \ *stavu*
 Nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kam mají být uloženy informace o týdnu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -476,13 +476,13 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající *první* v sekvenci [`first`, `last`), dokud nerozpozná celé neprázdné vstupní pole v týdnu. V případě úspěchu převede toto pole na jeho ekvivalentní hodnotu jako součást **TM:: tm \_wday**a výsledek uloží do `ptm->tm_wday`. Vrátí iterátor, který určuje první prvek za vstupním polem dne v týdnu. V opačném případě funkce nastaví `ios_base::failbit` ve *stavu*. Vrátí iterátor určení prvního prvku nad rámec libovolné předpony platného vstupního pole v týdnu. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
+Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající *první* v sekvenci [`first`, `last`), dokud nerozpozná celé neprázdné vstupní pole v týdnu. V případě úspěchu převede toto pole na jeho ekvivalentní hodnotu jako součást **TM:: tm\_wDay**a uloží výsledek do `ptm->tm_wday`. Vrátí iterátor, který určuje první prvek za vstupním polem dne v týdnu. V opačném případě funkce nastaví `ios_base::failbit` ve *stavu*. Vrátí iterátor určení prvního prvku nad rámec libovolné předpony platného vstupního pole v týdnu. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
 
 Vstupní pole Weekday je sekvence, která se shoduje s nejdelší sadou sekvencí specifických pro národní prostředí, například Sun, neděle, Mon, pondělí a tak dále. Převedená hodnota je počet dní od neděle.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [get_weekday](#get_weekday), který volá `do_get_weekday`.
+Podívejte se na příklad [get_weekday](#get_weekday), který volá `do_get_weekday`.
 
 ## <a name="do_get_year"></a>time_get::d o_get_year
 
@@ -498,19 +498,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
+*iosbase*\
 Příznak formátu, který po nastavení označuje, že symbol měny je nepovinný; v opačném případě se vyžaduje.
 
 \ *stavu*
 Nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kam mají být uloženy informace o roku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -519,13 +519,13 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající *první* v sekvenci [`first`, `last`), dokud nerozpozná celé neprázdné vstupní pole roku. V případě úspěchu převede toto pole na jeho ekvivalentní hodnotu jako součást **TM:: tm \_year**a výsledek uloží do `ptm->tm_year`. Vrátí iterátor, který určuje první prvek za vstupním polem year. V opačném případě funkce nastaví `ios_base::failbit` ve *stavu*. Vrátí iterátor určení prvního prvku nad rámec libovolné předpony platného vstupního pole roku. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
+Členská funkce Virtual Protected se pokusí porovnat sekvenční prvky začínající *první* v sekvenci [`first`, `last`), dokud nerozpozná celé neprázdné vstupní pole roku. V případě úspěchu převede toto pole na jeho ekvivalentní hodnotu jako součást **TM:: tm\_Year**a výsledek uloží do `ptm->tm_year`. Vrátí iterátor, který určuje první prvek za vstupním polem year. V opačném případě funkce nastaví `ios_base::failbit` ve *stavu*. Vrátí iterátor určení prvního prvku nad rámec libovolné předpony platného vstupního pole roku. V obou případech, Pokud vrácená hodnota se rovná *Last*, sada funkcí nastaví `ios_base::eofbit` ve *stavu*.
 
 Pole Year input je posloupnost desítkových číslic, jejichž odpovídající číselná hodnota musí být v rozsahu [1900, 2036). Uloženou hodnotou je hodnota minus 1900. V této implementaci hodnoty v rozsahu [69, 136) reprezentují rozsah roků [1969, 2036). Hodnoty v rozsahu [0, 69) jsou také přípustné, ale mohou představovat buď rozsah roků [1900, 1969) nebo [2000, 2069) v závislosti na konkrétním prostředí překladu.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [get_year](#get_year), který volá `do_get_year`.
+Podívejte se na příklad [get_year](#get_year), který volá `do_get_year`.
 
 ## <a name="get"></a>time_get:: Get
 
@@ -553,31 +553,31 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor, který označuje, kde se spustí sekvence, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor, který označuje konec posloupnosti, která má být převedena.
 
-*iosbase* \
+*iosbase*\
 Datový proud.
 
 \ *stavu*
 Pro stav datového proudu jsou nastaveny příslušné prvky maskování dat, aby označovaly chyby.
 
-*ptm* \
+*ptm*\
 Ukazatel na časovou strukturu, ve které má být čas uložen.
 
-*fmt* \
+*fmt*\
 Znak specifikátoru převodu.
 
 \ *mod*
 Volitelný znak modifikátoru.
 
-*fmt_first* \
+*fmt_first*\
 Odkazuje na to, kde se spouští direktivy Format.
 
-*fmt_last* \
+*fmt_last*\
 Odkazuje na konec direktiv formátu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -596,7 +596,7 @@ Prázdný element ve formátu přeskočí za nula nebo více vstupních prázdn�
 
 Všechny ostatní prvky ve formátu musí odpovídat dalšímu vstupnímu prvku, který se přeskočí. Sada chyb se shodou `ios_base::failbit` ve *stavu* a vrátí.
 
-## <a name="get_date"></a>time_get::get_date
+## <a name="get_date"></a>time_get:: get_date
 
 Analyzuje řetězec jako datum vytvořené specifikátorem *x* pro `strftime`.
 
@@ -610,19 +610,19 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
+*iosbase*\
 Příznak formátu, který po nastavení označuje, že symbol měny je nepovinný; v opačném případě se vyžaduje.
 
 \ *stavu*
 Nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kde budou uloženy informace o datu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -631,7 +631,7 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_get_date](#do_get_date)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Členská funkce vrací [do_get_date](#do_get_date)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 Všimněte si, že měsíce se počítají z 0 do 11.
 
@@ -690,7 +690,7 @@ tm_yday: 0
 tm_isdst: 0
 ```
 
-## <a name="get_monthname"></a>time_get::get_monthname
+## <a name="get_monthname"></a>time_get:: get_monthname
 
 Analyzuje řetězec jako název měsíce.
 
@@ -704,19 +704,19 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
-Nepoužívané.
+*iosbase*\
+Nepoužívá se.
 
 \ *stavu*
 Výstupní parametr, který nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kam mají být uloženy informace o měsíci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -725,7 +725,7 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_get_monthname](#do_get_monthname)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Členská funkce vrací [do_get_monthname](#do_get_monthname)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 ### <a name="example"></a>Příklad
 
@@ -782,7 +782,7 @@ tm_yday: 0
 tm_isdst: 0
 ```
 
-## <a name="get_time"></a>time_get::get_time
+## <a name="get_time"></a>time_get:: get_time
 
 Analyzuje řetězec jako datum vytvořené specifikátorem *X* pro `strftime`.
 
@@ -796,19 +796,19 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
-Nepoužívané.
+*iosbase*\
+Nepoužívá se.
 
 \ *stavu*
 Nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kde budou uloženy informace o datu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -817,7 +817,7 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_get_time](#do_get_time)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Členská funkce vrací [do_get_time](#do_get_time)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 ### <a name="example"></a>Příklad
 
@@ -863,7 +863,7 @@ tm_min: 13
 tm_hour: 11
 ```
 
-## <a name="get_weekday"></a>time_get::get_weekday
+## <a name="get_weekday"></a>time_get:: get_weekday
 
 Analyzuje řetězec jako název dne v týdnu.
 
@@ -877,19 +877,19 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
+*iosbase*\
 Příznak formátu, který po nastavení označuje, že symbol měny je nepovinný; v opačném případě se vyžaduje.
 
 \ *stavu*
 Nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kam mají být uloženy informace o týdnu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -898,7 +898,7 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_get_weekday](#do_get_weekday)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Členská funkce vrací [do_get_weekday](#do_get_weekday)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 ### <a name="example"></a>Příklad
 
@@ -940,7 +940,7 @@ time_get::get_time(mercredi) =
 tm_wday: 3
 ```
 
-## <a name="get_year"></a>time_get::get_year
+## <a name="get_year"></a>time_get:: get_year
 
 Analyzuje řetězec jako název roku.
 
@@ -954,19 +954,19 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Vstupní iterátor adresující začátek posloupnosti, která má být převedena.
 
-*poslední* \
+*poslední*\
 Vstupní iterátor adresující konec posloupnosti, která má být převedena.
 
-*iosbase* \
+*iosbase*\
 Příznak formátu, který po nastavení označuje, že symbol měny je nepovinný; v opačném případě se vyžaduje.
 
 \ *stavu*
 Nastaví odpovídající prvky maskování pro stav datového proudu podle toho, zda operace proběhla úspěšně.
 
-*ptm* \
+*ptm*\
 Ukazatel na místo, kam mají být uloženy informace o roku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -975,7 +975,7 @@ Vstupní iterátor adresující první prvek za vstupním polem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_get_year](#do_get_year)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Členská funkce vrací [do_get_year](#do_get_year)(`first`, `last`, `iosbase`, `state`, `ptm`).
 
 ### <a name="example"></a>Příklad
 
@@ -1018,7 +1018,7 @@ time_get::get_year(1928) =
 tm_year: 28
 ```
 
-## <a name="iter_type"></a>time_get::iter_type
+## <a name="iter_type"></a>time_get:: iter_type
 
 Typ, který popisuje vstupní iterátor.
 
@@ -1030,7 +1030,7 @@ typedef InputIterator iter_type;
 
 Typ je synonymum pro parametr šablony **InputIterator**.
 
-## <a name="time_get"></a>time_get::time_get
+## <a name="time_get"></a>time_get:: time_get
 
 Konstruktor pro objekty typu `time_get`.
 
@@ -1057,8 +1057,8 @@ Nejsou možné žádné přímé příklady, protože je destruktor chráněný.
 
 Konstruktor inicializuje svůj základní objekt pomocí **locale::** [Face](../standard-library/locale-class.md#facet_class)(`refs`).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<locale >](../standard-library/locale.md) \
-\ [třídy time_base](../standard-library/time-base-class.md)
+[\<> národního prostředí](../standard-library/locale.md)\
+[time_base\ třídy](../standard-library/time-base-class.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

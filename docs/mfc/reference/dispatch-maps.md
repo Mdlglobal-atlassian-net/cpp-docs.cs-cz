@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916513"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856647"
 ---
 # <a name="dispatch-maps"></a>Expediční mapy
 
@@ -29,9 +29,9 @@ Automatizace OLE poskytuje způsob volání metod a přístup k vlastnostem nap�
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Definuje vlastnost automatizace OLE, která přebírá parametry a názvů funkcí get a set.|
 |[DISP_DEFVALUE](#disp_defvalue)|Vytvoří existující vlastnost jako výchozí hodnotu objektu.|
 
-## <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP
+## <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
 
-`CCmdTarget`Pokud třída odvozená v programu podporuje automatizaci OLE, musí tato třída poskytnout mapu odeslání k vystavení metod a vlastností.
+Pokud třída odvozená od `CCmdTarget`v programu podporuje automatizaci OLE, musí tato třída poskytnout mapu odeslání k vystavení metod a vlastností.
 
 ```cpp
 DECLARE_DISPATCH_MAP()
@@ -39,10 +39,10 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte makro DECLARE_DISPATCH_MAP na konci deklarace třídy. Potom v. Soubor CPP, který definuje členské funkce pro třídu, použijte makro BEGIN_DISPATCH_MAP. Pak zahrňte položky makra pro všechny metody a vlastnosti vystavené vaší třídě (DISP_FUNCTION, DISP_PROPERTY a tak dále). Nakonec použijte makro END_DISPATCH_MAP.
+Použijte makro DECLARE_DISPATCH_MAP na konci deklarace třídy. Potom v. Soubor CPP, který definuje členské funkce pro třídu, použijte makro BEGIN_DISPATCH_MAP. Pak přidejte položky makra pro všechny metody a vlastnosti vystavené vaší třídě (DISP_FUNCTION, DISP_PROPERTY a tak dále). Nakonec použijte makro END_DISPATCH_MAP.
 
 > [!NOTE]
-> Pokud deklarujete členy po DECLARE_DISPATCH_MAP, musíte pro ně zadat nový typ přístupu ( **Public**, **Private**nebo Protected).
+> Pokud deklarujete žádné členy po DECLARE_DISPATCH_MAP, musíte pro ně zadat nový typ přístupu ( **Public**, **Private**nebo **Protected**).
 
 Průvodce aplikací a průvodci kódem pomáhají při vytváření tříd automatizace a při údržbě map odesílání. Další informace o mapách odesílání najdete v tématu [automatizační servery](../../mfc/automation-servers.md).
 
@@ -78,7 +78,7 @@ V souboru implementace (. cpp), který definuje členské funkce pro vaši tří
 
 **Záhlaví:** afxdisp. h
 
-## <a name="end_dispatch_map"></a>  END_DISPATCH_MAP
+## <a name="end_dispatch_map"></a>END_DISPATCH_MAP
 
 Ukončí definici mapy odeslání.
 
@@ -126,7 +126,7 @@ Mezerou oddělený seznam jedné nebo více konstant určujících seznam parame
 
 ### <a name="remarks"></a>Poznámky
 
-Argument *vtRetVal* je typu VARTYPE. Následující možné hodnoty pro tento argument jsou pořízeny z `VARENUM` výčtu:
+Argument *vtRetVal* je typu VARTYPE. Následující možné hodnoty pro tento argument jsou pořízeny z výčtu `VARENUM`:
 
 |Písmeno|Návratový typ|
 |------------|-----------------|
@@ -136,7 +136,7 @@ Argument *vtRetVal* je typu VARTYPE. Následující možné hodnoty pro tento ar
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATE|
+|VT_DATE|DATE (Datum)|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -144,13 +144,13 @@ Argument *vtRetVal* je typu VARTYPE. Následující možné hodnoty pro tento ar
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Argument *vtsParams* je seznam hodnot oddělených mezerami z `VTS_*` konstant. Jedna nebo více z těchto hodnot oddělených mezerami (nejedná se o čárky) určuje seznam parametrů funkce. Například
+Argument *vtsParams* je seznam hodnot oddělených mezerami z `VTS_*` konstant. Jedna nebo více z těchto hodnot oddělených mezerami (nejedná se o čárky) určuje seznam parametrů funkce. Například:
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
 Určuje seznam obsahující krátké celé číslo následované ukazatelem na krátké celé číslo.
 
-`VTS_` Konstanty a jejich významy jsou následující:
+Konstanty `VTS_` a jejich význam jsou následující:
 
 |Písmeno|Typ parametru|
 |------------|--------------------|
@@ -158,18 +158,18 @@ Určuje seznam obsahující krátké celé číslo následované ukazatelem na k
 |VTS_I4|**long**|
 |VTS_R4|**float**|
 |VTS_R8|**double**|
-|VTS_CY|`const CY` Nebo `CY*`|
-|VTS_DATE|DATE|
+|VTS_CY|`const CY` nebo `CY*`|
+|VTS_DATE|DATE (Datum)|
 |VTS_BSTR|LPCSTR|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_SCODE|SCODE|
 |VTS_BOOL|LOGICK|
-|VTS_VARIANT|`const VARIANT*` Nebo `VARIANT&`|
+|VTS_VARIANT|`const VARIANT*` nebo `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
-|VTS_PI2|__dostatečná\*__|
-|VTS_PI4|__dlouhou\*__|
-|VTS_PR4|__Plovák\*__|
-|VTS_PR8|__klepat\*__|
+|VTS_PI2|__Krátká\*__|
+|VTS_PI4|__Long\*__|
+|VTS_PR4|__plovoucí\*__|
+|VTS_PR8|__\* dvojitá přesnost__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -221,7 +221,7 @@ Argument *vtPropType* je typu **VARTYPE**. Možné hodnoty pro tento argument js
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATE|
+|VT_DATE|DATE (Datum)|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -259,7 +259,7 @@ Externí název vlastnosti
 *memberGet*<br/>
 Název členské funkce, která se používá k získání vlastnosti
 
-*memberSet*<br/>
+*množin*<br/>
 Název členské funkce použité k nastavení vlastnosti.
 
 *vtPropType*<br/>
@@ -269,7 +269,7 @@ Hodnota určující typ vlastnosti.
 
 Funkce *memberGet* a *memberSet* mají signatury určené argumentem *vtPropType* . Funkce *memberGet* nepřebírá žádné argumenty a vrací hodnotu typu určenou parametrem *vtPropType*. Funkce *memberSet* přebírá argument typu určený parametrem *vtPropType* a nevrací hodnotu Nothing.
 
-Argument *vtPropType* je typu VARTYPE. Možné hodnoty pro tento argument jsou pořízeny z výčtu VARENUM. Seznam těchto hodnot naleznete v tématu poznámky k parametru *vtRetVal* v [DISP_FUNCTION](#disp_function). Všimněte si, že VT_EMPTY, který je uvedený v DISP_FUNCTION – poznámky, není povolen jako datový typ vlastnosti.
+Argument *vtPropType* je typu VARTYPE. Možné hodnoty pro tento argument jsou pořízeny z výčtu VARENUM. Seznam těchto hodnot naleznete v tématu poznámky k parametru *vtRetVal* v [DISP_FUNCTION](#disp_function). Všimněte si, že VT_EMPTY, uvedená v DISP_FUNCTION poznámky, nejsou povoleny jako datový typ vlastnosti.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -307,7 +307,7 @@ Hodnota určující typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od vlastností definovaných pomocí DISP_PROPERTY bude vlastnost definovaná s DISP_PROPERTY_NOTIFY automaticky volat funkci určenou funkcí *pfnAfterSet* při změně vlastnosti.
+Na rozdíl od vlastností definovaných pomocí DISP_PROPERTY vlastnost definovaná pomocí DISP_PROPERTY_NOTIFY automaticky volá funkci určenou parametrem *pfnAfterSet* při změně vlastnosti.
 
 Argument *vtPropType* je typu VARTYPE. Možné hodnoty pro tento argument jsou pořízeny z výčtu VARENUM:
 
@@ -318,7 +318,7 @@ Argument *vtPropType* je typu VARTYPE. Možné hodnoty pro tento argument jsou p
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATE|
+|VT_DATE|DATE (Datum)|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -332,7 +332,7 @@ Argument *vtPropType* je typu VARTYPE. Možné hodnoty pro tento argument jsou p
 
 ## <a name="disp_property_param"></a>DISP_PROPERTY_PARAM
 
-Definuje vlastnost přistupovaná pomocí `Get` samostatných `Set` a členských funkcí.
+Definuje vlastnost, která je k dispozici pro samostatné `Get` a členské funkce `Set`.
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -362,11 +362,11 @@ Název členské funkce použité k nastavení vlastnosti.
 Hodnota určující typ vlastnosti.
 
 *vtsParams*<br/>
-Řetězec typů parametrů variant oddělených `VTS_*` mezerami, jeden pro každý parametr.
+Řetězec oddělený mezerami `VTS_*` typy parametrů variant, jeden pro každý parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od makra DISP_PROPERTY_EX vám toto makro umožní určit seznam parametrů pro vlastnost. To je užitečné pro implementaci vlastností, které jsou indexované nebo parametrizované.
+Na rozdíl od makra DISP_PROPERTY_EX umožňuje toto makro zadat seznam parametrů pro vlastnost. To je užitečné pro implementaci vlastností, které jsou indexované nebo parametrizované.
 
 ### <a name="example"></a>Příklad
 
@@ -374,7 +374,7 @@ Zvažte následující deklaraci funkcí get a set pro členské funkce, které 
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Odpovídají následujícímu DISP_PROPERTY_PARAM makru v mapě odesílání ovládacího prvku:
+Tyto prvky odpovídají následujícímu DISP_PROPERTY_PARAMmu makru v mapě odeslání ovládacího prvku:
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -382,7 +382,7 @@ Jako jiný příklad zvažte následující funkce Get a set pro členské funkc
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Odpovídají následujícímu DISP_PROPERTY_PARAM makru v mapě odesílání ovládacího prvku:
+Tyto prvky odpovídají následujícímu DISP_PROPERTY_PARAMmu makru v mapě odeslání ovládacího prvku:
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
@@ -390,7 +390,7 @@ Odpovídají následujícímu DISP_PROPERTY_PARAM makru v mapě odesílání ovl
 
 **Záhlaví:** afxdisp. h
 
-## <a name="disp_defvalue"></a>  DISP_DEFVALUE
+## <a name="disp_defvalue"></a>DISP_DEFVALUE
 
 Vytvoří existující vlastnost jako výchozí hodnotu objektu.
 
@@ -416,6 +416,6 @@ Výchozí hodnota objektu je vlastnost, která je načtena nebo nastavena, když
 
 **Záhlaví:** afxdisp. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

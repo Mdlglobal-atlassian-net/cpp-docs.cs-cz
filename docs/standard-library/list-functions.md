@@ -1,22 +1,22 @@
 ---
-title: '&lt;seznam&gt; funkce | Dokumentace Microsoftu'
+title: seznam &lt;&gt; funkcí | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - list/std::swap
 ms.openlocfilehash: 04f00a9274018432cd03917ae5485f2d395649e4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268060"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874420"
 ---
-# <a name="ltlistgt-functions"></a>&lt;seznam&gt; funkce
+# <a name="ltlistgt-functions"></a>funkce seznamu &lt;&gt;
 
-## <a name="swap"></a> Prohození
+## <a name="swap"></a>adresu
 
-Vymění prvky dvou seznamů.
+Vyměňuje prvky dvou seznamů.
 
 ```cpp
 template <class T, class Allocator>
@@ -25,12 +25,12 @@ template <class T, class Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `list`.
 
-*doprava*\
+*pravé*\
 Objekt typu `list`.
 
 ### <a name="remarks"></a>Poznámky
 
-Spustí tuto funkci `left.swap(right)`.
+Tato funkce šablony provádí `left.swap(right)`.

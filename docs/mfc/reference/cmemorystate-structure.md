@@ -1,5 +1,5 @@
 ---
-title: Cmemorystate – struktura
+title: Struktura CMemoryState
 ms.date: 11/04/2016
 f1_keywords:
 - CMemoryState
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163751"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855274"
 ---
-# <a name="cmemorystate-structure"></a>Cmemorystate – struktura
+# <a name="cmemorystate-structure"></a>Struktura CMemoryState
 
-Poskytuje pohodlný způsob, jak zjistit, že nevracení paměti v programu.
+Nabízí pohodlný způsob, jak detekovat nevracení paměti v programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,41 +31,41 @@ struct CMemoryState
 
 |Název|Popis|
 |----------|-----------------|
-|[CMemoryState::CMemoryState](#cmemorystate)|Vytvoří strukturu typu třída, která řídí paměti kontrolní body.|
+|[CMemoryState::CMemoryState](#cmemorystate)|Vytvoří strukturu podobnou třídě, která řídí kontrolní body paměti.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[CMemoryState::Checkpoint](#checkpoint)|Získá snímek aktuálního stavu paměti (kontrolního bodu).|
-|[CMemoryState::Difference](#difference)|Vypočítá rozdíl mezi dvěma objekty typu `CMemoryState`.|
-|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|Vypíše souhrn všechny aktuálně přidělené objekty od předchozího kontrolního bodu.|
-|[CMemoryState::DumpStatistics](#dumpstatistics)|Vypíše statistiky přidělení paměti pro `CMemoryState` objektu.|
+|[CMemoryState:: Checkpoint](#checkpoint)|Získá snímek (kontrolní bod) aktuálního stavu paměti.|
+|[CMemoryState::D ifference](#difference)|Vypočítá rozdíl mezi dvěma objekty typu `CMemoryState`.|
+|[CMemoryState::D umpAllObjectsSince](#dumpallobjectssince)|Vypíše souhrn všech aktuálně přidělených objektů od předchozího kontrolního bodu.|
+|[CMemoryState::D umpStatistics](#dumpstatistics)|Vytiskne statistiku přidělení paměti pro objekt `CMemoryState`.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMemoryState` Struktura a nemá žádné základní třídy.
+`CMemoryState` je struktura a nemá základní třídu.
 
-"Nevracení paměti" nastane, pokud je paměť pro objekt přidělený k haldě, ale ne uvolněna se už nevyžaduje. Takové nevracení paměti může nakonec vést k chybám na více instancí z důvodu nedostatku paměti. Existuje několik způsobů, jak přidělit a uvolnit paměť ve svém programu:
+K "nevracení paměti dojde v případě, že paměť pro objekt je přidělena haldě, ale není uvolněna, pokud již není vyžadována. Taková nevracení paměti může nakonec vést k chybám při nedostatku paměti. Existuje několik způsobů, jak přidělit a uvolnit paměť v programu:
 
-- Použití `malloc` /  `free` řady funkcí z knihovny run-time.
+- Použití `malloc`/ `free` rodinu funkcí z knihovny run-time.
 
-- Pomocí funkce správy paměti rozhraní Windows API, `LocalAlloc` /  `LocalFree` a `GlobalAlloc` /  `GlobalFree`.
+- Pomocí funkcí správy paměti rozhraní Windows API `LocalAlloc`/ `LocalFree` a `GlobalAlloc`/ `GlobalFree`.
 
-- Pomocí jazyka C++ **nové** a **odstranit** operátory.
+- C++ Pomocí operátorů **New** a **Delete** .
 
-`CMemoryState` Diagnostiky pouze umožní odhalit paměti nevracení nastává, když je paměť přidělena pomocí **nové** operátor není navrácena pomocí **odstranit**. Další dvě skupiny funkce správy paměti jsou určené pro programy jazyka C++ a jejich kombinování **nové** a **odstranit** ve stejném programu se nedoporučuje. Je k dispozici další makra, DEBUG_NEW, chcete-li nahradit **nové** operátor, když budete potřebovat soubor a číslo řádku sledování přidělování paměti. DEBUG_NEW slouží pokaždé, když se obvykle zřejmě použijete **nové** operátor.
+Diagnostiku `CMemoryState` jenom napomáhala detekci nevracení paměti, protože paměť přidělená pomocí operátoru **New** není navrácena pomocí **Delete**. Další dvě skupiny funkcí pro správu paměti jsou proC++ neprogramované a jejich kombinování s **novými** a **odstraněnými** ve stejném programu se nedoporučuje. Další makro, DEBUG_NEW, je k dispozici pro nahrazení operátoru **New** , pokud potřebujete sledovat přidělení paměti pro soubor a číslo řádku. DEBUG_NEW se používá vždy, když byste normálně použili operátor **New** .
 
-Stejně jako u jiných Diagnostika `CMemoryState` diagnostiky jsou dostupné jenom v ladicí verze aplikace. Ladicí verze musí mít _DEBUG konstanta definovaná.
+Stejně jako u jiných diagnostických nástrojů jsou Diagnostika `CMemoryState` k dispozici pouze ve verzi programu pro ladění. Ladicí verze musí mít definovanou _DEBUG konstantou.
 
-Pokud máte podezření na nevracení paměti má program, můžete použít `Checkpoint`, `Difference`, a `DumpStatistics` funkce zjišťování rozdílu stavu paměti (přidělené objekty) na dvou různých fázích provádění programu. Tyto informace mohou být užitečné při určování, zda všechny objekty, které přiděluje čistí funkce.
+Pokud se domníváte, že má váš program nevrácenou paměť, můžete použít funkce `Checkpoint`, `Difference`a `DumpStatistics` k zjištění rozdílu mezi stavem paměti (přidělenými objekty) na dvou různých místech provádění programu. Tyto informace mohou být užitečné při určování, zda funkce čistí všechny objekty, které přiděluje.
 
-Pokud stačí vědět, kde dochází k nevyrovnanosti přidělování a navracení zpět neposkytuje dostatek informací, můžete použít `DumpAllObjectsSince` funkce pro výpis všech objektů přidělených od předchozího volání `Checkpoint`. Tento výpis zobrazuje pořadí přidělení, zdrojového souboru a řádku, kde byla objektu přidělena (Pokud používáte DEBUG_NEW pro přidělení), a odvození objektu, jeho adresy a její velikost. `DumpAllObjectsSince` volá také každý objekt `Dump` funkce lze zadat informace o aktuálním stavu.
+Pokud stačí vědět, kde nedochází k nerovnováhě při přidělování a navracení, neposkytuje dostatek informací, můžete použít funkci `DumpAllObjectsSince` k výpisu všech objektů přidělených od předchozího volání `Checkpoint`. Tento výpis zobrazuje pořadí přidělení, zdrojový soubor a řádek, kde byl objekt přidělen (Pokud používáte DEBUG_NEW pro přidělení) a odvození objektu, jeho adresy a jeho velikosti. `DumpAllObjectsSince` také volá `Dump` funkci každého objektu, aby poskytovala informace o jeho aktuálním stavu.
 
-Další informace o tom, jak používat `CMemoryState` a další diagnostiky najdete v článku [ladění aplikací MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Další informace o použití `CMemoryState` a dalších diagnostických nástrojů naleznete v tématu [DEBUGGING MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).
 
 > [!NOTE]
->  Deklarace objektů typu `CMemoryState` a volání členských funkcí, by měl být uváděn v závorkách `#if defined(_DEBUG)/#endif` direktivy. To způsobí, že Diagnostika paměti mají být zahrnuty pouze v laděných sestaveních programu.
+>  Deklarace objektů typu `CMemoryState` a volání členských funkcí by měly být v závorkách direktivami `#if defined(_DEBUG)/#endif`. To způsobí zahrnutí diagnostiky paměti pouze v sestaveních ladění programu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -73,11 +73,11 @@ Další informace o tom, jak používat `CMemoryState` a další diagnostiky naj
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afx.h
+**Záhlaví:** AFX –. h
 
-##  <a name="checkpoint"></a>  CMemoryState::Checkpoint
+##  <a name="checkpoint"></a>CMemoryState:: Checkpoint
 
-Pořídí snímek souhrnu paměti a uloží je v tomto `CMemoryState` objektu.
+Provede Souhrn snímku paměti a uloží jej do tohoto objektu `CMemoryState`.
 
 ```
 void Checkpoint();
@@ -85,15 +85,15 @@ void Checkpoint();
 
 ### <a name="remarks"></a>Poznámky
 
-`CMemoryState` Členské funkce [rozdíl](#difference) a [DumpAllObjectsSince](#dumpallobjectssince) pomocí těchto dat snímku.
+Členské funkce `CMemoryState` [rozdíl](#difference) a [DumpAllObjectsSince](#dumpallobjectssince) používají tato data snímku.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [cmemorystate –](#cmemorystate) konstruktoru.
+  Podívejte se na příklad pro konstruktor [CMemoryState](#cmemorystate) .
 
-##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState
+##  <a name="cmemorystate"></a>CMemoryState::CMemoryState
 
-Vytvoří prázdnou `CMemoryState` objekt, který musí být vyplněna objektem [kontrolního bodu](#checkpoint) nebo [rozdíl](#difference) členskou funkci.
+Vytvoří prázdný objekt `CMemoryState`, který musí být vyplněn členskou funkcí [kontrolního bodu](#checkpoint) nebo [rozdílu](#difference) .
 
 ```
 CMemoryState();
@@ -103,9 +103,9 @@ CMemoryState();
 
 [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]
 
-##  <a name="difference"></a>  CMemoryState::Difference
+##  <a name="difference"></a>CMemoryState::D ifference
 
-Porovná dva `CMemoryState` objektů a potom uloží rozdíl do této `CMemoryState` objektu.
+Porovná dva objekty `CMemoryState` a pak tento rozdíl uloží do tohoto objektu `CMemoryState`.
 
 ```
 BOOL Difference(
@@ -116,26 +116,26 @@ BOOL Difference(
 ### <a name="parameters"></a>Parametry
 
 *oldState*<br/>
-Počáteční paměti stav souladu s definicemi `CMemoryState` kontrolního bodu.
+Počáteční stav paměti definovaný kontrolním bodem `CMemoryState`.
 
-*Nový stav*<br/>
-Nový stav paměti podle `CMemoryState` kontrolního bodu.
+*newState*<br/>
+Nový stav paměti definovaný kontrolním bodem `CMemoryState`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud jsou odlišná dvěma stavy paměti jinak 0.
+Nenulové, pokud jsou dva stavy paměti rozdílné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-[Kontrolní bod](#checkpoint) musí volat pro každou z těchto parametrů stavu paměti.
+Pro každý ze dvou parametrů stavu paměti musí být volán [kontrolní bod](#checkpoint) .
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [cmemorystate –](#cmemorystate) konstruktoru.
+  Podívejte se na příklad pro konstruktor [CMemoryState](#cmemorystate) .
 
-##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince
+##  <a name="dumpallobjectssince"></a>CMemoryState::D umpAllObjectsSince
 
-Volání `Dump` funkce pro všechny objekty typu odvozené od třídy `CObject` , které byly přiděleny (a jsou pořád ještě přidělená) od minulého [kontrolního bodu](#checkpoint) volání pro tuto `CMemoryState` objektu.
+Volá funkci `Dump` pro všechny objekty typu odvozeného od `CObject` třídy, které byly přiděleny (a jsou stále přiděleny) od posledního volání [kontrolního bodu](#checkpoint) pro tento objekt `CMemoryState`.
 
 ```
 void DumpAllObjectsSince() const;
@@ -143,15 +143,15 @@ void DumpAllObjectsSince() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `DumpAllObjectsSince` s neinicializované `CMemoryState` objektu se vypsat všechny objekty, které aktuálně v paměti.
+Volání `DumpAllObjectsSince` s neinicializovaným objektem `CMemoryState` vypíše všechny objekty, které jsou aktuálně v paměti.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [cmemorystate –](#cmemorystate) konstruktoru.
+  Podívejte se na příklad pro konstruktor [CMemoryState](#cmemorystate) .
 
-##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics
+##  <a name="dumpstatistics"></a>CMemoryState::D umpStatistics
 
-Vytiskne zprávu Statistika stručné paměti z `CMemoryState` objekt, který vyplní [rozdíl](#difference) členskou funkci.
+Vytiskne stručnou sestavu statistiky paměti z objektu `CMemoryState`, který je vyplněn členskou funkcí [rozdílu](#difference) .
 
 ```
 void DumpStatistics() const;
@@ -159,42 +159,42 @@ void DumpStatistics() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Sestava, která je vytištěna na [afxDump](diagnostic-services.md#afxdump) zařízení, zobrazí následující:
+Sestava, která je vytištěna na zařízení [afxDump](diagnostic-services.md#afxdump) , zobrazuje následující:
 
-Ukázková sestava nabízí informace o číslo (nebo velikost):
+Ukázková sestava obsahuje informace o počtu (nebo množství):
 
 - bezplatné bloky
 
-- Normální bloky
+- normální bloky
 
-- CRT bloky
+- Bloky CRT
 
-- bloky ignorovat
+- ignorovat bloky
 
 - klientské bloky
 
-- maximální velikost paměti, které používá tento program kdykoliv (v bajtech)
+- maximální velikost paměti, kterou program v jednom okamžiku využíval (v bajtech)
 
-- Celková paměť aktuálně používá tento program (v bajtech)
+- Celková paměť, kterou program aktuálně využíval (v bajtech)
 
-Počet bloků, jehož zrušení přidělení opozdila, pokud jsou zdarma bloky `afxMemDF` byl nastaven na `delayFreeMemDF`. Další informace najdete v tématu [afxmemdf –](diagnostic-services.md#afxmemdf), v části "MFC makra a globální prvky".
+Volné bloky jsou počet bloků, jejichž přidělení bylo zpožděno, pokud `afxMemDF` nastaveno na `delayFreeMemDF`. Další informace naleznete v tématu [afxMemDF](diagnostic-services.md#afxmemdf)v části "makra MFC a Globals".
 
 ### <a name="example"></a>Příklad
 
-  Následující kód musí být umístěné ve *název_projektu*App.cpp. Definujte tyto globální proměnné:
+  Následující kód by měl být umístěn v *ProjName*App. cpp. Definujte následující globální proměnné:
 
 [!code-cpp[NVC_MFC_Utilities#40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]
 
-V `InitInstance` funkci, přidejte řádek:
+Do funkce `InitInstance` přidejte řádek:
 
 [!code-cpp[NVC_MFC_Utilities#41](../../mfc/codesnippet/cpp/cmemorystate-structure_3.cpp)]
 
-Přidání obslužné rutiny `ExitInstance` fungovat a použijte následující kód:
+Přidejte obslužnou rutinu pro funkci `ExitInstance` a použijte následující kód:
 
 [!code-cpp[NVC_MFC_Utilities#42](../../mfc/codesnippet/cpp/cmemorystate-structure_4.cpp)]
 
-Nyní můžete spustit program v režimu ladění, pokud chcete zobrazit výstup `DumpStatistics` funkce.
+Nyní můžete spustit program v režimu ladění a zobrazit výstup funkce `DumpStatistics`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497857"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864443"
 ---
 # <a name="category-macros"></a>Makra kategorie
 
@@ -46,9 +46,9 @@ pro Název třídy, která obsahuje mapu kategorie.
 
 Mapa kategorie se používá k určení, které kategorie komponent bude třída COM implementovat a které kategorie vyžaduje z kontejneru.
 
-Přidejte položku [IMPLEMENTED_CATEGORY](#implemented_category) na mapu pro každou kategorii implementovanou třídou com. Přidejte položku [REQUIRED_CATEGORY](#required_category) na mapu pro každou kategorii, kterou třída vyžaduje k implementaci svých klientů. Označte konec mapy pomocí makra [END_CATEGORY_MAP](#end_category_map) .
+Přidejte položku [IMPLEMENTED_CATEGORY](#implemented_category) na mapu pro každou kategorii implementovanou třídou com. Přidejte [REQUIRED_CATEGORY](#required_category) položku na mapu pro každou kategorii, kterou třída vyžaduje k implementaci svých klientů. Označte konec mapy pomocí makra [END_CATEGORY_MAP](#end_category_map) .
 
-Kategorie komponent uvedené v mapě budou registrovány automaticky, pokud je modul zaregistrován, pokud má třída přidružené [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
+Kategorie komponent uvedené v mapě budou registrovány automaticky, pokud je modul zaregistrován, pokud má třída přidruženou [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
 
 > [!NOTE]
 >  Knihovna ATL používá ke registraci kategorií komponent standardní správce kategorií součástí. Pokud v systému není správce k dispozici, je-li modul registrován, registrace je úspěšná, ale kategorie komponent nebudou pro tuto třídu registrovány.
@@ -69,11 +69,11 @@ END_CATEGORY_MAP()
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [BEGIN_CATEGORY_MAP](#begin_category_map).
+Podívejte se na příklad [BEGIN_CATEGORY_MAP](#begin_category_map).
 
 ##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
-Přidejte makro IMPLEMENTED_CATEGORY k [mapě kategorie](#begin_category_map) vaší komponenty a určete tak, že by měl být zaregistrován jako implementace kategorie identifikované parametrem *catID* .
+Přidejte IMPLEMENTED_CATEGORY makro k [mapě kategorie](#begin_category_map) vaší komponenty a určete tak, že by měl být zaregistrován jako implementace kategorie identifikované parametrem *catID* .
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -86,7 +86,7 @@ pro CATID konstanta nebo proměnná drží globálně jedinečný identifikátor
 
 ### <a name="remarks"></a>Poznámky
 
-Kategorie komponent uvedené v mapě budou registrovány automaticky, pokud je modul zaregistrován, pokud má třída přidružené makro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Kategorie komponent uvedené v mapě budou registrovány automaticky, pokud je modul registrován, pokud má třída přidružené [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makro.
 
 Klienti mohou pomocí informací o kategorii registrovaných pro třídu určit její schopnosti a požadavky, aniž by museli vytvořit její instanci.
 
@@ -102,7 +102,7 @@ Další informace o kategoriích komponent naleznete v tématu [co jsou kategori
 |Jednoduchá datová vazba|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Rozšířená datová vazba|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Ovládací prvky bez oken|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Internetové objekty|Seznam [](/windows/win32/com/internet-aware-objects) ukázek najdete v části věnované internetovým objektům v Windows SDK.||
+|Internetové objekty|Seznam ukázek najdete v části věnované [internetovým objektům](/windows/win32/com/internet-aware-objects) v Windows SDK.||
 
 ### <a name="example"></a>Příklad
 
@@ -110,7 +110,7 @@ Další informace o kategoriích komponent naleznete v tématu [co jsou kategori
 
 ##  <a name="required_category"></a>REQUIRED_CATEGORY
 
-Přidejte makro REQUIRED_CATEGORY do [mapy kategorie](#begin_category_map) vaší komponenty a určete tak, že by měl být zaregistrován jako požadavek na kategorii identifikovanou parametrem *catID* .
+Přidejte REQUIRED_CATEGORY makro k [mapě kategorie](#begin_category_map) vaší komponenty a určete tak, že by měl být zaregistrován jako požadavek na kategorii identifikovanou parametrem *catID* .
 
 ```
 REQUIRED_CATEGORY( catID )
@@ -123,7 +123,7 @@ pro CATID konstanta nebo proměnná drží globálně jedinečný identifikátor
 
 ### <a name="remarks"></a>Poznámky
 
-Kategorie komponent uvedené v mapě budou registrovány automaticky, pokud je modul zaregistrován, pokud má třída přidružené makro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Kategorie komponent uvedené v mapě budou registrovány automaticky, pokud je modul registrován, pokud má třída přidružené [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makro.
 
 Klienti mohou pomocí informací o kategorii registrovaných pro třídu určit její schopnosti a požadavky, aniž by museli vytvořit její instanci. Ovládací prvek může například vyžadovat, aby vazba dat podporovala kontejner. Kontejner může zjistit, jestli má funkce nezbytné pro hostování ovládacího prvku, a to tak, že se dotazuje správce kategorií na kategorie vyžadované tímto ovládacím prvkem. Pokud kontejner nepodporuje požadovanou funkci, může odmítnout hostování objektu COM.
 
@@ -139,12 +139,12 @@ Další informace o kategoriích součástí, včetně ukázkového seznamu, naj
 |Jednoduchá datová vazba|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Rozšířená datová vazba|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Ovládací prvky bez oken|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Internetové objekty|Seznam [](/windows/win32/com/internet-aware-objects) ukázek najdete v části věnované internetovým objektům v Windows SDK.||
+|Internetové objekty|Seznam ukázek najdete v části věnované [internetovým objektům](/windows/win32/com/internet-aware-objects) v Windows SDK.||
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makr](../../atl/reference/atl-macros.md)

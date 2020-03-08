@@ -12,11 +12,11 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: b666ba3debe164118c9b40b90313646592b04876
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062039"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855275"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra ladění a zasílání zpráv o chybách
 
@@ -24,15 +24,15 @@ Tato makra poskytují užitečná zařízení pro ladění a trasování.
 
 |||
 |-|-|
-|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Zapisuje do okna výstup všechny nevrácené rozhraní, které se detekuje při `_Module.Term` volání.|
+|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Zapisuje do okna výstup, jakékoliv nevrácené rozhraní, které je zjištěno při volání `_Module.Term`.|
 |[_ATL_DEBUG_QI](#_atl_debug_qi)|Zapisuje všechna volání `QueryInterface` do okna výstup.|
-|[ATLASSERT](#atlassert)|Provádí stejné funkce jako makro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) , které se nachází v knihovně run-time jazyka C.|
-|[ATLENSURE](#atlensure)|Provede ověření parametrů. Zavolat `AtlThrow` v případě potřeby|
+|[ATLASSERT](#atlassert)|Provede stejnou funkci jako makro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) , které se nachází v knihovně run-time jazyka C.|
+|[ATLENSURE](#atlensure)|Provede ověření parametrů. V případě potřeby volejte `AtlThrow`|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|Pošle zprávu na zařízení s výpisem paměti, že zadaná funkce není implementovaná.|
 |[ATLTRACE](#atltrace)|Hlásí upozornění na výstupní zařízení, jako je například okno ladicího programu, podle uvedených příznaků a úrovní. Zahrnuto z důvodu zpětné kompatibility.|
 |[ATLTRACE2](#atltrace2)|Hlásí upozornění na výstupní zařízení, jako je například okno ladicího programu, podle uvedených příznaků a úrovní.|
 
-##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
+##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
 
 Definujte toto makro před zahrnutím souborů hlaviček ATL pro trasování všech `AddRef` a `Release` volání rozhraní komponent do okna výstup.
 
@@ -46,24 +46,24 @@ Výstup trasování se zobrazí, jak je znázorněno níže:
 
 `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`
 
-První část každého trasování bude vždy `ATL: QIThunk`. Další hodnotou je identifikace konkrétního použitého *volání rozhraní* . Rozhraní, které je používáno k údržbě počtu odkazů a poskytuje možnost trasování, které jsou zde použity, je objekt. Nové rozhraní je vytvořeno při každém volání `QueryInterface` s výjimkou požadavků `IUnknown` pro rozhraní (v tomto případě je stejná rutina s nevracením zpět vrácena pokaždé, když bude vyhovovat pravidlům identity modelu COM).
+První část každého trasování bude vždy `ATL: QIThunk`. Další hodnotou je identifikace konkrétního použitého *volání rozhraní* . Rozhraní, které je používáno k údržbě počtu odkazů a poskytuje možnost trasování, které jsou zde použity, je objekt. Nové rozhraní je vytvořeno při každém volání `QueryInterface` s výjimkou požadavků na rozhraní `IUnknown` (v tomto případě je stejná rutina s nevracením zpět vrácena vždy, když je to vyhověno pravidlům identity modelu COM).
 
-Dál se zobrazí `AddRef` nebo `Release` indikuje, která metoda byla volána. Za tímto se zobrazí hodnota identifikující objekt, jehož počet odkazů na rozhraní se změnil. Sledovaná hodnota je ukazatel **This** objektu.
+Dále uvidíte `AddRef` nebo `Release`, které označují, která metoda byla volána. Za tímto se zobrazí hodnota identifikující objekt, jehož počet odkazů na rozhraní se změnil. Sledovaná hodnota je ukazatel **This** objektu.
 
-Počet odkazů, které jsou trasovány, je počet odkazů na tento převod za `AddRef` volání `Release` po nebo byl volán. Všimněte si, že tento počet odkazů nesmí odpovídat počtu odkazů pro daný objekt. Každé zpětné volání udržuje svůj vlastní počet odkazů, který vám umožní plně dodržovat pravidla pro počítání odkazů modelu COM.
+Počet odkazů, které jsou trasovány, je počet odkazů na tento převod po volání `AddRef` nebo `Release`. Všimněte si, že tento počet odkazů nesmí odpovídat počtu odkazů pro daný objekt. Každé zpětné volání udržuje svůj vlastní počet odkazů, který vám umožní plně dodržovat pravidla pro počítání odkazů modelu COM.
 
-Poslední část informací, které jsou sledovány, je název objektu a rozhraní, které je ovlivněno `AddRef` voláním nebo. `Release`
+Poslední část informací, které jsou sledovány, je název objektu a rozhraní, na které se vztahuje `AddRef` nebo `Release` volání.
 
-Všechny nevrácené rozhraní, které se zjistí, když se server vypíná a je zavedený, `_Module.Term` se bude protokolovat takto:
+Dojde k zaznamenání všech nevrácených rozhraní, která jsou zjištěna při ukončení serveru a `_Module.Term` se budou zaprotokolovat takto:
 
 `ATL: QIThunk - 2005         LEAK    :   Object = 0x00d81ca0   Refcount = 1   MaxRefCount = 1   CBug - IBug`
 
 Informace, které jsou zde uvedeny, jsou mapovány přímo k informacím uvedeným v předchozích příkazech trasování, takže můžete kontrolovat počet odkazů po celou dobu životnosti rozhraní. Navíc získáte indikaci maximálního počtu odkazů na tomto rozhraní.
 
 > [!NOTE]
-> _ATL_DEBUG_INTERFACES se dá použít v maloobchodních sestaveních.
+> _ATL_DEBUG_INTERFACES lze použít v maloobchodních sestaveních.
 
-##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI
+##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
 
 Zapisuje všechna volání `QueryInterface` do okna výstup.
 
@@ -73,13 +73,13 @@ Zapisuje všechna volání `QueryInterface` do okna výstup.
 
 ### <a name="remarks"></a>Poznámky
 
-V případě `QueryInterface` neúspěšného volání se zobrazí okno výstup:
+Pokud selže volání `QueryInterface`, zobrazí se okno výstup:
 
 *název rozhraní* - `failed`
 
 ##  <a name="atlassert"></a>ATLASSERT
 
-Makro ATLASSERT provádí stejné funkce jako makro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) , které se nachází v knihovně run-time jazyka C.
+Makro ATLASSERT provádí stejné funkce jako makro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) , které bylo nalezeno v knihovně run-time jazyka C.
 
 ```
 ATLASSERT(booleanExpression);
@@ -119,11 +119,11 @@ Určuje kód chyby, který se má vrátit.
 
 Tato makra poskytují mechanismus pro detekci a upozorňování uživatele na nesprávné použití parametrů.
 
-Makro volá ATLASSERT, a pokud podmínka neproběhne, `AtlThrow`volání.
+Makro volá ATLASSERT a pokud podmínka neproběhne, volání `AtlThrow`.
 
-V případě `AtlThrow` ATLENSURE je volána pomocí E_FAIL.
+V případě ATLENSURE se zavolá `AtlThrow` s E_FAIL.
 
-V případě `AtlThrow` ATLENSURE_THROW je volána se zadaným HRESULT.
+V případě ATLENSURE_THROW je `AtlThrow` volána se zadaným HRESULT.
 
 Rozdíl mezi ATLENSURE a ATLASSERT je, že ATLENSURE vyvolá výjimku v sestavení vydaných verzí i v sestaveních ladění.
 
@@ -175,10 +175,10 @@ ATLTRACE(
 
 ### <a name="parameters"></a>Parametry
 
-*exp*<br/>
+*oček*<br/>
 pro Řetězec a proměnné, které se mají odeslat do okna výstupu nebo do jakékoli aplikace, která tyto zprávy provede.
 
-*Kategorie*<br/>
+*kategorií*<br/>
 pro Typ události nebo metody, na které se má sestava nahlásit Seznam kategorií naleznete v tématu poznámky.
 
 *obsah*<br/>
@@ -206,17 +206,17 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>Parametry
 
-*exp*<br/>
+*oček*<br/>
 pro Řetězec, který má být odeslán do okna výstup nebo do jakékoli aplikace, která tyto zprávy zachytávání.
 
-*Kategorie*<br/>
+*kategorií*<br/>
 pro Typ události nebo metody, na které se má sestava nahlásit Seznam kategorií naleznete v tématu poznámky.
 
 *obsah*<br/>
 pro Úroveň trasování pro sestavu. Podrobnosti najdete v poznámkách.
 
 *lpszFormat*<br/>
-pro `printf`Formátovací řetězec formátu, který se použije k vytvoření řetězce pro odeslání na zařízení s výpisem paměti.
+pro Formátovací řetězec ve stylu `printf`, který se použije k vytvoření řetězce pro odeslání na zařízení s výpisem paměti.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -257,23 +257,23 @@ Parametr *Category* obsahuje seznam příznaků trasování, které mají být n
 |`traceDatabase`|Zprávy z podpory databáze knihovny MFC.|
 |`traceInternet`|Zprávy z MFC podpory pro Internet.|
 
-Chcete-li deklarovat vlastní kategorii trasování, Deklarujte globální instanci `CTraceCategory` třídy následujícím způsobem:
+Chcete-li deklarovat vlastní kategorii trasování, Deklarujte globální instanci třídy `CTraceCategory` následujícím způsobem:
 
 [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]
 
-Název kategorie MY_CATEGORY v tomto příkladu je název, který zadáte do parametru *Category* . První parametr je název kategorie, který se zobrazí v trasovacím nástroji ATL nebo MFC. Druhým parametrem je výchozí úroveň trasování. Tento parametr je nepovinný a výchozí úroveň trasování je 0.
+Název kategorie, MY_CATEGORY v tomto příkladu, je název, který zadáte do parametru *Category* . První parametr je název kategorie, který se zobrazí v trasovacím nástroji ATL nebo MFC. Druhým parametrem je výchozí úroveň trasování. Tento parametr je nepovinný a výchozí úroveň trasování je 0.
 
 Použití uživatelsky definované kategorie:
 
 [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]
 
-Chcete-li určit, že chcete filtrovat zprávy trasování, vložte před `#include <atlbase.h>` výpisem do souboru stdafx. h definice pro tato makra.
+Chcete-li určit, že chcete filtrovat zprávy trasování, vložte definice pro tato makra do souboru stdafx. h před příkazem `#include <atlbase.h>`.
 
 Případně můžete nastavit filtr v direktivách preprocesoru v dialogovém okně **stránky vlastností** . Klikněte na kartu **preprocesor** a poté vložte globální do pole upravit **Definice preprocesoru** .
 
 Atlbase. h obsahuje výchozí definice maker ATLTRACE2 a tyto definice budou použity, pokud tyto symboly nedefinujete před zpracováním atlbase. h.
 
-V sestavení vydaných verzí se ATLTRACE2 `(void) 0`zkompiluje do.
+V sestavení vydaných verzí se ATLTRACE2 zkompiluje do `(void) 0`.
 
 ATLTRACE2 omezuje obsah řetězce, který se má odeslat do zařízení s výpisem paměti, aby po formátování nepřesahoval více než 1023 znaků.
 
@@ -283,7 +283,7 @@ ATLTRACE a ATLTRACE2 mají stejné chování, ale ATLTRACE je zahrnutá z důvod
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makr](../../atl/reference/atl-macros.md)<br/>
 [Globální funkce ladění a hlášení chyb](../../atl/reference/debugging-and-error-reporting-global-functions.md)

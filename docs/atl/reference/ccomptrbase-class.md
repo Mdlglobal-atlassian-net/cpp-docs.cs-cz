@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298608"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864949"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase – třída
 
@@ -37,20 +37,20 @@ class CComPtrBase
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Typ objektu, na který se má odkazovat inteligentní ukazatel
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComPtrBase:: ~ CComPtrBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComPtrBase:: Advise](#advise)|Voláním této metody vytvoříte připojení mezi spojovacím bodem `CComPtrBase`a jímkou klienta.|
 |[CComPtrBase:: Attach](#attach)|Voláním této metody převezmete vlastnictví existujícího ukazatele.|
@@ -58,13 +58,13 @@ Typ objektu, na který se má odkazovat inteligentní ukazatel
 |[CComPtrBase:: CopyTo](#copyto)|Voláním této metody zkopírujte ukazatel `CComPtrBase` do jiné proměnné ukazatele.|
 |[CComPtrBase::D etach](#detach)|Voláním této metody vydáte vlastnictví ukazatele.|
 |[CComPtrBase::IsEqualObject](#isequalobject)|Zavolejte tuto metodu, abyste zkontrolovali, jestli zadané `IUnknown` odkazují na stejný objekt přidružený k objektu `CComPtrBase`.|
-|[CComPtrBase::QueryInterface](#queryinterface)|Voláním této metody vrátíte ukazatel na zadané rozhraní.|
+|[CComPtrBase:: QueryInterface](#queryinterface)|Voláním této metody vrátíte ukazatel na zadané rozhraní.|
 |[CComPtrBase:: Release](#release)|Voláním této metody uvolníte rozhraní.|
 |[CComPtrBase:: SetSite](#setsite)|Voláním této metody nastavíte lokalitu objektu `CComPtrBase` na `IUnknown` nadřazeného objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComPtrBase:: operator T *](#operator_t_star)|Operátor přetypování.|
 |[CComPtrBase:: operator!](#operator_not)|Operátor NOT.|
@@ -76,7 +76,7 @@ Typ objektu, na který se má odkazovat inteligentní ukazatel
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|Proměnná členu dat ukazatele.|
 
@@ -104,10 +104,10 @@ HRESULT Advise(
 *pUnk*<br/>
 Ukazatel na `IUnknown`klienta.
 
-*iid*<br/>
+*identifikátor*<br/>
 Identifikátor GUID bodu připojení Obvykle je to stejné jako odchozí rozhraní spravované bodem připojení.
 
-*pdw*<br/>
+*PDW*<br/>
 Ukazatel na soubor cookie, který jedinečně identifikuje připojení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -128,7 +128,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p2*<br/>
+*P2*<br/>
 Objekt `CComPtrBase` převezme vlastnictví tohoto ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -197,7 +197,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ppT*<br/>
+*PowerPoint*<br/>
 Adresa proměnné, která získá ukazatel `CComPtrBase`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -291,7 +291,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pT*<br/>
+*Bodů*<br/>
 Ukazatel na objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -324,7 +324,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pT*<br/>
+*Bodů*<br/>
 Ukazatel na objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -366,10 +366,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Parametry
 
-*Q*<br/>
+*Č*<br/>
 Typ objektu, jehož ukazatel rozhraní je povinný.
 
-*pp*<br/>
+*str*<br/>
 Adresa výstupní proměnné, která přijímá ukazatel požadovaného rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -415,6 +415,6 @@ Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 Tato metoda volá [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přehled třídy](../../atl/atl-class-overview.md)

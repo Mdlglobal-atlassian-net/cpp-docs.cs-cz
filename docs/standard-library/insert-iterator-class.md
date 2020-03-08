@@ -11,15 +11,15 @@ helpviewer_keywords:
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874037"
 ---
-# <a name="insertiterator-class"></a>insert_iterator – třída
+# <a name="insert_iterator-class"></a>insert_iterator – třída
 
-Popisuje adaptér iterátoru, který splňuje požadavky výstupního iterátoru. Vloží, spíše než přepíše, prvky do zadní části sekvence a poskytne tak sémantiku, která se liší od sémantiky přepsání poskytnuté iterátory kontejnerů sekvence jazyka C++ a asociativními kontejnery. `insert_iterator` Třída je založena podle přizpůsobeného typu kontejneru.
+Popisuje adaptér iterátoru, který splňuje požadavky výstupního iterátoru. Vloží, spíše než přepíše, prvky do zadní části sekvence a poskytne tak sémantiku, která se liší od sémantiky přepsání poskytnuté iterátory kontejnerů sekvence jazyka C++ a asociativními kontejnery. Třída `insert_iterator` je založena podle přizpůsobeného typu kontejneru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,33 +30,33 @@ class insert_iterator;
 
 ### <a name="parameters"></a>Parametry
 
-*Vnitřního*\
+\ *kontejneru*
 Typ kontejneru, do kterého mají být prvky vloženy `insert_iterator`.
 
 ## <a name="remarks"></a>Poznámky
 
-Kontejner typu `Container` musí splňovat požadavky pro kontejner s proměnlivou velikostí a mít dva argumenty vložit členskou funkci, kde jsou parametry typu `Container::iterator` a `Container::value_type` a, který vrací typ `Container::iterator`. C++Standardní sekvence knihovny a seřazené asociativní kontejnery splňují tyto požadavky a lze je přizpůsobit pro použití s `insert_iterator`. Pro asociativní kontejnery je argument pozice považován za pokyn, který má potenciál zlepšit nebo snížit výkon v závislosti na tom, jak kvalitní nápověda je. `insert_iterator` Musí být vždy inicializován s jeho kontejnerem.
+Kontejner typu `Container` musí splňovat požadavky pro kontejner s proměnlivou velikostí a mít dva argumenty: funkce INSERT member, kde jsou parametry typu `Container::iterator` a `Container::value_type` a, které vrací typ `Container::iterator`. C++Standardní sekvence knihovny a seřazené asociativní kontejnery splňují tyto požadavky a lze je přizpůsobit pro použití s `insert_iterator`s. Pro asociativní kontejnery je argument pozice považován za pokyn, který má potenciál zlepšit nebo snížit výkon v závislosti na tom, jak kvalitní nápověda je. `insert_iterator` musí být vždy inicializovány s jeho kontejnerem.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[insert_iterator](#insert_iterator)|Vytvoří objekt `insert_iterator` , který vloží prvek do zadané pozice v kontejneru.|
+|[insert_iterator](#insert_iterator)|Vytvoří `insert_iterator`, který vloží prvek do zadané pozice v kontejneru.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
 |[container_type](#container_type)|Typ, který představuje kontejner, do kterého má být provedeno obecné vložení.|
-|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek v sekvenci řízené přiřazeným kontejnerem.|
+|[odkaz](#reference)|Typ, který poskytuje odkaz na prvek v sekvenci řízené přiřazeným kontejnerem.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[podnikatel](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x` pro obecné vložení.|
-|[operator + + – operátor](#op_add_add)|`insert_iterator` Zvýší na další místo, do kterého může být hodnota uložená.|
-|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru `i` *  =  `x` pro obecné vložení.|
+|[podnikatel](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru * `i` = `x` pro obecné vložení.|
+|[operator + + – operátor](#op_add_add)|Zvýší `insert_iterator` na další místo, do kterého může být hodnota uložená.|
+|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru * `i` = `x` pro obecné vložení.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -64,7 +64,7 @@ Kontejner typu `Container` musí splňovat požadavky pro kontejner s proměnliv
 
 **Obor názvů:** std
 
-## <a name="container_type"></a>insert_iterator::container_type
+## <a name="container_type"></a>insert_iterator:: container_type
 
 Typ, který představuje kontejner, do kterého má být provedeno obecné vložení.
 
@@ -106,9 +106,9 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iterator"></a>insert_iterator::insert_iterator
+## <a name="insert_iterator"></a>insert_iterator:: insert_iterator
 
-Vytvoří objekt `insert_iterator` , který vloží prvek do zadané pozice v kontejneru.
+Vytvoří `insert_iterator`, který vloží prvek do zadané pozice v kontejneru.
 
 ```cpp
 insert_iterator(Container& _Cont, typename Container::iterator _It);
@@ -117,14 +117,14 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 ### <a name="parameters"></a>Parametry
 
 *_Cont*\
-Kontejner, do kterého `insert_iterator` má být vložen element.
+Kontejner, do kterého má `insert_iterator` vkládat prvky.
 
 *_It*\
 Pozice pro vložení
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny kontejnery mají členskou funkci INSERT volanou `insert_iterator`. U asociativních kontejnerů je parametr pozice pouze návrhem. Funkce Inserter poskytuje pohodlný způsob, jak vkládat hodnoty.
+Všechny kontejnery mají funkci INSERT member volanou `insert_iterator`. U asociativních kontejnerů je parametr pozice pouze návrhem. Funkce Inserter poskytuje pohodlný způsob, jak vkládat hodnoty.
 
 ### <a name="example"></a>Příklad
 
@@ -172,7 +172,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>insert_iterator:: operator * – operátor
+## <a name="op_star"></a>insert_iterator:: operator *
 
 Vrátí odkaz na vložení iterátoru, který vrací element.
 
@@ -186,7 +186,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Poznámky
 
-Slouží k implementaci**hodnoty**  **\*ITER** = výrazu výstupního iterátoru. Pokud `Iter` je iterátor, který adresuje prvek v sekvenci, pak  **\*** **hodnota** ITER = nahrazuje tento prvek hodnotou a nemění celkový počet prvků v sekvenci.
+Slouží k implementaci výrazu výstupního iterátoru **\*Iter** = **Value**. Pokud je `Iter` iterátor, který adresuje prvek v sekvenci, potom **\*Iter** = **hodnota** nahradí tento prvek hodnotou a nemění celkový počet prvků v sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -234,7 +234,7 @@ After the insertions, the list L is:
 
 ## <a name="op_add_add"></a>insert_iterator:: operator + +
 
-`insert_iterator` Zvýší na další místo, do kterého může být hodnota uložená.
+Zvýší `insert_iterator` na další místo, do kterého může být hodnota uložená.
 
 ```cpp
 insert_iterator<Container>& operator++();
@@ -244,7 +244,7 @@ insert_iterator<Container> operator++(int);
 
 ### <a name="parameters"></a>Parametry
 
-`insert_iterator` Adresování dalšího umístění, do kterého může být uložena hodnota.
+`insert_iterator` adresující další umístění, do kterého může být hodnota uložená.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*počítává*\
+\ *Val*
 Hodnota, která má být přiřazena kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -427,8 +427,8 @@ The first element in the list L is: 10.
 */
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<iterátor >](../standard-library/iterator.md)\
+[> iterátoru\<](../standard-library/iterator.md)\
 [Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

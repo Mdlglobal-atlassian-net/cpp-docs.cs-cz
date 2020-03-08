@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689902"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856392"
 ---
 # <a name="char_traits-struct"></a>char_traits – struktura
 
@@ -47,7 +47,7 @@ struct char_traits;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* \
+*CharType*\
 Datový typ elementu.
 
 ## <a name="remarks"></a>Poznámky
@@ -75,7 +75,7 @@ Struktura šablony popisuje různé vlastnosti znaků pro typ `CharType`. Šablo
 |[eof](#eof)|Vrátí znak konce souboru (EOF).|
 |[přepínače](#eq)|Testuje, zda jsou dva `char_type` znaky stejné.|
 |[eq_int_type](#eq_int_type)|Testuje, zda jsou dva znaky reprezentované jako `int_type`s stejné.|
-|[najít](#find)|Vyhledá první výskyt zadaného znaku v rozsahu znaků.|
+|[find](#find)|Vyhledá první výskyt zadaného znaku v rozsahu znaků.|
 |[časový](#length)|Vrátí délku řetězce.|
 |[lt](#lt)|Testuje, zda je jeden znak menší než jiný.|
 |[Pøesunout](#move)|Zkopíruje zadaný počet znaků v sekvenci do druhé, možná překrývající se, sekvence. Zastaralé Místo toho použijte [char_traits:: _Move_s](#move_s) .|
@@ -86,7 +86,7 @@ Struktura šablony popisuje různé vlastnosti znaků pro typ `CharType`. Šablo
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<string >
+**Header:** \<řetězec >
 
 **Obor názvů:** std
 
@@ -107,18 +107,18 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom* znak, jehož hodnota má být přiřazena.
 
-*_CharTo* \
+*_CharTo*\
 Prvek, kterému má být přiřazena hodnota znaku.
 
-*strTo* \
+*strTo*\
 Řetězec nebo znaková pole, jejichž počáteční prvky mají být přiřazeny hodnoty znaků.
 
-*_Num* \
+*_Num*\
 Počet prvků, které budou přiřazeny hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Druhá členská funkce vrátí ukazatel na řetězec, jehož prvnímu prvku *_Num* byly přiřazeny hodnoty *_CharFrom*.
+Druhá členská funkce vrátí ukazatel na řetězec, jehož prvním *_Num* prvky byly přiřazeny hodnoty *_CharFrom*.
 
 ### <a name="example"></a>Příklad
 
@@ -161,7 +161,7 @@ The target string s1 is: abcd-1234-abcd
 The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 ```
 
-## <a name="char_type"></a>char_traits::char_type
+## <a name="char_type"></a>char_traits:: char_type
 
 Typ znaku.
 
@@ -189,13 +189,13 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Parametry
 
-*str1* \
+*str1*\
 První ze dvou řetězců, které mají být porovnány.
 
-*str2* \
+*str2*\
 Druhý ze dvou řetězců, které mají být porovnány.
 
-*_Num* \
+*_Num*\
 Počet prvků v řetězci, které mají být porovnány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -255,13 +255,13 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_To* \
+*_To*\
 Element na začátku řetězce nebo pole znaků, které cílí na příjem zkopírované sekvence znaků.
 
-*_From* \
+*_From*\
 Prvek na začátku zdrojového řetězce nebo pole znaků, který má být zkopírován.
 
-*_Num* \
+*_Num*\
 Počet prvků, které mají být zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -303,7 +303,7 @@ The destination string is: ABCD-1234
 The result1 = copy ( s1 , s2 , 4 ) is: ABCD-1234-abcd
 ```
 
-## <a name="copy_s"></a>char_traits::_Copy_s
+## <a name="copy_s"></a>char_traits:: _Copy_s
 
 Zkopíruje zadaný počet znaků z jednoho řetězce do jiného.
 
@@ -317,16 +317,16 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*cílový* \
+*cílový*\
 Řetězec nebo pole znaků, které cílí na příjem zkopírované sekvence znaků.
 
-*dest_size* \
-Velikost *cíle.* Pokud `char_type` je **char**, pak je tato velikost v bajtech. Pokud `char_type` je **wchar_t**, je tato velikost uvedená v slovech.
+*dest_size*\
+Velikost *cíle.* Pokud `char_type` je **char**, pak je tato velikost v bajtech. Je-li `char_type` **wchar_t**, je tato velikost uvedená v slovech.
 
-*_From* \
+*_From*\
 Zdrojový řetězec nebo pole znaků, které mají být zkopírovány.
 
-*počet* \
+*počet*\
 Počet prvků, které mají být zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -384,7 +384,7 @@ Znak EOF.
 
 Hodnota, která představuje konec souboru (například EOF nebo WEOF).
 
-C++ Standardní stavy, které tato hodnota nesmí odpovídat platnému `char_type` hodnotě. Kompilátor společnosti C++ Microsoft toto omezení vynutil pro typ **char**, ale ne pro typ **wchar_t**. To zachycuje níže uvedený příklad.
+C++ Standardní stavy, které tato hodnota nesmí odpovídat platnému `char_type` hodnotě. Kompilátor Microsoft C++ toto omezení vynutil pro typ **char**, ale ne pro typ **wchar_t**. To zachycuje níže uvedený příklad.
 
 ### <a name="example"></a>Příklad
 
@@ -429,10 +429,10 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1* \
+*_Ch1*\
 První ze dvou znaků, které mají být testovány pro rovnost.
 
-*_Ch2* \
+*_Ch2*\
 Druhý ze dvou znaků, které mají být testovány pro rovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -479,7 +479,7 @@ The character ch1 is not equal to the character ch2.
 The character ch1 is equal to the character ch3.
 ```
 
-## <a name="eq_int_type"></a>char_traits::eq_int_type
+## <a name="eq_int_type"></a>char_traits:: eq_int_type
 
 Testuje, zda jsou dva znaky reprezentované jako `int_type`s stejné nebo ne.
 
@@ -489,10 +489,10 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1* \
+*_Ch1*\
 První ze dvou znaků, které mají být testovány pro rovnost jako `int_type`s.
 
-*_Ch2* \
+*_Ch2*\
 Druhý ze dvou znaků, které mají být testovány pro rovnost jako `int_type`s.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -579,10 +579,10 @@ static const char_type* find(const char_type* str,
 \ *str*
 První znak v řetězci, který má být prohledán.
 
-*_Num* \
+*_Num*\
 Počet pozic, počítáno od prvního, v rozsahu, který chcete prohledat.
 
-*_Ch* \
+*_Ch*\
 Znak, který má být prohledán v rozsahu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -631,7 +631,7 @@ of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
-## <a name="int_type"></a>char_traits::int_type
+## <a name="int_type"></a>char_traits:: int_type
 
 Celočíselný typ, který může představovat znak typu `char_type` nebo znak konce souboru (EOF).
 
@@ -700,10 +700,10 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1* \
+*_Ch1*\
 První ze dvou znaků, které mají být testovány na méně než.
 
-*_Ch2* \
+*_Ch2*\
 Druhý ze dvou znaků, které mají být testovány na méně než.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -763,13 +763,13 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_To* \
+*_To*\
 Element na začátku řetězce nebo pole znaků, které cílí na příjem zkopírované sekvence znaků.
 
-*_From* \
+*_From*\
 Prvek na začátku zdrojového řetězce nebo pole znaků, který má být zkopírován.
 
-*_Num* \
+*_Num*\
 Počet prvků, které mají být zkopírovány ze zdrojového řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -826,7 +826,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = move ( sToFrom2 , findc , 8 ) is: cd-1234-4-ABCD
 ```
 
-## <a name="move_s"></a>char_traits::_Move_s
+## <a name="move_s"></a>char_traits:: _Move_s
 
 Zkopíruje zadaný počet znaků v posloupnosti do druhé, případně překrývající se sekvence.
 
@@ -840,16 +840,16 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Parametry
 
-*cílový* \
+*cílový*\
 Element na začátku řetězce nebo pole znaků, které cílí na příjem zkopírované sekvence znaků.
 
-*dest_size* \
-Velikost *cíle.* Pokud je `char_type` **char**, pak je v bajtech. Pokud `char_type` je **wchar_t**, pak se jedná o slova.
+*dest_size*\
+Velikost *cíle.* Pokud je `char_type` **char**, pak je v bajtech. Pokud je `char_type` **wchar_t**, pak se jedná o slova.
 
-*_From* \
+*_From*\
 Prvek na začátku zdrojového řetězce nebo pole znaků, který má být zkopírován.
 
-*počet* \
+*počet*\
 Počet prvků, které mají být zkopírovány ze zdrojového řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -906,7 +906,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) is: cd-1234-4-ABCD
 ```
 
-## <a name="not_eof"></a>char_traits::not_eof
+## <a name="not_eof"></a>char_traits:: not_eof
 
 Testuje, zda znak není znak konce souboru (EOF) nebo je znakem EOF.
 
@@ -916,12 +916,12 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* \
+*_Ch*\
 Znak reprezentovaný jako `int_type`, který se má testovat, pokud se jedná o znak EOF nebo ne.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-@No__t_0 reprezentace testovaného znaku, pokud `int_type` znaku není rovno znaku EOF.
+`int_type` reprezentace testovaného znaku, pokud `int_type` znaku není rovno znaku EOF.
 
 Pokud znak `int_type` hodnota se rovná hodnotě EOF `int_type`, pak hodnota **false**.
 
@@ -978,7 +978,7 @@ The eofTest1 returns: 120, which is the character: x.
 The eofTest2 indicates int2 is an EOF character.
 ```
 
-## <a name="off_type"></a>char_traits::off_type
+## <a name="off_type"></a>char_traits:: off_type
 
 Celočíselný typ, který může představovat posuny mezi pozicemi v datovém proudu.
 
@@ -1002,7 +1002,7 @@ typedef streampos pos_type;
 
 Typ popisuje objekt, který může ukládat všechny informace potřebné k obnovení libovolného indikátoru pozice souboru v rámci datového proudu. Je to obvykle synonymum pro [streampos](../standard-library/ios-typedefs.md#streampos), ale v každém případě má v podstatě stejné vlastnosti jako tento typ.
 
-## <a name="state_type"></a>char_traits::state_type
+## <a name="state_type"></a>char_traits:: state_type
 
 Typ, který představuje stav převodu pro vícebajtové znaky v datovém proudu.
 
@@ -1014,7 +1014,7 @@ typedef implementation-defined state_type;
 
 Typ popisuje objekt, který může představovat stav konverze. Je to obvykle synonymum pro `mbstate_t`, ale v každém případě má v podstatě stejné vlastnosti jako tento typ.
 
-## <a name="to_char_type"></a>char_traits::to_char_type
+## <a name="to_char_type"></a>char_traits:: to_char_type
 
 Převede `int_type` znak na odpovídající `char_type` znak a vrátí výsledek.
 
@@ -1024,8 +1024,8 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* \
-@No__t_0 znak, který se má znázornit jako `char_type`
+*_Ch*\
+`int_type` znak, který se má znázornit jako `char_type`
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1120,7 +1120,7 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="to_int_type"></a>char_traits::to_int_type
+## <a name="to_int_type"></a>char_traits:: to_int_type
 
 Převede `char_type` znak na odpovídající `int_type` znak a vrátí výsledek.
 
@@ -1130,8 +1130,8 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* \
-@No__t_0 znak, který má být reprezentován jako `int_type`.
+*_Ch*\
+`char_type` znak, který má být reprezentován jako `int_type`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1223,6 +1223,6 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

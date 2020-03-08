@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkce&gt; ostream'
+title: funkce &lt;ostream&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::swap
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - std::ends [C++]
 - std::flush [C++]
 ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447197"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874798"
 ---
-# <a name="ltostreamgt-functions"></a>&lt;funkce&gt; ostream
+# <a name="ltostreamgt-functions"></a>funkce &lt;ostream&gt;
 
-Jedná se o funkce globálních šablon definované v &lt;ostream&gt;. Pro členské funkce si přečtěte dokumentaci ke [třídě basic_ostream](basic-ostream-class.md) .
+Jedná se o funkce globálních šablon definované v &lt;ostream&gt;. Členské funkce naleznete v dokumentaci [třídy basic_ostream](basic-ostream-class.md) .
 
 ||||
 |-|-|-|
 |[endl](#endl)|[přípon](#ends)|[zaznamenány](#flush)|
-|[swap](#swap)|
+|[adresu](#swap)|
 
 ## <a name="endl"></a>endl
 
@@ -46,7 +46,7 @@ Typ elementu.
 *Ostr*\
 Objekt typu **basic_ostream**.
 
-*Recenzent*\
+*Tr*\
 Vlastnosti znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -55,7 +55,7 @@ Objekt typu **basic_ostream**.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor volá *OSTR*. [Vložit](../standard-library/basic-ostream-class.md#put) (*OSTR*. [rozšířit](../standard-library/basic-ios-class.md#widen) (' \n ')) a potom zavolá *OSTR*. [](../standard-library/basic-ostream-class.md#flush)vyprázdnit. Vrátí *OSTR*.
+Manipulátor volá *OSTR*. [Put](../standard-library/basic-ostream-class.md#put)(*OSTR*.[ rozšířit](../standard-library/basic-ios-class.md#widen)(' \n ')) a potom zavolá *OSTR*. [vyprázdnit](../standard-library/basic-ostream-class.md#flush). Vrátí *OSTR*.
 
 ### <a name="example"></a>Příklad
 
@@ -93,7 +93,7 @@ Typ elementu.
 *Ostr*\
 Objekt typu `basic_ostream`.
 
-*Recenzent*\
+*Tr*\
 Vlastnosti znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -102,7 +102,7 @@ Objekt typu `basic_ostream`.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor volá *OSTR*. [Vložit](../standard-library/basic-ostream-class.md#put) (*Elem*(\ 0)). Vrátí *OSTR*.
+Manipulátor volá *OSTR*. [Put](../standard-library/basic-ostream-class.md#put)(*elem*(' \ 0 ')). Vrátí *OSTR*.
 
 ### <a name="example"></a>Příklad
 
@@ -142,7 +142,7 @@ Typ elementu.
 *Ostr*\
 Objekt typu `basic_ostream`.
 
-*Recenzent*\
+*Tr*\
 Vlastnosti znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -151,7 +151,7 @@ Objekt typu `basic_ostream`.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor volá *OSTR*. [](../standard-library/basic-ostream-class.md#flush)vyprázdnit. Vrátí *OSTR*.
+Manipulátor volá *OSTR*. [vyprázdnit](../standard-library/basic-ostream-class.md#flush). Vrátí *OSTR*.
 
 ### <a name="example"></a>Příklad
 
@@ -187,19 +187,19 @@ void swap(
 *Elem*\
 Typ elementu.
 
-*Recenzent*\
+*Tr*\
 Vlastnosti znaků.
 
-*zbývá*\
-Odkaz l-hodnoty na `basic_ostream` objekt.
+*levý*\
+Odkaz l-hodnoty na objekt `basic_ostream`.
 
-*Kliknutím*\
-Odkaz l-hodnoty na `basic_ostream` objekt.
+*pravé*\
+Odkaz l-hodnoty na objekt `basic_ostream`.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce `swap` šablony se spustí `left.swap(right)`.
+Funkce šablony `swap` spouští `left.swap(right)`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [\<ostream >](../standard-library/ostream.md)

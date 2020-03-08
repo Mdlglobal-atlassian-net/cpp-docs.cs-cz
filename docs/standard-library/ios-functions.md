@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890073"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856495"
 ---
 # <a name="ltiosgt-functions"></a>&lt;funkce iOS&gt;
 
@@ -185,7 +185,7 @@ Objekt `ios_base`.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor efektivně volá `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`a potom vrátí *iosbase*.
+Manipulátor efektivně volá `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, pak vrátí *iosbase*.
 
 ## <a name="fixed"></a>určí
 

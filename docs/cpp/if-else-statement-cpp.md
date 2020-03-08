@@ -10,17 +10,17 @@ helpviewer_keywords:
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661641"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884147"
 ---
 # <a name="if-else-statement-c"></a>if-else – příkaz (C++)
 
 Ovládá podmíněné větvení. Příkazy v *bloku If* jsou spouštěny pouze v případě, že *výraz IF-Expression* je vyhodnocen jako nenulová hodnota (nebo true). Pokud je hodnota *výrazu* nenulová, *příkaz1* a všechny ostatní příkazy v bloku jsou spuštěny a blok else-Block, pokud je k dispozici, je vynechán. Pokud je hodnota *výrazu* nula, pak je if-Block vynechán a je proveden blok else-Block, pokud je k dispozici. Výrazy, které se vyhodnotí jako nenulové, jsou
 
-- PODMÍNKA
+- PRAVDA
 - ukazatel, který není null,
 - Jakákoli nenulová hodnota aritmetického typu nebo
 - typ třídy, který definuje jednoznačnou konverzi na aritmetický typ, logickou hodnotu nebo typ ukazatele. (Informace o převodech naleznete v tématu [standardní převody](../cpp/standard-conversions.md).)
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a>If – příkaz s inicializátorem
 
-**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Příkaz **if** může obsahovat také výraz, který deklaruje a inicializuje pojmenovanou proměnnou. Tuto formu příkazu if-Statement použijte, pokud je proměnná požadována pouze v rámci rozsahu bloku If-Block.
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): příkaz **if** může obsahovat také výraz, který deklaruje a inicializuje pojmenovanou proměnnou. Tuto formu příkazu if-Statement použijte, pokud je proměnná požadována pouze v rámci rozsahu bloku If-Block.
 
 ## <a name="example"></a>Příklad
 
@@ -161,11 +161,11 @@ int main()
 
 Ve všech formulářích příkazu **if** je *výraz*, který může mít libovolnou hodnotu s výjimkou struktury, vyhodnocen, včetně všech vedlejších účinků. Řízení se předává z příkazu **if** do dalšího příkazu v programu, pokud některý z *příkazů neobsahuje příkaz* [Break](../cpp/break-statement-cpp.md), [Continue](../cpp/continue-statement-cpp.md)nebo [goto](../cpp/goto-statement-cpp.md).
 
-Klauzule `if...else` ELSE příkazu je přidružená k nejbližšímu předchozímu příkazu **if** ve stejném oboru, který nemá odpovídající příkaz else.
+Klauzule **Else** příkazu `if...else` je přidružená k nejbližšímu předchozímu příkazu **if** ve stejném oboru, který nemá odpovídající příkaz **Else** .
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">Pokud příkazy constexpr
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">, pokud příkazy constexpr
 
-**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): V šablonách funkcí můžete použít příkaz **if constexpr** k provedení rozhodování o rozvětvení v době kompilace, aniž by bylo nutné se uchýlit k více funkcím přetížení. Můžete například napsat jednu funkci, která zpracovává parametr unpacking (žádné přetížení nula parametrů není nutné):
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): v šablonách funkcí můžete použít příkaz **if constexpr** k provedení rozhodování o rozvětvení v době kompilace, aniž by bylo nutné se uchýlit k vícenásobným přetížením funkcí. Můžete například napsat jednu funkci, která zpracovává parametr unpacking (žádné přetížení nula parametrů není nutné):
 
 ```cpp
 template <class T, class... Rest>
@@ -186,7 +186,7 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Příkazy výběru](../cpp/selection-statements-cpp.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>

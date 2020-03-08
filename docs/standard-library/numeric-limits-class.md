@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687625"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876023"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits – třída
 
@@ -90,12 +90,12 @@ template <class Type>
 
 ### <a name="parameters"></a>Parametry
 
-*Zadejte* \
+*Zadejte*\
 Základní datový typ prvku, jehož vlastnosti jsou testovány nebo dotazovány nebo nastaveny. *Typ* může být také deklarovaný jako **const**, **volatile**nebo **const volatile**.
 
 ## <a name="remarks"></a>Poznámky
 
-Hlavička Definuje explicitní specializace pro typy **wchar_t**, **bool**, **char**, **signed char**, **unsigned char**, **short**, **unsigned short**, **int**, **unsigned int**, **Long**, **unsigned long**, **float**, **Double**, **Long Double**, **Long Long**, **unsigned long long**, **char16_t**a **char32_t**. Pro tyto explicitní specializace má člen [numeric_limits:: is_specialized](#is_specialized) **hodnotu true**a všichni relevantní členové mají smysluplné hodnoty. Program může poskytovat další explicitní specializace. Většina členských funkcí třídy popisuje nebo testuje možné implementace **typu float**.
+Záhlaví Definuje explicitní specializace pro typy **wchar_t**, **bool**, **char**, **signed char**, **unsigned char**, **short**, **unsigned short**, **int**, **unsigned int**, **Long**, unsigned **Long,** **float**, **Double**, **Long Double**, **Long Long**, Long **Long,** Long, **char16_t**a **char32_t**. Pro tyto explicitní specializace má člen [numeric_limits:: is_specialized](#is_specialized) **hodnotu true**a všechny relevantní členy mají smysluplné hodnoty. Program může poskytovat další explicitní specializace. Většina členských funkcí třídy popisuje nebo testuje možné implementace **typu float**.
 
 Pro libovolnou specializaci nemají žádné členy smysluplné hodnoty. Členský objekt, který nemá smysluplnou hodnotu, ukládá hodnotu nula (nebo **false**) a členskou funkci, která nevrací smysluplnou hodnotu, vrátí `Type(0)`.
 
@@ -152,7 +152,7 @@ Nejmenší nenulová hodnota denormalizované hodnoty.
 
 **typ long double** je stejný jako **typ Double** pro C++ kompilátor.
 
-Funkce vrátí minimální hodnotu pro typ, který je stejný jako [minimum](#min) , pokud [has_denorm](#has_denorm) není rovno `denorm_present`.
+Funkce vrátí minimální hodnotu pro typ, který je stejný jako [minimum](#min) , pokud [has_denorm](#has_denorm) není rovna `denorm_present`.
 
 #### <a name="example"></a>Příklad
 
@@ -297,7 +297,7 @@ Rozdíl mezi 1 a nejmenší hodnotou větší než 1, který je reprezentovateln
 
 #### <a name="remarks"></a>Poznámky
 
-Hodnota je FLT_EPSILON pro typ **float**. `epsilon` pro typ je nejmenší kladné číslo s plovoucí desetinnou čárkou *n* tak, že *n*  +  `epsilon`  + *n* je reprezentovatelné.
+Hodnota je FLT_EPSILON pro typ **float**. `epsilon` pro typ je nejmenší kladné číslo s plovoucí desetinnou čárkou *n* tak, že *n* + `epsilon` + *n* je reprezentovatelné.
 
 #### <a name="example"></a>Příklad
 
@@ -345,7 +345,7 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Hodnota výčtu typu **const** `float_denorm_style`, která označuje, jestli typ povoluje denormalizované hodnoty.
+Hodnota výčtu typu **const**`float_denorm_style`, která označuje, jestli typ povoluje denormalizované hodnoty.
 
 #### <a name="remarks"></a>Poznámky
 
@@ -441,7 +441,7 @@ static constexpr bool has_infinity = false;
 
 #### <a name="remarks"></a>Poznámky
 
-Člen vrátí **hodnotu true** , pokud má [is_iec559](#is_iec559) **hodnotu true**.
+Člen vrátí **hodnotu true** , [](#is_iec559) Pokud is_iec559 **hodnotu true**.
 
 #### <a name="example"></a>Příklad
 
@@ -487,7 +487,7 @@ static constexpr bool has_quiet_NaN = false;
 
 #### <a name="remarks"></a>Poznámky
 
-Tiché NAN je kódování pro číslo, které nesignalizuje jeho přítomnost ve výrazu. Návratová hodnota má hodnotu **true** , pokud má [is_iec559](#is_iec559) hodnotu true.
+Tiché NAN je kódování pro číslo, které nesignalizuje jeho přítomnost ve výrazu. Návratová hodnota má **hodnotu true** , pokud [is_iec559](#is_iec559) hodnotu true.
 
 #### <a name="example"></a>Příklad
 
@@ -533,7 +533,7 @@ static constexpr bool has_signaling_NaN = false;
 
 #### <a name="remarks"></a>Poznámky
 
-Signalizace NAN je kódování pro číslo, které signalizuje jeho přítomnost ve výrazu. Návratová hodnota má hodnotu **true** , pokud má [is_iec559](#is_iec559) hodnotu true.
+Signalizace NAN je kódování pro číslo, které signalizuje jeho přítomnost ve výrazu. Návratová hodnota má **hodnotu true** , pokud [is_iec559](#is_iec559) hodnotu true.
 
 #### <a name="example"></a>Příklad
 
@@ -579,7 +579,7 @@ Reprezentace kladného nekonečna pro typ, je-li k dispozici.
 
 #### <a name="remarks"></a>Poznámky
 
-Návratová hodnota má smysl pouze v případě, že je hodnota [has_infinity](#has_infinity) **pravdivá**.
+Návratová hodnota má smysl pouze v případě, že je [has_infinity](#has_infinity) **true**.
 
 #### <a name="example"></a>Příklad
 
@@ -1011,7 +1011,7 @@ Maximální konečná hodnota pro typ.
 
 #### <a name="remarks"></a>Poznámky
 
-Maximální konečná hodnota je INT_MAX pro typ **int** a FLT_MAX pro typ **float**. Návratová hodnota má smysl, pokud má [is_bounded](#is_bounded) **hodnotu true**.
+Maximální konečná hodnota je INT_MAX pro typ **int** a FLT_MAX pro typ **float**. Návratová hodnota má smysl, pokud [is_bounded](#is_bounded) má **hodnotu true**.
 
 #### <a name="example"></a>Příklad
 
@@ -1069,7 +1069,7 @@ Maximální celočíselný exponent na základě základu, který je reprezentov
 
 #### <a name="remarks"></a>Poznámky
 
-Vrácená členská funkce je smysluplná jenom u typů s plovoucí desetinnou čárkou. @No__t_0 je hodnota FLT_MAX_EXP pro typ **float**.
+Vrácená členská funkce je smysluplná jenom u typů s plovoucí desetinnou čárkou. `max_exponent` je hodnota FLT_MAX_EXP pro typ **float**.
 
 #### <a name="example"></a>Příklad
 
@@ -1115,7 +1115,7 @@ Maximální celočíselná hodnota 10 exponent, kterou typ představuje.
 
 #### <a name="remarks"></a>Poznámky
 
-Vrácená členská funkce je smysluplná jenom u typů s plovoucí desetinnou čárkou. @No__t_0 je hodnota FLT_MAX_10 pro typ **float**.
+Vrácená členská funkce je smysluplná jenom u typů s plovoucí desetinnou čárkou. `max_exponent` je hodnota FLT_MAX_10 pro typ **float**.
 
 #### <a name="example"></a>Příklad
 
@@ -1161,7 +1161,7 @@ Minimální normalizovaná hodnota pro typ.
 
 #### <a name="remarks"></a>Poznámky
 
-Minimální normalizovaná hodnota je INT_MIN pro typ **int** a FLT_MIN pro typ **float**. Návratová hodnota má smysl, pokud má [is_bounded](#is_bounded) **hodnotu true** , nebo pokud [is_signed](#is_signed) je **false**.
+Minimální normalizovaná hodnota je INT_MIN pro typ **int** a FLT_MIN pro typ **float**. Návratová hodnota má smysl, pokud [is_bounded](#is_bounded) má **hodnotu true** , nebo pokud [is_signed](#is_signed) **hodnotu false**.
 
 #### <a name="example"></a>Příklad
 
@@ -1211,7 +1211,7 @@ Minimální celočíselná exponent na základě základu, který je reprezentov
 
 #### <a name="remarks"></a>Poznámky
 
-Členská funkce je smysluplná jenom u typů s plovoucí desetinnou čárkou. @No__t_0 je hodnota FLT_MIN_EXP pro typ **float**.
+Členská funkce je smysluplná jenom u typů s plovoucí desetinnou čárkou. `min_exponent` je hodnota FLT_MIN_EXP pro typ **float**.
 
 #### <a name="example"></a>Příklad
 
@@ -1257,7 +1257,7 @@ Minimální celočíselný základ 10 exponent, který je reprezentován typem.
 
 #### <a name="remarks"></a>Poznámky
 
-Členská funkce je smysluplná jenom u typů s plovoucí desetinnou čárkou. @No__t_0 je hodnota FLT_MIN_10_EXP pro typ **float**.
+Členská funkce je smysluplná jenom u typů s plovoucí desetinnou čárkou. `min_exponent10` je hodnota FLT_MIN_10_EXP pro typ **float**.
 
 #### <a name="example"></a>Příklad
 
@@ -1303,7 +1303,7 @@ Reprezentace tichého NAN pro typ.
 
 #### <a name="remarks"></a>Poznámky
 
-Návratová hodnota má smysl pouze v případě, že je hodnota [has_quiet_NaN](#has_quiet_nan) **pravdivá**.
+Návratová hodnota má smysl pouze v případě, že je [has_quiet_NaN](#has_quiet_nan) **true**.
 
 #### <a name="example"></a>Příklad
 
@@ -1349,7 +1349,7 @@ Základ integrálu pro reprezentaci typu.
 
 #### <a name="remarks"></a>Poznámky
 
-Základem je 2 pro předdefinované celočíselné typy a základ, na který je vyvoláno exponent, neboli FLT_RADIX pro předdefinované typy s plovoucí desetinnou čárkou.
+Základem je 2 pro předdefinované celočíselné typy a základ, na který je vyvoláno exponent, nebo FLT_RADIX pro předdefinované typy s plovoucí desetinnou čárkou.
 
 #### <a name="example"></a>Příklad
 
@@ -1484,7 +1484,7 @@ Reprezentace NAN signálu pro typ.
 
 #### <a name="remarks"></a>Poznámky
 
-Návratová hodnota má smysl pouze v případě, že je hodnota [has_signaling_NaN](#has_signaling_nan) **pravdivá**.
+Návratová hodnota má smysl pouze v případě, že je [has_signaling_NaN](#has_signaling_nan) **true**.
 
 #### <a name="example"></a>Příklad
 

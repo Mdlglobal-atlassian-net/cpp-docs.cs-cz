@@ -1,26 +1,26 @@
 ---
-title: '&lt;unordered_map&gt; operátory'
+title: operátory &lt;unordered_map&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454770"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873960"
 ---
-# <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; operátory
+# <a name="ltunordered_mapgt-operators"></a>operátory &lt;unordered_map&gt;
 
 |||||
 |-|-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
+|[operator!=](#op_neq)|[operator = = – operátor](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator = = – operátor](#op_eq_eq_multimap)|
 
 ## <a name="op_neq"></a>! = – operátor
 
-Testuje, zda objekt [unordered_map](../standard-library/unordered-map-class.md) na levé straně operátoru není roven objektu unordered_map na pravé straně.
+Testuje, zda [unordered_map](../standard-library/unordered-map-class.md) objekt na levé straně operátoru není roven objektu unordered_map na pravé straně.
 
 ```cpp
 bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
@@ -28,15 +28,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `unordered_map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `unordered_map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud se unordered_maps nerovná; **false** , pokud jsou stejné.
+**true** , pokud unordered_maps nejsou stejné; **false** , pokud jsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -74,7 +74,7 @@ int main( )
 }
 ```
 
-**Výstup:**
+**Výkonem**
 
 `um1 != um2: true`
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `unordered_map`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `unordered_map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud jsou unordered_maps stejné; **false** , pokud se neshodují.
+**true** , pokud se unordered_maps rovnají; **false** , pokud se neshodují.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -138,7 +138,7 @@ int main( )
 }
 ```
 
-**Výstup:**
+**Výkonem**
 
 `um1 == um2: false`
 
@@ -148,7 +148,7 @@ int main( )
 
 ## <a name="op_neq_multimap"></a>! = – operátor
 
-Testuje, zda objekt [unordered_multimap](../standard-library/unordered-multimap-class.md) na levé straně operátoru není roven objektu unordered_multimap na pravé straně.
+Testuje, zda [unordered_multimap](../standard-library/unordered-multimap-class.md) objekt na levé straně operátoru není roven objektu unordered_multimap na pravé straně.
 
 ```cpp
 bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
@@ -156,15 +156,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `unordered_multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `unordered_multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud se unordered_multimaps nerovná; **false** , pokud jsou stejné.
+**true** , pokud unordered_multimaps nejsou stejné; **false** , pokud jsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -203,7 +203,7 @@ int main( )
 }
 ```
 
-**Výstup:**
+**Výkonem**
 
 `um1 != um2: true`
 
@@ -221,15 +221,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
+*levý*\
 Objekt typu `unordered_multimap`.
 
-*Kliknutím*\
+*pravé*\
 Objekt typu `unordered_multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud jsou unordered_multimaps stejné; **false** , pokud se neshodují.
+**true** , pokud se unordered_multimaps rovnají; **false** , pokud se neshodují.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -268,7 +268,7 @@ int main( )
 }
 ```
 
-**Výstup:**
+**Výkonem**
 
 `um1 == um2: false`
 
@@ -276,6 +276,6 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [<unordered_map>](../standard-library/unordered-map.md)
