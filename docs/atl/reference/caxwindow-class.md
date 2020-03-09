@@ -17,11 +17,11 @@ helpviewer_keywords:
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
 ms.openlocfilehash: 6f5c178090a970906209e41da9298be61a61c639
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927860"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864724"
 ---
 # <a name="caxwindow-class"></a>CAxWindow – třída
 
@@ -42,27 +42,27 @@ class CAxWindow : public CWindow
 
 |||
 |-|-|
-|[AttachControl](#attachcontrol)|Připojí k `CAxWindow` objektu existující ovládací prvek ActiveX.|
-|[CAxWindow](#caxwindow)|`CAxWindow` Vytvoří objekt.|
-|[CreateControl](#createcontrol)|Vytvoří ovládací prvek ActiveX, inicializuje ho a hostuje ho v `CAxWindow` okně.|
+|[AttachControl](#attachcontrol)|Připojí existující ovládací prvek ActiveX k objektu `CAxWindow`.|
+|[CAxWindow](#caxwindow)|Vytvoří objekt `CAxWindow`.|
+|[CreateControl](#createcontrol)|Vytvoří ovládací prvek ActiveX, inicializuje ho a hostuje ho v okně `CAxWindow`.|
 |[CreateControlEx](#createcontrolex)|Vytvoří ovládací prvek ActiveX a načte ukazatel rozhraní (nebo ukazatele) z ovládacího prvku.|
-|[GetWndClassName](#getwndclassname)|Tras Načte předdefinovaný název `CAxWindow` třídy objektu.|
-|[QueryControl](#querycontrol)|`IUnknown` Načte hostovaný ovládací prvek ActiveX.|
-|[QueryHost](#queryhost)|`IUnknown` Načte ukazatel`CAxWindow` objektu.|
-|[SetExternalDispatch](#setexternaldispatch)|Nastaví externí odesílající rozhraní používané `CAxWindow` objektem.|
-|[SetExternalUIHandler](#setexternaluihandler)|Nastaví externí `IDocHostUIHandler` rozhraní používané `CAxWindow` objektem.|
+|[GetWndClassName](#getwndclassname)|Tras Načte předdefinovaný název třídy objektu `CAxWindow`.|
+|[QueryControl](#querycontrol)|Načte `IUnknown` hostovaného ovládacího prvku ActiveX.|
+|[QueryHost](#queryhost)|Načte ukazatel `IUnknown` objektu `CAxWindow`.|
+|[SetExternalDispatch](#setexternaldispatch)|Nastaví externí odesílající rozhraní používané objektem `CAxWindow`.|
+|[SetExternalUIHandler](#setexternaluihandler)|Nastaví externí rozhraní `IDocHostUIHandler` používané objektem `CAxWindow`.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[operátor =](#operator_eq)|Přiřadí HWND k existujícímu `CAxWindow` objektu.|
+|[operátor =](#operator_eq)|Přiřadí HWND k existujícímu objektu `CAxWindow`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje metody pro práci s oknem, který je hostitelem ovládacího prvku ActiveX. Hostování poskytuje " **AtlAxWin80"** , který je zabalený pomocí `CAxWindow`.
+Tato třída poskytuje metody pro práci s oknem, který je hostitelem ovládacího prvku ActiveX. Hostování poskytuje " **AtlAxWin80"** , který je zabalen pomocí `CAxWindow`.
 
-Třída `CAxWindow` je implementována jako specializace `CAxWindowT` třídy. Tato specializace je deklarována jako:
+`CAxWindow` třídy je implementována jako specializace `CAxWindowT` třídy. Tato specializace je deklarována jako:
 
 `typedef CAxWindowT<CWindow> CAxWindow;`
 
@@ -85,10 +85,10 @@ HRESULT AttachControl(
 ### <a name="parameters"></a>Parametry
 
 *pControl*<br/>
-pro Ukazatel na `IUnknown` ovládací prvek.
+pro Ukazatel na `IUnknown` ovládacího prvku.
 
 *ppUnkContainer*<br/>
-mimo Ukazatel na `IUnknown` hostitele `AxWin` (objekt).
+mimo Ukazatel na `IUnknown` hostitele (objekt `AxWin`).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -96,11 +96,11 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt ovládacího prvku, který se má připojit, musí být `AttachControl`před voláním správně inicializován.
+Objekt ovládacího prvku, který se má připojit, musí být před voláním `AttachControl`správně inicializován.
 
 ##  <a name="caxwindow"></a>CAxWindow::CAxWindow
 
-`CAxWindow` Vytvoří objekt pomocí existujícího popisovače objektu okna.
+Vytvoří objekt `CAxWindow` pomocí existujícího popisovače objektu okna.
 
 ```
 CAxWindow(HWND hWnd = NULL);
@@ -132,24 +132,24 @@ HRESULT CreateControl(
 *lpszName*<br/>
 Ukazatel na řetězec pro vytvoření ovládacího prvku. Musí být formátován jedním z následujících způsobů:
 
-- Identifikátor ProgID, například`"MSCAL.Calendar.7"`
+- Identifikátor ProgID, například `"MSCAL.Calendar.7"`
 
-- Identifikátor CLSID, jako např.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- Identifikátor CLSID, například `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adresa URL jako`"<https://www.microsoft.com>"`
+- Adresa URL jako `"<https://www.microsoft.com>"`
 
-- Odkaz na aktivní dokument, jako např.`"file://\\\Documents\MyDoc.doc"`
+- Odkaz na aktivní dokument, například `"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kódu HTML, jako např.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- Fragment kódu HTML, například `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML. V platformách Windows Mobile jsou podporovány pouze identifikátory ProgID a CLSID. Systém Windows CE integrované platformy, jiné než Windows Mobile s podporou pro CE IE, podporují všechny typy, včetně ProgID, CLSID, URL, odkazů na aktivní dokument a fragment kódu HTML.
+   > `"MSHTML:"` musí předcházet fragment kódu HTML, aby byl označený jako datový proud MSHTML. V platformách Windows Mobile jsou podporovány pouze identifikátory ProgID a CLSID. Systém Windows CE integrované platformy, jiné než Windows Mobile s podporou pro CE IE, podporují všechny typy, včetně ProgID, CLSID, URL, odkazů na aktivní dokument a fragment kódu HTML.
 
 *pStream*<br/>
 pro Ukazatel na datový proud, který slouží k inicializaci vlastností ovládacího prvku. Může mít hodnotu NULL.
 
 *ppUnkContainer*<br/>
-mimo Adresa ukazatele, který `IUnknown` dostane z kontejneru. Může mít hodnotu NULL.
+mimo Adresa ukazatele, který získá `IUnknown` kontejneru. Může mít hodnotu NULL.
 
 *dwResID*<br/>
 ID prostředku prostředku HTML. Ovládací prvek WebBrowser bude vytvořen a načten se zadaným prostředkem.
@@ -170,9 +170,9 @@ V tématu [CAxWindow2T:: CreateControlLic](../../atl/reference/caxwindow2t-class
 
 ### <a name="example"></a>Příklad
 
-Viz [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pro ukázku, která `CreateControl`používá.
+Ukázku, která používá `CreateControl`, najdete v tématu [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-##  <a name="createcontrolex"></a>  CAxWindow::CreateControlEx
+##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx
 
 Vytvoří, inicializuje a hostuje ovládací prvek ActiveX v zadaném okně.
 
@@ -199,30 +199,30 @@ HRESULT CreateControlEx(
 *lpszName*<br/>
 Ukazatel na řetězec pro vytvoření ovládacího prvku. Musí být formátován jedním z následujících způsobů:
 
-- Identifikátor ProgID, například`"MSCAL.Calendar.7"`
+- Identifikátor ProgID, například `"MSCAL.Calendar.7"`
 
-- Identifikátor CLSID, jako např.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- Identifikátor CLSID, například `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adresa URL jako`"<https://www.microsoft.com>"`
+- Adresa URL jako `"<https://www.microsoft.com>"`
 
-- Odkaz na aktivní dokument, jako např.`"file://\\\Documents\MyDoc.doc"`
+- Odkaz na aktivní dokument, například `"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kódu HTML, jako např.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- Fragment kódu HTML, například `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML. V platformách Windows Mobile jsou podporovány pouze identifikátory ProgID a CLSID. Systém Windows CE integrované platformy, jiné než Windows Mobile s podporou pro CE IE, podporují všechny typy, včetně ProgID, CLSID, URL, odkazů na aktivní dokument a fragment kódu HTML.
+   > `"MSHTML:"` musí předcházet fragment kódu HTML, aby byl označený jako datový proud MSHTML. V platformách Windows Mobile jsou podporovány pouze identifikátory ProgID a CLSID. Systém Windows CE integrované platformy, jiné než Windows Mobile s podporou pro CE IE, podporují všechny typy, včetně ProgID, CLSID, URL, odkazů na aktivní dokument a fragment kódu HTML.
 
 *pStream*<br/>
 pro Ukazatel na datový proud, který slouží k inicializaci vlastností ovládacího prvku. Může mít hodnotu NULL.
 
 *ppUnkContainer*<br/>
-mimo Adresa ukazatele, který `IUnknown` dostane z kontejneru. Může mít hodnotu NULL.
+mimo Adresa ukazatele, který získá `IUnknown` kontejneru. Může mít hodnotu NULL.
 
 *ppUnkControl*<br/>
-mimo Adresa ukazatele, který `IUnknown` získá ovládací prvek. Může mít hodnotu NULL.
+mimo Adresa ukazatele, který dostane `IUnknown` ovládacího prvku. Může mít hodnotu NULL.
 
 *iidSink*<br/>
-pro Identifikátor rozhraní odchozího rozhraní u objektu, který ho obsahuje. Může být IID_NULL.
+pro Identifikátor rozhraní odchozího rozhraní u objektu, který ho obsahuje. Lze IID_NULL.
 
 *punkSink*<br/>
 pro Ukazatel na `IUnknown` rozhraní objektu jímky, který má být připojen k bodu připojení v objektu, který je určen parametrem *iidSink*.
@@ -236,13 +236,13 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je podobná jako [CAxWindow:: CreateControl](#createcontrol), ale na rozdíl od této `CreateControlEx` metody, umožňuje také získat ukazatel rozhraní na nově vytvořený ovládací prvek a nastavit jímku událostí pro příjem událostí vyvolaných ovládacím prvkem.
+Tato metoda je podobná jako [CAxWindow:: CreateControl](#createcontrol), ale na rozdíl od této metody, `CreateControlEx` také umožňuje získat ukazatel rozhraní na nově vytvořený ovládací prvek a nastavit jímku událostí pro příjem událostí, které ovládací prvek vyvolal.
 
 V tématu [CAxWindow2T:: CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex) můžete vytvořit, inicializovat a hostovat licencovaný ovládací prvek ActiveX.
 
 ### <a name="example"></a>Příklad
 
-Viz [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pro ukázku, která `CreateControlEx`používá.
+Ukázku, která používá `CreateControlEx`, najdete v tématu [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
 ##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName
 
@@ -258,7 +258,7 @@ Ukazatel na řetězec obsahující název třídy okna, která může hostovat n
 
 ##  <a name="operator_eq"></a>CAxWindow:: operator =
 
-Přiřadí HWND k existujícímu `CAxWindow` objektu.
+Přiřadí HWND k existujícímu objektu `CAxWindow`.
 
 ```
 CAxWindow<TBase>& operator=(HWND hWnd);
@@ -271,9 +271,9 @@ Popisovač pro existující okno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na aktuální `CAxWindow` objekt.
+Vrátí odkaz na aktuální objekt `CAxWindow`.
 
-##  <a name="querycontrol"></a>  CAxWindow::QueryControl
+##  <a name="querycontrol"></a>CAxWindow::QueryControl
 
 Načte určené rozhraní hostovaného ovládacího prvku.
 
@@ -285,20 +285,20 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*iid*<br/>
+*identifikátor*<br/>
 pro Určuje IID rozhraní ovládacího prvku.
 
 *ppUnk*<br/>
 mimo Ukazatel na rozhraní ovládacího prvku. V šabloně verze této metody není nutné referenční ID, pokud je předáno typové rozhraní s přidruženým identifikátorem UUID.
 
-*Q*<br/>
+*Č*<br/>
 pro Rozhraní, na které se dotazuje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Standardní hodnota HRESULT.
 
-##  <a name="queryhost"></a>  CAxWindow::QueryHost
+##  <a name="queryhost"></a>CAxWindow::QueryHost
 
 Vrátí zadané rozhraní hostitele.
 
@@ -310,13 +310,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*iid*<br/>
+*identifikátor*<br/>
 pro Určuje IID rozhraní ovládacího prvku.
 
 *ppUnk*<br/>
 mimo Ukazatel na rozhraní na hostiteli. V šabloně verze této metody není nutné referenční ID, pokud je předáno typové rozhraní s přidruženým identifikátorem UUID.
 
-*Q*<br/>
+*Č*<br/>
 pro Rozhraní, na které se dotazuje.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -325,11 +325,11 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní hostitele umožňuje přístup k základní funkci kódu hostujícího okno, který implementuje `AxWin`.
+Rozhraní hostitele umožňuje přístup k základní funkci kódu hostujícího okno, implementovaného `AxWin`.
 
 ##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch
 
-Nastaví externí rozhraní pro `CAxWindow` odeslání objektu.
+Nastaví externí odesílající rozhraní pro objekt `CAxWindow`.
 
 ```
 HRESULT SetExternalDispatch(IDispatch* pDisp);
@@ -338,7 +338,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="parameters"></a>Parametry
 
 *pDisp*<br/>
-pro Ukazatel na `IDispatch` rozhraní.
+pro Ukazatel na rozhraní `IDispatch`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -346,7 +346,7 @@ Standardní hodnota HRESULT.
 
 ##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler
 
-Nastaví externí rozhraní [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) pro `CAxWindow` objekt.
+Nastaví externí rozhraní [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) pro objekt `CAxWindow`.
 
 ```
 HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
@@ -355,7 +355,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 ### <a name="parameters"></a>Parametry
 
 *pUIHandler*<br/>
-pro Ukazatel na `IDocHostUIHandlerDispatch` rozhraní.
+pro Ukazatel na rozhraní `IDocHostUIHandlerDispatch`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -363,9 +363,9 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Externí `IDocHostUIHandlerDispatch` rozhraní je používáno ovládacími prvky, které dotazují lokalitu `IDocHostUIHandlerDispatch` hostitele na rozhraní. Ovládací prvek WebBrowser je jeden ovládací prvek, který to dělá.
+Rozhraní External `IDocHostUIHandlerDispatch` je používáno ovládacími prvky, které dotazují lokalitu hostitele na rozhraní `IDocHostUIHandlerDispatch`. Ovládací prvek WebBrowser je jeden ovládací prvek, který to dělá.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ukázka ATLCON](../../overview/visual-cpp-samples.md)<br/>
 [CWindow – třída](../../atl/reference/cwindow-class.md)<br/>
