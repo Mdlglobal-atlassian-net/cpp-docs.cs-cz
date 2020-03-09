@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
 ms.openlocfilehash: aca3970d13db53ffa04fe9582bbe9b8db78e820d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275987"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864850"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic Interface
 
-Toto rozhraní poskytuje metody pro manipulaci s licencovaného ovládacího prvku a jeho objekt hostitele.
+Toto rozhraní poskytuje metody pro manipulaci s licencovaným ovládacím prvkem a jeho hostitelským objektem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,27 +32,27 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 |||
 |-|-|
-|[CreateControlLic](#createcontrollic)|Vytvoří licencovaného ovládacího prvku a připojí ho k objektu hostitele.|
-|[CreateControlLicEx](#createcontrollicex)|Vytvoří licencovaného ovládacího prvku a připojí ho k objektu hostitele volitelně nastaví obslužnou rutinu události.|
+|[CreateControlLic](#createcontrollic)|Vytvoří licencovaný ovládací prvek a připojí ho k objektu hostitele.|
+|[CreateControlLicEx](#createcontrollicex)|Vytvoří licencovaný ovládací prvek, připojí ho k objektu hostitele a volitelně nastaví obslužnou rutinu události.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IAxWinHostWindowLic` dědí z [iaxwinhostwindow –](../../atl/reference/iaxwinhostwindow-interface.md) a přidá metody, které podporují vytváření licencované ovládací prvky.
+`IAxWinHostWindowLic` dědí z [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) a přidává metody, které podporují vytváření licencovaných ovládacích prvků.
 
-Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku, která používá členy tohoto rozhraní.
+Viz [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pro ukázku, která používá členy tohoto rozhraní.
 
 ## <a name="requirements"></a>Požadavky
 
-Definice toto rozhraní není k dispozici jako IDL nebo C++, jak je znázorněno níže.
+Definice tohoto rozhraní je k dispozici jako IDL nebo C++, jak je znázorněno níže.
 
-|Typ definice|Soubor|
+|Typ definice|File|
 |---------------------|----------|
-|IDL|ATLIFace.idl|
-|C++|ATLIFace.h (také součástí ATLBase.h)|
+|JAZYKA|ATLIFace. idl|
+|C++|ATLIFace. h (také zahrnuté v ATLBase. h)|
 
-##  <a name="createcontrollic"></a>  IAxWinHostWindowLic::CreateControlLic
+##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic
 
-Vytvoří licencovaného ovládacího prvku, inicializuje ji a hostuje ji v okně identifikovaný `hWnd`.
+Vytvoří licencovaný ovládací prvek, inicializuje ho a hostuje ho v okně určeném `hWnd`.
 
 ```
 STDMETHOD(CreateControlLic)(
@@ -65,21 +65,21 @@ STDMETHOD(CreateControlLic)(
 ### <a name="parameters"></a>Parametry
 
 *bstrLic*<br/>
-[in] BSTR, který obsahuje licenční klíč pro ovládací prvek.
+pro BSTR, který obsahuje licenční klíč pro ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) popis zbývající parametry a návratové hodnoty.
+Popis zbývajících parametrů a návratové hodnoty naleznete v tématu [IAxWinHostWindow:: CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) .
 
-Voláním této metody je ekvivalentní volání [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)
+Volání této metody je ekvivalentní volání metody [IAxWinHostWindowLic:: CreateControlLicEx](#createcontrollicex)
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku, která používá `IAxWinHostWindowLic::CreateControlLic`.
+Ukázku, která používá `IAxWinHostWindowLic::CreateControlLic`, najdete v tématu [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx
+##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx
 
-Vytvoří licencovaného ovládacího prvku ActiveX, inicializuje ji a hostuje ji v zadaném okně, podobně jako [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).
+Vytvoří licencovaný ovládací prvek ActiveX, inicializuje ho a hostuje v zadaném okně, podobně jako [IAxWinHostWindow:: CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).
 
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -95,12 +95,12 @@ STDMETHOD(CreateControlLicEx)(
 ### <a name="parameters"></a>Parametry
 
 *bstrLic*<br/>
-[in] BSTR, který obsahuje licenční klíč pro ovládací prvek.
+pro BSTR, který obsahuje licenční klíč pro ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) popis zbývající parametry a návratové hodnoty.
+Popis zbývajících parametrů a návratové hodnoty naleznete v tématu [IAxWinHostWindow:: CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) .
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku, která používá `IAxWinHostWindowLic::CreateControlLicEx`.
+Ukázku, která používá `IAxWinHostWindowLic::CreateControlLicEx`, najdete v tématu [hostování ovládacích prvků ActiveX pomocí ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
