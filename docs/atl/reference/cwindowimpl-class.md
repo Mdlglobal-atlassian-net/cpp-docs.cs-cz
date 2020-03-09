@@ -19,11 +19,11 @@ helpviewer_keywords:
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
 ms.openlocfilehash: b8b633dcf4ea14e899ee00552b553476cf697689
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496188"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862961"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl – třída
 
@@ -41,22 +41,22 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Vaše nová třída odvozená z `CWindowImpl`.
 
 *TBase*<br/>
 Základní třída vaší třídy. Ve výchozím nastavení je základní třída [CWindow](../../atl/reference/cwindow-class.md).
 
 *TWinTraits*<br/>
-[Třída vlastností](../../atl/understanding-window-traits.md) , která definuje styly pro vaše okno. Výchozí hodnota je `CControlWinTraits`.
+[Třída vlastností](../../atl/understanding-window-traits.md) , která definuje styly pro vaše okno. Výchozí formát je `CControlWinTraits`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CWindowImpl::Create](#create)|Vytvoří okno.|
+|[CWindowImpl:: Create](#create)|Vytvoří okno.|
 
 ### <a name="cwindowimplbaset-methods"></a>Metody CWindowImplBaseT
 
@@ -84,27 +84,27 @@ Základní třída vaší třídy. Ve výchozím nastavení je základní tříd
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít `CWindowImpl` k vytvoření okna nebo podtřídy v existujícím okně. procedura `CWindowImpl` okna používá mapu zpráv k přímému směrování zpráv do příslušných obslužných rutin.
+Pomocí `CWindowImpl` můžete vytvořit okno nebo podtřídu existující okno. procedura okna `CWindowImpl` používá mapu zpráv k přímému směrování zpráv do příslušných obslužných rutin.
 
-`CWindowImpl::Create`Vytvoří okno na základě informací o třídě okna spravovaném pomocí [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl`obsahuje makro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , což znamená `CWndClassInfo` , že registruje novou třídu okna. Pokud chcete použít třídu existující třídy okna, odvodit třídu z `CWindowImpl` a zahrnout makro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . V tomto případě `CWndClassInfo` registruje třídu okna, která je založena na stávající třídě, ale používá `CWindowImpl::WindowProc`. Příklad:
+`CWindowImpl::Create` vytvoří okno na základě informací o třídě okna spravovaném pomocí [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl` obsahuje makro [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , což znamená, že `CWndClassInfo` zaregistruje novou třídu okna. Chcete-li použít supertřídy existující třídy okna, odvodit třídu z `CWindowImpl` a zahrnout makro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . V tomto případě `CWndClassInfo` zaregistruje třídu okna, která je založena na stávající třídě, ale používá `CWindowImpl::WindowProc`. Příklad:
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]
 
 > [!NOTE]
->  Vzhledem `CWndClassInfo` k tomu, že spravuje informace pouze pro jednu třídu okna, každé okno vytvořené prostřednictvím `CWindowImpl` instance je založeno na stejné třídě okna.
+>  Protože `CWndClassInfo` spravuje informace pouze pro jednu třídu okna, každé okno vytvořené prostřednictvím instance `CWindowImpl` je založeno na stejné třídě okna.
 
-`CWindowImpl`podporuje také roztřídění oken. Metoda připojí existující okno `CWindowImpl` k objektu a změní proceduru okna na `CWindowImpl::WindowProc`. `SubclassWindow` Každá instance `CWindowImpl` třídy může podtřídit jiné okno.
+`CWindowImpl` také podporuje podtříd oken. Metoda `SubclassWindow` připojí existující okno k objektu `CWindowImpl` a změní proceduru okna na `CWindowImpl::WindowProc`. Každá instance `CWindowImpl` může podtřídit jiné okno.
 
 > [!NOTE]
->  Pro libovolný daný `CWindowImpl` objekt volejte buď `Create` nebo `SubclassWindow`. U stejného objektu Nevolejte obě metody.
+>  Pro libovolný daný objekt `CWindowImpl` volejte buď `Create` nebo `SubclassWindow`. U stejného objektu Nevolejte obě metody.
 
-Kromě `CWindowImpl`toho ATL poskytuje [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) k vytvoření okna, které je obsaženo v jiném objektu.
+Kromě `CWindowImpl`ATL poskytuje [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) k vytvoření okna, které je obsaženo v jiném objektu.
 
-Destruktor základní třídy (~ `CWindowImplRoot`) zajišťuje, že okno zmizí před tím, než je objekt zničen.
+Destruktor základní třídy (~ `CWindowImplRoot`) zajistí, že okno zmizí před zničením objektu.
 
-`CWindowImpl`je odvozen z `CWindowImplBaseT`, který je odvozen `CWindowImplRoot`z, který je odvozen z `TBase` a [CMessageMap](../../atl/reference/cmessagemap-class.md).
+`CWindowImpl` je odvozena z `CWindowImplBaseT`, která je odvozena z `CWindowImplRoot`, která je odvozena od `TBase` a [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-|Další informace o|Další informace naleznete v tématu|
+|Další informace o|Seznamte se s|
 |--------------------------------|---------|
 |Vytváření ovládacích prvků|[Kurz ATL](../../atl/active-template-library-atl-tutorial.md)|
 |Použití Windows v ATL|[ATL – třídy oken](../../atl/atl-window-classes.md)|
@@ -147,7 +147,7 @@ HWND Create(
 pro Popisovač nadřazeného nebo vlastníka okna.
 
 *OBD*<br/>
-pro Struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) určující pozici okna. Rozhraní `RECT` může být předáno ukazatelem nebo odkazem.
+pro Struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) určující pozici okna. `RECT` lze předat pomocí ukazatele nebo odkazu.
 
 *szWindowName*<br/>
 pro Určuje název okna. Výchozí hodnota je NULL.
@@ -170,17 +170,17 @@ V případě úspěchu se popisovač nově vytvořeného okna. V opačném pří
 
 ### <a name="remarks"></a>Poznámky
 
-`Create`nejprve zaregistruje třídu okna, pokud ještě nebyla zaregistrována. Nově vytvořené okno je automaticky připojeno k `CWindowImpl` objektu.
+`Create` nejprve zaregistrovat třídu okna, pokud ještě nebyla zaregistrována. Nově vytvořené okno je automaticky připojeno k objektu `CWindowImpl`.
 
 > [!NOTE]
->  Nevolejte `Create` , pokud jste již volali [SubclassWindow](#subclasswindow).
+>  Nevolejte `Create`, pokud jste již volali [SubclassWindow](#subclasswindow).
 
-Chcete-li použít třídu okna, která je založena na existující třídě okna, odvodit třídu `CWindowImpl` z a zahrnout makro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . Procedura okna existující třídy okna je uložena v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Další informace najdete v tématu [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Overview.
+Chcete-li použít třídu okna, která je založena na existující třídě okna, odvodit třídu z `CWindowImpl` a zahrnout makro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . Procedura okna existující třídy okna je uložena v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Další informace najdete v tématu [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Overview.
 
 > [!NOTE]
 >  Pokud se hodnota 0 používá jako hodnota parametru *MenuOrID* , musí být zadána jako 0U (výchozí hodnota), aby se předešlo chybě kompilátoru.
 
-##  <a name="defwindowproc"></a>  CWindowImpl::DefWindowProc
+##  <a name="defwindowproc"></a>CWindowImpl::D efWindowProc
 
 Volá se [WindowProc](#windowproc) ke zpracování zpráv, které nezpracovává mapa zpráv.
 
@@ -210,13 +210,13 @@ Výsledek zpracování zprávy
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `DefWindowProc` volá funkci [CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) Win32 k odeslání informací o zprávě do procedury okna zadané v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+Ve výchozím nastavení `DefWindowProc` volá funkci [CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) Win32 pro odeslání informací o zprávě do procedury okna zadané v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 Funkce bez parametrů automaticky načte potřebné parametry z aktuální zprávy.
 
-##  <a name="getcurrentmessage"></a>  CWindowImpl::GetCurrentMessage
+##  <a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage
 
-Vrátí aktuální zprávu zabalenou ve `MSG` struktuře.
+Vrátí aktuální zprávu zabalenou ve struktuře `MSG`.
 
 ```
 const MSG* GetCurrentMessage();
@@ -228,7 +228,7 @@ Aktuální zpráva
 
 ##  <a name="getwindowproc"></a>CWindowImpl::GetWindowProc
 
-Vrátí `WindowProc`aktuální proceduru okna.
+Vrátí `WindowProc`aktuální procedura okna.
 
 ```
 virtual WNDPROC GetWindowProc();
@@ -256,13 +256,13 @@ Statická instance třídy [CWndClassInfo](../../atl/reference/cwndclassinfo-cla
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `CWindowImpl` získá tuto metodu pomocí makra [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , které určuje novou třídu okna.
+Ve výchozím nastavení `CWindowImpl` získá tuto metodu prostřednictvím makra [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) , které určuje novou třídu okna.
 
-Chcete-li použít supertřídy existující třídy okna, odvodit `CWindowImpl` třídu z a zahrnout makro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) k `GetWndClassInfo`přepsání. Další informace najdete v tématu [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Overview.
+Chcete-li použít supertřídy existující třídy okna, odvodit třídu z `CWindowImpl` a zahrnout makro [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) pro přepsání `GetWndClassInfo`. Další informace najdete v tématu [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Overview.
 
-Kromě použití maker DECLARE_WND_CLASS a DECLARE_WND_SUPERCLASS můžete přepsat `GetWndClassInfo` vlastní implementací.
+Kromě použití makra DECLARE_WND_CLASS a DECLARE_WND_SUPERCLASS můžete přepsat `GetWndClassInfo` s vlastní implementací.
 
-##  <a name="m_pfnsuperwindowproc"></a>  CWindowImpl::m_pfnSuperWindowProc
+##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl:: m_pfnSuperWindowProc
 
 V závislosti na okně odkazuje na jeden z následujících postupů okna.
 
@@ -295,11 +295,11 @@ pro Popisovač pro zničené okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace `OnFinalMessage` neprovede žádnou akci, ale tuto funkci můžete před zničením okna přepsat, aby bylo čištění zpracováno. Pokud chcete automaticky odstranit objekt po zničení okna, můžete zavolat **Odstranit this;** v této funkci.
+Výchozí implementace `OnFinalMessage` nedělá nic, ale tuto funkci můžete před zničením okna přepsat, aby se vyčistila. Pokud chcete automaticky odstranit objekt po zničení okna, můžete zavolat **Odstranit this;** v této funkci.
 
-##  <a name="subclasswindow"></a>  CWindowImpl::SubclassWindow
+##  <a name="subclasswindow"></a>CWindowImpl::SubclassWindow
 
-Roztřídí okno identifikované pomocí *HWND* a připojí ho k `CWindowImpl` objektu.
+Roztřídí okno identifikované pomocí *HWND* a připojí ho k objektu `CWindowImpl`.
 
 ```
 BOOL SubclassWindow(HWND hWnd);
@@ -319,11 +319,11 @@ TRUE, pokud je okno úspěšně podtříd; v opačném případě FALSE.
 Okno podtříd teď používá [CWindowImpl:: WindowProc](#windowproc). Původní procedura okna je uložena v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 > [!NOTE]
->  Nevolejte `SubclassWindow` , pokud jste již volali [Create](#create).
+>  Nevolejte `SubclassWindow`, pokud jste již volali [Create](#create).
 
-##  <a name="unsubclasswindow"></a>  CWindowImpl::UnsubclassWindow
+##  <a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow
 
-Odpojí okno podtřídy od `CWindowImpl` objektu a obnoví původní proceduru okna uloženou v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+Odpojí okno podtřídy od objektu `CWindowImpl` a obnoví původní proceduru okna uloženou v [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 ```
 HWND UnsubclassWindow();
@@ -333,7 +333,7 @@ HWND UnsubclassWindow();
 
 Popisovač pro dříve vytříděné okno.
 
-##  <a name="windowproc"></a>  CWindowImpl::WindowProc
+##  <a name="windowproc"></a>CWindowImpl::WindowProc
 
 Tato statická funkce implementuje proceduru okna.
 
@@ -365,17 +365,17 @@ Výsledek zpracování zprávy
 
 ### <a name="remarks"></a>Poznámky
 
-`WindowProc`používá výchozí mapu zpráv (deklarovaná s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) pro přímé zprávy na příslušné obslužné rutiny. V případě potřeby `WindowProc` zavolá [DefWindowProc](#defwindowproc) pro další zpracování zpráv. Pokud se Závěrečná zpráva nezpracovává, `WindowProc` provede následující akce:
+`WindowProc` používá výchozí mapu zpráv (deklarovaná s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) k přímému směrování zpráv na příslušné obslužné rutiny. V případě potřeby `WindowProc` voláním [DefWindowProc](#defwindowproc) pro další zpracování zpráv. Pokud se Závěrečná zpráva nezpracovává, `WindowProc` provede následující akce:
 
 - Provede unsubclassing, pokud bylo okno unsubclassed.
 
-- `m_hWnd`Vymaže.
+- Zruší `m_hWnd`.
 
 - Volá [OnFinalMessage](#onfinalmessage) před zničením okna.
 
-Můžete přepsat `WindowProc` a poskytnout tak jiný mechanismus pro zpracování zpráv.
+Můžete přepsat `WindowProc` k poskytnutí jiného mechanismu pro zpracování zpráv.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>

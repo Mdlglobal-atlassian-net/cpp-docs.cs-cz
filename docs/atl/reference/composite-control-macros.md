@@ -1,5 +1,5 @@
 ---
-title: Makra složených ovládacích prvků
+title: Složená makra ovládacího prvku
 ms.date: 05/06/2019
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 ms.openlocfilehash: 685bf55910d4746463de30b17b71aa6d246db199
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221101"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857116"
 ---
-# <a name="composite-control-macros"></a>Makra složených ovládacích prvků
+# <a name="composite-control-macros"></a>Složená makra ovládacího prvku
 
-Tato makra definují mapy jímek událostí a položek.
+Tato makra definují mapy a položky jímky událostí.
 
 |||
 |-|-|
-|[BEGIN_SINK_MAP](#begin_sink_map)|Označuje začátek toho, na mapě událostí jímky složeného ovládacího prvku.|
-|[END_SINK_MAP](#end_sink_map)|Označuje konec toho, na mapě událostí jímky složeného ovládacího prvku.|
-|[SINK_ENTRY](#sink_entry)|Položka k mapě událostí jímky.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Položka mapy jímky událostí s dalším parametrem.|
-|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Podobně jako SINK_ENTRY_EX s tím rozdílem, že bere ukazatel na iid.|
-|[SINK_ENTRY_INFO](#sink_entry_info)|Položka mapy jímky událostí s informacemi o ručně zadaný typ pro použití s [idispeventsimpleimpl –](../../atl/reference/idispeventsimpleimpl-class.md).|
-|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Podobně jako SINK_ENTRY_INFO s tím rozdílem, že bere ukazatel na iid.|
+|[BEGIN_SINK_MAP](#begin_sink_map)|Označuje začátek mapy jímky událostí složeného ovládacího prvku.|
+|[END_SINK_MAP](#end_sink_map)|Označuje konec mapy jímky událostí pro složený ovládací prvek.|
+|[SINK_ENTRY](#sink_entry)|Záznam do mapy jímky událostí.|
+|[SINK_ENTRY_EX](#sink_entry_ex)|Záznam do mapy jímky událostí s dalším parametrem.|
+|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Podobně jako u SINK_ENTRY_EX s tím rozdílem, že přebírá ukazatel na identifikátor IID.|
+|[SINK_ENTRY_INFO](#sink_entry_info)|Záznam do mapy jímky událostí s ručně dodanými informacemi o typu pro použití s [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
+|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Podobně jako u SINK_ENTRY_INFO s tím rozdílem, že přebírá ukazatel na identifikátor IID.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP
 
-Deklaruje začátku na mapě událostí jímky složeného ovládacího prvku.
+Deklaruje začátek mapy jímky událostí pro složený ovládací prvek.
 
 ```
 BEGIN_SINK_MAP(_class)
@@ -44,7 +44,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="parameters"></a>Parametry
 
 *_class*<br/>
-[in] Určuje ovládací prvek.
+pro Určuje ovládací prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -52,11 +52,11 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="remarks"></a>Poznámky
 
-Provádění CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a její chování není definováno.
+Implementace CE ATL jímka událostí ActiveX podporuje pouze návratové hodnoty typu HRESULT nebo void z metod obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a chování není definováno.
 
-##  <a name="end_sink_map"></a>  END_SINK_MAP
+##  <a name="end_sink_map"></a>END_SINK_MAP
 
-Deklaruje koncové na mapě událostí jímky složeného ovládacího prvku.
+Deklaruje konec mapy jímky událostí pro složený ovládací prvek.
 
 ```
 END_SINK_MAP()
@@ -68,11 +68,11 @@ END_SINK_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Provádění CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a její chování není definováno.
+Implementace CE ATL jímka událostí ActiveX podporuje pouze návratové hodnoty typu HRESULT nebo void z metod obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a chování není definováno.
 
-##  <a name="sink_entry"></a>  SINK_ENTRY
+##  <a name="sink_entry"></a>SINK_ENTRY
 
-Deklaruje funkci obslužné rutiny (*fn*) pro zadanou událost (*dispid*), ovládacího prvku identifikovaný *id*.
+Deklaruje funkci obslužné rutiny (*FN*) pro zadanou událost (*DISPID*) ovládacího prvku identifikovaného *ID*.
 
 ```
 SINK_ENTRY( id, dispid, fn )
@@ -81,13 +81,13 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-[in] Určuje ovládací prvek.
+pro Identifikuje ovládací prvek.
 
-*dispid*<br/>
-[in] Identifikuje zadané události.
+*DISPID*<br/>
+pro Identifikuje zadanou událost.
 
-*fn*<br/>
-[in] Název funkce obslužné rutiny události. Musíte použít tuto funkci `_stdcall` konvence volání a mít podpis stylům dispinterface.
+*VistaScan*<br/>
+pro Název funkce obslužné rutiny události Tato funkce musí používat konvenci volání `_stdcall` a musí mít příslušný podpis ve stylu odesílajícího.
 
 ### <a name="example"></a>Příklad
 
@@ -95,11 +95,11 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="remarks"></a>Poznámky
 
-Provádění CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a její chování není definováno.
+Implementace CE ATL jímka událostí ActiveX podporuje pouze návratové hodnoty typu HRESULT nebo void z metod obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a chování není definováno.
 
-##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX a SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX a SINK_ENTRY_EX_P
 
-Deklaruje funkci obslužné rutiny (*fn*) pro zadanou událost (*dispid*), rozhraní odbavení (*iid*), ovládacího prvku identifikovaný *id*.
+Deklaruje funkci obslužné rutiny (*FN*) pro zadanou událost (*DISPID*) z rozhraní Dispatch (*IID*) pro ovládací prvek identifikovaný *identifikátorem*.
 
 ```
 SINK_ENTRY_EX( id, iid, dispid, fn )
@@ -109,19 +109,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-[in] Určuje ovládací prvek.
+pro Identifikuje ovládací prvek.
 
-*iid*<br/>
-[in] Určuje rozhraní odbavení.
+*identifikátor*<br/>
+pro Identifikuje rozhraní dispatch.
 
 *piid*<br/>
-[in] Ukazatel na rozhraní odbavení.
+pro Ukazatel na rozhraní dispatching.
 
-*dispid*<br/>
-[in] Identifikuje zadané události.
+*DISPID*<br/>
+pro Identifikuje zadanou událost.
 
-*fn*<br/>
-[in] Název funkce obslužné rutiny události. Musíte použít tuto funkci `_stdcall` konvence volání a mít podpis stylům dispinterface.
+*VistaScan*<br/>
+pro Název funkce obslužné rutiny události Tato funkce musí používat konvenci volání `_stdcall` a musí mít příslušný podpis ve stylu odesílajícího.
 
 ### <a name="example"></a>Příklad
 
@@ -129,11 +129,11 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="remarks"></a>Poznámky
 
-Provádění CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a její chování není definováno.
+Implementace CE ATL jímka událostí ActiveX podporuje pouze návratové hodnoty typu HRESULT nebo void z metod obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a chování není definováno.
 
-##  <a name="sink_entry_info"></a>  SINK_ENTRY_INFO a SINK_ENTRY_INFO_P
+##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO a SINK_ENTRY_INFO_P
 
-Použijte makro SINK_ENTRY_INFO v rámci mapu jímky událostí k poskytování informací potřebných [idispeventsimpleimpl –](../../atl/reference/idispeventsimpleimpl-class.md) pro směrování událostí na relevantní obslužné rutiny.
+Pomocí makra SINK_ENTRY_INFO v rámci mapy jímky událostí poskytněte informace, které [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) potřebuje ke směrování událostí do příslušné funkce obslužné rutiny.
 
 ```
 SINK_ENTRY_INFO( id, iid, dispid, fn, info )
@@ -143,28 +143,28 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-[in] Celé číslo bez znaménka určující zdroj události. Tato hodnota musí odpovídat *nID* šablony parametr použitý v souvisejících článcích [idispeventsimpleimpl –](../../atl/reference/idispeventsimpleimpl-class.md) základní třídy.
+pro Celé číslo bez znaménka identifikující zdroj události. Tato hodnota se musí shodovat s parametrem šablony *NID* použitým v související základní třídě [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) .
 
-*iid*<br/>
-[in] Identifikátor IID, který identifikuje rozhraní odbavení.
+*identifikátor*<br/>
+pro IID, který identifikuje rozhraní dispatch.
 
 *piid*<br/>
-[in] Ukazatel na IID, který identifikuje rozhraní odbavení.
+pro Ukazatel na identifikátor IID, který identifikuje rozhraní dispatch.
 
-*dispid*<br/>
-[in] Identifikátor DISPID identifikace zadané události.
+*DISPID*<br/>
+pro Identifikátor DISPID identifikující zadanou událost
 
-*fn*<br/>
-[in] Název funkce obslužné rutiny události. Musíte použít tuto funkci `_stdcall` konvence volání a mít podpis stylům dispinterface.
+*VistaScan*<br/>
+pro Název funkce obslužné rutiny události Tato funkce musí používat konvenci volání `_stdcall` a musí mít příslušný podpis ve stylu odesílajícího.
 
-*info*<br/>
-[in] Zadejte informace pro funkce obslužné rutiny události. Informace o tomto typu je k dispozici ve formě ukazatel na `_ATL_FUNC_INFO` struktury. CC_CDECL je jedinou možností, které jsou podporované ve Windows CE pro DEFINICI pole `_ATL_FUNC_INFO` struktury. Jakákoli jiná hodnota není podporován tedy nedefinované chování.
+*příjemce*<br/>
+pro Informace o typu pro funkci obslužné rutiny událostí. Tyto informace o typu jsou k dispozici ve formě ukazatele na strukturu `_ATL_FUNC_INFO`. CC_CDECL je jediná možnost podporovaná v systém Windows CE pro pole definice struktury `_ATL_FUNC_INFO`. Jakákoli jiná hodnota je Nepodporovaná, takže její chování není definované.
 
 ### <a name="remarks"></a>Poznámky
 
-První čtyři – makro parametry jsou stejné jako u [SINK_ENTRY_EX](#sink_entry_ex) – makro. Poslední parametr poskytuje informace o typu události. Provádění CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a její chování není definováno.
+První čtyři parametry makra jsou stejné jako u [SINK_ENTRY_EXho](#sink_entry_ex) makra. Konečný parametr poskytuje informace o typu události. Implementace CE ATL jímka událostí ActiveX podporuje pouze návratové hodnoty typu HRESULT nebo void z metod obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a chování není definováno.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Makra](../../atl/reference/atl-macros.md)<br/>
+[Makr](../../atl/reference/atl-macros.md)<br/>
 [Globální funkce složených ovládacích prvků](../../atl/reference/composite-control-global-functions.md)
