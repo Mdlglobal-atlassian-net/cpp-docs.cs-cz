@@ -27,15 +27,15 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907828"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883616"
 ---
 # <a name="ccmdui-class"></a>CCmdUI – – třída
 
-Se používá pouze v rámci `ON_UPDATE_COMMAND_UI` obslužné rutiny `CCmdTarget`v odvozené třídě.
+Se používá pouze v rámci obslužné rutiny `ON_UPDATE_COMMAND_UI` v třídě odvozené `CCmdTarget`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,43 +47,43 @@ class CCmdUI
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CCmdUI::ContinueRouting](#continuerouting)|Oznamuje mechanismu směrování příkazů, aby pokračoval v směrování aktuální zprávy o řetězu obslužných rutin.|
+|[CCmdUI –:: ContinueRouting](#continuerouting)|Oznamuje mechanismu směrování příkazů, aby pokračoval v směrování aktuální zprávy o řetězu obslužných rutin.|
 |[CCmdUI –:: Enable](#enable)|Povoluje nebo zakazuje položku uživatelského rozhraní pro tento příkaz.|
 |[CCmdUI –:: SetCheck](#setcheck)|Nastaví stav kontroly položky uživatelského rozhraní pro tento příkaz.|
-|[CCmdUI::SetRadio](#setradio)|Podobně jako `SetCheck` členské funkce, ale funguje ve skupinách přepínačů.|
-|[CCmdUI::SetText](#settext)|Nastaví text pro položku uživatelského rozhraní pro tento příkaz.|
+|[CCmdUI –:: SetRadio](#setradio)|Podobně jako členská funkce `SetCheck`, ale funguje ve skupinách přepínačů.|
+|[CCmdUI –:: SetText](#settext)|Nastaví text pro položku uživatelského rozhraní pro tento příkaz.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CCmdUI::m_nID](#m_nid)|ID objektu uživatelského rozhraní.|
-|[CCmdUI::m_nIndex](#m_nindex)|Index objektu uživatelského rozhraní.|
-|[CCmdUI::m_pMenu](#m_pmenu)|Odkazuje na nabídku reprezentovanou `CCmdUI` objektem.|
-|[CCmdUI::m_pOther](#m_pother)|Odkazuje na objekt Window, který odeslal oznámení.|
-|[CCmdUI::m_pSubMenu](#m_psubmenu)|Odkazuje na obsaženou podnabídku reprezentovanou `CCmdUI` objektem.|
+|[CCmdUI –:: m_nID](#m_nid)|ID objektu uživatelského rozhraní.|
+|[CCmdUI –:: m_nIndex](#m_nindex)|Index objektu uživatelského rozhraní.|
+|[CCmdUI –:: m_pMenu](#m_pmenu)|Odkazuje na nabídku reprezentovanou objektem `CCmdUI`.|
+|[CCmdUI –:: m_pOther](#m_pother)|Odkazuje na objekt Window, který odeslal oznámení.|
+|[CCmdUI –:: m_pSubMenu](#m_psubmenu)|Odkazuje na obsaženou podnabídku reprezentovanou objektem `CCmdUI`.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CCmdUI`nemá základní třídu.
+`CCmdUI` nemá základní třídu.
 
 Když uživatel vaší aplikace vyžádá nabídku dolů, musí každá položka nabídky obsahovat informace o tom, jestli má být zobrazená jako povolená nebo zakázaná. Cíl příkazu nabídky poskytuje tyto informace implementací obslužné rutiny ON_UPDATE_COMMAND_UI. Pro každý příkaz pro objekty uživatelského rozhraní v aplikaci použijte [Průvodce třídou](mfc-class-wizard.md) nebo okno **vlastností** (v **zobrazení tříd**) k vytvoření položky mapování zpráv a prototypu funkce pro každou obslužnou rutinu.
 
-Když je nabídka vyvolána, rozhraní vyhledá a zavolá každou obslužnou rutinu ON_UPDATE_COMMAND_UI, každá `CCmdUI` obslužná rutina volá `Enable` členské `Check`funkce, jako jsou a a rozhraní a následně zobrazí každou položku nabídky.
+Když je nabídka vyvolána, rozhraní vyhledá a zavolá jednotlivé obslužné rutiny ON_UPDATE_COMMAND_UI, každá obslužná rutina volá `CCmdUI` členské funkce, jako je například `Enable` a `Check`, a rozhraní poté odpovídajícím způsobem zobrazí každou položku nabídky.
 
-Položka nabídky může být nahrazena tlačítkem ovládacího panelu nebo jiným objektem uživatelského rozhraní příkazu bez změny kódu v `ON_UPDATE_COMMAND_UI` obslužné rutině.
+Položka nabídky může být nahrazena tlačítkem ovládacího panelu nebo jiným objektem uživatelského rozhraní příkazu, aniž by bylo nutné změnit kód v obslužné rutině `ON_UPDATE_COMMAND_UI`.
 
-Následující tabulka shrnuje členské funkce efektu `CCmdUI`v různých příkazech uživatelského rozhraní.
+Následující tabulka shrnuje členské funkce `CCmdUI`efektu v různých příkazech uživatelského rozhraní.
 
-|Položka uživatelského rozhraní|Povolit|SetCheck|SetRadio|SetText|
+|Položka uživatelského rozhraní|Povolení|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
 |Položka nabídky|Povoluje nebo zakazuje|Zkontroluje nebo vrátí.|Kontroluje použití tečky.|Nastaví text položky|
-|Tlačítko panelu nástrojů|Povoluje nebo zakazuje|Vybere, nevybere nebo neurčité|Stejné jako`SetCheck`|(Nelze použít)|
-|Podokno stavového řádku|Změní text na viditelný nebo neviditelný.|Nastaví automaticky otevírané okno nebo normální ohraničení.|Stejné jako`SetCheck`|Nastaví text podokna.|
-|Tlačítko normální v`CDialogBar`|Povoluje nebo zakazuje|Zaškrtávací políčko nebo zrušení kontroly|Stejné jako`SetCheck`|Nastaví text tlačítka.|
-|Normální řízení v`CDialogBar`|Povoluje nebo zakazuje|(Nelze použít)|(Nelze použít)|Nastaví text okna.|
+|Tlačítko panelu nástrojů|Povoluje nebo zakazuje|Vybere, nevybere nebo neurčité|Stejné jako `SetCheck`|(Nelze použít)|
+|Podokno stavového řádku|Změní text na viditelný nebo neviditelný.|Nastaví automaticky otevírané okno nebo normální ohraničení.|Stejné jako `SetCheck`|Nastaví text podokna.|
+|Tlačítko normální v `CDialogBar`|Povoluje nebo zakazuje|Zaškrtávací políčko nebo zrušení kontroly|Stejné jako `SetCheck`|Nastaví text tlačítka.|
+|Normální řízení v `CDialogBar`|Povoluje nebo zakazuje|(Nelze použít)|(Nelze použít)|Nastaví text okna.|
 
 Další informace o použití této třídy naleznete v tématu [jak aktualizovat objekty uživatelského rozhraní](../../mfc/how-to-update-user-interface-objects.md).
 
@@ -128,7 +128,7 @@ TRUE pro povolení položky, FALSE pro její zakázání
 
 ##  <a name="m_nid"></a>CCmdUI –:: m_nID
 
-ID položky nabídky, tlačítka panelu nástrojů nebo jiného objektu uživatelského rozhraní reprezentovaného `CCmdUI` objektem.
+ID položky nabídky, tlačítka panelu nástrojů nebo jiného objektu uživatelského rozhraní reprezentovaného objektem `CCmdUI`.
 
 ```
 UINT m_nID;
@@ -136,7 +136,7 @@ UINT m_nID;
 
 ##  <a name="m_nindex"></a>CCmdUI –:: m_nIndex
 
-Index položky nabídky, tlačítka panelu nástrojů nebo jiného objektu uživatelského rozhraní reprezentovaného `CCmdUI` objektem.
+Index položky nabídky, tlačítka panelu nástrojů nebo jiného objektu uživatelského rozhraní reprezentovaného objektem `CCmdUI`.
 
 ```
 UINT m_nIndex;
@@ -144,7 +144,7 @@ UINT m_nIndex;
 
 ##  <a name="m_pmenu"></a>CCmdUI –:: m_pMenu
 
-Ukazatel ( `CMenu` typu) do nabídky reprezentované `CCmdUI` objektem.
+Ukazatel (of `CMenu` Type) do nabídky reprezentované objektem `CCmdUI`.
 
 ```
 CMenu* m_pMenu;
@@ -156,7 +156,7 @@ Hodnota NULL, pokud položka není nabídka.
 
 ##  <a name="m_psubmenu"></a>CCmdUI –:: m_pSubMenu
 
-Ukazatel ( `CMenu` typu) na obsaženou podnabídku reprezentovanou `CCmdUI` objektem.
+Ukazatel (of `CMenu` Type) do obsažené podnabídky reprezentované objektem `CCmdUI`.
 
 ```
 CMenu* m_pSubMenu;
@@ -176,7 +176,7 @@ CWnd* m_pOther;
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota null, pokud je položka nabídka nebo `CWnd` objekt, který není objektem.
+Hodnota NULL, pokud je položka nabídka nebo objekt, který není `CWnd`.
 
 ##  <a name="setcheck"></a>CCmdUI –:: SetCheck
 
@@ -210,7 +210,7 @@ TRUE pro povolení položky; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce funguje `SetCheck`jako, s tím rozdílem, že funguje na položkách uživatelského rozhraní, které fungují jako součást skupiny přepínačů. Zrušení kontroly ostatních položek ve skupině není automatické, pokud tyto položky neudržují chování skupiny rádi.
+Tato členská funkce funguje jako `SetCheck`, s tím rozdílem, že funguje na položkách uživatelského rozhraní, které fungují jako součást skupiny přepínačů. Zrušení kontroly ostatních položek ve skupině není automatické, pokud tyto položky neudržují chování skupiny rádi.
 
 ##  <a name="settext"></a>CCmdUI –:: SetText
 
@@ -229,7 +229,7 @@ Ukazatel na textový řetězec.
 
 [!code-cpp[NVC_MFCDocView#48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ukázka MDI MFC](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

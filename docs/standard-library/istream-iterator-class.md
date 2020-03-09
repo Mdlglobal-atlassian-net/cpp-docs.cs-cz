@@ -13,15 +13,15 @@ helpviewer_keywords:
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447759"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78869887"
 ---
-# <a name="istreamiterator-class"></a>istream_iterator – třída
+# <a name="istream_iterator-class"></a>istream_iterator – třída
 
-Popisuje objekt vstupního iterátoru. `Type` Extrahuje objekty třídy ze vstupního datového proudu, ke kterému přistupuje prostřednictvím objektu, který ukládá, typu `CharType` `basic_istream` `pointer` do <  `Traits`>.
+Popisuje objekt vstupního iterátoru. Extrahuje objekty třídy `Type` ze vstupního datového proudu, ke kterému přistupuje prostřednictvím objektu, který ukládá, typu `pointer` na `basic_istream`< `CharType``Traits`>.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,51 +36,51 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*Textový*\
+*Zadejte*\
 Typ objektu, který má být extrahován ze vstupního datového proudu.
 
 *CharType*\
 Typ, který představuje typ znaku pro `istream_iterator`. Tento argument je nepovinný a výchozí hodnota je **char**.
 
-*Traits*\
-Typ, který představuje typ znaku pro `istream_iterator`. Tento argument je nepovinný a výchozí hodnota `char_traits`je <  `CharType`>.
+\ *vlastností*
+Typ, který představuje typ znaku pro `istream_iterator`. Tento argument je nepovinný a výchozí hodnota je `char_traits`< `CharType`>.
 
-*Délku*\
-Typ signed integrálního typu, který představuje typ rozdílu pro `istream_iterator`. Tento argument je nepovinný a výchozí hodnota `ptrdiff_t`je.
+\ *vzdálenosti*
+Podepsaný integrální typ, který představuje typ rozdílu pro `istream_iterator`. Tento argument je nepovinný a výchozí hodnota je `ptrdiff_t`.
 
-Po sestavení nebo zvýšení objektu třídy istream_iterator pomocí uloženého ukazatele bez hodnoty null se objekt pokusí extrahovat a uložit objekt typu `Type` z přidruženého vstupního datového proudu. Pokud se extrakce nezdaří, objekt nahradí uložený ukazatel ukazatelem s hodnotou null a vytvoří tak indikátor ukončení sekvence.
+Po sestavení nebo zvýšení objektu třídy istream_iterator s nenulovým uloženým ukazatelem se objekt pokusí extrahovat a uložit objekt typu `Type` z přidruženého vstupního datového proudu. Pokud se extrakce nezdaří, objekt nahradí uložený ukazatel ukazatelem s hodnotou null a vytvoří tak indikátor ukončení sekvence.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[istream_iterator](#istream_iterator)|Sestaví iterátory koncového datového proudu jako výchozí `istream_iterator` `istream_iterator` nebo inicializovaný typ streamu iterátoru, ze kterého čte.|
+|[istream_iterator](#istream_iterator)|Vytvoří buď iterátor koncového datového proudu jako výchozí `istream_iterator` nebo `istream_iterator` inicializovaný jako typ datového proudu iterátoru, ze kterého čte.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[char_type](#char_type)|Typ, který poskytuje typ `istream_iterator`znaku pro.|
-|[istream_type](#istream_type)|Typ, který poskytuje typ `istream_iterator`datového proudu.|
-|[traits_type](#traits_type)|Typ, který poskytuje znaky typu `istream_iterator`pro.|
+|[char_type](#char_type)|Typ, který poskytuje typ znaku `istream_iterator`.|
+|[istream_type](#istream_type)|Typ, který poskytuje typ datového proudu `istream_iterator`.|
+|[traits_type](#traits_type)|Typ, který poskytuje typ znakových vlastností `istream_iterator`.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[podnikatel](#op_star)|Operátor přesměrování vrátí uložený objekt typu `Type` adresovaný. `istream_iterator`|
+|[podnikatel](#op_star)|Operátor přesměrování vrací uložený objekt typu `Type` adresovaná `istream_iterator`.|
 |[operátor->](#op_arrow)|Vrátí hodnotu členu, pokud existuje.|
 |[operator + + – operátor](#op_add_add)|Buď zkopíruje zvýšený objekt ze vstupního datového proudu, nebo zkopíruje objekt před jeho zvýšením a vrátí kopii.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<iterátor >
+**Záhlaví:** \<iterátor >
 
 **Obor názvů:** std
 
-## <a name="char_type"></a>istream_iterator::char_type
+## <a name="char_type"></a>istream_iterator:: char_type
 
-Typ, který poskytuje typ `istream_iterator`znaku pro.
+Typ, který poskytuje typ znaku `istream_iterator`.
 
 ```cpp
 typedef CharType char_type;
@@ -88,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr `Chartype`šablony.
+Typ je synonymum pro parametr šablony `Chartype`.
 
 ### <a name="example"></a>Příklad
 
@@ -126,9 +126,9 @@ int main( )
 }
 ```
 
-## <a name="istream_iterator"></a>istream_iterator::istream_iterator
+## <a name="istream_iterator"></a>istream_iterator:: istream_iterator
 
-Sestaví iterátory koncového datového proudu jako výchozí `istream_iterator` `istream_iterator` nebo inicializovaný typ streamu iterátoru, ze kterého čte.
+Vytvoří buď iterátor koncového datového proudu jako výchozí `istream_iterator` nebo `istream_iterator` inicializovaný jako typ datového proudu iterátoru, ze kterého čte.
 
 ```cpp
 istream_iterator();
@@ -145,7 +145,7 @@ Vstupní datový proud, který má být použit pro inicializaci `istream_iterat
 
 První konstruktor inicializuje ukazatel vstupního datového proudu s ukazatelem s hodnotou null a vytvoří iterátor konec datového proudu. Druhý konstruktor inicializuje ukazatel vstupního datového proudu pomocí *& _Istr*a potom se pokusí extrahovat a uložit objekt typu `Type`.
 
-Iterátor konce datového proudu lze použít k otestování, zda `istream_iterator` byl dosažen konec datového proudu.
+Iterátor konce datového proudu lze použít k otestování, zda `istream_iterator` dosáhla konce datového proudu.
 
 ### <a name="example"></a>Příklad
 
@@ -181,9 +181,9 @@ int main( )
 }
 ```
 
-## <a name="istream_type"></a>istream_iterator::istream_type
+## <a name="istream_type"></a>istream_iterator:: istream_type
 
-Typ, který poskytuje typ `istream_iterator`datového proudu.
+Typ, který poskytuje typ datového proudu `istream_iterator`.
 
 ```cpp
 typedef basic_istream<CharType, Traits> istream_type;
@@ -191,15 +191,15 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum `basic_istream` pro \< **CharType**, **vlastnosti**>.
+Typ je synonymum pro `basic_istream`\< **CharType**, **vlastnosti**>.
 
 ### <a name="example"></a>Příklad
 
-Příklad [](#istream_iterator) , jak deklarovat a používat `istream_type`, naleznete v tématu istream_iterator.
+Příklad, jak deklarovat a používat `istream_type`, naleznete v tématu [istream_iterator](#istream_iterator) .
 
-## <a name="op_star"></a>istream_iterator:: operator * – operátor
+## <a name="op_star"></a>istream_iterator:: operator *
 
-Operátor přesměrování vrátí uložený objekt typu `Type` adresovaný. `istream_iterator`
+Operátor přesměrování vrací uložený objekt typu `Type` adresovaná `istream_iterator`.
 
 ```cpp
 const Type& operator*() const;
@@ -255,9 +255,9 @@ Hodnota člena, pokud existuje.
 
 ### <a name="remarks"></a>Poznámky
 
-`i->m`je ekvivalentem`(*i).m`
+`i->m` je ekvivalentem `(*i).m`
 
-Operátor vrátí `&*this`.
+Operátor vrací `&*this`.
 
 ### <a name="example"></a>Příklad
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor členu vrátí odkaz na přírůstek objektu typu `Type` extrahovaný ze vstupního datového proudu a druhá členská funkce vrátí kopii objektu.
+První operátor členu vrátí odkaz na přírůstek objektu typu `Type` extrahován ze vstupního datového proudu a druhá členská funkce vrátí kopii objektu.
 
 ### <a name="example"></a>Příklad
 
@@ -337,9 +337,9 @@ int main( )
 }
 ```
 
-## <a name="traits_type"></a>istream_iterator::traits_type
+## <a name="traits_type"></a>istream_iterator:: traits_type
 
-Typ, který poskytuje znaky typu `istream_iterator`pro.
+Typ, který poskytuje typ znakových vlastností `istream_iterator`.
 
 ```cpp
 typedef Traits traits_type;
@@ -384,10 +384,10 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[input_iterator_tag – struktura](../standard-library/input-iterator-tag-struct.md)\
-[Struktura iterátoru](../standard-library/iterator-struct.md)\
-[\<iterátor >](../standard-library/iterator.md)\
+[Input_iterator_tag struktura](../standard-library/input-iterator-tag-struct.md)\
+\ [struktury iterátoru](../standard-library/iterator-struct.md)
+[> iterátoru\<](../standard-library/iterator.md)\
 [Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
