@@ -75,11 +75,11 @@ helpviewer_keywords:
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741348"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884102"
 ---
 # <a name="coleserveritem-class"></a>Odvozenou třídu COleServerItem – třída
 
@@ -95,67 +95,67 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[COleServerItem::COleServerItem](#coleserveritem)|`COleServerItem` Vytvoří objekt.|
+|[Odvozenou třídu COleServerItem:: odvozenou třídu COleServerItem](#coleserveritem)|Vytvoří objekt `COleServerItem`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Umístí prezentační a převodní formáty do `COleDataSource` objektu.|
-|[COleServerItem::CopyToClipboard](#copytoclipboard)|Zkopíruje položku do schránky.|
-|[COleServerItem::DoDragDrop](#dodragdrop)|Provede operaci přetažení.|
-|[COleServerItem::GetClipboardData](#getclipboarddata)|Získá zdroj dat pro použití při přenosu dat (přetahování nebo schránku).|
-|[COleServerItem::GetDocument](#getdocument)|Vrátí dokument serveru, který obsahuje položku.|
-|[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|Načte data CF_EMBEDSOURCE pro položku OLE.|
-|[COleServerItem::GetItemName](#getitemname)|Vrátí název položky. Používá se pouze pro propojené položky.|
-|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|Načte data CF_LINKSOURCE pro položku OLE.|
-|[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|Načte data CF_OBJECTDESCRIPTOR pro položku OLE.|
-|[COleServerItem::IsConnected](#isconnected)|Označuje, zda je položka aktuálně připojena k aktivnímu kontejneru.|
-|[COleServerItem::IsLinkedItem](#islinkeditem)|Označuje, zda položka představuje propojenou položku OLE.|
-|[COleServerItem::NotifyChanged](#notifychanged)|Aktualizuje všechny kontejnery pomocí automatické aktualizace propojení.|
-|[COleServerItem::OnDoVerb](#ondoverb)|Volá se, aby se spustil příkaz.|
+|[Odvozenou třídu COleServerItem:: AddOtherClipboardData](#addotherclipboarddata)|Umístí prezentační a převodní formáty do objektu `COleDataSource`.|
+|[Odvozenou třídu COleServerItem:: CopyToClipboard](#copytoclipboard)|Zkopíruje položku do schránky.|
+|[Odvozenou třídu COleServerItem::D oDragDrop](#dodragdrop)|Provede operaci přetažení.|
+|[Odvozenou třídu COleServerItem:: GetClipboardData](#getclipboarddata)|Získá zdroj dat pro použití při přenosu dat (přetahování nebo schránku).|
+|[Odvozenou třídu COleServerItem:: GetDocument](#getdocument)|Vrátí dokument serveru, který obsahuje položku.|
+|[Odvozenou třídu COleServerItem:: GetEmbedSourceData](#getembedsourcedata)|Získá CF_EMBEDSOURCE data pro položku OLE.|
+|[Odvozenou třídu COleServerItem:: GetItem](#getitemname)|Vrátí název položky. Používá se pouze pro propojené položky.|
+|[Odvozenou třídu COleServerItem:: GetLinkSourceData](#getlinksourcedata)|Získá CF_LINKSOURCE data pro položku OLE.|
+|[Odvozenou třídu COleServerItem:: GetObjectDescriptorData](#getobjectdescriptordata)|Získá CF_OBJECTDESCRIPTOR data pro položku OLE.|
+|[Odvozenou třídu COleServerItem::-Connected](#isconnected)|Označuje, zda je položka aktuálně připojena k aktivnímu kontejneru.|
+|[Odvozenou třídu COleServerItem:: IsLinkedItem](#islinkeditem)|Označuje, zda položka představuje propojenou položku OLE.|
+|[Odvozenou třídu COleServerItem:: NotifyChanged](#notifychanged)|Aktualizuje všechny kontejnery pomocí automatické aktualizace propojení.|
+|[Odvozenou třídu COleServerItem:: OnDoVerb](#ondoverb)|Volá se, aby se spustil příkaz.|
 |[Odvozenou třídu COleServerItem:: Draw](#ondraw)|Volá se, když kontejner vyžádá vykreslení položky; vyžaduje se implementace.|
 |[Odvozenou třídu COleServerItem:: OnDrawEx](#ondrawex)|Volá se pro vykreslení specializované položky.|
-|[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|Volá se rozhraním, aby se získala data, která se zkopírují do schránky.|
-|[COleServerItem::OnGetExtent](#ongetextent)|Volá se rozhraním, aby se načetla velikost položky OLE.|
-|[COleServerItem::OnInitFromData](#oninitfromdata)|Volá se rozhraním, aby se inicializoval položka OLE pomocí obsahu zadaného objektu pro přenos dat.|
-|[COleServerItem::OnQueryUpdateItems](#onqueryupdateitems)|Volá se, aby se zjistilo, jestli nějaké propojené položky vyžadují aktualizaci.|
-|[COleServerItem::OnRenderData](#onrenderdata)|Načte data jako součást zpožděného vykreslování.|
-|[COleServerItem::OnRenderFileData](#onrenderfiledata)|Načte data do `CFile` objektu jako součást zpožděného vykreslování.|
-|[COleServerItem::OnRenderGlobalData](#onrenderglobaldata)|Načte data do HGLOBAL jako součást zpožděného vykreslování.|
-|[COleServerItem::OnSetColorScheme](#onsetcolorscheme)|Volá se, aby se nastavilo barevné schéma položky.|
-|[COleServerItem::OnSetData](#onsetdata)|Volá se, aby se nastavila data položky.|
-|[COleServerItem::OnSetExtent](#onsetextent)|Volá se rozhraním, aby se nastavila velikost položky OLE.|
-|[COleServerItem::OnUpdate](#onupdate)|Volá se, když se změní část dokumentu, ve které položka patří.|
-|[COleServerItem::OnUpdateItems](#onupdateitems)|Volá se, aby se aktualizovala mezipaměť prezentace všech položek v dokumentu na serveru.|
-|[COleServerItem::SetItemName](#setitemname)|Nastaví název položky. Používá se pouze pro propojené položky.|
+|[Odvozenou třídu COleServerItem:: OnGetClipboardData](#ongetclipboarddata)|Volá se rozhraním, aby se získala data, která se zkopírují do schránky.|
+|[Odvozenou třídu COleServerItem:: OnGetExtent](#ongetextent)|Volá se rozhraním, aby se načetla velikost položky OLE.|
+|[Odvozenou třídu COleServerItem:: OnInitFromData](#oninitfromdata)|Volá se rozhraním, aby se inicializoval položka OLE pomocí obsahu zadaného objektu pro přenos dat.|
+|[Odvozenou třídu COleServerItem:: OnQueryUpdateItems](#onqueryupdateitems)|Volá se, aby se zjistilo, jestli nějaké propojené položky vyžadují aktualizaci.|
+|[Odvozenou třídu COleServerItem:: OnRenderData](#onrenderdata)|Načte data jako součást zpožděného vykreslování.|
+|[Odvozenou třídu COleServerItem:: OnRenderFileData](#onrenderfiledata)|Načte data do objektu `CFile` jako součást zpožděného vykreslování.|
+|[Odvozenou třídu COleServerItem:: OnRenderGlobalData](#onrenderglobaldata)|Načte data do HGLOBAL jako součást zpožděného vykreslování.|
+|[Odvozenou třídu COleServerItem:: OnSetColorScheme](#onsetcolorscheme)|Volá se, aby se nastavilo barevné schéma položky.|
+|[Odvozenou třídu COleServerItem::-SetData](#onsetdata)|Volá se, aby se nastavila data položky.|
+|[Odvozenou třídu COleServerItem:: OnSetExtent](#onsetextent)|Volá se rozhraním, aby se nastavila velikost položky OLE.|
+|[Odvozenou třídu COleServerItem:: inupdate](#onupdate)|Volá se, když se změní část dokumentu, ve které položka patří.|
+|[Odvozenou třídu COleServerItem:: OnUpdateItems](#onupdateitems)|Volá se, aby se aktualizovala mezipaměť prezentace všech položek v dokumentu na serveru.|
+|[Odvozenou třídu COleServerItem:: SetItemName](#setitemname)|Nastaví název položky. Používá se pouze pro propojené položky.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[COleServerItem::GetDataSource](#getdatasource)|Získá objekt použitý k uložení formátů převodu.|
-|[COleServerItem::OnHide](#onhide)|Volá se rozhraním, aby se skryla položka OLE.|
-|[COleServerItem::OnOpen](#onopen)|Volá se rozhraním, aby se zobrazila položka OLE ve svém vlastním okně nejvyšší úrovně.|
-|[COleServerItem::OnShow](#onshow)|Volá se, když kontejner požaduje zobrazení položky.|
+|[Odvozenou třídu COleServerItem:: GetDataSource](#getdatasource)|Získá objekt použitý k uložení formátů převodu.|
+|[Odvozenou třídu COleServerItem:: Hide](#onhide)|Volá se rozhraním, aby se skryla položka OLE.|
+|[Odvozenou třídu COleServerItem:: Open](#onopen)|Volá se rozhraním, aby se zobrazila položka OLE ve svém vlastním okně nejvyšší úrovně.|
+|[Odvozenou třídu COleServerItem:: inshow](#onshow)|Volá se, když kontejner požaduje zobrazení položky.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[COleServerItem::m_sizeExtent](#m_sizeextent)|Informuje server o tom, kolik položek OLE je viditelné.|
+|[Odvozenou třídu COleServerItem:: m_sizeExtent](#m_sizeextent)|Informuje server o tom, kolik položek OLE je viditelné.|
 
 ## <a name="remarks"></a>Poznámky
 
 Propojená položka může představovat některé nebo všechny serverové dokumenty. Vložená položka vždy představuje celý dokument serveru.
 
-`COleServerItem` Třída definuje několik přepisovatelných členských funkcí, které jsou volány pomocí knihovny DLL (Dynamic Link Library) systému OLE, obvykle v reakci na požadavky z aplikace typu kontejner. Tyto členské funkce umožňují aplikaci kontejneru manipulovat s položkou nepřímo různými způsoby, jako je zobrazení, provádění jejích operací nebo načítání dat v různých formátech.
+Třída `COleServerItem` definuje několik přepsatelné členské funkce, které jsou volány pomocí dynamických knihoven (DLL) systému OLE, obvykle v reakci na požadavky z aplikace typu kontejner. Tyto členské funkce umožňují aplikaci kontejneru manipulovat s položkou nepřímo různými způsoby, jako je zobrazení, provádění jejích operací nebo načítání dat v různých formátech.
 
-Chcete- `COleServerItem`li použít, odvodit z něj třídu a implementovat členské funkce [nakreslit](#ondraw) a [serializovat](../../mfc/reference/cobject-class.md#serialize) . `OnDraw` Funkce poskytuje metasouborové reprezentace položky, která umožňuje zobrazení, když aplikace typu kontejner otevírá složený dokument. `Serialize` Funkceposkytujenativníreprezentacepoložky,cožumožňujepřenášetvloženoupoložkumeziaplikacemi`CObject` serveru a kontejnerů. [OnGetExtent](#ongetextent) poskytuje přirozené velikosti položky kontejneru a povoluje kontejneru velikost položky.
+Chcete-li použít `COleServerItem`, odvodit z něj třídu a implementovat členské funkce [nakreslit](#ondraw) a [serializovat](../../mfc/reference/cobject-class.md#serialize) . Funkce `OnDraw` poskytuje metasouborové reprezentace položky, která umožňuje zobrazení, když aplikace typu kontejner otevře složený dokument. Funkce `Serialize` v `CObject` poskytuje nativní reprezentace položky, která umožňuje přenášet vloženou položku mezi aplikacemi serveru a kontejnerů. [OnGetExtent](#ongetextent) poskytuje přirozené velikosti položky kontejneru a povoluje kontejneru velikost položky.
 
-Další informace o serverech a souvisejících tématech najdete v článku [servery: Implementace serveru](../../mfc/servers-implementing-a-server.md) a "Vytvoření aplikace typu kontejner/server" v kontejnerech článků [: Pokročilé funkce](../../mfc/containers-advanced-features.md).
+Další informace o serverech a souvisejících tématech najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md) a vytvoření aplikace typu kontejner/server v [kontejnerech článků: pokročilé funkce](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -173,7 +173,7 @@ Další informace o serverech a souvisejících tématech najdete v článku [se
 
 ##  <a name="addotherclipboarddata"></a>Odvozenou třídu COleServerItem:: AddOtherClipboardData
 
-Voláním této funkce umístíte formáty prezentace a převodu pro položku OLE v zadaném `COleDataSource` objektu.
+Voláním této funkce umístíte formáty prezentace a převodu pro položku OLE v zadaném objektu `COleDataSource`.
 
 ```
 void AddOtherClipboardData(COleDataSource* pDataSource);
@@ -182,7 +182,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ### <a name="parameters"></a>Parametry
 
 *pDataSource*<br/>
-Ukazatel na `COleDataSource` objekt, ve kterém mají být umístěna data.
+Ukazatel na objekt `COleDataSource`, do kterého mají být umístěna data.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -190,7 +190,7 @@ Aby bylo možné zadat Prezentační formát (obrázek metasouboru) pro položku
 
 ##  <a name="coleserveritem"></a>Odvozenou třídu COleServerItem:: odvozenou třídu COleServerItem
 
-`COleServerItem` Vytvoří objekt a přidá jej do kolekce položek dokumentu na serveru.
+Vytvoří objekt `COleServerItem` a přidá jej do kolekce položek dokumentu na serveru.
 
 ```
 COleServerItem(
@@ -204,7 +204,7 @@ COleServerItem(
 Ukazatel na dokument, který bude obsahovat novou položku.
 
 *bAutoDelete*<br/>
-Příznak označující, zda lze objekt odstranit, je-li uvolněn odkaz na něj Nastavte na hodnotu false, pokud `COleServerItem` se jedná o nedílnou součást dat dokumentu, kterou je nutné odstranit. Nastavte na hodnotu TRUE, pokud je objekt sekundární strukturou použitou k identifikaci rozsahu v datech v dokumentu, který může rozhraní odstranit.
+Příznak označující, zda lze objekt odstranit, je-li uvolněn odkaz na něj Nastavte na hodnotu FALSE, pokud `COleServerItem` objekt je nedílnou součástí dat dokumentu, které je nutné odstranit. Nastavte na hodnotu TRUE, pokud je objekt sekundární strukturou použitou k identifikaci rozsahu v datech v dokumentu, který může rozhraní odstranit.
 
 ##  <a name="copytoclipboard"></a>Odvozenou třídu COleServerItem:: CopyToClipboard
 
@@ -221,11 +221,11 @@ Nastavte tuto hodnotu na TRUE, pokud se mají data odkazu zkopírovat do schrán
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce používá členskou funkci [OnGetClipboardData](#ongetclipboarddata) k vytvoření objektu [COleDataSource –](../../mfc/reference/coledatasource-class.md) obsahujícího data položky OLE ve formátech, které jsou podporovány. Funkce pak umístí `COleDataSource` objekt do schránky pomocí funkce [COleDataSource –:: SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) . `COleDataSource` Objekt obsahuje nativní data položky a její reprezentace ve formátu CF_METAFILEPICT a také data v libovolných formátech převodu, které se rozhodnete podporovat. Aby fungovala tato členská funkce, je nutné implementovat [serializaci](../../mfc/reference/cobject-class.md#serialize) a funkci [Draw](#ondraw) .
+Funkce používá členskou funkci [OnGetClipboardData](#ongetclipboarddata) k vytvoření objektu [COleDataSource –](../../mfc/reference/coledatasource-class.md) obsahujícího data položky OLE ve formátech, které jsou podporovány. Funkce potom umístí objekt `COleDataSource` do schránky pomocí funkce [COleDataSource –:: SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) . Objekt `COleDataSource` zahrnuje nativní data položky a její reprezentace v CF_METAFILEPICT formátu a také data v libovolných formátech převodu, které si zvolíte pro podporu. Aby fungovala tato členská funkce, je nutné implementovat [serializaci](../../mfc/reference/cobject-class.md#serialize) a funkci [Draw](#ondraw) .
 
 ##  <a name="dodragdrop"></a>Odvozenou třídu COleServerItem::D oDragDrop
 
-Chcete-li provést operaci přetažení, zavolejte členskoufunkci.`DoDragDrop`
+Chcete-li provést operaci přetažení, zavolejte členskou funkci `DoDragDrop`.
 
 ```
 DROPEFFECT DoDragDrop(
@@ -255,7 +255,7 @@ Ukazatel na obdélník, který definuje, kde se má skutečně začít přetahov
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota z výčtu DROPEFFECT. Pokud je DROPEFFECT_MOVE, měla by se odebrat původní data.
+Hodnota z výčtu DROPEFFECT. Pokud je DROPEFFECT_MOVE, měla by být odebrána původní data.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -263,7 +263,7 @@ Operace přetažení se nespustí okamžitě. Počká, dokud ukazatel myši neop
 
 Doba zpoždění je určena nastavením klíče registru. Dobu zpoždění můžete změnit voláním [CWinApp:: WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) nebo [CWinApp:: WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Pokud nezadáte dobu zpoždění, použije se výchozí hodnota 200 milisekund. Čas zpoždění při přetahování je uložený takto:
 
-- Čas zpoždění při přetahování Windows NT je uložený v HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.
+- Čas zpoždění při přetahování Windows NT je uložený ve HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.
 
 - Čas zpoždění při přetahování Windows 3. x je uložený v souboru WIN. Soubor INI, v části [Windows}.
 
@@ -286,7 +286,7 @@ void GetClipboardData(
 ### <a name="parameters"></a>Parametry
 
 *pDataSource*<br/>
-Ukazatel na `COleDataSource` objekt, který dostane data položky OLE ve všech podporovaných formátech.
+Ukazatel na objekt `COleDataSource`, který získá data položky OLE ve všech podporovaných formátech.
 
 *bIncludeLink*<br/>
 TRUE, pokud mají být data odkazů zkopírována do schránky. FALSE, pokud serverová aplikace nepodporuje odkazy.
@@ -301,7 +301,7 @@ Velikost objektu v pixelech
 
 Tato funkce volá členskou funkci [GetEmbedSourceData](#getembedsourcedata) pro získání nativních dat pro položku OLE a volá členskou funkci [AddOtherClipboardData](#addotherclipboarddata) pro získání formátu prezentace a všech podporovaných formátů převodu. Pokud má *bIncludeLink* hodnotu true, funkce také volá [GetLinkSourceData](#getlinksourcedata) , aby získala data propojení pro položku.
 
-Tuto funkci přepište, pokud chcete vložit formáty do `COleDataSource` objektu před nebo po těchto formátech, které `CopyToClipboard`poskytuje.
+Tuto funkci potlačíte, pokud chcete vložit formáty do objektu `COleDataSource` před nebo po tyto formáty dodávané `CopyToClipboard`.
 
 ##  <a name="getdatasource"></a>Odvozenou třídu COleServerItem:: GetDataSource
 
@@ -313,11 +313,11 @@ COleDataSource* GetDataSource();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `COleDataSource` objekt použitý k uložení formátů převodu.
+Ukazatel na objekt `COleDataSource`, který slouží k uložení formátů převodu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete, aby vaše serverová aplikace nabízela během operací přenosu dat data v nejrůznějších formátech, zaregistrujte tyto `COleDataSource` formáty pomocí objektu vráceného touto funkcí. Například pokud chcete zadat reprezentaci CF_TEXT položky OLE pro operace schránky nebo přetažení, měli byste tento formát zaregistrovat pomocí `COleDataSource` objektu, který vrátí tato funkce, a potom `OnRenderXxxData` přepsat členskou funkci na Zadejte data.
+Pokud chcete, aby vaše serverová aplikace nabízela během operací přenosu dat data v nejrůznějších formátech, zaregistrujte tyto formáty s objektem `COleDataSource` vráceným touto funkcí. Například pokud chcete zadat CF_TEXT reprezentaci položky OLE pro operace schránky nebo přetažení, měli byste tento formát zaregistrovat pomocí objektu `COleDataSource`, který vrátí tato funkce, a potom přepsat `OnRenderXxxData` členskou funkcí k poskytnutí dat.
 
 ##  <a name="getdocument"></a>Odvozenou třídu COleServerItem:: GetDocument
 
@@ -333,9 +333,9 @@ Ukazatel na dokument, který obsahuje položku; Hodnota NULL, pokud položka nen
 
 ### <a name="remarks"></a>Poznámky
 
-To umožňuje přístup k dokumentu serveru, který jste předali jako argument `COleServerItem` konstruktoru.
+To umožňuje přístup k dokumentu serveru, který jste předali jako argument konstruktoru `COleServerItem`.
 
-##  <a name="getembedsourcedata"></a>  COleServerItem::GetEmbedSourceData
+##  <a name="getembedsourcedata"></a>Odvozenou třídu COleServerItem:: GetEmbedSourceData
 
 Voláním této funkce získáte data CF_EMBEDSOURCE pro položku OLE.
 
@@ -350,7 +350,7 @@ Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium
 
 ### <a name="remarks"></a>Poznámky
 
-Tento formát zahrnuje nativní data položky. Aby tato funkce fungovala `Serialize` správně, je nutné, abyste implementovali členskou funkci.
+Tento formát zahrnuje nativní data položky. Aby tato funkce fungovala správně, je nutné, abyste implementovali `Serialize` členskou funkci.
 
 Výsledek lze přidat ke zdroji dat pomocí [COleDataSource –:: CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Tato funkce je volána automaticky pomocí [odvozenou třídu COleServerItem:: OnGetClipboardData](#ongetclipboarddata).
 
@@ -366,7 +366,7 @@ const CString& GetItemName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název položky
+Název položky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -421,7 +421,7 @@ Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium
 
 ### <a name="remarks"></a>Poznámky
 
-Informace se zkopírují do struktury `STGMEDIUM` , na kterou odkazuje *lpStgMedium*. Tento formát obsahuje informace potřebné pro dialog Vložit speciální.
+Informace se zkopírují do struktury `STGMEDIUM`, na kterou odkazuje *lpStgMedium*. Tento formát obsahuje informace potřebné pro dialog Vložit speciální.
 
 Další informace najdete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) v Windows SDK.
 
@@ -457,7 +457,7 @@ Nenulové, pokud je položka propojená položka; v opačném případě 0.
 
 Položka je propojena v případě, že položka je platná a není vrácena v seznamu vložené položky v dokumentu. Propojená položka může nebo nemusí být připojena ke kontejneru.
 
-Je běžné použít stejnou třídu pro propojené i vložené položky. `IsLinkedItem`umožňuje, aby se propojené položky chovaly jinak než vložené položky, i když je kód často společný.
+Je běžné použít stejnou třídu pro propojené i vložené položky. `IsLinkedItem` umožňuje, aby se propojené položky chovaly jinak než vložené položky, i když je kód často společný.
 
 ##  <a name="m_sizeextent"></a>Odvozenou třídu COleServerItem:: m_sizeExtent
 
@@ -484,19 +484,19 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 *nDrawAspect*<br/>
 Hodnota z výčtu DVASPECT, která určuje, který aspekt položky OLE se změnil. Tento parametr může mít některou z následujících hodnot:
 
-- Položka DVASPECT_CONTENT je reprezentovaná takovým způsobem, že se dá zobrazit jako vložený objekt uvnitř kontejneru.
+- DVASPECT_CONTENT položka je reprezentovaná takovým způsobem, že se může zobrazit jako vložený objekt uvnitř kontejneru.
 
-- Položka DVASPECT_THUMBNAIL se vykresluje v "miniatuře" reprezentace, aby se mohla zobrazit v nástroji pro procházení.
+- DVASPECT_THUMBNAIL položka je vykreslena jako "Miniatura", aby se mohla zobrazit v nástroji pro procházení.
 
-- Položka DVASPECT_ICON je reprezentována ikonou.
+- DVASPECT_ICON položka je reprezentována ikonou.
 
-- Položka DVASPECT_DOCPRINT je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
+- DVASPECT_DOCPRINT položka je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
 
 ### <a name="remarks"></a>Poznámky
 
 Pokud je položka kontejneru propojena s dokumentem pomocí automatického propojení, bude položka aktualizována, aby odrážela změny. V kontejnerových aplikacích napsaných pomocí knihovna Microsoft Foundation Class se v odpovědi volá [COleClientItem::-Change](../../mfc/reference/coleclientitem-class.md#onchange) .
 
-##  <a name="ondoverb"></a>  COleServerItem::OnDoVerb
+##  <a name="ondoverb"></a>Odvozenou třídu COleServerItem:: OnDoVerb
 
 Volá se rozhraním, aby se dala provést Zadaná operace.
 
@@ -509,10 +509,10 @@ virtual void OnDoVerb(LONG iVerb);
 *iVerb*<br/>
 Určuje operaci, která má být provedena. Může to být jedna z následujících možností:
 
-|Value|Význam|Písmeno|
+|Hodnota|Význam|Písmeno|
 |-----------|-------------|------------|
 |0|primární požadavek|OLEIVERB_PRIMARY|
-|1|Sekundární příkaz|NTato|
+|1|Sekundární příkaz|(Žádný)|
 |- 1|Zobrazit položku pro úpravy|OLEIVERB_SHOW|
 |- 2|Upravit položku v samostatném okně|OLEIVERB_OPEN|
 |- 3|Skrýt položku|OLEIVERB_HIDE|
@@ -521,7 +521,7 @@ Hodnota-1 je obvykle alias pro jinou operaci. Pokud není podporováno otevírá
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud byla aplikace typu kontejner vytvořena pomocí knihovna Microsoft Foundation Class, je tato funkce volána, když je volána členská funkce [COleClientItem:: Activate](../../mfc/reference/coleclientitem-class.md#activate) odpovídajícího `COleClientItem` objektu. Výchozí implementace volá členskou funkci [inshow](#onshow) , pokud je zadána primární operace nebo OLEIVERB_SHOW, [Open](#onopen) , pokud je ZADÁN sekundární příkaz nebo OLEIVERB_OPEN [, a když](#onhide) je zadán parametr OLEIVERB_HIDE. Výchozí implementace volá `OnShow` , pokud *iVerb* není jednou z výše uvedených příkazů.
+Pokud aplikace kontejneru byla napsána s knihovna Microsoft Foundation Class, je tato funkce volána, když je volána členská funkce [COleClientItem:: Activate](../../mfc/reference/coleclientitem-class.md#activate) odpovídajícího objektu `COleClientItem`. Výchozí implementace volá členskou funkci [inshow](#onshow) , pokud je zadána primární operace nebo OLEIVERB_SHOW, [otevřete](#onopen) , pokud je zadána sekundární operace nebo OLEIVERB_OPEN [, a když](#onhide) je zadán OLEIVERB_HIDE. Výchozí implementace volá `OnShow`, pokud *iVerb* není jednou z výše uvedených příkazů.
 
 Tuto funkci přepište, pokud vaše primární příkaz tuto položku nezobrazuje. Například pokud je položka záznam zvuku a jeho primárním příkazem je přehráno, nemusíte zobrazit serverovou aplikaci, aby ji bylo možné přehrát.
 
@@ -539,7 +539,7 @@ virtual BOOL OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Ukazatel na objekt [CDC](../../mfc/reference/cdc-class.md) , pro který chcete položku nakreslit. Kontext zobrazení je automaticky připojen k kontextu zobrazení atributu, takže můžete volat funkce atributů, i když by to mělo být závislé na zařízení.
 
 *rSize*<br/>
@@ -566,19 +566,19 @@ virtual BOOL OnDrawEx(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Ukazatel na objekt [CDC](../../mfc/reference/cdc-class.md) , pro který chcete položku nakreslit. Řadič domény se automaticky připojí k atributu řadiče domény, takže můžete volat funkce atributů, i když by to mělo být specifické pro zařízení Metafile.
 
 *nDrawAspect*<br/>
 Hodnota z výčtu DVASPECT. Tento parametr může mít některou z následujících hodnot:
 
-- Položka DVASPECT_CONTENT je reprezentovaná takovým způsobem, že se dá zobrazit jako vložený objekt uvnitř kontejneru.
+- DVASPECT_CONTENT položka je reprezentovaná takovým způsobem, že se může zobrazit jako vložený objekt uvnitř kontejneru.
 
-- Položka DVASPECT_THUMBNAIL se vykresluje v "miniatuře" reprezentace, aby se mohla zobrazit v nástroji pro procházení.
+- DVASPECT_THUMBNAIL položka je vykreslena jako "Miniatura", aby se mohla zobrazit v nástroji pro procházení.
 
-- Položka DVASPECT_ICON je reprezentována ikonou.
+- DVASPECT_ICON položka je reprezentována ikonou.
 
-- Položka DVASPECT_DOCPRINT je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
+- DVASPECT_DOCPRINT položka je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
 
 *rSize*<br/>
 Velikost položky v jednotkách HIMETRIC
@@ -589,13 +589,13 @@ Nenulové, pokud byla položka úspěšně vykreslena; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volání `OnDraw` , když je DVASPECT rovna DVASPECT_CONTENT; v opačném případě selže.
+Výchozí implementace implementace `OnDraw`, když je DVASPECT rovna DVASPECT_CONTENT; v opačném případě dojde k chybě.
 
 Přepište tuto funkci, pokud chcete poskytnout prezentační data pro jiné aspekty než DVASPECT_CONTENT, jako je například DVASPECT_ICON nebo DVASPECT_THUMBNAIL.
 
 ##  <a name="ongetclipboarddata"></a>Odvozenou třídu COleServerItem:: OnGetClipboardData
 
-Volá se rozhraním, aby se `COleDataSource` získal objekt obsahující všechna data, která by se umístila do schránky prostřednictvím volání členské funkce [CopyToClipboard](#copytoclipboard) .
+Volá se rozhraním, aby se získal objekt `COleDataSource` obsahující všechna data, která by se umístila do schránky prostřednictvím volání členské funkce [CopyToClipboard](#copytoclipboard) .
 
 ```
 virtual COleDataSource* OnGetClipboardData(
@@ -638,16 +638,16 @@ virtual BOOL OnGetExtent(
 *nDrawAspect*<br/>
 Určuje aspekt položky OLE, jejíž hranice mají být načteny. Tento parametr může mít některou z následujících hodnot:
 
-- Položka DVASPECT_CONTENT je reprezentovaná takovým způsobem, že se dá zobrazit jako vložený objekt uvnitř kontejneru.
+- DVASPECT_CONTENT položka je reprezentovaná takovým způsobem, že se může zobrazit jako vložený objekt uvnitř kontejneru.
 
-- Položka DVASPECT_THUMBNAIL se vykresluje v "miniatuře" reprezentace, aby se mohla zobrazit v nástroji pro procházení.
+- DVASPECT_THUMBNAIL položka je vykreslena jako "Miniatura", aby se mohla zobrazit v nástroji pro procházení.
 
-- Položka DVASPECT_ICON je reprezentována ikonou.
+- DVASPECT_ICON položka je reprezentována ikonou.
 
-- Položka DVASPECT_DOCPRINT je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
+- DVASPECT_DOCPRINT položka je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
 
 *rSize*<br/>
-Odkaz na `CSize` objekt, který získá velikost položky OLE.
+Odkaz na objekt `CSize`, který získá velikost položky OLE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -655,7 +655,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud byla aplikace typu kontejner napsána s knihovna Microsoft Foundation Class, je tato funkce volána, když je volána funkce [getvelikost](../../mfc/reference/coleclientitem-class.md#getextent) členské `COleClientItem` funkce odpovídajícího objektu. Výchozí implementace neprovádí žádnou akci. Musíte ji implementovat sami. Tuto funkci potlačíte, pokud chcete provádět zvláštní zpracování při zpracování požadavku na velikost položky OLE.
+Pokud byla aplikace typu kontejner napsána s knihovna Microsoft Foundation Class, je tato funkce volána, když je volána funkce [getvelikost](../../mfc/reference/coleclientitem-class.md#getextent) členské funkce odpovídajícího objektu `COleClientItem`. Výchozí implementace neprovádí žádnou akci. Musíte ji implementovat sami. Tuto funkci potlačíte, pokud chcete provádět zvláštní zpracování při zpracování požadavku na velikost položky OLE.
 
 ##  <a name="onhide"></a>Odvozenou třídu COleServerItem:: Hide
 
@@ -713,7 +713,7 @@ Tuto funkci přepište, pokud chcete při otevírání položky OLE provést spe
 
 Další informace naleznete v tématu [IOleClientSite:: OnShowWindow](/windows/win32/api/oleidl/nf-oleidl-ioleclientsite-onshowwindow) v Windows SDK.
 
-##  <a name="onqueryupdateitems"></a>  COleServerItem::OnQueryUpdateItems
+##  <a name="onqueryupdateitems"></a>Odvozenou třídu COleServerItem:: OnQueryUpdateItems
 
 Volá se rozhraním, aby se zjistilo, jestli jsou nějaké propojené položky v aktuálním dokumentu na serveru zastaralé.
 
@@ -753,15 +753,15 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zadaný formát je ten dřív umístěný do `COleDataSource` objektu pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) nebo [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) pro zpožděné vykreslování. Výchozí implementace této funkce volá [OnRenderFileData](#onrenderfiledata) nebo [OnRenderGlobalData](#onrenderglobaldata), v případě, že zadané paměťové médium je buď soubor, nebo paměť. Pokud ani jeden z těchto formátů není zadán, výchozí implementace vrátí 0 a neprovede žádnou akci.
+Zadaný formát je dříve umístěn do objektu `COleDataSource` pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) nebo [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) pro zpožděné vykreslování. Výchozí implementace této funkce volá [OnRenderFileData](#onrenderfiledata) nebo [OnRenderGlobalData](#onrenderglobaldata), v případě, že zadané paměťové médium je buď soubor, nebo paměť. Pokud ani jeden z těchto formátů není zadán, výchozí implementace vrátí 0 a neprovede žádnou akci.
 
-Pokud je *lpStgMedium*-> *TYMED* TYMED_NULL, STGMEDIUM by měl být přidělen a vyplněn podle zadání *lpFormatEtc-> TYMED*. Pokud není TYMED_NULL, STGMEDIUM by se měl vyplnit daty.
+Pokud je TYMED_NULL *lpStgMedium*-> *TYMED* , STGMEDIUM by měl být přidělen a vyplněn tak, jak je uvedeno v *lpFormatEtc-> TYMED*. Pokud není TYMED_NULL, STGMEDIUM by měl být vyplněn s daty.
 
 Toto je pokročilá přepsatelné. Tuto funkci potlačíte tak, aby poskytovala data v požadovaném formátu a na středních médiích. V závislosti na vašich datech možná budete chtít místo toho přepsat jednu z dalších verzí této funkce. Pokud jsou vaše data malá a pevná velikost, přepište `OnRenderGlobalData`. Pokud jsou vaše data v souboru nebo mají proměnlivou velikost, popište `OnRenderFileData`.
 
 Další informace naleznete v tématu [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)a [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) v Windows SDK.
 
-##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData
+##  <a name="onrenderfiledata"></a>Odvozenou třídu COleServerItem:: OnRenderFileData
 
 Volá se rozhraním, aby se načetla data v zadaném formátu, když je paměťové médium soubor.
 
@@ -777,7 +777,7 @@ virtual BOOL OnRenderFileData(
 Odkazuje na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) s určením formátu, ve kterém jsou požadovány informace.
 
 *pFile*<br/>
-Odkazuje na `CFile` objekt, ve kterém mají být vykreslena data.
+Odkazuje na objekt `CFile`, ve kterém se mají data vykreslovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -785,13 +785,13 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zadaný formát je ten dřív umístěný do `COleDataSource` objektu pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrátí hodnotu FALSE.
+Zadaný formát je dříve umístěn do objektu `COleDataSource` pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrátí hodnotu FALSE.
 
 Toto je pokročilá přepsatelné. Tuto funkci potlačíte tak, aby poskytovala data v požadovaném formátu a na středních médiích. V závislosti na vašich datech možná budete chtít místo toho přepsat jednu z dalších verzí této funkce. Pokud chcete zpracovat více úložných médií, přepište [OnRenderData](#onrenderdata). Pokud jsou vaše data v souboru nebo mají proměnlivou velikost, přepište [OnRenderFileData](#onrenderfiledata).
 
 Další informace naleznete v tématu [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) a [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) v Windows SDK.
 
-##  <a name="onrenderglobaldata"></a>  COleServerItem::OnRenderGlobalData
+##  <a name="onrenderglobaldata"></a>Odvozenou třídu COleServerItem:: OnRenderGlobalData
 
 Volá se rozhraním, aby se načetla data v zadaném formátu, pokud je zadané paměťové médium globální paměti.
 
@@ -815,7 +815,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zadaný formát je ten dřív umístěný do `COleDataSource` objektu pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrátí hodnotu FALSE.
+Zadaný formát je dříve umístěn do objektu `COleDataSource` pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrátí hodnotu FALSE.
 
 Pokud má *phGlobal* hodnotu null, měl by se přidělit a vrátit nový HGLOBAL v *phGlobal*. V opačném případě by měl být HGLOBAL zadaný pomocí *phGlobal* vyplněn daty. Množství dat umístěných v HGLOBAL nesmí překročit aktuální velikost bloku paměti. Blok nelze také přidělit větší velikosti.
 
@@ -842,7 +842,7 @@ Nenulová, pokud je použita paleta barev; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud byla aplikace kontejneru vytvořena pomocí knihovna Microsoft Foundation Class, je tato funkce volána při volání funkce [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) odpovídajícího `COleClientItem` objektu. Výchozí implementace vrátí hodnotu FALSE. Tuto funkci můžete přepsat, pokud chcete použít doporučenou paletu. Serverová aplikace není nutná k použití navrhované palety.
+Pokud byla aplikace kontejneru vytvořena pomocí knihovna Microsoft Foundation Class, je tato funkce volána při volání funkce [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) odpovídajícího objektu `COleClientItem`. Výchozí implementace vrátí hodnotu FALSE. Tuto funkci můžete přepsat, pokud chcete použít doporučenou paletu. Serverová aplikace není nutná k použití navrhované palety.
 
 Další informace naleznete v tématu [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) v Windows SDK.
 
@@ -895,13 +895,13 @@ virtual BOOL OnSetExtent(
 *nDrawAspect*<br/>
 Určuje aspekt položky OLE, jejíž hranice jsou určeny. Tento parametr může mít některou z následujících hodnot:
 
-- Položka DVASPECT_CONTENT je reprezentovaná takovým způsobem, že se dá zobrazit jako vložený objekt uvnitř kontejneru.
+- DVASPECT_CONTENT položka je reprezentovaná takovým způsobem, že se může zobrazit jako vložený objekt uvnitř kontejneru.
 
-- Položka DVASPECT_THUMBNAIL se vykresluje v "miniatuře" reprezentace, aby se mohla zobrazit v nástroji pro procházení.
+- DVASPECT_THUMBNAIL položka je vykreslena jako "Miniatura", aby se mohla zobrazit v nástroji pro procházení.
 
-- Položka DVASPECT_ICON je reprezentována ikonou.
+- DVASPECT_ICON položka je reprezentována ikonou.
 
-- Položka DVASPECT_DOCPRINT je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
+- DVASPECT_DOCPRINT položka je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
 
 *hodnota*<br/>
 Struktura [CSize](../../atl-mfc-shared/reference/csize-class.md) určující novou velikost položky OLE.
@@ -912,7 +912,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud byla aplikace kontejneru vytvořena pomocí knihovna Microsoft Foundation Class, je tato funkce volána při volání členské funkce [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) odpovídajícího `COleClientItem` objektu. Výchozí implementace nastaví člena [m_sizeExtent](#m_sizeextent) na určenou velikost, pokud je *nDrawAspect* DVASPECT_CONTENT; v opačném případě vrátí 0. Tuto funkci můžete přepsat, chcete-li provést speciální zpracování při změně velikosti položky.
+Pokud aplikace kontejneru byla napsána s knihovna Microsoft Foundation Class, je tato funkce volána při volání členské funkce [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) odpovídajícího objektu `COleClientItem`. Výchozí implementace nastaví [m_sizeExtent](#m_sizeextent) člena na určenou velikost, pokud je *nDrawAspect* DVASPECT_CONTENT; v opačném případě vrátí 0. Tuto funkci můžete přepsat, chcete-li provést speciální zpracování při změně velikosti položky.
 
 ##  <a name="onshow"></a>Odvozenou třídu COleServerItem:: inshow
 
@@ -924,7 +924,7 @@ virtual void OnShow();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volána, když uživatel aplikace typu kontejner vytvoří položku nebo provede operaci, například Edit, která vyžaduje zobrazení položky. Výchozí implementace pokusů o místní aktivaci. Pokud se to nepovede, funkce volá `OnOpen` členskou funkci, aby zobrazila položku OLE v samostatném okně.
+Tato funkce je obvykle volána, když uživatel aplikace typu kontejner vytvoří položku nebo provede operaci, například Edit, která vyžaduje zobrazení položky. Výchozí implementace pokusů o místní aktivaci. Pokud se to nepovede, funkce volá členskou funkci `OnOpen`, aby zobrazila položku OLE v samostatném okně.
 
 Tuto funkci potlačíte, pokud chcete provádět zvláštní zpracování při zobrazení položky OLE.
 
@@ -954,13 +954,13 @@ Ukazatel na objekt, který ukládá informace o změně.
 *nDrawAspect*<br/>
 Hodnota z výčtu DVASPECT. Tento parametr může mít jednu z následujících hodnot:
 
-- Položka DVASPECT_CONTENT je reprezentovaná takovým způsobem, že se dá zobrazit jako vložený objekt uvnitř kontejneru.
+- DVASPECT_CONTENT položka je reprezentovaná takovým způsobem, že se může zobrazit jako vložený objekt uvnitř kontejneru.
 
-- Položka DVASPECT_THUMBNAIL se vykresluje v "miniatuře" reprezentace, aby se mohla zobrazit v nástroji pro procházení.
+- DVASPECT_THUMBNAIL položka je vykreslena jako "Miniatura", aby se mohla zobrazit v nástroji pro procházení.
 
-- Položka DVASPECT_ICON je reprezentována ikonou.
+- DVASPECT_ICON položka je reprezentována ikonou.
 
-- Položka DVASPECT_DOCPRINT je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
+- DVASPECT_DOCPRINT položka je reprezentována, jako kdyby byla vytištěna pomocí příkazu Print v nabídce soubor.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -976,7 +976,7 @@ virtual void OnUpdateItems();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) pro všechny `COleClientItem` objekty v dokumentu.
+Výchozí implementace volá [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) pro všechny objekty `COleClientItem` v dokumentu.
 
 ##  <a name="setitemname"></a>Odvozenou třídu COleServerItem:: SetItemName
 
@@ -995,7 +995,7 @@ Ukazatel na nový název položky.
 
 Název musí být v rámci dokumentu jedinečný. Když je volána serverová aplikace pro úpravu propojené položky, aplikace používá tento název k vyhledání položky. Tuto funkci není nutné volat pro vložené položky.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [HIERSVR Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CDocItem – třída](../../mfc/reference/cdocitem-class.md)<br/>

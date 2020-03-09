@@ -1,5 +1,5 @@
 ---
-title: CAtlDllModuleT Class
+title: CAtlDllModuleT – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlDllModuleT
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
 ms.openlocfilehash: be42915c6c2e941bc5fc1de78c5c7ac26ccca6e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247097"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863166"
 ---
-# <a name="catldllmodulet-class"></a>CAtlDllModuleT Class
+# <a name="catldllmodulet-class"></a>CAtlDllModuleT – třída
 
-Tato třída reprezentuje modulu pro knihovnu DLL.
+Tato třída reprezentuje modul pro knihovnu DLL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,8 +34,8 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Vaše třída odvozena od `CAtlDllModuleT`.
+*Š*<br/>
+Vaše třída je odvozena z `CAtlDllModuleT`.
 
 ## <a name="members"></a>Členové
 
@@ -44,24 +44,24 @@ Vaše třída odvozena od `CAtlDllModuleT`.
 |Název|Popis|
 |----------|-----------------|
 |[CAtlDllModuleT::CAtlDllModuleT](#catldllmodulet)|Konstruktor|
-|[CAtlDllModuleT::~CAtlDllModuleT](#dtor)|Destruktor.|
+|[CAtlDllModuleT:: ~ CAtlDllModuleT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[CAtlDllModuleT::DllCanUnloadNow](#dllcanunloadnow)|Testuje, zda je knihovna DLL může být uvolněna.|
-|[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)|Vrátí objekt pro vytváření tříd.|
-|[CAtlDllModuleT::DllMain](#dllmain)|Volitelné vstupní bod do dynamická knihovna (DLL).|
-|[CAtlDllModuleT::DllRegisterServer](#dllregisterserver)|Přidá položky do systémového registru pro objekty v knihovně DLL.|
-|[CAtlDllModuleT::DllUnregisterServer](#dllunregisterserver)|Odebere položky systémového registru pro objekty v knihovně DLL.|
-|[CAtlDllModuleT::GetClassObject](#getclassobject)|Vrátí objekt pro vytváření tříd. Vyvolaná podle [DllGetClassObject](#dllgetclassobject).|
+|[CAtlDllModuleT::D llCanUnloadNow](#dllcanunloadnow)|Testuje, zda může být knihovna DLL uvolněna.|
+|[CAtlDllModuleT::D llGetClassObject](#dllgetclassobject)|Vrátí objekt pro vytváření tříd.|
+|[CAtlDllModuleT::D llMain](#dllmain)|Volitelný vstupní bod do knihovny DLL (Dynamic-Link Library).|
+|[CAtlDllModuleT::D llRegisterServer](#dllregisterserver)|Přidá položky do systémového registru pro objekty v knihovně DLL.|
+|[CAtlDllModuleT::D llUnregisterServer](#dllunregisterserver)|Odebere položky v systémovém registru pro objekty v knihovně DLL.|
+|[CAtlDllModuleT:: GetClassObject –](#getclassobject)|Vrátí objekt pro vytváření tříd. Vyvoláno pomocí [DllGetClassObject](#dllgetclassobject).|
 
 ## <a name="remarks"></a>Poznámky
 
-`CAtlDllModuleT` představuje modul pro dynamická knihovna (DLL) a poskytuje funkce, které používají všechny projekty knihovny DLL. Tato specializace [catlmodulet –](../../atl/reference/catlmodulet-class.md) třída zahrnuje podporu pro registraci.
+`CAtlDllModuleT` představuje modul pro dynamickou knihovnu (DLL) a poskytuje funkce používané všemi projekty knihovny DLL. Tato specializace třídy [CAtlModuleT](../../atl/reference/catlmodulet-class.md) zahrnuje podporu pro registraci.
 
-Další informace o modulech v ATL naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md).
+Další informace o modulech v knihovně ATL naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -75,9 +75,9 @@ Další informace o modulech v ATL naleznete v tématu [ATL – třídy modulů]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h
+**Záhlaví:** atlbase. h
 
-##  <a name="catldllmodulet"></a>  CAtlDllModuleT::CAtlDllModuleT
+##  <a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT
 
 Konstruktor
 
@@ -85,7 +85,7 @@ Konstruktor
 CAtlDllModuleT() throw();
 ```
 
-##  <a name="dtor"></a>  CAtlDllModuleT::~CAtlDllModuleT
+##  <a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT
 
 Destruktor.
 
@@ -93,9 +93,9 @@ Destruktor.
 ~CAtlDllModuleT() throw();
 ```
 
-##  <a name="dllcanunloadnow"></a>  CAtlDllModuleT::DllCanUnloadNow
+##  <a name="dllcanunloadnow"></a>CAtlDllModuleT::D llCanUnloadNow
 
-Testuje, zda je knihovna DLL může být uvolněna.
+Testuje, zda může být knihovna DLL uvolněna.
 
 ```
 HRESULT DllCanUnloadNow() throw();
@@ -103,9 +103,9 @@ HRESULT DllCanUnloadNow() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK, pokud se dá zrušit zavedení DLL nebo S_FALSE v případě nedostupnosti.
+Vrátí S_OK, pokud může být knihovna DLL uvolněna nebo S_FALSE, pokud nemůže.
 
-##  <a name="dllgetclassobject"></a>  CAtlDllModuleT::DllGetClassObject
+##  <a name="dllgetclassobject"></a>CAtlDllModuleT::D llGetClassObject
 
 Vrátí objekt pro vytváření tříd.
 
@@ -122,18 +122,18 @@ HRESULT DllGetClassObject(
 Identifikátor CLSID objektu, který má být vytvořen.
 
 *riid*<br/>
-Identifikátor IID požadované rozhraní.
+IID požadovaného rozhraní.
 
 *ppv*<br/>
-Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppv* nastaven na hodnotu NULL.
+Ukazatel na ukazatel rozhraní identifikovaný *riid*. Pokud objekt nepodporuje toto rozhraní, je *PPV* nastaveno na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="dllmain"></a>  CAtlDllModuleT::DllMain
+##  <a name="dllmain"></a>CAtlDllModuleT::D llMain
 
-Volitelné vstupní bod do dynamická knihovna (DLL).
+Volitelný vstupní bod do knihovny DLL (Dynamic-Link Library).
 
 ```
 BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
@@ -141,11 +141,11 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwReason*<br/>
-Pokud je nastavený na DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH a DLL_THREAD_DETACH případně oznámení volání jsou zakázána.
+*Parametr dwReason*<br/>
+Pokud je nastaveno na DLL_PROCESS_ATTACH, jsou volání oznámení DLL_THREAD_ATTACH a DLL_THREAD_DETACH zakázána.
 
 *lpReserved*<br/>
-Vyhrazená.
+Rezervovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -153,9 +153,9 @@ Vždy vrátí hodnotu TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-Zakazuje DLL_THREAD_ATTACH a DLL_THREAD_DETACH případně oznámení, že volání může být užitečné optimalizace pro vícevláknové aplikace, které mají mnoho knihoven DLL, který často vytvářet a odstraňovat vlákna, a jehož knihovny DLL nemusí tato oznámení na úrovni vlákna z přílohy/odpojení.
+Zakázání volání oznámení DLL_THREAD_ATTACH a DLL_THREAD_DETACH může být užitečnou optimalizací pro vícevláknové aplikace, které mají mnoho knihoven DLL, které často vytvářejí a odstraňují vlákna a jejichž knihovny DLL nepotřebují tato oznámení na úrovni vlákna pro přílohy a odpojení.
 
-##  <a name="dllregisterserver"></a>  CAtlDllModuleT::DllRegisterServer
+##  <a name="dllregisterserver"></a>CAtlDllModuleT::D llRegisterServer
 
 Přidá položky do systémového registru pro objekty v knihovně DLL.
 
@@ -166,15 +166,15 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ### <a name="parameters"></a>Parametry
 
 *bRegTypeLib*<br/>
-TRUE, pokud knihovna typů je k registraci. Výchozí hodnota je TRUE.
+TRUE, pokud má být zaregistrována knihovna typů. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="dllunregisterserver"></a>  CAtlDllModuleT::DllUnregisterServer
+##  <a name="dllunregisterserver"></a>CAtlDllModuleT::D llUnregisterServer
 
-Odebere položky systémového registru pro objekty v knihovně DLL.
+Odebere položky v systémovém registru pro objekty v knihovně DLL.
 
 ```
 HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
@@ -183,15 +183,15 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ### <a name="parameters"></a>Parametry
 
 *bUnRegTypeLib*<br/>
-TRUE, pokud knihovna typů má být odebrán z registru. Výchozí hodnota je TRUE.
+TRUE, pokud má být knihovna typů odebrána z registru. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="getclassobject"></a>  CAtlDllModuleT::GetClassObject
+##  <a name="getclassobject"></a>CAtlDllModuleT:: GetClassObject –
 
-Vytvoří objekt zadaným identifikátorem CLSID.
+Vytvoří objekt zadaného objektu CLSID.
 
 ```
 HRESULT GetClassObject(
@@ -206,22 +206,22 @@ HRESULT GetClassObject(
 Identifikátor CLSID objektu, který má být vytvořen.
 
 *riid*<br/>
-Identifikátor IID požadované rozhraní.
+IID požadovaného rozhraní.
 
 *ppv*<br/>
-Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppv* nastaven na hodnotu NULL.
+Ukazatel na ukazatel rozhraní identifikovaný *riid*. Pokud objekt nepodporuje toto rozhraní, je *PPV* nastaveno na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána metodou [CAtlDllModuleT::DllGetClassObject](#dllgetclassobject) a je součástí zpětné kompatibility.
+Tuto metodu volá [CAtlDllModuleT::D llgetclassobject](#dllgetclassobject) a je zahrnutá z důvodu zpětné kompatibility.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CAtlModuleT – třída](../../atl/reference/catlmodulet-class.md)<br/>
 [CAtlExeModuleT – třída](../../atl/reference/catlexemodulet-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)
