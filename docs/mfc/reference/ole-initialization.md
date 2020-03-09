@@ -8,26 +8,26 @@ helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
 ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502027"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855684"
 ---
 # <a name="ole-initialization"></a>Inicializace OLE
 
-Předtím, než může aplikace používat systémové služby OLE, musí inicializovat systémové knihovny DLL OLE a ověřit, zda jsou knihovny DLL správné verze. `AfxOleInit` Funkce inicializuje systémové knihovny DLL systému OLE.
+Předtím, než může aplikace používat systémové služby OLE, musí inicializovat systémové knihovny DLL OLE a ověřit, zda jsou knihovny DLL správné verze. Funkce `AfxOleInit` inicializuje systémové knihovny DLL systému OLE.
 
 ### <a name="ole-initialization"></a>Inicializace OLE
 
 |||
 |-|-|
 |[AfxOleInit](#afxoleinit)|Inicializuje knihovny OLE.|
-|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Voláním této funkce ve `InitInstance` funkci objektu aplikace povolíte podporu pro omezení ovládacích prvků OLE.|
+|[AfxEnableControlContainer –](#afxenablecontrolcontainer)|Voláním této funkce ve funkci `InitInstance` vašeho objektu aplikace povolíte podporu pro omezení ovládacích prvků OLE.|
 
-## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
+## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer –
 
-Voláním této funkce ve `InitInstance` funkci objektu aplikace povolíte podporu pro omezení ovládacích prvků OLE.
+Voláním této funkce ve funkci `InitInstance` vašeho objektu aplikace povolíte podporu pro omezení ovládacích prvků OLE.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -67,12 +67,12 @@ Voláním této funkce lze inicializovat podporu technologie OLE pro aplikaci MF
 >  Pokud je volána metoda **AfxOleInit** z knihovny MFC DLL, volání se nezdaří. K selhání dojde, protože funkce předpokládá, že pokud je volána z knihovny DLL, systém technologie OLE byl dříve inicializován volající aplikací.
 
 > [!NOTE]
->  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Pokud zavoláte [funkce CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) do `InitInstance` svého přepsání, zadejte COINIT_APARTMENTTHREADED (místo COINIT_MULTITHREADED).
+>  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Pokud zavoláte [funkce CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) v přepsání `InitInstance`, zadejte COINIT_APARTMENTTHREADED (místo COINIT_MULTITHREADED).
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdisp. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

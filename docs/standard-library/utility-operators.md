@@ -1,5 +1,5 @@
 ---
-title: '&lt;Nástroj&gt; operátory'
+title: '&gt; operátory &lt;Utility'
 ms.date: 11/04/2016
 f1_keywords:
 - utility/std::operator!=
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - std::operator&lt;= (utility)
 - std::operator== (utility)
 ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246296"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854857"
 ---
-# <a name="ltutilitygt-operators"></a>&lt;Nástroj&gt; operátory
+# <a name="ltutilitygt-operators"></a>&gt; operátory &lt;Utility
 
 > [!NOTE]
-> Použití operátorů `Type&` zahrnují `namespace rel_ops`.
+> Operátory používající `Type&` jsou součástí `namespace rel_ops`.
 
-## <a name="op_neq"></a> Operator! =
+## <a name="op_neq"></a>! = – operátor
 
-Testuje, zda je objekt dvojice na levé straně operátoru není roven párový objekt na pravé straně.
+Testuje, zda dvojice objektu na levé straně operátoru není rovna objektu páru na pravé straně.
 
 ```cpp
 template <class Type>
@@ -42,19 +42,19 @@ template <class T, class U>
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `pair`.
 
-*doprava*\
+*pravé*\
 Objekt typu `pair`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud dvojice nejsou stejné; **false** Pokud dvojice jsou si rovny.
+**true** , pokud nejsou páry stejné; **false** , pokud jsou páry stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Jednu dvojici je rovna jinou dvojici, pokud každý z jejich odpovídajících prvků rovná. Dvě dvojice rovny, pokud první nebo druhý prvek jednoho není shodný s odpovídající element páru.
+Jedna dvojice je rovna jiné dvojici, pokud je každý z jejich odpovídajících prvků stejný. Dva páry jsou nerovné, pokud buď první nebo druhý prvek jednoho není roven odpovídajícímu elementu druhé dvojice.
 
 ### <a name="example"></a>Příklad
 
@@ -103,9 +103,9 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>operator = = – operátor
 
-Testuje, zda objekt dvojice na levé straně operátoru roven objektu pair na pravé straně.
+Testuje, zda je objekt dvojice na levé straně operátoru roven objektu páru na pravé straně.
 
 ```cpp
 template <class T, class U>
@@ -114,19 +114,19 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `pair`.
 
-*doprava*\
+*pravé*\
 Objekt typu `pair`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud dvojice rovnají. **false** Pokud `pair`s nejsou stejné.
+**true** , pokud jsou páry stejné; **false** , pokud `pair`s nejsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Jednu dvojici je rovna jinou dvojici, pokud každý z jejich odpovídajících prvků rovná. Funkce vrátí `left`. **první** == `right`. **první** && `left`. **druhý** == `right`. **druhý**. Dvě dvojice rovny, pokud první nebo druhý prvek jednoho není shodný s odpovídající element páru.
+Jedna dvojice je rovna jiné dvojici, pokud je každý z jejich odpovídajících prvků stejný. Funkce vrátí `left`. **první** == `right`. **první** && `left`. **druhý** == `right`. **sekunda**. Dva páry jsou nerovné, pokud buď první nebo druhý prvek jednoho není roven odpovídajícímu elementu druhé dvojice.
 
 ### <a name="example"></a>Příklad
 
@@ -166,9 +166,9 @@ int main( )
 }
 ```
 
-## <a name="op_lt"></a> – Operátor&lt;
+## <a name="op_lt"></a>operátor&lt;
 
-Testuje, zda je pár objekt na levé straně operátoru je menší než objekt dvojice na pravé straně.
+Testuje, zda je objekt dvojice na levé straně operátoru menší než objekt dvojice na pravé straně.
 
 ```cpp
 template <class T, class U>
@@ -177,21 +177,21 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `pair` na levé straně operátoru.
 
-*doprava*\
+*pravé*\
 Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** Pokud `pair` na levé straně operátoru je striktně menší než `pair` na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud `pair` na levé straně operátoru je výhradně menší než `pair` na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-`left` `pair` Objektu se říká, že se striktně menší než `right` `pair` objekt by *levé* je menší a není rovno *správné*.
+Objekt `left` `pair` je označován jako striktně menší než objekt `right` `pair`, pokud *Left* je menší než a není rovno *pravému*.
 
-Porovnání dvojice první prvky dvě dvojice hodnot mají nejvyšší prioritu. Pokud se liší, je výsledek jejich porovnání považován za výsledek porovnání, které odpovídá páru licencí. Pokud nejsou hodnoty první prvků jiný, hodnoty druhý prvky jsou porovnány a výsledek jejich porovnání se bere jako výsledek porovnání, které odpovídá páru licencí.
+V porovnání párů mají hodnoty první prvky dvou párů nejvyšší prioritu. Pokud se liší, pak výsledek jejich porovnání je výsledkem porovnání páru. Pokud se hodnoty prvních prvků neliší, pak jsou porovnány hodnoty druhých prvků a výsledek jejich porovnání se považuje za výsledek porovnání páru.
 
 ### <a name="example"></a>Příklad
 
@@ -240,9 +240,9 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="op_lt_eq"></a> – Operátor&lt;=
+## <a name="op_lt_eq"></a>operátor&lt;=
 
-Testuje, zda je pár objekt na levé straně operátoru je menší než nebo rovna hodnotě párový objekt na pravé straně.
+Testuje, zda je objekt dvojice na levé straně operátoru menší než nebo roven objektu páru na pravé straně.
 
 ```cpp
 template <class Type>
@@ -254,19 +254,19 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `pair` na levé straně operátoru.
 
-*doprava*\
+*pravé*\
 Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** Pokud `pair` na levé straně operátoru je menší než nebo rovna hodnotě `pair` na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je `pair` na levé straně operátoru menší než nebo rovno `pair` na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání dvojice první prvky dvě dvojice hodnot mají nejvyšší prioritu. Pokud se liší, je výsledek jejich porovnání považován za výsledek porovnání, které odpovídá páru licencí. Pokud nejsou hodnoty první prvků jiný, hodnoty druhý prvky jsou porovnány a výsledek jejich porovnání se bere jako výsledek porovnání, které odpovídá páru licencí.
+V porovnání párů mají hodnoty první prvky dvou párů nejvyšší prioritu. Pokud se liší, pak výsledek jejich porovnání je výsledkem porovnání páru. Pokud se hodnoty prvních prvků neliší, pak jsou porovnány hodnoty druhých prvků a výsledek jejich porovnání se považuje za výsledek porovnání páru.
 
 ### <a name="example"></a>Příklad
 
@@ -325,9 +325,9 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="op_gt"></a> – Operátor&gt;
+## <a name="op_gt"></a>operátor&gt;
 
-Testuje, zda je objekt dvojice na levé straně operátoru větší než párový objekt na pravé straně.
+Testuje, zda je objekt dvojice na levé straně operátoru větší než dvojice objektu na pravé straně.
 
 ```cpp
 template <class Type>
@@ -339,21 +339,21 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `pair` na levé straně operátoru.
 
-*doprava*\
+*pravé*\
 Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud `pair` na levé straně operátoru je výhradně větší než `pair` na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je `pair` na levé straně operátoru striktně větší než `pair` na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-`left` `pair` Objektu se říká, že být striktně větší než `right` `pair` objekt by *levé* je větší než a není rovno *správné*.
+Objekt `left` `pair` je označován jako striktně větší než objekt `right` `pair`, pokud je *Left* větší než a není rovno *pravému*.
 
-Porovnání dvojice první prvky dvě dvojice hodnot mají nejvyšší prioritu. Pokud se liší, je výsledek jejich porovnání považován za výsledek porovnání, které odpovídá páru licencí. Pokud nejsou hodnoty první prvků jiný, hodnoty druhý prvky jsou porovnány a výsledek jejich porovnání se bere jako výsledek porovnání, které odpovídá páru licencí.
+V porovnání párů mají hodnoty první prvky dvou párů nejvyšší prioritu. Pokud se liší, pak výsledek jejich porovnání je výsledkem porovnání páru. Pokud se hodnoty prvních prvků neliší, pak jsou porovnány hodnoty druhých prvků a výsledek jejich porovnání se považuje za výsledek porovnání páru.
 
 ### <a name="example"></a>Příklad
 
@@ -412,9 +412,9 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="op_gt_eq"></a> – Operátor&gt;=
+## <a name="op_gt_eq"></a>operátor&gt;=
 
-Testuje, zda je objekt dvojice na levé straně operátoru větší než nebo rovna hodnotě párový objekt na pravé straně.
+Testuje, zda je objekt dvojice na levé straně operátoru větší než nebo roven objektu páru na pravé straně.
 
 ```cpp
 template <class Type>
@@ -426,19 +426,19 @@ template <class T, class U>
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `pair` na levé straně operátoru.
 
-*doprava*\
+*pravé*\
 Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** Pokud `pair` na levé straně operátoru je větší než nebo rovna hodnotě `pair` na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je `pair` na levé straně operátoru větší než nebo rovno `pair` na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání dvojice první prvky dvě dvojice hodnot mají nejvyšší prioritu. Pokud se liší, je výsledek jejich porovnání považován za výsledek porovnání, které odpovídá páru licencí. Pokud nejsou hodnoty první prvků jiný, hodnoty druhý prvky jsou porovnány a výsledek jejich porovnání se bere jako výsledek porovnání, které odpovídá páru licencí.
+V porovnání párů mají hodnoty první prvky dvou párů nejvyšší prioritu. Pokud se liší, pak výsledek jejich porovnání je výsledkem porovnání páru. Pokud se hodnoty prvních prvků neliší, pak jsou porovnány hodnoty druhých prvků a výsledek jejich porovnání se považuje za výsledek porovnání páru.
 
 ### <a name="example"></a>Příklad
 

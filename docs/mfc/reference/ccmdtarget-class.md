@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816341"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867028"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 
@@ -63,7 +63,7 @@ Základní třída architektury mapy zpráv knihovna Microsoft Foundation Class.
 class CCmdTarget : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
@@ -76,19 +76,19 @@ class CCmdTarget : public CObject
 |Název|Popis|
 |----------|-----------------|
 |[CCmdTarget:: BeginWaitCursor](#beginwaitcursor)|Zobrazí kurzor jako ukazatel na přesýpací hodiny.|
-|[CCmdTarget::DoOleVerb](#dooleverb)|Způsobí provedení akce zadané v příkazu OLE.|
+|[CCmdTarget::D oOleVerb](#dooleverb)|Způsobí provedení akce zadané v příkazu OLE.|
 |[CCmdTarget:: EnableAutomation](#enableautomation)|Povoluje automatizaci OLE pro objekt `CCmdTarget`.|
 |[CCmdTarget:: EnableConnections](#enableconnections)|Povolí vypínání událostí prostřednictvím bodů připojení.|
-|[CCmdTarget::EnableTypeLib](#enabletypelib)|Povoluje knihovnu typů objektu.|
+|[CCmdTarget:: EnableTypeLib](#enabletypelib)|Povoluje knihovnu typů objektu.|
 |[CCmdTarget:: EndWaitCursor](#endwaitcursor)|Vrátí se na předchozí kurzor.|
 |[CCmdTarget:: EnumOleVerbs](#enumoleverbs)|Vytvoří výčet příkazů OLE objektu.|
 |[CCmdTarget:: FromIDispatch](#fromidispatch)|Vrátí ukazatel na objekt `CCmdTarget` přidružený k ukazateli `IDispatch`.|
 |[CCmdTarget:: GetDispatchIID](#getdispatchiid)|Získá primární ID odesílajícího rozhraní.|
 |[CCmdTarget:: GetIDispatch](#getidispatch)|Vrátí ukazatel na objekt `IDispatch` přidružený k objektu `CCmdTarget`.|
-|[CCmdTarget::GetTypeInfoCount](#gettypeinfocount)|Načte počet rozhraní informací o typu, které objekt poskytuje.|
-|[CCmdTarget::GetTypeInfoOfGuid](#gettypeinfoofguid)|Načte popis typu, který odpovídá zadanému identifikátoru GUID.|
-|[CCmdTarget::GetTypeLib](#gettypelib)|Získá ukazatel na knihovnu typů.|
-|[CCmdTarget::GetTypeLibCache](#gettypelibcache)|Získá mezipaměť knihovny typů.|
+|[CCmdTarget:: GetTypeInfoCount](#gettypeinfocount)|Načte počet rozhraní informací o typu, které objekt poskytuje.|
+|[CCmdTarget:: GetTypeInfoOfGuid](#gettypeinfoofguid)|Načte popis typu, který odpovídá zadanému identifikátoru GUID.|
+|[CCmdTarget:: GetTypeLib](#gettypelib)|Získá ukazatel na knihovnu typů.|
+|[CCmdTarget:: GetTypeLibCache](#gettypelibcache)|Získá mezipaměť knihovny typů.|
 |[CCmdTarget:: IsInvokeAllowed](#isinvokeallowed)|Povoluje vyvolání metody automatizace.|
 |[CCmdTarget:: IsResultExpected](#isresultexpected)|Vrátí nenulovou hodnotu, pokud má funkce automatizace vracet hodnotu.|
 |[CCmdTarget:: OnCmdMsg –](#oncmdmsg)|Směruje a odesílá zprávy příkazů.|
@@ -349,7 +349,7 @@ HRESULT GetTypeInfoOfGuid(
 *lcid*<br/>
 Identifikátor národního prostředí (`LCID`).
 
-*guid*<br/>
+*hlavních*<br/>
 [Identifikátor GUID](/previous-versions/cc317743(v%3dmsdn.10)) popisu typu
 
 *ppTypeInfo*<br/>
@@ -411,7 +411,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*dispid*<br/>
+*DISPID*<br/>
 ID odeslání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -486,9 +486,9 @@ Pokud přepíšete `OnCmdMsg`, je nutné dodat příslušnou hodnotu pro *nCode*
 
 |hodnota *nCode*|hodnota *pExtra*|
 |-------------------|--------------------|
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
+|CN_COMMAND|[Ccmdui –](../../mfc/reference/ccmdui-class.md)\*|
 |CN_EVENT|AFX_EVENT\*|
-|CN_UPDATE_COMMAND_UI|CCmdUI\*|
+|CN_UPDATE_COMMAND_UI|CCmdUI –\*|
 |CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|
 |CN_OLE_UNREGISTER|NULL|
 
@@ -522,7 +522,7 @@ void RestoreWaitCursor();
 
 [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [ACDUAL Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>

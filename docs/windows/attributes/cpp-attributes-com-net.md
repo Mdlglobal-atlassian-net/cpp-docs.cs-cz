@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491060"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856439"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributy C++ pro COM a .NET
 
@@ -34,7 +34,7 @@ Atributy, C++ které se šíří v směrech, nejsou aktuálně možné, aniž by
 
 - Nahrazuje velký objem kódu IDL, který je vyžadován komponentou modelu COM, s několika stručnými atributy.
 
-Například pro implementaci jednoduché jímky událostí pro obecnou třídu ATL můžete použít atribut [event_receiver](event-receiver.md) na konkrétní třídu, jako je například `CMyReceiver`. Atribut je poté zkompilován kompilátorem společnosti Microsoft C++ , který vloží správný kód do souboru objektu. `event_receiver`
+Například pro implementaci jednoduché jímky událostí pro obecnou třídu ATL můžete použít atribut [event_receiver](event-receiver.md) na konkrétní třídu, jako je například `CMyReceiver`. Atribut `event_receiver` poté zkompiluje kompilátor společnosti Microsoft C++ , který vloží správný kód do souboru objektu.
 
 ```cpp
 [event_receiver(com)]
@@ -45,7 +45,7 @@ class CMyReceiver
 }
 ```
 
-`CMyReceiver` Pak můžete nastavit metody `handler1` a `handler2` zpracovávat události (pomocí vnitřní funkce [__hook](../../cpp/hook.md)) ze zdroje událostí, který můžete vytvořit pomocí [event_source](event-source.md).
+Potom můžete nastavit metody `CMyReceiver` `handler1` a `handler2` pro zpracování událostí (pomocí vnitřní [__hook](../../cpp/hook.md)funkce) ze zdroje událostí, který můžete vytvořit pomocí [event_source](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Základní mechanismy atributů
 
@@ -80,7 +80,7 @@ Kromě toho vizuální C++ linker vypíše všechny informace o atributu souvise
 
 ## <a name="contexts"></a>Kontexty atributů
 
-C++atributy je možné popsat pomocí čtyř základních polí: cíl, na který se dá použít (**platí pro**), pokud se dají opakovat nebo ne (**opakovatelné**), požadované přítomnosti ostatních atributů (**povinné atributy**) a nekompatibility. s jinými atributy (**neplatné atributy**). Tato pole jsou uvedena v doprovodné tabulce v referenčním tématu každého atributu. Každé z těchto polí je popsáno níže.
+C++atributy je možné popsat pomocí čtyř základních polí: cíl, na který se dá použít (**platí pro**), pokud se dají opakovat nebo ne (**Opakovat**), požadované přítomnosti ostatních atributů (**povinné atributy**) a nekompatibility s jinými atributy (**neplatné atributy**). Tato pole jsou uvedena v doprovodné tabulce v referenčním tématu každého atributu. Každé z těchto polí je popsáno níže.
 
 ### <a name="applies-to"></a>Platí pro
 

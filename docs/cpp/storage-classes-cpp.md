@@ -11,11 +11,11 @@ helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301311"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856895"
 ---
 # <a name="storage-classes"></a>Třídy úložiště
 
@@ -286,6 +286,6 @@ K programu je třeba si uvědomit několik bodů:
 
 - Nakonec statické lokální proměnné, například `I3` uchovávají jejich hodnoty po dobu trvání programu, ale jsou zničeny při ukončení programu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarace a definice](../cpp/declarations-and-definitions-cpp.md)
