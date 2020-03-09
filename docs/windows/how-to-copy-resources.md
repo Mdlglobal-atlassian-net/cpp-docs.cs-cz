@@ -31,11 +31,11 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740654"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890925"
 ---
 # <a name="how-to-manage-resources-c"></a>Postupy: Správa prostředků (C++)
 
@@ -46,7 +46,7 @@ Můžete kopírovat prostředky z jednoho souboru do druhého, aniž byste je zm
 Do aktuálního souboru prostředků můžete snadno kopírovat prostředky z existujícího prostředku nebo spustitelného souboru. Pokud chcete kopírovat prostředky, otevřete oba soubory, které obsahují prostředky, a přetáhněte položky z jednoho souboru na jiný nebo je zkopírujte a vložte mezi tyto dva soubory. Tato metoda se používá pro soubory skriptu prostředků (. RC) a soubory šablony prostředků (. RCT) a jako spustitelné soubory (. exe).
 
 > [!NOTE]
-> Vizuál C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své vlastní aplikaci. Další informace najdete v tématu [Klipart: Běžné prostředky](https://github.com/Microsoft/VCSamples).
+> Vizuál C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své vlastní aplikaci. Další informace najdete v tématu věnovaném [klipartům: běžné prostředky](https://github.com/Microsoft/VCSamples).
 
 Nemůžete přetahovat, kopírovat, vyjmout ani vkládat soubory prostředků v projektu (**prostředky**) a samostatné soubory. RC otevřené v dokumentu okna. To můžete provést v předchozích verzích produktu. Použijte pouze metodu přetažení mezi soubory. RC, které jsou otevřeny mimo projekt.
 
@@ -80,7 +80,7 @@ Při kopírování v prostředku můžete změnit jeho vlastnost jazyka nebo pod
 
 - Podmínka prostředku je definovaný symbol, který určuje podmínku, za kterou se má použít tato konkrétní kopie prostředku.
 
-Jazyk a podmínka prostředku jsou uvedeny v závorkách za názvem prostředku v okně **pracovního prostoru** . Zde je prostředek s `IDD_AboutBox` názvem použit `Finnish` jako jeho jazyk a jeho stav je `XX33`:
+Jazyk a podmínka prostředku jsou uvedeny v závorkách za názvem prostředku v okně **pracovního prostoru** . Zde prostředek s názvem `IDD_AboutBox` používá `Finnish` jako svůj jazyk a jeho stav je `XX33`:
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -126,8 +126,8 @@ Můžete importovat grafické prostředky (rastrové obrázky, ikony, kurzory a 
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
-[Postupy: Vytvořit prostředky](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Postupy: vytváření prostředků](../windows/how-to-create-a-resource-script-file.md)<br/>
 [Postupy: Zahrnutí prostředků v čase kompilace](../windows/how-to-include-resources-at-compile-time.md)<br/>

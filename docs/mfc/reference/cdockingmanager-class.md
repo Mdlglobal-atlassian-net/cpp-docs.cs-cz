@@ -161,11 +161,11 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
 ms.openlocfilehash: 8709b3a4eb3f57a3d2700ad7aaed16df994245c5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506874"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883920"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager – třída
 
@@ -181,7 +181,7 @@ class CDockingManager : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|Vytvoří ukotvené podokno a přidá ho do seznamu ovládacích panelů.|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Přidá popisovač do podokna pruhů do seznamu skrytých podoken panelu MDI.|
@@ -195,11 +195,11 @@ class CDockingManager : public CObject
 |[CDockingManager::BringBarsToTop](#bringbarstotop)|Přinese ukotvené pruhy, které mají zadané zarovnání na začátek.|
 |[CDockingManager::BuildPanesMenu](#buildpanesmenu)|Přidá do nabídky názvy ukotvených podoken a panelů nástrojů.|
 |[CDockingManager::CalcExpectedDockedRect](#calcexpecteddockedrect)|Vypočítá očekávaný obdélník ukotveného okna.|
-|[CDockingManager::Create](#create)|Vytvoří správce Docker.|
+|[CDockingManager:: Create](#create)|Vytvoří správce Docker.|
 |[CDockingManager::D eterminePaneAndStatus](#determinepaneandstatus)|Určuje podokno, které obsahuje daný bod a stav jeho ukotvení.|
-|[CDockingManager::DisableRestoreDockState](#disablerestoredockstate)|Povolí nebo zakáže načtení ukotveného rozložení z registru.|
-|[CDockingManager::DockPane](#dockpane)|Ukotví podokno do jiného podokna nebo okna rámce.|
-|[CDockingManager::DockPaneLeftOf](#dockpaneleftof)|Ukotví podokno nalevo od jiného podokna.|
+|[CDockingManager::D isableRestoreDockState](#disablerestoredockstate)|Povolí nebo zakáže načtení ukotveného rozložení z registru.|
+|[CDockingManager::D ockPane](#dockpane)|Ukotví podokno do jiného podokna nebo okna rámce.|
+|[CDockingManager::D ockPaneLeftOf](#dockpaneleftof)|Ukotví podokno nalevo od jiného podokna.|
 |[CDockingManager::EnableAutoHidePanes](#enableautohidepanes)|Povoluje ukotvení podokna do hlavního rámce, vytvoří ukotvené podokno a přidá jej do seznamu ovládacích panelů.|
 |[CDockingManager::EnableDocking](#enabledocking)|Vytvoří ukotvené podokno a povolí ukotvení podokna do hlavního rámce.|
 |[CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)|Zobrazí další tlačítko, které otevře místní nabídku s titulky všech ukotvených podoken.|
@@ -228,14 +228,14 @@ class CDockingManager : public CObject
 |[CDockingManager::IsOLEContainerMode](#isolecontainermode)|Určuje, zda je správce Docker v režimu kontejnerů OLE.|
 |[CDockingManager::IsPointNearDockSite](#ispointneardocksite)|Určuje, zda je zadaný bod poblíž webu Dock.|
 |[CDockingManager::IsPrintPreviewValid](#isprintpreviewvalid)|Určuje, zda je nastaven režim náhledu tisku.|
-|[CDockingManager::LoadState](#loadstate)|Načte stav správce Docker z registru.|
+|[CDockingManager:: LoadState](#loadstate)|Načte stav správce Docker z registru.|
 |[CDockingManager::LockUpdate](#lockupdate)|Zamkne dané okno.|
 |[CDockingManager::OnActivateFrame](#onactivateframe)|Volá se rozhraním, když je aktivní okno rámce nebo je deaktivované.|
 |[CDockingManager::OnClosePopupMenu](#onclosepopupmenu)|Volá se rozhraním, když aktivní místní nabídka zpracuje zprávu WM_DESTROY.|
 |[CDockingManager::OnMoveMiniFrame](#onmoveminiframe)|Volá se rozhraním, aby se přesunulo okno s minimálním rámcem.|
 |[CDockingManager::OnPaneContextMenu](#onpanecontextmenu)|Volá se rozhraním, když se vytvoří nabídka, která má seznam podoken.|
-|[CDockingManager::PaneFromPoint](#panefrompoint)|Vrátí podokno, které obsahuje daný bod.|
-|[CDockingManager::ProcessPaneContextMenuCommand](#processpanecontextmenucommand)|Volá se rozhraním pro výběr nebo zrušení zaškrtnutí políčka pro zadaný příkaz a přepočítání rozložení zobrazeného podokna.|
+|[CDockingManager::P aneFromPoint](#panefrompoint)|Vrátí podokno, které obsahuje daný bod.|
+|[CDockingManager::P rocessPaneContextMenuCommand](#processpanecontextmenucommand)|Volá se rozhraním pro výběr nebo zrušení zaškrtnutí políčka pro zadaný příkaz a přepočítání rozložení zobrazeného podokna.|
 |[CDockingManager::RecalcLayout](#recalclayout)|Přepočítá interní rozložení ovládacích prvků, které jsou k dispozici v seznamu ovládacích prvků.|
 |[CDockingManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|Uvolní prázdné kontejnery podokna.|
 |[CDockingManager::RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|Odebere zadané skryté podokno pruhů.|
@@ -258,13 +258,13 @@ class CDockingManager : public CObject
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Určuje, zda správce Docker skryje podokna v režimu kontejnerů OLE.|
-|[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Určuje globální režim uchycení.|
-|[CDockingManager::m_nDockSensitivity](#m_ndocksensitivity)|Určuje citlivost ukotvení.|
-|[CDockingManager::m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Určuje dobu v milisekundách, po jejímž uplynutí je ukotvené podokno v režimu okamžitého ukotvení.|
-|[CDockingManager::m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Určuje čas (v milisekundách), po kterém je panel nástrojů ukotven do hlavního okna rámce.|
+|[CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Určuje, zda správce Docker skryje podokna v režimu kontejnerů OLE.|
+|[CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal)|Určuje globální režim uchycení.|
+|[CDockingManager:: m_nDockSensitivity](#m_ndocksensitivity)|Určuje citlivost ukotvení.|
+|[CDockingManager:: m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Určuje dobu v milisekundách, po jejímž uplynutí je ukotvené podokno v režimu okamžitého ukotvení.|
+|[CDockingManager:: m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Určuje čas (v milisekundách), po kterém je panel nástrojů ukotven do hlavního okna rámce.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -272,11 +272,11 @@ Hlavní okno rámce vytvoří a automaticky Inicializuje tuto třídu.
 
 Objekt správce Docker obsahuje seznam všech podoken, která jsou v ukotveném rozložení, a také seznam všech oken [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) , která patří do hlavního okna rámce.
 
-Třída implementuje některé služby, které můžete použít k vyhledání podokna `CPaneFrameWnd` nebo okna. `CDockingManager` Tyto služby obvykle nebudete volat přímo, protože jsou zabaleny do objektu okna hlavního rámce. Další informace naleznete v tématu [Třída CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+Třída `CDockingManager` implementuje některé služby, které můžete použít k vyhledání podokna nebo `CPaneFrameWnd`ho okna. Tyto služby obvykle nebudete volat přímo, protože jsou zabaleny do objektu okna hlavního rámce. Další informace naleznete v tématu [Třída CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="customization-tips"></a>Tipy pro přizpůsobení
 
-Následující tipy platí pro `CDockingManager` objekty:
+Následující tipy se vztahují na `CDockingManager` objekty:
 
 - [Třída CDockingManager](../../mfc/reference/cdockingmanager-class.md) podporuje tyto režimy ukotvení:
 
@@ -286,13 +286,13 @@ Následující tipy platí pro `CDockingManager` objekty:
 
   - `AFX_DOCK_TYPE::DT_SMART`
 
-  Tyto režimy ukotvení jsou definovány pomocí [CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal) a jsou nastaveny voláním [CDockingManager:: SetDockingMode](#setdockingmode).
+  Tyto režimy ukotvení jsou definovány pomocí [CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal) a jsou nastaveny pomocí volání [CDockingManager:: SetDockingMode](#setdockingmode).
 
 - Pokud chcete vytvořit neplovoucí podokno bez změny velikosti, zavolejte metodu [CDockingManager:: AddPane](#addpane) . Tato metoda registruje podokno pomocí Správce docking, který je zodpovědný za rozložení podokna.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody ve `CDockingManager` třídě ke `CDockingManager` konfiguraci objektu. Příklad ukazuje, jak zobrazit další tlačítko, které otevře místní nabídku na titulky všech ukotvených podoken a jak nastavit režim ukotvení objektu. Tento fragment kódu je součástí ukázkového [vzorku sady Visual Studio](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody ve třídě `CDockingManager` ke konfiguraci objektu `CDockingManager`. Příklad ukazuje, jak zobrazit další tlačítko, které otevře místní nabídku na titulky všech ukotvených podoken a jak nastavit režim ukotvení objektu. Tento fragment kódu je součástí [ukázkového vzorku sady Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 
@@ -306,7 +306,7 @@ Následující příklad ukazuje, jak použít různé metody ve `CDockingManage
 
 **Záhlaví:** afxDockingManager. h
 
-##  <a name="adddocksite"></a>  CDockingManager::AddDockSite
+##  <a name="adddocksite"></a>CDockingManager::AddDockSite
 
 Vytvoří ukotvené podokno a přidá ho do seznamu ovládacích panelů.
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*info*<br/>
+*příjemce*<br/>
 pro Odkaz na strukturu informací, která obsahuje zarovnání ukotveného podokna.
 
 *ppDockBar*<br/>
@@ -430,14 +430,14 @@ virtual BOOL AdjustRectToClientArea(
 ### <a name="parameters"></a>Parametry
 
 *rectResult*<br/>
-pro Odkaz na `CRect` objekt
+pro Odkaz na objekt `CRect`
 
 *dwAlignment*<br/>
-pro Zarovnání `CRect` objektu
+pro Zarovnání objektu `CRect`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud bylo upraveno `CRect` zarovnání objektu; V opačném případě NEPRAVDA.
+TRUE, pokud bylo upraveno zarovnání objektu `CRect`; V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -623,11 +623,11 @@ Stav ukotvení může být jedna z následujících hodnot:
 |Hodnota AFX_CS_STATUS|Význam|
 |---------------------------|-------------|
 |CS_NOTHING|Ukazatel není nad dockou lokalitou. Proto nechejte podokno plovoucí.|
-|CS_DOCK_IMMEDIATELY|Ukazatel se nachází nad dokovacím webem v přímém režimu (styl DT_IMMEDIATE je povolen), takže podokno musí být ukotveno okamžitě.|
+|CS_DOCK_IMMEDIATELY|Ukazatel se nachází nad dokovacím webem v přímém režimu (DT_IMMEDIATE styl je povolen), takže podokno musí být ukotveno okamžitě.|
 |CS_DELAY_DOCK|Ukazatel je nad dockou lokalitou, která je v jiném dokovacím podokně, nebo je hranou hlavního rámce.|
 |CS_DELAY_DOCK_TO_TAB|Ukazatel je nad dockou lokalitou, která způsobuje, že je podokno ukotveno v okně s kartami. K tomu dochází, když je ukazatel myši nad titulkem jiného ukotveného podokna nebo přes oblast karet podokna s kartami.|
 
-##  <a name="disablerestoredockstate"></a>  CDockingManager::DisableRestoreDockState
+##  <a name="disablerestoredockstate"></a>CDockingManager::D isableRestoreDockState
 
 Povolí nebo zakáže načtení ukotveného rozložení z registru.
 
@@ -666,7 +666,7 @@ pro ID panelu, který se má ukotvit
 *lpRect*<br/>
 pro Cílový obdélník.
 
-##  <a name="dockpaneleftof"></a>  CDockingManager::DockPaneLeftOf
+##  <a name="dockpaneleftof"></a>CDockingManager::D ockPaneLeftOf
 
 Ukotví podokno nalevo od jiného podokna.
 
@@ -739,13 +739,13 @@ pro TRUE pro povolení nabídky ukotvit Web; v opačném případě FALSE.
 
 V nabídce ukotvit web se zobrazí následující možnosti pro změnu stavu ukotvení podokna:
 
-- `Floating`– Plovoucí podokno
+- `Floating` – Floatuje podokno
 
-- `Docking`– Ukotví podokno v hlavním rámci do umístění, kde bylo podokno naposledy ukotveno.
+- `Docking` – ukotví podokno v hlavním rámci do umístění, kde bylo podokno naposledy ukotveno.
 
-- `AutoHide`– Přepne podokno do režimu automatického skrývání.
+- `AutoHide` – přepne podokno do režimu automatického skrývání.
 
-- `Hide`-Skryje podokno
+- `Hide` – skryje podokno.
 
 Ve výchozím nastavení se tato nabídka nezobrazuje.
 
@@ -775,7 +775,7 @@ pro Text položky pro **přizpůsobení**
 *bToolbarsOnly*<br/>
 pro V případě hodnoty TRUE se v nabídce zobrazí pouze seznam panelů nástrojů aplikace. Pokud je hodnota FALSE, knihovna přidá do tohoto seznamu podokna ukotvení aplikace.
 
-##  <a name="finddocksite"></a>  CDockingManager::FindDockSite
+##  <a name="finddocksite"></a>CDockingManager::FindDockSite
 
 Načte podokno panelu, které je na zadané pozici a které má zadané zarovnání.
 
@@ -821,7 +821,7 @@ Objekt [CBasePane](../../mfc/reference/cbasepane-class.md) , který má zadané 
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="finddocksitebypane"></a>  CDockingManager::FindDockSiteByPane
+##  <a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane
 
 Vrátí podokno panelu, které má ID podokna cílového řádku.
 
@@ -838,7 +838,7 @@ pro Ukazatel na cílové podokno panelu.
 
 Podokno panelu, které má ID podokna cílového panelu; Hodnota NULL, pokud takové podokno pruhů neexistuje.
 
-##  <a name="fixupvirtualrects"></a>  CDockingManager::FixupVirtualRects
+##  <a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects
 
 Potvrdí všechny aktuální pozice panelu nástrojů na virtuální obdélníky.
 
@@ -848,7 +848,7 @@ virtual void FixupVirtualRects();
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel začne přetahovat panel nástrojů, aplikace si zapamatuje svou původní pozici ve virtuálním *obdélníku*. Když uživatel přesune panel nástrojů napříč jeho lokalitou Dock, panel nástrojů může přesunout další panely nástrojů. Původní pozice ostatních panelů nástrojů jsou uloženy v odpovídajících virtuálních obdélnících.
+Když uživatel začne přetahovat panel nástrojů, aplikace si zapamatuje svou původní pozici ve *virtuálním obdélníku*. Když uživatel přesune panel nástrojů napříč jeho lokalitou Dock, panel nástrojů může přesunout další panely nástrojů. Původní pozice ostatních panelů nástrojů jsou uloženy v odpovídajících virtuálních obdélnících.
 
 ##  <a name="framefrompoint"></a>CDockingManager::FrameFromPoint
 
@@ -1057,7 +1057,7 @@ pro Ukazatel na pruh, který má být vyloučen z skrývání.
 *bImmediately*<br/>
 pro TRUE pro okamžité skrytí podokna; FALSE pro skrytí podokna s efektem skrývání.
 
-##  <a name="insertdocksite"></a>  CDockingManager::InsertDockSite
+##  <a name="insertdocksite"></a>CDockingManager::InsertDockSite
 
 Vytvoří ukotvené podokno a vloží ho do seznamu ovládacích panelů.
 
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-*info*<br/>
+*příjemce*<br/>
 pro Struktura, která obsahuje informace o zarovnání k podoknu Dock.
 
 *dwAlignToInsertAfter*<br/>
@@ -1113,7 +1113,7 @@ TRUE, pokud je ovládací podokno úspěšně přidáno do seznamu ovládacích 
 
 Tato metoda vrátí hodnotu false, pokud je ovládací podokno již v seznamu ovládacích panelů nebo pokud cílové podokno neexistuje v seznamu ovládacích panelů.
 
-##  <a name="isdocksitemenu"></a>  CDockingManager::IsDockSiteMenu
+##  <a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu
 
 Určuje, zda se v popiscích všech podoken zobrazí místní nabídka.
 
@@ -1157,7 +1157,7 @@ TRUE, pokud je správce Docker v režimu kontejnerů OLE; v opačném případě
 
 V režimu kontejnerů OLE jsou všechna ukotvená podokna a panely nástrojů aplikace skryté. Podokna jsou také skryta v tomto režimu, pokud jste nastavili [CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) na hodnotu true.
 
-##  <a name="ispointneardocksite"></a>  CDockingManager::IsPointNearDockSite
+##  <a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite
 
 Určuje, zda je zadaný bod poblíž webu Dock.
 
@@ -1183,7 +1183,7 @@ mimo TRUE, pokud je bod poblíž vnějšího ohraničení ukotveného webu; V op
 
 TRUE, pokud je bod poblíž dokovací lokality; v opačném případě FALSE.
 
-##  <a name="isprintpreviewvalid"></a>  CDockingManager::IsPrintPreviewValid
+##  <a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid
 
 Určuje, zda je nastaven režim náhledu tisku.
 
@@ -1217,7 +1217,7 @@ pro ID správce Docker
 
 TRUE, pokud se stav Docker Manageru úspěšně načetl; v opačném případě FALSE.
 
-##  <a name="lockupdate"></a>  CDockingManager::LockUpdate
+##  <a name="lockupdate"></a>CDockingManager::LockUpdate
 
 Zamkne dané okno.
 
@@ -1234,7 +1234,7 @@ pro TRUE, pokud je okno uzamčené; V opačném případě NEPRAVDA.
 
 Když je okno uzamčené, nedá se přesunout a nedá se překreslit.
 
-##  <a name="m_bhidedockingbarsincontainermode"></a>  CDockingManager::m_bHideDockingBarsInContainerMode
+##  <a name="m_bhidedockingbarsincontainermode"></a>CDockingManager:: m_bHideDockingBarsInContainerMode
 
 Určuje, zda správce Docker skryje podokna v režimu kontejnerů OLE.
 
@@ -1246,7 +1246,7 @@ AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 
 Nastavte tuto hodnotu na FALSE, pokud chcete zachovat všechna podokna ukotvená do hlavního rámce, když je aplikace v režimu kontejneru OLE. Ve výchozím nastavení je tato hodnota TRUE.
 
-##  <a name="m_dockmodeglobal"></a>  CDockingManager::m_dockModeGlobal
+##  <a name="m_dockmodeglobal"></a>CDockingManager:: m_dockModeGlobal
 
 Určuje globální režim uchycení.
 
@@ -1258,7 +1258,7 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 
 Ve výchozím nastavení používá každý dokovací podokno tento režim ukotvení. Další informace o hodnotách, na které lze toto pole nastavit, naleznete v tématu [CBasePane:: GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
 
-##  <a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity
+##  <a name="m_ndocksensitivity"></a>CDockingManager:: m_nDockSensitivity
 
 Určuje citlivost ukotvení.
 
@@ -1270,7 +1270,7 @@ AFX_IMPORT_DATA static int m_nDockSensitivity;
 
 Citlivost ukotvení definuje způsob, jakým se může plovoucí podokno přiblíží k dokovacímu podoknu, dokovacímu webu nebo jinému podoknu, než systém změní stav na ukotveno.
 
-##  <a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock
+##  <a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager:: m_nTimeOutBeforeDockingBarDock
 
 Určuje dobu v milisekundách, po jejímž uplynutí je ukotvené podokno v režimu okamžitého ukotvení.
 
@@ -1282,7 +1282,7 @@ static UINT m_nTimeOutBeforeDockingBarDock;
 
 Předtím, než je podokno ukotveno, rozhraní počká určenou dobu. Tím se zabrání nechtěnému ukotvení podokna do umístění, když ho uživatel stále přetáhne.
 
-##  <a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock
+##  <a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager:: m_nTimeOutBeforeToolBarDock
 
 Určuje čas (v milisekundách), po kterém je panel nástrojů ukotven do hlavního okna rámce.
 
@@ -1294,7 +1294,7 @@ static UINT m_nTimeOutBeforeToolBarDock;
 
 Předtím, než je panel nástrojů ukotven, systém počká zadanou dobu. Tím zabráníte nechtěnému ukotvení panelu nástrojů na místo, když ho uživatel stále přetáhne.
 
-##  <a name="onactivateframe"></a>  CDockingManager::OnActivateFrame
+##  <a name="onactivateframe"></a>CDockingManager::OnActivateFrame
 
 Volá se rozhraním, když je aktivní okno rámce nebo je deaktivované.
 
@@ -1317,7 +1317,7 @@ void OnClosePopupMenu();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní pošle zprávu WM_DESTROY, když se chystá Zavřít aktuální hlavní okno. Přepište tuto metodu pro zpracování oznámení `CMFCPopupMenu` z objektů, které patří do okna rámce, `CMFCPopupMenu` když objekt zpracovává zprávu WM_DESTROY.
+Rozhraní pošle WM_DESTROYovou zprávu, když se chystá Zavřít aktuální hlavní okno. Přepište tuto metodu pro zpracování oznámení z `CMFCPopupMenu` objektů, které patří do okna rámce, když objekt `CMFCPopupMenu` zpracovává zprávu WM_DESTROY.
 
 ##  <a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame
 
@@ -1399,7 +1399,7 @@ Objekt odvozený od [CBasePane](../../mfc/reference/cbasepane-class.md), který 
 
 ### <a name="remarks"></a>Poznámky
 
-Když funkce vrátí a najde podokno, *dwAlignment* obsahuje zarovnání zadaného bodu. Například pokud je bod nejblíže horní části podokna, *dwAlignment* je nastaven na CBRS_ALIGN_TOP.
+Když funkce vrátí a najde podokno, *dwAlignment* obsahuje zarovnání zadaného bodu. Například pokud je bod nejblíže horní části podokna, *dwAlignment* je nastaveno na CBRS_ALIGN_TOP.
 
 ##  <a name="processpanecontextmenucommand"></a>CDockingManager::P rocessPaneContextMenuCommand
 
@@ -1422,14 +1422,14 @@ pro ID ovládacího panelu v nabídce
 pro Kód oznámení příkazu
 
 *pExtra*<br/>
-pro Ukazatel na typ void, který je převeden na ukazatel na `CCmdUI` , pokud je *nCode* CN_UPDATE_COMMAND_UI.
+pro Ukazatel na typ void, který je převeden na ukazatel na `CCmdUI`, pokud je CN_UPDATE_COMMAND_UI *nCode* .
 
 *pHandlerInfo*<br/>
 pro Ukazatel na strukturu informací. Tento parametr není používán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud *pEXtra* není null a *NCODE* se rovná CN_UPDATE_COMMAND_UI, nebo pokud existuje ovládací panel se zadaným *NID*.
+TRUE, pokud *pEXtra* není null a *nCode* se rovná CN_UPDATE_COMMAND_UI, nebo pokud je k dispozici ovládací panel se zadaným *NID*.
 
 ##  <a name="recalclayout"></a>CDockingManager::RecalcLayout
 
@@ -1640,7 +1640,7 @@ static void SetDockingMode(
 Určuje nový režim ukotvení. Další informace najdete v části poznámky.
 
 *použit*<br/>
-Určuje motiv, který má být použit pro značky inteligentního Docker. Může to být jedna z následujících hodnot výčtu: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+Určuje motiv, který má být použit pro značky inteligentního Docker. Může to být jedna z následujících hodnot výčtu: AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1650,9 +1650,9 @@ Zavolejte tuto statickou metodu pro nastavení režimu ukotvení.
 
 - DT_STANDARD – standardní režim docking, jak je implementováno v aplikaci Visual Studio .NET 2003. Podokna jsou přetažena bez kontextu přetahování.
 
-- DT_IMMEDIATE – okamžitý režim docking, jak je implementován v aplikaci Microsoft Visio. Podokna jsou přetažena pomocí kontextu přetažení, ale nejsou zobrazeny žádné značky.
+- DT_IMMEDIATE – režim docking, jak je implementován v aplikaci Microsoft Visio. Podokna jsou přetažena pomocí kontextu přetažení, ale nejsou zobrazeny žádné značky.
 
-- DT_SMART – režim inteligentního docking, jak je implementován v aplikaci Visual Studio 2005. Podokna jsou přetažena s přetahováním kontextu a jsou zobrazeny inteligentní značky, které ukazují, kde může být podokno ukotveno.
+- DT_SMART – režim inteligentního Docker, jak je implementováno v aplikaci Visual Studio 2005. Podokna jsou přetažena s přetahováním kontextu a jsou zobrazeny inteligentní značky, které ukazují, kde může být podokno ukotveno.
 
 ##  <a name="setdockstate"></a>CDockingManager::SetDockState
 
@@ -1742,7 +1742,7 @@ void StartSDocking(CWnd* pDockingWnd);
 *pDockingWnd*<br/>
 pro Ukazatel na ukotvení okna.
 
-##  <a name="stopsdocking"></a>  CDockingManager::StopSDocking
+##  <a name="stopsdocking"></a>CDockingManager::StopSDocking
 
 Zastaví inteligentní Docker.
 
@@ -1760,11 +1760,11 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí jednu z následujících hodnot výčtu: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
+Vrátí jednu z následujících hodnot výčtu: AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

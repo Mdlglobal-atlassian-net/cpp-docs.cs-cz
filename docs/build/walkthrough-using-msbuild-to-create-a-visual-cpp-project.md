@@ -5,49 +5,49 @@ helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
 ms.openlocfilehash: c93867f3be3b17f703c549aa5c05f3d327934c26
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837604"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856284"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild
 
-Tento návod ukazuje, jak používat MSBuild k sestavení sady Visual Studio C++ projektu z příkazového řádku. Se dozvíte, jak vytvořit zdrojové soubory C++ a soubor projektu založený na formátu XML pro konzolovou aplikaci Visual C++. Po vytvoření projektu, se dozvíte, jak přizpůsobit proces sestavení.
+Tento návod ukazuje, jak použít MSBuild k sestavení projektu sady Visual C++ Studio na příkazovém řádku. Naučíte se, jak vytvořit C++ zdrojové soubory a soubor projektu založený na jazyce XML pro konzolovou aplikaci C++ Visual Console. Po sestavení projektu se dozvíte, jak přizpůsobit proces sestavení.
 
 Tento návod znázorňuje následující úlohy:
 
-- Vytváření zdrojových souborů C++ pro váš projekt.
+- Vytváření C++ zdrojových souborů pro projekt.
 
-- Vytvoření souboru projektu XML MSBuild.
+- Vytváření souboru projektu XML MSBuild.
 
 - Použití nástroje MSBuild k sestavení projektu.
 
 - Použití nástroje MSBuild k přizpůsobení projektu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-Budete potřebovat k dokončení tohoto návodu:
+K dokončení tohoto návodu potřebujete následující:
 
-- Kopie sady Visual Studio s **vývoj desktopových aplikací pomocí C++** nainstalovaná úloha.
+- Kopie sady Visual Studio s nainstalovanou úlohou **vývoj C++ pro desktopy**
 
-- Obecné principy systému MSBuild.
-
-> [!NOTE]
-> Tento postup nepoužívejte, pokud máte v úmyslu později upravit soubor projektu s použitím rozhraní IDE sady Visual Studio. Pokud jste ručně vytvořili soubor .vcxproj, zejména v případě, že projekt používá zástupné znaky v položkách projektu nemusí být schopni upravit nebo načtení, integrovaném vývojovém prostředí sady Visual Studio.
+- Obecné porozumění systému MSBuild.
 
 > [!NOTE]
-> Většina nízké úrovně sestavení pokyny jsou součástí **.targets** a **.props** soubory, které jsou definovány v adresáři VCTargets uložená ve vlastnosti `$(VCTargetsPath)`. Výchozí cesta pro tyto soubory v aplikaci Visual Studio. 2019 Enterprise Edition je C:\Program Files (x86) \Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props.
+> Nepoužívejte tento přístup, pokud máte v úmyslu později upravit soubor projektu pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio. Vytvoříte-li soubor. vcxproj ručně, rozhraní IDE sady Visual Studio nemusí být schopno ho upravit ani načíst, zejména v případě, že projekt používá zástupné znaky v položkách projektu.
 
-## <a name="creating-the-c-source-files"></a>Vytváření zdrojových souborů C++
+> [!NOTE]
+> Většina pokynů pro sestavení na nízké úrovni je obsažena v souborech **. targets** a **. props** , které jsou definovány v adresáři VCTargets, uložené ve vlastnosti `$(VCTargetsPath)`. Výchozí cesta pro tyto soubory v aplikaci Visual Studio 2019 Enterprise Edition je C:\Program Files (x86) \Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props.
 
-V tomto návodu vytvoříte projekt, který obsahuje zdrojový soubor a soubor hlaviček. Zdrojový soubor main.cpp obsahuje hlavní funkci pro konzolové aplikace. Main.h v souboru záhlaví obsahuje kód přikazující zahrnutí souboru záhlaví iostream. Tyto soubory C++ můžete vytvořit pomocí sady Visual Studio nebo textový editor, třeba Visual Studio Code.
+## <a name="creating-the-c-source-files"></a>Vytváření C++ zdrojových souborů
 
-### <a name="to-create-the-c-source-files-for-your-project"></a>Vytvoření zdrojových souborů C++ pro váš projekt
+V tomto návodu vytvoříte projekt, který má zdrojový soubor a hlavičkový soubor. Zdrojový soubor Main. cpp obsahuje hlavní funkci pro konzolovou aplikaci. Hlavičkový soubor Main. h obsahuje kód pro zahrnutí hlavičkového souboru iostream –. Tyto C++ soubory můžete vytvořit pomocí sady Visual Studio nebo textového editoru, jako je například Visual Studio Code.
+
+### <a name="to-create-the-c-source-files-for-your-project"></a>Vytvoření C++ zdrojových souborů pro váš projekt
 
 1. Vytvořte adresář pro váš projekt.
 
-1. Vytvořte soubor s názvem main.cpp a do tohoto souboru přidejte následující kód:
+1. Vytvořte soubor s názvem Main. cpp a do tohoto souboru přidejte následující kód:
 
     ```cpp
     // main.cpp : the application source code.
@@ -60,33 +60,33 @@ V tomto návodu vytvoříte projekt, který obsahuje zdrojový soubor a soubor h
     }
     ```
 
-1. Vytvořte soubor s názvem main.h a do tohoto souboru přidejte následující kód:
+1. Vytvořte soubor s názvem Main. h a do tohoto souboru přidejte následující kód:
 
     ```cpp
     // main.h: the application header code.
     /* Additional source code to include. */
     ```
 
-## <a name="creating-the-xml-msbuild-project-file"></a>Vytváření XML souboru projektu nástroje MSBuild
+## <a name="creating-the-xml-msbuild-project-file"></a>Vytváření souboru projektu XML MSBuild
 
-Soubor projektu MSBuild je soubor XML, který obsahuje kořenový prvek projektu (`<Project>`). V následujícím příkladu projektu `<Project>` prvek obsahuje sedm podřízených elementů:
+Soubor projektu MSBuild je soubor XML, který obsahuje kořenový prvek projektu (`<Project>`). V následujícím ukázkovém projektu `<Project>` element obsahuje sedm podřízených elementů:
 
-- Tři značky skupiny položek (`<ItemGroup>`), které určují konfiguraci projektu a platforem, název zdrojového souboru a název souboru hlaviček.
+- Tři značky skupin položek (`<ItemGroup>`), které určují konfiguraci a platformu projektu, název zdrojového souboru a název souboru hlaviček.
 
-- Tři tagy pro import (`<Import>`), které určují umístění nastavení Microsoft Visual C++.
+- Tři značky importu (`<Import>`), které určují umístění nastavení Microsoft Visual C++ .
 
 - Značka skupiny vlastností (`<PropertyGroup>`), která určuje nastavení projektu.
 
-### <a name="to-create-the-msbuild-project-file"></a>K vytvoření souboru projektu MSBuild
+### <a name="to-create-the-msbuild-project-file"></a>Vytvoření souboru projektu MSBuild
 
-1. Pomocí textového editoru vytvořte soubor projektu s názvem `myproject.vcxproj`a potom přidejte následující kořen `<Project>` elementu. Vložte prvky do následujících kroků postupu mezi kořenové `<Project>` značky. (Použít atribut ToolsVersion = "15,0", pokud používáte Visual Studio 2017 nebo ToolsVersion = "16,0", pokud používáte Visual Studio 2019.)
+1. Pomocí textového editoru vytvořte soubor projektu s názvem `myproject.vcxproj`a poté přidejte následující kořenový prvek `<Project>`. Vložte prvky do následujících kroků procedury mezi kořenovými `<Project>` značkami. (Použijte ToolsVersion = "15.0", pokud používáte Visual Studio 2017 nebo ToolsVersion = "16.0", pokud používáte Visual Studio 2019.)
 
     ```xml
     <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
-1. Přidejte následující dva `<ProjectConfiguration>` podřízené elementy v `<ItemGroup>` elementu. Podřízený prvek určuje ladění a konfigurace pro operační systém Windows 32-bit verze:
+1. Do `<ItemGroup>` elementu přidejte následující dva `<ProjectConfiguration>` podřízené prvky. Podřízený element určuje konfiguraci ladění a vydání pro 32 operační systém Windows:
 
     ```xml
     <ItemGroup>
@@ -101,13 +101,13 @@ Soubor projektu MSBuild je soubor XML, který obsahuje kořenový prvek projektu
     </ItemGroup>
     ```
 
-1. Přidejte následující `<Import>` element, který určuje cestu k výchozímu nastavení C++ pro tento projekt:
+1. Přidejte následující prvek `<Import>`, který určuje cestu k výchozímu C++ nastavení pro tento projekt:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-1. Přidejte následující element skupiny vlastností (`<PropertyGroup>`), který určuje dvě vlastnosti projektu. (Verze 141 použijte, pokud používáte Visual Studio 2017 nebo v142 Pokud používáte Visual Studio 2019.)
+1. Přidejte následující prvek skupiny vlastností (`<PropertyGroup>`), který určuje dvě vlastnosti projektu. (Použijte v141, pokud používáte Visual Studio 2017 nebo V142, pokud používáte Visual Studio 2019.)
 
     ```xml
     <PropertyGroup>
@@ -116,13 +116,13 @@ Soubor projektu MSBuild je soubor XML, který obsahuje kořenový prvek projektu
     </PropertyGroup>
     ```
 
-1. Přidejte následující `<Import>` element, který určuje cestu k aktuálnímu nastavení C++ pro tento projekt:
+1. Přidejte následující prvek `<Import>`, který určuje cestu k aktuálnímu C++ nastavení pro tento projekt:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-1. Přidejte následující `<ClCompile>` podřízený element v `<ItemGroup>` elementu. Podřízený prvek určuje název pro kompilaci zdrojového souboru jazyka C/C++:
+1. Do `<ItemGroup>` elementu přidejte následující `<ClCompile>` podřízený element. Podřízený prvek určuje názevC++ zdrojového souboru jazyka C, který má být zkompilován:
 
     ```xml
     <ItemGroup>
@@ -131,9 +131,9 @@ Soubor projektu MSBuild je soubor XML, který obsahuje kořenový prvek projektu
     ```
 
    > [!NOTE]
-   > `<ClCompile>` je *cíl sestavení* a je definován v **VCTargets** adresáře.
+   > `<ClCompile>` je *cíl sestavení* a je definován v adresáři **VCTargets** .
 
-1. Přidejte následující `<ClInclude>` podřízený element v `<ItemGroup>` elementu. Podřízený prvek určuje název hlavičkového souboru pro zdrojový soubor jazyka C/C++:
+1. Do `<ItemGroup>` elementu přidejte následující `<ClInclude>` podřízený element. Podřízený prvek určuje název hlavičkového souboru pro C/C++ zdrojový soubor:
 
     ```xml
     <ItemGroup>
@@ -141,7 +141,7 @@ Soubor projektu MSBuild je soubor XML, který obsahuje kořenový prvek projektu
     </ItemGroup>
     ```
 
-1. Přidejte následující `<Import>` prvek, který určuje cestu k souboru, který definuje cíl pro tento projekt:
+1. Přidejte následující prvek `<Import>`, který určuje cestu k souboru, který definuje cíl pro tento projekt:
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
@@ -149,7 +149,7 @@ Soubor projektu MSBuild je soubor XML, který obsahuje kořenový prvek projektu
 
 ### <a name="complete-project-file"></a>Dokončit soubor projektu
 
-Následující kód ukazuje celý soubor projektu, který jste vytvořili v předchozím postupu. (Použít atribut ToolsVersion = "15,0" pro Visual Studio 2017.)
+Následující kód ukazuje kompletní soubor projektu, který jste vytvořili v předchozím postupu. (Použijte ToolsVersion = "15.0" pro Visual Studio 2017.)
 
 ```xml
 <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -179,61 +179,61 @@ Následující kód ukazuje celý soubor projektu, který jste vytvořili v pře
 </Project>
 ```
 
-## <a name="using-msbuild-to-build-your-project"></a>Použití nástroje MSBuild k sestavení projektu
+## <a name="using-msbuild-to-build-your-project"></a>Sestavení projektu pomocí nástroje MSBuild
 
-Zadejte následující příkaz na příkazovém řádku k vytvoření konzolové aplikace:
+Na příkazovém řádku zadejte následující příkaz pro sestavení konzolové aplikace:
 
 `msbuild myproject.vcxproj /p:configuration=debug`
 
-Nástroj MSBuild vytvoří adresář pro výstupní soubory a potom zkompiluje a propojí vaše projekty ke generování programu Myproject.exe. Po dokončení procesu sestavení, použijte následující příkaz ke spuštění aplikace ve složce ladění:
+Nástroj MSBuild vytvoří adresář pro výstupní soubory a poté zkompiluje a propojí váš projekt, aby vygeneroval program MyProject. exe. Po dokončení procesu sestavení pomocí následujícího příkazu spusťte aplikaci ze složky pro ladění:
 
 `myproject`
 
-Aplikace by měla zobrazit "Hello, MSBuild!" v okně konzoly.
+Aplikace by měla v MSBuildu zobrazovat text "Hello". v okně konzoly.
 
-## <a name="customizing-your-project"></a>Přizpůsobení vašeho projektu
+## <a name="customizing-your-project"></a>Přizpůsobení projektu
 
-Nástroj MSBuild umožňuje spustit předdefinované cíle sestavení, použít uživatelem definované vlastnosti a použít vlastní nástroje, události a kroky sestavení. Tato část ilustruje následující úkoly:
+Nástroj MSBuild umožňuje spustit předdefinované cíle sestavení, použít uživatelsky definované vlastnosti a použít vlastní nástroje, události a kroky sestavení. Tato část ilustruje následující úlohy:
 
 - Použití nástroje MSBuild s cíli sestavení.
 
-- Použití nástroje MSBuild s vlastnostmi sestavení.
+- Použití nástroje MSBuild s vlastnostmi buildu.
 
-- Použití nástroje MSBuild s 64bitovým kompilátorem a nástroji.
+- Použití nástroje MSBuild s 64m kompilátorem a nástroji.
 
 - Použití nástroje MSBuild s různými sadami nástrojů.
 
-- Přidání vlastního nastavení MSBuild.
+- Přidávání přizpůsobení nástroje MSBuild.
 
 ### <a name="using-msbuild-with-build-targets"></a>Použití nástroje MSBuild s cíli sestavení
 
-A *cíl sestavení* je pojmenovaná sada předdefinovaných nebo uživatelem definované příkazů, které mohou být provedeny během sestavení. Použít možnost příkazového řádku target (`/t`) Chcete-li určit cíle sestavení. Pro `myproject` příklad projektu, předdefinované **čisté** cíle odstraní všechny soubory ve složce ladění a vytvoří nový soubor protokolu.
+*Cíl sestavení* je pojmenovaná sada předdefinovaných nebo uživatelsky definovaných příkazů, které lze spustit během sestavení. K určení cíle sestavení použijte možnost příkazového řádku cíle (`/t`). V případě projektu `myproject` příkladu předdefinovaný **čistý** cíl odstraní všechny soubory ve složce Debug a vytvoří nový soubor protokolu.
 
-Na příkazovém řádku zadejte následující příkaz k čištění `myproject`.
+Na příkazovém řádku zadejte následující příkaz pro vyčištění `myproject`.
 
 `msbuild myproject.vcxproj /t:clean`
 
 ### <a name="using-msbuild-with-build-properties"></a>Použití nástroje MSBuild s vlastnostmi sestavení
 
-Možnost příkazového řádku vlastností (`/p`) umožňuje přepsat vlastnost v souboru sestavení projektu. V `myproject` příklad projektu, vydání nebo ladícího sestavení konfigurace je určena `Configuration` vlastnost. A je určený operační systém, který se má spustit sestavenou aplikaci `Platform` vlastnost.
+Možnost příkazového řádku vlastnosti (`/p`) umožňuje přepsat vlastnost v souboru sestavení projektu. V projektu `myproject` příkladu je konfigurace verze nebo sestavení ladění určena vlastností `Configuration`. A operační systém, který je určen ke spuštění sestavené aplikace, je určen vlastností `Platform`.
 
-Na příkazovém řádku zadejte následující příkaz k vytvoření nového sestavení ladění aplikace `myproject` aplikaci, která je určena pro spuštění na 32bitová verze Windows.
+Na příkazovém řádku zadejte následující příkaz pro vytvoření ladicího sestavení aplikace `myproject`, které je určeno ke spuštění v 32 bitových oknech.
 
 `msbuild myproject.vcxproj /p:configuration=debug /p:platform=win32`
 
-Předpokládejme, že `myproject` příklad projektu také definuje konfiguraci pro Windows 64-bit a jinou konfiguraci pro vlastní operační systém s názvem `myplatform`.
+Předpokládejme, že `myproject` ukázkový projekt také definuje konfiguraci pro 64 Windows a další konfiguraci pro vlastní operační systém s názvem `myplatform`.
 
-Na příkazovém řádku zadejte následující příkaz k vytvoření verze sestavení, která běží na Windows 64-bit.
+Na příkazovém řádku zadejte následující příkaz, který vytvoří sestavení pro vydání, které běží v 64-bitových oknech.
 
 `msbuild myproject.vcxproj /p:configuration=release /p:platform=x64`
 
-Na příkazovém řádku zadejte následující příkaz k vytvoření sestavení pro vydání pro `myplatform`.
+Na příkazovém řádku zadejte následující příkaz, který vytvoří sestavení pro vydání pro `myplatform`.
 
 `msbuild myproject.vcxproj /p:configuration=release /p:platform=myplatform`
 
-### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>Použití nástroje MSBuild s 64bitovým kompilátorem a nástroji
+### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>Použití nástroje MSBuild s 64 kompilátorem a nástroji
 
-Pokud jste nainstalovali Visual Studio na Windows 64-bit, ve výchozím nastavení, nainstaluje se x64 64bitové nativní a křížové nástroje. Můžete nakonfigurovat nástroj MSBuild pro použití 64bitového kompilátoru a nástrojů k sestavení aplikace nastavením `PreferredToolArchitecture` vlastnost. Tato vlastnost nemá vliv na vlastnosti projektu konfiguraci nebo platformu. Ve výchozím nastavení se používá 32bitovou verzi nástroje. Chcete-li určit 64bitovou verzi kompilátoru a nástrojů, přidejte následující element skupiny vlastností do souboru projektu Myproject.vcxproj po `Microsoft.Cpp.default.props` \<Import / > prvku:
+Pokud jste nainstalovali Visual Studio na 64 Windows, nainstalují se standardně 64 nativní a křížové nástroje x64. Nástroj MSBuild můžete nakonfigurovat tak, aby používal 64 kompilátor a nástroje pro sestavení aplikace nastavením vlastnosti `PreferredToolArchitecture`. Tato vlastnost nemá vliv na vlastnosti konfigurace projektu nebo platformy. Ve výchozím nastavení se používá 32 verze nástrojů. Chcete-li určit 64 verzi kompilátoru a nástrojů, přidejte následující prvek skupiny vlastností do souboru projektu MyProject. vcxproj `Microsoft.Cpp.default.props` za \<elementu Import/>:
 
 ```xml
 <PropertyGroup>
@@ -241,13 +241,13 @@ Pokud jste nainstalovali Visual Studio na Windows 64-bit, ve výchozím nastaven
 </PropertyGroup>
 ```
 
-Na příkazovém řádku zadejte následující příkaz k použití 64bitových nástrojů k sestavení aplikace.
+Na příkazovém řádku zadejte následující příkaz pro použití 64 bitových nástrojů k sestavení aplikace.
 
 `msbuild myproject.vcxproj /p:PreferredToolArchitecture=x64`
 
-### <a name="using-msbuild-with-a-different-toolset"></a>Použití nástroje MSBuild s různými sadami nástrojů
+### <a name="using-msbuild-with-a-different-toolset"></a>Použití nástroje MSBuild s jinou sadou nástrojů
 
-Pokud máte sady nástrojů a knihovny pro jiné verze jazyka Visual C++ nainstalovaná, nástroj MSBuild můžete vytvářet aplikace pro aktuální verzi jazyka Visual C++, nebo pro ostatní nainstalované verze. Například pokud jste nainstalovali sadu Visual Studio 2012, chcete-li určit sadu nástrojů Visual C++ 11.0 pro systém Windows XP, přidejte následující element skupiny vlastností do souboru projektu Myproject.vcxproj po `Microsoft.Cpp.props` \<Import / > prvku:
+Máte-li sady nástrojů a knihovny pro jiné verze aplikace Visual C++ , nástroj MSBuild může sestavovat aplikace buď pro aktuální verzi C++ vizuálu, nebo pro ostatní nainstalované verze. Pokud jste například nainstalovali sadu Visual Studio 2012, chcete-li zadat sadu nástrojů C++ Visual 11,0 pro systém Windows XP, přidejte následující element skupiny vlastností do souboru projektu MyProject. vcxproj `Microsoft.Cpp.props` za \<elementu Import/>:
 
 ```xml
 <PropertyGroup>
@@ -255,13 +255,13 @@ Pokud máte sady nástrojů a knihovny pro jiné verze jazyka Visual C++ nainsta
 </PropertyGroup>
 ```
 
-Chcete-li znovu sestavit projekt pomocí sady nástrojů Visual C++ 11.0 Windows XP, zadejte následující příkazy:
+Chcete-li projekt znovu sestavit pomocí sady C++ nástrojů Visual 11,0 Windows XP, zadejte následující příkazy:
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
 
-### <a name="adding-msbuild-customizations"></a>Přidání vlastního nastavení MSBuild
+### <a name="adding-msbuild-customizations"></a>Přidávání přizpůsobení nástroje MSBuild
 
-Nástroj MSBuild poskytuje různé způsoby přizpůsobení procesu sestavení. Následující témata ukazují, jak přidat vlastní kroky sestavení, nástroje a události do vašeho projektu nástroje MSBuild:
+Nástroj MSBuild poskytuje různé způsoby přizpůsobení procesu sestavení. Následující témata ukazují, jak přidat vlastní kroky sestavení, nástroje a události do projektu nástroje MSBuild:
 
 - [Postupy: Přidání vlastního kroku sestavení do projektů MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 

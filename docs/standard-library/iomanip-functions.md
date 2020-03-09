@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518462"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856501"
 ---
 # <a name="ltiomanipgt-functions"></a>funkce &lt;iomanip&gt;
 
@@ -42,7 +42,7 @@ ms.locfileid: "76518462"
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
 |[setprecision](#setprecision)|[setw](#setw)|
 
-## <a name="iomanip_get_money"></a>  get_money
+## <a name="iomanip_get_money"></a>get_money
 
 Extrahuje peněžní hodnotu z datového proudu pomocí požadovaného formátu a vrátí hodnotu v parametru.
 
@@ -57,7 +57,7 @@ T7 get_money(Money& amount, bool use_intl);
 Extrahovaná peněžní hodnota.
 
 *use_intl*\
-Pokud **má hodnotu true**, použijte mezinárodní formát. Výchozí hodnota je **false**.
+Pokud **má hodnotu true**, použijte mezinárodní formát. Výchozí hodnota je **false (NEPRAVDA**).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -651,6 +651,6 @@ l4 = 4096
 l5 = 65536
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<iomanip>](../standard-library/iomanip.md)
+[\<iomanip >](../standard-library/iomanip.md)
