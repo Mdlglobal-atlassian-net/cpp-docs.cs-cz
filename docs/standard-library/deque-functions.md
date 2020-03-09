@@ -1,21 +1,21 @@
 ---
-title: '&lt;deque –&gt; funkce'
+title: funkce &lt;deque&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - deque/std::swap
 ms.assetid: 1d14be53-b0b7-4f66-90cc-65bdeac563fd
 ms.openlocfilehash: e1bbdb864aabf892ca34860911412e4cf737e8cd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245662"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883791"
 ---
-# <a name="ltdequegt-functions"></a>&lt;deque –&gt; funkce
+# <a name="ltdequegt-functions"></a>funkce &lt;deque&gt;
 
-## <a name="swap"></a> Prohození
+## <a name="swap"></a>adresu
 
-Vymění prvky dvou deques.
+Vyměňuje prvky dvou deques.
 
 ```cpp
 void swap(
@@ -25,12 +25,12 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `deque`.
 
-*doprava*\
+*pravé*\
 Objekt typu `deque`.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [deque::swap](../standard-library/deque-class.md#swap).
+Podívejte se na příklad pro [deque:: swap](../standard-library/deque-class.md#swap).

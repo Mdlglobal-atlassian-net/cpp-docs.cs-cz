@@ -35,15 +35,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
 ms.openlocfilehash: b56e9052533269ba62d248312f07ac16db71bf4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253046"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876371"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb Class
 
-Třída kolekce slovníku, která mapuje jedinečné `CString` objektů `CObject` ukazatele.
+Třída kolekce slovníku, která mapuje jedinečné `CString` objektů na ukazatele `CObject`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,53 +63,53 @@ class CMapStringToOb : public CObject
 
 |Název|Popis|
 |----------|-----------------|
-|[CMapStringToOb::GetCount](#getcount)|Vrátí počet prvků, které na této mapě.|
+|[CMapStringToOb:: GetCount](#getcount)|Vrátí počet prvků v této mapě.|
 |[CMapStringToOb::GetHashTableSize](#gethashtablesize)|Určuje aktuální počet prvků v zatřiďovací tabulce.|
-|[CMapStringToOb::GetNextAssoc](#getnextassoc)|Získá další prvek pro iterace.|
-|[CMapStringToOb::GetSize](#getsize)|Vrátí počet prvků, které na této mapě.|
+|[CMapStringToOb::GetNextAssoc](#getnextassoc)|Získá další prvek pro iteraci.|
+|[CMapStringToOb:: GetSize](#getsize)|Vrátí počet prvků v této mapě.|
 |[CMapStringToOb::GetStartPosition](#getstartposition)|Vrátí pozici prvního prvku.|
-|[CMapStringToOb::HashKey](#hashkey)|Vypočítá hodnotu hash zadaný klíč.|
+|[CMapStringToOb::HashKey](#hashkey)|Vypočítá hodnotu hash zadaného klíče.|
 |[CMapStringToOb::InitHashTable](#inithashtable)|Inicializuje zatřiďovací tabulku.|
-|[CMapStringToOb::IsEmpty](#isempty)|Testy pro podmínku prázdný mapy (žádné elementy).|
-|[CMapStringToOb::Lookup](#lookup)|Vyhledá neplatný ukazatel na základě klíče ukazatele. Hodnota ukazatele, není entita, na kterou odkazuje, je použita pro porovnání klíčů.|
-|[CMapStringToOb::LookupKey](#lookupkey)|Vrátí odkaz na klíč přidružený k zadanou hodnotou klíče.|
+|[CMapStringToOb::-Empty](#isempty)|Testuje podmínku prázdné mapy (žádné elementy).|
+|[CMapStringToOb:: Lookup](#lookup)|Vyhledá ukazatel void na základě klíče ukazatele void. Hodnota ukazatele, nikoli entita, na kterou odkazuje, se používá pro porovnání klíčů.|
+|[CMapStringToOb:: LookupKey](#lookupkey)|Vrátí odkaz na klíč přidružený k zadané hodnotě klíče.|
 |[CMapStringToOb::RemoveAll](#removeall)|Odebere všechny prvky z této mapy.|
-|[CMapStringToOb::RemoveKey](#removekey)|Odebere element určený klíč.|
-|[CMapStringToOb::SetAt](#setat)|Vloží prvek do mapy; nahradí existující prvek, pokud je nalezen odpovídající klíč.|
+|[CMapStringToOb::RemoveKey](#removekey)|Odebere prvek určený klíčem.|
+|[CMapStringToOb::SetAt](#setat)|Vloží prvek do mapy; nahradí existující prvek, pokud se najde shodný klíč.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[CMapStringToOb::operator \[ \]](#operator_at)|Vloží prvek do mapy – operátor nahrazení pro `SetAt`.|
+|[CMapStringToOb:: operator \[ \]](#operator_at)|Vloží prvek do mapy – nahrazení operátoru pro `SetAt`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Po vložení `CString` -  `CObject*` pár (element) do objektu map, můžete efektivně načíst nebo odstranit pár pomocí řetězce nebo `CString` hodnotu jako klíč. Můžete také iterovat přes všechny prvky v objektu map.
+Po vložení `CString`- `CObject*` dvojici (elementu) do mapy lze efektivně načíst nebo odstranit dvojici pomocí řetězce nebo hodnoty `CString` jako klíče. Můžete také iterovat přes všechny prvky v mapě.
 
-Proměnné typu umístění se používá pro alternativní vstupní přístup ve všech změn mapy. Můžete na POZICI "pamatovat" záznam a k iteraci v rámci mapy. Si možná myslíte, že je sekvenční podle hodnoty klíče; této iterace není. Je neurčité, sekvence načtených prvků.
+Proměnná typu POSITION se používá pro alternativní přístup k položkám ve všech variacích map. Můžete použít pozici pro "zapamatování" záznamu a iterovat přes mapu. Můžete si všimnout, že je tato iterace sekvenční podle hodnoty klíče. Nejedná se o. Sekvence načtených elementů je neurčitá.
 
-`CMapStringToOb` zahrnuje `IMPLEMENT_SERIAL` – makro na podporu serializace a výpis z jeho prvků. Každý prvek je zase serializovat, když mapy je uložit do archivu, buď pomocí přetížených vložení ( **<<**) – operátor nebo se `Serialize` členskou funkci.
+`CMapStringToOb` zahrnuje makro `IMPLEMENT_SERIAL` pro podporu serializace a dumpingu jeho prvků. Každý prvek je serializován v případě, že je mapa uložena do archivu, buď pomocí operátoru přetížení ( **<<** ), nebo pomocí členské funkce `Serialize`.
 
-Pokud potřebujete diagnostiky s výpisem paměti jednotlivých prvků v objektu map ( `CString` hodnotu a `CObject` obsah), hloubka kontextu výpisu stavu systému je nutné nastavit na 1 nebo větší.
+Pokud potřebujete diagnostické výpisy jednotlivých prvků v mapě (hodnota `CString` a obsah `CObject`), je nutné nastavit hloubku kontextu výpisu na hodnotu 1 nebo vyšší.
 
-Když `CMapStringToOb` odstranění objektu, nebo když se odeberou jeho prvky, `CString` objekty a `CObject` ukazatele se odeberou. Objekty, odkazuje `CObject` ukazatele nejsou zničeny.
+Když je odstraněn objekt `CMapStringToOb` nebo když jsou jeho prvky odebrány, jsou objekty `CString` a `CObject` ukazatele odebrány. Objekty odkazované ukazateli `CObject` nebudou zničeny.
 
-Odvození třídy map se podobá seznamu odvození. Přečtěte si článek [kolekce](../../mfc/collections.md) ilustraci odvození třídy seznamu zvláštní účely.
+Odvození třídy map je podobné odvození seznamu. Ilustraci odvození třídy seznamu pro speciální účely najdete v [kolekcích](../../mfc/collections.md) článků.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CMapStringToOb`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcoll.h
+**Záhlaví:** afxcoll. h
 
-##  <a name="cmapstringtoob"></a>  CMapStringToOb::CMapStringToOb
+##  <a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb
 
-Vytvoří prázdnou `CString`- na - `CObject*` mapy.
+Vytvoří prázdnou mapu `CString`-to-`CObject*`.
 
 ```
 CMapStringToOb(INT_PTR nBlockSize = 10);
@@ -118,32 +118,32 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ### <a name="parameters"></a>Parametry
 
 *nBlockSize*<br/>
-Určuje členitosti přidělení paměti pro rozšíření na mapě.
+Určuje členitost přidělení paměti pro rozšíření mapy.
 
 ### <a name="remarks"></a>Poznámky
 
-S růstem mapy je paměť přidělena v jednotkách, které *nBlockSize* položky.
+Jak se mapa zvětšuje, paměť se přiděluje v jednotkách *nBlockSizech* položek.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb:: CMapStringToOb`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb:: CMapStringToOb`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**CMapPtrToPtr( INT_PTR** `nBlockSize` **= 10 );**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**CMapPtrToWord( INT_PTR** `nBlockSize` **= 10 );**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**CMapStringToPtr( INT_PTR** `nBlockSize` **= 10 );**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CMapStringToString( INT_PTR** `nBlockSize` **= 10 );**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CMapWordToOb( INT_PTR** `nBlockSize` **= 10 );**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**MapWordToPtr( INT_PTR** `nBlockSize` **= 10 );**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**CMapPtrToPtr (INT_PTR** `nBlockSize` **= 10);**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**CMapPtrToWord (INT_PTR** `nBlockSize` **= 10);**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**CMapStringToPtr (INT_PTR** `nBlockSize` **= 10);**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CMapStringToString (INT_PTR** `nBlockSize` **= 10);**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CMapWordToOb (INT_PTR** `nBlockSize` **= 10);**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**MapWordToPtr (INT_PTR** `nBlockSize` **= 10);**|
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#63](../../mfc/codesnippet/cpp/cmapstringtoob-class_1.cpp)]
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Seznam `CAge` třídy používané ve všech příkladech kolekce naleznete v tématu [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist) .
 
-##  <a name="getcount"></a>  CMapStringToOb::GetCount
+##  <a name="getcount"></a>CMapStringToOb:: GetCount
 
-Určuje počet prvků v objektu map.
+Určuje, kolik prvků je v mapě.
 
 ```
 INT_PTR GetCount() const;
@@ -151,28 +151,28 @@ INT_PTR GetCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet elementů v této mapy.
+Počet prvků v této mapě.
 
 ### <a name="remarks"></a>Poznámky
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::GetCount`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::GetCount`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR GetCount (const;)**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR GetCount (const;)**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**INT_PTR GetCount (const;)**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**INT_PTR GetCount (const;)**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR GetCount (const;)**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetCount (const;)**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR GetCount () const;**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR GetCount () const;**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**INT_PTR GetCount () const;**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**INT_PTR GetCount () const;**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR GetCount () const;**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetCount () const;**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Seznam `CAge` třídy používané ve všech příkladech kolekce naleznete v tématu [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist) .
 
 [!code-cpp[NVC_MFCCollections#64](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]
 
-##  <a name="gethashtablesize"></a>  CMapStringToOb::GetHashTableSize
+##  <a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize
 
 Určuje aktuální počet prvků v zatřiďovací tabulce.
 
@@ -186,20 +186,20 @@ Vrátí počet prvků v zatřiďovací tabulce.
 
 ### <a name="remarks"></a>Poznámky
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::GetHashTableSize`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::GetHashTableSize`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT GetHashTableSize (const;)**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT GetHashTableSize (const;)**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT GetHashTableSize (const;)**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT GetHashTableSize (const;)**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT GetHashTableSize (const;)**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT GetHashTableSize (const;)**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT GetHashTableSize () const;**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT GetHashTableSize () const;**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT GetHashTableSize () const;**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT GetHashTableSize () const;**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT GetHashTableSize () const;**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT GetHashTableSize () const;**|
 
-##  <a name="getnextassoc"></a>  CMapStringToOb::GetNextAssoc
+##  <a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc
 
-Načte prvek mapy v *rNextPosition*, pak aktualizuje *rNextPosition* odkazovat na další prvek v objektu map.
+Načte mapový element na *rNextPosition*a pak aktualizuje *rNextPosition* , aby odkazoval na další prvek v mapě.
 
 ```
 void GetNextAssoc(
@@ -211,44 +211,44 @@ void GetNextAssoc(
 ### <a name="parameters"></a>Parametry
 
 *rNextPosition*<br/>
-Určuje referenci na POZICI hodnotu vrácenou předchozím `GetNextAssoc` nebo `GetStartPosition` volání.
+Určuje odkaz na hodnotu pozice vrácenou předchozí `GetNextAssoc` nebo volání `GetStartPosition`.
 
 *rKey*<br/>
-Určuje vrácené klíč načtený elementu (řetězec).
+Určuje vrácený klíč načteného elementu (řetězec).
 
-*rValue*<br/>
-Určuje vrácené hodnoty načtené prvek ( `CObject` ukazatele). Další informace o tomto parametru najdete v poznámky.
+*r*<br/>
+Určuje vrácenou hodnotu načteného prvku (`CObject` ukazatel). Další informace o tomto parametru najdete v části poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je zvláště užitečná pro procházení všech prvků v objektu map. Všimněte si, že sekvence pozice není nutně stejné jako pořadí klíč-hodnota.
+Tato funkce je nejužitečnější pro iteraci všech prvků v mapě. Všimněte si, že sekvence pozice není nutně stejná jako sekvence hodnoty klíče.
 
-Pokud je načtený element poslední v objektu map, pak nová hodnota *rNextPosition* nastaven na hodnotu NULL.
+Pokud je načtený prvek poslední v mapě, je nová hodnota *rNextPosition* nastavena na hodnotu null.
 
-Pro *rValue* parametr, je nutné převést objekt typu **CObject\*&**, což je co vyžaduje kompilátor, jak je znázorněno v následujícím příkladu:
+Pro parametr *rValue* nezapomeňte přetypovat typ objektu na **CObject\*&** , což je to, co kompilátor vyžaduje, jak je znázorněno v následujícím příkladu:
 
 [!code-cpp[NVC_MFCCollections#65](../../mfc/codesnippet/cpp/cmapstringtoob-class_3.cpp)]
 
-To neplatí z `GetNextAssoc` pro mapy založené na šablonách.
+To není pravdivé `GetNextAssoc` pro mapy založené na šablonách.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::GetNextAssoc`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::GetNextAssoc`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void GetNextAssoc (pozice &** *rNextPosition* **, void\* &**  *rKey* **, void\* &**  *rValue* **) const;**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void GetNextAssoc (pozice &** *rNextPosition* **, void\* &**  *rKey* **, WORD a** *rValue* **) const;**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void GetNextAssoc (pozice &** *rNextPosition* **, CString &** *rKey* **, void\* &**  *rValue* **) const;**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void GetNextAssoc (pozice &** *rNextPosition* **, CString &** *rKey* **, CString &** *rValue* **) const;**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void GetNextAssoc (pozice &** *rNextPosition* **, WORD &** *rKey* **, CObject\* &**  *rValue* **) const;**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void GetNextAssoc (pozice &** *rNextPosition* **, WORD &** *rKey* **, void\* &**  *rValue* **) const;**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void GetNextAssoc (pozice &** *rNextPosition* **, void\*&** *rKey* **, void\*&** *rValue* **) const;**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void GetNextAssoc (pozice &** *rNextPosition* **, void\*&** *rKey* **, wordový &** *rValue* **) const;**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void GetNextAssoc (POSITION &** *rNextPosition* **, CString &** *rKey* **, void\*&** *rValue* **) const;**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void GetNextAssoc (POSITION &** *rNextPosition* **, cstring &** *rKey* **, CString &** *rValue* **) const;**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void GetNextAssoc (POSITION &** *rNextPosition* **, WORD &** *rKey* **, CObject\*&** *rValue* **) const;**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void GetNextAssoc (POSITION &** *rNextPosition* **, WORD &** *rKey* **, void\*&** *rValue* **) const;**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Seznam `CAge` třídy používané ve všech příkladech kolekce naleznete v tématu [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist) .
 
 [!code-cpp[NVC_MFCCollections#66](../../mfc/codesnippet/cpp/cmapstringtoob-class_4.cpp)]
 
-Výsledky z této aplikace jsou následující:
+Výsledky z tohoto programu jsou následující:
 
 ```Output
 Lisa : a CAge at $4724 11
@@ -257,9 +257,9 @@ Homer : a CAge at $4766 36
 Bart : a CAge at $45D4 13
 ```
 
-##  <a name="getsize"></a>  CMapStringToOb::GetSize
+##  <a name="getsize"></a>CMapStringToOb:: GetSize
 
-Vrátí počet prvků na mapě.
+Vrátí počet prvků mapy.
 
 ```
 INT_PTR GetSize() const;
@@ -267,30 +267,30 @@ INT_PTR GetSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v objektu map.
+Počet položek v mapě.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze načíst počet prvků v objektu map.
+Voláním této metody načtete počet prvků v mapě.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::GetSize`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::GetSize`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR getsize – (const;)**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR getsize – (const;)**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**INT_PTR getsize – (const;)**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**INT_PTR getsize – (const;)**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR getsize – (const;)**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR getsize – (const;)**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**INT_PTR GetSize () const;**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**INT_PTR GetSize () const;**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**INT_PTR GetSize () const;**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**INT_PTR GetSize () const;**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR GetSize () const;**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetSize () const;**|
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#67](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]
 
-##  <a name="getstartposition"></a>  CMapStringToOb::GetStartPosition
+##  <a name="getstartposition"></a>CMapStringToOb::GetStartPosition
 
-Spuštění iterace mapování tak, že vrací hodnotu POZICI, která mohou být předány `GetNextAssoc` volání.
+Spustí iteraci mapy vrácením hodnoty pozice, kterou lze předat `GetNextAssoc` volání.
 
 ```
 POSITION GetStartPosition() const;
@@ -298,30 +298,30 @@ POSITION GetStartPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-POZICE určující počáteční pozice pro iterace v mapě. nebo hodnota NULL, pokud mapa je prázdný.
+Hodnota pozice označující počáteční pozici pro iteraci mapy; nebo hodnotu NULL, pokud je mapa prázdná.
 
 ### <a name="remarks"></a>Poznámky
 
-Iterace sekvence není předvídatelný; "první prvek v objektu map", proto nemá žádný speciální význam.
+Posloupnost iterace není předvídatelná; Proto "první prvek v mapě" nemá žádný zvláštní význam.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::GetStartPosition`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::GetStartPosition`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**POZICE GetStartPosition (const;)**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**POZICE GetStartPosition (const;)**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**POZICE GetStartPosition (const;)**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**POZICE GetStartPosition (const;)**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**POZICE GetStartPosition (const;)**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**POZICE GetStartPosition (const;)**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**POZICE GetStartPosition () const;**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**POZICE GetStartPosition () const;**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**POZICE GetStartPosition () const;**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**POZICE GetStartPosition () const;**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**POZICE GetStartPosition () const;**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**POZICE GetStartPosition () const;**|
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CMapStringToOb::GetNextAssoc](#getnextassoc).
+Podívejte se na příklad pro [CMapStringToOb:: GetNextAssoc](#getnextassoc).
 
-##  <a name="hashkey"></a>  CMapStringToOb::HashKey
+##  <a name="hashkey"></a>CMapStringToOb::HashKey
 
-Vypočítá hodnotu hash zadaný klíč.
+Vypočítá hodnotu hash zadaného klíče.
 
 ```
 UINT HashKey(LPCTSTR key) const;
@@ -330,7 +330,7 @@ UINT HashKey(LPCTSTR key) const;
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Klíč, jehož hodnota hash je vypočítán.
+Klíč, jehož hodnota hash má být vypočítána.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -338,18 +338,18 @@ Hodnota hash klíče
 
 ### <a name="remarks"></a>Poznámky
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::HashKey`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::HashKey`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**HashKey – UINT (void** <strong>\*</strong> `key` **) const;**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**HashKey – UINT (void** <strong>\*</strong> `key` **) const;**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**HashKey – UINT (LPCTSTR** `key` **) const;**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**HashKey – UINT (LPCTSTR** `key` **) const;**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**HashKey – UINT (slovo** `key` **) const;**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**HashKey – UINT (slovo** `key` **) const;**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Uint HashKey (void** <strong>\*</strong> `key` **) const;**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Uint HashKey (void** <strong>\*</strong> `key` **) const;**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Uint HashKey (LPCTSTR** `key` **) const;**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Uint HashKey (LPCTSTR** `key` **) const;**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Uint HashKey (WORD** `key` **) const;**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Uint HashKey (WORD** `key` **) const;**|
 
-##  <a name="inithashtable"></a>  CMapStringToOb::InitHashTable
+##  <a name="inithashtable"></a>CMapStringToOb::InitHashTable
 
 Inicializuje zatřiďovací tabulku.
 
@@ -365,26 +365,26 @@ void InitHashTable(
 Počet položek v zatřiďovací tabulce.
 
 *bAllocNow*<br/>
-Při hodnotě TRUE se přiděluje zatřiďovací tabulku při inicializaci; jinak v tabulce je přidělena v případě potřeby.
+Je-li nastavena hodnota TRUE, při inicializaci přidělí zatřiďovací tabulku; v opačném případě je tabulka přidělena v případě potřeby.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro zajištění nejlepšího výkonu by měl být velikost tabulky hash Prvočíslo. Chcete-li minimalizovat kolize, velikost musí mít zhruba 20 procent větší než největší očekávané datové sady.
+Pro dosažení nejlepšího výkonu by měla být velikost tabulky hash primárním číslem. Chcete-li minimalizovat kolizí, velikost by měla být přibližně 20 procent větší než největší předpokládaná sada dat.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::InitHashTable`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::InitHashTable`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void InitHashTable (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void InitHashTable (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void InitHashTable (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **, bool** `bAllocNow` **= true);**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void InitHashTable (UINT** `hashSize` **, bool** `bAllocNow` **= true);**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void InitHashTable (UINT** `hashSize` **, bool** `bAllocNow` **= true);**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **, bool** `bAllocNow` **= true);**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void InitHashTable (UINT** `hashSize` **, bool** `bAllocNow` **= true);**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **, bool** `bAllocNow` **= true);**|
 
-##  <a name="isempty"></a>  CMapStringToOb::IsEmpty
+##  <a name="isempty"></a>CMapStringToOb::-Empty
 
-Určuje, zda na mapě je prázdný.
+Určuje, zda je mapa prázdná.
 
 ```
 BOOL IsEmpty() const;
@@ -392,7 +392,7 @@ BOOL IsEmpty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud neobsahuje žádné elementy; toto mapování jinak 0.
+Nenulové, pokud tato mapa neobsahuje žádné elementy; v opačném případě 0.
 
 ### <a name="example"></a>Příklad
 
@@ -400,20 +400,20 @@ Podívejte se na příklad pro [RemoveAll](#removeall).
 
 ### <a name="remarks"></a>Poznámky
 
-Následující tabulka uvádí další členské funkce, které jsou podobné **cmapstringtoob –:: IsEmpty**.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné **CMapStringToOb::-Empty**.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL IsEmpty (const;)**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL IsEmpty (const;)**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL IsEmpty (const;)**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL IsEmpty (const;)**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL IsEmpty (const;)**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL IsEmpty (const;)**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL = Empty () const;**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL = Empty () const;**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL = Empty () const;**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL = Empty () const;**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL = Empty () const;**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL = Empty () const;**|
 
-##  <a name="lookup"></a>  CMapStringToOb::Lookup
+##  <a name="lookup"></a>CMapStringToOb:: Lookup
 
-Vrátí `CObject` ukazatel na základě `CString` hodnotu.
+Vrátí `CObject` ukazatel na základě `CString` hodnoty.
 
 ```
 BOOL Lookup(
@@ -424,39 +424,39 @@ BOOL Lookup(
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Určuje klíč řetězec, který identifikuje elementu, který chcete vyhledávat.
+Určuje klíč řetězce, který identifikuje prvek, který má být vyhledán.
 
-*rValue*<br/>
-Určuje vrácenou hodnotu z prvku vyhledaných.
+*r*<br/>
+Určuje vrácenou hodnotu z vyhledaného prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud element nebyl nalezen; jinak 0.
+Nenulové, pokud byl element nalezen; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`Lookup` používá algoritmus hash a rychle najít prvek mapy s klíčem, který přesně odpovídá ( `CString` hodnota).
+`Lookup` používá algoritmus hash k rychlému nalezení mapového prvku s klíčem, který přesně odpovídá (`CString` hodnota).
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::LookUp`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::LookUp`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Vyhledávání BOOL (void** <strong>\*</strong> `key` **, void\* &**  `rValue` **) const;**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Vyhledávání BOOL (void** <strong>\*</strong> `key` **, WORD &** `rValue` **) const;**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Vyhledávání BOOL (LPCTSTR** `key` **, void\* &**  `rValue` **) const;**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Vyhledávání BOOL (LPCTSTR** `key` **, CString &** `rValue` **) const;**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Vyhledávání BOOL (slovo** `key` **, CObject\* &**  `rValue` **) const;**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Vyhledávání BOOL (slovo** `key` **, void\* &**  `rValue` **) const;**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Vyhledávání bool (void** <strong>\*</strong> `key` **, void\*&** `rValue` **) const;**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Vyhledávání bool (void** <strong>\*</strong> `key` **, Word &** `rValue` **) const;**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Vyhledávání bool (LPCTSTR** `key` **, void\*&** `rValue` **) const;**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Vyhledávání bool (LPCTSTR** `key` **, CString &** `rValue` **) const;**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Vyhledávání bool (WORD** `key` **, CObject\*&** `rValue` **) const;**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Vyhledávání bool (WORD** `key` **, void\*&** `rValue` **) const;**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Seznam `CAge` třídy používané ve všech příkladech kolekce naleznete v tématu [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist) .
 
 [!code-cpp[NVC_MFCCollections#68](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]
 
-##  <a name="lookupkey"></a>  CMapStringToOb::LookupKey
+##  <a name="lookupkey"></a>CMapStringToOb:: LookupKey
 
-Vrátí odkaz na klíč přidružený k zadanou hodnotou klíče.
+Vrátí odkaz na klíč přidružený k zadané hodnotě klíče.
 
 ```
 BOOL LookupKey(
@@ -467,29 +467,29 @@ BOOL LookupKey(
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Určuje klíč řetězec, který identifikuje elementu, který chcete vyhledávat.
+Určuje klíč řetězce, který identifikuje prvek, který má být vyhledán.
 
 *rKey*<br/>
 Odkaz na přidružený klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl klíč nalezen; jinak 0.
+Nenulové, pokud byl klíč nalezen; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí odkazu na klíč nebezpečné, pokud se používá po přidruženého prvku byl odebrán z mapy nebo po mapy se zničil.
+Použití odkazu na klíč není bezpečné, pokud je použit po odebrání přidruženého prvku z mapy nebo po zničení mapy.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb:: LookupKey`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb:: LookupKey`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Bool LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Bool LookupKey (LPCTSTR** `key` **, LPCTSTR &** `rKey` **) const;**|
 
-##  <a name="operator_at"></a>  CMapStringToOb::operator [ ]
+##  <a name="operator_at"></a>CMapStringToOb:: operator [] – operátor
 
-Pohodlné náhradou za `SetAt` členskou funkci.
+Užitečná náhrada za `SetAt` členskou funkci.
 
 ```
 CObject*& operator[ ](lpctstr key);
@@ -497,32 +497,32 @@ CObject*& operator[ ](lpctstr key);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na ukazatel `CObject` objektu; nebo hodnota NULL, pokud mapa je prázdný nebo *klíč* je mimo rozsah.
+Odkaz na ukazatel na objekt `CObject`; nebo hodnotu NULL, pokud je mapa prázdná nebo je *klíč* mimo rozsah.
 
 ### <a name="remarks"></a>Poznámky
 
-Proto jej lze použít pouze na levé straně příkazu přiřazení (l hodnota). Pokud neexistuje žádné mapování element se zadaným klíčem, se vytvoří nový prvek.
+Proto se dá použít jenom na levé straně příkazu přiřazení (l-hodnota). Pokud není k dispozici žádný element mapy se zadaným klíčem, je vytvořen nový prvek.
 
-Ekvivalentní pro tento operátor není žádný "pravému" (r), protože je možné, že klíče nemusí být nalezen v objektu map. Použití `Lookup` členskou funkci pro prvek načítání.
+Neexistuje žádná "pravá strana" (r-value) ekvivalentní tomuto operátoru, protože existuje možnost, že na mapě nelze najít klíč. Pro načtení elementu použijte členskou funkci `Lookup`.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::operator []`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::operator []`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|<strong>void\*& – operátor\[] (void \*</strong>  `key`  **\);**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Operátor & WORD\[] (void** <strong>\*</strong> `key`  **\);**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& – operátor\[] (lpctstr** `key`  **\);**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString – & – operátor\[] (lpctstr** `key`  **\);**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject –\*& – operátor\[] (slovo** `key`  **\);**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& – operátor\[] (slovo** `key`  **\);**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|<strong>void\*& operátor\[] (void \*</strong> `key` **\);**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**\[operátoru & slova] (void** <strong>\*</strong> `key` **\);**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& operátor\[] (lpctstr** `key` **\);**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString & operátor\[] (lpctstr** `key` **\);**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& operátor\[] (wordová** `key` **\);**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& operátor\[] (wordový** `key` **\);**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Seznam `CAge` třídy používané ve všech příkladech kolekce naleznete v tématu [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist) .
 
 [!code-cpp[NVC_MFCCollections#72](../../mfc/codesnippet/cpp/cmapstringtoob-class_7.cpp)]
 
-Výsledky z této aplikace jsou následující:
+Výsledky z tohoto programu jsou následující:
 
 ```Output
 Operator [] example: A CMapStringToOb with 2 elements
@@ -530,9 +530,9 @@ Operator [] example: A CMapStringToOb with 2 elements
 [Bart] = a CAge at $497E 13
 ```
 
-##  <a name="removeall"></a>  CMapStringToOb::RemoveAll
+##  <a name="removeall"></a>CMapStringToOb::RemoveAll
 
-Odebere všechny prvky z této mapy a odstraní `CString` klíče objekty.
+Odebere všechny prvky z této mapy a odstraní objekty `CString` klíče.
 
 ```
 void RemoveAll();
@@ -540,30 +540,30 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Poznámky
 
-`CObject` Objekty odkazuje každý klíč nejsou zničeny. `RemoveAll` Funkce může způsobit nevracení paměti, pokud není zajistíte, že odkazované `CObject` objekty jsou zničeny.
+Objekty `CObject`, na které se odkazuje každý klíč, nebudou zničeny. Funkce `RemoveAll` může způsobit nevracení paměti, pokud nezajistíte zničení odkazovaných `CObject` objektů.
 
-Funkce funguje správně, pokud mapa je prázdný.
+Funkce funguje správně, pokud je již mapa prázdná.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::RemoveAll`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::RemoveAll`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void (RemoveAll);**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void (RemoveAll);**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void (RemoveAll);**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void (RemoveAll);**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void (RemoveAll);**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void (RemoveAll);**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void RemoveAll ();**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void RemoveAll ();**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void RemoveAll ();**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void RemoveAll ();**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void RemoveAll ();**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void RemoveAll ();**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Seznam `CAge` třídy používané ve všech příkladech kolekce naleznete v tématu [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist) .
 
 [!code-cpp[NVC_MFCCollections#69](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]
 
-##  <a name="removekey"></a>  CMapStringToOb::RemoveKey
+##  <a name="removekey"></a>CMapStringToOb::RemoveKey
 
-Vyhledá položku mapování odpovídající zadaný klíč; potom Pokud je nalezen klíč, odebere položku.
+Vyhledá položku mapy odpovídající zadanému klíči. Pokud se klíč najde, odebere položku.
 
 ```
 BOOL RemoveKey(LPCTSTR key);
@@ -572,34 +572,34 @@ BOOL RemoveKey(LPCTSTR key);
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Určuje řetězec, používají pro vyhledávání v mapě.
+Určuje řetězec, který se používá pro vyhledávání v mapě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl nalezen a úspěšně odebral; položka jinak 0.
+Nenulové, pokud se položka našla a úspěšně odebrala; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-To může způsobit nevracení paměti, pokud `CObject` objekt není odstraněn, jinde.
+To může způsobit nevracení paměti, pokud se `CObject` objekt neodstraní jinde.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::RemoveKey`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::RemoveKey`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL RemoveKey (void** <strong>\*</strong> `key` **);**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL RemoveKey (void** <strong>\*</strong> `key` **);**|
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **);**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL RemoveKey (LPCTSTR** `key` **);**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey (slovo** `key` **);**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey (slovo** `key` **);**|
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**Bool RemoveKey (void** <strong>\*</strong> `key` **);**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**Bool RemoveKey (void** <strong>\*</strong> `key` **);**|
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**Bool RemoveKey (LPCTSTR** `key` **);**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**Bool RemoveKey (LPCTSTR** `key` **);**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Bool RemoveKey (WORD** `key` **);**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Bool RemoveKey (WORD** `key` **);**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Seznam `CAge` třídy používané ve všech příkladech kolekce naleznete v tématu [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist) .
 
 [!code-cpp[NVC_MFCCollections#70](../../mfc/codesnippet/cpp/cmapstringtoob-class_9.cpp)]
 
-Výsledky z této aplikace jsou následující:
+Výsledky z tohoto programu jsou následující:
 
 ```Output
 RemoveKey example: A CMapStringToOb with 3 elements
@@ -608,9 +608,9 @@ RemoveKey example: A CMapStringToOb with 3 elements
 [Bart] = a CAge at $4634 13
 ```
 
-##  <a name="setat"></a>  CMapStringToOb::SetAt
+##  <a name="setat"></a>CMapStringToOb::SetAt
 
-Primární znamená, že vkládání elementů v objektu map.
+Primární způsob vložení prvku do mapy.
 
 ```
 void SetAt(
@@ -621,33 +621,33 @@ void SetAt(
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Určuje řetězec, který je klíč nového elementu.
+Určuje řetězec, který je klíčem nového prvku.
 
 *newValue*<br/>
-Určuje, `CObject` ukazatel, který je hodnota nového elementu.
+Určuje `CObject` ukazatel, který je hodnotou nového prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Nejprve je klíč vyhledávat. Pokud je nalezen klíč, pak odpovídající hodnota, která se změnily. v opačném případě se vytvoří nový prvek klíč hodnota.
+Nejprve se vyhledá klíč. Pokud se klíč najde, změní se odpovídající hodnota. v opačném případě je vytvořen nový prvek klíčové hodnoty.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CMapStringToOb::SetAt`.
+V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CMapStringToOb::SetAt`.
 
 |Třída|Členská funkce|
 |-----------|---------------------|
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, void** <strong>\*</strong> `newValue` **);**|
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, WORD** `newValue` **);**|
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt (void** <strong>\*</strong> `key` **, Word** `newValue` **);**|
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt (LPCTSTR** `key` **, void** <strong>\*</strong> `newValue` **);**|
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt( LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt (slovo** `key` **, CObject** <strong>\*</strong> `newValue` **);**|
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (slovo** `key` **, void** <strong>\*</strong> `newValue` **);**|
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt (LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt (wordová** `key` **, CObject** <strong>\*</strong> `newValue` **);**|
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt (WORD** `key` **, void** <strong>\*</strong> `newValue` **);**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Seznam `CAge` třídy používané ve všech příkladech kolekce naleznete v tématu [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist) .
 
 [!code-cpp[NVC_MFCCollections#71](../../mfc/codesnippet/cpp/cmapstringtoob-class_10.cpp)]
 
-Výsledky z této aplikace jsou následující:
+Výsledky z tohoto programu jsou následující:
 
 ```Output
 before Lisa's birthday: A CMapStringToOb with 2 elements
@@ -658,7 +658,7 @@ after Lisa's birthday: A CMapStringToOb with 2 elements
 [Bart] = a CAge at $4654 13
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

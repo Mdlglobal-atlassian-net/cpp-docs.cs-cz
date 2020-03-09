@@ -13,11 +13,11 @@ helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
 ms.openlocfilehash: c2a70c15473798ba6eb2ef35e0b7ded395708586
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630623"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857136"
 ---
 # <a name="registry-macros"></a>Makra registru
 
@@ -66,7 +66,7 @@ Identifikátor GUID knihovny typů
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte DECLARE_LIBID v `CAtlModuleT`odvozené třídě.
+Použijte DECLARE_LIBID ve třídě odvozené `CAtlModuleT`.
 
 ### <a name="example"></a>Příklad
 
@@ -98,7 +98,7 @@ DECLARE_REGISTRY(
 *class*<br/>
 pro Zahrnuto z důvodu zpětné kompatibility.
 
-*pid*<br/>
+*PID*<br/>
 pro LPCTSTR, který je identifikátorem programu specifickým pro verzi.
 
 *vpid*<br/>
@@ -114,7 +114,7 @@ pro Hodnota DWORD obsahující model vláken tohoto programu v registru. Musí b
 
 Standardní registrace se skládá z identifikátoru CLSID, ID programu, ID programu nezávislého na verzi, řetězce popisu a modelu vlákna.
 
-Při vytváření objektu nebo ovládacího prvku pomocí Průvodce přidáním třídy ATL Průvodce automaticky implementuje podporu registru založenou na skriptech a přidá do souborů makro [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) . Pokud nechcete podporu registru založenou na skriptech, musíte toto makro nahradit pomocí DECLARE_REGISTRY. DECLARE_REGISTRY vloží do registru pouze pět základních klíčů popsaných výše. Je nutné ručně napsat kód pro vložení dalších klíčů do registru.
+Při vytváření objektu nebo ovládacího prvku pomocí Průvodce přidáním třídy ATL Průvodce automaticky implementuje podporu registru založenou na skriptech a přidá makro [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) do souborů. Pokud nechcete podporu registru založenou na skriptech, musíte toto makro nahradit DECLARE_REGISTRY. DECLARE_REGISTRY do registru vloží jenom pět základních klíčů popsaných výše. Je nutné ručně napsat kód pro vložení dalších klíčů do registru.
 
 ##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID
 
@@ -131,12 +131,12 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 *RESID*<br/>
 ID prostředku souboru. rgs, který obsahuje informace o *AppID*.
 
-*appid*<br/>
+*identifikátor*<br/>
 IDENTIFIKÁTOR GUID.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte DECLARE_REGISTRY_APPID_RESOURCEID v `CAtlModuleT`odvozené třídě.
+Použijte DECLARE_REGISTRY_APPID_RESOURCEID ve třídě odvozené `CAtlModuleT`.
 
 ### <a name="example"></a>Příklad
 
@@ -152,7 +152,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 pro Identifikátor řetězce vašeho prostředku
 
 ### <a name="remarks"></a>Poznámky
@@ -163,13 +163,13 @@ Pro optimalizovaný přístup k registru můžete staticky propojit komponentu r
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Pokud chcete, aby knihovna ATL nahradila nahrazující hodnoty za běhu, nezadávejte makro DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID. Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktur, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která nahradí zástupný symbol za běhu. Pak zavolejte [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)a předejte pole. Tím se do náhradní mapy registrátora přidá všechny `_ATL_REGMAP_ENTRIES` nahrazující hodnoty ve strukturách.
+Pokud chcete, aby knihovna ATL nahradila nahrazující hodnoty za běhu, nezadávejte makro DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID. Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktury, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která má nahradit zástupný symbol za běhu. Pak zavolejte [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)a předejte pole. Tím se přidají všechny nahrazující hodnoty ve strukturách `_ATL_REGMAP_ENTRIES` do náhradní mapy registrátora.
 
 Další informace o nahraditelných parametrech a skriptování naleznete v článku [Komponenta registru ATL (registrátor)](../../atl/atl-registry-component-registrar.md).
 
 ##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID
 
-Stejné jako [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) s tím rozdílem, že používá k identifikaci prostředku objekt uint generovaný průvodcem, nikoli název řetězce.
+Stejné jako u [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) s tím rozdílem, že používá k identifikaci prostředku objekt uint generovaný průvodcem, nikoli název řetězce.
 
 ```
 DECLARE_REGISTRY_RESOURCEID( x )
@@ -177,7 +177,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 pro Identifikátor vygenerovaného průvodcem pro váš prostředek.
 
 ### <a name="remarks"></a>Poznámky
@@ -188,10 +188,10 @@ Pro optimalizovaný přístup k registru můžete staticky propojit komponentu r
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Pokud chcete, aby knihovna ATL nahradila nahrazující hodnoty za běhu, nezadávejte makro DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID. Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktur, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která nahradí zástupný symbol za běhu. Pak zavolejte [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)a předejte pole. Tím se do náhradní mapy registrátora přidá všechny `_ATL_REGMAP_ENTRIES` nahrazující hodnoty ve strukturách.
+Pokud chcete, aby knihovna ATL nahradila nahrazující hodnoty za běhu, nezadávejte makro DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID. Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktury, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která má nahradit zástupný symbol za běhu. Pak zavolejte [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)a předejte pole. Tím se přidají všechny nahrazující hodnoty ve strukturách `_ATL_REGMAP_ENTRIES` do náhradní mapy registrátora.
 
 Další informace o nahraditelných parametrech a skriptování naleznete v článku [Komponenta registru ATL (registrátor)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makr](../../atl/reference/atl-macros.md)

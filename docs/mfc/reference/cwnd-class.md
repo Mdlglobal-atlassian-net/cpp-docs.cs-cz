@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 21e168731b8fe0eaff18f070cee5d54aa5782c2d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77567883"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855480"
 ---
 # <a name="cwnd-class"></a>CWnd – třída
 
@@ -9750,7 +9750,7 @@ U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou kl�
 
 U jiných než U. S. Vylepšená klávesnice 102 se jako kombinace kláves CTRL + ALT zpracuje pravá klávesová zkratka. Následující text zobrazuje posloupnost zpráv a volání, která jsou výsledkem, když uživatel stiskne a uvolní tento klíč:
 
-|Sequence|Dostupná funkce|Zpráva byla předána|
+|Pořadí|Dostupná funkce|Zpráva byla předána|
 |--------------|-----------------------|--------------------|
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|
