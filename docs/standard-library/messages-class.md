@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687689"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884018"
 ---
 # <a name="messages-class"></a>messages – třída
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* \
+*CharType*\
 Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
 ## <a name="remarks"></a>Poznámky
@@ -79,7 +79,7 @@ Tato omezující vlastnost v podstatě otevře katalog zpráv definovaný v zák
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<locale >
+**Záhlaví:** \<národní prostředí >
 
 **Obor názvů:** std
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* \
+*_Catval*\
 Katalog, který má být zavřen.
 
 ### <a name="remarks"></a>Poznámky
@@ -122,14 +122,14 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* \
+*_Catval*\
 Katalog, který má být zavřen.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce zavře katalog zpráv *_Catval*, který musí být otevřen starším voláním [do_open](#do_open).
+Chráněná členská funkce zavře *_Catval*katalogu zpráv, který musí být otevřen starším voláním [do_open](#do_open).
 
-*_Catval* se musí získat z dříve otevřeného katalogu, který není uzavřený.
+*_Catval* je třeba získat z dříve otevřeného katalogu, který není uzavřený.
 
 ### <a name="example"></a>Příklad
 
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* \
+*_Catval*\
 Identifikační hodnota určující katalog zpráv, který má být prohledán.
 
-*_Nastavit* \
+*_Set*\
 První identifikovaný, která se používá k vyhledání zprávy v katalogu zpráv.
 
-*_Message* \
+*_Message*\
 Druhá identifikovaná, která se používá k vyhledání zprávy v katalogu zpráv.
 
-*_Dfault* \
+*_Dfault*\
 Řetězec, který má být vrácen při selhání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -167,7 +167,7 @@ Vrátí kopii *_Dfault* při selhání. V opačném případě vrátí kopii zad
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce se pokusí získat sekvenci zprávy z katalogu zpráv *_Catval*. V takovém případě může používat *_* , *_Message*a *_Dfault* .
+Chráněná členská funkce se pokusí získat sekvenci zprávy z katalogu zpráv *_Catval*. V takovém případě může používat *_Set*, *_Message*a *_Dfault* .
 
 ### <a name="example"></a>Příklad
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname* \
+*_Catname*\
 Název katalogu, který se má prohledat
 
-*_Loc* \
+*_Loc*\
 Národní prostředí, které se v katalogu vyhledává.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -197,7 +197,7 @@ Vrátí hodnotu, která při selhání porovná méně než nulu. V opačném p�
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce se pokusí otevřít katalog zpráv, jehož název je *_Catname*. V takovém případě může použití národního prostředí *_Loc* .
+Chráněná členská funkce se pokusí otevřít katalog zpráv, jehož název je *_Catname*. V takovém případě může použití národního prostředí *_Loc* provádět.
 
 Návratová hodnota by měla být použita jako argument na pozdějším volání [uzavření](#close).
 
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* \
+*_Catval*\
 Identifikační hodnota určující katalog zpráv, který má být prohledán.
 
-*_Nastavit* \
+*_Set*\
 První identifikovaný, která se používá k vyhledání zprávy v katalogu zpráv.
 
-*_Message* \
+*_Message*\
 Druhá identifikovaná, která se používá k vyhledání zprávy v katalogu zpráv.
 
-*_Dfault* \
+*_Dfault*\
 Řetězec, který má být vrácen při selhání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -237,7 +237,7 @@ Vrátí kopii *_Dfault* při selhání. V opačném případě vrátí kopii zad
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_get](#do_get)(`_Catval`, `_Set`, `_Message`, `_Dfault`).
+Členská funkce vrací [do_get](#do_get)(`_Catval`, `_Set`, `_Message`, `_Dfault`).
 
 ## <a name="messages"></a>zprávy:: zprávy
 
@@ -254,10 +254,10 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+*_Refs*\
 Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
-*_Locname* \
+*_Locname*\
 Název národního prostředí.
 
 ### <a name="remarks"></a>Poznámky
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname* \
+*_Catname*\
 Název katalogu, který se má prohledat
 
-*_Loc* \
+*_Loc*\
 Národní prostředí, které se v katalogu vyhledává.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -310,10 +310,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) , jejíž objekty mohou ukládat kopie sekvencí zpráv.
+Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) jejichž objekty mohou ukládat kopie sekvencí zpráv.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<locale >](../standard-library/locale.md) \
-\ [třídy messages_base](../standard-library/messages-base-class.md)
+[\<> národního prostředí](../standard-library/locale.md)\
+[messages_base\ třídy](../standard-library/messages-base-class.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

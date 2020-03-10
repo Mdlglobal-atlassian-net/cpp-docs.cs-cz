@@ -8,11 +8,11 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062060"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875731"
 ---
 # <a name="unions"></a>Sjednocení
 
@@ -31,7 +31,7 @@ union [name]  { member-list };
 
 ### <a name="parameters"></a>Parametry
 
-*name*<br/>
+*Jméno*<br/>
 Název typu sjednocení.
 
 *seznam členů*<br/>
@@ -151,7 +151,7 @@ V předchozím příkladu si všimněte, že sjednocení ve vstupní struktuře 
 
 Samozřejmě předchozí příklad ukazuje problém, který lze také vyřešit pomocí tříd odvozených ze společné základní třídy a větvení kódu na základě typu modulu runtime každého objektu v kontejneru. Výsledkem může být kód, který usnadňuje údržbu a pochopení, ale může být také pomalejší než použití sjednocení. Pomocí sjednocení můžete také ukládat zcela nesouvisející typy a dynamicky měnit typ hodnoty, která je uložena bez změny typu proměnné sjednocení. Proto můžete vytvořit heterogenní pole MyUnionType, jehož prvky ukládají různé hodnoty různých typů.
 
-Všimněte si, `Input` že strukturu v předchozím příkladu je možné snadno použít. Pro přístup ke členu, který obsahuje data, je zcela na uživatele správně použit diskriminátor. Ochranu před zneužitím můžete zajistit tak, že vytvoříte soukromou unii a poskytnete speciální funkce přístupu, jak je znázorněno v následujícím příkladu.
+Všimněte si, že struktura `Input` v předchozím příkladu se dá snadno zneužít. Pro přístup ke členu, který obsahuje data, je zcela na uživatele správně použit diskriminátor. Ochranu před zneužitím můžete zajistit tak, že vytvoříte soukromou unii a poskytnete speciální funkce přístupu, jak je znázorněno v následujícím příkladu.
 
 ## <a name="unrestricted-unions-c11"></a>Neomezená sjednocení (C++ 11)
 
@@ -654,7 +654,7 @@ Kromě omezení pro pojmenovaná sjednocení se anonymním sjednocením vztahuj�
 
 - Nemohou mít členské funkce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy a struktury](../cpp/classes-and-structs-cpp.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>

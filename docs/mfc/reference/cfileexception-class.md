@@ -1,5 +1,5 @@
 ---
-title: Cfileexception – třída
+title: CFileException – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CFileException
@@ -25,13 +25,13 @@ helpviewer_keywords:
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205933"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855280"
 ---
-# <a name="cfileexception-class"></a>Cfileexception – třída
+# <a name="cfileexception-class"></a>CFileException – třída
 
 Představuje podmínku výjimky vztahující se k souboru.
 
@@ -47,47 +47,47 @@ class CFileException : public CException
 
 |Název|Popis|
 |----------|-----------------|
-|[CFileException::CFileException](#cfileexception)|Vytvoří `CFileException` objektu.|
+|[CFileException::CFileException](#cfileexception)|Vytvoří objekt `CFileException`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[CFileException::ErrnoToException](#errnotoexception)|Vrátí způsobit, že kód odpovídající počet chyb za běhu.|
-|[CFileException::GetErrorMessage](#geterrormessage)|Načte zpráva popisující výjimku.|
-|[CFileException::OsErrorToException](#oserrortoexception)|Vrátí kód příčina odpovídající kód chyby operačního systému.|
-|[CFileException::ThrowErrno](#throwerrno)|Vyvolá výjimku souborů podle čísla chyby modulu runtime.|
-|[CFileException::ThrowOsError](#throwoserror)|Vyvolá výjimku souborů založené na číslo chyby operačního systému.|
+|[CFileException::ErrnoToException](#errnotoexception)|Vrátí příčinu kódu odpovídající běhovému číslu chyby.|
+|[CFileException:: GetErrorMessage](#geterrormessage)|Načte zprávu popisující výjimku.|
+|[CFileException::OsErrorToException](#oserrortoexception)|Vrátí kód příčiny odpovídající kódu chyby operačního systému.|
+|[CFileException::ThrowErrno](#throwerrno)|Vyvolá výjimku souboru na základě čísla běhové chyby.|
+|[CFileException::ThrowOsError](#throwoserror)|Vyvolá výjimku souboru na základě čísla chyby operačního systému.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Název|Popis|
 |----------|-----------------|
-|[CFileException::m_cause](#m_cause)|Obsahuje přenositelný kód odpovídá příčina výjimky.|
-|[CFileException::m_lOsError](#m_loserror)|Obsahuje číslo související chyby operačního systému.|
-|[CFileException::m_strFileName](#m_strfilename)|Obsahuje název souboru pro tuto výjimku.|
+|[CFileException:: m_cause](#m_cause)|Obsahuje přenosný kód odpovídající výjimce výjimky.|
+|[CFileException:: m_lOsError](#m_loserror)|Obsahuje související číslo chyby operačního systému.|
+|[CFileException:: m_strFileName](#m_strfilename)|Obsahuje název souboru pro tuto výjimku.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CFileException` Třída zahrnuje veřejné datové členy, které obsahují kód přenosný příčina a číslo chyby operačního systému – konkrétní. Třída také poskytuje statické členské funkce pro generování souboru výjimek a vrácení kódů příčiny chyby operačního systému a C chybám za běhu.
+Třída `CFileException` zahrnuje veřejné datové členy, které obsahují přenosný kód příčiny a číslo chyby specifické pro operační systém. Třída také poskytuje statické členské funkce pro vyvolávání výjimek souborů a vrácení kódů příčin pro chyby operačního systému a běhové chyby jazyka C.
 
-`CFileException` objekty jsou vytvořena a vyvolána `CFile` členské funkce a v členské funkce odvozené třídy. Můžete přístup k těmto objektům v rámci oboru **CATCH** výrazu. Pro přenositelnost můžete použijte pouze kód příčina získáte z důvodu výjimky. Další informace o výjimkách, najdete v článku [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md).
+objekty `CFileException` jsou vytvářeny a vyvolány v `CFile` členských funkcích a v členských funkcích odvozených tříd. K těmto objektům máte přístup v rámci rozsahu výrazu **catch** . Pro přenositelnost použijte k získání důvodu výjimky pouze kód příčiny. Další informace o výjimkách naleznete v článku [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cexception –](../../mfc/reference/cexception-class.md)
+[CException –](../../mfc/reference/cexception-class.md)
 
 `CFileException`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afx.h
+**Záhlaví:** AFX –. h
 
-##  <a name="cfileexception"></a>  CFileException::CFileException
+##  <a name="cfileexception"></a>CFileException::CFileException
 
-Vytvoří `CFileException` objekt, který uchovává příčina kód a kód operačního systému v objektu.
+Vytvoří objekt `CFileException`, který ukládá kód příčiny a kód operačního systému v objektu.
 
 ```
 CFileException(
@@ -98,25 +98,25 @@ CFileException(
 
 ### <a name="parameters"></a>Parametry
 
-*Příčina*<br/>
-Proměnná výčtového typu, který označuje důvod výjimky. Zobrazit [CFileException::m_cause](#m_cause) seznam možných hodnot.
+*způsobit*<br/>
+Proměnná výčtového typu, která určuje důvod výjimky. Seznam možných hodnot naleznete v tématu [CFileException:: m_cause](#m_cause) .
 
 *lOsError*<br/>
-Z důvodu provozních konkrétní systém pro výjimku, pokud je k dispozici. *LOsError* parametr obsahuje více informace než *způsobit* nepodporuje.
+Důvod pro výjimku specifický pro operační systém, je-li k dispozici. Parametr *lOsError* poskytuje více informací, než *způsobuje* .
 
 *lpszArchiveName*<br/>
-Odkazuje na řetězec obsahující název `CFile` objekt, který způsobil výjimku.
+Odkazuje na řetězec obsahující název objektu `CFile`, který způsobil výjimku.
 
 ### <a name="remarks"></a>Poznámky
 
-Nepoužívejte tento konstruktor přímo, ale místo toho volat funkci globální [afxthrowfileexception –](exception-processing.md#afxthrowfileexception).
+Nepoužívejte tento konstruktor přímo, ale místo toho volejte globální funkci [AfxThrowFileException](exception-processing.md#afxthrowfileexception).
 
 > [!NOTE]
->  Proměnná *lOsError* platí jenom pro `CFile` a `CStdioFile` objekty. `CMemFile` Třídy nezpracovává tomto kódu chyby.
+>  Proměnná *lOsError* se vztahuje pouze na objekty `CFile` a `CStdioFile`. Třída `CMemFile` nezpracovává tento kód chyby.
 
-##  <a name="errnotoexception"></a>  CFileException::ErrnoToException
+##  <a name="errnotoexception"></a>CFileException::ErrnoToException
 
-Převede hodnotu na chyby dané knihovny run-time `CFileException` chybovou hodnotu ve výčtu.
+Převede zadanou hodnotu chyby běhové knihovny na `CFileException` výčtovou hodnotu chyby.
 
 ```
 static int PASCAL ErrnoToException(int nErrno);
@@ -125,21 +125,21 @@ static int PASCAL ErrnoToException(int nErrno);
 ### <a name="parameters"></a>Parametry
 
 *nErrno*<br/>
-Celé číslo chybový kód definovaný v souboru zahrnutí za běhu ERRNO. H.
+Celočíselný kód chyby, jak je definován v souboru include run-time ERRNO. Y.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výčtová hodnota, která odpovídá chybovou hodnotu daného knihovny run-time.
+Hodnota výčtu, která odpovídá dané chybové hodnotě běhové knihovny.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [CFileException::m_cause](#m_cause) seznam možných hodnot výčtu.
+Seznam možných hodnot výčtu naleznete v tématu [CFileException:: m_cause](#m_cause) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#26](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]
 
-##  <a name="geterrormessage"></a>  CFileException::GetErrorMessage
+##  <a name="geterrormessage"></a>CFileException:: GetErrorMessage
 
 Načte text, který popisuje výjimku.
 
@@ -153,21 +153,21 @@ virtual BOOL GetErrorMessage(
 ### <a name="parameters"></a>Parametry
 
 *lpszError*<br/>
-[out v] Ukazatel do vyrovnávací paměti, která obdrží chybovou zprávu.
+[in, out] Ukazatel na vyrovnávací paměť, která obdrží chybovou zprávu.
 
 *nMaxError*<br/>
-[in] Maximální počet znaků, které může obsahovat zadané vyrovnávací paměti. To zahrnuje ukončující znak null.
+pro Maximální počet znaků, které může zadaná vyrovnávací paměť uchovávat. To zahrnuje ukončující znak null.
 
 *pnHelpContext*<br/>
-[out v] Ukazatel na celé číslo bez znaménka, která přijímá ID kontextové nápovědy Pokud `NULL`, je vrácena žádná ID.
+[in, out] Ukazatel na unsigned integer, který obdrží ID kontextové aplikace Help. Pokud `NULL`, nevrátí se žádné ID.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud metoda byla úspěšná. v opačném případě FALSE.
+TRUE, pokud byla metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud zadané vyrovnávací paměti je příliš malá, je zkrátí chybovou zprávu.
+Pokud je zadaná vyrovnávací paměť příliš malá, chybová zpráva se zkrátí.
 
 ### <a name="example"></a>Příklad
 
@@ -175,9 +175,9 @@ Následující příklad používá `CFileException::GetErrorMessage`.
 
 [!code-cpp[NVC_MFCExceptions#22](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]
 
-##  <a name="m_cause"></a>  CFileException::m_cause
+##  <a name="m_cause"></a>CFileException:: m_cause
 
-Obsahuje hodnoty, které jsou definované `CFileException` výčtového typu.
+Obsahuje hodnoty definované výčtovým typem `CFileException`.
 
 ```
 int m_cause;
@@ -185,51 +185,51 @@ int m_cause;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento datový člen je veřejná proměnná typu **int**. Čítačů a jejich význam jsou následující:
+Tento datový člen je veřejná proměnná typu **int**. Enumerátory a jejich významy jsou následující:
 
-- `CFileException::none` 0: Nedošlo k žádné chybě.
+- `CFileException::none` 0: nedošlo k žádné chybě.
 
-- `CFileException::genericException` 1: Došlo k nespecifikované chybě.
+- `CFileException::genericException` 1: došlo k neurčené chybě.
 
-- `CFileException::fileNotFound` 2: Soubor nebyl nalezen.
+- `CFileException::fileNotFound` 2: soubor se nepovedlo najít.
 
-- `CFileException::badPath` 3: Všechny nebo část cesty je neplatný.
+- `CFileException::badPath` 3: celá cesta nebo část cesty není platná.
 
-- `CFileException::tooManyOpenFiles` 4: Byl překročen povolený počet otevřených souborů.
+- `CFileException::tooManyOpenFiles` 4: byl překročen povolený počet otevřených souborů.
 
-- `CFileException::accessDenied` 5: Soubor není přístupný.
+- `CFileException::accessDenied` 5: soubor není k dispozici.
 
-- `CFileException::invalidFile` 6: Došlo k pokusu o použití neplatný popisovač souboru.
+- `CFileException::invalidFile` 6: došlo k pokusu o použití neplatného popisovače souboru.
 
-- `CFileException::removeCurrentDir` 7: Nelze odebrat, aktuální pracovní adresář.
+- `CFileException::removeCurrentDir` 7: aktuální pracovní adresář nelze odebrat.
 
-- `CFileException::directoryFull` 8: Nejsou žádné záznamy adresářů.
+- `CFileException::directoryFull` 8: nejsou k dispozici žádné další položky adresáře.
 
-- `CFileException::badSeek` 9: Došlo k chybě při pokusu o nastavení ukazatele souboru.
+- `CFileException::badSeek` 9: při pokusu o nastavení ukazatele na soubor došlo k chybě.
 
-- `CFileException::hardIO` 10: Došlo k chybě hardwaru.
+- `CFileException::hardIO` 10: došlo k chybě hardwaru.
 
-- `CFileException::sharingViolation` 11: SDÍLENÉ SLOŽKY. Soubor EXE nebyla načtena, nebo byla sdílená oblast uzamčena.
+- `CFileException::sharingViolation` 11: sdílení. Soubor EXE nebyl načten nebo byla sdílená oblast uzamčena.
 
-- `CFileException::lockViolation` 12: Došlo k pokusu o uzamčení oblasti, která již byla uzamčena.
+- `CFileException::lockViolation` 12: došlo k pokusu o uzamčení oblasti, která již byla uzamčena.
 
-- `CFileException::diskFull` 14: Disk je plný.
+- `CFileException::diskFull` 14: disk je plný.
 
-- `CFileException::endOfFile` 15: Bylo dosaženo konce souboru.
-
-    > [!NOTE]
-    >  Tyto `CFileException` příčina enumerátory se liší od `CArchiveException` způsobit enumerátory.
+- `CFileException::endOfFile` 15: bylo dosaženo konce souboru.
 
     > [!NOTE]
-    > `CArchiveException::generic` je zastaralý. Místo nich se používá `genericException`. Pokud **obecný** se použijí v aplikaci a vytvořené s parametrem/CLR, výslednou syntaxi chyby nejsou snadno dekódovat.
+    >  Tyto `CFileException` způsobují, že enumerátory jsou odlišné od `CArchiveException` způsobujících výčty.
+
+    > [!NOTE]
+    > `CArchiveException::generic` je zastaralá. Místo toho použijte `genericException`. Pokud je v aplikaci použito **Obecné** a sestavené s možností/CLR, nejsou výsledné chyby syntaxe snadno čitelné.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#30](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]
 
-##  <a name="m_loserror"></a>  CFileException::m_lOsError
+##  <a name="m_loserror"></a>CFileException:: m_lOsError
 
-Obsahuje kód chyby operačního systému: pro tuto výjimku.
+Obsahuje kód chyby operačního systému pro tuto výjimku.
 
 ```
 LONG m_lOsError;
@@ -237,19 +237,19 @@ LONG m_lOsError;
 
 ### <a name="remarks"></a>Poznámky
 
-V příručce k operačního systému technical seznam kódů chyb. Tento datový člen je veřejná proměnná typu LONG.
+Seznam chybových kódů najdete v technické příručce k operačnímu systému. Tento datový člen je veřejná proměnná typu LONG.
 
-##  <a name="m_strfilename"></a>  CFileException::m_strFileName
+##  <a name="m_strfilename"></a>CFileException:: m_strFileName
 
-Obsahuje název souboru pro tuto podmínku.
+Obsahuje název souboru pro tuto podmínku výjimky.
 
 ```
 CString m_strFileName;
 ```
 
-##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException
+##  <a name="oserrortoexception"></a>CFileException::OsErrorToException
 
-Vrátí enumerátor, který odpovídá daný *lOsError* hodnotu. Pokud neznámý kód chyby, vrátí funkce `CFileException::generic`.
+Vrátí enumerátor, který odpovídá zadané hodnotě *lOsError* . Pokud kód chyby není znám, funkce vrátí `CFileException::generic`.
 
 ```
 static int PASCAL OsErrorToException(LONG lOsError);
@@ -258,19 +258,19 @@ static int PASCAL OsErrorToException(LONG lOsError);
 ### <a name="parameters"></a>Parametry
 
 *lOsError*<br/>
-Kód chyby operačního systému – konkrétní.
+Kód chyby specifický pro operační systém.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výčtová hodnota, která odpovídá hodnotě dané chybě operačního systému.
+Hodnota výčtu, která odpovídá zadané hodnotě chyby operačního systému.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]
 
-##  <a name="throwerrno"></a>  CFileException::ThrowErrno
+##  <a name="throwerrno"></a>CFileException::ThrowErrno
 
-Vytvoří `CFileException` odpovídající objekt daného *nErrno* hodnotu a potom vyvolá výjimku.
+Vytvoří objekt `CFileException` odpovídající dané hodnotě *nErrno* a potom vyvolá výjimku.
 
 ```
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
@@ -279,18 +279,18 @@ static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ### <a name="parameters"></a>Parametry
 
 *nErrno*<br/>
-Celé číslo chybový kód definovaný v souboru zahrnutí za běhu ERRNO. H.
+Celočíselný kód chyby, jak je definován v souboru include run-time ERRNO. Y.
 
 *lpszFileName*<br/>
-Ukazatel na řetězec obsahující název souboru, který výjimku způsobila, pokud je k dispozici.
+Ukazatel na řetězec obsahující název souboru, který způsobil výjimku, je-li k dispozici.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]
 
-##  <a name="throwoserror"></a>  CFileException::ThrowOsError
+##  <a name="throwoserror"></a>CFileException::ThrowOsError
 
-Vyvolá výjimku `CFileException` odpovídající danou *lOsError* hodnotu. Pokud neznámý kód chyby, pak funkce vyvolá výjimku kódovat jako `CFileException::generic`.
+Vyvolá `CFileException` odpovídající dané hodnotě *lOsError* . Pokud kód chyby není znám, funkce vyvolá výjimku kódovanou jako `CFileException::generic`.
 
 ```
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
@@ -299,16 +299,16 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lOsError*<br/>
-Kód chyby operačního systému – konkrétní.
+Kód chyby specifický pro operační systém.
 
 *lpszFileName*<br/>
-Ukazatel na řetězec obsahující název souboru, který výjimku způsobila, pokud je k dispozici.
+Ukazatel na řetězec obsahující název souboru, který způsobil výjimku, je-li k dispozici.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkční&gt; funkce'
+title: '&lt;funkčních&gt; funkcí'
 ms.date: 02/21/2019
 f1_keywords:
 - functional/std::bind
@@ -30,28 +30,28 @@ helpviewer_keywords:
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
 ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243778"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865558"
 ---
-# <a name="ltfunctionalgt-functions"></a>&lt;funkční&gt; funkce
+# <a name="ltfunctionalgt-functions"></a>&lt;funkčních&gt; funkcí
 
-Tyto funkce jsou zastaralé v C ++ 11 a v C ++ 17 odebrané:
+Tyto funkce jsou zastaralé v C++ 11 a odebrané v C++ 17:
 
 ||||
 |-|-|-|
-|[bind1st](#bind1st) |[bind2nd –](#bind2nd)|[mem_fun](#mem_fun)|
+|[bind1st –](#bind1st) |[bind2nd –](#bind2nd)|[mem_fun](#mem_fun)|
 |[mem_fun_ref](#mem_fun_ref)|[ptr_fun](#ptr_fun)||
 
-Tyto funkce jsou zastaralé v C ++ 17:
+Tyto funkce jsou v C++ 17 zastaralé:
 
 |||
 |-|-|
 |[not1 –](#not1)|[not2 –](#not2)|
 
-## <a name="bind"></a> Vytvoření vazby
+## <a name="bind"></a>zapisovat
 
 Naváže argumenty na volatelný objekt.
 
@@ -66,40 +66,40 @@ template <class RTy, class FT, class T1, class T2, ..., class TN>
 ### <a name="parameters"></a>Parametry
 
 *Fey*\
-Typ objektu určeného k volání.
+Typ objektu, který má být volán.
 
-*TN*\
-Typ n-té volání argument.
+\ *TN*
+Typ argumentu volání n-tý.
 
 *fn*\
-Objekt k volání.
+Objekt, který má být volán.
 
-*TN*\
-Volání n-tý argument.
+\ *TN*
+Argument pro volání n-tý.
 
 ### <a name="remarks"></a>Poznámky
 
-Typy `FT, T1, T2, ..., TN` musí být kopie constructible, a `INVOKE(fn, t1, ..., tN)` musí být platný výraz pro některé hodnoty `w1, w2, ..., wN`.
+Typy `FT, T1, T2, ..., TN` musí být Copy-constructible a `INVOKE(fn, t1, ..., tN)` musí být platným výrazem pro některé hodnoty `w1, w2, ..., wN`.
 
-První šablona funkce vrátí předávání volání obálky `g` typu slabé výsledku. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, kde `cv` je kvalifikátory cv z `g` a hodnoty a typy argumentů vázané `v1, v2, ..., vN` jsou určeny jak je uvedeno níže. Použijete ji k vytvoření vazby argumenty na volatelný objekt provádět se seznamem míru argument volatelný objekt.
+První funkce šablony vrací obálku přesměrovacího volání `g` s slabým výsledným typem. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN, `[invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, kde `cv` jsou kvalifikátory cv `g` a hodnoty a typy vázaných argumentů `v1, v2, ..., vN` jsou určeny jak je uvedeno níže. Použijete ho ke svázání argumentů s navázaným objektem, aby bylo možné volat objekt se seznamem argumentů, který je přizpůsobený.
 
-Druhá funkce šablony vrátí předávání volání obálky `g` s vnořený typ `result_type` , který je synonymum pro `RTy`. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN, RTy)`, kde `cv` je kvalifikátory cv z `g` a hodnoty a typy argumentů vázané `v1, v2, ..., vN` je zjištěno, jak je uvedeno níže. Použijete ji k vytvoření vazby argumenty na volatelný objekt volatelný objekt s seznam přizpůsobených argumentů a zadaný návratový typ.
+Druhá funkce šablony vrací obálku přesměrovacího volání `g` s vnořeným typem `result_type`, který je synonymem pro `RTy`. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN, RTy)`, kde `cv` jsou kvalifikátory cv `g` a hodnoty a typy vázaných argumentů `v1, v2, ..., vN` jsou určené níže. Použijete ho ke svázání argumentů s vydaným objektem, aby bylo možné volat objekt s přizpůsobeným seznamem argumentů a se zadaným návratovým typem.
 
-Hodnoty vázané argumentů `v1, v2, ..., vN` a jejich odpovídající typy `V1, V2, ..., VN` závisí na typu odpovídající argument `ti` typu `Ti` ve volání `bind` a kvalifikátory cv `cv` z Obálka volání `g` následujícím způsobem:
+Hodnoty vázaných argumentů `v1, v2, ..., vN` a jejich odpovídající typy `V1, V2, ..., VN` závisí na typu odpovídajícího argumentu `ti` typu `Ti` ve volání metody `bind` a kvalifikátory cv `cv` z obálky volání `g` následujícím způsobem:
 
-Pokud `ti` je typu `reference_wrapper<T>` argument `vi` je `ti.get()` a její typ `Vi` je `T&`;
+Pokud je `ti` typu `reference_wrapper<T>` je argument `vi` `ti.get()` a jeho typ `Vi` je `T&`;
 
-Pokud hodnota `std::is_bind_expression<Ti>::value` je **true** argument `vi` je `ti(u1, u2, ..., uM)` a její typ `Vi` je `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
+Pokud je hodnota `std::is_bind_expression<Ti>::value` **true** , argument `vi` je `ti(u1, u2, ..., uM)` a jeho typ `Vi` je `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
 
-Pokud hodnota `j` z `std::is_placeholder<Ti>::value` není nula argument `vi` je `uj` a její typ `Vi` je `Uj&`;
+Pokud hodnota `j` `std::is_placeholder<Ti>::value` není nula, je argument `vi` `uj` a jeho typ `Vi` je `Uj&`;
 
-v opačném případě je argument `vi` je `ti` a její typ `Vi` je `Ti` `cv` `&`.
+v opačném případě je argument `vi` `ti` a jeho typ `Vi` je `Ti` `cv` `&`.
 
-Mějme například funkci `f(int, int)` výraz `bind(f, _1, 0)` Obálka volání vrátí předávání `cw` tak, aby `cw(x)` volání `f(x, 0)`. Výraz `bind(f, 0, _1)` Obálka volání vrátí předávání `cw` tak, aby `cw(x)` volání `f(0, x)`.
+Například při zadání funkce `f(int, int)` výrazu `bind(f, _1, 0)` vrátí obálku přesměrovacího volání `cw` taková, `cw(x)` volá `f(x, 0)`. Výraz `bind(f, 0, _1)` vrátí obálku pro přesměrování volání `cw` tak, aby `cw(x)` volání `f(0, x)`.
 
-Počet argumentů ve volání `bind` a argument `fn` musí být roven počtu argumentů, které mohou být předány volatelný objekt `fn`. Například `bind(cos, 1.0)` je správný a obě `bind(cos)` a `bind(cos, _1, 0.0)` , nejsou správné.
+Počet argumentů v volání `bind` a argument `fn` musí být roven počtu argumentů, které mohou být předány volajícímu objektu `fn`. Například `bind(cos, 1.0)` je správné a `bind(cos)` a `bind(cos, _1, 0.0)` jsou nesprávné.
 
-Počet argumentů ve funkci volání Obálka volání, vrácený `bind` musí být přinejmenším stejně velká jako nejvyšší hodnotu číselného `is_placeholder<PH>::value` pro všechny zástupné argumenty ve volání `bind`. Například `bind(cos, _2)(0.0, 1.0)` je správný (a vrátí `cos(1.0)`), a `bind(cos, _2)(0.0)` je nesprávný.
+Počet argumentů ve volání funkce obálky volání vrácené `bind` musí být alespoň tak velký, jako nejvyšší číslovaná hodnota `is_placeholder<PH>::value` pro všechny zástupné znaky v volání `bind`. Například `bind(cos, _2)(0.0, 1.0)` je správný (a vrátí `cos(1.0)`) a `bind(cos, _2)(0.0)` je nesprávná.
 
 ### <a name="example"></a>Příklad
 
@@ -152,9 +152,9 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a> bind1st –
+## <a name="bind1st"></a>bind1st –
 
-Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce. Vytvoří vazbu mezi prvního argumentu binární funkce na zadanou hodnotu. Zastaralé v C ++ 11, v C ++ 17 odebrané.
+Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na unární objekt funkce. Vytvoří vazby prvního argumentu binární funkce na zadanou hodnotu. Zastaralé v C++ 11, odebrané v C++ 17.
 
 ```cpp
 template <class Operation, class Type>
@@ -163,21 +163,21 @@ template <class Operation, class Type>
 
 ### <a name="parameters"></a>Parametry
 
-*Func*\
-Objekt binární funkce pro převod na objekt jednočlenné funkce.
+\ *Func*
+Objekt binární funkce, který má být převeden na unární objekt funkce.
 
-*doleva*\
-Hodnota, na které má být vázaný prvního argumentu binární funkce na objekt.
+*levý*\
+Hodnota, na kterou má být první argument objektu binární funkce svázán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt jednočlenné funkce, která je výsledkem vazby prvního argumentu binární funkce na objekt na hodnotu *levé*.
+Unární objekt funkce, který je výsledkem vazby prvního argumentu objektu binární funkce na hodnotu *Left*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vazače jsou druh funkce adaptér. Protože se vrací objekty funkce, jsou umožňuje v určitých typů funkce – složení vytvořit složité a výkonné výrazy.
+Vazby funkcí jsou druhem adaptéru funkce. Vzhledem k tomu, že vracejí objekty funkce, mohou být použity v určitých typech složení funkce k vytvoření složitějších a výkonných výrazů.
 
-Pokud *func* je objekt typu `Operation` a `c` je konstanta, pak `bind1st( func, c )` je stejné jako [binder1st –](../standard-library/binder1st-class.md) konstruktoru třídy `binder1st<Operation>(func, c)`a je snazší použití.
+Pokud *Func* je objekt typu `Operation` a `c` je konstanta, pak `bind1st( func, c )` je stejný jako `binder1st<Operation>(func, c)`konstruktoru třídy [binder1st –](../standard-library/binder1st-class.md) a je pohodlnější použít.
 
 ### <a name="example"></a>Příklad
 
@@ -246,9 +246,9 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a> bind2nd –
+## <a name="bind2nd"></a>bind2nd –
 
-Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce. Vytvoří vazbu mezi druhého argumentu binární funkce na zadanou hodnotu. Zastaralé v C ++ 11, v C ++ 17 odebrané.
+Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na unární objekt funkce. Naváže druhý argument binární funkce na zadanou hodnotu. Zastaralé v C++ 11, odebrané v C++ 17.
 
 ```cpp
 template <class Operation, class Type>
@@ -257,21 +257,21 @@ template <class Operation, class Type>
 
 ### <a name="parameters"></a>Parametry
 
-*Func*\
-Objekt binární funkce pro převod na objekt jednočlenné funkce.
+\ *Func*
+Objekt binární funkce, který má být převeden na unární objekt funkce.
 
-*doprava*\
-Hodnota, na které má být vázaný druhého argumentu binární funkce na objekt.
+*pravé*\
+Hodnota, na kterou má být druhý argument objektu binární funkce svázán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek unárního funkce objektu vazby druhého argumentu binární funkce objektu, který se *správné*.
+Výsledkem objektu unární funkce je vytvoření vazby druhého argumentu objektu binární funkce *vpravo*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vazače jsou druh funkce adaptér. Protože se vrací objekty funkce, jsou umožňuje v určitých typů funkce – složení vytvořit složité a výkonné výrazy.
+Vazby funkcí jsou druhem adaptéru funkce. Vzhledem k tomu, že vracejí objekty funkce, mohou být použity v určitých typech složení funkce k vytvoření složitějších a výkonných výrazů.
 
-Pokud *func* je objekt typu `Operation` a `c` je konstanta, pak `bind2nd(func, c)` je stejné jako [binder2nd –](../standard-library/binder2nd-class.md) konstruktoru třídy `binder2nd<Operation>(func, c)`a pohodlnější použití.
+Pokud je *Func* objekt typu `Operation` a `c` je konstanta, pak `bind2nd(func, c)` je stejný jako `binder2nd<Operation>(func, c)`konstruktoru třídy [binder2nd –](../standard-library/binder2nd-class.md) a pohodlnější pro použití.
 
 ### <a name="example"></a>Příklad
 
@@ -340,9 +340,9 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a> bit_and
+## <a name="bit_and"></a>bit_and
 
-Předdefinovaný objekt funkce, která provádí logické bitové operace AND (binární `operator&`) na svých argumentů.
+Předdefinovaný objekt funkce, který provádí v argumentech bitovou a operaci (binární `operator&`).
 
 ```cpp
 template <class Type = void>
@@ -364,26 +364,26 @@ struct bit_and<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U*\
-Libovolný typ, který podporuje `operator&` , která přebírá operandů zadaný nebo odvozené typy.
+*Type*, *T*, *U*\
+Jakýkoli typ, který podporuje `operator&`, které přebírají operandy zadaných nebo odvozených typů.
 
-*doleva*\
-Levý operand bitové operace AND. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*Levý*\
+Levý operand bitové operace AND. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *T*.
 
-*doprava*\
-Pravý operand bitové operace AND. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*Pravé*\
+Pravý operand bitové operace AND. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *U*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left & Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator&`.
+Výsledek `Left & Right`. Specializovaná šablona provede dokonalé přesměrování výsledku, který má typ vrácený `operator&`.
 
 ### <a name="remarks"></a>Poznámky
 
-`bit_and` Funktor omezen na integrální typy pro základní typy dat, nebo do uživatelem definované typy tento binární soubor implementace `operator&`.
+`bit_and` funktor je omezen na celočíselné typy pro základní datové typy nebo na uživatelsky definované typy, které implementují binární `operator&`.
 
-## <a name="bit_not"></a> bit_not –
+## <a name="bit_not"></a>bit_not
 
-Předdefinovaný objekt funkce, která provádí bitového doplňku (ne) operaci (unární `operator~`) na svůj argument. Přidáno v C ++ 14.
+Předdefinovaný objekt funkce, který provádí v argumentu operaci bitového doplňku (nejedná se o unární `operator~`). Přidáno v C++ 14.
 
 ```cpp
 template <class Type = void>
@@ -403,23 +403,23 @@ struct bit_not<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
+*Zadejte*\
 Typ, který podporuje unární `operator~`.
 
-*doprava*\
-Operand operace bitového doplňku. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování argument typu odkaz lvalue nebo rvalue *typ*.
+*Pravé*\
+Operand operace bitového doplňku. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování argumentu lvalue nebo odkazu rvalue *typu*odvozeného typu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek `~ Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator~`.
+Výsledek `~ Right`. Specializovaná šablona provede dokonalé přesměrování výsledku, který má typ vrácený `operator~`.
 
 ### <a name="remarks"></a>Poznámky
 
-`bit_not` Funktor omezen na integrální typy pro základní typy dat, nebo do uživatelem definované typy tento binární soubor implementace `operator~`.
+`bit_not` funktor je omezen na celočíselné typy pro základní datové typy nebo na uživatelsky definované typy, které implementují binární `operator~`.
 
-## <a name="bit_or"></a> bit_or
+## <a name="bit_or"></a>bit_or
 
-Předdefinovaný objekt funkce, která provádí logické bitové operace OR (`operator|`) na svých argumentů.
+Předdefinovaný objekt funkce, který provádí v argumentech bitovou nebo operaci (`operator|`).
 
 ```cpp
 template <class Type = void>
@@ -441,26 +441,26 @@ struct bit_or<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U*\
-Libovolný typ, který podporuje `operator|` , která přebírá operandů zadaný nebo odvozené typy.
+*Type*, *T*, *U*\
+Jakýkoli typ, který podporuje `operator|`, které přebírají operandy zadaných nebo odvozených typů.
 
-*doleva*\
-Levý operand bitová operace OR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*Levý*\
+Levý operand bitové operace OR. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *T*.
 
-*doprava*\
-Pravý operand bitová operace OR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*Pravé*\
+Pravý operand bitové operace OR. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *U*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left | Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator|`.
+Výsledek `Left | Right`. Specializovaná šablona provede dokonalé přesměrování výsledku, který má typ vrácený `operator|`.
 
 ### <a name="remarks"></a>Poznámky
 
-`bit_or` Funktor omezen na integrální typy pro základní typy dat, nebo do uživatelem definované typy, které implementují `operator|`.
+`bit_or` funktor je omezen na celočíselné typy pro základní datové typy nebo na uživatelsky definované typy, které implementují `operator|`.
 
-## <a name="bit_xor"></a> bit_xor
+## <a name="bit_xor"></a>bit_xor
 
-Předdefinovaný objekt funkce, která provádí logické bitové operace XOR (binární `operator^`) na svých argumentů.
+Předdefinovaný objekt funkce, který provádí v argumentech operaci bitové operace XOR (binární `operator^`).
 
 ```cpp
 template <class Type = void>
@@ -482,24 +482,24 @@ struct bit_xor<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U*\
-Libovolný typ, který podporuje `operator^` , která přebírá operandů zadaný nebo odvozené typy.
+*Type*, *T*, *U*\
+Jakýkoli typ, který podporuje `operator^`, které přebírají operandy zadaných nebo odvozených typů.
 
-*doleva*\
-Levý operand bitové operace XOR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*Levý*\
+Levý operand bitové operace XOR Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *T*.
 
-*doprava*\
-Pravý operand bitové operace XOR. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*Pravé*\
+Pravý operand operace logického operátoru XOR. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *U*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left ^ Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator^`.
+Výsledek `Left ^ Right`. Specializovaná šablona provede dokonalé přesměrování výsledku, který má typ vrácený `operator^`.
 
 ### <a name="remarks"></a>Poznámky
 
-`bit_xor` Funktor omezen na integrální typy pro základní typy dat, nebo do uživatelem definované typy tento binární soubor implementace `operator^`.
+`bit_xor` funktor je omezen na celočíselné typy pro základní datové typy nebo na uživatelsky definované typy, které implementují binární `operator^`.
 
-## <a name="cref"></a> cref
+## <a name="cref"></a>cref
 
 Z argumentu vytvoří konstantní `reference_wrapper`.
 
@@ -514,14 +514,14 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 ### <a name="parameters"></a>Parametry
 
 *Ty*\
-Typ argumentu zabalit.
+Typ argumentu, který se má zabalit
 
-*arg*\
-Argument, který chcete zabalit.
+*arg* –\
+Argument, který se má zabalit
 
 ### <a name="remarks"></a>Poznámky
 
-První funkce vrací `reference_wrapper<const Ty>(arg.get())`. Můžete použít ke sbalení odkazu const. Druhá funkce vrátí `reference_wrapper<const Ty>(arg)`. Použijete ji znovu zabalit jako konstantní odkaz zabalené odkaz.
+První funkce vrátí `reference_wrapper<const Ty>(arg.get())`. Použijete ho k zabalení odkazu const. Druhá funkce vrátí `reference_wrapper<const Ty>(arg)`. Použijete ho k přebalení zabalených odkazů jako odkazu const.
 
 ### <a name="example"></a>Příklad
 
@@ -555,9 +555,9 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a> vyvolání
+## <a name="invoke"></a>Zavolejte
 
-Vyvolá jakékoli volatelný objekt s danou argumenty. Přidáno v C ++ 17.
+Vyvolá libovolný objekt, který se má volat, s danými argumenty. Přidáno v C++ 17.
 
 ```cpp
 template <class Callable, class... Args>
@@ -567,40 +567,40 @@ invoke_result_t<Callable, Args...>
 
 ### <a name="parameters"></a>Parametry
 
-*Volatelný*\
-Typ objektu určeného k volání.
+*Volat*\
+Typ objektu, který má být volán.
 
-*argumenty*\
+\ *argumentů*
 Typy argumentů volání.
 
 *fn*\
-Objekt k volání.
+Objekt, který má být volán.
 
-*argumenty*\
+\ *argumentů*
 Argumenty volání.
 
-*Specifikace*\
-**Noexcept** specifikace `std::is_nothrow_invocable_v<Callable, Args>)`.
+\ *specifikace*
+`std::is_nothrow_invocable_v<Callable, Args>)`specifikace **s výjimkou** .
 
 ### <a name="remarks"></a>Poznámky
 
-Vyvolá volatelný objekt *fn* pomocí parametrů *args*. Efektivně `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`, kde pseudofunkce `INVOKE(f, t1, t2, ..., tN)` znamená, že jeden z následujících akcí:
+Vyvolá přivolaný objekt *FN* pomocí *argumentů*Parameters. Efektivně `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`, kde `INVOKE(f, t1, t2, ..., tN)` pseudo-function znamená jednu z následujících akcí:
 
-- `(t1.*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`. To znamená, že pokud `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
+- `(t1.*f)(t2, ..., tN)`, je-li `f` ukazatel na členskou funkci třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`. To znamená, když `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
 
-- `(t1.get().*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `std::decay_t<decltype(t1)>` je specializací `std::reference_wrapper`.
+- `(t1.get().*f)(t2, ..., tN)`, když je `f` ukazatel na členskou funkci třídy `T` a `std::decay_t<decltype(t1)>` je specializace `std::reference_wrapper`.
 
-- `((*t1).*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `t1` není jeden z předchozích typů.
+- `((*t1).*f)(t2, ..., tN)`, je-li `f` ukazatel na členskou funkci třídy `T` a `t1` není jedním z předchozích typů.
 
-- `t1.*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`.  To znamená, že pokud `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
+- `t1.*f`, když N = 1 a `f` je ukazatel na Členská data třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`.  To znamená, když `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
 
-- `t1.get().*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `std::decay_t<decltype(t1)>` je specializací `std::reference_wrapper`.
+- `t1.get().*f`, když N = 1 a `f` je ukazatel na Členská data třídy `T` a `std::decay_t<decltype(t1)>` je specializace `std::reference_wrapper`.
 
-- `(*t1).*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` není jeden z předchozích typů.
+- `(*t1).*f`, když N = 1 a `f` je ukazatel na Členská data třídy `T` a `t1` není jedním z předchozích typů.
 
 - `f(t1, t2, ..., tN)` ve všech ostatních případech.
 
-Informace o typ výsledku volatelného objektu, najdete v části [invoke_result](invoke-result-class.md). Predikáty na volatelný typech naleznete v tématu [is_invocable is_invocable_r, is_nothrow_invocable is_nothrow_invocable_r třídy](is-invocable-classes.md).
+Informace o typu výsledného objektu, který se nedá volat, najdete v tématu [invoke_result](invoke-result-class.md). Predikáty na volatelné typy naleznete v tématu [is_invocable, is_invocable_r, is_nothrow_invocable is_nothrow_invocable_r třídy](is-invocable-classes.md).
 
 ### <a name="example"></a>Příklad
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a> mem_fn –
+## <a name="mem_fn"></a>mem_fn
 
 Vygeneruje jednoduchou obálku volání.
 
@@ -691,15 +691,15 @@ unspecified mem_fn(RTy Ty::*pm);
 Návratový typ zabalené funkce.
 
 *Ty*\
-Typ ukazatele členské funkce.
+Typ ukazatele členské funkce
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí jednoduchou obálku volání `cw`, s typem výsledku slabé tak, že výraz `cw(t, a2, ..., aN)` je stejný jako `INVOKE(pm, t, a2, ..., aN)`. Nevyvolá žádné výjimky.
+Funkce šablony vrací jednoduchý `cw`obálky volání s slabým typem výsledku, který je `cw(t, a2, ..., aN)` výrazu stejný jako `INVOKE(pm, t, a2, ..., aN)`. Nevyvolá žádné výjimky.
 
-Obálka volání vrácené je odvozen z `std::unary_function<cv Ty*, RTy>` (a definování vnořeného typu `result_type` jako synonymum pro *RTy* a vnořeného typu `argument_type` jako synonymum pro `cv Ty*`) pouze tehdy, pokud typ *Ty*  je ukazatel na členskou funkci s kvalifikátor cv-qualifier `cv` , která nepřijímá žádné argumenty.
+Vrácený obálka volání je odvozena od `std::unary_function<cv Ty*, RTy>` (a definováním vnořeného typu `result_type` jako synonymum pro *RTy* a vnořeného typu `argument_type` jako synonymum pro `cv Ty*`) pouze v případě, *že typ daného* typu je ukazatel na členskou funkci s kvalifikátorem CV `cv`, který nepřijímá žádné argumenty.
 
-Obálka volání vrácené je odvozen z `std::binary_function<cv Ty*, T2, RTy>` (a definování vnořeného typu `result_type` jako synonymum pro *RTy*, vnořený typ `first argument_type` jako synonymum pro `cv Ty*`a vnořeného typu `second argument_type` jako synonymum pro `T2`) pouze tehdy, pokud typ *Ty* je ukazatel na členskou funkci s kvalifikátor cv-qualifier `cv` , která přijímá jeden argument typu `T2`.
+Vrácený obálka volání je odvozena od `std::binary_function<cv Ty*, T2, RTy>` (a definováním vnořeného typu `result_type` jako synonymum pro *RTy*, vnořený typ `first argument_type` jako synonymum pro `cv Ty*`a vnořený typ `second argument_type` jako synonymum pro `T2`) pouze v případě, že typ, který je ukazatelem na členskou funkci s kvalifikátorem CV `cv`, který přebírá jeden *argument typu `T2`* .
 
 ### <a name="example"></a>Příklad
 
@@ -739,9 +739,9 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a> mem_fun –
+## <a name="mem_fun"></a>mem_fun
 
-Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů ukazatelů. Zastaralé v C ++ 11 pro [mem_fn –](#mem_fn) a [svázat](#bind)a v C ++ 17 odebrané.
+Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů ukazatelů. Zastaralé v C++ 11 pro [mem_fn](#mem_fn) a [BIND](#bind)a odebráno v c++ 17.
 
 ```cpp
 template <class Result, class Type>
@@ -760,11 +760,11 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 ### <a name="parameters"></a>Parametry
 
 *pMem*\
-Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
+Ukazatel na členskou funkci třídy `Type`, která má být převedena na objekt funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A **const** nebo **nekonstantní** objektu funkce typu `mem_fun_t` nebo `mem_fun1_t`.
+Objekt funkce **const** nebo **non_const** typu `mem_fun_t` nebo `mem_fun1_t`.
 
 ### <a name="example"></a>Příklad
 
@@ -826,9 +826,9 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a> mem_fun_ref –
+## <a name="mem_fun_ref"></a>mem_fun_ref
 
-Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů reference. Zastaralé v C ++ 11, v C ++ 17 odebrané.
+Pomocné funkce šablon používané k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů odkazů. Zastaralé v C++ 11, odebrané v C++ 17.
 
 ```cpp
 template <class Result, class Type>
@@ -847,11 +847,11 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) cons
 ### <a name="parameters"></a>Parametry
 
 *pMem*\
-Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
+Ukazatel na členskou funkci třídy `Type`, která má být převedena na objekt funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A **const** nebo `non_const` objektu funkce typu `mem_fun_ref_t` nebo `mem_fun1_ref_t`.
+Objekt funkce **const** nebo `non_const` typu `mem_fun_ref_t` nebo `mem_fun1_ref_t`.
 
 ### <a name="example"></a>Příklad
 
@@ -931,9 +931,9 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a> not1 –
+## <a name="not1"></a>not1 –
 
-Vrací doplněk jednočlenného predikátu. Zastaralé funkce pro [not_fn](#not_fn) v C ++ 17.
+Vrací doplněk jednočlenného predikátu. Zastaralé pro [not_fn](#not_fn) v c++ 17.
 
 ```cpp
 template <class UnaryPredicate>
@@ -942,16 +942,16 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 
 ### <a name="parameters"></a>Parametry
 
-*Predikát*\
-Unární predikát, který chcete bude negovat.
+\ *predikátu*
+Unární predikát, který má být negace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Unární predikát, který je negace unární predikát, změnit.
+Unární predikát, který je negací unárního predikátu změněn.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `unary_negate` je vytvořen z unární predikát `predicate(x)`, pak vrátí `!predicate(x)`.
+Pokud je `unary_negate` vytvořen z unárního predikátu `predicate(x)`, vrátí `!predicate(x)`.
 
 ### <a name="example"></a>Příklad
 
@@ -1003,9 +1003,9 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a> not2 –
+## <a name="not2"></a>not2 –
 
-Vrací doplněk binárního predikátu. Zastaralé funkce pro [not_fn](#not_fn) v C ++ 17.
+Vrací doplněk binárního predikátu. Zastaralé pro [not_fn](#not_fn) v c++ 17.
 
 ```cpp
 template <class BinaryPredicate>
@@ -1014,16 +1014,16 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Parametry
 
-*Func*\
-Binární predikát k bude negovat.
+\ *Func*
+Binární predikát, který má být negace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Upravovat binární predikát, který je negace binárním predikátem.
+Binární predikát, který je negací nezměněného binárního predikátu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `binary_negate` je vytvořen z binárním predikátem `binary_predicate(x, y)`, pak vrátí `!binary_predicate(x, y)`.
+Pokud je `binary_negate` vytvořen z binárního predikátu `binary_predicate(x, y)`, vrátí `!binary_predicate(x, y)`.
 
 ### <a name="example"></a>Příklad
 
@@ -1079,9 +1079,9 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a> not_fn
+## <a name="not_fn"></a>not_fn
 
-`not_fn` Šablona funkce převezme volatelný objekt a vrátí volatelný objekt. Když vrácené volatelný objekt později vyvolání některé argumenty, předává je do původní volatelný objekt a logicky Neguje výsledek. Uchovává const kvalifikaci a hodnota kategorie chování zkomprimovaného volatelného objektu. `not_fn` Novinky v C ++ 17 a nahradí se zastaralou `std::not1`, `std::not2`, `std::unary_negate`, a `std::binary_negate`.
+Šablona funkce `not_fn` přijímá objekt, který se dá volat, a vrátí objekt, který se dá volat. V případě, že vrácený objekt s voláním je později vyvolán s některými argumenty, předává je původní možnému objektu, který logicky negace výsledek. Zachovává chování const kvalifikace a kategorie hodnoty zabaleného volatelné objektu. `not_fn` je v C++ 17 novinkou a nahrazuje zastaralé `std::not1`, `std::not2`, `std::unary_negate`a `std::binary_negate`.
 
 ```cpp
 template <class Callable>
@@ -1090,12 +1090,12 @@ template <class Callable>
 
 ### <a name="parameters"></a>Parametry
 
-*Func*\
-Volatelný objekt použitý k vytvoření volání předávání obálky.
+\ *Func*
+Objekt, který se používá k vytvoření obálky předávacího volání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí Obálka volání jako `return call_wrapper(std::forward<Callable>(func))`založená na tuto třídu pouze budeme:
+Funkce šablony vrátí obálku volání, jako je `return call_wrapper(std::forward<Callable>(func))`, na základě této třídy, která je jen pro Exposition:
 
 ```cpp
 class call_wrapper
@@ -1124,9 +1124,9 @@ private:
 };
 ```
 
-Explicitní konstruktor na volatelný objekt *func* vyžaduje typ `std::decay_t<Callable>` splňovat požadavky `MoveConstructible`, a `is_constructible_v<FD, Callable>` musí mít hodnotu true. Inicializuje zkomprimovaným volatelným objektům `fd` z `std::forward<Callable>(func)`a vyvolá žádné výjimce způsobené konstrukce `fd`.
+Explicitní konstruktor funkce *Func* objektu pro vyžadování vyžaduje typ `std::decay_t<Callable>` pro splnění požadavků `MoveConstructible`a `is_constructible_v<FD, Callable>` musí mít hodnotu true. Inicializuje zabalený volaný objekt `fd` z `std::forward<Callable>(func)`a vyvolá jakoukoli výjimku vyvolanou konstrukcí `fd`.
 
-Obálka zveřejňuje operátory volání rozlišované podle kategorie odkaz lvalue nebo rvalue a const kvalifikace, jak je znázorněno zde:
+Obálka zpřístupňuje operátory volání odlišené podle hodnoty lvalue nebo odkazové kategorie rvalue a konstantní kvalifikace, jak je znázorněno zde:
 
 ```cpp
 template<class... Args> auto operator()(Args&&... args) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
@@ -1135,7 +1135,7 @@ template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<
 template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
 ```
 
-První dvě jsou stejné jako `return !std::invoke(fd, std::forward<Args>(args)...)`. Další dva jsou stejné jako `return !std::invoke(std::move(fd), std::forward<Args>(args)...)`.
+První dva jsou stejné jako `return !std::invoke(fd, std::forward<Args>(args)...)`. Druhá dvě jsou stejná jako `return !std::invoke(std::move(fd), std::forward<Args>(args)...)`.
 
 ### <a name="example"></a>Příklad
 
@@ -1179,9 +1179,9 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a> ptr_fun –
+## <a name="ptr_fun"></a>ptr_fun
 
-Pomocné funkce šablony použité k převést na jednočlenné a binární funkce ukazatele a binárních přizpůsobitelných funkcí. Zastaralé v C ++ 11, v C ++ 17 odebrané.
+Pomocné funkce šablon používané pro převod unárních a binárních ukazatelů na funkce v uvedeném pořadí na unární a binární adaptivní funkce. Zastaralé v C++ 11, odebrané v C++ 17.
 
 ```cpp
 template <class Arg, class Result>
@@ -1194,23 +1194,23 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 ### <a name="parameters"></a>Parametry
 
 *pfunc*\
-Unární nebo binární ukazatel funkce pro převod na přizpůsobitelné funkce.
+Unární nebo binární ukazatel funkce, který má být převeden na přizpůsobitelnou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První šablona funkce vrátí funkci unárního [pointer_to_unary_function –](../standard-library/pointer-to-unary-function-class.md) <`Arg`, **výsledek**> (\* `pfunc`).
+První funkce šablony vrací Unární funkci [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) <`Arg`, **výsledek**> (\* `pfunc`).
 
-Druhá funkce šablony vrátí binární funkce [pointer_to_binary_function –](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**, **Arg2**, **výsledek**> (\* `pfunc`).
+Druhá funkce šablony vrátí binární funkci [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**arg1**, **Arg2**, **Result**> (\* `pfunc`).
 
 ### <a name="remarks"></a>Poznámky
 
-Ukazatel na funkci je objekt funkce. Může být předán libovolném algoritmu, který očekává, že funkci jako parametr, ale není přizpůsobitelné. Informace o jeho vnořené typy nebo se vyžaduje k jeho použití s adaptér, například, k vytvoření vazby hodnoty se má negovat. Převod ukazatelů na jednočlenné a binární funkce podle `ptr_fun` pomocnou funkci umožňuje adaptérů funkce pro práci s ukazatelů na jednočlenné a binární funkce.
+Ukazatel funkce je objekt funkce. Může být předán jakémukoli algoritmu, který jako parametr očekává funkci, ale nelze jej upravit. Informace o vnořených typech jsou vyžadovány pro použití s adaptérem, například k navázání hodnoty na ni nebo pro negaci. Převod unárních a binárních ukazatelů na funkce pomocí pomocné funkce `ptr_fun` umožňuje adaptivním funkcím pracovat s unárními a binárními ukazateli funkcí.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a> REF
+## <a name="ref"></a>odkazů
 
 Vytvoří `reference_wrapper` z argumentu.
 
@@ -1228,7 +1228,7 @@ Odkaz na `arg`; konkrétně `reference_wrapper<Ty>(arg)`.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad definuje dvě funkce: jeden vázána na řetězcovou proměnnou, je mez na odkaz řetězcová hodnota vypočítaná aplikací volání `ref`. Při změně hodnoty proměnné, první funkce i nadále používat staré hodnoty a druhá funkce používá novou hodnotu.
+Následující příklad definuje dvě funkce: jeden vázaný na proměnnou řetězce, druhý vázaný na odkaz proměnné řetězce vypočítané voláním `ref`. Když se změní hodnota proměnné, bude první funkce nadále používat starou hodnotu a druhá funkce použije novou hodnotu.
 
 ```cpp
 #include <algorithm>
@@ -1302,9 +1302,9 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a> Prohození
+## <a name="swap"></a>adresu
 
-Prohodí dva `function` objekty.
+Zamění dva objekty `function`.
 
 ```cpp
 template <class FT>
@@ -1313,13 +1313,13 @@ template <class FT>
 
 ### <a name="parameters"></a>Parametry
 
-*FT*\
+\ *ft*
 Typ řízený objekty funkce.
 
-*F1*\
+\ *F1*
 První objekt funkce.
 
-*F2*\
+*f2*\
 Druhý objekt funkce.
 
 ### <a name="remarks"></a>Poznámky

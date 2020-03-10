@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: f1aa76514b98bbf12f8e516d3d54f68e8ef4dd7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496104"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862912"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread – třída
 
@@ -45,20 +45,20 @@ Třída, která poskytuje funkci vytváření vlákna, jako je například [CRTT
 
 ### <a name="protected-structures"></a>Chráněné struktury
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`WorkerClientEntry`||
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWorkerThread::CWorkerThread](#cworkerthread)|Konstruktor pro pracovní vlákno.|
 |[CWorkerThread:: ~ CWorkerThread](#dtor)|Destruktor pro pracovní vlákno.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CWorkerThread::AddHandle](#addhandle)|Voláním této metody přidáte popisovač čekajícího objektu do seznamu spravovaného pracovním vláknem.|
 |[CWorkerThread::AddTimer](#addtimer)|Voláním této metody přidáte pravidelný čekací časovač do seznamu spravovaného pracovním vláknem.|
@@ -78,7 +78,7 @@ Třída, která poskytuje funkci vytváření vlákna, jako je například [CRTT
 
 1. Zavolejte [CWorkerThread:: AddHandle](#addhandle) s popisovačem objektu jádra a ukazatelem na implementaci [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-   \- nebo –
+   \- nebo-
 
    Zavolejte [CWorkerThread:: addtimer](#addtimer) s ukazatelem na implementaci [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
@@ -116,7 +116,7 @@ Parametr, který má být předán do [IWorkerThreadClient:: Execute](../../atl/
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -150,7 +150,7 @@ mimo Adresa proměnné popisovače, která při úspěchu obdrží popisovač no
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -219,13 +219,13 @@ Existující pracovní vlákno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda by měla být volána pro inicializaci objektu po vytvoření nebo po volání metody [CWorkerThread:: Shutdown](#shutdown).
 
-Aby dva nebo více `CWorkerThread` objektů používalo stejné pracovní vlákno, inicializujte jeden z nich bez předání jakýchkoli argumentů a pak předejte ukazatel na tento objekt `Initialize` metodám ostatních. Objekty inicializované pomocí ukazatele by měly být ukončeny před tím, než je objekt použit k jeho inicializaci.
+Chcete-li mít dva nebo více objektů `CWorkerThread` použít stejné pracovní vlákno, inicializujte jeden z nich, aniž byste museli předávat žádné argumenty, a předejte ukazatel na tento objekt metodě `Initialize` ostatních. Objekty inicializované pomocí ukazatele by měly být ukončeny před tím, než je objekt použit k jeho inicializaci.
 
 Informace o tom, jak se chování této metody mění při inicializaci pomocí ukazatele na existující objekt, naleznete v tématu [CWorkerThread:: Shutdown](#shutdown) .
 
@@ -244,11 +244,11 @@ Popisovač, který chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Po odebrání popisovače [IWorkerThreadClient:: CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) bude volána u přidruženého objektu, který byl předán do [AddHandle](#addhandle). Pokud se toto volání nezdaří `CWorkerThread` , zavolá funkci Windows [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) na popisovači.
+Po odebrání popisovače [IWorkerThreadClient:: CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) bude volána u přidruženého objektu, který byl předán do [AddHandle](#addhandle). Pokud se toto volání nezdaří, `CWorkerThread` zavolá funkci Windows [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) na popisovači.
 
 ##  <a name="shutdown"></a>CWorkerThread:: Shutdown
 
@@ -261,19 +261,19 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwWait*<br/>
-Čas v milisekundách, po který se má čekat na vypnutí pracovního vlákna ATL_WORKER_THREAD_WAIT je standardně 10 sekund. V případě potřeby můžete pro tento symbol definovat vlastní hodnotu před zahrnutím atlutil. h.
+Čas v milisekundách, po který se má čekat na vypnutí pracovního vlákna ATL_WORKER_THREAD_WAIT výchozí hodnota je 10 sekund. V případě potřeby můžete pro tento symbol definovat vlastní hodnotu před zahrnutím atlutil. h.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání, například pokud je překročena hodnota časového limitu *dwWait*.
+Vrátí S_OK při úspěchu nebo chyba HRESULT při selhání, například pokud je překročena hodnota timeout, *dwWait*.
 
 ### <a name="remarks"></a>Poznámky
 
 Chcete-li znovu použít objekt, zavolejte [CWorkerThread:: Initialize](#initialize) po volání této metody.
 
-Všimněte si, `Shutdown` že volání na objekt inicializovaný s ukazatelem na `CWorkerThread` jiný objekt nemá žádný účinek a vždy vrátí hodnotu S_OK.
+Všimněte si, že volání `Shutdown` u objektu inicializovaného ukazatelem na jiný objekt `CWorkerThread` nemá žádný účinek a vždy vrátí S_OK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Třídy](../../atl/reference/atl-classes.md)<br/>

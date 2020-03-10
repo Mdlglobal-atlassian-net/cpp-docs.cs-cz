@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450349"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937432"
 ---
 # <a name="slice-class"></a>slice – třída
 
@@ -25,7 +25,7 @@ Třída nástrojů pro valarray, která se používá k definování jednorozmě
 
 ## <a name="remarks"></a>Poznámky
 
-Třída ukládá parametry, které charakterizují objekt typu [slice_array](../standard-library/slice-array-class.md) podmnožina valarray je nepřímo vytvořená, když se objekt řezu zobrazí jako argument pro objekt typu [valarray](../standard-library/valarray-class.md#op_at) **\<třídy >** . Uložené hodnoty, které určují podmnožinu vybrané z nadřazené valarray, zahrnují:
+Třída ukládá parametry, které charakterizují objekt typu [slice_array](../standard-library/slice-array-class.md) podmnožina valarray je nepřímo vytvořena, když se objekt řezu zobrazí jako argument pro objekt třídy [valarray](../standard-library/valarray-class.md#op_at) **\<typu >** . Uložené hodnoty, které určují podmnožinu vybrané z nadřazené valarray, zahrnují:
 
 - Počáteční index v valarray.
 
@@ -41,7 +41,7 @@ Operace na valarrays jsou zaručeny pouze v případě, že zdrojové a cílové
 
 |Konstruktor|Popis|
 |-|-|
-|[průřez](#slice)|Definuje podmnožinu `valarray` , která se skládá z několika prvků, které mají stejnou vzdálenost a které začínají specifikovaným elementem.|
+|[průřez](#slice)|Definuje podmnožinu `valarray`, která se skládá z několika prvků, které jsou rovny stejné vzdálenosti a které začínají specifikovaným elementem.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -53,7 +53,7 @@ Operace na valarrays jsou zaručeny pouze v případě, že zdrojové a cílové
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<valarray >
+**Záhlaví:** \<valarray >
 
 **Obor názvů:** std
 
@@ -142,7 +142,7 @@ Index valarray prvního prvku v podmnožině.
 *_Len*\
 Počet prvků v podmnožině.
 
-*mezer*\
+\ *mezer*
 Vzdálenost mezi prvky v podmnožině.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -310,6 +310,6 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

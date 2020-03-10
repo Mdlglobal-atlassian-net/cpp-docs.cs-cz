@@ -1,5 +1,5 @@
 ---
-title: Platform::Object – třída
+title: 'Platform:: Object – Třída'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
 ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183206"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865740"
 ---
-# <a name="platformobject-class"></a>Platform::Object – třída
+# <a name="platformobject-class"></a>Platform:: Object – Třída
 
-Poskytuje běžné chování pro referenční třídy a struktury ref v aplikacích pro Windows Runtime. Všechny třídy ref class a instance struktury ref jsou implicitně převést na Platform::Object ^ a jeho virtuální metodu ToString lze přepsat.
+Poskytuje běžné chování pro referenční třídy a struktury ref v aplikacích prostředí Windows Runtime. Všechny instance třídy ref class a ref struct jsou implicitně převoditelné na Platform:: Object ^ a mohou přepsat svou virtuální metodu ToString.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,17 +35,17 @@ public ref class Object : Object
 
 |Název|Popis|
 |----------|-----------------|
-|[Object::Object](#ctor)|Inicializuje novou instanci třídy objektu.|
+|[Object:: Object](#ctor)|Inicializuje novou instanci třídy Object.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[Object::Equals](#equals)|Určuje, zda se zadaný objekt rovná aktuálnímu objektu.|
-|[Object::GetHashCode](#gethashcode)|Vrátí kód hash této instance.|
-|[Object::ReferenceEquals](#referenceequals)|Určuje, zda jsou zadané instance objektu stejné instanci.|
-|[ToString](#tostring)|Vrací řetězec, který představuje aktuální objekt. Může být přepsána.|
-|[GetType](#gettype)|Získá [Platform::type –](../cppcx/platform-type-class.md) , která popisuje aktuální instance.|
+|[Object:: Equals](#equals)|Určí, zda se zadaný objekt rovná aktuálnímu objektu.|
+|[Objekt:: GetHashCode](#gethashcode)|Vrátí hodnotu hash pro tuto instanci.|
+|[Objekt:: ReferenceEquals](#referenceequals)|Určuje, zda jsou zadané instance objektů stejné instance.|
+|[Metodu](#tostring)|Vrátí řetězec, který představuje aktuální objekt. Lze přepsat.|
+|[GetType](#gettype)|Načte objekt [Platform:: Type](../cppcx/platform-type-class.md) , který popisuje aktuální instanci.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -55,13 +55,13 @@ public ref class Object : Object
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** vccorlib.h
+**Záhlaví:** vccorlib. h
 
-**Namespace:** Platforma
+**Obor názvů:** Platformy
 
-## <a name="equals"></a> Object::Equals – metoda
+## <a name="equals"></a>Object:: Equals – metoda
 
-Určuje, zda se zadaný objekt rovná aktuálnímu objektu.
+Určí, zda se zadaný objekt rovná aktuálnímu objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -73,16 +73,16 @@ bool Equals(
 
 ### <a name="parameters"></a>Parametry
 
-*obj*<br/>
-Objekt k porovnání.
+*objektu*<br/>
+Objekt k porovnání
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud objekty jsou stejné, jinak **false**.
+**true** , pokud jsou objekty stejné, v opačném případě **false**.
 
-## <a name="gethashcode"></a>  Object::GetHashCode – metoda
+## <a name="gethashcode"></a>Object:: GetHashCode – metoda
 
-Vrátí `IUnknown`* hodnotu identity pro tuto instanci, pokud je objekt modelu COM, nebo hodnotu Vypočítaný algoritmus hash, pokud není objekt modelu COM.
+Vrátí hodnotu `IUnknown`* identity této instance, pokud se jedná o objekt COM, nebo vypočítanou hodnotu hash, pokud se nejedná o objekt COM.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -96,11 +96,11 @@ public:int GetHashCode();
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda GetHashCode slouží k vytvoření klíče pro objekty v rámci služby maps. Hodnota hash kódy můžete porovnat s použitím [Object::Equals](#equals). Pokud cesta kódu je velmi důležité a `GetHashCode` a `Equals` nejsou dostatečně rychle, můžete rozevírací seznam pro základní vrstvě COM a proveďte nativní `IUnknown` porovnání ukazatelů.
+GetHashCode můžete použít k vytvoření klíčů pro objekty v mapách. Můžete porovnat kódy hash pomocí [objektu:: Equals](#equals). Pokud je cesta k kódu velmi kritická a `GetHashCode` a `Equals` nejsou dostatečně rychlé, můžete je vyřadit do podkladové vrstvy COM a provádět nativní porovnávání `IUnknown` ukazatelů.
 
-## <a name="gettype"></a>  Object::gettype – metoda
+## <a name="gettype"></a>Object:: GetType – metoda
 
-Vrátí [Platform::type –](../cppcx/platform-type-class.md) objekt, který popisuje typ objektu v modulu runtime.
+Vrátí objekt [Platform:: Type](../cppcx/platform-type-class.md) , který popisuje typ modulu runtime objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -110,23 +110,23 @@ Object::GetType();
 
 ### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-A [Platform::type –](../cppcx/platform-type-class.md) objekt, který popisuje modulu runtime typu objektu.
+Objekt [Platform:: Type](../cppcx/platform-type-class.md) , který popisuje typ modulu runtime objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Statické [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) můžete použít k získání [Platform::TypeCode – výčet](../cppcx/platform-typecode-enumeration.md) hodnotu, která představuje aktuálního typu. To oceníte především pro předdefinované typy. Typ kódu pro všechny třídy ref class kromě [Platform::String](../cppcx/platform-string-class.md) je objekt (1).
+Statický [Typ:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) lze použít k získání hodnoty [výčtu Platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) , která představuje aktuální typ. To je hlavně užitečné pro předdefinované typy. Kód typu pro všechny referenční třídy kromě [Platform:: String](../cppcx/platform-string-class.md) je Object (1).
 
-[Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) třída se používá v rozhraní Windows API způsobem nezávislým na jazyku předávání informací o typu mezi součásti Windows a aplikace. T[Platform::type – třída](../cppcx/platform-type-class.md) má operátory pro převod mezi `Type` a `TypeName`.
+Třída [Windows:: UI:: XAML:: Interop:: typeName](/uwp/api/windows.ui.xaml.interop.typename) se používá v rozhraních API systému Windows jako nezávislý způsob předávání informací o typech mezi součástmi systému Windows a aplikacemi. Třída T[Platform:: Type](../cppcx/platform-type-class.md) obsahuje operátory pro převod mezi `Type` a `TypeName`.
 
-Použití [typeid](../extensions/typeid-cpp-component-extensions.md) operátor se vraťte `Platform::Type` objekt pro název třídy, například při navigaci mezi stránkami XAML:
+Použijte operátor [typeid](../extensions/typeid-cpp-component-extensions.md) k vrácení objektu `Platform::Type` pro název třídy, například při navigaci mezi stránkami XAML:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="ctor"></a>  Object::Object konstruktor
+## <a name="ctor"></a>Object:: Object – konstruktor
 
-Inicializuje novou instanci třídy objektu.
+Inicializuje novou instanci třídy Object.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -134,9 +134,9 @@ Inicializuje novou instanci třídy objektu.
 public:Object();
 ```
 
-## <a name="referenceequals"></a>  Object::ReferenceEquals – metoda
+## <a name="referenceequals"></a>Object:: ReferenceEquals – metoda
 
-Určuje, zda jsou zadané instance objektu stejné instanci.
+Určuje, zda jsou zadané instance objektů stejné instance.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -146,19 +146,19 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 ### <a name="parameters"></a>Parametry
 
-*Obj1*<br/>
-První objekt k porovnání.
+*obj1*<br/>
+První objekt k porovnání
 
 *obj2*<br/>
-Druhý objekt k porovnání.
+Druhý objekt k porovnání
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud jsou oba objekty stejné; jinak **false**.
+**true** , pokud jsou tyto dva objekty stejné; v opačném případě **false**.
 
-## <a name="tostring"></a>  Metoda Object::ToString (C++/CX)
+## <a name="tostring"></a>Object:: ToString – MetodaC++(/CX)
 
-Vrací řetězec, který představuje aktuální objekt.
+Vrátí řetězec, který představuje aktuální objekt.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -169,7 +169,7 @@ virtual String^ ToString();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec, který představuje aktuální objekt. Můžete přepsat tuto metodu za účelem zadejte vlastní řetězec zprávu v referenční třídy nebo struktury:
+Řetězec, který představuje aktuální objekt. Tuto metodu můžete přepsat tak, aby poskytovala vlastní řetězcovou zprávu ve třídě ref class nebo struct:
 
 ```cpp
 public ref class Tree sealed
@@ -183,8 +183,8 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Platforma Namespace](platform-namespace-c-cx.md)<br/>
+[Obor názvů platformy](platform-namespace-c-cx.md)<br/>
 [Platform::Type – třída](platform-type-class.md)<br/>
 [Systém typů](type-system-c-cx.md)
