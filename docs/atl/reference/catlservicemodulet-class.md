@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
 ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497741"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864993"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT – třída
 
@@ -58,7 +58,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Vaše třída je odvozena z `CAtlServiceModuleT`.
 
 *nServiceNameID*<br/>
@@ -68,50 +68,50 @@ Identifikátor prostředku služby.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CAtlServiceModuleT::CAtlServiceModuleT](#catlservicemodulet)|Konstruktor|
+|[CAtlServiceModuleT:: CAtlServiceModuleT](#catlservicemodulet)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CAtlServiceModuleT::Handler](#handler)|Rutina obslužné rutiny pro službu.|
-|[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Poskytuje výchozí nastavení zabezpečení pro službu.|
-|[CAtlServiceModuleT::Install](#install)|Nainstaluje a vytvoří službu.|
-|[CAtlServiceModuleT::IsInstalled](#isinstalled)|Potvrdí, že služba je nainstalovaná.|
-|[CAtlServiceModuleT::LogEvent](#logevent)|Zapisuje do protokolu událostí.|
-|[CAtlServiceModuleT::OnContinue](#oncontinue)|Přepsáním této metody pokračujte v této službě.|
-|[CAtlServiceModuleT::OnInterrogate](#oninterrogate)|Přepsáním této metody dotazování službu.|
-|[CAtlServiceModuleT::OnPause](#onpause)|Potlačením této metody pozastavíte službu.|
-|[CAtlServiceModuleT::OnShutdown](#onshutdown)|Přepsat tuto metodu pro vypnutí služby|
-|[CAtlServiceModuleT::OnStop](#onstop)|Přepsáním této metody zastavíte službu.|
-|[CAtlServiceModuleT::OnUnknownRequest](#onunknownrequest)|Přepsat tuto metodu pro zpracování neznámých požadavků na službu|
-|[CAtlServiceModuleT::ParseCommandLine](#parsecommandline)|Analyzuje příkazový řádek a v případě potřeby provede registraci.|
-|[CAtlServiceModuleT::PreMessageLoop](#premessageloop)|Tato metoda se volá bezprostředně před vstupem do smyčky zpráv.|
-|[CAtlServiceModuleT::RegisterAppId](#registerappid)|Zaregistruje službu v registru.|
-|[CAtlServiceModuleT::Run](#run)|Spustí službu.|
-|[CAtlServiceModuleT::ServiceMain](#servicemain)|Metoda, kterou volá správce řízení služeb.|
-|[CAtlServiceModuleT::SetServiceStatus](#setservicestatus)|Aktualizuje stav služby.|
-|[CAtlServiceModuleT::Start](#start)|Volá se `CAtlServiceModuleT::WinMain` při spuštění služby.|
+|[CAtlServiceModuleT:: Handler](#handler)|Rutina obslužné rutiny pro službu.|
+|[CAtlServiceModuleT:: InitializeSecurity](#initializesecurity)|Poskytuje výchozí nastavení zabezpečení pro službu.|
+|[CAtlServiceModuleT:: Install](#install)|Nainstaluje a vytvoří službu.|
+|[CAtlServiceModuleT:: IsInstalled](#isinstalled)|Potvrdí, že služba je nainstalovaná.|
+|[CAtlServiceModuleT:: LogEvent](#logevent)|Zapisuje do protokolu událostí.|
+|[CAtlServiceModuleT::-Continue](#oncontinue)|Přepsáním této metody pokračujte v této službě.|
+|[CAtlServiceModuleT:: OnInterrogate](#oninterrogate)|Přepsáním této metody dotazování službu.|
+|[CAtlServiceModuleT:: pozastaveno](#onpause)|Potlačením této metody pozastavíte službu.|
+|[CAtlServiceModuleT:: deshutdown](#onshutdown)|Přepsat tuto metodu pro vypnutí služby|
+|[CAtlServiceModuleT:: instop](#onstop)|Přepsáním této metody zastavíte službu.|
+|[CAtlServiceModuleT:: OnUnknownRequest](#onunknownrequest)|Přepsat tuto metodu pro zpracování neznámých požadavků na službu|
+|[CAtlServiceModuleT::P arseCommandLine](#parsecommandline)|Analyzuje příkazový řádek a v případě potřeby provede registraci.|
+|[CAtlServiceModuleT::P reMessageLoop](#premessageloop)|Tato metoda se volá bezprostředně před vstupem do smyčky zpráv.|
+|[CAtlServiceModuleT:: RegisterAppId](#registerappid)|Zaregistruje službu v registru.|
+|[CAtlServiceModuleT:: Run](#run)|Spustí službu.|
+|[CAtlServiceModuleT:: ServiceMain](#servicemain)|Metoda, kterou volá správce řízení služeb.|
+|[CAtlServiceModuleT:: SetServiceStatus](#setservicestatus)|Aktualizuje stav služby.|
+|[CAtlServiceModuleT:: Start](#start)|Volá se při spuštění služby `CAtlServiceModuleT::WinMain`.|
 |[CAtlServiceModuleT:: Uninstall](#uninstall)|Zastaví a odebere službu.|
 |[CAtlServiceModuleT:: Unlock](#unlock)|Sníží počet zámků služby.|
-|[CAtlServiceModuleT::UnregisterAppId](#unregisterappid)|Odebere službu z registru.|
-|[CAtlServiceModuleT::WinMain](#winmain)|Tato metoda implementuje kód potřebný ke spuštění služby.|
+|[CAtlServiceModuleT:: UnregisterAppId](#unregisterappid)|Odebere službu z registru.|
+|[CAtlServiceModuleT:: WinMain](#winmain)|Tato metoda implementuje kód potřebný ke spuštění služby.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CAtlServiceModuleT::m_bService](#m_bservice)|Příznak označující, že program je spuštěný jako služba.|
-|[CAtlServiceModuleT::m_dwThreadID](#m_dwthreadid)|Členský proměnná, která ukládá identifikátor vlákna|
-|[CAtlServiceModuleT::m_hServiceStatus](#m_hservicestatus)|Členská proměnná, která ukládá popisovač do struktury informací o stavu pro aktuální službu.|
-|[CAtlServiceModuleT::m_status](#m_status)|Členská proměnná, která ukládá strukturu stavových informací pro aktuální službu.|
-|[CAtlServiceModuleT::m_szServiceName](#m_szservicename)|Název zaregistrované služby.|
+|[CAtlServiceModuleT:: m_bService](#m_bservice)|Příznak označující, že program je spuštěný jako služba.|
+|[CAtlServiceModuleT:: m_dwThreadID](#m_dwthreadid)|Členský proměnná, která ukládá identifikátor vlákna|
+|[CAtlServiceModuleT:: m_hServiceStatus](#m_hservicestatus)|Členská proměnná, která ukládá popisovač do struktury informací o stavu pro aktuální službu.|
+|[CAtlServiceModuleT:: m_status](#m_status)|Členská proměnná, která ukládá strukturu stavových informací pro aktuální službu.|
+|[CAtlServiceModuleT:: m_szServiceName](#m_szservicename)|Název zaregistrované služby.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CAtlServiceModuleT`odvozený z [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)implementuje modul ATL Service. `CAtlServiceModuleT`poskytuje metody pro zpracování, instalaci, registraci a odebrání příkazového řádku. Pokud je potřeba další funkce, můžete tyto a další metody přepsat.
+`CAtlServiceModuleT`odvozená z [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)implementuje modul ATL Service. `CAtlServiceModuleT` poskytuje metody pro zpracování, instalaci, registraci a odebrání příkazového řádku. Pokud je potřeba další funkce, můžete tyto a další metody přepsat.
 
 Tato třída nahrazuje zastaralou [třídu CComModule](../../atl/reference/ccommodule-class.md) , která se používá v dřívějších verzích knihovny ATL. Další podrobnosti naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
@@ -158,7 +158,7 @@ Přepínač, který definuje operaci obslužné rutiny. Podrobnosti najdete v ko
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je kód, který zavolá správce řízení služeb (SCM), aby načetl stav služby a pokyny pro vydání, jako je zastavení nebo pozastavení. SCM předá kód operace, který je zobrazen níže, `Handler` k určení toho, co by služba měla dělat.
+Toto je kód, který zavolá správce řízení služeb (SCM), aby načetl stav služby a pokyny pro vydání, jako je zastavení nebo pozastavení. Správce řízení předává kód operace, který je zobrazen níže, k `Handler` k určení toho, co by měla služba dělat.
 
 |Kód operace|Význam|
 |--------------------|-------------|
@@ -170,7 +170,7 @@ Toto je kód, který zavolá správce řízení služeb (SCM), aby načetl stav 
 
 Pokud kód operace není rozpoznán, je volána metoda [CAtlServiceModuleT:: OnUnknownRequest](#onunknownrequest) .
 
-Výchozí služba generovaná pomocí ATL zpracovává pouze instrukce stop. Pokud správce řízení předá pokyn k zastavení, služba oznámí službě SCM, že program se chystá zastavit. Služba pak zavolá `PostThreadMessage` k odeslání zprávy o ukončení do sebe samé. Tím se ukončí smyčka zpráv a služba se nakonec zavře.
+Výchozí služba generovaná pomocí ATL zpracovává pouze instrukce stop. Pokud správce řízení předá pokyn k zastavení, služba oznámí službě SCM, že program se chystá zastavit. Služba potom zavolá `PostThreadMessage` pro odeslání zprávy o ukončení do sebe samé. Tím se ukončí smyčka zpráv a služba se nakonec zavře.
 
 ##  <a name="initializesecurity"></a>CAtlServiceModuleT:: InitializeSecurity
 
@@ -182,13 +182,13 @@ HRESULT InitializeSecurity() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Libovolná třída, která je `CAtlServiceModuleT` odvozena z musí implementovat tuto metodu v odvozené třídě.
+Libovolná třída, která je odvozena z `CAtlServiceModuleT` musí implementovat tuto metodu v odvozené třídě.
 
-Při volání metody `CoInitializeSecurity`použijte ověřování na úrovni PKT, úroveň zosobnění RPC_C_IMP_LEVEL_IDENTIFY a odpovídající popisovač zabezpečení, který není null.
+Při volání `CoInitializeSecurity`použijte ověřování na úrovni PKT, úroveň zosobnění RPC_C_IMP_LEVEL_IDENTIFY a odpovídající popisovač zabezpečení, který není null.
 
 Pro neatributové projekty generované průvodcem, by to bylo
 
@@ -258,7 +258,7 @@ BOOL m_bService;
 
 Slouží k odlišení EXE služby od aplikace EXE.
 
-##  <a name="m_dwthreadid"></a>  CAtlServiceModuleT::m_dwThreadID
+##  <a name="m_dwthreadid"></a>CAtlServiceModuleT:: m_dwThreadID
 
 Členský proměnná, která ukládá identifikátor vlákna služby.
 
@@ -270,7 +270,7 @@ DWORD m_dwThreadID;
 
 Tato proměnná ukládá identifikátor vlákna aktuálního vlákna.
 
-##  <a name="m_hservicestatus"></a>  CAtlServiceModuleT::m_hServiceStatus
+##  <a name="m_hservicestatus"></a>CAtlServiceModuleT:: m_hServiceStatus
 
 Členská proměnná, která ukládá popisovač do struktury informací o stavu pro aktuální službu.
 
@@ -282,7 +282,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 Struktura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) obsahuje informace o službě.
 
-##  <a name="m_status"></a>  CAtlServiceModuleT::m_status
+##  <a name="m_status"></a>CAtlServiceModuleT:: m_status
 
 Členská proměnná, která ukládá strukturu stavových informací pro aktuální službu.
 
@@ -294,7 +294,7 @@ SERVICE_STATUS m_status;
 
 Struktura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) obsahuje informace o službě.
 
-##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
+##  <a name="m_szservicename"></a>CAtlServiceModuleT:: m_szServiceName
 
 Název zaregistrované služby.
 
@@ -398,13 +398,13 @@ Tento parametr je předán do [CAtlExeModuleT::P remessageloop](../../atl/refere
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
 Tuto metodu přepište, pokud chcete přidat vlastní inicializační kód pro službu.
 
-##  <a name="registerappid"></a>  CAtlServiceModuleT::RegisterAppId
+##  <a name="registerappid"></a>CAtlServiceModuleT:: RegisterAppId
 
 Zaregistruje službu v registru.
 
@@ -419,7 +419,7 @@ Pro registraci jako službu musí být true.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ##  <a name="run"></a>CAtlServiceModuleT:: Run
 
@@ -436,11 +436,11 @@ Určuje způsob zobrazení okna. Tento parametr může být jednou z hodnot pops
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Po volání [](../../atl/reference/catlexemodulet-class.md#postmessageloop) [](#premessageloop) [](../../atl/reference/catlexemodulet-class.md#runmessageloop)volání CAtlServiceModuleT::P remessageloop, CAtlExeModuleT:: RunMessageLoop a CAtlExeModuleT::P ostmessageloop. `Run`
+Po zavolání `Run` volá [CAtlServiceModuleT::P remessageloop](#premessageloop), [CAtlExeModuleT:: RunMessageLoop](../../atl/reference/catlexemodulet-class.md#runmessageloop)a [CAtlExeModuleT::P ostmessageloop](../../atl/reference/catlexemodulet-class.md#postmessageloop).
 
 ##  <a name="servicemain"></a>CAtlServiceModuleT:: ServiceMain
 
@@ -460,9 +460,9 @@ Argument argv
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `ServiceMain` správce řízení služeb při otevření aplikace služby v Ovládacích panelech vyberte službu a klikněte na tlačítko Spustit.
+Volání správce řízení služeb (SCM) `ServiceMain` při otevření aplikace služby v Ovládacích panelech vyberte službu a klikněte na tlačítko Spustit.
 
-Po volání `ServiceMain`SCM musí služba poskytnout funkci SCM a obslužné rutiny. Tato funkce umožňuje SCM získat stav služby a předat konkrétní pokyny (například pozastavení nebo zastavení). Následně se volá [CAtlServiceModuleT:: Run](#run) , aby se prováděla hlavní práce služby. `Run`pokračuje v provádění až do zastavení služby.
+Poté, co správce řízení volání `ServiceMain`, musí poskytovat funkci SCM a obslužné rutiny. Tato funkce umožňuje SCM získat stav služby a předat konkrétní pokyny (například pozastavení nebo zastavení). Následně se volá [CAtlServiceModuleT:: Run](#run) , aby se prováděla hlavní práce služby. `Run` pokračovat, dokud se služba nezastaví.
 
 ##  <a name="setservicestatus"></a>CAtlServiceModuleT:: SetServiceStatus
 
@@ -479,11 +479,11 @@ Nový stav. Možné hodnoty najdete v tématu [SetServiceStatus](/windows/win32/
 
 ### <a name="remarks"></a>Poznámky
 
-Aktualizuje informace o stavu správce řízení služeb pro danou službu. Je volána pomocí [CAtlServiceModuleT:: Run](#run), [CAtlServiceModuleT:: ServiceMain](#servicemain) a dalších metod obslužných rutin. Stav je také uložen v proměnné členu [CAtlServiceModuleT:: m_status](#m_status).
+Aktualizuje informace o stavu správce řízení služeb pro danou službu. Je volána pomocí [CAtlServiceModuleT:: Run](#run), [CAtlServiceModuleT:: ServiceMain](#servicemain) a dalších metod obslužných rutin. Stav je také uložen v členské proměnné [CAtlServiceModuleT:: m_status](#m_status).
 
 ##  <a name="start"></a>CAtlServiceModuleT:: Start
 
-Volá se `CAtlServiceModuleT::WinMain` při spuštění služby.
+Volá se při spuštění služby `CAtlServiceModuleT::WinMain`.
 
 ```
 HRESULT Start(int nShowCmd) throw();
@@ -496,11 +496,11 @@ Určuje způsob zobrazení okna. Tento parametr může být jednou z hodnot pops
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda [CAtlServiceModuleT:: WinMain](#winmain) zpracovává registraci i instalaci i úlohy, které se týkají odebírání položek registru a odinstalování modulu. Při spuštění `WinMain` služby volání `Start`.
+Metoda [CAtlServiceModuleT:: WinMain](#winmain) zpracovává registraci i instalaci i úlohy, které se týkají odebírání položek registru a odinstalování modulu. Při spuštění služby `WinMain` volání `Start`.
 
 ##  <a name="uninstall"></a>CAtlServiceModuleT:: Uninstall
 
@@ -530,7 +530,7 @@ LONG Unlock() throw();
 
 Vrátí počet zámků, který může být užitečný pro diagnostiku a ladění.
 
-##  <a name="unregisterappid"></a>  CAtlServiceModuleT::UnregisterAppId
+##  <a name="unregisterappid"></a>CAtlServiceModuleT:: UnregisterAppId
 
 Odebere službu z registru.
 
@@ -540,7 +540,7 @@ HRESULT UnregisterAppId() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ##  <a name="winmain"></a>CAtlServiceModuleT:: WinMain
 
@@ -563,7 +563,7 @@ Vrátí návratovou hodnotu služby.
 
 Tato metoda zpracuje příkazový řádek (s [CAtlServiceModuleT::P arsecommandline](#parsecommandline)) a potom službu spustí (pomocí [CAtlServiceModuleT:: Start](#start)).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CAtlExeModuleT – třída](../../atl/reference/catlexemodulet-class.md)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

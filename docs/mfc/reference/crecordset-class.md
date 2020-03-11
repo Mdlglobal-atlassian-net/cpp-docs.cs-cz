@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626193"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854028"
 ---
 # <a name="crecordset-class"></a>CRecordset – třída
 
@@ -151,13 +151,13 @@ class CRecordset : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRecordset:: CRecordset](#crecordset)|Vytvoří objekt `CRecordset`. Vaše odvozená třída musí poskytovat konstruktor, který volá tuto třídu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRecordset:: AddNew](#addnew)|Připraví pro přidání nového záznamu. Dokončete přidání voláním `Update`.|
 |[CRecordset:: CanAppend](#canappend)|Vrátí nenulovou hodnotu, pokud je možné přidat nové záznamy do sady záznamů prostřednictvím členské funkce `AddNew`.|
@@ -217,7 +217,7 @@ class CRecordset : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRecordset:: m_hstmt](#m_hstmt)|Obsahuje popisovač příkazu ODBC pro sadu záznamů. Zadejte `HSTMT`.|
 |[CRecordset:: m_nFields](#m_nfields)|Obsahuje počet datových členů pole v sadě záznamů. Zadejte `UINT`.|
@@ -739,7 +739,7 @@ Název pole.
 *varValu*e odkaz na objekt [CDBVariant –](../../mfc/reference/cdbvariant-class.md) , který bude uchovávat hodnotu pole.
 
 *nFieldType*<br/>
-Datový typ ODBC C daného pole. Použití výchozí hodnoty, DEFAULT_FIELD_TYPE, vynutí `GetFieldValue` určovat datový typ C z SQL data typu na základě následující tabulky. V opačném případě můžete zadat datový typ přímo nebo zvolit kompatibilní datový typ. do SQL_C_CHAR můžete například uložit libovolný datový typ.
+Datový typ ODBC C daného pole. Použití výchozí hodnoty DEFAULT_FIELD_TYPE, vynutí `GetFieldValue` určení datového typu jazyka C z datového typu SQL na základě následující tabulky. V opačném případě můžete zadat datový typ přímo nebo zvolit kompatibilní datový typ. do SQL_C_CHAR můžete například uložit libovolný datový typ.
 
 |Datový typ C|Datový typ SQL|
 |-----------------|-------------------|
@@ -956,7 +956,7 @@ struct CRecordsetStatus
 
 Dva členové `CRecordsetStatus` mají následující význam:
 
-- `m_lCurrentRecord` obsahuje index aktuálního záznamu v rámci sady záznamů založený na nule, pokud je tento příkaz známý. Pokud index nelze určit, obsahuje tento člen AFX_CURRENT_RECORD_UNDEFINED (-2). Pokud má `IsBOF` hodnotu TRUE (prázdná sada záznamů nebo se pokusy o posunutí před první záznam), `m_lCurrentRecord` je nastaven na AFX_CURRENT_RECORD_BOF (-1). Pokud je v prvním záznamu, pak je nastaven na 0, druhý záznam 1 atd.
+- `m_lCurrentRecord` obsahuje index aktuálního záznamu v rámci sady záznamů založený na nule, pokud je tento příkaz známý. Pokud index nelze určit, obsahuje tento člen AFX_CURRENT_RECORD_UNDEFINED (-2). Pokud má `IsBOF` hodnotu TRUE (prázdná sada záznamů nebo se pokusí o posunutí před první záznam), `m_lCurrentRecord` je nastaven na AFX_CURRENT_RECORD_BOF (-1). Pokud je v prvním záznamu, pak je nastaven na 0, druhý záznam 1 atd.
 
 - Pokud byl určen celkový počet záznamů v sadě záznamů, `m_bRecordCountFinal` nenulovou hodnotu. Obecně se to musí provést spuštěním na začátku sady záznamů a voláním `MoveNext`, dokud `IsEOF` nevrátí nenulovou hodnotu. Pokud je tento člen nula, počet záznamů vrácený funkcí `GetRecordCount`, pokud ne-1, je pouze "horním" počtem záznamů.
 
@@ -1040,7 +1040,7 @@ Nenulové, pokud je sada záznamů umístěna na odstraněný záznam; v opačn�
 
 Pokud se posunete na záznam a `IsDeleted` vrátí hodnotu TRUE (nenulový), musíte se před provedením jakékoli jiné operace sady záznamů posunout na jiný záznam.
 
-Výsledek `IsDeleted` závisí na mnoha faktorech, jako je například typ sady záznamů, bez ohledu na to, zda je vaše sada záznamů aktualizovatelná, zda jste zadali možnost `CRecordset::skipDeletedRecords` při otevření sady záznamů, zda vaše balíčky ovladačů odstranily záznamy a zda existuje více mohou.
+Výsledek `IsDeleted` závisí na mnoha faktorech, jako je například typ sady záznamů, bez ohledu na to, zda je vaše sada záznamů aktualizovatelná, zda jste zadali možnost `CRecordset::skipDeletedRecords` při otevření sady záznamů, zda vaše balíčky ovladačů odstranily záznamy a zda existuje více uživatelů.
 
 Další informace o `CRecordset::skipDeletedRecords` a balení ovladače naleznete v tématu [otevřená](#open) členská funkce.
 
@@ -1213,7 +1213,7 @@ Obsahuje počet datových členů parametrů ve třídě sady záznamů. To znam
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vaše třída sady záznamů obsahuje nějaké datové členy parametru, konstruktor třídy musí inicializovat `m_nParams` se správným číslem. Hodnota `m_nParams` výchozí hodnota je 0. Pokud přidáte členy dat parametrů (které je nutné provést ručně), musíte také ručně přidat inicializaci v konstruktoru třídy, aby odrážela počet parametrů (který musí být nejméně tak velký, jako je počet ' ' zástupných symbolů v `m_strFilter` nebo `m_strSort` řetězec).
+Pokud vaše třída sady záznamů obsahuje nějaké datové členy parametru, konstruktor třídy musí inicializovat `m_nParams` se správným číslem. Hodnota `m_nParams` výchozí hodnota je 0. Pokud přidáte členy dat parametrů (které je nutné provést ručně), musíte také ručně přidat inicializaci v konstruktoru třídy, aby odrážela počet parametrů (který musí být nejméně tak velký, jako je počet ' ' zástupných symbolů v `m_strFilter` nebo řetězci `m_strSort`).
 
 Rozhraní používá toto číslo při parameterizes dotazu sady záznamů.
 
@@ -1534,7 +1534,7 @@ Další informace o těchto typech sady záznamů naleznete v článku [Sada zá
 *Ipszsql*<br/>
 Ukazatel řetězce obsahující jedno z následujících:
 
-- Ukazatel s hodnotou NULL.
+- Ukazatel NULL.
 
 - Název tabulky.
 
@@ -1703,7 +1703,7 @@ Pro sady záznamů rozhraní ODBC, absolutní pozice nastavení 1 odkazuje na pr
 Můžete také předat záporné hodnoty `SetAbsolutePosition`. V tomto případě je pozice sady záznamů vyhodnocena z konce sady záznamů. Například `SetAbsolutePosition( -1 )` přesune ukazatel na aktuální záznam na poslední záznam v sadě záznamů.
 
 > [!NOTE]
->  Absolutní pozice není určena k použití jako náhradní číslo záznamu. Záložky jsou stále doporučeným způsobem zachování a návratu na danou pozici, protože pozice záznamu se mění při odstranění předcházejících záznamů. Kromě toho nemůžete mít jistotu, že daný záznam bude mít stejné absolutní umístění, pokud je znovu znovu vytvořena sada záznamů, protože pořadí jednotlivých záznamů v rámci sady záznamů není zaručeno, pokud není vytvořeno pomocí příkazu jazyka SQL pomocí klauzule **ORDER by.** klauzule.
+>  Absolutní pozice není určena k použití jako náhradní číslo záznamu. Záložky jsou stále doporučeným způsobem zachování a návratu na danou pozici, protože pozice záznamu se mění při odstranění předcházejících záznamů. Kromě toho nemůžete mít jistotu, že daný záznam bude mít stejné absolutní umístění, pokud je znovu znovu vytvořena sada záznamů, protože pořadí jednotlivých záznamů v rámci sady záznamů není zaručeno, pokud není vytvořeno pomocí příkazu jazyka SQL pomocí klauzule **ORDER by** .
 
 Další informace o navigaci a záložkách sady záznamů naleznete v článcích [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
@@ -1757,7 +1757,7 @@ Označení polí jako nezměněné zajistí, že se pole neaktualizuje a výsled
 > [!NOTE]
 >  Tato členská funkce se nedá použít pro sady záznamů, které používají hromadné načítání řádků. Pokud jste implementovali hromadné načítání řádků, pak `SetFieldDirty` způsobí selhání kontrolního výrazu. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Rozhraní označuje změněné datové členy pole tak, aby se zajistilo jejich zápis do záznamu ve zdroji dat pomocí mechanismu výměny pole záznamu (RFX). Změna hodnoty pole obvykle automaticky nastaví pole jako neměnné, takže nebudete muset volat `SetFieldDirty` sami, ale někdy budete chtít mít jistotu, že se sloupce explicitně aktualizují nebo vloží bez ohledu na to, jaká hodnota je v datech pole. člen.
+Rozhraní označuje změněné datové členy pole tak, aby se zajistilo jejich zápis do záznamu ve zdroji dat pomocí mechanismu výměny pole záznamu (RFX). Změna hodnoty pole obvykle automaticky nastaví pole jako chybné, takže nebudete muset volat `SetFieldDirty` sami, ale někdy budete chtít zajistit, aby se sloupce explicitně aktualizovaly nebo vložily bez ohledu na to, jaká hodnota je v datovém členu pole.
 
 > [!CAUTION]
 >  Tuto členskou funkci volejte až poté, co jste volali [Edit](#edit) nebo [AddNew](#addnew).
@@ -1919,7 +1919,7 @@ Tato virtuální členská funkce určuje, kolik řádků chcete načíst během
 Před voláním `Open`, aby se původně nastavila velikost sady řádků pro sadu záznamů, volejte `SetRowsetSize`. Výchozí velikost sady řádků při implementaci hromadného načítání řádků je 25.
 
 > [!NOTE]
->  Při volání `SetRowsetSize`buďte opatrní. Pokud ručně přidělíte úložiště pro data (určené možností `CRecordset::userAllocMultiRowBuffers` parametru dwOptions v `Open`), měli byste ověřit, zda je nutné znovu přidělit tyto vyrovnávací paměti úložiště po volání `SetRowsetSize`, ale před provedením všech kurzorů. navigační operace.
+>  Při volání `SetRowsetSize`buďte opatrní. Pokud ručně přiřazujete úložiště pro data (určené možností `CRecordset::userAllocMultiRowBuffers` parametru dwOptions v `Open`), měli byste ověřit, zda je nutné znovu přidělit tyto vyrovnávací paměti úložiště po volání `SetRowsetSize`, ale před provedením jakékoli operace navigace kurzoru.
 
 Chcete-li získat aktuální nastavení pro velikost sady řádků, zavolejte [GetRowsetSize](#getrowsetsize).
 
@@ -1957,7 +1957,7 @@ Podrobnosti o zpracování selhání `Update` naleznete v článku [Sada záznam
 
 Viz článek [transakce: provádění transakce v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

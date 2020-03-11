@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051484"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856784"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Použití sady nástrojů C++ Microsoft z příkazového řádku
 
@@ -228,7 +228,7 @@ Pro sestavení C/C++ projekt na příkazovém řádku poskytuje Visual Studio ty
 [CL](reference/compiling-a-c-cpp-program.md)<br/>
 Použijte kompilátor (CL. exe) pro zkompilování a propojení souborů se zdrojovým kódem do aplikací, knihoven a knihoven DLL.
 
-[Propojit](reference/linking.md)<br/>
+[Odkaz](reference/linking.md)<br/>
 Pomocí linkeru (Link. exe) můžete propojit zkompilované soubory objektů a knihovny s aplikacemi a knihovnami DLL.
 
 [MSBuild](msbuild-visual-cpp.md)<br/>
@@ -281,6 +281,6 @@ Obsahuje odkazy na články, které popisují možnosti linkeru a LINK. exe.
 [Další nástroje sestavení MSVC](reference/c-cpp-build-tools.md)<br/>
 Obsahuje odkazy na nástroje C/C++ Build, které jsou součástí sady Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Projekty a systémy sestavení](projects-and-build-systems-cpp.md)

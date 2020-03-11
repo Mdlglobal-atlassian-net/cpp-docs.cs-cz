@@ -19,11 +19,11 @@ helpviewer_keywords:
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
 ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630517"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855276"
 ---
 # <a name="diagnostic-services"></a>Diagnostické služby
 
@@ -35,7 +35,7 @@ Knihovna Microsoft Foundation Class poskytuje spoustu diagnostických služeb, k
 
 - Funkce diagnostiky objektů
 
-Tato makra a funkce jsou k dispozici pro všechny třídy `CObject` , které jsou odvozeny z ladění a verze Release knihovny MFC. Vše kromě DEBUG_NEW a ověření ale nedělá nic ve vydané verzi.
+Tato makra a funkce jsou k dispozici pro všechny třídy, které jsou odvozeny z `CObject` ve verzích ladění a vydání knihovny MFC. Všechny kromě DEBUG_NEW a ověření ale nedělají nic ve vydané verzi.
 
 V knihovně ladění jsou všechny přidělené paměťové bloky v závorkách s řadou "Guard bajty". Pokud jsou tyto bajty vyrušovány zápisem do paměti errant, diagnostické rutiny mohou nahlásit problém. Pokud zadáte řádek:
 
@@ -51,12 +51,12 @@ Kromě toho knihovna run-time jazyka C také podporuje sadu diagnostických funk
 |-|-|
 |[UPLATŇUJE](#assert)|Vytiskne zprávu a přeruší program, pokud se zadaný výraz vyhodnotí jako FALSE v ladicí verzi knihovny.|
 |[ASSERT_KINDOF](#assert_kindof)|Testuje, zda je objekt objektem zadané třídy nebo třídy odvozené ze zadané třídy.|
-|[ASSERT_VALID](#assert_valid)|Testuje vnitřní platnost objektu voláním jeho `AssertValid` členské funkce; obvykle přepsána z. `CObject`|
+|[ASSERT_VALID](#assert_valid)|Testuje vnitřní platnost objektu voláním jeho členské funkce `AssertValid`; obvykle přepsáno z `CObject`.|
 |[DEBUG_NEW](#debug_new)|Poskytuje název souboru a číslo řádku pro všechny alokace objektů v režimu ladění, aby bylo možné najít nevracení paměti.|
 |[DEBUG_ONLY](#debug_only)|Podobný jako ASSERT, ale netestuje hodnotu výrazu; užitečné pro kód, který by se měl spustit pouze v režimu ladění.|
 |[Zajistěte a ENSURE_VALID](#ensure)|Slouží k ověření správnosti dat.|
 |[THIS_FILE](#this_file)|Rozbalí se na název souboru, který se kompiluje.|
-|[PŘEHLED](#trace)|V `printf`ladicí verzi knihovny poskytuje možnost podobné.|
+|[Přehled](#trace)|Poskytuje funkce podobné `printf`v ladicí verzi knihovny.|
 |[OVĚŘÍTE](#verify)|Podobný jako ASSERT, ale vyhodnotí výraz v prodejní verzi knihovny i v ladicí verzi.|
 
 ### <a name="mfc-general-diagnostic-variables-and-functions"></a>Obecné diagnostické proměnné a funkce knihovny MFC
@@ -82,8 +82,8 @@ Kromě toho knihovna run-time jazyka C také podporuje sadu diagnostických funk
 
 |||
 |-|-|
-|[AfxDoForAllClasses](#afxdoforallclasses)|Provádí zadanou funkci na všech `CObject`třídách odvozených, které podporují kontrolu běhového typu.|
-|[AfxDoForAllObjects](#afxdoforallobjects)|Provede zadanou funkci na všech objektech odvozených od všech `CObject`objektů, které byly přiděleny s **novými**.|
+|[AfxDoForAllClasses](#afxdoforallclasses)|Provede zadanou funkci na všech třídách odvozených od `CObject`, které podporují kontrolu typu run-time.|
+|[AfxDoForAllObjects](#afxdoforallobjects)|Provede zadanou funkci na všech objektech odvozených od `CObject`, které byly přiděleny s **novým**.|
 
 ### <a name="mfc-compilation-macros"></a>Makra kompilace MFC
 
@@ -103,7 +103,7 @@ _AFX_SECURE_NO_WARNINGS
 
 ### <a name="example"></a>Příklad
 
-Tato ukázka kódu by způsobila upozornění kompilátoru, pokud nebyla definována _AFX_SECURE_NO_WARNINGS.
+Tato ukázka kódu způsobí upozornění kompilátoru, pokud _AFX_SECURE_NO_WARNINGS nebyly definovány.
 
 ```cpp
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
@@ -129,7 +129,7 @@ void AfxDebugBreak( );
 
 ### <a name="remarks"></a>Poznámky
 
-`AfxDebugBreak`nemá žádný vliv na vydané verze aplikace MFC a měla by být odebrána. Tato funkce by měla být použita pouze v aplikacích MFC. Použijte Win32 API verzi, `DebugBreak`Chcete-li způsobit přerušení v aplikacích, které nejsou součástí knihovny MFC.
+`AfxDebugBreak` nemá žádný vliv na vydané verze aplikace MFC a měla by být odebrána. Tato funkce by měla být použita pouze v aplikacích MFC. Použijte verzi Win32 API `DebugBreak`, chcete-li způsobit přerušení v aplikacích, které nejsou součástí knihovny MFC.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -156,7 +156,7 @@ Diagnostická zpráva má tvar
 
 `assertion failed in file <name> in line <num>`
 
-kde *název* je název zdrojového souboru a číslo řádku kontrolního výrazu, který selhal ve zdrojovém souboru.
+kde *název* *je název zdrojového souboru a číslo* řádku kontrolního výrazu, který selhal ve zdrojovém souboru.
 
 V vydané verzi knihovny MFC nevyhodnocují výrazy ASSERT výraz, takže program nebude přerušen. Pokud je nutné vyhodnotit výraz bez ohledu na prostředí, použijte místo KONTROLNÍho výrazu makro VERIFY.
 
@@ -189,15 +189,15 @@ Ukazatel na objekt třídy.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *pObject* by měl být ukazatel na objekt a může být const. Objekt, na který ukazuje, a třída musí podporovat `CObject` běhové informace třídy. Například pro zajištění, že `pDocument` je ukazatel na objekt `CMyDoc` třídy nebo jakýkoli z jeho derivátů, můžete kód:
+Parametr *pObject* by měl být ukazatel na objekt a může být **const**. Objekt, na který ukazuje, a třída musí podporovat `CObject` běhové informace třídy. Jako příklad, aby bylo zajištěno, že `pDocument` je ukazatel na objekt `CMyDoc` třídy nebo jakýkoli z jeho derivátů, můžete kód:
 
 [!code-cpp[NVC_MFCDocView#194](../../mfc/codesnippet/cpp/diagnostic-services_3.cpp)]
 
-`ASSERT_KINDOF` Použití makra je přesně stejné jako kódování:
+Použití makra `ASSERT_KINDOF` je přesně stejné jako kódování:
 
 [!code-cpp[NVC_MFCDocView#195](../../mfc/codesnippet/cpp/diagnostic-services_4.cpp)]
 
-Tato funkce funguje pouze pro třídy deklarované pomocí makra [DECLARE_DYNAMIC] (Run-Time-Object-Model-Services. MD # DECLARE_DYNAMIC nebo [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) ).
+Tato funkce funguje pouze pro třídy deklarované s makrem [DECLARE_DYNAMIC] (Run-Time-Object-Model-Services. MD # declare_dynamic nebo [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) .
 
 > [!NOTE]
 >  Tato funkce je k dispozici pouze v ladicí verzi knihovny MFC.
@@ -217,13 +217,13 @@ ASSERT_VALID(pObject)
 ### <a name="parameters"></a>Parametry
 
 *pObject*<br/>
-Určuje objekt třídy odvozené z `CObject` , která má přepsatelné verze `AssertValid` členské funkce.
+Určuje objekt třídy odvozené od `CObject`, která má překrytou verzi `AssertValid` členské funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-ASSERT_VALID volá `AssertValid` členskou funkci objektu předaného jako argument.
+ASSERT_VALID volá členskou funkci `AssertValid` objektu předaného jako argument.
 
-V prodejní verzi knihovny MFC ASSERT_VALID neprovede žádnou akci. V ladicí verzi ověřuje ukazatel, kontroluje proti hodnotě null a volá vlastní `AssertValid` členské funkce objektu. Pokud některý z těchto testů neproběhne úspěšně, zobrazí se zpráva s upozorněním stejným způsobem jako [Assert](#assert).
+V prodejní verzi knihovny MFC ASSERT_VALID neprovede žádnou akci. V ladicí verzi ověřuje ukazatel, kontroluje proti hodnotě NULL a volá vlastní `AssertValid` členské funkce objektu. Pokud některý z těchto testů neproběhne úspěšně, zobrazí se zpráva s upozorněním stejným způsobem jako [Assert](#assert).
 
 > [!NOTE]
 >  Tato funkce je k dispozici pouze v ladicí verzi knihovny MFC.
@@ -248,26 +248,26 @@ Pomáhá při hledání nevracení paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-V programu můžete použít DEBUG_NEW všude, kde byste obvykle použili operátor **New** k přidělení úložiště haldy.
+Můžete použít DEBUG_NEW všude v programu, které byste obvykle použili operátor **New** k přidělení úložiště haldy.
 
-V režimu ladění (když je definován symbol **_DEBUG** ), DEBUG_NEW sleduje název souboru a číslo řádku pro každý objekt, který přiděluje. Poté při použití členské funkce [CMemoryState::D umpallobjectssince](cmemorystate-structure.md#dumpallobjectssince) se každý objekt přidělený pomocí DEBUG_NEW zobrazí s názvem souboru a číslem řádku, kde byl přidělen.
+V režimu ladění (je-li definován symbol **_DEBUG** ), DEBUG_NEW sleduje název souboru a číslo řádku pro každý objekt, který přiděluje. Pak při použití členské funkce [CMemoryState::D umpallobjectssince](cmemorystate-structure.md#dumpallobjectssince) se každý objekt přidělený pomocí DEBUG_NEW zobrazí s názvem souboru a číslem řádku, kde byl přidělen.
 
 Pokud chcete použít DEBUG_NEW, vložte do zdrojových souborů následující direktivu:
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]
 
-Po vložení této direktivy bude preprocesor vkládat DEBUG_NEW, ať už použijete **New**, a prostředí MFC zbývající. Když kompilujete verzi programu, DEBUG_NEW se přeloží na jednoduchou **novou** operaci a informace o názvu souboru a řádku se nevygenerují.
+Po vložení této direktivy bude preprocesor vkládat DEBUG_NEW bez ohledu na to, kde použijete **Nový**, a prostředí MFC zbývající. Když kompilujete verzi programu, DEBUG_NEW se přeloží na jednoduchou **novou** operaci a informace o názvu souboru a řádku se nevygenerují.
 
 > [!NOTE]
->  V předchozích verzích knihovny MFC (4,1 a starší) bylo nutné `#define` příkaz Vložit za všechny příkazy, které se nazývají makra IMPLEMENT_DYNCREATE nebo IMPLEMENT_SERIAL. To již není nezbytné.
+>  V předchozích verzích knihovny MFC (4,1 a starší) bylo nutné vložit příkaz `#define` po všech příkazech, které se nazývají makra IMPLEMENT_DYNCREATE nebo IMPLEMENT_SERIAL. To již není nezbytné.
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** AFX –. h
 
-##  <a name="debug_only"></a>  DEBUG_ONLY
+##  <a name="debug_only"></a>DEBUG_ONLY
 
-V režimu ladění (když je definován symbol **_DEBUG** ), DEBUG_ONLY vyhodnotí svůj argument.
+V režimu ladění (při definování **_DEBUG** symbol) DEBUG_ONLY vyhodnotí svůj argument.
 
 ```
 DEBUG_ONLY(expression)
@@ -275,7 +275,7 @@ DEBUG_ONLY(expression)
 
 ### <a name="remarks"></a>Poznámky
 
-V buildu pro vydání DEBUG_ONLY nevyhodnotí svůj argument. To je užitečné, když máte kód, který by měl být proveden pouze v sestavení ladění.
+V sestavení pro vydání vyDEBUG_ONLY nevyhodnotí svůj argument. To je užitečné, když máte kód, který by měl být proveden pouze v sestavení ladění.
 
 Makro DEBUG_ONLY je ekvivalentem okolního *výrazu* s `#ifdef _DEBUG` a `#endif`.
 
@@ -307,9 +307,9 @@ Určuje logický výraz, který se má testovat.
 
 Účelem těchto maker je vylepšit ověřování parametrů. Makra zabraňují dalšímu zpracování nesprávných parametrů ve vašem kódu. Na rozdíl od maker kontrolního výrazu, zajistěte, aby makra zavolaly výjimku kromě generování kontrolního výrazu.
 
-Makra se chovají dvěma způsoby v závislosti na konfiguraci projektu. Makra volají vyhodnocení a poté vyvolávají výjimku, pokud se kontrolní výraz nezdařil. Proto v konfiguraci ladění (to znamená, kde je definována _DEBUG) makra vydávají kontrolní výraz a výjimku v konfiguracích vydané verze, makra vytvoří pouze výjimku (ASSERT nevyhodnotí výraz v konfiguracích vydané verze).
+Makra se chovají dvěma způsoby v závislosti na konfiguraci projektu. Makra volají vyhodnocení a poté vyvolávají výjimku, pokud se kontrolní výraz nezdařil. Proto v konfiguracích ladění (to znamená, kde je definována _DEBUG) makra vytvoří kontrolní výraz a výjimku v konfiguraci vydání, makra vyprodukuje pouze výjimku (ASSERT nevyhodnotí výraz v konfiguracích vydané verze).
 
-Makro ENSURE_ARG funguje jako makro pro UJIŠTĚNí.
+Makro ENSURE_ARG funguje jako makro zajistěte.
 
 ENSURE_VALID volá makro ASSERT_VALID (které má vliv pouze na sestavení ladění). Kromě toho ENSURE_VALID vyvolá výjimku, pokud má ukazatel hodnotu NULL. Test NULL se provádí v konfiguraci ladění i vydaných verzí.
 
@@ -348,7 +348,7 @@ static char THIS_FILE[] = __FILE__;
 
 **Záhlaví:** AFX –. h
 
-##  <a name="trace"></a>PŘEHLED
+##  <a name="trace"></a>Přehled
 
 Odešle zadaný řetězec ladicímu programu aktuální aplikace.
 
@@ -412,11 +412,11 @@ CDumpContext  afxDump;
 
 ### <a name="remarks"></a>Poznámky
 
-`afxDump`je předdefinovaný objekt [CDumpContext](../../mfc/reference/cdumpcontext-class.md) , který umožňuje odeslat `CDumpContext` informace do okna výstupu ladicího programu nebo do terminálu ladění. Obvykle zadáváte `afxDump` jako parametr do `CObject::Dump`.
+`afxDump` je předdefinovaný objekt [CDumpContext](../../mfc/reference/cdumpcontext-class.md) , který umožňuje odeslat `CDumpContext` informace do okna výstupu ladicího programu nebo do terminálu ladění. Obvykle zadáváte `afxDump` jako parametr pro `CObject::Dump`.
 
-V rámci systému Windows NT a všech verzí Windows `afxDump` se výstup pošle do okna ladění výstupu vizuálu C++ při ladění aplikace.
+V rámci systému Windows NT a všech verzí systému Windows se `afxDump` výstup odesílá do okna ladění výstupu vizuálu C++ při ladění aplikace.
 
-Tato proměnná je definována pouze v ladicí verzi knihovny MFC. Další informace o `afxDump`naleznete v tématu [ladění aplikací knihovny MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Tato proměnná je definována pouze v ladicí verzi knihovny MFC. Další informace o `afxDump`naleznete v tématu [DEBUGGING MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).
 
 ### <a name="example"></a>Příklad
 
@@ -443,15 +443,15 @@ Ukazatel na objekt třídy odvozené z `CObject`.
 
 ### <a name="remarks"></a>Poznámky
 
-`AfxDump`volá `Dump` členskou funkci objektu a odesílá informace do umístění určeného `afxDump` proměnnou. `AfxDump`je k dispozici pouze v ladicí verzi knihovny MFC.
+`AfxDump` volá členskou funkci objektu `Dump` a odesílá informace do umístění určeného proměnnou `afxDump`. `AfxDump` je k dispozici pouze v ladicí verzi knihovny MFC.
 
-Váš kód programu by neměl volat `AfxDump`, ale měl by místo toho `Dump` volat členskou funkci příslušného objektu.
+Váš kód programu by neměl volat `AfxDump`, ale měl by místo toho volat členskou funkci `Dump` příslušného objektu.
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** AFX –. h
 
-##  <a name="afxmemdf"></a>  afxMemDF
+##  <a name="afxmemdf"></a>afxMemDF
 
 Tato proměnná je přístupná z ladicího programu nebo programu a umožňuje vyladit diagnostiku přidělení.
 
@@ -461,13 +461,13 @@ int  afxMemDF;
 
 ### <a name="remarks"></a>Poznámky
 
-`afxMemDF`může mít následující hodnoty, které jsou určeny výčtem `afxMemDF`:
+`afxMemDF` může mít následující hodnoty určené `afxMemDF`výčtu:
 
-- `allocMemDF`Zapne Alokátor ladění (výchozí nastavení v knihovně ladění).
+- `allocMemDF` zapne Alokátor ladění (výchozí nastavení v knihovně ladění).
 
-- `delayFreeMemDF`Zpoždění uvolnění paměti. I když program uvolní blok paměti, Alokátor nevrátí tuto paměť do základního operačního systému. Tím se do programu umístí maximální nároky na paměť.
+- `delayFreeMemDF` zpoždění uvolnění paměti. I když program uvolní blok paměti, Alokátor nevrátí tuto paměť do základního operačního systému. Tím se do programu umístí maximální nároky na paměť.
 
-- `checkAlwaysMemDF`Volá `AfxCheckMemory` se při každém přidělení nebo uvolnění paměti. Tím dojde k výraznému zpomalení přidělování a navracení paměti.
+- `checkAlwaysMemDF` volá `AfxCheckMemory` při každém přidělení nebo uvolnění paměti. Tím dojde k výraznému zpomalení přidělování a navracení paměti.
 
 ### <a name="example"></a>Příklad
 
@@ -489,7 +489,7 @@ throw COleException*
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se jedná o chybu, funkce vyvolá výjimku. Pokud je předaný Code E_OUTOFMEMORY, funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) voláním [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). V opačném případě funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md) voláním [AfxThrowOleException](exception-processing.md#afxthrowoleexception).
+Pokud se jedná o chybu, funkce vyvolá výjimku. Pokud je předaná Code E_OUTOFMEMORY, funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) voláním [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). V opačném případě funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md) voláním [AfxThrowOleException](exception-processing.md#afxthrowoleexception).
 
 Tato funkce slouží ke kontrole vrácených hodnot volání funkcí OLE ve vaší aplikaci. Otestováním návratové hodnoty pomocí této funkce ve vaší aplikaci můžete správně reagovat na chybové podmínky s minimálním množstvím kódu.
 
@@ -504,7 +504,7 @@ Tato funkce slouží ke kontrole vrácených hodnot volání funkcí OLE ve vaš
 
 **Záhlaví:** AFX –. h
 
-##  <a name="afxcheckmemory"></a>  AfxCheckMemory
+##  <a name="afxcheckmemory"></a>AfxCheckMemory
 
 Tato funkce ověří fond volných paměti a vytiskne chybové zprávy podle potřeby.
 
@@ -520,7 +520,7 @@ Nenulové, pokud nejsou k dispozici žádné chyby paměti; v opačném případ
 
 Pokud funkce nezjistí poškození paměti, vytiskne se nic.
 
-Jsou zaškrtnuty všechny bloky paměti, které jsou aktuálně přiděleny na haldě, včetně těch, které jsou přiděleny **novým** , ale nikoli těch, které jsou přiděleny přímým voláním pro základní přidělování paměti, jako je například `GlobalAlloc` funkce \ funkce nebo funkce Windows Pokud je nalezen libovolný blok, zpráva bude vytištěna do výstupu ladicího programu.
+Jsou zaškrtnuty všechny bloky paměti, které jsou aktuálně přiděleny na haldě, včetně těch, které jsou přiděleny **novým** , ale nikoli těch, které jsou přiděleny přímým voláním pro základní přidělování paměti, jako je **například funkce typu sami nebo funkce Windows** `GlobalAlloc` Pokud je nalezen libovolný blok, zpráva bude vytištěna do výstupu ladicího programu.
 
 Pokud zadáte řádek
 
@@ -529,7 +529,7 @@ Pokud zadáte řádek
 v modulu programu pak následná volání `AfxCheckMemory` zobrazí název souboru a číslo řádku, kde byla paměť přidělena.
 
 > [!NOTE]
->  Pokud modul obsahuje jednu nebo více implementací serializovatelných tříd, je nutné vložit `#define` řádek za poslední volání makra IMPLEMENT_SERIAL.
+>  Pokud modul obsahuje jednu nebo více implementací serializovatelných tříd, je nutné umístit `#define` řádek za poslední volání makra IMPLEMENT_SERIAL.
 
 Tato funkce funguje pouze v ladicí verzi knihovny MFC.
 
@@ -556,9 +556,9 @@ Ukazatel na objekt třídy odvozené z `CObject`.
 
 ### <a name="remarks"></a>Poznámky
 
-`AfxDump`volá `Dump` členskou funkci objektu a odesílá informace do umístění určeného `afxDump` proměnnou. `AfxDump`je k dispozici pouze v ladicí verzi knihovny MFC.
+`AfxDump` volá členskou funkci objektu `Dump` a odesílá informace do umístění určeného proměnnou `afxDump`. `AfxDump` je k dispozici pouze v ladicí verzi knihovny MFC.
 
-Váš kód programu by neměl volat `AfxDump`, ale měl by místo toho `Dump` volat členskou funkci příslušného objektu.
+Váš kód programu by neměl volat `AfxDump`, ale měl by místo toho volat členskou funkci `Dump` příslušného objektu.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -579,17 +579,17 @@ Určuje cíl výstupu výpisu paměti. Možné hodnoty, které lze kombinovat po
 
 - AFX_STACK_DUMP_TARGET_TRACE odesílá výstup prostřednictvím makra [Trace](#trace) . Makro TRACE vygeneruje výstup pouze v sestaveních pro ladění; negeneruje žádný výstup pro sestavení vydaných verzí. TRASOVÁNÍ lze také přesměrovat na jiné cíle kromě ladicího programu.
 
-- AFX_STACK_DUMP_TARGET_DEFAULT odesílá výstup výpisu paměti do výchozího cíle. Pro sestavení ladění výstup přejde do makra TRACE. V sestavení pro vydání vychází výstup do schránky.
+- AFX_STACK_DUMP_TARGET_DEFAULT odešle výstup výpisu paměti do výchozího cíle. Pro sestavení ladění výstup přejde do makra TRACE. V sestavení pro vydání vychází výstup do schránky.
 
 - AFX_STACK_DUMP_TARGET_CLIPBOARD odesílá výstup pouze do schránky. Data jsou umístěna ve schránce jako prostý text pomocí formátu schránky CF_TEXT.
 
 - AFX_STACK_DUMP_TARGET_BOTH odesílá výstup do schránky a do makra TRACE současně.
 
-- AFX_STACK_DUMP_TARGET_ODS odesílá výstup přímo do ladicího programu prostřednictvím funkce `OutputDebugString()`Win32. Tato možnost vytvoří výstup ladicího programu v sestavení ladění i vydaných verzích, pokud je k procesu připojen ladicí program. AFX_STACK_DUMP_TARGET_ODS vždy přispěje k ladicímu programu (Pokud je připojený) a nedá se přesměrovat.
+- AFX_STACK_DUMP_TARGET_ODS odesílá výstup přímo do ladicího programu pomocí funkce Win32 `OutputDebugString()`. Tato možnost vytvoří výstup ladicího programu v sestavení ladění i vydaných verzích, pokud je k procesu připojen ladicí program. AFX_STACK_DUMP_TARGET_ODS vždy přispěje k ladicímu programu (Pokud je připojen) a nelze jej přesměrovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Následující příklad odráží jeden řádek výstupu vygenerovaného voláním `AfxDumpStack` z obslužné rutiny tlačítka v aplikaci dialogového okna MFC:
+Následující příklad odráží jeden řádek výstupu vygenerovaný z volání `AfxDumpStack` z obslužné rutiny tlačítka v aplikaci MFC dialog:
 
 ```Output
 === begin AfxDumpStack output ===
@@ -626,9 +626,9 @@ Například následující tabulka popisuje první řádek výše uvedeného vý
 |`00427D55:`|Návratová adresa posledního volání funkce.|
 |`DUMP2\DEBUG\DUMP2.EXE!`|Úplný název cesty modulu, který obsahuje volání funkce.|
 |`void AfxDumpStack(unsigned long)`|Prototyp funkce se nazývá.|
-|`+ 181 bytes`|Posun v bajtech z adresy prototypu funkce (v tomto případě `void AfxDumpStack(unsigned long)`) na zpáteční adresu (v tomto `00427D55`případě).|
+|`+ 181 bytes`|Posun v bajtech z adresy prototypu funkce (v tomto případě `void AfxDumpStack(unsigned long)`) na zpáteční adresu (v tomto případě `00427D55`).|
 
-`AfxDumpStack`je k dispozici v ladicích a neladicích verzích knihoven MFC; funkce je však vždy propojena staticky, a to i v případě, že spustitelný soubor používá knihovnu MFC ve sdílené knihovně DLL. V implementacích sdílené knihovny se funkce nachází v MFCS42. Knihovna LIB (a její varianty).
+`AfxDumpStack` je k dispozici v ladicích a neladicích verzích knihoven MFC; funkce je však vždy propojena staticky, a to i v případě, že spustitelný soubor používá knihovnu MFC ve sdílené knihovně DLL. V implementacích sdílené knihovny se funkce nachází v MFCS42. Knihovna LIB (a její varianty).
 
 Úspěšné použití této funkce:
 
@@ -639,7 +639,7 @@ Například následující tabulka popisuje první řádek výše uvedeného vý
 
 **Záhlaví:** AFX –. h
 
-##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump
+##  <a name="afxenablememoryleakdump"></a>AfxEnableMemoryLeakDump
 
 Povolí nebo zakáže výpis nevracení paměti v destruktoru AFX_DEBUG_STATE.
 
@@ -669,7 +669,7 @@ Pokud vaše aplikace načte jinou knihovnu před knihovnou MFC, některá přid�
 
 **Záhlaví:** AFX –. h
 
-##  <a name="afxenablememorytracking"></a>  AfxEnableMemoryTracking
+##  <a name="afxenablememorytracking"></a>AfxEnableMemoryTracking
 
 Trasování diagnostiky paměti je obvykle povoleno v ladicí verzi knihovny MFC.
 
@@ -690,7 +690,7 @@ Předchozí nastavení příznaku sledování – povolit.
 
 Pomocí této funkce zakážete sledování v částech kódu, o kterých víte, že se bloky přiděluje správně.
 
-Další informace o `AfxEnableMemoryTracking`naleznete v tématu [ladění aplikací knihovny MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Další informace o `AfxEnableMemoryTracking`naleznete v tématu [DEBUGGING MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).
 
 > [!NOTE]
 >  Tato funkce funguje pouze v ladicí verzi knihovny MFC.
@@ -716,7 +716,7 @@ BOOL AfxIsMemoryBlock(
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
+*trub*<br/>
 Odkazuje na blok paměti, která má být testována.
 
 *nBytes*<br/>
@@ -741,7 +741,7 @@ Také zkontroluje zadanou velikost oproti původní přidělené velikosti. Poku
 
 **Záhlaví:** AFX –. h
 
-##  <a name="afxisvalidaddress"></a>  AfxIsValidAddress
+##  <a name="afxisvalidaddress"></a>AfxIsValidAddress
 
 Testuje všechny adresy paměti, aby bylo zajištěno, že je obsažena výhradně v paměťovém prostoru programu.
 
@@ -813,7 +813,7 @@ V sestaveních bez ladění, nenulová, pokud *lpsz* není null; v opačném př
 
 **Záhlaví:** AFX –. h
 
-##  <a name="afxsetallochook"></a>  AfxSetAllocHook
+##  <a name="afxsetallochook"></a>AfxSetAllocHook
 
 Nastaví zavěšení, které umožňuje volání zadané funkce před přidělením každého bloku paměti.
 
@@ -840,7 +840,7 @@ Knihovna Microsoft Foundation Class modul pro ladění paměti může zavolat u�
 Velikost navrhovaného přidělení paměti.
 
 *bObject*<br/>
-TRUE, pokud je přidělení pro `CObject`objekt odvozený od; v opačném případě false.
+TRUE, pokud je přidělení pro objekt odvozený `CObject`; v opačném případě FALSE.
 
 *lRequestNumber*<br/>
 Pořadové číslo přidělení paměti.
@@ -851,9 +851,9 @@ Všimněte si, že konvence volání AFXAPI předpokládá, že volaný musí od
 
 **Záhlaví:** AFX –. h
 
-##  <a name="afxdoforallclasses"></a>  AfxDoForAllClasses
+##  <a name="afxdoforallclasses"></a>AfxDoForAllClasses
 
-Volá zadanou funkci iterace pro všechny `CObject`třídy odvozené od sebe v paměťovém prostoru aplikace.
+Volá zadanou funkci iterace pro všechny serializovatelný třídy odvozené `CObject`v paměťovém prostoru aplikace.
 
 ```
 void
@@ -864,15 +864,15 @@ AFXAPI AfxDoForAllClasses(
 
 ### <a name="parameters"></a>Parametry
 
-*pfn*<br/>
-Odkazuje na funkci iterace, která má být volána pro každou třídu. Argumenty funkce jsou ukazatel na `CRuntimeClass` objekt a ukazatel void na další data, která volající dodává do funkce.
+*PFN*<br/>
+Odkazuje na funkci iterace, která má být volána pro každou třídu. Argumenty funkce jsou ukazatel na objekt `CRuntimeClass` a ukazatel void na další data, která volající dodává do funkce.
 
 *pContext*<br/>
 Odkazuje na volitelná data, která volající může předat funkci iterace. Tento ukazatel může mít hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Serializovatelný `CObject`– odvozené třídy jsou třídy odvozené pomocí makra DECLARE_SERIAL. Ukazatel, který je předán `AfxDoForAllClasses` do *pContext* , je předán do zadané funkce iterace pokaždé, když je volána.
+Serializovatelný `CObject`– odvozené třídy jsou třídy odvozené pomocí DECLARE_SERIALho makra. Ukazatel, který je předán `AfxDoForAllClasses` v *pContext* , je předán do zadané funkce iterace pokaždé, když je volána.
 
 > [!NOTE]
 >  Tato funkce funguje pouze v ladicí verzi knihovny MFC.
@@ -887,9 +887,9 @@ Serializovatelný `CObject`– odvozené třídy jsou třídy odvozené pomocí 
 
 **Záhlaví:** AFX –. h
 
-##  <a name="afxdoforallobjects"></a>  AfxDoForAllObjects
+##  <a name="afxdoforallobjects"></a>AfxDoForAllObjects
 
-Spustí zadanou funkci iterace pro všechny objekty odvozené z `CObject` , které byly přiděleny s **novým**.
+Spustí zadanou funkci iterace pro všechny objekty odvozené od `CObject`, které byly přiděleny s **novým**.
 
 ```
 void AfxDoForAllObjects(
@@ -899,15 +899,15 @@ void AfxDoForAllObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*pfn*<br/>
-Odkazuje na funkci iterace, která se má provést pro každý objekt. Argumenty funkce jsou ukazatele na `CObject` a a void ukazatel na další data, která volající dodává do funkce.
+*PFN*<br/>
+Odkazuje na funkci iterace, která se má provést pro každý objekt. Argumenty funkce jsou ukazatel na `CObject` a ukazatel void na další data, která volající dodává do funkce.
 
 *pContext*<br/>
 Odkazuje na volitelná data, která volající může předat funkci iterace. Tento ukazatel může mít hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Zásobníky, globální nebo vložené objekty nejsou vyčísleny. Ukazatel předaný `AfxDoForAllObjects` do v *pContext* je předán do zadané funkce iterace pokaždé, když je volána.
+Zásobníky, globální nebo vložené objekty nejsou vyčísleny. Ukazatel předaný do `AfxDoForAllObjects` v *pContext* je předán do zadané funkce iterace pokaždé, když je volána.
 
 > [!NOTE]
 >  Tato funkce funguje pouze v ladicí verzi knihovny MFC.
@@ -918,7 +918,7 @@ Zásobníky, globální nebo vložené objekty nejsou vyčísleny. Ukazatel pře
 
 [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
 [CObject::D UMP](cobject-class.md#dump)

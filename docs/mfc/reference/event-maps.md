@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907898"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855484"
 ---
 # <a name="event-maps"></a>Mapy událostí
 
@@ -19,7 +19,7 @@ Knihovna Microsoft Foundation Class nabízí programovací model optimalizovaný
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK` Makro indikuje, že ovládací prvek aktivuje událost po kliknutí pokaždé, když detekuje kliknutí myší. Podrobnější seznam dalších uložených událostí najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md). K dispozici jsou také makra, která označují vlastní události.
+Makro `EVENT_STOCK_CLICK` označuje, že se ovládací prvek aktivuje událost po kliknutí pokaždé, když detekuje kliknutí myší. Podrobnější seznam dalších uložených událostí najdete v článku [ovládací prvky ActiveX: události](../../mfc/mfc-activex-controls-events.md). K dispozici jsou také makra, která označují vlastní události.
 
 I když jsou makra mapování událostí důležitá, obecně je nevložíte přímo. Důvodem je, že okno **vlastnosti** (v **zobrazení tříd**) automaticky vytvoří položky mapování událostí ve zdrojových souborech, když ho použijete k přidružení funkcí pro spouštění událostí s událostmi. Kdykoli budete chtít upravit nebo přidat položku mapování událostí, můžete použít okno **vlastnosti** .
 
@@ -51,7 +51,7 @@ Pro podporu map událostí poskytuje MFC následující makra:
 
 ##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP
 
-Každá `COleControl`třída odvozená v programu může poskytnout mapu události, která určuje události, které ovládací prvek bude moci aktivovat.
+Každá třída odvozená od `COleControl`v programu může poskytnout mapu události, která určuje události, které ovládací prvek bude moci aktivovat.
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -59,9 +59,9 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte makro DECLARE_EVENT_MAP na konci deklarace třídy. Poté v souboru. cpp, který definuje členské funkce pro třídu, použijte makro BEGIN_EVENT_MAP, položky makra pro každou událost ovládacího prvku a makro END_EVENT_MAP pro deklaraci konce seznamu událostí.
+Použijte makro DECLARE_EVENT_MAP na konci deklarace třídy. Poté v souboru. cpp, který definuje členské funkce pro třídu, použijte makro BEGIN_EVENT_MAP, položky makra pro každou událost ovládacího prvku a makro END_EVENT_MAP k deklaraci konce seznamu událostí.
 
-Další informace o mapách událostí najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md).
+Další informace o mapách událostí naleznete v článku [ovládací prvky ActiveX: události](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -87,7 +87,7 @@ Určuje název základní třídy *theclass*.
 
 V souboru implementace (. cpp), který definuje členské funkce pro vaši třídu, spusťte mapu události pomocí makra BEGIN_EVENT_MAP, pak přidejte položky makra pro každou z vašich událostí a dokončete mapu událostí pomocí makra END_EVENT_MAP.
 
-Další informace o mapách událostí a makru BEGIN_EVENT_MAP najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md).
+Další informace o mapách událostí a makru BEGIN_EVENT_MAP naleznete v článku [ovládací prvky ActiveX: události](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -116,7 +116,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="parameters"></a>Parametry
 
 *pszName*<br/>
-Název události
+Název události.
 
 *pfnFire*<br/>
 Název funkce pro vyvolávání událostí.
@@ -126,13 +126,13 @@ Mezerou oddělený seznam jedné nebo více konstant určujících seznam parame
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *vtsParams* je mezerami oddělený seznam hodnot z `VTS_` konstant. Jedna nebo více z těchto hodnot oddělených mezerami (nejedná se o čárky) určuje seznam parametrů funkce. Příklad:
+Parametr *vtsParams* je seznam hodnot oddělených mezerami z `VTS_` konstant. Jedna nebo více z těchto hodnot oddělených mezerami (nejedná se o čárky) určuje seznam parametrů funkce. Příklad:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
 Určuje seznam obsahující 32 celé číslo představující hodnotu barvy RGB následovaný ukazatelem na `IFontDisp` rozhraní objektu písma OLE.
 
-`VTS_` Konstanty a jejich významy jsou následující:
+Konstanty `VTS_` a jejich význam jsou následující:
 
 |Písmeno|Typ parametru|
 |------------|--------------------|
@@ -141,9 +141,9 @@ Určuje seznam obsahující 32 celé číslo představující hodnotu barvy RGB 
 |VTS_R4|**float**|
 |VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
-|VTS_CY|MĚNĚ|
-|VTS_DATE|DATE|
-|VTS_BSTR|typ **const** __znak\*__|
+|VTS_CY|MĚNA|
+|VTS_DATE|DATE (Datum)|
+|VTS_BSTR|\***const** __char__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|POPISOVAČ|
@@ -165,7 +165,7 @@ Určuje seznam obsahující 32 celé číslo představující hodnotu barvy RGB 
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Pro všechny typy variant byly definovány další konstanty variant s výjimkou hodnot VTS_FONT a VTS_PICTURE, které poskytují ukazatel na konstantu dat variant. Tyto konstanty jsou pojmenovány pomocí `VTS_Pconstantname` konvence. Například VTS_PCOLOR je ukazatel na konstantu VTS_COLOR.
+> Pro všechny typy variant byly definovány další konstanty variant s výjimkou VTS_FONT a VTS_PICTURE, které poskytují ukazatel na konstantu dat variant. Tyto konstanty jsou pojmenovány pomocí `VTS_Pconstantname` konvence. Například VTS_PCOLOR je ukazatel na konstantu VTS_COLOR.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -186,9 +186,9 @@ EVENT_CUSTOM_ID(
 ### <a name="parameters"></a>Parametry
 
 *pszName*<br/>
-Název události
+Název události.
 
-*dispid*<br/>
+*DISPID*<br/>
 ID odeslání používané ovládacím prvkem při vyvolávání události.
 
 *pfnFire*<br/>
@@ -205,7 +205,7 @@ Argument *vtsParams* je seznam hodnot oddělených mezerami z `VTS_` konstant. J
 
 Určuje seznam obsahující 32 celé číslo představující hodnotu barvy RGB následovaný ukazatelem na `IFontDisp` rozhraní objektu písma OLE.
 
-Seznam `VTS_` konstant naleznete v tématu [EVENT_CUSTOM](#event_custom).
+Seznam konstant `VTS_` naleznete v tématu [EVENT_CUSTOM](#event_custom).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -240,7 +240,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Hodnoty parametrů *lpMsg*, *hwndParent*a *lpRect* jsou odebírány z odpovídajících parametrů `IOleObject::DoVerb` členské funkce.
+Hodnoty parametrů *lpMsg*, *hwndParent*a *lpRect* jsou odebírány z odpovídajících parametrů členské funkce `IOleObject::DoVerb`.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -264,7 +264,7 @@ Funkce, která je volána rozhraním, když je vyvolána operace.
 
 ### <a name="remarks"></a>Poznámky
 
-Standardní index příkazu má formu `OLEIVERB_`, za nímž následuje akce. OLEIVERB_SHOW, OLEIVERB_HIDE a OLEIVERB_UIACTIVATE jsou příklady standardních sloves.
+Standardní index příkazu je `OLEIVERB_`formuláře, po kterém následuje akce. Příklady standardních sloves jsou OLEIVERB_SHOW, OLEIVERB_HIDE a OLEIVERB_UIACTIVATE.
 
 Popis prototypu funkce, který se má použít jako parametr *memberFxn* , najdete v tématu [ON_OLEVERB](#on_oleverb) .
 
@@ -272,6 +272,6 @@ Popis prototypu funkce, který se má použít jako parametr *memberFxn* , najde
 
 **Header** AFXOLE. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

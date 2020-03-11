@@ -4,11 +4,11 @@ ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
 ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556666"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856810"
 ---
 # <a name="cpppropertiesjson-reference"></a>Odkaz na CppProperties. JSON
 
@@ -162,7 +162,7 @@ Pokud má váš projekt složku zahrnutí a obsahuje také *Windows. h* a dalš�
 
 Pokud nevidíte očekávanou technologii IntelliSense, můžete řešit problémy tak, že v části **nástroje** > **Možnosti** > **textový editor** > **C/C++**  > **Rozšířené** a nastavení **Povolit protokolování** na **hodnotu true**. Pokud chcete začít, zkuste nastavit **úroveň protokolování** na 5 a **filtry protokolování** na 8.
 
-![Diagnostické protokoly](media/diagnostic-logging.png)
+![Protokolování diagnostiky](media/diagnostic-logging.png)
 
 Výstup je připojen do **okno výstup** a zobrazí se, když zvolíte možnost **Zobrazit výstup z: vizuálního C++ protokolu**. Výstup obsahuje mimo jiné seznam skutečných cest, které IntelliSense pokouší použít. Pokud cesty se neshodují s těmi v *CppProperties. JSON*, zkuste zavřít složku a odstranit podsložku *. vs* , která obsahuje data procházení v mezipaměti.
 

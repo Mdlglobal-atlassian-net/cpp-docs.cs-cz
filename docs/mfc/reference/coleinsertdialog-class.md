@@ -25,11 +25,11 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 ms.openlocfilehash: a884f946b60be0567f39477f434db8efe041e393
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503934"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855481"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog – třída
 
@@ -45,16 +45,16 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|`COleInsertDialog` Vytvoří objekt.|
+|[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Vytvoří objekt `COleInsertDialog`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[COleInsertDialog::CreateItem](#createitem)|Vytvoří položku vybranou v dialogovém okně.|
-|[COleInsertDialog::DoModal](#domodal)|Zobrazí dialogové okno Vložit objekt OLE.|
+|[COleInsertDialog:: CreateItem –](#createitem)|Vytvoří položku vybranou v dialogovém okně.|
+|[COleInsertDialog::D oModal](#domodal)|Zobrazí dialogové okno Vložit objekt OLE.|
 |[COleInsertDialog:: GetClassID](#getclassid)|Získá identifikátor CLSID přidružený k vybrané položce.|
 |[COleInsertDialog::GetDrawAspect](#getdrawaspect)|Určuje, zda má být položka vykreslována jako ikona.|
 |[COleInsertDialog::GetIconicMetafile](#geticonicmetafile)|Získá popisovač metasouboru přidruženého k ikonickým formuláři této položky.|
@@ -63,13 +63,13 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[COleInsertDialog::m_io](#m_io)|Struktura typu OLEUIINSERTOBJECT, která řídí chování dialogového okna.|
+|[COleInsertDialog:: m_io](#m_io)|Struktura typu OLEUIINSERTOBJECT, která řídí chování dialogového okna.|
 
 ## <a name="remarks"></a>Poznámky
 
-Vytvořte objekt třídy `COleInsertDialog` , pokud chcete zavolat toto dialogové okno. Po vytvoření `COleInsertDialog` objektu lze pomocí struktury [m_io](#m_io) inicializovat hodnoty nebo stavy ovládacích prvků v dialogovém okně. `m_io` Struktura je typu OLEUIINSERTOBJECT. Další informace o použití této třídy dialogového okna naleznete v tématu členská funkce [DoModal](#domodal) .
+Pokud chcete zavolat toto dialogové okno, vytvořte objekt třídy `COleInsertDialog`. Po vytvoření objektu `COleInsertDialog` lze pomocí struktury [m_io](#m_io) inicializovat hodnoty nebo stavy ovládacích prvků v dialogovém okně. Struktura `m_io` je typu OLEUIINSERTOBJECT. Další informace o použití této třídy dialogového okna naleznete v tématu členská funkce [DoModal](#domodal) .
 
 > [!NOTE]
 >  Kód kontejneru generovaný průvodcem aplikací používá tuto třídu.
@@ -100,7 +100,7 @@ Další informace o dialogových oknech specifických pro OLE naleznete v dialog
 
 ##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog
 
-Tato funkce vytvoří pouze `COleInsertDialog` objekt.
+Tato funkce vytvoří pouze objekt `COleInsertDialog`.
 
 ```
 COleInsertDialog (
@@ -113,19 +113,19 @@ COleInsertDialog (
 *dwFlags*<br/>
 Příznak vytvoření, který obsahuje libovolný počet následujících hodnot, které mají být kombinovány pomocí bitového operátoru OR:
 
-- IOF_SHOWHELP určuje, že se při volání dialogového okna zobrazí tlačítko Help.
+- IOF_SHOWHELP určuje, zda bude tlačítko Help zobrazeno při volání dialogového okna.
 
-- IOF_SELECTCREATENEW určuje, zda bude při volání dialogového okna zaškrtnuto políčko vytvořit nový přepínač. Toto je výchozí nastavení a nedá se použít s IOF_SELECTCREATEFROMFILE.
+- IOF_SELECTCREATENEW určuje, zda bude při volání dialogového okna na začátku zaškrtnuto políčko vytvořit nový přepínač. Toto je výchozí nastavení a nedá se použít s IOF_SELECTCREATEFROMFILE.
 
-- IOF_SELECTCREATEFROMFILE určuje, že přepínač Vytvořit ze souboru bude při prvním volání dialogového okna vybrán. Nelze použít s IOF_SELECTCREATENEW.
+- IOF_SELECTCREATEFROMFILE určuje, zda bude při volání dialogového okna na začátku vybrán přepínač Vytvořit ze souboru. Nelze použít s IOF_SELECTCREATENEW.
 
-- IOF_CHECKLINK určuje, že zaškrtávací políčko odkaz bude při prvním volání dialogového okna kontrolován.
+- IOF_CHECKLINK určuje, že zaškrtávací políčko odkaz bude při volání dialogového okna kontrolován.
 
-- IOF_DISABLELINK určuje, že při volání dialogového okna bude políčko odkaz neaktivní.
+- IOF_DISABLELINK určuje, zda bude odkaz při volání dialogového okna zakázán.
 
 - IOF_CHECKDISPLAYASICON Určuje, že se při prvním zaškrtnutí políčka Zobrazit jako ikona bude zobrazovat aktuální ikona a tlačítko změnit ikonu bude povoleno při volání dialogového okna.
 
-- IOF_VERIFYSERVERSEXIST určuje, že dialogové okno by mělo ověřit třídy, které přidá do seznamu, tím, že zajistí, aby servery zadané v registrační databázi existovaly před tím, než se zobrazí dialogové okno. Nastavením tohoto příznaku může výrazně zhoršit výkon.
+- IOF_VERIFYSERVERSEXIST určuje, že dialogové okno by mělo ověřit třídy, které přidá do seznamu, tím, že zajistí, že servery zadané v registrační databázi existují předtím, než se zobrazí dialogové okno. Nastavením tohoto příznaku může výrazně zhoršit výkon.
 
 *pParentWnd*<br/>
 Odkazuje na objekt okna nadřazeného objektu nebo vlastníka (typu `CWnd`), do kterého objekt dialogového okna patří. Pokud je hodnota NULL, nadřazené okno objektu dialogového okna je nastaveno na hlavní okno aplikace.
@@ -153,7 +153,7 @@ Nenulové, pokud byla položka vytvořena; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Před voláním této `COleClientItem` funkce je nutné objekt přidělit.
+Aby bylo možné zavolat tuto funkci, je nutné objekt `COleClientItem` přidělit.
 
 ##  <a name="domodal"></a>COleInsertDialog::D oModal
 
@@ -172,9 +172,9 @@ INT_PTR
 *dwFlags*<br/>
 Jedna z následujících hodnot:
 
-`COleInsertDialog::DocObjectsOnly`Vloží pouze DocObjects.
+`COleInsertDialog::DocObjectsOnly` vloží pouze DocObjects.
 
-`COleInsertDialog::ControlsOnly`Vloží pouze ovládací prvky ActiveX.
+`COleInsertDialog::ControlsOnly` vloží pouze ovládací prvky ActiveX.
 
 Nula nevkládá ani DocObject ani ovládací prvek ActiveX. Tato hodnota má za následek stejnou implementaci jako první prototyp uvedený výše.
 
@@ -196,7 +196,7 @@ Pokud `DoModal` vrátí IDOK, můžete zavolat jiné členské funkce pro načte
 
 ##  <a name="getclassid"></a>COleInsertDialog:: GetClassID
 
-Voláním této funkce získáte identifikátor CLSID přidružené k vybrané položce pouze v případě, že funkce [DoModal](#domodal) vrátí IDOK a typ `COleInsertDialog::createNewItem`výběru je.
+Voláním této funkce získáte identifikátor CLSID přidružené k vybrané položce pouze v případě, že funkce [DoModal](#domodal) vrátí IDOK a typ výběru je `COleInsertDialog::createNewItem`.
 
 ```
 REFCLSID GetClassID() const;
@@ -222,9 +222,9 @@ DVASPECT GetDrawAspect() const;
 
 Metoda potřebná pro vykreslení objektu.
 
-- DVASPECT_CONTENT vrátí, pokud není zaškrtnuto zaškrtávací políčko Zobrazit jako ikonu.
+- DVASPECT_CONTENT vráceny, pokud není zaškrtnuto políčko Zobrazit jako ikonu.
 
-- DVASPECT_ICON vráceny, pokud bylo zaškrtnuto políčko Zobrazit jako ikonu.
+- DVASPECT_ICON vrácena, pokud bylo zaškrtnuto políčko Zobrazit jako ikonu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -246,7 +246,7 @@ Popisovač metasouboru obsahujícího aspekt ikonickým pro vybranou položku, p
 
 ##  <a name="getpathname"></a>COleInsertDialog:: getcesta
 
-Voláním této funkce získáte úplnou cestu k vybranému souboru pouze v případě, že [DoModal](#domodal) vrátí IDOK a typ `COleInsertDialog::createNewItem`výběru není.
+Voláním této funkce získáte úplnou cestu k vybranému souboru, pouze pokud [DoModal](#domodal) vrátí IDOK a typ výběru není `COleInsertDialog::createNewItem`.
 
 ```
 CString GetPathName() const;
@@ -254,7 +254,7 @@ CString GetPathName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úplná cesta k souboru vybranému v dialogovém okně. Pokud je `createNewItem`typ výběru, tato funkce vrátí `CString` v režimu vydání nevýznamný nebo vyvolá kontrolní výraz v režimu ladění.
+Úplná cesta k souboru vybranému v dialogovém okně. Pokud je typ výběru `createNewItem`, vrátí tato funkce nevýznamný `CString` v režimu vydání nebo vyvolá kontrolní výraz v režimu ladění.
 
 ##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType
 
@@ -270,7 +270,7 @@ Typ provedeného výběru.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnoty návratového typu jsou určeny `Selection` výčtovým typem deklarovaným `COleInsertDialog` ve třídě.
+Hodnoty návratového typu jsou určeny typem výčtu `Selection` deklarovaným ve třídě `COleInsertDialog`.
 
 ```
 enum Selection {
@@ -282,13 +282,13 @@ enum Selection {
 
 Stručný popis těchto hodnot je následující:
 
-- `COleInsertDialog::createNewItem`Byl vybrán přepínač Vytvořit nový.
+- `COleInsertDialog::createNewItem` vybrali přepínač Vytvořit nový.
 
-- `COleInsertDialog::insertFromFile`Přepínač Vytvořit ze souboru byl vybrán a políčko odkaz nebylo zaškrtnuto.
+- `COleInsertDialog::insertFromFile` přepínač Vytvořit ze souboru byl vybrán a políčko odkaz nebylo zaškrtnuto.
 
-- `COleInsertDialog::linkToFile`Přepínač Vytvořit ze souboru byl vybrán a zaškrtávací políčko odkaz bylo zaškrtnuto.
+- `COleInsertDialog::linkToFile` přepínač Vytvořit ze souboru byl vybrán a zaškrtávací políčko odkaz bylo zaškrtnuto.
 
-##  <a name="m_io"></a>  COleInsertDialog::m_io
+##  <a name="m_io"></a>COleInsertDialog:: m_io
 
 Struktura typu OLEUIINSERTOBJECT slouží k řízení chování dialogového okna Vložit objekt.
 
@@ -302,7 +302,7 @@ OLEUIINSERTOBJECT m_io;
 
 Další informace najdete v tématu struktura [OLEUIINSERTOBJECT](/windows/win32/api/oledlg/ns-oledlg-oleuiinsertobjectw) v Windows SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [OCLIENT Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>

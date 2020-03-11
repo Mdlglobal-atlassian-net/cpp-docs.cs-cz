@@ -1,5 +1,5 @@
 ---
-title: Makra bodů připojení
+title: Makra spojovacího bodu
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_CONNECTION_POINT_MAP
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
 ms.openlocfilehash: cb8d6f696980ef91d7b43c960dc50289ea8500a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278199"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872484"
 ---
-# <a name="connection-point-macros"></a>Makra bodů připojení
+# <a name="connection-point-macros"></a>Makra spojovacího bodu
 
-Tato makra definují připojení bodu mapy a položky.
+Tato makra definují mapy a položky spojovacího bodu.
 
 |||
 |-|-|
-|[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Označuje začátek položek mapování bodu připojení.|
-|[CONNECTION_POINT_ENTRY](#connection_point_entry)|Zadá spojovacích bodů do objektu map.|
-|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Podobně jako CONNECTION_POINT_ENTRY ale bere ukazatel na iid.|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Označuje konec položek mapování bodu připojení.|
+|[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Označí začátek položek mapy bodu připojení.|
+|[CONNECTION_POINT_ENTRY](#connection_point_entry)|Vloží body připojení do mapy.|
+|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Podobně jako CONNECTION_POINT_ENTRY, ale přebírá ukazatel na identifikátor IID.|
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Označuje konec položek mapy spojovacího bodu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="begin_connection_point_map"></a>  BEGIN_CONNECTION_POINT_MAP
+##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP
 
-Označuje začátek položek mapování bodu připojení.
+Označí začátek položek mapy bodu připojení.
 
 ```
 BEGIN_CONNECTION_POINT_MAP(x)
@@ -39,22 +39,22 @@ BEGIN_CONNECTION_POINT_MAP(x)
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-[in] Název třídy, který obsahuje spojovací body.
+*znak*<br/>
+pro Název třídy, která obsahuje body připojení.
 
 ### <a name="remarks"></a>Poznámky
 
-Začínat – makro BEGIN_CONNECTION_POINT_MAP připojení bodu mapy, přidejte položky pro každý z vašich spojovací body s [CONNECTION_POINT_ENTRY](#connection_point_entry) – makro a proveďte mapování [END_CONNECTION_ POINT_MAP](#end_connection_point_map) – makro.
+Spusťte mapu spojovacího bodu pomocí makra BEGIN_CONNECTION_POINT_MAP, přidejte položky pro každý z vašich bodů připojení pomocí makra [CONNECTION_POINT_ENTRY](#connection_point_entry) a dokončete mapu pomocí makra [END_CONNECTION_POINT_MAP](#end_connection_point_map) .
 
-Další informace o spojovacích bodů ve ATL naleznete v článku [spojovací body](../../atl/atl-connection-points.md).
+Další informace o bodech připojení v knihovně ATL naleznete v článku [body připojení](../../atl/atl-connection-points.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]
 
-##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY a CONNECTION_POINT_ENTRY_P
+##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY a CONNECTION_POINT_ENTRY_P
 
-Zadá bodu připojení pro zadané rozhraní do objektu map bodu připojení tak, aby byla přístupná.
+Zadá bod připojení pro zadané rozhraní do mapy spojovacího bodu tak, aby byl k němu možné přihlédnout.
 
 ```
 CONNECTION_POINT_ENTRY(iid)
@@ -63,27 +63,27 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*iid*<br/>
-[in] Identifikátor GUID rozhraní se přidávají do mapy bodu připojení.
+*identifikátor*<br/>
+pro Identifikátor GUID přidávaného rozhraní do mapy spojovacího bodu.
 
 *piid*<br/>
-[in] Ukazatel na identifikátor GUID rozhraní se adde.
+pro Ukazatel na identifikátor GUID rozhraní, které se ADDE.
 
 ### <a name="remarks"></a>Poznámky
 
-Připojení bodu položky na mapě jsou používány [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). Třída obsahující mapě bod připojení musí dědit z `IConnectionPointContainerImpl`.
+Položky spojovacího bodu v mapě používá [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). Třída obsahující mapu spojovacího bodu musí dědit z `IConnectionPointContainerImpl`.
 
-Spuštění mapy bod připojení se [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) – makro, přidejte položky pro každý z vašich spojovací body s – makro CONNECTION_POINT_ENTRY a dokončení mapování se [END_CONNECTION_ POINT_MAP](#end_connection_point_map) – makro.
+Spusťte mapu spojovacího bodu pomocí makra [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) , přidejte položky pro každý z vašich bodů připojení pomocí makra CONNECTION_POINT_ENTRY a dokončete mapu pomocí makra [END_CONNECTION_POINT_MAP](#end_connection_point_map) .
 
-Další informace o spojovacích bodů ve ATL naleznete v článku [spojovací body](../../atl/atl-connection-points.md).
+Další informace o bodech připojení v knihovně ATL naleznete v článku [body připojení](../../atl/atl-connection-points.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]
 
-##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP
+##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP
 
-Označuje konec položek mapování bodu připojení.
+Označuje konec položek mapy spojovacího bodu.
 
 ```
 END_CONNECTION_POINT_MAP()
@@ -91,15 +91,15 @@ END_CONNECTION_POINT_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Spuštění mapy bod připojení se [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) – makro, přidejte položky pro každý z vašich spojovací body s [CONNECTION_POINT_ENTRY](#connection_point_entry) – makro a proveďte mapování END_ CONNECTION_POINT_MAP makra.
+Spusťte mapu spojovacího bodu pomocí makra [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) , přidejte položky pro každý z vašich bodů připojení pomocí makra [CONNECTION_POINT_ENTRY](#connection_point_entry) a dokončete mapu pomocí makra END_CONNECTION_POINT_MAP.
 
-Další informace o spojovacích bodů ve ATL naleznete v článku [spojovací body](../../atl/atl-connection-points.md).
+Další informace o bodech připojení v knihovně ATL naleznete v článku [body připojení](../../atl/atl-connection-points.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Windowing#128](../../atl/codesnippet/cpp/connection-point-macros_3.h)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Makra](../../atl/reference/atl-macros.md)<br/>
+[Makr](../../atl/reference/atl-macros.md)<br/>
 [Globální funkce bodů připojení](../../atl/reference/connection-point-global-functions.md)

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
 ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821366"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866529"
 ---
 # <a name="crect-class"></a>CRect – třída
 
@@ -55,18 +55,18 @@ class CRect : public tagRECT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRect::CRect](#crect)|Vytvoří objekt `CRect`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRect::BottomRight](#bottomright)|Vrátí pravý dolní bod `CRect`.|
 |[CRect::CenterPoint](#centerpoint)|Vrátí Centerpoint `CRect`.|
 |[CRect::CopyRect](#copyrect)|Zkopíruje rozměry zdrojového obdélníku do `CRect`.|
-|[CRect::DeflateRect](#deflaterect)|Zmenší šířku a výšku `CRect`.|
+|[CRect::D eflateRect](#deflaterect)|Zmenší šířku a výšku `CRect`.|
 |[CRect::EqualRect](#equalrect)|Určuje, zda je `CRect` rovny danému obdélníku.|
 |[CRect:: Height](#height)|Vypočítá výšku `CRect`.|
 |[CRect::InflateRect](#inflaterect)|Zvětší šířku a výšku `CRect`.|
@@ -78,7 +78,7 @@ class CRect : public tagRECT
 |[CRect::MoveToY](#movetoy)|Přesune `CRect` na zadanou souřadnici y.|
 |[CRect::NormalizeRect](#normalizerect)|Sjednotí výšku a šířku `CRect`.|
 |[CRect::OffsetRect](#offsetrect)|Přesune `CRect` o zadané posuny.|
-|[CRect::PtInRect](#ptinrect)|Určuje, zda zadaný bod leží v rámci `CRect`.|
+|[CRect::P tInRect](#ptinrect)|Určuje, zda zadaný bod leží v rámci `CRect`.|
 |[CRect::SetRect](#setrect)|Nastaví rozměry `CRect`.|
 |[CRect::SetRectEmpty](#setrectempty)|Nastaví `CRect` prázdnému obdélníku (všechny souřadnice se rovnají 0).|
 |[CRect:: size](#size)|Vypočítá velikost `CRect`.|
@@ -89,7 +89,7 @@ class CRect : public tagRECT
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CRect:: operator-](#operator_-)|Odečte zadaný posun od `CRect` nebo rozplochí `CRect` a vrátí výsledné `CRect`.|
 |[CRect:: operator LPCRECT](#operator_lpcrect)|Převede `CRect` na `LPCRECT`.|
@@ -291,10 +291,10 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *l*<br/>
 Určuje levou pozici `CRect`.
 
-*t*<br/>
+*š*<br/>
 Určuje začátek `CRect`.
 
-*r*<br/>
+*í*<br/>
 Určuje pravou pozici `CRect`.
 
 *b*<br/>
@@ -375,10 +375,10 @@ void DeflateRect(int l, int t, int r, int b) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Určuje počet jednotek pro zúžení levé a pravé strany `CRect`.
 
-*y*<br/>
+*požadované*<br/>
 Určuje počet jednotek, které se mají uprostřed horní a dolní části `CRect`.
 
 *hodnota*<br/>
@@ -390,10 +390,10 @@ Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRe
 *l*<br/>
 Určuje počet jednotek, ve kterých se má uprostřed `CRect`.
 
-*t*<br/>
+*š*<br/>
 Určuje počet jednotek pro zúžení horní části `CRect`.
 
-*r*<br/>
+*í*<br/>
 Určuje počet jednotek pro zúžení pravé strany `CRect`.
 
 *b*<br/>
@@ -501,10 +501,10 @@ void InflateRect(int l, int t, int r,  int b) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Určuje počet jednotek, které mají být nahuštěny na levou a pravou stranu `CRect`.
 
-*y*<br/>
+*požadované*<br/>
 Určuje počet jednotek, které mají být vyrovny hornímu a dolnímu `CRect`.
 
 *hodnota*<br/>
@@ -516,10 +516,10 @@ Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRe
 *l*<br/>
 Určuje počet jednotek pro neplochou levou stranu `CRect`.
 
-*t*<br/>
+*š*<br/>
 Určuje počet jednotek, které mají být v horní části `CRect`.
 
-*r*<br/>
+*í*<br/>
 Určuje počet jednotek, které mají být nahuštěny na pravé straně `CRect`.
 
 *b*<br/>
@@ -653,7 +653,7 @@ void MoveToX(int x) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Absolutní souřadnice x levého horního rohu obdélníku.
 
 ### <a name="example"></a>Příklad
@@ -677,10 +677,10 @@ void MoveToXY(POINT point) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Absolutní souřadnice x levého horního rohu obdélníku.
 
-*y*<br/>
+*požadované*<br/>
 Absolutní souřadnice y levého horního rohu obdélníku.
 
 *Vyberte*<br/>
@@ -705,7 +705,7 @@ void MoveToY(int y) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*požadované*<br/>
 Absolutní souřadnice y levého horního rohu obdélníku.
 
 ### <a name="example"></a>Příklad
@@ -754,10 +754,10 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Určuje velikost, která se má přesunout doleva nebo doprava. Posunutí doleva musí být záporné.
 
-*y*<br/>
+*požadované*<br/>
 Určuje velikost, která se má přesunout nahoru nebo dolů. Aby se mohl přesunout nahoru, musí být záporný.
 
 *Vyberte*<br/>
@@ -1267,10 +1267,10 @@ Určuje souřadnici x levého horního rohu.
 *Y1*<br/>
 Určuje souřadnici y v levém horním rohu.
 
-*x2*<br/>
+*X2*<br/>
 Určuje souřadnici x pravého dolního rohu.
 
-*y2*<br/>
+*Y2*<br/>
 Určuje souřadnici y v pravém dolním rohu.
 
 ### <a name="example"></a>Příklad
@@ -1483,7 +1483,7 @@ int nWid = rect.Width();
 ASSERT(nWid == 60);
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CPoint – třída](cpoint-class.md)<br/>
 [CSize – třída](csize-class.md)<br/>

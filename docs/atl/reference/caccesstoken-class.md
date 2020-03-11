@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
 ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497921"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864863"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken – třída
 
@@ -76,59 +76,59 @@ class CAccessToken
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CAccessToken::~CAccessToken](#dtor)|Destruktor.|
+|[CAccessToken:: ~ CAccessToken](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CAccessToken:: Attach](#attach)|Voláním této metody převezmete vlastnictví daného popisovače přístupového tokenu.|
-|[CAccessToken::CheckTokenMembership](#checktokenmembership)|Voláním této metody určíte, zda je v `CAccessToken` objektu povolen zadaný identifikátor SID.|
+|[CAccessToken::CheckTokenMembership](#checktokenmembership)|Voláním této metody určíte, zda je v objektu `CAccessToken` povolen zadaný identifikátor SID.|
 |[CAccessToken::CreateImpersonationToken](#createimpersonationtoken)|Voláním této metody vytvoříte nový přístupový token zosobnění.|
 |[CAccessToken::CreatePrimaryToken](#createprimarytoken)|Voláním této metody vytvoříte nový primární token.|
-|[CAccessToken::CreateProcessAsUser](#createprocessasuser)|Zavolejte tuto metodu pro vytvoření nového procesu spuštěného v kontextu zabezpečení uživatele reprezentovaného `CAccessToken` objektem.|
-|[CAccessToken::CreateRestrictedToken](#createrestrictedtoken)|Zavolejte tuto metodu pro vytvoření nového, omezeného `CAccessToken` objektu.|
+|[CAccessToken:: CreateProcessAsUser](#createprocessasuser)|Zavolejte tuto metodu pro vytvoření nového procesu spuštěného v kontextu zabezpečení uživatele reprezentovaného objektem `CAccessToken`.|
+|[CAccessToken::CreateRestrictedToken](#createrestrictedtoken)|Voláním této metody vytvoříte nový objekt s omezením `CAccessToken`.|
 |[CAccessToken::D etach](#detach)|Voláním této metody odvoláte vlastnictví přístupového tokenu.|
-|[CAccessToken::DisablePrivilege](#disableprivilege)|Voláním této metody zakážete oprávnění v `CAccessToken` objektu.|
-|[CAccessToken::DisablePrivileges](#disableprivileges)|Voláním této metody zakážete jedno nebo více oprávnění v `CAccessToken` objektu.|
-|[CAccessToken::EnablePrivilege](#enableprivilege)|Voláním této metody povolíte oprávnění v `CAccessToken` objektu.|
-|[CAccessToken::EnablePrivileges](#enableprivileges)|Voláním této metody povolíte v `CAccessToken` objektu jedno nebo více oprávnění.|
-|[CAccessToken::GetDefaultDacl](#getdefaultdacl)|Voláním této metody vrátíte `CAccessToken` výchozí seznam DACL objektu.|
-|[CAccessToken::GetEffectiveToken](#geteffectivetoken)|Zavolejte tuto metodu pro získání `CAccessToken` objektu, který se rovná přístupovému tokenu v platném pro aktuální vlákno.|
-|[CAccessToken:: GetGroups](#getgroups)|Voláním této metody vrátíte `CAccessToken` skupiny tokenů objektu.|
+|[CAccessToken::D isablePrivilege](#disableprivilege)|Voláním této metody zakážete oprávnění v objektu `CAccessToken`.|
+|[CAccessToken::D isablePrivileges](#disableprivileges)|Voláním této metody zakážete jedno nebo více oprávnění v objektu `CAccessToken`.|
+|[CAccessToken::EnablePrivilege](#enableprivilege)|Voláním této metody povolíte oprávnění v objektu `CAccessToken`.|
+|[CAccessToken::EnablePrivileges](#enableprivileges)|Voláním této metody povolíte jedno nebo více oprávnění v objektu `CAccessToken`.|
+|[CAccessToken::GetDefaultDacl](#getdefaultdacl)|Voláním této metody vrátíte výchozí seznam DACL objektu `CAccessToken`.|
+|[CAccessToken::GetEffectiveToken](#geteffectivetoken)|Voláním této metody získá objekt `CAccessToken`, který se rovná přístupovému tokenu v platnosti pro aktuální vlákno.|
+|[CAccessToken:: GetGroups](#getgroups)|Voláním této metody vrátíte skupiny tokenů `CAccessToken` objektu.|
 |[CAccessToken:: GetHandle](#gethandle)|Voláním této metody Načtěte popisovač přístupového tokenu.|
 |[CAccessToken::GetImpersonationLevel](#getimpersonationlevel)|Voláním této metody získáme úroveň zosobnění z přístupového tokenu.|
-|[CAccessToken::GetLogonSessionId](#getlogonsessionid)|Voláním této metody získáte ID přihlašovací relace přidružené `CAccessToken` k objektu.|
-|[CAccessToken::GetLogonSid](#getlogonsid)|Voláním této metody získáme přihlašovací identifikátor SID přidružený `CAccessToken` k objektu.|
-|[CAccessToken::GetOwner](#getowner)|Voláním této metody získáte vlastníka přidruženého `CAccessToken` k objektu.|
-|[CAccessToken::GetPrimaryGroup](#getprimarygroup)|Voláním této metody získáte primární skupinu přidruženou `CAccessToken` k objektu.|
-|[CAccessToken:: getprivileges](#getprivileges)|Voláním této metody získáte oprávnění přidružená `CAccessToken` k objektu.|
+|[CAccessToken::GetLogonSessionId](#getlogonsessionid)|Voláním této metody získáte ID přihlašovací relace přidružené k objektu `CAccessToken`.|
+|[CAccessToken::GetLogonSid](#getlogonsid)|Voláním této metody získáme přihlašovací identifikátor SID přidružený k objektu `CAccessToken`.|
+|[CAccessToken:: GetOwner](#getowner)|Voláním této metody získáte vlastníka přidruženého k objektu `CAccessToken`.|
+|[CAccessToken:: getprimary](#getprimarygroup)|Voláním této metody získáte primární skupinu přidruženou k objektu `CAccessToken`.|
+|[CAccessToken:: getprivileges](#getprivileges)|Voláním této metody získáte oprávnění spojená s objektem `CAccessToken`.|
 |[CAccessToken::GetProcessToken](#getprocesstoken)|Voláním této metody inicializujete `CAccessToken` pomocí přístupového tokenu z daného procesu.|
-|[CAccessToken:: GetProfile](#getprofile)|Voláním této metody získáte popisovač odkazující na profil uživatele přidružený `CAccessToken` k objektu.|
-|[CAccessToken:: GetSource](#getsource)|Voláním této metody načtete zdroj `CAccessToken` objektu.|
-|[CAccessToken:: getstatistics](#getstatistics)|Voláním této metody získáte informace spojené s `CAccessToken` objektem.|
-|[CAccessToken::GetTerminalServicesSessionId](#getterminalservicessessionid)|Voláním této metody získáte ID relace Terminálové služby přidružené k danému `CAccessToken` objektu.|
-|[CAccessToken::GetThreadToken](#getthreadtoken)|Zavolejte tuto metodu pro inicializaci `CAccessToken` s tokenem z daného vlákna.|
-|[CAccessToken::GetTokenId](#gettokenid)|Voláním této metody získáte ID tokenu přidruženého `CAccessToken` k objektu.|
-|[CAccessToken:: GetType](#gettype)|Voláním této metody získáte typ `CAccessToken` tokenu objektu.|
-|[CAccessToken::GetUser](#getuser)|Zavolejte tuto metodu k identifikaci uživatele přidruženého `CAccessToken` k objektu.|
-|[CAccessToken::HKeyCurrentUser](#hkeycurrentuser)|Voláním této metody získáte popisovač odkazující na profil uživatele přidružený `CAccessToken` k objektu.|
-|[CAccessToken:: Impersonate](#impersonate)|Voláním této metody přiřadíte zosobnění `CAccessToken` k vláknu.|
-|[CAccessToken::ImpersonateLoggedOnUser](#impersonateloggedonuser)|Zavolejte tuto metodu, pokud chcete volajícímu vláknu dovolit zosobnit kontext zabezpečení přihlášeného uživatele.|
-|[CAccessToken::IsTokenRestricted](#istokenrestricted)|Voláním této metody otestujete, `CAccessToken` zda objekt obsahuje seznam omezených identifikátorů SID.|
-|[CAccessToken::LoadUserProfile](#loaduserprofile)|Voláním této metody načtete profil uživatele přidružený `CAccessToken` k objektu.|
-|[CAccessToken::LogonUser](#logonuser)|Voláním této metody vytvoříte přihlašovací relaci pro uživatele přidruženého k zadaným přihlašovacím údajům.|
-|[CAccessToken::OpenCOMClientToken](#opencomclienttoken)|Volání této metody ze serveru com, který zpracovává volání od klienta za účelem inicializace `CAccessToken` přístupového tokenu z klienta modelu COM.|
-|[CAccessToken::OpenNamedPipeClientToken](#opennamedpipeclienttoken)|Volání této metody ze serveru, který přijímá požadavky přes pojmenovaný kanál k inicializaci `CAccessToken` s přístupovým tokenem z klienta.|
-|[CAccessToken::OpenRPCClientToken](#openrpcclienttoken)|Voláním této metody ze serveru, který zpracovává volání z klienta RPC pro inicializaci `CAccessToken` s přístupovým tokenem z klienta.|
-|[CAccessToken::OpenThreadToken](#openthreadtoken)|Voláním této metody nastavíte úroveň zosobnění a potom inicializujete `CAccessToken` token z daného vlákna.|
-|[CAccessToken::PrivilegeCheck](#privilegecheck)|Voláním této metody určíte, zda je v `CAccessToken` objektu povolena zadaná sada oprávnění.|
+|[CAccessToken:: GetProfile](#getprofile)|Voláním této metody získáte popisovač odkazující na profil uživatele přidružený k objektu `CAccessToken`.|
+|[CAccessToken:: GetSource](#getsource)|Voláním této metody načtete zdroj objektu `CAccessToken`.|
+|[CAccessToken:: getstatistics](#getstatistics)|Voláním této metody získáte informace spojené s objektem `CAccessToken`.|
+|[CAccessToken::GetTerminalServicesSessionId](#getterminalservicessessionid)|Voláním této metody získáte ID relace Terminálové služby přidružené k objektu `CAccessToken`.|
+|[CAccessToken::GetThreadToken](#getthreadtoken)|Voláním této metody inicializujete `CAccessToken` s tokenem z daného vlákna.|
+|[CAccessToken::GetTokenId](#gettokenid)|Voláním této metody získáte ID tokenu přidruženého k objektu `CAccessToken`.|
+|[CAccessToken:: GetType](#gettype)|Voláním této metody získáte typ tokenu objektu `CAccessToken`.|
+|[CAccessToken:: GetUser](#getuser)|Zavolejte tuto metodu k identifikaci uživatele přidruženého k objektu `CAccessToken`.|
+|[CAccessToken::HKeyCurrentUser](#hkeycurrentuser)|Voláním této metody získáte popisovač odkazující na profil uživatele přidružený k objektu `CAccessToken`.|
+|[CAccessToken:: Impersonate](#impersonate)|Voláním této metody přiřadíte `CAccessToken` k vláknu zosobnění.|
+|[CAccessToken:: ImpersonateLoggedOnUser –](#impersonateloggedonuser)|Zavolejte tuto metodu, pokud chcete volajícímu vláknu dovolit zosobnit kontext zabezpečení přihlášeného uživatele.|
+|[CAccessToken::IsTokenRestricted](#istokenrestricted)|Voláním této metody otestujete, zda objekt `CAccessToken` obsahuje seznam omezených identifikátorů SID.|
+|[CAccessToken:: LoadUserProfile nastavenými](#loaduserprofile)|Voláním této metody načtete profil uživatele přidružený k objektu `CAccessToken`.|
+|[CAccessToken:: LogonUser](#logonuser)|Voláním této metody vytvoříte přihlašovací relaci pro uživatele přidruženého k zadaným přihlašovacím údajům.|
+|[CAccessToken::OpenCOMClientToken](#opencomclienttoken)|Volání této metody ze serveru COM, který zpracovává volání od klienta za účelem inicializace `CAccessToken` pomocí přístupového tokenu z klienta modelu COM.|
+|[CAccessToken::OpenNamedPipeClientToken](#opennamedpipeclienttoken)|Volání této metody ze serveru, který přijímá požadavky přes pojmenovaný kanál k inicializaci `CAccessToken` pomocí přístupového tokenu z klienta.|
+|[CAccessToken::OpenRPCClientToken](#openrpcclienttoken)|Volání této metody ze serveru, který zpracovává volání z klienta RPC pro inicializaci `CAccessToken` pomocí přístupového tokenu z klienta.|
+|[CAccessToken:: OpenThreadToken –](#openthreadtoken)|Voláním této metody nastavíte úroveň zosobnění a poté inicializujete `CAccessToken` s tokenem z daného vlákna.|
+|[CAccessToken::P rivilegeCheck](#privilegecheck)|Voláním této metody určíte, zda je v objektu `CAccessToken` povolena zadaná sada oprávnění.|
 |[CAccessToken:: Revert](#revert)|Voláním této metody zastavíte vlákno, které používá token zosobnění.|
-|[CAccessToken::SetDefaultDacl](#setdefaultdacl)|Voláním této metody nastavíte výchozí seznam DACL `CAccessToken` objektu.|
-|[CAccessToken::SetOwner](#setowner)|Voláním této metody nastavíte vlastníka `CAccessToken` objektu.|
-|[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Voláním této metody nastavte primární skupinu `CAccessToken` objektu.|
+|[CAccessToken::SetDefaultDacl](#setdefaultdacl)|Voláním této metody nastavíte výchozí seznam DACL objektu `CAccessToken`.|
+|[CAccessToken::SetOwner](#setowner)|Voláním této metody nastavíte vlastníka objektu `CAccessToken`.|
+|[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Voláním této metody nastavte primární skupinu objektu `CAccessToken`.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -155,7 +155,7 @@ Popisovač přístupového tokenu.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění dojde k chybě kontrolního výrazu, pokud `CAccessToken` objekt již obsahuje vlastnictví přístupového tokenu.
+V sestavení ladění dojde k chybě kontrolního výrazu, pokud objekt `CAccessToken` již má vlastnictví přístupového tokenu.
 
 ##  <a name="dtor"></a>CAccessToken:: ~ CAccessToken
 
@@ -171,7 +171,7 @@ Uvolní všechny přidělené prostředky.
 
 ##  <a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership
 
-Voláním této metody určíte, zda je v `CAccessToken` objektu povolen zadaný identifikátor SID.
+Voláním této metody určíte, zda je v objektu `CAccessToken` povolen zadaný identifikátor SID.
 
 ```
 bool CheckTokenMembership(
@@ -193,12 +193,12 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CheckTokenMembership` Metoda zkontroluje přítomnost identifikátoru SID v identifikátorech SID uživatelů a skupin přístupového tokenu. Pokud je k dispozici identifikátor SID a má atribut SE_GROUP_ENABLED, je *pbIsMember* nastaven na hodnotu true. v opačném případě je nastaveno na FALSE.
+Metoda `CheckTokenMembership` kontroluje přítomnost identifikátoru SID v identifikátorech SID uživatelů a skupin přístupového tokenu. Pokud je k dispozici identifikátor SID a má atribut SE_GROUP_ENABLED, je *pbIsMember* nastaven na hodnotu true. v opačném případě je nastaveno na FALSE.
 
 V sestavení ladění dojde k chybě kontrolního výrazu, pokud *pbIsMember* není platný ukazatel.
 
 > [!NOTE]
->  `CAccessToken` Objekt musí být token pro zosobnění, nikoli primární token.
+>  Objekt `CAccessToken` musí být tokenem zosobnění, nikoli primárním tokenem.
 
 ##  <a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken
 
@@ -213,7 +213,7 @@ bool CreateImpersonationToken(
 ### <a name="parameters"></a>Parametry
 
 *pImp*<br/>
-Ukazatel na nový `CAccessToken` objekt.
+Ukazatel na nový objekt `CAccessToken`.
 
 *sil*<br/>
 Určuje [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) Výčtový typ, který poskytuje úroveň zosobnění nového tokenu.
@@ -224,7 +224,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateImpersonationToken`volá [volání metody duplicatetoken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) k vytvoření nového tokenu zosobnění.
+`CreateImpersonationToken` volá [volání metody duplicatetoken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) k vytvoření nového tokenu zosobnění.
 
 ##  <a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken
 
@@ -240,10 +240,10 @@ bool CreatePrimaryToken(
 ### <a name="parameters"></a>Parametry
 
 *pPri*<br/>
-Ukazatel na nový `CAccessToken` objekt.
+Ukazatel na nový objekt `CAccessToken`.
 
 *dwDesiredAccess*<br/>
-Určuje požadovaná přístupová práva k novému tokenu. Výchozí MAXIMUM_ALLOWED vyžaduje všechna přístupová práva platná pro daného volajícího. Další informace o přístupových právech najdete v tématu [přístupová práva a masky přístupu](/windows/win32/SecAuthZ/access-rights-and-access-masks) .
+Určuje požadovaná přístupová práva k novému tokenu. Výchozí MAXIMUM_ALLOWED, vyžádá všechna přístupová práva platná pro daného volajícího. Další informace o přístupových právech najdete v tématu [přístupová práva a masky přístupu](/windows/win32/SecAuthZ/access-rights-and-access-masks) .
 
 *pTokenAttributes*<br/>
 Ukazatel na strukturu [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , která určuje popisovač zabezpečení pro nový token a určuje, zda mohou podřízené procesy zdědit token. Pokud má *pTokenAttributes* hodnotu null, token Získá výchozí popisovač zabezpečení a popisovač nelze dědit.
@@ -254,11 +254,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreatePrimaryToken`volá [DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) k vytvoření nového primárního tokenu.
+`CreatePrimaryToken` volá [DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) k vytvoření nového primárního tokenu.
 
 ##  <a name="createprocessasuser"></a>CAccessToken:: CreateProcessAsUser
 
-Zavolejte tuto metodu pro vytvoření nového procesu spuštěného v kontextu zabezpečení uživatele reprezentovaného `CAccessToken` objektem.
+Zavolejte tuto metodu pro vytvoření nového procesu spuštěného v kontextu zabezpečení uživatele reprezentovaného objektem `CAccessToken`.
 
 ```
 bool CreateProcessAsUser(
@@ -312,13 +312,13 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateProcessAsUser`pomocí funkce `CAccessToken` Win32 vytvoří nový proces, který běží v kontextu zabezpečení uživatele reprezentovaného objektem. `CreateProcessAsUser` Úplnou diskuzi o požadovaných parametrech najdete v popisu funkce [CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) .
+`CreateProcessAsUser` používá funkci `CreateProcessAsUser` Win32 k vytvoření nového procesu, který je spuštěn v kontextu zabezpečení uživatele reprezentovaného objektem `CAccessToken`. Úplnou diskuzi o požadovaných parametrech najdete v popisu funkce [CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) .
 
-Aby tato metoda byla úspěšná, `CAccessToken` objekt musí obsahovat AssignPrimaryToken (Pokud se nejedná o omezený token) a oprávnění IncreaseQuota.
+Aby byla tato metoda úspěšná, musí objekt `CAccessToken` obsahovat AssignPrimaryToken (Pokud se nejedná o omezený token) a oprávnění IncreaseQuota.
 
 ##  <a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken
 
-Zavolejte tuto metodu pro vytvoření nového, omezeného `CAccessToken` objektu.
+Voláním této metody vytvoříte nový objekt s omezením `CAccessToken`.
 
 ```
 bool CreateRestrictedToken(
@@ -331,16 +331,16 @@ bool CreateRestrictedToken(
 ### <a name="parameters"></a>Parametry
 
 *pRestrictedToken*<br/>
-Nový objekt s omezením `CAccessToken` .
+Nový objekt s omezením `CAccessToken`.
 
 *SidsToDisable*<br/>
-`CTokenGroups` Objekt, který určuje identifikátory SID jen pro zamítnutí.
+Objekt `CTokenGroups`, který určuje identifikátory SID jen pro zamítnutí.
 
 *SidsToRestrict*<br/>
-`CTokenGroups` Objekt, který určuje omezení počtu identifikátorů SID.
+Objekt `CTokenGroups`, který určuje omezení počtu identifikátorů SID.
 
 *PrivilegesToDelete*<br/>
-`CTokenPrivileges` Objekt, který určuje oprávnění, která se mají odstranit v omezeném tokenu. Výchozí hodnota vytvoří prázdný objekt.
+Objekt `CTokenPrivileges`, který určuje oprávnění, která se mají odstranit v omezeném tokenu. Výchozí hodnota vytvoří prázdný objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -348,10 +348,10 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateRestrictedToken`pomocí funkce [CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 vytvoří nový `CAccessToken` objekt s omezeními.
+`CreateRestrictedToken` pomocí funkce Win32 [CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) vytvořit nový objekt `CAccessToken` s omezeními.
 
 > [!IMPORTANT]
->  Při použití `CreateRestrictedToken`nástroje zajistěte následující: existující token je platný (a nezadáte ho uživatelem) a *SidsToDisable* a *PrivilegesToDelete* jsou platné (a nezadal uživatel). Pokud metoda vrátí hodnotu FALSE, funkce odepřít.
+>  Při použití `CreateRestrictedToken`zajistěte následující: existující token je platný (a nezadáte ho uživatelem) a parametry *SidsToDisable* a *PrivilegesToDelete* jsou platné (a nezadal uživatel). Pokud metoda vrátí hodnotu FALSE, funkce odepřít.
 
 ##  <a name="detach"></a>CAccessToken::D etach
 
@@ -363,15 +363,15 @@ HANDLE Detach() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač `CAccessToken` , který byl odpojen.
+Vrátí popisovač pro `CAccessToken`, který byl odpojen.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odvolá `CAccessToken`vlastnictví přístupového tokenu.
+Tato metoda odvolá vlastnictví přístupového tokenu `CAccessToken`.
 
 ##  <a name="disableprivilege"></a>CAccessToken::D isablePrivilege
 
-Voláním této metody zakážete oprávnění v `CAccessToken` objektu.
+Voláním této metody zakážete oprávnění v objektu `CAccessToken`.
 
 ```
 bool DisablePrivilege(
@@ -382,10 +382,10 @@ bool DisablePrivilege(
 ### <a name="parameters"></a>Parametry
 
 *pszPrivilege*<br/>
-Ukazatel na řetězec obsahující oprávnění, které má být zakázáno v `CAccessToken` objektu.
+Ukazatel na řetězec obsahující oprávnění, které má být zakázáno v objektu `CAccessToken`.
 
 *pPreviousState*<br/>
-Ukazatel na `CTokenPrivileges` objekt, který bude obsahovat předchozí stav oprávnění.
+Ukazatel na objekt `CTokenPrivileges`, který bude obsahovat předchozí stav oprávnění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -393,7 +393,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="disableprivileges"></a>CAccessToken::D isablePrivileges
 
-Voláním této metody zakážete jedno nebo více oprávnění v `CAccessToken` objektu.
+Voláním této metody zakážete jedno nebo více oprávnění v objektu `CAccessToken`.
 
 ```
 bool DisablePrivileges(
@@ -404,10 +404,10 @@ bool DisablePrivileges(
 ### <a name="parameters"></a>Parametry
 
 *rPrivileges*<br/>
-Ukazatel na pole řetězců obsahující oprávnění, která mají být v `CAccessToken` objektu zakázána.
+Ukazatel na pole řetězců obsahující oprávnění, která mají být zakázána v objektu `CAccessToken`.
 
 *pPreviousState*<br/>
-Ukazatel na `CTokenPrivileges` objekt, který bude obsahovat předchozí stav oprávnění.
+Ukazatel na objekt `CTokenPrivileges`, který bude obsahovat předchozí stav oprávnění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -415,7 +415,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="enableprivilege"></a>CAccessToken::EnablePrivilege
 
-Voláním této metody povolíte oprávnění v `CAccessToken` objektu.
+Voláním této metody povolíte oprávnění v objektu `CAccessToken`.
 
 ```
 bool EnablePrivilege(
@@ -426,10 +426,10 @@ bool EnablePrivilege(
 ### <a name="parameters"></a>Parametry
 
 *pszPrivilege*<br/>
-Ukazatel na řetězec obsahující oprávnění pro povolení v `CAccessToken` objektu.
+Ukazatel na řetězec obsahující oprávnění pro povolení v objektu `CAccessToken`.
 
 *pPreviousState*<br/>
-Ukazatel na `CTokenPrivileges` objekt, který bude obsahovat předchozí stav oprávnění.
+Ukazatel na objekt `CTokenPrivileges`, který bude obsahovat předchozí stav oprávnění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -437,7 +437,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="enableprivileges"></a>CAccessToken::EnablePrivileges
 
-Voláním této metody povolíte v `CAccessToken` objektu jedno nebo více oprávnění.
+Voláním této metody povolíte jedno nebo více oprávnění v objektu `CAccessToken`.
 
 ```
 bool EnablePrivileges(
@@ -448,10 +448,10 @@ bool EnablePrivileges(
 ### <a name="parameters"></a>Parametry
 
 *rPrivileges*<br/>
-Ukazatel na pole řetězců obsahující oprávnění, která mají být v `CAccessToken` objektu povolena.
+Ukazatel na pole řetězců obsahující oprávnění, která lze povolit v objektu `CAccessToken`.
 
 *pPreviousState*<br/>
-Ukazatel na `CTokenPrivileges` objekt, který bude obsahovat předchozí stav oprávnění.
+Ukazatel na objekt `CTokenPrivileges`, který bude obsahovat předchozí stav oprávnění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -459,7 +459,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl
 
-Voláním této metody vrátíte `CAccessToken` výchozí seznam DACL objektu.
+Voláním této metody vrátíte výchozí seznam DACL objektu `CAccessToken`.
 
 ```
 bool GetDefaultDacl(CDacl* pDacl) const throw(...);
@@ -468,7 +468,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pDacl*<br/>
-Ukazatel na objekt [třídy CDacl](../../atl/reference/cdacl-class.md) , který `CAccessToken` Získá výchozí seznam DACL objektu.
+Ukazatel na objekt [třídy CDacl](../../atl/reference/cdacl-class.md) , který získá výchozí seznam DACL objektu `CAccessToken`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -476,7 +476,7 @@ Vrátí hodnotu pravda, pokud byl výchozí seznam DACL obnoven, jinak FALSE.
 
 ##  <a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken
 
-Zavolejte tuto metodu pro získání `CAccessToken` objektu, který se rovná přístupovému tokenu v platném pro aktuální vlákno.
+Voláním této metody získá objekt `CAccessToken`, který se rovná přístupovému tokenu v platnosti pro aktuální vlákno.
 
 ```
 bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
@@ -493,7 +493,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="getgroups"></a>CAccessToken:: GetGroups
 
-Voláním této metody vrátíte `CAccessToken` skupiny tokenů objektu.
+Voláním této metody vrátíte skupiny tokenů `CAccessToken` objektu.
 
 ```
 bool GetGroups(CTokenGroups* pGroups) const throw(...);
@@ -518,7 +518,7 @@ HANDLE GetHandle() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač `CAccessToken` přístupového tokenu objektu.
+Vrátí popisovač přístupového tokenu objektu `CAccessToken`.
 
 ##  <a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel
 
@@ -540,7 +540,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId
 
-Voláním této metody získáte ID přihlašovací relace přidružené `CAccessToken` k objektu.
+Voláním této metody získáte ID přihlašovací relace přidružené k objektu `CAccessToken`.
 
 ```
 bool GetLogonSessionId(LUID* pluid) const throw(...);
@@ -561,7 +561,7 @@ V sestavení ladění dojde k chybě kontrolního výrazu, pokud *pluid* je nepl
 
 ##  <a name="getlogonsid"></a>CAccessToken::GetLogonSid
 
-Voláním této metody získáme přihlašovací identifikátor SID přidružený `CAccessToken` k objektu.
+Voláním této metody získáme přihlašovací identifikátor SID přidružený k objektu `CAccessToken`.
 
 ```
 bool GetLogonSid(CSid* pSid) const throw(...);
@@ -569,7 +569,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*<br/>
+*PSID má*<br/>
 Ukazatel na objekt [třídy CSID](../../atl/reference/csid-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -582,7 +582,7 @@ V sestavení ladění dojde k chybě kontrolního výrazu, pokud *PSID má* je n
 
 ##  <a name="getowner"></a>CAccessToken:: GetOwner
 
-Voláním této metody získáte vlastníka přidruženého `CAccessToken` k objektu.
+Voláním této metody získáte vlastníka přidruženého k objektu `CAccessToken`.
 
 ```
 bool GetOwner(CSid* pSid) const throw(...);
@@ -590,7 +590,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*<br/>
+*PSID má*<br/>
 Ukazatel na objekt [třídy CSID](../../atl/reference/csid-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -603,7 +603,7 @@ Ve výchozím nastavení se vlastník nastavuje u všech objektů vytvořených 
 
 ##  <a name="getprimarygroup"></a>CAccessToken:: getprimary
 
-Voláním této metody získáte primární skupinu přidruženou `CAccessToken` k objektu.
+Voláním této metody získáte primární skupinu přidruženou k objektu `CAccessToken`.
 
 ```
 bool GetPrimaryGroup(CSid* pSid) const throw(...);
@@ -611,7 +611,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*<br/>
+*PSID má*<br/>
 Ukazatel na objekt [třídy CSID](../../atl/reference/csid-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -624,7 +624,7 @@ Skupina je standardně nastavená na všech objektech vytvořených v době, kdy
 
 ##  <a name="getprivileges"></a>CAccessToken:: getprivileges
 
-Voláním této metody získáte oprávnění přidružená `CAccessToken` k objektu.
+Voláním této metody získáte oprávnění spojená s objektem `CAccessToken`.
 
 ```
 bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
@@ -665,7 +665,7 @@ Zavolá funkci [OpenProcessToken](/windows/win32/api/processthreadsapi/nf-proces
 
 ##  <a name="getprofile"></a>CAccessToken:: GetProfile
 
-Voláním této metody získáte popisovač odkazující na profil uživatele přidružený `CAccessToken` k objektu.
+Voláním této metody získáte popisovač odkazující na profil uživatele přidružený k objektu `CAccessToken`.
 
 ```
 HANDLE GetProfile() const throw();
@@ -677,7 +677,7 @@ Vrátí popisovač ukazující na profil uživatele nebo hodnotu NULL, pokud ž�
 
 ##  <a name="getsource"></a>CAccessToken:: GetSource
 
-Voláním této metody načtete zdroj `CAccessToken` objektu.
+Voláním této metody načtete zdroj objektu `CAccessToken`.
 
 ```
 bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
@@ -694,7 +694,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="getstatistics"></a>CAccessToken:: getstatistics
 
-Voláním této metody získáte informace spojené s `CAccessToken` objektem.
+Voláním této metody získáte informace spojené s objektem `CAccessToken`.
 
 ```
 bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
@@ -711,7 +711,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionId
 
-Voláním této metody získáte ID relace Terminálové služby přidružené k danému `CAccessToken` objektu.
+Voláním této metody získáte ID relace Terminálové služby přidružené k objektu `CAccessToken`.
 
 ```
 bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
@@ -728,7 +728,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="getthreadtoken"></a>CAccessToken::GetThreadToken
 
-Zavolejte tuto metodu pro inicializaci `CAccessToken` s tokenem z daného vlákna.
+Voláním této metody inicializujete `CAccessToken` s tokenem z daného vlákna.
 
 ```
 bool GetThreadToken(
@@ -746,7 +746,7 @@ Určuje masku přístupu, která určuje požadované typy přístupu k přístu
 Zpracování vlákna, u kterého je otevřen přístupový token.
 
 *bOpenAsSelf*<br/>
-Označuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá `GetThreadToken` metodu, nebo proti kontextu zabezpečení procesu volajícího vlákna.
+Určuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá metodu `GetThreadToken` nebo proti kontextu zabezpečení procesu volajícího vlákna.
 
 Pokud má tento parametr hodnotu FALSE, kontroly přístupu se provádí pomocí kontextu zabezpečení volajícího vlákna. Pokud vlákno zosobňuje klienta, může to být tento kontext zabezpečení klientským procesem. Je-li tento parametr TRUE, je provedena kontroly přístupu pomocí kontextu zabezpečení procesu pro volající vlákno.
 
@@ -756,7 +756,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="gettokenid"></a>CAccessToken::GetTokenId
 
-Voláním této metody získáte ID tokenu přidruženého `CAccessToken` k objektu.
+Voláním této metody získáte ID tokenu přidruženého k objektu `CAccessToken`.
 
 ```
 bool GetTokenId(LUID* pluid) const throw(...);
@@ -773,7 +773,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="gettype"></a>CAccessToken:: GetType
 
-Voláním této metody získáte typ `CAccessToken` tokenu objektu.
+Voláním této metody získáte typ tokenu objektu `CAccessToken`.
 
 ```
 bool GetType(TOKEN_TYPE* pType) const throw(...);
@@ -782,7 +782,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pType*<br/>
-Adresa proměnné [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type) , která po úspěchu obdrží typ tokenu.
+Adresa [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type) proměnné, která po úspěchu obdrží typ tokenu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -794,7 +794,7 @@ Typ výčtu TOKEN_TYPE obsahuje hodnoty, které rozlišují primární token a t
 
 ##  <a name="getuser"></a>CAccessToken:: GetUser
 
-Zavolejte tuto metodu k identifikaci uživatele přidruženého `CAccessToken` k objektu.
+Zavolejte tuto metodu k identifikaci uživatele přidruženého k objektu `CAccessToken`.
 
 ```
 bool GetUser(CSid* pSid) const throw(...);
@@ -802,7 +802,7 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*<br/>
+*PSID má*<br/>
 Ukazatel na objekt [třídy CSID](../../atl/reference/csid-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -811,7 +811,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser
 
-Voláním této metody získáte popisovač odkazující na profil uživatele přidružený `CAccessToken` k objektu.
+Voláním této metody získáte popisovač odkazující na profil uživatele přidružený k objektu `CAccessToken`.
 
 ```
 HKEY HKeyCurrentUser() const throw();
@@ -823,7 +823,7 @@ Vrátí popisovač ukazující na profil uživatele nebo hodnotu NULL, pokud ž�
 
 ##  <a name="impersonate"></a>CAccessToken:: Impersonate
 
-Voláním této metody přiřadíte zosobnění `CAccessToken` k vláknu.
+Voláním této metody přiřadíte `CAccessToken` k vláknu zosobnění.
 
 ```
 bool Impersonate(HANDLE hThread = NULL) const throw(...);
@@ -832,7 +832,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *hThread*<br/>
-Zpracujte vlákno, kterému chcete přiřadit token zosobnění. Tento popisovač se musí otevřít s přístupovými právy TOKEN_IMPERSONATE. Pokud má *hThread* hodnotu null, metoda způsobí, že vlákno přestane používat token zosobnění.
+Zpracujte vlákno, kterému chcete přiřadit token zosobnění. Tento popisovač musí být otevřený s přístupovými právy TOKEN_IMPERSONATE. Pokud má *hThread* hodnotu null, metoda způsobí, že vlákno přestane používat token zosobnění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -840,11 +840,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění dojde k chybě kontrolního výrazu, `CAccessToken` Pokud nemá platný ukazatel na token.
+V sestavení ladění dojde k chybě kontrolního výrazu, pokud `CAccessToken` nemá platný ukazatel na token.
 
 [Třída CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) se dá použít k automatickému vrácení zosobněných přístupových tokenů.
 
-##  <a name="impersonateloggedonuser"></a>  CAccessToken::ImpersonateLoggedOnUser
+##  <a name="impersonateloggedonuser"></a>CAccessToken:: ImpersonateLoggedOnUser –
 
 Zavolejte tuto metodu, pokud chcete volajícímu vláknu dovolit zosobnit kontext zabezpečení přihlášeného uživatele.
 
@@ -863,7 +863,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted
 
-Voláním této metody otestujete, `CAccessToken` zda objekt obsahuje seznam omezených identifikátorů SID.
+Voláním této metody otestujete, zda objekt `CAccessToken` obsahuje seznam omezených identifikátorů SID.
 
 ```
 bool IsTokenRestricted() const throw();
@@ -875,7 +875,7 @@ Vrátí hodnotu TRUE, pokud objekt obsahuje seznam omezení SID, FALSE, pokud ne
 
 ##  <a name="loaduserprofile"></a>CAccessToken:: LoadUserProfile nastavenými
 
-Voláním této metody načtete profil uživatele přidružený `CAccessToken` k objektu.
+Voláním této metody načtete profil uživatele přidružený k objektu `CAccessToken`.
 
 ```
 bool LoadUserProfile() throw(...);
@@ -887,7 +887,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění dojde k chybě kontrolního výrazu, pokud `CAccessToken` neobsahuje platný token, nebo pokud profil uživatele již existuje.
+Při ladění sestavení dojde k chybě kontrolního výrazu, pokud `CAccessToken` neobsahuje platný token, nebo pokud profil uživatele již existuje.
 
 ##  <a name="logonuser"></a>CAccessToken:: LogonUser
 
@@ -925,11 +925,11 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Přístupový token, který je výsledkem přihlášení, bude přidružen `CAccessToken`k. Aby tato metoda byla `CAccessToken` úspěšná, musí objekt obsahovat oprávnění SE_TCB_NAME a identifikovat držitele jako součást základu důvěryhodného počítače. Další informace o požadovaných oprávněních naleznete v tématu [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
+Přístupový token, který je výsledkem přihlášení, bude přidružen k `CAccessToken`. Aby byla tato metoda úspěšná, musí objekt `CAccessToken` držet SE_TCB_NAME oprávnění a identifikovat držitele jako součást základu důvěryhodného počítače. Další informace o požadovaných oprávněních naleznete v tématu [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
 
 ##  <a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken
 
-Volání této metody ze serveru com, který zpracovává volání od klienta za účelem inicializace `CAccessToken` přístupového tokenu z klienta modelu COM.
+Volání této metody ze serveru COM, který zpracovává volání od klienta za účelem inicializace `CAccessToken` pomocí přístupového tokenu z klienta modelu COM.
 
 ```
 bool OpenCOMClientToken(
@@ -961,7 +961,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken
 
-Volání této metody ze serveru, který přijímá požadavky přes pojmenovaný kanál k inicializaci `CAccessToken` s přístupovým tokenem z klienta.
+Volání této metody ze serveru, který přijímá požadavky přes pojmenovaný kanál k inicializaci `CAccessToken` pomocí přístupového tokenu z klienta.
 
 ```
 bool OpenNamedPipeClientToken(
@@ -997,7 +997,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken
 
-Voláním této metody ze serveru, který zpracovává volání z klienta RPC pro inicializaci `CAccessToken` s přístupovým tokenem z klienta.
+Volání této metody ze serveru, který zpracovává volání z klienta RPC pro inicializaci `CAccessToken` pomocí přístupového tokenu z klienta.
 
 ```
 bool OpenRPCClientToken(
@@ -1033,7 +1033,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ##  <a name="openthreadtoken"></a>CAccessToken:: OpenThreadToken –
 
-Voláním této metody nastavíte úroveň zosobnění a potom inicializujete `CAccessToken` token z daného vlákna.
+Voláním této metody nastavíte úroveň zosobnění a poté inicializujete `CAccessToken` s tokenem z daného vlákna.
 
 ```
 bool OpenThreadToken(
@@ -1065,13 +1065,13 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`OpenThreadToken`je podobný jako [CAccessToken:: GetThreadToken](#getthreadtoken), ale nastaví úroveň zosobnění před inicializací `CAccessToken` z přístupového tokenu vlákna.
+`OpenThreadToken` je podobná [CAccessToken:: GetThreadToken](#getthreadtoken), ale nastaví úroveň zosobnění před inicializací `CAccessToken` z přístupového tokenu vlákna.
 
 [Třída CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) se dá použít k automatickému vrácení zosobněných přístupových tokenů vytvořených nastavením příznaku *bImpersonate* na hodnotu true.
 
 ##  <a name="privilegecheck"></a>CAccessToken::P rivilegeCheck
 
-Voláním této metody určíte, zda je v `CAccessToken` objektu povolena zadaná sada oprávnění.
+Voláním této metody určíte, zda je v objektu `CAccessToken` povolena zadaná sada oprávnění.
 
 ```
 bool PrivilegeCheck(
@@ -1085,7 +1085,7 @@ bool PrivilegeCheck(
 Ukazatel na strukturu [PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set) .
 
 *pbResult*<br/>
-Ukazatel na hodnotu, kterou metody nastaví, aby označoval, zda jsou v `CAccessToken` objektu povoleny některá nebo všechna zadaná oprávnění.
+Ukazatel na hodnotu, kterou metoda nastavuje, aby označovala, zda jsou v objektu `CAccessToken` povoleny některá nebo všechna zadaná oprávnění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1093,7 +1093,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `PrivilegeCheck` se vrátí `Attributes` , člen každé struktury [LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes) se nastaví na SE_PRIVILEGE_USED_FOR_ACCESS, pokud je povolené příslušné oprávnění. Tato metoda volá funkci [PrivilegeCheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32.
+Když `PrivilegeCheck` vrátí, je `Attributes` člen každé struktury [LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes) nastaven na SE_PRIVILEGE_USED_FOR_ACCESS, pokud je povolené příslušné oprávnění. Tato metoda volá funkci [PrivilegeCheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32.
 
 ##  <a name="revert"></a>CAccessToken:: Revert
 
@@ -1118,7 +1118,7 @@ Reverze tokenů zosobnění se dá provést automaticky pomocí [třídy CAutoRe
 
 ##  <a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl
 
-Voláním této metody nastavíte výchozí seznam DACL `CAccessToken` objektu.
+Voláním této metody nastavíte výchozí seznam DACL objektu `CAccessToken`.
 
 ```
 bool SetDefaultDacl(const CDacl& rDacl) throw(...);
@@ -1139,7 +1139,7 @@ Výchozím seznamem DACL je seznam DACL, který se ve výchozím nastavení pou�
 
 ##  <a name="setowner"></a>CAccessToken::SetOwner
 
-Voláním této metody nastavíte vlastníka `CAccessToken` objektu.
+Voláním této metody nastavíte vlastníka objektu `CAccessToken`.
 
 ```
 bool SetOwner(const CSid& rSid) throw(...);
@@ -1160,7 +1160,7 @@ Vlastníkem je výchozí vlastník, který se používá pro nové objekty vytvo
 
 ##  <a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup
 
-Voláním této metody nastavte primární skupinu `CAccessToken` objektu.
+Voláním této metody nastavte primární skupinu objektu `CAccessToken`.
 
 ```
 bool SetPrimaryGroup(const CSid& rSid) throw(...);
@@ -1179,7 +1179,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Primární skupina je výchozí skupina pro nové objekty vytvořené v době, kdy je tento přístupový token platný.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ukázka ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Přístupové tokeny](/windows/win32/SecAuthZ/access-tokens)<br/>

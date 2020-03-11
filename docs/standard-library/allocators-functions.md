@@ -1,5 +1,5 @@
 ---
-title: makra &lt;allocators &gt;
+title: '&lt;přidělování&gt; maker'
 ms.date: 11/04/2016
 f1_keywords:
 - allocators/std::ALLOCATOR_DECL
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
 ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690057"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875920"
 ---
-# <a name="ltallocatorsgt-macros"></a>makra &lt;allocators &gt;
+# <a name="ltallocatorsgt-macros"></a>&lt;přidělování&gt; maker
 
 ||||
 |-|-|-|
@@ -110,6 +110,6 @@ Vypočítá filtr synchronizace.
 
 Pokud kompilátor podporuje kompilování vícevláknové i vícevláknové aplikace, pro aplikace s jedním vláknem, které makro vrací `stdext::allocators::sync_none`; ve všech ostatních případech poskytuje `stdext::allocators::sync_shared`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<allocators >](../standard-library/allocators-header.md)
+[\<přidělování >](../standard-library/allocators-header.md)

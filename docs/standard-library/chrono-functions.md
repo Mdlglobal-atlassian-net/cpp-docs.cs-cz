@@ -1,22 +1,22 @@
 ---
-title: '&lt;chrono&gt; funkce'
+title: funkce &lt;Chrono&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::duration_cast
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244909"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865193"
 ---
-# <a name="ltchronogt-functions"></a>&lt;chrono&gt; funkce
+# <a name="ltchronogt-functions"></a>funkce &lt;Chrono&gt;
 
-## <a name="duration_cast"></a> duration_cast –
+## <a name="duration_cast"></a>duration_cast
 
-Přetypování `duration` objekt zadaného typu.
+Přetypování `duration` objektu na zadaný typ.
 
 ```cpp
 template <class To, class Rep, class Period>
@@ -32,15 +32,15 @@ constexpr ToDuration round(const duration<Rep, Period>& d);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `duration` objekt typu `To` , který představuje časový interval `Dur`, který je zkrácen, pokud je nutné umístit do cílového typu.
+Objekt `duration` typu `To`, který představuje `Dur`časového intervalu, který je zkrácen, pokud se musí vejít do cílového typu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `To` je instance `duration`, tato funkce není součástí řešení přetížení.
+Pokud je `To` instance `duration`, tato funkce není součástí řešení přetížení.
 
-## <a name="time_point_cast"></a> time_point_cast –
+## <a name="time_point_cast"></a>time_point_cast
 
-Přetypování [time_point](../standard-library/time-point-class.md) objekt zadaného typu.
+Přetypování [time_point](../standard-library/time-point-class.md) objektu na zadaný typ.
 
 ```cpp
 template <class To, class Clock, class Duration>
@@ -59,8 +59,8 @@ round(const time_point<Clock, Duration>& tp);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `time_point` objekt, který má dobu trvání typu `To`.
+Objekt `time_point`, který má dobu trvání typu `To`.
 
 ### <a name="remarks"></a>Poznámky
 
-Není-li `To` je instance [doba trvání](../standard-library/duration-class.md), tato funkce není součástí řešení přetížení.
+Pokud `To` není instancí [Trvání](../standard-library/duration-class.md), tato funkce není součástí řešení přetížení.

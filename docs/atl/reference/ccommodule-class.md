@@ -32,15 +32,15 @@ helpviewer_keywords:
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
 ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630649"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863173"
 ---
 # <a name="ccommodule-class"></a>CComModule – třída
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 > [!IMPORTANT]
 >  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
@@ -55,45 +55,45 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CComModule:: GetClassObject –](#getclassobject)|Vytvoří objekt zadaného objektu CLSID. Pouze pro knihovny DLL.|
-|[CComModule:: GetModuleInstance](#getmoduleinstance)|Vrátí `m_hInst`.|
-|[CComModule:: GetResourceInstance](#getresourceinstance)|Vrátí `m_hInstResource`.|
-|[CComModule::GetTypeLibInstance](#gettypelibinstance)|Vrátí `m_hInstTypeLib`.|
+|[CComModule:: GetModuleInstance](#getmoduleinstance)|Vrací objekt `m_hInst`.|
+|[CComModule:: GetResourceInstance](#getresourceinstance)|Vrací objekt `m_hInstResource`.|
+|[CComModule:: GetTypeLibInstance](#gettypelibinstance)|Vrací objekt `m_hInstTypeLib`.|
 |[CComModule:: init](#init)|Inicializuje datové členy.|
 |[CComModule:: RegisterClassHelper](#registerclasshelper)|Zadá do systémového registru registraci standardní třídy objektu.|
 |[CComModule:: RegisterClassObjects](#registerclassobjects)|Zaregistruje objekt třídy. Jenom pro exe.|
-|[CComModule::RegisterServer](#registerserver)|Aktualizuje systémový registr pro každý objekt v mapě objektů.|
-|[CComModule::RegisterTypeLib](#registertypelib)|Zaregistruje knihovnu typů.|
+|[CComModule:: RegisterServer](#registerserver)|Aktualizuje systémový registr pro každý objekt v mapě objektů.|
+|[CComModule:: RegisterTypeLib](#registertypelib)|Zaregistruje knihovnu typů.|
 |[CComModule:: RevokeClassObjects](#revokeclassobjects)|Odvolá objekt třídy. Jenom pro exe.|
 |[CComModule:: Term](#term)|Uvolňuje datové členy.|
 |[CComModule:: UnregisterClassHelper](#unregisterclasshelper)|Odebere registraci standardní třídy objektu ze systémového registru.|
-|[CComModule::UnregisterServer](#unregisterserver)|Zruší registraci každého objektu v mapě objektů.|
-|[CComModule::UpdateRegistryClass](#updateregistryclass)|Registruje nebo zruší registraci standardní třídy objektu.|
-|[CComModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu.|
-|[CComModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Staticky propojí komponentu registru ATL. Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu.|
+|[CComModule:: UnregisterServer](#unregisterserver)|Zruší registraci každého objektu v mapě objektů.|
+|[CComModule:: UpdateRegistryClass](#updateregistryclass)|Registruje nebo zruší registraci standardní třídy objektu.|
+|[CComModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)|Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu.|
+|[CComModule:: UpdateRegistryFromResourceS](#updateregistryfromresources)|Staticky propojí komponentu registru ATL. Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CComModule::m_csObjMap](#m_csobjmap)|Zajišťuje synchronizovaný přístup k informacím o mapě objektů.|
-|[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|Zajišťuje synchronizovaný přístup k informacím o knihovně typů.|
-|[CComModule::m_csWindowCreate](#m_cswindowcreate)|Zajišťuje synchronizovaný přístup k informacím o třídě okna a ke statickým datům použitým během vytváření okna.|
-|[CComModule::m_hInst](#m_hinst)|Obsahuje popisovač instance modulu.|
-|[CComModule::m_hInstResource](#m_hinstresource)|Ve výchozím nastavení obsahuje popisovač instance modulu.|
-|[CComModule::m_hInstTypeLib](#m_hinsttypelib)|Ve výchozím nastavení obsahuje popisovač instance modulu.|
-|[CComModule::m_pObjMap](#m_pobjmap)|Odkazuje na mapu objektů udržované instancí modulu.|
+|[CComModule:: m_csObjMap](#m_csobjmap)|Zajišťuje synchronizovaný přístup k informacím o mapě objektů.|
+|[CComModule:: m_csTypeInfoHolder](#m_cstypeinfoholder)|Zajišťuje synchronizovaný přístup k informacím o knihovně typů.|
+|[CComModule:: m_csWindowCreate](#m_cswindowcreate)|Zajišťuje synchronizovaný přístup k informacím o třídě okna a ke statickým datům použitým během vytváření okna.|
+|[CComModule:: m_hInst](#m_hinst)|Obsahuje popisovač instance modulu.|
+|[CComModule:: m_hInstResource](#m_hinstresource)|Ve výchozím nastavení obsahuje popisovač instance modulu.|
+|[CComModule:: m_hInstTypeLib](#m_hinsttypelib)|Ve výchozím nastavení obsahuje popisovač instance modulu.|
+|[CComModule:: m_pObjMap](#m_pobjmap)|Odkazuje na mapu objektů udržované instancí modulu.|
 
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Tato třída je zastaralá a Průvodce generováním kódu ATL teď používá odvozené třídy [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) a [CAtlModule](../../atl/reference/catlmodule-class.md) . Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) . Níže uvedené informace jsou pro použití s aplikacemi vytvořenými staršími verzemi knihovny ATL. `CComModule`je stále součástí knihovny ATL pro funkci zpětného vyhledávání.
+>  Tato třída je zastaralá a Průvodce generováním kódu ATL teď používá odvozené třídy [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) a [CAtlModule](../../atl/reference/catlmodule-class.md) . Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) . Níže uvedené informace jsou pro použití s aplikacemi vytvořenými staršími verzemi knihovny ATL. `CComModule` je stále součástí knihovny ATL pro funkci zpětného navýšení.
 
-`CComModule`implementuje modul COM serveru a umožňuje klientovi přístup k součástem modulu. `CComModule`podporuje jak knihovny DLL (in-proces), tak i EXE (místní) moduly.
+`CComModule` implementuje modul COM Server a umožňuje klientovi přístup k komponentám modulu. `CComModule` podporuje jak knihovny DLL (in-proces), tak i EXE (místní) moduly.
 
-`CComModule` Instance používá mapu objektů k údržbě sady definic objektů třídy. Toto mapování objektů je implementováno jako pole `_ATL_OBJMAP_ENTRY` struktur a obsahuje informace pro:
+Instance `CComModule` používá mapu objektů k údržbě sady definic objektů třídy. Tato mapa objektu je implementována jako pole struktur `_ATL_OBJMAP_ENTRY` a obsahuje informace pro:
 
 - Zadávání a odebírání popisů objektů v systémovém registru.
 
@@ -103,9 +103,9 @@ class CComModule : public _ATL_MODULE
 
 - Provádění správy životnosti objektů třídy.
 
-Když spustíte AppWizard ATL com, průvodce automaticky vygeneruje `_Module`, globální `CComModule` instanci nebo třídu odvozenou z ní. Další informace o Průvodci projektem ATL naleznete v článku [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md).
+Když spustíte AppWizard ATL COM, průvodce automaticky vygeneruje `_Module`, globální instanci `CComModule` nebo třídu odvozenou z ní. Další informace o Průvodci projektem ATL naleznete v článku [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md).
 
-Kromě `CComModule`toho ATL poskytuje [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), který implementuje modul modelu apartment pro exe a služby systému Windows. Odvodit modul z `CComAutoThreadModule` , pokud chcete vytvořit objekty ve více objektech Apartment.
+Kromě `CComModule`ATL poskytuje [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), který implementuje modul modelu apartment pro exe a služby systému Windows. Odvodit modul z `CComAutoThreadModule`, pokud chcete vytvořit objekty ve více objektech Apartment.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -123,7 +123,7 @@ Kromě `CComModule`toho ATL poskytuje [CComAutoThreadModule](../../atl/reference
 
 ##  <a name="getclassobject"></a>CComModule:: GetClassObject –
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT GetClassObject(
@@ -151,11 +151,11 @@ Standardní hodnota HRESULT.
 
 Vytvoří objekt zadaného identifikátoru CLSID a načte ukazatel rozhraní na tento objekt.
 
-`GetClassObject`je k dispozici pouze pro knihovny DLL.
+`GetClassObject` je k dispozici pouze pro knihovny DLL.
 
 ##  <a name="getmoduleinstance"></a>CComModule:: GetModuleInstance
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE GetModuleInstance() throw();
@@ -171,7 +171,7 @@ Vrátí datový člen [m_hInst](#m_hinst) .
 
 ##  <a name="getresourceinstance"></a>CComModule:: GetResourceInstance
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE GetResourceInstance() throw();
@@ -187,7 +187,7 @@ Vrátí datový člen [m_hInstResource](#m_hinstresource) .
 
 ##  <a name="gettypelibinstance"></a>CComModule:: GetTypeLibInstance
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE GetTypeLibInstance() const throw();
@@ -203,7 +203,7 @@ Vrátí datový člen [m_hInstTypeLib](#m_hinsttypelib) .
 
 ##  <a name="init"></a>CComModule:: init
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT Init(
@@ -214,10 +214,10 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
+*trub*<br/>
 pro Ukazatel na pole položek mapy objektů.
 
-*h*<br/>
+*y*<br/>
 pro HINSTANCE předaný do `DLLMain` nebo `WinMain`.
 
 *plibid*<br/>
@@ -231,9 +231,9 @@ Standardní hodnota HRESULT.
 
 Inicializuje všechny datové členy.
 
-##  <a name="m_csobjmap"></a>  CComModule::m_csObjMap
+##  <a name="m_csobjmap"></a>CComModule:: m_csObjMap
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 CRITICAL_SECTION m_csObjMap;
@@ -243,9 +243,9 @@ CRITICAL_SECTION m_csObjMap;
 
 Zajišťuje synchronizovaný přístup k mapě objektů.
 
-##  <a name="m_cstypeinfoholder"></a>  CComModule::m_csTypeInfoHolder
+##  <a name="m_cstypeinfoholder"></a>CComModule:: m_csTypeInfoHolder
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 CRITICAL_SECTION m_csTypeInfoHolder;
@@ -255,9 +255,9 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 
 Zajišťuje synchronizovaný přístup k knihovně typů.
 
-##  <a name="m_cswindowcreate"></a>  CComModule::m_csWindowCreate
+##  <a name="m_cswindowcreate"></a>CComModule:: m_csWindowCreate
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 CRITICAL_SECTION m_csWindowCreate;
@@ -269,7 +269,7 @@ Zajišťuje synchronizovaný přístup k informacím o třídě okna a ke static
 
 ##  <a name="m_hinst"></a>CComModule:: m_hInst
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE m_hInst;
@@ -279,11 +279,11 @@ HINSTANCE m_hInst;
 
 Obsahuje popisovač instance modulu.
 
-Metoda [init](#init) se nastaví `m_hInst` na popisovač předaný do `DLLMain` nebo `WinMain`.
+Metoda [init](#init) nastaví `m_hInst` k popisovači předanému `DLLMain` nebo `WinMain`.
 
 ##  <a name="m_hinstresource"></a>CComModule:: m_hInstResource
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE m_hInstResource;
@@ -293,13 +293,13 @@ HINSTANCE m_hInstResource;
 
 Ve výchozím nastavení obsahuje popisovač instance modulu.
 
-Metoda [init](#init) se nastaví `m_hInstResource` na popisovač předaný do `DLLMain` nebo `WinMain`. Můžete explicitně nastavit `m_hInstResource` popisovač na prostředek.
+Metoda [init](#init) nastaví `m_hInstResource` k popisovači předanému `DLLMain` nebo `WinMain`. Můžete explicitně nastavit `m_hInstResource` na popisovač prostředku.
 
 Metoda [GetResourceInstance](#getresourceinstance) vrací popisovač uložený v `m_hInstResource`.
 
-##  <a name="m_hinsttypelib"></a>  CComModule::m_hInstTypeLib
+##  <a name="m_hinsttypelib"></a>CComModule:: m_hInstTypeLib
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE m_hInstTypeLib;
@@ -309,13 +309,13 @@ HINSTANCE m_hInstTypeLib;
 
 Ve výchozím nastavení obsahuje popisovač instance modulu.
 
-Metoda [init](#init) se nastaví `m_hInstTypeLib` na popisovač předaný do `DLLMain` nebo `WinMain`. Můžete explicitně nastavit `m_hInstTypeLib` popisovač na knihovnu typů.
+Metoda [init](#init) nastaví `m_hInstTypeLib` k popisovači předanému `DLLMain` nebo `WinMain`. Můžete explicitně nastavit `m_hInstTypeLib` na popisovač knihovny typů.
 
 Metoda [GetTypeLibInstance](#gettypelibinstance) vrací popisovač uložený v `m_hInstTypeLib`.
 
-##  <a name="m_pobjmap"></a>  CComModule::m_pObjMap
+##  <a name="m_pobjmap"></a>CComModule:: m_pObjMap
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 _ATL_OBJMAP_ENTRY* m_pObjMap;
@@ -327,7 +327,7 @@ Odkazuje na mapu objektů udržované instancí modulu.
 
 ##  <a name="registerclasshelper"></a>CComModule:: RegisterClassHelper
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 ATL_DEPRECATED HRESULT RegisterClassHelper(
@@ -367,7 +367,7 @@ Metoda [UpdateRegistryClass](#updateregistryclass) volá `RegisterClassHelper`.
 
 ##  <a name="registerclassobjects"></a>CComModule:: RegisterClassObjects
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
@@ -391,7 +391,7 @@ Zaregistruje objekt třídy EXE s OLE, aby se k němu mohli připojit jiné apli
 
 ##  <a name="registerserver"></a>CComModule:: RegisterServer
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT RegisterServer(
@@ -417,13 +417,13 @@ V závislosti na parametru *pCLSID* aktualizuje systémový registr pro jeden ob
 
 Pokud má *bRegTypeLib* hodnotu true, budou aktualizovány také informace o knihovně typů.
 
-Informace o tom, jak přidat položku do mapy objektů, naleznete v tématu [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) .
+Informace o tom, jak přidat položku do mapy objektů, najdete v tématu [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) .
 
-`RegisterServer`bude volána automaticky `DLLRegisterServer` pro knihovnu DLL `WinMain` nebo pro spuštění s `/RegServer` možností příkazového řádku.
+`RegisterServer` bude automaticky volána `DLLRegisterServer` pro knihovnu DLL nebo `WinMain` pro spuštění EXE s možností `/RegServer` příkazového řádku.
 
 ##  <a name="registertypelib"></a>CComModule:: RegisterTypeLib
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT RegisterTypeLib() throw();
@@ -447,7 +447,7 @@ Pokud instance modulu obsahuje více knihoven typů, použijte druhou verzi tét
 
 ##  <a name="revokeclassobjects"></a>CComModule:: RevokeClassObjects
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT RevokeClassObjects() throw();
@@ -463,7 +463,7 @@ Odebere objekt třídy. Tato metoda je k dispozici pouze pro exe.
 
 ##  <a name="term"></a>CComModule:: Term
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 void Term() throw();
@@ -475,7 +475,7 @@ Uvolní všechny datové členy.
 
 ##  <a name="unregisterclasshelper"></a>CComModule:: UnregisterClassHelper
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 ATL_DEPRECATED HRESULT UnregisterClassHelper(
@@ -507,7 +507,7 @@ Metoda [UpdateRegistryClass](#updateregistryclass) volá `UnregisterClassHelper`
 
 ##  <a name="unregisterserver"></a>CComModule:: UnregisterServer
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT UnregisterServer(const CLSID* pCLSID = NULL) throw ();
@@ -530,13 +530,13 @@ Standardní hodnota HRESULT.
 
 V závislosti na parametru *pCLSID* zruší registraci jediného objektu třídy nebo všech objektů v mapě objektů.
 
-`UnregisterServer`bude volána automaticky `DLLUnregisterServer` pro knihovnu DLL `WinMain` nebo pro spuštění s `/UnregServer` možností příkazového řádku.
+`UnregisterServer` bude automaticky volána `DLLUnregisterServer` pro knihovnu DLL nebo `WinMain` pro spuštění EXE s možností `/UnregServer` příkazového řádku.
 
-Informace o tom, jak přidat položku do mapy objektů, naleznete v tématu [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) .
+Informace o tom, jak přidat položku do mapy objektů, najdete v tématu [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) .
 
 ##  <a name="updateregistryclass"></a>CComModule:: UpdateRegistryClass
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 ATL_DEPRECATED HRESULT UpdateRegistryClass(
@@ -589,13 +589,13 @@ Pokud má *bRegister* hodnotu true, tato metoda do systémového registru zadáv
 
 Pokud je *BREGISTER* false, odebere registraci objektu.
 
-V závislosti na hodnotě *bRegister* `UpdateRegistryClass` zavolá buď [RegisterClassHelper](#registerclasshelper) , nebo [UnregisterClassHelper](#unregisterclasshelper).
+V závislosti na hodnotě *bRegister*`UpdateRegistryClass` zavolá buď [RegisterClassHelper](#registerclasshelper) , nebo [UnregisterClassHelper](#unregisterclasshelper).
 
-Zadáním `UpdateRegistryClass` makra [DECLARE_REGISTRY](registry-macros.md#declare_registry) se vyvolá automaticky při zpracování mapy objektů.
+Zadáním [DECLARE_REGISTRY](registry-macros.md#declare_registry) makra budou `UpdateRegistryClass` vyvolány automaticky při zpracování mapy objektů.
 
 ##  <a name="updateregistryfromresourced"></a>CComModule:: UpdateRegistryFromResourceD
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 virtual HRESULT UpdateRegistryFromResourceD(
@@ -633,10 +633,10 @@ Spustí skript obsažený v prostředku určeném parametrem *lpszRes* nebo *nRe
 
 Pokud má *bRegister* hodnotu true, tato metoda registruje objekt v registru systému. v opačném případě zruší registraci objektu.
 
-Zadáním `UpdateRegistryFromResourceD` makra [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) nebo [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) bude vyvoláno automaticky při zpracování mapy objektů.
+Zadáním [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) nebo [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) makra `UpdateRegistryFromResourceD` bude vyvoláno automaticky při zpracování mapy objektů.
 
 > [!NOTE]
->  Chcete-li nahradit nahrazující hodnoty za běhu, nezadávejte makro DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID. Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktur, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která nahradí zástupný symbol za běhu. Pak zavolejte `UpdateRegistryFromResourceD`a předejte pole pro parametr *pMapEntries* . Tím se ve `_ATL_REGMAP_ENTRIES` strukturách přidají všechny nahrazující hodnoty pro náhradní mapu registrátora.
+>  Chcete-li nahradit nahrazující hodnoty za běhu, nezadávejte makro DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID. Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktury, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která má nahradit zástupný symbol za běhu. Pak zavolejte `UpdateRegistryFromResourceD`a předejte pole pro parametr *pMapEntries* . Tím se do nahrazující mapy registrátora přidá všechny nahrazující hodnoty ve `_ATL_REGMAP_ENTRIES` struktur.
 
 > [!NOTE]
 >  Chcete-li staticky propojit komponentu registru knihovny ATL (registrátor), přečtěte si téma [UpdateRegistryFromResourceS](#updateregistryfromresources).
@@ -645,7 +645,7 @@ Další informace o nahraditelných parametrech a skriptování naleznete v čl�
 
 ##  <a name="updateregistryfromresources"></a>CComModule:: UpdateRegistryFromResourceS
 
-Od ATL 7,0 `CComModule` je zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
+Od ATL 7,0 je `CComModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 virtual HRESULT UpdateRegistryFromResourceS(
@@ -679,15 +679,15 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Podobně jako [UpdateRegistryFromResourceD](#updateregistryfromresourced) s `UpdateRegistryFromResourceS` tím rozdílem, že vytvoří statický odkaz na komponentu registru ATL (registrátor).
+Podobně jako [UpdateRegistryFromResourceD](#updateregistryfromresourced) , s výjimkou `UpdateRegistryFromResourceS` vytvoří statický odkaz na komponentu registru ATL (registrátor).
 
-`UpdateRegistryFromResourceS`bude vyvolána automaticky při zpracování mapy objektů za předpokladu, že přidáte `#define _ATL_STATIC_REGISTRY` do souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší).
+`UpdateRegistryFromResourceS` bude vyvolána automaticky při zpracování mapy objektů za předpokladu, že přidáte `#define _ATL_STATIC_REGISTRY` do souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší).
 
 > [!NOTE]
->  Chcete-li nahradit nahrazující hodnoty za běhu, nezadávejte makro [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) nebo [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) . Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktur, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která nahradí zástupný symbol za běhu. Pak zavolejte `UpdateRegistryFromResourceS`a předejte pole pro parametr *pMapEntries* . Tím se ve `_ATL_REGMAP_ENTRIES` strukturách přidají všechny nahrazující hodnoty pro náhradní mapu registrátora.
+>  Chcete-li nahradit nahrazující hodnoty za běhu, nezadávejte makro [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) nebo [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) . Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktury, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která má nahradit zástupný symbol za běhu. Pak zavolejte `UpdateRegistryFromResourceS`a předejte pole pro parametr *pMapEntries* . Tím se do nahrazující mapy registrátora přidá všechny nahrazující hodnoty ve `_ATL_REGMAP_ENTRIES` struktur.
 
 Další informace o nahraditelných parametrech a skriptování naleznete v článku [Komponenta registru ATL (registrátor)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přehled třídy](../../atl/atl-class-overview.md)

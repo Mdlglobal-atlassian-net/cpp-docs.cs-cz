@@ -1,22 +1,22 @@
 ---
-title: '&lt;unordered_set –&gt; operátory'
+title: operátory &lt;unordered_set&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
 ms.openlocfilehash: 59a7154ed46ac788516bc9f42c3385ec8f07dcf1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243422"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890726"
 ---
-# <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set –&gt; operátory
+# <a name="ltunordered_setgt-operators"></a>operátory &lt;unordered_set&gt;
 
-## <a name="op_neq"></a> Operator! =
+## <a name="op_neq"></a>! = – operátor
 
-Testy, jestli [unordered_set](../standard-library/unordered-set-class.md) objekt na levé straně operátoru není roven objektu unordered_set na pravé straně.
+Testuje, zda [unordered_set](../standard-library/unordered-set-class.md) objekt na levé straně operátoru není roven objektu unordered_set na pravé straně.
 
 ```cpp
 bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
@@ -24,19 +24,19 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `unordered_set`.
 
-*doprava*\
+*pravé*\
 Objekt typu `unordered_set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud unordered_sets nejsou stejné; **false** jestli jsou shodné.
+**true** , Pokud unordered_sets nejsou stejné; **false** , pokud jsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty unordered_set – nemá vliv libovolného pořadí, ve kterém jsou v nich uložené jejich prvky. Pokud mají stejný počet prvků a elementů do jednoho kontejneru jsou permutaci prvků v jiném kontejneru dvě unordered_sets jsou si rovny. V opačném případě nerovnost.
+Porovnání mezi objekty unordered_set není ovlivněno libovolným pořadím, ve kterém ukládají jejich prvky. Dva unordered_sets jsou stejné, pokud mají stejný počet prvků a prvky v jednom kontejneru jsou permutací prvků v druhém kontejneru. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -74,7 +74,7 @@ int main()
 }
 ```
 
-**Výstup:**
+**Výkonem**
 
 `c1 != c2: true`
 
@@ -82,9 +82,9 @@ int main()
 
 `c2 != c3: true`
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>operator = = – operátor
 
-Testy, jestli [unordered_set](../standard-library/unordered-set-class.md) je objekt na levé straně operátoru roven objektu unordered_set na pravé straně.
+Testuje, zda je objekt [unordered_set](../standard-library/unordered-set-class.md) na levé straně operátoru roven objektu unordered_set na pravé straně.
 
 ```cpp
 bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
@@ -92,19 +92,19 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `unordered_set`.
 
-*doprava*\
+*pravé*\
 Objekt typu `unordered_set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud unordered_sets rovnají. **false** Pokud nejsou stejné.
+**true** , pokud se unordered_sets rovnají; **false** , pokud se neshodují.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty unordered_set – nemá vliv libovolného pořadí, ve kterém jsou v nich uložené jejich prvky. Pokud mají stejný počet prvků a elementů do jednoho kontejneru jsou permutaci prvků v jiném kontejneru dvě unordered_sets jsou si rovny. V opačném případě nerovnost.
+Porovnání mezi objekty unordered_set není ovlivněno libovolným pořadím, ve kterém ukládají jejich prvky. Dva unordered_sets jsou stejné, pokud mají stejný počet prvků a prvky v jednom kontejneru jsou permutací prvků v druhém kontejneru. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -148,9 +148,9 @@ c1 == c3: true
 c2 == c3: false
 ```
 
-## <a name="op_neq_unordered_multiset"></a> Operator! =
+## <a name="op_neq_unordered_multiset"></a>! = – operátor
 
-Testy, jestli [unordered_multiset](../standard-library/unordered-multiset-class.md) objekt na levé straně operátoru není roven objektu unordered_multiset na pravé straně.
+Testuje, zda [unordered_multiset](../standard-library/unordered-multiset-class.md) objekt na levé straně operátoru není roven objektu unordered_multiset na pravé straně.
 
 ```cpp
 bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
@@ -158,19 +158,19 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `unordered_multiset`.
 
-*doprava*\
+*pravé*\
 Objekt typu `unordered_multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud unordered_multisets nejsou stejné; **false** jestli jsou shodné.
+**true** , pokud unordered_multisets nejsou stejné; **false** , pokud jsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty unordered_multiset – nemá vliv libovolného pořadí, ve kterém jsou v nich uložené jejich prvky. Pokud mají stejný počet prvků a elementů do jednoho kontejneru jsou permutaci prvků v jiném kontejneru dvě unordered_multisets jsou si rovny. V opačném případě nerovnost.
+Porovnání mezi objekty unordered_multiset není ovlivněno libovolným pořadím, ve kterém ukládají jejich prvky. Dva unordered_multisets jsou stejné, pokud mají stejný počet prvků a prvky v jednom kontejneru jsou permutací prvků v druhém kontejneru. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -217,9 +217,9 @@ c1 != c3: false
 c2 != c3: true
 ```
 
-## <a name="op_eq_eq_unordered_multiset"></a> Operator ==
+## <a name="op_eq_eq_unordered_multiset"></a>operator = = – operátor
 
-Testy, jestli [unordered_multiset](../standard-library/unordered-multiset-class.md) je objekt na levé straně operátoru roven objektu unordered_multiset na pravé straně.
+Testuje, zda je objekt [unordered_multiset](../standard-library/unordered-multiset-class.md) na levé straně operátoru roven objektu unordered_multiset na pravé straně.
 
 ```cpp
 bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
@@ -227,19 +227,19 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `unordered_multiset`.
 
-*doprava*\
+*pravé*\
 Objekt typu `unordered_multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud unordered_multisets rovnají. **false** Pokud nejsou stejné.
+**true** , pokud se unordered_multisets rovnají; **false** , pokud se neshodují.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty unordered_multiset – nemá vliv libovolného pořadí, ve kterém jsou v nich uložené jejich prvky. Pokud mají stejný počet prvků a elementů do jednoho kontejneru jsou permutaci prvků v jiném kontejneru dvě unordered_multisets jsou si rovny. V opačném případě nerovnost.
+Porovnání mezi objekty unordered_multiset není ovlivněno libovolným pořadím, ve kterém ukládají jejich prvky. Dva unordered_multisets jsou stejné, pokud mají stejný počet prvků a prvky v jednom kontejneru jsou permutací prvků v druhém kontejneru. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 

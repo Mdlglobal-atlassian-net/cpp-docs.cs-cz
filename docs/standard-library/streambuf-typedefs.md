@@ -1,18 +1,18 @@
 ---
-title: '&lt;streambuf &gt; definice typedef'
+title: '&lt;streambuf&gt; definice typedef'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
 ms.openlocfilehash: 1c9850ad7d7ec9b9c3554e6806f4790ef3613b08
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688927"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866209"
 ---
-# <a name="ltstreambufgt-typedefs"></a>&lt;streambuf &gt; definice typedef
+# <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt; definice typedef
 
 |||
 |-|-|
@@ -42,6 +42,6 @@ typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 
 Typ je synonymum pro šablonu třídy [basic_streambuf](../standard-library/basic-streambuf-class.md)specializované pro prvky typu **wchar_t** s výchozími vlastnostmi znaků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [\<streambuf >](../standard-library/streambuf.md)

@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505944"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890704"
 ---
 # <a name="cimagelist-class"></a>Atributu CImageList – třída
 
@@ -95,38 +95,38 @@ class CImageList : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[Atributu CImageList:: atributu CImageList](#cimagelist)|`CImageList` Vytvoří objekt.|
+|[Atributu CImageList:: atributu CImageList](#cimagelist)|Vytvoří objekt `CImageList`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[Atributu CImageList:: Add](#add)|Přidá obrázek nebo obrázky do seznamu obrázků.|
-|[Atributu CImageList:: Attach](#attach)|Připojí seznam obrázků k `CImageList` objektu.|
+|[Atributu CImageList:: Attach](#attach)|Připojí seznam obrázků k objektu `CImageList`.|
 |[Atributu CImageList:: přetahovacích funkcí](#begindrag)|Začne přetahovat obrázek.|
-|[Atributu CImageList:: Copy](#copy)|Kopíruje obrázek v rámci `CImageList` objektu.|
-|[Atributu CImageList:: Create](#create)|Inicializuje seznam obrázků a připojí ho k `CImageList` objektu.|
+|[Atributu CImageList:: Copy](#copy)|Kopíruje obrázek v rámci objektu `CImageList`.|
+|[Atributu CImageList:: Create](#create)|Inicializuje seznam obrázků a připojí ho k objektu `CImageList`.|
 |[Atributu CImageList::D eleteImageList](#deleteimagelist)|Odstraní seznam obrázků.|
-|[CImageList::DeleteTempMap](#deletetempmap)|Volána obslužnou rutinou pro nečinnost v [CWinApp](../../mfc/reference/cwinapp-class.md) k odstranění dočasného `CImageList` objektu vytvořeného pomocí `FromHandle`.|
-|[CImageList::Detach](#detach)|Odpojí objekt seznamu obrázků od `CImageList` objektu a vrátí popisovač do seznamu obrázků.|
+|[Atributu CImageList::D eleteTempMap](#deletetempmap)|Volána obslužnou rutinou pro nečinnost v [CWinApp](../../mfc/reference/cwinapp-class.md) k odstranění dočasného objektu `CImageList` vytvořeného pomocí `FromHandle`.|
+|[Atributu CImageList::D etach](#detach)|Odpojí objekt seznamu obrázků od objektu `CImageList` a vrátí popisovač do seznamu obrázků.|
 |[Atributu CImageList::D ragEnter](#dragenter)|Zamkne aktualizace během operace přetažení a zobrazí obrázek přetáhnutí na zadané pozici.|
 |[Atributu CImageList::D ragLeave](#dragleave)|Odemkne okno a skryje obrázek přetažení, aby bylo možné aktualizovat okno.|
 |[Atributu CImageList::D ragMove](#dragmove)|Přesune obrázek, který se přetahuje během operace přetažení.|
-|[CImageList::DragShowNolock](#dragshownolock)|Zobrazí nebo skryje obrázek přetažení během operace přetažení bez uzamknutí okna.|
+|[Atributu CImageList::D ragShowNolock](#dragshownolock)|Zobrazí nebo skryje obrázek přetažení během operace přetažení bez uzamknutí okna.|
 |[Atributu CImageList: nezpracované:D](#draw)|Nakreslí obrázek, který se přetahuje během operace přetažení.|
 |[Atributu CImageList::D rawEx](#drawex)|Nakreslí položku seznamu obrázků v zadaném kontextu zařízení. Funkce používá zadaný styl vykreslování a smíchá obrázek se zadanou barvou.|
 |[Atributu CImageList::D rawIndirect](#drawindirect)|Nakreslí obrázek ze seznamu obrázků.|
 |[Atributu CImageList:: EndDrag](#enddrag)|Ukončí operaci přetažení.|
 |[Atributu CImageList:: ExtractIcon](#extracticon)|Vytvoří ikonu založenou na obrázku a masce v seznamu obrázků.|
-|[Atributu CImageList:: FromHandle](#fromhandle)|Vrátí ukazatel na `CImageList` objekt, pokud je předána popisovač seznamu obrázků. Pokud objekt není připojen k popisovači, je vytvořen a připojen `CImageList` dočasný objekt. `CImageList`|
-|[Atributu CImageList:: FromHandlePermanent](#fromhandlepermanent)|Vrátí ukazatel na `CImageList` objekt, pokud je předána popisovač seznamu obrázků. `CImageList` Pokud objekt není připojen k popisovači, je vrácena hodnota null.|
-|[CImageList::GetBkColor](#getbkcolor)|Načte aktuální barvu pozadí seznamu obrázků.|
+|[Atributu CImageList:: FromHandle](#fromhandle)|Vrátí ukazatel na objekt `CImageList`, pokud je předána obslužná rutina seznamu obrázků. Pokud objekt `CImageList` není připojen k popisovači, je vytvořen a připojen dočasný objekt `CImageList`.|
+|[Atributu CImageList:: FromHandlePermanent](#fromhandlepermanent)|Vrátí ukazatel na objekt `CImageList`, pokud je předána obslužná rutina seznamu obrázků. Pokud objekt `CImageList` není připojen k popisovači, je vrácena hodnota NULL.|
+|[Atributu CImageList:: GetBkColor](#getbkcolor)|Načte aktuální barvu pozadí seznamu obrázků.|
 |[Atributu CImageList:: GetDragImage](#getdragimage)|Načte dočasný seznam obrázků, který se používá k přetahování.|
-|[CImageList::GetImageCount](#getimagecount)|Načte počet obrázků v seznamu obrázků.|
+|[Atributu CImageList:: GetImageCount](#getimagecount)|Načte počet obrázků v seznamu obrázků.|
 |[Atributu CImageList:: GetImageInfo](#getimageinfo)|Načte informace o obrázku.|
-|[Atributu CImageList:: GetSafeHandle](#getsafehandle)|Načte `m_hImageList`.|
+|[Atributu CImageList:: GetSafeHandle](#getsafehandle)|Načte objekt `m_hImageList`.|
 |[Atributu CImageList:: Read](#read)|Přečte seznam obrázků z archivu.|
 |[Atributu CImageList:: Remove](#remove)|Odebere obrázek ze seznamu obrázků.|
 |[Atributu CImageList:: Replace](#replace)|Nahradí obrázek v seznamu obrázků novým obrázkem.|
@@ -138,21 +138,21 @@ class CImageList : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[Atributu CImageList:: operator HIMAGELIST](#operator_himagelist)|Vrátí HIMAGELIST připojené k `CImageList`.|
+|[Atributu CImageList:: operator HIMAGELIST](#operator_himagelist)|Vrátí HIMAGELIST připojenou k `CImageList`.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CImageList::m_hImageList](#m_himagelist)|Popisovač obsahující seznam obrázků připojený k tomuto objektu.|
+|[Atributu CImageList:: m_hImageList](#m_himagelist)|Popisovač obsahující seznam obrázků připojený k tomuto objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
 "Seznam obrázků" je kolekce obrázků stejné velikosti, z nichž každá může být odkazována jeho indexem založeným na nule. Seznamy obrázků slouží k efektivní správě velkých sad ikon nebo rastrových obrázků. Všechny obrázky v seznamu obrázků jsou obsaženy ve formátu obrazovky s jedním, velkým rastrovým obrázkem. Seznam obrázků může obsahovat také monochromatický rastrový obrázek, který obsahuje masky používané pro transparentní vykreslování obrázků (styl ikony). Rozhraní API (Application Programming Interface) pro Microsoft Win32 nabízí funkce seznamu obrázků, které umožňují kreslit obrázky, vytvářet a zničit seznamy obrázků, přidávat a odebírat obrázky, nahrazovat obrázky, slučovat obrázky a přetahovat obrázky.
 
-Tento ovládací prvek (a `CImageList` třída) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
+Tento ovládací prvek (a proto třída `CImageList`) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
 
 Další informace o použití `CImageList`naleznete v tématu [Controls](../../mfc/controls-mfc.md) and [using atributu CImageList](../../mfc/using-cimagelist.md).
 
@@ -210,7 +210,7 @@ Zodpovídáte za uvolnění popisovače ikony, když s ním budete hotovi.
 
 ##  <a name="attach"></a>Atributu CImageList:: Attach
 
-Voláním této funkce připojíte seznam obrázků k `CImageList` objektu.
+Voláním této funkce připojíte seznam obrázků k objektu `CImageList`.
 
 ```
 BOOL Attach(HIMAGELIST hImageList);
@@ -253,7 +253,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce vytvoří dočasný seznam obrázků, který se používá k přetahování. Obrázek kombinuje zadaný obrázek a jeho masku s aktuálním kurzorem. V reakci na následné zprávy WM_MOUSEMOVE můžete přesunout obrázek přetažením pomocí `DragMove` členské funkce. Chcete-li ukončit operaci přetažení, můžete použít `EndDrag` členskou funkci.
+Tato funkce vytvoří dočasný seznam obrázků, který se používá k přetahování. Obrázek kombinuje zadaný obrázek a jeho masku s aktuálním kurzorem. V reakci na následné zprávy WM_MOUSEMOVE můžete přesunout obrázek přetažením pomocí členské funkce `DragMove`. Chcete-li ukončit operaci přetažení, můžete použít členskou funkci `EndDrag`.
 
 ### <a name="example"></a>Příklad
 
@@ -261,7 +261,7 @@ Tato funkce vytvoří dočasný seznam obrázků, který se používá k přetah
 
 ##  <a name="cimagelist"></a>Atributu CImageList:: atributu CImageList
 
-`CImageList` Vytvoří objekt.
+Vytvoří objekt `CImageList`.
 
 ```
 CImageList();
@@ -295,13 +295,13 @@ Index založený na nule obrázku, který má být použit jako zdroj operace ko
 *uFlags*<br/>
 Hodnota bitového příznaku, která určuje typ operace kopírování, která má být provedena. Tento parametr může být jedna z následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
-|ILCF_MOVE|Zdrojový obrázek se zkopíruje do indexu cílové image. Výsledkem této operace je více instancí daného obrázku. Výchozí hodnota je ILCF_MOVE.|
+|ILCF_MOVE|Zdrojový obrázek se zkopíruje do indexu cílové image. Výsledkem této operace je více instancí daného obrázku. Výchozím nastavením je ILCF_MOVE.|
 |ILCF_SWAP|Pozice pro výměnu zdrojových a cílových imagí v rámci seznamu obrázků.|
 
 *pSrc*<br/>
-Ukazatel na `CImageList` objekt, který je cílem operace kopírování.
+Ukazatel na objekt `CImageList`, který je cílem operace kopírování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -348,7 +348,7 @@ BOOL Create(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parametry
 
-*cx*<br/>
+*CX*<br/>
 Rozměry každého obrázku (v pixelech)
 
 *kr*<br/>
@@ -357,9 +357,9 @@ Rozměry každého obrázku (v pixelech)
 *nFlags*<br/>
 Určuje typ seznamu obrázků, který se má vytvořit. Tento parametr může být kombinací následujících hodnot, ale může obsahovat pouze jednu z `ILC_COLOR` hodnot.
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
-|ILC_COLOR|Pokud není zadaný žádný z ostatních příznaků ILC_COLOR *, použijte výchozí chování. Výchozí hodnota je obvykle ILC_COLOR4; u starších ovladačů displeje se ale výchozí hodnota ILC_COLORDDB.|
+|ILC_COLOR|Pokud není zadán žádný z dalších příznaků ILC_COLOR *, použijte výchozí chování. Výchozí hodnota je obvykle ILC_COLOR4; u starších ovladačů displeje se ale výchozí hodnota ILC_COLORDDB.|
 |ILC_COLOR4|Jako rastrový obrázek pro seznam obrázků použijte 8bitové oddíly (16 barev) DIB (16 barev).|
 |ILC_COLOR8|Použijte 8bitový oddíl se znaménkem DIB. Barvy použité pro tabulku barev jsou stejné barvy jako paleta polotónů.|
 |ILC_COLOR16|Použijte 16bitový oddíl DIB (32/64 KB barev).|
@@ -384,25 +384,25 @@ Barva použitá k vygenerování masky Každý pixel této barvy v zadané bitma
 Řetězec obsahující ID prostředků imagí.
 
 *imagelist1*<br/>
-Odkaz na `CImageList` objekt.
+Odkaz na objekt `CImageList`.
 
 *nImage1*<br/>
 Index první existující image
 
 *imagelist2*<br/>
-Odkaz na `CImageList` objekt.
+Odkaz na objekt `CImageList`.
 
 *nImage2*<br/>
 Index druhého existujícího obrázku
 
-*dx*<br/>
+*DX*<br/>
 Posun druhého obrázku ve vztahu k prvnímu obrázku (v pixelech) na ose x
 
 *dy*<br/>
 Posun druhého obrázku ve vztahu k prvnímu obrázku (v pixelech) na ose y
 
 *pImageList*<br/>
-Ukazatel na `CImageList` objekt.
+Ukazatel na objekt `CImageList`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -410,7 +410,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří `CImageList` se ve dvou krocích. Nejprve volejte konstruktor a potom zavolejte `Create`, čímž se vytvoří seznam obrázků a připojí ho `CImageList` k objektu.
+Sestavíte `CImageList` ve dvou krocích. Nejprve volejte konstruktor a potom zavolejte `Create`, který vytvoří seznam obrázků a připojí ho k objektu `CImageList`.
 
 ### <a name="example"></a>Příklad
 
@@ -434,7 +434,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ##  <a name="deletetempmap"></a>Atributu CImageList::D eleteTempMap
 
-Volána automaticky `CWinApp` obslužnou rutinou nečinnosti, `DeleteTempMap` odstraní všechny dočasné `CImageList` objekty vytvořené pomocí [FromHandle](#fromhandle), ale nezničí žádné popisovače ( `hImageList`) dočasně přidružené k `ImageList` objekty.
+Volána automaticky `CWinApp` obslužným rutinou nečinných časů `DeleteTempMap` odstraní všechny dočasné `CImageList` objekty vytvořené pomocí [FromHandle](#fromhandle), ale nezničí žádné popisovače (`hImageList`) dočasně asociované s `ImageList` objekty.
 
 ```
 static void PASCAL DeleteTempMap();
@@ -446,7 +446,7 @@ static void PASCAL DeleteTempMap();
 
 ##  <a name="detach"></a>Atributu CImageList::D etach
 
-Voláním této funkce odpojíte objekt seznamu obrázků od `CImageList` objektu.
+Voláním této funkce odpojíte objekt seznamu obrázků od objektu `CImageList`.
 
 ```
 HIMAGELIST Detach();
@@ -538,7 +538,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se obvykle volá v reakci na zprávu WM_MOUSEMOVE. Chcete-li zahájit operaci přetažení, `BeginDrag` použijte členskou funkci.
+Tato funkce se obvykle volá v reakci na zprávu WM_MOUSEMOVE. Chcete-li zahájit operaci přetažení, použijte členskou funkci `BeginDrag`.
 
 ### <a name="example"></a>Příklad
 
@@ -579,7 +579,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Ukazatel na cílový kontext zařízení.
 
 *nImage*<br/>
@@ -591,12 +591,12 @@ Umístění, ve kterém se má nakreslit v rámci určeného kontextu zařízen�
 *nStyle*<br/>
 Příznak určující styl vykreslování Může to být jedna nebo víc z těchto hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
-|ILD_BLEND25, ILD_FOCUS|Nakreslí obrázek, promícháním 25 procent pomocí barvy zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznam obrázků neobsahuje masku.|
-|ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Nakreslí obrázek, míchání 50 procent s barvou zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznam obrázků neobsahuje masku.|
+|ILD_BLEND25 ILD_FOCUS|Nakreslí obrázek, promícháním 25 procent pomocí barvy zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznam obrázků neobsahuje masku.|
+|ILD_BLEND50, ILD_SELECTED ILD_BLEND|Nakreslí obrázek, míchání 50 procent s barvou zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznam obrázků neobsahuje masku.|
 |ILD_MASK|Nakreslí masku.|
-|ILD_NORMAL|Nakreslí obrázek pomocí barvy pozadí seznamu obrázků. Pokud je barva pozadí hodnotou CLR_NONE, obrázek je vykreslen transparentně pomocí masky.|
+|ILD_NORMAL|Nakreslí obrázek pomocí barvy pozadí seznamu obrázků. Pokud je barva pozadí CLR_NONE hodnotou, obrázek je vykreslen transparentně pomocí masky.|
 |ILD_TRANSPARENT|Nakreslí obraz transparentně pomocí masky bez ohledu na barvu pozadí.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -624,7 +624,7 @@ BOOL DrawEx(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 Ukazatel na cílový kontext zařízení.
 
 *nImage*<br/>
@@ -633,17 +633,17 @@ Index vykreslování obrázku založený na nule
 *bodů*<br/>
 Umístění, ve kterém se má nakreslit v rámci určeného kontextu zařízení.
 
-*sz*<br/>
-Velikost části obrázku, která se má vykreslit vzhledem k levému hornímu rohu obrázku Viz *DX* a *dy* v [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) ve Windows SDK.
+*'s*<br/>
+Velikost části obrázku, která se má vykreslit vzhledem k levému hornímu rohu obrázku Viz *DX* a *dy* v [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) Windows SDK.
 
 *clrBk*<br/>
-Barva pozadí obrázku Viz *rgbBk* v [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) ve Windows SDK.
+Barva pozadí obrázku Přečtěte si téma *rgbBk* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) v Windows SDK.
 
 *clrFg*<br/>
-Barva popředí obrázku Viz *rgbFg* v [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) ve Windows SDK.
+Barva popředí obrázku Přečtěte si téma *rgbFg* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) v Windows SDK.
 
 *nStyle*<br/>
-Příznak určující styl vykreslování Viz *fStyle* v [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) ve Windows SDK.
+Příznak určující styl vykreslování Přečtěte si téma *fStyle* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -684,7 +684,7 @@ BOOL DrawIndirect(
 *pimldp*<br/>
 Ukazatel na strukturu [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) , která obsahuje informace o operaci Draw.
 
-*pDC*<br/>
+*Emulátor*<br/>
 Ukazatel na kontext cílového zařízení. Pokud s tím budete hotovi, musíte tento objekt [CDC](../../mfc/reference/cdc-class.md) odstranit.
 
 *nImage*<br/>
@@ -693,34 +693,34 @@ Index založený na nule obrázku, který má být vykreslen.
 *bodů*<br/>
 Struktura [bodu](/previous-versions/dd162805\(v=vs.85\)) obsahující souřadnice x a y, kde se obrázek vykreslí.
 
-*sz*<br/>
+*'s*<br/>
 Struktura [velikosti](/windows/win32/api/windef/ns-windef-size) označující velikost obrázku, který se má vykreslit.
 
 *ptOrigin*<br/>
 Struktura [bodu](/previous-versions/dd162805\(v=vs.85\)) obsahující souřadnice x a y, které určují levý horní roh operace kreslení vzhledem k samotné imagi. Obrazové body obrázku vlevo od souřadnice x a nad souřadnicí y nejsou vykresleny.
 
 *fStyle*<br/>
-Příznak určující styl vykreslování a volitelně překryvný obrázek. Informace o překryté imagi najdete v části s poznámkami. Výchozí implementace knihovny MFC, ILD_NORMAL, vykreslí obrázek pomocí barvy pozadí seznamu obrázků. Pokud je barva pozadí CLR_NONE hodnotou, obrázek je vykreslen transparentně pomocí masky.
+Příznak určující styl vykreslování a volitelně překryvný obrázek. Informace o překryté imagi najdete v části s poznámkami. Výchozí implementace knihovny MFC, ILD_NORMAL, nakreslí obrázek pomocí barvy pozadí seznamu obrázků. Pokud je barva pozadí CLR_NONE hodnotou, obrázek je vykreslen transparentně pomocí masky.
 
 Další možné styly jsou popsány v rámci *fStyle* člena struktury [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *dwRop*<br/>
-Hodnota, která určuje kód pro rastrovou operaci. Tyto kódy definují, jak budou barevná data pro zdrojový obdélník kombinována s barevnými daty pro cílový obdélník, aby se dosáhlo konečné barvy. Výchozí implementace knihovny MFC, SRCCOPY, kopíruje zdrojový obdélník přímo do cílového obdélníku. Tento parametr se ignoruje, pokud parametr *fStyle* nezahrnuje příznak ILD_ROP.
+Hodnota, která určuje kód pro rastrovou operaci. Tyto kódy definují, jak budou barevná data pro zdrojový obdélník kombinována s barevnými daty pro cílový obdélník, aby se dosáhlo konečné barvy. Výchozí implementace knihovny MFC, SRCCOPY, kopíruje zdrojový obdélník přímo do cílového obdélníku. Tento parametr se ignoruje v případě, že parametr *fStyle* neobsahuje příznak ILD_ROP.
 
 Další možné hodnoty jsou popsány v rámci *dwRop* člena struktury [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *rgbBack*<br/>
 Barva pozadí obrázku ve výchozím nastavení CLR_DEFAULT. Tento parametr může být hodnota RGB definovaná aplikací nebo jedna z následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |CLR_DEFAULT|Výchozí barva pozadí Obrázek se vykreslí pomocí barvy pozadí v seznamu obrázků.|
 |CLR_NONE|Barva pozadí není k dispozici. Obrázek je vykreslen transparentně.|
 
 *rgbFore*<br/>
-Barva popředí obrázku, ve výchozím nastavení CLR_DEFAULT. Tento parametr může být hodnota RGB definovaná aplikací nebo jedna z následujících hodnot:
+Barva popředí obrázku ve výchozím nastavení CLR_DEFAULT. Tento parametr může být hodnota RGB definovaná aplikací nebo jedna z následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |CLR_DEFAULT|Výchozí barva popředí Obrázek je vykreslen pomocí barvy zvýraznění systému jako barva popředí.|
 |CLR_NONE|Žádná barva Blendu. Obrázek je Blend s barvou cílového zařízení v kontextu.|
@@ -733,9 +733,9 @@ Příznak určující stav kreslení Tento člen může obsahovat jeden nebo ví
 *Rámec*<br/>
 Ovlivňuje chování sytosti a alfa efektů prolnutí.
 
-Při použití s ILS_SATURATE má tento člen hodnotu, která je přidána do každé složky barvy s trojicí RGB pro každý pixel v ikoně.
+Při použití s ILS_SATURATE obsahuje tento člen hodnotu, která je přidána do každé složky barev s trojicí RGB pro každý pixel v ikoně.
 
-Při použití s ILS_APLHA má tento člen hodnotu pro alfa kanál. Tato hodnota může být od 0 do 255, s 0 je zcela transparentní a 255 je zcela neprůhledné.
+Při použití s ILS_APLHA obsahuje tento člen hodnotu pro alfa kanál. Tato hodnota může být od 0 do 255, s 0 je zcela transparentní a 255 je zcela neprůhledné.
 
 *crEffect*<br/>
 Hodnota [COLORREF](/windows/win32/gdi/colorref) , která se používá pro efekt záře a stín.
@@ -764,7 +764,7 @@ static void PASCAL EndDrag();
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zahájit operaci přetažení, `BeginDrag` použijte členskou funkci.
+Chcete-li zahájit operaci přetažení, použijte členskou funkci `BeginDrag`.
 
 ### <a name="example"></a>Příklad
 
@@ -789,7 +789,7 @@ Popisovač ikony v případě úspěchu; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda spoléhá na chování makra [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) k vytvoření ikony. Další informace o vytváření a čištění ikon naleznete v makru [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) .
+Tato metoda spoléhá na chování [ImageList_ExtractIconho](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) makra k vytvoření ikony. Další informace o vytváření a čištění ikon naleznete v makru [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) .
 
 ### <a name="example"></a>Příklad
 
@@ -797,7 +797,7 @@ Tato metoda spoléhá na chování makra [ImageList_ExtractIcon](/windows/win32/
 
 ##  <a name="fromhandle"></a>Atributu CImageList:: FromHandle
 
-Vrátí ukazatel na `CImageList` objekt, pokud je předána popisovač seznamu obrázků.
+Vrátí ukazatel na objekt `CImageList`, pokud je předána obslužná rutina seznamu obrázků.
 
 ```
 static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
@@ -810,11 +810,11 @@ Určuje seznam obrázků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `CImageList` objekt v případě úspěchu; jinak null.
+Ukazatel na objekt `CImageList` v případě úspěchu; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud k popisovači již `CImageList` nenípřipojen,jevytvořenapřipojendočasnýobjekt.`CImageList` Tento dočasný `CImageList` objekt je platný pouze do okamžiku, kdy aplikace bude mít čas nečinnosti ve smyčce události, kdy jsou odstraněny všechny dočasné objekty.
+Pokud k popisovači již není připojen `CImageList`, je vytvořen a připojen dočasný objekt `CImageList`. Tento dočasný `CImageList` objekt je platný pouze do okamžiku, kdy aplikace bude mít čas nečinnosti ve smyčce události, kdy se všechny dočasné objekty odstraní.
 
 ### <a name="example"></a>Příklad
 
@@ -822,7 +822,7 @@ Pokud k popisovači již `CImageList` nenípřipojen,jevytvořenapřipojendočas
 
 ##  <a name="fromhandlepermanent"></a>Atributu CImageList:: FromHandlePermanent
 
-Vrátí ukazatel na `CImageList` objekt, pokud je předána popisovač seznamu obrázků.
+Vrátí ukazatel na objekt `CImageList`, pokud je předána obslužná rutina seznamu obrázků.
 
 ```
 static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
@@ -835,11 +835,11 @@ Určuje seznam obrázků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `CImageList` objekt v případě úspěchu; jinak null.
+Ukazatel na objekt `CImageList` v případě úspěchu; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-`CImageList` Pokud objekt není připojen k popisovači, je vrácena hodnota null.
+Pokud objekt `CImageList` není připojen k popisovači, je vrácena hodnota NULL.
 
 ### <a name="example"></a>Příklad
 
@@ -855,7 +855,7 @@ COLORREF GetBkColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota barvy RGB barvy pozadí `CImageList` objektu.
+Hodnota barvy RGB barvy pozadí objektu `CImageList`
 
 ### <a name="example"></a>Příklad
 
@@ -877,7 +877,7 @@ static CImageList* PASCAL GetDragImage(
 Adresa struktury [bodu](/previous-versions/dd162805\(v=vs.85\)) , která přijímá aktuální polohu při přetahování.
 
 *lpPointHotSpot*<br/>
-`POINT` Adresa struktury, která přijímá posunutí obrázku přetažení vzhledem k poloze přetažení
+Adresa `POINT` struktury, která přijímá posunutí obrázku přetažením vzhledem k poloze pro přetažení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -923,11 +923,11 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`IMAGEINFO` Struktura obsahuje informace o obrázku v seznamu obrázků.
+Struktura `IMAGEINFO` obsahuje informace o obrázku v seznamu obrázků.
 
 ##  <a name="getsafehandle"></a>Atributu CImageList:: GetSafeHandle
 
-Voláním této funkce načtete `m_hImageList` datový člen.
+Voláním této funkce načtete datový člen `m_hImageList`.
 
 ```
 HIMAGELIST GetSafeHandle() const;
@@ -949,7 +949,7 @@ Popisovač seznamu obrázků připojeného k tomuto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-`m_hImageList` Datový člen je veřejná proměnná typu HIMAGELIST.
+Datový člen `m_hImageList` je veřejná proměnná typu HIMAGELIST.
 
 ### <a name="example"></a>Příklad
 
@@ -957,7 +957,7 @@ Popisovač seznamu obrázků připojeného k tomuto objektu.
 
 ##  <a name="operator_himagelist"></a>Atributu CImageList:: operator HIMAGELIST
 
-Tento operátor použijte k získání připojeného popisovače `CImageList` objektu.
+Tento operátor použijte k získání připojeného popisovače objektu `CImageList`.
 
 ```
 operator HIMAGELIST() const;
@@ -965,7 +965,7 @@ operator HIMAGELIST() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je to úspěšné, popisovač seznamu obrázků reprezentovaný `CImageList` objektem, jinak null.
+Je-li to úspěšné, popisovač seznamu obrázků reprezentovaného objektem `CImageList`; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -986,7 +986,7 @@ BOOL Read(CArchive* pArchive);
 ### <a name="parameters"></a>Parametry
 
 *pArchive*<br/>
-Ukazatel na `CArchive` objekt, ze kterého má být načten seznam obrázků.
+Ukazatel na objekt `CArchive`, ze kterého má být načten seznam obrázků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1054,7 +1054,7 @@ Popisovač ikony, která obsahuje rastrový obrázek a masku pro nový obrázek.
 
 Verze vracející BOOL vrátí nenulovou hodnotu, pokud je úspěšná; v opačném případě 0.
 
-Verze vracející celočíselný vrátí index založený na nule, pokud je to úspěšné; v opačném případě-1.
+Verze **vracející** celočíselný vrátí index založený na nule, pokud je to úspěšné; v opačném případě-1.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1074,12 +1074,12 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*cr*<br/>
-Barva pozadí, která se má nastavit Může to být CLR_NONE. V takovém případě jsou obrázky transparentně vykreslovány pomocí masky.
+*znaky*<br/>
+Barva pozadí, která se má nastavit Může být CLR_NONE. V takovém případě jsou obrázky transparentně vykreslovány pomocí masky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí barva pozadí v případě úspěchu; v opačném případě CLR_NONE.
+Předchozí barva pozadí v případě úspěchu; jinak CLR_NONE.
 
 ### <a name="example"></a>Příklad
 
@@ -1113,7 +1113,7 @@ Vzhledem k tomu, že funkce přetahování používají nový obrázek během op
 
 ##  <a name="setimagecount"></a>Atributu CImageList:: SetImageCount
 
-Voláním této členské funkce resetujete počet obrázků v `CImageList` objektu.
+Zavolejte tuto členskou funkci pro resetování počtu imagí v objektu `CImageList`.
 
 ```
 BOOL SetImageCount(UINT uNewCount);
@@ -1181,7 +1181,7 @@ BOOL Write(CArchive* pArchive);
 ### <a name="parameters"></a>Parametry
 
 *pArchive*<br/>
-Ukazatel na `CArchive` objekt, ve kterém má být uložen seznam obrázků.
+Ukazatel na objekt `CArchive`, ve kterém má být uložen seznam obrázků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1191,7 +1191,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 [!code-cpp[NVC_MFC_CImageList#17](../../mfc/reference/codesnippet/cpp/cimagelist-class_23.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

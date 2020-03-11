@@ -8,17 +8,17 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507700"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855472"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkce zpětného volání používané v prostředí MFC
 
 V knihovna Microsoft Foundation Class se zobrazí tři funkce zpětného volání. Tyto funkce zpětného volání jsou předány do [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: GrayString](../../mfc/reference/cdc-class.md#graystring)a [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Všimněte si, že všechny funkce zpětného volání musí před návratem do systému Windows zachytit výjimky knihovny MFC, protože výjimky nelze vyvolat přes hranice zpětného volání. Další informace o výjimkách najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
 
-|Name||
+|Název||
 |----------|-----------------|
 |[Funkce zpětného volání pro metodu CDC::EnumObjects](#enum_objects)||
 |[Funkce zpětného volání pro metodu CDC::GrayString](#graystring)||
@@ -46,11 +46,11 @@ int CALLBACK EXPORT ObjectFunc(
 Odkazuje na strukturu dat [LOGPEN –](/windows/win32/api/Wingdi/ns-wingdi-logpen) nebo [LOGBRUSH –](/windows/win32/api/wingdi/ns-wingdi-logbrush) , která obsahuje informace o logických atributech objektu.
 
 *lpData*<br/>
-Odkazuje na data dodaná aplikací předaná `EnumObjects` funkci.
+Odkazuje na data poskytnutá aplikací předaná funkci `EnumObjects`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Funkce zpětného volání vrací **int**. Hodnota tohoto návratu je definovaná uživatelem. Pokud funkce zpětného volání vrátí hodnotu `EnumObjects` 0, zastaví výčet na začátku.
+Funkce zpětného volání vrací **int**. Hodnota tohoto návratu je definovaná uživatelem. Pokud funkce zpětného volání vrátí hodnotu 0, `EnumObjects` zastaví výčet na začátku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -72,7 +72,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="parameters"></a>Parametry
 
 *hDC*<br/>
-Identifikuje kontext paměťového zařízení s rastrovým obrázkem s minimální šířkou a výškou `nWidth` určenou `nHeight` a `GrayString`na.
+Identifikuje kontext paměťového zařízení s rastrovým obrázkem s minimální šířkou a výškou určenou `nWidth` a `nHeight` na `GrayString`.
 
 *lpData*<br/>
 Odkazuje na řetězec znaků, který chcete kreslit.
@@ -105,8 +105,8 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 Identifikuje kontext zařízení.
 
-*code*<br/>
-Určuje, zda došlo k chybě. Je 0, pokud nedošlo k žádné chybě. Je SP_OUTOFDISK v případě, že správce tisku aktuálně nemá volné místo na disku a další místo na disku bude k dispozici, pokud aplikace počká. Pokud je *kód* SP_OUTOFDISK, aplikace nemusí přerušit tiskovou úlohu. Pokud tomu tak není, musí pro správce tisku vracet volání `PeekMessage` funkce nebo. `GetMessage`
+*znakovou*<br/>
+Určuje, zda došlo k chybě. Je 0, pokud nedošlo k žádné chybě. Je SP_OUTOFDISK v případě, že správce tisku aktuálně nemá volné místo na disku a další místo na disku bude k dispozici, pokud aplikace počká. Pokud je *kód* SP_OUTOFDISK, aplikace nemusí přerušit tiskovou úlohu. Pokud tomu tak není, musí poskytnout správci tisku voláním `PeekMessage` nebo `GetMessage` funkce Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -116,9 +116,9 @@ Návratová hodnota funkce Abort-Handler je nenulová, Pokud tisková úloha pok
 
 Skutečný název musí být exportován, jak je popsáno v části poznámky v tématu [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Struktury, styly, zpětná volání a mapy zpráv](structures-styles-callbacks-and-message-maps.md)<br/>
 [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
-[CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
+[CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
 [CDC:: GrayString](../../mfc/reference/cdc-class.md#graystring)

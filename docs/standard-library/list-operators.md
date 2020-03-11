@@ -1,5 +1,5 @@
 ---
-title: '&lt;seznam&gt; operátory'
+title: operátory seznamu&gt; &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - list/std::operator!=
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - std::operator&lt;= (list)
 - std::operator== (list)
 ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246465"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874423"
 ---
-# <a name="ltlistgt-operators"></a>&lt;seznam&gt; operátory
+# <a name="ltlistgt-operators"></a>operátory seznamu&gt; &lt;
 
-## <a name="op_neq"></a> Operator! =
+## <a name="op_neq"></a>! = – operátor
 
-Testuje, zda je objekt seznamu na levé straně operátoru není roven objektu seznamu na pravé straně.
+Testuje, zda se objekt seznamu na levé straně operátoru nerovná objektu seznamu na pravé straně.
 
 ```cpp
 bool operator!=(
@@ -37,19 +37,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `list`.
 
-*doprava*\
+*pravé*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud nejsou stejné; seznamy **false** Pokud seznamy jsou si rovny.
+**true** , pokud se seznamy neshodují; **false** , pokud jsou seznamy stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi seznam objektů podle pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dva seznamy jsou si rovny. V opačném případě nerovnost.
+Porovnání mezi objekty seznamu je založeno na porovnávacím porovnání jejich prvků. Dva seznamy jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -76,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt"></a> – Operátor&lt;
+## <a name="op_lt"></a>operátor&lt;
 
 Testuje, zda je objekt seznamu na levé straně operátoru menší než objekt seznamu na pravé straně.
 
@@ -88,19 +88,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `list`.
 
-*doprava*\
+*pravé*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** -li v seznamu na levé straně operátoru menší než, ale není v seznamu na pravé straně operátoru roven; v opačném případě **false**.
+**true** , pokud je seznam na levé straně operátoru menší než, ale není rovno seznamu na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi seznam objektů podle pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
+Porovnání mezi objekty seznamu je založeno na porovnávacím porovnání jejich prvků. Vztah menší než je mezi dvěma objekty je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -131,9 +131,9 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> – Operátor&lt;=
+## <a name="op_lt_eq"></a>operátor&lt;=
 
-Testuje, zda je objekt v seznamu na levé straně operátoru je menší než nebo roven objektu seznamu na pravé straně.
+Testuje, zda je objekt seznamu na levé straně operátoru menší než nebo roven objektu seznamu na pravé straně.
 
 ```cpp
 bool operator<=(
@@ -143,19 +143,19 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `list`.
 
-*doprava*\
+*pravé*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** -li v seznamu na levé straně operátoru menší než nebo rovna hodnotě v seznamu na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je seznam na levé straně operátoru menší než nebo rovný seznamu na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi seznam objektů podle pairwise porovnání jejich prvky. Je menší než nebo rovna na vztah mezi dvěma objekty podle porovnání první pár prvků nerovnost.
+Porovnání mezi objekty seznamu je založeno na porovnávacím porovnání jejich prvků. Vztah menší nebo rovno mezi dvěma objekty je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -186,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>operator = = – operátor
 
 Testuje, zda je objekt seznamu na levé straně operátoru roven objektu seznamu na pravé straně.
 
@@ -198,19 +198,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `list`.
 
-*doprava*\
+*pravé*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud je seznam na levé straně operátoru roven seznamu na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je seznam na levé straně operátoru stejný jako seznam na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi seznam objektů podle pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dva seznamy jsou si rovny. V opačném případě nerovnost.
+Porovnání mezi objekty seznamu je založeno na porovnávacím porovnání jejich prvků. Dva seznamy jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -237,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt"></a> – Operátor&gt;
+## <a name="op_gt"></a>operátor&gt;
 
 Testuje, zda je objekt seznamu na levé straně operátoru větší než objekt seznamu na pravé straně.
 
@@ -249,19 +249,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `list`.
 
-*doprava*\
+*pravé*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud je v seznamu na levé straně operátoru větší než v seznamu na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je seznam na levé straně operátoru větší než seznam na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi seznam objektů podle pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
+Porovnání mezi objekty seznamu je založeno na porovnávacím porovnání jejich prvků. Větší vztah mezi dvěma objekty je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -292,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> – Operátor&gt;=
+## <a name="op_gt_eq"></a>operátor&gt;=
 
 Testuje, zda je objekt seznamu na levé straně operátoru větší než nebo roven objektu seznamu na pravé straně.
 
@@ -304,19 +304,19 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*levý*\
 Objekt typu `list`.
 
-*doprava*\
+*pravé*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud je v seznamu na levé straně operátoru větší než nebo rovna hodnotě v seznamu na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je seznam na levé straně operátoru větší než nebo roven seznamu na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi seznam objektů podle pairwise porovnání jejich prvky. Větší než nebo rovna hodnotě vztah mezi dvěma objekty podle porovnání první pár prvků nerovnost.
+Porovnání mezi objekty seznamu je založeno na porovnávacím porovnání jejich prvků. Relace větší než nebo rovna mezi dvěma objekty je založena na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 

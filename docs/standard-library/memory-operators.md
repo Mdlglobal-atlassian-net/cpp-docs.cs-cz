@@ -1,5 +1,5 @@
 ---
-title: '&lt;paměť&gt; operátory'
+title: operátory&gt; &lt;paměti
 ms.date: 11/04/2016
 f1_keywords:
 - memory/std::operator!=
@@ -11,15 +11,15 @@ f1_keywords:
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243822"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884067"
 ---
-# <a name="ltmemorygt-operators"></a>&lt;paměť&gt; operátory
+# <a name="ltmemorygt-operators"></a>operátory&gt; &lt;paměti
 
-## <a name="op_neq"></a> Operator! =
+## <a name="op_neq"></a>! = – operátor
 
 Testy pro nerovnost mezi objekty.
 
@@ -42,27 +42,27 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Jeden z objektů má být testována nerovnost.
+*levý*\
+Jeden z objektů, který má být testován pro nerovnost.
 
-*doprava*\
-Jeden z objektů má být testována nerovnost.
+*pravé*\
+Jeden z objektů, který má být testován pro nerovnost.
 
 *Ty1*\
-Typ řízený levé sdílený ukazatel.
+Typ řízený levým sdíleným ukazatelem.
 
 *Ty2*\
-Typ řízený správné sdílený ukazatel.
+Typ řízený správným sdíleným ukazatelem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud objekty nejsou stejné; **false** Pokud jsou objekty rovnocenné.
+**true** , pokud objekty nejsou stejné; **false** , pokud jsou objekty stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-První šablona operátor vrátí hodnotu false. (Všechny výchozí alokátorů jsou si rovny.)
+První operátor šablony vrátí hodnotu false. (Všechna výchozí přidělování jsou shodná.)
 
-Druhý a třetí šablony operátory vrací `!(left == right)`.
+Druhá a třetí operátor šablony vrací `!(left == right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>operator = = – operátor
 
 Testy pro rovnost mezi objekty.
 
@@ -143,27 +143,27 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Jeden z objektů, které chcete testovat rovnost.
+*levý*\
+Jeden z objektů, který má být testován pro rovnost.
 
-*doprava*\
-Jeden z objektů, které chcete testovat rovnost.
+*pravé*\
+Jeden z objektů, který má být testován pro rovnost.
 
 *Ty1*\
-Typ řízený levé sdílený ukazatel.
+Typ řízený levým sdíleným ukazatelem.
 
 *Ty2*\
-Typ řízený správné sdílený ukazatel.
+Typ řízený správným sdíleným ukazatelem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud se objekty rovnají, **false** Pokud objekty nejsou stejné.
+**true** , pokud jsou objekty stejné, **false** , pokud objekty nejsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-První šablona operátor vrátí hodnotu true. (Všechny výchozí alokátorů jsou si rovny.)
+První operátor šablony vrátí hodnotu true. (Všechna výchozí přidělování jsou shodná.)
 
-Druhý a třetí šablony operátory vrací `left.get() ==  right.get()`.
+Druhá a třetí operátor šablony vrací `left.get() ==  right.get()`.
 
 ### <a name="example"></a>Příklad
 
@@ -232,9 +232,9 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> – Operátor&gt;=
+## <a name="op_gt_eq"></a>operátor&gt;=
 
-Testy pro jeden objekt, který je větší než nebo roven druhému objektu.
+Testy pro jeden objekt, který je větší nebo roven druhému objektu.
 
 ```cpp
 template <class T, class Del1, class U, class Del2>
@@ -250,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Jeden z objektů, který se má porovnat.
+*levý*\
+Jeden z objektů, které mají být porovnány.
 
-*doprava*\
-Jeden z objektů, který se má porovnat.
+*pravé*\
+Jeden z objektů, které mají být porovnány.
 
 *Ty1*\
-Typ řízený levé sdílený ukazatel.
+Typ řízený levým sdíleným ukazatelem.
 
 *Ty2*\
-Typ řízený správné sdílený ukazatel.
+Typ řízený správným sdíleným ukazatelem.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona operátory vrací `left.get() >= right.get()`.
+Operátory šablony vracejí `left.get() >= right.get()`.
 
-## <a name="op_lt"></a> – Operátor&lt;
+## <a name="op_lt"></a>operátor&lt;
 
 Testy pro jeden objekt, který je menší než druhý objekt.
 
@@ -284,21 +284,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Jeden z objektů, který se má porovnat.
+*levý*\
+Jeden z objektů, které mají být porovnány.
 
-*doprava*\
-Jeden z objektů, který se má porovnat.
+*pravé*\
+Jeden z objektů, které mají být porovnány.
 
 *Ty1*\
-Typ řízený ukazatelem vlevo.
+Typ řízený levým ukazatelem.
 
 *Ty2*\
-Typ řízený ukazatelem správné.
+Typ řízený pravým ukazatelem.
 
-## <a name="op_lt_eq"></a> – Operátor&lt;=
+## <a name="op_lt_eq"></a>operátor&lt;=
 
-Testy pro jeden objekt, který je menší než nebo roven druhému objektu.
+Testy pro jeden objekt, který je menší nebo roven druhému objektu.
 
 ```cpp
 template <class T, class Del1, class U, class Del2>
@@ -314,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Jeden z objektů, který se má porovnat.
+*levý*\
+Jeden z objektů, které mají být porovnány.
 
-*doprava*\
-Jeden z objektů, který se má porovnat.
+*pravé*\
+Jeden z objektů, které mají být porovnány.
 
 *Ty1*\
-Typ řízený levé sdílený ukazatel.
+Typ řízený levým sdíleným ukazatelem.
 
 *Ty2*\
-Typ řízený správné sdílený ukazatel.
+Typ řízený správným sdíleným ukazatelem.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona operátory vrací `left.get() <= right.get()`
+Operátory šablony vracejí `left.get() <= right.get()`
 
-## <a name="op_gt"></a> – Operátor&gt;
+## <a name="op_gt"></a>operátor&gt;
 
 Testy pro jeden objekt, který je větší než druhý objekt.
 
@@ -348,21 +348,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Jeden z objektů, který se má porovnat.
+*levý*\
+Jeden z objektů, které mají být porovnány.
 
-*doprava*\
-Jeden z objektů, který se má porovnat.
+*pravé*\
+Jeden z objektů, které mají být porovnány.
 
 *Ty1*\
-Typ řízený levé sdílený ukazatel.
+Typ řízený levým sdíleným ukazatelem.
 
 *Ty2*\
-Typ řízený správné sdílený ukazatel.
+Typ řízený správným sdíleným ukazatelem.
 
-## <a name="op_lt_lt"></a> – Operátor&lt;&lt;
+## <a name="op_lt_lt"></a>operátor&lt;&lt;
 
-Sdílený ukazatel zapíše do datového proudu.
+Zapíše sdílený ukazatel do datového proudu.
 
 ```cpp
 template <class Elem, class Tr, class Ty>
@@ -373,23 +373,23 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 ### <a name="parameters"></a>Parametry
 
 *Elem*\
-Typ prvku datového proudu.
+Typ elementu streamu.
 
-*tr*\
-Typ elementu vlastnosti datového proudu.
+*Tr*\
+Zadejte vlastnosti prvku datového proudu.
 
 *Ty*\
 Typ řízený sdíleným ukazatelem.
 
-*navýšení kapacity*\
+*\*
 Výstupní datový proud
 
-*SP*\
+\ *SP*
 Sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí `out << sp.get()`.
+Funkce šablony vrací `out << sp.get()`.
 
 ### <a name="example"></a>Příklad
 

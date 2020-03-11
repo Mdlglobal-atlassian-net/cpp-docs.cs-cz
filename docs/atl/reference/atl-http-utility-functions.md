@@ -3,11 +3,11 @@ title: Funkce nástrojů ATL HTTP
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497964"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865021"
 ---
 # <a name="atl-http-utility-functions"></a>Funkce nástrojů ATL HTTP
 
@@ -28,7 +28,7 @@ Tyto funkce podporují manipulaci s adresami URL.
 
 **Záhlaví:** atlutil. h
 
-## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 Voláním této funkce převedete adresu URL na kanonický tvar, přičemž problematické znaky a mezery se převedou na řídicí sekvence.
 
@@ -54,11 +54,11 @@ Ukazatel na proměnnou, která obsahuje délku ve znacích *szCanonicalized*. Po
 *dwFlags*<br/>
 ATL_URL příznaky ovládající chování této funkce.
 
-- ATL_URL_BROWSER_MODE nekóduje ani dekóduje znaky za znakem "#" nebo "?" a neodebírá koncovou mezeru za znakem "?". Pokud tato hodnota není zadaná, celá adresa URL se zakóduje a na konci se odeberou prázdné znaky.
+- ATL_URL_BROWSER_MODE nekóduje ani dekóduje znaky za znakem "#" nebo "?" a neodebírá koncové prázdné znaky po znaku "?". Pokud tato hodnota není zadaná, celá adresa URL se zakóduje a na konci se odeberou prázdné znaky.
 
 - ATL_URL_DECODE převede všechny sekvence% XX na znaky, včetně řídicích sekvencí, před analýzou adresy URL.
 
-- ATL_URL_ENCODE_PERCENT zakóduje všechny zjištěné znaky procent. Ve výchozím nastavení nejsou znaménka procent kódována.
+- ATL_URL_ENCODE_PERCENT zakódování všech zjištěných znaků procent. Ve výchozím nastavení nejsou znaménka procent kódována.
 
 - ATL_URL_ENCODE_SPACES_ONLY zakóduje pouze mezery.
 
@@ -172,7 +172,7 @@ Hodnota [ATL_URL_SCHEME](atl-url-scheme-enum.md) identifikující schéma, pro k
 
 [ATL_URL_PORT](atl-typedefs.md#atl_url_port) přidružené k zadanému schématu nebo ATL_URL_INVALID_PORT_NUMBER, pokud schéma není rozpoznáno.
 
-## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
 
 Voláním této funkce zjistíte, zda lze znak bezpečně použít v adrese URL.
 
@@ -233,7 +233,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Obrátí proces převodu, který používá [AtlEscapeUrl](#atlescapeurl).
 
-## <a name="rgbtohtml"></a> RGBToHtml
+## <a name="rgbtohtml"></a>RGBToHtml
 
 Převede hodnotu [COLORREF](/windows/win32/gdi/colorref) na text HTML odpovídající této hodnotě barvy.
 
@@ -263,7 +263,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Hodnota barvy HTML je znak křížku následovaný hexadecimální hodnotou o hodnotě 6 číslic pomocí 2 číslic pro každou z červených, zelených a modrých komponent barvy (například #FFFFFF je bílá).
 
-## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 
 Voláním této funkce převedete systémový čas na řetězec ve formátu vhodném pro použití v hlavičkách protokolu HTTP.
 
@@ -275,14 +275,14 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Parametry
 
-*st*<br/>
+*sv*<br/>
 Systémový čas, který má být získán jako řetězec formátu HTTP.
 
 *strTime*<br/>
-Odkaz na proměnnou řetězce pro příjem data a času protokolu HTTP, jak je definován v dokumentu RFC[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)2616 () a RFC[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)1123 ().
+Odkaz na proměnnou řetězce pro příjem data a času protokolu HTTP, jak je definován v dokumentu RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) a RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Charakteristiky](../active-template-library-atl-concepts.md)<br/>
+[Koncepty](../active-template-library-atl-concepts.md)<br/>
 [Desktopové komponenty ATL objektů COM](../atl-com-desktop-components.md)<br/>
 [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw)

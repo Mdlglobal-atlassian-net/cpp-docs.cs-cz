@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 1aebb30649d138b22c5b9dae95662f84a6bf39f2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684106"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890727"
 ---
 # <a name="unordered_set-class"></a>unordered_set – třída
 
@@ -158,16 +158,16 @@ class unordered_set;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *klíčů*
+\ *klíčů*
 Klíčový typ
 
-@No__t_1 *hash*
+\ *hash*
 Typ objektu hashovací funkce
 
-*Před* \
+*Před*\
 Typ objektu funkce porovnání rovnosti
 
-@No__t_1 *přidělení*
+\ *přidělení*
 Třída alokátoru
 
 ## <a name="members"></a>Členové
@@ -192,7 +192,7 @@ Třída alokátoru
 |[size_type](#size_type)|Typ vzdálenosti bez znaménka mezi dvěma prvky|
 |[value_type](#value_type)|Typ prvku|
 
-### <a name="functions"></a>Funkce
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -203,14 +203,14 @@ Třída alokátoru
 |[cbegin](#cbegin)|Určuje začátek řízené sekvence.|
 |[cend](#cend)|Určuje konec řízené sekvence.|
 |[jejich](#clear)|Odebere všechny prvky.|
-|[výpočtu](#count)|Zjistí počet prvků odpovídající zadanému klíči.|
+|[count](#count)|Zjistí počet prvků odpovídající zadanému klíči.|
 |[emplace](#emplace)|Přidá prvek vytvořený v místě.|
 |[emplace_hint](#emplace_hint)|Přidá prvek vytvořený v místě s nápovědou.|
 |[obsahovat](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
 |[účelu](#end)|Určuje konec řízené sekvence.|
 |[equal_range](#equal_range)|Najde rozsah, který odpovídá zadanému klíči.|
 |[ověřování](#erase)|Odebere prvky v určených pozicích.|
-|[najít](#find)|Vyhledá prvek, který odpovídá zadanému klíči.|
+|[find](#find)|Vyhledá prvek, který odpovídá zadanému klíči.|
 |[get_allocator](#get_allocator)|Získá uložený objekt alokátoru.|
 |[hash_function](#hash)|Získá uložený objekt hashovací funkce.|
 |[zadat](#insert)|Přidá prvky.|
@@ -232,15 +232,15 @@ Třída alokátoru
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt seřadí sekvenci, kterou ovládá, voláním dvou uložených objektů, objektu funkce porovnání typu [unordered_set:: key_equal](#key_equal) a objektu funkce hash typu [unordered_set:: hash](#hasher). K prvnímu uloženému objektu přistupujete voláním členské funkce [unordered_set:: key_eq](#key_eq) `()`; a přístup k druhému uloženému objektu získáte voláním členské funkce [unordered_set:: hash_function](#hash) `()`. Konkrétně pro všechny hodnoty `X` a `Y` typu `Key` vrátí volání `key_eq()(X, Y)` hodnotu true pouze v případě, že obě hodnoty argumentů mají ekvivalentní řazení; `hash_function()(keyval)` volání poskytuje distribuci hodnot typu `size_t`. Na rozdíl od šablony třídy [unordered_multiset](../standard-library/unordered-multiset-class.md), objekt typu `unordered_set` zajišťuje, že `key_eq()(X, Y)` je vždy false pro všechny dva prvky řízené sekvence. (Klíče jsou jedinečné).
+Objekt seřadí sekvenci, kterou ovládá, voláním dvou uložených objektů, objektu funkce porovnání typu [unordered_set:: key_equal](#key_equal) a objektu funkce hash typu [unordered_set:: hash](#hasher). K prvnímu uloženému objektu přistupujete voláním členské funkce [unordered_set:: key_eq](#key_eq)`()`; a přístup k druhému uloženému objektu získáte voláním členské funkce [unordered_set:: hash_function](#hash)`()`. Konkrétně pro všechny hodnoty `X` a `Y` typu `Key`vrátí volání `key_eq()(X, Y)` hodnotu true pouze v případě, že obě hodnoty argumentů mají ekvivalentní řazení; `hash_function()(keyval)` volání poskytuje distribuci hodnot typu `size_t`. Na rozdíl od šablony třídy [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md), objekt typu `unordered_set` zajišťuje, aby `key_eq()(X, Y)` vždy false pro jakékoli dva prvky řízené sekvence. (Klíče jsou jedinečné).
 
-Objekt také uchovává faktor maximálního zatížení, který určuje maximální požadovaný průměrný počet prvků na kbelík. Pokud vložení elementu způsobí, že [unordered_set:: load_factor](#load_factor) `()` překročí maximální zátěžový faktor, kontejner zvýší počet intervalů a znovu sestaví zatřiďovací tabulku podle potřeby.
+Objekt také uchovává faktor maximálního zatížení, který určuje maximální požadovaný průměrný počet prvků na kbelík. Pokud vložení elementu způsobí, že [unordered_set:: load_factor](#load_factor)`()` překročit maximální zátěžový faktor, kontejner zvýší počet intervalů a znovu sestaví zatřiďovací tabulku podle potřeby.
 
 Skutečné pořadí prvků v řízené sekvenci závisí na hashovací funkci, funkci porovnání, pořadí vkládání, faktoru maximálního zatížení a aktuálním počtu kbelíků. Pořadí prvků v řízené sekvenci obecně nelze předvídat. Můžete si však vždy být jisti, že všechny dílčí množiny prvků, které mají ekvivalentní řazení, v řízené sekvenci sousedí.
 
 Objekt přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, prostřednictvím uloženého objektu přidělování typu [unordered_set:: allocator_type](#allocator_type). Takový objekt přidělování musí mít stejné externí rozhraní jako objekt typu `allocator`. Všimněte si, že uložený objekt alokátoru není zkopírován při přiřazení objektu kontejneru.
 
-## <a name="allocator_type"></a>unordered_set::allocator_type
+## <a name="allocator_type"></a>unordered_set:: allocator_type
 
 Typ alokátoru pro správu úložiště
 
@@ -294,7 +294,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket* \
+*nbucket*\
 Číslo intervalu.
 
 ### <a name="remarks"></a>Poznámky
@@ -367,7 +367,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Hodnota klíče, která má být namapována.
 
 ### <a name="remarks"></a>Poznámky
@@ -507,7 +507,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket* \
+*nbucket*\
 Číslo intervalu.
 
 ### <a name="remarks"></a>Poznámky
@@ -566,7 +566,7 @@ Iterátor pro dopředný přístup **const** , který odkazuje na první prvek r
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin` nelze upravovat elementy v rozsahu.
+S návratovou hodnotou `cbegin`nelze upravovat elementy v rozsahu.
 
 Tuto členskou funkci lze použít místo `begin()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `begin()` a `cbegin()`.
 
@@ -616,7 +616,7 @@ void clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce volá [unordered_set:: erase](#erase) `(` [unordered_set:: begin](#begin) `(),` [unordered_set:: end](#end) `())`.
+Členská funkce volá [unordered_set:: erase](#erase)`(` [unordered_set:: begin](#begin)`(),` [unordered_set:: end](#end)`())`.
 
 ### <a name="example"></a>Příklad
 
@@ -859,12 +859,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí počet prvků v rozsahu, který je oddělený [unordered_set:: equal_range](#equal_range) `(keyval)`.
+Členská funkce vrátí počet prvků v rozsahu, který je oddělený [unordered_set:: equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Příklad
 
@@ -973,13 +973,13 @@ Args&&... args);
 ### <a name="parameters"></a>Parametry
 
 \ *argumentů*
-Argumenty předané k vytvoření prvku, který má být vložen do objektu unordered_set, pokud již neobsahuje prvek, jehož hodnota je ekvivalentní objednaná.
+Argumenty předané k vytvoření elementu, který má být vložen do unordered_set, pokud již neobsahují element, jehož hodnota je ekvivalentně seřazena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-@No__t_0, jehož komponenta **bool** vrátí hodnotu true, pokud bylo provedeno vložení, a hodnotu false, pokud `unordered_set` již obsahovala element, jehož klíč měl ekvivalentní hodnotu v pořadí řazení a jehož komponenta iterátoru vrátí adresu, kam byl vložen nový prvek. nebo kde již byl element umístěn.
+`pair`, jehož komponenta **bool** vrátí hodnotu true, pokud bylo provedeno vložení a false v případě, že `unordered_set` již obsahovala prvek, jehož klíč měl ekvivalentní hodnotu v pořadí řazení a jehož komponenta iterátoru vrátí adresu, kam byl vložen nový prvek nebo kde byl prvek již umístěn.
 
-Chcete-li získat přístup k součásti iterátoru páru `pr` vráceného touto členskou funkcí, použijte `pr.first` a k jeho zpětnému odkazování použijte `*(pr.first)`. Chcete-li získat přístup ke komponentě **bool** páru `pr` vrácená touto členskou funkcí, použijte `pr.second`.
+Chcete-li získat přístup k součásti iterátoru páru `pr` vráceného touto členskou funkcí, použijte `pr.first`a k jeho zpětnému odkazování použijte `*(pr.first)`. Chcete-li získat přístup ke komponentě **bool** páru `pr` vrácená touto členskou funkcí, použijte `pr.second`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1005,7 +1005,7 @@ Args&&... args);
 \ *argumentů*
 Argumenty předané k vytvoření prvku, který má být vložen do unordered_set, pokud unordered_set již tento prvek neobsahuje, nebo obecněji, pokud již neobsahuje prvek, jehož klíč je ekvivalentní objednání.
 
-*kde* \
+*kde*\
 Nápověda týkající se místa, kde lze začít hledat správný bod vložení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1102,7 +1102,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket* \
+*nbucket*\
 Číslo intervalu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1168,12 +1168,12 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí dvojici iterátorů `X` tak, že `[X.first, X.second)` omezuje pouze ty prvky řízené sekvence, které mají ekvivalentní řazení pomocí *keyVal*. Pokud žádné takové prvky neexistují, oba iterátory jsou `end()`.
+Členská funkce vrátí dvojici iterátorů `X` tak, že`[X.first, X.second)` omezuje pouze ty prvky řízené sekvence, které mají ekvivalentní řazení pomocí *keyVal*. Pokud žádné takové prvky neexistují, oba iterátory jsou `end()`.
 
 ### <a name="example"></a>Příklad
 
@@ -1224,7 +1224,7 @@ equal_range('b'): [b]
 
 ## <a name="erase"></a>ověřování
 
-Odebere prvek nebo rozsah prvků v objektu unordered_set ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.
+Odebere prvek nebo rozsah prvků v unordered_set ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.
 
 ```cpp
 iterator erase(const_iterator Where);
@@ -1236,21 +1236,21 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* \
+*Kde*\
 Pozice prvku, který má být odebrán.
 
-*První* \
+*První*\
 Pozice prvního prvku, který má být odebrán.
 
-*Poslední* \
+*Poslední*\
 Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-@No__t_1 *klíčů*
+\ *klíčů*
 Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro první dvě členské funkce obousměrný iterátor, který určuje první prvek zbývající za odebranými prvky, nebo element, který je konci unordered_set, pokud žádný takový prvek neexistuje.
+Pro první dvě členské funkce obousměrný iterátor, který určuje první prvek zbývající za odebranými prvky, nebo element, který je koncem unordered_set, pokud žádný takový prvek neexistuje.
 
 Třetí členská funkce vrátí počet prvků, které byly odebrány z unordered_set.
 
@@ -1268,12 +1268,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [unordered_set:: equal_range](#equal_range) `(keyval).first`.
+Členská funkce vrací [unordered_set:: equal_range](#equal_range)`(keyval).first`.
 
 ### <a name="example"></a>Příklad
 
@@ -1433,7 +1433,7 @@ hfn('b') == 1647086
 
 ## <a name="insert"></a>zadat
 
-Vloží prvek nebo rozsah prvků do objektu unordered_set.
+Vloží prvek nebo rozsah prvků do unordered_set.
 
 ```cpp
 // (1) single element
@@ -1460,32 +1460,32 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *Val*
-Hodnota prvku, který má být vložen do objektu unordered_set, pokud již neobsahuje element, jehož klíč je ekvivalentní objednané.
+\ *Val*
+Hodnota prvku, který má být vložen do unordered_set, pokud již neobsahuje prvek, jehož klíč je ekvivalentní.
 
-*Kde* \
+*Kde*\
 Místo zahájení vyhledání správného bodu vložení.
 
-*ValTy* \
-Parametr šablony, který určuje typ argumentu, který může unordered_set použít k vytvoření elementu [value_type](../standard-library/map-class.md#value_type)a Perfect-Forwards *Val* jako argument.
+*ValTy*\
+Parametr šablony, který určuje typ argumentu, který může unordered_set použít k vytvoření prvku [value_type](../standard-library/map-class.md#value_type)a Perfect-Forwards *Val* jako argument.
 
-*První* \
+*První*\
 Pozice prvního prvku, který chcete zkopírovat.
 
-*Poslední* \
+*Poslední*\
 Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.
 
-*InputIterator* \
-Argument funkce šablony, který splňuje požadavky [vstupního iterátoru](../standard-library/input-iterator-tag-struct.md) , který odkazuje na prvky typu, které lze použít k vytvoření objektů [value_type](../standard-library/map-class.md#value_type) .
+*InputIterator*\
+Argument funkce šablony, který splňuje požadavky [vstupního iterátoru](../standard-library/input-iterator-tag-struct.md) , který odkazuje na prvky typu, které lze použít k vytvoření [value_type](../standard-library/map-class.md#value_type) objektů.
 
-@No__t_1 *IList*
-[Initializer_list](../standard-library/initializer-list.md) , ze kterého se mají kopírovat prvky
+\ *IList*
+[Initializer_list](../standard-library/initializer-list.md) , ze kterých se mají kopírovat prvky
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Členské funkce s jedním prvkem (1) a (2) vrátí [dvojici](../standard-library/pair-structure.md) , jejíž **logická** komponenta má hodnotu true, pokud bylo provedeno vložení, a hodnotu false, pokud unordered_set již obsahovala element, jehož klíč měl ekvivalentní hodnotu v řazení. Komponenta iterátoru dvojice vrácených hodnot odkazuje na nově vložený element, pokud je **logická** komponenta true nebo na existující prvek, pokud je komponenta **bool** false.
 
-Členské funkce s jedním prvkem, (3) a (4), vrátí iterátor, který odkazuje na pozici, kde byl nový element vložen do unordered_set nebo, pokud element s ekvivalentním klíčem již existuje, pro existující prvek.
+Členské funkce s jedním prvkem, (3) a (4), vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen do unordered_set nebo, pokud element s ekvivalentním klíčem již existuje, pro existující prvek.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1493,11 +1493,11 @@ Touto funkcí nejsou zneplatněny žádné iterátory, ukazatele ani odkazy.
 
 Pokud je při vložení pouze jednoho prvku vyvolána výjimka, ale nenastane v kontejneru funkce hash, stav kontejneru se nezmění. Pokud je vyvolána výjimka ve funkci hash, výsledek není definován. Pokud je při vkládání více prvků vyvolána výjimka, kontejner zůstane v neurčeném, ale platném stavu.
 
-Chcete-li získat přístup k součásti iterátoru `pair` `pr`, který je vrácen členskými funkcemi s jedním prvkem, použijte `pr.first`; Chcete-li překázat na iterátor v rámci vráceného páru, použijte `*pr.first`, což vám poskytne element. Pro přístup ke komponentě **bool** použijte `pr.second`. Příklad naleznete v ukázce kódu dále v tomto článku.
+Chcete-li získat přístup k součásti iterátoru `pair` `pr`, který je vrácen členskými funkcemi s jedním prvkem, použijte `pr.first`; Chcete-li překázat na iterátor v rámci vráceného páru, použijte`*pr.first`, což vám poskytne element. Pro přístup ke komponentě **bool** použijte `pr.second`. Příklad naleznete v ukázce kódu dále v tomto článku.
 
-[Value_type](../standard-library/map-class.md#value_type) kontejneru je definice typu, která patří do kontejneru a, pro set `unordered_set<V>::value_type` typ `const V`.
+[Value_type](../standard-library/map-class.md#value_type) kontejneru je definice typu, která patří do kontejneru, a v případě sady `unordered_set<V>::value_type` je typ `const V`.
 
-Člen rozsahu (5) vloží sekvenci hodnot prvků do objektu unordered_set, který odpovídá každému prvku, který je adresován iterátorem v rozsahu `[First, Last)`; Proto se *Poslední* příkaz nevloží. Členská funkce kontejneru `end()` se vztahuje k pozici hned za posledním prvkem v kontejneru, například příkaz `s.insert(v.begin(), v.end());` se pokusí vložit všechny prvky `v` do `s`. Vkládají se pouze prvky, které v rozsahu obsahují jedinečné hodnoty. Duplicitní hodnoty jsou ignorovány. Chcete-li sledovat, které prvky jsou odmítnuty, použijte jednoprvkovou verzi funkce `insert`.
+Členská funkce range (5) vloží sekvenci hodnot prvků do unordered_set, který odpovídá každému prvku, který adresuje iterátor v rozsahu `[First, Last)`; Proto se *Poslední* příkaz nevloží. Členská funkce kontejneru `end()` se vztahuje k pozici hned za posledním prvkem v kontejneru, například příkaz `s.insert(v.begin(), v.end());` se pokusí vložit všechny prvky `v` do `s`. Vkládají se pouze prvky, které v rozsahu obsahují jedinečné hodnoty. Duplicitní hodnoty jsou ignorovány. Chcete-li sledovat, které prvky jsou odmítnuty, použijte jednoprvkovou verzi funkce `insert`.
 
 Členská funkce seznamu inicializátorů (6) používá [initializer_list](../standard-library/initializer-list.md) ke zkopírování prvků do unordered_set.
 
@@ -1507,7 +1507,7 @@ Příklad kódu naleznete v tématu [set:: INSERT](../standard-library/set-class
 
 ## <a name="iterator"></a>iterátor
 
-Typ, který poskytuje konstantní [dopředný iterátor](../standard-library/forward-iterator-tag-struct.md) , který může číst elementy v unordered_set.
+Typ, který poskytuje konstantní [dopředný iterátor](../standard-library/forward-iterator-tag-struct.md) , který může číst prvky v unordered_set.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1659,7 +1659,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací `(float)`[unordered_set:: size](#size) `() / (float)`[unordered_set:: bucket_count](#bucket_count) `()`, průměrný počet prvků na interval.
+Členská funkce vrací`(float)`[unordered_set:: size](#size)`() / (float)`[unordered_set:: bucket_count](#bucket_count)`()`, průměrný počet prvků na interval.
 
 ### <a name="example"></a>Příklad
 
@@ -1878,7 +1878,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*faktor* \
+*faktor*\
 Nový faktor maximálního zatížení.
 
 ### <a name="remarks"></a>Poznámky
@@ -2005,12 +2005,12 @@ unordered_set& operator=(unordered_set&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 [Unordered_set](../standard-library/unordered-set-class.md) se kopíruje do `unordered_set`.
 
 ### <a name="remarks"></a>Poznámky
 
-Po vymazání všech existujících prvků v `unordered_set` `operator=` buď zkopírování nebo přesunutí obsahu *přímo* do `unordered_set`.
+Po vymazání všech existujících prvků v `unordered_set``operator=` buď zkopírování nebo přesunutí obsahu *přímo* do `unordered_set`.
 
 ### <a name="example"></a>Příklad
 
@@ -2151,7 +2151,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets* \
+*nbuckets*\
 Požadovaný počet kontejnerů.
 
 ### <a name="remarks"></a>Poznámky
@@ -2329,12 +2329,12 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Kontejner, pomocí kterého se má prohodit.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce přemění kontrolované sekvence mezi `*this` a *pravou*. Pokud [unordered_set:: get_allocator](#get_allocator) `() == right.get_allocator()`, funguje v konstantním čase, vyvolá výjimku pouze v důsledku kopírování objektu uložených vlastností typu `Tr` a neověřuje žádné odkazy, ukazatele nebo iterátory, které určují elementy v dvě řízené sekvence. V opačném případě provede několik přiřazení prvků a volání konstruktoru v poměru k počtu prvků ve dvou řízených sekvencích.
+Členská funkce přemění kontrolované sekvence mezi `*this` a *pravou*. Pokud [unordered_set:: get_allocator](#get_allocator)`() == right.get_allocator()`provede v konstantním čase, vyvolá výjimku pouze v důsledku kopírování objektu uložených vlastností typu `Tr`a neověřuje žádné odkazy, ukazatele nebo iterátory, které určují prvky ve dvou řízených sekvencích. V opačném případě provede několik přiřazení prvků a volání konstruktoru v poměru k počtu prvků ve dvou řízených sekvencích.
 
 ### <a name="example"></a>Příklad
 
@@ -2437,36 +2437,36 @@ unordered_set(
 
 ### <a name="parameters"></a>Parametry
 
-*InputIterator* \
+*InputIterator*\
 Typ iterátoru.
 
-*Al* \
+*Al*\
 Objekt alokátoru, který se má uložit.
 
-@No__t_1 *comp*
+\ *comp*
 Objekt funkce porovnání, který se má uložit.
 
-@No__t_1 *hash*
+\ *hash*
 Objekt hashovací funkce, který se má uložit.
 
-*bucket_count* \
+*bucket_count*\
 Minimální počet kbelíků.
 
-*Pravé* \
+*Pravé*\
 Kontejner, který se má kopírovat.
 
-@No__t_1 *IList*
+\ *IList*
 Initializer_list obsahující prvky ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor určuje kopii sekvence řízenou *vpravo*. Druhý konstruktor určuje prázdnou řízenou sekvenci. Třetí konstruktor určuje kopii sekvence přesunutím *pravého* , čtvrtého a osmého konstruktoru pomocí initializer_list k určení elementů ke zkopírování. Devátý konstruktor vloží sekvenci hodnot prvků `[first, last)`.
+První konstruktor určuje kopii sekvence řízenou *vpravo*. Druhý konstruktor určuje prázdnou řízenou sekvenci. Třetí konstruktor určuje kopii sekvence přesunutím *pravého* a osmého konstruktoru pomocí initializer_list pro určení prvků ke zkopírování. Devátý konstruktor vloží sekvenci hodnot prvků`[first, last)`.
 
 Všechny konstruktory také inicializují několik uložených hodnot. Pro kopírovací konstruktor jsou hodnoty získány *zprava*. V opačném případě:
 
 Minimální počet intervalů je argument *bucket_count*, pokud je k dispozici; v opačném případě se jedná o výchozí hodnotu, která je zde popsána jako hodnota definovaná implementací `N0`.
 
-Objekt funkce hash je argumentem *hodnota hash*, pokud je k dispozici; v opačném případě se `Hash()`.
+objekt funkce hash je argumentem *hodnota hash*, pokud je k dispozici; v opačném případě se `Hash()`.
 
 Objekt funkce porovnání je *kompozice*argumentů, pokud je k dispozici; v opačném případě se `Comp()`.
 

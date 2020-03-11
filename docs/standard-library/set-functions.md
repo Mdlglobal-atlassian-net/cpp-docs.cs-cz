@@ -1,20 +1,20 @@
 ---
-title: '&lt;Nastavte&gt; funkce'
+title: '&lt;nastavení&gt; funkcí'
 ms.date: 11/04/2016
 f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 ms.openlocfilehash: a3a63fb86caa3485b1ee14538c3eb1f1ff72923e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246403"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875760"
 ---
-# <a name="ltsetgt-functions"></a>&lt;Nastavte&gt; funkce
+# <a name="ltsetgt-functions"></a>&lt;nastavení&gt; funkcí
 
-## <a name="swap"></a> swap (map)
+## <a name="swap"></a>swap (map)
 
 Vymění prvky dvou sad.
 
@@ -25,27 +25,27 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*\
-Sada poskytující prvky pro záměnu nebo set, jehož prvky mají být zaměněny sady *levé*.
+*pravé*\
+Sada poskytující prvky, které mají být zaměněny, nebo sadu, jejíž prvky mají být vyměňovány pomocí těch, které jsou nastaveny *vlevo*.
 
-*doleva*\
-Sada, jehož prvky mají být zaměněny sady *správné*.
+*levý*\
+Sada, jejíž prvky mají být vyměňovány s nastavením *práva*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablon je algoritmus specializované na nastavení ke spuštění funkce člena třídy kontejneru `left.` [prohození](../standard-library/set-class.md#swap)(`right`). Toto je instance částečné řazení šablon funkcí v kompilátoru. Pokud funkce šablony jsou přetížené tak, že shoda šablony pomocí volání funkce není jedinečný, pak kompilátor zvolit nejvíce specializovanou verzi šablony funkce. Obecné verzi funkce šablon
+Funkce šablony je algoritmus specializovaný na třídu kontejneru nastavenou na spouštění členské funkce `left.`[swap](../standard-library/set-class.md#swap)(`right`). Toto je instance částečného řazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejvíce specializované verze funkce šablony. Obecná verze funkce šablony
 
-`template` \< **classT**> **void prohození**( **T &** , **T &** )
+`template` \< **třídy**> **void swap**( **t &** , **t &** )
 
-Třída v algoritmu funguje tak, že přiřazení a je pomalá operace. Specializované verze v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s vnitřní reprezentaci třídy kontejneru.
+Třída algoritmu funguje podle přiřazení a je pomalé operace. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s interní reprezentace třídy kontejneru.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad kódu pro člen třídy [set::swap](../standard-library/set-class.md#swap) příklad použití šablony verze `swap`.
+Viz příklad kódu pro sadu tříd členů [:: swap](../standard-library/set-class.md#swap) pro příklad použití verze šablony `swap`.
 
-## <a name="swap_multiset"></a> swap (multiset)
+## <a name="swap_multiset"></a>swap (multiset)
 
-Vymění prvky dvou multisets.
+Vyměňuje prvky dvou množin.
 
 ```cpp
 template <class Key, class Traits, class Allocator>
@@ -54,20 +54,20 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*\
-Multiset poskytující prvky pro záměnu nebo multiset, jehož prvky mají vyměnit s těmi třída multiset *levé*.
+*pravé*\
+Multiset poskytuje prvky, které mají být měněny, nebo multiset, jejichž prvky mají být vyměňovány s multiset *doleva*.
 
-*doleva*\
-Multiset, jehož prvky mají vyměnit s těmi třída multiset *správné*.
+*levý*\
+Multiset, jehož prvky mají být vyměňovány pomocí multiset *práva*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablon je algoritmus specializované na třída multiset kontejneru ke spuštění funkce člena `left.` [prohození](../standard-library/multiset-class.md#swap)(`right`). Toto je instance částečné řazení šablon funkcí v kompilátoru. Pokud funkce šablony jsou přetížené tak, že shoda šablony pomocí volání funkce není jedinečný, pak kompilátor zvolit nejvíce specializovanou verzi šablony funkce. Obecné verzi funkce šablon
+Funkce šablony je algoritmus specializovaný na třídu kontejneru multiset ke spuštění členské funkce `left.`[swap](../standard-library/multiset-class.md#swap)(`right`). Toto je instance částečného řazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejvíce specializované verze funkce šablony. Obecná verze funkce šablony
 
-`template` \< **classT**> **void prohození**( **T &** , **T &** )
+`template` \< **třídy**> **void swap**( **t &** , **t &** )
 
-Třída v algoritmu funguje tak, že přiřazení a je pomalá operace. Specializované verze v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s vnitřní reprezentaci třídy kontejneru.
+Třída algoritmu funguje podle přiřazení a je pomalé operace. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s interní reprezentace třídy kontejneru.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad kódu pro člen třídy [multiset::swap](../standard-library/multiset-class.md#swap)příklad použití šablony verze `swap`.
+V příkladu kódu pro třídu member [multiset:: swap](../standard-library/multiset-class.md#swap)najdete příklad použití verze šablony `swap`.

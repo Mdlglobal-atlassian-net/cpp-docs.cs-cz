@@ -1,26 +1,26 @@
 ---
-title: '&lt;scoped_allocator&gt; operátory'
+title: operátory &lt;scoped_allocator&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
 ms.openlocfilehash: 071fc3b73cd3378b110d6d412bb7575e35a77478
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447331"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876332"
 ---
-# <a name="ltscopedallocatorgt-operators"></a>&lt;scoped_allocator&gt; operátory
+# <a name="ltscoped_allocatorgt-operators"></a>operátory &lt;scoped_allocator&gt;
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[operator = = – operátor](#op_eq_eq)|
 
 ## <a name="op_neq"></a>! = – operátor
 
-Testuje dva `scoped_allocator_adaptor` objekty pro nerovnost.
+Testuje dva objekty `scoped_allocator_adaptor` pro nerovnost.
 
 ```cpp
 template <class Outer, class... Inner>
@@ -31,11 +31,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
-Levý `scoped_allocator_adaptor` objekt
+*levý*\
+Levý objekt `scoped_allocator_adaptor`.
 
-*Kliknutím*\
-Pravý `scoped_allocator_adaptor` objekt.
+*pravé*\
+Pravý objekt `scoped_allocator_adaptor`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -43,7 +43,7 @@ Pravý `scoped_allocator_adaptor` objekt.
 
 ## <a name="op_eq_eq"></a>operator = = – operátor
 
-Testuje rovnost `scoped_allocator_adaptor` dvou objektů.
+Testuje dva objekty `scoped_allocator_adaptor` pro rovnost.
 
 ```cpp
 template <class Outer, class... Inner>
@@ -54,16 +54,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*zbývá*\
-Levý `scoped_allocator_adaptor` objekt
+*levý*\
+Levý objekt `scoped_allocator_adaptor`.
 
-*Kliknutím*\
-Pravý `scoped_allocator_adaptor` objekt.
+*pravé*\
+Pravý objekt `scoped_allocator_adaptor`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `left.outer_allocator() == right.outer_allocator() && left.inner_allocator() == right.inner_allocator()`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [<scoped_allocator>](../standard-library/scoped-allocator.md)

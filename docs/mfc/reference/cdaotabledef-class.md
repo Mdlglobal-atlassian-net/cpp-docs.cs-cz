@@ -1,5 +1,5 @@
 ---
-title: Cdaotabledef – třída
+title: CDaoTableDef – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CDaoTableDef
@@ -73,13 +73,13 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151212"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883863"
 ---
-# <a name="cdaotabledef-class"></a>Cdaotabledef – třída
+# <a name="cdaotabledef-class"></a>CDaoTableDef – třída
 
 Představuje uloženou definici základní tabulky nebo připojené tabulky.
 
@@ -95,103 +95,103 @@ class CDaoTableDef : public CObject
 
 |Název|Popis|
 |----------|-----------------|
-|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Vytvoří `CDaoTableDef` objektu.|
+|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Vytvoří objekt `CDaoTableDef`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[CDaoTableDef::Append](#append)|Přidá novou tabulku do databáze.|
-|[CDaoTableDef::CanUpdate](#canupdate)|Vrátí nenulovou hodnotu, pokud je možné aktualizovat tabulky (můžete upravit definice polí a vlastností tabulky).|
-|[CDaoTableDef::Close](#close)|Zavře otevřený tabledef.|
-|[CDaoTableDef::Create](#create)|Vytvoří tabulku, která mohou být přidány do databáze pomocí [připojit](#append).|
-|[CDaoTableDef::CreateField](#createfield)|Volá se, aby vytvořit pole tabulky.|
-|[CDaoTableDef::CreateIndex](#createindex)|Volá se, k vytvoření indexu pro tabulku.|
-|[CDaoTableDef::DeleteField](#deletefield)|Volá se, jak odstranit pole z tabulky.|
-|[CDaoTableDef::DeleteIndex](#deleteindex)|Volá se, aby odstranění indexu z tabulky.|
-|[CDaoTableDef::GetAttributes](#getattributes)|Vrátí hodnotu, která určuje jeden nebo více vlastností `CDaoTableDef` objektu.|
-|[CDaoTableDef::GetConnect](#getconnect)|Vrátí hodnotu, která poskytuje informace o zdrojové tabulce.|
-|[CDaoTableDef::GetDateCreated](#getdatecreated)|Vrátí datum a čas v základní tabulce podkladových `CDaoTableDef` objekt byl vytvořen.|
-|[CDaoTableDef::GetDateLastUpdated](#getdatelastupdated)|Vrátí datum a čas poslední změny v návrhu v základní tabulce.|
+|[CDaoTableDef:: Append](#append)|Přidá novou tabulku do databáze.|
+|[CDaoTableDef:: CanUpdate](#canupdate)|Vrátí nenulovou hodnotu, pokud je možné tabulku aktualizovat (můžete upravit definici polí nebo vlastností tabulky).|
+|[CDaoTableDef:: Close](#close)|Zavře otevřený tabledef.|
+|[CDaoTableDef:: Create](#create)|Vytvoří tabulku, kterou lze přidat do databáze pomocí [Append](#append).|
+|[CDaoTableDef::CreateField](#createfield)|Volá se, aby se vytvořilo pole pro tabulku.|
+|[CDaoTableDef::CreateIndex](#createindex)|Volá se, aby se vytvořil index pro tabulku.|
+|[CDaoTableDef::D eleteField](#deletefield)|Volá se, aby se odstranilo pole z tabulky.|
+|[CDaoTableDef::D eleteIndex](#deleteindex)|Volá se, aby se odstranil index z tabulky.|
+|[CDaoTableDef:: Get– atributy](#getattributes)|Vrací hodnotu, která označuje jednu nebo více vlastností objektu `CDaoTableDef`.|
+|[CDaoTableDef:: GetConnect](#getconnect)|Vrátí hodnotu, která poskytuje informace o zdroji tabulky.|
+|[CDaoTableDef::GetDateCreated](#getdatecreated)|Vrátí datum a čas, kdy byla vytvořena základní tabulka s podkladovým objektem `CDaoTableDef`.|
+|[CDaoTableDef::GetDateLastUpdated](#getdatelastupdated)|Vrátí datum a čas poslední změny provedené v návrhu základní tabulky.|
 |[CDaoTableDef::GetFieldCount](#getfieldcount)|Vrátí hodnotu, která představuje počet polí v tabulce.|
-|[CDaoTableDef::GetFieldInfo](#getfieldinfo)|Vrátí určité druhy informací o polích v tabulce.|
+|[CDaoTableDef:: GetFieldInfo](#getfieldinfo)|Vrátí konkrétní druhy informací o polích v tabulce.|
 |[CDaoTableDef::GetIndexCount](#getindexcount)|Vrátí počet indexů pro tabulku.|
-|[CDaoTableDef::GetIndexInfo](#getindexinfo)|Vrátí určité druhy informací o indexování pro tabulku.|
-|[CDaoTableDef::GetName](#getname)|Vrátí uživatelem definovaný název tabulky.|
+|[CDaoTableDef::GetIndexInfo](#getindexinfo)|Vrátí konkrétní druhy informací o indexech pro tabulku.|
+|[CDaoTableDef:: GetName](#getname)|Vrátí uživatelsky definovaný název tabulky.|
 |[CDaoTableDef::GetRecordCount](#getrecordcount)|Vrátí počet záznamů v tabulce.|
 |[CDaoTableDef::GetSourceTableName](#getsourcetablename)|Vrátí hodnotu, která určuje název připojené tabulky ve zdrojové databázi.|
-|[CDaoTableDef::GetValidationRule](#getvalidationrule)|Vrátí hodnotu, která ověřuje data v poli jako ho se nezmění ani nepřidá do tabulky.|
-|[CDaoTableDef::GetValidationText](#getvalidationtext)|Vrátí hodnotu, která určuje text zprávy, která vaše aplikace zobrazí, pokud hodnotu objektu pole nevyhovuje zadané pravidlo ověřování.|
-|[CDaoTableDef::IsOpen](#isopen)|Vrátí nenulovou hodnotu, pokud je tabulka otevřete.|
-|[CDaoTableDef::Open](#open)|Otevře existující tabledef uložené v databázi vaší společnosti TableDef kolekce.|
-|[CDaoTableDef::RefreshLink](#refreshlink)|Aktualizuje informace o připojení pro připojené tabulky.|
-|[CDaoTableDef::SetAttributes](#setattributes)|Nastaví hodnotu, která určuje jeden nebo více vlastností `CDaoTableDef` objektu.|
-|[CDaoTableDef::SetConnect](#setconnect)|Nastaví hodnotu, která poskytuje informace o zdrojové tabulce.|
+|[CDaoTableDef:: getověřovací pravidlo](#getvalidationrule)|Vrátí hodnotu, která ověřuje data v poli, jak je změněno nebo přidáno do tabulky.|
+|[CDaoTableDef::GetValidationText](#getvalidationtext)|Vrátí hodnotu, která určuje text zprávy, kterou aplikace zobrazuje, pokud hodnota objektu Field nevyhovuje zadanému ověřovacímu pravidlu.|
+|[CDaoTableDef:: Open](#isopen)|Vrátí nenulovou hodnotu, pokud je tabulka otevřená.|
+|[CDaoTableDef:: Open](#open)|Otevře existující tabledef uložený v kolekci TableDef's databáze.|
+|[CDaoTableDef::RefreshLink](#refreshlink)|Aktualizuje informace o připojení pro připojenou tabulku.|
+|[CDaoTableDef:: SetAttributes](#setattributes)|Nastaví hodnotu, která označuje jednu nebo více vlastností objektu `CDaoTableDef`.|
+|[CDaoTableDef::SetConnect](#setconnect)|Nastaví hodnotu, která poskytuje informace o zdroji tabulky.|
 |[CDaoTableDef::SetName](#setname)|Nastaví název tabulky.|
 |[CDaoTableDef::SetSourceTableName](#setsourcetablename)|Nastaví hodnotu, která určuje název připojené tabulky ve zdrojové databázi.|
-|[CDaoTableDef::SetValidationRule](#setvalidationrule)|Nastaví hodnotu, která ověřuje data v poli jako ho se nezmění ani nepřidá do tabulky.|
-|[CDaoTableDef::SetValidationText](#setvalidationtext)|Nastaví hodnotu, která určuje text zprávy, která vaše aplikace zobrazí, pokud hodnotu objektu pole nevyhovuje zadané pravidlo ověřování.|
+|[CDaoTableDef::SetValidationRule](#setvalidationrule)|Nastaví hodnotu, která ověří data v poli, jak je změněno nebo přidáno do tabulky.|
+|[CDaoTableDef::SetValidationText](#setvalidationtext)|Nastaví hodnotu, která určuje text zprávy, kterou aplikace zobrazuje, pokud hodnota objektu Field nevyhovuje zadanému ověřovacímu pravidlu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Název|Popis|
 |----------|-----------------|
-|[CDaoTableDef::m_pDAOTableDef](#m_pdaotabledef)|Ukazatel na rozhraní DAO základního objektu tabledef.|
-|[CDaoTableDef::m_pDatabase](#m_pdatabase)|Zdrojová databáze pro tuto tabulku.|
+|[CDaoTableDef:: m_pDAOTableDef](#m_pdaotabledef)|Ukazatel na rozhraní DAO podkladový objekt tabledef.|
+|[CDaoTableDef:: m_pDatabase](#m_pdatabase)|Zdrojová databáze pro tuto tabulku|
 
 ## <a name="remarks"></a>Poznámky
 
-Každý databázový objekt DAO udržuje kolekci s názvem tabledefs –, který obsahuje všechny objekty uložené tabledef DAO.
+Každý objekt databáze rozhraní DAO udržuje kolekci s názvem TableDefs, která obsahuje všechny uložené objekty DAO tabledef.
 
-Můžete pracovat s definici tabulky pomocí `CDaoTableDef` objektu. Například můžete:
+S definicí tabulky pracujete pomocí objektu `CDaoTableDef`. Můžete například provést následující věci:
 
-- Zkontrolujte strukturu pole a indexu jakékoli místní, připojené nebo externí tabulky v databázi.
+- Prověřte strukturu polí a indexů jakékoli místní, připojené nebo externí tabulky v databázi.
 
-- Volání `SetConnect` a `SetSourceTableName` členské funkce pro připojené tabulky a použití `RefreshLink` členská funkce se aktualizovat připojení k připojené tabulky.
+- Pro připojené tabulky zavolejte členské funkce `SetConnect` a `SetSourceTableName` a pomocí členské funkce `RefreshLink` aktualizujte připojení k připojeným tabulkám.
 
-- Volání `CanUpdate` členskou funkci k určení, pokud můžete upravit definice polí v tabulce.
+- Zavolejte členskou funkci `CanUpdate`, abyste zjistili, jestli můžete upravovat definice polí v tabulce.
 
-- Získání nebo nastavení ověření podmínky použití `GetValidationRule` a `SetValidationRule`a `GetValidationText` a `SetValidationText` členské funkce.
+- Získat nebo nastavit podmínky ověřování pomocí `GetValidationRule` a `SetValidationRule`a členských funkcí `GetValidationText` a `SetValidationText`.
 
-- Použití `Open` členskou funkci pro vytvoření tabulky-, dynamická sada nebo typ snímku `CDaoRecordset` objektu.
+- Pomocí `Open` členské funkce můžete vytvořit objekt `CDaoRecordset` typu tabulka-, sada nebo snímek.
 
     > [!NOTE]
-    >  Databázové třídy DAO se liší od databázových tříd MFC založených na připojení ODBC (Open Database). Všechny názvy tříd DAO databáze mají předponu "CDao". Můžete si pořád přístup ke zdrojům dat ODBC s tříd DAO; třídy DAO obecně nabízejí vynikající možnosti, protože jsou specifické pro databázový stroj Microsoft Jet.
+    >  Databázové třídy DAO se liší od databázových tříd knihovny MFC založených na rozhraní ODBC (Open Database Connectivity). Všechny názvy databázových tříd DAO mají předponu "CDao". Ke zdrojům dat rozhraní ODBC můžete přistupovat i s třídami DAO; třídy DAO obecně nabízejí nadřazené možnosti, protože jsou specifické pro databázový stroj Microsoft Jet.
 
-### <a name="to-use-tabledef-objects-either-to-work-with-an-existing-table-or-to-create-a-new-table"></a>Použití objektů tabledef pro práci s existující tabulky nebo vytvořit novou tabulku
+### <a name="to-use-tabledef-objects-either-to-work-with-an-existing-table-or-to-create-a-new-table"></a>Použití objektů tabledef pro práci s existující tabulkou nebo pro vytvoření nové tabulky
 
-1. Ve všech případech, nejprve se vytvoří `CDaoTableDef` objekt, ukazatel na poskytnutí [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu, ke které patří tabulky.
+1. Ve všech případech nejprve Sestavte objekt `CDaoTableDef` a poskytněte ukazatel na objekt [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) , ke kterému tabulka patří.
 
-1. Proveďte následující kroky, podle toho, co chcete:
+1. Pak proveďte následující postup v závislosti na tom, co chcete:
 
-   - Pokud chcete použít stávající uložený tabulky, volání objektu tabledef [otevřít](#open) členskou funkci, poskytnutí název uloženého tabulky.
+   - Chcete-li použít existující uloženou tabulku, zavolejte na [otevřené](#open) členské funkce objektu TableDef a zadejte název uložené tabulky.
 
-   - Pokud chcete vytvořit novou tabulku, volání objektu tabledef [vytvořit](#create) členskou funkci, zadání názvu tabulky. Volání [CreateField](#createfield) a [CreateIndex](#createindex) přidání pole a indexů do tabulky.
+   - Chcete-li vytvořit novou tabulku, zavolejte funkci [Create](#create) member objektu TableDef a zadejte název tabulky. Chcete-li přidat pole a indexy do tabulky, zavolejte [CreateField](#createfield) a [CreateIndex](#createindex) .
 
-   - Volání [připojit](#append) k uložení tabulky připojením k vaší databáze tabledefs – kolekce. `Create` Vloží tabledef v otevřeném stavu, takže po volání `Create` není volána `Open`.
+   - Voláním [Append](#append) uložte tabulku tím, že ji připojíte do kolekce TableDefs databáze. `Create` vloží tabledef do otevřeného stavu, takže po volání `Create` nebudete volat `Open`.
 
         > [!TIP]
-        >  Můžete je vytvořit a uložit je ve vaší databázi pomocí aplikace Microsoft Access je nejjednodušší způsob, jak vytvářet tabulky uložené. Pak můžete otevřít a použít je ve vašem kódu knihovny MFC.
+        >  Nejjednodušší způsob, jak vytvořit uložené tabulky, je vytvořit je a uložit je do databáze pomocí Microsoft Accessu. Pak je můžete otevřít a použít ve svém kódu knihovny MFC.
 
-Použití objektu tabledef jste otevřeli nebo vytvořili, vytvořte a otevřete `CDaoRecordset` objekt zadáním názvu tabledef s `dbOpenTable` hodnota v *nOpenType* parametru.
+Chcete-li použít objekt tabledef, který jste otevřeli nebo vytvořili, vytvořte a otevřete objekt `CDaoRecordset` a zadejte název tabledef s hodnotou `dbOpenTable` v parametru *nOpenType* .
 
-Použití objektu tabledef k vytvoření `CDaoRecordset` obvykle vytvoříte nebo otevřete tabledef výše popsaným způsobem a pak vytvořit objekt sady záznamů předání ukazatele do objektu tabledef při volání objektu [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open). Tabledef, které můžete předat musí být v otevřeném stavu. Další informace najdete v tématu třídy [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
+Chcete-li použít objekt tabledef k vytvoření objektu `CDaoRecordset`, obvykle je třeba vytvořit nebo otevřít tabledef, jak je popsáno výše, potom sestavit objekt sady záznamů a předat ukazatel na objekt tabledef při volání [CDaoRecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open). Tabledef, který předáte, musí být v otevřeném stavu. Další informace najdete v tématu Třída [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-Po dokončení práce tabledef objekt volat jeho [Zavřít](../../mfc/reference/cdaorecordset-class.md#close) členské funkci; poté zničit objekt tabledef.
+Po dokončení použití objektu tabledef zavolejte jeho členskou funkci [Close](../../mfc/reference/cdaorecordset-class.md#close) ; pak zničí objekt tabledef.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CDaoTableDef`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao.h
+**Záhlaví:** afxdao. h
 
-##  <a name="append"></a>  CDaoTableDef::Append
+##  <a name="append"></a>CDaoTableDef:: Append
 
-Voláním této členské funkce po zavolání [vytvořit](#create) k vytvoření nového objektu tabledef uložit tabledef v databázi.
+Tuto členskou funkci zavolejte po volání metody [Create](#create) k vytvoření nového objektu tabledef k uložení tabledef v databázi.
 
 ```
 virtual void Append();
@@ -199,16 +199,16 @@ virtual void Append();
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce objekt připojí k vaší databáze tabledefs – kolekce. Můžete použít tabledef jako dočasný objekt při definování není připojením, ale pokud chcete uložit a použít, musíte zavolat `Append`.
+Funkce připojí objekt k kolekci TableDefs databáze. Tabledef můžete použít jako dočasný objekt a současně ho definovat tak, že ho nepřipojíte, ale pokud ho chcete uložit a používat, musíte volat `Append`.
 
 > [!NOTE]
->  Pokud se pokusíte připojit nepojmenované tabledef (obsahuje hodnotu null nebo prázdný řetězec), knihovna MFC vyvolá výjimku.
+>  Pokud se pokusíte připojit nepojmenovaný tabledef (obsahující null nebo prázdný řetězec), knihovna MFC vyvolá výjimku.
 
-Související informace naleznete v tématu "Metodu" v nápovědě k DAO.
+Související informace naleznete v tématu "připojit metodu" v nápovědě k rozhraní DAO.
 
-##  <a name="canupdate"></a>  CDaoTableDef::CanUpdate
+##  <a name="canupdate"></a>CDaoTableDef:: CanUpdate
 
-Voláním této členské funkce k určení, jestli definici základní tabulky `CDaoTableDef` objektu můžete změnit.
+Voláním této členské funkce určíte, zda lze změnit definici tabulky podkladového objektu `CDaoTableDef`.
 
 ```
 BOOL CanUpdate();
@@ -216,17 +216,17 @@ BOOL CanUpdate();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je možné upravit struktura tabulky (schéma) (Přidání nebo odstranění pole a indexy), jinak 0.
+Nenulové, pokud je možné upravit strukturu tabulky (schématu) (Přidat nebo odstranit pole a indexy), jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení nově vytvořenou databázi základní `CDaoTableDef` objekt je možné aktualizovat a jako základ připojené tabulky `CDaoTableDef` objekt nelze aktualizovat. A `CDaoTableDef` objekt může být aktualizovat, i v případě, že není výslednou sadu záznamů aktualizovat.
+Ve výchozím nastavení se dá aktualizovat nově vytvořená tabulka s podkladovým objektem `CDaoTableDef` a připojenou tabulkou, která je základem `CDaoTableDef` objektu, nejde aktualizovat. Objekt `CDaoTableDef` může být aktualizovatelný, a to i v případě, že výsledná sada záznamů není aktualizovatelná.
 
-Související informace naleznete v tématu "Aktualizovat vlastnost" v nápovědě k DAO.
+Související informace naleznete v nápovědě k rozhraní DAO v tématu "Aktualizovatelná vlastnost".
 
-##  <a name="cdaotabledef"></a>  CDaoTableDef::CDaoTableDef
+##  <a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef
 
-Vytvoří `CDaoTableDef` objektu.
+Vytvoří objekt `CDaoTableDef`.
 
 ```
 CDaoTableDef(CDaoDatabase* pDatabase);
@@ -235,15 +235,15 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ### <a name="parameters"></a>Parametry
 
 *pDatabase*<br/>
-Ukazatel [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu.
+Ukazatel na objekt [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
-Po vytvoření objektu, je třeba zavolat [vytvořit](#create) nebo [otevřít](#open) členskou funkci. Jakmile skončíte s objektem, je nutné volat jeho [Zavřít](#close) členské funkce a zničit `CDaoTableDef` objektu.
+Po sestavení objektu je nutné zavolat členskou funkci [Create](#create) nebo [Open](#open) . Po dokončení objektu musíte zavolat jeho členskou funkci [Close](#close) a zničit objekt `CDaoTableDef`.
 
-##  <a name="close"></a>  CDaoTableDef::Close
+##  <a name="close"></a>CDaoTableDef:: Close
 
-Voláním této členské funkce uvolnění objektu tabledef a zavřete.
+Chcete-li zavřít a uvolnit objekt tabledef, zavolejte tuto členskou funkci.
 
 ```
 virtual void Close();
@@ -251,15 +251,15 @@ virtual void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle po volání `Close`, odstraňte objekt tabledef, pokud byla přidělena pomocí **nové**.
+Obvykle po volání `Close`odstraníte objekt tabledef, pokud byl přidělen s **novým**.
 
-Můžete volat [otevřít](#open) znovu po volání `Close`. Díky tomu můžete znovu použít objekt tabledef.
+Po volání `Close`můžete zavolat [otevřít](#open) znovu. To umožňuje znovu použít objekt tabledef.
 
-Související informace naleznete v tématu "Metoda Close" v nápovědě k DAO.
+Související informace naleznete v nápovědě k rozhraní DAO v tématu "Close Method".
 
-##  <a name="create"></a>  CDaoTableDef::Create
+##  <a name="create"></a>CDaoTableDef:: Create
 
-Voláním této členské funkce, chcete-li vytvořit novou tabulku uložené.
+Chcete-li vytvořit novou uloženou tabulku, zavolejte tuto členskou funkci.
 
 ```
 virtual void Create(
@@ -272,33 +272,33 @@ virtual void Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-Ukazatel na řetězec obsahující název tabulky.
+Ukazatel na řetězec, který obsahuje název tabulky.
 
 *lAttributes*<br/>
-Hodnota odpovídající vlastnosti tabulky tabledef objektem. Bitový operátor OR můžete kombinovat některý z následujících konstant:
+Hodnota odpovídající charakteristikám tabulky reprezentované objektem tabledef. Můžete použít bitový operátor or ke kombinování libovolné z následujících konstant:
 
-|Konstanta|Popis|
+|Trvalé|Popis|
 |--------------|-----------------|
-|`dbAttachExclusive`|U databází, které používají databázovém stroji Microsoft Jet značí, že v tabulce je otevřen pro výhradní použití připojené tabulky.|
-|`dbAttachSavePWD`|U databází, které používají databázovém stroji Microsoft Jet označuje, že se uloží ID uživatele a heslo pro připojené tabulku s informacemi o připojení.|
-|`dbSystemObject`|Označuje, že systémová tabulka poskytuje databázový stroj Microsoft Jet je tabulka.|
-|`dbHiddenObject`|Označuje, že tabulka se skryté tabulky, poskytovaných databázový stroj Microsoft Jet.|
+|`dbAttachExclusive`|U databází, které používají databázový stroj Microsoft Jet, je tabulka připojená tabulka otevřená pro výhradní použití.|
+|`dbAttachSavePWD`|U databází, které používají databázový stroj Microsoft Jet, se zobrazí informace o tom, že ID uživatele a heslo pro připojenou tabulku jsou uloženy spolu s informacemi o připojení.|
+|`dbSystemObject`|Určuje, že tabulka je systémová tabulka poskytovaná databázovým strojem Microsoft Jet.|
+|`dbHiddenObject`|Určuje, že tabulka je skrytá tabulka poskytovaná databázovým strojem Microsoft Jet.|
 
 *lpszSrcTable*<br/>
-Ukazatel na řetězec obsahující název zdrojové tabulky. Ve výchozím nastavení je tato hodnota inicializován jako hodnota NULL.
+Ukazatel na řetězec obsahující název zdrojové tabulky. Ve výchozím nastavení je tato hodnota inicializována jako NULL.
 
 *lpszConnect*<br/>
-Ukazatel na řetězec obsahující výchozí připojovací řetězec. Ve výchozím nastavení je tato hodnota inicializován jako hodnota NULL.
+Ukazatel na řetězec obsahující výchozí připojovací řetězec. Ve výchozím nastavení je tato hodnota inicializována jako NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Jakmile pojmenujete tabledef, pak můžete volat [připojit](#append) uložit tabledef databáze tabledefs – kolekce. Po volání `Append`tabledef je v otevřeném stavu a slouží k vytvoření [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objektu.
+Jakmile budete mít název tabledef, můžete zavolat příkaz [Append](#append) a uložit tabledef v kolekci TableDefs databáze. Po volání `Append`je tabledef v otevřeném stavu a můžete ho použít k vytvoření objektu [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) .
 
-Související informace naleznete v tématu "CreateTableDef metodu" v nápovědě k DAO.
+Související informace naleznete v tématu "metoda CreateTableDef" v nápovědě k rozhraní DAO.
 
-##  <a name="createfield"></a>  CDaoTableDef::CreateField
+##  <a name="createfield"></a>CDaoTableDef::CreateField
 
-Voláním této členské funkce, chcete-li přidat pole do tabulky.
+Chcete-li přidat pole do tabulky, zavolejte tuto členskou funkci.
 
 ```
 void CreateField(
@@ -315,45 +315,45 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *lpszName*<br/>
 Ukazatel na řetězcový výraz určující název tohoto pole.
 
-*nType*<br/>
-Hodnota označující datový typ pole. Toto nastavení může být jedna z těchto hodnot:
+*Noznámení*<br/>
+Hodnota, která určuje datový typ pole. Nastavení může být jedna z těchto hodnot:
 
-|Type|Velikost (bajty)|Popis|
+|Typ|Velikost (bajty)|Popis|
 |----------|--------------------|-----------------|
-|`dbBoolean`|1 bajt|BOOL|
+|`dbBoolean`|1 bajt|LOGICK|
 |`dbByte`|BYTE|
 |`dbInteger`|2|int|
 |`dbLong`|4|long|
-|`dbCurrency`|8|Měny ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
+|`dbCurrency`|8|Měna ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|float|
 |`dbDouble`|8|double|
 |`dbDate`|8|Datum a čas ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Text ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
-|`dbLongBinary`|0|Dlouhá binární soubor (objekt OLE) [CLongBinary](../../mfc/reference/clongbinary-class.md) nebo [CByteArray –](../../mfc/reference/cbytearray-class.md)|
+|`dbLongBinary`|0|Long Binary (objekt OLE), [CLongBinary –](../../mfc/reference/clongbinary-class.md) nebo [CByteArray](../../mfc/reference/cbytearray-class.md)|
 |`dbMemo`|0|Memo ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 
 *lSize*<br/>
-Hodnota, která určuje maximální velikost v bajtech, pole, který obsahuje text, nebo pevné velikosti pole, která obsahuje textové nebo číselné hodnoty. *LSize* parametr je ignorován u všech textových polí.
+Hodnota, která určuje maximální velikost (v bajtech) pole obsahujícího text nebo pevnou velikost pole, které obsahuje textové nebo číselné hodnoty. Parametr *lSize* je ignorován pro všechna pole kromě textu.
 
 *lAttributes*<br/>
-Hodnota odpovídající vlastnosti pole a, který lze spojovat pomocí bitového operátoru OR.
+Hodnota odpovídající vlastnostem pole a kterou lze kombinovat pomocí bitového operátoru OR.
 
-|Konstanta|Popis|
+|Trvalé|Popis|
 |--------------|-----------------|
-|`dbFixedField`|Velikost pole je pevně (výchozí nastavení pro číselné pole).|
-|`dbVariableField`|Velikost pole je proměnná (pouze textové pole).|
-|`dbAutoIncrField`|Hodnotu pole pro nové záznamy se automaticky zvýší na jedinečné long integer, která se nedá změnit. Podporováno pouze pro Microsoft Jet databázových tabulek.|
-|`dbUpdatableField`|Můžete změnit hodnotu pole.|
-|`dbDescending`|Pole je seřazen v sestupném (Z - A nebo 100-0) pořadí (platí pouze pro pole objektů v kolekci polí objektu indexu). Vynecháte-li tato konstanta, pole je seřazen vzestupně (A – Z nebo 0 – 100) pořadí (výchozí).|
+|`dbFixedField`|Velikost pole je pevná (výchozí pro číselná pole).|
+|`dbVariableField`|Velikost pole je proměnná (pouze textová pole).|
+|`dbAutoIncrField`|Hodnota pole pro nové záznamy se automaticky zvýší na jedinečné dlouhé celé číslo, které nelze změnit. Podporováno pouze pro databázové tabulky Microsoft Jet.|
+|`dbUpdatableField`|Hodnota pole může být změněna.|
+|`dbDescending`|Pole je seřazeno sestupně (Z-A nebo 100-0) pořadí (platí pouze pro objekt pole v kolekci pole objektu index). Pokud tuto konstantu vynecháte, pole se seřadí ve vzestupném pořadí (A-Z nebo 0-100) (výchozí).|
 
-*fieldinfo*<br/>
-Odkaz na [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktury.
+*FieldInfo*<br/>
+Odkaz na strukturu [CDaoFieldInfo –](../../mfc/reference/cdaofieldinfo-structure.md) .
 
 ### <a name="remarks"></a>Poznámky
 
-A `DAOField` objekt (OLE) se vytvoří a připojí ke kolekci polí `DAOTableDef` objekt (OLE). Kromě jeho použití pro zkoumání vlastností objektu můžete také použít `CDaoFieldInfo` vytvořit vstupní parametr pro vytvoření nových polí v tabledef. První verze `CreateField` je jednodušší použít, ale pokud chcete lepší kontrolu, můžete použít druhou verzi `CreateField`, které přijímá `CDaoFieldInfo` parametr.
+Objekt `DAOField` (OLE) je vytvořen a připojen ke kolekci polí objektu `DAOTableDef` (OLE). Kromě jejího použití pro zkoumání vlastností objektu můžete také použít `CDaoFieldInfo` k vytvoření vstupního parametru pro vytváření nových polí v tabledef. První verze `CreateField` se jednodušší používat, ale pokud chcete přesnější řízení, můžete použít druhou verzi `CreateField`, která přebírá `CDaoFieldInfo` parametr.
 
-Pokud používáte verzi `CreateField` , která přijímá `CDaoFieldInfo` parametr, musíte pečlivě nastavit každý z následujících členů `CDaoFieldInfo` struktury:
+Pokud používáte verzi `CreateField`, která přebírá `CDaoFieldInfo` parametr, musíte pečlivě nastavit všechny následující členy struktury `CDaoFieldInfo`:
 
 - `m_strName`
 
@@ -365,13 +365,13 @@ Pokud používáte verzi `CreateField` , která přijímá `CDaoFieldInfo` param
 
 - `m_bAllowZeroLength`
 
-Zbývající členy `CDaoFieldInfo` by mělo být nastavené **0**, FALSE nebo prázdný řetězec, podle potřeby pro člena nebo `CDaoException` může dojít.
+Zbývající členové `CDaoFieldInfo` by měli být nastaveni na **hodnotu 0**, false nebo prázdný řetězec, jak je to vhodné pro člena, nebo k `CDaoException` může dojít.
 
-Související informace naleznete v tématu "CreateField metodu" v nápovědě k DAO.
+Související informace naleznete v tématu "metoda CreateField" v nápovědě k rozhraní DAO.
 
-##  <a name="createindex"></a>  CDaoTableDef::CreateIndex
+##  <a name="createindex"></a>CDaoTableDef::CreateIndex
 
-Voláním této funkce do tabulky přidat index.
+Voláním této funkce přidáte index do tabulky.
 
 ```
 void CreateIndex(CDaoIndexInfo& indexinfo);
@@ -380,27 +380,27 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 ### <a name="parameters"></a>Parametry
 
 *indexinfo*<br/>
-Odkaz na [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktury.
+Odkaz na strukturu [CDaoIndexInfo –](../../mfc/reference/cdaoindexinfo-structure.md) .
 
 ### <a name="remarks"></a>Poznámky
 
-Indexy určují pořadí záznamů, které jsou k němu přistupovat z databázové tabulky a určuje, jestli jsou přijaty duplicitní záznamy. Indexy také poskytují efektivní přístup k datům.
+Indexy určují pořadí záznamů, které jsou dostupné z databázových tabulek, a to, jestli se mají Povolit duplicitní záznamy. Indexy také poskytují efektivní přístup k datům.
 
-Není nutné k vytváření indexů pro tabulky, ale v tabulkách velké, neindexovaný přístup ke konkrétní záznam nebo vytvoření sady záznamů může trvat dlouhou dobu. Vytváření moc velký počet indexů na druhé straně může zpomalit aktualizace, přidat a odstranit operací, protože se automaticky aktualizují všechny indexy. Jak se můžete rozhodnout, které indexy vytvořit vezměte v úvahu tyto faktory.
+Nemusíte vytvářet indexy pro tabulky, ale v rozsáhlých, neindexovaných tabulkách, přístup k určitému záznamu nebo vytvoření sady záznamů může trvat dlouhou dobu. Na druhé straně vytváření příliš velkého počtu indexů zpomaluje operace aktualizace, připojení a odstranění, protože se automaticky aktualizují všechny indexy. Při rozhodování o tom, které indexy se mají vytvořit, vezměte v úvahu tyto faktory.
 
-Následující členové `CDaoIndexInfo` struktura musí být nastavena:
+Musí být nastaveni následující členové `CDaoIndexInfo` struktury:
 
-- `m_strName` Je nutné zadat název.
+- `m_strName` je třeba zadat název.
 
-- `m_pFieldInfos` Musí odkazovat na pole `CDaoIndexFieldInfo` struktury.
+- `m_pFieldInfos` musí odkazovat na pole `CDaoIndexFieldInfo` struktury.
 
-- `m_nFields` Musíte zadat počet polí v poli `CDaoFieldInfo` struktury.
+- `m_nFields` musí určovat počet polí v poli `CDaoFieldInfo` struktury.
 
-Zbývající členy se ignorované if nastaví na hodnotu FALSE. Kromě toho `m_lDistinctCount` členů se ignoruje při vytváření indexu.
+Zbývající členové budou ignorováni, pokud je nastavena hodnota FALSE. Kromě toho je člen `m_lDistinctCount` ignorován během vytváření indexu.
 
-##  <a name="deletefield"></a>  CDaoTableDef::DeleteField
+##  <a name="deletefield"></a>CDaoTableDef::D eleteField
 
-Voláním této členské funkce pole odebrat a usnadnit nepřístupný.
+Chcete-li odebrat pole a nepřístupný, zavolejte tuto členskou funkci.
 
 ```
 void DeleteField(LPCTSTR lpszName);
@@ -410,20 +410,20 @@ void DeleteField(int nIndex);
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-Ukazatel na řetězec výraz, který je název existujícího pole.
+Ukazatel na řetězcový výraz, který je název existujícího pole.
 
 *nIndex*<br/>
-Index pole v tabulky založený na nule kolekce pole pro vyhledávání podle indexu.
+Index pole v kolekci polí založených na nule pro vyhledávání podle indexu
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci člena můžete použít na nový objekt, který nebyl se připojí k databázi nebo když [CanUpdate](#canupdate) vrátí nenulovou hodnotu.
+Tuto členskou funkci můžete použít pro nový objekt, který nebyl přidán do databáze nebo když funkce [CanUpdate](#canupdate) vrátí nenulovou hodnotu.
 
-Související informace naleznete v tématu "Odstranit metodu" v nápovědě k DAO.
+Související informace naleznete v tématu "odstranění metody" v nápovědě rozhraní DAO.
 
-##  <a name="deleteindex"></a>  CDaoTableDef::DeleteIndex
+##  <a name="deleteindex"></a>CDaoTableDef::D eleteIndex
 
-Voláním této členské funkce pro odstranění indexu v základní tabulce.
+Chcete-li odstranit index v podkladové tabulce, zavolejte tuto členskou funkci.
 
 ```
 void DeleteIndex(LPCTSTR lpszName);
@@ -433,20 +433,20 @@ void DeleteIndex(int nIndex);
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-Ukazatel na výraz řetězce, který je název existujícího indexu.
+Ukazatel na řetězcový výraz, který je názvem existujícího indexu.
 
 *nIndex*<br/>
-Index pole objektu indexu ve vaší databáze od nuly tabledefs – kolekce, pro vyhledávání podle indexu.
+Index pole objektu index v kolekci TableDefs založené na nule pro vyhledávání podle indexu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci člena můžete použít na nový objekt, který nebyl se připojí k databázi nebo když [CanUpdate](#canupdate) vrátí nenulovou hodnotu.
+Tuto členskou funkci můžete použít na nový objekt, který se nepřipojil k databázi, nebo když funkce [CanUpdate](#canupdate) vrátí nenulovou hodnotu.
 
-Související informace naleznete v tématu "Odstranit metodu" v nápovědě k DAO.
+Související informace naleznete v tématu "odstranění metody" v nápovědě rozhraní DAO.
 
-##  <a name="getattributes"></a>  CDaoTableDef::GetAttributes
+##  <a name="getattributes"></a>CDaoTableDef:: Get– atributy
 
-Pro `CDaoTableDef` objekt, návratová hodnota určuje vlastností tabulky reprezentována `CDaoTableDef` objekt a může být součet těchto konstanty:
+V případě objektu `CDaoTableDef` vrátí návratová hodnota vlastnosti tabulky reprezentované objektem `CDaoTableDef` a může se jednat o součet těchto konstant:
 
 ```
 long GetAttributes();
@@ -454,28 +454,28 @@ long GetAttributes();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu, která určuje jeden nebo více vlastností `CDaoTableDef` objektu.
+Vrací hodnotu, která označuje jednu nebo více vlastností objektu `CDaoTableDef`.
 
 ### <a name="remarks"></a>Poznámky
 
-|Konstanta|Popis|
+|Trvalé|Popis|
 |--------------|-----------------|
-|`dbAttachExclusive`|U databází, které používají databázovém stroji Microsoft Jet značí, že v tabulce je otevřen pro výhradní použití připojené tabulky.|
-|`dbAttachSavePWD`|U databází, které používají databázovém stroji Microsoft Jet označuje, že se uloží ID uživatele a heslo pro připojené tabulku s informacemi o připojení.|
-|`dbSystemObject`|Označuje, že systémová tabulka poskytuje databázový stroj Microsoft Jet je tabulka.|
-|`dbHiddenObject`|Označuje, že tabulka se skryté tabulky, poskytovaných databázový stroj Microsoft Jet.|
-|`dbAttachedTable`|Označuje, že je tabulka připojené tabulky z databáze rozhraní ODBC, jako je databázový stroj.|
-|`dbAttachedODBC`|Označuje, že je tabulka připojené tabulky z databáze ODBC, jako je Microsoft SQL Server.|
+|`dbAttachExclusive`|U databází, které používají databázový stroj Microsoft Jet, je tabulka připojená tabulka otevřená pro výhradní použití.|
+|`dbAttachSavePWD`|U databází, které používají databázový stroj Microsoft Jet, se zobrazí informace o tom, že ID uživatele a heslo pro připojenou tabulku jsou uloženy spolu s informacemi o připojení.|
+|`dbSystemObject`|Určuje, že tabulka je systémová tabulka poskytovaná databázovým strojem Microsoft Jet.|
+|`dbHiddenObject`|Určuje, že tabulka je skrytá tabulka poskytovaná databázovým strojem Microsoft Jet.|
+|`dbAttachedTable`|Určuje, že tabulka je připojená tabulka z jiné databáze než ODBC, jako je například databáze Paradox.|
+|`dbAttachedODBC`|Určuje, že tabulka je připojená tabulka z databáze rozhraní ODBC, například Microsoft SQL Server.|
 
-Systémová tabulka je tabulka vytvořená databázovém stroji Microsoft Jet tak, aby obsahovala různých interních informací.
+Systémová tabulka je tabulka vytvořená databázovým strojem Microsoft Jet, která obsahuje různé interní informace.
 
-Skryté tabulky je vytvořený pro dočasné použití databázový stroj Microsoft Jet tabulku.
+Skrytá tabulka je tabulka vytvořená pro dočasné použití databázovým strojem Microsoft Jet.
 
-Související informace naleznete v tématu "Atributy vlastnosti" v nápovědě k DAO.
+Související informace naleznete v tématu "vlastnost atributů" v nápovědě rozhraní DAO.
 
-##  <a name="getconnect"></a>  CDaoTableDef::GetConnect
+##  <a name="getconnect"></a>CDaoTableDef:: GetConnect
 
-Voláním této členské funkce k získání připojovacího řetězce datového zdroje.
+Zavolejte tuto členskou funkci pro získání připojovacího řetězce pro zdroj dat.
 
 ```
 CString GetConnect();
@@ -483,25 +483,25 @@ CString GetConnect();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CString` objekt, který obsahuje typ cesty a databáze pro tabulku.
+Objekt `CString` obsahující cestu a typ databáze pro tabulku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro `CDaoTableDef` objekt, který reprezentuje připojené tabulky `CString` objektu se skládá z jedné nebo dvou částí (specifikátor typu databáze a cestu k databázi).
+Pro objekt `CDaoTableDef`, který představuje připojenou tabulku, se objekt `CString` skládá z jedné nebo dvou částí (specifikátor typu databáze a cesta k databázi).
 
-Cesta, jak je znázorněno v následující tabulce je úplnou cestu k adresáři obsahujícímu soubory databáze a musí předcházet identifikátor "databáze =". V některých případech (jak s Microsoft Jet a Microsoft Excel databáze) konkrétní název souboru je zahrnuta v argumentu cesty databáze.
+Cesta uvedená v následující tabulce je úplná cesta pro adresář obsahující soubory databáze a před ní musí být uveden identifikátor "DATABASE =". V některých případech (stejně jako u databází Microsoft Jet a Microsoft Excel) je do argumentu cesta databáze zahrnut konkrétní název souboru.
 
-V tabulce v [CDaoTableDef::SetConnect](#setconnect) ukazuje databáze typy a jejich odpovídající specifikátory databáze a cesty:
+Tabulka v [CDaoTableDef:: SetConnect](#setconnect) zobrazuje možné typy databází a jejich odpovídající specifikátory databáze a cesty:
 
-Pro základní tabulky databáze Microsoft Jet specifikátor je prázdný řetězec ("").
+Pro základní tabulky databáze Microsoft Jet je specifikátorem prázdný řetězec ("").
 
-Pokud heslo je vyžadována, ale není zadaný, zobrazí se ovladač ODBC čas přihlášení dialogového okna při prvním přístupu k tabulce znovu a pokud je připojení zavřít a znovu otevřít. Pokud má připojené tabulky `dbAttachSavePWD` atribut, výzva k přihlášení se nezobrazí, když znovu otevřete v tabulce.
+Pokud je vyžadováno heslo, ale není k dispozici, zobrazí se v ovladači ODBC dialogové okno přihlášení při prvním otevření tabulky a znovu v případě, že je připojení zavřeno a znovu otevřeno. Pokud má připojená tabulka atribut `dbAttachSavePWD`, výzva k zadání přihlašovacích údajů se nezobrazí při opětovném otevření tabulky.
 
-Související informace naleznete v tématu "Připojit vlastnost" v nápovědě k DAO.
+Související informace najdete v nápovědě k rozhraní DAO v tématu "připojení vlastnosti".
 
-##  <a name="getdatecreated"></a>  CDaoTableDef::GetDateCreated
+##  <a name="getdatecreated"></a>CDaoTableDef::GetDateCreated
 
-Voláním této funkce určete datum a čas podkladové tabulky `CDaoTableDef` objekt byl vytvořen.
+Voláním této funkce určíte datum a čas, kdy byla vytvořena tabulka podkladového objektu `CDaoTableDef`.
 
 ```
 COleDateTime GetDateCreated();
@@ -509,17 +509,17 @@ COleDateTime GetDateCreated();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnotu obsahující datum a čas vytvoření podkladové tabulky `CDaoTableDef` objektu.
+Hodnota, která obsahuje datum a čas vytvoření tabulky podkladového objektu `CDaoTableDef`.
 
 ### <a name="remarks"></a>Poznámky
 
-Nastavení data a času jsou odvozeny z počítače, na kterém byla vytvořena nebo poslední aktualizace základní tabulka. V prostředí uživatelé získají nastavení přímo ze souborového serveru, aby se zabránilo odchylky; To znamená všechny klienti měli používat jako zdroj času "standard", případně z jednoho serveru.
+Nastavení data a času jsou odvozena z počítače, ve kterém byla vytvořena nebo naposledy aktualizována základní tabulka. Ve víceuživatelském prostředí by uživatelé měli získat tato nastavení přímo ze souborového serveru, aby se předešlo nesrovnalostem. To znamená, že všichni klienti by měli použít "standardní" zdroj času, třeba z jednoho serveru.
 
-Související informace naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě k DAO.
+Související informace naleznete v tématu "DateCreated, hodnota LastUpdated Properties" v nápovědě pro rozhraní DAO.
 
-##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated
+##  <a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated
 
-Voláním této funkce určete datum a čas podkladové tabulky `CDaoTableDef` byl objekt naposledy aktualizován.
+Voláním této funkce určíte datum a čas, kdy byla tabulka podkladového objektu `CDaoTableDef` naposledy aktualizována.
 
 ```
 COleDateTime GetDateLastUpdated();
@@ -527,17 +527,17 @@ COleDateTime GetDateLastUpdated();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která obsahuje datum a čas podkladové tabulky `CDaoTableDef` byl objekt naposledy aktualizován.
+Hodnota, která obsahuje datum a čas, kdy byla naposledy aktualizována tabulka podkladového objektu `CDaoTableDef`.
 
 ### <a name="remarks"></a>Poznámky
 
-Nastavení data a času jsou odvozeny z počítače, na kterém byla vytvořena nebo poslední aktualizace základní tabulka. V prostředí uživatelé získají nastavení přímo ze souborového serveru, aby se zabránilo odchylky; To znamená všechny klienti měli používat jako zdroj času "standard", případně z jednoho serveru.
+Nastavení data a času jsou odvozena z počítače, ve kterém byla vytvořena nebo naposledy aktualizována základní tabulka. Ve víceuživatelském prostředí by uživatelé měli získat tato nastavení přímo ze souborového serveru, aby se předešlo nesrovnalostem. To znamená, že všichni klienti by měli použít "standardní" zdroj času, třeba z jednoho serveru.
 
-Související informace naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě k DAO.
+Související informace naleznete v tématu "DateCreated, hodnota LastUpdated Properties" v nápovědě pro rozhraní DAO.
 
-##  <a name="getfieldcount"></a>  CDaoTableDef::GetFieldCount
+##  <a name="getfieldcount"></a>CDaoTableDef::GetFieldCount
 
-Voláním této členské funkce se načíst počet polí definovaných v tabulce.
+Zavolejte tuto členskou funkci pro načtení počtu polí definovaných v tabulce.
 
 ```
 short GetFieldCount();
@@ -545,17 +545,17 @@ short GetFieldCount();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet polí v tabulce.
+Počet polí v tabulce
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je jeho hodnota 0, nejsou žádné objekty v kolekci.
+Pokud je jeho hodnota 0, v kolekci nejsou žádné objekty.
 
-Související informace naleznete v tématu "Vlastnosti" v nápovědě k DAO.
+Související informace naleznete v nápovědě k rozhraní DAO v tématu "vlastnost Count".
 
-##  <a name="getfieldinfo"></a>  CDaoTableDef::GetFieldInfo
+##  <a name="getfieldinfo"></a>CDaoTableDef:: GetFieldInfo
 
-Voláním této členské funkce získat různé druhy informací o pole definované v tabledef.
+Volejte tuto členskou funkci pro získání různých druhů informací o poli definovaném v tabledef.
 
 ```
 void GetFieldInfo(
@@ -572,34 +572,34 @@ void GetFieldInfo(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index pole objektu v tabulky založený na nule kolekce pole pro vyhledávání podle indexu.
+Index objektu pole v kolekci polí založených na nule pro vyhledávání podle indexu.
 
-*fieldinfo*<br/>
-Odkaz na [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktury.
+*FieldInfo*<br/>
+Odkaz na strukturu [CDaoFieldInfo –](../../mfc/reference/cdaofieldinfo-structure.md) .
 
 *dwInfoOptions*<br/>
-Možnosti, které určují, jaké informace o pole, které chcete načíst. Tady jsou uvedené dostupné možnosti spolu s způsobí funkce vrátit:
+Možnosti, které určují, které informace o poli se mají načíst. Dostupné možnosti jsou uvedené tady spolu s tím, co způsobí, že funkce vrátí:
 
-- `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ, velikosti, atributy. Tuto možnost použijte pro nejrychlejší výkon.
+- `AFX_DAO_PRIMARY_INFO` (výchozí) název, typ, velikost, atributy. Tuto možnost použijte pro nejrychlejší výkon.
 
-- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: Pořadí, povinné, umožňují nulovou délku, Kolační pořadí, cizí název, zdrojové pole, zdrojová tabulka
+- `AFX_DAO_SECONDARY_INFO` primární informace, navíc: ordinální pozice, požadováno, povolení nulové délky, pořadí řazení, cizí název, zdrojové pole, zdrojová tabulka
 
-- `AFX_DAO_ALL_INFO` Informace o primární a sekundární, a navíc: Ověřovací pravidla, Text pro ověření, výchozí hodnota
+- `AFX_DAO_ALL_INFO` primární a sekundární informace, navíc: ověřovací pravidlo, text ověření, výchozí hodnota
 
 *lpszName*<br/>
-Ukazatel na název objektu pole pro vyhledávání podle názvu. Název je řetězec s až 64 znaků, který jednoznačně názvy pole.
+Ukazatel na název objektu pole pro vyhledávání podle názvu. Název je řetězec s až 64 znaky, které pole jedinečně pojmenují.
 
 ### <a name="remarks"></a>Poznámky
 
-Jednu verzi funkce umožňuje vyhledat pole podle indexu. Jiné verze umožňuje vyhledávání podle názvu pole.
+Jedna verze funkce umožňuje vyhledat pole podle indexu. Druhá verze umožňuje vyhledat pole podle názvu.
 
-Popis informací, najdete v tématu [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktury. Tato struktura obsahuje členy, které odpovídají položkám informací uvedených v popisu *dwInfoOptions*. Pokud budete požadovat informace na jedné úrovni, můžete získat informace o všech předchozích úrovní.
+Popis vrácených informací najdete v tématu struktura [CDaoFieldInfo –](../../mfc/reference/cdaofieldinfo-structure.md) . Tato struktura obsahuje členy, které odpovídají položkám, které jsou uvedeny výše v popisu *dwInfoOptions*. Když si vyžádáte informace na jedné úrovni, získáte informace také pro všechny předchozí úrovně.
 
-Související informace naleznete v tématu "Atributy vlastnosti" v nápovědě k DAO.
+Související informace naleznete v tématu "vlastnost atributů" v nápovědě rozhraní DAO.
 
-##  <a name="getindexcount"></a>  CDaoTableDef::GetIndexCount
+##  <a name="getindexcount"></a>CDaoTableDef::GetIndexCount
 
-Voláním této členské funkce získat počet indexů pro tabulku.
+Voláním této členské funkce získáte počet indexů pro tabulku.
 
 ```
 short GetIndexCount();
@@ -611,13 +611,13 @@ Počet indexů pro tabulku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je jeho hodnota 0, nejsou žádné indexy v kolekci.
+Pokud je jeho hodnota 0, v kolekci nejsou žádné indexy.
 
-Související informace naleznete v tématu "Vlastnosti" v nápovědě k DAO.
+Související informace naleznete v nápovědě k rozhraní DAO v tématu "vlastnost Count".
 
-##  <a name="getindexinfo"></a>  CDaoTableDef::GetIndexInfo
+##  <a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo
 
-Voláním této členské funkce získat různé druhy informací o indexu definované v tabledef.
+Volejte tuto členskou funkci pro získání různých druhů informací o indexu definovaném v tabledef.
 
 ```
 void GetIndexInfo(
@@ -634,34 +634,34 @@ void GetIndexInfo(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Číselný index objektu na Index v tabulce založený na nule indexů kolekce, pro vyhledávání podle jeho pozice v kolekci.
+Číselný index objektu indexu v kolekci indexů založených na nule pro vyhledávání podle pozice v kolekci.
 
 *indexinfo*<br/>
-Odkaz na [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktury.
+Odkaz na strukturu [CDaoIndexInfo –](../../mfc/reference/cdaoindexinfo-structure.md) .
 
 *dwInfoOptions*<br/>
-Možnosti, které určují, jaké informace o index k načtení. Tady jsou uvedené dostupné možnosti spolu s způsobí funkce vrátit:
+Možnosti, které určují, které informace o indexu mají být načteny. Dostupné možnosti jsou uvedené tady spolu s tím, co způsobí, že funkce vrátí:
 
-- `AFX_DAO_PRIMARY_INFO` Pole se jménem, informace o poli. Tuto možnost použijte pro nejrychlejší výkon.
+- `AFX_DAO_PRIMARY_INFO` název, pole informace o poli. Tuto možnost použijte pro nejrychlejší výkon.
 
-- `AFX_DAO_SECONDARY_INFO` Primární informace, a navíc: Primární, jedinečný, v clusteru, Ignorovat hodnoty Null, povinné, cizí
+- `AFX_DAO_SECONDARY_INFO` primární informace, navíc: primární, jedinečný, clusterovaný, ignorované hodnoty null, povinné, cizí
 
-- `AFX_DAO_ALL_INFO` Informace o primární a sekundární, a navíc: Počet jedinečných položek
+- `AFX_DAO_ALL_INFO` primární a sekundární informace a navíc: jedinečný počet
 
 *lpszName*<br/>
 Ukazatel na název objektu indexu pro vyhledávání podle názvu.
 
 ### <a name="remarks"></a>Poznámky
 
-Jednu verzi funkce umožňuje vyhledat index podle jeho pozice v kolekci. Jiné verze umožňuje vyhledávání podle názvu indexu.
+Jedna verze funkce umožňuje vyhledat index podle jeho pozice v kolekci. Druhá verze umožňuje vyhledat index podle názvu.
 
-Popis informací, najdete v tématu [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktury. Tato struktura obsahuje členy, které odpovídají položkám informací uvedených v popisu *dwInfoOptions*. Pokud budete požadovat informace na jedné úrovni, můžete získat informace o všech předchozích úrovní.
+Popis vrácených informací najdete v tématu struktura [CDaoIndexInfo –](../../mfc/reference/cdaoindexinfo-structure.md) . Tato struktura obsahuje členy, které odpovídají položkám, které jsou uvedeny výše v popisu *dwInfoOptions*. Když si vyžádáte informace na jedné úrovni, získáte informace také pro všechny předchozí úrovně.
 
-Související informace naleznete v tématu "Atributy vlastnosti" v nápovědě k DAO.
+Související informace naleznete v tématu "vlastnost atributů" v nápovědě rozhraní DAO.
 
-##  <a name="getname"></a>  CDaoTableDef::GetName
+##  <a name="getname"></a>CDaoTableDef:: GetName
 
-Voláním této členské funkce získat uživatelem definovaný název základní tabulky.
+Zavolejte tuto členskou funkci, aby získala uživatelsky definovaný název podkladové tabulky.
 
 ```
 CString GetName();
@@ -669,17 +669,17 @@ CString GetName();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Uživatelem definovaný název tabulky.
+Uživatelsky definovaný název tabulky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento název začíná písmenem a může obsahovat až 64 znaků. Může obsahovat čísla a podtržítka znaků, ale nemůže obsahovat interpunkční znaménka nebo mezery.
+Tento název začíná písmenem a může obsahovat maximálně 64 znaků. Může obsahovat číslice a podtržítka, ale nemůže obsahovat interpunkční znaménka nebo mezery.
 
-Související informace naleznete v tématu "Název vlastnosti" v nápovědě k DAO.
+Související informace najdete v tématu "vlastnost Name" v nápovědě k rozhraní DAO.
 
-##  <a name="getrecordcount"></a>  CDaoTableDef::GetRecordCount
+##  <a name="getrecordcount"></a>CDaoTableDef::GetRecordCount
 
-Voláním této členské funkce a zjistěte, kolik záznamů se v `CDaoTableDef` objektu.
+Voláním této členské funkce zjistíte, kolik záznamů je v objektu `CDaoTableDef`.
 
 ```
 long GetRecordCount();
@@ -687,17 +687,17 @@ long GetRecordCount();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet záznamů v objektu tabledef získat přístup.
+Počet záznamů, které jsou k dispozici v objektu tabledef.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `GetRecordCount` pro typ tabulky `CDaoTableDef` objekt představuje přibližný počet záznamů v tabulce a má vliv okamžitě, jako jsou přidané a odstraněné záznamy tabulky. Vrátit zpět, dokud nezavoláte, bude se transakce zobrazují počet záznamů v rámci [CDaoWorkSpace::CompactDatabase](../../mfc/reference/cdaoworkspace-class.md#compactdatabase). A `CDaoTableDef` objektu se žádné záznamy je vlastnost počet záznamů je nastavena na hodnotu 0. Při práci s tabulkami v připojené nebo ODBC databází, `GetRecordCount` vždy vrátí hodnotu -1.
+Volání `GetRecordCount` pro objekt `CDaoTableDef` typu tabulka odráží přibližný počet záznamů v tabulce a je okamžitě ovlivněn při přidávání a odstraňování záznamů tabulky. Transakce vracené zpět se zobrazí jako součást počtu záznamů, dokud nebudete volat [CDaoWorkspace:: CompactDatabase](../../mfc/reference/cdaoworkspace-class.md#compactdatabase). Objekt `CDaoTableDef` bez záznamů má nastavení vlastnosti počet záznamů na hodnotu 0. Při práci s připojenými tabulkami nebo databázemi ODBC `GetRecordCount` vždy vrátí hodnotu-1.
 
-Související informace naleznete v tématu "PočetZáznamů vlastnost" v nápovědě k DAO.
+Související informace najdete v tématu "vlastnost RecordCount" v nápovědě k rozhraní DAO.
 
-##  <a name="getsourcetablename"></a>  CDaoTableDef::GetSourceTableName
+##  <a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName
 
-Voláním této členské funkce načíst název připojené tabulky ve zdrojové databázi.
+Voláním této členské funkce načtěte název připojené tabulky ve zdrojové databázi.
 
 ```
 CString GetSourceTableName();
@@ -705,17 +705,17 @@ CString GetSourceTableName();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CString` objekt, který určuje název zdroje připojené tabulky nebo prázdný řetězec, pokud má tabulka nativní data.
+Objekt `CString`, který určuje název zdroje připojené tabulky nebo prázdný řetězec, pokud je tabulka nativních dat.
 
 ### <a name="remarks"></a>Poznámky
 
-Připojené tabulky je tabulka v jiné databázi, které jsou propojeny s Microsoft Jet databáze. Data pro připojené tabulky zůstanou v externí databázi, ve kterém lze ovládat pomocí jiných aplikací.
+Připojená tabulka je tabulka v jiné databázi propojené s databází Microsoft Jet. Data pro připojené tabulky zůstanou v externí databázi, kde se můžou manipulovat jinými aplikacemi.
 
-Související informace naleznete v tématu "%{sourcetablename/ vlastnost" v nápovědě k DAO.
+Související informace najdete v tématu "Vlastnost SourceTableName" v nápovědě k rozhraní DAO.
 
-##  <a name="getvalidationrule"></a>  CDaoTableDef::GetValidationRule
+##  <a name="getvalidationrule"></a>CDaoTableDef:: getověřovací pravidlo
 
-Voláním této členské funkce k načtení ověřovacího pravidla pro tabledef.
+Voláním této členské funkce načtěte ověřovací pravidlo pro tabledef.
 
 ```
 CString GetValidationRule();
@@ -723,17 +723,17 @@ CString GetValidationRule();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CString` objekt, který ověřuje data v poli jako ho se nezmění ani nepřidá do tabulky.
+Objekt `CString`, který ověřuje data v poli, jak je změněno nebo přidáno do tabulky.
 
 ### <a name="remarks"></a>Poznámky
 
-Ověřovací pravidla se používají v souvislosti s operace aktualizace. Pokud tabledef obsahuje ověřovací pravidlo, musí aktualizace této tabledef předem kritériím neodpovídají, předtím, než se data změní. Pokud změna neodpovídá kritériím, výjimku, která obsahuje hodnotu [GetValidationText](#getvalidationtext) je vyvolána výjimka. Pro `CDaoTableDef` objektu, to `CString` je jen pro čtení pro připojené tabulky a čtení/zápisu pro základní tabulky.
+Ověřovací pravidla se používají v souvislosti s operacemi aktualizace. Pokud tabledef obsahuje ověřovací pravidlo, musí aktualizace tohoto tabledef odpovídat předem určeným kritériím, aby se data změnila. Pokud změna neodpovídá kritériím, je vyvolána výjimka obsahující hodnotu [GetValidationText](#getvalidationtext) . Pro objekt `CDaoTableDef` je tato `CString` jen pro čtení pro připojenou tabulku a pro čtení i zápis pro základní tabulku.
 
-Související informace naleznete v tématu "Ověřovací pravidlo vlastnost" v nápovědě k DAO.
+Související informace najdete v nápovědě k rozhraní DAO v tématu vlastnost "ověřovací pravidlo".
 
-##  <a name="getvalidationtext"></a>  CDaoTableDef::GetValidationText
+##  <a name="getvalidationtext"></a>CDaoTableDef::GetValidationText
 
-Voláním této funkce se načíst řetězec, který se zobrazí, když uživatel zadá data, která se neshoduje s ověřovací pravidlo.
+Voláním této funkce načtete řetězec, který se zobrazí, když uživatel zadá data, která se neshodují s ověřovacím pravidlem.
 
 ```
 CString GetValidationText();
@@ -741,17 +741,17 @@ CString GetValidationText();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CString` objekt, který určuje text zobrazený v případě, že uživatel zadá data, která se neshoduje s ověřovací pravidlo.
+Objekt `CString`, který určuje text zobrazený v případě, že uživatel zadá data, která se neshodují s ověřovacím pravidlem.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro `CDaoTableDef` objektu, to `CString` je jen pro čtení pro připojené tabulky a čtení/zápisu pro základní tabulky.
+Pro objekt `CDaoTableDef` je tato `CString` jen pro čtení pro připojenou tabulku a pro čtení i zápis pro základní tabulku.
 
-Související informace naleznete v tématu "Ověřovací vlastnost" v nápovědě k DAO.
+Související informace najdete v nápovědě k rozhraní DAO v tématu "vlastnost ověřovacího hesla".
 
-##  <a name="isopen"></a>  CDaoTableDef::IsOpen
+##  <a name="isopen"></a>CDaoTableDef:: Open
 
-Voláním této členské funkce k určení, zda `CDaoTableDef` objektu je momentálně otevřený.
+Voláním této členské funkce určíte, zda je objekt `CDaoTableDef` aktuálně otevřen.
 
 ```
 BOOL IsOpen() const;
@@ -759,27 +759,27 @@ BOOL IsOpen() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulovou hodnotu, pokud `CDaoTableDef` objekt je otevřít; jinak 0.
+Nenulové, pokud je objekt `CDaoTableDef` otevřený; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_pdatabase"></a>  CDaoTableDef::m_pDatabase
+##  <a name="m_pdatabase"></a>CDaoTableDef:: m_pDatabase
 
-Obsahuje ukazatel [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu pro tuto tabulku.
-
-### <a name="remarks"></a>Poznámky
-
-##  <a name="m_pdaotabledef"></a>  CDaoTableDef::m_pDAOTableDef
-
-Obsahuje ukazatel na rozhraní OLE pro základní objekt rozhraní DAO tabledef `CDaoTableDef` objektu.
+Obsahuje ukazatel na objekt [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) pro tuto tabulku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je potřeba získat přímo přístup k rozhraní DAO, použijte tento ukazatel.
+##  <a name="m_pdaotabledef"></a>CDaoTableDef:: m_pDAOTableDef
 
-##  <a name="open"></a>  CDaoTableDef::Open
+Obsahuje ukazatel na rozhraní OLE pro objekt DAO tabledef podkladového objektu `CDaoTableDef`.
 
-Tato členská funkce Otevřít tabledef dříve uložené v databázi volání vaší společnosti TableDef kolekce.
+### <a name="remarks"></a>Poznámky
+
+Tento ukazatel použijte v případě, že potřebujete získat přímý přístup k rozhraní DAO.
+
+##  <a name="open"></a>CDaoTableDef:: Open
+
+Voláním této členské funkce otevřete tabledef dříve uloženou v kolekci TableDef's databáze.
 
 ```
 virtual void Open(LPCTSTR lpszName);
@@ -792,9 +792,9 @@ Ukazatel na řetězec, který určuje název tabulky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="refreshlink"></a>  CDaoTableDef::RefreshLink
+##  <a name="refreshlink"></a>CDaoTableDef::RefreshLink
 
-Voláním této členské funkce k aktualizaci informací o připojení pro připojené tabulky.
+Chcete-li aktualizovat informace o připojení pro připojenou tabulku, zavolejte tuto členskou funkci.
 
 ```
 void RefreshLink();
@@ -802,15 +802,15 @@ void RefreshLink();
 
 ### <a name="remarks"></a>Poznámky
 
-Změnit informace o připojení pro připojené tabulky voláním [SetConnect](#setconnect) u odpovídajícího `CDaoTableDef` objekt a potom pomocí `RefreshLink` členskou funkci k aktualizaci informací. Při volání `RefreshLink`, vlastnosti připojené tabulky se nezmění.
+Informace o připojení pro připojenou tabulku změníte voláním [SetConnect](#setconnect) na odpovídajícím objektu `CDaoTableDef` a následným použitím `RefreshLink` členské funkce k aktualizaci informací. Při volání `RefreshLink`se nezmění vlastnosti připojené tabulky.
 
-Chcete-li vynutit upravené připojení informace, které začnou platit, všechny otevřené [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekty podle této tabledef musí být uzavřeny.
+Aby se projevily změněné informace o připojení, musí být všechny otevřené objekty [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) založené na tomto tabledef zavřeny.
 
-Související informace naleznete v tématu "RefreshLink metodu" v nápovědě k DAO.
+Související informace naleznete v tématu "metoda RefreshLink" v nápovědě k rozhraní DAO.
 
-##  <a name="setattributes"></a>  CDaoTableDef::SetAttributes
+##  <a name="setattributes"></a>CDaoTableDef:: SetAttributes
 
-Nastaví hodnotu, která určuje jeden nebo více vlastností `CDaoTableDef` objektu.
+Nastaví hodnotu, která označuje jednu nebo více vlastností objektu `CDaoTableDef`.
 
 ```
 void SetAttributes(long lAttributes);
@@ -819,28 +819,28 @@ void SetAttributes(long lAttributes);
 ### <a name="parameters"></a>Parametry
 
 *lAttributes*<br/>
-Vlastnosti tabulky reprezentována `CDaoTableDef` objekt a může být součet těchto konstanty:
+Charakteristiky tabulky reprezentované objektem `CDaoTableDef` a mohou být součtem těchto konstant:
 
-|Konstanta|Popis|
+|Trvalé|Popis|
 |--------------|-----------------|
-|`dbAttachExclusive`|U databází, které používají databázovém stroji Microsoft Jet značí, že v tabulce je otevřen pro výhradní použití připojené tabulky.|
-|`dbAttachSavePWD`|U databází, které používají databázovém stroji Microsoft Jet označuje, že se uloží ID uživatele a heslo pro připojené tabulku s informacemi o připojení.|
-|`dbSystemObject`|Označuje, že systémová tabulka poskytuje databázový stroj Microsoft Jet je tabulka.|
-|`dbHiddenObject`|Označuje, že tabulka se skryté tabulky, poskytovaných databázový stroj Microsoft Jet.|
+|`dbAttachExclusive`|U databází, které používají databázový stroj Microsoft Jet, je tabulka připojená tabulka otevřená pro výhradní použití.|
+|`dbAttachSavePWD`|U databází, které používají databázový stroj Microsoft Jet, se zobrazí informace o tom, že ID uživatele a heslo pro připojenou tabulku jsou uloženy spolu s informacemi o připojení.|
+|`dbSystemObject`|Určuje, že tabulka je systémová tabulka poskytovaná databázovým strojem Microsoft Jet.|
+|`dbHiddenObject`|Určuje, že tabulka je skrytá tabulka poskytovaná databázovým strojem Microsoft Jet.|
 
 ### <a name="remarks"></a>Poznámky
 
-Při nastavování více atributů, kombinovat sečtením odpovídající konstanty pomocí operátoru bitového operátoru OR. Nastavení `dbAttachExclusive` na samostatný tabulku vytváří výjimku. Kombinace těchto hodnot také vytvořit výjimku:
+Při nastavování více atributů je lze kombinovat pomocí součtu příslušných konstant pomocí bitového operátoru OR. Nastavení `dbAttachExclusive` v nepřipojené tabulce vyvolá výjimku. Kombinování následujících hodnot také produkuje výjimku:
 
 - **dbAttachExclusive &#124; dbAttachedODBC**
 
 - **dbAttachSavePWD &#124; dbAttachedTable**
 
-Související informace naleznete v tématu "Atributy vlastnosti" v nápovědě k DAO.
+Související informace naleznete v tématu "vlastnost atributů" v nápovědě rozhraní DAO.
 
-##  <a name="setconnect"></a>  CDaoTableDef::SetConnect
+##  <a name="setconnect"></a>CDaoTableDef::SetConnect
 
-Pro `CDaoTableDef` objekt, který reprezentuje připojené tabulky, na objekt řetězce se skládá z jedné nebo dvou částí (specifikátor typu databáze a cestu k databázi).
+Pro objekt `CDaoTableDef`, který představuje připojenou tabulku, se objekt String skládá z jedné nebo dvou částí (specifikátor typu databáze a cesta k databázi).
 
 ```
 void SetConnect(LPCTSTR lpszConnect);
@@ -849,50 +849,50 @@ void SetConnect(LPCTSTR lpszConnect);
 ### <a name="parameters"></a>Parametry
 
 *lpszConnect*<br/>
-Ukazatel na řetězcový výraz určující další parametry k předání do rozhraní ODBC nebo instalovat ovladače databází.
+Ukazatel na řetězcový výraz, který určuje další parametry, které se mají předat rozhraní ODBC nebo instalovat ovladače ISAM.
 
 ### <a name="remarks"></a>Poznámky
 
-Cesta, jak je znázorněno v následující tabulce je úplnou cestu k adresáři obsahujícímu soubory databáze a musí předcházet identifikátor "databáze =". V některých případech (jak s Microsoft Jet a Microsoft Excel databáze) konkrétní název souboru je zahrnuta v argumentu cesty databáze.
+Cesta uvedená v následující tabulce je úplná cesta pro adresář obsahující soubory databáze a před ní musí být uveden identifikátor "DATABASE =". V některých případech (stejně jako u databází Microsoft Jet a Microsoft Excel) je do argumentu cesta databáze zahrnut konkrétní název souboru.
 
 > [!NOTE]
->  Nesmí obsahovat mezery kolem rovnítka cesta příkazy ve formě "databáze = jednotka:\\\path". To způsobí k vyvolání výjimky a neúspěšné připojení.
+>  Nepoužívejte prázdné znaky kolem příkazů Path pro rovnítko ve formátu "DATABASE = Drive:\\\path". Výsledkem bude vyjímka výjimky a selhání připojení.
 
-V následující tabulce jsou uvedeny typy databáze a jejich odpovídající specifikátory databáze a cesty:
+V následující tabulce jsou uvedeny možné typy databází a jejich odpovídající specifikátory a cesty databáze:
 
 |Typ databáze|Specifikátor|Cesta|
 |-------------------|---------------|----------|
-|Databáze s použitím databázový stroj|"[ `database`];"|" `drive`:\\\ *cesta*\\\ *filename*. MDB"|
-|dBASE III|"dBASE III;"|" `drive`:\\\ *cesta*"|
-|dBASE IV|"dBASE IV;"|" `drive`:\\\ *cesta*"|
-|dBASE 5|"dBASE 5.0."|" `drive`:\\\ *cesta*"|
-|Paradox 3.x|"Paradox 3.x;"|" `drive`:\\\ *cesta*"|
-|Paradox 4.x|"Paradox 4.x;"|" `drive`:\\\ *cesta*"|
-|Paradox 5.x|"Paradox 5.x;"|" `drive`:\\\ *cesta*"|
-|Excel 3.0|"Excel 3.0;"|" `drive`:\\\ *cesta*\\\ *filename*. XLS"|
-|Excel 4.0|"Excel 4.0;"|" `drive`:\\\ *cesta*\\\ *filename*. XLS"|
-|Excel 5.0 nebo 95 aplikace Excel|"Excel 5.0."|" `drive`:\\\ *cesta*\\\ *filename*. XLS"|
-|Excel 97|"Excel 8.0;"|" `drive`:\\\ *cesta*\ *filename*. XLS"|
-|HTML Import|"HTML Import;"|" `drive`:\\\ *cesta*\ *filename*"|
-|HTML Export|"Export ve formátu HTML;"|" `drive`:\\\ *cesta*"|
-|Text|"Text";|"jednotka:\\\path"|
-|ODBC|"ODBC; DATABÁZE = `database`; UID = *uživatele*; PWD = *heslo*; Název zdroje dat = *datasourcename;* LOGINTIMEOUT = *sekund;*" (To nemusí být úplný připojovací řetězec pro všechny servery, je jenom pro příklad. Je velmi důležité, abyste adresní prostory mezi parametry.)|Žádné|
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*"jednotka*:\\\ *cesta*\\\ *filename*. MDB"|
+|Databáze pomocí databázového stroje Jet|"[`database`];"|"`drive`:\\\ *cesta*\\\ *filename*. DATABÁZI|
+|dBASE III|"dBASE III;"|"`drive`:\\\ *cesta*"|
+|dBASE IV|"dBASE IV;"|"`drive`:\\\ *cesta*"|
+|dBASE 5|"dBASE 5,0;"|"`drive`:\\\ *cesta*"|
+|Paradox 3. x|"Paradox 3. x;"|"`drive`:\\\ *cesta*"|
+|Paradox 4. x|"Paradox 4. x;"|"`drive`:\\\ *cesta*"|
+|Paradox 5. x|"Paradox 5. x;"|"`drive`:\\\ *cesta*"|
+|Excel 3,0|"Excel 3,0;"|"`drive`:\\\ *cesta*\\\ *filename*. NAPŘ|
+|Excel 4,0|"Excel 4,0;"|"`drive`:\\\ *cesta*\\\ *filename*. NAPŘ|
+|Excel 5,0 nebo Excel 95|"Excel 5,0;"|"`drive`:\\\ *cesta*\\\ *filename*. NAPŘ|
+|Excel 97|"Excel 8,0;"|"`drive`:\\\ *cesta*\ *filename*. NAPŘ|
+|Import HTML|"Import HTML;"|"`drive`:\\\ *cesta*\ *filename*|
+|HTML Export|"Export HTML;"|"`drive`:\\\ *cesta*"|
+|Text|"Text;"|"Drive:\\\path"|
+|ODBC|ODBC DATABÁZE = `database`; UID = *uživatel*; PWD = *Password*; DSN = *zdroj dat;* LOGINTIMEOUT = *sekundy;* " (To nemusí být úplný připojovací řetězec pro všechny servery. je to jenom příklad. Je velmi důležité, aby mezi parametry nebyla mezera.)|Žádná|
+|Exchange|Výměn<br /><br /> MAPILEVEL = *FolderPath*;<br /><br /> [TABLETYPE = {0 &#124; 1};]<br /><br /> [PROFILe = *Profile*;]<br /><br /> [PWD = *Password*;]<br /><br /> [DATABASE = `database`;] "|*"Drive*:\\\ *cesta*\\\ *filename*. DATABÁZI|
 
 > [!NOTE]
->  Btrieve je již nejsou podporovány od verze DAO 3.5.
+>  Btrieve již není podporován z hlediska rozhraní DAO 3,5.
 
-Je třeba použít dvojité zpětné lomítko (\\\\) v připojovacích řetězcích. Pokud jste změnili vlastnosti existující připojení pomocí `SetConnect`, lze následně zavolat [RefreshLink](#refreshlink). Pokud se inicializace vlastností připojení pomocí `SetConnect`, budete potřebovat není volání `RefreshLink`, ale rozhodnete tak učinit, nejdřív připojit tabledef.
+V připojovacích řetězcích je nutné použít dvojité zpětné lomítko (\\\\). Pokud jste změnili vlastnosti stávajícího připojení pomocí `SetConnect`, musíte následně volat [RefreshLink](#refreshlink). Pokud inicializujete vlastnosti připojení pomocí `SetConnect`, nemusíte volat `RefreshLink`, ale pokud se k tomu rozhodnete, nejprve tabledef přidejte.
 
-Pokud heslo je vyžadována, ale není zadaný, zobrazí se ovladač ODBC čas přihlášení dialogového okna při prvním přístupu k tabulce znovu a pokud je připojení zavřít a znovu otevřít.
+Pokud je vyžadováno heslo, ale není k dispozici, zobrazí se v ovladači ODBC dialogové okno přihlášení při prvním otevření tabulky a znovu v případě, že je připojení zavřeno a znovu otevřeno.
 
-Můžete nastavit připojovací řetězec pro `CDaoTableDef` objekt tím, že poskytuje zdroj argument `Create` členskou funkci. Můžete zkontrolovat nastavení k určení typu, cesta, ID uživatele, heslo nebo zdroje dat ODBC databáze. Další informace naleznete v dokumentaci pro určitý ovladač.
+Můžete nastavit připojovací řetězec pro objekt `CDaoTableDef` zadáním zdrojového argumentu do členské funkce `Create`. Můžete kontrolovat nastavení pro určení typu, cesty, ID uživatele, hesla nebo zdroje dat ODBC databáze. Další informace najdete v dokumentaci ke konkrétnímu ovladači.
 
-Související informace naleznete v tématu "Připojit vlastnost" v nápovědě k DAO.
+Související informace najdete v nápovědě k rozhraní DAO v tématu "připojení vlastnosti".
 
-##  <a name="setname"></a>  CDaoTableDef::SetName
+##  <a name="setname"></a>CDaoTableDef::SetName
 
-Voláním této členské funkce pro nastavení uživatelem definovaný název pro tabulku.
+Zavolejte tuto členskou funkci pro nastavení uživatelsky definovaného názvu tabulky.
 
 ```
 void SetName(LPCTSTR lpszName);
@@ -901,17 +901,17 @@ void SetName(LPCTSTR lpszName);
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
-Ukazatel na řetězec výraz, který určuje název tabulky.
+Ukazatel na řetězcový výraz, který určuje název tabulky.
 
 ### <a name="remarks"></a>Poznámky
 
-Název musí začínat písmenem a může obsahovat až 64 znaků. Může obsahovat čísla a podtržítka znaků, ale nemůže obsahovat interpunkční znaménka nebo mezery.
+Název musí začínat písmenem a může obsahovat maximálně 64 znaků. Může obsahovat číslice a podtržítka, ale nemůže obsahovat interpunkční znaménka nebo mezery.
 
-Související informace naleznete v tématu "Název vlastnosti" v nápovědě k DAO.
+Související informace najdete v tématu "vlastnost Name" v nápovědě k rozhraní DAO.
 
-##  <a name="setsourcetablename"></a>  CDaoTableDef::SetSourceTableName
+##  <a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName
 
-Voláním této členské funkce zadejte jméno připojené tabulky nebo název základní tabulky, na kterém `CDaoTableDef` podle objektu, protože existuje v původním zdroji dat.
+Voláním této členské funkce určíte název připojené tabulky nebo název základní tabulky, na které je objekt `CDaoTableDef` založený, protože existuje v původním zdroji dat.
 
 ```
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
@@ -920,17 +920,17 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ### <a name="parameters"></a>Parametry
 
 *lpszSrcTableName*<br/>
-Ukazatel na řetězec výraz, který určuje název tabulky v externí databázi. Základní tabulka, nastavení je prázdný řetězec ("").
+Ukazatel na řetězcový výraz, který určuje název tabulky v externí databázi. U základní tabulky je toto nastavení prázdný řetězec ("").
 
 ### <a name="remarks"></a>Poznámky
 
-Musíte pak zavolat [RefreshLink](#refreshlink). Nastavení této vlastnosti je pro čtení a zápisu pro připojené tabulky nebo objektu není připojen ke kolekci a základní tabulky prázdný.
+Pak musíte zavolat [RefreshLink](#refreshlink). Nastavení této vlastnosti je prázdné pro základní tabulku a pro čtení a zápis pro připojenou tabulku nebo objekt, který není připojen ke kolekci.
 
-Související informace naleznete v tématu "%{sourcetablename/ vlastnost" v nápovědě k DAO.
+Související informace najdete v tématu "Vlastnost SourceTableName" v nápovědě k rozhraní DAO.
 
-##  <a name="setvalidationrule"></a>  CDaoTableDef::SetValidationRule
+##  <a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule
 
-Voláním této členské funkce, chcete-li nastavit ověřovací pravidlo pro tabledef.
+Zavolejte tuto členskou funkci pro nastavení ověřovacího pravidla pro tabledef.
 
 ```
 void SetValidationRule(LPCTSTR lpszValidationRule);
@@ -939,23 +939,23 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
 ### <a name="parameters"></a>Parametry
 
 *lpszValidationRule*<br/>
-Ukazatel na výraz řetězce, která ověřuje operace.
+Ukazatel na řetězcový výraz, který ověřuje operaci.
 
 ### <a name="remarks"></a>Poznámky
 
-Ověřovací pravidla se používají v souvislosti s operace aktualizace. Pokud tabledef obsahuje ověřovací pravidlo, musí aktualizace této tabledef předem kritériím neodpovídají, předtím, než se data změní. Pokud změna neodpovídá kritériím, obsahující text výjimky [GetValidationText](#getvalidationtext) se zobrazí.
+Ověřovací pravidla se používají v souvislosti s operacemi aktualizace. Pokud tabledef obsahuje ověřovací pravidlo, musí aktualizace tohoto tabledef odpovídat předem určeným kritériím, aby se data změnila. Pokud změna neodpovídá kritériím, zobrazí se výjimka obsahující text [GetValidationText](#getvalidationtext) .
 
-Ověření se podporuje jenom pro databáze, které používají databázový stroj Microsoft Jet. Výraz nemůže odkazovat na uživatelsky definovaných funkcí, domény agregační funkce, agregačních funkcí SQL nebo dotazy. Ověřovací pravidlo pro `CDaoTableDef` objektu mohou odkazovat na více polí v objektu.
+Ověřování je podporováno pouze pro databáze, které používají databázový stroj Microsoft Jet. Výraz nemůže odkazovat na uživatelsky definované funkce, agregační funkce domény, agregační funkce SQL nebo dotazy. Ověřovací pravidlo pro objekt `CDaoTableDef` může odkazovat na více polí v tomto objektu.
 
-Například pro pole s názvem *hire_date* a *termination_date*, může být ověřovacího pravidla:
+Například pro pole s názvem *hire_date* a *termination_date*může pravidlo ověřování:
 
 [!code-cpp[NVC_MFCDatabase#34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]
 
-Související informace naleznete v tématu "Ověřovací pravidlo vlastnost" v nápovědě k DAO.
+Související informace najdete v nápovědě k rozhraní DAO v tématu vlastnost "ověřovací pravidlo".
 
-##  <a name="setvalidationtext"></a>  CDaoTableDef::SetValidationText
+##  <a name="setvalidationtext"></a>CDaoTableDef::SetValidationText
 
-Voláním této členské funkce, chcete-li nastavit text výjimky ověřovací pravidlo pro `CDaoTableDef` objekt s základní základní tabulka nepodporuje databázový stroj Microsoft Jet.
+Zavolejte tuto členskou funkci pro nastavení textu výjimky ověřovacího pravidla pro objekt `CDaoTableDef` se základní tabulkou podporovanou databázovým strojem Microsoft Jet.
 
 ```
 void SetValidationText(LPCTSTR lpszValidationText);
@@ -964,15 +964,15 @@ void SetValidationText(LPCTSTR lpszValidationText);
 ### <a name="parameters"></a>Parametry
 
 *lpszValidationText*<br/>
-Ukazatel na řetězec výraz, který určuje text zobrazený v případě zadání dat je neplatný.
+Ukazatel na řetězcový výraz, který určuje text zobrazený v případě, že jsou zadaná data neplatná.
 
 ### <a name="remarks"></a>Poznámky
 
-Nelze nastavit text pro ověření připojené tabulky.
+Nemůžete nastavit ověřovací text připojené tabulky.
 
-Související informace naleznete v tématu "Ověřovací vlastnost" v nápovědě k DAO.
+Související informace najdete v nápovědě k rozhraní DAO v tématu "vlastnost ověřovacího hesla".
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

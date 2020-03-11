@@ -1,5 +1,5 @@
 ---
-title: '&lt;řazené kolekce členů&gt; funkce'
+title: funkce &lt;řazené kolekce členů&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - tuple/std::get
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241666"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866186"
 ---
-# <a name="lttuplegt-functions"></a>&lt;řazené kolekce členů&gt; funkce
+# <a name="lttuplegt-functions"></a>funkce &lt;řazené kolekce členů&gt;
 
-## <a name="apply"></a> Použít
+## <a name="apply"></a>vyrovnat
 
 ```cpp
 template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t);
@@ -30,9 +30,9 @@ template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t)
 
 ### <a name="remarks"></a>Poznámky
 
-Volá funkci *F* s řazenou kolekci členů *t*.
+Volá funkci *F* s řazenou kolekcí členů *t*.
 
-## <a name="forward"></a> forward_as_tuple
+## <a name="forward"></a>forward_as_tuple
 
 ```cpp
 template <class... TTypes>
@@ -41,15 +41,15 @@ template <class... TTypes>
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
+Vrací objekt `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří řazenou kolekci členů odkazů na argumentů *t* vhodný pro předání jako argumentů funkce.
+Vytvoří řazenou kolekci členů odkazů na argumenty v *t* vhodné pro přesměrování jako argumenty funkce.
 
-## <a name="get"></a> získat
+## <a name="get"></a>Čtěte
 
-Získá prvek z `tuple` objektu pomocí indexu nebo (v C ++ 14) podle typu.
+Získá prvek z objektu `tuple`, podle indexu nebo (v C++ 14) podle typu.
 
 ```cpp
 // by index:
@@ -82,22 +82,22 @@ template <class T, class... Types>
 ### <a name="parameters"></a>Parametry
 
 *Index*\
-Index prvku, který chcete získat.
+Index elementu, který se má načíst
 
-*Typy*\
-Posloupnost typy deklarované v řazené kolekci členů, v pořadí deklarace.
+\ *typů*
+Sekvence typů deklarované v řazené kolekci členů v pořadí deklarací.
 
 *T*\
-Typ elementu, který chcete získat.
+Typ prvku, který má být získán.
 
-*Řazené kolekce členů*\
-A `std::tuple` , která obsahuje libovolný počet prvků.
+\ *řazené kolekce členů*
+`std::tuple`, který obsahuje libovolný počet prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí odkaz na hodnotu indexu *Index*, nebo typu *T* v `tuple` objektu.
+Funkce šablony vrátí odkaz na hodnotu *indexu*indexu nebo typ *T* v objektu `tuple`.
 
-Volání `get<T>(Tuple)` způsobí chybu kompilátoru, pokud řazená kolekce členů obsahuje více nebo méně než jeden element typu T.
+Volání `get<T>(Tuple)` vytvoří chybu kompilátoru, pokud řazená kolekce členů obsahuje více nebo méně než jeden prvek typu T.
 
 ### <a name="example"></a>Příklad
 
@@ -128,7 +128,7 @@ int main() {
 0 1.42 Call me Tuple
 ```
 
-## <a name="make_from_tuple"></a> make_from_tuple
+## <a name="make_from_tuple"></a>make_from_tuple
 
 ```cpp
 template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
@@ -138,9 +138,9 @@ template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
 
 Stejné jako `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})`.
 
-## <a name="make_tuple"></a> make_tuple –
+## <a name="make_tuple"></a>make_tuple
 
-Díky `tuple` z hodnot prvků.
+Vytvoří `tuple` z hodnot elementu.
 
 ```cpp
 template <class T1, class T2, ..., class TN>
@@ -149,17 +149,17 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parametry
 
-*TN*\
-Typ parametru Nth – funkce
+\ *TN*
+Typ n-tý parametr funkce
 
-*TN*\
-Hodnota parametru n-tý funkce.
+\ *TN*
+Hodnota n-tý parametr funkce
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, kde každý typ `Vi` je `X&` při příslušného `Ti` je `cv` `reference_wrapper<X>`; v opačném případě je `Ti`.
+Funkce šablony vrátí `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, kde každý typ `Vi` je `X&`, pokud `Ti` odpovídající typ `cv` `reference_wrapper<X>`; v opačném případě je `Ti`.
 
-Jednou z výhod `make_tuple` je, že typy ukládaných objektů jsou určeny automaticky kompilátorem a není nutné explicitně zadat. Nepoužívejte explicitní argumenty šablony, jako `make_tuple<int, int>(1, 2)` při použití `make_tuple` protože je zbytečně podrobný a přidá komplexní rvalue reference problémy, které mohou způsobit selhání kompilace.
+Jednou z výhod `make_tuple` je, že typy objektů, které jsou uložené, jsou určeny automaticky kompilátorem a není nutné je explicitně zadat. Nepoužívejte explicitní argumenty šablony, jako je například `make_tuple<int, int>(1, 2)` při použití `make_tuple`, protože je zbytečně podrobné a přidává komplexní problémy s odkazem rvalue, které by mohly způsobit selhání kompilace.
 
 ### <a name="example"></a>Příklad
 
@@ -196,16 +196,16 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="swap"></a> Prohození
+## <a name="swap"></a>adresu
 
 ```cpp
 template <class... Types>
     void swap(tuple<Types...>& x, tuple<Types...>& y) noexcept(see below );
 ```
 
-## <a name="tie"></a> Tie
+## <a name="tie"></a>propojují
 
-Díky `tuple` z elementu odkazů.
+Vytvoří `tuple` z odkazů na prvky.
 
 ```cpp
 template <class T1, class T2, ..., class TN>
@@ -214,12 +214,12 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parametry
 
-*TN*\
-Základní typ řazené kolekce členů n-tý prvek.
+\ *TN*
+Základní typ n-tý prvek řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
+Funkce šablony vrací `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
 
 ### <a name="example"></a>Příklad
 
@@ -262,7 +262,7 @@ int main() {
 0 1 2 3
 ```
 
-## <a name="tuple_cat"></a> tuple_cat
+## <a name="tuple_cat"></a>tuple_cat
 
 ```cpp
 template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
@@ -270,16 +270,16 @@ template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt řazené kolekce členů, a to provedením inicializace je každý prvek typu.
+Objekt řazené kolekce členů vytvořený inicializací každého elementu typu.
 
-## <a name="tuple_element_t"></a> Alias typu tuple_element_t
+## <a name="tuple_element_t"></a>tuple_element_t
 
 ```cpp
 template <size_t I, class T>
     using tuple_element_t = typename tuple_element<I, T>::type;
 ```
 
-## <a name="tuple_size_v"></a> tuple_size_v
+## <a name="tuple_size_v"></a>tuple_size_v
 
 ```cpp
 template <class T>

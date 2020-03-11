@@ -1,5 +1,5 @@
 ---
-title: Makra Map služeb
+title: Service Map makra
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -8,30 +8,30 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274561"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862511"
 ---
-# <a name="service-map-macros"></a>Makra Map služeb
+# <a name="service-map-macros"></a>Service Map makra
 
-Tato makra definují map služeb a položky.
+Tato makra definují mapy a položky služeb.
 
 |||
 |-|-|
-|[BEGIN_SERVICE_MAP](#begin_service_map)|Označuje začátek ATL služby mapy.|
-|[END_SERVICE_MAP](#end_service_map)|Označuje konec mapování ATL služby.|
-|[SERVICE_ENTRY](#service_entry)|Označuje, že objekt podporuje ID konkrétní služby.|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Dává pokyn [IServiceProviderImpl::QueryService](#queryservice) ke sledu k zadanému objektu.|
+|[BEGIN_SERVICE_MAP](#begin_service_map)|Označuje začátek mapy služby ATL.|
+|[END_SERVICE_MAP](#end_service_map)|Označuje konec mapy služby ATL.|
+|[SERVICE_ENTRY](#service_entry)|Indikuje, že objekt podporuje konkrétní ID služby.|
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Instruuje [IServiceProviderImpl:: QueryService](#queryservice) k zřetězení zadaného objektu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP
+##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP
 
-Označuje začátek toho mapy služeb.
+Označuje začátek mapy služby.
 
 ```
 BEGIN_SERVICE_MAP(theClass)
@@ -40,23 +40,23 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-[in] Určuje třídu obsahující mapy služeb.
+pro Určuje třídu obsahující mapu služby.
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace funkce poskytovatele služby na váš objekt modelu COM pomocí mapy služeb. Nejprve musíte odvodit třídu z [iserviceproviderimpl –](../../atl/reference/iserviceproviderimpl-class.md). Existují dva typy položek:
+K implementaci funkce poskytovatele služeb v objektu COM použijte mapu služby. Nejprve musíte třídu odvodit z [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md). Existují dva typy položek:
 
-- [SERVICE_ENTRY](#service_entry) udává podporu pro zadaný Identifikátor (SID) služby.
+- [SERVICE_ENTRY](#service_entry)   Určuje podporu pro zadané ID služby (SID).
 
-- [SERVICE_ENTRY_CHAIN](#service_entry_chain) nařizuje [IServiceProviderImpl::QueryService](#queryservice) řetězce do jiného, zadaný objekt.
+- [SERVICE_ENTRY_CHAIN](#service_entry_chain)   Instruuje [IServiceProviderImpl:: QueryService](#queryservice) k zřetězení do jiného zadaného objektu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]
 
-##  <a name="end_service_map"></a>  END_SERVICE_MAP
+##  <a name="end_service_map"></a>END_SERVICE_MAP
 
-Označuje konec mapy služeb.
+Označuje konec mapy služby.
 
 ```
 END_SERVICE_MAP()
@@ -64,11 +64,11 @@ END_SERVICE_MAP()
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [BEGIN_SERVICE_MAP](#begin_service_map).
+Podívejte se na příklad [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="service_entry"></a>  SERVICE_ENTRY
+##  <a name="service_entry"></a>SERVICE_ENTRY
 
-Označuje, že objekt podporuje id služby určené *SID*.
+Indikuje, že objekt podporuje ID služby určené *identifikátorem SID*.
 
 ```
 SERVICE_ENTRY( SID )
@@ -76,16 +76,16 @@ SERVICE_ENTRY( SID )
 
 ### <a name="parameters"></a>Parametry
 
-*IDENTIFIKÁTOR SID*<br/>
-ID služby.
+*ID*<br/>
+ID služby
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [BEGIN_SERVICE_MAP](#begin_service_map).
+Podívejte se na příklad [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN
+##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN
 
-Dává pokyn [IServiceProviderImpl::QueryService](#queryservice) ke sledu k objektu určeného parametrem *punk*.
+Instruuje [IServiceProviderImpl:: QueryService](#queryservice) a řetězení k objektu určenému parametrem *punk*.
 
 ```
 SERVICE_ENTRY_CHAIN( punk )
@@ -94,15 +94,15 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="parameters"></a>Parametry
 
 *punk*<br/>
-Ukazatel **IUnknown** rozhraní, ke kterému do řetězce.
+Ukazatel na rozhraní **IUnknown** , na které se má zřetězit.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [BEGIN_SERVICE_MAP](#begin_service_map).
+Podívejte se na příklad [BEGIN_SERVICE_MAP](#begin_service_map).
 
-##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
+##  <a name="queryservice"></a>IServiceProviderImpl::QueryService
 
-Vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní k zadanému rozhraní pro službu.
+Vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní na určené rozhraní pro službu.
 
 ```
 STDMETHOD(QueryService)(
@@ -114,42 +114,42 @@ STDMETHOD(QueryService)(
 ### <a name="parameters"></a>Parametry
 
 *guidService*<br/>
-[in] Ukazatel na identifikátor služby (SID).
+pro Ukazatel na identifikátor služby (SID).
 
 *riid*<br/>
-[in] Identifikátor rozhraní, ke kterému volající získat přístup.
+pro Identifikátor rozhraní, ke kterému má volající získat přístup.
 
 *ppvObj*<br/>
-[out] Nepřímé ukazatel na požadované rozhraní.
+mimo Nepřímý ukazatel na požadované rozhraní
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota HRESULT je jedním z následujících akcí:
+Vrácená hodnota HRESULT je jedna z následujících:
 
 |Návratová hodnota|Význam|
 |------------------|-------------|
-|S_OK|Služby byl úspěšně vytvořen nebo načten.|
-|E_INVALIDARG|Jeden nebo více argumentů je neplatný.|
-|E_OUTOFMEMORY|Paměti není dostatečná k vytvoření služby.|
-|E_UNEXPECTED, JE-|Došlo k neznámé chybě.|
-|E_NOINTERFACE|Požadované rozhraní není součástí této služby nebo služby neznámý.|
+|S_OK|Služba byla úspěšně vytvořena nebo načtena.|
+|E_INVALIDARG|Jeden nebo více argumentů je neplatných.|
+|E_OUTOFMEMORY|Paměť nemá dostatek místa k vytvoření služby.|
+|E_UNEXPECTED|Došlo k neznámé chybě.|
+|E_NOINTERFACE|Požadované rozhraní není součástí této služby, nebo je služba neznámá.|
 
 ### <a name="remarks"></a>Poznámky
 
-`QueryService` Vrátí nepřímým ukazatel na požadované rozhraní v zadaná služba. Volající zodpovídá za uvolňuje tento ukazatel, když se už nevyžaduje.
+`QueryService` vrátí nepřímý ukazatel na požadované rozhraní v zadané službě. Volající je zodpovědný za uvolnění tohoto ukazatele, pokud již není požadován.
 
-Při volání `QueryService`, předáte identifikátor služby (*guidService*) a identifikátor rozhraní (*riid*). *GuidService* určuje služby, ke kterému chcete získat přístup, a *riid* identifikuje rozhraní, která je součástí služby. Na oplátku obdržíte nepřímé ukazatel na rozhraní.
+Při volání `QueryService`předáte jak identifikátor služby (*guidService*), tak identifikátor rozhraní (*riid*). *GuidService* Určuje službu, ke které chcete získat přístup, a *riid* identifikuje rozhraní, které je součástí služby. V rámci návratu obdržíte nepřímý ukazatel na rozhraní.
 
-Objekt, který implementuje rozhraní může také implementovat rozhraní, které jsou součástí jiné služby. Zvažte použití těchto zdrojů:
+Objekt, který implementuje rozhraní, může také implementovat rozhraní, která jsou součástí jiných služeb. Zvažte použití těchto zdrojů:
 
-- Některé z těchto rozhraní může být volitelný. Ne všechna rozhraní, které jsou definované v popisu služby nejsou nutně na každou implementaci služby nebo na každý vráceného objektu.
+- Některá z těchto rozhraní můžou být volitelná. Ne všechna rozhraní definovaná v popisu služby jsou nutně přítomna při každé implementaci služby nebo u všech vrácených objektů.
 
-- Na rozdíl od volání `QueryInterface`, předávání identifikátor různé služby nemusí nutně znamenat, že se vrátí jiný objekt modelu COM (Component Object).
+- Na rozdíl od volání `QueryInterface`, předání jiného identifikátoru služby nemusí nutně znamenat, že je vrácen jiný objekt modelu COM (Component Object Model).
 
-- Vrácený objekt může mít další rozhraní, které nejsou součástí definice služby.
+- Vrácený objekt může mít další rozhraní, která nejsou součástí definice služby.
 
-Dvě různé služby, jako je například SID_SMyService a SID_SYourService, můžete i určit používá stejné rozhraní, i když implementaci rozhraní může mít nic společného mezi těmito dvěma službami. Tento postup funguje, protože volání `QueryService` (SID_SMyService, IID_IDispatch) může vrátit do jiného objektu než `QueryService` (SID_SYourService, IID_IDispatch). Identita objektu není předpokládá, že pokud zadáte identifikátor jinou službu.
+Dvě různé služby, například SID_SMyService a SID_SYourService, mohou určovat použití stejného rozhraní, i když implementace rozhraní nemusí mít mezi těmito dvěma službami společný nic. To funguje, protože volání `QueryService` (SID_SMyService, IID_IDispatch) může vracet jiný objekt než `QueryService` (SID_SYourService, IID_IDispatch). Identita objektu se nepředpokládá, když zadáte jiný identifikátor služby.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Makra](../../atl/reference/atl-macros.md)
+[Makr](../../atl/reference/atl-macros.md)

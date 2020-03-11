@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
 ms.openlocfilehash: cdec425e317585abbd9730447e2c4fbb19b8250a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398768"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865704"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určena pro použití přímo v kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ struct BoolStruct;
 
 ## <a name="remarks"></a>Poznámky
 
-`BoolStruct` Struktury definuje, jestli `ComPtr` spravuje doba života objektu rozhraní. `BoolStruct` se používá interně pomocí [BoolType()](comptr-class.md#operator-microsoft-wrl-details-booltype) operátor.
+Struktura `BoolStruct` definuje, zda `ComPtr` spravuje dobu života objektu rozhraní. `BoolStruct` se interně používá pomocí operátoru [BoolType – ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .
 
 ## <a name="members"></a>Členové
 
@@ -36,7 +36,7 @@ struct BoolStruct;
 
 Název                          | Popis
 ----------------------------- | ------------------------------------------------------------------------------------------------------------------
-[Boolstruct::Member –](#member) | Určuje, že [ComPtr](comptr-class.md) je nebo není, Správa doba života objektu rozhraní.
+[BoolStruct –:: member](#member) | Určuje, že [ComPtr](comptr-class.md) je, nebo není, spravovat životnost objektu rozhraní.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -44,13 +44,13 @@ Název                          | Popis
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** internal.h
+**Záhlaví:** interní. h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft:: WRL::D etails
 
-## <a name="member"></a>Boolstruct::Member –
+## <a name="member"></a>BoolStruct –:: member
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určena pro použití přímo v kódu.
 
 ```cpp
 int Member;
@@ -58,4 +58,4 @@ int Member;
 
 ### <a name="remarks"></a>Poznámky
 
-Určuje, že [ComPtr](comptr-class.md) je nebo není, Správa doba života objektu rozhraní.
+Určuje, že [ComPtr](comptr-class.md) je, nebo není, spravovat životnost objektu rozhraní.

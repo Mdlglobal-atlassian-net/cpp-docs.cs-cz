@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkce&gt; unordered_map'
+title: '&lt;unordered_map&gt; funkce'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_map/std::swap
@@ -9,13 +9,13 @@ ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454826"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873961"
 ---
-# <a name="ltunorderedmapgt-functions"></a>&lt;funkce&gt; unordered_map
+# <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; funkce
 
 |||
 |-|-|
@@ -34,30 +34,30 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Zkrat*\
+\ *klíčů*
 Klíčový typ
 
 *Ty*\
 Mapovaný typ
 
-*Kontrole*\
+\ *hash*
 Typ objektu hashovací funkce
 
-*Čekání*\
+*Před*\
 Typ objektu funkce porovnání rovnosti
 
-*Vyhrazen*\
+\ *přidělení*
 Třída alokátoru
 
-*zbývá*\
+*levý*\
 První kontejner, který se má prohodit.
 
-*Kliknutím*\
+*pravé*\
 Druhý kontejner pro prohození.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony provede `left.` [unordered_map:: swap](../standard-library/unordered-map-class.md#swap)`(right)`.
+Funkce šablony provede `left.`[unordered_map:: swap](../standard-library/unordered-map-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -127,30 +127,30 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Zkrat*\
+\ *klíčů*
 Klíčový typ
 
 *Ty*\
 Mapovaný typ
 
-*Kontrole*\
+\ *hash*
 Typ objektu hashovací funkce
 
-*Čekání*\
+*Před*\
 Typ objektu funkce porovnání rovnosti
 
-*Vyhrazen*\
+\ *přidělení*
 Třída alokátoru
 
-*zbývá*\
+*levý*\
 První kontejner, který se má prohodit.
 
-*Kliknutím*\
+*pravé*\
 Druhý kontejner pro prohození.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony provede `left.` [unordered_multimap:: swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
+Funkce šablony provede `left.`[unordered_multimap:: swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -207,6 +207,6 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [<unordered_map>](../standard-library/unordered-map.md)
