@@ -10,21 +10,21 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524788"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856797"
 ---
 # <a name="mfc-library-versions"></a>MFC – verze knihovny
 
-Knihovna MFC je k dispozici ve verzích, které podporují ANSI jednobajtové a vícebajtové znakové sady (MBCS) kódu, jakož i verze, které podporují kódování Unicode (s kódováním UTF-16LE, znakové sady Windows native). Každá verze rozhraní MFC je k dispozici jako statické knihovny nebo sdílené knihovny DLL. Je také menší statické knihovní verze rozhraní MFC, která mimo MFC – ovládací prvky pro dialogová okna pro aplikace, které jsou velmi citlivé na velikost a nepotřebují tyto ovládací prvky. Knihovny MFC jsou k dispozici v obou ladění a vydání verze pro podporované architektury, které zahrnují x86 x64 a procesory ARM. Můžete vytvořit pro obě aplikace (soubory .exe) a knihovny DLL s jakoukoli verzi knihovny MFC. Existuje také sada knihoven MFC pro propojení se spravovaným kódem. Sdílené knihovny DLL MFC zahrnují číslo verze k označení binární kompatibilitu knihovny.
+Knihovna MFC je dostupná ve verzích, které podporují jednobajtové znakové sady ANSI a vícebajtové znakové sady (MBCS) a také verze podporující kódování Unicode (kódované jako UTF-16LE, sada znaků nativní pro systém Windows). Každá verze knihovny MFC je k dispozici jako Statická knihovna nebo jako sdílená knihovna DLL. Existuje také menší verze statické knihovny knihovny MFC, která opustí ovládací prvky MFC pro dialogy pro aplikace, které jsou velmi citlivé na velikost a nepotřebují tyto ovládací prvky. Knihovny MFC jsou k dispozici v ladicí i prodejní verzi pro podporované architektury, které zahrnují procesory x86, x64 a ARM. Můžete vytvořit obě aplikace (soubory. exe) a knihovny DLL s libovolnou verzí knihoven MFC. K dispozici je také sada knihoven MFC kompilovaných pro propojení se spravovaným kódem. Sdílené knihovny MFC Shared obsahují číslo verze pro označení binární kompatibility knihovny.
 
-## <a name="automatic-linking-of-mfc-library-versions"></a>Automatické propojení knihovní verze knihovny MFC
+## <a name="automatic-linking-of-mfc-library-versions"></a>Automatické propojování verzí knihoven MFC
 
-Soubory hlaviček knihovny MFC automaticky určit správnou verzi knihovny MFC pro propojení, založený na hodnotách definovaných ve vašem prostředí sestavení. Soubory hlaviček knihovny MFC Přidání direktivy kompilátoru propojovací program na odkaz v konkrétní verzi knihovny MFC.
+Soubory hlaviček knihovny MFC automaticky určují správnou verzi knihovny MFC, která se má propojit, na základě hodnot definovaných ve vašem prostředí sestavení. Soubory hlaviček knihovny MFC přidávají direktivy kompilátoru, které řídí linker, aby propojí v konkrétní verzi knihovny MFC.
 
-Například, afx –. Soubor hlaviček H přikáže linkeru odkaz v celý statický, omezené statické, nebo sdílené knihovny DLL verzi knihovny MFC; ANSI/znakové sady MBCS a Unicode verze; a ladění nebo maloobchodní verze, v závislosti na konfiguraci sestavení:
+Například AFX –. Soubor hlaviček H instruuje linker, aby propojí v plné statické, omezené statické nebo sdílené knihovně DLL verze MFC; ANSI/MBCS nebo verze Unicode; a ladění nebo prodejní verze v závislosti na konfiguraci sestavení:
 
 ```cpp
 #ifndef _AFXDLL
@@ -71,74 +71,74 @@ Například, afx –. Soubor hlaviček H přikáže linkeru odkaz v celý static
 #endif
 ```
 
-Soubory hlaviček knihovny MFC také obsahovat direktivy propojení ve všech požadovaných knihovnách včetně knihovny MFC, knihovny Win32, knihovny OLE, vytvořené z ukázek knihovny OLE, ODBC knihovny a tak dále.
+Soubory hlaviček knihovny MFC také obsahují direktivy pro propojení ve všech požadovaných knihovnách, včetně knihoven MFC, knihoven Win32, knihoven OLE, knihoven OLE vytvořených ze vzorků, knihoven ODBC a tak dále.
 
-## <a name="ansi-mbcs-and-unicode"></a>ANSI, znakové sady MBCS a Unicode
+## <a name="ansi-mbcs-and-unicode"></a>ANSI, MBCS a Unicode
 
-Verze knihovny MFC standardu ANSI/MBCS podporují oba jednobajtový znak, jako je například ASCII a vícebajtové znakové sady například Shift-JIS. Verze knihovny MFC kódování Unicode podporu v podobě kódováním UTF-16LE širokého znaku Unicode. Použití verze knihovny ANSI/MBCS knihoven MFC pro podporu kódování Unicode kódování UTF-8.
+Verze knihovny MFC ANSI/MBCS podporuje dvoubajtové znakové sady, jako je například ASCII, a vícebajtové znakové sady, jako je například Shift-JIS. Verze knihovny MFC Unicode podporuje Unicode ve formátu UTF-16LE s kódováním znaků. Pro podporu kódování Unicode UTF-8 použijte verzi knihovny ANSI/MBCS.
 
-K nastavení konfigurace projektu pro použití v integrovaném vývojovém prostředí jednobajtový vícebajtový nebo širokého znaku podporu řetězců a znaků Unicode, použijte **vlastnosti projektu** dialogového okna. V **vlastnosti konfigurace** > **Obecné** nastavte **znaková sada** vlastnost **Nenastaveno** používat jednobajtové znakové sadě. Nastavte vlastnost na **použít vícebajtovou znakovou sadu** vícebajtové znakové sady, nebo **pomocí Unicode znaková sada** používat jako UTF-16 kódování Unicode.
+Chcete-li nastavit konfiguraci projektu tak, aby v integrovaném vývojovém prostředí používala jednobajtové, vícebajtové nebo roztažitelné řetězce Unicode a podporu znaků, použijte dialogové okno **Vlastnosti projektu** . Na stránce **Vlastnosti konfigurace** > **Obecné** nastavte vlastnost **znaková sada** na hodnotu **Nenastaveno** na použít jednobajtové znakové sady. Nastavte vlastnost na použití vícebajtové znakové **sady** pro použití vícebajtové znakové sady nebo pro použití **znakové sady Unicode** s kódováním Unicode UTF-16.
 
-Projekty MFC používají symbol preprocesoru \_UNICODE označuje podporu širokého znaku Unicode UTF-16, a \_Podpora MBCS udávajících znakové sady MBCS. Tyto možnosti se vzájemně vylučují v projektu.
+Projekty MFC používají symbol preprocesoru \_UNICODE k označení podpory znakové sady UTF-16 pro velké písmeno a \_znakové sady MBCS k označení podpory znakové sady MBCS. Tyto možnosti se vzájemně vylučují v projektu.
 
-## <a name="mfc-static-library-naming-conventions"></a>Konvence pojmenování statické knihovny MFC
+## <a name="mfc-static-library-naming-conventions"></a>Konvence pojmenování statických knihoven MFC
 
-Statické knihovny MFC pomocí následující názvové konvence. Názvy knihoven mít formát _služba ._protokol
+Statické knihovny pro MFC používají následující konvence pojmenování. Názvy knihoven mají tvar
 
-> <em>u</em>AFX<em>cd</em>.LIB
+> <em>u</em> AFX –<em>CD</em>. Knihovna
 
-zobrazí kurzívou malá písmena, kde jsou zástupné symboly specifikátory jehož význam, jsou uvedeny v následující tabulce:
+kde písmena zobrazená kurzívou jsou zástupné symboly pro specifikátory, jejichž význam je uveden v následující tabulce:
 
-|Specifikátor|Hodnoty a vysvětlení|
+|Specifikátor|Hodnoty a významy|
 |---------------|-------------------------|
-|*u*|ANSI/znakové sady MBCS (N) nebo Unicode (U); Vynechat pro verzi bez MFC – ovládací prvky v dialogových oknech|
-|*c*|Verze s MFC – ovládací prvky v dialogových oknech (CW) nebo bez (NMCD)|
-|*d*|Ladit nebo vydaná verze: D = Debug; vynechat specifikátor verze|
+|*h*|ANSI/MBCS (N) nebo Unicode (U); vynechat pro verzi bez ovládacích prvků MFC v dialogových oknech|
+|*r*|Verze s ovládacími prvky MFC v dialozích (SH) nebo bez (NMCD)|
+|*trojrozměrné*|Ladění nebo verze: D = ladění; vynechat specifikátor pro vydanou verzi|
 
-Všechny knihovny, které jsou uvedeny v následující tabulce jsou zahrnuty v adresáři \atlmfc\lib pro podporované sestavení architektury předem připravené.
+Všechny knihovny, které jsou uvedeny v následující tabulce, jsou zahrnuty předem v adresáři \atlmfc\lib pro podporované architektury sestavení.
 
 |Knihovna|Popis|
 |-------------|-----------------|
-|NAFXCW.LIB|Staticky propojené knihovny MFC, prodejní verze|
-|NAFXCWD.LIB|Staticky propojené knihovny MFC, ladicí verze|
-|UAFXCW.LIB|Staticky propojené knihovny MFC s podporou kódování Unicode, prodejní verze|
-|UAFXCWD.LIB|Staticky propojené knihovny MFC s podporou kódování Unicode, ladicí verze|
-|AFXNMCD.LIB|Staticky propojené knihovny MFC bez ovládací prvky dialogového okna knihovny MFC, prodejní verze|
-|AFXNMCDD.LIB|Staticky propojené knihovny MFC bez ovládací prvky dialogového okna knihovny MFC, ladicí verze|
+|NAFXCW.LIB|Statická knihovna MFC, verze pro vydání|
+|NAFXCWD.LIB|Statická knihovna MFC, ladicí verze|
+|UAFXCW.LIB|Statická knihovna MFC s podporou kódování Unicode, verze vydaná pro vydání|
+|UAFXCWD.LIB|Statická knihovna MFC s podporou kódování Unicode, ladicí verze|
+|AFXNMCD.LIB|Statická knihovna MFC bez ovládacích prvků dialogového okna MFC, verze vydaná pro vydání|
+|AFXNMCDD.LIB|Statická knihovna MFC bez ovládacích prvků dialogového okna MFC, ladicí verze|
 
-Soubory ladicího programu, které mají stejný základní název a příponou PDB jsou také k dispozici pro každý statických knihoven.
+Soubory ladicího programu, které mají stejný základní název a příponu PDB, jsou k dispozici také pro každou ze statických knihoven.
 
-## <a name="mfc-shared-dll-naming-conventions"></a>Sdílená knihovna MFC DLL zásady vytváření názvů
+## <a name="mfc-shared-dll-naming-conventions"></a>Konvence pojmenování sdílených knihoven DLL MFC
 
-MFC sdílené knihovny DLL také následující zásady strukturovaného vytváření názvů. Díky tomu snadnější zjistit, které knihovny DLL nebo knihovny byste měli použít pro konkrétní účel.
+Sdílené knihovny DLL MFC také následují jako strukturované konvence vytváření názvů. Díky tomu je snazší zjistit, které knihovny DLL nebo knihovny byste měli používat pro tento účel.
 
-Knihovny DLL MFC mají *verze* čísla označující binární kompatibilitu. Použití knihovny MFC DLL, které mají stejnou verzi jako vaší knihovny a sady nástrojů kompilátoru k zajištění kompatibility v rámci projektu.
+Knihovny MFC DLL mají čísla *verzí* , která označují binární kompatibilitu. Používejte knihovny MFC DLL, které mají stejnou verzi jako vaše jiné knihovny a sady nástrojů kompilátoru pro zajištění kompatibility v rámci projektu.
 
 |DLL|Popis|
 |---------|-----------------|
-|MFC*version*.DLL|MFC DLL, ANSI nebo znakové sady MBCS vydání verze|
-|MFC*version*U.DLL|Knihovny MFC DLL, Unicode verze|
-|MFC*version*D.DLL|Verze knihovny MFC DLL, ANSI nebo ladění znakové sady MBCS|
-|MFC*version*UD.DLL|Knihovny MFC DLL, Unicode ladicí verze|
-|MFCM*version*.DLL|MFC DLL pomocí ovládacích prvků Windows Forms, ANSI nebo znakové sady MBCS vydání verze|
-|MFCM*version*U.DLL|Pomocí ovládacích prvků Windows Forms, Unicode verze knihovny MFC DLL|
-|MFCM*version*D.DLL|MFC DLL pomocí ovládacích prvků Windows Forms, verze ANSI nebo ladění znakové sady MBCS|
-|MFCM*version*UD.DLL|Pomocí ovládacích prvků Windows Forms, Unicode ladicí verze knihovny MFC DLL|
+|*Verze*knihovny MFC. DLL|MFC DLL, verze ANSI nebo verze znakové sady MBCS|
+|MFC*verze*U. dll|MFC DLL, verze pro verzi Unicode|
+|MFC*verze*D. dll|MFC DLL, ANSI nebo verze ladění znakové sady MBCS|
+|UD*verze*knihovny MFC. DLL|MFC DLL, verze ladění Unicode|
+|*Verze*MFCM DLL|MFC DLL s ovládacími prvky model Windows Forms, verzí verze ANSI nebo MBCS|
+|MFCM*verze*U. dll|MFC DLL s ovládacími prvky model Windows Forms, verze Release Unicode|
+|MFCM*verze*D. dll|MFC DLL s ovládacími prvky model Windows Forms, verze ladění ANSI nebo MBCS|
+|MFCM*verze*ud. DLL|MFC DLL s ovládacími prvky model Windows Forms, ladicí verzí Unicode|
 
-Importovat knihovny potřebné k sestavení aplikace nebo MFC – rozšiřující knihovny DLL, které používají tyto sdílené knihovny DLL mají stejný základní název jako knihovna DLL, ale mají příponu názvu souboru LIB. Při použití sdílené knihovny DLL, malé statické knihovny musí být stále propojené s vaším kódem; Tato knihovna je s názvem MFCS*verze*lib {U} {D}.
+Knihovny importů potřebné pro sestavování aplikací nebo knihoven DLL rozšíření MFC, které používají tyto sdílené knihovny DLL, mají stejný základní název jako knihovna DLL, ale mají příponu názvu souboru. lib. Při použití sdílených knihoven DLL musí být stále propojena malá Statická knihovna s vaším kódem; Tato knihovna má název MFCS*verze*{U} {D}. lib.
 
-Pokud jsou dynamického propojení ke sdílené knihovně DLL verze knihovny MFC, ať už z aplikace nebo rozšiřující knihovny DLL MFC, je nutné zahrnout odpovídající MFC*verze*. Knihovna DLL nebo knihovny MFC*verze*U.DLL při nasazování produktu.
+Pokud dynamicky propojujete se sdílenou knihovnou DLL verze knihovny MFC, ať už je z aplikace, nebo z knihovny DLL rozšíření MFC, je nutné zahrnout vyhovující*verzi*knihovny MFC. Knihovna DLL nebo knihovna MFC*verze*U. dll při nasazení produktu.
 
-Seznam Visual C++ knihovny DLL, které můžete distribuovat s vašimi aplikacemi, najdete v článku [Distribuovatelný kód pro Microsoft Visual Studio 2017 a Microsoft Visual Studio 2017 SDK (zahrnuje soubory Buildovacího serveru a)](/visualstudio/productinfo/2017-redistribution-vs) nebo [ Distribuovatelný kód pro Visual Studio 2019](/visualstudio/releases/2019/redistribution).
+Seznam vizuálních C++ knihoven DLL, které lze distribuovat s vašimi aplikacemi, naleznete v tématu [distribuovatelný kód pro Microsoft Visual Studio 2017 a Microsoft Visual Studio 2017 SDK (zahrnuje nástroje a soubory Buildovacího serveru)](/visualstudio/productinfo/2017-redistribution-vs) nebo [distribuovatelný kód pro Visual Studio 2019](/visualstudio/releases/2019/redistribution).
 
-Další informace o podpoře znakové sady MBCS a Unicode v prostředí MFC, naleznete v tématu [vícebajtové znakové sady (MBCS) Podpora kódování Unicode a](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
+Další informace o podpoře znakové sady MBCS a Unicode v knihovně MFC naleznete v tématu [Podpora sady Unicode a vícebajtové znakové sady (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 
-## <a name="dynamic-link-library-support"></a>Podpora knihovny DLL
+## <a name="dynamic-link-library-support"></a>Podpora knihovny Dynamic-Link
 
-Můžete použít buď statická nebo sdílené dynamické knihovny MFC pro vytvoření DLL knihoven, které mohou být využívána spustitelné soubory knihovny MFC a non-MFC. Ty se nazývají "obvyklé knihovny DLL" nebo "obvyklé knihovny DLL MFC", abychom je odlišili od MFC – rozšiřující knihovny DLL, které mohou být pouze používané aplikace knihovny MFC a knihovny MFC DLL. Knihovny DLL vytvořené pomocí statické knihovny MFC se někdy označuje jako USRDLL starší odkazy, protože projekty knihovny MFC DLL, definujte symbol preprocesoru  **\_USRDLL**. Knihovny DLL, že používá MFC sdílené knihovny DLL se někdy nazývá AFXDLL starší odkazy, protože definuje symbol preprocesoru  **\_AFXDLL**.
+Můžete použít statickou nebo sdílenou dynamickou knihovnu MFC k vytvoření knihoven DLL, které mohou být používány spustitelnými soubory MFC i non-MFC. Jsou označovány jako "běžné knihovny DLL" nebo "běžné knihovny MFC DLL", aby je bylo možné odlišit od rozšiřujících knihoven DLL MFC, které mohou používat pouze aplikace MFC a knihovny MFC DLL. Knihovna DLL sestavená pomocí statických knihoven knihovny MFC je někdy označována jako USRDLL ve starších odkazech, protože projekty knihovny MFC DLL definují symbol preprocesoru **\_USRDLL**. Knihovna DLL, která používá sdílené knihovny MFC, se někdy označuje jako AFXDLL – ve starších odkazech, protože definuje symbol preprocesoru **\_AFXDLL –** .
 
-Při vytváření projektu knihovny DLL odkazování na statické knihovny MFC, knihovny DLL se dá nasadit bez knihovny MFC sdílené knihovny DLL. Pokud váš projekt knihovny DLL odkazuje na importní knihovny MFC*verze*. LIB nebo MFC*verze*U.LIB, je nutné nasadit odpovídající sdílené knihovny MFC DLL MFC*verze*. Knihovna DLL nebo knihovny MFC*verze*U.DLL společně s vaší knihovny DLL. Další informace najdete v tématu [knihovny DLL](../build/dlls-in-visual-cpp.md).
+Při vytváření projektu knihovny DLL pomocí propojení ke statickým knihovnám knihovny MFC může být vaše knihovna DLL nasazena bez sdílených knihoven DLL knihovny MFC. Když projekt knihovny DLL odkazuje na*verzi*knihovny MFC pro import knihoven. LIB nebo MFC*verze*U. lib, musíte nasadit vyhovující*verzi*MFC Shared DLL MFC. DLL nebo knihovna MFC*verze*U. dll společně s vaší knihovnou DLL. Další informace najdete v tématu [knihovny DLL](../build/dlls-in-visual-cpp.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obecná témata MFC](../mfc/general-mfc-topics.md)

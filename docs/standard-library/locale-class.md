@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898845"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856496"
 ---
 # <a name="locale-class"></a>locale – třída
 
@@ -148,20 +148,20 @@ Pravidla formátování čísel pro další vložení do `cout` zůstanou stejn�
 
 |Název typu|Popis|
 |-|-|
-|[Kategorie](#category)|Typ integer, který poskytuje hodnoty bitové masky pro skupiny standardních omezujících vlastností.|
+|[kategorií](#category)|Typ integer, který poskytuje hodnoty bitové masky pro skupiny standardních omezujících vlastností.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[spojen](#combine)|Vloží omezující vlastnost ze zadaného národního prostředí do cílového národního prostředí.|
-|[name](#name)|Vrátí název uloženého národního prostředí.|
+|[Jméno](#name)|Vrátí název uloženého národního prostředí.|
 
 ### <a name="static-functions"></a>Statické funkce
 
 |||
 |-|-|
-|[classic](#classic)|Statická funkce členu vrátí objekt národního prostředí, který představuje klasické národní prostředí jazyka C.|
+|[standardním](#classic)|Statická funkce členu vrátí objekt národního prostředí, který představuje klasické národní prostředí jazyka C.|
 |[global](#global)|Obnoví výchozí národní prostředí pro program.|
 
 ### <a name="operators"></a>Operátory
@@ -171,7 +171,7 @@ Pravidla formátování čísel pro další vložení do `cout` zůstanou stejn�
 |[operátor =](#op_eq)|Přiřadí národní prostředí.|
 |[operator!=](#op_neq)|Testuje dvě národní prostředí na nerovnost.|
 |[operator () – operátor](#op_call)|Porovná dva objekty `basic_string`.|
-|[operator==](#op_eq_eq)|Testuje dvě národní prostředí na rovnost.|
+|[operator = = – operátor](#op_eq_eq)|Testuje dvě národní prostředí na rovnost.|
 
 ### <a name="classes"></a>Třídy
 
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [\<> národního prostředí](../standard-library/locale.md)\
 [Znakové stránky](../c-runtime-library/code-pages.md)\

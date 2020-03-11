@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189411"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883794"
 ---
 # <a name="array-class-c-standard-library"></a>Array – třídaC++ (standardní knihovna)
 
@@ -166,7 +166,7 @@ class array;
 
 ## <a name="remarks"></a>Poznámky
 
-Typ má výchozí konstruktor `array()` a výchozí operátor přiřazení `operator=`a splňuje požadavky pro `aggregate`. Proto lze objekty typu `array<Ty, N>` inicializovat pomocí agregačního inicializátoru. Například
+Typ má výchozí konstruktor `array()` a výchozí operátor přiřazení `operator=`a splňuje požadavky pro `aggregate`. Proto lze objekty typu `array<Ty, N>` inicializovat pomocí agregačního inicializátoru. Například:
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [> pole \<](../standard-library/array.md)

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685422"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867310"
 ---
 # <a name="time_put-class"></a>time_put – třída
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* \
+*CharType*\
 Typ používaný v rámci programu ke kódování znaků.
 
-*OutputIterator* \
+*OutputIterator*\
 Typ iterátoru, do kterého časové funkce zapisují svůj výstup.
 
 ## <a name="remarks"></a>Poznámky
@@ -67,11 +67,11 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<locale >
+**Záhlaví:** \<národní prostředí >
 
 **Obor názvů:** std
 
-## <a name="char_type"></a>time_put::char_type
+## <a name="char_type"></a>time_put:: char_type
 
 Typ, který se používá k popisu znaku používaného národním prostředním.
 
@@ -98,20 +98,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametry
 
-*další* \
+*další*\
 Výstupní iterátor, kde má být vložena posloupnost znaků reprezentujících čas a datum.
 
-*_Iosbase* \
-Nepoužívané.
+*_Iosbase*\
+Nepoužívá se.
 
-*_Pt* \
+*_Pt*\
 Výstup informací o čase a datu.
 
-*_Fmt* \
-Formát výstupu. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
+*_Fmt*\
+Formát výstupu. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
 
-*_Mod* \
-Modifikátor pro formát. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
+*_Mod*\
+Modifikátor pro formát. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -121,13 +121,13 @@ Iterátor na první pozici po vložení posledního elementu.
 
 Členská funkce Virtual Protected generuje sekvenční prvky začínající na `next` z hodnot času uložených v objektu \* `_Pt`, typu `tm`. Funkce vrátí iterátor, který určuje další místo pro vložení elementu za generovaný výstup.
 
-Výstup je vygenerován stejnými pravidly, které používá `strftime` s posledním argumentem *_Pt*, pro generování řady elementů typu **char** do pole. U každého takového elementu **char** se předpokládá mapování na ekvivalentní prvek typu `CharType` jednoduchým mapováním 1:1. Pokud se *_Mod* rovná nule, je platný formát "% F", kde F je nahrazeno *_Fmt*. V opačném případě je platný formát "% MF", kde M je nahrazeno *_Mod*.
+Výstup je vygenerován stejnými pravidly, které používá `strftime`, s posledním argumentem *_Pt*pro generování řady elementů typu **char** v poli. U každého takového elementu **char** se předpokládá mapování na ekvivalentní prvek typu `CharType` jednoduchým mapováním 1:1. Pokud je *_Mod* rovna nule, je platný formát "% F", kde F je nahrazen *_Fmt*. V opačném případě je platný formát "% MF", kde M je nahrazeno *_Mod*.
 
 ### <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [Put](#put), který volá `do_put`.
 
-## <a name="iter_type"></a>time_put::iter_type
+## <a name="iter_type"></a>time_put:: iter_type
 
 Typ, který popisuje výstupní iterátor.
 
@@ -161,29 +161,29 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Parametry
 
-*další* \
+*další*\
 Výstupní iterátor, kde má být vložena posloupnost znaků reprezentujících čas a datum.
 
-*_Iosbase* \
-Nepoužívané.
+*_Iosbase*\
+Nepoužívá se.
 
-*_Fill* \
+*_Fill*\
 Znak typu `CharType` použitý pro mezery
 
-*_Pt* \
+*_Pt*\
 Výstup informací o čase a datu.
 
-*_Fmt* \
-Formát výstupu. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
+*_Fmt*\
+Formát výstupu. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
 
-*_Mod* \
-Modifikátor pro formát. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
+*_Mod*\
+Modifikátor pro formát. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
 
-*první* \
-Začátek formátovacího řetězce pro výstup. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
+*první*\
+Začátek formátovacího řetězce pro výstup. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
 
-*poslední* \
-Konec formátovacího řetězce pro výstup. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
+*poslední*\
+Konec formátovacího řetězce pro výstup. Platné hodnoty najdete v tématu [strftime, wcsftime, _strftime_l _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -191,7 +191,7 @@ Iterátor na první pozici po vložení posledního elementu.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce vrátí [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). Druhá členská funkce kopíruje do \* `next` + + libovolný prvek v intervalu [`first`, `last`) jiné než procento (%). V procentech, po kterých následuje znak *C* v intervalu [`first`, `last`), funkce místo toho vyhodnotí `next`  =  `do_put` (`next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) a přeskočí předchozí *C*. Pokud je ale *C* znak kvalifikátor ze sady EOQ #, po které následuje znak 3 v intervalu [4, 5), funkce místo toho vyhodnocuje 6 7 8 (9, 0 , 1, 2, 3, *C*) a přeskočí předchozí 5.
+První členská funkce vrátí [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). Druhá členská funkce kopíruje do \* `next` + + libovolný prvek v intervalu [`first`, `last`) jiné než procento (%). V procentech, po kterých následuje znak *C* v intervalu [`first`, `last`), funkce místo toho vyhodnotí `next` = `do_put`(`next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) a přeskočí předchozí *C*. Pokud *je však* znak kvalifikátoru ze sady EOQ # následovaný znakem `C2` v intervalu [`first`, `last`), funkce místo toho vyhodnotí `next` = `do_put`(`next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) a přeskočí minulé `C2`.
 
 ### <a name="example"></a>Příklad
 
@@ -237,7 +237,7 @@ num_put( ) = x: 05:30:40 07/04/00
 strftime( ) = x: 05:30:40 07/04/00
 ```
 
-## <a name="time_put"></a>time_put::time_put
+## <a name="time_put"></a>time_put:: time_put
 
 Konstruktor pro objekty typu `time_put`.
 
@@ -247,7 +247,7 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* \
+*_Refs*\
 Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
 ### <a name="remarks"></a>Poznámky
@@ -262,8 +262,8 @@ Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
 
 Konstruktor inicializuje svůj základní objekt pomocí [locale:: Face](../standard-library/locale-class.md#facet_class)( *_Refs*).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<locale >](../standard-library/locale.md) \
-\ [třídy time_base](../standard-library/time-base-class.md)
+[\<> národního prostředí](../standard-library/locale.md)\
+[time_base\ třídy](../standard-library/time-base-class.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

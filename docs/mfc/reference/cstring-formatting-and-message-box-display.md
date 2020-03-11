@@ -5,34 +5,34 @@ helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 ms.openlocfilehash: ad880c5302fd2274c5d46719e912461fd7497f10
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611011"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854052"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formátování dat CString a zobrazení oken zpráv
 
-Počet funkcí, které jsou k dispozici pro formátování a analýzu `CString` objekty. Tyto funkce můžete použít, kdykoli budete chtít pracovat s `CString` objekty, ale jsou užitečné hlavně při formátovacích řetězců, které se zobrazí okno se zprávou text.
+K dispozici je řada funkcí pro formátování a analýzu `CString` objektů. Tyto funkce lze použít vždy, když je nutné manipulovat s `CString` objekty, ale jsou zvláště užitečné pro formátování řetězců, které se zobrazí v textu zpráv.
 
-Tato skupina funkce také globální rutina pro zobrazení okna se zprávou.
+Tato skupina funkcí obsahuje také globální rutinu pro zobrazení okna se zprávou.
 
 ### <a name="cstring-functions"></a>CString – funkce
 
 |||
 |-|-|
-|[AfxExtractSubString](#afxextractsubstring)|Extrahuje dílčích řetězců oddělených jeden znak z daného zdroje řetězce.|
-|[AfxFormatString1](#afxformatstring1)|Nahradí zadaného řetězce pro formátování znaků "%1" v řetězci obsažené v tabulce řetězců.|
-|[AfxFormatString2](#afxformatstring2)|Nahradí dva řetězce formátu znaky "%1" a "%2" v řetězci obsažené v tabulce řetězců.|
+|[AfxExtractSubString](#afxextractsubstring)|Extrahuje podřetězce oddělené jedním znakem z daného zdrojového řetězce.|
+|[AfxFormatString1](#afxformatstring1)|Nahradí daný řetězec pro formátovací znaky "%1" v řetězci obsaženém v tabulce řetězců.|
+|[AfxFormatString2](#afxformatstring2)|Nahradí dva řetězce pro formátovací znaky "%1" a "%2" v řetězci obsaženém v tabulce řetězců.|
 |[AfxMessageBox](#afxmessagebox)|Zobrazí okno se zprávou.|
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxwin.h
+  **Header** afxwin. h
 
-##  <a name="afxextractsubstring"></a>  Afxextractsubstring –
+##  <a name="afxextractsubstring"></a>AfxExtractSubString
 
-Tato globální funkce je možné extrahovat dílčí řetězec z daného zdroje řetězce.
+Tato globální funkce může být použita k extrakci podřetězce z daného zdrojového řetězce.
 
 ```
 BOOL AFXAPI AfxExtractSubString (
@@ -45,26 +45,26 @@ BOOL AFXAPI AfxExtractSubString (
 ### <a name="parameters"></a>Parametry
 
 *rString*<br/>
-Odkaz [CString](../../atl-mfc-shared/using-cstring.md) objekt, který se zobrazí jednotlivé dílčí řetězec.
+Odkaz na objekt [CString](../../atl-mfc-shared/using-cstring.md) , který obdrží jednotlivý dílčí řetězec.
 
 *lpszFullString*<br/>
-Řetězec obsahující textu v plném znění extrahovat z řetězce.
+Řetězec obsahující úplný text řetězce, ze kterého se má extrahovat.
 
 *iSubString*<br/>
-Index založený na nule podřetězec extrahovat z *lpszFullString*.
+Nulový index dílčího řetězce, který se má extrahovat z *lpszFullString*.
 
 *chSep*<br/>
-Oddělovač znak použitý k oddělení podřetězců.
+Znak oddělovače použitý k oddělení podřetězců
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud funkci bylo úspěšně extrahováno dílčí řetězec na zadaný index; v opačném případě hodnota FALSE.
+TRUE, pokud funkce úspěšně extrahuje podřetězec v zadaném indexu; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je užitečná pro extrahování řetězu více podřetězců z řetězce zdroje při známé jeden znak odděluje každý dílčí řetězec. Tato funkce hledá od začátku *lpszFullString* parametr pokaždé, když je volána.
+Tato funkce je užitečná pro extrakci více podřetězců ze zdrojového řetězce, když známý samostatný znak odděluje každý podřetězec. Tato funkce vyhledává na začátku parametru *lpszFullString* pokaždé, když je volána.
 
-Tato funkce vrátí hodnotu FALSE, pokud buď *lpszFullString* nastaven na hodnotu NULL nebo funkci dosáhne konce *lpszFullString* bez hledání *iSubString*+ 1 výskyty znaků zadaného oddělovače. *RString* parametr se nezmění původní hodnotu Pokud *lpszFullString* byla nastavena na hodnotu NULL; v opačném případě *rString* parametr je nastaven na prázdný řetězec, pokud pro zadaný index nelze extrahovat podřetězec.
+Tato funkce vrátí hodnotu FALSE, pokud je buď vlastnost *lpszFullString* nastavena na hodnotu null nebo funkce dosáhne konce *lpszFullString* , aniž by bylo nutné najít *iSubString*+ 1 výskytu zadaného znaku oddělovače. Parametr *rString* nebude změněn z původní hodnoty, pokud byla *lpszFullString* nastavena na hodnotu null. v opačném případě je parametr *rString* nastaven na prázdný řetězec, pokud nelze podřetězec extrahovat pro zadaný index.
 
 ### <a name="example"></a>Příklad
 
@@ -72,11 +72,11 @@ Tato funkce vrátí hodnotu FALSE, pokud buď *lpszFullString* nastaven na hodno
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxwin.h
+  **Header** afxwin. h
 
-##  <a name="afxformatstring1"></a>  AfxFormatString1
+##  <a name="afxformatstring1"></a>AfxFormatString1
 
-Nahradí řetězec, který ukazuje *lpsz1* pro všechny instance znaky "%1" v šabloně řetězec prostředku označeném identifikátorem *nIDS*.
+Nahradí řetězec, na který odkazuje *lpsz1* , pro všechny výskyty znaků "%1" v prostředku řetězce šablony identifikovaného pomocí *nIDS*.
 
 ```
 void  AfxFormatString1(
@@ -88,19 +88,19 @@ void  AfxFormatString1(
 ### <a name="parameters"></a>Parametry
 
 *rString*<br/>
-Odkaz na `CString` objekt, který bude obsahovat výsledný řetězec po provedení nahrazení.
+Odkaz na objekt `CString`, který bude obsahovat výsledný řetězec po provedení substituce.
 
 *nIDS*<br/>
-ID prostředku šablony řetězce, na kterém se provede nahrazení.
+ID prostředku řetězce šablony, na kterém bude provedena náhrada
 
 *lpsz1*<br/>
-Řetězec, který nahradí formát znaky "%1" v řetězci šablony.
+Řetězec, ve kterém budou nahrazeny znaky formátu "%1" v řetězci šablony.
 
 ### <a name="remarks"></a>Poznámky
 
-Nově vytvořenou řetězec je uložen v *rString*. Například, pokud je řetězec do tabulky řetězců "Soubor %1 nebyl nalezen" a *lpsz1* je rovno "C:\MYFILE. TXT", pak *rString* bude obsahovat řetězcem"File C:\MYFILE. TXT nebyl nalezen". Tato funkce je užitečná pro formátování řetězce odeslány do okna se zprávou a dalších oknech.
+Nově vytvořený řetězec je uložený v *rString*. Například pokud řetězec v tabulce řetězců je "soubor %1 nebyl nalezen" a *lpsz1* se rovná "C:\MYFILE. TXT ", *rString* bude obsahovat řetězec" File C:\MYFILE. TXT nebyl nalezen. Tato funkce je užitečná pro formátování řetězců odesílaných do oken zpráv a dalších oken.
 
-Pokud formát znaky "%1" objevit více než jednou v řetězci, bude proveden více nahrazení.
+Pokud se formátovací znaky "%1" objeví v řetězci více než jednou, budou provedeny vícenásobné náhrady.
 
 ### <a name="example"></a>Příklad
 
@@ -108,11 +108,11 @@ Pokud formát znaky "%1" objevit více než jednou v řetězci, bude proveden v�
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxwin.h
+  **Header** afxwin. h
 
-##  <a name="afxformatstring2"></a>  AfxFormatString2
+##  <a name="afxformatstring2"></a>AfxFormatString2
 
-Nahradí řetězec, který ukazuje *lpsz1* pro všechny výskyty znaků "%1" a řetězce, na které odkazuje *lpsz2* pro všechny instance znaky "%2" v prostředku šablony řetězců identifikovaný *nIDS*.
+Nahradí řetězec, na který odkazuje *lpsz1* pro všechny výskyty znaků "%1", a řetězec, na který odkazuje *lpsz2* pro všechny instance znaků "%2" v prostředku řetězce šablony identifikovaného *nIDS*.
 
 ```
 void AfxFormatString2(
@@ -125,22 +125,22 @@ void AfxFormatString2(
 ### <a name="parameters"></a>Parametry
 
 *rString*<br/>
-Odkaz na `CString` po provedení nahrazení, který bude obsahovat výsledný řetězec.
+Odkaz na `CString`, který bude obsahovat výsledný řetězec po provedení nahrazení.
 
 *nIDS*<br/>
-ID tabulky řetězec šablony řetězce, na kterém se provede nahrazení.
+ID řetězcové tabulky řetězce šablony, na které bude provedena náhrada.
 
 *lpsz1*<br/>
-Řetězec, který nahradí formát znaky "%1" v řetězci šablony.
+Řetězec, ve kterém budou nahrazeny znaky formátu "%1" v řetězci šablony.
 
 *lpsz2*<br/>
-Řetězec, který nahradí formát znaky "%2" v řetězci šablony.
+Řetězec, ve kterém budou nahrazeny znaky formátu "%2" v řetězci šablony.
 
 ### <a name="remarks"></a>Poznámky
 
-Nově vytvořenou řetězec je uložen v *rString*. Pokud je řetězec do tabulky řetězců "Soubor %1 nebyl nalezen v adresáři %2", například *lpsz1* odkazuje na "MYFILE. TXT", a *lpsz2* odkazuje na"C:\MYDIR", pak *rString* bude obsahovat řetězcem"File MYFILE. Nebyl nalezen v adresáři C:\MYDIR TXT"
+Nově vytvořený řetězec je uložený v *rString*. Pokud je řetězec v tabulce řetězců například "soubor %1 nebyl nalezen v adresáři %2", *lpsz1* odkazuje na "MYFILE. TXT ", a *lpsz2* odkazuje na" C:\MYDIR ", pak *rString* bude obsahovat řetězec" File MYFILE. V adresáři C:\MYDIR se nenašel znak TXT.
 
-Pokud formát znaky "%1" nebo "%2" se objevit více než jednou v řetězci, bude proveden více nahrazení. Nemají v jejich číselného pořadí.
+Pokud se formátovací znaky "%1" nebo "%2" objeví v řetězci více než jednou, budou provedeny vícenásobné náhrady. Nemusí být v číselném pořadí.
 
 ### <a name="example"></a>Příklad
 
@@ -148,11 +148,11 @@ Pokud formát znaky "%1" nebo "%2" se objevit více než jednou v řetězci, bud
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxwin.h
+  **Header** afxwin. h
 
-##  <a name="afxmessagebox"></a>  AfxMessageBox
+##  <a name="afxmessagebox"></a>AfxMessageBox
 
-Na obrazovce zobrazí okno se zprávou.
+Zobrazí okno se zprávou na obrazovce.
 
 ```
 int AfxMessageBox(
@@ -169,50 +169,50 @@ int AFXAPI AfxMessageBox(
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-Odkazuje `CString` objektu nebo řetězec zakončený hodnotou null obsahující zprávu, která se zobrazí v okně se zprávou.
+Odkazuje na objekt `CString` nebo řetězec zakončený hodnotou null obsahující zprávu, která se má zobrazit v okně se zprávou.
 
-*nType*<br/>
-Styl okna se zprávou. Některý [styly oken zpráv](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) do pole.
+*Noznámení*<br/>
+Styl okna se zprávou Použijte libovolné [Styly okna zpráv](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) pro pole.
 
 *nIDHelp*<br/>
-ID kontextové nápovědy pro zprávy. Hodnota 0 znamená, že bude použita výchozí Kontextová nápověda aplikace.
+ID kontextu nápovědu pro zprávu; 0 znamená, že se použije výchozí kontext Help aplikace.
 
 *nIDPrompt*<br/>
-Jedinečný Identifikátor, který slouží jako odkaz na řetězec do tabulky řetězců.
+Jedinečné ID, které se používá k odkazování na řetězec v tabulce řetězců.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nula v případě, že není dostatek paměti k zobrazení okna se zprávou; v opačném případě se vrátí jednu z následujících hodnot:
+Nula, pokud není k dispozici dostatek paměti k zobrazení okna se zprávou; v opačném případě se vrátí jedna z následujících hodnot:
 
-- Bylo zvoleno tlačítko Přerušit IDABORT.
+- Bylo vybráno tlačítko Abort (IDABORT).
 
-- Bylo zvoleno tlačítko Zrušit IDCANCEL.
+- IDCANCEL bylo vybráno tlačítko Storno.
 
-- Bylo zvoleno tlačítko Ignorovat IDIGNORE.
+- IDIGNORE tlačítko Ignorovat bylo vybráno.
 
-- IDNO The bylo zvoleno tlačítko.
+- IDNOo, že není vybrané žádné tlačítko.
 
-- Bylo zvoleno tlačítko IDOK OK.
+- Bylo vybráno tlačítko OK IDOK.
 
-- Bylo zvoleno tlačítko Opakovat IDRETRY.
+- IDRETRY bylo vybráno tlačítko Opakovat.
 
-- IDYES The bylo zvoleno tlačítko Ano.
+- Bylo vybráno tlačítko Ano (IDYES).
 
-Pokud okno se zprávou má tlačítko Storno, bude vrácena hodnota IDCANCEL, a pokud po stisknutí klávesy ESC nebo je zvoleno tlačítko Storno. Pokud okno se zprávou nemá žádné tlačítko Storno, stisknutí klávesy ESC nemá žádný vliv.
+Pokud je v okně se zprávou tlačítko zrušit, bude vrácena hodnota IDCANCEL při stisknutí klávesy ESC nebo při výběru tlačítka zrušit. Pokud okno se zprávou nemá žádné tlačítko Storno, nemá stisknutí klávesy ESC žádný efekt.
 
-Funkce [AfxFormatString1](#afxformatstring1) a [AfxFormatString2](#afxformatstring2) může být užitečné při formátování textu, který se zobrazí v okně se zprávou.
+Funkce [AfxFormatString1](#afxformatstring1) a [AfxFormatString2](#afxformatstring2) mohou být užitečné při formátování textu, který se zobrazí v okně se zprávou.
 
 ### <a name="remarks"></a>Poznámky
 
-První formulář této přetížené funkce zobrazí textový řetězec s odkazem *lpszText* v okně se zprávou a využívá *nIDHelp* k popisu kontextové nápovědy. Kontextovou nápovědu lze použít pro přechod na související téma nápovědy, když uživatel stiskne klávesu pro nápovědu (obvykle F1).
+První forma této přetížené funkce zobrazuje textový řetězec, na který odkazuje *lpszText* v okně se zprávou, a používá *nIDHelp* k popisu kontextu kontextové aplikace. Kontext nápovědy se používá k přechodu na související téma nápovědy, když uživatel stiskne klávesu nápovědy (obvykle F1).
 
-Druhý tvar funkce používá řetězec prostředku s ID *nIDPrompt* pro zobrazení zprávy v okně se zprávou. Přidružená stránka nápovědy se vyhledá prostřednictvím hodnoty *nIDHelp*. Pokud výchozí hodnotu *nIDHelp* se používá (-1), ID zdroje řetězce *nIDPrompt*, se používá pro kontextové nápovědy. Další informace o definování kontextů nápovědy naleznete v tématu [Technická poznámka 28](../../mfc/tn028-context-sensitive-help-support.md).
+Druhá forma funkce používá prostředek řetězce s ID *nIDPrompt* k zobrazení zprávy v okně se zprávou. Přidružená Stránka s nápovědě se nachází prostřednictvím hodnoty *nIDHelp*. Pokud je použita výchozí hodnota *nIDHelp* (-1), pro kontext nápovědu se použije ID prostředku řetězce *nIDPrompt*. Další informace o definování kontextů nápovědu najdete v části [technická Poznámka 28](../../mfc/tn028-context-sensitive-help-support.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CStringT – třída](../../atl-mfc-shared/reference/cstringt-class.md)

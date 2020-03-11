@@ -105,15 +105,15 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108492"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883652"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl – třída
 
-`CMFCTabCtrl` Třída poskytuje funkce pro ovládací prvek karta. Ovládací prvek karta zobrazuje okno ukotvit s plochými nebo třemi dimenzionálními kartami v horní nebo dolní části. Karty mohou zobrazovat text a obrázek a mohou změnit barvu, pokud je aktivní.
+Třída `CMFCTabCtrl` poskytuje funkce pro ovládací prvek karta. Ovládací prvek karta zobrazuje okno ukotvit s plochými nebo třemi dimenzionálními kartami v horní nebo dolní části. Karty mohou zobrazovat text a obrázek a mohou změnit barvu, pokud je aktivní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -125,20 +125,20 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |`CMFCTabCtrl::CMFCTabCtrl`|Výchozí konstruktor|
 |`CMFCTabCtrl::~CMFCTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Zobrazí určenou kartu aktuálního ovládacího prvku karta a nastaví fokus na této kartě.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
 |[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|Určuje, zda má rozhraní změnit velikost klientské oblasti všech oken ovládacího prvku karta, pokud se změní prvek uživatelského rozhraní ovládacího prvku karta.|
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Odrovná velikost zadané oblasti tabulátoru. (Overrides `CMFCBaseTabCtrl::CalcRectEdit`.)|
-|[CMFCTabCtrl::Create](#create)|Vytvoří ovládací prvek karta a připojí ho k `CMFCTabCtrl` objektu.|
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Odrovná velikost zadané oblasti tabulátoru. (Přepisuje `CMFCBaseTabCtrl::CalcRectEdit`.)|
+|[CMFCTabCtrl:: Create](#create)|Vytvoří ovládací prvek karta a připojí ho k objektu `CMFCTabCtrl`.|
 |`CMFCTabCtrl::CreateObject`|Používá se rozhraním k vytvoření dynamické instance tohoto typu třídy.|
 |[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|Zobrazí nebo skryje tlačítko Zavřít ( **X**) na aktivní kartě.|
 |[CMFCTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Povoluje nebo zakazuje upravitelné popisky karet. (Overrides [CMFCBaseTabCtrl:: EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|
@@ -147,7 +147,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::GetDocumentIcon](#getdocumenticon)|Načte symbol, který je přidružen k záložce v místní nabídce oken s kartami.|
 |[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|Načte index první karty, která je viditelná v aktuálním ovládacím prvku karta.|
 |[CMFCTabCtrl::GetResizeMode](#getresizemode)|Načte hodnotu, která určuje, jak lze změnit velikost aktuálního ovládacího prvku karta.|
-|[CMFCTabCtrl::GetScrollBar](#getscrollbar)|Načte ukazatel na objekt posuvníku, který je přidružen k ovládacímu prvku karta.|
+|[CMFCTabCtrl:: getscrollbar](#getscrollbar)|Načte ukazatel na objekt posuvníku, který je přidružen k ovládacímu prvku karta.|
 |[CMFCTabCtrl::GetTabArea](#gettabarea)|Načte ohraničující obdélník oblasti popisku karty v horní nebo dolní části ovládacího prvku karta. (Overrides [CMFCBaseTabCtrl:: GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
 |`CMFCTabCtrl::GetTabFromPoint`|Načte kartu, která obsahuje zadaný bod. (Overrides [CMFCBaseTabCtrl:: GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|
 |[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|Načte maximální šířku karty.|
@@ -180,7 +180,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |`CMFCTabCtrl::PreTranslateMessage`|Přeloží zprávy oken před odesláním do funkcí Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Overrides [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Přepočítá interní rozložení ovládacího prvku karta. (Overrides [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Nastaví aktuální kartu ovládacího prvku karta jako aktivní kartu ve skupině karet rozhraní více dokumentů.|
-|[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktivuje kartu. (Overrides [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
+|[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktivuje kartu. (potlačení [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
 |[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|Povolí nebo zakáže použití tučného písma na aktivních kartách.|
 |[CMFCTabCtrl::SetDrawFrame](#setdrawframe)|Povolí nebo zakáže vykreslení obdélníku rámce kolem vloženého panelu.|
 |[CMFCTabCtrl::SetFlatFrame](#setflatframe)|Určuje, zda se má kolem oblasti karet nakreslit plochý nebo prostorový rámeček.|
@@ -193,13 +193,13 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Zabrání aktivnímu zobrazení ve ztrátě fokusu, když je vložena a povolena nová karta.|
+|[CMFCTabCtrl:: m_bEnableActivate](#m_benableactivate)|Zabrání aktivnímu zobrazení ve ztrátě fokusu, když je vložena a povolena nová karta.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCTabCtrl` Třída podporuje:
+Třída `CMFCTabCtrl` podporuje:
 
 - Styly ovládacího prvku karty, které zahrnují 3D, plochý a plochý sdílený vodorovný posuvník
 
@@ -213,7 +213,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 - Odpojitelné okna s kartami
 
-`CMFCTabCtrl` Třídu lze použít s dialogovým oknem, ale je určena pro aplikace, které používají ukotvení ovládacích prvků, jako je Microsoft Excel a Visual Studio. Další informace naleznete v tématu [Třída CDockablePane](../../mfc/reference/cdockablepane-class.md).
+Třídu `CMFCTabCtrl` lze použít s dialogovým oknem, ale je určena pro aplikace, které používají ukotvení ovládacích panelů, jako je Microsoft Excel a Visual Studio. Další informace naleznete v tématu [Třída CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
 Pomocí těchto kroků přidejte ovládací prvek karty s možností změny velikosti v aplikaci:
 
@@ -227,7 +227,7 @@ Pomocí těchto kroků přidejte ovládací prvek karty s možností změny veli
 
 1. Zavolejte [CFrameWndEx::D ockpane](../../mfc/reference/cframewndex-class.md#dockpane) pro ukotvení okna s kartami v hlavním rámci.
 
-Příklad toho, jak vytvořit okno s kartami jako ukotvené ovládací panel, naleznete v tématu [Třída CTabbedPane](../../mfc/reference/ctabbedpane-class.md). Chcete- `CMFCTabCtrl` li použít jako nedockický ovládací prvek, `CMFCTabCtrl` vytvořte objekt a poté zavolejte [CMFCTabCtrl:: Create](#create).
+Příklad toho, jak vytvořit okno s kartami jako ukotvené ovládací panel, naleznete v tématu [Třída CTabbedPane](../../mfc/reference/ctabbedpane-class.md). Chcete-li použít `CMFCTabCtrl` jako nedockal Control, vytvořte objekt `CMFCTabCtrl` a pak zavolejte [CMFCTabCtrl:: Create](#create).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -243,7 +243,7 @@ Příklad toho, jak vytvořit okno s kartami jako ukotvené ovládací panel, na
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody ve `CMFCTabCtrl` třídě ke `CMFCTabCtrl` konfiguraci objektu. Příklad vysvětluje, jak přidat kartu, zobrazit tlačítko Zavřít na aktivní kartě, povolit upravitelné popisky karty a zobrazit místní nabídku popisků oken s kartami. Tento příklad je součástí [ukázky kolekce stavů](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody ve třídě `CMFCTabCtrl` ke konfiguraci objektu `CMFCTabCtrl`. Příklad vysvětluje, jak přidat kartu, zobrazit tlačítko Zavřít na aktivní kartě, povolit upravitelné popisky karty a zobrazit místní nabídku popisků oken s kartami. Tento příklad je součástí [ukázky kolekce stavů](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
@@ -267,7 +267,7 @@ pro Index založený na nule karty, která se má zobrazit, nebo-1 pro zadání 
 
 ##  <a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane
 
-Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
+Další podrobnosti najdete ve zdrojovém kódu, který se nachází ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
 ```
 virtual BOOL AllowDestroyEmptyTabbedPane() const;
@@ -279,7 +279,7 @@ Vždycky TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="autosizewindow"></a>  CMFCTabCtrl::AutoSizeWindow
+##  <a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow
 
 Určuje, zda má rozhraní změnit velikost klientské oblasti všech oken ovládacího prvku karta, pokud se změní prvek uživatelského rozhraní ovládacího prvku karta.
 
@@ -296,7 +296,7 @@ pro TRUE pro automatické přizpůsobení velikosti oken ovládacího prvku kart
 
 ##  <a name="create"></a>CMFCTabCtrl:: Create
 
-Vytvoří ovládací prvek karta a připojí ho k `CMFCTabCtrl` objektu.
+Vytvoří ovládací prvek karta a připojí ho k objektu `CMFCTabCtrl`.
 
 ```
 BOOL Create(
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*style*<br/>
+*řez*<br/>
 pro Styl ovládacího prvku karta Další informace najdete v tématu poznámky.
 
 *OBD*<br/>
@@ -348,14 +348,14 @@ Následující tabulka popisuje hodnoty, které můžete zadat pro parametr *sty
 
 Následující tabulka uvádí hodnoty, které můžete zadat pro parametr *Location* .
 
-|Location|Popis|
+|Umístění|Popis|
 |--------------|-----------------|
 |LOCATION_BOTTOM|Karty jsou umístěny v dolní části ovládacího prvku karta.|
 |LOCATION_TOP|Karty jsou umístěny v horní části ovládacího prvku karta.|
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít `Create` metodu `CMFCTabCtrl` ve třídě. Tento příklad je součástí [ukázky kolekce stavů](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít metodu `Create` ve třídě `CMFCTabCtrl`. Tento příklad je součástí [ukázky kolekce stavů](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]
@@ -486,7 +486,7 @@ ResizeMode GetResizeMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedna z `CMFCTabCtrl::ResizeMode` hodnot výčtu, která určuje, jak lze změnit velikost ovládacího prvku karta. Seznam možných hodnot naleznete v části poznámky metody [CMFCTabCtrl:: SetResizeMode](#setresizemode) .
+Jedna z hodnot `CMFCTabCtrl::ResizeMode` výčtu, které určují, jak lze změnit velikost ovládacího prvku karta. Seznam možných hodnot naleznete v části poznámky metody [CMFCTabCtrl:: SetResizeMode](#setresizemode) .
 
 ##  <a name="getscrollbar"></a>CMFCTabCtrl:: getscrollbar
 
@@ -594,7 +594,7 @@ void HideActiveWindowHorzScrollBar();
 
 Tuto metodu použijte, chcete-li zabránit tomu, aby se ovládací prvek karty rozsvítit, když uživatel přepíná mezi stránkami ovládacího prvku karta.
 
-##  <a name="hideinactivewindow"></a>  CMFCTabCtrl::HideInactiveWindow
+##  <a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow
 
 Určuje, zda se v rozhraní zobrazí okna s neaktivním ovládacím prvkem karet.
 
@@ -609,7 +609,7 @@ pro TRUE – zobrazení neaktivního okna; FALSE pro zobrazení neaktivního okn
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="hidenotabs"></a>  CMFCTabCtrl::HideNoTabs
+##  <a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs
 
 Povolí nebo zakáže vykreslování oblasti karet, pokud nejsou žádné viditelné karty.
 
@@ -639,7 +639,7 @@ pro TRUE, pokud nechcete nakreslit kartu pro jedno okno s kartami; FALSE pro vyk
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isactiveinmditabgroup"></a>  CMFCTabCtrl::IsActiveInMDITabGroup
+##  <a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup
 
 Určuje, zda je aktuální karta ovládacího prvku karta aktivní karta ve skupině karet rozhraní více dokumentů.
 
@@ -655,7 +655,7 @@ TRUE, pokud je aktuální karta ovládacího prvku karta aktivní karta ve skupi
 
 Můžete uspořádat více oken dokumentů do skupin svislých a vodorovných karet a snadno je rozmíchat z jedné skupiny karet do druhé.
 
-##  <a name="isactivetabboldfont"></a>  CMFCTabCtrl::IsActiveTabBoldFont
+##  <a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont
 
 Označuje, zda je text aktivní karty zobrazen pomocí tučného písma.
 
@@ -671,7 +671,7 @@ TRUE, pokud se aktivní karta zobrazuje pomocí tučného písma; v opačném p�
 
 Pro změnu aktivního písma tabulátoru použijte metodu [CMFCTabCtrl:: SetActiveTabBoldFont](#setactivetabboldfont) .
 
-##  <a name="isactivetabclosebutton"></a>  CMFCTabCtrl::IsActiveTabCloseButton
+##  <a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton
 
 Označuje, zda se na aktivní kartě nebo v pravém horním rohu oblasti karet zobrazuje tlačítko Zavřít ( **X**).
 
@@ -717,7 +717,7 @@ TRUE, pokud je rámeček kolem oblasti karet plochý; FALSE, pokud je rámec tro
 
 Pro změnu způsobu vykreslování snímku použijte metodu [CMFCTabCtrl:: SetFlatFrame](#setflatframe) .
 
-##  <a name="isflattab"></a>  CMFCTabCtrl::IsFlatTab
+##  <a name="isflattab"></a>CMFCTabCtrl::IsFlatTab
 
 Určuje, zda je vzhled karet na aktuálním ovládacím prvku karta plochý.
 
@@ -741,7 +741,7 @@ virtual BOOL IsLeftRightRounded() const;
 
 TRUE, pokud jsou strany každé karty zaoblené; v opačném případě FALSE.
 
-##  <a name="ismditabgroup"></a>  CMFCTabCtrl::IsMDITabGroup
+##  <a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup
 
 Určuje, zda je aktuální ovládací prvek karta obsažen v klientské oblasti okna rozhraní s více dokumenty.
 
@@ -753,7 +753,7 @@ virtual BOOL IsMDITabGroup() const;
 
 TRUE, pokud je aktuální ovládací prvek karty v okně klientské oblasti MDI; v opačném případě FALSE.
 
-##  <a name="isonenotestyle"></a>  CMFCTabCtrl::IsOneNoteStyle
+##  <a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle
 
 Určuje, zda je aktuální ovládací prvek karta zobrazen ve stylu aplikace Microsoft OneNote.
 
@@ -765,7 +765,7 @@ virtual BOOL IsOneNoteStyle() const;
 
 TRUE, pokud se ovládací prvek karta zobrazuje ve stylu Microsoft OneNotu; v opačném případě FALSE.
 
-##  <a name="issharedscroll"></a>  CMFCTabCtrl::IsSharedScroll
+##  <a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll
 
 Určuje, zda má aktuální ovládací prvek karta posuvník, který může posouvat své karty jako skupinu.
 
@@ -779,7 +779,7 @@ TRUE, pokud má ovládací prvek karta sdílený posuvník; v opačném případ
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vrátí hodnotu TRUE, pokud parametr *style* metody [CMFCTabCtrl:: Create](#create) je STYLE_FLAT_SHARED_HORZ_SCROLL.
+Tato metoda vrátí hodnotu TRUE, pokud je parametr *style* metody [CMFCTabCtrl:: Create](#create) STYLE_FLAT_SHARED_HORZ_SCROLL.
 
 ##  <a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu
 
@@ -813,7 +813,7 @@ TRUE, pokud jsou karty vykresleny pomocí stylu sady Visual Studio 2005; v opač
 
 Pomocí parametru *style* metody [CMFCTabCtrl:: Create](#create) určete, jak se mají vykreslovat karty.
 
-##  <a name="m_benableactivate"></a>  CMFCTabCtrl::m_bEnableActivate
+##  <a name="m_benableactivate"></a>CMFCTabCtrl:: m_bEnableActivate
 
 Zabrání aktivnímu zobrazení ve ztrátě fokusu, když je vložena a povolena nová karta.
 
@@ -823,7 +823,7 @@ static BOOL m_bEnableActivate;
 
 ### <a name="remarks"></a>Poznámky
 
-Fokus se obvykle provádí v novém okně s kartami, když je karta vložená a aktivovaná. `CMFCTabCtrl::m_bEnableActivate` Nastavte členskou proměnnou na hodnotu false, chcete-li zachovat původní fokus. Výchozí hodnota je TRUE (pravda).
+Fokus se obvykle provádí v novém okně s kartami, když je karta vložená a aktivovaná. Nastavte členskou proměnnou `CMFCTabCtrl::m_bEnableActivate` na hodnotu FALSE, chcete-li zachovat původní fokus. Výchozí hodnota je TRUE (pravda).
 
 ##  <a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle
 
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametry
 
-*style*<br/>
+*řez*<br/>
 pro Jedna z hodnot výčtu, která určuje vzhled ovládacího prvku karta. Další informace najdete v tabulce v tématu poznámky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -844,9 +844,9 @@ Vždycky TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnotou parametru *style* může být jeden z následujících `CMFCTabCtrl::Style` výčtů.
+Hodnota parametru *style* může být jedním z následujících `CMFCTabCtrl::Style` výčtů.
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |STYLE_3D|Zobrazí trojrozměrné a pravoúhlé tabulátory, které mají zaoblené rohy.|
 |STYLE_3D_ONENOTE|Zobrazí trojrozměrné karty, které mají jednu svislou stranu a jednu šikmou stranu a které mají zaoblené rohy.|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 pro Odkazuje na datový objekt, který obsahuje data přetažená uživatelem.
 
 *dwKeyState*<br/>
-pro Obsahuje stav modifikačních kláves. Tento parametr je bitovou kombinací (nebo) následujících hodnot: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v části **parametry zprávy** [o vstupu myši](/windows/win32/inputdev/about-mouse-input).
+pro Obsahuje stav modifikačních kláves. Tento parametr je bitová kombinace (nebo) následujících hodnot: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v části **parametry zprávy** [o vstupu myši](/windows/win32/inputdev/about-mouse-input).
 
 *Vyberte*<br/>
 pro Obsahuje aktuální umístění kurzoru v souřadnicích klienta.
@@ -887,9 +887,9 @@ Always DROPEFFECT_NONE, což znamená, že cíl přetažení nemůže přijmout 
 
 Tato metoda slouží k podpoře operace přetažení. Tuto metodu přepište, pokud chcete implementovat vlastní chování.
 
-Ve výchozím nastavení tato metoda volá `CMFCTabCtrl::OnDragOver`pouze, což vždy vrátí DROPEFFECT_NONE.
+Ve výchozím nastavení tato metoda volá pouze `CMFCTabCtrl::OnDragOver`, která vždy vrací DROPEFFECT_NONE.
 
-##  <a name="ondragover"></a>  CMFCTabCtrl::OnDragOver
+##  <a name="ondragover"></a>CMFCTabCtrl::OnDragOver
 
 Volá se rozhraním během operace přetažení, když se myš přesune přes cílové okno přetažení.
 
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 pro Ukazatel na objekt [COleDataObject](../../mfc/reference/coledataobject-class.md) , který se přetahuje přes cíl přetažení.
 
 *dwKeyState*<br/>
-pro Stav modifikačních kláves, což je bitová kombinace (nebo) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace naleznete v části "parametry zprávy" v tématu [o vstupu myši](/windows/win32/inputdev/about-mouse-input).
+pro Stav modifikačních kláves, což je bitová kombinace MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace naleznete v části "parametry zprávy" v tématu [o vstupu myši](/windows/win32/inputdev/about-mouse-input).
 
 *Vyberte*<br/>
 pro Aktuální pozice myši.
@@ -970,9 +970,9 @@ TRUE, pokud byla zadaná karta aktivní; FALSE, pokud zadaná hodnota parametru 
 
 ### <a name="remarks"></a>Poznámky
 
-Tím se `AFX_WM_CHANGE_ACTIVE_TAB` oznámení odešle do nadřazeného okna a do nadřazeného rámce ovládacího prvku karta.
+Tím se oznámení `AFX_WM_CHANGE_ACTIVE_TAB` odešle do nadřazeného okna a do nadřazeného rámce ovládacího prvku karta.
 
-Metoda automaticky zavolá metodu [CMFCTabCtrl:: HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) , aby se zabránilo blikání obrazovky. `SetActiveTab`
+Metoda `SetActiveTab` automaticky zavolá metodu [CMFCTabCtrl:: HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) , aby se zabránilo blikání obrazovky.
 
 ##  <a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont
 
@@ -1042,7 +1042,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 pro ID prostředku rastrového obrázku, který obsahuje seznam obrázků.
 
-*cx*<br/>
+*CX*<br/>
 pro Šířka každého obrázku (v pixelech). Výchozí hodnota je 15.
 
 *clrTransp*<br/>
@@ -1072,13 +1072,13 @@ void SetResizeMode(ResizeMode resizeMode);
 ### <a name="parameters"></a>Parametry
 
 *resizeMode*<br/>
-pro Jedna z `CMFCTabCtrl::ResizeMode` hodnot výčtu, která určuje, jak lze změnit velikost ovládacího prvku karta. Seznam možných hodnot naleznete v tabulce v části poznámky.
+pro Jedna z hodnot `CMFCTabCtrl::ResizeMode` výčtu, které určují, jak lze změnit velikost ovládacího prvku karta. Seznam možných hodnot naleznete v tabulce v části poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *resizeMode* může být jedna z následujících `ResizeMode` hodnot výčtu.
+Parametr *resizeMode* může být jednou z následujících hodnot `ResizeMode` výčtu.
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |RESIZE_NO|Velikost ovládacího prvku karta nelze změnit.|
 |RESIZE_VERT|Velikost ovládacího prvku karta se dá změnit svisle, ale ne horizontálně.|
@@ -1135,7 +1135,7 @@ TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 Tato metoda ovlivňuje pouze ovládací prvek karta, který zobrazuje ploché karty. Posuvník má vliv na všechny karty ve stejnou dobu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

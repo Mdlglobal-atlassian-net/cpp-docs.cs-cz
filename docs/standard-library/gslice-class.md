@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448902"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866245"
 ---
 # <a name="gslice-class"></a>gslice – třída
 
@@ -25,7 +25,7 @@ Třída nástrojů pro valarray, která se používá k definování multidimenz
 
 ## <a name="remarks"></a>Poznámky
 
-Třída ukládá parametry, které charakterizují objekt typu [gslice_array](../standard-library/gslice-array-class.md). Podmnožina valarray je nepřímo vytvořena, když se objekt třídy gslice zobrazí jako argument pro objekt typu třídy [valarray](../standard-library/valarray-class.md#op_at) **\<>** . Uložené hodnoty, které určují podmnožinu vybrané z nadřazené valarray, zahrnují:
+Třída ukládá parametry, které charakterizují objekt typu [gslice_array](../standard-library/gslice-array-class.md). Podmnožina valarray je nepřímo vytvořena, když se objekt třídy gslice zobrazí jako argument pro objekt třídy [valarray](../standard-library/valarray-class.md#op_at) **\<typ >** . Uložené hodnoty, které určují podmnožinu vybrané z nadřazené valarray, zahrnují:
 
 - Počáteční index.
 
@@ -43,19 +43,19 @@ Operace na valarrays jsou zaručeny pouze v případě, že zdrojové a cílové
 
 |Konstruktor|Popis|
 |-|-|
-|[gslice](#gslice)|Definuje podmnožinu `valarray` , která se skládá z více řezů `valarray` , které vše začínají v zadaném elementu.|
+|[gslice](#gslice)|Definuje podmnožinu `valarray`, která se skládá z více řezů `valarray`, které všechny začínají na určeném prvku.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[hodnota](#size)|Najde hodnoty pole, které určují počet prvků v obecné výseči `valarray`.|
+|[hodnota](#size)|Vyhledá hodnoty pole určující počet prvků v obecné výseči `valarray`.|
 |[start](#start)|Najde počáteční index obecného řezu `valarray`.|
 |[mezer](#stride)|Najde vzdálenost mezi prvky v obecném řezu `valarray`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<valarray >
+**Záhlaví:** \<valarray >
 
 **Obor názvů:** std
 
@@ -85,11 +85,11 @@ Pole, které určuje rozteč v jednotlivých výsečích.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí konstruktor ukládá hodnotu nula pro počáteční index a vektory s nulovou délkou pro délky a vektory mezer. Druhý konstruktor ukládá *_StartIndex* pro počáteční index, *_LenArray* pro pole length a *_IncArray* pro pole Rozteč.
+Výchozí konstruktor ukládá hodnotu nula pro počáteční index a vektory s nulovou délkou pro délky a vektory mezer. Druhý konstruktor ukládá *_StartIndex* pro počáteční index, *_LenArray* pole length a *_IncArray* pro pole Rozteč.
 
 ### <a name="remarks"></a>Poznámky
 
-**gslice** definuje podmnožinu valarray, která se skládá z více řezů valarray, které každý spustí na stejném zadaném elementu. Možnost použít pole k definování více řezů je jediný rozdíl mezi `gslice` a [řezů:: Slice](../standard-library/slice-class.md#slice). První řez má první element s indexem *_StartIndex*, počet prvků určený prvním prvkem *_LenArray*a mezerou určenou prvním prvkem *_IncArray*. Další sada kolmých řezů má první prvky, které jsou uvedeny v prvním řezu. Druhý prvek *_LenArray* určuje počet prvků. Rozteč je dána druhým prvkem *_IncArray*. Třetí rozměr řezů by převzal prvky dvojrozměrného pole jako počáteční prvky a pokračovaly obdobně.
+**gslice** definuje podmnožinu valarray, která se skládá z více řezů valarray, které každý spustí na stejném zadaném elementu. Možnost používat pole k definování více řezů je jediným rozdílem mezi `gslice` a [řezů:: Slice](../standard-library/slice-class.md#slice). První řez má první element s indexem *_StartIndex*, počet prvků určený prvním prvkem *_LenArray*a mezerou určenou prvním prvkem *_IncArray*. Další sada kolmých řezů má první prvky, které jsou uvedeny v prvním řezu. Druhý prvek *_LenArray* určuje počet prvků. Rozteč je dána druhým prvkem *_IncArray*. Třetí rozměr řezů by převzal prvky dvojrozměrného pole jako počáteční prvky a pokračovaly obdobně.
 
 ### <a name="example"></a>Příklad
 
@@ -347,6 +347,6 @@ The strides of vaResult are:
 vaGSlice.stride ( ) = ( 7 4 ).
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

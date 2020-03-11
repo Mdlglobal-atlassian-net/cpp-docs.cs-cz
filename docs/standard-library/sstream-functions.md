@@ -1,21 +1,21 @@
 ---
-title: '&lt;funkce&gt; sstream'
+title: funkce &lt;sstream&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
 ms.openlocfilehash: 707d35123797b84b2b7cef1d1cfd9005e4becb1c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447533"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865912"
 ---
-# <a name="ltsstreamgt-functions"></a>&lt;funkce&gt; sstream
+# <a name="ltsstreamgt-functions"></a>funkce &lt;sstream&gt;
 
 ||
 |-|
-|[swap](#sstream_swap)|
+|[adresu](#sstream_swap)|
 
 ## <a name="sstream_swap"></a>adresu
 
@@ -47,13 +47,13 @@ void swap(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*zbývá*|Odkaz na `sstream` objekt.|
-|*Kliknutím*|Odkaz na `sstream` objekt.|
+|*zbývá*|Odkaz na objekt `sstream`.|
+|*Kliknutím*|Odkaz na objekt `sstream`.|
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony se spustí `left.swap(right)`.
+Funkce šablony provede `left.swap(right)`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<sstream>](../standard-library/sstream.md)
+[\<sstream >](../standard-library/sstream.md)

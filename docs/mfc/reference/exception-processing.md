@@ -12,11 +12,11 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502550"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855279"
 ---
 # <a name="exception-processing"></a>Zpracování výjimek
 
@@ -38,12 +38,12 @@ Příklady a další podrobnosti najdete v článku [výjimky](../../mfc/excepti
 
 |||
 |-|-|
-|[ZKUSTE](#try)|Určuje blok kódu pro zpracování výjimek.|
+|[Zkuste](#try)|Určuje blok kódu pro zpracování výjimek.|
 |[CATCH](#catch)|Určuje blok kódu pro zachycení výjimky z předchozího **testovaného** bloku.|
 |[CATCH_ALL](#catch_all)|Určuje blok kódu pro zachycení všech výjimek z předchozího **testovaného** bloku.|
 |[AND_CATCH](#and_catch)|Určuje blok kódu pro zachycení dalších typů výjimek z předchozího **testovaného** bloku.|
 |[AND_CATCH_ALL](#and_catch_all)|Určuje blok kódu pro zachycení všech dalších typů výjimek vyvolaných v předchozím bloku **Try** .|
-|[END_CATCH](#end_catch)|Ukončí poslední blok kódu **catch** nebo **AND_CATCH** .|
+|[END_CATCH](#end_catch)|Ukončí poslední blok **catch** nebo **AND_CATCHho** bloku kódu.|
 |[END_CATCH_ALL](#end_catch_all)|Ukončí poslední blok kódu **CATCH_ALL** .|
 |[VYVOLÁ](#throw)|Vyvolá určenou výjimku.|
 |[THROW_LAST](#throw_last)|Vyvolá Aktuálně zpracovávanou výjimku z další vnější obslužné rutiny.|
@@ -69,7 +69,7 @@ Knihovna MFC poskytuje dvě funkce pro vyvolání výjimek specificky pro výjim
 |[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Vyvolá výjimku v rámci funkce automatizace OLE.|
 |[AfxThrowOleException](#afxthrowoleexception)|Vyvolá výjimku OLE.|
 
-Pro podporu výjimek databáze poskytují třídy databáze dvě třídy výjimek, `CDBException` `CDaoException`a a globální funkce pro podporu typů výjimek:
+Pro podporu výjimek databáze poskytují třídy databáze dvě třídy výjimek, `CDBException` a `CDaoException`a globální funkce pro podporu typů výjimek:
 
 ### <a name="dao-exception-functions"></a>Funkce výjimky DAO
 
@@ -86,7 +86,7 @@ Knihovna MFC poskytuje následující funkci ukončení:
 |-|-|
 |[AfxAbort](#afxabort)|Volá se, aby se ukončila aplikace, když dojde k závažné chybě.|
 
-##  <a name="try"></a>ZKUSTE
+##  <a name="try"></a>Zkuste
 
 Nastaví blok **Try** .
 
@@ -126,14 +126,14 @@ Určuje název ukazatele objektu výjimky, který bude vytvořen makrem. Můžet
 
 ### <a name="remarks"></a>Poznámky
 
-Kód pro zpracování výjimek může dotazování objekt výjimky, pokud je to vhodné, pro získání dalších informací o konkrétní příčině výjimky. Vyvolat makro THROW_LAST pro posunutí zpracování na další vnější rámec výjimky. Ukončete blok **Try** pomocí makra END_CATCH.
+Kód pro zpracování výjimek může dotazování objekt výjimky, pokud je to vhodné, pro získání dalších informací o konkrétní příčině výjimky. Vyvolat makro THROW_LAST pro posunutí zpracování na další vnější rámec výjimky. Ukončete blok **Try** pomocí END_CATCHho makra.
 
-Pokud je *exception_class* třídou `CException`, budou zachyceny všechny typy výjimek. Můžete použít členskou funkci [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) k určení, která konkrétní výjimka byla vyvolána. Lepší způsob, jak zachytit několik druhů výjimek, je použití sekvenčních příkazů **AND_CATCH** , z nichž každý má jiný typ výjimky.
+Pokud *exception_class* je `CException`třídy, budou zachyceny všechny typy výjimek. Můžete použít členskou funkci [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) k určení, která konkrétní výjimka byla vyvolána. Lepší způsob, jak zachytit několik druhů výjimek, je použití sekvenčních příkazů **AND_CATCH** , z nichž každý má jiný typ výjimky.
 
 Ukazatel objektu výjimky je vytvořen pomocí makra. Nemusíte ho deklarovat sami.
 
 > [!NOTE]
->  Blok **catch** je definován jako C++ obor vymezený složenými závorkami. Pokud deklarujete proměnné v tomto oboru, budou přístupné pouze v rámci tohoto oboru. To platí i pro *exception_object_pointer_name*.
+>  Blok **catch** je definován jako C++ obor vymezený složenými závorkami. Pokud deklarujete proměnné v tomto oboru, budou přístupné pouze v rámci tohoto oboru. To platí také pro *exception_object_pointer_name*.
 
 Další informace o výjimkách a makru CATCH naleznete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
 
@@ -156,7 +156,7 @@ Určuje název ukazatele objektu výjimky, který bude vytvořen makrem. Můžet
 
 ### <a name="remarks"></a>Poznámky
 
-Kód pro zpracování výjimek může dotazování objekt výjimky, pokud je to vhodné, pro získání dalších informací o konkrétní příčině výjimky. `THROW_LAST` Vyvolat makro pro posunutí zpracování na další vnější rámec výjimky. Pokud používáte **CATCH_ALL**, ukončete blok **Try** pomocí makra END_CATCH_ALL.
+Kód pro zpracování výjimek může dotazování objekt výjimky, pokud je to vhodné, pro získání dalších informací o konkrétní příčině výjimky. Vyvolat makro `THROW_LAST` pro posunutí zpracování na další vnější rámec výjimky. Pokud používáte **CATCH_ALL**, ukončete blok **TRY** pomocí makra END_CATCH_ALL.
 
 > [!NOTE]
 >  Blok **CATCH_ALL** je definován jako C++ obor vymezený složenými závorkami. Pokud deklarujete proměnné v tomto oboru, budou přístupné pouze v rámci tohoto oboru.
@@ -185,16 +185,16 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 Určuje typ výjimky, která se má testovat. Seznam standardních tříd výjimek naleznete v tématu Třída [CException –](../../mfc/reference/cexception-class.md).
 
 *exception_object_pointer_name*<br/>
-Název ukazatele objektu výjimky, který bude vytvořen makrem. K přístupu k objektu výjimky v rámci bloku **AND_CATCH** můžete použít název ukazatele. Tato proměnná je deklarována za vás.
+Název ukazatele objektu výjimky, který bude vytvořen makrem. Můžete použít název ukazatele pro přístup k objektu výjimky v rámci **AND_CATCH** bloku. Tato proměnná je deklarována za vás.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte makro CATCH k zachycení jednoho typu výjimky, poté makro AND_CATCH pro zachycení každého následného typu. Ukončete blok **Try** pomocí makra END_CATCH.
+Použijte makro CATCH k zachycení jednoho typu výjimky a potom makro AND_CATCH pro zachycení každého následného typu. Ukončete blok **Try** pomocí END_CATCHho makra.
 
-Kód pro zpracování výjimek může dotazování objekt výjimky, pokud je to vhodné, pro získání dalších informací o konkrétní příčině výjimky. Voláním makra THROW_LAST v bloku **AND_CATCH** přesunete zpracování na další vnější rámec výjimky. **AND_CATCH** označuje konec předchozího bloku **catch** nebo **AND_CATCH** .
+Kód pro zpracování výjimek může dotazování objekt výjimky, pokud je to vhodné, pro získání dalších informací o konkrétní příčině výjimky. Zavolejte makro THROW_LAST v rámci bloku **AND_CATCH** , aby se zpracování posunulo na další vnější rámec výjimky. **AND_CATCH** označuje konec předchozího bloku **catch** nebo **AND_CATCH** .
 
 > [!NOTE]
->  Blok **AND_CATCH** je definován jako C++ obor (vymezený složenými závorkami). Pokud deklarujete proměnné v tomto oboru, nezapomeňte, že jsou přístupné pouze v rámci tohoto oboru. To platí i pro proměnnou *exception_object_pointer_name* .
+>  Blok **AND_CATCH** je definován jako C++ obor (vymezený složenými závorkami). Pokud deklarujete proměnné v tomto oboru, nezapomeňte, že jsou přístupné pouze v rámci tohoto oboru. To platí i pro *exception_object_pointer_name* proměnnou.
 
 ### <a name="example"></a>Příklad
 
@@ -214,16 +214,16 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="parameters"></a>Parametry
 
 *exception_object_pointer_name*<br/>
-Název ukazatele objektu výjimky, který bude vytvořen makrem. K přístupu k objektu výjimky v rámci bloku **AND_CATCH_ALL** můžete použít název ukazatele. Tato proměnná je deklarována za vás.
+Název ukazatele objektu výjimky, který bude vytvořen makrem. Můžete použít název ukazatele pro přístup k objektu výjimky v rámci **AND_CATCH_ALL** bloku. Tato proměnná je deklarována za vás.
 
 ### <a name="remarks"></a>Poznámky
 
 Použijte makro **catch** k zachycení jednoho typu výjimky, potom makro AND_CATCH_ALL pro zachycení všech dalších dalších typů. Pokud používáte AND_CATCH_ALL, ukončete blok **Try** pomocí makra END_CATCH_ALL.
 
-Kód pro zpracování výjimek může dotazování objekt výjimky, pokud je to vhodné, pro získání dalších informací o konkrétní příčině výjimky. Voláním makra THROW_LAST v bloku **AND_CATCH_ALL** přesunete zpracování na další vnější rámec výjimky. **AND_CATCH_ALL** označuje konec předchozího bloku **catch** nebo **AND_CATCH_ALL** .
+Kód pro zpracování výjimek může dotazování objekt výjimky, pokud je to vhodné, pro získání dalších informací o konkrétní příčině výjimky. Zavolejte makro THROW_LAST v rámci bloku **AND_CATCH_ALL** , aby se zpracování posunulo na další vnější rámec výjimky. **AND_CATCH_ALL** označuje konec předchozího bloku **catch** nebo **AND_CATCH_ALL** .
 
 > [!NOTE]
->  Blok **AND_CATCH_ALL** je definován jako C++ obor (vymezený složenými závorkami). Pokud deklarujete proměnné v tomto oboru, nezapomeňte, že jsou přístupné pouze v rámci tohoto oboru.
+>  Blok **AND_CATCH_ALL** je definován jako C++ obor (oddělený závorkami). Pokud deklarujete proměnné v tomto oboru, nezapomeňte, že jsou přístupné pouze v rámci tohoto oboru.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -239,15 +239,15 @@ END_CATCH
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o makru END_CATCH najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
+Další informace o makru END_CATCH naleznete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
 
 ### <a name="requirements"></a>Požadavky
 
   **Header** AFX –. h
 
-##  <a name="end_catch_all"></a>  END_CATCH_ALL
+##  <a name="end_catch_all"></a>END_CATCH_ALL
 
-Označuje konec posledního bloku **CATCH_ALL88** nebo **AND_CATCH_ALL** .
+Označuje konec posledního **CATCH_ALL88** nebo bloku **AND_CATCH_ALL** .
 
 ```
 END_CATCH_ALL
@@ -290,7 +290,7 @@ THROW_LAST()
 
 ### <a name="remarks"></a>Poznámky
 
-Toto makro umožňuje vyvolat místně vytvořenou výjimku. Pokud se pokusíte vyvolat výjimku, kterou jste právě zachytili, obvykle se přestanou mimo rozsah a odstraní se. V **THROW_LAST**se výjimka předává do další obslužné rutiny **catch** správně.
+Toto makro umožňuje vyvolat místně vytvořenou výjimku. Pokud se pokusíte vyvolat výjimku, kterou jste právě zachytili, obvykle se přestanou mimo rozsah a odstraní se. Při **THROW_LAST**je výjimka předána do další obslužné rutiny **catch** správně.
 
 Další informace najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
 
@@ -316,7 +316,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 Určuje celé číslo, které označuje důvod výjimky. Seznam možných hodnot naleznete v tématu [CArchiveException:: m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).
 
 *lpszArchiveName*<br/>
-Odkazuje na řetězec obsahující název `CArchive` objektu, který způsobil výjimku (je-li k dispozici).
+Odkazuje na řetězec obsahující název objektu `CArchive`, který způsobil výjimku (je-li k dispozici).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci volejte, pokud selže volání systémových přidělování paměti (například \ [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) a funkce systému Windows). Nemusíte ji volat pro funkci **New** , protože **Nová** dojde k automatickému vyvolání výjimky paměti, pokud se přidělení paměti nezdaří.
+Tuto funkci volejte, pokud selže volání systémových přidělování paměti (například \ GlobalAlloc **a funkce** systému [](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows). Nemusíte ji volat pro funkci **New** , protože **Nová** dojde k automatickému vyvolání výjimky paměti, pokud se přidělení paměti nezdaří.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -424,7 +424,7 @@ void AfxThrowUserException();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se obvykle volá ihned poté `AfxMessageBox` , co nahlásila uživateli chybu.
+Tato funkce se obvykle volá hned po `AfxMessageBox` nahlásila uživateli chybu.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -483,7 +483,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="parameters"></a>Parametry
 
-*sc*<br/>
+*příkaz*<br/>
 Stavový kód OLE, který určuje důvod výjimky.
 
 *oddělení*<br/>
@@ -510,16 +510,16 @@ void AFXAPI AfxThrowDaoException(
 ### <a name="parameters"></a>Parametry
 
 *nAfxDaoError*<br/>
-Celočíselná hodnota představující Rozšířený kód chyby DAO, což může být jedna z hodnot uvedených v poli [CDaoException:: m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).
+Celočíselná hodnota představující Rozšířený kód chyby DAO, což může být jedna z hodnot uvedených v části [CDaoException:: m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).
 
-*scode*<br/>
+*Code*<br/>
 Kód chyby OLE z rozhraní DAO typu Code. Informace naleznete v tématu [CDaoException:: m_scode](../../mfc/reference/cdaoexception-class.md#m_scode).
 
 ### <a name="remarks"></a>Poznámky
 
 Rozhraní také volá `AfxThrowDaoException`. V volání můžete předat jeden z parametrů nebo obojí. Například pokud chcete vyvolat jednu z chyb definovaných v **CDaoException:: nAfxDaoError** , ale nezáleží na parametru *Code* , předejte v parametru *nAfxDaoError* platný kód a přijměte výchozí hodnotu pro *Code*.
 
-Informace o výjimkách souvisejících s třídami knihovny MFC rozhraní DAO naleznete `CDaoException` v tématu Třída v této příručce [a v článku výjimky: Výjimky](../../mfc/exceptions-database-exceptions.md)databáze.
+Informace o výjimkách souvisejících s třídami knihovny MFC rozhraní DAO naleznete v tématu Class `CDaoException` v této knize a v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -541,15 +541,15 @@ void AfxThrowDBException(
 *nRetCode*<br/>
 Hodnota typu RETCODE, která definuje typ chyby, která způsobila vyvolání výjimky.
 
-*pdb*<br/>
-Ukazatel na `CDatabase` objekt, který představuje připojení ke zdroji dat, ke kterému je výjimka přidružena.
+*PDB*<br/>
+Ukazatel na objekt `CDatabase`, který představuje připojení ke zdroji dat, ke kterému je výjimka přidružena.
 
 *hstmt*<br/>
 Popisovač ODBC HSTMT, který určuje popisovač příkazu, ke kterému je výjimka přidružena.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá `AfxThrowDBException` , když přijme rozhraní ODBC RETCODE z volání funkce rozhraní API ODBC a interpretuje RETCODE jako výjimečnou podmínku, spíše než očekávanou chybu. Například operace přístupu k datům může selhat kvůli chybě čtení disku.
+Rozhraní volá `AfxThrowDBException`, když obdrží rozhraní ODBC RETCODE ze volání funkce rozhraní ODBC API a interpretuje RETCODE jako výjimečnou podmínku spíše než očekávanou chybu. Například operace přístupu k datům může selhat kvůli chybě čtení disku.
 
 Informace o hodnotách RETCODE definovaných pomocí rozhraní ODBC naleznete v části kapitola 8 "načítání informací o stavu a chybách" v Windows SDK. Informace o rozšířeních MFC pro tyto kódy naleznete v tématu Třída [CDBException](../../mfc/reference/cdbexception-class.md).
 
@@ -567,7 +567,7 @@ void  AfxAbort();
 
 ### <a name="remarks"></a>Poznámky
 
-`AfxAbort`se nazývá interně členské funkce knihovny MFC, když dojde k závažné chybě, jako je nezachycená výjimka, kterou nelze zpracovat. Pokud se setkáte s závažnou chybou, ze které nemůžete obnovit, můžete zavolat `AfxAbort` ve vzácných případech.
+`AfxAbort` se interně nazývá členské funkce knihovny MFC, když dojde k závažné chybě, jako je nezachycená výjimka, kterou nelze zpracovat. Pokud se setkáte s závažnou chybou, ze které nelze provést obnovení, můžete volat `AfxAbort` ve vzácných případech.
 
 ### <a name="example"></a>Příklad
 
@@ -577,7 +577,7 @@ Podívejte se na příklad pro [catch](#catch).
 
   **Header** AFX –. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
 [CException – třída](cexception-class.md)<br/>

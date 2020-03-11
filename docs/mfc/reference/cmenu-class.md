@@ -85,15 +85,15 @@ helpviewer_keywords:
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 ms.openlocfilehash: 1cd7be72dc6c9a38fae4f5ccc1a15c184a2d4466
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505524"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855486"
 ---
 # <a name="cmenu-class"></a>CMenu – – třída
 
-Zapouzdření oken `HMENU`.
+Zapouzdření `HMENU`Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -105,43 +105,43 @@ class CMenu : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CMenu –:: CMenu –](#cmenu)|`CMenu` Vytvoří objekt.|
+|[CMenu –:: CMenu –](#cmenu)|Vytvoří objekt `CMenu`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMenu –:: AppendMenu](#appendmenu)|Připojí novou položku na konec této nabídky.|
-|[CMenu –:: Attach](#attach)|Připojí popisovač nabídky systému Windows k `CMenu` objektu.|
+|[CMenu –:: Attach](#attach)|Připojí popisovač nabídky systému Windows k objektu `CMenu`.|
 |[CMenu –:: CheckMenuItem](#checkmenuitem)|Umístí zaškrtnutí nebo zruší zaškrtnutí u položky nabídky v místní nabídce.|
-|[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|Umístí přepínač vedle položky nabídky a odebere přepínač ze všech ostatních položek nabídky ve skupině.|
-|[CMenu –:: CreateMenu](#createmenu)|Vytvoří prázdnou nabídku a připojí ji k `CMenu` objektu.|
-|[CMenu::CreatePopupMenu](#createpopupmenu)|Vytvoří prázdnou místní nabídku a připojí ji k `CMenu` objektu.|
-|[CMenu::DeleteMenu](#deletemenu)|Odstraní zadanou položku z nabídky. Pokud má položka nabídky přidruženou místní nabídku, odstraní popisovač do místní nabídky a uvolní paměť, kterou používá.|
-|[CMenu –::D eleteTempMap](#deletetempmap)|Odstraní všechny dočasné `CMenu` objekty vytvořené `FromHandle` členskou funkcí.|
-|[CMenu::DestroyMenu](#destroymenu)|Odstraní nabídku připojenou k `CMenu` objektu a uvolní veškerou paměť, kterou nabídka zabírala.|
-|[CMenu –::D etach](#detach)|Odpojí popisovač nabídky systému Windows od `CMenu` objektu a vrátí popisovač.|
+|[CMenu –:: CheckMenuRadioItem](#checkmenuradioitem)|Umístí přepínač vedle položky nabídky a odebere přepínač ze všech ostatních položek nabídky ve skupině.|
+|[CMenu –:: CreateMenu](#createmenu)|Vytvoří prázdnou nabídku a připojí ji k objektu `CMenu`.|
+|[CMenu –:: CreatePopupMenu](#createpopupmenu)|Vytvoří prázdnou místní nabídku a připojí ji k objektu `CMenu`.|
+|[CMenu –::D eleteMenu](#deletemenu)|Odstraní zadanou položku z nabídky. Pokud má položka nabídky přidruženou místní nabídku, odstraní popisovač do místní nabídky a uvolní paměť, kterou používá.|
+|[CMenu –::D eleteTempMap](#deletetempmap)|Odstraní všechny dočasné `CMenu` objekty vytvořené pomocí `FromHandle` členské funkce.|
+|[CMenu –::D estroyMenu](#destroymenu)|Odstraní nabídku připojenou k objektu `CMenu` a uvolní veškerou paměť, kterou nabídka zabírala.|
+|[CMenu –::D etach](#detach)|Odpojí popisovač nabídky systému Windows od objektu `CMenu` a vrátí popisovač.|
 |[CMenu –::D rawItem](#drawitem)|Volá se rozhraním, když se změní vizuální aspekt nabídky sestavené vlastníkem.|
 |[CMenu –:: EnableMenuItem](#enablemenuitem)|Povolí, zakáže nebo ztmaví (šedě) položku nabídky.|
-|[CMenu –:: FromHandle](#fromhandle)|Vrátí ukazatel na `CMenu` objekt, který je dán popisovačem nabídky systému Windows.|
+|[CMenu –:: FromHandle](#fromhandle)|Vrátí ukazatel na objekt `CMenu` pro danou obslužnou rutinu nabídky systému Windows.|
 |[CMenu –:: GetDefaultItem](#getdefaultitem)|Určuje výchozí položku nabídky v zadané nabídce.|
-|[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|Načte ID kontextu nápovědě přidružené k této nabídce.|
-|[CMenu::GetMenuInfo](#getmenuinfo)|Načte informace o konkrétní nabídce.|
-|[CMenu::GetMenuItemCount](#getmenuitemcount)|Určuje počet položek v místní nabídce nebo v nabídce nejvyšší úrovně.|
+|[CMenu –:: GetMenuContextHelpId](#getmenucontexthelpid)|Načte ID kontextu nápovědě přidružené k této nabídce.|
+|[CMenu –:: GetMenuInfo](#getmenuinfo)|Načte informace o konkrétní nabídce.|
+|[CMenu –:: GetMenuItemCount](#getmenuitemcount)|Určuje počet položek v místní nabídce nebo v nabídce nejvyšší úrovně.|
 |[CMenu –:: GetMenuItemID](#getmenuitemid)|Získá identifikátor položky nabídky pro položku nabídky, která se nachází na zadané pozici.|
-|[CMenu::GetMenuItemInfo](#getmenuiteminfo)|Načte informace o položce nabídky.|
+|[CMenu –:: GetMenuItemInfo](#getmenuiteminfo)|Načte informace o položce nabídky.|
 |[CMenu –:: GetMenuState](#getmenustate)|Vrátí stav zadané položky nabídky nebo počet položek v místní nabídce.|
 |[CMenu –:: GetMenuString](#getmenustring)|Načte popisek zadané položky nabídky.|
-|[CMenu –:: GetSafeHmenu](#getsafehmenu)|Vrátí zabalený tímto `CMenu`objektem. `m_hMenu`|
+|[CMenu –:: GetSafeHmenu](#getsafehmenu)|Vrátí `m_hMenu` zabalenou tímto `CMenu`m objektem.|
 |[CMenu –:: Get– podnabídka](#getsubmenu)|Načte ukazatel na místní nabídku.|
 |[CMenu –:: InsertMenu](#insertmenu)|Vloží novou položku nabídky na určenou pozici a přesune jiné položky v nabídce.|
 |[CMenu –:: InsertMenuItem](#insertmenuitem)|Vloží novou položku nabídky na určenou pozici v nabídce.|
-|[CMenu –:: LoadMenu](#loadmenu)|Načte prostředek nabídky ze spustitelného souboru a připojí ho k `CMenu` objektu.|
-|[CMenu –:: LoadMenuIndirect](#loadmenuindirect)|Načte nabídku ze šablony nabídky v paměti a připojí ji k `CMenu` objektu.|
+|[CMenu –:: LoadMenu](#loadmenu)|Načte prostředek nabídky ze spustitelného souboru a připojí ho k objektu `CMenu`.|
+|[CMenu –:: LoadMenuIndirect](#loadmenuindirect)|Načte nabídku ze šablony nabídky v paměti a připojí ji k objektu `CMenu`.|
 |[CMenu –:: MeasureItem](#measureitem)|Volá se rozhraním, aby se určily dimenze nabídky, když se vytvoří nabídka pro vykreslení vlastníka.|
-|[CMenu::ModifyMenu](#modifymenu)|Změní existující položku nabídky na zadané pozici.|
+|[CMenu –:: ModifyMenu](#modifymenu)|Změní existující položku nabídky na zadané pozici.|
 |[CMenu –:: RemoveMenu](#removemenu)|Odstraní položku nabídky s přidruženou místní nabídkou ze zadané nabídky.|
 |[CMenu –:: SetDefaultItem](#setdefaultitem)|Nastaví výchozí položku nabídky pro určenou nabídku.|
 |[CMenu –:: SetMenuContextHelpId](#setmenucontexthelpid)|Nastaví ID kontextové aplikace Help, které má být přidruženo k této nabídce.|
@@ -153,7 +153,7 @@ class CMenu : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMenu –:: operator HMENU](#operator_hmenu)|Načte popisovač objektu nabídky.|
 |[CMenu –:: operator! =](#operator_neq)|Určuje, zda se dva objekty nabídky neshodují.|
@@ -161,17 +161,17 @@ class CMenu : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CMenu::m_hMenu](#m_hmenu)|Určuje popisovač pro nabídku systému Windows připojenou k `CMenu` objektu.|
+|[CMenu –:: m_hMenu](#m_hmenu)|Určuje popisovač pro nabídku systému Windows připojenou k objektu `CMenu`.|
 
 ## <a name="remarks"></a>Poznámky
 
 Poskytuje členské funkce pro vytváření, sledování, aktualizaci a zničení nabídky.
 
-Vytvořte objekt v bloku zásobníku jako místní a pak zavolejte `CMenu`členské funkce pro manipulaci s novou nabídkou podle potřeby. `CMenu` Potom zavolejte [CWnd:: SetMenu](../../mfc/reference/cwnd-class.md#setmenu) , aby se nabídka nastavila na okno, následované hned voláním `CMenu` členské funkce [odpojení](#detach) objektu. `CWnd::SetMenu` Členská funkce nastaví nabídku okna na novou nabídku, způsobí, že okno se překreslí tak, aby odráželo změnu nabídky, a také předává vlastnictví nabídky do okna. Volání `Detach` odpojí HMENU `CMenu` od objektu, aby v případě, že místní `CMenu` proměnná přechází z oboru, se `CMenu` destruktor objektu nepokouší zničit nabídku, kterou již nevlastní. V případě zničení okna je automaticky zničena i nabídka.
+Vytvořte objekt `CMenu` v bloku zásobníku jako místní a potom zavolejte členské funkce `CMenu`, abyste podle potřeby mohli pracovat s novou nabídkou. Potom zavolejte [CWnd:: SetMenu](../../mfc/reference/cwnd-class.md#setmenu) , aby se nabídka nastavila na okno, následované hned voláním členské funkce [Odpojit](#detach) objekt `CMenu`. Členská funkce `CWnd::SetMenu` nastaví nabídku okna na novou nabídku, způsobí, že okno bude překresleno tak, aby odráželo změnu nabídky, a také předává vlastnictví nabídky do okna. Volání `Detach` odpojí HMENU od objektu `CMenu`, takže když se místní `CMenu` proměnná předává mimo rozsah, destruktor objektu `CMenu` se nepokusí zničit nabídku, kterou již vlastní. V případě zničení okna je automaticky zničena i nabídka.
 
-Pomocí členské funkce [LoadMenuIndirect](#loadmenuindirect) můžete vytvořit nabídku ze šablony v paměti, ale nabídku vytvořenou z prostředku voláním [LoadMenu](#loadmenu) je snazší udržovat a samotný prostředek nabídky lze vytvořit a upravit pomocí editoru nabídek. .
+Pomocí členské funkce [LoadMenuIndirect](#loadmenuindirect) můžete vytvořit nabídku ze šablony v paměti, ale nabídku vytvořenou z prostředku voláním [LoadMenu](#loadmenu) je snazší udržovat a samotný prostředek nabídky lze vytvořit a upravit pomocí editoru nabídek.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -205,19 +205,19 @@ BOOL AppendMenu(
 Určuje informace o stavu nové položky nabídky, když je přidána do nabídky. Obsahuje jednu nebo více hodnot uvedených v části poznámky.
 
 *nIDNewItem*<br/>
-Určuje ID příkazu nové položky nabídky nebo, pokud je *nFlags* nastaveno na MF_POPUP, v místní nabídce se zobrazí nabídka ( `HMENU`). Parametr *nIDNewItem* se ignoruje (není nutné), pokud je *NFLAGS* nastaven na MF_SEPARATOR.
+Určuje ID příkazu nové položky nabídky nebo, pokud je *nFlags* nastaveno na MF_POPUP, v místní nabídce se zobrazí nabídka (`HMENU`). Parametr *nIDNewItem* se ignoruje (není potřeba), pokud je *nFlags* nastavené na MF_SEPARATOR.
 
 *lpszNewItem*<br/>
 Určuje obsah nové položky nabídky. Parametr *nFlags* slouží k interpretaci *lpszNewItem* následujícím způsobem:
 
 |nFlags|Výklad lpszNewItem|
 |------------|-----------------------------------|
-|MF_OWNERDRAW|Obsahuje hodnotu 32-bit dodanou aplikací, kterou může aplikace použít k udržování dalších dat přidružených k položce nabídky. Tato hodnota 32 je pro aplikaci k dispozici, když zpracovává zprávy WM_MEASUREITEM a WM_DRAWITEM. Hodnota je uložena v `itemData` členovi struktury dodávané s těmito zprávami.|
+|MF_OWNERDRAW|Obsahuje hodnotu 32-bit dodanou aplikací, kterou může aplikace použít k udržování dalších dat přidružených k položce nabídky. Tato hodnota 32 je pro aplikaci k dispozici, když zpracovává WM_MEASUREITEM a WM_DRAWITEM zprávy. Hodnota je uložena v `itemData` členu struktury dodávané s těmito zprávami.|
 |MF_STRING|Obsahuje ukazatel na řetězec zakončený hodnotou null. Toto je výchozí interpretace.|
 |MF_SEPARATOR|Parametr *lpszNewItem* se ignoruje (není nutné).|
 
 *pBmp*<br/>
-Odkazuje na `CBitmap` objekt, který bude použit jako položka nabídky.
+Odkazuje na objekt `CBitmap`, který bude použit jako položka nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -225,13 +225,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace může určit stav položky nabídky nastavením hodnot v *nFlags*. Když *nIDNewItem* určí místní nabídku, bude se jednat o součást nabídky, ke které se připojí. Pokud je tato nabídka zničena, bude také zničena i připojená nabídka. Připojená nabídka by se měla odpojit od `CMenu` objektu, aby se předešlo konfliktu. Všimněte si, že MF_STRING a MF_OWNERDRAW nejsou platné pro rastrovou verzi `AppendMenu`.
+Aplikace může určit stav položky nabídky nastavením hodnot v *nFlags*. Když *nIDNewItem* určí místní nabídku, bude se jednat o součást nabídky, ke které se připojí. Pokud je tato nabídka zničena, bude také zničena i připojená nabídka. Připojená nabídka by se měla odpojit od objektu `CMenu`, aby se předešlo konfliktu. Všimněte si, že MF_STRING a MF_OWNERDRAW nejsou platné pro verzi rastrového obrázku `AppendMenu`.
 
 Následující seznam popisuje příznaky, které mohou být nastaveny v *nFlags*:
 
-- MF_CHECKED funguje jako přepínač s MF_UNCHECKED pro umístění výchozího zaškrtnutí vedle položky. Když aplikace poskytuje rastrové obrázky značek zaškrtnutí (viz členská funkce [SetMenuItemBitmaps](#setmenuitembitmaps) ), zobrazí se rastrový obrázek "zaškrtnutí na".
+- MF_CHECKED slouží jako přepínač s MF_UNCHECKED pro umístění výchozího zaškrtnutí vedle položky. Když aplikace poskytuje rastrové obrázky značek zaškrtnutí (viz členská funkce [SetMenuItemBitmaps](#setmenuitembitmaps) ), zobrazí se rastrový obrázek "zaškrtnutí na".
 
-- MF_UNCHECKED funguje jako přepínač s MF_CHECKED pro odebrání značky zaškrtnutí vedle položky. Když aplikace zadává rastrové obrázky značek zaškrtnutí (viz `SetMenuItemBitmaps` členská funkce), zobrazí se rastrový obrázek "zaškrtnutí vypnuto".
+- MF_UNCHECKED slouží jako přepínač s MF_CHECKED, chcete-li odebrat zaškrtnutí vedle položky. Když aplikace poskytuje rastrové obrázky značek zaškrtnutí (viz členská funkce `SetMenuItemBitmaps`), zobrazí se rastrový obrázek "zaškrtnutí vypnuto".
 
 - MF_DISABLED zakáže položku nabídky, aby ji nebylo možné vybrat, ale nedim.
 
@@ -243,13 +243,13 @@ Následující seznam popisuje příznaky, které mohou být nastaveny v *nFlags
 
 - MF_MENUBREAK umístí položku na nový řádek ve statických nabídkách nebo v novém sloupci v místních nabídkách. Mezi sloupci se neumístí žádná dělicí čára.
 
-- MF_OWNERDRAW určuje, že položka je položkou vykreslování vlastníka. Při prvním zobrazení nabídky se zobrazí okno, které vlastní nabídka, zprávu WM_MEASUREITEM, která načte výšku a šířku položky nabídky. Zpráva WM_DRAWITEM je odeslána pokaždé, když je nutné, aby vlastník aktualizoval vizuální vzhled položky nabídky. Tato možnost není platná pro položku nabídky nejvyšší úrovně.
+- MF_OWNERDRAW určuje, že položka je položkou vykreslování vlastníka. Při prvním zobrazení nabídky se zobrazí okno, které vlastní nabídka, zprávu WM_MEASUREITEM, která načte výšku a šířku položky nabídky. WM_DRAWITEM zpráva je odeslána pokaždé, když vlastník musí aktualizovat vzhled položky nabídky. Tato možnost není platná pro položku nabídky nejvyšší úrovně.
 
-- MF_POPUP určuje, že položka nabídky má přiřazenou místní nabídku. Parametr ID Určuje popisovač pro místní nabídku, která má být přidružena k položce. Tato možnost se používá pro přidání místní nabídky nejvyšší úrovně nebo hierarchické místní nabídky do položky místní nabídky.
+- MF_POPUP určuje, zda má položka nabídky k ní přidruženou místní nabídku. Parametr ID Určuje popisovač pro místní nabídku, která má být přidružena k položce. Tato možnost se používá pro přidání místní nabídky nejvyšší úrovně nebo hierarchické místní nabídky do položky místní nabídky.
 
 - MF_SEPARATOR nakreslí horizontální dělicí čáru. Dá se použít jenom v místní nabídce. Tento řádek nemůže být ztlumený, zakázaný nebo zvýrazněný. Další parametry jsou ignorovány.
 
-- MF_STRING určuje, že položka nabídky je řetězec znaků.
+- MF_STRING určuje, zda je položka nabídky znakovým řetězcem.
 
 Každá z následujících skupin obsahuje příznaky, které jsou vzájemně exkluzivní a nelze je použít společně:
 
@@ -269,7 +269,7 @@ Pokaždé, když se změní nabídka, která se nachází v okně (bez ohledu na
 
 ##  <a name="attach"></a>CMenu –:: Attach
 
-Připojí existující nabídku systému Windows k `CMenu` objektu.
+Připojí existující nabídku systému Windows k objektu `CMenu`.
 
 ```
 BOOL Attach(HMENU hMenu);
@@ -286,7 +286,7 @@ Nenulové, pokud operace byla úspěšná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by neměla být volána, pokud je nabídka již k `CMenu` objektu připojena. Popisovač nabídky je uložený v `m_hMenu` datovém členu.
+Tato funkce by neměla být volána, pokud je již nabídka připojena k objektu `CMenu`. Obslužná rutina nabídky je uložena v datovém členu `m_hMenu`.
 
 Pokud je nabídka, kterou chcete manipulovat, již přidružena k oknu, můžete k získání popisovače do nabídky použít funkci [CWnd:: getmenu](../../mfc/reference/cwnd-class.md#getmenu) .
 
@@ -314,15 +314,15 @@ Určuje, jak se má položka nabídky kontrolovat a jak se má určit pozice pol
 
 - MF_BYCOMMAND určuje, že parametr poskytuje ID příkazu pro existující položku nabídky. Toto nastavení je výchozí.
 
-- MF_BYPOSITION určuje, že parametr poskytuje pozici existující položky nabídky. První položka je na pozici 0.
+- MF_BYPOSITION určuje, zda parametr poskytuje pozici existující položky nabídky. První položka je na pozici 0.
 
-- MF_CHECKED funguje jako přepínač s MF_UNCHECKED pro umístění výchozího zaškrtnutí vedle položky.
+- MF_CHECKED slouží jako přepínač s MF_UNCHECKED pro umístění výchozího zaškrtnutí vedle položky.
 
-- MF_UNCHECKED funguje jako přepínač s MF_CHECKED pro odebrání značky zaškrtnutí vedle položky.
+- MF_UNCHECKED slouží jako přepínač s MF_CHECKED, chcete-li odebrat zaškrtnutí vedle položky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí stav položky: MF_CHECKED nebo MF_UNCHECKED, nebo 0xFFFFFFFF, pokud položka nabídky neexistuje.
+Předchozí stav položky: MF_CHECKED nebo MF_UNCHECKED nebo 0xFFFFFFFF, pokud položka nabídky neexistuje.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -360,7 +360,7 @@ Určuje (jako ID nebo posun v závislosti na hodnotě *nFlags*) položku ve skup
 *nFlags*<br/>
 Určuje výklad *nIDFirst*, *nIDLast*a *nIDItem* následujícím způsobem:
 
-|nFlags|Výsledků|
+|nFlags|Interpretace|
 |------------|--------------------|
 |MF_BYCOMMAND|Určuje, že parametr poskytuje ID příkazu pro existující položku nabídky. Toto je výchozí nastavení, pokud není nastavená hodnota MF_BYCOMMAND ani MF_BYPOSITION.|
 |MF_BYPOSITION|Určuje, že parametr poskytuje pozici existující položky nabídky. První položka je na pozici 0.|
@@ -375,11 +375,11 @@ Ve stejnou dobu funkce zruší zaškrtnutí všech ostatních položek nabídky 
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range).
+  Podívejte se na příklad [ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range).
 
 ##  <a name="cmenu"></a>CMenu –:: CMenu –
 
-Vytvoří prázdnou nabídku a připojí ji k `CMenu` objektu.
+Vytvoří prázdnou nabídku a připojí ji k objektu `CMenu`.
 
 ```
 CMenu();
@@ -387,7 +387,7 @@ CMenu();
 
 ### <a name="remarks"></a>Poznámky
 
-Nabídka není vytvořena, dokud nebudete volat jednu z členských funkcí Create nebo Load pro`CMenu:`
+Nabídka není vytvořena, dokud nebudete volat jednu z členských funkcí Create nebo Load `CMenu:`
 
 - [CreateMenu](#createmenu)
 
@@ -401,7 +401,7 @@ Nabídka není vytvořena, dokud nebudete volat jednu z členských funkcí Crea
 
 ##  <a name="createmenu"></a>CMenu –:: CreateMenu
 
-Vytvoří nabídku a připojí ji k `CMenu` objektu.
+Vytvoří nabídku a připojí ji k objektu `CMenu`.
 
 ```
 BOOL CreateMenu();
@@ -413,7 +413,7 @@ Nenulové, pokud se nabídka vytvořila úspěšně; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Nabídka je zpočátku prázdná. Položky nabídky lze přidat pomocí `AppendMenu` členské funkce nebo. `InsertMenu`
+Nabídka je zpočátku prázdná. Položky nabídky lze přidat pomocí členské funkce `AppendMenu` nebo `InsertMenu`.
 
 Pokud je nabídka přiřazena k oknu, je automaticky zničena při zničení okna.
 
@@ -425,7 +425,7 @@ Před ukončením musí aplikace uvolnit systémové prostředky spojené s nab�
 
 ##  <a name="createpopupmenu"></a>CMenu –:: CreatePopupMenu
 
-Vytvoří místní nabídku a připojí ji k `CMenu` objektu.
+Vytvoří místní nabídku a připojí ji k objektu `CMenu`.
 
 ```
 BOOL CreatePopupMenu();
@@ -437,7 +437,7 @@ Nenulové, pokud se místní nabídka úspěšně vytvořila; v opačném příp
 
 ### <a name="remarks"></a>Poznámky
 
-Nabídka je zpočátku prázdná. Položky nabídky lze přidat pomocí `AppendMenu` členské funkce nebo. `InsertMenu` Aplikace může přidat místní nabídku do existující nabídky nebo místní nabídky. `TrackPopupMenu` Členská funkce se dá použít k zobrazení této nabídky jako plovoucí místní nabídky a ke sledování výběru v místní nabídce.
+Nabídka je zpočátku prázdná. Položky nabídky lze přidat pomocí členské funkce `AppendMenu` nebo `InsertMenu`. Aplikace může přidat místní nabídku do existující nabídky nebo místní nabídky. Členská funkce `TrackPopupMenu` může být použita k zobrazení této nabídky jako plovoucí místní nabídky a ke sledování výběru v místní nabídce.
 
 Pokud je nabídka přiřazena k oknu, je automaticky zničena při zničení okna. Pokud je nabídka přidána do existující nabídky, je automaticky zničena při zničení této nabídky.
 
@@ -486,7 +486,7 @@ Pokaždé, když se změní nabídka, která se nachází v okně (bez ohledu na
 
 ##  <a name="deletetempmap"></a>CMenu –::D eleteTempMap
 
-Volána automaticky `CWinApp` obslužnou rutinou nečinnosti, odstraní všechny dočasné `CMenu` objekty vytvořené členskou funkcí [FromHandle](#fromhandle) .
+Volána automaticky `CWinApp` obslužná rutina doby nečinnosti, odstraní všechny dočasné objekty `CMenu` vytvořené členskou funkcí [FromHandle](#fromhandle) .
 
 ```
 static void PASCAL DeleteTempMap();
@@ -494,7 +494,7 @@ static void PASCAL DeleteTempMap();
 
 ### <a name="remarks"></a>Poznámky
 
-`DeleteTempMap``CMenu` před`CMenu` odstraněním objektu odpojí objekt nabídky systému Windows připojen k dočasnému objektu.
+`DeleteTempMap` před odstraněním objektu `CMenu` odpojí objekt nabídky systému Windows připojen k dočasnému objektu `CMenu`.
 
 ### <a name="example"></a>Příklad
 
@@ -514,7 +514,7 @@ Nenulové, pokud je nabídka zničena; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Nabídka je odpojena od `CMenu` objektu před jeho zničením. Funkce Windows `DestroyMenu` je automaticky volána `CMenu` v destruktoru.
+Nabídka je odpojena od objektu `CMenu` před tím, než je zničena. Funkce Windows `DestroyMenu` je automaticky volána v destruktoru `CMenu`.
 
 ### <a name="example"></a>Příklad
 
@@ -522,7 +522,7 @@ Nabídka je odpojena od `CMenu` objektu před jeho zničením. Funkce Windows `D
 
 ##  <a name="detach"></a>CMenu –::D etach
 
-Odpojí nabídku systému Windows od `CMenu` objektu a vrátí popisovač.
+Odpojí nabídku systému Windows od objektu `CMenu` a vrátí popisovač.
 
 ```
 HMENU Detach();
@@ -534,7 +534,7 @@ Popisovač typu HMENU do nabídky systému Windows, pokud je úspěšný; jinak 
 
 ### <a name="remarks"></a>Poznámky
 
-`m_hMenu` Datový člen je nastaven na hodnotu null.
+Datový člen `m_hMenu` je nastaven na hodnotu NULL.
 
 ### <a name="example"></a>Příklad
 
@@ -555,9 +555,9 @@ Ukazatel na strukturu [DRAWITEMSTRUCT –](/windows/win32/api/winuser/ns-winuser
 
 ### <a name="remarks"></a>Poznámky
 
-`itemAction` Člen`DRAWITEMSTRUCT` struktury definuje akci kreslení, která má být provedena. Přepište tuto členskou funkci pro implementaci vykreslování pro objekt vykreslený `CMenu` vlastníkem. Aplikace by měla obnovit všechny objekty GDI (Graphics Device Interface) vybrané pro kontext zobrazení zadaný v *lpDrawItemStruct* před ukončením této členské funkce.
+`itemAction` člen struktury `DRAWITEMSTRUCT` definuje akci kreslení, která má být provedena. Přepište tuto členskou funkci pro implementaci vykreslování pro objekt `CMenu` vykreslený vlastníkem. Aplikace by měla obnovit všechny objekty GDI (Graphics Device Interface) vybrané pro kontext zobrazení zadaný v *lpDrawItemStruct* před ukončením této členské funkce.
 
-Popis`DRAWITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) .
+Popis `DRAWITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) .
 
 ### <a name="example"></a>Příklad
 
@@ -581,11 +581,11 @@ UINT EnableMenuItem(
 Určuje položku nabídky, která má být povolena, jak je určeno *nEnable*. Tento parametr může určovat položky místní nabídky a také standardní položky nabídky.
 
 *nEnable*<br/>
-Určuje akci, která má být provedena. Může to být kombinace MF_DISABLED, MF_ENABLED nebo MF_GRAYED s MF_BYCOMMAND nebo MF_BYPOSITION. Tyto hodnoty lze kombinovat pomocí bitového operátoru OR. Tyto hodnoty mají následující význam:
+Určuje akci, která má být provedena. Může se jednat o kombinaci MF_DISABLED, MF_ENABLED nebo MF_GRAYED s MF_BYCOMMAND nebo MF_BYPOSITION. Tyto hodnoty lze kombinovat pomocí bitového operátoru OR. Tyto hodnoty mají následující význam:
 
 - MF_BYCOMMAND určuje, že parametr poskytuje ID příkazu pro existující položku nabídky. Toto nastavení je výchozí.
 
-- MF_BYPOSITION určuje, že parametr poskytuje pozici existující položky nabídky. První položka je na pozici 0.
+- MF_BYPOSITION určuje, zda parametr poskytuje pozici existující položky nabídky. První položka je na pozici 0.
 
 - MF_DISABLED zakáže položku nabídky, aby ji nebylo možné vybrat, ale nedim.
 
@@ -601,9 +601,9 @@ Předchozí stav (MF_DISABLED, MF_ENABLED nebo MF_GRAYED) nebo-1, pokud není pl
 
 Členské funkce [CreateMenu](#createmenu), [InsertMenu](#insertmenu), [ModifyMenu](#modifymenu)a [LoadMenuIndirect](#loadmenuindirect) mohou také nastavit stav (Enabled, disabled nebo dimmed) položky nabídky.
 
-Použití hodnoty MF_BYPOSITION vyžaduje, aby aplikace použila správný `CMenu`. `CMenu` Pokud je použit panel nabídek, je ovlivněna položka nabídky nejvyšší úrovně (položka v panelu nabídek). Chcete-li nastavit stav položky v automaticky otevíraném okně nebo vnořené místní nabídce podle pozice, musí aplikace určit v `CMenu` místní nabídce.
+Použití hodnoty MF_BYPOSITION vyžaduje, aby aplikace používala správný `CMenu`. Je-li použita `CMenu` řádku nabídek, bude ovlivněna položka nabídky nejvyšší úrovně (položka v panelu nabídek). Chcete-li nastavit stav položky v automaticky otevíraném okně nebo vnořené místní nabídce podle pozice, aplikace musí určovat `CMenu` místní nabídky.
 
-Když aplikace určí příznak MF_BYCOMMAND, systém Windows zkontroluje všechny místní nabídky položky, které jsou podřízené k `CMenu`; proto, pokud nejsou k dispozici duplicitní položky nabídky, a to `CMenu` pomocí panelu nabídek.
+Když aplikace určí příznak MF_BYCOMMAND, systém Windows zkontroluje všechny místní nabídky položky, které jsou podřízené `CMenu`; proto, pokud nejsou k dispozici duplicitní položky nabídky, je použití `CMenu` panelu nabídek dostatečné.
 
 ### <a name="example"></a>Příklad
 
@@ -611,7 +611,7 @@ Když aplikace určí příznak MF_BYCOMMAND, systém Windows zkontroluje všech
 
 ##  <a name="fromhandle"></a>CMenu –:: FromHandle
 
-Vrátí ukazatel na `CMenu` objekt s daným popisovačem Windows v nabídce.
+Vrátí ukazatel na objekt `CMenu` s daným popisovačem Windows pro nabídku.
 
 ```
 static CMenu* PASCAL FromHandle(HMENU hMenu);
@@ -624,13 +624,13 @@ Popisovač Windows do nabídky
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `CMenu` , který může být dočasný nebo trvalý.
+Ukazatel na `CMenu`, která může být dočasná nebo trvalá.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt již není připojen k objektu nabídky systému Windows, je vytvořen a připojen `CMenu` dočasný objekt. `CMenu`
+Pokud objekt `CMenu` již není připojen k objektu nabídky systému Windows, je vytvořen a připojen dočasný objekt `CMenu`.
 
-Tento dočasný `CMenu` objekt je platný pouze do okamžiku, kdy aplikace bude mít čas nečinnosti ve smyčce události, kdy jsou odstraněny všechny dočasné objekty.
+Tento dočasný objekt `CMenu` je platný pouze do okamžiku, kdy aplikace bude mít čas nečinnosti ve smyčce události, kdy jsou odstraněny všechny dočasné objekty.
 
 ### <a name="example"></a>Příklad
 
@@ -651,7 +651,7 @@ UINT GetDefaultItem(
 *gmdiFlags*<br/>
 Hodnota určující, jak funkce vyhledává položky nabídky Tento parametr může být None, jedna nebo kombinace následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |GMDI_GOINTOPOPUPS|Určuje, že pokud je výchozí položkou položka, která otevře podnabídku, je funkce vyhledána v odpovídající podnabídce rekurzivně. Pokud podnabídka nemá výchozí položku, vrácená hodnota identifikuje položku, která otevře podnabídku.<br /><br /> Ve výchozím nastavení funkce vrátí první výchozí položku v zadané nabídce bez ohledu na to, zda se jedná o položku, která otevře podnabídku.|
 |GMDI_USEDISABLED|Určuje, že funkce má vrátit výchozí položku, i když je zakázaná.<br /><br /> Ve výchozím nastavení funkce přeskočí zakázané nebo šedé položky.|
@@ -673,7 +673,7 @@ Tato členská funkce implementuje chování funkce Win32 [GetMenuDefaultItem](/
 
 ##  <a name="getmenucontexthelpid"></a>CMenu –:: GetMenuContextHelpId
 
-Načte ID kontextové kontextové informace přidružené `CMenu`k.
+Načte ID kontextové kontextové informace přidružené k `CMenu`.
 
 ```
 DWORD GetMenuContextHelpId() const;
@@ -681,7 +681,7 @@ DWORD GetMenuContextHelpId() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-ID kontextové kontextové relace, ke `CMenu` kterému je aktuálně přidruženo, pokud má hodnotu. v opačném případě nula.
+ID kontextové kontextové informace, které je aktuálně přidruženo k `CMenu`, pokud má jednu z nich; v opačném případě nenulová.
 
 ### <a name="example"></a>Příklad
 
@@ -765,7 +765,7 @@ Identifikátor nebo pozice položky nabídky, o které se mají získat informac
 Ukazatel na [MENUITEMINFO](/windows/win32/api/winuser/ns-winuser-menuiteminfow), jak je popsáno v Windows SDK, který obsahuje informace o nabídce.
 
 *fByPos*<br/>
-Hodnota, která určuje význam `nIDItem`. Ve výchozím nastavení `ByPos` má hodnotu false, což označuje, že uItem je identifikátor položky nabídky. Pokud `ByPos` vlastnost není nastavena na hodnotu false, indikuje umístění položky nabídky.
+Hodnota určující význam `nIDItem`. Ve výchozím nastavení je `ByPos` FALSE, což označuje, že uItem je identifikátor položky nabídky. Pokud `ByPos` není nastavena na hodnotu FALSE, indikuje umístění položky nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -773,7 +773,7 @@ Pokud je funkce úspěšná, vrácená hodnota je nenulová. Pokud dojde k chyb�
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování [GetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-getmenuiteminfow)funkce Win32, jak je popsáno v Windows SDK. Všimněte si, že v implementaci `GetMenuItemInfo`MFC rozhraní nepoužíváte popisovač pro nabídku.
+Tato členská funkce implementuje chování [GetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-getmenuiteminfow)funkce Win32, jak je popsáno v Windows SDK. Všimněte si, že v implementaci knihovny MFC `GetMenuItemInfo`nepoužíváte popisovač pro nabídku.
 
 ### <a name="example"></a>Příklad
 
@@ -799,13 +799,13 @@ Určuje povaze *NID*. Může to být jedna z následujících hodnot:
 
 - MF_BYCOMMAND určuje, že parametr poskytuje ID příkazu pro existující položku nabídky. Toto nastavení je výchozí.
 
-- MF_BYPOSITION určuje, že parametr poskytuje pozici existující položky nabídky. První položka je na pozici 0.
+- MF_BYPOSITION určuje, zda parametr poskytuje pozici existující položky nabídky. První položka je na pozici 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Hodnota 0xFFFFFFFF, pokud zadaná položka neexistuje. Pokud *nId* identifikuje místní nabídku, obsahuje horní bajty počet položek v místní nabídce a bajt s nižším pořadím obsahuje příznaky nabídky přidružené k místní nabídce. V opačném případě je vrácená hodnota maska (logická hodnota nebo) hodnot z následujícího seznamu (Tato maska popisuje stav položky nabídky, kterou *nId* identifikuje):
 
-- MF_CHECKED funguje jako přepínač s MF_UNCHECKED pro umístění výchozího zaškrtnutí vedle položky. Když aplikace poskytuje rastrové obrázky značek zaškrtnutí (viz `SetMenuItemBitmaps` členská funkce), zobrazí se rastrový obrázek zaškrtnutí na obrázku.
+- MF_CHECKED slouží jako přepínač s MF_UNCHECKED pro umístění výchozího zaškrtnutí vedle položky. Když aplikace poskytuje rastrové obrázky značek zaškrtnutí (viz členská funkce `SetMenuItemBitmaps`), zobrazí se rastrový obrázek zaškrtnutí na obrázku.
 
 - MF_DISABLED zakáže položku nabídky, aby ji nebylo možné vybrat, ale nedim.
 
@@ -819,7 +819,7 @@ Hodnota 0xFFFFFFFF, pokud zadaná položka neexistuje. Pokud *nId* identifikuje 
 
 - MF_SEPARATOR nakreslí horizontální dělicí čáru. Dá se použít jenom v místní nabídce. Tento řádek nemůže být ztlumený, zakázaný nebo zvýrazněný. Další parametry jsou ignorovány.
 
-- MF_UNCHECKED funguje jako přepínač s MF_CHECKED pro odebrání značky zaškrtnutí vedle položky. Když aplikace zadává rastrové obrázky značek zaškrtnutí (viz `SetMenuItemBitmaps` členská funkce), zobrazí se rastrový obrázek "zaškrtnutí vypnuto". Všimněte si, že hodnota této konstanty je 0; Při použití této hodnoty by aplikace neměla při selhání zkoušet hodnotu 0.
+- MF_UNCHECKED slouží jako přepínač s MF_CHECKED, chcete-li odebrat zaškrtnutí vedle položky. Když aplikace poskytuje rastrové obrázky značek zaškrtnutí (viz členská funkce `SetMenuItemBitmaps`), zobrazí se rastrový obrázek "zaškrtnutí vypnuto". Všimněte si, že hodnota této konstanty je 0; Při použití této hodnoty by aplikace neměla při selhání zkoušet hodnotu 0.
 
 ### <a name="example"></a>Příklad
 
@@ -851,7 +851,7 @@ Určuje celočíselný identifikátor položky nabídky nebo posun položky nab�
 Odkazuje na vyrovnávací paměť, která má obdržet popisek.
 
 *rString*<br/>
-Odkaz na `CString` objekt, který má přijmout zkopírovaný řetězec nabídky.
+Odkaz na objekt `CString`, který má přijmout zkopírovaný řetězec nabídky.
 
 *nMaxCount*<br/>
 Určuje maximální délku (ve znacích) popisku, který se má zkopírovat. Pokud je popisek delší než maximální hodnota zadaná v *nMaxCount*, znaky navíc se zkrátí.
@@ -878,7 +878,7 @@ Parametr *nMaxCount* by měl být větší než počet znaků v popisku, aby odp
 
 ##  <a name="getsafehmenu"></a>CMenu –:: GetSafeHmenu
 
-Vrátí HMENU zabalený tímto `CMenu` objektem nebo ukazatel s hodnotou null.`CMenu`
+Vrátí HMENU zabalený tímto objektem `CMenu` nebo`CMenu` ukazatel s hodnotou NULL.
 
 ```
 HMENU GetSafeHmenu() const;
@@ -890,7 +890,7 @@ HMENU GetSafeHmenu() const;
 
 ##  <a name="getsubmenu"></a>CMenu –:: Get– podnabídka
 
-`CMenu` Načte objekt místní nabídky.
+Načte objekt `CMenu` místní nabídky.
 
 ```
 CMenu* GetSubMenu(int nPos) const;
@@ -903,7 +903,7 @@ Určuje umístění místní nabídky obsažené v nabídce. Hodnoty pozice zač
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `CMenu` objekt, jehož `m_hMenu` člen obsahuje popisovač do místní nabídky, pokud na dané pozici existuje místní nabídka, v opačném případě hodnota null. `CMenu` Pokud objekt neexistuje, je vytvořen dočasný. Vrácený `CMenu` ukazatel by neměl být uložen.
+Ukazatel na objekt `CMenu`, jehož člen `m_hMenu` obsahuje popisovač do místní nabídky, pokud na dané pozici existuje místní nabídka. jinak NULL. Pokud objekt `CMenu` neexistuje, je vytvořen dočasný. Vrácený ukazatel `CMenu` by neměl být uložen.
 
 ### <a name="example"></a>Příklad
 
@@ -941,19 +941,19 @@ Určuje položku nabídky, před kterou bude vložena nová položka nabídky. P
 Určuje způsob interpretace *npozici* a určení informací o stavu nové položky nabídky při jejím přidání do nabídky. Seznam příznaků, které lze nastavit, naleznete v tématu členská funkce [AppendMenu](#appendmenu) . Chcete-li zadat více než jednu hodnotu, použijte operátor OR pro kombinaci s příznakem MF_BYCOMMAND nebo MF_BYPOSITION.
 
 *nIDNewItem*<br/>
-Určuje ID příkazu nové položky nabídky nebo, pokud je *nFlags* nastaveno na MF_POPUP, v místní nabídce se zobrazí nabídka (HMENU). Parametr *nIDNewItem* se ignoruje (není nutné), pokud je *NFLAGS* nastaven na MF_SEPARATOR.
+Určuje ID příkazu nové položky nabídky nebo, pokud je *nFlags* nastaveno na MF_POPUP, v místní nabídce se zobrazí nabídka HMENU (). Parametr *nIDNewItem* se ignoruje (není potřeba), pokud je *nFlags* nastavené na MF_SEPARATOR.
 
 *lpszNewItem*<br/>
 Určuje obsah nové položky nabídky. *nFlags* lze použít k interpretaci *lpszNewItem* následujícími způsoby:
 
 |nFlags|Výklad lpszNewItem|
 |------------|-----------------------------------|
-|MF_OWNERDRAW|Obsahuje hodnotu 32-bit dodanou aplikací, kterou může aplikace použít k udržování dalších dat přidružených k položce nabídky. Tato hodnota 32 je k dispozici pro aplikaci v `itemData` členu struktury dodávané zprávami [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) a [WM_DRAWITEM](/windows/win32/Controls/wm-drawitem) . Tyto zprávy jsou odesílány, když je položka nabídky zpočátku zobrazena nebo se změnila.|
+|MF_OWNERDRAW|Obsahuje hodnotu 32-bit dodanou aplikací, kterou může aplikace použít k udržování dalších dat přidružených k položce nabídky. Tato hodnota 32 je k dispozici pro aplikaci v `itemData`m členu struktury dodávané [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) a [WM_DRAWITEMmi](/windows/win32/Controls/wm-drawitem) zprávami. Tyto zprávy jsou odesílány, když je položka nabídky zpočátku zobrazena nebo se změnila.|
 |MF_STRING|Obsahuje dlouhý ukazatel na řetězec zakončený hodnotou null. Toto je výchozí interpretace.|
 |MF_SEPARATOR|Parametr *lpszNewItem* se ignoruje (není nutné).|
 
 *pBmp*<br/>
-Odkazuje na `CBitmap` objekt, který bude použit jako položka nabídky.
+Odkazuje na objekt `CBitmap`, který bude použit jako položka nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -963,11 +963,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 Aplikace může určit stav položky nabídky nastavením hodnot v *nFlags*.
 
-Pokaždé, když se změní nabídka, která se nachází v okně (bez ohledu na to, zda se okno zobrazí), aplikace `CWnd::DrawMenuBar`by měla zavolat.
+Pokaždé, když se změní nabídka, která se nachází v okně (bez ohledu na to, zda se okno zobrazí), aplikace by měla volat `CWnd::DrawMenuBar`.
 
-Když *nIDNewItem* určí místní nabídku, bude se jednat o součást nabídky, do které je vložena. Pokud je tato nabídka zničena, bude také zničena i vložená nabídka. Vložená nabídka by se měla odpojit od `CMenu` objektu, aby se předešlo konfliktu.
+Když *nIDNewItem* určí místní nabídku, bude se jednat o součást nabídky, do které je vložena. Pokud je tato nabídka zničena, bude také zničena i vložená nabídka. Vložená nabídka by se měla odpojit od objektu `CMenu`, aby se předešlo konfliktu.
 
-Pokud je aktivní podřízené okno MDI (Multiple Document Interface) a aplikace vloží místní nabídku do nabídky aplikace MDI voláním této funkce a zadáním příznaku MF_BYPOSITION, nabídka se vloží o jednu pozici dále, než Outer. K tomu dochází, protože řídicí nabídka aktivního podřízeného okna MDI je vložena do první pozice řádku nabídek okna rámce MDI. Pro správné umístění nabídky musí aplikace přidat 1 k hodnotě pozice, kterou by jinak bylo možné použít. Aplikace může použít zprávu WM_MDIGETACTIVE k určení, zda je aktuálně aktivní podřízené okno maximalizováno.
+Pokud je aktivní podřízené okno MDI (Multiple Document Interface) a aplikace vloží místní nabídku do nabídky aplikace MDI voláním této funkce a určením příznaku MF_BYPOSITION, nabídka se vloží o jednu pozici dále, než je Outer. K tomu dochází, protože řídicí nabídka aktivního podřízeného okna MDI je vložena do první pozice řádku nabídek okna rámce MDI. Pro správné umístění nabídky musí aplikace přidat 1 k hodnotě pozice, kterou by jinak bylo možné použít. Aplikace může použít WM_MDIGETACTIVEovou zprávu k určení, zda je aktuálně aktivní podřízené okno maximalizováno.
 
 ### <a name="example"></a>Příklad
 
@@ -990,10 +990,10 @@ BOOL InsertMenuItem(
 Viz popis *uItem* v [InsertMenuItem](/windows/win32/api/winuser/nf-winuser-insertmenuitemw) ve Windows SDK.
 
 *lpMenuItemInfo*<br/>
-Viz popis *lpmii* v `InsertMenuItem` v Windows SDK.
+Viz popis *lpmii* v `InsertMenuItem` Windows SDK.
 
 *fByPos*<br/>
-Viz popis *fByPosition* v `InsertMenuItem` v Windows SDK.
+Viz popis *fByPosition* v `InsertMenuItem` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1001,7 +1001,7 @@ Tato funkce zalomí [InsertMenuItem](/windows/win32/api/winuser/nf-winuser-inser
 
 ##  <a name="loadmenu"></a>CMenu –:: LoadMenu
 
-Načte prostředek nabídky ze spustitelného souboru aplikace a připojí ho k `CMenu` objektu.
+Načte prostředek nabídky ze spustitelného souboru aplikace a připojí ho k objektu `CMenu`.
 
 ```
 BOOL LoadMenu(LPCTSTR lpszResourceName);
@@ -1030,7 +1030,7 @@ Před ukončením musí aplikace uvolnit systémové prostředky spojené s nab�
 
 ##  <a name="loadmenuindirect"></a>CMenu –:: LoadMenuIndirect
 
-Načte prostředek ze šablony nabídky v paměti a připojí ho k `CMenu` objektu.
+Načte prostředek ze šablony nabídky v paměti a připojí ho k objektu `CMenu`.
 
 ```
 BOOL LoadMenuIndirect(const void* lpMenuTemplate);
@@ -1051,9 +1051,9 @@ Nenulové, pokud byl prostředek nabídky úspěšně načten; v opačném pří
 
 Číslo verze by mělo být 0.
 
-`mtOption` Příznaky by měly obsahovat MF_END pro poslední položku v překryvném seznamu a pro poslední položku v hlavním seznamu. Další příznaky viz členská funkce. `AppendMenu` Člen musí být vynechán ze struktury MENUITEMTEMPLATE, pokud je MF_POPUP zadán v `mtOption`. `mtId`
+Příznaky `mtOption` by měly zahrnovat MF_END pro poslední položku v rozevíracím seznamu a pro poslední položku v hlavním seznamu. Další příznaky najdete v tématu `AppendMenu` členské funkce. Pokud je MF_POPUP určena v `mtOption`, musí být člen `mtId` vynechán ze struktury MENUITEMTEMPLATE.
 
-Prostor přidělený pro strukturu MENUITEMTEMPLATE musí být dostatečně `mtString` velký, aby mohl obsahovat název položky nabídky jako řetězec zakončený hodnotou null.
+Prostor přidělený pro strukturu MENUITEMTEMPLATE musí být dostatečně velký, aby `mtString` obsahovat název položky nabídky jako řetězec zakončený hodnotou null.
 
 Před ukončením musí aplikace uvolnit systémové prostředky spojené s nabídkou, pokud nabídka není přiřazena k oknu. Aplikace uvolní nabídku voláním členské funkce [DestroyMenu](#destroymenu) .
 
@@ -1061,9 +1061,9 @@ Před ukončením musí aplikace uvolnit systémové prostředky spojené s nab�
 
 [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]
 
-##  <a name="m_hmenu"></a>  CMenu::m_hMenu
+##  <a name="m_hmenu"></a>CMenu –:: m_hMenu
 
-Určuje popisovač HMENU nabídky systému Windows připojené k `CMenu` objektu.
+Určuje popisovač HMENU nabídky systému Windows připojené k objektu `CMenu`.
 
 ```
 HMENU m_hMenu;
@@ -1084,13 +1084,13 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpMeasureItemStruct*<br/>
-Ukazatel na `MEASUREITEMSTRUCT` strukturu.
+Ukazatel na strukturu `MEASUREITEMSTRUCT`.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Tuto členskou funkci přepište a vyplňte `MEASUREITEMSTRUCT` strukturu, aby informovala okna o dimenzích nabídky.
+Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Tuto členskou funkci přepište a naplňte `MEASUREITEMSTRUCT` struktury a informujte okna o dimenzích nabídek.
 
-Popis`MEASUREITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) .
+Popis `MEASUREITEMSTRUCT` struktury naleznete v tématu [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) .
 
 ### <a name="example"></a>Příklad
 
@@ -1130,19 +1130,19 @@ Určuje položku nabídky, která se má změnit. Parametr *nFlags* lze použít
 Určuje způsob interpretace *npozici* a poskytuje informace o změnách, které mají být provedeny v položce nabídky. Seznam příznaků, které lze nastavit, naleznete v tématu členská funkce [AppendMenu](#appendmenu) .
 
 *nIDNewItem*<br/>
-Určuje ID příkazu upravované položky nabídky nebo, je-li *nFlags* nastaven na MF_POPUP, je obslužná rutina nabídky (HMENU) místní nabídky. Parametr *nIDNewItem* se ignoruje (není nutné), pokud je *NFLAGS* nastaven na MF_SEPARATOR.
+Určuje ID příkazu upravované položky nabídky nebo, pokud je *nFlags* nastaveno na MF_POPUP, v místní nabídce se zobrazí nabídka HMENU (). Parametr *nIDNewItem* se ignoruje (není potřeba), pokud je *nFlags* nastavené na MF_SEPARATOR.
 
 *lpszNewItem*<br/>
 Určuje obsah nové položky nabídky. Parametr *nFlags* lze použít k interpretaci *lpszNewItem* následujícími způsoby:
 
 |nFlags|Výklad lpszNewItem|
 |------------|-----------------------------------|
-|MF_OWNERDRAW|Obsahuje hodnotu 32-bit dodanou aplikací, kterou může aplikace použít k udržování dalších dat přidružených k položce nabídky. Tato hodnota 32 je k dispozici pro aplikaci při zpracování MF_MEASUREITEM a MF_DRAWITEM.|
+|MF_OWNERDRAW|Obsahuje hodnotu 32-bit dodanou aplikací, kterou může aplikace použít k udržování dalších dat přidružených k položce nabídky. Tato hodnota 32 je pro aplikaci k dispozici, když zpracovává MF_MEASUREITEM a MF_DRAWITEM.|
 |MF_STRING|Obsahuje dlouhý ukazatel na řetězec zakončený hodnotou null nebo na `CString`.|
 |MF_SEPARATOR|Parametr *lpszNewItem* se ignoruje (není nutné).|
 
 *pBmp*<br/>
-Odkazuje na `CBitmap` objekt, který bude použit jako položka nabídky.
+Odkazuje na objekt `CBitmap`, který bude použit jako položka nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1152,9 +1152,9 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 Aplikace určuje nový stav položky nabídky nastavením hodnot v *nFlags*. Pokud tato funkce nahradí místní nabídku přidruženou k položce nabídky, zničí starou místní nabídku a uvolní paměť využívanou místní nabídkou.
 
-Když *nIDNewItem* určí místní nabídku, bude se jednat o součást nabídky, do které je vložena. Pokud je tato nabídka zničena, bude také zničena i vložená nabídka. Vložená nabídka by se měla odpojit od `CMenu` objektu, aby se předešlo konfliktu.
+Když *nIDNewItem* určí místní nabídku, bude se jednat o součást nabídky, do které je vložena. Pokud je tato nabídka zničena, bude také zničena i vložená nabídka. Vložená nabídka by se měla odpojit od objektu `CMenu`, aby se předešlo konfliktu.
 
-Pokaždé, když se změní nabídka, která se nachází v okně (bez ohledu na to, zda se okno zobrazí), aplikace `CWnd::DrawMenuBar`by měla zavolat. Chcete-li změnit atributy existujících položek nabídky, je mnohem rychlejší použít `CheckMenuItem` členské funkce a. `EnableMenuItem`
+Pokaždé, když se změní nabídka, která se nachází v okně (bez ohledu na to, zda se okno zobrazí), aplikace by měla volat `CWnd::DrawMenuBar`. Chcete-li změnit atributy existujících položek nabídky, je mnohem rychlejší použít členské funkce `CheckMenuItem` a `EnableMenuItem`.
 
 ### <a name="example"></a>Příklad
 
@@ -1162,7 +1162,7 @@ Pokaždé, když se změní nabídka, která se nachází v okně (bez ohledu na
 
 ##  <a name="operator_hmenu"></a>CMenu –:: operator HMENU
 
-Tento operátor použijte k načtení popisovače `CMenu` objektu.
+Tento operátor použijte k načtení popisovače objektu `CMenu`.
 
 ```
 operator HMENU() const;
@@ -1170,7 +1170,7 @@ operator HMENU() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu, popisovač `CMenu` objektu, jinak null.
+Pokud je úspěšná, popisovač objektu `CMenu`; v opačném případě hodnota NULL.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1187,7 +1187,7 @@ BOOL operator!=(const CMenu& menu) const;
 ### <a name="parameters"></a>Parametry
 
 *nabídce*<br/>
-`CMenu` Objekt pro porovnání.
+Objekt `CMenu` pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1204,7 +1204,7 @@ BOOL operator==(const CMenu& menu) const;
 ### <a name="parameters"></a>Parametry
 
 *nabídce*<br/>
-`CMenu` Objekt pro porovnání.
+Objekt `CMenu` pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1239,9 +1239,9 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Nezničí popisovač pro místní nabídku, takže se nabídka dá znovu použít. Před voláním této funkce může aplikace zavolat `GetSubMenu` členskou funkci, aby načetla překryvný `CMenu` objekt pro opakované použití.
+Nezničí popisovač pro místní nabídku, takže se nabídka dá znovu použít. Před voláním této funkce může aplikace zavolat členskou funkci `GetSubMenu`, aby získala místní `CMenu` objekt pro opakované použití.
 
-Pokaždé, když se změní nabídka, která se nachází v okně (bez ohledu na to, zda se okno zobrazuje), musí `CWnd::DrawMenuBar`aplikace zavolat.
+Pokaždé, když se změní nabídka, která se nachází v okně (bez ohledu na to, zda je okno zobrazeno), aplikace musí volat `CWnd::DrawMenuBar`.
 
 ### <a name="example"></a>Příklad
 
@@ -1279,7 +1279,7 @@ Tato členská funkce implementuje chování funkce Win32 [SetMenuDefaultItem](/
 
 ##  <a name="setmenucontexthelpid"></a>CMenu –:: SetMenuContextHelpId
 
-Přidruží kontextovou identifikaci `CMenu`k.
+Přidruží kontext kontextového ID k `CMenu`.
 
 ```
 BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
@@ -1288,7 +1288,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="parameters"></a>Parametry
 
 *dwContextHelpId*<br/>
-ID kontextové kontextové informace, ke `CMenu`kterému se má přidružit.
+ID kontextové kontextové informace, které se má přidružit k `CMenu`
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1391,10 +1391,10 @@ BOOL SetMenuItemInfo(
 Viz popis *uItem* v [SetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-setmenuiteminfow) ve Windows SDK.
 
 *lpMenuItemInfo*<br/>
-Viz popis *lpmii* v `SetMenuItemInfo` v Windows SDK.
+Viz popis *lpmii* v `SetMenuItemInfo` Windows SDK.
 
 *fByPos*<br/>
-Viz popis *fByPosition* v `SetMenuItemInfo` v Windows SDK.
+Viz popis *fByPosition* v `SetMenuItemInfo` Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1418,14 +1418,14 @@ BOOL TrackPopupMenu(
 *nFlags*<br/>
 Určuje příznaky pozice obrazovky a myši. Seznam dostupných příznaků najdete v tématu [TrackPopupMenu](/windows/win32/api/winuser/nf-winuser-trackpopupmenu) .
 
-*x*<br/>
+*znak*<br/>
 Určuje vodorovnou pozici na souřadnicích obrazovky v místní nabídce. V závislosti na hodnotě parametru *nFlags* lze nabídku Zarovnat doleva, Zarovnat doprava nebo zarovnat na střed vzhledem k této pozici.
 
-*y*<br/>
+*požadované*<br/>
 Určuje svislou pozici v souřadnicích obrazovky horní části nabídky na obrazovce.
 
 *pWnd*<br/>
-Identifikuje okno, které vlastní místní nabídku. Tento parametr nemůže mít hodnotu NULL ani v případě, že je zadán příznak TPM_NONOTIFY. Toto okno přijímá všechny zprávy WM_COMMAND z nabídky. V systému Windows verze 3,1 a novějších okno nepřijímá WM_COMMAND zprávy, dokud `TrackPopupMenu` nevrátí. V systému Windows 3,0 okno obdrží zprávy WM_COMMAND před `TrackPopupMenu` vrácením.
+Identifikuje okno, které vlastní místní nabídku. Tento parametr nemůže mít hodnotu NULL ani v případě, že je zadán příznak TPM_NONOTIFY. Toto okno obdrží všechny zprávy WM_COMMAND z nabídky. V systému Windows verze 3,1 a novějších okno nepřijímá WM_COMMAND zprávy, dokud `TrackPopupMenu` nevrátí. V systému Windows 3,0 okno obdrží zprávy WM_COMMAND, než `TrackPopupMenu` vrátí.
 
 *lpRect*<br/>
 Přeskočen.
@@ -1460,29 +1460,29 @@ BOOL TrackPopupMenuEx(
 *fuFlags*<br/>
 Určuje různé funkce v rozšířené nabídce. Seznam všech hodnot a jejich významu naleznete v tématu [TrackPopupMenuEx](/windows/win32/api/winuser/nf-winuser-trackpopupmenuex).
 
-*x*<br/>
+*znak*<br/>
 Určuje vodorovnou pozici na souřadnicích obrazovky v místní nabídce.
 
-*y*<br/>
+*požadované*<br/>
 Určuje svislou pozici v souřadnicích obrazovky horní části nabídky na obrazovce.
 
 *pWnd*<br/>
-Ukazatel na okno vlastnící místní nabídku a příjem zpráv z nabídky vytvořen. Toto okno může být libovolné okno z aktuální aplikace, ale nemůže mít hodnotu NULL. Pokud v parametru *fuFlags* zadáte TPM_NONOTIFY, funkce neposílá žádné zprávy do *pWnd*. Funkce musí vracet pro okno, na které odkazuje *pWnd* , aby mohla přijmout zprávu WM_COMMAND.
+Ukazatel na okno vlastnící místní nabídku a příjem zpráv z nabídky vytvořen. Toto okno může být libovolné okno z aktuální aplikace, ale nemůže mít hodnotu NULL. Pokud zadáte TPM_NONOTIFY v parametru *fuFlags* , funkce nepošle žádné zprávy do *pWnd*. Funkce musí vracet pro okno, na které odkazuje *pWnd* , aby mohla přijmout zprávu WM_COMMAND.
 
 *lptpm*<br/>
 Ukazatel na strukturu [TPMPARAMS](/windows/win32/api/winuser/ns-winuser-tpmparams) , která určuje oblast obrazovky, na kterou se nabídka nesmí překrývat. Tento parametr může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud v parametru *fuFlags* zadáte TPM_RETURNCMD, návratová hodnota je identifikátor položky nabídky položky, kterou uživatel vybral. Pokud uživatel nabídku zruší bez provedení výběru nebo dojde k chybě, vrácená hodnota je 0.
+Pokud zadáte TPM_RETURNCMD v parametru *fuFlags* , návratovou hodnotou je identifikátor položky nabídky položky, kterou uživatel vybral. Pokud uživatel nabídku zruší bez provedení výběru nebo dojde k chybě, vrácená hodnota je 0.
 
-Pokud v parametru *fuFlags* nezadáte TPM_RETURNCMD, návratová hodnota je nenulová, pokud je funkce úspěšná, a 0, pokud selže. Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Pokud nezadáte TPM_RETURNCMD v parametru *fuFlags* , návratová hodnota je nenulová, pokud je funkce úspěšná, a 0, pokud selže. Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
 Plovoucí místní nabídka se může objevit kdekoli na obrazovce. Další informace o zpracování chyb při vytváření místní nabídky najdete v tématu [TrackPopupMenuEx](/windows/win32/api/winuser/nf-winuser-trackpopupmenuex).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CTRLTEST Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [DYNAMENU Sample MFC](../../overview/visual-cpp-samples.md)<br/>

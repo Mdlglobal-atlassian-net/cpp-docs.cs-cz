@@ -157,11 +157,11 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741598"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866680"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx – třída
 
@@ -177,7 +177,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Přepočítá rozložení aktivní položky.|
 |`CMDIFrameWndEx::AddDockSite`|Tato metoda se nepoužívá.|
@@ -220,7 +220,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Určuje, zda má okno rámce panel nabídek.|
 |[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Určuje, zda je zadaný bod poblíž webu Dock.|
 |[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|Určuje, zda je okno rámce v režimu náhledu tisku.|
-|[CMDIFrameWndEx::LoadFrame](#loadframe)|Vytvoří okno rámce z informací o zdroji. (Overrides `CMDIFrameWnd::LoadFrame`.)|
+|[CMDIFrameWndEx::LoadFrame](#loadframe)|Vytvoří okno rámce z informací o zdroji. (Přepisuje `CMDIFrameWnd::LoadFrame`.)|
 |[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|Načte zadané rozložení skupin s kartami MDI a seznam dříve otevřených dokumentů.|
 |[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Přesune aktivní kartu z aktuálně aktivního okna s kartami na další nebo předchozí skupinu s kartami.|
 |[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|Vytvoří novou skupinu s kartami s jedním oknem.|
@@ -228,7 +228,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Volá se rozhraním, když uživatel klikne na tlačítko **Zavřít** v podokně ukotvit.|
 |[CMDIFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|Volá se rozhraním, když uživatel klikne na tlačítko **Zavřít** v plovoucím minipanelu okně rámce.|
 |[CMDIFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Volá se rozhraním, když aktivní místní nabídka zpracuje zprávu WM_DESTROY.|
-|[CMDIFrameWndEx::OnCmdMsg](#oncmdmsg)|Volá se rozhraním pro směrování a odesílání zpráv příkazů a k aktualizaci objektů uživatelského rozhraní příkazu.|
+|[CMDIFrameWndEx:: OnCmdMsg –](#oncmdmsg)|Volá se rozhraním pro směrování a odesílání zpráv příkazů a k aktualizaci objektů uživatelského rozhraní příkazu.|
 |[CMDIFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Volá se rozhraním, když se vykresluje image přidružená k položce nabídky.|
 |[CMDIFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Volá se rozhraním, když [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)zpracovává zprávu WM_PAINT.|
 |[CMDIFrameWndEx::OnEraseMDIClientBackground](#onerasemdiclientbackground)|Volá se rozhraním, když okno rámce MDI zpracovává zprávu WM_ERASEBKGND.|
@@ -241,9 +241,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Volá se rozhraním, když se aktivuje místní nabídka.|
 |[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|Volá se rozhraním, když se mění velikost okna klienta MDI.|
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Volá se rozhraním, když se aktivuje nabídka, která má odtrhnout pruh.|
-|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Volá se rozhraním, aby se aktualizovala nabídka rámce. (Overrides `CMDIFrameWnd::OnUpdateFrameMenu`.)|
+|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Volá se rozhraním, aby se aktualizovala nabídka rámce. (Přepisuje `CMDIFrameWnd::OnUpdateFrameMenu`.)|
 |[CMDIFrameWndEx::P aneFromPoint](#panefrompoint)|Vrátí ukotvené podokno, které obsahuje zadaný bod.|
-|`CMDIFrameWndEx::PreTranslateMessage`|Používá se třídou [CWinApp](../../mfc/reference/cwinapp-class.md) k překladu zpráv oken před odesláním do funkcí Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) .  (Overrides `CMDIFrameWnd::PreTranslateMessage`.)|
+|`CMDIFrameWndEx::PreTranslateMessage`|Používá se třídou [CWinApp](../../mfc/reference/cwinapp-class.md) k překladu zpráv oken před odesláním do funkcí Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) .  (Přepisuje `CMDIFrameWnd::PreTranslateMessage`.)|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Volá se rozhraním, aby se přepočítalo rozložení okna rámce. (Overrides [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Zruší registraci podokna a odebere ho z dokovacího správce.|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Uloží aktuální rozložení skupin s kartami MDI a seznamu dřív otevřených dokumentů.|
@@ -259,18 +259,18 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="data-members"></a>Datové členy
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Určuje, zda lze ukotvená podokna převést na podřízená okna MDI.|
-|[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Povolí nebo zakáže optimalizaci překreslování pro podřízená okna MDI.|
+|[CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Určuje, zda lze ukotvená podokna převést na podřízená okna MDI.|
+|[CMDIFrameWndEx:: m_bDisableSetRedraw](#m_bdisablesetredraw)|Povolí nebo zakáže optimalizaci překreslování pro podřízená okna MDI.|
 
 ## <a name="remarks"></a>Poznámky
 
-Chcete-li využít výhod rozšířených funkcí vlastního nastavení v aplikaci MDI, odvodit třídu okna rámce MDI aplikace z `CMDIFrameWndEx` `CMDIFrameWnd`místo.
+Chcete-li využít výhod rozšířených funkcí vlastního nastavení v aplikaci MDI, odvodit třídu okna rámce MDI aplikace z `CMDIFrameWndEx` místo `CMDIFrameWnd`.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad odvodí třídu z `CMDIFrameWndEx`. Tento fragment kódu pochází z [ukázky DrawClient: Aplikace](../../overview/visual-cpp-samples.md)pro kreslení objektů OLE založené na pásu karet MFC
+V následujícím příkladu je odvozena třída z `CMDIFrameWndEx`. Tento fragment kódu pochází z [ukázky DrawClient: aplikace pro kreslení objektů OLE založené na pásu karet MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -364,11 +364,11 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 *pnMDITabsType*<br/>
 mimo Ukazatel na celočíselnou proměnnou, která určuje, které funkce jsou povoleny:
 
-- 0: Všechny funkce jsou zakázané.
+- 0: všechny funkce jsou zakázané.
 
-- 1: Karty MDI jsou povoleny.
+- 1: karty MDI jsou povoleny.
 
-- 2: Skupiny MDI s kartami jsou povoleny.
+- 2: jsou povolené skupiny s kartami MDI.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -449,9 +449,9 @@ Tuto metodu přepište, pokud chcete vytvořit dokumenty při jejich načítán�
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `CreateDocumentWindow` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `CreateDocumentWindow` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
-V tomto příkladu `g_strStartViewName` může být název "virtuální dokument" (například "Úvodní stránka"), který není ve skutečnosti načtený ze souboru na disku. Proto potřebujeme speciální zpracování pro zpracování tohoto případu.
+V tomto příkladu může být `g_strStartViewName` název virtuálního dokumentu (například "Úvodní stránka"), který není ve skutečnosti načtený ze souboru na disku. Proto potřebujeme speciální zpracování pro zpracování tohoto případu.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -505,7 +505,7 @@ Tato metoda ukotví zadané podokno do jedné ze stran okna rámce, které bylo 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití `DockPane` metody. Tento fragment kódu pochází z [ukázky VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje použití metody `DockPane`. Tento fragment kódu pochází z [ukázky VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -537,7 +537,7 @@ Voláním této metody můžete ukotvit několik objektů podokna v předdefinov
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob `DockPaneLeftOf` použití metody [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá metoda `DockPaneLeftOf` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ Voláním této funkce povolíte automatické skrývání režimu pro podokna, k
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob `EnableAutoHidePanes` použití metody [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá metoda `EnableAutoHidePanes` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -591,11 +591,11 @@ pro Určuje styl ukotvení, který chcete použít.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce povolíte ukotvení podoken, která patří `CMDIFrameWndEx` do objektu.
+Voláním této funkce povolíte ukotvení podoken, která patří do objektu `CMDIFrameWndEx`.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob `EnableDocking` použití metody [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá metoda `EnableDocking` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -629,7 +629,7 @@ pro ID příkazu, který povolí nebo zakáže režim zobrazení na celé obrazo
 
 ### <a name="remarks"></a>Poznámky
 
-V režimu celé obrazovky jsou všechny ukotvené řídicí panely, panely nástrojů a nabídky skryté a aktivní zobrazení se změní tak, aby se zabíralo na celou obrazovku. Pokud povolíte režim zobrazení na celé obrazovce, je nutné zadat ID příkazu, který ho povoluje nebo zakazuje. Můžete volat `EnableFullScreenMode` z `OnCreate` funkce hlavního rámce. Když je okno rámce přepnuto do režimu celé obrazovky, rozhraní vytvoří plovoucí panel nástrojů s jedním tlačítkem, které má zadané ID příkazu. Pokud chcete zachovat hlavní nabídku na obrazovce, zavolejte [CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu).
+V režimu celé obrazovky jsou všechny ukotvené řídicí panely, panely nástrojů a nabídky skryté a aktivní zobrazení se změní tak, aby se zabíralo na celou obrazovku. Pokud povolíte režim zobrazení na celé obrazovce, je nutné zadat ID příkazu, který ho povoluje nebo zakazuje. Můžete volat `EnableFullScreenMode` z funkce `OnCreate` hlavního rámce. Když je okno rámce přepnuto do režimu celé obrazovky, rozhraní vytvoří plovoucí panel nástrojů s jedním tlačítkem, které má zadané ID příkazu. Pokud chcete zachovat hlavní nabídku na obrazovce, zavolejte [CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu).
 
 ##  <a name="enableloaddockstate"></a>CMDIFrameWndEx::EnableLoadDockState
 
@@ -680,13 +680,13 @@ Tuto metodu použijte, chcete-li povolit nebo zakázat funkci MDI seskupované s
 
 Pokud tuto metodu zavoláte s *bEnable* nastavenou na hodnotu false, *parametry* se ignorují.
 
-I v případě, že jsou již povoleny skupiny s kartami MDI, můžete tuto metodu zavolat znovu a změnit nastavení pro podřízená okna. Zavolejte metodu s *bEnable* nastavenou na hodnotu true a upravte členy `CMDITabInfo` objektu, které jsou určeny parametrem *params* .
+I v případě, že jsou již povoleny skupiny s kartami MDI, můžete tuto metodu zavolat znovu a změnit nastavení pro podřízená okna. Zavolejte metodu s *bEnable* nastavenou na hodnotu true a upravte členy objektu `CMDITabInfo`, které jsou určeny parametrem *params* .
 
 Další informace o tom, jak používat skupiny s kartami MDI, najdete v tématu [skupiny MDI s kartami](../../mfc/mdi-tabbed-groups.md).
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `EnableMDITabbedGroups` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `EnableMDITabbedGroups` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -719,8 +719,8 @@ Určuje umístění popisků karet.
 *bTabCloseButton*<br/>
 Určuje, zda se mají zobrazovat tlačítka pro zavření tabulátoru.
 
-*style*<br/>
-Určuje styl karet. Použijte STYLE_3D_SCROLLED pro běžné tabulátory nebo STYLE_3D_ONENOTE pro záložky Microsoft OneNote.
+*řez*<br/>
+Určuje styl karet. Použijte STYLE_3D_SCROLLED pro běžné karty nebo STYLE_3D_ONENOTE na kartách Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
 Určuje, zda jsou povoleny vlastní popisy tlačítek.
@@ -732,13 +732,13 @@ V případě hodnoty TRUE se na aktivní kartě zobrazí tlačítko **Zavřít**
 
 Voláním této metody povolíte nebo zakážete funkci záložky MDI pro okno rámce MDI. Pokud je tato možnost povolená, zobrazí se jako karty všechny podřízené okna.
 
-Popisky karet lze umístit v horní nebo dolní části rámce v závislosti na nastavení parametru *tabLocation*. Můžete zadat buď `CMFCTabCtrl::LOCATION_BOTTOM` (výchozí nastavení), nebo `CMFCTabCtrl::LOCATION_TOP`.
+Popisky karet lze umístit v horní nebo dolní části rámce v závislosti na nastavení parametru *tabLocation*. Je možné zadat buď `CMFCTabCtrl::LOCATION_BOTTOM` (výchozí nastavení), nebo `CMFCTabCtrl::LOCATION_TOP`.
 
-Pokud má *bTabCustomTooltips* hodnotu true, do hlavního okna rámce se pošle zpráva AFX_WM_ON_GET_TAB_TOOLTIP. Váš kód může tuto zprávu zpracovat a poskytnout rozhraní s vlastními popisy tlačítek pro karty MDI.
+Pokud má *bTabCustomTooltips* hodnotu true, pošle se do hlavního okna rámce AFX_WM_ON_GET_TAB_TOOLTIP zpráva. Váš kód může tuto zprávu zpracovat a poskytnout rozhraní s vlastními popisy tlačítek pro karty MDI.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `EnableMDITabs` se používá [v ukázce MDITabsDemo: Aplikace](../../overview/visual-cpp-samples.md)MDI s kartami MFC
+Následující příklad ukazuje, jak se používá `EnableMDITabs` v [ukázce MDITabsDemo: aplikace MDI s kartami MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -765,7 +765,7 @@ Existují dva způsoby, jak otevřít kartu při zavření aktivní karty:
 
 Výchozí implementace používá první způsob.
 
-Pomocí `EnableMDITabsLastActiveActivation` této možnosti lze povolit druhý způsob aktivace karty. Emuluje způsob, jakým Windows otevírá podřízená okna MDI.
+Pomocí `EnableMDITabsLastActiveActivation` můžete povolit druhý způsob aktivace karty. Emuluje způsob, jakým Windows otevírá podřízená okna MDI.
 
 ##  <a name="enablepanemenu"></a>CMDIFrameWndEx::EnablePaneMenu
 
@@ -807,7 +807,7 @@ V místní nabídce se zobrazí seznam podoken aplikace a umožňuje uživateli 
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `EnablePaneMenu` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `EnablePaneMenu` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -845,11 +845,11 @@ pro Identifikátor prostředku řetězce, který obsahuje textový řetězec pol
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li vložit položku nabídky, jejíž příkaz volá dialogové okno správy podřízeného okna MDI ( [Třída CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Nová položka je vložena do nabídky určené parametrem *uiMenuId*. Volá `EnableWindowsDialog` se při zpracování zprávy WM_CREATE.
+Tuto metodu použijte, chcete-li vložit položku nabídky, jejíž příkaz volá dialogové okno správy podřízeného okna MDI ( [Třída CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Nová položka je vložena do nabídky určené parametrem *uiMenuId*. Při zpracování zprávy WM_CREATE zavolejte `EnableWindowsDialog`.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `EnableWindowsDialog` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `EnableWindowsDialog` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -925,13 +925,13 @@ DWORD GetMDITabsContextMenuAllowedItems();
 
 Bitový nebo kombinaci následujících příznaků:
 
-- BCGP_MDI_CREATE_VERT_GROUP – může vytvořit svislou skupinu karet.
+- BCGP_MDI_CREATE_VERT_GROUP – lze vytvořit svislou skupinu karet.
 
-- BCGP_MDI_CREATE_HORZ_GROUP – může vytvořit vodorovnou skupinu karet.
+- BCGP_MDI_CREATE_HORZ_GROUP – lze vytvořit vodorovnou skupinu karet.
 
-- BCGP_MDI_CAN_MOVE_PREV – může přesunout kartu na předchozí skupinu karet.
+- BCGP_MDI_CAN_MOVE_PREV – můžete přesunout kartu na předchozí skupinu karet.
 
-- BCGP_MDI_CAN_MOVE_NEXT – může přesunout tabulátor na další skupinu karet.
+- BCGP_MDI_CAN_MOVE_NEXT – můžete přesunout tabulátor na další skupinu karet.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -998,11 +998,11 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt [třídy CObList](../../mfc/reference/coblist-class.md) , který obsahuje kolekci ukazatelů na `CPane`odvozené objekty, které jsou v neurčitém stavu.
+Odkaz na objekt [třídy CObList](../../mfc/reference/coblist-class.md) , který obsahuje kolekci ukazatelů na objekty odvozené od `CPane`, které jsou v neurčitém stavu.
 
 ### <a name="remarks"></a>Poznámky
 
-`CMDIFrameWndEx`udržuje kolekci roztrhnoutelné nabídky. Tuto metodu použijte, chcete-li načíst odkaz na tento seznam.
+`CMDIFrameWndEx` udržuje kolekci nevypnutých nabídek. Tuto metodu použijte, chcete-li načíst odkaz na tento seznam.
 
 ##  <a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx::GetToolbarButtonToolTipText
 
@@ -1136,7 +1136,7 @@ BOOL IsPointNearDockSite(
 pro Zadaný bod v souřadnicích obrazovky.
 
 *dwBarAlignment*<br/>
-pro Určuje, na který okraj se bod blíží. Možné hodnoty jsou CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP a CBRS_ALIGN_BOTTOM.
+pro Určuje, na který okraj se bod blíží. Možné hodnoty jsou CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP a CBRS_ALIGN_BOTTOM
 
 *bOuterEdge*<br/>
 pro TRUE, pokud je bod poblíž vnějšího ohraničení ukotveného webu; V opačném případě NEPRAVDA.
@@ -1216,19 +1216,19 @@ Pokud chcete načíst nebo uložit stav karet a skupin MDI a seznam otevřených
 
 - Při uzavírání hlavního rámce zavolejte [CMDIFrameWndEx:: SaveMDIState.](#savemdistate)
 
-- Při vytváření hlavního rámce volejte [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) . Doporučené místo pro toto volání je před prvním zobrazením hlavního rámce. Přidejte `CWinAppEx::EnableLoadWindowPlacement` předpřidáním`pMainFrame->LoadFrame (IDR_MAINFRAME);.` povolání`LoadMDIState` , aby se zobrazil hlavní rámec na pozici, která byla uložena v registru. `CBCGPWorkspace::ReloadWindowPlacement` `(FALSE);` `(pMainFrame);`
+- Při vytváření hlavního rámce volejte [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) . Doporučené místo pro toto volání je před prvním zobrazením hlavního rámce. Přidejte `CWinAppEx::EnableLoadWindowPlacement` `(FALSE);` před `pMainFrame->LoadFrame (IDR_MAINFRAME);.` přidejte `CBCGPWorkspace::ReloadWindowPlacement` `(pMainFrame);` po volání `LoadMDIState`, abyste zobrazili hlavní rámec na pozici, která byla uložena v registru.
 
-- `GetDocumentName` Přepsat`CMDIChildWndEx`v odvozené třídě, pokud vaše aplikace zobrazuje dokumenty, které nejsou uloženy jako soubory. Vrácený řetězec bude uložen v registru jako identifikátor dokumentu. Základní implementace [CMDIChildWndEx:: Getdocumenter](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) vrací hodnotu získanou z [objektu CDocument:: GetPath](../../mfc/reference/cdocument-class.md#getpathname).
+- Pokud vaše aplikace zobrazuje dokumenty, které nejsou uložené jako soubory, přepište `GetDocumentName` v třídě odvozené `CMDIChildWndEx`. Vrácený řetězec bude uložen v registru jako identifikátor dokumentu. Základní implementace [CMDIChildWndEx:: Getdocumenter](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) vrací hodnotu získanou z [objektu CDocument:: GetPath](../../mfc/reference/cdocument-class.md#getpathname).
 
-- Přepsat [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) pro správné vytváření dokumentů při jejich načítání z registru. První parametr je `GetDocumentName` vrácený řetězec.
+- Přepsat [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) pro správné vytváření dokumentů při jejich načítání z registru. První parametr je řetězec, který `GetDocumentName` vrácen.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `LoadMDIState` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `LoadMDIState` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
-##  <a name="mditabmovetonextgroup"></a>  CMDIFrameWndEx::MDITabMoveToNextGroup
+##  <a name="mditabmovetonextgroup"></a>CMDIFrameWndEx::MDITabMoveToNextGroup
 
 Přesune aktivní kartu z aktuálně aktivního okna s kartami na další nebo předchozí skupinu s kartami.
 
@@ -1241,7 +1241,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 *bNext*<br/>
 pro Pokud má hodnotu TRUE, přesuňte kartu na další skupinu s kartami. Pokud je hodnota FALSE, přesuňte ji na předchozí skupinu s kartami.
 
-##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
+##  <a name="mditabnewgroup"></a>CMDIFrameWndEx::MDITabNewGroup
 
 Vytvoří novou skupinu s kartami s jedním oknem.
 
@@ -1260,11 +1260,11 @@ Pomocí této funkce můžete vytvořit nové okno s kartami (novou skupinu s ka
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `MDITabNewGroup` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `MDITabNewGroup` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
-##  <a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild
+##  <a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild
 
 Určuje, zda lze ukotvená podokna převést na podřízená okna MDI.
 
@@ -1274,17 +1274,17 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="remarks"></a>Poznámky
 
-Určuje, zda lze ukotvit řídicí panely převést na podřízená okna MDI. Pokud je tento příznak TRUE, rozhraní zpracovává převod automaticky, když uživatel vybere příkaz dokumentu s **kartami** . Příznak je chráněn a tuto možnost musíte explicitně povolit buď nastavením `m_bCanCovertControlBarToMDIChild` v konstruktoru třídy odvozené `CMDIFrameWndEx`od třídy, nebo přepsáním `CanConvertControlBarToMDIChild`.
+Určuje, zda lze ukotvit řídicí panely převést na podřízená okna MDI. Pokud je tento příznak TRUE, rozhraní zpracovává převod automaticky, když uživatel vybere příkaz dokumentu s **kartami** . Příznak je chráněn a tuto možnost musíte explicitně povolit buď nastavením `m_bCanCovertControlBarToMDIChild` v konstruktoru třídy odvozené `CMDIFrameWndEx`, nebo přepsáním `CanConvertControlBarToMDIChild`.
 
 Výchozí hodnota je `FALSE`.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `m_bCanCovertControlBarToMDIChild` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `m_bCanCovertControlBarToMDIChild` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
-##  <a name="m_bdisablesetredraw"></a>CMDIFrameWndEx::m_bDisableSetRedraw
+##  <a name="m_bdisablesetredraw"></a>CMDIFrameWndEx:: m_bDisableSetRedraw
 
 Povolí nebo zakáže optimalizaci překreslování pro podřízená okna MDI.
 
@@ -1313,7 +1313,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="parameters"></a>Parametry
 
 *nBorderCmd*<br/>
-pro Obsahuje jednu z následujících hodnot výčtu `CFrameWnd::BorderCmd`:
+pro Obsahuje jednu z následujících hodnot `CFrameWnd::BorderCmd`výčtu:
 
 - `borderGet` = 1
 
@@ -1393,7 +1393,7 @@ pro Ukazatel na místní nabídku.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu přepište, pokud chcete zpracovat oznámení z objektů [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , které patří do okna rámce MDI, když tyto objekty ZPRACOVÁVAJÍ zprávy WM_DESTROY.
+Tuto metodu přepište, pokud chcete zpracovávat oznámení z objektů [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , které patří do okna rámce MDI, když tyto objekty zpracovávají WM_DESTROY zprávy.
 
 ##  <a name="oncmdmsg"></a>CMDIFrameWndEx:: OnCmdMsg –
 
@@ -1419,7 +1419,7 @@ pro Identifikuje kód oznámení příkazu. Další informace o hodnotách pro *
 pro Používá se v závislosti na hodnotě *nCode*. Další informace o *pExtra*najdete v tématu [CCmdTarget:: OnCmdMsg –](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) .
 
 *pHandlerInfo*<br/>
-[in, out] Tento parametr obvykle by měl mít hodnotu NULL. Pokud není null, `OnCmdMsg` vyplní nástroj `pTarget` a `pmf` členy struktury *pHandlerInfo* místo odeslání příkazu.
+[in, out] Tento parametr obvykle by měl mít hodnotu NULL. Pokud není NULL, `OnCmdMsg` vyplní `pTarget` a `pmf` členů struktury *pHandlerInfo* místo odeslání příkazu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1438,7 +1438,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
+*Emulátor*<br/>
 pro Ukazatel na kontext zařízení.
 
 *pMenuButton*<br/>
@@ -1453,7 +1453,7 @@ TRUE, pokud metoda nakreslí obrázek. Výchozí implementace vrátí hodnotu FA
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu přepište, pokud chcete přizpůsobit vykreslování obrázků pro položky nabídky, které patří do řádku nabídek vlastněné `CMDIFrameWndEx`objektem odvozeným od objektu. Výchozí implementace neprovádí žádnou akci.
+Tuto metodu přepište, pokud chcete přizpůsobit vykreslování obrázků pro položky nabídky, které patří do řádku nabídek vlastněné objektem odvozeným od `CMDIFrameWndEx`. Výchozí implementace neprovádí žádnou akci.
 
 ##  <a name="ondrawmenulogo"></a>CMDIFrameWndEx::OnDrawMenuLogo
 
@@ -1468,7 +1468,7 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište tuto funkci, pokud chcete zobrazit logo v místní nabídce, která patří do řádku nabídek vlastněné `CMDIFrameWndEx`objektem odvozeným od objektu. Výchozí implementace neprovádí žádnou akci.
+Přepište tuto funkci, pokud chcete zobrazit logo v místní nabídce, která patří do řádku nabídek vlastněné objektem odvozeným od `CMDIFrameWndEx`. Výchozí implementace neprovádí žádnou akci.
 
 ##  <a name="onerasemdiclientbackground"></a>CMDIFrameWndEx::OnEraseMDIClientBackground
 
@@ -1484,7 +1484,7 @@ TRUE, pokud aplikace zpracuje zprávu a smaže pozadí.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto členskou funkci přepište, pokud chcete zpracovat zprávu WM_ERASEBKGND v `CMDIFrameWndEx`odvozené třídě.
+Tuto členskou funkci přepište, pokud chcete zpracovat zprávu WM_ERASEBKGND v třídě odvozené `CMDIFrameWndEx`.
 
 ##  <a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx::OnMenuButtonToolHitTest
 
@@ -1545,7 +1545,7 @@ virtual void OnSetPreviewMode(
 pro Pokud je nastaveno na TRUE, nastaví režim náhledu tisku. Pokud je hodnota FALSE, zruší režim náhledu.
 
 *pState*<br/>
-pro Ukazatel na `CPrintPreviewState` strukturu.
+pro Ukazatel na strukturu `CPrintPreviewState`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1598,15 +1598,15 @@ pro Umístění nabídky na souřadnicích obrazovky
 *dwAllowedItems*<br/>
 pro Bitový operátor nebo kombinace příznaků, které určují, jaké akce jsou povolené pro aktuální kartu:
 
-- BCGP_MDI_CREATE_VERT_GROUP – může vytvořit svislou skupinu karet.
+- BCGP_MDI_CREATE_VERT_GROUP – lze vytvořit svislou skupinu karet.
 
-- BCGP_MDI_CREATE_HORZ_GROUP – může vytvořit vodorovnou skupinu karet.
+- BCGP_MDI_CREATE_HORZ_GROUP – lze vytvořit vodorovnou skupinu karet.
 
-- BCGP_MDI_CAN_MOVE_PREV – může přesunout kartu na předchozí skupinu karet.
+- BCGP_MDI_CAN_MOVE_PREV – můžete přesunout kartu na předchozí skupinu karet.
 
-- BCGP_MDI_CAN_MOVE_NEXT – může přesunout tabulátor na další skupinu karet.
+- BCGP_MDI_CAN_MOVE_NEXT – můžete přesunout tabulátor na další skupinu karet.
 
-- BCGP_MDI_CAN_BE_DOCKED – přepne dokument s kartami na ukotvený stav (týká se pouze dokumentů s kartami).
+- BCGP_MDI_CAN_BE_DOCKED – přepne dokument s kartami na ukotvený stav (týká se jenom dokumentů s kartami).
 
 *bTabDrop*<br/>
 pro TRUE pro zobrazení nabídky v důsledku přetažení karty na jinou skupinu s kartami FALSE pro zobrazení nabídky jako místní nabídky na aktuálně aktivní kartě
@@ -1621,7 +1621,7 @@ Pokud nezpracováváte `OnShowMDITabContextMenu`, místní nabídka se nezobraz�
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `OnShowMDITabContextMenu` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `OnShowMDITabContextMenu` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1646,7 +1646,7 @@ TRUE, pokud se změní stav podoken v důsledku volání této metody, FALSE, po
 
 Výchozí implementace odebere panel nástrojů z okna rámce nejvyšší úrovně.
 
-Pokud [CDockingManager:: m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) má hodnotu true (výchozí nastavení), všechna ukotvená podokna budou skrytá.
+Pokud [CDockingManager:: m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) má hodnotu true (výchozí), všechna ukotvená podokna budou skrytá.
 
 ##  <a name="onshowpopupmenu"></a>CMDIFrameWndEx::OnShowPopupMenu
 
@@ -1842,21 +1842,21 @@ TRUE, pokud bylo uložení úspěšné; FALSE, pokud se uložení nezdařilo.
 
 Pokud chcete načíst nebo uložit stav karet a skupin MDI a seznam otevřených dokumentů, udělejte toto:
 
-- Zavolat `SaveMDIState` při uzavírání hlavního rámce
+- Při uzavírání hlavního rámce zavolejte `SaveMDIState`.
 
 - Při vytváření hlavního rámce volejte [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) . Doporučené umístění pro toto volání je před prvním zobrazením hlavního rámce.
 
-- Zavolat `CWinAppEx::EnableLoadWindowPlacement(FALSE);` před`pMainFrame->LoadFrame (IDR_MAINFRAME);`
+- Volat `CWinAppEx::EnableLoadWindowPlacement(FALSE);` před `pMainFrame->LoadFrame (IDR_MAINFRAME);`
 
-- Zavolejte `CWinAppEx::ReloadWindowPlacement(pMainFrame)` po`LoadMDIState` k zobrazení hlavního rámce na pozici, která byla uložena v registru.
+- Pokud chcete zobrazit hlavní rámec na pozici, která byla uložena v registru, zavolejte `CWinAppEx::ReloadWindowPlacement(pMainFrame)` po `LoadMDIState`.
 
-- `GetDocumentName` Přepsat`CMDIChildWndEx`v odvozené třídě, pokud vaše aplikace zobrazuje dokumenty, které nejsou uloženy jako soubory. Vrácený řetězec bude uložen v registru jako identifikátor dokumentu. Další informace naleznete v tématu [CMDIChildWndEx:: GetDocument](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
+- Pokud vaše aplikace zobrazuje dokumenty, které nejsou uložené jako soubory, přepište `GetDocumentName` v třídě odvozené `CMDIChildWndEx`. Vrácený řetězec bude uložen v registru jako identifikátor dokumentu. Další informace naleznete v tématu [CMDIChildWndEx:: GetDocument](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
 
-- Přepsat [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) pro správné vytváření dokumentů při jejich načítání z registru. Parametr na `CreateDocumentWindow` je řetězec, který `GetDocumentName` se vrátil dříve.
+- Přepsat [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) pro správné vytváření dokumentů při jejich načítání z registru. Parametr pro `CreateDocumentWindow` je řetězec, který `GetDocumentName` vrátil dříve.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `SaveMDIState` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `SaveMDIState` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1935,11 +1935,11 @@ pro Hodnota TRUE pro zobrazení podokna by měla být aktivní. FALSE pro zobraz
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody zobrazíte nebo skryjete podokno. Nepoužívejte `ShowWindow` pro ukotvená podokna.
+Voláním této metody zobrazíte nebo skryjete podokno. Nepoužívejte `ShowWindow` pro dokovací podokna.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `ShowPane` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `ShowPane` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `ShowWindowsDialog` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `ShowWindowsDialog` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1980,7 +1980,7 @@ Tuto metodu použijte, chcete-li převést dokument s kartami do ukotveného pod
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak `TabbedDocumentToControlBar` se používá [v ukázce VisualStudioDemo: Aplikace](../../overview/visual-cpp-samples.md)MFC sady Visual Studio.
+Následující příklad ukazuje, jak se používá `TabbedDocumentToControlBar` v [ukázce VisualStudioDemo: aplikace MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 
@@ -2024,7 +2024,7 @@ pro Určuje typ požadované aplikace Help. Seznam možných hodnot a jejich vli
 
 Tato metoda přepisuje [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375891"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865022"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkce kódování textu ATL
 
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>Parametry
 
-*pReserved*<br/>
+*konzervován*<br/>
 Vyhrazený ukazatel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -352,7 +352,7 @@ Délka ve znacích vyrovnávací paměti přidělené volajícímu.
 ATL_ESC příznaky popisující, jak má být proveden převod.
 
 - ATL_ESC_FLAG_NONE výchozí chování. Uvozovky a apostrofy nejsou převedeny.
-- ATL_ESC_FLAG_ATTR uvozovky a apostrofy se převedou `&quot;` na `&apos;` a v uvedeném pořadí.
+- ATL_ESC_FLAG_ATTR uvozovky a apostrofy se převedou na `&quot;` a `&apos;` v uvedeném pořadí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -362,13 +362,13 @@ Délka převedené řetězce ve znacích
 
 Možné převody provedené touto funkcí jsou uvedeny v tabulce:
 
-|Source|Cíl|
+|Zdroj|Cíl|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
 |&|&amp;|
 |'|&apos;|
-|"|&quot;|
+|.|&quot;|
 
 ## <a name="getextendedchars"></a>GetExtendedChars
 
@@ -400,7 +400,7 @@ inline int IsExtendedChar(char ch) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
+*Zvolte*<br/>
 Testovaný znak
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -631,7 +631,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Tato implementace uuencoding se řídí specifikací POSIX P 1003.2 b/D11.
 
-## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
 
 Voláním této funkce získáte bajtovou velikost vyrovnávací paměti, která by mohla obsahovat data dekódovaná z řetězce zadané délky zakódovaného do kódování UUENCODE.
 
@@ -681,16 +681,16 @@ Vyrovnávací paměť přidělená volajícímu pro příjem kódovaných dat
 Ukazatel na proměnnou, která obsahuje délku ve znacích *szDest*. Pokud je funkce úspěšná, proměnná přijme počet znaků zapsaných do vyrovnávací paměti. Pokud dojde k chybě funkce, proměnná obdrží požadovanou délku ve znacích vyrovnávací paměti.
 
 *lpszFile*<br/>
-Soubor, který má být přidán do záhlaví, je-li v *dwFlags*ZADÁN parametr ATLSMTP_UUENCODE_HEADER.
+Soubor, který má být přidán do záhlaví, pokud je ATLSMTP_UUENCODE_HEADER zadáno v *dwFlags*.
 
 *dwFlags*<br/>
 Příznaky ovládající chování této funkce.
 
-- ATLSMTP_UUENCODE_HEADE hlavičky se zakódují.
+- ATLSMTP_UUENCODE_HEADE bude zakódována hlavička.
 
-- ATLSMTP_UUENCODE_END se zakódováním konce.
+- ATLSMTP_UUENCODE_END bude konec kódován.
 
-- Budou provedeny ATLSMTP_UUENCODE_DOTcí datové věci.
+- ATLSMTP_UUENCODE_DOT se budou provádět datové věci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -721,7 +721,7 @@ Počet znaků vyžadovaných pro vyrovnávací paměť, která by mohla uchováv
 
 Tato implementace uuencoding se řídí specifikací POSIX P 1003.2 b/D11.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Charakteristiky](../active-template-library-atl-concepts.md)<br/>
+[Koncepty](../active-template-library-atl-concepts.md)<br/>
 [Desktopové komponenty ATL objektů COM](../atl-com-desktop-components.md)

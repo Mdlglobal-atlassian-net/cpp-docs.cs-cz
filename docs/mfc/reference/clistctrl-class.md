@@ -265,11 +265,11 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927921"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855488"
 ---
 # <a name="clistctrl-class"></a>CListCtrl – třída
 
@@ -285,148 +285,148 @@ class CListCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CListCtrl::CListCtrl](#clistctrl)|`CListCtrl` Vytvoří objekt.|
+|[CListCtrl:: CListCtrl](#clistctrl)|Vytvoří objekt `CListCtrl`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CListCtrl::ApproximateViewRect](#approximateviewrect)|Určuje šířku a výšku nutnou k zobrazení položek ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: ApproximateViewRect](#approximateviewrect)|Určuje šířku a výšku nutnou k zobrazení položek ovládacího prvku zobrazení seznamu.|
 |[CListCtrl:: uspořádávat](#arrange)|Zarovnává položky v mřížce.|
-|[CListCtrl::CancelEditLabel](#canceleditlabel)|Zruší operaci úpravy textu položky.|
-|[CListCtrl::Create](#create)|Vytvoří ovládací prvek seznamu a připojí ho k `CListCtrl` objektu.|
-|[CListCtrl::CreateDragImage](#createdragimage)|Vytvoří seznam obrázků přetažení pro zadanou položku.|
-|[CListCtrl::CreateEx](#createex)|Vytvoří ovládací prvek seznamu se zadanými rozšířenými styly Windows a připojí ho k `CListCtrl` objektu.|
-|[CListCtrl::DeleteAllItems](#deleteallitems)|Odstraní všechny položky z ovládacího prvku.|
-|[CListCtrl::DeleteColumn](#deletecolumn)|Odstraní sloupec z ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::DeleteItem](#deleteitem)|Odstraní položku z ovládacího prvku.|
-|[CListCtrl::DrawItem](#drawitem)|Volá se, když se změní vizuální aspekt ovládacího prvku vykresleného vlastníkem.|
-|[CListCtrl::EditLabel](#editlabel)|Spustí místní úpravu textu položky.|
-|[CListCtrl::EnableGroupView](#enablegroupview)|Povolí nebo zakáže, zda se položky v ovládacím prvku zobrazení seznamu zobrazí jako skupina.|
-|[CListCtrl::EnsureVisible](#ensurevisible)|Zajistí, že je položka viditelná.|
-|[CListCtrl::FindItem](#finditem)|Vyhledá položku zobrazení seznamu se zadanými charakteristikami.|
-|[CListCtrl::GetBkColor](#getbkcolor)|Načte barvu pozadí ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetBkImage](#getbkimage)|Načte aktuální obrázek pozadí ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetCallbackMask](#getcallbackmask)|Načte masku zpětného volání pro ovládací prvek zobrazení seznamu.|
-|[CListCtrl::GetCheck](#getcheck)|Načte aktuální stav zobrazení obrázku stavu, který je přidružený k položce.|
+|[CListCtrl:: CancelEditLabel](#canceleditlabel)|Zruší operaci úpravy textu položky.|
+|[CListCtrl:: Create](#create)|Vytvoří ovládací prvek seznamu a připojí ho k objektu `CListCtrl`.|
+|[CListCtrl:: CreateDragImage](#createdragimage)|Vytvoří seznam obrázků přetažení pro zadanou položku.|
+|[CListCtrl:: CreateEx](#createex)|Vytvoří ovládací prvek seznamu se zadanými rozšířenými styly Windows a připojí ho k objektu `CListCtrl`.|
+|[CListCtrl::D eleteAllItems](#deleteallitems)|Odstraní všechny položky z ovládacího prvku.|
+|[CListCtrl::D eleteColumn](#deletecolumn)|Odstraní sloupec z ovládacího prvku zobrazení seznamu.|
+|[CListCtrl::D eleteItem](#deleteitem)|Odstraní položku z ovládacího prvku.|
+|[CListCtrl::D rawItem](#drawitem)|Volá se, když se změní vizuální aspekt ovládacího prvku vykresleného vlastníkem.|
+|[CListCtrl:: EditLabel](#editlabel)|Spustí místní úpravu textu položky.|
+|[CListCtrl:: EnableGroupView](#enablegroupview)|Povolí nebo zakáže, zda se položky v ovládacím prvku zobrazení seznamu zobrazí jako skupina.|
+|[CListCtrl:: EnsureVisible](#ensurevisible)|Zajistí, že je položka viditelná.|
+|[CListCtrl:: FindItem](#finditem)|Vyhledá položku zobrazení seznamu se zadanými charakteristikami.|
+|[CListCtrl:: GetBkColor](#getbkcolor)|Načte barvu pozadí ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetBkImage](#getbkimage)|Načte aktuální obrázek pozadí ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetCallbackMask](#getcallbackmask)|Načte masku zpětného volání pro ovládací prvek zobrazení seznamu.|
+|[CListCtrl:: getcheck](#getcheck)|Načte aktuální stav zobrazení obrázku stavu, který je přidružený k položce.|
 |[CListCtrl:: GetColumn](#getcolumn)|Načte atributy sloupce ovládacího prvku.|
 |[CListCtrl:: GetColumnOrderArray](#getcolumnorderarray)|Načte pořadí sloupců (zleva doprava) ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetColumnWidth](#getcolumnwidth)|Načte šířku sloupce v zobrazení sestavy nebo zobrazení seznamu.|
-|[CListCtrl::GetCountPerPage](#getcountperpage)|Vypočítá počet položek, které se dají přizpůsobit svisle v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::GetEditControl](#geteditcontrol)|Načte popisovač ovládacího prvku pro úpravy, který slouží k úpravě textu položky.|
-|[CListCtrl::GetEmptyText](#getemptytext)|Načte řetězec, který se zobrazí, pokud je aktuální ovládací prvek seznamu-zobrazení prázdný.|
-|[CListCtrl::GetExtendedStyle](#getextendedstyle)|Načte aktuální rozšířené styly ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetFirstSelectedItemPosition](#getfirstselecteditemposition)|Načte pozici první vybrané položky zobrazení seznamu v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::GetFocusedGroup](#getfocusedgroup)|Načte skupinu, která má fokus klávesnice v aktuálním ovládacím prvku seznam-zobrazení.|
-|[CListCtrl::GetGroupCount](#getgroupcount)|Načte počet skupin v aktuálním ovládacím prvku List-View.|
-|[CListCtrl::GetGroupInfo](#getgroupinfo)|Načte informace o zadané skupině ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetGroupInfoByIndex](#getgroupinfobyindex)|Načte informace o zadané skupině v aktuálním ovládacím prvku seznam-zobrazení.|
-|[CListCtrl::GetGroupMetrics](#getgroupmetrics)|Načte metriky skupiny.|
-|[CListCtrl::GetGroupRect](#getgrouprect)|Načte ohraničující obdélník pro zadanou skupinu v aktuálním ovládacím prvku seznam-zobrazení.|
-|[CListCtrl::GetGroupState](#getgroupstate)|Načte stav zadané skupiny v aktuálním ovládacím prvku seznam-zobrazení.|
-|[CListCtrl::GetHeaderCtrl](#getheaderctrl)|Načte ovládací prvek záhlaví ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetHotCursor](#gethotcursor)|Načte kurzor, který se použije, když je pro ovládací prvek zobrazení seznamu povolený Hot Tracking.|
-|[CListCtrl::GetHotItem](#gethotitem)|Načte položku zobrazení seznamu, která je aktuálně pod kurzorem.|
-|[CListCtrl::GetHoverTime](#gethovertime)|Načte aktuální čas najetí myší na ovládací prvek zobrazení seznamu.|
-|[CListCtrl::GetImageList](#getimagelist)|Načte popisovač seznamu obrázků používaného pro vykreslení položek zobrazení seznamu.|
-|[CListCtrl::GetInsertMark](#getinsertmark)|Načte aktuální pozici značky vložení.|
-|[CListCtrl::GetInsertMarkColor](#getinsertmarkcolor)|Načte aktuální barvu značky vložení.|
-|[CListCtrl::GetInsertMarkRect](#getinsertmarkrect)|Načte obdélník, který je ohraničený bodem vložení.|
-|[CListCtrl::GetItem](#getitem)|Načte atributy položky zobrazení seznamu.|
-|[CListCtrl::GetItemCount](#getitemcount)|Načte počet položek v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::GetItemData](#getitemdata)|Načte hodnotu specifickou pro aplikaci přidruženou k položce.|
-|[CListCtrl::GetItemIndexRect](#getitemindexrect)|Načte ohraničující obdélník pro celou položku nebo část podpoložky v aktuálním ovládacím prvku seznam-zobrazení.|
-|[CListCtrl::GetItemPosition](#getitemposition)|Načte pozici položky zobrazení seznamu.|
-|[CListCtrl::GetItemRect](#getitemrect)|Načte ohraničující obdélník pro položku.|
-|[CListCtrl::GetItemSpacing](#getitemspacing)|Vypočítá mezery mezi položkami v aktuálním ovládacím prvku seznam-zobrazení.|
-|[CListCtrl::GetItemState](#getitemstate)|Načte stav položky zobrazení seznamu.|
-|[CListCtrl::GetItemText](#getitemtext)|Načte text položky zobrazení seznamu nebo podpoložky.|
-|[CListCtrl::GetNextItem](#getnextitem)|Vyhledá položku zobrazení seznamu se zadanými vlastnostmi a zadaným vztahem k dané položce.|
-|[CListCtrl::GetNextItemIndex](#getnextitemindex)|Načte index položky v aktuálním ovládacím prvku seznam zobrazení, který má zadanou sadu vlastností.|
-|[CListCtrl::GetNextSelectedItem](#getnextselecteditem)|Načte index pozice položky zobrazení seznamu a pozici položky zobrazení vybraného seznamu pro iteraci.|
-|[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)|Načte aktuální počet pracovních oblastí pro ovládací prvek zobrazení seznamu.|
-|[CListCtrl::GetOrigin](#getorigin)|Načte aktuální počátek zobrazení pro ovládací prvek zobrazení seznamu.|
-|[CListCtrl::GetOutlineColor](#getoutlinecolor)|Načte barvu ohraničení ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetSelectedColumn](#getselectedcolumn)|Načte index aktuálně vybraného sloupce v ovládacím prvku seznam.|
-|[CListCtrl::GetSelectedCount](#getselectedcount)|Načte počet vybraných položek v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::GetSelectionMark](#getselectionmark)|Načte značku výběru ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetStringWidth](#getstringwidth)|Určuje minimální šířku sloupce nutnou k zobrazení všech daných řetězců.|
-|[CListCtrl::GetSubItemRect](#getsubitemrect)|Načte ohraničující obdélník položky v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::GetTextBkColor](#gettextbkcolor)|Načte barvu pozadí textu ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetTextColor](#gettextcolor)|Načte barvu textu ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetTileInfo](#gettileinfo)|Načte informace o dlaždici v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::GetTileViewInfo](#gettileviewinfo)|Načte informace o ovládacím prvku seznamu zobrazení v dlaždicovém zobrazení.|
-|[CListCtrl::GetToolTips](#gettooltips)|Načte ovládací prvek ToolTip, který ovládací prvek zobrazení seznamu používá k zobrazení popisů tlačítek.|
-|[CListCtrl::GetTopIndex](#gettopindex)|Načte index nejvyšší viditelné položky.|
-|[CListCtrl::GetView](#getview)|Získá zobrazení ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::GetViewRect](#getviewrect)|Načte ohraničující obdélník všech položek v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: GetColumnWidth](#getcolumnwidth)|Načte šířku sloupce v zobrazení sestavy nebo zobrazení seznamu.|
+|[CListCtrl:: GetCountPerPage](#getcountperpage)|Vypočítá počet položek, které se dají přizpůsobit svisle v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: GetEditControl](#geteditcontrol)|Načte popisovač ovládacího prvku pro úpravy, který slouží k úpravě textu položky.|
+|[CListCtrl:: GetEmptyText](#getemptytext)|Načte řetězec, který se zobrazí, pokud je aktuální ovládací prvek seznamu-zobrazení prázdný.|
+|[CListCtrl:: GetExtendedStyle](#getextendedstyle)|Načte aktuální rozšířené styly ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetFirstSelectedItemPosition](#getfirstselecteditemposition)|Načte pozici první vybrané položky zobrazení seznamu v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: getprioritní](#getfocusedgroup)|Načte skupinu, která má fokus klávesnice v aktuálním ovládacím prvku seznam-zobrazení.|
+|[CListCtrl:: GetGroupCount](#getgroupcount)|Načte počet skupin v aktuálním ovládacím prvku List-View.|
+|[CListCtrl:: GetGroupInfo](#getgroupinfo)|Načte informace o zadané skupině ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetGroupInfoByIndex](#getgroupinfobyindex)|Načte informace o zadané skupině v aktuálním ovládacím prvku seznam-zobrazení.|
+|[CListCtrl:: GetGroupMetrics](#getgroupmetrics)|Načte metriky skupiny.|
+|[CListCtrl:: GetGroupRect](#getgrouprect)|Načte ohraničující obdélník pro zadanou skupinu v aktuálním ovládacím prvku seznam-zobrazení.|
+|[CListCtrl:: GetGroupState](#getgroupstate)|Načte stav zadané skupiny v aktuálním ovládacím prvku seznam-zobrazení.|
+|[CListCtrl:: GetHeaderCtrl](#getheaderctrl)|Načte ovládací prvek záhlaví ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetHotCursor](#gethotcursor)|Načte kurzor, který se použije, když je pro ovládací prvek zobrazení seznamu povolený Hot Tracking.|
+|[CListCtrl:: GetHotItem](#gethotitem)|Načte položku zobrazení seznamu, která je aktuálně pod kurzorem.|
+|[CListCtrl:: GetHoverTime](#gethovertime)|Načte aktuální čas najetí myší na ovládací prvek zobrazení seznamu.|
+|[CListCtrl:: GetImageList](#getimagelist)|Načte popisovač seznamu obrázků používaného pro vykreslení položek zobrazení seznamu.|
+|[CListCtrl:: GetInsertMark](#getinsertmark)|Načte aktuální pozici značky vložení.|
+|[CListCtrl:: GetInsertMarkColor](#getinsertmarkcolor)|Načte aktuální barvu značky vložení.|
+|[CListCtrl:: GetInsertMarkRect](#getinsertmarkrect)|Načte obdélník, který je ohraničený bodem vložení.|
+|[CListCtrl:: GetItem](#getitem)|Načte atributy položky zobrazení seznamu.|
+|[CListCtrl:: GetItemCount](#getitemcount)|Načte počet položek v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: GetItemData](#getitemdata)|Načte hodnotu specifickou pro aplikaci přidruženou k položce.|
+|[CListCtrl:: GetItemIndexRect](#getitemindexrect)|Načte ohraničující obdélník pro celou položku nebo část podpoložky v aktuálním ovládacím prvku seznam-zobrazení.|
+|[CListCtrl:: GetItemPosition](#getitemposition)|Načte pozici položky zobrazení seznamu.|
+|[CListCtrl:: GetItemRect](#getitemrect)|Načte ohraničující obdélník pro položku.|
+|[CListCtrl:: GetItemSpacing](#getitemspacing)|Vypočítá mezery mezi položkami v aktuálním ovládacím prvku seznam-zobrazení.|
+|[CListCtrl:: GetItemState](#getitemstate)|Načte stav položky zobrazení seznamu.|
+|[CListCtrl:: GetItemText](#getitemtext)|Načte text položky zobrazení seznamu nebo podpoložky.|
+|[CListCtrl:: GetNextItem](#getnextitem)|Vyhledá položku zobrazení seznamu se zadanými vlastnostmi a zadaným vztahem k dané položce.|
+|[CListCtrl:: GetNextItemIndex](#getnextitemindex)|Načte index položky v aktuálním ovládacím prvku seznam zobrazení, který má zadanou sadu vlastností.|
+|[CListCtrl:: GetNextSelectedItem](#getnextselecteditem)|Načte index pozice položky zobrazení seznamu a pozici položky zobrazení vybraného seznamu pro iteraci.|
+|[CListCtrl:: GetNumberOfWorkAreas](#getnumberofworkareas)|Načte aktuální počet pracovních oblastí pro ovládací prvek zobrazení seznamu.|
+|[CListCtrl:: getorigin](#getorigin)|Načte aktuální počátek zobrazení pro ovládací prvek zobrazení seznamu.|
+|[CListCtrl:: GetOutlineColor](#getoutlinecolor)|Načte barvu ohraničení ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetSelectedColumn](#getselectedcolumn)|Načte index aktuálně vybraného sloupce v ovládacím prvku seznam.|
+|[CListCtrl:: GetSelectedCount](#getselectedcount)|Načte počet vybraných položek v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: GetSelectionMark](#getselectionmark)|Načte značku výběru ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetStringWidth](#getstringwidth)|Určuje minimální šířku sloupce nutnou k zobrazení všech daných řetězců.|
+|[CListCtrl:: GetSubItemRect](#getsubitemrect)|Načte ohraničující obdélník položky v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: GetTextBkColor](#gettextbkcolor)|Načte barvu pozadí textu ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetTextColor](#gettextcolor)|Načte barvu textu ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetTileInfo](#gettileinfo)|Načte informace o dlaždici v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: GetTileViewInfo](#gettileviewinfo)|Načte informace o ovládacím prvku seznamu zobrazení v dlaždicovém zobrazení.|
+|[CListCtrl:: GetToolTips](#gettooltips)|Načte ovládací prvek ToolTip, který ovládací prvek zobrazení seznamu používá k zobrazení popisů tlačítek.|
+|[CListCtrl:: GetTopIndex](#gettopindex)|Načte index nejvyšší viditelné položky.|
+|[CListCtrl:: GetView](#getview)|Získá zobrazení ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: GetViewRect](#getviewrect)|Načte ohraničující obdélník všech položek v ovládacím prvku zobrazení seznamu.|
 |[CListCtrl:: GetWorkAreas](#getworkareas)|Načte aktuální pracovní oblasti ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::HasGroup](#hasgroup)|Určuje, zda má ovládací prvek zobrazení seznamu zadanou skupinu.|
-|[CListCtrl::HitTest](#hittest)|Určuje, která položka zobrazení seznamu je na zadané pozici.|
-|[CListCtrl::InsertColumn](#insertcolumn)|Vloží nový sloupec do ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::InsertGroup](#insertgroup)|Vloží skupinu do ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::InsertGroupSorted](#insertgroupsorted)|Vloží zadanou skupinu do seřazeného seznamu skupin.|
-|[CListCtrl::InsertItem](#insertitem)|Vloží novou položku do ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::InsertMarkHitTest](#insertmarkhittest)|Načte bod vložení nejblíže k zadanému bodu.|
-|[CListCtrl::IsGroupViewEnabled](#isgroupviewenabled)|Určuje, zda je pro ovládací prvek zobrazení seznamu povolený zobrazení skupiny.|
-|[CListCtrl::IsItemVisible](#isitemvisible)|Označuje, zda je zadaná položka v aktuálním ovládacím prvku seznam-zobrazení zobrazena.|
-|[CListCtrl::MapIDToIndex](#mapidtoindex)|Mapuje jedinečné ID položky v aktuálním ovládacím prvku seznam-zobrazení na index.|
-|[CListCtrl::MapIndexToID](#mapindextoid)|Mapuje index položky v aktuálním ovládacím prvku seznam-zobrazení na jedinečné ID.|
-|[CListCtrl::MoveGroup](#movegroup)|Přesune zadanou skupinu.|
-|[CListCtrl::MoveItemToGroup](#moveitemtogroup)|Přesune zadanou skupinu na zadaný index založený na nule ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: HasGroup](#hasgroup)|Určuje, zda má ovládací prvek zobrazení seznamu zadanou skupinu.|
+|[CListCtrl:: HitTest](#hittest)|Určuje, která položka zobrazení seznamu je na zadané pozici.|
+|[CListCtrl:: InsertColumn](#insertcolumn)|Vloží nový sloupec do ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: INSERT –.](#insertgroup)|Vloží skupinu do ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: InsertGroupSorted](#insertgroupsorted)|Vloží zadanou skupinu do seřazeného seznamu skupin.|
+|[CListCtrl:: InsertItem](#insertitem)|Vloží novou položku do ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: InsertMarkHitTest](#insertmarkhittest)|Načte bod vložení nejblíže k zadanému bodu.|
+|[CListCtrl:: IsGroupViewEnabled](#isgroupviewenabled)|Určuje, zda je pro ovládací prvek zobrazení seznamu povolený zobrazení skupiny.|
+|[CListCtrl:: IsItemVisible](#isitemvisible)|Označuje, zda je zadaná položka v aktuálním ovládacím prvku seznam-zobrazení zobrazena.|
+|[CListCtrl:: MapIDToIndex](#mapidtoindex)|Mapuje jedinečné ID položky v aktuálním ovládacím prvku seznam-zobrazení na index.|
+|[CListCtrl:: MapIndexToID](#mapindextoid)|Mapuje index položky v aktuálním ovládacím prvku seznam-zobrazení na jedinečné ID.|
+|[CListCtrl:: Move –.](#movegroup)|Přesune zadanou skupinu.|
+|[CListCtrl:: MoveItemToGroup](#moveitemtogroup)|Přesune zadanou skupinu na zadaný index založený na nule ovládacího prvku zobrazení seznamu.|
 |[CListCtrl:: RedrawItems](#redrawitems)|Vynutí ovládací prvek zobrazení seznamu pro překreslení rozsahu položek.|
-|[CListCtrl::RemoveAllGroups](#removeallgroups)|Odebere všechny skupiny z ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::RemoveGroup](#removegroup)|Odebere zadanou skupinu z ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::Scroll](#scroll)|Posune obsah ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetBkColor](#setbkcolor)|Nastaví barvu pozadí ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetBkImage](#setbkimage)|Nastaví aktuální obrázek pozadí ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetCallbackMask](#setcallbackmask)|Nastaví masku zpětného volání pro ovládací prvek zobrazení seznamu.|
+|[CListCtrl:: RemoveAllGroups](#removeallgroups)|Odebere všechny skupiny z ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: Remove](#removegroup)|Odebere zadanou skupinu z ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: Scroll](#scroll)|Posune obsah ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetBkColor](#setbkcolor)|Nastaví barvu pozadí ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetBkImage](#setbkimage)|Nastaví aktuální obrázek pozadí ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetCallbackMask](#setcallbackmask)|Nastaví masku zpětného volání pro ovládací prvek zobrazení seznamu.|
 |[CListCtrl:: SetCheck](#setcheck)|Nastaví aktuální stav zobrazení obrázku stavu přidruženého k položce.|
 |[CListCtrl:: SetColumn](#setcolumn)|Nastaví atributy sloupce zobrazení seznamu.|
 |[CListCtrl:: SetColumnOrderArray](#setcolumnorderarray)|Nastaví pořadí sloupců (zleva doprava) ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetColumnWidth](#setcolumnwidth)|Změní šířku sloupce v zobrazení sestavy nebo zobrazení seznamu.|
-|[CListCtrl::SetExtendedStyle](#setextendedstyle)|Nastaví aktuální rozšířené styly ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetGroupInfo](#setgroupinfo)|Nastaví informace o zadané skupině ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetGroupMetrics](#setgroupmetrics)|Nastaví metriky skupiny ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetHotCursor](#sethotcursor)|Nastaví kurzor, který se použije, když je pro ovládací prvek zobrazení seznamu povolený Hot Tracking.|
-|[CListCtrl::SetHotItem](#sethotitem)|Nastaví aktuální aktivní položku ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetHoverTime](#sethovertime)|Nastaví aktuální dobu najetí myší na ovládací prvek zobrazení seznamu.|
-|[CListCtrl::SetIconSpacing](#seticonspacing)|Nastaví mezery mezi ikonami v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::SetImageList](#setimagelist)|Přiřadí seznam obrázků k ovládacímu prvku zobrazení seznamu.|
-|[CListCtrl::SetInfoTip](#setinfotip)|Nastaví text popisku.|
-|[CListCtrl::SetInsertMark](#setinsertmark)|Nastaví bod vložení na definovanou pozici.|
-|[CListCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Nastaví barvu bodu vložení.|
-|[CListCtrl::SetItem](#setitem)|Nastaví některé nebo všechny atributy položky zobrazení seznamu.|
-|[CListCtrl::SetItemCount](#setitemcount)|Připraví ovládací prvek zobrazení seznamu pro přidání velkého počtu položek.|
-|[CListCtrl::SetItemCountEx](#setitemcountex)|Nastaví počet položek pro ovládací prvek zobrazení virtuálního seznamu.|
-|[CListCtrl::SetItemData](#setitemdata)|Nastaví hodnotu specifickou pro aplikaci položky.|
-|[CListCtrl::SetItemIndexState](#setitemindexstate)|Nastaví stav položky v aktuálním ovládacím prvku seznam-zobrazení.|
-|[CListCtrl::SetItemPosition](#setitemposition)|Přesune položku na určenou pozici v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: SetColumnWidth](#setcolumnwidth)|Změní šířku sloupce v zobrazení sestavy nebo zobrazení seznamu.|
+|[CListCtrl:: SetExtendedStyle](#setextendedstyle)|Nastaví aktuální rozšířené styly ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetGroupInfo](#setgroupinfo)|Nastaví informace o zadané skupině ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetGroupMetrics](#setgroupmetrics)|Nastaví metriky skupiny ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetHotCursor](#sethotcursor)|Nastaví kurzor, který se použije, když je pro ovládací prvek zobrazení seznamu povolený Hot Tracking.|
+|[CListCtrl:: SetHotItem](#sethotitem)|Nastaví aktuální aktivní položku ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetHoverTime](#sethovertime)|Nastaví aktuální dobu najetí myší na ovládací prvek zobrazení seznamu.|
+|[CListCtrl:: SetIconSpacing](#seticonspacing)|Nastaví mezery mezi ikonami v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: SetImageList](#setimagelist)|Přiřadí seznam obrázků k ovládacímu prvku zobrazení seznamu.|
+|[CListCtrl:: SetInfoTip](#setinfotip)|Nastaví text popisku.|
+|[CListCtrl:: SetInsertMark](#setinsertmark)|Nastaví bod vložení na definovanou pozici.|
+|[CListCtrl:: SetInsertMarkColor](#setinsertmarkcolor)|Nastaví barvu bodu vložení.|
+|[CListCtrl:: SetItem](#setitem)|Nastaví některé nebo všechny atributy položky zobrazení seznamu.|
+|[CListCtrl:: SetItemCount](#setitemcount)|Připraví ovládací prvek zobrazení seznamu pro přidání velkého počtu položek.|
+|[CListCtrl:: SetItemCountEx](#setitemcountex)|Nastaví počet položek pro ovládací prvek zobrazení virtuálního seznamu.|
+|[CListCtrl:: SetItemData](#setitemdata)|Nastaví hodnotu specifickou pro aplikaci položky.|
+|[CListCtrl:: SetItemIndexState](#setitemindexstate)|Nastaví stav položky v aktuálním ovládacím prvku seznam-zobrazení.|
+|[CListCtrl:: SetItemPosition](#setitemposition)|Přesune položku na určenou pozici v ovládacím prvku zobrazení seznamu.|
 |[CListCtrl:: SetItemState](#setitemstate)|Změní stav položky v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::SetItemText](#setitemtext)|Změní text položky zobrazení seznamu nebo podpoložky.|
-|[CListCtrl::SetOutlineColor](#setoutlinecolor)|Nastaví barvu ohraničení ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetItemText](#setitemtext)|Změní text položky zobrazení seznamu nebo podpoložky.|
+|[CListCtrl:: SetOutlineColor](#setoutlinecolor)|Nastaví barvu ohraničení ovládacího prvku zobrazení seznamu.|
 |[CListCtrl:: SetSelectedColumn](#setselectedcolumn)|Nastaví vybraný sloupec ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetSelectionMark](#setselectionmark)|Nastaví značku výběru ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetTextBkColor](#settextbkcolor)|Nastaví barvu pozadí textu v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::SetTextColor](#settextcolor)|Nastaví barvu textu ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetTileInfo](#settileinfo)|Nastaví informace pro dlaždici ovládacího prvku zobrazení seznamu.|
-|[CListCtrl::SetTileViewInfo](#settileviewinfo)|Nastaví informace, které ovládací prvek zobrazení seznamu používá v zobrazení dlaždic.|
-|[CListCtrl::SetToolTips](#settooltips)|Nastaví ovládací prvek ToolTip, který ovládací prvek zobrazení seznamu použije k zobrazení popisů tlačítek.|
+|[CListCtrl:: SetSelectionMark](#setselectionmark)|Nastaví značku výběru ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetTextBkColor](#settextbkcolor)|Nastaví barvu pozadí textu v ovládacím prvku zobrazení seznamu.|
+|[CListCtrl:: SetTextColor](#settextcolor)|Nastaví barvu textu ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetTileInfo](#settileinfo)|Nastaví informace pro dlaždici ovládacího prvku zobrazení seznamu.|
+|[CListCtrl:: SetTileViewInfo](#settileviewinfo)|Nastaví informace, které ovládací prvek zobrazení seznamu používá v zobrazení dlaždic.|
+|[CListCtrl:: SetToolTips](#settooltips)|Nastaví ovládací prvek ToolTip, který ovládací prvek zobrazení seznamu použije k zobrazení popisů tlačítek.|
 |[CListCtrl:: SetView](#setview)|Nastaví zobrazení ovládacího prvku zobrazení seznamu.|
 |[CListCtrl:: SetWorkAreas](#setworkareas)|Nastaví oblast, kde lze ikony Zobrazit v ovládacím prvku zobrazení seznamu.|
-|[CListCtrl::SortGroups](#sortgroups)|Seřadí skupiny ovládacího prvku zobrazení seznamu pomocí uživatelsky definované funkce.|
-|[CListCtrl::SortItems](#sortitems)|Seřadí položky zobrazení seznamu pomocí funkce porovnání definované aplikací.|
-|[CListCtrl::SortItemsEx](#sortitemsex)|Seřadí položky zobrazení seznamu pomocí funkce porovnání definované aplikací.|
-|[CListCtrl::SubItemHitTest](#subitemhittest)|Určuje, která položka zobrazení seznamu, pokud existuje, je na dané pozici.|
-|[CListCtrl::Update](#update)|Vynutí, aby ovládací prvek překreslit zadanou položku.|
+|[CListCtrl:: SortGroups](#sortgroups)|Seřadí skupiny ovládacího prvku zobrazení seznamu pomocí uživatelsky definované funkce.|
+|[CListCtrl:: SortItems](#sortitems)|Seřadí položky zobrazení seznamu pomocí funkce porovnání definované aplikací.|
+|[CListCtrl:: SortItemsEx](#sortitemsex)|Seřadí položky zobrazení seznamu pomocí funkce porovnání definované aplikací.|
+|[CListCtrl:: SubItemHitTest](#subitemhittest)|Určuje, která položka zobrazení seznamu, pokud existuje, je na dané pozici.|
+|[CListCtrl:: Update](#update)|Vynutí, aby ovládací prvek překreslit zadanou položku.|
 
 ## <a name="remarks"></a>Poznámky
 
-Kromě ikony a popisku můžou mít jednotlivé položky informace zobrazené ve sloupcích napravo od ikony a popisku. Tento ovládací prvek (a `CListCtrl` třída) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
+Kromě ikony a popisku můžou mít jednotlivé položky informace zobrazené ve sloupcích napravo od ikony a popisku. Tento ovládací prvek (a proto třída `CListCtrl`) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
 
-Následuje stručný přehled `CListCtrl` třídy. Podrobné koncepční diskuzi najdete v tématu [Použití CListCtrl](../../mfc/using-clistctrl.md) a [ovládacích prvků](../../mfc/controls-mfc.md).
+Následuje stručný přehled třídy `CListCtrl`. Podrobné koncepční diskuzi najdete v tématu [Použití CListCtrl](../../mfc/using-clistctrl.md) a [ovládacích prvků](../../mfc/controls-mfc.md).
 
 ## <a name="views"></a>Zobrazení
 
@@ -446,13 +446,13 @@ Ovládací prvky zobrazení seznamu mohou zobrazit jejich obsah čtyřmi různý
 
 - Zobrazení sestavy
 
-   Každá položka se zobrazí na vlastním řádku a další informace uspořádané do sloupců vpravo. Sloupec úplně vlevo obsahuje malou ikonu a popisek a následující sloupce obsahují podpoložky, které jsou určeny aplikací. Tyto sloupce jsou implementovány vloženým ovládacím prvkem záhlaví (třída [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)). Další informace o ovládacím prvku záhlaví a sloupcích v zobrazení sestavy najdete v tématu [použití CListCtrl: Přidávání sloupců do ovládacího prvku (zobrazení sestavy)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Každá položka se zobrazí na vlastním řádku a další informace uspořádané do sloupců vpravo. Sloupec úplně vlevo obsahuje malou ikonu a popisek a následující sloupce obsahují podpoložky, které jsou určeny aplikací. Tyto sloupce jsou implementovány vloženým ovládacím prvkem záhlaví (třída [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)). Další informace o ovládacím prvku záhlaví a sloupcích v zobrazení sestavy naleznete v tématu [using CListCtrl: Přidání sloupců do ovládacího prvku (zobrazení sestavy)](../../mfc/adding-columns-to-the-control-report-view.md).
 
-Styl aktuálního zobrazení seznamu ovládacího prvku určuje aktuální zobrazení. Další informace o těchto stylech a jejich použití naleznete v [tématu using CListCtrl: Změna stylů](../../mfc/changing-list-control-styles.md)ovládacího prvku seznam.
+Styl aktuálního zobrazení seznamu ovládacího prvku určuje aktuální zobrazení. Další informace o těchto stylech a jejich použití naleznete v tématu [using CListCtrl: měnící styly ovládacího prvku seznam](../../mfc/changing-list-control-styles.md).
 
 ## <a name="extended-styles"></a>Rozšířené styly
 
-Kromě standardních stylů seznamů podporuje třída `CListCtrl` širokou sadu rozšířených stylů a poskytuje tak obohacené funkce. Mezi příklady této funkce patří:
+Kromě standardních stylů seznamů třída `CListCtrl` podporuje velkou sadu rozšířených stylů a poskytuje rozšířené funkce. Mezi příklady této funkce patří:
 
 - Výběr najetí myší
 
@@ -460,7 +460,7 @@ Kromě standardních stylů seznamů podporuje třída `CListCtrl` širokou sadu
 
 - Zobrazení virtuálních seznamů
 
-   Pokud je povoleno, umožňuje ovládacímu prvku podporovat až DWORD položky. To je možné tím, že umístíte režijní náklady na správu dat položek v aplikaci. S výjimkou výběru položek a informací o fokusech musí aplikace spravovat všechny informace o položkách. Další informace najdete v tématu [použití CListCtrl: Ovládací prvky](../../mfc/virtual-list-controls.md)virtuálního seznamu.
+   Pokud je povoleno, umožňuje ovládacímu prvku podporovat až DWORD položky. To je možné tím, že umístíte režijní náklady na správu dat položek v aplikaci. S výjimkou výběru položek a informací o fokusech musí aplikace spravovat všechny informace o položkách. Další informace naleznete v tématu [using CListCtrl: Virtual list Controls](../../mfc/virtual-list-controls.md).
 
 - Aktivace jedním kliknutím a dvěma kliknutími
 
@@ -470,15 +470,15 @@ Kromě standardních stylů seznamů podporuje třída `CListCtrl` širokou sadu
 
    Pokud je povoleno, umožňuje přeřazení sloupců v ovládacím prvku zobrazení seznamu přetažením myší. K dispozici pouze v zobrazení sestav.
 
-Informace o používání těchto nových rozšířených stylů najdete v [tématu Použití CListCtrl: Změna stylů](../../mfc/changing-list-control-styles.md)ovládacího prvku seznam.
+Informace o použití těchto nových rozšířených stylů naleznete v tématu [using CListCtrl: měnící styly ovládacího prvku seznam](../../mfc/changing-list-control-styles.md).
 
 ## <a name="items-and-subitems"></a>Položky a podpoložky
 
 Každá položka v ovládacím prvku zobrazení seznamu se skládá z ikony (ze seznamu obrázků), popisku, aktuálního stavu a hodnoty definované aplikací (označované jako "data položky"). K jednotlivým položkám lze také přidružit jednu nebo více podpoložky. "Dílčí položka" je řetězec, který lze v zobrazení sestavy zobrazit ve sloupci napravo od ikony položky a popisku. Všechny položky v ovládacím prvku zobrazení seznamu musí mít stejný počet podpoložek.
 
-Třída `CListCtrl` poskytuje několik funkcí pro vložení, odstranění, vyhledání a úpravu těchto položek. Další informace naleznete v tématu [CListCtrl:: GetItem](#getitem), [CListCtrl:: InsertItem](#insertitem)a [CListCtrl:: FindItem](#finditem), [Přidání položek do ovládacího prvku](../adding-items-to-the-control.md)a [posouvání, uspořádání, řazení a hledání v ovládacích prvcích seznam](../scrolling-arranging-sorting-and-finding-in-list-controls.md).
+`CListCtrl` třídy poskytuje několik funkcí pro vložení, odstranění, vyhledání a úpravu těchto položek. Další informace naleznete v tématu [CListCtrl:: GetItem](#getitem), [CListCtrl:: InsertItem](#insertitem)a [CListCtrl:: FindItem](#finditem), [Přidání položek do ovládacího prvku](../adding-items-to-the-control.md)a [posouvání, uspořádání, řazení a hledání v ovládacích prvcích seznam](../scrolling-arranging-sorting-and-finding-in-list-controls.md).
 
-Ve výchozím nastavení je ovládací prvek zobrazení seznamu zodpovědný za ukládání ikon položky a textových atributů. Kromě těchto typů položek podporuje třída `CListCtrl` také "položky zpětného volání". "Položka zpětného volání" je položka zobrazení seznamu, pro kterou aplikace (místo ovládacího prvku) ukládá text, ikonu nebo obojí. Maska zpětného volání slouží k určení, které atributy položky (text a/nebo ikona) jsou součástí aplikace. Pokud aplikace používá položky zpětného volání, musí být schopna dodat atributy textu nebo ikony na vyžádání. Položky zpětného volání jsou užitečné, když vaše aplikace už některé z těchto informací uchovává. Další informace najdete v tématu [použití CListCtrl: Položky zpětného volání a maska](../callback-items-and-the-callback-mask.md)zpětného volání.
+Ve výchozím nastavení je ovládací prvek zobrazení seznamu zodpovědný za ukládání ikon položky a textových atributů. Kromě těchto typů položek však třída `CListCtrl` podporuje "položky zpětného volání". "Položka zpětného volání" je položka zobrazení seznamu, pro kterou aplikace (místo ovládacího prvku) ukládá text, ikonu nebo obojí. Maska zpětného volání slouží k určení, které atributy položky (text a/nebo ikona) jsou součástí aplikace. Pokud aplikace používá položky zpětného volání, musí být schopna dodat atributy textu nebo ikony na vyžádání. Položky zpětného volání jsou užitečné, když vaše aplikace už některé z těchto informací uchovává. Další informace naleznete v tématu [using CListCtrl: Items zpětného volání a maska zpětného volání](../callback-items-and-the-callback-mask.md).
 
 ## <a name="image-lists"></a>Seznamy obrázků
 
@@ -500,7 +500,7 @@ Ikony, obrázky položek hlaviček a stavy definované aplikací pro položky zo
 
    Používá se v zobrazení sestavy pro malé obrázky, které se zobrazují v každé položce ovládacího prvku záhlaví.
 
-Ve výchozím nastavení ovládací prvek zobrazení seznamu zničí seznam obrázků, které jsou k němu přiřazeny při jeho zničení. vývojář ale může toto chování přizpůsobit zničením všech seznamů obrázků, pokud se už nepoužívá, jak určuje aplikace. Další informace najdete v tématu [použití CListCtrl: Seznam položek a seznamů](../list-items-and-image-lists.md)obrázků.
+Ve výchozím nastavení ovládací prvek zobrazení seznamu zničí seznam obrázků, které jsou k němu přiřazeny při jeho zničení. vývojář ale může toto chování přizpůsobit zničením všech seznamů obrázků, pokud se už nepoužívá, jak určuje aplikace. Další informace najdete v tématu [Použití CListCtrl: seznam položek a seznamů obrázků](../list-items-and-image-lists.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -516,7 +516,7 @@ Ve výchozím nastavení ovládací prvek zobrazení seznamu zničí seznam obr�
 
 **Záhlaví:** afxcmn. h
 
-## <a name="approximateviewrect"></a>  CListCtrl::ApproximateViewRect
+## <a name="approximateviewrect"></a>CListCtrl:: ApproximateViewRect
 
 Určuje šířku a výšku nutnou k zobrazení položek ovládacího prvku zobrazení seznamu.
 
@@ -528,7 +528,7 @@ CSize ApproximateViewRect(
 
 ### <a name="parameters"></a>Parametry
 
-*sz*<br/>
+*'s*<br/>
 Navrhované rozměry ovládacího prvku v pixelech Pokud nejsou dimenze zadány, používá rozhraní aktuální šířku nebo výšku hodnoty ovládacího prvku.
 
 *iCount*<br/>
@@ -536,7 +536,7 @@ Počet položek, které se mají zobrazit v ovládacím prvku Pokud je tento par
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`CSize` Objekt, který obsahuje přibližnou šířku a výšku potřebnou k zobrazení položek v pixelech.
+Objekt `CSize`, který obsahuje přibližnou šířku a výšku potřebnou k zobrazení položek v pixelech.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -561,7 +561,7 @@ Určuje styl zarovnání pro položky. Může to být jedna z následujících h
 
 - LVA_DEFAULT zarovnává položky podle aktuálního stylu zarovnání zobrazení seznamu (výchozí hodnota).
 
-- LVA_SNAPTOGRID přichytí všechny ikony do nejbližší pozice mřížky.
+- LVA_SNAPTOGRID přichytí všechny ikony k nejbližší pozici mřížky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -594,7 +594,7 @@ Tato členská funkce emuluje funkce [LVM_CANCELEDITLABEL](/windows/win32/Contro
 
 ## <a name="clistctrl"></a>CListCtrl:: CListCtrl
 
-`CListCtrl` Vytvoří objekt.
+Vytvoří objekt `CListCtrl`.
 
 ```
 CListCtrl();
@@ -602,7 +602,7 @@ CListCtrl();
 
 ## <a name="create"></a>CListCtrl:: Create
 
-Vytvoří ovládací prvek seznamu a připojí ho k `CListCtrl` objektu.
+Vytvoří ovládací prvek seznamu a připojí ho k objektu `CListCtrl`.
 
 ```
 virtual BOOL Create(
@@ -618,10 +618,10 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku seznamu. Použít libovolnou kombinaci stylů ovládacího prvku seznam pro ovládací prvek. Úplný seznam těchto stylů najdete v tématu [Styly okna zobrazení seznamu](/windows/win32/Controls/list-view-window-styles) v Windows SDK. Nastavte rozšířené styly specifické pro ovládací prvek pomocí [SetExtendedStyle](#setextendedstyle).
 
 *OBD*<br/>
-Určuje velikost a polohu ovládacího prvku seznamu. Může to být buď `CRect` objekt, nebo struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
+Určuje velikost a polohu ovládacího prvku seznamu. Může to být buď objekt `CRect`, nebo struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
 *pParentWnd*<br/>
-Určuje nadřazené okno ovládacího prvku seznam, obvykle a `CDialog`. Nesmí mít hodnotu NULL.
+Určuje nadřazené okno ovládacího prvku seznamu, obvykle `CDialog`. Nesmí mít hodnotu NULL.
 
 *nID*<br/>
 Určuje ID ovládacího prvku seznamu.
@@ -632,9 +632,9 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří `CListCtrl` se ve dvou krocích. Nejprve zavolejte konstruktor a potom zavolejte `Create`, čímž se vytvoří ovládací prvek zobrazení seznamu a připojí se `CListCtrl` k objektu.
+Sestavíte `CListCtrl` ve dvou krocích. Nejprve zavolejte konstruktor a potom zavolejte `Create`, čímž se vytvoří ovládací prvek zobrazení seznamu a připojí se k objektu `CListCtrl`.
 
-Chcete-li použít rozšířené styly Windows na objekt ovládacího prvku seznamu [](#createex) , zavolejte CreateEx `Create`místo.
+Chcete-li použít rozšířené styly Windows na objekt ovládacího prvku seznamu, zavolejte [CreateEx](#createex) místo `Create`.
 
 ### <a name="example"></a>Příklad
 
@@ -646,7 +646,7 @@ Chcete-li použít rozšířené styly Windows na objekt ovládacího prvku sezn
 
 ## <a name="createex"></a>CListCtrl:: CreateEx
 
-Vytvoří ovládací prvek (podřízené okno) a přidruží ho k `CListCtrl` objektu.
+Vytvoří ovládací prvek (podřízené okno) a přidruží ho k objektu `CListCtrl`.
 
 ```
 virtual BOOL CreateEx(
@@ -680,11 +680,11 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte `CreateEx` místo příkaz [vytvořit](#create) pro použití rozšířených stylů Windows, které jsou určené **WS_EX_** rozšířeným stylem Windows.
+Použijte `CreateEx` namísto [Create](#create) k použití rozšířených stylů Windows, které jsou určené **WS_EX_m**ve stylu rozšířených stylů Windows.
 
-`CreateEx`Vytvoří ovládací prvek s rozšířenými styly Windows specifikovanými pomocí *dwExStyle*. Chcete-li nastavit rozšířené styly specifické pro ovládací prvek, zavolejte [SetExtendedStyle](#setextendedstyle). Například použijte `CreateEx` k nastavení takových stylů jako WS_EX_CONTEXTHELP, ale použijte `SetExtendedStyle` k nastavení takových stylů jako LVS_EX_FULLROWSELECT. Další informace najdete v tématu styly popsané v článku [Rozšířené styly zobrazení seznamu](/windows/win32/Controls/extended-list-view-styles) v Windows SDK.
+`CreateEx` vytvoří ovládací prvek s rozšířenými styly Windows specifikovanými pomocí *dwExStyle*. Chcete-li nastavit rozšířené styly specifické pro ovládací prvek, zavolejte [SetExtendedStyle](#setextendedstyle). Například použijte `CreateEx` k nastavení stylů jako WS_EX_CONTEXTHELP, ale použijte `SetExtendedStyle` k nastavení stylů jako LVS_EX_FULLROWSELECT. Další informace najdete v tématu styly popsané v článku [Rozšířené styly zobrazení seznamu](/windows/win32/Controls/extended-list-view-styles) v Windows SDK.
 
-## <a name="createdragimage"></a>  CListCtrl::CreateDragImage
+## <a name="createdragimage"></a>CListCtrl:: CreateDragImage
 
 Vytvoří seznam obrázků přetažení pro položku určenou parametrem *nItem*.
 
@@ -708,7 +708,7 @@ V případě úspěchu ukazatel na seznam přetažení obrázku; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-`CImageList` Objekt je trvalý a po dokončení jej musíte odstranit. Příklad:
+Objekt `CImageList` je trvalý a po dokončení ho musíte odstranit. Příklad:
 
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
@@ -718,7 +718,7 @@ V případě úspěchu ukazatel na seznam přetažení obrázku; jinak NULL.
         delete pImageList;
 ```
 
-## <a name="deleteallitems"></a>  CListCtrl::DeleteAllItems
+## <a name="deleteallitems"></a>CListCtrl::D eleteAllItems
 
 Odstraní všechny položky z ovládacího prvku zobrazení seznamu.
 
@@ -811,9 +811,9 @@ Dlouhý ukazatel na `DRAWITEMSTRUCT` strukturu, která obsahuje informace o typu
 
 ### <a name="remarks"></a>Poznámky
 
-Člen struktury DRAWITEMSTRUCT – definuje akci kreslení, která má být provedena. [](/windows/win32/api/winuser/ns-winuser-drawitemstruct) `itemAction`
+`itemAction` člen struktury [DRAWITEMSTRUCT –](/windows/win32/api/winuser/ns-winuser-drawitemstruct) definuje akci kreslení, která má být provedena.
 
-Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Přepište tuto členskou funkci pro implementaci vykreslování pro objekt vykreslený `CListCtrl` vlastníkem.
+Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Přepište tuto členskou funkci pro implementaci vykreslování pro objekt `CListCtrl` vykreslený vlastníkem.
 
 Aplikace by měla obnovit všechny objekty GDI (Graphic Device Interface) vybrané pro kontext zobrazení zadaný v *lpDrawItemStruct* před ukončením této členské funkce.
 
@@ -832,7 +832,7 @@ Index položky zobrazení seznamu, která má být upravena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu, ukazatel na `CEdit` objekt, který se používá k úpravě textu položky; jinak null.
+Pokud je úspěšná, ukazatel na objekt `CEdit`, který se používá k úpravě textu položky; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -938,7 +938,7 @@ Index položky v případě úspěchu nebo-1 v opačném případě.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *pFindInfo* odkazuje na `LVFINDINFO` strukturu, která obsahuje informace používané k hledání položky zobrazení seznamu.
+Parametr *pFindInfo* odkazuje na strukturu `LVFINDINFO`, která obsahuje informace používané k hledání položky zobrazení seznamu.
 
 ### <a name="example"></a>Příklad
 
@@ -956,7 +956,7 @@ Parametr *pFindInfo* odkazuje na `LVFINDINFO` strukturu, která obsahuje informa
         }
 ```
 
-## <a name="getbkcolor"></a>  CListCtrl::GetBkColor
+## <a name="getbkcolor"></a>CListCtrl:: GetBkColor
 
 Načte barvu pozadí ovládacího prvku zobrazení seznamu.
 
@@ -972,7 +972,7 @@ COLORREF GetBkColor() const;
 
 Podívejte se na příklad pro [CListCtrl:: SetBkColor](#setbkcolor).
 
-## <a name="getbkimage"></a>  CListCtrl::GetBkImage
+## <a name="getbkimage"></a>CListCtrl:: GetBkImage
 
 Načte aktuální obrázek pozadí ovládacího prvku zobrazení seznamu.
 
@@ -983,7 +983,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ### <a name="parameters"></a>Parametry
 
 *plvbkImage*<br/>
-Ukazatel na `LVBKIMAGE` strukturu, která obsahuje aktuální obrázek pozadí zobrazení seznamu.
+Ukazatel na `LVBKIMAGE`ovou strukturu obsahující aktuální obrázek pozadí zobrazení seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1069,7 +1069,7 @@ BOOL GetColumn(
 Index sloupce, jehož atributy mají být načteny.
 
 *pColumn*<br/>
-Adresa struktury [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) , která určuje informace pro načtení a příjem informací o sloupci `mask` Člen Určuje, které atributy sloupce se mají načíst. Pokud člen Určuje hodnotu LVCF_TEXT `pszText` , člen musí obsahovat adresu vyrovnávací paměti, která obdrží text položky, a `cchTextMax` člen musí určit velikost vyrovnávací paměti. `mask`
+Adresa struktury [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) , která určuje informace pro načtení a příjem informací o sloupci Člen `mask` určuje, které atributy sloupce se mají načíst. Pokud člen `mask` určuje LVCF_TEXT hodnotu, musí `pszText` člen obsahovat adresu vyrovnávací paměti, která obdrží text položky, a `cchTextMax` člen musí určit velikost vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1077,7 +1077,7 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-`LVCOLUMN` Struktura obsahuje informace o sloupci v zobrazení sestavy.
+Struktura `LVCOLUMN` obsahuje informace o sloupci v zobrazení sestavy.
 
 ### <a name="example"></a>Příklad
 
@@ -1216,7 +1216,7 @@ V případě úspěchu, ukazatel na objekt [CEdit](cedit-class.md) , který se p
         }
 ```
 
-## <a name="getemptytext"></a>  CListCtrl::GetEmptyText
+## <a name="getemptytext"></a>CListCtrl:: GetEmptyText
 
 Načte řetězec, který se zobrazí, pokud je aktuální ovládací prvek seznamu-zobrazení prázdný.
 
@@ -1285,7 +1285,7 @@ Následující příklad kódu ukazuje použití této funkce.
         }
 ```
 
-## <a name="getfocusedgroup"></a>  CListCtrl::GetFocusedGroup
+## <a name="getfocusedgroup"></a>CListCtrl:: getprioritní
 
 Načte skupinu, která má fokus klávesnice v aktuálním ovládacím prvku seznam-zobrazení.
 
@@ -1299,9 +1299,9 @@ Index skupiny, jejíž stav je LVGS_FOCUSED, pokud taková skupina existuje; v o
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [LVM_GETFOCUSEDGROUP](/windows/win32/Controls/lvm-getfocusedgroup) , která je popsána v Windows SDK. Další informace najdete v tématu hodnota `state` LVGS_FOCUSED člena struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) .
+Tato metoda pošle zprávu [LVM_GETFOCUSEDGROUP](/windows/win32/Controls/lvm-getfocusedgroup) , která je popsána v Windows SDK. Další informace naleznete v tématu LVGS_FOCUSED hodnota `state` člena struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) .
 
-## <a name="getgroupcount"></a>  CListCtrl::GetGroupCount
+## <a name="getgroupcount"></a>CListCtrl:: GetGroupCount
 
 Načte počet skupin v aktuálním ovládacím prvku List-View.
 
@@ -1315,9 +1315,9 @@ Počet skupin v ovládacím prvku zobrazení seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [LVM_GETGROUPCOUNT](/windows/win32/Controls/lvm-getgroupcount) , která je popsána v > Windows SDK.
+Tato metoda pošle zprávu [LVM_GETGROUPCOUNT](/windows/win32/Controls/lvm-getgroupcount) , která je popsána v Windows SDK-->.
 
-## <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo
+## <a name="getgroupinfo"></a>CListCtrl:: GetGroupInfo
 
 Načte informace o zadané skupině ovládacího prvku zobrazení seznamu.
 
@@ -1343,7 +1343,7 @@ Vrátí ID skupiny, pokud bylo úspěšné, nebo-1 v opačném případě.
 
 Tato členská funkce emuluje funkce [LVM_GETGROUPINFO](/windows/win32/Controls/lvm-getgroupinfo) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex
+## <a name="getgroupinfobyindex"></a>CListCtrl:: GetGroupInfoByIndex
 
 Načte informace o zadané skupině v aktuálním ovládacím prvku seznam-zobrazení.
 
@@ -1358,7 +1358,7 @@ BOOL GetGroupInfoByIndex(
 |Parametr|Popis|
 |---------------|-----------------|
 |*iIndex*|pro Index skupiny založený na nule.|
-|*pGroup*|mimo Ukazatel na strukturu [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) , která přijímá informace o skupině určené parametrem *iIndex* .<br /><br /> Volající je zodpovědný za inicializaci členů struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) . Nastavte člena na velikost struktury a příznaky `mask` člena pro určení informací, které mají být načteny. `cbSize`|
+|*pGroup*|mimo Ukazatel na strukturu [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) , která přijímá informace o skupině určené parametrem *iIndex* .<br /><br /> Volající je zodpovědný za inicializaci členů struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) . Nastavte člena `cbSize` na velikost struktury a příznaky `mask`ho člena k určení informací, které mají být načteny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1366,11 +1366,11 @@ TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [LVM_GETGROUPINFOBYINDEX](/windows/win32/controls/lvm-getgroupinfobyindex) , která je popsána v > Windows SDK.
+Tato metoda pošle zprávu [LVM_GETGROUPINFOBYINDEX](/windows/win32/controls/lvm-getgroupinfobyindex) , která je popsána v Windows SDK-->.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou, `m_listCtrl`která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, `m_listCtrl`, která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
 
 ```cpp
 public:
@@ -1380,7 +1380,7 @@ public:
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje `GetGroupInfoByIndex` metodu. V dřívější části tohoto příkladu kódu jsme vytvořili ovládací prvek seznamu zobrazení, který v zobrazení sestavy zobrazuje dva sloupce s názvem ClientID a "stupeň". Následující příklad kódu načte informace o skupině, jejíž index je 0, pokud taková skupina existuje.
+Následující příklad kódu ukazuje metodu `GetGroupInfoByIndex`. V dřívější části tohoto příkladu kódu jsme vytvořili ovládací prvek seznamu zobrazení, který v zobrazení sestavy zobrazuje dva sloupce s názvem ClientID a "stupeň". Následující příklad kódu načte informace o skupině, jejíž index je 0, pokud taková skupina existuje.
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1425,7 +1425,7 @@ Ukazatel na [LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetr
 
 Tato členská funkce emuluje funkce [LVM_GETGROUPMETRICS](/windows/win32/Controls/lvm-getgroupmetrics) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="getgrouprect"></a>  CListCtrl::GetGroupRect
+## <a name="getgrouprect"></a>CListCtrl:: GetGroupRect
 
 Načte ohraničující obdélník pro zadanou skupinu v aktuálním ovládacím prvku seznam-zobrazení.
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |---------------|-----------------|
 |*iGroupId*|pro Určuje skupinu.|
 |*lpRect*|[in, out] Ukazatel na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) . Pokud je tato metoda úspěšná, struktura přijme souřadnice obdélníku skupiny, která je určena *iGroupId*.|
-|*iCoords*|pro Určuje souřadnice obdélníku, které se mají načíst. Použijte jednu z těchto hodnot:<br /><br /> -LVGGR_GROUP-(výchozí) souřadnice celé rozbalené skupiny.<br />-LVGGR_HEADER – koordinuje pouze záhlaví (sbalenou skupinu).<br />-LVGGR_SUBSETLINK-souřadnice pouze odkazu na podmnožinu (podmnožina značek).|
+|*iCoords*|pro Určuje souřadnice obdélníku, které se mají načíst. Použijte jednu z těchto hodnot:<br /><br /> -LVGGR_GROUP-(výchozí) souřadnice celé rozbalené skupiny.<br />-LVGGR_HEADER-koordinuje pouze záhlaví (sbalenou skupinu).<br />-LVGGR_SUBSETLINK-souřadnice pouze odkazu na podmnožinu (podmnožina kódu).|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1456,7 +1456,7 @@ Tato metoda pošle zprávu [LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgro
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou, `m_listCtrl`která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, `m_listCtrl`, která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
 ```cpp
 public:
     // Variable used to access the list control.
@@ -1465,7 +1465,7 @@ public:
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje `GetGroupRect` metodu. V dřívější části tohoto příkladu kódu jsme vytvořili ovládací prvek seznamu zobrazení, který v zobrazení sestavy zobrazuje dva sloupce s názvem ClientID a "stupeň". Následující příklad kódu nakreslí kolem skupiny 3D obdélník, jehož index je 0, pokud taková skupina existuje.
+Následující příklad kódu ukazuje metodu `GetGroupRect`. V dřívější části tohoto příkladu kódu jsme vytvořili ovládací prvek seznamu zobrazení, který v zobrazení sestavy zobrazuje dva sloupce s názvem ClientID a "stupeň". Následující příklad kódu nakreslí kolem skupiny 3D obdélník, jehož index je 0, pokud taková skupina existuje.
 
 ```cpp
     // GetGroupRect
@@ -1482,7 +1482,7 @@ Následující příklad kódu ukazuje `GetGroupRect` metodu. V dřívější č
     }
 ```
 
-## <a name="getgroupstate"></a>  CListCtrl::GetGroupState
+## <a name="getgroupstate"></a>CListCtrl:: GetGroupState
 
 Načte stav zadané skupiny v aktuálním ovládacím prvku seznam-zobrazení.
 
@@ -1505,11 +1505,11 @@ Požadovaný stav pro zadanou skupinu nebo 0, pokud nelze najít skupinu.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrácená hodnota je výsledkem bitové a operace s parametrem *dwMask* a hodnotou `state` člena struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) , která představuje aktuální ovládací prvek list-View.
+Návratová hodnota je výsledkem bitové a operace s parametrem *dwMask* a hodnotou `state` člena struktury [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) , která představuje aktuální ovládací prvek seznam-zobrazení.
 
-Tato metoda pošle zprávu [LVM_GETGROUPSTATE](/windows/win32/Controls/lvm-getgroupstate) , která je popsána v Windows SDK. Další informace najdete v tématu makro [ListView_GetGroupState](/windows/win32/api/commctrl/nf-commctrl-listview_getgroupstate) .
+Tato metoda pošle zprávu [LVM_GETGROUPSTATE](/windows/win32/Controls/lvm-getgroupstate) , která je popsána v Windows SDK. Další informace naleznete v tématu [ListView_GetGroupState](/windows/win32/api/commctrl/nf-commctrl-listview_getgroupstate) makro.
 
-## <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl
+## <a name="getheaderctrl"></a>CListCtrl:: GetHeaderCtrl
 
 Načte ovládací prvek záhlaví ovládacího prvku zobrazení seznamu.
 
@@ -1529,7 +1529,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_GetHeader](/
 
 Podívejte se na příklad pro [CListCtrl:: GetColumnOrderArray](#getcolumnorderarray).
 
-## <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
+## <a name="gethotcursor"></a>CListCtrl:: GetHotCursor
 
 Načte kurzor, který se použije, když je pro ovládací prvek zobrazení seznamu povolený Hot Tracking.
 
@@ -1554,7 +1554,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_GetHotCursor
         ASSERT(m_myListCtrl.GetHotCursor() == hCursor);
 ```
 
-## <a name="gethotitem"></a>  CListCtrl::GetHotItem
+## <a name="gethotitem"></a>CListCtrl:: GetHotItem
 
 Načte položku zobrazení seznamu, která je aktuálně pod kurzorem.
 
@@ -1581,7 +1581,7 @@ Pokud je povoleno sledování v síti, když uživatel pozastaví položku zobra
         m_myListCtrl.SetHotItem(0);
 ```
 
-## <a name="gethovertime"></a>  CListCtrl::GetHoverTime
+## <a name="gethovertime"></a>CListCtrl:: GetHoverTime
 
 Načte aktuální čas najetí myší na ovládací prvek zobrazení seznamu.
 
@@ -1606,7 +1606,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_GetHoverTime
             m_myListCtrl.SetHoverTime(1000);
 ```
 
-## <a name="getimagelist"></a>  CListCtrl::GetImageList
+## <a name="getimagelist"></a>CListCtrl:: GetImageList
 
 Načte popisovač seznamu obrázků používaného pro vykreslení položek zobrazení seznamu.
 
@@ -1621,9 +1621,9 @@ Hodnota určující, který seznam obrázků se má načíst Může to být jedn
 
 - LVSIL_NORMAL seznam obrázků s velkými ikonami.
 
-- LVSIL_SMALL se seznam obrázků s malými ikonami.
+- LVSIL_SMALL seznamu obrázků s malými ikonami.
 
-- LVSIL_STATE obrázkový seznam s imagemi stavu.
+- LVSIL_STATE seznam obrázků s imagemi stavu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1637,7 +1637,7 @@ Ukazatel na seznam obrázků použitý pro vykreslení položek zobrazení sezna
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
-## <a name="getinsertmark"></a>  CListCtrl::GetInsertMark
+## <a name="getinsertmark"></a>CListCtrl:: GetInsertMark
 
 Načte aktuální pozici značky vložení.
 
@@ -1652,13 +1652,13 @@ Ukazatel na strukturu [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvi
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud bylo úspěšné, nebo jinak FALSE. Pokud velikost v `cbSize` členu `LVINSERTMARK` struktury není stejná jako skutečná velikost struktury, vrátí se hodnota false.
+Vrátí hodnotu TRUE, pokud bylo úspěšné, nebo jinak FALSE. Pokud velikost v `cbSize` členu `LVINSERTMARK` struktury není shodná se skutečnou velikostí struktury, vrátí se hodnota FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato členská funkce emuluje funkce [LVM_GETINSERTMARK](/windows/win32/Controls/lvm-getinsertmark) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="getinsertmarkcolor"></a>  CListCtrl::GetInsertMarkColor
+## <a name="getinsertmarkcolor"></a>CListCtrl:: GetInsertMarkColor
 
 Načte aktuální barvu značky vložení.
 
@@ -1674,7 +1674,7 @@ Vrátí strukturu [COLORREF](/windows/win32/gdi/colorref) , která obsahuje barv
 
 Tato členská funkce emuluje funkce [LVM_GETINSERTMARKCOLOR](/windows/win32/Controls/lvm-getinsertmarkcolor) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect
+## <a name="getinsertmarkrect"></a>CListCtrl:: GetInsertMarkRect
 
 Načte obdélník, který je ohraničený bodem vložení.
 
@@ -1685,7 +1685,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 ### <a name="parameters"></a>Parametry
 
 *pRect*<br/>
-Ukazatel na `RECT` strukturu, která obsahuje souřadnice obdélníku, který je ohraničený bodem vložení.
+Ukazatel na strukturu `RECT`, která obsahuje souřadnice obdélníku, který je ohraničený bodem vložení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1718,9 +1718,9 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-`LVITEM` Struktura určuje nebo přijímá atributy položky zobrazení seznamu.
+Struktura `LVITEM` určuje nebo přijímá atributy položky zobrazení seznamu.
 
-## <a name="getitemcount"></a>  CListCtrl::GetItemCount
+## <a name="getitemcount"></a>CListCtrl:: GetItemCount
 
 Načte počet položek v ovládacím prvku zobrazení seznamu.
 
@@ -1736,9 +1736,9 @@ Počet položek v ovládacím prvku zobrazení seznamu.
 
 Podívejte se na příklad pro [CListCtrl::D eleteitem](#deleteitem).
 
-## <a name="getitemdata"></a>  CListCtrl::GetItemData
+## <a name="getitemdata"></a>CListCtrl:: GetItemData
 
-Načte 32 hodnotu specifickou pro aplikaci přidruženou k položce určené parametrem `nItem`.
+Načte 32 hodnotu specifickou pro aplikaci, která je přidružená k položce určené `nItem`.
 
 ```
 DWORD_PTR GetItemData(int nItem) const;
@@ -1755,7 +1755,7 @@ Index položky seznamu, jejichž data mají být načtena.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota je `lParam` členem struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , jak je popsáno v Windows SDK
+Tato hodnota je `lParam` člen struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , jak je popsáno v Windows SDK
 
 ### <a name="example"></a>Příklad
 
@@ -1770,7 +1770,7 @@ Tato hodnota je `lParam` členem struktury [LVITEM](/windows/win32/api/commctrl/
     }
 ```
 
-## <a name="getitemindexrect"></a>  CListCtrl::GetItemIndexRect
+## <a name="getitemindexrect"></a>CListCtrl:: GetItemIndexRect
 
 Načte ohraničující obdélník pro celou položku nebo část podpoložky v aktuálním ovládacím prvku seznam-zobrazení.
 
@@ -1801,7 +1801,7 @@ Tato metoda pošle zprávu [LVM_GETITEMINDEXRECT](/windows/win32/Controls/lvm-ge
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou, `m_listCtrl`která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, `m_listCtrl`, která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
 
 ```cpp
 public:
@@ -1811,7 +1811,7 @@ public:
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje `GetGroupRect` metodu. Před vstupem do tohoto příkladu kódu jsme vytvořili ovládací prvek seznam, který zobrazí dva sloupce s názvem ClientID a "stupeň" v zobrazení sestavy. Následující příklad kódu nakreslí kolem druhé podpoložky v obou sloupcích 3D obdélník.
+Následující příklad kódu ukazuje metodu `GetGroupRect`. Před vstupem do tohoto příkladu kódu jsme vytvořili ovládací prvek seznam, který zobrazí dva sloupce s názvem ClientID a "stupeň" v zobrazení sestavy. Následující příklad kódu nakreslí kolem druhé podpoložky v obou sloupcích 3D obdélník.
 
 ```cpp
     // GetItemIndexRect
@@ -1865,7 +1865,7 @@ Nenulové, pokud bylo úspěšné; jinak nula.
         }
 ```
 
-## <a name="getitemrect"></a>  CListCtrl::GetItemRect
+## <a name="getitemrect"></a>CListCtrl:: GetItemRect
 
 Načte ohraničující obdélník pro celou položku nebo část položky v aktuálním zobrazení.
 
@@ -1887,11 +1887,11 @@ Adresa struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) , která přijí
 *nCode*<br/>
 Část položky zobrazení seznamu, pro kterou chcete načíst ohraničující obdélník. Může to být jedna z těchto hodnot:
 
-- LVIR_BOUNDS vrací ohraničující obdélník celé položky, včetně ikony a popisku.
+- LVIR_BOUNDS vrátí ohraničující obdélník celé položky, včetně ikony a popisku.
 
-- LVIR_ICON vrací ohraničující obdélník ikony nebo malé ikony.
+- LVIR_ICON vrátí ohraničující obdélník ikony nebo malé ikony.
 
-- LVIR_LABEL vrací ohraničující obdélník textu položky.
+- LVIR_LABEL vrátí ohraničující obdélník textu položky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1990,13 +1990,13 @@ Příznaky stavu pro zadanou položku zobrazení seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Stav položky je určen `state` členem struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , jak je popsáno v Windows SDK. Když zadáte nebo změníte stav položky, `stateMask` člen určí, které bity stavu chcete změnit.
+Stav položky je určen `state` členem struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , jak je popsáno v Windows SDK. Když zadáte nebo změníte stav položky, člen `stateMask` určuje, které bity stavu chcete změnit.
 
 ### <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [CListCtrl:: GetTopIndex](#gettopindex).
 
-## <a name="getitemtext"></a>  CListCtrl::GetItemText
+## <a name="getitemtext"></a>CListCtrl:: GetItemText
 
 Načte text položky zobrazení seznamu nebo podpoložky.
 
@@ -2030,7 +2030,7 @@ Délka vyrovnávací paměti, na kterou odkazuje *lpszText*.
 
 Verze **vracející celočíselná vrátí délku** načteného řetězce.
 
-Verze vracející `CString` text vrátí text položky.
+Verze vracející `CString` vrátí text položky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2060,7 +2060,7 @@ Geometrický vztah požadované položky na zadanou položku a stav požadované
 
 - LVNI_BELOW vyhledá položku, která je pod zadanou položkou.
 
-- LVNI_TOLEFT vyhledá položku nalevo od zadané položky.
+- LVNI_TOLEFT vyhledá položku vlevo od zadané položky.
 
 - LVNI_TORIGHT vyhledá položku napravo od zadané položky.
 
@@ -2078,7 +2078,7 @@ Pokud položka nemá všechny zadané příznaky stavu, pokračuje hledání s d
 
 Index další položky, pokud je úspěch, nebo-1 v opačném případě.
 
-## <a name="getnextitemindex"></a>  CListCtrl::GetNextItemIndex
+## <a name="getnextitemindex"></a>CListCtrl:: GetNextItemIndex
 
 Načte index položky v aktuálním ovládacím prvku seznam zobrazení, který má zadanou sadu vlastností.
 
@@ -2093,7 +2093,7 @@ BOOL GetNextItemIndex(
 |Parametr|Popis|
 |---------------|-----------------|
 |*pItemIndex*|[in, out] Ukazatel na strukturu [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) , která popisuje položku, kde hledání začíná, nebo-1 pro nalezení první položky, která odpovídá příznaků v parametru *nFlags* .<br /><br /> Pokud je tato metoda úspěšná, `LVITEMINDEX` struktura popisuje položku nalezenou hledáním.|
-|*nFlags*|pro Bitových kombinací (nebo) příznaků, které určují, jak se má hledání provést.<br /><br /> Hledání může záviset na indexu, stavu nebo vzhledu cílové položky nebo fyzické pozici cílové položky vzhledem k položce určené parametrem *pItemIndex* . Další informace naleznete v parametru *Flags* v [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) zprávě.|
+|*nFlags*|pro Bitových kombinací (nebo) příznaků, které určují, jak se má hledání provést.<br /><br /> Hledání může záviset na indexu, stavu nebo vzhledu cílové položky nebo fyzické pozici cílové položky vzhledem k položce určené parametrem *pItemIndex* . Další informace naleznete v parametru *Flags* ve zprávě [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) .|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2101,7 +2101,7 @@ TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Volající je zodpovědný za přidělení a nastavení členů `LVITEMINDEX` struktury, na které odkazoval parametr *pItemIndex* .
+Volající je zodpovědný za přidělení a nastavení členů struktury `LVITEMINDEX`, na které odkazoval parametr *pItemIndex* .
 
 Tato metoda pošle zprávu [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex) , která je popsána v Windows SDK.
 
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 ### <a name="parameters"></a>Parametry
 
 *POS*<br/>
-Odkaz na hodnotu pozice vrácenou předchozím voláním `GetNextSelectedItem` nebo. `GetFirstSelectedItemPosition` Hodnota je aktualizována na další pozici tímto voláním.
+Odkaz na hodnotu pozice vrácený předchozím voláním `GetNextSelectedItem` nebo `GetFirstSelectedItemPosition`. Hodnota je aktualizována na další pozici tímto voláním.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2124,7 +2124,7 @@ Index položky seznamu identifikovaný *POS*
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete použít `GetNextSelectedItem` ve smyčce dopředné iteraci, pokud vytvoříte počáteční pozici s `GetFirstSelectedItemPosition`voláním.
+Pokud vytváříte počáteční pozici s voláním `GetFirstSelectedItemPosition`, můžete použít `GetNextSelectedItem` ve smyčce dopředné iteraci.
 
 Je nutné zajistit, aby byla hodnota pozice platná. Pokud je neplatný, ladicí verze knihovna Microsoft Foundation Class výrazy.
 
@@ -2192,7 +2192,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_GetNumberOfW
         }
 ```
 
-## <a name="getoutlinecolor"></a>  CListCtrl::GetOutlineColor
+## <a name="getoutlinecolor"></a>CListCtrl:: GetOutlineColor
 
 Načte barvu ohraničení ovládacího prvku zobrazení seznamu.
 
@@ -2241,7 +2241,7 @@ Index vybraného sloupce
 
 Tato členská funkce emuluje funkce [LVM_GETSELECTEDCOLUMN](/windows/win32/Controls/lvm-getselectedcolumn) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount
+## <a name="getselectedcount"></a>CListCtrl:: GetSelectedCount
 
 Načte počet vybraných položek v ovládacím prvku zobrazení seznamu.
 
@@ -2271,7 +2271,7 @@ Počet vybraných položek v ovládacím prvku zobrazení seznamu.
         }
 ```
 
-## <a name="getselectionmark"></a>  CListCtrl::GetSelectionMark
+## <a name="getselectionmark"></a>CListCtrl:: GetSelectionMark
 
 Načte značku výběru ovládacího prvku zobrazení seznamu.
 
@@ -2356,11 +2356,11 @@ Index založený na jednom z dílčích položek.
 *nArea*<br/>
 Určuje část ohraničujícího obdélníku (z podpoložky zobrazení seznamu), která má být načtena. Část (ikona, popisek nebo obojí) ohraničujícího obdélníku je určena použitím bitového operátoru OR na jednu nebo více z následujících hodnot:
 
-- LVIR_BOUNDS vrací ohraničující obdélník celé položky, včetně ikony a popisku.
+- LVIR_BOUNDS vrátí ohraničující obdélník celé položky, včetně ikony a popisku.
 
-- LVIR_ICON vrací ohraničující obdélník ikony nebo malé ikony.
+- LVIR_ICON vrátí ohraničující obdélník ikony nebo malé ikony.
 
-- LVIR_LABEL vrací ohraničující obdélník celé položky, včetně ikony a popisku. To je stejné jako LVIR_BOUNDS.
+- LVIR_LABEL vrátí ohraničující obdélník celé položky, včetně ikony a popisku. To je stejné jako LVIR_BOUNDS.
 
 *ref*<br/>
 Odkaz na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje souřadnice ohraničujícího obdélníku podpoložky.
@@ -2373,7 +2373,7 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 Tato členská funkce implementuje chování makra Win32, [ListView_GetSubItemRect](/windows/win32/api/commctrl/nf-commctrl-listview_getsubitemrect), jak je popsáno v Windows SDK.
 
-## <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor
+## <a name="gettextbkcolor"></a>CListCtrl:: GetTextBkColor
 
 Načte barvu pozadí textu ovládacího prvku zobrazení seznamu.
 
@@ -2389,7 +2389,7 @@ COLORREF GetTextBkColor() const;
 
 Podívejte se na příklad pro [CListCtrl:: SetTextBkColor](#settextbkcolor).
 
-## <a name="gettextcolor"></a>  CListCtrl::GetTextColor
+## <a name="gettextcolor"></a>CListCtrl:: GetTextColor
 
 Načte barvu textu ovládacího prvku zobrazení seznamu.
 
@@ -2405,7 +2405,7 @@ COLORREF GetTextColor() const;
 
 Podívejte se na příklad pro [CListCtrl:: SetTextColor](#settextcolor).
 
-## <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
+## <a name="gettileinfo"></a>CListCtrl:: GetTileInfo
 
 Načte informace o dlaždici v ovládacím prvku zobrazení seznamu.
 
@@ -2426,7 +2426,7 @@ Návratová hodnota se nepoužívá.
 
 Tato členská funkce emuluje funkce [LVM_GETTILEINFO](/windows/win32/Controls/lvm-gettileinfo) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo
+## <a name="gettileviewinfo"></a>CListCtrl:: GetTileViewInfo
 
 Načte informace o ovládacím prvku seznamu zobrazení v dlaždicovém zobrazení.
 
@@ -2447,7 +2447,7 @@ Návratová hodnota se nepoužívá.
 
 Tato členská funkce emuluje funkce [LVM_GETTILEVIEWINFO](/windows/win32/Controls/lvm-gettileviewinfo) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="gettooltips"></a>  CListCtrl::GetToolTips
+## <a name="gettooltips"></a>CListCtrl:: GetToolTips
 
 Načte ovládací prvek ToolTip, který ovládací prvek zobrazení seznamu používá k zobrazení popisů tlačítek.
 
@@ -2457,11 +2457,11 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [CToolTipCtrl](ctooltipctrl-class.md) , který má být použit ovládacím prvkem seznamu. Pokud funkce [Create](#create) member používá styl LVS_NOTOOLTIPS, nejsou použity žádné popisy a jsou vráceny hodnoty null.
+Ukazatel na objekt [CToolTipCtrl](ctooltipctrl-class.md) , který má být použit ovládacím prvkem seznamu. Pokud funkce [Create](#create) member používá LVS_NOTOOLTIPS stylu, nejsou použity žádné popisy a jsou vráceny hodnoty null.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [LVM_GETTOOLTIPS](/windows/win32/Controls/lvm-gettooltips), jak je popsáno v Windows SDK. Implementace `GetToolTips` knihovny MFC `CToolTipCtrl` vrátí objekt, který je použit ovládacím prvkem seznam namísto popisovače ovládacího prvku ToolTip.
+Tato členská funkce implementuje chování zprávy Win32 [LVM_GETTOOLTIPS](/windows/win32/Controls/lvm-gettooltips), jak je popsáno v Windows SDK. Implementace knihovny MFC `GetToolTips` vrátí objekt `CToolTipCtrl`, který je použit ovládacím prvkem seznam namísto popisovače ovládacího prvku ToolTip.
 
 ### <a name="example"></a>Příklad
 
@@ -2474,7 +2474,7 @@ Tato členská funkce implementuje chování zprávy Win32 [LVM_GETTOOLTIPS](/wi
         }
 ```
 
-## <a name="gettopindex"></a>  CListCtrl::GetTopIndex
+## <a name="gettopindex"></a>CListCtrl:: GetTopIndex
 
 Načte index nejvyšší viditelné položky při zobrazení seznamu nebo zobrazení sestavy.
 
@@ -2566,7 +2566,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_GetWorkAreas
 
 Podívejte se na příklad pro [CListCtrl:: GetNumberOfWorkAreas](#getnumberofworkareas).
 
-## <a name="hasgroup"></a>  CListCtrl::HasGroup
+## <a name="hasgroup"></a>CListCtrl:: HasGroup
 
 Určuje, zda má ovládací prvek zobrazení seznamu zadanou skupinu.
 
@@ -2587,7 +2587,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Tato členská funkce emuluje funkce [LVM_HASGROUP](/windows/win32/Controls/lvm-hasgroup) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="hittest"></a>  CListCtrl::HitTest
+## <a name="hittest"></a>CListCtrl:: HitTest
 
 Určuje, která položka zobrazení seznamu, pokud existuje, je na zadané pozici.
 
@@ -2602,7 +2602,7 @@ int HitTest(
 ### <a name="parameters"></a>Parametry
 
 *pHitTestInfo*<br/>
-`LVHITTESTINFO` Adresa struktury, která obsahuje pozici pro test přístupů a která přijímá informace o výsledcích testu volání.
+Adresa `LVHITTESTINFO` struktury, která obsahuje pozici pro test přístupů a který přijímá informace o výsledcích testu volání.
 
 *bodů*<br/>
 Bod k otestování.
@@ -2616,9 +2616,9 @@ Index položky na pozici určené parametrem *pHitTestInfo*, pokud existuje, neb
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnoty LVHT_ABOVE, LVHT_BELOW, LVHT_TOLEFT a LVHT_TORIGHT `flag` člena struktury můžete použít k určení, zda se má posunout obsah ovládacího prvku zobrazení seznamu. Dva z těchto příznaků lze kombinovat, například pokud je pozice výše a nalevo od klientské oblasti.
+Pomocí LVHT_ABOVE, LVHT_BELOW, LVHT_TOLEFT a LVHT_TORIGHT hodnoty `flag` člena struktury můžete určit, zda se má posunout obsah ovládacího prvku zobrazení seznamu. Dva z těchto příznaků lze kombinovat, například pokud je pozice výše a nalevo od klientské oblasti.
 
-Můžete otestovat hodnotu LVHT_ONITEM `flag` člena struktury, abyste zjistili, zda je daná pozice nad položkou Zobrazení seznamu. Tato hodnota je bitová nebo operace na hodnotách LVHT_ONITEMICON, LVHT_ONITEMLABEL a LVHT_ONITEMSTATEICON `flag` člena struktury.
+Můžete testovat LVHT_ONITEM hodnotu `flag` člena struktury, abyste zjistili, zda je daná pozice nad položkou Zobrazení seznamu. Tato hodnota je bitová operace nebo operace LVHT_ONITEMICON, LVHT_ONITEMLABEL a LVHT_ONITEMSTATEICON hodnoty člena `flag` struktury.
 
 ### <a name="example"></a>Příklad
 
@@ -2665,7 +2665,7 @@ int InsertColumn(
 Index nového sloupce
 
 *pColumn*<br/>
-`LVCOLUMN` Adresa struktury, která obsahuje atributy nového sloupce.
+Adresa `LVCOLUMN` struktury, která obsahuje atributy nového sloupce.
 
 *lpszColumnHeading*<br/>
 Adresa řetězce obsahujícího záhlaví sloupce
@@ -2701,7 +2701,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
+*indexovacím*<br/>
 Index položky, do které má být skupina vložena.
 
 *pgrp*<br/>
@@ -2715,7 +2715,7 @@ Vrátí index položky, do které se přidala skupina, nebo-1, pokud se operace 
 
 Tato členská funkce emuluje funkce [LVM_INSERTGROUP](/windows/win32/Controls/lvm-insertgroup) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted
+## <a name="insertgroupsorted"></a>CListCtrl:: InsertGroupSorted
 
 Vloží zadanou skupinu do seřazeného seznamu skupin.
 
@@ -2786,7 +2786,7 @@ Označuje stav položky, obrázek stavu a překryvný obrázek. Další informac
 Určuje, které bity členského státu budou načteny nebo upraveny. Další informace najdete v tématu [Struktura LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) v Windows SDK.
 
 *lParam*<br/>
-32 hodnota specifická pro aplikaci, která je přidružená k položce. Je-li tento parametr zadán, je nutné nastavit atribut *NMASK* LVIF_PARAM.
+32 hodnota specifická pro aplikaci, která je přidružená k položce. Je-li tento parametr zadán, je nutné nastavit atribut *nMask* LVIF_PARAM.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2794,7 +2794,7 @@ Index nové položky v případě úspěchu nebo-1 v opačném případě.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této metody může způsobit odeslání zprávy LVM_INSERTITEM do okna ovládacího prvku. Přidružená obslužná rutina zprávy pro ovládací prvek může selhat při nastavení textu položky za určitých podmínek (například pomocí stylů oken, jako je například LVS_OWNERDRAW). Další informace o těchto podmínkách najdete v tématu [LVM_INSERTITEM](/windows/win32/Controls/lvm-insertitem) v Windows SDK.
+Volání této metody může způsobit odeslání zprávy LVM_INSERTITEM do okna ovládacího prvku. Přidružená obslužná rutina zprávy pro ovládací prvek může selhat při nastavení textu položky za určitých podmínek (například pomocí stylů oken, například LVS_OWNERDRAW). Další informace o těchto podmínkách najdete v tématu [LVM_INSERTITEM](/windows/win32/Controls/lvm-insertitem) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -2820,7 +2820,7 @@ Volání této metody může způsobit odeslání zprávy LVM_INSERTITEM do okna
         }
 ```
 
-## <a name="insertmarkhittest"></a>  CListCtrl::InsertMarkHitTest
+## <a name="insertmarkhittest"></a>CListCtrl:: InsertMarkHitTest
 
 Načte bod vložení nejblíže k zadanému bodu.
 
@@ -2846,7 +2846,7 @@ Bod vložení nejbližší k zadanému bodu.
 
 Tato členská funkce emuluje funkce [LVM_INSERTMARKHITTEST](/windows/win32/Controls/lvm-insertmarkhittest) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled
+## <a name="isgroupviewenabled"></a>CListCtrl:: IsGroupViewEnabled
 
 Určuje, zda je pro ovládací prvek zobrazení seznamu povolený zobrazení skupiny.
 
@@ -2874,7 +2874,7 @@ BOOL IsItemVisible(int index) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*index*|pro Index položky v aktuálním ovládacím prvku zobrazení seznamu od nuly|
+|*indexovacím*|pro Index položky v aktuálním ovládacím prvku zobrazení seznamu od nuly|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2884,7 +2884,7 @@ TRUE, pokud je zadaná položka viditelná; v opačném případě FALSE.
 
 Tato metoda pošle zprávu [LVM_ISITEMVISIBLE](/windows/win32/Controls/lvm-isitemvisible) , která je popsána v Windows SDK.
 
-## <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex
+## <a name="mapidtoindex"></a>CListCtrl:: MapIDToIndex
 
 Mapuje jedinečné ID položky v aktuálním ovládacím prvku seznam-zobrazení na index.
 
@@ -2910,7 +2910,7 @@ Všimněte si, že v prostředí s více vlákny je index zaručen pouze v vlák
 
 Tato metoda pošle zprávu [LVM_MAPIDTOINDEX](/windows/win32/controls/lvm-mapidtoindex) , která je popsána v Windows SDK.
 
-## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
+## <a name="mapindextoid"></a>CListCtrl:: MapIndexToID
 
 Mapuje index položky v aktuálním ovládacím prvku seznam-zobrazení na jedinečné ID.
 
@@ -2922,7 +2922,7 @@ UINT MapIndexToID(UINT index) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*index*|pro Index položky založený na nule.|
+|*indexovacím*|pro Index položky založený na nule.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2938,7 +2938,7 @@ Tato metoda pošle zprávu [LVM_MAPINDEXTOID](/windows/win32/Controls/lvm-mapind
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou, `m_listCtrl`která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, `m_listCtrl`, která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
 
 ```cpp
 public:
@@ -2948,7 +2948,7 @@ public:
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje `MapIndexToID` metodu. V dřívější části tohoto příkladu kódu jsme vytvořili ovládací prvek seznamu zobrazení, který v zobrazení sestavy zobrazuje dva sloupce s názvem ClientID a "stupeň". Následující příklad mapuje index každé položky zobrazení seznamu na identifikační číslo a následně načte index pro každé identifikační číslo. Nakonec tento příklad hlásí, zda byly obnoveny původní indexy.
+Následující příklad kódu ukazuje metodu `MapIndexToID`. V dřívější části tohoto příkladu kódu jsme vytvořili ovládací prvek seznamu zobrazení, který v zobrazení sestavy zobrazuje dva sloupce s názvem ClientID a "stupeň". Následující příklad mapuje index každé položky zobrazení seznamu na identifikační číslo a následně načte index pro každé identifikační číslo. Nakonec tento příklad hlásí, zda byly obnoveny původní indexy.
 
 ```cpp
     // MapIndexToID
@@ -2976,7 +2976,7 @@ Následující příklad kódu ukazuje `MapIndexToID` metodu. V dřívější č
         MB_ICONINFORMATION);
 ```
 
-## <a name="movegroup"></a>  CListCtrl::MoveGroup
+## <a name="movegroup"></a>CListCtrl:: Move –.
 
 Přesune zadanou skupinu na zadaný index založený na nule ovládacího prvku zobrazení seznamu.
 
@@ -3002,7 +3002,7 @@ Návratová hodnota se nepoužívá.
 
 Tato členská funkce emuluje funkce [LVM_MOVEGROUP](/windows/win32/Controls/lvm-movegroup) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup
+## <a name="moveitemtogroup"></a>CListCtrl:: MoveItemToGroup
 
 Přesune zadanou položku do zadané skupiny.
 
@@ -3025,7 +3025,7 @@ pro Identifikátor skupiny, do které bude položka přesunuta.
 > [!NOTE]
 >  Tato metoda není momentálně implementovaná.
 
-Tato metoda emuluje funkčnost zprávy [LVM_MOVEITEMTOGROUP](/windows/win32/Controls/lvm-moveitemtogroup) , jak je popsáno v Windows SDK.
+Tato metoda emuluje funkce [LVM_MOVEITEMTOGROUP](/windows/win32/Controls/lvm-moveitemtogroup) zprávy, jak je popsáno v Windows SDK.
 
 ## <a name="redrawitems"></a>CListCtrl:: RedrawItems
 
@@ -3065,7 +3065,7 @@ void RemoveAllGroups();
 
 Tato členská funkce emuluje funkce [LVM_REMOVEALLGROUPS](/windows/win32/Controls/lvm-removeallgroups) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="removegroup"></a>  CListCtrl::RemoveGroup
+## <a name="removegroup"></a>CListCtrl:: Remove
 
 Odebere zadanou skupinu z ovládacího prvku zobrazení seznamu.
 
@@ -3097,13 +3097,13 @@ BOOL Scroll(CSize size);
 ### <a name="parameters"></a>Parametry
 
 *hodnota*<br/>
-`CSize` Objekt určující velikost vodorovného a svislého posouvání v pixelech. Velikost členu je dělena výškou (v pixelech) čáry ovládacího prvku zobrazení seznamu a ovládací prvek je posunut o výsledný počet řádků. `y`
+Objekt `CSize` určující velikost vodorovného a svislého posouvání v pixelech. `y` člen *velikosti* je dělený výškou (v pixelech) čáry ovládacího prvku zobrazení seznamu a ovládací prvek je posunut o výsledný počet řádků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Nenulové, pokud bylo úspěšné; jinak nula.
 
-## <a name="setbkcolor"></a>  CListCtrl::SetBkColor
+## <a name="setbkcolor"></a>CListCtrl:: SetBkColor
 
 Nastaví barvu pozadí ovládacího prvku zobrazení seznamu.
 
@@ -3113,8 +3113,8 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*cr*<br/>
-Barva pozadí, která se má nastavit, nebo hodnota CLR_NONE pro žádnou barvu pozadí Ovládací prvky zobrazení seznamu s barvami pozadí, které se překreslí, výrazně rychleji než ty bez barvy pozadí. Informace najdete v tématu [COLORREF](/windows/win32/gdi/colorref) v Windows SDK.
+*znaky*<br/>
+Barva pozadí, která se má nastavit, nebo CLR_NONE hodnota bez barvy pozadí Ovládací prvky zobrazení seznamu s barvami pozadí, které se překreslí, výrazně rychleji než ty bez barvy pozadí. Informace najdete v tématu [COLORREF](/windows/win32/gdi/colorref) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3129,7 +3129,7 @@ Nenulové, pokud bylo úspěšné; jinak nula.
         ASSERT(m_myListCtrl.GetBkColor() == crBkColor);
 ```
 
-## <a name="setbkimage"></a>  CListCtrl::SetBkImage
+## <a name="setbkimage"></a>CListCtrl:: SetBkImage
 
 Nastaví obrázek pozadí ovládacího prvku zobrazení seznamu.
 
@@ -3152,7 +3152,7 @@ BOOL SetBkImage(
 ### <a name="parameters"></a>Parametry
 
 *plvbkImage*<br/>
-`LVBKIMAGE` Adresa struktury, která obsahuje nové informace o obrázku na pozadí.
+Adresa `LVBKIMAGE` struktury, která obsahuje nové informace o obrázku na pozadí.
 
 *hBitmap*<br/>
 Zpracování rastrového obrázku.
@@ -3176,7 +3176,7 @@ Vrátí nenulovou hodnotu, pokud bylo úspěšné, nebo nula jinak.
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Vzhledem `CListCtrl::SetBkImage` k tomu, že využívá funkci OLE com, musí být před použitím `SetBkImage`inicializovány knihovny OLE. Je nejvhodnější inicializovat knihovny COM při inicializaci aplikace a zrušit inicializaci knihoven při ukončení aplikace. To se provádí automaticky v aplikacích MFC, které využívají technologii ActiveX, automatizaci OLE, propojení/vložení OLE nebo operace rozhraní ODBC/DAO.
+>  Vzhledem k tomu, že `CListCtrl::SetBkImage` využívá funkci OLE COM, musí být před použitím `SetBkImage`inicializovat knihovny OLE. Je nejvhodnější inicializovat knihovny COM při inicializaci aplikace a zrušit inicializaci knihoven při ukončení aplikace. To se provádí automaticky v aplikacích MFC, které využívají technologii ActiveX, automatizaci OLE, propojení/vložení OLE nebo operace rozhraní ODBC/DAO.
 
 ### <a name="example"></a>Příklad
 
@@ -3264,7 +3264,7 @@ BOOL SetColumn(
 Index sloupce, jehož atributy mají být nastaveny.
 
 *pColumn*<br/>
-Adresa struktury [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) obsahující nové atributy sloupce, jak je popsáno v Windows SDK. `mask` Člen struktury určuje, které atributy sloupce se mají nastavit. Pokud člen Určuje hodnotu LVCF_TEXT, `pszText` člen struktury je adresa `cchTextMax` řetězce zakončeného hodnotou null a člen struktury je ignorován. `mask`
+Adresa struktury [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) obsahující nové atributy sloupce, jak je popsáno v Windows SDK. Člen `mask` struktury určuje, které atributy sloupce se mají nastavit. Pokud člen `mask` určuje LVCF_TEXT hodnotu, `pszText` člen struktury je adresa řetězce zakončeného hodnotou null a `cchTextMax` členu struktury je ignorována.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3319,8 +3319,8 @@ BOOL SetColumnWidth(
 *nCol*<br/>
 Index sloupce, pro který má být nastavena Šířka V zobrazení seznamu musí být tento parametr 0.
 
-*cx*<br/>
-Nová šířka sloupce Může být buď LVSCW_AUTOSIZE, nebo LVSCW_AUTOSIZE_USEHEADER, jak je popsáno v [LVM_SETCOLUMNWIDTH](/windows/win32/Controls/lvm-setcolumnwidth) v Windows SDK.
+*CX*<br/>
+Nová šířka sloupce Může být buď LVSCW_AUTOSIZE, nebo LVSCW_AUTOSIZE_USEHEADER, jak je popsáno v [LVM_SETCOLUMNWIDTH](/windows/win32/Controls/lvm-setcolumnwidth) Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3355,7 +3355,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_SetExtendedL
         (m_myListCtrl.GetExtendedStyle()|LVS_EX_HEADERDRAGDROP);
 ```
 
-## <a name="setgroupinfo"></a>  CListCtrl::SetGroupInfo
+## <a name="setgroupinfo"></a>CListCtrl:: SetGroupInfo
 
 Nastaví informace, které popisují zadanou skupinu aktuálního ovládacího prvku List-View.
 
@@ -3398,7 +3398,7 @@ Ukazatel na strukturu [LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-l
 
 Tato členská funkce emuluje funkce [LVM_SETGROUPMETRICS](/windows/win32/Controls/lvm-setgroupmetrics) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="sethotcursor"></a>  CListCtrl::SetHotCursor
+## <a name="sethotcursor"></a>CListCtrl:: SetHotCursor
 
 Nastaví kurzor, který se použije, když je pro ovládací prvek zobrazení seznamu povolený Hot Tracking.
 
@@ -3408,7 +3408,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>Parametry
 
-*hc*<br/>
+*HC*<br/>
 Popisovač prostředku kurzoru, který reprezentuje aktivní ukazatel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3450,7 +3450,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_SetHotItem](
 
 Podívejte se na příklad pro [CListCtrl:: GetHotItem](#gethotitem).
 
-## <a name="sethovertime"></a>  CListCtrl::SetHoverTime
+## <a name="sethovertime"></a>CListCtrl:: SetHoverTime
 
 Nastaví aktuální dobu najetí myší na ovládací prvek zobrazení seznamu.
 
@@ -3489,14 +3489,14 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*cx*<br/>
+*CX*<br/>
 Vzdálenost (v pixelech) mezi ikonami na ose x.
 
 *kr*<br/>
 Vzdálenost (v pixelech) mezi ikonami na ose y.
 
 *hodnota*<br/>
-`CSize` Objekt určující vzdálenost (v pixelech) mezi ikonami na osách x a y.
+Objekt `CSize` určující vzdálenost (v pixelech) mezi ikonami na osách x a y.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3513,7 +3513,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_SetIconSpaci
     m_myListCtrl.SetIconSpacing(CSize(100, 100));
 ```
 
-## <a name="setimagelist"></a>  CListCtrl::SetImageList
+## <a name="setimagelist"></a>CListCtrl:: SetImageList
 
 Přiřadí seznam obrázků k ovládacímu prvku zobrazení seznamu.
 
@@ -3533,9 +3533,9 @@ Typ seznamu obrázků Může to být jedna z těchto hodnot:
 
 - LVSIL_NORMAL seznam obrázků s velkými ikonami.
 
-- LVSIL_SMALL se seznam obrázků s malými ikonami.
+- LVSIL_SMALL seznamu obrázků s malými ikonami.
 
-- LVSIL_STATE obrázkový seznam s imagemi stavu.
+- LVSIL_STATE seznam obrázků s imagemi stavu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3566,7 +3566,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Tato členská funkce emuluje funkce [LVM_SETINFOTIP](/windows/win32/Controls/lvm-setinfotip) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="setinsertmark"></a>  CListCtrl::SetInsertMark
+## <a name="setinsertmark"></a>CListCtrl:: SetInsertMark
 
 Nastaví bod vložení na definovanou pozici.
 
@@ -3581,13 +3581,13 @@ Ukazatel na strukturu [LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvi
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud bylo úspěšné, nebo jinak FALSE. Pokud velikost v `cbSize` členu `LVINSERTMARK` struktury není shodná se skutečnou velikostí struktury nebo pokud se v aktuálním zobrazení nepoužije kurzor, je vrácena hodnota false.
+Vrátí hodnotu TRUE, pokud bylo úspěšné, nebo jinak FALSE. Pokud velikost v `cbSize` členu `LVINSERTMARK` struktury není shodná se skutečnou velikostí struktury nebo pokud se v aktuálním zobrazení neaplikuje žádný bod vložení, je vrácena hodnota FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato členská funkce emuluje funkce [LVM_SETINSERTMARK](/windows/win32/Controls/lvm-setinsertmark) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor
+## <a name="setinsertmarkcolor"></a>CListCtrl:: SetInsertMarkColor
 
 Nastaví barvu bodu vložení.
 
@@ -3602,7 +3602,7 @@ Struktura [COLORREF](/windows/win32/gdi/colorref) určující barvu pro nastaven
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`COLORREF` Vrátí strukturu obsahující předchozí barvu.
+Vrátí strukturu `COLORREF` obsahující předchozí barvu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -3640,7 +3640,7 @@ BOOL SetItem(
 ### <a name="parameters"></a>Parametry
 
 *pItem*<br/>
-Adresa struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) obsahující nové atributy položky, jak je popsáno v Windows SDK. Struktura `iItem` `mask` a `iSubItem` členové identifikují položku nebo podpoložku a člen struktury určuje, které atributy mají být nastaveny. Další informace o `mask` členovi naleznete v tématu **poznámky**.
+Adresa struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) obsahující nové atributy položky, jak je popsáno v Windows SDK. Členy `iItem` a `iSubItem`y struktury identifikují položku nebo podpoložku a člen `mask` struktury určuje, které atributy mají být nastaveny. Další informace o `mask` členu naleznete v tématu **poznámky**.
 
 *nItem*<br/>
 Index položky, jejíž atributy mají být nastaveny.
@@ -3675,19 +3675,19 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-`iItem` Členové a v`iSubItem` rámci struktury a parametry nItem a nSubItem identifikují položku a podpoložku, jejichž atributy mají být nastaveny `LVITEM` .
+`iItem` a `iSubItem` členů struktury `LVITEM` a parametry *nItem* a *nSubItem* identifikují položku a podpoložku, jejichž atributy mají být nastaveny.
 
-Člen struktury a parametr nMask určují, které atributy položky mají být nastaveny: `mask` `LVITEM`
+`mask` člen struktury `LVITEM` a parametr *nMask* určují, které atributy položky mají být nastaveny:
 
-- LVIF_TEXT členem nebo parametr *lpszItem* je adresa řetězce `cchTextMax` zakončeného hodnotou null; člen je ignorován. `pszText`
+- LVIF_TEXT `pszText` člen nebo parametr *lpszItem* je adresa řetězce zakončeného hodnotou null; člen `cchTextMax` je ignorován.
 
-- LVIF_STATE parametr `state` member nebo nStateMask určuje, které položky se mají změnit, a člen nebo parametr nInformace obsahuje hodnoty pro tyto stavy. `stateMask`
+- LVIF_STATE parametr `stateMask` member nebo *nStateMask* určuje, které položky se mají změnit, a parametr `state` member nebo *nInformace* obsahuje hodnoty pro tyto stavy.
 
 ### <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [CListCtrl:: HitTest](#hittest).
 
-## <a name="setitemcount"></a>  CListCtrl::SetItemCount
+## <a name="setitemcount"></a>CListCtrl:: SetItemCount
 
 Připraví ovládací prvek zobrazení seznamu pro přidání velkého počtu položek.
 
@@ -3723,7 +3723,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_SetItemCount
         }
 ```
 
-## <a name="setitemcountex"></a>  CListCtrl::SetItemCountEx
+## <a name="setitemcountex"></a>CListCtrl:: SetItemCountEx
 
 Nastaví počet položek pro ovládací prvek zobrazení virtuálního seznamu.
 
@@ -3741,9 +3741,9 @@ Počet položek, které bude ovládací prvek nakonec obsahovat.
 *dwFlags*<br/>
 Určuje chování ovládacího prvku zobrazení seznamu po resetování počtu položek. Tato hodnota může být kombinací následujících:
 
-- LVSICF_NOINVALIDATEALL ovládací prvek zobrazení seznamu nebude překreslit, pokud se aktuálně nezobrazují ovlivněné položky. Jedná se o výchozí hodnotu.
+- LVSICF_NOINVALIDATEALL ovládací prvek zobrazení seznamu nebude překreslit, pokud se aktuálně nezobrazují žádné ovlivněné položky. Toto je výchozí hodnota.
 
-- LVSICF_NOSCROLL v ovládacím prvku seznam zobrazení se nezmění pozice posunutí při změně počtu položek.
+- LVSICF_NOSCROLL ovládací prvek zobrazení seznamu nezmění pozici posunutí při změně počtu položek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3751,7 +3751,7 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování makra Win32 [ListView_SetItemCountEx](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcountex), jak je popsáno v tématu Windows SDKand by mělo být voláno pouze pro zobrazení virtuálních seznamů.
+Tato členská funkce implementuje chování makra Win32, [ListView_SetItemCountEx](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcountex), jak je popsáno v tématu Windows SDKand by měla být volána pouze pro zobrazení virtuálních seznamů.
 
 ### <a name="example"></a>Příklad
 
@@ -3772,7 +3772,7 @@ Tato členská funkce implementuje chování makra Win32 [ListView_SetItemCountE
         }
 ```
 
-## <a name="setitemdata"></a>  CListCtrl::SetItemData
+## <a name="setitemdata"></a>CListCtrl:: SetItemData
 
 Nastaví 32 hodnotu specifickou pro aplikaci přidruženou k položce určené parametrem *nItem*.
 
@@ -3794,7 +3794,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota je `lParam` členem struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , jak je popsáno v Windows SDK.
+Tato hodnota je `lParam` člen struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , jak je popsáno v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -3863,7 +3863,7 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 Ovládací prvek musí být v zobrazení Ikona nebo malá ikona.
 
-Má-li ovládací prvek zobrazení seznamu styl LVS_AUTOARRANGE, je zobrazení seznamu uspořádáno po nastavení pozice položky.
+Pokud má ovládací prvek zobrazení seznamu LVS_AUTOARRANGE styl, bude zobrazení seznamu uspořádáno po nastavení pozice položky.
 
 ### <a name="example"></a>Příklad
 
@@ -3890,7 +3890,7 @@ BOOL SetItemState(
 Index položky, jejíž stav má být nastaven.
 
 *pItem*<br/>
-Adresa struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , jak je popsáno v Windows SDK. `stateMask` Člen struktury určuje, které změny stavu se mají změnit a `state` člen struktury obsahuje nové hodnoty pro tyto bity. Ostatní členové jsou ignorováni.
+Adresa struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , jak je popsáno v Windows SDK. Člen `stateMask` struktury určuje, které změny stavu se mají změnit a `state` člen struktury obsahuje nové hodnoty pro tyto bity. Ostatní členové jsou ignorováni.
 
 *nInformace*<br/>
 Nové hodnoty pro stavové bity. Seznam možných hodnot naleznete v tématu [CListCtrl:: GetNextItem](#getnextitem) a člen stavu [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) .
@@ -3910,7 +3910,7 @@ Položka "State" je hodnota, která určuje dostupnost položky, označuje akce 
 
 Podívejte se na příklad pro [CListCtrl:: GetTopIndex](#gettopindex).
 
-## <a name="setitemtext"></a>  CListCtrl::SetItemText
+## <a name="setitemtext"></a>CListCtrl:: SetItemText
 
 Změní text položky zobrazení seznamu nebo podpoložky.
 
@@ -3959,7 +3959,7 @@ Nová struktura [COLORREF](/windows/win32/gdi/colorref) obsahující obrysovou b
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí `COLORREF` struktura obsahující barvu obrysu
+Předchozí struktura `COLORREF` obsahující barvu obrysu
 
 ### <a name="remarks"></a>Poznámky
 
@@ -4011,7 +4011,7 @@ Tato členská funkce implementuje chování makra Win32, [ListView_SetSelection
 
 Podívejte se na příklad pro [CListCtrl:: GetSelectionMark](#getselectionmark).
 
-## <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
+## <a name="settextbkcolor"></a>CListCtrl:: SetTextBkColor
 
 Nastaví barvu pozadí textu v ovládacím prvku zobrazení seznamu.
 
@@ -4021,7 +4021,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*cr*<br/>
+*znaky*<br/>
 COLORREF určující novou barvu pozadí textu. Informace najdete v tématu [COLORREF](/windows/win32/gdi/colorref) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4037,7 +4037,7 @@ Nenulové, pokud bylo úspěšné; jinak nula.
         ASSERT(m_myListCtrl.GetTextBkColor() == crBkColor);
 ```
 
-## <a name="settextcolor"></a>  CListCtrl::SetTextColor
+## <a name="settextcolor"></a>CListCtrl:: SetTextColor
 
 Nastaví barvu textu ovládacího prvku zobrazení seznamu.
 
@@ -4047,7 +4047,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*cr*<br/>
+*znaky*<br/>
 COLORREF určující novou barvu textu. Informace najdete v tématu [COLORREF](/windows/win32/gdi/colorref) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4064,7 +4064,7 @@ Nenulové, pokud bylo úspěšné; jinak nula.
     ASSERT(m_myListCtrl.GetTextColor() == crTextColor);
 ```
 
-## <a name="settileinfo"></a>  CListCtrl::SetTileInfo
+## <a name="settileinfo"></a>CListCtrl:: SetTileInfo
 
 Nastaví informace pro dlaždici ovládacího prvku zobrazení seznamu.
 
@@ -4085,7 +4085,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 Tato členská funkce emuluje funkce [LVM_SETTILEINFO](/windows/win32/Controls/lvm-settileinfo) zprávy, jak je popsáno v Windows SDK.
 
-## <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo
+## <a name="settileviewinfo"></a>CListCtrl:: SetTileViewInfo
 
 Nastaví informace, které ovládací prvek zobrazení seznamu používá v zobrazení dlaždic.
 
@@ -4117,7 +4117,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="parameters"></a>Parametry
 
 *pWndTip*<br/>
-Ukazatel na `CToolTipCtrl` objekt, který bude používat ovládací prvek seznamu.
+Ukazatel na objekt `CToolTipCtrl`, který bude používat ovládací prvek seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4127,7 +4127,7 @@ Ukazatel na objekt [CToolTipCtrl](ctooltipctrl-class.md) obsahující popisek, k
 
 Tato členská funkce implementuje chování zprávy Win32 [LVM_SETTOOLTIPS](/windows/win32/Controls/lvm-settooltips), jak je popsáno v Windows SDK.
 
-Pokud nechcete používat popisy tlačítek, určete styl LVS_NOTOOLTIPS při vytváření `CListCtrl` objektu.
+Pokud nechcete používat popisy tlačítek, při vytváření objektu `CListCtrl` Určete styl LVS_NOTOOLTIPS.
 
 ## <a name="setview"></a>CListCtrl:: SetView
 
@@ -4166,7 +4166,7 @@ void SetWorkAreas(
 Počet `RECT` struktur (nebo objektů [CRect](../../atl-mfc-shared/reference/crect-class.md) ) v poli, na které ukazuje *lpRect*.
 
 *lpRect*<br/>
-Adresa pole `RECT` struktury (neboli `CRect` objektů), které určují nové pracovní oblasti v ovládacím prvku zobrazení seznamu. Tyto oblasti musí být určeny v souřadnicích klientů. Pokud má tento parametr hodnotu NULL, bude pracovní oblast nastavena na klientskou oblast ovládacího prvku.
+Adresa pole `RECT` struktury (nebo objektů `CRect`), které určují nové pracovní oblasti v ovládacím prvku zobrazení seznamu. Tyto oblasti musí být určeny v souřadnicích klientů. Pokud má tento parametr hodnotu NULL, bude pracovní oblast nastavena na klientskou oblast ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -4300,18 +4300,18 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
-Tato zpráva se podobá [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems), s výjimkou typu informací předaných funkci porovnání. V [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)jsou hodnoty položek, které se mají porovnat, *lParam1* a *lParam2* . V [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)je *lParam1* aktuální index první položky k porovnání a *lParam2* je aktuální index druhé položky. Můžete odeslat zprávu [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext) a získat další informace o položce.
+Tato zpráva se podobá [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems), s výjimkou typu informací předaných funkci porovnání. V [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)jsou *lParam1* a *lParam2* hodnoty položek, které se mají porovnat. V [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)je *lParam1* aktuální index první položky k porovnání a *lParam2* je aktuální index druhé položky. Můžete odeslat zprávu [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext) a získat další informace o položce.
 
 Funkce porovnání musí vracet zápornou hodnotu, pokud by první položka měla předcházet druhé, kladné hodnotě, pokud má první položka následovat za sekundu, nebo nula, pokud jsou obě položky stejné.
 
 > [!NOTE]
->  Během procesu řazení jsou obsah zobrazení seznamu nestabilní. Pokud funkce zpětného volání pošle jakékoli zprávy do jiného ovládacího prvku zobrazení seznamu, než je [LVM_GETITEM](/windows/win32/Controls/lvm-getitem), výsledky se nepředvídatelné.
+>  Během procesu řazení jsou obsah zobrazení seznamu nestabilní. Pokud funkce zpětného volání pošle jakékoli zprávy na jiný ovládací prvek zobrazení seznamu než [LVM_GETITEM](/windows/win32/Controls/lvm-getitem), výsledky se nepředvídatelné.
 
 Tato metoda pošle zprávu [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex) , která je popsána v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou, `m_listCtrl`která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, `m_listCtrl`, která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
 
 ```cpp
 public:
@@ -4321,7 +4321,7 @@ public:
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje `SortItemEx` metodu. V dřívější části tohoto příkladu kódu jsme vytvořili ovládací prvek seznamu zobrazení, který v zobrazení sestavy zobrazuje dva sloupce s názvem ClientID a "stupeň". Následující příklad kódu seřadí tabulku pomocí hodnot ve sloupci "stupeň".
+Následující příklad kódu ukazuje metodu `SortItemEx`. V dřívější části tohoto příkladu kódu jsme vytvořili ovládací prvek seznamu zobrazení, který v zobrazení sestavy zobrazuje dva sloupce s názvem ClientID a "stupeň". Následující příklad kódu seřadí tabulku pomocí hodnot ve sloupci "stupeň".
 
 ```cpp
 // The ListCompareFunc() method is a global function used by SortItemEx().
@@ -4419,7 +4419,7 @@ Tato funkce také uspořádá ovládací prvek zobrazení seznamu, pokud má sty
 
 Podívejte se na příklad pro [CListCtrl:: GetSelectedCount](#getselectedcount).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [ROWLIST Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](cwnd-class.md)<br/>

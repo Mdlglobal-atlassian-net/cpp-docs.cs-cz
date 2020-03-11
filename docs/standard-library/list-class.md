@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687829"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890846"
 ---
 # <a name="list-class"></a>list – třída
 
@@ -118,11 +118,11 @@ class list
 
 ### <a name="parameters"></a>Parametry
 
-*Zadejte* \
+*Zadejte*\
 Typ dat prvku, který bude uložen v seznamu.
 
-@No__t_1 *přidělování*
-Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování a navracení paměti v seznamu. Tento argument je nepovinný a výchozí hodnota je \<*typ* **přidělování** >.
+\ *přidělování*
+Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování a navracení paměti v seznamu. Tento argument je nepovinný a výchozí hodnota je\<*typ* **přidělování** >.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -132,7 +132,7 @@ Funkce seznamu členů funkce [Merge](#merge), [Reverted](#reverse), [Unique](#u
 
 Přerozdělení seznamu nastane, pokud členská funkce musí vložit nebo smazat prvky seznamu. Ve všech takových případech se stanou neplatnými pouze iterátory nebo odkazy, které ukazují na vymazané části řízené sekvence.
 
-Zahrnout standardní hlavičku standardní knihovny \<list > k definování seznamu šablon třídy kontejneru a několika pomocných šablon. [](../standard-library/stl-containers.md) C++
+C++ Pokud chcete definovat seznam šablon třídy [kontejneru](../standard-library/stl-containers.md) a několik pomocných šablon, zahrňte standardní hlavičku Standard Library \<>.
 
 ## <a name="members"></a>Členové
 
@@ -159,7 +159,7 @@ Zahrnout standardní hlavičku standardní knihovny \<list > k definování sezn
 |[size_type](#size_type)|Typ, který počítá počet prvků v seznamu.|
 |[value_type](#value_type)|Typ, který představuje datový typ uložený v seznamu.|
 
-### <a name="functions"></a>Funkce
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -206,7 +206,7 @@ Zahrnout standardní hlavičku standardní knihovny \<list > k definování sezn
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<list >
+**Záhlaví**: seznam \<>
 
 ## <a name="allocator_type"></a>allocator_type
 
@@ -222,7 +222,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [get_allocator](#get_allocator).
+Podívejte se na příklad [get_allocator](#get_allocator).
 
 ## <a name="assign"></a>řadit
 
@@ -244,19 +244,19 @@ void assign(
 
 ### <a name="parameters"></a>Parametry
 
-*První* \
+*První*\
 Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat ze seznamu argumentů.
 
-*Poslední* \
+*Poslední*\
 Pozice prvního prvku za rozsahem prvků, které se mají zkopírovat ze seznamu argumentů.
 
-*Počet* \
+*Počet*\
 Počet kopií prvku vloženého do seznamu.
 
-@No__t_1 *Val*
+\ *Val*
 Hodnota prvku vloženého do seznamu.
 
-@No__t_1 *IList*
+\ *IList*
 Objekt initializer_list obsahující prvky, které mají být vloženy.
 
 ### <a name="remarks"></a>Poznámky
@@ -430,7 +430,7 @@ Iterátor s obousměrným přístupem **const** , který odkazuje na první prve
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin` nelze upravovat elementy v rozsahu.
+S návratovou hodnotou `cbegin`nelze upravovat elementy v rozsahu.
 
 Tuto členskou funkci lze použít místo `begin()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `begin()` a `cbegin()`.
 
@@ -452,7 +452,7 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-@No__t_0 iterátoru s obousměrným přístupem, který odkazuje hned za konec rozsahu.
+`const` iterátoru s obousměrným přístupem, který odkazuje hned za konec rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -611,7 +611,7 @@ Konstantní reverzní obousměrný iterátor, který adresuje první prvek v obr
 
 `crbegin` se používá s obráceným seznamem stejně jako [list:: begin](#begin) se používá s `list`.
 
-V případě návratové hodnoty `crbegin` nelze objekt list upravit. [list:: rbegin](#rbegin) lze použít k iteraci seznamu zpět.
+V případě návratové hodnoty `crbegin`nelze objekt list upravit. [list:: rbegin](#rbegin) lze použít k iteraci seznamu zpět.
 
 ### <a name="example"></a>Příklad
 
@@ -655,7 +655,7 @@ Konstantní reverzní obousměrný iterátor, který adresuje umístění násle
 
 `crend` se používá s obráceným seznamem stejně jako [list:: end](#end) se používá s `list`.
 
-S návratovou hodnotou `crend` nelze změnit objekt `list`.
+S návratovou hodnotou `crend`nelze změnit objekt `list`.
 
 `crend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho `list`.
 
@@ -700,9 +700,9 @@ typedef typename Allocator::difference_type difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-@No__t_0 je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. @No__t_0 se obvykle používá k reprezentaci počtu prvků v rozsahu [`first`, `last`) mezi iterátory `first` a `last`, zahrnuje element, na který odkazuje `first`, a rozsah prvků až po , ale nezahrnuje prvek, na který ukazuje `last`.
+`difference_type` je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. `difference_type` se obvykle používá k reprezentaci počtu prvků v rozsahu [`first`, `last`) mezi iterátory `first` a `last`, zahrnuje element, na který odkazuje `first`, a rozsah prvků až do, ale ne včetně, prvku, na který odkazuje `last`.
 
-Všimněte si, že i když `difference_type` je k dispozici pro všechny iterátory, které splňují požadavky vstupního iterátoru, které zahrnují třídu Obousměrných iterátorů podporovaných vratnými kontejnery, jako je nastaveno, odčítání mezi iterátory je podporováno pouze pomocí iterátory s náhodným přístupem poskytované kontejnerem s náhodným přístupem, jako je například [Třída Vector](../standard-library/vector-class.md).
+Všimněte si, že i když `difference_type` je k dispozici pro všechny iterátory, které splňují požadavky vstupního iterátoru, který zahrnuje třídu Obousměrných iterátorů podporovaných vratnými kontejnery, jako je třeba set, odečítání mezi iterátory je podporováno pouze iterátory s náhodným přístupem, které jsou poskytovány kontejnerem s náhodným přístupem, jako je například [Třída Vector](../standard-library/vector-class.md).
 
 ### <a name="example"></a>Příklad
 
@@ -757,7 +757,7 @@ void emplace(iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* \
+*Kde*\
 Pozice v cílovém [seznamu](../standard-library/list-class.md) , do níž je vložen první prvek.
 
 \ *Val*
@@ -981,13 +981,13 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* \
+*Kde*\
 Pozice prvku, který má být odebrán ze seznamu.
 
-*první* \
+*první*\
 Pozice prvního elementu byla odebrána ze seznamu.
 
-*poslední* \
+*poslední*\
 Umístit hned za poslední prvek odebraný ze seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1149,19 +1149,19 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* \
+*Kde*\
 Pozice v cílovém seznamu, do níž je vložen první prvek.
 
-@No__t_1 *Val*
+\ *Val*
 Hodnota prvku vloženého do seznamu.
 
-*Počet* \
+*Počet*\
 Počet prvků, které jsou vloženy do seznamu.
 
-*První* \
+*První*\
 Pozice prvního prvku v rozsahu prvků v seznamu argumentů, který má být zkopírován.
 
-*Poslední* \
+*Poslední*\
 Pozice prvního prvku mimo rozsah prvků v seznamu argumentů, který má být zkopírován.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1278,25 +1278,25 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* \
+*Al*\
 Třída alokátoru, která se má použít s tímto objektem.
 
-*Počet* \
+*Počet*\
 Počet prvků v seznamu sestavených.
 
-@No__t_1 *Val*
+\ *Val*
 Hodnota prvků v seznamu.
 
-*Pravé* \
+*Pravé*\
 Seznam, ze kterého se má sestavený seznam kopírovat
 
-*První* \
+*První*\
 Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.
 
-*Poslední* \
+*Poslední*\
 Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.
 
-@No__t_1 *IList*
+\ *IList*
 Initializer_list obsahující prvky, které mají být zkopírovány.
 
 ### <a name="remarks"></a>Poznámky
@@ -1456,7 +1456,7 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Seznam argumentů, který se má sloučit s cílovým seznamem
 
 \ *comp*
@@ -1538,12 +1538,12 @@ list& operator=(list&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 [Seznam](../standard-library/list-class.md) , který se kopíruje do `list`.
 
 ### <a name="remarks"></a>Poznámky
 
-Po vymazání všech existujících prvků v `list` operátor buď zkopíruje nebo přesune obsah *přímo* do `list`.
+Po vymazání všech existujících prvků v `list`operátor buď zkopíruje nebo přesune obsah *přímo* do `list`.
 
 ### <a name="example"></a>Příklad
 
@@ -1968,7 +1968,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parametry
 
-*před* \
+*před*\
 Unární predikát, který je-li splněn prvkem, vede k odstranění tohoto prvku ze seznamu.
 
 ### <a name="example"></a>Příklad
@@ -2119,7 +2119,7 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize* \
+*_Newsize*\
 Nová velikost seznamu
 
 \ *Val*
@@ -2373,19 +2373,19 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* \
+*Kde*\
 Pozice v seznamu cílů před vložením
 
-@No__t_1 *zdroje*
+\ *zdroje*
 Zdrojový seznam, který má být vložen do cílového seznamu.
 
-@No__t_1 *ITER*
+\ *ITER*
 Prvek, který má být vložen ze zdrojového seznamu.
 
-*První* \
+*První*\
 První prvek v rozsahu, který má být vložen ze zdrojového seznamu.
 
-*Poslední* \
+*Poslední*\
 První pozice za posledním prvkem v rozsahu, který má být vložen ze zdrojového seznamu.
 
 ### <a name="remarks"></a>Poznámky
@@ -2487,10 +2487,10 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Seznam obsahující prvky, které mají být nahrazeny, nebo seznam, jehož prvky mají být vyměněny pomocí seznamu *vlevo*.
 
-*levý* \
+*levý*\
 Seznam, jehož prvky mají být vyměněny pomocí *práva*seznamu.
 
 ### <a name="example"></a>Příklad
@@ -2554,7 +2554,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parametry
 
-*před* \
+*před*\
 Binární predikát, který slouží k porovnání po sobě jdoucích prvků.
 
 ### <a name="remarks"></a>Poznámky
@@ -2563,7 +2563,7 @@ Tato funkce předpokládá, že seznam je seřazen, aby všechny duplicitní prv
 
 První členská funkce odebere všechny prvky, které porovnávají stejné jako předchozí prvek.
 
-Druhá členská funkce odebere všechny prvky, které splňují funkci predikátu *před* porovnáním s předchozím prvkem. Můžete použít kterýkoli z objektů binární funkce deklarované v hlavičce \<functional > pro argument *před* nebo můžete vytvořit vlastní.
+Druhá členská funkce odebere všechny prvky, které splňují funkci predikátu *před* porovnáním s předchozím prvkem. Můžete použít kterýkoli z objektů binárních funkcí deklarovaných v \<funkční > hlavičce argumentu *před* nebo můžete vytvořit vlastní.
 
 ### <a name="example"></a>Příklad
 

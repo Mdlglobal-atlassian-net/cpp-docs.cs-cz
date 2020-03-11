@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907885"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866578"
 ---
 # <a name="icommandui-interface"></a>Rozhraní ICommandUI
 
@@ -35,23 +35,23 @@ interface class ICommandUI
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[icommandui__Check](#check)|Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.|
 |[ICommandUI::ContinueRouting](#continuerouting)|Oznamuje mechanismu směrování příkazů, aby pokračoval v směrování aktuální zprávy o řetězu obslužných rutin.|
 |[ICommandUI:: Enabled](#enabled)|Povoluje nebo zakazuje položku uživatelského rozhraní pro tento příkaz.|
-|[ICommandUI:: ID](#id)|Získá ID objektu uživatelského rozhraní reprezentovaného `ICommandUI` objektem.|
-|[ICommandUI:: index](#index)|Získá index objektu uživatelského rozhraní reprezentovaného `ICommandUI` objektem.|
+|[ICommandUI:: ID](#id)|Získá ID objektu uživatelského rozhraní reprezentovaného objektem `ICommandUI`.|
+|[ICommandUI:: index](#index)|Získá index objektu uživatelského rozhraní reprezentovaného objektem `ICommandUI`.|
 |[ICommandUI:: Radio](#radio)|Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.|
 |[ICommandUI:: text](#text)|Nastaví text položky uživatelského rozhraní pro tento příkaz.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto rozhraní poskytuje metody a vlastnosti, které spravují příkazy uživatelského rozhraní. `ICommandUI`se podobá [třídě CCmdUI –](../../mfc/reference/ccmdui-class.md), s tím `ICommandUI` rozdílem, že se používá pro aplikace MFC, které spolupracují s komponentami .NET.
+Toto rozhraní poskytuje metody a vlastnosti, které spravují příkazy uživatelského rozhraní. `ICommandUI` je podobná [třídě CCmdUI –](../../mfc/reference/ccmdui-class.md), s tím rozdílem, že `ICommandUI` se používá pro aplikace MFC, které spolupracují s komponentami .NET.
 
-`ICommandUI`se používá v obslužné rutině ON_UPDATE_COMMAND_UI v třídě odvozené z [ICommandTarget](../../mfc/reference/icommandtarget-interface.md). Když se uživatel aplikace aktivuje (vybere nebo klikne) na nabídku, zobrazí se každá položka nabídky jako povolená nebo zakázaná. Cíl jednotlivých příkazů nabídky poskytuje tyto informace implementací obslužné rutiny ON_UPDATE_COMMAND_UI. Pro každý z objektů uživatelského rozhraní příkazu v aplikaci použijte [Průvodce třídami](mfc-class-wizard.md) k vytvoření položky mapování zpráv a prototypu funkce pro každou obslužnou rutinu.
+`ICommandUI` se používá v obslužné rutině ON_UPDATE_COMMAND_UI v odvozené třídě [ICommandTarget](../../mfc/reference/icommandtarget-interface.md). Když se uživatel aplikace aktivuje (vybere nebo klikne) na nabídku, zobrazí se každá položka nabídky jako povolená nebo zakázaná. Cíl jednotlivých příkazů nabídky poskytuje tyto informace implementací obslužné rutiny ON_UPDATE_COMMAND_UI. Pro každý z objektů uživatelského rozhraní příkazu v aplikaci použijte [Průvodce třídami](mfc-class-wizard.md) k vytvoření položky mapování zpráv a prototypu funkce pro každou obslužnou rutinu.
 
-Další informace o tom, jak `ICommandUI` se rozhraní používá při směrování příkazu, najdete [v tématu How to: Přidejte směrování příkazů do ovládacího prvku](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)model Windows Forms.
+Další informace o tom, jak se `ICommandUI` rozhraní používá při směrování příkazu, naleznete v tématu [How to: Add Routing and Command to the model Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Další informace o použití model Windows Forms naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Poznámky
 
-Toto je pokročilá členská funkce, která by se měla používat ve spojení s obslužnou rutinou ON_COMMAND_EX, která vrací hodnotu FALSE. Další informace najdete v tématu technická Poznámka TN006: Mapy zpráv.
+Toto je pokročilá členská funkce, která by se měla používat ve spojení s obslužnou rutinou ON_COMMAND_EX, která vrací hodnotu FALSE. Další informace najdete v tématu technická Poznámka TN006: mapy zpráv.
 
 ## <a name="enabled"></a>ICommandUI:: Enabled
 
@@ -141,6 +141,6 @@ Tato vlastnost nastavuje text položky uživatelského rozhraní pro tento pří
 
 **Záhlaví:** afxwinforms. h (definováno v sestavení atlmfc\lib\mfcmifc80.dll)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CCmdUI – třída](../../mfc/reference/ccmdui-class.md)

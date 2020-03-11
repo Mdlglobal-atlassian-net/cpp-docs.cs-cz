@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
 ms.openlocfilehash: 0c4ea79165f31de32645c2258f699f3a03f24877
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688806"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890728"
 ---
 # <a name="unordered_multiset-class"></a>unordered_multiset – třída
 
@@ -159,7 +159,7 @@ class unordered_multiset;
 
 |Parametr|Popis|
 |-|-|
-|*Key*|Klíčový typ|
+|*Klíč*|Klíčový typ|
 |*Kontrole*|Typ objektu hashovací funkce|
 |*Čekání*|Typ objektu funkce porovnání rovnosti|
 |*Vyhrazen*|Třída alokátoru|
@@ -193,14 +193,14 @@ class unordered_multiset;
 |[cbegin](#cbegin)|Určuje začátek řízené sekvence.|
 |[cend](#cend)|Určuje konec řízené sekvence.|
 |[jejich](#clear)|Odebere všechny prvky.|
-|[výpočtu](#count)|Zjistí počet prvků odpovídající zadanému klíči.|
+|[count](#count)|Zjistí počet prvků odpovídající zadanému klíči.|
 |[emplace](#emplace)|Přidá prvek vytvořený v místě.|
 |[emplace_hint](#emplace_hint)|Přidá prvek vytvořený v místě s nápovědou.|
 |[obsahovat](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
 |[účelu](#end)|Určuje konec řízené sekvence.|
 |[equal_range](#equal_range)|Najde rozsah, který odpovídá zadanému klíči.|
 |[ověřování](#erase)|Odebere prvky v určených pozicích.|
-|[najít](#find)|Vyhledá prvek, který odpovídá zadanému klíči.|
+|[find](#find)|Vyhledá prvek, který odpovídá zadanému klíči.|
 |[get_allocator](#get_allocator)|Získá uložený objekt alokátoru.|
 |[hash_function](#hash)|Získá uložený objekt hashovací funkce.|
 |[zadat](#insert)|Přidá prvky.|
@@ -220,9 +220,9 @@ class unordered_multiset;
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt seřadí sekvenci, kterou ovládá, voláním dvou uložených objektů, objektu funkce porovnání typu [unordered_multiset:: key_equal](#key_equal) a objektu funkce hash typu [unordered_multiset:: hash](#hasher). K prvnímu uloženému objektu přistupujete voláním členské funkce [unordered_multiset:: key_eq](#key_eq) `()`; a přístup k druhému uloženému objektu získáte voláním členské funkce [unordered_multiset:: hash_function](#hash) `()`. Konkrétně pro všechny hodnoty `X` a `Y` typu `Key` vrátí volání `key_eq()(X, Y)` hodnotu true pouze v případě, že obě hodnoty argumentů mají ekvivalentní řazení; `hash_function()(keyval)` volání poskytuje distribuci hodnot typu `size_t`. Na rozdíl od šablony třídy [unordered_set](../standard-library/unordered-set-class.md), objekt typu `unordered_multiset` nezajistí, že `key_eq()(X, Y)` je vždy false pro jakékoli dva prvky řízené sekvence. (Klíče nemusí být jedinečné.)
+Objekt seřadí sekvenci, kterou ovládá, voláním dvou uložených objektů, objektu funkce porovnání typu [unordered_multiset:: key_equal](#key_equal) a objektu funkce hash typu [unordered_multiset:: hash](#hasher). K prvnímu uloženému objektu přistupujete voláním členské funkce [unordered_multiset:: key_eq](#key_eq)`()`; a přístup k druhému uloženému objektu získáte voláním členské funkce [unordered_multiset:: hash_function](#hash)`()`. Konkrétně pro všechny hodnoty `X` a `Y` typu `Key`vrátí volání `key_eq()(X, Y)` hodnotu true pouze v případě, že obě hodnoty argumentů mají ekvivalentní řazení; `hash_function()(keyval)` volání poskytuje distribuci hodnot typu `size_t`. Na rozdíl od šablony třídy [Unordered_set třídy](../standard-library/unordered-set-class.md), objekt typu `unordered_multiset` nezajistí, že `key_eq()(X, Y)` je vždy false pro jakékoli dva prvky řízené sekvence. (Klíče nemusí být jedinečné.)
 
-Objekt také uchovává faktor maximálního zatížení, který určuje maximální požadovaný průměrný počet prvků na kbelík. Pokud vložení elementu způsobí, že [unordered_multiset:: load_factor](#load_factor) `()` překročí maximální zátěžový faktor, kontejner zvýší počet intervalů a znovu sestaví zatřiďovací tabulku podle potřeby.
+Objekt také uchovává faktor maximálního zatížení, který určuje maximální požadovaný průměrný počet prvků na kbelík. Pokud vložení elementu způsobí, že [unordered_multiset:: load_factor](#load_factor)`()` překročit maximální zátěžový faktor, kontejner zvýší počet intervalů a znovu sestaví zatřiďovací tabulku podle potřeby.
 
 Skutečné pořadí prvků v řízené sekvenci závisí na hashovací funkci, funkci porovnání, pořadí vkládání, faktoru maximálního zatížení a aktuálním počtu kbelíků. Pořadí prvků v řízené sekvenci obecně nelze předvídat. Můžete si však vždy být jisti, že všechny dílčí množiny prvků, které mají ekvivalentní řazení, v řízené sekvenci sousedí.
 
@@ -234,7 +234,7 @@ Objekt přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, prost
 
 **Obor názvů:** std
 
-## <a name="allocator_type"></a>unordered_multiset::allocator_type
+## <a name="allocator_type"></a>unordered_multiset:: allocator_type
 
 Typ alokátoru pro správu úložiště
 
@@ -350,7 +350,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Hodnota klíče, která má být namapována.
 
 ### <a name="remarks"></a>Poznámky
@@ -396,7 +396,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>unordered_multiset::bucket_count
+## <a name="bucket_count"></a>unordered_multiset:: bucket_count
 
 Získá počet kbelíků.
 
@@ -481,7 +481,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>unordered_multiset::bucket_size
+## <a name="bucket_size"></a>unordered_multiset:: bucket_size
 
 Získá velikost kontejneru.
 
@@ -491,7 +491,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket* \
+*nbucket*\
 Číslo intervalu.
 
 ### <a name="remarks"></a>Poznámky
@@ -551,7 +551,7 @@ Iterátor pro dopředný přístup **const** , který odkazuje na první prvek r
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin` nelze upravovat elementy v rozsahu.
+S návratovou hodnotou `cbegin`nelze upravovat elementy v rozsahu.
 
 Tuto členskou funkci lze použít místo `begin()` členské funkce pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. V příkladu zvažte `Container` jako upravitelný kontejner ( **nekonstantní**) libovolného druhu, který podporuje `begin()` a `cbegin()`.
 
@@ -601,7 +601,7 @@ void clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce volá [unordered_multiset:: erase](#erase) `(` [unordered_multiset:: begin](#begin) `(),` [unordered_multiset:: end](#end) `())`.
+Členská funkce volá [unordered_multiset:: erase](#erase)`(` [unordered_multiset:: begin](#begin)`(),` [unordered_multiset:: end](#end)`())`.
 
 ### <a name="example"></a>Příklad
 
@@ -658,7 +658,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>unordered_multiset::const_iterator
+## <a name="const_iterator"></a>unordered_multiset:: const_iterator
 
 Typ konstantního iterátoru řízené sekvence
 
@@ -701,7 +701,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a>unordered_multiset::const_local_iterator
+## <a name="const_local_iterator"></a>unordered_multiset:: const_local_iterator
 
 Typ konstantního iterátoru kbelíku řízené sekvence
 
@@ -749,7 +749,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a>unordered_multiset::const_pointer
+## <a name="const_pointer"></a>unordered_multiset:: const_pointer
 
 Typ konstantního ukazatele na prvek
 
@@ -795,7 +795,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a>unordered_multiset::const_reference
+## <a name="const_reference"></a>unordered_multiset:: const_reference
 
 Typ konstantního odkazu na prvek
 
@@ -851,12 +851,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí počet prvků v rozsahu, který je oddělený [unordered_multiset:: equal_range](#equal_range) `(keyval)`.
+Členská funkce vrátí počet prvků v rozsahu, který je oddělený [unordered_multiset:: equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Příklad
 
@@ -968,7 +968,7 @@ iterator emplace(Args&&... args);
 
 |Parametr|Popis|
 |-|-|
-|*argumentů*|Argumenty předané k vytvoření prvku, který má být vložen do unordered_multiset.|
+|*argumentů*|Argumenty předané pro vytvoření prvku, který má být vložen do unordered_multiset.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -982,7 +982,7 @@ Pokud při vložení dojde k výjimce, ale nedojde k tomu ve funkci hash kontejn
 
 Příklad kódu naleznete v tématu [multiset:: emplace](../standard-library/multiset-class.md#emplace).
 
-## <a name="emplace_hint"></a>unordered_multiset::emplace_hint
+## <a name="emplace_hint"></a>unordered_multiset:: emplace_hint
 
 Vloží prvek sestavený na místě (nejsou provedeny žádné operace kopírování nebo přesunutí) s pomocným parametrem umístění.
 
@@ -997,7 +997,7 @@ iterator emplace_hint(
 
 |Parametr|Popis|
 |-|-|
-|*argumentů*|Argumenty předané k vytvoření prvku, který má být vložen do unordered_multiset.|
+|*argumentů*|Argumenty předané pro vytvoření prvku, který má být vložen do unordered_multiset.|
 |*,*|Nápověda týkající se místa, kde lze začít hledat správný bod vložení.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1092,7 +1092,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket* \
+*nbucket*\
 Číslo intervalu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1145,7 +1145,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a>unordered_multiset::equal_range
+## <a name="equal_range"></a>unordered_multiset:: equal_range
 
 Najde rozsah, který odpovídá zadanému klíči.
 
@@ -1159,7 +1159,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
@@ -1216,7 +1216,7 @@ equal_range('b'): [b]
 
 ## <a name="erase"></a>unordered_multiset:: Erase
 
-Odebere prvek nebo rozsah prvků v objektu unordered_multiset ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.
+Odebere prvek nebo rozsah prvků v unordered_multiset ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.
 
 ```cpp
 iterator erase(
@@ -1232,21 +1232,21 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Kde* \
+*Kde*\
 Pozice prvku, který má být odebrán.
 
-*První* \
+*První*\
 Pozice prvního prvku, který má být odebrán.
 
-*Poslední* \
+*Poslední*\
 Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-@No__t_1 *klíčů*
+\ *klíčů*
 Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro první dvě členské funkce obousměrný iterátor, který určuje první prvek zbývající za odebranými prvky, nebo element, který je konci unordered_multiset, pokud žádný takový prvek neexistuje.
+Pro první dvě členské funkce obousměrný iterátor, který určuje první prvek zbývající za odebranými prvky, nebo element, který je koncem unordered_multiset, pokud žádný takový prvek neexistuje.
 
 Třetí členská funkce vrátí počet prvků, které byly odebrány z unordered_multiset.
 
@@ -1264,12 +1264,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* \
+*keyval*\
 Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [unordered_multiset:: equal_range](#equal_range) `(keyval).first`.
+Členská funkce vrací [unordered_multiset:: equal_range](#equal_range)`(keyval).first`.
 
 ### <a name="example"></a>Příklad
 
@@ -1314,7 +1314,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a>unordered_multiset::get_allocator
+## <a name="get_allocator"></a>unordered_multiset:: get_allocator
 
 Získá uložený objekt alokátoru.
 
@@ -1352,7 +1352,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>unordered_multiset::hash_function
+## <a name="hash"></a>unordered_multiset:: hash_function
 
 Získá uložený objekt hashovací funkce.
 
@@ -1390,7 +1390,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>unordered_multiset:: hash – modul
+## <a name="hasher"></a>unordered_multiset:: hasher
 
 Typ hashovací funkce
 
@@ -1430,7 +1430,7 @@ hfn('b') == 1647086
 
 ## <a name="insert"></a>unordered_multiset:: INSERT
 
-Vloží prvek nebo rozsah prvků do objektu unordered_multiset.
+Vloží prvek nebo rozsah prvků do unordered_multiset.
 
 ```cpp
 // (1) single element
@@ -1472,15 +1472,15 @@ IList);
 |-|-|
 |*Počítává*|Hodnota prvku, který má být vložen do unordered_multiset.|
 |*,*|Místo zahájení vyhledání správného bodu vložení.|
-|*ValTy*|Parametr šablony, který určuje typ argumentu, který může unordered_multiset použít k vytvoření elementu [value_type](../standard-library/map-class.md#value_type)a Perfect-Forwards *Val* jako argument.|
+|*ValTy*|Parametr šablony, který určuje typ argumentu, který může unordered_multiset použít k vytvoření prvku [value_type](../standard-library/map-class.md#value_type)a Perfect-Forwards *Val* jako argument.|
 |*První*|Pozice prvního prvku, který chcete zkopírovat.|
 |*Posledního*|Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.|
-|*InputIterator*|Argument funkce šablony, který splňuje požadavky [vstupního iterátoru](../standard-library/input-iterator-tag-struct.md) , který odkazuje na prvky typu, které lze použít k vytvoření objektů [value_type](../standard-library/map-class.md#value_type) .|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) , ze kterého se mají kopírovat prvky|
+|*InputIterator*|Argument funkce šablony, který splňuje požadavky [vstupního iterátoru](../standard-library/input-iterator-tag-struct.md) , který odkazuje na prvky typu, které lze použít k vytvoření [value_type](../standard-library/map-class.md#value_type) objektů.|
+|*IList*|[Initializer_list](../standard-library/initializer-list.md) , ze kterých se mají kopírovat prvky|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Funkce pro vložení členů s jedním elementem, (1) a (2), vrátí iterátor na pozici, kam byl nový prvek vložen do unordered_multiset.
+Funkce pro vložení členů s jedním prvkem, (1) a (2), vrátí iterátor na pozici, kam byl nový prvek vložen do unordered_multiset.
 
 Členské funkce s jedním prvkem, (3) a (4), vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen do unordered_multiset.
 
@@ -1490,19 +1490,19 @@ Tato funkce neověřuje žádné ukazatele nebo odkazy, ale může zrušit platn
 
 Pokud je při vložení pouze jednoho prvku vyvolána výjimka, ale nenastane v kontejneru funkce hash, stav kontejneru se nezmění. Pokud je vyvolána výjimka ve funkci hash, výsledek není definován. Pokud je při vkládání více prvků vyvolána výjimka, kontejner zůstane v neurčeném, ale platném stavu.
 
-[Value_type](../standard-library/map-class.md#value_type) kontejneru je definice typu, která patří do kontejneru a, pro set `unordered_multiset<V>::value_type` typ `const V`.
+[Value_type](../standard-library/map-class.md#value_type) kontejneru je definice typu, která patří do kontejneru, a v případě sady `unordered_multiset<V>::value_type` je typ `const V`.
 
-Člen rozsahu (5) vloží sekvenci hodnot prvků do objektu unordered_multiset, který odpovídá každému prvku, který je adresován iterátorem v rozsahu `[First, Last)`; Proto se *Poslední* příkaz nevloží. Členská funkce kontejneru `end()` odkazuje na pozici hned za posledním prvkem v kontejneru – například příkaz `m.insert(v.begin(), v.end());` vloží všechny prvky `v` do `m`.
+Členská funkce range (5) vloží sekvenci hodnot prvků do unordered_multiset, který odpovídá každému prvku, který adresuje iterátor v rozsahu `[First, Last)`; Proto se *Poslední* příkaz nevloží. Členská funkce kontejneru `end()` odkazuje na pozici hned za posledním prvkem v kontejneru – například příkaz `m.insert(v.begin(), v.end());` vloží všechny prvky `v` do `m`.
 
 Členská funkce seznamu inicializátorů (6) používá [initializer_list](../standard-library/initializer-list.md) ke zkopírování prvků do unordered_multiset.
 
-Pro vložení elementu vytvořeného na místě – to znamená, že nejsou provedeny žádné operace kopírování nebo přesunutí – viz [unordered_multiset:: emplace](#emplace) a [unordered_multiset:: emplace_hint](#emplace_hint).
+Pro vložení elementu vytvořeného na místě – to znamená, že nejsou provedeny žádné operace kopírování nebo přesunu – viz [unordered_multiset:: emplace](#emplace) a [unordered_multiset:: emplace_hint](#emplace_hint).
 
 Příklad kódu naleznete v tématu [multiset:: INSERT](../standard-library/multiset-class.md#insert).
 
 ## <a name="iterator"></a>unordered_multiset:: iterátor
 
-Typ, který poskytuje konstantní [dopředný iterátor](../standard-library/forward-iterator-tag-struct.md) , který může číst elementy v unordered_multiset.
+Typ, který poskytuje konstantní [dopředný iterátor](../standard-library/forward-iterator-tag-struct.md) , který může číst prvky v unordered_multiset.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1512,7 +1512,7 @@ typedef implementation-defined iterator;
 
 Podívejte se na příklad pro [začátek](../standard-library/multiset-class.md#begin) příkladu, jak deklarovat a použít **iterátor**.
 
-## <a name="key_eq"></a>unordered_multiset::key_eq
+## <a name="key_eq"></a>unordered_multiset:: key_eq
 
 Získá uložený objekt funkce porovnání.
 
@@ -1552,7 +1552,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>unordered_multiset::key_equal
+## <a name="key_equal"></a>unordered_multiset:: key_equal
 
 Typ funkce porovnání
 
@@ -1592,7 +1592,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>unordered_multiset::key_type
+## <a name="key_type"></a>unordered_multiset:: key_type
 
 Typ klíče řazení
 
@@ -1646,7 +1646,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a>unordered_multiset::load_factor
+## <a name="load_factor"></a>unordered_multiset:: load_factor
 
 Spočítá průměrný počet prvků na kbelík.
 
@@ -1656,7 +1656,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací `(float)`[unordered_multiset:: size](#size) `() / (float)`[unordered_multiset:: bucket_count](#bucket_count) `()`, průměrný počet prvků na interval.
+Členská funkce vrací `(float)`[unordered_multiset:: size](#size)`() / (float)`[unordered_multiset:: bucket_count](#bucket_count)`()`, průměrný počet prvků na interval.
 
 ### <a name="example"></a>Příklad
 
@@ -1714,7 +1714,7 @@ int main()
 }
 ```
 
-## <a name="local_iterator"></a>unordered_multiset::local_iterator
+## <a name="local_iterator"></a>unordered_multiset:: local_iterator
 
 Typ iterátoru kontejneru.
 
@@ -1762,7 +1762,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a>unordered_multiset::max_bucket_count
+## <a name="max_bucket_count"></a>unordered_multiset:: max_bucket_count
 
 Získá maximální počet kbelíků.
 
@@ -1848,7 +1848,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>unordered_multiset::max_load_factor
+## <a name="max_load_factor"></a>unordered_multiset:: max_load_factor
 
 Získá nebo nastaví maximální počet prvků na kbelík.
 
@@ -1860,7 +1860,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*faktor* \
+*faktor*\
 Nový faktor maximálního zatížení.
 
 ### <a name="remarks"></a>Poznámky
@@ -1941,7 +1941,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>unordered_multiset::max_size
+## <a name="max_size"></a>unordered_multiset:: max_size
 
 Získá maximální velikost řízené sekvence.
 
@@ -1994,7 +1994,7 @@ unordered_multiset& operator=(unordered_multiset&& right);
 
 ### <a name="remarks"></a>Poznámky
 
-Po vymazání všech existujících prvků v `unordered_multiset` `operator=` buď zkopírování nebo přesunutí obsahu *přímo* do `unordered_multiset`.
+Po vymazání všech existujících prvků v `unordered_multiset``operator=` buď zkopírování nebo přesunutí obsahu *přímo* do `unordered_multiset`.
 
 ### <a name="example"></a>Příklad
 
@@ -2137,7 +2137,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets* \
+*nbuckets*\
 Požadovaný počet kontejnerů.
 
 ### <a name="remarks"></a>Poznámky
@@ -2272,7 +2272,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>unordered_multiset::size_type
+## <a name="size_type"></a>unordered_multiset:: size_type
 
 Typ vzdálenosti bez znaménka mezi dvěma prvky
 
@@ -2318,12 +2318,12 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
+*pravé*\
 Kontejner, pomocí kterého se má prohodit.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce přemění kontrolované sekvence mezi `*this` a *pravou*. Pokud [unordered_multiset:: get_allocator](#get_allocator) `() == right.get_allocator()`, funguje v konstantním čase, vyvolá výjimku pouze v důsledku kopírování objektu uložených vlastností typu `Tr` a neověřuje žádné odkazy, ukazatele nebo iterátory, které určují elementy v dvě řízené sekvence. V opačném případě provede několik přiřazení prvků a volání konstruktoru v poměru k počtu prvků ve dvou řízených sekvencích.
+Členská funkce přemění kontrolované sekvence mezi `*this` a *pravou*. Pokud [unordered_multiset:: get_allocator](#get_allocator)`() == right.get_allocator()`provede v konstantním čase, vyvolá výjimku pouze v důsledku kopírování objektu uložených vlastností typu `Tr`a neověřuje žádné odkazy, ukazatele nebo iterátory, které určují prvky ve dvou řízených sekvencích. V opačném případě provede několik přiřazení prvků a volání konstruktoru v poměru k počtu prvků ve dvou řízených sekvencích.
 
 ### <a name="example"></a>Příklad
 
@@ -2380,7 +2380,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multiset"></a>unordered_multiset::unordered_multiset
+## <a name="unordered_multiset"></a>unordered_multiset:: unordered_multiset
 
 Sestaví objekt kontejneru.
 
@@ -2452,13 +2452,13 @@ Všechny konstruktory také inicializují několik uložených hodnot. Pro kopí
 
 Minimální počet intervalů je argument *Bucket_count*, pokud je k dispozici; v opačném případě se jedná o výchozí hodnotu, která je zde popsána jako hodnota definovaná implementací `N0`.
 
-Objekt funkce hash je argumentem *hodnota hash*, pokud je k dispozici; v opačném případě se `Hash()`.
+objekt funkce hash je argumentem *hodnota hash*, pokud je k dispozici; v opačném případě se `Hash()`.
 
 Objekt funkce porovnání je *kompozice*argumentů, pokud je k dispozici; v opačném případě se `Comp()`.
 
 Objekt přidělování je argument *Al*, pokud je k dispozici; v opačném případě je `Alloc()`.
 
-## <a name="value_type"></a>unordered_multiset::value_type
+## <a name="value_type"></a>unordered_multiset:: value_type
 
 Typ prvku
 
@@ -2512,9 +2512,9 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[< unordered_set >](../standard-library/unordered-set.md) \
-@No__t_1 [kontejnerů](../cpp/containers-modern-cpp.md)
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
+[< unordered_set >](../standard-library/unordered-set.md)\
+[Containers](../cpp/containers-modern-cpp.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

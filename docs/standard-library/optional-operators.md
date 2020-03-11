@@ -1,5 +1,5 @@
 ---
-title: '&lt;volitelné&gt; operátory'
+title: '&lt;volitelné operátory&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
 ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268030"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854051"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;volitelné&gt; operátory
+# <a name="ltoptionalgt-operators"></a>&lt;volitelné operátory&gt;
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>operator = = – operátor
 
-Testuje, zda `optional` objekt na levé straně operátoru rovná `optional` objekt na pravé straně.
+Testuje, zda je objekt `optional` na levé straně operátoru roven objektu `optional` na pravé straně.
 
 ```cpp
 template <class T, class U> constexpr bool operator==(const optional<T>& left, const optional<U>& right);
@@ -39,15 +39,15 @@ template <class T, class U> constexpr bool operator==(const U&, const optional<T
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*levý*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
-*doprava*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*pravé*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
-## <a name="op_neq"></a> Operator! =
+## <a name="op_neq"></a>! = – operátor
 
-Testuje, zda `optional` objekt na levé straně operátoru není roven `optional` objekt na pravé straně.
+Testuje, zda `optional` objekt na levé straně operátoru není roven objektu `optional` na pravé straně.
 
 ```cpp
 template <class T, class U> constexpr bool operator!=(const optional<T>&, const optional<U>&);
@@ -59,19 +59,19 @@ template <class T, class U> constexpr bool operator!=(const U&, const optional<T
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*levý*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
-*doprava*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*pravé*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato šablona funkce vrátí `!(left == right)`.
+Tato funkce šablony vrací `!(left == right)`.
 
-## <a name="op_lt"></a> – Operátor&lt;
+## <a name="op_lt"></a>operátor&lt;
 
-Testuje, zda `optional` objekt na levé straně operátoru menší než `optional` objekt na pravé straně.
+Testuje, zda je objekt `optional` na levé straně operátoru menší než objekt `optional` na pravé straně.
 
 ```cpp
 template <class T, class U> constexpr bool operator<(const optional<T>&, const optional<U>&);
@@ -83,19 +83,19 @@ template <class T, class U> constexpr bool operator<(const U&, const optional<T>
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*levý*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
-*doprava*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*pravé*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** -li v seznamu na levé straně operátoru menší než, ale není v seznamu na pravé straně operátoru roven; v opačném případě **false**.
+**true** , pokud je seznam na levé straně operátoru menší než, ale není rovno seznamu na pravé straně operátoru; v opačném případě **false**.
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a>operátor&lt;=
 
-Testuje, zda `optional` je objekt na levé straně operátoru menší než nebo rovna hodnotě `optional` objekt na pravé straně.
+Testuje, zda je objekt `optional` na levé straně operátoru menší než nebo roven `optional`mu objektu na pravé straně.
 
 ```cpp
 template <class T, class U> constexpr bool operator<=(const optional<T>&, const optional<U>&);
@@ -107,23 +107,23 @@ template <class T, class U> constexpr bool operator<=(const U&, const optional<T
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*levý*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
-*doprava*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*pravé*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** -li v seznamu na levé straně operátoru menší než nebo rovna hodnotě v seznamu na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je seznam na levé straně operátoru menší než nebo rovný seznamu na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato šablona funkce vrátí `!(right < left)`.
+Tato funkce šablony vrací `!(right < left)`.
 
-## <a name="op_gt"></a> – Operátor&gt;
+## <a name="op_gt"></a>operátor&gt;
 
-Testuje, zda `optional` je objekt na levé straně operátoru větší než `optional` objekt na pravé straně.
+Testuje, zda je objekt `optional` na levé straně operátoru větší než objekt `optional` na pravé straně.
 
 ```cpp
 template <class T, class U> constexpr bool operator>(const optional<T>&, const optional<U>&);
@@ -135,23 +135,23 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*levý*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
-*doprava*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*pravé*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud je v seznamu na levé straně operátoru větší než v seznamu na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je seznam na levé straně operátoru větší než seznam na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato šablona funkce vrátí `right < left`.
+Tato funkce šablony vrací `right < left`.
 
-## <a name="op_gt_eq"></a> – Operátor&gt;=
+## <a name="op_gt_eq"></a>operátor&gt;=
 
-Testuje, zda `optional` je objekt na levé straně operátoru větší než nebo rovna hodnotě `optional` objekt na pravé straně.
+Testuje, zda je objekt `optional` na levé straně operátoru větší než nebo roven `optional`mu objektu na pravé straně.
 
 ```cpp
 template <class T, class U> constexpr bool operator>=(const optional<T>&, const optional<U>&);
@@ -163,16 +163,16 @@ template <class T, class U> constexpr bool operator>=(const U&, const optional<T
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*levý*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
-*doprava*\
-Objekt typu `optional`, `nullopt_t`, nebo `T`.
+*pravé*\
+Objekt typu `optional`, `nullopt_t`nebo `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** Pokud `optional` na levé straně operátoru je větší než nebo rovna hodnotě `optional` na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je `optional` na levé straně operátoru větší než nebo rovno `optional` na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí `!(left < right)`.
+Funkce šablony vrací `!(left < right)`.

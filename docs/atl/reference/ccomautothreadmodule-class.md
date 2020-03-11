@@ -1,5 +1,5 @@
 ---
-title: Ccomautothreadmodule – třída
+title: CComAutoThreadModule – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComAutoThreadModule
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
 ms.openlocfilehash: 9b0fa685bf9a7de94b158bd62b00161c1b58562d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260211"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866170"
 ---
-# <a name="ccomautothreadmodule-class"></a>Ccomautothreadmodule – třída
+# <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule – třída
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ class CComAutoThreadModule : public CComModule
 #### <a name="parameters"></a>Parametry
 
 *ThreadAllocator*<br/>
-[in] Třídy správy výběr vlákna. Výchozí hodnota je [ccomsimplethreadallocator –](../../atl/reference/ccomsimplethreadallocator-class.md).
+pro Třída, která spravuje výběr vlákna. Výchozí hodnota je [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
 ## <a name="members"></a>Členové
 
@@ -49,11 +49,11 @@ class CComAutoThreadModule : public CComModule
 
 |||
 |-|-|
-|[CreateInstance](#createinstance)|Vybere vlákna a poté vytvoří objekt v přidružené objektu apartment.|
-|[GetDefaultThreads](#getdefaultthreads)|(Statické) Dynamicky vypočítá počet vláken pro modul na základě počtu procesorů.|
+|[Metoda](#createinstance)|Vybere vlákno a následně vytvoří objekt v přidruženém objektu apartment.|
+|[GetDefaultThreads](#getdefaultthreads)|Tras Dynamicky vypočítá počet vláken pro modul na základě počtu procesorů.|
 |[Init](#init)|Vytvoří vlákna modulu.|
-|[Zámek](#lock)|Pak inkrementuje počet na modul a u aktuálního vlákna.|
-|[Odemknutí](#unlock)|Dekrementuje počet zámků v modulu a u aktuálního vlákna.|
+|[Získáte](#lock)|Zvýší počet zámků v modulu a v aktuálním vlákně.|
+|[Uzamknout](#unlock)|Sníží počet zámků v modulu a v aktuálním vlákně.|
 
 ### <a name="data-members"></a>Datové členy
 
@@ -64,18 +64,18 @@ class CComAutoThreadModule : public CComModule
 |[dwThreadID](#dwthreadid)|Obsahuje identifikátor aktuálního vlákna.|
 |[m_Allocator](#m_allocator)|Spravuje výběr vlákna.|
 |[m_nThreads](#m_nthreads)|Obsahuje počet vláken v modulu.|
-|[m_pApartments](#m_papartments)|Spravuje objekty apartment modulu.|
+|[m_pApartments](#m_papartments)|Spravuje objekty Apartment modulu.|
 
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Tato třída je zastaralá, s nahrazena [catlautothreadmodule –](../../atl/reference/catlautothreadmodule-class.md) a [catlmodule –](../../atl/reference/catlmodule-class.md) odvozené třídy. Informace, které následuje je pro použití se staršími verzemi sady ATL.
+>  Tato třída je zastaralá a byla nahrazena odvozenými třídami [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) a [CAtlModule](../../atl/reference/catlmodule-class.md) . Níže uvedené informace jsou pro použití se staršími verzemi knihovny ATL.
 
-`CComAutoThreadModule` je odvozen od [ccommodule –](../../atl/reference/ccommodule-class.md) implementovat ve fondu vláken, apartment model modelu COM serveru služby souborů exe a Windows. `CComAutoThreadModule` používá [ccomapartment –](../../atl/reference/ccomapartment-class.md) ke správě typu apartment pro každé vlákno v modulu.
+`CComAutoThreadModule` je odvozena od [CComModule](../../atl/reference/ccommodule-class.md) k implementaci serveru COM ve fondu vláken pro exe a služby systému Windows. `CComAutoThreadModule` používá [CComApartment](../../atl/reference/ccomapartment-class.md) ke správě izolovaného prostoru pro každé vlákno v modulu.
 
-Odvození z modulu `CComAutoThreadModule` kdy budete chtít vytvořit objekty ve více objekty apartment. Je také nutné uvést [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) makra v definici třídy objektu k určení [ccomclassfactoryautothread –](../../atl/reference/ccomclassfactoryautothread-class.md) jako objekt pro vytváření tříd.
+Odvodit modul z `CComAutoThreadModule`, pokud chcete vytvořit objekty ve více objektech Apartment. Musíte také zahrnout makro [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) do definice třídy vašeho objektu pro určení [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) jako objektu pro vytváření tříd.
 
-Standardně průvodcem AppWizard knihovny ATL modelu COM (Průvodce projektu knihovny ATL v sadě Visual Studio .NET) odvodí z modulu `CComModule`. Chcete-li použít `CComAutoThreadModule`, upravte definici třídy. Příklad:
+Ve výchozím nastavení bude AppWizard ATL COM (Průvodce projekty ATL v aplikaci Visual Studio .NET) odvodit váš modul od `CComModule`. Chcete-li použít `CComAutoThreadModule`, upravte definici třídy. Příklad:
 
 [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]
 
@@ -97,11 +97,11 @@ Standardně průvodcem AppWizard knihovny ATL modelu COM (Průvodce projektu kni
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h
+**Záhlaví:** atlbase. h
 
-##  <a name="createinstance"></a>  CComAutoThreadModule::CreateInstance
+##  <a name="createinstance"></a>CComAutoThreadModule:: CreateInstance
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT CreateInstance(
@@ -113,25 +113,25 @@ HRESULT CreateInstance(
 ### <a name="parameters"></a>Parametry
 
 *pfnCreateInstance*<br/>
-[in] Ukazatel na funkci Tvůrce.
+pro Ukazatel na funkci Creator.
 
 *riid*<br/>
-[in] Identifikátor IID požadované rozhraní.
+pro IID požadovaného rozhraní.
 
 *ppvObj*<br/>
-[out] Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppvObj* nastaven na hodnotu NULL.
+mimo Ukazatel na ukazatel rozhraní identifikovaný *riid*. Pokud objekt nepodporuje toto rozhraní, je *ppvObj* nastaveno na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Vybere vlákna a poté vytvoří objekt v přidružené objektu apartment.
+Vybere vlákno a následně vytvoří objekt v přidruženém objektu apartment.
 
-##  <a name="dwthreadid"></a>  CComAutoThreadModule::dwThreadID
+##  <a name="dwthreadid"></a>CComAutoThreadModule::d wThreadID
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 DWORD dwThreadID;
@@ -141,9 +141,9 @@ DWORD dwThreadID;
 
 Obsahuje identifikátor aktuálního vlákna.
 
-##  <a name="getdefaultthreads"></a>  CComAutoThreadModule::GetDefaultThreads
+##  <a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 static int GetDefaultThreads();
@@ -151,15 +151,15 @@ static int GetDefaultThreads();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet vláken v modulu souboru EXE.
+Počet vláken, která mají být vytvořena v modulu EXE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato statická funkce dynamicky vypočítá maximální počet vláken pro modul EXE, na základě počtu procesorů. Ve výchozím nastavení, je předat tuto hodnotu [Init](#init) metodu pro vytvoření vlákna.
+Tato statická funkce dynamicky vypočítá maximální počet vláken pro modul EXE na základě počtu procesorů. Ve výchozím nastavení je tato návratová hodnota předána metodě [init](#init) pro vytvoření vlákna.
 
-##  <a name="init"></a>  CComAutoThreadModule::Init
+##  <a name="init"></a>CComAutoThreadModule:: init
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT Init(
@@ -171,25 +171,25 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-[in] Ukazatel na pole položek mapování objektu.
+*trub*<br/>
+pro Ukazatel na pole položek mapy objektů.
 
-*h*<br/>
-[in] Předány HINSTANCE `DLLMain` nebo `WinMain`.
+*y*<br/>
+pro HINSTANCE předaný do `DLLMain` nebo `WinMain`.
 
 *plibid*<br/>
-[in] Ukazatel na LIBID knihovnu typů, který je přidružený k projektu.
+pro Ukazatel na LIBID knihovny typů přidružené k projektu.
 
 *nThreads*<br/>
-[in] Počet vláken, který se má vytvořit. Ve výchozím nastavení *nThreads* je hodnoty vrácené [GetDefaultThreads](#getdefaultthreads).
+pro Počet vláken, která mají být vytvořena. Ve výchozím nastavení je *nThreads* hodnotou vrácenou [GetDefaultThreads](#getdefaultthreads).
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje datové členy a vytvoří počet vláken určené *nThreads*.
+Inicializuje datové členy a vytvoří počet vláken určených parametrem *nThreads*.
 
-##  <a name="lock"></a>  CComAutoThreadModule::Lock
+##  <a name="lock"></a>CComAutoThreadModule:: Lock
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 LONG Lock();
@@ -197,15 +197,15 @@ LONG Lock();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která může být užitečné pro diagnostiku a testování.
+Hodnota, která může být užitečná pro diagnostiku nebo testování.
 
 ### <a name="remarks"></a>Poznámky
 
-Provádí atomické přírůstek na počet zámků pro modul a pro aktuální vlákno. `CComAutoThreadModule` Počet zámků modulů se používá k určení, zda všichni klienti přistupují k modulu. Počet zámků pro aktuální vlákno je použít pro statistické účely.
+Provede atomické zvýšení počtu zámků pro modul a pro aktuální vlákno. `CComAutoThreadModule` používá počet zámků modulu k určení, jestli klienti přistupují k modulu. Počet zámků aktuálního vlákna se používá ke statistickým účelům.
 
-##  <a name="m_allocator"></a>  CComAutoThreadModule::m_Allocator
+##  <a name="m_allocator"></a>CComAutoThreadModule:: m_Allocator
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 ThreadAllocator  m_Allocator;
@@ -213,11 +213,11 @@ ThreadAllocator  m_Allocator;
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt správy výběr vlákna. Ve výchozím nastavení `ThreadAllocator` je parametr šablony třídy [ccomsimplethreadallocator –](../../atl/reference/ccomsimplethreadallocator-class.md).
+Objekt, který spravuje výběr vlákna. Ve výchozím nastavení je parametr šablony `ThreadAllocator` třídy [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
-##  <a name="m_nthreads"></a>  CComAutoThreadModule::m_nThreads
+##  <a name="m_nthreads"></a>CComAutoThreadModule:: m_nThreads
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 int m_nThreads;
@@ -225,11 +225,11 @@ int m_nThreads;
 
 ### <a name="remarks"></a>Poznámky
 
-Obsahuje počet vláken v modulu souboru EXE. Když [Init](#init) se nazývá `m_nThreads` je nastavena na *nThreads* hodnotu parametru. Každé vlákno přidružené apartment spravuje [ccomapartment –](../../atl/reference/ccomapartment-class.md) objektu.
+Obsahuje počet vláken v modulu EXE. Při volání metody [init](#init) je `m_nThreads` nastavena na hodnotu parametru *nThreads* . Objekt Apartment každého vlákna je spravován objektem [CComApartment](../../atl/reference/ccomapartment-class.md) .
 
-##  <a name="m_papartments"></a>  CComAutoThreadModule::m_pApartments
+##  <a name="m_papartments"></a>CComAutoThreadModule:: m_pApartments
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 CComApartment* m_pApartments;
@@ -237,11 +237,11 @@ CComApartment* m_pApartments;
 
 ### <a name="remarks"></a>Poznámky
 
-Odkazuje na pole [ccomapartment –](../../atl/reference/ccomapartment-class.md) objektů, z nichž každý spravuje komplexu v modulu. Počet prvků v poli je založen na [m_nThreads](#m_nthreads) člena.
+Odkazuje na pole objektů [CComApartment](../../atl/reference/ccomapartment-class.md) , z nichž každá spravuje objekt Apartment v modulu. Počet elementů v poli je založen na členu [m_nThreads](#m_nthreads) .
 
-##  <a name="unlock"></a>  CComAutoThreadModule::Unlock
+##  <a name="unlock"></a>CComAutoThreadModule:: Unlock
 
-Od verze ATL 7.0 `CComAutoThreadModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
+Od ATL 7,0 je `CComAutoThreadModule` zastaralé: Další informace naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md) .
 
 ```
 LONG Unlock();
@@ -249,15 +249,15 @@ LONG Unlock();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která může být užitečné pro diagnostiku a testování.
+Hodnota, která může být užitečná pro diagnostiku nebo testování.
 
 ### <a name="remarks"></a>Poznámky
 
-Provádí atomické snížení počet zámků pro modul a pro aktuální vlákno. `CComAutoThreadModule` Počet zámků modulů se používá k určení, zda všichni klienti přistupují k modulu. Počet zámků pro aktuální vlákno je použít pro statistické účely.
+Provede atomické snížení počtu zámků pro modul a pro aktuální vlákno. `CComAutoThreadModule` používá počet zámků modulu k určení, jestli klienti přistupují k modulu. Počet zámků aktuálního vlákna se používá ke statistickým účelům.
 
-Když počet zámků modulů dosáhne nuly, může být uvolněna modulu.
+Když počet zámků modulu dosáhne nuly, může být modul uvolněn.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)

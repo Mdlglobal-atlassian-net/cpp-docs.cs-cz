@@ -5,11 +5,11 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415698"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865488"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie změn Visual C++ 2003–2015
 
@@ -2883,7 +2883,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li najít místa v kódu, který by se mohl pokusit optimalizovat, použijte kompilátor z této verze společně s možností kompilátoru `/W3` a zapněte C4370 upozornění. Například:
+   Chcete-li najít místa v kódu, který by se mohl pokusit optimalizovat, použijte kompilátor z této verze společně s možností kompilátoru `/W3` a zapněte C4370 upozornění. Příklad:
 
     ```cpp
     #pragma warning(default:4370)
@@ -3302,7 +3302,7 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 - Proměnná prostředí __MSVCRT_HEAP_SELECT už není podporovaná. Tato proměnná prostředí je odebrána a neexistuje žádná náhrada.
 
-### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční informace
+### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční dokumentace
 
 - Z referenčního kompilátoru Microsoft Macro assembleru bylo odebráno několik direktiv. Odebrané direktivy jsou `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087`a `.NO87`.
 

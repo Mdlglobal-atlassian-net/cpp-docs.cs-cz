@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
 ms.openlocfilehash: 8c33aa4d77eeeeca69e50dc63982ff4d7e8bd505
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502326"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865532"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl – třída
 
@@ -65,38 +65,38 @@ class CStatusBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CStatusBarCtrl::CStatusBarCtrl](#cstatusbarctrl)|`CStatusBarCtrl` Vytvoří objekt.|
+|[CStatusBarCtrl:: CStatusBarCtrl](#cstatusbarctrl)|Vytvoří objekt `CStatusBarCtrl`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
-|[CStatusBarCtrl::Create](#create)|Vytvoří ovládací prvek stavového řádku a připojí ho k `CStatusBarCtrl` objektu.|
-|[CStatusBarCtrl::CreateEx](#createex)|Vytvoří ovládací prvek stavového řádku se zadanými rozšířenými styly Windows a připojí ho k `CStatusBarCtrl` objektu.|
-|[CStatusBarCtrl::DrawItem](#drawitem)|Volá se, když se změní vizuální aspekt ovládacího prvku pro vykreslení stavového řádku.|
-|[CStatusBarCtrl::GetBorders](#getborders)|Načte aktuální šířku vodorovného a svislého ohraničení ovládacího prvku stavového řádku.|
-|[CStatusBarCtrl::GetIcon](#geticon)|Načte ikonu součásti (také označované jako podokno) v aktuálním ovládacím prvku stavového řádku.|
-|[CStatusBarCtrl::GetParts](#getparts)|Načte počet částí v ovládacím prvku stavový řádek.|
-|[CStatusBarCtrl::GetRect](#getrect)|Načte ohraničující obdélník součásti v ovládacím prvku stavový řádek.|
-|[CStatusBarCtrl::GetText](#gettext)|Načte text z dané části ovládacího prvku stavového řádku.|
-|[CStatusBarCtrl::GetTextLength](#gettextlength)|Načte délku textu z dané části ovládacího prvku stavového řádku (ve znacích).|
-|[CStatusBarCtrl::GetTipText](#gettiptext)|Načte text popisku podokna ve stavovém řádku.|
-|[CStatusBarCtrl::IsSimple](#issimple)|Kontroluje ovládací prvek stavového okna a zjišťuje, zda je v jednoduchém režimu.|
-|[CStatusBarCtrl::SetBkColor](#setbkcolor)|Nastaví barvu pozadí ve stavovém řádku.|
-|[CStatusBarCtrl::SetIcon](#seticon)|Nastaví ikonu podokna ve stavovém řádku.|
-|[CStatusBarCtrl::SetMinHeight](#setminheight)|Nastaví minimální výšku oblasti vykreslování ovládacího prvku stavového řádku.|
-|[CStatusBarCtrl::SetParts](#setparts)|Nastaví počet částí v ovládacím prvku stavový řádek a souřadnice pravého okraje každé části.|
-|[CStatusBarCtrl::SetSimple](#setsimple)|Určuje, zda ovládací prvek stavového řádku zobrazuje jednoduchý text nebo zobrazuje všechny části ovládacího prvku nastavené předchozím `SetParts`voláním.|
-|[CStatusBarCtrl::SetText](#settext)|Nastaví text v dané části ovládacího prvku stavového řádku.|
-|[CStatusBarCtrl::SetTipText](#settiptext)|Nastaví text popisku podokna ve stavovém řádku.|
+|[CStatusBarCtrl:: Create](#create)|Vytvoří ovládací prvek stavového řádku a připojí ho k objektu `CStatusBarCtrl`.|
+|[CStatusBarCtrl:: CreateEx](#createex)|Vytvoří ovládací prvek stavového řádku se zadanými rozšířenými styly Windows a připojí ho k objektu `CStatusBarCtrl`.|
+|[CStatusBarCtrl::D rawItem](#drawitem)|Volá se, když se změní vizuální aspekt ovládacího prvku pro vykreslení stavového řádku.|
+|[CStatusBarCtrl:: GetBorders](#getborders)|Načte aktuální šířku vodorovného a svislého ohraničení ovládacího prvku stavového řádku.|
+|[CStatusBarCtrl:: GetIcon](#geticon)|Načte ikonu součásti (také označované jako podokno) v aktuálním ovládacím prvku stavového řádku.|
+|[CStatusBarCtrl:: GetParts](#getparts)|Načte počet částí v ovládacím prvku stavový řádek.|
+|[CStatusBarCtrl:: GetRect](#getrect)|Načte ohraničující obdélník součásti v ovládacím prvku stavový řádek.|
+|[CStatusBarCtrl:: GetText](#gettext)|Načte text z dané části ovládacího prvku stavového řádku.|
+|[CStatusBarCtrl:: GetTextLength](#gettextlength)|Načte délku textu z dané části ovládacího prvku stavového řádku (ve znacích).|
+|[CStatusBarCtrl:: GetTipText](#gettiptext)|Načte text popisku podokna ve stavovém řádku.|
+|[CStatusBarCtrl:: jednoduchá](#issimple)|Kontroluje ovládací prvek stavového okna a zjišťuje, zda je v jednoduchém režimu.|
+|[CStatusBarCtrl:: SetBkColor](#setbkcolor)|Nastaví barvu pozadí ve stavovém řádku.|
+|[CStatusBarCtrl:: SetIcon](#seticon)|Nastaví ikonu podokna ve stavovém řádku.|
+|[CStatusBarCtrl:: SetMinHeight](#setminheight)|Nastaví minimální výšku oblasti vykreslování ovládacího prvku stavového řádku.|
+|[CStatusBarCtrl:: SetParts](#setparts)|Nastaví počet částí v ovládacím prvku stavový řádek a souřadnice pravého okraje každé části.|
+|[CStatusBarCtrl:: SetSimple](#setsimple)|Určuje, zda ovládací prvek stavového řádku zobrazuje jednoduchý text nebo zobrazuje všechny části ovládacího prvku nastavené předchozím voláním `SetParts`.|
+|[CStatusBarCtrl:: SetText](#settext)|Nastaví text v dané části ovládacího prvku stavového řádku.|
+|[CStatusBarCtrl:: SetTipText](#settiptext)|Nastaví text popisku podokna ve stavovém řádku.|
 
 ## <a name="remarks"></a>Poznámky
 
 "Ovládací prvek stavového řádku" je horizontální okno, obvykle se zobrazuje v dolní části nadřazeného okna, ve kterém může aplikace zobrazit různé druhy informací o stavu. Ovládací prvek stavového řádku lze rozdělit na části pro zobrazení více než jednoho typu informací.
 
-Tento ovládací prvek (a `CStatusBarCtrl` třída) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
+Tento ovládací prvek (a proto třída `CStatusBarCtrl`) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
 
 Další informace o použití `CStatusBarCtrl`naleznete v tématu [Controls](../../mfc/controls-mfc.md) and [using CStatusBarCtrl](../../mfc/using-cstatusbarctrl.md).
 
@@ -116,7 +116,7 @@ Další informace o použití `CStatusBarCtrl`naleznete v tématu [Controls](../
 
 ##  <a name="create"></a>CStatusBarCtrl:: Create
 
-Vytvoří ovládací prvek stavového řádku a připojí ho k `CStatusBarCtrl` objektu.
+Vytvoří ovládací prvek stavového řádku a připojí ho k objektu `CStatusBarCtrl`.
 
 ```
 virtual BOOL Create(
@@ -135,7 +135,7 @@ Určuje styl ovládacího prvku stavového řádku. Použít libovolnou kombinac
 Určuje velikost a polohu ovládacího prvku stavového řádku. Může to být buď objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , nebo struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
 *pParentWnd*<br/>
-Určuje nadřazené okno ovládacího prvku stavového řádku, obvykle a `CDialog`. Nesmí mít hodnotu NULL.
+Určuje nadřazené okno ovládacího prvku stavového řádku, obvykle `CDialog`. Nesmí mít hodnotu NULL.
 
 *nID*<br/>
 Určuje ID ovládacího prvku stavového řádku.
@@ -146,9 +146,9 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří `CStatusBarCtrl` se ve dvou krocích. Nejprve volejte konstruktor a potom zavolejte `Create`, čímž se vytvoří ovládací prvek stavového řádku a připojí se `CStatusBarCtrl` k objektu.
+Sestavíte `CStatusBarCtrl` ve dvou krocích. Nejprve volejte konstruktor a potom zavolejte `Create`, čímž se vytvoří ovládací prvek stavového řádku a připojí se k objektu `CStatusBarCtrl`.
 
-Výchozí pozice stavového okna je podél dolního okraje nadřazeného okna, ale můžete zadat styl CCS_TOP, který se zobrazí v horní části klientské oblasti nadřazeného okna. Můžete určit styl SBARS_SIZEGRIP, který bude obsahovat úchyt pro změnu velikosti v pravém konci okna stavu. Kombinování stylů CCS_TOP a SBARS_SIZEGRIP se nedoporučuje, protože výsledné úchyty pro změnu velikosti nejsou funkční, i když ho systém vykreslí v okně stav.
+Výchozí pozice stavového okna je podél dolního okraje nadřazeného okna, ale můžete určit styl CCS_TOP, který se zobrazí v horní části klientské oblasti nadřazeného okna. Můžete určit styl SBARS_SIZEGRIP pro zahrnutí úchytu pro změnu velikosti na pravé straně stavového okna. Kombinování CCS_TOP a SBARS_SIZEGRIP stylů se nedoporučuje, protože výsledné úchyty pro změnu velikosti nejsou funkční, i když ho systém vykreslí v okně stav.
 
 Chcete-li vytvořit stavový řádek pomocí rozšířených stylů oken, zavolejte [CStatusBarCtrl:: CreateEx](#createex) namísto `Create`.
 
@@ -158,7 +158,7 @@ Chcete-li vytvořit stavový řádek pomocí rozšířených stylů oken, zavole
 
 ##  <a name="createex"></a>CStatusBarCtrl:: CreateEx
 
-Vytvoří ovládací prvek (podřízené okno) a přidruží ho k `CStatusBarCtrl` objektu.
+Vytvoří ovládací prvek (podřízené okno) a přidruží ho k objektu `CStatusBarCtrl`.
 
 ```
 virtual BOOL CreateEx(
@@ -192,11 +192,11 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte `CreateEx` místo příkaz [vytvořit](#create) pro použití rozšířených stylů Windows, které jsou určené **WS_EX_** rozšířeným stylem Windows.
+Použijte `CreateEx` namísto [Create](#create) k použití rozšířených stylů Windows, které jsou určené **WS_EX_m**ve stylu rozšířených stylů Windows.
 
 ##  <a name="cstatusbarctrl"></a>CStatusBarCtrl:: CStatusBarCtrl
 
-`CStatusBarCtrl` Vytvoří objekt.
+Vytvoří objekt `CStatusBarCtrl`.
 
 ```
 CStatusBarCtrl();
@@ -217,9 +217,9 @@ Dlouhý ukazatel na strukturu [DRAWITEMSTRUCT –](/windows/win32/api/winuser/ns
 
 ### <a name="remarks"></a>Poznámky
 
-`itemAction` Člen`DRAWITEMSTRUCT` struktury definuje akci kreslení, která má být provedena.
+`itemAction` člen struktury `DRAWITEMSTRUCT` definuje akci kreslení, která má být provedena.
 
-Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Přepište tuto členskou funkci pro implementaci vykreslování pro objekt vykreslený `CStatusBarCtrl` vlastníkem.
+Ve výchozím nastavení tato členská funkce neprovede žádnou akci. Přepište tuto členskou funkci pro implementaci vykreslování pro objekt `CStatusBarCtrl` vykreslený vlastníkem.
 
 Aplikace by měla obnovit všechny objekty GDI (Graphic Device Interface) vybrané pro kontext zobrazení zadaný v *lpDrawItemStruct* před ukončením této členské funkce.
 
@@ -244,7 +244,7 @@ Adresa pole typu Integer má tři prvky. První prvek přijímá šířku vodoro
 *nHorz*<br/>
 Odkaz na celé číslo, které přijímá šířku vodorovného ohraničení.
 
-*nVert*<br/>
+*Veďte*<br/>
 Odkaz na celé číslo, které přijímá šířku svislého ohraničení.
 
 *nSpacing*<br/>
@@ -288,7 +288,7 @@ Ovládací prvek stavového řádku se skládá z řádku podoken textových vý
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou, `m_statusBar`která se používá pro přístup k aktuálnímu ovládacímu prvku stavového řádku. Tato proměnná se používá v následujícím příkladu.
+Následující příklad kódu definuje proměnnou, `m_statusBar`, která se používá pro přístup k aktuálnímu ovládacímu prvku stavového řádku. Tato proměnná se používá v následujícím příkladu.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_3.h)]
 
@@ -354,7 +354,7 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
-##  <a name="gettext"></a>  CStatusBarCtrl::GetText
+##  <a name="gettext"></a>CStatusBarCtrl:: GetText
 
 Načte text z dané části ovládacího prvku stavového řádku.
 
@@ -382,11 +382,11 @@ Ukazatel na celé číslo, které obdrží informace o typu. Typ může být jed
 
 - **0** text se vykreslí s ohraničením, které se má snížit, než rovina stavového řádku.
 
-- SBT_NOBORDERS text se vykreslí bez ohraničení.
+- SBT_NOBORDERS se text vykreslí bez ohraničení.
 
-- SBT_POPOUT text se vykreslí ohraničením, aby se zobrazilo nad rovinou stavového řádku.
+- SBT_POPOUT se text vykreslí ohraničením, aby se zobrazilo větší než rovina stavového řádku.
 
-- SBT_OWNERDRAW Pokud text obsahuje typ kreslení SBT_OWNERDRAW, *pType* obdrží tuto zprávu a vrátí hodnotu 32 spojenou s textem místo délky a typu operace.
+- SBT_OWNERDRAW je-li text typu vykreslování SBT_OWNERDRAW, *pType* obdrží tuto zprávu a vrátí hodnotu 32 spojenou s textem místo délky a typu operace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -396,7 +396,7 @@ Délka textu nebo [CString](../../atl-mfc-shared/reference/cstringt-class.md) , 
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]
 
-##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength
+##  <a name="gettextlength"></a>CStatusBarCtrl:: GetTextLength
 
 Načte délku textu z dané části ovládacího prvku stavového řádku (ve znacích).
 
@@ -416,11 +416,11 @@ Ukazatel na celé číslo, které obdrží informace o typu. Typ může být jed
 
 - **0** text se vykreslí s ohraničením, které se má snížit, než rovina stavového řádku.
 
-- SBT_NOBORDERS text se vykreslí bez ohraničení.
+- SBT_NOBORDERS se text vykreslí bez ohraničení.
 
-- SBT_OWNERDRAW je text vykreslený nadřazeným oknem.
+- SBT_OWNERDRAW je text vykreslen nadřazeným oknem.
 
-- SBT_POPOUT text se vykreslí ohraničením, aby se zobrazilo nad rovinou stavového řádku.
+- SBT_POPOUT se text vykreslí ohraničením, aby se zobrazilo větší než rovina stavového řádku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -430,7 +430,7 @@ Délka textu v znacích
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]
 
-##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText
+##  <a name="gettiptext"></a>CStatusBarCtrl:: GetTipText
 
 Načte text popisku podokna ve stavovém řádku.
 
@@ -455,7 +455,7 @@ Tato členská funkce implementuje chování zprávy Win32 [SB_GETTIPTEXT](/wind
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]
 
-##  <a name="issimple"></a>  CStatusBarCtrl::IsSimple
+##  <a name="issimple"></a>CStatusBarCtrl:: jednoduchá
 
 Kontroluje ovládací prvek stavového okna a zjišťuje, zda je v jednoduchém režimu.
 
@@ -481,7 +481,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametry
 
-*cr*<br/>
+*znaky*<br/>
 Hodnota COLORREF, která určuje novou barvu pozadí. Zadejte hodnotu CLR_DEFAULT, která způsobí, že se ve stavovém řádku bude používat výchozí barva pozadí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -536,7 +536,7 @@ void SetMinHeight(int nMin);
 
 ### <a name="parameters"></a>Parametry
 
-*nMin*<br/>
+*Nminimum*<br/>
 Minimální výška ovládacího prvku v pixelech
 
 ### <a name="remarks"></a>Poznámky
@@ -588,13 +588,13 @@ pro Příznak typu zobrazení Pokud má tento parametr hodnotu TRUE, ovládací 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždycky vrátí hodnotu 0.
+Vždy vrátí hodnotu 0.
 
 ### <a name="remarks"></a>Poznámky
 
 Pokud vaše aplikace změní ovládací prvek stavového řádku z nejednoduchého na jednoduchý nebo naopak, systém ovládací prvek ihned překreslí.
 
-##  <a name="settext"></a>  CStatusBarCtrl::SetText
+##  <a name="settext"></a>CStatusBarCtrl:: SetText
 
 Nastaví text v dané části ovládacího prvku stavového řádku.
 
@@ -608,13 +608,13 @@ BOOL SetText(
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-Adresa řetězce zakončeného hodnotou null určující text, který se má nastavit Pokud je *NOZNÁMENÍ* SBT_OWNERDRAW, *lpszText* představuje 32 bitů dat.
+Adresa řetězce zakončeného hodnotou null určující text, který se má nastavit Pokud je *noznámení* SBT_OWNERDRAW, *lpszText* představuje 32 bitů dat.
 
 *nPane*<br/>
 Index založený na nule části, kterou chcete nastavit. Pokud je tato hodnota 255, je ovládací prvek stavového řádku považován za jednoduchý ovládací prvek, který má pouze jednu část.
 
-*nType*<br/>
-Typ operace kreslení Seznam možných hodnot naleznete v tématu [SB_SETTEXT zpráva](/windows/win32/Controls/sb-settext) .
+*Noznámení*<br/>
+Typ operace kreslení Seznam možných hodnot naleznete v [SB_SETTEXT zprávě](/windows/win32/Controls/sb-settext) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -622,13 +622,13 @@ Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Zpráva zruší platnost části ovládacího prvku, která se změnila, což způsobí, že se zobrazí nový text, když ovládací prvek další přijme zprávu WM_PAINT.
+Zpráva zruší platnost části ovládacího prvku, který se změnil, což způsobí, že se zobrazí nový text, když ovládací prvek příště obdrží zprávu WM_PAINT.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]
 
-##  <a name="settiptext"></a>  CStatusBarCtrl::SetTipText
+##  <a name="settiptext"></a>CStatusBarCtrl:: SetTipText
 
 Nastaví text popisku podokna ve stavovém řádku.
 
@@ -654,7 +654,7 @@ Tato členská funkce implementuje chování zprávy Win32 [SB_SETTIPTEXT](/wind
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
