@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 16d485320eb3970bd5c1e4a7a7fabb0602149e6f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856500"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79128907"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf – třída
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud ukazatel na soubor není ukazatel s hodnotou null.
+**true** , pokud ukazatel na soubor nemá hodnotu null.
 
 ### <a name="example"></a>Příklad
 
@@ -413,7 +413,7 @@ Výchozí ochrana při otevření souboru, která odpovídá parametru *Shflag* 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je ukazatel na soubor ukazatel s hodnotou null, funkce vrátí ukazatel s hodnotou null. V opačném případě **to vrátí.**
+Pokud je vyrovnávací paměť již otevřena, nebo pokud je ukazatel souboru ukazatel s hodnotou null, funkce vrátí ukazatel s hodnotou null. V opačném případě **to vrátí.**
 
 ### <a name="remarks"></a>Poznámky
 
