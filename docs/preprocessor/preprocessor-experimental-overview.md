@@ -1,33 +1,35 @@
 ---
 title: MSVC experimentální preprocesor – přehled
 description: MSVC preprocesor se aktualizuje pro dodržování předpisů pomocí jazyka C/C++ standardů.
-ms.date: 11/06/2019
+ms.date: 02/09/2020
 helpviewer_keywords:
 - preprocessor, experimental
-ms.openlocfilehash: 446603b34d9309c256afba9abd7234ae2ab16f5c
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: eb861b18a8d42c73429f6d00a3f47b35c9b198ca
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73797174"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090557"
 ---
 # <a name="msvc-experimental-preprocessor-overview"></a>MSVC experimentální preprocesor – přehled
 
-V současné C++ době probíhá aktualizace preprocesoru Microsoftu pro zlepšení dodržování standardů, opravy chyb dlouhodobě zavazuje chránit a změnu některých chování, která jsou oficiálně nedefinovaná. Kromě toho byly přidány nové diagnostiky, které upozorňují na chyby v definicích maker.
+::: moniker range="vs-2015"
 
-Tyto změny v jejich aktuálním stavu jsou k dispozici pomocí přepínače kompilátoru [/Experimental: preprocesor](../build/reference/experimental-preprocessor.md) v aplikaci visual Studio 2017 nebo visual Studio 2019. Výchozí chování preprocesoru zůstává stejné jako v předchozích verzích.
+Visual Studio 2015 používá tradiční preprocesor, který není v souladu se standardem C++. Experimentální preprocesor je k dispozici v rámci sady Visual Studio 2017 a sady Visual Studio 2019 pomocí přepínače kompilátoru [/Experimental: preprocesor](../build/reference/experimental-preprocessor.md) . Další informace o použití nového preprocesoru v aplikaci Visual Studio 2017 a Visual Studio 2019 je k dispozici. Pokud ho chcete zobrazit, použijte selektor verzí dokumentace a vyberte jednu z těchto verzí.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+Aktualizujeme preprocesor od Microsoftu C++ pro zlepšení dodržování standardů, opravu chyb dlouhodobě zavazuje chránit a změnu některých chování, která jsou oficiálně nedefinovaná. Přidali jsme také novou diagnostiku, která upozorňuje na chyby v definicích maker.
+
+Tyto změny jsou k dispozici pomocí přepínače kompilátoru [/Experimental: preprocesor](../build/reference/experimental-preprocessor.md) v aplikaci visual Studio 2017 nebo visual Studio 2019. Výchozí chování preprocesoru zůstává stejné jako v předchozích verzích.
+
+Počínaje verzí Visual Studio 2019 verze 16,5, experimentální podpora předběžného zpracování pro Standard C++ 20 je funkce dokončena.
 
 ## <a name="new-predefined-macro"></a>Nové předdefinované makro
 
-Můžete zjistit, který preprocesor se používá v době kompilace. Ověřte hodnotu předdefinovaného makra [\_MSVC\_tradiční](predefined-macros.md) a sdělte, zda se tradiční preprocesor používá. Toto makro je nastaveno na nepodmíněné verze kompilátoru, který ho podporuje, nezávisle na tom, který preprocesor je vyvolán. Jeho hodnota je 1 pro tradiční preprocesor. Je 0 pro vyhovující experimentální preprocesor:
-
-```cpp
-#if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
-// Logic using the traditional preprocessor
-#else
-// Logic using cross-platform compatible preprocessor
-#endif
-```
+Můžete zjistit, který preprocesor se používá v době kompilace. Ověřte hodnotu předdefinovaného makra [\_MSVC\_tradiční](predefined-macros.md) a sdělte, zda se tradiční preprocesor používá. Toto makro je nastaveno na nepodmíněné verze kompilátoru, který ho podporuje, nezávisle na tom, který preprocesor je vyvolán. Jeho hodnota je 1 pro tradiční preprocesor. Je 0 pro vyhovující preprocesor.
 
 ```cpp
 #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -39,11 +41,11 @@ Můžete zjistit, který preprocesor se používá v době kompilace. Ověřte h
 
 ## <a name="behavior-changes-in-the-experimental-preprocessor"></a>Změny chování v experimentálním preprocesoru
 
-Počáteční práce na experimentálním preprocesoru se zaměřuje na zajištění shody všech rozšíření maker, aby bylo možné povolit použití kompilátoru MSVC s knihovnami, které jsou aktuálně blokované v důsledku tradičního chování. Níže je uveden seznam některých nejběžnějších nedokončených změn, které byly spuštěny při testování aktualizovaného preprocesoru s projekty reálného světa.
+Počáteční práce na experimentálním preprocesoru se zaměřuje na to, že všechna rozšíření makra jsou v souladu se standardem. Umožňuje použít kompilátor MSVC s knihovnami, které jsou aktuálně blokovány tradičním chováním. Otestovali jsme aktualizované preprocesory na projektech reálného světa. Tady jsou některé z nejběžnějších nejnovějších změn, které jsme našli:
 
 ### <a name="macro-comments"></a>Komentáře makra
 
-Tradiční preprocesor je založen na vyrovnávací paměti znaků spíše než tokeny preprocesoru. To umožňuje neobvyklým chováním, jako je například následující štych komentáře preprocesoru, který nebude fungovat s vyhovujícími preprocesory:
+Tradiční preprocesor je založen na vyrovnávací paměti znaků spíše než tokeny preprocesoru. Umožňuje neobvyklé chování, jako je například následující štych komentáře preprocesoru, který nefunguje s vyhovujícím preprocesorem:
 
 ```cpp
 #if DISAPPEAR
@@ -56,7 +58,7 @@ Tradiční preprocesor je založen na vyrovnávací paměti znaků spíše než 
 DISAPPEARING_TYPE myVal;
 ```
 
-Vyhovující standardům je deklarovat `int myVal` v příslušných `#ifdef/#endif` direktivách:
+Oprava vyhovující standardům je deklarována `int myVal` uvnitř příslušných `#ifdef/#endif`ch direktiv:
 
 ```cpp
 #define MYVAL 1
@@ -78,7 +80,7 @@ Tradiční preprocesor nesprávně kombinuje předponu řetězce s výsledkem op
 const wchar_t *info = DEBUG_INFO(hello world);
 ```
 
-V tomto případě je `L` prefix zbytečný, protože sousední řetězcové literály jsou kombinovány po rozšíření makra. Zpětně kompatibilní oprava je změna definice na následující:
+V tomto případě je `L` prefix zbytečný, protože sousední řetězcové literály jsou kombinovány po rozšíření makra. Zpětně kompatibilní oprava je změna definice:
 
 ```cpp
 #define DEBUG_INFO(val) L"debug prefix:" #val
@@ -95,7 +97,7 @@ Stejný problém je také nalezen v praktických makrech, které "převádějíc
 
 Problém můžete vyřešit různými způsoby:
 
-- Použijte zřetězení řetězců `L""` a `#str` k přidání předpony. To funguje, protože sousední řetězcové literály jsou kombinovány po rozšíření makra:
+- Použijte zřetězení řetězců `L""` a `#str` k přidání předpony. Sousední řetězcové literály jsou kombinovány po rozšíření makra:
 
    ```cpp
    #define STRING1(str) L""#str
@@ -116,7 +118,7 @@ Problém můžete vyřešit různými způsoby:
 
 ### <a name="warning-on-invalid-"></a>Upozornění na neplatné \#\#
 
-Pokud [operátor vložení tokenu (# #)](token-pasting-operator-hash-hash.md) nevede k jednomu platnému tokenu předzpracování, chování není definováno. Tradiční preprocesor by v tichém případě nemohlo kombinovat tokeny. Nový preprocesor bude odpovídat chování většiny ostatních kompilátorů a vygeneruje diagnostiku.
+Pokud [operátor vložení tokenu (# #)](token-pasting-operator-hash-hash.md) nevede k jednomu platnému tokenu předzpracování, chování není definováno. Tradiční preprocesor bez upozornění nemůže kombinovat tokeny. Nový preprocesor se shoduje s chováním většiny ostatních kompilátorů a generuje diagnostiku.
 
 ```cpp
 // The ## is unnecessary and does not result in a single preprocessing token.
@@ -127,7 +129,7 @@ ADD_STD(string) s;
 
 ### <a name="comma-elision-in-variadic-macros"></a>Čárka Elizi v makrech variadické
 
-Tradiční preprocesor MSVC vždy odstraní čárky před prázdnými `__VA_ARGS__` nahrazení. Experimentální preprocesor se podrobněji řídí chováním ostatních oblíbených kompilátorů pro různé platformy. Aby byla čárka odebrána, argument variadické musí chybět (ne jen prázdné) a musí být označený operátorem `##`. Vezměte v úvahu následující příklad:
+Tradiční preprocesor MSVC vždy odstraní čárky před prázdnými `__VA_ARGS__` nahrazení. Experimentální preprocesor se podrobněji řídí chováním ostatních oblíbených kompilátorů pro různé platformy. Aby byla čárka odebrána, argument variadické musí chybět (ne jen prázdné) a musí být označený operátorem `##`. Vezměte v úvahu v následujícím příkladu:
 
 ```cpp
 void func(int, int = 2, int = 3);
@@ -135,16 +137,19 @@ void func(int, int = 2, int = 3);
 #define FUNC(a, ...) func(a, __VA_ARGS__)
 int main()
 {
-    // In the traditional preprocessor, the following macro is replaced with:
+    // In the traditional preprocessor, the
+    // following macro is replaced with:
     // func(10,20,30)
     FUNC(10, 20, 30);
 
-    // A conforming preprocessor will replace the following macro with: func(1, ), which will result in a syntax error.
+    // A conforming preprocessor replaces the
+    // following macro with: func(1, ), which
+    // results in a syntax error.
     FUNC(1, );
 }
 ```
 
-V následujícím příkladu ve volání metody `FUNC2(1)` argument variadické chybí v evoked makro. V volání `FUNC2(1, )` argument variadické je prázdný, ale nebyl nalezen (Všimněte si čárky v seznamu argumentů).
+V následujícím příkladu ve volání metody `FUNC2(1)` argument variadické chybí ve vyvolání makra. V volání `FUNC2(1, )` argument variadické je prázdný, ale nebyl nalezen (Všimněte si čárky v seznamu argumentů).
 
 ```cpp
 #define FUNC2(a, ...) func(a , ## __VA_ARGS__)
@@ -158,11 +163,26 @@ int main()
 }
 ```
 
-V nadcházejících standardech C + + 2a se tento problém vyřešil přidáním `__VA_OPT__`, která ještě není naimplementovaná.
+V nadcházejícím standardu C++ 20 byl tento problém řešen přidáním `__VA_OPT__`. Experimentální podpora preprocesoru pro `__VA_OPT__` je k dispozici počínaje verzí Visual Studio 2019 verze 16,5.
+
+### <a name="c20-variadic-macro-extension"></a>Rozšíření makra c++ 20 variadické
+
+Experimentální preprocesor podporuje variadické Argument makra C++ 20 Elizi:
+
+```cpp
+#define FUNC(a, ...) __VA_ARGS__ + a
+int main()
+  {
+  int ret = FUNC(0);
+  return ret;
+  }
+```
+
+Tento kód se neshoduje s standardem C++ 20. V MSVC experimentální preprocesor rozšiřuje toto chování jazyka C++ 20 na nižší standardní režimy ( **`/std:c++14`** , **`/std:c++17`** ). Toto rozšíření se shoduje s chováním dalších hlavních kompilátorů C++ pro různé platformy.
 
 ### <a name="macro-arguments-are-unpacked"></a>Argumenty makra jsou "unpacked".
 
-V tradičním preprocesoru, pokud makro přepošle jeden z argumentů na jiné závislé makro, pak argument nezíská "unpacked" při nahrazení. Obvykle se tato optimalizace neprojeví, ale může vést k neobvyklému chování:
+V tradičním preprocesoru, pokud makro předává některý z jeho argumentů jinému závislému makru, pak argument nezíská "unpacked" při vložení. Obvykle se tato optimalizace neprojeví, ale může vést k neobvyklému chování:
 
 ```cpp
 // Create a string out of the first argument, and the rest of the arguments.
@@ -170,18 +190,18 @@ V tradičním preprocesoru, pokud makro přepošle jeden z argumentů na jiné z
 #define A( ... ) TWO_STRINGS(__VA_ARGS__)
 const char* c[2] = { A(1, 2) };
 
-// Conformant preprocessor results:
+// Conforming preprocessor results:
 // const char c[2] = { "1", "2" };
 
 // Traditional preprocessor results, all arguments are in the first string:
 // const char c[2] = { "1, 2", };
 ```
 
-Při rozbalování `A()`tradiční preprocesor přepošle všechny argumenty zabalené v `__VA_ARGS__` na první argument TWO_STRINGS, což ponechá argument variadické `TWO_STRINGS` prázdné. Výsledkem je, že výsledek `#first` být "1, 2" namísto pouze "1". Pokud máte pozor, můžete se setkat s tím, co se stalo s výsledkem `#__VA_ARGS__` v tradičním rozšíření preprocesoru: Pokud je parametr variadické prázdný, měla by být výsledkem `""`prázdného řetězcového literálu. Z důvodu samostatného problému nebyl vygenerován prázdný řetězcový literálový token.
+Při rozbalování `A()`tradiční preprocesor přepošle všechny argumenty zabalené v `__VA_ARGS__` na první argument TWO_STRINGS, který ponechá argument variadické `TWO_STRINGS` prázdný. Výsledkem je, že výsledek `#first` být "1, 2" namísto pouze "1". Pokud máte pozor, můžete se setkat s tím, co se stalo s výsledkem `#__VA_ARGS__` v tradičním rozšíření preprocesoru: Pokud je parametr variadické prázdný, měla by být výsledkem `""`prázdného řetězcového literálu. Samostatný problém zachová prázdný řetězcový literálový token od vygenerování.
 
 ### <a name="rescanning-replacement-list-for-macros"></a>Znovu prohledat náhradní seznam pro makra
 
-Po nahrazení makra se u výsledných tokenů znovu prohledají další identifikátory maker, které je potřeba nahradit. Algoritmus používaný tradičním preprocesorem pro provedení opětovného prohledání není vyhovující, jak je znázorněno v tomto příkladu na základě aktuálního kódu:
+Po nahrazení makra se u výsledných tokenů znovu vyhledají další identifikátory maker, které se mají nahradit. Algoritmus používaný tradičním preprocesorem pro provedení opětovného prohledání není v souladu s tímto příkladem, jak je znázorněno v tomto příkladu na základě aktuálního kódu:
 
 ```cpp
 #define CAT(a,b) a ## b
@@ -196,20 +216,20 @@ DO_THING(1, "World");
 
 // Traditional preprocessor:
 // do_thing_one( "Hello", "World");
-// Conformant preprocessor:
+// Conforming preprocessor:
 // IMPL1 ( "Hello","World");
 ```
 
-I když se tento příklad jeví jako bitová contrived, bylo zjištěno, že došlo k reálnému světovému kódu. Pokud chcete zjistit, co se vám bude líbit, můžete rozšíření od `DO_THING`rozdělit:
+I když se tento příklad může zdát bit contrived, zobrazili jsme ho v reálném světě kódu. Pokud chcete zjistit, co se právě používá, můžeme rozšíření od `DO_THING`rozdělit:
 
 1. `DO_THING(1, "World")` se rozšíří na `CAT(IMPL, 1) ECHO(("Hello", "World"))`
 1. `CAT(IMPL, 1)` se rozšíří na `IMPL ## 1`, které se rozšíří na `IMPL1`
 1. Nyní jsou tokeny v tomto stavu: `IMPL1 ECHO(("Hello", "World"))`
-1. Preprocesor vyhledá identifikátor makra podobného funkci `IMPL1`, ale není následován `(`, takže není považován za vyvolání makra jako funkce. 
-1. Přesune se na následující tokeny a najde makro podobné funkci `ECHO`: `ECHO(("Hello", "World"))`, které se rozšíří na `("Hello", "World")`
+1. Preprocesor vyhledá identifikátor makra podobného funkci `IMPL1`. Vzhledem k tomu, že není následován `(`, není považován za vyvolání makra jako funkce.
+1. Preprocesor se přesune na následující tokeny. Najde makro podobné funkci `ECHO` vyvolá vyvolání: `ECHO(("Hello", "World"))`, které se rozšíří na `("Hello", "World")`
 1. `IMPL1` se pro rozšíření nikdy nepovažuje za znovu, takže úplný výsledek rozšíření je: `IMPL1("Hello", "World");`
 
-Makro lze upravit tak, aby se chovalo stejně jako experimentální preprocesor a tradiční preprocesor přidáním do jiné vrstvy dereference:
+Chcete-li upravit makro tak, aby se chovalo stejným způsobem v rámci experimentálního preprocesoru i tradičního preprocesoru, přidejte další vrstvu dereference:
 
 ```cpp
 #define CAT(a,b) a##b
@@ -227,8 +247,10 @@ DO_THING_FIXED(1, "World");
 
 ## <a name="incomplete-features"></a>Neúplné funkce
 
-Experimentální preprocesor je většinou kompletní, i když se některé z logiky direktiv preprocesoru stále nevrátí k tradičnímu chování. Tady je částečný seznam neúplných funkcí:
+Počínaje verzí Visual Studio 2019 verze 16,5 je experimentální preprocesor funkce dokončen pro C++ 20. V předchozích verzích sady Visual Studio je experimentální preprocesor většinou kompletní, i když se některá z nich logika direktiv preprocesoru stále nevrátí k tradičnímu chování. Zde je částečný seznam neúplných funkcí v verzích sady Visual Studio před 16,5:
 
-- Podpora `_Pragma`
+- Podpora pro `_Pragma`
 - Funkce c++ 20
-- Zvýšení úrovně chyby při zablokování: logické operátory v konstantních výrazech preprocesoru nejsou plně implementované v novém preprocesoru. U některých direktiv `#if` se může nový preprocesor vrátit k tradičnímu preprocesoru. Tento efekt je patrné pouze v případě, že makra, která jsou nekompatibilní s tradičním preprocesorem, jsou rozbalena, což může nastat při sestavování zvýšení slotu preprocesoru.
+- Zesílení blokující chybu: logické operátory v konstantních výrazech preprocesoru nejsou plně implementovány v novém preprocesoru před verzí 16,5. U některých direktiv `#if` se může nový preprocesor vrátit k tradičnímu preprocesoru. Tento efekt je patrné pouze v případě, že jsou makra nekompatibilní s tradičním preprocesorem rozbalena. K tomu může dojít při sestavování, když se budou zvyšovat sloty preprocesoru.
+
+::: moniker-end
