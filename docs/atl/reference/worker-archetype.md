@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 7f28b9e64c88a5be440417dd9d22f129ee7d6edf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e57c575ed778184cf319bb84e61f585fcfa2111
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495271"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509338"
 ---
 # <a name="worker-archetype"></a>Pracovní proces Archetype
 
@@ -45,7 +45,7 @@ Tyto třídy odpovídají tomuto archetype:
 
 Tyto parametry šablony očekávají, že třída bude vyhovovat tomuto archetype:
 
-|Název parametru|Využíval|
+|Název parametru|Používáno v|
 |--------------------|-------------|
 |*Zaměstnanec*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
 |*Zaměstnanec*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
@@ -74,11 +74,12 @@ Pracovní položka, která má být zpracována. Pracovní položka je stejného
 Vlastní parametr, který rozumí třída pracovního procesu. Také předán `WorkerArchetype::Initialize` a `Terminate`.
 
 *pOverlapped*<br/>
-Ukazatel na překrývající se strukturu použitou k vytvoření fronty, na které byly pracovní položky zařazeny do fronty. [](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)
+Ukazatel na [PŘEkrývající](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) se strukturu použitou k vytvoření fronty, na které byly pracovní položky zařazeny do fronty.
 
 ## <a name="initialize"></a>WorkerArchetype:: Initialize
 
-Volá se, aby se inicializoval objekt pracovního procesu, aby `WorkerArchetype::Execute`se předaly všechny požadavky.
+Volá se, aby se inicializoval objekt pracovního procesu před předáním všech požadavků do `WorkerArchetype::Execute`.
+
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
@@ -102,11 +103,11 @@ typedef MyRequestType RequestType;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento typ musí být použit jako první parametr `WorkerArchetype::Execute` a musí být schopný přetypování na a z ULONG_PTR.
+Tento typ musí být použit jako první parametr `WorkerArchetype::Execute` a musí být schopný přetypování do a z ULONG_PTR.
 
 ## <a name="terminate"></a>WorkerArchetype:: terminate
 
-Volá se, aby se zrušila inicializace objektu pracovního procesu po předání všech `WorkerArchetype::Execute`požadavků do).
+Volá se, aby se zrušila inicializace objektu pracovního procesu po předání všech požadavků do `WorkerArchetype::Execute`).
 
 ```
 void Terminate(void* pvParam) throw();
@@ -117,7 +118,7 @@ void Terminate(void* pvParam) throw();
 *pvParam*<br/>
 Vlastní parametr, který rozumí třída pracovního procesu. Také předán `WorkerArchetype::Initialize` a `WorkerArchetype::Execute`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Charakteristiky](../../atl/active-template-library-atl-concepts.md)<br/>
+[Koncepty](../../atl/active-template-library-atl-concepts.md)<br/>
 [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)

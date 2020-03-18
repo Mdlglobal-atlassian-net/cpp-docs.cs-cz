@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: 1548f82b62163600b5220c553bebcea72020abbc
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: df3b768c139bc4dc000c185d7153fd4aa38ae94a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274746"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509448"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ projekty a systémy sestavení v aplikaci Visual Studio
 
@@ -23,7 +23,7 @@ Sadu Visual Studio můžete použít k úpravám, kompilování a sestavení C++
 
 ## <a name="c-compilation"></a>C++kompilace
 
-Chcete -li C++ vytvořit program pro zkompilování zdrojového kódu z jednoho nebo více souborů a pak tyto soubory propojit do spustitelného souboru (. exe), knihovny DLL (. dll) nebo statické knihovny (. lib). 
+Chcete *build* -li C++ vytvořit program pro zkompilování zdrojového kódu z jednoho nebo více souborů a pak tyto soubory propojit do spustitelného souboru (. exe), knihovny DLL (. dll) nebo statické knihovny (. lib). 
 
 Základní C++ kompilace zahrnuje tři hlavní kroky:
 
@@ -35,20 +35,21 @@ Základní C++ kompilace zahrnuje tři hlavní kroky:
 
 Kompilátor společnosti C++ Microsoft, linker, standardní knihovny a související nástroje tvoří sadu nástrojů kompilátoru MSVC (označované také jako sada nástrojů nebo "Build Tools"). Ty jsou součástí sady Visual Studio. Můžete si také stáhnout a používat sadu nástrojů jako samostatný balíček zdarma z [umístění pro stahování nástrojů sestavení pro Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
-Jednoduché programy můžete sestavit vyvoláním kompilátoru MSVC (CL. exe) přímo z příkazového řádku. Následující příkaz přijme jeden soubor zdrojového kódu a vyvolá CL. exe pro sestavení spustitelného souboru s názvem Hello *. exe*: 
+Jednoduché programy můžete sestavit vyvoláním kompilátoru MSVC (CL. exe) přímo z příkazového řádku. Následující příkaz přijme jeden soubor zdrojového kódu a vyvolá CL. exe pro sestavení spustitelného souboru s názvem *Hello. exe*: 
 
 ```cmd
 cl /EHsc hello.cpp
 ```
+
 Všimněte si, že tady kompilátor (CL. exe) automaticky vyvolá C++ preprocesor a linker, aby vytvořil finální výstupní soubor.  Další informace najdete v tématu [sestavování na příkazovém řádku](building-on-the-command-line.md).
 
 ## <a name="build-systems-and-projects"></a>Systémy a projekty pro sestavování
 
-Většina reálných programů používá určitý druh *systému sestavení* ke správě složitosti kompilace více zdrojových souborů pro více konfigurací (tj. ladění vs. Release), více platforem (x86, x64, ARM atd.), vlastních kroků sestavení a dokonce i více spustitelné soubory, které musí být kompilovány v určitém pořadí. Nastavení provedete v konfiguračních souborech sestavení a systém sestavení přijímá tento soubor jako vstup před tím, než vyvolá kompilátor. Sada zdrojových souborů a souborů konfigurace sestavení potřebných k sestavení spustitelného souboru se nazývá *projekt*. 
+Většina reálných programů používá určitý druh *systému sestavení* ke správě složitosti kompilace více zdrojových souborů pro více konfigurací (tj. ladění vs. Release), více platforem (x86, x64, ARM atd.), vlastních kroků sestavení a dokonce i více spustitelných souborů, které musí být zkompilovány v určitém pořadí. Nastavení provedete v konfiguračních souborech sestavení a systém sestavení přijímá tento soubor jako vstup před tím, než vyvolá kompilátor. Sada zdrojových souborů a souborů konfigurace sestavení potřebných k sestavení spustitelného souboru se nazývá *projekt*. 
 
 Následující seznam obsahuje různé možnosti pro projekty sady Visual Studio – C++:
 
-- pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio vytvořte projekt sady Visual Studio a nakonfigurujte ho pomocí stránek vlastností. Projekty sady Visual Studio vytváří programy, které běží v systému Windows. Přehled naleznete v tématu [kompilace a](/visualstudio/ide/compiling-and-building-in-visual-studio) sestavování v dokumentaci k sadě Visual Studio.
+- pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio vytvořte projekt sady Visual Studio a nakonfigurujte ho pomocí stránek vlastností. Projekty sady Visual Studio vytváří programy, které běží v systému Windows. Přehled naleznete v tématu [kompilace a sestavování](/visualstudio/ide/compiling-and-building-in-visual-studio) v dokumentaci k sadě Visual Studio.
 
 - Otevřete složku, která obsahuje soubor CMakeLists. txt. Podpora CMake je integrovaná do sady Visual Studio. Pomocí integrovaného vývojového prostředí (IDE) můžete upravovat, testovat a ladit bez úprav souborů CMake jakýmkoli způsobem. To vám umožní pracovat ve stejném projektu CMake jako jiní uživatelé, kteří mohou používat různé editory. CMake je doporučený postup pro vývoj pro různé platformy. Další informace najdete v tématu [projekty cmake](cmake-projects-in-visual-studio.md).
  
@@ -77,7 +78,7 @@ Popisuje, jak používat vývojové nástroje CC++ /Compiler a Build přímo z p
 
 [Vytváření knihoven DLL v aplikaci Visual Studio](dlls-in-visual-cpp.md) Jak vytvářet, ladit a nasazovat knihovny CC++ /dll (sdílené knihovny) v aplikaci Visual Studio.
 
-[Návod: Vytvoření a použití statické knihovny](walkthrough-creating-and-using-a-static-library-cpp.md) , jak vytvořit binární soubor. lib.
+[Návod: vytvoření a použití statické knihovny](walkthrough-creating-and-using-a-static-library-cpp.md) Postup vytvoření binárního souboru. lib.
 
 [SestavováníC++ aplikací založených na jazyce C/Isolated a souběžných sestavení](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Popisuje model nasazení pro desktopové aplikace pro Windows na základě nápadu izolovaných aplikací a souběžných sestavení.
 

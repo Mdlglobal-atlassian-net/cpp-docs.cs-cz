@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 4c7cc6027a3af4c300b88389cb29e3ccf091514e
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245884"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509406"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specifikace výjimek (throw, s výjimkou)C++()
 
@@ -24,11 +24,13 @@ Před C++ 17 byly dva druhy specifikace výjimek. *Specifikace s výjimkou* byla
 ```cpp
 void MyFunction(int i) throw();
 ```
+
 instruuje kompilátor, že funkce nevyvolá žádné výjimky. V **/std: v režimu c++ 14** to však může vést k nedefinovanému chování, pokud funkce vyvolá výjimku. Proto doporučujeme použít operátor [s výjimkou](../cpp/noexcept-cpp.md) místo výše uvedeného:
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
+
 Následující tabulka shrnuje implementaci specifikací výjimek od C++ Microsoftu:
 
 |Specifikace výjimek|Význam|
@@ -127,7 +129,7 @@ About to throw 1
 in handler
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [try, throw a catch – příkazy (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
 [Moderní C++ osvědčené postupy pro výjimky a zpracování chyb](errors-and-exception-handling-modern-cpp.md)

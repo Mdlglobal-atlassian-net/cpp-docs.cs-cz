@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: 3988c5f062c1f30886dbaa4bca8502e2bd841dfc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624740"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509429"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMaké konfigurace předdefinovaných sestavení
 
@@ -351,6 +351,7 @@ Tyto možnosti umožňují spustit příkazy ve vzdáleném systému před a po 
   ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -695,7 +696,7 @@ Když zvolíte konfiguraci, přidá se do souboru CMakeSettings. JSON v kořenov
 ```
 
 ::: moniker-end
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurace projektu Linux CMake](../linux/cmake-linux-project.md)<br/>

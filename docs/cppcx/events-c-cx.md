@@ -3,12 +3,12 @@ title: Události (C++/CX)
 description: Jak použít C++/CX k vytváření a používání obslužných rutin událostí v prostředí Windows Runtime.
 ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: b40f71b183561b52047c1f7316def3d895465d2a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972203"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509365"
 ---
 # <a name="events-ccx"></a>Události (C++/CX)
 
@@ -28,7 +28,7 @@ Následující příklad ukazuje, jak deklarovat a vyvolat událost. Všimněte 
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Použití
+### <a name="usage"></a>Využití
 
 Následující příklad ukazuje, jak třída pro odběr používá operátor `+=` k přihlášení k odběru události a poskytnutí obslužné rutiny události, která má být vyvolána při vyvolání události. Všimněte si, že zadaná funkce odpovídá signatuře delegáta, který je definován na straně vydavatele v oboru názvů `EventTest`.
 
@@ -59,7 +59,7 @@ Ke stejné události může být přidruženo více obslužných rutin. Zdroj ud
 
 Pořadí, ve kterém zdroj události vyvolává obslužné rutiny událostí, není zaručeno a může se lišit od volání volání.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
 [Delegáti](../cppcx/delegates-c-cx.md)<br/>
