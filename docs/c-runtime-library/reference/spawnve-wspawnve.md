@@ -24,7 +24,6 @@ f1_keywords:
 - wspawnve
 - _spawnve
 - _wspawnve
-- spawnve
 helpviewer_keywords:
 - _spawnve function
 - spawnve function
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 37ff1358e8639d49992b8cfafb76b2ddac079889
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 37f8b6737fbd2b36c1482790a34dc386936b704b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947540"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442710"
 ---
 # <a name="_spawnve-_wspawnve"></a>_spawnve, _wspawnve
 
@@ -81,7 +80,7 @@ Pole ukazatelů na nastavení prostředí
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota z synchronního **_spawnve** nebo **_wspawnve** ( **_P_WAIT** zadaná pro *režim*) je stav ukončení nového procesu. Vrácená hodnota z asynchronního **_spawnve** nebo **_wspawnve** ( **_P_NOWAIT** nebo **_P_NOWAITO** určená pro *režim*) je obslužná rutina procesu. Stav ukončení je 0, pokud byl proces ukončen normálně. Stav ukončení můžete nastavit na nenulovou hodnotu, pokud vytvořený proces konkrétně volá rutinu **ukončení** s nenulovým argumentem. Pokud nový proces neexplicitně nastavil kladný stav ukončení, pozitivní stav ukončení indikuje abnormální ukončení s přerušením nebo přerušením. Návratová hodnota-1 označuje chybu (nový proces není spuštěn). V tomto případě je **errno** nastaveno na jednu z následujících hodnot.
+Návratová hodnota z synchronního **_spawnve** nebo **_wspawnve** ( **_P_WAIT** zadaná pro *režim*) je stav ukončení nového procesu. Vrácená hodnota z asynchronního **_spawnve** nebo **_wspawnve** ( **_P_NOWAIT** nebo **_P_NOWAITO** zadaná pro *režim*) je obslužná rutina procesu. Stav ukončení je 0, pokud byl proces ukončen normálně. Stav ukončení můžete nastavit na nenulovou hodnotu, pokud vytvořený proces konkrétně volá rutinu **ukončení** s nenulovým argumentem. Pokud nový proces neexplicitně nastavil kladný stav ukončení, pozitivní stav ukončení indikuje abnormální ukončení s přerušením nebo přerušením. Návratová hodnota-1 označuje chybu (nový proces není spuštěn). V tomto případě je **errno** nastaveno na jednu z následujících hodnot.
 
 |||
 |-|-|
@@ -110,9 +109,9 @@ Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-r
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [_spawn, _Wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
+Podívejte se na příklad v [_spawn _Wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

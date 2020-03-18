@@ -9,12 +9,10 @@ f1_keywords:
 - ATL::IDBPropertiesImpl
 - IDBPropertiesImpl::GetProperties
 - IDBPropertiesImpl.GetProperties
-- GetProperties
 - IDBPropertiesImpl::GetPropertyInfo
 - IDBPropertiesImpl.GetPropertyInfo
 - GetPropertyInfo
 - IDBPropertiesImpl.SetProperties
-- SetProperties
 - IDBPropertiesImpl::SetProperties
 helpviewer_keywords:
 - IDBPropertiesImpl class
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 807cdf55a5a2fa6e0cc063c22b1685d8156c41a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77f70c8b0bc602da6840bec38565c4441644c6d0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408924"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443717"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl – třída
 
-Poskytuje implementaci pro `IDBProperties` rozhraní.
+Poskytuje implementaci rozhraní `IDBProperties`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,12 +41,12 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Vaše třída odvozena od `IDBPropertiesImpl`.
+*Š*<br/>
+Vaše třída odvozená od `IDBPropertiesImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -56,17 +54,17 @@ Vaše třída odvozena od `IDBPropertiesImpl`.
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|Vrátí hodnoty vlastností ve zdroji dat, informace o zdroji dat a inicializaci skupiny vlastností, které jsou aktuálně nastaveny na objekt zdroje dat nebo hodnoty vlastností ve skupině vlastností Initialization, které jsou aktuálně nastavená na Enumerátor.|
-|[GetPropertyInfo](#getpropertyinfo)|Vrátí informace o všech vlastnostech podporována zprostředkovatelem.|
-|[SetProperties –](#setproperties)|Nastaví vlastnosti zdroje dat a inicializační vlastnosti skupiny, pro objekty zdroje dat, nebo skupině vlastností Initialization pro enumerátory.|
+|[GetProperties](#getproperties)|Vrátí hodnoty vlastností ve zdroji dat, v informacích o zdroji dat a skupinách vlastností inicializace, které jsou aktuálně nastaveny pro objekt zdroje dat, nebo na hodnoty vlastností ve skupině vlastností inicializace, které jsou aktuálně nastaveny v čítače.|
+|[GetPropertyInfo](#getpropertyinfo)|Vrátí informace o všech vlastnostech podporovaných zprostředkovatelem.|
+|[SetProperties](#setproperties)|Nastaví vlastnosti v datových zdrojích a skupinách vlastností inicializace pro objekty zdroje dat nebo skupinu vlastností inicializace pro enumerátory.|
 
 ## <a name="remarks"></a>Poznámky
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory. Nicméně pokud enumerátor zpřístupní [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), musí vystavit `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` pomocí statické funkce definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory. Nicméně pokud enumerátor zveřejňuje [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), musí zveřejnit `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` pomocí statické funkce definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
+## <a name="getproperties"></a>IDBPropertiesImpl –:: GetProperties
 
-Vrátí hodnoty vlastností ve zdroji dat, informace o zdroji dat a inicializaci skupiny vlastností, které jsou aktuálně nastaveny na objekt zdroje dat nebo hodnoty vlastností ve skupině vlastností Initialization, které jsou aktuálně nastavená na Enumerátor.
+Vrátí hodnoty vlastností ve zdroji dat, v informacích o zdroji dat a skupinách vlastností inicializace, které jsou aktuálně nastaveny pro objekt zdroje dat, nebo na hodnoty vlastností ve skupině vlastností inicializace, které jsou aktuálně nastaveny v čítače.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -79,11 +77,11 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) v *referenci programátora OLE DB*.
 
-Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBProperties::GetProperties`:
+Některé parametry odpovídají *OLE DB referenční parametry programátora* různých názvů, které jsou popsány v `IDBProperties::GetProperties`:
 
-|Parametry šablony technologie OLE DB|*OLE DB referenční informace pro programátory* parametry|
+|Parametry šablony OLE DB|*OLE DB referenční parametry programátora*|
 |--------------------------------|------------------------------------------------|
 |*cPropertySets*|*cPropertyIDSets*|
 |*rgPropertySets*|*rgPropertyIDSets*|
@@ -92,11 +90,11 @@ Některé parametry odpovídají *OLE DB referenční informace pro programátor
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud zprostředkovatele je inicializován, vrátí tato metoda hodnoty vlastností v DBPROPSET_DATASOURCE DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT skupiny vlastností, které jsou aktuálně nastavená na objekt zdroje dat. Pokud zprostředkovatele není inicializován, vrátí pouze vlastnosti DBPROPSET_DBINIT skupiny.
+Pokud je poskytovatel inicializován, vrátí tato metoda hodnoty vlastností v DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT skupiny vlastností, které jsou aktuálně nastaveny pro objekt zdroje dat. Pokud zprostředkovatel není inicializován, vrátí pouze DBPROPSET_DBINIT vlastnosti skupiny.
 
-## <a name="getpropertyinfo"></a> IDBPropertiesImpl::GetPropertyInfo
+## <a name="getpropertyinfo"></a>IDBPropertiesImpl –:: GetPropertyInfo
 
-Vrátí informace o vlastnosti zdroje dat podporované.
+Vrátí informace o vlastnostech podporované zdrojem dat.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -110,22 +108,22 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IDBProperties:: GetPropertyInfo](/previous-versions/windows/desktop/ms718175(v=vs.85)) v *referenci programátora OLE DB*.
 
-Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBProperties::GetPropertyInfo`:
+Některé parametry odpovídají *OLE DB referenční parametry programátora* různých názvů, které jsou popsány v `IDBProperties::GetPropertyInfo`:
 
-|Parametry šablony technologie OLE DB|*OLE DB referenční informace pro programátory* parametry|
+|Parametry šablony OLE DB|*OLE DB referenční parametry programátora*|
 |--------------------------------|------------------------------------------------|
 |*cPropertySets*|*cPropertyIDSets*|
 |*rgPropertySets*|*rgPropertyIDSets*|
 
 ### <a name="remarks"></a>Poznámky
 
-Používá [IDBInitializeImpl::m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) pro implementaci této funkce.
+K implementaci této funkce používá [IDBInitializeImpl:: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) .
 
-## <a name="setproperties"></a> IDBPropertiesImpl::SetProperties
+## <a name="setproperties"></a>IDBPropertiesImpl –:: SetProperties
 
-Nastaví vlastnosti zdroje dat a inicializační vlastnosti skupiny, pro objekty zdroje dat, nebo skupině vlastností Initialization pro enumerátory.
+Nastaví vlastnosti v datových zdrojích a skupinách vlastností inicializace pro objekty zdroje dat nebo skupinu vlastností inicializace pro enumerátory.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -136,13 +134,13 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IDBProperties:: SetProperties](/previous-versions/windows/desktop/ms723049(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud zprostředkovatele je inicializována, tato metoda nastaví hodnoty vlastností v DBPROPSET_DATASOURCE DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT skupiny vlastností pro objekt zdroje dat. Pokud zprostředkovatele není inicializován, nastaví DBPROPSET_DBINIT skupiny pouze vlastnosti.
+Pokud je poskytovatel inicializován, tato metoda nastaví hodnoty vlastností v DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT skupiny vlastností pro objekt zdroje dat. Pokud zprostředkovatel není inicializován, nastaví pouze DBPROPSET_DBINIT vlastnosti skupiny.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

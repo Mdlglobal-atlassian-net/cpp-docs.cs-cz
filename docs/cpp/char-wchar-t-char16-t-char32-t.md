@@ -1,22 +1,17 @@
 ---
 title: char, wchar_t, char16_t, char32_t
 ms.date: 02/14/2018
-f1_keywords:
-- char_cpp
-- char16_t_cpp
-- wchar_t_cpp
-- char32_t_cpp
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
-ms.openlocfilehash: 542751cdbd5bb21bb70467163c823e2669373e24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a518f24973aaddff59b97f104d9d912e4a2bedce
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331165"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447153"
 ---
-# <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
+# <a name="char-wchar_t-char16_t-char32_t"></a>char, wchar_t, char16_t, char32_t
 
-Typy **char**, **wchar_t**, **char16_t** a **char32_t** jsou předdefinované typy, které představují alfanumerické znaky a jednak jiné než alfanumerické glyfy a netisknutelné znaky.
+Typy **char**, **wchar_t**, **char16_t** a **char32_t** jsou předdefinované typy, které představují alfanumerické znaky, a také nealfanumerické glyfy a netisknutelné znaky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,10 +24,10 @@ char32_t ch4{ U'a' };
 
 ## <a name="remarks"></a>Poznámky
 
-**Char** typ byl původní typ znaku v jazyce C a C++. Typ **unsigned char** se často používá k reprezentování *bajtů*, které není vestavěný typ v jazyce C++. **Char** typ lze použít k ukládání znaky ze znakové sady ASCII nebo některý z ISO-8859 znakových sad a jednotlivých bajtech vícebajtové znaky, jako je například Shift-JIS nebo kódování znakové sady Unicode UTF-8. Řetězce **char** typu jsou označovány jako *zúžit* řetězce, i když použít ke kódování znaků. V kompilátoru Microsoft **char** je 8 bitů typu.
+Typ **znaku byl původní typ znaku** v jazyce C a. C++ Znak typu **bez znaménka** se často používá k vyjádření *bajtů*, což není vestavěný typ v C++. Typ **znaku** lze použít k ukládání znaků ze znakové sady ASCII nebo libovolné znakové sady ISO-8859 a jednotlivé bajty vícebajtových znaků, jako je například Shift-JIS nebo kódování UTF-8 znakové sady Unicode. Řetězce typu **char** jsou označovány jako *úzké* řetězce, a to i v případě, že se používají ke kódování vícebajtových znaků. V kompilátoru společnosti Microsoft je **znak** typu 8 bitů.
 
-**Wchar_t** typ je typ definovaných implementací širokých znaků. V kompilátoru Microsoft představuje 16bitové širokého znaku, používá k ukládání Unicode s kódováním UTF-16LE, typ nativní znaku v operačních systémech Windows. Verze širokého znaku pomocí funkce Universal C Runtime (UCRT) knihovny **wchar_t** a jeho ukazatele a pole typů jako parametrů a vrácených hodnot, jako verze širokého znaku nativní rozhraní API Windows.
+Typ **wchar_t** je typ znaku definovaný pro implementaci. V kompilátoru společnosti Microsoft představuje 16bitový znak, který se používá k uložení kódování Unicode kódovaného jako UTF-16LE, nativního typu znaku v operačních systémech Windows. Verze rozhraní UCRT (Universal C Runtime) knihovny pro velké znaky používají **wchar_t** a jeho typ ukazatele a pole jako parametry a návratové hodnoty, stejně jako verze v rámci nativního znaku rozhraní API systému Windows.
 
-**Char16_t** a **char32_t** typy představují 16bitová a 32bitová verze širokých znaků, v uvedeném pořadí. Kódování UTF-16 může být uložen v kódování Unicode **char16_t** typu a kódování UTF-32 může být uložen v Unicode **char32_t** typu. Řetězce z těchto typů a **wchar_t** jsou všechny uvedené jako *široké* řetězce, přestože termín se často platí konkrétně pro řetězce **wchar_t** typu.
+Typy **char16_t** a **char32_t** reprezentují 16 bitů a 32 znaků v uvedeném pořadí. Kódování Unicode kódované jako UTF-16 může být uloženo v typu **char16_t** a kódování Unicode jako utf-32 lze uložit do **char32_tho** typu. Řetězce těchto typů a **wchar_t** jsou všechny označovány jako *roztažitelné* řetězce, ačkoliv pojem často označuje konkrétně řetězce **wchar_t** typu.
 
-Ve standardní knihovně C++ `basic_string` typu jsou specializované pro úzké a široké řetězce. Použití `std::string` při znaky jsou typu **char**, `std::u16string` při znaky jsou typu **char16_t**, `std::u32string` při znaky jsou typu **char32_t** , a `std::wstring` při znaky jsou typu **wchar_t**. Jiné typy, které představují text, včetně `std::stringstream` a `std::cout` mít specializace pro úzké a široké řetězce.
+Ve C++ standardní knihovně je typ `basic_string` specializovaný pro zúžené i roztažitelné řetězce. Použijte `std::string`, pokud jsou znaky typu **char**, `std::u16string` Pokud jsou znaky typu **char16_t**, `std::u32string`, pokud jsou znaky typu **char32_t**a `std::wstring`, pokud jsou znaky typu **wchar_t**. Jiné typy, které reprezentují text, včetně `std::stringstream` a `std::cout` mají specializace pro zúžené a širší řetězce.

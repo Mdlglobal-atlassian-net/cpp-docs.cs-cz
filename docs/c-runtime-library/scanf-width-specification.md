@@ -1,34 +1,21 @@
 ---
 title: scanf – specifikace šířky
 ms.date: 10/22/2019
-api_location:
-- msvcr100.dll
-- msvcr120.dll
-- msvcr80.dll
-- msvcr110_clr0400.dll
-- msvcr110.dll
-- msvcr90.dll
-api_type:
-- DLLExport
-topic_type:
-- apiref
-f1_keywords:
-- scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ea0b2728021e3093ab7818af17e60c598f73587f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811116"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444708"
 ---
 # <a name="scanf-width-specification"></a>scanf – specifikace šířky
 
 Tyto informace se vztahují na výklad řetězců formátu v `scanf` rodině funkcí, včetně zabezpečených verzí, jako je `scanf_s`. Tyto funkce obvykle předpokládají, že vstupní datový proud je rozdělen do posloupnosti tokenů. Tokeny jsou odděleny prázdným znakem (mezera, tabulátor nebo nový řádek) nebo pro číselné typy, a to přirozenému konci číselného datového typu, který je označen prvním znakem, který nelze převést na číselný text. Nicméně specifikace šířky může být použita k tomu, aby se analýza vstupu zastavila před přirozeným koncem tokenu.
 
-Specifikace *šířky* se skládá ze znaků mezi `%` a specifikátorem pole typu, které mohou zahrnovat kladné celé číslo s názvem pole *Width* a jeden nebo více znaků, které označují velikost pole, což může být také považuje se za modifikátory typu pole, jako je například označení, zda je celočíselný typ **krátký** nebo **dlouhý**. Tyto znaky jsou označovány jako předpona velikosti.
+Specifikace *šířky* se skládá ze znaků mezi `%` a specifikátorem pole typu, které mohou zahrnovat kladné celé číslo s názvem pole *Width* a jeden nebo více znaků, které označují velikost pole, které lze také považovat za modifikátory typu pole, například označení, zda je celočíselný typ **krátký** nebo **dlouhý**. Tyto znaky jsou označovány jako předpona velikosti.
 
 ## <a name="the-width-field"></a>Pole Šířka
 
@@ -106,7 +93,7 @@ Funkce `scanf` kontroluje každé vstupní pole, znak po znaku. Před dosažení
 
 Z jakéhokoli důvodu, když funkce `scanf` zastaví čtení vstupního pole, je další vstupní pole považováno za začínající na první nepřečtený znak. Konfliktní znak, pokud existuje, je považován za nepřečtený. Je to první znak dalšího vstupního pole nebo první znak v následných operacích čtení na vstupním datovém proudu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

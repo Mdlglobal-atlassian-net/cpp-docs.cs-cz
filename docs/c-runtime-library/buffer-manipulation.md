@@ -1,38 +1,36 @@
 ---
 title: Zacházení s vyrovnávací pamětí
 ms.date: 04/04/2018
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-ms.openlocfilehash: e8a449cbfa6a52ccc2346e2215ce187c09d677e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a79bfdb33d2bff5e18c916a2e116ab03251afdf1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290388"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443598"
 ---
 # <a name="buffer-manipulation"></a>Zacházení s vyrovnávací pamětí
 
-Pomocí těchto rutin pro práci s oblastí paměti na základě bajt po bajtu.
+Pomocí těchto rutin můžete pracovat s oblastmi paměti na základě bajtů.
 
-## <a name="buffer-manipulation-routines"></a>Rutiny zacházení s vyrovnávací pamětí
+## <a name="buffer-manipulation-routines"></a>Rutiny manipulace s vyrovnávací pamětí
 
 |Rutina|Použití|
 |-------------|---------|
-|[_memccpy](../c-runtime-library/reference/memccpy.md)|Kopírování znaků z jedné vyrovnávací paměti do druhého, dokud se daný znak nebo zadaný počet znaků, které se zkopírovala|
-|[memchr, wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|Vrátí ukazatel na první výskyt, v rámci zadaný počet znaků, z daný znak ve vyrovnávací paměti|
-|[memcmp, wmemcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|Porovnání několika určenými znaky ze dvou vyrovnávacích pamětí|
-|[memcpy wmemcpy –](../c-runtime-library/reference/memcpy-wmemcpy.md), [memcpy_s – wmemcpy_s –](../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)|Kopírování zadaný počet znaků z jedné vyrovnávací paměti do jiného|
-|[_memicmp, _memicmp_l](../c-runtime-library/reference/memicmp-memicmp-l.md)|Porovnání několika určenými znaky ze dvou vyrovnávacích pamětech bez ohledu na případ|
-|[memmove wmemmove –](../c-runtime-library/reference/memmove-wmemmove.md),[memmove_s – wmemmove_s –](../c-runtime-library/reference/memmove-s-wmemmove-s.md)|Kopírování zadaný počet znaků z jedné vyrovnávací paměti do jiného|
-|[memset, wmemset](../c-runtime-library/reference/memset-wmemset.md)|Použijte zadaný znak inicializovat zadaný počet bajtů ve vyrovnávací paměti|
+|[_memccpy](../c-runtime-library/reference/memccpy.md)|Kopírovat znaky z jedné vyrovnávací paměti do druhé, dokud daný znak nebo daný počet znaků nebyl zkopírován|
+|[memchr, wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|Vrátí ukazatel na první výskyt, který je v zadaném počtu znaků, z daného znaku v bufferu.|
+|[memcmp, wmemcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|Porovnat zadaný počet znaků ze dvou vyrovnávacích pamětí|
+|[memcpy, wmemcpy](../c-runtime-library/reference/memcpy-wmemcpy.md), [memcpy_s, wmemcpy_s](../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)|Kopírovat zadaný počet znaků z jedné vyrovnávací paměti do druhé|
+|[_memicmp, _memicmp_l](../c-runtime-library/reference/memicmp-memicmp-l.md)|Porovnat zadaný počet znaků ze dvou vyrovnávacích pamětí bez ohledu na velikost písmen|
+|[memmove, wmemmove](../c-runtime-library/reference/memmove-wmemmove.md),[memmove_s, wmemmove_s](../c-runtime-library/reference/memmove-s-wmemmove-s.md)|Kopírovat zadaný počet znaků z jedné vyrovnávací paměti do druhé|
+|[memset, wmemset](../c-runtime-library/reference/memset-wmemset.md)|Použijte daný znak k inicializaci zadaného počtu bajtů ve vyrovnávací paměti.|
 |[_swab](../c-runtime-library/reference/swab.md)|Prohození bajtů dat a jejich uložení v zadaném umístění|
 
-Pokud zdrojové a cílové oblasti překrývají, pouze **memmove** je zaručeno zkopírovat úplné zdrojové správně.
+Když se zdrojové a cílové oblasti překrývají, je zaručeno správné zkopírování úplného zdroje pouze **memmove** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)

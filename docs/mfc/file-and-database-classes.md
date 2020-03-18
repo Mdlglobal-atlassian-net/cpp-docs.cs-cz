@@ -1,25 +1,23 @@
 ---
 title: Souborové a databázové třídy
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.file
 helpviewer_keywords:
 - database classes [MFC], MFC
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 96c45cad5da0bf16edfa71cb7e357ae4d66e318d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0996810a2af835c5c98a4f3311d2411466d43583
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405830"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442397"
 ---
 # <a name="file-and-database-classes"></a>Souborové a databázové třídy
 
-Tyto třídy umožňují ukládání informací do databáze nebo soubor na disku. Existují tři páry databázové třídy – technologie OLE DB, ODBC a DAO –, který poskytuje podobné funkce. Skupina OLE DB je implementováno pomocí technologie OLE DB a funguje s šablonami příjemců OLE DB, rozhraní DAO skupiny je implementováno pomocí přístupu k objektu Data, a skupině ODBC je implementováno pomocí Open Database Connectivity. Existuje také sada tříd pro práci s standardní soubory, aktivní datové proudy a datových proudů HTML.
+Tyto třídy umožňují ukládat informace do databáze nebo souboru na disku. Existují tři sady databázových tříd – OLE DB, ODBC a DAO, které poskytují podobné funkce. Skupina OLE DB je implementována pomocí OLE DB a spolupracuje s šablonami OLE DB příjemce, skupina DAO je implementována pomocí objektu pro přístup k datům a skupina rozhraní ODBC je implementována pomocí připojení Open Database. K dispozici je také sada tříd pro práci se standardními soubory, aktivními proudy a datovými proudy HTML.
 
-Následující kategorie třídy podpora trvalosti dat.
+Následující kategorie tříd podporují Trvalost dat.
 
 - [Třídy I/O souborů](../mfc/file-i-o-classes.md)
 
@@ -29,6 +27,6 @@ Následující kategorie třídy podpora trvalosti dat.
 
 - [ODBC – třídy](../mfc/odbc-classes.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../mfc/class-library-overview.md)
+[Přehled třídy](../mfc/class-library-overview.md)

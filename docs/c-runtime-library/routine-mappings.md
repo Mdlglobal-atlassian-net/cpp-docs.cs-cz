@@ -1,31 +1,29 @@
 ---
 title: Mapování rutiny
 ms.date: 11/04/2016
-f1_keywords:
-- c.mappings
 helpviewer_keywords:
 - _tWinMain
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 60a05b8102df1ecb9bb6f66eda15ff10cb12b32a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383370"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444855"
 ---
 # <a name="routine-mappings"></a>Mapování rutiny
 
-Mapování rutin obecného textu jsou definovány v TCHAR. H. `_tccpy` a `_tclen` namapovat na funkce v modelu znakové sady MBCS, jsou mapovány na makra nebo vložené v modelech SBCS a Unicode pro úplnost. Informace o obecné textové rutiny naleznete v tématu nápovědy o odpovídající `SBCS`–, `_MBCS`-, nebo `_UNICODE`-související rutiny.
+Mapování rutin obecného textu je definováno v TCHAR. Y. `_tccpy` a `_tclen` mapování na funkce v modelu znakové sady MBCS; jsou namapovány na makra nebo vložené funkce v modelech SBCS a Unicode pro úplnost. Informace o obecné textové rutině naleznete v tématu nápovědy o odpovídající rutině související s `SBCS`, `_MBCS`nebo `_UNICODE`.
 
-Podrobnější informace o jednotlivých rutin, které jsou uvedené v levém sloupci v tabulce následujících není k dispozici v této dokumentaci. Však můžete snadno vyhledat informace o odpovídající `SBCS`–, `_MBCS`-, nebo `_UNICODE`-související rutiny. Použití **hledání** příkaz **pomáhají** nabídky k vyhledání jakékoli obecné textové rutiny uvedených níže.
+Konkrétnější informace o jednotlivých rutinách uvedených v levém sloupci v následující tabulce nejsou k dispozici v této dokumentaci. Tyto informace ale můžete snadno vyhledat na odpovídající rutině související s `SBCS`, `_MBCS`nebo `_UNICODE`. Pomocí příkazu **Search** v nabídce **help** můžete vyhledat libovolnou rutinu s obecným textem uvedenou níže.
 
-Související informace naleznete v tématu [mapování obecného textu v TCHAR. H](../text/generic-text-mappings-in-tchar-h.md).
+Související informace naleznete v tématu [Mapování obecného textu v Tchar. H](../text/generic-text-mappings-in-tchar-h.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Obecné textové rutiny název|SBCS (_UNICODE a znakové sady MBCS nedefinovaná.)|_MBCS definováno|_UNICODE definováno|
+|Název rutiny obecného textu|SBCS (_UNICODE & znakové sady MBCS není definován.)|_MBCS definováno|_UNICODE definováno|
 |--------------------------------|-------------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|
@@ -52,9 +50,9 @@ Související informace naleznete v tématu [mapování obecného textu v TCHAR.
 |`_istcntrl`|`iscntrl`|`iscntrl`|`iswcntrl`|
 |`_istdigit`|`isdigit`|`_ismbcdigit`|`iswdigit`|
 |`_istgraph`|`isgraph`|`_ismbcgraph`|`iswgraph`|
-|`_istlead`|Vždy vrátí hodnotu false|`_ismbblead`|Vždy vrátí hodnotu false|
-|`_istleadbyte`|Vždy vrátí hodnotu false|`isleadbyte`|Vždy vrátí hodnotu false|
-|`_istlegal`|Vždy vrátí hodnotu true|`_ismbclegal`|Vždy vrátí hodnotu true|
+|`_istlead`|Vždycky vrátí hodnotu false.|`_ismbblead`|Vždycky vrátí hodnotu false.|
+|`_istleadbyte`|Vždycky vrátí hodnotu false.|`isleadbyte`|Vždycky vrátí hodnotu false.|
+|`_istlegal`|Vždycky vrátí hodnotu true.|`_ismbclegal`|Vždycky vrátí hodnotu true.|
 |`_istlower`|`islower`|`_ismbclower`|`iswlower`|
 |`_istprint`|`isprint`|`_ismbcprint`|`iswprint`|
 |`_istpunct`|`ispunct`|`_ismbcpunct`|`iswpunct`|
@@ -82,11 +80,11 @@ Související informace naleznete v tématu [mapování obecného textu v TCHAR.
 |`_taccess_s`|`_access_s`|`_access_s`|`_waccess_s`|
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|
-|`_tccmp`|Mapuje se na makro nebo vloženou funkci|`_mbsncmp`|Mapuje se na makro nebo vloženou funkci|
-|`_tccpy`|Mapuje se na makro nebo vloženou funkci|`_mbccpy`|Mapuje se na makro nebo vloženou funkci|
+|`_tccmp`|Mapuje se na makro nebo vloženou funkci.|`_mbsncmp`|Mapuje se na makro nebo vloženou funkci.|
+|`_tccpy`|Mapuje se na makro nebo vloženou funkci.|`_mbccpy`|Mapuje se na makro nebo vloženou funkci.|
 |`_tccpy_s`|`strcpy_s`|`_mbccpy_s`|`wcscpy_s`|
 |`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|
-|`_tclen`|Mapuje se na makro nebo vloženou funkci|`_mbclen`|Mapuje se na makro nebo vloženou funkci|
+|`_tclen`|Mapuje se na makro nebo vloženou funkci.|`_mbclen`|Mapuje se na makro nebo vloženou funkci.|
 |`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|
 |`_tcprintf`|`_cprintf`|`_cprintf`|`_cwprintf`|
 |`_tcprintf_s`|`_cprintf_s`|`_cprintf_s`|`_cwprintf_s`|
@@ -262,7 +260,7 @@ Související informace naleznete v tématu [mapování obecného textu v TCHAR.
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)<br/>
 [Mapování datového typu](../c-runtime-library/data-type-mappings.md)<br/>

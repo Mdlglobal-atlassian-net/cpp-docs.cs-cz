@@ -1,29 +1,27 @@
 ---
 title: Používání atributu CHeaderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CHeaderCtrl
 helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: bf99aad508aee52bc8d345ca084ef96ef40f803b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386405"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443998"
 ---
 # <a name="using-cheaderctrl"></a>Používání atributu CHeaderCtrl
 
-Použití ovládacího prvku záhlaví reprezentovaný třídou [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), chcete-li zobrazit záhlaví sloupců pro seznam úložiště se sloupcovou strukturou. Ovládací prvek hlavičky by být například užitečné pro implementaci ovládací prvky sloupce v tabulce.
+Pro zobrazení záhlaví sloupců pro sloupcový seznam použijte ovládací prvek záhlaví reprezentovaný třídou [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md). Například ovládací prvek záhlaví by byl užitečný pro implementaci ovládacích prvků sloupce v tabulce.
 
-Ovládací prvek hlavičky je obvykle rozdělena na oddíly, nazývá "záhlaví nosiče," každý název přidružený sloupec text nebo čísla. V závislosti na styly, které nastavíte můžete zadat počet s přímým přístupem způsoby, jak se uživatelé k manipulaci s položky hlavičky.
+Ovládací prvek záhlaví je obvykle rozdělen na části označované jako "položky záhlaví", přičemž každý má název přidruženého sloupce textu nebo čísel. V závislosti na stylech, které nastavíte, můžete poskytnout uživatelům řadu přímých způsobů manipulace s položkami hlaviček.
 
 > [!NOTE]
->  [CListCtrl –](../mfc/reference/clistctrl-class.md) poskytuje ovládací prvek vložený záhlaví a [CListView](../mfc/reference/clistview-class.md) zapouzdřuje `CListCtrl` v třídy knihovny MFC. Obecně platí, si můžete představit pomocí `CHeaderCtrl` do popisku seznamů, které chcete kreslit sami.
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) poskytuje ovládací prvek vložené záhlaví a [clistview –](../mfc/reference/clistview-class.md) zapouzdření `CListCtrl` ve třídě MFC. Obecně zvažte použití `CHeaderCtrl` k označení seznamů, které máte v úmyslu kreslit sami.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Ovládací prvky záhlaví a seznam](../mfc/header-control-and-list-control.md)
 
@@ -49,6 +47,6 @@ Ovládací prvek hlavičky je obvykle rozdělena na oddíly, nazývá "záhlaví
 
 - [Zpracování oznámení ovládacího prvku záhlaví](../mfc/processing-header-control-notifications.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ovládací prvky](../mfc/controls-mfc.md)

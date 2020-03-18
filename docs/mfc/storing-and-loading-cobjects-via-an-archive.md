@@ -1,8 +1,6 @@
 ---
 title: Ukládání a načítání objektů CObject prostřednictvím archivu
 ms.date: 11/04/2016
-f1_keywords:
-- CObject
 helpviewer_keywords:
 - CObjects [MFC], loading through archives
 - CArchive class [MFC], storing and loading objects
@@ -10,34 +8,34 @@ helpviewer_keywords:
 - CObject class [MFC], CArchive objects
 - CObjects [MFC]
 ms.assetid: a829b6dd-bc31-47e0-8108-fbb946722db9
-ms.openlocfilehash: 591ce7032aa3d70b1e5a020cd9173ed4c9d0fa9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 368421a86d6ff6fc70455edd0ea9a32e05645007
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306766"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446362"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Ukládání a načítání objektů CObject prostřednictvím archivu
 
-Ukládání a načítání `CObject`s prostřednictvím archivu vyžaduje další zkoumání. V některých případech, měli byste zavolat `Serialize` funkce objektu, kde `CArchive` objektu je parametr `Serialize` volání, na rozdíl od použití **< \<** nebo **>>** operátoru `CArchive`. Je důležité skutečnosti potřeba mít na paměti, že `CArchive` **>>** operátor konstrukce `CObject` v paměti na základě `CRuntimeClass` informace předtím zapsala do souboru pomocí ukládání archivu.
+Ukládání a načítání `CObject`s prostřednictvím archivu vyžaduje další pozornost. V některých případech byste měli zavolat funkci `Serialize` objektu, kde je objekt `CArchive` parametr `Serialize` volání, a to na rozdíl od **<\<** nebo **>>ho** operátoru `CArchive`. Důležitým faktem, který je třeba pamatovat, je, že operátor `CArchive` **>>** sestaví `CObject` v paměti na základě `CRuntimeClass` informací, které byly dříve zapsány do souboru uložením archivu.
 
-Proto, ať už používáte `CArchive` **< \<** a **>>** operátory porovnání volání `Serialize`, závisí na tom, zda jste *potřebovat* načítání archiv k dynamicky rekonstrukci objektu na základě dříve uložené `CRuntimeClass` informace. Použití `Serialize` funkce v následujících případech:
+Proto bez ohledu na to, zda používáte `CArchive` **<\<** a **>>** operátory, a volání `Serialize`, závisí na tom, zda *potřebujete* archiv načítání k dynamickému rekonstrukci objektu na základě dříve uložených `CRuntimeClass` informací. Použijte funkci `Serialize` v následujících případech:
 
-- Při deserializaci objektu, víte přesně třídu objektu předem.
+- Při deserializaci objektu je třeba předem znát přesnou třídu objektu.
 
-- Při deserializaci objektu, máte již pro něj přidělené paměti.
+- Při deserializaci objektu již máte přidělenou paměť.
 
 > [!CAUTION]
->  Pokud načtete pomocí objektu `Serialize` funkce, musíte také uložit objekt pomocí `Serialize` funkce. Neukládejte pomocí `CArchive` **<<** operátor a potom zatížení pomocí `Serialize` funkce nebo ukládat pomocí `Serialize` funkci a pak načíst pomocí `CArchive >>` operátor.
+>  Pokud načtete objekt pomocí funkce `Serialize`, je také nutné uložit objekt pomocí funkce `Serialize`. Neukládat pomocí operátoru `CArchive` **<<** a pak ho načíst pomocí funkce `Serialize` nebo uložit pomocí `Serialize` funkce a pak načíst pomocí operátoru `CArchive >>`.
 
-Následující příklad ukazuje případy:
+Následující příklad znázorňuje případy:
 
 [!code-cpp[NVC_MFCSerialization#36](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_1.h)]
 
 [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_2.cpp)]
 
-Stručně řečeno, pokud serializovatelné třídy definuje vložený `CObject` jako člena, měli byste *není* použít `CArchive` **< \<** a **>>** operátory pro daný objekt by měly volat, ale `Serialize` namísto toho funkci. Navíc pokud serializovatelné třídy definuje ukazatel na `CObject` (nebo objekt odvozený od `CObject`) jako člen, ale konstrukce tento jiný objekt ve své vlastní konstruktor, měli byste také zavolat `Serialize`.
+V souhrnu, pokud vaše serializovatelný třída definuje vložený `CObject` jako člen *, neměli byste používat `CArchive`* **<\<** a **>>** operátory pro daný objekt, ale měli byste místo toho volat funkci `Serialize`. Také Pokud vaše serializovatelný třída definuje ukazatel na `CObject` (nebo objekt odvozený z `CObject`) jako člen, ale sestaví tento druhý objekt ve svém vlastním konstruktoru, měli byste také volat `Serialize`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Serializace: Serializace objektu](../mfc/serialization-serializing-an-object.md)

@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946260"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443684"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -66,17 +65,17 @@ Aktuální pozice ukazatele na soubor. U zařízení, která neumožňují hled�
 
 Návratová hodnota-1L označuje chybu. Pokud je *popisovačem* neplatný popisovač souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EBADF** a vrátí-1l.
 
-Další informace o tomto a dalších návratových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_tell** získá aktuální pozici ukazatele souboru (pokud existuje) přidruženého k argumentu *popisovače* . Pozice je vyjádřena jako počet bajtů od začátku souboru. Pro funkci **_telli64** se tato hodnota vyjádří jako celé číslo 64.
+Funkce **_tell** získá aktuální pozici ukazatele souboru (pokud existuje) přidruženého k argumentu *popisovače* . Pozice je vyjádřena jako počet bajtů od začátku souboru. Pro funkci **_telli64** je tato hodnota vyjádřena jako 64 celé číslo.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_tell**, **_telli64**|\<io.h>|
+|**_tell** **_telli64**|\<IO. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
@@ -126,7 +125,7 @@ Line two.
 Current file position is: 20
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>

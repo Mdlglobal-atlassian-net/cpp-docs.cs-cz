@@ -1,14 +1,14 @@
 ---
 title: C++vylepšení shody
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 description: Microsoft C++ v aplikaci Visual Studio pokračuje v plném souladu s jazykem standardu c++ 20.
 ms.technology: cpp-language
-ms.openlocfilehash: e9c2a69c8d33ea692a76a5642a15b581567c2c63
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 31c64ca8ce6b13af89a2e19bccd1de1bfb99543a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793840"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446784"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Vylepšení shody C++ se sadou Visual Studio
 
@@ -383,7 +383,7 @@ bool neq(const S& lhs, const S& rhs) {
 - [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html): podpora knihovny pro char8_t
 - [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[dispustit]] pro STL, část 1
 - [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html): to_address ()
-- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): verze \<
+- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): verze \<>
 - [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf): s výjimkou konstruktoru Move std:: Function
 
 ## <a name="improvements_163"></a>Vylepšení shody v aplikaci Visual Studio 2019 verze 16,3
@@ -406,7 +406,7 @@ char x[42];
 std::cin >> x;
 ```
 
-### <a name="new-keywords-requires-and-concept"></a>Nové klíčové slovo vyžaduje **koncept** a.
+### <a name="new-keywords-requires-and-concept"></a>Nové klíčové **requires** slovo vyžaduje **koncept** a.
 
 Nová klíčová slova **vyžaduje** a **koncept** se přidal do kompilátoru C++ Microsoftu. Pokud se pokusíte použít buď jednu jako identifikátor v [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md) režim, kompilátor vyvolá *C2059: Chyba syntaxe*.
 
@@ -571,7 +571,7 @@ void f(T (&buffer)[Size], int& size_read)
 
 ### <a name="user-provided-specializations-of-type-traits"></a>Uživatelsky zadané specializace typů vlastností
 
-V souladu s podklauzulí *meta. Rqmts* Standard, kompilátor MSVC nyní vyvolá chybu, pokud narazí na uživatelem definovanou specializaci jedné ze zadaných šablon type_traits v oboru názvů `std`. Pokud není uvedeno jinak, Tyto specializace mají za následek nedefinované chování. Následující příklad má nedefinované chování, protože je v rozporu s pravidlem a `static_assert` se nezdařila s chybou **C2338**.
+V souladu s podklauzulí *meta. Rqmts* Standard, kompilátor MSVC nyní vyvolá chybu, pokud narazí na uživatelem definovanou specializaci jedné ze zadaných šablon `type_traits` v oboru názvů `std`. Pokud není uvedeno jinak, Tyto specializace mají za následek nedefinované chování. Následující příklad má nedefinované chování, protože je v rozporu s pravidlem a `static_assert` se nezdařila s chybou **C2338**.
 
 ```cpp
 #include <type_traits>
@@ -583,7 +583,7 @@ struct std::is_fundamental<S> : std::true_type {};
 static_assert(std::is_fundamental<S>::value, "fail");
 ```
 
-Chcete-li se této chybě vyhnout, definujte strukturu, která dědí z požadované type_trait, a specializujte to:
+Chcete-li se této chybě vyhnout, definujte strukturu, která dědí z preferovaného `type_trait`, a specializujte to:
 
 ```cpp
 #include <type_traits>
@@ -603,19 +603,19 @@ static_assert(my_is_fundamental<S>::value, "fail");
 
 Kompilátor MSVC nyní implementuje následující změny pro operátory porovnání na [P1630R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1630r1.html) , pokud je povolena možnost [/std: c + + poslední](../build/reference/std-specify-language-standard-version.md) :
 
-Kompilátor již nebude zapisovat výrazy s `operator==`, pokud obsahují návratový typ, který není **bool**. Následující kód nyní vytvoří *chybu C2088: '! = ': neplatné pro strukturu*:
+Kompilátor již nepřepisuje výrazy pomocí `operator==`, pokud obsahují návratový typ, který není **bool**. Následující kód nyní vytvoří *chybu C2088: '! = ': neplatné pro strukturu*:
 
 ```cpp
 struct U {
-  operator bool() const;
+    operator bool() const;
 };
 
 struct S {
-  U operator==(const S&) const;
+    U operator==(const S&) const;
 };
 
 bool neq(const S& lhs, const S& rhs) {
-  return lhs != rhs;
+    return lhs != rhs;
 }
 ```
 
@@ -636,7 +636,7 @@ bool neq(const S& lhs, const S& rhs) {
 }
 ```
 
-Kompilátor již nebude definovat výchozí relační operátor, pokud je členem třídy typu Union. Následující příklad nyní vytvoří *C2120: ' void ' je neplatný se všemi typy*:
+Kompilátor již nedefinuje výchozí relační operátor, pokud je členem třídy typu Union. Následující příklad nyní vytvoří *C2120: ' void ' je neplatný se všemi typy*:
 
 ```cpp
 #include <compare>
@@ -658,13 +658,13 @@ Chcete-li se této chybě vyhnout, definujte tělo pro operátor:
 #include <compare>
 
 union S {
-  int a;
-  char b;
-  auto operator<=>(const S&) const { ... }
-}; 
+    int a;
+    char b;
+    auto operator<=>(const S&) const { ... }
+};
 
 bool lt(const S& lhs, const S& rhs) {
-  return lhs < rhs;
+    return lhs < rhs;
 }
 ```
 
@@ -696,6 +696,195 @@ struct U {
 bool lt(const U& lhs, const U& rhs) {
     return lhs < rhs;
 }
+```
+
+## <a name="improvements_165"></a>Vylepšení shody v aplikaci Visual Studio 2019 verze 16,5
+
+### <a name="explicit-specialization-declaration-without-an-initializer-is-not-a-definition"></a>Explicitní deklarace specializace bez inicializátoru není definicí.
+
+V rámci `/permissive-`nyní MSVC vynutilo standardní pravidlo, že explicitní deklarace specializace bez inicializátorů nejsou definicemi. Dřív by deklarace byla považována za definici s výchozím inicializátorem. Účinek je v době propojování pozorovatelný, protože program v závislosti na tomto chování teď může mít nevyřešené symboly. V tomto příkladu teď dojde k chybě:
+
+```cpp
+template <typename> struct S {
+    static int a;
+};
+
+// In permissive-, this declaration is not a definition and the program will not link.
+template <> int S<char>::a;
+
+int main() {
+    return S<char>::a;
+}
+```
+
+```Output
+error LNK2019: unresolved external symbol "public: static int S<char>::a" (?a@?$S@D@@2HA) referenced in function _main
+at link time.
+```
+
+Chcete-li tento problém vyřešit, přidejte inicializátor:
+
+```cpp
+template <typename> struct S {
+    static int a;
+};
+
+// Add an initializer for the declaration to be a definition.
+template <> int S<char>::a{};
+
+int main() {
+    return S<char>::a;
+}
+```
+
+### <a name="preprocessor-output-preserves-newlines"></a>Výstup preprocesoru zachovává newlines
+
+Experimentální preprocesor nyní zachovává newlines a prázdné znaky při použití `/P` nebo `/E` s `/experimental:preprocessor`. Tato změna se dá zakázat pomocí `/d1experimental:preprocessor:oldWhitespace`.
+
+V tomto ukázkovém zdroji,
+
+```cpp
+#define m()
+line m(
+) line
+```
+
+Předchozí výstup `/E`:
+
+```Output
+line line
+#line 2
+```
+
+Nový výstup `/E` je nyní:
+
+```Output
+line
+ line
+```
+
+### <a name="import-and-module-keywords-are-context-dependent"></a>Klíčová slova import a Module jsou závislá na kontextu.
+
+Za P1857R1, direktivy preprocesoru a moduly preprocesoru mají další omezení na jejich syntaxi. Tento příklad již není zkompilován:
+
+```cpp
+import // Invalid
+m;
+```
+
+Vytvoří se tato chybová zpráva:
+
+```Output
+error C2146: syntax error: missing ';' before identifier 'm'
+```
+
+Chcete-li tento problém vyřešit, zachovejte import na stejném řádku:
+
+```cpp
+import m; // OK
+```
+
+### <a name="removal-of-stdweak_equality-and-stdstrong_equality"></a>Odebrání std:: weak_equality a std:: strong_equality
+
+Sloučení P1959R0 vyžaduje, aby kompilátor odebral chování a odkazy na `std::weak_equality` a `std::strong_equality` typy.
+
+Kód v tomto příkladu již není zkompilován:
+
+```cpp
+#include <compare>
+
+struct S {
+    std::strong_equality operator<=>(const S&) const = default;
+};
+
+void f() {
+    nullptr<=>nullptr;
+    &f <=> &f;
+    &S::operator<=> <=> &S::operator<=>;
+}
+```
+
+Tento příklad nyní vede k těmto chybám:
+
+```Output
+error C2039: 'strong_equality': is not a member of 'std'
+error C2143: syntax error: missing ';' before '<=>'
+error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+error C7546: binary operator '<=>': unsupported operand types 'nullptr' and 'nullptr'
+error C7546: binary operator '<=>': unsupported operand types 'void (__cdecl *)(void)' and 'void (__cdecl *)(void)'
+error C7546: binary operator '<=>': unsupported operand types 'int (__thiscall S::* )(const S &) const' and 'int (__thiscall S::* )(const S &) const'
+```
+
+Chcete-li problém vyřešit, aktualizujte, aby dávaly předdefinované relační operátory a nahradily odebrané typy:
+
+```cpp
+#include <compare>
+
+struct S {
+    std::strong_ordering operator<=>(const S&) const = default; // prefer 'std::strong_ordering'
+};
+
+void f() {
+    nullptr != nullptr; // use pre-existing builtin operator != or ==.
+    &f != &f;
+    &S::operator<=> != &S::operator<=>;
+}
+```
+
+### <a name="tls-guard-changes"></a>Změny ochrany TLS Guard
+
+Předtím byly proměnné místního vlákna v knihovnách DLL nesprávně inicializovány před prvním použitím na vláknech, které existovaly před nahráním knihovny DLL, kromě vlákna, které knihovnu DLL načetla. Tato vada se teď opravila.
+Proměnné místního vlákna v takové knihovně DLL jsou inicializovány bezprostředně před prvním použitím v takových vláknech.
+
+Toto nové chování při testování pro inicializaci na použití proměnných místních vláken může být zakázáno pomocí přepínače kompilátoru `/Zc:tlsGuards-`. Nebo přidáním atributu `[[msvc:no_tls_guard]]` pro konkrétní thread local proměnné.
+
+### <a name="better-diagnosis-of-call-to-deleted-functions"></a>Lepší diagnóza volání odstraněných funkcí
+
+Náš kompilátor byl více opravňující o volání odstraněných funkcí dříve. Například pokud volání proběhla v kontextu těla šablony, nemůžeme diagnostikovat volání. Kromě toho, pokud došlo k několika instancím volání odstraněných funkcí, vydáváme jenom jednu diagnostiku. Teď pro každý z nich vydáváme diagnostiku.
+
+Jedním z důsledků nového chování může být vytvoření malé zásadní změny: kód, který volal odstraněnou funkci, by nebyl diagnostikován, pokud nebyl nikdy pro generování kódu potřebný. Nyní Diagnostikujte IT vpřed.
+
+Tento příklad ukazuje kód, který teď vytvoří chybu:
+
+```cpp
+struct S {
+  S() = delete;
+  S(int) { }
+};
+
+struct U {
+  U() = delete;
+  U(int i): s{ i } { }
+
+  S s{};
+};
+
+U u{ 0 };
+```
+
+```Output
+error C2280: 'S::S(void)': attempting to reference a deleted function
+note: see declaration of 'S::S'
+note: 'S::S(void)': function was explicitly deleted
+```
+
+Chcete-li tento problém vyřešit, odeberte volání odstraněných funkcí:
+
+```cpp
+struct S {
+  S() = delete;
+  S(int) { }
+};
+
+struct U {
+  U() = delete;
+  U(int i): s{ i } { }
+
+  S s;  // Do not call the deleted ctor of 'S'.
+};
+
+U u{ 0 };
 ```
 
 ## <a name="update_160"></a>Opravy chyb a změny chování v aplikaci Visual Studio 2019
@@ -2847,7 +3036,7 @@ int main()
 
 V režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) kompilátor nyní vyžaduje klíčové slovo **template** , aby předcházel název šablony, když přichází po závislém vnořeném specifikátoru názvu.
 
-Následující kód v režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) nyní vyvolává C7510: *' example ': použití závislého názvu šablony musí být předpona ' Template '. Poznámka: Přečtěte si odkaz na kompilování instance šablony třídy ' X<T>'* :
+Následující kód v režimu [/Permissive-](../build/reference/permissive-standards-conformance.md) nyní vyvolává C7510: *' example ': použití závislého názvu šablony musí být předpona ' Template '. Poznámka: Přečtěte si odkaz na kompilování šablony třídy ' X\<t > '* :
 
 ```cpp
 template<typename T> struct Base
@@ -3077,6 +3266,6 @@ Chcete-li se této chybě vyhnout, odeberte kvalifikátor **constexpr** z explic
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Tabulka C++ shody jazyka Microsoft](../visual-cpp-language-conformance.md)

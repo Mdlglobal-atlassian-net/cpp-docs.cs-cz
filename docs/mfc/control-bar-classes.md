@@ -1,62 +1,60 @@
 ---
 title: Třídy ovládacích pruhů
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.control
 helpviewer_keywords:
 - control bars [MFC], classes
 ms.assetid: 11009103-cad8-4309-85ce-3d2e858e1818
-ms.openlocfilehash: 3426d84eab888a6fe78b663945776fff2fe708dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a050c5d2f7396324c2c380a03fc28e01ab992208
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301952"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440965"
 ---
 # <a name="control-bar-classes"></a>Třídy ovládacích pruhů
 
-Ovládací pruhy jsou připojeny k okno rámce. Obsahují tlačítka, stav podoken nebo šablony dialogového okna. Plovoucí ovládací pruhy, také nazývané nástroj palety, jsou implementovány jejich připojením [cminiframewnd –](../mfc/reference/cminiframewnd-class.md) objektu.
+Ovládací panely jsou připojeny k oknu rámce. Obsahují tlačítka, stavová podokna nebo šablonu dialogového okna. Bezplatné ovládací prvky, které jsou označovány také jako palety nástrojů, jsou implementovány připojením k objektu [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) .
 
-## <a name="framework-control-bars"></a>Rozhraní Framework ovládací pruhy
+## <a name="framework-control-bars"></a>Řídicí panely rozhraní
 
-Tyto ovládací pruhy jsou nedílnou součástí rozhraní MFC. Se snadněji používá a výkonnější, než Windows řídit pruhy integrovaná se službami rozhraní framework. Většina aplikací knihovny MFC pomocí těchto ovládacích pruhů spíše než ovládacích panelů Windows.
+Tyto ovládací panely jsou nedílnou součástí architektury MFC. Je jednodušší používat a výkonnější než ovládací panely Windows, protože jsou integrovány s architekturou. Většina aplikací MFC používá ovládací panely místo ovládacích panelů systému Windows.
 
-[CControlBar](../mfc/reference/ccontrolbar-class.md)<br/>
-Základní třída pro MFC – ovládací pruhy uvedené v této části. Ovládací panel je okno zarovnané k okraji okna rámce. Ovládací panel obsahuje buď `HWND`– na základě podřízených ovládacích prvků nebo není založen na ovládací prvky `HWND`, jako jsou tlačítka na panelu nástrojů.
+[CControlBar –](../mfc/reference/ccontrolbar-class.md)<br/>
+Základní třída pro ovládací prvky MFC uvedená v této části. Ovládací panel je okno zarovnané na okraj okna rámce. Ovládací panel obsahuje buď podřízené ovládací prvky nebo ovládací prvky založené na `HWND`, které nejsou založené na `HWND`, například tlačítka panelu nástrojů.
 
 [CDialogBar](../mfc/reference/cdialogbar-class.md)<br/>
-Ovládací panel, který je založen na šablony dialogového okna.
+Ovládací panel, který je založen na šabloně dialogového okna.
 
-[CReBar](../mfc/reference/crebar-class.md)<br/>
-Podporuje, který může obsahovat další podřízená okna do formuláře ovládací prvky panelu nástrojů.
+[CReBar –](../mfc/reference/crebar-class.md)<br/>
+Podporuje panel nástrojů, který může obsahovat další podřízená okna ve formě ovládacích prvků.
 
-[CToolBar](../mfc/reference/ctoolbar-class.md)<br/>
-Na základě windows ovládacího prvku panel nástrojů, obsahující příkazová tlačítka rastrového obrázku není `HWND`. Většina aplikací MFC, použijte tuto třídu spíše než `CToolBarCtrl`.
+[CToolBar –](../mfc/reference/ctoolbar-class.md)<br/>
+Okna ovládacích prvků panelu nástrojů obsahující příkazová tlačítka rastrového obrázku, která nejsou založená na `HWND`. Většina aplikací MFC používá tuto třídu místo `CToolBarCtrl`.
 
-[CStatusBar](../mfc/reference/cstatusbar-class.md)<br/>
-Základní třída pro ovládací prvek stavového systému windows. Většina aplikací MFC, použijte tuto třídu spíše než `CStatusBarCtrl`.
+[CStatusBar –](../mfc/reference/cstatusbar-class.md)<br/>
+Základní třída pro okna ovládacích prvků stavového řádku. Většina aplikací MFC používá tuto třídu místo `CStatusBarCtrl`.
 
-## <a name="windows-control-bars"></a>Windows ovládací pruhy
+## <a name="windows-control-bars"></a>Ovládací panely Windows
 
-Tyto ovládací pruhy jsou dynamického zajišťování obálky pro odpovídající ovládací prvky Windows. Protože se bude integrovat s použitím rozhraní framework, jsou obtížnější než ovládací pruhy výše uvedených. Většina aplikací knihovny MFC používá ovládací pruhy výše uvedených.
+Tyto ovládací panely jsou tenké obálky pro odpovídající ovládací prvky systému Windows. Vzhledem k tomu, že nejsou integrovány s architekturou, jsou těžší používat než výše uvedené ovládací panely. Většina aplikací MFC používá výše uvedené ovládací panely.
 
-[CRebarCtrl](../mfc/reference/crebarctrl-class.md)<br/>
-Implementuje interního řízení `CRebar` objektu.
+[Atributu CReBarCtrl](../mfc/reference/crebarctrl-class.md)<br/>
+Implementuje vnitřní kontrolu objektu `CRebar`.
 
 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)<br/>
-Vodorovné okno obvykle rozdělena na dvě podokna, ve kterých může aplikace zobrazit informace o stavu.
+Horizontální okno, obvykle rozdělené do podoken, ve kterém aplikace může zobrazit stavové informace.
 
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)<br/>
-Poskytuje funkce pro Windows nástrojů běžný ovládací prvek.
+Poskytuje funkce pro běžný ovládací prvek panelu nástrojů systému Windows.
 
 ## <a name="related-classes"></a>Související třídy
 
 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)<br/>
-Malého vyskakovacího okna, která zobrazuje jeden řádek textu popisujícího účel nástroje v aplikaci.
+Malé automaticky otevírané okno, které zobrazuje jeden řádek textu popisující účel nástroje v aplikaci.
 
 [CDockState](../mfc/reference/cdockstate-class.md)<br/>
-Zpracovává ukotvení data o stavu pro ovládacích pruhů trvalého úložiště.
+Zpracovává trvalé úložiště dat dokovacího stavu pro ovládací panely.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../mfc/class-library-overview.md)
+[Přehled třídy](../mfc/class-library-overview.md)

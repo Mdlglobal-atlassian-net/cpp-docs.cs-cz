@@ -1,26 +1,24 @@
 ---
 title: Příznak směru
 ms.date: 11/04/2016
-f1_keywords:
-- c.flags
 helpviewer_keywords:
 - direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
-ms.openlocfilehash: ead32fa7f09e9dd98130855ecd87ba3b3d454ef5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04e096c6a62f806f4c214745a8401b1730eda3a6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344418"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443390"
 ---
 # <a name="direction-flag"></a>Příznak směru
 
-Příznak směru je specifické pro všechny procesory Intel x86 kompatibilní příznak procesoru. Platí pro všechny pokyny k sestavení, které používají předpona REP (opakování), například MOVS, MOVSD, MOVSW a dalších. Adresy, které jsou k dispozici na příslušné pokyny jsou zvýšena, pokud se vymaže příznak směru.
+Příznak směru je příznak procesoru specifický pro všechny procesory kompatibilní s platformou Intel x86. Vztahuje se na všechny pokyny k sestavení, které používají předponu (opakování), například MOVS, MOVSD, MOVSW a další. Adresy uvedené v příslušných pokynech se zvyšují, pokud je příznak směru vymazán.
 
-Běhové rutiny jazyka C předpokládá, že se vymaže příznak směru. Pokud používáte jiné funkce s funkcí jazyka C za běhu, musíte zajistit, že jiné funkce ponechat stávající příznak směru samostatně, nebo jej obnovit do původního stavu. Příznak směru, aby se nezapomnělo při vstupu je očekáván díky za běhu kódu rychlejší a efektivnější.
+Rutiny běhu jazyka C předpokládají, že příznak směru je vymazán. Pokud používáte jiné funkce s běhovými funkcemi jazyka C, je nutné zajistit, aby ostatní funkce ponechaly příznak Direction samostatně, nebo obnovit původní podmínku. Očekává se, že příznak směru, který má být jasný po vstupu, provede rychlejší a efektivnější kód za běhu.
 
-Příznak směru, aby se nezapomnělo očekávat, že funkce knihovny C Run-Time, jako je například rutiny zacházení s řetězci a zacházení s vyrovnávací pamětí.
+Funkce běhové knihovny jazyka C, například rutiny pro manipulaci s řetězci a manipulaci s vyrovnávací pamětí, očekávají, že příznak směru bude jasný.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce knihovny CRT](../c-runtime-library/crt-library-features.md)

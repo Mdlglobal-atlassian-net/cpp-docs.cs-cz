@@ -1,8 +1,6 @@
 ---
 title: I/O nízké úrovně
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O [CRT], low-level
 - I/O [CRT], functions
@@ -10,48 +8,48 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: 7812656bdcb3f58866f91009b6ad3de9fd67cebe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343053"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443102"
 ---
 # <a name="low-level-io"></a>I/O nízké úrovně
 
-Tyto funkce vyvolají operačního systému přímo pro operaci nižší úrovně, než poskytuje datový proud vstupně-výstupních operací. Nižší vstupní a výstupní vyrovnávací paměti nebo formátu dat proveďte volání.
+Tyto funkce vyvolají operační systém přímo pro operaci nižší úrovně, než která je poskytována v/v datového proudu. Vstupní a výstupní volání nízké úrovně neukládají do vyrovnávací paměti nebo formátují data.
 
-Rutiny nízké úrovně můžete přístup z více vláken standardní otevře při spuštění programu pomocí následující předdefinovaných souboru popisovače.
+Rutiny nízké úrovně mají přístup ke standardním datovým proudům otevřeným při spuštění programu pomocí následujících předdefinovaných popisovačů souborů.
 
-|Stream|Popisovač souboru|
+|Datový proud|Popisovač souboru|
 |------------|---------------------|
-|**stdin**|0|
+|**standardního**|0|
 |**STDOUT**|1|
 |**stderr**|2|
 
-Sada rutiny nízké úrovně vstupně-výstupních operací [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) globální proměnné, když dojde k chybě. Je nutné uvést STDIO. H pouze v případě, že váš program vyžaduje konstantu, která je definována v STDIO použijete funkce nízké úrovně. H, jako je například indikátor konce souboru (**EOF**).
+Rutiny I/O nízké úrovně nastaví globální proměnnou [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , když dojde k chybě. Musíte zahrnout STDIO. H při použití funkcí nízké úrovně pouze v případě, že program vyžaduje konstantu, která je definována v STDIO. H, jako je například indikátor konce souboru (**EOF**).
 
-## <a name="low-level-io-functions"></a>I/O nízké úrovně funkce
+## <a name="low-level-io-functions"></a>Vstupně-výstupní funkce nízké úrovně
 
 |Funkce|Použití|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|Zavřít soubor|
-|[_commit](../c-runtime-library/reference/commit.md)|Vyprázdnění souboru na disk|
-|[_creat, _wcreat](../c-runtime-library/reference/creat-wcreat.md)|Vytvoření souboru|
-|[_dup](../c-runtime-library/reference/dup-dup2.md)|Návratový další popisovače souborů pro daný soubor|
-|[_dup2](../c-runtime-library/reference/dup-dup2.md)|Vytvořte druhý popisovač pro danou souboru|
-|[_eof](../c-runtime-library/reference/eof.md)|Test pro konec souboru|
-|[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Změna umístění souboru ukazatel na daném umístění|
+|[_commit](../c-runtime-library/reference/commit.md)|Vyprázdnit soubor na disk|
+|[_creat, _wcreat](../c-runtime-library/reference/creat-wcreat.md)|Vytvořit soubor|
+|[_dup](../c-runtime-library/reference/dup-dup2.md)|Vrátit další dostupný popisovač souboru pro daný soubor|
+|[_dup2](../c-runtime-library/reference/dup-dup2.md)|Vytvořit druhý popisovač pro daný soubor|
+|[_eof](../c-runtime-library/reference/eof.md)|Test konce souboru|
+|[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Změnit umístění ukazatele na soubor do daného umístění|
 |[_open, _wopen](../c-runtime-library/reference/open-wopen.md)|Otevřít soubor|
-|[_read](../c-runtime-library/reference/read.md)|Čtení dat ze souboru|
-|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s, _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Otevřít soubor pro sdílení souborů|
-|[_tell, _telli64](../c-runtime-library/reference/tell-telli64.md)|Získejte aktuální pozici ukazatele na soubor|
-|[_umask –](../c-runtime-library/reference/umask.md), [_umask_s –](../c-runtime-library/reference/umask-s.md)|Nastavení oprávnění souboru masky|
-|[_write](../c-runtime-library/reference/write.md)|Zápis dat do souboru|
+|[_read](../c-runtime-library/reference/read.md)|Číst data ze souboru|
+|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Otevřít soubor pro sdílení souborů|
+|[_tell, _telli64](../c-runtime-library/reference/tell-telli64.md)|Získá aktuální pozici ukazatele na soubor.|
+|[_umask](../c-runtime-library/reference/umask.md) [_umask_s](../c-runtime-library/reference/umask-s.md)|Nastavit soubor – maska oprávnění|
+|[_write](../c-runtime-library/reference/write.md)|Zapsat data do souboru|
 
-**_dup –** a **_dup2 –** jsou obvykle slouží k přidružení předdefinovaného souboru popisovače různé soubory.
+**_dup** a **_dup2** se obvykle používají k přidružení předdefinovaných popisovačů souborů k různým souborům.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vstup a výstup](../c-runtime-library/input-and-output.md)<br/>
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

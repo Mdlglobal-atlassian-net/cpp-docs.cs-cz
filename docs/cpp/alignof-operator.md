@@ -2,7 +2,6 @@
 title: __alignof – operátor
 ms.date: 12/17/2018
 f1_keywords:
-- alignas_cpp
 - __alignof_cpp
 - alignof_cpp
 - __alignof
@@ -14,20 +13,20 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3764e95846d48d293991d69d04bc71c6b3aed90
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258249"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443601"
 ---
-# <a name="alignof-operator"></a>__alignof – operátor
+# <a name="__alignof-operator"></a>__alignof – operátor
 
-C ++ 11 zavádí **alignof** operátor, který vrátí zarovnání, v bajtech zadaného typu. Pro zajištění maximální přenositelnosti používali operátor alignof místo __alignof – operátor specifické pro společnost Microsoft.
+C++ 11 zavádí operátor **alignof** , který vrací zarovnání v bajtech zadaného typu. Pro maximální přenositelnost byste měli použít operátor alignof namísto operátoru __alignof specifického pro společnost Microsoft.
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Vrátí hodnotu typu `size_t` to znamená požadavek zarovnání typu.
+Vrací hodnotu typu `size_t`, která je požadavkem na zarovnání typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,24 +38,24 @@ Vrátí hodnotu typu `size_t` to znamená požadavek zarovnání typu.
 
 Příklad:
 
-|Výraz|Value|
+|Výraz|Hodnota|
 |----------------|-----------|
-|**__alignof (char)**|1|
+|**__alignof (Char)**|1|
 |**__alignof (krátký)**|2|
-|**__alignof (int).**|4|
-|**__alignof( \__int64 )**|8|
+|**__alignof (int)**|4|
+|**__alignof (\__int64)**|8|
 |**__alignof (float)**|4|
-|**__alignof (double)**|8|
-|**__alignof (char\* )**|4|
+|**__alignof (Double)**|8|
+|**__alignof (Char\*)**|4|
 
-**__Alignof** hodnota je stejná jako hodnota `sizeof` pro základní typy. Uvažme však tento příklad:
+Hodnota **__alignof** je stejná jako hodnota `sizeof` pro základní typy. Uvažme však tento příklad:
 
 ```cpp
 typedef struct { int a; double b; } S;
 // __alignof(S) == 8
 ```
 
-V takovém případě **__alignof** hodnota je požadavkem zarovnání největšího prvku ve struktuře.
+V tomto případě je hodnota **__alignof** požadavek na zarovnání největšího prvku ve struktuře.
 
 Podobně pro
 
@@ -64,9 +63,9 @@ Podobně pro
 typedef __declspec(align(32)) struct { int a; } S;
 ```
 
-`__alignof(S)` je rovno `32`.
+`__alignof(S)` se rovná `32`.
 
-Jedním použitím **__alignof** by bylo parametrem pro jednu z vlastních rutin přidělení paměti. Například s ohledem na následující definovanou strukturu `S` lze volat rutinu přidělení paměti s názvem `aligned_malloc` pro přidělení paměti na hranici určitého zarovnání.
+Jedním z použití **__alignof** by byl jako parametr jedné z vlastních rutin pro přidělování paměti. Například s ohledem na následující definovanou strukturu `S` lze volat rutinu přidělení paměti s názvem `aligned_malloc` pro přidělení paměti na hranici určitého zarovnání.
 
 ```cpp
 typedef __declspec(align(32)) struct { int a; double b; } S;
@@ -74,7 +73,7 @@ int n = 50; // array size
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 ```
 
-Z důvodu kompatibility s předchozími verzemi **_alignof** je synonymum pro **__alignof** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadat.
+Z důvodu kompatibility s předchozími verzemi je **_alignof** synonymem pro **__alignof** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 Další informace o úpravách zarovnání naleznete v:
 
@@ -86,15 +85,15 @@ Další informace o úpravách zarovnání naleznete v:
 
 - [/Zp (zarovnání členů struktury)](../build/reference/zp-struct-member-alignment.md)
 
-- [Příklady zarovnání struktur](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 konkrétní)
+- [Příklady zarovnání struktury](../build/x64-software-conventions.md#examples-of-structure-alignment) (specifické pro procesory x64)
 
-Další informace o rozdílech v souladu v kódu pro x86 a x64 najdete v tématu:
+Další informace o rozdílech v zarovnání v kódu pro x86 a x64 naleznete v tématu:
 
 - [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

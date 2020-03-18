@@ -1,24 +1,22 @@
 ---
 title: Používání atributu CToolBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolBarCtrl
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: 70bb563b7dd4558ab1943ad87ee3db5b877951e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411666"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442236"
 ---
 # <a name="using-ctoolbarctrl"></a>Používání atributu CToolBarCtrl
 
-Můžete použít ovládací prvek panelu nástrojů ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) Chcete-li vytvořit okno ovládacího prvku, který obsahuje tlačítka a volitelné mezery. Jako uživatel vybere každé tlačítko v panelu nástrojů okno ovládacího prvku odešle zprávu příkaz do nadřazeného okna. Tlačítka na panelu nástrojů, obvykle odpovídají položky v nabídce aplikace, poskytuje další a více přímý způsob pro uživatele pro přístup k aplikačním příkazy.
+Ovládací prvek Toolbar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) můžete použít k vytvoření ovládacího okna obsahujícího tlačítka a volitelné mezery. Každé tlačítko v okně ovládacího prvku panel nástrojů pošle zprávu příkazu do nadřazeného okna, protože ho uživatel zvolí. Obvykle tlačítka na panelu nástrojů odpovídají položkám v nabídce aplikace a poskytují tak dodatečný a přímý způsob, jak uživatel přistupovat k příkazům aplikace.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Metody vytváření panelů nástrojů](../mfc/methods-of-creating-a-toolbar.md)
 
@@ -32,6 +30,6 @@ Můžete použít ovládací prvek panelu nástrojů ([CToolBarCtrl](../mfc/refe
 
 - [Přizpůsobení vzhledu ovládacího prvku panel nástrojů](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ovládací prvky](../mfc/controls-mfc.md)

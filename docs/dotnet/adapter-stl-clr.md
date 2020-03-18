@@ -7,7 +7,6 @@ f1_keywords:
 - cliext::collection_adapter
 - cliext::collection_adapter::base
 - cliext::collection_adapter::begin
-- cliext::collection_adapter
 - cliext::collection_adapter::collection_adapter
 - cliext::collection_adapter::difference_type
 - cliext::collection_adapter::end
@@ -49,16 +48,16 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdaf5e0e8e4d9620e7a55dfff84f271f0059faf3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397676"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444021"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
-Záhlaví STL/CLR `<cliext/adapter>` určuje dvě šablony třídy (`collection_adapter` a `range_adapter`) a funkce šablon `make_collection`.
+Hlavička STL/CLR `<cliext/adapter>` určuje dvě třídy šablony (`collection_adapter` a `range_adapter`) a funkce šablony `make_collection`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,26 +67,26 @@ Záhlaví STL/CLR `<cliext/adapter>` určuje dvě šablony třídy (`collection_
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<adaptéru cliext – >
+**Hlavička:** \<cliext –/Adapter >
 
-**Namespace:** cliext –
+**Obor názvů:** cliext –
 
 ## <a name="declarations"></a>Deklarace
 
 |Třída|Popis|
 |-----------|-----------------|
-|[collection_adapter (STL/CLR)](#collection_adapter)|Zabalí základní třídy knihovny (BCL) kolekce jako rozsah.|
-|[range_adapter (STL/CLR)](#range_adapter)|Zabalí rozsahu jako kolekci BCL.|
+|[collection_adapter (STL/CLR)](#collection_adapter)|Zabalí kolekci knihovny základních tříd (BCL) jako rozsah.|
+|[range_adapter (STL/CLR)](#range_adapter)|Zabalí rozsah jako kolekci BCL.|
 
 |Funkce|Popis|
 |--------------|-----------------|
-|[make_collection (STL/CLR)](#make_collection)|Vytvoří rozsah adaptér pomocí páru iterátoru.|
+|[make_collection (STL/CLR)](#make_collection)|Vytvoří adaptér rozsahu pomocí páru iterátorů.|
 
 ## <a name="members"></a>Členové
 
-## <a name="collection_adapter"></a> collection_adapter – (STL/CLR)
+## <a name="collection_adapter"></a>collection_adapter (STL/CLR)
 
-Zabalí kolekci .NET pro použití jako kontejner STL/CLR. A `collection_adapter` je třída šablony popisující objekt jednoduchý kontejner STL/CLR. Zabalí rozhraní knihovny třídy Base (BCL) a vrátí páru iterátoru, který používáte k manipulaci s řízené sekvence.
+Zabalí kolekci .NET pro použití jako kontejner STL/CLR. `collection_adapter` je třída šablony, která popisuje jednoduchý objekt kontejneru STL/CLR. Obaluje rozhraní knihovny tříd (BCL) a vrátí pár iterátorů, který použijete k manipulaci s řízenou sekvencí.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -125,20 +124,20 @@ template<typename Key,
 #### <a name="parameters"></a>Parametry
 
 *Coll*<br/>
-Typ kolekce.
+Typ zabalené kolekce.
 
 ### <a name="specializations"></a>Specializace
 
 |Specializace|Popis|
 |--------------------|-----------------|
-|IEnumerable|Pořadí mezi prvky.|
-|Rozhraní ICollection|Spravuje skupiny prvků.|
-|IList|Udržuje seřazený skupiny prvků.|
-|IDictionary|Zachovat sadu {klíč, hodnota} dvojice.|
-|IEnumerable\<hodnotu >|Pořadí pomocí zadané elementy.|
-|Rozhraní ICollection\<hodnotu >|Udržuje typy prvků.|
-|IList\<hodnotu >|Udržuje uspořádanou skupinu zadané elementy.|
-|IDictionary\<hodnotu >|Udržuje sadu typu {klíč, hodnota} dvojice.|
+|Rozhraní|Sekvence prostřednictvím prvků.|
+|ICollection|Udržuje skupinu prvků.|
+|IList|Udržuje uspořádanou skupinu prvků.|
+|IDictionary|Udržuje sadu párů {Key, Value}.|
+|Hodnota IEnumerable\<>|Sekvence prostřednictvím typových prvků.|
+|Hodnota ICollection\<>|Udržuje skupinu typových prvků.|
+|IList\<Value >|Udržuje uspořádanou skupinu typových prvků.|
+|Hodnota IDictionary\<>|Udržuje sadu zadaných párů dvojic {Key, Value}.|
 
 ### <a name="members"></a>Členové
 
@@ -154,24 +153,24 @@ Typ kolekce.
 
 |Členská funkce|Popis|
 |---------------------|-----------------|
-|[collection_adapter::base (STL/CLR)](#base)|Označí rozhraní zabalené BCL.|
+|[collection_adapter::base (STL/CLR)](#base)|Určuje zabalené rozhraní BCL.|
 |[collection_adapter::begin (STL/CLR)](#begin)|Určuje začátek řízené sekvence.|
-|[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|Vytvoří objekt adaptér.|
+|[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|Vytvoří objekt adaptéru.|
 |[collection_adapter::end (STL/CLR)](#end)|Určuje konec řízené sekvence.|
 |[collection_adapter::size (STL/CLR)](#size)|Spočítá počet prvků.|
 |[collection_adapter::swap (STL/CLR)](#swap)|Zamění obsah dvou kontejnerů.|
 
 |Operátor|Popis|
 |--------------|-----------------|
-|[collection_adapter::operator= (STL/CLR)](#op_eq)|Nahradí uloženou BCL popisovač.|
+|[collection_adapter::operator= (STL/CLR)](#op_eq)|Nahradí uložený popisovač BCL.|
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této třídy šablony pro manipulaci s BCL kontejneru jako kontejner STL/CLR. `collection_adapter` Uloží popisovač BCL rozhraní, které zase určuje pořadí prvků. A `collection_adapter` objekt `X` vrátí pár iterátorů vstupní `X.begin()` a `X.end()` můžete navštívit prvky v pořadí. Některé z odborností, které jsou také umožňují napsat `X.size()` má být určena délka řízené sekvence.
+Tuto třídu šablony použijete k manipulaci s kontejnerem BCL jako s kontejnerem STL/CLR. `collection_adapter` ukládá popisovač do rozhraní BCL, které zase ovládá sekvenci prvků. Objekt `collection_adapter` `X` vrátí dvojici vstupních iterátorů `X.begin()` a `X.end()`, které slouží k návštěvě prvků v daném pořadí. Některé specializace také umožňují napsat `X.size()` k určení délky řízené sekvence.
 
-## <a name="base"></a> collection_adapter::Base (STL/CLR)
+## <a name="base"></a>collection_adapter:: Base (STL/CLR)
 
-Označí rozhraní zabalené BCL.
+Určuje zabalené rozhraní BCL.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -181,7 +180,7 @@ Coll^ base();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí uložený rozhraní popisovač BCL.
+Členská funkce vrátí uložený popisovač rozhraní BCL.
 
 ### <a name="example"></a>Příklad
 
@@ -213,7 +212,7 @@ x x x x x x
 base() same = True
 ```
 
-## <a name="begin"></a> collection_adapter::begin (STL/CLR)
+## <a name="begin"></a>collection_adapter:: begin (STL/CLR)
 
 Určuje začátek řízené sekvence.
 
@@ -225,7 +224,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí vstupní iterátor, který určuje první prvek řízenou sekvenci nebo přesně za konec k prázdné sekvenci.
+Členská funkce vrátí vstupní iterátor, který určí první prvek řízené sekvence nebo těsně za konec prázdné sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -264,9 +263,9 @@ a b c
 *++begin() = b
 ```
 
-## <a name="collection_adapter_collection_adapter"></a> collection_adapter::collection_adapter (STL/CLR)
+## <a name="collection_adapter_collection_adapter"></a>collection_adapter:: collection_adapter (STL/CLR)
 
-Vytvoří objekt adaptér.
+Vytvoří objekt adaptéru.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -279,11 +278,11 @@ collection_adapter(Coll^ collection);
 
 #### <a name="parameters"></a>Parametry
 
-*Kolekce*<br/>
-Obslužná rutina BCL Zabalit.
+*kolekce*<br/>
+BCL popisovač pro zabalení.
 
-*doprava*<br/>
-Kopírovaný objekt.
+*Kliknutím*<br/>
+Objekt ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -297,13 +296,13 @@ Konstruktor:
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-Inicializuje uložený popisovač s `right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
+Inicializuje uložený popisovač s `right.`[collection_adapter:: Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
 
 Konstruktor:
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-Inicializuje uložený popisovač s `right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
+Inicializuje uložený popisovač s `right->`[collection_adapter:: Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
 
 Konstruktor:
 
@@ -358,9 +357,9 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="difference_type"></a> collection_adapter::difference_type (STL/CLR)
+## <a name="difference_type"></a>collection_adapter::d ifference_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma prvky.
+Typy podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -370,7 +369,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje počet podepsaný prvků.
+Typ popisuje počet podepsaných prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -410,7 +409,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="end"></a> collection_adapter::end (STL/CLR)
+## <a name="end"></a>collection_adapter:: end (STL/CLR)
 
 Určuje konec řízené sekvence.
 
@@ -422,7 +421,7 @@ iterator end();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí vstupní iterátor, který ukazuje za konec řízené sekvence.
+Členská funkce vrátí vstupní iterátor, který odkazuje hned za konec řízené sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -455,7 +454,7 @@ int main()
 a b c
 ```
 
-## <a name="iterator"></a> collection_adapter::iterator (STL/CLR)
+## <a name="iterator"></a>collection_adapter:: iterátor (STL/CLR)
 
 Typ iterátoru řízené sekvence
 
@@ -467,7 +466,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T1` , který může sloužit jako ke vstupnímu iterátoru řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T1`, který může sloužit jako vstupní iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -500,7 +499,7 @@ int main()
 a b c
 ```
 
-## <a name="key_type"></a> collection_adapter::key_type (STL/CLR)
+## <a name="key_type"></a>collection_adapter:: key_type (STL/CLR)
 
 Typ klíče slovníku.
 
@@ -512,7 +511,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Key`, ve specializaci pro `IDictionary` nebo `IDictionary<Value>`; v opačném případě není definován.
+Typ je synonymum pro parametr šablony `Key`v specializaci pro `IDictionary` nebo `IDictionary<Value>`; v opačném případě není definováno.
 
 ### <a name="example"></a>Příklad
 
@@ -550,7 +549,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> collection_adapter::mapped_type (STL/CLR)
+## <a name="mapped_type"></a>collection_adapter:: mapped_type (STL/CLR)
 
 Typ hodnoty slovníku.
 
@@ -562,7 +561,7 @@ typedef Value mapped_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Value`, ve specializaci pro `IDictionary` nebo `IDictionary<Value>`; v opačném případě není definován.
+Typ je synonymum pro parametr šablony `Value`v specializaci pro `IDictionary` nebo `IDictionary<Value>`; v opačném případě není definováno.
 
 ### <a name="example"></a>Příklad
 
@@ -600,9 +599,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::Operator = (STL/CLR)
+## <a name="op_eq"></a>collection_adapter:: operator = (STL/CLR)
 
-Nahradí uloženou BCL popisovač.
+Nahradí uložený popisovač BCL.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -612,12 +611,12 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Adaptér pro kopírování.
+*Kliknutím*<br/>
+Adaptér ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahrazení uložené popisovač BCL kopie uložené BCL úchytu v *správné*.
+Operátor členu kopíruje *přímo* na objekt a potom vrátí `*this`. Použijete ji k nahrazení uloženého popisovače BCL kopií uloženého popisovače BCL *přímo*.
 
 ### <a name="example"></a>Příklad
 
@@ -657,7 +656,7 @@ a b c
 a b c
 ```
 
-## <a name="reference"></a> collection_adapter::Reference (STL/CLR)
+## <a name="reference"></a>collection_adapter:: Reference (STL/CLR)
 
 Typ odkazu na prvek
 
@@ -669,7 +668,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje odkaz na element.
+Typ popisuje odkaz na prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -705,7 +704,7 @@ int main()
 a b c
 ```
 
-## <a name="size"></a> collection_adapter::size (STL/CLR)
+## <a name="size"></a>collection_adapter:: Size (STL/CLR)
 
 Spočítá počet prvků.
 
@@ -717,7 +716,7 @@ size_type size();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí délku objektu řízené sekvence. Není definovaný ve specializaci pro `IEnumerable` nebo `IEnumerable<Value>`.
+Členská funkce vrací délku řízené sekvence. Není definován v specializaci pro `IEnumerable` nebo `IEnumerable<Value>`.
 
 ### <a name="example"></a>Příklad
 
@@ -748,9 +747,9 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="size_type"></a> collection_adapter::size_type (STL/CLR)
+## <a name="size_type"></a>collection_adapter:: size_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma elementu.
+Typ podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -760,7 +759,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje počet prvků záporná.
+Typ popisuje nezáporný počet prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -793,7 +792,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="swap"></a> collection_adapter::swap (STL/CLR)
+## <a name="swap"></a>collection_adapter:: swap (STL/CLR)
 
 Zamění obsah dvou kontejnerů.
 
@@ -805,12 +804,12 @@ void swap(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Kontejner pro obsah s.
+*Kliknutím*<br/>
+Kontejner pro prohození obsahu pomocí.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Zamění uložené popisovače BCL mezi `*this` a *správné*.
+Členská funkce přemění uložené BCL popisovače mezi `*this` a *Right*.
 
 ### <a name="example"></a>Příklad
 
@@ -862,7 +861,7 @@ x x x x x
 a b c
 ```
 
-## <a name="value_type"></a> collection_adapter::value_type (STL/CLR)
+## <a name="value_type"></a>collection_adapter:: value_type (STL/CLR)
 
 Typ prvku
 
@@ -874,7 +873,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony *hodnotu*, pokud jsou k dispozici ve specializaci; v opačném případě je synonymum pro `System::Object^`.
+Typ je synonymum pro *hodnotu*parametru šablony, pokud se nachází v specializaci. v opačném případě se jedná o synonymum pro `System::Object^`.
 
 ### <a name="example"></a>Příklad
 
@@ -911,9 +910,9 @@ int main()
 a b c
 ```
 
-## <a name="make_collection"></a> make_collection – (STL/CLR)
+## <a name="make_collection"></a>make_collection (STL/CLR)
 
-Ujistěte se, `range_adapter` z páru iterátoru.
+Vytvoří `range_adapter` z páru iterátorů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -925,17 +924,17 @@ template<typename Iter>
 #### <a name="parameters"></a>Parametry
 
 *ITER*<br/>
-Typ zabalené iterátory.
+Typ zabaleného iterátoru.
 
 *první*<br/>
-První iterátor, který chcete zabalit.
+První iterátor, který se má zabalit
 
-*last*<br/>
-Druhý iterátor zabalit.
+*posledního*<br/>
+Druhý iterátor pro zabalení.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí `gcnew range_adapter<Iter>(first, last)`. Lze použít k sestavení `range_adapter<Iter>` objekt z pár iterátorů.
+Funkce šablony vrací `gcnew range_adapter<Iter>(first, last)`. Použijete ji k vytvoření objektu `range_adapter<Iter>` z páru iterátorů.
 
 ### <a name="example"></a>Příklad
 
@@ -989,9 +988,9 @@ SyncRoot not nullptr = True
 | a b c |
 ```
 
-## <a name="range_adapter"></a> range_adapter – (STL/CLR)
+## <a name="range_adapter"></a>range_adapter (STL/CLR)
 
-Třída šablony, která obaluje pár iterátorů, které se používají k implementaci několika rozhraní knihovny třídy Base (BCL). Použít range_adapter – k manipulaci s rozsahem STL/CLR, jako by šlo BCL kolekce.
+Třída šablony, která zabalí dvojici iterátorů, které slouží k implementaci několika rozhraní BCL (Base Class Library). Použijete range_adapter k manipulaci s rozsahem STL/CLR, jako by šlo o kolekci BCL.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1009,34 +1008,34 @@ template<typename Iter>
 #### <a name="parameters"></a>Parametry
 
 *ITER*<br/>
-Typ přidružený k zabalené iterátory.
+Typ přidružený k zabalenému iterátoru.
 
 ### <a name="members"></a>Členové
 
 |Členská funkce|Popis|
 |---------------------|-----------------|
-|[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|Vytvoří objekt adaptér.|
+|[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|Vytvoří objekt adaptéru.|
 
 |Operátor|Popis|
 |--------------|-----------------|
-|[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|Nahradí pár uložený iterátor.|
+|[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|Nahradí uložený pár iterátorů.|
 
 ### <a name="interfaces"></a>Rozhraní
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|<xref:System.Collections.IEnumerable>|Provede iteraci prvků v kolekci.|
-|<xref:System.Collections.ICollection>|Spravuje skupiny prvků.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Iteruje zadaný elementů v kolekci...|
-|<xref:System.Collections.Generic.ICollection%601>|Udržuje typy prvků.|
+|<xref:System.Collections.IEnumerable>|Projde prvky v kolekci.|
+|<xref:System.Collections.ICollection>|Udržuje skupinu prvků.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Prochází pomocí typových elementů v kolekci..|
+|<xref:System.Collections.Generic.ICollection%601>|Udržuje skupinu typových prvků.|
 
 ### <a name="remarks"></a>Poznámky
 
-Range_adapter – ukládá pár iterátorů, které zase vymezují sekvenci prvků. Daný objekt implementuje čtyři BCL rozhraní, které umožňují iteraci v rámci elementů v pořadí. Pomocí této třídy šablony pro manipulaci s rozsahy STL/CLR podobně jako kontejnery BCL.
+Range_adapter ukládá pár iterátorů, což zase vymezují sekvenci prvků. Objekt implementuje čtyři rozhraní BCL, která umožňují iterovat prvky v pořadí. Tuto třídu šablony použijete k manipulaci s rozsahy STL/CLR podobně jako BCL kontejnery.
 
-## <a name="range_adapter_op_eq"></a> range_adapter::Operator = (STL/CLR)
+## <a name="range_adapter_op_eq"></a>range_adapter:: operator = (STL/CLR)
 
-Nahradí pár uložený iterátor.
+Nahradí uložený pár iterátorů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1046,12 +1045,12 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Adaptér pro kopírování.
+*Kliknutím*<br/>
+Adaptér ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahrazení uloženého iterátoru dvojice kopii uloženého iterátoru dvojice v *správné*.
+Operátor členu kopíruje *přímo* na objekt a potom vrátí `*this`. Použijete ho k nahrazení uloženého páru iterátoru s kopií uloženého páru iterátoru *vpravo*.
 
 ### <a name="example"></a>Příklad
 
@@ -1091,9 +1090,9 @@ a b c
 a b c
 ```
 
-## <a name="range_adapter_range_adapter"></a> range_adapter::range_adapter (STL/CLR)
+## <a name="range_adapter_range_adapter"></a>range_adapter:: range_adapter (STL/CLR)
 
-Vytvoří objekt adaptér.
+Vytvoří objekt adaptéru.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1107,13 +1106,13 @@ range_adapter(Iter first, Iter last);
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-První iterátor, který chcete zabalit.
+První iterátor, který se má zabalit
 
-*last*<br/>
-Druhý iterátor zabalit.
+*posledního*<br/>
+Druhý iterátor pro zabalení.
 
-*doprava*<br/>
-Kopírovaný objekt.
+*Kliknutím*<br/>
+Objekt ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1121,25 +1120,25 @@ Konstruktor:
 
 `range_adapter();`
 
-Inicializuje uloženého iterátoru dvojice s výchozí vyrobený iterátory.
+Inicializuje uložený pár iterátorů s výchozími vytvořenými iterátory.
 
 Konstruktor:
 
 `range_adapter(range_adapter<Iter>% right);`
 
-Inicializuje uloženého iterátoru dvojice zkopírováním uložený v pár *správné*.
+Inicializuje uložený pár iterátorů zkopírováním dvojice uložených *vpravo*.
 
 Konstruktor:
 
 `range_adapter(range_adapter<Iter>^ right);`
 
-Inicializuje uloženého iterátoru dvojice zkopírováním uložený v pár `*right`.
+Inicializuje uložený pár iterátorů zkopírováním páru uloženého v `*right`.
 
 Konstruktor:
 
 `range_adapter(Iter^ first, last);`
 
-Inicializuje uloženého iterátoru dvojice s *první* a *poslední*.
+Inicializuje uložený pár iterátorů s *první* a *Poslední*.
 
 ### <a name="example"></a>Příklad
 

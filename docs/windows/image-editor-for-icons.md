@@ -9,11 +9,8 @@ f1_keywords:
 - vc.editors.bitmap
 - vc.editors.dialog.GridSettings
 - vc.editors.gridsettings
-- vc.editors.bitmap
 - vc.editors.icon
 - vc.editors.texttool
-- vc.editors.bitmap
-- vc.editors.icon
 helpviewer_keywords:
 - editors, images
 - resource editors [C++], graphics
@@ -42,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c1c09f8ffe0ef8d4759b9242ba30e8fafaaeb01
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514217"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443762"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor obrázků pro ikony (C++)
 
@@ -86,8 +83,8 @@ Nabídka **Obrázek** , která se zobrazí pouze v případě, že je **Editor o
 |**Kreslit neprůhledné**|Když se tato možnost vybere, převede aktuální výběr na neprůhledný.<br/><br/>Pokud je zaškrtnuto, převede aktuální výběr na průhledný.|
 |**Editor panelu nástrojů**|Otevře se [dialogové okno nový prostředek panelu nástrojů](../windows/new-toolbar-resource-dialog-box.md).|
 |**Nastavení mřížky**|Otevře dialogové okno **Nastavení mřížky** , ve kterém můžete pro svůj obrázek zadat mřížku.|
-|**Nový typ obrázku**|Otevře [dialogové okno \<nový typ obrázku > zařízení](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Jeden prostředek ikony může obsahovat několik imagí různých velikostí a systém Windows může použít vhodnou velikost ikony v závislosti na tom, jak se bude zobrazovat. Nový typ zařízení nemění velikost ikony, ale místo toho vytvoří novou image v rámci této ikony. Platí pouze pro ikony a kurzory.|
-|**Aktuální ikona a typ obrázku ukazatele**|Otevře podnabídku, která obsahuje prvních devět dostupných imagí kurzoru nebo ikon. Poslední příkaz v podnabídce, **Další**, otevře [dialogové okno otevřít \<>ou bitovou kopii zařízení](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Nový typ obrázku**|Otevře [dialogové okno Nový typ obrázku > \<zařízení](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Jeden prostředek ikony může obsahovat několik imagí různých velikostí a systém Windows může použít vhodnou velikost ikony v závislosti na tom, jak se bude zobrazovat. Nový typ zařízení nemění velikost ikony, ale místo toho vytvoří novou image v rámci této ikony. Platí pouze pro ikony a kurzory.|
+|**Aktuální ikona a typ obrázku ukazatele**|Otevře podnabídku, která obsahuje prvních devět dostupných imagí kurzoru nebo ikon. Poslední příkaz v podnabídce, **Další**, otevře [dialogové okno otevřít \<zařízení >m obrázku](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
 |**Odstranit typ obrázku**|Odstraní vybranou image zařízení.|
 |**Nástroje**|Spustí podnabídku, která obsahuje všechny nástroje, které jsou k dispozici na panelu nástrojů **Editor obrázků** .|
 
@@ -104,7 +101,7 @@ Dialogové okno **Nastavení mřížky** umožňuje zadat nastavení mřížky p
 
 Panel nástrojů **Editor obrázků** obsahuje nástroje pro kreslení, malování, zadávání textu, mazání a manipulaci s zobrazeními. Obsahuje také selektor možností, ve kterém můžete vybrat možnosti pro použití jednotlivých nástrojů. Můžete například vybrat z různých šířek štětců, faktorů zvětšení a stylů čáry.
 
-Všechny nástroje, které jsou k dispozici na panelu nástrojů **Editor obrázků** , jsou také k dispozici v nabídce**nástroje**pro **Image** > . Pokud chcete použít panel nástrojů **Editor obrázků** a selektor **možností** , vyberte požadovaný nástroj nebo možnost.
+Všechny nástroje, které jsou k dispozici na panelu nástrojů **Editor obrázků** , jsou také k dispozici v nabídce > **nástroje**pro **Image** nabídky. Pokud chcete použít panel nástrojů **Editor obrázků** a selektor **možností** , vyberte požadovaný nástroj nebo možnost.
 
 ![Panel nástrojů Editor obrázků](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Panel nástrojů **Editor obrázků**
@@ -114,7 +111,7 @@ Panel nástrojů **Editor obrázků**
 
 Vzhledem k tomu, že mnohé z nástrojů pro kreslení jsou k dispozici z [klávesnice](../windows/accelerator-keys-image-editor-for-icons.md), někdy je užitečné skrýt panel nástrojů **Editor obrázků** .
 
-- Chcete-li zobrazit nebo skrýt panel nástrojů **Editor obrázků** , přejděte do nabídky**panely nástrojů** **zobrazení** > a vyberte **Editor obrázků**.
+- Chcete-li zobrazit nebo skrýt panel nástrojů **Editor obrázků** , přejděte do nabídky **zobrazení** > **panely nástrojů** a vyberte **Editor obrázků**.
 
 > [!NOTE]
 > Prvky z tohoto panelu nástrojů nebudou k dispozici, pokud soubor obrázku z aktuálního projektu nebo řešení není otevřen v **editoru obrázků**.
@@ -130,7 +127,7 @@ Selektor **možností** na panelu nástrojů **editoru obrázků**
 
 Pomocí dialogového okna **textový nástroj** můžete přidat text k prostředku kurzoru, rastrového obrázku nebo ikony.
 
-Chcete-li získat přístup k tomuto dialogovému oknu, otevřete **Editor obrázků** a přejděte do nabídky**nástroje**pro **obrázky** > a pak vyberte příkaz **textový nástroj** .
+Chcete-li získat přístup k tomuto dialogovému oknu, otevřete **Editor obrázků** a přejděte do nabídky **Image** > **nástroje**a pak vyberte příkaz **textový nástroj** .
 
 > [!TIP]
 > Můžete kliknout pravým tlačítkem myši na dialogové okno **textový nástroj** a získat přístup k výchozí místní nabídce, která obsahuje seznam standardních příkazů systému Windows.
@@ -143,19 +140,19 @@ Chcete-li získat přístup k tomuto dialogovému oknu, vyberte tlačítko **pí
 |---|---|
 |**Písma**|Zobrazuje dostupná písma.|
 |**Styl písma**|Vypíše dostupné styly pro zadané písmo.|
-|**Hodnota**|Vypisuje dostupné velikosti bodů pro zadané písmo.|
-|**Vzorku**|Zobrazuje ukázku způsobu, jakým se text zobrazí se zadaným nastavením písma.|
-|**skript**|Vypisuje dostupné jazykové skripty pro zadané písmo.<br/><br/>Když vyberete jiný jazykový skript, znaková sada pro tento jazyk bude k dispozici pro vytváření vícejazyčných dokumentů.|
+|**Velikost**|Vypisuje dostupné velikosti bodů pro zadané písmo.|
+|**Ukázka**|Zobrazuje ukázku způsobu, jakým se text zobrazí se zadaným nastavením písma.|
+|**Pravidel**|Vypisuje dostupné jazykové skripty pro zadané písmo.<br/><br/>Když vyberete jiný jazykový skript, znaková sada pro tento jazyk bude k dispozici pro vytváření vícejazyčných dokumentů.|
 
 #### <a name="to-change-the-font-of-text-on-an-image"></a>Změna písma textu obrázku
 
 Tady je příklad, jak přidat text do ikony v aplikaci pro Windows a manipulovat s písmem textu.
 
-1. Vytvořte aplikaci C++ model Windows Forms. Podrobnosti najdete v tématu [How to: Vytváření aplikací](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90))model Windows Forms. Ve výchozím nastavení je do projektu přidán soubor *App. ico* .
+1. Vytvořte aplikaci C++ model Windows Forms. Podrobnosti naleznete v tématu [How to: Create model Windows Forms Applications](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Ve výchozím nastavení je do projektu přidán soubor *App. ico* .
 
 1. V **Průzkumník řešení**dvakrát klikněte na soubor *App. ico*. Otevře se **Editor obrázků** .
 
-1. Přejděte na**nástroje** pro **obrázky** > nabídky a vyberte **textový nástroj**.
+1. Přejít na **Obrázek** nabídky > **nástroje** a vybrat **textový nástroj**.
 
 1. V dialogovém okně **textový nástroj** zadejte *C++* text do pole prázdná oblast. Tento text se zobrazí v poli umožňujícím změnu velikosti umístěnou v levém horním rohu *App. ico* v **editoru obrázků**.
 
@@ -200,7 +197,7 @@ Ve výchozím nastavení **Editor obrázků** zobrazí zobrazení v levém podok
 
 1. Vyberte podokno **editoru obrázků** , jehož faktor zvětšení chcete změnit.
 
-1. Na panelu nástrojů **Editor obrázků** vyberte šipku napravo od nástroje **Lupa** a v podnabídce vyberte zvětšení-faktor: **1x**, **2x**, **6X**nebo **8rychlostní**.
+1. Na panelu nástrojů **Editor obrázků** vyberte šipku napravo od nástroje **Lupa** a v podnabídce vyberte zvětšení-faktor: **1x**, **2x**, **6X**nebo **8x**.
 
    > [!NOTE]
    > Chcete-li vybrat jiný faktor zvětšení než ty, které jsou uvedeny v nástroji **Lupa** , použijte klávesy akcelerátoru.
@@ -209,15 +206,15 @@ Ve výchozím nastavení **Editor obrázků** zobrazí zobrazení v levém podok
 
 Pro všechna podokna **editoru obrázků** s faktorem zvětšení 4 nebo vyšší můžete zobrazit mřížku, která odděluje jednotlivé pixely v imagi.
 
-1. Přejděte na**Nastavení mřížky** **obrázku** > nabídky.
+1. Přejít na **Obrázek** nabídky > **Nastavení mřížky**
 
 1. Zaškrtněte políčko **Mřížka pixelů** pro zobrazení mřížky, nebo zrušte zaškrtnutí políčka pro skrytí mřížky.
 
 ## <a name="requirements"></a>Požadavky
 
-Žádné
+Žádná
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 [Ikony](/windows/win32/menurc/icons)

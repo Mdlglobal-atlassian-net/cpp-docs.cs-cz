@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: e993b694e03c83ef2b2bc96ecefc2d37e48f7747
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 4e13402fbff40ff810e71f78f43060cb59f03cd9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419026"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441638"
 ---
 # <a name="hash_map-class"></a>hash_map – třída
 
@@ -124,7 +124,7 @@ Typ dat prvku, který bude uložen v hash_map.
 Typ, který obsahuje dva objekty funkce, jeden z porovnání třídy může porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a funkci hash, která je unárním predikátem mapování hodnot klíčů prvků na nepodepsaná celá čísla typu `size_t`. Tento argument je nepovinný a hash_compare <`Key`. výchozí hodnota je menší <`Key`> >.
 
 \ *přidělování*
-Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování a navracení paměti hash_map. Tento argument je nepovinný a výchozí hodnota je < párování < const `Key`, `Type`> >.
+Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování a navracení paměti hash_map. Tento argument je nepovinný a výchozí hodnota je\<párování < const `Key`, `Type`> >.
 
 ## <a name="remarks"></a>Poznámky
 

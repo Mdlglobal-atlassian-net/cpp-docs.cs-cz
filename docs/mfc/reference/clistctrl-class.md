@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 83d7c0223e2ca4a40560e29932beca1f17f74f80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418676"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442691"
 ---
 # <a name="clistctrl-class"></a>CListCtrl – třída
 
@@ -1381,6 +1381,7 @@ public:
 ### <a name="example"></a>Příklad
 
 Následující příklad kódu ukazuje metodu `GetGroupInfoByIndex`. V dřívější části tohoto příkladu kódu jsme vytvořili ovládací prvek seznamu zobrazení, který v zobrazení sestavy zobrazuje dva sloupce s názvem ClientID a "stupeň". Následující příklad kódu načte informace o skupině, jejíž index je 0, pokud taková skupina existuje.
+
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1457,6 +1458,7 @@ Tato metoda pošle zprávu [LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgro
 ### <a name="example"></a>Příklad
 
 Následující příklad kódu definuje proměnnou, `m_listCtrl`, která se používá pro přístup k aktuálnímu ovládacímu prvku zobrazení seznamu. Tato proměnná se používá v následujícím příkladu.
+
 ```cpp
 public:
     // Variable used to access the list control.
@@ -4240,6 +4242,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 Funkce porovnání musí vracet zápornou hodnotu, pokud by první položka měla předcházet druhé, kladné hodnotě, pokud má první položka následovat za sekundu, nebo nula, pokud jsou obě položky stejné.
 
 Parametr *lParam1* je hodnota 32-bit přidružená k první položce, která je porovnána, a parametr *lParam2* je hodnota přidružená k druhé položce. Jedná se o hodnoty, které byly zadány v *lParam* členu struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) položky, když byly vloženy do seznamu. Parametr *lParamSort* je stejný jako hodnota *dwData* .
@@ -4300,6 +4303,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 Tato zpráva se podobá [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems), s výjimkou typu informací předaných funkci porovnání. V [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)jsou *lParam1* a *lParam2* hodnoty položek, které se mají porovnat. V [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)je *lParam1* aktuální index první položky k porovnání a *lParam2* je aktuální index druhé položky. Můžete odeslat zprávu [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext) a získat další informace o položce.
 
 Funkce porovnání musí vracet zápornou hodnotu, pokud by první položka měla předcházet druhé, kladné hodnotě, pokud má první položka následovat za sekundu, nebo nula, pokud jsou obě položky stejné.

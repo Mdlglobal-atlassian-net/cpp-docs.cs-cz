@@ -1,19 +1,17 @@
 ---
-title: 'Výchozí:: (type_name):: GetHashCode – metoda'
+title: 'výchozí: metoda:(type_name):: GetHashCode'
 ms.date: 12/30/2016
-f1_keywords:
-- VCCORLIB/Platform::Object::GetHashCode
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
-ms.openlocfilehash: 427756e8e87162738bd2297f1f6edc5af8d7b194
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f64607ab21cd0fd5deccbd16f3f69f96e4d245b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176108"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444314"
 ---
-# <a name="defaulttypenamegethashcode-method"></a>Výchozí:: (type_name):: GetHashCode – metoda
+# <a name="defaulttype_namegethashcode-method"></a>výchozí: metoda:(type_name):: GetHashCode
 
-Vrátí kód hash této instance.
+Vrátí hodnotu hash pro tuto instanci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,14 +25,14 @@ Kód hash této instance
 
 ### <a name="requirements"></a>Požadavky
 
-**Minimální podporovaná klienta:** Windows 8
+**Minimální podporovaný klient:** Systém Windows 8
 
-**Minimální podporovaná serveru:** Windows Server 2012
+**Minimální podporovaný Server:** Windows Server 2012
 
-**Namespace:** výchozí
+**Obor názvů:** výchozí
 
-**Záhlaví:** vccorlib.h
+**Záhlaví:** vccorlib. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [default – obor názvů](../cppcx/default-namespace.md)

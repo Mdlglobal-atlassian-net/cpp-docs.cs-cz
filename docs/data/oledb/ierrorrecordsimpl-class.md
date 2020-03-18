@@ -32,8 +32,6 @@ f1_keywords:
 - IErrorRecordsImpl::GetCustomErrorObject
 - ATL.IErrorRecordsImpl.GetCustomErrorObject
 - IErrorRecordsImpl.GetCustomErrorObject
-- GetCustomErrorObject
-- GetErrorInfo
 - IErrorRecordsImpl.GetErrorInfo
 - IErrorRecordsImpl::GetErrorInfo
 - IErrorRecordsImpl::GetErrorParameters
@@ -65,16 +63,16 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: b1ab6b0984cbf84690d69a3ffe7eb3931bf59563
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd9e1f39d30dc8289b0236bf655c87da04b14de6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390955"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447361"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl – třída
 
-Implementuje rozhraní OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) rozhraní, přidání záznamů do a načtení záznamů z datového členu ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) typu **catlarray – <** `RecordClass`**>**.
+Implementuje rozhraní OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) , přidávání záznamů do a načítání záznamů z datového členu ([M_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) typu **CAtlArray <** `RecordClass` **>** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,15 +83,15 @@ class IErrorRecordsImpl : public IErrorRecords
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Třída odvozená z `IErrorRecordsImpl`.
+*Š*<br/>
+Třída odvozená od `IErrorRecordsImpl`.
 
 *RecordClass*<br/>
-Třída, která představuje objekt error OLE DB.
+Třída, která představuje objekt chyby OLE DB.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -101,32 +99,32 @@ Třída, která představuje objekt error OLE DB.
 
 |||
 |-|-|
-|[GetErrorDescriptionString](#geterrordescriptionstring)|Získá řetězec popisu chyby z záznam chyby.|
-|[GetErrorGUID](#geterrorguid)|Získá chybu identifikátoru GUID z záznam chyby.|
-|[Geterrorhelpcontext –](#geterrorhelpcontext)|Získá ID kontextové nápovědy z záznam chyby.|
-|[Geterrorhelpfile –](#geterrorhelpfile)|Získá úplnou cestu v souboru nápovědy z záznam chyby.|
-|[GetErrorSource](#geterrorsource)|Získá zdrojový kód chyby z záznam chyby.|
+|[GetErrorDescriptionString](#geterrordescriptionstring)|Získá řetězec s popisem chyby z záznamu chyby.|
+|[GetErrorGUID](#geterrorguid)|Získá identifikátor GUID chyby z záznamu chyby.|
+|[GetErrorHelpContext](#geterrorhelpcontext)|Získá ID kontextu helpu z záznamu chyby.|
+|[GetErrorHelpFile](#geterrorhelpfile)|Získá úplnou cestu k souboru s názvem z záznamu chyby.|
+|[GetErrorSource](#geterrorsource)|Získá zdrojový kód chyby z záznamu chyby.|
 
 ### <a name="interface-methods"></a>Metody rozhraní
 
 |||
 |-|-|
-|[AddErrorRecord](#adderrorrecord)|Přidá záznam do objektu Chyba OLE DB.|
-|[GetBasicErrorInfo](#getbasicerrorinfo)|Vrátí základní informace o této chybě, jako je například návratový kód a číslo chyby specifické pro zprostředkovatele.|
-|[GetCustomErrorObject](#getcustomerrorobject)|Vrací ukazatel na rozhraní pro objekt vlastních chyb.|
-|[GetErrorInfo](#geterrorinfo)|Vrátí [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) ukazatel rozhraní na zadaný záznam.|
-|[Geterrorparameters –](#geterrorparameters)|Vrátí parametry chyby.|
-|[GetRecordCount](#getrecordcount)|Vrátí počet záznamů v záznamu objektu OLE DB.|
+|[AddErrorRecord](#adderrorrecord)|Přidá záznam do objektu chyby OLE DB.|
+|[GetBasicErrorInfo](#getbasicerrorinfo)|Vrátí základní informace o chybě, jako je návratový kód a číslo chyby specifické pro poskytovatele.|
+|[GetCustomErrorObject](#getcustomerrorobject)|Vrátí ukazatel na rozhraní objektu vlastní chyby.|
+|[GetErrorInfo](#geterrorinfo)|Vrátí ukazatel rozhraní [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) na zadaném záznamu.|
+|[GetErrorParameters](#geterrorparameters)|Vrátí parametry chyby.|
+|[GetRecordCount](#getrecordcount)|Vrátí počet záznamů v objektu OLE DB záznamu.|
 
 ### <a name="data-members"></a>Datové členy
 
 |||
 |-|-|
-|[m_rgErrors](#rgerrors)|Pole Chyba záznamů.|
+|[m_rgErrors](#rgerrors)|Pole záznamů chyb.|
 
-## <a name="geterrordescriptionstring"></a> IErrorRecordsImpl::GetErrorDescriptionString
+## <a name="geterrordescriptionstring"></a>IErrorRecordsImpl:: GetErrorDescriptionString
 
-Získá řetězec popisu chyby z záznam chyby.
+Získá řetězec s popisem chyby z záznamu chyby.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -137,15 +135,15 @@ LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Parametry
 
 *rCurError*<br/>
-`ERRORINFO` v záznamu `IErrorInfo` rozhraní.
+Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Ukazatel na řetězec popisující chybu.
 
-## <a name="geterrorguid"></a> IErrorRecordsImpl::GetErrorGUID
+## <a name="geterrorguid"></a>IErrorRecordsImpl:: GetErrorGUID
 
-Získá chybu identifikátoru GUID z záznam chyby.
+Získá identifikátor GUID chyby z záznamu chyby.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -156,15 +154,15 @@ REFGUID GetErrorGUID(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Parametry
 
 *rCurError*<br/>
-`ERRORINFO` v záznamu `IErrorInfo` rozhraní.
+Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Odkaz na identifikátor GUID pro chybu.
 
-## <a name="geterrorhelpcontext"></a> IErrorRecordsImpl::GetErrorHelpContext
+## <a name="geterrorhelpcontext"></a>IErrorRecordsImpl:: GetErrorHelpContext
 
-Získá ID kontextové nápovědy z záznam chyby.
+Získá ID kontextu helpu z záznamu chyby.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -175,15 +173,15 @@ DWORD GetErrorHelpContext(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Parametry
 
 *rCurError*<br/>
-`ERRORINFO` v záznamu `IErrorInfo` rozhraní.
+Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-ID kontextové nápovědy k chybě.
+ID kontextu nápovědu pro chybu.
 
-## <a name="geterrorhelpfile"></a> IErrorRecordsImpl::GetErrorHelpFile
+## <a name="geterrorhelpfile"></a>IErrorRecordsImpl:: GetErrorHelpFile
 
-Získá název cesty souboru nápovědy z záznam chyby.
+Získá název cesty souboru Help z záznamu chyby.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -194,15 +192,15 @@ LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Parametry
 
 *rCurError*<br/>
-`ERRORINFO` v záznamu `IErrorInfo` rozhraní.
+Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na řetězec, který obsahuje název cesty souboru nápovědy k chybě.
+Ukazatel na řetězec, který obsahuje název cesty souboru s nápovědu pro chybu.
 
-## <a name="geterrorsource"></a> IErrorRecordsImpl::GetErrorSource
+## <a name="geterrorsource"></a>IErrorRecordsImpl:: GetErrorSource
 
-Získá zdrojový kód, který způsobil chybu z záznam chyby.
+Získá zdrojový kód, který způsobil chybu v záznamu chyby.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -213,15 +211,15 @@ LPOLESTR GetErrorSource(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Parametry
 
 *rCurError*<br/>
-`ERRORINFO` v záznamu `IErrorInfo` rozhraní.
+Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na řetězec, který obsahuje zdrojový kód chyby.
+Ukazatel na řetězec obsahující zdrojový kód chyby.
 
-## <a name="adderrorrecord"></a> IErrorRecordsImpl::AddErrorRecord
+## <a name="adderrorrecord"></a>IErrorRecordsImpl:: AddErrorRecord
 
-Přidá záznam do objektu Chyba OLE DB.
+Přidá záznam do objektu chyby OLE DB.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -235,11 +233,11 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IErrorRecords:: AddErrorRecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="getbasicerrorinfo"></a> IErrorRecordsImpl::GetBasicErrorInfo
+## <a name="getbasicerrorinfo"></a>IErrorRecordsImpl:: GetBasicErrorInfo
 
-Vrátí základní informace o této chybě, jako je například návratový kód a číslo chyby specifické pro zprostředkovatele.
+Vrátí základní informace o chybě, jako je návratový kód a číslo chyby specifické pro poskytovatele.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -250,11 +248,11 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="getcustomerrorobject"></a> IErrorRecordsImpl::GetCustomErrorObject
+## <a name="getcustomerrorobject"></a>IErrorRecordsImpl:: GetCustomErrorObject
 
-Vrací ukazatel na rozhraní pro objekt vlastních chyb.
+Vrátí ukazatel na rozhraní objektu vlastní chyby.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -266,11 +264,11 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IErrorRecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="geterrorinfo"></a> IErrorRecordsImpl::GetErrorInfo
+## <a name="geterrorinfo"></a>IErrorRecordsImpl:: GetErrorInfo
 
-Vrátí [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) ukazatel rozhraní na zadaný záznam.
+Vrátí ukazatel rozhraní [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) na zadaném záznamu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -282,9 +280,9 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="geterrorparameters"></a> IErrorRecordsImpl::GetErrorParameters
+## <a name="geterrorparameters"></a>IErrorRecordsImpl:: GetErrorParameters
 
 Vrátí parametry chyby.
 
@@ -297,11 +295,11 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="getrecordcount"></a> IErrorRecordsImpl::GetRecordCount
+## <a name="getrecordcount"></a>IErrorRecordsImpl:: GetRecordCount
 
-Vrátí počet záznamů v záznamu objektu OLE DB.
+Vrátí počet záznamů v objektu OLE DB záznamu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -311,11 +309,11 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IErrorRecords:: GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="rgerrors"></a> IErrorRecordsImpl::m_rgErrors
+## <a name="rgerrors"></a>IErrorRecordsImpl:: m_rgErrors
 
-Pole Chyba záznamů.
+Pole záznamů chyb.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -323,7 +321,7 @@ Pole Chyba záznamů.
 CAtlArray< RecordClass > m_rgErrors;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

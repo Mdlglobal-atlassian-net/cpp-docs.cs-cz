@@ -25,7 +25,6 @@ f1_keywords:
 - _fputwchar
 - fputwchar
 - _fputtchar
-- fputchar
 - _fputchar
 helpviewer_keywords:
 - fputchar function
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b78c59b937a8854d7a36355173a1ccf4f219d541
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956937"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442960"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -60,12 +59,12 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*r*<br/>
 Znak, který se má zapsat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí napsaný znak. V případě **_fputchar**označuje návratová hodnota **EOF** chybu. V případě **_fputwchar**označuje návratová hodnota **WEOF** chybu. Pokud je c **null**, tyto funkce generují výjimku neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **EOF** (nebo **WEOF**) a nastaví **errno** na **EINVAL**.
+Každá z těchto funkcí vrátí napsaný znak. Pro **_fputchar**návratová hodnota **EOF** označuje chybu. U **_fputwchar**vrácená hodnota **WEOF** označuje chybu. Pokud je c **null**, tyto funkce generují výjimku neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **EOF** (nebo **WEOF**) a nastaví **errno** na **EINVAL**.
 
 Další informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -83,7 +82,7 @@ Obě tyto funkce zapisují jeden znak *c* do **stdout** a podle potřeby posunou
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fputchar**|\<stdio.h>|
+|**_fputchar**|\<stdio. h >|
 |**_fputwchar**|\<stdio. h > nebo \<WCHAR. h >|
 
 Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou –**stdin**, **stdout**a **stderr**– musí být přesměrované před tím, než je funkce běhového běhu v aplikacích pro UWP můžou použít. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
@@ -113,7 +112,7 @@ int main( void )
 This is a test of _fputchar!!
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

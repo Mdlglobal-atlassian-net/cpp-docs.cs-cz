@@ -1,17 +1,15 @@
 ---
 title: Přejmenovat atribut import
 ms.date: 08/29/2019
-f1_keywords:
-- Rename
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-ms.openlocfilehash: ef1f64e0c268f850899efe499f7b1ad3991dd570
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 520369f0308078fead2947e27a512f25a3ad3fab
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216661"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447493"
 ---
 # <a name="rename-import-attribute"></a>Přejmenovat atribut import
 
@@ -21,14 +19,14 @@ Funguje kolem problémů kolize názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#import** *typ – Knihovna* **Rename (** "*oldname*" **;** "*newname*" **)**
+> **#import** přejmenování *knihovny typů* **(** "*oldname*" **,** "*Nový_název*" **)**
 
 ### <a name="parameters"></a>Parametry
 
 *OldName*\
 Starý název v knihovně typů.
 
-*Nového*\
+*Nový_název*\
 Název, který se má použít místo starého názvu
 
 ## <a name="remarks"></a>Poznámky
@@ -40,23 +38,23 @@ Atribut **přejmenování** lze použít, pokud se název v knihovně typů shod
 > [!NOTE]
 > Náhrada je určena pro název, který se používá v knihovně typů, nikoli pro název, který se používá ve výsledném hlavičkovém souboru.
 
-Předpokládejme například, že vlastnost s názvem `MyParent` existuje v knihovně typů a makro `GetMyParent` je definováno v souboru hlaviček a použito před `#import`. Vzhledem `GetMyParent` k tomu, že je výchozím názvem funkce obálky pro vlastnost zpracování `get` chyb, dojde ke kolizi názvů. Chcete-li tento problém obejít, použijte následující atribut v `#import` příkazu:
+Předpokládejme například, že vlastnost s názvem `MyParent` existuje v knihovně typů a makro `GetMyParent` je definováno v souboru hlaviček a použito před `#import`. Vzhledem k tomu, že `GetMyParent` je výchozím názvem funkce obálky pro vlastnost `get` zpracování chyb, dojde k kolizi názvů. Chcete-li tento problém obejít, použijte následující atribut v příkazu `#import`:
 
 ```cpp
 #import MyTypeLib.tlb rename("MyParent","MyParentX")
 ```
 
-který přejmenuje název `MyParent` v knihovně typů. Pokus o přejmenování `GetMyParent` názvu obálky se nezdařil:
+Přejmenuje název `MyParent` v knihovně typů. Pokus o přejmenování názvu obálky `GetMyParent` se nezdařil:
 
 ```cpp
 #import MyTypeLib.tlb rename("GetMyParent","GetMyParentX")
 ```
 
-Je to proto, že `GetMyParent` název se vyskytuje pouze ve výsledném hlavičkovém souboru knihovny typů.
+Je to proto, že název `GetMyParent` pouze v souboru hlaviček výsledné knihovny typů.
 
 **Specifické C++ pro konec**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import direktiva](../preprocessor/hash-import-directive-cpp.md)

@@ -4,24 +4,24 @@ ms.date: 07/21/2017
 f1_keywords:
 - C3446
 helpviewer_keywords:
-- C3445
+- C3446
 ms.assetid: 33064548-24e4-46f1-beb1-476e3c3b3fbf
-ms.openlocfilehash: 8145e0cdd97022ebdcc1a7ce38c8860a005945b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f9ebd274a90dffe00b0e8375cc374acf46e7a08
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182441"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447117"
 ---
 # <a name="compiler-error-c3446"></a>Chyba kompilátoru C3446
 
->"*třídy*': výchozí inicializátor členu není povolený pro člena hodnotové třídy.
+>*Class*: výchozí inicializátor členů není povolený pro člena hodnotové třídy.
 
-V sadě Visual Studio 2015 a starší kompilátor povoleno (ale ignorovat) výchozí inicializátor členu pro člena třídy value class. Výchozí inicializace hodnotová třída vždy nula inicializuje členy. výchozí konstruktor není povolená. V sadě Visual Studio 2017 výchozí inicializátory členů vyvolat chybu kompilátoru, jak je znázorněno v tomto příkladu:
+V aplikaci Visual Studio 2015 a starší kompilátor povolil (ale ignoruje) výchozí inicializátor členu pro člena hodnotové třídy. Výchozí inicializace třídy hodnot vždy nula – inicializuje členy; výchozí konstruktor není povolený. V aplikaci Visual Studio 2017 vyvolají výchozí Inicializátory členů chybu kompilátoru, jak je znázorněno v následujícím příkladu:
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3446 v sadě Visual Studio 2017 a novější:
+Následující ukázka generuje C3446 v aplikaci Visual Studio 2017 a novější:
 
 ```cpp
 // C3446.cpp
@@ -33,7 +33,7 @@ value struct V
 };
 ```
 
-Chcete-li chybu opravit, odeberte inicializátoru:
+Chcete-li chybu opravit, odeberte inicializátor:
 
 ```cpp
 // C3446b.cpp

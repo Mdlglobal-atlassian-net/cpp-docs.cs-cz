@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: e8afa7a5f5a7692f88ace4da08209b80f902b603
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420818"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445675"
 ---
 # <a name="iview-interface"></a>Rozhraní IView
 
@@ -54,6 +54,7 @@ Záhlaví: afxwinforms. h (definováno v sestavení atlmfc\lib\mfcmifc80.dll)
 ## <a name="onactivateview"></a>IView:: OnActivateView
 
 Volá se knihovnou MFC při aktivaci nebo deaktivaci zobrazení.
+
 ```
 void OnActivateView(bool activate);
 ```
@@ -66,6 +67,7 @@ Označuje, zda se zobrazení aktivuje nebo deaktivuje.
 ## <a name="oninitialupdate"></a>IView:: OnInitialUpdate
 
 Volá se rozhraním po prvním připojení zobrazení k dokumentu, ale před tím, než se zobrazení zpočátku zobrazí.
+
 ```
 void OnInitialUpdate();
 ```
@@ -73,6 +75,7 @@ void OnInitialUpdate();
 ## <a name="onupdate"></a>IView:: inupdate
 
 Volá se knihovnou MFC po úpravě dokumentu zobrazení.
+
 ```
 void OnUpdate();
 ```

@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - wexecvpe
-- execvpe
 - _wexecvpe
 - _execvpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49b7f4c55dd0c84807d6ed754ae9b45d63f37dcf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941742"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443008"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -90,22 +89,22 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 Každá z těchto funkcí načte a spustí nový proces a předá pole ukazatelů na argumenty příkazového řádku a pole ukazatelů do nastavení prostředí. Tyto funkce používají proměnnou prostředí **path** k vyhledání souboru, který má být spuštěn.
 
-Funkce **_execvpe** ověřují jejich parametry. Pokud je *cmdname* ukazatel s hodnotou null, nebo pokud je *argv* ukazatel s hodnotou null, ukazatel na prázdné pole nebo ukazatel na pole, které obsahuje prázdný řetězec jako první argument, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [ Ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí-1. Nespustí se žádný proces.
+Funkce **_execvpe** ověřují jejich parametry. Pokud je *cmdname* ukazatel s hodnotou null, nebo pokud je *argv* ukazatel s hodnotou null, ukazatel na prázdné pole nebo ukazatel na pole, které obsahuje prázdný řetězec jako první argument, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí-1. Nespustí se žádný proces.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_execvpe**|\<Process. h >|\<errno.h>|
-|**_wexecvpe**|\<Process. h > \<nebo WCHAR. h >|\<errno.h>|
+|**_execvpe**|\<Process. h >|\<errno. h >|
+|**_wexecvpe**|\<Process. h > nebo \<WCHAR. h >|\<errno. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [_exec, _Wexec Functions](../../c-runtime-library/exec-wexec-functions.md).
+Podívejte se na příklad v [_exec _Wexec Functions](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)<br/>

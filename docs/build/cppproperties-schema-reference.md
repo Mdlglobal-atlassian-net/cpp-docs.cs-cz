@@ -3,12 +3,12 @@ title: Odkaz na CppProperties. JSON
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417367"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442552"
 ---
 # <a name="cpppropertiesjson-reference"></a>Odkaz na CppProperties. JSON
 
@@ -28,7 +28,7 @@ Konfigurace může mít některou z následujících vlastností:
 |`forcedInclude`|Hlavička, která má být automaticky zahrnuta v každé kompilační jednotce (mapuje se na/FI pro MSVC nebo-include for Clang)|
 |`undefines`|Seznam maker, která se mají nedefinovat (mapuje se na/U pro MSVC)|
 |`intelliSenseMode`|Modul IntelliSense, který se má použít. Můžete zadat jednu z předdefinovaných variant specifických pro architekturu pro MSVC, RSZ nebo Clang.|
-|`environments`|Uživatelsky definované sady proměnných, které se chovají jako proměnné prostředí v příkazovém řádku a jsou dostupné pomocí $ {env.<VARIABLE>} podokně.|
+|`environments`|Uživatelsky definované sady proměnných, které se chovají jako proměnné prostředí v příkazovém řádku a jsou dostupné pomocí makra $ {env.\<VARIABLE >}.|
 
 ### <a name="intellisensemode-values"></a>hodnoty režim intellisensemode
 
@@ -162,7 +162,7 @@ Pokud má váš projekt složku zahrnutí a obsahuje také *Windows. h* a dalš�
 
 Pokud nevidíte očekávanou technologii IntelliSense, můžete řešit problémy tak, že v části **nástroje** > **Možnosti** > **textový editor** > **C/C++**  > **Rozšířené** a nastavení **Povolit protokolování** na **hodnotu true**. Pokud chcete začít, zkuste nastavit **úroveň protokolování** na 5 a **filtry protokolování** na 8.
 
-![Diagnostické protokoly](media/diagnostic-logging.png)
+![Protokolování diagnostiky](media/diagnostic-logging.png)
 
 Výstup je připojen do **okno výstup** a zobrazí se, když zvolíte možnost **Zobrazit výstup z: vizuálního C++ protokolu**. Výstup obsahuje mimo jiné seznam skutečných cest, které IntelliSense pokouší použít. Pokud cesty se neshodují s těmi v *CppProperties. JSON*, zkuste zavřít složku a odstranit podsložku *. vs* , která obsahuje data procházení v mezipaměti.
 

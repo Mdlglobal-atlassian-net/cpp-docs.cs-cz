@@ -5,25 +5,23 @@ f1_keywords:
 - ISessionPropertiesImpl
 - ISessionPropertiesImpl::GetProperties
 - ISessionPropertiesImpl.GetProperties
-- GetProperties
 - ISessionPropertiesImpl.SetProperties
-- SetProperties
 - ISessionPropertiesImpl::SetProperties
 helpviewer_keywords:
 - ISessionPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: ed8b7a271bc6ac234fc9276d6c88d26848da24f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50052e13371482fa0a8b6d66ef666b9801837501
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390682"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444030"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl – třída
 
-Poskytuje implementaci [ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85)) rozhraní.
+Poskytuje implementaci rozhraní [ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,15 +34,15 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Vaše třída odvozena od `ISessionPropertiesImpl`.
+*Š*<br/>
+Vaše třída odvozená od `ISessionPropertiesImpl`.
 
 *PropClass*<br/>
-Uživatelská vlastnost třídy, která výchozí hodnota je *T*.
+Uživatelsky definované třídy vlastností, které mají výchozí hodnotu *T*.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -52,16 +50,16 @@ Uživatelská vlastnost třídy, která výchozí hodnota je *T*.
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|Vrátí seznam vlastností ve skupině vlastností relace, které jsou aktuálně nastavená na relaci.|
-|[SetProperties –](#setproperties)|Nastaví vlastnosti ve skupině vlastností relace.|
+|[GetProperties](#getproperties)|Vrátí seznam vlastností ve skupině vlastností Session, které jsou aktuálně nastaveny v relaci.|
+|[SetProperties](#setproperties)|Nastaví vlastnosti ve skupině vlastností Session.|
 
 ## <a name="remarks"></a>Poznámky
 
-Povinné rozhraní na relace. Tato třída implementuje vlastnosti relace voláním statické funkce definované [mapy sady vlastností](../../data/oledb/begin-propset-map.md). Mapa set vlastnosti musí být zadán v třídě relace.
+Povinné rozhraní v relacích. Tato třída implementuje vlastnosti relace voláním statické funkce definované [mapou sady vlastností](../../data/oledb/begin-propset-map.md). V třídě relace by měla být zadána mapa sady vlastností.
 
-## <a name="getproperties"></a> ISessionPropertiesImpl::GetProperties
+## <a name="getproperties"></a>ISessionPropertiesImpl –:: GetProperties
 
-Vrátí seznam vlastností v `DBPROPSET_SESSION` skupiny vlastností, které jsou aktuálně nastavená na relaci.
+Vrátí seznam vlastností ve skupině vlastností `DBPROPSET_SESSION`, které jsou aktuálně nastaveny v relaci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -74,11 +72,11 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [ISessionProperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
+## <a name="setproperties"></a>ISessionPropertiesImpl –:: SetProperties
 
-Nastaví vlastnosti `DBPROPSET_SESSION` skupiny vlastností.
+Nastaví vlastnosti ve skupině vlastností `DBPROPSET_SESSION`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -89,9 +87,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [ISessionProperties:: SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

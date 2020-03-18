@@ -4,17 +4,17 @@ ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
-- VCCORLIB/Platform::Exception::HResult
-- VCCORLIB/Platform::Exception::Message
+- VCCORLIB/Platform::COMException::HResult
+- VCCORLIB/Platform::COMException::Message
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500551"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444291"
 ---
 # <a name="platformcomexception-class"></a>Platform:: COMException – třída
 
@@ -55,7 +55,7 @@ Třída COMException má následující vlastnosti.
 
 Následující předdefinované výjimky jsou odvozeny z COMException. Liší se od COMException pouze v jejich názvu, názvu svého konstruktoru a jejich podkladové hodnotě HRESULT.
 
-|Name|Základní HRESULT|Popis|
+|Název|Základní HRESULT|Popis|
 |----------|------------------------|-----------------|
 |COMException|*uživatelem definovaná hodnota HRESULT*|Vyvolána, pokud se vrátí nerozpoznaný HRESULT z volání metody modelu COM.|
 |AccessDeniedException|E_ACCESSDENIED|Vyvoláno, když je odepřen přístup k prostředku nebo funkci.|
@@ -73,11 +73,11 @@ Následující předdefinované výjimky jsou odvozeny z COMException. Liší se
 
 ### <a name="requirements"></a>Požadavky
 
-**Minimální podporovaný klient:** Windows 8
+**Minimální podporovaný klient:** Systém Windows 8
 
 **Minimální podporovaný Server:** Windows Server 2012
 
-**Hosting** Platforma
+**Obor názvů:** Platformy
 
 **Metadata:** Platform. winmd
 
@@ -129,6 +129,6 @@ public:property String^ Message {    String^ get();}
 
 Popis výjimky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

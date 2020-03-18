@@ -20,23 +20,19 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943414"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443047"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -52,16 +48,16 @@ double _cabs(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*od*<br/>
 Komplexní číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_cabs** vrátí absolutní hodnotu svého argumentu, pokud je úspěšná. Při přetečení **_cabs** vrátí **HUGE_VAL** a nastaví **errno** na **ERANGE**. Zpracování chyb můžete změnit pomocí [_matherr](matherr.md).
+**_cabs** vrátí absolutní hodnotu svého argumentu, pokud je úspěšná. Při přetečení **_cabs** vrátí **HUGE_VAL** a nastaví **errno** na **ERANGE**. Můžete změnit zpracování chyb pomocí [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_cabs** vypočítá absolutní hodnotu komplexního čísla, které musí být struktura typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* se skládá z reálné komponenty *x* a imaginární komponenty *y*. Volání **_cabs** vytvoří hodnotu ekvivalentní výrazu `sqrt( z.x * z.x + z.y * z.y )`.
+Funkce **_cabs** vypočítá absolutní hodnotu komplexního čísla, které musí být strukturou typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* se skládá z reálné komponenty *x* a imaginární komponenty *y*. Volání **_cabs** vytvoří hodnotu ekvivalentní `sqrt( z.x * z.x + z.y * z.y )`výrazu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -96,7 +92,7 @@ int main( void )
 The absolute value of 3.000000 + 4.000000i is 5.000000
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
