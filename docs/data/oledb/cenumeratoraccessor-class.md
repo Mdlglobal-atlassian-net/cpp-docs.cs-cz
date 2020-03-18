@@ -14,14 +14,12 @@ f1_keywords:
 - CEnumeratorAccessor.m_nType
 - CEnumeratorAccessor::m_nType
 - ATL.CEnumeratorAccessor.m_nType
-- m_nType
 - ATL::CEnumeratorAccessor::m_szDescription
 - CEnumeratorAccessor.m_szDescription
 - CEnumeratorAccessor::m_szDescription
 - ATL.CEnumeratorAccessor.m_szDescription
 - CEnumeratorAccessor::m_szName
 - ATL.CEnumeratorAccessor.m_szName
-- m_szName
 - ATL::CEnumeratorAccessor::m_szName
 - CEnumeratorAccessor.m_szName
 - CEnumeratorAccessor::m_szParseName
@@ -37,12 +35,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: dd698499607a5c4f04ccd01207d78fef9328c079
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d85f630a01ab7e2a07035a8a304a56be91eca8a9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501400"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442002"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor – třída
 
@@ -74,7 +72,7 @@ class CEnumeratorAccessor
 
 Tato sada řádků se skládá ze zdrojů dat a enumerátorů viditelných z aktuálního enumerátoru.
 
-## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
+## <a name="bisparent"></a>CEnumeratorAccessor:: m_bIsParent
 
 Proměnná, která označuje, zda je enumerátor nadřazeným enumerátorem, pokud je řádek enumerátor.
 
@@ -88,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 Další informace najdete v tématu [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *Referenční příručce programátora OLE DB* .
 
-## <a name="ntype"></a> CEnumeratorAccessor::m_nType
+## <a name="ntype"></a>CEnumeratorAccessor:: m_nType
 
 Proměnná, která označuje, zda řádek popisuje zdroj dat nebo enumerátor.
 
@@ -116,7 +114,7 @@ WCHAR m_szDescription[129];
 
 Další informace najdete v tématu [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *Referenční příručce programátora OLE DB* .
 
-## <a name="szname"></a> CEnumeratorAccessor::m_szName
+## <a name="szname"></a>CEnumeratorAccessor:: m_szName
 
 Název zdroje dat nebo čítače výčtu.
 
@@ -130,7 +128,7 @@ WCHAR m_szName[129];
 
 Další informace najdete v tématu [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *Referenční příručce programátora OLE DB* .
 
-## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
+## <a name="szparsename"></a>CEnumeratorAccessor:: m_szParseName
 
 Řetězec, který se má předat [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) a získat moniker pro zdroj dat nebo enumerátor.
 
@@ -144,7 +142,7 @@ WCHAR m_szParseName[129];
 
 Další informace najdete v tématu [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *Referenční příručce programátora OLE DB* .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

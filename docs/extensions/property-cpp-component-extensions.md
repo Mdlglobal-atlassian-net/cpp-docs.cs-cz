@@ -2,18 +2,15 @@
 title: vlastnost (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
-f1_keywords:
-- property_cpp
-- property
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509713"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445168"
 ---
 # <a name="property--ccli-and-ccx"></a>vlastnost (C++/CLI a C++/CX)
 
@@ -67,12 +64,12 @@ Datový typ hodnoty vlastnosti, a následně samotnou vlastnost.
 *property_name*<br/>
 Název vlastnosti
 
-*access-modifier*<br/>
+*přístup – modifikátor*<br/>
 Kvalifikátor přístupu. Platné kvalifikátory jsou **statické** a **virtuální**.
 
-Přistupující objekty get nebo set nesouhlasí s virtuálním kvalifikátorem, ale musí souhlasit s jeho statickým kvalifikátorem.
+Přistupující objekty get nebo set nesouhlasí s **virtuálním** kvalifikátorem, ale musí souhlasit s jeho **statickým** kvalifikátorem.
 
-*inheritance-modifier*<br/>
+*dědičnost – modifikátor*<br/>
 Kvalifikátor dědičnosti. Platné kvalifikátory jsou **abstraktní** a **zapečetěné**.
 
 *index_list*<br/>
@@ -82,7 +79,7 @@ Seznam jednoho nebo více indexů oddělených čárkami. Každý index se sklá
 Hodnota, která má být přiřazena vlastnosti v operaci set nebo načtena v operaci get.
 
 *property_body*<br/>
-Tělo metody vlastnosti objektu set nebo Get. *Property_body* může použít *index_list* pro přístup k základnímu datovému členu vlastnosti nebo jako parametry v uživatelsky definovaném zpracování.
+Tělo metody vlastnosti objektu set nebo Get. *Property_body* může použít *index_list* k přístupu k základnímu datovému členu vlastnosti nebo jako parametry v uživatelsky definovaném zpracování.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
@@ -90,7 +87,7 @@ Další informace najdete v tématu [vlastnosti (C++/CX)](../cppcx/properties-c-
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
@@ -127,11 +124,11 @@ Seznam jednoho nebo více indexů oddělených čárkami, který je určený v h
 
 ### <a name="remarks"></a>Poznámky
 
-První příklad syntaxe ukazuje *jednoduchou vlastnost*, která implicitně deklaruje `set` metodu a. `get` Kompilátor automaticky vytvoří soukromé pole pro uložení hodnoty vlastnosti.
+První příklad syntaxe ukazuje *jednoduchou vlastnost*, která implicitně deklaruje metodu `set` i `get`. Kompilátor automaticky vytvoří soukromé pole pro uložení hodnoty vlastnosti.
 
-Druhý příklad syntaxe ukazuje *blok vlastnosti*, který explicitně deklaruje `set` metodu a. `get`
+Druhý příklad syntaxe ukazuje *blok vlastnosti*, který explicitně deklaruje metodu `set` i `get`.
 
-Třetí příklad syntaxe znázorňuje uživatelsky definovanou *vlastnost indexu*. Vlastnost index má kromě hodnoty, která má být nastavena nebo načtena, i parametry. Je nutné zadat název vlastnosti. Na `set` rozdíl od jednoduchých vlastností musí být metody a/ `get` nebo vlastnosti index explicitně definovány a musíte zadat název vlastnosti.
+Třetí příklad syntaxe znázorňuje uživatelsky definovanou *vlastnost indexu*. Vlastnost index má kromě hodnoty, která má být nastavena nebo načtena, i parametry. Je nutné zadat název vlastnosti. Na rozdíl od jednoduchých vlastností musí být metody `set` a/nebo `get` indexové vlastnosti explicitně definovány a musíte zadat název vlastnosti.
 
 Čtvrtý příklad syntaxe ukazuje *výchozí* vlastnost, která poskytuje přístup jako typ pole k instanci typu. Klíčové slovo **Default**, slouží pouze k určení výchozí vlastnosti. Název výchozí vlastnosti je název typu, ve kterém je vlastnost definována.
 
@@ -165,7 +162,7 @@ Pro přístupové metody v bloku vlastností je povoleno jiné usnadnění.  To 
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/clr`
+Možnost kompilátoru: `/clr`
 
 ### <a name="examples"></a>Příklady
 
@@ -213,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

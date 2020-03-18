@@ -1,28 +1,26 @@
 ---
-title: Universal C runtime rutiny podle kategorie
+title: Rutiny UCRT (Universal C runtime) podle kategorie
 ms.date: 04/06/2018
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - routines, run-time
 - functions [CRT], run-time
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: 0f81ad76a535cc4e4f5aa740e1501d3ffd323e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4da18db2278a38fd7c59010d2c64d5cb804ad4eb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390890"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444808"
 ---
-# <a name="universal-c-runtime-routines-by-category"></a>Universal C runtime rutiny podle kategorie
+# <a name="universal-c-runtime-routines-by-category"></a>Rutiny UCRT (Universal C runtime) podle kategorie
 
-Tato část uvádí a popisuje rutiny knihoven Universal C runtime (UCRT) podle kategorie. Pro usnadnění práce odkaz jsou uvedeny některé rutiny ve více než jednu kategorii. Vícebajtové a širokého znaku rutiny jsou seskupeny protějšky jednobajtový znak, pokud existují.
+Tato část obsahuje seznam a popisuje rutiny knihovny Universal C runtime (UCRT) podle kategorie. Pro usnadnění odkazů jsou některé rutiny uvedené ve více než jedné kategorii. Rutiny vícebajtových znaků a rutiny s velkým množstvím znaků jsou seskupeny s dvoubajtovými znakovými protějšky, kde existují.
 
-## <a name="ucrt-library-routine-categories"></a>Kategorie rutiny UCRT knihovny
+## <a name="ucrt-library-routine-categories"></a>Kategorie rutiny knihovny UCRT
 
-Jsou hlavní kategorie rutiny UCRT knihoven:
+Hlavní kategorie rutin knihoven UCRT jsou:
 
 |||
 |-|-|
@@ -36,9 +34,9 @@ Jsou hlavní kategorie rutiny UCRT knihoven:
 |[Vstup a výstup](../c-runtime-library/input-and-output.md)|[Internacionalizace](../c-runtime-library/internationalization.md)|
 |[Přidělení paměti](../c-runtime-library/memory-allocation.md)|[Řízení procesů a prostředí](../c-runtime-library/process-and-environment-control.md)|
 |[Robustnost](../c-runtime-library/robustness.md)|[Kontrola chyb za běhu](../c-runtime-library/run-time-error-checking.md)|
-|[Vyhledávání a třídění](../c-runtime-library/searching-and-sorting.md)|[Zacházení s řetězci](../c-runtime-library/string-manipulation-crt.md)|
+|[Vyhledávání a třídění](../c-runtime-library/searching-and-sorting.md)|[Manipulace s řetězci](../c-runtime-library/string-manipulation-crt.md)|
 |[Systémová volání](../c-runtime-library/system-calls.md)|[Správa času](../c-runtime-library/time-management.md)|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)<br/>

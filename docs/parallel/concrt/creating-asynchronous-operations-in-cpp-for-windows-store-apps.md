@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: cc6c5315757b4a1602eba53ebafb573dd88caed2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2ceb22afa5e6d071c1cb8dae79327eaaf08e3ee1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141794"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445103"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací C++ v aplikacích pro UWP
 
@@ -90,7 +90,7 @@ Následující příklad ukazuje různé způsoby vytvoření `IAsyncAction` obj
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-component"></a>Příklad: Vytvoření komponenty C++ prostředí Windows Runtime a její využíváníC#
+## <a name="example-component"></a>Příklad: Vytvoření komponenty C++ prostředí Windows Runtime a její využívání v jazyce C\#
 
 Vezměte v úvahu aplikaci, která používá C# XAML a k definování uživatelského rozhraní C++ a prostředí Windows Runtime komponenty pro provádění operací náročných na výpočetní výkon. V tomto příkladu C++ komponenta počítá, která čísla v daném rozsahu jsou typu základna. Pro ilustraci rozdílů mezi čtyřmi prostředí Windows Runtime rozhraní asynchronních úloh, začněte v aplikaci Visual Studio vytvořením **prázdného řešení** a pojmenováním `Primes`. Pak přidejte do řešení prostředí Windows Runtime projekt **komponenty** a pojmenujte ho `PrimesLibrary`. Do vygenerovaného C++ souboru hlaviček přidejte následující kód (Tento příklad přejmenuje Class1. h na základny. h). Každá metoda `public` definuje jedno ze čtyř asynchronních rozhraní. Metody, které vracejí hodnotu vrací objekt [Windows:: Foundation:: Collections:: IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) Object. Metody, které sestaví průběh, vydávají `double` hodnoty definující procentuální podíl celkové práce, která byla dokončena.
 

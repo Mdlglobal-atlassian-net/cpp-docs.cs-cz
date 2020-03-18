@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _wexeclpe
-- execlpe
 - wexeclpe
 - _execlpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: 960d148963aa9c6410fec03b5a6f265a6e4ab9d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0783e07c945de7d65a11247efc6346c5e315c900
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941900"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443024"
 ---
 # <a name="_execlpe-_wexeclpe"></a>_execlpe, _wexeclpe
 
@@ -69,7 +68,7 @@ intptr_t _wexeclpe(
 *cmdname*<br/>
 Cesta k souboru, který má být spuštěn.
 
-*arg0*, ... *argn*<br/>
+*arg0*,... *argn*<br/>
 Seznam ukazatelů na parametry.
 
 *envp*<br/>
@@ -101,16 +100,16 @@ Funkce **_execlpe** ověřují jejich parametry. Pokud je *cmdname* nebo *arg0* 
 
 |Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_execlpe**|\<Process. h >|\<errno.h>|
-|**_wexeclpe**|\<Process. h > \<nebo WCHAR. h >|\<errno.h>|
+|**_execlpe**|\<Process. h >|\<errno. h >|
+|**_wexeclpe**|\<Process. h > nebo \<WCHAR. h >|\<errno. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [_exec, _Wexec Functions](../../c-runtime-library/exec-wexec-functions.md).
+Podívejte se na příklad v [_exec _Wexec Functions](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)<br/>
