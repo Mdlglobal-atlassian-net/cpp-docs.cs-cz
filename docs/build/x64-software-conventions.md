@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865597"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417192"
 ---
 # <a name="x64-software-conventions"></a>x64 – softwarové konvence
 
@@ -47,8 +47,8 @@ I když je možné získat přístup k datům s jakýmkoli zarovnáním, doporu�
 |||||
 |-|-|-|-|
 |Skalární typ|Datový typ C|Velikost úložiště (v bajtech)|Doporučené zarovnání|
-|**INT8**|**char**|1|Bajt|
-|**UINT8**|**znak bez znaménka**|1|Bajt|
+|**INT8**|**char**|1|Byte|
+|**UINT8**|**znak bez znaménka**|1|Byte|
 |**INT16**|**short**|2|Word|
 |**UINT16**|**krátký unsigned**|2|Word|
 |**UVEDENA**|**int**, **Long**|4|Doubleword|
@@ -82,8 +82,8 @@ Následující tabulka ukazuje silné navrhované zarovnání skalárních člen
 ||||
 |-|-|-|
 |Skalární typ|Datový typ C|Vyžadované zarovnání|
-|**INT8**|**char**|Bajt|
-|**UINT8**|**znak bez znaménka**|Bajt|
+|**INT8**|**char**|Byte|
+|**UINT8**|**znak bez znaménka**|Byte|
 |**INT16**|**short**|Word|
 |**UINT16**|**krátký unsigned**|Word|
 |**UVEDENA**|**int**, **Long**|Doubleword|
@@ -193,7 +193,7 @@ Následující tabulka popisuje, jak se každý registr používá napříč vol
 
 ||||
 |-|-|-|
-|Registrace|Status|Použití|
+|Registrace|Stav|Použití|
 |RAX|Permanentní|Registr návratových hodnot|
 |RCX|Permanentní|První celočíselný argument|
 |RDX|Permanentní|Druhý celočíselný argument|

@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856499"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418970"
 ---
 # <a name="ios_base-class"></a>ios_base – třída
 
@@ -195,7 +195,7 @@ Objekt třídy ios_base také ukládá informace o stavu datového proudu, v obj
 |[unitbuf](#fmtflags)|Způsobí vyprázdnění výstupu po každém vložení.|
 |[všechna](#fmtflags)|Určuje vkládání velkých ekvivalentů malých písmen v určitých vloženích.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkce
 
 |||
 |-|-|

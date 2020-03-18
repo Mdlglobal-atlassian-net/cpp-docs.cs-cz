@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876023"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419768"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits – třída
 
@@ -441,7 +441,7 @@ static constexpr bool has_infinity = false;
 
 #### <a name="remarks"></a>Poznámky
 
-Člen vrátí **hodnotu true** , [](#is_iec559) Pokud is_iec559 **hodnotu true**.
+Člen vrátí **hodnotu true** , [is_iec559](#is_iec559) Pokud is_iec559 **hodnotu true**.
 
 #### <a name="example"></a>Příklad
 

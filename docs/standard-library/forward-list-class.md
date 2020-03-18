@@ -80,11 +80,11 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890849"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419103"
 ---
 # <a name="forward_list-class"></a>forward_list – třída
 
@@ -140,7 +140,7 @@ K sestavování řízené sekvence může dojít voláním [forward_list:: inser
 |[size_type](#size_type)|Typ, který představuje vzdálenost bez znaménka mezi dvěma prvky.|
 |[value_type](#value_type)|Typ, který představuje typ elementu uložený v seznamu pro dopředný seznam.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkce
 
 |||
 |-|-|

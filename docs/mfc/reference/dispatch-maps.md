@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856647"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421350"
 ---
 # <a name="dispatch-maps"></a>Expediční mapy
 
@@ -136,7 +136,7 @@ Argument *vtRetVal* je typu VARTYPE. Následující možné hodnoty pro tento ar
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATE (Datum)|
+|VT_DATE|DATUM|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -159,7 +159,7 @@ Konstanty `VTS_` a jejich význam jsou následující:
 |VTS_R4|**float**|
 |VTS_R8|**double**|
 |VTS_CY|`const CY` nebo `CY*`|
-|VTS_DATE|DATE (Datum)|
+|VTS_DATE|DATUM|
 |VTS_BSTR|LPCSTR|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_SCODE|SCODE|
@@ -221,7 +221,7 @@ Argument *vtPropType* je typu **VARTYPE**. Možné hodnoty pro tento argument js
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATE (Datum)|
+|VT_DATE|DATUM|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
@@ -318,7 +318,7 @@ Argument *vtPropType* je typu VARTYPE. Možné hodnoty pro tento argument jsou p
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE|DATE (Datum)|
+|VT_DATE|DATUM|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|

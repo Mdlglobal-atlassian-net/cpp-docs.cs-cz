@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883863"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418760"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef – třída
 
@@ -876,7 +876,7 @@ V následující tabulce jsou uvedeny možné typy databází a jejich odpovída
 |Import HTML|"Import HTML;"|"`drive`:\\\ *cesta*\ *filename*|
 |HTML Export|"Export HTML;"|"`drive`:\\\ *cesta*"|
 |Text|"Text;"|"Drive:\\\path"|
-|ODBC|ODBC DATABÁZE = `database`; UID = *uživatel*; PWD = *Password*; DSN = *zdroj dat;* LOGINTIMEOUT = *sekundy;* " (To nemusí být úplný připojovací řetězec pro všechny servery. je to jenom příklad. Je velmi důležité, aby mezi parametry nebyla mezera.)|Žádná|
+|ODBC|ODBC DATABÁZE = `database`; UID = *uživatel*; PWD = *Password*; DSN = *zdroj dat;* LOGINTIMEOUT = *sekundy;* " (To nemusí být úplný připojovací řetězec pro všechny servery. je to jenom příklad. Je velmi důležité, aby mezi parametry nebyla mezera.)|Žádné|
 |Exchange|Výměn<br /><br /> MAPILEVEL = *FolderPath*;<br /><br /> [TABLETYPE = {0 &#124; 1};]<br /><br /> [PROFILe = *Profile*;]<br /><br /> [PWD = *Password*;]<br /><br /> [DATABASE = `database`;] "|*"Drive*:\\\ *cesta*\\\ *filename*. DATABÁZI|
 
 > [!NOTE]

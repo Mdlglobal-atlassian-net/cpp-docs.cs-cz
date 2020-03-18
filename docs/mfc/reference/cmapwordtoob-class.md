@@ -1,49 +1,49 @@
 ---
-title: CMapWordToOb Class
+title: CMapWordToOb – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMapWordToOb
 - AFXCOLL/CMapWordToOb
-- AFXCOLL/CMapStringToOb::CMapStringToOb
-- AFXCOLL/CMapStringToOb::GetCount
-- AFXCOLL/CMapStringToOb::GetHashTableSize
-- AFXCOLL/CMapStringToOb::GetNextAssoc
-- AFXCOLL/CMapStringToOb::GetSize
-- AFXCOLL/CMapStringToOb::GetStartPosition
-- AFXCOLL/CMapStringToOb::HashKey
-- AFXCOLL/CMapStringToOb::InitHashTable
-- AFXCOLL/CMapStringToOb::IsEmpty
-- AFXCOLL/CMapStringToOb::Lookup
-- AFXCOLL/CMapStringToOb::LookupKey
-- AFXCOLL/CMapStringToOb::RemoveAll
-- AFXCOLL/CMapStringToOb::RemoveKey
-- AFXCOLL/CMapStringToOb::SetAt
+- AFXCOLL/CMapWordToOb::CMapWordToOb
+- AFXCOLL/CMapWordToOb::GetCount
+- AFXCOLL/CMapWordToOb::GetHashTableSize
+- AFXCOLL/CMapWordToOb::GetNextAssoc
+- AFXCOLL/CMapWordToOb::GetSize
+- AFXCOLL/CMapWordToOb::GetStartPosition
+- AFXCOLL/CMapWordToOb::HashKey
+- AFXCOLL/CMapWordToOb::InitHashTable
+- AFXCOLL/CMapWordToOb::IsEmpty
+- AFXCOLL/CMapWordToOb::Lookup
+- AFXCOLL/CMapWordToOb::LookupKey
+- AFXCOLL/CMapWordToOb::RemoveAll
+- AFXCOLL/CMapWordToOb::RemoveKey
+- AFXCOLL/CMapWordToOb::SetAt
 helpviewer_keywords:
-- CMapStringToOb [MFC], CMapStringToOb
-- CMapStringToOb [MFC], GetCount
-- CMapStringToOb [MFC], GetHashTableSize
-- CMapStringToOb [MFC], GetNextAssoc
-- CMapStringToOb [MFC], GetSize
-- CMapStringToOb [MFC], GetStartPosition
-- CMapStringToOb [MFC], HashKey
-- CMapStringToOb [MFC], InitHashTable
-- CMapStringToOb [MFC], IsEmpty
-- CMapStringToOb [MFC], Lookup
-- CMapStringToOb [MFC], LookupKey
-- CMapStringToOb [MFC], RemoveAll
-- CMapStringToOb [MFC], RemoveKey
-- CMapStringToOb [MFC], SetAt
+- CMapWordToOb [MFC], CMapWordToOb
+- CMapWordToOb [MFC], GetCount
+- CMapWordToOb [MFC], GetHashTableSize
+- CMapWordToOb [MFC], GetNextAssoc
+- CMapWordToOb [MFC], GetSize
+- CMapWordToOb [MFC], GetStartPosition
+- CMapWordToOb [MFC], HashKey
+- CMapWordToOb [MFC], InitHashTable
+- CMapWordToOb [MFC], IsEmpty
+- CMapWordToOb [MFC], Lookup
+- CMapWordToOb [MFC], LookupKey
+- CMapWordToOb [MFC], RemoveAll
+- CMapWordToOb [MFC], RemoveKey
+- CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 42c41407b86705e46d43113326d15f1ef3271d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80d53f195ba98f853c86a4d9c38fa9fcda52da3b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375857"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442581"
 ---
-# <a name="cmapwordtoob-class"></a>CMapWordToOb Class
+# <a name="cmapwordtoob-class"></a>CMapWordToOb – třída
 
-Podporuje mapy `CObject` ukazatele označenými pomocí 16bitových slov.
+Podporuje mapy `CObject`ových ukazatelů s použitím 16bitových slov.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,65 +53,65 @@ class CMapWordToOb : public CObject
 
 ## <a name="members"></a>Členové
 
-Členské funkce `CMapWordToOb` jsou podobné jako u členských funkcí třídy [cmapstringtoob –](../../mfc/reference/cmapstringtoob-class.md). Z důvodu podobnosti, můžete použít `CMapStringToOb` referenční dokumentaci pro konkrétní členské funkce. Po zobrazení `CString` nebo **const** ukazatel na **char** jako parametr funkce nebo návratová hodnota, nahraďte slovo.
+Členské funkce `CMapWordToOb` jsou podobné členským funkcím třídy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Z důvodu této podobnosti můžete použít referenční dokumentaci `CMapStringToOb` pro konkrétní členské funkce. Bez ohledu na to, kde vidíte `CString` nebo **const** ukazatel na **char** jako parametr funkce nebo návratovou hodnotu, nahraďte slovo.
 
-`BOOL CMapStringToOb::Lookup( const char* <key>,` CObject* & <rValue> ) const;.
+`BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
 
 například se přeloží na
 
-`BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
+`BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
 |Název|Popis|
 |----------|-----------------|
-|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor|
+|[CMapWordToOb::CMapWordToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Vrátí počet prvků, které na této mapě.|
-|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Určuje aktuální počet prvků v zatřiďovací tabulce.|
-|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Získá další prvek pro iterace.|
-|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Vrátí počet prvků, které na této mapě.|
-|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Vrátí pozici prvního prvku.|
-|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Vypočítá hodnotu hash zadaný klíč.|
-|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicializuje zatřiďovací tabulku.|
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Testy pro podmínku prázdný mapy (žádné elementy).|
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Vyhledá neplatný ukazatel na základě klíče ukazatele. Hodnota ukazatele, není entita, na kterou odkazuje, je použita pro porovnání klíčů.|
-|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Vrátí odkaz na klíč přidružený k zadanou hodnotou klíče.|
-|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Odebere všechny prvky z této mapy.|
-|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Odebere element určený klíč.|
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Vloží prvek do mapy; nahradí existující prvek, pokud je nalezen odpovídající klíč.|
+|[CMapWordToOb:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Vrátí počet prvků v této mapě.|
+|[CMapWordToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Určuje aktuální počet prvků v zatřiďovací tabulce.|
+|[CMapWordToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Získá další prvek pro iteraci.|
+|[CMapWordToOb:: GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Vrátí počet prvků v této mapě.|
+|[CMapWordToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Vrátí pozici prvního prvku.|
+|[CMapWordToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Vypočítá hodnotu hash zadaného klíče.|
+|[CMapWordToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicializuje zatřiďovací tabulku.|
+|[CMapWordToOb::-Empty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Testuje podmínku prázdné mapy (žádné elementy).|
+|[CMapWordToOb:: Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Vyhledá ukazatel void na základě klíče ukazatele void. Hodnota ukazatele, nikoli entita, na kterou odkazuje, se používá pro porovnání klíčů.|
+|[CMapWordToOb:: LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Vrátí odkaz na klíč přidružený k zadané hodnotě klíče.|
+|[CMapWordToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Odebere všechny prvky z této mapy.|
+|[CMapWordToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Odebere prvek určený klíčem.|
+|[CMapWordToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Vloží prvek do mapy; nahradí existující prvek, pokud se najde shodný klíč.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Vloží prvek do mapy – operátor nahrazení pro `SetAt`.|
+|[CMapWordToOb:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Vloží prvek do mapy – nahrazení operátoru pro `SetAt`.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMapWordToOb` zahrnuje IMPLEMENT_SERIAL – makro na podporu serializace a výpis z jeho prvků. Každý prvek je zase serializovat, když mapy je uložit do archivu, buď pomocí přetížených vložení ( **<<**) – operátor nebo se `Serialize` členskou funkci.
+`CMapWordToOb` zahrnuje makro IMPLEMENT_SERIAL pro podporu serializace a dumpingu jeho prvků. Každý prvek je serializován v případě, že je mapa uložena do archivu, buď pomocí operátoru přetížení ( **<<** ), nebo pomocí členské funkce `Serialize`.
 
-Pokud potřebujete výpis paměti jednotlivých SLOV - `CObject` prvky, hloubka kontextu výpisu stavu systému je nutné nastavit na 1 nebo větší.
+Pokud potřebujete výpis z jednotlivých prvků `CObject` slova, je nutné nastavit hloubku kontextu výpisu na hodnotu 1 nebo vyšší.
 
-Když `CMapWordToOb` odstranění objektu, nebo když se odeberou jeho prvky, `CObject` ukazatele se odeberou. Objekty, odkazuje `CObject` ukazatele nejsou zničeny.
+Když je odstraněn objekt `CMapWordToOb` nebo když jsou jeho prvky odebrány, jsou ukazatele `CObject` odebrány. Objekty odkazované ukazateli `CObject` nebudou zničeny.
 
-Další informace o `CMapWordToOb`, najdete v článku [kolekce](../../mfc/collections.md).
+Další informace o `CMapWordToOb`najdete v článku [kolekce](../../mfc/collections.md)článků.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CMapWordToOb`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcoll.h
+**Záhlaví:** afxcoll. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

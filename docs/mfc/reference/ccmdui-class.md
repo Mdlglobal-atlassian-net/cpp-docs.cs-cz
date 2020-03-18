@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883616"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418823"
 ---
 # <a name="ccmdui-class"></a>CCmdUI – – třída
 
@@ -77,7 +77,7 @@ Položka nabídky může být nahrazena tlačítkem ovládacího panelu nebo jin
 
 Následující tabulka shrnuje členské funkce `CCmdUI`efektu v různých příkazech uživatelského rozhraní.
 
-|Položka uživatelského rozhraní|Povolení|SetCheck|SetRadio|SetText|
+|Položka uživatelského rozhraní|Povolit|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
 |Položka nabídky|Povoluje nebo zakazuje|Zkontroluje nebo vrátí.|Kontroluje použití tečky.|Nastaví text položky|
 |Tlačítko panelu nástrojů|Povoluje nebo zakazuje|Vybere, nevybere nebo neurčité|Stejné jako `SetCheck`|(Nelze použít)|

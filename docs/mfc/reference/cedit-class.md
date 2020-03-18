@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876358"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420384"
 ---
 # <a name="cedit-class"></a>CEdit – třída
 
@@ -181,7 +181,7 @@ Chcete-li zpracovat oznamovací zprávy systému Windows odeslané ovládacím p
 
 Každá položka mapování zpráv má následující podobu:
 
-  **Oznámení ON_** **(** _ID_ **,** _memberFxn_ **)**
+  **Oznámení ON_** _NOTIFICATION_ **(** _ID_ **,** _memberFxn_ **)**
 
 kde `id` Určuje ID podřízeného okna ovládacího prvku pro úpravy odesílajícího oznámení a `memberFxn` je název nadřazené členské funkce, kterou jste napsali pro zpracování oznámení.
 

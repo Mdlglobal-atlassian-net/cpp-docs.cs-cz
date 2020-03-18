@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- spawnl
 - wspawnl
 - _wspawnl
 - _spawnl
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: b39e76b010fd0d3b9ae3dc8d0104c69ce97ac87e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3ee169aac300aab6aabeeb05138d63cdbcabb580
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947827"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442775"
 ---
 # <a name="_spawnl-_wspawnl"></a>_spawnl, _wspawnl
 
@@ -77,12 +76,12 @@ Režim spuštění pro volající proces.
 *cmdname*<br/>
 Cesta k souboru, který má být spuštěn.
 
-*arg0*, *arg1*, ... *argn*<br/>
+*arg0*, *arg1*,... *argn*<br/>
 Seznam ukazatelů na argumenty. Argument *arg0* je obvykle ukazatel na *cmdname*. Argumenty *arg1* až *argn* jsou ukazatele na řetězce znaků, které tvoří nový seznam argumentů. Následující *argn*musí mít ukazatel s **hodnotou null** k označení konce seznamu argumentů.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota z synchronního **_spawnl** nebo **_wspawnl** ( **_P_WAIT** zadaná pro *režim*) je stav ukončení nového procesu. Vrácená hodnota z asynchronního **_spawnl** nebo **_wspawnl** ( **_P_NOWAIT** nebo **_P_NOWAITO** určená pro *režim*) je obslužná rutina procesu. Stav ukončení je 0, pokud byl proces ukončen normálně. Stav ukončení můžete nastavit na nenulovou hodnotu, pokud vytvořený proces konkrétně volá rutinu **ukončení** s nenulovým argumentem. Pokud nový proces neexplicitně nastavil kladný stav ukončení, pozitivní stav ukončení indikuje abnormální ukončení s přerušením nebo přerušením. Návratová hodnota-1 označuje chybu (nový proces není spuštěn). V tomto případě je **errno** nastaveno na jednu z následujících hodnot.
+Návratová hodnota z synchronního **_spawnl** nebo **_wspawnl** ( **_P_WAIT** zadaná pro *režim*) je stav ukončení nového procesu. Vrácená hodnota z asynchronního **_spawnl** nebo **_wspawnl** ( **_P_NOWAIT** nebo **_P_NOWAITO** zadaná pro *režim*) je obslužná rutina procesu. Stav ukončení je 0, pokud byl proces ukončen normálně. Stav ukončení můžete nastavit na nenulovou hodnotu, pokud vytvořený proces konkrétně volá rutinu **ukončení** s nenulovým argumentem. Pokud nový proces neexplicitně nastavil kladný stav ukončení, pozitivní stav ukončení indikuje abnormální ukončení s přerušením nebo přerušením. Návratová hodnota-1 označuje chybu (nový proces není spuštěn). V tomto případě je **errno** nastaveno na jednu z následujících hodnot.
 
 |||
 |-|-|
@@ -111,9 +110,9 @@ Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-r
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [_spawn, _Wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
+Podívejte se na příklad v [_spawn _Wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

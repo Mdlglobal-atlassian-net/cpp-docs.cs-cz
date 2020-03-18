@@ -109,11 +109,11 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: b54a1913073ca0b23aeb17a57b16f589a074637b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890804"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418816"
 ---
 # <a name="ccombobox-class"></a>CComboBox – – třída
 
@@ -200,7 +200,7 @@ Následující tabulka porovnává tři [styly](../../mfc/reference/styles-used-
 |-----------|-------------------------------|-----------------------------|
 |Jednoduchý|Vždy|Upravit|
 |Rozevírací seznam|Při vyřazení dolů|Upravit|
-|Rozevírací seznam|Při vyřazení dolů|Statická|
+|Rozevírací seznam|Při vyřazení dolů|Statické|
 
 Objekt `CComboBox` můžete vytvořit buď z šablony dialogového okna, nebo přímo v kódu. V obou případech nejprve zavolejte konstruktor `CComboBox` pro vytvoření objektu `CComboBox`; Potom zavolejte funkci [vytvořit](#create) členskou funkci pro vytvoření ovládacího prvku a připojte jej k objektu `CComboBox`.
 

@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883864"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420489"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace – třída
 
@@ -131,7 +131,7 @@ Ve většině případů nebudete potřebovat více pracovních prostorů a nebu
 > [!NOTE]
 >  Databázové třídy DAO se liší od databázových tříd knihovny MFC založených na rozhraní ODBC (Open Database Connectivity). Všechny názvy databázových tříd DAO mají předponu "CDao". Obecně jsou třídy knihovny MFC založené na rozhraní DAO větší, než třídy knihovny MFC založené na rozhraní ODBC. Třídy založené na rozhraní DAO mají přístup k datům prostřednictvím databázového stroje Microsoft Jet, včetně ovladačů ODBC. Podporují také operace DDL (Data Definition Language), jako je vytváření databází a přidávání tabulek a polí přes třídy, aniž by museli volat rozhraní DAO přímo.
 
-## <a name="capabilities"></a>Možnosti
+## <a name="capabilities"></a>Schopnosti
 
 `CDaoWorkspace` třídy poskytuje následující:
 

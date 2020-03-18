@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855480"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420986"
 ---
 # <a name="cwnd-class"></a>CWnd – třída
 
@@ -9750,7 +9750,7 @@ U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou kl�
 
 U jiných než U. S. Vylepšená klávesnice 102 se jako kombinace kláves CTRL + ALT zpracuje pravá klávesová zkratka. Následující text zobrazuje posloupnost zpráv a volání, která jsou výsledkem, když uživatel stiskne a uvolní tento klíč:
 
-|Pořadí|Dostupná funkce|Zpráva byla předána|
+|Sequence|Dostupná funkce|Zpráva byla předána|
 |--------------|-----------------------|--------------------|
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|
@@ -11911,7 +11911,7 @@ Chcete-li vytvořit horní okno, zavolejte `SetWindowPos` s parametrem *pWndInse
 
 Pokud pořadí Z-order obsahuje všechna okna s WS_EX_TOPMOST stylem, okno přesunuté s hodnotou **& wndTopMost** je umístěno v horní části všech oken, která nejsou v nejvyšší úrovni, ale pod jakákoli nejvyšší část okna. Když aplikace aktivuje neaktivní okno bez WS_EX_TOPMOSTho bitu, okno se přesune nad všechna nevrchní Windows, ale pod jakákoli nejvrchnější okna.
 
-Pokud je volána `SetWindowPos`, když je parametr PWndInsertAfter **& wndBottom** a `CWnd` je nejvyšší okno, okno ztratí jeho nejvyšší stav (WS_EX_TOPMOST je vymazáno) a systém umístí okno do dolní části pořadí z.
+Pokud je volána `SetWindowPos`, když *pWndInsertAfter* je parametr PWndInsertAfter **& wndBottom** a `CWnd` je nejvyšší okno, okno ztratí jeho nejvyšší stav (WS_EX_TOPMOST je vymazáno) a systém umístí okno do dolní části pořadí z.
 
 ### <a name="example"></a>Příklad
 

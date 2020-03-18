@@ -61,11 +61,11 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855281"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418704"
 ---
 # <a name="cfile-class"></a>CFile – – Třída
 
@@ -601,7 +601,7 @@ Následující tabulka popisuje možné výsledky `Open`.
 |`pError`|Došlo k chybě|Návratová hodnota|CFileException obsah|
 |--------------|------------------------|------------------|----------------------------|
 |NULL|Ne|PRAVDA|neuvedeno|
-|PTR na `CFileException`|Ne|PRAVDA|Oproti|
+|PTR na `CFileException`|Ne|PRAVDA|oproti|
 |NULL|Ano|CHYBNÉ|neuvedeno|
 |PTR na `CFileException`|Ano|CHYBNÉ|inicializováno k popisu chyby|
 

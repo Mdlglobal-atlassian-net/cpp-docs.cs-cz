@@ -3,11 +3,11 @@ title: 2. Direktivy
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
 ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882850"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417087"
 ---
 # <a name="2-directives"></a>2. Direktivy
 
@@ -153,13 +153,13 @@ Direktiva `for` umisťuje omezení struktury odpovídající `for` smyčky. Konk
 `for (` *init-expr* `;` *var Logic-op b* `;` *incr-expr* `)`
 
 *init-expr*<br/>
-Jeden z následujících produktů:
+Jedna z následujících:
 
 - *var* = *kg*
 - *var typu integer* * = .*
 
 *incr – výraz*<br/>
-Jeden z následujících produktů:
+Jedna z následujících:
 
 - `++` *var*
 - *var* `++`
@@ -175,7 +175,7 @@ Jeden z následujících produktů:
 Celočíselná proměnná se znaménkem. Pokud by byla tato proměnná jinak sdílená, implicitně se pro dobu trvání `for`stane soukromou. Neupravujte tuto proměnnou v těle příkazu `for`. Není-li proměnná zadána `lastprivate`, její hodnota po neurčitém cyklu.
 
 *logický operátor op*<br/>
-Jeden z následujících produktů:
+Jedna z následujících:
 
 - `<`
 - `<=`

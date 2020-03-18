@@ -51,11 +51,11 @@ helpviewer_keywords:
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
 ms.openlocfilehash: 4508c683ff5d4bece290b7fef2bbd83ae8023eac
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882893"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416996"
 ---
 # <a name="openmp-functions"></a>Funkce jazyka OpenMP
 
@@ -93,7 +93,7 @@ Pro zámek:
 |[omp_test_lock](#omp-test-lock)|Pokusí se nastavit zámek, ale neblokuje provádění vlákna.|
 |[omp_test_nest_lock](#omp-test-nest-lock)|Pokusí se nastavit vnořený zámek, ale neblokuje provádění vlákna.|
 
-|Typ dat|Popis|
+|Datový typ|Popis|
 |---------|-----------|
 |`omp_lock_t`|Typ, který obsahuje stav zámku, zda je zámek k dispozici nebo pokud vlákno vlastní zámek.|
 |`omp_nest_lock_t`|Typ, který obsahuje jednu z následujících částí informací o zámku: zda je zámek k dispozici, a identitu vlákna, které vlastní zámek a počet vnoření.|

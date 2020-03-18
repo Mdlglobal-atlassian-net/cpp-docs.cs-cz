@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876201"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416765"
 ---
 # <a name="complex-class"></a>complex – třída
 
@@ -56,7 +56,7 @@ Pro tři typy s plovoucí desetinnou čárkou existují explicitní specializace
 |-|-|
 |[value_type](#value_type)|Typ, který představuje datový typ, který reprezentuje reálné a imaginární části komplexního čísla.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkce
 
 |||
 |-|-|

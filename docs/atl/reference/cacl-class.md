@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
 ms.openlocfilehash: 5d03154597f800042846e82d0a0cf5e7c46b613f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864902"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418144"
 ---
 # <a name="cacl-class"></a>CAcl – třída
 
@@ -90,7 +90,7 @@ Existují dva typy seznamů ACL:
 
 - Volitelného
 
-- Systémový
+- Systém
 
 Volitelný seznam ACL je řízen vlastníkem objektu nebo kýmkoli uděleným WRITE_DAC přístup k objektu. Určuje přístup konkrétního uživatele a skupiny může být objektem. Vlastník souboru může například použít volitelný seznam řízení přístupu (ACL), který řídí, kteří uživatelé a skupiny můžou a nemají přístup k tomuto souboru.
 

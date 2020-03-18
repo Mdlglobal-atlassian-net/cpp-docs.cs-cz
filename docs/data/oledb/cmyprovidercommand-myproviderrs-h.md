@@ -3,24 +3,22 @@ title: CCustomCommand (CustomRS.H)
 ms.date: 10/22/2018
 f1_keywords:
 - cmyprovidercommand
-- myproviderrs.h
 - ccustomcommand
-- customrs.h
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
 - CCustomCommand class in CustomRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-ms.openlocfilehash: b10d7bccae6fa9b86d072b8e13791f23516b2c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61bd60b63490303c65729843c3c0351a570a8056
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230716"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444149"
 ---
 # <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
-`CCustomCommand` Třída je implementace objektu command zprostředkovatel. Poskytuje implementaci pro `IAccessor`, `ICommandText`, a `ICommandProperties` rozhraní. `IAccessor` Rozhraní je stejný jako v dané sadě řádků. Objekt příkazu používá přistupující k určení vazby parametrů. Objektu sady řádků je používá k určení vazby pro výstupní sloupce. `ICommandText` Rozhraní je užitečný způsob, jak určit textový příkaz. V tomto příkladu `ICommandText` rozhraní později, když přidá vlastní kód; Potlačí také `ICommand::Execute` metody. `ICommandProperties` Rozhraní zpracovává všechny vlastnosti pro objekty příkazu a sady řádků.
+Třída `CCustomCommand` je implementací objektu příkazu poskytovatele. Poskytuje implementaci pro rozhraní `IAccessor`, `ICommandText`a `ICommandProperties`. Rozhraní `IAccessor` je stejné jako v sadě řádků. Objekt Command používá přistupující objekt k určení vazeb pro parametry. Objekt sady řádků je používá k určení vazeb pro výstupní sloupce. Rozhraní `ICommandText` je vhodným způsobem, jak zadat příkaz jako textový. Tento příklad používá rozhraní `ICommandText` později při přidání vlastního kódu; přepíše také metodu `ICommand::Execute`. Rozhraní `ICommandProperties` zpracovává všechny vlastnosti pro příkaz a objekty sady řádků.
 
 ```cpp
 // CCustomCommand
@@ -35,12 +33,12 @@ class ATL_NO_VTABLE CCustomCommand :
    public IColumnsInfoImpl<CCustomCommand>
 ```
 
-`IAccessor` Rozhraní spravuje všechny vazby použité v příkazech a sady řádků. Příjemce volání `IAccessor::CreateAccessor` s polem `DBBINDING` struktury. Každý `DBBINDING` struktura obsahuje informace o tom, jak by měly být zpracovány vazeb sloupců (jako je například typ a délku). Zprostředkovatel přijímá struktury a určuje, jak by se měly převést data a zda jsou všechny převody potřebné. `IAccessor` Rozhraní se používá v objektu příkazu pro zpracování libovolných parametrů v příkazu.
+Rozhraní `IAccessor` spravuje všechny vazby používané v příkazech a sadách řádků. Příjemce volá `IAccessor::CreateAccessor` s polem `DBBINDING` struktury. Každá struktura `DBBINDING` obsahuje informace o tom, jak by měly být zpracovány vazby sloupců (například typ a délka). Poskytovatel obdrží struktury a poté určí, jak se mají data přenést a zda jsou potřebné převody. Rozhraní `IAccessor` se používá v objektu Command ke zpracování libovolných parametrů v příkazu.
 
-Objekt příkazu také poskytuje implementaci `IColumnsInfo`. OLE DB vyžaduje `IColumnsInfo` rozhraní. Rozhraní umožňuje příjemci k načtení informací o parametry příkazu. Pomocí objektu sady řádků `IColumnsInfo` rozhraní, který vrací informace o výstupní sloupce k poskytovateli.
+Objekt příkazu také poskytuje implementaci `IColumnsInfo`. OLE DB vyžaduje rozhraní `IColumnsInfo`. Rozhraní umožňuje příjemci načíst informace o parametrech z příkazu. Objekt sady řádků používá rozhraní `IColumnsInfo` k vrácení informací o výstupních sloupcích poskytovateli.
 
-Zprostředkovatel také obsahuje rozhraní volá `IObjectWithSite`. `IObjectWithSite` Rozhraní bylo implementováno v knihovně ATL 2.0 a umožňuje implementátora k předávání informací o samotné do jeho podřízených. Objekt příkazu používá `IObjectWithSite` informace zjistit všechny generují rozhraní objektu sady řádků je vytvořil.
+Zprostředkovatel také obsahuje rozhraní s názvem `IObjectWithSite`. Rozhraní `IObjectWithSite` bylo implementováno v knihovně ATL 2,0 a umožňuje implementátorovi předat informace o sobě samotnému objektu. Objekt Command používá informace o `IObjectWithSite` k oznámení libovolným generovaným objektům sady řádků, o tom, kdo je vytvořil.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)

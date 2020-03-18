@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: f1718b1cd362e54f63388b46025804ccc0396851
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865125"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419565"
 ---
 # <a name="set-class"></a>set – třída
 
@@ -169,7 +169,7 @@ Iterátor poskytnutý třídou set je obousměrný iterátor, ale funkce člensk
 |[value_compare](#value_compare)|Typ poskytující objekt funkce, který může porovnat dva prvků pro určení jejich relativního pořadí v sadě.|
 |[value_type](#value_type)|Typ popisuje objekt uložený jako prvek sady (objekt set) v jeho kapacitě jako hodnotu.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkce
 
 |||
 |-|-|

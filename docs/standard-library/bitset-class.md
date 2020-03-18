@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
 ms.openlocfilehash: a4771e9c2c48bfe9c4c09629278533b031d60979
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890848"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421938"
 ---
 # <a name="bitset-class"></a>bitset – třída
 
@@ -77,7 +77,7 @@ Bit je nastaven, pokud je jeho hodnota 1 a resetuje se, pokud má hodnotu 0. Chc
 |-|-|
 |[element_type](#element_type)|Typ, který představuje synonymum pro datový typ **bool** a lze jej použít k odkazování na bity elementu v `bitset`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkce
 
 |||
 |-|-|
