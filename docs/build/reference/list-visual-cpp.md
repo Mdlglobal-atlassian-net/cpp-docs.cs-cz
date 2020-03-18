@@ -1,23 +1,22 @@
 ---
-title: '&lt;Seznam > (C++ dokumentačních komentářů)'
+title: '> seznamu &lt;(C++ dokumentační komentáře)'
 ms.date: 11/04/2016
 f1_keywords:
 - list
-- <list>
 helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: fd5b97ac518bc4075697da7b6ed88ed46bdd8814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102cf9f7b1b867a012f662ce786d97012826abd1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305265"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439299"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
-\<Listheader – > blokování se používá k definování řádek záhlaví tabulky nebo definice seznamu. Při definování tabulku, stačí zadat položky pro výraz v záhlaví.
+Blok > \<listheader – se používá k definování řádku záhlaví v seznamu tabulek nebo definic. Při definování tabulky stačí zadat položku pro termín v záhlaví.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,19 +35,19 @@ ms.locfileid: "62305265"
 
 #### <a name="parameters"></a>Parametry
 
-*Termín*<br/>
-Termín, který chcete definovat, které budou určené v `description`.
+*doby*<br/>
+Pojem, který definuje, který bude definován v `description`.
 
-*description*<br/>
-Buď položku v odrážkami nebo číslovaný seznam nebo definici `term`.
+*název*<br/>
+Buď položka v seznamu odrážek nebo číslovaný seznam, nebo definice `term`.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá položka v seznamu není zadán s \<položky > bloku. Při vytváření definice seznamu, budete muset zadat současně `term` a `description`. Ale pro tabulku, seznam s odrážkami nebo číslovaného seznamu, stačí zadat položku pro `description`.
+Každá položka v seznamu je určena položkou \<> bloku. Při vytváření seznamu definic bude nutné zadat jak `term`, tak `description`. U tabulky, seznamu s odrážkami nebo číslovaného seznamu ale stačí zadat položku pro `description`.
 
-Seznam nebo tabulku můžete mít kolik \<položky > blokuje podle potřeby.
+Seznam nebo tabulka může v případě potřeby obsahovat tolik \<položek >.
 
-Kompilovat s [/doc](doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+Zkompilujte pomocí [/doc](doc-process-documentation-comments-c-cpp.md) a zpracujte dokumentační komentáře do souboru.
 
 ## <a name="example"></a>Příklad
 
@@ -69,6 +68,6 @@ Kompilovat s [/doc](doc-process-documentation-comments-c-cpp.md) pro zpracován�
 class MyClass {};
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Dokumentace XML](xml-documentation-visual-cpp.md)

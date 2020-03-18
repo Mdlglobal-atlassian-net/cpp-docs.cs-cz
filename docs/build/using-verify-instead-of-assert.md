@@ -1,8 +1,6 @@
 ---
 title: Použití příkazu VERIFY místo ASSERT
 ms.date: 05/06/2019
-f1_keywords:
-- assert
 helpviewer_keywords:
 - ASSERT statements
 - debugging [MFC], ASSERT statements
@@ -11,24 +9,24 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-ms.openlocfilehash: 83ea24904c75d41f7c9c9b383f8b7cf8c39e328f
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: bfc0847677ae232fef67ab6200c626472f042bdb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217667"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438621"
 ---
 # <a name="using-verify-instead-of-assert"></a>Použití příkazu VERIFY místo ASSERT
 
-Předpokládejme, že když spustíte ladicí verze aplikace knihovny MFC, nejsou žádné problémy. Ale verzi stejné aplikace dojde k chybě, vrátí nesprávné výsledky, a/nebo vykazuje nějaké neobvyklé chování.
+Předpokládejme, že při spuštění ladicí verze aplikace MFC nejsou k dispozici žádné problémy. Verze pro vydání stejné aplikace ale selže, vrátí nesprávné výsledky nebo se projeví v jiném neobvyklém chování.
 
-Tento problém může být způsobena umístíte důležité kód kontrolní příkaz k ověření, že funguje správně. Protože příkazů ASSERT, jsou zakomentované v sestavení pro vydání aplikace knihovny MFC, nespustí se kód v sestavení pro vydání.
+K tomuto problému může dojít při umísťování důležitého kódu do příkazu KONTROLNÍho výrazu pro ověření, že funguje správně. Vzhledem k tomu, že příkazy ASSERT jsou zakomentovány v sestavení pro vydání programu knihovny MFC, kód neběží v buildu pro vydání.
 
-Pokud používáte ASSERT potvrďte, že volání funkce úspěšné, zvažte použití [OVĚŘTE](../mfc/reference/diagnostic-services.md#verify) místo. VERIFY – makro vyhodnocuje svoje vlastní argumenty v obou ladění a verze sestavení aplikace.
+Pokud používáte ASSERT k potvrzení, že volání funkce bylo úspěšné, zvažte místo toho použití [ověření](../mfc/reference/diagnostic-services.md#verify) . Makro VERIFY vyhodnotí své vlastní argumenty v sestaveních ladění i vydaných verzí aplikace.
 
-Jiné upřednostňované technikou je návratová hodnota funkce přiřadit dočasné proměnné a otestujte proměnné v příkazu ASSERT.
+Další upřednostňovanou technikou je přiřadit návratovou hodnotu funkce dočasnou proměnnou a potom otestovat proměnnou v příkazu KONTROLNÍho výrazu.
 
-Zkontrolujte následující fragment kódu:
+Projděte si následující fragment kódu:
 
 ```
 enum {
@@ -40,15 +38,15 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-Tento kód se spustí dokonale v ladicí verzi aplikace knihovny MFC. Pokud volání `calloc( )` selže, diagnostickou zprávu, která zahrnuje soubor a číslo řádku se zobrazí. Nicméně v sestavení prodejní verze aplikace knihovny MFC:
+Tento kód funguje dokonale v ladicí verzi aplikace MFC. Pokud se volání `calloc( )` nezdařila, zobrazí se diagnostická zpráva, která obsahuje soubor a číslo řádku. V maloobchodním sestavení aplikace MFC však:
 
-- volání `calloc( )` se nikdy neprovádí, byste museli opustit `buf` neinicializované nebo
+- volání `calloc( )` nikdy neproběhne, ponechá `buf` uninicializovaný nebo
 
-- `strcpy_s( )` kopie "`Hello, World`" do náhodných část paměti, může být selhání aplikace nebo může způsobit systém přestane reagovat, nebo
+- `strcpy_s( )` kopíruje "`Hello, World`" do náhodné paměti, pravděpodobně dojde k chybě aplikace nebo způsobilo, že systém přestane reagovat.
 
-- `free()` pokusy o uvolnění paměti, který se nikdy.
+- `free()` se pokusí uvolnit paměť, která nebyla nikdy přidělena.
 
-Použití metody ASSERT správně, by měla být změněna vzorový kód takto:
+Chcete-li použít vyhodnocení správně, je třeba změnit vzorek kódu na následující:
 
 ```
 enum {
@@ -61,7 +59,7 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-Nebo můžete místo toho použít ověřte, zda:
+Nebo můžete místo toho použít možnost ověřit:
 
 ```
 enum {
@@ -73,6 +71,6 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Oprava problémů se sestavením pro vydání](fixing-release-build-problems.md)

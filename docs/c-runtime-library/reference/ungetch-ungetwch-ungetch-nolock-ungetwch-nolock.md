@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,12 +46,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945911"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443744"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -80,22 +79,22 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*r*<br/>
 Znak, který má být vložen.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě funkce vrátí znak *c* v případě úspěchu. Pokud dojde k chybě, vrátí **_ungetch** hodnotu **EOF** a **_ungetwch** vrátí **WEOF**.
+Obě funkce vrátí znak *c* v případě úspěchu. Pokud dojde k chybě, **_ungetch** vrátí hodnotu **EOF** a **_ungetwch** vrátí **WEOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce načtou znak *c* zpátky do konzoly, což způsobí, že *c* bude dalším znakem čteným **_getch** nebo **_getche** (nebo **_getwch** nebo **_getwche**). **_ungetch** a **_ungetwch** selžou, pokud jsou volány více než jednou před dalším čtením. Argument *jazyka c* nemůže být znak **EOF** (nebo **WEOF**).
+Tyto funkce načtou znak *c* zpátky do konzoly, což způsobí, že *c* bude dalším přečteným znakem **_getch** nebo **_getche** (nebo **_getwch** nebo **_getwche**). **_ungetch** a **_ungetwch** selžou, pokud jsou volány více než jednou před dalším čtením. Argument *jazyka c* nemůže být znak **EOF** (nebo **WEOF**).
 
 Verze s příponou **_nolock** jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
@@ -104,8 +103,8 @@ Verze s příponou **_nolock** jsou stejné s tím rozdílem, že nejsou chrán�
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ungetch**, **_ungetch_nolock**|\<CONIO. h >|
-|**_ungetwch**, **_ungetwch_nolock**|\<CONIO. h > nebo \<WCHAR. h >|
+|**_ungetch** **_ungetch_nolock**|\<CONIO. h >|
+|**_ungetwch** **_ungetwch_nolock**|\<CONIO. h > nebo \<WCHAR. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
@@ -151,7 +150,7 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

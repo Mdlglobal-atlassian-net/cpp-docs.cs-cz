@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: d78bbc6e66fe97af1049fa6976ac8c5fa806ef43
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883792"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419173"
 ---
 # <a name="deque-class"></a>deque – třída
 
@@ -157,7 +157,7 @@ V opačném případě vložení nebo mazání elementu zruší platnost všech 
 |[size_type](#size_type)|Typ, který počítá počet prvků v `deque`.|
 |[value_type](#value_type)|Typ, který představuje datový typ uložený v `deque`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkce
 
 |||
 |-|-|

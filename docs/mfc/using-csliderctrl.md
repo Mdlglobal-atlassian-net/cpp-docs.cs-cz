@@ -1,28 +1,26 @@
 ---
 title: Používání atributu CSliderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CSliderCtrl
 helpviewer_keywords:
 - CSliderCtrl class [MFC], using
 - slider controls [MFC], using
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
-ms.openlocfilehash: f133d25ddab76f42b4bf7b133bb988def9f0f01a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fb26bc981630b59a918acf5bb81b9f3fdb4620a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411770"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441786"
 ---
 # <a name="using-csliderctrl"></a>Používání atributu CSliderCtrl
 
-[Atributu CSliderCtrl](../mfc/reference/csliderctrl-class.md) třída reprezentuje ovládacím prvku posuvník, kterému se taky říká posuvník. "Ovládacího prvku posuvník" je okno, které obsahuje posuvník a volitelné osové značky. Když uživatel přesune posuvník, pomocí myši nebo klávesy se šipkami, ovládací prvek posuvník odesílá zpráv s oznámením k označení změn.
+Třída [atributu CSliderCtrl](../mfc/reference/csliderctrl-class.md) představuje ovládací prvek posuvníku, který se také označuje jako TrackBar. "Ovládací prvek posuvník" je okno, které obsahuje posuvník a volitelné osové značky. Když uživatel přesune posuvník pomocí myši nebo kláves se šipkami, ovládací prvek posuvník pošle oznamovací zprávy, aby označoval změnu.
 
-Posuvníky jsou užitečné, pokud chcete uživateli vybrat diskrétní hodnoty nebo sadu po sobě jdoucích hodnot v rozsahu. Například můžete použít ovládací prvek typu jezdec aby uživatel mohl nastavení opakování míry klávesnice přesunete posuvník na dané značky zaškrtnutí.
+Ovládací prvky posuvníku jsou užitečné, pokud chcete, aby uživatel vybral diskrétní hodnotu nebo sadu po sobě jdoucích hodnot v rozsahu. Například můžete použít ovládací prvek posuvníku, který uživateli umožní nastavit rychlost opakování klávesnice přesunutím posuvníku na danou značku.
 
-Posuvník v ovládacím prvku posuvník posune v krocích, které určíte při jeho vytvoření. Například pokud chcete zadat, že v ovládacím prvku posuvník by měl mít celou řadu pěti, posuvník pouze zabírat šest pozice: pozice na levé straně ovládacího prvku posuvníku a jednu pozici pro každý přírůstek v rozsahu. Obvykle každá z těchto umístění je identifikován značky zaškrtnutí.
+Posuvník v ovládacím prvku posuvník se přesune v přírůstcích, které zadáte při jeho vytváření. Například pokud určíte, že ovládací prvek posuvník by měl mít rozsah pět, může posuvník zabírat pouze šest pozic: polohu na levé straně ovládacího prvku posuvníku a jednu pozici pro každý přírůstek v rozsahu. Obvykle je každá z těchto pozic identifikována osové značkou.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Použití ovládacích prvků posuvník](../mfc/using-slider-controls.md)
 
@@ -32,6 +30,6 @@ Posuvník v ovládacím prvku posuvník posune v krocích, které určíte při 
 
 - [Zprávy s oznámením pro posuvník](../mfc/slider-notification-messages.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ovládací prvky](../mfc/controls-mfc.md)

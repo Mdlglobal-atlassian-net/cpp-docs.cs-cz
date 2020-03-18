@@ -1,31 +1,29 @@
 ---
 title: Zpětná kompatibilita
 ms.date: 11/04/2016
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - backward compatibility, C run-time libraries
 - compatibility, C run-time libraries
 - backward compatibility
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
-ms.openlocfilehash: f672f0601a9d20a726f90963265d08ec212dedce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c2b4570e5e3131911e7f424280f16e9977f047e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290362"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438560"
 ---
 # <a name="backward-compatibility"></a>Zpětná kompatibilita
 
-Kvůli kompatibilitě mezi verzemi tohoto produktu, knihovna OLDNAMES. LIB mapuje starých názvů na nové názvy. Například `open` mapuje `_open`. Je třeba explicitně propojit s OLDNAMES. LIB jenom při kompilaci s následující kombinace možností příkazového řádku:
+Z důvodu kompatibility mezi verzemi produktu OLDNAMES knihovny. LIB mapuje staré názvy na nové názvy. `open` například mapuje na `_open`. Musíte explicitně propojit s OLDNAMES. LIB pouze při kompilaci s následujícími kombinacemi možností příkazového řádku:
 
-- `/Zl` (vypuštění názvu výchozí knihovny ze souboru objektu) a `/Ze` (výchozí nastavení – pomocí rozšíření společnosti Microsoft)
+- `/Zl` (vynechání názvu výchozí knihovny ze souboru objektů) a `/Ze` (výchozí – použít rozšíření Microsoftu)
 
-- `/link` (linkeru – ovládací prvek), `/NOD` (hledání žádné výchozí knihovny), a `/Ze`
+- `/link` (ovládací prvek Linker), `/NOD` (bez vyhledávání výchozích knihoven) a `/Ze`
 
-Další informace o možnostech příkazového řádku kompilátoru najdete v tématu [kompilátory](../build/reference/compiler-options.md).
+Další informace o možnostech příkazového řádku kompilátoru naleznete v tématu [Reference k kompilátoru](../build/reference/compiler-options.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Kompatibilita](../c-runtime-library/compatibility.md)

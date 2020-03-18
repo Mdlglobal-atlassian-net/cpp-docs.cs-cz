@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78937418"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422407"
 ---
 # <a name="valarray-class"></a>valarray – třída
 
@@ -69,7 +69,7 @@ Zejména, mezi konstrukcí kopírování a výchozím konstrukcí, které násle
 |-|-|
 |[value_type](#value_type)|Typ, který představuje typ elementu uložený ve `valarray`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkce
 
 |||
 |-|-|

@@ -1,23 +1,22 @@
 ---
-title: '&lt;kód > (C++ dokumentačních komentářů)'
+title: '> kódu &lt;(C++ dokumentační dokumentace)'
 ms.date: 11/04/2016
 f1_keywords:
-- code
 - <code>
 helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bacd95f9c93a439e5bab7a556ac2724a042411b8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272407"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440157"
 ---
-# <a name="ltcodegt"></a>&lt;code&gt;
+# <a name="ltcodegt"></a>kód &lt;&gt;
 
-\<Kód > značky poskytuje způsob, jak určit jeden nebo více řádků jako kód.
+Značka \<kódu > poskytuje způsob, jak označit jeden nebo více řádků jako kód.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,19 +26,19 @@ ms.locfileid: "62272407"
 
 #### <a name="parameters"></a>Parametry
 
-*content*<br/>
-Text, který je označený jako kód.
+*sušin*<br/>
+Text, který chcete označit jako kód.
 
 ## <a name="remarks"></a>Poznámky
 
-Použití [ \<c >](c-visual-cpp.md) k označení část textu, by měla být označena jako kód.
+Použijte [\<> c](c-visual-cpp.md) k označení části textu by měla být označena jako kód.
 
-Kompilovat s [/doc](doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+Zkompilujte pomocí [/doc](doc-process-documentation-comments-c-cpp.md) a zpracujte dokumentační komentáře do souboru.
 
 ## <a name="example"></a>Příklad
 
-Najdete v článku [ \<příklad >](example-visual-cpp.md) najdete příklad, jak používat \<kód > značky.
+Příklad použití značky > kódu \<naleznete v tématu [\<příklad >](example-visual-cpp.md) tématu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Dokumentace XML](xml-documentation-visual-cpp.md)

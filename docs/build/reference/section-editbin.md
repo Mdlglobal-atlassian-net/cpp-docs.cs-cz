@@ -2,19 +2,19 @@
 title: /SECTION (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /section
+- /section_editbin
 helpviewer_keywords:
 - -SECTION editbin option
 - SECTION editbin option
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e1d1c1cf288a7fe68f5bd076791d43f5b8572
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318599"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438910"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -24,30 +24,30 @@ ms.locfileid: "62318599"
 
 ## <a name="remarks"></a>Poznámky
 
-Tato možnost změní atributy oddílu a přepíše přitom atributy nastavené při kompilaci nebo propojené souboru objektu pro oddíl.
+Tato možnost změní atributy oddílu a přepíše atributy, které byly nastaveny při kompilaci nebo propojení souboru objektu pro oddíl.
 
-Za dvojtečkou ( **:** ), zadejte *název* oddílu. Chcete-li změnit název oddílu, postupujte podle *název* znaménkem rovná se (=) a *newname* pro oddíl.
+Za dvojtečku ( **:** ) zadejte *název* oddílu. Chcete-li změnit název oddílu, použijte *název* se symbolem rovná se (=) a *Nový_název* pro oddíl.
 
-Nastavit nebo změnit v části `attributes`, zadejte čárku (**,**) následované znaky jeden nebo více atributů. Chcete-li negate – atribut, před jeho znak s vykřičníkem (!). Tyto znaky zadat atributy paměti:
+Chcete-li nastavit nebo změnit `attributes`oddílu, zadejte čárku ( **,** ) následovaný jedním nebo více znaky atributů. Pro negaci atributu, před jeho znak vykřičníkem (!). Následující znaky určují atributy paměti:
 
 |Atribut|Nastavení|
 |---------------|-------------|
-|c|kód|
-|d|Discardable|
-|e|spustitelný soubor|
-|Mohu|inicializovaná data|
-|k|v mezipaměti virtuální paměti|
-|m|Odebrat odkaz|
+|c|code|
+|d|vypuštění|
+|e|spouštěcí|
+|Můžu|inicializovaná data|
+|k|virtuální paměť v mezipaměti|
+|m|odebrat odkaz|
 |o|informace o propojení|
 |p|stránkovaná virtuální paměť|
 |r|read|
 |s|shared|
-|u|Neinicializovaná data|
+|u|neinicializovaná data|
 |w|write|
 
-Ovládací prvek *zarovnání*, zadejte znak **A** , následovaný jednou z následujících znaků nastavit velikost zarovnání v bajtech, následujícím způsobem:
+Chcete-li ovládací prvek *Zarovnání*, zadejte znak **a** následovaný jedním z následujících znaků pro nastavení velikosti zarovnání v bajtech následujícím způsobem:
 
-|Znak|Zarovnání velikost v bajtech|
+|Znak|Velikost zarovnání v bajtech|
 |---------------|-----------------------------|
 |1|1|
 |2|2|
@@ -58,8 +58,8 @@ Ovládací prvek *zarovnání*, zadejte znak **A** , následovaný jednou z nás
 |s|64|
 |x|bez zarovnání|
 
-Zadejte `attributes` a *zarovnání* znaků jako řetězec s žádné prázdné znaky. Znaky nejsou velká a malá písmena.
+Zadejte `attributes` a *Zarovnání* znaků jako řetězec bez mezer. U znaků se nerozlišují malá a velká písmena.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [EDITBIN – možnosti](editbin-options.md)

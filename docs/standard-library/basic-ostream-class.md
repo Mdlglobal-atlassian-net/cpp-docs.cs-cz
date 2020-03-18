@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
 ms.openlocfilehash: 9025d595e79eed9f81aff77b931a2585359a8c3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874801"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421973"
 ---
 # <a name="basic_ostream-class"></a>basic_ostream – třída
 
@@ -434,7 +434,7 @@ Odkaz na objekt basic_ostream.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud [](../standard-library/basic-ios-class.md#fail) je selhání **false**, První členská funkce volá **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*) pro některé `pos_type` dočasné `newpos`objektů. Pokud je `fail` false, druhá funkce volá **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_Off, _Way*). V obou případech, pokud (`off_type`)**newpos = =** (`off_type`) (-1) (operace umístění se nezdařila), funkce volá **ISTR.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Obě funkce vrací **\*** .
+Pokud [fail](../standard-library/basic-ios-class.md#fail) je selhání **false**, První členská funkce volá **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*) pro některé `pos_type` dočasné `newpos`objektů. Pokud je `fail` false, druhá funkce volá **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_Off, _Way*). V obou případech, pokud (`off_type`)**newpos = =** (`off_type`) (-1) (operace umístění se nezdařila), funkce volá **ISTR.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Obě funkce vrací **\*** .
 
 ### <a name="example"></a>Příklad
 

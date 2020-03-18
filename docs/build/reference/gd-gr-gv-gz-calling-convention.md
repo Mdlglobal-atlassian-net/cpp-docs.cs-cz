@@ -2,9 +2,8 @@
 title: /Gd, /Gr, /Gv, /Gz (Konvence volání)
 ms.date: 09/05/2018
 f1_keywords:
-- /gr
+- /Gr
 - /Gv
-- /gz
 - /Gd
 - VC.Project.VCCLCompilerTool.CallingConvention
 helpviewer_keywords:
@@ -21,95 +20,96 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: eabb4e11715e03745e27911ccd654568d70b8352
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 92fd4f6ae4193e86edb114cc366e6d40e4208ca8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400502"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439665"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Konvence volání)
 
-Tyto možnosti určují pořadí ve funkci, která argumenty jsou vloženy do zásobníku, zda funkce volajícího nebo volaná funkce odstraní argumenty ze zásobníku volání na konci volání a konvence dekorování, který kompilátor používá k identifikaci jednotlivé funkce.
+Tyto možnosti určují pořadí, ve kterém jsou argumenty funkce vloženy do zásobníku, zda volající funkce nebo volaná funkce odebere argumenty ze zásobníku na konci volání a konvenci Name-upravení, kterou kompilátor používá k identifikaci jednotlivé funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Gd**<br/>
-> **/Gr**<br/>
-> **/Gv**<br/>
-> **/Gz**
+> **/GD**<br/>
+> **/GR**<br/>
+> **/GV**<br/>
+> **/GZ**
 
 ## <a name="remarks"></a>Poznámky
 
-**/GD –** , výchozí nastavení, určuje, [__cdecl](../../cpp/cdecl.md) konvence volání pro všechny funkce s výjimkou C++ členské funkce a funkce, které jsou označeny [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), nebo [__vectorcall](../../cpp/vectorcall.md).
+**/GD**, výchozí nastavení, určuje [__cdecl](../../cpp/cdecl.md) konvence volání pro všechny C++ funkce s výjimkou členských funkcí a funkcí, které jsou označeny [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md)nebo [__vectorcall](../../cpp/vectorcall.md).
 
-**/GR** Určuje, `__fastcall` konvence volání pro všechny funkce s výjimkou členských funkcí jazyka C++, funkce s názvem `main`a funkce, které jsou označeny `__cdecl`, `__stdcall`, nebo `__vectorcall`. Všechny `__fastcall` funkce musejí mít prototypy. Tato konvence volání je k dispozici v kompilátorech, které se zaměřují x86 pouze a ignorováno kompilátory, které se zaměřují na jiné architektury.
+**/Gr** určuje konvenci volání `__fastcall` pro všechny funkce s C++ výjimkou členských funkcí, funkcí nazvaných `main`a funkcí, které jsou označeny `__cdecl`, `__stdcall`nebo `__vectorcall`. Všechny funkce `__fastcall` musí mít prototypy. Tato konvence volání je k dispozici pouze v kompilátorech cílících na platformu x86 a jsou ignorovány kompilátory, které cílí na jiné architektury.
 
-**/GZ** Určuje, `__stdcall` konvence volání pro všechny funkce s výjimkou členských funkcí jazyka C++, funkce s názvem `main`a funkce, které jsou označeny `__cdecl`, `__fastcall`, nebo `__vectorcall`. Všechny `__stdcall` funkce musejí mít prototypy. Tato konvence volání je k dispozici v kompilátorech, které se zaměřují x86 pouze a ignorováno kompilátory, které se zaměřují na jiné architektury.
+**/GZ** určuje konvenci volání `__stdcall` pro všechny funkce s C++ výjimkou členských funkcí, funkcí nazvaných `main`a funkcí, které jsou označeny `__cdecl`, `__fastcall`nebo `__vectorcall`. Všechny funkce `__stdcall` musí mít prototypy. Tato konvence volání je k dispozici pouze v kompilátorech cílících na platformu x86 a jsou ignorovány kompilátory, které cílí na jiné architektury.
 
-**/Gv** Určuje `__vectorcall` konvence volání pro všechny funkce s výjimkou C++ členské funkce, funkce s názvem `main`, funguje s `vararg` Proměnný seznam argumentů nebo funkce, které jsou označeny konfliktním `__cdecl`, `__stdcall`, nebo `__fastcall` atribut. Tato konvence volání je k dispozici pouze v x86 a x64 architektury, které podporují SSE2 a vyšší a je ignorován kompilátory, které se zaměřují na architekturu ARM.
+**/GV** určuje konvenci volání `__vectorcall` pro všechny funkce s C++ výjimkou členských funkcí, funkcí nazvaných `main`, funkcí se seznamem argumentů `vararg` proměnných, nebo funkcí, které jsou označeny konfliktní `__cdecl`, `__stdcall`nebo `__fastcall` atribut. Tato konvence volání je k dispozici pouze v architekturách x86 a x64, které podporují/arch: SSE2 a vyšší a jsou ignorovány kompilátory, které cílí na architekturu ARM.
 
-Funkce vyžadující proměnný počet argumentů musí být označen `__cdecl`.
+Funkce, které přijímají proměnný počet argumentů, musí být označeny `__cdecl`.
 
-**/GD –** , **GR**, **/Gv** a **/Gz** nejsou kompatibilní s [/CLR: safe](clr-common-language-runtime-compilation.md) nebo   **/CLR: pure**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v sadě Visual Studio 2017 a novější.
+**/GD**, **/gr**, **/GV** a **/GZ** nejsou kompatibilní s [/clr: Safe](clr-common-language-runtime-compilation.md) nebo **/clr: Pure**. Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017 a novější.
 
 > [!NOTE]
-> Ve výchozím nastavení pro x86 procesory, C++ členské funkce pomocí [klíčové slovo __thiscall](../../cpp/thiscall.md).
+> Ve výchozím nastavení pro procesory C++ x86 používají členské funkce [__thiscall](../../cpp/thiscall.md).
 
-Pro všechny procesory, členská funkce, která je explicitně označena jako `__cdecl`, `__fastcall`, `__vectorcall`, nebo `__stdcall` používá zadané konvence volání, pokud není ignorována u této architektury. Členská funkce, která přijímá proměnný počet argumentů, vždy používá `__cdecl` konvence volání.
+Pro všechny procesory, členská funkce, která je explicitně označena jako `__cdecl`, `__fastcall`, `__vectorcall`nebo `__stdcall` používá zadanou konvenci volání, pokud není v této architektuře ignorována. Členská funkce, která přijímá proměnný počet argumentů, vždy používá konvenci volání `__cdecl`.
 
-Tyto možnosti kompilátoru nemají žádný vliv na názvovou dekoraci metod C++ a funkcí. Pokud nejsou deklarovány jako `extern "C"`, používají jiné schéma dekorování C++ metody a funkce. Další informace najdete v tématu [dekorované názvy](decorated-names.md).
+Tyto možnosti kompilátoru nemají žádný vliv na název dekorace C++ metod a funkcí. Pokud se nedeklaruje jako C++ `extern "C"`, metody a funkce používají jiné schéma Name-upravení. Další informace najdete v tématu [dekorované názvy](decorated-names.md).
 
 Další informace o konvencích volání naleznete v tématu [konvence volání](../../cpp/calling-conventions.md).
 
-## <a name="cdecl-specifics"></a>Specifikace __cdecl
+## <a name="__cdecl-specifics"></a>__cdecl specifické
 
-Na x86 procesory, všechny argumenty jsou předány v zásobníku zprava doleva. Na ARM a x64 některé argumenty jsou předány registrem a ostatní jsou předány v zásobníku zprava doleva. Rutina volání vezme argumenty ze zásobníku POP.
+U procesorů x86 jsou všechny argumenty funkce předány v zásobníku zprava doleva. V architekturách ARM a x64 jsou některé argumenty předány registrem a zbytek se předává v zásobníku zprava doleva. Rutina volání odvolá argumenty ze zásobníku.
 
-Pro jazyk C `__cdecl` používá konvence pojmenování název funkce začínající podtržítkem ( `_` ); provádí se žádný překlad případu. Pokud nejsou deklarovány jako `extern "C"`, používají funkce jazyka C++ jiné schéma dekorování. Další informace najdete v tématu [dekorované názvy](decorated-names.md).
+V případě jazyka C `__cdecl` konvence pojmenování používá název funkce předchází podtržítkem (`_`); neprovádí se žádný překlad případu. Pokud se nedeklaruje jako C++ `extern "C"`, funkce používají jiné schéma s názvem upravení. Další informace najdete v tématu [dekorované názvy](decorated-names.md).
 
-## <a name="fastcall-specifics"></a>Specifikace __fastcall
+## <a name="__fastcall-specifics"></a>__fastcall specifické
 
-Část `__fastcall` argumenty funkce předány v registrech (pro x86 procesory, ECX a EDX), a zbývající je vložena do zásobníku zprava doleva. Volaná rutina vyjme tyto argumenty ze zásobníku ještě před jeho vrácením. Obvykle **GR** snižuje dobu provádění.
+Některé argumenty funkce `__fastcall` jsou předány v registrech (pro procesory x86, ECX a EDX) a zbývající jsou vloženy do zásobníku zprava doleva. Volaná rutina před vrácením z zásobníku tyto argumenty převezme. **/Gr** obvykle zkracuje dobu provádění.
 
 > [!NOTE]
-> Buďte opatrní při použití `__fastcall` konvence volání pro všechny funkce, který je napsán ve vloženém jazyce sestavení. Využití registrů by mohla v konfliktu s použitím kompilátoru.
+> Buďte opatrní při použití `__fastcall` konvence volání pro všechny funkce, které jsou napsány ve vloženém jazyce sestavení. Vaše použití registrů může být v konfliktu s použitím kompilátoru.
 
-Pro jazyk C `__fastcall` používá konvence pojmenování název funkce předchází zavináč ( **\@** ) následovaný velikostí argumentů funkce v bajtech. Provádí se žádný překlad případu. Kompilátor používá tuto šablonu pro vytváření názvů:
+V případě jazyka C `__fastcall` konvence pojmenování používá název funkce, před kterým následuje znaménko ( **\@** ) následovaný velikostí argumentů funkce v bajtech. Neprovádí se žádný překlad případu. Kompilátor používá tuto šablonu pro konvenci vytváření názvů:
 
 `@function_name@number`
 
-Při použití `__fastcall` zásady vytváření názvů, použijte standardní soubory zahrnutí. V opačném případě získáte nevyřešené externí odkazy.
+Při použití `__fastcall` konvence pojmenování použijte standardní soubory k zahrnutí. Jinak obdržíte nevyřešené externí odkazy.
 
-## <a name="stdcall-specifics"></a>Specifikace __stdcall
+## <a name="__stdcall-specifics"></a>__stdcall specifické
 
-A `__stdcall` jsou argumenty funkce vloženy do zásobníku zprava doleva a volaná funkce tyto argumenty zobrazí ze zásobníku ještě před jeho vrácením.
+Argumenty funkce `__stdcall` jsou vloženy do zásobníku zprava doleva a volaná funkce tyto argumenty ze zásobníku před vrácením vrátí.
 
-Pro jazyk C `__stdcall` používá konvence pojmenování název funkce začínající podtržítkem ( **\_** ) a za nímž následuje zavináč ( **\@** ) a velikost funkce argumentů v bajtech. Provádí se žádný překlad případu. Kompilátor používá tuto šablonu pro vytváření názvů:
+V případě jazyka C `__stdcall` konvence pojmenování používá název funkce předchází podtržítkem ( **\_** ) a následuje znakem při znaménku ( **\@** ) a velikostí argumentů funkce v bajtech. Neprovádí se žádný překlad případu. Kompilátor používá tuto šablonu pro konvenci vytváření názvů:
 
 `_functionname@number`
 
-## <a name="vectorcall-specifics"></a>Specifikace __vectorcall
+## <a name="__vectorcall-specifics"></a>__vectorcall specifické
 
-A `__vectorcall` celočíselné argumenty funkce jsou předávány hodnotou, využívají až dva (na x86) nebo čtyři (na x64) celočíselné registry a až šest registrů XMM zaregistruje s plovoucí desetinnou čárkou a hodnoty vektoru a ostatní jsou předány v zásobníku zprava doleva. Volaná funkce vyčistí zásobník před jeho vrácením. Vektorové a vrácené hodnoty s plovoucí desetinnou čárkou jsou vráceny v XMM0.
+Celočíselné argumenty funkce `__vectorcall` jsou předávány hodnotou, za použití až dvou (na platformě x86) nebo čtyř (na platformě x64) registrů celých čísel a až šesti registrů XMM pro hodnoty s plovoucí desetinnou čárkou a vektoru a zbytek se předává v zásobníku zprava doleva. Volaná funkce vyčistí zásobník před jeho vrácením. V XMM0 se vrátí vektorové a návratové hodnoty s plovoucí desetinnou čárkou.
 
-Pro jazyk C `__vectorcall` zásady vytváření názvů používá název funkce následovaný dvěma zavináči ( **\@\@** ) a velikostí argumentů funkce v bajtech. Provádí se žádný překlad případu. Kompilátor používá tuto šablonu pro vytváření názvů:
+V případě jazyka C `__vectorcall` konvence pojmenování používá název funkce následovaný dvěma znaménky ( **\@\@** ) a velikostí argumentů funkce v bajtech. Neprovádí se žádný překlad případu. Kompilátor používá tuto šablonu pro konvenci vytváření názvů:
 
 `functionname@@number`
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **C/C++**  > **Upřesnit** stránku vlastností.
+1. Vyberte stránku vlastností **Upřesnit** v jazyce **C/C++**  > .
 
-1. Upravit **konvence volání** vlastnost.
+1. Upravte vlastnost **konvence volání** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Parametry kompilátoru MSVC](compiler-options.md)
 - [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
+ 

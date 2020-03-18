@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890847"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419656"
 ---
 # <a name="queue-class"></a>queue – třída
 
@@ -80,7 +80,7 @@ Existují tři typy adaptérů kontejneru definovaných C++ standardní knihovno
 |[size_type](#size_type)|Typ unsigned integer, který může představovat počet prvků v `queue`.|
 |[value_type](#value_type)|Typ, který představuje typ objektu uložený jako prvek v `queue`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkce
 
 |||
 |-|-|

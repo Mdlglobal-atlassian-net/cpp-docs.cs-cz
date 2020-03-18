@@ -1,9 +1,6 @@
 ---
 title: Společná makra pro příkazy a vlastnosti MSBuild
 ms.date: 08/02/2019
-f1_keywords:
-- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
-- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -93,12 +90,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988325"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440165"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Společná makra pro příkazy a vlastnosti MSBuild
 
@@ -118,35 +115,35 @@ Tato tabulka popisuje běžně použitou podmnožinu dostupných maker. Zde je u
 |-----------|-----------------|
 |**$ (Konfigurace)**|Název aktuální konfigurace projektu, například "ladit".|
 |**$ (DevEnvDir)**|Instalační adresář aplikace Visual Studio (definovaný jako jednotka + cesta); obsahuje koncové zpětné lomítko '\\'.|
-|**$(FrameworkDir)**|Adresář, do kterého byl nainstalován .NET Framework.|
-|**$(FrameworkSDKDir)**|Adresář, do kterého jste nainstalovali .NET Framework. .NET Framework mohl být nainstalován jako součást sady Visual Studio nebo samostatně.|
+|**$ (FrameworkDir)**|Adresář, do kterého byl nainstalován .NET Framework.|
+|**$ (FrameworkSDKDir)**|Adresář, do kterého jste nainstalovali .NET Framework. .NET Framework mohl být nainstalován jako součást sady Visual Studio nebo samostatně.|
 |**$ (FrameworkVersion)**|Verze .NET Framework používaná v aplikaci Visual Studio. V kombinaci s **$ (FrameworkDir)** je úplná cesta k verzi .NET Framework, kterou používá Visual Studio.|
-|**$(FxCopDir)**|Cesta k souboru FxCop. cmd. Soubor FxCop. cmd není nainstalován se všemi edicemi sady Visual Studio.|
-|**$(IntDir)**|Cesta k adresáři určenému pro mezilehlé soubory. Pokud se jedná o relativní cestu, mezilehlé soubory přejdou do této cesty připojené k adresáři projektu. Tato cesta by měla obsahovat koncové lomítko. Přeloží se na hodnotu vlastnosti **zprostředkujícího adresáře** . Pro definování této vlastnosti Nepoužívejte **$ (OutDir)** .|
-|**$(OutDir)**|Cesta k adresáři výstupního souboru Pokud se jedná o relativní cestu, výstupní soubory přejdou do této cesty připojené k adresáři projektu. Tato cesta by měla obsahovat koncové lomítko. Přeloží se na hodnotu vlastnosti **výstupní adresář** . Pro definování této vlastnosti Nepoužívejte **$ (IntDir)** .|
-|**$(Platform)**|Název aktuální projektové platformy, například "Win32".|
-|**$(PlatformShortName)**|Krátký název aktuální architektury, například "x86" nebo "x64".|
-|**$(ProjectDir)**|Adresář projektu (definovaný jako jednotka + cesta); obsahuje koncové zpětné lomítko '\\'.|
-|**$(ProjectExt)**|Přípona souboru projektu. Obsahuje znak "." před příponou souboru.|
-|**$(ProjectFileName)**|Název souboru projektu (definovaný jako základní název + Přípona souboru).|
-|**$(ProjectName)**|Základní název projektu|
-|**$(ProjectPath)**|Absolutní cesta k názvu projektu (definovaná jako jednotka + cesta + základní název + Přípona souboru).|
+|**$ (FxCopDir)**|Cesta k souboru FxCop. cmd. Soubor FxCop. cmd není nainstalován se všemi edicemi sady Visual Studio.|
+|**$ (IntDir)**|Cesta k adresáři určenému pro mezilehlé soubory. Pokud se jedná o relativní cestu, mezilehlé soubory přejdou do této cesty připojené k adresáři projektu. Tato cesta by měla obsahovat koncové lomítko. Přeloží se na hodnotu vlastnosti **zprostředkujícího adresáře** . Pro definování této vlastnosti Nepoužívejte **$ (OutDir)** .|
+|**$ (OutDir)**|Cesta k adresáři výstupního souboru Pokud se jedná o relativní cestu, výstupní soubory přejdou do této cesty připojené k adresáři projektu. Tato cesta by měla obsahovat koncové lomítko. Přeloží se na hodnotu vlastnosti **výstupní adresář** . Pro definování této vlastnosti Nepoužívejte **$ (IntDir)** .|
+|**$ (Platforma)**|Název aktuální projektové platformy, například "Win32".|
+|**$ (PlatformShortName)**|Krátký název aktuální architektury, například "x86" nebo "x64".|
+|**$ (ProjectDir)**|Adresář projektu (definovaný jako jednotka + cesta); obsahuje koncové zpětné lomítko '\\'.|
+|**$ (ProjectExt)**|Přípona souboru projektu. Obsahuje znak "." před příponou souboru.|
+|**$ (ProjectFileName)**|Název souboru projektu (definovaný jako základní název + Přípona souboru).|
+|**$ (ProjectName)**|Základní název projektu|
+|**$ (ProjectPath)**|Absolutní cesta k názvu projektu (definovaná jako jednotka + cesta + základní název + Přípona souboru).|
 |**$ (PublishDir)**|Umístění výstupu pro cíl publikování; obsahuje koncové zpětné lomítko '\\'. Výchozí hodnota je **aplikace $ (OutDir). publish\\** složka.|
 |**$ (RemoteMachine)**|Nastavte na hodnotu vlastnosti **vzdálený počítač** na stránce vlastností ladění. Další informace najdete v tématu [Změna nastavení projektuC++ pro konfiguraci C/Debug](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|
 |**$ (RootNameSpace)**|Obor názvů, pokud existuje, obsahující aplikaci.|
 |**$ (SolutionDir)**|Adresář řešení (definovaný jako jednotka + cesta); obsahuje koncové zpětné lomítko '\\'. Definováno pouze při sestavování řešení v integrovaném vývojovém prostředí.|
 |**$ (SolutionExt)**|Přípona souboru řešení. Obsahuje znak "." před příponou souboru. Definováno pouze při sestavování řešení v integrovaném vývojovém prostředí.|
-|**$(SolutionFileName)**|Název souboru řešení (definovaného jako základní název + Přípona souboru). Definováno pouze při sestavování řešení v integrovaném vývojovém prostředí.|
+|**$ (SolutionFileName)**|Název souboru řešení (definovaného jako základní název + Přípona souboru). Definováno pouze při sestavování řešení v integrovaném vývojovém prostředí.|
 |**$ (Řešení)**|Základní název řešení Definováno pouze při sestavování řešení v integrovaném vývojovém prostředí.|
 |**$ (SolutionPath)**|Absolutní cesta k názvu řešení (definovaného jako jednotka + cesta + základní název + Přípona souboru). Definováno pouze při sestavování řešení v integrovaném vývojovém prostředí.|
-|**$(TargetDir)**|Adresář primárního výstupního souboru pro sestavení (definovaný jako jednotka + cesta); obsahuje koncové zpětné lomítko '\\'.|
-|**$(TargetExt)**|Přípona souboru primárního výstupního souboru pro sestavení. Obsahuje znak "." před příponou souboru.|
-|**$(TargetFileName)**|Název souboru primárního výstupního souboru pro sestavení (definované jako základní název + Přípona souboru).|
-|**$(TargetName)**|Základní název primárního výstupního souboru pro sestavení.|
-|**$(TargetPath)**|Absolutní cesta k primárnímu výstupnímu souboru pro sestavení (definované jako jednotka + cesta + základní název + Přípona souboru).|
+|**$ (TargetDir)**|Adresář primárního výstupního souboru pro sestavení (definovaný jako jednotka + cesta); obsahuje koncové zpětné lomítko '\\'.|
+|**$ (TargetExt)**|Přípona souboru primárního výstupního souboru pro sestavení. Obsahuje znak "." před příponou souboru.|
+|**$ (TargetFileName)**|Název souboru primárního výstupního souboru pro sestavení (definované jako základní název + Přípona souboru).|
+|**$ (Cílový_název)**|Základní název primárního výstupního souboru pro sestavení.|
+|**$ (TargetPath)**|Absolutní cesta k primárnímu výstupnímu souboru pro sestavení (definované jako jednotka + cesta + základní název + Přípona souboru).|
 |**$ (VCInstallDir)**|Adresář, který obsahuje C++ obsah vaší instalace sady Visual Studio. Tato vlastnost obsahuje verzi cílené sady nástrojů Microsoft C++ (MSVC), která se může lišit od hostitele sady Visual Studio. Například při sestavování pomocí `$(PlatformToolset) = v140`obsahuje **$ (VCInstallDir)** cestu k instalaci sady Visual Studio 2015.|
 |**$ (VSInstallDir)**|Adresář, do kterého jste nainstalovali aplikaci Visual Studio. Tato vlastnost obsahuje verzi cílené sady nástrojů sady Visual Studio, která se může lišit od hostitele sady Visual Studio. Například při sestavování pomocí `$(PlatformToolset) = v110`obsahuje **$ (VSINSTALLDIR)** cestu k instalaci sady Visual Studio 2012.|
-|**$(WebDeployPath)**|Relativní cesta z kořenu nasazení webu, do které patří výstup projektu.|
+|**$ (WebDeployPath)**|Relativní cesta z kořenu nasazení webu, do které patří výstup projektu.|
 |**$ (WebDeployRoot)**|Absolutní cesta k umístění **\<localhost >** . Například c:\Inetpub\Wwwroot.|
 
 ## <a name="obsolete-macros"></a>Zastaralá makra
@@ -160,12 +157,12 @@ Sestavovací systém pro C++ byl významně změněn mezi visual Studio 2008 a v
 |**$ (InputFileName)**|(Migrováno) Název souboru vstupního souboru (definovaného jako základní název + Přípona souboru). Pokud je projekt vstupem, pak je toto makro ekvivalentní **$ (ProjectFileName)** . U zdrojových souborů se jedná o **% (identitu)** .|
 |**$ (Vstup)**|(Migrováno) Základní název vstupního souboru. Pokud je projekt vstupem, pak je toto makro ekvivalentní **$ (ProjectName)** . U zdrojových souborů se jedná o **% (název souboru)** .|
 |**$ (InputPath)**|(Migrováno) Absolutní cesta ke vstupnímu souboru (definovaná jako jednotka + cesta + základní název + Přípona souboru). Pokud je projekt vstupem, pak je toto makro ekvivalentní **$ (ProjectPath)** . Pro zdrojové soubory je to **% (FullPath)** .|
-|**$(ParentName)**|Název položky obsahující tuto položku projektu Toto bude název nadřazené složky nebo název projektu.|
+|**$ (Parent)**|Název položky obsahující tuto položku projektu Toto bude název nadřazené složky nebo název projektu.|
 |**$ (SafeInputName)**|Název souboru jako platný název třídy, mínus Přípona souboru. Tato vlastnost nemá přesný ekvivalent.|
-|**$(SafeParentName)**|Název bezprostředního nadřazeného objektu ve formátu platného názvu. Například formulář je nadřazený souboru. resx. Tato vlastnost nemá přesný ekvivalent.|
-|**$(SafeRootNamespace)**|Název oboru názvů, do kterého budou Průvodci projektu přidány kód. Tento název oboru názvů bude obsahovat pouze znaky, které by mohly být povoleny C++ v platném identifikátoru. Tato vlastnost nemá přesný ekvivalent.|
+|**$ (SafeParentName)**|Název bezprostředního nadřazeného objektu ve formátu platného názvu. Například formulář je nadřazený souboru. resx. Tato vlastnost nemá přesný ekvivalent.|
+|**$ (SafeRootNamespace)**|Název oboru názvů, do kterého budou Průvodci projektu přidány kód. Tento název oboru názvů bude obsahovat pouze znaky, které by mohly být povoleny C++ v platném identifikátoru. Tato vlastnost nemá přesný ekvivalent.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Projekty sady Visual Studio C++ –](../creating-and-managing-visual-cpp-projects.md)\
 [Průvodce C++ portací a upgradem vizuálů](../../porting/visual-cpp-porting-and-upgrading-guide.md)\

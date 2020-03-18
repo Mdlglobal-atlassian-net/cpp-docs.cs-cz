@@ -4,7 +4,6 @@ ms.date: 11/12/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MinimalRebuild
 - /Gm
-- /FD
 - VC.Project.VCCLWCECompilerTool.MinimalRebuild
 helpviewer_keywords:
 - /Gm compiler option [C++]
@@ -13,16 +12,16 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-ms.openlocfilehash: 4a66dda37b84119a4b8bc23f7fc719d50e8786f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b928f3add0a2ec10257bf63fe61a824336c19b8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292063"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439642"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (Povolit minimální opětovné sestavení)
 
-Zastaralé Povoluje minimální opětovné sestavení, která určuje, zda se musejí překompilovat zdrojové soubory C++ obsahující změněné definice tříd C++ (uložené v souborech hlaviček (.h)).
+Zastaralé Povoluje minimální opětovné sestavení, které určuje, C++ zda je nutné znovu zkompilovat C++ zdrojové soubory, které obsahují změněné definice tříd (uložené v hlavičkových souborech (. h)).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,28 +31,28 @@ Zastaralé Povoluje minimální opětovné sestavení, která určuje, zda se mu
 
 ## <a name="remarks"></a>Poznámky
 
-**/GM** je zastaralý. To nemusí aktivovat sestavení pro určité druhy změny v souboru záhlaví. Tuto možnost můžete bezpečně odstranit z vašich projektů. Pokud chcete zkrátit dobu sestavování, doporučujeme použití předkompilovaných hlaviček a přírůstkových a paralelní možnosti sestavení místo toho. Seznam možností kompilátoru zastaralé, najdete v článku **zastaralé a odebrat možnosti kompilátoru** tématu [možnosti kompilátoru seřazené podle kategorie](compiler-options-listed-by-category.md).
+**/GM** je zastaralá. Nemusí aktivovat sestavení pro určitý druh změny souboru hlaviček. Tuto možnost můžete z vašich projektů bezpečně odebrat. Pro zlepšení časů sestavení doporučujeme místo toho použít předkompilované hlavičky a přírůstkové a paralelní možnosti sestavení. Seznam zastaralých možností kompilátoru naleznete v části **zastaralé a odebrané možnosti kompilátoru** v tématu [Možnosti kompilátoru uvedené podle kategorie](compiler-options-listed-by-category.md).
 
-Kompilátor ukládá informace o závislostech mezi zdrojovými soubory a definice tříd v souboru IDB projektu během první kompilace. (Informace o závislostech říká, které zdrojový soubor je závislá na které definice třídy a které. h: soubor definice se nachází v.) Následné zkompiluje používat informace uložené v souboru IDB určit, zda zdrojový soubor musí ke kompilaci, i v případě obsahuje upravený. h: soubor.
+Kompilátor ukládá informace o závislostech mezi zdrojovými soubory a definicemi tříd v souboru. IDB projektu během první kompilace. (Informace o závislostech určují, který zdrojový soubor závisí na definici třídy a který soubor. h definice je umístěna v.) Další kompilace používají informace uložené v souboru. IDB k určení, zda zdrojový soubor musí být zkompilován, i když obsahuje upravený soubor. h.
 
 > [!NOTE]
-> Minimální opětovné sestavení závisí na třídě definice se nemění, mezi soubory k zahrnutí. Definice tříd musí být globální pro projekt (měl by existovat pouze jedna definice z dané třídy), protože informace o závislostech v souboru IDB se vytvoří pro celý projekt. Pokud máte více než jednu definici pro třídu ve vašem projektu, zakažte minimálního opětovného sestavení.
+> Minimální opětovné sestavení spoléhá na definice tříd, které mezi soubory zahrnutí nemění. Definice tříd musí být globální pro projekt (měla by existovat pouze jedna definice dané třídy), protože informace o závislostech v souboru. IDB jsou vytvořeny pro celý projekt. Pokud máte více než jednu definici pro třídu ve vašem projektu, vypněte minimální opětovné sestavení.
 
-Protože přírůstkový linker nepodporuje metadat Windows zahrnuty v souborech .obj pomocí [/ZW (kompilace Windows Runtime)](zw-windows-runtime-compilation.md) možnost, **/Gm** možnost není kompatibilní s  **/ZW**.
+Vzhledem k tomu, že přírůstkový linker nepodporuje metadata Windows obsažená v souborech. obj pomocí možnosti [/ZW (prostředí Windows Runtime Compilation)](zw-windows-runtime-compilation.md) , možnost **/GM** není kompatibilní s **/ZW**.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **C/C++** > **generování kódu** stránku vlastností.
+1. Vyberte **Vlastnosti konfigurace** > stránka vlastností **generování kódu** **C++ jazyka C/**  > .
 
-1. Upravit **povolení minimálního opětovného sestavení** vlastnost.
+1. Upravte vlastnost **Povolit minimální opětovné sestavení** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.MinimalRebuild%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.MinimalRebuild%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

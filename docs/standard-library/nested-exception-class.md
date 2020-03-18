@@ -2,18 +2,18 @@
 title: nested_exception – třída
 ms.date: 11/04/2016
 f1_keywords:
-- exception/std::bad_exception
+- exception/std::nested_exception
 helpviewer_keywords:
-- bad_exception class
+- nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 5741b3aa255f915500f5fe79ab5374c8c86f8814
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460179"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441614"
 ---
-# <a name="nestedexception-class"></a>nested_exception – třída
+# <a name="nested_exception-class"></a>nested_exception – třída
 
 Třída popisuje výjimku pro použití s vícenásobnou dědičností. Zachycuje Aktuálně zpracovávanou výjimku a uloží ji pro pozdější použití.
 
@@ -36,7 +36,7 @@ class nested_exception {
 |-|-|
 |[operátor =](#op_as)||
 
-### <a name="functions"></a>Funkce
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -57,7 +57,7 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Uložená výjimka zachycená tímto `nested_exception` objektem.
+Uložená výjimka zachycená tímto objektem `nested_exception`.
 
 ### <a name="rethrow_nested"></a>rethrow_nested
 
@@ -71,11 +71,11 @@ Pokud `nested_ptr()` vrátí ukazatel s hodnotou null, funkce volá `std::termin
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> výjimky
+**Header:** \<> výjimky
 
 **Obor názvů:** std
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Exception – třída](../standard-library/exception-class.md)\
+\ [třídy výjimky](../standard-library/exception-class.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

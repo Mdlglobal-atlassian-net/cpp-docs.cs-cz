@@ -1,5 +1,5 @@
 ---
-title: /fp (zadání chování plovoucí desetinné čárky)
+title: /fp (určení chování hodnot s plovoucí desetinnou čárkou)
 ms.date: 11/09/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
@@ -11,83 +11,83 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 25b228c16f534ca227d50bfdf632fdacb5703cd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 402b59c4aee34a413a08235aab2327ca64e7db39
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292351"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439678"
 ---
-# <a name="fp-specify-floating-point-behavior"></a>/fp (zadání chování plovoucí desetinné čárky)
+# <a name="fp-specify-floating-point-behavior"></a>/fp (určení chování hodnot s plovoucí desetinnou čárkou)
 
-Určuje, jak kompilátor považuje výrazů s plovoucí desetinnou čárkou, optimalizací a výjimky. **/FP** určují, zda umožňuje generovaný kód s plovoucí desetinnou čárkou prostředí změní režim, výjimka masek a subnormal chování a zda kontroly stavu s plovoucí desetinnou čárkou vrátí aktuální, správné výsledky. Určuje, zda kompilátor generuje kód, který udržuje operaci správy zdrojových a výraz řazení a odpovídá standardu pro šíření hodnoty NaN, nebo pokud místo toho generuje efektivnější kód, který může změnit pořadí nebo kombinace operací a použití, která zjednodušuje jejich algebraický transformace, které nejsou povoleny Standard.
+Určuje způsob, jakým kompilátor zpracovává výrazy, optimalizace a výjimky s plovoucí desetinnou čárkou. Možnosti **/FP** určují, zda bude generovaný kód umožňovat změnu prostředí s plovoucí desetinnou čárkou v režimu zaokrouhlování, masek výjimek a dílčím normálním chování a zda kontroly stavu s plovoucí desetinnou čárkou vracejí aktuální, přesné výsledky. Určuje, zda kompilátor generuje kód, který udržuje zdrojovou operaci a řazení výrazu, a odpovídá standardu pro šíření NaN, nebo pokud místo toho generuje efektivnější kód, který může změnit pořadí nebo kombinovat operace a použít zjednodušení. algebraických transformace, které nejsou povoleny standardem.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ FP:**[**přesné** | **striktní** | **rychlé** | **s výjimkou**[ **-**]]
+> **/FP:** [**přesný** | **striktní** | **Fast** | **s výjimkou**[ **-** ]]
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Argumenty
 
-#### <a name="precise"></a>přesné
+#### <a name="precise"></a>popsat
 
-Ve výchozím nastavení, kterou kompilátor používá `/fp:precise` chování.
+Ve výchozím nastavení kompilátor používá chování `/fp:precise`.
 
-V části `/fp:precise` kompilátor zachová zdrojový výraz řazení a zaokrouhlení vlastnosti kód s plovoucí desetinnou čárkou, když ji vygeneruje a optimalizuje objektový kód pro cílový počítač. Kompilátor zaokrouhlí na přesnost zdrojového kódu na čtyři konkrétní body při vyhodnocení výrazu: v přiřazeních na zaokrouhlovat, když volání funkce je předán jako argument s plovoucí desetinnou čárkou a při hodnotu s plovoucí desetinnou čárkou je vrácená z volání funkce. Zprostředkující výpočty mohou být provedeny v počítači přesnosti. Zaokrouhlovat lze explicitně zaokrouhlit zprostředkující výpočty.
+V části `/fp:precise` kompilátor zachovává vlastnosti řazení zdrojového výrazu a vlastnosti zaoblení kódu s plovoucí desetinnou čárkou, když generuje a optimalizuje kód objektu pro cílový počítač. Kompilátor se zaokrouhluje na přesnost zdrojového kódu ve čtyřech konkrétních bodech během vyhodnocování výrazu: u přiřazení na přetypování, když se argument s plovoucí desetinnou čárkou předává volání funkce a když se hodnota s plovoucí desetinnou čárkou vrátí z volání funkce. Mezilehlé výpočty se můžou provádět na přesnosti počítače. Přetypování se dá použít k explicitnímu zaokrouhlení zprostředkujících výpočtů.
 
-Kompilátor neprovádí algebraických transformace výrazů s plovoucí desetinnou čárkou, jako je například opětovné přiřazení nebo distribuce, pokud je zaručeno, že transformace bitový identické výsledkem.
-Výrazy, které se týkají zvláštní hodnoty (NaN, + nekonečno, - nekonečno,-0.0) se zpracovávají podle specifikace IEEE 754. Například `x != x` vyhodnotí jako **true** Pokud x má NaN. S plovoucí desetinnou čárkou *staženiny*, tedy strojové instrukce, které kombinují operace s plovoucí desetinnou čárkou, mohou být generovány v rámci `/fp:precise`.
+Kompilátor neprovádí transformace algebraických pro výrazy s plovoucí desetinnou čárkou, jako je například opětovné přidružení nebo distribuce, pokud není zaručena transformace, aby vytvořila bitový identický výsledek.
+Výrazy, které zahrnují speciální hodnoty (NaN, + Infinity,-Infinity,-0,0), se zpracovávají podle specifikací IEEE-754. Například `x != x` vyhodnotí jako **true** , pokud je x NaN. *Smluvní strany*s plovoucí desetinnou čárkou, tedy pokyny pro počítače, které kombinují operace s plovoucí desetinnou čárkou, mohou být vygenerovány v `/fp:precise`.
 
-Kompilátor generuje kód určený ke spuštění v [výchozí prostředí s plovoucí desetinnou čárkou](#the-default-floating-point-environment) a předpokládá, že není prostředí s plovoucí desetinnou čárkou otevřeny nebo upraveny za běhu. To znamená předpokládá, že kód není odmaskování výjimek s plovoucí desetinnou čárkou, číst nebo zapisovat stav s plovoucí desetinnou čárkou registry nebo změnit režimech zaokrouhlení.
+Kompilátor generuje kód určený ke spuštění ve [výchozím prostředí s plovoucí desetinnou](#the-default-floating-point-environment) čárkou a předpokládá, že prostředí s plovoucí desetinnou čárkou není k dispozici nebo upraveno za běhu. To znamená, že předpokládá, že kód neprovádí zrušení maskování výjimek s plovoucí desetinnou čárkou, čtení nebo zápis stavových registrů s plovoucí desetinnou čárkou, nebo změnu režimů zaokrouhlení.
 
-Pokud váš kód s plovoucí desetinnou čárkou není závislý v řádu operace a výrazů s plovoucí desetinnou čárkou příkazy (např. Pokud vám nezáleží, jestli `a * b + a * c` je vypočítán jako `(b + c) * a` nebo `2 * a` jako `a + a`), vezměte v úvahu [Fast](#fast) možnost, která můžete vytvářet kód rychlejší a efektivnější. Pokud váš kód jak závisí v řádu operace a výrazy a přistupuje k nebo mění s plovoucí desetinnou čárkou prostředí (například ke změně režimu zaokrouhlování nebo zachycují výjimky s plovoucí desetinnou čárkou), použijte [/FP: strict](#strict).
+Pokud váš kód s plovoucí desetinnou čárkou nezávisí na pořadí operací a výrazů v příkazech s plovoucí desetinnou čárkou (například pokud nezáleží na tom, zda je `a * b + a * c` vypočítávána jako `(b + c) * a` nebo `2 * a` jako `a + a`), zvažte možnost [/FP: Fast](#fast) , která může způsobit rychlejší a efektivnější kód. Pokud váš kód závisí na pořadí operací a výrazů a přistupuje k němu nebo mění prostředí s plovoucí desetinnou čárkou (například pro změnu režimů zaokrouhlení nebo soutisku výjimek s plovoucí desetinnou čárkou), použijte [/FP: Strict](#strict).
 
 #### <a name="strict"></a>přísné
 
-`/fp:strict` chování podobný `/fp:precise`, to znamená, že kompilátor zachová řazení zdroje a zaokrouhlení vlastnosti kód s plovoucí desetinnou čárkou, když ji vygeneruje a optimalizuje objektový kód pro cílový počítač a dodržuje standardní při zpracování speciálními hodnotami. Kromě toho může program bezpečně přistupovat k nebo upravit s plovoucí desetinnou čárkou prostředí za běhu.
+`/fp:strict` má podobné chování jako `/fp:precise`. kompilátor zachovává vlastnosti řazení zdroje a zaokrouhlování kódu s plovoucí desetinnou čárkou, když generuje a optimalizuje kód objektu pro cílový počítač a při zpracování speciálních hodnot sleduje Standard. Kromě toho může program bezpečně přistupovat k prostředí s plovoucí desetinnou čárkou nebo ho upravovat za běhu.
 
-V části `/fp:strict`, kompilátor generuje kód, který umožňuje program bezpečně odmaskování výjimek s plovoucí desetinnou čárkou, číst nebo zapisovat stav s plovoucí desetinnou čárkou registry nebo změnit režimech zaokrouhlení. Zaokrouhlí na přesnost zdrojového kódu na čtyři konkrétní body při vyhodnocení výrazu: v přiřazeních na zaokrouhlovat, když volání funkce je předán jako argument s plovoucí desetinnou čárkou a při hodnotu s plovoucí desetinnou čárkou je vrácená z volání funkce. Zprostředkující výpočty mohou být provedeny v počítači přesnosti. Zaokrouhlovat lze explicitně zaokrouhlit zprostředkující výpočty. Kompilátor neprovádí algebraických transformace výrazů s plovoucí desetinnou čárkou, jako je například opětovné přiřazení nebo distribuce, pokud je zaručeno, že transformace bitový identické výsledkem. Výrazy, které se týkají zvláštní hodnoty (NaN, + nekonečno, - nekonečno,-0.0) se zpracovávají podle specifikace IEEE 754. Například `x != x` vyhodnotí jako **true** Pokud x má NaN. S plovoucí desetinnou čárkou staženiny nejsou generovány v `/fp:strict`.
+V rámci `/fp:strict`kompilátor generuje kód, který umožňuje programu bezpečně zrušit maskování výjimek s plovoucí desetinnou čárkou, číst nebo zapisovat Registry stavu s plovoucí desetinnou čárkou nebo měnit režimy zaokrouhlení. Se zaokrouhluje na přesnost zdrojového kódu ve čtyřech konkrétních bodech během vyhodnocování výrazu: v přiřazení na přetypování, když se argument s plovoucí desetinnou čárkou předává volání funkce a když se hodnota s plovoucí desetinnou čárkou vrátí z volání funkce. Mezilehlé výpočty se můžou provádět na přesnosti počítače. Přetypování se dá použít k explicitnímu zaokrouhlení zprostředkujících výpočtů. Kompilátor neprovádí transformace algebraických pro výrazy s plovoucí desetinnou čárkou, jako je například opětovné přidružení nebo distribuce, pokud není zaručena transformace, aby vytvořila bitový identický výsledek. Výrazy, které zahrnují speciální hodnoty (NaN, + Infinity,-Infinity,-0,0), se zpracovávají podle specifikací IEEE-754. Například `x != x` vyhodnotí jako **true** , pokud je x NaN. Smluvní strany s plovoucí desetinnou čárkou nejsou vygenerovány v `/fp:strict`.
 
-`/fp:strict` je výpočetně dražší než `/fp:precise` vzhledem k tomu, že kompilátor musíte vložit další pokyny k zachycení výjimky a povolit programy pro přístup k nebo upravit s plovoucí desetinnou čárkou prostředí za běhu. Pokud váš kód nepoužívá tato funkce, ale vyžaduje řazení zdrojový kód a zaokrouhlení nebo závisí na zvláštní hodnoty, použijte `/fp:precise`. V opačném případě zvažte použití `/fp:fast`, který může vytvořit rychlejší a menší kód.
+`/fp:strict` je výpočetně dražší než `/fp:precise`, protože kompilátor musí vložit další pokyny pro depeše a umožní programům přístup nebo upravit prostředí s plovoucí desetinnou čárkou za běhu. Pokud váš kód tuto schopnost nepoužívá, ale vyžaduje řazení zdrojového kódu a zaokrouhlování nebo spoléhá na speciální hodnoty, použijte `/fp:precise`. V opačném případě zvažte použití `/fp:fast`, což může způsobit rychlejší a menší kód.
 
-#### <a name="fast"></a>Rychlé
+#### <a name="fast"></a>světl
 
-`/fp:fast` Možnost umožňuje kompilátoru změnit pořadí, kombinovat nebo zjednodušují operace s plovoucí desetinnou čárkou k optimalizaci plovoucí desetinné čárky kód rychlost a místa. Kompilátor může vynechat zaokrouhlení přiřazovací příkazy, zaokrouhlovat nebo volání funkce. Může změnit pořadí operací nebo provádět algebraické transformace, například pomocí asociativních a distributivních zákony, i v případě, že takové transformace za následek viditelně různé chování se zaokrouhlováním. Z důvodu tyto rozšířené optimalizace výsledek některé výpočtů s plovoucí desetinnou čárkou mohou lišit od těch vytvořené pomocí jiných `/fp` možnosti. Zvláštní hodnoty (NaN, + nekonečno, - nekonečno,-0.0) nemusí být rozšířena nebo chovat přesně podle standardu IEEE 754. V části mohou být generovány s plovoucí desetinnou čárkou staženiny `/fp:fast`. Kompilátor je stále vázané základní architektuře v rámci `/fp:fast`, a další optimalizace může být k dispozici prostřednictvím použití [/arch](arch-minimum-cpu-architecture.md) možnost.
+Možnost `/fp:fast` umožňuje kompilátoru změnit pořadí, kombinování nebo zjednodušení operací s plovoucí desetinnou čárkou pro optimalizaci kódu s plovoucí desetinnou čárkou pro rychlost a místo. Kompilátor může vynechat zaokrouhlování v příkazech přiřazení, přetypování nebo volání funkcí. Může změnit pořadí operací nebo provádět transformace algebraických, například pomocí asociativních a obchodních zákonů, i když tyto transformace vedou ke pozorování různých chování při zaokrouhlování. Kvůli této rozšířené optimalizaci se výsledek některých výpočtů s plovoucí desetinnou čárkou může lišit od těch, které jsou vytvořené jinými možnostmi `/fp`. Speciální hodnoty (NaN, + Infinity,-Infinity,-0,0) se nedají rozšířit nebo se chovat výhradně podle standardu IEEE-754. V `/fp:fast`můžou být vygenerovány kontrakty s plovoucí desetinnou čárkou. Kompilátor je stále svázán se základní architekturou v rámci `/fp:fast`a další optimalizace mohou být k dispozici prostřednictvím použití možnosti [/arch](arch-minimum-cpu-architecture.md) .
 
-V části `/fp:fast`, kompilátor generuje kód určený ke spuštění ve výchozím prostředí s plovoucí desetinnou čárkou a předpokládá, že není prostředí s plovoucí desetinnou čárkou otevřeny nebo upraveny za běhu. To znamená předpokládá, že kód není odmaskování výjimek s plovoucí desetinnou čárkou, číst nebo zapisovat stav s plovoucí desetinnou čárkou registry nebo změnit režimech zaokrouhlení.
+V části `/fp:fast`kompilátor generuje kód určený ke spuštění ve výchozím prostředí s plovoucí desetinnou čárkou a předpokládá, že prostředí s plovoucí desetinnou čárkou není k dispozici nebo upraveno za běhu. To znamená, že předpokládá, že kód neprovádí zrušení maskování výjimek s plovoucí desetinnou čárkou, čtení nebo zápis stavových registrů s plovoucí desetinnou čárkou, nebo změnu režimů zaokrouhlení.
 
-`/fp:fast` je určená pro programy, které nevyžadují striktní zdrojový kód, řazení a zaokrouhlení výrazů s plovoucí desetinnou čárkou a nespoléhejte na standardní pravidla pro zpracování speciálními hodnotami, jako je například NaN. Pokud váš kód s plovoucí desetinnou čárkou a zachovávání s rozlišením zdrojového kódu, řazení a zaokrouhlení vyžaduje nebo závisí na standardní chování speciálními hodnotami, použijte [/FP: precise](#precise). Pokud váš kód přistupuje k nebo upraví prostředí s plovoucí desetinnou čárkou ke změně režimu zaokrouhlování, odmaskování výjimek s plovoucí desetinnou čárkou, nebo zkontrolujte stav s plovoucí desetinnou čárkou, použijte [/FP: strict](#strict).
+`/fp:fast` je určena pro programy, které nevyžadují striktní řazení zdrojového kódu a zaokrouhlování výrazů s plovoucí desetinnou čárkou, a nespoléhá se na standardní pravidla pro zpracování speciálních hodnot, jako je NaN. Pokud váš kód s plovoucí desetinnou čárkou vyžaduje zachování řazení zdrojového kódu a zaokrouhlování nebo spoléhá na standardní chování speciálních hodnot, použijte [/FP: přesně](#precise). Pokud váš kód přistupuje k prostředí s plovoucí desetinnou čárkou a mění režimy zaokrouhlení, odmaskuje výjimky s plovoucí desetinnou čárkou nebo kontroluje stav s plovoucí desetinnou čárkou, použijte [/FP: Strict](#strict).
 
-#### <a name="except"></a>S výjimkou
+#### <a name="except"></a>výjimk
 
-`/fp:except` Možnost generuje kód, který zajistí, že všechny nemaskované výjimky s plovoucí desetinnou čárkou jsou vyvolány v okamžiku, kdy k nim dojde, a že žádné další výjimky s plovoucí desetinnou čárkou jsou vyvolány. Ve výchozím nastavení `/fp:strict` možnost umožňuje `/fp:except`, a `/fp:precise` nepodporuje. `/fp:except` Možnost není kompatibilní s `/fp:fast`. Možnost může být explicitně zakázány podle nás z `/fp:except-`.
+Možnost `/fp:except` generuje kód, který zajistí, že jakékoli nemaskované výjimky s plovoucí desetinnou čárkou jsou vyvolány v přesném okamžiku, kdy k nim dojde, a že nejsou vyvolány žádné další výjimky s plovoucí desetinnou čárkou. Ve výchozím nastavení možnost `/fp:strict` povolí `/fp:except`a `/fp:precise` ne. Možnost `/fp:except` není kompatibilní s `/fp:fast`. Možnost může být explicitně zakázána od nás `/fp:except-`.
 
-Všimněte si, že `/fp:except` nepovolí všechny výjimky s plovoucí desetinnou čárkou samostatně, ale je vyžadováno pro programy povolit výjimky plovoucí desetinné čárky. Zobrazit [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) informace o tom, jak povolit výjimky plovoucí desetinné čárky.
+Všimněte si, že `/fp:except` nepovoluje žádné výjimky s plovoucí desetinnou čárkou samotné, ale je vyžadováno, aby programy povolovaly výjimky s plovoucí desetinnou čárkou. Informace o tom, jak povolit výjimky s plovoucí desetinnou čárkou, najdete v tématu [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Více `/fp` možnosti lze zadat na stejném příkazovém řádku kompilátoru. Pouze jeden z `/fp:strict`, `/fp:fast`, a `/fp:precise` možnosti mohou být v platnosti v čase. Pokud na příkazovém řádku je zadán více než jednu z těchto možností, má přednost před pozdější možnost a kompilátor vygeneruje upozornění. `/fp:strict` a `/fp:except` možnosti nejsou kompatibilní s `/clr`.
+Ve stejném příkazovém řádku kompilátoru lze zadat více možností `/fp`. V současné době může být použita pouze jedna z možností `/fp:strict`, `/fp:fast`a `/fp:precise`. Je-li na příkazovém řádku zadán více než jedna z těchto možností, má možnost pozdější přednost a kompilátor vygeneruje upozornění. Možnosti `/fp:strict` a `/fp:except` nejsou kompatibilní s `/clr`.
 
-[/Za](za-ze-disable-language-extensions.md) (Kompatibilita s ANSI) možnost není kompatibilní s `/fp`.
+Možnost [/za](za-ze-disable-language-extensions.md) (kompatibilita ANSI) není kompatibilní s `/fp`.
 
-### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Řízení chování plovoucí desetinné čárky pomocí direktivy kompilátoru
+### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Použití direktiv kompilátoru k řízení chování s plovoucí desetinnou čárkou
 
-Kompilátor poskytuje tři direktivy pragma přepsat chování plovoucí desetinné čárky, který je zadán v příkazovém řádku: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), a [fp_contract](../../preprocessor/fp-contract.md). Tyto direktivy můžete řídit chování plovoucí desetinné čárky na úrovni funkcí, není ve funkci. Všimněte si, že tyto direktivy neodpovídají přímo `/fp` možnosti. Tato tabulka ukazuje, jak `/fp` možnosti a direktivy pragma se mapují k sobě navzájem. Další informace najdete v dokumentaci pro jednotlivé možnosti a direktivy pragma.
+Kompilátor poskytuje tři direktivy pragma pro přepsání chování s plovoucí desetinnou čárkou zadanou na příkazovém řádku: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md)a [fp_contract](../../preprocessor/fp-contract.md). Tyto direktivy lze použít k řízení chování plovoucí desetinné čárky na úrovni funkce, nikoli v rámci funkce. Všimněte si, že tyto direktivy neodpovídají přímo možnostem `/fp`. Tato tabulka ukazuje, jak jsou namapovány možnosti `/fp` a direktivy pragma na sebe navzájem. Další informace naleznete v dokumentaci pro jednotlivé možnosti a direktivy pragma.
 
-||float_control(Precise)|float_control(except)|fenv_access|fp_contract|
+||float_control (přesný)|float_control (kromě)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|`/fp:fast`|vypnuto|vypnuto|vypnuto|on|
-|`/fp:precise`|on|vypnuto|vypnuto|on|
-|`/fp:strict`|on|on|on|vypnuto|
+|`/fp:fast`|vypnuto|vypnuto|vypnuto|zapnuté|
+|`/fp:precise`|zapnuté|vypnuto|vypnuto|zapnuté|
+|`/fp:strict`|zapnuté|zapnuté|zapnuté|vypnuto|
 
-### <a name="the-default-floating-point-environment"></a>Výchozí prostředí s plovoucí desetinnou čárkou bodu
+### <a name="the-default-floating-point-environment"></a>Výchozí prostředí s plovoucí desetinnou čárkou
 
-Při inicializaci procesu *výchozí číslo s plovoucí čárkou bodu prostředí* nastavena. Toto prostředí zakrývá všechny plovoucí výjimky, nastaví režim zaokrouhlit na nejbližší (`FE_TONEAREST`), zachová subnormal (denormal) hodnoty, použije výchozí přesnost mantisy (mantisa) pro **float**, **double**, a **long double** hodnoty a pokud je podporováno, nastaví na výchozí režim nastavená na affine ovládací prvek nekonečno.
+Při inicializaci procesu je nastavené *výchozí prostředí s plovoucí* desetinnou čárkou. Toto prostředí maskuje všechny výjimky s plovoucí desetinnou čárkou, nastaví režim zaokrouhlení na nejbližší (`FE_TONEAREST`), zachová subnormální (denormální) hodnoty, používá výchozí přesnost mantisa (mantisy) pro **float**, **Double**a **Long Double** a kde je to podporováno, nastaví ovládací prvek Infinite na výchozí režim spřažení.
 
-### <a name="floating-point-environment-access-and-modification"></a>Přístup k prostředí s plovoucí desetinnou čárkou a úpravy
+### <a name="floating-point-environment-access-and-modification"></a>Přístup a úpravy prostředí s plovoucí desetinnou čárkou
 
-Modul runtime Microsoft Visual C++ poskytuje několik funkcí pro přístup a úpravy prostředí s plovoucí desetinnou čárkou. Patří mezi ně [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md), [_clearfp –](../../c-runtime-library/reference/clear87-clearfp.md), a [_statusfp –](../../c-runtime-library/reference/status87-statusfp-statusfp2.md) a jejich variant. K zajištění chování programu při váš kód přistupuje k nebo upraví s plovoucí desetinnou čárkou prostředí `fenv_access` musí být povolena, buď pomocí `/fp:strict` možnost nebo použije `fenv_access` – Direktiva pragma pro tyto funkce nemá žádný vliv. Když `fenv_access` není povolen přístup nebo úpravu prostředí s plovoucí desetinnou čárkou může vést k neočekávanému chování programu: nemusí kód vyhovět požadované změny v prostředí s plovoucí desetinnou čárkou; nemusí hlásit stav s plovoucí desetinnou čárkou registrů aktuální nebo očekávaných výsledků; a neočekávané výjimky s plovoucí desetinnou čárkou může dojít, nebo nelze provádět očekávané výjimky s plovoucí desetinnou čárkou.
+Modul Microsoft Visual C++ runtime poskytuje několik funkcí pro přístup k prostředí s plovoucí desetinnou čárkou a jeho úpravu. Mezi ně patří [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md), [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)a [_statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md) a jejich varianty. Aby se zajistilo správné chování programu, když váš kód přistupuje k prostředí s plovoucí desetinnou čárkou nebo ho upravuje, `fenv_access` musí být povolený, buď pomocí `/fp:strict` nebo pomocí direktivy pragma `fenv_access`, aby tyto funkce měly nějaký účinek. Pokud `fenv_access` není povolen, může přístup nebo úprava prostředí s plovoucí desetinnou čárkou způsobit neočekávané chování programu: kód nemusí akceptovat požadované změny prostředí s plovoucí desetinnou čárkou. Registry stavu s plovoucí desetinnou čárkou nemusí hlásit očekávané nebo aktuální výsledky; a neočekávané výjimky s plovoucí desetinnou čárkou mohou nastat nebo by neměly nastat výjimky s plovoucí desetinnou čárkou.
 
-Pokud váš kód přistupuje k nebo upraví s plovoucí desetinnou čárkou prostředí, musíte být opatrní při kombinování kódu kde `fenv_access` je povolené s kódem, který nemá `fenv_access` povolena. V kódu kde `fenv_access` není povolené, kompilátor předpokládá, platformu výchozí prostředí s plovoucí desetinnou čárkou je aktivní a že není otevřeny nebo upraveny stav s plovoucí desetinnou čárkou. Doporučujeme uložit a obnovit do výchozího stavu místní prostředí s plovoucí desetinnou čárkou, před ovládací prvek bude převeden na funkci, která nemá `fenv_access` povolena. Tento příklad ukazuje, jak `float_control` – Direktiva pragma je možné nastavit a obnovit:
+Když váš kód přistupuje nebo upravuje prostředí s plovoucí desetinnou čárkou, musíte být opatrní při kombinování kódu, kde je `fenv_access` povoleno s kódem, který nemá `fenv_access` povolen. V kódu, kde `fenv_access` není povolen, kompilátor předpokládá, že je aktivní prostředí s plovoucí desetinnou čárkou platformy a že stav s plovoucí desetinnou čárkou není k dispozici nebo upraven. Před přenesením řízení do funkce, která nemá povolenou `fenv_access`, doporučujeme uložit a obnovit místní prostředí s plovoucí desetinnou čárkou do výchozího stavu. Tento příklad ukazuje, jak lze nastavit a obnovit `float_control` direktivu pragma:
 
 ```cpp
 #pragma float_control(strict, on, push)
@@ -95,9 +95,9 @@ Pokud váš kód přistupuje k nebo upraví s plovoucí desetinnou čárkou pros
 #pragma float_control(pop)
 ```
 
-### <a name="floating-point-rounding-modes"></a>Zaokrouhlení s plovoucí desetinnou čárkou režimy
+### <a name="floating-point-rounding-modes"></a>Režimy zaokrouhlení s plovoucí desetinnou čárkou
 
-V obou `/fp:precise` a `/fp:fast` kompilátor generuje kód určený ke spuštění ve výchozím prostředí s plovoucí desetinnou čárkou a předpokládá, že prostředí není otevřeny nebo upraveny za běhu. To znamená předpokládá, že kód není odmaskování výjimek s plovoucí desetinnou čárkou, číst nebo zapisovat stav s plovoucí desetinnou čárkou registry nebo změnit režimech zaokrouhlení.  Některé programy však zapotřebí změnit prostředí s plovoucí desetinnou čárkou. Tato ukázka například vypočítá hranice chyba s plovoucí desetinnou čárkou násobení změnou zaokrouhlení s plovoucí desetinnou čárkou režimů:
+V obou `/fp:precise` a `/fp:fast` kompilátor generuje kód určený ke spuštění ve výchozím prostředí s plovoucí desetinnou čárkou a předpokládá, že prostředí není k dispozici nebo upraveno za běhu. To znamená, že předpokládá, že kód neprovádí zrušení maskování výjimek s plovoucí desetinnou čárkou, čtení nebo zápis stavových registrů s plovoucí desetinnou čárkou, nebo změnu režimů zaokrouhlení.  Některé programy ale musí změnit prostředí s plovoucí desetinnou čárkou. Například Tato ukázka počítá chybovou mez násobení plovoucí desetinné čárky změnou režimů zaokrouhlení s plovoucí desetinnou čárkou:
 
 ```cpp
 // fp_error_bounds.cpp
@@ -145,14 +145,14 @@ int main(void)
 }
 ```
 
-Protože kompilátor předpokládá výchozí hodnota s plovoucí desetinnou čárkou bodu prostředí v rámci `/fp:fast` a `/fp:precise` je zdarma pro ignorování volání `_controlfp_s`. Například při kompilaci pomocí `/O2` a `/fp:precise` pro x86 architektury, nejsou vypočítané hranice a vypíše ukázkový program:
+Vzhledem k tomu, že kompilátor předpokládá, že je v rámci `/fp:fast` výchozí prostředí s plovoucí desetinnou čárkou, `/fp:precise` je zdarma ignorovat volání `_controlfp_s`. Například při kompilování pomocí `/O2` a `/fp:precise` pro architekturu x86 nejsou hranice vypočítány a výstupní program zahrnuje výstupy:
 
 ```Output
 cLower = -inf
 cUpper = -inf
 ```
 
-Při kompilaci s oběma `/O2` a `/fp:strict` pro x86 architektury, ukázkový program výstupy:
+Když se zkompiluje s `/O2` i `/fp:strict` pro architekturu x86, ukázkový výstup programu:
 
 ```Output
 cLower = -inf
@@ -161,9 +161,9 @@ cUpper = -3.40282e+38
 
 ### <a name="floating-point-special-values"></a>Speciální hodnoty s plovoucí desetinnou čárkou
 
-V části `/fp:precise` a `/fp:strict`, výrazy, které se týkají zvláštní hodnoty (NaN, + nekonečno, - nekonečno,-0.0) se chovají podle specifikace IEEE 754. V části `/fp:fast`, chování tyto speciální hodnoty mohou být konzistentní s IEEE 754.
+V části `/fp:precise` a `/fp:strict`výrazy, které zahrnují speciální hodnoty (NaN, + Infinity,-Infinity,-0,0), se chovají podle specifikace IEEE-754. V části `/fp:fast`může být chování těchto speciálních hodnot nekonzistentní s IEEE-754.
 
-Tento příklad ukazuje různé chování zvláštní hodnoty v rámci `/fp:precise`, `/fp:strict` a `/fp:fast`:
+Tato ukázka demonstruje různé chování speciálních hodnot v části `/fp:precise``/fp:strict` a `/fp:fast`:
 
 ```cpp
 // fp_special_values.cpp
@@ -194,7 +194,7 @@ int main()
 }
 ```
 
-Při kompilaci s `/O2` `/fp:precise` nebo `/O2` `/fp:strict` pro x86 architektury, výstupy jsou konzistentní s specifikace IEEE 754:
+Při kompilaci s `/O2` `/fp:precise` nebo `/O2` `/fp:strict` pro architekturu x86 jsou výstupy konzistentní se specifikací IEEE-754:
 
 ```Output
 INFINITY == INFINITY : 1
@@ -204,7 +204,7 @@ NAN - NAN            : -nan(ind)
 std::signbit(-0.0/-INFINITY): 1
 ```
 
-Při kompilaci s `/O2` `/fp:fast` pro x86 architektury, výstupy nejsou konzistentní s IEEE 754:
+Při kompilaci s `/O2` `/fp:fast` pro architekturu x86 nejsou výstupy konzistentní s IEEE-754:
 
 ```Output
 INFINITY == INFINITY : 1
@@ -214,9 +214,9 @@ NAN - NAN            : 0.000000
 std::signbit(-0.0/-INFINITY): 0
 ```
 
-### <a name="floating-point-algebraic-transformations"></a>S plovoucí desetinnou čárkou algebraických transformace
+### <a name="floating-point-algebraic-transformations"></a>Transformace algebraických s plovoucí desetinnou čárkou
 
-V části `/fp:precise` a `/fp:strict`, kompilátor neprovede matematické transformace, pokud je zaručeno, že transformace bitový identické výsledkem. Kompilátor může provádět takové transformace v části `/fp:fast`. Například výraz `a * b + a * c` v ukázkové funkce `algebraic_transformation` může být zkompilovány do `a * (b + c)` pod `/fp:fast`. Takové transformace, neprovedou se v rámci `/fp:precise` nebo `/fp:strict`, a kompilátor generuje `a * b + a * c`.
+V rámci `/fp:precise` a `/fp:strict`kompilátor neprovádí matematické transformace, pokud není zaručena transformace, aby vytvořila bitový identický výsledek. Kompilátor může provádět takové transformace v rámci `/fp:fast`. Například výraz `a * b + a * c` ve vzorové funkci `algebraic_transformation` může být zkompilován do `a * (b + c)` v `/fp:fast`. Tyto transformace nejsou prováděny v rámci `/fp:precise` nebo `/fp:strict`a kompilátor generuje `a * b + a * c`.
 
 ```cpp
 float algebraic_transformation (float a, float b, float c)
@@ -225,9 +225,9 @@ float algebraic_transformation (float a, float b, float c)
 }
 ```
 
-### <a name="floating-point-explicit-casting-points"></a>Bodů s plovoucí desetinnou čárkou explicitní přetypování
+### <a name="floating-point-explicit-casting-points"></a>Explicitní přetypování do plovoucí desetinné čárky
 
-V části `/fp:precise` a `/fp:strict`, kompilátor se zaokrouhlí na přesnost zdrojového kódu na čtyři konkrétní body při vyhodnocení výrazu: v přiřazeních na zaokrouhlovat plovoucí desetinné čárky argument je předán do volání funkce a data plovoucí desetinné čárky je vrácena hodnota z volání funkce. Zaokrouhlovat lze explicitně zaokrouhlit zprostředkující výpočty. V části `/fp:fast`, kompilátor negeneruje explicitní přetypování v těchto bodech zaručit přesnost zdrojového kódu. Tento příklad ukazuje chování v rámci různých `/fp` možnosti:
+V rámci `/fp:precise` a `/fp:strict`kompilátor zaokrouhlí na přesnost zdrojového kódu ve čtyřech konkrétních bodech během vyhodnocování výrazu: v přiřazení na přetypování, když je argument s plovoucí desetinnou čárkou předán volání funkce a při vrácení hodnoty s plovoucí desetinnou čárkou z volání funkce. Přetypování se dá použít k explicitnímu zaokrouhlení zprostředkujících výpočtů. V části `/fp:fast`Kompilátor negeneruje explicitní přetypování v těchto bodech pro zajištění přesnosti zdrojového kódu. Tato ukázka demonstruje chování v rámci různých možností `/fp`:
 
 ```cpp
 float casting(float a, float b)
@@ -236,7 +236,7 @@ float casting(float a, float b)
 }
 ```
 
-Při kompilaci pomocí `/O2` `/fp:precise` nebo `/O2` `/fp:strict`, uvidíte, že explicitní přetypování jsou vloženy v obou zadání a v návratovém bodě funkce v generovaném kódu pro x64 architektury:
+Při kompilaci pomocí `/O2` `/fp:precise` nebo `/O2` `/fp:strict`, vidíte, že explicitní přetypování jsou vloženy do přetypovat i na návratový bod funkce v generovaném kódu pro architekturu x64:
 
 ```asm
         addss    xmm0, xmm1
@@ -246,7 +246,7 @@ Při kompilaci pomocí `/O2` `/fp:precise` nebo `/O2` `/fp:strict`, uvidíte, ž
         ret      0
 ```
 
-V části `/O2` `/fp:fast` generovaný kód zjednodušen, protože všechny přetypování typu jsou optimalizovány:
+V části `/O2` `/fp:fast` vygenerovaný kód je zjednodušen, protože jsou optimalizována všechna přetypování typů:
 
 ```asm
         addss    xmm0, xmm1
@@ -256,17 +256,18 @@ V části `/O2` `/fp:fast` generovaný kód zjednodušen, protože všechny pře
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **C/C++** > **generování kódu** stránku vlastností.
+1. Vyberte **Vlastnosti konfigurace** > stránka vlastností **generování kódu** **C++ jazyka C/**  > .
 
-1. Upravit **Model plovoucí desetinné čárky** vlastnost.
+1. Upravte vlastnost **modelu plovoucí desetinné** čárky.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
+ 

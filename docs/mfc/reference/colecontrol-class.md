@@ -335,11 +335,11 @@ helpviewer_keywords:
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
 ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855725"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421588"
 ---
 # <a name="colecontrol-class"></a>COleControl – – Třída
 
@@ -738,7 +738,7 @@ Následuje seznam platných návratových hodnot:
 |------------------|-------------|
 |0|Obecné zarovnání (čísla vpravo, text vlevo).|
 |1|Zarovnat doleva|
-|2|Střed|
+|2|Center|
 |3|Zarovnat vpravo|
 
 ### <a name="remarks"></a>Poznámky
@@ -2322,7 +2322,7 @@ virtual void OnClose(DWORD dwSaveOption);
 ### <a name="parameters"></a>Parametry
 
 *dwSaveOption*<br/>
-Příznak, který označuje, zda má být objekt před načtením uložen. Platné hodnoty jsou:
+Příznak, který označuje, zda má být objekt před načtením uložen. Platné hodnoty:
 
 - OLECLOSE_SAVEIFDIRTY
 

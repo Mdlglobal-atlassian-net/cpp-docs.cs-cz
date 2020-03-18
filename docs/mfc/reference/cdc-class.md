@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855478"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420678"
 ---
 # <a name="cdc-class"></a>CDC – třída
 
@@ -5610,7 +5610,7 @@ Ukazatel na objekt [CGdiObject](../../mfc/reference/cgdiobject-class.md) , kter�
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt, který má být nahrazen. Toto je ukazatel na objekt jedné ze tříd odvozených od `CGdiObject`, jako je například `CPen`, v závislosti na tom, která verze funkce je použita. Pokud dojde k chybě, vrácená hodnota je NULL. Tato funkce může vrátit ukazatel na dočasný objekt. Tento dočasný objekt je platný pouze během zpracování jedné zprávy systému Windows. Další informace naleznete v tématu `CGdiObject::FromHandle`.
+Ukazatel na objekt, který má být nahrazen. Toto je ukazatel na objekt jedné ze tříd odvozených od `CGdiObject`, jako je například `CPen`, v závislosti na tom, která verze funkce je použita. Pokud dojde k chybě, vrácená hodnota je NULL. Tato funkce může vrátit ukazatel na dočasný objekt. Tento dočasný objekt je platný pouze během zpracování jedné zprávy systému Windows. Další informace najdete v tématu `CGdiObject::FromHandle`.
 
 Verze členské funkce, která přijímá parametr region, provádí stejný úkol jako členská funkce `SelectClipRgn`. Vrácená hodnota může být libovolná z následujících:
 

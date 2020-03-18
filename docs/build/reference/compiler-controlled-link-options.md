@@ -1,8 +1,6 @@
 ---
 title: Možnosti LINK řízené kompilátorem
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - LINK tool [C++], compiler-controlled options
 - linker [C++], CL compiler control
@@ -10,39 +8,39 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f631d0ebbbd9e60fe5d54aac6fb158461d3f4d38
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342861"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440106"
 ---
 # <a name="compiler-controlled-link-options"></a>Možnosti LINK řízené kompilátorem
 
-CL – kompilátor automaticky volá propojení, pokud nezadáte možnost /c. CL poskytuje určitou kontrolu nad linkeru prostřednictvím parametrů příkazového řádku a argumenty. Následující tabulka shrnuje funkce, které ovlivňují propojování v CL.
+Kompilátor CL automaticky volá propojení, pokud nezadáte možnost/c. CL poskytuje určitou kontrolu nad linkerem prostřednictvím možností příkazového řádku a argumentů. Následující tabulka shrnuje funkce v CL, které ovlivňují propojování.
 
-|Cl – specifikace|CL akci, která má vliv na odkaz|
+|Specifikace CL|Akce CL, která má vliv na odkaz|
 |----------------------|---------------------------------|
-|Libovolnou příponou názvu než .c, .cxx, .cpp nebo .def|Předá název souboru jako vstup pro odkaz|
-|*Název souboru*.def|/ DEF předá:*filename*.def|
-|/F*číslo*|Průchody/Stack:*číslo*|
-|/FD*název souboru*|Předá/pdb:*název souboru*|
-|/FE*název souboru*|Předá/OUT:*název souboru*|
-|/Fm*filename*|Předá parametr/map:*název souboru*|
-|/Gy|Vytvoří zabalených funkcí (sekvence Comdat); Povolí propojování na úrovní funkcí|
-|/LD|Předá/DLL|
-|/LDd|Předá/DLL|
-|/link|ODKAZ se předá zbytek příkazového řádku|
-|/MD nebo/MT|Umístí do souboru .obj název výchozí knihovny|
-|/ MDd nebo/MTD|Umístí do souboru .obj název výchozí knihovny. Definuje symbol **_DEBUG**|
-|/nologo|/ Nologo předá|
-|/Zd|Předá/Debug|
-|Zi nebo/Z7|Předá/Debug|
-|/Zl|Vynechá výchozí název knihovny ze souboru .obj|
+|Libovolná přípona názvu souboru, která je jiná než. c,. příponu CXX,. cpp nebo. def|Předá název souboru jako vstup pro propojení.|
+|*filename*. def|Průchod/DEF:*filename*. def|
+|*Číslo* /f|Předává/STACK:*Number*|
+|*Název souboru* /FD|Projde/PDB:*filename*|
+|*Název souboru* /FE|Projde/OUT:*filename*|
+|*Název souboru* /FM|Projde/MAP:*filename*|
+|/Gy|Vytvoří zabalené funkce (sekvence COMDAT); povolí propojení na úrovni funkcí.|
+|/LD|Projde/DLL|
+|/LDd|Projde/DLL|
+|/link|Předá zbytek příkazového řádku k propojení.|
+|/MD nebo/MT|Umístí výchozí název knihovny v souboru. obj.|
+|/MDd nebo/MTd|Umístí do souboru. obj název výchozí knihovny. Definuje symbol **_DEBUG**|
+|/nologo|Projde/NOLOGO|
+|/Zd|Předává/DEBUG|
+|/Zi nebo/Z7|Předává/DEBUG|
+|/Zl|Vynechává výchozí název knihovny ze souboru. obj.|
 
-Další informace najdete v tématu [– možnosti kompilátoru MSVC](compiler-options.md).
+Další informace najdete v tématu [Možnosti kompilátoru MSVC](compiler-options.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční zdroje k linkeru MSVC](linking.md)<br/>
 [Možnosti linkeru MSVC](linker-options.md)
