@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 f1_keywords:
 - CByteArray
 - AFXCOLL/CByteArray
-- AFXCOLL/CObArray::CObArray
-- AFXCOLL/CObArray::Add
-- AFXCOLL/CObArray::Append
-- AFXCOLL/CObArray::Copy
-- AFXCOLL/CObArray::ElementAt
-- AFXCOLL/CObArray::FreeExtra
-- AFXCOLL/CObArray::GetAt
-- AFXCOLL/CObArray::GetCount
-- AFXCOLL/CObArray::GetData
-- AFXCOLL/CObArray::GetSize
-- AFXCOLL/CObArray::GetUpperBound
-- AFXCOLL/CObArray::InsertAt
-- AFXCOLL/CObArray::IsEmpty
-- AFXCOLL/CObArray::RemoveAll
-- AFXCOLL/CObArray::RemoveAt
-- AFXCOLL/CObArray::SetAt
-- AFXCOLL/CObArray::SetAtGrow
-- AFXCOLL/CObArray::SetSize
+- AFXCOLL/CByteArray::CByteArray
+- AFXCOLL/CByteArray::Add
+- AFXCOLL/CByteArray::Append
+- AFXCOLL/CByteArray::Copy
+- AFXCOLL/CByteArray::ElementAt
+- AFXCOLL/CByteArray::FreeExtra
+- AFXCOLL/CByteArray::GetAt
+- AFXCOLL/CByteArray::GetCount
+- AFXCOLL/CByteArray::GetData
+- AFXCOLL/CByteArray::GetSize
+- AFXCOLL/CByteArray::GetUpperBound
+- AFXCOLL/CByteArray::InsertAt
+- AFXCOLL/CByteArray::IsEmpty
+- AFXCOLL/CByteArray::RemoveAll
+- AFXCOLL/CByteArray::RemoveAt
+- AFXCOLL/CByteArray::SetAt
+- AFXCOLL/CByteArray::SetAtGrow
+- AFXCOLL/CByteArray::SetSize
 helpviewer_keywords:
-- CObArray [MFC], CObArray
-- CObArray [MFC], Add
-- CObArray [MFC], Append
-- CObArray [MFC], Copy
-- CObArray [MFC], ElementAt
-- CObArray [MFC], FreeExtra
-- CObArray [MFC], GetAt
-- CObArray [MFC], GetCount
-- CObArray [MFC], GetData
-- CObArray [MFC], GetSize
-- CObArray [MFC], GetUpperBound
-- CObArray [MFC], InsertAt
-- CObArray [MFC], IsEmpty
-- CObArray [MFC], RemoveAll
-- CObArray [MFC], RemoveAt
-- CObArray [MFC], SetAt
-- CObArray [MFC], SetAtGrow
-- CObArray [MFC], SetSize
+- CByteArray [MFC], CByteArray
+- CByteArray [MFC], Add
+- CByteArray [MFC], Append
+- CByteArray [MFC], Copy
+- CByteArray [MFC], ElementAt
+- CByteArray [MFC], FreeExtra
+- CByteArray [MFC], GetAt
+- CByteArray [MFC], GetCount
+- CByteArray [MFC], GetData
+- CByteArray [MFC], GetSize
+- CByteArray [MFC], GetUpperBound
+- CByteArray [MFC], InsertAt
+- CByteArray [MFC], IsEmpty
+- CByteArray [MFC], RemoveAll
+- CByteArray [MFC], RemoveAt
+- CByteArray [MFC], SetAt
+- CByteArray [MFC], SetAtGrow
+- CByteArray [MFC], SetSize
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
-ms.openlocfilehash: b1c48e087052308dfb6b27275c5b4997ed9cca7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2453e7c040b9101f9c3a3b018e274b16e76ebea7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279122"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446347"
 ---
 # <a name="cbytearray-class"></a>CByteArray – třída
 
@@ -61,7 +61,7 @@ class CByteArray : public CObject
 
 ## <a name="members"></a>Členové
 
-Členské funkce `CByteArray` jsou podobné jako u členských funkcí třídy [cobarray –](../../mfc/reference/cobarray-class.md). Z důvodu podobnosti, můžete použít `CObArray` referenční dokumentaci pro konkrétní členské funkce. Po zobrazení `CObject` ukazatele jako parametr funkce nebo návratová hodnota, nahraďte BAJTŮ.
+Členské funkce `CByteArray` jsou podobné členským funkcím třídy [CObArray](../../mfc/reference/cobarray-class.md). Z důvodu této podobnosti můžete použít referenční dokumentaci `CObArray` pro konkrétní členské funkce. Bez ohledu na to, kde vidíte `CObject` ukazatel jako parametr funkce nebo návratovou hodnotu, nahraďte bajt.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -73,58 +73,58 @@ například se přeloží na
 
 |Název|Popis|
 |----------|-----------------|
-|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Vytvoří prázdné pole.|
+|[CByteArray::CByteArray](../../mfc/reference/cobarray-class.md#cobarray)|Vytvoří prázdné pole.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Přidá prvek na konec pole. v případě potřeby se zvětší pole.|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Připojí další pole k poli; v případě potřeby se zvětší pole.|
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Zkopíruje jiného objektu array do pole. v případě potřeby se zvětší pole.|
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Vrátí odkaz na dočasný bajtů v rámci pole.|
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Uvolní všechny nevyužité paměti nad aktuální horní mez.|
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Vrátí hodnotu na daném indexu.|
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Získá počet elementů v tomto poli.|
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umožňuje přístup k prvkům v poli. Může mít hodnotu NULL.|
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Získá počet elementů v tomto poli.|
-|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Vrátí největší platný index.|
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Vloží zadaný index elementu (nebo všechny prvky v jiného objektu array).|
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Určuje, zda je pole prázdné.|
-|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Odebere všechny prvky z tohoto pole.|
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Odebere element na konkrétní indexu.|
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Nastaví hodnotu pro daný index; pole nesmí růst.|
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Nastaví hodnotu pro daný index; v případě potřeby se zvětší pole.|
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Nastaví počet prvků, které mají být obsažena v tomto poli.|
+|[CByteArray:: Add](../../mfc/reference/cobarray-class.md#add)|Přidá prvek na konec pole; v případě potřeby zvětší pole.|
+|[CByteArray:: Append](../../mfc/reference/cobarray-class.md#append)|Připojí další pole k poli. v případě potřeby zvětší pole.|
+|[CByteArray:: Copy](../../mfc/reference/cobarray-class.md#copy)|Zkopíruje do pole jiné pole; v případě potřeby zvětší pole.|
+|[CByteArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Vrátí dočasný odkaz na bajt v rámci pole.|
+|[CByteArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Uvolní veškerou nevyužitou paměť nad rámec aktuální horní meze.|
+|[CByteArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Vrátí hodnotu v daném indexu.|
+|[CByteArray:: GetCount](../../mfc/reference/cobarray-class.md#getcount)|Získá počet prvků v tomto poli.|
+|[CByteArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Umožňuje přístup k prvkům v poli. Může mít hodnotu NULL.|
+|[CByteArray:: GetSize](../../mfc/reference/cobarray-class.md#getsize)|Získá počet prvků v tomto poli.|
+|[CByteArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Vrátí největší platný index.|
+|[CByteArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Vloží prvek (nebo všechny prvky v jiném poli) do zadaného indexu.|
+|[CByteArray::-Empty](../../mfc/reference/cobarray-class.md#isempty)|Určuje, zda je pole prázdné.|
+|[CByteArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Odebere všechny prvky z tohoto pole.|
+|[CByteArray:: funkce RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Odebere prvek v konkrétním indexu.|
+|[CByteArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Nastaví hodnotu pro daný index. pole není povoleno zvětšit.|
+|[CByteArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Nastaví hodnotu pro daný index. v případě potřeby zvětší pole.|
+|[CByteArray:: SetSize](../../mfc/reference/cobarray-class.md#setsize)|Nastaví počet prvků, které mají být obsaženy v tomto poli.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
+|[CByteArray:: operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo Získá prvek na zadaném indexu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CByteArray` zahrnuje IMPLEMENT_SERIAL – makro na podporu serializace a výpis z jeho prvků. Pokud pole bajtů je uložit do archivu, buď pomocí přetížených vložení ( **<<**) – operátor nebo se `Serialize` členská funkce, každý element je, v důsledku, serializovat.
+`CByteArray` zahrnuje makro IMPLEMENT_SERIAL pro podporu serializace a dumpingu jeho prvků. Je-li pole bajtů uloženo do archivu, buď pomocí operátoru přetížení ( **<<** ), nebo pomocí členské funkce `Serialize`, každý prvek je následně serializován.
 
 > [!NOTE]
->  Před použitím pole, použijte `SetSize` vytvoření jeho velikost a přidělit paměť pro něj. Pokud nepoužijete `SetSize`, přidání prvků pole způsobí, že ho bude často nevyčerpané a zkopírovat. Časté realokace a kopírování jsou neefektivní a může fragmentovat paměti.
+>  Před použitím pole použijte `SetSize` k určení jeho velikosti a přidělení paměti pro něj. Pokud nepoužíváte `SetSize`, přidání prvků do pole způsobí, že bude často znovu přiděleno a zkopírováno. Časté přerozdělování a kopírování je neefektivní a může fragmentovat paměť.
 
-Pokud potřebujete ladit výstup z jednotlivých prvků v poli, je nutné nastavit hloubka `CDumpContext` objektu na hodnotu 1 nebo větší.
+Pokud potřebujete ladit výstup z jednotlivých prvků v poli, je nutné nastavit hloubku objektu `CDumpContext` na hodnotu 1 nebo vyšší.
 
-Další informace o používání `CByteArray`, najdete v článku [kolekce](../../mfc/collections.md).
+Další informace o používání `CByteArray`najdete v článku [kolekce](../../mfc/collections.md)článků.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CByteArray`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcoll.h
+**Záhlaví:** afxcoll. h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

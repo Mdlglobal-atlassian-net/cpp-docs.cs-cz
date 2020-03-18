@@ -1,8 +1,6 @@
 ---
 title: Extrahování člena knihovny
 ms.date: 11/04/2016
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - LIB [C++], extracting library members
 - EXTRACT library manager option
@@ -11,23 +9,23 @@ helpviewer_keywords:
 - extracting library members
 - /EXTRACT library manager option
 ms.assetid: a2c5c2a1-9b7e-489a-a9a4-1dec694e1fc5
-ms.openlocfilehash: 6c577300f747d6f546b7caa3c66bddd6a516e16b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 874866627099eb5aeb318273db26a976e99bac7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271317"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439877"
 ---
 # <a name="extracting-a-library-member"></a>Extrahování člena knihovny
 
-Lib – slouží k vytvoření souboru objektů (.obj), který obsahuje kopii členem existující knihovnu. Extrahujte kopii členem, použijte následující syntaxi:
+LIB můžete použít k vytvoření souboru objektu (. obj), který obsahuje kopii člena existující knihovny. Chcete-li extrahovat kopii člena, použijte následující syntaxi:
 
 ```
 LIB library /EXTRACT:member /OUT:objectfile
 ```
 
-Tento příkaz vytvoří soubor .obj nazývá *objectfile* , který obsahuje kopii `member` z *knihovny*. `member` Název je velká a malá písmena. Můžete extrahovat jenom jeden člen stačí jediný příkaz. Parametr/out možnost je vyžadována; neexistuje žádný výchozí název výstupu. Pokud soubor s názvem *objectfile* již existuje v zadaném adresáři (nebo aktuálního adresáře, pokud není zadán žádný adresář s *objectfile*), extrahované *objectfile*nahradí existující soubor.
+Tento příkaz vytvoří soubor. obj s názvem *objectfile* , který obsahuje kopii `member` *knihovny*. Název `member` rozlišuje velká a malá písmena. V jednom příkazu můžete extrahovat pouze jednoho člena. Možnost/OUT je povinná; není k dispozici žádný výchozí název výstupu. Pokud soubor s názvem *objectfile* již v určeném adresáři (nebo v aktuálním adresáři není zadán, pokud není k dispozici žádný adresář s *objectfile*), nahradí extrahovaný *objectfile* existující soubor.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace ke knihovně LIB](lib-reference.md)

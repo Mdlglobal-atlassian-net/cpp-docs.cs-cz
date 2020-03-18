@@ -3,13 +3,15 @@ layout: HubPage
 title: Dokumentace C++ k sadě Visual
 description: Naučte se používat C++ k vývoji aplikací, služeb a nástrojů pro vaše platformy a zařízení.
 ms.topic: hub-page
-ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: f8d9b683e8030cbbafa9b3da57b4f7fd738ed3ac
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793794"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446103"
 ---
+<!-- markdownlint-disable MD033 -->
+
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
@@ -60,7 +62,7 @@ ms.locfileid: "75793794"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Co je nového C++ v aplikaci Visual Studio</h3>
+                                    <h3>Novinky v jazyce C++ v sadě Visual Studio</h3>
                                 </div>
                             </div>
                         </div>
@@ -73,11 +75,11 @@ ms.locfileid: "75793794"
         <h1>Dokumentace C++ k sadě Visual</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Úlohy</a>
-                <ul id="workloads">
+                 
+                <a href="#workloads">úloh</a><ul id="workloads">
                     <li>
-                        <a href="#workloads1">Úlohy</a>
-                        <ul id="workloads1" class="cardsC">
+                         
+                        <a href="#workloads1">úloh</a><ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/cppcx/universal-windows-apps-cpp">
                                     <div class="cardSize">
@@ -89,7 +91,7 @@ ms.locfileid: "75793794"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Vývoj pro Univerzální platformu Windows</h3>
+                                                    <h3>Vývoj pro univerzální platformu Windows</h3>
                                                     <p>Vývoj aplikací pro Univerzální platforma Windows (UWP) pomocí nástroje C++.</p>
                                                 </div>
                                             </div>
@@ -232,7 +234,7 @@ ms.locfileid: "75793794"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sestavit</h3>
+                                                    <h3>Sestavení</h3>
                                                     <p>Zkompilujte a propojte svůj kód a optimalizujte maximální propustnost.</p>
                                                 </div>
                                             </div>
@@ -251,7 +253,7 @@ ms.locfileid: "75793794"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Ladit</h3>
+                                                    <h3>Ladění</h3>
                                                     <p>Ladění C++ kódu pomocí ladicího programu sady Visual Studio.</p>
                                                 </div>
                                             </div>
@@ -327,7 +329,7 @@ ms.locfileid: "75793794"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Portování a upgrade</h3>
+                                                    <h3>Portování a upgradování</h3>
                                                     <p>Upgradujte na nejnovější verzi sady Visual Studio a migrujte starší aplikace na moderní platformy.</p>
                                                 </div>
                                             </div>

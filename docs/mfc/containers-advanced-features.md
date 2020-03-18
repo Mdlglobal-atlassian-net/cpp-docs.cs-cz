@@ -12,66 +12,66 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 350431975a4335fc06e436237b7e0d3388faab64
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88acba8d6e2541b3c9f7707b4dd9c03b13067dda
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152927"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445349"
 ---
 # <a name="containers-advanced-features"></a>Kontejnery: Pokročilé funkce
 
-Tento článek popisuje kroky potřebné k začlenit volitelné pokročilé funkce do stávajících aplikací typu kontejner. Tyto funkce jsou:
+Tento článek popisuje kroky potřebné k začlenění volitelných pokročilých funkcí do stávajících aplikací kontejneru. Jsou to tyto funkce:
 
-- [Aplikace, která je kontejner a server](#_core_creating_a_container_server_application)
+- [Aplikace, která je kontejnerem i serverem](#_core_creating_a_container_server_application)
 
-- [Propojení na vložený objekt OLE](#_core_links_to_embedded_objects)
+- [Propojení OLE s vloženým objektem](#_core_links_to_embedded_objects)
 
-##  <a name="_core_creating_a_container_server_application"></a> Vytvoření aplikace typu Server/kontejner
+##  <a name="_core_creating_a_container_server_application"></a>Vytvoření aplikace typu kontejner/server
 
-Aplikace typu server/kontejner je aplikace, která funguje jako kontejner a serverem. Aplikace Microsoft Word pro Windows je příkladem. V jiných aplikacích můžete vložit dokumenty aplikace Word pro Windows a položky můžete také vložit do dokumentů aplikace Word pro Windows. Proces pro úpravu svou aplikaci typu kontejner kontejneru a plnou instalaci systému server (nelze vytvořit aplikace typu kontejner/miniserver kombinaci) je podobný procesu pro vytváření plnou instalaci systému server.
+Aplikace typu kontejner/server je aplikace, která funguje jako kontejner i server. Příkladem je Microsoft Word pro Windows. Word pro dokumenty Windows můžete vložit do jiných aplikací a můžete také vkládat položky do Wordu pro dokumenty Windows. Proces pro úpravu aplikace typu kontejner tak, aby byl současně kontejnerem i úplným serverem (nemůžete vytvořit kombinaci kontejneru/aplikace v miniserver), je podobný procesu pro vytvoření úplného serveru.
 
-Tento článek [serverů: Implementace serveru](../mfc/servers-implementing-a-server.md) uvádí počet úloh potřebných k implementaci serverové aplikace. Pokud převedete aplikace typu kontejner pro aplikace typu server/kontejner, musíte provést některé z těchto stejných úkolů, přidání kódu do kontejneru. Následující seznam obsahuje důležité věci k uvážení:
+Článek [servery: implementace serveru](../mfc/servers-implementing-a-server.md) obsahuje řadu úkolů potřebných k implementaci serverové aplikace. Převedete-li aplikaci typu kontejner na aplikaci typu kontejner/server, je nutné provést některé z těchto stejných úloh a přidat kód do kontejneru. Následující seznam obsahuje důležité informace, které je potřeba vzít v úvahu:
 
-- Kód kontejneru už vytvořené průvodcem aplikací inicializuje subsystému OLE. Nemusíte změnit nebo přidat cokoli pro, které podporují.
+- Kód kontejneru vytvořený průvodcem aplikací již inicializuje Podsystém OLE. Pro tuto podporu nebudete muset měnit ani přidávat žádné další.
 
-- Všude, kde je k základní třídě této třídy dokumentu `COleDocument`, změňte základní třídu na `COleServerDoc`.
+- Bez ohledu na to, kde je základní třída třídy dokumentu `COleDocument`, změňte základní třídu na `COleServerDoc`.
 
-- Přepsat `COleClientItem::CanActivate` nechcete úpravu položky na místě samotný server se používá k úpravě na místě.
+- Přepište `COleClientItem::CanActivate`, aby nedošlo k úpravě položek na místě, zatímco se server sám používá k úpravám.
 
-   Například MFC OLE ukázky [OCLIENT](../overview/visual-cpp-samples.md) obsahuje vložené položky vytvořené aplikace typu server/kontejner. Otevřete aplikaci OCLIENT a místní úpravy položky vytvořené aplikace typu server/kontejner. Při úpravách položky vaší aplikace, rozhodnete chcete vložit položky vytvořené v rámci MFC OLE ukázky [HIERSVR](../overview/visual-cpp-samples.md). Chcete-li to provést, nelze použít aktivace na místě. Je nutné otevřít plně HIERSVR k aktivaci této položky. Protože knihovny Microsoft Foundation Class nepodporuje tuto funkci OLE, přepisování `COleClientItem::CanActivate` můžete zkontrolovat v této situaci a zabránit možných chyb za běhu ve vaší aplikaci.
+   Například ukázková [OCLIENT](../overview/visual-cpp-samples.md) knihovny MFC OLE má vloženou položku vytvořenou v rámci aplikace kontejneru nebo serveru. Otevřete aplikaci OCLIENT a místní upravte položku vytvořenou v rámci aplikace kontejneru nebo serveru. Při úpravách položky vaší aplikace se rozhodnete, že chcete vložit položku vytvořenou v ukázce [HIERSVR](../overview/visual-cpp-samples.md)knihovny MFC OLE. K tomu nemůžete použít místní aktivaci. Chcete-li aktivovat tuto položku, je nutné plně otevřít HIERSVR. Protože knihovna Microsoft Foundation Class nepodporuje tuto funkci OLE, přepisování `COleClientItem::CanActivate` umožňuje kontrolu této situace a zabránit možné chybě v době běhu v aplikaci.
 
-Pokud vytváříte novou aplikaci a chcete, aby fungovala jako aplikace typu server/kontejner, zvolte možnost v dialogovém okně Možnosti OLE v Průvodci aplikací a tato podpora se vytvoří automaticky. Další informace najdete v článku [přehled: Vytvoření kontejneru ovládacího prvku ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Informace o ukázky knihovny MFC naleznete v tématu ukázky knihovny MFC.
+Pokud vytváříte novou aplikaci a chcete, aby fungovala jako aplikace typu kontejner/server, vyberte tuto možnost v dialogovém okně Možnosti OLE v Průvodci aplikací a tato podpora bude vytvořena automaticky. Další informace naleznete v článku [Přehled: vytvoření kontejneru ovládacího prvku ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Informace o ukázkách MFC naleznete v tématu MFC Samples.
 
-Všimněte si, že aplikace MDI nelze vložit do sebe sama. Aplikace, která je server/kontejner nelze vložit do sebe sama, pokud je aplikace SDI.
+Všimněte si, že aplikaci MDI nelze vložit do sebe samé. Aplikaci, která je kontejnerem nebo serverem, nelze vložit do sebe samé, pokud se nejedná o aplikaci SDI.
 
-##  <a name="_core_links_to_embedded_objects"></a> Odkazy na vložené objekty
+##  <a name="_core_links_to_embedded_objects"></a>Odkazy na vložené objekty
 
-Odkazy na vložené objekty funkce umožňuje uživateli vytvoření dokumentu pomocí propojení OLE do vloženého objektu uvnitř svou aplikaci typu kontejner. Například vytvořte dokument v textovém editoru, který obsahuje vložené tabulky. Pokud vaše aplikace podporuje odkazy na vložené objekty, může vložit odkaz na tabulku obsažené v dokumentu aplikace word procesoru. Tato funkce umožňuje vaší aplikaci použít informace obsažené v tabulce bez znalosti, ve kterém textový procesor původně rozumím.
+Funkce odkazy na vložené objekty umožňuje uživateli vytvořit dokument s odkazem OLE na vložený objekt uvnitř vaší aplikace typu kontejner. Můžete například vytvořit dokument v textovém procesoru obsahujícím vloženou tabulku. Pokud vaše aplikace podporuje odkazy na vložené objekty, může vložit odkaz na tabulku obsaženou v dokumentu procesoru aplikace Word. Tato funkce umožňuje, aby vaše aplikace používala informace obsažené v tabulce bez znalosti, kde textový procesor původně získal.
 
-#### <a name="to-link-to-embedded-objects-in-your-application"></a>Odkaz na vložené objekty v aplikaci
+#### <a name="to-link-to-embedded-objects-in-your-application"></a>Připojení k vloženým objektům ve vaší aplikaci
 
-1. Odvodit vaše dokumentové třídy z `COleLinkingDoc` místo `COleDocument`.
+1. Odvodit třídu dokumentu z `COleLinkingDoc` místo `COleDocument`.
 
-1. Vytvoření ID OLE – třídy (**CLSID**) pro vaši aplikaci s využitím generátoru ID třídy součástí OLE nástroje pro vývoj.
+1. Vytvořte identifikátor třídy OLE (**CLSID**) pro vaši aplikaci pomocí generátoru ID třídy, který je součástí vývojářských nástrojů OLE.
 
-1. Zaregistrujte aplikaci s OLE.
+1. Zaregistrujte aplikaci pomocí technologie OLE.
 
-1. Vytvoření `COleTemplateServer` objektu jako člen třídy aplikace.
+1. Vytvořte objekt `COleTemplateServer` jako člen třídy vaší aplikace.
 
-1. Ve své třídě aplikace `InitInstance` členské funkce, postupujte takto:
+1. Ve svojí členské funkci `InitInstance` třídy aplikace proveďte následující:
 
-   - Připojení vaší `COleTemplateServer` objektu do dokumentu šablon voláním objektu `ConnectTemplate` členskou funkci.
+   - Připojte objekt `COleTemplateServer` k vašim šablonám dokumentů voláním členské funkce objektu `ConnectTemplate`.
 
-   - Volání `COleTemplateServer::RegisterAll` členskou funkci k registraci všech objektů třídy OLE systému.
+   - Zavolejte členskou funkci `COleTemplateServer::RegisterAll` pro registraci všech objektů třídy se systémem OLE.
 
-   - Volání `COleTemplateServer::UpdateRegistry`. Jediný parametr `UpdateRegistry` by měl být *OAT_CONTAINER* Pokud aplikace není spuštěna s přepínačem "/ Embedded". To registruje aplikaci jako kontejner, který může podporovat odkazy na vložené objekty.
+   - Zavolejte `COleTemplateServer::UpdateRegistry`. Jediným parametrem `UpdateRegistry` by měl být *OAT_CONTAINER* , pokud aplikace není spuštěna s přepínačem "/Embedded". Tím se aplikace zaregistruje jako kontejner, který může podporovat odkazy na vložené objekty.
 
-         If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
+      Pokud se aplikace spustí s přepínačem "/Embedded", neměl by zobrazovat své hlavní okno, podobně jako serverová aplikace.
 
-Ukázky knihovny MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) implementuje tuto funkci. Příklad, jak to lze provést, najdete v článku `InitInstance` fungovat v *OCLIENT. CPP* souboru této ukázkové aplikaci.
+Tuto funkci implementuje ukázková [OCLIENT](../overview/visual-cpp-samples.md) knihovny MFC OLE. Příklad toho, jak to lze provést, naleznete v tématu funkce `InitInstance` v *OCLIENT. Soubor CPP* této ukázkové aplikace
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Kontejnery](../mfc/containers.md)<br/>
 [Servery](../mfc/servers.md)

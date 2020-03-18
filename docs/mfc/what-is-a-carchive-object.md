@@ -1,8 +1,6 @@
 ---
 title: Co je objekt CArchive
 ms.date: 11/04/2016
-f1_keywords:
-- CArchive
 helpviewer_keywords:
 - archive objects [MFC]
 - archives [MFC], for serialization
@@ -10,23 +8,23 @@ helpviewer_keywords:
 - CArchive class [MFC], about CArchive class [MFC]
 - buffering, serializable objects
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
-ms.openlocfilehash: 4bae451168449ce3e120ba9d172a615864ac2157
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0a78385c81c43a4b0c925bbe89ccd3937873ee8b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346382"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446015"
 ---
 # <a name="what-is-a-carchive-object"></a>Co je objekt CArchive
 
-A `CArchive` objekt, který poskytuje mechanismus bezpečnost typů vyrovnávací paměti pro zápis nebo čtení serializovatelné objekty do nebo z `CFile` objektu. Obvykle `CFile` objekt představuje soubor na disku, ale může také být souboru paměti (`CSharedFile` objektu), možná představující do schránky.
+Objekt `CArchive` poskytuje mechanismus pro ukládání do vyrovnávací paměti bezpečný pro zápis nebo čtení serializovatelných objektů do nebo z objektu `CFile`. Objekt `CFile` obvykle představuje soubor na disku; může to ale být i soubor paměti (`CSharedFile` objekt), třeba reprezentovat schránku.
 
-A uveden `CArchive` objekt buď úložišť (zapisuje, serializuje) dat nebo nahrávání (čtení, deserializuje) data, ale nikdy obojí. Životnost `CArchive` objektu je omezená na jednom průchodu přes zápis objektů do souboru nebo čtení objektů ze souboru. Díky tomu se dvěma postupně vytvořili `CArchive` objekty jsou nutné k serializaci dat do souboru a pak ho Deserializujte zpět ze souboru.
+Daný `CArchive` objekt buď ukládá (zapisuje, serializace) data nebo načítá (čte, deserializace) data, ale nikdy ne obojí. Životnost objektu `CArchive` je omezena na jeden průchod zápisem objektů do souboru nebo čtením objektů ze souboru. Proto dva úspěšně vytvořené `CArchive` objekty jsou vyžadovány k serializaci dat do souboru a jejich deserializaci ze souboru.
 
-Není-li archiv ukládá objekty do souboru, připojí archivu `CRuntimeClass` název k objektům. Když jiný archivu načte objekty ze souboru do paměti, potom `CObject`-odvozené objekty jsou dynamicky znovu vytvořena na základě `CRuntimeClass` objektů. Daný objekt může odkazovat více než jednou, při zápisu do souboru pomocí ukládání archivu. Načítání archivu, ale bude rekonstruovat objekt pouze jednou. Podrobnosti o jak archiv připojí `CRuntimeClass` informace, které objekty a rekonstruuje objekty, s ohledem možné více odkazů, jsou popsány v [Technická poznámka 2](../mfc/tn002-persistent-object-data-format.md).
+Když archiv ukládá objekty do souboru, archiv připojí název `CRuntimeClass` k objektům. Poté, když jiný archiv načte objekty ze souboru do paměti, jsou objekty odvozené `CObject`dynamicky přebudovány na základě `CRuntimeClass` objektů. Na daný objekt může být odkazováno více než jednou, protože je zapsán do souboru uložením archivu. Při načítání archivu však dojde pouze k rekonstrukci objektu. Podrobnosti o tom, jak archiv připojuje `CRuntimeClass` informace k objektům a rekonstruuje objekty, přičemž vezme v úvahu možné více odkazů, jsou popsány v [technické poznámce 2](../mfc/tn002-persistent-object-data-format.md).
 
-Podle data, je serializován do archivu, archivu nahromadí data, dokud jeho vyrovnávací paměť je plná. Pak archivu zapíše do vyrovnávací paměti `CFile` objekt, který odkazuje `CArchive` objektu. Podobně jak načíst data z archivu, čte data ze souboru do vyrovnávací paměti a potom z vyrovnávací paměti deserializovaného objektu. Tato ukládání do vyrovnávací paměti snižuje počet pokusů, které je pevný disk fyzicky čtení, tedy zvýšení výkonu vaší aplikace.
+Při serializaci dat do archivu archiv shromáždí data, dokud její vyrovnávací paměť nebude plná. Potom archiv zapíše svou vyrovnávací paměť na objekt `CFile`, na který ukazuje objekt `CArchive`. Podobně při čtení dat z archivu načte data ze souboru do vyrovnávací paměti a pak z vyrovnávací paměti do vašeho deserializovaného objektu. Toto ukládání do vyrovnávací paměti snižuje počet fyzického čtení pevného disku, což zlepšuje výkon vaší aplikace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Serializace: Serializace objektu](../mfc/serialization-serializing-an-object.md)

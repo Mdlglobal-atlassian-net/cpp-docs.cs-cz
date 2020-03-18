@@ -12,7 +12,6 @@ f1_keywords:
 - CSimpleRow.AddRefRow
 - CSimpleRow.Compare
 - CSimpleRow::Compare
-- CSimpleRow
 - ATL::CSimpleRow::CSimpleRow
 - CSimpleRow.CSimpleRow
 - ATL.CSimpleRow.CSimpleRow
@@ -35,16 +34,16 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390929"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441137"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow – třída
 
-Poskytuje výchozí implementaci pro popisovač řádku, který je používán [IRowsetImpl –](../../data/oledb/irowsetimpl-class.md) třídy.
+Poskytuje výchozí implementaci pro popisovač řádku, který se používá ve třídě [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,7 +53,7 @@ class CSimpleRow
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -62,25 +61,25 @@ class CSimpleRow
 
 |||
 |-|-|
-|[Addrefrow –](#addrefrow)|Přidá počet odkazů na existující popisovač řádku.|
-|[Compare](#compare)|Porovná dva řádky, které chcete zobrazit, pokud se odkazují na stejnou instanci řádek.|
+|[AddRefRow](#addrefrow)|Přidá počet odkazů do existujícího popisovače řádku.|
+|[Compare](#compare)|Porovná dva řádky a zjistí, zda odkazují na stejnou instanci řádku.|
 |[CSimpleRow](#csimplerow)|Konstruktor|
-|[Releaserow –](#releaserow)|Verze řádků.|
+|[ReleaseRow](#releaserow)|Uvolní řádky.|
 
 ### <a name="data-members"></a>Datové členy
 
 |||
 |-|-|
-|[m_dwRef](#dwref)|Počet odkazů na existující popisovač řádku.|
-|[m_iRowset](#irowset)|Index tak, aby v sadě řádků reprezentující kurzor.|
+|[m_dwRef](#dwref)|Počet odkazů na existující popisovač řádku|
+|[m_iRowset](#irowset)|Index sady řádků reprezentující kurzor|
 
 ## <a name="remarks"></a>Poznámky
 
-Popisovač řádku jsou logicky jedinečný klíčová slova pro řádek výsledek. `IRowsetImpl` Vytvoří novou `CSimpleRow` pro každý řádek požaduje v [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` také se dá nahradit výrazem vlastní implementaci popisovač řádku, jako je výchozí argument šablony pro `IRowsetImpl`. Jediným požadavkem na nahrazení Tato třída má mít náhradní třída konstruktor, který přijímá jeden parametr typu zadat **dlouhé**.
+Popisovač řádku je logicky jedinečný tag pro řádek výsledku. `IRowsetImpl` vytvoří nový `CSimpleRow` pro každý řádek požadovaný v [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` lze také nahradit vlastní implementací popisovače řádku, protože se jedná o výchozí argument šablony pro `IRowsetImpl`. Jediným požadavkem nahrazení této třídy je, aby třída nahrazení poskytovala konstruktor, který přijímá jeden parametr typu **Long**.
 
-## <a name="addrefrow"></a> CSimpleRow::AddRefRow
+## <a name="addrefrow"></a>CSimpleRow:: AddRefRow
 
-Přidá počet odkazů na existující popisovač řádku způsobem bezpečným pro vlákno.
+Přidá počet odkazů na existující popisovač řádku způsobem bezpečným pro přístup z více vláken.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -88,9 +87,9 @@ Přidá počet odkazů na existující popisovač řádku způsobem bezpečným 
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> CSimpleRow::Compare
+## <a name="compare"></a>CSimpleRow:: Compare
 
-Porovná dva řádky, které chcete zobrazit, pokud se odkazují na stejnou instanci řádek.
+Porovná dva řádky a zjistí, zda odkazují na stejnou instanci řádku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -101,13 +100,13 @@ HRESULT Compare(CSimpleRow* pRow);
 #### <a name="parameters"></a>Parametry
 
 *pRow*<br/>
-Ukazatel `CSimpleRow` objektu.
+Ukazatel na objekt `CSimpleRow`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnotu HRESULT, obvykle S_OK označující dvěma řádky se stejnou instanci řádek nebo S_FALSE označující dvěma řádky se liší. Zobrazit [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) v *OLE DB referenční informace pro programátory* pro ostatní možných vrácených hodnot.
+Hodnota HRESULT, obvykle S_OK, což znamená, že dva řádky jsou stejné jako instance řádku nebo S_FALSE, což značí, že se dva řádky liší. Další možné návratové hodnoty naleznete v tématu [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) v *referenci programátora OLE DB* .
 
-## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
+## <a name="csimplerow"></a>CSimpleRow:: CSimpleRow
 
 Konstruktor
 
@@ -120,15 +119,15 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 #### <a name="parameters"></a>Parametry
 
 *iRowsetCur*<br/>
-[in] Index aktuální sady řádků.
+pro Index na aktuální sadu řádků.
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) k *iRowsetCur*.
+Nastaví [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) na *iRowsetCur*.
 
-## <a name="releaserow"></a> CSimpleRow::ReleaseRow
+## <a name="releaserow"></a>CSimpleRow:: ReleaseRow
 
-Verze řádků způsobem bezpečným pro vlákno.
+Uvolní řádky způsobem bezpečným pro přístup z více vláken.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -136,9 +135,9 @@ Verze řádků způsobem bezpečným pro vlákno.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> CSimpleRow::m_dwRef
+## <a name="dwref"></a>CSimpleRow:: m_dwRef
 
-Počet odkazů na existující popisovač řádku.
+Počet odkazů na existující popisovač řádku
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -146,9 +145,9 @@ Počet odkazů na existující popisovač řádku.
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> CSimpleRow::m_iRowset
+## <a name="irowset"></a>CSimpleRow:: m_iRowset
 
-Index řádků reprezentující kurzor.
+Index sady řádků reprezentující kurzor
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -156,8 +155,8 @@ Index řádků reprezentující kurzor.
 KeyType m_iRowset;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetImpl – třída](../../data/oledb/irowsetimpl-class.md)

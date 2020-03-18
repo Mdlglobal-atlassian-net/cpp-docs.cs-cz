@@ -6,22 +6,21 @@ f1_keywords:
 - IDBCreateCommandImpl
 - ATL.IDBCreateCommandImpl
 - IDBCreateCommandImpl.CreateCommand
-- CreateCommand
 - IDBCreateCommandImpl::CreateCommand
 helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 7450d91cd5e5383b55e2ebb391fe5f1190cbed2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27ca1fd20e8f358d936789da695611d96a6e7aa1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408911"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446128"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl – třída
 
-Poskytuje implementaci [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) rozhraní.
+Poskytuje implementaci rozhraní [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,15 +32,15 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Relace objekt odvozený od `IDBCreateCommandImpl`.
+*Š*<br/>
+Objekt Session odvozený z `IDBCreateCommandImpl`.
 
 *CommandClass*<br/>
-Vaší třídy příkazu.
+Vaše třída příkazu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -53,9 +52,9 @@ Vaší třídy příkazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Volitelné rozhraní objektu relace získat nový příkaz.
+Volitelné rozhraní objektu Session pro získání nového příkazu.
 
-## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+## <a name="createcommand"></a>IDBCreateCommandImpl –:: CreateCommand
 
 Vytvoří nový příkaz a vrátí požadované rozhraní.
 
@@ -69,15 +68,15 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) v *referenci programátora OLE DB*.
 
-Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBCreateCommand::CreateCommand`:
+Některé parametry odpovídají *OLE DB referenční parametry programátora* různých názvů, které jsou popsány v `IDBCreateCommand::CreateCommand`:
 
-|Parametry šablony technologie OLE DB|*OLE DB referenční informace pro programátory* parametry|
+|Parametry šablony OLE DB|*OLE DB referenční parametry programátora*|
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

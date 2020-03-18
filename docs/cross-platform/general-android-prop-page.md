@@ -13,25 +13,25 @@ f1_keywords:
 - VC.Project.VCConfiguration.Android.ConfigurationType
 - VC.Project.VCConfiguration.UseOfSTL
 - VC.Project.VCConfiguration.ThumbMode
-ms.openlocfilehash: 694e69e063f73830c21976bd0615cf4d1d99b368
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 78f6df8286151b61ed026cc6b5170ff3508295d4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177575"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446883"
 ---
 # <a name="general-project-properties-android-c"></a>Obecné vlastnosti projektů (Android C++)
 
-Vlastnost | Popis | Vlastnit
---- | ---| ---
-Výstupní adresář | Určuje relativní cestu k adresáři výstupního souboru. může obsahovat proměnné prostředí.
-Zprostředkující adresář | Určuje relativní cestu k adresáři zprostředkujícího souboru. může obsahovat proměnné prostředí.
-Cílový název | Určuje název souboru, který bude tento projekt generovat.
-Cílová Přípona | Určuje příponu souboru, kterou bude tento projekt generovat. (Příklad: *. exe* nebo *. dll*)
-Přípony k odstranění při čištění | Středníky oddělená specifikace zástupných znaků, pro které se soubory v zprostředkujícím adresáři odstraňují při čištění nebo opětovném sestavení.
-Soubor protokolu sestavení | Určuje soubor protokolu sestavení, do kterého se má zapisovat, pokud je povolené protokolování sestavení.
-Sada nástrojů platformy | Určuje sadu nástrojů použitou pro sestavení aktuální konfigurace. Pokud není nastavená, použije se výchozí sada nástrojů.
-Typ konfigurace | Určuje typ výstupu, který tato konfigurace generuje. | **Dynamická knihovna (. so)** – dynamická knihovna ( *. so*)<br>**Statická knihovna (. a)** – statická knihovna ( *. a*)<br>**Nástroj** – nástroj<br>**Makefile** -makefile<br>
-Cílová úroveň rozhraní API | Úroveň rozhraní API pro Android NDK, na kterou cílí Tato konfigurace.
-Použití STL | Určuje, C++ která standardní knihovna se má použít pro tuto konfiguraci. | **Minimální C++ běhová knihovna (systém)**<br>**C++Statická knihovna modulu runtime (Gabi + + _static)**<br>**C++Běhová knihovna Shared (Gabi + + _shared)**<br>**Statická knihovna sdílená knihovna běhového runtime (stlport_static)**<br>**Sdílená knihovna sdílená knihovna běhového runtime (stlport_shared)**<br>**Statická knihovna GNU STL (gnustl_static)**<br>**Sdílená knihovna GNU STL (gnustl_shared)**<br>**Statická knihovna LLVM libc + + (c++ _static)**<br>**Sdílená knihovna LLVM libc + + (c++ _shared)**<br>
-Režim miniatur | Vygeneruje kód, který se spustí pro mikroarchitekturu pro palec. To platí jenom pro architekturu ARM. | **Táhl**<br>**ARM**<br>**Disabled** (Zakázáno)<br>
+| Vlastnost | Popis | Vlastnit |
+|--|--|--|
+| Výstupní adresář | Určuje relativní cestu k adresáři výstupního souboru. může obsahovat proměnné prostředí. |
+| Zprostředkující adresář | Určuje relativní cestu k adresáři zprostředkujícího souboru. může obsahovat proměnné prostředí. |
+| Cílový název | Určuje název souboru, který tento projekt vygeneruje. |
+| Cílová Přípona | Určuje příponu souboru, kterou tento projekt vygeneruje. (Příklad: *. exe* nebo *. dll*) |
+| Přípony k odstranění při čištění | Středníky oddělená specifikace zástupných znaků, pro které se soubory v zprostředkujícím adresáři odstraňují při čištění nebo opětovném sestavení. |
+| Soubor protokolu sestavení | Určuje soubor protokolu sestavení, do kterého se má zapisovat, pokud je povolené protokolování sestavení. |
+| Sada nástrojů platformy | Určuje sadu nástrojů použitou pro sestavení aktuální konfigurace. Pokud není nastavená, použije se výchozí sada nástrojů. |
+| Typ konfigurace | Určuje typ výstupu, který tato konfigurace generuje. | **Dynamická knihovna (. so)** – dynamická knihovna ( *. so*)<br>**Statická knihovna (. a)** – statická knihovna ( *. a*)<br>**Nástroj** – nástroj<br>**Makefile** -makefile<br> |
+| Cílová úroveň rozhraní API | Úroveň rozhraní API pro Android NDK, na kterou cílí Tato konfigurace. |
+| Použití STL | Určuje, C++ která standardní knihovna se má použít pro tuto konfiguraci. | **Minimální C++ běhová knihovna (systém)**<br>**C++Statická knihovna modulu runtime (Gabi + + _static)**<br>**C++Běhová knihovna Shared (Gabi + + _shared)**<br>**Statická knihovna sdílená knihovna běhového runtime (stlport_static)**<br>**Sdílená knihovna sdílená knihovna běhového runtime (stlport_shared)**<br>**Statická knihovna GNU STL (gnustl_static)**<br>**Sdílená knihovna GNU STL (gnustl_shared)**<br>**Statická knihovna LLVM libc + + (c++ _static)**<br>**Sdílená knihovna LLVM libc + + (c++ _shared)**<br> |
+| Režim miniatur | Vygeneruje kód, který se spustí pro mikroarchitekturu pro palec. To platí jenom pro architekturu ARM. | **Táhl**<br>**ARM**<br>**Disabled** (Zakázáno)<br> |

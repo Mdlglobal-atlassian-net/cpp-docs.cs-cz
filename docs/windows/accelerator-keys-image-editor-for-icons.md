@@ -1,75 +1,72 @@
 ---
-title: Klávesy akcelerátoru (C++ Editor obrázků pro ikony)
+title: Klávesy akcelerátoruC++ (Editor obrázků pro ikony)
 ms.date: 02/15/2019
-f1_keywords:
-- vc.editors.bitmap
-- vc.editors.icon
 helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35aeeb7e644849d215cd4782a1d06576449746ef
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204802"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447199"
 ---
-# <a name="accelerator-keys-c-image-editor-for-icons"></a>Klávesy akcelerátoru (C++ Editor obrázků pro ikony)
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>Klávesy akcelerátoruC++ (Editor obrázků pro ikony)
 
-V následující tabulce jsou klávesy akcelerátoru pro editor příkazy bitové kopie, které jsou vázány na klíče ve výchozím nastavení. Chcete-li změnit klávesové zkratky, přejděte do nabídky **nástroje** > **možnosti** a zvolte **klávesnice** pod **prostředí** složky. Další informace najdete v tématu [určení a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Níže jsou uvedeny klávesy akcelerátoru pro příkazy editoru obrázků, které jsou ve výchozím nastavení vázány na klíče. Pokud chcete změnit přístupové klávesy, přejděte na **nástroje** nabídky > **Možnosti** a vyberte možnost **klávesnice** ve složce **prostředí** . Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
-> Dostupné možnosti v dialogových oknech, názvy a umístění příkazů, které vidíte, mohou lišit od informací uvedených v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, přejděte do nabídky **nástroje** > **nastavení importu a exportu**. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Dostupné možnosti v dialogových oknech, názvy a umístění příkazů, které vidíte, mohou lišit od informací uvedených v nápovědě v závislosti na aktivních nastaveních nebo edici. Pokud chcete změnit nastavení, přejděte na **nástroje** nabídky > **Nastavení importu a exportu**. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-|Příkaz|klíče|Popis|
+|Příkaz|Klíče|Popis|
 |-------------|----------|-----------------|
-|Image.AirBrushTool|**Ctrl** + **A**|Kreslení pomocí rozprašovače se zvolenou velikostí a barvou.|
-|Image.BrushTool|**Ctrl** + **B**|Kreslení pomocí štětce se vybraný tvar, velikostí a barvou.|
-|Image.CopyAndOutlineSelection|**Ctrl** + **Shift** + **U**|Vytvoří kopii aktuálního výběru a zvýrazní ji. Je-li barvu pozadí je obsažen v aktuálním výběru, bude vyloučena v případě, že máte [transparentní](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) vybrané.|
-|Image.DrawOpaque|**CTRL** + **J**|Změní aktuální výběr buď [neprůhledné nebo průhledné](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).|
-|Image.EllipseTool|**Ctrl** + **P**|Nakreslí elipsu s zvolenou šířku čáry a barvu.|
-|Image.EraserTool|**Ctrl** + **Shift** + **I**|Vymaže část obrázku (aktuální barvou pozadí).|
-|Image.FilledEllipseTool|**Ctrl** + **Shift** + **Alt** + **P**|Kreslení plné elipsy.|
-|Image.FilledRectangleTool|**Ctrl** + **Shift** + **Alt** + **R**|Kreslení plného obdélníku.|
-|Image.FilledRoundRectangleTool|**Ctrl** + **Shift** + **Alt** + **W**|Kreslení plného zaobleného obdélníku.|
-|Image.FillTool|**CTRL** + **F**|Vyplní oblast.|
-|Image.FlipHorizontal|**CTRL** + **H**|Převrátí obrázek nebo výběr vodorovně.|
-|Image.FlipVertical|**SHIFT**+ **Alt** + **H**|Převrátí obrázek nebo výběr svisle.|
-|Image.LargerBrush|**Ctrl** + **=**|Zvětší velikost štětce o jeden pixel v každém směru. Pro zmenšení velikosti štětce viz. Image.SmallerBrush v této tabulce.|
-|Image.LineTool|**Ctrl** + **L**|Kreslení rovné čáry s vybraný tvar, velikostí a barvou.|
-|Image.MagnificationTool|**Ctrl** + **M**|Aktivuje **Magnify** nástroj, který umožňuje zvětšit konkrétní část obrázku.|
-|Image.Magnify|**CTRL** + **Shift** + **M**|Přepíná mezi aktuálním zvětšení a zvětšením 1:1.|
-|Image.NewImageType|**Vložit**|Spustí [nový \<zařízení > obrázku dialogové okno](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) pomocí které můžete vytvořit image pro typ jinou image.|
-|Image.NextColor|**Ctrl** + **]**<br /><br /> - nebo -<br /><br /> **CTRL** + **šipka doprava**|Změní vykreslení barvy popředí na následující barvu z palety.|
-|Image.NextRightColor|**Ctrl** + **Shift** + **]**<br /><br /> - nebo -<br /><br /> **SHIFT** + **Ctrl** + **šipka doprava**|Změní vykreslení barvy pozadí na následující barvu z palety.|
-|Image.OutlinedEllipseTool|**SHIFT** + **Alt** + **P**|Kreslení plné elipsy s ohraničením.|
-|Image.OutlinedRectangleTool|**SHIFT** + **Alt** + **R**|Kreslení plného obdélníku s ohraničením|
-|Image.OutlinedRoundRectangleTool|**SHIFT** + **Alt** + **W**|Kreslení plného zaobleného obdélníku s ohraničením.|
-|Image.PencilTool|**Ctrl** + **I**|Kreslení pomocí tužky jeden pixel.|
-|Image.PreviousColor|**Ctrl** + **[**<br /><br /> - nebo -<br /><br /> **CTRL** + **šipka vlevo**|Změní vykreslení barvy popředí na předchozí barvu z palety.|
-|Image.PreviousRightColor|**Ctrl** + **Shift** + **[**<br /><br /> - nebo -<br /><br /> **SHIFT** + **Ctrl** + **šipka vlevo**|Změní vykreslení barvy pozadí na předchozí barvu z palety.|
-|Image.RectangleSelectionTool|**SHIFT** + **Alt** + **S**|Výběr obdélníkové části obrázku pro přesunutí, zkopírování nebo upravit.|
-|Image.RectangleTool|ATL + R|Kreslení obdélníku s zvolenou šířku čáry a barvu.|
-|Image.Rotate90Degrees|**CTRL** + **Shift** + **H**|Otočí obrázek nebo výběr o 90 stupňů.|
-|Image.RoundedRectangleTool|**ALT** + **W**|Kreslení zaobleného obdélníku s zvolenou šířku čáry a barvu.|
-|Image.ShowGrid|**Ctrl** + **Alt** + **S**|Přepíná mřížku pixelů (zaškrtne nebo zruší **mřížku obrazových bodů** možnost [dialogové okno Nastavení mřížky](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
-|Image.ShowTileGrid|**Ctrl** + **Shift** + **Alt** + **S**|Přepíná mřížku (zaškrtne nebo zruší **mřížka** možnost [dialogové okno Nastavení mřížky](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
-|Image.SmallBrush|**CTRL** + **.** (tečka)|Snižuje **štětce** velikost na jeden pixel. (Viz také Image.LargerBrush a Image.SmallerBrush v této tabulce.)|
-|Image.SmallerBrush|**CTRL**  +  **-** (minus)|Zmenší velikost štětce o jeden pixel v každém směru. Zvětšení velikosti štětce znovu, viz. Image.LargerBrush v této tabulce.|
-|Image.TextTool|**Ctrl** + **T**|Otevře [dialogové okno textový nástroj](../windows/text-tool-dialog-box-image-editor-for-icons.md).|
-|Image.UseSelectionAsBrush|**Ctrl** + **U**|Kreslení štětcem pomocí aktuálního výběru.|
-|Image.ZoomIn|**Ctrl** + **Shift** + **.** (tečka)<br /><br /> - nebo -<br /><br /> **CTRL** + **šipka nahoru**|Zvětšuje zvětšení aktuálního zobrazení.|
-|Image.ZoomOut|**CTRL** + **,** (čárka)<br /><br /> - nebo -<br /><br /> **CTRL** + **šipka dolů**|Snižuje zvětšení aktuálního zobrazení.|
+|Image. AirBrushTool|**Ctrl** + **A**|Kreslí pomocí spreje zvolené velikosti a barvy.|
+|Image.BrushTool|**Ctrl** + **B**|Kreslí pomocí štětce s vybraným tvarem, velikostí a barvou.|
+|Image.CopyAndOutlineSelection|**Ctrl** + **SHIFT** + **U**|Vytvoří kopii aktuálního výběru a objednává ho. Pokud je barva pozadí obsažena v aktuálním výběru, bude vyloučena, pokud jste vybrali možnost [transparentní](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) .|
+|Image.DrawOpaque|**Ctrl** + **J**|Provede aktuální výběr buď [neprůhledný, nebo transparentní](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).|
+|Image.EllipseTool|**Ctrl** + **P**|Nakreslí elipsu s vybranou šířkou a barvou čáry.|
+|Image.EraserTool|**Ctrl** + **SHIFT** + **I**|Vymaže část obrázku (s aktuální barvou pozadí).|
+|Image.FilledEllipseTool|**Ctrl** + **Shift** + **ALT** + **P**|Vykreslí Vyplněnou elipsu.|
+|Image.FilledRectangleTool|**Ctrl** + **Shift** + **ALT** + **R**|Nakreslí vyplněný obdélník.|
+|Image.FilledRoundRectangleTool|**Ctrl** + **Shift** + **ALT** + **W**|Nakreslí plný zaoblený obdélník.|
+|Image.FillTool|**Ctrl** + **F**|Vyplní oblast.|
+|Image.FlipHorizontal|**Ctrl** + **H**|Překlopí obrázek nebo výběr vodorovně.|
+|Image.FlipVertical|**Shift**+ **ALT** + **H**|Překlopí obrázek nebo výběr svisle.|
+|Image.LargerBrush|**Ctrl** +  **=**|Zvětší velikost štětce o jeden pixel v každém směru. Chcete-li zmenšit velikost štětce, přečtěte si část image. SmallerBrush v této tabulce.|
+|Image.LineTool|**Ctrl** + **L**|Nakreslí rovnou čáru vybraným tvarem, velikostí a barvou.|
+|Image.MagnificationTool|**Ctrl** + **M**|Aktivuje nástroj **Lupa** , který umožňuje zvětšit konkrétní části obrázku.|
+|Image.Magnify|**Ctrl** + **SHIFT** + **M**|Přepíná mezi aktuálním zvětšením a 1:1 zvětšením.|
+|Image.NewImageType|**Zadat**|Spustí [dialogové okno Nový typ obrázku > \<zařízení](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) , ve kterém můžete vytvořit obrázek pro jiný typ obrázku.|
+|Image.NextColor|**Ctrl** +  **]**<br /><br /> ani<br /><br /> **Ctrl** + **šipka vpravo**|Změní barvu popředí kreslení na další barvu v paletě.|
+|Image.NextRightColor|**Ctrl** + **SHIFT** +  **]**<br /><br /> ani<br /><br /> **Shift** + **CTRL** + **šipka doprava**|Změní barvu pozadí kresby na další barvu palety.|
+|Image.OutlinedEllipseTool|**Shift** + **ALT** + **P**|Kreslí Vyplněnou elipsu s obrysem.|
+|Image.OutlinedRectangleTool|**Shift** + **ALT** + **R**|Kreslení plného obdélníku pomocí obrysu|
+|Image. OutlinedRoundRectangleTool|**Shift** + **ALT** + **W**|Nakreslí plný zaoblený obdélník s obrysem.|
+|Image.PencilTool|**Ctrl** + **I**|Kreslí pomocí tužky s jedním pixelem.|
+|Image.PreviousColor|**Ctrl** +  **[**<br /><br /> ani<br /><br /> **Ctrl** + **šipka vlevo**|Změní barvu popředí kreslení na předchozí barvu z palety.|
+|Image.PreviousRightColor|**Ctrl** + **SHIFT** +  **[**<br /><br /> ani<br /><br /> **Shift** + **CTRL** + **šipka vlevo**|Změní barvu pozadí kresby na předchozí barvu palety.|
+|Image.RectangleSelectionTool|**Shift** + **ALT** + **S**|Vybere obdélníkovou část obrázku pro přesunutí, zkopírování nebo úpravu.|
+|Image.RectangleTool|ATL + R|Nakreslí obdélník s vybranou šířkou a barvou čáry.|
+|Image.Rotate90Degrees|**Ctrl** + **SHIFT** + **H**|Otočí obrázek nebo výběr o 90 stupňů.|
+|Image.RoundedRectangleTool|**Alt** + **W**|Nakreslí zaoblený obdélník s vybranou šířkou a barvou čáry.|
+|Image.ShowGrid|**Ctrl** + **ALT** + **S**|Přepíná mřížku pixelů (vybere nebo zruší možnost **mřížky pixelů** v [dialogovém okně nastavení mřížky](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
+|Image.ShowTileGrid|**Ctrl** + **Shift** + **ALT** + **S**|Přepíná mřížku dlaždic (vybere nebo zruší možnost **mřížky dlaždice** v [dialogovém okně nastavení mřížky](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
+|Image.SmallBrush|**Ctrl** +  **.** hodin|Zmenší velikost **štětce** na jeden pixel. (Viz také image. LargerBrush a image. SmallerBrush v této tabulce.)|
+|Image.SmallerBrush|**Ctrl** +  **-** (mínus)|Zmenší velikost štětce o jeden pixel v každém směru. Chcete-li znovu zvětšit velikost štětce, viz obrázek. LargerBrush v této tabulce.|
+|Image.TextTool|**Ctrl** + **t**|Otevře [dialogové okno textový nástroj](../windows/text-tool-dialog-box-image-editor-for-icons.md).|
+|Image.UseSelectionAsBrush|**Ctrl** + **U**|Kreslí pomocí aktuálního výběru jako štětec.|
+|Image.ZoomIn|**Ctrl** + **SHIFT** +  **.** hodin<br /><br /> ani<br /><br /> **Ctrl** + **šipka nahoru**|Zvětší zvětšení aktuálního zobrazení.|
+|Image.ZoomOut|**Ctrl** +  **,** (čárka)<br /><br /> ani<br /><br /> **Ctrl** + **šipka dolů**|Zmenší zvětšení aktuálního zobrazení.|
 
 ## <a name="requirements"></a>Požadavky
 
-Žádné
+Žádná
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)<br/>
-[Postupy: Vytvoření ikony nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Postupy: vytvoření ikony nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
 [Postupy: Úprava obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Postupy: Použití nástroje pro kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Postupy: Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Postupy: použití nástroje pro kreslení](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Postupy: práce s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>

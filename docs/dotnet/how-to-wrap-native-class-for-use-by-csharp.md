@@ -6,14 +6,14 @@ helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: 65a1b11578565e08f0be7aa04f96d3da4cbfbf7a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988123"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446311"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Postupy: Zabalení nativních tříd pro použití v jazyce C#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Postupy: zabalení nativní třídy pro použití v jazyce C\#
 
 Tento příklad ukazuje, jak zabalit C++ nativní třídu, aby ji bylo možné spotřebovat pomocí kódu C#vytvořeného v nebo jiném jazyku .NET.
 
@@ -67,6 +67,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

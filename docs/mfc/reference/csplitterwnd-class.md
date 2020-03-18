@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: bee6deed3052d6cc923e432e97ad9a7904060cb6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421455"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447447"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd – třída
 
@@ -522,17 +522,17 @@ Ukazatel na zobrazení, ze kterého zpráva o posunu vznikla.
 *nScrollCode*<br/>
 Kód posuvníku, který označuje požadavek na posunutí uživatele. Tento parametr se skládá ze dvou částí: bajt nízkého řádu, který určuje typ posouvání, ke kterému dochází vodorovně, a horní bajt, který určuje typ posouvání, ke kterému dochází vertikálně:
 
-    - SB_BOTTOM posouvá se dolů.
+- SB_BOTTOM posouvá se dolů.
 
-    - SB_LINEDOWN posouvá jeden řádek dolů.
+- SB_LINEDOWN posouvá jeden řádek dolů.
 
-    - SB_LINEUP posouvá o jeden řádek nahoru.
+- SB_LINEUP posouvá o jeden řádek nahoru.
 
-    - SB_PAGEDOWN posouvá jednu stránku dolů.
+- SB_PAGEDOWN posouvá jednu stránku dolů.
 
-    - SB_PAGEUP posouvá o jednu stránku nahoru.
+- SB_PAGEUP posouvá o jednu stránku nahoru.
 
-    - SB_TOP posouvá na začátek.
+- SB_TOP posouvá na začátek.
 
 *bDoScroll*<br/>
 Určuje, zda dojde k zadané akci posunutí. Pokud má *bDoScroll* hodnotu true (to znamená, pokud existuje podřízené okno, a pokud má rozdělená okna rozsah posunu), může dojít k zadané akci posouvání. Pokud má *bDoScroll* hodnotu false (tj. Pokud žádné podřízené okno neexistuje nebo pokud rozdělená zobrazení nemají žádný rozsah posunu), není k dispozici posouvání.
@@ -709,9 +709,9 @@ DWORD GetScrollStyle() const;
 
 Jeden nebo více následujících příznaků stylu Windows, pokud jsou úspěšné:
 
-    - WS_HSCROLL, zda rozdělovač aktuálně spravuje sdílené vodorovné posuvníky.
+- WS_HSCROLL, zda rozdělovač aktuálně spravuje sdílené vodorovné posuvníky.
 
-    - WS_VSCROLL, zda rozdělovač aktuálně spravuje sdílené svislé posuvníky.
+- WS_VSCROLL, zda rozdělovač aktuálně spravuje sdílené svislé posuvníky.
 
 Pokud je nula, okno s rozdělovačem aktuálně nespravuje žádné sdílené posuvníky.
 
@@ -810,13 +810,13 @@ Ukazatel na kontext zařízení, ve kterém se má kreslit. Pokud má *primárn�
 *Noznámení*<br/>
 Hodnota `enum ESplitType`, což může být jedna z následujících:
 
-    - `splitBox` příčky přetáhněte pole.
+- `splitBox` příčky přetáhněte pole.
 
-    - `splitBar` pruh, který se zobrazí mezi dvěma rozdělenými okny.
+- `splitBar` pruh, který se zobrazí mezi dvěma rozdělenými okny.
 
-    - `splitIntersection` průsečík rozdělených oken. Tento prvek nebude volán při spuštění v systému Windows 95/98.
+- `splitIntersection` průsečík rozdělených oken. Tento prvek nebude volán při spuštění v systému Windows 95/98.
 
-    - `splitBorder` ohraničení rozděleného okna.
+- `splitBorder` ohraničení rozděleného okna.
 
 *OBD*<br/>
 Odkaz na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) určující velikost a tvar rozdělených oken.

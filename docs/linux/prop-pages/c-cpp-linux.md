@@ -1,20 +1,20 @@
 ---
-title: Vlastnosti C/C++ (C++ pro Linux)
+title: C/C++ vlastnosti (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
-ms.openlocfilehash: b5be7582970c45e25f1e2c90971d587c19eac2a0
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 394cb501b4df6caed6a358ffa96ce0de5d187ae1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821331"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441470"
 ---
-# <a name="cc-properties-linux-c"></a>Vlastnosti C/C++ (C++ pro Linux)
+# <a name="cc-properties-linux-c"></a>C/C++ vlastnosti (Linux C++)
 
 ::: moniker range="vs-2015"
 
-Podpora Linuxu je k dispozici v sadě Visual Studio 2017 nebo novější.
+Podpora pro Linux je k dispozici v systému Visual Studio 2017 nebo novějším.
 
 ::: moniker-end
 
@@ -22,65 +22,65 @@ Podpora Linuxu je k dispozici v sadě Visual Studio 2017 nebo novější.
 
 ## <a name="general"></a>Obecné
 
-Vlastnost | Popis | Možnosti
---- | ---| ---
-Další adresáře souborů k zahrnutí | Určuje jeden nebo více adresářů, které chcete přidat do cesty zahrnutí. K oddělení více adresářů, použijte středníky. (-I\[cesta]).
-Formát ladicích informací | Určuje typ ladicích informací generovaných kompilátorem. | **Žádný** -nevytváří žádné ladicí informace, takže kompilace může být rychlejší.<br/>**Minimální informace o ladění** -generovat minimální informace o ladění.<br/>**Úplné informace o ladění (DWARF2)** -ladicí informace DWARF2 generovat.<br/>
-Název souboru objektů | Určuje název, který má přepsat výchozí název souboru objektů. Může být název souboru nebo adresáře. (-o [název]).
-Úroveň upozornění | Vybere, jak přísně má kompilátor, aby se informace o kódu chyby.  Přidat přímo do nastavení další příznaky **další možnosti**. (/ w, / weverything). | **Vypnout všechna upozornění** – zakáže všechna upozornění kompilátoru.<br/>**EnableAllWarnings** – umožňuje všechna upozornění včetně těch, které jsou ve výchozím nastavení zakázané.<br/>
-Zpracovávat upozornění jako chyby | Zpracuje všechna upozornění kompilátoru jako chyby. Pro nový projekt může být vhodné použít werror při všech kompilacích. Vyřešte všechna upozornění zajistit nejmíň vad kódu možné obtížné najít.
-Další upozornění C | Definuje množinu zpráv dalších upozornění.
-Další upozornění C++ | Definuje množinu zpráv dalších upozornění.
-Povolíte režim s komentářem | Když je povolený režim s komentářem, vytiskne Další informace pro diagnostiku sestavení.
-Kompilátor jazyka C | Určuje program, který se má volat během kompilování zdrojových souborů C, nebo cestu ke kompilátoru C ve vzdáleném systému.
-Kompilátor C++ | Určuje program, který se má volat během kompilování zdrojových souborů C++, nebo cestu ke kompilátoru C++ ve vzdáleném systému.
-Časový limit kompilace | Časový limit vzdálené kompilace, v milisekundách.
-Kopírovat soubory objektů | Určuje, jestli se má kopírovat zkompilované soubory objektů ze vzdáleného systému do místního počítače.
+| Vlastnost | Popis | Vlastnit |
+|--|--|--|
+| Další adresáře k zahrnutí | Určuje jeden nebo více adresářů, které mají být přidány do cesty include. K oddělení více adresářů použijte středníkem. (-I\[cesta]). |
+| Formát ladicích informací | Určuje typ ladicích informací generovaných kompilátorem. | **None** – nevytváří žádné ladicí informace, takže kompilace může být rychlejší.<br/>**Minimální informace o ladění** – vygenerují minimální ladicí informace.<br/>**Úplné ladicí informace (DWARF2)** – vygeneruje informace o ladění DWARF2.<br/> |
+| Název souboru objektu | Určuje název, který má přepsat výchozí název souboru objektu. Může se jednat o název souboru nebo adresáře. (-o [název]). |
+| Úroveň upozornění | Vybírá, jak striktní má kompilátor být o chybách kódu.  Přidejte další příznaky přímo k **dalším možnostem**. (/w,/Weverything). | Vypnout **všechna upozornění** – zakáže všechna upozornění kompilátoru.<br/>**Povolit všechna upozornění** – povolí všechna upozornění, včetně těch, která jsou ve výchozím nastavení zakázaná.<br/> |
+| Zpracovávat upozornění jako chyby | Zpracovává všechna upozornění kompilátoru jako chyby. Pro nový projekt může být nejvhodnější používat/Werror ve všech kompilacích. Vyřešte všechna upozornění, abyste zajistili nejmenší možné nedostatky v obtížném hledání kódu. |
+| Další upozornění (C) | Definuje sadu dalších zpráv s upozorněními. |
+| C++Další upozornění | Definuje sadu dalších zpráv s upozorněními. |
+| Zapnout režim podrobného výpisu | Pokud je zapnutý režim verbose, vypíše Další informace k diagnostice sestavení. |
+| Kompilátor jazyka C | Určuje program, který se má volat během kompilování zdrojových souborů C, nebo cestu ke kompilátoru C ve vzdáleném systému. |
+| Kompilátor C++ | Určuje program, který se má volat během C++ kompilování zdrojových souborů, nebo cestu k C++ kompilátoru na vzdáleném systému. |
+| Časový limit kompilace | Časový limit vzdálené kompilace v milisekundách |
+| Kopírovat soubory objektů | Určuje, zda se mají kopírovat zkompilované soubory objektů ze vzdáleného systému do místního počítače. |
 
 ## <a name="optimization"></a>Optimalizace
 
-Vlastnost | Popis | Možnosti
---- | ---| ---
-Optimalizace | Určuje úroveň optimalizace pro aplikaci. | **Vlastní** – vlastní optimalizace.<br/>**Zakázané** – zakáže optimalizaci.<br/>**Minimální velikost** -optimalizovat pro velikost.<br/>**Maximalizovat rychlost** -optimalizovat rychlost.<br/>**Plná optimalizace** – nákladné optimalizace.
-Striktní aliasy | Předpokládá nejpřísnější pravidla pro aliasy.  Objekt jednoho typu nikdy se předpokládá, že má stejné adrese jako objekt jiného typu.
-Rozvinutí smyček | Unrolls smyček urychlí aplikaci snížením počtu provedených rozvětvení na, úkor větší velikosti kódu.
-Optimalizace v době propojování | Umožňuje meziprocedurální optimalizaci tím, že Optimalizátor hledání napříč soubory objektů ve vaší aplikaci.
-Vypustit ukazatel na rámec | Zakazuje vytváření ukazatelů na rámce v zásobníku volání.
-Žádné společné bloky | Alokuje i neinicializované globální proměnné v datové sekci souboru objektu, nikoli Generovat jako společné bloky.
+| Vlastnost | Popis | Vlastnit |
+|--|--|--|
+| Optimalizace | Určuje úroveň optimalizace pro aplikaci. | **Vlastní** optimalizace.<br/>**Zakázáno** – zakázat optimalizaci.<br/>**Minimalizovat velikost** – optimalizovat pro velikost<br/>**Maximalizujte rychlost** – Optimalizujte rychlost.<br/>**Úplná optimalizace** – nákladné optimalizace |
+| Striktní aliasy | Předpokládá pravidla pro přísnější aliasy.  U objektu jednoho typu se nikdy nepředpokládá, že má stejnou adresu jako objekt jiného typu. |
+| Odvalení smyček | Umožňuje uvolnit smyčky, aby se aplikace rychleji snížila tím, že se sníží počet spuštěných větví za cenu větší velikosti kódu. |
+| Optimalizace času propojení | Umožňuje optimalizaci mezi procesními soubory tím, že umožňuje Optimalizátoru prohledat v aplikacích objekty v aplikaci. |
+| Vynechat ukazatel na rámec | Zakazuje vytváření ukazatelů na rámce v zásobníku volání. |
+| Žádné společné bloky | Přiděluje dokonce neinicializované globální proměnné v datové sekci souboru objektu, spíše než je vygeneruje jako běžné bloky. |
 
 ## <a name="preprocessor"></a>Preprocesor
 
-Vlastnost | Popis | Možnosti
---- | ---| ---
-Definice preprocesoru | Definuje symboly předzpracování pro zdrojový soubor. (-D)
-Zrušit Definice preprocesoru | Určuje že jeden nebo více nedefinovaných hodnot preprocesoru.  (-U \[– makro])
-Zrušit všechny definice preprocesoru | Nedefinovaných hodnot všech dříve definovaných hodnot preprocesoru.  (-undef)
-Zobrazit soubory k zahrnutí | Generuje seznam vložených souborů s výstupem kompilátoru.  (-H)
+| Vlastnost | Popis | Vlastnit |
+|--|--|--|
+| Definice preprocesoru | Definuje symboly předzpracování pro zdrojový soubor. (-D) |
+| Zrušit Definice preprocesoru | Určuje jeden nebo více zrušení definujících preprocesoru.  (-U \[makro]) |
+| Zrušit definici všech definic preprocesoru | Zruší definici všech dříve definovaných hodnot preprocesoru.  (-undef) |
+| Zobrazit zahrnutí | Generuje seznam souborů k zahrnutí s výstupem kompilátoru.  (-H) |
 
 ## <a name="code-generation"></a>Vytvoření kódu
 
-Vlastnost | Popis | Možnosti
---- | ---| ---
-Pozičně nezávislý kód | Generuje kód nezávislý na pozici (PIC) pro použití ve sdílené knihovně.
-Jsou vláknově bezpečné | Generuje kód navíc používající rutiny určené v C++ ABI pro vláknově bezpečné inicializace místních statik. | **Ne** – zakáže vláknově bezpečné pro vlákna.<br/>**Ano** -povolit vláknově bezpečné pro vlákna.
-Optimalizace plovoucí desetinné čárky | Umožňuje optimalizace plovoucí desetinné čárky volnějším IEEE 754 dodržování předpisů.
-Skrytí inline metod | Pokud povolená, jsou deklarované mimo řádek kopie inline metod `private extern`.
-Ve výchozím nastavení skryje symboly | Všechny symboly se deklarují jako `private extern` Pokud nejsou explicitně označené pro export s použitím `__attribute` – makro.
-Povolit výjimky jazyka C++ | Určuje model zpracování výjimek, které kompilátor použije. | **Ne** – zakáže zpracování výjimek.<br/>**Ano** -povolit zpracování výjimek.
+| Vlastnost | Popis | Vlastnit |
+|--|--|--|
+| Pozice nezávislého kódu | Generuje kód nezávislý na poloze (PIC) pro použití ve sdílené knihovně. |
+| Statické objekty jsou vláknově bezpečné. | Vygeneruje dodatečný kód pro použití rutin určených v C++ ABI pro inicializaci místních statických proměnných pro vlákny. | **Ne** – zakažte statické objekty bezpečné pro přístup z více vláken.<br/>**Ano** – povolí statické objekty bezpečné pro přístup z více vláken. |
+| Optimalizace plovoucí desetinné čárky | Povolí optimalizace plovoucí desetinné čárky podle požadavků dodržování předpisů IEEE-754. |
+| Skryté metody vložených | Je-li povoleno, jsou uvedeny nepřesné kopie vložených metod, které jsou deklarovány `private extern`. |
+| Ve výchozím nastavení jsou symboly skryté. | Všechny symboly jsou deklarovány `private extern`, pokud nejsou explicitně označeny pro export pomocí makra `__attribute`. |
+| Povolit C++ výjimky | Určuje model zpracování výjimek používaný kompilátorem. | **Bez** zákazu zpracování výjimek.<br/>**Ano** – povolí zpracování výjimek. |
 
 ## <a name="language"></a>Jazyk
 
-Vlastnost | Popis | Možnosti
---- | ---| ---
-Povolit informace běhového typu | Přidává kód pro kontrolu typů objektů jazyka C++ za běhu (informace typu za běhu).     (frtti, fno-rtti)
-Standard jazyka C | Určuje standard jazyka C. | **Default**<br/>**C89** – Standard jazyka C89.<br/>**C99** – Standard jazyka C99.<br/>**C11** – Standard jazyka C11.<br/>**C99 (dialekt GNU)** – Standard jazyka C99 (dialekt GNU).<br/>**C11 (dialekt GNU)** – Standard jazyka C11 (dialekt GNU).
-Standard jazyka C++ | Určuje standard jazyka C++. | **Default**<br/>**C ++ 03** – Standard C ++ 03 jazyka.<br/>**C ++ 11** – Standard C ++ 11 jazyka.<br/>**C ++ 14** – Standard C ++ 14 jazyka.<br/>**C ++ 03 (dialekt GNU)** – C ++ 03 (dialekt GNU) Standard jazyka.<br/>**C ++ 11 (dialekt GNU)** – C ++ 11 (dialekt GNU) Standard jazyka.<br/>**C ++ 14 (dialekt GNU)** – C ++ 14 (dialekt GNU) Standard jazyka.
+| Vlastnost | Popis | Vlastnit |
+|--|--|--|
+| Povolit informace běhového typu | Přidá kód pro kontrolu C++ typů objektů v době běhu (informace o typu modulu runtime).     (frtti, fno-rtti) |
+| Standard jazyka C | Určuje standard jazyka C. | **Výchozí**<br/>Standard jazyka **c89** -c89.<br/>Standard jazyka **C99** -C99.<br/>Standard jazyka **C11** -C11.<br/>**C99 (DIALEKT GNU)** – Standard jazyka C99 (dialekt GNU)<br/>**C11 (DIALEKT GNU)** – Standard jazyka C11 (dialekt GNU) |
+| C++Standardní jazyk | Určuje standardní C++ jazyk. | **Výchozí**<br/>**C++ 03** – Standard jazyka c++ 03.<br/>**C++** 11 – Standard jazyka c++ 11.<br/>**C++** 14 – Standard jazyka c++ 14.<br/>**C++ 03 (DIALEKT GNU)** – Standard jazyka c++ 03 (dialekt GNU)<br/>**C++ 11 (DIALEKT GNU)** – Standard jazyka c++ 11 (dialekt GNU)<br/>**C++ 14 (DIALEKT GNU)** – Standard jazyka c++ 14 (dialekt GNU) |
 
-## <a name="advanced"></a>Upřesnit
+## <a name="advanced"></a>Upřesňující
 
-Vlastnost | Popis | Možnosti
---- | ---| ---
-Kompilovat jako | Vybere možnost jazyka kompilace pro soubory .c a .cpp. (-x c, -x c++) | **Výchozí** – zjišťování na základě přípony .c nebo .cpp.<br/>**Kompilovat jako kód jazyka C** -kompilovat jako kód jazyka C.<br/>**Zkompiluje kód jako C++ kód** – zkompiluje kód jako C++ kódu.
-Nuceně zahrnuté soubory | Určuje jeden nebo více vynucených soubory k zahrnutí (-zahrnují \[název])
+| Vlastnost | Popis | Vlastnit |
+|--|--|--|
+| Kompilovat jako | Vybere možnost jazyka kompilace pro soubory. c a. cpp. (-x c, -x c++) | **Výchozí** – rozpoznat podle přípony. c nebo. cpp.<br/>**Kompilovat jako kód jazyka c** – kompilovat jako kód jazyka c.<br/>**Kompilovat jako C++**  kód – kompilovat jako C++ kód. |
+| Vynucené vložené soubory | Určuje jeden nebo více souborů s vynuceným zahrnutím (-include \[název]). |
 
 ::: moniker-end

@@ -2,7 +2,6 @@
 title: /GR (Povolit informace běhového typu)
 ms.date: 11/04/2016
 f1_keywords:
-- /gr
 - VC.Project.VCCLWCECompilerTool.RuntimeTypeInfo
 - VC.Project.VCCLCompilerTool.RuntimeTypeInfo
 helpviewer_keywords:
@@ -12,16 +11,16 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-ms.openlocfilehash: 15ad453b10fd31de97bbc25f8062e628129076f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee1398b2f9ee78c62fb84aa591e77708cd0d9d83
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292117"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439595"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Povolit informace běhového typu)
 
-Přidává kód pro kontrolu typů objektů v době běhu.
+Přidá kód pro kontrolu typů objektů v době běhu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,27 +30,27 @@ Přidává kód pro kontrolu typů objektů v době běhu.
 
 ## <a name="remarks"></a>Poznámky
 
-Když **GR** zapnutý, kompilátor definuje `_CPPRTTI` makro preprocesoru. Ve výchozím nastavení **GR** zapnutý. **/GR-** zakáže informace typu za běhu.
+Když je **/gr** , kompilátor definuje makro preprocesoru `_CPPRTTI`. Ve výchozím nastavení je **/gr** zapnutý. **/Gr-** zakazuje informace o běhovém typu.
 
-Použití **GR** Pokud kompilátor nemůže vyřešit staticky typ objektu, který ve svém kódu. Obvykle potřebujete **GR** při váš kód používá možnost [dynamic_cast – operátor](../../cpp/dynamic-cast-operator.md) nebo [typeid](../../cpp/typeid-operator.md). Ale **GR** zvyšuje velikost souboru .rdata část obrázku. Pokud váš kód nepoužívá **dynamic_cast** nebo **typeid**, **/GR-** může způsobit menší obrázek.
+Použijte **/gr** , pokud kompilátor nemůže statisticky přeložit typ objektu ve vašem kódu. Obvykle je potřeba možnost **/gr** , když kód používá [operátor dynamic_cast](../../cpp/dynamic-cast-operator.md) nebo [typeid](../../cpp/typeid-operator.md). **/Gr** ale zvětšuje velikost částí. rdata obrázku. Pokud váš kód nepoužívá **dynamic_cast** nebo **typeid**, může **/gr-** vytvořit menší obrázek.
 
-Další informace o kontrole run-time typu, najdete v části [informace o typu za běhu](../../cpp/run-time-type-information.md) v *referenční dokumentace jazyka C++*.
+Další informace o kontrole typu za běhu naleznete v tématu [informace o typu běhu](../../cpp/run-time-type-information.md) v  *C++ referenční příručce jazyka*.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **C/C++** složky.
+1. Klikněte na složku **CC++ /a** .
 
-1. Klikněte na tlačítko **jazyk** stránku vlastností.
+1. Klikněte na stránku vlastností **jazyka** .
 
-1. Upravit **povolit informace typu za běhu** vlastnost.
+1. Upravte vlastnost **Povolit informace o typu běhu** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

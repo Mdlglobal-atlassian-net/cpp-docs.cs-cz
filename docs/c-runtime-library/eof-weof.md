@@ -1,19 +1,17 @@
 ---
 title: EOF, WEOF
 ms.date: 11/04/2016
-f1_keywords:
-- EOF
 helpviewer_keywords:
 - EOF function
 - WEOF function
 - end of file
 ms.assetid: a7150563-cdae-4cdf-9798-ad509990e505
-ms.openlocfilehash: f00c4003afebad580bd2ea5d6853edc3ca6e8c73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ccb97b55cb61bd42d0487b22bd3e01413444ad3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344068"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438439"
 ---
 # <a name="eof-weof"></a>EOF, WEOF
 
@@ -25,11 +23,11 @@ ms.locfileid: "62344068"
 
 ## <a name="remarks"></a>Poznámky
 
-Konec souboru je vrácený rutiny vstupně-výstupní operace při ukončení ze souboru (nebo v některých případech může chybu) dochází.
+Znak EOF je vrácen rutinou I/O, pokud byl zjištěn konec souboru (nebo v některých případech chyba).
 
-WEOF vrací návratovou hodnotu typu **wint_t**, která se používá, který signalizuje, že konec široké datového proudu nebo hlášení chybovou podmínku.
+WEOF vrací návratovou hodnotu typu **wint_t**, která se používá k signalizaci konce datového proudu, nebo k nahlášení chybového stavu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [putc, putwc](../c-runtime-library/reference/putc-putwc.md)<br/>
 [ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)<br/>

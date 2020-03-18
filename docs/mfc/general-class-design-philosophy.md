@@ -1,8 +1,6 @@
 ---
 title: Obecná filosofie návrhu tříd
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - designing classes [MFC]
 - MFC, Windows API
@@ -10,43 +8,43 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-ms.openlocfilehash: 4dfa11c73703f5f2d3d17f8278610d32178af679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a173802e3fa43615c05da4ce747592f851228f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219616"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441184"
 ---
 # <a name="general-class-design-philosophy"></a>Obecná filosofie návrhu tříd
 
-Microsoft Windows byla navržená tak dlouho, než se stal oblíbený jazyk C++. Protože nepřeberným množstvím aplikací využívají rozhraní (API) Windows jazyka C, toto rozhraní se zachová v dohledné budoucnosti. Libovolné rozhraní C++ Windows musí být proto postavená na procedurální rozhraní API jazyka C. Zaručí se tak, že bude aplikací v jazyce C++ může existovat vedle sebe s aplikacemi C.
+Systém Microsoft Windows byl navržený dlouho C++ před tím, než se jazyk stal oblíbeným. Vzhledem k tomu, že tisíce aplikací používají rozhraní API (Windows Application Programming Interface) jazyka C, bude toto rozhraní udržováno v předvídatelné budoucnosti. Jakékoli C++ rozhraní systému Windows musí být proto postavené nad procedurální rozhraní API pro jazyk C. To zaručuje, C++ že aplikace budou moci koexistovat s aplikacemi jazyka C.
 
-Knihovny Microsoft Foundation Class je objektově orientované rozhraní pro Windows, který splňuje následující požadavky návrhu:
+Knihovna Microsoft Foundation Class je objektově orientované rozhraní systému Windows, které splňuje následující cíle návrhu:
 
-- Významné snížení úsilí o napsání aplikace pro Windows.
+- Významné snížení úsilí při psaní aplikace pro Windows.
 
-- Rychlost provádění srovnatelné s rozhraní API jazyka C.
+- Rychlost spuštění srovnatelná s jazykem jazyka C-Language API.
 
-- Režijní náklady na kód minimální velikost.
+- Minimální režijní náklady na velikost kódu.
 
-- Možnost volat jakékoli funkce Windows C přímo.
+- Možnost volat jakoukoli funkci Windows C přímo
 
-- Jednodušší převodu stávajících aplikací C do C++.
+- Jednodušší převod stávajících aplikací v jazyce C C++na.
 
-- Možnost využívat z existujícího základu jazyka C Windows programovací prostředí.
+- Schopnost využívat stávající základ programovacího prostředí systému Windows pro jazyk C.
 
-- Snadnější použití rozhraní API Windows pomocí C++ než s C.
+- Jednodušší používání rozhraní API systému Windows s C++ výjimkou jazyka C.
 
-- Snadnější použití, ale výkonné abstrakce složité funkce, jako jsou ovládací prvky ActiveX, Podpora databáze, tisk, panely nástrojů a stavové řádky.
+- Jednodušší je používat stále výkonné abstrakce složitých funkcí, jako jsou ovládací prvky ActiveX, podpora databází, tisk, panely nástrojů a stavové řádky.
 
-- True rozhraní API Windows pro jazyk C++, který efektivně používá funkce jazyka C++.
+- True Windows API pro C++ efektivně používá C++ jazykové funkce.
 
 Další informace o návrhu knihovny MFC naleznete v tématu:
 
-- [Architektura aplikace](../mfc/application-framework.md)
+- [Aplikační rozhraní](../mfc/application-framework.md)
 
 - [Vztah k rozhraní API jazyka C](../mfc/relationship-to-the-c-language-api.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../mfc/class-library-overview.md)
+[Přehled třídy](../mfc/class-library-overview.md)

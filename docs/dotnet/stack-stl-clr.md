@@ -4,12 +4,6 @@ ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - cliext::stack
-- cliext::operator!=
-- cliext::operator<
-- cliext::operator<=
-- cliext::operator==
-- cliext::operator>
-- cliext::operator>=
 - cliext::stack::assign
 - cliext::stack::const_reference
 - cliext::stack::container_type
@@ -59,18 +53,18 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f1ae182573ca70a6983b9cd23e253ecf30731e4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384605"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441990"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
-Třída šablony popisuje objekt, který řídí různé délky sekvence elementů, s přístupem k FIFO last-in. Můžete použít adaptér kontejneru `stack` ke správě základního kontejneru jako důkladné zásobníku.
+Třída šablony popisuje objekt, který řídí proměnlivou délku sekvence prvků, které mají při prvním přístupu poslední. Použijete `stack` adaptéru kontejnerů ke správě podkladového kontejneru jako zásobníku pro odesílání.
 
-V popisu níže `GValue` je stejný jako *hodnotu* Pokud je typ odkazu, v takovém případě je `Value^`. Obdobně `GContainer` je stejný jako *kontejneru* Pokud je typ odkazu, v takovém případě je `Container^`.
+V popisu níže je `GValue` stejné jako *hodnota* , pokud se jedná o typ REF, v takovém případě je `Value^`. Podobně `GContainer` je stejný jako *kontejner* , pokud se jedná o typ REF, v takovém případě je `Container^`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,23 +83,23 @@ template<typename Value,
 *Hodnota*<br/>
 Typ elementu v řízené sekvenci
 
-*Kontejner*<br/>
-Typ základního kontejneru.
+*Vnitřního*<br/>
+Typ podkladového kontejneru.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<cliext – / stack >
+**Záhlaví:** \<cliext –/Stack >
 
-**Namespace:** cliext –
+**Obor názvů:** cliext –
 
 ## <a name="declarations"></a>Deklarace
 
 |Definice typu|Popis|
 |---------------------|-----------------|
 |[stack::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|
-|[stack::container_type (STL/CLR)](#container_type)|Typ základního kontejneru.|
+|[stack::container_type (STL/CLR)](#container_type)|Typ podkladového kontejneru.|
 |[stack::difference_type (STL/CLR)](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|
-|[stack::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro adaptér kontejneru.|
+|[stack::generic_container (STL/CLR)](#generic_container)|Typ obecného rozhraní pro adaptér kontejneru.|
 |[stack::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro adaptér kontejneru.|
 |[stack::reference (STL/CLR)](#reference)|Typ odkazu na prvek|
 |[stack::size_type (STL/CLR)](#size_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|
@@ -113,46 +107,46 @@ Typ základního kontejneru.
 
 |Členská funkce|Popis|
 |---------------------|-----------------|
-|[stack::assign (STL/CLR)](#assign)|Nahradí všechny elementy.|
+|[stack::assign (STL/CLR)](#assign)|Nahradí všechny prvky.|
 |[stack::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
-|[stack::get_container (STL/CLR)](#get_container)|Přistupuje k podkladové kontejneru.|
+|[stack::get_container (STL/CLR)](#get_container)|Přistupuje k základnímu kontejneru.|
 |[stack::pop (STL/CLR)](#pop)|Odstraní poslední prvek.|
 |[stack::push (STL/CLR)](#push)|Přidá nový poslední prvek.|
 |[stack::size (STL/CLR)](#size)|Spočítá počet prvků.|
 |[stack::stack (STL/CLR)](#stack)|Sestaví objekt kontejneru.|
-|[stack::top (STL/CLR)](#top)|Přistupuje k poslední prvek.|
-|[stack::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|
+|[stack::top (STL/CLR)](#top)|Přistupuje k poslednímu prvku.|
+|[stack::to_array (STL/CLR)](#to_array)|Zkopíruje řízenou sekvenci do nového pole.|
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|[stack::top_item (STL/CLR)](#top_item)|Přistupuje k poslední prvek.|
+|[stack::top_item (STL/CLR)](#top_item)|Přistupuje k poslednímu prvku.|
 
 |Operátor|Popis|
 |--------------|-----------------|
-|[stack::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvence.|
-|[operator!= (stack) (STL/CLR)](#op_neq)|Určuje, zda `stack` není roven jinému objektu `stack` objektu.|
-|[operator< (stack) (STL/CLR)](#op_lt)|Určuje, zda `stack` je menší než jiný objekt `stack` objektu.|
-|[operator<= (stack) (STL/CLR)](#op_lteq)|Určuje, zda `stack` objekt je menší nebo rovna jiné `stack` objektu.|
-|[operator== (stack) (STL/CLR)](#op_eq)|Určuje, zda `stack` je roven jinému objektu `stack` objektu.|
-|[operator> (stack) (STL/CLR)](#op_gt)|Určuje, zda `stack` je větší než jiný objekt `stack` objektu.|
-|[operator>= (stack) (STL/CLR)](#op_gteq)|Určuje, zda `stack` objekt je větší než nebo roven jinému `stack` objektu.|
+|[stack::operator= (STL/CLR)](#op_as)|Nahradí řízenou sekvenci.|
+|[operator!= (stack) (STL/CLR)](#op_neq)|Určuje, zda `stack` objekt není roven jinému objektu `stack`.|
+|[operator< (stack) (STL/CLR)](#op_lt)|Určuje, zda je objekt `stack` menší než jiný objekt `stack`.|
+|[operator<= (stack) (STL/CLR)](#op_lteq)|Určuje, zda je objekt `stack` menší nebo roven jinému objektu `stack`.|
+|[operator== (stack) (STL/CLR)](#op_eq)|Určuje, zda je objekt `stack` roven jinému objektu `stack`.|
+|[operator> (stack) (STL/CLR)](#op_gt)|Určuje, zda je objekt `stack` větší než jiný objekt `stack`.|
+|[operator>= (stack) (STL/CLR)](#op_gteq)|Určuje, zda je objekt `stack` větší nebo roven jinému objektu `stack`.|
 
 ## <a name="interfaces"></a>Rozhraní
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|<xref:System.ICloneable>|Duplicitní objektu.|
-|IStack\<hodnoty, kontejner >|Udržujte adaptér obecný kontejneru.|
+|<xref:System.ICloneable>|Duplikuje objekt.|
+|IStack\<hodnota, kontejner >|Udržujte obecný adaptér kontejneru.|
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt přiděluje a uvolňuje úložiště pro sekvenci řídí, prostřednictvím základní kontejneru, typu *kontejneru*, který ukládá *hodnotu* elementy a roste na požádání. Objekt omezuje přístup k vložení a odebrání právě posledního prvku, implementace fronty FIFO poslední dovnitř (označované také jako LIFO fronty nebo stack).
+Objekt přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, prostřednictvím podkladového kontejneru typu *Container*, který ukládá prvky *hodnot* a roste na vyžádání. Objekt omezuje přístup k nahrání a odebrání pouze posledního prvku, implementace první fronty prvního (označovaného také jako fronta LIFO nebo zásobník).
 
 ## <a name="members"></a>Členové
 
-## <a name="assign"></a> Stack::Assign (STL/CLR)
+## <a name="assign"></a>stack:: assign (STL/CLR)
 
-Nahradí všechny elementy.
+Nahradí všechny prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -162,12 +156,12 @@ void assign(stack<Value, Container>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*Kliknutím*<br/>
 Adaptér kontejneru pro vložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce přiřadí `right.get_container()` do základního kontejneru. Použijte ke změně celého obsahu do zásobníku.
+Členská funkce přiřadí `right.get_container()` k základnímu kontejneru. Použijete ho ke změně celého obsahu zásobníku.
 
 ### <a name="example"></a>Příklad
 
@@ -204,7 +198,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a> Stack::const_reference (STL/CLR)
+## <a name="const_reference"></a>stack:: const_reference (STL/CLR)
 
 Typ konstantního odkazu na prvek
 
@@ -216,7 +210,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje konstantní odkaz na element.
+Typ popisuje konstantní odkaz na prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -248,9 +242,9 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> Stack::container_type (STL/CLR)
+## <a name="container_type"></a>stack:: container_type (STL/CLR)
 
-Typ základního kontejneru.
+Typ podkladového kontejneru.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -260,7 +254,7 @@ typedef Container value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony *kontejneru*.
+Typ je synonymum pro *kontejner*parametrů šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -290,9 +284,9 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> Stack::difference_type (STL/CLR)
+## <a name="difference_type"></a>stack::d ifference_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma prvky.
+Typy podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -302,7 +296,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje element může být záporný počet.
+Typ popisuje pravděpodobně negativní počet prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -348,7 +342,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> Stack::Empty (STL/CLR)
+## <a name="empty"></a>stack:: Empty (STL/CLR)
 
 Zkouší, zda nejsou přítomny žádné prvky.
 
@@ -360,7 +354,7 @@ bool empty();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda zásobník je prázdný.
+Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentem [zásobníku:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Použijete ho k otestování, jestli je zásobník prázdný.
 
 ### <a name="example"></a>Příklad
 
@@ -402,9 +396,9 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a> Stack::generic_container (STL/CLR)
+## <a name="generic_container"></a>stack:: generic_container (STL/CLR)
 
-Typ obecné rozhraní pro adaptér kontejneru.
+Typ obecného rozhraní pro adaptér kontejneru.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -415,7 +409,7 @@ typedef Microsoft::VisualC::StlClr::IStack<Value>
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecné rozhraní pro tuto třídu adaptéru kontejner šablony.
+Typ popisuje obecné rozhraní pro tuto třídu kontejnerového adaptéru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -465,9 +459,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a> Stack::generic_value (STL/CLR)
+## <a name="generic_value"></a>stack:: generic_value (STL/CLR)
 
-Typ elementu pro použití s obecné rozhraní pro kontejner.
+Typ elementu pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -477,7 +471,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje. (`GValue` je buď `value_type` nebo `value_type^` Pokud `value_type` je typ odkazu.)
+Typ popisuje objekt typu `GValue`, který popisuje hodnotu uloženého elementu pro použití s obecným rozhraním pro tuto třídu kontejneru šablony. (`GValue` je buď `value_type` nebo `value_type^`, pokud `value_type` je typ ref.)
 
 ### <a name="example"></a>Příklad
 
@@ -523,9 +517,9 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a> Stack::get_container (STL/CLR)
+## <a name="get_container"></a>stack:: get_container (STL/CLR)
 
-Přistupuje k podkladové kontejneru.
+Přistupuje k základnímu kontejneru.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -535,7 +529,7 @@ container_type^ get_container();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí obslužnou rutinu pro základní kontejneru. Použijete ji obejít omezení vynucená obálkou kontejneru.
+Členská funkce vrací popisovač pro základní kontejner. Použijete ji k obejít omezení uložených obálkou kontejneru.
 
 ### <a name="example"></a>Příklad
 
@@ -565,9 +559,9 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> Stack::Operator = (STL/CLR)
+## <a name="op_as"></a>stack:: operator = – operátor (STL/CLR)
 
-Nahradí řízené sekvence.
+Nahradí řízenou sekvenci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -577,12 +571,12 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Adaptér kontejneru pro kopírování.
+*Kliknutím*<br/>
+Adaptér kontejneru ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.
+Operátor členu kopíruje *přímo* na objekt a potom vrátí `*this`. Použijete ji k nahrazení kontrolované sekvence kopií kontrolované sekvence *vpravo*.
 
 ### <a name="example"></a>Příklad
 
@@ -619,7 +613,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> Stack::POP (STL/CLR)
+## <a name="pop"></a>stack::p op (STL/CLR)
 
 Odstraní poslední prvek.
 
@@ -631,7 +625,7 @@ void pop();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce odstraní poslední prvek řízené sekvence, která musí být neprázdný. Použijte ke zkrácení zásobníku o jeden element na pozadí.
+Členská funkce odstraní poslední prvek kontrolované sekvence, který nesmí být prázdný. Použijete ho ke zkrácení zásobníku podle jednoho prvku na pozadí.
 
 ### <a name="example"></a>Příklad
 
@@ -667,7 +661,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a> Stack::push (STL/CLR)
+## <a name="push"></a>stack::p USH (STL/CLR)
 
 Přidá nový poslední prvek.
 
@@ -679,7 +673,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vloží prvek s hodnotou `val` na konci řízené sekvence. Použijete ji k připojení jiný element do zásobníku.
+Členská funkce vloží element s hodnotou `val` na konci řízené sekvence. Použijete ho k připojení jiného elementu do zásobníku.
 
 ### <a name="example"></a>Příklad
 
@@ -708,7 +702,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a> Stack::Reference (STL/CLR)
+## <a name="reference"></a>stack:: Reference (STL/CLR)
 
 Typ odkazu na prvek
 
@@ -720,7 +714,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje odkaz na element.
+Typ popisuje odkaz na prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -757,7 +751,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> Stack::size (STL/CLR)
+## <a name="size"></a>stack:: Size (STL/CLR)
 
 Spočítá počet prvků.
 
@@ -769,7 +763,7 @@ size_type size();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.
+Členská funkce vrací délku řízené sekvence. Použijete ji k určení počtu prvků, které jsou aktuálně v řízené sekvenci. Pokud vás zajímá, zda má sekvence nenulovou velikost, přečtěte si téma [stack:: Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Příklad
 
@@ -811,9 +805,9 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> Stack::size_type (STL/CLR)
+## <a name="size_type"></a>stack:: size_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma elementu.
+Typ podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -823,7 +817,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje počet prvků záporná.
+Typ popisuje nezáporný počet prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -860,9 +854,9 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a> Stack::Stack (STL/CLR)
+## <a name="stack"></a>stack:: Stack (STL/CLR)
 
-Sestaví objekt kontejneru adaptéru.
+Vytvoří objekt adaptéru kontejneru.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -875,11 +869,11 @@ explicit stack(container_type% wrapped);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Kopírovaný objekt.
+*Kliknutím*<br/>
+Objekt ke zkopírování.
 
-*Zabalená*<br/>
-Zabalená kontejner, aby používal.
+*zalamován*<br/>
+Zabalený kontejner, který se má použít
 
 ### <a name="remarks"></a>Poznámky
 
@@ -887,25 +881,25 @@ Konstruktor:
 
 `stack();`
 
-Vytvoří prázdný zabalené kontejner. Použijete ji k určení počáteční prázdnou řízenou sekvenci.
+Vytvoří prázdný zabalený kontejner. Použijete ji k zadání prázdné počáteční řízené sekvence.
 
 Konstruktor:
 
 `stack(stack<Value, Container>% right);`
 
-Vytvoří zabalené kontejner, který je kopií `right.get_container()`. Můžete použít k určení počáteční řízené sekvence, která je kopii sekvence řízenou parametrem objektu stack *správné*.
+Vytvoří zabalený kontejner, který je kopií `right.get_container()`. Použijete ji k určení počáteční řízené sekvence, která je kopií sekvence řízené objektem zásobníku *vpravo*.
 
 Konstruktor:
 
 `stack(stack<Value, Container>^ right);`
 
-Vytvoří zabalené kontejner, který je kopií `right->get_container()`. Můžete použít k určení počáteční řízené sekvence, která je kopii sekvence řízenou parametrem objektu stack `*right`.
+Vytvoří zabalený kontejner, který je kopií `right->get_container()`. Použijete ji k určení počáteční řízené sekvence, která je kopií sekvence řízené objektem Stack `*right`.
 
 Konstruktor:
 
 `explicit stack(container_type% wrapped);`
 
-používá existující kontejner *zabalené* jako zabalené kontejner. Můžete použít k vytvoření zásobníku z existující kontejner.
+použije existující kontejner *zabalený* jako zabalený kontejner. Použijete ji k vytvoření zásobníku z existujícího kontejneru.
 
 ### <a name="example"></a>Příklad
 
@@ -953,9 +947,9 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a> Stack::to_array (STL/CLR)
+## <a name="to_array"></a>stack:: to_array (STL/CLR)
 
-Zkopíruje do nového pole řízené sekvence.
+Zkopíruje řízenou sekvenci do nového pole.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -965,7 +959,7 @@ cli::array<Value>^ to_array();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.
+Členská funkce vrátí pole obsahující řízenou sekvenci. Použijete ho k získání kopie řízené sekvence ve formuláři Array.
 
 ### <a name="example"></a>Příklad
 
@@ -1003,9 +997,9 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a> Stack::top (STL/CLR)
+## <a name="top"></a>stack:: Top (STL/CLR)
 
-Přistupuje k poslední prvek.
+Přistupuje k poslednímu prvku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1015,7 +1009,7 @@ reference top();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí odkaz na poslední prvek řízené sekvence, která musí být neprázdný. Použijete ho pro přístup k posledního prvku, když víte, že existuje.
+Členská funkce vrátí odkaz na poslední prvek řízené sekvence, který nesmí být prázdný. Použijete ho k přístupu k poslednímu prvku, když víte, že existuje.
 
 ### <a name="example"></a>Příklad
 
@@ -1055,9 +1049,9 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a> Stack::top_item (STL/CLR)
+## <a name="top_item"></a>stack:: top_item (STL/CLR)
 
-Přistupuje k poslední prvek.
+Přistupuje k poslednímu prvku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1067,7 +1061,7 @@ property value_type top_item;
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastnost má přístup k poslední prvek řízené sekvence, která musí být neprázdný. Můžete použít ke čtení nebo zápisu posledního prvku, když víte, že existuje.
+Vlastnost přistupuje k poslednímu prvku kontrolované sekvence, který nesmí být prázdný. Použijete ho ke čtení nebo zápisu posledního prvku, když víte, že existuje.
 
 ### <a name="example"></a>Příklad
 
@@ -1107,7 +1101,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a> Stack::value_type (STL/CLR)
+## <a name="value_type"></a>stack:: value_type (STL/CLR)
 
 Typ prvku
 
@@ -1119,7 +1113,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony *hodnota*.
+Typ je synonymum pro *hodnotu*parametru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1152,9 +1146,9 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a> Operator! = (stack) (STL/CLR)
+## <a name="op_neq"></a>operator! = (Stack) – operátor (STL/CLR)
 
-Zásobník není rovno porovnání.
+Neshodné porovnání zásobníku
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1167,15 +1161,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `!(left == right)`. Pomocí něho můžete testovat, zda *levé* není stejný jako seřazené *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.
+Funkce operátoru vrací `!(left == right)`. Použijete ho k otestování, jestli *vlevo* není seřazené stejně jako *právo* , pokud jsou tyto dva zásobníky porovnány s elementy podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -1223,9 +1217,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operátor&lt; (stack) (STL/CLR)
+## <a name="op_lt"></a>operator&lt; (Stack) – operátor (STL/CLR)
 
-Zásobník menší než porovnání.
+Zásobník je menší než porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1238,15 +1232,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Operátoru funkce vrátí hodnota true v případě, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, který `left[i] < right[i]`. V opačném případě vrátí `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` pomocí něho můžete testovat, zda *levé* je řazen před *správné* Když jsou dva balíčky porovnání elementu pomocí elementu.
+Funkce operator vrátí hodnotu true, pokud `i` nejnižší pozice, pro kterou `!(right[i] < left[i])` je také true `left[i] < right[i]`. V opačném případě vrátí `left->`[stack:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() <` `right->size()` použijete k otestování, zda je před *pravou* seřazena hodnota *Left* , pokud jsou tyto dva zásobníky porovnány s prvkem podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -1294,9 +1288,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operátor&lt;= (stack) (STL/CLR)
+## <a name="op_lteq"></a>operator&lt;= (Stack) – operátor (STL/CLR)
 
-Stack – menší nebo rovna porovnání.
+Zásobník je menší nebo roven hodnotě porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1309,15 +1303,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `!(right < left)`. Pomocí něho můžete testovat, zda *levé* není seřazené po *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.
+Funkce operátoru vrací `!(right < left)`. Použijete ho k otestování, jestli není po *pravé straně* , když jsou tyto dva zásobníky porovnány s prvkem podle prvku, *Left* .
 
 ### <a name="example"></a>Příklad
 
@@ -1365,9 +1359,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> Operator == (stack) (STL/CLR)
+## <a name="op_eq"></a>operator = = (Stack) – operátor (STL/CLR)
 
-Porovnání rovna zásobníku.
+Stejné porovnání zásobníku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1380,15 +1374,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrátí hodnotu true pouze v případě, že řídí sekvencí *levé* a *správné* mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Pomocí něho můžete testovat, zda *levé* je stejný jako seřazené *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.
+Funkce operator vrátí hodnotu true pouze v případě, že sekvence řízené *levou* a *pravou* mají stejnou délku a pro každou pozici `i``left[i] ==` `right[i]`. Použijete ho k otestování, jestli je *levé* *, pokud jsou* tyto dva zásobníky porovnány s elementy podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -1436,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operátor&gt; (stack) (STL/CLR)
+## <a name="op_gt"></a>operator&gt; (Stack) – operátor (STL/CLR)
 
 Zásobník je větší než porovnání.
 
@@ -1451,15 +1445,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `right` `<` `left`. Pomocí něho můžete testovat, zda *levé* seřazené po *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.
+Funkce operator vrací `right` `<` `left`. Použijete ho k otestování *, zda je* po *pravé* době řazení obou zásobníků porovnáno s elementy podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -1507,9 +1501,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operátor&gt;= (stack) (STL/CLR)
+## <a name="op_gteq"></a>operator&gt;= (Stack) – operátor (STL/CLR)
 
-Stack – větší než nebo roven hodnotě porovnání.
+Překrývání je větší nebo rovno porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1522,15 +1516,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `!(left < right)`. Pomocí něho můžete testovat, zda *levé* není řazen před *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.
+Funkce operátoru vrací `!(left < right)`. Použijete ji k otestování, zda je *ponecháno* před *pravou* , pokud jsou tyto dva zásobníky porovnány elementem podle elementu.
 
 ### <a name="example"></a>Příklad
 

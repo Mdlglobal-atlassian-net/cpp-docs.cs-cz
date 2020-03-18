@@ -1,8 +1,6 @@
 ---
-title: CWinApp Třída aplikace
+title: CWinApp – třída aplikace
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - application class [MFC]
 - CWinApp class [MFC], CWinThread
@@ -14,30 +12,30 @@ helpviewer_keywords:
 - WinMain method [MFC], in MFC
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
-ms.openlocfilehash: d9f0d4f5ba6b6b070b23ce98ecda8c7accf44934
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8518e21a9fa6bcf5ac640cff25b17c5028046b06
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241559"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447019"
 ---
-# <a name="cwinapp-the-application-class"></a>CWinApp Třída aplikace
+# <a name="cwinapp-the-application-class"></a>CWinApp – třída aplikace
 
-Třída hlavní aplikace v prostředí MFC zapouzdřuje inicializace, spuštění a ukončení aplikace operačního systému Windows. Aplikace založená na rozhraní musí mít jeden a pouze jeden objekt třídy odvozené z [CWinApp](../mfc/reference/cwinapp-class.md). Tento objekt je vytvořen před vytvořením systému windows.
+Hlavní třída aplikace v knihovně MFC zapouzdřuje inicializaci, spuštění a ukončení aplikace pro operační systém Windows. Aplikace postavená na rozhraní musí mít jeden a jenom jeden objekt třídy odvozené z [CWinApp](../mfc/reference/cwinapp-class.md). Tento objekt je vytvořen před vytvořením systému Windows.
 
-`CWinApp` je odvozen z `CWinThread`, která představuje hlavní vlákno provádění pro vaši aplikaci, která může mít jeden nebo více vláken. V nejnovější verze knihovny MFC `InitInstance`, **spustit**, `ExitInstance`, a `OnIdle` členské funkce jsou ve skutečnosti ve třídě `CWinThread`. Tyto funkce jsou popsány zde, jako by byly `CWinApp` členy místo, protože diskuse se týká objektu role jako objekt aplikace, nikoli jako primární vlákno.
-
-> [!NOTE]
->  Třída vaší aplikace se považuje za primární vlákno provádění vaší aplikace. Pomocí funkce rozhraní Win32 API, můžete také vytvořit sekundární vlákna exekuce. Tato vlákna můžete použít knihovnu MFC. Další informace najdete v tématu [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
-
-Stejně jako jakékoli programu operačního systému Windows, rozhraní framework aplikace má `WinMain` funkce. V rozhraní framework aplikace, ale nenapíšete `WinMain`. Zadaná pomocí knihovny tříd a je volána při spuštění aplikace. `WinMain` provede standardním službám, jako je registrace tříd oken. Poté zavolá členské funkce objektu aplikace k inicializaci a spuštění aplikace. (Můžete přizpůsobit `WinMain` tak, že přepíšete `CWinApp` členské funkce, která `WinMain` volání.)
-
-Inicializace aplikace, `WinMain` volá objekt aplikace `InitApplication` a `InitInstance` členské funkce. Ke spuštění aplikace smyčky zpráv, `WinMain` volání **spustit** členskou funkci. Při ukončení `WinMain` volá objekt aplikace `ExitInstance` členskou funkci.
+`CWinApp` je odvozen od `CWinThread`, která představuje hlavní vlákno provádění aplikace, což může mít jeden nebo více vláken. V posledních verzích knihovny MFC jsou členské funkce `InitInstance`, **Run**, `ExitInstance`a `OnIdle` ve skutečnosti ve třídě `CWinThread`. Tyto funkce jsou popsány zde, jako kdyby byly místo toho `CWinApp` členy, protože diskuze se týká role objektu jako objekt aplikace, nikoli jako primární vlákno.
 
 > [!NOTE]
->  Názvy ukazuje **tučné** v této dokumentaci označuje prvky poskytnutých knihovny Microsoft Foundation Class a Visual C++. Názvy ukazuje `monospaced` typ označení elementy, které můžete vytvářet ani přepisovat.
+>  Vaše třída aplikace představuje primární podproces provádění vaší aplikace. Pomocí funkcí Win32 API můžete také vytvořit sekundární vlákna provádění. Tato vlákna mohou používat knihovnu MFC. Další informace naleznete v tématu [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-## <a name="see-also"></a>Viz také:
+Podobně jako jakýkoli program pro operační systém Windows má vaše aplikace architektury funkci `WinMain`. V aplikaci architektury však nepíšete `WinMain`. Je dodávána knihovnou tříd a je volána při spuštění aplikace. `WinMain` provádí standardní služby, jako je například registrace tříd oken. Pak zavolá členské funkce objektu Application k inicializaci a spuštění aplikace. (Můžete přizpůsobit `WinMain` přepsáním `CWinApp` členských funkcí, které `WinMain` volání.)
+
+Pro inicializaci aplikace `WinMain` volá `InitApplication` `InitInstance` a členské funkce objektu aplikace. Chcete-li spustit smyčku zpráv aplikace, `WinMain` volá členskou funkci **Run** . Při ukončení `WinMain` volá členskou funkci `ExitInstance` objektu aplikace.
+
+> [!NOTE]
+>  Názvy zobrazené **tučně** v této dokumentaci označují prvky dodávané knihovna Microsoft Foundation Class a vizuálu C++. Názvy zobrazené v `monospaced` typ označují prvky, které můžete vytvořit nebo přepsat.
+
+## <a name="see-also"></a>Viz také
 
 [Obecná témata MFC](../mfc/general-mfc-topics.md)<br/>
 [CWinApp a průvodce aplikací MFC](../mfc/cwinapp-and-the-mfc-application-wizard.md)<br/>

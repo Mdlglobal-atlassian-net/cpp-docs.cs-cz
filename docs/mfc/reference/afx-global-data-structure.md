@@ -20,7 +20,7 @@ f1_keywords:
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetTextHeight
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWICFactory
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWriteFactory
-- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::InitD2D
 - AFXGLOBALS/AFX_GLOBAL_DATA::Is32BitIcons
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsDwmCompositionEnabled
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 66cfb66e091d487ea9d3f563b7b6bbb9ca1ea928
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420587"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447333"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA – struktura
 
@@ -100,7 +100,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA:: GetTextHeight](#gettextheight)|Načte výšku textových znaků v aktuálním písmu.|
 |[AFX_GLOBAL_DATA:: GetWICFactory](#getwicfactory)|Vrátí ukazatel na rozhraní `IWICImagingFactory`, které je uloženo v globálních datech. Pokud rozhraní není inicializováno, je vytvořeno a má výchozí parametry.|
 |[AFX_GLOBAL_DATA:: GetWriteFactory](#getwritefactory)|Vrátí ukazatel na rozhraní `IDWriteFactory`, které je uloženo v globálních datech. Pokud rozhraní není inicializováno, je vytvořeno a má výchozí parametry.|
-|[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|Inicializuje `D2D`, `DirectWrite`a `WIC` továrny. Před inicializací hlavního okna volejte tuto metodu.|
+|[AFX_GLOBAL_DATA:: InitD2D](#initd2d)|Inicializuje `D2D`, `DirectWrite`a `WIC` továrny. Před inicializací hlavního okna volejte tuto metodu.|
 |[AFX_GLOBAL_DATA:: Is32BitIcons](#is32biticons)|Určuje, zda jsou podporovány předdefinované 32 ikony.|
 |[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|Určuje, zda `D2D` byla inicializována.|
 |[AFX_GLOBAL_DATA:: IsDwmCompositionEnabled](#isdwmcompositionenabled)|Poskytuje jednoduchý způsob volání metody [DwmIsCompositionEnabled](/windows/win32/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) systému Windows.|
@@ -535,6 +535,7 @@ TRUE, pokud je povolené složení [správce oken plochy](/windows/win32/dwm/dwm
 ## <a name="ishighcontrastmode"></a>AFX_GLOBAL_DATA:: IsHighContrastMode
 
 Označuje, zda jsou obrázky aktuálně zobrazovány s vysokým kontrastem.
+
 ```
 BOOL IsHighContrastMode() const;
 ```

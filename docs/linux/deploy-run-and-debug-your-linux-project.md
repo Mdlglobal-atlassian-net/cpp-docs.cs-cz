@@ -1,114 +1,114 @@
 ---
-title: Nasazení, spuštění a ladění projektu C++ Linux v sadě Visual Studio
-description: Popisuje, jak kompilovat, spouštění a ladění kódu na vzdálené cílové z uvnitř projektu Linux C++ v sadě Visual Studio.
+title: Nasazení, spuštění a ladění projektu pro C++ Linux v aplikaci Visual Studio
+description: Popisuje, jak zkompilovat, spustit a ladit kód na vzdáleném cíli v rámci projektu Linux C++ v aplikaci Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042761"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441653"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Nasazení, spuštění a ladění projektu Linux
 
 ::: moniker range="vs-2015"
 
-Podpora Linuxu je k dispozici v sadě Visual Studio 2017 nebo novější.
+Podpora pro Linux je k dispozici v systému Visual Studio 2017 nebo novějším.
 
 ::: moniker-end
 
-Po vytvoření projektu Linux C++ v sadě Visual Studio a jste se připojili pomocí projektu [Správce připojení systému Linux](connect-to-your-remote-linux-computer.md), můžete spustit a ladit projekt. Kompilace, spuštění a ladění kódu na vzdálené cílové.
+Po vytvoření projektu pro Linux C++ v aplikaci Visual Studio a připojení k projektu pomocí [Správce připojení pro Linux](connect-to-your-remote-linux-computer.md)můžete spustit a ladit projekt. Zkompilujete, spustíte a ladíte kód na vzdáleném cíli.
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 verze 16.1** je možné cílit na různých systémech Linux pro účely ladění a sestavení. Například můžete křížové kompilace na x64 a nasadit do zařízení s ARM, při cílení na scénáře IoT. Další informace najdete v tématu [určit různé počítače pro sestavování a ladění](#separate_build_debug) dále v tomto článku.
+**Visual Studio 2019 verze 16,1** Pro ladění a sestavování můžete cílit na různé systémy Linux. Například můžete křížově kompilovat na platformě x64 a nasazovat je do zařízení ARM při cílení na scénáře IoT. Další informace najdete v tématu [určení různých počítačů pro sestavování a ladění](#separate_build_debug) dále v tomto článku.
 
 ::: moniker-end
 
-Existuje několik způsobů, jak pracovat s a ladění projektu Linux.
+Existuje několik způsobů, jak pracovat s projektem pro Linux a ladit ho.
 
-- Ladění pomocí tradiční funkce aplikace Visual Studio, jako je například zarážky, oknech kukátka a ukazatele myši nad proměnnou. Použití těchto metod, může ladit běžným způsobem pro ostatní typy projektů.
+- Proveďte ladění pomocí tradičních funkcí sady Visual Studio, jako jsou například zarážky, Sledujte okna a najeďte myší na proměnnou. Pomocí těchto metod se můžete ladit jako obvykle pro jiné typy projektů.
 
-- Zobrazení výstupu z cílového počítače v okně konzoly systému Linux. Můžete také použít konzolu k odeslání vstupní k cílovému počítači.
+- Zobrazit výstup z cílového počítače v okně konzoly Linux. Můžete také použít konzolu k odeslání vstupu do cílového počítače.
 
-## <a name="debug-your-linux-project"></a>Ladění projektu Linux
+## <a name="debug-your-linux-project"></a>Ladění projektu pro Linux
 
-1. Vyberte režim ladění v **ladění** stránku vlastností.
+1. Na stránce vlastností **ladění** vyberte režim ladění.
    
    ::: moniker range="vs-2019"
 
-   GDB slouží k ladění aplikace běžící na Linuxu. Při ladění na vzdáleném systému (ne WSL) můžete spustit GDB ve dvou různých režimech, které můžete vybrat z **režim ladění** možnost v projektu **ladění** stránky vlastností:
+   GDB se používá pro ladění aplikací běžících na Linux. Při ladění na vzdáleném systému (ne WSL) GDB může běžet ve dvou různých režimech, které lze vybrat z možnosti **režim ladění** na stránce vlastností **ladění** projektu:
 
-   ![Možnosti GDB](media/vs2019-debugger-settings.png)
+   ![GDB možnosti](media/vs2019-debugger-settings.png)
 
    ::: moniker-end
 
    ::: moniker range="vs-2017"
 
-   GDB slouží k ladění aplikace běžící na Linuxu. Můžete spustit GDB ve dvou různých režimech, které můžete vybrat z **režim ladění** možnost v projektu **ladění** stránky vlastností:
+   GDB se používá pro ladění aplikací běžících na Linux. GDB lze spustit ve dvou různých režimech, které lze vybrat z možnosti **režim ladění** na stránce vlastností **ladění** projektu:
 
-   ![Možnosti GDB](media/vs2017-debugger-settings.png)
+   ![GDB možnosti](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
 
 
-   - V **gdbserver** režimu GDB spouštíte místně, která se připojí k gdbserver ve vzdáleném systému.  Všimněte si, že se jedná o jediný režim, který podporuje v okně konzoly systému Linux.
+   - V režimu **gdbserver** se GDB spouští místně, který se připojuje k gdbserver na vzdáleném systému.  Všimněte si, že toto je jediný režim, který podporuje okno konzoly Linux.
 
-   - V **gdb** režim ladicího programu sady Visual Studio GDB jednotky ve vzdáleném systému. To je lepší volbou, pokud v místní verzi GDB není kompatibilní s verzí nainstalované v cílovém počítači. |
+   - V režimu **GDB** se na vzdáleném systému GDB ladicí program sady Visual Studio. Tato možnost je lepší, pokud místní verze GDB není kompatibilní s verzí nainstalovanou na cílovém počítači. |
 
    > [!NOTE]
-   > Pokud se nemůžete k dosažení zarážky v ladění režimu gdbserver, zkuste režimu gdb použije. musí být nejprve gdb [nainstalované](download-install-and-setup-the-linux-development-workload.md) na vzdálené cílové.
+   > Pokud nemůžete v režimu ladění gdbserver vysáhnout zarážky, vyzkoušejte režim GDB. GDB se musí nejdřív [nainstalovat](download-install-and-setup-the-linux-development-workload.md) na vzdálený cíl.
 
-1. Vyberte vzdálený cíl pomocí standardní **ladění** nástrojů v sadě Visual Studio.
+1. Vyberte vzdálený cíl pomocí panelu nástrojů Standardní **ladění** v sadě Visual Studio.
 
-   Při vzdálené cílové je k dispozici, zobrazí se, že je uvedená podle názvu nebo IP adresu.
+   Když je vzdálený cíl k dispozici, zobrazí se seznam podle názvu nebo IP adresy.
 
-   ![Vzdálené cílové](media/remote_target.png)
+   ![Vzdálený cíl](media/remote_target.png)
 
-   Pokud jste se ještě nepřipojili na vzdálené cílové, zobrazí se pokyn k použití [Správce připojení systému Linux](connect-to-your-remote-linux-computer.md) pro připojení k vzdálené cílové.
+   Pokud jste se ještě nepřipojili ke vzdálenému cíli, zobrazí se výzva k připojení ke vzdálenému cíli pomocí [Správce připojení pro Linux](connect-to-your-remote-linux-computer.md) .
 
-   ![Vzdálené architektury](media/architecture.png)
+   ![Vzdálená architektura](media/architecture.png)
 
-1. Spustí sadu zarážku kliknutím v levém hřbetu kódu, které znáte.
+1. Nastavte zarážku kliknutím na levé hřbety kódu, který se spustí.
 
-   Červená tečka se zobrazí na řádku kódu, kde nastavit zarážku.
+   Na řádku kódu, kde jste nastavili zarážku, se zobrazí červená tečka.
 
-1. Stisknutím klávesy **F5** (nebo **ladit > Spustit ladění**) pro spuštění ladění.
+1. Stisknutím klávesy **F5** (nebo **laděním > Spustit ladění**) spusťte ladění.
 
-   Při spuštění ladění bude uložena zkompilovaná aplikace na vzdálené cílové před spuštěním. Chyby při kompilaci se zobrazí v **seznam chyb** okna.
+   Při spuštění ladění je aplikace kompilována na vzdáleném cíli před spuštěním. V okně **Seznam chyb** se zobrazí všechny chyby kompilace.
 
-   Pokud nejsou žádné chyby, aplikace se spustí a ladicí program se pozastaví na zarážce.
+   Pokud nedojde k žádným chybám, aplikace se spustí a ladicí program se zastaví na zarážce.
 
-   ![Na zarážku](media/hit_breakpoint.png)
+   ![Stiskněte zarážku](media/hit_breakpoint.png)
 
-   Teď můžete pracovat s aplikací v jeho aktuálním stavu, zobrazit proměnné a procházejte kódem po krocích stisknutím klávesy příkaz **F10** nebo **F11**.
+   Nyní můžete s aplikací pracovat v jejím aktuálním stavu, zobrazit proměnné a krokovat kód stisknutím klávesových zkratek, jako je například **F10** nebo **F11**.
 
-1. Pokud chcete použít konzolu pro Linux pro interakci s vaší aplikací, vyberte **ladit > Konzola Linuxu**.
+1. Pokud chcete používat konzolu Linux k interakci s vaší aplikací, vyberte **ladit > Linux Console**.
 
-   ![Konzola Linuxu nabídky](media/consolemenu.png)
+   ![Nabídka konzoly Linux](media/consolemenu.png)
 
-   Tato konzola zobrazit žádný výstup konzoly z cílového počítače a také trvat vstupní a odeslat do cílového počítače.
+   V této konzole se zobrazí všechny výstupy konzoly z cílového počítače a jejich převzetí vstupu a odeslání do cílového počítače.
 
-   ![Okno konzoly systému Linux](media/consolewindow.png)
+   ![Okno konzoly pro Linux](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options-msbuild-based-projects"></a>Nakonfigurovat další možnosti ladění (projekty využívající MSBuild)
+## <a name="configure-other-debugging-options-msbuild-based-projects"></a>Konfigurace dalších možností ladění (projekty založené na MSBuild)
 
-- Argumenty příkazového řádku může být předán spustitelného souboru pomocí **argumenty programu** položky v projektu **ladění** stránku vlastností.
+- Argumenty příkazového řádku lze předat spustitelnému souboru pomocí položky **argumenty programu** na stránce vlastností **ladění** projektu.
 
    ![Argumenty programu](media/settings_programarguments.png)
 
-- Možnosti ladicího programu pro konkrétní mohou být předány GDB pomocí **další příkazy ladicího programu** položka.  Můžete například chtít ignorovat SIGILL signály (Neplatná instrukce).  Můžete použít **zpracování** dosáhnete přidáním následujícího příkazu **další příkazy ladicího programu** položka, jak je uvedeno výše:
+- Konkrétní možnosti ladicího programu lze předat do GDB pomocí položky **Další příkazy ladicího programu** .  Například můžete chtít ignorovat signály SIGILL (neplatné instrukce).  K tomuto účelu můžete použít příkaz **Handle** , a to tak, že do **dalšího příkazu ladicího programu** přidáte následující položku, jak je uvedeno výše:
 
    `handle SIGILL nostop noprint`
 
-## <a name="configure-other-debugging-options-cmake-projects"></a>Nakonfigurovat další možnosti ladění (projekty CMake)
+## <a name="configure-other-debugging-options-cmake-projects"></a>Konfigurace dalších možností ladění (projekty CMake)
 
-Můžete zadat další argumenty příkazového řádku pro projekt CMake v souboru launch.vs.json. Další informace najdete v tématu [ladit projekt CMake](cmake-linux-project.md#debug_cmake_project)
+V souboru Launch. vs. JSON můžete zadat další argumenty příkazového řádku pro projekt CMake. Další informace najdete v tématu [ladění projektu cmake](cmake-linux-project.md#debug_cmake_project)
 
-## <a name="debug-with-attach-to-process"></a>Ladění se připojit k procesu
+## <a name="debug-with-attach-to-process"></a>Ladit pomocí příkazu připojit k procesu
 
-[Ladění](prop-pages/debugging-linux.md) stránku vlastností pro projekty aplikace Visual Studio a **souboru Launch.vs.json** nastavení pro projekty CMake, mají nastavení, které vám umožní připojit ke spuštěnému procesu. Pokud potřebujete větší kontrolu nad rámec co je součástí těchto nastavení, můžete umístit soubor s názvem `Microsoft.MIEngine.Options.xml` v kořenové složce vašeho řešení nebo pracovního prostoru. Tady je jednoduchý příklad:
+Stránka vlastností [ladění](prop-pages/debugging-linux.md) pro projekty sady Visual Studio a nastavení **Launch. vs. JSON** pro projekty cmake má nastavení, které vám umožní připojit se k běžícímu procesu. Pokud požadujete další kontrolu nad rámec toho, co jsou v těchto nastaveních k dispozici, můžete soubor s názvem `Microsoft.MIEngine.Options.xml` umístit do kořenového adresáře vašeho řešení nebo pracovního prostoru. Tady je jednoduchý příklad:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -125,29 +125,29 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 </SupplementalLaunchOptions>
 ```
 
-**AttachOptionsForConnection** s nejvíce atributů může být nutné. Výše uvedený příklad ukazuje, jak zadat umístění pro vyhledávání knihoven Další .so. Podřízený element **ServerOptions** umožňuje připojení ke vzdálenému procesu s gdbserver místo. K tomu budete muset zadat místní gdb klienta (jedna odeslaná v sadě Visual Studio 2017 je popsaný výš) a místní kopii binárního souboru se symboly. **SetupCommands** element umožňuje předat příkazy přímo do gdb. Můžete najít všechny možnosti, které jsou k dispozici v [LaunchOptions.xsd schématu](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) na Githubu.
+**AttachOptionsForConnection** má většinu atributů, které možná budete potřebovat. Výše uvedený příklad ukazuje, jak určit umístění pro hledání dalších. knihovny. **ServerOptions** podřízených elementů umožňuje připojení ke vzdálenému procesu pomocí gdbserver místo toho. K tomu je potřeba zadat místního klienta GDB (ten, který je součástí sady Visual Studio 2017), a místní kopii binárního souboru se symboly. Element **SetupCommands** umožňuje předat příkazy přímo do GDB. Můžete najít všechny možnosti, které jsou k dispozici ve [schématu LaunchOptions. xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) na GitHubu.
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a> Zadejte jiný počítačů pro sestavování a ladění
+## <a name="separate_build_debug"></a>Určení různých počítačů pro sestavování a ladění
 
-V aplikaci Visual Studio 2019 verze 16.1 můžete oddělit vzdáleného úložiště sestavení počítače z vašeho počítače vzdáleného ladění pro založené na MSBuild Linuxové projekty a projekty CMake, které se zaměřují vzdáleném počítači s Linuxem. Například můžete nyní křížové kompilace na x64 a nasadit do zařízení s ARM, při cílení na scénáře IoT.
+V sadě Visual Studio 2019 verze 16,1 můžete oddělit svůj vzdálený sestavovací počítač od vzdáleného ladicího počítače pro projekty Linux založené na MSBuild i pro projekty CMake, které cílí na vzdálený počítač se systémem Linux. Například můžete provést křížovou kompilaci na platformě x64 a nasadit ji do zařízení ARM při cílení na scénáře IoT.
 
-### <a name="msbuild-based-projects"></a>Projekty využívající MSBuild
+### <a name="msbuild-based-projects"></a>Projekty založené na MSBuildu
 
-Ve výchozím nastavení, vzdálený ladicí počítač je stejný jako vzdálený sestavující počítač (**vlastnosti konfigurace** > **Obecné** > **vzdálený počítač sestavení**). Pokud chcete zadat nový počítač vzdáleného ladění, klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a přejděte na **vlastnosti konfigurace** > **ladění**  >  **Vzdáleného ladění počítače**.  
+Ve výchozím nastavení je vzdálený ladicí počítač stejný jako vzdálený sestavovací počítač (**konfigurační vlastnosti** > **Obecné** > **počítači vzdáleného sestavení**). Chcete-li určit nový vzdálený ladicí počítač, klikněte pravým tlačítkem myši na projekt v **Průzkumník řešení** a přejděte do části **Vlastnosti konfigurace** > **ladění** > **vzdáleném počítači ladění**.  
 
-![Vzdálený ladicí počítač s Linuxem](media/linux-remote-debug-machine.png)
+![Linux Remote Debug Machine](media/linux-remote-debug-machine.png)
 
-V rozevírací nabídce pro **vzdáleného ladění počítače** se načtou všechny zavedené vzdálená připojení. Chcete-li přidat nové vzdálené připojení, přejděte na **nástroje** > **možnosti** > **různé platformy**  >   **Správce připojení** nebo vyhledejte "Connection Manager" v **Snadné spuštění**. Můžete také určit nasadit nový vzdálený adresář na stránkách vlastností projektu (**vlastnosti konfigurace** > **Obecné** > **vzdálený adresář nasazení** ).
+Rozevírací nabídka pro **vzdálený ladicí počítač** se naplní všemi zavedenými vzdálenými připojeními. Chcete-li přidat nové vzdálené připojení, přejděte do části **nástroje** > **Možnosti** > pro **různé platformy** > **Správce připojení** nebo vyhledejte "Správce připojení" v části **Snadné spuštění**. Můžete také zadat nový adresář vzdáleného nasazení na stránkách vlastností projektu (**konfigurační vlastnosti** > **Obecné** > **adresáře vzdáleného nasazení**).
 
-Ve výchozím nastavení se nasadí na vzdálený ladicí počítač pouze soubory nezbytné pro proces pro ladění. Můžete použít **Průzkumníka řešení** nakonfigurovat zdroj, který se nasadí soubory do počítače vzdáleného ladění. Když kliknete na zdrojový soubor, zobrazí se náhled vlastnosti souboru přímo pod v Průzkumníku řešení.
+Ve výchozím nastavení budou do vzdáleného ladicího počítače nasazeny pouze soubory, které jsou nezbytné pro ladění procesu. Pomocí **Průzkumník řešení** můžete nakonfigurovat, které zdrojové soubory budou nasazeny do vzdáleného ladicího počítače. Po kliknutí na zdrojový soubor se zobrazí náhled vlastností souboru přímo pod Průzkumník řešení.
 
-![Nasaditelnými soubory Linuxu](media/linux-deployable-content.png)
+![Nasaditelné soubory pro Linux](media/linux-deployable-content.png)
 
-**Obsahu** vlastnost určuje, zda se soubor nasadí do počítače vzdáleného ladění. Nasazení můžete zakázat zcela tak, že přejdete do **stránky vlastností** > **nástroje Configuration Manager** a zrušíte zaškrtnutí **nasadit** pro požadovaný konfigurace.
+Vlastnost **Content** určuje, zda bude soubor nasazen do vzdáleného ladicího počítače. Nasazení můžete zcela vypnout tak, že přejdete na **stránky vlastností** > **Configuration Manager** a zrušíte kontrolu **nasazení** pro požadovanou konfiguraci.
 
-V některých případech mohou vyžadovat větší kontrolu nad nasazením váš projekt. Například může být některé soubory, které chcete nasadit mimo vašeho řešení nebo chcete přizpůsobit vzdáleného úložiště nasadit adresář za ordirectory souboru. V těchto případech připojit následujících bloků kódu do souboru .vcxproj a nahraďte názvy skutečný soubor "example.cpp":
+V některých případech můžete vyžadovat větší kontrolu nad nasazením projektu. Například některé soubory, které chcete nasadit, mohou být mimo vaše řešení nebo chcete přizpůsobit adresář vzdáleného nasazení na soubor ordirectory. V těchto případech přidejte následující bloky kódu do souboru. vcxproj a nahraďte "example. cpp" skutečnými názvy souborů:
 
 ```xml
 
@@ -168,13 +168,13 @@ V některých případech mohou vyžadovat větší kontrolu nad nasazením vá�
 
 ### <a name="cmake-projects"></a>Projekty CMake
 
-Pro projekty CMake, které se zaměřují vzdáleném počítači s Linuxem můžete zadat nový počítač vzdáleného ladění v souboru launch.vs.json. Ve výchozím nastavení je hodnota "název_vzdáleného_počítače" synchronizován s vlastnost "název_vzdáleného_počítače" v souboru CMakeSettings.json, který odpovídá vzdálený sestavující počítač. Tyto vlastnosti se už nemusí odpovídat, a hodnota "název_vzdáleného_počítače" v souboru launch.vs.json bude určovat, které vzdálený počítač se používá pro nasazení a ladění.
+U projektů CMake, které cílí na vzdálený počítač se systémem Linux, můžete zadat nový vzdálený ladicí počítač v programu Launch. vs. JSON. Ve výchozím nastavení je hodnota "remoteMachineName" synchronizována s vlastností "remoteMachineName" v CMakeSettings. JSON, která odpovídá vašemu vzdálenému sestavení počítače. Tyto vlastnosti již nemusí odpovídat a hodnota "remoteMachineName" v příkazu Launch. vs. JSON určí, který vzdálený počítač bude použit pro nasazení a ladění.
 
-![CMake vzdálený ladicí počítač](media/cmake-remote-debug-machine.png)
+![Vzdálený ladicí počítač CMake](media/cmake-remote-debug-machine.png)
 
-Technologie IntelliSense nabídne všem seznam všech vytvořených vzdáleného připojení. Můžete přidat nové připojení ke vzdálené tak, že přejdete do **nástroje** > **možnosti** > **různé platformy**  >   **Správce připojení** nebo vyhledávání "Connection Manager" v rámci **Snadné spuštění**.
+Technologie IntelliSense navrhne všechny navázané vzdálené připojení. Nové vzdálené připojení můžete přidat tak, že přejdete na **nástroje** > **Možnosti** > pro **různé platformy** > **Správce připojení** nebo ve **snadném spuštění**vyhledáte "Správce připojení".
 
-Pokud chcete úplnou kontrolu nad nasazením, můžete přidat následující bloků kódu do souboru launch.vs.json. Nezapomeňte nahradit hodnoty zástupných symbolů skutečné hodnoty:
+Pokud chcete mít úplnou kontrolu nad vaším nasazením, můžete do souboru Launch. vs. JSON připojit následující bloky kódu. Nezapomeňte nahradit hodnoty zástupných symbolů skutečnými hodnotami:
 
 ```json
 
@@ -191,12 +191,13 @@ Pokud chcete úplnou kontrolu nad nasazením, můžete přidat následující bl
 ]
 
 ```
+
 ::: moniker-end
 
 ## <a name="next-steps"></a>Další kroky
 
-- Chcete-li ladit ARM zařízení v systému Linux, najdete v tomto blogovém příspěvku: [Ladění zařízení se systémem embedded ARM v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Pokud chcete ladit zařízení ARM v systému Linux, přečtěte si tento Blogový příspěvek: [ladění vloženého zařízení ARM v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[C++ vlastnosti ladění (Linux C++)](prop-pages/debugging-linux.md)
+[C++Vlastnosti ladění (Linux C++)](prop-pages/debugging-linux.md)

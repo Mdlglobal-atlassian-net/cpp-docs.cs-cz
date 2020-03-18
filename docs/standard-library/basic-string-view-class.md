@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 2f262ee238d8ee9b441f5bc1daebcf6a64f35a52
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416172"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445835"
 ---
 # <a name="basic_string_view-class"></a>basic_string_view – třída
 
@@ -902,12 +902,14 @@ Přiřadí string_view nebo převoditelné objekty řetězce k jinému string_vi
 ```cpp
 constexpr basic_string_view& operator=(const basic_string_view&) noexcept = default;
 ```
+
 ### <a name="example"></a>Příklad
 
 ```cpp
    string_view s = "Hello";
    string_view s2 = s;
 ```
+
 ## <a name="op_at"></a>basic_string_view:: operator [] – operátor
 
 Poskytuje const_reference ke znaku se zadaným indexem.

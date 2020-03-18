@@ -1,26 +1,24 @@
 ---
 title: Používání atributu CTreeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CTreeCtrl
 helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-ms.openlocfilehash: ab73ea66af27e6c1de43ff09074a9539f7518700
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 443ad948e7d48eaefbb74165a0072966b22439b9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411653"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442186"
 ---
 # <a name="using-ctreectrl"></a>Používání atributu CTreeCtrl
 
-Ovládací prvek stromu, reprezentovaný třídou [CTreeCtrl](../mfc/reference/ctreectrl-class.md), je okno, které zobrazí hierarchické seznam položek, jako jsou záhlaví v dokumentu, záznamy v indexu, nebo soubory a adresáře na disku. Každé položky se skládá z popisku a volitelné rastrové obrázku a každá položka může mít seznam podřízených položek s ním spojená. Uživatel kliknutím na položku, můžete rozbalit nebo sbalit přidružený seznam podřízených položek. Ve stromu adresáře v levém podokně v Průzkumníku souborů je příkladem ovládacím prvkem strom.
+Stromová ovládací prvek reprezentovaný třídou [CTreeCtrl](../mfc/reference/ctreectrl-class.md)je okno, které zobrazuje hierarchický seznam položek, jako jsou například záhlaví v dokumentu, položky v indexu nebo soubory a adresáře na disku. Každá položka se skládá z popisku a volitelného rastrového obrázku a každá položka může mít k sobě přidružené seznam podpoložek. Kliknutím na položku může uživatel rozbalit a sbalit přidružený seznam podpoložek. Strom adresářů v levém podokně Průzkumníka souborů je příkladem ovládacího prvku strom.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
-- [Porovnání atributů CTreeCtrl a CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
+- [CTreeCtrl vs. CTreeView –](../mfc/ctreectrl-vs-ctreeview.md)
 
 - [Použití ovládacích prvků strom](../mfc/using-tree-controls.md)
 
@@ -48,6 +46,6 @@ Ovládací prvek stromu, reprezentovaný třídou [CTreeCtrl](../mfc/reference/c
 
 - [Zprávy s oznámením ovládacího prvku strom](../mfc/tree-control-notification-messages.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ovládací prvky](../mfc/controls-mfc.md)

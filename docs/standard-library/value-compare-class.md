@@ -2,18 +2,18 @@
 title: value_compare – třída
 ms.date: 11/04/2016
 f1_keywords:
-- value_compare
+- hash_map/std::value_compare
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: 0e057a6229c903402a51b34a8f4e844e80ace187
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d64d51869ca8db1ed42e9d33691f59da4473d8d0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452372"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447564"
 ---
-# <a name="valuecompare-class"></a>value_compare – třída
+# <a name="value_compare-class"></a>value_compare – třída
 
 Poskytuje objekt funkce, který může porovnat prvky hash_map porovnáním hodnot jejich klíčů a určením jejich relativního pořadí v hash_map.
 
@@ -39,9 +39,9 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Kritéria porovnání poskytnutá value_compare mezi `value_types` celými prvky obsaženými v hash_map jsou vynásobeny porovnáním mezi klíči příslušných prvků konstrukcí pomocné třídy. Operátor členské funkce používá objekt `comp` typu `key_compare` uložený v objektu Function, který poskytuje value_compare k porovnání komponent pro seřazení klíčů dvou prvků.
+Kritéria porovnání poskytnutá value_compare mezi `value_types` celých prvků obsažených v hash_map jsou vynásobena porovnáním mezi klíči příslušných prvků konstrukcí pomocné třídy. Operátor členské funkce používá objekt `comp` typu `key_compare` uložený v objektu Function, který poskytuje value_compare pro porovnání komponent pro seřazení klíčů dvou prvků.
 
-Pro hash_sets a hash_multisets, což jsou jednoduché kontejnery, kde jsou klíčové hodnoty identické s hodnotami elementu, value_compare je ekvivalentní k `key_compare`; pro hash_maps a hash_multimaps nejsou, protože hodnota typu `pair` elementy nejsou totožné s hodnotou klíče elementu.
+Pro hash_sets a hash_multisets, což jsou jednoduché kontejnery, kde jsou klíčové hodnoty stejné jako hodnoty prvků, value_compare je ekvivalentem `key_compare`; pro hash_maps a hash_multimaps nejsou, protože hodnota typu `pair` prvky není shodná s hodnotou klíče elementu.
 
 ## <a name="example"></a>Příklad
 
@@ -49,12 +49,12 @@ Příklad, jak deklarovat a používat value_compare, naleznete v příkladu pro
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** \<hash_map>
+**Záhlaví:** \<hash_map >
 
 **Obor názvů:** stdext
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[binary_function – struktura](../standard-library/binary-function-struct.md)\
+[Binary_function struktura](../standard-library/binary-function-struct.md)\
 [Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

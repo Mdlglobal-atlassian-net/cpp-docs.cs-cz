@@ -2,9 +2,6 @@
 title: Typ a velikost proměnných ve vloženém sestavení
 ms.date: 08/30/2018
 ms.topic: reference
-f1_keywords:
-- length
-- Type
 helpviewer_keywords:
 - variables, length
 - size, getting in inline assembly
@@ -16,41 +13,41 @@ helpviewer_keywords:
 - variables, type
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-ms.openlocfilehash: 36c97ee866ca449e9bbcf514e464a13f24f12cd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdb8bddccbea0ef711cb0be4bbac60f7457c625c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166890"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441564"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Typ a velikost proměnných ve vloženém sestavení
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-**Délka**, **velikost**, a **typ** operátory mají omezenou význam ve vloženém sestavení. Nelze je použít na všech s `DUP` – operátor (protože nelze definovat data pomocí direktivy MASM nebo operátory). Ale můžete je použít k vyhledání velikost proměnné jazyka C nebo C++ nebo typy:
+Operátory **Length**, **Size**a **Type** mají omezený význam ve vloženém sestavení. Nelze je použít vůbec pomocí operátoru `DUP` (protože nelze definovat data pomocí direktiv MASM nebo operátorů). Ale můžete je použít k nalezení velikosti C nebo C++ proměnných nebo typů:
 
-- **Délka** operátor může vrátit počet prvků v poli. Vrátí hodnotu 1 pro proměnné bez pole.
+- Operátor **Length** může vracet počet prvků v poli. Vrátí hodnotu 1 pro proměnné, které nejsou pole.
 
-- **Velikost** operátor může vrátit velikost proměnné jazyka C nebo C++. Velikost proměnné je produkt jeho **délka** a **typ**.
+- Operátor **Size** může vracet velikost proměnné C nebo C++ . Velikost proměnné je součinem jeho **délky** a **typu**.
 
-- **Typ** operátor může vrátit velikost typu jazyka C nebo C++ nebo proměnné. Pokud je pole, proměnná **typ** vrátí velikost položky jediný prvek pole.
+- Operátor **typu** může vracet velikost C++ typu nebo proměnné jazyka C. Pokud je proměnná pole, **typ** vrátí velikost jednoho prvku pole.
 
-Například, pokud program neobsahuje 8 element **int** pole,
+Například pokud má program pole typu **int** s 8 prvky,
 
 ```cpp
 int arr[8];
 ```
 
-Následující C a sestavení výrazy yield velikost `arr` a jeho elementy.
+Následující výrazy jazyka C a sestavení vynášejí velikost `arr` a jeho prvků.
 
 |__asm|C|Velikost|
 |-------------|-------|----------|
-|**Délka** směrování žádostí na aplikace|`sizeof`(arr)/`sizeof`(arr[0])|8|
-|**VELIKOST** směrování žádostí na aplikace|`sizeof`(arr)|32|
-|**TYP** směrování žádostí na aplikace|`sizeof`(arr[0])|4|
+|**Délka** ARR|`sizeof`(ARR)/`sizeof`(šipka [0])|8|
+|**Velikost** ARR|`sizeof`(ARR)|32|
+|**Typ** ARR|`sizeof`(ARR [0])|4|
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

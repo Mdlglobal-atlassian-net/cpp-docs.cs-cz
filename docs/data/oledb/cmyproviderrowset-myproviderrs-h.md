@@ -3,24 +3,22 @@ title: CCustomRowset (CustomRS.H)
 ms.date: 10/22/2018
 f1_keywords:
 - cmyproviderrowset
-- myproviderrs.h
 - ccustomrowset
-- customrs.h
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderRowset class in MyProviderRS.H
 - CCustomRowset class in CustomRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
-ms.openlocfilehash: 9f9dcb97ecd6b5f37f1af2187abf8b5612eedce3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c84ff359bdbb39f281928fa0135edd40b1f7d20
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230660"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446081"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-Průvodce vytvoří položku pro objektu sady řádků. V takovém případě se nazývá `CCustomRowset`. `CCustomRowset` Třída dědí ze třídy zprostředkovatele OLE DB volá `CRowsetImpl`, který implementuje všechna potřebná rozhraní objektu sady řádků. Následující kód ukazuje řetězec dědičnosti pro `CRowsetImpl`:
+Průvodce vygeneruje položku pro objekt sady řádků. V tomto případě se nazývá `CCustomRowset`. Třída `CCustomRowset` dědí z třídy poskytovatele OLE DB s názvem `CRowsetImpl`, která implementuje všechna potřebná rozhraní pro objekt sady řádků. Následující kód ukazuje řetěz dědičnosti pro `CRowsetImpl`:
 
 ```cpp
 template <class T, class Storage, class CreatorClass, 
@@ -30,14 +28,14 @@ class CMyRowsetImpl:
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
-`CRowsetImpl` také používá `IAccessor` a `IColumnsInfo` rozhraní. Tato rozhraní se používá pro výstupní pole tabulky. Třída rovněž poskytuje implementaci pro `IRowsetIdentity`, která umožňuje příjemci k určení, zda jsou dva řádky stejné. `IRowsetInfo` Rozhraní implementuje vlastnosti objektu sady řádků. `IConvertType` Rozhraní umožňuje poskytovatelem a vyřešit rozdíly mezi datovými typy požadoval uživatel a používaných zprostředkovatelem.
+`CRowsetImpl` používá také rozhraní `IAccessor` a `IColumnsInfo`. Tato rozhraní používá pro výstupní pole v tabulkách. Třída také poskytuje implementaci pro `IRowsetIdentity`, která umožňuje příjemci určit, zda jsou dva řádky stejné. Rozhraní `IRowsetInfo` implementuje vlastnosti pro objekt sady řádků. Rozhraní `IConvertType` umožňuje poskytovateli vyřešit rozdíly mezi datovými typy požadovanými příjemcem a uživateli, které použil poskytovatel.
 
-`IRowset` Rozhraní ve skutečnosti zpracovává data načítání. Příjemce nejprve volá metodu s názvem `GetNextRows` se vraťte na řádek, označované jako popisovač `HROW`. Pak zavolá příjemce `IRowset::GetData` s ním `HROW` načíst požadovaná data.
+Rozhraní `IRowset` ve skutečnosti zpracovává načítání dat. Uživatel nejprve volá metodu nazvanou `GetNextRows`, která vrátí popisovač řádku, který se označuje jako `HROW`. Příjemce pak zavolá `IRowset::GetData` s tímto `HROW` načte požadovaná data.
 
-`CRowsetImpl` také přijímá několik parametrů šablony. Tyto parametry umožňují určit, jak `CRowsetImpl` třída zpracovává data. `ArrayType` Argument umožňuje určit, jaký mechanismus úložiště se používá k ukládání dat řádku. *RowClass* parametr určuje, jaké třída obsahuje `HROW`.
+`CRowsetImpl` také přebírá několik parametrů šablony. Tyto parametry umožňují určit, jak `CRowsetImpl` třída zpracovává data. Argument `ArrayType` umožňuje určit, který mechanismus úložiště se používá k ukládání dat řádků. Parametr *RowClass* určuje, která třída obsahuje `HROW`.
 
-*RowsetInterface* parametr umožňuje použít také `IRowsetLocate` nebo `IRowsetScroll` rozhraní. `IRowsetLocate` a `IRowsetScroll` obě dědí z rozhraní `IRowset`. Šablony zprostředkovatele OLE DB proto musíte zadat speciální zpracování pro tato rozhraní. Pokud chcete použít některou z těchto rozhraní, budete muset použít tento parametr.
+Parametr *RowsetInterface* umožňuje také použít rozhraní `IRowsetLocate` nebo `IRowsetScroll`. Rozhraní `IRowsetLocate` a `IRowsetScroll` dědí z `IRowset`. Proto šablony poskytovatele OLE DB musí pro tato rozhraní poskytovat speciální zpracování. Pokud chcete použít jedno z těchto rozhraní, je nutné použít tento parametr.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)<br/>

@@ -217,7 +217,6 @@ f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_Segment_t
 - concrt/Concurrency::details::_ReentrantPPLLock::_Scoped_lock
 - ppl/Concurrency::_Task_handle_base_with_dtor::_Task_handle_base
-- DWORD
 - concurrent_queue/Concurrency::details::_Concurrent_queue_base_v4::_Internal_empty
 - concrt/Concurrency::details::_TaskCollection::_Wait
 - agents/Concurrency::_Order_node_base::consume_message
@@ -453,25 +452,25 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180144"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446290"
 ---
 # <a name="reference-concurrency-runtime"></a>Referenční dokumentace (Concurrency Runtime)
 
-Tato část obsahuje referenční informace k modulu Runtime souběžnosti.
+Tato část obsahuje referenční informace o Concurrency Runtime.
 
 > [!Note]
-> C++ Standard jazyka vyhrazuje použití identifikátorů, které začínají znakem podtržítka (_), například pro implementaci knihoven. Nepoužívejte tyto názvy v kódu. Chování kódu elementy, jejichž názvy postupujte podle tohoto konvence není zaručeno a se může změnit v budoucích vydáních. Z těchto důvodů jsou takovéto prvky kódu vynechány v dokumentaci k modulu Runtime souběžnosti.
+> Standard C++ jazyka vyhrazuje použití identifikátorů, které začínají podtržítkem (_) pro implementace, jako jsou knihovny. Ve svém kódu tyto názvy nepoužívejte. Chování prvků kódu, jejichž názvy následují podle této konvence, není zaručeno a v budoucích verzích se může změnit. Z těchto důvodů jsou tyto prvky kódu vynechány v dokumentaci Concurrency Runtime.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [concurrency – obor názvů](concurrency-namespace.md)<br/>
-Obor názvů souběžnosti poskytuje třídy a funkce, které umožňují přístup k modulu Concurrency Runtime, souběžnému programovacímu rámci pro jazyk C++. Další informace najdete v tématu [Concurrency Runtime](../concurrency-runtime.md).
+Obor názvů Concurrency poskytuje třídy a funkce, které vám umožní přístup k Concurrency Runtime, souběžně programovací rozhraní pro C++. Další informace najdete v tématu [Concurrency Runtime](../concurrency-runtime.md).
 
 [obor názvů std](std-namespace.md)
 
-[stdx namespace](stdx-namespace.md)
+[obor názvů stdx –](stdx-namespace.md)

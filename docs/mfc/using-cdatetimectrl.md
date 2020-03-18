@@ -1,26 +1,24 @@
 ---
 title: Používání atributu CDateTimeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CDateTimeCtrl
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-ms.openlocfilehash: 251528cafcbedb0352a1962d70452f8b8778f10b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c437c97ad6c6d377b3bc62099e569b29f03346
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348598"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447073"
 ---
 # <a name="using-cdatetimectrl"></a>Používání atributu CDateTimeCtrl
 
-Výběr ovládacího prvku datum a čas ([atributu CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementuje metodu intuitivní a rozpoznat zadáním nebo výběrem konkrétní datum. Hlavní rozhraní ovládacího prvku se podobá ve funkcích pole se seznamem. Pokud je uživatel rozbalí ovládacího prvku, zobrazí se ovládací prvek měsíční kalendář (ve výchozím nastavení), ale umožňuje uživateli zadat konkrétní data. Při výběru datum ovládací prvek měsíční kalendář automaticky zmizí.
+Ovládací prvek pro výběr data a času ([atributu CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementuje intuitivní a rozpoznatelnou metodu zadávání nebo výběru konkrétního data. Hlavní rozhraní ovládacího prvku je podobné jako funkce pole se seznamem. Pokud však uživatel rozbalí ovládací prvek, zobrazí se ovládací prvek měsíční kalendář (ve výchozím nastavení), který uživateli umožňuje zadat konkrétní datum. Po výběru data se automaticky zmizí ovládací prvek měsíční kalendář.
 
 > [!NOTE]
->  Chcete-li použít `CDateTimePicker` a `CMonthCalCtrl` třídy v projektu, musíte zahrnout AFXDTCTL. H, obvykle v STDAFX váš projekt. Soubor H.
+>  Chcete-li v projektu použít třídu `CDateTimePicker` i `CMonthCalCtrl`, je nutné zahrnout AFXDTCTL. H, obvykle ve vašem projektu STDAFX. Soubor H.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Vytvoření ovládacího prvku pro výběr data a času](../mfc/creating-the-date-and-time-picker-control.md)
 
@@ -34,6 +32,6 @@ Výběr ovládacího prvku datum a čas ([atributu CDateTimeCtrl](../mfc/referen
 
 - [Zpracování oznamovacích zpráv v ovládacích prvcích pro výběr data a času](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ovládací prvky](../mfc/controls-mfc.md)

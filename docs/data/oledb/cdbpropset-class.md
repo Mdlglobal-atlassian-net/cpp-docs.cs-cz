@@ -21,7 +21,6 @@ f1_keywords:
 - ATL.CDBPropSet.SetGUID
 - CDBPropSet.SetGUID
 - ATL::CDBPropSet::SetGUID
-- SetGUID
 - CDBPropSet::SetGUID
 helpviewer_keywords:
 - CDBPropSet class
@@ -33,16 +32,16 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325023"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447450"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet – třída
 
-Dědí z `DBPROPSET` struktury a přidá konstruktor, který inicializuje pole klíče i na `AddProperty` přístup k metodě.
+Dědí ze struktury `DBPROPSET` a přidává konstruktor, který inicializuje klíčová pole a také metodu přístupu `AddProperty`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,7 +51,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h
+**Záhlaví:** atldbcli. h
 
 ## <a name="members"></a>Členové
 
@@ -60,23 +59,23 @@ class CDBPropSet : public tagDBPROPSET
 
 |||
 |-|-|
-|[addProperty](#addproperty)|Přidá vlastnost sady vlastností.|
+|[AddProperty](#addproperty)|Přidá vlastnost do sady vlastností.|
 |[CDBPropSet](#cdbpropset)|Konstruktor|
-|[SetGUID](#setguid)|Nastaví `guidPropertySet` pole `DBPROPSET` struktury.|
+|[SetGUID](#setguid)|Nastaví pole `guidPropertySet` struktury `DBPROPSET`.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[operátor =](#op_equal)|Přiřadí obsah jednu vlastnost nastavena na jiný.|
+|[operátor =](#op_equal)|Přiřadí obsah jedné vlastnosti nastavené na jinou.|
 
 ## <a name="remarks"></a>Poznámky
 
-Použití poskytovatelů a příjemců OLE DB `DBPROPSET` struktury předat pole `DBPROP` struktury. Každý `DBPROP` struktura představuje jedinou vlastností, které je možné nastavit.
+OLE DB poskytovatelé a spotřebitelé používají `DBPROPSET` struktury k předání polí `DBPROP` struktury. Každá struktura `DBPROP` představuje jednu vlastnost, kterou lze nastavit.
 
-## <a name="addproperty"></a> CDBPropSet::AddProperty
+## <a name="addproperty"></a>CDBPropSet:: AddProperty
 
-Přidá vlastnost sady vlastností.
+Přidá vlastnost do sady vlastností.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -98,36 +97,36 @@ bool AddProperty(DWORD dwPropertyID,
 #### <a name="parameters"></a>Parametry
 
 *dwPropertyID*<br/>
-[in] ID vlastnosti mají být přidány. Použitý k inicializaci `dwPropertyID` z `DBPROP` struktury přidána do sady vlastností.
+pro ID vlastnosti, která se má přidat Slouží k inicializaci `dwPropertyID` struktury `DBPROP` přidané do sady vlastností.
 
 *var*<br/>
-[in] Hodnotu typu variant použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
+pro Typ variant použitý k inicializaci hodnoty vlastnosti `DBPROP` struktury přidané do sady vlastností.
 
 *szValue*<br/>
-[in] Řetězec použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
+pro Řetězec použitý k inicializaci hodnoty vlastnosti `DBPROP` struktury přidané do sady vlastností.
 
 *bValue*<br/>
-[in] A `BYTE` nebo logická hodnota, které se používají k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
+pro `BYTE` nebo logická hodnota, která se používá k inicializaci hodnoty vlastnosti pro `DBPROP` strukturu přidanou do sady vlastností.
 
-*nValue*<br/>
-[in] Celočíselná hodnota použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
+*nHodnota*<br/>
+pro Celočíselná hodnota použitá pro inicializaci hodnoty vlastnosti `DBPROP` struktury přidané do sady vlastností.
 
 *fltValue*<br/>
-[in] Použitý k inicializaci hodnoty vlastnosti pro hodnotu s plovoucí desetinnou čárkou `DBPROP` struktury přidána do sady vlastností.
+pro Hodnota s plovoucí desetinnou čárkou, která se používá k inicializaci hodnoty vlastnosti `DBPROP` struktury přidané do sady vlastností.
 
 *dblValue*<br/>
-[in] Dvojité přesnosti s plovoucí desetinnou čárkou hodnota použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
+pro Hodnota s plovoucí desetinnou čárkou s dvojitou přesností, která se používá k inicializaci hodnoty vlastnosti `DBPROP` struktury přidané do sady vlastností.
 
 *cyValue*<br/>
-[in] Hodnota měny CY použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.
+pro Hodnota měny CY použitá pro inicializaci hodnoty vlastnosti `DBPROP` struktury přidané do sady vlastností.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** vlastnost úspěšně přidal. V opačném případě **false**.
+**hodnota true** , pokud byla vlastnost úspěšně přidána. V opačném případě **false**.
 
-## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
+## <a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
 
-Konstruktor Inicializuje `rgProperties`, `cProperties`, a `guidPropertySet` pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury.
+Konstruktor Inicializuje pole `rgProperties`, `cProperties`a `guidPropertySet` struktury [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -141,15 +140,15 @@ CDBPropSet();
 
 #### <a name="parameters"></a>Parametry
 
-*identifikátor GUID*<br/>
-[in] Identifikátor GUID použitý k inicializaci `guidPropertySet` pole.
+*hlavních*<br/>
+pro Identifikátor GUID použitý k inicializaci pole `guidPropertySet`.
 
 *propset*<br/>
-[in] Jiné `CDBPropSet` objekt pro konstrukci kopie.
+pro Jiný objekt `CDBPropSet` pro konstrukci kopírování.
 
-## <a name="setguid"></a> CDBPropSet::SetGUID
+## <a name="setguid"></a>CDBPropSet:: SetGUID
 
-Nastaví `guidPropertySet` pole `DBPROPSET` struktury.
+Nastaví pole `guidPropertySet` ve struktuře `DBPROPSET`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -159,16 +158,16 @@ void SetGUID(const GUID& guid) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*identifikátor GUID*<br/>
-[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury.
+*hlavních*<br/>
+pro Identifikátor GUID, který slouží k nastavení `guidPropertySet` pole struktury [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
 
 ### <a name="remarks"></a>Poznámky
 
-Toto pole lze nastavit [konstruktor](../../data/oledb/cdbpropset-cdbpropset.md) také.
+Toto pole lze také nastavit pomocí [konstruktoru](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a> CDBPropSet::operator =
+## <a name="op_equal"></a>CDBPropSet:: operator =
 
-Přiřadí obsah jednu vlastnost nastavena na jinou sadu vlastností.
+Přiřadí obsah jedné vlastnosti nastavené na jinou sadu vlastností.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -176,10 +175,10 @@ Přiřadí obsah jednu vlastnost nastavena na jinou sadu vlastností.
 CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet – třída](../../data/oledb/cdbpropidset-class.md)<br/>
-[Struktura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
-[DBPROP struktura](/previous-versions/windows/desktop/ms717970(v=vs.85))
+Struktura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
+[struktury DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

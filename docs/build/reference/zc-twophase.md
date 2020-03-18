@@ -5,17 +5,16 @@ ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
-- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856953"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438640"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase- (zakázání dvoufázového vyhledávání názvů)
 
@@ -23,7 +22,7 @@ Parametr **/Zc: twoPhase-** Option v rámci **/Permissive-** instruuje kompilát
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:twoPhase-**
+> **/Zc: twoPhase-**
 
 ## <a name="remarks"></a>Poznámky
 
@@ -199,6 +198,6 @@ Další informace o problémech shody naleznete v tématu [ C++ vylepšení shod
 
 1. Upravte vlastnost **Další možnosti** tak, aby zahrnovala parametr **/Zc: twoPhase-** a pak klikněte na **tlačítko OK**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [/Zc (shoda)](zc-conformance.md)

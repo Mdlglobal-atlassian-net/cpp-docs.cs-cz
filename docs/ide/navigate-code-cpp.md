@@ -1,104 +1,104 @@
 ---
-title: Přejděte C++ kódu v sadě Visual Studio
-description: Použít různé nástroje v sadě Visual Studio k navigaci v vaše C++ základu kódu.
+title: Navigace C++ v kódu v aplikaci Visual Studio
+description: Pomocí různých nástrojů v aplikaci Visual Studio můžete procházet C++ základ kódu.
 ms.date: 05/28/2019
-ms.openlocfilehash: c2d3a1aa4a26cb820ff4a1e87d6eae88b1b8e739
-ms.sourcegitcommit: 96f48079cdc402e4c2c1578d1f1eed4846a484dc
+ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67576530"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446736"
 ---
-# <a name="navigate-c-code-in-visual-studio"></a>Přejděte C++ kódu v sadě Visual Studio
+# <a name="navigate-c-code-in-visual-studio"></a>Navigace C++ v kódu v aplikaci Visual Studio
 
-Visual Studio poskytuje sadu nástrojů, které můžete použít k navigaci v vašeho základu kódu rychle a efektivně.
+Sada Visual Studio poskytuje sadu nástrojů, které můžete použít k rychlému a efektivnímu procházení základního kódu.
 
-## <a name="open-an-included-file"></a>Otevřete vkládaného souboru
+## <a name="open-an-included-file"></a>Otevřít zahrnutý soubor
 
-Klikněte pravým tlačítkem na `#include` směrnice a vyberte **přejít do dokumentu**. Nebo vyberte **F12** s kurzorem přes tento řádek k otevření souboru.
+Klikněte pravým tlačítkem na direktivu `#include` a vyberte **Přejít k dokumentu**. Nebo vyberte **F12** s kurzorem na této čáře a otevřete soubor.
 
-![C&#43; &#43; možnost nabídky přejít do dokumentu](../ide/media/go-to-document.png "přejít do dokumentu")
+![&#43; Přejít na možnost nabídky dokument&#43; v dokumentu](../ide/media/go-to-document.png "Přejít k dokumentu")
 
-## <a name="toggle-headercode-file"></a>Přepínač záhlaví/kódový soubor
+## <a name="toggle-headercode-file"></a>Přepnout hlavičku/soubor s kódem
 
-Můžete přepínat mezi záhlaví souboru a jeho odpovídající zdrojový soubor. Klikněte pravým tlačítkem na libovolné místo v souboru a vyberte **přepínač záhlaví/kódový soubor**. Nebo můžete vybrat **Ctrl + K**, **Ctrl + O**.
+Můžete přepínat mezi hlavičkovým souborem a jeho odpovídajícím zdrojovým souborem. Klikněte pravým tlačítkem myši kdekoli v souboru a vyberte možnost **Přepnout hlavičku/soubor s kódem**. Případně můžete vybrat **CTRL + K**, **CTRL + O**.
 
-## <a name="go-to-definitiondeclaration"></a>Přejít na definice nebo deklarace
+## <a name="go-to-definitiondeclaration"></a>Přejít k definici nebo deklaraci
 
-Můžete přejít k definici symbolu kódu v editoru pravým tlačítkem a vyberete **přejít k definici**, nebo výběrem **F12**. Můžete přejít na deklaraci podobně kliknutím pravým tlačítkem a otevřete kontextu nabídku, nebo výběrem **Ctrl + F12**.
+Můžete přejít na definici symbolu kódu tak, že na něj kliknete pravým tlačítkem v editoru a vyberete **Přejít k definici**nebo vyberete **F12**. Můžete přejít na deklaraci kliknutím pravým tlačítkem na otevřít místní nabídku nebo výběrem **kombinace kláves CTRL + F12**.
 
-![C&#43; &#43; přejít k definici](../ide/media/go-to-def.png "přejít k definici")
+![&&#43; &#43; Přejít k definici](../ide/media/go-to-def.png "Přejít k definici")
 
 ## <a name="go-to"></a>Přejít na
 
-**Přejít na** odkazuje na sadu funkcí, že každá z nichž poskytuje zvláštní druh výsledek na základě filtrů můžete zadat navigace. 
+**Přejít na** odkazuje na sadu navigačních funkcí, které každý z nich poskytuje konkrétní typ výsledku na základě filtrů, které zadáte. 
 
-Můžete otevřít **přejít na** s **Ctrl +** . Tato akce vytvoří vyhledávací pole v dokumentu, který upravujete.
+Můžete otevřít **Přejít na** pomocí **CTRL +,** . Tato akce vytvoří vyhledávací pole nad dokumentem, který upravujete.
 
-![C&#43; &#43; přejít na](../ide/media/go-to-cpp.png "přejít na")
+![&#43; &#43; Přejít na](../ide/media/go-to-cpp.png "Přejít na")
 
-**Přejít na** zahrnuje tyto filtry hledání:
+**Přejít na** obsahuje tyto filtry hledání:
 
-- **Přejít na řádek** (**Ctrl + G**): Rychle přejděte na jiný řádek v aktuálním dokumentu.
-- **Přejít ke všem** (**Ctrl +** ) nebo (**Ctrl + T**): Výsledky hledání obsahují vše, co následuje.
-- **Přejděte na soubor** (**Ctrl 1, F**): Vyhledávání souborů ve vašem řešení.
-- **Přejděte na typ** (**Ctrl 1, T**): Výsledky hledání obsahují:
+- **Přejít na řádek** (**CTRL + G**): rychle přejít na jiný řádek v aktuálním dokumentu.
+- **Přejít na vše** (**CTRL +,** ) nebo (**CTRL + T**): výsledky hledání zahrnují všechno, co následuje.
+- **Přejít k souboru** (**CTRL 1, F**): vyhledejte soubory ve vašem řešení.
+- **Přejít na typ** (**CTRL 1, T**): výsledky hledání zahrnují:
   - Třídy, struktury a výčty.
-  - Rozhraní a delegátů (pouze pro spravovaný kód).
-- **Přejděte na člen** (**Ctrl 1, M**): Výsledky hledání obsahují:
+  - Rozhraní a Delegáti (pouze spravovaný kód).
+- **Přejít na člena** (**CTRL 1, M**): výsledky hledání zahrnují:
   - Globální proměnné a globální funkce.
   - Členské proměnné třídy a členské funkce.
-  - Konstanty.
-  - Položky výčtu.
+  - Konstant.
+  - Vyčíslení položek
   - Vlastnosti a události.
-- **Přejděte na Symbol** (**Ctrl 1, S**): Výsledky hledání obsahují:
-  - Výsledky z přejít na typy a přejděte na členy.
-  - Všechny zbývající C++ jazykovým konstrukcím, včetně maker.
+- **Přejít na symbol** (**CTRL 1, S**): výsledky hledání zahrnují:
+  - Výsledky z možnosti přejít na typy a přejít na členy.
+  - Všechny zbývající C++ jazykové konstrukce, které obsahují makra.
 
-Při prvním vyvolání **přejít na** s **Ctrl +** , **přejít na vše** je aktivováno (žádné filtry na výsledky hledání). Pak můžete vybrat filtr, který chcete pomocí tlačítek téměř do vyhledávacího pole. Můžete vyvolat konkrétní filtr pomocí jeho odpovídající klávesové zkratky. To tedy otevře **přejít na** vyhledávací pole s tímto filtrem předem vybrali. Všechny klávesové zkratky se dají konfigurovat.
+Když se poprvé vyvoláte, **přejdete na** s **klávesou Ctrl +** , **na vše** se aktivuje (žádné filtry pro výsledky hledání). Pak můžete vybrat požadovaný filtr pomocí tlačítek v blízkosti vyhledávacího pole. Konkrétní filtr můžete vyvolat pomocí odpovídající klávesové zkratky. Tím se otevře vyhledávací pole **Přejít na** s vybraným filtrem. Všechny klávesové zkratky lze konfigurovat.
 
-Použít filtr text, začněte s odpovídající znak tohoto filtru, za nímž následuje mezera vašemu vyhledávacímu dotazu. (**Přejít na řádek** můžete volitelně vynechat, nechte pole.) K dispozici jsou tyto filtry textu:
+Chcete-li použít textový filtr, spusťte vyhledávací dotaz s odpovídajícím znakem filtru následovaným mezerou. (**Přejít na řádek** může volitelně vynechat místo.) K dispozici jsou tyto textové filtry:
 
-- Přejít na vše: (žádný filtr text)
-- Přejděte na číslo řádku::
-- Přejděte k souboru: f
-- Přejděte na typu: t
-- Přejděte na člen: m
-- Přejděte na Symbol: #
+- Přejít na vše: (žádný textový filtr)
+- Přejít na číslo řádku::
+- Přejít k souboru: f
+- Přejít na typ: t
+- Přejít ke členu: m
+- Přejít na symbol: #
 
-Následující příklad ukazuje výsledky z *přejít na soubory* operace pomocí filtru "f":
+Následující příklad ukazuje výsledky z operace *Přejít k souborům* pomocí filtru "f":
 
-![C&#43; &#43; přejděte do nabídky](../ide/media/vs2017-go-to-results.png "přejděte do nabídky")
+![&#43; &#43; V nabídce Přejít na](../ide/media/vs2017-go-to-results.png "Přejít na nabídku")
 
-Chcete-li zobrazit seznam filtrech textu, zadejte? následovanými mezerou. Můžete také přejít **přejít na** příkazů s **upravit** nabídky. Toto je další způsob, jak připomenou hlavní **přejít na** klávesové zkratky.
+Seznam textových filtrů zobrazíte tak, že zadáte a? následováno mezerou. Přístup k příkazům **Přejít na** můžete také získat pomocí nabídky **Upravit** . To je jiný způsob, jak připomenout hlavní **Přejít k** klávesovým zkratkám.
 
-![C&#43; &#43; přejděte do nabídky](../ide/media/go-to-menu-cpp.png "přejděte do nabídky")
+![&#43; &#43; V nabídce Přejít na](../ide/media/go-to-menu-cpp.png "Přejít na nabídku")
 
 ## <a name="find-or-find-in-files"></a>Najít nebo najít v souborech
 
-Hledání textu pro všechno, co můžete spustit ve vašem řešení pomocí **najít** (**Ctrl + F**) nebo **najít v souborech** (**Ctrl + Shift + F**).
+Můžete spustit hledání libovolného textu ve vašem řešení pomocí **find** (**CTRL + F**) nebo **najít v souborech** (**CTRL + SHIFT + f**).
 
-**Najít** se dají vymezit na výběr, aktuální dokument, všechny otevřené dokumenty, aktuální projekt nebo celé řešení. Můžete použít regulární výrazy a prostý text. Také zvýrazní všechny shody automaticky v integrovaném vývojovém prostředí.
+**Hledání** může být vymezeno na výběr, aktuální dokument, všechny otevřené dokumenty, aktuální projekt nebo celé řešení. Můžete použít regulární výrazy a prostý text. Také zvýrazní všechny shody automaticky v integrovaném vývojovém prostředí.
 
-![C&#43; &#43; najít](../ide/media/find-cpp.png "najít")
+![Hledání&#43; &#43; v jazyce C](../ide/media/find-cpp.png "Hledání")
 
-**Najít v souborech** je výkonnější verze **najít** , který zobrazí výsledky v **výsledky hledání** okna. Můžete hledat závislosti externí kód, filtrovat podle typů souborů a další. 
+**Hledání v souborech** je výkonnější verze **hledání** , která v okně **výsledky hledání** zobrazuje výsledky. Můžete hledat externí závislosti v kódu, filtrovat podle typů souborů a další. 
 
-![C&#43; &#43; najít v souborech](../ide/media/find-in-files-cpp.png "najít v souborech")
+![&#43; &#43;](../ide/media/find-in-files-cpp.png "Najít v souborech")
 
-Můžete uspořádat **najít v souborech** výsledkem dvě okna. Výsledky z více vyhledávání, můžete připojit společně. Vyberte příslušný výsledek přejdete do tohoto umístění v souboru.
+Výsledky **hledání v souborech** můžete uspořádat ve dvou oknech. Můžete přidat výsledky z několika hledání najednou. Vyberte výsledek, který chcete přejít do tohoto umístění v souboru.
 
-![C&#43; &#43; najít v souborech](../ide/media/vs2017-find-in-files-results.png "najít v souborech")
+![&#43; &#43;](../ide/media/vs2017-find-in-files-results.png "Najít v souborech")
 
-Další informace najdete v tématu [najít v souborech](/visualstudio/ide/find-in-files) v dokumentaci k sadě Visual Studio.
+Další informace najdete v tématu [hledání v souborech](/visualstudio/ide/find-in-files) v dokumentaci k sadě Visual Studio.
 
 ## <a name="find-all-references"></a>Najít všechny odkazy
 
-Pokud chcete najít všechny použití symbolu ve vašem základu kódu, umístíte blikající kurzor v nebo bezprostředně po symbolu, klikněte pravým tlačítkem a pak vyberte **najít všechny odkazy**. Filtrování, řazení nebo seskupení výsledků mnoha různými způsoby. Výsledky naplnit postupně. Se už klasifikován jako čte nebo zapisuje do pomoct zjistit, co je v řešení na rozdíl od systémových hlavičkách nebo jiných knihoven.
+Chcete-li najít všechna použití symbolu v základu kódu, umístěte blikající kurzor do nebo hned za symbol, klikněte pravým tlačítkem myši a vyberte možnost **Najít všechny odkazy**. Výsledky můžete filtrovat, řadit nebo seskupovat mnoha různými způsoby. Výsledky jsou přírůstkově naplněny. Jsou klasifikované jako čtení nebo zápisy, které vám pomůžou zjistit, co je ve vašem řešení, na rozdíl od systémových hlaviček nebo jiných knihoven.
 
-![C&#43; &#43; najít všechny odkazy](../ide/media/find-all-references-results-cpp.png "najít všechny odkazy")
+![&#43; &#43;](../ide/media/find-all-references-results-cpp.png "Najít všechny odkazy")
 
-Seskupení výsledků podle těchto kategorií:
+Výsledky můžete seskupit podle následujících kategorií:
 
 - Projekt a pak definice
 - Jenom definice
@@ -106,30 +106,30 @@ Seskupení výsledků podle těchto kategorií:
 - Definice a pak cesta
 - Definice, projekt a pak cesta
 
- #### <a name="filter-results"></a>Filtrování výsledků
+#### <a name="filter-results"></a>Filtrování výsledků
 
-Pro filtrování výsledků, najeďte myší na sloupec a vyberte ikonu filtrování, která se otevře. Můžete filtrovat výsledky z prvního sloupce, chcete-li skrýt věci jako odkazy na řetězec a komentáře, které nebudete chtít naleznete v tématu.
+Pokud chcete filtrovat výsledky, najeďte myší na sloupec a vyberte ikonu filtrování, která se zobrazí. Můžete filtrovat výsledky z prvního sloupce a skrýt tak například řetězce a odkazy na komentáře, které nechcete, aby bylo možné je zobrazit.
 
-![C&#43; &#43; najít všechny odkazy na filtry](../ide/media/find-all-references-filters-cpp.png "najít všechny odkazy na filtry")
+![&#43; Vyhledá všechny filtry&#43; odkazů.](../ide/media/find-all-references-filters-cpp.png "Najít všechny odkazy na filtry")
 
-- **Potvrdit výsledky**: Skutečný kód odkazy na symbol vyhledaly. Například hledání členská funkce volána `Size` vrátí všechny odkazy na `Size` , které odpovídají oboru třídy, která definuje `Size`.
+- **Potvrzené výsledky**: skutečný kód odkazuje na hledaný symbol. Například vyhledávání členské funkce nazvané `Size` vrátí všechny odkazy na `Size`, které odpovídají oboru třídy definující `Size`.
 
-- **Nepotvrzený výsledky**: Tento filtr je vypnuto ve výchozím nastavení protože zobrazuje symboly, jejíž název odpovídá ale nejsou skutečné odkazy na symbol, který hledáte. Například, pokud máte dvě třídy, z nichž každý definuje členskou funkci volat `Size`, a spusťte hledání `Size` na odkaz z objektu `Class1`, všechny odkazy na `Size` z `Class2` zobrazí jako Nepotvrzený.
+- **Nepotvrzené výsledky**: Tento filtr je ve výchozím nastavení vypnutý, protože zobrazuje symboly, jejichž název odpovídá, ale nejedná se o skutečné odkazy na symbol, který hledáte. Například pokud máte dvě třídy, které každý definují členskou funkci nazvanou `Size`a spustíte hledání `Size` na odkaz z objektu `Class1`, všechny odkazy na `Size` z `Class2` se zobrazí jako nepotvrzené.
 
-- **Nezpracované výsledky**: **Najít všechny odkazy** operace může trvat dobu na větší základů kódu, takže v seznamu výsledků se zobrazí "nezpracované" výsledky. Nezpracované výsledky odpovídat názvu symbolu vyhledávaná, ale dosud nebyla potvrzena jako odkazy na skutečný kód. Tento filtr se získat rychlejší výsledky, můžete zapnout. Právě mějte na paměti, že některé výsledky nemusí být skutečný odkazy.
+- **Nezpracované výsledky**: u větších základů kódu můžou operace **Najít všechny odkazy** trvat delší dobu, takže v seznamu výsledků se tady zobrazí "nezpracované" výsledky. Nezpracované výsledky se shodují s názvem hledaného symbolu, ale ještě nebyl potvrzen jako skutečný odkaz na kód. Tento filtr můžete zapnout, chcete-li dosáhnout rychlejších výsledků. Stačí vědět, že některé výsledky nemusí být skutečné odkazy.
 
- #### <a name="sort-results"></a>Řazení výsledků
+#### <a name="sort-results"></a>Řazení výsledků
 
-Výsledky můžete řadit podle libovolného sloupce tak, že vyberete tento sloupec. Můžete přepínat mezi vzestupném nebo sestupném pořadí tak, že znovu vyberete sloupec.
+Výběrem tohoto sloupce můžete seřadit výsledky podle libovolného sloupce. Sloupec můžete přepínat vzestupně nebo sestupně, a to tak, že ho vyberete znovu.
 
 ## <a name="navigation-bar"></a>Navigační panel
 
-Můžete přejít na definici typu v souboru nebo členy, s použitím typu **navigační panel** , který je uveden výše v okně editoru.
+Můžete přejít k definici typu v souboru nebo zadat členy pomocí **navigačního panelu** , který je nad oknem editoru.
 
-![C&#43; &#43; navigační panel](../ide/media/navbar-cpp.png "navigační panel")
+![Navigační&#43; &#43; panel jazyka C](../ide/media/navbar-cpp.png "Navigační panel")
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Čtení a pochopení C++ kódu](read-and-understand-code-cpp.md)</br>
-- [Upravit a Refaktorovat C++ kódu](read-and-understand-code-cpp.md)</br>
-- [Spolupráce s živými sdílenou složkou proC++](live-share-cpp.md)
+- [Upravit a Refaktorovat C++ kód](read-and-understand-code-cpp.md)</br>
+- [Spolupráce s Live Share proC++](live-share-cpp.md)

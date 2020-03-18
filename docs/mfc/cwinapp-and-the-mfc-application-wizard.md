@@ -1,38 +1,36 @@
 ---
 title: CWinApp a průvodce aplikací MFC
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - application wizards [MFC], and CWinApp
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: cb45c8ffae15628b0b99a1ebcd962d88d845f83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a46842d7b4d6a588da585d63e2ad56982bb0ff8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241575"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447039"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp a průvodce aplikací MFC
 
-Při vytváření kostry aplikace, Průvodce aplikací MFC deklaruje Aplikační třída odvozená z [CWinApp](../mfc/reference/cwinapp-class.md). Průvodce aplikací MFC také vygeneruje soubor implementace, která obsahuje následující položky:
+Když vytvoří kostru aplikace, Průvodce aplikací knihovny MFC deklaruje třídu aplikace odvozenou z [CWinApp](../mfc/reference/cwinapp-class.md). Průvodce aplikací knihovny MFC také generuje implementační soubor, který obsahuje následující položky:
 
-- Mapy zpráv pro třídu aplikace.
+- Mapa zpráv pro třídu aplikace
 
-- Prázdná třída konstruktor.
+- Prázdný konstruktor třídy
 
-- Proměnná, která deklaruje pouze objekt třídy.
+- Proměnná, která deklaruje pouze jeden objekt třídy.
 
-- Standardní implementace vaší `InitInstance` členskou funkci.
+- Standardní implementace `InitInstance` členské funkce.
 
-Třída aplikace je umístěn v záhlaví projektu a hlavní zdrojových souborů. Názvy třídy a soubory vytvořené jsou založeny na název projektu, který zadáte v průvodci MFC aplikace. Nejjednodušší způsob, jak zobrazit kód pro tyto třídy je prostřednictvím [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code).
+Třída aplikace je umístěna v záhlaví projektu a v hlavních zdrojových souborech. Názvy vytvořených tříd a souborů jsou založeny na názvu projektu, který zadáte v Průvodci aplikací knihovny MFC. Nejjednodušší způsob, jak zobrazit kód pro tyto třídy, je prostřednictvím [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code).
 
-Standardní implementace a mapování zpráv zadaný jsou dostatečné pro celou řadu účelů, ale můžete je upravit podle potřeby. Nejzajímavější z těchto implementací je `InitInstance` členskou funkci. Obvykle přidáte kód do základní implementace `InitInstance`.
+Standardní implementace a mapa zpráv jsou vhodné pro mnoho účelů, ale můžete je podle potřeby upravit. Nejzajímavější z těchto implementací je `InitInstance` členská funkce. Obvykle přidáte kód do implementace základní `InitInstance`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CWinApp Třída aplikace](../mfc/cwinapp-the-application-class.md)<br/>
+[CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)<br/>
 [Přepisovatelné členské funkce CWinApp](../mfc/overridable-cwinapp-member-functions.md)<br/>
 [Speciální služby CWinApp](../mfc/special-cwinapp-services.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 48ffe6f124b91ee8ad60452f26d895bc2698779b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421357"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447303"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView
 
@@ -476,7 +476,8 @@ Obecné DDX_Field příklad najdete v tématu [DDX_FieldText](#ddx_fieldtext) . 
 
   **Header** afxdao. h
 
-  ## <a name="ddx_fieldslider"></a>DDX_FieldSlider
+## <a name="ddx_fieldslider"></a>DDX_FieldSlider
+
 Funkce `DDX_FieldSlider` synchronizuje polohu jezdce ovládacího prvku posuvníku v zobrazení záznamu a datový člen pole **int** objektu Recordset přidruženého k zobrazení záznamu (nebo s libovolnou celočíselnou proměnnou, na kterou jste se rozhodli namapovat).
 
 ### <a name="syntax"></a>Syntaxe

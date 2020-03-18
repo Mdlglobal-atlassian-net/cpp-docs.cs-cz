@@ -1,8 +1,6 @@
 ---
 title: LINK – výstup
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - mapfiles [C++]
 - ILK files
@@ -17,40 +15,40 @@ helpviewer_keywords:
 - DLLs [C++], as linker output
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-ms.openlocfilehash: 183f83501d930188032ec4209623ef7cf1a30efa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8323723f2049d3db469e874c91b99f4cfb561c72
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269173"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439324"
 ---
 # <a name="link-output"></a>LINK – výstup
 
-Link – výstup zahrnuje soubory .exe, knihovny DLL, soubory mapování a zprávy.
+Výstup odkazu zahrnuje soubory. exe, knihovny DLL, soubory mapování a zprávy.
 
-##  <a name="_core_output_files"></a> Výstupní soubory
+##  <a name="_core_output_files"></a>Výstupní soubory
 
-Výchozí výstupní soubor z odkazu je soubor s příponou .exe. Pokud [/dll](dll-build-a-dll.md) zadána, odkazu: sestavení souboru .dll. Můžete upravit název výstupního souboru s [název výstupního souboru (/ OUT)](out-output-file-name.md) možnost.
+Výchozí výstupní soubor z odkazu je soubor. exe. Pokud je zadána možnost [/DLL](dll-build-a-dll.md) , vytvoří odkaz sestavení souboru. dll. Můžete ovládat název výstupního souboru pomocí možnosti [název výstupního souboru (/out)](out-output-file-name.md) .
 
-PROPOJENÍ v přírůstkovém režimu, vytvoří soubor .ilk k uložení informace o stavu pro později přírůstková sestavení programu. Podrobnosti o souborech .ilk najdete v tématu [soubory .ilk](dot-ilk-files-as-linker-input.md). Další informace o přírůstkové propojování, najdete v článku [přírůstkové propojení (/ INCREMENTAL)](incremental-link-incrementally.md) možnost.
+V přírůstkovém režimu vytvoří odkaz soubor. ilk, který bude obsahovat informace o stavu pro pozdější přírůstkové sestavení tohoto programu. Podrobnosti o souborech. ilk naleznete v [souboru. ilk](dot-ilk-files-as-linker-input.md). Další informace o přírůstkovém propojování naleznete v možnosti [odkaz přírůstkově (/INCREMENTAL)](incremental-link-incrementally.md) .
 
-Při propojení vytvoří program, který obsahuje exportuje (obvykle knihovny DLL), ale zároveň vytvoří soubor LIB, jedině v případě souboru .exp se používá v sestavení. Název souboru knihovny importu se můžete řídit [/IMPLIB](implib-name-import-library.md) možnost.
+Když propojení vytvoří program, který obsahuje export (obvykle knihovna DLL), vytvoří také soubor. lib, pokud se v sestavení nepoužil soubor. exp. Název souboru knihovny pro import můžete řídit pomocí možnosti [/IMPLIB](implib-name-import-library.md) .
 
-Pokud [generovat soubor mapování (/ MAP)](map-generate-mapfile.md) zadána, příkaz LINK vytvoří soubor mapfile.
+Pokud je zadána možnost [Generate souboru mapování (/map)](map-generate-mapfile.md) , vytvoří odkaz vytvořit souboru mapování.
 
-Pokud [Generovat ladicí informace (/ DEBUG)](debug-generate-debug-info.md) zadána, příkaz LINK vytvoří soubor PDB obsahovat informace o ladění programu.
+Pokud je zadána možnost [vygenerovat informace o ladění (/debug)](debug-generate-debug-info.md) , vytvoří odkaz na soubor PDB, který obsahuje ladicí informace pro program.
 
-##  <a name="_core_other_output"></a> Další výstup
+##  <a name="_core_other_output"></a>Další výstup
 
-Po zadání `link` bez jiného příkazového řádku vstupu, odkaz se zobrazí využití příkaz, který shrnuje jeho možnosti.
+Když zadáte `link` bez dalšího vstupu příkazového řádku, odkaz zobrazí příkaz použití, který shrnuje své možnosti.
 
-ODKAZ zobrazí zprávu o autorských právech a verze a vrátí soubor příkazů vstup, pokud [Potlačit úvodní nápis při spouštění (/ NOLOGO)](nologo-suppress-startup-banner-linker.md) možnost se používá.
+ODKAZ zobrazí zprávu o autorských právech a verzích a vrátí vstup do příkazového souboru, pokud se nepoužije možnost [Potlačit úvodní nápis (/nologo)](nologo-suppress-startup-banner-linker.md) .
 
-Můžete použít [tisk zpráv průběhu (/ VERBOSE)](verbose-print-progress-messages.md) možnosti zobrazíte další podrobnosti o sestavení.
+Pomocí možnosti zprávy o [průběhu tisku (/verbose)](verbose-print-progress-messages.md) můžete zobrazit další podrobnosti o sestavení.
 
-ODKAZ vydá chybové a výstražné zprávy ve formě LNK*nnnn*. Tato chyba předponu a rozsah čísel jsou také používány LIB, DUMPBIN a nástroje EDITBIN.
+Propojí chybu a varovné zprávy ve formuláři LNK*nnnn*. Tato chybová předpona a rozsah čísel jsou také používány LIB, DUMPBIN a nástroje Editbin.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční zdroje k linkeru MSVC](linking.md)<br/>
 [Možnosti linkeru MSVC](linker-options.md)

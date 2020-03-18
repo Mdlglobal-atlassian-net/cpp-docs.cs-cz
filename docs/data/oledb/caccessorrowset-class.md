@@ -9,15 +9,12 @@ f1_keywords:
 - CAccessorRowset::Bind
 - CAccessorRowset::CAccessorRowset
 - CAccessorRowset.CAccessorRowset
-- CAccessorRowset
 - ATL.CAccessorRowset.CAccessorRowset
 - ATL::CAccessorRowset::CAccessorRowset
 - CAccessorRowset.Close
 - CAccessorRowset::Close
 - CAccessorRowset::FreeRecordMemory
 - CAccessorRowset.FreeRecordMemory
-- FreeRecordMemory
-- GetColumnInfo
 - CAccessorRowset.GetColumnInfo
 - CAccessorRowset::GetColumnInfo
 helpviewer_keywords:
@@ -30,16 +27,16 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283800"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447269"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset – třída
 
-Zapouzdřuje sadu řádků a jejich přidružené přístupových objektů v jedné třídě.
+Zapouzdřuje sadu řádků a její přidružené přistupující objekty v jediné třídě.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,14 +49,14 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Třídu přistupujícího objektu.
+Přístupová třída.
 
 *TRowset*<br/>
-Třídy sady řádků.
+Třída sady řádků.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h
+**Záhlaví:** atldbcli. h
 
 ## <a name="members"></a>Členové
 
@@ -67,19 +64,19 @@ Třídy sady řádků.
 
 |||
 |-|-|
-|[Bind](#bind)|Vytvoří vazbu (nepoužívá, pokud `bBind` je zadán jako **false** v [CCommand::Open](../../data/oledb/ccommand-open.md)).|
-|[CAccessorRowset](#caccessorrowset)|Konstruktor|
-|[Zavřít](#close)|Zavře sadu řádků a všechny přistupující objekty.|
-|[FreeRecordMemory](#freerecordmemory)|Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.|
-|[GetColumnInfo](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
+|[Bind](#bind)|Vytvoří vazby (používá se, když je `bBind` zadáno jako **false** v [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[CAccessorRowset –](#caccessorrowset)|Konstruktor|
+|[Uzavírací](#close)|Zavře sadu řádků a všechny přistupující objekty.|
+|[FreeRecordMemory](#freerecordmemory)|Uvolní všechny sloupce v aktuálním záznamu, které je třeba uvolnit.|
+|[GetColumnInfo –](#getcolumninfo)|Implementuje [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída `TAccessor` spravuje přistupujícího objektu. Třída *TRowset* spravuje v sadě řádků.
+Třída `TAccessor` spravuje přistupující objekt. Třída *TRowset* spravuje sadu řádků.
 
-## <a name="bind"></a> CAccessorRowset::Bind
+## <a name="bind"></a>CAccessorRowset –:: bind
 
-Vytvoří vazbu, pokud jste zadali `bBind` jako **false** v [CCommand::Open](../../data/oledb/ccommand-open.md).
+Vytvoří vazby, pokud jste zadali `bBind` jako **false** v [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -89,11 +86,11 @@ HRESULT Bind();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
+## <a name="caccessorrowset"></a>CAccessorRowset –:: CAccessorRowset –
 
-Inicializuje `CAccessorRowset` objektu.
+Inicializuje objekt `CAccessorRowset`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -101,9 +98,9 @@ Inicializuje `CAccessorRowset` objektu.
 CAccessorRowset();
 ```
 
-## <a name="close"></a> CAccessorRowset::Close
+## <a name="close"></a>CAccessorRowset –:: Close
 
-Uvolní všechny aktivní přístupové objekty a sady řádků.
+Uvolní všechny aktivní přistupující objekty a sadu řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -113,11 +110,11 @@ void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny přidružené paměti.
+Uvolní jakoukoli přidruženou paměť.
 
-## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
+## <a name="freerecordmemory"></a>CAccessorRowset –:: FreeRecordMemory
 
-Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.
+Uvolní všechny sloupce v aktuálním záznamu, které je třeba uvolnit.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -125,7 +122,7 @@ Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
+## <a name="getcolumninfo"></a>CAccessorRowset –:: GetColumnInfo
 
 Získá informace o sloupci z otevřené sady řádků.
 
@@ -142,19 +139,19 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
+Viz [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenci OLE DB programátora*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Uživatel musí uvolnit informace vrácené sloupce a vyrovnávací paměti pro řetězec. Druhá verze tuto metodu použijte, když používáte [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) a je nutné přepsat vazbách.
+Uživatel musí uvolnit vrácené informace o sloupci a vyrovnávací paměť řetězců. Druhou verzi této metody použijte, když použijete [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) a potřebujete přepsat vazby.
 
-Další informace najdete v tématu [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.
+Další informace naleznete v tématu [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenci programátora OLE DB*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,21 +1,19 @@
 ---
 title: Řetězce jazyků
 ms.date: 11/04/2016
-f1_keywords:
-- c.strings
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 18a94d33f9ca382bb6c7cd77a4f2b33ed800f2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500075"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438248"
 ---
 # <a name="language-strings"></a>Řetězce jazyků
 
-Funkce [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) mohou používat jazyky podporované rozhraním Windows NLS API v operačních systémech, které nepoužívají znakovou stránku Unicode. Seznam podporovaných jazyků podle verze operačního systému najdete v [příloze a: Chování](https://msdn.microsoft.com/library/cc233982.aspx) produktu v [MS-LCID]: Odkaz na identifikátor kódu jazyka systému Windows (LCID). Řetězec jazyka může být libovolná hodnota ve sloupci **jazyk** a **jazykové značky** v seznamu podporovaných jazyků. Příklad kódu, který vytváří výčet dostupných názvů národních prostředí a souvisejících hodnot, najdete v [tématu NLS: Ukázka](/windows/win32/intl/nls--name-based-apis-sample)rozhraní API založených na názvech.
+Funkce [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) můžou používat jazyky podporované rozhraním Windows NLS API v operačních systémech, které nepoužívají znakovou stránku Unicode. Seznam podporovaných jazyků podle verze operačního systému najdete v [příloze a: chování produktu](https://msdn.microsoft.com/library/cc233982.aspx) v [MS-LCID]: referenční informace k identifikátoru kódu jazyka Windows (LCID). Řetězec jazyka může být libovolná hodnota ve sloupci **jazyk** a **jazykové značky** v seznamu podporovaných jazyků. Příklad kódu, který vytváří výčet dostupných názvů národních prostředí a souvisejících hodnot, naleznete v části [NLS: název rozhraní API na základě názvů](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Další podporované řetězce jazyka
 
@@ -23,9 +21,9 @@ Implementace knihovny run-time jazyka C společnosti Microsoft podporuje i tyto 
 
 |Řetězec jazyka|Ekvivalentní název národního prostředí|
 |---------------------|----------------------------|
-|anglického|en-US|
-|americká angličtina|en-US|
-|americká – angličtina|en-US|
+|anglického|cs-CZ|
+|americká angličtina|cs-CZ|
+|americká – angličtina|cs-CZ|
 |časopisu|cs AU|
 |Lucemburské|nl-BE|
 |Kanadské|cs CA|
@@ -37,7 +35,7 @@ Implementace knihovny run-time jazyka C společnosti Microsoft podporuje i tyto 
 |čínština – Singapur|zh-SG|
 |čínština (tradiční)|zh-TW|
 |Holandština – belgické|nl-BE|
-|Angličtina – americká|en-US|
+|Angličtina – americká|cs-CZ|
 |Angličtina (Austrálie)|cs AU|
 |Angličtina – Belize|en-BZ|
 |Angličtina – může|cs CA|
@@ -48,8 +46,8 @@ Implementace knihovny run-time jazyka C společnosti Microsoft podporuje i tyto 
 |Angličtina (Jihoafrická Korea)|EN-ZA|
 |Angličtina – Trinidad a Tobago|en-TT|
 |Angličtina (Velká Británie)|en-GB|
-|Angličtina (USA)|en-US|
-|Angličtina (USA)|en-US|
+|Angličtina (USA)|cs-CZ|
+|Angličtina (USA)|cs-CZ|
 |francouzština – Belgie|fr – bude|
 |francouzština (Kanada)|fr-CA|
 |francouzština – Lucembursko|fr-LU|
@@ -60,7 +58,7 @@ Implementace knihovny run-time jazyka C společnosti Microsoft podporuje i tyto 
 |german-swiss|de-CH|
 |Irština – angličtina|cs IE|
 |Italština – Švýcarsko|IT – CH|
-|Norština|Ne|
+|Norština|ne|
 |Norština – Bokmal|nb-NO|
 |Norština – Nynorsk|NN – ne|
 |portugalština – Brazílie|pt-BR|
@@ -86,10 +84,10 @@ Implementace knihovny run-time jazyka C společnosti Microsoft podporuje i tyto 
 |Švédština – Finsko|sv-FI|
 |Švýcarské|de-CH|
 |Velká Británie|en-GB|
-|vylepšení|en-US|
-|usa|en-US|
+|vylepšení|cs-CZ|
+|usa|cs-CZ|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Názvy národních prostředí, jazyky a řetězce země/oblasti](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Řetězce země/oblasti](../c-runtime-library/country-region-strings.md)<br/>

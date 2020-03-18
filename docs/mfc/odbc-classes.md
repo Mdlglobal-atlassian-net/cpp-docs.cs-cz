@@ -1,48 +1,46 @@
 ---
 title: ODBC – třídy
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.data
 helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: 75e022ea3e5de4a57f0ef2b1e3f312654c2889ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4cfa0d7afa197de7b65b6a0bd6b881a09534ef6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237772"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447693"
 ---
 # <a name="odbc-classes"></a>ODBC – třídy
 
-Tyto třídy fungují s další aplikace tříd rozhraní framework a poskytovat snadný přístup k široké databází, pro které jsou k dispozici ovladače připojení ODBC (Open Database).
+Tyto třídy pracují s ostatními třídami rozhraní aplikace a poskytují snadný přístup k široké škále databází, pro které jsou k dispozici ovladače rozhraní ODBC (Open Database Connectivity).
 
-Programy, které používají rozhraní ODBC databáze bude mít alespoň `CDatabase` objektu a `CRecordset` objektu.
+Programy, které používají databáze ODBC, budou mít alespoň objekt `CDatabase` a objekt `CRecordset`.
 
 [CDatabase](../mfc/reference/cdatabase-class.md)<br/>
-Zapouzdřuje připojení ke zdroji dat, pomocí kterého můžete pracovat ve zdroji dat.
+Zapouzdřuje připojení ke zdroji dat, pomocí kterého můžete pracovat na zdroji dat.
 
 [CRecordset](../mfc/reference/crecordset-class.md)<br/>
-Zapouzdřuje sadu záznamů ze zdroje dat vybrané. Sady záznamů povolit posouvání ze záznamu, aktualizují záznamy (přidání, úpravy a odstranění záznamů), výběr kvalifikaci s filtrem, řazení výběr a Parametrizace výběru s informacemi o získaných nebo vypočítat v době běhu.
+Zapouzdřuje sadu záznamů vybraných ze zdroje dat. Sady záznamů umožňují posouvání záznamu na záznam, aktualizaci záznamů (přidávání, upravování a odstraňování záznamů), kvalifikaci výběru s filtrem, řazení výběru a Parametrizace výběru o informace získané nebo počítané v době běhu.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Formulář obsahuje zobrazení přímo připojen k objektu sady záznamů. Výměna dialogových dat (DDX) mechanizmus výměny dat mezi sady záznamů a ovládací prvky zobrazení záznamů. Stejně jako všechna zobrazení formuláře zobrazení záznamů podle prostředku šablony dialogového okna. Zobrazení záznamů také podporují přesunutí mezi záznamy v sadě záznamů, aktualizace záznamů a zavření přidružené sadě záznamů po zavření zobrazení záznamů.
+Poskytuje zobrazení formuláře přímo připojené k objektu sady záznamů. Mechanismus pro výměnu dat dialogových oken (DDX) vyměňuje data mezi sadou záznamů a ovládacími prvky zobrazení záznamu. Podobně jako u všech zobrazení formulářů je zobrazení záznamu založené na prostředku šablony dialogového okna. Zobrazení záznamů také podporují přesun ze záznamu na záznam v sadě záznamů, aktualizaci záznamů a zavření přidružené sady záznamů při zavření zobrazení záznamu.
 
 [CDBException](../mfc/reference/cdbexception-class.md)<br/>
-Výjimka výsledkem zpracování chyb v přístupu k datům. Tato třída slouží stejnému účelu jako ostatní třídy výjimek v mechanismus zpracování výjimek knihovny tříd.
+Výjimka způsobená chybami při zpracování přístupu k datům. Tato třída slouží stejnému účelu jako jiné třídy výjimek v mechanismu zpracování výjimek knihovny tříd.
 
 [CFieldExchange](../mfc/reference/cfieldexchange-class.md)<br/>
-Poskytuje kontextové informace pro podporu výměna pole záznamu (RFX), který vyměňuje data mezi pole datové členy a parametry datových členů objektu sady záznamů a odpovídající sloupce tabulky ve zdroji dat. Obdobná třída [cdataexchange –](../mfc/reference/cdataexchange-class.md), který se používá podobně pro výměna dat dialogových oken (DDX).
+Poskytuje kontextové informace pro podporu výměny pole záznamu (RFX), která vyměňuje data mezi poli datových členů a parametrem datových členů objektu Recordset a odpovídající sloupce tabulky ve zdroji dat. Analogické ke třídě [CDataExchange –](../mfc/reference/cdataexchange-class.md), která se používá podobně pro výměnu dialogových dat (DDX).
 
 ## <a name="related-classes"></a>Související třídy
 
-[CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
-Zapouzdřuje popisovač úložiště pro binární velkých objektů (BLOB), jako je například rastrový obrázek. `CLongBinary` objekty se používají ke správě velkých datových objektů uložených v databázových tabulek.
+[CLongBinary –](../mfc/reference/clongbinary-class.md)<br/>
+Zapouzdřuje popisovač do úložiště pro binární rozsáhlý objekt (BLOB), jako je například rastrový obrázek. objekty `CLongBinary` se používají ke správě rozsáhlých datových objektů uložených v databázových tabulkách.
 
-[CDBVariant](../mfc/reference/cdbvariant-class.md)<br/>
-Umožňuje uložit hodnotu bez starostí o datový typ hodnoty. `CDBVariant` sleduje datový typ aktuální hodnotu, která je uložena ve sjednocení.
+[CDBVariant –](../mfc/reference/cdbvariant-class.md)<br/>
+Umožňuje uložit hodnotu bez obav o datový typ hodnoty. `CDBVariant` sleduje datový typ aktuální hodnoty, který je uložen ve sjednocení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../mfc/class-library-overview.md)
+[Přehled třídy](../mfc/class-library-overview.md)

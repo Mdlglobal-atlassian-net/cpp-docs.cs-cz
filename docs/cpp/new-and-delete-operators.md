@@ -1,19 +1,16 @@
 ---
 title: Operátory new a delete
 ms.date: 11/19/2019
-f1_keywords:
-- delete_cpp
-- new
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246439"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445457"
 ---
 # <a name="new-and-delete-operators"></a>new a delete – operátory
 
@@ -23,7 +20,7 @@ C++podporuje dynamické přidělování a navracení objektů pomocí operátor�
 
 Seznam souborů knihoven, které tvoří běhovou knihovnu jazyka C a C++ standardní knihovnu, naleznete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
 
-##  <a id="new_operator"></a> Operátor New
+##  <a id="new_operator"> </a> Operátor New
 
 V případě, že se v programu objevil příkaz, jako je následující, se přeloží na volání **operátoru funkce New**:
 
@@ -39,7 +36,7 @@ Dva obory pro **operátor New** Functions jsou popsány v následující tabulce
 
 ### <a name="scope-for-operator-new-functions"></a>Rozsah pro funkce operator new
 
-|Operátor|Obor|
+|Operátor|Rozsah|
 |--------------|-----------|
 |**:: operator new**|Globální|
 |*název třídy* **:: operator new**|Třída|
@@ -124,7 +121,7 @@ int main() {
 
 Existuje jiný způsob, jak zpracovat neúspěšné požadavky na přidělení paměti. Zapište vlastní rutinu obnovení pro zpracování takového selhání a pak zaregistrujte funkci voláním funkce run-time [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) .
 
-##  <a id="delete_operator"></a> Operátor delete
+##  <a id="delete_operator"> </a> Operátor delete
 
 Paměť, která je dynamicky přidělena pomocí operátoru **New** , může být uvolněna pomocí operátoru **Delete** . Operátor delete volá funkci **operátoru delete** , která uvolní paměť zpátky do dostupného fondu. Použití operátoru **Delete** také způsobí, že destruktor třídy (pokud existuje), který má být volán.
 

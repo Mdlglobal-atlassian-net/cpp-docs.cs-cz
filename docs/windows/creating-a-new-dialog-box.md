@@ -1,8 +1,6 @@
 ---
 title: 'Postupy: Vytvoření dialogového okna (C++)'
 ms.date: 02/15/2019
-f1_keywords:
-- vc.editors.dialog
 helpviewer_keywords:
 - dialog boxes [C++], creating
 - Dialog Editor [C++], creating dialog boxes
@@ -14,95 +12,95 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 380cf58180913f538c1c326d6aaf49947b694063
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344210"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445414"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Postupy: Vytvoření dialogového okna (C++)
 
-Umístění a velikosti dialogového okna C++ a umístění a velikost ovládacích prvků na ní, se měří v jednotkách dialogového okna. Hodnoty jednotlivých ovládacích prvků a dialogové okno se zobrazí v pravém dolním rohu sady Visual Studio se na stavovém řádku při výběru.
+Umístění a velikost C++ dialogového okna a umístění a velikost ovládacích prvků v něm jsou měřeny v jednotkách dialogu. Hodnoty pro jednotlivé ovládací prvky a dialogové okno se zobrazí v pravém dolním rohu stavového řádku sady Visual Studio při jejich výběru.
 
 > [!NOTE]
-> Pokud váš projekt již neobsahuje soubor .rc, přečtěte si téma [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+> Pokud projekt ještě neobsahuje soubor. RC, přečtěte si téma [Vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
-## <a name="how-to"></a>Postupy
+## <a name="how-to"></a>Postup
 
-**Editoru dialogového okna** vám umožní:
+**Editor dialogových oken** vám umožní:
 
-### <a name="to-create-a-new-dialog-box"></a>K vytvoření nového dialogového okna
+### <a name="to-create-a-new-dialog-box"></a>Vytvoření nového dialogového okna
 
-1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na váš *.rc* a vyberte možnost **přidat prostředek**.
+1. V [prostředky](how-to-create-a-resource-script-file.md#create-resources)klikněte pravým tlačítkem myši na soubor *. RC* a vyberte **Přidat prostředek**.
 
-1. V **přidat prostředek** dialogu **dialogové okno** v **typ prostředku** seznamu a pak zvolte **nový**.
+1. V dialogovém okně **Přidat prostředek** vyberte v seznamu **typ prostředku** možnost **dialog** a pak zvolte možnost **Nový**.
 
-   Pokud symbol plus ( **+** ) se zobrazí vedle **dialogové okno** typ prostředku, znamená to, že pole šablon dialogového okna jsou k dispozici. Vyberte znaménko plus rozbalit seznam šablon, vyberte šablonu a zvolte **nový**.
+   Pokud se vedle typu prostředku **dialogového okna** objeví znaménko plus ( **+** ), znamená to, že jsou k dispozici šablony dialogových oken. Vyberte znaménko plus a rozbalte seznam šablon, vyberte šablonu a zvolte **Nový**.
 
-   Otevře se dialogové okno Nový v **editoru dialogového okna**.
+   Nové dialogové okno se otevře v **editoru dialogového okna**.
 
-Můžete také otevřít stávající dialogových oknech v editoru dialogové okno pro úpravy.
+V editoru dialogových oken můžete také otevřít existující dialogová okna pro úpravy.
 
-### <a name="to-create-a-dialog-box-that-a-user-cant-exit"></a>Chcete-li vytvořit dialogové okno, které uživatel nemohou zavřít.
+### <a name="to-create-a-dialog-box-that-a-user-cant-exit"></a>Vytvoření dialogového okna, které uživatel nemůže ukončit
 
-Můžete vytvořit modul runtime dialogové okno, které uživatel nemůže ukončeno. Tento druh dialogové okno je užitečný pro přihlášení a pro aplikace nebo dokumentu zámky.
+Můžete vytvořit dialogové okno runtime, které uživatel nemůže ukončit. Tento druh dialogového okna je vhodný pro přihlášení a pro zámky aplikací nebo dokumentů.
 
-1. V **vlastnosti** podokno pro dialogové okno, nastavte **systémové nabídky** vlastnost **false**.
+1. V podokně **vlastnosti** dialogového okna nastavte vlastnost **systémová nabídka** na **hodnotu NEPRAVDA**.
 
-   Toto nastavení zakáže nabídky systému dialogového a **Zavřít** tlačítko.
+   Toto nastavení zakáže systémovou nabídku a tlačítko **Zavřít** dialogového okna.
 
-1. V dialogovém okně pole formuláře, odstraňte **zrušit** a **OK** tlačítka.
+1. Ve formuláři dialogového okna odstraňte tlačítka **Storno** a **OK** .
 
-   V době běhu nemůže uživatel ukončit modální dialogové okno, které má tyto vlastnosti.
+   V době spuštění nemůže uživatel ukončit modální dialogové okno s těmito charakteristikami.
 
-Pokud chcete povolit testování tohoto druhu dialogového okna, test dialog box – funkce zjistí při **Esc** stisknutí. **ESC** se také označuje jako virtuální vk_escape – klíč. Bez ohledu na to, jak je určen dialogovém okně chování za běhu, můžete testovací režim ukončit stisknutím kombinace kláves **Esc**.
+Chcete-li povolit testování tohoto druhu dialogového okna, funkce dialogového okna test detekuje při stisknutí **klávesy ESC** . **Klávesa ESC** je také známá jako VK_ESCAPE virtuální klíč. Bez ohledu na to, jak je dialogové okno navrženo v době běhu, můžete ukončit režim testu stisknutím klávesy **ESC**.
 
 > [!NOTE]
-> Pro aplikace knihovny MFC, chcete-li vytvořit dialogové okno, které uživatelé nebudou moct zavřít, je nutné přepsat výchozí chování `OnOK` a `OnCancel` vzhledem k tomu, že i v případě, že odstraníte přidružené tlačítka, dialogové okno může stále vynechat stisknutím klávesy  **Zadejte** nebo **Esc**.
+> Pro aplikace MFC, chcete-li vytvořit dialogové okno, které uživatel nemůže ukončit, je nutné přepsat výchozí chování `OnOK` a `OnCancel`, protože i když odstraníte přidružená tlačítka, dialogové okno může být stále zavřeno stisknutím klávesy **ENTER** nebo **ESC**.
 
-### <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>K určení umístění a velikosti dialogového okna
+### <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>Určení umístění a velikosti dialogového okna
 
-Existují vlastnosti můžete nastavit [okno vlastností](/visualstudio/ide/reference/properties-window) k určení, kde se zobrazí dialogové okno na obrazovce.
+V [okně Vlastnosti](/visualstudio/ide/reference/properties-window) lze nastavit vlastnosti, které určují, kde se zobrazí dialogové okno na obrazovce.
 
-- Datový typ Boolean **Center** vlastnost.
+- Vlastnost logického **středu** .
 
-   Pokud nastavíte hodnotu na **True**, dialogové okno se vždy zobrazí ve středu obrazovky. Pokud nastavíte tuto vlastnost na **False**, pak můžete nastavit **Pozice_x** a **Pozice_y** vlastnosti.
+   Pokud nastavíte hodnotu na **true**, dialogové okno se vždy zobrazí ve středu obrazovky. Pokud nastavíte tuto vlastnost na **hodnotu false**, můžete nastavit vlastnosti **XPos** a **YPos** .
 
-- **Pozice_x** a **Pozice_y** vlastnosti, které slouží k explicitnímu definování tam, kde na obrazovce se zobrazí dialogové okno.
+- Vlastnosti **XPos** a **YPos** , které se používají k explicitnímu definování, kde se zobrazí dialogové okno na obrazovce.
 
-   Tyto vlastnosti pozice jsou hodnoty posunu v levém horním rohu oblasti zobrazení, která je definována jako `{X=0, Y=0}`.
+   Tyto vlastnosti pozice jsou odsazené hodnoty z levého horního rohu oblasti zobrazení, která je definována jako `{X=0, Y=0}`.
 
-- **Absolutní zarovnání** vlastnost, která má vliv na pozici.
+- **Absolutní vlastnost align** , která má vliv na pozici.
 
-   Pokud **True**, souřadnice jsou relativní vzhledem k obrazovce. Pokud **False**, souřadnice jsou relativně k nadřazenému dialogovém oknu.
+   Při **hodnotě true**jsou souřadnice relativní vzhledem k obrazovce. Pokud je **hodnota false**, souřadnice jsou relativní vzhledem k oknu vlastníka dialogového okna.
 
 ### <a name="to-test-a-dialog-box"></a>Testování dialogového okna
 
-Při návrhu dialogového okna můžete simulovat a testovat jeho chování za běhu bez kompilace programu. V tomto režimu můžete:
+Při navrhování dialogového okna můžete simulovat a testovat jeho chování za běhu bez kompilování programu. V tomto režimu můžete:
 
-- Zadejte text, vyberte ze seznamu pole se seznamem, zapnout nebo vypnout možnosti a volit příkazy.
+- Zadejte text, vyberte ze seznamu pole se seznamem, zapněte nebo vypněte možnosti a zvolte příkazy.
 
 - Otestujte pořadí ovládacích prvků.
 
-- Otestujte seskupení ovládacích prvků, jako jsou přepínače a zaškrtávací políčka.
+- Otestujte seskupení ovládacích prvků, jako jsou například přepínače a zaškrtávací políčka.
 
 - Otestujte klávesové zkratky pro ovládací prvky v dialogovém okně.
 
 > [!NOTE]
-> Připojení ke kódu dialogového okna pomocí průvodců nejsou zahrnuta v simulaci.
+> V simulaci nejsou zahrnuta připojení k kódu dialogového okna vytvořenému pomocí průvodců.
 
-Při testování dialogového okna se obvykle zobrazuje v umístění, které jsou relativní vůči hlavnímu oknu programu. Pokud jste tak nastavili dialogových oken **absolutní zarovnání** vlastnost **True**, zobrazí dialogové okno v pozici, která je relativní vzhledem k levého horního rohu obrazovky.
+Když otestujete dialogové okno, obvykle se zobrazí v umístění, které je relativní vzhledem k hlavnímu oknu programu. Pokud jste nastavili vlastnost **absolutní zarovnání** dialogového okna na **hodnotu true**, zobrazí se dialogové okno na pozici, která je relativní vzhledem k levému hornímu rohu obrazovky.
 
-1. Když **editoru dialogového okna** aktivní okno, přejděte do nabídky **formátu** > **testovací dialogové okno**.
+1. Když je **Editor dialogového okna** aktivní okno, přejděte do nabídky **Format** > **dialog test**.
 
-1. Chcete-li simulaci ukončit, stiskněte **Esc** nebo vyberte **Zavřít** tlačítko v dialogovém okně, kterou testujete.
+1. Chcete-li ukončit simulaci, stiskněte klávesu **ESC** nebo vyberte tlačítko **Zavřít** v dialogovém okně, které testujete.
 
 ## <a name="requirements"></a>Požadavky
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editor dialogových oken](../windows/dialog-editor.md)<br/>
-[Postupy: Správa ovládací prvky dialogového okna](../windows/controls-in-dialog-boxes.md)<br/>
+[Postupy: Správa ovládacích prvků dialogového okna](../windows/controls-in-dialog-boxes.md)<br/>

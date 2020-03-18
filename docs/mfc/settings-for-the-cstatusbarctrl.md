@@ -1,37 +1,35 @@
 ---
 title: Nastavení pro třídu CStatusBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - status bar controls [MFC], settings
 - CStatusBarCtrl class [MFC], settings
 ms.assetid: adeba0c3-17f3-435c-b140-a57845e9ce49
-ms.openlocfilehash: b41997fb9342a651260bc2196d212016dc0deb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18c4c780ecf7865d8d648bfa4c54961bbffe7b18
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307689"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446398"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Nastavení pro třídu CStatusBarCtrl
 
-Výchozí pozice [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) podél dolního okraje nadřazeného okna se stavové okno, ale můžete určit styl CCS_TOP na něm se zobrazí v horní části klientské oblasti okna nadřazené.
+Výchozí pozice stavového okna [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) je podél dolního okraje nadřazeného okna, ale můžete určit styl CCS_TOP, který se zobrazí v horní části klientské oblasti nadřazeného okna.
 
-Můžete určit styl SBARS_SIZEGRIP zahrnout úchyt na pravém konci `CStatusBarCtrl` stavové okno. Úchyt pro změnu velikosti je podobná velikosti ohraničení; je obdélníkovou oblast, která uživatel může klikněte a přetáhněte pro změnu velikosti nadřazeného okna.
+Můžete určit styl SBARS_SIZEGRIP pro zahrnutí úchytu pro změnu velikosti na pravé straně okna stavu `CStatusBarCtrl`. Úchyt pro změnu velikosti je podobný hranici velikosti; Jedná se o obdélníkovou oblast, kterou uživatel může kliknutím a přetažením změnit velikost nadřazeného okna.
 
 > [!NOTE]
->  Pokud kombinujete CCS_TOP a SBARS_SIZEGRIP styly, výsledný úchyt pro změnu velikosti není funkční, přestože systém nakreslí ho v okně Stav.
+>  Pokud kombinujete styly CCS_TOP a SBARS_SIZEGRIP, výsledné úchyty pro změnu velikosti nebudou funkční, i když ho systém vykreslí v okně stav.
 
-Proceduru okna pro stavové okno automaticky nastaví počáteční velikost a umístění okna ovládacího prvku. Šířka je stejné jako u nadřazené okno klientské oblasti. Výška je založena na metriky písma, která je aktuálně vybrána v kontextu zařízení stavové okno a na šířku ohraničení okna.
+Procedura okna pro stavové okno automaticky nastaví počáteční velikost a polohu okna ovládacího prvku. Šířka je stejná jako v klientské oblasti v nadřazeném okně. Výška je založena na metrikách písma, které je aktuálně vybráno v kontextu zařízení stavového okna a na šířku ohraničení okna.
 
-Proceduru okna velikost stavové okno automaticky přizpůsobí pokaždé, když dostane zprávu WM_SIZE. Obvykle při změně velikosti nadřazené okno nadřazené odešle zprávu WM_SIZE stavové okno.
+Procedura okna automaticky upraví velikost stavového okna vždy, když obdrží zprávu WM_SIZE. Obvykle při změně velikosti nadřazeného okna pošle nadřazená zpráva WM_SIZE do okna stavu.
 
-Můžete nastavit minimální výšku oblasti pro kreslení stavové okno voláním [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), určení minimální výšku v pixelech. Vykreslení oblasti nezahrnuje ohraničení okna.
+Můžete nastavit minimální výšku oblasti kreslení stavového okna voláním [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)a určením minimální výšky v pixelech. Oblast kreslení neobsahuje ohraničení okna.
 
-Načíst šířky ohraničení stavové okno voláním [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). Tato členská funkce obsahuje ukazatel na prvek tři pole, která přijímá šířku ohraničení vodorovné, svislé ohraničení a ohraničení mezi obdélníky.
+Načtěte šířky ohraničení stavového okna voláním [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). Tato členská funkce zahrnuje ukazatel na pole se třemi prvky, které přijímá šířku vodorovného ohraničení, svislé ohraničení a ohraničení mezi obdélníky.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání atributu CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)

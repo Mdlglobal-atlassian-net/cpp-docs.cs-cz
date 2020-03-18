@@ -7,7 +7,6 @@ f1_keywords:
 - IColumnsInfoImpl
 - ATL.IColumnsInfoImpl
 - ATL::IColumnsInfoImpl<T>
-- GetColumnInfo
 - ATL::IColumnsInfoImpl::GetColumnInfo
 - ATL.IColumnsInfoImpl.GetColumnInfo
 - ATL::IColumnsInfoImpl<T>::GetColumnInfo
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb7714762de8ccf810a8fdd04ee33ae24e9d431
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409145"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447060"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl – třída
 
-Poskytuje implementaci [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) rozhraní.
+Poskytuje implementaci rozhraní [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,12 +48,12 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Vaše třída odvozena od `IColumnsInfoImpl`.
+*Š*<br/>
+Vaše třída odvozená od `IColumnsInfoImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -62,16 +61,16 @@ Vaše třída odvozena od `IColumnsInfoImpl`.
 
 |||
 |-|-|
-|[GetColumnInfo](#getcolumninfo)|Vrátí metadata sloupce vyžadované většina uživatelů.|
-|[MapColumnIDs](#mapcolumnids)|Vrátí pole řadové číslovky sloupců v sadě řádků, které se identifikují pomocí ID zadaného sloupce.|
+|[GetColumnInfo –](#getcolumninfo)|Vrátí metadata sloupce potřebná pro většinu uživatelů.|
+|[MapColumnIDs](#mapcolumnids)|Vrátí pole pořadí sloupců v sadě řádků, které jsou identifikovány zadanými ID sloupců.|
 
 ## <a name="remarks"></a>Poznámky
 
-Povinné rozhraní sady řádků a příkazy. Chcete změnit chování váš poskytovatel `IColumnsInfo` implementace, budete muset upravit mapování sloupce poskytovatele.
+Povinné rozhraní pro sady řádků a příkazy. Pokud chcete upravit chování `IColumnsInfo` implementace vašeho poskytovatele, musíte upravit mapu sloupce poskytovatele.
 
-## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
+## <a name="getcolumninfo"></a>IColumnsInfoImpl –:: GetColumnInfo
 
-Vrátí metadata sloupce vyžadované většina uživatelů.
+Vrátí metadata sloupce potřebná pro většinu uživatelů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -83,11 +82,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
+Viz [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenci OLE DB programátora*.
 
-## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
+## <a name="mapcolumnids"></a>IColumnsInfoImpl –:: MapColumnIDs
 
-Vrátí pole řadové číslovky sloupců v sadě řádků, které se identifikují pomocí ID zadaného sloupce.
+Vrátí pole pořadí sloupců v sadě řádků, které jsou identifikovány zadanými ID sloupců.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -99,9 +98,9 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IColumnsInfo:: MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

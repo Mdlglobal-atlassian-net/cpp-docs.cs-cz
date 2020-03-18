@@ -2,20 +2,20 @@
 title: Třída exception
 ms.date: 11/04/2016
 f1_keywords:
-- exception
+- exception/std::exception
 helpviewer_keywords:
 - exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-ms.openlocfilehash: 90906469e923d29dd886930bd36944e4292bd9cd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5bef8190889ae00298760ea395fb524f557c2be2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246072"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446826"
 ---
 # <a name="exception-class"></a>Třída exception
 
-Tato třída slouží jako základní třída pro všechny výjimky vyvolané některými výrazy a standardní knihovny C++.
+Třída slouží jako základní třída pro všechny výjimky vyvolané některými výrazy a C++ standardní knihovnou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,13 +34,13 @@ class exception {
 
 ## <a name="remarks"></a>Poznámky
 
-Konkrétně tato základní třída je kořenem standardní výjimka tříd definovaných v [ \<stdexcept – >](../standard-library/stdexcept.md). Hodnota vrácený řetězec jazyka C `what` nebyl zadán pomocí výchozího konstruktoru, ale může být definovaná jako řetězec definovanou implementací jazyka C pomocí konstruktorů určitých odvozených tříd. Žádná z členské funkce generovat žádné výjimky.
+Konkrétně tato základní třída je kořenem standardních tříd výjimek definovaných v [\<stdexcept >](../standard-library/stdexcept.md). Hodnota řetězce C vrácená funkcí `what` není určena výchozím konstruktorem, ale může být definována konstruktory pro určité odvozené třídy jako řetězec jazyka C definované implementací. Žádná z členských funkcí nevyvolá žádné výjimky.
 
-**Int** parametrů můžete zadat, že by měla být přidělená žádná paměť. Hodnota **int** se ignoruje.
+Parametr **int** umožňuje určit, že by neměla být přidělena žádná paměť. Hodnota **int** je ignorována.
 
 > [!NOTE]
-> Konstruktory `exception(const char* const &message)` a `exception(const char* const &message, int)` jsou rozšíření Microsoft pro standardní knihovny C++.
+> Konstruktory `exception(const char* const &message)` a `exception(const char* const &message, int)` jsou rozšířeními společnosti Microsoft pro C++ standardní knihovnu.
 
 ## <a name="example"></a>Příklad
 
-Příklady použití, které dědí z třídy standardní výjimka `exception` třídy, naleznete v některém z tříd definovaných v [ \<stdexcept – >](../standard-library/stdexcept.md).
+Příklady použití třídy standardní výjimky, které dědí z třídy `exception`, naleznete v libovolné třídě definované v [\<stdexcept >](../standard-library/stdexcept.md).

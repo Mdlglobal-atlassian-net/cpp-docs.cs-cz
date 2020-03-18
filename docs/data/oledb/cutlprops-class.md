@@ -9,7 +9,6 @@ f1_keywords:
 - CUtlProps::IsValidValue
 - CUtlProps.IsValidValue
 - IsValidValue
-- CUtlProps
 - OnPropertyChanged
 - CUtlProps.OnPropertyChanged
 - CUtlProps::OnPropertyChanged
@@ -30,16 +29,16 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 3f1af90bcf454a3651dd8de65bbee7cb6b5960ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176112"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441034"
 ---
 # <a name="cutlprops-class"></a>CUtlProps – třída
 
-Implementuje vlastnosti pro celou řadu vlastností rozhraní technologie OLE DB (například `IDBProperties`, `IDBProperties`, a `IRowsetInfo`).
+Implementuje vlastnosti pro celou řadu OLE DBch vlastností rozhraní (například `IDBProperties`, `IDBProperties`a `IRowsetInfo`).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,12 +49,12 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Třída, která obsahuje `BEGIN_PROPSET_MAP`.
+*Š*<br/>
+Třída obsahující `BEGIN_PROPSET_MAP`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -63,23 +62,23 @@ Třída, která obsahuje `BEGIN_PROPSET_MAP`.
 
 |||
 |-|-|
-|[GetPropValue](#getpropvalue)|Získá vlastnost ze sady vlastností.|
-|[IsValidValue –](#isvalidvalue)|Slouží k ověření hodnotu před nastavením vlastnosti.|
-|[OnInterfaceRequested](#oninterfacerequested)|Zpracovává požadavky pro volitelné rozhraní, když příjemce volá metodu pro vytvoření rozhraní objektu.|
-|[OnPropertyChanged](#onpropertychanged)|Volá se po nastavení vlastnosti pro zpracování zřetězené vlastnosti.|
-|[SetPropValue](#setpropvalue)|Nastaví vlastnost v sadu vlastností.|
+|[GetPropValue](#getpropvalue)|Načte vlastnost ze sady vlastností.|
+|[IsValidValue](#isvalidvalue)|Slouží k ověření hodnoty před nastavením vlastnosti.|
+|[OnInterfaceRequested](#oninterfacerequested)|Zpracovává požadavky na volitelné rozhraní, když příjemce volá metodu na rozhraní pro vytvoření objektu.|
+|[V-PropertyChanged](#onpropertychanged)|Volá se po nastavení vlastnosti pro zpracování zřetězených vlastností.|
+|[SetPropValue](#setpropvalue)|Nastaví vlastnost v sadě vlastností.|
 
 ## <a name="remarks"></a>Poznámky
 
-Většina této třídy je podrobnost implementace.
+Většina této třídy je podrobností implementace.
 
-`CUtlProps` pro nastavení vlastnosti interně obsahuje dva členy: [Getpropvalue –](../../data/oledb/cutlprops-getpropvalue.md) a [setpropvalue –](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` obsahuje dva členy pro interní nastavení vlastností: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) a [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
 
-Další informace o makra použít v mapování sady vlastností, naleznete v tématu [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) a [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
+Další informace o makrech použitých v mapě sady vlastností naleznete v tématu [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) a [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a> CUtlProps::GetPropValue
+## <a name="getpropvalue"></a>CUtlProps:: GetPropValue
 
-Získá vlastnost ze sady vlastností.
+Načte vlastnost ze sady vlastností.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -92,21 +91,21 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 #### <a name="parameters"></a>Parametry
 
 *pguidPropSet*<br/>
-[in] Identifikátor GUID sada vlastností.
+pro Identifikátor GUID pro PropSet.
 
 *dwPropId*<br/>
-[in] Vlastnost index.
+pro Index vlastnosti.
 
 *pvValue*<br/>
-[out] Ukazatel na hodnotu typu variant, která obsahuje novou hodnotu vlastnosti.
+mimo Ukazatel na variantu, která obsahuje novou hodnotu vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`Failure` na selhání a S_OK v případě úspěšného ověření.
+`Failure` při selhání a v případě úspěchu S_OK.
 
-## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
+## <a name="isvalidvalue"></a>CUtlProps:: IsValidValue
 
-Slouží k ověření hodnotu před nastavením vlastnosti.
+Slouží k ověření hodnoty před nastavením vlastnosti.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -118,22 +117,22 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 #### <a name="parameters"></a>Parametry
 
 *iCurSet*<br/>
-Index pole vlastností nastavenou; nula, pokud existuje pouze jedna vlastnost sady.
+Index do pole sady vlastností; nula, pokud je k dispozici pouze jedna sada vlastností.
 
 *pDBProp*<br/>
-ID vlastnosti a nová hodnota v [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
+ID vlastnosti a nová hodnota ve struktuře [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT. Výchozí návratová hodnota je S_OK.
+Standardní hodnota HRESULT. Výchozí návratová hodnota je S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud máte jakékoli rutiny ověřování, které chcete spustit na hodnotu, která se chystáte použít k nastavení vlastnosti, by měly přepsat tuto funkci. Například může ověřovat DBPROP_AUTH_PASSWORD proti heslo tabulky, abyste zjistili platnou hodnotu.
+Pokud máte nějaké rutiny ověřování, které chcete spustit na hodnotě, kterou se chystáte použít k nastavení vlastnosti, měli byste tuto funkci přepsat. Můžete například ověřit DBPROP_AUTH_PASSWORD proti tabulce hesel, abyste určili platnou hodnotu.
 
-## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
+## <a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
 
-Zpracovává požadavky pro volitelné rozhraní, když příjemce volá metodu v jednom objektu vytváření rozhraní.
+Zpracovává požadavky na volitelné rozhraní, když příjemce volá metodu na jednom z rozhraní pro vytvoření objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -144,15 +143,15 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 #### <a name="parameters"></a>Parametry
 
 *riid*<br/>
-[in] Identifikátor IID pro požadované rozhraní. Další podrobnosti naleznete v popisu *riid* parametr `ICommand::Execute` v *OLE DB referenční informace pro programátory* (v *sadu MDAC SDK*).
+pro IID pro požadované rozhraní. Další podrobnosti najdete v popisu parametru *riid* `ICommand::Execute` v referenční příručce pro *OLE DB programátora* (v sadě *MDAC SDK*).
 
 ### <a name="remarks"></a>Poznámky
 
-`OnInterfaceRequested` zpracovává požadavky příjemce pro volitelné rozhraní, když příjemce volá metodu v jednom objektu vytváření rozhraní (například `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`, nebo `ICommand`). Nastaví vlastnost odpovídající OLE DB pro požadované rozhraní. Například, pokud uživatel požaduje `IID_IRowsetLocate`, `OnInterfaceRequested` nastaví `DBPROP_IRowsetLocate` rozhraní. To udržuje správný stav při vytváření sady řádků.
+`OnInterfaceRequested` zpracovává požadavky spotřebitelů na volitelné rozhraní, když příjemce volá metodu na jednom z rozhraní pro vytváření objektů (například `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`nebo `ICommand`). Nastaví odpovídající vlastnost OLE DB pro požadované rozhraní. Například pokud spotřebitel požaduje `IID_IRowsetLocate`, `OnInterfaceRequested` nastaví rozhraní `DBPROP_IRowsetLocate`. Tím se zachová správný stav při vytváření sady řádků.
 
 Tato metoda je volána, když příjemce volá `IOpenRowset::OpenRowset` nebo `ICommand::Execute`.
 
-Pokud příjemce otevře objekt a vyžádá volitelné rozhraní, poskytovateli třeba nastavit vlastnosti přidružené k rozhraní k VARIANT_TRUE. Pokud chcete povolit zpracování specifické pro vlastnost `OnInterfaceRequested` je volána před provedením poskytovatele `Execute` metoda je volána. Ve výchozím nastavení `OnInterfaceRequested` zpracovává následujících rozhraní:
+Pokud příjemce otevře objekt a požádá o volitelné rozhraní, poskytovatel by měl nastavit vlastnost přidruženou k tomuto rozhraní na VARIANT_TRUE. Aby bylo možné použít zpracování specifické pro vlastnosti, `OnInterfaceRequested` je volána před voláním metody `Execute` poskytovatele. Ve výchozím nastavení `OnInterfaceRequested` zpracovává následující rozhraní:
 
 - `IRowsetLocate`
 
@@ -164,11 +163,11 @@ Pokud příjemce otevře objekt a vyžádá volitelné rozhraní, poskytovateli 
 
 - `IRowsetScroll`
 
-Pokud chcete zpracovávat další rozhraní, přepište tuto funkci ve třídě zdroje, relace, příkazu nebo sady řádků dat pro funkci procesu. Přepsání by měl projít rozhraní normální nastavení nebo získání vlastnosti k zajištění, že nastavení vlastností také nastaví všechny zřetězené vlastnosti (viz [OnPropertyChanged –](../../data/oledb/cutlprops-onpropertychanged.md)).
+Pokud chcete zpracovat jiná rozhraní, přepište tuto funkci ve zdroji dat, relaci, příkazu nebo třídě sady řádků pro zpracování funkcí. Vaše přepsání by mělo projít běžnými rozhraními vlastností set/get, aby bylo zajištěno, že vlastnosti nastavení také nastaví všechny zřetězené vlastnosti [(viz](../../data/oledb/cutlprops-onpropertychanged.md)přepsané).
 
-## <a name="onpropertychanged"></a> CUtlProps::OnPropertyChanged
+## <a name="onpropertychanged"></a>CUtlProps::-PropertyChanged
 
-Volá se po nastavení vlastnosti pro zpracování zřetězené vlastnosti.
+Volá se po nastavení vlastnosti pro zpracování zřetězených vlastností.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -180,28 +179,28 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 #### <a name="parameters"></a>Parametry
 
 *iCurSet*<br/>
-Index pole vlastností nastavenou; nula, pokud existuje pouze jedna vlastnost sady.
+Index do pole sady vlastností; nula, pokud je k dispozici pouze jedna sada vlastností.
 
 *pDBProp*<br/>
-ID vlastnosti a nová hodnota v [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struktury.
+ID vlastnosti a nová hodnota ve struktuře [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT. Výchozí návratová hodnota je S_OK.
+Standardní hodnota HRESULT. Výchozí návratová hodnota je S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete zpracovat zřetězené vlastnosti, jako je například záložek nebo aktualizace, jejichž hodnoty jsou závislé na hodnotě jiné vlastnosti, by měly přepsat tuto funkci.
+Pokud chcete zpracovat zřetězené vlastnosti, jako jsou například záložky nebo aktualizace, jejichž hodnoty jsou závislé na hodnotě jiné vlastnosti, měli byste tuto funkci přepsat.
 
 ### <a name="example"></a>Příklad
 
-V této funkci uživatel získá ID vlastnosti z `DBPROP*` parametru. Nyní je možné porovnat ID pro vlastnosti řetězce. Když je vlastnost nalezena, `SetProperties` je volána s vlastností, které se nastaví ve spojení s jiné vlastnosti. V takovém případě pokud se z nich dostane `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, nebo `DBPROP_ORDEREDBOOKMARKS` , jeden můžete nastavit `DBPROP_BOOKMARKS` vlastnost.
+V této funkci uživatel získá ID vlastnosti z parametru `DBPROP*`. Nyní je možné porovnat ID s vlastností a řetězit. Když je vlastnost nalezena, `SetProperties` je volána s vlastností, která bude nyní nastavena ve spojení s jinou vlastností. V takovém případě, pokud jeden získá vlastnost `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`nebo `DBPROP_ORDEREDBOOKMARKS`, může jedna nastavit vlastnost `DBPROP_BOOKMARKS`.
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> CUtlProps::SetPropValue
+## <a name="setpropvalue"></a>CUtlProps:: SetPropValue
 
-Nastaví vlastnost v sadu vlastností.
+Nastaví vlastnost v sadě vlastností.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -214,19 +213,19 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 #### <a name="parameters"></a>Parametry
 
 *pguidPropSet*<br/>
-[in] Identifikátor GUID sada vlastností.
+pro Identifikátor GUID pro PropSet.
 
 *dwPropId*<br/>
-[in] Vlastnost index.
+pro Index vlastnosti.
 
 *pvValue*<br/>
-[in] Ukazatel na hodnotu typu variant, která obsahuje novou hodnotu vlastnosti.
+pro Ukazatel na variantu, která obsahuje novou hodnotu vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`Failure` na selhání a S_OK v případě úspěšného ověření.
+`Failure` při selhání a v případě úspěchu S_OK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

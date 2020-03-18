@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455242"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446195"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution – třída
+# <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution – třída
 
 Generuje konstantní konstantní distribuci, která má v každém intervalu různé intervaly s různou šířkou s jednotnou pravděpodobností.
 
@@ -81,11 +81,11 @@ public:
 ### <a name="parameters"></a>Parametry
 
 *RealType*\
-Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
+Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy naleznete v tématu [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato distribuce vzorkování má v každém intervalu různou šířku intervalu s jednotnou pravděpodobností. Informace o dalších distribucích vzorkování naleznete v tématu [Třída piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md) a [discrete_distribution](../standard-library/discrete-distribution-class.md).
+Tato distribuce vzorkování má v každém intervalu různou šířku intervalu s jednotnou pravděpodobností. Informace o dalších distribucích vzorkování naleznete v tématu [Piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) a [discrete_distribution](../standard-library/discrete-distribution-class.md).
 
 Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů:
 
@@ -94,19 +94,19 @@ Následující tabulka obsahuje odkazy na články týkající se jednotlivých 
 |[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|
 |`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|
 
-Funkce `intervals()` Property`vector<result_type>` vrátí sadu se sadou uložených intervalů distribuce.
+Funkce Property `intervals()` vrátí `vector<result_type>` se sadou uložených intervalů distribuce.
 
-Funkce `densities()` Property`vector<result_type>` vrátí s uloženou hustotou pro každý interval sady, který je vypočítán podle vah uvedených v parametrech konstruktoru.
+Funkce Property `densities()` vrátí `vector<result_type>` s uloženými hustotami pro každý interval sady, který je vypočítán podle vah uvedených v parametrech konstruktoru.
 
-Člen `param()` vlastnosti nastaví nebo `param_type` vrátí uložený balíček parametrů distribuce.
+Člen vlastnosti `param()` nastaví nebo vrátí `param_type` uložený balíček parametrů distribuce.
 
-Členské funkce `max()` a vracejí nejmenší možný výsledek a největší možný výsledek, v uvedeném pořadí. `min()`
+Členské funkce `min()` a `max()` vracejí nejmenší možný výsledek a největší možný výsledek.
 
-Členská funkce zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího `operator()` volání není závislý na všech hodnotách získaných z modulu před voláním. `reset()`
+Členská funkce `reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
 
-`operator()` Členské funkce vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+Členské funkce `operator()` vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
+Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
 
 ## <a name="example"></a>Příklad
 
@@ -214,7 +214,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<náhodné >
+**Záhlaví:** \<náhodný >
 
 **Obor názvů:** std
 
@@ -251,16 +251,16 @@ explicit piecewise_constant_distribution(const param_type& parm);
 *první*\
 Vstupní iterátor prvního prvku v rozsahu distribuce.
 
-*Poslední*\
+*poslední*\
 Vstupní iterátor posledního prvku v rozsahu distribuce.
 
 *firstW*\
 Vstupní iterátor prvního prvku v rozsahu vah.
 
-*období*\
+*intervaly*\
 [Initializer_list](../cpp/initializers.md) s intervaly distribuce.
 
-*výpočtu*\
+*počet*\
 Počet prvků v rozsahu distribuce.
 
 *xmin*\
@@ -280,15 +280,17 @@ Struktura parametrů používaná k sestavení distribuce.
 Výchozí konstruktor nastaví uložené parametry tak, aby byl jeden interval, 0 až 1, s hustotou pravděpodobnosti 1.
 
 Konstruktor rozsahu iterátoru
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
     InputIteratorW firstW);
 ```
 
-sestaví objekt distribuce s itnervals z iterátorů přes sekvenci [ `firstI`, `lastI`) a stejnou sekvenci váhy začínající na `firstW`.
+sestaví distribuční objekt s itnervals z iterátorů přes sekvenci [`firstI`, `lastI`) a v pořadí podle `firstW`má stejnou sekvenci váhy.
 
 Konstruktor seznamu inicializátorů
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,15 +301,17 @@ intervals,
 Vytvoří distribuční objekt s intervaly ze seznamu inicializačních *intervalů* a vah vygenerovaných funkcí *weightfunc*.
 
 Konstruktor definovaný jako
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-sestaví distribuční objekt s intervaly *počtu* distribuovaně rovnoměrně přes `xmin,xmax`[], přiřazování každé váhy intervalu podle funkce *weightfunc*a *weightfunc* musí přijmout jeden parametr a vracet hodnota, kterou lze převést na `double`hodnotu. **Předběžná podmínka:** `xmin < xmax`
+sestaví distribuční objekt s intervaly *počtu* distribuovaně rovnoměrně přes [`xmin,xmax`], přiřazování každé váhy intervalu podle funkce *weightfunc*a *weightfunc* musí přijmout jeden parametr a vracet návratovou hodnotu, obě jsou převoditelné na `double`. **Předběžná podmínka:** `xmin < xmax`
 
 Konstruktor definovaný jako
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
@@ -342,9 +346,9 @@ Podívejte se na parametry konstruktoru pro [piecewise_constant_distribution](#p
 
 **Předběžná podmínka:** `xmin < xmax`
 
-Tuto strukturu lze předat konstruktoru třídy distribuce při vytváření instance, `param()` členské funkci pro nastavení uložených parametrů stávající distribuce a k `operator()` použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<náhodné >](../standard-library/random.md)\
+[\<náhodný >](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

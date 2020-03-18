@@ -3,11 +3,6 @@ title: '&lt;filesystem&gt;'
 description: Popisuje třídy, funkce a typy v hlavičce filesystem standardní C++ knihovny.
 ms.date: 01/22/2020
 f1_keywords:
-- filesystem/std::experimental::filesystem::directory_entry
-- filesystem/std::experimental::filesystem::recursive_directory_iterator
-- filesystem/std::experimental::filesystem::path
-- filesystem/std::experimental::filesystem::filesystem_error
-- filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
@@ -17,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: dbe6dc89d5460a08ffafd86aa3fcd01222c82166
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725679"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441707"
 ---
 # &lt;filesystem&gt;
 
@@ -117,13 +112,13 @@ Další informace a příklady kódu naleznete v tématu [Navigace v systému so
 |-|-|
 |[struktura space_info](../standard-library/space-info-structure.md)|Uchovává informace o svazku.|
 
-## <a name="functions"></a>Funkce
+## <a name="functions"></a>Functions
 
 [\<filesystem> funkce](../standard-library/filesystem-functions.md)
 
 ## <a name="operators"></a>Operátory
 
-[operátory \<filesystem](../standard-library/filesystem-operators.md)
+[operátory \<filesystem>](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>Výčty
 
@@ -135,6 +130,6 @@ Další informace a příklady kódu naleznete v tématu [Navigace v systému so
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| Vytvoří výčet možností pro funkci `permissions`. |
 |[oprávnění](../standard-library/filesystem-enumerations.md#perms)|Typ maskování, který slouží k předávání oprávnění a možností oprávnění|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

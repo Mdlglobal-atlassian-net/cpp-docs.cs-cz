@@ -5,6 +5,9 @@ f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
 - char_cpp
+- char8_t_cpp
+- char16_t_cpp
+- char32_t_cpp
 - double_cpp
 - float_cpp
 - int_cpp
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301493"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445307"
 ---
 # <a name="built-in-types-c"></a>Předdefinované typy (C++)
 
@@ -66,16 +69,16 @@ Následující tabulka vysvětluje omezení velikosti typů ve vztahu k sobě na
 
 ### <a name="built-in-type-size-restrictions"></a>Vestavěná omezení velikosti typu
 
-|Kategorie|Type|Obsah|
+|Kategorie|Typ|Obsah|
 |--------------|----------|--------------|
 |Integrální|**char**|Typ **char** je integrální typ, který obvykle obsahuje členy základní znakové sady pro spuštění – ve výchozím nastavení je to ASCII v Microsoftu C++.<br /><br /> C++ Kompilátor zpracovává proměnné typu **char**, **signed char**a **unsigned char** s různými typy. Proměnné typu **char** jsou povýšeny na **int** , jako by byly typu **signed char** ve výchozím nastavení, pokud se nepoužije možnost kompilace/j. V tomto případě se považují za typ **char bez znaménka** a jsou povýšeny na **int** bez přípony Sign.|
 ||**bool**|Typ **bool** je celočíselný typ, který může mít jednu ze dvou hodnot **true** nebo **false**. Jeho velikost není specifikována.|
 ||**short**|Typ **short int** (nebo jen **krátká**) je celočíselný typ, který je větší nebo roven velikosti typu **char**a menší nebo roven velikosti typu **int**.<br /><br /> Objekty typu **short** lze deklarovat jako **signed short** nebo **unsigned short**. **Signed short** je synonymum pro **krátké**.|
 ||**int**|Typ **int** je celočíselný typ, který je větší nebo roven velikosti typu **short int**a menší nebo roven velikosti typu **Long**.<br /><br /> Objekty typu **int** lze deklarovat jako **signed int** nebo **unsigned int**. **Signed int** je synonymem pro **int**.|
-||**__int8**, **__int16**, **__int32**, **__int64**|Size Integer `__int n`, kde `n` je velikost proměnné Integer v bitech. **__int8**, **__int16**, **__int32** a **__Int64** jsou klíčová slova specifická pro společnost Microsoft. Ne všechny typy jsou k dispozici ve všech architekturách. ( **__int128** se nepodporuje.)|
+||**__int8**, **__int16**, **__int32** **__int64**|Size Integer `__int n`, kde `n` je velikost proměnné Integer v bitech. **__int8**, **__int16**, **__int32** a **__Int64** jsou klíčová slova specifická pro společnost Microsoft. Ne všechny typy jsou k dispozici ve všech architekturách. ( **__int128** se nepodporuje.)|
 ||**long**|Typ **Long** (nebo **Long int**) je celočíselný typ, který je větší nebo roven velikosti typu **int**. (Ve Windows **Long** má stejnou velikost jako **int**.)<br /><br /> Objekty typu **Long** lze deklarovat jako **signed Long** nebo **unsigned long**. **Long signed** je synonymum pro **Long**.|
-||**Long Long**|Větší než unsigned **Long**.<br /><br /> Objekty typu **long long** lze deklarovat jako **podepsáno long long** nebo **unsigned long long**. Long Long **signed Long** je synonymum pro **dlouhou**dobu.|
-||**wchar_t**, **__wchar_t**|Proměnná typu **wchar_t** určuje typ znaku s velkým znakem nebo vícebajtovým znakem. Ve výchozím nastavení je **wchar_t** nativním typem, ale můžete použít parametr [/Zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) k provedení **wchar_t** definice typu pro **znaménko short**. Typ **__wchar_t** je synonymum specifické pro společnost Microsoft pro nativní typ **wchar_t** .<br /><br /> Použijte předponu L před znakovým nebo řetězcovým literálem k určení typu s velkým znakem.|
+||**Long Long**|Větší než unsigned **Long**.<br /><br /> Objekty typu **Long Long** lze deklarovat jako **signed** longed Long nebo **unsigned long long**. Long Long **signed Long** je synonymum pro **dlouhou**dobu.|
+||**wchar_t** **__wchar_t**|Proměnná typu **wchar_t** určuje typ znaku s velkým znakem nebo vícebajtovým znakem. Ve výchozím nastavení je **wchar_t** nativním typem, ale můžete použít parametr [/Zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) k provedení **wchar_t** definice typu pro **znaménko short**. Typ **__wchar_t** je synonymum specifické pro společnost Microsoft pro nativní typ **wchar_t** .<br /><br /> Použijte předponu L před znakovým nebo řetězcovým literálem k určení typu s velkým znakem.|
 |Číslo s plovoucí desetinnou čárkou|**float**|Typ **float** je nejmenší typ s plovoucí desetinnou čárkou.|
 ||**double**|Typ **Double** je typ s plovoucí desetinnou čárkou, který je větší než nebo roven typu **float**, ale kratší nebo rovno velikosti typu **Long Double**.<br /><br /> Specifické pro společnost Microsoft: reprezentace **Long Double** a **Double** je shodná. **Long Double** a **Double** jsou však samostatné typy.|
 ||**Long Double**|Typ **Long Double** je typ s plovoucí desetinnou čárkou, který je větší nebo roven typu **Double**.|
@@ -86,7 +89,7 @@ V následující tabulce je uvedeno množství úložiště potřebné pro před
 
 ### <a name="sizes-of-built-in-types"></a>Velikosti předdefinovaných typů
 
-|Type|Velikost|
+|Typ|Velikost|
 |----------|----------|
 |**bool**, **char**, **unsigned char**, **signed char**, **__int8**|1 bajt|
 |**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2 bajty|
@@ -99,6 +102,6 @@ V části rozsahy [datových typů](data-type-ranges.md) můžete zobrazit souhr
 
 Další informace o převodu typů naleznete v tématu [standardní převody](standard-conversions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rozsahy datových typů](data-type-ranges.md)

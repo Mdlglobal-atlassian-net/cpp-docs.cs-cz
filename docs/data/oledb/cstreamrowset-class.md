@@ -11,7 +11,6 @@ f1_keywords:
 - CStreamRowset.CStreamRowset
 - ATL.CStreamRowset.CStreamRowset
 - ATL::CStreamRowset::CStreamRowset
-- CStreamRowset
 - CStreamRowset<TAccessor>::CStreamRowset
 - ATL::CStreamRowset<TAccessor>::CStreamRowset
 - CStreamRowset<TAccessor>.Close
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: b566ddab89d2198e3f6b24eb9a20c60747749d1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a0e67ff1e800ff0f838b863eaaf839d4456ed82
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368666"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441079"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset – třída
 
-Používáno `CCommand` nebo `CTable` deklarace.
+Používá se v deklaraci `CCommand` nebo `CTable`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,11 +47,11 @@ class CStreamRowset
 ### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Třídu přistupujícího objektu.
+Přístupová třída.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h
+**Záhlaví:** atldbcli. h
 
 ## <a name="members"></a>Členové
 
@@ -60,31 +59,31 @@ Třídu přistupujícího objektu.
 
 |||
 |-|-|
-|[CStreamRowset](#cstreamrowset)|Konstruktor Vytvoří a inicializuje `CStreamRowset` objektu.|
-|[Zavřít](#close)|Verze [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) ukazatel rozhraní ve třídě.|
+|[CStreamRowset](#cstreamrowset)|Konstruktor Vytvoří instanci a inicializuje objekt `CStreamRowset`.|
+|[Uzavírací](#close)|Uvolní ukazatel rozhraní [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) ve třídě.|
 
 ## <a name="remarks"></a>Poznámky
 
-Použití `CStreamRowset` ve vašich `CCommand` nebo `CTable` prohlášení, například:
+V deklaraci `CCommand` nebo `CTable` použijte `CStreamRowset`, například:
 
 [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
 
-or
+nebo
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute` Vrátí `ISequentialStream` ukazatel, který je uložený v `m_spStream`. Pak použijete `Read` metodu pro načtení dat (řetězce Unicode) ve formátu XML. Příklad:
+`ICommand::Execute` vrátí ukazatel `ISequentialStream`, který je uložen v `m_spStream`. Pak použijte metodu `Read` k načtení dat (řetězce Unicode) ve formátu XML. Příklad:
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 
-SQL Server 2000 provádí XML, formátování a vrátí všechny sloupce a všechny řádky v sadě řádků jako jeden řetězec XML.
+SQL Server 2000 provádí formátování XML a vrátí všechny sloupce a všechny řádky sady řádků jako jeden řetězec XML.
 
 > [!NOTE]
->  Tato funkce funguje pouze s SQL Server 2000.
+>  Tato funkce funguje jenom s SQL Server 2000.
 
-## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
+## <a name="cstreamrowset"></a>CStreamRowset:: CStreamRowset
 
-Vytvoří a inicializuje `CStreamRowset` objektu.
+Vytvoří instanci a inicializuje objekt `CStreamRowset`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -92,9 +91,9 @@ Vytvoří a inicializuje `CStreamRowset` objektu.
 CStreamRowset();
 ```
 
-## <a name="close"></a> CStreamRowset::Close
+## <a name="close"></a>CStreamRowset:: Close
 
-Verze [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) ukazatel rozhraní ve třídě.
+Uvolní ukazatel rozhraní [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) ve třídě.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -102,7 +101,7 @@ Verze [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) 
 void Close();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

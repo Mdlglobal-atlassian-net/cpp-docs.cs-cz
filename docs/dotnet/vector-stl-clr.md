@@ -4,12 +4,6 @@ ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - cliext::vector
-- cliext::operator!=
-- cliext::operator<
-- cliext::operator<=
-- cliext::operator==
-- cliext::operator>
-- cliext::operator>=
 - cliext::vector::assign
 - cliext::vector::at
 - cliext::vector::back
@@ -97,18 +91,18 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: 34997476085ece7f7a55f72340b57516874aa483
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 5b16319c17b5f5681f6417d8732931da1974b66b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926129"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445546"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
-Třída šablony popisuje objekt, který řídí proměnlivou délku sekvence prvků, které mají náhodný přístup. Kontejner `vector` se používá ke správě sekvence prvků jako souvislý blok úložiště. Blok je implementován jako pole, které roste na vyžádání.
+Třída šablony popisuje objekt, který řídí proměnlivou délku sekvence prvků, které mají náhodný přístup. Pomocí `vector` kontejnerů můžete spravovat sekvenci prvků jako souvislý blok úložiště. Blok je implementován jako pole, které roste na vyžádání.
 
-V popisu níže `GValue` je stejná jako *hodnota* , pokud se jedná o typ REF, v takovém případě je `Value^`to.
+V popisu níže je `GValue` stejné jako *hodnota* , pokud se jedná o typ REF, v takovém případě je `Value^`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -133,7 +127,7 @@ Typ elementu v řízené sekvenci
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<cliext –/Vector – >
+**Záhlaví:** \<cliext –/Vector >
 
 **Obor názvů:** cliext –
 
@@ -188,12 +182,12 @@ Typ elementu v řízené sekvenci
 |--------------|-----------------|
 |[vector::operator= (STL/CLR)](#op_as)|Nahradí řízenou sekvenci.|
 |[vector::operator(STL/CLR)](#op)|Přistupuje k elementu na zadané pozici.|
-|[operator!= (vector) (STL/CLR)](#op_neq)|Určuje, zda `vector` objekt není roven jinému `vector` objektu.|
-|[operator< (vector) (STL/CLR)](#op_lt)|Určuje, zda `vector` je objekt menší než jiný `vector` objekt.|
-|[operator<= (vector) (STL/CLR)](#op_lteq)|Určuje, zda `vector` je objekt menší nebo roven jinému `vector` objektu.|
-|[operator== (vector) (STL/CLR)](#op_eq)|Určuje, zda `vector` je objekt roven jinému `vector` objektu.|
-|[operator> (vector) (STL/CLR)](#op_gt)|Určuje, zda `vector` je objekt větší než jiný `vector` objekt.|
-|[operator>= (vector) (STL/CLR)](#op_gteq)|Určuje, zda `vector` je objekt větší nebo roven jinému `vector` objektu.|
+|[operator!= (vector) (STL/CLR)](#op_neq)|Určuje, zda `vector` objekt není roven jinému objektu `vector`.|
+|[operator< (vector) (STL/CLR)](#op_lt)|Určuje, zda je objekt `vector` menší než jiný objekt `vector`.|
+|[operator<= (vector) (STL/CLR)](#op_lteq)|Určuje, zda je objekt `vector` menší nebo roven jinému objektu `vector`.|
+|[operator== (vector) (STL/CLR)](#op_eq)|Určuje, zda je objekt `vector` roven jinému objektu `vector`.|
+|[operator> (vector) (STL/CLR)](#op_gt)|Určuje, zda je objekt `vector` větší než jiný objekt `vector`.|
+|[operator>= (vector) (STL/CLR)](#op_gteq)|Určuje, zda je objekt `vector` větší nebo roven jinému objektu `vector`.|
 
 ## <a name="interfaces"></a>Rozhraní
 
@@ -205,17 +199,17 @@ Typ elementu v řízené sekvenci
 |<xref:System.Collections.Generic.IEnumerable%601>|Sekvence prostřednictvím typových elementů.|
 |<xref:System.Collections.Generic.ICollection%601>|Udržovat skupinu typových elementů.|
 |<xref:System.Collections.Generic.IList%601>|Udržovat uspořádanou skupinu typových prvků.|
-|Hodnota < IVector\>|Udržujte obecný kontejner.|
+|IVector hodnota <\>|Udržujte obecný kontejner.|
 
 ## <a name="remarks"></a>Poznámky
 
 Objekt přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, prostřednictvím uloženého pole *hodnotových* prvků, které roste na vyžádání. Růst probíhá takovým způsobem, že náklady na připojení nového prvku jsou konstantním časem. Jinými slovy, náklady na přidání prvků na konci nezvyšují průměrně, protože délka řízené sekvence je větší. Proto je vektor vhodným kandidátem pro základní kontejner pro zásobník tříd šablon [(STL/CLR)](../dotnet/stack-stl-clr.md).
 
-Podporuje iterátory s náhodným přístupem, což znamená, že můžete odkazovat na prvek přímo z jeho číselné pozice a počítat z nuly pro první (přední) prvek, na `size() - 1` pro poslední (zadní) prvek. `vector` Také to znamená, že vektor je dobrým kandidátem pro základní kontejner pro třídu template [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
+`vector` podporuje iterátory s náhodným přístupem, což znamená, že můžete odkazovat na element přímo v rámci své číselné pozice, počítáno od nuly pro první (přední) prvek a `size() - 1` pro poslední (zadní) prvek. Také to znamená, že vektor je dobrým kandidátem pro základní kontejner pro třídu šablony [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
 
 Vektorový iterátor ukládá popisovač do svého přidruženého vektorového objektu spolu s posunem elementu, který označuje. Iterátory lze použít pouze u jejich přidružených objektů kontejneru. Posun prvku Vector je stejný jako jeho pozice.
 
-Vložení nebo mazání prvků může změnit hodnotu prvku uloženou na dané pozici, aby mohla být hodnota určená iterátorem také změněna. (Kontejner může muset zkopírovat prvky nahoru nebo dolů a vytvořit díru před vložením nebo vyplněním otvoru po vymazání.) Nicméně vektorový iterátor zůstává platný, pokud je jeho posun v rozsahu `[0, size()]`. Navíc platí, že platný iterátor zůstává neodkazný – můžete ho použít pro přístup k hodnotě prvku, kterou Určuje, pokud k ní chcete přistupovat nebo ji upravit, a to i v `size()`případě, že se jeho posun nerovná.
+Vložení nebo mazání prvků může změnit hodnotu prvku uloženou na dané pozici, aby mohla být hodnota určená iterátorem také změněna. (Kontejner může muset zkopírovat prvky nahoru nebo dolů a vytvořit díru před vložením nebo vyplněním otvoru po vymazání.) Nicméně vektorový iterátor zůstává platný, pokud je jeho posun v rozsahu `[0, size()]`. Navíc platí, že platný iterátor zůstává neodkazný – můžete ho použít k přístupu k hodnotě prvku, kterou určí, a k její změně, pokud se její posun nerovná `size()`.
 
 Při mazání nebo odebírání elementu se volá destruktor pro jeho uloženou hodnotu. Zničení kontejneru smaže všechny prvky. Proto kontejner, jehož typ elementu je ref class, zajistí, že kontejner neobsahuje žádné prvky. Upozorňujeme však, že kontejner popisovačů nezničí své prvky.
 
@@ -236,10 +230,10 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 
 #### <a name="parameters"></a>Parametry
 
-*výpočtu*<br/>
+*count*<br/>
 Počet prvků, které mají být vloženy.
 
-*first*<br/>
+*první*<br/>
 Začátek rozsahu, který se má vložit
 
 *posledního*<br/>
@@ -573,7 +567,7 @@ void clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce efektivně volá Vector: [: Erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md) `(` [Vector:: begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md) `(),` [Vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md)`())`. Použijete ho k zajištění, aby řízená sekvence byla prázdná.
+Členská funkce efektivně volá [Vector:: Erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)`(` [Vector:: begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)`(),` [Vector:: end (STL/CLR](../dotnet/vector-end-stl-clr.md) )`())`. Použijete ho k zajištění, aby řízená sekvence byla prázdná.
 
 ### <a name="example"></a>Příklad
 
@@ -630,7 +624,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt nespecifikovaného typu `T2` , který může sloužit jako konstantní iterátor náhodného přístupu pro řízenou sekvenci.
+Typ popisuje objekt nespecifikovaného typu `T2`, který může sloužit jako konstantní iterátor náhodného přístupu pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -715,7 +709,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt nespecifikovaného typu `T4` , který může sloužit jako konstantní reverzní iterátor pro řízenou sekvenci.
+Typ popisuje objekt nespecifikovaného typu `T4`, který může sloužit jako konstantní reverzní iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -811,7 +805,7 @@ bool empty();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní k [Vector:: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() == 0`. Použijete ho k otestování, jestli je vektor prázdný.
+Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní s`() == 0`[Vector:: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md) . Použijete ho k otestování, jestli je vektor prázdný.
 
 ### <a name="example"></a>Příklad
 
@@ -862,7 +856,7 @@ iterator end();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí iterátor náhodného přístupu, který odkazuje hned za konec řízené sekvence. Použijete ho k získání iterátoru, který označuje `current` konec řízené sekvence, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
+Členská funkce vrátí iterátor náhodného přístupu, který odkazuje hned za konec řízené sekvence. Použijete ho k získání iterátoru, který určuje `current` konec řízené sekvence, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -919,7 +913,7 @@ iterator erase(iterator first, iterator last);
 
 #### <a name="parameters"></a>Parametry
 
-*first*<br/>
+*první*<br/>
 Začátek rozsahu, který se má vymazat
 
 *posledního*<br/>
@@ -934,7 +928,7 @@ První členská funkce odstraní prvek řízené sekvence, na kterou ukazuje, *
 
 Druhá členská funkce odstraní prvky řízené sekvence v rozsahu [`first`, `last`). Použijete ho k odebrání nuly nebo více souvislých prvků.
 
-Oba členské funkce vrací iterátor, který určuje první prvek zbývající za odebranými prvky, nebo [Vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `()` , pokud žádný takový prvek neexistuje.
+Oba členské funkce vrací iterátor, který určuje první prvek zbývající za odebranými prvky, nebo [Vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md)`()`, pokud žádný takový prvek neexistuje.
 
 Při mazání prvků je počet kopií elementu lineární v počtu prvků mezi koncem mazání a koncem koncového čísla sekvence. (Při mazání jednoho nebo více prvků na konci sekvence nedojde k žádnému kopírování prvků.)
 
@@ -1277,7 +1271,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt typu `GValue` , který popisuje hodnotu uloženého elementu pro použití s obecným rozhraním pro tuto třídu kontejneru šablony.
+Typ popisuje objekt typu `GValue`, který popisuje hodnotu uloženého elementu pro použití s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1338,10 +1332,10 @@ void insert(iterator where,
 
 #### <a name="parameters"></a>Parametry
 
-*výpočtu*<br/>
+*count*<br/>
 Počet prvků, které mají být vloženy.
 
-*first*<br/>
+*první*<br/>
 Začátek rozsahu, který se má vložit
 
 *posledního*<br/>
@@ -1364,11 +1358,11 @@ První členská funkce vloží prvek s hodnotou *Val* a vrátí iterátor, kter
 
 Druhá členská funkce vloží opakování *počtu prvků Value* *Val*. Použijete ho k vložení nula nebo více souvislých prvků, které jsou kopie stejné hodnoty.
 
-Pokud `InIt` je celočíselný typ, třetí členská funkce se chová stejně jako `insert(where, (size_type)first, (value_type)last)`. V opačném případě vloží sekvenci`first`[ `last`,). Použijete ho k vložení nula nebo více sousedících prvků zkopírovaných z jiné sekvence.
+Pokud `InIt` je celočíselný typ, třetí členská funkce se chová stejně jako `insert(where, (size_type)first, (value_type)last)`. V opačném případě vloží sekvenci [`first``last`). Použijete ho k vložení nula nebo více sousedících prvků zkopírovaných z jiné sekvence.
 
 Čtvrtá členská funkce vloží sekvenci určenou *vpravo*. Použijete ho k vložení sekvence popsané enumerátorem.
 
-Při vkládání jednoho prvku je počet kopií elementu lineární v počtu elementů mezi kurzorem a koncem sekvence. (Při vložení jednoho nebo více prvků na konci sekvence nedojde k žádnému kopírování prvků.) Pokud `InIt` je vstupní iterátor, třetí členská funkce efektivně provede jedno vložení pro každý prvek v sekvenci. V opačném případě `N` při vkládání prvků je počet kopií prvků lineární v `N` plus počet prvků mezi kurzorem a koncem sekvence.
+Při vkládání jednoho prvku je počet kopií elementu lineární v počtu elementů mezi kurzorem a koncem sekvence. (Při vložení jednoho nebo více prvků na konci sekvence nedojde k žádnému kopírování prvků.) Pokud je `InIt` vstupní iterátor, třetí členská funkce efektivně provede jedno vložení pro každý prvek v sekvenci. V opačném případě při vkládání `N` prvků je počet kopií prvku lineární v `N` plus počet prvků mezi kurzorem a koncem sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -1442,7 +1436,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt nespecifikovaného typu `T1` , který může sloužit jako iterátor náhodného přístupu pro řízenou sekvenci.
+Typ popisuje objekt nespecifikovaného typu `T1`, který může sloužit jako iterátor náhodného přístupu pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -1683,7 +1677,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí reverzní iterátor, který určuje poslední prvek řízené sekvence nebo těsně za začátek prázdné sekvence. Proto určuje `beginning` reverzní sekvenci. Použijete ho k získání iterátoru, který určuje `current` začátek kontrolované sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
+Členská funkce vrátí reverzní iterátor, který určuje poslední prvek řízené sekvence nebo těsně za začátek prázdné sekvence. Proto určuje `beginning` reverzní sekvence. Použijete ho k získání iterátoru, který určí `current` začátkem kontrolované sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -1793,7 +1787,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí reverzní iterátor, který odkazuje hned za začátek řízené sekvence. Proto určuje `end` reverzní sekvenci. Použijete ho k získání iterátoru, který určí `current` konec řízené sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
+Členská funkce vrátí reverzní iterátor, který odkazuje hned za začátek řízené sekvence. Proto určuje `end` reverzní sekvence. Použijete ho k získání iterátoru, který určuje `current` konec řízené sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -1849,12 +1843,12 @@ void reserve(size_type count);
 
 #### <a name="parameters"></a>Parametry
 
-*výpočtu*<br/>
+*count*<br/>
 Nová Minimální kapacita kontejneru.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce zajišťuje, `capacity()` že funkce nevrátí nejnižší *počet*. Použijete ho k zajištění, aby kontejner nemusel znovu přidělit úložiště pro řízenou sekvenci, dokud se nezvětšil na určenou velikost.
+Členská funkce zajišťuje, že `capacity()` funkce příště vrátí alespoň *počet*. Použijete ho k zajištění, aby kontejner nemusel znovu přidělit úložiště pro řízenou sekvenci, dokud se nezvětšil na určenou velikost.
 
 ### <a name="example"></a>Příklad
 
@@ -1913,7 +1907,7 @@ Hodnota elementu odsazení
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce zajišťují, že funkce [Vector:: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` následně vrátí *new_size*. Pokud musí být řízená sekvence delší, První členská funkce připojí prvky s hodnotou `value_type()`, zatímco druhá členská funkce přidá prvky s hodnotou *Val*. Chcete-li nastavit kratší sekvenci, obě členské funkce efektivně vymažou poslední prvek [Vector:: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() -` `new_size` krát. Použijete ji k zajištění, že řízená sekvence má velikost *new_size*, buď oříznutím nebo odsazením aktuálně řízené sekvence.
+Členské funkce zajišťují, že funkce [Vector:: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()` vrátí *new_size*. Je-li nutné řídit sekvenci déle, První členská funkce připojí prvky s hodnotou `value_type()`, zatímco druhá členská funkce připojí prvky s hodnotou *Val*. Chcete-li nastavit kratší sekvenci, obě členské funkce efektivně vymažou poslední prvek [Vector:: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() -` `new_size` časy. Slouží k zajištění, že řízená sekvence má velikost *new_size*, buď oříznutím nebo odsazením aktuálně řízené sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -1964,7 +1958,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt nespecifikovaného typu `T3` , který může sloužit jako reverzní iterátor pro řízenou sekvenci.
+Typ popisuje objekt nespecifikovaného typu `T3`, který může sloužit jako reverzní iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -2116,7 +2110,7 @@ Kontejner pro prohození obsahu pomocí.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce přemění kontrolované sekvence mezi `*this` a *vpravo*. Provede to v konstantním čase a nevyvolává žádné výjimky. Použijete ho jako rychlý způsob, jak vyměňovat obsah dvou kontejnerů.
+Členská funkce přemění kontrolované sekvence mezi `*this` a *pravou*. Provede to v konstantním čase a nevyvolává žádné výjimky. Použijete ho jako rychlý způsob, jak vyměňovat obsah dvou kontejnerů.
 
 ### <a name="example"></a>Příklad
 
@@ -2276,10 +2270,10 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 
 #### <a name="parameters"></a>Parametry
 
-*výpočtu*<br/>
+*count*<br/>
 Počet prvků, které mají být vloženy.
 
-*first*<br/>
+*první*<br/>
 Začátek rozsahu, který se má vložit
 
 *posledního*<br/>
@@ -2315,7 +2309,7 @@ Konstruktor:
 
 `explicit vector(size_type count);`
 
-Inicializuje řízenou sekvenci s *počtem* elementů, `value_type()`každý s hodnotou. Použijete ho k vyplnění kontejneru všemi prvky, které mají výchozí hodnotu.
+Inicializuje řízenou sekvenci pomocí prvků *Count* s hodnotou `value_type()`. Použijete ho k vyplnění kontejneru všemi prvky, které mají výchozí hodnotu.
 
 Konstruktor:
 
@@ -2424,7 +2418,7 @@ Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrátí `!(left == right)`. Použijete ji k otestování, zda *Left* není seřazena stejně jako *právo* , pokud jsou tyto dva vektory porovnány s prvkem podle elementu.
+Funkce operátoru vrací `!(left == right)`. Použijete ji k otestování, zda *Left* není seřazena stejně jako *právo* , pokud jsou tyto dva vektory porovnány s prvkem podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -2493,7 +2487,7 @@ Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operator vrátí hodnotu true, pokud, pro nejnižší pozici `i` , pro `!(right[i] < left[i])` kterou je také true `left[i] < right[i]`. V opačném případě `left->size() < right->size()` ho vrátí k otestování, *zda je* před *pravou* seřazena druhá vektory, pokud jsou tyto dva vektory porovnány elementem.
+Funkce operator vrátí hodnotu true, pokud `i` nejnižší pozice, pro kterou `!(right[i] < left[i])` je také true `left[i] < right[i]`. V opačném případě vrátí `left->size() < right->size()` použijete k otestování, *zda je* před *pravou* seřazena druhá vektory, pokud jsou tyto dva vektory porovnány elementem.
 
 ### <a name="example"></a>Příklad
 
@@ -2562,7 +2556,7 @@ Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrátí `!(right < left)`. Použijete ho k otestování *, jestli není* po *pravé straně* , když jsou tyto dva vektory porovnány, na prvek podle elementu.
+Funkce operátoru vrací `!(right < left)`. Použijete ho k otestování *, jestli není* po *pravé straně* , když jsou tyto dva vektory porovnány, na prvek podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -2631,7 +2625,7 @@ Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operator vrátí hodnotu true pouze v případě, že sekvence kontrolované *levou* a *pravou* mají stejnou délku a pro `i` `left[i] ==` `right[i]`každou pozici. Použijete ji k otestování, zda je *levé* řazení stejné jako *pravé* , pokud jsou dva vektory porovnány s prvkem podle prvku.
+Funkce operator vrátí hodnotu true pouze v případě, že sekvence řízené *levou* a *pravou* mají stejnou délku a pro každou pozici `i``left[i] ==` `right[i]`. Použijete ji k otestování, zda je *levé* řazení stejné jako *pravé* , pokud jsou dva vektory porovnány s prvkem podle prvku.
 
 ### <a name="example"></a>Příklad
 
@@ -2700,7 +2694,7 @@ Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrátí `right`. `<` `left` Použijete ji k otestování *, zda je* po *pravé* době řazení dvou vektorů porovnány prvky podle prvku.
+Funkce operator vrací `right` `<` `left`. Použijete ji k otestování *, zda je* po *pravé* době řazení dvou vektorů porovnány prvky podle prvku.
 
 ### <a name="example"></a>Příklad
 
@@ -2769,7 +2763,7 @@ Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrátí `!(left < right)`. Použijete ji k otestování, zda je *ponecháno* před *pravou* , pokud jsou tyto dva vektory porovnány podle elementu.
+Funkce operátoru vrací `!(left < right)`. Použijete ji k otestování, zda je *ponecháno* před *pravou* , pokud jsou tyto dva vektory porovnány podle elementu.
 
 ### <a name="example"></a>Příklad
 

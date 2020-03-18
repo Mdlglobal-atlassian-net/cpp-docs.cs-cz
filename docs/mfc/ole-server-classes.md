@@ -1,50 +1,48 @@
 ---
 title: OLE – třídy serveru
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - OLE server applications [MFC], server classes
 - OLE server documents
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 99dd7f58b862fadc86ee2515bb8ef2008bc538fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92dec514611dcce7d6c666fdd271843e69561637
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385320"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447590"
 ---
 # <a name="ole-server-classes"></a>OLE – třídy serveru
 
-Tyto třídy jsou používány serverových aplikací. Dokumenty na serveru jsou odvozeny z `COleServerDoc` spíše než z `CDocument`. Upozorňujeme, že `COleServerDoc` je odvozen z `COleLinkingDoc`, dokumenty na serveru může být také kontejnery, které podporují propojování.
+Tyto třídy používají serverové aplikace. Dokumenty serveru jsou odvozeny z `COleServerDoc` spíše než z `CDocument`. Vzhledem k tomu, že `COleServerDoc` je odvozená od `COleLinkingDoc`, serverové dokumenty můžou být také kontejnery, které podporují propojování.
 
-`COleServerItem` Třída představuje dokument nebo část dokumentu, který může být vložený do jiného dokumentu nebo propojené s.
+Třída `COleServerItem` představuje dokument nebo část dokumentu, která může být vložena do jiného dokumentu nebo propojena s.
 
-`COleIPFrameWnd` a `COleResizeBar` podporují místní úpravy. Pokud je objekt v kontejneru a `COleTemplateServer` podporuje vytváření dokumentů/zobrazení dvojice, takže lze upravovat objekty OLE z jiných aplikací.
+`COleIPFrameWnd` a `COleResizeBar` podporu místních úprav, zatímco je objekt v kontejneru, a `COleTemplateServer` podporuje vytváření párů dokument/zobrazení, aby bylo možné upravovat objekty OLE z jiných aplikací.
 
 [COleServerDoc](../mfc/reference/coleserverdoc-class.md)<br/>
-Použít jako základní třída pro třídy dokumentu serverová aplikace. `COleServerDoc` objekty poskytují hromadné podpora serveru prostřednictvím interakce s `COleServerItem` objekty. Vizuální úpravy funkce je poskytována architekturu document/view knihovny tříd pomocí.
+Slouží jako základní třída pro třídy dokumentu serverové aplikace. `COleServerDoc` objekty poskytují hromadnou podporu serveru prostřednictvím interakcí s objekty `COleServerItem`. Funkce úprav vizuálního prostředí je k dispozici pomocí architektury document/view knihovny tříd.
 
 [CDocItem](../mfc/reference/cdocitem-class.md)<br/>
-Abstraktní základní třída `COleClientItem` a `COleServerItem`. Objekty tříd odvozených z `CDocItem` představují části dokumentů.
+Abstraktní základní třída `COleClientItem` a `COleServerItem` Objekty tříd odvozených z `CDocItem` reprezentují části dokumentů.
 
-[COleServerItem](../mfc/reference/coleserveritem-class.md)<br/>
-Reprezentuje rozhraní OLE `COleServerDoc` položky. Je obvykle `COleServerDoc` objektu, který reprezentuje vložený část dokumentu. Na serverech, které podporují odkazy na části dokumentů, může být mnoho `COleServerItem` objektů, z nichž každý představuje odkaz na část dokumentu.
+[Odvozenou třídu COleServerItem](../mfc/reference/coleserveritem-class.md)<br/>
+Slouží k reprezentaci rozhraní OLE pro `COleServerDoc` položek. K dispozici je obvykle jeden `COleServerDoc` objekt, který představuje vloženou část dokumentu. V serverech, které podporují odkazy na části dokumentů, může existovat mnoho `COleServerItem` objektů, z nichž každý představuje odkaz na část dokumentu.
 
 [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
-Pokud dokument na serveru je upravována v místě, poskytuje okno rámce pro zobrazení.
+Poskytuje okno rámce pro zobrazení při upravovaném dokumentu serveru.
 
 [COleResizeBar](../mfc/reference/coleresizebar-class.md)<br/>
-Poskytuje standardní uživatelské rozhraní pro změnu velikosti na místě. Objekty této třídy jsou vždy používá ve spojení s `COleIPFrameWnd` objekty.
+Poskytuje standardní uživatelské rozhraní pro místní změnu velikosti. Objekty této třídy se vždycky používají ve spojení s `COleIPFrameWnd` objekty.
 
 [COleTemplateServer](../mfc/reference/coletemplateserver-class.md)<br/>
-Slouží k vytváření dokumentů pomocí architektury dokument/zobrazení rozhraní framework. A `COleTemplateServer` deleguje většinu práce na přiřazený objekt `CDocTemplate` objektu.
+Slouží k vytváření dokumentů pomocí architektury dokument/zobrazení rozhraní. Objekt `COleTemplateServer` deleguje většinu práce na přidružený objekt `CDocTemplate`.
 
 [COleException](../mfc/reference/coleexception-class.md)<br/>
-Výjimka vyplývající z chyby ve zpracování OLE. Tato třída se používá tak, že kontejnery a servery.
+Výjimka způsobená selháním při zpracování OLE. Tato třída se používá v kontejnerech i serverech.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../mfc/class-library-overview.md)
+[Přehled třídy](../mfc/class-library-overview.md)

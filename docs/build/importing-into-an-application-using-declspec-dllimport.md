@@ -1,25 +1,22 @@
 ---
 title: Import do aplikace s použitím deklarace __declspec(dllimport)
 ms.date: 11/04/2016
-f1_keywords:
-- __declspec
-- dllimport
 helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: 30e0f6517f2d749962c5cf49dddb1662c9ccf129
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fd7d42ec5a76b92aa789a3a20f38e6b2c0fd2cb1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341646"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440409"
 ---
-# <a name="import-into-an-application-using-declspecdllimport"></a>Import do aplikace s použitím deklarace __declspec(dllimport)
+# <a name="import-into-an-application-using-__declspecdllimport"></a>Import do aplikace s použitím deklarace __declspec(dllimport)
 
-Program, který používá veřejné symboly definované knihovnou DLL se říká, že je importovat. Když vytvoříte soubory hlaviček pro aplikace, které používají vaše DLL knihovny k sestavení, použijte **__declspec(dllimport)** deklarace veřejných symbolů. Klíčové slovo **__declspec(dllimport)** funguje, jestli exportujete pomocí souborů .def nebo se **__declspec(dllexport)** – klíčové slovo.
+Program, který používá veřejné symboly definované knihovnou DLL, je uveden pro import. Při vytváření hlavičkových souborů pro aplikace, které používají knihovny DLL k sestavení pomocí, použijte **__declspec (dllimport)** pro deklarace veřejných symbolů. Klíčové slovo **__declspec (dllimport)** funguje bez ohledu na to, zda exportujete do souborů. def nebo pomocí klíčového slova **__declspec (dllexport)** .
 
-Aby byl kód čitelnější, definujte makro pro **__declspec(dllimport)** a poté použijte makro k deklaraci každý importovaný symbol:
+Aby byl váš kód čitelnější, definujte makro pro **__declspec (dllimport)** a pak použijte makro k deklaraci každého importovaného symbolu:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -28,9 +25,9 @@ DllImport int  j;
 DllImport void func();
 ```
 
-Pomocí **__declspec(dllimport)** je volitelné na deklarace funkcí, ale kompilátor vytvoří kód efektivnější, pokud použijete toto klíčové slovo. Nicméně je nutné použít **__declspec(dllimport)** pro import spustitelného souboru pro přístup k veřejné datové symboly a objekty knihovny DLL. Všimněte si, že uživatelé vaše knihovna DLL stále nutné propojení s knihovnou importu.
+Použití **__declspec (dllimport)** je volitelné v deklaracích funkcí, ale kompilátor vytváří efektivnější kód, pokud použijete toto klíčové slovo. Je však nutné použít **__declspec (dllimport)** pro import spustitelného souboru pro přístup ke symbolům a objektům veřejných dat knihovny DLL. Všimněte si, že uživatelé vaší knihovny DLL stále musí propojit knihovnu importů.
 
-Můžete stejného souboru hlavičky pro knihovnu DLL a klientské aplikace. K tomuto účelu použijte speciální symbol preprocesoru, který označuje, zda je vytváření knihovny DLL nebo vytváření klientské aplikace. Příklad:
+Můžete použít stejný hlavičkový soubor pro knihovnu DLL i pro klientskou aplikaci. K tomu použijte speciální symbol preprocesoru, který označuje, zda vytváříte knihovnu DLL nebo vytváříte klientskou aplikaci. Příklad:
 
 ```
 #ifdef _EXPORTING
@@ -45,14 +42,14 @@ class CLASS_DECLSPEC CExampleA : public CObject
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicializovat knihovnu DLL](run-time-library-behavior.md#initializing-a-dll)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
 - [Import a export vložených funkcí](importing-and-exporting-inline-functions.md)
 
 - [Vzájemné importy](mutual-imports.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Import do aplikace](importing-into-an-application.md)

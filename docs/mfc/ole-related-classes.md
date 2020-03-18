@@ -1,36 +1,34 @@
 ---
 title: Třídy související s rozhraním OLE
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
-ms.openlocfilehash: 7d58072d133b9348558804b848ecfda4497931e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfcc07b3fbd0c5badce8e397f4d52bc7d8d3028c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378294"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447602"
 ---
 # <a name="ole-related-classes"></a>Třídy související s rozhraním OLE
 
-Tyto třídy poskytují celou řadou různých služeb, od výjimky pro vstup a výstup souborů.
+Tyto třídy poskytují různé služby, od výjimek až po vstup a výstup souborů.
 
 [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)<br/>
-Umožňuje vytvořit položky při požadavku na z jiných kontejnerů. Tato třída slouží jako základní třída pro konkrétnější typy objektů pro vytváření, včetně `COleTemplateServer`.
+Slouží k vytváření položek, pokud se požadují z jiných kontejnerů. Tato třída slouží jako základní třída pro více specifických typů továrn, včetně `COleTemplateServer`.
 
 [COleMessageFilter](../mfc/reference/colemessagefilter-class.md)<br/>
-Použít ke správě souběžnosti s OLE Lightweight vzdálené procedury volání (LRPC).
+Používá se ke správě souběžnosti s nezjednodušenými vzdálenými procedurami volání OLE (LRPC).
 
 [COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
-Používá COM `IStream` rozhraní k poskytování `CFile` přístup k složené soubory. Tato třída (odvozený od `CFile`) umožňuje MFC serializace za účelem použití OLE strukturované úložiště.
+K poskytnutí `CFile` přístupu ke složeným souborům používá `IStream` rozhraní COM. Tato třída (odvozená z `CFile`) umožňuje serializaci knihovny MFC k použití strukturovaného úložiště OLE.
 
-[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
-Používá k přesunutí, změna velikosti a přesměrování na místě položek.
+[CRectTracker –](../mfc/reference/crecttracker-class.md)<br/>
+Slouží k povolení přesouvání, změny velikosti a přeorientaci místních položek.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../mfc/class-library-overview.md)
+[Přehled třídy](../mfc/class-library-overview.md)

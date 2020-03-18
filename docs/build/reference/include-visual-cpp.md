@@ -1,23 +1,22 @@
 ---
-title: '&lt;Zahrnout > (C++ dokumentačních komentářů)'
+title: '&lt;zahrnout > (C++ dokumentační komentáře)'
 ms.date: 11/04/2016
 f1_keywords:
-- include
 - <include>
 helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: b7d1033aa5b6c95c0db8eb9debf74596dc214fb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1d6a26f28069cfb4a1c74bd591d63bc89352774
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291324"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439517"
 ---
 # <a name="ltincludegt"></a>&lt;include&gt;
 
-\<Zahrnout > značky umožňuje odkazovat na komentáře do jiného souboru, které popisují typy a členy ve zdrojovém kódu. Jedná se o alternativu k uvedení dokumentační komentáře přímo v souboru zdrojového kódu.  Například můžete použít \<zahrnout > Chcete-li vložit standardní "standardní" komentáře, které se používají v váš tým nebo společnost.
+\<include > umožňuje odkazování na komentáře v jiném souboru, které popisují typy a členy ve zdrojovém kódu. Toto je alternativa k umístění dokumentačních komentářů přímo do souboru zdrojového kódu.  Můžete například použít \<zahrnout > pro vložení standardních "často používaných" komentářů, které se používají v celém týmu nebo společnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,27 +26,27 @@ ms.locfileid: "62291324"
 
 #### <a name="parameters"></a>Parametry
 
-*Název souboru*<br/>
-Název souboru, který obsahuje dokumentaci. Název souboru může být kvalifikovány s cestou.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  Kompilátor vyvolá upozornění, pokud se nenajde `filename`.
+*Bitmap*<br/>
+Název souboru, který obsahuje dokumentaci. Název souboru může být kvalifikován cestou.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  Kompilátor vydá upozornění, pokud nenajde `filename`.
 
 *tagpath*<br/>
-Platný výraz XPath, který vybere požadované sadě uzlů obsažené v souboru.
+Platný výraz XPath, který vybírá požadovanou sadu uzlů obsaženou v souboru.
 
 *Jméno*<br/>
-Specifikátor názvem ve značce, který předchází komentáře; `name` bude mít `id`.
+Specifikátor názvu ve značce, který předchází komentářům; `name` bude mít `id`.
 
 *id*<br/>
-ID značky, které předchází komentáře.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.
+ID značky, která předchází komentář.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.
 
 ## <a name="remarks"></a>Poznámky
 
-\<Zahrnout > značky používá syntaxe jazyka XML. Výraz XPath dokumentaci způsoby, jak přizpůsobit pomocí \<zahrnout >.
+\<obsahuje značku > používá syntaxi XPath XML. V dokumentaci XPath najdete způsoby přizpůsobení pomocí \<include >.
 
-Kompilovat s [/doc](doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+Zkompilujte pomocí [/doc](doc-process-documentation-comments-c-cpp.md) a zpracujte dokumentační komentáře do souboru.
 
 ## <a name="example"></a>Příklad
 
-Toto je vícesouborové příklad. První soubor, který používá \<zahrnout >, obsahuje následující komentáře k dokumentaci:
+Toto je příklad vícesouborového typu. První soubor, který používá \<include >, obsahuje následující komentáře k dokumentaci:
 
 ```cpp
 // xml_include_tag.cpp
@@ -67,7 +66,7 @@ public ref class Test2 {
 };
 ```
 
-Druhý soubor, xml_include_tag.doc, obsahuje následující komentáře k dokumentaci:
+Druhý soubor xml_include_tag. doc obsahuje následující komentáře k dokumentaci:
 
 ```xml
 <MyDocs>
@@ -110,6 +109,6 @@ The summary for this other type.
 </doc>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Dokumentace XML](xml-documentation-visual-cpp.md)

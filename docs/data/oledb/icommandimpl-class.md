@@ -21,7 +21,6 @@ f1_keywords:
 - ICommandImpl.GetDBSession
 - ATL.ICommandImpl.ICommandImpl
 - ATL::ICommandImpl::ICommandImpl
-- ICommandImpl
 - ICommandImpl::ICommandImpl
 - ICommandImpl.ICommandImpl
 - ICommandImpl::m_bCancel
@@ -52,16 +51,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408963"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447058"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl – třída
 
-Poskytuje implementaci pro [rozhraní ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85)) rozhraní.
+Poskytuje implementaci pro rozhraní [ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,15 +71,15 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Vaše třída odvozena od `ICommandImpl`.
+*Š*<br/>
+Vaše třída odvozená od `ICommandImpl`.
 
 *CommandBase*<br/>
-Příkaz rozhraní. Výchozí hodnota je `ICommand`.
+Rozhraní příkazu. Výchozí formát je `ICommand`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -88,28 +87,28 @@ Příkaz rozhraní. Výchozí hodnota je `ICommand`.
 
 |||
 |-|-|
-|[Zrušení](#cancel)|Zruší aktuální provedení příkazu.|
-|[CancelExecution](#cancelexecution)|Zruší aktuální provedení příkazu.|
+|[Zrušení](#cancel)|Zruší aktuální spuštění příkazu.|
+|[CancelExecution](#cancelexecution)|Zruší aktuální spuštění příkazu.|
 |[CreateRowset](#createrowset)|Vytvoří objekt sady řádků.|
-|[Execute](#execute)|Vykoná příkaz.|
-|[GetDBSession](#getdbsession)|Vrátí ukazatel rozhraní na relaci, která vytvoří příkaz.|
+|[Execute](#execute)|Provede příkaz.|
+|[GetDBSession](#getdbsession)|Vrátí ukazatel rozhraní na relaci, která vytvořila příkaz.|
 |[ICommandImpl](#icommandimpl)|Konstruktor|
 
 ### <a name="data-members"></a>Datové členy
 
 |||
 |-|-|
-|[m_bCancel](#bcancel)|Označuje, zda je příkazu budou zrušeny.|
-|[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Označuje, zda je příkazu budou zrušeny při provádění.|
-|[m_bIsExecuting](#bisexecuting)|Určuje, zda příkaz právě probíhá.|
+|[m_bCancel](#bcancel)|Určuje, zda má být příkaz zrušen.|
+|[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Určuje, zda má být příkaz zrušen při spuštění.|
+|[m_bIsExecuting](#bisexecuting)|Určuje, zda je příkaz aktuálně spuštěn.|
 
 ## <a name="remarks"></a>Poznámky
 
-Povinné rozhraní pro objekt příkazu.
+Povinné rozhraní objektu Command.
 
-## <a name="cancel"></a> ICommandImpl::Cancel
+## <a name="cancel"></a>ICommandImpl:: Cancel
 
-Zruší aktuální provedení příkazu.
+Zruší aktuální spuštění příkazu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -119,11 +118,11 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ICommand::Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
+## <a name="cancelexecution"></a>ICommandImpl:: CancelExecution
 
-Zruší aktuální provedení příkazu.
+Zruší aktuální spuštění příkazu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -131,9 +130,9 @@ Zruší aktuální provedení příkazu.
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a> ICommandImpl::CreateRowset
+## <a name="createrowset"></a>ICommandImpl:: CreateRowset
 
-Volané [Execute](../../data/oledb/icommandimpl-execute.md) k vytvoření jedné sady řádků.
+Volá se [spuštěním, aby](../../data/oledb/icommandimpl-execute.md) se vytvořila jediná sada řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -150,39 +149,39 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 #### <a name="parameters"></a>Parametry
 
 *RowsetClass*<br/>
-Šablona člena třídy představující třídu sady řádků uživatele. Obvykle generované průvodcem knihovnou.
+Člen třídy šablony představující třídu sady řádků uživatele. Obvykle generuje průvodcem.
 
 *pUnkOuter*<br/>
-[in] Ukazatel řízení `IUnknown` rozhraní, pokud v sadě řádků se vytváří jako součást agregace; jinak má hodnotu null.
+pro Ukazatel na řídicí `IUnknown` rozhraní, pokud se sada řádků vytváří jako součást agregace; v opačném případě má hodnotu null.
 
 *riid*<br/>
-[in] Odpovídá *riid* v `ICommand::Execute`.
+pro Odpovídá *riid* v `ICommand::Execute`.
 
 *pParams*<br/>
-[/ out] Odpovídá *pParams* v `ICommand::Execute`.
+[in/out] Odpovídá *pParams* v `ICommand::Execute`.
 
 *pcRowsAffected*<br/>
 Odpovídá *pcRowsAffected* v `ICommand::Execute`.
 
 *ppRowset*<br/>
-[/ out] Odpovídá *ppRowset* v `ICommand::Execute`.
+[in/out] Odpovídá *ppRowset* v `ICommand::Execute`.
 
 *pRowsetObj*<br/>
-[out] Ukazatel na objektu sady řádků. Tento parametr se obvykle nepoužívá, ale lze použít, pokud před předáním objektu COM je nutné provést další práce na dané sadě řádků. Životnost *pRowsetObj* je svázaná s *ppRowset*.
+mimo Ukazatel na objekt sady řádků. Tento parametr se obvykle nepoužívá, ale je možné jej použít, je-li nutné provést více práce na sadě řádků předtím, než je předáte objektu COM. Životnost *pRowsetObj* je vázána *ppRowset*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT. Zobrazit `ICommand::Execute` seznam typické hodnoty.
+Standardní hodnota HRESULT. Seznam typických hodnot naleznete v tématu `ICommand::Execute`.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li vytvořit více než jedné sady řádků nebo poskytnout vlastní podmínky pro vytváření různých sad řádků, umístěte volání různých `CreateRowset` zevnitř `Execute`.
+Chcete-li vytvořit více než jednu sadu řádků nebo zadat vlastní podmínky pro vytváření různých sad řádků, umístěte různá volání `CreateRowset` v rámci `Execute`.
 
-Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenční informace pro OLE DB programátory.*
+Viz [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenci programátora OLE DB.*
 
-## <a name="execute"></a> ICommandImpl::Execute
+## <a name="execute"></a>ICommandImpl:: Execute
 
-Vykoná příkaz.
+Provede příkaz.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -196,17 +195,17 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="remarks"></a>Poznámky
 
-Odchozí požadované rozhraní bude rozhraní získaných z objektu sady řádků, které tato funkce vytvoří.
+Požadované odchozí rozhraní bude rozhraní získaná z objektu sady řádků, který tato funkce vytvoří.
 
-`Execute` volání [createrowset –](../../data/oledb/icommandimpl-createrowset.md). Přepište výchozí implementace vytvořit více než jedné sady řádků nebo poskytnout vlastní podmínky pro vytváření různé sady řádků.
+`Execute` volá [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Přepsat výchozí implementaci pro vytvoření více než jedné sady řádků nebo pro poskytnutí vlastních podmínek pro vytváření různých sad řádků.
 
-## <a name="getdbsession"></a> ICommandImpl::GetDBSession
+## <a name="getdbsession"></a>ICommandImpl:: GetDBSession
 
-Vrátí ukazatel rozhraní na relaci, která vytvoří příkaz.
+Vrátí ukazatel rozhraní na relaci, která vytvořila příkaz.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -217,13 +216,13 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [ICommand:: GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="remarks"></a>Poznámky
 
-Užitečné při načítání vlastností z relace.
+Užitečné pro načítání vlastností z relace.
 
-## <a name="icommandimpl"></a> ICommandImpl::ICommandImpl
+## <a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
 
 Konstruktor
 
@@ -233,7 +232,7 @@ Konstruktor
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a> ICommandImpl::m_bCancel
+## <a name="bcancel"></a>ICommandImpl:: m_bCancel
 
 Určuje, zda je příkaz zrušen.
 
@@ -245,11 +244,11 @@ unsigned m_bCancel:1;
 
 ### <a name="remarks"></a>Poznámky
 
-V této proměnné můžete načíst `Execute` metody třídy příkazu a zrušit podle potřeby.
+Tuto proměnnou můžete načíst v metodě `Execute` třídy Command a zrušit podle potřeby.
 
-## <a name="bcancelwhenexecuting"></a> ICommandImpl::m_bCancelWhenExecuting
+## <a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
 
-Určuje, zda příkaz se může týkat při provádění.
+Určuje, zda lze příkaz Zrušit při spuštění.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -259,11 +258,11 @@ unsigned m_bCancelWhenExecuting:1;
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí hodnota je **true** (může být zrušen).
+Výchozí **hodnota je true** (lze zrušit).
 
-## <a name="bisexecuting"></a> ICommandImpl::m_bIsExecuting
+## <a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
 
-Určuje, zda příkaz právě probíhá.
+Určuje, zda je příkaz aktuálně spuštěn.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -273,9 +272,9 @@ unsigned m_bIsExecuting:1;
 
 ### <a name="remarks"></a>Poznámky
 
-`Execute` Metoda třídy příkazu můžete tuto proměnnou nastavit na **true**.
+Metoda `Execute` vaší třídy příkazu může tuto proměnnou nastavit na **hodnotu true**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

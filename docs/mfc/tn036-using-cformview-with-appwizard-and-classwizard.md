@@ -1,23 +1,21 @@
 ---
-title: 'TN036: Použití třídy CFormView s průvodcem AppWizard a ClassWizard'
+title: 'TN036: Použití třídy CFormView s objekty AppWizard a ClassWizard'
 ms.date: 11/04/2016
-f1_keywords:
-- CFormView
 helpviewer_keywords:
 - TN036
 ms.assetid: dd54053f-ae80-4d23-9180-c7d07ddf2290
-ms.openlocfilehash: 698070340e2f44b908a564bdda2c69ecda227386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a339ba7b4a3837d4712174dbb5b749131435617
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305525"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447411"
 ---
-# <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: Použití třídy CFormView s průvodcem AppWizard a ClassWizard
+# <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: Použití třídy CFormView s objekty AppWizard a ClassWizard
 
-Tato technická Poznámka popisuje úpravy aplikace vygenerované průvodcem AppWizard tak, aby ho použít `CFormView` místo výchozího `CView` jako jeho třída hlavního zobrazení. To je podporováno přímo s touto verzí sady Visual C++.
+Tato technická Poznámka popisuje, jak upravit AppWizard generovanou aplikaci tak, aby místo výchozího `CView` používala jako hlavní třídu zobrazení `CFormView`. To je podporováno přímo v této verzi vizuálu C++.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

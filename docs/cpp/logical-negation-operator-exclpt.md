@@ -3,18 +3,17 @@ title: 'Logický operátor negace: !'
 ms.date: 08/27/2018
 f1_keywords:
 - '!'
-- Not
 helpviewer_keywords:
 - '! operator'
 - NOT operator
 - logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
-ms.openlocfilehash: 7b37e5108ca01d782c13508c0cd7a96b096cd745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06142ef15fcdbafdbae4b892772a04b117c087f6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216405"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446536"
 ---
 # <a name="logical-negation-operator-"></a>Logický operátor negace: !
 
@@ -26,13 +25,13 @@ ms.locfileid: "62216405"
 
 ## <a name="remarks"></a>Poznámky
 
-Operátor logické negace (**!**) změní význam jeho operandu. Operand musí být aritmetického typu nebo typu ukazatele (nebo výraz, jehož výsledkem je aritmetický typ nebo typ ukazatele). Operand je implicitně převeden na typ **bool**. Výsledkem je hodnota TRUE, pokud má převedený operand hodnotu FALSE; Výsledkem je FALSE, pokud má převedený operand hodnotu TRUE. Výsledek je typu **bool**.
+Logický operátor negace ( **!** ) obrátí význam jeho operandu. Operand musí být aritmetického typu nebo typu ukazatele (nebo výraz, jehož výsledkem je aritmetický typ nebo typ ukazatele). Operand je implicitně převeden na typ **bool**. Výsledek je TRUE, pokud je převedený operand FALSE; výsledek je FALSE, pokud má převedený operand hodnotu TRUE. Výsledek je typu **bool**.
 
-Pro výraz *e*, je jednočlenný výraz `!e` je ekvivalentní výraz `(e == 0)`, s výjimkou případů, ve kterém se účastní přetížené operátory.
+Pro výraz *e*je unární výraz `!e` ekvivalentní k výrazu `(e == 0)`, s výjimkou případů, kdy jsou zapojeny přetížené operátory.
 
 ## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor !
 
-**Není** operátor je alternativní pravopis **!**. Existují dva způsoby přístupu k **není** operátor ve svých programech: zahrnutím souboru hlaviček \<soubor iso646.h >, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).
+Operátor **Not** je alternativním pravopisem **!** . Existují dva způsoby, jak získat přístup k operátoru **Not** ve svých programech: zahrňte soubor hlaviček \<iso646. h > nebo zkompilujte pomocí možnosti kompilátoru [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
 
 ## <a name="example"></a>Příklad
 
@@ -49,7 +48,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

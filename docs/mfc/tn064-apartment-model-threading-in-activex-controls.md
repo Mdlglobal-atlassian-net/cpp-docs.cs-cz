@@ -1,8 +1,6 @@
 ---
-title: 'TN064: Dělení na vlákna modelu apartment v ovládacích prvcích ActiveX'
+title: 'TN064: Model apartment práce s vlákny v ovládacích prvcích ActiveX'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.controls.activex
 helpviewer_keywords:
 - OLE controls [MFC], container support
 - containers [MFC], multithreaded
@@ -10,14 +8,14 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: 2c6b9dd3ed244f7169e5055eebe7a34e3345e841
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f490e82e179da4614eea345136a9edfb1d320705
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513321"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442112"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Dělení na vlákna modelu apartment v ovládacích prvcích ActiveX
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Model apartment práce s vlákny v ovládacích prvcích ActiveX
 
 > [!NOTE]
 >  Následující technická Poznámka nebyla od prvního zařazení do online dokumentace aktualizována. V důsledku toho mohou být některé postupy a témata neaktuální nebo nesprávné. Nejnovější informace najdete v tématu informace o tom, co je důležité v online katalogu dokumentace najít.
@@ -40,7 +38,7 @@ Povolení dělení modelu Apartment je snadné pro většinu ovládacích prvků
 
 ## <a name="protecting-shared-data"></a>Ochrana sdílených dat
 
-Pokud váš ovládací prvek používá sdílená data, například statickou členskou proměnnou, měl by být přístup k těmto datům chráněn s kritickou částí, aby se zabránilo více než jednomu vláknu v úpravě dat ve stejnou dobu. Chcete-li pro tento účel nastavit kritickou část, deklarujte statickou členskou proměnnou třídy `CCriticalSection` ve třídě ovládacího prvku. Používejte členské funkce `Unlock`atohoto objektu kritické sekce všude, kde váš kód přistupuje ke sdíleným datům. `Lock`
+Pokud váš ovládací prvek používá sdílená data, například statickou členskou proměnnou, měl by být přístup k těmto datům chráněn s kritickou částí, aby se zabránilo více než jednomu vláknu v úpravě dat ve stejnou dobu. Chcete-li pro tento účel nastavit kritickou část, deklarujte statickou členskou proměnnou třídy `CCriticalSection` ve třídě ovládacího prvku. Použijte členské funkce `Lock` a `Unlock` tohoto objektu kritického oddílu všude, kde váš kód přistupuje ke sdíleným datům.
 
 Vezměte v úvahu například třídu ovládacího prvku, která musí udržovat řetězec, který je sdílen všemi instancemi. Tento řetězec může být udržován ve statické členské proměnné a chráněný kritickým oddílem. Deklarace třídy ovládacího prvku by obsahovala následující:
 
@@ -60,7 +58,7 @@ int CString CSampleCtrl::_strShared;
 CCriticalSection CSampleCtrl::_critSect;
 ```
 
-Přístup ke `_strShared` statickému členu lze následně ochránit pomocí kritické části:
+Přístup ke statickému členu `_strShared` lze následně ochránit pomocí kritické části:
 
 ```
 void CSampleCtrl::SomeMethod()
@@ -76,7 +74,7 @@ if (_strShared.Empty())
 
 ## <a name="registering-an-apartment-model-aware-control"></a>Registrace ovládacího prvku pracujícího s modelem Apartment
 
-Ovládací prvky, které podporují vlákno modelu apartment, by měly tuto schopnost označit v registru přidáním pojmenované hodnoty "ThreadingModel" s hodnotou "Apartment" v položce registru Class ID pod *ID* \\  **třídy. InprocServer32** klíč. Chcete-li způsobit, aby byl tento klíč automaticky zaregistrován pro váš ovládací prvek, předejte příznak *afxRegApartmentThreading* do `AfxOleRegisterControlClass`šestého parametru pro:
+Ovládací prvky, které podporují vlákno modelu apartment, by měly tuto schopnost v registru indikovat přidáním pojmenované hodnoty "ThreadingModel" s hodnotou "Apartment" v položce registru třídy ID pod *ID třídy*\\**InprocServer32** klíče. Chcete-li způsobit, aby byl tento klíč automaticky zaregistrován pro váš ovládací prvek, předejte příznak *afxRegApartmentThreading* do šestého parametru `AfxOleRegisterControlClass`:
 
 ```
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
@@ -107,7 +105,7 @@ Pokud byl projekt vygenerován starší verzí ControlWizard, váš stávající
 
 Pokud váš ovládací prvek nedodržuje pravidla pro podprocesy modelu apartment, nesmíte v tomto parametru předat *afxRegApartmentThreading* .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

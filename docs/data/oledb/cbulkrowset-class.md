@@ -8,7 +8,6 @@ f1_keywords:
 - CBulkRowset
 - ATL.CBulkRowset<TAccessor>
 - CBulkRowset::AddRefRows
-- AddRefRows
 - CBulkRowset.AddRefRows
 - ATL.CBulkRowset<TAccessor>.AddRefRows
 - ATL::CBulkRowset::AddRefRows
@@ -22,7 +21,6 @@ f1_keywords:
 - ATL.CBulkRowset.CBulkRowset
 - ATL::CBulkRowset<TAccessor>::CBulkRowset
 - CBulkRowset<TAccessor>::CBulkRowset
-- CBulkRowset
 - ATL.CBulkRowset.MoveFirst
 - CBulkRowset<TAccessor>.MoveFirst
 - ATL.CBulkRowset<TAccessor>.MoveFirst
@@ -39,7 +37,6 @@ f1_keywords:
 - ATL::CBulkRowset::MoveLast
 - ATL.CBulkRowset<TAccessor>.MoveLast
 - CBulkRowset<TAccessor>::MoveLast
-- MoveLast
 - ATL.CBulkRowset<TAccessor>.MoveNext
 - ATL::CBulkRowset::MoveNext
 - CBulkRowset::MoveNext
@@ -49,7 +46,6 @@ f1_keywords:
 - CBulkRowset<TAccessor>.MoveNext
 - CBulkRowset<TAccessor>::MoveNext
 - CBulkRowset::MovePrev
-- MovePrev
 - CBulkRowset<TAccessor>::MovePrev
 - ATL::CBulkRowset<TAccessor>::MovePrev
 - CBulkRowset<TAccessor>.MovePrev
@@ -59,20 +55,17 @@ f1_keywords:
 - ATL.CBulkRowset<TAccessor>.MovePrev
 - CBulkRowset<TAccessor>::MoveToBookmark
 - CBulkRowset.MoveToBookmark
-- MoveToBookmark
 - ATL.CBulkRowset.MoveToBookmark
 - CBulkRowset::MoveToBookmark
 - ATL::CBulkRowset<TAccessor>::MoveToBookmark
 - ATL::CBulkRowset::MoveToBookmark
 - CBulkRowset.MoveToRatio
 - ATL::CBulkRowset::MoveToRatio
-- MoveToRatio
 - CBulkRowset::MoveToRatio
 - ATL.CBulkRowset<TAccessor>.MoveToRatio
 - ATL::CBulkRowset<TAccessor>::MoveToRatio
 - ATL.CBulkRowset.MoveToRatio
 - CBulkRowset<TAccessor>::MoveToRatio
-- ReleaseRows
 - ATL.CBulkRowset<TAccessor>.ReleaseRows
 - ATL::CBulkRowset<TAccessor>::ReleaseRows
 - ATL.CBulkRowset.ReleaseRows
@@ -102,16 +95,16 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176466"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446054"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset – třída
 
-Načítá a zpracovává řádků pro práci s daty hromadně načtením více popisovačů řádků pomocí jediného volání.
+Načítá a zpracovává řádky pro hromadnou práci s daty, a to načítáním více popisovačů řádků s jedním voláním.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -123,11 +116,11 @@ class CBulkRowset : public CRowset<TAccessor>
 ### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Třídu přistupujícího objektu.
+Přístupová třída.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h
+**Záhlaví:** atldbcli. h
 
 ## <a name="members"></a>Členové
 
@@ -135,26 +128,26 @@ Třídu přistupujícího objektu.
 
 |||
 |-|-|
-|[Addrefrows –](#addrefrows)|Zvýší počet odkazů.|
+|[AddRefRows](#addrefrows)|Zvýší počet odkazů.|
 |[CBulkRowset](#cbulkrowset)|Konstruktor|
-|[MoveFirst](#movefirst)|Načte první řádek dat, provádění nové hromadné načítání, v případě potřeby.|
-|[MoveLast](#movelast)|Přejde na poslední řádek.|
-|[MoveNext](#movenext)|Načte další řádek dat.|
+|[MoveFirst](#movefirst)|Načte první řádek dat a v případě potřeby provede nové hromadné načtení.|
+|[MoveLast](#movelast)|Přesune se na poslední řádek.|
+|[Metoda](#movenext)|Načte další řádek dat.|
 |[MovePrev](#moveprev)|Přesune se na předchozí řádek.|
-|[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádek na zadaný posun z tuto záložku.|
-|[MoveToRatio](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|
-|[ReleaseRows](#releaserows)|Nastaví aktuální řádek (`m_nCurrentRow`) na nulu a verzích všechny řádky.|
-|[SetRows](#setrows)|Nastaví počet popisovačů řádků, které se mají načíst jedním voláním.|
+|[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádkem na zadaném posunu z této záložky.|
+|[MoveToRatio](#movetoratio)|Načte řádky začínající ze zlomkové pozice v sadě řádků.|
+|[ReleaseRows](#releaserows)|Nastaví aktuální řádek (`m_nCurrentRow`) na hodnotu nula a uvolní všechny řádky.|
+|[SetRows](#setrows)|Nastaví počet obslužných rutin řádků, které mají být načteny jedním voláním.|
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití `CBulkRowset` třídy.
+Následující příklad ukazuje použití třídy `CBulkRowset`.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a> CBulkRowset::AddRefRows
+## <a name="addrefrows"></a>CBulkRowset:: AddRefRows
 
-Volání [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
+Volá [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) pro zvýšení počtu odkazů pro všechny řádky, které jsou aktuálně načteny ze sady řádků Bulk.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -164,11 +157,11 @@ HRESULT AddRefRows() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
+## <a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
 
-Vytvoří novou `CBulkRowset` objekt a nastaví výchozí počet řádků na 10.
+Vytvoří nový objekt `CBulkRowset` a nastaví výchozí počet řádků na 10.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -176,7 +169,7 @@ Vytvoří novou `CBulkRowset` objekt a nastaví výchozí počet řádků na 10.
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a> CBulkRowset::MoveFirst
+## <a name="movefirst"></a>CBulkRowset:: MoveFirst
 
 Načte první řádek dat.
 
@@ -188,11 +181,11 @@ HRESULT MoveFirst() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="movelast"></a> CBulkRowset::MoveLast
+## <a name="movelast"></a>CBulkRowset:: MoveLast
 
-Přejde na poslední řádek.
+Přesune se na poslední řádek.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -202,9 +195,9 @@ HRESULT MoveLast() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="movenext"></a> CBulkRowset::MoveNext
+## <a name="movenext"></a>CBulkRowset:: MoveNext
 
 Načte další řádek dat.
 
@@ -216,9 +209,9 @@ HRESULT MoveNext() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT. Když se dosáhne konce řádků, vrátí DB_S_ENDOFROWSET.
+Standardní hodnota HRESULT. Po dosažení konce sady řádků vrátí DB_S_ENDOFROWSET.
 
-## <a name="moveprev"></a> CBulkRowset::MovePrev
+## <a name="moveprev"></a>CBulkRowset:: MovePrev
 
 Přesune se na předchozí řádek.
 
@@ -230,11 +223,11 @@ HRESULT MovePrev() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
+## <a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
 
-Načte řádek označený záložku nebo řádek na zadaný posun (*lSkip*) z tuto záložku.
+Načte řádek označený záložkou nebo řádku v zadaném posunu (*lSkip*) z této záložky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -245,19 +238,19 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parametry
 
-*záložky*<br/>
-[in] Záložka označení umístění, ze kterého chcete načíst data.
+*záložku*<br/>
+pro Záložka označující umístění, ze kterého chcete načíst data.
 
 *lSkip*<br/>
-[in] Počtu řádků ze záložky pro cílový řádek. Pokud *lSkip* je nula, první řádek načtený je označenou záložkou a doplňujte řádek. Pokud *lSkip* 1, načíst první řádek je řádek po řádku označenou záložkou a doplňujte. Pokud *lSkip* se -1, načíst první řádek je řádek před označenou záložkou a doplňujte řádek.
+pro Počet řádků z záložky na cílový řádek. Pokud je *lSkip* nula, první načtený řádek je řádek s záložkou. Pokud je *lSkip* 1, první načtený řádek je řádek za řádkem s záložkou. Pokud je *lSkip* -1, první načtený řádek je řádek před řádkem s záložkou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
+## <a name="movetoratio"></a>CBulkRowset:: MoveToRatio
 
-Načte řádky začínající od desetinné pozice v dané sadě řádků.
+Načte řádky začínající ze zlomkové pozice v sadě řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -269,26 +262,26 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 #### <a name="parameters"></a>Parametry
 
 *nNumerator*<br/>
-[in] Čítač použít k určení desetinné umístění, ze kterého se má načíst data.
+pro Čitatel použitý k určení zlomkové pozice, ze které se mají načíst data
 
 *nDenominator*<br/>
-[in] Jmenovatel používá k určení desetinné umístění, ze kterého se má načíst data.
+pro Jmenovatel použitý k určení zlomkové pozice, ze které se mají načíst data
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-`MoveToRatio` načte řádky zhruba podle následující vzorec:
+`MoveToRatio` načte řádky přibližně podle následujícího vzorce:
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Kde `RowsetSize` je velikost sady řádků měřenou v řádcích. Přesnost tohoto vzorce závisí na konkrétním zprostředkovateli. Podrobnosti najdete v tématu [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="releaserows"></a> CBulkRowset::ReleaseRows
+## <a name="releaserows"></a>CBulkRowset:: ReleaseRows
 
-Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) se sníží počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
+Volá [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) pro snížení počtu odkazů pro všechny řádky, které jsou aktuálně načteny ze sady řádků Bulk.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -298,11 +291,11 @@ HRESULT ReleaseRows() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="setrows"></a> CBulkRowset::SetRows
+## <a name="setrows"></a>CBulkRowset:: SetRows
 
-Nastaví počet popisovačů řádků, které jsou načítána pro každé volání.
+Nastaví počet obslužných rutin, které jednotlivé hovory načítají.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -312,14 +305,14 @@ void SetRows(DBROWCOUNT nRows) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*nRows*<br/>
-[in] Nová velikost řádků (počet řádků).
+*Hodnota nRows*<br/>
+pro Nová velikost sady řádků (počet řádků).
 
 ### <a name="remarks"></a>Poznámky
 
-Při volání této funkce, musí být před otevřením v sadě řádků.
+Pokud zavoláte tuto funkci, musí být před otevřením sady řádků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

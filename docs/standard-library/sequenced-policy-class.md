@@ -1,18 +1,18 @@
 ---
-title: sequenced_policy třídy
+title: sequenced_policy – třída
 ms.date: 04/18/2019
 f1_keywords:
-- execution/std::execution::parallel_policy
-ms.openlocfilehash: 63be7166b84fa452f53baf6b6de16831eb657a23
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- execution/std::execution::sequenced_policy
+ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268111"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444912"
 ---
-# <a name="sequencedpolicy-class"></a>sequenced_policy třídy
+# <a name="sequenced_policy-class"></a>sequenced_policy – třída
 
-Používá jako jedinečný typ na rozlišení přetížení paralelního algoritmu a vyžadovat, že nemusí být paralelizována provádění paralelního algoritmu.
+Používá se jako jedinečný typ k jednoznačnému přetížení paralelního algoritmu a vyžaduje, aby se provádění paralelního algoritmu nemohlo paralelní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -22,4 +22,4 @@ class execution::sequenced_policy;
 
 ## <a name="remarks"></a>Poznámky
 
-Během provádění paralelního algoritmu s `execution::sequenced_policy` zásady, pokud se ukončí volání funkce přístupu k elementu prostřednictvím vydá nezachycenou výjimku `terminate()` musí být volána.
+Při provádění paralelního algoritmu se zásadami `execution::sequenced_policy` platí, že pokud vyvolání funkce přístupu k elementu skončí prostřednictvím nezachycené výjimky, `terminate()` být volána.

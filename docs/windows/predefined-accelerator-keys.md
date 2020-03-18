@@ -1,8 +1,6 @@
 ---
-title: Klávesy akcelerátoru (C++)
+title: Klávesy akcelerátoruC++()
 ms.date: 02/14/2019
-f1_keywords:
-- vc.editors.accelerator
 helpviewer_keywords:
 - accelerator keys
 - keyboard shortcuts
@@ -10,81 +8,81 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: bb407538f254df5f187ff91b85a8eaa753a52287
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6753545b711ff45f79b3140b30a2edbcea81c39c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362384"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445410"
 ---
-# <a name="accelerator-keys-c"></a>Klávesy akcelerátoru (C++)
+# <a name="accelerator-keys-c"></a>Klávesy akcelerátoruC++()
 
 ## <a name="predefined-accelerator-keys"></a>Předdefinované klávesy akcelerátoru
 
-Existuje mnoho z předdefinované klávesy akcelerátoru, které mohou být součástí projektu aplikace Windows. Některé z těchto virtuální klíče jsou pro prostředí Windows. Jiné podporují prohlížeč nebo aplikace kódování Unicode. Můžete použít některý z těchto klíčů v jakékoli akcelerátoru.
+Existuje několik předdefinovaných kláves akcelerátorů, které mohou být součástí projektu aplikace systému Windows. Některé z těchto virtuálních klíčů jsou pro prostředí systému Windows. Ostatní podporují prohlížeč nebo aplikace Unicode. Libovolný z těchto klíčů můžete použít v jakémkoli akcelerátoru.
 
-|Key|Popis|
+|Klíč|Popis|
 |---------|-----------------|
-|VK_ACCEPT|(IME) přijměte|
-|VK_BROWSER_BACK|(Windows) Prohlížeč, **zpět** klíč|
-|VK_BROWSER_FAVORITES|(Windows) Prohlížeč, **Oblíbené** klíč|
-|VK_BROWSER_FORWARD|(Windows) Prohlížeč, **vpřed** klíč|
-|VK_BROWSER_HOME|(Windows) Prohlížeč, **Start** a **Domů** klíč|
-|VK_BROWSER_REFRESH|(Windows) Prohlížeč, **aktualizovat** klíč|
-|VK_BROWSER_SEARCH|(Windows) Prohlížeč, **hledání** klíč|
-|VK_BROWSER_STOP|(Windows) Prohlížeč, **Zastavit** klíč|
-|VK_CONVERT|Převést (IME)|
-|VK_FINAL|Poslední režim (IME)|
-|VK_HANGUEL|(IME) Režim Hanguel (zachován z důvodu kompatibility, použijte VK_HANGUL)|
-|VK_HANGUL|(IME) Korejská režimu|
-|VK_HANJA|(IME) Režim Hanja|
-|VK_JUNJA|(IME) Režim Junja|
-|VK_KANA|(IME) Režim Kana|
-|VK_KANJI|(IME) Režim Kanji|
-|VK_LAUNCH_APP1|(Windows) **Spuštění aplikace 1** klíč|
-|VK_LAUNCH_APP2|(Windows) **Spuštění aplikace 2** klíč|
-|VK_LAUNCH_MAIL|(Windows) **Spustit poštu** klíč|
-|VK_LAUNCH_MEDIA_SELECT|(Windows) **Výběr média** klíč|
-|VK_LCONTROL|**Vlevo Ctrl** klíč|
-|VK_LMENU|**Nabídku vlevo** klíč|
-|VK_LSHIFT|**Posunutí doleva** klíč|
-|VK_MEDIA_NEXT_TRACK|(Windows) **Další stopa** klíč|
-|VK_MEDIA_PLAY_PAUSE|(Windows) **Pauzy a přehrávání médií** klíč|
-|VK_MEDIA_PREV_TRACK|(Windows) **Předchozí stopa** klíč|
-|VK_MEDIA_STOP|(Windows) **Zastavit média** klíč|
-|VK_MODECHANGE|Žádost o změnu režimu (IME)|
-|VK_NONCONVERT|Nonconvert (IME)|
-|VK_OEM_1|(Windows) Pro americké standardní klávesnici **;:** klíč|
-|VK_OEM_102|(Windows) Lomená závorka klíč nebo zpětné lomítko klávesu na klávesnici 102 klávesami RT|
-|VK_OEM_2|(Windows) Pro americké standardní klávesnici **/?** klíč|
-|VK_OEM_3|(Windows) Pro americké standardní klávesnici **`~** klíč|
-|VK_OEM_4|(Windows) Pro americké standardní klávesnici **[{** klíč|
-|VK_OEM_5|(Windows) Pro americké standardní klávesnici **\\ &#124;** klíč|
-|VK_OEM_6|(Windows) Pro americké standardní klávesnici **]}** klíč|
-|VK_OEM_7|(Windows) Pro americké standardní klávesnice klíč "single nabídky/dvojité uvozovky"|
-|VK_OEM_COMMA|(Windows) Pro žádné země ani oblasti **,** klíč|
-|VK_OEM_MINUS|(Windows) Pro žádné země ani oblasti **-** klíč|
-|VK_OEM_PERIOD|(Windows) Pro žádné země ani oblasti **.** klíč|
-|VK_OEM_PLUS|(Windows) Pro žádné země ani oblasti **+** klíč|
-|VK_PACKET|(Windows) Sloužící k předávání znaky znakové sady Unicode, jako by šlo úhozy na klávesnici.|
-|VK_RCONTROL|**Pravé Ctrl** klíč|
-|VK_RMENU|**Nabídka vpravo** klíč|
-|VK_RSHIFT|**Pravý Shift** klíč|
-|VK_SLEEP|**Počítač v režimu spánku** klíč|
-|VK_VOLUME_DOWN|(Windows) **Svazku dolů** klíč|
-|VK_VOLUME_MUTE|(Windows) **Svazku Ztlumit** klíč|
-|VK_VOLUME_UP|(Windows) **Svazku nahoru** klíč|
-|VK_XBUTTON1|(Windows) **X1** tlačítko myši.|
-|VK_XBUTTON2|(Windows) **X2** tlačítko myši.|
+|VK_ACCEPT|(IME) přijmout|
+|VK_BROWSER_BACK|Systému Prohlížeč, **zpětný** klíč|
+|VK_BROWSER_FAVORITES|Systému Prohlížeč, klíč **Oblíbené položky**|
+|VK_BROWSER_FORWARD|Systému Prohlížeč, **dopředný** klíč|
+|VK_BROWSER_HOME|Systému Prohlížeč, **spouštěcí** a **domovské** klávesy|
+|VK_BROWSER_REFRESH|Systému Prohlížeč, **aktualizovat** klíč|
+|VK_BROWSER_SEARCH|Systému Prohlížeč, klíč **hledání**|
+|VK_BROWSER_STOP|Systému Prohlížeč, **stop** Key|
+|VK_CONVERT|(IME) převod|
+|VK_FINAL|(IME) finální režim|
+|VK_HANGUEL|REŽIM Režim Hanguel (se zachovává pro kompatibilitu, použití VK_HANGUL)|
+|VK_HANGUL|REŽIM Režim Hangul|
+|VK_HANJA|REŽIM Režim Hanja|
+|VK_JUNJA|REŽIM Junja režim|
+|VK_KANA|REŽIM Režim kana|
+|VK_KANJI|REŽIM Režim kanji|
+|VK_LAUNCH_APP1|Systému **Spustit klíč aplikace 1**|
+|VK_LAUNCH_APP2|Systému **Spustit klíč aplikace 2**|
+|VK_LAUNCH_MAIL|Systému **Spustit poštovní** klíč|
+|VK_LAUNCH_MEDIA_SELECT|Systému **Vybrat mediální** klíč|
+|VK_LCONTROL|Klávesa **Ctrl + šipka vlevo**|
+|VK_LMENU|Klávesa **levé nabídky**|
+|VK_LSHIFT|Klávesa **levý SHIFT**|
+|VK_MEDIA_NEXT_TRACK|Systému Klíč **Další stopy**|
+|VK_MEDIA_PLAY_PAUSE|Systému **Přehrát/pozastavit Media** Key|
+|VK_MEDIA_PREV_TRACK|Systému **Předchozí klíč stopy**|
+|VK_MEDIA_STOP|Systému **Zastavit mediální** klíč|
+|VK_MODECHANGE|(IME) režim žádosti o změnu|
+|VK_NONCONVERT|(IME) nepřevedeno|
+|VK_OEM_1|Systému Pro klávesnici US Standard, klíč **;:**|
+|VK_OEM_102|Systému Klávesa lomená závorka nebo zpětné lomítko na klávesnici RT 102-Key|
+|VK_OEM_2|Systému Pro klávesnici US Standard, **/?** key|
+|VK_OEM_3|Systému Pro klávesnici US Standard je **`~** klíč|
+|VK_OEM_4|Systému Pro klávesnici US Standard je to **[{** Key|
+|VK_OEM_5|Systému Pro klávesnici US Standard je **\\&#124;**  klíč|
+|VK_OEM_6|Systému Pro klávesnici US Standard, klíč **]}**|
+|VK_OEM_7|Systému Pro klávesnici US Standard je klíč "Single-quote/Double-quote".|
+|VK_OEM_COMMA|Systému Pro každou zemi nebo oblast **, klíč**|
+|VK_OEM_MINUS|Systému U každé země nebo oblasti **-** klíč|
+|VK_OEM_PERIOD|Systému V případě jakékoli země/oblasti, **.** key|
+|VK_OEM_PLUS|Systému U každé země nebo oblasti **+** klíč|
+|VK_PACKET|Systému Slouží k předávání znaků Unicode, jako by se jedná o stisknutí kláves.|
+|VK_RCONTROL|Klávesa **CTRL + ŠIPKA vpravo**|
+|VK_RMENU|Klávesa **pravé nabídky**|
+|VK_RSHIFT|Klávesa **SHIFT + šipka doprava**|
+|VK_SLEEP|Klíč **spánku počítače**|
+|VK_VOLUME_DOWN|Systému **Odstínový** klíč|
+|VK_VOLUME_MUTE|Systému Klíč **ztlumení svazku**|
+|VK_VOLUME_UP|Systému Klíč ke **svazku**|
+|VK_XBUTTON1|Systému **X1** – tlačítko myši|
+|VK_XBUTTON2|Systému **X2** – tlačítko myši|
 
-## <a name="accelerator-key-association"></a>Přiřazení klíče akcelerátoru
+## <a name="accelerator-key-association"></a>Asociace klávesových zkratek
 
-V mnoha případech má položku nabídky a kombinace kláves pro stejný příkaz programu. Tuto akci proveďte, přiřazením stejný identifikátor prostředku (ID) na položku nabídky a záznam v tabulce akcelerátorů vaší aplikace. Potom upravte položku nabídky titulek, aby se zobrazil název akcelerátoru. Další informace o položky nabídky a přístupové klávesy, naleznete v tématu [příkazy nabídky](../windows/associating-a-menu-command-with-an-accelerator-key.md).
+Mnohokrát budete chtít, aby položka nabídky a kombinace kláves byly vydány stejným příkazem programu. Tuto akci provedete přiřazením stejného identifikátoru prostředku (ID) k položce nabídky a záznamem v tabulce akcelerátorů vaší aplikace. Potom upravíte titulek položky nabídky a zobrazí se název akcelerátoru. Další informace o položkách nabídek a klávesách akcelerátorů naleznete v tématu [příkazy nabídky](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
 ## <a name="requirements"></a>Požadavky
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editor akcelerátorů](../windows/accelerator-editor.md)<br/>

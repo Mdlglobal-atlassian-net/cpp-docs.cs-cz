@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 79854d8ead089aeba88fbdc151fdc0788dd181c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416061"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445792"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform:: Collections:: BackInsertIterator – třída
 
@@ -59,8 +59,8 @@ Třída BackInsertIterator implementuje pravidla, která vyžaduje [třída back
 
 **Header:** Collection. h
 
-<a name="namespace-platformcollections"></a>**Obor názvů:** Platform:: Collections
----
+**Obor názvů:** Platform:: Collections
+
 ## <a name="ctor"></a>BackInsertIterator:: BackInsertIterator – konstruktor
 
 Inicializuje novou instanci třídy `BackInsertIterator`.
@@ -68,7 +68,6 @@ Inicializuje novou instanci třídy `BackInsertIterator`.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 explicit BackInsertIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
@@ -126,7 +125,6 @@ Vrátí odkaz na aktuální BackInsertIterator. Iterátor je nezměněný.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 BackInsertIterator& operator++();
 
 BackInsertIterator operator++(int);

@@ -3,22 +3,21 @@ title: Běžné aplikace knihovny MFC
 ms.date: 07/28/2019
 f1_keywords:
 - MFC
-- mfc
 helpviewer_keywords:
 - libraries, MFC
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: f23a41a0dbaedb7063617accee3afe4ba833d59c
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607534"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447707"
 ---
 # <a name="mfc-desktop-applications"></a>Běžné aplikace knihovny MFC
 
-Knihovna Microsoft Foundation Class (MFC) poskytuje objektově orientovanou obálku nad mnoho rozhraní API Win32 a COM. I když lze použít k vytvoření velmi jednoduchých desktopových aplikací, je nejužitečnější, pokud potřebujete vyvíjet složitější uživatelská rozhraní s více ovládacími prvky. Knihovnu MFC lze použít k vytváření aplikací s uživatelskými rozhraními ve stylu systému Office. Dokumentaci k samotné platformě Windows najdete v [dokumentaci k Windows](/windows/index). Informace o vytváření aplikací pro Windows v C++ nástroji bez knihovny MFC naleznete v tématu sestavování aplikací [pro windows Desktop pomocí Win32 API](/windows/win32/index).
+Knihovna Microsoft Foundation Class (MFC) poskytuje objektově orientovanou obálku nad mnoho rozhraní API Win32 a COM. I když lze použít k vytvoření velmi jednoduchých desktopových aplikací, je nejužitečnější, pokud potřebujete vyvíjet složitější uživatelská rozhraní s více ovládacími prvky. Knihovnu MFC lze použít k vytváření aplikací s uživatelskými rozhraními ve stylu systému Office. Dokumentaci k samotné platformě Windows najdete v [dokumentaci k Windows](/windows/index). Informace o vytváření aplikací pro Windows v C++ nástroji bez knihovny MFC naleznete v tématu [sestavování aplikací pro windows Desktop pomocí Win32 API](/windows/win32/index).
 
 Odkaz na knihovnu MFC pokrývá třídy, globální funkce, globální proměnné a makra, které tvoří knihovna Microsoft Foundation Class.
 
@@ -35,7 +34,7 @@ Dokumentace pro každou třídu obsahuje přehled třídy, souhrn členů podle 
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Charakteristiky](mfc-concepts.md)<br/>
+[Koncepty](mfc-concepts.md)<br/>
 Koncepční články o tématech MFC.
 
 [Graf hierarchie](hierarchy-chart.md)<br/>
@@ -88,6 +87,6 @@ Obsahuje odkazy na různé knihovny poskytované pomocí vizuálu C++, včetně 
 [Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Obsahuje odkazy na používání ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedurách.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rozhraní MFC a knihovna ATL](mfc-and-atl.md)

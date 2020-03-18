@@ -1,24 +1,22 @@
 ---
 title: Používání atributu CRichEditCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CRichEditCtrl
 helpviewer_keywords:
 - rich edit controls [MFC], using
 - CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
-ms.openlocfilehash: d935cb5282af16a189d091ee6f40d128a906d392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f718d58840eba5f7c1e41c1c337e6c779b51e3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411731"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441805"
 ---
 # <a name="using-cricheditctrl"></a>Používání atributu CRichEditCtrl
 
-Ovládací prvek RichEdit je okno, ve kterém můžete uživatele zadat a upravit text. Text je možné přiřadit formátování znaků a odstavců a může obsahovat vložené objekty OLE. Ovládací prvek RichEdit je reprezentován v knihovně MFC podle [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) třídy.
+Ovládací prvek s bohatou úpravou je okno, ve kterém může uživatel zadávat a upravovat text. Textu lze přiřadit formátování znaků a odstavců a může obsahovat vložené objekty OLE. Ovládací prvek RichEdit je reprezentován v knihovně MFC třídou [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) .
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Přehled ovládacích prvků pro úpravy s formátováním](../mfc/overview-of-the-rich-edit-control.md)
 
@@ -32,7 +30,7 @@ Ovládací prvek RichEdit je okno, ve kterém můžete uživatele zadat a upravi
 
 - [Aktuální výběr v ovládacích prvcích pro úpravy s formátováním](../mfc/current-selection-in-a-rich-edit-control.md)
 
-- [Dělení textu v ovládacím prvku pro úpravy s formátováním](../mfc/word-breaks-in-rich-edit-controls.md)
+- [Zalamování slov v ovládacím prvku Rich Edit](../mfc/word-breaks-in-rich-edit-controls.md)
 
 - [Operace se schránkou v ovládacích prvcích pro úpravy s formátováním](../mfc/clipboard-operations-in-rich-edit-controls.md)
 
@@ -44,6 +42,6 @@ Ovládací prvek RichEdit je okno, ve kterém můžete uživatele zadat a upravi
 
 - [Oznámení z ovládacích prvků pro úpravy s formátováním](../mfc/notifications-from-a-rich-edit-control.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Ovládací prvky](../mfc/controls-mfc.md)

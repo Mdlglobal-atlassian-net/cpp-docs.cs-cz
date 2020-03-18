@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421294"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445690"
 ---
 # <a name="icommandui-interface"></a>Rozhraní ICommandUI
 
@@ -60,6 +60,7 @@ Další informace o tom, jak jsou příkazy uživatelského rozhraní spravován
 ## <a name="check"></a>ICommandUI:: check
 
 Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz na
 ## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
 Oznamuje mechanismu směrování příkazů, aby pokračoval v směrování aktuální zprávy o řetězu obslužných rutin.
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ Toto je pokročilá členská funkce, která by se měla používat ve spojení 
 ## <a name="enabled"></a>ICommandUI:: Enabled
 
 Povoluje nebo zakazuje položku uživatelského rozhraní pro tento příkaz.
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ Tato vlastnost povoluje nebo zakazuje položku uživatelského rozhraní pro ten
 ## <a name="id"></a>ICommandUI:: ID
 
 Získá ID objektu uživatelského rozhraní reprezentovaného objektem ICommandUI.
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ Tato vlastnost získá ID (popisovač) položky nabídky, tlačítka panelu nás
 ## <a name="index"></a>ICommandUI:: index
 
 Získá index objektu uživatelského rozhraní reprezentovaného objektem ICommandUI.
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ Tato vlastnost získá index (popisovač) položky nabídky, tlačítko panelu n
 ## <a name="radio"></a>ICommandUI:: Radio
 
 Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz na
 ## <a name="text"></a>ICommandUI:: text
 
 Nastaví text položky uživatelského rozhraní pro tento příkaz.
+
 ```
 property String^ Text;
 ```

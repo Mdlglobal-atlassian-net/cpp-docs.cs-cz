@@ -1,19 +1,17 @@
 ---
 title: 'Bitový operátor AND: &amp;'
 ms.date: 11/04/2016
-f1_keywords:
-- bitand
 helpviewer_keywords:
 - AND operator
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-ms.openlocfilehash: b7d0d73802a5af7ab71e980d73eaff5c5b3c4bb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba17c9a633b7b18cad2881dfef90fde7c2074319
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387705"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446134"
 ---
 # <a name="bitwise-and-operator-amp"></a>Bitový operátor AND: &amp;
 
@@ -25,15 +23,15 @@ expression & expression
 
 ## <a name="remarks"></a>Poznámky
 
-Výrazy mohou být jiné a výrazů, nebo (na základě práv subjektů k omezení typů, které jsou uvedené níže) výrazy rovnosti, relační výrazy, sčítání výrazy, násobení výrazy, ukazatel na člen výrazy, výrazy přetypování, unární výrazy, výrazy přípony nebo primární výrazy.
+Výrazy můžou být jiné výrazy a – nebo (podléhají omezením typu uvedeným níže) výrazy rovnosti, relační výrazy, výrazy doplňku, multiplikativní výrazy, ukazatel na členské výrazy, výrazy přetypování, unární výrazy, přípony výrazů nebo primární výrazy.
 
-Bitový operátor AND (**&**) porovnává každý bit prvního operandu s odpovídajícím bitem druhého operandu. Pokud i službu bits 1, odpovídající bit výsledku je nastavená na 1. V opačném případě je odpovídající výsledek bit nastaven na hodnotu 0.
+Bitový operátor AND ( **&** ) porovnává každý bit prvního operandu s odpovídajícím bitem druhého operandu. Pokud jsou obě bity 1, odpovídající bit výsledku je nastaven na hodnotu 1. V opačném případě je odpovídající bit výsledek nastaven na hodnotu 0.
 
-Oba operandy bitového operátoru AND musí být integrální typy. Obvyklé aritmetické převody uvedené v [standardní převody](standard-conversions.md), jsou na operandy použity.
+Oba operandy bitového operátoru AND musí být integrálních typů. Obvyklé aritmetické převody, které jsou pokryty [standardními](standard-conversions.md)převody, jsou aplikovány na operandy.
 
-## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor &
+## <a name="operator-keyword-for-"></a>Klíčové slovo operátoru pro &
 
-**Bitand** operátor je textový ekvivalent operátoru **&**. Existují dva způsoby přístupu k **bitand** operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).
+Operátor **BITAND** je textový ekvivalent **&** . Existují dva způsoby, jak získat přístup k operátoru **BITAND** ve svých programech: zahrňte hlavičkový soubor `iso646.h`nebo zkompilujte pomocí možnosti kompilátoru [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
 
 ## <a name="example"></a>Příklad
 
@@ -51,7 +49,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Integrované operátory C++, jejich priorita a asociativita](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

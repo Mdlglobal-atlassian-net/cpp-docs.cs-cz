@@ -7,7 +7,6 @@ f1_keywords:
 - ATL::IAccessorImpl::IAccessorImpl
 - IAccessorImpl::IAccessorImpl
 - IAccessorImpl.IAccessorImpl
-- IAccessorImpl
 - ATL::IAccessorImpl::AddRefAccessor
 - AddRefAccessor
 - IAccessorImpl::AddRefAccessor
@@ -37,16 +36,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: a4f98cdfea9ea1e82ec0a3de09e292604a6c199f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1865089100ac7f60e8c011e72eedb3d0a3f8470
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409041"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447071"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl – třída
 
-Poskytuje implementaci [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) rozhraní.
+Poskytuje implementaci rozhraní [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,18 +58,18 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Vaše třída objektu sady řádků nebo příkaz.
+*Š*<br/>
+Třída objektu sady řádků nebo příkazu.
 
 *BindType*<br/>
-Jednotky úložiště pro informace o vazbě. Výchozí hodnota je `ATLBINDINGS` struktury (viz atldb.h).
+Jednotka úložiště pro informace o vazbě. Výchozí hodnota je struktura `ATLBINDINGS` (viz Atldb. h).
 
 *BindingVector*<br/>
-Jednotky úložiště pro informace o sloupci. Výchozí hodnota je [catlmap –](../../atl/reference/catlmap-class.md) kde HACCESSOR hodnota je klíčovým prvkem a hodnota elementu je ukazatel `BindType` struktury.
+Jednotka úložiště pro informace o sloupci Výchozí hodnota je [CAtlMap](../../atl/reference/catlmap-class.md) , kde je klíčovým prvkem hodnota HACCESSOR a element value je ukazatel na `BindType` strukturu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -84,16 +83,16 @@ Jednotky úložiště pro informace o sloupci. Výchozí hodnota je [catlmap –
 
 |||
 |-|-|
-|[AddRefAccessor](#addrefaccessor)|Přidá počet odkazů na existující přistupující objekt.|
-|[CreateAccessor](#createaccessor)|Vytvoří ze sady vazby přistupující objekt.|
-|[Getbindings –](#getbindings)|Vrátí vazby přistupující objekt.|
-|[ReleaseAccessor](#releaseaccessor)|Uvolní přistupující objekt.|
+|[AddRefAccessor](#addrefaccessor)|Přidá počet odkazů do existujícího přístupového objektu.|
+|[CreateAccessor](#createaccessor)|Vytvoří přistupující objekt ze sady vazeb.|
+|[Getbindings](#getbindings)|Vrátí vazby v přístupovém objektu.|
+|[ReleaseAccessor](#releaseaccessor)|Uvolňuje přistupující objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto je povinná na příkazy a sady řádků. OLE DB vyžaduje poskytovatele, jak implementovat HACCESSOR, což je značka na pole [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) struktury. HACCESSORs poskytované `IAccessorImpl` jsou adresy `BindType` struktury. Ve výchozím nastavení `BindType` je definován jako `ATLBINDINGS` v `IAccessorImpl`vaší definice šablony. `BindType` poskytuje mechanismus používaný `IAccessorImpl` ke sledování počtu prvků v jeho `DBBINDING` pole a také odkaz na počtu a přístupový objekt příznaky.
+Toto je povinné pro sady řádků a příkazy. OLE DB vyžaduje, aby poskytovatelé implementovali HACCESSOR, což je značka pro pole [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) struktur. HACCESSORs, které poskytuje `IAccessorImpl`, jsou adresy `BindType` struktury. Ve výchozím nastavení je `BindType` definován jako `ATLBINDINGS` v definici šablony `IAccessorImpl`. `BindType` poskytuje mechanismus, který `IAccessorImpl` používá ke sledování počtu prvků v jeho poli `DBBINDING` a také počet odkazů a příznaky přistupujícího objektu.
 
-## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
+## <a name="iaccessorimpl"></a>IAccessorImpl:: IAccessorImpl
 
 Konstruktor
 
@@ -103,9 +102,9 @@ Konstruktor
 IAccessorImpl();
 ```
 
-## <a name="addrefaccessor"></a> IAccessorImpl::AddRefAccessor
+## <a name="addrefaccessor"></a>IAccessorImpl:: AddRefAccessor
 
-Přidá počet odkazů na existující přistupující objekt.
+Přidá počet odkazů do existujícího přístupového objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -116,11 +115,11 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IAccessor:: AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
+## <a name="createaccessor"></a>IAccessorImpl:: CreateAccessor
 
-Vytvoří ze sady vazby přistupující objekt.
+Vytvoří přistupující objekt ze sady vazeb.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -135,11 +134,11 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="getbindings"></a> IAccessorImpl::GetBindings
+## <a name="getbindings"></a>IAccessorImpl:: getbindings
 
-Vrátí základní sloupce vazby od uživatele v přistupujícím objektu.
+Vrátí základní vazby sloupců od příjemce v přístupovém objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -152,11 +151,11 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IAccessor:: Getbindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
+## <a name="releaseaccessor"></a>IAccessorImpl:: ReleaseAccessor
 
-Uvolní přistupující objekt.
+Uvolňuje přistupující objekt.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -167,9 +166,9 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IAccessor:: ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

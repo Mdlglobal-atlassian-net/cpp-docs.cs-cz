@@ -4,7 +4,6 @@ ms.date: 11/04/2016
 f1_keywords:
 - IRowsetImpl
 - IRowsetImpl::AddRefRows
-- AddRefRows
 - IRowsetImpl.AddRefRows
 - ATL::IRowsetImpl::AddRefRows
 - ATL.IRowsetImpl.AddRefRows
@@ -29,14 +28,12 @@ f1_keywords:
 - ATL::IRowsetImpl::IRowsetImpl
 - ATL.IRowsetImpl.IRowsetImpl
 - IRowsetImpl::IRowsetImpl
-- IRowsetImpl
 - ATL::IRowsetImpl::RefRows
 - ATL.IRowsetImpl.RefRows
 - IRowsetImpl.RefRows
 - RefRows
 - IRowsetImpl::RefRows
 - ATL.IRowsetImpl.ReleaseRows
-- ReleaseRows
 - IRowsetImpl::ReleaseRows
 - ATL::IRowsetImpl::ReleaseRows
 - IRowsetImpl.ReleaseRows
@@ -91,16 +88,16 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 47b03a542933c6223e098bc9d8fa8d45bf5e047b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fbe461bfc812c5ac9b9a09aa3ed31c0a2a638e1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390747"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447356"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl – třída
 
-Poskytuje implementaci `IRowset` rozhraní.
+Poskytuje implementaci rozhraní `IRowset`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -117,21 +114,21 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Vaše třída odvozena od `IRowsetImpl`.
+*Š*<br/>
+Vaše třída odvozená od `IRowsetImpl`.
 
 *RowsetInterface*<br/>
-Třída odvozená z `IRowsetImpl`.
+Třída odvozená od `IRowsetImpl`.
 
 *RowClass*<br/>
-Jednotka pro ukládání `HROW`.
+Jednotka úložiště pro `HROW`.
 
 *MapClass*<br/>
-Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředkovatelem.
+Jednotka úložiště pro všechny obsluhy řádků držené zprostředkovatelem.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -139,34 +136,34 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
 
 |||
 |-|-|
-|[Addrefrows –](#addrefrows)|Přidá počet odkazů na existující popisovač řádku.|
-|[CreateRow](#createrow)|Volané [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) přidělit nový `HROW`. Nebyla volána přímo uživatelem.|
-|[GetData](#getdata)|Načte data z dané sadě řádků kopii řádku.|
+|[AddRefRows](#addrefrows)|Přidá počet odkazů do existujícího popisovače řádku.|
+|[CreateRow](#createrow)|Volá se [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) k přidělení nového `HROW`. Nevoláno přímo uživatelem.|
+|[GetData](#getdata)|Načte data z kopie řádku sady řádků.|
 |[GetDBStatus](#getdbstatus)|Vrátí stav pro zadané pole.|
-|[GetNextRows](#getnextrows)|Načte řádky postupně, pamatovat předchozí pozici.|
-|[IRowsetImpl](#irowsetimpl)|Konstruktor Nebyla volána přímo uživatelem.|
-|[RefRows](#refrows)|Volané [addrefrows –](../../data/oledb/irowsetimpl-addrefrows.md) a [releaserows –](../../data/oledb/irowsetimpl-releaserows.md). Nebyla volána přímo uživatelem.|
-|[ReleaseRows](#releaserows)|Verze řádků.|
-|[RestartPosition](#restartposition)|Přemístí pozici na počáteční pozici; To znamená vytvořit svůj postoj při první sadu řádků.|
-|[SetDBStatus](#setdbstatus)|Nastaví stav příznaky pro zadané pole.|
+|[GetNextRows](#getnextrows)|Načte řádky postupně a pamatuje předchozí pozici.|
+|[IRowsetImpl](#irowsetimpl)|Konstruktor Nevoláno přímo uživatelem.|
+|[RefRows](#refrows)|Volá se [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) a [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md). Nevoláno přímo uživatelem.|
+|[ReleaseRows](#releaserows)|Uvolní řádky.|
+|[Volání metody RestartPosition](#restartposition)|Přemístí další pozici načtení na počáteční pozici; To znamená, že při prvním vytvoření sady řádků.|
+|[SetDBStatus](#setdbstatus)|Nastaví pro zadané pole příznaky stavu.|
 
 ### <a name="data-members"></a>Datové členy
 
 |||
 |-|-|
-|[m_bCanFetchBack](#bcanfetchback)|Označuje, zda poskytovatel podporuje načítání zpětně.|
-|[m_bCanScrollBack](#bcanscrollback)|Označuje, zda zprostředkovatel může mít jeho posunout kurzor zpětně.|
-|[m_bReset](#breset)|Určuje, zda zprostředkovatele má resetovat pozici kurzoru. To má zvláštní význam při posouvání zpětně nebo načítání zpětně v [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md).|
-|[m_iRowset](#irowset)|Index tak, aby v sadě řádků reprezentující kurzor.|
+|[m_bCanFetchBack](#bcanfetchback)|Určuje, zda zprostředkovatel podporuje zpětné načítání.|
+|[m_bCanScrollBack](#bcanscrollback)|Označuje, zda může být u poskytovatele posunuto kurzor zpět.|
+|[m_bReset](#breset)|Označuje, zda poskytovatel obnovil pozici kurzoru. To má zvláštní význam při posouvání zpět nebo načítání zpětně v [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md).|
+|[m_iRowset](#irowset)|Index sady řádků představující kurzor.|
 |[m_rgRowHandles](#rgrowhandles)|Seznam popisovačů řádků.|
 
 ## <a name="remarks"></a>Poznámky
 
-[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) je rozhraní pro základní sadu řádků.
+[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) je základní rozhraní sady řádků.
 
-## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
+## <a name="addrefrows"></a>IRowsetImpl:: AddRefRows
 
-Přidá počet odkazů na existující popisovač řádku.
+Přidá počet odkazů do existujícího popisovače řádku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -179,11 +176,11 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="createrow"></a> IRowsetImpl::CreateRow
+## <a name="createrow"></a>IRowsetImpl:: CreateRow
 
-Pomocná metoda volána [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) přidělit nový `HROW`.
+Pomocná metoda, kterou volá [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) k přidělení nového `HROW`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -196,21 +193,21 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 #### <a name="parameters"></a>Parametry
 
 *lRowsOffset*<br/>
-Pozice kurzoru řádku, který vytváří.
+Pozice kurzoru řádku, který se má vytvořit
 
 *cRowsObtained*<br/>
-Odkaz se předá zpět do uživatele udávající počet řádků, které vytvořili.
+Odkaz předaný uživateli, který indikuje počet vytvořených řádků.
 
 *rgRows*<br/>
-Pole `HROW`s vrátit zpět volajícímu s úchyty pro nově vytvořený řádku.
+Do volajícího bylo vráceno pole `HROW`s nově vytvořenými obslužnými rutinami řádků.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud řádek existuje, tato metoda volá [addrefrows –](../../data/oledb/irowsetimpl-addrefrows.md) a vrátí. V opačném případě přidělí novou instanci třídy proměnnou šablony RowClass a přidá jej do [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).
+Pokud řádek existuje, tato metoda volá [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) a vrátí. V opačném případě přidělí novou instanci proměnné šablony RowClass a přidá ji do [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).
 
-## <a name="getdata"></a> IRowsetImpl::GetData
+## <a name="getdata"></a>IRowsetImpl:: GetData
 
-Načte data z dané sadě řádků kopii řádku.
+Načte data z kopie řádku sady řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -222,21 +219,21 @@ STDMETHOD(GetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenci programátora OLE DB*.
 
-Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IRowset::GetData`:
+Některé parametry odpovídají *OLE DB referenční parametry programátora* různých názvů, které jsou popsány v `IRowset::GetData`:
 
-|Parametry šablony technologie OLE DB|*OLE DB referenční informace pro programátory* parametry|
+|Parametry šablony OLE DB|*OLE DB referenční parametry programátora*|
 |--------------------------------|------------------------------------------------|
 |*pDstData*|*pData*|
 
 ### <a name="remarks"></a>Poznámky
 
-Převod dat pomocí převodu dat OLE DB knihovny DLL také zpracovává.
+Také zpracovává převod dat pomocí OLE DB DLL pro převod dat.
 
-## <a name="getdbstatus"></a> IRowsetImpl::GetDBStatus
+## <a name="getdbstatus"></a>IRowsetImpl:: GetDBStatus
 
-Vrátí stav DBSTATUS příznaky pro zadané pole.
+Vrátí příznak stavu DBSTATUS pro zadané pole.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -248,18 +245,18 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 #### <a name="parameters"></a>Parametry
 
 *currentRow*<br/>
-[in] Na aktuálním řádku.
+pro Aktuální řádek.
 
 *columnNames*<br/>
-[in] Sloupec, pro který je požadovaný stav.
+pro Sloupec, pro který se požaduje stav
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) příznaky pro sloupec.
+Příznaky [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) pro sloupec.
 
-## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
+## <a name="getnextrows"></a>IRowsetImpl:: GetNextRows
 
-Načte řádky postupně, pamatovat předchozí pozici.
+Načte řádky postupně a pamatuje předchozí pozici.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -273,9 +270,9 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
+## <a name="irowsetimpl"></a>IRowsetImpl:: IRowsetImpl
 
 Konstruktor
 
@@ -287,11 +284,11 @@ IRowsetImpl();
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle není nutné tuto metodu volat přímo.
+Tuto metodu obvykle nemusíte volat přímo.
 
-## <a name="refrows"></a> IRowsetImpl::RefRows
+## <a name="refrows"></a>IRowsetImpl:: RefRows
 
-Volané [addrefrows –](../../data/oledb/irowsetimpl-addrefrows.md) a [releaserows –](../../data/oledb/irowsetimpl-releaserows.md) buď zvýšit nebo vydání počet odkazů na existující popisovač řádku.
+Volá se [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) a [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) pro zvýšení nebo uvolnění počtu odkazů na existující popisovač řádku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -305,15 +302,15 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="releaserows"></a> IRowsetImpl::ReleaseRows
+## <a name="releaserows"></a>IRowsetImpl:: ReleaseRows
 
-Verze řádků.
+Uvolní řádky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -327,11 +324,11 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="restartposition"></a> IRowsetImpl::RestartPosition
+## <a name="restartposition"></a>IRowsetImpl:: volání metody RestartPosition
 
-Přemístí pozici na počáteční pozici; To znamená vytvořit svůj postoj při první sadu řádků.
+Přemístí další pozici načtení na počáteční pozici; To znamená, že při prvním vytvoření sady řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -341,15 +338,15 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IRowset:: volání metody RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="remarks"></a>Poznámky
 
-Umístění sady řádků nedefinovaný až do `GetNextRow` je volána. Můžete přesunout zpět v rowet voláním `RestartPosition` a načítání nebo posouvání zpětně.
+Pozice sady řádků je nedefinovaná, dokud není volána `GetNextRow`. Zpětně můžete přejít v rowet voláním `RestartPosition` a následným načtením nebo posouváním zpět.
 
-## <a name="setdbstatus"></a> IRowsetImpl::SetDBStatus
+## <a name="setdbstatus"></a>IRowsetImpl:: SetDBStatus
 
-Nastaví příznaky DBSTATUS stavu pro zadané pole.
+Nastaví příznak stavu DBSTATUS pro zadané pole.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -362,25 +359,25 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Parametry
 
 *statusFlags*<br/>
-[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) příznaky nastavit pro sloupec.
+Příznaky [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) pro nastavení sloupce.
 
 *currentRow*<br/>
-Na aktuálním řádku.
+Aktuální řádek.
 
-*columnInfo*<br/>
-Sloupec, pro který je nastaven stav.
+*Vlastnost ColumnInfo*<br/>
+Sloupec, pro který se nastavuje stav
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Zprostředkovatel přepsání této funkce můžete zadat speciální zpracování pro DBSTATUS_S_ISNULL a DBSTATUS_S_DEFAULT.
+Zprostředkovatel Přepisuje tuto funkci, aby poskytoval zvláštní zpracování pro DBSTATUS_S_ISNULL a DBSTATUS_S_DEFAULT.
 
-## <a name="bcanfetchback"></a> IRowsetImpl::m_bCanFetchBack
+## <a name="bcanfetchback"></a>IRowsetImpl:: m_bCanFetchBack
 
-Označuje, zda poskytovatel podporuje načítání zpětně.
+Určuje, zda zprostředkovatel podporuje zpětné načítání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -390,11 +387,11 @@ unsigned m_bCanFetchBack:1;
 
 ### <a name="remarks"></a>Poznámky
 
-Propojené na `DBPROP_CANFETCHBACKWARDS` vlastnost `DBPROPSET_ROWSET` skupiny. Zprostředkovatel musí podporovat `DBPROP_CANFETCHBACKWARDS` pro `m_bCanFetchBackwards` bude **true**.
+Odkazuje na vlastnost `DBPROP_CANFETCHBACKWARDS` ve skupině `DBPROPSET_ROWSET`. Poskytovatel musí podporovat `DBPROP_CANFETCHBACKWARDS`, aby `m_bCanFetchBackwards` na **hodnotu true**.
 
-## <a name="bcanscrollback"></a> IRowsetImpl::m_bCanScrollBack
+## <a name="bcanscrollback"></a>IRowsetImpl:: m_bCanScrollBack
 
-Označuje, zda zprostředkovatel může mít jeho posunout kurzor zpětně.
+Označuje, zda může být u poskytovatele posunuto kurzor zpět.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -404,11 +401,11 @@ unsigned  m_bCanScrollBack:1;
 
 ### <a name="remarks"></a>Poznámky
 
-Propojené na `DBPROP_CANSCROLLBACKWARDS` vlastnost `DBPROPSET_ROWSET` skupiny. Zprostředkovatel musí podporovat `DBPROP_CANSCROLLBACKWARDS` pro `m_bCanFetchBackwards` bude **true**.
+Odkazuje na vlastnost `DBPROP_CANSCROLLBACKWARDS` ve skupině `DBPROPSET_ROWSET`. Poskytovatel musí podporovat `DBPROP_CANSCROLLBACKWARDS`, aby `m_bCanFetchBackwards` na **hodnotu true**.
 
-## <a name="breset"></a> IRowsetImpl::m_bReset
+## <a name="breset"></a>IRowsetImpl:: m_bReset
 
-Bitový příznak, který umožňuje určit, pokud pozice kurzoru je definována v sadě řádků.
+Bitový příznak, pomocí kterého lze určit, zda je pozice kurzoru definována v sadě řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -418,11 +415,11 @@ unsigned m_bReset:1;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud příjemce volá [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) s záporné `lOffset` nebo *cRows* a `m_bReset` má hodnotu true, `GetNextRows` přesune na konec objektu sady řádků. Pokud `m_bReset` má hodnotu false, uživatel obdrží chybový kód, v souladu se specifikací OLE DB. `m_bReset` Získá příznak nastaven na **true** při prvním vytvoření v sadě řádků a když se zavolá příjemce [IRowsetImpl::RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Získá hodnotu **false** při volání `GetNextRows`.
+Pokud příjemce volá [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) se záporným `lOffset` nebo *rozvětvení* a `m_bReset` je true, `GetNextRows` přesune na konec sady řádků. Pokud je `m_bReset` false, příjemce obdrží kód chyby v souladu se specifikací OLE DB. Příznak `m_bReset` se nastaví na **hodnotu true** při prvním vytvoření sady řádků a když příjemce volá [IRowsetImpl:: volání metody RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Je nastavena na **hodnotu false** při volání `GetNextRows`.
 
-## <a name="irowset"></a> IRowsetImpl::m_iRowset
+## <a name="irowset"></a>IRowsetImpl:: m_iRowset
 
-Index tak, aby v sadě řádků reprezentující kurzor.
+Index sady řádků představující kurzor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -430,9 +427,9 @@ Index tak, aby v sadě řádků reprezentující kurzor.
 DBROWOFFSET m_iRowset;
 ```
 
-## <a name="rgrowhandles"></a> IRowsetImpl::m_rgRowHandles
+## <a name="rgrowhandles"></a>IRowsetImpl:: m_rgRowHandles
 
-Mapy popisovačů řádků, které jsou aktuálně obsaženy poskytovatelem v reakci na `GetNextRows`.
+Mapa popisovačů řádků aktuálně obsažených poskytovatelem v reakci na `GetNextRows`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -442,10 +439,10 @@ MapClass m_rgRowHandles;
 
 ### <a name="remarks"></a>Poznámky
 
-Popisovačů řádků se odeberou voláním `ReleaseRows`. Zobrazit [IRowsetImpl – přehled](../../data/oledb/irowsetimpl-class.md) pro definici *MapClass*.
+Popisovače řádků se odeberou voláním `ReleaseRows`. Další informace najdete v tématu [Přehled IRowsetImpl](../../data/oledb/irowsetimpl-class.md) pro definici *MapClass*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [CSimpleRow – třída](../../data/oledb/csimplerow-class.md)

@@ -1,19 +1,16 @@
 ---
 title: '> &lt;výjimky (C++ dokumentační dokumentace)'
 ms.date: 11/04/2016
-f1_keywords:
-- exception
-- <exception>
 helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d56e0ce7c892cfd9fd909b5268043d77929bd43c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988290"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439859"
 ---
 # <a name="ltexceptiongt"></a>výjimka &lt;&gt;
 
@@ -32,7 +29,7 @@ Odkaz na výjimku, která je k dispozici z aktuálního prostředí kompilace. P
 
 Název uzavřete do jednoduchých nebo dvojitých uvozovek.
 
-Informace o tom, jak vytvořit odkaz cref na obecný typ, najdete v tématu [\<](see-visual-cpp.md).
+Informace o tom, jak vytvořit odkaz cref na obecný typ, najdete v tématu [\<>](see-visual-cpp.md).
 
 *název*<br/>
 Popis.
@@ -67,6 +64,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Dokumentace XML](xml-documentation-visual-cpp.md)

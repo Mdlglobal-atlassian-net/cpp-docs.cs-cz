@@ -5,7 +5,6 @@ f1_keywords:
 - IOpenRowsetImpl
 - IOpenRowsetImpl.CreateRowset
 - IOpenRowsetImpl::CreateRowset
-- CreateRowset
 - OpenRowset
 - IOpenRowsetImpl::OpenRowset
 - IOpenRowsetImpl.OpenRowset
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 6f0dfb90b0ea79e115f459968558e48ae9827e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66fce9d2ffe63798738be1658a5328e907395a54
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390773"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446326"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl – třída
 
-Poskytuje implementaci pro `IOpenRowset` rozhraní.
+Poskytuje implementaci pro rozhraní `IOpenRowset`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,11 +34,11 @@ class IOpenRowsetImpl : public IOpenRowset
 ### <a name="parameters"></a>Parametry
 
 *SessionClass*<br/>
-Vaše třída odvozena od `IOpenRowsetImpl`.
+Vaše třída odvozená od `IOpenRowsetImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -47,16 +46,16 @@ Vaše třída odvozena od `IOpenRowsetImpl`.
 
 |||
 |-|-|
-|[CreateRowset](#createrowset)|Vytvoří objekt sady řádků. Nebyla volána přímo uživatelem.|
-|[OpenRowset](#openrowset)|Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu. (Není v ATLDB. H)|
+|[CreateRowset](#createrowset)|Vytvoří objekt sady řádků. Nevoláno přímo uživatelem.|
+|[OpenRowset](#openrowset)|Otevře a vrátí sadu řádků, která obsahuje všechny řádky z jedné základní tabulky nebo indexu. (Ne v ATLDB. Y|
 
 ## <a name="remarks"></a>Poznámky
 
-[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) rozhraní je povinné pro objekt relace. Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.
+Rozhraní [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) je pro objekt Session povinné. Otevře a vrátí sadu řádků, která obsahuje všechny řádky z jedné základní tabulky nebo indexu.
 
-## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
+## <a name="createrowset"></a>IOpenRowsetImpl –:: CreateRowset
 
-Vytvoří objekt sady řádků. Nebyla volána přímo uživatelem. Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) v *referenční informace pro OLE DB programátory.*
+Vytvoří objekt sady řádků. Nevoláno přímo uživatelem. Viz [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) v *referenci programátora OLE DB.*
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -75,16 +74,16 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 #### <a name="parameters"></a>Parametry
 
 *RowsetClass*<br/>
-Šablona člena třídy představující třídu sady řádků uživatele. Obvykle generované průvodcem knihovnou.
+Člen třídy šablony představující třídu sady řádků uživatele. Obvykle generuje průvodcem.
 
 *pRowsetObj*<br/>
-[out] Ukazatel na objektu sady řádků. Tento parametr se obvykle nepoužívá, ale lze použít, pokud před předáním objektu COM je nutné provést další práce na dané sadě řádků. Životnost *pRowsetObj* je svázaná s *ppRowset*.
+mimo Ukazatel na objekt sady řádků. Tento parametr se obvykle nepoužívá, ale je možné jej použít, je-li nutné provést více práce na sadě řádků předtím, než je předáte objektu COM. Životnost *pRowsetObj* je vázána *ppRowset*.
 
-Další parametry, naleznete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) v *OLE DB referenční informace pro programátory.*
+Další parametry naleznete v tématu [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) v *referenci programátora OLE DB.*
 
-## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
+## <a name="openrowset"></a>IOpenRowsetImpl –:: OpenRowset
 
-Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.
+Otevře a vrátí sadu řádků, která obsahuje všechny řádky z jedné základní tabulky nebo indexu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -100,13 +99,13 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda nebyla nalezena v ATLDB. H. Je vytvořen objekt Průvodcem knihovnou ATL při vytváření zprostředkovatele.
+Tato metoda není v ATLDB nalezena. Y. Vytvoří se Průvodce objektem ATL při vytváření poskytovatele.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

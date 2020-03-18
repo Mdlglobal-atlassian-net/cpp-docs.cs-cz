@@ -1,10 +1,9 @@
 ---
-title: /Fp (název &period;soubor pch)
-description: Pomocí možnosti kompilátoru /Fp zadejte název souboru předkompilované hlavičky.
+title: /FP (název &period;souboru PCH)
+description: Pomocí možnosti kompilátoru/FP určete název souboru předkompilované hlavičky.
 ms.date: 05/31/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
-- /fp
 - VC.Project.VCCLWCECompilerTool.PrecompiledHeaderFile
 helpviewer_keywords:
 - Fp compiler option [C++]
@@ -16,54 +15,54 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 6e7faa934d14acb5d129173c5e0c7ee67d6caf2b
-ms.sourcegitcommit: 540fa2f5015de1adfa7b6bf823f6eb4ed5a6a4bd
+ms.openlocfilehash: d62c5bd9fc7920c0a2a5530879680fad2a01d39a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66460872"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439779"
 ---
-# <a name="fp-name-periodpch-file"></a>/Fp (název &period;soubor pch)
+# <a name="fp-name-periodpch-file"></a>/FP (název &period;souboru PCH)
 
-Poskytuje název cesty pro předkompilované hlavičky místo použití výchozí název cesty.
+Poskytuje název cesty pro předkompilovanou hlavičku namísto použití výchozího názvu cesty.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Fp**<em>pathname</em>
+> **/FP**<em>cesta</em>
 
 ## <a name="remarks"></a>Poznámky
 
-Použití **/FP** spolu s možností [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](yc-create-precompiled-header-file.md) nebo [/Yu (Použít předkompilovaný hlavičkový soubor)](yu-use-precompiled-header-file.md) a zadat název a cesta k souboru předkompilované hlavičky (PCH) soubor. Ve výchozím nastavení **/Yc** možnost vytvoří název souboru PCH s použitím základní název zdrojového souboru a *pch* rozšíření.
+Použijte možnost **/FP** s [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](yc-create-precompiled-header-file.md) nebo [/Yu (použijte soubor předkompilované hlavičky)](yu-use-precompiled-header-file.md) k určení cesty a názvu souboru předkompilované hlavičky (PCH). Ve výchozím nastavení možnost **/YC** vytvoří název souboru PCH pomocí základního názvu zdrojového souboru a rozšíření *PCH* .
 
-Pokud nezadáte jako součást rozšíření *cesta*, rozšířením *pch* se předpokládá, že. Pokud zadáte název adresáře pomocí lomítko ( **/** ) na konci *cesta*, výchozí název souboru je vc*verze*0.pch, kde  *verze* je hlavní verzi sady nástrojů Visual Studio. Tento adresář musí existovat nebo je vygenerována chyba C1083.
+Pokud neurčíte rozšíření jako součást *cesty*, předpokládá se rozšíření *PCH* . Když zadáte název adresáře pomocí lomítka ( **/** ) na konci *cesty*, výchozí název souboru je VC*verze*0. pch, kde *Version* je hlavní verzí sady nástrojů sady Visual Studio. Tento adresář musí existovat, nebo je vygenerována chyba C1083.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Otevřít **vlastnosti konfigurace** > **C /C++**  > **předkompilované hlavičky** stránku vlastností.
+1. Otevřete **Vlastnosti konfigurace** > stránka vlastností **Předkompilovaná hlavička** **C/C++**  > .
 
-1. Upravit **výstupní soubor předkompilované hlavičky** vlastnost.
+1. Upravte vlastnost **výstupní soubor předkompilované hlavičky** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="examples"></a>Příklady
 
-Vytvoření samostatné verze souboru předkompilované hlavičky pro sestavení pro ladění programu s názvem, můžete zadat příkaz jako:
+Chcete-li vytvořit samostatnou pojmenovanou verzi souboru předkompilované hlavičky pro ladicí sestavení programu, můžete zadat příkaz jako:
 
 ```CMD
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP
 ```
 
-Následující příkaz určuje použití předkompilovaného hlavičkového souboru s názvem MYPCH.pch. Kompilátor překompiluje zdrojový kód v PROG.cpp až do konce MYAPP.h a umístí předkompilovaný kód MYPCH.pch. Pak používá obsah MYPCH.pch a zkompiluje rest PROG.cpp k vytvoření souboru .obj. Výstup tohoto příkladu je soubor s názvem PROG.exe.
+Následující příkaz určuje použití předkompilovaného hlavičkového souboru s názvem MYPCH. pch. Kompilátor předkompiluje zdrojový kód v souboru auto. cpp až do konce MYAPP. h a vloží předkompilovaný kód do souboru MYPCH. pch. Pak použije obsah souboru MYPCH. pch a zkompiluje zbytek programu auto. cpp a vytvoří soubor. obj. Výstupem tohoto příkladu je soubor s názvem auto. exe.
 
 ```CMD
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>

@@ -4,15 +4,14 @@ ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
-- event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821737"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441264"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource – třída
 
@@ -58,7 +57,7 @@ Velká většina komponent v prostředí Windows Runtime je agilní komponenty. 
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Název|Popis|
 |----------|-----------------|
 |[AgileEventSource:: Add – metoda](#add)|Připojí událost agilní události reprezentované zadaným rozhraním delegáta k sadě obslužných rutin událostí pro aktuální objekt **AgileEventSource** .|
 
@@ -87,6 +86,6 @@ Po dokončení této operace bude popisovač reprezentující událost. Tento to
 
 S_OK v případě úspěchu; v opačném případě hodnota HRESULT, která označuje chybu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)
