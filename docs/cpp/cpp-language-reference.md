@@ -5,16 +5,16 @@ ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f00d4eb5dc69ee0ab95ea864e63091b041a1853f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301584"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079927"
 ---
 # <a name="c-language-reference"></a>C++ – jazykové referenční informace
 
-Tento odkaz vysvětluje C++ programovací jazyk, jak je implementován v kompilátoru C++ společnosti Microsoft. Organizace je založena na [ *C++ referenční příručce s poznámkami*](http://www.stroustrup.com/arm.html) od Margaret Ellis a Bjarne Stroustrup a v mezinárodním standardu ANSI/ C++ ISO (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.
+Tento odkaz vysvětluje C++ programovací jazyk, jak je implementován v kompilátoru C++ společnosti Microsoft. Organizace je založena na  *C++ referenční příručce s poznámkami* od Margaret Ellis a Bjarne Stroustrup a v mezinárodním standardu ANSI/ C++ ISO (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.
 
 Přehled moderních C++ postupů programování najdete v tématu [Vítejte zpátky na C++ ](welcome-back-to-cpp-modern-cpp.md).
 
@@ -110,6 +110,6 @@ Referenční materiál pro pragmy, direktivy preprocesoru, předdefinovaná makr
 [Knihovny C++ vizuálů](../standard-library/cpp-standard-library-reference.md)<br/>
 Seznam odkazů na úvodní stránky odkazů pro různé knihovny Microsoftu C++
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

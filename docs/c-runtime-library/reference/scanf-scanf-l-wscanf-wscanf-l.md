@@ -43,18 +43,18 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: acb336827a669a867b937806a6cdb9aa51d75cbe
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778323"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079215"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
-Přečte formátovaná data ze standardního vstupního datového proudu. K dispozici jsou bezpečnější verze těchto funkcí; viz [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
+Přečte formátovaná data ze standardního vstupního datového proudu. K dispozici jsou bezpečnější verze těchto funkcí; viz [scanf_s, _scanf_s_l, wscanf_s _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
-> [!NOTE] 
+> [!NOTE]
 > V aplikaci Visual Studio 2015 `printf` a `scanf` rodina funkcí byly deklarovány jako **inline** a přesunuty do hlaviček `<stdio.h>` a `<conio.h>`. Pokud migrujete starší kód, může se v souvislosti s těmito funkcemi zobrazit *linkerů LNK2019* . Další informace najdete v tématu [o C++ historii vizuálních změn 2003 – 2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="syntax"></a>Syntaxe
@@ -112,7 +112,7 @@ Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že pou
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tscanf**|**scanf**|**scanf**|**wscanf**|
 |**_tscanf_l**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
@@ -124,7 +124,7 @@ Další informace najdete v tématu [pole specifikace formátu – funkce scanf 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**scanf**, **_scanf_l**|\<stdio. h >|
-|**wscanf**, **_wscanf_l**|\<stdio. h > nebo \<wchar. h >|
+|**wscanf**, **_wscanf_l**|\<stdio. h > nebo \<WCHAR. h >|
 
 Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
@@ -166,12 +166,12 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf –, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf –, _sprintf_l, swprintf, _swprintf_l \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

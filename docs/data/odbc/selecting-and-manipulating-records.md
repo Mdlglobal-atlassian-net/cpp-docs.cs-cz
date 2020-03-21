@@ -6,36 +6,36 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 8388cd5c8c53a4595dc9b44430077421ee8680bf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707810"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079801"
 ---
 # <a name="selecting-and-manipulating-records"></a>Výběr záznamů a manipulace s nimi
 
-> [!NOTE] 
-> Průvodce příjemcem ODBC knihovny MFC není k dispozici v aplikaci Visual Studio 2019 a novějším. Příjemce měli stále můžete vytvořit ručně.
+> [!NOTE]
+> Průvodce příjemcem knihovny MFC rozhraní ODBC není dostupný v aplikaci Visual Studio 2019 a novějším. Příjemce můžete přesto vytvořit ručně.
 
-Obvykle Pokud vyberete záznamy ze zdroje dat pomocí SQL **vyberte** příkazu získat sadu výsledků dotazu, což je sada záznamů z tabulky nebo dotaz. S databázovými třídami použít objekt sady záznamů a vyberte přístup k sadě výsledků. Toto je objekt třídy specifické pro aplikaci, která je odvozena od třídy [CRecordset](../../mfc/reference/crecordset-class.md). Při definování třídy sady záznamů, můžete zadat zdroje dat a přidružte jej k, tabulku použít a sloupce v tabulce. Průvodce aplikací knihovny MFC nebo **přidat třídu** (jak je popsáno v [přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) s připojením ke konkrétnímu zdroji dat vytvoří třídu. Průvodci zápis [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) členské funkce třídy `CRecordset` vrátit název tabulky.
+Když vyberete záznamy ze zdroje dat pomocí příkazu SQL **Select** , dostanete sadu výsledků, což je sada záznamů z tabulky nebo dotazu. S databázovými třídami použijete objekt sady záznamů pro výběr a přístup k sadě výsledků. Toto je objekt třídy specifické pro aplikaci, kterou můžete odvodit z třídy [CRecordset](../../mfc/reference/crecordset-class.md). Při definování třídy sady záznamů zadáte zdroj dat, ke kterému se má přidružit, tabulka, která se má použít, a sloupce tabulky. Průvodce aplikací knihovny MFC nebo **Přidat třídu** (jak je popsáno v tématu [Přidání příjemce knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) vytvoří třídu s připojením ke konkrétnímu zdroji dat. Průvodci zapisují členskou funkci [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) třídy `CRecordset`, která vrátí název tabulky.
 
-Použití [CRecordset](../../mfc/reference/crecordset-class.md) objektu za běhu, můžete:
+Pomocí objektu [CRecordset](../../mfc/reference/crecordset-class.md) v době běhu můžete:
 
-- Prozkoumejte datová pole z aktuální záznam.
+- Projděte si datová pole aktuálního záznamu.
 
-- Filtr nebo řazení záznamů.
+- Filtrovat nebo seřadit sadu záznamů.
 
-- Přizpůsobení výchozí SQL **vyberte** příkazu.
+- Přizpůsobení výchozího příkazu SQL **Select** .
 
-- Projděte si vybrané záznamy.
+- Procházejte vybranými záznamy.
 
-- Přidání, aktualizace nebo odstranění záznamů (Pokud je zdroj dat a sady záznamů jsou aktualizovatelné).
+- Přidejte, aktualizujte nebo odstraňte záznamy (Pokud je zdroj dat i sada záznamů aktualizovatelný).
 
-- Otestujte, zda sada záznamů umožňuje opětovné spuštění dotazu a aktualizovat obsah sady záznamů.
+- Otestujte, zda sada záznamů umožňuje dotazování a aktualizaci obsahu sady záznamů.
 
-Po dokončení používání objektu sady záznamů, zavřete a zničte jej. Další informace o sadách záznamů najdete v tématu [sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md).
+Po dokončení práce s objektem sady záznamů jej zavřete a zničit. Další informace o sadách záznamů naleznete v tématu [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)

@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927682"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079502"
 ---
 # <a name="manifest-tool-property-pages"></a>Stránky vlastností nástroje manifest
 
-Pomocí těchto stránek můžete zadat obecné možnosti pro [Mt. exe](/windows/win32/sbscs/mt-exe). Tyto stránky najdete v části**vlastnosti** >  **projektu** > **vlastnosti** > konfigurace**nástroje manifest**.
+Pomocí těchto stránek můžete zadat obecné možnosti pro [Mt. exe](/windows/win32/sbscs/mt-exe). Tyto stránky se nacházejí v části **vlastnosti** **projektu** >  > **Vlastnosti konfigurace** > **Nástroj manifest**.
 
 ## <a name="general-property-page"></a>Obecná stránka vlastností
 
@@ -47,11 +47,11 @@ Pomocí těchto stránek můžete zadat obecné možnosti pro [Mt. exe](/windows
 
 ### <a name="assembly-identity"></a>Identita sestavení * *
 
-Používá možnost/identity k určení řetězce identity, který zahrnuje atributy pro [ \<prvek assemblyIdentity >](/visualstudio/deployment/assemblyidentity-element-clickonce-application). `name` Řetězec identity začíná hodnotou atributu a je následován páry*hodnoty* *atributu* = . Atributy v řetězci identity jsou odděleny čárkou.
+Používá možnost/identity k určení řetězce identity, který obsahuje atributy pro [> prvek\<assemblyIdentity](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Řetězec identity začíná hodnotou atributu `name` a za ním následuje dvojice *atributů* = *hodnota* . Atributy v řetězci identity jsou odděleny čárkou.
 
-Toto je příklad řetězce identity:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Toto je příklad řetězce identity: `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>Vstupní a výstupní stránka vlastností     
+## <a name="input-and-output-property-page"></a>Vstupní a výstupní stránka vlastností
 
 ###  <a name="additional-manifest-files"></a>Další soubory manifestu
 
@@ -99,13 +99,13 @@ Určuje, zda je aplikace zohledňující rozlišení DPI. Ve výchozím nastaven
 
 **Vlastnit**
 
-- **Žádné**
+- **NTato**
 - **Vysoká úroveň DPI**
 - **Pro monitor s vysokým rozlišením DPI**
 
 ## <a name="isolated-com-property-page"></a>Izolovaná stránka vlastností COM
 
-Další informace o izolovaném modelu COM naleznete v tématu [izolované aplikace](/windows/win32/SbsCs/isolated-applications) a [postupy: Sestavujte izolované aplikace pro využívání](../how-to-build-isolated-applications-to-consume-com-components.md)komponent modelu COM.
+Další informace o izolovaném modelu COM naleznete v tématu [izolované aplikace](/windows/win32/SbsCs/isolated-applications) a [Postupy: sestavování izolovaných aplikací pro využívání komponent modelu COM](../how-to-build-isolated-applications-to-consume-com-components.md).
 
 ###  <a name="type-library-file"></a>Soubor knihovny typů
 
@@ -137,7 +137,6 @@ Určuje cestu hledání, která se má použít při aktualizaci hodnot hash sou
 
 Další možnosti
 
-
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [C++odkaz na stránku vlastností projektu](property-pages-visual-cpp.md)

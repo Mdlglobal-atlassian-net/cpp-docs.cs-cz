@@ -3,16 +3,16 @@ title: Stránky vlastností linkeru
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fd0befd7b8ed4e7a4209c3c80602be2f2a99422f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927705"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079601"
 ---
 # <a name="linker-property-pages"></a>Stránky vlastností linkeru
 
-Následující vlastnosti jsou nalezeny v části**vlastnosti** >  **projektu** > **vlastnosti** > konfigurace**linker**. Další informace o linkeru naleznete v tématu [CL vyvolá Možnosti linkeru](cl-invokes-the-linker.md) a [linkeru](linker-options.md).
+Následující vlastnosti jsou v rámci **projektu** > **vlastnosti** > **Vlastnosti konfigurace** > **linkeru**. Další informace o linkeru naleznete v tématu [CL vyvolá Možnosti linkeru](cl-invokes-the-linker.md) a [linkeru](linker-options.md).
 
 ## <a name="general-property-page"></a>Obecná stránka vlastností
 
@@ -27,42 +27,42 @@ Vytiskne zprávy o průběhu linkeru.
 **Vlastnit**
 
 - **Nenastaveno** – bez podrobností
-- **Zobrazit všechny zprávy o průběhu** – zobrazí všechny zprávy o průběhu. 
+- **Zobrazit všechny zprávy o průběhu** – zobrazí všechny zprávy o průběhu.
 - **Pro prohledávané knihovny** – zobrazí zprávy o průběhu, které označují pouze prohledávané knihovny.
 - **O skládání COMDAT během optimalizovaného propojování** – zobrazí informace o skládání COMDAT během optimalizovaného propojování.
 - Informace o **odebraných datech během optimalizovaného propojování** – zobrazí informace o funkcích a datech odebraných během optimalizovaného propojování.
 - **O modulech nekompatibilních s SEH** – zobrazí informace o modulech nekompatibilních s bezpečným zpracováním výjimek.
 - **O aktivitě linkeru související se spravovaným kódem** – zobrazí informace o aktivitě linkeru související se spravovaným kódem.
 
-### <a name="version"></a>Version
+### <a name="version"></a>Verze
 
 Možnost [/Version](version-version-information.md) dá linkeru pokyn, aby vložil číslo verze do hlavičky souboru. exe nebo. dll. Pomocí DUMPBIN/HEADERS můžete zobrazit pole verze obrázku VOLITELNÝch hodnot hlaviček, abyste viděli účinek **/Version**.
 
 ### <a name="enable-incremental-linking"></a>Povolit přírůstkové propojování
 
-Povolí přírůstkové propojování. ([/INCREMENTAL](incremental-link-incrementally.md),/INCREMENTAL: NO)
+Povolí přírůstkové propojování. ([/incremental](incremental-link-incrementally.md),/incremental: No)
 
 ### <a name="suppress-startup-banner"></a>Potlačit úvodní nápis
 
-Možnost [/nologo](nologo-suppress-startup-banner-linker.md) zabraňuje zobrazení zprávy o autorských právech a čísla verze. 
+Možnost [/nologo](nologo-suppress-startup-banner-linker.md) zabraňuje zobrazení zprávy o autorských právech a čísla verze.
 
 ### <a name="ignore-import-library"></a>Ignorovat knihovnu importu
 
 Tato vlastnost oznamuje linkeru, že neodkazuje žádný z výstupů. lib vygenerovaných z tohoto sestavení do libovolného závislého projektu. Umožňuje systému projektu zpracovávat soubory. dll, které při sestavení nevytvářejí soubor. lib. Pokud projekt závisí na jiném projektu, který vytváří knihovnu DLL, systém projektu automaticky propojí soubor. lib vytvořený tímto podřízeným projektem. Tato vlastnost může být zbytečná v projektech, které vytváří knihovny COM DLL nebo knihovny DLL s pouze prostředky, protože tyto knihovny DLL nemají smysluplné exporty. Pokud knihovna DLL neobsahuje žádné exporty, linker negeneruje soubor. lib. Není-li k dispozici žádný soubor export. lib a systém projektu přikáže linkeru, aby provedl propojení s chybějící knihovnou DLL, odkaz se nezdařil. K vyřešení tohoto problému použijte vlastnost **Ignorovat knihovnu import** . Když je nastaveno na **Ano**, systém projektu ignoruje přítomnost nebo nepřítomnost souboru. lib a způsobí, že každý projekt, který závisí na tomto projektu, nebude propojen s neexistujícím souborem. lib.
 
-Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>této vlastnosti, přečtěte si téma.
+Chcete-li získat programový přístup k této vlastnosti, přečtěte si <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
 
 ### <a name="register-output"></a>Registrovat výstup
 
-Spouští `regsvr32.exe /s $(TargetPath)` se ve výstupu sestavení, který je platný pouze pro projekty. dll. Pro projekty. exe je tato vlastnost ignorována. Chcete-li zaregistrovat výstup. exe, nastavte událost postbuild v konfiguraci tak, aby vlastní registraci, která je vždy vyžadována pro registrované soubory. exe.
+Spustí `regsvr32.exe /s $(TargetPath)` ve výstupu sestavení, který je platný pouze pro projekty. dll. Pro projekty. exe je tato vlastnost ignorována. Chcete-li zaregistrovat výstup. exe, nastavte událost postbuild v konfiguraci tak, aby vlastní registraci, která je vždy vyžadována pro registrované soubory. exe.
 
-Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>této vlastnosti, přečtěte si téma.
+Chcete-li získat programový přístup k této vlastnosti, přečtěte si <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>.
 
 ### <a name="per-user-redirection"></a>Přesměrování podle uživatele
 
-Registrace v aplikaci Visual Studio se tradičně provedla v registru HKEY_CLASSES_ROOT (HKCR). V případě systému Windows Vista a novějších operačních systémů je pro přístup k HKCR nutné spustit aplikaci Visual Studio v režimu zvýšeného oprávnění. Vývojáři nechtějí vždycky spouštět v režimu zvýšené úrovně, ale pořád musí fungovat s registrací. Přesměrování vázané na uživatele umožňuje registraci bez nutnosti spuštění v režimu zvýšené úrovně.
+Registrace v aplikaci Visual Studio byla tradičně provedena v HKEY_CLASSES_ROOT (HKCR). V případě systému Windows Vista a novějších operačních systémů je pro přístup k HKCR nutné spustit aplikaci Visual Studio v režimu zvýšeného oprávnění. Vývojáři nechtějí vždycky spouštět v režimu zvýšené úrovně, ale pořád musí fungovat s registrací. Přesměrování vázané na uživatele umožňuje registraci bez nutnosti spuštění v režimu zvýšené úrovně.
 
-Přesměrování dle uživatele vynutí přesměrování zápisu do HKCR na HKEY\_aktuálního\_uživatele (HKCU). Pokud je přesměrování pro jednotlivé uživatele vypnuté, může způsobit [chybu sestavení projektu PRJ0050](../../error-messages/tool-errors/project-build-error-prj0050.md) , když se program pokusí zapisovat do HKCR.
+Přesměrování dle uživatele vynutí přesměrování zápisu na HKCR do HKEY\_aktuální\_uživatele (HKCU). Pokud je přesměrování pro jednotlivé uživatele vypnuté, může způsobit [chybu sestavení projektu PRJ0050](../../error-messages/tool-errors/project-build-error-prj0050.md) , když se program pokusí zapisovat do HKCR.
 
 ### <a name="additional-library-directories"></a>Další adresáře knihoven
 
@@ -72,7 +72,7 @@ Umožňuje uživateli přepsat cestu ke knihovně prostředí. ([/LIBPATH](libpa
 
 Určuje, zda se mají propojit soubory. lib, které jsou vytvářeny závislými projekty. Obvykle je vhodné propojit soubory. lib, ale nemusí se jednat o případ některých knihoven DLL.
 
-Můžete také zadat soubor. obj zadáním názvu souboru a relativní cesty, například. \\. \MyLibProject\MyObjFile.obj". Pokud zdrojový kód souboru. obj #includes předkompilovanou hlavičku, například PCH. h, pak je soubor PCH. obj umístěn ve stejné složce jako MyObjFile. obj. Také je nutné přidat soubor PCH. obj jako další závislost.
+Můžete také zadat soubor. obj zadáním názvu souboru a relativní cesty, například.\\. \MyLibProject\MyObjFile.obj". Pokud zdrojový kód souboru. obj #includes předkompilovanou hlavičku, například PCH. h, pak je soubor PCH. obj umístěn ve stejné složce jako MyObjFile. obj. Také je nutné přidat soubor PCH. obj jako další závislost.
 
 ### <a name="use-library-dependency-inputs"></a>Použít vstupy závislosti knihoven
 
@@ -82,7 +82,7 @@ Informace o tom, jak získat přístup k stránce vlastností **obecného** link
 
 ### <a name="link-status"></a>Stav propojení
 
-Určuje, zda má linker zobrazit ukazatel průběhu ukazující, jaké procento propojení je dokončeno. Ve výchozím nastavení se tyto informace o stavu nezobrazují. ([/LTCG](ltcg-link-time-code-generation.md): STATUS | LTCG: INSTATUS)
+Určuje, zda má linker zobrazit ukazatel průběhu ukazující, jaké procento propojení je dokončeno. Ve výchozím nastavení se tyto informace o stavu nezobrazují. ([/LTCG](ltcg-link-time-code-generation.md): status | LTCG: INSTATUS)
 
 ### <a name="prevent-dll-binding"></a>Zabránit vazbě knihoven DLL
 
@@ -125,7 +125,7 @@ Určuje další položky, které se mají přidat do příkazového řádku prop
 
 ### <a name="ignore-all-default-libraries"></a>Ignorovat všechny výchozí knihovny
 
-Možnost [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) přikáže linkeru, aby odebral jednu nebo více výchozích knihoven ze seznamu knihoven, které vyhledává při překladu externích odkazů. 
+Možnost [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) přikáže linkeru, aby odebral jednu nebo více výchozích knihoven ze seznamu knihoven, které vyhledává při překladu externích odkazů.
 
 ### <a name="ignore-specific-default-libraries"></a>Ignorovat specifické výchozí knihovny
 
@@ -133,7 +133,7 @@ Určuje jeden nebo více názvů výchozích knihoven, které se mají ignorovat
 
 ### <a name="module-definition-file"></a>Soubor definice modulu
 
-Parametr [/def](def-specify-module-definition-file.md) předá linkeru soubor definice modulu (. def). Pro propojení lze zadat pouze jeden soubor. def. 
+Parametr [/def](def-specify-module-definition-file.md) předá linkeru soubor definice modulu (. def). Pro propojení lze zadat pouze jeden soubor. def.
 
 ### <a name="add-module-to-assembly"></a>Přidat modul do sestavení
 
@@ -149,7 +149,7 @@ Možnost [/include](include-force-symbol-references.md) dá linkeru pokyn, aby p
 
 ### <a name="delay-loaded-dlls"></a>Odložené načtené knihovny DLL
 
-Možnost [/DELAYLOAD](delayload-delay-load-import.md) způsobuje zpožděné načítání knihoven DLL. Název knihovny DLL určuje knihovnu DLL pro odložené načtení. 
+Možnost [/DELAYLOAD](delayload-delay-load-import.md) způsobuje zpožděné načítání knihoven DLL. Název knihovny DLL určuje knihovnu DLL pro odložené načtení.
 
 ### <a name="assembly-link-resource"></a>Prostředek odkazu na sestavení
 
@@ -171,11 +171,11 @@ Možnost [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-r
 
 ### <a name="allow-isolation"></a>Povoluje izolaci
 
-Určuje chování při vyhledávání manifestu. ([/ALLOWISOLATION](allowisolation-manifest-lookup.md): NO)
+Určuje chování při vyhledávání manifestu. ([/ALLOWISOLATION](allowisolation-manifest-lookup.md): No)
 
 ### <a name="enable-user-account-control-uac"></a>Povolit řízení uživatelských účtů (UAC)
 
-Určuje, jestli je povolený řízení uživatelských účtů.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC: NO)
+Určuje, jestli je povolený řízení uživatelských účtů.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC: No)
 
 ### <a name="uac-execution-level"></a>Úroveň spuštění nástroje řízení uživatelských účtů
 
@@ -201,8 +201,8 @@ Tato možnost umožňuje vytvoření informací o ladění pro soubor. exe nebo 
 
 - **Ne** – nevytváří žádné ladicí informace.
 - **Vygenerovat informace o ladění** – vytvoří kompletní programovou databázi (PDB), která je ideální pro distribuci na server symbolů Microsoft.
-- **Generovat ladicí informace optimalizované pro rychlejší odkazy** – vytvoří programovou databázi (PDB) ideální pro cyklus úpravy-propojení-ladění. 
-- **Vygenerovat informace o ladění optimalizované pro sdílení a publikování** – vytvoří databázi programu (PDB) ideální pro cyklus úpravy-propojení-ladění. 
+- **Generovat ladicí informace optimalizované pro rychlejší odkazy** – vytvoří programovou databázi (PDB) ideální pro cyklus úpravy-propojení-ladění.
+- **Vygenerovat informace o ladění optimalizované pro sdílení a publikování** – vytvoří databázi programu (PDB) ideální pro cyklus úpravy-propojení-ladění.
 
 ### <a name="generate-program-database-file"></a>Generovat soubor databáze programu
 
@@ -282,7 +282,7 @@ Možnost [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) určuje, že ope
 
 Možnost [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) určuje, že operační systém nejprve zkopíruje výstup linkeru do odkládacího souboru a pak z něj spustí bitovou kopii. Tato možnost je funkce systému Windows NT 4,0 (a novější). Je-li zadán parametr **net** , bude operační systém nejprve kopírovat binární obrázek ze sítě do odkládacího souboru a načíst jej z něj. Tato možnost je užitečná pro spuštěné aplikace v síti.
 
-### <a name="driver"></a>Faktorů
+### <a name="driver"></a>Ovladač
 
 Pomocí možnosti linkeru [/Driver](driver-windows-nt-kernel-mode-driver.md) můžete vytvořit ovladač režimu jádra systému Windows NT.
 
@@ -290,8 +290,8 @@ Pomocí možnosti linkeru [/Driver](driver-windows-nt-kernel-mode-driver.md) mů
 
 - **Nenastaveno** -výchozí nastavení ovladače.
 - Ovladač **ovladače**
-- **Pouze** /Driver: v linkeru způsobí, že LINKER přidá IMAGE_FILE_UP_SYSTEM_ONLY bit do vlastností ve výstupní hlavičce a určí, že se jedná o ovladač JEDNOPROCESOROVÉHO (up). Operační systém odmítne načíst ovladač do systému s více procesory (MP).
-- **WDM** -/Driver: WDM způsobí, že LINKER nastaví použití parametru bit v poli DLLCHARACTERISTICS volitelného záhlaví.
+- **Pouze** /Driver: umožňuje linkeru přidat IMAGE_FILE_UP_SYSTEM_ONLY bitovou kopii do vlastností v hlavičce Output, aby bylo možné určit, že se jedná o ovladač JEDNOPROCESOROVÉHO (up). Operační systém odmítne načíst ovladač do systému s více procesory (MP).
+- **WDM** -/Driver: WDM způsobí, že linker nastaví IMAGE_DLLCHARACTERISTICS_WDM_DRIVER bit v poli DLLCHARACTERISTICS volitelného záhlaví.
 
 ## <a name="optimization-property-page"></a>Stránka vlastností optimalizace
 
@@ -381,7 +381,7 @@ Možnost [/entry](entry-entry-point-symbol.md) Určuje funkci vstupního bodu ja
 
 ### <a name="no-entry-point"></a>Žádný vstupní bod
 
-Možnost [/NOENTRY](noentry-no-entry-point.md)je vyžadována pro vytvoření knihovny DLL, která je jen pro prostředky. Tuto možnost použijte, pokud nechcete, aby propojení propojuje odkaz na `_main` do knihovny DLL.
+Možnost [/NOENTRY](noentry-no-entry-point.md)je vyžadována pro vytvoření knihovny DLL, která je jen pro prostředky. Tuto možnost použijte, pokud chcete zabránit propojení odkazem na `_main` do knihovny DLL.
 
 ### <a name="set-checksum"></a>Nastavit kontrolní součet
 
@@ -393,15 +393,15 @@ Nastaví základní adresu programu. ([/Base](base-base-address.md): {Address\[;
 
 ### <a name="randomized-base-address"></a>Náhodná základní adresa
 
-Náhodná základní adresa. ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: NO])
+Náhodná základní adresa. ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: No])
 
 ### <a name="fixed-base-address"></a>Pevná základní adresa
 
-Vytvoří program, který se dá načíst jenom na upřednostňovanou základní adresu. ([/FIXED](fixed-fixed-base-address.md)\[: NO])
+Vytvoří program, který se dá načíst jenom na upřednostňovanou základní adresu. ([/FIXED](fixed-fixed-base-address.md)\[: No])
 
 ### <a name="data-execution-prevention-dep"></a>Zabránění spuštění dat (DEP)
 
-Označí spustitelný soubor jako testovaný, aby byl kompatibilní s funkcí Zabránění spuštění dat systému Windows. ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: NO])
+Označí spustitelný soubor jako testovaný, aby byl kompatibilní s funkcí Zabránění spuštění dat systému Windows. ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: No])
 
 ### <a name="turn-off-assembly-generation"></a>Vypnout generování sestavení
 
@@ -409,11 +409,11 @@ Možnost [/NOASSEMBLY](noassembly-create-a-msil-module.md) dá linkeru pokyn, ab
 
 ### <a name="unload-delay-loaded-dll"></a>Uvolnit odložené načtení knihovny DLL
 
-Kvalifikátor **Unload** oznamuje funkci opožděného načítání, aby podporovala explicitní uvolnění knihovny DLL. ([/DELAY](delay-delay-load-import-settings.md): UNLOAD)
+Kvalifikátor **Unload** oznamuje funkci opožděného načítání, aby podporovala explicitní uvolnění knihovny DLL. ([/Delay](delay-delay-load-import-settings.md): Unload)
 
 ### <a name="nobind-delay-loaded-dll"></a>Knihovna DLL pro odložené načtení zpoždění vazby
 
-Kvalifikátor IAT přikáže linkeru, aby nezahrnoval s **možností vazby v** konečné imagi. Výchozím nastavením je vytvoření IAT s možností vazby pro odložené načítání knihoven DLL. ([/DELAY](delay-delay-load-import-settings.md): NENÍ VÁZÁNO)
+Kvalifikátor IAT přikáže linkeru, aby nezahrnoval s **možností vazby v** konečné imagi. Výchozím nastavením je vytvoření IAT s možností vazby pro odložené načítání knihoven DLL. ([/Delay](delay-delay-load-import-settings.md): není vázáno)
 
 ### <a name="import-library"></a>Importovat knihovnu
 
@@ -445,7 +445,7 @@ Možnost [/Machine](machine-specify-target-platform.md) určuje cílovou platfor
 
 ### <a name="profile"></a>Profil
 
-Vytvoří výstupní soubor, který se dá použít s profilerem Performance Tools. Vyžaduje nastavení GenerateDebugInformation (/[/Debug](debug-generate-debug-info.md)). ([/PROFILE](profile-performance-tools-profiler.md))
+Vytvoří výstupní soubor, který se dá použít s profilerem Performance Tools. Vyžaduje nastavení GenerateDebugInformation (/[/Debug](debug-generate-debug-info.md)). ([/Profile](profile-performance-tools-profiler.md))
 
 ### <a name="clr-thread-attribute"></a>Atribut vlákna CLR
 

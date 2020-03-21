@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Architektura (ODBC)'
+title: 'Sada záznamů: Architektura (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, data members
@@ -13,34 +13,34 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: 0edde640e0eebaf21216fc9ef37a8e31e2c1a210
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: e95250b5ef307eafdb334050fbace945355e0521
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707981"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079866"
 ---
-# <a name="recordset-architecture-odbc"></a>Recordset: Architektura (ODBC)
+# <a name="recordset-architecture-odbc"></a>Sada záznamů: Architektura (ODBC)
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
-Toto téma popisuje datové členy, které tvoří architektura objekt sady záznamů:
+Toto téma popisuje datové členy, které tvoří architekturu objektu sady záznamů:
 
-- [Pole datových členů](#_core_field_data_members)
+- [Datové členy pole](#_core_field_data_members)
 
-- [Parametry datových členů](#_core_parameter_data_members)
+- [Datové členy parametru](#_core_parameter_data_members)
 
-- [Pomocí m_nFields a m_nParams datové členy](#_core_using_m_nfields_and_m_nparams)
+- [Použití datových členů m_nFields a m_nParams](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud je implementovaná hromadné načítání řádků, se podobá architektuře. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené od `CRecordset`, ve kterých nebylo implementováno hromadné načítání řádků. Pokud je implementováno hromadné načítání řádků, je architektura podobná. Pro pochopení rozdílů si přečtěte téma [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-##  <a name="_core_a_sample_class"></a> Ukázkový – třída
+##  <a name="sample-class"></a><a name="_core_a_sample_class"></a>Sample – třída
 
-> [!NOTE] 
-> Průvodce příjemcem ODBC knihovny MFC není k dispozici v aplikaci Visual Studio 2019 a novějším. Příjemce měli stále můžete vytvořit ručně.
+> [!NOTE]
+> Průvodce příjemcem knihovny MFC rozhraní ODBC není dostupný v aplikaci Visual Studio 2019 a novějším. Příjemce můžete přesto vytvořit ručně.
 
-Při použití [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** průvodce, chcete-li deklarovat třídu sady záznamů odvozený od `CRecordset`, výsledné třídy obsahuje obecnou strukturu je znázorněno v následujícím jednoduché Třída:
+Použijete-li průvodce [příjemcem rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z průvodce **přidáním třídy** k deklaraci třídy sady záznamů odvozené od `CRecordset`, výsledná třída má obecnou strukturu zobrazenou v následující jednoduché třídě:
 
 ```cpp
 class CCourse : public CRecordset
@@ -54,47 +54,47 @@ public:
 };
 ```
 
-Na začátek třídy, průvodce zapíše sadu [pole datových členů](#_core_field_data_members). Když vytváříte třídu, je nutné zadat jeden nebo více polí datové členy. Pokud je třída s parametry, jako ukázku třída je (s datový člen `m_strIDParam`), je třeba ručně přidat [parametry datových členů](#_core_parameter_data_members). Průvodce nepodporuje přidávání parametrů do třídy.
+Na začátku třídy Průvodce zapisuje sadu [datových členů pole](#_core_field_data_members). Při vytváření třídy je nutné zadat jeden nebo více datových členů pole. Pokud je třída parametrizovaná, protože ukázková třída je (s datovým členem `m_strIDParam`), musíte ručně přidat [datové členy parametrů](#_core_parameter_data_members). Průvodce nepodporuje přidávání parametrů do třídy.
 
-##  <a name="_core_field_data_members"></a> Pole datových členů
+##  <a name="field-data-members"></a><a name="_core_field_data_members"></a>Datové členy pole
 
-Nejdůležitější členy třídy sady záznamů jsou datové členy polí. Pro každý sloupec, kterou jste vybrali ze zdroje dat obsahuje třídu datový člen třídy odpovídající datový typ pro tento sloupec. Například [ukázková třída](#_core_a_sample_class) uvedené na začátku tohoto tématu má dvě pole datových členů, oba typu `CString`, označované jako `m_strCourseID` a `m_strCourseTitle`.
+Nejdůležitějšími členy vaší třídy sady záznamů jsou pole datových členů. Pro každý sloupec, který vyberete ze zdroje dat, třída obsahuje datový člen příslušného datového typu pro daný sloupec. Například [Třída vzorku](#_core_a_sample_class) zobrazená na začátku tohoto tématu má dva pole datových členů, jak typu `CString`, nazývané `m_strCourseID` a `m_strCourseTitle`.
 
-Pokud sada záznamů vybere sadu záznamů, systém automaticky sváže sloupce aktuální záznam (po `Open` volání, první záznam je aktuální) na pole datové členy objektu. To znamená, že rozhraní používá datový člen příslušné pole jako vyrovnávací paměť pro uložení obsahu sloupec záznamů.
+Když sada záznamů vybere sadu záznamů, rozhraní automaticky váže sloupce aktuálního záznamu (po volání `Open`, první záznam je aktuální) k poli datových členů objektu. To znamená, že rozhraní používá příslušný datový člen pole jako vyrovnávací paměť, do které se ukládá obsah sloupce záznamu.
 
-Procházení nový záznam rozhraní datové členy polí používá k reprezentaci aktuální záznam. Rozhraní framework aktualizuje pole datových členů, nahraďte hodnoty předchozí záznam. Datové členy polí se používají také k aktualizaci aktuální záznam a pro přidávání nových záznamů. Jako součást procesu aktualizace záznamu zadejte hodnoty aktualizace přiřazením hodnoty přímo do příslušného pole datového člena nebo členy.
+Když se uživatel posune k novému záznamu, používá rozhraní pole datových členů k reprezentaci aktuálního záznamu. Rozhraní aktualizuje pole datových členů a nahradí hodnoty předchozího záznamu. Datové členy pole se používají také k aktualizaci aktuálního záznamu a k přidávání nových záznamů. V rámci procesu aktualizace záznamu zadáte hodnoty aktualizace přiřazením hodnot přímo k příslušnému datovému členu nebo členům pole.
 
-##  <a name="_core_parameter_data_members"></a> Parametry datových členů
+##  <a name="parameter-data-members"></a><a name="_core_parameter_data_members"></a>Datové členy parametru
 
-Pokud je třída parametrizovaná, má jeden nebo více parametry datových členů. Parametrizované třída umožňuje základní záznamů dotazu na informace o získaných nebo vypočítat v době běhu.
+Pokud je třída parametrizovaná, má jeden nebo více datových členů parametrů. Parametrizovaná třída umožňuje vytvořit dotaz sady záznamů pro informace získané nebo počítané za běhu.
 
-Parametr obvykle pomáhá zúžení výběru, jako v následujícím příkladu. Na základě [ukázková třída](#_core_a_sample_class) na začátku tohoto tématu, může být objekt sady záznamů spustit následující příkaz SQL:
+Obvykle parametr umožňuje zúžit výběr, jak je uvedeno v následujícím příkladu. Na základě [Ukázkové třídy](#_core_a_sample_class) na začátku tohoto tématu může objekt sady záznamů spustit následující příkaz SQL:
 
 ```sql
 SELECT CourseID, CourseTitle FROM Course WHERE CourseID = ?
 ```
 
-"?" Je zástupný symbol pro hodnotu parametru, který zadáte v době běhu. Při vytvoření sady záznamů a nastavte jeho `m_strIDParam` stane datový člen na MATH101 efektivní příkazu SQL sady záznamů:
+"?" Je zástupný symbol pro hodnotu parametru, který zadáte v době běhu. Při sestavování sady záznamů a nastavení jejího datového členu `m_strIDParam` na MATH101, bude platný příkaz jazyka SQL pro sadu záznamů:
 
 ```sql
 SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 ```
 
-Definuje parametry datových členů, informování rozhraní framework o parametrech v řetězci SQL. Systém sváže parametr, který umožňuje ODBC věděli, kde získat hodnoty nahraďte zástupný symbol. V příkladu Výsledná sada záznamů obsahuje pouze záznam z kurzu tabulky se sloupcem CourseID, jehož hodnota je MATH101. Jsou vybrané všechny sloupce zadané tohoto záznamu. Můžete zadat libovolný počet parametrů (a zástupné symboly) podle potřeby.
+Definováním datových členů parametru říkáte rozhraní o parametrech v řetězci SQL. Rozhraní váže parametr, který umožňuje rozhraní ODBC zjistit, kde získat hodnoty, které nahradí zástupný symbol. V tomto příkladu Výsledná sada záznamů obsahuje pouze záznam z tabulky Course se sloupcem CourseID, jehož hodnota je MATH101. Jsou vybrány všechny zadané sloupce tohoto záznamu. Můžete zadat tolik parametrů (a zástupné symboly), kolik potřebujete.
 
 > [!NOTE]
->  Nemá žádný účinek, samotné knihovny MFC s parametry – zejména neprovede nahrazování textu. Místo toho MFC zjistí ODBC, kde získat parametr; ODBC načte data a provede nezbytné parametrizace.
+>  Knihovna MFC sama o sobě neprovede žádné parametry – konkrétně neprovádí substituci textu. Místo toho knihovna MFC oznamuje rozhraní ODBC, kde získat parametr; Rozhraní ODBC načte data a provede nezbytné Parametrizace.
 
 > [!NOTE]
->  Je důležité pořadí parametrů. Informace o této a další informace o parametrech najdete v tématu [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+>  Pořadí parametrů je důležité. Informace o tomto a další informace o parametrech naleznete v tématu [Sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-##  <a name="_core_using_m_nfields_and_m_nparams"></a> Pomocí m_nFields a m_nParams
+##  <a name="using-m_nfields-and-m_nparams"></a><a name="_core_using_m_nfields_and_m_nparams"></a>Používání m_nFields a m_nParams
 
-Když průvodce zapíše konstruktor pro třídu, také inicializuje [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) datového člena, který určuje, kolik [pole datových členů](#_core_field_data_members) ve třídě. Pokud chcete přidat všechny [parametry](#_core_parameter_data_members) do vaší třídy, musíte taky přidat inicializace pro [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) datového člena, který určuje, kolik parametry datových členů. Rozhraní používá tyto hodnoty pro práci s datové členy.
+Když průvodce zapíše konstruktor pro třídu, inicializuje také datový člen [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) , který určuje počet [datových členů](#_core_field_data_members) v třídě. Pokud do své třídy přidáte žádné [parametry](#_core_parameter_data_members) , je nutné také přidat inicializaci pro datový člen [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) , který určuje počet datových členů parametrů. Rozhraní používá tyto hodnoty pro práci s datovými členy.
 
-Další informace a příklady najdete v tématu [výměna polí záznamu: Použití funkce RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Další informace a příklady naleznete v tématu [Výměna polí záznamu: Použití RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>

@@ -1,20 +1,19 @@
 ---
-title: Možnosti Průvodce stránkou vlastností ATL
+title: Možnosti, Průvodce stránkou vlastností ATL
 ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.options
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707005"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076214"
 ---
-# <a name="options-atl-property-page-wizard"></a>Možnosti Průvodce stránkou vlastností ATL
-
+# <a name="options-atl-property-page-wizard"></a>Možnosti, Průvodce stránkou vlastností ATL
 
 ::: moniker range="vs-2019"
 
@@ -24,32 +23,32 @@ Průvodce stránkou vlastností ATL není k dispozici v aplikaci Visual Studio 2
 
 ::: moniker range="<=vs-2017"
 
-Pomocí této stránky v průvodci můžete definovat vláken modelu a agregace úroveň stránky vlastností, kterou vytváříte.
+Pomocí této stránky průvodce můžete definovat model vláken a úroveň agregace stránky vlastností, kterou vytváříte.
 
 - **Model vláken**
 
-   Určuje model vláken používané stránky vlastností.
+   Určuje model vláken používaný na stránce vlastností.
 
-   Zobrazit [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Další informace.
+   Další informace najdete v tématu [Určení modelu vláken v projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) .
 
    |Možnost|Popis|
    |------------|-----------------|
-   |**Jeden**|Na stránce vlastností spustí jenom v primárním vláknu COM.|
-   |**Apartment**|Na stránce vlastností lze vytvořit v libovolné objektu apartment pro jedno vlákno. Výchozí nastavení|
+   |**Konkrétní**|Stránka vlastností se spouští pouze v primárním vlákně COM.|
+   |**Domy**|Stránku vlastností lze vytvořit v jakémkoli vláknovém izolovaném vlákně. Výchozí nastavení|
 
 - **Agregace**
 
-   Přidá podporu agregace pro stránku vlastnost, kterou vytváříte. Zobrazit [agregace](../../atl/aggregation.md) Další informace.
+   Přidá podporu agregace pro stránku vlastností, kterou vytváříte. Další informace najdete v tématu [agregace](../../atl/aggregation.md) .
 
    |Možnost|Popis|
    |------------|-----------------|
-   |**Ano**|Vytvoření stránky vlastností, které se dají agregovat.|
-   |**Ne**|Vytvoření stránky vlastností, který nemůže být agregován.|
-   |**Pouze**|Vytvoření stránky vlastností, který může být vytvořena pouze prostřednictvím agregace.|
+   |**Ano**|Vytvoří stránku vlastností, která se dá agregovat.|
+   |**Ne**|Vytvoří stránku vlastností, kterou nelze agregovat.|
+   |**Pouze**|Vytvoří stránku vlastností, která se dá vytvořit jenom pomocí agregace.|
 
 ::: moniker-end
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Průvodce stránkou vlastností ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Řetězce, Průvodce stránkou vlastností ATL](../../atl/reference/strings-atl-property-page-wizard.md)

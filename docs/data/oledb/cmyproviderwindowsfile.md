@@ -9,22 +9,22 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-ms.openlocfilehash: 4af302d8a391de359f3b8ac66d41b5d7198fd8f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 103a1ce5568c6137994056e574ce8eec04511d8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182909"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079746"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-Průvodce vytvoří třídu, která obsahuje jeden řádek dat.; v takovém případě se nazývá `CCustomWindowsFile`. Následující kód pro `CCustomWindowsFile` je vygenerovaný průvodcem a uvádí všechny soubory v adresáři s použitím `WIN32_FIND_DATA` struktury. `CCustomWindowsFile` dědí z `WIN32_FIND_DATA` struktury:
+Průvodce vytvoří třídu, která má jeden řádek dat; v tomto případě se nazývá `CCustomWindowsFile`. Následující kód pro `CCustomWindowsFile` je vygenerován průvodcem a zobrazí seznam všech souborů v adresáři pomocí struktury `WIN32_FIND_DATA`. `CCustomWindowsFile` dědí ze struktury `WIN32_FIND_DATA`:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
 // CustomRS.H
 
-class CCustomWindowsFile: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
@@ -38,9 +38,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-`CCustomWindowsFile` je volána [třídy uživatelského záznamu](../../data/oledb/user-record.md) protože má také mapu popisující sloupce v sadě řádků %{Rowset/ poskytovatele. Mapování sloupce poskytovatele obsahuje jeden záznam pro každé pole v sadě řádků %{Rowset/ použití maker PROVIDER_COLUMN_ENTRY. Makra zadejte název sloupce, pořadí a posun k položce struktury. Sloupec položky zprostředkovatele ve výše uvedeném kódu obsahují posun do `WIN32_FIND_DATA` struktury. Když příjemce volá `IRowset::GetData`, data se přenáší do jedné souvislé vyrovnávací paměti. Místo toho můžete provést aritmetiku ukazatele, mapy můžete zadat datový člen.
+`CCustomWindowsFile` se nazývá [Třída záznamu uživatele](../../data/oledb/user-record.md) , protože má také mapu popisující sloupce v sadě řádků poskytovatele. Mapa sloupce Provider obsahuje jednu položku pro každé pole v sadě řádků pomocí PROVIDER_COLUMN_ENTRY maker. Makra určují název sloupce, ordinální číslo a posun na položku struktury. Položky sloupce poskytovatele ve výše uvedeném kódu obsahují posuny do `WIN32_FIND_DATA` struktury. Když příjemce volá `IRowset::GetData`, data se přenesou do jedné souvislé vyrovnávací paměti. Místo toho, abyste mohli provádět aritmetické operace s ukazatelem, vám mapa umožní zadat datový člen.
 
-`CCustomRowset` Třída také obsahuje `Execute` metody. `Execute` je, co skutečně čte data z nativní zdroje. Následující kód ukazuje generované průvodcem `Execute` metody. Využívá rozhraní Win32 funkce `FindFirstFile` a `FindNextFile` rozhraní API k načtení informací o souborech v adresáři a umístit je do instance `CCustomWindowsFile` třídy.
+Třída `CCustomRowset` obsahuje také metodu `Execute`. `Execute` je to, co skutečně čte data z nativního zdroje. Následující kód ukazuje `Execute` metodu generovanou průvodcem. Funkce používá rozhraní Win32 `FindFirstFile` a rozhraní API `FindNextFile` k načtení informací o souborech v adresáři a jejich umístění do instancí třídy `CCustomWindowsFile`.
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -73,10 +73,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }
 ```
 
-Adresář, který má hledání je zobrazen objektem `m_strCommandText`; obsahuje text reprezentován `ICommandText` rozhraní příkazového objektu. Pokud není zadán žádný adresář, použije aktuální adresář.
+Adresář pro hledání je zobrazen pomocí `m_strCommandText`; obsahuje text reprezentovaný rozhraním `ICommandText` v objektu Command. Pokud není zadán žádný adresář, použije se aktuální adresář.
 
-Metoda vytvoří jeden záznam pro každý soubor (odpovídající řádek) a umístí jej do `m_rgRowData` datový člen. `CRowsetImpl` Třída definuje `m_rgRowData` datový člen. Data v tomto poli se zobrazí celou tabulku a používá se v rámci šablony.
+Metoda vytvoří jednu položku pro každý soubor (odpovídající řádku) a umístí jej do datového členu `m_rgRowData`. Třída `CRowsetImpl` definuje datový člen `m_rgRowData`. Data v tomto poli se zobrazí v celé tabulce a používají se v celém šablonách.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)<br/>

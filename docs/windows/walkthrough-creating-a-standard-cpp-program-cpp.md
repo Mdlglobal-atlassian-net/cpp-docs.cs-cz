@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 9b2d1f3bf1a229a0590553369e37bc07f35ada33
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 381fa347a4ca2872ef0697d76a1e788c97e8a014
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627132"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075443"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Návod: vytvoření standardního C++ programu ()C++
 
@@ -22,7 +22,7 @@ Můžete zadat vlastní C++ program nebo použít některý z ukázkových progr
 > [!NOTE]
 > Pokud je vyžadováno dodržování určité verze C++ jazykového standardu (tj. c++ 14 nebo c++ 17), použijte možnost kompilátoru `/std:c++14` nebo `/std:c++17`. (Visual Studio 2017 a novější)
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Předpokladem práce s tímto návodem je znalost základů jazyka C++.
 
@@ -36,7 +36,7 @@ Následující postup se liší v závislosti na verzi sady Visual Studio, ktero
 
 1. V hlavní nabídce vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
 
-1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**. 
+1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**.
 
 1. Z filtrovaného seznamu typů projektů zvolte **Konzolová aplikace** a pak zvolte **Další**. Na další stránce zadejte název projektu a v případě potřeby zadejte umístění projektu.
 
@@ -54,7 +54,7 @@ Následující postup se liší v závislosti na verzi sady Visual Studio, ktero
 
 1. Zadejte název projektu. Ve výchozím nastavení má řešení, které obsahuje projekt, stejný název jako projekt, ale můžete zadat jiný název. Můžete také zadat jiné umístění projektu.
 
-1. Kliknutím na tlačítko **OK** vytvořte projekt.
+1. Projekt vytvoříte kliknutím na **OK**.
 
 ::: moniker-end
 
@@ -70,13 +70,13 @@ Následující postup se liší v závislosti na verzi sady Visual Studio, ktero
 
 1. Zadejte název projektu. Ve výchozím nastavení má řešení, které obsahuje projekt, stejný název jako projekt, ale můžete zadat jiný název. Můžete také zadat jiné umístění projektu.
 
-1. Kliknutím na tlačítko **OK** vytvořte projekt.
+1. Projekt vytvoříte kliknutím na **OK**.
 
-1. Dokončete **Průvodce aplikací Win32**. 
+1. Dokončete **Průvodce aplikací Win32**.
 
-1. Klikněte na **Další**, pak se ujistěte, že je vybraná **aplikace konzoly** , a zrušte zaškrtnutí políčka **Předkompilovaná záhlaví** . 
+1. Klikněte na **Další**, pak se ujistěte, že je vybraná **aplikace konzoly** , a zrušte zaškrtnutí políčka **Předkompilovaná záhlaví** .
 
-1. Klikněte na tlačítko **Dokončit**.
+1. Klikněte na **Finish** (Dokončit).
 
 ::: moniker-end
 
@@ -96,7 +96,7 @@ Následující postup se liší v závislosti na verzi sady Visual Studio, ktero
 
 1. Uložte soubor.
 
-1. V nabídce **sestavení** klikněte na **Sestavit řešení**.
+1. V nabídce **Sestavení** klikněte na **Sestavit řešení**.
 
    V okně **výstup** se zobrazí informace o průběhu kompilace, například umístění protokolu sestavení a zpráva, která označuje stav sestavení.
 
@@ -109,7 +109,7 @@ Následující postup se liší v závislosti na verzi sady Visual Studio, ktero
 **Předchozí:** [konzolové aplikace v C++ jazyce Visual](../windows/console-applications-in-visual-cpp.md)<br/>
 **Další:** [Návod: kompilování nativního C++ programu na příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

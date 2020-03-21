@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 0975e96e670400b7fa221ae2d1b9982b5cee613b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 7e53befcc46319d0ecf2287ab96a19a73a0b0b85
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75314143"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076268"
 ---
 # <a name="code"></a>.CODE
 
@@ -28,9 +28,8 @@ ms.locfileid: "75314143"
 *název*\
 Volitelný parametr, který určuje název segmentu kódu. Výchozí název je **_TEXT** pro malé, malé, kompaktní a ploché [modely](dot-model.md). Výchozí název je *module*_TEXT pro jiné modely.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 \ – [referenční informace o direktivách](directives-reference.md)
 [.\ dat](dot-data.md)
 [Gramatika BNF MASM](masm-bnf-grammar.md)
-

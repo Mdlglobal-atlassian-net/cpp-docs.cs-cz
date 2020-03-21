@@ -33,12 +33,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: 9c2e5923fe35287a7586cd4b52bc60e4a5b27b2d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 956648babf987d156cac753f8373518a83362013
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441146"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079680"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl – třída
 
@@ -55,7 +55,7 @@ template <
    class RowClass = CSimpleRow,
    class RowsetInterface = IRowsetImpl <T, IRowset>
 >
-class CRowsetImpl : 
+class CRowsetImpl :
    public CComObjectRootEx<CreatorClass::_ThreadModel>,
    public CRowsetBaseImpl<T, Storage, ArrayType, RowsetInterface>,
    public IRowsetInfoImpl<T, CreatorClass::_PropClass>
@@ -116,7 +116,7 @@ Pokud vytváříte třídu odvozenou od `CRowsetImpl`pro implementaci sady řád
 
 Chcete-li implementovat některou z `CRowsetImpl`ch `Execute`ch metod, je nutné naplnit vnitřní vyrovnávací paměti pro data ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)).
 
-## <a name="namefromdbid"></a>CRowsetImpl:: NameFromDBID
+## <a name="crowsetimplnamefromdbid"></a><a name="namefromdbid"></a>CRowsetImpl:: NameFromDBID
 
 Extrahuje řetězec z `DBID` a zkopíruje ho do předaného typu *BSTR* .
 
@@ -147,7 +147,7 @@ Standardní hodnota HRESULT. V závislosti na tom, zda je `DBID` tabulka nebo in
 
 Tato metoda je volána `CRowsetImpl` implementacemi rozhraní [ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md) a [GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md).
 
-## <a name="setcommandtext"></a>CRowsetImpl:: SetCommandText
+## <a name="crowsetimplsetcommandtext"></a><a name="setcommandtext"></a>CRowsetImpl:: SetCommandText
 
 Ověří a uloží `DBID`s v obou řetězcích ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)).
 
@@ -176,7 +176,7 @@ Metoda `SetCommentText` je volána `CreateRowset`, statickou metodou založena `
 
 Tato metoda deleguje svou práci voláním [ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md) a [GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md) prostřednictvím přetypování ukazatele.
 
-## <a name="getcolumninfo"></a>CRowsetImpl:: GetColumnInfo
+## <a name="crowsetimplgetcolumninfo"></a><a name="getcolumninfo"></a>CRowsetImpl:: GetColumnInfo
 
 Načte informace o sloupci pro konkrétní požadavek klienta.
 
@@ -209,7 +209,7 @@ Následující příklad ukazuje použití `GetColumnInfo`. V tomto příkladu j
 
 [!code-cpp[NVC_OLEDB_Provider#1](../../data/oledb/codesnippet/cpp/crowsetimpl-getcolumninfo_1.h)]
 
-## <a name="getcommandfromid"></a>CRowsetImpl:: GetCommandFromID
+## <a name="crowsetimplgetcommandfromid"></a><a name="getcommandfromid"></a>CRowsetImpl:: GetCommandFromID
 
 Kontroluje, zda buď nebo oba parametry obsahují hodnoty řetězce, a pokud ano, zkopíruje řetězcové hodnoty do datových členů [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).
 
@@ -236,7 +236,7 @@ Standardní hodnota HRESULT.
 
 Tato metoda je volána prostřednictvím statického přetypování `CRowsetImpl` k naplnění datových členů [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). Ve výchozím nastavení tato metoda kontroluje, zda buď oba parametry, nebo oba obsahují hodnoty v řetězci. Pokud obsahují hodnoty řetězce, tato metoda zkopíruje řetězcové hodnoty do datových členů. Vložením metody s tímto podpisem do vaší třídy odvozené od `CRowsetImpl`bude metoda volána místo základní implementace.
 
-## <a name="validatecommandid"></a>CRowsetImpl:: ValidateCommandID
+## <a name="crowsetimplvalidatecommandid"></a><a name="validatecommandid"></a>CRowsetImpl:: ValidateCommandID
 
 Kontroluje, zda buď nebo oba `DBID`s obsahují hodnoty řetězce, a pokud ano, zkopíruje je do datových členů [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).
 
@@ -263,7 +263,7 @@ Standardní hodnota HRESULT.
 
 Tato metoda je volána prostřednictvím statického přetypování `CRowsetImpl` k naplnění svých datových členů [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) a [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). Ve výchozím nastavení tato metoda kontroluje, zda buď nebo obojí `DBID`s řetězcovými hodnotami, a pokud ano, zkopíruje je do svých datových členů. Vložením metody s tímto podpisem do vaší třídy odvozené od `CRowsetImpl`bude metoda volána místo základní implementace.
 
-## <a name="rgrowdata"></a>CRowsetImpl:: m_rgRowData
+## <a name="crowsetimplm_rgrowdata"></a><a name="rgrowdata"></a>CRowsetImpl:: m_rgRowData
 
 Ve výchozím nastavení `CAtlArray`, který se templatizes na argumentu šablony záznamu uživatele `CRowsetImpl`.
 
@@ -277,7 +277,7 @@ ArrayType CRowsetBaseImpl::m_rgRowData;
 
 *ArrayType* je parametr šablony pro `CRowsetImpl`.
 
-## <a name="strcommandtext"></a>CRowsetImpl:: m_strCommandText
+## <a name="crowsetimplm_strcommandtext"></a><a name="strcommandtext"></a>CRowsetImpl:: m_strCommandText
 
 Obsahuje počáteční příkaz sady řádků.
 
@@ -287,7 +287,7 @@ Obsahuje počáteční příkaz sady řádků.
 CComBSTR CRowsetBaseImpl::m_strCommandText;
 ```
 
-## <a name="strindextext"></a>CRowsetImpl:: m_strIndexText
+## <a name="crowsetimplm_strindextext"></a><a name="strindextext"></a>CRowsetImpl:: m_strIndexText
 
 Obsahuje počáteční index sady řádků.
 

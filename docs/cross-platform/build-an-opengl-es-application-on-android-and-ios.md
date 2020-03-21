@@ -2,12 +2,12 @@
 title: Vytvoření aplikace OpenGL ES na Androidu a iOSu
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 23dd9dbb1ff32050494e0d1d105cd55de3123fbb
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3709cfcc681f265d08758f97422ae16e98a66a1c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177673"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079661"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Vytvoření aplikace OpenGL ES na Androidu a iOSu
 
@@ -109,7 +109,7 @@ Nové řešení aplikace OpenGL ES zahrnuje tři projekty knihovny a dva aplika�
 
    Vygenerovaná projekty aplikace a knihovny pro nativní Android vloží C++ sdílený kód do dynamické knihovny. Obsahuje kód "připevnit" rozhraní s platformou pro Android. Většina kódu aplikace je v knihovně. Pokyny k manifestu, prostředkům a sestavení jsou v projektu balení. Sdílený kód je volán z Main. cpp v projektu NativeActivity. Další informace o tom, jak programovat nativní aktivitu Androidu, najdete na stránce věnované [konceptům](https://developer.android.com/ndk/guides/concepts.html) pro vývojáře pro Android NDK.
 
-   Visual Studio sestavuje projekty nativních aktivit Androidu pomocí Android NDK. Používá Clang jako sadu nástrojů platformy. Visual Studio mapuje vlastnosti projektu na příkazy kompilace, propojení a ladění na cílové platformě. Pro podrobnosti otevřete dialogové okno **stránky vlastností** pro projekt MyOpenGLESApp. Android. NativeActivity. Další informace o přepínačích příkazového řádku naleznete v [příručce uživatele kompilátoru Clang](http://clang.llvm.org/docs/UsersManual.html).
+   Visual Studio sestavuje projekty nativních aktivit Androidu pomocí Android NDK. Používá Clang jako sadu nástrojů platformy. Visual Studio mapuje vlastnosti projektu na příkazy kompilace, propojení a ladění na cílové platformě. Pro podrobnosti otevřete dialogové okno **stránky vlastností** pro projekt MyOpenGLESApp. Android. NativeActivity. Další informace o přepínačích příkazového řádku naleznete v [příručce uživatele kompilátoru Clang](https://clang.llvm.org/docs/UsersManual.html).
 
 ## <a name="build-and-run-the-ios-app-on-an-ios-device"></a>Sestavení a spuštění aplikace pro iOS na zařízení s iOS
 

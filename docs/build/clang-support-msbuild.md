@@ -4,12 +4,12 @@ ms.date: 08/30/2019
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 819f96bf2fd949f80ae72ca878ba7eb9cb1bffcc
-ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
+ms.openlocfilehash: 5bd90141cdc7646dce206e6b02a605b73d78de95
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75914374"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078806"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Podpora Clang/LLVM v projektech Visual studia
 
@@ -23,9 +23,9 @@ Podpora Clang pro projekty CMake a MSBuild je k dispozici v sadě Visual Studio 
 
 Pomocí sady Visual Studio 2019 verze 16,2 s Clang můžete upravovat, sestavovat a ladit C++ projekty sady Visual Studio (MSBuild), které cílí na Windows nebo Linux.
 
-## <a name="install"></a>Instalace produktu
+## <a name="install"></a>Instalace
 
-Pro nejlepší podporu IDE v aplikaci Visual Studio doporučujeme použít nejnovější nástroje kompilátoru Clang pro Windows. Pokud je ještě nemáte, můžete je nainstalovat tak, že otevřete instalační program pro Visual Studio a zvolíte  **C++ Clang Tools for Windows** v části **vývoj pro stolní počítače C++ s** volitelnými součástmi. Pokud dáváte přednost použití existující instalace Clang na vašem počítači, vyberte  **C++ nástroje pro sestavení V142 Clang-CL.** volitelná součást. Standardní knihovna C++ Microsoft aktuálně vyžaduje aspoň Clang 8.0.0; sada Instalovaná verze Clang se automaticky aktualizuje, aby byla aktuální s aktualizacemi v implementaci standardní knihovny od Microsoftu. 
+Pro nejlepší podporu IDE v aplikaci Visual Studio doporučujeme použít nejnovější nástroje kompilátoru Clang pro Windows. Pokud je ještě nemáte, můžete je nainstalovat tak, že otevřete instalační program pro Visual Studio a zvolíte  **C++ Clang Tools for Windows** v části **vývoj pro stolní počítače C++ s** volitelnými součástmi. Pokud dáváte přednost použití existující instalace Clang na vašem počítači, vyberte  **C++ nástroje pro sestavení V142 Clang-CL.** volitelná součást. Standardní knihovna C++ Microsoft aktuálně vyžaduje aspoň Clang 8.0.0; sada Instalovaná verze Clang se automaticky aktualizuje, aby byla aktuální s aktualizacemi v implementaci standardní knihovny od Microsoftu.
 
 ![Instalace součásti Clang](media/clang-install-vs2019.png)
 
@@ -45,16 +45,16 @@ Pro projekty se systémem Linux používá Visual Studio front-end kompatibilní
 
 Konfigurace projektu sady Visual Studio pro systém Linux pro použití Clang:
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte **vlastnosti**. 
-1. Obvykle byste nejdřív měli zvolit **všechny konfigurace** v horní části dialogového okna. 
+1. V **Průzkumník řešení** klikněte pravým tlačítkem myši na uzel projektu a vyberte **vlastnosti**.
+1. Obvykle byste nejdřív měli zvolit **všechny konfigurace** v horní části dialogového okna.
 1. V části **obecná** > **Sada nástrojů platformy**vyberte možnost **WSL_Clang_1_0** , pokud používáte podsystém Windows pro Linux, nebo **REMOTE_CLANG_1_0** , pokud používáte vzdálený počítač nebo virtuální počítač.
-1. Stisknutím klávesy **OK**.
+1. Stiskněte **OK**.
 
 ![Instalace součásti Clang](media/clang-msbuild-prop-page.png)
 
 V systému Linux používá Visual Studio ve výchozím nastavení první umístění Clang, ke kterému dojde ve vlastnosti prostředí PATH. Pokud používáte vlastní instalaci Clang, musíte změnit hodnotu vlastnosti `LLVMInstallDir` nebo jinak dosadit cestu pod > **vlastností** **projektu** > **VC + + adresáře** > **Vlastnosti konfigurace** > **spustitelné adresáře**. Další informace najdete v tématu [nastavení vlastního umístění LLVM](#custom_llvm_location) .
 
-## <a name="custom_llvm_location"></a>Nastavení vlastního umístění LLVM
+## <a name="set-a-custom-llvm-location"></a><a name="custom_llvm_location"></a>Nastavení vlastního umístění LLVM
 
 Můžete nastavit vlastní cestu pro LLVM pro jeden nebo více projektů vytvořením souboru *Directory. Build. props* a přidáním tohoto souboru do kořenové složky libovolného projektu. Můžete ji přidat do kořenové složky řešení a použít ji pro všechny projekty v řešení. Soubor by měl vypadat nějak takto (ale nahraďte svou vlastní cestu):
 

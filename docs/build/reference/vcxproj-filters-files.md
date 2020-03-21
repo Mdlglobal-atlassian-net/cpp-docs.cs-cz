@@ -1,18 +1,18 @@
 ---
-title: vcxproj. filters – soubory
+title: Vcxproj. filters – soubory
 ms.date: 09/25/2019
 description: Použijte filtry souborů v projektech sady C++ Visual Studio k definování vlastních logických složek pro soubory v Průzkumník řešení
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: ee44bf3d1cbe06d6c007ed8976ec384a456efca5
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686857"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078279"
 ---
-# <a name="vcxprojfilters-files"></a>vcxproj. filters – soubory
+# <a name="vcxprojfilters-files"></a>Vcxproj. filters – soubory
 
 Soubor *filtrů* (\*. vcxproj. filters) je soubor XML ve formátu MSBuild, který je umístěn v kořenové složce projektu. Určuje typy souborů, do kterých se v **Průzkumník řešení**logická složka. Na následujícím obrázku jsou soubory *. cpp* pod uzlem **zdrojové soubory** . soubory *. h* jsou pod uzlem **soubory hlaviček** a soubory *. ico* a *. RC* jsou v **souborech prostředků**. Toto umístění je řízeno souborem filtrů.
 
@@ -26,7 +26,7 @@ Visual Studio automaticky vytvoří tento soubor. V případě aplikací klasick
 
 Následující příklad ukazuje soubor filtrů pro příklad zobrazený výše. Má plochou hierarchii; Jinými slovy nejsou žádné vnořené logické složky. Uzel `UniqueIdentifier` je nepovinný. Umožňuje rozhraní automatizace sady Visual Studio najít filtr. `Extensions` je také volitelné. Když se do projektu přidá nový soubor, přidá se do nejvyššího filtru se stejnou příponou souboru. Chcete-li přidat soubor do konkrétního filtru, klikněte pravým tlačítkem na filtr a vyberte možnost **Přidat novou položku**.
 
-`ItemGroup`, který obsahuje uzly `ClInclude`, se vytvoří při prvním spuštění projektu. Pokud generujete vlastní soubory vcxproj, ujistěte se, že všechny položky projektu mají také záznam v souboru filters. Hodnoty v uzlu `ClInclude` přepisují výchozí filtrování na základě přípon souborů. Při použití sady Visual Studio k přidání nové položky do projektu přidá rozhraní IDE jednotlivé položky souboru do souboru filtrů. Když změníte příponu souboru, filtr se automaticky znovu nepřiřazuje. 
+`ItemGroup`, který obsahuje uzly `ClInclude`, se vytvoří při prvním spuštění projektu. Pokud generujete vlastní soubory vcxproj, ujistěte se, že všechny položky projektu mají také záznam v souboru filters. Hodnoty v uzlu `ClInclude` přepisují výchozí filtrování na základě přípon souborů. Při použití sady Visual Studio k přidání nové položky do projektu přidá rozhraní IDE jednotlivé položky souboru do souboru filtrů. Když změníte příponu souboru, filtr se automaticky znovu nepřiřazuje.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,4 +107,3 @@ Chcete-li vytvořit vnořené logické složky, deklarujte všechny uzly ve filt
     </Filter>
   </ItemGroup>
 ```
-

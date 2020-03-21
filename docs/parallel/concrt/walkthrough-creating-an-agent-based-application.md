@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 3ece04811a75fba22db447875dc6ed08c22987b5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 25fffd018c45200571f99dc87ab8ffe29bb6667f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142042"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080010"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Návod: Vytvoření aplikace založené na agentovi
 
@@ -28,7 +28,7 @@ Chcete-li dokončit tento návod, je nutné pochopit následující témata:
 
 - [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a>Řezů
+## <a name="sections"></a><a name="top"></a>Řezů
 
 Tento návod ukazuje, jak provádět následující úlohy:
 
@@ -38,7 +38,7 @@ Tento návod ukazuje, jak provádět následující úlohy:
 
 - [Použití třídy file_reader v aplikaci](#useagentclass)
 
-## <a name="createapplication"></a>Vytvoření konzolové aplikace
+## <a name="creating-the-console-application"></a><a name="createapplication"></a>Vytvoření konzolové aplikace
 
 V této části se dozvíte, C++ jak vytvořit konzolovou aplikaci, která odkazuje na soubory hlaviček, které bude program používat. Počáteční postupy se liší v závislosti na verzi sady Visual Studio, kterou používáte. Přesvědčte se, zda je selektor verzí nastaven správně v levém horním rohu této stránky.
 
@@ -48,7 +48,7 @@ V této části se dozvíte, C++ jak vytvořit konzolovou aplikaci, která odkaz
 
 1. V hlavní nabídce vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
 
-1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**. 
+1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**.
 
 1. Z filtrovaného seznamu typů projektů zvolte **Konzolová aplikace** a pak zvolte **Další**. Na další stránce zadejte jako název projektu `BasicAgent` a v případě potřeby zadejte umístění projektu.
 
@@ -80,7 +80,7 @@ V této části se dozvíte, C++ jak vytvořit konzolovou aplikaci, která odkaz
 
 [[Nahoře](#top)]
 
-## <a name="createagentclass"></a>Vytváření file_reader třídy
+## <a name="creating-the-file_reader-class"></a><a name="createagentclass"></a>Vytváření file_reader třídy
 
 V této části se dozvíte, jak vytvořit třídu `file_reader`. Modul runtime naplánuje, aby každý Agent prováděl práci ve vlastním kontextu. Proto můžete vytvořit agenta, který provádí synchronní práci, ale spolupracuje s ostatními komponentami asynchronně. Třída `file_reader` čte data z daného vstupního souboru a odesílá data z daného souboru do dané cílové součásti.
 
@@ -128,7 +128,7 @@ Následující příklad ukazuje úplný obsah file_reader. h.
 
 [[Nahoře](#top)]
 
-## <a name="useagentclass"></a>Použití třídy file_reader v aplikaci
+## <a name="using-the-file_reader-class-in-the-application"></a><a name="useagentclass"></a>Použití třídy file_reader v aplikaci
 
 V této části se dozvíte, jak použít třídu `file_reader` ke čtení obsahu textového souboru. Také ukazuje, jak vytvořit objekt [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) , který obdrží tato data souborů a vypočítá kontrolní součet Adler-32.
 

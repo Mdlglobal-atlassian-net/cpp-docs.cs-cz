@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: bef825f546573b878c415c385e1a2a2286e08db4
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 52a966bb321226058afbf4667a4192e4e814f0a1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444903"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075858"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Upozornění kompilátoru (úroveň 4) C4127
 
@@ -45,7 +45,6 @@ int main() {
 ```
 
 Toto upozornění je také možné vygenerovat při použití konstanty v době kompilace v podmíněném výrazu:
-
 
 ```cpp
 #include <string>

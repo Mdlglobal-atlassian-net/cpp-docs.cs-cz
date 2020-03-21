@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Deklarování třídy pro předdefinovaný dotaz (ODBC)'
+title: 'Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,43 +8,43 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 9ef95f4a2ebbc1bdf52e5631389f65391ce7cf8f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6338de99bf9c3e19e6e15ffbe0bcf5caab066ed8
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707956"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079836"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset: Deklarování třídy pro předdefinovaný dotaz (ODBC)
-
-> [!NOTE] 
-> Průvodce příjemcem ODBC knihovny MFC není k dispozici v aplikaci Visual Studio 2019 a novějším. Příjemce měli stále můžete vytvořit ručně.
-
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
-
-Toto téma vysvětluje, jak vytvořit sadu záznamů třídy pro předdefinovaný dotaz (říká se jim uložené procedury, stejně jako v systému Microsoft SQL Server).
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud hromadné načítání řádků je implementováno, je velmi podobné. Rozdíly mezi sadách záznamů implementujících hromadné načítání řádků a ty, které nejsou najdete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Průvodce příjemcem knihovny MFC rozhraní ODBC není dostupný v aplikaci Visual Studio 2019 a novějším. Příjemce můžete přesto vytvořit ručně.
 
-Některé systémy správy databáze (DBMS) umožňují vytvořit předdefinovaný dotaz a jeho volání z aplikace jako funkce. Dotaz s názvem, mohou mít parametry a může vrátit záznamů. Postup v tomto tématu popisuje, jak volat předdefinovaný dotaz, který vrací záznamy (a možná parametry).
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
-Databázové třídy nepodporují aktualizaci předdefinované dotazy. Rozdíl mezi předdefinovaný dotaz snímku a dynamická sada předdefinovaného dotazu není aktualizovatelný, ale Určuje, zda jsou viditelné ve vaší sadě záznamů změny provedené jinými uživateli (nebo jiné sady záznamů ve svém programu).
+Toto téma vysvětluje, jak vytvořit třídu sady záznamů pro předdefinovaný dotaz (někdy označované jako uložená procedura, jako v Microsoft SQL Server).
+
+> [!NOTE]
+>  Toto téma se vztahuje na objekty odvozené od `CRecordset`, ve kterých nebylo implementováno hromadné načítání řádků. Pokud je implementováno hromadné načítání řádků, je proces velmi podobný. Pro pochopení rozdílů mezi sadami záznamů, které implementují hromadné načítání řádků a těch, které nejsou, viz [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+
+Některé systémy správy databáze (DBMS) umožňují vytvořit předdefinovaný dotaz a volat ho z vašich programů, jako je funkce. Dotaz má název, může přebírat parametry a může vracet záznamy. Postup v tomto tématu popisuje, jak volat předdefinovaný dotaz, který vrací záznamy (a případně přebírá parametry).
+
+Databázové třídy nepodporují aktualizaci předdefinovaných dotazů. Rozdíl mezi předdefinovaným dotazem snímku a předdefinovaným dynamická sadou nelze aktualizovat, ale zda jsou změny provedené jinými uživateli (nebo jinými sadami záznamů v programu) viditelné v sadě záznamů.
 
 > [!TIP]
->  Není nutné sadu záznamů pro předdefinovaný dotaz, který nevrací záznamy volání. Příprava příkaz jazyka SQL, jak je popsáno níže, ale provést voláním `CDatabase` členskou funkci [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
+>  Nepotřebujete sadu záznamů pro volání předdefinovaného dotazu, který nevrací záznamy. Připravte příkaz SQL, jak je popsáno níže, ale spusťte ho voláním členské funkce `CDatabase` [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
 
-Můžete vytvořit třídu jedné sady záznamů ke správě volání předdefinovaného dotazu, ale musíte udělat některé úkoly sami. Průvodce nepodporuje vytvoření třídy speciálně pro tento účel.
+Můžete vytvořit jednu třídu sady záznamů pro správu volání předdefinovaného dotazu, ale musíte provést nějakou práci sami. Průvodci nepodporují vytváření tříd speciálně pro tento účel.
 
-#### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>Chcete-li vytvořit třídu pro volání předdefinovaného dotazu (uložené procedury)
+#### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>Vytvoření třídy pro volání předdefinovaného dotazu (uložená procedura)
 
-1. Použití [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** pro vytvoření sady záznamů třídy pro tabulku, jež přispívají nejvíce sloupců vrácených dotazem. To vám začít.
+1. Pomocí [Průvodce příjemcem knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **Přidat třídu** vytvořte třídu sady záznamů pro tabulku, která bude mít nejvíce sloupců vrácených dotazem. To vám dává začátek.
 
-1. Ručně přidejte pole datových členů pro všechny sloupce všech tabulek, které dotaz vrátí hodnotu, ale tento průvodce se nevytvořil za vás.
+1. Ručně přidejte datové členy pole pro všechny sloupce všech tabulek, které dotaz vrátí, ale průvodce pro vás nevytvořil.
 
-   Například pokud dotaz vrací tři sloupce ze dvou dalších tabulek, přidejte do třídy šesti pole datové členy (příslušné datové typy).
+   Například pokud dotaz vrátí tři sloupce každý ze dvou dalších tabulek, přidejte do třídy šest datových členů pole (z odpovídajících datových typů).
 
-1. Ruční přidání [RFX](../../data/odbc/record-field-exchange-rfx.md) volání funkce [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) členské funkce třídy, jeden odpovídající typ dat každého z nich přidá pole datového člena.
+1. Ručně přidejte volání funkce [RFX](../../data/odbc/record-field-exchange-rfx.md) v členské funkci [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) třídy, jednu odpovídající datovému typu každého přidaného datového člena pole.
 
     ```cpp
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:
@@ -52,39 +52,39 @@ Můžete vytvořit třídu jedné sady záznamů ke správě volání předdefin
     ```
 
     > [!NOTE]
-    >  Musíte znát datové typy a pořadí sloupců ve výsledku nastavit. Pořadí funkcí RFX volání `DoFieldExchange` musí odpovídat pořadí sloupců sady výsledků dotazu.
+    >  Musíte znát datové typy a pořadí sloupců vrácených v sadě výsledků dotazu. Pořadí volání funkce RFX v `DoFieldExchange` musí odpovídat pořadí sloupců sady výsledků.
 
-1. Ručně přidejte inicializace pro nové pole datových členů v konstruktoru třídy sady záznamů.
+1. Ručně přidejte inicializace pro nové datové členy pole v konstruktoru třídy sady záznamů.
 
-   Také musíte zvýšit hodnotu inicializace [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) datový člen. Průvodce provádí zápis inicializace, ale zahrnuje pouze datové členy polí, které přidá za vás. Příklad:
+   Také je nutné zvýšit inicializační hodnotu datového členu [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) . Průvodce zapíše inicializaci, ale vztahuje se pouze na pole datových členů, které pro vás přidá. Příklad:
 
     ```cpp
     m_nFields += 6;
     ```
 
-   Některé typy dat by neměl být inicializovány tady, například `CLongBinary` nebo pole bajtů.
+   Některé typy dat by se tady neměly inicializovat, například `CLongBinary` nebo Bajtová pole.
 
-1. Pokud parametry dotazu, přidejte parametr datový člen pro každý parametr, volání funkce RFX pro každou a inicializace pro každou.
+1. Pokud dotaz přebírá parametry, přidejte datový člen parametru pro každý parametr, volání funkce RFX pro každou a inicializaci každého.
 
-1. Musíte zvýšit hodnotu `m_nParams` pro každý přidaný parametr, jako jste to udělali `m_nFields` pro přidání polí v kroku 4 tohoto postupu. Další informace najdete v tématu [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Je nutné zvýšit `m_nParams` pro každý přidaný parametr, protože jste `m_nFields` pro přidaná pole v kroku 4 tohoto postupu. Další informace naleznete v tématu [Sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-1. Ručně napište řetězec příkazu SQL s následující tvar:
+1. Ručně napište řetězec příkazu SQL s následujícím formulářem:
 
     ```
     {CALL proc-name [(? [, ?]...)]}
     ```
 
-   kde **volání** je klíčové slovo rozhraní ODBC **proc název** je název dotazu, který je znám na zdroji dat a "?" položky jsou zástupné symboly pro hodnoty parametrů zadat do sady záznamů v době běhu (pokud existuje) . V následujícím příkladu připraví zástupný symbol pro jeden parametr:
+   kde **Call** je klíčové slovo ODBC, **proc-Name** je název dotazu, který je známý ve zdroji dat, a položky "?" jsou zástupné symboly pro hodnoty parametrů, které zadáte do sady záznamů v době běhu (pokud existuje). Následující příklad připraví zástupný symbol pro jeden parametr:
 
     ```
     CString mySQL = "{CALL Delinquent_Accts (?)}";
     ```
 
-1. V kódu, který otevře sadu záznamů, nastavte hodnoty parametru sady záznamů datové členy a následně zavolat `Open` členskou funkci předání řetězce jazyka SQL *Ipszsql* parametru. Nebo místo toho nahradit řetězec vrácený funkcí `GetDefaultSQL` členské funkce ve své třídě.
+1. V kódu, který otevře sadu záznamů, nastavte hodnoty datových členů parametru sady záznamů a potom zavolejte `Open` členské funkce a předejte řetězec SQL pro parametr *lpszSQL* . Nebo místo toho nahraďte řetězec vrácený `GetDefaultSQL` členskou funkcí ve vaší třídě.
 
-Následující příklady ukazují postup volání předdefinovaný dotaz s názvem `Delinquent_Accts`, která přijímá jeden parametr pro číslo prodejní oblasti. Tento dotaz vrátí tři sloupce: `Acct_No`, `L_Name`, `Phone`. Jsou všechny sloupce z tabulky Zákazníci.
+Následující příklady znázorňují postup pro volání předdefinovaného dotazu s názvem `Delinquent_Accts`, který přijímá jeden parametr pro číslo oblasti prodeje. Tento dotaz vrátí tři sloupce: `Acct_No`, `L_Name``Phone`. Všechny sloupce jsou z tabulky Customers.
 
-Následující sada záznamů určuje pole datových členů pro sloupce, které vrátí dotaz a parametrů pro prodej po oblastech číslo, které se požaduje za běhu.
+Následující sada záznamů Určuje datové členy pole pro sloupce, které dotaz vrátí, a parametr pro číslo oblasti prodeje požadované v době běhu.
 
 ```cpp
 class CDelinquents : public CRecordset
@@ -98,9 +98,9 @@ class CDelinquents : public CRecordset
 };
 ```
 
-Tato deklarace třídy je jako průvodce provádí zápis, s výjimkou `m_lDistParam` člena přidat ručně. Ostatní členové se tady nezobrazují.
+Tato deklarace třídy je jako průvodce zapisuje, s výjimkou člena `m_lDistParam` přidaných ručně. Další členové zde nejsou zobrazeni.
 
-Následující příklad znázorňuje tyto inicializace pro datové členy v `CDelinquents` konstruktoru.
+Následující příklad ukazuje inicializace pro datové členy v konstruktoru `CDelinquents`.
 
 ```cpp
 CDelinquents::CDelinquents(CDatabase* pdb)
@@ -117,7 +117,7 @@ CDelinquents::CDelinquents(CDatabase* pdb)
 }
 ```
 
-Mějte na paměti tyto inicializace pro [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) a [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). Inicializuje průvodce `m_nFields`; inicializaci `m_nParams`.
+Poznamenejte si inicializace pro [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) a [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). Průvodce inicializuje `m_nFields`; inicializujete `m_nParams`.
 
 Následující příklad ukazuje funkce RFX v `CDelinquents::DoFieldExchange`:
 
@@ -133,9 +133,9 @@ void CDelinquents::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-Kromě volání funkce RFX pro tři vrácené sloupce, tento kód slouží ke správě vazbu parametru, který předáte v době běhu. Parametr je nastaven na `Dist_No` sloupec (číslo oblasti).
+Kromě vytvoření volání RFX pro tři vrácené sloupce tento kód spravuje vazbu parametru, který jste předali za běhu. Parametr je nastaven na sloupec `Dist_No` (číslo oblasti).
 
-Následující příklad ukazuje, jak vytvořit řetězec SQL a jak ji používat k otevření sady záznamů.
+Další příklad ukazuje, jak nastavit řetězec SQL a jak ho použít k otevření sady záznamů.
 
 ```cpp
 // Construct a CDelinquents recordset object
@@ -148,14 +148,14 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
     // Use the recordset ...
 ```
 
-Tento kód vytvoří snímek, předává je parametr, který jste dříve získali z uživatele a zavolá předdefinovaný dotaz. Při spuštění dotazu se vrátí záznamy pro zadanou prodejní oblast. Každý záznam obsahuje sloupce pro číslo účtu, Příjmení odběratele a telefonní číslo zákazníka.
+Tento kód vytvoří snímek, předá mu parametr získaný dříve od uživatele a zavolá předdefinovaný dotaz. Při spuštění dotazu vrátí záznamy pro zadanou oblast prodeje. Každý záznam obsahuje sloupce pro číslo účtu, příjmení zákazníka a telefonní číslo zákazníka.
 
 > [!TIP]
->  Můžete chtít zpracovat návratovou hodnotu (výstupní parametr) z uložené procedury. Další informace a příklad najdete v tématu [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
+>  Je možné, že budete chtít zpracovat návratovou hodnotu (výstupní parametr) z uložené procedury. Další informace a příklad naleznete v tématu [CFieldExchange:: SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
 [Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Sada záznamů: Provedení spojení (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

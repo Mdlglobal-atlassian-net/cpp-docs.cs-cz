@@ -1,69 +1,68 @@
 ---
-title: Odkaz na MSVC linkeru
+title: Referenční zdroje k linkeru MSVC
 ms.date: 12/10/2018
 ms.assetid: bb736587-d13b-4f3c-8982-3cc2c015c59c
-ms.openlocfilehash: 3a9eebef0a264b0131311b5ca96011a4d56264a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46874b5eaff889834df284ba90e6c6f196d8d66
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176626"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079516"
 ---
 # <a name="linking"></a>Propojení
 
-V projektu v jazyce C++ *propojení* krok se provádí po kompilátor obsahuje zdrojový kód zkompilovány do souborů objektů (*.obj). Linker (link.exe) kombinuje objektových souborů v jediném spustitelném souboru. 
+V C++ projektu je krok *propojení* proveden poté, co kompilátor zkompiluje zdrojový kód do souborů objektů (*. obj). Linker (Link. exe) kombinuje soubory objektů do jediného spustitelného souboru.
 
-Možnosti linkeru můžete nastavit uvnitř nebo mimo sadu Visual Studio. V sadě Visual Studio, můžete přístup k možnosti linkeru kliknutím pravým tlačítkem na uzel projektu v **Průzkumníka řešení** a zvolíte **vlastnosti** pro zobrazení stránky vlastností. Zvolte **Linkeru** v levém podokně rozbalte uzel a zobrazíte všechny možnosti. 
-
+Možnosti linkeru lze nastavit uvnitř nebo vně sady Visual Studio. V rámci sady Visual Studio získáte přístup k možnostem linkeru kliknutím pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a výběrem **vlastnosti** zobrazíte stránky vlastností. V levém podokně vyberte **linker** a rozbalte uzel a zobrazte všechny možnosti.
 
 ## <a name="linker-command-line-syntax"></a>Syntaxe příkazového řádku linkeru
 
-Při spuštění odkaz mimo sadu Visual Studio, můžete zadat vstup jednu nebo více způsoby:
+Když spustíte odkaz mimo sadu Visual Studio, můžete zadat vstup jedním nebo více způsoby:
 
 - Na příkazovém řádku
 
-- Pomocí příkazu souborů
+- Použití souborů příkazů
 
-- V seznamu proměnných prostředí
+- V proměnných prostředí
 
-ODKAZ první procesy možnosti zadané v proměnné prostředí LINK, za nímž následuje možnosti v pořadí, v jakém jsou uvedeny v příkazovém řádku a v souborech příkazů. Pokud možnost se opakuje různé argumenty, posledním blokem zpracovat přednost.
+Propojte možnosti prvního procesu zadané v proměnné prostředí propojení a potom klikněte na možnosti v pořadí, v jakém jsou zadány na příkazovém řádku a v souborech příkazů. Pokud se možnost opakuje s jinými argumenty, má poslední zpracování přednost.
 
-Možnosti platí pro celé sestavení; bez možností je použít na konkrétní vstupní soubory.
+Možnosti platí pro celé sestavení; pro konkrétní vstupní soubory nelze použít žádné možnosti.
 
-Ke spuštění odkaz. Soubor EXE, použijte tuto syntaxi příkazu:
+Pro spuštění odkazu. EXE použijte následující syntaxi příkazu:
 
 ```
 LINK arguments
 ```
 
-`arguments` Zahrnují možnosti a názvy souborů a dá se zadat v libovolném pořadí. Možnosti jsou zpracované první a soubory. K oddělení argumentů použijte mezery nebo tabulátory.
+`arguments` zahrnují možnosti a názvy souborů a lze je zadat v libovolném pořadí. Napřed se zpracují tyto možnosti a pak soubory. Oddělte argumenty pomocí jedné nebo více mezer nebo karet.
 
 > [!NOTE]
->  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
+>  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nemůžete ho spustit z příkazového řádku systému nebo z Průzkumníka souborů.
 
 ## <a name="command-line"></a>Příkazový řádek
 
-Na příkazovém řádku možnost sestává ze specifikátoru možnosti, pomlčku (-) nebo lomítkem (/), za nímž následuje název možnosti. Názvy možností nelze zkracovat. Některé možnosti přijímají argument, zadané za dvojtečkou (:). Mezery ani tabulátory jsou povoleny ve specifikaci možnosti, s výjimkou v rámci řetězec v uvozovkách ve variantě pro Comment. Určení argumentů v desítkovém zápisu nebo v zápisu jazyka. Názvy možností a jejich – klíčové slovo nebo název souboru argumenty nejsou velká a malá písmena, ale identifikátory jako argumenty jsou malá a velká písmena.
+V příkazovém řádku se možnost skládá z specifikátoru možnosti, buď spojovníku (-), nebo lomítko (/) následovaný názvem možnosti. Názvy možností nelze zkracovat. Některé možnosti přebírají argument zadaný za dvojtečkou (:). V rámci specifikace možnosti nejsou povoleny mezery ani tabulátory, s výjimkou řetězce v uvozovkách v možnosti/COMMENT. Zadejte číselné argumenty v desítkovém nebo jazykovém zápisu jazyka C. Názvy možností a jejich klíčové slovo nebo argumenty filename nerozlišují velká a malá písmena, ale identifikátory jako argumenty rozlišují malá a velká písmena.
 
-Do propojovacího programu předat do souboru, zadejte na příkazovém řádku po příkazu LINK název souboru. Můžete zadat absolutní nebo relativní cestu s názvem, a můžete použít zástupné znaky v názvu souboru. Pokud vynecháte tečku (.) a názvem souboru s příponou, odkaz předpokládá .obj za účelem vyhledání souboru. ODKAZ přípony názvu souboru nebo chybějící je, abyste neklikli vytvářet předpoklady o obsah souborů. Určuje typ souboru porovnáním se a zpracovává je odpovídajícím způsobem.
+Chcete-li předat souboru linkeru, zadejte název souboru na příkazovém řádku za příkazem LINK. Můžete zadat absolutní nebo relativní cestu k názvu souboru a můžete použít zástupné znaky v názvu souboru. Pokud vynecháte příponu tečky (.) a filename, odkaz předpokládá, že pro účely hledání souboru. ODKAZ nepoužívá přípony názvů souborů ani nedostatečné informace k vytvoření předpokladů o obsahu souborů; Určuje typ souboru jeho prozkoumáním a zpracuje ho odpovídajícím způsobem.
 
-Link.exe vrátí hodnotu 0 pro úspěch (bez chyb).  V opačném případě vrátí linkeru číslo chyby, který zastavil na odkaz.  Například pokud linker vydá LNK1104, linker vrátí 1104.  Nejnižší číslo chyby vrácené v případě chyby linkeru odpovídajícím způsobem, je 1000.  Vrácená hodnota 128 představuje buď problém s operačním systémem nebo o soubor .config. zavaděč se nenačetla link.exe nebo c2.dll.
+Link. exe vrátí hodnotu nula pro úspěch (bez chyb).  V opačném případě linker vrátí číslo chyby, která odkaz zastavila.  Například pokud linker generuje LINKERŮ LNK1104, linker vrátí 1104.  Tedy nejnižší číslo chyby vrácené linkerem je 1000.  Návratová hodnota 128 představuje problém s konfigurací buď s operačním systémem, nebo souborem. config; zavaděč nenačte buď Link. exe, nebo C2. dll.
 
 ## <a name="link-command-files"></a>Soubory příkazů LINK
 
-Můžete předat argumenty příkazového řádku na odkaz ve formě souboru příkazů. K určení souboru příkazů do propojovacího programu, použijte následující syntaxi:
+Můžete předat argumenty příkazového řádku pro propojení ve formě souboru příkazů. K určení souboru příkazů linkeru použijte následující syntaxi:
 
-> **ODKAZ \@**  <em>commandfile</em>
+> **Propojit \@** <em>CommandFile</em>
 
-*Commandfile* je název textového souboru. Je povolená žádná mezera nebo tabulátor mezi zavináč (**\@**) a název souboru. Neexistuje žádný výchozí příponou; je nutné zadat úplný název souboru, včetně všech rozšíření. Zástupné znaky nelze použít. Můžete zadat absolutní nebo relativní cestu s názvem. ODKAZ nepoužívá proměnnou prostředí k vyhledání souboru.
+*CommandFile* je název textového souboru. Mezi znakem at ( **\@** ) a názvem souboru není povolen žádný prostor ani tabulátor. Neexistuje žádné výchozí rozšíření. je nutné zadat úplný název souboru včetně všech přípon. Nelze použít zástupné znaky. Můžete zadat absolutní nebo relativní cestu k názvu souboru. ODKAZ nepoužívá k vyhledání souboru proměnnou prostředí.
 
-V souboru příkazů, argumentů je možné oddělit mezerami či tabulátory (jako v příkazovém řádku) a znaky nového řádku.
+V souboru příkazů mohou být argumenty odděleny mezerami nebo tabulátory (jako na příkazovém řádku) a znakem nového řádku.
 
-Můžete zadat část nebo celý příkazový řádek v souboru příkazů. Můžete použít více než jeden soubor příkazů v příkazu LINK. ODKAZ přijímá vstup souboru příkazů, jako kdyby byly zadány v dané oblasti na příkazovém řádku. Soubory příkazů nelze vnořit. ODKAZ vypisuje obsah soubory příkazů, pokud [/nologo](nologo-suppress-startup-banner-linker.md) je zadána možnost.
+V souboru příkazů můžete zadat celý nebo celý příkazový řádek. V příkazu LINK můžete použít více než jeden soubor příkazů. ODKAZ přijme vstup z příkazového souboru, jako kdyby byl zadán v tomto umístění na příkazovém řádku. Soubory příkazů nelze vnořovat. ODKAZ vrátí obsah souborů příkazů, pokud není zadána možnost [/nologo](nologo-suppress-startup-banner-linker.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující příkaz pro vytvoření knihovny DLL předá názvy souborů objektů a knihoven v souborech samostatných příkazů a používá třetí příkaz specifikace možnost/EXPORTS v souboru:
+Následující příkaz pro sestavení knihovny DLL předává názvy objektů a knihoven do samostatných souborů příkazů a používá třetí příkazový soubor pro specifikaci možnosti/EXPORTS:
 
 ```cmd
 link /dll @objlist.txt @liblist.txt @exports.txt
@@ -71,19 +70,19 @@ link /dll @objlist.txt @liblist.txt @exports.txt
 
 ## <a name="link-environment-variables"></a>Proměnné prostředí LINK
 
-Nástroj LINK používá následující proměnné prostředí:
+Nástroj propojení používá následující proměnné prostředí:
 
-- ODKAZ a \_odkaz\_, pokud je definována. Nástroj LINK připojí na začátek možnosti a argumenty, které jsou definovány v proměnné prostředí LINK a připojí možností a argumentů definované v \_odkaz\_ proměnnou prostředí pro argumenty příkazového řádku před zpracováním.
+- ODKAZ a \_propojení\_, je-li definován. Nástroj propojení přiřadí možnosti a argumenty definované v proměnné prostředí propojení a připojí parametry a argumenty definované v proměnné prostředí \_propojení\_ k argumentům příkazového řádku před zpracováním.
 
-- LIB, pokud je definována. Nástroje pro propojení používá cesta ke KNIHOVNĚ při hledání objektu, knihovny nebo jiný soubor zadaný v příkazovém řádku nebo pomocí [/základní](base-base-address.md) možnost. Cesta ke KNIHOVNĚ také používá k nalezení souboru .pdb s názvem v objektu. LIB proměnné může obsahovat jeden nebo více specifikace cesty oddělené středníky. Jedna cesta musí odkazovat na podadresáři \lib instalace sady Visual C++.
+- LIB, je-li definován. Nástroje pro propojení používají cestu LIB při hledání objektu, knihovny nebo jiného souboru zadaného v příkazovém řádku nebo pomocí možnosti [/Base](base-base-address.md) . Také používá cestu LIB k nalezení souboru PDB s názvem v objektu. Proměnná LIB může obsahovat jednu nebo více specifikací cesty, které jsou odděleny středníky. Jedna cesta musí ukazovat na podadresář \lib vaší vizuální C++ instalace.
 
-- CESTA, je-li nástroj je potřeba spustit CVTRES a nemůže najít soubor ve stejném adresáři jako samotného odkazu. (Odkaz vyžaduje CVTRES propojit soubor .res). Cesta musí odkazovat na podadresáři \bin instalace sady Visual C++.
+- CESTA, pokud nástroj potřebuje spustit CVTRES a nemůže najít soubor ve stejném adresáři jako samotný odkaz. (Odkaz vyžaduje CVTRES k propojení souboru. res.) Cesta musí ukazovat na podadresáři \Bin vaší vizuální C++ instalace.
 
-- TMP, zadejte adresář, při propojování omf – nebo .res souborů.
+- TMP, chcete-li určit adresář při propojování souborů OMF nebo. res.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Reference sestavení C/C++](c-cpp-building-reference.md)
-[možnosti Linkeru MSVC](linker-options.md)
-[soubory definice modulu (.def)](module-definition-dot-def-files.md)
-[podpora Linkeru pro Knihovny DLL s odloženým načtením](linker-support-for-delay-loaded-dlls.md)
+[C/C++ sestavit odkaz](c-cpp-building-reference.md)
+[MSVC Možnosti linkeru](linker-options.md)
+[soubory definice modulu (. def)](module-definition-dot-def-files.md)
+[Podpora linkeru pro odložené načítání knihoven DLL](linker-support-for-delay-loaded-dlls.md)

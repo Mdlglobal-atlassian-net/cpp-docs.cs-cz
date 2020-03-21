@@ -2,12 +2,12 @@
 title: Konfigurace projektu C++ pro Linux v aplikaci Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419383"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077727"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
@@ -17,9 +17,9 @@ Podpora pro Linux je k dispozici v systému Visual Studio 2017 nebo novějším.
 
 ::: moniker-end
 
-Toto téma popisuje, jak nakonfigurovat projekt C++ pro Linux, jak je popsáno v tématu [ C++ vytvoření nového projektu pro Linux v aplikaci Visual Studio](create-a-new-linux-project.md). Projekty CMake pro Linux najdete v tématu [konfigurace projektu Linux cmake ](cmake-linux-project.md). 
+Toto téma popisuje, jak nakonfigurovat projekt C++ pro Linux, jak je popsáno v tématu [ C++ vytvoření nového projektu pro Linux v aplikaci Visual Studio](create-a-new-linux-project.md). Projekty CMake pro Linux najdete v tématu [konfigurace projektu Linux cmake ](cmake-linux-project.md).
 
-Můžete nakonfigurovat projekt pro Linux pro cíl fyzického počítače se systémem Linux, virtuálního počítače nebo subsystému [Windows pro Linux](/windows/wsl/about) (WSL). 
+Můžete nakonfigurovat projekt pro Linux pro cíl fyzického počítače se systémem Linux, virtuálního počítače nebo subsystému [Windows pro Linux](/windows/wsl/about) (WSL).
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Vzhledem k tomu, že se na vzdáleném počítači (nebo WSL) koná veškerá ko
 
 ![Události sestavení](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a>IntelliSense pro hlavičky ve vzdálených systémech
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a>IntelliSense pro hlavičky ve vzdálených systémech
 
 Když přidáte nové připojení ve **Správci připojení**, Visual Studio automaticky detekuje adresáře zahrnutí pro kompilátor ve vzdáleném systému. Visual Studio potom zips a zkopíruje tyto soubory do adresáře na místním počítači s Windows. Po každém použití tohoto připojení v projektu sady Visual Studio nebo CMake budou hlavičky v těchto adresářích použity k poskytnutí IntelliSense.
 

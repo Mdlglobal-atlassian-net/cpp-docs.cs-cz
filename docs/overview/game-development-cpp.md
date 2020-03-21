@@ -1,17 +1,15 @@
 ---
 title: Vývoj herních aplikací v jazyce C++
 ms.date: 02/26/2019
-ms.openlocfilehash: b9c5296f5a89a51797be5981b2592fe22267a154
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4cc16e864d9ade1726733504a58551f9110171b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410052"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079382"
 ---
 # <a name="game-development-with-c"></a>Vývoj herních aplikací v jazyce C++
 
-Když vytváříte hry s Windows 10, máte příležitost k oslovení miliónů hráče po celém světě přes telefon, počítač a Xbox One. Hry pro Windows 10 s Xbox na Windows, Xbox Live, různá zařízení pro více hráčů, úžasné herní komunitě a výkonné nové funkce, jako je univerzální platformu Windows (UPW) a rozhraní DirectX 12 thrill hráčů omezení věku a žánry. Nové platformy pro Universal Windows (UPW) zajišťuje kompatibilitu vaší hry napříč zařízení s Windows 10 společné rozhraní API pro telefon, počítač a Xbox One a taky nástroje a možnosti přizpůsobení hry do prostředí pro každé zařízení.
+Když vytvoříte hru s Windows 10, budete mít možnost oslovit miliony hráčů po celém světě na telefonu, počítači PC a Xbox One. Se službami Xbox ve Windows, Xbox Live, více zařízeními pro více zařízení, úžasné herní komunitou a výkonnými novými funkcemi, jako jsou Univerzální platforma Windows (UWP) a DirectX 12, Windows 10 Games Thrill Playery všech věkových a žánrů. Nové Univerzální platforma Windows (UWP) poskytují kompatibilitu pro vaši hru v zařízeních s Windows 10 a společně s nástroji a možnostmi pro přizpůsobení her pro všechna prostředí zařízení.
 
-Vývoj her je popsána v [Windows Dev Center](https://docs.microsoft.com/windows/uwp/gaming/getting-started).
-
-
+Vývoj her je popsán na stránce [Windows Dev Center](https://docs.microsoft.com/windows/uwp/gaming/getting-started).

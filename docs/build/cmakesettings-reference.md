@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac92d9dfa5266227fb3bd4a3749ab50f425a2d90
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417388"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078712"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Reference ke schématu CMakeSettings. JSON
 
@@ -21,13 +21,13 @@ Projekty CMake jsou podporovány v sadě Visual Studio 2017 a novějších.
 
 ::: moniker range=">=vs-2017"
 
-Soubor **CMakeSettings. JSON** obsahuje informace, které sada Visual Studio používá pro technologii IntelliSense a vytváření argumentů příkazového řádku, které předává cmaki. exe pro zadané prostředí *Konfigurace* a kompilátoru. Konfigurace určuje vlastnosti, které se vztahují na konkrétní platformu a typ sestavení, například `x86-Debug` nebo `Linux-Release`. Každá konfigurace určuje prostředí, které zapouzdřuje informace o sadě nástrojů kompilátoru, například MSVC, RSZ nebo Clang. CMake používá argumenty příkazového řádku k opětovnému vygenerování kořenového souboru *CMakeCache. txt* a dalších souborů projektu projektu. Hodnoty lze přepsat v souborech *CMakeLists. txt* . 
+Soubor **CMakeSettings. JSON** obsahuje informace, které sada Visual Studio používá pro technologii IntelliSense a vytváření argumentů příkazového řádku, které předává cmaki. exe pro zadané prostředí *Konfigurace* a kompilátoru. Konfigurace určuje vlastnosti, které se vztahují na konkrétní platformu a typ sestavení, například `x86-Debug` nebo `Linux-Release`. Každá konfigurace určuje prostředí, které zapouzdřuje informace o sadě nástrojů kompilátoru, například MSVC, RSZ nebo Clang. CMake používá argumenty příkazového řádku k opětovnému vygenerování kořenového souboru *CMakeCache. txt* a dalších souborů projektu projektu. Hodnoty lze přepsat v souborech *CMakeLists. txt* .
 
 Můžete přidat nebo odebrat konfigurace v integrovaném vývojovém prostředí a pak je upravit přímo v souboru JSON nebo pomocí **editoru nastavení cmake** (Visual Studio 2019 a novější). V rozhraní IDE lze snadno přepínat mezi konfiguracemi, aby bylo možné generovat různé soubory projektu. Další informace najdete [v tématu Přizpůsobení nastavení buildu cmake v sadě Visual Studio](customize-cmake-settings.md) .
 
 ## <a name="configurations"></a>Konfigurace
 
-Pole `configurations` obsahuje všechny konfigurace pro projekt CMake. Další informace o předdefinovaných konfiguracích najdete v tématu Referenční dokumentace k předdefinovaným [konfiguracím cmake](cmake-predefined-configuration-reference.md) . Do souboru můžete přidat libovolný počet předem definovaných nebo vlastních konfigurací. 
+Pole `configurations` obsahuje všechny konfigurace pro projekt CMake. Další informace o předdefinovaných konfiguracích najdete v tématu Referenční dokumentace k předdefinovaným [konfiguracím cmake](cmake-predefined-configuration-reference.md) . Do souboru můžete přidat libovolný počet předem definovaných nebo vlastních konfigurací.
 
 `configuration` má tyto vlastnosti:
 
@@ -43,8 +43,8 @@ Pole `configurations` obsahuje všechny konfigurace pro projekt CMake. Další i
 - `codeAnalysisRuleset`: Určuje RuleSet, který se má použít při spuštění nástroje Code Analysis. Může to být úplná cesta nebo název souboru ruleset nainstalovaného aplikací Visual Studio.
 - `configurationType`: Určuje konfiguraci typu sestavení pro vybraný generátor. Může to být jedna z těchto:
 
-  - Ladit
-  - Vydaná verze
+  - Ladění
+  - Vydat
   - MinSizeRel
   - RelWithDebInfo
   
@@ -148,7 +148,7 @@ Pokud aktivní konfigurace určuje generátor sady Visual Studio, je ve výchoz�
 Všimněte si, že pokud nedefinujete `"type"`, bude ve výchozím nastavení předpokládána typ `"STRING"`.
 - `remoteCopyOptimizations`: vlastnosti sady **Visual Studio 2019 verze 16,5 nebo novější** pro řízení zdrojové kopie na vzdáleném cíli. Ve výchozím nastavení jsou povolené optimalizace. Zahrnuje `remoteCopyUseOptimizations`, `rsyncSingleDirectoryCommandArgs`a `remoteCopySourcesMaxSmallChange`.
 
-## <a name="environments"></a>Environment
+## <a name="environments"></a><a name="environments"></a>Environment
 
 *Prostředí* zapouzdřuje proměnné prostředí, které jsou nastaveny v procesu, který aplikace Visual Studio používá k vyvolání cmake. exe. Pro projekty MSVC jsou proměnné, které jsou nastaveny v [příkazovém řádku vývojáře](building-on-the-command-line.md) pro konkrétní platformu. Například prostředí `msvc_x64_x64` je stejné jako spuštění **Developer Command Prompt pro vs 2017** nebo **Developer Command Prompt pro vs 2019** s argumenty **-arch = amd64-host_arch = amd64** . Pomocí syntaxe `env.{<variable_name>}` v *CMakeSettings. JSON* můžete odkazovat na jednotlivé proměnné prostředí, například pro vytváření cest ke složkám.  K dispozici jsou následující předdefinovaná prostředí:
 
@@ -175,7 +175,7 @@ V `CMakeSettings.json`můžete v poli `environments` definovat vlastní proměnn
 - `namespace`: pojmenuje prostředí tak, aby na jeho proměnných bylo možné odkazovat z konfigurace ve formuláři `namespace.variable`. Výchozí objekt prostředí se nazývá `env` a je naplněn určitými proměnnými prostředí systému, včetně `%USERPROFILE%`.
 - `environment`: jednoznačně identifikuje tuto skupinu proměnných. Povolí dědění skupiny později v položce `inheritEnvironments`.
 - `groupPriority`: celé číslo, které určuje prioritu těchto proměnných při jejich vyhodnocování. Nejprve se vyhodnotí položky s vyšším počtem.
-- `inheritEnvironments`: pole hodnot, které určují sadu prostředí děděných touto skupinou. Tato funkce umožňuje dědit výchozí prostředí a vytvořit vlastní proměnné prostředí, které se předávají do CMake. exe při spuštění. 
+- `inheritEnvironments`: pole hodnot, které určují sadu prostředí děděných touto skupinou. Tato funkce umožňuje dědit výchozí prostředí a vytvořit vlastní proměnné prostředí, které se předávají do CMake. exe při spuštění.
 
 **Visual Studio 2019 verze 16,4 a novější:** Cíle ladění se automaticky spustí s prostředím, které zadáte v *CMakeSettings. JSON*. Můžete přepsat nebo přidat proměnné prostředí v závislosti na cíli nebo jednotlivých úkolech v [Launch. vs. JSON](launch-vs-schema-reference-cpp.md) a [Tasks. vs. JSON](tasks-vs-json-schema-reference-cpp.md).
 
@@ -269,7 +269,7 @@ V *CMakeSettings. JSON*lze použít následující makra:
 
 Všechny odkazy na makra a proměnné prostředí v souboru *CMakeSettings. JSON* se rozbalí před předáním do příkazového řádku cmake. exe.
 
-## <a name="ninja"></a>Argumenty příkazového řádku expertem
+## <a name="ninja-command-line-arguments"></a><a name="ninja"></a>Argumenty příkazového řádku expertem
 
 Pokud jsou cíle Nespecifikovány, aplikace vytvoří cíl default.
 

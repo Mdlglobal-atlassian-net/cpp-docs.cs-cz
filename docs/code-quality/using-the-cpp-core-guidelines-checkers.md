@@ -4,12 +4,12 @@ ms.date: 08/14/2018
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 955a445fbc29fca479a64684b4b60909234a0b38
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: b9eea6dc466db202ee388a2bfb2e59632e210b7f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418681"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076170"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Použití kontrolních mechanismů C++ Core Guidelines
 
@@ -17,7 +17,7 @@ C++ Základní pokyny jsou přenosné sady pokynů, pravidel a osvědčených po
 
 ## <a name="the-c-core-guidelines-project"></a>C++ Základní projektové směrnice
 
-C++ Základní pokyny, které vytvořila aplikace Bjarne Stroustrup a další, jsou návodem k C++ používání moderního a efektivního použití. Pokyny zdůrazňují zabezpečení statického typu a bezpečnost prostředků. Identifikují způsoby, jak eliminovat nebo minimalizovat největší možné části kódu náchylné k chybám, a navrhnout, jak zjednodušit a zajistit jednodušší a spolehlivější způsob provádění. Tyto pokyny jsou spravovány standardem C++ Foundation. Další informace najdete v dokumentaci, [ C++ základních pokynech](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)a v C++ dokumentaci k základním pokynům dokumentace k souborům projektu na [GitHubu](https://github.com/isocpp/CppCoreGuidelines).
+C++ Základní pokyny, které vytvořila aplikace Bjarne Stroustrup a další, jsou návodem k C++ používání moderního a efektivního použití. Pokyny zdůrazňují zabezpečení statického typu a bezpečnost prostředků. Identifikují způsoby, jak eliminovat nebo minimalizovat největší možné části kódu náchylné k chybám, a navrhnout, jak zjednodušit a zajistit jednodušší a spolehlivější způsob provádění. Tyto pokyny jsou spravovány standardem C++ Foundation. Další informace najdete v dokumentaci, [ C++ základních pokynech](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)a v C++ dokumentaci k základním pokynům dokumentace k souborům projektu na [GitHubu](https://github.com/isocpp/CppCoreGuidelines).
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>Povolit C++ základní kontrolní pokyny při analýze kódu
 
@@ -166,7 +166,7 @@ Místo #pragmas můžete použít možnosti příkazového řádku na stránce v
 
 Pomocí možnosti příkazového řádku můžete dočasně zakázat veškerou analýzu kódu pro soubor zadáním `/analyze-`. Tím dojde k tomu, že upozornění *D9025 Přepisuje "/analyze" pomocí "/analyze-"* , který vás později upozorní na opětovné povolení analýzy kódu.
 
-## <a name="corecheck_per_file"></a>Povolit kontrolu C++ základních pokynů pro konkrétní soubory projektu
+## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a>Povolit kontrolu C++ základních pokynů pro konkrétní soubory projektu
 
 V některých případech může být užitečné provádět analýzu kódu a dál používat Visual Studio IDE. Následující vzorový scénář lze použít pro velké projekty pro uložení času sestavení a pro snadnější filtrování výsledků:
 
@@ -237,7 +237,7 @@ Je nutné nastavit několik proměnných prostředí a použít pro kompilátor 
 
 Knihovna podpory směrnic je navržená tak, aby vám pomohla postupovat podle základních pokynů. GSL obsahuje definice, které umožňují nahradit konstrukce náchylné k chybám s bezpečnějšími alternativami. Můžete například nahradit dvojici `T*, length` parametrů s typem `span<T>`. GSL je k dispozici na adrese [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). Knihovna je open source, takže můžete zobrazit zdroje, vytvářet komentáře nebo přispívat. Projekt najdete na adrese [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
-## <a name="vs2015_corecheck"></a>Použití C++ základních pokynů pro kontrolu v projektech sady Visual Studio 2015
+## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>Použití C++ základních pokynů pro kontrolu v projektech sady Visual Studio 2015
 
 Pokud používáte sadu Visual Studio 2015, není C++ standardně nainstalována sada pravidel analýzy kódu základní kontroly. Než budete moci povolit C++ základní nástroje pro analýzu kódu v aplikaci Visual Studio 2015, je nutné provést některé další kroky. Společnost Microsoft poskytuje podporu pro projekty sady Visual Studio 2015 pomocí balíčku NuGet. Balíček má název Microsoft. CppCoreCheck a je k dispozici na adrese [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck). Tento balíček vyžaduje aspoň sadu Visual Studio 2015 s nainstalovanou aktualizací Update 1.
 

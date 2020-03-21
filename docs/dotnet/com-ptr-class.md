@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a3223543dfa6c1b5b45fef2780cd11b558eab84
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209227"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078967"
 ---
 # <a name="comptr-class"></a>com::ptr – třída
 
-Obálka pro objekt modelu COM, který může sloužit jako člen třídy CLR.  Obálka kanál také automatizuje správu životního cyklu objektu COM, uvolňuje všechny vlastněné odkazů na objekt, když jeho destruktoru je volána. Obdobná [CComPtr – třída](../atl/reference/ccomptr-class.md).
+Obálka pro objekt modelu COM, který lze použít jako člen třídy CLR.  Obálka také automatizuje správu životního cyklu objektu COM a uvolní všechny vlastněné odkazy na objekt při volání jeho destruktoru. Analogová ke [třídě CComPtr](../atl/reference/ccomptr-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ Rozhraní COM.
 
 ## <a name="remarks"></a>Poznámky
 
-A `com::ptr` lze také jako funkce místní proměnnou ke zjednodušení různé úlohy COM a automatizují správu životního cyklu.
+`com::ptr` lze použít také jako místní proměnnou funkce pro zjednodušení různých úloh COM a automatizaci správy životního cyklu.
 
-A `com::ptr` nelze použít přímo jako parametr funkce; použijte [operátor odkazu sledování](../extensions/tracking-reference-operator-cpp-component-extensions.md) nebo [operátor popisovače objektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) místo.
+`com::ptr` nelze použít přímo jako parametr funkce; místo toho použijte [Operátor sledovacího odkazu](../extensions/tracking-reference-operator-cpp-component-extensions.md) nebo [popisovač na objekt (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) .
 
-A `com::ptr` nemůže být vráceny přímo z funkce; místo toho použijte popisovač.
+`com::ptr` nelze přímo vrátit z funkce; místo toho použijte popisovač.
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  Volání veřejné metody tříd výsledky ve volání do uzavřeného `IXMLDOMDocument` objektu.  Ukázka vytvoří instanci dokumentu XML, vyplní některé jednoduché XML a nemá zjednodušené procházení uzlů ve stromu analyzovaný dokumentu a vytisknout XML do konzoly.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu.  Volání veřejných metod třídy má za následek volání objektu obsaženého `IXMLDOMDocument`.  Ukázka vytvoří instanci dokumentu XML, vyplní ji pomocí nějakého jednoduchého kódu XML a zjednodušuje procházení uzlů ve stromu analyzovaných dokumentů pro tisk XML do konzoly.
 
 ```cpp
 // comptr.cpp
@@ -167,42 +167,40 @@ int main() {
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis| 
-|---------|-----------| 
-|[ptr::ptr](#ptr)|Vytvoří `com::ptr` zabalit objekt modelu COM.| 
-|[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`.| 
+|Název|Popis|
+|---------|-----------|
+|[ptr::ptr](#ptr)|Vytvoří `com::ptr` pro zabalení objektu COM.|
+|[ptr::~ptr](#tilde-ptr)|Destrukturuje `com::ptr`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
-|---------|-----------| 
-|[ptr::Attach](#attach)|Připojí objektu modelu COM `com::ptr`.| 
-|[ptr::CreateInstance](#createInstance)|Vytvoří instanci objektu modelu COM v rámci `com::ptr`.| 
-|[ptr::Detach](#detach)|Vrací vlastnictví objektu COM, vrací ukazatel na objekt.| 
-|[ptr::GetInterface](#getInterface)|Vytvoří instanci objektu modelu COM v rámci `com::ptr`.| 
-|[ptr::QueryInterface](#queryInterface)|Dotazuje se vlastnictví objektu modelu COM pro rozhraní a připojí výsledek do jiného `com::ptr`.| 
-|[ptr::Release](#release)|Uvolní všechny vlastněné odkazy na objekt modelu COM.|
+|---------|-----------|
+|[ptr::Attach](#attach)|Připojí objekt COM k `com::ptr`.|
+|[ptr::CreateInstance](#createInstance)|Vytvoří instanci objektu COM v rámci `com::ptr`.|
+|[ptr::Detach](#detach)|Přidělí vlastnictví objektu COM a vrátí ukazatel na objekt.|
+|[ptr::GetInterface](#getInterface)|Vytvoří instanci objektu COM v rámci `com::ptr`.|
+|[ptr::QueryInterface](#queryInterface)|Zadá dotaz na vlastní objekt modelu COM pro rozhraní a připojí výsledek k jinému `com::ptr`.|
+|[ptr::Release](#release)|Uvolní všechny vlastněné odkazy na objekt COM.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
-|---------|-----------| 
-|[PTR::Operator-&gt;](#operator-arrow)|Operátor přístupu členů použít k volání metody na vlastní objekt modelu COM.| 
-|[ptr::operator=](#operator-assign)|Připojí objektu modelu COM `com::ptr`.| 
-|[PTR::Operator&nbsp;bool](#operator-bool)|Operátor pro používání `com::ptr` v podmíněných výrazech.| 
-|[ptr::operator!](#operator-logical-not)|Operátor zjistit, zda vlastní objekt modelu COM je neplatná.| 
+|---------|-----------|
+|[PTR:: operator-&gt;](#operator-arrow)|Operátor přístupu ke členu, který se používá k volání metod ve vlastněných objektech COM.|
+|[ptr::operator=](#operator-assign)|Připojí objekt COM k `com::ptr`.|
+|[PTR:: operator&nbsp;bool](#operator-bool)|Operátor pro použití `com::ptr` v podmíněném výrazu.|
+|[ptr::operator!](#operator-logical-not)|K určení, zda je vlastněný objekt COM neplatný|
 
 ## <a name="requirements"></a>Požadavky
 
-**Header file** \<msclr\com\ptr.h>
+**Hlavičkový soubor** \<msclr\com\ptr.h >
 
-**Namespace** msclr::com
+**Obor názvů** msclr –:: com
 
- 
+## <a name="ptrptr"></a><a name="ptr"></a>PTR::p TR
 
-## <a name="ptr"></a>ptr::ptr
-
-Vrací ukazatel na vlastní objekt modelu COM.
+Vrátí ukazatel na vlastněný objekt COM.
 
 ```cpp
 ptr();
@@ -213,20 +211,20 @@ ptr(
 
 ### <a name="parameters"></a>Parametry
 
-*P*<br/>
-Ukazatele rozhraní modelu COM.
+*Trub*<br/>
+Ukazatel rozhraní modelu COM.
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor bez argumentů přiřadí `nullptr` na podkladové popisovač objektu. Budoucí volání `com::ptr` ověření na vnitřní objekt, který se tiše skončit neúspěchem, dokud nebude objekt je vytvořen nebo připojen.
+Konstruktor bez argumentů přiřadí `nullptr` k popisovači objektu. Budoucí volání `com::ptr` ověří interní objekt a tiše selže, dokud se objekt nevytvoří nebo nepřipojí.
 
-Konstruktor jednoargumentové přidá odkaz na objekt modelu COM, ale nebude release odkaz volajícího, aby volající musí zavolat `Release` u objektu COM skutečně ztratit kontrolu. Při `com::ptr`zavolán destruktor automaticky vydá jejich odkazů na objekt modelu COM.
+Konstruktor s jedním argumentem přidá odkaz na objekt modelu COM, ale neuvolní odkaz volajícího, takže volající musí volat `Release` v objektu COM, aby bylo možné skutečně poskytnout řízení. Pokud je volán destruktor `com::ptr`, automaticky uvolní odkazy na objekt modelu COM.
 
-Předání `NULL` pro tento konstruktor je stejná jako verze bez argumentů volání.
+Předávání `NULL` k tomuto konstruktoru je stejné jako volání verze bez argumentů.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu. Ukazuje použití obě verze konstruktoru.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu. Ukazuje použití obou verzí konstruktoru.
 
 ```cpp
 // comptr_ptr.cpp
@@ -287,9 +285,9 @@ int main() {
 }
 ```
 
-## <a name="tilde-ptr"></a>PTR:: ~ ptr
+## <a name="ptrptr"></a><a name="tilde-ptr"></a>PTR:: ~ PTR
 
-Destructs `com::ptr`.
+Destrukturuje `com::ptr`.
 
 ```cpp
 ~ptr();
@@ -297,11 +295,11 @@ Destructs `com::ptr`.
 
 ### <a name="remarks"></a>Poznámky
 
-Při zlikvidování `com::ptr` uvolní všechny odkazy na vlastní k jeho objekt modelu COM. Za předpokladu, že neexistují žádné další odkazy, které jsou uložené na objekt modelu COM, odstraní objekt modelu COM a jeho paměť uvolněna.
+Při zničení `com::ptr` uvolní všechny odkazy, které vlastní, ke svému objektu COM. Za předpokladu, že neexistují žádné další odkazy na objekt modelu COM, objekt COM bude odstraněn a jeho uvolněná paměť.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  V `main` funkce, dva `XmlDocument` destruktory objektů bude volána při mizení z rozsahu `try` blok, což vede k podkladovým `com::ptr` destruktoru je volána, uvolnění všechny vlastněné odkazy modelu COM objekt.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu.  Ve funkci `main` budou volány dva destruktory objektů `XmlDocument`, pokud přestanou z oboru bloku `try`, což vede k vyvolání základního destruktoru `com::ptr`, který uvolňuje všechny vlastněné odkazy na objekt modelu COM.
 
 ```cpp
 // comptr_dtor.cpp
@@ -362,9 +360,9 @@ int main() {
 }
 ```
 
-## <a name="attach"></a>ptr::Attach
+## <a name="ptrattach"></a><a name="attach"></a>PTR:: Attach
 
-Připojí objektu modelu COM `com::ptr`.
+Připojí objekt COM k `com::ptr`.
 
 ```cpp
 void Attach(
@@ -374,22 +372,22 @@ void Attach(
 
 ### <a name="parameters"></a>Parametry
 
-*vp_ravo*<br/>
-Ukazatele rozhraní modelu COM pro připojení.
+*_right*<br/>
+Ukazatel rozhraní modelu COM, který se má připojit.
 
 ### <a name="exceptions"></a>Výjimky
 
-Pokud `com::ptr` již vlastní odkaz na objekt modelu COM `Attach` vyvolá <xref:System.InvalidOperationException>.
+Pokud `com::ptr` již vlastní odkaz na objekt modelu COM, `Attach` vyvolá <xref:System.InvalidOperationException>.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `Attach` odkazuje na objekt modelu COM, ale nemá verzi na ni odkaz volajícího.
+Volání `Attach` odkazuje na objekt modelu COM, ale neuvolní na něj odkaz volajícího.
 
-Předání `NULL` k `Attach` výsledkem je provedena žádná akce.
+Předání `NULL` k `Attach` výsledky neprovádí žádnou akci.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu. `ReplaceDocument` První volání členských funkcí `Release` na žádném dříve vlastněn objekt a poté zavolá `Attach` připojit nový objekt dokumentu.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu. Členská funkce `ReplaceDocument` nejprve volá `Release` na všechny dřív vlastněné objekty a potom volá `Attach` pro připojení nového objektu dokumentu.
 
 ```cpp
 // comptr_attach.cpp
@@ -463,9 +461,9 @@ int main() {
 }
 ```
 
-## <a name="createInstance"></a>PTR::CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a>PTR:: CreateInstance
 
-Vytvoří instanci objektu modelu COM v rámci `com::ptr`.
+Vytvoří instanci objektu COM v rámci `com::ptr`.
 
 ```cpp
 void CreateInstance(
@@ -509,30 +507,30 @@ void CreateInstance(
 ### <a name="parameters"></a>Parametry
 
 *progid*<br/>
-A `ProgID` řetězec.
+`ProgID` řetězec.
 
 *pouter*<br/>
-Ukazatel na rozhraní IUnknown agregovaný objekt (řídící rozhraní IUnknown). Pokud `pouter` není zadán, `NULL` se používá.
+Ukazatel na rozhraní IUnknown agregovaného objektu (řízení IUnknown). Pokud `pouter` není zadán, použije se `NULL`.
 
 *cls_context*<br/>
-Kontext, ve kterém se spustí kód, který spravuje nově vytvořený objekt. Hodnoty pocházejí ze `CLSCTX` výčtu. Pokud `cls_context` není zadána, hodnota se používá CLSCTX_ALL.
+Kontext, ve kterém se spustí kód, který spravuje nově vytvořený objekt. Hodnoty jsou pořízeny z výčtu `CLSCTX`. Pokud `cls_context` není zadán, použije se hodnota CLSCTX_ALL.
 
 *rclsid*<br/>
-`CLSID` související s daty a kód, který se použije k vytvoření objektu.
+`CLSID` spojená s daty a kódem, který se použije k vytvoření objektu.
 
 ### <a name="exceptions"></a>Výjimky
 
-Pokud `com::ptr` již vlastní odkaz na objekt modelu COM `CreateInstance` vyvolá <xref:System.InvalidOperationException>.
+Pokud `com::ptr` již vlastní odkaz na objekt modelu COM, `CreateInstance` vyvolá <xref:System.InvalidOperationException>.
 
-Tato funkce volá `CoCreateInstance` a používá <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> převést všechny chyby `HRESULT` k příslušné výjimky.
+Tato funkce volá `CoCreateInstance` a používá <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> k převodu všech `HRESULT` chyb na odpovídající výjimku.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateInstance` používá `CoCreateInstance` k vytvoření nové instance zadaného objektu určen buď z ProgID a CLSID. `com::ptr` Odkazuje na nově vytvořený objekt a automaticky uvolní všechny vlastní reference při zničení.
+`CreateInstance` používá `CoCreateInstance` k vytvoření nové instance zadaného objektu identifikovaného buď z identifikátoru ProgID nebo CLSID. `com::ptr` odkazuje na nově vytvořený objekt a bude automaticky vydávat všechny vlastněné odkazy po zničení.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu. Konstruktor třídy použít dva různé způsoby `CreateInstance` vytvořit objekt dokumentu z ProgID nebo z CLSID plus CLSCTX.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu. Konstruktory třídy používají dvě různé formy `CreateInstance` k vytvoření objektu dokumentu buď z identifikátoru ProgID, nebo z identifikátoru CLSID a CLSCTX.
 
 ```cpp
 // comptr_createinstance.cpp
@@ -581,9 +579,9 @@ int main() {
 }
 ```
 
-## <a name="detach"></a>ptr::Detach
+## <a name="ptrdetach"></a><a name="detach"></a>PTR::D etach
 
-Vrací vlastnictví objektu COM, vrací ukazatel na objekt.
+Přidělí vlastnictví objektu COM a vrátí ukazatel na objekt.
 
 ```cpp
 _interface_type * Detach();
@@ -593,19 +591,19 @@ _interface_type * Detach();
 
 Ukazatel na objekt modelu COM.
 
-Pokud je vlastní žádný objekt, je vrácena hodnota NULL.
+Pokud žádný objekt není vlastněn, je vrácena hodnota NULL.
 
 ### <a name="exceptions"></a>Výjimky
 
-Interně `QueryInterface` je volán na vlastní objekt modelu COM a všechny chyby `HRESULT` jsou převedeny na výjimky podle <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+Interně `QueryInterface` je volána ve vlastněných objektech COM a všechny chyby `HRESULT` jsou převedeny na výjimku <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
 ### <a name="remarks"></a>Poznámky
 
-`Detach` nejprve přidá odkaz na objekt modelu COM jménem volající a uvolní všechny odkazy na vlastní `com::ptr`.  Volající musí nakonec uvolnit vráceného objektu na jeho zničení.
+`Detach` nejprve přidá odkaz na objekt COM jménem volajícího a poté uvolní všechny odkazy, které jsou vlastněny `com::ptr`.  Volající musí nakonec uvolnit vrácený objekt k jeho zničení.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  `DetachDocument` Volání členských funkcí `Detach` vzdát vlastnictví objektu modelu COM a vrací ukazatel na volajícího.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu.  Členská funkce `DetachDocument` volá `Detach`, aby poskytovala vlastnictví objektu COM a vrátila ukazatel na volajícího.
 
 ```cpp
 // comptr_detach.cpp
@@ -686,9 +684,9 @@ int main() {
 }
 ```
 
-## <a name="getInterface"></a>ptr::GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a>PTR:: GetInterface
 
-Vrací ukazatel na vlastní objekt modelu COM.
+Vrátí ukazatel na vlastněný objekt COM.
 
 ```cpp
 _interface_type * GetInterface();
@@ -696,19 +694,19 @@ _interface_type * GetInterface();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na vlastní objekt modelu COM.
+Ukazatel na vlastněný objekt COM.
 
 ### <a name="exceptions"></a>Výjimky
 
-Interně `QueryInterface` je volán na vlastní objekt modelu COM a všechny chyby `HRESULT` jsou převedeny na výjimky podle <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+Interně `QueryInterface` je volána ve vlastněných objektech COM a všechny chyby `HRESULT` jsou převedeny na výjimku <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
 ### <a name="remarks"></a>Poznámky
 
-`com::ptr` Přidá odkaz na objekt modelu COM jménem volajícího a také udržuje svůj vlastní odkaz na objekt modelu COM. Volající musí nakonec uvolnění odkazu na vráceného objektu nebo se nikdy zničení.
+`com::ptr` přidá odkaz na objekt modelu COM jménem volajícího a také uchovává svůj vlastní odkaz na objekt modelu COM. Volající musí nakonec uvolnit odkaz na vrácený objekt nebo nebude nikdy zničen.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu. `GetDocument` Členská funkce používá `GetInterface` se vraťte ukazatel na objekt modelu COM.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu. Členská funkce `GetDocument` používá `GetInterface` k vrácení ukazatele na objekt modelu COM.
 
 ```cpp
 // comptr_getinterface.cpp
@@ -828,9 +826,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="queryInterface"></a>ptr::QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>PTR:: QueryInterface
 
-Dotazuje se vlastnictví objektu modelu COM pro rozhraní a připojí výsledek do jiného `com::ptr`.
+Zadá dotaz na vlastní objekt modelu COM pro rozhraní a připojí výsledek k jinému `com::ptr`.
 
 ```cpp
 template<class _other_type>
@@ -841,20 +839,20 @@ void QueryInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-`com::ptr` , Která získá rozhraní.
+*jiná*<br/>
+`com::ptr`, který získá rozhraní.
 
 ### <a name="exceptions"></a>Výjimky
 
-Interně `QueryInterface` je volán na vlastní objekt modelu COM a všechny chyby `HRESULT` jsou převedeny na výjimky podle <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+Interně `QueryInterface` je volána ve vlastněných objektech COM a všechny chyby `HRESULT` jsou převedeny na výjimku <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete vytvořit obálky COM pro jiné rozhraní objektu COM, který vlastní aktuální obálky. Tato metoda volá `QueryInterface` prostřednictvím vlastní objekt modelu COM požádat o ukazatel na určité rozhraní modelu COM objektu a připojí Vrácený ukazatel rozhraní k předaným `com::ptr`.
+Tuto metodu použijte, chcete-li vytvořit obálku modelu COM pro jiné rozhraní objektu COM vlastněné aktuální obálkou. Tato metoda volá `QueryInterface` prostřednictvím vlastněné objektu COM k vyžádání ukazatele na konkrétní rozhraní objektu COM a připojí ukazatel vráceného rozhraní k předanému `com::ptr`.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu. `WriteTopLevelNode` Členská funkce používá `QueryInterface` tak, aby vyplnil místní `com::ptr` s `IXMLDOMNode` a pak předá `com::ptr` (sledováním odkaz) privátní členské funkci, která zapisuje do konzole vlastnosti name a text uzlu.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu. Členská funkce `WriteTopLevelNode` používá `QueryInterface` k vyplnění místního `com::ptr` `IXMLDOMNode` a poté předá `com::ptr` (sledováním odkazu) do soukromé členské funkce, která zapisuje vlastnosti názvu a textu uzlu do konzoly.
 
 ```cpp
 // comptr_queryinterface.cpp
@@ -959,9 +957,9 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="release"></a>PTR::Release
+## <a name="ptrrelease"></a><a name="release"></a>PTR:: Release
 
-Uvolní všechny vlastněné odkazy na objekt modelu COM.
+Uvolní všechny vlastněné odkazy na objekt COM.
 
 ```cpp
 void Release();
@@ -969,11 +967,11 @@ void Release();
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této funkce uvolní vlastnictví všech odkazů na objekt modelu COM a nastaví vnitřní popisovač objektu modelu COM `nullptr`.  Pokud neexistují žádné odkazy na objekt modelu COM, se zničil.
+Volání této funkce uvolní všechny vlastněné odkazy na objekt modelu COM a nastaví vnitřní popisovač objektu COM na `nullptr`.  Pokud neexistují žádné další odkazy na objekt COM, budou zničeny.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  `ReplaceDocument` Členská funkce používá `Release` uvolnit jakýkoli objekt předchozí dokument před připojením nový dokument.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu.  Členská funkce `ReplaceDocument` používá `Release` k uvolnění dříve objektu dokumentu před připojením nového dokumentu.
 
 ```cpp
 // comptr_release.cpp
@@ -1047,9 +1045,9 @@ int main() {
 }
 ```
 
-## <a name="operator-arrow"></a>PTR::Operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>PTR:: operator-&gt;
 
-Operátor přístupu členů použít k volání metody na vlastní objekt modelu COM.
+Operátor přístupu ke členu, který se používá k volání metod ve vlastněných objektech COM.
 
 ```cpp
 _detail::smart_com_ptr<_interface_type> operator->();
@@ -1057,19 +1055,19 @@ _detail::smart_com_ptr<_interface_type> operator->();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `smart_com_ptr` objekt modelu COM.
+`smart_com_ptr` objektu COM.
 
 ### <a name="exceptions"></a>Výjimky
 
-Interně `QueryInterface` je volán na vlastní objekt modelu COM a všechny chyby `HRESULT` jsou převedeny na výjimky podle <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+Interně `QueryInterface` je volána ve vlastněných objektech COM a všechny chyby `HRESULT` jsou převedeny na výjimku <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor můžete volat metody vlastní objekt modelu COM. Vrátí dočasnou `smart_com_ptr` , která automaticky zpracovává vlastní `AddRef` a `Release`.
+Tento operátor umožňuje volat metody vlastněné objektu COM. Vrátí dočasnou `smart_com_ptr`, která automaticky zpracuje vlastní `AddRef` a `Release`.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu. `WriteDocument` Funkce používá `operator->` volat `get_firstChild` člen objektu dokumentu.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu. Funkce `WriteDocument` používá `operator->` k volání `get_firstChild` člena objektu dokumentu.
 
 ```cpp
 // comptr_op_member.cpp
@@ -1189,9 +1187,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="operator-assign"></a>PTR::Operator =
+## <a name="ptroperator"></a><a name="operator-assign"></a>PTR:: operator =
 
-Připojí objektu modelu COM `com::ptr`.
+Připojí objekt COM k `com::ptr`.
 
 ```cpp
 ptr<_interface_type> % operator=(
@@ -1201,26 +1199,26 @@ ptr<_interface_type> % operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*vp_ravo*<br/>
-Ukazatele rozhraní modelu COM pro připojení.
+*_right*<br/>
+Ukazatel rozhraní modelu COM, který se má připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz sledování na `com::ptr`.
+Sledovací odkaz na `com::ptr`.
 
 ### <a name="exceptions"></a>Výjimky
 
-Pokud `com::ptr` již vlastní odkaz na objekt modelu COM `operator=` vyvolá <xref:System.InvalidOperationException>.
+Pokud `com::ptr` již vlastní odkaz na objekt modelu COM, `operator=` vyvolá <xref:System.InvalidOperationException>.
 
 ### <a name="remarks"></a>Poznámky
 
-Přiřazení objektu modelu COM `com::ptr` odkazuje na objekt modelu COM, ale nemá verzi na ni odkaz volajícího.
+Přiřazení objektu COM k `com::ptr` odkazuje na objekt modelu COM, ale neuvolní na něj odkaz volajícího.
 
 Tento operátor má stejný účinek jako `Attach`.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  `ReplaceDocument` První volání členských funkcí `Release` na žádném dříve vlastněn objekt a potom použije `operator=` připojit nový objekt dokumentu.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu.  Členská funkce `ReplaceDocument` nejdříve volá `Release` na všech dřív vlastněných objektech a poté používá `operator=` k připojení nového objektu dokumentu.
 
 ```cpp
 // comptr_op_assign.cpp
@@ -1294,9 +1292,9 @@ int main() {
 }
 ```
 
-## <a name="operator-bool"></a> PTR::Operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a>PTR:: operator bool
 
-Operátor pro používání `com::ptr` v podmíněných výrazech.
+Operátor pro použití `com::ptr` v podmíněném výrazu.
 
 ```cpp
 operator bool();
@@ -1304,17 +1302,17 @@ operator bool();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je platná; vlastní objekt modelu COM `false` jinak.
+`true`, je-li vlastněný objekt modelu COM platný; `false` jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastní objekt modelu COM je platný, pokud není `nullptr`.
+Vlastněný objekt COM je platný, pokud není `nullptr`.
 
-Tento operátor převede na `_detail_class::_safe_bool` což je bezpečnější než `bool` vzhledem k tomu, že jej nelze převést na celočíselný typ.
+Tento operátor převede na `_detail_class::_safe_bool`, která je bezpečnější než `bool`, protože nemůže být převedena na celočíselný typ.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu. `CreateInstance` Členská funkce používá `operator bool` po vytvoření nového objektu dokumentu k určení, zda je platný a zapisuje do konzoly, pokud se jedná.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu. Členská funkce `CreateInstance` používá `operator bool` po vytvoření nového objektu dokumentu k určení, zda je platný a zapisuje do konzoly, pokud je.
 
 ```cpp
 // comptr_op_bool.cpp
@@ -1365,9 +1363,9 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="operator-logical-not"></a>PTR::Operator!
+## <a name="ptroperator"></a><a name="operator-logical-not"></a>PTR:: operator!
 
-Operátor zjistit, zda vlastní objekt modelu COM je neplatná.
+K určení, zda je vlastněný objekt COM neplatný
 
 ```cpp
 bool operator!();
@@ -1375,15 +1373,15 @@ bool operator!();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je neplatný; vlastní objekt modelu COM `false` jinak.
+`true`, je-li vlastněný objekt COM neplatný; `false` jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastní objekt modelu COM je platný, pokud není `nullptr`.
+Vlastněný objekt COM je platný, pokud není `nullptr`.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  `CreateInstance` Členská funkce používá `operator!` k určení, zda již vlastní objekt dokumentu a pouze vytvoří novou instanci, pokud objekt je neplatný.
+Tento příklad implementuje třídu CLR, která používá `com::ptr` k zabalení jeho soukromého člena `IXMLDOMDocument` objektu.  Členská funkce `CreateInstance` používá `operator!` k určení, zda je objekt dokumentu již vlastněn, a vytvoří pouze novou instanci, pokud je objekt neplatný.
 
 ```cpp
 // comptr_op_not.cpp

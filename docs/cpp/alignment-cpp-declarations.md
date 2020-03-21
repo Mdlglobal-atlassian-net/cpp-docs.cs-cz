@@ -3,16 +3,16 @@ title: Zarovnání
 description: Způsob, jakým je zarovnání dat C++určeno v moderních.
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443668"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076117"
 ---
 # <a name="alignment"></a>Zarovnání
 
-Jednou z funkcí nižší úrovně C++ je možnost určit přesné zarovnání objektů v paměti, aby bylo možné využít maximální využití konkrétní hardwarové architektury. Ve výchozím nastavení kompilátor zarovnává členy třídy a struktury s hodnotou velikosti: `bool` a `char` na hranici 1 bajtu, `short` na hranicích se dvěma bajty, `int`, `long`a `float` na hranicích se 4 bajty a `long long`, `double`a `long double` na hranici 8 bajtů. 
+Jednou z funkcí nižší úrovně C++ je možnost určit přesné zarovnání objektů v paměti, aby bylo možné využít maximální využití konkrétní hardwarové architektury. Ve výchozím nastavení kompilátor zarovnává členy třídy a struktury s hodnotou velikosti: `bool` a `char` na hranici 1 bajtu, `short` na hranicích se dvěma bajty, `int`, `long`a `float` na hranicích se 4 bajty a `long long`, `double`a `long double` na hranici 8 bajtů.
 
 Ve většině scénářů nikdy nemusíte mít obavy o zarovnání, protože výchozí zarovnání je již optimální. V některých případech ale můžete dosáhnout výrazného zvýšení výkonu nebo úspory paměti tím, že zadáte vlastní zarovnání vašich datových struktur. Před Visual Studio 2015 můžete použít klíčová slova specifická pro společnost Microsoft `__alignof` a `declspec(alignas)` k určení zarovnání většího, než je výchozí hodnota. Počínaje verzí Visual Studio 2015 byste měli použít standardní klíčová slova C++ 11 **alignof** a **alignas** pro maximální přenositelnost kódu. Nová klíčová slova se chovají stejným způsobem jako v digestoři jako rozšíření specifická pro společnost Microsoft. Dokumentace pro tato rozšíření platí také pro nová klíčová slova. Další informace najdete v tématu [operátor](../cpp/alignof-operator.md) a [Zarovnání](../cpp/align-cpp.md)__alignof. C++ Standard neurčuje chování při sbalení pro zarovnání na hranicích menších, než je výchozí kompilátor pro cílovou platformu, takže v takovém případě je stále nutné použít sadu Microsoft #pragma [Pack](../preprocessor/pack.md) .
 

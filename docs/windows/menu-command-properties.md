@@ -1,5 +1,5 @@
 ---
-title: Příkazy (C++)
+title: Příkazy nabídky (C++)
 ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
@@ -17,76 +17,76 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 1010e4d1c11c9408ef73f4db0a449314b36059a7
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 972478923a7c4c60d8ff949c5532b00a1de1efc0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400759"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075506"
 ---
-# <a name="menu-commands-c"></a>Příkazy (C++)
+# <a name="menu-commands-c"></a>Příkazy nabídky (C++)
 
-Níže uvedené informace jsou uspořádané podle **nabídky** vlastnosti, které se zobrazují v [okno vlastností](/visualstudio/ide/reference/properties-window) když vyberete příkaz nabídky. Ty jsou uvedeny v abecedním pořadí i když **vlastnosti** okna také umožňuje zobrazit tyto vlastnosti podle kategorie.
+Níže uvedené informace jsou uspořádány podle vlastností **nabídky** , které se zobrazí v [okně Vlastnosti](/visualstudio/ide/reference/properties-window) při výběru příkazu nabídky. Ty jsou uvedeny v abecedním pořadí, přestože okno **vlastnosti** také umožňuje zobrazit tyto vlastnosti podle kategorie.
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Konec**|Může být jedna z těchto hodnot:<br/>  - **Žádný**: Žádná zalomení. Toto nastavení je výchozí.<br/>  - **Sloupec**: Tato hodnota pro statické nabídky, umístí příkaz nabídky na nový řádek.<br/>      Pro místní nabídky umístí tato hodnota příkazu nabídky nový sloupec s žádný zřejmý mezi sloupci.<br/>      Nastavení této vlastnosti má vliv na vzhled nabídky pouze v době běhu, není v nabídce editoru.<br />   - **Panel**: Stejné jako **sloupec** s výjimkou, pro místní nabídky, tato hodnota odděluje nového sloupce ze staré sloupci se zobrazuje svislá čára.<br/>      Nastavení této vlastnosti není v ovlivňuje vzhled nabídky pouze v době běhu **Editor nabídek**.|
-|**Titulek**|Text, který označuje příkaz nabídky (název nabídky). K výběru jedné ze písmena v popiscích nabídky příkazu mnemonická klávesa, předchází znak ampersand (&).|
-|**Zaškrtnuto**|Pokud **True**, je příkaz nabídky hesla implicitně zaškrtnuto. Zadejte: **BOOL**. Výchozí hodnota: **False**.|
-|**Povoleno**|Pokud **False**, položka nabídky je zakázána.|
-|**Šedý**|Pokud **True**, příkaz nabídky je zpočátku šedě a neaktivní. Zadejte: **BOOL**. Výchozí hodnota: **False**.|
-|**Pomoc**|Zarovná položky nabídky na pravé straně. Výchozí hodnota: **False**.<br/><br/>Například **pomáhají** příkazu nabídky je vždy na pravé straně ve všech aplikacích pro Windows. Pokud tuto vlastnost nastavíte na položku nabídky, této položky se zobrazí velmi úplně vpravo a na konci velmi nabídky. Platí pro položky nejvyšší úrovně.|
-|**ID**|Symbol definovaný v souboru hlaviček. Zadejte: **Symbol**, **celé číslo**, nebo **řetězec v uvozovkách**.<br/><br/>Můžete použít libovolný symbol, který je běžně k dispozici v editorech, i když [okno vlastností](/visualstudio/ide/reference/properties-window) neposkytuje rozevíracího seznamu pro výběr z.|
-|**Popup**|Pokud **True**, příkaz nabídky je rozbalovací nabídky. Zadejte: **BOOL**. Výchozí hodnota: **Hodnota TRUE** pro nejvyšší úrovně nabídky na řádku nabídek, jinak **False**.|
-|**Zeptat se**|Obsahuje text, který se zobrazí ve stavovém řádku, když je zvýrazněn tento příkaz. Text je umístěn v tabulce řetězců se stejným identifikátorem příkazu nabídky.<br/><br/>Tato vlastnost je k dispozici pro každý typ projektu, ale funkce za běhu je konkrétní knihovny MFC.|
-|**Zarovnat zprava doleva.**|Zarovnává doprava příkaz nabídky na řádku nabídek v době běhu. Zadejte: **BOOL**. Výchozí hodnota: **False**.|
-|**Right to Left Order**|Umožňuje zobrazovat zprava doleva, pokud rozhraní je lokalizován pro libovolný jazyk, který čte doleva, jako je například hebrejština nebo arabštině příkazů místní nabídky.|
-|**Oddělovač**|Pokud **True**, příkaz nabídky je oddělovač. Zadejte: **BOOL**. Výchozí hodnota: **False**.|
+|**Rozdělován**|Může to být jedna z těchto hodnot:<br/>  - **none**: žádné přerušení. Toto nastavení je výchozí.<br/>  - **sloupec**: u statických nabídek tato hodnota umístí příkaz nabídky na nový řádek.<br/>      Pro místní nabídky tato hodnota umístí příkaz nabídky do nového sloupce bez dělicí čáry mezi sloupce.<br/>      Nastavení této vlastnosti ovlivňuje vzhled nabídky pouze v době běhu, nikoli v editoru nabídek.<br />   - **bar**: totéž jako **sloupec** s výjimkou pro místní nabídky, tato hodnota odděluje nový sloupec ze starého sloupce se svislou čárou.<br/>      Nastavení této vlastnosti ovlivňuje vzhled nabídky pouze v době běhu, nikoli v **editoru nabídek**.|
+|**Popisku**|Text popisku příkazu nabídky (název nabídky) Chcete-li vytvořit jedno z písmen v popisku příkazu nabídky s použitím klávesové zkratky, uveďte před ním znak ampersand (&).|
+|**Kontrolovaný**|Při **hodnotě true**se zpočátku kontroluje příkaz nabídky. Zadejte: **bool**. Výchozí hodnota: **false**.|
+|**Enabled** (Povoleno)|Je-li nastavena **hodnota false**, položka nabídky je zakázána.|
+|**Zobrazena šedě**|Při **hodnotě true**je příkaz nabídky zpočátku šedý a neaktivní. Zadejte: **bool**. Výchozí hodnota: **false**.|
+|**Pomoc**|Zarovná položku nabídky doprava. Výchozí hodnota: **false**.<br/><br/>Například příkaz nabídky **help** je vždycky na pravé straně všech aplikací Windows. Pokud tuto vlastnost nastavíte pro položku nabídky, tato položka se zobrazí v pravém horním rohu a na konci této nabídky. Platí pro položky nejvyšší úrovně.|
+|**ID**|Symbol definovaný v hlavičkovém souboru. Typ: **symbol**, **celé číslo**nebo **řetězec v uvozovkách**.<br/><br/>Můžete použít libovolný symbol, který je běžně k dispozici v některém z editorů, i když [okno Vlastnosti](/visualstudio/ide/reference/properties-window) neposkytuje rozevírací seznam, ze kterého můžete vybírat.|
+|**Popup**|Pokud je nastaveno na **true**, je příkaz nabídky místní nabídkou. Zadejte: **bool**. Výchozí hodnota: **true** pro nabídky nejvyšší úrovně na řádku nabídek, jinak **false**.|
+|**Výzv**|Obsahuje text, který se zobrazí ve stavovém řádku při zvýraznění tohoto příkazu nabídky. Text je umístěn v tabulce řetězců se stejným identifikátorem jako příkaz nabídky.<br/><br/>Tato vlastnost je k dispozici pro jakýkoliv typ projektu, ale Běhová funkce je specifická pro knihovnu MFC.|
+|**Zarovnat zprava doleva**|Pravým tlačítkem myši Zarovná příkaz nabídky na řádku nabídek v době běhu. Zadejte: **bool**. Výchozí hodnota: **false**.|
+|**Vpravo od levého pořadí**|Umožňuje příkazům nabídky zobrazovat zprava doleva, pokud je rozhraní lokalizované do libovolného jazyka, který čte zprava doleva, jako je například hebrejština nebo arabština.|
+|**Oddělovač**|Pokud je nastaveno na **true**, příkaz nabídky je oddělovač. Zadejte: **bool**. Výchozí hodnota: **false**.|
 
-## <a name="associate-menu-commands"></a>Přiřazení příkazů nabídky
+## <a name="associate-menu-commands"></a>Přidružit příkazy nabídky
 
-Jsou často časy, kdy má příkaz nabídky a kombinace kláves stejný příkaz programu. Stejné příkazy jsou vystavované pomocí **Editor nabídek** přiřadit stejný identifikátor prostředku pro příkaz nabídky a záznam v tabulce akcelerátorů vaší aplikace. Pak upravíte [titulek](../windows/menu-command-properties.md) příkazu nabídky, aby se zobrazil název klíče akcelerátoru.
+K dispozici jsou často časy, kdy chcete příkaz nabídky a kombinaci kláves vystavovat stejným příkazem programu. Identické příkazy jsou vydávány pomocí **editoru nabídek** pro přiřazení stejného identifikátoru prostředku k příkazu nabídky a k záznamu v tabulce akcelerátorů vaší aplikace. Pak upravíte [Titulek](../windows/menu-command-properties.md) příkazu nabídky a zobrazí se název klávesy akcelerátoru.
 
-### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Pro přiřazení příkazu nabídky klávese akcelerátoru
+### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Přidružení příkazu nabídky ke klávese akcelerátoru
 
-1. V **Editor nabídek**, vyberte požadovaný příkaz nabídky.
+1. V **editoru nabídek**vyberte příkaz nabídky, který chcete.
 
-1. V [okno vlastností](/visualstudio/ide/reference/properties-window), přidejte název klíče akcelerátoru k **titulek** vlastnost:
+1. V [okně Vlastnosti](/visualstudio/ide/reference/properties-window)přidejte do vlastnosti **Caption** (název) klávesu akcelerátoru:
 
-   - Po popisek nabídky zadejte řídicí sekvence pro kartu (\t), takže všechno, co jsou klávesové zkratky v nabídce vlevo.
+   - Po zadání popisku nabídky zadejte řídicí sekvenci pro tabulátor (\t), aby byly všechny klávesové zkratky v nabídce zarovnané doleva.
 
-   - Zadejte název modifikační klávesa (**Ctrl**, **Alt**, nebo **Shift**) následované znakem plus ( **+** ) a název, písmeno, nebo symbol Další klíč.
+   - Zadejte název modifikační klávesy (**CTRL**, **ALT**nebo **SHIFT**) následovaný symbolem plus ( **+** ) a názvem, písmenem nebo symbolem dalšího klíče.
 
-   Například chcete přiřadit **Ctrl**+**O** k **otevřít** příkaz **souboru** nabídky, změnit příkazu nabídky  **Titulek** tak, aby vypadal jako následující text:
+   Chcete-li například přiřadit příkaz **Ctrl**+**o** k příkazu **otevřít** v nabídce **soubor** , upravte **Titulek** příkazu nabídky tak, aby vypadal jako následující text:
 
    ```
    &Open...\tCtrl+O
    ```
 
-   Příkaz nabídky v **Editor nabídek** se aktualizuje tak, aby odrážely nový popisek během psaní.
+   Příkaz nabídky v **editoru nabídek** se aktualizuje tak, aby odrážel nový titulek při psaní.
 
-1. [Vytvoření položky tabulky akcelerátorů](../windows/adding-an-entry-to-an-accelerator-table.md) v **akcelerátoru** editoru a přiřaďte ho stejný identifikátor jako příkaz nabídky. Pomocí kombinace kláves, která si myslíte, že bude snadno pamatovat.
+1. [Vytvořte položku akcelerátor – tabulka](../windows/adding-an-entry-to-an-accelerator-table.md) v editoru **akcelerátorů** a přiřaďte ji stejnému identifikátoru jako příkaz nabídky. Použijte kombinaci kláves, kterou si myslíte, že se snadno pamatuje.
 
-Vaše aplikace knihovny MFC můžete zobrazit popisný text pro všechny příkazy nabídek, které může uživatel vybrat. Zobrazí popisný text každého příkazu nabídky s přiřazením textový řetězec **výzvy** vlastnost **vlastnosti** okna. Pokud máte řetězci [tabulka řetězců](../windows/string-editor.md) jehož ID je stejný jako příkaz, aplikace knihovny MFC, automaticky zobrazí tento prostředek řetězce ve stavovém řádku běžící aplikaci. když uživatel najede myší položku nabídky.
+Aplikace MFC může zobrazit popisný text pro každý z příkazů nabídky, které uživatel může vybrat. Přiřaďte textový řetězec k příkazu nabídky pomocí vlastnosti **prompt** v okně **vlastnosti** a zobrazte tak popisný text. Pokud máte řetězec v [tabulce řetězců](../windows/string-editor.md) , jehož ID je stejné jako příkaz, aplikace MFC automaticky zobrazí tento prostředek řetězce ve stavovém řádku běžící aplikace, když uživatel najede myší na položku nabídky.
 
-- Chcete přidružit k příkazu nabídky stavového řádku textového řetězce v aplikacích MFC v **Editor nabídek**, vyberte příkaz nabídky. V [okno vlastností](/visualstudio/ide/reference/properties-window), zadejte text přidružený stavového řádku v **výzvy** pole.
+- K přidružení příkazu nabídky k textovému řetězci stavového řádku v aplikacích MFC v **editoru nabídek**vyberte příkaz nabídky. V [okně Vlastnosti](/visualstudio/ide/reference/properties-window)zadejte do pole **příkazového řádku** přidružený text stavového řádku.
 
-V projektu v jazyce C++ můžete přiřadit přístupový klíč (symbol, který umožňuje uživateli vybrat nabídku pomocí klávesnice) do nabídek a příkazů nabídky.
+V C++ projektu můžete přiřadit přístupový klíč (k ovládacímu prvku, který uživateli umožňuje vybrat nabídku pomocí klávesnice) pro nabídky a příkazy nabídek.
 
-- Chcete-li přiřadit příkazu nabídky (místní) přístupový klíč, zadejte znak ampersand (`&`) před písmena v názvu nabídky nebo název příkazu zadat písmeno jako odpovídající přístupový klíč. 
+- Chcete-li přiřadit klávesu Access (klávesovou zkratku) k příkazu nabídky, zadejte ampersand (`&`) před písmeno v nabídce název nebo název příkazu k zadání písmena jako odpovídajícího přístupového klíče.
 
-   Například "& soubor" sady **Alt**+**F** jako klávesovou zkratku **souboru** nabídky aplikace napsané pro Microsoft Windows.
+   Například "& soubor" nastaví **Alt**+**F** jako klávesovou zkratku pro nabídku **soubor** v aplikacích napsaných pro Microsoft Windows.
 
-   Položka nabídky bude informovat viditelné s jedním z písmen klávesová zkratka přiřazena. Následující písmeno, znak ampersand se zobrazí podtržený (závislý na operační systém).
+   Položka nabídky poskytne viditelné upozornění, že jedno z písmen má přiřazenou klávesovou zkratku. Písmeno následující po ampersandu bude podtržené (závisí na operačním systému).
 
 > [!NOTE]
-> Ujistěte se, že přístupové klíče v nabídce jsou jedinečné pravým tlačítkem myši na vaše nabídky a zvolením **zkontrolujte klávesových zkratek**.
+> Zajistěte, aby všechny přístupové klávesy v nabídce byly jedinečné kliknutím pravým tlačítkem myši na nabídku a výběrem možnosti **zkontrolovat klávesové zkratky**.
 
 ## <a name="requirements"></a>Požadavky
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editor nabídek](../windows/menu-editor.md)
 

@@ -6,36 +6,36 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: 81f793fbdc6d9dda567051b8c35a96f3d3f2f470
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 3e27d276e5500c1e32ca7b576b355f14f18a47f6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524619"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075264"
 ---
 # <a name="adding-an-atl-property-page"></a>Přidání stránky vlastností ATL
 
-> [!NOTE] 
+> [!NOTE]
 > Průvodce stránkou vlastností ATL není k dispozici v aplikaci Visual Studio 2019 a novějším.
 
-Chcete-li do svého projektu přidat stránku vlastností Active Template Library (ATL), váš projekt musí být vytvořen jako aplikace ATL nebo MFC aplikaci, která obsahuje podpory knihovny ATL Můžete použít [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) k implementaci podpory knihovny ATL pro aplikaci knihovny MFC.
+Chcete-li přidat stránku vlastností knihovny ATL (Active Template Library) do projektu, projekt musí být vytvořen jako aplikace ATL nebo jako aplikace knihovny MFC, která obsahuje podporu knihovny ATL. [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md) můžete použít k vytvoření aplikace ATL nebo k [Přidání objektu ATL do aplikace MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) pro implementaci podpory knihovny ATL pro aplikaci knihovny MFC.
 
-Pokud přidáváte stránky vlastností pro ovládací prvek, ovládací prvek musí podporovat [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) rozhraní. Ve výchozím nastavení, toto rozhraní je v seznamu odvození ovládacího prvku třídu při vám [vytvoření ovládacího prvku ATL](../../atl/reference/adding-an-atl-control.md) pomocí [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md).
+Pokud přidáváte stránku vlastností pro ovládací prvek, ovládací prvek musí podporovat rozhraní [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) . Ve výchozím nastavení je toto rozhraní v seznamu odvození vaší třídy ovládacího prvku při [vytváření ovládacího prvku ATL](../../atl/reference/adding-an-atl-control.md) pomocí [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md).
 
 > [!NOTE]
-> Pokud nemá žádné třídy vašeho ovládacího prvku [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) ve svém seznamu odvození, je třeba přidat ji ručně.
+> Pokud vaše třída ovládacího prvku nemá [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) v seznamu odvozených tříd, je nutné ji přidat ručně.
 
 ## <a name="to-add-an-atl-property-page-to-your-project"></a>Přidání stránky vlastností ATL do projektu
 
-1. V jednom **Průzkumníka řešení** nebo [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název projektu, ke kterému chcete přidat stránku vlastností ATL.
+1. V buď **Průzkumník řešení** nebo [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code)klikněte pravým tlačítkem myši na název projektu, do kterého chcete přidat stránku vlastností ATL.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat třídu**.
+1. V místní nabídce klikněte na **Přidat** a pak klikněte na **Přidat třídu**.
 
-1. V [přidat třídu](../../ide/add-class-dialog-box.md) v dialogu **šablony** podokně klikněte na tlačítko **stránka vlastností knihovny ATL** a potom klikněte na **otevřít** zobrazíte [Průvodce stránkou vlastností ATL](../../atl/reference/atl-property-page-wizard.md).
+1. V dialogovém okně [Přidat třídu](../../ide/add-class-dialog-box.md) klikněte v podokně **šablony** na **Stránka vlastnost ATL** a potom kliknutím na tlačítko **otevřít** zobrazte [Průvodce stránkou vlastností ATL](../../atl/reference/atl-property-page-wizard.md).
 
-Jakmile vytvoříte stránky vlastností pro ovládací prvek, je nutné zadat [PROP_PAGE](property-map-macros.md#prop_page) položky v mapování ovládacího prvku.
+Po vytvoření stránky vlastností pro ovládací prvek je třeba zadat položku [PROP_PAGE](property-map-macros.md#prop_page) v mapě vlastností ovládacího prvku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Stránky vlastností](../../atl/atl-com-property-pages.md)<br/>
 [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>

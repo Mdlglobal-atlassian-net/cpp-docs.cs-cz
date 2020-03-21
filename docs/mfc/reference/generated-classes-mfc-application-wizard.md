@@ -6,41 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-ms.openlocfilehash: 14efffeca11a87f4c3bcaa3241af5cf6784d01e9
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 472ceade4dbb5d99194098d82b7effc40092b5d1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708351"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075665"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Generované třídy, Průvodce aplikací MFC
 
-Toto téma uvádí seznam základních tříd a soubory, které váš projekt vytvoří. Ve výchozím nastavení, názvy jsou založeny na název projektu, který jste zadali v **dialogové okno Nový projekt**. Většina z těchto názvů, můžete změnit podle postupu popsaného tady:
+Toto téma obsahuje seznam názvů základních tříd a souborů, které generuje projekt. Ve výchozím nastavení jsou názvy založeny na názvu projektu, který jste zadali v **dialogovém okně Nový projekt**. Většinu těchto názvů můžete změnit, jak je popsáno zde:
 
 - **Generované třídy**
 
-   Názvy tříd, které jsou vytvořeny pro projekt. Ve výchozím nastavení názvy jsou založeny na název projektu. Vytvoří výchozí projekt knihovny MFC a C*název_projektu*zobrazení třídy a C*název_projektu*třídu aplikace, a C*název_projektu*třídy, CMainFrame – třída a třída CChildFrame dokumentu. Všechny ostatní hodnoty na této stránce obsahují informace o třídě aktuálně vybraného v **generované třídy** seznamu.
+   Názvy tříd vytvořených pro projekt. Ve výchozím nastavení jsou názvy založeny na názvu projektu. Výchozí projekt knihovny MFC vytvoří třídu zobrazení C*ProjName*, třídu aplikace c*ProjName*, c*ProjName*doc, třídu CMainFrame a třídu CChildFrame. Všechny ostatní hodnoty na této stránce obsahují informace o třídě aktuálně vybrané v seznamu **generovaných tříd** .
 
-   Chcete-li změnit název třídy, použijte **název třídy** textového pole.
+   Chcete-li změnit název třídy, použijte textové pole **název třídy** .
 
 - **Název třídy**
 
-   Název třídy, která je aktuálně vybrána v **generované třídy** seznamu. Pokud toto políčko není aktivní, můžete změnit název třídy. Při změně fokusu z **název třídy** pole se zobrazí v změny názvu vybranou třídu **generované třídy** seznamu.
+   Název třídy, která je aktuálně vybrána v seznamu **vygenerovaných tříd** . Pokud je pole aktivní, můžete změnit název třídy. Když změníte fokus z pole **název třídy** , všechny změny v názvu zvolené třídy se zobrazí v seznamu **vygenerovaných tříd** .
 
-- **.h file**
+- **soubor. h**
 
-   Název souboru hlaviček třídy, která je aktuálně vybrána v **generované třídy** seznamu. Pokud textové pole aktivní, můžete změnit název souboru hlaviček.
+   Název hlavičkového souboru třídy, který je aktuálně vybraný v seznamu **generovaných tříd** . Pokud je textové pole aktivní, můžete změnit název hlavičkového souboru.
 
 - **Základní třída**
 
-   Název základní třídy v aktuálně vybrané třídy **generované třídy** seznamu. Pokud toto políčko není aktivní, můžete vybrat ze seznamu jiné třídy pro základní třídu.
+   Název základní třídy aktuálně vybrané třídy v seznamu **generovaných tříd** . Pokud je pole aktivní, můžete vybrat ze seznamu jiné třídy základní třídy.
 
-- **soubor .cpp**
+- **soubor. cpp**
 
-   Název souboru se zdrojovým kódem, který je spojen s vybranou třídu. Pokud textové pole aktivní, můžete změnit název implementačního souboru.
+   Název souboru se zdrojovým kódem, který je přidružen k vybrané třídě. Pokud je textové pole aktivní, můžete změnit název implementačního souboru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Pokročilé funkce, Průvodce aplikací MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)<br/>
-[Soubor typy vytvořené pro sadu Visual Studio C++ projekty](../../build/reference/file-types-created-for-visual-cpp-projects.md)
-
+[Typy souborů vytvořených pro projekty sady C++ Visual Studio](../../build/reference/file-types-created-for-visual-cpp-projects.md)

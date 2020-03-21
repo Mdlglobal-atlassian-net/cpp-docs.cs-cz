@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření projektu jazyka C++ z existujícího kódu'
+title: 'Postupy: Vytvoření projektu jazyka C++ z existujícího kódu'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
@@ -10,66 +10,66 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 5e59230186380b787c95dbe08914bcd9d3ca2407
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221451"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078542"
 ---
-# <a name="how-to-create-a-c-project-from-existing-code"></a>Postupy: Vytvoření projektu jazyka C++ z existujícího kódu
+# <a name="how-to-create-a-c-project-from-existing-code"></a>Postupy: Vytvoření projektu jazyka C++ z existujícího kódu
 
-V sadě Visual Studio, můžete do projektu C++ s použitím portu existujících souborů kódu **vytvoření nového projektu z existujících souborů kódu** průvodce. Tento průvodce vytvoří řešení projekt, který používá systém MSBuild ke správě zdrojových souborů a konfiguraci sestavení. Funguje nejlépe s poměrně jednoduchá projekty, které nemají komplexních složky hierarchie. Průvodce není k dispozici ve starších edicích Express sady Visual Studio. 
+V aplikaci Visual Studio můžete portovat existující soubory kódu do C++ projektu pomocí průvodce **vytvořením nového projektu z existujících souborů kódu** . Tento průvodce vytvoří řešení projektu, které používá systém MSBuild ke správě zdrojových souborů a konfigurace sestavení. Funguje nejlépe s relativně jednoduchými projekty, které nemají složité hierarchie složek. Průvodce není dostupný ve starších edicích Express sady Visual Studio.
 
-Přenesení existujících souborů kódu do projektu jazyka C++ umožňuje použít nativní MSBuild funkce správy projektů integrovanou do rozhraní IDE. Pokud byste radši chtěli použít existující systém sestavení, jako jsou soubory pravidel nmake, CMake nebo alternativy, můžete místo toho použít možnosti Otevřít složku nebo CMake. Další informace najdete v tématu [projekty otevřít složku pro jazyk C++](open-folder-projects-cpp.md) nebo [projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md). Obě možnosti umožňují používat funkce rozhraní IDE, jako [IntelliSense](/visualstudio/ide/using-intellisense) a [vlastnosti projektu](working-with-project-properties.md).
+Přenos stávajících souborů s C++ kódem do projektu umožňuje použití nativních funkcí správy projektů MSBuild integrovaných v INTEGROVANÉm vývojovém prostředí. Pokud dáváte přednost použití stávajícího sestavovacího systému, jako jsou soubory pravidel NMAKE, CMake nebo alternativy, můžete místo toho použít možnost otevřít složku nebo CMake. Další informace najdete v tématu [otevřené složky projekty pro C++ ](open-folder-projects-cpp.md) nebo [cmake v sadě Visual Studio](cmake-projects-in-visual-studio.md). Obě možnosti umožňují používat funkce rozhraní IDE, jako jsou například [technologie IntelliSense](/visualstudio/ide/using-intellisense) a [Vlastnosti projektu](working-with-project-properties.md).
 
 ### <a name="to-create-a-c-project-from-existing-code"></a>Vytvoření projektu jazyka C++ z existujícího kódu
 
-1. Na **souboru** nabídce vyberte možnost **nový** > **projekt z existujícího kódu**.
+1. V nabídce **soubor** vyberte **Nový** > **projekt z existujícího kódu**.
 
-1. Zadejte umístění vašeho projektu, adresáře pro zdrojové soubory a typy souborů, které Průvodce naimportuje do nového projektu. Zvolte **Další** pokračujte.
+1. Zadejte umístění projektu, adresář pro zdrojové soubory a typy souborů, které průvodce importuje do nového projektu. Pokračujte kliknutím na tlačítko **Další** .
 
     | Nastavení | Popis |
     | --- | --- |
-    | **Umístění souboru projektu** | Určuje cestu k adresáři nový projekt. Toto umístění je, kde průvodce uloží všechny soubory (a jeho podadresářích) nového projektu.<br/><br/>Vyberte **Procházet** zobrazíte **umístění souboru projektu** dialogového okna. Přejděte do správné složky a určete adresář, který obsahuje nový projekt. |
-    | **název projektu** | Určuje název nového projektu. Soubory projektu, které mají přípony souborů, jako je VCXPROJ přijme, tento název a existujících souborů kódu zachovají původní názvy. |
-    | **Přidejte soubory do projektu z těchto složek** | Zaškrtněte, pokud chcete nastavit průvodcem ke kopírování existujících souborů kódu z jejich původní adresářů (které jsou uvedeny v seznamu pod tento ovládací prvek) do nového projektu.<br/><br/>Zkontrolujte **přidat podsložky** k určení kopírování souborů kódu ze všech podadresářů do projektu. Adresáře jsou uvedeny v **složky** sloupce.<br/>-Vybrat **přidat** zobrazíte **přidat soubory do projektu z této složky** dialogové okno, chcete-li určit adresáře, které průvodce vyhledá existujících souborů kódu.<br/>-Vybrat **odebrat** odstranit cestu k adresáři vybrali v rozevíracím seznamu.<br/><br/>V **typů, který chcete přidat do projektu soubor** zadejte typů souborů, které průvodce přidá nový projekt založený na daný soubor rozšíření. Přípony souborů jsou uvedeny s zástupný znak hvězdička a jsou odděleny středníky v seznamu přípon souborů. |
-    | **Zobrazit všechny soubory v Průzkumníku řešení** | Určuje, že všechny soubory v novém projektu budou viditelné a v zobrazené **Průzkumníka řešení** okna. Tato možnost je povolená ve výchozím nastavení. |
+    | **Umístění souboru projektu** | Určuje cestu k adresáři nového projektu. Do tohoto umístění průvodce uloží všechny soubory (a podadresáře) nového projektu.<br/><br/>Vyberte **Procházet** a zobrazte tak dialogové okno **umístění souboru projektu** . Přejděte do správné složky a zadejte adresář, který obsahuje nový projekt. |
+    | **Název projektu** | Určuje název nového projektu. Soubory projektu, které mají přípony souborů, například. vcxproj, přijímají tento název a stávající soubory s kódem udržují původní název. |
+    | **Přidat soubory do projektu z těchto složek** | Zaškrtněte, pokud chcete, aby průvodce kopíroval stávající soubory kódu z původních adresářů (které jsou uvedeny v seznamu pod tímto ovládacím prvkem) do nového projektu.<br/><br/>Pokud chcete určit kopírování souborů kódu ze všech podadresářů do projektu, vyberte **Přidat podsložky** . Adresáře jsou uvedeny ve sloupci **Složka** .<br/>– Vyberte **Přidat** , chcete-li zobrazit dialogové okno **Přidat soubory do projektu z této složky** , chcete-li zadat adresáře, které Průvodce vyhledá existující soubory kódu.<br/>– Vyberte **Odebrat** , pokud chcete odstranit cestu k adresáři, kterou jste vybrali v rozevíracím seznamu.<br/><br/>V okně **typy souborů, které chcete přidat do pole projekt** zadejte typy souborů, které průvodce přidá do nového projektu na základě daných přípon souborů. Příponám souborů předchází zástupný znak hvězdička a jsou odděleny v seznamu přípon souborů středníkem. |
+    | **Zobrazit všechny soubory v Průzkumník řešení** | Určuje, že se všechny soubory v novém projektu budou zobrazovat a zobrazovat v okně **Průzkumník řešení** . Tato možnost je ve výchozím nastavení povolená. |
 
     ![Umístění projektu](media/location.png)
 
-1. Zadejte nastavení projektu použít například prostředí pro sestavení nového projektu a nastavení sestavení tak, aby odpovídaly konkrétní typ nový projekt generovat. Zvolte **Další** pokračujte.
+1. Zadejte nastavení projektu, které se má použít, například prostředí sestavení pro nový projekt a nastavení sestavení tak, aby odpovídalo určitému typu nového projektu, který se má vygenerovat. Pokračujte kliknutím na tlačítko **Další** .
 
     | Nastavení | Popis |
     | --- | --- |
-    | **Pomocí sady Visual Studio** | Určuje použití nástroje pro vytváření, které jsou zahrnuty v sadě Visual Studio pro vytváření nového projektu. Ve výchozím nastavení je vybraná tato možnost.<br/><br/>Vyberte **typu projektu** k určení typu projektu vygeneruje průvodce. Zvolte **projekt aplikace Windows**, **projekt konzolové aplikace**, **projektu dynamické knihovny (DLL)**, nebo **statická knihovna (LIB) projekt**.<br/><br/>Zkontrolujte **přidat podporu ATL** přidat podporu ATL do nového projektu.<br/><br/>Zkontrolujte **přidat podporu knihovny MFC** k přidání podpory MFC do nového projektu.<br/><br/>Zkontrolujte **přidání podpory pro modul Common Language Runtime** přidat do projektu podporu CLR programování. Zvolte **Common Language Runtime Support** pro typ dodržování předpisů, jako například **Common Language Runtime (stará syntaxe)** dodržování předpisů s spravovaných rozšíření pro C++ syntaxe, programovací syntaxe CLR před Visual Studio 2005. |
-    | **Použití externího sestavovacího systému** | Určuje použití nástroje sestavení, které nejsou zahrnuty v sadě Visual Studio pro vytváření nového projektu. Pokud je vybraná tato možnost, můžete určit příkazové řádky sestavení na **zadat konfigurační nastavení ladění** a **zadejte konfigurační nastavení vydání** stránky. |
+    | **Použití sady Visual Studio** | Určuje použití nástrojů sestavení, které jsou součástí sady Visual Studio pro sestavení nového projektu. Tato možnost je vybrána jako výchozí nastavení.<br/><br/>Vyberte **typ projektu** a zadejte typ projektu, který průvodce vygeneruje. Vyberte **projekt aplikace systému Windows**, **projekt konzolové aplikace**, **projekt dynamické knihovny (DLL)** nebo **projekt statické knihovny (lib)** .<br/><br/>Pokud chcete přidat podporu ATL do nového projektu, podívejte se do **Přidat podporu pro ATL** .<br/><br/>Chcete-li přidat podporu knihovny MFC do nového projektu, je nutné zaškrtnout **Přidat podporu knihovny MFC** .<br/><br/>Pokud chcete přidat podporu programování CLR do projektu, podívejte se do **části přidat podporu pro modul CLR (Common Language Runtime)** . Vyberte podporu modulu CLR ( **Common Language** Runtime) pro typ dodržování předpisů, jako je například **Common Language Runtime (stará syntaxe)** pro C++ dodržování předpisů se spravovanými rozšířeními pro syntaxi, programovací syntaxí CLR před sadou Visual Studio 2005. |
+    | **Použít externí sestavovací systém** | Určuje použití nástrojů sestavení, které nejsou součástí sady Visual Studio pro sestavení nového projektu. Pokud je vybrána tato možnost, můžete zadat příkazové řádky sestavení na stránce **zadat nastavení konfigurace ladění** a **zadat konfigurační nastavení vydání** . |
 
     ![Nastavení projektu](media/settings.png)
 
     > [!NOTE]
-    > Když **použijte externí sestavovací systém** zaškrtnete políčko, rozhraní IDE nedaří sestavit projekt, proto /D, / jsem, /FI, /AI nebo možnosti /FU nejsou požadovány pro kompilaci. Však musí tyto možnosti nastavit správně, aby IntelliSense fungovat správně.
+    > Pokud je zaškrtnuta možnost **použít externí sestavovací systém** , rozhraní IDE nevytvoří projekt, takže možnosti/D,/I,/Fi,/AI nebo/Fu nejsou pro kompilaci požadovány. Tyto možnosti je však nutné nastavit správně, aby technologie IntelliSense správně fungovala.
 
-1. Zadejte nastavení konfigurace ladění k použití. Zvolte **Další** pokračujte.
+1. Zadejte nastavení konfigurace ladění, které se má použít. Pokračujte kliknutím na tlačítko **Další** .
 
     | Nastavení | Popis |
     | --- | --- |
-    | **Sestavení příkazového řádku** | Určuje příkazový řádek, který vytvoří projekt. Zadejte název kompilátor (plus všechny přepínače nebo argumenty) nebo skripty sestavení, kterou chcete použít k sestavení projektu. |
-    | **Opětovné sestavení příkazového řádku** | Určuje příkazový řádek, který znovu sestaví nový projekt. |
-    | **Příkazový řádek vyčištění** | Určuje příkazový řádek odstranit podpůrné soubory generované nástroje sestavení pro projekt. |
-    | **Výstup (ladění)** | Určuje cestu k adresáři výstupních souborů pro konfiguraci ladění projektu. |
-    | **Definice preprocesoru (/ D)** | Definuje symboly preprocesoru projekt, naleznete v tématu [/D (Definice preprocesoru)](../build/reference/d-preprocessor-definitions.md). |
-    | **Zahrnout cestu vyhledávání (/ I)** | Určuje cesty k adresářům kompilátor vyhledá soubor odkazy předané preprocesoru direktiv v projektu vyřešit, najdete v článku [/I (další vložené adresáře)](../build/reference/i-additional-include-directories.md). |
-    | **Nuceně zahrnuté soubory (/FI)** | Určuje soubory hlaviček zpracování při sestavování projektu, přečtěte si téma [/FI (vynucené soubor zahrnutí názvu)](../build/reference/fi-name-forced-include-file.md). |
-    | **Cesta pro vyhledávání sestavení .NET (/ AI)** | Určuje adresář cesty, které kompilátor vyhledá vyřešit .NET sestavení odkazy předané preprocesoru direktiv v projektu, naleznete v tématu [/AI (zadat adresáře metadat)](../build/reference/ai-specify-metadata-directories.md). |
-    | **Vynuceně použitá sestavení .NET (/ FU)** | Určuje sestavení .NET pro zpracování při sestavování projektu, naleznete v tématu [/FU (vynuceným názvem #using souboru)](../build/reference/fu-name-forced-hash-using-file.md). |
+    | **Příkazový řádek sestavení** | Určuje příkazový řádek, který sestaví projekt. Zadejte název kompilátoru (spolu s přepínači nebo argumenty) nebo skripty sestavení, které chcete použít k sestavení projektu. |
+    | **Příkazový řádek pro opětovné sestavení** | Určuje příkazový řádek, který znovu sestaví nový projekt. |
+    | **Příkazový řádek vyčištění** | Určuje příkazový řádek, který má odstranit podpůrné soubory generované nástroji sestavení pro projekt. |
+    | **Výstup (pro ladění)** | Určuje cestu k adresáři výstupních souborů pro konfiguraci ladění projektu. |
+    | **Definice preprocesoru (/D)** | Definuje symboly preprocesoru pro projekt, viz [/d (Definice preprocesoru)](../build/reference/d-preprocessor-definitions.md). |
+    | **Cesta hledání zahrnutí (/I)** | Určuje cesty k adresářům, které kompilátor hledá, aby vyřešil odkazy na soubory předané do direktiv preprocesoru v projektu, viz [/i (další adresáře k zahrnutí)](../build/reference/i-additional-include-directories.md). |
+    | **Nuceně zahrnuté soubory (/FI)** | Určuje soubory hlaviček, které se mají zpracovat při sestavování projektu, viz [/Fi (soubor vynuceného zahrnutí názvu)](../build/reference/fi-name-forced-include-file.md). |
+    | **Cesta pro vyhledávání sestavení .NET (/AI)** | Určuje cesty k adresářům, které kompilátor vyhledává pro překlad odkazů na sestavení .NET předaných do direktiv preprocesoru v projektu, viz [/AI (určení adresářů metadat)](../build/reference/ai-specify-metadata-directories.md). |
+    | **Vynucené používání sestavení .NET (/FU)** | Určuje sestavení .NET, která se mají zpracovat při sestavování projektu, viz [/Fu (název vynuceného #using souboru)](../build/reference/fu-name-forced-hash-using-file.md). |
 
     ![Konfigurace projektu](media/config.png)
 
     > [!NOTE]
-    > **Sestavení**, **znovu sestavit**, **Vyčistit** příkazového řádku a **výstup (ladění)** nastavení jsou povoleny pouze v případě **použití externí sestavovací systém** výběru na **zadejte nastavení projektu** stránky.
+    > Nastavení **sestavit**, **znovu sestavit**, **vyčistit** příkazový řádek a **výstup (pro ladění)** jsou povolena pouze v případě, že je vybrána možnost **použít externí sestavovací systém** na stránce **zadat nastavení projektu** .
 
-1. Zadejte konfigurační nastavení vydání chcete použít, tato nastavení jsou stejné jako nastavení konfigurace ladění. Zvolte **Dokončit** k vygenerování nového projektu.
+1. Zadejte nastavení konfigurace verze, která se mají použít. Tato nastavení jsou stejná jako nastavení konfigurace ladění. Kliknutím na tlačítko **Dokončit** Vygenerujte nový projekt.
 
     > [!NOTE]
-    > Tady můžete zkontrolovat **stejný jako konfigurace ladění** k určení, že průvodce bude generovat verze konfigurace nastavení projektu identické a ladit nastavení projektu. Tato možnost je ve výchozím nastavení zaškrtnuto. Další možnosti na této stránce jsou neaktivní, dokud nezrušíte zaškrtnutí tohoto políčka.
+    > Tady můžete stejnou kontrolu **jako konfigurace ladění** , abyste určili, že průvodce generuje nastavení projektu konfigurace vydané verze shodná s nastavením ladění projektu konfigurace. Tato možnost je ve výchozím nastavení zaškrtnutá. Všechny ostatní možnosti na této stránce jsou neaktivní, pokud zrušíte jeho zrušení.

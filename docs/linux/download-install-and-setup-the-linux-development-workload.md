@@ -3,12 +3,12 @@ title: Instalace úlohy C++ Linux do sady Visual Studio
 description: Popisuje, jak stáhnout, nainstalovat a nastavit úlohu pro Linux pro C++ v aplikaci Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966215"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077644"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Stažení, instalace a nastavení úlohy Linux
 
@@ -20,11 +20,11 @@ Projekty Linux jsou podporovány v aplikaci Visual Studio 2017 a novějších.
 
 ::: moniker range=">=vs-2017"
 
-Pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio ve Windows můžete C++ vytvářet, upravovat a ladit projekty, které se spouštějí na vzdáleném systému Linux, virtuálním počítači nebo v subsystému [Windows pro Linux](/windows/wsl/about). 
+Pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio ve Windows můžete C++ vytvářet, upravovat a ladit projekty, které se spouštějí na vzdáleném systému Linux, virtuálním počítači nebo v subsystému [Windows pro Linux](/windows/wsl/about).
 
-Můžete pracovat na svém stávajícím základu kódu, který používá CMake bez nutnosti ho převést na projekt sady Visual Studio. Pokud je váš základ kódu pro různé platformy, můžete v sadě Visual Studio cílit na Windows i Linux. Můžete například upravovat, sestavovat a ladit kód ve Windows pomocí sady Visual Studio a pak rychle změnit cílení projektu pro Linux na sestavování a ladění v prostředí Linux. Soubory hlaviček systému Linux jsou automaticky zkopírovány do místního počítače, kde je aplikace Visual Studio používá k zajištění úplné podpory technologie IntelliSense (dokončování příkazů, přechodu k definici atd.). 
- 
-Pro některý z těchto scénářů se vyžaduje **vývoj pro C++ Linux s** úlohou. 
+Můžete pracovat na svém stávajícím základu kódu, který používá CMake bez nutnosti ho převést na projekt sady Visual Studio. Pokud je váš základ kódu pro různé platformy, můžete v sadě Visual Studio cílit na Windows i Linux. Můžete například upravovat, sestavovat a ladit kód ve Windows pomocí sady Visual Studio a pak rychle změnit cílení projektu pro Linux na sestavování a ladění v prostředí Linux. Soubory hlaviček systému Linux jsou automaticky zkopírovány do místního počítače, kde je aplikace Visual Studio používá k zajištění úplné podpory technologie IntelliSense (dokončování příkazů, přechodu k definici atd.).
+
+Pro některý z těchto scénářů se vyžaduje **vývoj pro C++ Linux s** úlohou.
 
 ::: moniker-end
 
@@ -162,7 +162,7 @@ Podpora pro vývoj C++ pro Linux je dostupná v systému Visual Studio 2017 nebo
 
 ## <a name="next-steps"></a>Další kroky
 
-Teď jste připraveni vytvořit nebo otevřít projekt pro Linux a nakonfigurovat ho tak, aby běžel v cílovém systému. Další informace naleznete v tématu:
+Teď jste připraveni vytvořit nebo otevřít projekt pro Linux a nakonfigurovat ho tak, aby běžel v cílovém systému. Další informace naleznete v tématu:
 
 - [Vytvoření nového projektu Linux](create-a-new-linux-project.md)
 - [Konfigurace projektu Linux CMake](cmake-linux-project.md)

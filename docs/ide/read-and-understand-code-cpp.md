@@ -2,12 +2,12 @@
 title: Čtení a pochopení C++ kódu v aplikaci Visual Studio
 description: Použijte Editor C++ kódu v aplikaci Visual Studio k formátování a pochopení kódu.
 ms.date: 05/28/2019
-ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: aa9008900ae631668d7a87fb413dd389696f3454
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416120"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079048"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Čtení a pochopení C++ kódu v aplikaci Visual Studio
 
@@ -61,7 +61,7 @@ Najeďte myší na jakoukoli proměnnou, funkci nebo jiný symbol, abyste získa
 
 ![Rychlé informace v jazyce C&#43;&#43;](../ide/media/quick-info-vs2019.png "Rychlé informace")
 
-Popis **rychlá informace** obsahuje online odkaz pro **hledání** . Chcete-li zadat poskytovatele vyhledávání, použijte možnost **C++** **nástroje** > **možnosti** > **textový editor** >  > **zobrazení** . 
+Popis **rychlá informace** obsahuje online odkaz pro **hledání** . Chcete-li zadat poskytovatele vyhledávání, použijte možnost **C++** **nástroje** > **možnosti** > **textový editor** >  > **zobrazení** .
 
 Pokud v kódu dojde k chybě, můžete na něj umístit ukazatel myši a **rychlé informace** zobrazí chybovou zprávu. Chybovou zprávu můžete najít také v okně Seznam chyb.
 

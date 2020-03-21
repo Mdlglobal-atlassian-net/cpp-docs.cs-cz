@@ -8,19 +8,19 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: d6920a73f107f226cc31cb27fd15178f6d2f1c26
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525256"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079006"
 ---
 # <a name="user-record"></a>Uživatelský záznam
 
-> [!NOTE] 
-> Průvodce zprostředkovatele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším.
+> [!NOTE]
+> Průvodce zprostředkovatelem OLE DB ATL není k dispozici v aplikaci Visual Studio 2019 a novější.
 
-Záznam uživatele poskytuje strukturu kód a data, která představuje sloupci data pro sadu řádků. Uživatelský záznam lze vytvořit v době kompilace nebo za běhu. Když vytvoříte poskytovatele prostřednictvím **Průvodce zprostředkovatelem ATL OLE DB**, Průvodce vytvoří výchozí uživatelský záznam, který vypadá takto (za předpokladu, že zadaný název zprostředkovatele [krátký název] z *MyProvider*):
+Záznam uživatele poskytuje strukturu kódu a dat, která představuje data sloupce pro sadu řádků. Záznam uživatele lze vytvořit v době kompilace nebo v době běhu. Když vytvoříte poskytovatele pomocí **průvodce OLE DB zprostředkovatele ATL**, vytvoří průvodce výchozí záznam uživatele, který bude vypadat nějak takto (za předpokladu, že jste zadali název zprostředkovatele [krátký název] *MyProvider*):
 
 ```cpp
 class CWindowsFile:
@@ -39,36 +39,36 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-Šablony zprostředkovatele OLE DB zpracovat všechny specifikace technologie OLE DB na interakce s klientem. Získat sloupce data potřebná pro odpověď, volá zprostředkovatele `GetColumnInfo` funkce, která je nutné umístit v záznamu uživatele. Můžete explicitně přepsat `GetColumnInfo` v záznamu uživatele, například podle jeho deklarací v souboru .h jak je znázorněno zde:
+Šablony poskytovatele OLE DB zpracovávají všechny OLE DB specifické pro interakce s klientem. Aby bylo možné získat data sloupce potřebná pro odpověď, zprostředkovatel zavolá funkci `GetColumnInfo`, kterou je nutné umístit do záznamu uživatele. Můžete explicitně přepsat `GetColumnInfo` v záznamu uživatele, například jeho deklarováním v souboru. h, jak je znázorněno zde:
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
 ```
 
-To odpovídá:
+To je rovno:
 
 ```cpp
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)
 ```
 
-Poté, implementujte `GetColumnInfo` v záznamu uživatele soubor .cpp.
+Potom implementujte `GetColumnInfo` v souboru. cpp záznamu uživatele.
 
-Makra Provider Column Map pomáhají při vytváření `GetColumnInfo` funkce:
+PROVIDER_COLUMN_MAP makra pomáhají při vytváření funkce `GetColumnInfo`:
 
-- BEGIN_PROVIDER_COLUMN_MAP definuje prototyp funkce a statická pole `ATLCOLUMNINFO` struktury.
+- BEGIN_PROVIDER_COLUMN_MAP definuje prototyp funkce a statické pole `ATLCOLUMNINFO` struktur.
 
-- PROVIDER_COLUMN_ENTRY definuje a inicializuje jediného `ATLCOLUMNINFO`.
+- PROVIDER_COLUMN_ENTRY definuje a inicializuje jeden `ATLCOLUMNINFO`.
 
-- END_PROVIDER_COLUMN_MAP zavře pole a funkce. Počet prvků pole do také umístí *pcCols* parametru.
+- END_PROVIDER_COLUMN_MAP zavře pole a funkci. Také umístí prvky pole do parametru *pcCols* .
 
-Když se vytvoří záznam uživatele v době běhu `GetColumnInfo` používá *pThis* parametr přijímat ukazatel na instanci sady řádků nebo příkaz. Příkazy a sady řádků musí podporovat `IColumnsInfo` tak informace o sloupci můžete provést z tohoto ukazatele rozhraní.
+Při vytvoření záznamu uživatele v době běhu `GetColumnInfo` používá parametr *pThis* k přijetí ukazatele na instanci sady řádků nebo příkazu. Příkazy a sady řádků musí podporovat rozhraní `IColumnsInfo`, takže informace o sloupci je možné z tohoto ukazatele považovat.
 
-`CommandClass` a `RowsetClass` příkazu a sady řádků, které používají uživatelský záznam.
+`CommandClass` a `RowsetClass` jsou příkazy a sady řádků, které používají záznam uživatele.
 
-Podrobnější příklad toho, jak přepsat `GetColumnInfo` v záznamu uživatele, najdete v článku [dynamické určování sloupců vrácených příjemci](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
+Podrobnější příklad, jak přepsat `GetColumnInfo` v záznamu uživatele, najdete v tématu [Dynamické určování sloupců vrácených příjemci](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

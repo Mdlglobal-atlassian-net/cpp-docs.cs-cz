@@ -11,21 +11,21 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomSession class in CustomSess.H
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-ms.openlocfilehash: 5cb462aba671e79450e9ee7b8447410252f8edc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4775f21c1e0fa7666d24b4d6a55e099bc6ae55a2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230578"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079761"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
-*Vlastní*Sess.H obsahuje deklaraci a implementaci objektu relace technologie OLE DB. Objekt zdroje dat vytvoří objekt relace a představuje konverzaci mezi spotřebitele a zprostředkovatele. Několik souběžných relací může být otevřené pro jeden zdroj. V seznamu dědičnosti `CCustomSession` následující:
+*Vlastní* Sess. H obsahuje deklaraci a implementaci objektu relace OLE DB. Objekt zdroje dat vytvoří objekt Session a představuje konverzaci mezi příjemcem a poskytovatelem. Pro jeden zdroj dat lze otevřít několik současných relací. Seznam dědičnosti pro `CCustomSession` následující:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
 // CCustomSession
-class ATL_NO_VTABLE CCustomSession : 
+class ATL_NO_VTABLE CCustomSession :
    public CComObjectRootEx<CComSingleThreadModel>,
    public IGetDataSourceImpl<CCustomSession>,
    public IOpenRowsetImpl<CCustomSession>,
@@ -35,12 +35,12 @@ class ATL_NO_VTABLE CCustomSession :
    public IDBCreateCommandImpl<CCustomSession, CCustomCommand>
 ```
 
-Objekt relace dědí z `IGetDataSource`, `IOpenRowset`, `ISessionProperties`, a `IDBCreateCommand`. `IGetDataSource` Rozhraní umožňuje relaci získání zdroje dat, která ho vytvořila. To je užitečné, pokud je potřeba získat vlastnosti ze zdroje dat, který jste vytvořili nebo Další informace, které zdroj dat může poskytovat. `ISessionProperties` Rozhraní zpracovává všechny vlastnosti v relaci. `IOpenRowset` a `IDBCreateCommand` rozhraní se používají k práci databáze. Pokud zprostředkovatel podporuje příkazy, implementuje `IDBCreateCommand` rozhraní. Používá se k vytvoření objektu příkazu, který můžete spouštět příkazy. Zprostředkovatel vždy implementuje `IOpenRowset` objektu. Používá se k vygenerování sady řádků od poskytovatele. Je výchozí sada řádků (například `"select * from mytable"`) od poskytovatele.
+Objekt Session dědí z `IGetDataSource`, `IOpenRowset`, `ISessionProperties`a `IDBCreateCommand`. Rozhraní `IGetDataSource` umožňuje relaci načíst zdroj dat, který ho vytvořil. To je užitečné v případě, že potřebujete získat vlastnosti ze zdroje dat, který jste vytvořili, nebo jiných informací, které může zdroj dat poskytnout. Rozhraní `ISessionProperties` zpracovává všechny vlastnosti relace. Rozhraní `IOpenRowset` a `IDBCreateCommand` slouží k tomu, aby databáze fungovala. Pokud zprostředkovatel podporuje příkazy, implementuje rozhraní `IDBCreateCommand`. Slouží k vytvoření objektu příkazu, který může spustit příkazy. Zprostředkovatel vždy implementuje objekt `IOpenRowset`. Používá se ke generování sady řádků od poskytovatele. Je to výchozí sada řádků (například `"select * from mytable"`) od poskytovatele.
 
-Průvodce také vytvoří tři třídy relace: `CCustomSessionColSchema`, `CCustomSessionPTSchema`, a `CCustomSessionTRSchema`. Tyto relace se používají pro sad řádků schématu. Sady řádků schématu povolit zprostředkovatele vrátit metadata pro příjemce bez příjemce by bylo nutné provést dotaz nebo načíst data. Načítají se metadata může být mnohem rychlejší než hledání možnosti poskytovatele.
+Průvodce také generuje tři třídy relace: `CCustomSessionColSchema`, `CCustomSessionPTSchema`a `CCustomSessionTRSchema`. Tyto relace jsou používány pro sady řádků schématu. Sady řádků schématu umožňují poskytovateli vracet metadata příjemci bez nutnosti spustit dotaz nebo načíst data. Načítající metadata můžou být daleko rychlejší než nalezení schopností poskytovatele.
 
-Specifikaci OLE DB vyžaduje, aby implementace zprostředkovatele `IDBSchemaRowset` typy sada řádků schématu rozhraní podporu tři: DBSCHEMA_COLUMNS DBSCHEMA_PROVIDER_TYPES a DBSCHEMA_TABLES. Průvodce vytvoří implementacemi pro každý sada řádků schématu. Každá třída generované průvodcem knihovnou obsahuje `Execute` metody. V tomto `Execute` metoda může vrátit data poskytovatele, o které tabulky, sloupce a datové typy, které podporujete. Tato data je známá v době kompilace.
+Specifikace OLE DB vyžaduje, aby poskytovatelé implementující rozhraní `IDBSchemaRowset` podporovaly tři typy sad řádků schématu: DBSCHEMA_COLUMNS, DBSCHEMA_PROVIDER_TYPES a DBSCHEMA_TABLES. Průvodce generuje implementace pro každou sadu řádků schématu. Každá třída vygenerovaná průvodcem obsahuje metodu `Execute`. V této `Execute` metody můžete vrátit data zprostředkovateli, které tabulky, sloupce a datové typy, které podporujete. Tato data jsou známá v době kompilace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)<br/>

@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: a65ad69914b14e7b8b37c321fa7d06740af57e3a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a8cd13e27859d09bcaaca1f5f6f1c2750b908fe6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493375"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078776"
 ---
 # <a name="consuming-libraries-and-components"></a>Využívání knihoven a komponent
 
-C++ Projekt často potřebuje volat funkce nebo získat přístup k datům v binárním souboru, jako je statická knihovna (soubory. lib), knihovna DLL, prostředí Windows Runtime komponenty, komponenta modelu COM nebo sestavení .NET. V těchto případech je nutné nakonfigurovat projekt tak, aby mohl najít tento binární soubor v čase sestavení. Konkrétní postup závisí na typu vašeho projektu, typu binárního souboru a na tom, zda je binární soubor sestaven ve stejném řešení jako váš projekt. 
+C++ Projekt často potřebuje volat funkce nebo získat přístup k datům v binárním souboru, jako je statická knihovna (soubory. lib), knihovna DLL, prostředí Windows Runtime komponenty, komponenta modelu COM nebo sestavení .NET. V těchto případech je nutné nakonfigurovat projekt tak, aby mohl najít tento binární soubor v čase sestavení. Konkrétní postup závisí na typu vašeho projektu, typu binárního souboru a na tom, zda je binární soubor sestaven ve stejném řešení jako váš projekt.
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Využívání knihoven stažených prostřednictvím vcpkg
 
-Pokud chcete využít knihovnu, kterou jste stáhli pomocí Správce balíčků **vcpkg** , můžete následující pokyny ignorovat. Viz [vcpkg: Správce C++ balíčků pro Windows, Linux a MacOS](vcpkg.md#integrate-with-visual-studio-windows) , kde najdete další informace.
+Pokud chcete využít knihovnu, kterou jste stáhli pomocí Správce balíčků **vcpkg** , můžete následující pokyny ignorovat. Další informace najdete v tématu [vcpkg: správce C++ balíčků pro Windows, Linux a MacOS](vcpkg.md#integrate-with-visual-studio-windows) .
 
 ## <a name="consuming-static-libraries"></a>Spotřebovávání statických knihoven
 
 Pokud je váš projekt statické knihovny sestaven ve stejném řešení:
 
 1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>Zahrňte hlavičkové soubory pro statickou knihovnu pomocí uvozovek. V typickém řešení bude cesta začínat `../<library project name>`. IntelliSense vám pomůže ho najít.
-2. Přidejte odkaz na projekt statické knihovny. Klikněte pravým tlačítkem na **odkazy** v uzlu projekt aplikace v **Průzkumník řešení** a vyberte možnost **Přidat odkaz**. 
+2. Přidejte odkaz na projekt statické knihovny. Klikněte pravým tlačítkem na **odkazy** v uzlu projekt aplikace v **Průzkumník řešení** a vyberte možnost **Přidat odkaz**.
 
 Pokud Statická knihovna není součástí řešení:
 
-1. Klikněte pravým tlačítkem myši na uzel projekt aplikace v **Průzkumník řešení** a pak zvolte **vlastnosti**. 
+1. Klikněte pravým tlačítkem myši na uzel projekt aplikace v **Průzkumník řešení** a pak zvolte **vlastnosti**.
 2. Na stránce vlastností **adresářů VC + +** přidejte cestu k adresáři, kde se nachází soubor. lib v **cestě knihovny** a přidejte cestu k hlavičkovým souborům knihovny v **adresáři include**.  
 3. Na stránce vlastnosti **linkeru > Input** přidejte název souboru. lib do **dalších závislostí**.
 
@@ -46,11 +46,11 @@ Pokud knihovna DLL není součástí řešení aplikace, budete potřebovat soub
 
 ## <a name="com-objects"></a>COM – objekty
 
-Pokud vaše nativní C++ aplikace potřebuje spotřebovat objekt com a tento objekt je *zaregistrován*, pak vše, co musíte udělat, je zavolat funkci CoCreateInstance a předat identifikátor CLSID objektu. Systém ho najde v registru Windows a načte ho. Projekt C++/CLI může spotřebovat objekt modelu COM stejným způsobem, nebo přidáním odkazu na odkaz > v seznamu **Přidat odkazy com** a jeho využitím obálkou s možností volání [za běhu](/dotnet/framework/interop/runtime-callable-wrapper). 
+Pokud vaše nativní C++ aplikace potřebuje spotřebovat objekt com a tento objekt je *zaregistrován*, pak vše, co musíte udělat, je zavolat funkci CoCreateInstance a předat identifikátor CLSID objektu. Systém ho najde v registru Windows a načte ho. Projekt C++/CLI může spotřebovat objekt modelu COM stejným způsobem, nebo přidáním odkazu na odkaz > v seznamu **Přidat odkazy com** a jeho využitím obálkou s možností volání [za běhu](/dotnet/framework/interop/runtime-callable-wrapper).
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>.NET – sestavení a součásti prostředí Windows Runtime
 
-V projektech UWP C++nebo/CLI můžete využívat sestavení .net nebo prostředí Windows Runtime komponenty přidáním *odkazu* na sestavení nebo komponentu. Pod uzlem **odkazy** v projektu UWP nebo C++/CLI vidíte odkazy na běžně používané komponenty. Kliknutím pravým tlačítkem na uzel **odkazy** v **Průzkumník řešení** otevřete **Správce odkazů** a procházejte dalšími komponentami, které systém zná. Kliknutím na tlačítko **Procházet** přejděte do složky, ve které je umístěna vlastní komponenta. Vzhledem k tomu, že komponenty sestavení a prostředí Windows Runtime .NET obsahují vestavěné informace o typu, můžete zobrazit své metody a třídy kliknutím pravým tlačítkem a výběrem možnosti **Zobrazit v prohlížeč objektů**. 
+V projektech UWP C++nebo/CLI můžete využívat sestavení .net nebo prostředí Windows Runtime komponenty přidáním *odkazu* na sestavení nebo komponentu. Pod uzlem **odkazy** v projektu UWP nebo C++/CLI vidíte odkazy na běžně používané komponenty. Kliknutím pravým tlačítkem na uzel **odkazy** v **Průzkumník řešení** otevřete **Správce odkazů** a procházejte dalšími komponentami, které systém zná. Kliknutím na tlačítko **Procházet** přejděte do složky, ve které je umístěna vlastní komponenta. Vzhledem k tomu, že komponenty sestavení a prostředí Windows Runtime .NET obsahují vestavěné informace o typu, můžete zobrazit své metody a třídy kliknutím pravým tlačítkem a výběrem možnosti **Zobrazit v prohlížeč objektů**.
 
 ## <a name="reference-properties"></a>Vlastnosti odkazu
 
@@ -106,7 +106,7 @@ Následující vlastnosti jsou k dispozici na různých druzích odkazů. Umož�
 
 ### <a name="project-to-project-reference-properties"></a>Vlastnosti odkazu z projektu na projekt
 
-Následující vlastnosti definují odkaz typu *projekt-projekt* z projektu, který je vybrán v podokně **odkazy** , na jiný projekt ve stejném řešení. Další informace najdete v tématu [Správa odkazů v projektu](/visualstudio/ide/managing-references-in-a-project).
+Následující vlastnosti definují odkaz typu *projekt-projekt* z projektu, který je vybrán v podokně **odkazy** , na jiný projekt ve stejném řešení. Další informace naleznete v tématu [Správa odkazů v projektu](/visualstudio/ide/managing-references-in-a-project).
 
 - **Propojit závislosti knihoven**
 
@@ -158,13 +158,13 @@ Následující vlastnosti jsou nalezeny v odkazech na sestavení COM a .NET a ne
 
 - **Silný název**
 
-   `true`, pokud má odkazované sestavení silný název. Silné pojmenované sestavení má jedinečnou verzi.
+   `true`, zda má odkazované sestavení silný název. Silné pojmenované sestavení má jedinečnou verzi.
 
 - **Verze**
 
    Zobrazuje verzi odkazovaného sestavení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [C++odkaz na stránku vlastností projektu](reference/property-pages-visual-cpp.md)<br>
 [Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](working-with-project-properties.md)

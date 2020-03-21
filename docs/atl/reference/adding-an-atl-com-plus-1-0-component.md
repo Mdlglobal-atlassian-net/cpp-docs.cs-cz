@@ -1,40 +1,37 @@
 ---
-title: Přidání komponenty ATL COM + 1.0
+title: Přidání komponenty ATL COM+ 1,0
 ms.date: 05/09/2019
 ms.assetid: c6c95e64-9ee4-4a6e-8804-5930202ce1b9
-ms.openlocfilehash: 6b8ffd71dd7e743bcbb7ff6ccac333dfd235156f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 843563e324e5e01af3c38896f268efc06c9a6222
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706959"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075326"
 ---
-# <a name="adding-an-atl-com-10-component"></a>Přidání komponenty ATL COM + 1.0
-
+# <a name="adding-an-atl-com-10-component"></a>Přidání komponenty ATL COM+ 1,0
 
 ::: moniker range="vs-2019"
 
-Komponenta knihovny ATL modelu COM + 1.0 průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
+Průvodce komponentami ATL COM+ 1,0 není k dispozici v aplikaci Visual Studio 2019 a novější.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Tento průvodce přidá objekt do projektu, který podporuje služby COM + 1.0, včetně transakce.
+Tento průvodce přidá objekt do projektu, který podporuje služby COM+ 1,0, včetně transakcí.
 
-## <a name="to-add-an-atl-com-10-component-to-your-project"></a>Přidat do projektu jako komponenta knihovny ATL modelu COM + 1.0
+## <a name="to-add-an-atl-com-10-component-to-your-project"></a>Přidání komponenty ATL COM+ 1,0 do projektu
 
-1. V jednom **Průzkumníka řešení** nebo [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název projektu, ke kterému chcete přidat součást knihovny ATL modelu COM + 1.0.
+1. V buď **Průzkumník řešení** nebo [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code)klikněte pravým tlačítkem myši na název projektu, do kterého chcete přidat komponentu ATL COM+ 1,0.
 
-1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.
+1. V místní nabídce klikněte na **Přidat**a pak klikněte na **Přidat třídu**.
 
-1. V [přidat třídu](../../ide/add-class-dialog-box.md) v dialogu **šablony** podokně klikněte na tlačítko **komponenta knihovny ATL modelu COM + 1.0**a potom klikněte na **otevřít** zobrazíte [ ATL COM + 1.0 součást Průvodce](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
+1. V dialogovém okně [Přidat třídu](../../ide/add-class-dialog-box.md) klikněte v podokně **šablony** na **Komponenta ATL COM+ 1,0**a potom klikněte na tlačítko **otevřít** . zobrazí se [Průvodce komponentami ATL COM+ 1,0](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Přidání metody](../../ide/adding-a-method-visual-cpp.md)
 
 ::: moniker-end
-
-

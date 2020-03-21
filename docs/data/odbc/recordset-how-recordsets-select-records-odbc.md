@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Jak sady záznamů vybírají záznamy (ODBC)'
+title: 'Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - recordsets, selecting records
@@ -9,97 +9,95 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 41542e3e11d304bd9ad8b81c0a1b9c6504e156a7
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 4b446d69651cb3cf52bd6c15899d85ed76b319da
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707903"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079815"
 ---
-# <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset: Jak sady záznamů vybírají záznamy (ODBC)
+# <a name="recordset-how-recordsets-select-records-odbc"></a>Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)
 
-> [!NOTE] 
-> Průvodce příjemcem ODBC knihovny MFC není k dispozici v aplikaci Visual Studio 2019 a novějším. Příjemce měli stále můžete vytvořit ručně.
+> [!NOTE]
+> Průvodce příjemcem knihovny MFC rozhraní ODBC není dostupný v aplikaci Visual Studio 2019 a novějším. Příjemce můžete přesto vytvořit ručně.
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
 Toto téma vysvětluje:
 
-- [Vaše role a možnosti při výběru záznamů](#_core_your_options_in_selecting_records).
+- [Vaše role a možnosti v rámci výběru záznamů](#_core_your_options_in_selecting_records).
 
-- [Jak sada záznamů sestavuje příkaz SQL a vybírá záznamy](#_core_how_a_recordset_constructs_its_sql_statement).
+- [Způsob, jakým sada záznamů vytvoří svůj příkaz SQL a vybere záznamy](#_core_how_a_recordset_constructs_its_sql_statement).
 
-- [Co můžete dělat přizpůsobit výběr](#_core_customizing_the_selection).
+- [Co můžete udělat pro přizpůsobení výběru](#_core_customizing_the_selection).
 
-Sady záznamů vybírají záznamy ze zdroje dat prostřednictvím ovladače rozhraní ODBC odesláním příkazů SQL pro ovladač. SQL odeslána závisí na návrh a otevřete třídu sady záznamů.
+Sady záznamů vybírají záznamy ze zdroje dat prostřednictvím ovladače ODBC odesláním příkazů SQL do ovladače. Odeslání SQL závisí na tom, jak navrhujete a otevíráte třídu sady záznamů.
 
-##  <a name="_core_your_options_in_selecting_records"></a> Možnosti při výběru záznamů
+##  <a name="your-options-in-selecting-records"></a><a name="_core_your_options_in_selecting_records"></a>Vaše možnosti při výběru záznamů
 
-V následující tabulce jsou uvedeny možnosti při výběru záznamů.
+V následující tabulce jsou uvedené možnosti pro výběr záznamů.
 
-### <a name="how-and-when-you-can-affect-a-recordset"></a>Jak a kdy může mít vliv na sadu záznamů
+### <a name="how-and-when-you-can-affect-a-recordset"></a>Jak a kdy můžete ovlivnit sadu záznamů
 
-|Pokud jste|Můžeš|
+|Při|Můžeš|
 |--------------|-------------|
-|Deklarujete třídu sady záznamů s **přidat třídu** Průvodce|Zadejte které tabulky vybírat.<br /><br /> Zadejte sloupce, které chcete zahrnout.<br /><br /> Zobrazit [přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).|
-|Dokončení implementaci třídy sady záznamů|Členské funkce přepsat jako `OnSetOptions` (Upřesnit) nastavit možnosti specifické pro aplikace nebo chcete změnit výchozí hodnoty. Zadejte parametry datových členů, pokud chcete parametrizovanou sadu záznamů.|
-|Vytvořte objekt sady záznamů (před voláním `Open`)|Zadejte podmínky vyhledávání (může být složené) pro použití v **kde** klauzuli, která filtruje záznamy. See [Recordset: Filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Určit pořadí řazení pro použití v **klauzule ORDER BY** klauzuli, která seřadí záznamy. See [Recordset: Řazení záznamů (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Zadejte hodnoty parametrů pro všechny parametry, které jste přidali do třídy. See [Recordset: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
+|Deklarace třídy sady záznamů pomocí průvodce **přidáním třídy**|Určete, ze které tabulky se má vybírat.<br /><br /> Zadejte sloupce, které chcete zahrnout.<br /><br /> Viz [Přidání příjemce knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).|
+|Dokončení implementace třídy sady záznamů|Přepsat členské funkce, například `OnSetOptions` (rozšířené) pro nastavení možností specifických pro aplikaci nebo změna výchozích hodnot. Určete datové členy parametru, pokud chcete parametrizovanou sadu záznamů.|
+|Konstrukce objektu sady záznamů (před voláním `Open`)|Zadejte podmínku vyhledávání (případně složenou) pro použití v klauzuli **WHERE** , která filtruje záznamy. Viz [Sada záznamů: filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Zadejte pořadí řazení pro použití v klauzuli **ORDER by** , která Seřadí záznamy. Viz [Sada záznamů: řazení záznamů (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Zadejte hodnoty parametrů pro všechny parametry, které jste přidali do třídy. Viz [Sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
 
-| Sady záznamů dotaz spustíte voláním `Open`| Zadejte vlastní řetězec SQL, chcete-li nahradit řetězec SQL výchozí nastavení průvodce. Zobrazit [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) v *tříd – referenční dokumentace ke knihovně* a [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). |
+| Spusťte dotaz sady záznamů voláním `Open`| Zadejte vlastní řetězec SQL, který nahradí výchozí řetězec SQL nastavený průvodcem. Viz [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) v *knihovně tříd reference* a [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). |
 
-| Volání `Requery` do sady záznamů s nejnovějšími hodnotami ve zdroji dat. requery | Zadejte nové parametry, filtr nebo řazení. See [Recordset: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |
+| Zavolejte `Requery` pro opětovné spuštění dotazu sady záznamů s nejnovějšími hodnotami ve zdroji dat | Zadejte nové parametry, filtr nebo řazení. Viz [Sada záznamů: dotazování sady záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |
 
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Jak sada záznamů sestavuje příkaz SQL
+##  <a name="how-a-recordset-constructs-its-sql-statement"></a><a name="_core_how_a_recordset_constructs_its_sql_statement"></a>Jak sada záznamů vytvoří svůj příkaz SQL
 
-Při volání objektu sady záznamů [otevřít](../../mfc/reference/crecordset-class.md#open) členskou funkci `Open` sestavuje příkaz SQL pomocí některé nebo všechny z následujících složek:
+Při volání [otevřené](../../mfc/reference/crecordset-class.md#open) členské funkce objektu sady záznamů `Open` sestaví příkaz SQL pomocí některých nebo všech následujících složek:
 
-- *Ipszsql* byl předán parametr `Open`. Pokud není NULL, tento parametr určuje vlastní řetězec SQL nebo členem jedné. Rozhraní analyzuje řetězec. Pokud je řetězec SQL **vyberte** příkazu nebo ODBC **volání** prohlášení, rozhraní se použije jako příkazu SQL sady záznamů. Pokud řetězec nemá na začátku "Vyberte" nebo "{volání", systém použije co je součástí konstrukce SQL **FROM** klauzuli.
+- Parametr *lpszSQL* předaný `Open`. Pokud hodnota není NULL, tento parametr určuje vlastní řetězec SQL nebo část jednoho. Rozhraní analyzuje řetězec. Pokud je řetězec příkazem SQL **Select** nebo příkazem **volání** ODBC, rozhraní používá řetězec jako příkaz SQL sady záznamů. Pokud řetězec nezačíná "SELECT" nebo "{CALL", rozhraní používá rozhraní, které je dodáno k vytvoření klauzule SQL **from** .
 
-- Řetězec vrácený funkcí [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql). Ve výchozím nastavení toto je název tabulky, ve které jste zadali pro sady záznamů v průvodci, ale můžete změnit, funkce vrátí. Rámec volá `GetDefaultSQL` – Pokud řetězec nemá na začátku "Vyberte" nebo "{volání", předpokládá se bude název tabulky, který se používá ke konstrukci řetězec SQL.
+- Řetězec vrácený funkcí [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql). Ve výchozím nastavení je to název tabulky, kterou jste zadali pro sadu záznamů v průvodci, ale můžete změnit, co funkce vrátí. Rozhraní volá `GetDefaultSQL` – Pokud řetězec nezačíná "SELECT" nebo "{CALL", předpokládá se, že se jedná o název tabulky, který se používá k vytvoření řetězce SQL.
 
+- Pole datových členů sady záznamů, které mají být vázány na konkrétní sloupce tabulky. Rozhraní váže sloupce záznamů na adresy těchto členů a použije je jako vyrovnávací paměti. Rozhraní určuje korelaci datových členů pole k tabulkovým sloupcům z volání funkce [RFX](../../data/odbc/record-field-exchange-using-rfx.md) nebo Bulk RFX v rámci funkce [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) členské funkce sady záznamů.
 
-- Pole datových členů sady záznamů, které mají být vázaný na konkrétní sloupce v tabulce. Rozhraní framework sváže záznam sloupců adresy tyto členy, jejich použití jako vyrovnávací paměť. Rozhraní určuje korelace pole datových členů na sloupce tabulky z [RFX](../../data/odbc/record-field-exchange-using-rfx.md) nebo Bulk RFX funkce se volá v sadě záznamů [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [DoBulkFieldExchange ](../../mfc/reference/crecordset-class.md#dofieldexchange) členskou funkci.
+- [Filtr](../../data/odbc/recordset-filtering-records-odbc.md) pro sadu záznamů, pokud existuje, obsažený v [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) datovém členu. Rozhraní používá tento řetězec k vytvoření klauzule **WHERE** jazyka SQL.
 
-- [Filtr](../../data/odbc/recordset-filtering-records-odbc.md) sady záznamů, pokud existuje, součástí [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) datový člen. Rozhraní tento řetězec používá k vytvoření SQL **kde** klauzuli.
-
-- [Řazení](../../data/odbc/recordset-sorting-records-odbc.md) pořadí záznamů, pokud existuje, součástí [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) datový člen. Rozhraní tento řetězec používá k vytvoření SQL **klauzule ORDER BY** klauzuli.
+- Pořadí [řazení](../../data/odbc/recordset-sorting-records-odbc.md) pro sadu záznamů, pokud existuje, obsažena v datovém členu [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) . Rozhraní používá tento řetězec k vytvoření klauzule **ORDER by** SQL.
 
    > [!TIP]
-   > Použití SQL **Group** klauzuli (a případně **HAVING** klauzule), připojte na konec řetězce filtru klauzule.
+   > Chcete-li použít klauzuli **Group by** (případně klauzuli **having** ), přidejte klauzule na konec řetězce filtru.
 
-- Hodnot ve všech [parametry datových členů](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) zadáte pro třídu. Nastavit hodnoty parametrů těsně před voláním `Open` nebo `Requery`. Rozhraní vazby hodnoty parametru "?" zástupné texty v řetězci SQL. V době kompilace můžete zadat řetězec se zástupnými symboly. V době běhu vyplní rozhraní podrobnosti na základě hodnot parametrů, které můžete předat.
+- Hodnoty všech [datových členů parametrů](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) , které zadáte pro třídu. Hodnoty parametrů nastavíte těsně před voláním `Open` nebo `Requery`. Rozhraní váže hodnoty parametrů k zástupným symbolům "?" v řetězci SQL. V době kompilace zadáte řetězec se zástupnými symboly. V době běhu rozhraní vyplní podrobnosti na základě hodnot parametrů, které předáte.
 
-`Open` vytvoří SQL **vyberte** příkaz z těchto složek. Zobrazit [přizpůsobení výběr](#_core_customizing_the_selection) podrobnosti o tom, jak rozhraní používá složek.
+`Open` vytvoří příkaz SQL **Select** z těchto složek. Podrobnosti o tom, jak rozhraní používá tyto komponenty, najdete v tématu [přizpůsobení výběru](#_core_customizing_the_selection) .
 
-Po vytvoření příkazu, `Open` odešle SQL správce ovladačů ODBC (a knihovna kurzorů rozhraní ODBC, pokud se v paměti), který ho odešle ovladač ODBC pro konkrétní systém DBMS. Ovladač komunikuje s DBMS pro provedení výběru ve zdroji dat a načte první záznam. Rozhraní načte záznam do pole data členů sady záznamů.
+Po vytvoření příkazu `Open` odešle SQL do správce ovladačů ODBC (a do knihovny kurzorů rozhraní ODBC, pokud je v paměti), která ho pošle ovladači ODBC pro konkrétní DBMS. Ovladač komunikuje s DBMS a provede výběr na zdroji dat a načte první záznam. Rozhraní načte záznam do datových členů pole sady záznamů.
 
-Kombinace těchto postupů můžete otevřít [tabulky](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) a k vytvoření dotazu na základě [spojení](../../data/odbc/recordset-performing-a-join-odbc.md) z více tabulek. Pomocí dalších úprav lze volat [předdefinované dotazy](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (uložené procedury), vyberte tabulku sloupce není známý v době návrhu a [svázat](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) je sada záznamů pole nebo je můžete provádět většiny ostatních přístup k datům úlohy. Nelze provést přizpůsobením sady záznamů úlohy můžete provést i nadále [volání funkcí rozhraní API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) nebo přímo provádění příkazů SQL s [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
+Kombinaci těchto postupů můžete použít k otevření [tabulek](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) a k vytvoření dotazu na základě [spojení](../../data/odbc/recordset-performing-a-join-odbc.md) více tabulek. Pomocí dalšího přizpůsobení můžete volat [předdefinované dotazy](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (uložené procedury), vybrat sloupce tabulky, které nejsou v době návrhu známy, a [vytvořit jejich vazby](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) k polím sady záznamů nebo můžete provést většinu dalších úloh přístupu k datům. Úkoly, které nemůžete provést přizpůsobením sad záznamů, se dají provést [voláním funkcí rozhraní ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) nebo přímo vykonávajícími příkazy SQL pomocí [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
 
-##  <a name="_core_customizing_the_selection"></a> Přizpůsobení výběru
+##  <a name="customizing-the-selection"></a><a name="_core_customizing_the_selection"></a>Přizpůsobení výběru
 
-Kromě zadání filtru, pořadí řazení nebo parametry, můžete provést následující akce pro přizpůsobení sady záznamů výběr:
+Kromě poskytnutí filtru, pořadí řazení nebo parametry můžete provést následující akce pro přizpůsobení výběru vaší sady záznamů:
 
-- Zadat vlastní řetězec SQL v *Ipszsql* při volání [otevřít](../../mfc/reference/crecordset-class.md#open) sady záznamů. Nic předáním *lpsqSQL* co má přednost před [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) členská funkce vrátí.
+- Předat vlastní řetězec SQL v *lpszSQL* při volání metody [Open](../../mfc/reference/crecordset-class.md#open) pro sadu záznamů. Cokoli, co předáte v *lpsqSQL* , má přednost před tím, co vrací členskou funkci [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) .
 
-   Další informace najdete v tématu [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), které popisují typy příkazů SQL (nebo částečné výpisy) můžete předat `Open` a systém provádí s nimi.
+   Další informace naleznete v tématu [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), který popisuje typy příkazů SQL (nebo částečné příkazy), které lze předat `Open` a k čemu rozhraní s nimi.
 
     > [!NOTE]
-    >  Pokud vlastní řetězec, který předáte nezačíná "Vyberte" nebo "{volání", MFC předpokládá, že obsahuje název tabulky. To platí i pro další položky seznamu s odrážkami.
+    >  Pokud vlastní řetězec, který předáte, nezačíná "SELECT" nebo "{CALL", knihovna MFC předpokládá, že obsahuje název tabulky. To platí i pro další položku s odrážkami.
 
-- Příkaz ALTER řetězec, který průvodce zapíše do sady záznamů `GetDefaultSQL` členskou funkci. Upravte kód funkce, chcete-li změnit jej vrátí. Ve výchozím nastavení, Průvodce provádí zápis `GetDefaultSQL` funkce, která vrací jeden název tabulky.
+- Upravte řetězec, který průvodce zapíše do `GetDefaultSQL` členské funkce vaší sady záznamů. Úpravou kódu funkce změňte, co vrátí. Ve výchozím nastavení průvodce zapíše funkci `GetDefaultSQL`, která vrací název jedné tabulky.
 
-   Můžete mít `GetDefaultSQL` vrátit žádnou z položek, které můžete předat *Ipszsql* parametr `Open`. Pokud nepředáte vlastní řetězec SQL v *Ipszsql*, systém použije řetězec, který `GetDefaultSQL` vrátí. Minimálně `GetDefaultSQL` musí vracet název jedné tabulky. Ale můžete ho vrátit více názvy tabulek, úplné máte **vyberte** příkaz ODBC **volání** příkazu a tak dále. Seznam můžete předat do *Ipszsql* – nebo mít `GetDefaultSQL` vrátit – viz [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+   Můžete mít `GetDefaultSQL` vrátit libovolnou z položek, které lze předat v parametru *lpszSQL* pro `Open`. Pokud nepředáte vlastní řetězec SQL v *lpszSQL*, rozhraní používá řetězec, který `GetDefaultSQL` vrátí. Minimálně `GetDefaultSQL` musí vracet název jedné tabulky. Můžete ale mít možnost vracet více názvů tabulek, úplný příkaz **Select** , příkaz **volání** rozhraní ODBC a tak dále. Seznam toho, co můžete předat *lpszSQL* , nebo `GetDefaultSQL` vrátit, najdete v tématu [SQL: Přizpůsobení příkazu SQL sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-   Pokud provádíte spojení dvou nebo více tabulek, přepište `GetDefaultSQL` přizpůsobení seznamu tabulka použita v SQL **FROM** klauzuli. Další informace najdete v tématu [sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Provádíte-li spojení dvou nebo více tabulek, přepište `GetDefaultSQL` pro přizpůsobení seznamu tabulek používaného v klauzuli SQL **from** . Další informace naleznete v tématu [Sada záznamů: provádí se spojení (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
+- Ruční vazba dalších datových členů pole, možná na základě informací, které získáte o schématu zdroje dat v době běhu. Přidáte datové členy pole do třídy sady záznamů, [RFX](../../data/odbc/record-field-exchange-using-rfx.md) nebo hromadné volání funkce RFX pro ně do členské funkce [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) a inicializací datových členů v konstruktoru třídy. Další informace naleznete v tématu [Sada záznamů: dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-- Ruční svázání datové členy další pole, možná na základě informací, které získáte o schématu zdroje dat v době běhu. Přidejte datové členy polí třídy sady záznamů [RFX](../../data/odbc/record-field-exchange-using-rfx.md) nebo Bulk RFX funkce se volá, aby [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) členská funkce, a Inicializace datových členů v konstruktoru třídy. Další informace najdete v tématu [sada záznamů: Dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+- Přepsat členské funkce sady záznamů, například `OnSetOptions`, pro nastavení možností specifických pro aplikaci nebo přepsání výchozích hodnot.
 
-- Přepsat záznamů členské funkce, jako například `OnSetOptions`, chcete-li nastavit možnosti specifické pro aplikaci nebo přepsat výchozí nastavení.
+Pokud chcete vytvořit založit sadu záznamů v komplexním příkazu SQL, je nutné použít několik kombinací těchto technik přizpůsobení. Například možná budete chtít použít klauzule SQL a klíčová slova, která nejsou přímo podporována sadami záznamů, nebo možná se připojujete k několika tabulkám.
 
-Pokud chcete založit komplexního příkazu SQL sady záznamů, budete muset použít kombinaci těchto technik. Například možná chcete použít klauzuli SQL a klíčová slova nejsou přímo podporována sady záznamů, nebo možná chcete se připojit se k více tabulek.
-
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>

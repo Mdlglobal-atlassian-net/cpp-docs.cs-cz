@@ -5,18 +5,18 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 81353581d22f3d075fd19d783591ec856c21e241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6061fc7da6f4c4dd53ae70a0e2d5ba7ec40023
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175495"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079634"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamické určování sloupců vrácených příjemci
 
-PROVIDER_COLUMN_ENTRY makra obvykle zpracovávají `IColumnsInfo::GetColumnsInfo` volání. Ale protože příjemce rozhodnout, že chcete používat záložky, zprostředkovatele musí být změnit sloupců vrácených v závislosti na tom, zda uživatel požádá o záložku.
+PROVIDER_COLUMN_ENTRY makra obvykle zpracovávají volání `IColumnsInfo::GetColumnsInfo`. Vzhledem k tomu, že příjemce může použít záložky, poskytovatel musí být schopný změnit sloupce vracené v závislosti na tom, zda příjemce požaduje zadání záložky.
 
-Zpracování `IColumnsInfo::GetColumnsInfo` volání, odstraňte Provider Column Map, který definuje funkci `GetColumnInfo`, z `CCustomWindowsFile` záznam uživatele v *vlastní*RS.h a nahraďte ho vlastní definice `GetColumnInfo` funkce:
+Chcete-li zpracovat `IColumnsInfo::GetColumnsInfo` volání, odstraňte PROVIDER_COLUMN_MAP, který definuje `GetColumnInfo`funkce, od záznamu `CCustomWindowsFile` uživatele ve *vlastním*RS. h a nahraďte ho definicí vlastní `GetColumnInfo` funkce:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -39,11 +39,11 @@ public:
 };
 ```
 
-V dalším kroku implementovat `GetColumnInfo` fungovat v *vlastní*RS.cpp, jak je znázorněno v následujícím kódu.
+Dále implementujte funkci `GetColumnInfo` v *vlastní*RS. cpp, jak je znázorněno v následujícím kódu.
 
-`GetColumnInfo` kontroluje, první Pokud vlastnost OLE DB `DBPROP_BOOKMARKS` nastavena. Chcete-li získat vlastnost, `GetColumnInfo` používá ukazatel (`pRowset`) k objektu sady řádků. `pThis` Ukazatel představuje třídu, která vytvoří sadu řádků, což je třída ukládat mapy vlastností. `GetColumnInfo` zaokrouhlovat `pThis` ukazatel `RCustomRowset` ukazatele.
+`GetColumnInfo` nejprve kontroluje, zda je nastavena vlastnost OLE DB `DBPROP_BOOKMARKS`. Chcete-li získat vlastnost, `GetColumnInfo` používá ukazatel (`pRowset`) k objektu sady řádků. Ukazatel `pThis` představuje třídu, která vytvořila sadu řádků, což je třída, ve které je uložena mapa vlastností. `GetColumnInfo` přetypování ukazatel `pThis` na ukazatel `RCustomRowset`.
 
-Hledat `DBPROP_BOOKMARKS` vlastnost `GetColumnInfo` používá `IRowsetInfo` rozhraní, které lze získat voláním `QueryInterface` na `pRowset` rozhraní. Jako alternativu můžete použít knihovny ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metoda místo.
+Chcete-li zjistit vlastnost `DBPROP_BOOKMARKS`, `GetColumnInfo` používá rozhraní `IRowsetInfo`, které lze získat voláním `QueryInterface` na `pRowset` rozhraní. Alternativně můžete místo toho použít metodu ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) .
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -53,7 +53,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
    static ATLCOLUMNINFO _rgColumns[5];
    ULONG ulCols = 0;
   
-   // Check the property flag for bookmarks; if it is set, set the zero 
+   // Check the property flag for bookmarks; if it is set, set the zero
    // ordinal entry in the column map with the bookmark information.
    CCustomRowset* pRowset = (CCustomRowset*) pThis;
    CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
@@ -75,25 +75,25 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
   
       if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
       {
-         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD), 
-         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark, 
+         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
+         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark,
          DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
    }
   
    // Next, set the other columns up.
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szCommand)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szText)
    ulCols++;
   
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szCommand2)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szText2)
    ulCols++;
   
@@ -104,7 +104,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 }
 ```
 
-Tento příklad používá statické pole pro uložení informace o sloupci. Pokud uživatel nechce sloupec záložky, jedna položka v poli se nepoužívá. Pro zpracování informací, můžete vytvořit dvě pole makra: ADD_COLUMN_ENTRY a ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX přijímá parametr navíc *příznaky*, který je nutný v případě, že určíte sloupec záložky.
+Tento příklad používá ke uchovávání informací o sloupci statické pole. Pokud spotřebitel nechce, aby byl sloupec Bookmark, jedna položka v poli se nepoužívá. Chcete-li tyto informace zpracovat, vytvořte dvě makra pole: ADD_COLUMN_ENTRY a ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX používá další parametr, *příznaky*, který je potřeba, pokud určíte sloupec Bookmark.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -135,7 +135,7 @@ Tento příklad používá statické pole pro uložení informace o sloupci. Pok
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```
 
-V `GetColumnInfo` funkce, makro záložky se používá takto:
+Ve funkci `GetColumnInfo` se makro záložka používá takto:
 
 ```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
@@ -143,8 +143,8 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)
 ```
 
-Teď můžete zkompilovat a spustit Vylepšený zprostředkovatel služeb. Otestovat poskytovateli, upravte test příjemce, jak je popsáno v [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md). Spusťte test příjemce s tímto poskytovatelem a ověřte, že příjemce testů obdrží od zprostředkovatele správné řetězce.
+Nyní můžete zkompilovat a spustit vylepšeného poskytovatele. Chcete-li otestovat poskytovatele, upravte uživatele testu, jak je popsáno v tématu [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md). Spusťte testovacího příjemce se zprostředkovatelem a ověřte, že příjemce testu získá správné řetězce od poskytovatele.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

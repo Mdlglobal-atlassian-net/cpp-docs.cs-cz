@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fbc8b108ea958f526156e7f81a75a2918a0a8903
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418445"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076162"
 ---
 # <a name="functions-c"></a>Funkce (C++)
 
@@ -261,7 +261,7 @@ Proměnná, která je deklarována uvnitř těla funkce, se nazývá *místní p
 
 C++ Místní proměnná může být deklarována jako statická. Proměnná je viditelná pouze uvnitř těla funkce, ale jedna kopie proměnné existuje pro všechny instance funkce. Místní statické objekty jsou při ukončení zrušeny pomocí `atexit`. Nebyl-li statický objekt vytvořen, protože průběh řízení aplikace obešel jeho deklaraci, není proveden žádný pokus o zrušení objektu.
 
-##  <a name="type_deduction"></a>Srážky typu v návratových typech (C++ 14)
+##  <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>Srážky typu v návratových typech (C++ 14)
 
 V C++ 14 můžete použít **auto** k instruování kompilátoru, aby odvodit návratový typ z těla funkce bez nutnosti zadat koncový návratový typ. Všimněte si, že **auto** vždy se odvodit na hodnotu vrácení podle hodnoty. Použijte `auto&&` k instruování kompilátoru, aby odvodit odkaz.
 
@@ -277,7 +277,7 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 
 Všimněte si, že **auto** nezachovává const-Ness typu, který se odvodit. Pro předávání funkcí, jejichž návratová hodnota musí zachovat const-Ness nebo ref-Ness svých argumentů, lze použít klíčové slovo **decltype (auto)** , které používá pravidla odvození typu **decltype** a uchovává všechny informace o typu. **decltype (auto)** se dá použít jako obvyklá návratová hodnota na levé straně nebo jako koncová návratová hodnota.
 
-Následující příklad (založený na kódu z [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)) zobrazuje **decltype (auto)** , který se používá k umožnění dokonalého předávání argumentů funkce v návratovém typu, který není znám, dokud není vytvořena instance šablony.
+Následující příklad (založený na kódu z [N3493](https://wg21.link/n3493)) zobrazuje **decltype (auto)** , který se používá k umožnění dokonalého předávání argumentů funkce v návratovém typu, který není znám, dokud není vytvořena instance šablony.
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -295,7 +295,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="multi_val"></a>Vrácení více hodnot z funkce
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>Vrácení více hodnot z funkce
 
 Existují různé způsoby, jak vrátit více než jednu hodnotu z funkce:
 

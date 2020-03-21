@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 97224380a591f4fa3fe23d25a898c112702f5a5c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630758"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078304"
 ---
 # <a name="project-files"></a>Soubory projektu
 
@@ -26,13 +26,12 @@ Následující ukázkový soubor. vcxproj byl vytvořen pomocí **Průvodce prac
 
 ::: moniker range="<=vs-2017"
 
-Následující ukázkový soubor. vcxproj byl vytvořen zadáním konzolové **aplikace Win32** v dialogovém okně **Nový projekt** . Chcete-li zpracovat soubor projektu, použijte buď nástroj MSBuild. exe v příkazovém řádku, nebo příkaz **sestavit** v integrovaném vývojovém prostředí (IDE). (Tuto ukázku nelze zpracovat, protože nejsou zadány požadované zdrojové soubory a soubory hlaviček.) Další informace o prvcích XML v souboru projektu naleznete v tématu [Referenční dokumentace schématu souborů projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+Následující ukázkový soubor. vcxproj byl vytvořen zadáním **konzolové aplikace Win32** v dialogovém okně **Nový projekt** . Chcete-li zpracovat soubor projektu, použijte buď nástroj MSBuild. exe v příkazovém řádku, nebo příkaz **sestavit** v integrovaném vývojovém prostředí (IDE). (Tuto ukázku nelze zpracovat, protože nejsou zadány požadované zdrojové soubory a soubory hlaviček.) Další informace o prvcích XML v souboru projektu naleznete v tématu [Referenční dokumentace schématu souborů projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
-
 >[!NOTE]
-> Pro projekty v aplikaci Visual Studio 2017 a starší, `pch.h` změňte `stdafx.h` na `pch.cpp` a `stdafx.cpp`na.
+> U projektů v aplikaci Visual Studio 2017 a starších verzích změňte `pch.h` na `stdafx.h` a `pch.cpp` na `stdafx.cpp`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -132,7 +131,7 @@ Následující ukázkový soubor. vcxproj byl vytvořen zadáním konzolové **a
 </Project>
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Projekty sady Visual Studio – C++](../creating-and-managing-visual-cpp-projects.md)<br>
 [Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](../working-with-project-properties.md)

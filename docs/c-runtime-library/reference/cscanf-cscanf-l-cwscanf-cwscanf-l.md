@@ -48,18 +48,18 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778316"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079986"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
-Přečte formátovaná data z konzoly. K dispozici jsou bezpečnější verze těchto funkcí; viz [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
+Přečte formátovaná data z konzoly. K dispozici jsou bezpečnější verze těchto funkcí; viz [_cscanf_s, _cscanf_s_l, _cwscanf_s _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
-> [!NOTE] 
+> [!NOTE]
 > V aplikaci Visual Studio 2015 `printf` a `scanf` rodina funkcí byly deklarovány jako **inline** a přesunuty do hlaviček `<stdio.h>` a `<conio.h>`. Pokud migrujete starší kód, může se v souvislosti s těmito funkcemi zobrazit *linkerů LNK2019* . Další informace najdete v tématu [o C++ historii vizuálních změn 2003 – 2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
@@ -105,7 +105,7 @@ Počet polí, která byla úspěšně převedena a přiřazena. Vrácená hodnot
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_cscanf** čte data přímo z konzoly do umístění předaných *argumentem*. Funkce [_getche](getch-getwch.md) slouží ke čtení znaků. Každý volitelný parametr musí být ukazatel na proměnnou s typem, který odpovídá specifikátoru typu ve *formátu*. Formát řídí interpretaci vstupních polí a má stejnou formu a funkci jako parametr *Format* pro funkci [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Zatímco **_cscanf** normálně vrací vstupní znak, neudělá to, pokud bylo poslední volání **_ungetch**.
+Funkce **_cscanf** čte data přímo z konzoly do umístění předaných *argumentem*. Funkce [_getche](getch-getwch.md) slouží ke čtení znaků. Každý volitelný parametr musí být ukazatel na proměnnou s typem, který odpovídá specifikátoru typu ve *formátu*. Formát řídí interpretaci vstupních polí a má stejnou formu a funkci jako parametr *Format* pro funkci [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Zatímco **_cscanf** obvykle vypisuje vstupní znak, neudělá to, pokud poslední volání bylo **_ungetch**.
 
 Tato funkce ověří své parametry. Pokud má formát **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **EOF**.
 
@@ -122,8 +122,8 @@ Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že pou
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cscanf**, **_cscanf_l**|\<conio. h >|
-|**_cwscanf**, **_cwscanf_l**|\<conio. h > nebo \<wchar. h >|
+|**_cscanf** **_cscanf_l**|\<CONIO. h >|
+|**_cwscanf** **_cwscanf_l**|\<CONIO. h > nebo \<WCHAR. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
@@ -164,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417374"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078587"
 ---
 # <a name="precompiled-header-files"></a>Předkompilované soubory hlaviček
 
-Při vytváření nového projektu v aplikaci Visual Studio je do projektu přidán *předkompilovaný hlavičkový soubor* s názvem *PCH. h* . (V aplikaci Visual Studio 2017 a starší se soubor nazýval *stdafx. h*.) Účelem souboru je urychlení procesu sestavení. Zde by měly být zahrnuty všechny stabilní hlavičkové soubory, například hlavičky standardní knihovny, například `<vector>`. Předkompilovaná hlavička je kompilována pouze v případě, že je upravena nebo všechny soubory, které obsahují. Pokud provedete pouze změny ve zdrojovém kódu projektu, sestavení bude přeskočit kompilaci pro předkompilovanou hlavičku. 
+Při vytváření nového projektu v aplikaci Visual Studio je do projektu přidán *předkompilovaný hlavičkový soubor* s názvem *PCH. h* . (V aplikaci Visual Studio 2017 a starší se soubor nazýval *stdafx. h*.) Účelem souboru je urychlení procesu sestavení. Zde by měly být zahrnuty všechny stabilní hlavičkové soubory, například hlavičky standardní knihovny, například `<vector>`. Předkompilovaná hlavička je kompilována pouze v případě, že je upravena nebo všechny soubory, které obsahují. Pokud provedete pouze změny ve zdrojovém kódu projektu, sestavení bude přeskočit kompilaci pro předkompilovanou hlavičku.
 
-Možnosti kompilátoru pro předkompilované hlavičky jsou [/y](reference/y-precompiled-headers.md). Na stránkách vlastností projektu jsou možnosti umístěny v části **Vlastnosti konfigurace > předkompilovaných hlavičekC++ C/>** . Můžete zvolit, že nebudete používat předkompilované hlavičky, a můžete zadat název souboru hlaviček a cestu k výstupnímu souboru. 
+Možnosti kompilátoru pro předkompilované hlavičky jsou [/y](reference/y-precompiled-headers.md). Na stránkách vlastností projektu jsou možnosti umístěny v části **Vlastnosti konfigurace > předkompilovaných hlavičekC++ C/>** . Můžete zvolit, že nebudete používat předkompilované hlavičky, a můžete zadat název souboru hlaviček a cestu k výstupnímu souboru.
 
 ## <a name="custom-precompiled-code"></a>Vlastní předkompilovaný kód
 

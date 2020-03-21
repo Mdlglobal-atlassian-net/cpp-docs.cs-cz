@@ -10,16 +10,16 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: f234f9a05a871fe474b783a68f644cb4f2b1c2e7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f322d16bbbe91d229fb8efdfb5f2d35cb0a686ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498431"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079223"
 ---
 # <a name="c-project-templates"></a>Šablony projektů C++
 
-Šablony projektů sady Visual Studio generují soubory zdrojového kódu, možnosti kompilátoru, nabídky, panely nástrojů, ikony, odkazy `#include` a příkazy, které jsou vhodné pro typ projektu, který chcete vytvořit. Visual Studio obsahuje několik druhů šablon C++ projektů a poskytuje průvodce pro mnohé z nich, aby bylo možné přizpůsobit projekty při jejich vytváření. Ihned po vytvoření projektu můžete sestavit a spustit aplikaci. Při vývoji aplikace se dobrým zvykem sestavovat.
+Šablony projektů sady Visual Studio generují soubory zdrojového kódu, možnosti kompilátoru, nabídky, panely nástrojů, ikony, odkazy a `#include` příkazy, které jsou vhodné pro typ projektu, který chcete vytvořit. Visual Studio obsahuje několik druhů šablon C++ projektů a poskytuje průvodce pro mnohé z nich, aby bylo možné přizpůsobit projekty při jejich vytváření. Ihned po vytvoření projektu můžete sestavit a spustit aplikaci. Při vývoji aplikace se dobrým zvykem sestavovat.
 
 > [!NOTE]
 > Projekt jazyka C lze vytvořit pomocí C++ šablon projektů. Ve vygenerovaném projektu vyhledejte soubory, které mají příponu názvu souboru. cpp a změňte ji na. c. Pak na stránce **vlastností projektu** projektu (ne pro řešení) rozbalte položku **Vlastnosti konfigurace**, **C++ C/** a vyberte **Upřesnit**. Změňte nastavení **kompilovat jako** na **kompilovat jako kód jazyka C (/TC)** .
@@ -28,7 +28,7 @@ ms.locfileid: "69498431"
 
 Šablony projektů zahrnuté v aplikaci Visual Studio závisí na verzi produktu a na úlohách, které jste nainstalovali. Pokud jste nainstalovali desktopový vývoj s C++ úlohou, Visual Studio má tyto C++ šablony projektů.
 
-### <a name="windows-desktop"></a>Plocha Windows
+### <a name="windows-desktop"></a>Windows Desktop
 
 |Šablona projektu|Popis|
 |----------------------|-----------------------------|
@@ -66,7 +66,7 @@ Pokud přidáte komponentu podpory knihovny MFC a ATL do instalace aplikace Visu
 |----------------------|-----------------------------|
 |[Aplikace MFC](../../mfc/reference/creating-an-mfc-application.md)|Projekt pro vytvoření aplikace, která používá knihovnu Microsoft Foundation Class (MFC).|
 |[MFC – ovládací prvek ActiveX](../../mfc/reference/creating-an-mfc-activex-control.md)|Projekt pro vytvoření ovládacího prvku ActiveX, který používá knihovnu MFC.|
-|[MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)|Projekt pro vytvoření knihovny DLL, která používá knihovnu MFC.|
+|[KNIHOVNA MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)|Projekt pro vytvoření knihovny DLL, která používá knihovnu MFC.|
 
 ### <a name="windows-universal-apps"></a>Univerzální aplikace pro Windows
 
@@ -89,5 +89,3 @@ Přehled univerzálních aplikací pro Windows v C++najdete v tématu [univerzá
 ## <a name="todo-comments"></a>Komentáře TODO
 
 Mnoho souborů generovaných šablonou projektu obsahuje komentáře TODO, které vám pomohou určit, kde můžete zadat vlastní zdrojový kód. Další informace o tom, jak přidat kód, naleznete v tématu [Přidání funkcionality pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md) a [práce se soubory prostředků](../../windows/working-with-resource-files.md).
-
-

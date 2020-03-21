@@ -4,83 +4,81 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400631"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079253"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Nástroje a funkce C++ v různých edicích sady Visual Studio
 
-
 ::: moniker range=">=vs-2019"
 
-
-Následující C++ funkce jsou k dispozici v aplikaci Visual Studio 2019. Pokud není uvedeno jinak, jsou všechny funkce dostupné ve všech edicích: Visual Studio Community, Visual Studio Professional a Visual Studio Enterprise. Některé funkce vyžadují konkrétní úlohy nebo volitelné součásti, které můžete nainstalovat pomocí instalačního programu sady Visual Studio.
+V aplikaci C++ Visual Studio 2019 jsou k dispozici následující funkce. Pokud není uvedeno jinak, všechny funkce jsou k dispozici ve všech edicích: Visual Studio Community, Visual Studio Professional a Visual Studio Enterprise. Některé funkce vyžadují konkrétní úlohy nebo volitelné součásti, které můžete nainstalovat pomocí Instalační program pro Visual Studio.
 
 ## <a name="platforms"></a>Platformy
 
-- Plocha Windows
-- Univerzální platforma Windows ((tablet PC, Xbox, IoT a HoloLens))
+- Windows Desktop
+- Univerzální platforma Windows (tablet, PC, Xbox, IoT a HoloLens))
 - Linux
 - Android
 - iOS
 
 ## <a name="compilers"></a>Kompilátory
 
-- 32-bit kompilátor MSVC x86, x 64, ARM a ARM64
-- 64bitovým kompilátorem MSVC pro x86, x 64, ARM a ARM64
-- GCC křížový kompilátor pro ARM
+- MSVC 32 – 32bitový kompilátor pro procesory x86, x64, ARM a ARM64
+- MSVC 64 – 32bitový kompilátor pro procesory x86, x64, ARM a ARM64
+- Křížové kompilátory RSZ pro ARM
 - Clang/LLVM
-  - Na Windows, Clang/LLVM 7.0 x86 nebo x64 (jenom podpora Cmaku). Jiné verze Clang mohou fungovat, ale nejsou oficiálně podporované.
-  - V žádné instalaci Clang/LLVM podporována distribuce Linuxu.
- 
+  - Ve Windows, Clang/LLVM 7,0, cílící na x86 nebo x64 (pouze podpora CMake). Jiné verze Clang mohou fungovat, ale nejsou oficiálně podporovány.
+  - V systému Linux všechny instalace Clang/LLVM podporované rozhraním distribuce.
+
 ## <a name="c-workloads"></a>C++Úlohy
 
-Visual Studio obsahuje následující úlohy pro C++ vývoje. Můžete nainstalovat některé nebo všechny z nich, společně s další úlohy, jako jsou .NET Desktop Development, vývoj v jazyce Python, vývoj pro Azure, vývoj rozšíření sady Visual Studio a dalších.
+Visual Studio obsahuje následující úlohy pro C++ vývoj. Můžete nainstalovat libovolné nebo všechny tyto součásti, spolu s dalšími úlohami, jako je vývoj desktopových aplikací pro .NET, vývoj v jazyce Python, vývoj pro Azure, vývoj rozšíření sady Visual Studio a další.
 
 ### <a name="desktop-development-with-c"></a>Vývoj desktopových aplikací pomocí C++
 
-Zahrnuté:
-- C++– základní desktopové funkce
+Obsaženy
+- C++základní desktopové funkce
 
 Volitelné součásti:
-- MSVC v142 – VS 2019 C++ x64/x86 sestavení nástroje (v14.21)
+- Nástroje MSVC V142-VS C++ 2019 x64/x86 Build Tools (v 14.21)
 - Windows 10 SDK (10.0.17763.0)
 - Just-In-Time debugger
 - Nástroje pro profilaci v C++
-- Nástroje C++ CMake pro Windows
-- C++ ATL pro nástroje pro vytváření v142 (x86 & x64)
+- C++Nástroje CMake pro Windows
+- C++ATL pro nástroje V142 Build (x86 & x64)
 - Testovací adaptér pro Boost.Test
 - Testovací adaptér pro Google Test
 - Live Share
 - IntelliCode
-- IntelliTrace (pouze v Enterprise)
-- C++ MFC pro nástroje pro vytváření v142 (x86 & x64)
-- C++/ Podpora rozhraní příkazového řádku pro nástroje pro vytváření v142 (14.21)
-- Moduly C++ pro v142 sestavení nástroje (x64/x86 – experimentální)
-- Clang kompilátor pro Windows
+- IntelliTrace (jenom Enterprise)
+- C++MFC pro nástroje V142 Build (x86 & x64)
+- C++Podpora/CLI pro nástroje V142 Build (14,21)
+- C++Moduly pro V142 Build Tools (x64/x86 – experimentální)
+- Kompilátor Clang pro Windows
 - IncrediBuild – urychlení sestavení
 - Windows 10 SDK (10.0.17134.0)
 - Windows 10 SDK (10.0.16299.0)
-- MSVC v141 – sady VS 2017 C++ x64/x86 sestavení nástroje (v14.16)
-- MSVC v140 - VS 2015 C++ vytvářet nástroje (v14.00)
+- Nástroje MSVC v141-VS C++ 2017 x64/x86 Build Tools (v 14.16)
+- MSVC v140-VS 2015 C++ Build Tools (v 14.00)
 
-### <a name="linux-development-with-c"></a>Vývoj pro Linux v C++
+### <a name="linux-development-with-c"></a>Vývoj linuxových aplikací v jazyce C++
 
-Zahrnuté:
-- C++ – základní funkce
+Obsaženy
+- C++základní funkce
 - Windows Universal C Runtime
-- C++ pro vývoj pro Linux
+- C++pro vývoj pro Linux
 
 Volitelné součásti:
-- Nástroje C++ CMake pro Linux
-- Vložené a IoT vývojářské nástroje
+- C++Nástroje CMake pro Linux
+- Nástroje pro vývoj integrovaných a IoT
 
-### <a name="universal-windows-platform-development"></a>Vývoj pro univerzální platformu Windows
+### <a name="universal-windows-platform-development"></a>Vývoj pro Univerzální platformu Windows
 
-Zahrnuté:
+Obsaženy
 - Blend for Visual Studio
 - .NET native a .NET Standard
 - Správce balíčků NuGet
@@ -89,10 +87,10 @@ Zahrnuté:
 
 Volitelné součásti:
 - IntelliCode
-- IntelliTrace (pouze v Enterprise)
+- IntelliTrace (jenom Enterprise)
 - Připojení zařízení USB
-- Nástroje pro univerzální platformu Windows C++ (v142)
-- Nástroje pro univerzální platformu Windows C++ (v141)
+- C++(v142) Nástroje Univerzální platforma Windows
+- C++v141 Nástroje Univerzální platforma Windows
 - Ladicí program grafiky a profiler GPU pro DirectX
 - Windows 10 SDK (10.0.18362.0)
 - Windows 10 SDK (10.0.17134.0)
@@ -101,130 +99,129 @@ Volitelné součásti:
 
 ### <a name="c-game-development"></a>C++Vývoj her
 
-Zahrnuté:
-- C++ – základní funkce
+Obsaženy
+- C++základní funkce
 - Windows Universal C Runtime
-- C++ 2019 Redistributable Update
-- MSVC v142 – VS 2019 C++ x64/x86 sestavení nástroje (v14.21)
+- C++2019 Distribuovatelný aktualizace
+- Nástroje MSVC V142-VS C++ 2019 x64/x86 Build Tools (v 14.21)
 
 Volitelné součásti:
 - Nástroje pro profilaci v C++
 - Windows 10 SDK (10.0.17763.0)
 - IntelliCode
-- IntelliTrace (pouze v Enterprise)
+- IntelliTrace (jenom Enterprise)
 - Windows 10 SDK (10.0.17134.0)
 - Windows 10 SDK (10.0.16299.0)
 - IncrediBuild – urychlení sestavení
 - Cocos
 - Instalační program Unreal Engine
-- Podpora androidu integrovaného vývojového prostředí pro Unreal engine
+- Podpora prostředí Android IDE pro modul Unreal
 
-### <a name="mobile-development-with-c"></a>Vývoj mobilních aplikací pomocí C++
+### <a name="mobile-development-with-c"></a>Vývoj mobilních aplikací v jazyce C++
 
-Zahrnuté:
-- C++ – základní funkce
-- Instalace sady Android SDK (úroveň rozhraní API 25) (místní instalace pro vývoj mobilních aplikací pomocí C++)
+Obsaženy
+- C++základní funkce
+- Instalace Android SDK (úroveň rozhraní API 25) (místní instalace pro vývoj pro C++mobilní zařízení pomocí)
 
 Volitelné součásti:
 - Android NDK (R16B)
 - Apache Ant (1.9.3)
 - Vývojové nástroje C++ pro Android
 - IntelliCode
-- Emulátor Google Android (API úrovně 25) (místní instalace)
+- Google Android Emulator (rozhraní API úrovně 25) (místní instalace)
 - Intel Hardware Accelerated provádění Manager (HAXM) (místní instalace)
-- Sada Android NDK (R16B) (32 bitů)
+- Android NDK (R16B) (32 bitů)
 - Nástroje pro vývoj iOS C++
 - IncrediBuild – urychlení sestavení
 
-
 ## <a name="individual-components"></a>Jednotlivé komponenty
 
-Tyto součásti můžete nainstalovat samostatně z jakékoli pracovní zátěže.
+Tyto součásti můžete nainstalovat nezávisle na jakémkoli zatížení.
 
 - Diagnostika jazyka JavaScript
 - Live Share
-- Modul runtime C++ Universal Windows Platform pro v142 nástroje sestavení
+- C++Modul runtime Univerzální platforma Windows pro nástroje V142 Build
 - Publikování ClickOnce
-- Microsoft Visual Studio Installer Projects
+- Projekty instalační služby Microsoft Visual Studio
 
 ## <a name="libraries-and-headers"></a>Knihovny a hlavičky
 
-- Knihovny a hlavičky Windows
-- Windows Universal C Runtime (CRT)
+- Hlavičky a knihovny Windows
+- Windows Universal C runtime (CRT)
 - Standardní knihovna C++
 - ATL
 - MFC
 - .NET Framework – knihovna tříd
-- Knihovna podpory C++ pro rozhraní .NET
-- OpenMP 2.0
-- Více než 900 knihovny open-source prostřednictvím vcpkg katalogu
+- C++Podpora knihovny pro .NET
+- OpenMP 2,0
+- Více než 900 Open-Source knihoven prostřednictvím katalogu vcpkg
 
-## <a name="build-and-project-systems"></a>Sestavit a projektovat systémy
+## <a name="build-and-project-systems"></a>Systémy sestavení a projektů
 
 - CMake
-- Libovolná sestavení systému prostřednictvím funkce Otevřít složku
-- Sestavení příkazového řádku (msbuild.exe)
+- Libovolný systém sestavení prostřednictvím otevřené složky
+- Sestavení příkazového řádku (MSBuild. exe)
 - Nativní cílení na více platforem
 - Spravované cílení na více platforem
 - Paralelní sestavení
-- Vlastní nastavení sestavení
-- Rozšiřitelnost stránek vlastností
+- Přizpůsobení sestavení
+- Rozšíření stránek vlastností
 
 ## <a name="project-templates"></a>Šablony projektů
 
-Následující šablony projektů jsou k dispozici v závislosti na úlohy, které jste nainstalovali.
+Následující šablony projektu jsou k dispozici v závislosti na tom, jaké úlohy jste nainstalovali.
 
 Plocha Windows:
 - Prázdný projekt
 - Konzolová aplikace
-- Desktopový Průvodce pro Windows
-- Aplikace klasické pracovní plochy Windows
-- Projekt sdílené položky
-- MFC App
-- Dynamické knihovny DLL
+- Průvodce desktopem systému Windows
+- Desktopová aplikace pro Windows
+- Projekt sdílených položek
+- Aplikace MFC
+- Knihovna dynamického propojení
 - Prázdný projekt CLR
 - Konzolová aplikace CLR
 - Statická knihovna
 - Projekt CMake
-- Projekt knihovny ATL
+- ATL – projekt
 - Knihovna MFC DLL
 - Knihovna tříd CLR
 - Projekt makefile (Windows)
-- Ovládací prvek ActiveX knihovny MFC
+- ActiveXControl knihovny MFC
 - Nativní projekt testu jednotek
 - Google Test
 
-Universal Windows Platform (C++/CX):
+Univerzální platforma Windows (C++/CX):
 - Prázdná aplikace
-- Rozhraní DirectX 11 a XAML aplikací
+- Aplikace DirectX 11 a XAML
 - Aplikace DirectX 11
-- Aplikace DirectX 12 
-- Aplikace testů jednotek 
-- DLL 
-- Součást prostředí Windows Runtime 
-- Statická knihovna 
-- Projekt Windows Application Packaging
+- Aplikace DirectX 12
+- Aplikace pro testování částí
+- DLL
+- Součást prostředí Windows Runtime
+- Statická knihovna
+- Projekt pro balení aplikace pro systém Windows
 
 Linux:
 - Konzolová aplikace (Linux)
 - Prázdný projekt (Linux)
-- Blikání Raspberry Pi
+- Bliknutí ve Maline PI
 - Projekt makefile (Linux)
 
 ## <a name="tools"></a>Nástroje
 
-- Přírůstkový Linker (Link.exe)
-- Nástroj Microsoft Makefile (Nmake.exe)
-- Generátor lib (Lib.exe)
-- Kompilátor prostředků Windows (Rc.exe)
-- Prostředků Windows pro převaděč objekt (CvtRes.exe)
-- Procházet Nástroj Údržba informací (BscMake.exe)
-- C++ Name Undecorator (Undname.exe)
-- Tlumič COFF/PE (Dumpbin.exe)
-- Editor COFF/PE (Editbin.exe)
-- MASM (Ml.exe)
+- Přírůstkový Linker (Link. exe)
+- Microsoft makefile Utility (NMAKE. exe)
+- Lib Generator (lib. exe)
+- Kompilátor prostředků Windows (RC. exe)
+- Převaděč prostředků Windows do objektů (CvtRes. exe)
+- Nástroj pro údržbu informací o procházení (BscMake. exe)
+- C++Název Undecorator (UNDNAME. exe)
+- COFF/PE tlumič (DUMPBIN. exe)
+- Editor COFF/PE (nástroje Editbin. exe)
+- MASM (ml. exe)
 - Spy++
-- Errlook –
+- ErrLook
 - AtlTrace
 - Odvozená pravidla
 - Optimalizace na základě profilu
@@ -232,8 +229,8 @@ Linux:
 ## <a name="debugging-features"></a>Funkce ladění
 
 - Nativní ladění
-- natvis (nativní typ vizualizace)
-- Grafické ladění
+- Natvis (vizualizace nativního typu)
+- Ladění grafiky
 - Spravované ladění
 - Využití GPU
 - Využití paměti
@@ -245,22 +242,22 @@ Linux:
 
 - Návrhář XAML
 - Návrhář/Editor stylu CSS
-- Návrhář/Editor HTML
+- Návrhář nebo editor HTML
 - Editor XML
 - Editor zdrojového kódu
-- Pro zvýšení produktivity: Refaktoring, modul IntelliSense zaměstnance EDG C++ formátování kódu
+- Funkce pro produktivitu: refaktoring, modul EDG C++ IntelliSense, formátování kódu
 - Návrhář formulářů Windows
 - Návrhář dat
-- Nativní Editor prostředků (.rc soubory)
+- Nativní editor prostředků (soubory. RC)
 - Editory prostředků
 - Editor modelů
 - Návrhář shaderů
-- Živé ověření závislosti (pouze v Enterprise)
-- Diagramy vrstev architektury (pouze v Enterprise)
-- Ověření architektury (pouze v Enterprise)
-- Klonování kódu (pouze v Enterprise)
+- Ověřování závislostí v reálném čase (jenom Enterprise)
+- Diagramy vrstev architektury (jenom Enterprise)
+- Ověření architektury (jenom Enterprise)
+- Klon kódu (jenom Enterprise)
 
-## <a name="data-features"></a>Datových funkcích
+## <a name="data-features"></a>Datové funkce
 
 - Návrhář dat
 - Datové objekty
@@ -269,200 +266,200 @@ Linux:
 
 ## <a name="automation-and-extensibility"></a>Automatizace a rozšiřitelnost
 
-- Objektové modely rozšíření
+- Rozšiřitelné objektové modely
 - Model kódu
 - Model projektu
-- Model editoru prostředku
+- Model editoru prostředků
 - Model průvodce
 - Model objektu ladicího programu
 
 ## <a name="application-lifecycle-management-tools"></a>Nástroje pro správu životního cyklu aplikací
 
-- Testování jednotek (nativní Microsoft C++, Boost.Test, Google Test, CTest)
-- Kód grafy mapy a závislostí (Professional a Enterprise)
-- Pokrytí kódu (pouze Enterprise)
-- Manuální testování (pouze v Enterprise)
-- Relace nahodilého testování (pouze v Enterprise)
-- Správa testovacích případů (pouze v Enterprise)
-- Ladicí program integrace mapy kódu (pouze v Enterprise)
-- Live Unit Testing (pouze v Enterprise)
-- IntelliTrace (pouze v Enterprise)
-- IntelliTest (pouze v Enterprise)
-- Microsoft Fakes (izolace pro testování jednotek) (pouze v Enterprise)
-- Pokrytí kódu (pouze v Enterprise)
+- Testování částí (Microsoft Native C++, zvyšování. Test, Google test, CTest)
+- Mapa kódu a grafy závislostí (Professional a Enterprise)
+- Pokrytí kódu (jenom Enterprise)
+- Manuální testování (jenom Enterprise)
+- Průzkumné testování (jenom Enterprise)
+- Správa testovacích případů (jenom Enterprise)
+- Integrace ladicího programu mapy kódu (jenom Enterprise)
+- Live Unit Testing (jenom Enterprise)
+- IntelliTrace (jenom Enterprise)
+- IntelliTest (jenom Enterprise)
+- Napodobeniny Microsoftu (jenom Enterprise test Unit) (jenom Enterprise)
+- Pokrytí kódu (jenom Enterprise)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Instalace sady Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Co je nového v sadě Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[C++typy projektů v sadě Visual Studio](../build/reference/visual-cpp-project-types.md)
+[Co je nového v aplikaci Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[C++typy projektů v aplikaci Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Následující tabulky popisují Visual C++ funkce, které jsou k dispozici v sadě Visual Studio 2017. X v buňce znamená, že funkce je k dispozici. prázdná buňka znamená, že tato funkce není k dispozici. Poznámky v závorkách označují, že funkce je k dispozici, ale s omezeným přístupem.
+V následujících tabulkách jsou uvedeny C++ vizuální funkce, které jsou k dispozici v aplikaci visual Studio 2017. X v buňce označuje, že funkce je k dispozici; prázdná buňka označuje, že funkce není k dispozici. Poznámky v závorkách označují, že funkce je k dispozici, ale je omezená.
 
 ## <a name="platforms"></a>Platformy
 
 ||||||
 |-|-|-|-|-|
-|Platforma|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
-|Plocha Windows||X|X|X|
-|Univerzální platforma Windows ((telefonu, tabletu, počítače, Xbox, IoT a HoloLens))|X||X|X|
-|Linux|X|X|
-|Microsoft Store 8.1|||X|X|
-|Windows Phone 8.0|||X|X|
-|Android|||X|X|
-|iOS|||X|X|
+|Platforma|Visual Studio Express pro Windows 10|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Community/Professional|Visual Studio Enterprise|
+|Windows Desktop||×|×|×|
+|Univerzální platforma Windows ((telefon, tablet, PC, Xbox, IoT a HoloLens))|×||×|×|
+|Linux|×|×|
+|Microsoft Store 8,1|||×|×|
+|Windows Phone 8,0|||×|×|
+|Android|||×|×|
+|iOS|||×|×|
 
 ## <a name="compilers"></a>Kompilátory
 
-|Kompilátor|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Přepínač|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|MSVC X86 32-bit kompilátor|X|X|X|X|
-|X86_arm cross-compiler|X||X|X|
-|MSVC x64 64-bit kompilátor|||X|X|
-|X86_ x64 cross-compiler|X|X|X|X|
+|MSVC 32 – 32bitový kompilátor x86|×|×|×|×|
+|X86_arm mezi kompilátorem|×||×|×|
+|64 MSVC – 32bitový kompilátor x64|||×|×|
+|X86_ x64 cross-compiler|×|×|×|×|
 
 ## <a name="libraries-and-headers"></a>Knihovny a hlavičky
 
-|Knihovna nebo záhlaví|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Knihovna nebo hlavička|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Windows hlavičky a knihovny a Knihovna CRT|(X)|X|X|X|
-|Standardní knihovna C++|X|X|X|X|
-|ATL|||X|X|
-|MFC|||X|X|
-|.NET Framework – knihovna tříd||X|X|X|
-|Knihovna podpory C++ pro rozhraní .NET||X|X|X|
-|OpenMP 2.0|X|X|X|X|
+|Hlavičky a knihovny systému Windows a Knihovna CRT|(X)|×|×|×|
+|Standardní knihovna C++|×|×|×|×|
+|ATL|||×|×|
+|MFC|||×|×|
+|.NET Framework – knihovna tříd||×|×|×|
+|C++Podpora knihovny pro .NET||×|×|×|
+|OpenMP 2,0|×|×|×|×|
 
 ## <a name="project-templates"></a>Šablony projektů
 
-|Šablona|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Šablona|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Šablony XAML pro UPW, Windows 8.1, Windows Phone 8.0|X||X|X|
-|Aplikace Direct3D|X||X|X|
-|Knihovny DLL (Universal Windows)|X||X|X|
-|Statická knihovna (Universal Windows)|X||X|X|
-|Součást prostředí Windows Runtime|X||X|X|
-|Aplikace testů jednotek (Universal Windows)|X||X|X|
-|Projekt knihovny ATL|||X|X|
-|Knihovna tříd (CLR)||X|X|X|
-|Konzolová aplikace CLR||X|X|X|
-|Prázdný projekt CLR||X|X|X|
-|Vlastní průvodce|||X|X|
-|Prázdný projekt||X|X|X|
-|Projekt makefile||X|X|X|
-|Ovládací prvek ActiveX knihovny MFC|||X|X|
-|Aplikace MFC|||X|X|
-|MFC DLL|||X|X|
-|Projekt testů|X|X|X|X|
-|Konzolová aplikace Win32||X|X|X|
-|Projekt Win32||X|X|X|
+|Šablony XAML pro UWP, Windows 8.1 Windows Phone 8,0|×||×|×|
+|Aplikace Direct3D|×||×|×|
+|DLL (univerzální pro Windows)|×||×|×|
+|Statická knihovna (univerzální pro Windows)|×||×|×|
+|Součást prostředí Windows Runtime|×||×|×|
+|Aplikace pro testování jednotek (univerzální pro Windows)|×||×|×|
+|ATL – projekt|||×|×|
+|Knihovna tříd (CLR)||×|×|×|
+|Konzolová aplikace CLR||×|×|×|
+|Prázdný projekt CLR||×|×|×|
+|Vlastní průvodce|||×|×|
+|Prázdný projekt||×|×|×|
+|Projekt makefile||×|×|×|
+|MFC – ovládací prvek ActiveX|||×|×|
+|Aplikace MFC|||×|×|
+|MFC DLL|||×|×|
+|Projekt testů|×|×|×|×|
+|Konzolová aplikace Win32||×|×|×|
+|Projekt Win32||×|×|×|
 
 ## <a name="tools"></a>Nástroje
 
-|Nástroj|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Nástroj|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Přírůstkový Linker (Link.exe)|X|X|X|X|
-|Nástroj pro údržbu programu (Nmake.exe)||X|X|X|
-|Generátor lib (Lib.exe)|X|X|X|X|
-|Kompilátor prostředků Windows (Rc.exe)|X|X|X|X|
-|Prostředků Windows pro převaděč objekt (CvtRes.exe)||X|X|X|
-|Procházet Nástroj Údržba informací (BscMake.exe)|X|X|X|X|
-|C++ Name Undecorator (Undname.exe)|X|X|X|X|
-|Tlumič COFF/PE (Dumpbin.exe)|X|X|X|X|
-|Editor COFF/PE (Editbin.exe)|X|X|X|X|
-|MASM (Ml.exe)|||X|X|
-|Spy++|||X|X|
-|Errlook –|||X|X|
-|AtlTrace|||X|X|
-|Devenv.com|||X|X|
-|Odvozená pravidla|||X|X|
-|Upgrade projektů VCBuild .vcproj na MSBuild (VCUpgrade.exe)|X|X|X|X|
-|Optimalizace na základě profilu|||X|X|
+|Přírůstkový Linker (Link. exe)|×|×|×|×|
+|Nástroj Údržba programu (NMAKE. exe)||×|×|×|
+|Lib Generator (lib. exe)|×|×|×|×|
+|Kompilátor prostředků Windows (RC. exe)|×|×|×|×|
+|Převaděč prostředků Windows do objektů (CvtRes. exe)||×|×|×|
+|Nástroj pro údržbu informací o procházení (BscMake. exe)|×|×|×|×|
+|C++Název Undecorator (UNDNAME. exe)|×|×|×|×|
+|COFF/PE tlumič (DUMPBIN. exe)|×|×|×|×|
+|Editor COFF/PE (nástroje Editbin. exe)|×|×|×|×|
+|MASM (ml. exe)|||×|×|
+|Spy++|||×|×|
+|ErrLook|||×|×|
+|AtlTrace|||×|×|
+|Devenv.com|||×|×|
+|Odvozená pravidla|||×|×|
+|Upgrade projektů VCBuild. vcproj na MSBuild (VCUpgrade. exe)|×|×|×|×|
+|Optimalizace na základě profilu|||×|×|
 
 ## <a name="debugging-features"></a>Funkce ladění
 
-|Funkce ladění|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Funkce ladění|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Nativní ladění|X|X|X|X|
-|natvis (nativní typ vizualizace)|X|X|X|X|
-|Grafické ladění|X||X|X|
-|Spravované ladění||X|X|X|
-|Využití GPU|X||X|X|
-|Využití paměti|X||X|X|
-|Vzdálené ladění|X|X|X|X|
-|Ladění SQL|||X|X|
-|Analýza statického kódu|Limited|Limited|X|X|
+|Nativní ladění|×|×|×|×|
+|Natvis (vizualizace nativního typu)|×|×|×|×|
+|Ladění grafiky|×||×|×|
+|Spravované ladění||×|×|×|
+|Využití GPU|×||×|×|
+|Využití paměti|×||×|×|
+|Vzdálené ladění|×|×|×|×|
+|Ladění SQL|||×|×|
+|Analýza statického kódu|Limitovan|Limitovan|×|×|
 
 ## <a name="designers-and-editors"></a>Návrháři a editory
 
-|Návrhář nebo Editor|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Návrhář nebo Editor|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
 |------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Návrhář XAML|X||X|X|
-|Návrhář/Editor stylu CSS|X|X|X|X|
-|Návrhář/Editor HTML|X|X|X|X|
-|Editor XML|X|X|X|X|
-|Editor zdrojového kódu|X|X|X|X|
-|Pro zvýšení produktivity: Refaktoring, technologie IntelliSense, formátování kódu jazyka C++|X|X|X|X|
-|Návrhář formulářů Windows||X|X|X|
-|Návrhář dat|||X|X|
-|Nativní Editor prostředků (.rc soubory)|||X|X|
-|Editory prostředků|X|X|X|X|
-|Editor modelů|X||X|X|
-|Návrhář shaderů|X||X|X|
+|Návrhář XAML|×||×|×|
+|Návrhář/Editor stylu CSS|×|×|×|×|
+|Návrhář nebo editor HTML|×|×|×|×|
+|Editor XML|×|×|×|×|
+|Editor zdrojového kódu|×|×|×|×|
+|Funkce pro produktivitu: refaktoring, C++ IntelliSense, formátování kódu|×|×|×|×|
+|Návrhář formulářů Windows||×|×|×|
+|Návrhář dat|||×|×|
+|Nativní editor prostředků (soubory. RC)|||×|×|
+|Editory prostředků|×|×|×|×|
+|Editor modelů|×||×|×|
+|Návrhář shaderů|×||×|×|
 
-## <a name="data-features"></a>Datových funkcích
+## <a name="data-features"></a>Datové funkce
 
-|Funkce dat|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Funkce dat|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
 |------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Návrhář dat|||X|X|
-|Datové objekty|||X|X|
-|Webové služby|||X|X|
-|Průzkumník serveru|||X|X|
+|Návrhář dat|||×|×|
+|Datové objekty|||×|×|
+|Webové služby|||×|×|
+|Průzkumník serveru|||×|×|
 
-## <a name="build-and-project-systems"></a>Sestavit a projektovat systémy
+## <a name="build-and-project-systems"></a>Systémy sestavení a projektů
 
-|Sestavení nebo projektu funkce|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Funkce Build nebo Project|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
 |------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Sestavení příkazového řádku (msbuild.exe)|X|X|X|X|
-|Nativní cílení na více platforem||X|X|X|
-|Spravované cílení na více platforem||X|X|X|
-|Paralelní sestavení|X|X|X|X|
-|Vlastní nastavení sestavení|X|X|X|X|
-|Rozšiřitelnost stránek vlastností|X|X|X|X|
+|Sestavení příkazového řádku (MSBuild. exe)|×|×|×|×|
+|Nativní cílení na více platforem||×|×|×|
+|Spravované cílení na více platforem||×|×|×|
+|Paralelní sestavení|×|×|×|×|
+|Přizpůsobení sestavení|×|×|×|×|
+|Rozšíření stránek vlastností|×|×|×|×|
 
 ## <a name="automation-and-extensibility"></a>Automatizace a rozšiřitelnost
 
-|Automatizace a rozšiřitelnost|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|Automatizace a rozšiřitelnost|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
 |----------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|Objektové modely rozšíření|||X|X|
-|Model kódu|||X|X|
-|Model projektu|||X|X|
-|Model editoru prostředku|||X|X|
-|Model průvodce|||X|X|
-|Model objektu ladicího programu|||X|X|
+|Rozšiřitelné objektové modely|||×|×|
+|Model kódu|||×|×|
+|Model projektu|||×|×|
+|Model editoru prostředků|||×|×|
+|Model průvodce|||×|×|
+|Model objektu ladicího programu|||×|×|
 
 ## <a name="application-lifecycle-management-tools"></a>Nástroje pro správu životního cyklu aplikací
 
 ||||||
 |-|-|-|-|-|
-|Nástroj|Visual Studio Express pro Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
-|Testování jednotek (nativní rozhraní framework)|X|X|X|X|
-|Testování jednotek (spravované framework)||X|X|X|
-|Pokrytí kódu||||X|
-|Manuální testování||||X|
-|nahodilé testování||||X|
-|Správa testovacích případů||||X|
-|Kód mapy a závislostí grafů|||jen pro čtení|X|
-|Ladění mapy kódu||||X|
+|Nástroj|Visual Studio Express pro Windows|Visual Studio Express pro desktopovou plochu Windows|Visual Studio Professional/komunita|Visual Studio Enterprise|
+|Testování částí (nativní rozhraní)|×|×|×|×|
+|Testování částí (spravované rozhraní)||×|×|×|
+|Pokrytí kódu||||×|
+|Manuální testování||||×|
+|nahodilé testování||||×|
+|Správa testovacích případů||||×|
+|Mapa kódu a grafy závislostí|||jen pro čtení|×|
+|Ladění mapy kódu||||×|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Instalace sady Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Co je nového v sadě Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[C++typy projektů v sadě Visual Studio](../build/reference/visual-cpp-project-types.md)
+[Co je nového v aplikaci Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[C++typy projektů v aplikaci Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end

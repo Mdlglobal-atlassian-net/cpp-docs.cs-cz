@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: 28b1c21382832c8775ffe0406038a482e74076c5
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299723"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079629"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Vynutit výstup souboru)
 
@@ -41,7 +41,7 @@ Pokud je modul zkompilován s možností **/CLR**, **/Force** nevytvoří obráz
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**. 
+1. V **Průzkumník řešení** klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**.
 
 1. Klikněte na složku **linker** .
 
@@ -53,9 +53,9 @@ Další informace najdete v tématu [nastavení C++ vlastností kompilátoru a s
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční zdroje k linkeru MSVC](linking.md)<br/>
 [Možnosti linkeru MSVC](linker-options.md)

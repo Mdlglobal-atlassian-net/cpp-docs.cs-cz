@@ -9,37 +9,37 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: 9d249c7effc2c78e319207d82c9a963d7a61a67c
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d928d8de34c6caab0f86e9205d0aea45b5ed737c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504765"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079451"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Vytváření aplikací MFC ve stylu webového prohlížeče
 
-Webovou aplikaci ve stylu prohlížeče můžete přístup k informacím z Internetu (například HTML nebo aktivní dokumenty) nebo intranet, stejně jako složky v místním systému souborů a v síti. Odvozené třídy zobrazení vaší aplikace z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektivně provedete webový prohlížeč pro aplikaci tím, že poskytuje zobrazení pomocí ovládacího prvku WebBrowser.
+Aplikace ve stylu webového prohlížeče má přístup k informacím z Internetu (například HTML nebo Active Documents) nebo intranetu a také ke složkám v místním systému souborů a v síti. Vyvoláním třídy zobrazení aplikace z [CHtmlView –](../../mfc/reference/chtmlview-class.md)efektivně aplikace zpřístupní webový prohlížeč tím, že poskytuje zobrazení s ovládacím prvkem WebBrowser.
 
-### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>K vytvoření webové aplikace v prohlížeči podle architektury dokument/zobrazení MFC
+### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Vytvoření aplikace webového prohlížeče na základě architektury document/view knihovny MFC
 
-1. Postupujte podle pokynů v [vytvoření aplikace MFC](../../mfc/reference/creating-an-mfc-application.md).
+1. Postupujte podle pokynů v části [Vytvoření aplikace MFC](../../mfc/reference/creating-an-mfc-application.md).
 
-1. V Průvodce aplikací MFC [typ aplikace](../../mfc/reference/application-type-mfc-application-wizard.md) stránce, provedení určitých, který **architekturu Document/view** je zaškrtnuté políčko. (Můžete zvolit **jednotlivý dokument** nebo **více dokumentů**, ale ne **na bázi dialogu**.)
+1. Na stránce [Typ aplikace](../../mfc/reference/application-type-mfc-application-wizard.md) Průvodce aplikací knihovny MFC zaškrtněte políčko **dokument/zobrazení architektury** . (Můžete zvolit buď **jeden dokument** , nebo **více dokumentů**, ale **dialogové okno není založené**.)
 
-1. Na [třídy generované v revizi](../../mfc/reference/generated-classes-mfc-application-wizard.md) stránky, použijte **základní třída** rozevírací nabídky vyberte `CHtmlView`.
+1. Na stránce [Kontrola vygenerovaných tříd](../../mfc/reference/generated-classes-mfc-application-wizard.md) použijte rozevírací nabídku **základní třída** k výběru `CHtmlView`.
 
-1. Vyberte další možnosti, které chcete, aby integrované do kostry aplikace.
+1. Vyberte další možnosti, které chcete integrovat do kostry aplikace.
 
-1. Klikněte na tlačítko **Dokončit**.
+1. Klikněte na **Finish** (Dokončit).
 
-Ovládací prvek WebBrowser podporuje, procházení webu pomocí hypertextové odkazy a navigace Uniform Resource Locator (URL). Ovládací prvek udržuje seznam historie, který umožňuje uživateli procházet vpřed a zpět mezi předchozích navštívených stránek lokalit, složky a dokumenty. Ovládací prvek přímo zpracovává navigační, hypertextové odkazy, seznamy historie, Oblíbené položky a zabezpečení. Aplikace slouží jako kontejner pro aktivní dokument pro hostování aktivního dokumentu ovládací prvek WebBrowser. Proto bohatě formátovaná dokumenty, jako jsou tabulky Microsoft Excel nebo dokumentů aplikace Word lze otevřít a upravit v rámci ovládacího prvku WebBrowser. WebBrowser – ovládací prvek je také kontejnerem ovládacího prvku ActiveX, který může hostovat jakýkoli ovládací prvek ActiveX.
+Ovládací prvek WebBrowser podporuje procházení webu prostřednictvím odkazů a navigace v rámci adresy URL (Uniform Resource Locator). Ovládací prvek udržuje seznam historie, který uživateli umožňuje procházet předchozí prohlížené weby, složky a dokumenty a procházet je směrem dopředu. Ovládací prvek přímo zpracovává navigaci, hypertextové odkazy, seznamy historie, oblíbené položky a zabezpečení. Aplikace mohou používat ovládací prvek WebBrowser jako kontejner aktivních dokumentů pro hostování aktivních dokumentů. Bohatě formátované dokumenty, například tabulky aplikace Microsoft Excel nebo dokumenty aplikace Word, lze proto otevřít a upravit přímo v ovládacím prvku WebBrowser. Ovládací prvek WebBrowser je také kontejner ovládacího prvku ActiveX, který může hostovat jakýkoli ovládací prvek ActiveX.
 
 > [!NOTE]
->  Ovládací prvek WebBrowser ActiveX (a tedy `CHtmlView`) je dostupná jenom pro aplikace běžící v rámci verze Windows, ve které aplikace Internet Explorer 4.0 nebo novější bylo nainstalováno.
+>  Ovládací prvek ActiveX WebBrowser (a proto `CHtmlView`) je k dispozici pouze pro aplikace, které jsou spuštěny ve verzích systému Windows, ve kterých je nainstalována aplikace Internet Explorer 4,0 nebo novější.
 
-Protože `CHtmlView` jednoduše implementuje ovládací prvek webu prohlížeče, podporu pro tisk není jako jiné [CView](../../mfc/reference/cview-class.md)-odvozené třídy. Místo toho ovládací prvek WebBrowser implementuje v uživatelském rozhraní tiskárny a tisku. V důsledku toho `CHtmlView` nemá nepodporuje náhled tisku a neposkytuje rozhraní pro další tisk funkce podpory: například [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), a [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), které jsou k dispozici v jiných aplikacích MFC.
+Vzhledem k tomu, že `CHtmlView` jednoduše implementuje ovládací prvek webového prohlížeče společnosti Microsoft, podpora pro tisk se nepodobá jiným třídám odvozeným od programu [CView](../../mfc/reference/cview-class.md). Místo toho ovládací prvek WebBrowser implementuje uživatelské rozhraní tiskárny a tisk. V důsledku toho `CHtmlView` nepodporuje náhled tisku a rozhraní neposkytuje pro další funkce podpory tisku: například [CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView:: OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)a [CView:: OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), které jsou k dispozici v jiných aplikacích knihovny MFC.
 
-`CHtmlView` funguje jako obálka pro ovládací prvek webového prohlížeče, která poskytuje zobrazení na webu nebo stránku HTML vaší aplikace. Průvodce vytvoří, přepíše [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funkce ve třídě zobrazení poskytující navigační odkaz na web Microsoft Visual C++:
+`CHtmlView` slouží jako obálka ovládacího prvku webového prohlížeče, který umožňuje zobrazení vaší aplikace na webu nebo na stránce HTML. Průvodce vytvoří přepsání funkce [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) ve třídě zobrazení a poskytne navigační odkaz na web Microsoft Visual C++ web:
 
 ```cpp
 void CWebView::OnInitialUpdate()
@@ -54,7 +54,7 @@ void CWebView::OnInitialUpdate()
 }
 ```
 
-Tento web můžete nahradit vlastním, nebo můžete použít [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) členské funkce a otevřete stránku HTML, který se nachází v skript prostředků projektu jako výchozí obsah pro zobrazení. Příklad:
+Tuto lokalitu můžete nahradit vlastními, nebo můžete pomocí členské funkce [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) otevřít stránku HTML, která se nachází v skriptu prostředků projektu jako výchozí obsah pro zobrazení. Příklad:
 
 ```cpp
 void CWebView::OnInitialUpdate()
@@ -67,11 +67,10 @@ void CWebView::OnInitialUpdate()
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC MFCIE](https://github.com/Microsoft/VCSamples)<br/>
+[MFCIE Sample MFC](https://github.com/Microsoft/VCSamples)<br/>
 [MFC – průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)<br/>
-[Nastavení kompilátoru a vlastnosti sestavení](../../build/working-with-project-properties.md)<br/>
+[Nastavení vlastností kompilátoru a sestavení](../../build/working-with-project-properties.md)<br/>
 [Stránky vlastností](../../build/reference/property-pages-visual-cpp.md)<br/>
-[Nastavení kompilátoru a vlastnosti sestavení](../../build/working-with-project-properties.md)
-
+[Nastavení vlastností kompilátoru a sestavení](../../build/working-with-project-properties.md)
