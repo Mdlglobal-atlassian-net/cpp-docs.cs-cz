@@ -3,12 +3,12 @@ title: x64 – konvence volání
 description: Podrobnosti o výchozí konvenci volání metody ABI x64
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5b9801eff6a9789313d083fdd6ed69c3076643ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417164"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078086"
 ---
 # <a name="x64-calling-convention"></a>x64 – konvence volání
 
@@ -45,7 +45,7 @@ Následující tabulka shrnuje, jak se předávají parametry:
 |Typ parametru|Jak úspěšné|
 |--------------------|----------------|
 |Číslo s plovoucí desetinnou čárkou|Prvních 4 parametry – XMM0 až XMM3. Ostatní prošly v zásobníku.|
-|Celé číslo|Prvních 4 parametry – RCX, RDX, R8, R9. Ostatní prošly v zásobníku.|
+|Integer|Prvních 4 parametry – RCX, RDX, R8, R9. Ostatní prošly v zásobníku.|
 |Agreguje (8, 16, 32 nebo 64 bitů) a __m64|Prvních 4 parametry – RCX, RDX, R8, R9. Ostatní prošly v zásobníku.|
 |Agregace (jiné)|Podle ukazatele. Prvních 4 parametry byly předány jako ukazatelé v RCX, RDX, R8 a R9.|
 |__m128|Podle ukazatele. Prvních 4 parametry byly předány jako ukazatelé v RCX, RDX, R8 a R9.|
@@ -147,7 +147,7 @@ Registry RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 a horní části YMM0-15 a ZMM0
 Registry RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 a XMM6-15 jsou považovány za nestálé a musí být uloženy a obnoveny funkcí, která je používá.
 
 ## <a name="function-pointers"></a>Ukazatele na funkce
- 
+
 Ukazatele na funkci jsou pouhými ukazateli na popisek příslušné funkce. Neexistují žádné požadavky obsahu (TOC) pro ukazatele na funkce.
 
 ## <a name="floating-point-support-for-older-code"></a>Podpora plovoucí desetinné čárky pro starší kód

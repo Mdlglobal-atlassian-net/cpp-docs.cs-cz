@@ -6,18 +6,18 @@ helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: 99e7e8218a80e28d67767392cadfb5c4918a3bfe
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 68e5f09acfc6444afb46bcbc0f7e9db10b04afed
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302182"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076873"
 ---
 # <a name="preprocessor-grammar-summary-cc"></a>Souhrn gramatiky preprocesoru (C/C++)
 
 Tento článek popisuje formální gramatiku jazyka C a C++ preprocesoru. Zabývá se syntaxí direktiv předzpracování a operátorů. Další informace naleznete v tématu direktivy [preprocesoru](../preprocessor/preprocessor.md) a [direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-## <a name="definitions"></a>Definice pro Shrnutí gramatiky
+## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a>Definice pro Shrnutí gramatiky
 
 Terminály jsou koncové body v definici syntaxe. Žádné jiné řešení není možné. Terminály obsahují sadu vyhrazených slov a uživatelské identifikátory.
 
@@ -25,11 +25,11 @@ Neterminály jsou zástupné symboly v syntaxi. Většina je definována jinde v
 
 *konstanta*, *konstantní výraz*, *identifikátor*, *klíčové slovo*, *operátor*, *punctuator*
 
-Volitelná součást je označena jako volitelná. <sub></sub> Například následující syntaxe označuje volitelný výraz uzavřený ve složených závorkách:
+Volitelná součást je označena jako volitelná. <sub>opt</sub> Například následující syntaxe označuje volitelný výraz uzavřený ve složených závorkách:
 
 **{** *Expression*<sub>opt</sub> **}**
 
-## <a name="conventions"></a>Konvence dokumentů
+## <a name="document-conventions"></a><a name="conventions"></a>Konvence dokumentů
 
 Úmluvy používají odlišné atributy písma pro různé součásti syntaxe. Symboly a písma jsou následující:
 
@@ -44,19 +44,19 @@ Dvojtečka ( **:** ) po neterminálu zavádí svou definici. Alternativní defin
 
 V blocích syntaxe kódu mají tyto symboly ve výchozím řezu písma zvláštní význam:
 
-| Symbol | Popis |
+| Písmeno | Popis |
 |---|---|
 | \[] | Hranaté závorky obklopí volitelný prvek. |
 | {\|} | Složené závorky ohraničují alternativní prvky oddělené svislými pruhy. |
-| ... | Určuje, že se může opakovat vzor předchozího prvku. |
+| Tlačítka ... | Určuje, že se může opakovat vzor předchozího prvku. |
 
 V blocích syntaxe kódu, čárky (`,`), tečky (`.`), dvojtečky (`;`), dvojtečky (`:`), kulaté závorky (`( )`), dvojité uvozovky (`"`) a jednoduché uvozovky (`'`) jsou literály.
 
-## <a name="grammar"></a>Gramatika preprocesoru
+## <a name="preprocessor-grammar"></a><a name="grammar"></a>Gramatika preprocesoru
 
 *řídicí čára*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#define** tokenu *identifikátoru ID* *-řetězec*<sub>opt</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identifikátor* **(** *ID*<sub>opt</sub> **,** ... **,** <sub>opt</sub> **identifikátor)** *token-* \<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identifikátor* **(** *ID*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **identifikátor)** *token-* \<sub>opt</sub>
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _cesta-specifikace_ **"** \
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** _cesta-specifikace_ **>** \
 &nbsp;&nbsp;&nbsp;&nbsp; **#line** *Číselná sekvence* **"** _filename_ **"** <sub>opt</sub>\
@@ -73,7 +73,7 @@ V blocích syntaxe kódu, čárky (`,`), tečky (`.`), dvojtečky (`;`), dvojte�
 &nbsp;&nbsp;&nbsp;&nbsp;*if-Part* *elif – část*<sub>opt</sub> *Else*-<sub>Part opt</sub> *endif-line*
 
 *if-Part*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
+&nbsp;&nbsp;&nbsp;&nbsp;*text* *if-line*
 
 *řádek if-line*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#if** *konstantního výrazu*\
@@ -125,7 +125,6 @@ V blocích syntaxe kódu, čárky (`,`), tečky (`.`), dvojtečky (`;`), dvojte�
 > [!NOTE]
 > Následující neterminály jsou rozbaleny v části [lexikální konvence](../cpp/lexical-conventions.md) v  *C++ odkazu na jazyk*: *konstanta*, *konstantní výraz*, *identifikátor*, *klíčové slovo*, *operátor*a *punctuator*.
 
-
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [C/C++ reference preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)

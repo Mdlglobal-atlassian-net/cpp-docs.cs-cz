@@ -2,12 +2,12 @@
 title: Příkaz For založený na rozsahu (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af9811fd707d4dbc28158dba3b6b3fbfcc43e4fe
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244132"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077183"
 ---
 # <a name="range-based-for-statement-c"></a>Příkaz For založený na rozsahu (C++)
 
@@ -22,11 +22,11 @@ for ( for-range-declaration : expression )
 
 ## <a name="remarks"></a>Poznámky
 
-Použít rozsahový **pro** příkaz k vytvoření smyček, které jsou vykonány skrze "rozsah", který je definován jako cokoli, co lze iterovat – například `std::vector`, nebo všechny ostatní standardní knihovny C++ pořadí rozsahem je definován `begin()` a `end()`. Název, který je deklarován v `for-range-declaration` je lokální pro **pro** příkazu a nemůže být předeklarováno ve `expression` nebo `statement`. Všimněte si, že [automaticky](../cpp/auto-cpp.md) je preferováno klíčové slovo `for-range-declaration` část příkazu.
+Použijte příkaz **pro** rozsah založený na rozsahu k vytvoření smyček, které musí být provedeny prostřednictvím "rozsahu", který je definován jako cokoli, co lze iterovat, například `std::vector`nebo jakékoli jiné C++ standardní knihovny, jejichž rozsah je definován `begin()` a `end()`. Název deklarovaný v `for-range-declaration` èásti je místní pro příkaz **for** a nemůže být znovu deklarován v `expression` nebo `statement`. Všimněte si, že klíčové slovo [auto](../cpp/auto-cpp.md) je upřednostňováno v `for-range-declaration` část příkazu.
 
-**Nová funkce v sadě Visual Studio 2017:**  Založený na rozsahu pro smyčky už nevyžadují, aby begin() a end() vrací objekty stejného typu. To umožňuje end() vrátí objekt sentinel, například používané rozsahy, jak je definováno v návrhu rozsahy V3. Další informace najdete v tématu [zobecňuje Range-Based pro smyčky](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) a [knihovny rozsah v3 na Githubu](https://github.com/ericniebler/range-v3).
+**Novinka v aplikaci Visual Studio 2017:**  Smyčky for založené na rozsahu již nevyžadují, aby objekty begin () a end () vracely stejný typ. To umožňuje, aby příkaz end () vrátil objekt Sentinel, který je používán rozsahy, jak je definováno v návrhu rozsahy-v3. Další informace najdete v tématu [generalizace smyčky for](https://wg21.link/p0184r0) a [Range-V3 Library na GitHubu](https://github.com/ericniebler/range-v3).
 
-Tento kód ukazuje, jak použít rozsahový **pro** smyčky pro iteraci polem a vektorem:
+Tento kód ukazuje, jak použít smyčky na základě **rozsahu pro** iteraci pomocí pole a vektoru:
 
 ```cpp
 // range-based-for.cpp
@@ -83,7 +83,7 @@ int main()
 }
 ```
 
-Zde je výstup:
+Tady je výstup:
 
 ```Output
 1 2 3 4 5 6 7 8 9 10
@@ -96,9 +96,9 @@ end of integer array test
 end of vector test
 ```
 
-Range-based **pro** smyčky skončí, když jeden z těchto `statement` provádí: [přerušení](../cpp/break-statement-cpp.md), [vrátit](../cpp/return-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md) k s popiskem příkaz mimo rozsahový **pro** smyčky. A [pokračovat](../cpp/continue-statement-cpp.md) příkaz v možnosti range-based **pro** smyčku ukončí pouze aktuální iteraci.
+Smyčka **na základě rozsahu** končí, když je provedena jedna z těchto `statement`: [Break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md)nebo [goto](../cpp/goto-statement-cpp.md) pro příkaz označený mimo rozsah smyčka **for** . Příkaz [Continue](../cpp/continue-statement-cpp.md) v rámci smyčky **for** končí pouze aktuální iterací.
 
-Mějte na paměti tyto skutečnosti o založený na rozsahu **pro**:
+Mějte na paměti, že tato fakta jsou založená **na rozsahu:**
 
 - Automaticky rozpozná pole.
 
@@ -106,7 +106,7 @@ Mějte na paměti tyto skutečnosti o založený na rozsahu **pro**:
 
 - Pro vše ostatní používá vyhledávání závislé na argumentu `begin()` a `end()`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [auto](../cpp/auto-cpp.md)<br/>
 [Příkazy iterace](../cpp/iteration-statements-cpp.md)<br/>

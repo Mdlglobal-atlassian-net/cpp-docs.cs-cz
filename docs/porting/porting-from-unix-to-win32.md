@@ -1,17 +1,17 @@
 ---
-title: Spouštění programů Linux ve Windows
+title: Spouštění programů pro Linux ve Windows
 ms.date: 07/31/2019
 helpviewer_keywords:
 - Linux [C++], porting to Win32
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 6b59d7685aaada3ba44c03da2e5c27c75c8a473a
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 1c1807cee07db479a91f45e21434b3ba13be2ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682392"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076891"
 ---
-# <a name="running-linux-programs-on-windows"></a>Spouštění programů Linux ve Windows
+# <a name="running-linux-programs-on-windows"></a>Spouštění programů pro Linux ve Windows
 
 Chcete-li spustit program Linux v systému Windows, máte tyto možnosti:
 
@@ -20,4 +20,3 @@ Chcete-li spustit program Linux v systému Windows, máte tyto možnosti:
 - Zkompilujte program pomocí RSZ nebo Clang v prostředích [MINGW](http://MinGW.org/) nebo [MINGW-W64](https://MinGW-w64.org/doku.php) , která poskytují vrstvu překladu ze systému Linux na volání systému Windows.
 - Zkompilujte a spusťte program pomocí RSZ nebo Clang v prostředí [Cygwin](https://www.cygwin.com/) , které ve srovnání s MinGW nebo MINGW-W64 nabízí ucelené prostředí Linux ve Windows.
 - Ruční portujte svůj kód z Linux a zkompilujte pro Windows pomocí C++ Microsoft (MSVC). To zahrnuje refaktoring kódu nezávislého na platformě do samostatných knihoven a následném přepsání kódu specifického pro Linux pro použití kódu specifického pro systém Windows (například Win32 nebo rozhraní DirectX API). Pro aplikace, které vyžadují grafiku s vysokým výkonem, se pravděpodobně jedná o nejlepší možnost.
-

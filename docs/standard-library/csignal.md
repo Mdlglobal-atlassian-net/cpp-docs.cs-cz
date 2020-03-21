@@ -6,17 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fcad9c1b5ec20a7a10afc40884ece8ae8abec184
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452334"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076679"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-Zahrnuje standardní hlavičku hlavičky \<knihovny jazyka C. h > a přidává přidružené názvy `std` do oboru názvů. Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v hlavičce standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
-
+Obsahuje hlavičku standardní knihovny jazyka C \<Signal. h > a přidává přidružené názvy do oboru názvů `std`. Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v hlavičce standardní knihovny jazyka C jsou deklarovány v oboru názvů `std`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,15 +43,15 @@ namespace std {
 #define SIGTERM
 ```
 
-## <a name="functions"></a>Funkce
+## <a name="functions"></a>Functions
 
 ```cpp
 signal-handler* signal(int sig, signal-handler* func);
 int raise(int sig);
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+\ [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+Přehled standardní knihovny\ [ C++ ](../standard-library/cpp-standard-library-overview.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

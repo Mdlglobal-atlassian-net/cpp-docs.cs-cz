@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685871"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076372"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution – třída
 
@@ -64,8 +64,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* \
-Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*RealType*\
+Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy naleznete v tématu [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -80,7 +80,7 @@ Funkce Property `n()` vrací hodnotu pro uložený parametr distribuce `n`.
 
 Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
 
-Podrobné informace o tom, jak se chystá *distribuce pro studenty*, najdete v článku Wolfram MathWorld, [studenti t-Distribution](http://mathworld.wolfram.com/Studentst-Distribution.html).
+Podrobné informace o tom, jak se chystá *distribuce pro studenty*, najdete v článku Wolfram MathWorld, [studenti t-Distribution](https://mathworld.wolfram.com/Studentst-Distribution.html).
 
 ## <a name="example"></a>Příklad
 
@@ -159,11 +159,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<random >
+**Záhlaví:** \<náhodný >
 
 **Obor názvů:** std
 
-## <a name="student_t_distribution"></a>student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution:: student_t_distribution
 
 Sestaví rozdělení.
 
@@ -174,10 +174,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*n* \
+*n*\
 Parametr distribuce `n`.
 
-*parametr* \
+*parametr*\
 Balíček parametrů použitý k sestavení distribuce.
 
 ### <a name="remarks"></a>Poznámky
@@ -188,7 +188,7 @@ První konstruktor vytvoří objekt, jehož uložená `n` hodnota obsahuje hodno
 
 Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
 
-## <a name="param_type"></a>student_t_distribution::p aram_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution::p aram_type
 
 Ukládá všechny parametry distribuce.
 
@@ -205,10 +205,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*n* \
+*n*\
 Parametr distribuce `n`.
 
-*pravé* \
+*pravé*\
 Objekt `param_type`, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
@@ -217,6 +217,6 @@ Objekt `param_type`, který se má porovnat.
 
 Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<random >](../standard-library/random.md)
+[\<náhodný >](../standard-library/random.md)

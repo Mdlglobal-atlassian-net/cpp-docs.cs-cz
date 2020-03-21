@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d91ee36d26e307577aa56560eb95bef5ed03305b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 1b4e7f0f188ce7b3003f12cb7acafaf15a03d86a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051532"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078244"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Návod: Kompilování programu jazyka C na příkazovém řádku
 
@@ -21,7 +21,7 @@ Vizuál C++ obsahuje kompilátor jazyka C, který můžete použít k vytvořen�
 
 Tento návod ukazuje, jak vytvořit základní program jazyka C ve stylu "Hello, World" pomocí textového editoru a pak ho zkompilovat na příkazovém řádku. Pokud místo toho chcete pracovat C++ na příkazovém řádku, přečtěte si [Návod: kompilování nativního C++ programu na příkazovém řádku](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Pokud byste chtěli prostředí Visual Studio IDE vyzkoušet namísto použití příkazového řádku, přečtěte si [Návod: práce s projekty a řešeními (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) nebo [pomocí integrovaného vývojového prostředí C++ sady Visual Studio pro desktopový vývoj](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Chcete-li dokončit tento návod, je nutné nainstalovat aplikaci Visual Studio a volitelné vizuální C++ komponenty nebo nástroje sestavení pro Visual Studio.
 
@@ -63,9 +63,8 @@ Pokud používáte jinou verzi systému Windows, podívejte se do nabídky Start
 Pokud jste nainstalovali nástroje Microsoft Visual C++ Build Tools 2015 ve Windows 10, otevřete nabídku **Start** a přejděte dolů a otevřete složku **Visual C++ Build Tools** . Zvolením možnosti  **C++ Visual 2015 x86 Native Tools Command Prompt** otevřete okno příkazového řádku.
 
 Pokud používáte jinou verzi systému Windows, podívejte se do nabídky Start nebo na úvodní stránce složky nástroje Visual Studio, která obsahuje zástupce příkazového řádku pro vývojáře. Můžete také použít funkci Windows Search k vyhledání "příkazového řádku pro vývojáře" a vybrat, který odpovídá nainstalované verzi sady Visual Studio. Pomocí zástupce otevřete okno příkazového řádku.
-   
-::: moniker-end
 
+::: moniker-end
 
 Dále ověřte, zda je správně C++ nastaven příkazový řádek nástroje Visual Developer. V okně příkazového řádku zadejte `cl` a ověřte, že výstup vypadá nějak takto:
 
@@ -183,7 +182,7 @@ Jazyky C a C++ jsou podobné, ale nikoli stejné. Kompilátor jazyka Microsoft C
 
 MSVC je kompatibilní se standardem ISO C99, ale není výhradně kompatibilní. Ve většině případů bude přenos v kódu jazyka C zkompilován a spuštěn podle očekávání. Vizuál C++ nepodporuje většinu změn v ISO C11. Některé funkce knihovny a názvy funkcí POSIX jsou zastaraly pomocí MSVC. Funkce jsou podporovány, ale preferované názvy se změnily. Další informace najdete v tématu [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md) a [Upozornění kompilátoru (úroveň 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Návod: Vytvoření programu ve standardním C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)<br/>

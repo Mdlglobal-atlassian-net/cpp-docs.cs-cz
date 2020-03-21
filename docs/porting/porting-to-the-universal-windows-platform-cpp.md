@@ -2,12 +2,12 @@
 title: Přenos aplikací do Univerzální platformy Windows (C++)
 ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 9314cb564e792a7d4949d422a3942e9d46a23cb2
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 0013d85ad8c27c06560c9f9e541691f4335252d1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627207"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076864"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Přenos aplikací do Univerzální platformy Windows (C++)
 
@@ -21,9 +21,9 @@ Toto téma obsahuje následující postupy pro přenos kódu do UWP.
 
 - [Portování komponenty modulu runtime Windows 8.1 do UWP](#BK_81Component)
 
-Máte-li klasickou knihovnu DLL klasické pracovní plochy a chcete ji volat z aplikace UWP, můžete to provést také. Pomocí těchto postupů můžete vytvořit vrstvu uživatelského rozhraní UWP pro existující klasickou aplikaci klasické pracovní plochy C++ systému Windows nebo standardní C++ kód pro různé platformy. Viz [Postupy: použití existujícího C++ kódu v aplikaci Univerzální platforma Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md). 
+Máte-li klasickou knihovnu DLL klasické pracovní plochy a chcete ji volat z aplikace UWP, můžete to provést také. Pomocí těchto postupů můžete vytvořit vrstvu uživatelského rozhraní UWP pro existující klasickou aplikaci klasické pracovní plochy C++ systému Windows nebo standardní C++ kód pro různé platformy. Viz [Postupy: použití existujícího C++ kódu v aplikaci Univerzální platforma Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
-## <a name="BK_81StoreApp"></a>Přenos aplikace Windows 8.1 Storu do UWP
+## <a name="porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a>Přenos aplikace Windows 8.1 Storu do UWP
 
 Pokud máte aplikaci Windows 8.1 Store, můžete tento postup použít k tomu, abyste mohli pracovat na UWP a na jakémkoli zařízení s Windows 10.  Je vhodné nejdřív sestavit projekt pomocí sady Visual Studio 2019 jako projektu Windows 8.1, abyste nejdřív vyloučili všechny problémy, které vznikají ve změnách kompilátoru a knihoven. Až to uděláte, existují dva způsoby, jak tuto možnost převést na projekt UWP s Windows 10. Nejjednodušší způsob (jak je vysvětleno v následujícím postupu) je vytvoření univerzálního projektu pro Windows a zkopírování existujícího kódu do něj. Pokud jste používali univerzální projekt pro Windows 8.1 Desktop a Windows 8.1 telefon, bude projekt začínat dvěma různými rozloženími v jazyce XAML, ale končit jedním dynamickým rozložením, které se přizpůsobí velikosti zobrazení.
 
@@ -68,7 +68,7 @@ Pokud máte aplikaci Windows 8.1 Store, můžete tento postup použít k tomu, a
 
 1. Spusťte a ladit aplikaci na emulátoru nebo fyzickém zařízení pro každý typ zařízení, které vaše aplikace podporuje. Chcete-li spustit emulátor, je nutné spustit aplikaci Visual Studio na fyzickém počítači, nikoli na virtuálním počítači.
 
-## <a name="BK_81Component"></a>Portování komponenty modulu runtime Windows 8.1 do UWP
+## <a name="porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a>Portování komponenty modulu runtime Windows 8.1 do UWP
 
 Máte-li knihovnu DLL nebo komponentu prostředí Windows Runtime, která již spolupracuje s aplikacemi pro Windows 8.1 Store, můžete pomocí tohoto postupu získat součást nebo knihovnu DLL, které pracují s UWP a Windows 10. Základní procedura slouží k vytvoření nového projektu a zkopírování kódu do něj.
 
@@ -82,7 +82,7 @@ Máte-li knihovnu DLL nebo komponentu prostředí Windows Runtime, která již s
 
 1. Sestavujte a vyřešte všechny chyby z důvodu zásadních změn mezi různými verzemi Windows SDK.
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Řešení potíží
 
 Během procesu přenosu kódu do UWP může dojít k různým chybám. Zde jsou některé možné problémy, se kterými se můžete setkat.
 
@@ -106,7 +106,7 @@ Pokud k tomu dojde, projekt se nevytváří jako univerzální projekt pro Windo
 
 Pokud jste vytvořili nový projekt UWP pomocí sady Visual Studio, tuto chybu byste neměli vidět.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Průvodce C++ přenosem vizuálů](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [Vývoj aplikací pro Univerzální platformu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

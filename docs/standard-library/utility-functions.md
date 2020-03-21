@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3e92d6dc9f6966efda0e26fb28cf14652be880c7
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422498"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075588"
 ---
 # <a name="ltutilitygt-functions"></a>funkce &lt;&gt; nástrojů
 
-## <a name="asconst"></a>as_const
+## <a name="as_const"></a><a name="asconst"></a>as_const
 
 ```cpp
 template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
@@ -34,13 +34,13 @@ template <class T> void as_const(const T&&) = delete;
 
 Vrátí *T*.
 
-## <a name="declval"></a>declval –
+## <a name="declval"></a><a name="declval"></a>declval –
 
 ```cpp
 template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
 ```
 
-## <a name="exchange"></a>výměn
+## <a name="exchange"></a><a name="exchange"></a>výměn
 
 **(C++ 14)** Přiřadí novou hodnotu objektu a vrátí jeho starou hodnotu.
 
@@ -95,7 +95,7 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a>Komisi
+## <a name="forward"></a><a name="forward"></a>Komisi
 
 Podmíněně přetypuje svůj argument na odkaz rvalue, pokud je argument hodnota rvalue nebo odkaz rvalue. Tím se období hodnota rvalue argumentu na funkci předání za účelem maximální podpory předávání.
 
@@ -127,19 +127,19 @@ Je nutné zadat explicitní argument šablony pro volání `forward`.
 
 Obnovení hodnoty rvalue-Ness původní hodnoty argumentu k provedení překladu přetížení se označuje jako *dokonalé přesměrování*. Dokonalé předávání umožňuje funkci šablony přijmout argument některého typu odkazu a obnovit jeho vlastnost rvalue, když je nezbytná pro správné řešení přetížení. Pomocí dokonalého předávání můžete zachovat sémantiku přesunu pro hodnoty rvalue. Nebude tak nutné poskytovat přetížení pro funkce, které se liší pouze typem odkazu svých argumentů.
 
-## <a name="from_chars"></a>from_chars
+## <a name="from_chars"></a><a name="from_chars"></a>from_chars
 
 ```cpp
 from_chars_result from_chars(const char* first, const char* last, see below& value, int base = 10);
 
-from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general);
 
-from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general);
 
 from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
 ```
 
-## <a name="get"></a>Čtěte
+## <a name="get"></a><a name="get"></a>Čtěte
 
 Získá prvek z objektu `pair` podle pozice indexu nebo podle typu.
 
@@ -235,35 +235,35 @@ int main()
 1 0.27
 ```
 
-## <a name="index_sequence"></a>index_sequence
+## <a name="index_sequence"></a><a name="index_sequence"></a>index_sequence
 
 ```cpp
 template<size_t... I>
     using index_sequence = integer_sequence<size_t, I...>;
 ```
 
-## <a name="index_sequence_for"></a>index_sequence_for
+## <a name="index_sequence_for"></a><a name="index_sequence_for"></a>index_sequence_for
 
 ```cpp
 template<class... T>
     using index_sequence_for = make_index_sequence<sizeof...(T)>;
 ```
 
-## <a name="make_index_sequence"></a>make_index_sequence
+## <a name="make_index_sequence"></a><a name="make_index_sequence"></a>make_index_sequence
 
 ```cpp
 template<size_t N>
     using make_index_sequence = make_integer_sequence<size_t, N>;
 ```
 
-## <a name="make_integer_sequence"></a>make_integer_sequence
+## <a name="make_integer_sequence"></a><a name="make_integer_sequence"></a>make_integer_sequence
 
 ```cpp
 template<class T, T N>
     using make_integer_sequence = integer_sequence<T, see below >;
 ```
 
-## <a name="make_pair"></a>make_pair
+## <a name="make_pair"></a><a name="make_pair"></a>make_pair
 
 Funkce šablony, kterou lze použít k vytvoření objektů typu `pair`, kde se typy komponent automaticky volí na základě datových typů, které jsou předány jako parametry.
 
@@ -313,7 +313,7 @@ Pomocná funkce `make_pair` také umožňuje předat dvě hodnoty funkci, která
 
 Příklad použití pomocné funkce `make_pair` k deklaraci a inicializaci páru naleznete v tématu [Struktura páru](../standard-library/pair-structure.md).
 
-## <a name="move"></a>Pøesunout
+## <a name="move"></a><a name="move"></a>Pøesunout
 
 Bezpodmínečně přetypuje svůj argument na odkaz hodnoty rvalue a značí, že ji lze přesunout, pokud je pro její typ přesunutí povoleno.
 
@@ -342,13 +342,13 @@ Argument, který chcete přetypovat. I když se typ *arg* zdá být určen jako 
 
 Pokud hodnota předaná v *arg* je lvalue – to znamená, že má název nebo adresu, která může být provedena, je při přesunu zrušena její platnost. Po přesunutí neodkazujte na hodnotu předanou v *arg* pomocí jejího názvu nebo adresy.
 
-## <a name="moveif"></a>move_if_noexcept
+## <a name="move_if_noexcept"></a><a name="moveif"></a>move_if_noexcept
 
 ```cpp
 template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
 ```
 
-## <a name="swap"></a>adresu
+## <a name="swap"></a><a name="swap"></a>adresu
 
 Vyměňuje prvky dvou typů nebo objektů [struktury páru](../standard-library/pair-structure.md) .
 
@@ -373,18 +373,18 @@ Objekt typu nebo typu `pair`.
 
 Jednou z výhod `swap` je, že typy objektů, které jsou uložené, jsou určeny automaticky kompilátorem a není nutné je explicitně zadat. Nepoužívejte explicitní argumenty šablony, jako je například `swap<int, int>(1, 2)` při použití `swap`, protože je podrobná a přidává složité problémy s odkazem rvalue, které by mohly způsobit selhání kompilace.
 
-## <a name="to_chars"></a>to_chars
+## <a name="to_chars"></a><a name="to_chars"></a>to_chars
 
 ```cpp
 to_chars_result to_chars(char* first, char* last, see below value, int base = 10);
-to_chars_result to_chars(char* first, char* last, float value); 
-to_chars_result to_chars(char* first, char* last, double value); 
+to_chars_result to_chars(char* first, char* last, float value);
+to_chars_result to_chars(char* first, char* last, double value);
 to_chars_result to_chars(char* first, char* last, long double value);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 

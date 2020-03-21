@@ -2,12 +2,12 @@
 title: Navigace C++ v kódu v aplikaci Visual Studio
 description: Pomocí různých nástrojů v aplikaci Visual Studio můžete procházet C++ základ kódu.
 ms.date: 05/28/2019
-ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 932694db70019924557259d4defe802b53ef0f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446736"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079082"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Navigace C++ v kódu v aplikaci Visual Studio
 
@@ -31,7 +31,7 @@ Můžete přejít na definici symbolu kódu tak, že na něj kliknete pravým tl
 
 ## <a name="go-to"></a>Přejít na
 
-**Přejít na** odkazuje na sadu navigačních funkcí, které každý z nich poskytuje konkrétní typ výsledku na základě filtrů, které zadáte. 
+**Přejít na** odkazuje na sadu navigačních funkcí, které každý z nich poskytuje konkrétní typ výsledku na základě filtrů, které zadáte.
 
 Můžete otevřít **Přejít na** pomocí **CTRL +,** . Tato akce vytvoří vyhledávací pole nad dokumentem, který upravujete.
 
@@ -82,7 +82,7 @@ Můžete spustit hledání libovolného textu ve vašem řešení pomocí **find
 
 ![Hledání&#43; &#43; v jazyce C](../ide/media/find-cpp.png "Hledání")
 
-**Hledání v souborech** je výkonnější verze **hledání** , která v okně **výsledky hledání** zobrazuje výsledky. Můžete hledat externí závislosti v kódu, filtrovat podle typů souborů a další. 
+**Hledání v souborech** je výkonnější verze **hledání** , která v okně **výsledky hledání** zobrazuje výsledky. Můžete hledat externí závislosti v kódu, filtrovat podle typů souborů a další.
 
 ![&#43; &#43;](../ide/media/find-in-files-cpp.png "Najít v souborech")
 

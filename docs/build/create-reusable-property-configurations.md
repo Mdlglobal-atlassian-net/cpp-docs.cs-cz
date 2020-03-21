@@ -3,16 +3,16 @@ title: Sdílení nebo opakované použití nastavení projektu sady Visual Studi
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 49a0153edc5678777c937423ba2bdbd2d92a6a35
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 451e22997f81753abf0c8d55d3b9e8d097cc6d5d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303219"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078708"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Sdílení a opakované použití nastavení projektu sady Visual Studio
 
-Chcete-li vytvořit vlastní skupinu nastavení, která můžete sdílet s ostatními nebo znovu použít ve více projektech, použijte **Správce vlastností** k vytvoření *seznamu vlastností* (soubor. props) pro uložení nastavení pro každý typ projektu, který chcete mít možnost znovu použít nebo sdílet s ostatními. Používání seznamů vlastností je mnohem méně náchylné k chybám než jiné způsoby vytváření "globálních" nastavení. 
+Chcete-li vytvořit vlastní skupinu nastavení, která můžete sdílet s ostatními nebo znovu použít ve více projektech, použijte **Správce vlastností** k vytvoření *seznamu vlastností* (soubor. props) pro uložení nastavení pro každý typ projektu, který chcete mít možnost znovu použít nebo sdílet s ostatními. Používání seznamů vlastností je mnohem méně náchylné k chybám než jiné způsoby vytváření "globálních" nastavení.
 
 > [!IMPORTANT]
 > **soubory. User a proč jsou problematické**
@@ -21,7 +21,7 @@ Chcete-li vytvořit vlastní skupinu nastavení, která můžete sdílet s ostat
 >
 > Přestože soubory .user se v sadě Visual Studio stále instalují a účastní se dědění vlastností, jsou ve výchozím nastavení prázdné. Osvědčeným postupem je odstranit odkaz na ně v **Správce vlastností** , aby se zajistilo, že vaše projekty budou fungovat nezávisle na jednotlivých uživatelích, nastavení jednotlivých počítačů je důležité k zajištění správného chování v prostředí SCC (řízení zdrojového kódu).
 
-Chcete-li zobrazit **Správce vlastností**, v řádku nabídek vyberte možnost **Zobrazit** > **Správce vlastností** nebo zobrazení ** > ** ** > Správce vlastností**v závislosti na nastaveních.
+Chcete-li zobrazit **Správce vlastností**, v řádku nabídek vyberte možnost **Zobrazit** > **Správce vlastností** nebo zobrazení ** > ** ** > Správce vlastností**v závislosti na nastaveních. **View**
 
 Pokud máte běžnou, často používanou sadu vlastností, které chcete použít pro více projektů, můžete použít **Správce vlastností** k jejich zachycení do opakovaně použitelného souboru *seznamu vlastností* , který má v konvenci příponu názvu souboru. props. Seznam (případně více seznamů) lze použít u nových projektů, takže nemusíte nastavovat jejich vlastnosti od začátku.
 

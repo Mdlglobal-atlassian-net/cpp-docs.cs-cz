@@ -47,30 +47,30 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927693"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076134"
 ---
 # <a name="midl-property-pages"></a>MIDL – stránky vlastností
 
-Stránky vlastností MIDL jsou k dispozici jako vlastnost položky v. Soubor IDL v C++ projektu, který používá com. Použijte je ke konfiguraci [kompilátoru MIDL](/windows/win32/midl/using-the-midl-compiler-2). Informace o tom, jak programově přistupovat k možnostem C++ MIDL pro projekty <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> , naleznete v tématu Object. Viz také [Obecná syntaxe příkazového řádku MIDL](/windows/win32/midl/general-midl-command-line-syntax).
+Stránky vlastností MIDL jsou k dispozici jako vlastnost položky v. Soubor IDL v C++ projektu, který používá com. Použijte je ke konfiguraci [kompilátoru MIDL](/windows/win32/midl/using-the-midl-compiler-2). Informace o tom, jak programově přistupovat k možnostem C++ MIDL pro projekty, naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> Object. Viz také [Obecná syntaxe příkazového řádku MIDL](/windows/win32/midl/general-midl-command-line-syntax).
 
 ## <a name="general-property-page"></a>Obecná stránka vlastností
 
 ### <a name="preprocessor-definitions"></a>Definice preprocesoru
 
-Určuje jednu nebo více definic, včetně maker MIDL ([/d](/windows/win32/midl/-d))\[\].
+Určuje jednu nebo více definic, včetně maker MIDL ([/d](/windows/win32/midl/-d))\[maker\]).
 
 ### <a name="additional-include-directories"></a>Další adresáře k zahrnutí
 
-Určuje jeden nebo více adresářů, které mají být přidány do cesty include (\][/i](/windows/win32/midl/-i)\[Path).
+Určuje jeden nebo více adresářů, které mají být přidány do cesty include ([/i](/windows/win32/midl/-i)\[cesta\]).
 
 ### <a name="additional-metadata-directories"></a>Další adresáře metadat
 
-Zadejte adresář obsahující soubor Windows. Foundation. winmd (cesta\][/metadata_dir](/windows/win32/midl/-metadata-dir) \[).
+Zadejte adresář obsahující soubor Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[cesta\]).
 
 ### <a name="enable-windows-runtime"></a>Povolit prostředí Windows Runtime
 
@@ -78,7 +78,7 @@ Povolit sémantiku prostředí Windows Runtime k vytvoření souboru metadat sys
 
 ### <a name="ignore-standard-include-path"></a>Ignorovat standardní cestu zahrnutí
 
-Ignorujte aktuální a ZAHRNUTé adresáře ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
+Ignorujte aktuální a adresáře INCLUDE ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
 
 ### <a name="mktyplib-compatible"></a>Kompatibilní s MkTypLib
 
@@ -220,7 +220,7 @@ Určuje formát souboru knihovny typů ([/oldtlb |/newtlb]).
 
 ### <a name="c-preprocess-options"></a>Možnosti předzpracování jazyka C
 
-Určuje přepínače předané preprocesoru kompilátoru jazyka C (přepínače[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
+Určuje přepínače předané preprocesoru kompilátoru jazyka C ([/cpp_optm](/windows/win32/midl/-cpp-opt) přepínačům).
 
 ### <a name="undefine-preprocessor-definitions"></a>Zrušit Definice preprocesoru
 
@@ -242,7 +242,7 @@ Podívejte se na chyby z důvodu nedostatku paměti ([/Error](/windows/win32/mid
 
 ### <a name="check-bounds"></a>Kontrolovat meze
 
-Ověřte velikost a specifikaci přenosové délky ([/Error](/windows/win32/midl/-error) bounds_check).
+Kontrolní velikost vs specifikace přenosové délky ([/error](/windows/win32/midl/-error) bounds_check).
 
 ### <a name="check-enum-range"></a>Kontrolovat rozsah výčtu
 
@@ -254,7 +254,7 @@ Kontroluje, zda odkazují ukazatele na hodnotu nenulového typu ([/Error](/windo
 
 ### <a name="check-stub-data"></a>Kontrolovat data zástupných procedur
 
-Vygeneruje další kontrolu platnosti dat zástupných procedur na straně serveru ([/Error](/windows/win32/midl/-error) stub_data).
+Vygeneruje další kontrolu platnosti dat zástupných procedur na straně serveru ([/error](/windows/win32/midl/-error) stub_data).
 
 ### <a name="prepend-with-abi-namespace"></a>Předřadit obor názvů ABI
 
@@ -262,7 +262,7 @@ Předřaďte obor názvů ABI všem typům.  ([/ns_prefix](/windows/win32/midl/-
 
 ### <a name="validate-parameters"></a>Ověřit parametry
 
-Vygenerujte Další informace pro ověřování parametrů ([/Robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
+Vygenerujte Další informace pro ověřování parametrů ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Zarovnání členů struktury
 
@@ -283,6 +283,3 @@ Přesměruje výstup z obrazovky do souboru ([/o](/windows/win32/midl/-o) File).
 ### <a name="minimum-target-system"></a>Minimální cílový systém
 
 Nastavte minimální cílový systém ([/target](/windows/win32/midl/-target) řetězec).
-
-
-

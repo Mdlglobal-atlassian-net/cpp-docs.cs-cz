@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: e914a019877482058c6b2842d3138cda02f1e228
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bf9fe7775cee1c774c097a1b6bd371721c9fa34f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219703"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80074979"
 ---
 # <a name="__ull_rshift"></a>__ull_rshift
 
@@ -24,14 +24,14 @@ na platformě x64 posune 64 hodnotu určenou prvním parametrem vpravo o počet 
 
 ```C
 unsigned __int64 __ull_rshift(
-   unsigned __int64 mask, 
+   unsigned __int64 mask,
    int nBit
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*zrušit*\
+\ *masky*
 pro Hodnota 64 celé číslo, která se má posunout vpravo.
 
 *nBit*\
@@ -39,7 +39,7 @@ pro Počet bitů, které se mají posunout, modulo 32 na x86 a modulo 64 na plat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Maska posunutá pomocí `nBit` bitů.
+Maska se posune o `nBit` bitů.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -51,7 +51,7 @@ Maska posunutá pomocí `nBit` bitů.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud je druhý parametr větší než 31 na platformě x86 (63 na platformě x64), toto číslo se převezme modulo 32 (64 na platformě x64) a určí počet bitů, které se mají posunout. V názvu značí `unsigned long long (unsigned __int64)`. `ull`
+Pokud je druhý parametr větší než 31 na platformě x86 (63 na platformě x64), toto číslo se převezme modulo 32 (64 na platformě x64) a určí počet bitů, které se mají posunout. `ull` v názvu označuje `unsigned long long (unsigned __int64)`.
 
 ## <a name="example"></a>Příklad
 
@@ -80,7 +80,7 @@ int main()
 
 **Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [__ll_lshift](../intrinsics/ll-lshift.md)\
 [__ll_rshift](../intrinsics/ll-rshift.md)\

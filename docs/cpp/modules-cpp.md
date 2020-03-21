@@ -5,12 +5,12 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Moduly v C++ 20 poskytují moderní alternativu hlavičkových souborů.
-ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 286d2ec8a26dbd0a85e8f8721ad6fd7f12f45a31
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301376"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078045"
 ---
 # <a name="overview-of-modules-in-c"></a>Přehled modulů v C++
 
@@ -52,7 +52,7 @@ export module Foo;
 
 #define ANSWER 42
 
-namespace Bar 
+namespace Bar
 {
    int f_internal() {
         return ANSWER;
@@ -168,6 +168,6 @@ import <vector>
 import "myheader.h"
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [modul, import, export](import-export-module.md)

@@ -4,12 +4,12 @@ description: BNF popis MASM pro x64
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322804"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075468"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Gramatická BNFa makra Microsoft Macro Assembler
 
@@ -121,7 +121,7 @@ Gramatika BNF umožňuje Rekurzivní definice. Například gramatika používá 
 &nbsp;&nbsp;&nbsp;&nbsp;; *text* ;;
 
 *commentDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; *oddělovače* komentářů\
+&nbsp;&nbsp;&nbsp;&nbsp;**COMMENT** *oddělovače* komentářů\
 &nbsp;&nbsp;&nbsp;&nbsp;*textu*\
 &nbsp;&nbsp;&nbsp;*text* *oddělovače* *textu* &nbsp;;;
 
@@ -218,7 +218,7 @@ Gramatika BNF umožňuje Rekurzivní definice. Například gramatika používá 
 &nbsp;&nbsp;&nbsp;&nbsp;*generalDir* | *segmentDef*
 
 *directiveList*\
-&nbsp;&nbsp; *&nbsp;direktiva &nbsp;* direktiva | *directiveList*
+&nbsp;&nbsp; *&nbsp;direktiva &nbsp;* direktiva | *directiveList* *directive*
 
 \ *vzdálenosti*
 &nbsp;&nbsp;&nbsp;&nbsp;*nearfar* | **NEAR16** | **NEAR32** | **FAR16** | **FAR32**
@@ -270,7 +270,7 @@ Gramatika BNF umožňuje Rekurzivní definice. Například gramatika používá 
 &nbsp;&nbsp;&nbsp;&nbsp;( *expr* ) \
 &nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *výraz* ⟧ \
 &nbsp;&nbsp;&nbsp;&nbsp;| **Šířka** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ID* masky\
+&nbsp;&nbsp;&nbsp;&nbsp;| **MASK** *ID* masky\
 &nbsp;&nbsp;&nbsp;&nbsp;| **velikosti** *sizeArg*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **SIZEOF** *sizeArg*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **Délka** *ID*\
@@ -289,7 +289,7 @@ Gramatika BNF umožňuje Rekurzivní definice. Například gramatika používá 
 *echoDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;**ECHO**\
 &nbsp;&nbsp;&nbsp;&nbsp;*arbitraryText* ;; \
-% *arbitraryText* ;; \
+%**OUT** *arbitraryText* ;; \
 
 *elseifBlock*\
 &nbsp;&nbsp;&nbsp;&nbsp;*elseifStatement* ;; \
@@ -389,7 +389,7 @@ Gramatika BNF umožňuje Rekurzivní definice. Například gramatika používá 
 *oddělovač* &nbsp;&nbsp;&nbsp;&nbsp;
 
 *fileCharList*\
-&nbsp;&nbsp; *&nbsp;&nbsp;char* | *fileCharList*
+&nbsp;&nbsp; *&nbsp;&nbsp;char* | *fileCharList* *fileChar*
 
 \ *fileSpec*
 &nbsp;&nbsp;&nbsp;&nbsp;*fileCharList* | *textLiteral*
@@ -537,7 +537,7 @@ ID *skupiny*\
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* : | *ID* :: | @@:
 
 *labelDir*\
-&nbsp;&nbsp;&nbsp;popisek *id* &nbsp;*qualifiedType* ;;
+&nbsp;&nbsp;&nbsp;popisek *id* **LABEL** &nbsp;*qualifiedType* ;;
 
 *langType*\
 &nbsp;&nbsp;&nbsp;&nbsp;**C** | **PASCAL** | **FORTRAN** | **základní** | **syscall** | **STDCALL**
@@ -600,7 +600,7 @@ ID *skupiny*\
 &nbsp;&nbsp;&nbsp;&nbsp;**ENDM** ;;
 
 *macroForc*\
-&nbsp;&nbsp;&nbsp;&nbsp; *ID* forcDir, *textLiteral* ;; \
+&nbsp;&nbsp;&nbsp;&nbsp;*forcDir* *ID* forcDir, *textLiteral* ;; \
 &nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
 &nbsp;&nbsp;&nbsp;&nbsp;**ENDM** ;;
 
@@ -836,7 +836,7 @@ ID *skupiny*\
 &nbsp;&nbsp;&nbsp;&nbsp;*recordTag* { *oldRecordFieldList* } | *recordTag* < *oldRecordFieldList* >
 
 *recordDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **záznam** recordTag *bitDefList* ;;
+&nbsp;&nbsp;&nbsp;&nbsp;*recordTag* **záznam** recordTag *bitDefList* ;;
 
 *recordFieldList*\
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *constExpr* ⟧ | *recordFieldList* , ⟦;; ⟧ ⟦ *constExpr* ⟧
@@ -856,7 +856,7 @@ ID *skupiny*\
 &nbsp;&nbsp;&nbsp;&nbsp;*specialRegister* | *gpRegister* | *byteRegister* | *qwordRegister* |  *fpuRegister* | *SIMDRegister* | *segmentRegister*
 
 *regList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*registrovat* | *regList*
+&nbsp;&nbsp;&nbsp;&nbsp;*registrovat* | *regList* *register*
 
 *relOp*\
 &nbsp;&nbsp;&nbsp;&nbsp;EQ | NE | LT | LE | GT | GE
@@ -872,7 +872,7 @@ ID *skupiny*\
 &nbsp;&nbsp;&nbsp;&nbsp;*initValue* | *scalarInstList* , ⟦;; ⟧ *initValue*
 
 *segAlign*\
-&nbsp;&nbsp;&nbsp;&nbsp;m **bajtovém** ** | ** **DWORD** | **param** | **stránce**
+&nbsp;&nbsp;&nbsp;&nbsp;m **bajtovém** ** | ** **DWORD** | **param** | **stránce** | 
 
 *segAttrib*\
 &nbsp;&nbsp; **&nbsp;&nbsp;**  | ch | ch ** | ** **běžných** | **paměti** **na** *constExpr* | **Private**
@@ -960,7 +960,7 @@ ID *skupiny*\
 &nbsp;&nbsp;&nbsp;&nbsp;*stringChar* | *sText* *stringChar*
 
 \ *řetězců*
-&nbsp;&nbsp; *&nbsp;&nbsp;⟦* citace *sText* ⟧
+&nbsp;&nbsp; *&nbsp;&nbsp;⟦* citace *sText* ⟧ *quote*
 
 *stringChar*\
 &nbsp;&nbsp; *&nbsp;&nbsp;uvozovkách* *|* Libovolný znak kromě uvozovek.
@@ -1071,4 +1071,3 @@ kvalifikátor **TYPEDEF** &nbsp;&nbsp;&nbsp;&nbsp;*typeId*
 
 *xmmRegister*\
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
-

@@ -2,19 +2,18 @@
 title: Statické knihovny (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 42c247650f778dcc9dbfa13d27cbb0244c0ebbc2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302941"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077981"
 ---
 # <a name="static-libraries-ccx"></a>Statické knihovny (C++/CX)
 
 Statická knihovna, která se používá v aplikaci Univerzální platforma Windows (UWP), může obsahovat kód ISO standard C++ , včetně typů STL, a také volání rozhraní API systému Win32, která nejsou vyloučena z aplikace prostředí Windows Runtime App Platform. Statická knihovna spotřebovává prostředí Windows Runtime komponenty a může vytvářet prostředí Windows Runtime komponenty s určitými omezeními.
 
 ## <a name="creating-static-libraries"></a>Vytváření statických knihoven
-
 
 Pokyny pro vytvoření nového projektu se liší v závislosti na verzi sady Visual Studio, kterou jste nainstalovali. Ujistěte se, že máte selektor verzí v levém horním rohu nastavený na správnou verzi.
 
@@ -24,7 +23,7 @@ Pokyny pro vytvoření nového projektu se liší v závislosti na verzi sady Vi
 
 1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
 
-1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte na **UWP**. 
+1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte na **UWP**.
 
 1. Z filtrovaného seznamu typů projektů zvolte možnost **Statická knihovna (Universal Windows- C++/CX)** a pak klikněte na tlačítko **Další**. Na další stránce zadejte název projektu a v případě potřeby určete umístění projektu.
 
@@ -52,6 +51,6 @@ Použijete-li statickou knihovnu, která vytvoří veřejné třídy `ref`, tř�
 
 Upozornění lze bezpečně ignorovat pouze v případě, že Statická knihovna neprodukuje prostředí Windows Runtime komponenty, které jsou spotřebovány mimo samotnou knihovnu. Pokud knihovna nevyužívá komponentu, kterou definuje, pak linker může optimalizovat implementaci, i když veřejná metadata obsahují informace o typu. To znamená, že veřejné součásti ve statické knihovně budou kompilovány, ale za běhu se neaktivují. Z tohoto důvodu musí být všechny prostředí Windows Runtime komponenty určené pro použití jinými komponentami nebo aplikacemi implementovány v dynamické knihovně (DLL).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Dělení do vláken a zařazování](../cppcx/threading-and-marshaling-c-cx.md)

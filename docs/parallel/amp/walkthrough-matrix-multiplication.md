@@ -2,20 +2,20 @@
 title: 'Návod: Násobení matic'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518488"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075707"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Návod: Násobení matic
 
 V tomto podrobném návodu se dozvíte, jak pomocí C++ amp zrychlit provádění násobení matic. K dispozici jsou dva algoritmy, a to bez dlaždic a jednoho s dlaždicí.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-Než začnete:
+Než začnete, potřebujete:
 
 - Přečtěte si [ C++ přehled amp](../../parallel/amp/cpp-amp-overview.md).
 
@@ -33,7 +33,7 @@ Pokyny pro vytvoření nového projektu se liší v závislosti na verzi sady Vi
 
 1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
 
-1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**. 
+1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte **Console**.
 
 1. Z filtrovaného seznamu typů projektů zvolte možnost **prázdný projekt** a pak zvolte možnost **Další**. Na další stránce zadejte do pole **název** *MatrixMultiply* a zadejte název projektu a v případě potřeby určete umístění projektu.
 
@@ -57,7 +57,7 @@ Pokyny pro vytvoření nového projektu se liší v závislosti na verzi sady Vi
 
 1. Vyberte **prázdný projekt**, do pole **název** zadejte *MatrixMultiply* a pak klikněte na tlačítko **OK** .
 
-1. Zvolte **Další** tlačítko.
+1. Klikněte na tlačítko **Další** .
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro **zdrojové soubory**a zvolte možnost **Přidat** > **novou položku**.
 
@@ -320,7 +320,7 @@ Pro implementaci tohoto algoritmu kód:
 
 1. Stisknutím **mezerníku** aplikaci ukončete.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Návod: Ladění aplikace C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

@@ -53,16 +53,16 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 367d0b0cd3197623b27ee1a50e804cca797aedf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09819c9e8dd924581ce8cd67233d273f7e8d62ca
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398820"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079899"
 ---
 # <a name="asyncbase-class"></a>AsyncBase – třída
 
-Implementuje asynchronní stav počítače Windows Runtime.
+Implementuje prostředí Windows Runtime asynchronní Stavový počítač.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,10 +85,10 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 Obslužná rutina události, která je volána po dokončení asynchronní operace.
 
 *TProgress*<br/>
-Obslužná rutina události, která je volána při spuštěné asynchronní operace nahlásí aktuální průběh operace.
+Obslužná rutina události, která je volána, když běžící asynchronní operace hlásí aktuální průběh operace.
 
-*resultType*<br/>
-Jeden z [asyncresulttype –](asyncresulttype-enumeration.md) hodnot výčtu. Ve výchozím nastavení `SingleResult`.
+*Hodnotu*<br/>
+Jedna z hodnot výčtu [AsyncResultType –](asyncresulttype-enumeration.md) . Ve výchozím nastavení `SingleResult`.
 
 ## <a name="members"></a>Členové
 
@@ -96,41 +96,40 @@ Jeden z [asyncresulttype –](asyncresulttype-enumeration.md) hodnot výčtu. Ve
 
 Název                               | Popis
 ---------------------------------- | -------------------------------------------------
-[Asyncbase::asyncbase –](#asyncbase) | Inicializuje novou instanci `AsyncBase` třídy.
+[AsyncBase:: AsyncBase](#asyncbase) | Inicializuje instanci třídy `AsyncBase`.
 
 ### <a name="public-methods"></a>Veřejné metody
 
 Název                                         | Popis
 -------------------------------------------- | -------------------------------------------------------------------------------------
-[Asyncbase::Cancel –](#cancel)                 | Zruší asynchronní operace.
-[Asyncbase::Close –](#close)                   | Ukončí asynchronní operaci.
-[Asyncbase::firecompletion –](#firecompletion) | Vyvolá obslužnou rutinu události dokončení nebo obnoví vnitřní průběh delegáta.
-[Asyncbase::fireprogress –](#fireprogress)     | Vyvolá obslužnou rutinu události aktuální průběh.
-[AsyncBase::get_ErrorCode](#get-errorcode)   | Získá kód chyby pro aktuální asynchronní operaci.
-[AsyncBase::get_Id](#get-id)                 | Načte popisovač asynchronní operace.
-[AsyncBase::get_Status](#get-status)         | Načte hodnotu označující stav asynchronní operace.
-[Asyncbase::getoncomplete –](#getoncomplete)   | Adresa aktuálního obslužné rutiny události dokončení zkopíruje do zadané proměnné.
-[Asyncbase::getonprogress –](#getonprogress)   | Adresa obslužné rutiny události aktuální průběh zkopíruje do zadané proměnné.
-[Asyncbase::put_id –](#put-id)                 | Nastaví popisovač asynchronní operace.
-[Asyncbase::putoncomplete –](#putoncomplete)   | Nastaví adresu obslužné rutiny události dokončení se zadanou hodnotou.
-[AsyncBase::PutOnProgress](#putonprogress)   | Nastaví adresu průběh obslužné rutiny události se zadanou hodnotou.
-
+[AsyncBase:: Cancel](#cancel)                 | Zruší asynchronní operaci.
+[AsyncBase:: Close](#close)                   | Zavře asynchronní operaci.
+[AsyncBase:: FireCompletion –](#firecompletion) | Vyvolá obslužnou rutinu události dokončení nebo obnoví interního delegáta průběhu.
+[AsyncBase:: FireProgress –](#fireprogress)     | Vyvolá aktuální obslužnou rutinu události průběhu.
+[AsyncBase:: get_ErrorCode](#get-errorcode)   | Načte kód chyby aktuální asynchronní operace.
+[AsyncBase:: get_Id](#get-id)                 | Načte popisovač asynchronní operace.
+[AsyncBase:: get_Status](#get-status)         | Načte hodnotu, která označuje stav asynchronní operace.
+[AsyncBase:: Getoncomplete –](#getoncomplete)   | Zkopíruje adresu aktuální obslužné rutiny události dokončení do zadané proměnné.
+[AsyncBase:: Getonprogress –](#getonprogress)   | Zkopíruje adresu aktuální obslužné rutiny události průběhu do zadané proměnné.
+[AsyncBase::p ut_Id](#put-id)                 | Nastaví popisovač asynchronní operace.
+[AsyncBase::P utOnComplete](#putoncomplete)   | Nastaví adresu obslužné rutiny události dokončení na zadanou hodnotu.
+[AsyncBase::P utOnProgress](#putonprogress)   | Nastaví adresu obslužné rutiny události průběhu na určenou hodnotu.
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 Název                                                                         | Popis
 ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[AsyncBase::CheckValidStateForDelegateCall](#checkvalidstatefordelegatecall) | Ověřuje, zda vlastnosti delegáta lze upravit v aktuálním asynchronní stavu.
-[AsyncBase::CheckValidStateForResultsCall](#checkvalidstateforresultscall)   | Testuje, jestli výsledky asynchronní operace se můžou shromažďovat v aktuálním asynchronní stavu.
-[AsyncBase::ContinueAsyncOperation](#continueasyncoperation)                 | Určuje, zda by měly pokračovat ve zpracování asynchronní operaci, nebo by měla zastavit.
-[Asyncbase::currentStatus –](#currentstatus)                                   | Načte stav aktuální asynchronní operace.
-[AsyncBase::ErrorCode](#errorcode)                                           | Získá kód chyby pro aktuální asynchronní operaci.
-[Asyncbase::oncancel –](#oncancel)                                             | Při přepisu v odvozené třídě, zruší asynchronní operace.
-[Asyncbase::onclose –](#onclose)                                               | Při přepisu v odvozené třídě, ukončí asynchronní operaci.
-[AsyncBase::OnStart](#onstart)                                               | Při přepisu v odvozené třídě, spustí asynchronní operaci.
-[Asyncbase::Start –](#start)                                                   | Spustí asynchronní operaci.
-[Asyncbase::trytransitiontocompleted –](#trytransitiontocompleted)             | Určuje, zda aktuální asynchronní operace byla dokončena.
-[Asyncbase::trytransitiontoerror –](#trytransitiontoerror)                     | Určuje, zda kód zadanou chybovou můžete upravit stavu došlo k vnitřní chybě.
+[AsyncBase:: Checkvalidstatefordelegatecall –](#checkvalidstatefordelegatecall) | Testuje, zda lze vlastnosti delegáta upravit v aktuálním asynchronním stavu.
+[AsyncBase:: Checkvalidstateforresultscall –](#checkvalidstateforresultscall)   | Testuje, zda mohou být výsledky asynchronní operace shromažďovány v aktuálním asynchronním stavu.
+[AsyncBase:: Continueasyncoperation –](#continueasyncoperation)                 | Určuje, zda má být asynchronní operace pokračovat ve zpracování, nebo by měla být zastavena.
+[AsyncBase:: currentStatus –](#currentstatus)                                   | Načte stav aktuální asynchronní operace.
+[AsyncBase:: ErrorCode](#errorcode)                                           | Načte kód chyby aktuální asynchronní operace.
+[AsyncBase::-Cancel](#oncancel)                                             | Při přepsání v odvozené třídě zruší asynchronní operaci.
+[AsyncBase::-Close](#onclose)                                               | Při přepsání v odvozené třídě ukončí asynchronní operaci.
+[AsyncBase:: OnStart](#onstart)                                               | Při přepsání v odvozené třídě spustí asynchronní operaci.
+[AsyncBase:: Start](#start)                                                   | Spustí asynchronní operaci.
+[AsyncBase:: Trytransitiontocompleted –](#trytransitiontocompleted)             | Označuje, zda byla aktuální asynchronní operace dokončena.
+[AsyncBase:: Trytransitiontoerror –](#trytransitiontoerror)                     | Určuje, zda může zadaný kód chyby upravovat stav interní chyby.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -140,21 +139,21 @@ Název                                                                         |
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** async.h
+**Hlavička:** Async. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="asyncbase"></a>Asyncbase::asyncbase –
+## <a name="asyncbaseasyncbase"></a><a name="asyncbase"></a>AsyncBase:: AsyncBase
 
-Inicializuje novou instanci `AsyncBase` třídy.
+Inicializuje instanci třídy `AsyncBase`.
 
 ```cpp
 AsyncBase();
 ```
 
-## <a name="cancel"></a>Asyncbase::Cancel –
+## <a name="asyncbasecancel"></a><a name="cancel"></a>AsyncBase:: Cancel
 
-Zruší asynchronní operace.
+Zruší asynchronní operaci.
 
 ```cpp
 STDMETHOD(
@@ -164,15 +163,15 @@ STDMETHOD(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ve výchozím nastavení vždy vrátí hodnotu S_OK.
+Ve výchozím nastavení vždy vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-`Cancel()` je výchozí implementace `IAsyncInfo::Cancel`, a nemá žádné samotnou práci. Pokud chcete skutečně zrušit asynchronní operaci, přepsat `OnCancel()` čistě virtuální metody.
+`Cancel()` je výchozí implementace `IAsyncInfo::Cancel`a nemá žádnou skutečnou práci. Chcete-li skutečně zrušit asynchronní operaci, přepište `OnCancel()` čistě virtuální metodu.
 
-## <a name="checkvalidstatefordelegatecall"></a>AsyncBase::CheckValidStateForDelegateCall
+## <a name="asyncbasecheckvalidstatefordelegatecall"></a><a name="checkvalidstatefordelegatecall"></a>AsyncBase:: Checkvalidstatefordelegatecall –
 
-Ověřuje, zda vlastnosti delegáta lze upravit v aktuálním asynchronní stavu.
+Testuje, zda lze vlastnosti delegáta upravit v aktuálním asynchronním stavu.
 
 ```cpp
 inline HRESULT CheckValidStateForDelegateCall();
@@ -180,11 +179,11 @@ inline HRESULT CheckValidStateForDelegateCall();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud lze upravovat vlastnosti delegáta. v opačném případě E_ILLEGAL_METHOD_CALL.
+S_OK, pokud lze změnit vlastnosti delegáta; v opačném případě E_ILLEGAL_METHOD_CALL.
 
-## <a name="checkvalidstateforresultscall"></a>AsyncBase::CheckValidStateForResultsCall
+## <a name="asyncbasecheckvalidstateforresultscall"></a><a name="checkvalidstateforresultscall"></a>AsyncBase:: Checkvalidstateforresultscall –
 
-Testuje, jestli výsledky asynchronní operace se můžou shromažďovat v aktuálním asynchronní stavu.
+Testuje, zda mohou být výsledky asynchronní operace shromažďovány v aktuálním asynchronním stavu.
 
 ```cpp
 inline HRESULT CheckValidStateForResultsCall();
@@ -192,11 +191,11 @@ inline HRESULT CheckValidStateForResultsCall();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud výsledky se můžou shromažďovat; S_OK v opačném případě E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.
+S_OK, pokud se mají shromažďovat výsledky; v opačném případě E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.
 
-## <a name="close"></a>Asyncbase::Close –
+## <a name="asyncbaseclose"></a><a name="close"></a>AsyncBase:: Close
 
-Ukončí asynchronní operaci.
+Zavře asynchronní operaci.
 
 ```cpp
 STDMETHOD(
@@ -206,15 +205,15 @@ STDMETHOD(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK Pokud operace ukončí nebo je již uzavřeno; v opačném případě E_ILLEGAL_STATE_CHANGE.
+S_OK, zda je operace ukončena nebo je již zavřena; v opačném případě E_ILLEGAL_STATE_CHANGE.
 
 ### <a name="remarks"></a>Poznámky
 
-`Close()` je výchozí implementace `IAsyncInfo::Close`, a nemá žádné samotnou práci. Ve skutečnosti zavřete asynchronní operace, přepsat `OnClose()` čistě virtuální metody.
+`Close()` je výchozí implementace `IAsyncInfo::Close`a nemá žádnou skutečnou práci. Chcete-li skutečně ukončit asynchronní operaci, přepište `OnClose()` čistě virtuální metodu.
 
-## <a name="continueasyncoperation"></a>AsyncBase::ContinueAsyncOperation
+## <a name="asyncbasecontinueasyncoperation"></a><a name="continueasyncoperation"></a>AsyncBase:: Continueasyncoperation –
 
-Určuje, zda by měly pokračovat ve zpracování asynchronní operaci, nebo by měla zastavit.
+Určuje, zda má být asynchronní operace pokračovat ve zpracování, nebo by měla být zastavena.
 
 ```cpp
 inline bool ContinueAsyncOperation();
@@ -222,9 +221,9 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** -li aktuální stav asynchronní operace *spuštění*, což znamená, že operace má pokračovat. V opačném případě **false**, což znamená, že operace by měla zastavit.
+**true** , pokud je aktuální stav asynchronní operace *spuštěno*, což znamená, že operace by měla pokračovat. V opačném případě **false**, což znamená, že operace by se měla zastavit.
 
-## <a name="currentstatus"></a>Asyncbase::currentStatus –
+## <a name="asyncbasecurrentstatus"></a><a name="currentstatus"></a>AsyncBase:: currentStatus –
 
 Načte stav aktuální asynchronní operace.
 
@@ -236,16 +235,16 @@ inline void CurrentStatus(
 
 ### <a name="parameters"></a>Parametry
 
-*status*<br/>
-Umístění, kde tato operace uloží aktuální stav.
+*stav*<br/>
+Umístění, kde tato operace ukládá aktuální stav.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato operace je bezpečná pro vlákno.
+Tato operace je bezpečná pro přístup z více vláken.
 
-## <a name="errorcode"></a>Asyncbase::ErrorCode –
+## <a name="asyncbaseerrorcode"></a><a name="errorcode"></a>AsyncBase:: ErrorCode
 
-Získá kód chyby pro aktuální asynchronní operaci.
+Načte kód chyby aktuální asynchronní operace.
 
 ```cpp
 inline void ErrorCode(
@@ -255,16 +254,16 @@ inline void ErrorCode(
 
 ### <a name="parameters"></a>Parametry
 
-*error*<br/>
+*Chyba*<br/>
 Umístění, kde tato operace ukládá aktuální kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato operace je bezpečná pro vlákno.
+Tato operace je bezpečná pro přístup z více vláken.
 
-## <a name="firecompletion"></a>Asyncbase::firecompletion –
+## <a name="asyncbasefirecompletion"></a><a name="firecompletion"></a>AsyncBase:: FireCompletion –
 
-Vyvolá obslužnou rutinu události dokončení nebo obnoví vnitřní průběh delegáta.
+Vyvolá obslužnou rutinu události dokončení nebo obnoví interního delegáta průběhu.
 
 ```cpp
 void FireCompletion(
@@ -276,11 +275,11 @@ virtual void FireCompletion();
 
 ### <a name="remarks"></a>Poznámky
 
-První verze `FireCompletion()` obnoví vnitřní průběh proměnné delegáta. Druhá verze vyvolá obslužnou rutinu události dokončení pokud asynchronní operace nebude dokončena.
+První verze `FireCompletion()` obnoví proměnnou delegáta interního průběhu. Druhá verze vyvolá obslužnou rutinu události dokončení, pokud je asynchronní operace dokončena.
 
-## <a name="fireprogress"></a>Asyncbase::fireprogress –
+## <a name="asyncbasefireprogress"></a><a name="fireprogress"></a>AsyncBase:: FireProgress –
 
-Vyvolá obslužnou rutinu události aktuální průběh.
+Vyvolá aktuální obslužnou rutinu události průběhu.
 
 ```cpp
 void FireProgress(
@@ -290,16 +289,16 @@ void FireProgress(
 
 ### <a name="parameters"></a>Parametry
 
-*arg*<br/>
-Metoda obslužné rutiny události, která se má vyvolat.
+*ARG*<br/>
+Metoda obslužné rutiny události, která se má vyvolat
 
 ### <a name="remarks"></a>Poznámky
 
-`ProgressTraits` je odvozen z [argtraitshelper – struktura](argtraitshelper-structure.md).
+`ProgressTraits` je odvozen ze [struktury ArgTraitsHelper –](argtraitshelper-structure.md).
 
-## <a name="get-errorcode"></a>AsyncBase::get_ErrorCode
+## <a name="asyncbaseget_errorcode"></a><a name="get-errorcode"></a>AsyncBase:: get_ErrorCode
 
-Získá kód chyby pro aktuální asynchronní operaci.
+Načte kód chyby aktuální asynchronní operace.
 
 ```cpp
 STDMETHOD(
@@ -314,9 +313,9 @@ Umístění, kde je uložen aktuální kód chyby.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL, pokud se zavře aktuální asynchronní operace.
+S_OK v případě úspěchu; jinak E_ILLEGAL_METHOD_CALL, pokud je aktuální asynchronní operace zavřena.
 
-## <a name="get-id"></a>AsyncBase::get_Id
+## <a name="asyncbaseget_id"></a><a name="get-id"></a>AsyncBase:: get_Id
 
 Načte popisovač asynchronní operace.
 
@@ -329,7 +328,7 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-Umístění, kam se uloží popisovač.
+Umístění, kam má být popisovač uložen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -339,9 +338,9 @@ S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.
 
 Tato metoda implementuje `IAsyncInfo::get_Id`.
 
-## <a name="get-status"></a>AsyncBase::get_Status
+## <a name="asyncbaseget_status"></a><a name="get-status"></a>AsyncBase:: get_Status
 
-Načte hodnotu označující stav asynchronní operace.
+Načte hodnotu, která označuje stav asynchronní operace.
 
 ```cpp
 STDMETHOD(
@@ -351,8 +350,8 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*status*<br/>
-Umístění, kde má být uložen stav. Další informace najdete v tématu `Windows::Foundation::AsyncStatus` výčtu.
+*stav*<br/>
+Umístění, kde má být stav uložen. Další informace najdete v tématu výčet `Windows::Foundation::AsyncStatus`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -362,9 +361,9 @@ S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.
 
 Tato metoda implementuje `IAsyncInfo::get_Status`.
 
-## <a name="getoncomplete"></a>Asyncbase::getoncomplete –
+## <a name="asyncbasegetoncomplete"></a><a name="getoncomplete"></a>AsyncBase:: Getoncomplete –
 
-Adresa aktuálního obslužné rutiny události dokončení zkopíruje do zadané proměnné.
+Zkopíruje adresu aktuální obslužné rutiny události dokončení do zadané proměnné.
 
 ```cpp
 STDMETHOD(
@@ -375,15 +374,15 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *completeHandler*<br/>
-Umístění, kde je uložen adresu aktuální obslužné rutiny události dokončení.
+Umístění, kde je uložena adresa obslužné rutiny události aktuálního dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.
 
-## <a name="getonprogress"></a>Asyncbase::getonprogress –
+## <a name="asyncbasegetonprogress"></a><a name="getonprogress"></a>AsyncBase:: Getonprogress –
 
-Adresa obslužné rutiny události aktuální průběh zkopíruje do zadané proměnné.
+Zkopíruje adresu aktuální obslužné rutiny události průběhu do zadané proměnné.
 
 ```cpp
 STDMETHOD(
@@ -394,15 +393,15 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *progressHandler*<br/>
-Umístění, kde je uložen adresu obslužné rutiny události aktuální průběh.
+Umístění, kde je uložena adresa obslužné rutiny události aktuálního průběhu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.
 
-## <a name="oncancel"></a>Asyncbase::oncancel –
+## <a name="asyncbaseoncancel"></a><a name="oncancel"></a>AsyncBase::-Cancel
 
-Při přepisu v odvozené třídě, zruší asynchronní operace.
+Při přepsání v odvozené třídě zruší asynchronní operaci.
 
 ```cpp
 virtual void OnCancel(
@@ -410,9 +409,9 @@ virtual void OnCancel(
 ) = 0;
 ```
 
-## <a name="onclose"></a>Asyncbase::onclose –
+## <a name="asyncbaseonclose"></a><a name="onclose"></a>AsyncBase::-Close
 
-Při přepisu v odvozené třídě, ukončí asynchronní operaci.
+Při přepsání v odvozené třídě ukončí asynchronní operaci.
 
 ```cpp
 virtual void OnClose(
@@ -420,9 +419,9 @@ virtual void OnClose(
 ) = 0;
 ```
 
-## <a name="onstart"></a>Asyncbase::ONSTART –
+## <a name="asyncbaseonstart"></a><a name="onstart"></a>AsyncBase:: OnStart
 
-Při přepisu v odvozené třídě, spustí asynchronní operaci.
+Při přepsání v odvozené třídě spustí asynchronní operaci.
 
 ```cpp
 virtual HRESULT OnStart(
@@ -430,7 +429,7 @@ virtual HRESULT OnStart(
 ) = 0;
 ```
 
-## <a name="put-id"></a>Asyncbase::put_id –
+## <a name="asyncbaseput_id"></a><a name="put-id"></a>AsyncBase::p ut_Id
 
 Nastaví popisovač asynchronní operace.
 
@@ -443,15 +442,15 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-Popisovač nenulovou hodnotu.
+Nenulový popisovač.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak E_INVALIDARG nebo E_ILLEGAL_METHOD_CALL.
+S_OK v případě úspěchu; v opačném případě E_INVALIDARG nebo E_ILLEGAL_METHOD_CALL.
 
-## <a name="putoncomplete"></a>Asyncbase::putoncomplete –
+## <a name="asyncbaseputoncomplete"></a><a name="putoncomplete"></a>AsyncBase::P utOnComplete
 
-Nastaví adresu obslužné rutiny události dokončení se zadanou hodnotou.
+Nastaví adresu obslužné rutiny události dokončení na zadanou hodnotu.
 
 ```cpp
 STDMETHOD(
@@ -462,15 +461,15 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *completeHandler*<br/>
-Adresy, ke kterému je nastavena obslužná rutina události dokončení.
+Adresa, na kterou je nastavena obslužná rutina události dokončení
 
 ### <a name="return-value"></a>Návratová hodnota
 
 S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.
 
-## <a name="putonprogress"></a>AsyncBase::PutOnProgress
+## <a name="asyncbaseputonprogress"></a><a name="putonprogress"></a>AsyncBase::P utOnProgress
 
-Nastaví adresu průběh obslužné rutiny události se zadanou hodnotou.
+Nastaví adresu obslužné rutiny události průběhu na určenou hodnotu.
 
 ```cpp
 STDMETHOD(
@@ -481,13 +480,13 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *progressHandler*<br/>
-Adresy, ke kterému je nastavena obslužná rutina události průběh.
+Adresa, na kterou je obslužná rutina události průběhu nastavena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.
 
-## <a name="start"></a>Asyncbase::Start –
+## <a name="asyncbasestart"></a><a name="start"></a>AsyncBase:: Start
 
 Spustí asynchronní operaci.
 
@@ -499,15 +498,15 @@ STDMETHOD(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK Pokud operaci spuštění nebo je již spuštěna; v opačném případě E_ILLEGAL_STATE_CHANGE.
+S_OK, zda je operace spuštěna nebo je již spuštěna; v opačném případě E_ILLEGAL_STATE_CHANGE.
 
 ### <a name="remarks"></a>Poznámky
 
-`Start()` je chráněný, který není externě viditelný, protože asynchronní operace "horkými start" před vrácením řízení volajícímu metody.
+`Start()` je chráněná metoda, která není externě viditelná, protože před návratem k volajícímu se musí spustit asynchronní operace "Hot Start".
 
-## <a name="trytransitiontocompleted"></a>Asyncbase::trytransitiontocompleted –
+## <a name="asyncbasetrytransitiontocompleted"></a><a name="trytransitiontocompleted"></a>AsyncBase:: Trytransitiontocompleted –
 
-Určuje, zda aktuální asynchronní operace byla dokončena.
+Označuje, zda byla aktuální asynchronní operace dokončena.
 
 ```cpp
 bool TryTransitionToCompleted(
@@ -517,11 +516,11 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud dokončení asynchronní operace; v opačném případě **false**.
+**true** , pokud se asynchronní operace dokončila; v opačném případě **false**.
 
-## <a name="trytransitiontoerror"></a>Asyncbase::trytransitiontoerror –
+## <a name="asyncbasetrytransitiontoerror"></a><a name="trytransitiontoerror"></a>AsyncBase:: Trytransitiontoerror –
 
-Určuje, zda kód zadanou chybovou můžete upravit stavu došlo k vnitřní chybě.
+Určuje, zda může zadaný kód chyby upravovat stav interní chyby.
 
 ```cpp
 bool TryTransitionToError(
@@ -531,13 +530,13 @@ bool TryTransitionToError(
 
 ### <a name="parameters"></a>Parametry
 
-*error*<br/>
+*Chyba*<br/>
 Chyba HRESULT.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud státu došlo k vnitřní chybě byla změněné; v opačném případě **false**.
+**true** , pokud došlo ke změně stavu vnitřní chyby; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato operace změní chybový stav, pouze v případě, že chybový stav je již nastavena na hodnotu S_OK. Tato operace nemá žádný vliv, pokud chybový stav je již chyba, zrušena, Dokončeno nebo Uzavřeno.
+Tato operace upraví chybový stav pouze v případě, že stav chyby je již nastaven na S_OK. Tato operace nemá žádný vliv, pokud chybový stav je již chyba, zrušeno, dokončeno nebo Uzavřeno.

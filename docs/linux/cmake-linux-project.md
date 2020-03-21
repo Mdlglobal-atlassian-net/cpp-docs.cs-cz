@@ -3,12 +3,12 @@ title: Vytvoření a konfigurace projektu Linux CMake v sadě Visual Studio
 description: Jak vytvořit, konfigurovat, upravit a zkompilovat projekt pro Linux CMake v sadě Visual Studio
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: a0b98e1d0e9ca5e68f5fd12c458fe29b9835b65c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d781d1995a4c9a60932d498d2ad7cfea97ee023f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446865"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077668"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Vytvoření a konfigurace projektu Linux CMake
 
@@ -37,14 +37,14 @@ Obecné informace o podpoře CMake v sadě Visual Studio najdete v tématu [proj
 
 ## <a name="before-you-begin"></a>Než začnete
 
-Nejdřív se ujistěte, že máte nainstalovaný **vývoj pro Linux C++ s** nainstalovanou úlohou, včetně komponenty cmake. Viz [instalace úlohy C++ pro Linux v aplikaci Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
+Nejdřív se ujistěte, že máte nainstalovaný **vývoj pro Linux C++ s** nainstalovanou úlohou, včetně komponenty cmake. Viz [instalace úlohy C++ pro Linux v aplikaci Visual Studio](download-install-and-setup-the-linux-development-workload.md).
 
-V systému Linux se ujistěte, že jsou nainstalovány následující: 
+V systému Linux se ujistěte, že jsou nainstalovány následující:
 
 - gcc
 - gdb
 - rsync
-- zip 
+- zip
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Jakmile otevřete složku, aplikace Visual Studio analyzuje soubor CMakeLists. t
 
 ::: moniker range="vs-2019"
 
-Chcete-li cílit na podsystém Windows pro Linux, klikněte na možnost **spravovat konfigurace** v rozevírací nabídce konfigurace v hlavním panelu nástrojů. Pak stiskněte tlačítko **Přidat konfiguraci** a zvolte možnost **WSL-Debug** nebo **WSL-Release** při použití nástroje RSZ nebo Clang varianty, pokud používáte sadu nástrojů Clang/LLVM. 
+Chcete-li cílit na podsystém Windows pro Linux, klikněte na možnost **spravovat konfigurace** v rozevírací nabídce konfigurace v hlavním panelu nástrojů. Pak stiskněte tlačítko **Přidat konfiguraci** a zvolte možnost **WSL-Debug** nebo **WSL-Release** při použití nástroje RSZ nebo Clang varianty, pokud používáte sadu nástrojů Clang/LLVM.
 
 **Visual Studio 2019 verze 16,1** Při cílení na WSL není nutné žádné kopírování zdrojů nebo hlaviček, protože kompilátor systému Linux má přímý přístup k systému souborů systému Windows, ve kterém jsou umístěny vaše zdrojové soubory. (V systému Windows verze 1903 a novějších mají aplikace systému Windows podobně přístup k hlavičkovým souborům Linux přímo, ale Visual Studio tuto funkci ještě nevyužívá).
 
@@ -102,13 +102,13 @@ Pro vzdálené cíle zvolí Visual Studio ve výchozím nastavení první vzdál
 
 Pokud zadáte vzdálený cíl pro Linux, váš zdroj se zkopíruje do vzdáleného systému.
 
-Po výběru cíle se CMake spustí automaticky v systému Linux, aby se pro váš projekt vygenerovala mezipaměť CMake. 
+Po výběru cíle se CMake spustí automaticky v systému Linux, aby se pro váš projekt vygenerovala mezipaměť CMake.
 
 ![Vygenerovat mezipaměť CMake v systému Linux](media/cmake-linux-1.png "Generování mezipaměti CMake v systému Linux")
 
 Aby bylo možné poskytovat podporu technologie IntelliSense pro hlavičky na vzdálených systémech Linux, Visual Studio je automaticky zkopíruje z počítače se systémem Linux do adresáře na místním počítači s Windows. Další informace najdete v tématu [IntelliSense pro vzdálené hlavičky](configure-a-linux-project.md#remote_intellisense).
 
-## <a name="debug_cmake_project"></a>Ladění projektu CMake
+## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a>Ladění projektu CMake
 
 Chcete-li ladit kód v zadaném cílovém systému pro ladění, nastavte zarážku, vyberte cíl cmake jako položku po spuštění v nabídce panelu nástrojů vedle nastavení projektu a zvolte možnost  **&#x23f5; spustit** na panelu nástrojů nebo stiskněte klávesu F5.
 
@@ -125,13 +125,13 @@ Pokud chcete přizpůsobit argumenty příkazového řádku programu, stiskněte
 
 Chcete-li zadat další argumenty, přidejte je do pole `args` JSON. Další informace najdete v tématech [otevření složky projekty pro C++ ](../build/open-folder-projects-cpp.md) a [Konfigurace relací ladění cmake](../build/configure-cmake-debugging-sessions.md).
 
-## <a name="configure_cmake_linux"></a>Konfigurace nastavení CMake pro Linux
+## <a name="configure-cmake-settings-for-linux"></a><a name="configure_cmake_linux"></a>Konfigurace nastavení CMake pro Linux
 
-Soubor CMakeSettings. JSON v projektu CMake pro Linux může určovat všechny vlastnosti uvedené v části [přizpůsobení nastavení cmake](../build/customize-cmake-settings.md)a další vlastnosti, které řídí nastavení sestavení na vzdáleném počítači se systémem Linux. 
+Soubor CMakeSettings. JSON v projektu CMake pro Linux může určovat všechny vlastnosti uvedené v části [přizpůsobení nastavení cmake](../build/customize-cmake-settings.md)a další vlastnosti, které řídí nastavení sestavení na vzdáleném počítači se systémem Linux.
 
 ::: moniker range="vs-2019"
 
-Chcete-li změnit výchozí nastavení CMake v sadě Visual Studio 2019, otevřete z hlavního panelu nástrojů rozevírací seznam **Konfigurace** a klikněte na možnost **spravovat konfigurace**. 
+Chcete-li změnit výchozí nastavení CMake v sadě Visual Studio 2019, otevřete z hlavního panelu nástrojů rozevírací seznam **Konfigurace** a klikněte na možnost **spravovat konfigurace**.
 
 ![Správa konfigurací CMake](../build/media/vs2019-cmake-manage-configurations.png "Rozevírací seznam konfigurace CMake")
 
@@ -207,7 +207,6 @@ Výchozí konfigurace Linux-Debug v aplikaci Visual Studio 2019 verze 16,1 a nov
 
 Další informace o těchto nastaveních naleznete v tématu [CMakeSettings. JSON reference](../build/cmakesettings-reference.md).
 
-
 ## <a name="optional-settings"></a>Volitelná nastavení
 
 Pro větší kontrolu můžete použít následující volitelná nastavení:
@@ -221,8 +220,6 @@ Pro větší kontrolu můžete použít následující volitelná nastavení:
 ```
 
 Tyto možnosti umožňují spustit příkazy v systému Linux před a po sestavení a před generováním CMake. Hodnoty můžou být libovolný příkaz, který je platný na vzdáleném systému. Výstup je zapsán do kanálu zpět do sady Visual Studio.
-
-
 
 ## <a name="see-also"></a>Viz také
 

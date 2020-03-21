@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 08e36606ae5d8dc34b9e25dd7d8dbc6d606520da
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a2dcb946b4161c03fe34f02608cfb3dbbca21695
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447382"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075822"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor – třída
 
@@ -180,7 +180,7 @@ Informace o sloupci jsou uloženy ve vyrovnávací paměti, která je vytvořena
 
 Diskuzi a příklady použití tříd dynamického přistupujícího objektu naleznete v tématu [použití dynamických přístupových objektů](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="addbindentry"></a>CDynamicAccessor:: AddBindEntry
+## <a name="cdynamicaccessoraddbindentry"></a><a name="addbindentry"></a>CDynamicAccessor:: AddBindEntry
 
 Přidá položku vazby do výstupních sloupců.
 
@@ -203,7 +203,7 @@ Jedna ze standardních hodnot HRESULT.
 
 Tuto metodu použijte při přepisu výchozího přístupového objektu vytvořeného pomocí `CDynamicAccessor` (viz [Jak můžu načíst data?](../../data/oledb/fetching-data.md)).
 
-## <a name="cdynamicaccessor"></a>CDynamicAccessor:: CDynamicAccessor
+## <a name="cdynamicaccessorcdynamicaccessor"></a><a name="cdynamicaccessor"></a>CDynamicAccessor:: CDynamicAccessor
 
 Vytvoří instanci a inicializuje objekt `CDynamicAccessor`.
 
@@ -228,7 +228,7 @@ Použijete-li konstruktor k inicializaci objektu `CDynamicAccessor`, můžete ur
 
 Můžete také určit, jakým způsobem `CDynamicAccessor` zpracovává data sloupců, která se mají vycházet jako data objektů BLOB: může zpracovávat data objektů BLOB ve výchozím způsobu; může přeskočit (nevytvářet vazby) data objektů BLOB; nebo může navazovat data objektů BLOB v paměti přidělené poskytovatelem.
 
-## <a name="close"></a>CDynamicAccessor:: Close
+## <a name="cdynamicaccessorclose"></a><a name="close"></a>CDynamicAccessor:: Close
 
 Odpojí všechny sloupce, uvolní přidělenou paměť a uvolní ukazatel rozhraní [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) ve třídě.
 
@@ -238,7 +238,7 @@ Odpojí všechny sloupce, uvolní přidělenou paměť a uvolní ukazatel rozhra
 void Close() throw();
 ```
 
-## <a name="getblobhandling"></a>CDynamicAccessor:: GetBlobHandling
+## <a name="cdynamicaccessorgetblobhandling"></a><a name="getblobhandling"></a>CDynamicAccessor:: GetBlobHandling
 
 Načte hodnotu zpracování objektu BLOB pro aktuální řádek.
 
@@ -252,7 +252,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 Vrátí hodnotu zpracování objektu BLOB *eBlobHandling* jako nastavenou hodnotou [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).
 
-## <a name="getblobsizelimit"></a>CDynamicAccessor:: GetBlobSizeLimit
+## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a>CDynamicAccessor:: GetBlobSizeLimit
 
 Načte maximální velikost objektu BLOB v bajtech.
 
@@ -266,7 +266,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 Vrátí hodnotu zpracování objektu BLOB *nBlobSize* jako nastavenou hodnotou [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
 
-## <a name="getbookmark"></a>CDynamicAccessor:: GetBookmark
+## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a>CDynamicAccessor:: GetBookmark
 
 Načte záložku pro aktuální řádek.
 
@@ -289,7 +289,7 @@ Jedna ze standardních hodnot HRESULT.
 
 Je nutné nastavit `DBPROP_IRowsetLocate` pro VARIANT_TRUE k načtení záložky.
 
-## <a name="getcolumncount"></a>CDynamicAccessor:: getsloupců
+## <a name="cdynamicaccessorgetcolumncount"></a><a name="getcolumncount"></a>CDynamicAccessor:: getsloupců
 
 Načte počet sloupců.
 
@@ -303,7 +303,7 @@ DBORDINAL GetColumnCount() const throw();
 
 Počet načtených sloupců
 
-## <a name="getcolumnflags"></a>CDynamicAccessor:: GetColumnFlags
+## <a name="cdynamicaccessorgetcolumnflags"></a><a name="getcolumnflags"></a>CDynamicAccessor:: GetColumnFlags
 
 Načte vlastnosti sloupce.
 
@@ -330,7 +330,7 @@ Vrátí **hodnotu true** , pokud jsou charakteristiky sloupce úspěšně načte
 
 Číslo sloupce je posunuto od jednoho. Nula sloupce je zvláštní případ; je to záložka, pokud je dostupná.
 
-## <a name="getcolumninfo"></a>CDynamicAccessor:: GetColumnInfo
+## <a name="cdynamicaccessorgetcolumninfo"></a><a name="getcolumninfo"></a>CDynamicAccessor:: GetColumnInfo
 
 Vrátí metadata sloupce potřebná pro většinu uživatelů.
 
@@ -365,7 +365,7 @@ Jedna ze standardních hodnot HRESULT.
 
 Informace o datových typech `DBORDINAL`, `DBCOLUMNINFO`a `OLECHAR`naleznete v tématu [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenčních informacích programátora OLE DB* .
 
-## <a name="getcolumnname"></a>CDynamicAccessor:: getsloupcový
+## <a name="cdynamicaccessorgetcolumnname"></a><a name="getcolumnname"></a>CDynamicAccessor:: getsloupcový
 
 Načte název zadaného sloupce.
 
@@ -384,7 +384,7 @@ pro Číslo sloupce Počet sloupců začíná 1. Hodnota 0 odkazuje na sloupec B
 
 Název zadaného sloupce
 
-## <a name="getcolumntype"></a>CDynamicAccessor:: GetColumnType
+## <a name="cdynamicaccessorgetcolumntype"></a><a name="getcolumntype"></a>CDynamicAccessor:: GetColumnType
 
 Načte datový typ zadaného sloupce.
 
@@ -407,7 +407,7 @@ mimo Ukazatel na datový typ zadaného sloupce.
 
 Vrací **hodnotu true** při úspěchu nebo **false** při selhání.
 
-## <a name="getlength"></a>CDynamicAccessor:: GetLength
+## <a name="cdynamicaccessorgetlength"></a><a name="getlength"></a>CDynamicAccessor:: GetLength
 
 Načte délku zadaného sloupce.
 
@@ -443,7 +443,7 @@ Vrátí **hodnotu pravda** , pokud je nalezen zadaný sloupec. V opačném pří
 
 První přepsání přebírá číslo sloupce a druhá a třetí přepsání přebírají název sloupce ve formátu ANSI nebo Unicode, v uvedeném pořadí.
 
-## <a name="getordinal"></a>CDynamicAccessor:: GetOrdinal
+## <a name="cdynamicaccessorgetordinal"></a><a name="getordinal"></a>CDynamicAccessor:: GetOrdinal
 
 Načte číslo sloupce pro daný název sloupce.
 
@@ -469,7 +469,7 @@ mimo Ukazatel na číslo sloupce.
 
 Vrátí **hodnotu pravda** , pokud je nalezen sloupec se zadaným názvem. V opačném případě vrátí tato funkce **hodnotu false**.
 
-## <a name="getstatus"></a>CDynamicAccessor:: GetStatus
+## <a name="cdynamicaccessorgetstatus"></a><a name="getstatus"></a>CDynamicAccessor:: GetStatus
 
 Načte stav zadaného sloupce.
 
@@ -501,7 +501,7 @@ mimo Ukazatel na proměnnou, která obsahuje stav sloupce. Další informace naj
 
 Vrátí **hodnotu pravda** , pokud je nalezen zadaný sloupec. V opačném případě vrátí tato funkce **hodnotu false**.
 
-## <a name="getvalue"></a>CDynamicAccessor:: GetValue
+## <a name="cdynamicaccessorgetvalue"></a><a name="getvalue"></a>CDynamicAccessor:: GetValue
 
 Načte data pro zadaný sloupec.
 
@@ -550,7 +550,7 @@ Použijte nešablonované verze k vrácení sloupců, které obsahují řetězce
 
 V režimu ladění obdržíte kontrolní výraz, pokud je velikost *PDATA* rovna velikosti sloupce, na který odkazuje.
 
-## <a name="setblobhandling"></a>CDynamicAccessor:: SetBlobHandling
+## <a name="cdynamicaccessorsetblobhandling"></a><a name="setblobhandling"></a>CDynamicAccessor:: SetBlobHandling
 
 Nastaví hodnotu manipulace objektu BLOB pro aktuální řádek.
 
@@ -577,7 +577,7 @@ Před voláním `Open`byste měli volat `SetBlobHandling`.
 
 Metoda konstruktoru [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) nastaví hodnotu manipulace objektu BLOB na DBBLOBHANDLING_DEFAULT.
 
-## <a name="setblobsizelimit"></a>CDynamicAccessor:: SetBlobSizeLimit
+## <a name="cdynamicaccessorsetblobsizelimit"></a><a name="setblobsizelimit"></a>CDynamicAccessor:: SetBlobSizeLimit
 
 Nastaví maximální velikost objektu BLOB v bajtech.
 
@@ -598,7 +598,7 @@ Nastaví maximální velikost objektu BLOB v bajtech. data sloupce větší, ne�
 
 Metoda konstruktoru [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) nastaví maximální velikost objektu BLOB na výchozí hodnotu 8 000 bajtů.
 
-## <a name="setlength"></a>CDynamicAccessor:: SetLength
+## <a name="cdynamicaccessorsetlength"></a><a name="setlength"></a>CDynamicAccessor:: SetLength
 
 Nastaví délku zadaného sloupce.
 
@@ -630,7 +630,7 @@ pro Ukazatel na řetězec znaků obsahující název sloupce.
 
 Vrátí **hodnotu true** , pokud je zadaná délka sloupce úspěšně nastavena. V opačném případě vrátí tato funkce **hodnotu false**.
 
-## <a name="setstatus"></a>CDynamicAccessor:: SetStatus
+## <a name="cdynamicaccessorsetstatus"></a><a name="setstatus"></a>CDynamicAccessor:: SetStatus
 
 Nastaví stav zadaného sloupce.
 
@@ -662,7 +662,7 @@ pro Ukazatel na řetězec znaků obsahující název sloupce.
 
 Vrátí **hodnotu true** , pokud je stav zadaného sloupce úspěšně nastaven. V opačném případě vrátí tato funkce **hodnotu false**.
 
-## <a name="setvalue"></a>CDynamicAccessor:: SetValue
+## <a name="cdynamicaccessorsetvalue"></a><a name="setvalue"></a>CDynamicAccessor:: SetValue
 
 Ukládá data do zadaného sloupce.
 
@@ -674,7 +674,7 @@ bool SetValue(
    DBORDINAL nColumn,
    constctype& data) throw( );
 
-template <class ctype> 
+template <class ctype>
 bool SetValue(
    const CHAR * pColumnName,
    const ctype& data) throw( );

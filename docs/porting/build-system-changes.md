@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626599"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076952"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild a MSBuild: sestavování změn systému v sadě Visual Studio 2010
 
@@ -63,7 +63,7 @@ Když se **Průzkumník řešení** používá k přidání souboru do projektu,
 
 ## <a name="vc-directories-settings"></a>Nastavení adresářů VC + +
 
-Nastavení C++ vizuálních adresářů je zadáno na [stránce vlastností adresáře VC + +](../ide/vcpp-directories-property-page.md). V aplikaci Visual Studio 2008 a dřívějších nastavení adresáře platí pro jednotlivé uživatele a seznam vyloučených adresářů je zadaný v souboru *sysincl. dat* . 
+Nastavení C++ vizuálních adresářů je zadáno na [stránce vlastností adresáře VC + +](../ide/vcpp-directories-property-page.md). V aplikaci Visual Studio 2008 a dřívějších nastavení adresáře platí pro jednotlivé uživatele a seznam vyloučených adresářů je zadaný v souboru *sysincl. dat* .
 
 Pokud spustíte [devenv/ResetSettings](/visualstudio/ide/reference/resetsettings-devenv-exe) na příkazovém řádku, nemůžete změnit nastavení adresáře VC + +. Nemůžete také změnit nastavení, pokud otevřete nabídku **nástroje** , klikněte na **Nastavení importu a exportu**a pak vyberte možnost **resetovat všechna nastavení** .
 
@@ -73,6 +73,6 @@ Migrace nastavení adresářů VC + + ze souboru *. vssettings* , který byl vyt
 2. Vyberte možnost **Importovat vybrané nastavení prostředí** .
 3. Postupujte podle pokynů v průvodci.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MSBuild na příkazovém řádku –C++](../build/msbuild-visual-cpp.md)

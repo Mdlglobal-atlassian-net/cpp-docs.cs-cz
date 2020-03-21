@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - <cstdint>
 ms.assetid: 87afafb2-c630-4383-a2fc-a6b47c639e21
-ms.openlocfilehash: 9f4839ed6166e328feac4ae89fcce0637abce993
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 142ea2b341dad307dea98d1406803a1e7eca5e78
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447477"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076632"
 ---
 # <a name="ltcstdintgt"></a>&lt;cstdint&gt;
 
-Obsahuje hlavičku \<standardní knihovny jazyka C stdin. h > a přidává přidružené názvy `std` do oboru názvů. Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v hlavičce standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
+Obsahuje hlavičku standardní knihovny jazyka C \<stdin. h > a přidává přidružené názvy do oboru názvů `std`. Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v hlavičce standardní knihovny jazyka C jsou deklarovány v oboru názvů `std`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,7 +24,7 @@ Obsahuje hlavičku \<standardní knihovny jazyka C stdin. h > a přidává přid
 ## <a name="types"></a>Typy
 
 ```cpp
-namespace std { 
+namespace std {
     using int8_t = signed integer type; // optional
     using int16_t = signed integer type; // optional
     using int32_t = signed integer type; // optional
@@ -69,7 +69,7 @@ SIZE_MAX
 [U]INT{8 16 32 64 MAX}_C
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+\ [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)

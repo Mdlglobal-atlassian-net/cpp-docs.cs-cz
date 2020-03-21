@@ -6,39 +6,38 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1d4e962e91e2a30356fc9f90a26dbeb857c8a29
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395739"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075888"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 
-Knihovny Microsoft Foundation Classes (MFC) poskytuje třídy pro programování s připojením ODBC (Open Database). Od verze Visual Studio 2015 a ODBC systému SQL Server 2012 je preferovaný způsob, jak se připojit ke zdrojům dat SQL.
+Knihovna Microsoft Foundation Classes (MFC) poskytuje třídy pro programování s rozhraním ODBC (Open Database Connectivity). Od sady Visual Studio 2015 a SQL Server 2012 rozhraní ODBC je preferovaným způsobem, jak se připojit ke zdrojům dat SQL.
 
-Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v tématu [připojení ODBC (Open Database)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK na webu MSDN.
-
+Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v tématu rozhraní [ODBC (Open Database Connectivity)](/sql/odbc/microsoft-open-database-connectivity-odbc) na webu MSDN.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-- [ODBC](odbc-basics.md)– standard Open Database Connectivity a rozhraní API
+- [ODBC](odbc-basics.md)– Standard Open Database Connectivity a API
 
-- [Jaké MFC podporu pochází](odbc-and-mfc.md) pro programování rozhraní ODBC
+- [Jaká podpora knihovny MFC je poskytována](odbc-and-mfc.md) pro programování rozhraním ODBC
 
 - [Jaké ovladače rozhraní ODBC jsou k dispozici](odbc-driver-list.md)
 
 - [Připojení ke zdrojům dat ODBC](data-source-managing-connections-odbc.md)
 
-- [Zaznamenejte výměna pole (RFX)](record-field-exchange-rfx.md) mezi databází a objektem sady
+- [Výměna pole záznamu (RFX)](record-field-exchange-rfx.md) mezi databází a objektem sady záznamů
 
 - [Sady záznamů rozhraní ODBC](recordset-odbc.md)
 
 - [SQL](sql.md) pro ODBC
 
-- [Databázové transakce](transaction-odbc.md)
+- [Transakce databáze](transaction-odbc.md)
 
-- [Stanovení schématu zdroje dat ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) za běhu
+- [Určení schématu zdroje dat ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) za běhu
 
 - [Programová konfigurace zdroje dat ODBC](data-source-programmatically-configuring-an-odbc-data-source.md)
 
@@ -46,21 +45,21 @@ Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v t�
 
 - [Hromadné načítání záznamů](recordset-fetching-records-in-bulk-odbc.md)
 
-- [Přizpůsobení příkazu SQL Moje sady záznamů](sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [Přizpůsobení příkazu SQL moje sada záznamů](sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [Vytvoření přímého volání SQL](sql-making-direct-sql-calls-odbc.md)
+- [Vytváření přímých volání SQL](sql-making-direct-sql-calls-odbc.md)
 
-- [Vytvoření přímého volání rozhraní API ODBC](odbc-calling-odbc-api-functions-directly.md)
+- [Přímá volání rozhraní ODBC API](odbc-calling-odbc-api-functions-directly.md)
 
-- [Jak pracují databázové třídy s architektury dokument/zobrazení MFC?](working-with-documents-and-views.md)
+- [Jak fungují databázové třídy s architekturou Document/view knihovny MFC?](working-with-documents-and-views.md)
 
 - [Seznam ovladačů ODBC](odbc-driver-list.md)
 
-## <a name="odbc-database-tasks"></a>Databázové úkoly rozhraní ODBC
+## <a name="odbc-database-tasks"></a>Databázové úlohy ODBC
 
-Tyto úkoly jsou založeny na MFC [ODBC](odbc-basics.md) třídy. Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v tématu [připojení ODBC (Open Database)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK.
+Tyto úlohy jsou založené na třídách knihovny MFC [rozhraní ODBC](odbc-basics.md) . Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v tématu rozhraní [ODBC (Open Database Connectivity)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK.
 
-- [Nainstalovat a začít s rozhraním ODBC](installing-and-getting-started-with-odbc.md)
+- [Instalace a Začínáme s rozhraním ODBC](installing-and-getting-started-with-odbc.md)
 
 - [Návrh a vytvoření databázové aplikace ODBC](design-and-create-an-odbc-database-application.md)
 
@@ -76,6 +75,6 @@ Tyto úkoly jsou založeny na MFC [ODBC](odbc-basics.md) třídy. Další inform
 
 - [Použití sad záznamů rozhraní MFC ODBC](use-mfc-odbc-recordsets.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přístup k datům programování knihovny MFC nebo ATL)](../../data/data-access-programming-mfc-atl.md)
+[Programování přístupu k datům (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

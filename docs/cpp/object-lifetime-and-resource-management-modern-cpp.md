@@ -4,12 +4,12 @@ description: Postupujte podle principu RAII v moderním C++ , abyste se vyhnuli 
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303369"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078022"
 ---
 # <a name="object-lifetime-and-resource-management-raii"></a>Životní cyklus objektů a správa prostředků (RAII)
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 V následujícím příkladu `w` vlastní prostředek paměti, takže aby bylo možné paměť odstranit, musí mít ve svém destruktoru kód.
- 
+
 ```cpp
 class widget
 {
@@ -89,7 +89,7 @@ Pomocí inteligentních ukazatelů pro přidělení paměti můžete eliminovat 
 
 Návrh C++ zajistí, že objekty budou zničeny, když dostanou mimo rozsah. To znamená, že jsou zničeny při ukončení bloků, v opačném pořadí konstrukce. Když je objekt zničen, jeho základy a členy jsou zničeny v určitém pořadí. Objekty deklarované mimo libovolný blok v globálním rozsahu mohou vést k problémům. Může být obtížné ladit, pokud konstruktor globálního objektu vyvolá výjimku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vítejte zpět naC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>

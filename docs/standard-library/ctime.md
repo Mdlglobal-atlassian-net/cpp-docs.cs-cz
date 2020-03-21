@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-ms.openlocfilehash: f4bdb8fa30c44a6eaa83f53624c5bd43bd235261
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2b3f31ba48ca831b2d2d8cd460b60549c4debe83
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449379"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076627"
 ---
 # <a name="ltctimegt"></a>&lt;CTime –&gt;
 
-Obsahuje hlavičku \<standardní knihovny jazyka C Time. h > a přidává přidružené názvy `std` do oboru názvů.
+Obsahuje hlavičku standardní knihovny jazyka C \<Time. h > a přidává přidružené názvy do oboru názvů `std`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ Obsahuje hlavičku \<standardní knihovny jazyka C Time. h > a přidává přidr
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v hlavičce standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v hlavičce standardní knihovny jazyka C jsou deklarovány v oboru názvů `std`.
 
 ## <a name="constants"></a>Konstanty
 
@@ -41,15 +41,15 @@ namespace std {
     using time_t = see below ;
 }
 ```
-    
+
 ## <a name="structures"></a>Struktury
-    
+
 ```cpp
 struct timespec;
 struct tm;
 ```
-    
-## <a name="functions"></a>Funkce
+
+## <a name="functions"></a>Functions
 
 ```cpp
 clock_t clock();
@@ -64,8 +64,8 @@ struct tm* localtime(const time_t* timer);
 size_t strftime(char* s, size_t maxsize, const char* format, const struct tm* timeptr);
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+\ [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
+Přehled standardní knihovny\ [ C++ ](../standard-library/cpp-standard-library-overview.md)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

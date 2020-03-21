@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 53394a10464e2688953cd1b5703530e2719b7593
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456235"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076455"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>třídy is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
+# <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>třídy is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 
-Tyto šablony určují, zda lze typ vyvolat se zadanými typy argumentů. `is_invocable_r`a `is_nothrow_invocable_r` také určíte, zda je výsledek vyvolání převeden na konkrétní typ. `is_nothrow_invocable`a `is_nothrow_invocable_r` také určete, zda je vyvolání známo, že nevyvolává výjimky. Přidáno v C++ 17.
+Tyto šablony určují, zda lze typ vyvolat se zadanými typy argumentů. `is_invocable_r` a `is_nothrow_invocable_r` také určí, zda je výsledek vyvolání převeden na konkrétní typ. `is_nothrow_invocable` a `is_nothrow_invocable_r` také určit, zda vyvolání není známo, že vyvolává výjimky. Přidáno v C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Parametry
 
-*Kompatibilní*\
+*Volat*\
 Typ, který se má volat pro dotaz
 
-*Argumentů*\
+\ *argumentů*
 Typy argumentů pro dotazování.
 
-*Cenný*\
+*Převoditelné*\
 Typ, na který se má *volat* , se musí převést na.
 
 ## <a name="remarks"></a>Poznámky
 
-Predikát typu má hodnotu true, pokud lze volat *typ Invoke* pomocí argumentů argumenty v nehodnoceném kontextu.  `is_invocable`
+Predikát `is_invocable`ho typu má hodnotu true, pokud lze *volat typ Invoke* *pomocí argumentů argumenty v* nehodnoceném kontextu.
 
-Predikát typu má hodnotu true, *Pokud typ možné* volání lze vyvolat pomocí argumentů *argumentů v* nehodnoceném kontextu pro vytvoření typu výsledku převoditelného pro převoditelné.  `is_invocable_r`
+Predikát `is_invocable_r`ho typu má hodnotu true, pokud volaný typ, který lze *volat* , lze vyvolat *pomocí argumentů argumentů v* nehodnoceném kontextu pro vytvoření typu výsledku převoditelného na *převoditelný*.
 
-Predikát typu má hodnotu true, pokud volaný typ *Invoke lze vyvolat* pomocí argumentů *argumentů v* nehodnoceném kontextu a že takové volání je známo, že nevyvolává výjimku. `is_nothrow_invocable`
+Predikát `is_nothrow_invocable`ho typu má hodnotu true, pokud volaný *typ Invoke* lze vyvolat *pomocí argumentů argumentů v* nehodnoceném kontextu a že takové volání je známo, že nevyvolává výjimku.
 
-Predikát typu má hodnotu true, pokud *volaný typ Invoke* lze vyvolat pomocí argumentů *argumentů v* nehodnoceném kontextu pro vytvoření typu výsledku převoditelného pro převoditelné a že takové volání je známo, že není throw.  `is_nothrow_invocable_r` výjimka.
+Predikát `is_nothrow_invocable_r`ho typu má hodnotu true, pokud lze *volat typ,* který lze vyvolat pomocí *argumentů argumentů v* nehodnoceném kontextu pro vytvoření typu výsledku převoditelného pro *převoditelné*a že takové volání je známo, že nevyvolá výjimku.
 
-Každý z typů převoditelné, *volatelné*a typy v argumentech sady *parametrů musí být* úplný typ, pole neznámého objektu Bound nebo pravděpodobně **typ void**, který je typu CV kvalifikován. V opačném případě chování predikátu není definováno.
+Každý z typů *převoditelné*, *volatelné*a typy v argumentech sady *parametrů musí být* úplný typ, pole neznámého objektu Bound nebo pravděpodobně **typ void**, který je typu CV kvalifikován. V opačném případě chování predikátu není definováno.
 
 ## <a name="example"></a>Příklad
 
@@ -103,7 +103,7 @@ int main()
 {
     static_assert( std::is_invocable<decltype(test1), short>::value );
 
-    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value ); 
+    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value );
     static_assert( std::is_invocable_r<long(*)(), decltype(test1), int>::value ); // fails
 
     static_assert( std::is_nothrow_invocable<decltype(test1), int>::value );
@@ -116,11 +116,11 @@ int main()
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<type_traits >
+**Záhlaví:** \<type_traits >
 
 **Obor názvů:** std
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [< type_traits >](../standard-library/type-traits.md)\
-[invoke](functional-functions.md#invoke)
+[Zavolejte](functional-functions.md#invoke)

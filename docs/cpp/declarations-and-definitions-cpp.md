@@ -2,12 +2,12 @@
 title: Deklarace a definice (C++)
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7aa9e07a471ed5a32ecc8f13690f1a1bf08b655f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301545"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077205"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklarace a definice (C++)
 
@@ -40,9 +40,9 @@ namespace N {
 }
 ```
 
-Na řádku 5 je deklarována funkce `main`. Na řádku 7 je proměnná **const** s názvem `pi` deklarovaná a *inicializovaná*. Na řádku 8 je celočíselná `i` deklarovaná a inicializovaná s hodnotou vytvořenou `f`funkcí. Název `f` je viditelný pro kompilátor z důvodu *dopředné deklarace* na řádku 3. 
+Na řádku 5 je deklarována funkce `main`. Na řádku 7 je proměnná **const** s názvem `pi` deklarovaná a *inicializovaná*. Na řádku 8 je celočíselná `i` deklarovaná a inicializovaná s hodnotou vytvořenou `f`funkcí. Název `f` je viditelný pro kompilátor z důvodu *dopředné deklarace* na řádku 3.
 
-V řádku 9 je deklarována proměnná s názvem `obj` typu `C`. Tato deklarace však vyvolá chybu, protože `C` není deklarována až později v programu a není deklarována s dopředně. Chcete-li chybu opravit, můžete buď přesunout celou *definici* `C` před `main` nebo jinak přidat k ní deklaraci dopředné deklarace. Toto chování se liší od jiných jazyků C#, jako je například, ve kterém lze funkce a třídy použít před jejich bodem deklarace ve zdrojovém souboru. 
+V řádku 9 je deklarována proměnná s názvem `obj` typu `C`. Tato deklarace však vyvolá chybu, protože `C` není deklarována až později v programu a není deklarována s dopředně. Chcete-li chybu opravit, můžete buď přesunout celou *definici* `C` před `main` nebo jinak přidat k ní deklaraci dopředné deklarace. Toto chování se liší od jiných jazyků C#, jako je například, ve kterém lze funkce a třídy použít před jejich bodem deklarace ve zdrojovém souboru.
 
 V řádku 10 je deklarována proměnná s názvem `str` typu `std::string`. Název `std::string` je viditelný, protože je představen v [souboru hlaviček](header-files-cpp.md) `string`, který je sloučen do zdrojového souboru na řádku 1. `std` je obor názvů, ve kterém je deklarována `string` třída.
 
@@ -107,6 +107,6 @@ C++ Program může obsahovat více než jednu [jednotku kompilace](header-files-
 [decltype](decltype-cpp.md)<br/>
 [Atributy vC++](attributes.md)<br/>
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Základní koncepty](../cpp/basic-concepts-cpp.md)<br/>

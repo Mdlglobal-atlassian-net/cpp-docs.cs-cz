@@ -4,12 +4,12 @@ description: Pomocí editoru C++ kódu v aplikaci Visual Studio můžete formát
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438163"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077850"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Úpravy a refaktorace C++ kódu v aplikaci Visual Studio
 
@@ -70,15 +70,15 @@ Tlačítko se zobrazí pouze v případě, že je relevantní pro vaši aktuáln
 
 ## <a name="template-intellisense"></a>IntelliSense šablony
 
-Když je kurzor uvnitř definice šablony, zobrazí se **panel šablony** , který umožňuje poskytnout ukázkové argumenty šablony pro technologii IntelliSense. 
+Když je kurzor uvnitř definice šablony, zobrazí se **panel šablony** , který umožňuje poskytnout ukázkové argumenty šablony pro technologii IntelliSense.
 
 ![IntelliSense&#43; &#43; – šablona jazyka C – zobrazit existující instance](../ide/media/template-intellisense-cpp-1.png "Šablona IntelliSense – zobrazit existující instance")
 
-Kliknutím na ikonu **\<t >** rozbalíte nebo sbalíte **panel šablon**. Kliknutím na ikonu tužky nebo dvojitým kliknutím na **panel šablon** otevřete okno **Upravit** . 
+Kliknutím na ikonu **\<t >** rozbalíte nebo sbalíte **panel šablon**. Kliknutím na ikonu tužky nebo dvojitým kliknutím na **panel šablon** otevřete okno **Upravit** .
 
 ![IntelliSense&#43; &#43; – šablona jazyka C](../ide/media/template-intellisense-cpp-3.png "IntelliSense šablony")
 
-Úpravy, které provedete v okně, se aplikují přímo na zdrojový kód, abyste viděli účinky v reálném čase. 
+Úpravy, které provedete v okně, se aplikují přímo na zdrojový kód, abyste viděli účinky v reálném čase.
 
 Panel šablon může automaticky naplnit kandidáty na základě vytváření instancí v kódu. Kliknutím na **Přidat všechny existující instance** zobrazíte seznam všech konkrétních argumentů, které byly použity k vytvoření instance šablony v rámci vašeho základu kódu.
 
@@ -94,13 +94,13 @@ Informace na **panelu šablon** se považují za specifické pro uživatele. Je 
 
 Pokud editor detekuje problémy s vaším kódem, přidá se v rámci problému barevné vlnovky. Červené vlnovky označují kód, který se nebude kompilovat. Zelené vlnovky označují jiné druhy problémů, které mohou být stále závažné. Chcete-li získat další informace o problémech, můžete otevřít okno **Seznam chyb** .
 
-V případě některých druhů chyb a také běžných vzorů kódování bude editor nabízet **rychlou opravu** ve formě žárovky, která se zobrazí, když najedete myší na vlnovku. Kliknutím na šipku dolů zobrazíte návrhy. 
+V případě některých druhů chyb a také běžných vzorů kódování bude editor nabízet **rychlou opravu** ve formě žárovky, která se zobrazí, když najedete myší na vlnovku. Kliknutím na šipku dolů zobrazíte návrhy.
 
 V následujícím příkladu byla deklarována `vector`, ale nebyla nalezena žádná definice, takže Editor nabízí zahrnutí potřebného hlavičkového souboru:
 
 ![Rychlá&#43; &#43; oprava jazyka C](../ide/media/quick-fix-for-header-cpp.png "C++Rychlá oprava")
 
-Editor také nabízí rychlé opravy pro některé příležitosti refaktoringu. Například pokud deklarujete třídu v hlavičkovém souboru, Visual Studio nabídne vytvoření definice v samostatném souboru. cpp. 
+Editor také nabízí rychlé opravy pro některé příležitosti refaktoringu. Například pokud deklarujete třídu v hlavičkovém souboru, Visual Studio nabídne vytvoření definice v samostatném souboru. cpp.
 
 ![Rychlá&#43; &#43; oprava jazyka C](../ide/media/quick-fix.png "C++Rychlá oprava")
 

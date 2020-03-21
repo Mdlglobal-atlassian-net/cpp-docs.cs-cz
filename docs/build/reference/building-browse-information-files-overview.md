@@ -7,47 +7,46 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 94cb5865e56e12f51ef4a8598a5df3fcbe69fa0f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220543"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078362"
 ---
 # <a name="building-browse-information-files-overview"></a>Sestavení souborů informací o procházení: Přehled
 
-
 > [!WARNING]
-> Přestože BSCMAKE je stále instalace sady Visual Studio, se už používá integrovaným vývojovým prostředím. Od verze Visual Studio 2008 je automaticky uloženy informace o procházení a symbol v soubor SDF SQL serveru ve složce řešení.
+> I když je aplikace BSCMAKE stále nainstalována se sadou Visual Studio, již není používána rozhraním IDE. Vzhledem k tomu, že se Visual Studio 2008, informace o procházení a symbolech se ukládají automaticky do souboru SQL Server. SDF ve složce řešení.
 
-K vytvoření informací o procházení pro procházení symbolů, kompilátor vytvoří soubor .sbr pro každý zdrojový soubor v projektu, pak BSCMAKE. Soubor EXE řetězí soubory .sbr do jednoho souboru .bsc.
+Chcete-li vytvořit informace o procházení pro procházení symbolů, kompilátor vytvoří soubor. sbr pro každý zdrojový soubor v projektu a pak BSCMAKE. EXE zřetězí soubory. sbr do jednoho souboru. BSC.
 
-Generují se soubory .sbr a .bsc zabere určitý čas, aby Visual Studio vypne tyto funkce ve výchozím nastavení. Pokud chcete aktuální informace o procházení, musíte zapnout možnosti procházení a sestavte projekt znovu.
+Generování souborů. sbr a. BSC trvá čas, takže Visual Studio tyto funkce ve výchozím nastavení vypne. Chcete-li procházet aktuální informace, je nutné zapnout možnosti procházení a znovu sestavit projekt.
 
-Použití [/FR](fr-fr-create-dot-sbr-file.md) nebo [/Fr](fr-fr-create-dot-sbr-file.md) říct kompilátor vytvoří soubory .sbr. Pokud chcete vytvořit soubory .bsc, můžete volat [BSCMAKE](bscmake-command-line.md) z příkazového řádku. Pomocí nástroje BSCMAKE z příkazového řádku poskytuje přesnější kontrolu nad zpracování souborů informací o procházení. Zobrazit [BscMake – referenční dokumentace](bscmake-reference.md) Další informace.
+Pomocí [/fr](fr-fr-create-dot-sbr-file.md) nebo [/fr](fr-fr-create-dot-sbr-file.md) sdělte kompilátoru, aby vytvořil soubory. sbr. Chcete-li vytvořit soubory. BSC, můžete volat [BSCMAKE](bscmake-command-line.md) z příkazového řádku. Pomocí BSCMAKE z příkazového řádku získáte přesnější kontrolu nad manipulací se soubory s informacemi o procházení. Další informace najdete v [referenčních](bscmake-reference.md) informacích k BSCMAKE.
 
 > [!TIP]
->  Můžete zapnout generování souboru .sbr ale ponechte generování souboru .bsc vypnuté. Tento postup umožňuje rychlé sestavení, ale také umožňuje rychle vytvořit soubor .bsc čerstvé zapnutím generování souboru .bsc a sestavením projektu.
+>  Můžete zapnout generování souborů. SBR, ale ponechat vypnuto generování souboru BSC. To poskytuje rychlé sestavení, ale také umožňuje rychle vytvořit nový soubor. BSC tím, že zapnete generování souborů. BSC a sestavíte projekt.
 
-Můžete snížit čas, paměť a místo na disku potřebné k sestavení souboru .bsc snížením velikosti souboru .bsc.
+Omezením velikosti souboru. BSC můžete zkrátit čas, paměť a místo na disku potřebné k vytvoření souboru. BSC.
 
-Zobrazit [Obecná stránka vlastností (projekt)](general-property-page-project.md) informace o tom, jak vytvořit soubor prohlížeče ve vývojovém prostředí.
+Informace o tom, jak vytvořit soubor prohlížeče ve vývojovém prostředí, najdete v části [Obecná stránka vlastností (projekt)](general-property-page-project.md) .
 
-### <a name="to-create-a-smaller-bsc-file"></a>Chcete-li vytvořit menší soubor .bsc
+### <a name="to-create-a-smaller-bsc-file"></a>Vytvoření menšího souboru. BSC
 
-1. Použití [bscmakee – možnosti příkazového řádku](bscmake-options.md) vyloučit informace z informačního souboru procházení.
+1. K vyloučení informací ze souboru s informacemi o procházení použijte [Možnosti příkazového řádku BSCMAKE](bscmake-options.md) .
 
-1. Vynechte lokální symboly v jedné nebo více soubory .sbr při kompilaci nebo sestavení.
+1. Vynechání místních symbolů v jednom nebo více souborech. sbr při kompilování nebo sestavování.
 
-1. Pokud soubor objektu neobsahuje informace potřebné pro vaši aktuální fázi ladění, vynechte jeho soubor .sbr z příkazu BSCMAKE při opětovném sestavování informačního souboru procházení.
+1. Pokud soubor objektu neobsahuje informace potřebné pro vaši aktuální fázi ladění, vynechejte jeho soubor. SBR z příkazu BSCMAKE při opětovném sestavování souboru s informacemi o procházení.
 
-### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>Ke sloučení informací procházení z několika projektů do souboru jeden prohlížeč (.bsc)
+### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>Kombinování informací o procházení z několika projektů do jednoho souboru prohlížeče (. BSC)
 
-1. Buď není sestavení souboru .bsc na úrovni projektu nebo pomocí přepínače /n zabránit soubory .sbr vedlo ke zkrácení.
+1. Buď nevytvářejte soubor. bsc na úrovni projektu, nebo použijte přepínač/n, abyste zabránili zkracování souborů. sbr.
 
-1. Po jsou všechny projekty sestaveny, spusťte nástroj BSCMAKE všechny soubory .sbr jako vstup. Zástupné znaky. Například pokud jste měli adresáře projektu C:\X C:\Y a C:\Z se soubory .sbr je, a chtěli je zkombinovat do jednoho souboru BSC programem, použijte nástroje BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\ \*.sbr /o c:\whatever_directory\combined.bsc pro sestavení souboru .bsc kombinované.
+1. Po sestavení všech projektů spusťte BSCMAKE se všemi soubory. sbr jako vstupem. Zástupné znaky jsou přijaty. Pokud byste například měli adresáře projektu C:\X, C:\Y a C:\Z se soubory. SBR v nich a chtěli jste je zkombinovat do jednoho souboru. BSC, použijte BSCMAKE C:\X\\\*. sbr C:\Y\\\*. sbr C:\Z\\\*. sbr/o c:\ whatever_directory \combined.BSC pro sestavení kombinovaného souboru BSC.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)<br/>
+[Další nástroje pro sestavení MSVC](c-cpp-build-tools.md)<br/>
 [BSCMAKE – referenční dokumentace](bscmake-reference.md)

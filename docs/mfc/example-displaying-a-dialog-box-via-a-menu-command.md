@@ -1,5 +1,5 @@
 ---
-title: 'Příklad: Zobrazení dialogového okna pomocí příkazu nabídky'
+title: 'Příklad: Zobrazení dialogového okna pomocí příkazu v nabídce'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 12c919c1c79a3e40a1322f3f73398b90af2fad5f
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095920"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078829"
 ---
-# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Příklad: Zobrazení dialogového okna pomocí příkazu nabídky
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Příklad: Zobrazení dialogového okna pomocí příkazu v nabídce
 
 Toto téma obsahuje postupy:
 
@@ -44,7 +44,7 @@ Postupy používají následující názvy a hodnoty:
 
 1. Přidejte třídu pro dialogové okno. Další informace najdete v tématu věnovaném [Přidání třídy](../ide/adding-a-class-visual-cpp.md) .
 
-1. V **zobrazení tříd**vyberte třídu dokumentu (CDisplayDialogDoc). V okně **vlastnosti** klikněte na tlačítko **události** . Dvakrát klikněte na ID příkazu nabídky (ID_VIEW_TEST). Potom klikněte na šipku dolů a vyberte  **\<přidat > OnViewTest**.
+1. V **zobrazení tříd**vyberte třídu dokumentu (CDisplayDialogDoc). V okně **vlastnosti** klikněte na tlačítko **události** . Dvakrát klikněte na ID příkazu nabídky (ID_VIEW_TEST). Potom klikněte na šipku dolů a vyberte **\<přidat > OnViewTest**.
 
    Pokud jste přidali příkaz nabídky do sálového počítače aplikace MDI, vyberte místo toho třídu aplikace (CDisplayDialogApp).
 
@@ -54,11 +54,11 @@ Postupy používají následující názvy a hodnoty:
    #include "TestDialog.h"
    ```
 
-1. Přidejte následující kód k `OnViewTest` implementaci funkce:
+1. Přidejte následující kód, který `OnViewTest` k implementaci funkce:
 
    ```cpp
    CTestDialog testdlg;
-   testdlg.DoModal(); 
+   testdlg.DoModal();
    ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Zobrazení nemodálního dialogového okna
@@ -99,7 +99,7 @@ Postupy používají následující názvy a hodnoty:
    delete m_pTestDlg;
    ```
 
-   - Přidejte následující kód k `OnViewTest` implementaci funkce:
+   - Přidejte následující kód, který `OnViewTest` k implementaci funkce:
 
    ```cpp
    if (NULL == m_pTestDlg)
@@ -110,7 +110,7 @@ Postupy používají následující názvy a hodnoty:
    m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
 [Modální a nemodální dialogová okna](../mfc/modal-and-modeless-dialog-boxes.md)

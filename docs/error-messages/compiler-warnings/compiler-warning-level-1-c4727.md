@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 1bcc029536d2602d50178d7148332b8371db3c7f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 0c00ac552e525fd57f6f09b0be5655958cfce3cc
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630835"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075143"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Upozornění kompilátoru (úroveň 1) C4727
 
-Soubor PCH s názvem pch_file se stejným časovým razítkem se našel v obj_file_1 a obj_file_2.  Použití prvního souboru PCH.
+V obj_file_1 a obj_file_2 byl nalezen "PCH s názvem pch_file se stejným časovým razítkem.  Použití prvního souboru PCH.
 
 > [!NOTE]
 > V aplikaci Visual Studio 2017 a starší je předkompilovaná hlavička ve výchozím nastavení označována jako *stdafx. h* a v aplikaci Visual Studio 2019 a novější je ve výchozím nastavení označována jako *PCH. h* .
@@ -50,8 +50,7 @@ Místo toho použijte následující:
 
 ::: moniker-end
 
-
-Další informace naleznete v tématu
+Další informace najdete v tématu
 
 - [/Yc (vytvoření souboru předkompilované hlavičky)](../../build/reference/yc-create-precompiled-header-file.md)
 

@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: dba962c761fac0408a3c68a46ec6447aa7832522
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fdd6072f831d7bfb77673169c2ef8062cc7107a6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444074"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077865"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl – třída
 
@@ -145,7 +145,7 @@ Měli byste si nejdřív přečíst a porozumět dokumentaci k [IRowsetChange](/
 
 - Podívejte se také, jak se třída `RUpdateRowset` používá v ukázce [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-## <a name="setdata"></a>IRowsetUpdateImpl:: SetData
+## <a name="irowsetupdateimplsetdata"></a><a name="setdata"></a>IRowsetUpdateImpl:: SetData
 
 Nastaví hodnoty dat v jednom nebo více sloupcích.
 
@@ -165,7 +165,7 @@ Viz [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.8
 
 Tato metoda přepisuje metodu [IRowsetChangeImpl:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md) , ale zahrnuje ukládání původních dat do mezipaměti, aby bylo možné povolit okamžité nebo odložené zpracování operace.
 
-## <a name="getoriginaldata"></a>IRowsetUpdateImpl:: GetOriginalData
+## <a name="irowsetupdateimplgetoriginaldata"></a><a name="getoriginaldata"></a>IRowsetUpdateImpl:: GetOriginalData
 
 Načte data, která se na zdroj dat naposled přenáší nebo získají, a ignoruje probíhající změny.
 
@@ -181,7 +181,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
 
 Viz [IRowsetUpdate:: GetOriginalData](/previous-versions/windows/desktop/ms709947(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="getpendingrows"></a>IRowsetUpdateImpl:: GetPendingRows
+## <a name="irowsetupdateimplgetpendingrows"></a><a name="getpendingrows"></a>IRowsetUpdateImpl:: GetPendingRows
 
 Vrátí seznam řádků s nedokončenými změnami.
 
@@ -206,7 +206,7 @@ Další parametry naleznete v tématu [IRowsetUpdate:: GetPendingRows](/previous
 
 Další informace naleznete v tématu [IRowsetUpdate:: GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="getrowstatus"></a>IRowsetUpdateImpl:: GetRowStatus
+## <a name="irowsetupdateimplgetrowstatus"></a><a name="getrowstatus"></a>IRowsetUpdateImpl:: GetRowStatus
 
 Vrátí stav zadaných řádků.
 
@@ -226,7 +226,7 @@ pro Odpovídá parametru *hChapter* v [IRowsetUpdate:: GetRowStatus](/previous-v
 
 Další parametry naleznete v tématu [IRowsetUpdate:: GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="undo"></a>IRowsetUpdateImpl:: Undo
+## <a name="irowsetupdateimplundo"></a><a name="undo"></a>IRowsetUpdateImpl:: Undo
 
 Vrátí na řádku od posledního načtení nebo aktualizace změny.
 
@@ -254,7 +254,7 @@ pro Odpovídá parametru *prgRows* v [IRowsetUpdate:: Undo](/previous-versions/w
 
 Další parametry naleznete v tématu [IRowsetUpdate:: Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="update"></a>IRowsetUpdateImpl:: Update
+## <a name="irowsetupdateimplupdate"></a><a name="update"></a>IRowsetUpdateImpl:: Update
 
 Přenese všechny změny provedené na řádku od posledního načtení nebo aktualizace.
 
@@ -280,7 +280,7 @@ Další parametry naleznete v tématu [IRowsetUpdate:: Update](/previous-version
 
 Změny se odesílají voláním [IRowsetChangeImpl:: FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Aby se změny projevily, musí příjemce zavolat [CRowset:: Update](../../data/oledb/crowset-update.md) . Nastavte *prgRowStatus* na odpovídající hodnotu, jak je popsáno v části [stavy řádků](/previous-versions/windows/desktop/ms722752(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="isupdateallowed"></a>IRowsetUpdateImpl:: IsUpdateAllowed
+## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a>IRowsetUpdateImpl:: IsUpdateAllowed
 
 Před aktualizacemi popište tuto metodu, aby kontrolovala zabezpečení, integritu a tak dále.
 
@@ -307,7 +307,7 @@ mimo Stav vrácený uživateli
 
 Pokud určíte, že by měla být aktualizace povolená, vrátí S_OK; v opačném případě vrátí E_FAIL. Pokud povolíte aktualizaci, musíte také nastavit `DBROWSTATUS` v [IRowsetUpdateImpl:: Update](../../data/oledb/irowsetupdateimpl-update.md) na příslušný [stav řádku](/previous-versions/windows/desktop/ms722752(v=vs.85)).
 
-## <a name="mapcacheddata"></a>IRowsetUpdateImpl:: m_mapCachedData
+## <a name="irowsetupdateimplm_mapcacheddata"></a><a name="mapcacheddata"></a>IRowsetUpdateImpl:: m_mapCachedData
 
 Mapa obsahující původní data pro odloženou operaci.
 
@@ -315,7 +315,7 @@ Mapa obsahující původní data pro odloženou operaci.
 
 ```cpp
 CAtlMap<
-   HROW hRow, 
+   HROW hRow,
    Storage* pData
 >
 m_mapCachedData;

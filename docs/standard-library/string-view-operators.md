@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446765"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076406"
 ---
 # <a name="ltstring_viewgt-operators"></a>operátory &lt;string_view&gt;
 
-Tyto operátory použijte k porovnání dvou string_view objektů nebo string_view a nějakého jiného objektu řetězce (například [std:: String](basic-string-class.md)nebo **char\*** ), pro který je k dispozici implicitní převod. 
+Tyto operátory použijte k porovnání dvou string_view objektů nebo string_view a nějakého jiného objektu řetězce (například [std:: String](basic-string-class.md)nebo **char\*** ), pro který je k dispozici implicitní převod.
 
 ||||
 |-|-|-|
@@ -34,7 +34,7 @@ Tyto operátory použijte k porovnání dvou string_view objektů nebo string_vi
 |[operátor&lt;](#op_lt)|[operátor&lt;&lt;](#op_lt_lt)|[operátor&lt;=](#op_lt_eq)|
 |[operator = = – operátor](#op_eq_eq)|[sv – operátor](#op_sv)|
 
-## <a name="op_neq"></a>! = – operátor
+## <a name="operator"></a><a name="op_neq"></a>! = – operátor
 
 Testuje, zda objekt na levé straně operátoru není roven objektu na pravé straně.
 
@@ -69,11 +69,11 @@ Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string
 
 ### <a name="remarks"></a>Poznámky
 
-Implicitní převod musí existovat z *convertible_string_type* na string_view na druhé straně. 
+Implicitní převod musí existovat z *convertible_string_type* na string_view na druhé straně.
 
 Porovnání je založeno na lexicographical porovnání sekvencí znaků. Pokud mají stejný počet prvků a všechny elementy jsou stejné, jsou oba objekty stejné. V opačném případě jsou nerovné.
 
-## <a name="op_eq_eq"></a>operator = = – operátor
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = = – operátor
 
 Testuje, zda je objekt na levé straně operátoru roven objektu na pravé straně.
 
@@ -108,12 +108,11 @@ Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string
 
 ### <a name="remarks"></a>Poznámky
 
-Implicitní převod musí existovat z *convertible_string_type* na string_view na druhé straně. 
+Implicitní převod musí existovat z *convertible_string_type* na string_view na druhé straně.
 
 Porovnání je založeno na lexicographical porovnání sekvencí znaků. Pokud mají stejný počet prvků a všechny elementy jsou stejné, jsou oba objekty stejné.
 
-
-## <a name="op_lt"></a>operátor&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>operátor&lt;
 
 Testuje, zda je objekt na levé straně operátoru menší než objekt na pravé sidestring_view
 
@@ -148,7 +147,7 @@ Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string
 
 ### <a name="remarks"></a>Poznámky
 
-Implicitní převod musí existovat z *convertible_string_type* na string_view na druhé straně. 
+Implicitní převod musí existovat z *convertible_string_type* na string_view na druhé straně.
 
 Porovnání je založeno na lexicographical porovnání sekvencí znaků. Při výskytu prvního nestejné dvojice znaků se vrátí výsledek tohoto porovnání. Pokud se nenajde žádné nestejné znaky, ale jedna sekvence je kratší, kratší sekvence bude menší než delší. Jinými slovy, "Cat" je menší než "kočky".
 
@@ -174,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>operátor&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>operátor&lt;=
 
 Testuje, zda je objekt na levé straně operátoru menší než nebo roven objektu na pravé straně.
 
@@ -211,7 +210,7 @@ Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string
 
 Viz [operátor&lt;](#op_lt).
 
-## <a name="op_lt_lt"></a>operátor&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operátor&lt;&lt;
 
 Zapíše string_view do výstupního datového proudu.
 
@@ -237,7 +236,7 @@ výstupní datový proud, do kterého se zapisuje.
 
 Tento operátor použijte k vložení obsahu string_view do výstupního datového proudu, například pomocí [std:: cout](iostream.md#cout).
 
-## <a name="op_gt"></a>operátor&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>operátor&gt;
 
 Testuje, zda je objekt na levé straně operátoru větší než objekt na pravé straně.
 
@@ -274,7 +273,7 @@ Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string
 
 Viz [operátor&lt;](#op_lt).
 
-## <a name="op_gt_eq"></a>operátor&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>operátor&gt;=
 
 Testuje, zda je objekt na levé straně operátoru větší než nebo roven objektu na pravé straně.
 
@@ -311,9 +310,9 @@ Jakýkoli typ řetězce, který se dá převést, nebo objekt typu `basic_string
 
 Viz [operátor&lt;](#op_lt).
 
-## <a name="op_sv"></a>operátor "" sv (string_view Literal)
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>operátor "" sv (string_view Literal)
 
-Sestaví string_view z řetězcového literálu. Vyžaduje `std::literals::string_view_literals`oboru názvů. 
+Sestaví string_view z řetězcového literálu. Vyžaduje `std::literals::string_view_literals`oboru názvů.
 
 ### <a name="example"></a>Příklad
 

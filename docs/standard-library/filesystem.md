@@ -12,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 86be11da1e2cef2fe0ca12691aeb0ce3dbe94202
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441707"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076511"
 ---
 # &lt;filesystem&gt;
 
@@ -32,7 +32,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Ve vydané verzi sady Visual Studio 2017 nebyla hlavička \<filesystem> dosud C++ standardní. C++v rámci sady Visual Studio 2017 RTW implementuje finální koncept Standard, který najdete v [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf). Visual Studio 2017 verze 15,7 a novější podporuje nové prostředí C++ 17 \<filesystem> Standard.
+> Ve vydané verzi sady Visual Studio 2017 nebyla hlavička \<filesystem> dosud C++ standardní. C++v rámci sady Visual Studio 2017 RTW implementuje finální koncept Standard, který najdete v [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100). Visual Studio 2017 verze 15,7 a novější podporuje nové prostředí C++ 17 \<filesystem> Standard.
 > Jedná se o zcela novou implementaci, která není kompatibilní s předchozí `std::experimental` verzí. Byl nutný pro podporu symlink, opravy chyb a změny v chování vyžadovaném standardem. V současné době zahrnuje \<filesystem> k dispozici nové `std::filesystem` a předchozí `std::experimental::filesystem`. Včetně \<experimental/filesystem> poskytuje pouze starou implementaci experimental. Implementace experimental bude odebrána v další vydaných vydáních knihovny ABI.
 
 Tato hlavička podporuje systémy souborů pro jednu ze dvou hlavních tříd hostitelských operačních systémů: Microsoft Windows a POSIX.

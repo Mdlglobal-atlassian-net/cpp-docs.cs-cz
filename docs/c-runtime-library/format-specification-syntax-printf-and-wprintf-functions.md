@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c5cd93607f8e5a892d789dcb6aeef934f8936dad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417171"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078049"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe specifikace formátu: funkce printf a wprintf
 
-Různé funkce `printf` a `wprintf` přebírají řetězec formátu a volitelné argumenty a vytvoří formátovanou sekvenci znaků pro výstup. Formátovací řetězec obsahuje nula nebo více *direktiv*, což jsou buď literálové znaky pro výstupní nebo kódované *specifikace převodu* , které popisují, jak formátovat argument ve výstupu. Tento článek popisuje syntaxi použitou ke kódování specifikace převodu v řetězci formátu. Seznam těchto funkcí najdete v tématu [vstupně-výstupní operace streamu](../c-runtime-library/stream-i-o.md). 
+Různé funkce `printf` a `wprintf` přebírají řetězec formátu a volitelné argumenty a vytvoří formátovanou sekvenci znaků pro výstup. Formátovací řetězec obsahuje nula nebo více *direktiv*, což jsou buď literálové znaky pro výstupní nebo kódované *specifikace převodu* , které popisují, jak formátovat argument ve výstupu. Tento článek popisuje syntaxi použitou ke kódování specifikace převodu v řetězci formátu. Seznam těchto funkcí najdete v tématu [vstupně-výstupní operace streamu](../c-runtime-library/stream-i-o.md).
 
 Specifikace převodu se skládá z volitelných a povinných polí v tomto formuláři:
 
@@ -39,7 +39,7 @@ Základní specifikace převodu obsahuje pouze znak procenta a znak *typu* . Nap
 
 <a name="type"></a>
 
-> [!NOTE] 
+> [!NOTE]
 > V aplikaci Visual Studio 2015 `printf` a `scanf` rodina funkcí byly deklarovány jako **inline** a přesunuty do hlaviček `<stdio.h>` a `<conio.h>`. Pokud migrujete starší kód, může se v souvislosti s těmito funkcemi zobrazit *linkerů LNK2019* . Další informace najdete v tématu [o C++ historii vizuálních změn 2003 – 2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="type-conversion-specifier"></a>Specifikátor převodu typu
@@ -59,12 +59,12 @@ Celočíselné typy, jako `short`, `int`, `long`, `long long`a jejich `unsigned`
 |--------------------|--------------|-------------------|
 |**r**|Znak|Při použití s funkcemi `printf` určuje jednobajtové znak; Při použití s funkcí `wprintf` určuje velký znak.|
 |**C**|Znak|Při použití s funkcí `printf` určuje velký znak; Při použití s funkcemi `wprintf` určuje jednobajtové znak.|
-|**trojrozměrné**|Celé číslo|Desítkové celé číslo se znaménkem.|
-|**došlo**|Celé číslo|Desítkové celé číslo se znaménkem.|
-|**zápis**|Celé číslo|Osmičkové celé číslo bez znaménka.|
-|**h**|Celé číslo|Celé číslo bez znaménka.|
-|**znak**|Celé číslo|Šestnáctkové celé číslo bez znaménka; používá "ABCDEF".|
-|**Znak**|Celé číslo|Šestnáctkové celé číslo bez znaménka; používá "ABCDEF".|
+|**trojrozměrné**|Integer|Desítkové celé číslo se znaménkem.|
+|**došlo**|Integer|Desítkové celé číslo se znaménkem.|
+|**zápis**|Integer|Osmičkové celé číslo bez znaménka.|
+|**h**|Integer|Celé číslo bez znaménka.|
+|**znak**|Integer|Šestnáctkové celé číslo bez znaménka; používá "ABCDEF".|
+|**Znak**|Integer|Šestnáctkové celé číslo bez znaménka; používá "ABCDEF".|
 |**cerebrální**|Plovoucí desetinná čárka|Podepsaná hodnota, která má formu [-]*d. dddd*__e__ *-* \[*d*], kde *d* je jedna desítková číslice, *dddd* je jedna nebo více desítkových číslic v závislosti na zadané přesnosti nebo šest ve výchozím nastavení a *DD*\[*d*] je dvě nebo tři desítkové číslice v závislosti na [formátu výstupu](../c-runtime-library/set-output-format.md) a velikosti exponentu.|
 |**Cerebrální**|Plovoucí desetinná čárka|Stejné jako ve formátu **e** **s výjimkou, že** místo **e** představuje exponent.|
 |**FJ**|Plovoucí desetinná čárka|Podepsaná hodnota, která má tvar [-]*dddd* __.__ *dddd*, kde *dddd* je jedna nebo více desítkových číslic. Počet číslic před desetinnou čárkou závisí na velikosti čísla a počet číslic po desetinné čárkě závisí na požadované přesnosti nebo šesti ve výchozím nastavení.|
@@ -75,8 +75,8 @@ Celočíselné typy, jako `short`, `int`, `long`, `long long`a jejich `unsigned`
 |**Určitého**|Plovoucí desetinná čárka|Podepsaná hexadecimální hodnota s dvojitou přesností a plovoucí desetinnou čárkou, která má tvar [-] 0X*h. hhhh*__P__. hhhh *, kde* *h.* jsou šestnáctkové číslice (s velkými písmeny) mantisy a *DD* jsou jedna nebo více číslic pro exponent. Přesnost určuje počet číslic za bodem.|
 |**n**|Ukazatel na celé číslo|Počet znaků, které byly dosud úspěšně zapsány do datového proudu nebo vyrovnávací paměti. Tato hodnota je uložena v celé číslo, jehož adresa je uvedena jako argument. Velikost celého čísla, na které se odkazuje, se dá řídit předponou specifikace velikosti argumentu. Specifikátor **n** je ve výchozím nastavení zakázaný. informace najdete v důležité poznámce zabezpečení.|
 |**trub**|Typ ukazatele|Zobrazí argument jako adresu v šestnáctkových číslicích.|
-|**pracují**|String|Při použití s funkcemi `printf` určuje jednobajtové nebo vícebajtový řetězec znaků; Při použití s funkcemi `wprintf` určuje řetězec s velkým znakem. Znaky jsou zobrazeny až do prvního znaku null nebo do dosažení hodnoty *přesnosti* .|
-|**Pracují**|String|Při použití s funkcemi `printf` určuje řetězec s velkým znakem; Při použití s funkcemi `wprintf` určuje jednobajtové nebo vícebajtový řetězec znaků. Znaky jsou zobrazeny až do prvního znaku null nebo do dosažení hodnoty *přesnosti* .|
+|**pracují**|Řetězec|Při použití s funkcemi `printf` určuje jednobajtové nebo vícebajtový řetězec znaků; Při použití s funkcemi `wprintf` určuje řetězec s velkým znakem. Znaky jsou zobrazeny až do prvního znaku null nebo do dosažení hodnoty *přesnosti* .|
+|**Pracují**|Řetězec|Při použití s funkcemi `printf` určuje řetězec s velkým znakem; Při použití s funkcemi `wprintf` určuje jednobajtové nebo vícebajtový řetězec znaků. Znaky jsou zobrazeny až do prvního znaku null nebo do dosažení hodnoty *přesnosti* .|
 |**Od**|struktura `ANSI_STRING` nebo `UNICODE_STRING`|Když je adresa [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) nebo struktury [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) předána jako argument, zobrazí řetězec obsažený ve vyrovnávací paměti, na které ukazuje pole `Buffer` struktury. Použijte předponu modifikátoru *velikosti* **w** pro určení argumentu `UNICODE_STRING`, například `%wZ`. Pole `Length` struktury musí být nastavené na délku řetězce v bajtech. Pole `MaximumLength` struktury musí být nastavené na délku vyrovnávací paměti (v bajtech).<br /><br /> Obvykle se znak typu **z** používá pouze v ladicích funkcích ovladače, které používají specifikaci převodu, například `dbgPrint` a `kdPrint`.|
 
 Počínaje verzí Visual Studio 2015, pokud argument, který odpovídá specifikátoru převodu s plovoucí desetinnou čárkou(a **, a,** **e**, **e**, **f**, **f**, **g**, **g**), je nekonečný, nekonečný nebo NaN, formátovaný výstup odpovídá standardu C99. V této tabulce je uveden formátovaný výstup:

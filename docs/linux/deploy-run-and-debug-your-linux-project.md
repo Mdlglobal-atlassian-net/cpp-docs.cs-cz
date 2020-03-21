@@ -3,12 +3,12 @@ title: Nasazení, spuštění a ladění projektu pro C++ Linux v aplikaci Visua
 description: Popisuje, jak zkompilovat, spustit a ladit kód na vzdáleném cíli v rámci projektu Linux C++ v aplikaci Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441653"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077827"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Nasazení, spuštění a ladění projektu Linux
 
@@ -35,7 +35,7 @@ Existuje několik způsobů, jak pracovat s projektem pro Linux a ladit ho.
 ## <a name="debug-your-linux-project"></a>Ladění projektu pro Linux
 
 1. Na stránce vlastností **ladění** vyberte režim ladění.
-   
+
    ::: moniker range="vs-2019"
 
    GDB se používá pro ladění aplikací běžících na Linux. Při ladění na vzdáleném systému (ne WSL) GDB může běžet ve dvou různých režimech, které lze vybrat z možnosti **režim ladění** na stránce vlastností **ladění** projektu:
@@ -51,7 +51,6 @@ Existuje několik způsobů, jak pracovat s projektem pro Linux a ladit ho.
    ![GDB možnosti](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - V režimu **gdbserver** se GDB spouští místně, který se připojuje k gdbserver na vzdáleném systému.  Všimněte si, že toto je jediný režim, který podporuje okno konzoly Linux.
 
@@ -129,7 +128,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a>Určení různých počítačů pro sestavování a ladění
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a>Určení různých počítačů pro sestavování a ladění
 
 V sadě Visual Studio 2019 verze 16,1 můžete oddělit svůj vzdálený sestavovací počítač od vzdáleného ladicího počítače pro projekty Linux založené na MSBuild i pro projekty CMake, které cílí na vzdálený počítač se systémem Linux. Například můžete provést křížovou kompilaci na platformě x64 a nasadit ji do zařízení ARM při cílení na scénáře IoT.
 

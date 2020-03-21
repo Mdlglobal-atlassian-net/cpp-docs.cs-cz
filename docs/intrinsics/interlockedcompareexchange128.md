@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedCompareExchange128
+title: _InterlockedCompareExchange128 vnitřní funkce
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 525b0fd77323789eed05c47c944794ff389bfac5
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6f6b36b238945f7d46e9817cdc85977d666e1e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217698"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077629"
 ---
-# <a name="_interlockedcompareexchange128-intrinsic-functions"></a>Vnitřní funkce _InterlockedCompareExchange128
+# <a name="_interlockedcompareexchange128-intrinsic-functions"></a>_InterlockedCompareExchange128 vnitřní funkce
 
 **Specifické pro společnost Microsoft**
 
@@ -62,7 +62,7 @@ unsigned char _InterlockedCompareExchange128_rel(
 
 ### <a name="parameters"></a>Parametry
 
-*Tabulka*\
+\ *cíle*
 [in, out] Ukazatel na cíl, což je pole 2 64 celých čísel, která jsou považována za 128-bitové pole. Aby se zabránilo obecné chybě ochrany, musí být cílová data zarovnaná se 16 bajty.
 
 *ExchangeHigh*\
@@ -76,7 +76,7 @@ pro 64 celé číslo, které může být vyměněno s nízkou částí cíle.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-1, pokud 128-bit operand porovnávání odpovídá původní hodnotě cíle. `ExchangeHigh`a `ExchangeLow` přepište 128 cíl.
+1, pokud 128-bit operand porovnávání odpovídá původní hodnotě cíle. `ExchangeHigh` a `ExchangeLow` přepíší 128 cíl.
 
 0, pokud se operand porovnávání nerovná původní hodnotě cílového umístění. Hodnota cíle se nezměnila a hodnota operand porovnávání se přepíše hodnotou cíle.
 
@@ -92,24 +92,24 @@ pro 64 celé číslo, které může být vyměněno s nízkou částí cíle.
 
 ## <a name="remarks"></a>Poznámky
 
-Vnitřní vygeneruje instrukci (s `lock` předponou) k provedení 128y uzamčeného porovnání a výměny. `cmpxchg16b` `_InterlockedCompareExchange128` Dřívější verze AMD 64-bit hardware tuto instrukci nepodporuje. Chcete-li vyhledat podporu hardwaru pro `cmpxchg16b` instrukci, `__cpuid` zavolejte vnitřní objekt `InfoType=0x00000001 (standard function 1)`with. Bit 13 z `CPUInfo[2]` (ecx) je 1, pokud je instrukce podporována.
+Vnitřní `_InterlockedCompareExchange128` vygeneruje instrukci `cmpxchg16b` (s předponou `lock`) k provedení 128ho uzamčeného porovnání a výměny. Dřívější verze AMD 64-bit hardware tuto instrukci nepodporuje. Chcete-li vyhledat podporu hardwaru pro `cmpxchg16b` instrukci, zavolejte vnitřní `__cpuid` s `InfoType=0x00000001 (standard function 1)`. Pokud je instrukce podporovaná, je bitová verze 13 `CPUInfo[2]` (ECX) 1.
 
 > [!NOTE]
-> Hodnota `ComparandResult` je vždy přepsána. Po instrukci Tento vnitřní objekt okamžitě zkopíruje počáteční `Destination` hodnotu do `ComparandResult`. `lock` Z tohoto důvodu `Destination` by `ComparandResult` měl odkazovat na oddělené paměťové umístění, aby nedocházelo k neočekávanému chování.
+> Hodnota `ComparandResult` je vždy přepsána. Po `lock` instrukci Tento vnitřní objekt okamžitě zkopíruje počáteční hodnotu `Destination` na `ComparandResult`. Z tohoto důvodu by `ComparandResult` a `Destination` odkazovaly na oddělené paměťové umístění, aby nedocházelo k neočekávanému chování.
 
-I když můžete použít `_InterlockedCompareExchange128` pro synchronizaci vláken nízké úrovně, nemusíte synchronizovat přes 128 bitů, pokud můžete místo toho použít menší synchronizační funkce (například jiné `_InterlockedCompareExchange` vnitřní objekty). Použijte `_InterlockedCompareExchange128` , pokud chcete, aby byl v paměti atomický přístup k 128 hodnotě.
+I když můžete použít `_InterlockedCompareExchange128` pro synchronizaci vláken nízké úrovně, nemusíte synchronizovat přes 128 bitů, pokud můžete místo toho použít menší synchronizační funkce (například jiné vnitřní objekty `_InterlockedCompareExchange`). Použijte `_InterlockedCompareExchange128`, pokud chcete, aby byl v paměti atomický přístup k 128 hodnotě.
 
-Pokud spustíte kód, který používá vnitřní na hardwaru, který nepodporuje `cmpxchg16b` instrukci, výsledky se nepředvídatelné.
+Pokud spustíte kód, který používá vnitřní na hardwaru, který nepodporuje instrukci `cmpxchg16b`, nepředvídatelné výsledky.
 
-Na platformách ARM používejte vnitřní `_acq` funkce a `_rel` přípony pro získání a vydání sémantiky, jako například na začátku a konci kritické části. Vnitřní objekty ARM s `_nf` příponou (bez plotu) nefungují jako bariéra paměti.
+Na platformách ARM použijte vnitřní objekty s příponami `_acq` a `_rel` pro sémantiku získání a vydání, jako je například na začátku a konci kritické části. Vnitřní objekty ARM s příponou `_nf` (bez plotu) nefungují jako bariéra paměti.
 
-Vnitřní objekty s `_np` příponou ("bez předběžného navýšení") brání v tom, aby kompilátor vložil možné operace předběžného načtení.
+Vnitřní objekty s příponou `_np` ("bez předběžného navýšení") brání, aby bylo možné operaci předběžného načtení vložit do kompilátoru.
 
 Tato rutina je k dispozici pouze jako vnitřní.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad používá `_InterlockedCompareExchange128` k nahrazení vysokého slova pole 2 64 celých čísel se součtem jeho horních a dolních slov a k zvýšení nízkého počtu slov. Přístup k `BigInt.Int` poli je Atomic, ale v tomto příkladu se používá jediné vlákno a ignoruje uzamykání pro jednoduchost.
+V tomto příkladu se používá `_InterlockedCompareExchange128` k nahrazení vysokého slova pole 2 64 celých čísel se součtem jeho horních a dolních slov a k zvýšení nízkého počtu slov. Přístup k poli `BigInt.Int` je Atomic, ale v tomto příkladu se používá jediné vlákno a ignoruje uzamykání pro jednoduchost.
 
 ```cpp
 // cmpxchg16b.c
@@ -159,9 +159,8 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 
 **Specifické pro konec Microsoftu**
 
-
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
-[Vnitřní funkce _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)\
+[_InterlockedCompareExchange vnitřní funkce](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)\
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

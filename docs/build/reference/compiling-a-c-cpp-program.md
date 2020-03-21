@@ -1,25 +1,25 @@
 ---
-title: Referenční dokumentace kompilátoru MSVC C/C++ - Visual Studio
-description: Možnosti sady nástrojů kompilátoru MSVC.
+title: MSVC C/C++ reference kompilátoru – Visual Studio
+description: MSVC možnosti sady nástrojů kompilátoru.
 ms.date: 12/10/2018
 helpviewer_keywords:
 - cl.exe compiler
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
-ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c75176b139895d7b00d88aca1c58604b47386894
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294145"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077379"
 ---
-# <a name="compiling-a-cc-project"></a>Kompilace projektu jazyka C/C++
+# <a name="compiling-a-cc-project"></a>Kompilace jazyka C/C++ Project
 
-Možnosti kompilátoru C a C++ lze nastavit v integrovaném vývojovém prostředí sady Visual Studio nebo na příkazovém řádku. 
+Možnosti jazyka C++ C a kompilátoru lze nastavit buď v integrovaném vývojovém prostředí sady Visual Studio, nebo na příkazovém řádku.
 
-## <a name="in-visual-studio"></a>In Visual Studio
+## <a name="in-visual-studio"></a>V nástroji Visual Studio
 
-Můžete nastavit možnosti kompilátoru pro každý projekt v jeho Visual Studio **stránky vlastností** dialogové okno. V levém podokně vyberte **vlastnosti konfigurace**, **C/C++** a pak zvolte kategorii parametrů kompilátoru. V tématech pro jednotlivé možnosti kompilátoru je popsáno, jak tento parametr nastavíte a kde ho ve vývojovém prostředí najdete. Zobrazit [– možnosti kompilátoru MSVC](compiler-options.md) úplný seznam.
+Můžete nastavit možnosti kompilátoru pro každý projekt v dialogovém okně **stránky vlastností** sady Visual Studio. V levém podokně vyberte možnost **Vlastnosti konfigurace**, **C/C++**  a pak zvolte kategorii možností kompilátoru. V tématech pro jednotlivé možnosti kompilátoru je popsáno, jak tento parametr nastavíte a kde ho ve vývojovém prostředí najdete. Úplný seznam najdete v tématu [Možnosti kompilátoru MSVC](compiler-options.md) .
 
 ## <a name="from-the-command-line"></a>Z příkazového řádku
 
@@ -43,8 +43,8 @@ Možnosti kompilátoru se zpracovávají „zleva doprava“ a při zjištění
 
 - [CL vyvolává linker](cl-invokes-the-linker.md)
 
-Informace o volbě kompilátoru hostitele a cílové architektury, najdete v části [projekty konfigurace C++ pro 64bitové x64 cíle](../configuring-programs-for-64-bit-visual-cpp.md).
+Informace o volbě hostitele kompilátoru a cílové architektury naleznete v tématu [Configure C++ projects for 64-bit a cíle x64](../configuring-programs-for-64-bit-visual-cpp.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](c-cpp-building-reference.md)

@@ -7,18 +7,17 @@ helpviewer_keywords:
 - ATL [C++], database support
 - databases [C++], installing database support
 ms.assetid: 3820ba96-4fb8-4405-83dd-bb3bc5998667
-ms.openlocfilehash: cd0e8892aa208c80fdd30e6c3f4d47bddb9886ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c105b0ec579354a7360f9ff2d1e99f394618befc
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397936"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077111"
 ---
-# <a name="installing-database-support-mfcatl"></a>Instalace podpory databáze knihovny MFC nebo ATL)
+# <a name="installing-database-support-mfcatl"></a>Instalace podpory databáze (MFC/ATL)
 
-Visual C++ neobsahuje žádné produkty databáze. Chcete-li
+Vizuál C++ neobsahuje žádné databázové produkty. Akce
 
+## <a name="see-also"></a>Viz také
 
-## <a name="see-also"></a>Viz také:
-
-[Přístup k datům](data-access-in-cpp.md)
+[Přístup k datům](data-access-in-cpp.md)

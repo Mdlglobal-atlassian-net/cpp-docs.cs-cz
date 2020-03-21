@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416933"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076853"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie změn Visual C++ 2003–2015
 
@@ -36,9 +36,9 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
 
 - [Concurrency Runtime přerušující změny](#BK_ConcRT)
 
-## <a name="VC_2015"></a>Změny shody sady Visual Studio 2015
+## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a>Změny shody sady Visual Studio 2015
 
-###  <a name="BK_CRT"></a>Běhová knihovna jazyka C (CRT)
+###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>Běhová knihovna jazyka C (CRT)
 
 #### <a name="general-changes"></a>Obecné změny
 
@@ -78,7 +78,7 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
 
 - **Shoda s plovoucí desetinnou čárkou**
 
-   Bylo provedeno mnoho změn v knihovně Math pro zlepšení dodržování specifikace IEEE-754 a přílohy F specifikací C11 s ohledem na vstupy zvláštních případů, jako je hodnoty NaN a nekonečno. Například tiché vstupy NaN, které byly často zpracovány jako chyby v předchozích verzích knihovny, již nejsou považovány za chyby. Viz standard [IEEE 754](https://standards.ieee.org/standard/754-2008.html) a Příloha F [standardu C11](http://www.iso-9899.info/wiki/The_Standard).
+   Bylo provedeno mnoho změn v knihovně Math pro zlepšení dodržování specifikace IEEE-754 a přílohy F specifikací C11 s ohledem na vstupy zvláštních případů, jako je hodnoty NaN a nekonečno. Například tiché vstupy NaN, které byly často zpracovány jako chyby v předchozích verzích knihovny, již nejsou považovány za chyby. Viz standard [IEEE 754](https://standards.ieee.org/standard/754-2008.html) a Příloha F [standardu C11](https://www.iso.org/standard/57853.html).
 
    Tyto změny nezpůsobí chyby při kompilaci, ale mohou způsobit, že se programy chovají jinak a správně podle standardu.
 
@@ -106,7 +106,7 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
 
    Při kompilování C++ kódu [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nyní ověřuje v době kompilace, že argument předaný do něj není odkazový typ. Argumenty typu odkazu jsou zakázané C++ standardem.
 
-#### <a name="stdio_and_conio"></a>\<stdio. h > a \<CONIO. h >
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio. h > a \<CONIO. h >
 
 - **Rodina funkcí printf a scanf je teď definovaná jako inline.**
 
@@ -303,7 +303,7 @@ Navíc průběžná vylepšení shody kompilátoru mohou někdy změnit způsob,
 
    CLOCKS_PER_SEC makro se nyní rozbalí na celé číslo typu `clock_t`, jak to vyžaduje jazyk C.
 
-####  <a name="BK_STL"></a>C++ Standardní knihovna
+####  <a name="c-standard-library"></a><a name="BK_STL"></a>C++ Standardní knihovna
 
 Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace standardní knihovny C++ záměrně neumožňuje binární kompatibilitu mezi verzemi. Proto při použití standardní knihovny C++ nelze objektové soubory a statické knihovny, které jsou kompilovány pomocí různých verzí, směšovat v jednom binárním souboru (EXE nebo DLL) a objekty standardní knihovny C++ nelze předávat mezi binárními soubory, které jsou kompilovány pomocí různých verzí. Takovéto směšování objektů vyvolává chyby linkeru týkající se neshod _MSC_VER. (_MSC_VER je makro, které obsahuje hlavní verzi kompilátoru, například 1800 pro Visual Studio 2013.) Tato kontrola nedokáže detekovat kombinování knihoven DLL a nemůže detekovat kombinování, které zahrnuje Visual Studio 2008 nebo starší.
 
@@ -385,7 +385,7 @@ Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace 
 
    Nestandardní `launch::any` a zásady `launch::sync` se odebraly. Místo toho použijte pro `launch::any``launch:async | launch:deferred`. Pro `launch::sync`použijte `launch::deferred`. Viz [Spustit výčet](../standard-library/future-enums.md#launch).
 
-####  <a name="BK_MFC"></a>MFC a ATL
+####  <a name="mfc-and-atl"></a><a name="BK_MFC"></a>MFC a ATL
 
 - **Knihovna MFC (Microsoft Foundation Classes)**
 
@@ -393,7 +393,7 @@ Pokud byte chtěli povolit nové optimalizace a kontroly ladění, implementace 
 
    Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.
 
-####  <a name="BK_ConcRT"></a>Concurrency Runtime
+####  <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>Concurrency Runtime
 
 - **Dej makro z Windows. h v konfliktu s concurrency:: Context:: yield**
 
@@ -421,7 +421,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
 - [Vylepšení shody v aktualizaci Update 3](#VS_Update3)
 
-###  <a name="VS_RTM"></a>Vylepšení shody v aplikaci Visual Studio 2015
+###  <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Vylepšení shody v aplikaci Visual Studio 2015
 
 - /Zc: forScope-Option
 
@@ -1697,7 +1697,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     C c;
     ```
 
-###  <a name="VS_Update1"></a>Vylepšení shody v aktualizaci Update 1
+###  <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>Vylepšení shody v aktualizaci Update 1
 
 - **Soukromé virtuální základní třídy a nepřímá dědičnost**
 
@@ -2201,7 +2201,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     }
     ```
 
-###  <a name="VS_Update2"></a>Vylepšení shody v aktualizaci Update 2
+###  <a name="conformance-improvements-in-update-2"></a><a name="VS_Update2"></a>Vylepšení shody v aktualizaci Update 2
 
 - **Další upozornění a chyby mohou být vydány v důsledku částečné podpory pro Expression SFINAE**
 
@@ -2463,7 +2463,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
    Oprava kódu, který je napsán tímto způsobem, může vyžadovat, aby definice operátora byly přesunuty ze souboru hlaviček a do odpovídajícího zdrojového souboru.
 
-###  <a name="VS_Update3"></a>Vylepšení shody v aktualizaci Update 3
+###  <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a>Vylepšení shody v aktualizaci Update 3
 
 - **std:: is_convertable nyní detekuje samostatné přiřazení** (standardní knihovna)
 

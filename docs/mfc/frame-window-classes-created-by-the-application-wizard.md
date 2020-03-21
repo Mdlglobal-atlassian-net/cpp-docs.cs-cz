@@ -14,27 +14,26 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c17ba2b6dd79e8e62baa29bba403c136d16a0d95
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392814"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077536"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Třídy oken s rámečkem vytvořené průvodcem aplikací
 
-Při vytvoření nové knihovny MFC projekt **nový projekt** dialogového okna, kromě aplikace, dokumentů a zobrazení tříd, Průvodce aplikací vytvoří třídu odvozenou oken s rámečkem pro oknu hlavního rámce. Třída se nazývá `CMainFrame` ve výchozím nastavení a soubory, které obsahují jsou pojmenovány MAINFRM. H a MAINFRM. CPP.
+Když vytváříte nový projekt knihovny MFC z dialogového okna **Nový projekt** , kromě tříd aplikace, dokumentu a zobrazení, vytvoří Průvodce aplikací odvozenou třídu okna pro hlavní rámec vaší aplikace. Třída se ve výchozím nastavení nazývá `CMainFrame` a soubory, které ji obsahují, mají název MAINFRM. H a MAINFRM. CPP.
 
 Pokud je vaše aplikace SDI, vaše `CMainFrame` třída je odvozena od třídy [CFrameWnd](../mfc/reference/cframewnd-class.md).
 
-Pokud je vaše aplikace MDI, `CMainFrame` je odvozena z třídy [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). V tomto případě `CMainFrame` implementuje hlavního rámce, který obsahuje nabídky, nástrojů a stavové řádky. Průvodce aplikací neodvozuje nové třídy oken s rámečkem dokumentu pro vás. Místo toho používá výchozí implementace v [CMDIChildWnd – třída](../mfc/reference/cmdichildwnd-class.md). Rozhraní MFC vytvoří podřízené okno tak, aby obsahovala každé zobrazení (které můžou být typu `CScrollView`, `CEditView`, `CTreeView`, `CListView`, a tak dále), která aplikace požaduje. Pokud potřebujete přizpůsobit okna rámce dokumentu, můžete vytvořit nové dokumentové třídy oken s rámečkem (viz [přidání třídy](../ide/adding-a-class-visual-cpp.md)).
+Pokud je vaše aplikace MDI, `CMainFrame` je odvozena ze třídy [CMDIFrameWnd –](../mfc/reference/cmdiframewnd-class.md). V tomto případě `CMainFrame` implementuje hlavní rámec, který obsahuje nabídku, panel nástrojů a stavové řádky. Průvodce aplikací neodvozuje pro vás novou třídu oken s rámcem dokumentu. Místo toho používá výchozí implementaci ve [třídě CMDIChildWnd –](../mfc/reference/cmdichildwnd-class.md). Rozhraní MFC Framework vytvoří podřízené okno obsahující každé zobrazení (které může být typu `CScrollView`, `CEditView`, `CTreeView`, `CListView`a tak dále), které aplikace vyžaduje. Pokud potřebujete přizpůsobit okno rámce dokumentu, můžete vytvořit novou třídu okna s rámcem dokumentu (viz [Přidání třídy](../ide/adding-a-class-visual-cpp.md)).
 
-Pokud se rozhodnete pro podporu nástrojů, má také třída členské proměnné typu [ctoolbar –](../mfc/reference/ctoolbar-class.md) a [cstatusbar –](../mfc/reference/cstatusbar-class.md) a `OnCreate` obslužná rutina zprávy funkce lze inicializovat dvou [ ovládací prvek pruhy](../mfc/control-bars.md).
+Pokud se rozhodnete podporovat panel nástrojů, třída má také členské proměnné typu [CToolBar –](../mfc/reference/ctoolbar-class.md) a [CStatusBar –](../mfc/reference/cstatusbar-class.md) a funkci obslužné rutiny zpráv `OnCreate` k inicializaci dvou [ovládacích panelů](../mfc/control-bars.md).
 
-Tyto třídy oken s rámečkem práci při vytváření, ale k rozšíření svých funkcí, je nutné přidat členské proměnné a členské funkce. Také můžete chtít mít třídy okna zpracovávat dalších zpráv Windows. Další informace najdete v tématu [změna stylů okna vytvořeného rozhraním MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
+Tyto třídy oken s rámečkem fungují jako vytvořené, ale pro vylepšení jejich funkcí je nutné přidat členské proměnné a členské funkce. Můžete také chtít, aby vaše třídy oken zpracovávala jiné zprávy systému Windows. Další informace naleznete v tématu [Změna stylů okna vytvořeného pomocí knihovny MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy oken s rámečkem](../mfc/frame-window-classes.md)<br/>
 [Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček](../build/reference/mfc-program-or-control-source-and-header-files.md)
-

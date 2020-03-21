@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 57414bd56c72b951d3f1948e658243e9036f0179
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6c05dd00324113819dd145e46bf10dfeb96a66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498129"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078240"
 ---
 # <a name="set-compiler-and-build-properties"></a>Nastavení vlastností kompilátoru a sestavení
 
-V integrovaném vývojovém prostředí jsou všechny informace, které jsou nutné k sestavení projektu, zpřístupněny jako *vlastnosti*. Tyto informace zahrnují název aplikace, rozšíření (například knihovnu DLL, LIB, EXE), možnosti kompilátoru, Možnosti linkeru, nastavení ladicího programu, vlastní kroky sestavení a mnoho dalších věcí. Pro zobrazení a úpravu těchto vlastností obvykle používáte *stránky vlastností* . Chcete-li získat přístup ke stránkám vlastností, vyberte z hlavní nabídky vlastnosti **projekt** >  **_ProjectName_**  , nebo klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **vlastnosti**.
+V integrovaném vývojovém prostředí jsou všechny informace, které jsou nutné k sestavení projektu, zpřístupněny jako *vlastnosti*. Tyto informace zahrnují název aplikace, rozšíření (například knihovnu DLL, LIB, EXE), možnosti kompilátoru, Možnosti linkeru, nastavení ladicího programu, vlastní kroky sestavení a mnoho dalších věcí. Pro zobrazení a úpravu těchto vlastností obvykle používáte *stránky vlastností* . Chcete-li získat přístup ke stránkám vlastností, vyberte z hlavní nabídky položku **projekt** > **vlastnosti _ProjectName_**  nebo klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **vlastnosti**.
 
 ## <a name="default-properties"></a>Výchozí vlastnosti
 
 Když vytvoříte projekt, systém přiřadí hodnoty pro různé vlastnosti. Výchozí hodnoty se mírně liší v závislosti na typu projektu a na možnostech, které zvolíte v Průvodci aplikací. Například projekt ATL má vlastnosti týkající se souborů MIDL, ale ty nejsou v základní konzolové aplikaci přítomny. Výchozí vlastnosti jsou zobrazeny v podokně obecné na stránkách vlastností:
 
-![Výchozí hodnoty&#43; &#43; projektu](media/visual-c---project-defaults.png " C++ ") Visual c++
+![Výchozí hodnoty&#43; &#43; projektů Visual c++](media/visual-c---project-defaults.png "Výchozí C++ nastavení projektu Visual")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Použití vlastností pro sestavení konfigurací a cílových platforem
 
@@ -31,15 +31,15 @@ Některé vlastnosti, například název aplikace, se vztahují na všechny vari
 
 Stránky vlastností jsou navržené tak, aby se vždy zobrazila a v případě potřeby změnila konfigurace a platforma, na které se má hodnota vlastnosti vztahovat. Následující obrázek znázorňuje stránky vlastností s informacemi o konfiguraci a platformě v seznamech v horní části. Pokud je zde nastavena vlastnost **optimalizace** , bude použita pouze pro ladění sestavení Win32, což se stane aktivní konfigurací, jak je znázorněno na červené šipky.
 
-![Stránky vlastností&#43; &#43; Visual c++ zobrazující stránky aktivní konfigurace nastavení](media/visual-c---property-pages-showing-active-configuration.png "vizuálních C++ vlastností zobrazujících aktivní konfiguraci")
+![Stránky vlastností&#43; &#43; Visual c++ zobrazující aktivní konfiguraci](media/visual-c---property-pages-showing-active-configuration.png "Stránky C++ vlastností vizuálu zobrazující aktivní konfiguraci")
 
 Následující ilustrace znázorňuje stejnou stránku vlastností projektu, ale konfigurace byla změněna na Release. Všimněte si jiné hodnoty vlastnosti optimalizace. Všimněte si také, že aktivní konfigurace je stále ladit. Tady můžete nastavit vlastnosti pro jakoukoli konfiguraci. nemusí být aktivní.
 
-![Stránky vlastností&#43; &#43; Visual c++](media/visual-c---property-pages-showing-release-config.png " C++ vlastností konfigurace vydaných verzí znázorňující konfiguraci vydané verze")
+![Stránky vlastností&#43; &#43; Visual c++ znázorňující konfiguraci vydané verze](media/visual-c---property-pages-showing-release-config.png "Stránky C++ vlastností vizuálu zobrazující konfiguraci vydané verze")
 
 ## <a name="target-platforms"></a>Cílové platformy
 
-*Cílová platforma* odkazuje na druh zařízení nebo operačního systému, na kterém se spustitelný soubor spustí. Projekt můžete sestavit pro více než jednu platformu. Dostupné cílové platformy pro C++ projekty závisí na typu projektu. zahrnují, ale nejsou omezené na Win32, x64, ARM, Android a iOS.     Cílová platforma **x86** , která se může zobrazit v **Configuration Manager** , je v nativních C++ projektech shodná s Win32. Win32 znamená 32 Windows a **x64** znamená 64 bitových oken. Další informace o těchto dvou platformách najdete v tématu [spouštění 32CH aplikací](/windows/win32/WinProg64/running-32-bit-applications).
+*Cílová platforma* odkazuje na druh zařízení nebo operačního systému, na kterém se spustitelný soubor spustí. Projekt můžete sestavit pro více než jednu platformu. Dostupné cílové platformy pro C++ projekty závisí na typu projektu. zahrnují, ale nejsou omezené na Win32, x64, ARM, Android a iOS.     Cílová platforma **x86** , která se může zobrazit v **Configuration Manager** , je v **Win32** nativních C++ projektech shodná s Win32. Win32 znamená 32 Windows a **x64** znamená 64 bitových oken. Další informace o těchto dvou platformách najdete v tématu [spouštění 32CH aplikací](/windows/win32/WinProg64/running-32-bit-applications).
 
 Hodnota **libovolné** cílové platformy procesoru, která se může zobrazit v **Configuration Manager** nemá žádný vliv na nativní C++ projekty; je relevantní pro C++/CLI a jiné typy projektů .NET. Další informace najdete v tématu [/CLRIMAGETYPE (určení typu image CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 
@@ -47,20 +47,20 @@ Další informace o nastavení vlastností pro sestavení pro ladění naleznete
 
 - [Nastavení projektu pro konfiguraci ladění jazyka C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [Nastavení a příprava ladicího programu](/visualstudio/debugger/debugger-settings-and-preparation)
-- [Příprava ladění: Typy C++ projektů Visual](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+- [Příprava ladění: typy C++ projektů Visual](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [Zadání symbolu (.pdb) a zdrojových souborů v ladicím programu sady Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
 ## <a name="c-compiler-and-linker-options"></a>C++možnosti kompilátoru a linkeru
 
-C++možnosti kompilátoru a linkeru jsou umístěné pod uzlem **linkeru** **CC++ /** a v levém podokně v části **Vlastnosti konfigurace**. Tyto překlady přímo do možností příkazového řádku, které budou předány kompilátoru. Pokud si chcete přečíst dokumentaci ke konkrétní možnosti, vyberte možnost v prostředním podokně a stiskněte klávesu **F1**. Nebo můžete procházet dokumentaci pro všechny možnosti na [MSVC možnosti kompilátoru](reference/compiler-options.md) a [Možnosti linkeru MSVC](reference/linker-options.md). 
+C++možnosti kompilátoru a linkeru jsou umístěné pod uzlem **linkeru** **CC++ /** a v levém podokně v části **Vlastnosti konfigurace**. Tyto překlady přímo do možností příkazového řádku, které budou předány kompilátoru. Pokud si chcete přečíst dokumentaci ke konkrétní možnosti, vyberte možnost v prostředním podokně a stiskněte klávesu **F1**. Nebo můžete procházet dokumentaci pro všechny možnosti na [MSVC možnosti kompilátoru](reference/compiler-options.md) a [Možnosti linkeru MSVC](reference/linker-options.md).
 
-Dialogové okno **stránky vlastností** zobrazuje pouze stránky vlastností, které jsou relevantní pro aktuální projekt. Pokud například projekt nemá soubor .idl, stránka s vlastnostmi MIDL se nezobrazí. Další informace o nastavení na jednotlivých stránkách vlastností naleznete v tématu [Property Pages (C++)](reference/property-pages-visual-cpp.md). 
+Dialogové okno **stránky vlastností** zobrazuje pouze stránky vlastností, které jsou relevantní pro aktuální projekt. Pokud například projekt nemá soubor .idl, stránka s vlastnostmi MIDL se nezobrazí. Další informace o nastavení na jednotlivých stránkách vlastností naleznete v tématu [Property Pages (C++)](reference/property-pages-visual-cpp.md).
 
 ## <a name="directory-and-path-values"></a>Hodnoty adresáře a cesty
 
-Nástroj MSBuild podporuje použití konstant v čase kompilace nazývaných "makra" pro určité řetězcové hodnoty, včetně adresářů a cest. Tyto stránky jsou zpřístupněny na stránkách vlastností, kde je můžete odkazovat a upravovat pomocí [editoru vlastností](#property_editor). 
+Nástroj MSBuild podporuje použití konstant v čase kompilace nazývaných "makra" pro určité řetězcové hodnoty, včetně adresářů a cest. Tyto stránky jsou zpřístupněny na stránkách vlastností, kde je můžete odkazovat a upravovat pomocí [editoru vlastností](#property_editor).
 
-Následující obrázek znázorňuje stránky vlastností projektu sady Visual Studio C++ . V levém podokně je vybráno *pravidlo* **adresáře VC + +** a v pravém podokně jsou uvedeny vlastnosti, které jsou spojeny s tímto pravidlem. Hodnoty se nazývají *makra.* `$(...)` *Makro* je konstanta v čase kompilace, která může odkazovat na hodnotu, která je definována v aplikaci Visual Studio nebo v systému MSBuild, nebo na hodnotu definovanou uživatelem. Pomocí maker namísto pevně zakódovaných hodnot, jako jsou například cesty k adresářům, můžete snáze sdílet nastavení vlastností mezi počítači a mezi verzemi sady Visual Studio a lépe zajistit, aby se nastavení projektu správně účastnilo ve [Vlastnosti. dědičnost](project-property-inheritance.md). 
+Následující obrázek znázorňuje stránky vlastností projektu sady Visual Studio C++ . V levém podokně je vybráno *pravidlo* **adresáře VC + +** a v pravém podokně jsou uvedeny vlastnosti, které jsou spojeny s tímto pravidlem. Hodnoty `$(...)` se nazývají *makra*. *Makro* je konstanta v čase kompilace, která může odkazovat na hodnotu, která je definována v aplikaci Visual Studio nebo v systému MSBuild, nebo na hodnotu definovanou uživatelem. Pomocí maker namísto pevně zakódovaných hodnot, jako jsou například cesty k adresářům, lze snadněji sdílet nastavení vlastností mezi počítači a mezi verzemi sady Visual Studio a můžete lépe zajistit, aby se nastavení projektu správně účastnilo v [dědičnosti vlastností](project-property-inheritance.md).
 
 ![Stránky vlastností projektu](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
@@ -69,10 +69,10 @@ Pomocí editoru vlastností můžete zobrazit hodnoty všech dostupných maker.
 ### <a name="predefined-macros"></a>Předdefinovaná makra
 
 *globální makra*<br/>
-Platí pro všechny položky v konfiguraci projektu. Má syntaxi `$(name)`. Příkladem globálního makra je `$(VCInstallDir)`, který ukládá kořenový adresář instalace sady Visual Studio. Globální makro odpovídá `PropertyGroup` v nástroji MSBuild.
+Platí pro všechny položky v konfiguraci projektu. Má `$(name)`syntaxe. Příkladem globálního makra je `$(VCInstallDir)`, který ukládá kořenový adresář instalace sady Visual Studio. Globální makro odpovídá `PropertyGroup` v nástroji MSBuild.
 
 *makra položky*<br/>
-Má syntaxi `%(name)`. V případě souboru se makro položky vztahuje pouze na tento soubor – například můžete použít `%(AdditionalIncludeDirectories)` k určení adresářů include, které se vztahují pouze na konkrétní soubor. Tento druh makra položky odpovídá `ItemGroup` metadatům v nástroji MSBuild. Pokud se používá v kontextu konfigurace projektu, platí makro položky pro všechny soubory určitého typu. Například vlastnost konfiguraceC++ **definic preprocesoru** C/preprocesoru `%(PreprocessorDefinitions)` může mít makro položky, které se vztahuje na všechny soubory. cpp v projektu. Tento druh makra položky odpovídá `ItemDefinitionGroup` metadatům v nástroji MSBuild. Další informace naleznete v tématu [Definice položek](/visualstudio/msbuild/item-definitions).
+Má `%(name)`syntaxe. V případě souboru se makro položky vztahuje pouze na tento soubor – například můžete použít `%(AdditionalIncludeDirectories)` k určení adresářů include, které se vztahují pouze na konkrétní soubor. Tento druh makra položky odpovídá metadatům `ItemGroup` v nástroji MSBuild. Pokud se používá v kontextu konfigurace projektu, platí makro položky pro všechny soubory určitého typu. Například vlastnost konfiguraceC++ **definic preprocesoru C/preprocesoru** může mít makro `%(PreprocessorDefinitions)` položky, které se vztahuje na všechny soubory. cpp v projektu. Tento druh makra položky odpovídá metadatům `ItemDefinitionGroup` v nástroji MSBuild. Další informace naleznete v tématu [Definice položek](/visualstudio/msbuild/item-definitions).
 
 ### <a name="user-defined-macros"></a>Uživatelsky definovaná makra
 
@@ -82,25 +82,25 @@ Uživatelem definované makro je uloženo v seznamu vlastností. Pokud projekt 
 
 #### <a name="to-create-a-user-defined-macro"></a>Vytvoření uživatelem definovaného makra
 
-1. Otevřete okno **Správce vlastností** . (Na panelu nabídek vyberte možnost **Zobrazit** > **Správce vlastností** nebo **Zobrazit** > další**Správce vlastností** **systému Windows** > .) Otevřete místní nabídku pro seznam vlastností (jeho název končí na. uživatel) a pak zvolte **vlastnosti**. Otevře se dialogové okno **stránky vlastností** pro tento seznam vlastností.
+1. Otevřete okno **Správce vlastností** . (Na panelu nabídek vyberte možnost **zobrazit** > **Správce vlastností** nebo **zobrazit** > **dalších > Windows** **Správce vlastností**.) Otevřete místní nabídku pro seznam vlastností (jeho název končí na. uživatel) a pak zvolte **vlastnosti**. Otevře se dialogové okno **stránky vlastností** pro tento seznam vlastností.
 
 1. V levém podokně dialogového okna vyberte **uživatelská makra**. V pravém podokně klikněte na tlačítko **Přidat makro** a otevřete dialogové okno **Přidat uživatelské makro** .
 
 1. V dialogovém okně zadejte název a hodnotu makra. Volitelně můžete zaškrtnout políčko **nastavit toto makro jako proměnnou prostředí v prostředí sestavení** .
 
-## <a name="property_editor">Editor vlastností</a>
+## <a name=""></a><a name="property_editor">Editor vlastností</a>
 
-Editor vlastností můžete použít ke změně některých vlastností řetězce a k výběru maker jako hodnot. Editor vlastností otevřete tak, že vyberete vlastnost na stránce vlastností a pak kliknete na šipku dolů na pravé straně. Pokud rozevírací seznam obsahuje  **\<> úprav**, můžete ho zvolit pro zobrazení editoru vlastností pro danou vlastnost.
+Editor vlastností můžete použít ke změně některých vlastností řetězce a k výběru maker jako hodnot. Editor vlastností otevřete tak, že vyberete vlastnost na stránce vlastností a pak kliknete na šipku dolů na pravé straně. Pokud rozevírací seznam obsahuje **\<upravit >** , můžete zvolit, aby se zobrazil Editor vlastností pro danou vlastnost.
 
 ![Rozevírací&#95;seznam&#95;editoru vlastností](media/property_editor_dropdown.png "Property_Editor_Dropdown")
 
 V editoru vlastností můžete kliknutím na tlačítko **makra** zobrazit dostupná makra a jejich aktuální hodnoty. Následující ilustrace znázorňuje Editor vlastností pro vlastnost **Další adresáře include** po výběru tlačítka **makra** . Když je zaškrtnuto políčko **Zdědit z nadřazené hodnoty nebo výchozí hodnoty projektu** a přidáte novou hodnotu, připojí se ke všem hodnotám, které jsou v současné době zděděné. Pokud zaškrtnutí políčka zrušíte, nahradí nová hodnota zděděné hodnoty. Ve většině případů ponechte políčko zaškrtnuté.
 
-![Property editor, Visual C&#43;&#43;](media/propertyeditorvc.png "PropertyEditorVC")
+![Editor vlastností, Visual C&#43;&#43;](media/propertyeditorvc.png "PropertyEditorVC")
 
 ## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>Přidání adresáře include do sady výchozích adresářů
 
-Přidáváte-li do projektu adresář vkládaných souborů, je důležité, abyste nepřepsali všechny výchozí adresáře. Správný způsob přidání adresáře je připojit novou cestu, například "C:\MyNewIncludeDir\"", a pak připojit makro **$ (IncludePath)** k hodnotě vlastnosti.
+Přidáváte-li do projektu adresář vkládaných souborů, je důležité, abyste nepřepsali všechny výchozí adresáře. Správný způsob přidání adresáře je připojit novou cestu, například "C:\MyNewIncludeDir\", a pak připojit makro **$ (IncludePath)** do hodnoty vlastnosti.
 
 ## <a name="quickly-browse-and-search-all-properties"></a>Rychlé procházení a hledání všech vlastností
 
@@ -134,9 +134,9 @@ Jak vytvořit soubor. props s vlastním nastavením sestavení, které lze sdíl
 Popisuje pořadí vyhodnocování pro soubory. props,. targets,. vcxproj a proměnné prostředí v procesu sestavení.
 
 [Změna vlastností a cílů beze změny souboru projektu](modify-project-properties-without-changing-project-file.md)<br/>
-Jak vytvořit dočasné nastavení sestavení bez nutnosti upravovat soubor projektu. 
+Jak vytvořit dočasné nastavení sestavení bez nutnosti upravovat soubor projektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Projekty sady Visual Studio – C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [Struktura souborů .vcxproj a .props](reference/vcxproj-file-structure.md)<br/>

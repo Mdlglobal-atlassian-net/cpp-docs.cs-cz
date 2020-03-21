@@ -24,16 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ede3c828437aab1759c6711fc40511c69646a133
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419124"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076572"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;&gt; funkce výjimky
 
-## <a name="current_exception"></a>current_exception
+## <a name="current_exception"></a><a name="current_exception"></a>current_exception
 
 Získá inteligentní ukazatel na aktuální výjimku.
 
@@ -55,7 +55,7 @@ Destruktor pro aktuální výjimku je volána na konci bloku **catch** , pokud v
 
 Po sobě jdoucí volání funkce `current_exception` vrací objekty `exception_ptr`, které odkazují na různé kopie aktuální výjimky. V důsledku toho se objekty při porovnání jeví jako nerovné, protože odkazují na jiné kopie, i přesto, že kopie mají stejné binární hodnoty.
 
-## <a name="make_exception_ptr"></a>make_exception_ptr
+## <a name="make_exception_ptr"></a><a name="make_exception_ptr"></a>make_exception_ptr
 
 Vytvoří objekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) , který obsahuje kopii výjimky.
 
@@ -79,7 +79,7 @@ Volání funkce `make_exception_ptr` je ekvivalentní k vyvolání C++ výjimky,
 
 Aplikace obvykle nevyžaduje funkci `make_exception_ptr` a neodrazí se k jejímu použití.
 
-## <a name="rethrow_exception"></a>rethrow_exception
+## <a name="rethrow_exception"></a><a name="rethrow_exception"></a>rethrow_exception
 
 Vyvolá výjimku předanou jako parametr.
 
@@ -96,7 +96,7 @@ Zachycená výjimka, kterou chcete znovu vyvolat. Pokud *P* je [exception_ptr](.
 
 Po uložení zachycené výjimky do objektu `exception_ptr` může primární vlákno objekt zpracovat. V primárním vlákně zavolejte funkci `rethrow_exception` společně s objektem `exception_ptr` jako jeho argument. Funkce `rethrow_exception` extrahuje výjimku z objektu `exception_ptr` a poté vyvolá výjimku v kontextu primárního vlákna.
 
-## <a name="get_terminate"></a>get_terminate
+## <a name="get_terminate"></a><a name="get_terminate"></a>get_terminate
 
 Získá aktuální funkci `terminate_handler`.
 
@@ -104,7 +104,7 @@ Získá aktuální funkci `terminate_handler`.
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>set_terminate
+## <a name="set_terminate"></a><a name="set_terminate"></a>set_terminate
 
 Vytvoří nový `terminate_handler`, který se má volat při ukončení programu.
 
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>get_unexpected
+## <a name="get_unexpected"></a><a name="get_unexpected"></a>get_unexpected
 
 Získá aktuální funkci `unexpected_handler`.
 
@@ -161,10 +161,10 @@ Získá aktuální funkci `unexpected_handler`.
 unexpected_handler get_unexpected();
 ```
 
-## <a name="rethrow_if_nested"></a>rethrow_if_nested
+## <a name="rethrow_if_nested"></a><a name="rethrow_if_nested"></a>rethrow_if_nested
 
 ```cpp
-template <class E> 
+template <class E>
     void rethrow_if_nested(const E& e);
 ```
 
@@ -172,7 +172,7 @@ template <class E>
 
 Pokud není typ polymorfní třídy nebo pokud je `nested_exception` nepřístupná nebo nejednoznačná, neexistuje žádný vliv. V opačném případě provede dynamické přetypování.
 
-## <a name="set_unexpected"></a>set_unexpected
+## <a name="set_unexpected"></a><a name="set_unexpected"></a>set_unexpected
 
 Vytvoří nový `unexpected_handler`, který má být v případě, že došlo k neočekávané výjimce.
 
@@ -220,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>ruší
+## <a name="terminate"></a><a name="terminate"></a>ruší
 
 Zavolá obslužnou rutinu ukončení.
 
@@ -238,7 +238,7 @@ Obslužná rutina ukončení se nemůže vrátit volajícímu. Při spuštění 
 
 Příklad použití `terminate`naleznete v tématu [set_unexpected](../standard-library/exception-functions.md#set_unexpected) .
 
-## <a name="throw_with_nested"></a>throw_with_nested
+## <a name="throw_with_nested"></a><a name="throw_with_nested"></a>throw_with_nested
 
 ```cpp
 template <class T> [[noreturn]]
@@ -249,7 +249,7 @@ template <class T> [[noreturn]]
 
 Vyvolá výjimku s vnořenými výjimkami.
 
-## <a name="uncaught_exception"></a>uncaught_exception
+## <a name="uncaught_exception"></a><a name="uncaught_exception"></a>uncaught_exception
 
 Vrátí **hodnotu true** pouze v případě, že právě probíhá zpracování vyvolané výjimky.
 
@@ -314,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>neočekávané
+## <a name="unexpected"></a><a name="unexpected"></a>neočekávané
 
 Volá neočekávanou obslužnou rutinu.
 
