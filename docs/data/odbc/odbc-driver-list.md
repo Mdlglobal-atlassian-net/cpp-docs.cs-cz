@@ -6,33 +6,33 @@ helpviewer_keywords:
 - ODBC drivers, list of
 - drivers, ODBC
 ms.assetid: 4e12c832-39fe-44f7-9230-5c8d37203f11
-ms.openlocfilehash: 479c30717d645d511e06651e36f73bb1188f0d21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 619aae452b0657e552baa54445dd38457fa32319
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395765"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213119"
 ---
 # <a name="odbc-driver-list"></a>Seznam ovladačů ODBC
 
-ODBC – ovladače poskytuje jazyk Visual C++ pro následující databáze:
+Visual C++ poskytuje ovladače ODBC pro následující databáze:
 
-- SQL Server
+- Server SQL
 
 - Microsoft Access
 
 - Microsoft Excel
 
-- dBASE
+- Program
 
 - Paradox
 
-- Microsoft Oracle ODBC
+- Rozhraní Microsoft Oracle ODBC
 
 - Textové soubory
 
-Informace o ovladače rozhraní ODBC, které jsou k dispozici od společnosti Microsoft a jiných společností, včetně balíčku ovladačů rozhraní ODBC Kontaktujte Microsoft Product Support Services.
+Informace o ovladačích rozhraní ODBC dostupných od společnosti Microsoft a jiných společností, včetně sady ovladačů ODBC, získáte od společnosti Microsoft pro oddělení služeb technické podpory.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

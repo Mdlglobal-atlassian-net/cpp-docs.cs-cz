@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2517
 ms.assetid: d79348d5-e271-4aad-b973-8264515f8e90
-ms.openlocfilehash: 63523670fe1292d23327112f627e7d1a9dafeca6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66b7657869c70b6f6175e7f3cccc1dfb4d2614f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395492"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202644"
 ---
 # <a name="compiler-error-c2517"></a>Chyba kompilátoru C2517
 
-'identifier': napravo od '::' není definován
+' identifier ': napravo od ':: ' není definováno.
 
-Identifikátor na pravé straně operátoru rozlišení oboru (`::`) musí být definované členem třídy, struktury nebo sjednocení na levé straně. Pokud je název žádné třídy, struktury nebo sjednocení, identifikátor na pravé straně musí být deklarován s globálním oboru.
+Identifikátor na pravé straně operátoru rozlišení oboru (`::`) musí být definovaným členem třídy, struktury nebo sjednocení vlevo. Pokud se nejmenuje žádná třída, struktura nebo sjednocení, musí být identifikátor na pravé straně deklarovaný s globálním rozsahem.

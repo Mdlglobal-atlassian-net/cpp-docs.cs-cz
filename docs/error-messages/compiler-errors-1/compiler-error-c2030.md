@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2030
 ms.assetid: 5806cead-64df-4eff-92de-52c9a3f5ee62
-ms.openlocfilehash: 217f97d205e1da075277b8b0bc22ff3baab13482
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3f3936e6fd37da16c923cb482f45cec11833b3c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208029"
 ---
 # <a name="compiler-error-c2030"></a>Chyba kompilátoru C2030
 
-destruktor s přístupností protected private nemůže být členem třídy deklarované jako sealed.
+destruktor s přístupností Protected Private nemůže být členem třídy deklarované jako Sealed.
 
-Prostředí Windows Runtime třídy deklarované jako `sealed` nemůže mít destruktor chráněné privátní. Veřejné virtuální a privátní nevirtuální destruktory jsou povoleny pouze v zapečetěných typech. Další informace najdete v tématu [referenční třídy a struktury](../../cppcx/ref-classes-and-structs-c-cx.md).
+Třída prostředí Windows Runtime deklarovaná jako `sealed` nemůže mít chráněný privátní destruktor. Pro zapečetěné typy jsou povoleny pouze veřejné virtuální a soukromé nevirtuální destruktory. Další informace naleznete v tématu [ref Classes and Structs](../../cppcx/ref-classes-and-structs-c-cx.md).
 
-Chcete-li tuto chybu vyřešit, změňte přístupnost destruktor.
+Chcete-li tuto chybu opravit, změňte přístupnost destruktoru.

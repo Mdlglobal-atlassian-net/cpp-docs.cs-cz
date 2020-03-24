@@ -5,28 +5,28 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: 68ada06514defe0f7f5332288ad8e91a7d8d9351
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b855e0917ba9cdbdaa38a92473d7bddb4279101
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361916"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210065"
 ---
 # <a name="ole-db-programming-overview"></a>Přehled programování v architektuře OLE DB
 
-OLE DB je založená na modelu COM, vysoce výkonné databázové technologie. Poskytuje běžný způsob, jak získat přístup k datům nezávislý formuláře, ve kterém jsou uložená. V typickém podnikovém situaci obrovské množství informací nejsou uložená v podnikových databází. Tyto informace je nalezené v systémech souborů (například FAT nebo systému souborů NTFS), sekvenční indexovat soubory, osobní databází (jako je například přístup), tabulky (například aplikace Excel), aplikace plánování projektu (například projekt) a e-mailu (jako je například Outlook). OLE DB umožňuje získat přístup k jakýkoli druh úložiště dat stejným způsobem jako úložiště dat obsahuje zprostředkovatele OLE DB.
+OLE DB je vysoce výkonná databázová technologie založená na modelu COM. Poskytuje běžný způsob, jak přistupovat k datům nezávisle na formuláři, ve kterém je uložená. V typické obchodní situaci se v podnikových databázích neukládají obrovské množství informací. Tyto informace najdete v systémech souborů (například FAT nebo NTFS), indexované sekvenční soubory, osobní databáze (například přístup), tabulky (například Excel), aplikace plánování projektu (například projekt) a e-maily (například Outlook). OLE DB umožňuje přístup k libovolnému druhu úložiště dat stejným způsobem, pokud úložiště dat má poskytovatele OLE DB.
 
-OLE DB umožňuje vyvíjet aplikace s přístupem k různorodých zdrojů, ať už jsou to DBMS, nebo ne. OLE DB umožňuje univerzální přístup pomocí rozhraní modelu COM, které podporují správnou funkčnost DBMS pro daný zdroj dat. COM snižuje zdvojení služeb a maximalizuje vzájemnou funkční spolupráci pouze mezi zdroji dat, ale také mezi jinými aplikacemi.
+OLE DB umožňuje vyvíjet aplikace s přístupem k různým zdrojům dat bez ohledu na to, zda jsou systémy DBMS. OLE DB zpřístupňuje univerzální přístup pomocí rozhraní COM, která podporují příslušné funkce DBMS pro daný zdroj dat. Model COM omezuje zbytečné duplikování služeb a maximalizuje interoperabilitu nejen mezi zdroji dat, ale také mezi jinými aplikacemi.
 
 ## <a name="benefits-of-com"></a>Výhody modelu COM
 
-To přichází modelu COM. OLE DB je sada COM rozhraní. Tak přístup k datům prostřednictvím sady jednotné rozhraní, můžete uspořádat do matice spolupracujících součástí databáze.
+V takovém případě se v modelu COM nachází. OLE DB je sada rozhraní COM. Přístupem k datům prostřednictvím jednotné sady rozhraní můžete uspořádat databázi do matice spolupracujících komponent.
 
-Podle specifikace modelu COM, OLE DB definuje rozšiřitelné a udržuje kolekci rozhraní, která faktor a zapouzdření konzistentní vzhledem k aplikacím, opakovatelně použitelných částí funkcí DBMS. Tato rozhraní definují hranice DBMS komponent, jako jsou kontejnery řádek, procesory dotazu a koordinátory transakcí, které umožňují jednotné transakční přístup k rozličnými zdroji informací.
+Na základě specifikace modelu COM OLE DB definuje rozšiřitelnou a udržovatelnou kolekci rozhraní, kterou součinitel a zapouzdření konzistentních a opakovaně použitelných částí DBMS funkcí. Tato rozhraní definují hranice součástí DBMS, jako jsou kontejnery řádků, procesory dotazů a koordinátory transakcí, které umožňují jednotný transakční přístup k různým zdrojům informací.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Šablony OLE DB](../../data/oledb/ole-db-templates.md)

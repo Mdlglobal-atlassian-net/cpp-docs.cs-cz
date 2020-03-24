@@ -7,25 +7,25 @@ helpviewer_keywords:
 - OLE DB, resource pooling
 - OLE DB providers, resource pooling
 ms.assetid: 2ead1bcf-bbd4-43ea-a307-bb694b992fc1
-ms.openlocfilehash: 786c2b31bb93b0691d80885c86377e2afba8c1dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3604f6eaaf0f34a0ff7e54826923c2aa92eef4a2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243956"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209761"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Sdružování prostředků v aplikaci OLE DB
 
-Chcete-li využívají sdružování v aplikaci, je nutné jsou vyvolány projít zdroje dat OLE DB služby `IDataInitialize` nebo `IDBPromptInitialize`. Pokud používáte přímo `CoCreateInstance` pro vyvolání poskytovatele podle poskytovatele CLSID, jsou vyvolány žádné služby rozhraní OLE DB.
+Chcete-li v aplikaci využít sdružování, je nutné zajistit, aby OLE DB služby byly vyvolány tím, že získá zdroj dat prostřednictvím `IDataInitialize` nebo `IDBPromptInitialize`. Pokud přímo použijete `CoCreateInstance` k vyvolání poskytovatele založeného na identifikátoru CLSID poskytovatele, nejsou vyvolány žádné OLE DB služby.
 
-Služby rozhraní OLE DB spravovat fondy připojených zdrojů dat. Pokud odkaz na `IDataInitialize` nebo `IDBPromptInitialize` vlastněnou nebo dokud není připojení používá. Fondy se také automaticky udržuje v rámci prostředí služby COM + 1.0 nebo internetové informační služby (IIS). Pokud vaše aplikace využívá sdružování externí služby COM + 1.0 nebo IIS prostředí, byste měli mít odkaz na `IDataInitialize` nebo `IDBPromptInitialize` nebo opřete se o nejméně jedno připojení. Pokud chcete mít jistotu, že není získat fondu zničeny při vydání poslední připojení aplikací, zachovávat odkaz nebo blokovat připojení po dobu životnosti vaší aplikace.
+Služba OLE DB Services udržuje fondy propojených zdrojů dat, pokud se používá odkaz na `IDataInitialize` nebo `IDBPromptInitialize`, nebo pokud se používá připojení. Fondy se taky udržují automaticky v prostředí služby COM+ 1,0 nebo Internetová informační služba (IIS). Pokud vaše aplikace využívá výhod sdružování mimo služby modelu COM+ 1,0 nebo prostředí IIS, měli byste mít odkaz na `IDataInitialize` nebo `IDBPromptInitialize` nebo podržet aspoň na jednom připojení. Aby se zajistilo, že se fond po uvolnění posledního připojení uvolní v rámci aplikace, ponechejte odkaz nebo ponechte připojení po dobu života vaší aplikace.
 
-Služby rozhraní OLE DB identifikaci fondu, ze které je vykreslena připojení v době, která `Initialize` je volána. Po připojení je vykreslení z fondu, nelze jej přesunout na jiný fond. Ano, vyhýbání se dělání věcí ve vaší aplikaci, které se mění informace o inicializaci, jako je například volání `UnInitialize` nebo volání `QueryInterface` specifickým pro zprostředkovatele rozhraní před voláním `Initialize`. Kromě toho nejsou ve fondu připojení vytvořená pomocí výzvy jiná hodnota než DBPROMPT_NOPROMPT. Však inicializačního řetězce načte z připojení navázané prostřednictvím dotazování umožňuje vytvářet další ve fondu připojení ke stejnému zdroji dat.
+Služba OLE DB Services identifikuje fond, ze kterého se vykreslí připojení v době volání `Initialize`. Po vykreslení připojení z fondu se nedá přesunout do jiného fondu. Nepoužívejte proto v aplikaci změny inicializačních informací, jako je například volání `UnInitialize` nebo volání `QueryInterface` pro rozhraní specifické pro poskytovatele před voláním `Initialize`. Také připojení vytvořená s hodnotou výzvy jinou než DBPROMPT_NOPROMPT nejsou ve fondu. Inicializační řetězec načtený z připojení navázaného prostřednictvím výzvy se ale dá použít k vytvoření dalších sdružených připojení ke stejnému zdroji dat.
 
-Někteří poskytovatelé, třeba samostatného připojení pro každou relaci. Tyto další připojení musí samostatně zařazena v distribuované transakci, pokud existuje. OLE DB služby mezipaměti a opětovně používá jedinou relaci jeden zdroj dat, ale pokud aplikace požaduje více než jedna relace současně z jednoho zdroje dat, poskytovatele může skončit další připojení a provádění dalších transakce zařazení, které nejsou ve fondu. Je mnohem efektivnější vytvořit zdroj samostatná data pro každou relaci v prostředí než vytvářet více relací z jednoho zdroje dat ve fondu.
+Někteří poskytovatelé musí vytvořit samostatné připojení pro každou relaci. Tato další připojení se musí samostatně zařadit do distribuované transakce, pokud existuje. Služba OLE DB Services ukládá do mezipaměti a znovu používá jednu relaci na zdroj dat, ale pokud aplikace požádá o více než jednu relaci současně z jednoho zdroje dat, může zprostředkovatel ukončit další připojení a provádět další zařazení transakcí, které není ve fondu. Je efektivnější vytvořit samostatný zdroj dat pro každou relaci ve fondu prostředí, než vytvořit více relací z jednoho zdroje dat.
 
-A konečně protože ADO automaticky využívá technologie OLE DB služby, můžete použít ADO a navázat spojení a sdružování a zařazení probíhají automaticky.
+Vzhledem k tomu, že objekty ADO automaticky využívají OLE DB služby, můžete k navázání připojení použít ADO a sdružování a zařazení se automaticky provádí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sdružování prostředků OLE DB a služby](../../data/oledb/ole-db-resource-pooling-and-services.md)

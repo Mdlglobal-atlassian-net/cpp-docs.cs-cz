@@ -1,23 +1,23 @@
 ---
-title: 'Postupy: Přetížení funkcí s vnitřními a nativními ukazateli (C++vyhodnocovací)'
+title: 'Postupy: Přetížení funkcí s vnitřními a nativními ukazateli (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - Functions with interior and native pointers, overloading
 ms.assetid: d70df625-4aad-457c-84f5-70a0a290cc1f
-ms.openlocfilehash: f84a7efc87985f23b62139f0547c292989537aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4e7ee1140942b0168c8ae94baabd938d6923c7c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254561"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172241"
 ---
-# <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Postupy: Přetížení funkcí s vnitřními a nativními ukazateli (C++vyhodnocovací)
+# <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Postupy: Přetížení funkcí s vnitřními a nativními ukazateli (C++/CLI)
 
-Funkce mohou být přetíženy podle toho, zda je typ parametru vnitřní ukazatel nebo nativní ukazatel.
+Funkce mohou být přetíženy v závislosti na tom, zda je typ parametru vnitřní ukazatel nebo nativní ukazatel.
 
 > [!IMPORTANT]
-> Této funkci jazyka podporuje `/clr` – možnost kompilátoru, ale ne za `/ZW` – možnost kompilátoru.
+> Tato funkce jazyka je podporována možností kompilátoru `/clr`, ale ne pomocí možnosti kompilátoru `/ZW`.
 
 ## <a name="example"></a>Příklad
 
@@ -63,6 +63,6 @@ in f( int* pi )
 in f( interior_ptr<int> pi )
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

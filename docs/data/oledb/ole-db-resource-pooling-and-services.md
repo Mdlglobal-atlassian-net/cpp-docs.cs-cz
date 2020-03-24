@@ -9,25 +9,25 @@ helpviewer_keywords:
 - OLE DB services [OLE DB]
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-ms.openlocfilehash: f46c6f493ae41570c75c384fcc836707faeab99f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eeffff2bf165a5ccbdbaa546ad5b9ca9a57914
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210025"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Sdružování prostředků OLE DB a služby
 
-Pro práci s sdružování OLE DB nebo se všemi službami, OLE DB, váš poskytovatel musí podporovat agregace všechny objekty. Jde o požadavek OLE DB 1.5 nebo novější zprostředkovatele. Je velmi důležité pro využívání služby. Poskytovatelé, kteří nepodporují agregace nelze ve fondu a jsou k dispozici žádné další služby.
+Aby bylo možné dobře spolupracovat s OLE DB sdružováním nebo s jakoukoli OLE DB službou, váš poskytovatel musí podporovat agregaci všech objektů. Toto je požadavek jakéhokoli poskytovatele OLE DB 1,5 nebo novějšího. Je klíčové pro využití služeb. Zprostředkovatele, kteří nepodporují agregaci, nelze zařadit do fondu a žádné další služby nejsou k dispozici.
 
-Do fondu, musí podporovat zprostředkovatelů zdarma vlákno modelu. Fond zdrojů Určuje model vláken poskytovatele podle vlastnost DBPROP_THREADMODEL.
+Aby bylo možné fondy vyřadit do fondu, musí podporovat model bezplatného vlákna. Fond zdrojů Určuje model vláken poskytovatele podle vlastnosti DBPROP_THREADMODEL.
 
-Pokud má poskytovatel globálního připojení stavu, ve kterém můžou změnit zdroj dat je v inicializovaném stavu, má podporovat nové vlastnosti DBPROP_RESETDATASOURCE. Tato vlastnost je volána před připojení již byl použit a dává příležitost k vyčištění stavu před její další použití zprostředkovatele. Pokud zprostředkovatele nelze vyčistit některé stavu přidružené k připojení, může vrátit DBPROPSTATUS_NOTSETTABLE pro vlastnost a připojení nebude znovu použít.
+Pokud má poskytovatel globální stav připojení, který se může změnit, pokud je zdroj dat v inicializovaném stavu, měla by podporovat novou vlastnost DBPROP_RESETDATASOURCE. Tato vlastnost je volána před tím, než se připojení znovu použije a dává poskytovateli možnost Vyčistit stav před dalším použitím. Pokud zprostředkovatel nemůže vyčistit nějaký stav přidružený k připojení, může vrátit DBPROPSTATUS_NOTSETTABLE pro vlastnost a připojení nebude znovu použito.
 
-Vlastnost DBPROP_CONNECTIONSTATUS by měla podporovat poskytovatelé, kteří připojení ke vzdálené databázi a může zjistit, zda toto připojení může být ztracené. Tato vlastnost poskytuje schopnost detekovat mrtvého připojení a ujistěte se, že se nevrátíte do fondu služeb OLE DB.
+Poskytovatelé, kteří se připojují ke vzdálené databázi a mohou zjistit, zda může být toto připojení ztraceno, by mělo podporovat vlastnost DBPROP_CONNECTIONSTATUS. Tato vlastnost dává službám OLE DB možnost detekovat nedoručená připojení a zajistit, aby se nevracely do fondu.
 
-Nakonec automatický zápis do transakce obecně nebude fungovat pokud je implementováno na stejné úrovni, ke které dochází sdružování. Poskytovatelé, které podporují automatické transakce zařazení by měly podporovat zákaz tomuto zařazení ve vystavení vlastnost DBPROP_INIT_OLEDBSERVICES a zakázání zařazení, pokud DBPROPVAL_OS_TXNENLISTMENT není vybraná.
+A nakonec automatické zařazení transakce obvykle nefunguje, pokud není implementováno na stejné úrovni, ke které se sdružování provádí. Poskytovatelé, kteří podporují automatické zařazení transakce, by měli podporovat zakázání tohoto zařazení tím, že vystaví vlastnost DBPROP_INIT_OLEDBSERVICES a zakáže zařazení, pokud je DBPROPVAL_OS_TXNENLISTMENT zrušení výběru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Pokročilé techniky zprostředkování](../../data/oledb/advanced-provider-techniques.md)

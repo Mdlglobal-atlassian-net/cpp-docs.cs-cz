@@ -8,27 +8,27 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eda4dccda147ddd4776bb56e649f539a7550abd1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282813"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209764"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Předávání testů shodnosti technologie OLE DB
 
-Chcete-li poskytovatele konzistentnější, Data Access SDK poskytuje sadu testů shodnosti technologie OLE DB. Testy zkontrolujte všechny aspekty vašeho poskytovatele a poskytují rozumné záruku, že vaše zprostředkovatel funguje podle očekávání. Testů shodnosti technologie OLE DB můžete najít v sadě Microsoft Data Access SDK. Tato část se zaměřuje na věci, které byste měli udělat pro předávání testů shodnosti. Informace o spuštění testů shodnosti technologie OLE DB najdete v sadě SDK.
+Pro zajištění větší konzistence zprostředkovatelů poskytuje sada Data Access SDK sadu OLE DBch testů shody. Testy kontrolují všechny aspekty poskytovatele a poskytují přiměřenou záruku, že poskytovatel funguje podle očekávání. V sadě Microsoft Data Access SDK můžete najít OLE DB testy shody. Tato část se zaměřuje na věci, které byste měli udělat, abyste vyhověli testům shody. Informace o spuštění testů shody OLE DB naleznete v sadě SDK.
 
-## <a name="running-the-conformance-tests"></a>Spuštění testů shodnosti
+## <a name="running-the-conformance-tests"></a>Spuštění testů shody
 
-Ve Visual C++ 6.0 přidali šablony zprostředkovatele OLE DB počet zapojených funkcí, které umožňují zkontrolovat hodnoty a vlastnosti. Většina těchto funkcí byly přidány v reakci na testů shodnosti.
+V jazyce C++ Visual 6,0 šablony poskytovatele OLE DB přidali množství funkcí vidlice, které umožňují kontrolu hodnot a vlastností. Většina těchto funkcí byla přidána v reakci na testy dodržování shody.
 
 > [!NOTE]
-> Budete muset přidat několik ověřovací funkce pro předávání testů shodnosti technologie OLE DB poskytovatele.
+> Je potřeba přidat několik funkcí ověřování pro poskytovatele, aby bylo možné předat OLE DB testy shody.
 
-Tento poskytovatel vyžaduje dvě rutiny ověřování. První rutina `CRowsetImpl::ValidateCommandID`, je součástí vaší třídy sady řádků. Je volána při vytváření sady řádků šablony zprostředkovatele. Ukázka používá tato rutina příjemci říct, že nepodporuje indexy. První volání `CRowsetImpl::ValidateCommandID` (Všimněte si, že poskytovatel použije `_RowsetBaseClass` typedef přidán v mapě rozhraní pro `CCustomRowset` v [Podpora zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md), takže není nutné zadat tyto dlouhé řádky šablony argumenty). Poté vrátí DB_E_NOINDEX, pokud parametr indexu není NULL (to znamená, že uživatel chce používat indexu v USA). Další informace o ID příkazů najdete v příslušné specifikaci OLE DB a hledejte `IOpenRowset::OpenRowset`.
+Tento zprostředkovatel vyžaduje dvě rutiny ověřování. První rutina, `CRowsetImpl::ValidateCommandID`, je součástí vaší třídy sady řádků. Je volána během vytváření sady řádků pomocí šablon zprostředkovatele. Ukázka používá tuto rutinu k oznámení příjemcům, že nepodporuje indexy. Prvním voláním je `CRowsetImpl::ValidateCommandID` (Všimněte si, že zprostředkovatel používá `_RowsetBaseClass` typedef přidaný v mapě rozhraní pro `CCustomRowset` v [podpoře poskytovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md), takže nemusíte zadávat dlouhý řádek argumentů šablony). Dále vraťte DB_E_NOINDEX, pokud parametr indexu není NULL (to znamená, že příjemce chce použít index na US). Další informace o ID příkazů naleznete v tématu OLE DB Specification a hledejte `IOpenRowset::OpenRowset`.
 
-Následující kód je `ValidateCommandID` ověření rutinu:
+Následující kód je `ValidateCommandID` rutina ověřování:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -48,12 +48,12 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-Šablony zprostředkovatele volají `OnPropertyChanged` metoda pokaždé, když někdo přechází na jiné vlastnosti DBPROPSET_ROWSET skupiny. Pokud chcete zpracovávat vlastnosti pro jiné skupiny, je přidáte do příslušného objektu (to znamená, kontroly DBPROPSET_SESSION přejdou do `CCustomSession` třídy).
+Šablony zprostředkovatele volají metodu `OnPropertyChanged` vždy, když někdo změní vlastnost ve skupině DBPROPSET_ROWSET. Chcete-li zpracovat vlastnosti pro jiné skupiny, přidejte je do příslušného objektu (to znamená, DBPROPSET_SESSION kontroly přecházejí do třídy `CCustomSession`).
 
-Kód nejprve zkontroluje, zda je vlastnost propojený na jiný. Pokud vlastnosti je zřetězená, nastaví vlastnost DBPROP_BOOKMARKS na `True`. Příloha C specifikaci OLE DB obsahuje informace o vlastnostech. Tyto informace také zjistíte, zda je vlastnost zřetězené do jiného.
+Kód nejprve zkontroluje, zda je vlastnost propojena s jinou. Pokud je vlastnost zřetězena, nastaví vlastnost DBPROP_BOOKMARKS na hodnotu `True`. Příloha C specifikace OLE DB obsahuje informace o vlastnostech. Tyto informace také sdělují, zda je vlastnost zřetězena do jiné.
 
-Můžete také přidat `IsValidValue` rutiny do vašeho kódu. Volání šablony `IsValidValue` při pokusu o nastavení vlastnosti. Tato metoda by se mělo přepsat, pokud vyžadují další zpracování při nastavení hodnoty vlastnosti. Můžete mít jednu z těchto metod pro každou sadu vlastností.
+Můžete také chtít přidat rutinu `IsValidValue` do kódu. Šablony volají `IsValidValue` při pokusu o nastavení vlastnosti. Tuto metodu byste měli přepsat, pokud při nastavování hodnoty vlastnosti požadujete další zpracování. Jednu z těchto metod můžete pro každou sadu vlastností nastavit.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Pokročilé techniky zprostředkování](../../data/oledb/advanced-provider-techniques.md)

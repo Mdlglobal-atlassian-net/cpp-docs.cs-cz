@@ -24,41 +24,41 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80b7139996fddc82b206828d4a036922fa1446d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411796"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167599"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text a řetězce v jazyce Visual C++
 
-Důležitou součástí vývoje aplikací pro mezinárodní trhy je odpovídající reprezentace místní znakové sady. Znaková sada ASCII definuje znaky v rozsahu 0x00 do 0x7F. Existují jiné znakové sady, především Evropské, které definují znaky v rozsahu 0x00 do 0x7F stejně jako znaková sada ASCII a také definovat rozšířené znakové od 0x80 do 0xFF. Proto 8 bitů, jedním jednobajtového znaku sady (SBCS) je dostačující k reprezentaci znakové sady ASCII, jakož i znakových sad mnoha evropských jazyků. Ale některé neevropské znakových sad, jako je například japonská Kanji obsahovat mnoho více znaků, než schéma kódování jednobajtové představují a proto vyžadují vícebajtové znakové sady (MBCS s) kódováním.
+Důležitým aspektem vývoje aplikací pro mezinárodní trhy je odpovídající reprezentace místních znakových sad. Znaková sada ASCII definuje znaky v rozsahu 0x00 až 0x7F. Existují i jiné znakové sady, které definují znaky v rozsahu 0x00 až 0x7F stejným způsobem jako znaková sada ASCII a také definují rozšířenou znakovou sadu z 0x80 na 0xFF. Proto je 16bitová Vícebajtová znaková sada (SBCS) dostačující pro reprezentaci znakové sady ASCII a také znakové sady pro mnoho evropských jazyků. Nicméně některé neevropské znakové sady, například japonské kanji, obsahují mnoho dalších znaků, než je jednobajtové schéma kódování, může představovat, a proto vyžaduje kódování vícebajtových znakových sad (MBCS).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Unicode a MBCS](../text/unicode-and-mbcs.md)<br/>
-Tento článek popisuje podporu Visual C++ pro programování v kódování Unicode a MBCS.
+Popisuje vizuální C++ podporu programování Unicode a MBCS.
 
 [Podpora pro Unicode](../text/support-for-unicode.md)<br/>
-Popisuje kódování Unicode, specifikace pro podporu všech znakových sad, včetně znakových sad, které nelze reprezentovat jediným bajtem.
+Popisuje znakovou sadu Unicode, specifikaci pro podporu všech znakových sad, včetně znakových sad, které nemohou být reprezentovány v jednom bajtu.
 
 [Podpora vícebajtových znakových sad (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
-Tento článek popisuje znakové sady MBCS, o alternativu k kódování Unicode pro podporu znakové sady, jako například japonštinu a čínštinu, které nelze reprezentovat jediným bajtem.
+Popisuje znakovou sadu MBCS, alternativu ke znakové sadě Unicode pro podpůrné znakové sady, jako je například japonština a čínština, které nemohou být reprezentovány v jednom bajtu.
 
 [Mapování obecného textu v souboru tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
-Mapování obecného textu specifické pro společnost Microsoft poskytuje pro mnoho typů dat, rutiny a dalších objektů.
+Poskytuje mapování obecného textu specifického pro společnost Microsoft pro mnoho datových typů, rutin a dalších objektů.
 
-[Postupy: Převody různých typů řetězců](../text/how-to-convert-between-various-string-types.md)<br/>
-Ukazuje, jak převést různé řetězcové typy jazyka Visual C++ do jiných řetězců.
+[Postupy: Převody mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)<br/>
+Ukazuje, jak převést různé typy C++ vizuálních řetězců na jiné řetězce.
 
 ## <a name="related-sections"></a>Související oddíly
 
 [Internacionalizace](../c-runtime-library/internationalization.md)<br/>
-Tento článek popisuje Mezinárodní podpora v knihovně C Runtime.
+Popisuje mezinárodní podporu v knihovně run-time jazyka C.
 
-[Mezinárodní ukázky](https://github.com/Microsoft/VCSamples)<br/>
-Obsahuje odkazy na ukázky internacionalizaci v jazyce Visual C++.
+[Mezinárodní ukázky](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/International)<br/>
+Obsahuje odkazy na ukázky, které demonstrují mezinárodní C++využití v vizuálu.
 
-[Jazyka a země/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-Poskytuje řetězců jazyka a země/oblast v knihovny run-time jazyka C.
+[Řetězce jazyka a země/oblasti](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+Poskytuje řetězce jazyka a země/oblasti v knihovně run-time jazyka C.

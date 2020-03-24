@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1561
 ms.assetid: cb0b709b-7c9c-4496-8a4e-9e1e4aefe447
-ms.openlocfilehash: ad216c7b7a09b8dd5d2ca2b86bc3a386fa18a552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 706cf6c90dc187b6c343edc82cebb93bb8660452
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161027"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194847"
 ---
 # <a name="linker-tools-error-lnk1561"></a>Chyba linkerů LNK1561
 
-musí být definován vstupní bod
+vstupní bod musí být definovaný.
 
-Propojovací program nebyl nalezen *vstupní bod*, počáteční funkce má být volána v spustitelný soubor. Ve výchozím nastavení, propojovací program vyhledá `main` nebo `wmain` funkce pro aplikaci konzoly, `WinMain` nebo `wWinMain` funkce aplikace pro Windows, nebo `DllMain` pro knihovnu DLL, která vyžaduje inicializace. Můžete zadat jiné funkce s použitím [/Entry](../../build/reference/entry-entry-point-symbol.md) – možnost linkeru.
+Linker nenalezl *vstupní bod*, počáteční funkci pro volání ve spustitelném souboru. Ve výchozím nastavení linker hledá `main` nebo `wmain` funkce pro konzolovou aplikaci, `WinMain` nebo `wWinMain` funkce pro aplikaci pro Windows, nebo `DllMain` pro knihovnu DLL, která vyžaduje inicializaci. Jinou funkci můžete zadat pomocí možnosti linkeru [/entry](../../build/reference/entry-entry-point-symbol.md) .
 
 Tato chyba může mít několik příčin:
-- Nesmí obsahovat soubor, který definuje vstupní bod v seznamu souborů určených k propojení. Ověřte, že je propojený soubor, který obsahuje funkci vstupního bodu do vaší aplikace.
-- Jste definovali pomocí nesprávného funkce podpis; vstupní bod například jste zadáno chybně nebo použít nesprávné případu pro název funkce a nesprávně zadaný návratový typ nebo typy parametrů.
-- Zadali jste [/dll](../../build/reference/dll-build-a-dll.md) možnost při sestavování knihovny DLL.
-- Možná jste zadali název funkci vstupního bodu správně při použití [/Entry](../../build/reference/entry-entry-point-symbol.md) – možnost linkeru.
-- Pokud používáte [LIB](../../build/reference/lib-reference.md) nástroj k vytváření knihovny DLL, jste zadali .def souboru. Pokud ano, odeberte soubor .def ze sestavení.
+- Možná jste nezahrnuli soubor definující vstupní bod v seznamu souborů k propojení. Ověřte, zda je soubor, který obsahuje funkci vstupního bodu, propojen do vaší aplikace.
+- Je možné, že jste vstupní bod definovali pomocí špatné signatury funkce. Například je možné, že jste nesprávně nastavili nebo nepoužili špatný případ pro název funkce, nebo pokud jste nezadali typ návratového typu nebo parametru.
+- Možná jste nezadali možnost [/DLL](../../build/reference/dll-build-a-dll.md) při vytváření knihovny DLL.
+- Pokud jste použili možnost linkeru [/entry](../../build/reference/entry-entry-point-symbol.md) , je možné, že jste nesprávně zadali název funkce vstupního bodu.
+- Používáte-li nástroj [lib](../../build/reference/lib-reference.md) k sestavení knihovny DLL, je možné, že jste zadali soubor. def. Pokud ano, odeberte soubor. def ze sestavení.
 
-Při sestavování aplikace, hledá linker funkci vstupního bodu volaná ke spuštění kódu. Toto je funkce, která je volána po načtení aplikace a modul runtime je inicializován. Je nutné zadat funkci vstupního bodu pro aplikaci nebo aplikaci nelze spustit. Vstupní bod je volitelný pro knihovnu DLL. Ve výchozím nastavení, hledá linker funkci vstupního bodu, který má jednu z několika specifickými názvy a podpisy, jako například `int main(int, char**)`. Můžete zadat jiný název funkce jako položku bodu pomocí možnosti linkeru/Entry.
+Při sestavování aplikace linker hledá funkci vstupního bodu pro volání ke spuštění kódu. Toto je funkce, která je volána po načtení aplikace a inicializaci modulu runtime. Pro aplikaci musíte zadat funkci vstupního bodu, jinak se aplikace nedá spustit. Vstupní bod je volitelný pro knihovnu DLL. Ve výchozím nastavení linker hledá funkci vstupního bodu, která má jeden z několika specifických názvů a podpisů, například `int main(int, char**)`. Další název funkce můžete zadat jako vstupní bod pomocí možnosti linkeru/ENTRY.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje LNK1561:
+Následující ukázka generuje LINKERŮ LNK1561:
 
 ```cpp
 // LNK1561.cpp

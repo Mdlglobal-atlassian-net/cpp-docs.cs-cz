@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Source method [C++]
 ms.assetid: 55353741-fabc-4b0c-9787-b5a69bb189f2
-ms.openlocfilehash: 682070877f269967405677d027b20707c8366f61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43dd21297ddd54863d535402dddd59243d589eec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154954"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180521"
 ---
-# <a name="comerrorsource"></a>_com_error::Source
+# <a name="_com_errorsource"></a>_com_error::Source
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Volání `IErrorInfo::GetSource` funkce.
+Volá funkci `IErrorInfo::GetSource`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,14 +27,14 @@ _bstr_t Source() const;
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí výsledek `IErrorInfo::GetSource` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Výsledná `BSTR` zapouzdřena v `_bstr_t` objektu. Pokud ne `IErrorInfo` je zaznamenán, vrátí prázdný `_bstr_t`.
+Vrátí výsledek `IErrorInfo::GetSource` pro objekt `IErrorInfo` zaznamenaný v rámci objektu `_com_error`. Výsledný `BSTR` je zapouzdřený v objektu `_bstr_t`. Pokud není zaznamenána žádná `IErrorInfo`, vrátí prázdnou `_bstr_t`.
 
 ## <a name="remarks"></a>Poznámky
 
-Jakékoli neúspěchy při volání `IErrorInfo::GetSource` metoda se ignoruje.
+Jakékoli selhání při volání metody `IErrorInfo::GetSource` je ignorováno.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_error – třída](../cpp/com-error-class.md)

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - schemas [C++], database
 - structures [C++]
 ms.assetid: 7d17e35f-1ccf-4853-b915-5b8c7a45b9ee
-ms.openlocfilehash: cc333ee987ed0c6cba6cb11730d8f940e49d525d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eac4f47c3d00c34c1aadaef18202a95f831ad82
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152693"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209090"
 ---
 # <a name="schema--mfc-data-access"></a>Schéma (přístup k datům MFC)
 
-Schéma databáze popisuje aktuální struktura tabulky a zobrazení databáze v databázi. Obecně platí generované v Průvodci kód předpokládá, že nedojde ke změně schématu pro tabulku nebo tabulky přistupuje na sadu záznamů, ale databázové třídy můžete vyřešit některé změny schématu, jako je například přidání, změna uspořádání nebo odstranění nevázaných sloupců. Pokud tabulka změní, musíte ručně aktualizovat sadu záznamů tabulky a zkompilovat aplikaci znovu.
+Schéma databáze popisuje aktuální strukturu tabulek a zobrazení databáze v databázi. Obecně, kód vygenerovaný průvodcem předpokládá, že schéma tabulky nebo tabulek, ke kterým se přistupovalo sadou záznamů, se nezmění, ale třídy databáze mohou pracovat s některými změnami schématu, jako je například přidání, změna pořadí nebo odstranění nevázaných sloupců. Pokud se tabulka změní, je nutné ručně aktualizovat sadu záznamů pro tabulku a pak znovu zkompilovat aplikaci.
 
-Můžete doplnit generované v Průvodci kód vypořádat s databází, jejichž schématu není úplně známý v době kompilace. Další informace najdete v tématu [sada záznamů: Dynamické vazby datových sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+Můžete také doplnit kód vygenerovaný průvodcem pro práci s databází, jejíž schéma není zcela známo v době kompilace. Další informace naleznete v tématu [Sada záznamů: dynamické vazby datových sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přístup k datům programování knihovny MFC nebo ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[Programování přístupu k datům (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [SQL](../data/odbc/sql.md)<br/>
 [Sada záznamů (ODBC)](../data/odbc/recordset-odbc.md)

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: a2afb7354dd0447375ee6205b7c5d9a4755aa4b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50e05b70a782dd343031443540790697e980c994
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209536"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Podpora volných vláken ve zprostředkovateli
 
-Všechny třídy zprostředkovatele OLE DB jsou bezpečné pro vlákna a položky registru se nastaví odpovídajícím způsobem. Je vhodné podpora volných vláken, které vám pomůžou zajistit vysokou úroveň výkonu v situacích s více uživateli. Zajistit, aby byl váš poskytovatel bezpečné pro vlákna, musíte ověřit, že váš kód správně blokované. Při každém zápisu nebo ukládání dat, třeba blokovat přístup s kritických oddílů.
+Všechny třídy poskytovatele OLE DB jsou bezpečné pro přístup z více vláken a položky registru jsou nastaveny odpovídajícím způsobem. Pro zajištění vysoké úrovně výkonu v situacích s více uživateli je vhodné podporovat bezplatná vlákna. Aby bylo možné zajistit bezpečnost pro přístup z více vláken, je nutné ověřit, zda je kód správně zablokován. Kdykoli zapisujete nebo ukládáte data, je nutné zablokovat přístup s kritickými oddíly.
 
-Každý objekt šablony zprostředkovatele OLE DB má svůj vlastní kritický oddíl. Chcete-li snadněji blokování, by měl být každou novou třídu vytvoříte třídu šablony s ohledem na nadřazenou třídu název jako argument.
+Každý objekt šablony poskytovatele OLE DB má svůj vlastní kritický oddíl. Aby bylo blokování snazší, každá nová třída, kterou vytvoříte, by měla být třída šablony, která přebírá název nadřazené třídy jako argument.
 
-Následující příklad ukazuje, jak blokovat kódu:
+Následující příklad ukazuje, jak zablokovat váš kód:
 
 ```cpp
 template <class T>
@@ -37,10 +37,10 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-Další informace o tom, jak chránit kritické oddíly s `Lock` a `Unlock`, naleznete v tématu [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Další informace o tom, jak chránit kritické oddíly pomocí `Lock` a `Unlock`, naleznete v tématu [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
-Ověřte, že všechny metody, které přepsat (například `Execute`) jsou bezpečné pro vlákna.
+Ověřte, že všechny metody, které přepisujete (například `Execute`), jsou bezpečné pro přístup z více vláken.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2692
 ms.assetid: 02ade3b4-b757-448b-b065-d7d71bc3f441
-ms.openlocfilehash: c469f4944417c9116c7316b01642dd4b370b8c4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ce57cd50e9ec83cf80ec64e14f49eb9714f9208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257813"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177089"
 ---
 # <a name="compiler-error-c2692"></a>Chyba kompilátoru C2692
 
-'Název_funkce': v kompilátoru C používat plně prototypované funkce "/ clr' možnost
+' function_name ': v kompilátoru jazyka C s možností/CLR jsou vyžadovány plně prototypované funkce
 
-Při kompilaci pro .NET spravovaného kódu, kompilátor jazyka C vyžaduje deklarace funkcí ANSI. Kromě toho, pokud funkce nepřijímá žádné parametry, se musí explicitně deklarovat `void` jako typ parametru.
+Při kompilaci pro spravovaný kód .NET vyžaduje kompilátor jazyka C deklarace funkce ANSI. Kromě toho, pokud funkce přebírá žádné parametry, musí explicitně deklarovat `void` jako typ parametru.

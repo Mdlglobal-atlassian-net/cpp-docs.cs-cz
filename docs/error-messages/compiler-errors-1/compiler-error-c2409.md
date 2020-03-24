@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2409
 ms.assetid: 5d4aa952-0752-4412-b5c2-050dde0636f4
-ms.openlocfilehash: bc0b6ea5732ba4602a9d4127f6cb0a9c6f815744
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aad038ae1e61fc1f19476773cc4e3d1c7619ffb2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205715"
 ---
 # <a name="compiler-error-c2409"></a>Chyba kompilátoru C2409
 
-používá se jako operátor "context" Neplatný typ
+jako operátor v kontextu byl použit neplatný typ.
 
-Typ není platný jako operátor v tomto kontextu.
+Typ není v tomto kontextu platný jako operátor.

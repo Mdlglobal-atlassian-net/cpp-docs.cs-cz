@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1008
 ms.assetid: 7de729e3-b2ca-4a68-95ab-8a1c920f3f2c
-ms.openlocfilehash: 0c0d0311189c71439ad75ed16c07b188732e7a4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 614fbcd0fe938ecb845112f07357040f5084e59f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364295"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204838"
 ---
 # <a name="fatal-error-c1008"></a>Závažná chyba C1008
 
-zadané žádné vstupní soubory
+nebyl zadán vstupní soubor.
 
-Kompilátor Listener was not given zdrojový soubor jazyka C nebo C++ pro kompilaci. Zkontrolujte **CL** příkazový řádek a proměnné prostředí pro specifikace názvu souboru.
+Kompilátoru nebyl poskytnut soubor C nebo C++ zdrojový soubor ke kompilaci. Ověřte příkazový řádek **CL** a proměnnou prostředí pro specifikace filename.

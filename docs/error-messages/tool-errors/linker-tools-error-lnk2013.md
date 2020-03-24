@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 4d932a89f1b0bde27f6de2f84b2ed103dab1b1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299065"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194743"
 ---
 # <a name="linker-tools-error-lnk2013"></a>Chyba linkerů LNK2013
 
@@ -19,7 +19,7 @@ opravte typ opravou přetečení. Cílový 'název symbolu' je mimo rozsah
 
 Linker nemůže pojmout potřebné adresy nebo posun do uvedené instrukce, protože cílový symbol je příliš vzdálený od umístění instrukce.
 
-Tento problém lze vyřešit vytvořením více bitových kopií nebo pomocí [/ORDER](../../build/reference/order-put-functions-in-order.md) možnost tak instrukce a cíl byly blíže.
+Tento problém můžete vyřešit vytvořením několika imagí nebo pomocí možnosti [/Order](../../build/reference/order-put-functions-in-order.md) , aby se instrukce a cíl vzájemně rozblížily.
 
 Pokud je název symbolu symbol definovaný uživatelem (nikoli symbol vygenerovaný kompilátorem), lze pro odstranění chyby zkusit také následující akce:
 

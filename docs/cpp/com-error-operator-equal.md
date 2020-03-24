@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error [C++]
 ms.assetid: b9cc4094-d055-450c-b45a-0a95317488f8
-ms.openlocfilehash: 1c68d10c8f82f5d5ed7f6286ba15437941c0ac6b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 7f24076a0286da910378d6633f483e6f050858b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180547"
 ---
-# <a name="comerroroperator-"></a>_com_error::operator =
+# <a name="_com_erroroperator-"></a>_com_error::operator =
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Přiřadí existující `_com_error` objektu na jiný.
+Přiřadí existující objekt `_com_error` k druhému.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,11 +29,11 @@ _com_error& operator = (
 
 #### <a name="parameters"></a>Parametry
 
-*který*<br/>
-A `_com_error` objektu.
+*zda*<br/>
+Objekt `_com_error`.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_error – třída](../cpp/com-error-class.md)

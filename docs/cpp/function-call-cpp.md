@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - function call operator ()
 ms.assetid: 5094254a-045b-46f7-8653-69bc91e80dce
-ms.openlocfilehash: 0064b17f0adf5cadf732321fbb62403a1da5db76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7326b0f9c9592cb2b3be973a5ba1747a2015a0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154227"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179806"
 ---
 # <a name="function-call-c"></a>Volání funkcí (C++)
 
@@ -30,7 +30,7 @@ primary-expression ( expression-list )
 
 ## <a name="remarks"></a>Poznámky
 
-V tomto kontextu `primary-expression` je první operand a `expression-list`, případně prázdný seznam argumentů, je druhý operand. Operátor volání funkce se používá pro operace, které vyžadují více parametrů. Tento postup funguje, protože `expression-list` je seznam místo jediného operandu. Operátor volání funkce musí být nestatická členská funkce.
+V tomto kontextu je `primary-expression` prvním operandem a `expression-list`, případně prázdný seznam argumentů, je druhý operand. Operátor volání funkce se používá pro operace, které vyžadují více parametrů. To funguje, protože `expression-list` je seznam místo jednoho operandu. Operátor volání funkce musí být nestatická členská funkce.
 
 Operátor volání funkce nemění v případě přetížení způsob, jakým jsou funkce volány. Místo toho upravuje, jak se operátor interpretuje při použití na objekty daného typu třídy. Například následující kód by obvykle neměl význam:
 
@@ -39,7 +39,7 @@ Point pt;
 pt( 3, 2 );
 ```
 
-Zadaný operátor odpovídající přetížená volání funkce, ale tato syntaxe umožňuje posun `x` koordinovat 3 jednotky a `y` koordinovat 2 jednotky. Následující kód ukazuje takovou definici:
+Při použití vhodného přetíženého operátoru volání funkce se ale tato syntaxe dá použít k posunu `x` souřadnici 3 jednotky a `y` souřadnicích 2 jednotky. Následující kód ukazuje takovou definici:
 
 ```cpp
 // function_call.cpp
@@ -62,7 +62,7 @@ int main()
 
 Je třeba poznamenat, že operátor volání funkce je použit na název objektu, nikoli na název funkce.
 
-Můžete také přetížit operátor volání funkce pomocí ukazatele na funkci (spíše než samotné funkce).
+Operátor volání funkce můžete také přetížit pomocí ukazatele na funkci (místo samotné funkce).
 
 ```cpp
 typedef void(*ptf)();
@@ -84,6 +84,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přetížení operátoru](../cpp/operator-overloading.md)

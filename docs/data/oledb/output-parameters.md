@@ -8,24 +8,24 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece626eb7fbecae9b90321ccc2569607897cf520
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283936"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209856"
 ---
 # <a name="output-parameters"></a>Výstupní parametry
 
-Volání uložené procedury je podobná spuštění příkazu SQL. Hlavní rozdíl je, že uložených procedur použijte výstupní parametry (nebo "výstupní parametry") a návratových hodnot.
+Volání uložené procedury je podobné spuštění příkazu jazyka SQL. Hlavním rozdílem je, že uložené procedury používají výstupní parametry (neboli "výstupy") a návratové hodnoty.
 
-Těmito uloženou proceduru, první '? 'je návratová hodnota (telefon) a druhá'?' je vstupní parametr (název):
+V následující uložené proceduře první '? ' je návratovou hodnotou (Phone) a druhým '? ' je vstupní parametr (Name):
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }"))
 ```
 
-Zadat vstupní a výstupní parametry v mapě parametr:
+Zadejte parametry in a out v mapě parametrů:
 
 ```cpp
 BEGIN_PARAM_MAP(CMySProcAccessor)
@@ -36,13 +36,13 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-Ke zpracování potřeba aplikace výstupu vráceného z uložené procedury. Různé technologie OLE DB – zprostředkovatelé vrátit výstupní parametry a návratové hodnoty v různých časech během zpracování výsledku. Zprostředkovatel Microsoft OLE DB pro SQL Server (SQLOLEDB) není třeba výstupní parametry a návratové kódy až po příjemce načte nebo zruší sady výsledků vrácené procedurou. uložené. Výstup se vrací v posledním TDS paketu ze serveru.
+Vaše aplikace musí zpracovat výstup vrácený z uložených procedur. Různí poskytovatelé OLE DB vracejí výstupní parametry a návratové hodnoty v různých časech během zpracování výsledků. Například poskytovatel Microsoft OLE DB pro SQL Server (SQLOLEDB) nedodá výstupní parametry a návratové kódy, dokud uživatel nenačte nebo zruší sady výsledků vrácené uloženou procedurou. Výstup se vrátí v posledním paketu TDS ze serveru.
 
 ## <a name="row-count"></a>Počet řádků
 
-Pokud používáte ke spuštění uložené procedury, která má výstupní parametry šablony příjemce technologie OLE DB, počet řádků není nastavená, dokud ho neukončíte sadu řádků.
+Použijete-li šablony příjemce OLE DB ke spuštění uložené procedury, která má dílčí parametry, počet řádků není nastaven, dokud nezavřete sadu řádků.
 
-Představte si třeba uložené procedury s sady řádků a výstupním parametrem:
+Například zvažte uloženou proceduru se sadou řádků a dílčím parametrem:
 
 ```sql
 create procedure sp_test
@@ -53,8 +53,8 @@ as
 return 0
 ```
 
-`@_rowcount` Výstupní zprávy, kolik řádků vrácených z tabulky testu. Tuto uloženou proceduru však omezuje počet řádků na 50. Například pokud byly nějaké 100 řádků v testu, rowcount by 50 (protože je tento kód načte jenom prvních 50 řádků). Pokud byly nějaké pouze 30 řádky v tabulce, by rowcount 30. Nezapomeňte volat `Close` nebo `CloseAll` k naplnění výstupní před načíst jeho hodnotu.
+`@_rowcount` dílčí parametr oznamuje, kolik řádků bylo vráceno z testovací tabulky. Tato uložená procedura ale omezuje počet řádků na 50. Například pokud byly v testu 100 řádky, rowcount by byl 50 (protože tento kód načte pouze hlavní 50 řádky). Pokud byla v tabulce pouze 30 řádků, rowcount by byl 30. Nezapomeňte volat `Close` nebo `CloseAll`, abyste naplnili dílčí parametr před tím, než načtete jeho hodnotu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití uložených procedur](../../data/oledb/using-stored-procedures.md)

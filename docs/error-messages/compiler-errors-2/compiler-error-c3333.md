@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3333
 ms.assetid: 51693978-fba6-435a-a696-74735cc875de
-ms.openlocfilehash: 8f2a3a0a31234491b451bcae5c03aa76f3cb4ea8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0ccab0b676bf388ba5b94c151de5e18f842aac7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222424"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201243"
 ---
 # <a name="compiler-error-c3333"></a>Chyba kompilátoru C3333
 
-'knihovny typů': nelze #import poškozená knihovna typů
+' knihovna typů ': nelze #import poškozenou knihovnu typů
 
-Knihovnu typů zadanou v `#import` příkaz nečitelná kompilátorem. Můžete buď obnovit knihovny typů, pokud je to možné, nebo požádat o novou knihovnu typů ze svého dodavatele. Můžete chtít použít OLE prohlížeč, dodávané s Visual C++, chcete-li zobrazit soubor knihovny typů, které chcete zobrazit, co je otázkou s ním.
+Knihovna typů zadaná v příkazu `#import` není pro kompilátor čitelná. Můžete chtít buď znovu vygenerovat knihovnu typů, pokud je to možné, nebo požádat o novou knihovnu typů od dodavatele. Můžete chtít použít prohlížeč OLE, který je dodáván s jazykem Visual C++, k zobrazení souboru knihovny typů, aby bylo možné zjistit, co je v souvislosti s ním.

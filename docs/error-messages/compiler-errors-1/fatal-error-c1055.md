@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C1055
 ms.assetid: a9fb9190-d7eb-4d5f-b1a2-a41e584a28c1
-ms.openlocfilehash: e6df4870d7af49c369be7e513791955599c48326
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c349c09b4931c0a303e7619b364ab237394bd4fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390643"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204448"
 ---
 # <a name="fatal-error-c1055"></a>Závažná chyba C1055
 
-limit kompilátoru: došly klíče
+limit kompilátoru: došly klíče.
 
-Zdrojový soubor obsahuje příliš mnoho symbolů. Kompilátor nemá dostatek klíčů hash pro symbol tabulku.
+Zdrojový soubor obsahuje příliš mnoho symbolů. Kompilátor nemá klíče hash pro tabulku symbolů.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Oprava pomocí následujících možných řešení
 
-1. Zdrojový soubor rozdělte na menší soubory.
+1. Rozdělte zdrojový soubor na menší soubory.
 
-1. Odstranění nepotřebných hlavičkové soubory.
+1. Eliminujte nepotřebné hlavičkové soubory.
 
-1. Znovu použít dočasný a globální proměnné místo vytvoření nové značky.
+1. Místo vytváření nových proměnných znovu použijte dočasné a globální proměnné.

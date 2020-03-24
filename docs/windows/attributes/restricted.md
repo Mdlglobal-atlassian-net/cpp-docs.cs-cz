@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514060"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166364"
 ---
 # <a name="restricted"></a>restricted
 
@@ -69,12 +69,12 @@ class c : public a, public b
 |-|-|
 |**Platí pro**|Metoda rozhraní, **rozhraní**, **Třída**, **Struktura**|
 |**REPEATABLE**|Ne|
-|**Požadované atributy**|**Coclass – třída** (při použití u **třídy** nebo **struktury**)|
+|**Požadované atributy**|**Coclass – třída** (při použití pro **třídu** nebo **strukturu**)|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)<br/>

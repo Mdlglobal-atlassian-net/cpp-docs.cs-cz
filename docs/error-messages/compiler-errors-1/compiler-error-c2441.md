@@ -1,31 +1,31 @@
 ---
-title: Compiler Error C2441
+title: Chyba kompilátoru C2441
 ms.date: 11/04/2016
 f1_keywords:
 - C2441
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338919"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205306"
 ---
-# <a name="compiler-error-c2441"></a>Compiler Error C2441
+# <a name="compiler-error-c2441"></a>Chyba kompilátoru C2441
 
-> "*proměnnou*': symbol deklarovaný s: __declspec(process), musí být const v/CLR: pure režimu
+> '*Variable*': symbol deklarovaný pomocí __declspec (Process) musí být const v režimu/CLR: Pure.
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-Ve výchozím nastavení, jsou proměnné pro doménu aplikace v rámci **/CLR: pure**. Proměnné označené `__declspec(process)` pod **/CLR: pure** jsou náchylné na chyby, pokud se změnil v jeden aplikační domény a číst v jiném.
+Ve výchozím nastavení jsou proměnné na doménu aplikace pod možností **/clr: Pure**. Proměnná označená `__declspec(process)` v **/clr: Pure** je náchylná k chybám, pokud se změnila v jedné doméně aplikace a načte se v jiné.
 
-Proto kompilátor vynucuje proces proměnné `const` pod **/CLR: pure**, provedení je číst pouze ve všech doménách aplikace.
+Proto kompilátor vynutil proměnné procesu je `const` v režimu **/clr: Pure**, aby je bylo možné číst pouze ve všech doménách aplikace.
 
-Další informace najdete v tématu [procesu](../../cpp/process.md) a [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Další informace naleznete v tématu [Process](../../cpp/process.md) and [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 8c4253d469c510f5e6eb996ed510ef836844899d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a53cd653258980d21e9dd297ae61c458732b7250
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501392"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210545"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl – třída
 
-Provádí stejné funkce jako `IObjectWithSite` , ale také umožňuje OLE DB vlastnosti. `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`
+Provede stejné funkce jako `IObjectWithSite`, ale také umožňuje OLE DB vlastnosti `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,8 +40,8 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Třída odvozená z `IRowsetCreator`.
+*Š*<br/>
+Třída odvozená od `IRowsetCreator`.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -57,9 +57,9 @@ Třída odvozená z `IRowsetCreator`.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída dědí z [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) a Přepisuje [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Když příkaz nebo objekt relace vytvoří sadu řádků, zavolá `QueryInterface` na objekt sady řádků, který `IObjectWithSite` hledá a volá `SetSite` předání `IUnkown` rozhraní objektu sady řádků jako rozhraní lokality.
+Tato třída dědí z [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) a Přepisuje [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Když příkaz nebo objekt Session zprostředkovatele vytvoří sadu řádků, zavolá `QueryInterface` objektu sady řádků, který hledá `IObjectWithSite` a volání `SetSite` předání rozhraní `IUnkown` objektu sady řádků jako rozhraní lokality.
 
-## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
+## <a name="irowsetcreatorimplsetsite"></a><a name="setsite"></a>IRowsetCreatorImpl –:: SetSite
 
 Nastaví lokalitu, která obsahuje objekt sady řádků. Další informace najdete v tématu [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite).
 
@@ -72,7 +72,7 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 #### <a name="parameters"></a>Parametry
 
 *pCreator*<br/>
-pro Ukazatel na `IUnknown` ukazatel rozhraní lokality, která spravuje objekt sady řádků.
+pro Ukazatel na ukazatel rozhraní `IUnknown` lokality, která spravuje objekt sady řádků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -80,9 +80,9 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Kromě toho `IRowsetCreatorImpl::SetSite` umožňuje OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` vlastnosti.
+Kromě toho `IRowsetCreatorImpl::SetSite` povoluje vlastnosti `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` OLE DB.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

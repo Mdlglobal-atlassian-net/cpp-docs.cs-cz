@@ -1,5 +1,5 @@
 ---
-title: 'Relační operátory: &lt;, &gt;, &lt;=, a &gt;='
+title: 'Relační operátory: &lt;, &gt;, &lt;= a &gt;='
 ms.date: 11/04/2016
 f1_keywords:
 - <
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - less than or equal to operator
 - <= operator
 ms.assetid: d346b53d-f14d-4962-984f-89d39a17ca0f
-ms.openlocfilehash: 52a3c10e6da42f6c181d3f93de13168e22141bec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38e05b78d334ca690d9523797f7ca1813834c5d3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404751"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179117"
 ---
-# <a name="relational-operators-lt-gt-lt-and-gt"></a>Relační operátory: &lt;, &gt;, &lt;=, a &gt;=
+# <a name="relational-operators-lt-gt-lt-and-gt"></a>Relační operátory: &lt;, &gt;, &lt;= a &gt;=
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,15 +37,15 @@ expression >= expression
 
 Binární relační operátory určují následující vztahy:
 
-- Menší než (**\<**)
+- Menší než ( **\<** )
 
-- Větší než (**>**)
+- Větší než ( **>** )
 
-- Menší než nebo rovno (**\<=**)
+- Menší než nebo rovno ( **\<=** )
 
-- Větší než nebo rovno (**>=**)
+- Větší než nebo rovno ( **>=** )
 
-Relační operátory mají asociativitu operátorů zleva doprava. Oba operandy relačních operátorů musejí mít aritmetický typ nebo typ ukazatele. Dávají hodnoty typu **bool**. Vrácená hodnota je **false** (0) Pokud je vztah ve výrazu false; v opačném případě je vrácená hodnota **true** (1).
+Relační operátory mají asociativitu operátorů zleva doprava. Oba operandy relačních operátorů musejí mít aritmetický typ nebo typ ukazatele. Poskytují hodnoty typu **bool**. Vrácená hodnota je **false** (0), pokud je relace ve výrazu false; v opačném případě je vrácená hodnota **true** (1).
 
 ## <a name="example"></a>Příklad
 
@@ -64,35 +64,35 @@ int main() {
 }
 ```
 
-Výrazy uvedené v předchozím příkladu musí být uzavřen v závorkách, protože operátor vkládání datového proudu (**<<**) má vyšší prioritu než relační operátory. První výraz bez závorek by tedy byl vyhodnocen jako:
+Výrazy v předchozím příkladu musí být uzavřeny v závorkách, protože operátor vložení datového proudu ( **<<** ) má vyšší prioritu než relační operátory. První výraz bez závorek by tedy byl vyhodnocen jako:
 
 ```cpp
 (cout << "The true expression 3 > 2 yields: " << 3) < (2 << "\n");
 ```
 
-Obvyklé aritmetické převody uvedené v [standardní převody](standard-conversions.md) jsou použity na operandy aritmetických typů.
+Obvyklé aritmetické převody, které jsou pokryty [standardními](standard-conversions.md) převody, jsou aplikovány na operandy aritmetických typů.
 
-## <a name="comparing-pointers"></a>Porovnání ukazatelů
+## <a name="comparing-pointers"></a>Porovnávání ukazatelů
 
-Při porovnání dvou ukazatelů s objekty stejného typu je výsledek určen umístěním objektů, na které je odkazováno v adresním prostoru programu. Ukazatele je také možné porovnat s konstantním výrazem, který se vyhodnotí na hodnotu 0 nebo na ukazatel typu `void *`. Pokud je provedeno porovnání ukazatele s ukazatelem typu `void *`, druhý ukazatel implicitně převeden na typ `void *`. Poté je provedeno porovnání.
+Při porovnání dvou ukazatelů s objekty stejného typu je výsledek určen umístěním objektů, na které je odkazováno v adresním prostoru programu. Ukazatele lze také porovnat s konstantním výrazem, který je vyhodnocen na hodnotu 0 nebo na ukazatel typu `void *`. Pokud je porovnání ukazatelů provedeno na ukazatel typu `void *`, druhý ukazatel je implicitně převeden na typ `void *`. Poté je provedeno porovnání.
 
 Dva ukazatele na různé typy nelze srovnávat, pokud:
 
 - jeden typ není typem třídy odvozeným z jiného typu,
 
-- Nejméně jeden z ukazatelů není explicitně převeden (přetypován) na typ `void *`. (Druhý ukazatel implicitně převeden na typ `void *` pro převod.)
+- Nejméně jeden z ukazatelů je explicitně převeden (přetypování) na typ `void *`. (Druhý ukazatel je implicitně převeden na typ `void *` pro převod.)
 
 není zaručeno, že dva odkazy stejného typu, které odkazují na stejný objekt, budou při porovnávání stejné. Pokud jsou porovnány dva ukazatele na nestatické členy objektu, platí následující pravidla:
 
-- Pokud typ třídy není **sjednocení**, a pokud nejsou dva členy odděleny *access-specifier*, například **veřejné**, **chráněné**, nebo **privátní**, ukazatel na člen deklarovaný jako poslední při porovnání větší než ukazatel na člen deklarovaný dříve.
+- Pokud typ třídy není **sjednocení**a pokud dva členy nejsou odděleny *specifikátorem přístupu*, jako je například **Public**, **Protected**nebo **Private**, ukazatel na člen deklarovaný jako poslední bude porovnávat větší hodnotu než ukazatel na dříve deklarovaný člen.
 
-- Pokud jsou dva členy odděleny *access-specifier*, nejsou výsledky definovány.
+- Pokud jsou dva členy odděleny *specifikátorem přístupu*, výsledky nejsou definovány.
 
-- Pokud je typ třídy **sjednocení**, ukazatele na různé datové členy v dané **sjednocení** porovnání rovnosti.
+- Pokud je typem třídy **sjednocení**, ukazatelé na různé datové členy v tomto **sjednocení** se rovnají.
 
 Pokud dva ukazatele odkazují na prvky stejného pole nebo na prvek, který je za koncem tohoto pole, ukazatel na objekt s vyšším dolním indexem bude při porovnávání větší. Porovnání ukazatelů je zaručeno pouze v případě, že ukazatele odkazují na objekty stejného pole nebo na umístění za koncem pole.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

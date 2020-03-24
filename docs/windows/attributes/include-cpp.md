@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 39f991bb036dce1c50a9d2ee800d3fec65af7c55
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166780"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -30,13 +30,13 @@ Název souboru, který chcete zahrnout do vygenerovaného souboru IDL.
 
 ## <a name="remarks"></a>Poznámky
 
-Atribut **include** C++ způsobí, že je `import "docobj.idl"` příkaz umístěn pod příkazem v generovaném souboru IDL. `#include`
+Atribut **include** C++ způsobí, že je příkaz `#include` umístěn pod příkazem `import "docobj.idl"` v generovaném souboru IDL.
 
 Atribut **include** C++ má stejné funkce jako atribut [include](/windows/win32/Midl/include) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje příklad použití **include**. V tomto příkladu soubor include. h obsahuje pouze `#include` příkaz.
+Následující kód ukazuje příklad použití **include**. V tomto příkladu soubor include. h obsahuje pouze příkaz `#include`.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -58,7 +58,7 @@ Následující kód ukazuje příklad použití **include**. V tomto příkladu 
 
 Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>

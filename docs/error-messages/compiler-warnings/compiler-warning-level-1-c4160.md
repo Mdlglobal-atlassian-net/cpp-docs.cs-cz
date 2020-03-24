@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4160
+title: Upozornění kompilátoru (úroveň 1) C4160
 ms.date: 08/27/2018
 f1_keywords:
 - C4160
 helpviewer_keywords:
 - C4160
 ms.assetid: a9610cb7-cac4-4a74-8b4e-049030ebb92b
-ms.openlocfilehash: 988c1fcbe0826582dceaa527811c688711fd8906
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb53d3f00c717df0e657ede3de6dd71d4a0bb47
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391839"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176166"
 ---
-# <a name="compiler-warning-level-1-c4160"></a>Kompilátor upozornění (úroveň 1) C4160
+# <a name="compiler-warning-level-1-c4160"></a>Upozornění kompilátoru (úroveň 1) C4160
 
-> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>direktivy pragma (pop,...): nebyl nalezen dřív nabízený identifikátor "*identifikátor*.
+> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (pop,...): nenašel se dřív nabízený identifikátor*Identifier*.
 
 ## <a name="remarks"></a>Poznámky
 
-Příkaz – Direktiva pragma ve zdrojovém kódu se pokusí vyvolat přes pop identifikátor, který nebylo vloženo. K tomuto upozornění předejít, ujistěte se, že je odebrán identifikátor má správně vložena.
+Příkaz pragma ve zdrojovém kódu se pokusí odblokovat identifikátor, který nebyl vložen. Chcete-li se tomuto upozornění vyhnout, ujistěte se, že byl identifikátor vytlačen správně.
 
 ## <a name="example"></a>Příklad
 

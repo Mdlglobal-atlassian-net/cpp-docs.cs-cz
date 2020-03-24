@@ -1,5 +1,5 @@
 ---
-title: Platform::IDisposable – rozhraní
+title: 'Platform:: IDisposable – rozhraní'
 ms.date: 02/03/2017
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-ms.openlocfilehash: f114959321c0ed3879a089b944a5ff1b19843118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0024edbad0bb3311a0497be67fc8bcfc954602e1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257826"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214237"
 ---
-# <a name="platformidisposable-interface"></a>Platform::IDisposable – rozhraní
+# <a name="platformidisposable-interface"></a>Platform:: IDisposable – rozhraní
 
 Používá se k uvolnění nespravovaných prostředků.
 
@@ -26,13 +26,13 @@ public interface class IDisposable
 
 ## <a name="attributes"></a>Atributy
 
-**GuidAttribute**("de0cbaea-8065-4a45-b196-c9d443f9bab3")
+**GuidAttribute**("de0cbaea-8065-4a45-B196-c9d443f9bab3")
 
 **VersionAttribute**(NTDDI_WIN8)
 
 ### <a name="members"></a>Členové
 
-Rozhraní IDisposable dědí z rozhraní IUnknown. Rozhraní IDisposable obsahuje také následující typy členů:
+Rozhraní IDisposable dědí z rozhraní IUnknown. Rozhraní IDisposable má také následující typy členů:
 
 **Metody**
 
@@ -40,12 +40,12 @@ Rozhraní IDisposable má následující metody.
 
 |Metoda|Popis|
 |------------|-----------------|
-|Metody Dispose|Používá se k uvolnění nespravovaných prostředků.|
+|Zrušen|Používá se k uvolnění nespravovaných prostředků.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Minimální podporovaná klienta:** Windows 8
+**Minimální podporovaný klient:** Systém Windows 8
 
-**Minimální podporovaná serveru:** Windows Server 2012
+**Minimální podporovaný Server:** Windows Server 2012
 
-**Namespace:** Platforma
+**Obor názvů:** Platformy

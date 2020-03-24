@@ -38,12 +38,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 2d2b21652fd5ee3604c3c72c2168c3d9a495caf1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8c91beb2a305604f663d5e81b4a534a1699705cf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447466"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212014"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo – třída
 
@@ -76,7 +76,7 @@ class CDBErrorInfo
 
 Toto rozhraní vrátí uživateli jeden nebo více záznamů o chybách. Napřed zavolejte [CDBErrorInfo:: GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) , aby se získal počet záznamů chyb. Pak zavolejte jednu z funkcí přístupu, jako je například [CDBErrorInfo:: GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), a načtěte informace o chybě pro každý záznam.
 
-## <a name="getallerrorinfo"></a>CDBErrorInfo:: GetAllErrorInfo
+## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a>CDBErrorInfo:: GetAllErrorInfo
 
 Vrátí všechny typy informací o chybách obsažených v záznamu chyby.
 
@@ -126,7 +126,7 @@ Výstupní hodnota *pbstrDescription* je interně získána voláním `IErrorInf
 
 1. hodnota *LCID* není rovna hodnotě vrácené funkcí GetUserDefaultLCID.
 
-## <a name="getbasicerrorinfo"></a>CDBErrorInfo:: GetBasicErrorInfo
+## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>CDBErrorInfo:: GetBasicErrorInfo
 
 Volá [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) , aby vracel základní informace o chybě, jako je návratový kód a číslo chyby specifické pro poskytovatele.
 
@@ -145,7 +145,7 @@ Viz [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723
 
 Standardní hodnota HRESULT.
 
-## <a name="getcustomerrorobject"></a>CDBErrorInfo:: GetCustomErrorObject
+## <a name="cdberrorinfogetcustomerrorobject"></a><a name="getcustomerrorobject"></a>CDBErrorInfo:: GetCustomErrorObject
 
 Volá metodu [IErrorRecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) , která vrátí ukazatel na rozhraní objektu Custom Error.
 
@@ -164,7 +164,7 @@ Viz [IErrorRecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms
 
 Standardní hodnota HRESULT.
 
-## <a name="geterrorinfo"></a>CDBErrorInfo:: GetErrorInfo
+## <a name="cdberrorinfogeterrorinfo"></a><a name="geterrorinfo"></a>CDBErrorInfo:: GetErrorInfo
 
 Volá [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) a vrátí ukazatel rozhraní [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) na zadaný záznam.
 
@@ -183,7 +183,7 @@ Viz [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v
 
 Standardní hodnota HRESULT.
 
-## <a name="geterrorparameters"></a>CDBErrorInfo:: GetErrorParameters
+## <a name="cdberrorinfogeterrorparameters"></a><a name="geterrorparameters"></a>CDBErrorInfo:: GetErrorParameters
 
 Volá [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) , aby se vracely parametry chyby.
 
@@ -202,7 +202,7 @@ Viz [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/ms71
 
 Standardní hodnota HRESULT.
 
-## <a name="geterrorrecords"></a>CDBErrorInfo:: GetErrorRecords
+## <a name="cdberrorinfogeterrorrecords"></a><a name="geterrorrecords"></a>CDBErrorInfo:: GetErrorRecords
 
 Získá záznamy chyb pro zadaný objekt.
 

@@ -548,12 +548,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 2c47b167f12cd98a752806369df6281d5b20c696
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 82401ae88ea95d0e05659fa662a3621a27ef4531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444144"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209700"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Třídy sady řádků schématu a definiční třídy typů
 
@@ -598,7 +598,7 @@ V následující tabulce jsou uvedeny jednotlivé sady řádků schématu OLE DB
 |[Náhled](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
-## <a name="assertion"></a>CAssertions, CAssertionInfo
+## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a>CAssertions, CAssertionInfo
 
 Pro implementaci `CAssertionInfo`třídy parametru volejte `CAssertions` třídy typedef.
 
@@ -619,7 +619,7 @@ V následující tabulce jsou uvedeny datové členy třídy pro `CAssertionInfo
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|POPIS|
 
-## <a name="catalog"></a>CCatalogs, CCatalogInfo
+## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a>CCatalogs, CCatalogInfo
 
 Pro implementaci `CCatalogInfo`třídy parametru volejte `CCatalogs` třídy typedef.
 
@@ -636,7 +636,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szName|CATALOG_NAME|
 |m_szDescription|POPIS|
 
-## <a name="characterset"></a>CCharacterSets, CCharacterSetInfo
+## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a>CCharacterSets, CCharacterSetInfo
 
 Pro implementaci `CCharacterSetInfo`třídy parametru volejte `CCharacterSets` třídy typedef.
 
@@ -659,7 +659,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="checkconstraint"></a>CCheckConstraints, CCheckConstraintInfo
+## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a>CCheckConstraints, CCheckConstraintInfo
 
 Pro implementaci `CCheckConstraintInfo`třídy parametru volejte `CCheckConstraints` třídy typedef.
 
@@ -679,7 +679,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szCheckClause|CHECK_CLAUSE|
 |m_szDescription|POPIS|
 
-## <a name="collation"></a>CCollations, CCollationInfo
+## <a name="ccollations-ccollationinfo"></a><a name="collation"></a>CCollations, CCollationInfo
 
 Pro implementaci `CCollationInfo`třídy parametru volejte `CCollations` třídy typedef.
 
@@ -701,7 +701,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="columndomainusage"></a>CColumnDomainUsage, CColumnDomainUsageInfo
+## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a>CColumnDomainUsage, CColumnDomainUsageInfo
 
 Pro implementaci `CColumnDomainUsageInfo`třídy parametru volejte `CColumnDomainUsage` třídy typedef.
 
@@ -725,7 +725,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="columnprivilege"></a>CColumnPrivileges, CColumnPrivilegeInfo
+## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a>CColumnPrivileges, CColumnPrivilegeInfo
 
 Pro implementaci `CColumnPrivilegeInfo`třídy parametru volejte `CColumnPrivileges` třídy typedef.
 
@@ -750,7 +750,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="columns"></a>CColumns, CColumnsInfo
+## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a>CColumns, CColumnsInfo
 
 Pro implementaci `CColumnsInfo`třídy parametru volejte `CColumns` třídy typedef.
 
@@ -793,7 +793,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szDomainName|DOMAIN_NAME|
 |m_szDescription|POPIS|
 
-## <a name="constraintcolumnusage"></a>CConstraintColumnUsage, CConstraintColumnUsageInfo
+## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a>CConstraintColumnUsage, CConstraintColumnUsageInfo
 
 Pro implementaci `CConstraintColumnUsageInfo`třídy parametru volejte `CConstraintColumnUsage` třídy typedef.
 
@@ -817,7 +817,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="constrainttableusage"></a>CConstraintTableUsage, CConstraintTableUsageInfo
+## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a>CConstraintTableUsage, CConstraintTableUsageInfo
 
 Pro implementaci `CConstraintTableUsageInfo`třídy parametru volejte `CConstraintTableUsage` třídy typedef.
 
@@ -838,7 +838,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="foreignkeys"></a>CForeignKeys, CForeignKeysInfo
+## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a>CForeignKeys, CForeignKeysInfo
 
 Pro implementaci `CForeignKeysInfo`třídy parametru volejte `CForeignKeys` třídy typedef.
 
@@ -868,7 +868,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="index"></a>CIndexes, CIndexInfo
+## <a name="cindexes-cindexinfo"></a><a name="index"></a>CIndexes, CIndexInfo
 
 Pro implementaci `CIndexInfo`třídy parametru volejte `CIndexes` třídy typedef.
 
@@ -907,7 +907,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_nPages|STRÁNKY|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="keycolumn"></a>CKeyColumns, CKeyColumnInfo
+## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a>CKeyColumns, CKeyColumnInfo
 
 Pro implementaci `CKeyColumnInfo`třídy parametru volejte `CKeyColumns` třídy typedef.
 
@@ -932,7 +932,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="primarykey"></a>CPrimaryKeys, CPrimaryKeyInfo
+## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a>CPrimaryKeys, CPrimaryKeyInfo
 
 Pro implementaci `CPrimaryKeyInfo`třídy parametru volejte `CPrimaryKeys` třídy typedef.
 
@@ -954,7 +954,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinal|ŘADOVÝ|
 
-## <a name="procedurecolumn"></a>CProcedureColumns, CProcedureColumnInfo
+## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a>CProcedureColumns, CProcedureColumnInfo
 
 Pro implementaci `CProcedureColumnInfo`třídy parametru volejte `CProcedureColumns` třídy typedef.
 
@@ -985,7 +985,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|POPIS|
 
-## <a name="procedureparam"></a>CProcedureParameters CProcedureParamInfo
+## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a>CProcedureParameters CProcedureParamInfo
 
 Pro implementaci `CProcedureParamInfo`třídy parametru volejte `CProcedureParameters` třídy typedef.
 
@@ -1015,7 +1015,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|POPIS|
 
-## <a name="procedure"></a>CProcedures, CProcedureInfo
+## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a>CProcedures, CProcedureInfo
 
 Pro implementaci `CProcedureInfo`třídy parametru volejte `CProcedures` třídy typedef.
 
@@ -1036,7 +1036,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szDefinition|PROCEDURE_DEFINITION|
 |m_szDescription|POPIS|
 
-## <a name="provider"></a>CProviderTypes, CProviderInfo
+## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a>CProviderTypes, CProviderInfo
 
 Pro implementaci `CProviderInfo`třídy parametru volejte `CProviderTypes` třídy typedef.
 
@@ -1071,7 +1071,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="referentialconstraint"></a>CReferentialConstraints, CReferentialConstraintInfo
+## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a>CReferentialConstraints, CReferentialConstraintInfo
 
 Pro implementaci `CReferentialConstraintInfo`třídy parametru volejte `CReferentialConstraints` třídy typedef.
 
@@ -1096,7 +1096,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szDeleteRule|DELETE_RULE|
 |m_szDescription|POPIS|
 
-## <a name="schemata"></a>CSchemata, CSchemataInfo
+## <a name="cschemata-cschematainfo"></a><a name="schemata"></a>CSchemata, CSchemataInfo
 
 Pro implementaci `CSchemataInfo`třídy parametru volejte `CSchemata` třídy typedef.
 
@@ -1117,7 +1117,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="sqllanguage"></a>CSQLLanguages, CSQLLanguageInfo
+## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a>CSQLLanguages, CSQLLanguageInfo
 
 Pro implementaci `CSQLLanguageInfo`třídy parametru volejte `CSQLLanguages` třídy typedef.
 
@@ -1139,7 +1139,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="statistic"></a>CStatistics, CStatisticInfo
+## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a>CStatistics, CStatisticInfo
 
 Pro implementaci `CStatisticInfo`třídy parametru volejte `CStatistics` třídy typedef.
 
@@ -1158,7 +1158,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|KARDINALITA|
 
-## <a name="tableconstraint"></a>CTableConstraints, CTableConstraintInfo
+## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a>CTableConstraints, CTableConstraintInfo
 
 Pro implementaci `CTableConstraintInfo`třídy parametru volejte `CTableConstraints` třídy typedef.
 
@@ -1183,7 +1183,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|POPIS|
 
-## <a name="tableprivilege"></a>CTablePrivileges, CTablePrivilegeInfo
+## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a>CTablePrivileges, CTablePrivilegeInfo
 
 Pro implementaci `CTablePrivilegeInfo`třídy parametru volejte `CTablePrivileges` třídy typedef.
 
@@ -1205,7 +1205,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="table"></a>CTable, CTableInfo
+## <a name="ctables-ctableinfo"></a><a name="table"></a>CTable, CTableInfo
 
 Pro implementaci `CTableInfo`třídy parametru volejte `CTables` třídy typedef.
 
@@ -1226,7 +1226,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_guidTable|TABLE_GUID|
 |m_szDescription|POPIS|
 
-## <a name="translation"></a>CTranslations, CTranslationInfo
+## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a>CTranslations, CTranslationInfo
 
 Pro implementaci `CTranslationInfo`třídy parametru volejte `CTranslations` třídy typedef.
 
@@ -1250,7 +1250,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="usageprivilege"></a>CUsagePrivileges, CUsagePrivilegeInfo
+## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a>CUsagePrivileges, CUsagePrivilegeInfo
 
 Pro implementaci `CUsagePrivilegeInfo`třídy parametru volejte `CUsagePrivileges` třídy typedef.
 
@@ -1273,7 +1273,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="viewcolumn"></a>CViewColumnUsage, CViewColumnInfo
+## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a>CViewColumnUsage, CViewColumnInfo
 
 Pro implementaci `CViewColumnInfo`třídy parametru volejte `CViewColumnUsage` třídy typedef.
 
@@ -1297,7 +1297,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="view"></a>CViews, CViewInfo
+## <a name="cviews-cviewinfo"></a><a name="view"></a>CViews, CViewInfo
 
 Pro implementaci `CViewInfo`třídy parametru volejte `CViews` třídy typedef.
 
@@ -1319,7 +1319,7 @@ V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídaj
 |m_bIsUpdatable|IS_UPDATABLE|
 |m_szDescription|POPIS|
 
-## <a name="viewtable"></a>CViewTableUsage, CViewTableInfo
+## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a>CViewTableUsage, CViewTableInfo
 
 Pro implementaci `CViewTableInfo`třídy parametru volejte `CViewTableUsage` třídy typedef.
 

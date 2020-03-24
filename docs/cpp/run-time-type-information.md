@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type information, run-time type checking
 - run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
-ms.openlocfilehash: 1d11ee3ea472f935120c59f0faefee905361ee97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 195274d7bcef0ff4d82383a8ec828ca9267573b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178935"
 ---
 # <a name="run-time-type-information"></a>Informace běhového typu
 
@@ -24,18 +24,18 @@ V zájmu přehlednosti je popis mechanismu RTTI téměř zcela omezen na ukazate
 
 Existují tři hlavní prvky jazyka C++ informující o typu modulu runtime:
 
-- [Dynamic_cast](../cpp/dynamic-cast-operator.md) operátor.
+- Operátor [dynamic_cast](../cpp/dynamic-cast-operator.md) .
 
    Používá se pro převod polymorfních typů.
 
-- [Typeid](../cpp/typeid-operator.md) operátor.
+- Operátor [typeid](../cpp/typeid-operator.md) .
 
    Používá se k identifikaci přesného typu objektu.
 
-- [Type_info](../cpp/type-info-class.md) třídy.
+- Třída [type_info](../cpp/type-info-class.md) .
 
-   Sloužící k uchování informací o typu vrácené **typeid** operátor.
+   Slouží k uchování informací o typu vrácených operátorem **typeid** .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přetypování](../cpp/casting.md)

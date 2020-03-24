@@ -4,20 +4,20 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: a37a23296159de2632f6a218eb81315ee2d6a646
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 19d95c9519670db39f3ca467aff794233823d7ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222509"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180885"
 ---
 # <a name="classes-and-structs-c"></a>Třídy a struktury (C++)
 
-Tato část představuje C++ třídy a struktury. Dva konstruktory jsou identické v jazyce C++, s tím rozdílem, že ve strukturách výchozí dostupnost je veřejné, zatímco ve třídách výchozí hodnota je privátní.
+Tato část zavádí C++ třídy a struktury. Tyto dvě konstrukce jsou identické v C++ s tím rozdílem, že ve strukturách je výchozí přístupnost veřejná, zatímco v třídách výchozí je privátní.
 
-Třídy a struktury jsou konstrukce, které definování vlastních typů. Třídy a struktury můžete oba obsahovat datové členy a členské funkce, které vám umožní popisují stav a chování tohoto typu.
+Třídy a struktury jsou konstrukce, při kterých definujete vlastní typy. Třídy a struktury mohou obsahovat datové členy a členské funkce, které umožňují popsat stav a chování typu.
 
-Jsou zahrnuty v následujících tématech:
+Jsou k dispozici následující témata:
 
 - [class](../cpp/class-cpp.md)
 
@@ -33,7 +33,7 @@ Jsou zahrnuty v následujících tématech:
 
 - [Převody typů definovaných uživatelem](../cpp/user-defined-type-conversions-cpp.md)
 
-- [Proměnlivé datové členy (proměnný specifikátor)](../cpp/mutable-data-members-cpp.md)
+- [Proměnlivé datové členy (proměnlivý specifikátor)](../cpp/mutable-data-members-cpp.md)
 
 - [Deklarace vnořených tříd](../cpp/nested-class-declarations.md)
 
@@ -45,18 +45,18 @@ Jsou zahrnuty v následujících tématech:
 
 - [Bitová pole jazyka C++](../cpp/cpp-bit-fields.md)
 
-Třída tři typy jsou struktury, třídy a sjednocení. Jsou deklarovány pomocí [struktura](../cpp/struct-cpp.md), [třídy](../cpp/class-cpp.md), a [sjednocení](../cpp/unions.md) klíčová slova. V následující tabulce jsou uvedeny rozdíly mezi typy tři třídy.
+Tři typy tříd jsou struktura, třída a sjednocení. Jsou deklarovány pomocí klíčových slov [struct](../cpp/struct-cpp.md), [Class](../cpp/class-cpp.md)a [Union](../cpp/unions.md) . V následující tabulce jsou uvedeny rozdíly mezi třemi typy tříd.
 
-Další informace o sjednocení, naleznete v tématu [sjednocení](../cpp/unions.md). Informace o třídách a strukturách v C++vyhodnocovací a C++/CX, naleznete v tématu [třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md).
+Další informace o sjednoceních najdete v tématu [sjednocení](../cpp/unions.md). Informace o třídách a strukturách v C++/CLI a C++/CX naleznete v tématu [třídy a struktury](../extensions/classes-and-structs-cpp-component-extensions.md).
 
-### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Řízení přístupu a omezení struktury, třídy a sjednocení
+### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Access Control a omezení struktur, tříd a sjednocení
 
 |Struktury|Třídy|Sjednocení|
 |----------------|-------------|------------|
-|klíč třídy je **– struktura**|klíč třídy je **třídy**|klíč třídy je **sjednocení**|
-|Přístup k výchozím je veřejný|Přístup k výchozím je soukromý|Přístup k výchozím je veřejný|
-|Bez omezení využití|Bez omezení využití|Chvíli používat jenom jeden člen.|
+|klíč třídy je **Struktura** .|klíč třídy je **Třída** .|klíč třídy je **sjednocení** .|
+|Výchozí přístup je veřejný.|Výchozí přístup je privátní.|Výchozí přístup je veřejný.|
+|Žádná omezení použití|Žádná omezení použití|Použít vždy pouze jednoho člena|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

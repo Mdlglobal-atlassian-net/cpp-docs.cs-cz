@@ -7,16 +7,16 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301484"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179299"
 ---
 # <a name="property-c"></a>property (C++)
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Tento atribut lze použít pro nestatické „virtuální datové členy“ v definici třídy nebo struktury. Kompilátor zpracovává tyto „virtuální datové členy“ jako datové členy změnou jejich odkazů na volání funkce.
 
@@ -30,7 +30,7 @@ Tento atribut lze použít pro nestatické „virtuální datové členy“ v de
 
 ## <a name="remarks"></a>Poznámky
 
-Když kompilátor narazí na datový člen deklarovaný pomocí tohoto atributu na pravé straně operátoru výběru členů ("**.**"nebo"**->**"), převede operaci `get` nebo `put` funkce, v závislosti na tom, jestli je takový výraz l hodnotou nebo r-hodnotou. U více komplikovaných kontextů, jako například "`+=`", je provedena revize pomocí `get` a `put`.
+Když kompilátor uvidí datový člen deklarovaný pomocí tohoto atributu na pravé straně operátoru výběru členů (" **.** " nebo " **->** "), převede operaci na funkci `get` nebo `put`, a to v závislosti na tom, zda takový výraz je l-hodnota nebo r-hodnota. Ve složitějších kontextech, jako je například "`+=`", je přepisování provedeno pomocí `get` a `put`.
 
 Tento atribut lze použít také v deklaraci prázdného pole v definici třídy nebo struktury. Příklad:
 
@@ -40,7 +40,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
 
 Výše uvedený příkaz označuje, že `x[]` lze použít s jedním nebo více indexy pole. V tomto případě bude `i=p->x[a][b]` převeden na `i=p->GetX(a, b)` a `p->x[a][b] = i` bude převeden na `p->PutX(a, b, i);`
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="example"></a>Příklad
 
@@ -66,7 +66,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [__declspec](../cpp/declspec.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetAddress method [C++]
 ms.assetid: 09bc9180-867e-4ee5-b22a-8339dc663142
-ms.openlocfilehash: 4d51539d2afbb2fbcc860b6c4d821df119aca418
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca78bd1b607ba4a86bbc824887a7ec767cd5476e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393893"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181249"
 ---
-# <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
+# <a name="_bstr_tgetaddress"></a>_bstr_t::GetAddress
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Uvolní všechny existující řetězce a vrátí adresu řetězce s nově přidělenou pamětí.
 
@@ -31,14 +31,14 @@ Ukazatel na objekt `BSTR` obalený objektem `_bstr_t`.
 
 ## <a name="remarks"></a>Poznámky
 
-**GetAddress** ovlivní všechny `_bstr_t` objekty tuto sdílenou složku `BSTR`. Více než jeden `_bstr_t` můžete sdílet `BSTR` prostřednictvím kopírovacího konstruktoru a **operátoru =**.
+**GetAddress** má vliv na všechny `_bstr_t` objekty, které sdílejí `BSTR`. Více než jeden `_bstr_t` může sdílet `BSTR` prostřednictvím použití kopírovacího konstruktoru a **operátoru =** .
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití **GetAddress**.
+Viz [_bstr_t:: Assign](../cpp/bstr-t-assign.md) pro příklad pomocí **GetAddress**.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_bstr_t – třída](../cpp/bstr-t-class.md)

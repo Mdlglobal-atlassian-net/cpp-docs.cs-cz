@@ -1,20 +1,20 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4381
+title: Upozornění kompilátoru (úroveň 1) C4381
 ms.date: 11/04/2016
 f1_keywords:
 - C4381
 helpviewer_keywords:
 - C4381
 ms.assetid: f67a6db3-b334-4b2e-8182-b30c7a3c7c32
-ms.openlocfilehash: 31c7e4519e0eb1e0b6c66b6082edc7407522554a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a736a164527d53e69daf25686043922145a7e01
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380902"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162800"
 ---
-# <a name="compiler-warning-level-1-c4381"></a>Kompilátor upozornění (úroveň 1) C4381
+# <a name="compiler-warning-level-1-c4381"></a>Upozornění kompilátoru (úroveň 1) C4381
 
-'function1': metoda rozhraní se nebude implementovat neveřejnou metodu "function2"
+' Function1 ': metoda rozhraní nebude implementována neveřejnou metodou ' function2 '
 
-Třída musí implementovat všechny funkce v rozhraní. Třídu můžete k tomuto stavu odpovídají, pokud jeden z jejích základních tříd implementuje funkci. Funkce však musí být implementován jako veřejné funkce.
+Třída musí implementovat všechny funkce v rozhraní. Třída může splnit tuto podmínku, pokud jedna z jejích základních tříd implementuje funkci. Funkce však musí být implementována jako veřejná funkce.

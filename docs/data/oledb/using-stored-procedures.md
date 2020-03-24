@@ -8,33 +8,33 @@ helpviewer_keywords:
 - OLE DB provider templates, stored procedures
 - stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
-ms.openlocfilehash: 7ace43283c56c0c859b193f63e8ca104f6b52a31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7e97781d245e236c57942db15d61080d6418cfa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209271"
 ---
 # <a name="using-stored-procedures"></a>Použití uložených procedur
 
-Uložená procedura je spustitelný soubor objekt uložený v databázi. Volání uložené procedury se podobá vyvolání příkazu SQL. Použití uložených procedur na zdroj dat (namísto spuštění nebo při přípravě příkazu v klientské aplikaci), můžete zadat několik výhod, včetně vyšší výkon, nároky na omezenou síť a zlepšení konzistence a přesnost.
+Uložená procedura je spustitelný objekt uložený v databázi. Volání uložené procedury je podobné vyvolání příkazu jazyka SQL. Použití uložených procedur na zdroji dat (místo spuštění nebo přípravy příkazu v klientské aplikaci) může poskytovat několik výhod, včetně vyššího výkonu, snížené síťové režie a lepší konzistence a přesnosti.
 
-Uloženou proceduru mohou mít libovolný počet (včetně nuly) vstupní nebo výstupní parametry a můžete předat návratovou hodnotu. Můžete buď hodnoty parametrů pevný kód jako hodnoty dat, nebo použijte parametr značky (otazník "?").
-
-> [!NOTE]
->  Uložené procedury, které jsou vytvořené pomocí jazyka Visual C++, musí být kompilována s CLR SQL serveru `/clr:safe` – možnost kompilátoru.
-
-Zprostředkovatel OLE DB pro SQL Server (SQLOLEDB) podporuje tyto mechanismy, které uložených procedur použijte vrátit data:
-
-- Každý **vyberte** příkaz v postupu generuje sadu výsledků dotazu.
-
-- Postup může vrátit data prostřednictvím výstupní parametry.
-
-- Postup může mít návratový kód celého čísla.
+Uložená procedura může mít libovolný počet (včetně nuly) vstupních nebo výstupních parametrů a může předat návratovou hodnotu. Hodnoty parametrů pevného kódu můžete určit jako konkrétní hodnoty dat nebo použít značku parametru (otazník "?").
 
 > [!NOTE]
-> Nelze použít uložené procedury pomocí zprostředkovatele OLE DB pro Jet protože tento zprostředkovatel nepodporuje uložené procedury; v řetězcích dotazů jsou povoleny pouze konstanty.
+>  CLR SQL Server uložené procedury vytvořené pomocí vizuálu C++ musí být kompilovány pomocí možnosti kompilátoru `/clr:safe`.
 
-## <a name="see-also"></a>Viz také:
+Zprostředkovatel OLE DB pro SQL Server (SQLOLEDB) podporuje následující mechanismy, které uložené procedury používají k vrácení dat:
+
+- Každý příkaz **Select** v proceduře vygeneruje sadu výsledků dotazu.
+
+- Procedura může vracet data prostřednictvím výstupních parametrů.
+
+- Procedura může mít návratový kód typu Integer.
+
+> [!NOTE]
+> U poskytovatele OLE DB pro stroj Jet nelze použít uložené procedury, protože tento zprostředkovatel nepodporuje uložené procedury. v řetězcích dotazů jsou povoleny pouze konstanty.
+
+## <a name="see-also"></a>Viz také
 
 [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

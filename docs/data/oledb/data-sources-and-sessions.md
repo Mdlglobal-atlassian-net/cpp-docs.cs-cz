@@ -6,28 +6,28 @@ helpviewer_keywords:
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-ms.openlocfilehash: 2c11230d106b50e8120dfa9f4e283e97700d2739
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0514f6a9285936c85608f08774c1d377fd72d6ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175999"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211052"
 ---
 # <a name="data-sources-and-sessions"></a>Zdroje dat a relace
 
-Následující obrázek ukazuje třídy, které podporují připojení k a přístup ke zdroji dat. Každá třída je založen na standardní součástí implementace technologie OLE DB.
+Následující obrázek znázorňuje třídy, které podporují připojení ke zdroji dat a přístup k němu. Každá třída je založena na standardní implementaci OLE DB komponenty.
 
-![Datové zdroje a relace třídy](../../data/oledb/media/vcdatasourcesessionclasses.gif "datové zdroje a relace třídy") <br/>
-Zdroj dat a relace tříd
+![Třídy zdroje dat a relace](../../data/oledb/media/vcdatasourcesessionclasses.gif "Třídy zdroje dat a relace") <br/>
+Třídy zdroje dat a relace
 
 Třídy jsou:
 
-- [CDataSource –](../../data/oledb/cdatasource-class.md) této třídy vytváří instanci objektu zdroje dat, které vytváří a spravuje připojení ke zdroji dat pomocí zprostředkovatele OLE DB. Zdroj dat trvá informace, jako je adresu a ověřovací informace o zdroji dat v podobě připojovacího řetězce.
+- [CDataSource](../../data/oledb/cdatasource-class.md) Tato třída vytvoří instanci objektu zdroje dat, která vytvoří a spravuje připojení ke zdroji dat prostřednictvím poskytovatele OLE DB. Zdroj dat přebírá informace, jako je adresa zdroje dat a ověřovací informace, ve formě připojovacího řetězce.
 
-   Je také vhodné poznamenat, že pomocná třída [CEnumerator](../../data/oledb/cenumerator-class.md) se často používá před žádné připojení k získání seznamu dostupných zprostředkovatelů registrován v systému. To umožňuje vybrat jako zdroj dat poskytovatele. Například **vlastnosti propojení dat** dialogové okno používá k naplnění seznamu zprostředkovatelů na tuto třídu **poskytovatelé** kartu. To odpovídá `SQLBrowseConnect` nebo `SQLDriverConnect` funkce.
+   Také je potřeba poznamenat, že pomocná třída [CEnumerator –](../../data/oledb/cenumerator-class.md) se často používá předtím, než se naváže jakékoli připojení, aby se získal seznam dostupných zprostředkovatelů registrovaných v systému. To umožňuje vybrat poskytovatele jako zdroj dat. Například dialogové okno **Vlastnosti datového propojení** používá tuto třídu k naplnění seznamu zprostředkovatelů na kartě **poskytovatelé** . Je rovna funkci `SQLBrowseConnect` nebo `SQLDriverConnect`.
 
-- [CSession](../../data/oledb/csession-class.md) této třídy vytváří instanci objektu relace, který reprezentuje relaci jeden přístup ke zdroji dat. Však můžete vytvořit více relací na datovém zdroji. Pro každou relaci můžete vytvořit sady řádků, příkazy a dalších objektů pro přístup k datům z datového zdroje. Relace nezpracovává transakce.
+- [CSession](../../data/oledb/csession-class.md) Tato třída vytvoří instanci objektu Session, která představuje jednu relaci přístupu ke zdroji dat. Pro zdroj dat však můžete vytvořit více relací. Pro každou relaci můžete vytvořit sady řádků, příkazy a další objekty pro přístup k datům ze zdroje dat. Relace zpracovává transakce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)

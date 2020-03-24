@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 85e95afa92c8a968865d9a3031e1a309e68ae7d3
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630755"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211455"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Vytvoření příjemce bez použití průvodce
 
@@ -17,7 +17,7 @@ Následující příklad předpokládá, že přidáváte podporu OLE DB spotře
 
 Přidání zákaznické podpory OLE DB bez použití **Průvodce příjemcem OLE DB příjemce**:
 
-- V souboru *PCH. h* přidejte následující `#include` příkazy:
+- V souboru *PCH. h* přidejte následující příkazy `#include`:
 
     ```cpp
     #include <atlbase.h>
@@ -27,7 +27,7 @@ Přidání zákaznické podpory OLE DB bez použití **Průvodce příjemcem OLE
 
 Prostřednictvím kódu programu uživatel obvykle provádí následující posloupnost operací:
 
-1. Vytvořte třídu záznamu uživatele, která sváže sloupce s lokálními proměnnými. V tomto příkladu `CMyTableNameAccessor` je třída záznamu uživatele (viz [záznamy uživatelů](../../data/oledb/user-records.md)). Tato třída obsahuje mapu sloupce a mapování parametrů. Deklarujte datový člen v třídě záznamu uživatele pro každé pole, které zadáte v mapě sloupce. pro každý z těchto datových členů také deklarujte datový člen stavu a délku datového člena. Další informace najdete v tématu [datové členy stavu pole v přístupových průvodcích generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
+1. Vytvořte třídu záznamu uživatele, která sváže sloupce s lokálními proměnnými. V tomto příkladu je `CMyTableNameAccessor` třídy záznamu uživatele (viz [záznamy uživatelů](../../data/oledb/user-records.md)). Tato třída obsahuje mapu sloupce a mapování parametrů. Deklarujte datový člen v třídě záznamu uživatele pro každé pole, které zadáte v mapě sloupce. pro každý z těchto datových členů také deklarujte datový člen stavu a délku datového člena. Další informace najdete v tématu [datové členy stavu pole v přístupových průvodcích generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
 
     > [!NOTE]
     > Pokud píšete vlastního příjemce, musí být datové proměnné před proměnnými s stavem a délkou.
@@ -40,7 +40,7 @@ Prostřednictvím kódu programu uživatel obvykle provádí následující posl
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>
     ```
 
-- Zavolejte `CoInitialize` k inicializaci modelu COM. Tato metoda je volána v hlavním kódu. Příklad:
+- Zavolejte `CoInitialize` pro inicializaci modelu COM. Tato metoda je volána v hlavním kódu. Příklad:
 
     ```cpp
     HRESULT hr = CoInitialize(NULL);
@@ -56,7 +56,7 @@ Prostřednictvím kódu programu uživatel obvykle provádí následující posl
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- Volitelně můžete nastavit vlastnosti sady řádků `CDBPropSet::AddProperty` pomocí a předat je jako parametr do `rs.Open`. Příklad toho, jak to udělat, najdete v tématu `GetRowsetProperties` [metody generované průvodcem příjemce](../../data/oledb/consumer-wizard-generated-methods.md).
+- Volitelně můžete nastavit vlastnosti sady řádků pomocí `CDBPropSet::AddProperty` a předat je jako parametr pro `rs.Open`. Příklad toho, jak to lze provést, naleznete v tématu `GetRowsetProperties` v tématu [metody vygenerované průvodcem příjemce](../../data/oledb/consumer-wizard-generated-methods.md).
 
 - Nyní můžete sadu řádků použít k načtení nebo manipulaci s daty.
 
@@ -68,14 +68,14 @@ Prostřednictvím kódu programu uživatel obvykle provádí následující posl
     ds.Close();
     ```
 
-   Pokud používáte příkaz, může být vhodné zavolat `ReleaseCommand` po. `Close` Příklad kódu v [CCommand:: Close](../../data/oledb/ccommand-close.md) ukazuje, jak zavolat `Close` a. `ReleaseCommand`
+   Pokud používáte příkaz, může být vhodné volat `ReleaseCommand` po `Close`. Příklad kódu v [CCommand:: Close](../../data/oledb/ccommand-close.md) ukazuje, jak volat `Close` a `ReleaseCommand`.
 
-- Zavolejte `CoUnInitialize` k zrušení inicializace modelu COM. Tato metoda je volána v hlavním kódu.
+- Zavolejte `CoUnInitialize` pro zrušení inicializace modelu COM. Tato metoda je volána v hlavním kódu.
 
     ```cpp
     CoUninitialize();
     ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

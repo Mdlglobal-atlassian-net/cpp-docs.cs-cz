@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
-ms.openlocfilehash: a0b9c6dcd7ee19af59ac39a71498fe41bfc107ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22703e92b1a127378c965ce12bcc4e5475b3e452
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180833"
 ---
-# <a name="codeseg-declspec"></a>code_seg (__declspec)
+# <a name="code_seg-__declspec"></a>code_seg (__declspec)
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-**Code_seg** deklarace atributu pojmenuje spustitelný textový segment v souboru .obj, ve kterém bude uložen objektový kód pro funkci nebo funkce člena třídy.
+Atribut deklarace **code_seg** pojmenovává spustitelný textový segment v souboru. obj, ve kterém budou uloženy kód objektu pro funkci nebo členské funkce třídy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,21 +27,21 @@ __declspec(code_seg("segname")) declarator
 
 ## <a name="remarks"></a>Poznámky
 
-`__declspec(code_seg(...))` Atribut umožňuje umístění kódu do samostatně pojmenovaných segmentů, které lze stránkovat nebo jednotlivě Zamknout v paměti. Tento atribut umožňuje řídit umístění instancí šablon a kódu generovanému kompilátorem.
+Atribut `__declspec(code_seg(...))` umožňuje umístění kódu do samostatných pojmenovaných segmentů, které mohou být stránkované nebo uzamčené v paměti jednotlivě. Tento atribut umožňuje řídit umístění instancí šablon a kódu generovanému kompilátorem.
 
-A *segmentu* je pojmenovaný blok dat v souboru .obj, který je načten do paměti jako celek. A *textový segment* je segment, který obsahuje spustitelný kód. Termín *části* se často zaměňuje s segmentu.
+*Segment* je pojmenovaný blok dat v souboru. obj, který je načten do paměti jako jednotka. *Textový segment* je segment, který obsahuje spustitelný kód. *Oddíl* Term se často používá k zaměnitelné segmenty.
 
-Objektový kód, který je generován, když `declarator` je definována bude umístěn do textového segmentu určené `segname`, což je úzký řetězcový literál. Název `segname` nebude muset zadat [části](../preprocessor/section.md) – Direktiva pragma před použitím v prohlášení. Ve výchozím nastavení, když ne `code_seg` není zadána, objektový kód je umístěn do segmentu nazvaného .text. A **code_seg** atribut přepíše všechny existující [#pragma code_seg](../preprocessor/code-seg.md) směrnice. A **code_seg** atribut použitý na členskou funkci přepíše všechny **code_seg** atribut u nadřazené třídy.
+Kód objektu, který je generován při definování `declarator` je vložen do textového segmentu určeného `segname`, což je úzký řetězcový literál. Název `segname` nemusí být zadán v [oddílu](../preprocessor/section.md) pragma, aby jej bylo možné použít v deklaraci. Ve výchozím nastavení, pokud není zadána žádná `code_seg`, je kód objektu umístěn do segmentu s názvem. text. Atribut **code_seg** přepisuje všechny existující direktivy [#pragma code_seg](../preprocessor/code-seg.md) . Atribut **code_seg** aplikovaný na členskou funkci přepíše všechny atributy **code_seg** použité pro ohraničující třídu.
 
-Pokud má entita **code_seg** atribut, všechny deklarace a definice stejné entity musí mít identické **code_seg** atributy. Pokud má základní třídy **code_seg** atribut odvozené třídy musí mít stejný atribut.
+Pokud má entita atribut **code_seg** , musí mít všechny deklarace a definice stejné entity stejné **code_seg** atributy. Pokud má základní třída atribut **code_seg** , odvozené třídy musí mít stejný atribut.
 
-Když **code_seg** atributu se použije funkce rozsahu oboru názvů nebo členskou funkci, objektový kód pro tuto funkci je umístěn do zadaného textového segmentu. Pokud je tento atribut aplikován na třídu, všechny členské funkce třídy a vnořené třídy – včetně kompilátorem generované zvláštní členské funkce – jsou umístěny v zadaném segmentu. Místně definované třídy – například třídy definované v hlavní části členské funkce – nedědí **code_seg** atributu nadřazeného rámce.
+Pokud je atribut **code_seg** použit pro funkci oboru oboru názvů nebo členskou funkci, je kód objektu pro tuto funkci vložen do zadaného textového segmentu. Pokud je tento atribut aplikován na třídu, všechny členské funkce třídy a vnořené třídy – včetně kompilátorem generované zvláštní členské funkce – jsou umístěny v zadaném segmentu. Lokálně definované třídy – například třídy definované v těle členské funkce – nedědí atribut **code_seg** ohraničujícího oboru.
 
-Když **code_seg** atribut používá šablony třídy nebo funkce šablony, všechny implicitní specializace šablony jsou umístěny v zadané segmentu. Explicitní nebo částečné specializace nedědí **code_seg** atribut z primární šablony. Můžete zadat stejný nebo jiný **code_seg** atribut specializace. A **code_seg** atribut nelze použít explicitní vytváření instancí šablon.
+Když je atribut **code_seg** použit pro třídu šablony nebo funkci šablony, jsou všechny implicitní specializace šablony vloženy do zadaného segmentu. Explicitní nebo Částečná specializace nedědí atribut **code_seg** z primární šablony. U specializace můžete zadat stejný nebo jiný atribut **code_seg** . Atribut **code_seg** nelze použít pro explicitní vytváření instancí šablony.
 
-Ve výchozím nastavení je kód generovaný kompilátorem, jako speciální členská funkce, umístěn to segmentu .text. `#pragma code_seg` – Direktiva nemůže přepsat toto výchozí nastavení. Použití **code_seg** atribut na třídu, šablonu třídy nebo šablonu funkce a určete, kde je umístěn kód generovaný kompilátorem.
+Ve výchozím nastavení je kód generovaný kompilátorem, jako speciální členská funkce, umístěn to segmentu .text. Direktiva `#pragma code_seg` nepřepisuje tuto výchozí hodnotu. Použijte atribut **code_seg** pro třídu, šablonu třídy nebo šablonu funkce k určení, kde je kód generovaný kompilátorem vložen.
 
-Výrazy lambda dědí **code_seg** atributy z jejich nadřazených rámců. K určení segmentu pro výraz lambda, použití **code_seg** atribut po klauzuli deklarace parametru a před jakoukoli proměnlivé nebo specifikací výjimky, všechny koncové specifikací návratového typu a hlavní část výrazu lambda. Další informace najdete v tématu [Lambda Expression Syntax](../cpp/lambda-expression-syntax.md). Tento příklad definuje výraz lambda v segmentu s názvem PagedMem:
+Výrazy lambda dědí **code_seg** atributy z jejich ohraničujícího rozsahu. Chcete-li určit segment pro lambda, použijte atribut **code_seg** za klauzulí deklarace parametru a před jakoukoli proměnlivou specifikací nebo specifikací výjimek, jakoukoli specifikací návratového typu a tělo výrazu lambda. Další informace naleznete v tématu [syntaxe výrazu lambda](../cpp/lambda-expression-syntax.md). Tento příklad definuje výraz lambda v segmentu s názvem PagedMem:
 
 ```cpp
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
@@ -51,7 +51,7 @@ Buďte opatrní při uvádění určitých členských funkcí – zejména virt
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje, jak **code_seg** atribut ovládá umístění segmentu při implicitní a explicitní specializace šablony se používá:
+Tento příklad ukazuje, jak atribut **code_seg** řídí umístění segmentu, pokud je použita implicitní specializace šablony:
 
 ```cpp
 // code_seg.cpp
@@ -103,9 +103,9 @@ int main()
 }
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [__declspec](../cpp/declspec.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

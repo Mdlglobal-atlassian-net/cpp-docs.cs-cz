@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 3dda0b19fffaaf725ab363a0c4fe70d2ca54e3f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d31e1456106d5f82c4a13079c72c231b8477bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190479"
 ---
 # <a name="break-statement-c"></a>break – příkaz (C++)
 
-**Přerušení** příkaz ukončí vykonávání nejbližšího obklopujícího cyklu nebo podmíněného příkazu, ve kterém se zobrazí. Řízení se předá příkazu, který následuje po konci příkazu.
+Příkaz **Break** ukončí provádění nejbližší ohraničující smyčky nebo podmíněného příkazu, ve kterém se zobrazí. Řízení se předá příkazu, který následuje po konci příkazu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,17 +25,17 @@ break;
 
 ## <a name="remarks"></a>Poznámky
 
-**Přerušení** prohlášení se používá s podmíněným [přepnout](../cpp/switch-statement-cpp.md) příkazu a s [proveďte](../cpp/do-while-statement-cpp.md), [pro](../cpp/for-statement-cpp.md), a [při](../cpp/while-statement-cpp.md) příkazy pro cykly.
+Příkaz **Break** se používá spolu s podmíněným příkazem [Switch](../cpp/switch-statement-cpp.md) a s příkazy [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)a [while](../cpp/while-statement-cpp.md) .
 
-V **přepnout** příkazu **přerušení** příkaz způsobí, že se program spustí další příkaz mimo příkaz **přepnout** příkaz. Bez **přerušení** prohlášení, každý příkaz ze spárovaného **případ** popisek na konec objektu **přepnout** prohlášení, včetně **výchozí**klauzule, je proveden.
+V příkazu **Switch** příkaz **Break** způsobí, že program spustí následující příkaz mimo příkaz **Switch** . Bez příkazu **Break** se spustí všechny příkazy z popisku odpovídajícího **případu** až po konec příkazu **Switch** , včetně **výchozí** klauzule.
 
-Ve smyčkách **přerušení** ukončí vykonávání nejbližšího obklopujícího příkazu **proveďte**, **pro**, nebo **při** příkazu. Řízení se předá příkazu, který následuje ukončený příkaz.
+Ve smyčce ukončí příkaz **Break** provádění nejbližšího ohraničujícího příkazu **do**, **for**nebo **while** . Řízení se předá příkazu, který následuje ukončený příkaz.
 
-V rámci vnořených příkazů **přerušení** ukončí pouze příkaz **proveďte**, **pro**, **přepnout**, nebo **při**příkaz, který jej bezprostředně obklopuje. Můžete použít **vrátit** nebo **goto** příkaz k přenosu řízení z více hluboce vnořené struktury.
+V rámci vnořených příkazů **příkaz break** ukončí pouze příkaz **do**, **pro**, **Switch**nebo **while** , který jej bezprostředně obklopuje. Můžete použít příkaz **return** nebo **goto** pro přenos řízení z hlouběji vnořených struktur.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak používat **přerušení** výroky **pro** smyčky.
+Následující kód ukazuje použití příkazu **Break** ve smyčce **for** .
 
 ```cpp
 #include <iostream>
@@ -71,7 +71,7 @@ In each case:
 3
 ```
 
-Následující kód ukazuje, jak používat **přerušení** v **při** smyčky a **proveďte** smyčky.
+Následující kód ukazuje, jak použít **přerušení** ve smyčce **while** **a smyčka do.**
 
 ```cpp
 #include <iostream>
@@ -104,7 +104,7 @@ In each case:
 0123
 ```
 
-Následující kód ukazuje, jak používat **přerušení** v příkazu switch. Je nutné použít **přerušení** ve všech případech, pokud chcete jednotlivé případy zpracovat zvlášť; pokud nepoužijete **přerušení**, spouštění kódu přejde na další případ.
+Následující kód ukazuje, jak použít **přerušení** v příkazu switch. Je nutné použít **přerušení** v každém případě, pokud chcete zpracovat každý případ zvlášť; Pokud nepoužijete příkaz **Break**, spuštění kódu přejde do dalšího případu.
 
 ```cpp
 #include <iostream>
@@ -151,7 +151,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Jump – příkazy](../cpp/jump-statements-cpp.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>

@@ -7,26 +7,26 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-ms.openlocfilehash: 8edfadefdacf94685952d31f2eaf83e8593eaef8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7847de072b2c0d5b95597e88f9ebf7e2ad63e180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386106"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180950"
 ---
 # <a name="class-member-overview"></a>Přehled členů třídy
 
-Třídy nebo struktury se skládá z jejích členů. Práce, která nemá třídu provádí její členské funkce. Stav, který uchovává je uložen v její datové členy. Inicializace členů se provádí tak, že konstruktory a vyčištění práce, jako je například uvolnění paměti a uvolnění prostředků provádí destruktory. V C ++ 11 a novějším datové členy můžete (a obvykle by měl) inicializovat v bodě deklarace.
+Třída nebo struktura se skládá z jejích členů. Práce, kterou třída provádí pomocí jejích členských funkcí. Stav, který je udržován, je uložen ve svých datových členech. Inicializace členů je prováděna konstruktory a čistící práce, jako je uvolnění paměti a uvolnění prostředků, jsou prováděny destruktory. V C++ 11 a novějších mohou být datové členy (a obvykle by) inicializovány v místě deklarace.
 
-## <a name="kinds-of-class-members"></a>Typy členů třídy.
+## <a name="kinds-of-class-members"></a>Druhy členů třídy
 
-Úplný seznam kategorií člen vypadá takto:
+Úplný seznam kategorií členů je následující:
 
 - [Speciální členské funkce](special-member-functions.md).
 
-- [Přehled členských funkcí](overview-of-member-functions.md).
+- [Přehled členských funkcí](overview-of-member-functions.md)
 
-- [Datové členy](static-members-cpp.md) včetně předdefinovaných typů a jiným uživatelem definované typy.
+- [Datové členy](static-members-cpp.md) , včetně vestavěných typů a dalších uživatelsky definovaných typů.
 
 - Operátory
 
@@ -40,14 +40,14 @@ Třídy nebo struktury se skládá z jejích členů. Práce, která nemá tří
 
 - [Přátelé](../cpp/friend-cpp.md).
 
-- [Aliasy a definice TypeDef](../cpp/aliases-and-typedefs-cpp.md).
+- [Aliasy a definice typedef](../cpp/aliases-and-typedefs-cpp.md).
 
     > [!NOTE]
     >  Přátelé jsou zahrnuty v předchozím seznamu, protože jsou obsaženy v deklaraci třídy. Nejsou však skutečnými členy třídy, protože nejsou v oboru třídy.
 
 ## <a name="example-class-declaration"></a>Příklad deklarace třídy
 
-Následující příklad ukazuje deklaraci třídy jednoduchý:
+Následující příklad ukazuje jednoduchou deklaraci třídy:
 
 ```cpp
 // TestRun.h
@@ -90,35 +90,35 @@ private:
 int TestRun::_instances{ 0 };
 ```
 
-## <a name="member-accessibility"></a>Usnadnění přístupu člena
+## <a name="member-accessibility"></a>Přístupnost člena
 
-Členy třídy jsou deklarovány v seznamu členů. Seznam členů třídy může být rozdělen do libovolného počtu **privátní**, **chráněné** a **veřejné** oddíly, použití klíčových slov známá jako specifikátory přístupu.  Dvojtečka **:** musí následovat specifikátor přístupu.  Tyto části nemusejí být souvislé, to znamená, že některé z těchto klíčových slov se mohou v seznamu členů objevit několikrát.  Klíčové slovo určuje přístup všech členů, dokud se neobjeví další specifikátor přístupu nebo uzavírací složená závorka. Další informace najdete v tématu [ovládací prvek přístupu členů (C++)](../cpp/member-access-control-cpp.md).
+Členy třídy jsou deklarovány v seznamu členů. Seznam členů třídy může být rozdělen na libovolný počet **privátních**, **chráněných** a **veřejných** oddílů pomocí klíčových slov označovaných jako specifikátory přístupu.  Dvojtečka **:** musí následovat po specifikátoru přístupu.  Tyto části nemusejí být souvislé, to znamená, že některé z těchto klíčových slov se mohou v seznamu členů objevit několikrát.  Klíčové slovo určuje přístup všech členů, dokud se neobjeví další specifikátor přístupu nebo uzavírací složená závorka. Další informace naleznete v tématu [Member Access Control (C++)](../cpp/member-access-control-cpp.md).
 
 ## <a name="static-members"></a>Statické členy
 
-Datový člen mohou být deklarovány jako statická, což znamená, že všechny objekty třídy mají přístup na stejnou kopii. Členské funkce mohou být deklarovány jako statická, v takovém případě může pouze přistupovat k statické datové členy třídy (a nemá žádné *to* ukazatele). Další informace najdete v tématu [statické datové členy](../cpp/static-members-cpp.md).
+Datový člen může být deklarován jako static, což znamená, že všechny objekty třídy mají přístup ke stejné kopii. Členská funkce může být deklarována jako statická, v takovém případě může přistupovat pouze ke statickým datovým členům třídy (a *nemá žádný ukazatel* ). Další informace naleznete v tématu [static data Members](../cpp/static-members-cpp.md).
 
-## <a name="special-member-functions"></a>Speciální členské funkce
+## <a name="special-member-functions"></a>Zvláštní členské funkce
 
-Speciální členské funkce jsou funkce, které jsou automaticky poskytován kompilátorem, pokud není zadáno ve zdrojovém kódu.
+Speciální členské funkce jsou funkce, které kompilátor poskytuje automaticky, pokud je neurčíte ve zdrojovém kódu.
 
 1. Výchozí konstruktor
 
 1. Kopírovací konstruktor
 
-1. **(C ++ 11)**  Konstruktoru přesunu
+1. **(C++ 11)** Přesunout konstruktor
 
-1. Operátor přiřazení kopie
+1. Operátor přiřazení pro kopírování
 
-1. **(C ++ 11)**  Operátor přiřazení přesunutí
+1. **(C++ 11)** Operátor přiřazení přesunutí
 
 1. Destruktor
 
-Další informace najdete v tématu [speciálních členských funkcí](../cpp/special-member-functions.md).
+Další informace najdete v tématu [zvláštní členské funkce](../cpp/special-member-functions.md).
 
-## <a name="memberwise-initialization"></a>Inicializace související se členy
+## <a name="memberwise-initialization"></a>Inicializace kopírování členů
 
-V C ++ 11 a novějším nestatická členská deklarátory mohou obsahovat inicializátory.
+V jazyce C++ 11 a novějším může nestatický člen deklarátory obsahovat inicializátory.
 
 ```cpp
 class CanInit
@@ -140,9 +140,9 @@ int main()
 }
 ```
 
-Pokud člen není přiřazena hodnota v konstruktoru, tato hodnota přepíše hodnotu, se kterým byl člen inicializovat v bodě deklarace.
+Pokud je členovi přiřazena hodnota v konstruktoru, tato hodnota přepíše hodnotu, se kterou byl člen inicializován v bodě deklarace.
 
-Existuje pouze jedna kopie sdílených statických datových členů pro všechny objekty typu dané třídy. Statické datové členy musejí být definovány a mohou být inicializovány v rozsahu souboru. (Další informace o statických datových členech naleznete v tématu [statické datové členy](../cpp/static-members-cpp.md).) Následující příklad ukazuje, jak provést tyto inicializace:
+Existuje pouze jedna kopie sdílených statických datových členů pro všechny objekty typu dané třídy. Statické datové členy musejí být definovány a mohou být inicializovány v rozsahu souboru. (Další informace o statických datových členech naleznete v tématu [static data Members](../cpp/static-members-cpp.md).) Následující příklad ukazuje, jak provést tyto inicializace:
 
 ```cpp
 // class_members2.cpp
@@ -170,6 +170,6 @@ int CanInit2::j = i;
 > [!NOTE]
 >  Název třídy `CanInit2` musí předcházet identifikátor `i`, čímž určíte, že definovaný identifikátor `i` je členem třídy `CanInit2`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

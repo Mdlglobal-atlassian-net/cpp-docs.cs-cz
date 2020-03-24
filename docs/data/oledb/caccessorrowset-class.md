@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447269"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212248"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset – třída
 
@@ -74,7 +74,7 @@ Třída sady řádků.
 
 Třída `TAccessor` spravuje přistupující objekt. Třída *TRowset* spravuje sadu řádků.
 
-## <a name="bind"></a>CAccessorRowset –:: bind
+## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset –:: bind
 
 Vytvoří vazby, pokud jste zadali `bBind` jako **false** v [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
@@ -88,7 +88,7 @@ HRESULT Bind();
 
 Standardní hodnota HRESULT.
 
-## <a name="caccessorrowset"></a>CAccessorRowset –:: CAccessorRowset –
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset –:: CAccessorRowset –
 
 Inicializuje objekt `CAccessorRowset`.
 
@@ -98,7 +98,7 @@ Inicializuje objekt `CAccessorRowset`.
 CAccessorRowset();
 ```
 
-## <a name="close"></a>CAccessorRowset –:: Close
+## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset –:: Close
 
 Uvolní všechny aktivní přistupující objekty a sadu řádků.
 
@@ -112,7 +112,7 @@ void Close();
 
 Uvolní jakoukoli přidruženou paměť.
 
-## <a name="freerecordmemory"></a>CAccessorRowset –:: FreeRecordMemory
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset –:: FreeRecordMemory
 
 Uvolní všechny sloupce v aktuálním záznamu, které je třeba uvolnit.
 
@@ -122,7 +122,7 @@ Uvolní všechny sloupce v aktuálním záznamu, které je třeba uvolnit.
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a>CAccessorRowset –:: GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset –:: GetColumnInfo
 
 Získá informace o sloupci z otevřené sady řádků.
 

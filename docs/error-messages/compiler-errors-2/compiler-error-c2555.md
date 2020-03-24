@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-ms.openlocfilehash: cc6c3a3a29665ccf65b77a3d9866986cb0a46b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebf3e4a3aff48311edd5fb95b01a7b2d23990231
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353196"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202421"
 ---
 # <a name="compiler-error-c2555"></a>Chyba kompilátoru C2555
 
-'class1::function1': přepisující virtuální funkce návratový typ se liší a není kovariantem z: "class2::function2.
+' Class1:: Function1 ': návratový typ přepisující virtuální funkce se liší a není kovariantou od ' Class2:: function2 '
 
-Virtuální funkce a odvozené přepisující funkce mají stejné parametr seznamy ale různé typy vrácené hodnoty. Přepsání funkce v odvozené třídě se nemůže lišit od virtuální funkce v základní třídě pouze podle jejího návratového typu.
+Virtuální funkce a odvozená přepisovaná funkce mají stejné seznamy parametrů, ale jiné návratové typy. Přepisování funkce v odvozené třídě se nemůže lišit od virtuální funkce v základní třídě pouze pomocí jejího návratového typu.
 
-Chcete-li vyřešit tuto chybu, přetypujte návratovou hodnotu po volání virtuální funkce.
+Chcete-li tuto chybu vyřešit, přetypování návratové hodnoty poté, co byla volána virtuální funkce.
 
-Tato chyba může také zobrazit, pokud kompilujete s možnostmi/CLR.   Například Visual C++ ekvivalentní následující deklarace jazyka C#:
+Tato chyba se může zobrazit i v případě, že kompilujete pomocí parametrem/CLR.   Například vizuální C++ ekvivalent k následující C# deklaraci:
 
 ```
 Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);

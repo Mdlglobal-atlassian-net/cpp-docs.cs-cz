@@ -5,41 +5,41 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 45078d8e1bdbeb23dd311d915ba2cf47e42b2663
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446949"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194509"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Chyba linkerů LNK2038
 
-> zjištěna neshoda pro '*název*': hodnota '*value_1*'neodpovídá hodnotě'*value_2*"v *filename.obj*
+> zjistila se neshoda pro:*Name*: hodnota*value_1*se neshoduje s hodnotou*value_2*v *souboru filename. obj* .
 
-Byla zjištěna neshoda symbolu vytvořeného linkerem. Tato chyba označuje, že různé části aplikace, včetně knihoven nebo jiný objekt kódu, aby propojení aplikace, používají konfliktní definice symbolu. [Zjištění neshody](../../preprocessor/detect-mismatch.md) – Direktiva pragma se používá k definování těchto symbolů a zjišťování konfliktních hodnot.
+Linker zjistil neshodu symbolů. Tato chyba označuje, že různé části aplikace, včetně knihoven nebo jiného kódu objektu, na které aplikace odkazuje, používají konfliktní definice symbolu. Direktiva pragma s [neshodou detekce](../../preprocessor/detect-mismatch.md) slouží k definování takových symbolů a zjištění jejich konfliktních hodnot.
 
 ## <a name="possible-causes-and-solutions"></a>Možné příčiny a řešení
 
-Této chybě může dojít, když je soubor objektu v projektu je zastaralý. Před vyzkoušením dalších řešení této chyby proveďte čisté sestavení k zajištění, že objekt soubory jsou aktuální.
+K této chybě může dojít, pokud je soubor objektu v projektu zastaralý. Předtím, než se pokusíte o tuto chybu, proveďte čisté sestavení, aby se zajistilo, že jsou soubory objektů aktuální.
 
-Visual Studio definuje následující symboly, aby se zabránilo propojení nekompatibilního kód, který může způsobit chyby za běhu nebo jiné neočekávané chování.
+Visual Studio definuje následující symboly, aby nedocházelo k propojení nekompatibilního kódu, který může způsobit chyby za běhu nebo jiné neočekávané chování.
 
-- `_MSC_VER` Označuje číslo hlavní verze a podverze Microsoft C++ kompilátor (MSVC), který se používá k vytvoření aplikace nebo knihovna. Kód, který je zkompilován pomocí jedné verze MSVC není kompatibilní s kódem, který je zkompilován s použitím verzi, která má různé hlavní verze a podverze čísla. Další informace najdete v tématu `_MSC_VER` v [předdefinovaná makra](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` označuje číslo hlavní verze a podverze kompilátoru Microsoft C++ (MSVC), které se používají k sestavení aplikace nebo knihovny. Kód, který je zkompilován pomocí jedné verze MSVC, je nekompatibilní s kódem, který je zkompilován pomocí verze, která má odlišná čísla hlavní verze a podverze. Další informace najdete v tématu `_MSC_VER` v [předdefinovaných makrech](../../preprocessor/predefined-macros.md).
 
-   Pokud odkazujete na knihovnu, která není kompatibilní s verzí MSVC, který používáte, a nelze získat nebo vytvořit kompatibilní verzi knihovny, můžete použít starší verzi kompilátoru k sestavení projektu: změnit  **Sada nástrojů platformy** vlastnosti projektu starší sadu nástrojů. Další informace najdete v tématu [jak: Změna cílové architektury a sady nástrojů](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Pokud propojujete knihovnu, která není kompatibilní s verzí MSVC, kterou používáte, a nelze získat nebo sestavit kompatibilní verzi knihovny, můžete použít starší verzi kompilátoru pro sestavení projektu: Změňte vlastnost **Sada nástrojů platformy** projektu na předchozí sadu nástrojů. Další informace naleznete v tématu [Postupy: Změna cílové architektury a sady nástrojů platformy](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- `_ITERATOR_DEBUG_LEVEL` Informuje o úrovni zabezpečení a ladění funkcí, které jsou povoleny ve standardní knihovně jazyka C++. Tyto funkce mohou změnit reprezentaci některých objektů standardní knihovny C++ a tím je znekompatibilnit ty použití různých zabezpečení a ladění funkcí. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
+- `_ITERATOR_DEBUG_LEVEL` označuje úroveň zabezpečení a funkce ladění, které jsou povoleny ve C++ standardní knihovně. Tyto funkce mohou změnit reprezentace určitých C++ objektů knihovny Standard a tak je nekompatibilní s možnostmi, které používají jiné funkce zabezpečení a ladění. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 
-- `RuntimeLibrary` Určuje verzi modulu runtime standardní knihovny C++ a C, který používá aplikace nebo knihovna. Kód, který používá jednu verzi modulu runtime standardní knihovny C++ nebo C je nekompatibilní s kódem, který používá jinou verzi. Další informace najdete v tématu [/ / MD, / MT, /LD (použití knihovny Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md).
+- `RuntimeLibrary` označuje verzi knihovny C++ Standard a modulu runtime jazyka C, kterou používá aplikace nebo knihovna. Kód, který používá jednu verzi C++ standardní knihovny nebo modulu runtime jazyka C, není kompatibilní s kódem, který používá jinou verzi. Další informace naleznete v tématu [/MD,/MT,/LD (použití běhové knihovny)](../../build/reference/md-mt-ld-use-run-time-library.md).
 
-- `_PPLTASKS_WITH_WINRT` Označuje, že kód, který používá [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) je propojen s objekty zkompilovanými s použitím různých nastavení [/ZW](../../build/reference/zw-windows-runtime-compilation.md) – možnost kompilátoru. (**/ZW** podporuje C++/CX.) Kód, který se používá nebo závisí na PPL musí být zkompilován pomocí stejné **/ZW** nastavení, které se používá ve zbývající části aplikace.
+- `_PPLTASKS_WITH_WINRT` označuje, že kód, který používá [knihovnu paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) , je propojen s objekty kompilovány pomocí jiného nastavení pro možnost kompilátoru [/ZW](../../build/reference/zw-windows-runtime-compilation.md) . ( **/ZW** podporuje C++/CX.) Kód, který používá nebo závisí na PPL, musí být kompilován pomocí stejného nastavení **/ZW** , které se používá ve zbývající části aplikace.
 
-Zajistěte, aby byly hodnoty těchto symbolů konzistentní v rámci projektů v řešení sady Visual Studio a také, že jsou slučitelné s kódem a knihovnami, které vaše aplikace připojuje.
+Zajistěte, aby hodnoty těchto symbolů byly konzistentní v rámci projektů v řešení sady Visual Studio a také byly konzistentní s kódem a knihovnami, na které vaše aplikace odkazuje.
 
-## <a name="third-party-library-issues-and-vcpkg"></a>Problémy knihovny třetí strany a Vcpkg
+## <a name="third-party-library-issues-and-vcpkg"></a>Problémy s knihovnou třetích stran a Vcpkg
 
-Pokud tato chyba se zobrazí, když se pokoušíte nakonfigurovat knihovny třetích stran jako součást vašeho sestavení, zvažte použití [Vcpkg](../../vcpkg.md), Visual C++ balíček správce k instalaci a vytvoření knihovny. Vcpkg podporuje jejichž [seznam knihoven třetích stran](https://github.com/Microsoft/vcpkg/tree/master/ports)a nastaví vlastnosti konfigurace a závislosti, které vyžaduje pro úspěšné sestavení jako součást vašeho projektu. Další informace najdete v tématu související [blogu Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) příspěvku.
+Pokud se tato chyba zobrazí při pokusu o konfiguraci knihovny třetí strany v rámci sestavení, zvažte použití [Vcpkg](../../vcpkg.md), správce balíčků Visual C++ , k instalaci a sestavení knihovny. Vcpkg podporuje velký a rostoucí [seznam knihoven třetích stran](https://github.com/Microsoft/vcpkg/tree/master/ports)a nastavuje všechny vlastnosti konfigurace a závislosti vyžadované pro úspěšná sestavení v rámci projektu. Další informace najdete v souvisejícím [ C++ blogovém](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) příspěvku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chyby a upozornění linkerů](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

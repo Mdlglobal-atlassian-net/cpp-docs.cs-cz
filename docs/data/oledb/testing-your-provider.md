@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: 722757b93d3423b02340c382b16e08a31626bc01
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b1f068c928abd0a6656bed0702422d9bda843208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501256"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209496"
 ---
 # <a name="testing-your-provider"></a>Testování zprostředkovatele
 
@@ -23,6 +23,6 @@ Před vydáním zprostředkovatele byste měli provést následující testy v u
 
 1. Spusťte testy shody OLE DB (včetně testů shody ADO), abyste ukázali, že poskytovatel splňuje standard úrovně 0 pro poskytovatele OLE DB. (Pro vysvětlení úrovně 0 vyhledejte **OLE DB testy shody úrovně 0** v [příručce OLE DB Programátorská příručka](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Tyto testy a přidruženou dokumentaci jsou součástí vizuálu C++ v sadě Data Access SDK. Tyto testy také pomůžou Ukázat, že váš poskytovatel je dobře spuštěný, když je agregovaný jinými [poskytovateli služeb](../../data/oledb/ole-db-resource-pooling-and-services.md) a je zvlášť užitečný, když upravíte nebo přidáte vlastnosti. Další informace o testech dodržování shody najdete v souboru Readme pro sadu SDK pro Data Access, která je umístěná na jednom z disků CD sady Visual Studio.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

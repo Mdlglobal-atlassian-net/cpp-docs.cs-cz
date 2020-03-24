@@ -99,26 +99,26 @@ helpviewer_keywords:
 - operator> (map) member [STL/CLR]
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-ms.openlocfilehash: 9150d603f67051df4a6f182366623935e59fe9ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19b450e256a428769ca6588227e9249e4e21f51d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393711"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208543"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
-Třída šablony popisuje objekt, který řídí různé délky sekvence elementů, která má obousměrný přístup. Použití kontejneru `map` , spravovat řadu prvků, jako větve (téměř) s vyrovnáváním seřazených uzlů, každý ukládání jeden element. Element se skládá z klíče pro seřazení, pořadí a mapované hodnoty, které nenastane pravé.
+Třída šablony popisuje objekt, který ovládá proměnlivou délku posloupnosti prvků, které mají obousměrný přístup. Pomocí `map` kontejnerů můžete spravovat sekvenci prvků jako (skoro) vyvážený uspořádaný strom uzlů, z nichž každý ukládá jeden element. Prvek se skládá z klíče pro objednávání sekvence a mapované hodnoty, které jsou společně pro jízdní.
 
-V popisu níže `GValue` je stejný jako:
+V popisu níže je `GValue` stejné jako:
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
 kde:
 
-`GKey` je stejný jako *klíč* Pokud je typ odkazu, v takovém případě je `Key^`
+`GKey` je stejný jako *klíč* , pokud se jedná o typ REF, v takovém případě je `Key^`
 
-`GMapped` je stejný jako *mapované* Pokud je typ odkazu, v takovém případě je `Mapped^`
+`GMapped` je stejná jako *mapovaná* , pokud se jedná o typ REF, v takovém případě je `Mapped^`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -140,17 +140,17 @@ template<typename Key,
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
-Typ klíčovou komponentou elementu v řízené sekvenci.
+*Klíč*<br/>
+Typ klíčové součásti prvku v řízené sekvenci.
 
-*Mapovat*<br/>
-Typ elementu v řízené sekvenci další komponenty.
+*Mapovaný*<br/>
+Typ dodatečné součásti prvku v řízené sekvenci.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<cliext – / map >
+**Záhlaví:** \<cliext –/map >
 
-**Namespace:** cliext –
+**Obor názvů:** cliext –
 
 ## <a name="declarations"></a>Deklarace
 
@@ -158,99 +158,99 @@ Typ elementu v řízené sekvenci další komponenty.
 |---------------------|-----------------|
 |[map::const_iterator (STL/CLR)](#const_iterator)|Typ konstantního iterátoru řízené sekvence|
 |[map::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|
-|[map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantního zpětného iterátoru řízené sekvence.|
-|[map::difference_type (STL/CLR)](#difference_type)|Typ (může být podepsaná) vzdálenosti mezi dvěma prvky.|
-|[map::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro kontejner.|
-|[map::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterátoru pro obecné rozhraní pro kontejner.|
-|[map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ "reverse iterator" pro obecné rozhraní pro kontejner.|
-|[map::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro kontejner.|
+|[map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantního reverzního iterátoru řízené sekvence.|
+|[map::difference_type (STL/CLR)](#difference_type)|Typ (možná znaménko) vzdálenosti mezi dvěma prvky.|
+|[map::generic_container (STL/CLR)](#generic_container)|Typ obecného rozhraní pro kontejner.|
+|[map::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterátoru pro obecné rozhraní kontejneru.|
+|[map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ reverzního iterátoru pro obecné rozhraní kontejneru.|
+|[map::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní kontejneru.|
 |[map::iterator (STL/CLR)](#iterator)|Typ iterátoru řízené sekvence|
-|[map::key_compare (STL/CLR)](#key_compare)|Pořadí delegáta pro dva klíče.|
+|[map::key_compare (STL/CLR)](#key_compare)|Delegát řazení pro dva klíče.|
 |[map::key_type (STL/CLR)](#key_type)|Typ klíče řazení|
-|[map::mapped_type (STL/CLR)](#mapped_type)|Typ mapované hodnoty přiřazené ke každému klíči.|
+|[map::mapped_type (STL/CLR)](#mapped_type)|Typ mapované hodnoty přidružené k jednotlivým klíčům.|
 |[map::reference (STL/CLR)](#reference)|Typ odkazu na prvek|
-|[map::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ "reverse iterator" pro řízenou sekvenci.|
-|[map::size_type (STL/CLR)](#size_type)|Typ vzdálenosti (nezáporné) mezi dvěma prvky.|
-|[map::value_compare (STL/CLR)](#value_compare)|Pořadí delegáta pro dvě hodnoty prvků.|
+|[map::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ reverzního iterátoru řízené sekvence.|
+|[map::size_type (STL/CLR)](#size_type)|Typ (nezáporné) vzdálenosti mezi dvěma prvky.|
+|[map::value_compare (STL/CLR)](#value_compare)|Delegát řazení pro dvě hodnoty elementu.|
 |[map::value_type (STL/CLR)](#value_type)|Typ prvku|
 
 |Členská funkce|Popis|
 |---------------------|-----------------|
 |[map::begin (STL/CLR)](#begin)|Určuje začátek řízené sekvence.|
 |[map::clear (STL/CLR)](#clear)|Odebere všechny prvky.|
-|[map::count (STL/CLR)](#count)|Vrátí počet prvků odpovídající zadanému klíči.|
+|[map::count (STL/CLR)](#count)|Spočítá prvky, které odpovídají zadanému klíči.|
 |[map::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
 |[map::end (STL/CLR)](#end)|Určuje konec řízené sekvence.|
 |[map::equal_range (STL/CLR)](#equal_range)|Najde rozsah, který odpovídá zadanému klíči.|
 |[map::erase (STL/CLR)](#erase)|Odebere prvky v určených pozicích.|
 |[map::find (STL/CLR)](#find)|Vyhledá prvek, který odpovídá zadanému klíči.|
 |[map::insert (STL/CLR)](#insert)|Přidá prvky.|
-|[map::key_comp (STL/CLR)](#key_comp)|Zkopíruje pořadí delegáta pro dva klíče.|
-|[map::lower_bound (STL/CLR)](#lower_bound)|Vyhledá počátek rozsahu, který odpovídá zadanému klíči.|
+|[map::key_comp (STL/CLR)](#key_comp)|Zkopíruje delegáta řazení dvou klíčů.|
+|[map::lower_bound (STL/CLR)](#lower_bound)|Vyhledá začátek rozsahu, který odpovídá zadanému klíči.|
 |[map::make_value (STL/CLR)](#make_value)|Vytvoří objekt hodnoty.|
 |[map::map (STL/CLR)](#map)|Sestaví objekt kontejneru.|
-|[map::rbegin (STL/CLR)](#rbegin)|Určuje začátek řízené obrácené sekvenci.|
-|[map::rend (STL/CLR)](#rend)|Určuje konec řízené obrácené sekvenci.|
+|[map::rbegin (STL/CLR)](#rbegin)|Určuje začátek obrácené kontrolované sekvence.|
+|[map::rend (STL/CLR)](#rend)|Určuje konec reverzní kontrolované sekvence.|
 |[map::size (STL/CLR)](#size)|Spočítá počet prvků.|
 |[map::swap (STL/CLR)](#swap)|Zamění obsah dvou kontejnerů.|
-|[map::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|
+|[map::to_array (STL/CLR)](#to_array)|Zkopíruje řízenou sekvenci do nového pole.|
 |[map::upper_bound (STL/CLR)](#upper_bound)|Najde konec rozsahu, který odpovídá zadanému klíči.|
-|[map::value_comp (STL/CLR)](#value_comp)|Zkopíruje pořadí delegáta pro dvě hodnoty prvků.|
+|[map::value_comp (STL/CLR)](#value_comp)|Zkopíruje delegáta řazení pro dvě hodnoty elementu.|
 
 |Operátor|Popis|
 |--------------|-----------------|
-|[map::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvence.|
-|[map::operator(STL/CLR)](#op)|Mapuje klíč na její přidružené mapované hodnoty.|
-|[operator!= (map) (STL/CLR)](#op_neq)|Určuje, zda `map` není roven jinému objektu `map` objektu.|
-|[operator< (map) (STL/CLR)](#op_lt)|Určuje, zda `map` je menší než jiný objekt `map` objektu.|
-|[operator<= (map) (STL/CLR)](#op_lteq)|Určuje, zda `map` objekt je menší nebo rovna jiné `map` objektu.|
-|[operator== (map) (STL/CLR)](#op_eq)|Určuje, zda `map` je roven jinému objektu `map` objektu.|
-|[operator> (map) (STL/CLR)](#op_gt)|Určuje, zda `map` je větší než jiný objekt `map` objektu.|
-|[operator>= (map) (STL/CLR)](#op_gteq)|Určuje, zda `map` objekt je větší než nebo roven jinému `map` objektu.|
+|[map::operator= (STL/CLR)](#op_as)|Nahradí řízenou sekvenci.|
+|[map::operator(STL/CLR)](#op)|Mapuje klíč na jeho přidruženou mapovanou hodnotu.|
+|[operator!= (map) (STL/CLR)](#op_neq)|Určuje, zda `map` objekt není roven jinému objektu `map`.|
+|[operator< (map) (STL/CLR)](#op_lt)|Určuje, zda je objekt `map` menší než jiný objekt `map`.|
+|[operator<= (map) (STL/CLR)](#op_lteq)|Určuje, zda je objekt `map` menší nebo roven jinému objektu `map`.|
+|[operator== (map) (STL/CLR)](#op_eq)|Určuje, zda je objekt `map` roven jinému objektu `map`.|
+|[operator> (map) (STL/CLR)](#op_gt)|Určuje, zda je objekt `map` větší než jiný objekt `map`.|
+|[operator>= (map) (STL/CLR)](#op_gteq)|Určuje, zda je objekt `map` větší nebo roven jinému objektu `map`.|
 
 ## <a name="interfaces"></a>Rozhraní
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|<xref:System.ICloneable>|Duplicitní objektu.|
-|<xref:System.Collections.IEnumerable>|Pořadí mezi prvky.|
-|<xref:System.Collections.ICollection>|Údržba skupiny prvků.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Pořadí pomocí zadané elementy.|
-|<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny zadané elementy.|
-|<xref:System.Collections.Generic.IDictionary%602>|Údržba skupiny {klíč, hodnota} dvojice.|
-|ITree < klíč, hodnota >|Udržujte obecný kontejneru.|
+|<xref:System.ICloneable>|Duplikuje objekt.|
+|<xref:System.Collections.IEnumerable>|Sekvence prostřednictvím prvků.|
+|<xref:System.Collections.ICollection>|Udržovat skupinu prvků.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Sekvence prostřednictvím typových elementů.|
+|<xref:System.Collections.Generic.ICollection%601>|Udržovat skupinu typových elementů.|
+|<xref:System.Collections.Generic.IDictionary%602>|Udržuje skupinu dvojic {Key, Value}.|
+|ITree < klíč, hodnota >|Udržujte obecný kontejner.|
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt přiděluje a uvolňuje úložiště pro sekvenci, ovládací prvky jako jednotlivé uzly. Vloží prvky do (téměř) s vyrovnáváním strom, který udržuje seřazený tím, že změna vazby mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odebrat elementy volně bez narušení zbývající prvky.
+Objekt přiděluje a uvolňuje úložiště pro sekvenci, která ovládá jako jednotlivé uzly. Vloží prvky do (skoro) vyvážené stromové struktury, které jsou uspořádány pomocí změny propojení mezi uzly, nikdy kopírováním obsahu jednoho uzlu do druhého. To znamená, že můžete vkládat a odebírat prvky volně bez narušování zbývajících prvků.
 
-Objekt seřadí sekvence pomocí volání uloženého delegáta objekt typu [map::key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md). Při vytvoření objektu map; můžete zadat objekt uložené delegáta Pokud chcete zadat žádný objekt. delegát, výchozí hodnota je porovnání `operator<(key_type, key_type)`. Přístup k tomuto uloženého objektu voláním členské funkce [map::key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)`()`.
+Objekt seřadí sekvenci, kterou ovládá, voláním uloženého objektu delegáta typu [map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md). Uložený objekt delegáta lze zadat při vytváření mapy. Pokud nezadáte žádný delegovaný objekt, výchozí hodnota je porovnávání `operator<(key_type, key_type)`. K tomuto uloženému objektu přistupujete voláním funkce mapa členské funkce [:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)`()`.
 
-Takový objekt delegáta musí uložit přísné slabé seřazení klíčů typu [map::key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md). To znamená pro jakékoli dva klíče `X` a `Y`:
+Takový objekt delegáta musí mít přísně slabé řazení klíčů typu [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md). To znamená, že pro všechny dva klíče `X` a `Y`:
 
-`key_comp()(X, Y)` Vrátí výsledek stejný datový typ Boolean při každém volání.
+`key_comp()(X, Y)` vrací stejný logický výsledek při každém volání.
 
-Pokud `key_comp()(X, Y)` má hodnotu true, pak `key_comp()(Y, X)` musí mít hodnotu false.
+Pokud má `key_comp()(X, Y)` hodnotu true, `key_comp()(Y, X)` musí mít hodnotu false.
 
-Pokud `key_comp()(X, Y)` má hodnotu true, pak `X` říká, že je řazen před `Y`.
+Pokud má `key_comp()(X, Y)` hodnotu true, `X` se říká, že se má seřadit před `Y`.
 
-Pokud `!key_comp()(X, Y) && !key_comp()(Y, X)` má hodnotu true, pak `X` a `Y` se říká, že mají ekvivalentní řazení.
+Pokud má `!key_comp()(X, Y) && !key_comp()(Y, X)` hodnotu true, pak `X` a `Y` se říká, že mají ekvivalentní řazení.
 
-Pro libovolný element `X` , která předchází `Y` v řízené sekvenci `key_comp()(Y, X)` má hodnotu false. (Pro výchozí objekt delegáta, klíče nikdy snížení hodnoty.) Na rozdíl od třídy šablony [mapy](../dotnet/map-stl-clr.md), objekt třídy šablony `map` nevyžaduje, aby byly jedinečné klíče pro všechny elementy. (Dva nebo více klíčů může mít odpovídající řazení.)
+U všech prvků `X`, které předcházejí `Y` v řízené sekvenci, `key_comp()(Y, X)` má hodnotu false. (Pro výchozí objekt delegáta klíče nikdy nesnižují hodnotu.) Na rozdíl od [mapy](../dotnet/map-stl-clr.md)třídy šablony, objekt `map` třídy šablony nevyžaduje, aby klíče pro všechny elementy byly jedinečné. (Dva nebo více klíčů může mít ekvivalentní řazení.)
 
-Každý prvek obsahuje samostatný klíč a hodnotu pro mapovanou. Sekvence je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odstranění libovolný prvek s počtem operací úměrný logaritmu počtu prvků v sekvenci (logaritmické čas). Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.
+Každý prvek obsahuje samostatný klíč a namapovanou hodnotu. Sekvence je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odebírání libovolného prvku s řadou operací, které jsou úměrné logaritmu počtu prvků v sekvenci (logaritmický čas). Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.
 
-Mapu podporuje obousměrné iterátory, což znamená, že přejdete na sousedící prvky zadaný iterátor, který určuje elementu v řízené sekvenci. Speciální hlavního uzlu odpovídá iterátorů vrácené [map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. Tento iterátor, který má přístup po posledním prvku v řízené sekvenci lze snížit, pokud jsou k dispozici. Můžete zvýšit mapy iterátor pro přístup k hlavnímu uzlu a budou pak porovnat rovna `end()`. Nelze přistoupit přes ukazatel vrátí iterátor, ale `end()`.
+Mapa podporuje obousměrné iterátory, což znamená, že můžete krokovat s sousedícími prvky daným iterátorem, který určuje prvek v řízené sekvenci. Speciální hlavní uzel odpovídá iterátoru vrácenému funkcí [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. Tento iterátor můžete snížit tak, aby se dosáhlo posledního prvku v řízené sekvenci, pokud je k dispozici. Můžete zvýšit iterátor mapy tak, aby se dosáhlo hlavního uzlu, a pak bude porovnán se `end()`. Nemůžete ale odkázat na iterátor vrácený `end()`.
 
-Všimněte si, že nemůže odkazovat na element mapy přímo zadané pozici číselné –, který vyžaduje iterátor náhodného přístupu.
+Všimněte si, že nemůžete odkazovat na prvek mapy přímo podle jeho číselné pozice – to vyžaduje iterátor náhodného přístupu.
 
-Iterátor mapy uloží popisovač do uzlu přidružené map, který je pak uloží popisovač pro jeho přiřazeným kontejnerem. Iterátory lze použít pouze objekty, které přiřazeným kontejnerem. Iterátor mapy platná tak dlouho, dokud jeho přidružené mapy uzel souvisí s některé mapy. Kromě toho je platný iterátoru přesměrovat – slouží k přístupu nebo změnit hodnotu prvku jmenuje--tak dlouho, dokud se nerovná `end()`.
+Iterátor mapování ukládá popisovač do přidruženého uzlu map, který zase ukládá popisovač do přidruženého kontejneru. Iterátory lze použít pouze u jejich přidružených objektů kontejneru. Iterátor mapy zůstává platný, pokud je jeho přidružený uzel mapy spojen s určitou mapou. Kromě toho je možné, že platný iterátor je deodkazování – můžete ho použít pro přístup k hodnotě prvku, kterou Určuje, a k její změně, pokud to není rovno `end()`.
 
-Smazání nebo odstranění prvku volá destruktor pro jeho uložené hodnotě. Zničení kontejneru vymaže všechny prvky. Kontejner, jehož typ prvku je třídy ref class tak, zajišťuje, že žádné elementy něj kontejneru. Mějte na paměti, ale, že kontejner zpracovává nemá *není* zničit jeho prvků.
+Při mazání nebo odebírání elementu se volá destruktor pro jeho uloženou hodnotu. Zničení kontejneru smaže všechny prvky. Proto kontejner, jehož typ elementu je ref class, zajistí, že kontejner neobsahuje žádné prvky. Upozorňujeme však, že kontejner popisovačů *nezničí své* prvky.
 
 ## <a name="members"></a>Členové
 
-## <a name="begin"></a> map::begin (STL/CLR)
+## <a name="mapbegin-stlclr"></a><a name="begin"></a>map:: begin (STL/CLR)
 
 Určuje začátek řízené sekvence.
 
@@ -262,7 +262,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí obousměrný iterátor, který určuje první prvek řízenou sekvenci nebo přesně za konec k prázdné sekvenci. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí obousměrný iterátor, který určuje první prvek řízené sekvence nebo těsně za konec prázdné sekvence. Použijete ho k získání iterátoru, který určuje `current` začátek řízené sekvence, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -301,7 +301,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="clear"></a> map::clear (STL/CLR)
+## <a name="mapclear-stlclr"></a><a name="clear"></a>map:: Clear (STL/CLR)
 
 Odebere všechny prvky.
 
@@ -313,7 +313,7 @@ void clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce efektivně volá [map::erase (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [map::end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())`. Použijete ji k zajištění, že je prázdná řízené sekvence.
+Členská funkce efektivně volá [map:: Erase (STL/CLR)](../dotnet/map-erase-stl-clr.md)`(` [map:: begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)`(),` [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`())`. Použijete ho k zajištění, aby řízená sekvence byla prázdná.
 
 ### <a name="example"></a>Příklad
 
@@ -359,7 +359,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> map::const_iterator (STL/CLR)
+## <a name="mapconst_iterator-stlclr"></a><a name="const_iterator"></a>map:: const_iterator (STL/CLR)
 
 Typ konstantního iterátoru řízené sekvence
 
@@ -371,7 +371,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T2` , který může sloužit jako konstantní obousměrného iterátoru řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T2`, který může sloužit jako konstantní obousměrný iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -401,7 +401,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> map::const_reference (STL/CLR)
+## <a name="mapconst_reference-stlclr"></a><a name="const_reference"></a>map:: const_reference (STL/CLR)
 
 Typ konstantního odkazu na prvek
 
@@ -413,7 +413,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje konstantní odkaz na element.
+Typ popisuje konstantní odkaz na prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -446,9 +446,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> map::const_reverse_iterator (STL/CLR)
+## <a name="mapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>map:: const_reverse_iterator (STL/CLR)
 
-Typ konstantního zpětného iterátoru řízené sekvence...
+Typ konstantního reverzního iterátoru řízené sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -458,7 +458,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T4` , který může sloužit jako konstantní zpětného iterátoru řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T4`, který může sloužit jako konstantní reverzní iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -488,7 +488,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> map::Count (STL/CLR)
+## <a name="mapcount-stlclr"></a><a name="count"></a>map:: Count (STL/CLR)
 
 Zjistí počet prvků odpovídající zadanému klíči.
 
@@ -501,11 +501,11 @@ size_type count(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí počet prvků v řízené sekvenci, která mají stejné pořadí s *klíč*. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.
+Členská funkce vrátí počet prvků v řízené sekvenci, které mají ekvivalentní řazení s *klíčem*. Použijete ji k určení počtu prvků, které jsou aktuálně v řízené sekvenci, které odpovídají zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -541,9 +541,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> map::difference_type (STL/CLR)
+## <a name="mapdifference_type-stlclr"></a><a name="difference_type"></a>map::d ifference_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma prvky.
+Typy podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -553,7 +553,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje element může být záporný počet.
+Typ popisuje pravděpodobně negativní počet prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -596,7 +596,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> map::Empty (STL/CLR)
+## <a name="mapempty-stlclr"></a><a name="empty"></a>map:: Empty (STL/CLR)
 
 Zkouší, zda nejsou přítomny žádné prvky.
 
@@ -608,7 +608,7 @@ bool empty();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [map::size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda na mapě je prázdný.
+Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní k [mapě:: Size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`. Použijete ho k otestování, jestli je mapa prázdná.
 
 ### <a name="example"></a>Příklad
 
@@ -648,7 +648,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> map::end (STL/CLR)
+## <a name="mapend-stlclr"></a><a name="end"></a>map:: end (STL/CLR)
 
 Určuje konec řízené sekvence.
 
@@ -660,7 +660,7 @@ iterator end();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí obousměrný iterátor, který ukazuje za konec řízené sekvence. Můžete ji použít k získání iterátor, který určuje konec řízené sekvence; jeho stav kódu ne změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí obousměrný iterátor, který odkazuje hned za konec řízené sekvence. Použijete ho k získání iterátoru, který označuje konec řízené sekvence. jeho stav se nemění, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -695,7 +695,7 @@ int main()
     }
 ```
 
-## <a name="equal_range"></a> map::equal_range (STL/CLR)
+## <a name="mapequal_range-stlclr"></a><a name="equal_range"></a>map:: equal_range (STL/CLR)
 
 Najde rozsah, který odpovídá zadanému klíči.
 
@@ -708,11 +708,11 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pár iterátorů `cliext::pair<iterator, iterator>(` [map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`. Použijete ji k určení rozsahu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.
+Členská funkce vrací dvojici iterátorů `cliext::pair<iterator, iterator>(` [map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)`(key),` [map:: Upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`. Použijete ji k určení rozsahu prvků, které jsou aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -756,7 +756,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> map::Erase (STL/CLR)
+## <a name="maperase-stlclr"></a><a name="erase"></a>map:: Erase (STL/CLR)
 
 Odebere prvky v určených pozicích.
 
@@ -771,26 +771,26 @@ bool erase(key_type key)
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-Začátek rozsahu vymazat.
+Začátek rozsahu, který se má vymazat
 
 *key*<br/>
-Hodnota klíče vymazat.
+Hodnota klíče, která se má vymazat
 
-*last*<br/>
-Konec rozsahu vymazat.
+*posledního*<br/>
+Konec rozsahu, který se má vymazat
 
-*kde*<br/>
-Element vymazat.
+*,*<br/>
+Prvek k vymazání.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce odstraní prvek řízené sekvence, na které odkazuje *kde*a vrátí iterátor, který určuje první prvek zbývající za prvkem, který odebere, nebo [map::end (STL/CLR) ](../dotnet/map-end-stl-clr.md) `()` Pokud žádný takový prvek neexistuje. Použijete ji k odebrání jeden element.
+První členská funkce odstraní prvek řízené sekvence, na kterou ukazuje, *kde*a vrátí iterátor, který určí první prvek zbývající za odebraný element nebo [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`, pokud žádný takový prvek neexistuje. Použijete ho k odebrání jednoho elementu.
 
-Druhá členská funkce odebere prvky řízené sekvence v rozsahu [`first`, `last`) a vrátí iterátor, který určuje první prvek zbývající za všemi odstraněnými prvky, nebo `end()` Pokud žádný takový prvek existuje... Použijete ji k odebrání nula nebo více souvislých prvků.
+Druhá členská funkce odstraní prvky kontrolované sekvence v rozsahu [`first`, `last`) a vrátí iterátor, který určí první prvek zbývající za odebranými prvky, nebo `end()`, pokud žádný takový prvek neexistuje.. Použijete ho k odebrání nuly nebo více souvislých prvků.
 
-Třetí členská funkce odstraní libovolný prvek řízenou sekvenci, jehož klíč má ekvivalentní řazení na *klíč*a vrátí počet prvků, které jsou odebrány. Použijete ho odebrat a spočítat všechny elementy, které odpovídají zadanému klíči.
+Třetí členská funkce odebere všechny prvky kontrolované sekvence, jejichž klíč má ekvivalentní řazení *klíče*, a vrátí počet odebraných prvků. Použijete ho k odebrání a počítání všech prvků, které odpovídají zadanému klíči.
 
-Každý prvek mazání trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci.
+Každé mazání elementu trvá čas úměrný logaritmu počtu prvků v řízené sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -849,7 +849,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> map::Find (STL/CLR)
+## <a name="mapfind-stlclr"></a><a name="find"></a>map:: Find (STL/CLR)
 
 Vyhledá prvek, který odpovídá zadanému klíči.
 
@@ -862,11 +862,11 @@ iterator find(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má alespoň jeden element v řízené sekvenci s odpovídající řazení *klíč*, členská funkce vrátí iterátor určit jeden z těchto elementů; v opačném případě vrátí [map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. Použijete ji k aktuálně vyhledejte elementu v řízené sekvenci, která odpovídá zadanému klíči.
+Pokud alespoň jeden prvek kontrolované sekvence má ekvivalentní řazení s *klíčem*, vrátí členská funkce iterátor s označením jednoho z těchto elementů. v opačném případě vrací`()`[map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) . Použijete ji k vyhledání prvku, který je aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -908,9 +908,9 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="generic_container"></a> map::generic_container (STL/CLR)
+## <a name="mapgeneric_container-stlclr"></a><a name="generic_container"></a>map:: generic_container (STL/CLR)
 
-Typ obecné rozhraní pro kontejner.
+Typ obecného rozhraní pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -922,7 +922,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecné rozhraní pro tuto třídu šablony kontejneru.
+Typ popisuje obecné rozhraní pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -972,9 +972,9 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="generic_iterator"></a> map::generic_iterator (STL/CLR)
+## <a name="mapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>map:: generic_iterator (STL/CLR)
 
-Typ iterátoru pro použití s obecné rozhraní pro kontejner.
+Typ iterátoru pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -986,7 +986,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecný iterátoru, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.
+Typ popisuje obecný iterátor, který lze použít s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1029,9 +1029,9 @@ int main()
 [a 1]
 ```
 
-## <a name="generic_reverse_iterator"></a> map::generic_reverse_iterator (STL/CLR)
+## <a name="mapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>map:: generic_reverse_iterator (STL/CLR)
 
-Typ "reverse iterator" pro použití s obecné rozhraní pro kontejner.
+Typ reverzního iterátoru pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1043,7 +1043,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecný zpětný iterátor, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.
+Typ popisuje obecný reverzní iterátor, který lze použít s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1085,9 +1085,9 @@ int main()
 [c 3]
 ```
 
-## <a name="generic_value"></a> map::generic_value (STL/CLR)
+## <a name="mapgeneric_value-stlclr"></a><a name="generic_value"></a>map:: generic_value (STL/CLR)
 
-Typ elementu pro použití s obecné rozhraní pro kontejner.
+Typ elementu pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1097,7 +1097,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje.
+Typ popisuje objekt typu `GValue`, který popisuje hodnotu uloženého elementu pro použití s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1139,7 +1139,7 @@ int main()
 [a 1]
 ```
 
-## <a name="insert"></a> map::Insert (STL/CLR)
+## <a name="mapinsert-stlclr"></a><a name="insert"></a>map:: Insert (STL/CLR)
 
 Přidá prvky.
 
@@ -1156,33 +1156,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-Začátek rozsahu pro vložení.
+Začátek rozsahu, který se má vložit
 
-*last*<br/>
-Konec rozsahu pro vložení.
+*posledního*<br/>
+Konec rozsahu, který má být vložen.
 
-*doprava*<br/>
+*Kliknutím*<br/>
 Výčet pro vložení.
 
-*Val*<br/>
-Hodnota klíče pro vložení.
+*počítává*<br/>
+Hodnota klíče, která se má vložit
 
-*kde*<br/>
-Kde v kontejneru pro vložení (jenom pro pomocný parametr).
+*,*<br/>
+Kam umístit do kontejneru (jenom Nápověda)
 
 ### <a name="remarks"></a>Poznámky
 
-Každá z členské funkce vloží pořadí určeném zbývající operandy.
+Každá z členských funkcí vloží sekvenci určenou zbývajícími operandy.
 
-První členská funkce endeavors vložit element s hodnotou *val*a vrátí dvojice hodnot `X`. Pokud `X.second` má hodnotu true, `X.first` označí nově vložený prvek; v opačném případě `X.first` určuje element s ekvivalentní řazení, která již existuje a je vložen žádný nový prvek. Použijete ji k vložení jeden element.
+První členská funkce budoucna pro vložení elementu s hodnotou *Val*a vrátí dvojici hodnot `X`. Pokud `X.second` má hodnotu true, `X.first` označí nově vložený element; jinak `X.first` určí element s ekvivalentním řazením, které již existuje, a žádný nový prvek není vložen. Použijete ho k vložení jediného elementu.
 
-Druhá členská funkce vloží prvek s hodnotou *val*s použitím *kde* jako Nápověda (ke zlepšení výkonu) a vrátí iterátor, který určuje nově vložený prvek. Použijete ji k vložení jeden element, který může být vedle elementu, které už znáte.
+Druhá členská funkce vloží element s hodnotou *Val*, pomocí *WHERE* jako pomocný parametr (pro zlepšení výkonu) a vrátí iterátor, který určí nově vložený element. Použijete ho k vložení jednoho prvku, který může být sousedící s prvkem, který znáte.
 
-Třetí členská funkce vloží sekvenci [`first`, `last`). Použijete ji k vložení nula nebo více elementů zkopírovaných z jiné pořadí.
+Třetí členská funkce vloží sekvenci [`first`, `last`). Použijete ho k vložení nula nebo více prvků zkopírovaných z jiné sekvence.
 
-Čtvrtá členská funkce vloží pořadí určeném *správné*. Použijete ji k vložení pořadí popsal enumerátor.
+Čtvrtá členská funkce vloží sekvenci určenou *vpravo*. Použijete ho k vložení sekvence popsané enumerátorem.
 
-Každý prvek vložení trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci. Vložení situace může nastat v amortizovaném konstantním času, ale zadaný pomocného parametru, který určuje prvek vedle kurzor.
+Každé vložení elementu trvá čas úměrný logaritmu počtu prvků v řízené sekvenci. Vložení se může objevit v čase konstantního času, avšak s použitím pomocného parametru, který určuje prvek sousedící s bodem vložení.
 
 ### <a name="example"></a>Příklad
 
@@ -1259,7 +1259,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="iterator"></a> map::iterator (STL/CLR)
+## <a name="mapiterator-stlclr"></a><a name="iterator"></a>map:: iterátor (STL/CLR)
 
 Typ iterátoru řízené sekvence
 
@@ -1271,7 +1271,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T1` , který může sloužit jako obousměrný iterátor, který řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T1`, který může sloužit jako obousměrný iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -1301,9 +1301,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> map::key_comp (STL/CLR)
+## <a name="mapkey_comp-stlclr"></a><a name="key_comp"></a>map:: key_comp (STL/CLR)
 
-Zkopíruje pořadí delegáta pro dva klíče.
+Zkopíruje delegáta řazení dvou klíčů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1313,7 +1313,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dva klíče.
+Členská funkce vrátí delegáta řazení, který se používá k seřazení řízené sekvence. Použijete ho k porovnání dvou klíčů.
 
 ### <a name="example"></a>Příklad
 
@@ -1360,9 +1360,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> map::key_compare (STL/CLR)
+## <a name="mapkey_compare-stlclr"></a><a name="key_compare"></a>map:: key_compare (STL/CLR)
 
-Pořadí delegáta pro dva klíče.
+Delegát řazení pro dva klíče.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1373,7 +1373,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro delegáta, který určuje řazení klíče argumenty.
+Typ je synonymum pro delegáta, který určuje pořadí jeho klíčových argumentů.
 
 ### <a name="example"></a>Příklad
 
@@ -1420,7 +1420,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> map::key_type (STL/CLR)
+## <a name="mapkey_type-stlclr"></a><a name="key_type"></a>map:: key_type (STL/CLR)
 
 Typ klíče řazení
 
@@ -1432,7 +1432,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony *klíč*.
+Typ je synonymum pro *klíč*parametru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1465,9 +1465,9 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> map::lower_bound (STL/CLR)
+## <a name="maplower_bound-stlclr"></a><a name="lower_bound"></a>map:: lower_bound (STL/CLR)
 
-Vyhledá počátek rozsahu, který odpovídá zadanému klíči.
+Vyhledá začátek rozsahu, který odpovídá zadanému klíči.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1478,11 +1478,11 @@ iterator lower_bound(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce určuje první prvek `X` v řízené sekvenci, která má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, vrátí [map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje `X`. Použijete ji k aktuálně vyhledejte na začátek pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.
+Členská funkce určuje první prvek `X` v řízené sekvenci, která má ekvivalentní řazení *klíče*. Pokud žádný takový prvek neexistuje, vrátí [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určí `X`. Použijete ji k vyhledání začátku sekvence prvků, které jsou aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -1524,7 +1524,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="make_value"></a> map::make_value (STL/CLR)
+## <a name="mapmake_value-stlclr"></a><a name="make_value"></a>map:: make_value (STL/CLR)
 
 Vytvoří objekt hodnoty.
 
@@ -1537,14 +1537,14 @@ static value_type make_value(key_type key, mapped_type mapped);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče používat.
+Hodnota klíče, která se má použít
 
-*Mapovat*<br/>
-Mapovaná hledanou hodnotu.
+*mapovaný*<br/>
+Namapovaná hodnota, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `value_type` objekt, jehož klíč je *klíč* a jejichž mapované hodnoty se *namapované*. Použijete ji k vytvoření objektu vhodný pro použití s několika další členské funkce.
+Členská funkce vrátí objekt `value_type`, jehož klíč je *klíč* , a jehož mapovaná hodnota je *namapovaná*. Použijete ho k vytvoření objektu vhodného pro použití s několika dalšími členskými funkcemi.
 
 ### <a name="example"></a>Příklad
 
@@ -1573,7 +1573,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="map"></a> map::map (STL/CLR)
+## <a name="mapmap-stlclr"></a><a name="map"></a>map:: map (STL/CLR)
 
 Sestaví objekt kontejneru.
 
@@ -1597,16 +1597,16 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-Začátek rozsahu pro vložení.
+Začátek rozsahu, který se má vložit
 
-*last*<br/>
-Konec rozsahu pro vložení.
+*posledního*<br/>
+Konec rozsahu, který má být vložen.
 
-*Před*<br/>
-Řazení predikátu řízené sekvence.
+*čekání*<br/>
+Predikát řazení pro řízenou sekvenci.
 
-*doprava*<br/>
-Objekt nebo rozsahu pro vložení.
+*Kliknutím*<br/>
+Objekt nebo rozsah, který chcete vložit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1614,49 +1614,49 @@ Konstruktor:
 
 `map();`
 
-Inicializuje výchozí řazení predikátu řízené sekvence bez prvků `key_compare()`. Použijete ji k určení prázdnou počáteční řízenou sekvenci, s výchozí řazení predikátu.
+Inicializuje řízenou sekvenci bez elementů s výchozím predikátem řazení `key_compare()`. Použijete ji k zadání prázdné počáteční řízené sekvence s výchozím predikátem řazení.
 
 Konstruktor:
 
 `explicit map(key_compare^ pred);`
 
-Inicializuje řízené sekvence bez prvků pořadí predikátem *před*. Použít prázdnou počáteční řízenou sekvenci, určit se zadanou predikát pořadí.
+Inicializuje řízená sekvence bez elementů s predikátem řazení *před*. Použijete ji k zadání prázdné počáteční řízené sekvence se zadaným predikátem řazení.
 
 Konstruktor:
 
 `map(map<Key, Mapped>% right);`
 
-Inicializuje řízené sekvence s pořadím [`right.begin()`, `right.end()`), s výchozí řazení predikátu. Můžete použít k určení počáteční řízené sekvence, která je kopii sekvence řízenou parametrem objekt map *správné*, s výchozí řazení predikátu.
+Inicializuje řízenou sekvenci pomocí sekvence [`right.begin()`, `right.end()`) s výchozím predikátem řazení. Použijete ji k určení počáteční řízené sekvence, která je kopií sekvence řízené objektem map *vpravo*s výchozím predikátem řazení.
 
 Konstruktor:
 
 `map(map<Key, Mapped>^ right);`
 
-Inicializuje řízené sekvence s pořadím [`right->begin()`, `right->end()`), s výchozí řazení predikátu. Můžete použít k určení počáteční řízené sekvence, která je kopii sekvence řízenou parametrem objekt map *správné*, s výchozí řazení predikátu.
+Inicializuje řízenou sekvenci pomocí sekvence [`right->begin()`, `right->end()`) s výchozím predikátem řazení. Použijete ji k určení počáteční řízené sekvence, která je kopií sekvence řízené objektem map *vpravo*s výchozím predikátem řazení.
 
 Konstruktor:
 
 `template<typename InIter> map(InIter first, InIter last);`
 
-Inicializuje řízené sekvence s pořadím [`first`, `last`), s výchozí řazení predikátu. Používejte aby řízené sekvence kopii jiné pořadí, s výchozí řazení predikátu.
+Inicializuje řízenou sekvenci pomocí sekvence [`first`, `last`) s výchozím predikátem řazení. Použijete ji k tomu, aby řízená sekvence zkopírovala jinou sekvenci s výchozím predikátem řazení.
 
 Konstruktor:
 
 `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`
 
-Inicializuje řízené sekvence s pořadím [`first`, `last`), pořadí predikátem *před*. Použijete ji k vytvoření kopie jiné pořadí se zadanou predikát pořadí řízené sekvence.
+Inicializuje řízenou sekvenci pomocí sekvence [`first`, `last`) s predikátem řazení *před*. Použijete ji k tomu, aby řízená sekvence zkopírovala jinou sekvenci se zadaným predikátem řazení.
 
 Konstruktor:
 
 `map(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, s výchozí řazení predikátu. Použijete ji k vytvoření kopie jiné pořadí popsal čítače, s výchozí řazení predikátu řízené sekvence.
+Inicializuje řízenou sekvenci sekvencí, která je určena *přípravou*, s výchozím predikátem řazení. Použijete ho k tomu, aby řízená sekvence zkopírovala jinou sekvenci popsanou enumerátorem s výchozím predikátem řazení.
 
 Konstruktor:
 
 `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, pořadí predikátem *před*. Použijete ji k vytvoření kopie jiné pořadí popsal enumerátor se zadanou predikát pořadí řízené sekvence.
+Inicializuje řízená sekvence sekvencí, která je určena *přípravou*, s predikátem řazení *před*. Použijete ho k tomu, aby řízená sekvence zkopírovala jinou sekvenci popsanou enumerátorem, se zadaným predikátem řazení.
 
 ### <a name="example"></a>Příklad
 
@@ -1746,7 +1746,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> map::mapped_type (STL/CLR)
+## <a name="mapmapped_type-stlclr"></a><a name="mapped_type"></a>map:: mapped_type (STL/CLR)
 
 Typ mapované hodnoty přiřazené ke každému klíči
 
@@ -1758,7 +1758,7 @@ typedef Mapped mapped_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony *mapované*.
+Typ je synonymum pro *mapovaný*parametr šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1791,9 +1791,9 @@ int main()
 1 2 3
 ```
 
-## <a name="op_as"></a> map::Operator = (STL/CLR)
+## <a name="mapoperator-stlclr"></a><a name="op_as"></a>map:: operator = (STL/CLR)
 
-Nahradí řízené sekvence.
+Nahradí řízenou sekvenci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1803,12 +1803,12 @@ map<Key, Mapped>% operator=(map<Key, Mapped>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Kontejner pro kopírování.
+*Kliknutím*<br/>
+Kontejner ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.
+Operátor členu kopíruje *přímo* na objekt a potom vrátí `*this`. Použijete ji k nahrazení kontrolované sekvence kopií kontrolované sekvence *vpravo*.
 
 ### <a name="example"></a>Příklad
 
@@ -1846,9 +1846,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op"></a> map::Operator(STL/CLR)
+## <a name="mapoperatorstlclr"></a><a name="op"></a>map:: – operátor (STL/CLR)
 
-Mapuje klíč na její přidružené mapované hodnoty.
+Mapuje klíč na jeho přidruženou mapovanou hodnotu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1859,11 +1859,11 @@ mapped_type operator[](key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce přejeme vyhledání elementu s odpovídající řazení na *klíč*. Pokud jeden najde, vrátí související namapovanou hodnotu; v opačném případě vloží `value_type(key, mapped_type())` a vrátí přidružený namapované hodnotu (výchozí). Použijte ho k vyhledání mapované hodnoty zadané jeho přidružený klíč a ujistěte se, že položka existuje pro klíč, pokud žádná se nenašla.
+Členské funkce budoucna k nalezení prvku s ekvivalentním řazením *klíče*. Pokud nalezne jednu, vrátí přidruženou mapovanou hodnotu; v opačném případě vloží `value_type(key, mapped_type())` a vrátí přidruženou (výchozí) mapovanou hodnotu. Použijete ji k vyhledání mapované hodnoty, která má přiřazený klíč, nebo k zajištění toho, že pro klíč existuje položka, pokud žádná není nalezena.
 
 ### <a name="example"></a>Příklad
 
@@ -1913,9 +1913,9 @@ c1[b] = 2
 [A 10] [a 1] [b 2] [c 13]
 ```
 
-## <a name="rbegin"></a> map::rbegin (STL/CLR)
+## <a name="maprbegin-stlclr"></a><a name="rbegin"></a>map:: rbegin (STL/CLR)
 
-Určuje začátek řízené obrácené sekvenci.
+Určuje začátek obrácené kontrolované sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1925,7 +1925,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí zpětný iterátor, který určuje poslední prvek řízenou sekvenci nebo hned za začátku k prázdné sekvenci. Proto, označí `beginning` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí reverzní iterátor, který určuje poslední prvek řízené sekvence nebo těsně za začátek prázdné sekvence. Proto určuje `beginning` reverzní sekvence. Použijete ho k získání iterátoru, který určí `current` začátkem kontrolované sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -1964,7 +1964,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> map::Reference (STL/CLR)
+## <a name="mapreference-stlclr"></a><a name="reference"></a>map:: Reference (STL/CLR)
 
 Typ odkazu na prvek
 
@@ -1976,7 +1976,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje odkaz na element.
+Typ popisuje odkaz na prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -2009,9 +2009,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rend"></a> map::rend (STL/CLR)
+## <a name="maprend-stlclr"></a><a name="rend"></a>map:: rend (STL/CLR)
 
-Určuje konec řízené obrácené sekvenci.
+Určuje konec reverzní kontrolované sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2021,7 +2021,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí "reverse iterator", který ukazuje za začátek řízené sekvence. Proto, označí `end` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` konec řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí reverzní iterátor, který odkazuje hned za začátek řízené sekvence. Proto určuje `end` reverzní sekvence. Použijete ho k získání iterátoru, který určuje `current` konec řízené sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -2062,9 +2062,9 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> map::reverse_iterator (STL/CLR)
+## <a name="mapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>map:: reverse_iterator (STL/CLR)
 
-Typ "reverse iterator" pro řízenou sekvenci.
+Typ reverzního iterátoru řízené sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2074,7 +2074,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T3` , který může sloužit jako "reverse iterator" pro řízenou sekvenci.
+Typ popisuje objekt nespecifikovaného typu `T3`, který může sloužit jako reverzní iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -2104,7 +2104,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="size"></a> map::size (STL/CLR)
+## <a name="mapsize-stlclr"></a><a name="size"></a>map:: Size (STL/CLR)
 
 Spočítá počet prvků.
 
@@ -2116,7 +2116,7 @@ size_type size();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`.
+Členská funkce vrací délku řízené sekvence. Použijete ji k určení počtu prvků, které jsou aktuálně v řízené sekvenci. Pokud vás zajímá, zda má sekvence nenulovou velikost, přečtěte si téma [map:: Empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Příklad
 
@@ -2156,9 +2156,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> map::size_type (STL/CLR)
+## <a name="mapsize_type-stlclr"></a><a name="size_type"></a>map:: size_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma elementu.
+Typ podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2168,7 +2168,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje počet prvků záporná.
+Typ popisuje nezáporný počet prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -2204,7 +2204,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> map::swap (STL/CLR)
+## <a name="mapswap-stlclr"></a><a name="swap"></a>map:: swap (STL/CLR)
 
 Zamění obsah dvou kontejnerů.
 
@@ -2216,12 +2216,12 @@ void swap(map<Key, Mapped>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Kontejner pro obsah s.
+*Kliknutím*<br/>
+Kontejner pro prohození obsahu pomocí.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Zamění řízené sekvence mezi `this` a *správné*. Provádí se v konstantním času a vyvolá žádné výjimky. Můžete použít jako rychlý způsob, jak Zamění obsah dvou kontejnerů.
+Členská funkce přemění kontrolované sekvence mezi `this` a *pravou*. Provede to v konstantním čase a nevyvolává žádné výjimky. Použijete ho jako rychlý způsob, jak vyměňovat obsah dvou kontejnerů.
 
 ### <a name="example"></a>Příklad
 
@@ -2272,9 +2272,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="to_array"></a> map::to_array (STL/CLR)
+## <a name="mapto_array-stlclr"></a><a name="to_array"></a>map:: to_array (STL/CLR)
 
-Zkopíruje do nového pole řízené sekvence.
+Zkopíruje řízenou sekvenci do nového pole.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2284,7 +2284,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.
+Členská funkce vrátí pole obsahující řízenou sekvenci. Použijete ho k získání kopie řízené sekvence ve formuláři Array.
 
 ### <a name="example"></a>Příklad
 
@@ -2322,7 +2322,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> map::upper_bound (STL/CLR)
+## <a name="mapupper_bound-stlclr"></a><a name="upper_bound"></a>map:: upper_bound (STL/CLR)
 
 Najde konec rozsahu, který odpovídá zadanému klíči.
 
@@ -2335,11 +2335,11 @@ iterator upper_bound(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce určuje poslední prvek `X` v řízené sekvenci, která má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, nebo pokud `X` je po posledním prvku v řízené sekvenci vrátí [map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje prvního prvku mimo `X`. Pomocí aktuálně najít konec pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.
+Členská funkce určuje poslední prvek `X` v řízené sekvenci, která má ekvivalentní řazení *klíče*. Pokud žádný takový prvek neexistuje nebo pokud je `X` posledním prvkem řízené sekvence, vrátí [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určí první prvek nad rámec `X`. Použijete ho k vyhledání konce posloupnosti prvků, které jsou aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -2381,9 +2381,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> map::value_comp (STL/CLR)
+## <a name="mapvalue_comp-stlclr"></a><a name="value_comp"></a>map:: value_comp (STL/CLR)
 
-Zkopíruje pořadí delegáta pro dvě hodnoty prvků.
+Zkopíruje delegáta řazení pro dvě hodnoty elementu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2393,7 +2393,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dvě hodnoty prvků.
+Členská funkce vrátí delegáta řazení, který se používá k seřazení řízené sekvence. Použijete ho k porovnání dvou hodnot prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -2428,9 +2428,9 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_compare"></a> map::value_compare (STL/CLR)
+## <a name="mapvalue_compare-stlclr"></a><a name="value_compare"></a>map:: value_compare (STL/CLR)
 
-Pořadí delegáta pro dvě hodnoty prvků.
+Delegát řazení pro dvě hodnoty elementu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2441,7 +2441,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro delegáta, který určuje pořadí z argumentů hodnotu.
+Typ je synonymum pro delegáta, který určuje řazení jeho hodnotových argumentů.
 
 ### <a name="example"></a>Příklad
 
@@ -2476,7 +2476,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> map::value_type (STL/CLR)
+## <a name="mapvalue_type-stlclr"></a><a name="value_type"></a>map:: value_type (STL/CLR)
 
 Typ prvku
 
@@ -2520,9 +2520,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_neq"></a> Operator! = (map) (STL/CLR)
+## <a name="operator-map-stlclr"></a><a name="op_neq"></a>operator! = (map) – operátor (STL/CLR)
 
-Seznam není rovno porovnání.
+Seznam se neshoduje s porovnáním.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2535,15 +2535,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `!(left == right)`. Pomocí něho můžete testovat, zda *levé* není stejný jako seřazené *správné* když jsou dvě mapy porovnání elementu pomocí elementu.
+Funkce operátoru vrací `!(left == right)`. Použijete ho k otestování, jestli *vlevo* není seřazené stejně jako *právo* , pokud jsou tyto dvě mapy porovnány s elementy podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -2591,9 +2591,9 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operátor&lt; (map) (STL/CLR)
+## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a>operator&lt; (map) – operátor (STL/CLR)
 
-Seznam menší než porovnání.
+Seznam je menší než porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2606,15 +2606,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Operátoru funkce vrátí hodnota true v případě, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, který `left[i] < right[i]`. V opačném případě vrátí `left->size() < right->size()` pomocí něho můžete testovat, zda *levé* je řazen před *správné* když jsou dvě mapy porovnání elementu pomocí elementu.
+Funkce operator vrátí hodnotu true, pokud `i` nejnižší pozice, pro kterou `!(right[i] < left[i])` je také true `left[i] < right[i]`. V opačném případě vrátí `left->size() < right->size()` použijete k otestování *, zda je* před *pravou* seřazena druhá mapa, pokud jsou obě mapy porovnány elementem.
 
 ### <a name="example"></a>Příklad
 
@@ -2662,9 +2662,9 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operátor&lt;= (map) (STL/CLR)
+## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a>operator&lt;= (map) – operátor (STL/CLR)
 
-Seznam menší nebo rovna porovnání.
+Seznam je menší nebo roven hodnotě porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2677,15 +2677,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `!(right < left)`. Pomocí něho můžete testovat, zda *levé* není seřazené po *správné* když jsou dvě mapy porovnání elementu pomocí elementu.
+Funkce operátoru vrací `!(right < left)`. Použijete ho k otestování *, jestli není* po *pravé straně* , když jsou tyto dvě mapy porovnány s elementy podle elementu, k disobjednávce.
 
 ### <a name="example"></a>Příklad
 
@@ -2733,9 +2733,9 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> Operator == (map) (STL/CLR)
+## <a name="operator-map-stlclr"></a><a name="op_eq"></a>operator = = (map) – operátor (STL/CLR)
 
-Porovnání rovna seznamu.
+Seznam se stejným porovnáním
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2748,15 +2748,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrátí hodnotu true pouze v případě, že řídí sekvencí *levé* a *správné* mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Pomocí něho můžete testovat, zda *levé* je stejný jako seřazené *správné* když jsou dvě mapy porovnání elementu pomocí elementu.
+Funkce operator vrátí hodnotu true pouze v případě, že sekvence řízené *levou* a *pravou* mají stejnou délku a pro každou pozici `i``left[i] ==` `right[i]`. Použijete ho k otestování, jestli je *levé* *, pokud jsou* tyto dvě mapy porovnány s elementy podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -2804,7 +2804,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operátor&gt; (map) (STL/CLR)
+## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a>operator&gt; (map) – operátor (STL/CLR)
 
 Seznam je větší než porovnání.
 
@@ -2819,15 +2819,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `right` `<` `left`. Pomocí něho můžete testovat, zda *levé* seřazené po *správné* když jsou dvě mapy porovnání elementu pomocí elementu.
+Funkce operator vrací `right` `<` `left`. Použijete ji k otestování, *zda je* po *pravé straně* porovnávána tato dvě mapování na prvky podle prvku.
 
 ### <a name="example"></a>Příklad
 
@@ -2875,9 +2875,9 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operátor&gt;= (map) (STL/CLR)
+## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a>operator&gt;= (map) – operátor (STL/CLR)
 
-Seznam větší než nebo rovna porovnání.
+Seznam je větší než nebo rovno porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2890,15 +2890,15 @@ template<typename Key,
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `!(left` `<` `right)`. Pomocí něho můžete testovat, zda *levé* není řazen před *správné* když jsou dvě mapy porovnání elementu pomocí elementu.
+Funkce operator vrací `!(left` `<` `right)`. Použijete ji k otestování, zda je *ponechána* před *pravou* , pokud jsou obě mapy porovnány podle elementu.
 
 ### <a name="example"></a>Příklad
 

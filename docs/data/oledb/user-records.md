@@ -15,23 +15,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: c9c1126f0e8248f31ac739bb1d939f811bda678d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525289"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209440"
 ---
 # <a name="user-records"></a>Uživatelské záznamy
 
 > [!NOTE]
-> Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](creating-a-consumer-without-using-a-wizard.md).
+> Průvodce příjemcem OLE DB ATL není v aplikaci Visual Studio 2019 a novějších k dispozici. Tuto funkci můžete přesto přidat ručně. Další informace najdete v tématu [Vytvoření příjemce bez použití Průvodce](creating-a-consumer-without-using-a-wizard.md).
 
-Pro použití statického následovníka (to znamená, přístupový objekt odvozený od `CAccessor`), vaše spotřebitel musí mít uživatelský záznam. Záznam uživatele je třída C++, který obsahuje prvky dat ke zpracování vstupu nebo výstupu. **Průvodce příjemcem ATL OLE DB** generuje záznam uživatele pro vaše příjemce. Přidat metody do uživatelského záznamu pro volitelné úkoly, jako je zpracování příkazů.
+Pro použití statického přístupového objektu (to znamená přistupující objekt odvozený z `CAccessor`) musí mít váš příjemce záznam uživatele. Záznam uživatele je C++ třída, která obsahuje datové prvky pro zpracování vstupu nebo výstupu. **Průvodce příjemcem OLE DB ATL** vygeneruje uživatelský záznam pro vašeho příjemce. Do záznamu uživatele můžete přidat metody pro volitelné úlohy, jako jsou příkazy pro zpracování.
 
-Následující kód ukazuje ukázkové záznam, který zpracovává příkazy. V záznamu uživatele BEGIN_COLUMN_MAP představuje sadu řádků data předaná příjemci z zprostředkovatele. BEGIN_PARAM_MAP představuje sadu parametrů příkazu. Tento příklad používá [CCommand](../../data/oledb/ccommand-class.md) třídy pro zpracování parametry příkazu. Datové členy v mapě položky představují posun do souvislý blok paměti pro každou instanci třídy. COLUMN_ENTRY makra odpovídají PROVIDER_COLUMN_ENTRY makra na straně zprostředkovatele.
+Následující kód ukazuje vzorový záznam, který zpracovává příkazy. V záznamu uživatele BEGIN_COLUMN_MAP představuje datovou sadu, která byla předána příjemci od poskytovatele. BEGIN_PARAM_MAP představuje sadu parametrů příkazu. Tento příklad používá třídu [CCommand](../../data/oledb/ccommand-class.md) ke zpracování parametrů příkazu. Datové členy v položkách mapy reprezentují posuny do jednoho souvislého bloku paměti pro každou instanci třídy. COLUMN_ENTRY makra odpovídají PROVIDER_COLUMN_ENTRYm makrům na straně poskytovatele.
 
-Další informace o COLUMN_MAP a PARAM_MAP najdete v tématu [makra pro šablony příjemců OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).
+Další informace o makrech COLUMN_MAP a PARAM_MAP naleznete v tématu [makra pro OLE DB šablony zákazníků](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).
 
 ```cpp
 class CArtists
@@ -56,15 +56,15 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="wizard-generated-user-records"></a>Generované průvodcem uživatelských záznamů
+## <a name="wizard-generated-user-records"></a>Záznamy uživatelů generovaných průvodcem
 
-Pokud používáte **průvodce příjemcem ATL OLE DB** generovat příjemce, máte na výběr mezi používáním šablony technologie OLE DB nebo OLE DB atributy. Generovaný kód je v každém případě liší. Další informace o tomto kódu najdete v tématu [vygenerované třídy](../../data/oledb/consumer-wizard-generated-classes.md).
+Použijete-li **Průvodce příjemcem OLE DB ATL** k vygenerování příjemce, máte možnost použít šablony OLE DB nebo atributy OLE DB. Vygenerovaný kód se v každém případě liší. Další informace o tomto kódu naleznete v tématu [třídy generované průvodcem příjemce](../../data/oledb/consumer-wizard-generated-classes.md).
 
-## <a name="user-record-support-for-multiple-accessors"></a>Podpora uživatelského záznamu pro několik přístupových objektů
+## <a name="user-record-support-for-multiple-accessors"></a>Podpora záznamu uživatelů pro více přístupových objektů
 
-Podrobné informace o scénářích, ve kterých je potřeba použít několik přístupových objektů, naleznete v tématu [použití více přístupových objektů pro sadu řádků](../../data/oledb/using-multiple-accessors-on-a-rowset.md).
+Podrobné informace o scénářích, ve kterých potřebujete použít více přístupových objektů, naleznete v tématu [použití více přístupových objektů pro sadu řádků](../../data/oledb/using-multiple-accessors-on-a-rowset.md).
 
-Následující příklad ukazuje záznam uživatele, pro podporu více přístupových objektů v dané sadě řádků změnit. Místo BEGIN_COLUMN_MAP a END_COLUMN_MAP používá [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) a [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) pro každý přistupující objekt. BEGIN_ACCESSOR – makro Určuje číslo přístupového objektu (posun od nuly) a zda je přistupující objekt automaticky přistupující objekt. Volání načtel `GetData` k načtení dat automaticky na volání [MoveNext](../../data/oledb/crowset-movenext.md). Manuální přístupových objektů vyžadují, abyste explicitně načíst data. Pokud provádíte navázání na pole velkých objemů dat (např. rastrový obrázek), které možná nebudete chtít načíst pro každý záznam, použijte manuální přistupující objekt.
+Následující příklad ukazuje záznam uživatele upravený tak, aby podporoval více přístupových objektů pro sadu řádků. Místo BEGIN_COLUMN_MAP a END_COLUMN_MAP používá pro každý přistupující objekt [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) a [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) . BEGIN_ACCESSOR makro Určuje číslo přistupujícího objektu (posun od nuly) a zda je přistupující objekt autoaccesser. Autoaccesss volá `GetData` pro automatické načtení dat při volání metody [MoveNext](../../data/oledb/crowset-movenext.md). Neautomatické přistupující objekty vyžadují, abyste data explicitně načetli. Pokud vytváříte vazbu k velkému datovému poli (například k rastrovému obrázku), který nechcete načíst pro každý záznam, použijte neautomatický přistupující objekt.
 
 ```cpp
 class CMultiArtists
@@ -88,6 +88,6 @@ END_ACCESSOR_MAP()
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)

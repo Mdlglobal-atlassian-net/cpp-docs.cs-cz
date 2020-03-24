@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2114
 ms.assetid: abdfdc46-6601-451f-8e81-81e92bcd2208
-ms.openlocfilehash: 0939319b363a36e534d6910a72c07d6f432c2112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b748d6224b56cbfe893348cf156f9922b50f3046
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220084"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191454"
 ---
 # <a name="resource-compiler-error-rc2114"></a>Chyba kompilátoru prostředků RC2114
 
-Název třídy očekávané ovládacího prvku
+očekával se název třídy ovládacího prvku.
 
-`class` Pole v příkazu ovládacího prvku **dialogové okno** příkazu musí být jedna z následujících typů: TLAČÍTKO, pole se SEZNAMEM, úpravy, LISTBOX, POSUVNÍK, STATICKÝ, nebo uživatelem definovaný. Ujistěte se, že třída je napsán správně.
+Pole `class` příkazu CONTROL v příkazu **dialogového okna** musí být jeden z následujících typů: tlačítko, pole se seznamem, úpravy, seznam, posuvník, statická nebo uživatelsky definovaná. Ujistěte se, že je třída správně napsaná.
