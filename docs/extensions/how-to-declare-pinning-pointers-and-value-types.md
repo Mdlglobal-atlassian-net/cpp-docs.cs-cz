@@ -6,16 +6,16 @@ helpviewer_keywords:
 - value types, declaring
 - pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-ms.openlocfilehash: 901980c76aac5dd364f2fa2fae0e007f5d25f3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ef7e82161703a272a571392fd66e6055371c61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254869"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181964"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Postupy: Deklarace přídavných ukazatelů a typů hodnot
 
-Hodnotový typ jde použít boxing implicitně. Pak může deklarovat ukazatel Připnutí na objekt typu hodnoty samostatně a použití **pin_ptr** na hodnotový typu.
+Hodnotový typ může být implicitně zabalený. Pak můžete deklarovat ukazatel připnutí na samotný objekt typu hodnoty a použít **pin_ptr** na zabalený typ hodnoty.
 
 ## <a name="example"></a>Příklad
 
@@ -45,6 +45,6 @@ int main() {
 7
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)

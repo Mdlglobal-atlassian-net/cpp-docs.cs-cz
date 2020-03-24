@@ -1,5 +1,5 @@
 ---
-title: 'Jeden&#39;s vlastní operátor doplňku: ~'
+title: 'Druhý&#39;operátor s doplňkem: ~'
 ms.date: 11/04/2016
 f1_keywords:
 - "~"
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-ms.openlocfilehash: d8fb8ca56932669ff85646f2aa0c10691122013b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 777f253925caf38647863bdaa93fde8d5a03e3f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245017"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177713"
 ---
-# <a name="one39s-complement-operator-"></a>Jeden&#39;s vlastní operátor doplňku: ~
+# <a name="one39s-complement-operator-"></a>Druhý&#39;operátor s doplňkem: ~
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,7 +31,7 @@ Jeden z operátorů doplňku (`~`), někdy nazývaný operátor „bitového dop
 
 ## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor ~
 
-**Compl** operátor je textový ekvivalent operátoru `~`. Existují dva způsoby přístupu k **compl** operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md).
+Operátor **comp** je textový ekvivalent `~`. Existují dva způsoby, jak získat přístup k operátoru **comp** ve svých programech: zahrňte hlavičkový soubor `iso646.h`nebo zkompilujte pomocí [/za](../build/reference/za-ze-disable-language-extensions.md).
 
 ## <a name="example"></a>Příklad
 
@@ -52,9 +52,9 @@ int main () {
 
 V tomto příkladu je nová hodnota přiřazená proměnné `y` jedničkovým doplňkem hodnoty bez znaménka 0xFFFF nebo 0x0000.
 
-Celočíselné povýšení proběhne na celočíselných operandech a výsledný typ je typ, na který je operand povýšen. Zobrazit [standardní převody](standard-conversions.md) Další informace o tom, jak je povýšení provedeno.
+Celočíselné povýšení proběhne na celočíselných operandech a výsledný typ je typ, na který je operand povýšen. Další informace o tom, jak se povýšení provádí, najdete v tématu [standardní převody](standard-conversions.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

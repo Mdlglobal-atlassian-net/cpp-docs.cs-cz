@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0047
 - CXX0047
 ms.assetid: db23d0db-fce2-4d86-b391-6e1d6ad13fd4
-ms.openlocfilehash: ecc2ca4061f01cfa3ef868ed2916ceaeb5513116
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b5a8ebaaac351833970b10336f4f71940082114
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160793"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184902"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>Chyba při vyhodnocování výrazu CXX0047
 
-Seznam argumentů se neshoduje – funkce
+seznam argumentů neodpovídá funkci.
 
-Výraz volá funkci s seznamu aplikace skutečný parametr, který neodpovídá seznamu formálních parametrů. všechny funkce se stejným názvem, které jsou definovány v programu.
+Výraz nazvaný funkci se skutečným seznamem parametrů, který neodpovídá seznamu formálních parametrů žádné funkce se stejným názvem definovaným v programu.
 
-Přetížené funkce lze volat pouze v případě, že je v případě přesné parametr shody nebo shodu, která nevyžaduje konstrukce objektu.
+Přetížené funkce lze volat pouze v případě, že existuje přesný parametr nebo shoda, která nevyžaduje konstrukci objektu.
 
-Tato chyba se shoduje s CAN0047.
+Tato chyba je shodná s CAN0047.

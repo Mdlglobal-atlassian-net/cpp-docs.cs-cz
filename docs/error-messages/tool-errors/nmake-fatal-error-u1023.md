@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - U1023
 ms.assetid: 22d4c469-85da-43ee-86d1-171b1b99217d
-ms.openlocfilehash: 13c866e1d9c4cd14dcffbf573b1e125cb6f46b2e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bb25073cdb0a5fe2561d11d4fc6f86540e798049
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345348"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173410"
 ---
 # <a name="nmake-fatal-error-u1023"></a>Závažná chyba nástroje NMAKE U1023
 
@@ -19,4 +19,4 @@ Chyba syntaxe ve výrazu
 
 Výraz je neplatný.
 
-Zkontrolujte povolené operátory a priorita operátorů.
+Podívejte se na povolené operátory a prioritu operátoru.

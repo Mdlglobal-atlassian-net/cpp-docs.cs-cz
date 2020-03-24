@@ -1,30 +1,30 @@
 ---
-title: Kompilátor C4840 upozornění (úroveň 4)
+title: Upozornění kompilátoru (úroveň 4) C4840
 ms.date: 09/13/2018
 f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: a757004659c1a9d2ce858cfae5ddfbc6c024d782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185201"
 ---
-# <a name="compiler-warning-level-4-c4840"></a>Kompilátor C4840 upozornění (úroveň 4)
+# <a name="compiler-warning-level-4-c4840"></a>Upozornění kompilátoru (úroveň 4) C4840
 
-> nepřenositelné použití třídy*typ*"jako argumentu variadické funkce
+> nepřenosné použití třídy*Type*jako argumentu funkce variadické
 
 ## <a name="remarks"></a>Poznámky
 
-Třídy nebo struktury, které jsou předány variadické funkce musí být snadno kopírovatelná. Při předávání těchto objektů, kompilátor jednoduše vytvoří bitové kopie a nevolá konstruktor nebo destruktor.
+Třídy nebo struktury, které jsou předány funkci variadické, musí být triviální kopírovatelné. Při předání takových objektů kompilátor jednoduše vytvoří bitovou kopii a nevolá konstruktor nebo destruktor.
 
-Toto upozornění je k dispozici od verze Visual Studio 2017.
+Toto upozornění je k dispozici od začátku v aplikaci Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C4840 a ukazuje, jak ho opravit:
+Následující ukázka generuje C4840 a ukazuje, jak ji opravit:
 
 ```cpp
 // C4840.cpp
@@ -49,7 +49,7 @@ int main()
 }
 ```
 
-Pro řetězce vytvořené a spravují s použitím `CStringW`, poskytnutého `operator LPCWSTR()` by měla sloužit k přetypování `CStringW` ukazatel na řetězec ve stylu jazyka C ve formátovacím řetězci byl očekáván objekt:
+Pro řetězce sestavené a spravované pomocí `operator LPCWSTR()` `CStringW`by se měly použít k přetypování `CStringW` objektu na ukazatel řetězce ve stylu C, který je očekáván formátovacím řetězcem:
 
 ```cpp
     CStringW str1;

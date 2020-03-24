@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW4001
 ms.assetid: 7c2d35eb-9899-46f5-848d-7ef49c39d706
-ms.openlocfilehash: 71bf08f73ea1eddebfe3f949e4c4da3e895fc777
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61559c30b299866d3511063608bc4fa585a4d8f7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182250"
 ---
 # <a name="resource-compiler-warning-rw4001"></a>Upozornění kompilátoru prostředků RW4001
 
-. Možnosti zpracování EXE (/ l /M /P /T /K /E /31 nebo /30)
+. Možnosti zpracování EXE (/L/M/P/T/K/E/31 nebo/30)
 
-Zadaný soubor EXE možností zpracování, ale došlo ke zpracování žádná spustitelný soubor. Nepoužívejte tyto možnosti se soubor .res.
+Zadali jste možnosti zpracování EXE, ale neexistoval spustitelný soubor ke zpracování. Nepoužívejte tyto možnosti se souborem. res.

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4102
 ms.assetid: bfd1b17e-05c7-4bc2-80d6-2888b1a425b2
-ms.openlocfilehash: 0f9c8649988dd3056e98730ac4b02022a8c9dd51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fda1fdb03a7629894f846bb20ed84df519239327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327259"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183303"
 ---
 # <a name="linker-tools-warning-lnk4102"></a>Upozornění linkerů LNK4102
 
-Export odstraňující destruktor "name"; bitové kopie se možná správně nespustí
+Export odstraňující název destruktoru; Image možná nebude správně fungovat.
 
-Program se pokusil exportovat odstraňování destruktor. Výsledný odstranění může dojít k přes hranice knihovny DLL tak, aby proces může uvolnit paměť, která není vlastníkem. Ujistěte se, že daný symbol není uvedená v souboru .def a že symbol není uvedena jako argument **/IMPORT** nebo **/EXPORT** možnost příkazového řádku linkeru.
+Program se pokusil exportovat odstraněný destruktor. Výsledné odstranění může nastat v rámci hranice knihovny DLL tak, že proces může uvolnit paměť, kterou nevlastní. Ujistěte se, že daný symbol není uveden v souboru. def a že symbol není uveden jako argument možnosti **/Import** nebo **/Export** v příkazovém řádku linkeru.
 
-Pokud bude probíhat opětovné sestavení knihovny run-time jazyka C, můžete tuto zprávu ignorovat.
+Při opětovném sestavování knihovny run-time jazyka C můžete tuto zprávu ignorovat.

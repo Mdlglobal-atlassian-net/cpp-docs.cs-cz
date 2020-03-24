@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 34f9c10cd898b0359463d5933141822576fa4a11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189478"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
-Toto téma se věnuje specifické pro Microsoft zastaralé declspec deklarace. Informace o C ++ 14 `[[deprecated]]` atribut a pokyny, kdy použít tento atribut vs. declspec specifické pro společnost Microsoft nebo direktivy pragma, najdete v části [C++ standardní atributy](attributes.md).
+Toto téma se týká deklarace declspec zastaralosti specifické pro společnost Microsoft. Informace o atributu `[[deprecated]]` c++ 14 a pokyny, kdy použít tento atribut vs. declspec nebo pragma specifické pro společnost Microsoft, naleznete v tématu [ C++ standardní atributy](attributes.md).
 
-S výjimkami uvedenými níže **zastaralé** nabízí stejné funkce jako deklarace [zastaralé](../preprocessor/deprecated-c-cpp.md) – Direktiva pragma:
+S výjimkami uvedenými níže, **zastaralá** deklarace nabízí stejné funkce jako [zastaralá](../preprocessor/deprecated-c-cpp.md) direktiva pragma:
 
-- **Zastaralé** deklarace umožňuje určit konkrétní podoby přetížení funkce jako zastaralé, kdežto forma direktivy pragma se vztahuje na všechny přetížené formy názvu funkce.
+- **Zastaralá** deklarace umožňuje určit konkrétní formy přetížení funkce jako zastaralé, zatímco formulář pragma se vztahuje na všechny přetížené formy názvu funkce.
 
-- **Zastaralé** deklarace umožňuje zadat zprávu, která se zobrazí v době kompilace. Text zprávy může být z makra.
+- **Zastaralá** deklarace umožňuje určit zprávu, která se zobrazí v době kompilace. Text zprávy může být z makra.
 
-- Makra lze pouze označené jako zastaralé s **zastaralé** direktivy pragma.
+- Makra mohou být označena jako zastaralá s **vystaralou** direktivou pragma.
 
-Pokud kompilátor narazí na použití zastaralého identifikátoru nebo standardní [ `[[deprecated]]` ](attributes.md) atribut [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) je vyvoláno upozornění.
+Pokud kompilátor narazí na použití zastaralého identifikátoru nebo atributu standardní [`[[deprecated]]`](attributes.md) , je vyvolána [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) upozornění.
 
 ## <a name="example"></a>Příklad
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [__declspec](../cpp/declspec.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

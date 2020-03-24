@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CXX0039
 - CAN0039
 ms.assetid: 8bf698d2-e015-4595-944f-72b81aa43d22
-ms.openlocfilehash: 053e57a21f0cb75cbd96732edb6812b3557bcd50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5706d002eb3d566d05b059cb04b6b1626fdb3d33
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396974"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185123"
 ---
 # <a name="expression-evaluator-error-cxx0039"></a>Chyba při vyhodnocování výrazu CXX0039
 
-nejednoznačný symbol
+symbol je dvojznačný.
 
-Vyhodnocovací filtr výrazů C nemůže určit, která instance symbol, který chcete použít ve výrazu. Symbol vyskytuje více než jednou ve stromu dědičnosti.
+Vyhodnocovací filtr výrazů jazyka C nemůže určit, která instance symbolu použít ve výrazu. Symbol se vyskytuje ve stromu dědičnosti více než jednou.
 
-Je nutné použít operátor rozlišení oboru (`::`) s ohledem na instance, kterou chcete použít ve výrazu.
+K explicitnímu určení instance, která se má použít ve výrazu, je nutné použít operátor rozlišení oboru (`::`).
 
-Tato chyba se shoduje s CAN0039.
+Tato chyba je shodná s CAN0039.

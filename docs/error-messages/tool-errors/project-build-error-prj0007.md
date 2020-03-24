@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0007
 ms.assetid: d923948b-acc9-498f-bf3b-f14e41bed61a
-ms.openlocfilehash: 83cb02f4d9d5232eda45b3bdbb591dd819fa12d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96d1b5655fc2c3f78efc04e1dc11c45f7b4ccee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359589"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192975"
 ---
 # <a name="project-build-error-prj0007"></a>Chyba sestavení projektu PRJ0007
 
-Nelze vytvořit výstupní adresář 'directory'.
+Nelze vytvořit výstupní adresář ' Directory '.
 
-Visual C++ se nepodařilo vytvořit výstupní adresář. Mezi možné důvody patří:
+Vizuálu C++ se nepodařilo vytvořit výstupní adresář. Mezi možné důvody patří:
 
-- Adresář, ve kterém bylo vytvořit výstupní adresář je jen pro čtení.
+- Adresář, ve kterém má být vytvořen výstupní adresář, je jen pro čtení.
 
-- Počítač je nedostatek místa na disku.
+- Počítač nemá dostatek místa na disku.
 
-- Zadali jste neplatná cesta k adresáři.
+- Zadali jste neplatnou cestu k adresáři.
 
-- Uživatelská oprávnění nejsou dostatečná pro vytvoření adresáře.
+- Uživatelská oprávnění nestačí k vytvoření adresáře.

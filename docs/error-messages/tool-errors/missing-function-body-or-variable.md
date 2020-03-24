@@ -5,20 +5,20 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 5e3436054d69da7fb67c240c1d684585734635c3
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 6d2ef22b90009d320485fb6fe3f7e308ae05c442
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857161"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173618"
 ---
 # <a name="missing-function-body-or-variable"></a>Chybějící tělo funkce nebo proměnná
 
-Právě prototypem funkce kompilátor může pokračovat bez chyb, ale linkeru nejde vyřešit volání na adresu, protože neexistuje žádný kód funkce nebo proměnná místa vyhrazeného. Tuto chybu neuvidíte, dokud nevytvoříte volání funkce, která musíte vyřešit linkeru.
+Pouze pomocí prototypu funkce může kompilátor pokračovat bez chyby, ale linker nemůže vyřešit volání na adresu, protože není k dispozici žádný kód funkce nebo vyhrazené místo proměnné. Tato chyba se nezobrazí, dokud nevytvoříte volání funkce, kterou musí linker přeložit.
 
 ## <a name="example"></a>Příklad
 
-Volání funkce ve funkci main způsobí LNK2019, protože prototyp umožňuje kompilátoru myslíte, že existuje funkce.  Linker zjistí, že není.
+Volání funkce v main způsobí LINKERŮ LNK2019, protože prototyp umožňuje kompilátoru, aby se domnívá, že funkce existuje.  Linker zjistí, že není.
 
 ```cpp
 // LNK2019_MFBV.cpp
@@ -31,7 +31,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-V jazyce C++ Ujistěte se, že složku zahrnujete implementace konkrétní funkce pro třídy a ne jenom prototypu v definici třídy. Pokud definujete třídu mimo rámec souborů záhlaví, nezapomeňte zahrnout název třídy před funkci (`Classname::memberfunction`).
+V C++nástroji se ujistěte, že jste zahrnuli implementaci konkrétní funkce pro třídu, a ne pouze prototyp v definici třídy. Pokud definujete třídu mimo hlavičkový soubor, nezapomeňte zahrnout název třídy před funkci (`Classname::memberfunction`).
 
 ```cpp
 // LNK2019_MFBV_2.cpp
@@ -49,6 +49,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chyba linkerů LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

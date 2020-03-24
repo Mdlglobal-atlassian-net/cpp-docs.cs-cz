@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1224
 ms.assetid: e190b5d0-ce0c-4f65-8cc0-753f1cc9758a
-ms.openlocfilehash: 7e2c8da7443a9251d8111f643a785f5d75149cac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b84a2390baad5ac307fa025e3fffafa0f093fb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242541"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183875"
 ---
 # <a name="linker-tools-error-lnk1224"></a>Chyba linkerů LNK1224
 
-Základní adresa neplatný obrázek
+neplatná základní adresa obrázku
 
-Zadali jste neplatnou základní adresou pro bitovou kopii. Základní adresy musí být zarovnaná 64KB (poslední čtyři šestnáctkové číslice musí být nula) a základní image se musí vejít hodnotu 32-bit nebo bez znaménka.
+Pro bitovou kopii jste zadali neplatnou základní adresu. Základní adresy musí být zarovnané na 64 kB (poslední čtyři šestnáctkové číslice musí být nula) a základ obrázku se musí vejít do hodnoty se znaménkem 32 nebo bez znaménka.

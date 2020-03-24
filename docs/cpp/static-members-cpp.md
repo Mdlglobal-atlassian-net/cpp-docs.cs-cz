@@ -13,18 +13,18 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-ms.openlocfilehash: 708f78c09db263584d478d16863999d4428e4891
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c18b29cf69c2f899fbf06c7cb75ebbd2242ab427
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266943"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178558"
 ---
 # <a name="static-members-c"></a>Statické členy (C++)
 
-Třídy mohou obsahovat statická členská data a členské funkce. Když je datový člen deklarován jako **statické**, pouze jedna kopie dat se zachová pro všechny objekty třídy.
+Třídy mohou obsahovat statická členská data a členské funkce. Je-li datový člen deklarován jako **static**, je pro všechny objekty třídy udržována pouze jedna kopie dat.
 
-Statické datové členy, které nejsou součástí objekty daného typu třídy. Deklarace statického datového členu v důsledku toho se nepovažuje za definici. Datový člen je deklarovaný v oboru třídy, ale definice se provádí v rozsahu souboru. Tyto statické členy mají vnější propojení. Následující příklad ukazuje toto:
+Statické datové členy nejsou součástí objektů daného typu třídy. V důsledku toho deklarace statického datového členu není považována za definici. Datový člen je deklarován v oboru třídy, ale definice je provedena v oboru souboru. Tito statický členové mají vnější propojení. Ilustruje to následující příklad:
 
 ```cpp
 // static_data_members.cpp
@@ -55,15 +55,15 @@ int main()
 }
 ```
 
-V předchozím kódu člena `bytecount` je deklarovaná ve třídě `BufferedOutput`, ale musí být definovány mimo deklaraci třídy.
+V předchozím kódu je členský `bytecount` deklarován ve třídě `BufferedOutput`, ale musí být definován mimo deklaraci třídy.
 
-Členy statických dat lze odkazovat bez odkazující na objekt typu třídy. Počet bajtů zapsaných pomocí `BufferedOutput` objektů můžete získat následujícím způsobem:
+Na členy statických dat lze odkazovat bez odkazu na objekt typu třídy. Počet bajtů zapsaných pomocí `BufferedOutput` objektů lze získat následujícím způsobem:
 
 ```cpp
 long nBytes = BufferedOutput::bytecount;
 ```
 
-Pro statický člen neexistuje není nutné, že neexistují žádné objekty typu třídy. Statickým členům lze rovněž přistupovat pomocí výběru členů (**.** a **->**) operátory. Příklad:
+Aby existoval statický člen, není nutné, aby existovaly žádné objekty typu třídy. Ke statickým členům lze také přistupovat pomocí výběru členů ( **.** a **->** ) operátory. Příklad:
 
 ```cpp
 BufferedOutput Console;
@@ -71,12 +71,12 @@ BufferedOutput Console;
 long nBytes = Console.bytecount;
 ```
 
-V předchozím případě odkazu na objekt (`Console`), nebude hodnocen; vrácená hodnota je statický objekt `bytecount`.
+V předchozím případě není vyhodnocen odkaz na objekt (`Console`); vrácenou hodnotou je `bytecount`statických objektů.
 
-Statické datové členy jsou v souladu s pravidla pro přístup k členu třídy, takže privátní přístup ke statické datové členy je povoleno pouze pro třídy členskými funkcemi a přáteli. Tato pravidla jsou popsány v [řízení přístupu členů](../cpp/member-access-control-cpp.md). Výjimkou je tato statická data, členy musí být definován v oboru souboru bez ohledu na omezení jejich přístupu. Pokud explicitně inicializovat datový člen, třeba zadat inicializátor s definicí.
+Statickým datovým členům podléhají pravidla přístupu členů třídy, takže privátní přístup ke statickým datovým členům je povolen pouze pro členské funkce a přátele typu třída. Tato pravidla jsou popsána v tématu [Member-Access Control](../cpp/member-access-control-cpp.md). Výjimkou je, že statické datové členy musí být definovány v rozsahu souboru bez ohledu na jejich omezení přístupu. Pokud má být datový člen explicitně inicializován, musí být pro definici k dispozici inicializátor.
 
-Typ statického člena, který není kvalifikován pomocí názvu třídy. Proto typ `BufferedOutput::bytecount` je **dlouhé**.
+Typ statického člena není kvalifikován názvem jeho třídy. Proto je typ `BufferedOutput::bytecount` **dlouhý**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

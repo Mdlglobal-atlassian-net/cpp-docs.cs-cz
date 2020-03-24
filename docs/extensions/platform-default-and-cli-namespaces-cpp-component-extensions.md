@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509764"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181821"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Obory názvů Platform, default a CLIC++(/CLI C++a/CX)
 
@@ -30,7 +30,7 @@ Další informace naleznete v tématu [obory názvů a viditelnostC++typů (/CX)
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
@@ -42,7 +42,7 @@ using namespace cli;
 
 ### <a name="remarks"></a>Poznámky
 
-C++/CLI podporuje obor názvů **CLI** . Při kompilaci s `/clr`příkazem je odvozen příkaz **using** v oddílu syntax.
+C++/CLI podporuje obor názvů **CLI** . Při kompilaci s `/clr`je odvozen příkaz **using** v oddílu syntax.
 
 Následující jazykové funkce jsou v oboru názvů **CLI** :
 
@@ -56,7 +56,7 @@ Následující jazykové funkce jsou v oboru názvů **CLI** :
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/clr`
+Možnost kompilátoru: `/clr`
 
 ### <a name="examples"></a>Příklady
 
@@ -78,6 +78,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

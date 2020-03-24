@@ -11,12 +11,12 @@ helpviewer_keywords:
 - pointer dereference operator overloading
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
-ms.openlocfilehash: 802380bad59534e8402020142e394b3948032476
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60444ee3c55df39e6b7820ff9b9d7ad81017b0da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377221"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188490"
 ---
 # <a name="overloading-unary-operators"></a>Přetížení unárních operátorů
 
@@ -24,11 +24,11 @@ Unární operátory, které mohou být přetíženy, jsou následující:
 
 1. `!` ([logický operátor NOT](../cpp/logical-negation-operator-exclpt.md))
 
-1. `&` ([address-of](../cpp/address-of-operator-amp.md))
+1. `&` ([adresa-z](../cpp/address-of-operator-amp.md))
 
-1. `~` ([doplněk](../cpp/one-s-complement-operator-tilde.md))
+1. `~` ([doplněk 1](../cpp/one-s-complement-operator-tilde.md))
 
-1. `*` ([přesměrování ukazatele bylo](../cpp/indirection-operator-star.md))
+1. `*` ([zpětný odkaz ukazatele](../cpp/indirection-operator-star.md))
 
 1. `+` ([Unární plus](../cpp/additive-operators-plus-and.md))
 
@@ -40,25 +40,25 @@ Unární operátory, které mohou být přetíženy, jsou následující:
 
 9. operátory převodu
 
-Přípony Inkrementace a dekrementace operátory (`++` a `--`) jsou popsány odděleně v [addref()](../cpp/increment-and-decrement-operator-overloading-cpp.md).
+Operátory přírůstku a snížení přípony (`++` a `--`) se zpracovávají samostatně v [přírůstcích a snížení](../cpp/increment-and-decrement-operator-overloading-cpp.md).
 
-Operátory převodu jsou popsány také v samostatném tématu; Zobrazit [uživatelem definovaných převodů typu](../cpp/user-defined-type-conversions-cpp.md).
+Operátory převodu jsou také popsány v samostatném tématu. viz [uživatelsky definované převody typů](../cpp/user-defined-type-conversions-cpp.md).
 
 Následující pravidla platí pro všechny ostatní unární operátory. Chcete-li deklarovat funkci unárního operátoru jako nestatický člen, musíte ji deklarovat ve formě:
 
-> *RET-type* **operátor** *op* **)**
+> *operátor ret-Type* **operator** *op* **()**
 
-kde *ret-type* je návratový typ a *op* je jeden z operátorů uvedených v předchozí tabulce.
+kde *ret-Type* je návratový typ a *op* je jedním z operátorů uvedených v předchozí tabulce.
 
 Chcete-li deklarovat funkci unárního operátoru jako globální funkci, musíte ji deklarovat ve formě:
 
-> *RET-type* **operátor** *op* **(** *arg* **)**
+> operátor *ret-Type* **operator** *op* **(** *arg* **)**
 
-kde *ret-type* a *op* jsou popsány pro členské funkce operátora a *arg* je argument typu třídy, na kterém chcete pracovat.
+kde *ret-Type* a *op* jsou popsány pro členské funkce operátora a *arg* je argument typu třídy, na kterém chcete pracovat.
 
 > [!NOTE]
->  Návratové typy unárních operátorů nejsou nijak omezeny. Například smysl pro logický operátor NOT (`!`) vrátit integrální hodnotu, ale to se nevynucuje.
+>  Návratové typy unárních operátorů nejsou nijak omezeny. Například dává smysl pro logickou hodnotu NOT (`!`), která vrátí celočíselnou hodnotu, ale toto není vynutilo.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přetížení operátoru](../cpp/operator-overloading.md)

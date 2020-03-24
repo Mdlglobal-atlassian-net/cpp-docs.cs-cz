@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: ab97238cf13accf3db593b5c4a81550297a53d6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 685df7285e58e0cf2ceeded5ac27641364897298
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403331"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187697"
 ---
-# <a name="variantt-extractors"></a>_variant_t – extraktory
+# <a name="_variant_t-extractors"></a>_variant_t – extraktory
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Extrahovat data z zapouzdřeného `VARIANT` objektu.
+Extrahuje data ze zapouzdřeného objektu `VARIANT`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,32 +87,32 @@ operator unsigned __int64() const;
 
 ## <a name="remarks"></a>Poznámky
 
-Extrahuje nezpracovaných dat z zapouzdřenému `VARIANT`. Pokud `VARIANT` ještě není správný typ. `VariantChangeType` slouží pokusu o převod, a je generována chyba, nebude úspěšná:
+Extrahuje nezpracovaná data ze zapouzdřených `VARIANT`. Pokud `VARIANT` ještě není správného typu, `VariantChangeType` se použije k pokusu o převod a při selhání se vygeneruje chyba:
 
-- **(krátký) – operátor** extrahuje **krátký** celočíselnou hodnotu.
+- **short – operátor ()** Extrahuje **krátkou** celočíselnou hodnotu.
 
-- **– operátor (dlouhé)** extrahuje **dlouhé** celočíselnou hodnotu.
+- **Long – operátor ()** Extrahuje **dlouhé** celočíselné hodnoty.
 
-- **operátor float ()** extrahuje **float** číselnou hodnotu.
+- **Operator float () – operátor** Extrahuje číselnou hodnotu **typu float** .
 
-- **operátor double ()** extrahuje **double** celočíselnou hodnotu.
+- **Double – operátor ()** Extrahuje **dvojitou** celočíselnou hodnotu.
 
-- **operátor CY ()** extrahuje `CY` objektu.
+- **Operator CY () – operátor** Extrahuje objekt `CY`.
 
-- **bool – operátor ()** extrahuje **bool** hodnotu.
+- **bool – operátor ()** Extrahuje **logickou** hodnotu.
 
-- **operátor DECIMAL ()** extrahuje `DECIMAL` hodnotu.
+- **Decimal – operátor ()** Extrahuje `DECIMAL`ou hodnotu.
 
-- **– operátor (BYTE)** extrahuje `BYTE` hodnotu.
+- **Byte – operátor ()** Extrahuje `BYTE`ou hodnotu.
 
-- **_bstr_t – operátor ()** extrahuje řetězce, který je zapouzdřena v `_bstr_t` objektu.
+- **operátor _bstr_t ()** Extrahuje řetězec, který je zapouzdřený v objektu `_bstr_t`.
 
-- **operátor IDispatch\*()** extrahuje ze zapouzdřený ukazatel dispinterface `VARIANT`. `AddRef` je volán na výsledný ukazatel, tak, aby byl vás volat `Release` ji uvolnit.
+- **operátor IDispatch\*()** Extrahuje ukazatel odesílajícího rozhraní ze zapouzdřeného `VARIANT`. `AddRef` se volá na výsledný ukazatel, takže je k dispozici pro volání `Release` k uvolnění.
 
-- **operátor IUnknown\*()** extrahuje ze zapouzdřeného ukazatele rozhraní modelu COM `VARIANT`. `AddRef` je volán na výsledný ukazatel, tak, aby byl vás volat `Release` ji uvolnit.
+- **operátor IUnknown\*()** Extrahuje ukazatel rozhraní modelu COM ze zapouzdřeného `VARIANT`. `AddRef` se volá na výsledný ukazatel, takže je k dispozici pro volání `Release` k uvolnění.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_variant_t – třída](../cpp/variant-t-class.md)

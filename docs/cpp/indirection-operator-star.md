@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: a35d8cb28baaee37ad64a61cbcb9d4c76a5aad06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183580"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178274"
 ---
 # <a name="indirection-operator-"></a>Deferenční operátor: *
 
@@ -24,11 +24,11 @@ ms.locfileid: "62183580"
 
 ## <a name="remarks"></a>Poznámky
 
-Operátor unární dereference (<strong>\*</strong>) přistoupí přes ukazatel; to znamená, převede hodnotu ukazatele na l hodnotou. Operand operátoru dereference musí být ukazatel na typ. Výsledek výrazu dereference je typ, ze kterého je odvozen typ ukazatele. Použití <strong>\*</strong> operátor v tomto kontextu se liší od jeho význam jako binární operátor, který je násobení.
+Unární operátor indirekce (<strong>\*</strong>) odkazuje na ukazatel; To znamená, že převede hodnotu ukazatele na l-value. Operandem operátoru dereference musí být ukazatel na typ. Výsledek nepřímého výrazu je typ, ze kterého je odvozen typ ukazatele. Použití operátoru <strong>\*</strong> v tomto kontextu se liší od významu jako binární operátor, což je násobení.
 
 Ukazuje-li operand na funkci, je výsledkem označení funkce. Ukazuje-li na umístění úložiště, je výsledkem l-hodnota označující umístění úložiště.
 
-Operátor dereference lze kumulativně dereference ukazatele na ukazatele. Příklad:
+Operátor dereference lze použít kumulativně pro přesměrování ukazatelů na ukazatele. Příklad:
 
 ```cpp
 // expre_Indirection_Operator.cpp
@@ -60,7 +60,7 @@ Pokud je hodnota ukazatele neplatná, výsledek není definován. Následující
 
 - Ukazatel určuje adresu, která není používána spuštěným programem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

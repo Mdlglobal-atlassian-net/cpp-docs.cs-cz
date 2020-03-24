@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1023
 ms.assetid: 1fe0964a-a8cc-4ffa-a427-dbce39f23173
-ms.openlocfilehash: da4f9588d115654fd676585cad4256ca91ea8ac3
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 60ac821a6b0dd3841f9d26a4441d8e00f83ae2cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345263"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182367"
 ---
 # <a name="resource-compiler-fatal-error-rw1023"></a>Závažná chyba kompilátoru prostředků RW1023
 
-Chyba vstupně-výstupní operace zápisu do souboru, jednotka úplné
+Vstupně-výstupní chyba při zápisu souboru, úplná jednotka
 
-Volné místo se musí rovnat minimálně dvojnásobek velikosti spustitelného souboru, který vytváříte.
+Volné místo musí být alespoň dvojnásobně velikost spustitelného souboru, který vytváříte.

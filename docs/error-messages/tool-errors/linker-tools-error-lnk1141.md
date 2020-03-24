@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1141
 ms.assetid: 83b78606-6dd3-43a7-88e2-152f5359cbd8
-ms.openlocfilehash: e2e3ae2462919a8261e450460370a46f0022bb1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2564cbb557f818aa3ef06e0032335b534daf7188
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184200"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Chyba linkerů LNK1141
 
-během sestavování souboru exportů došlo k chybě
+Při sestavování souboru exportu došlo k chybě.
 
-[ODKAZ](../../build/reference/linking.md) Nepodařilo se vytvořit soubor exporty (.exp).
+[Odkaz](../../build/reference/linking.md) nemůže vytvořit soubor exportu (. exp).
 
-Příčiny této chyby patří systému problémy, jako je nedostatek paměti a syntaktických chyb v možnosti nebo příkazy definice modulu.
+Příčinou této chyby jsou systémové problémy, jako je například nedostatek paměti a chyby syntaxe v příkazech Options nebo definice modulu.
 
-Tato chyba předchází Další chyba, která poskytuje další informace.
+Tato chyba předchází jiné chybě, která poskytuje další informace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Soubory .Exp jako vstup linkeru](../../build/reference/dot-exp-files-as-linker-input.md)

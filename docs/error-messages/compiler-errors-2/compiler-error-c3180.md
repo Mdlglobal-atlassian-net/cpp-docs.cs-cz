@@ -1,22 +1,22 @@
 ---
-title: Compiler Error C3180
+title: Chyba kompilátoru C3180
 ms.date: 11/04/2016
 f1_keywords:
 - C3180
 helpviewer_keywords:
 - C3180
 ms.assetid: 5281f583-7df7-418a-8507-d4da67ed6572
-ms.openlocfilehash: bfe2699ce448aa879f0c93aa431a17dbc1334274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c94019bf7a58492fcbb27c4f092a6e5f7e36ca25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382387"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176452"
 ---
-# <a name="compiler-error-c3180"></a>Compiler Error C3180
+# <a name="compiler-error-c3180"></a>Chyba kompilátoru C3180
 
-'type name': název překračuje limit metadat 'limit' znaků
+název typu: název překračuje limit metadat (limit).
 
-Kompilátor zkrácený název spravovaného typu v metadatech. Zkrácení bude nepoužitelnost typ s `#using` – direktiva (nebo ekvivalent v jiném jazyce).
+Kompilátor zkrátil název spravovaného typu v metadatech. Zkrácení způsobí, že typ nebude použitelný u direktivy `#using` (nebo ekvivalentu v jiném jazyce).
 
-Název typu omezení se vztahuje na všechny kvalifikaci oboru názvů.
+Omezení názvu typu zahrnuje libovolné kvalifikace oboru názvů.

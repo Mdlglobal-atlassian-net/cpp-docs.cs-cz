@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CAN0065
 - CXX0065
 ms.assetid: aac68f87-0b90-4c19-afa6-1c587625a5fd
-ms.openlocfilehash: 7b62e42da2a74d910e2dc56ce2dfcb5cb38f2bfa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4120deec3c8e7ce14e381f782904cf83a588e43
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299314"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184421"
 ---
 # <a name="expression-evaluator-error-cxx0065"></a>Chyba při vyhodnocování výrazu CXX0065
 
-Proměnná musí rámec zásobníku
+Proměnná vyžaduje rámec zásobníku.
 
-Výraz obsahuje proměnné, která existuje v aktuálním oboru, ale ještě nebyl vytvořen.
+Výraz obsahoval proměnnou, která existuje v rámci aktuálního oboru, ale ještě nebyla vytvořena.
 
-Této chybě může dojít, když jste vkročili prologu funkce ale ještě není nastavení rámce zásobníku pro funkci, nebo pokud jste vkročili ukončovací kód pro funkci.
+K této chybě může dojít, pokud jste se přeměnili na prolog funkce, ale ještě jste nastavili rámec zásobníku pro funkci, nebo pokud jste se změnili na ukončovací kód funkce.
 
-Krokovat kód prologu, dokud rámce zásobníku je nastavený před vyhodnocením výrazu.
+Projděte si kód prologu, dokud není před vyhodnocením výrazu nastavený rámec zásobníku.
 
-Tato chyba se shoduje s CAN0065.
+Tato chyba je shodná s CAN0065.

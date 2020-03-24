@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structured exception handling [C++], exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
-ms.openlocfilehash: 6f1bcecf3aaed2bf2b7ebbe511f11cdb5ec1ca5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 201dcaa6a90584d1f9535df11d5722a37bdceb89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209400"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187281"
 ---
 # <a name="writing-an-exception-handler"></a>Zápis obslužné rutiny výjimek
 
@@ -18,9 +18,9 @@ Obslužné rutiny výjimek se obvykle používají jako reakce na konkrétní ch
 
 Obslužné rutiny výjimek používají příkaz try-except.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
-- [Try-except – příkaz](../cpp/try-except-statement.md)
+- [Příkaz try-except](../cpp/try-except-statement.md)
 
 - [Zápis filtru výjimek](../cpp/writing-an-exception-filter.md)
 
@@ -30,6 +30,6 @@ Obslužné rutiny výjimek používají příkaz try-except.
 
 - [Omezení obslužných rutin výjimek](../cpp/restrictions-on-exception-handlers.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

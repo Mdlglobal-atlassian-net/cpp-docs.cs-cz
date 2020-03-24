@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403435"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188295"
 ---
 # <a name="reference-type-function-returns"></a>Vrácení funkce typu odkazu
 
@@ -21,11 +21,11 @@ Funkce mohou být deklarovány, aby vracely typ odkazu. Existují dva důvody pr
 
 - Typ funkce musí být l-hodnota.
 
-- Odkazovaný objekt nebude dostanou mimo rozsah, když funkce vrátí.
+- Odkazovaný objekt nebude při návratu funkce z oboru přecházet.
 
-Stejně jako může být efektivnější předat velké objekty *k* funkcí odkazem, také může být efektivnější velké objekty vrátit *z* funkcí odkazem. Protokol vrácení odkazu eliminuje nutnost kopírování objektu do dočasného umístění před vrácením.
+Stejně tak, jak může být efektivnější předat velké *objekty funkcím* odkazem, může být efektivnější vracet velké objekty *z* funkcí odkazem. Protokol vrácení odkazu eliminuje nutnost kopírování objektu do dočasného umístění před vrácením.
 
-Typy vracející odkaz mohou být také užitečné, když se funkce musí vyhodnotit na l-hodnotu. Nejvíce přetížených operátorů patří do této kategorie, zejména operátor přiřazení. Přetížené operátory jsou uvedeny v [přetížené operátory](../cpp/operator-overloading.md).
+Typy vracející odkaz mohou být také užitečné, když se funkce musí vyhodnotit na l-hodnotu. Nejvíce přetížených operátorů patří do této kategorie, zejména operátor přiřazení. Přetížené operátory jsou pokryty v [přetížených operátorech](../cpp/operator-overloading.md).
 
 ## <a name="example"></a>Příklad
 
@@ -82,11 +82,11 @@ y = 9
 
 Všimněte si, že funkce `x` a `y` jsou deklarovány, aby vracely odkazy. Tyto funkce lze použít na obou stranách příkazu přiřazení.
 
-Všimněte si také, že ve funkci main, objekt ThePoint zůstává v oboru, a proto jeho členy odkazu jsou stále aktivní a mohli uživatelé bezpečně.
+Všimněte si také, že v hlavním objektu ThePoint zůstane v oboru, a proto jsou jeho referenční členové stále aktivní a lze k nim bezpečně přistoupit.
 
 Deklarace odkazů musí obsahovat inicializátory s výjimkou těchto případů:
 
-- Explicitní **extern** deklarace
+- Explicitní **externí** deklarace
 
 - Deklarace členu třídy
 
@@ -94,9 +94,9 @@ Deklarace odkazů musí obsahovat inicializátory s výjimkou těchto případů
 
 - Deklarace argumentu funkce nebo návratového typu funkce
 
-## <a name="caution-returning-address-of-local"></a>Upozornění: vrací adresu místní
+## <a name="caution-returning-address-of-local"></a>Upozornění vracející adresu místního
 
-Pokud deklarujete objekt v místním oboru, bude tento objekt zničen. když se funkce vrátí. Pokud funkce vrátí odkaz na tento objekt, tento odkaz pravděpodobně způsobit narušení přístupu za běhu, pokud volající pokusí použít nulový odkaz.
+Pokud deklarujete objekt v místním oboru, tento objekt bude zničen při návratu funkce. Vrátí-li funkce odkaz na tento objekt, bude tento odkaz pravděpodobně způsobovat porušení přístupu za běhu, pokud se volající pokusí použít odkaz s hodnotou null.
 
 ```cpp
 // C4172 means Don’t do this!!!
@@ -108,8 +108,8 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-Kompilátor vyvolá upozornění v tomto případě: `warning C4172: returning address of local variable or temporary`. V jednoduchých aplikacích je možné, že v některých bez narušení přístupu dojde, pokud odkaz přistupuje volající předtím, než se přepíše umístění v paměti. Toto je kvůli velkému štěstí. Věnujte pozornost upozornění.
+Kompilátor vydá upozornění v tomto případě: `warning C4172: returning address of local variable or temporary`. V jednoduchých programech je možné, že v případě, že volající je přístup k referenci před přepsáním umístění v paměti, dojde k chybě. Důvodem je Sheer štěstí. Heed upozornění.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Odkazy](../cpp/references-cpp.md)

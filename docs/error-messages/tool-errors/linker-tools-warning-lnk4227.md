@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-ms.openlocfilehash: fb657719c69445ce23d36ccf04ac4a14db0955e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b75cff4f03370951245bde1b485d538ffdb4007
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352738"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182939"
 ---
 # <a name="linker-tools-warning-lnk4227"></a>Upozornění linkerů LNK4227
 
-> upozornění operace metadat (*HRESULT*): *warning_message*
+> Upozornění operace metadat (*HRESULT*): *warning_message*
 
-Linker byly zjištěny při slučování metadat rozdíly:
+Linker zjistil rozdíly v metadatech při sloučení:
 
-- Jeden nebo víc odkazovaných sestavení se sestavením jsou sestaveny.
+- Jedno nebo více odkazovaných sestavení se sestavou sestavení, které je právě sestaveno.
 
-- Jeden nebo více soubory zdrojového kódu v kompilaci.
+- Jeden nebo více souborů zdrojového kódu v kompilaci.
 
-Například může být způsobeno LNK4227 Pokud máte dvě globální funkce se stejným názvem, ale informace o parametrech, které jsou deklarovány jinak (to znamená, že deklarace nejsou konzistentní vzhledem k aplikacím ve všech souborech určených ke kompilaci). Použijte ildasm.exe/text/metadata *object_file* každého souboru .obj, pokud chcete zobrazit, jak se liší typy.
+Například LINKERŮ LNK4227 může být způsobeno tím, že máte dvě globální funkce se stejným názvem, ale informace o parametrech jsou deklarovány jinak (tj. deklarace nejsou konzistentní ve všech compilands). Použijte Ildasm. exe/TEXT/METADATA *object_file* v každém souboru. obj, abyste viděli, jak se typy liší.
 
-LNK4227 slouží také k hlášení problémů, které pocházejí z jiného nástroje. Vyhledejte upozornění pro další informace.
+LINKERŮ LNK4227 se také používá k nahlášení problémů, které pocházejí z jiného nástroje. Vyhledejte zprávu s upozorněním, kde najdete další informace.
 
-Problémy metadat musí být nastaven na vyřešení upozornění.
+Aby bylo možné vyřešit upozornění, je nutné opravit problémy s metadaty.
 
 ## <a name="example"></a>Příklad
 
-LNK4227 se vygeneruje, když odkazované sestavení byla podepsána jiným způsobem než sestavení, která na něj odkazuje.
+LINKERŮ LNK4227 se generuje, když se odkazované sestavení přihlásilo jinak než na sestavení, které na něj odkazuje.
 
-Následující ukázka generuje LNK4227:
+Následující ukázka generuje LINKERŮ LNK4227:
 
 ```cpp
 // LNK4227.cpp
@@ -45,7 +45,7 @@ using namespace System::Reflection;
 int main() {}
 ```
 
-a pak,
+a potom
 
 ```cpp
 // LNK4227b.cpp
@@ -64,9 +64,9 @@ ref class MyClass
 
 ## <a name="example"></a>Příklad
 
-Při předávání čísla verze v nesprávném formátu pro atributy sestavení, můžou být taky vygenerovaná LNK4227.  "*" Je specifické pro zápis `AssemblyVersionAttribute`.  Pokud chcete vyřešit toto upozornění, použijte pouze čísla v atributech verze jiné než `AssemblyVersionAttribute`.
+LINKERŮ LNK4227 lze také vygenerovat, pokud jsou čísla verzí v nesprávném formátu předávána atributům sestavení.  Notace * je specifická pro `AssemblyVersionAttribute`.  Chcete-li toto upozornění vyřešit, použijte pouze čísla z atributů verze kromě `AssemblyVersionAttribute`.
 
-Následující ukázka generuje LNK4227:
+Následující ukázka generuje LINKERŮ LNK4227:
 
 ```cpp
 // LNK4227e.cpp

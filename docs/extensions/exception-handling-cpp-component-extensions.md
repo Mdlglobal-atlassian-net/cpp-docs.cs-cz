@@ -1,5 +1,5 @@
 ---
-title: Zpracování výjimek (C++vyhodnocovací a C++/CX)
+title: Zpracování výjimek (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - exception handling, types of
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-ms.openlocfilehash: b477f7355ee1f4f70a0ad3df8b85c4276c07d397
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f5662bb9e744b5db3b0ab25ac4230b2f67016bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182120"
 ---
-# <a name="exception-handling--ccli-and-ccx"></a>Zpracování výjimek (C++vyhodnocovací a C++/CX)
+# <a name="exception-handling--ccli-and-ccx"></a>Zpracování výjimek (C++/CLI a C++/CX)
 
-Zkompilovaná aplikace `/ZW` – možnost kompilátoru nebo `/clr` – možnost kompilátoru používají *výjimky* zpracování neočekávaných chyb během provádění programu. Následující témata popisují zpracování výjimek v buď C++/CX nebo C++vyhodnocovací aplikací.
+Aplikace zkompilované pomocí možnosti kompilátoru `/ZW` nebo `/clr` kompilátoru používají *výjimky* ke zpracování neočekávaných chyb během provádění programu. Následující témata popisují zpracování výjimek v aplikacích C++/CX nebo C++/CLI.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Základní koncepty při práci se spravovanými výjimkami](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
-Popisuje generování výjimek a pomocí **zkuste**/**catch** bloky.
+Popisuje vyvolávání výjimek a použití bloku **try**/**catch** .
 
-[Rozdíly v chování zpracování výjimek v/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
-Tento článek popisuje rozdíly oproti standardní chování zpracování výjimek jazyka C++.
+[Rozdíly v chování zpracování výjimek v rámci/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
+Popisuje rozdíly oproti standardnímu chování zpracování C++ výjimek.
 
 [finally](../dotnet/finally.md)<br/>
-Tento článek popisuje způsob použití finally – klíčové slovo.
+Popisuje způsob použití klíčového slova finally.
 
 [Postupy: Definování a instalace globální obslužné rutiny výjimek](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
-Ukazuje, jak neošetřené výjimky mohou být zachyceny.
+Ukazuje, jak lze zachytit neošetřené výjimky.
 
-[Postupy: Zachycení výjimek v nativním kódu vyvolaných z prostředí MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
-Popisuje, jak zachytávat výjimky CLR a C++ v nativním kódu.
+[Postupy: Zachycení výjimek v nativním kódu z prostředí MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
+Popisuje, jak zachytit CLR a C++ výjimky v nativním kódu.
 
 [Postupy: Definování a instalace globální obslužné rutiny výjimek](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Ukazuje, jak zachytit všechny neošetřené výjimky.
@@ -44,8 +44,8 @@ Ukazuje, jak zachytit všechny neošetřené výjimky.
 ## <a name="related-sections"></a>Související oddíly
 
 [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)<br/>
-Popisuje zpracování výjimek v standardním jazyce C++.
+Popisuje zpracování výjimek ve standardu C++.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

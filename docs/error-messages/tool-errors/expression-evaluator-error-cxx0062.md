@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0062
 - CGopherFile class, operations
 ms.assetid: 8e4165c4-7753-4f45-90e9-4542cbb9fc7a
-ms.openlocfilehash: 7f18ac438dd6411dbc86c8ac4c380c8ad2b59079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9efb3347b6afecad79dd063bc3c897704416479c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299462"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184486"
 ---
 # <a name="expression-evaluator-error-cxx0062"></a>Chyba při vyhodnocování výrazu CXX0062
 
-volání konstruktoru není podporován
+volání konstruktoru nejsou podporovaná.
 
-Výraz provedla volání konstruktoru. Výrazy nelze provést explicitní volání konstruktorů nebo nastavit jako převody, které vyžaduje volání konstruktoru.
+Výraz provedl volání konstruktoru. Výrazy nemohou provádět explicitní volání konstruktorů nebo provádět převody, které vyžadují volání konstruktoru.
 
-Tato chyba se shoduje s CAN0062.
+Tato chyba je shodná s CAN0062.

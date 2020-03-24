@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44b1031376abd6c50c3b9706089042995994e495
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177674"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operátory přírůstku a snížení přípony: ++ a --
 
@@ -32,23 +32,23 @@ postfix-expression --
 
 ## <a name="remarks"></a>Poznámky
 
-Jazyk C++ poskytuje předponové a příponové operátory inkrementace a dekrementace. Tato část popisuje pouze příponové operátory inkrementace a dekrementace. (Další informace najdete v tématu [operátory Prefix Inkrementace a dekrementace](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md).) Rozdíl mezi těmito dvěma spočívá v tom, že v notaci příponový operátor, který se zobrazí po *postfix-expression*, zatímco v předponovém, se operátor vyskytuje před *výrazu.* Následující příklad ukazuje příponový operátor inkrementace:
+Jazyk C++ poskytuje předponové a příponové operátory inkrementace a dekrementace. Tato část popisuje pouze příponové operátory inkrementace a dekrementace. (Další informace najdete v tématu [operátory přírůstku a snížení předpony](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md).) Rozdíl mezi těmito dvěma hodnotami je, že v notaci přípony se operátor zobrazí za *výrazem přípony*, zatímco v zápisu předpony se operátor zobrazí před *výrazem.* Následující příklad ukazuje příponový operátor inkrementace:
 
 ```cpp
 i++;
 ```
 
-Účinkem použití příponového operátoru Inkrementace (**++**) je, že je zvýšení hodnoty operandu o jednu jednotku příslušného typu. Obdobně, účinkem použití příponového operátoru dekrementace (**--**) je, že je snížení hodnoty operandu o jednu jednotku příslušného typu.
+Účinek použití operátoru přírůstku přípony ( **++** ) je, že hodnota operandu se zvyšuje o jednu jednotku příslušného typu. Podobně platí, že účinek použití operátoru pro snížení přípony ( **--** ) je, že hodnota operandu se zmenší o jednu jednotku příslušného typu.
 
-Je důležité si uvědomit, že příponový zvýšení nebo snížení výraz vyhodnocen jako hodnota výrazu *před* aplikací použitím daného operátoru. Dojde k operaci zvýšení nebo snížení *po* operand je vyhodnocen. K tomuto problému dochází pouze v případě výskytu příponové operace inkrementace či dekrementace v kontextu rozsáhlejšího výrazu.
+Je důležité si uvědomit, že výraz pro přírůstek nebo snížení přípony se vyhodnocuje na hodnotu výrazu *před* použitím příslušného operátoru. Operace zvýšení nebo snížení nastane *po* vyhodnocení operandu. K tomuto problému dochází pouze v případě výskytu příponové operace inkrementace či dekrementace v kontextu rozsáhlejšího výrazu.
 
 Je-li příponový operátor použit v argumentu funkce, není zaručeno, že hodnota argumentu bude zvýšena nebo snížena před jeho předáním funkci.  Další informace naleznete v oddílu 1.9.17 standardu jazyka C++.
 
-Použití příponového operátoru Inkrementace u ukazatele na pole objektů typu **dlouhé** skutečně přičte hodnotu 4 na vnitřní reprezentaci ukazatele. Toto chování způsobí, že ukazatel, který dříve odkazoval *n*-tém prvku pole k odkazování (*n*+ 1) tý prvek.
+Použití operátoru příznaku **příznaku** na ukazatel na pole objektů typu Long ve skutečnosti přidá čtyři k vnitřní reprezentaci ukazatele. Toto chování způsobí, že ukazatel, který dříve odkazoval na *n*-tý prvek pole, odkazuje na element (*n*+ 1).
 
-Operandy Příponové operátory Inkrementace a dekrementace operátory přípony musí být upravitelné (nikoli **const**) l hodnoty aritmetického typu nebo typu ukazatele. Typ výsledku je stejný jako *postfix-expression*, ale už nejsou l hodnotou.
+Operandy přírůstku a operátoru snížení přípony musí být možné upravovat ( **nekonstantní**) hodnoty typu aritmetického typu nebo typu ukazatele. Typ výsledku je stejný jako *příponový výraz*, ale již není l-value.
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Operand příponového přírůstek nebo snížení operátor nesmí být typu **bool**.
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Operand operátoru příznaku nebo odečtení přípony nemůže být typu **bool**.
 
 Následující kód znázorňuje příponový operátor inkrementace:
 
@@ -73,7 +73,7 @@ Compass myCompass;
 for( myCompass = North; myCompass != West; myCompass++ ) // Error
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy přípony](../cpp/postfix-expressions.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

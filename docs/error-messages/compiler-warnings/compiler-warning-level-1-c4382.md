@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4382
+title: Upozornění kompilátoru (úroveň 1) C4382
 ms.date: 11/04/2016
 f1_keywords:
 - C4382
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-ms.openlocfilehash: cca2f8cc13cc8317bac3736e142ef58e126ed994
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8dbf77defab2a711ad931057c740193908474b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390487"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186969"
 ---
-# <a name="compiler-warning-level-1-c4382"></a>Kompilátor upozornění (úroveň 1) C4382
+# <a name="compiler-warning-level-1-c4382"></a>Upozornění kompilátoru (úroveň 1) C4382
 
-> vyvolání "*typ*': typ s destruktorem __clrcall nebo kopírovacím konstuktorem se dá zachytit jedině v/CLR: pure modulu
+> *typ*vyvolání: typ s __clrcall destruktorem nebo kopírovacím konstruktorem se dá zachytit jedině v modulu/CLR: Pure.
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnost **/clr: Pure** Compiler je v aplikaci visual Studio 2015 zastaralá a není podporovaná v rámci sady visual Studio 2017.
 
-Při kompilaci s **/CLR** (ne **/CLR: pure**), zpracování výjimek v nativním typu bude očekává členské funkce [__cdecl](../../cpp/cdecl.md) a ne [__clrcall](../../cpp/clrcall.md). Nativní typy pomocí členské funkce pomocí `__clrcall` konvence volání nemůže být zachycena v modul zkompilovaný pomocí **/CLR**.
+Při kompilaci s možností **/CLR** (ne **/clr: Pure**) očekává zpracování výjimek členské funkce v nativním typu [__cdecl](../../cpp/cdecl.md) a nikoli [__clrcall](../../cpp/clrcall.md). Nativní typy s členskými funkcemi pomocí `__clrcall` konvence volání nelze zachytit v modulu zkompilovaném pomocí **/CLR**.
 
-Pokud výjimka bude zachycena v modul zkompilovaný pomocí **/CLR: pure**, můžete toto upozornění ignorovat.
+Pokud bude výjimka zachycena v modulu zkompilovaném pomocí **/clr: Pure**, můžete toto upozornění ignorovat.
 
-Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1152
 ms.assetid: 2523b61a-1359-4612-9c16-7d1f705f32e6
-ms.openlocfilehash: 156e9894c078587cd264c344e6d094aeb60d4649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c7cf650505314745b168c3a191b2e608d50e080
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254998"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184070"
 ---
 # <a name="linker-tools-error-lnk1152"></a>Chyba linkerů LNK1152
 
-nelze vyřešit jeden nebo víc nedekorovaných symbolů
+nejde vyřešit jeden nebo víc nedekorovaných symbolů.
 
-Tato chyba předchází jedno upozornění [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) pro každý nedekorovaných symbol, který nebylo možné přeložit a aspoň dva upozornění [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) duplicitní symbolů pro nedekorovaných symbolů se nenašly.
+Tato chyba předchází jednomu upozornění [linkerů LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) pro každý nedekorovaný symbol, který nebylo možné přeložit, a nejméně dvě upozornění [linkerů LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) pro duplicitní symboly, které se našly pro nedekorovaný symbol.

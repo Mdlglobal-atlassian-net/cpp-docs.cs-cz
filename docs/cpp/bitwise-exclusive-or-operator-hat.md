@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 07af1b507cf256b84ac2f0f2db4061790a23555a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a44dc60a985729aae79ed0e2e48c44adace647b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232011"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190713"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Bitový exkluzivní operátor OR: ^
 
@@ -27,13 +27,13 @@ expression ^ expression
 
 ## <a name="remarks"></a>Poznámky
 
-Bitový exkluzivní operátor OR (**^**) porovnává každý bit jeho prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud jeden bit na hodnotu 0 a dalších bit na hodnotu 1, odpovídající bit výsledku je nastavená na 1. V opačném případě je odpovídající výsledek bit nastaven na hodnotu 0.
+Bitový exkluzivní operátor OR ( **^** ) porovnává každý bit jeho prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud je jeden bit 0 a druhý bit je 1, odpovídající bit výsledku je nastaven na hodnotu 1. V opačném případě je odpovídající bit výsledek nastaven na hodnotu 0.
 
-Oba operandy bitový exkluzivní operátor OR musí být integrální typy. Obvyklé aritmetické převody uvedené v [standardní převody](standard-conversions.md) jsou na operandy použity.
+Oba operandy logického operátoru OR musí být integrálního typu. Obvyklé aritmetické převody, které jsou pokryty [standardními](standard-conversions.md) převody, jsou aplikovány na operandy.
 
-## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor ^
+## <a name="operator-keyword-for-"></a>Klíčové slovo operátoru pro ^
 
-**Xor** operátor je textový ekvivalent operátoru **^**. Existují dva způsoby přístupu k **xor** operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).
+Operátor **XOR** je textový ekvivalent **^** . Existují dva způsoby, jak získat přístup k operátoru **XOR** ve svých programech: zahrňte hlavičkový soubor `iso646.h`nebo zkompilujte pomocí možnosti kompilátoru [/za](../build/reference/za-ze-disable-language-extensions.md) (Disable Language Extensions).
 
 ## <a name="example"></a>Příklad
 
@@ -51,6 +51,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

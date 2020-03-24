@@ -9,20 +9,20 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cb4653bd2f03683b9abad1eea0e9ffa88222090e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856878"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184239"
 ---
 # <a name="function-inlining-problems"></a>Problémy vložené funkce
 
-Pokud používáte funkci vkládání, musíte mít:
+Pokud používáte vkládání funkcí, musíte:
 
-- Mít vložené funkce v souboru hlaviček, které jsou implementovány.
+- Vložené funkce jsou implementované v hlavičkovém souboru, který zahrnete.
 
-- Mít vkládání zapnuté v hlavičkovém souboru.
+- V hlavičkovém souboru je zapnuté vkládání.
 
 ```cpp
 // LNK2019_function_inline.cpp
@@ -37,7 +37,7 @@ struct _load_config_used {
 void _load_config_used::Test() { printf("in Test\n"); }
 ```
 
-a pak,
+a potom
 
 ```cpp
 // LNK2019_function_inline_2.cpp
@@ -54,11 +54,11 @@ int main() {
 }
 ```
 
-Pokud používáte `#pragma inline_depth` kompilátoru direktiv, ujistěte se, že máte hodnotu 2 nebo vyšší nastavení. Hodnota 0 vypne vkládání. Také se ujistěte, že používáte **/Ob1** nebo **/ob2** – možnosti kompilátoru.
+Pokud používáte direktivu `#pragma inline_depth` kompilátoru, ujistěte se, že máte nastavenou hodnotu 2 nebo vyšší. Hodnota nula vypne vkládání. Také se ujistěte, že používáte možnosti kompilátoru **/OB1** nebo **/Ob2** .
 
-Kombinování vložené a které nejsou vložené možnosti kompilace na různých modulů v některých případech může způsobovat problémy. Pokud knihovnu C++ se vytvoří pomocí funkce vkládání zapnuté ([/Ob1](../../build/reference/ob-inline-function-expansion.md) nebo [/ob2](../../build/reference/ob-inline-function-expansion.md)), ale odpovídající soubor záhlaví popisující funkce má vkládání vypnuto (žádná volba), zobrazí se chyba LNK2001. Funkce není vloženy do kódu ze souboru hlaviček, ale protože nejsou v souboru knihovny není žádná adresa přeložit odkaz.
+Při kombinování vložených a nevložených možností kompilace v různých modulech může někdy dojít k potížím. Pokud je C++ vytvořená knihovna se zapnutým vkládáním funkcí ([/OB1](../../build/reference/ob-inline-function-expansion.md) nebo [/Ob2](../../build/reference/ob-inline-function-expansion.md)), ale odpovídající hlavičkový soubor, který popisuje funkce pro obložení vypnuto (bez možnosti), se zobrazí chyba linkerů LNK2001. Funkce nejsou vloženy do kódu ze souboru hlaviček, ale vzhledem k tomu, že nejsou v souboru knihovny, není k dispozici žádná adresa pro vyřešení odkazu.
 
-Obdobně projekt, který používá funkci vkládání ještě definuje funkce v souboru s příponou .cpp, spíše než v hlavičce souboru získají LNK2019. Soubor hlaviček je součástí všude, kde považujete za vhodné, ale funkce jsou pouze vložené když soubor .cpp prochází kompilátoru; proto linkeru považuje funkce nerozpoznané externí typy při použití v dalších modulů.
+Podobně, projekt, který používá vkládání funkcí, ještě definuje funkce v souboru. cpp, a ne v hlavičkovém souboru, bude také mít LINKERŮ LNK2019. Hlavičkový soubor obsahuje všude považované za vhodné, ale funkce jsou vloženy pouze v případě, že soubor. cpp projde kompilátorem; Proto linker uvidí funkce jako nevyřešené externí typy při použití v jiných modulech.
 
 ```cpp
 // LNK2019_FIP.h
@@ -67,7 +67,7 @@ struct testclass {
 };
 ```
 
-a pak,
+a potom
 
 ```cpp
 // LNK2019_FIP.cpp
@@ -76,7 +76,7 @@ a pak,
 inline void testclass::PublicStatMemFunc1(void) {}
 ```
 
-a pak,
+a potom
 
 ```cpp
 // LNK2019_FIP_2.cpp
@@ -91,6 +91,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chyba linkerů LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

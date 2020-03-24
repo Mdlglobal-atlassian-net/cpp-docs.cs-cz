@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1241
 ms.assetid: 7b8b52eb-0231-4521-b52a-2bce8d3e8956
-ms.openlocfilehash: 87f73680d7ed40b9b2db9f40f9140976d552ab6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e2b955787166c94be4ca35e1c58df5becd243f2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183810"
 ---
 # <a name="linker-tools-error-lnk1241"></a>Chyba linkerů LNK1241
 
-soubor prostředků zdroj souboru, který již zadán
+zdrojový soubor již byl určen.
 
-Tato chyba je generována při spuštění **cvtres** ručně z příkazového řádku a pokud se pak předejte výsledný .obj souborů v linkeru kromě na jiné soubory .res.
+Tato chyba je vygenerována, pokud spouštíte **CVTRES** ručně z příkazového řádku a Pokud předáte výsledný soubor. obj do linkeru kromě dalších souborů. res.
 
-Pokud chcete zadat více souborů res, předat je vše do linkeru jako soubory res, není v rámci soubory .obj vytvořil **cvtres**.
+Chcete-li zadat více souborů. res, předejte je do linkeru jako soubory. res, nikoli ze souborů. obj vytvořených pomocí **CVTRES**.

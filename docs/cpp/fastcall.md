@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4b650542a3a85c8f0008374abef02686c5491a3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154318"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188919"
 ---
-# <a name="fastcall"></a>__fastcall
+# <a name="__fastcall"></a>__fastcall
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-**__Fastcall** konvence volání Určuje, že argumenty funkcí mají být předány v registrech, pokud je to možné. Tato konvence volání se vztahuje pouze x86 architektury. Následující seznam ukazuje implementaci této konvence volání.
+Konvence volání **__fastcall** určuje, že argumenty funkcí mají být předány v registrech, pokud je to možné. Tato konvence volání se vztahuje pouze na architekturu x86. Následující seznam ukazuje implementaci této konvence volání.
 
 |Prvek|Implementace|
 |-------------|--------------------|
-|Pořadí předávání argumentů|První dvě DWORD nebo menší argumenty, které se nacházejí v seznamu argumentů zleva doprava jsou předány v registrech ECX a EDX; všechny argumenty jsou předány v zásobníku zprava doleva.|
-|Odpovědnost za údržbu zásobníku|Volaná funkce vezme argumenty ze zásobníku.|
-|Konvence pro vzhled názvu|Zavináč (\@) je předponou názvů; zavináče následovaný počtem bajtů (v desítkové soustavě) v parametru seznam je přidán k názvům.|
+|Pořadí předávání argumentů|První dva argumenty DWORD nebo menší argumenty, které se nacházejí v seznamu argumentů zleva doprava, jsou předány v registrech ECX a EDX; všechny ostatní argumenty jsou předány v zásobníku zprava doleva.|
+|Odpovědnost za údržbu zásobníku|Volaná funkce převezme argumenty ze zásobníku.|
+|Konvence pro vzhled názvu|Na znaménko (\@) je předpona názvů; u znaménka následovaných počtem bajtů (v desítkové soustavě) v seznamu parametrů je přípona na názvy.|
 |Konvence pro posunutí|Neprovádí se žádné posunutí.|
 
 > [!NOTE]
-> Budoucí verze kompilátoru mohou používat různé registry k uložení parametrů.
+> Budoucí verze kompilátoru mohou pro ukládání parametrů použít různé registry.
 
-Použití [GR](../build/reference/gd-gr-gv-gz-calling-convention.md) – možnost kompilátoru způsobí, že každá funkce v modulu je kompilována jako **__fastcall** Pokud není funkce deklarována s konfliktním atributem použitím nebo název funkce `main` .
+Použití možnosti kompilátoru [/gr](../build/reference/gd-gr-gv-gz-calling-convention.md) způsobí, že každá funkce v modulu má být zkompilována jako **__fastcall** , pokud není funkce deklarována pomocí kolidujícího atributu nebo pokud je název funkce `main`.
 
-**__Fastcall** – klíčové slovo je přijato a ignorováno kompilátory, které se zaměřují ARM a x64 architektury; x x64 čip, podle úmluvy první čtyři argumenty předány v registrech, pokud je to možné a další argumenty jsou předány v zásobníku. Další informace najdete v tématu [x64 konvence volání](../build/x64-calling-convention.md). Čipu ARM až čtyři celočíselné argumenty a osm argumentů s plovoucí desetinnou čárkou mohou být předány v registrech a další argumenty jsou předány v zásobníku.
+Klíčové slovo **__fastcall** je přijato a ignorováno kompilátory, které cílí na architektury ARM a x64. v případě čipu x64, podle úmluvy, jsou první čtyři argumenty předány v registrech, pokud je to možné, a další argumenty jsou předány do zásobníku. Další informace naleznete v tématu [konvence volání x64](../build/x64-calling-convention.md). V případě čipu ARM může být v registrech předán až čtyři celočíselné argumenty a osm argumentů s plovoucí desetinnou čárkou a další argumenty jsou předány do zásobníku.
 
 U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice. Při této definici třídy:
 
@@ -55,11 +55,11 @@ je ekvivalentem tohoto:
 void __fastcall CMyClass::mymethod() { return; }
 ```
 
-Z důvodu kompatibility s předchozími verzemi **_fastcall** je synonymum pro **__fastcall** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadat.
+Z důvodu kompatibility s předchozími verzemi je **_fastcall** synonymem pro **__fastcall** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu se funkce `DeleteAggrWrapper` předány argumenty v registrech:
+V následujícím příkladu je funkce `DeleteAggrWrapper` předána argumenty v registrech:
 
 ```cpp
 // Example of the __fastcall keyword
@@ -70,9 +70,9 @@ void FASTCALL DeleteAggrWrapper(void* pWrapper);
 typedef BOOL (__fastcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

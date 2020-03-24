@@ -8,16 +8,16 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: e7dcb8290c0130fa9376e48f065e82163a1ca5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312307"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177622"
 ---
 # <a name="primary-expressions"></a>Primární výrazy
 
-Primární výrazy jsou stavebními bloky složitějších výrazů. Jsou literály, názvy a názvy kvalifikovány operátorem rozlišení oboru (`::`).  Primární výraz může mít některou z těchto forem:
+Primární výrazy jsou stavebními bloky složitějších výrazů. Jsou to literály, názvy a názvy, které jsou kvalifikovány operátorem rozlišení oboru (`::`).  Primární výraz může mít některou z těchto forem:
 
 ```
 literal
@@ -26,11 +26,11 @@ name
 ::name ( expression )
 ```
 
-A *literálu* je konstantní primární výraz. Jeho typ závisí na formuláři specifikace. Zobrazit [literály](../cpp/numeric-boolean-and-pointer-literals-cpp.md) podrobnější informace o zadávání literálů.
+*Literál* je konstantní primární výraz. Jeho typ závisí na formuláři specifikace. Úplné informace o určení literálů naleznete v tématu [literály](../cpp/numeric-boolean-and-pointer-literals-cpp.md) .
 
-**To** – klíčové slovo je ukazatel na objekt třídy. Je k dispozici v rámci funkce nestatického členu a odkazuje na instanci třídy, pro kterou byla funkce vyvolána. **To** – klíčové slovo nelze použít mimo tělo funkce člena třídy.
+Klíčové slovo **This** je ukazatel na objekt třídy. Je k dispozici v rámci funkce nestatického členu a odkazuje na instanci třídy, pro kterou byla funkce vyvolána. Klíčové slovo **This** nelze použít mimo tělo členské funkce třídy.
 
-Typ **to** ukazatel `type`  **\*const** (kde `type` je název třídy) v rámci funkcí, které ne specificky upravují **tento** ukazatele. Následující příklad ukazuje členské funkce deklarace a typy **to**:
+Typ **tohoto** ukazatele je `type` **\*const** (kde `type` je název třídy) v rámci funkcí, které nemění konkrétně **Tento** ukazatel. Následující příklad ukazuje deklarace členské funkce a **typy těchto typů:**
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,9 +44,9 @@ public:
 };
 ```
 
-V tématu [ukazatele this](this-pointer.md) pro další informace o změnách typu **to** ukazatele.
+Další informace o úpravě typu **tohoto** ukazatele naleznete v [tomto ukazateli](this-pointer.md) .
 
-Operátor rozlišení oboru (`::`) následovaný názvem představuje primární výraz.  Tyto názvy musí být jména v globálním rozsahu, ne názvy členů.  Typ tohoto výrazu je určen deklarací názvu. Je to hodnota l (to znamená, že může být zobrazena na levé straně výrazu operátoru přiřazení), pokud je deklarující název hodnota l. Operátoru rozsahu rozlišení umožňuje odkazování na globální název, i když je tento název skrytý v aktuálním oboru. Zobrazit [oboru](../cpp/scope-visual-cpp.md) příklad použití operátoru rozsahu rozlišení.
+Operátor rozlišení oboru (`::`) následovaný názvem představuje primární výraz.  Tyto názvy musí být jména v globálním rozsahu, ne názvy členů.  Typ tohoto výrazu je určen deklarací názvu. Je to hodnota l (to znamená, že může být zobrazena na levé straně výrazu operátoru přiřazení), pokud je deklarující název hodnota l. Operátoru rozsahu rozlišení umožňuje odkazování na globální název, i když je tento název skrytý v aktuálním oboru. Viz [obor](../cpp/scope-visual-cpp.md) pro příklad použití operátoru rozlišení oboru.
 
 Výraz uzavřený do závorek je primární výraz, jehož typ a hodnota jsou stejné jako typ a hodnota výrazu bez závorek. Je to hodnota l, pokud je výraz bez závorek hodnota l.
 
@@ -62,7 +62,7 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression
 ```
 
-Následující příklady jsou všechny považovány za *názvy*a proto za primární výrazy v různých formách:
+Níže uvedené příklady jsou považovány za *názvy*, a proto primární výrazy v různých formulářích:
 
 ```cpp
 MyClass // a identifier
@@ -74,6 +74,6 @@ A::B   // a qualified name
 A<int> // a template id
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Typy výrazů](../cpp/types-of-expressions.md)

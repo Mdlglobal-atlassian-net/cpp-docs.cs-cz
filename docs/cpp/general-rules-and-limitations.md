@@ -2,20 +2,20 @@
 title: Obecná pravidla a omezení
 ms.date: 11/04/2016
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-ms.openlocfilehash: 3bd8956b08d3e5f2109c5574802a3a8a72fba537
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1adbaf9d9be3a0fc0724603e01b81700554839bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857525"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188586"
 ---
 # <a name="general-rules-and-limitations"></a>Obecná pravidla a omezení
 
 **Specifické pro společnost Microsoft**
 
-- Pokud deklarujete funkci nebo objekt bez atributu **dllimport** nebo **dllexport** , funkce nebo objekt není považován za součást rozhraní dll. Proto musí být definice funkce nebo objektu přítomna v modulu nebo jiném modulu stejného programu. Chcete-li vytvořit součást funkce nebo objektu v rozhraní knihovny DLL, je nutné deklarovat definici funkce nebo objektu v jiném modulu jako **dllexport**. Jinak dojde k chybě propojovacího programu.
+- Pokud deklarujete funkci nebo objekt bez atributu **dllimport** nebo **dllexport** , funkce nebo objekt není považován za součást rozhraní dll. Proto musí být definice funkce nebo objektu přítomna v modulu nebo jiném modulu stejného programu. Chcete-li vytvořit součást funkce nebo objektu v rozhraní knihovny DLL, je nutné deklarovat definici funkce nebo objektu v jiném modulu jako **dllexport**. V opačném případě je vygenerována chyba linkeru.
 
-   Pokud deklarujete funkci nebo objekt s atributem **dllexport** , jeho definice se musí objevit v některém modulu stejného programu. Jinak dojde k chybě propojovacího programu.
+   Pokud deklarujete funkci nebo objekt s atributem **dllexport** , jeho definice se musí objevit v některém modulu stejného programu. V opačném případě je vygenerována chyba linkeru.
 
 - Pokud jeden modul v programu obsahuje deklarace **dllimport** i **dllexport** pro stejnou funkci nebo objekt, má atribut **dllexport** přednost před atributem **dllimport** . Vygeneruje se ale upozornění kompilátoru. Příklad:
 
@@ -85,6 +85,6 @@ ms.locfileid: "74857525"
 
 **Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [dllexport, dllimport](../cpp/dllexport-dllimport.md)

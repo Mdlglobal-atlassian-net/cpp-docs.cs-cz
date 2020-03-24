@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RC1101
 ms.assetid: ff273384-b819-464a-8c0e-d5951e4a28b4
-ms.openlocfilehash: abe16bb949fff46f01b51efee842f065d8e37cae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45ffe1d687cc54268af489a268a5927d00ad3224
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374284"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182510"
 ---
 # <a name="resource-compiler-fatal-error-rc1101"></a>Závažná chyba kompilátoru prostředků RC1101
 
-> žádný prostředek binární název souboru zadaný
+> nebyl zadán žádný binární název souboru prostředku.
 
-Přejmenovat výstupu (/ fo) možnost nenásledovala název souboru.
+Možnost přejmenování výstupu (/FO) nenásledovala názvem souboru.
 
-Pro možnost /fo použijte následující syntaxi:
+Pro možnost/FO použijte následující syntaxi:
 
-> **RC /fo** *outfilename* <em>infilename</em>**.rc**
+> **RC/FO** , *soubor* <em>s příponou</em> **. RC**

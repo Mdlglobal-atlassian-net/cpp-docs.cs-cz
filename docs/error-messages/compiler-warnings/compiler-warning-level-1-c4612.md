@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4612
+title: Upozornění kompilátoru (úroveň 1) C4612
 ms.date: 08/27/2018
 f1_keywords:
 - C4612
 helpviewer_keywords:
 - C4612
 ms.assetid: 21ac02b2-51cd-4aff-9b70-d543511d5962
-ms.openlocfilehash: ed5458fc52c1c9c9f12187095e4658204613d1a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9478caef9eaba9c72dc282179100daf2d94c6d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406363"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185981"
 ---
-# <a name="compiler-warning-level-1-c4612"></a>Kompilátor upozornění (úroveň 1) C4612
+# <a name="compiler-warning-level-1-c4612"></a>Upozornění kompilátoru (úroveň 1) C4612
 
-> Chyba v názvu vloženého souboru
+> Chyba v souboru include filename
 
 ## <a name="remarks"></a>Poznámky
 
-Toto upozornění se zobrazí s **#pragma include_alias** kdy název souboru je nesprávný nebo chybí.
+K tomuto upozornění dochází u **#pragma include_alias** , pokud název souboru není správný nebo chybí.
 
-Argumenty, které mají **#pragma include_alias** příkaz můžete použít formuláře uvozovky ("*název souboru*") nebo forma lomené závorky (\<*filename*>), ale obě musí pomocí stejného formuláře.
+Argumenty příkazu **#pragma include_alias** mohou použít formulář nabídky ("*filename*") nebo tvar lomené závorky (\<*filename*>), ale oba musí používat stejný formulář.
 
 ## <a name="example"></a>Příklad
 

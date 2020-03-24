@@ -1,34 +1,34 @@
 ---
-title: Typy parametrů atributů (C++vyhodnocovací a C++/CX)
+title: Typy parametrů atributu (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: fbb2bd68f589630608e341b944b4201c12d67211
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346071"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172643"
 ---
-# <a name="attribute-parameter-types--ccli-and-ccx"></a>Typy parametrů atributů (C++vyhodnocovací a C++/CX)
+# <a name="attribute-parameter-types--ccli-and-ccx"></a>Typy parametrů atributu (C++/CLI a C++/CX)
 
-Hodnoty předané metodě atributy musí být známo pro kompilátor v době kompilace.  Parametry atributu může být z následujících typů:
+Hodnoty předané atributům musí být pro kompilátor v době kompilace známy.  Parametry atributu můžou být z následujících typů:
 
 - **bool**
 
-- **Char**, **unsigned char**
+- **char**, **unsigned char**
 
 - **krátký**, **unsigned short**
 
-- **int**, **int bez znaménka**
+- **int**, **unsigned int**
 
-- **dlouhé**, **unsigned long**
+- **Long**, **bez znaménka**
 
-- **__int64**, **unsigned __int64**
+- **__int64**, **nepodepsaný __int64**
 
-- **float**, **double**
+- **float**, **Double**
 
 - **wchar_t**
 
@@ -69,7 +69,7 @@ ref struct MyStruct {
 
 ### <a name="description"></a>Popis
 
-Při zadávání atributy, musí předcházet všechny nepojmenované argumenty (poziční) všechny pojmenované argumenty.
+Při zadávání atributů musí všechny nepojmenované argumenty (poziční) předcházet před všemi pojmenovanými argumenty.
 
 ### <a name="code"></a>Kód
 
@@ -103,7 +103,7 @@ ref class ClassD {};   // Positional and named
 
 ### <a name="description"></a>Popis
 
-Parametry atributu může být jednorozměrné pole předchozí typů.
+Parametry atributu mohou být jednorozměrné pole předchozích typů.
 
 ### <a name="code"></a>Kód
 
@@ -122,6 +122,6 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Uživatelsky definované atributy](user-defined-attributes-cpp-component-extensions.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2027
 ms.assetid: e2f857a8-8e8a-4697-bbff-12ccb84a35c1
-ms.openlocfilehash: e74912780bab3056ead36ae3705f0910805228e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c531f70f98a017e8b75cceddc684f99d33bc554
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299007"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194590"
 ---
 # <a name="linker-tools-error-lnk2027"></a>Chyba linkerů LNK2027
 
-odkaz na nerozpoznaný modulu 'module'
+Nerozpoznaný odkaz na modul – modul
 
-Soubor linkeru předány obsahuje závislost na modulu, který byl zadán ani jeden s **/ASSEMBLYMODULE** ani linkeru předány.
+Soubor předaný linkeru má závislost na modulu, který nebyl zadán s **/ASSEMBLYMODULE** ani předán přímo do linkeru.
 
-Vyřešit LNK2027, proveďte jednu z následujících akcí:
+Chcete-li vyřešit LINKERŮ LNK2027, proveďte jednu z následujících akcí:
 
-- Nepředávejte linkeru soubor, který má závislost modulu.
+- Nepředávejte do linkeru soubor, který má závislost modulu.
 
-- Zadejte modul s parametrem **/ASSEMBLYMODULE**.
+- Určete modul pomocí **/ASSEMBLYMODULE**.
 
-- Pokud modul je bezpečné .netmodule, předejte modulu přímo do propojovacího programu.
+- Pokud je modul bezpečný. netmodule, předejte modul přímo linkeru.
 
-Další informace najdete v tématu [/ASSEMBLYMODULE (Přidání modulu MSIL do sestavení)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md) a [soubory .netmodule jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md).
+Další informace naleznete v tématu [/ASSEMBLYMODULE (Přidání modulu MSIL do sestavení)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md) a [souborů. netmodule jako vstup linkeru](../../build/reference/netmodule-files-as-linker-input.md).

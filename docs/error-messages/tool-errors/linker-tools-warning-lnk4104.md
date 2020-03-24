@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4104
 ms.assetid: ca6728db-d616-419a-a570-65e8445c6079
-ms.openlocfilehash: 3d89b27c32b33b917abb7fc140eebf5924142423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604dccf01b3dffc0060546bebf19d64c16ebf965
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298539"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193963"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>Upozornění linkerů LNK4104
 
-Export symbolu 'symbol' by měl být PRIVATE.
+Export symbolu symbol by měl být privátní.
 
-`symbol` Může být jedna z následujících akcí:
+`symbol` může být jedna z následujících:
 
 - `DllCanUnloadNow`
 
@@ -49,4 +49,4 @@ Export symbolu 'symbol' by měl být PRIVATE.
 
 - `RasCustomEntryDlg`
 
-Toto upozornění je vygenerován, když jsou sestavování knihovny importů pro knihovnu DLL a exportovat jedné z výše uvedených funkcí bez zadání jako SOUKROMÝ v souboru definice modulu. Obecně tyto funkce jsou exportovány pro použití pouze technologie OLE. Uvedení v knihovně importu může vést k neobvyklé chování při nesprávně propojené ke knihovně program provede volání na ně. Další informace o klíčového slova PRIVATE, naleznete v tématu [EXPORTY](../../build/reference/exports.md).
+Toto upozornění je generováno při sestavování knihovny importu pro knihovnu DLL a exportu jedné z výše uvedených funkcí, aniž by bylo nutné je zadat v souboru definice modulu jako privátní. Obecně platí, že tyto funkce jsou exportovány pro použití pouze pomocí technologie OLE. Jejich umístění do knihovny importů může vést k neobvyklému chování, když program propojený do knihovny nesprávně provede volání do těchto knihoven. Další informace o klíčovém slově PRIVATE naleznete v tématu [EXPORTS](../../build/reference/exports.md).

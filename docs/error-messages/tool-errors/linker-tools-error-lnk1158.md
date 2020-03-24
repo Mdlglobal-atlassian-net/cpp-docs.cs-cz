@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1158
 ms.assetid: 45febf16-d9e1-42db-af91-532e2717fd6a
-ms.openlocfilehash: 0dbb40fb1fe0405f3685a5e7246ecba2b53ec526
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2602c488db660ce067c672df4a746c388d987120
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254957"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184057"
 ---
 # <a name="linker-tools-error-lnk1158"></a>Chyba linkerů LNK1158
 
-nelze spustit 'název souboru.
+nejde spustit filename.
 
-Daný spustitelný soubor volá [odkaz](../../build/reference/linking.md) není v adresáři, který obsahuje odkaz, ani v adresáři uvedeném na proměnné prostředí PATH.
+Zadaný spustitelný soubor nazvaný by [odkaz](../../build/reference/linking.md) není v adresáři, který obsahuje odkaz ani v adresáři zadaném v proměnné prostředí PATH.
 
-Například obdržíte tuto chybu, pokud se pokusíte použít parametr PGOPTIMIZE [parametru/LTCG](../../build/reference/ltcg-link-time-code-generation.md) – možnost linkeru na počítači s operačním systémem 32-bit.
+Tato chyba se zobrazí například v případě, že se pokusíte použít parametr PGOPTIMIZE pro možnost linkeru [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) v počítači s 32 operačním systémem.

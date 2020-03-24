@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4219
 ms.assetid: 363fedf4-b10c-4985-811a-55a9fba688d6
-ms.openlocfilehash: 7407537b55525bf622fc11cdbdb8e00244e51c18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4488539a4f7282180048f1e3530e62e35c3b339e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410249"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183095"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Upozornění linkerů LNK4219
 
-Oprava název opravou přetečení. Cílový "název symbolu cíl" je mimo rozsah. vkládá se převodní rutina
+Oprava přetečení opravy názvu Cílový název symbolu target je mimo rozsah a vkládání převodů.
 
-Linker vloží převodní rutina v situaci, kdy se nepodařilo přizpůsobit do uvedené instrukce, protože cílový symbol je příliš daleko od umístění instrukce adresy nebo posun.
+Linker vložil převod v situaci, kdy se adresa nebo posun nedokázal do dané instrukce vejít, protože cílový symbol je příliš daleko od umístění instrukce.
 
-Možná budete chtít změnit pořadí bitovou kopii (pomocí [/ORDER](../../build/reference/order-put-functions-in-order.md) volby, například), aby úroveň dereference.
+Je možné změnit pořadí obrázku (například pomocí možnosti [/Order](../../build/reference/order-put-functions-in-order.md) ), abyste zabránili nadbytečné úrovni nepřímých odkazů.

@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4a385b9559e2f54e81bda76e6dd13505e978a74
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186902"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183485"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Upozornění linkerů LNK4075
 
-ignoruje kvůli specifikaci "možnost2" číslo "možnost1"
+ignoruje se "možnost1" kvůli specifikaci "možnost2".
 
-Druhá možnost přepíše první.
+Druhá možnost Přepisuje první.
 
-Jsou zadané linkeru vzájemně se vylučující možnosti.  Prozkoumejte možnosti linkeru.  Tam, kde jsou možnosti linkeru zadán závisí na tom, jak se sestavení projektu.
+Jsou zadány vzájemně exkluzivní možnosti linkeru.  Projděte si možnosti linkeru.  Kde jsou zadány možnosti linkeru, závisí na způsobu sestavování projektu.
 
-- Pokud vytváříte ve vývojovém prostředí, podívejte se do stránky vlastností linkeru pro váš projekt a v tématu, kde jsou zadané obě možnosti linkeru.  Zobrazit [nastavení kompilátoru a vlastnosti sestavení](../../build/working-with-project-properties.md) Další informace.
+- Pokud sestavíte ve vývojovém prostředí, podívejte se na stránky vlastností linkeru pro váš projekt a zjistěte, kde jsou zadány obě možnosti linkeru.  Další informace naleznete v tématu [Nastavení vlastností kompilátoru a sestavení](../../build/working-with-project-properties.md) .
 
-- Při sestavování v příkazovém řádku, podívejte se na možnosti linkeru, existuje zadaná.
+- Pokud sestavíte na příkazovém řádku, podívejte se na Možnosti linkeru, které tady zadáte.
 
-- Pokud vytváříte skripty sestavení, projděte vaše skripty, abyste zjistili, kde jsou zadané tyto možnosti linkeru.
+- Pokud sestavíte pomocí skriptů sestavení, Projděte si skripty, abyste viděli, kde jsou tyto možnosti linkeru určeny.
 
-Pokud zjistíte, kde jsou zadány možnosti vzájemně se vylučující linkeru, odeberte jednu z možností propojovacího programu.
+Pokud zjistíte, kde jsou zadány vzájemně exkluzivní možnosti linkeru, odeberte jednu z možností linkeru.
 
 Některé konkrétní příklady:
 
-- Pokud jste modul, který byl kompilován s **/zi**, což zahrnuje interní linkeru možnost volat neignoruje a modul, který byl kompilován s OPT, /OPT:ICF nebo/incremental: no, které neznamená žádné neignoruje, bude Získejte LNK4075.  Zobrazit [/Z7, / zi, /ZI (formát informací o ladění)](../../build/reference/z7-zi-zi-debug-information-format.md) Další informace.
+- Pokud propojíte modul, který byl zkompilován pomocí **/Zi**, což implikuje interní možnost linkeru s názvem/EDITANDCONTINUE a modul, který byl zkompilován s/OPT: REF,/OPT: ICF nebo/incremental: No, což neznamená, že se nejedná o/EDITANDCONTINUE, získáte linkerů LNK4075.  Další informace naleznete v tématu [/Z7,/Zi,/Zi (formát ladicích informací)](../../build/reference/z7-zi-zi-debug-information-format.md) .

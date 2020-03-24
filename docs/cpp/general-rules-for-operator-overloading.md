@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-ms.openlocfilehash: 1eceb26a244bc6dd2d5243e54f5e3b8391d88ed1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c8cbea3411acd50be376ae0853a143af57458f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188587"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Obecná pravidla přetížení operátoru
 
-Následující pravidla omezují způsob, jakým jsou implementovány přetížené operátory. Nicméně se nevztahují na [nové](../cpp/new-operator-cpp.md) a [odstranit](../cpp/delete-operator-cpp.md) operátory, které jsou pokryty samostatně.
+Následující pravidla omezují způsob, jakým jsou implementovány přetížené operátory. Neplatí však pro operátory [New](../cpp/new-operator-cpp.md) a [Delete](../cpp/delete-operator-cpp.md) , které jsou pokryty samostatně.
 
-- Nelze definovat nové operátory, jako například **.**.
+- Nelze definovat nové operátory, jako například **.** .
 
 - Nelze předefinovat význam operátorů při použití předdefinovaných datových typů.
 
@@ -38,23 +38,23 @@ Následující pravidla omezují způsob, jakým jsou implementovány přetíže
     }
     ```
 
-   Předchozí příklad kódu deklaruje operátor „menší než“ jako členskou funkci. Operátory sčítání jsou však deklarovány jako globální funkce, které mají „přátelský“ přístup. Pro daný operátor může být poskytnuta více než jedna implementace. V případě předchozího operátoru sčítání jsou poskytnuty dvě implementace pro poskytnutí komutativity. Je stejně pravděpodobné jako implementace operátorů, které aplikacím dodávají `Point` k `Point`, **int** k `Point`, a tak dále se musí implementovat.
+   Předchozí příklad kódu deklaruje operátor „menší než“ jako členskou funkci. Operátory sčítání jsou však deklarovány jako globální funkce, které mají „přátelský“ přístup. Pro daný operátor může být poskytnuta více než jedna implementace. V případě předchozího operátoru sčítání jsou poskytnuty dvě implementace pro poskytnutí komutativity. Je tak pravděpodobné, že operátory, které přidávají `Point` do `Point`, **int** do `Point`a tak dále, mohou být implementovány.
 
-- Operátory dodržují seskupování a respektují počet operandů zadaný jejich typickým použitím v rámci předdefinovaných typů. Proto neexistuje žádný způsob, jak vyjádřit pojem "přičíst 2 a 3 k objektu typu `Point`," očekává 2 mají být přidány do *x* souřadnice a 3 přidávaného do *y* koordinaci.
+- Operátory dodržují seskupování a respektují počet operandů zadaný jejich typickým použitím v rámci předdefinovaných typů. Proto neexistuje žádný způsob, jak vyjádřit koncept "Add 2 a 3" objektu typu `Point`, "očekává se 2 Přidání na souřadnici *x* a 3 pro přidání do souřadnic *y* .
 
 - Unární operátory, které jsou deklarovány jako členské funkce, nepřebírají žádné argumenty. Jsou-li deklarovány jako globální funkce, přebírají jeden argument.
 
 - Binární operátory, které jsou deklarovány jako členské funkce, přebírají jeden argument. Jsou-li deklarovány jako globální funkce, přebírají dva argumenty.
 
-- Pokud operátor lze použít jako unární operátor nebo binární operátor (__&__, __*__, __+__, a __-__), můžete použít přetížení každém použití samostatně.
+- Pokud operátor lze použít jako unární nebo binární operátor ( __&__ , __*__ , __+__ a __-__ ), můžete každé použití přetížit samostatně.
 
 - Přetížené operátory nemohou mít výchozí argumenty.
 
-- Všechny přetížené operátory s výjimkou přiřazení (**operátoru =**) jsou zděděny z odvozených tříd.
+- Všechny přetížené operátory s výjimkou přiřazení (**operátor =** ) jsou děděny odvozenými třídami.
 
 - První argument přetížených operátorů členské funkce je vždy typu třídy objektu, pro který je operátor vyvolán (třída, ve které je operátor deklarován nebo třída odvozená z této třídy). Pro první argument nejsou k dispozici žádné převody.
 
-Význam libovolného operátoru lze zcela změnit. Který zahrnuje význam adresy (**&**), přiřazení (**=**), operátory a operátory volání funkce. Identity, které lze dovolávat pro vestavěné typy, lze také změnit pomocí přetěžování operátoru. Následující čtyři příkazy jsou obvykle při vyhodnocování zcela ekvivalentní:
+Význam libovolného operátoru lze zcela změnit. Který zahrnuje význam adres ( **&** ), přiřazení ( **=** ) a operátorů volání funkce. Identity, které lze dovolávat pro vestavěné typy, lze také změnit pomocí přetěžování operátoru. Následující čtyři příkazy jsou obvykle při vyhodnocování zcela ekvivalentní:
 
 ```cpp
 var = var + 1;
@@ -63,11 +63,11 @@ var++;
 ++var;
 ```
 
-Tuto identitu nelze dovolávat pro typy tříd, které přetěžují operátory. Kromě toho některé požadavky zahrnují použití těchto operátorů pro základní typy, které jsou zmírněny pro přetížené operátory. Například operátor přiřazení/sčítání **+=**, vyžaduje levý operand l hodnota. při použití na základní typy; neexistuje žádný takový požadavek při přetížení operátoru.
+Tuto identitu nelze dovolávat pro typy tříd, které přetěžují operátory. Kromě toho některé požadavky zahrnují použití těchto operátorů pro základní typy, které jsou zmírněny pro přetížené operátory. Například operátor sčítání a přiřazování **+=** vyžaduje, aby levý operand byl l-hodnotou při použití na základní typy; žádný takový požadavek neexistuje, pokud je operátor přetížený.
 
 > [!NOTE]
 > V rámci konzistence je při definování přetížených operátorů často nejlepší postupovat podle modelu předdefinovaných typů. Liší-li se významně sémantika přetíženého operátoru od jeho významu v jiných kontextech, může být více matoucí než užitečný.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přetížení operátoru](../cpp/operator-overloading.md)

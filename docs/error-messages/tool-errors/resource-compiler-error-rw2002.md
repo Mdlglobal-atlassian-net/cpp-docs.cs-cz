@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230410"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190687"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Chyba kompilátoru prostředků RW2002
 
@@ -21,7 +21,7 @@ Chyba analýzy
 
 1. **Vyžaduje se typ akcelerátoru (ASCII nebo VIRTKEY).**
 
-   Pole v příkazu akcelerátory musí obsahovat hodnotu ASCII nebo VIRTKEY. `type`
+   Pole `type` v příkazu **akcelerátory** musí obsahovat hodnotu ASCII nebo VIRTKEY.
 
 1. **V tabulce akcelerátorů byl očekáván začátek.**
 
@@ -49,7 +49,7 @@ Chyba analýzy
 
 1. **Řídicí znak je mimo rozsah [^ A-^ Z].**
 
-   Řídicí znak v příkazu **akcelerátory** je neplatný. Znak následující po znaku stříšky **^** () musí být mezi a a Z včetně.
+   Řídicí znak v příkazu **akcelerátory** je neplatný. Znak následující po znaku stříšky ( **^** ) musí být mezi a a Z včetně.
 
 1. **Prázdné nabídky nejsou povoleny**
 
@@ -65,11 +65,11 @@ Chyba analýzy
 
 1. **Očekávaná čárka v tabulce akcelerátorů**
 
-   Kompilátor prostředků vyžaduje čárku mezi `event` poli a *idValue* v příkazu **akcelerátory** .
+   Kompilátor prostředků vyžaduje čárku mezi poli `event` a *idValue* v příkazu **akcelerátory** .
 
 1. **Očekával se název třídy ovládacího prvku.**
 
-   Pole příkazu Control v příkazu **dialogového okna** musí být jeden z následujících typů: `class` TLAČÍTKO, pole se seznamem, úpravy, seznam, posuvník, statická nebo uživatelsky definovaná. Ujistěte se, že je třída správně napsaná.
+   Pole `class` příkazu **Control** v příkazu **dialogového okna** musí být jeden z následujících typů: tlačítko, pole se seznamem, úpravy, seznam, posuvník, statická nebo uživatelsky definovaná. Ujistěte se, že je třída správně napsaná.
 
 1. **Očekával se název vzhledu písma.**
 
@@ -85,11 +85,11 @@ Chyba analýzy
 
 1. **Očekávaná hodnota číselného příkazu**
 
-   Kompilátor prostředků očekával v příkazu **akcelerátory** číselné pole *idValue* . Ujistěte se, že jste použili `#define` konstantu k zadání hodnoty a zda je konstanta zadána správně.
+   Kompilátor prostředků očekával v příkazu **akcelerátory** číselné pole *idValue* . Ujistěte se, že jste použili `#define` konstanty k zadání hodnoty a zda je konstanta zadána správně.
 
 1. **Očekávaná číselná konstanta v tabulce řetězců**
 
-   Číselná konstanta definovaná v `#define` příkazu musí ihned následovat po klíčovém slovu **Begin** v příkazu typu **String** .
+   Číselná konstanta definovaná v příkazu `#define` musí hned následovat po klíčovém slovu **Begin** v příkazu typu **String** .
 
 1. **Očekávaná velikost číselného bodu**
 
@@ -105,19 +105,19 @@ Chyba analýzy
 
 1. **Očekával se řetězec nebo příkaz pro konstantní akcelerátor.**
 
-   Kompilátor prostředků nebyl schopný určit, jaký druh klíče se má pro akcelerátor nastavovat. Pole v příkazu akcelerátory může být neplatné. `event`
+   Kompilátor prostředků nebyl schopný určit, jaký druh klíče se má pro akcelerátor nastavovat. Pole `event` v příkazu **akcelerátory** mohou být neplatné.
 
 1. **Očekávalo se číslo ID.**
 
-   Očekává se číslo pro `id` pole řídicího příkazu v příkazu **dialogového okna** . Ujistěte se, že máte číslo nebo `#define` příkaz pro ID ovládacího prvku.
+   Očekává se číslo pro pole `id` příkazu ovládacího prvku v příkazu **dialogového okna** . Ujistěte se, že máte příkaz číslo nebo `#define` pro ID ovládacího prvku.
 
 1. **Očekává se řetězec v uvozovkách ve třídě dialogového okna.**
 
-   Pole možnosti třída v příkazu **dialogového okna** musí být celé číslo nebo řetězec uzavřený do dvojitých uvozovek. `class`
+   Pole `class` v možnosti třídy v příkazu **dialogového okna** musí být celé číslo nebo řetězec uzavřený do dvojitých uvozovek.
 
 1. **V názvu dialogového okna je očekáván řetězec v uvozovkách.**
 
-   Pole možnosti Caption v příkazu **dialogového okna** musí být řetězec znaků ASCII uzavřený v dvojitých uvozovkách. `captiontext`
+   Pole `captiontext` možnosti CAPTION v příkazu **dialog** musí být řetězec znaků ASCII uzavřený v dvojitých uvozovkách.
 
 1. **Soubor nebyl nalezen: název souboru**
 
@@ -129,11 +129,11 @@ Chyba analýzy
 
 1. **Neplatný akcelerátor**
 
-   Pole v příkazu akcelerátory se nerozpoznalo nebo bylo delší než dva znaky. `event`
+   Pole `event` v příkazu **akcelerátory** nebylo rozpoznáno nebo bylo delší než dva znaky.
 
 1. **Neplatný typ akcelerátoru (ASCII nebo VIRTKEY)**
 
-   Pole v příkazu akcelerátory musí obsahovat hodnotu ASCII nebo VIRTKEY. `type`
+   Pole `type` v příkazu **akcelerátory** musí obsahovat hodnotu ASCII nebo VIRTKEY.
 
 1. **Neplatný řídicí znak**
 
@@ -141,7 +141,7 @@ Chyba analýzy
 
 1. **Neplatný typ ovládacího prvku**
 
-   Každý příkaz ovládacího prvku v příkazu **dialogového okna** musí být jeden z následujících: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, SKUPINOVÝ, ICON, LISTBOX, LTEXT, (PUSHBUTTON), RADIOBUTTON, RTEXT, SCROLLBAR. Ujistěte se, že jsou tyto příkazy ovládacích prvků zadány správně.
+   Každý příkaz ovládacího prvku v příkazu **dialogového okna** musí být jedna z následujících: CheckBox, ComboBox, Control, CTEXT, DEFPUSHBUTTON, EditText, skupinový, Icon, ListBox, LTEXT, (pushbutton), RadioButton, RText, SCROLLBAR. Ujistěte se, že jsou tyto příkazy ovládacích prvků zadány správně.
 
 1. **Neplatný typ**
 
@@ -149,7 +149,7 @@ Chyba analýzy
 
 1. **V ovládacím prvku byl očekáván textový řetězec nebo pořadové číslo.**
 
-   *Textové* pole příkazu **ovládacího prvku** v příkazu **dialogového okna** musí být textový řetězec nebo odkaz na pořadové číslo typu ovládacího prvku. Pokud používáte ordinální číslo, ujistěte se, že máte `#define` příkaz pro ovládací prvek.
+   *Textové* pole příkazu **ovládacího prvku** v příkazu **dialogového okna** musí být textový řetězec nebo odkaz na pořadové číslo typu ovládacího prvku. Pokud používáte ordinální číslo, ujistěte se, že máte příkaz `#define` pro ovládací prvek.
 
 1. **Neshoda závorek**
 

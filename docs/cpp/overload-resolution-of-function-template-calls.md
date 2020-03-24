@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-ms.openlocfilehash: a736e89565bb7ab6bc49c3c0f65d12fc9508200c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d96046c629e812e342ce86b850b6d52a57094997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379126"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188438"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Řešení přetížení volání šablony funkce
 
-Šablony funkce lze přetížení funkce nešablonových se stejným názvem. V tomto scénáři jsou vyřešeny volání funkce tak, že nejprve pomocí odvození argumentu šablony pro vytvoření instance šablony funkce s specializaci jedinečný. Pokud selže odvození argumentu šablony další přetížení funkce jsou považovány za vyřešit volání. Tyto další přetížení, označované také jako sada Release candidate, zahrnují funkce nešablonových a další instance funkce šablony. Pokud bude úspěšné odvození argumentu šablony, pak generované funkce je ve srovnání s dalších funkcí, které mají určit nejlepší shodu dle pravidel pro řešení přetížení. Další informace najdete v tématu [přetížení funkce](function-overloading.md).
+Šablona funkce může přetížit nešablonové funkce se stejným názvem. V tomto scénáři jsou volání funkcí řešeny nejprve pomocí odvození argumentu šablony pro vytvoření instance šablony funkce s jedinečnou specializací. Pokud je odvození argumentu šablony neúspěšné, další přetížení funkce se považují za řešení tohoto volání. Tato další přetížení, označovaná také jako kandidátská sada, zahrnují nešablonové funkce a jiné instance šablon funkcí. Pokud je vyrovnávání argumentu šablony úspěšné, pak je vygenerovaná funkce porovnána s ostatními funkcemi pro určení nejlepší shody, podle pravidel pro řešení přetížení. Další informace naleznete v tématu [přetížení funkce](function-overloading.md).
 
 ## <a name="example"></a>Příklad
 
-Pokud je funkce nešablonových stejně dobrým shoda pro šablony funkce, funkce nešablonových zvolená (pokud byly argumenty šablony explicitně zadán), protože při volání metody `f(1, 1)` v následujícím příkladu.
+Pokud je nešablonová funkce stejně vhodná pro funkci šablony, je zvolena nešablonovaná funkce (pokud nejsou explicitně zadány argumenty šablony), jako v následujícím příkladu volání `f(1, 1)`.
 
 ```cpp
 // template_name_resolution9.cpp
@@ -50,7 +50,7 @@ void f(T1, T2)
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, že přesně odpovídající funkce šablony je upřednostňované, pokud funkce nešablonových vyžaduje převod.
+Následující příklad ilustruje, že je upřednostňována přesně vyhovující funkce šablony, pokud funkce nevyžadující šablonu vyžaduje převod.
 
 ```cpp
 // template_name_resolution10.cpp
@@ -80,7 +80,7 @@ int main()
 void f(T1, T2)
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Překlad názvů](../cpp/templates-and-name-resolution.md)<br/>
 [typename](../cpp/typename.md)

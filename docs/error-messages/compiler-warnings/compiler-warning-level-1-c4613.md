@@ -1,20 +1,20 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4613
+title: Upozornění kompilátoru (úroveň 1) C4613
 ms.date: 11/04/2016
 f1_keywords:
 - C4613
 helpviewer_keywords:
 - C4613
 ms.assetid: 399f521b-651c-4997-bc91-f40198e9a4d4
-ms.openlocfilehash: 3eaea39f49b985334247da41fa8f3499d3697815
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb3883d318ccd885d19469e7722362485f782144
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327298"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185942"
 ---
-# <a name="compiler-warning-level-1-c4613"></a>Kompilátor upozornění (úroveň 1) C4613
+# <a name="compiler-warning-level-1-c4613"></a>Upozornění kompilátoru (úroveň 1) C4613
 
-'segmentu': nelze změnit třídu segmentu
+' segment ': třídu segmentu nelze změnit.
 
-Pokusili jste se vytvořit segment s názvem třídy, segment, který používá kompilátor. Nebyla vytvořena žádná nová třída segmentu.
+Pokusili jste se vytvořit segment se stejným názvem třídy jako segment používaný kompilátorem. Nebyla vytvořena žádná nová třída segmentů.

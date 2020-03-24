@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0041
 - CXX0041
 ms.assetid: ce8a2366-758f-481b-8c03-ed7d779091b2
-ms.openlocfilehash: 0b2d2a17bbc7f1084e25fe53157eb5c17e4d71bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b297f7ed928bc2ea248773014293ebae4e8f1d23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396961"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185084"
 ---
 # <a name="expression-evaluator-error-cxx0041"></a>Chyba při vyhodnocování výrazu CXX0041
 
-Třída elementu musí být statický člen nebo členskou funkci
+element Class musí být statický člen nebo členská funkce.
 
-Nestatický člen třídy (nebo struktura nebo sjednocení) byl použit bez zadání která vytváření instancí třídy k použití.
+Nestatický člen třídy (nebo struktury nebo sjednocení) byl použit bez určení instance třídy, která se má použít.
 
-Pouze statické datové členy nebo členské funkce lze použít bez zadání instance.
+Pouze statické datové členy nebo členské funkce lze použít bez určení instance.
 
-Tato chyba se shoduje s CAN0041.
+Tato chyba je shodná s CAN0041.

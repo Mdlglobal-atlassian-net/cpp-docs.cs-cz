@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - _bstr_t [C++]
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
-ms.openlocfilehash: 57a9379be6d90cfb574ea0dcc033692762c47990
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a4126eb7771e17db5fb813898d6fa4917f6983bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222233"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190310"
 ---
-# <a name="bstrt-relational-operators"></a>_bstr_t – relační operátory
+# <a name="_bstr_t-relational-operators"></a>_bstr_t – relační operátory
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Porovná dva `_bstr_t` objekty.
+Porovná dva objekty `_bstr_t`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,10 +39,10 @@ bool operator>=(const _bstr_t& str) const throw( );
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto operátory porovnávají dva objekty `_bstr_t` lexikograficky. Operátory vrací TRUE, pokud porovnání projdou, jinak vrátí FALSE.
+Tyto operátory porovnávají dva objekty `_bstr_t` lexikograficky. Operátory vrátí hodnotu TRUE, pokud se podrží porovnávání, jinak vrátí FALSE.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_bstr_t – třída](../cpp/bstr-t-class.md)

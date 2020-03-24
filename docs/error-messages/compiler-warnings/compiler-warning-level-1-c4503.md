@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4503
+title: Upozornění kompilátoru (úroveň 1) C4503
 ms.date: 05/14/2018
 f1_keywords:
 - C4503
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 94c88511d87c3adf3cf5687a94948c83ebc5b3d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9077c448f3b5f1d70d18047b91dcf300e606c91f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160975"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186542"
 ---
-# <a name="compiler-warning-level-1-c4503"></a>Kompilátor upozornění (úroveň 1) C4503
+# <a name="compiler-warning-level-1-c4503"></a>Upozornění kompilátoru (úroveň 1) C4503
 
-> "*identifikátor*': délka názvu decorated-překročí, název se zkrátil
+> '*Identifier*': překročila se délka názvu dekorované, název byl zkrácen.
 
 ## <a name="remarks"></a>Poznámky
 
-Toto upozornění kompilátoru je zastaralá a není generován v sadě Visual Studio 2017 a novější kompilátory.
+Toto upozornění kompilátoru je zastaralé a negeneruje se v kompilátorech Visual Studio 2017 a novějších.
 
-Upravený název delší než omezení kompilátoru (4096) a byla zkrácena. Abyste toto upozornění a zkrácení snížíte počet argumentů nebo název délek identifikátory používané. Dekorované názvy, které jsou déle, než omezení kompilátoru mají hodnotu hash použít a nehrozí nebezpečí kolize názvů.
+Dekorovaný název byl delší než limit kompilátoru (4096) a byl zkrácen. Chcete-li se vyhnout tomuto upozornění a zkrácení, snižte počet argumentů nebo názvy používaných identifikátorů. Dekorované názvy, které jsou delší než omezení kompilátoru, mají použitu hodnotu hash a nejsou v nebezpečí kolizí názvů.
 
-Pokud používáte starší verzi sady Visual Studio, můžete toto upozornění vydána, když váš kód obsahuje šablony specializované pro šablony opakovaně. Například mapa mapy (ze standardní knihovny C++). V takovém případě můžete provést vaší definice TypeDef typu ( **struktura**, například), která obsahuje mapu.
+Při použití starší verze sady Visual Studio může být toto upozornění vystaveno, když váš kód obsahuje šablony specializované na šablony opakovaně. Například mapa map (ze C++ standardní knihovny). V této situaci můžete vytvořit definice typedef typ (například **strukturu**), která obsahuje mapu.
 
-Může se však rozhodnout není změny struktury kódu.  Je možné dodávat aplikace, která generuje C4503, ale pokud dojde k chybám čas odkaz na zkrácený symbol, může být obtížné určit typ symbolu v chybě. Také ladění může být obtížnější; ladicí program může mít problémy mapování názvu symbol pro název typu. Správnost program, je však neovlivněna zkrácený název.
+Můžete se ale rozhodnout nestrukturovat kód.  Je možné dodávat aplikaci, která generuje C4503, ale pokud dojde k chybám při propojování pro zkrácený symbol, může být obtížné určit typ symbolu v chybě. Ladění může být také obtížnější; ladicí program může mít obtížné mapování názvu symbolu na název typu. Správnost tohoto programu ale neovlivní zkrácený název.
 
 ## <a name="example"></a>Příklad
 
@@ -47,7 +47,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;
 ```
 
-Tento příklad ukazuje jeden způsob, jak revize kódu řešení C4503:
+Tento příklad ukazuje jeden ze způsobů, jak přepsat kód pro vyřešení C4503:
 
 ```cpp
 // C4503b.cpp
