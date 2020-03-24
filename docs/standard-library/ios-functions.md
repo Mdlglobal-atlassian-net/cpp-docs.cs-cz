@@ -56,16 +56,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3ba2ba463bbd59bd8febccb73c37cc3b79a4c75b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421609"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150626"
 ---
 # <a name="ltiosgt-functions"></a>&lt;funkce iOS&gt;
 
-## <a name="boolalpha"></a>boolalpha
+## <a name="boolalpha"></a><a name="boolalpha"></a>boolalpha
 
 Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) se v datovém proudu zobrazují jako **true** nebo **false** .
 
@@ -117,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a>18.12
+## <a name="dec"></a><a name="dec"></a>18.12
 
 Určuje, že se celočíselné proměnné zobrazují v zápisu se základem 10.
 
@@ -170,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>&lt;iOS&gt; defaultfloat
+## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a>&lt;iOS&gt; defaultfloat
 
 Nakonfiguruje příznaky objektu `ios_base` k použití výchozího formátu zobrazení pro hodnoty float.
 
@@ -187,7 +187,7 @@ Objekt `ios_base`.
 
 Manipulátor efektivně volá `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, pak vrátí *iosbase*.
 
-## <a name="fixed"></a>určí
+## <a name="fixed"></a><a name="fixed"></a>určí
 
 Určuje, že se v zápisu s pevným počtem desetinných míst zobrazuje číslo s plovoucí desetinnou čárkou.
 
@@ -235,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a>soustavy
+## <a name="hex"></a><a name="hex"></a>soustavy
 
 Určuje, že se mají v zápisu se základem 16 vyskytovat celočíselné proměnné.
 
@@ -262,13 +262,13 @@ Manipulátor efektivně volá `str` **.** [setf](../standard-library/ios-base-cl
 
 Příklad použití `hex`naleznete v části [dec](../standard-library/ios-functions.md#dec) .
 
-## <a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
 ```
 
-## <a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a>io_errc
 
 ```cpp
 enum class io_errc {
@@ -276,7 +276,7 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a>vnitřních
+## <a name="internal"></a><a name="internal"></a>vnitřních
 
 Způsobí zarovnání zarovnaného čísla na levou a číslo, které se má zarovnat vpravo.
 
@@ -297,7 +297,7 @@ Odkaz na objekt, ze kterého je odvozena *str* .
 
 [showpos](../standard-library/ios-functions.md#showpos) způsobí, že se znaménko zobrazí pro kladná čísla.
 
-Manipulátor efektivně volá `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: Internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`a vrátí *str*.
+Manipulátor efektivně volá `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: Internal](../standard-library/ios-base-class.md#fmtflags)`,` [ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -322,19 +322,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="is_error_code_enum"></a>is_error_code_enum
+## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a>is_error_code_enum
 
 ```cpp
 template <> struct is_error_code_enum<io_errc> : public true_type { };
 ```
 
-## <a name="iostream_category"></a>iostream_category
+## <a name="iostream_category"></a><a name="iostream_category"></a>iostream_category
 
 ```cpp
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a>zbývá
+## <a name="left"></a><a name="left"></a>zbývá
 
 Způsobí, že text, který není stejně široké jako šířka výstupu, se zobrazí v vyprázdnění streamu s levým okrajem.
 
@@ -377,19 +377,19 @@ int main( )
         5
 ```
 
-## <a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
 
 ```cpp
 error_code make_error_code(io_errc e) noexcept;
 ```
 
-## <a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
 
 ```cpp
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a>noboolalpha
+## <a name="noboolalpha"></a><a name="noboolalpha"></a>noboolalpha
 
 Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) se v datovém proudu zobrazují jako 1 nebo 0.
 
@@ -418,7 +418,7 @@ Ve výchozím nastavení je `noboolalpha` aktivní.
 
 Příklad použití `noboolalpha`naleznete v tématu [boolalpha](../standard-library/ios-functions.md#boolalpha) .
 
-## <a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
 
 Vypne označení základu zápisu, ve kterém se zobrazuje číslo.
 
@@ -445,7 +445,7 @@ Manipulátor efektivně volá `str.`[unsetf](../standard-library/ios-base-class.
 
 Příklad použití `noshowbase`naleznete v tématu [showbase](../standard-library/ios-functions.md#showbase) .
 
-## <a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
 
 Zobrazí pouze část čísla s plovoucí desetinnou čárkou, jejichž Zlomková část je nulová.
 
@@ -492,7 +492,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
 
 Způsobí, že kladná čísla nebudou explicitně podepsána.
 
@@ -519,7 +519,7 @@ Manipulátor efektivně volá `str.`[unsetf](../standard-library/ios-base-class.
 
 Příklad použití `noshowpos`naleznete v tématu [showpos](../standard-library/ios-functions.md#showpos) .
 
-## <a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a>noskipws
 
 Způsobí, že vstupní datový proud přečte mezery.
 
@@ -561,7 +561,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
 
 Způsobí, že výstup bude uložen do vyrovnávací paměti a zpracován, když je vyrovnávací paměť plná.
 
@@ -584,7 +584,7 @@ Odkaz na objekt, ze kterého je odvozena *str* .
 
 Manipulátor efektivně volá `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::unitbuf)`a vrací *str*.
 
-## <a name="nouppercase"></a>Velká písmena
+## <a name="nouppercase"></a><a name="nouppercase"></a>Velká písmena
 
 Určuje, že hexadecimální číslice a exponent v matematickém zápisu se zobrazí malými písmeny.
 
@@ -609,7 +609,7 @@ Manipulátor efektivně volá `str.`[unsetf](../standard-library/ios-base-class.
 
 Příklad použití `nouppercase`naleznete v části [velká písmena](../standard-library/ios-functions.md#uppercase) .
 
-## <a name="oct"></a>mořská
+## <a name="oct"></a><a name="oct"></a>mořská
 
 Určuje, že se v zápisu se základem 8 vyskytují celočíselné proměnné.
 
@@ -636,7 +636,7 @@ Manipulátor efektivně volá `str.`[setf](../standard-library/ios-base-class.md
 
 Příklad použití `oct`naleznete v části [dec](../standard-library/ios-functions.md#dec) .
 
-## <a name="right"></a>Kliknutím
+## <a name="right"></a><a name="right"></a>Kliknutím
 
 Způsobí, že text, který není stejně široké jako šířka výstupu, se zobrazí v vyprázdnění streamu s pravým okrajem.
 
@@ -693,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a>odbornou
+## <a name="scientific"></a><a name="scientific"></a>odbornou
 
 Způsobí, že se čísla s plovoucí desetinnou čárkou budou zobrazovat pomocí vědeckého zápisu.
 
@@ -738,7 +738,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a>showbase
 
 Určuje notaci základ, ve kterém je zobrazeno číslo.
 
@@ -792,7 +792,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a>showpoint
 
 Zobrazí část čísla s plovoucí desetinnou čárkou a číslicemi vpravo od desetinné čárky, a to i v případě, že desetinná část je nula.
 
@@ -819,7 +819,7 @@ Manipulátor efektivně volá `str.`[setf](../standard-library/ios-base-class.md
 
 Příklad použití `showpoint`naleznete v tématu [noshowpoint](../standard-library/ios-functions.md#noshowpoint) .
 
-## <a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a>showpos
 
 Způsobí, že kladné číslo bude explicitně podepsáno.
 
@@ -864,7 +864,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a>skipws
 
 Způsobí, že vstupní datový proud nebude číst mezery.
 
@@ -916,7 +916,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
 
 Způsobí, že výstup bude zpracován, pokud není vyrovnávací paměť prázdná.
 
@@ -941,7 +941,7 @@ Všimněte si, že `endl` také vyprázdní vyrovnávací paměť.
 
 Manipulátor efektivně volá `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`a vrací *str*.
 
-## <a name="uppercase"></a>všechna
+## <a name="uppercase"></a><a name="uppercase"></a>všechna
 
 Určuje, že hexadecimální číslice a exponent v matematickém zápisu se zobrazí velkými písmeny.
 

@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150755"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie změn Visual C++ 2003–2015
 
@@ -2704,7 +2704,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
 
 ## <a name="visual-studio-2013-conformance-changes"></a>Visual Studio 2013 změny shody
 
-### <a name="compiler"></a>Přepínač
+### <a name="compiler"></a>Compiler
 
 - **Konečné** klíčové slovo nyní vygeneruje nevyřešenou chybu symbolu, kde by předtím byla zkompilována:
 
@@ -2883,7 +2883,7 @@ I když tyto rozdíly mohou ovlivnit váš zdrojový kód nebo jiné artefakty s
     };
     ```
 
-   Chcete-li najít místa v kódu, který by se mohl pokusit optimalizovat, použijte kompilátor z této verze společně s možností kompilátoru `/W3` a zapněte C4370 upozornění. Příklad:
+   Chcete-li najít místa v kódu, který by se mohl pokusit optimalizovat, použijte kompilátor z této verze společně s možností kompilátoru `/W3` a zapněte C4370 upozornění. Například:
 
     ```cpp
     #pragma warning(default:4370)
@@ -2996,7 +2996,7 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 ## <a name="visual-studio-2012-breaking-changes"></a>Nejnovější změny sady Visual Studio 2012
 
-### <a name="compiler"></a>Přepínač
+### <a name="compiler"></a>Compiler
 
 - Možnost kompilátoru `/Yl` se změnila. Ve výchozím nastavení kompilátor používá tuto možnost, což může vést k LINKERŮ LNK2011 chyb za určitých podmínek. Další informace naleznete v tématu [/yl (vložení referenčního souboru PCH pro knihovnu ladění)](../build/reference/yl-inject-pch-reference-for-debug-library.md).
 
@@ -3040,7 +3040,7 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 ### <a name="standard-library"></a>Standardní knihovna
 
-- Po zásadní změně mezi standardy C++ 98/03 a C++ 11 pomocí explicitních argumentů šablony pro volání `make_pair()` – jako v `make_pair<int, int>(x, y)` – obvykle není kompilována v vizuálu C++ v aplikaci visual Studio 2012. Řešením je vždy volat `make_pair() `bez explicitních argumentů šablony – jako v `make_pair(x, y)`. Zadání explicitních argumentů šablony zaruší účel funkce. Pokud potřebujete přesnou kontrolu nad výsledným typem, použijte místo `make_pair` `pair`, jako v `pair<short, short>(int1, int2)`.
+- Po zásadní změně mezi standardy C++ 98/03 a C++ 11 pomocí explicitních argumentů šablony pro volání `make_pair()` – jako v `make_pair<int, int>(x, y)` – obvykle není kompilována v vizuálu C++ v aplikaci visual Studio 2012. Řešením je vždy volat `make_pair()` bez explicitních argumentů šablony – jako v `make_pair(x, y)`. Zadání explicitních argumentů šablony zaruší účel funkce. Pokud potřebujete přesnou kontrolu nad výsledným typem, použijte místo `make_pair` `pair`, jako v `pair<short, short>(int1, int2)`.
 
 - Další zásadní změna mezi standardy C++ 98/03 a C++ 11: Pokud je implicitně převoditelná na B a B, implicitně převoditelné na C, ale není implicitně převoditelná na C, C++ 98/03 a Visual Studio `pair<A, X>` 2010, aby bylo možné `pair<C, X>`převést (implicitně nebo explicitně). (Druhý typ, X, není zde důležité a není specifický pro první typ v páru.) C++ Kompilátor v aplikaci Visual Studio 2012 detekuje, že není možné implicitně převést na jazyk C a odebírá dvojici převodů z řešení přetížení. Tato změna je pro mnoho scénářů pozitivní. Například přetížení `func(const pair<int, int>&)` a `func(const pair<string, string>&)`a volání `func()` s `pair<const char *, const char *>` budou kompilována s touto změnou. Tato změna však přerušuje kód, který se opírá o agresivní převody párů. Takový kód může být obvykle vyřešen prováděním jedné části převodu explicitně – například předáním `make_pair(static_cast<B>(a), x)` funkci, která očekává `pair<C, X>`.
 
@@ -3230,7 +3230,7 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 ## <a name="visual-studio-2010-breaking-changes"></a>Nejnovější změny sady Visual Studio 2010
 
-### <a name="compiler"></a>Přepínač
+### <a name="compiler"></a>Compiler
 
 - Klíčové slovo **auto** má nový výchozí význam. Vzhledem k tomu, že použití starého významu je vzácné, většina aplikací nebude touto změnou ovlivněná.
 
@@ -3302,13 +3302,13 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 - Proměnná prostředí __MSVCRT_HEAP_SELECT už není podporovaná. Tato proměnná prostředí je odebrána a neexistuje žádná náhrada.
 
-### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční informace
+### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční dokumentace
 
 - Z referenčního kompilátoru Microsoft Macro assembleru bylo odebráno několik direktiv. Odebrané direktivy jsou `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087`a `.NO87`.
 
 ## <a name="visual-studio-2008-breaking-changes"></a>Nejnovější změny sady Visual Studio 2008
 
-### <a name="compiler"></a>Přepínač
+### <a name="compiler"></a>Compiler
 
 - Platformy Windows 95, Windows 98, Windows MILLENNIUM a Windows NT již nejsou podporovány. Tyto operační systémy byly ze seznamu cílových platforem odebrány.
 
@@ -3474,7 +3474,7 @@ C++ Kompilátor v Visual Studio 2013 zjistí neshody v _ITERATOR_DEBUG_LEVEL, kt
 
 ## <a name="visual-c-net-2003-breaking-changes"></a>Nejnovější C++ změny v jazyce Visual .NET 2003
 
-### <a name="compiler"></a>Přepínač
+### <a name="compiler"></a>Compiler
 
 - Pravé kulaté závorky se teď vyžadují pro definovanou direktivu preprocesoru (c2004).
 

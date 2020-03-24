@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 459e46f6aa144c591173a159c282658b120b1af3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419488"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150600"
 ---
 # <a name="ltstringgt-functions"></a>&lt;řetězcové&gt; funkce
 
@@ -44,7 +44,7 @@ ms.locfileid: "79419488"
 |[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
 |[adresu](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
-## <a name="getline"></a>getline
+## <a name="getline"></a><a name="getline"></a>getline
 
 Extrahuje řetězce ze vstupního datového proudu řádek po řádku.
 
@@ -156,7 +156,7 @@ int main()
 }
 ```
 
-## <a name="stod"></a>stod
+## <a name="stod"></a><a name="stod"></a>stod
 
 Převede posloupnost znaků na **dvojitou**hodnotu.
 
@@ -184,9 +184,9 @@ Hodnota typu **Double**
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **Double** jako if voláním `strtod( str.c_str(), _Eptr)`, kde `_Eptr` je objekt interní pro funkci. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **Double** jako if voláním `strtod( str.c_str(), _Eptr)`, kde `_Eptr` je objekt interní pro funkci. Pokud `str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stof"></a>stof
+## <a name="stof"></a><a name="stof"></a>stof
 
 Převede sekvenci znaků na float.
 
@@ -213,9 +213,9 @@ Hodnota float.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **float** jako if voláním `strtof( str.c_str(), _Eptr)`, kde `_Eptr` je objekt interní pro funkci. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **float** jako if voláním `strtof( str.c_str(), _Eptr)`, kde `_Eptr` je objekt interní pro funkci. Pokud `str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stoi"></a>stoi
+## <a name="stoi"></a><a name="stoi"></a>stoi
 
 Převede sekvenci znaků na celé číslo.
 
@@ -251,7 +251,7 @@ Funkce `stoi` Převede sekvenci znaků v *str* na hodnotu typu **int** a vrátí
 
 Pokud `str.c_str() == *_Eptr`, `stoi` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, nebo Pokud vrácená hodnota nemůže být reprezentována jako objekt typu **int**, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr - str.c_str()` v `*idx`.
 
-## <a name="stol"></a>stol
+## <a name="stol"></a><a name="stol"></a>stol
 
 Převede sekvenci znaků na **Long**.
 
@@ -281,9 +281,9 @@ Hodnota Long-Integer.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **Long** , jako by bylo voláno voláním `strtol( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní pro funkci. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **Long** , jako by bylo voláno voláním `strtol( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní pro funkci. Pokud `str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stold"></a>stold
+## <a name="stold"></a><a name="stold"></a>stold
 
 Převede sekvenci znaků na **Long Double**.
 
@@ -310,9 +310,9 @@ Hodnota **Long Double** .
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **Long Double** jako if voláním `strtold( str.c_str(), _Eptr)`, kde `_Eptr` je objekt interní pro funkci. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **Long Double** jako if voláním `strtold( str.c_str(), _Eptr)`, kde `_Eptr` je objekt interní pro funkci. Pokud `str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stoll"></a>stoll
+## <a name="stoll"></a><a name="stoll"></a>stoll
 
 Převede sekvenci znaků na **dlouhou dobu**.
 
@@ -342,9 +342,9 @@ long long stoll(
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **Long** Long, jako by bylo voláno voláním `strtoll( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní pro funkci. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **Long** Long, jako by bylo voláno voláním `strtoll( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní pro funkci. Pokud `str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stoul"></a>stoul
+## <a name="stoul"></a><a name="stoul"></a>stoul
 
 Převede sekvenci znaků na Long bez znaménka.
 
@@ -374,9 +374,9 @@ Hodnota bez znaménka Long-Integer.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **bez znaménka** jako if voláním `strtoul( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní pro funkci. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **bez znaménka** jako if voláním `strtoul( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní pro funkci. Pokud `str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stoull"></a>stoull
+## <a name="stoull"></a><a name="stoull"></a>stoull
 
 Převede sekvenci znaků na **dlouhou dobu bez znaménka**.
 
@@ -406,9 +406,9 @@ Hodnota **bez znaménka Long Long** .
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **bez znaménka** , jako by to bylo volání `strtoull( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní pro funkci. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede sekvenci prvků v *str* na hodnotu `val` typu **bez znaménka** , jako by to bylo volání `strtoull( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní pro funkci. Pokud `str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud by takové volání bylo nastaveno `errno`, vyvolá objekt typu `out_of_range`. V opačném případě, pokud není *IDX* ukazatel s hodnotou null, funkce ukládá `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="swap"></a>adresu
+## <a name="swap"></a><a name="swap"></a>adresu
 
 Vyměňuje pole znaků dvou řetězců.
 
@@ -464,7 +464,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="to_string"></a>to_string
+## <a name="to_string"></a><a name="to_string"></a>to_string
 
 Převede hodnotu na `string`.
 
@@ -512,7 +512,7 @@ Funkce převede hodnotu *Val* na sekvenci prvků uložených v objektu Array `Bu
 
 Funkce vrátí `string(Buf)`.
 
-## <a name="to_wstring"></a>to_wstring
+## <a name="to_wstring"></a><a name="to_wstring"></a>to_wstring
 
 Převede hodnotu na široký řetězec.
 

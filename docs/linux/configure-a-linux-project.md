@@ -2,12 +2,12 @@
 title: Konfigurace projektu C++ pro Linux v aplikaci Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077727"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150963"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
@@ -17,7 +17,7 @@ Podpora pro Linux je k dispozici v systému Visual Studio 2017 nebo novějším.
 
 ::: moniker-end
 
-Toto téma popisuje, jak nakonfigurovat projekt C++ pro Linux, jak je popsáno v tématu [ C++ vytvoření nového projektu pro Linux v aplikaci Visual Studio](create-a-new-linux-project.md). Projekty CMake pro Linux najdete v tématu [konfigurace projektu Linux cmake ](cmake-linux-project.md).
+Toto téma popisuje, jak nakonfigurovat projekt C++ pro Linux, jak je popsáno v tématu [ C++ vytvoření nového projektu pro Linux v aplikaci Visual Studio](create-a-new-linux-project.md). Projekty CMake pro Linux najdete v tématu [konfigurace projektu Linux cmake](cmake-linux-project.md).
 
 Můžete nakonfigurovat projekt pro Linux pro cíl fyzického počítače se systémem Linux, virtuálního počítače nebo subsystému [Windows pro Linux](/windows/wsl/about) (WSL).
 

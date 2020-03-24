@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7fd523dc9184ae613cf8a52969a497b6b4761cf6
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421637"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150818"
 ---
 # <a name="ltiomanipgt-functions"></a>funkce &lt;iomanip&gt;
 
@@ -42,7 +42,7 @@ ms.locfileid: "79421637"
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
 |[setprecision](#setprecision)|[setw](#setw)|
 
-## <a name="iomanip_get_money"></a>get_money
+## <a name="get_money"></a><a name="iomanip_get_money"></a>get_money
 
 Extrahuje peněžní hodnotu z datového proudu pomocí požadovaného formátu a vrátí hodnotu v parametru.
 
@@ -65,7 +65,7 @@ Manipulátor vrátí objekt, který při extrakci z datového proudu `str`chová
 
 `Money` musí být typu `long double` nebo instance `basic_string` se stejnými parametry elementu a vlastností jako `str`.
 
-## <a name="iomanip_get_time"></a>get_time
+## <a name="get_time"></a><a name="iomanip_get_time"></a>get_time
 
 Extrahuje časovou hodnotu z datového proudu pomocí požadovaného formátu. Vrátí hodnotu v parametru jako časovou strukturu.
 
@@ -86,7 +86,7 @@ Požadovaný formát, který se má použít k získání hodnoty času.
 
 Manipulátor vrátí objekt, který při extrakci z datového proudu `str`chová jako `formatted input function`, který volá členskou funkci `get` pro omezující vlastnost národního prostředí `time_get` přidružených k `str`, pomocí `tptr` k označení časové struktury a `fmt` k označení začátku řetězce formátu zakončeného hodnotou null. V případě úspěchu se volání ukládají do struktury času, které jsou přidruženy k polím s extrahovanými časovými poli. Manipulátor pak vrátí `str`.
 
-## <a name="iomanip_put_money"></a>put_money
+## <a name="put_money"></a><a name="iomanip_put_money"></a>put_money
 
 Vloží peněžní částku pomocí požadovaného formátu do datového proudu.
 
@@ -113,7 +113,7 @@ Manipulátor vrátí objekt, který při vložení do datového proudu `str`chov
 
 `Money` musí být typu `long double` nebo instance `basic_string` se stejnými parametry elementu a vlastností jako `str`.
 
-## <a name="iomanip_put_time"></a>put_time
+## <a name="put_time"></a><a name="iomanip_put_time"></a>put_time
 
 Zapisuje časovou hodnotu z časové struktury do datového proudu pomocí zadaného formátu.
 
@@ -134,7 +134,7 @@ Požadovaný formát pro zápis hodnoty času.
 
 Manipulátor vrátí objekt, který při vložení do datového proudu `str`chová jako `formatted output function`. Funkce Output volá členskou funkci `put` pro omezující vlastnost národního prostředí `time_put` přidružená ke `str`. Funkce Output používá *time_ptr* k označení časové struktury a *TIME_FORMAT* k označení začátku řetězce formátu zakončeného hodnotou null. V případě úspěchu volání vloží literálový text z řetězce formátu a převede hodnoty z časové struktury. Manipulátor pak vrátí `str`.
 
-## <a name="quoted"></a>uvedená
+## <a name="quoted"></a><a name="quoted"></a>uvedená
 
 **(Novinka v c++ 14)** Iostream – manipulátor, který umožňuje pohodlné kruhové Trip řetězců do proudu a z datových proudů pomocí operátorů > > a < <.
 
@@ -301,7 +301,7 @@ Press Enter to exit
 */
 ```
 
-## <a name="resetiosflags"></a>resetiosflags
+## <a name="resetiosflags"></a><a name="resetiosflags"></a>resetiosflags
 
 Vymaže zadané příznaky.
 
@@ -322,7 +322,7 @@ Manipulátor vrátí objekt, který při extrakci nebo vložení do datového pr
 
 Příklad použití `resetiosflags`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
-## <a name="setbase"></a>setbase
+## <a name="setbase"></a><a name="setbase"></a>setbase
 
 Nastaví základ pro celá čísla.
 
@@ -337,7 +337,7 @@ Základ čísla
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá `str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`a potom vrátí `str`. Tady se `mask` určí takto:
+Manipulátor vrátí objekt, který při extrakci nebo vložení do datového proudu `str`volá `str.setf(mask,` [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`a potom vrátí `str`. Tady se `mask` určí takto:
 
 - Pokud je *základna* 8, `mask` je `ios_base::`[ZZÚ](../standard-library/ios-functions.md#oct).
 
@@ -351,7 +351,7 @@ Manipulátor vrátí objekt, který při extrakci nebo vložení do datového pr
 
 Příklad použití `setbase`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
-## <a name="setfill"></a>setfill
+## <a name="setfill"></a><a name="setfill"></a>setfill
 
 Nastaví znak, který se použije k vyplňování mezer v zobrazení zarovnaném vpravo.
 
@@ -373,7 +373,7 @@ Manipulátor šablony vrátí objekt, který při extrakci nebo vložení do dat
 
 Příklad použití `setfill`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
-## <a name="setiosflags"></a>setiosflags
+## <a name="setiosflags"></a><a name="setiosflags"></a>setiosflags
 
 Nastaví zadané příznaky.
 
@@ -394,7 +394,7 @@ Manipulátor vrátí objekt, který při extrakci nebo vložení do datového pr
 
 Příklad použití `setiosflags`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
-## <a name="setprecision"></a>setprecision
+## <a name="setprecision"></a><a name="setprecision"></a>setprecision
 
 Nastaví přesnost hodnot s plovoucí desetinnou čárkou.
 
@@ -415,7 +415,7 @@ Manipulátor vrátí objekt, který při extrakci nebo vložení do datového pr
 
 Příklad použití `setprecision`naleznete v tématu [setw](../standard-library/iomanip-functions.md#setw) .
 
-## <a name="setw"></a>setw
+## <a name="setw"></a><a name="setw"></a>setw
 
 Určuje šířku pole zobrazení pro další prvek v datovém proudu.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889992"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150613"
 ---
 # <a name="num_get-class"></a>num_get – třída
 
@@ -34,10 +34,10 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* \
+*CharType*\
 Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
-*InputIterator* \
+*InputIterator*\
 Typ iterátoru, ze kterého číselné funkce get čtou svůj vstup.
 
 ## <a name="remarks"></a>Poznámky
@@ -66,11 +66,11 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<locale >
+**Záhlaví:** \<národní prostředí >
 
 **Obor názvů:** std
 
-## <a name="char_type"></a>num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a>num_get:: char_type
 
 Typ, který se používá k popisu znaku používaného národním prostředním.
 
@@ -82,7 +82,7 @@ typedef CharType char_type;
 
 Typ je synonymum pro parametr šablony **CharType**.
 
-## <a name="do_get"></a>num_get::d o_get
+## <a name="num_getdo_get"></a><a name="do_get"></a>num_get::d o_get
 
 Virtuální funkce volaná k extrakci číselné hodnoty nebo logické hodnoty ze sekvence znaků.
 
@@ -167,14 +167,14 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Začátek rozsahu znaků, ze kterého má být číslo čteno.
 
-*poslední* \
+*poslední*\
 Konec rozsahu znaků, ze kterého má být číslo čteno.
 
-*iosbase* \
-[Ios_base](../standard-library/ios-base-class.md) , jehož příznaky jsou používány převodem.
+*iosbase*\
+[Ios_base](../standard-library/ios-base-class.md) , jejichž příznaky jsou používány převodem.
 
 \ *stavu*
 Stav, ke kterému se failbit (viz [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)), se přidá při selhání.
@@ -203,7 +203,7 @@ Porovná sekvenční prvky začínající *první* v sekvenci `[first, last)`, d
 
 Pole typu celé číslo je převedeno pomocí stejných pravidel používaných funkcemi kontroly pro porovnání a převod řady prvků typu **char** ze souboru. (Každý takový element **char** se předpokládá, že se mapuje na ekvivalentní prvek typu `Elem` jednoduchým mapováním 1:1.) Ekvivalentní specifikace převodu vyhledávání se určuje takto:
 
-Pokud `iosbase.`[ios_base:: flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[OCT](../standard-library/ios-functions.md#oct), je specifikace převodu `lo`.
+If `iosbase.`[ios_base:: flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[OCT](../standard-library/ios-functions.md#oct), je specifikace převodu `lo`.
 
 Pokud `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), je specifikace převodu `lx`.
 
@@ -211,11 +211,11 @@ Je-li `iosbase.flags() & ios_base::basefield == 0`, je specifikace převodu `li`
 
 V opačném případě je specifikace převodu `ld`.
 
-Formát pole pro zadání celého čísla je dále určen [omezující vlastností národního prostředí](../standard-library/locale-class.md#facet_class)`fac` vrácených voláním [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. Určen
+Formát pole pro zadání celého čísla je dále určen [omezující vlastností národního prostředí](../standard-library/locale-class.md#facet_class)`fac` vrácených voláním [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. Konkrétně:
 
 `fac.`[numpunct:: seskupovací](../standard-library/numpunct-class.md#grouping)`()` určuje, jak jsou číslice seskupeny nalevo od libovolné desetinné čárky.
 
-`fac.`[numpunct:: thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` Určuje sekvenci, která odděluje skupiny číslic nalevo od desetinné čárky.
+`fac.`[numpunct:: thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` Určuje sekvenci, která odděluje skupiny číslic nalevo od libovolné desetinné čárky.
 
 Pokud nedošlo k žádné instanci `fac.thousands_sep()` v poli číselného vstupu, není uloženo žádné omezení seskupení. V opačném případě jsou vynucená všechna omezení seskupení zavedená `fac.grouping()` a pak se odeberou oddělovače, než dojde k převodu vyhledávání.
 
@@ -308,7 +308,7 @@ virtual iter_type do_get(
     void *& val) const;
 ```
 
-se chová stejně jako první, s výjimkou, že je `p` ekvivalentní specifikátor převodu vyhledávání.
+se chová stejně jako první, s výjimkou, že je `p`ekvivalentní specifikátor převodu vyhledávání.
 
 Poslední (jedenáctá) virtuální funkce chráněná členem:
 
@@ -323,13 +323,13 @@ virtual iter_type do_get(
 
 se chová stejně jako první, s tím rozdílem, že budoucna odpovídá celému neprázdnému vstupnímu poli logických hodnot. V případě úspěchu převede vstupní pole Boolean na hodnotu typu **bool** a uloží tuto hodnotu do hodnoty *Val*.
 
-Logické vstupní pole má jednu ze dvou forem. Pokud `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) je false, je stejný jako pole typu Integer, s výjimkou, že převedená hodnota musí být 0 (pro false) nebo 1 (pro true). V opačném případě musí sekvence odpovídat buď `fac.`[numpunct:: false](../standard-library/numpunct-class.md#falsename) `()` (pro false), nebo `fac.`[numpunct:: true](../standard-library/numpunct-class.md#truename) `()` (pro true).
+Logické vstupní pole má jednu ze dvou forem. Pokud `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) je false, je stejný jako pole typu Integer, s výjimkou, že převedená hodnota musí být 0 (pro false) nebo 1 (pro true). V opačném případě musí sekvence odpovídat buď `fac.`[numpunct:: false](../standard-library/numpunct-class.md#falsename)`()` (pro false), nebo `fac.`[numpunct:: true](../standard-library/numpunct-class.md#truename)`()` (pro true).
 
 ### <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [Get](#get), kde je virtuální členská funkce volána nástrojem `do_get`.
 
-## <a name="get"></a>num_get:: Get
+## <a name="num_getget"></a><a name="get"></a>num_get:: Get
 
 Extrahuje ze sekvence znaků číselnou nebo logickou hodnotu.
 
@@ -414,14 +414,14 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
+*první*\
 Začátek rozsahu znaků, ze kterého má být číslo čteno.
 
-*poslední* \
+*poslední*\
 Konec rozsahu znaků, ze kterého má být číslo čteno.
 
-*iosbase* \
-[Ios_base](../standard-library/ios-base-class.md) , jehož příznaky jsou používány převodem.
+*iosbase*\
+[Ios_base](../standard-library/ios-base-class.md) , jejichž příznaky jsou používány převodem.
 
 \ *stavu*
 Stav, ke kterému se failbit (viz [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)), se přidá při selhání.
@@ -441,7 +441,7 @@ První virtuální chráněná členská funkce se pokusí porovnat sekvenční 
 
 Pole typu celé číslo je převedeno pomocí stejných pravidel používaných funkcemi kontroly pro porovnání a převod řady prvků typu **char** ze souboru. U každého takového elementu **char** se předpokládá mapování na ekvivalentní prvek typu `CharType` jednoduchým mapováním 1:1. Ekvivalentní specifikace převodu vyhledávání se určuje takto:
 
-- Pokud `iosbase.`[flags](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[ZZÚ](../standard-library/ios-functions.md#oct), je specifikace převodu `lo`.
+- Pokud `iosbase.`[flags](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[ZZÚ](../standard-library/ios-functions.md#oct), je specifikace převodu `lo`.
 
 - Pokud `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), je specifikace převodu `lx`.
 
@@ -449,7 +449,7 @@ Pole typu celé číslo je převedeno pomocí stejných pravidel používaných 
 
 - V opačném případě je specifikace převodu `ld`.
 
-Formát pole pro zadání celého čísla je dále určen [omezující vlastností národního prostředí](../standard-library/locale-class.md#facet_class) `fac` vrácených voláním [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. Určen
+Formát pole pro celé číslo je dále určen [omezující vlastností národního prostředí](../standard-library/locale-class.md#facet_class) `fac` vrácených voláním [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. Konkrétně:
 
 - [seskupení](../standard-library/numpunct-class.md#grouping) `fac.`určuje, jak jsou číslice seskupeny nalevo od libovolné desetinné čárky.
 
@@ -503,7 +503,7 @@ virtual iter_type do_get(iter_type first,
     void *& val) const;
 ```
 
-se chová stejně jako první, s výjimkou, že je `p` ekvivalentní specifikátor převodu vyhledávání.
+se chová stejně jako první, s výjimkou, že je `p`ekvivalentní specifikátor převodu vyhledávání.
 
 Šestá virtuální členská funkce Protected:
 
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="iter_type"></a>num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a>num_get:: iter_type
 
 Typ, který popisuje vstupní iterátor.
 
@@ -563,7 +563,7 @@ typedef InputIterator iter_type;
 
 Typ je synonymum pro parametr šablony `InputIterator`.
 
-## <a name="num_get"></a>num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a>num_get:: num_get
 
 Konstruktor pro objekty typu `num_get`, které slouží k extrakci číselných hodnot ze sekvencí.
 
@@ -590,8 +590,8 @@ Nejsou možné žádné přímé příklady, protože je destruktor chráněný.
 
 Konstruktor inicializuje svůj základní objekt pomocí `locale::`[omezujících vlastností](../standard-library/locale-class.md#facet_class)`(refs)`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<locale >](../standard-library/locale.md) \
+[\<> národního prostředí](../standard-library/locale.md)\
 \ [třídy omezující vlastnosti](../standard-library/locale-class.md#facet_class)
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

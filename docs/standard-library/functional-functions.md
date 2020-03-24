@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421798"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150677"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;funkčních&gt; funkcí
 
@@ -51,7 +51,7 @@ Tyto funkce jsou v C++ 17 zastaralé:
 |-|-|
 |[not1 –](#not1)|[not2 –](#not2)|
 
-## <a name="bind"></a>zapisovat
+## <a name="bind"></a><a name="bind"></a>zapisovat
 
 Naváže argumenty na volatelný objekt.
 
@@ -81,7 +81,7 @@ Argument pro volání n-tý.
 
 Typy `FT, T1, T2, ..., TN` musí být Copy-constructible a `INVOKE(fn, t1, ..., tN)` musí být platným výrazem pro některé hodnoty `w1, w2, ..., wN`.
 
-První funkce šablony vrací obálku přesměrovacího volání `g` s slabým výsledným typem. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN, `[invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, kde `cv` jsou kvalifikátory cv `g` a hodnoty a typy vázaných argumentů `v1, v2, ..., vN` jsou určeny jak je uvedeno níže. Použijete ho ke svázání argumentů s navázaným objektem, aby bylo možné volat objekt se seznamem argumentů, který je přizpůsobený.
+První funkce šablony vrací obálku přesměrovacího volání `g` s slabým výsledným typem. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, kde `cv` jsou kvalifikátory cv `g` a hodnoty a typy vázaných argumentů `v1, v2, ..., vN` jsou určeny jak je uvedeno níže. Použijete ho ke svázání argumentů s navázaným objektem, aby bylo možné volat objekt se seznamem argumentů, který je přizpůsobený.
 
 Druhá funkce šablony vrací obálku přesměrovacího volání `g` s vnořeným typem `result_type`, který je synonymem pro `RTy`. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN, RTy)`, kde `cv` jsou kvalifikátory cv `g` a hodnoty a typy vázaných argumentů `v1, v2, ..., vN` jsou určené níže. Použijete ho ke svázání argumentů s vydaným objektem, aby bylo možné volat objekt s přizpůsobeným seznamem argumentů a se zadaným návratovým typem.
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>bind1st –
+## <a name="bind1st"></a><a name="bind1st"></a>bind1st –
 
 Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na unární objekt funkce. Vytvoří vazby prvního argumentu binární funkce na zadanou hodnotu. Zastaralé v C++ 11, odebrané v C++ 17.
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>bind2nd –
+## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd –
 
 Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na unární objekt funkce. Naváže druhý argument binární funkce na zadanou hodnotu. Zastaralé v C++ 11, odebrané v C++ 17.
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
 Předdefinovaný objekt funkce, který provádí v argumentech bitovou a operaci (binární `operator&`).
 
@@ -381,7 +381,7 @@ Výsledek `Left & Right`. Specializovaná šablona provede dokonalé přesměrov
 
 `bit_and` funktor je omezen na celočíselné typy pro základní datové typy nebo na uživatelsky definované typy, které implementují binární `operator&`.
 
-## <a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
 Předdefinovaný objekt funkce, který provádí v argumentu operaci bitového doplňku (nejedná se o unární `operator~`). Přidáno v C++ 14.
 
@@ -417,7 +417,7 @@ Výsledek `~ Right`. Specializovaná šablona provede dokonalé přesměrování
 
 `bit_not` funktor je omezen na celočíselné typy pro základní datové typy nebo na uživatelsky definované typy, které implementují binární `operator~`.
 
-## <a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
 Předdefinovaný objekt funkce, který provádí v argumentech bitovou nebo operaci (`operator|`).
 
@@ -458,7 +458,7 @@ Výsledek `Left | Right`. Specializovaná šablona provede dokonalé přesměrov
 
 `bit_or` funktor je omezen na celočíselné typy pro základní datové typy nebo na uživatelsky definované typy, které implementují `operator|`.
 
-## <a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
 Předdefinovaný objekt funkce, který provádí v argumentech operaci bitové operace XOR (binární `operator^`).
 
@@ -499,7 +499,7 @@ Výsledek `Left ^ Right`. Specializovaná šablona provede dokonalé přesměrov
 
 `bit_xor` funktor je omezen na celočíselné typy pro základní datové typy nebo na uživatelsky definované typy, které implementují binární `operator^`.
 
-## <a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a>cref
 
 Z argumentu vytvoří konstantní `reference_wrapper`.
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a>Zavolejte
+## <a name="invoke"></a><a name="invoke"></a>Zavolejte
 
 Vyvolá libovolný objekt, který se má volat, s danými argumenty. Přidáno v C++ 17.
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
 
 Vygeneruje jednoduchou obálku volání.
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
 
 Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů ukazatelů. Zastaralé v C++ 11 pro [mem_fn](#mem_fn) a [BIND](#bind)a odebráno v c++ 17.
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
 
 Pomocné funkce šablon používané k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů odkazů. Zastaralé v C++ 11, odebrané v C++ 17.
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>not1 –
+## <a name="not1"></a><a name="not1"></a>not1 –
 
 Vrací doplněk jednočlenného predikátu. Zastaralé pro [not_fn](#not_fn) v c++ 17.
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>not2 –
+## <a name="not2"></a><a name="not2"></a>not2 –
 
 Vrací doplněk binárního predikátu. Zastaralé pro [not_fn](#not_fn) v c++ 17.
 
@@ -1079,7 +1079,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
 Šablona funkce `not_fn` přijímá objekt, který se dá volat, a vrátí objekt, který se dá volat. V případě, že vrácený objekt s voláním je později vyvolán s některými argumenty, předává je původní možnému objektu, který logicky negace výsledek. Zachovává chování const kvalifikace a kategorie hodnoty zabaleného volatelné objektu. `not_fn` je v C++ 17 novinkou a nahrazuje zastaralé `std::not1`, `std::not2`, `std::unary_negate`a `std::binary_negate`.
 
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
 
 Pomocné funkce šablon používané pro převod unárních a binárních ukazatelů na funkce v uvedeném pořadí na unární a binární adaptivní funkce. Zastaralé v C++ 11, odebrané v C++ 17.
 
@@ -1210,7 +1210,7 @@ Ukazatel funkce je objekt funkce. Může být předán jakémukoli algoritmu, kt
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>odkazů
+## <a name="ref"></a><a name="ref"></a>odkazů
 
 Vytvoří `reference_wrapper` z argumentu.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>adresu
+## <a name="swap"></a><a name="swap"></a>adresu
 
 Zamění dva objekty `function`.
 
